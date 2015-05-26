@@ -1,11 +1,11 @@
 // Map position within background, pixel based
-#define DK10_MAP_X (233)
-#define DK10_MAP_Y (387)
-#define DK10_MAP_W (1605)
-#define DK10_MAP_H (1188)
+#define DK10_MAP_X (257)
+#define DK10_MAP_Y (491)
+#define DK10_MAP_W (1341)
+#define DK10_MAP_H (993)
 
 // Height of header and footer OSD elements
-#define DK10_OSD_HEADER_H (50)
+#define DK10_OSD_HEADER_H (42)
 #define DK10_OSD_FOOTER_H (0)
 
 // Screen content (the stuff that changes, so map area - header and footer)
@@ -61,17 +61,17 @@
 #define DK10_WINDOW_CONTENT_B_Y (DK10_WINDOW_BACK_B_Y + DK10_WINDOW_CONTENT_OFFSET_Y)
 
 // Desktop icon size and offset from tablet screen edge in pixels
-#define DK10_DESKTOP_ICON_OFFSET_X (30)
-#define DK10_DESKTOP_ICON_OFFSET_Y (30)
-#define DK10_DESKTOP_ICON_W (120)
-#define DK10_DESKTOP_ICON_H (120)
+#define DK10_DESKTOP_ICON_OFFSET_X (25)
+#define DK10_DESKTOP_ICON_OFFSET_Y (25)
+#define DK10_DESKTOP_ICON_W (100)
+#define DK10_DESKTOP_ICON_H (100)
 
 // Message element positions in pixels
 #define DK10_MESSAGE_MARGIN_OUTER (20)
 #define DK10_MESSAGE_MARGIN_INNER (10)
 
-#define DK10_MESSAGE_BUTTON_W (180)
-#define DK10_MESSAGE_BUTTON_H (60)
+#define DK10_MESSAGE_BUTTON_W (150)
+#define DK10_MESSAGE_BUTTON_H (50)
 
 #define DK10_MESSAGE_MESSAGETEXT_FRAME_X (DK10_SCREEN_CONTENT_X + DK10_MESSAGE_MARGIN_OUTER)
 #define DK10_MESSAGE_MESSAGETEXT_FRAME_Y (DK10_SCREEN_CONTENT_Y + DK10_MESSAGE_MARGIN_INNER)
@@ -130,8 +130,8 @@
 
 // On-screen text sizes, hight in pixels
 // Standard text elements
-#define DK10_OSD_TEXT_STD_SIZE (32)
-#define DK10_OSD_ICON_STD_SIZE (42)
+#define DK10_OSD_TEXT_STD_SIZE (27)
+#define DK10_OSD_ICON_STD_SIZE (35)
 
 // On-screen map centre cursor
-#define DK10_CURSOR (38)
+#define DK10_CURSOR (32)

@@ -1,14 +1,14 @@
 class CfgWeapons {
-    class ItemCore;
     class ACE_ItemCore;
     class InventoryItem_Base_F;
 
-    class GVAR(ItemCore): ItemCore {
-        ace_bft_deviceType = "FBCB2Device";
-        ace_bft_magazineItem = "";
+    class GVAR(ItemCore): ACE_ItemCore {
+        EGVAR(bft,deviceType) = "FBCB2Device";
+        EGVAR(bft,magazineItem) = "";
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
-        simulation = "ItemGPS";
+        // cannot do ItemGPS as long as we do have to use magazines for unique items
+        // simulation = "ItemGPS";
     };
 
     class ACE_DK10: GVAR(ItemCore) {
@@ -19,7 +19,9 @@ class CfgWeapons {
             mass = 40;
         };
 
-        ace_bft_magazineItem = "ACE_DK10Magazine";
+        EGVAR(bft,magazineItem) = "ACE_DK10Magazine";
+
+        GVAR(dialogName) = QGVAR(DK10_dlg);
     };
 
     class ACE_GD300: GVAR(ItemCore) {
@@ -31,7 +33,10 @@ class CfgWeapons {
             mass = 5;
         };
 
-        ace_bft_magazineItem = "ACE_GD300Magazine";
+        EGVAR(bft,magazineItem) = "ACE_GD300Magazine";
+
+        GVAR(displayName) = QGVAR(GD300_dsp);
+        GVAR(dialogName) = QGVAR(GD300_dlg);
     };
 
     class ACE_MicroDAGR_x: GVAR(ItemCore) { // temporary name change to not interfere with MicroDAGR module during integration
@@ -43,7 +48,10 @@ class CfgWeapons {
             mass = 6;
         };
 
-        ace_bft_magazineItem = "ACE_MicroDAGR_xMagazine";
+        EGVAR(bft,magazineItem) = "ACE_MicroDAGR_xMagazine";
+
+        //GVAR(displayName) = GVAR(MicroDAGR_dsp);
+        //GVAR(dialogName) = GVAR(MicroDAGR_dlg);
     };
 
     class ACE_HelmetCam: ACE_ItemCore {

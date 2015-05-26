@@ -27,6 +27,12 @@ call {
 GVAR(ifOpenStart) = false;
 
 // Initialize all uiNamespace variables
+SETUVAR(GVAR(DK10_dlg), displayNull);
+SETUVAR(GVAR(GD300_dsp), displayNull);
+SETUVAR(GVAR(GD300_dlg), displayNull);
+SETUVAR(GVAR(JV5_dlg), displayNull);
+SETUVAR(GVAR(MicroDAGR_dsp), displayNull);
+SETUVAR(GVAR(MicroDAGR_dlg), displayNull);
 SETUVAR(GVAR(TAD_dsp), displayNull);
 SETUVAR(GVAR(TAD_dlg), displayNull);
 
@@ -75,6 +81,7 @@ HASH_SET(GVAR(settings),"COMMON",_tempHash);
 
 // DK10 settings
 _tempHash = HASH_CREATE;
+HASH_SET(_tempHash,"dlgIfPosition",[]);
 HASH_SET(_tempHash,"mode","DESKTOP");
 HASH_SET(_tempHash,"showIconText",true);
 HASH_SET(_tempHash,"mapWorldPos",[]);
@@ -88,10 +95,14 @@ HASH_SET(_tempHash,"mapType","SAT");
 HASH_SET(_tempHash,"uavCam","");
 HASH_SET(_tempHash,"hCam","");
 HASH_SET(_tempHash,"mapTools",true);
+HASH_SET(_tempHash,"nightMode",2);
+HASH_SET(_tempHash,"brightness",0.9);
 HASH_SET(GVAR(settings),"DK10",_tempHash);
 
 // GD300 settings
 _tempHash = HASH_CREATE;
+HASH_SET(_tempHash,"dlgIfPosition",[]);
+HASH_SET(_tempHash,"dspIfPosition",false);
 HASH_SET(_tempHash,"mode","BFT");
 HASH_SET(_tempHash,"showIconText",true);
 HASH_SET(_tempHash,"mapWorldPos",[]);
@@ -110,6 +121,7 @@ HASH_SET(GVAR(settings),"GD300",_tempHash);
 
 // JV5 settings
 _tempHash = HASH_CREATE;
+HASH_SET(_tempHash,"dlgIfPosition",[]);
 HASH_SET(_tempHash,"mapWorldPos",[]);
 HASH_SET(_tempHash,"showIconText",true);
 HASH_SET(_tempHash,"mapScaleDsp",2);
@@ -124,6 +136,8 @@ HASH_SET(GVAR(settings),"JV5",_tempHash);
 
 // TAD settings
 _tempHash = HASH_CREATE;
+HASH_SET(_tempHash,"dlgIfPosition",[]);
+HASH_SET(_tempHash,"dspIfPosition",false);
 HASH_SET(_tempHash,"mapWorldPos",[]);
 HASH_SET(_tempHash,"showIconText",true);
 HASH_SET(_tempHash,"mapScaleDsp",2);
@@ -142,6 +156,8 @@ HASH_SET(GVAR(settings),"TAD",_tempHash);
 
 // MicroDAGR settings
 _tempHash = HASH_CREATE;
+HASH_SET(_tempHash,"dlgIfPosition",[]);
+HASH_SET(_tempHash,"dspIfPosition",false);
 HASH_SET(_tempHash,"mapWorldPos",[]);
 HASH_SET(_tempHash,"showIconText",true);
 HASH_SET(_tempHash,"mapScaleDsp",0.4);

@@ -85,7 +85,7 @@ class GVAR(GD300_notificationLight) {
     h = pxToScreen_H(61);
 };
 class GVAR(GD300_header): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = "#(argb,8,8,3)color(0,0,0,1)";
     x = pxToScreen_X(GD300_MAP_X);
     y = pxToScreen_Y(GD300_MAP_Y);
@@ -93,7 +93,7 @@ class GVAR(GD300_header): GVAR(RscPicture) {
     h = pxToScreen_H(GD300_OSD_HEADER_H);
 };
 class GVAR(GD300_on_screen_battery): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\battery_ca.paa));
     x = pxToScreen_X(GD300_OSD_X(1));
     y = pxToScreen_Y(GD300_MAP_Y + (GD300_OSD_HEADER_H - GD300_OSD_ICON_STD_SIZE) / 2);
@@ -108,13 +108,13 @@ class GVAR(GD300_on_screen_time): GVAR(GD300_RscText) {
     y = pxToScreen_Y(GD300_MAP_Y + (GD300_OSD_HEADER_H - GD300_OSD_TEXT_STD_SIZE) / 2);
 };
 class GVAR(GD300_on_screen_signalStrength): GVAR(GD300_on_screen_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\signalStrength_ca.paa));
     x = pxToScreen_X(GD300_OSD_X(5) + GD300_OSD_ELEMENT_STD_W - GD300_OSD_ICON_STD_SIZE * 2);
     colorText[] = COLOR_WHITE;
 };
 class GVAR(GD300_on_screen_satellite): GVAR(GD300_on_screen_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = "\a3\ui_f\data\map\Diary\signal_ca.paa";
     x = pxToScreen_X(GD300_OSD_X(5) + GD300_OSD_ELEMENT_STD_W - GD300_OSD_ICON_STD_SIZE);
     colorText[] = COLOR_WHITE;
@@ -175,7 +175,7 @@ class GVAR(GD300_windowsBG): GVAR(RscPicture) {
 
 // Define areas around the screen as interaction areas to allow screen movement
 class GVAR(GD300_movingHandle_T): GVAR(GD300_RscText) {
-    idc = -1;
+    IDC_COUNTER
     moving = 1;
     colorBackground[] = COLOR_TRANSPARENT;
     x = pxToScreen_X(0);
@@ -184,15 +184,18 @@ class GVAR(GD300_movingHandle_T): GVAR(GD300_RscText) {
     h = pxToScreen_H(GD300_MAP_Y);
 };
 class GVAR(GD300_movingHandle_B): GVAR(GD300_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(GD300_MAP_Y + GD300_MAP_H);
     h = pxToScreen_H(GUI_GRID_PX_H - (GD300_MAP_Y + GD300_MAP_H));
 };
 class GVAR(GD300_movingHandle_L): GVAR(GD300_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(GD300_MAP_Y);
     w = pxToScreen_W(GD300_MAP_X);
     h = pxToScreen_H(GD300_MAP_H);
 };
 class GVAR(GD300_movingHandle_R): GVAR(GD300_movingHandle_L) {
+    IDC_COUNTER
     x = pxToScreen_X(GD300_MAP_X + GD300_MAP_W);
     w = pxToScreen_W(GUI_GRID_PX_W - (GD300_MAP_X + GD300_MAP_W));
 };

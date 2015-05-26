@@ -103,12 +103,12 @@ class GVAR(DISPLAY_NAME) {
             tooltip = "Decrease Font";
         };
         class btnBrtInc: GVAR(TAD_BRT_INC) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(incBrightness);
             tooltip = "Increase Brightness";
         };
         class btnBrtDec: GVAR(TAD_BRT_DEC) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(decBrightness);
             tooltip = "Decrease Brightness";
         };
@@ -118,17 +118,17 @@ class GVAR(DISPLAY_NAME) {
             tooltip = "Toggle Text on/off";
         };
         class btnMapType: GVAR(TAD_OSB20) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(toggleMapType);
             tooltip = "Toggle Map Type (F6)";
         };
         class btnMapTools: GVAR(TAD_OSB18) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(toggleMapTools);
             tooltip = "Toggle Map Tools (F5)";
         };
         class btnF7: GVAR(TAD_OSB19) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(centerMapOnPlayerPosition);
             tooltip = "Center Map On Current Position (F7)";
         };

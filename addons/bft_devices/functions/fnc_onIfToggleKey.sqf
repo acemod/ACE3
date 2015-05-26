@@ -20,8 +20,10 @@
 
 private [];
 
+_handled = false;
+
 // exit if we have already an interface starting up
-if (GVAR(ifOpenStart)) exitWith {false};
+if (GVAR(ifOpenStart)) exitWith {_handled};
 
 _previousInterface = "";
 
@@ -35,22 +37,61 @@ if (!isNil QGVAR(ifOpen) && {GVAR(ifOpen) select 0 == _this}) exitWith {
 if !(isNil QGVAR(ifOpen)) then {
     _previousInterface = GVAR(ifOpen) select 1;
     [] call FUNC(ifClose);
+    _handled = true;
 };
 
-_displayName = switch (_this) do {
-    case 0: {QGVAR(GD300_dsp)};
-    case 1: {QGVAR(GD300_dlg)};
-    default {QGVAR(DK10_dlg)}; // JV5_dlg
+// see if player is carrying any devices
+_playerDevices = [ACE_player] call EFUNC(bft,getOwnedDevices);
+
+// get devices for the vehicle the player might be in
+_vehicleDevices =
+    if (ACE_player != vehicle ACE_player) then {
+        [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
+    } else {
+        [];
+    };
+
+// select a device --- the first one for now
+_deviceId = if !(_playerDevices isEqualTo []) then {_playerDevices select 0} else {""};
+
+// bail if we could not retrieve a device ID
+if (_deviceId == "") exitWith {_handled};
+
+// get device data
+_deviceData = [_deviceId] call EFUNC(bft,getDeviceData);
+
+// bail if we could not receive device data
+if (_deviceData isEqualTo []) exitWith {_handled};
+
+// get class name for device
+_className = D_GET_CLASSNAME(_deviceData);
+
+// get uiNamespace variable names
+_displayName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(displayName));
+_dialogName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(dialogName));
+
+// logic to determine which interface to open
+_interfaceName = switch (_this) do {
+    case 0: {
+        if (_displayName != "") then {_displayName} else {_dialogName};
+    };
+    case 1: {
+        if (_dialogName != "") then {_dialogName} else {_displayName};
+    };
+    default {QGVAR(JV5_dlg)}; // ToDo: make dynamic
 };
 
-if (_displayName != "") then {
+if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
     [{
         if (isNil QGVAR(ifOpen)) then {
-            ((_this select 0) + [ACE_player,vehicle ACE_player]) call FUNC(ifOpen);
             [_this select 1] call CBA_fnc_removePerFrameHandler;
+            ((_this select 0 select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
+            
+            // send "bft_deviceOpened" event ---- to be moved to ifOnLoad function
+            ["bft_deviceOpened", [_this select 0 select 1]] call EFUNC(common,localEvent);
         };
-    }, 0, [_this,_displayName] ] call CBA_fnc_addPerFrameHandler;
+    }, 0, [[_this, _interfaceName], _deviceID]] call CBA_fnc_addPerFrameHandler;
 };
 
 true

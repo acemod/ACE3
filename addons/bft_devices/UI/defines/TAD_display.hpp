@@ -46,7 +46,6 @@ class GVAR(DISPLAY_NAME) {
             ### OSD GUI controls ###
         */
         class navModeOrScale: GVAR(TAD_OSD_navModeOrScale) {
-            idc = IDC_OSD_MAP_SCALE;
             x = pxToScreen_X(TAD_OSD_EDGE_R - TAD_OSD_ELEMENT_MODE_W * 2);
             w = pxToScreen_W(TAD_OSD_ELEMENT_MODE_W * 2);
         };

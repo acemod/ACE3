@@ -29,7 +29,7 @@ class GVAR(JV5_background): GVAR(RscPicture) {
     h = GUI_GRID_H;
 };
 class GVAR(JV5_header): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = "#(argb,8,8,3)color(0,0,0,1)";
     x = pxToScreen_X(JV5_MAP_X);
     y = pxToScreen_Y(JV5_MAP_Y);
@@ -37,7 +37,7 @@ class GVAR(JV5_header): GVAR(RscPicture) {
     h = pxToScreen_H(JV5_OSD_HEADER_H);
 };
 class GVAR(JV5_OSD_battery): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\battery_ca.paa));
     x = pxToScreen_X(JV5_OSD_X(1));
     y = pxToScreen_Y(JV5_MAP_Y + (JV5_OSD_HEADER_H - JV5_OSD_ICON_STD_SIZE) / 2);
@@ -52,13 +52,13 @@ class GVAR(JV5_OSD_time): GVAR(JV5_RscText) {
     y = pxToScreen_Y(JV5_MAP_Y + (JV5_OSD_HEADER_H - JV5_OSD_TEXT_STD_SIZE) / 2);
 };
 class GVAR(JV5_OSD_signalStrength): GVAR(JV5_OSD_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\signalStrength_ca.paa));
     x = pxToScreen_X(JV5_OSD_X(5) + JV5_OSD_ELEMENT_STD_W - JV5_OSD_ICON_STD_SIZE * 2);
     colorText[] = COLOR_WHITE;
 };
 class GVAR(JV5_OSD_satellite): GVAR(JV5_OSD_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = "\a3\ui_f\data\map\Diary\signal_ca.paa";
     x = pxToScreen_X(JV5_OSD_X(5) + JV5_OSD_ELEMENT_STD_W - JV5_OSD_ICON_STD_SIZE);
     colorText[] = COLOR_WHITE;

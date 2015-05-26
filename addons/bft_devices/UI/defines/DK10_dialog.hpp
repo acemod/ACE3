@@ -1,8 +1,12 @@
 #define DISPLAY_NAME DK10_dlg
 
-#define GUI_GRID_H  (safezoneH * 1.15)
+#define GUI_GRID_H  (safezoneH * 1.2)
 #define GUI_GRID_W  (GUI_GRID_H * 3/4)
-#define GUI_GRID_X  (safezoneX + (safezoneW - GUI_GRID_W) / 2)
+// since the actual map position is not in the center, we correct for it by shifting it right
+// (GUI_GRID_PX_W - DK10_MAP_W) / 2 - DK10_MAP_X
+// is 96.5, that is the pixel amount we have to shift by, devided by GUI_GRID_PX_W
+// to make it a ratio that we can apply to GUI_GRID_W in order to get a screen value to shift by
+#define GUI_GRID_X  (safezoneX + (safezoneW - GUI_GRID_W) / 2 + (GUI_GRID_W * ((GUI_GRID_PX_W - DK10_MAP_W) / 2 - DK10_MAP_X) / 2048))
 #define GUI_GRID_Y  (safezoneY + (safezoneH - GUI_GRID_H) / 2)
 
 #include "DK10_controls.hpp"
@@ -127,17 +131,17 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class UAVListBG: GVAR(DK10_window_back_TL) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class UAVVidBG1: GVAR(DK10_window_back_TR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class UAVVidBG2: GVAR(DK10_window_back_BR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_B_Y);
                 };
@@ -179,12 +183,12 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class HcamListBG: GVAR(DK10_window_back_TL) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class HcamVidBG: GVAR(DK10_window_back_TR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
@@ -218,7 +222,7 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class msgframe: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Read Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_MESSAGETEXT_FRAME_X);
                     y = pxToGroup_Y(DK10_MESSAGE_MESSAGETEXT_FRAME_Y);
@@ -247,7 +251,7 @@ class GVAR(DISPLAY_NAME) {
                     canModify = 0;
                 };
                 class composeFrame: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Compose Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_COMPOSE_FRAME_X);
                     y = pxToGroup_Y(DK10_MESSAGE_COMPOSE_FRAME_Y);
@@ -357,7 +361,7 @@ class GVAR(DISPLAY_NAME) {
             tooltip = "Toggle Map Textures (F6)";
         };
         class btnF7: GVAR(DK10_btnTrackpad) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(centerMapOnPlayerPosition);
             tooltip = "Center Map On Current Position (F7)";
         };
@@ -378,13 +382,13 @@ class GVAR(DISPLAY_NAME) {
         };
         class btnUP: GVAR(DK10_btnBrtUp) {
             idc = IDC_BTNUP;
-            onMouseButtonDown = QFUNC(decTextSize);
-            tooltip = "Decrease Font";
+            onMouseButtonDown = QFUNC(incTextSize);
+            tooltip = "Increase Font";
         };
         class btnDWN: GVAR(DK10_btnBrtDn) {
             idc = IDC_BTNDWN;
-            onMouseButtonDown = QFUNC(incTextSize);
-            tooltip = "Increase Font";
+            onMouseButtonDown = QFUNC(decTextSize);
+            tooltip = "Decrease Font";
         };
         class btnACT: GVAR(DK10_btnMouse) {
             idc = IDC_BTNACT;

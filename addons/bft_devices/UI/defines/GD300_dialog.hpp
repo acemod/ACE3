@@ -60,14 +60,14 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class menuBackground: GVAR(IGUIBack) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = 0;
                     y = 0;
                     w = pxToScreen_W(GD300_OSD_MENU_W);
                     h = pxToScreen_H(GD300_OSD_MENU_H);
                 };
                 class btnTextonoff: GVAR(RscButton) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Text On/Off"; //--- ToDo: Localize;
                     sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE);
                     x = pxToMenu_X(GD300_OSD_MENU_ELEMENT_X);
@@ -78,35 +78,35 @@ class GVAR(DISPLAY_NAME) {
                     tooltip = "Toggle Text on/off";
                 };
                 class btnIcnSizeup: btnTextonoff {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Icon Size +"; //--- ToDo: Localize;
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(2));
                     onMouseButtonDown = QFUNC(incTextSize);
                     tooltip = "Increase Font";
                 };
                 class btnIconSizedwn: btnTextonoff {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Icon Size -"; //--- ToDo: Localize;
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(3));
                     onMouseButtonDown = QFUNC(decTextSize);
                     tooltip = "Decrease Font";
                 };
                 class btnF5: btnTextonoff {
-                    idc = -1;
+                    IDC_COUNTER
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(7));
                     text = "Map Tools";
                     tooltip = "Toggle Map Tools (F5)";
                     onMouseButtonUp = onMBU(toggleMapTools);
                 };
                 class btnF6: btnTextonoff {
-                    idc = -1;
+                    IDC_COUNTER
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(5));
                     text = "Map Textures";
                     onMouseButtonUp = onMBU(toggleMapType);
                     tooltip = "Toggle Map Textures (F6)";
                 };
                 class btnF7: btnTextonoff {
-                    idc = -1;
+                    IDC_COUNTER
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(6));
                     text = "Center Map";
                     onMouseButtonUp = onMBU(centerMapOnPlayerPosition);
@@ -128,6 +128,7 @@ class GVAR(DISPLAY_NAME) {
                 class msgListbox: GVAR(RscListbox) {
                     idc = IDC_MSG_LIST;
                     style = LB_MULTI;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_MESSAGELIST_X);
                     y = pxToGroup_Y(GD300_MESSAGE_MESSAGELIST_Y);
                     w = pxToScreen_W(GD300_MESSAGE_MESSAGELIST_W);
@@ -135,7 +136,7 @@ class GVAR(DISPLAY_NAME) {
                     onLBSelChanged = onLBSC(MSGlist);
                 };
                 class msgframe: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Read Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(GD300_MESSAGE_MESSAGETEXT_FRAME_X);
                     y = pxToGroup_Y(GD300_MESSAGE_MESSAGETEXT_FRAME_Y);
@@ -148,6 +149,7 @@ class GVAR(DISPLAY_NAME) {
                     style = ST_MULTI;
                     lineSpacing = 0.2;
                     text = "No Message Selected"; //--- ToDo: Localize;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_MESSAGETEXT_X);
                     y = pxToGroup_Y(GD300_MESSAGE_MESSAGETEXT_Y);
                     w = pxToScreen_W(GD300_MESSAGE_MESSAGETEXT_W);
@@ -165,7 +167,7 @@ class GVAR(DISPLAY_NAME) {
                     onMouseButtonUp = onMBU(msgDelete);
                 };
                 class toCompose: GVAR(RscButton) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Compose >>"; //--- ToDo: Localize;
                     tooltip = "Compose Messages";
                     x = pxToGroup_X(GD300_MESSAGE_BUTTON_MODE_X);
@@ -188,7 +190,7 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class composeFrame: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Compose Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(GD300_MESSAGE_COMPOSE_FRAME_X);
                     y = pxToGroup_Y(GD300_MESSAGE_COMPOSE_FRAME_Y);
@@ -198,6 +200,7 @@ class GVAR(DISPLAY_NAME) {
                 class playerlistbox: GVAR(RscListbox) {
                     idc = IDC_MSG_RECIPIENTS;
                     style = LB_MULTI;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_PLAYERLIST_X);
                     y = pxToGroup_Y(GD300_MESSAGE_PLAYERLIST_Y);
                     w = pxToScreen_W(GD300_MESSAGE_PLAYERLIST_W);
@@ -218,13 +221,14 @@ class GVAR(DISPLAY_NAME) {
                     style = ST_MULTI;
                     lineSpacing = 0.2;
                     text = ""; //--- ToDo: Localize;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_COMPOSE_TEXT_X);
                     y = pxToGroup_Y(GD300_MESSAGE_COMPOSE_TEXT_Y);
                     w = pxToScreen_W(GD300_MESSAGE_COMPOSE_TEXT_W);
                     h = pxToScreen_H(GD300_MESSAGE_COMPOSE_TEXT_H);
                 };
                 class toRead: GVAR(RscButton) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Read >>"; //--- ToDo: Localize;
                     tooltip = "Read Messages";
                     x = pxToGroup_X(GD300_MESSAGE_BUTTON_MODE_X);

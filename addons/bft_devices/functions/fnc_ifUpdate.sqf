@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode"];
+private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset"];
 disableSerialization;
 
 if (isNil QGVAR(ifOpen)) exitWith {false};
@@ -61,6 +61,51 @@ if (isNil "_mode") then {
         _value = (_settings select 1) select _forEachIndex;
         if (isNil "_value") exitWith {};
         
+        // ------------ DISPLAY POSITION ------------
+        if (_x == "dspIfPosition") exitWith {
+            _dspIfPosition = _value;
+            
+            if !(_isDialog) then {
+                // get the current position of the background control
+                _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
+                _backgroundPositionX = _backgroundPosition select 0 select 0;
+                _backgroundPositionW = _backgroundPosition select 0 select 2;
+                
+                // get the original position of the background control
+                _backgroundConfigPositionX = _backgroundPosition select 1 select 0;
+                
+                // figure out if we need to do anything
+                if !((_backgroundPositionX != _backgroundConfigPositionX) isEqualTo _dspIfPosition) then {
+                    // calculate offset required to shift position to the opposite
+                    _xOffset = if (_backgroundPositionX == _backgroundConfigPositionX) then {
+                            2 * safeZoneX + safeZoneW - _backgroundPositionW - 2 * _backgroundPositionX
+                        } else {
+                            _backgroundConfigPositionX - _backgroundPositionX
+                        };
+                    [_displayName,[_xOffset,0]] call FUNC(setInterfacePosition);
+                };
+            };
+        };
+        // ------------ DIALOG POSITION ------------
+        if (_x == "dlgIfPosition") exitWith {
+            _backgroundOffset = _value;
+            
+            if (_isDialog) then {
+                if (_backgroundOffset isEqualTo []) then {
+                    _backgroundOffset = if (_interfaceInit) then {
+                            [0,0]
+                        } else {
+                            // reset to defaults
+                            _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
+                            [(_backgroundPosition select 1 select 0) - (_backgroundPosition select 0 select 0),(_backgroundPosition select 1 select 1) - (_backgroundPosition select 0 select 1)]
+                        };
+                };
+                if !(_backgroundOffset isEqualTo [0,0]) then {
+                    // move by offset
+                    [_displayName,_backgroundOffset] call FUNC(setInterfacePosition);
+                };
+            };
+        };
         // ------------ BRIGHTNESS ------------
         // Value ranges from 0 to 1, 0 being off and 1 being full brightness
         if (_x == "brightness") exitWith {
@@ -102,6 +147,13 @@ if (isNil "_mode") then {
                         QUOTE(PATHTOF(UI\images\MicroDAGR_background_night_ca.paa))
                     } else {
                         QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa))
+                    };
+                };
+                if (_displayName in [QGVAR(DK10_dlg)]) exitWith {
+                    if (_nightMode) then {
+                        QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa))
+                    } else {
+                        QUOTE(PATHTOF(UI\images\DK10_background_ca.paa))
                     };
                 };
                 ""
@@ -194,6 +246,21 @@ if (isNil "_mode") then {
                             };
                         };
                     };
+                    // ---------- _NOT_ BFT -----------
+                    if (_isDialog) then {
+                        _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+                        if (count _mapTypes > 1) then {
+                            _targetMapName = [_displayName,"mapType"] call FUNC(getSettings);
+                            _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
+                            _targetMapCtrl = _display displayCtrl _targetMapIDC;
+                            
+                            // If we find the map to be shown, we are switching away from BFT. Lets save map scale and position
+                            if (ctrlShown _targetMapCtrl) then {
+                                _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
+                                [_displayName,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale]],false] call FUNC(setSettings);
+                            };
+                        };
+                    };
                     // ---------- UAV -----------
                     if (_mode == "UAV") exitWith {
                         _displayItemsToShow = [
@@ -203,6 +270,9 @@ if (isNil "_mode") then {
                         ];
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
                         HASH_SET(_settings,"uavListUpdate",true);
+                        if (!_interfaceInit) then {
+                            HASH_SET(_settings,"uavCam",[_displayName,"uavCam"] call FUNC(getSettings));
+                        };
                     };
                     // ---------- HELMET CAM -----------
                     if (_mode == "HCAM") exitWith {
@@ -213,12 +283,16 @@ if (isNil "_mode") then {
                         ];
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                         HASH_SET(_settings,"hCamListUpdate",true);
+                        if (!_interfaceInit) then {
+                            HASH_SET(_settings,"hCam",[_displayName,"hCam"] call FUNC(getSettings));
+                        };
                     };
                     // ---------- MESSAGING -----------
                     if (_mode == "MESSAGE") exitWith {
                         _displayItemsToShow = [IDC_GROUP_MESSAGE];
                         call FUNC(msgGuiLoad);
                         GVAR(rscLayerMailNotification) cutText ["", "PLAIN"];
+                        _btnActCtrl ctrlSetTooltip "";
                     };
                     // ---------- MESSAGING COMPOSE -----------
                     if (_mode == "COMPOSE") exitWith {
