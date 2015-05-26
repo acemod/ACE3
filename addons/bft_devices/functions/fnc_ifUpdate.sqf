@@ -246,6 +246,21 @@ if (isNil "_mode") then {
                             };
                         };
                     };
+                    // ---------- _NOT_ BFT -----------
+                    if (_isDialog) then {
+                        _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+                        if (count _mapTypes > 1) then {
+                            _targetMapName = [_displayName,"mapType"] call FUNC(getSettings);
+                            _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
+                            _targetMapCtrl = _display displayCtrl _targetMapIDC;
+                            
+                            // If we find the map to be shown, we are switching away from BFT. Lets save map scale and position
+                            if (ctrlShown _targetMapCtrl) then {
+                                _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
+                                [_displayName,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale]],false] call FUNC(setSettings);
+                            };
+                        };
+                    };
                     // ---------- UAV -----------
                     if (_mode == "UAV") exitWith {
                         _displayItemsToShow = [
