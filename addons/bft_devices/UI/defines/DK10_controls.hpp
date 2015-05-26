@@ -21,10 +21,10 @@ class GVAR(DK10_RscText): GVAR(RscText) {
     shadow = 0;
 };
 class GVAR(DK10_RscListbox): GVAR(RscListbox) {
-    sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.5);
+    sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.2);
 };
 class GVAR(DK10_RscEdit): GVAR(RscEdit) {
-    sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.5);
+    sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.2);
 };
 class GVAR(DK10_RscButton): GVAR(RscButton) {
     font = GUI_FONT_MONO;

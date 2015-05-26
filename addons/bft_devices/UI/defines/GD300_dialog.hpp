@@ -128,6 +128,7 @@ class GVAR(DISPLAY_NAME) {
                 class msgListbox: GVAR(RscListbox) {
                     idc = IDC_MSG_LIST;
                     style = LB_MULTI;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_MESSAGELIST_X);
                     y = pxToGroup_Y(GD300_MESSAGE_MESSAGELIST_Y);
                     w = pxToScreen_W(GD300_MESSAGE_MESSAGELIST_W);
@@ -148,6 +149,7 @@ class GVAR(DISPLAY_NAME) {
                     style = ST_MULTI;
                     lineSpacing = 0.2;
                     text = "No Message Selected"; //--- ToDo: Localize;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_MESSAGETEXT_X);
                     y = pxToGroup_Y(GD300_MESSAGE_MESSAGETEXT_Y);
                     w = pxToScreen_W(GD300_MESSAGE_MESSAGETEXT_W);
@@ -198,6 +200,7 @@ class GVAR(DISPLAY_NAME) {
                 class playerlistbox: GVAR(RscListbox) {
                     idc = IDC_MSG_RECIPIENTS;
                     style = LB_MULTI;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_PLAYERLIST_X);
                     y = pxToGroup_Y(GD300_MESSAGE_PLAYERLIST_Y);
                     w = pxToScreen_W(GD300_MESSAGE_PLAYERLIST_W);
@@ -218,6 +221,7 @@ class GVAR(DISPLAY_NAME) {
                     style = ST_MULTI;
                     lineSpacing = 0.2;
                     text = ""; //--- ToDo: Localize;
+                    sizeEx = pxToScreen_H(GD300_OSD_TEXT_STD_SIZE * 0.8);
                     x = pxToGroup_X(GD300_MESSAGE_COMPOSE_TEXT_X);
                     y = pxToGroup_Y(GD300_MESSAGE_COMPOSE_TEXT_Y);
                     w = pxToScreen_W(GD300_MESSAGE_COMPOSE_TEXT_W);
