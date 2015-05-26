@@ -27,7 +27,7 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = diag_tickTime;
+GVAR(keyDownTime) = ACE_diagTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];

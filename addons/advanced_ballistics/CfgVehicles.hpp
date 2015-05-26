@@ -17,23 +17,29 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
-            class alwaysSimulateForSnipers {
-                displayName = "$STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_DisplayName";
-                description = "$STR_ACE_AdvancedBallistics_alwaysSimulateForSnipers_Description";
+            class simulateForSnipers {
+                displayName = "$STR_ACE_AdvancedBallistics_simulateForSnipers_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_simulateForSnipers_Description";
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class simulateForGroupMembers {
+                displayName = "$STR_ACE_AdvancedBallistics_simulateForGroupMembers_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_simulateForGroupMembers_Description";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class simulateForEveryone {
+                displayName = "$STR_ACE_AdvancedBallistics_simulateForEveryone_DisplayName";
+                description = "$STR_ACE_AdvancedBallistics_simulateForEveryone_Description";
+                typeName = "BOOL";
+                defaultValue = 0;
             };
             class disabledInFullAutoMode {
                 displayName = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName";
                 description = "$STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description";
                 typeName = "BOOL";
                 defaultValue = 0;
-            };
-            class onlyActiveForLocalPlayers {
-                displayName = "$STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_DisplayName";
-                description = "$STR_ACE_AdvancedBallistics_onlyActiveForLocalPlayers_Description";
-                typeName = "BOOL";
-                defaultValue = 1;
             };
             /* // TODO: We currently do not have firedEHs on vehicles
             class vehicleGunnerEnabled {

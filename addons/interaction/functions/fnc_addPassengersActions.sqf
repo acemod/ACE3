@@ -25,7 +25,7 @@ _actions = [];
 {
     private ["_unit"];
     _unit = _x;
-    if (_unit != _player) then {
+    if ((_unit != _player) && {(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"}) then {
         _actions pushBack
             [
                 [

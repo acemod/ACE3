@@ -86,11 +86,11 @@ _refresh = {
 
 if (_show) then {
     if ({(_x select 0 == _iconId)} count _list == 0) then {
-        _list pushback [_iconId, _icon, _color, time];
+        _list pushback [_iconId, _icon, _color, ACE_time];
     } else {
         {
             if (_x select 0 == _iconId) exitwith {
-                _list set [_foreachIndex, [_iconId, _icon, _color, time]];
+                _list set [_foreachIndex, [_iconId, _icon, _color, ACE_time]];
             };
         } forEach _list;
     };

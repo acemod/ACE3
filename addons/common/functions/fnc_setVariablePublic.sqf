@@ -1,13 +1,13 @@
 /*
  * Author: commy2
  *
- * Sets a public variable, but wait a certain amount of time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
+ * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
  * Argument:
  * 0: Object the variable should be assigned to (Object)
  * 1: Name of the variable (String)
  * 2: Value of the variable (Any)
- * 3: Windup time (Number, optional. Default: 1)
+ * 3: Windup ACE_time (Number, optional. Default: 1)
  *
  * Return value:
  * Nothing.
@@ -38,12 +38,12 @@ if (_idName in _allIdNames) exitWith {};
 
 // when to push the value
 private "_syncTime";
-_syncTime = diag_tickTime + _sync;
+_syncTime = ACE_diagTime + _sync;
 
 // add eventhandler
 [_idName, "onEachFrame", {
     // wait to sync the variable
-    if (diag_tickTime > _this select 2) then {
+    if (ACE_diagTime > _this select 2) then {
         // set value public
         (_this select 0) setVariable [_this select 1, (_this select 0) getVariable (_this select 1), true];
 

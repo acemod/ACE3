@@ -1,17 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_DN_ACE_FRAG">
-            <English>Disable Fragmentation</English>
-            <German>Keine Schrapnelle</German>
-            <Czech>Zakázat fragmentaci granátů</Czech>
-            <Spanish>Desactivar fragmentación</Spanish>
-            <Polish>Wyłącz fragmentację odłamków</Polish>
-            <Russian>Выключить разлёт осколков</Russian>
-            <French>Désactive la fragmentation</French>
-            <Hungarian>Repeszek letiltása</Hungarian>
-            <Italian>Disattiva la frammentazione</Italian>
-            <Portuguese>Desabilitar Fragmentação</Portuguese>
+        <Key ID="STR_ACE_frag_EnableFrag">
+            <English>Fragmentation Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_frag_EnableFrag_Desc">
+            <English>Enable the ACE Fragmentation Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_frag_EnableSpall">
+            <English>Spalling Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_frag_EnableSpall_Desc">
+            <English>Enable the ACE Spalling Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_frag_MaxTrack">
+            <English>Maximum Projectiles Tracked</English>
+        </Key>
+        <Key ID="STR_ACE_frag_MaxTrack_Desc">
+            <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( >200 rounds in the air at once)</English>
+        </Key>
+        <Key ID="STR_ACE_frag_MaxTrackPerFrame">
+            <English>Maximum Projectiles Per Frame</English>
+        </Key>
+        <Key ID="STR_ACE_frag_MaxTrackPerFrame_Desc">
+            <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
+        </Key>
+        <Key ID="STR_ACE_frag_EnableDebugTrace">
+            <English>(SP Only) Frag/Spall Debug Tracing</English>
+        </Key>
+        <Key ID="STR_ACE_frag_EnableDebugTrace_Desc">
+            <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
         </Key>
     </Package>
 </Project>

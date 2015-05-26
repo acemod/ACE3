@@ -75,7 +75,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
     };
-    class IEDLandBig_Remote_Ammo: IEDUrbanBig_Remote_Ammo {
+    class IEDLandBig_Remote_Ammo: PipeBombBase {
         mineTrigger = "RangeTrigger";
         triggerWhenDestroyed = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
@@ -85,7 +85,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
     };
-    class IEDLandSmall_Remote_Ammo: IEDUrbanSmall_Remote_Ammo {
+    class IEDLandSmall_Remote_Ammo: PipeBombBase {
         mineTrigger = "RangeTrigger";
         triggerWhenDestroyed = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};

@@ -6,13 +6,13 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
 Main module which acts as the ACE core module.
 
 
-## Dependencies
+## 2. Dependencies
 
-Arma 3 and CBA
+`Arma 3` and `CBA (RC6 minimum)`
 
-Note: Note: The Main module is required by all other modules. Do not disable it!
+Note: The Main module is required by all other modules. Do not disable it!

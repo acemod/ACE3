@@ -64,6 +64,7 @@ _unit setvariable [QGVAR(hasLostBlood), 0, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
 _unit setvariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
+_unit setvariable [QGVAR(painSuppress), 0, true];
 
 // medication
 _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];

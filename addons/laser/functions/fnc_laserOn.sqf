@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_uuid", "_args"];
-_uuid = format["%1%2%3", floor diag_tickTime, floor random 1000, floor random 10000];
+_uuid = format["%1%2%3", floor ACE_diagTime, floor random 1000, floor random 10000];
 _args = [_uuid, _this];
 ["laser_laserOn", _args] call EFUNC(common,globalEvent);
 _uuid;
