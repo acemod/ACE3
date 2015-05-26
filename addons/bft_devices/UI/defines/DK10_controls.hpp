@@ -39,7 +39,7 @@ class GVAR(DK10_background): GVAR(RscPicture) {
     h = GUI_GRID_H;
 };
 class GVAR(DK10_header): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = "#(argb,8,8,3)color(0,0,0,1)";
     x = pxToScreen_X(DK10_MAP_X);
     y = pxToScreen_Y(DK10_MAP_Y);
@@ -47,7 +47,7 @@ class GVAR(DK10_header): GVAR(RscPicture) {
     h = pxToScreen_H(DK10_OSD_HEADER_H);
 };
 class GVAR(DK10_OSD_battery): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\battery_ca.paa));
     x = pxToScreen_X(DK10_OSD_X(1));
     y = pxToScreen_Y(DK10_MAP_Y + (DK10_OSD_HEADER_H - DK10_OSD_ICON_STD_SIZE) / 2);
@@ -62,13 +62,13 @@ class GVAR(DK10_OSD_time): GVAR(DK10_RscText) {
     y = pxToScreen_Y(DK10_MAP_Y + (DK10_OSD_HEADER_H - DK10_OSD_TEXT_STD_SIZE) / 2);
 };
 class GVAR(DK10_OSD_signalStrength): GVAR(DK10_OSD_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = QUOTE(PATHTOF(UI\icons\signalStrength_ca.paa));
     x = pxToScreen_X(DK10_OSD_X(7) + DK10_OSD_ELEMENT_STD_W - DK10_OSD_ICON_STD_SIZE * 2);
     colorText[] = COLOR_WHITE;
 };
 class GVAR(DK10_OSD_satellite): GVAR(DK10_OSD_battery) {
-    idc = -1;
+    IDC_COUNTER
     text = "\a3\ui_f\data\map\Diary\signal_ca.paa";
     x = pxToScreen_X(DK10_OSD_X(7) + DK10_OSD_ELEMENT_STD_W - DK10_OSD_ICON_STD_SIZE);
     colorText[] = COLOR_WHITE;
@@ -191,7 +191,7 @@ class GVAR(DK10_loadingtxt): GVAR(DK10_RscText) {
 };
 // Define areas around the screen as interaction areas to allow screen movement
 class GVAR(DK10_movingHandle_T): GVAR(DK10_RscText) {
-    idc = -1;
+    IDC_COUNTER
     moving = 1;
     colorBackground[] = COLOR_TRANSPARENT;
     x = pxToScreen_X(0);
@@ -200,15 +200,18 @@ class GVAR(DK10_movingHandle_T): GVAR(DK10_RscText) {
     h = pxToScreen_H(DK10_MAP_Y);
 };
 class GVAR(DK10_movingHandle_B): GVAR(DK10_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(DK10_MAP_Y + DK10_MAP_H);
     h = pxToScreen_H(GUI_GRID_PX_H - (DK10_MAP_Y + DK10_MAP_H));
 };
 class GVAR(DK10_movingHandle_L): GVAR(DK10_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(DK10_MAP_Y);
     w = pxToScreen_W(DK10_MAP_X);
     h = pxToScreen_H(DK10_MAP_H);
 };
 class GVAR(DK10_movingHandle_R): GVAR(DK10_movingHandle_L) {
+    IDC_COUNTER
     x = pxToScreen_X(DK10_MAP_X + DK10_MAP_W);
     w = pxToScreen_W(GUI_GRID_PX_W - (DK10_MAP_X + DK10_MAP_W));
 };

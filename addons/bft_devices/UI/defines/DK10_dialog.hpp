@@ -127,17 +127,17 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class UAVListBG: GVAR(DK10_window_back_TL) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class UAVVidBG1: GVAR(DK10_window_back_TR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class UAVVidBG2: GVAR(DK10_window_back_BR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_B_Y);
                 };
@@ -179,12 +179,12 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class HcamListBG: GVAR(DK10_window_back_TL) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
                 class HcamVidBG: GVAR(DK10_window_back_TR) {
-                    idc = -1;
+                    IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
                 };
@@ -218,7 +218,7 @@ class GVAR(DISPLAY_NAME) {
             class Scrollbar {};
             class controls {
                 class msgframe: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Read Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_MESSAGETEXT_FRAME_X);
                     y = pxToGroup_Y(DK10_MESSAGE_MESSAGETEXT_FRAME_Y);
@@ -247,7 +247,7 @@ class GVAR(DISPLAY_NAME) {
                     canModify = 0;
                 };
                 class composeFrame: GVAR(RscFrame) {
-                    idc = -1;
+                    IDC_COUNTER
                     text = "Compose Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_COMPOSE_FRAME_X);
                     y = pxToGroup_Y(DK10_MESSAGE_COMPOSE_FRAME_Y);
@@ -357,7 +357,7 @@ class GVAR(DISPLAY_NAME) {
             tooltip = "Toggle Map Textures (F6)";
         };
         class btnF7: GVAR(DK10_btnTrackpad) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(centerMapOnPlayerPosition);
             tooltip = "Center Map On Current Position (F7)";
         };

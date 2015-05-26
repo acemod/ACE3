@@ -16,3 +16,7 @@
 
 // Calling onDraw for BFT
 #define onDrawBFT(PARAM) QUOTE([ARR_2(PARAM,_this)] call FUNC(ifOnDrawBFT))
+
+// set IDC counter to 0
+__EXEC(_idc = 0);
+#define IDC_COUNTER __EXEC(_idc = _idc + 1); idc = __EVAL(_idc);

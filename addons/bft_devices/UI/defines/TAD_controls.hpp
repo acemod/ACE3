@@ -495,6 +495,7 @@ class GVAR(TAD_RscMapControl_BLACK): GVAR(TAD_RscMapControl) {
     };
 };
 class GVAR(TAD_Map_Background): GVAR(RscText) {
+    IDC_COUNTER
     x = pxToScreen_X(TAD_MAP_X);
     y = pxToScreen_Y(TAD_MAP_Y);
     w = pxToScreen_W(TAD_MAP_W);
@@ -529,12 +530,12 @@ class GVAR(TAD_OSD_hookDir): GVAR(TAD_OSD_hookGrid) {
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 8);
 };
 class GVAR(TAD_OSD_hookToggleIconBackground): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET - TAD_OSD_ELEMENT_STD_W);
     y = pxToScreen_Y(TAD_OSD_OSB18_Y - TAD_OSD_ELEMENT_STD_H   / 2);
 };
 class GVAR(TAD_OSD_hookToggleIcon): GVAR(TAD_upDownArrow) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET - TAD_OSD_ELEMENT_STD_W);
     y = pxToScreen_Y(TAD_OSD_OSB18_Y - TAD_OSD_ICON_H / 2);
 };
@@ -560,7 +561,7 @@ class GVAR(TAD_OSD_currentElevation): GVAR(TAD_OSD_currentDirection) {
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 5);
 };
 class GVAR(TAD_OSD_centerMapText): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET);
     y = pxToScreen_Y(TAD_OSD_OSB19_Y - TAD_OSD_ELEMENT_STD_H / 2);
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 3);
@@ -576,7 +577,7 @@ class GVAR(TAD_loadingtxt): GVAR(TAD_RscText) {
     h = pxToScreen_H(TAD_MAP_H);
 };
 class GVAR(TAD_OSD_cursor): GVAR(RscPicture) {
-    idc = -1;
+    IDC_COUNTER
     text = "\a3\ui_f\data\IGUI\Cfg\WeaponCursors\cursoraimon_gs.paa";
         // "\a3\ui_f\data\map\Markers\Military\destroy_ca.paa";
         // "\a3\ui_f\data\IGUI\Cfg\WeaponCursors\cursoraimon_gs.paa"
@@ -595,7 +596,7 @@ class GVAR(TAD_OSD_navModeOrScale): GVAR(TAD_RscText) {
     sizeEx = pxToScreen_H(TAD_OSD_TEXT_MODE_SIZE);
 };
 class GVAR(TAD_OSD_modeTAD): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_OSB15_X - TAD_OSD_ELEMENT_STD_W * 3 / 2);
     y = pxToScreen_Y(TAD_OSD_EDGE_B - TAD_OSD_ELEMENT_STD_H);
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 3);
@@ -604,17 +605,17 @@ class GVAR(TAD_OSD_modeTAD): GVAR(TAD_RscText) {
     text = "TAD";
 };
 class GVAR(TAD_OSD_txtToggleIconBg): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_R - TAD_OSD_OSB_TEXT_OFFSET);
     y = pxToScreen_Y(TAD_OSD_OSB10_Y - TAD_OSD_ELEMENT_STD_H / 2);
 };
 class GVAR(TAD_OSD_txtToggleIcon): GVAR(TAD_upDownArrow) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_R - TAD_OSD_OSB_TEXT_OFFSET);
     y = pxToScreen_Y(TAD_OSD_OSB10_Y - TAD_OSD_ICON_H / 2);
 };
 class GVAR(TAD_OSD_txtToggleText1): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_R - TAD_OSD_OSB_TEXT_OFFSET - TAD_OSD_ELEMENT_STD_W * 3);
     y = pxToScreen_Y(TAD_OSD_OSB10_Y - TAD_OSD_ELEMENT_STD_H);
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 3);
@@ -639,17 +640,17 @@ class GVAR(TAD_OSD_currentGrid): GVAR(TAD_RscText) {
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 6);
 };
 class GVAR(TAD_OSD_mapToggleIconBg): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET - TAD_OSD_ELEMENT_STD_W);
     y = pxToScreen_Y(TAD_OSD_OSB20_Y - TAD_OSD_ELEMENT_STD_H / 2);
 };
 class GVAR(TAD_OSD_mapToggleIcon): GVAR(TAD_upDownArrow) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET - TAD_OSD_ELEMENT_STD_W);
     y = pxToScreen_Y(TAD_OSD_OSB20_Y - TAD_OSD_ICON_H / 2);
 };
 class GVAR(TAD_OSD_mapToggleText1): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     x = pxToScreen_X(TAD_OSD_EDGE_L + TAD_OSD_OSB_TEXT_OFFSET);
     y = pxToScreen_Y(TAD_OSD_OSB20_Y - TAD_OSD_ELEMENT_STD_H);
     w = pxToScreen_W(TAD_OSD_ELEMENT_STD_W * 3);
@@ -664,7 +665,7 @@ class GVAR(TAD_OSD_mapToggleText2): GVAR(TAD_RscText) {
 
 // Define areas around the screen as interaction areas to allow screen movement
 class GVAR(TAD_movingHandle_T): GVAR(TAD_RscText) {
-    idc = -1;
+    IDC_COUNTER
     moving = 1;
     colorBackground[] = COLOR_TRANSPARENT;
     x = pxToScreen_X(0);
@@ -673,15 +674,18 @@ class GVAR(TAD_movingHandle_T): GVAR(TAD_RscText) {
     h = pxToScreen_H(TAD_MAP_Y);
 };
 class GVAR(TAD_movingHandle_B): GVAR(TAD_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(TAD_MAP_Y + TAD_MAP_H);
     h = pxToScreen_H(GUI_GRID_PX_H - (TAD_MAP_Y + TAD_MAP_H));
 };
 class GVAR(TAD_movingHandle_L): GVAR(TAD_movingHandle_T) {
+    IDC_COUNTER
     y = pxToScreen_Y(TAD_MAP_Y);
     w = pxToScreen_W(TAD_MAP_X);
     h = pxToScreen_H(TAD_MAP_H);
 };
 class GVAR(TAD_movingHandle_R): GVAR(TAD_movingHandle_L) {
+    IDC_COUNTER
     x = pxToScreen_X(TAD_MAP_X + TAD_MAP_W);
     w = pxToScreen_W(GUI_GRID_PX_W - (TAD_MAP_X + TAD_MAP_W));
 };

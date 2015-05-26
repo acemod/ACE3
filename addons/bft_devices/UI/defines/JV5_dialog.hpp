@@ -88,7 +88,7 @@ class GVAR(DISPLAY_NAME) {
             tooltip = "Toggle Map Textures (F6)";
         };
         class btnF7: GVAR(JV5_btnF7) {
-            idc = -1;
+            IDC_COUNTER
             onMouseButtonUp = onMBU(centerMapOnPlayerPosition);
             tooltip = "Center Map On Current Position (F7)";
         };
