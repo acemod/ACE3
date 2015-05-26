@@ -81,7 +81,7 @@ _resistance = _target getvariable [QGVAR(peripheralResistance), 100];
 _resistance = _resistance + _viscosityChange;
 _target setvariable [QGVAR(peripheralResistance), _resistance max 0];
 
-// Call back to ensure that the medication is decreased over time
+// Call back to ensure that the medication is decreased over ACE_time
 [_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

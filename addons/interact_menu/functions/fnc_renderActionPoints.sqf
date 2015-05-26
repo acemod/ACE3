@@ -25,7 +25,7 @@ _fnc_renderNearbyActions = {
     #define MAXINTERACTOBJECTS 3
 
     GVAR(foundActions) = [];
-    GVAR(lastTimeSearchedActions) = diag_tickTime;
+    GVAR(lastTimeSearchedActions) = ACE_diagTime;
 
     _numInteractObjects = 0;
     _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
@@ -125,7 +125,7 @@ GVAR(collectedActionPoints) resize 0;
 if (GVAR(openedMenuType) == 0) then {
 
     if (vehicle ACE_player == ACE_player) then {
-        if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
+        if (ACE_diagTime > GVAR(lastTimeSearchedActions) + 0.20) then {
             // Once every 0.2 secs, collect nearby objects active and visible action points and render them
             call _fnc_renderNearbyActions;
         } else {

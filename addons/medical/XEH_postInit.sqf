@@ -86,7 +86,7 @@ GVAR(effectPainCC) = [
 
 // Initialize Other Variables
 GVAR(effectBlind) = false;
-GVAR(effectTimeBlood) = time;
+GVAR(effectTimeBlood) = ACE_time;
 
 // MAIN EFFECTS LOOP
 [{
@@ -133,8 +133,8 @@ GVAR(effectTimeBlood) = time;
 
     _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < time) then {
-        GVAR(effectTimeBlood) = time;
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < ACE_time) then {
+        GVAR(effectTimeBlood) = ACE_time;
         [600 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
@@ -150,8 +150,8 @@ GVAR(effectTimeBlood) = time;
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 
-GVAR(lastHeartBeat) = time;
-GVAR(lastHeartBeatSound) = time;
+GVAR(lastHeartBeat) = ACE_time;
+GVAR(lastHeartBeatSound) = ACE_time;
 
 // HEARTRATE BASED EFFECTS
 [{
@@ -164,8 +164,8 @@ GVAR(lastHeartBeatSound) = time;
     if (_heartRate <= 0) exitwith {};
     _interval = 60 / (_heartRate min 50);
 
-    if (time > GVAR(lastHeartBeat) + _interval) then {
-        GVAR(lastHeartBeat) = time;
+    if (ACE_time > GVAR(lastHeartBeat) + _interval) then {
+        GVAR(lastHeartBeat) = ACE_time;
 
         // Pain effect
         _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
@@ -219,8 +219,8 @@ GVAR(lastHeartBeatSound) = time;
 
     if (GVAR(level) >= 2 && {_heartRate > 0}) then {
         _minTime = 60 / _heartRate;
-        if (time - GVAR(lastHeartBeatSound) > _minTime) then {
-            GVAR(lastHeartBeatSound) = time;
+        if (ACE_time - GVAR(lastHeartBeatSound) > _minTime) then {
+            GVAR(lastHeartBeatSound) = ACE_time;
             // Heart rate sound effect
             if (_heartRate < 60) then {
                 _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
@@ -252,7 +252,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 [
     {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0] - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9)},
+    {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
     {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
     {((_this select 0) getvariable [QGVAR(inReviveState), false])},
     {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
@@ -267,7 +267,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 // Item Event Handler
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
-}] call EFUNC(common,addEventHandler);§
+}] call EFUNC(common,addEventHandler);
 
 // Networked litter
 [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);

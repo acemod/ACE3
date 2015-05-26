@@ -54,6 +54,7 @@
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
+        </Key>
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
             <Polish>Zawsze akt. dla czł. grupy</Polish>
