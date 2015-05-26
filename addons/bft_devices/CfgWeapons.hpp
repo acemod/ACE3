@@ -50,8 +50,8 @@ class CfgWeapons {
 
         EGVAR(bft,magazineItem) = "ACE_MicroDAGR_xMagazine";
 
-        GVAR(displayName) = GVAR(MicroDAGR_dsp);
-        GVAR(dialogName) = GVAR(MicroDAGR_dlg);
+        //GVAR(displayName) = GVAR(MicroDAGR_dsp);
+        //GVAR(dialogName) = GVAR(MicroDAGR_dlg);
     };
 
     class ACE_HelmetCam: ACE_ItemCore {
