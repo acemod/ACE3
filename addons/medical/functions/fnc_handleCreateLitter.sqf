@@ -28,12 +28,12 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     } forEach (_oldLitter select 1);
 };
 
-GVAR(allCreatedLitter) pushBack [time, [_litterObject]];
+GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
     [{
         {
-            if (time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
+            if (ACE_time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
                 {
                     deleteVehicle _x;
                 } forEach (_x select 1);

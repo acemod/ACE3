@@ -33,12 +33,12 @@ switch (_this) do {
                 case 2: { // Auto set
                     GVAR(RefHeading) = (getDir ACE_player) % 360;
                     GVAR(referenceHeadingMenu) = 0;
-                    GVAR(headingSetDisplayTimer) = diag_tickTime;
+                    GVAR(headingSetDisplayTimer) = ACE_diagTime;
                 };
                 case 3: { // Manual set
                     GVAR(RefHeading) = GVAR(TmpHeading);
                     GVAR(referenceHeadingMenu) = 0;
-                    GVAR(headingSetDisplayTimer) = diag_tickTime;
+                    GVAR(headingSetDisplayTimer) = ACE_diagTime;
                 };
             };
         };
@@ -73,13 +73,13 @@ switch (_this) do {
             GVAR(MinAvgMax) = !GVAR(MinAvgMax);
         } else {
             if (GVAR(referenceHeadingMenu) == 3) then {
-                if (diag_tickTime - GVAR(manualSetCooldown) < 0.2) then {
+                if (ACE_diagTime - GVAR(manualSetCooldown) < 0.2) then {
                     GVAR(TmpHeading) = GVAR(TmpHeading) - 10;
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) - 1;
                 };
                 GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
-                GVAR(manualSetCooldown) = diag_tickTime;
+                GVAR(manualSetCooldown) = ACE_diagTime;
             };
         };
     };
@@ -88,13 +88,13 @@ switch (_this) do {
             GVAR(MinAvgMax) = !GVAR(MinAvgMax);
         } else {
             if (GVAR(referenceHeadingMenu) == 3) then {
-                if (diag_tickTime - GVAR(manualSetCooldown) < 0.2) then {
+                if (ACE_diagTime - GVAR(manualSetCooldown) < 0.2) then {
                     GVAR(TmpHeading) = GVAR(TmpHeading) + 10;
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) + 1;
                 };
                 GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
-                GVAR(manualSetCooldown) = diag_tickTime;
+                GVAR(manualSetCooldown) = ACE_diagTime;
             };
         };
     };

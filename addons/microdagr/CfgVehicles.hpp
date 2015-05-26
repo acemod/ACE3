@@ -66,11 +66,24 @@ class CfgVehicles {
             description = "$STR_ACE_Dagr_Module_Description";
         };
     };
-    
+
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_microDAGR,10);
+        };
+    };
+
+    class Item_Base_F;
+    class ACE_microDAGR_Item: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "$STR_ACE_microdagr_itemName";
+        author = "$STR_ACE_Common_ACETeam";
+        vehicleClass = "Items";
+        icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
+        class TransportItems {
+            MACRO_ADDITEM(ACE_microDAGR,1);
         };
     };
 };

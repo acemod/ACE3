@@ -14,7 +14,7 @@ GVAR(ShowNamesTime) = -10;
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    GVAR(ShowNamesTime) = time;
+    GVAR(ShowNamesTime) = ACE_time;
     if (call FUNC(canShow)) then{ call FUNC(doShow); };
     // Return false so it doesn't block other actions
     false
