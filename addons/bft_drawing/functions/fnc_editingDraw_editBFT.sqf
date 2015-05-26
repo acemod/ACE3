@@ -22,8 +22,7 @@ if (count (GVAR(selection) select 1) == 0) exitWith {(_this select 0) ctrlRemove
 
 // Draw animation, but wait first for the initial zoom
 if (ctrlMapAnimDone _ctrl) then {
-    _selection = GVAR(selection);
-    _pos = DEV_GETPOSITION(_selection);
+    _pos = AD_GET_POSITION(GVAR(selection));
     _ctrl ctrlMapAnimAdd [0,0.05,_pos];
     ctrlMapAnimCommit _ctrl;
 };

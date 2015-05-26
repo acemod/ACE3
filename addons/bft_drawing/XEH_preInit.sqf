@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+PREP(doBFTDraw);
+
 // prepare functions
 // event handler functions
 PREP(editingDraw);

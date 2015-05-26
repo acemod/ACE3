@@ -1,19 +1,8 @@
-#include "\z\ace\addons\blueforcetracking\script_component.hpp"
+#include "\z\ace\addons\bft_drawing\script_component.hpp"
+#include "\z\ace\addons\bft\device_getters.hpp"
 
 // bft data addon macros
 #define     BFT_DATA_ADDON              bft
-
-// I use them as constant getters so indexes won't get messed up
-#define     DEV_GETDEVICEID(element)    (element select 0)
-#define     DEV_GETCALLSIGN(element)    (element select 1)
-#define     DEV_GETTYPEICON(element)    (element select 2)
-#define     DEV_GETSIZEICON(element)    (element select 3)
-#define     DEV_GETPOSITION(element)    (element select 4)
-#define     DEV_GETENCRYPTION(element)  (element select 5)
-#define     DEV_GETID(element)          (element select 6)
-#define     DEV_GETDEVICE(element)      (element select 7)
-#define     DEV_GETTYPE(element)        ("type name not implemented jet")
-#define     DEV_GETSIZE(element)        ("size name not implemented jet")
 
 // data for blueforce tracking icons
 #define     STRINGXMLFORMAT(token)      ace_##COMPONENT##_##token

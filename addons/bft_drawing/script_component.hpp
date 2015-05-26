@@ -1,4 +1,4 @@
-#define COMPONENT blueforcetracking
+#define COMPONENT bft_drawing
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_BLUEFORCETRACKING
