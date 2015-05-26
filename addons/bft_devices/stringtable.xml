@@ -73,5 +73,11 @@
         <Key ID="STR_ACE_BFT_Devices_IfZoomOutKey_ToolTip">
             <English>Zoom Out on map while BFT device is in small overlay mode</English>
         </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTogglePositionKey_Name">
+            <English>Toggle Interface Position</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTogglePositionKey_ToolTip">
+            <English>Toggle overlay mode interface position from left to right or reset interactive mode interface position to default</English>
+        </Key>
     </Package>
 </Project>
