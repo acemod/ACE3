@@ -24,7 +24,7 @@ _seekerParams = _args select 3;
 _stateParams = _args select 4;
 
 _lastRunTime = _stateParams select 0;
-_runtimeDelta = diag_tickTime - _lastRunTime;
+_runtimeDelta = ACE_diagTime - _lastRunTime;
 _adjustTime = 1;
 
 if(accTime > 0) then {
@@ -100,7 +100,7 @@ _PS setDropInterval 3.0;
 hintSilent format["d: %1", _distanceToTarget];
 #endif
 
-_stateParams set[0, diag_tickTime];
+_stateParams set[0, ACE_diagTime];
 
 _args set[4, _stateParams];
 _this set[0, _args];

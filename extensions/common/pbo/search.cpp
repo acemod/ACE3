@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #include "search.hpp"
 #include <sstream>
 #include <iterator>
@@ -299,3 +301,5 @@ namespace ace {
         }
     }
 }
+
+#endif

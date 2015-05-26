@@ -50,10 +50,16 @@ class ACE_Medical_Actions {
             displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
             requiredMedic = 1;
             treatmentTime = 20;
-            items[] = {{"ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250"}};
+            items[] = {"ACE_bloodIV"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
+        };
+        class BloodIV_500: BloodIV {
+            items[] = {"ACE_bloodIV_500"};
+        };
+        class BloodIV_250: BloodIV {
+            items[] = {"ACE_bloodIV_250"};
         };
         class BodyBag: Bandage {
             displayName = "$STR_ACE_Medical_PlaceInBodyBag";
@@ -804,11 +810,11 @@ class ACE_Medical_Advanced {
 
             // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 1;
+                painReduce = 15;
                 hrIncreaseLow[] = {-10, -30, 35};
                 hrIncreaseNormal[] = {-10, -50, 40};
                 hrIncreaseHigh[] = {-10, -40, 50};
-                timeInSystem = 500;
+                timeInSystem = 900;
                 maxDose = 4;
                 inCompatableMedication[] = {};
                 viscosityChange = 10;
@@ -824,9 +830,9 @@ class ACE_Medical_Advanced {
             };
             class Atropine {
                 painReduce = 0;
-                hrIncreaseLow[] = {20, 30, 15};
-                hrIncreaseNormal[] = {-10, -50, 20};
-                hrIncreaseHigh[] = {-10, -40, 10};
+                hrIncreaseLow[] = {-5, -7, 15};
+                hrIncreaseNormal[] = {-10, -30, 20};
+                hrIncreaseHigh[] = {-10, -20, 10};
                 timeInSystem = 120;
                 maxDose = 6;
                 inCompatableMedication[] = {};

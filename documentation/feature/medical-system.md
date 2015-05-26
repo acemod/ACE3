@@ -67,7 +67,7 @@ In order to stop the bleeding, all injuries on every bodypart requires treatment
 While a unit is bleeding however, the blood volume decreases which will result in a change of vitals.  Depending on the factors such as current blood volume, the blood loss rate, medication used, the blood pressure will start to drop. To counter this drop, also based upon the previously mentioned factors and others, the heart rate will adjust accordingly to attempt to keep blood pressure at safe levels. This means that for any patient it is required to keep an eye on the vitals. This is done through the interaction system by selecting check pulse or blood pressure on either the arms or head.
 
 #### 3.1.3 Medication
-To stabalize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
+To stabilize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
 
 * Atropine
 * Morphine
@@ -75,7 +75,7 @@ To stabalize the vitals and to counter for example pain, a player/medic can use 
 
 Atropine is a vagolytic and anticholinergic drug which in low dosages reduces heart rate but in high dosages increases it, countering effects of organophosphate poisoning (in NBC scenarios; anticholinesterase poisoning) and symptomatic bradycardia (in post-ROSC care and resuscitative medicine).
 
-Morphine is used to alleviate large amounts of pain. Has an effect similar to Heroin due to its opiate properties. Must only ever be given once, and only when bleeding has been reduced to a minimum. Morphine must never be given to a casualty with a low heart rate, as it can stop the heart.
+Morphine is used to alleviate large amounts of pain. Has an effect similar to Heroin due to its opiate properties. Must only ever be given once, and only when bleeding has been reduced to a minimum. Morphine must never be given to a casualty with a low heart rate, as it can stop the heart. It's effect lasts up to 15 minutes.
 
 Epinephrine is used to increase heart rate and blood pressure and alleviate unconsciousness. Epinephrine is a synthetic form of Adrenaline, which is naturally produced in the body. It can also be applied to counter-act the effects of Atropine. Be careful though, as it may only be given once.
 
@@ -107,7 +107,7 @@ Advanced medical system brings more different types of wounds, each with its own
 * Cut wounds
   * Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
   * Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs
-  * Effects: pain - light, w zależności od głębokości i szerokości rany dosyć szybkie wykrwawianie się.
+  * Effects: pain - light, bleeding - speed depends on lenght and size of the woundę.
 
 * Lacerations
   * Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
@@ -178,7 +178,7 @@ All bandage types weights about 50 grams each.
   * Can only be applied on limbs
   * Stops bleeding from wounds
   * Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds
-  * If not taken off for a while it will cause pain to patient, can yield to death that way
+  * If not taken off for a while it will cause pain to patient, can cause death that way
 
 #### 3.1.6 Transfuzions
 In case of blood loss, blood could be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.

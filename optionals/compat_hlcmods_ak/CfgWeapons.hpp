@@ -58,7 +58,8 @@ class CfgWeapons
     class HLC_Optic_PSO1 : optic_dms {
         ACE_ScopeAdjust_Vertical[] = { 0, 0 };
         ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
-        ACE_ScopeAdjust_Increment = 0.5;
+        ACE_ScopeAdjust_VerticalIncrement = 0.0;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.5;
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
@@ -71,6 +72,5 @@ class CfgWeapons
     class HLC_Optic_1p29 : HLC_Optic_PSO1 {
         ACE_ScopeAdjust_Vertical[] = {};
         ACE_ScopeAdjust_Horizontal[] = {};
-        ACE_ScopeAdjust_Increment = 0;
     };
 };
