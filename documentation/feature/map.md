@@ -6,21 +6,28 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Map styling
+Better map styling (contours, legend, hiding bushes and trees, etc).
 
-### Sub-feature 2
-Short description of sub-feature 2.
+### 1.2 Map zoom level (optional)
+The mission maker / server owner can restrict the maximum zoom level of the map.
+
+### 1.3 Map shake (optional)
+While walking your map will move all around the place.
+
+### 1.4 Map illumination (optional)
+The map illumination will be the same as your surroundings meaning that in a dark night you'll either need a lightsource or NVGs to see your map.
+
+### 1.5 Blufor tracker (optional)
+With blufor tracker you'll never loose your leader anymore, it marks the position of your faction group leader on the map.
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+- IMPORTANT NOTICE: The (optional) features above CAN be restricted by the mission maker / server owner. User experience may vary.
 
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

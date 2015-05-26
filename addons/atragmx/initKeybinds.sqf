@@ -2,7 +2,10 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
-    if (GVAR(active)) exitWith {false};
+    if (GVAR(active)) exitWith {
+        closeDialog 0;
+        false
+    };
     // Statement
     [] call FUNC(create_dialog);
     false

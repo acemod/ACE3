@@ -103,7 +103,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                 GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
-                //PARTIALRECOVERY - start decreasing effect over time
+                //PARTIALRECOVERY - start decreasing effect over ACE_time
                 [{
                     PARAMS_1(_strength);
                     GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];

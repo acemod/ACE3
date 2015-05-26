@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
-    systemChat format ["%1 startCarryPFH running", time];
+    systemChat format ["%1 startCarryPFH running", ACE_time];
 #endif
 
 private ["_unit", "_target", "_timeOut"];
@@ -24,13 +24,13 @@ if ((!([_target] call EFUNC(common,isAlive))) || {(_unit distance _target) > 10}
 
 // handle persons vs objects
 if (_target isKindOf "CAManBase") then {
-    if (time > _timeOut) exitWith {
+    if (ACE_time > _timeOut) exitWith {
         [_unit, _target] call FUNC(carryObject);
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 } else {
-    if (time > _timeOut) exitWith {
+    if (ACE_time > _timeOut) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         // drop if in timeout

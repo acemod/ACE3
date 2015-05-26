@@ -321,6 +321,8 @@ ACE_realTime = diag_tickTime;
 ACE_virtualTime = diag_tickTime;
 ACE_diagTime = diag_tickTime;
 ACE_gameTime = time;
+ACE_pausedTime = 0;
+ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
 [FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;

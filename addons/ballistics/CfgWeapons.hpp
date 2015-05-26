@@ -552,7 +552,7 @@ class CfgWeapons {
         };
         initSpeed = -1.0;
         ACE_barrelTwist=381.0;
-        ACE_barrelLength=929.64;
+        ACE_barrelLength=730;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
         magazines[] = {

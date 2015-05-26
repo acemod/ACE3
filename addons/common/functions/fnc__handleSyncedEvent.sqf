@@ -28,7 +28,7 @@ if(isServer) then {
     if(_ttl > -1) then {
         _internalData = HASH_GET(GVAR(syncedEvents),_name);
         _eventLog = _internalData select 1;
-        _eventLog pushback [diag_tickTime, _args, _ttl];
+        _eventLog pushback [ACE_diagTime, _args, _ttl];
     };
 };
 

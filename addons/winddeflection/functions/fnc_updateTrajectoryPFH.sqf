@@ -30,8 +30,8 @@
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
     
-    _deltaT = time - _time;
-    _args set[2, time];
+    _deltaT = ACE_time - _time;
+    _args set[2, ACE_time];
     
     if (vectorMagnitude ACE_wind > 0) then {
         _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
@@ -47,4 +47,4 @@
     };
     _bullet setVelocity _bulletVelocity;
     
-}, GVAR(simulationInterval), [_this select 0, _this select 1, time]] call CBA_fnc_addPerFrameHandler;
+}, GVAR(simulationInterval), [_this select 0, _this select 1, ACE_time]] call CBA_fnc_addPerFrameHandler;
