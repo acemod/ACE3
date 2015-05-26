@@ -22,6 +22,6 @@ _drag = if (count _this > 2) then {_this select 2} else {false};
 
 // cannot unload a unit not in a vehicle.
 if (vehicle _target == _target) exitwith {};
-if (([_target] call cse_fnc_isAwake)) exitwith {};
+if (([_target] call EFUNC(common,isAwake))) exitwith {};
 
 [_target] call EFUNC(common,unloadPerson)
