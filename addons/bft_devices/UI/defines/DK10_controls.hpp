@@ -105,59 +105,59 @@ class GVAR(DK10_window_back_BR): GVAR(DK10_window_back_TR) {
     y = pxToScreen_Y(DK10_WINDOW_BACK_B_Y);
 };
 class GVAR(DK10_btnF1): GVAR(RscButtonInv) {
-    x = pxToScreen_X(531);
-    y = pxToScreen_Y(1650);
-    w = pxToScreen_W(61);
-    h = pxToScreen_H(61);
+    x = pxToScreen_X(506);
+    y = pxToScreen_Y(1545);
+    w = pxToScreen_W(52);
+    h = pxToScreen_H(52);
 };
 class GVAR(DK10_btnF2): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(607);
+    x = pxToScreen_X(569);
 };
 class GVAR(DK10_btnF3): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(691);
+    x = pxToScreen_X(639);
 };
 class GVAR(DK10_btnF4): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(767);
+    x = pxToScreen_X(703);
 };
 class GVAR(DK10_btnF5): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(845);
+    x = pxToScreen_X(768);
 };
 class GVAR(DK10_btnF6): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(923);
+    x = pxToScreen_X(833);
 };
 class GVAR(DK10_btnFn): GVAR(DK10_btnF1) {
-    x = pxToScreen_X(1088);
+    x = pxToScreen_X(970);
 };
 class GVAR(DK10_btnPower): GVAR(DK10_btnFn) {
-    x = pxToScreen_X(1164);
+    x = pxToScreen_X(1034);
 };
 class GVAR(DK10_btnBrtDn): GVAR(DK10_btnFn) {
-    x = pxToScreen_X(1243);
+    x = pxToScreen_X(1100);
 };
 class GVAR(DK10_btnBrtUp): GVAR(DK10_btnFn) {
-    x = pxToScreen_X(1319);
+    x = pxToScreen_X(1163);
 };
 class GVAR(DK10_btnTrackpad): GVAR(DK10_btnFn) {
-    x = pxToScreen_X(1438);
-    y = pxToScreen_Y(1655);
-    w = pxToScreen_W(56);
-    h = pxToScreen_H(51);
+    x = pxToScreen_X(1262);
+    y = pxToScreen_Y(1550);
+    w = pxToScreen_W(48);
+    h = pxToScreen_H(43);
 };
 class GVAR(DK10_btnMouse): GVAR(DK10_btnFn) {
-    x = pxToScreen_X(1605);
-    w = pxToScreen_W(107);
+    x = pxToScreen_X(1401);
+    w = pxToScreen_W(91);
 };
 class GVAR(DK10_btnHome): GVAR(DK10_btnMouse) {
-    x = pxToScreen_X(999);
-    y = pxToScreen_Y(1636);
-    w = pxToScreen_W(73);
-    h = pxToScreen_H(58);
+    x = pxToScreen_X(897);
+    y = pxToScreen_Y(1534);
+    w = pxToScreen_W(61);
+    h = pxToScreen_H(49);
 };
 class GVAR(DK10_notificationLight) {
-    x = pxToScreen_X(1546);
-    y = pxToScreen_Y(1664);
-    w = pxToScreen_W(33);
-    h = pxToScreen_H(33);
+    x = pxToScreen_X(1353);
+    y = pxToScreen_Y(1557);
+    w = pxToScreen_W(28);
+    h = pxToScreen_H(28);
 };
 class GVAR(DK10_OSD_hookGrid): GVAR(DK10_RscText) {
     idc = IDC_OSD_HOOK_GRID;
