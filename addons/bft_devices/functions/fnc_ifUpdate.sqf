@@ -210,6 +210,9 @@ if (isNil "_mode") then {
                         ];
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
                         HASH_SET(_settings,"uavListUpdate",true);
+                        if (!_interfaceInit) then {
+                            HASH_SET(_settings,"uavCam",[_displayName,"uavCam"] call FUNC(getSettings));
+                        };
                     };
                     // ---------- HELMET CAM -----------
                     if (_mode == "HCAM") exitWith {
@@ -220,6 +223,9 @@ if (isNil "_mode") then {
                         ];
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                         HASH_SET(_settings,"hCamListUpdate",true);
+                        if (!_interfaceInit) then {
+                            HASH_SET(_settings,"hCam",[_displayName,"hCam"] call FUNC(getSettings));
+                        };
                     };
                     // ---------- MESSAGING -----------
                     if (_mode == "MESSAGE") exitWith {
