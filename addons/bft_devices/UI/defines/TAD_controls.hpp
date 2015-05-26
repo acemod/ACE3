@@ -589,6 +589,7 @@ class GVAR(TAD_OSD_cursor): GVAR(RscPicture) {
     colorText[] = COLOR_NEON_GREEN;
 };
 class GVAR(TAD_OSD_navModeOrScale): GVAR(TAD_RscText) {
+    idc = IDC_OSD_MAP_SCALE;
     x = pxToScreen_X(TAD_OSD_EDGE_R - TAD_OSD_ELEMENT_MODE_W * 4);
     y = pxToScreen_Y(TAD_OSD_EDGE_T);
     w = pxToScreen_W(TAD_OSD_ELEMENT_MODE_W * 4);
