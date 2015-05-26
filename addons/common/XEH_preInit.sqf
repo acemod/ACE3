@@ -286,6 +286,7 @@ PREP(_handleRequestSyncedEvent);
 PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(waitAndExecArray) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
