@@ -232,6 +232,7 @@ if (isNil "_mode") then {
                         _displayItemsToShow = [IDC_GROUP_MESSAGE];
                         call FUNC(msgGuiLoad);
                         GVAR(rscLayerMailNotification) cutText ["", "PLAIN"];
+                        _btnActCtrl ctrlSetTooltip "";
                     };
                     // ---------- MESSAGING COMPOSE -----------
                     if (_mode == "COMPOSE") exitWith {
