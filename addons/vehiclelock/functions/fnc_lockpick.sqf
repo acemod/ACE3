@@ -54,7 +54,7 @@ case (_funcType == "canLockpick"): {
         _returnValue = true;
     };
 case (_funcType == "startLockpick"): {
-        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize "STR_ACE_Vehicle_Action_LockpickInUse"), _condition] call EFUNC(common,progressBar);
+        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize STRING(Action_LockpickInUse)), _condition] call EFUNC(common,progressBar);
         _returnValue = true;
     };
 case (_funcType == "finishLockpick"): {

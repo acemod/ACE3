@@ -37,7 +37,7 @@ if (_itemVehClass == "") then {
 
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
 
-_onAtachText = format [localize "STR_ACE_Attach_Item_Attached", _onAtachText];
+_onAtachText = format [localize STRING(Item_Attached), _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _unit removeItem _itemClassname;  // Remove item
@@ -54,12 +54,12 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-    //MenuBack isn't working for now (localize "STR_ACE_Attach_CancelAction")
-    [{[localize "STR_ACE_Attach_PlaceAction", ""] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+    //MenuBack isn't working for now (localize STRING(CancelAction))
+    [{[localize STRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = 1;}] call EFUNC(common,AddActionEventHandler)];
     // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
 
-    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Attach_CancelAction"], {GVAR(placeAction) = 0}];
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize STRING(CancelAction)], {GVAR(placeAction) = 0}];
 
     [{
         private "_startingPosition";

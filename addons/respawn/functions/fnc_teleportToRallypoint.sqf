@@ -31,4 +31,4 @@ _rallypoint = missionNamespace getVariable [_rallypoint, objNull],
 if (isNull _rallypoint) exitWith {};
 
 _unit setPosASL getPosASL _rallypoint;
-[[localize "STR_ACE_Respawn_TeleportedToRallypoint", localize "STR_ACE_Respawn_TeleportedToBase"] select _toBase] call EFUNC(common,displayTextStructured);
+[[localize STRING(TeleportedToRallypoint), localize STRING(TeleportedToBase)] select _toBase] call EFUNC(common,displayTextStructured);

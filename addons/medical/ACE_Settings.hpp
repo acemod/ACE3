@@ -85,8 +85,8 @@ class ACE_Settings {
         value = 1;
     };
     class GVAR(litterSimulationDetail) {
-        displayName = "$STR_ACE_Medical_litterSimulationDetail";
-        description = "$STR_ACE_Medical_litterSimulationDetail_Desc";
+        displayName = CSTRING(litterSimulationDetail);
+        description = CSTRING(litterSimulationDetail_Desc);
         typeName = "SCALAR";
 
         value = 3;
@@ -138,7 +138,7 @@ class ACE_Settings {
         value = 1;
     };
     class GVAR(painEffectType) {
-        displayName = "$STR_ACE_Medical_painEffectType";
+        displayName = CSTRING(painEffectType);
         typeName = "SCALAR";
         value = 0;
         values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
@@ -154,8 +154,8 @@ class ACE_Settings {
     };
 
     class GVAR(menuTypeStyle) {
-        displayName = "$STR_ACE_Medical_menuTypeDisplay";
-        description = "$STR_ACE_Medical_menuTypeDescription";
+        displayName = CSTRING(menuTypeDisplay);
+        description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
         values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};

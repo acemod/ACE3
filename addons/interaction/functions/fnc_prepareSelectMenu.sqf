@@ -21,7 +21,7 @@ PARAMS_2(_header,_buttonText);
 closeDialog 0;
 
 if (isNil "_buttonText" or {_buttonText == ""}) then {
-    _buttonText = localize "STR_ACE_Interaction_MakeSelection";
+    _buttonText = localize STRING(MakeSelection);
 };
 
 createDialog "RscACE_SelectAnItem";

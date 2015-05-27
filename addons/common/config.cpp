@@ -74,10 +74,10 @@ class ACE_Settings {
     *
     * The following settings only apply when isClientSettable == 1
     * Stringtable entry with the setting name
-    *    displayName = "$STR_ACE_Common_SettingName";
+    *    displayName = CSTRING(SettingName);
     *
     * Stringtable entry with the setting description
-    *    description = "$STR_ACE_Common_SettingDescription";
+    *    description = CSTRING(SettingDescription);
     *
     * Stringtable entries that describe the options
     * Only applies if typeName == "SCALAR";
@@ -92,15 +92,15 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_EnableNumberHotkeys";
+        displayName = CSTRING(EnableNumberHotkeys);
     };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;
         typeName = "SCALAR";
         force = 0;
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_SettingFeedbackIconsName";
-        description = "$STR_ACE_Common_SettingFeedbackIconsDesc";
+        displayName = CSTRING(SettingFeedbackIconsName);
+        description = CSTRING(SettingFeedbackIconsDesc);
         values[] = {"$STR_ACE_Common_Hide", "$STR_ACE_Common_TopRightDown", "$STR_ACE_Common_TopRightLeft", "$STR_ACE_Common_TopLeftDown", "$STR_ACE_Common_TopLeftRight"};
     };
     class GVAR(SettingProgressBarLocation) {
@@ -108,23 +108,23 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 0;
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_SettingProgressbarLocationName";
-        description = "$STR_ACE_Common_SettingProgressbarLocationDesc";
+        displayName = CSTRING(SettingProgressbarLocationName);
+        description = CSTRING(SettingProgressbarLocationDesc);
         values[] = {"$STR_ACE_Common_Top", "$STR_ACE_Common_Bottom"};
     };
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};
         typeName = "COLOR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_SettingDisplayTextColorName";
-        description = "$STR_ACE_Common_SettingDisplayTextColorDesc";
+        displayName = CSTRING(SettingDisplayTextColorName);
+        description = CSTRING(SettingDisplayTextColorDesc);
     };
     class GVAR(displayTextFontColor) {
         value[] = {1,1,1,1};
         typeName = "COLOR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_SettingDisplayTextFontColorName";
-        description = "$STR_ACE_Common_SettingDisplayTextFontColorDesc";
+        displayName = CSTRING(SettingDisplayTextFontColorName);
+        description = CSTRING(SettingDisplayTextFontColorDesc);
     };
 };
 

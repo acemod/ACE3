@@ -15,6 +15,6 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Hearing_DisableEarRinging";
+        displayName = CSTRING(DisableEarRinging);
     };
 };

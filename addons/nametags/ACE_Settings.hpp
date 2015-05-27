@@ -3,33 +3,33 @@ class ACE_Settings {
         value[] = {0.77, 0.51, 0.08, 1};
         typeName = "COLOR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_DefaultNametagColor";
+        displayName = CSTRING(DefaultNametagColor);
     };
     class GVAR(showPlayerNames) {
         value = 1;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_ShowPlayerNames";
-        description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
+        displayName = CSTRING(ShowPlayerNames);
+        description = CSTRING(ShowPlayerNames_Desc);
         values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_Enabled", "$STR_ACE_Common_OnlyCursor", "$STR_ACE_Common_OnlyOnKeypress", "$STR_ACE_Common_OnlyCursorAndKeyPress"};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_ShowPlayerRanks";
+        displayName = CSTRING(ShowPlayerRanks);
     };
     class GVAR(showVehicleCrewInfo) {
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_ShowVehicleCrewInfo";
+        displayName = CSTRING(ShowVehicleCrewInfo);
     };
     class GVAR(showNamesForAI) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_ShowNamesForAI";
+        displayName = CSTRING(ShowNamesForAI);
     };
     class GVAR(showCursorTagForVehicles) {
         value = 0;
@@ -40,8 +40,8 @@ class ACE_Settings {
         value = 1;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_NameTags_ShowSoundWaves";
-        description = "$STR_ACE_NameTags_ShowSoundWaves_Desc";
+        displayName = CSTRING(ShowSoundWaves);
+        description = CSTRING(ShowSoundWaves_Desc);
         values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
     };
     class GVAR(PlayerNamesViewDistance) {

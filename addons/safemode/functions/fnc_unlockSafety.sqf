@@ -59,4 +59,4 @@ if (inputAction "nextWeapon" > 0) then {
 
 private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize "STR_ACE_SafeMode_TookOffSafety", _picture] call EFUNC(common,displayTextPicture);
+[localize STRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);

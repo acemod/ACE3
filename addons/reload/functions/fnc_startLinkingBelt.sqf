@@ -66,4 +66,4 @@ _player playActionNow "PutDown";
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);
 
 // Call progress bar
-[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize "STR_ACE_Reload_LinkingBelt"), _condition] call EFUNC(common,progressBar);
+[4, [_player, _target, [_magazineType, _maxAmmo]], _onFinish, _onFailure, (localize STRING(LinkingBelt)), _condition] call EFUNC(common,progressBar);

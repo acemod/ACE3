@@ -37,8 +37,8 @@ _config = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> co
 _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
 
-_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize "STR_ACE_Explosives_DetonateCode",
+_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize STRING(DetonateCode),
     GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
 
 _unit setVariable [QGVAR(Clackers), _clacker, true];
-_unit sideChat format [localize "STR_ACE_Explosives_DetonateCode", GVAR(PlacedCount)];
+_unit sideChat format [localize STRING(DetonateCode), GVAR(PlacedCount)];

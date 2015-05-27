@@ -8,7 +8,7 @@ class CfgVehicles {
     // TODO make a curator variant for this
     class ACE_moduleAmbianceSound: Module_F {
         scope = 2;
-        displayName = "$STR_ACE_MissionModules_AmbianceSounds_DisplayName";
+        displayName = CSTRING(AmbianceSounds_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
         category = "ACE_missionModules";
         function = QUOTE(FUNC(moduleAmbianceSound));
@@ -18,50 +18,50 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         class Arguments    {
             class soundFiles {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description";
+                displayName = CSTRING(AmbianceSounds_soundFiles_DisplayName);
+                description = CSTRING(AmbianceSounds_soundFiles_Description);
                 typeName = "STRING";
                 defaultValue = "";
             };
             class minimalDistance {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description";
+                displayName = CSTRING(AmbianceSounds_minimalDistance_DisplayName);
+                description = CSTRING(AmbianceSounds_minimalDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 400;
             };
             class maximalDistance {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description";
+                displayName = CSTRING(AmbianceSounds_maximalDistance_DisplayName);
+                description = CSTRING(AmbianceSounds_maximalDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 900;
             };
             class minimalDelay {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description";
+                displayName = CSTRING(AmbianceSounds_minimalDelay_DisplayName);
+                description = CSTRING(AmbianceSounds_minimalDelay_Description);
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
             class maximalDelay {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description";
+                displayName = CSTRING(AmbianceSounds_maximalDelay_DisplayName);
+                description = CSTRING(AmbianceSounds_maximalDelay_Description);
                 typeName = "NUMBER";
                 defaultValue = 170;
             };
             class followPlayers {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description";
+                displayName = CSTRING(AmbianceSounds_followPlayers_DisplayName);
+                description = CSTRING(AmbianceSounds_followPlayers_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class soundVolume {
-                displayName = "$STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName";
-                description = "$STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description";
+                displayName = CSTRING(AmbianceSounds_soundVolume_DisplayName);
+                description = CSTRING(AmbianceSounds_soundVolume_Description);
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "$STR_ACE_MissionModules_AmbianceSounds_Description";
+            description = CSTRING(AmbianceSounds_Description);
             sync[] = {};
         };
     };

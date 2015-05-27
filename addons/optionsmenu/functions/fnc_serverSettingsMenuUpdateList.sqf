@@ -37,7 +37,7 @@ switch (GVAR(optionMenu_openTab)) do {
 
             // Created disable/enable options for bools
             _settingsText = if ((_x select 1) == "BOOL") then {
-                [(localize "STR_ACE_OptionsMenu_Disabled"), (localize "STR_ACE_OptionsMenu_Enabled")] select _settingsValue;
+                [(localize STRING(Disabled)), (localize STRING(Enabled))] select _settingsValue;
             } else {
                 (_x select 5) select _settingsValue;
             };

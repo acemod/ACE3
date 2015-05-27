@@ -36,4 +36,4 @@ _onFailure = {
 
 [_caller, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
 
-[10, [_caller, _target], _onFinish, _onFailure, (localize "STR_ACE_logistics_uavbattery_Battery_Recharge"), {(_this select 0) call FUNC(canRefuelUAV)}] call EFUNC(common,progressBar);
+[10, [_caller, _target], _onFinish, _onFailure, (localize STRING(Battery_Recharge)), {(_this select 0) call FUNC(canRefuelUAV)}] call EFUNC(common,progressBar);

@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(open) {
-                    displayName = "$STR_ACE_Kestrel4500_OpenKestrel";
+                    displayName = CSTRING(OpenKestrel);
                     condition = QUOTE(call FUNC(canShow) && !GVAR(Kestrel4500));
                     statement = QUOTE(call FUNC(createKestrelDialog));
                     showDisabled = 0;
@@ -13,7 +13,7 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(show) {
-                    displayName = "$STR_ACE_Kestrel4500_ShowKestrel";
+                    displayName = CSTRING(ShowKestrel);
                     condition = QUOTE(call FUNC(canShow) && !GVAR(Overlay));
                     statement = QUOTE(call FUNC(displayKestrel));
                     showDisabled = 0;
@@ -22,7 +22,7 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap", "isNotInside"};
                 };
                 class GVAR(hide) {
-                    displayName = "$STR_ACE_Kestrel4500_HideKestrel";
+                    displayName = CSTRING(HideKestrel);
                     condition = QUOTE(GVAR(Overlay));
                     statement = QUOTE(call FUNC(displayKestrel));
                     showDisabled = 0;

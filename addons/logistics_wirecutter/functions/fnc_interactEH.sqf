@@ -53,7 +53,7 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
                     if ([_x] call FUNC(isFence)) then {
                         _fencesHelped pushBack _x;
                         _helper = "Sign_Sphere25cm_F" createVehicleLocal (getpos _x);
-                        _action = [QGVAR(helperCutFence), (localize "STR_ACE_logistics_wirecutter_CutFence"), QUOTE(PATHTOF(ui\wirecutter_ca.paa)), _fncStatement, _fncCondition, {}, _x, [0,0,0], 5] call EFUNC(interact_menu,createAction);
+                        _action = [QGVAR(helperCutFence), (localize STRING(CutFence)), QUOTE(PATHTOF(ui\wirecutter_ca.paa)), _fncStatement, _fncCondition, {}, _x, [0,0,0], 5] call EFUNC(interact_menu,createAction);
                         [_helper, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
                         _helper setPosASL ((getPosASL _x) vectorAdd [0,0,1.25]);
                         _helper hideObject true;

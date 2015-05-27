@@ -1,6 +1,6 @@
 // by commy2
 
-["ACE3 Weapons", QGVAR(lockTarget), localize "STR_ACE_JAVELIN_LockTarget",
+["ACE3 Weapons", QGVAR(lockTarget), localize STRING(LockTarget),
 {
     if (GETGVAR(isLockKeyDown,false)) exitWith {false};
 
@@ -21,7 +21,7 @@
 },
 [15, [false, false, false]], false] call cba_fnc_addKeybind;  //Tab Key
 
-["ACE3 Weapons", QGVAR(cycleFireMode), localize "STR_ACE_JAVELIN_CycleFireMode",
+["ACE3 Weapons", QGVAR(cycleFireMode), localize STRING(CycleFireMode),
 { false },
 {
     [ACE_player] call FUNC(cycleFireMode);

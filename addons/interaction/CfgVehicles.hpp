@@ -4,21 +4,21 @@ class CfgVehicles {
   class ACE_ModuleInteraction: Module_F {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
-    displayName = "$STR_ACE_InteractionSystem_Module_DisplayName";
+    displayName = CSTRING(Module_DisplayName);
     function = "ACE_Interaction_fnc_moduleInteraction";
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
     class Arguments {
       class EnableTeamManagement {
-        displayName = "$STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName";
-        description = "$STR_ACE_InteractionSystem_EnableTeamManagement_Description";
+        displayName = CSTRING(EnableTeamManagement_DisplayName);
+        description = CSTRING(EnableTeamManagement_Description);
         typeName = "BOOL";
         defaultValue = 1;
       };
     };
     class ModuleDescription {
-      description = "$STR_ACE_InteractionSystem_Module_Description";
+      description = CSTRING(Module_Description);
     };
   };
 
@@ -26,7 +26,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 distance = 4;
                 condition = QUOTE(true);
                 statement = "";
@@ -34,7 +34,7 @@ class CfgVehicles {
                 selection = "pelvis";
 
                 class ACE_TeamManagement {
-                    displayName = "$STR_ACE_Interaction_TeamManagement";
+                    displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
                     statement = "";
                     showDisabled = 0;
@@ -43,7 +43,7 @@ class CfgVehicles {
                     hotkey = "M";
 
                     class ACE_AssignTeamRed {
-                        displayName = "$STR_ACE_Interaction_AssignTeamRed";
+                        displayName = CSTRING(AssignTeamRed);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
                         showDisabled = 1;
@@ -52,7 +52,7 @@ class CfgVehicles {
                         hotkey = "R";
                     };
                     class ACE_AssignTeamGreen {
-                        displayName = "$STR_ACE_Interaction_AssignTeamGreen";
+                        displayName = CSTRING(AssignTeamGreen);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
                         showDisabled = 1;
@@ -61,7 +61,7 @@ class CfgVehicles {
                         hotkey = "G";
                     };
                     class ACE_AssignTeamBlue {
-                        displayName = "$STR_ACE_Interaction_AssignTeamBlue";
+                        displayName = CSTRING(AssignTeamBlue);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
                         showDisabled = 1;
@@ -70,7 +70,7 @@ class CfgVehicles {
                         hotkey = "B";
                     };
                     class ACE_AssignTeamYellow {
-                        displayName = "$STR_ACE_Interaction_AssignTeamYellow";
+                        displayName = CSTRING(AssignTeamYellow);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
                         showDisabled = 1;
@@ -80,7 +80,7 @@ class CfgVehicles {
                     };
 
                     class ACE_UnassignTeam {
-                        displayName = "$STR_ACE_Interaction_LeaveTeam";
+                        displayName = CSTRING(LeaveTeam);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
                         statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
                         showDisabled = 1;
@@ -91,7 +91,7 @@ class CfgVehicles {
                 };
 
                 class ACE_JoinGroup {
-                    displayName = "$STR_ACE_Interaction_JoinGroup";
+                    displayName = CSTRING(JoinGroup);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinGroup));
                     statement = QUOTE([_player] joinSilent group _target);
                     showDisabled = 0;
@@ -101,21 +101,21 @@ class CfgVehicles {
                 };
 
                 class ACE_GetDown {
-                    displayName = "$STR_ACE_Interaction_GetDown";
+                    displayName = CSTRING(GetDown);
                     condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
                     statement = QUOTE([_target] call DFUNC(getDown));
                     showDisabled = 0;
                     priority = 2.2;
                 };
                 class ACE_SendAway {
-                    displayName = "$STR_ACE_Interaction_SendAway";
+                    displayName = CSTRING(SendAway);
                     condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
                     statement = QUOTE([_target] call DFUNC(sendAway));
                     showDisabled = 0;
                     priority = 2.0;
                 };
                 class ACE_Pardon {
-                    displayName = "$STR_ACE_Interaction_Pardon";
+                    displayName = CSTRING(Pardon);
                     condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
                     statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
                     showDisabled = 0;
@@ -123,49 +123,49 @@ class CfgVehicles {
                 };
             };
             class ACE_Torso {
-                displayName = "$STR_ACE_Interaction_Torso";
+                displayName = CSTRING(Torso);
                 selection = "spine3";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_Head {
-                displayName = "$STR_ACE_Interaction_Head";
+                displayName = CSTRING(Head);
                 selection = "pilot";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_ArmLeft {
-                displayName = "$STR_ACE_Interaction_ArmLeft";
+                displayName = CSTRING(ArmLeft);
                 selection = "LeftForeArm";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_ArmRight {
-                displayName = "$STR_ACE_Interaction_ArmRight";
+                displayName = CSTRING(ArmRight);
                 selection = "RightForeArm";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_LegLeft {
-                displayName = "$STR_ACE_Interaction_LegLeft";
+                displayName = CSTRING(LegLeft);
                 selection = "LKnee";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_LegRight {
-                displayName = "$STR_ACE_Interaction_LegRight";
+                displayName = CSTRING(LegRight);
                 selection = "RKnee";
                 distance = 1.50;
                 condition = "";
                 statement = "";
             };
             class ACE_Weapon {
-                displayName = "$STR_ACE_Interaction_Weapon";
+                displayName = CSTRING(Weapon);
                 position = QUOTE(call FUNC(getWeaponPos));
                 distance = 1.50;
                 condition = "";
@@ -173,14 +173,14 @@ class CfgVehicles {
             };
 
             class ACE_TapShoulderRight {
-                displayName = "$STR_ACE_Interaction_TapShoulder";
+                displayName = CSTRING(TapShoulder);
                 selection = "rightshoulder";
                 distance = 2.0;
                 condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
                 statement = QUOTE([ARR_3(_player, _target, 0)] call DFUNC(tapShoulder));
             };
             class ACE_TapShoulderLeft {
-                displayName = "$STR_ACE_Interaction_TapShoulder";
+                displayName = CSTRING(TapShoulder);
                 selection = "leftshoulder";
                 distance = 2.0;
                 condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
@@ -190,7 +190,7 @@ class CfgVehicles {
 
         class ACE_SelfActions {
             class ACE_TeamManagement {
-                displayName = "$STR_ACE_Interaction_TeamManagement";
+                displayName = CSTRING(TeamManagement);
                 condition = QUOTE(GVAR(EnableTeamManagement));
                 exceptions[] = {"isNotInside"};
                 statement = "";
@@ -200,7 +200,7 @@ class CfgVehicles {
                 hotkey = "M";
 
                 class ACE_JoinTeamRed {
-                    displayName = "$STR_ACE_Interaction_JoinTeamRed";
+                    displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
@@ -210,7 +210,7 @@ class CfgVehicles {
                     hotkey = "R";
                 };
                 class ACE_JoinTeamGreen {
-                    displayName = "$STR_ACE_Interaction_JoinTeamGreen";
+                    displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
@@ -220,7 +220,7 @@ class CfgVehicles {
                     hotkey = "G";
                 };
                 class ACE_JoinTeamBlue {
-                    displayName = "$STR_ACE_Interaction_JoinTeamBlue";
+                    displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
@@ -230,7 +230,7 @@ class CfgVehicles {
                     hotkey = "B";
                 };
                 class ACE_JoinTeamYellow {
-                    displayName = "$STR_ACE_Interaction_JoinTeamYellow";
+                    displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
@@ -241,7 +241,7 @@ class CfgVehicles {
                 };
 
                 class ACE_LeaveTeam {
-                    displayName = "$STR_ACE_Interaction_LeaveTeam";
+                    displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
@@ -251,7 +251,7 @@ class CfgVehicles {
                     hotkey = "N";
                 };
                 class ACE_BecomeLeader {
-                    displayName = "$STR_ACE_Interaction_BecomeLeader";
+                    displayName = CSTRING(BecomeLeader);
                     condition = QUOTE(_this call DFUNC(canBecomeLeader));
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE(_this call DFUNC(doBecomeLeader));
@@ -261,7 +261,7 @@ class CfgVehicles {
                     hotkey = "L";
                 };
                 class ACE_LeaveGroup {
-                    displayName = "$STR_ACE_Interaction_LeaveGroup";
+                    displayName = CSTRING(LeaveGroup);
                     condition = QUOTE(count (units group _player) > 1);
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
@@ -273,7 +273,7 @@ class CfgVehicles {
             };
 
             class ACE_Gestures {
-                displayName = "$STR_ACE_Interaction_Gestures";
+                displayName = CSTRING(Gestures);
                 condition = "canStand _target";
                 statement = "";
                 showDisabled = 1;
@@ -282,14 +282,14 @@ class CfgVehicles {
                 hotkey = "G";
 
                 /*class ACE_Gesture_Advance {
-                    displayName = "$STR_ACE_Interaction_Gestures_Attack";
+                    displayName = CSTRING(Gestures_Attack);
                     condition = "canStand _target";
                     statement = "_target playActionNow 'gestureAttack';";
                     showDisabled = 1;
                     priority = 2.0;
                 };*/
                 class ACE_Gesture_Advance {
-                    displayName = "$STR_ACE_Interaction_Gestures_Advance";
+                    displayName = CSTRING(Gestures_Advance);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureAdvance';);
                     showDisabled = 1;
@@ -297,7 +297,7 @@ class CfgVehicles {
                     hotkey = "1";
                 };
                 class ACE_Gesture_Go {
-                    displayName = "$STR_ACE_Interaction_Gestures_Go";
+                    displayName = CSTRING(Gestures_Go);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow ([ARR_2('gestureGo','gestureGoB')] select floor random 2););
                     showDisabled = 1;
@@ -305,7 +305,7 @@ class CfgVehicles {
                     hotkey = "2";
                 };
                 class ACE_Gesture_Follow {
-                    displayName = "$STR_ACE_Interaction_Gestures_Follow";
+                    displayName = CSTRING(Gestures_Follow);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureFollow';);
                     showDisabled = 1;
@@ -313,14 +313,14 @@ class CfgVehicles {
                     hotkey = "3";
                 };
                 /*class ACE_Gesture_Point {
-                    displayName = "$STR_ACE_Interaction_Gestures_Point";
+                    displayName = CSTRING(Gestures_Point);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gesturePoint';);
                     showDisabled = 1;
                     priority = 1.6;
                 };*/
                 class ACE_Gesture_Up {
-                    displayName = "$STR_ACE_Interaction_Gestures_Up";
+                    displayName = CSTRING(Gestures_Up);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureUp';);
                     showDisabled = 1;
@@ -328,7 +328,7 @@ class CfgVehicles {
                     hotkey = "4";
                 };
                 class ACE_Gesture_Cover {
-                    displayName = "$STR_ACE_Interaction_Gestures_Cover";
+                    displayName = CSTRING(Gestures_Cover);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureCover';);
                     showDisabled = 1;
@@ -336,7 +336,7 @@ class CfgVehicles {
                     hotkey = "5";
                 };
                 class ACE_Gesture_CeaseFire {
-                    displayName = "$STR_ACE_Interaction_Gestures_Cease_Fire";
+                    displayName = CSTRING(Gestures_Cease_Fire);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureCeaseFire';);
                     showDisabled = 1;
@@ -344,7 +344,7 @@ class CfgVehicles {
                     hotkey = "6";
                 };
                 class ACE_Gesture_Freeze {
-                    displayName = "$STR_ACE_Interaction_Gestures_Freeze";
+                    displayName = CSTRING(Gestures_Freeze);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureFreeze';);
                     showDisabled = 1;
@@ -352,7 +352,7 @@ class CfgVehicles {
                     hotkey = "7";
                 };
                 class ACE_Gesture_Yes {
-                    displayName = "$STR_ACE_Interaction_Gestures_Yes";
+                    displayName = CSTRING(Gestures_Yes);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
                     showDisabled = 1;
@@ -360,7 +360,7 @@ class CfgVehicles {
                     hotkey = "8";
                 };
                 class ACE_Gesture_No {
-                    displayName = "$STR_ACE_Interaction_Gestures_No";
+                    displayName = CSTRING(Gestures_No);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureNo';);
                     showDisabled = 1;
@@ -368,7 +368,7 @@ class CfgVehicles {
                     hotkey = "9";
                 };
                 class ACE_Gesture_Hi {
-                    displayName = "$STR_ACE_Interaction_Gestures_Hi";
+                    displayName = CSTRING(Gestures_Hi);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow ([ARR_3('gestureHi','gestureHiB','gestureHiC')] select floor random 3););
                     showDisabled = 1;
@@ -378,7 +378,7 @@ class CfgVehicles {
             };
 
             class ACE_Equipment {
-                displayName = "$STR_ACE_Interaction_Equipment";
+                displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
                 exceptions[] = {"isNotInside","notOnMap"};
                 statement = "";
@@ -394,12 +394,12 @@ class CfgVehicles {
     class Car: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 10;
                 condition = "true";
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -408,7 +408,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -418,12 +418,12 @@ class CfgVehicles {
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 10;
                 condition = "true";
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -432,7 +432,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -444,12 +444,12 @@ class CfgVehicles {
     class Helicopter: Air {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 10;
                 condition = "true";
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -458,7 +458,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -468,12 +468,12 @@ class CfgVehicles {
     class Plane: Air {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 10;
                 condition = "true";
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -482,7 +482,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -494,13 +494,13 @@ class CfgVehicles {
     class Ship_F: Ship {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 10;
                 condition = "true";
 
                 class ACE_Push {
-                    displayName = "$STR_ACE_Interaction_Push";
+                    displayName = CSTRING(Push);
                     distance = 6;
                     condition = QUOTE(getMass _target < 1000 && {alive _target});
                     statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call DFUNC(push););
@@ -508,7 +508,7 @@ class CfgVehicles {
                     priority = -1;
                 };
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -517,7 +517,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -528,12 +528,12 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "gunnerview";
                 distance = 2;
                 condition = "true";
                 class ACE_Passengers {
-                    displayName = "$STR_ACE_Interaction_Passengers";
+                    displayName = CSTRING(Passengers);
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -542,7 +542,7 @@ class CfgVehicles {
         };
         class ACE_SelfActions {
             class ACE_Passengers {
-                displayName = "$STR_ACE_Interaction_Passengers";
+                displayName = CSTRING(Passengers);
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -554,7 +554,7 @@ class CfgVehicles {
     class ReammoBox_F: thingX {
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = "$STR_ACE_Interaction_MainAction";
+                displayName = CSTRING(MainAction);
                 selection = "";
                 distance = 2;
                 condition = "true";

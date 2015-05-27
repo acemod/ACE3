@@ -6,7 +6,7 @@ class CfgVehicles {
     class ACE_ModuleRespawn: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "$STR_ACE_Respawn_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
         scope = 2;
         isGlobal = 1;
@@ -14,28 +14,28 @@ class CfgVehicles {
 
         class Arguments {
             class SavePreDeathGear {
-                displayName = "$STR_ACE_Respawn_SavePreDeathGear_DisplayName";
-                description = "$STR_ACE_Respawn_SavePreDeathGear_Description";
+                displayName = CSTRING(SavePreDeathGear_DisplayName);
+                description = CSTRING(SavePreDeathGear_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
 
             class RemoveDeadBodiesDisconnected {
-                displayName = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName";
-                description = "$STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description";
+                displayName = CSTRING(RemoveDeadBodiesDisconnected_DisplayName);
+                description = CSTRING(RemoveDeadBodiesDisconnected_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Respawn_Module_Description";
+            description = CSTRING(Module_Description);
         };
     };
 
     class ACE_ModuleFriendlyFire: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "$STR_ACE_FriendlyFire_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
@@ -43,14 +43,14 @@ class CfgVehicles {
 
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_FriendlyFire_Module_Description";
+            description = CSTRING(Module_Description);
         };
     };
 
     class ACE_ModuleRallypoint: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "$STR_ACE_Rallypoint_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
@@ -58,7 +58,7 @@ class CfgVehicles {
 
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Rallypoint_Module_Description";
+            description = CSTRING(Module_Description);
         };
     };
 
@@ -67,7 +67,7 @@ class CfgVehicles {
     class CAManBase : Man {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
-                displayName = "$STR_ACE_Rallypoint_MoveRallypoint";
+                displayName = CSTRING(MoveRallypoint);
                 condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
                 statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
                 showDisabled = 0;
@@ -95,12 +95,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointWestBase";
+        displayName = CSTRING(RallypointWestBase);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
+                displayName = CSTRING(TeleportToRallypoint);
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West')] call FUNC(teleportToRallypoint));
@@ -115,12 +115,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointEastBase";
+        displayName = CSTRING(RallypointEastBase);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
+                displayName = CSTRING(TeleportToRallypoint);
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East')] call FUNC(teleportToRallypoint));
@@ -135,12 +135,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointIndependentBase";
+        displayName = CSTRING(RallypointIndependentBase);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToRallypoint";
+                displayName = CSTRING(TeleportToRallypoint);
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent')] call FUNC(teleportToRallypoint));
@@ -156,12 +156,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointWest";
+        displayName = CSTRING(RallypointWest);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToBase";
+                displayName = CSTRING(TeleportToBase);
                 distance = 4;
                 condition = QUOTE(side group _player == west);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_West_Base')] call FUNC(teleportToRallypoint));
@@ -176,12 +176,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointEast";
+        displayName = CSTRING(RallypointEast);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToBase";
+                displayName = CSTRING(TeleportToBase);
                 distance = 4;
                 condition = QUOTE(side group _player == east);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_East_Base')] call FUNC(teleportToRallypoint));
@@ -196,12 +196,12 @@ class CfgVehicles {
         XEH_ENABLED;
 
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Respawn_RallypointIndependent";
+        displayName = CSTRING(RallypointIndependent);
         vehicleClass = QGVAR(Rallypoints);
 
         class ACE_Actions: ACE_Actions {
             class ACE_Teleport {
-                displayName = "$STR_ACE_Respawn_TeleportToBase";
+                displayName = CSTRING(TeleportToBase);
                 distance = 4;
                 condition = QUOTE(side group _player == independent);
                 statement = QUOTE([ARR_3(_player,side group _player,'ACE_Rallypoint_Independent_Base')] call FUNC(teleportToRallypoint));

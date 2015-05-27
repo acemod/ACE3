@@ -22,7 +22,7 @@ _player removeItem "ACE_EarPlugs";
 
 _player setVariable ["ACE_hasEarPlugsIn", true, true];
 
-[localize "STR_ACE_Hearing_EarPlugs_Are_On"] call EFUNC(common,displayTextStructured);
+[localize STRING(EarPlugs_Are_On)] call EFUNC(common,displayTextStructured);
 
 /*// No Ear Plugs in inventory, telling user
-[localize "STR_ACE_Hearing_NoPlugs"] call EFUNC(common,displayTextStructured);*/
+[localize STRING(NoPlugs)] call EFUNC(common,displayTextStructured);*/

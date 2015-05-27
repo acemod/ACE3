@@ -30,7 +30,7 @@ _loadableMissiles = [_unit, _weapon] call FUNC(getLoadableMissiles);
     private ["_name", "_displayName", "_statement", "_condition", "_action"];
 
     _name = format [QGVAR(Missile_%1), _x];
-    _displayName = format [localize "STR_ACE_ReloadLaunchers_LoadMagazine", getText (configFile >> "CfgMagazines" >> _x >> "displayName")];
+    _displayName = format [localize STRING(LoadMagazine), getText (configFile >> "CfgMagazines" >> _x >> "displayName")];
 
     _statement = {
         (_this select 2) call DFUNC(load);

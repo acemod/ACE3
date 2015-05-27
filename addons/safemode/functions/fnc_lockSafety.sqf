@@ -47,7 +47,7 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
         [_this select 1, currentWeapon (_this select 1), currentMuzzle (_this select 1)] call FUNC(unlockSafety);
     };
 
-    //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize "STR_ACE_SafeMode_TakeOffSafety"], "DefaultAction", _condition, {}, {true}, _statement, 10] call EFUNC(common,addActionMenuEventHandler);
+    //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize STRING(TakeOffSafety)], "DefaultAction", _condition, {}, {true}, _statement, 10] call EFUNC(common,addActionMenuEventHandler);
     _id = [_unit, "DefaultAction", _condition, {}] call EFUNC(common,addActionEventHandler);
 
     _unit setVariable [QGVAR(actionID), _id];
@@ -62,4 +62,4 @@ if ((typeName _muzzle) == (typeName "")) then {
 
 private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize "STR_ACE_SafeMode_PutOnSafety", _picture] call EFUNC(common,displayTextPicture);
+[localize STRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);

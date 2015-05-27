@@ -41,7 +41,7 @@ if (GVAR(EnableSafeZone)) then {
 
 // exitWith doesn't exit past the "if(EnableSafeZone)" block
 if (_leave) exitWith {
-    [localize "STR_ACE_SwitchUnits_TooCloseToEnemy"] call EFUNC(common,displayTextStructured);
+    [localize STRING(TooCloseToEnemy)] call EFUNC(common,displayTextStructured);
 };
 
 // should switch locality
@@ -88,7 +88,7 @@ DFUNC(pfhSwitchUnit) = {
             [[_oldUnit, _oldOwner], QUOTE({(_this select 0) setOwner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
         };
 
-        [localize "STR_ACE_SwitchUnits_SwitchedUnit"] call EFUNC(common,displayTextStructured);
+        [localize STRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);
 
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
 

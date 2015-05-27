@@ -56,8 +56,8 @@ if (count _collection > 0) then {
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
                 lbClear 400;
-                lbAdd [400, (localize "STR_ACE_OptionsMenu_Disabled")];
-                lbAdd [400, (localize "STR_ACE_OptionsMenu_Enabled")];
+                lbAdd [400, (localize STRING(Disabled))];
+                lbAdd [400, (localize STRING(Enabled))];
                 _settingsValue = [0, 1] select _settingsValue;
             } else {
                 lbClear 400;
@@ -77,10 +77,10 @@ if (count _collection > 0) then {
 
             // Created disable/enable options for bools
             _expectedType = switch (_setting select 1) do {
-                case "STRING": {"STR_ACE_OptionsMenu_stringType"};
-                case "ARRAY": {"STR_ACE_OptionsMenu_arrayType"};
-                case "SCALAR": {"STR_ACE_OptionsMenu_scalarType"};
-                default {"STR_ACE_optionsMenu_unknownType"};
+                case "STRING": {STRING(stringType)};
+                case "ARRAY": {STRING(arrayType)};
+                case "SCALAR": {STRING(scalarType)};
+                default {STRING(unknownType)};
             };
             (_settingsMenu displayCtrl 414) ctrlSetText format["%1", _settingsValue];
             (_settingsMenu displayCtrl 415) ctrlSetText format[localize _expectedType];

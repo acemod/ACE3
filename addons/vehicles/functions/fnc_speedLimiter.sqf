@@ -7,12 +7,12 @@ _driver = _this select 0;
 _vehicle = _this select 1;
 
 if (GETGVAR(isSpeedLimiter,false)) exitWith {
-    [localize "STR_ACE_SpeedLimiter_Off"] call EFUNC(common,displayTextStructured);
+    [localize STRING(Off)] call EFUNC(common,displayTextStructured);
     playSound "ACE_Sound_Click";
     GVAR(isSpeedLimiter) = false;
 };
 
-[localize "STR_ACE_SpeedLimiter_On"] call EFUNC(common,displayTextStructured);
+[localize STRING(On)] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 

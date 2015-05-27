@@ -8,8 +8,8 @@ class CfgWeapons {
         scope = 1;
         ACE_isUsedLauncher = 1;
         author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Disposable_UsedTube";
-        descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = CSTRING(UsedTube);
+        descriptionShort = CSTRING(UsedTubeDescription);
         magazines[] = {"ACE_FiredMissileDummy"};  // This will disable the used launcher class from being fired again.
         //picture = "";              @todo
         //model = "";                @todo

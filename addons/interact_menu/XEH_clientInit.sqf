@@ -28,7 +28,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3 Common", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+["ACE3 Common", QGVAR(InteractKey), (localize STRING(InteractKey)),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -37,7 +37,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 },{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3 Common", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+["ACE3 Common", QGVAR(SelfInteractKey), (localize STRING(SelfInteractKey)),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};

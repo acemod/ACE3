@@ -5,8 +5,8 @@ class CfgWeapons {
     class ACE_microDAGR: ACE_ItemCore {
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
-        displayName = "$STR_ACE_microdagr_itemName";
-        descriptionShort = "$STR_ACE_microdagr_itemDescription";
+        displayName = CSTRING(itemName);
+        descriptionShort = CSTRING(itemDescription);
         picture = QUOTE(PATHTOF(images\microDAGR_item.paa));
         class ItemInfo: InventoryItem_Base_F {
             mass = 2;

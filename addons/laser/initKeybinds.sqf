@@ -1,4 +1,4 @@
-["ACE3 Equipment", QGVAR(LaserCodeUp), localize "STR_ACE_laser_laserCodeUp",
+["ACE3 Equipment", QGVAR(LaserCodeUp), localize STRING(laserCodeUp),
 {
     if( EGVAR(laser_selfdesignate,active) 
         || 
@@ -12,7 +12,7 @@
 {false},
 [16, [false, true, true]], false, 0] call CBA_fnc_addKeybind; // (ALT+CTRL+Q)
 
-["ACE3 Equipment", QGVAR(LaserCodeDown), localize "STR_ACE_laser_laserCodeDown",
+["ACE3 Equipment", QGVAR(LaserCodeDown), localize STRING(laserCodeDown),
 {
     if( EGVAR(laser_selfdesignate,active) 
         || 

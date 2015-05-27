@@ -38,4 +38,4 @@ _progressCheck = {
     ((!isNull _fenceObject) && {(damage _fenceObject) < 1} && {("ACE_wirecutter" in (items ACE_player))})
 };
 
-[_timeToCut, [_fenceObject,0], {(_this select 0) call FUNC(cutDownFenceCallback)}, {(_this select 0) call FUNC(cutDownFenceAbort)}, localize "STR_ACE_logistics_wirecutter_CuttingFence", _progressCheck] call EFUNC(common,progressBar);
+[_timeToCut, [_fenceObject,0], {(_this select 0) call FUNC(cutDownFenceCallback)}, {(_this select 0) call FUNC(cutDownFenceAbort)}, localize STRING(CuttingFence), _progressCheck] call EFUNC(common,progressBar);

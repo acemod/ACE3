@@ -49,7 +49,7 @@ if (_actionID != -1) then {
 };
 
 _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Dragging_Drop"],
+    format ["<t color='#FF0000'>%1</t>", localize STRING(Drop)],
     QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
     nil,
     20,

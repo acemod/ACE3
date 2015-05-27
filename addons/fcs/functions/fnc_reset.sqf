@@ -22,4 +22,4 @@ _turret = _this select 1;
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret],  0] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],  0] call EFUNC(common,setVariablePublic);
 
-[localize "STR_ACE_FCS_HasBeenReset"] call EFUNC(common,displayTextStructured);
+[localize STRING(HasBeenReset)] call EFUNC(common,displayTextStructured);

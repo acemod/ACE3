@@ -75,6 +75,6 @@ FUNC(clipboardExport) = {
 };
 [_compiledConfig] call FUNC(clipboardExport);
 
-["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
+[STRING(settingsExported)] call EFUNC(common,displayTextStructured);
 
 

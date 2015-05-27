@@ -69,19 +69,19 @@ class CfgAmmo {
     };
     
     class ACE_Hydra70_DAGR : M_PG_AT {
-        displayName = "$STR_ACE_Hydra70_DAGR";
-        displayNameShort = "$STR_ACE_Hydra70_DAGR_Short";
+        displayName = CSTRING(DAGR);
+        displayNameShort = CSTRING(DAGR_Short);
         
-        description = "$STR_ACE_Hydra70_DAGR";
-        descriptionShort = "$STR_ACE_Hydra70_DAGR_Desc";
+        description = CSTRING(DAGR);
+        descriptionShort = CSTRING(DAGR_Desc);
     };
     
     class ACE_Hellfire_AGM114K : ACE_Hydra70_DAGR {
-        displayName = "$STR_ACE_Hellfire_AGM114K";
-        displayNameShort = "$STR_ACE_Hellfire_AGM114K_Short";
+        displayName = CSTRING(AGM114K);
+        displayNameShort = CSTRING(AGM114K_Short);
         
-        description = "$STR_ACE_Hellfire_AGM114K_desc";
-        descriptionShort = "$STR_ACE_Hellfire_AGM114K_desc";
+        description = CSTRING(AGM114K_desc);
+        descriptionShort = CSTRING(AGM114K_desc);
         
         // @TODO: placeholder model to at least make it look different
         model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";

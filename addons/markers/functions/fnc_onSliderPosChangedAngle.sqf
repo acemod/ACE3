@@ -25,6 +25,6 @@ if (_direction < 0) then {
     _direction = _direction + 360;
 };
 
-((ctrlParent _ctrl) displayCtrl 1221) ctrlSetText format [localize "STR_ACE_Markers_MarkerDirection", _direction];
+((ctrlParent _ctrl) displayCtrl 1221) ctrlSetText format [localize STRING(MarkerDirection), _direction];
 
 GVAR(currentMarkerAngle) = _data;

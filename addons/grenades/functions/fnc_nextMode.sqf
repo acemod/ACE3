@@ -31,11 +31,11 @@ if (_mode == 3) then {
 };
 
 _hint = [
-localize "STR_ACE_Grenades_NormalThrow",
-localize "STR_ACE_Grenades_HighThrow",
-localize "STR_ACE_Grenades_PreciseThrow",
-localize "STR_ACE_Grenades_RollGrenade",
-localize "STR_ACE_Grenades_DropGrenade"
+localize STRING(NormalThrow),
+localize STRING(HighThrow),
+localize STRING(PreciseThrow),
+localize STRING(RollGrenade),
+localize STRING(DropGrenade)
 ] select _mode;
 
 [_hint] call EFUNC(common,displayTextStructured);

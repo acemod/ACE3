@@ -61,7 +61,7 @@ _menu = uiNamespace getvariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_exClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (STRING(exClientSettings));
 } else {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_inClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (STRING(inClientSettings));
 };

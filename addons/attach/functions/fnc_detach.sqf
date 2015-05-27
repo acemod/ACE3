@@ -49,7 +49,7 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 
 // Exit if can't add the item
 if !(_unit canAdd _itemName) exitWith {
-    [localize "STR_ACE_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
+    [localize STRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Add item to inventory
@@ -78,4 +78,4 @@ if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize "STR_ACE_Attach_Item_Detached", _itemDisplayName]] call EFUNC(common,displayTextStructured);
+[format [localize STRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);

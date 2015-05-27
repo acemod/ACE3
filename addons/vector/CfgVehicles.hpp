@@ -10,7 +10,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_Vector_VectorName";
+        displayName = CSTRING(VectorName);
         vehicleClass = "Items";
         class TransportWeapons {
             MACRO_ADDWEAPON(ACE_Vector,1);

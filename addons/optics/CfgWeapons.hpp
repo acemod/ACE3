@@ -73,7 +73,7 @@ class CfgWeapons {
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_2D";
-        displayName = "$STR_ACE_optic_hamr";
+        displayName = CSTRING(hamr);
         weaponInfoType = "ACE_RscWeapon_Hamr";
 
         class ItemInfo: ItemInfo {
@@ -99,7 +99,7 @@ class CfgWeapons {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Hamr_PIP";
         //scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_hamr_pip";
+        displayName = CSTRING(hamr_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -123,7 +123,7 @@ class CfgWeapons {
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_2D";
-        displayName = "$STR_ACE_optic_arco";
+        displayName = CSTRING(arco);
         weaponInfoType = "ACE_RscWeapon_Arco";
 
         class ItemInfo: ItemInfo {
@@ -148,7 +148,7 @@ class CfgWeapons {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_Arco_PIP";
         //scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_arco_pip";
+        displayName = CSTRING(arco_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -172,7 +172,7 @@ class CfgWeapons {
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_MRCO_2D";
-        displayName = "$STR_ACE_optic_valdada";
+        displayName = CSTRING(valdada);
         weaponInfoType = "ACE_RscWeapon_MRCO";
 
         class ItemInfo: ItemInfo {
@@ -198,7 +198,7 @@ class CfgWeapons {
         _generalMacro = "ACE_optic_MRCO_PIP";
         scope = 1;
         //scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_valdada_pip";
+        displayName = CSTRING(valdada_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -222,7 +222,7 @@ class CfgWeapons {
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_2D";
-        displayName = "$STR_ACE_optic_sos";
+        displayName = CSTRING(sos);
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -240,7 +240,7 @@ class CfgWeapons {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_SOS_PIP";
         //scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_sos_pip";
+        displayName = CSTRING(sos_pip);
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
@@ -268,7 +268,7 @@ class CfgWeapons {
 
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_2D";
-        displayName = "$STR_ACE_optic_lrps";
+        displayName = CSTRING(lrps);
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -291,7 +291,7 @@ class CfgWeapons {
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_PIP";
         //scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_lrps_pip";
+        displayName = CSTRING(lrps_pip);
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {

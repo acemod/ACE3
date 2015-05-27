@@ -37,7 +37,7 @@ if (_nextMuzzle != "") then {
     GVAR(CurrentGrenadeMuzzleFrag) = ""; GVAR(CurrentGrenadeMuzzleOther) = "";
 
     if (GVAR(DisplayText)) then {
-        _text = [localize "STR_ACE_WeaponSelect_NoGrenadesLeft", [1,0,0]] call EFUNC(common,stringToColoredText);
+        _text = [localize STRING(NoGrenadesLeft), [1,0,0]] call EFUNC(common,stringToColoredText);
         [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
     };
 };
