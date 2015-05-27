@@ -55,8 +55,6 @@ _triggerSpecificVars pushBack _triggerConfig;
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
 _explosive setPosATL _pos;
 
-["explosive_placed", [_explosive]] call EFUNC(common,globalEvent);
-
 if (!isNull _attachedTo) then {
     TRACE_1("Attaching Live Explosive",_attachedTo);
     _explosive attachTo [_attachedTo];
