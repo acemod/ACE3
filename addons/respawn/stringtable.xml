@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Interaction">
+    <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds ...</English>
             <French>Déploiement dans 5 secondes ...</French>
@@ -174,25 +174,25 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
         </Key>
-        <Key ID="STR_ACE_FriendlyFire_Module_DisplayName">
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
             <Polish>Wiadomości Friendly Fire</Polish>
             <Spanish>Mensajes de fuego amigo</Spanish>
         </Key>
-        <Key ID="STR_ACE_FriendlyFire_Module_Description">
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <English></English>
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
         </Key>
-        <Key ID="STR_ACE_Rallypoint_Module_DisplayName">
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
             <Polish>System punktu zbiórki</Polish>
             <Spanish>Sistema de punto de reunión</Spanish>
         </Key>
-        <Key ID="STR_ACE_Rallypoint_Module_Description">
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
         </Key>
-        <Key ID="STR_ACE_Rallypoint_MoveRallypoint">
+        <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
             <Polish>Przenieś punkt zbiórki</Polish>
             <Spanish>Mover punto de reunión</Spanish>

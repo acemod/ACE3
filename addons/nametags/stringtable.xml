@@ -173,37 +173,37 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
         </Key>
-        <Key ID="STR_ACE_Common_Disabled">
+        <Key ID="STR_ACE_NameTags_Disabled">
             <English>Disabled</English>
             <Polish>Wyłączone</Polish>
             <Spanish>Desactivado</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_Enabled">
+        <Key ID="STR_ACE_NameTags_Enabled">
             <English>Enabled</English>
             <Polish>Włączone</Polish>
             <Spanish>Activado</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyCursor">
+        <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only Cursor</English>
             <Polish>Tylko pod kursorem</Polish>
             <Spanish>Solo cursor</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyOnKeypress">
+        <Key ID="STR_ACE_NameTags_OnlyOnKeypress">
             <English>Only On Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
             <Spanish>Solo al pulsar tecla</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_OnlyCursorAndKeyPress">
+        <Key ID="STR_ACE_NameTags_OnlyCursorAndKeyPress">
             <English>Only Cursor and KeyPress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
             <Spanish>En cursor y al pulsar tecla</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_NameTagSettings">
+        <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
             <Polish>Użyj ustawień imion</Polish>
             <Spanish>Usar ajustes de etiquetas de nombre</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_AlwaysShowAll">
+        <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
             <Polish>Zawsze pokazuj wszystkie</Polish>
             <Spanish>Mostrar siempre todo</Spanish>

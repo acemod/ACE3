@@ -35,7 +35,7 @@ class CfgVehicles {
     class ACE_ModuleFriendlyFire: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = CSTRING(Module_DisplayName);
+        displayName = CSTRING(FriendlyFire_Module_DisplayName);
         function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
@@ -43,14 +43,14 @@ class CfgVehicles {
 
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = CSTRING(Module_Description);
+            description = CSTRING(FriendlyFire_Module_Description);
         };
     };
 
     class ACE_ModuleRallypoint: Module_F {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = CSTRING(Module_DisplayName);
+        displayName = CSTRING(Rallypoint_Module_DisplayName);
         function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
@@ -58,7 +58,7 @@ class CfgVehicles {
 
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = CSTRING(Module_Description);
+            description = CSTRING(Rallypoint_Module_Description);
         };
     };
 
@@ -67,7 +67,7 @@ class CfgVehicles {
     class CAManBase : Man {
         class ACE_SelfActions {
             class ACE_MoveRallypoint {
-                displayName = CSTRING(MoveRallypoint);
+                displayName = CSTRING(Rallypoint_MoveRallypoint);
                 condition = QUOTE([ARR_2(_player, side group _player)] call FUNC(canMoveRallypoint));
                 statement = QUOTE([ARR_2(_player, side group _player)] call FUNC(moveRallypoint));
                 showDisabled = 0;

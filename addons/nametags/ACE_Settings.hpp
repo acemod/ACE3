@@ -11,7 +11,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ShowPlayerNames);
         description = CSTRING(ShowPlayerNames_Desc);
-        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_Enabled", "$STR_ACE_Common_OnlyCursor", "$STR_ACE_Common_OnlyOnKeypress", "$STR_ACE_Common_OnlyCursorAndKeyPress"};
+        values[] = {CSTRING(Disabled), CSTRING(Enabled), CSTRING(OnlyCursor), CSTRING(OnlyOnKeypress), CSTRING(OnlyCursorAndKeyPress)};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
@@ -42,7 +42,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ShowSoundWaves);
         description = CSTRING(ShowSoundWaves_Desc);
-        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
+        values[] = {CSTRING(Disabled), CSTRING(NameTagSettings), CSTRING(AlwaysShowAll)};
     };
     class GVAR(PlayerNamesViewDistance) {
         value = 5;

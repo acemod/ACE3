@@ -169,7 +169,7 @@
             <Italian>Numero</Italian>
             <Portuguese>Número</Portuguese>
         </Key>
-        <Key ID="STR_ACE_optionsMenu_unknownType">
+        <Key ID="STR_ACE_OptionsMenu_unknownType">
             <English>Uknown input type</English>
             <German>Unbekannter Eingabetyp</German>
             <Spanish>Tipo de entrada desconocida</Spanish>
@@ -229,7 +229,7 @@
             <Italian>Parametri esportati alla clipboard</Italian>
             <Portuguese>Opções exportadas para o clipboard.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_optionsMenu_uiScaing">
+        <Key ID="STR_ACE_OptionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
             <French>Menu option: taille de l'UI</French>
             <Polish>Skalowanie UI menu ustawień</Polish>
@@ -241,57 +241,57 @@
             <Portuguese>Escalar o menu de opções</Portuguese>
             <Italian>Proporzioni della interfaccia utente</Italian>
         </Key>
-        <Key ID="STR_AllowConfigExport_Module_DisplayName">
+        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
             <Polish>Pozwól na eksport ustawień [ACE]</Polish>
             <Spanish>[ACE] Permitir exportar configuración</Spanish>
         </Key>
-        <Key ID="STR_AllowConfigExport_allowconfigurationExport_DisplayName">
+        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
             <Polish>Zezwól</Polish>
             <Spanish>Permitir</Spanish>
         </Key>
-        <Key ID="STR_AllowConfigExport_allowconfigurationExport_Description">
+        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
             <Polish>Zezwól na eksport wszystkich ustawień do formatu konfiguracji serwera.</Polish>
             <Spanish>Permitir la exportación de todos los ajustes de configuración a un servidor con formato.</Spanish>
         </Key>
-        <Key ID="STR_AllowConfigExport_Module_Description">
+        <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
             <Polish>Jeżeli ustawione na zezwól, wtedy będziesz mieć dostęp do ekranu modyfikacji wszystich ustawień i zmiennych ACE, a także będziesz mieć możliwość eksportu tychże ustawień do formatu rozpoznawalnego przez userconfig serwera. Kliknięcie opcji Eksportuj skopiuje wszystkie ustawienia do schowka. Działa tylko w trybie SP.</Polish>
             <Spanish>Cuando esta permitido, se tiene acceso a los ajustes de modificación y exportación en SP. Pulsar en exportar copiara la configuración al portapapeles.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_Hide">
+        <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
             <Polish>Ukryj</Polish>
             <Spanish>Ocultar</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_TopRightDown">
+        <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
             <Polish>Po prawej u góry, w dół</Polish>
             <Spanish>Arriba a la derecha, hacia abajo</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_TopRightLeft">
+        <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
             <Polish>Po prawej u góry, do lewej</Polish>
             <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_TopLeftDown">
+        <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
             <Polish>Po lewej u góry, w dół</Polish>
             <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_TopLeftRight">
+        <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
             <Polish>Po lewej u góry, do prawej</Polish>
             <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_Top">
+        <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
             <Polish>Góra</Polish>
             <Spanish>Arriba</Spanish>
         </Key>
-        <Key ID="STR_ACE_Common_Bottom">
+        <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
             <Polish>Dół</Polish>
             <Spanish>Abajo</Spanish>
