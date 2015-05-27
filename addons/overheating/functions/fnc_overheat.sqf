@@ -44,12 +44,12 @@ _energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);
 _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
+_temperature = [_temperature, _barrelMass, ACE_time - _time] call FUNC(cooldown);
 // Calculate heating
 _temperature = _temperature + _energyIncrement / (_barrelMass * 466); // Steel Heat Capacity = 466 J/(Kg.K)
 
 // set updated values
-_time = time;
+_time = ACE_time;
 _unit setVariable [_variableName, [_temperature, _time], false];
 _scaledTemperature = (_temperature / 1000) min 1 max 0;
 

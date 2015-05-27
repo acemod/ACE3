@@ -14,10 +14,12 @@
 
 EXPLODE_1_PVT(_this,_target);
 
-private ["_objectType","_actionsVarName", "_canCollapse", "_children", "_enableInside", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_runOnHover"];
+private ["_objectType","_actionsVarName","_isMan"];
 _objectType = _target;
+_isMan = false;
 if (typeName _target == "OBJECT") then {
     _objectType = typeOf _target;
+    _isMan = _target isKindOf "CAManBase";
 };
 _actionsVarName = format [QGVAR(SelfAct_%1), _objectType];
 
@@ -78,7 +80,7 @@ _recurseFnc = {
     _actions
 };
 
-private "_actionsCfg";
+private ["_actionsCfg","_actions"];
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
 
 private ["_baseDisplayName", "_baseIcon"];
@@ -100,26 +102,31 @@ if (_objectType isKindOf "CAManBase") then {
     };
 };
 
-// Create a master action to base on self action
-_actions = [
+// If the classname inherits from CAManBase, just copy it's menu without recompiling a new one
+_actions = if (_isMan) then {
+    + (missionNamespace getVariable QGVAR(SelfAct_CAManBase))
+} else {
+    // Create a master action to base on self action
     [
         [
-            "ACE_SelfActions",
-            _baseDisplayName,
-            _baseIcon,
-            {
-                // Dummy statement so it's not collapsed when there's no available actions
-                true
-            },
-            {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
-            {},
-            {},
-            "Spine3",
-            10,
-            [false,true,false]
-        ],
-        [_actionsCfg] call _recurseFnc
+            [
+                "ACE_SelfActions",
+                _baseDisplayName,
+                _baseIcon,
+                {
+                    // Dummy statement so it's not collapsed when there's no available actions
+                    true
+                },
+                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)},
+                {},
+                {},
+                "Spine3",
+                10,
+                [false,true,false]
+            ],
+            [_actionsCfg] call _recurseFnc
+        ]
     ]
-];
+};
 
 missionNamespace setVariable [_actionsVarName, _actions];

@@ -21,6 +21,6 @@
 PARAMS_3(_caller,_target,_errorMsg);
 
 if (_errorMsg != "") then {
-    diag_log text format ["[ACE_Disarming] %1 - eventTargetFinish: %2", time, _this];
+    diag_log text format ["[ACE_Disarming] %1 - eventTargetFinish: %2", ACE_time, _this];
     ["DisarmDebugCallback", [_caller], [_caller, _target, _errorMsg]] call EFUNC(common,targetEvent);
 };

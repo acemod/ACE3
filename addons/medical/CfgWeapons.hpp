@@ -182,7 +182,7 @@ class CfgWeapons {
         descriptionShort = $STR_ACE_Medical_Aid_Kit_Desc_Short;
         descriptionUse = $STR_ACE_Medical_Aid_Kit_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 2;
+            mass = 10;
         };
     };
     class ACE_surgicalKit: ACE_ItemCore {
@@ -193,7 +193,7 @@ class CfgWeapons {
         descriptionShort = $STR_ACE_Medical_SurgicalKit_Desc_Short;
         descriptionUse = $STR_ACE_Medical_SurgicalKit_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 5;
+            mass = 15;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {
@@ -204,7 +204,7 @@ class CfgWeapons {
         descriptionShort = $STR_ACE_Medical_Bodybag_Desc_Short;
         descriptionUse = $STR_ACE_Medical_Bodybag_Desc_Use;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 15;
+            mass = 20;
         };
     };
 };

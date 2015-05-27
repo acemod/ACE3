@@ -1,5 +1,7 @@
 #pragma once
 
+#ifdef _WIN32
+
 #include <cstdint>
 #include <string>
 #include <vector>
@@ -55,3 +57,4 @@ namespace ace {
     };
 }
 
+#endif
