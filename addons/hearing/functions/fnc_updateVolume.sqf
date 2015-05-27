@@ -38,7 +38,7 @@ if (GVAR(currentDeafness) > 0.7) then {
     };
 };
 
-// Deafness recovers with time
+// Deafness recovers with ACE_time
 GVAR(currentDeafness) = GVAR(currentDeafness) - _recoverRate max 0;
 
 // needed until Bohemia fixes playSound to actually use the second argument
