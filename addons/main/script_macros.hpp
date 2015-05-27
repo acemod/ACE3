@@ -22,6 +22,8 @@
 
 #define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
 
+#define STRING(var1) QUOTE(TRIPLES(STR,ADDON,var1))
+#define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
 
 #define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
 #define SETVAR_SYS(var1,var2) setVariable [ARR_2(QUOTE(var1),var2)]
