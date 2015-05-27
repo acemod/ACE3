@@ -58,6 +58,7 @@ if (alive _target) exitwith {
     _target setvariable [QGVAR(hasLostBlood), 0, true];
     _target setvariable [QGVAR(isBleeding), false, true];
     _target setvariable [QGVAR(hasPain), false, true];
+    _target setvariable [QGVAR(painSuppress), 0, true];
 
     // medication
     _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];

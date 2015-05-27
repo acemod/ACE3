@@ -53,7 +53,9 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
     _unit setVariable [QGVAR(actionID), _id];
 };
 
-_unit selectWeapon _muzzle;//_weapon
+if ((typeName _muzzle) == (typeName "")) then {
+    _unit selectWeapon _muzzle;//_weapon
+};
 
 // play fire mode selector sound
 [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);

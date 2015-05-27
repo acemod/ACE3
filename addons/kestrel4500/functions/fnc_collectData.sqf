@@ -65,11 +65,17 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     // HEADWIND
     _headwind = 0;
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        _headwind = abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed);
+        _headwind = cos(GVAR(RefHeading) - _playerDir) * _windSpeed;
     } else {
-        _headwind = abs(cos(GVAR(RefHeading)) * _windSpeed);
+        _headwind = cos(GVAR(RefHeading)) * _windSpeed;
     };
-    [4, _headwind] call _fnc_updateMemory;
+    if (abs(_headwind) > abs(GVAR(MAX) select 4)) then {
+        GVAR(MAX) set [4, _headwind];
+    };
+    if (abs(_headwind) < abs(GVAR(MIN) select 4)) then {
+        GVAR(MIN) set [4, _headwind];
+    };
+    GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _headwind];
 };
 
 [5, _temperature] call _fnc_updateMemory;

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
  * 1: Set unconsciouns <BOOL> <OPTIONAL>
- * 2: Minimum unconscious time <NUMBER> <OPTIONAL>
+ * 2: Minimum unconscious ACE_time <NUMBER> <OPTIONAL>
  *
  * ReturnValue:
  * nil
@@ -17,10 +17,11 @@
 
 #define DEFAULT_DELAY   (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime"];
+private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_force"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
+_force = if (count _this > 3) then {_this select 3} else {false};
 
 // No change, fuck off. (why is there no xor?)
 if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
@@ -32,7 +33,7 @@ if !(_set) exitwith {
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
 if (!local _unit) exitwith {
-    [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 _unit setvariable ["ACE_isUnconscious", true, true];
@@ -46,7 +47,7 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
-if !([_unit] call EFUNC(common,isPlayer)) then {
+if (!([_unit] call EFUNC(common,isPlayer)) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) exitWith {
         [_unit, true] call FUNC(setDead);
@@ -96,7 +97,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     };
 }, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
 
-_startingTime = time;
+_startingTime = ACE_time;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

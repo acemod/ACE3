@@ -6,21 +6,18 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Visible light laser
+ACE3 adds visible light laser. This feature is compatible with BI's lasers as well as supported modded ones.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+## 2. Usage
 
+### 2.1 Switching laser mode
+- For this feature you need to have a compatible side attachment.
+- Press <kbd> ctrl+L </kbd> (by default).
+- A hint indicating the mode switch will appear in the top right corner.
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_common`
