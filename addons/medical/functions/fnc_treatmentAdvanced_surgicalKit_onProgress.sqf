@@ -21,8 +21,8 @@ if (count _bandagedWounds == 0) exitWith {false};
 
 //Has enough time elapsed that we can close another wound?
 if ((_totalTime - _elapsedTime) <= (((count _bandagedWounds) - 1) * 5)) then {
-	_bandagedWounds deleteAt 0;
-	_target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+    _bandagedWounds deleteAt 0;
+    _target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 };
 
 true
