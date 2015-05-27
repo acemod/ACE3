@@ -180,7 +180,7 @@ class ACE_Torso {
     };
 };
 class ACE_ArmLeft {
-    displayName = CSTRING(ArmLeft);
+    displayName = ECSTRING(interaction,ArmLeft);
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
@@ -338,7 +338,7 @@ class ACE_ArmLeft {
     };
 };
 class ACE_ArmRight {
-    displayName = CSTRING(ArmRight);
+    displayName = ECSTRING(interaction,ArmRight);
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
@@ -493,7 +493,7 @@ class ACE_ArmRight {
 
 };
 class ACE_LegLeft {
-    displayName = CSTRING(LegLeft);
+    displayName = ECSTRING(interaction,LegLeft);
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION
@@ -636,7 +636,7 @@ class ACE_LegLeft {
     };
 };
 class ACE_LegRight {
-    displayName = CSTRING(LegRight);
+    displayName = ECSTRING(interaction,LegRight);
     runOnHover = 1;
     statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
     ACTION_CONDITION

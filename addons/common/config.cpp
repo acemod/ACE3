@@ -101,7 +101,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(SettingFeedbackIconsName);
         description = CSTRING(SettingFeedbackIconsDesc);
-        values[] = {"$STR_ACE_Common_Hide", "$STR_ACE_Common_TopRightDown", "$STR_ACE_Common_TopRightLeft", "$STR_ACE_Common_TopLeftDown", "$STR_ACE_Common_TopLeftRight"};
+        values[] = {ECSTRING(optionsmenu,Hide), ECSTRING(optionsmenu,TopRightDown), ECSTRING(optionsmenu,TopRightLeft), ECSTRING(optionsmenu,TopLeftDown), ECSTRING(optionsmenu,TopLeftRight)};
     };
     class GVAR(SettingProgressBarLocation) {
         value = 0;
@@ -110,7 +110,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(SettingProgressbarLocationName);
         description = CSTRING(SettingProgressbarLocationDesc);
-        values[] = {"$STR_ACE_Common_Top", "$STR_ACE_Common_Bottom"};
+        values[] = {ECSTRING(optionsmenu,Top), ECSTRING(optionsmenu,Bottom)};
     };
     class GVAR(displayTextColor) {
         value[] = {0,0,0,0.1};

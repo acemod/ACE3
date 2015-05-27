@@ -146,7 +146,7 @@ class Medical {
         };
     };
     class ACE_ArmLeft {
-        displayName = CSTRING(ArmLeft);
+        displayName = ECSTRING(interaction,ArmLeft);
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 2)] call DFUNC(displayPatientInformation));
@@ -248,7 +248,7 @@ class Medical {
         };
     };
     class ACE_ArmRight {
-        displayName = CSTRING(ArmRight);
+        displayName = ECSTRING(interaction,ArmRight);
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 3)] call DFUNC(displayPatientInformation));
@@ -346,7 +346,7 @@ class Medical {
         };
     };
     class ACE_LegLeft {
-        displayName = CSTRING(LegLeft);
+        displayName = ECSTRING(interaction,LegLeft);
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 4)] call DFUNC(displayPatientInformation));
@@ -433,7 +433,7 @@ class Medical {
         };
     };
     class ACE_LegRight {
-        displayName = CSTRING(LegRight);
+        displayName = ECSTRING(interaction,LegRight);
         runOnHover = 1;
         exceptions[] = {"isNotInside"};
         statement = QUOTE([ARR_3(_target, true, 5)] call DFUNC(displayPatientInformation));
