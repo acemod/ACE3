@@ -29,7 +29,7 @@ if (_typeNum == 0) then {
 };
 
 private ["_varName","_actionTrees", "_parentNode"];
-_varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
+_varName = format [[QGVAR(ACE_Actions_%1), QGVAR(ACE_SelfActions_%1)] select _typeNum, _objectType];
 _actionTrees = missionNamespace getVariable [_varName, []];
 if((count _actionTrees) == 0) then {
     missionNamespace setVariable [_varName, _actionTrees];
