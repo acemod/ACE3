@@ -9,7 +9,7 @@ class CfgVehicles {
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class enableServerController {
                 displayName = CSTRING(enableServerController_DisplayName);

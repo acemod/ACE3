@@ -17,7 +17,7 @@ class CfgVehicles {
 
     class B_Parachute;
     class ACE_NonSteerableParachute: B_Parachute {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(NonSteerableParachute);
         //picture = "\A3\Characters_F\data\ui\icon_b_parachute_ca.paa";    // @todo

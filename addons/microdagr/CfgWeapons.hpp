@@ -3,7 +3,7 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_microDAGR: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(itemName);
         descriptionShort = CSTRING(itemDescription);

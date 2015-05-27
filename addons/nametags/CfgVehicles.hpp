@@ -4,7 +4,7 @@ class CfgVehicles {
         class ModuleDescription {};
     };
     class ACE_ModuleNameTags : Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleNameTags);

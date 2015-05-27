@@ -2,7 +2,7 @@
 class CfgVehicles {
     class Sign_F;
     class ACE_TargetWall: Sign_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 0;
         class Eventhandlers {
             init = QUOTE(_this call COMPILE_FILE(scripts\initTargetWall));
@@ -192,7 +192,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(AmmoSupplyCrate_DisplayName);
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_Mag_SD,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_762x51_M993_AP_Mag,4);

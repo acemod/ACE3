@@ -1,7 +1,7 @@
 class CfgMagazines {
     class NLAW_F;
     class ACE_PreloadedMissileDummy: NLAW_F {              // The dummy magazine
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 1;
         scopeArsenal = 1;
         displayName = CSTRING(PreloadedMissileDummy);
@@ -13,7 +13,7 @@ class CfgMagazines {
         count = 0;
     };
     class ACE_UsedTube_F: NLAW_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(UsedTube);
         descriptionShort = CSTRING(UsedTubeDescription);
         displayNameShort = "-";

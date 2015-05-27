@@ -1,7 +1,7 @@
 class CfgVehicles {
     class Module_F;
     class ACE_ModuleMap: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMap);
@@ -40,7 +40,7 @@ class CfgVehicles {
     };
 
     class ACE_ModuleBlueForceTracking: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);

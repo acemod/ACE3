@@ -7,7 +7,7 @@ class CfgWeapons {
     class ACE_launch_NLAW_Used_F: launch_NLAW_F {   // the used tube should be a sub class of the disposable launcher
         scope = 1;
         ACE_isUsedLauncher = 1;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(UsedTube);
         descriptionShort = CSTRING(UsedTubeDescription);
         magazines[] = {"ACE_FiredMissileDummy"};  // This will disable the used launcher class from being fired again.

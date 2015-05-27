@@ -42,7 +42,7 @@ class CfgVehicles {
         class ModuleDescription {};
     };
     class GVAR(dagrModule): Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMapFill);
@@ -79,7 +79,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(itemName);
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
         class TransportItems {

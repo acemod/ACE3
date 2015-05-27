@@ -7,7 +7,7 @@
 class CfgVehicles {
     class Item_Base_F;
     class ACE_Item_Vector: Item_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(VectorName);

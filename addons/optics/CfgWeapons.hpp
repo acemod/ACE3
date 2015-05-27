@@ -31,7 +31,7 @@ class CfgWeapons {
     };
 
     /*class ACE_optic_DMS: optic_DMS {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_DMS";
         scope = 1;
         displayName = "LOCALIZE ACE DMS";
@@ -71,7 +71,7 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Hamr_2D";
         displayName = CSTRING(hamr);
         weaponInfoType = "ACE_RscWeapon_Hamr";
@@ -96,7 +96,7 @@ class CfgWeapons {
     };
 
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Hamr_PIP";
         //scopeArsenal = 1;
         displayName = CSTRING(hamr_pip);
@@ -121,7 +121,7 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\arco-reticle65_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\arco-reticle65Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Arco_2D";
         displayName = CSTRING(arco);
         weaponInfoType = "ACE_RscWeapon_Arco";
@@ -145,7 +145,7 @@ class CfgWeapons {
     };
 
     class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Arco_PIP";
         //scopeArsenal = 1;
         displayName = CSTRING(arco_pip);
@@ -170,7 +170,7 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\mrco-reticle556_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\mrco-reticle556Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_MRCO_2D";
         displayName = CSTRING(valdada);
         weaponInfoType = "ACE_RscWeapon_MRCO";
@@ -194,7 +194,7 @@ class CfgWeapons {
     };
 
     class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_MRCO_PIP";
         scope = 1;
         //scopeArsenal = 1;
@@ -220,7 +220,7 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_SOS_2D";
         displayName = CSTRING(sos);
         weaponInfoType = "ACE_RscWeapon_SOS";
@@ -237,7 +237,7 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_SOS_PIP";
         //scopeArsenal = 1;
         displayName = CSTRING(sos_pip);
@@ -266,7 +266,7 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_LRPS_2D";
         displayName = CSTRING(lrps);
         weaponInfoType = "ACE_RscWeapon_SOS";
@@ -288,7 +288,7 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_LRPS_PIP";
         //scopeArsenal = 1;
         displayName = CSTRING(lrps_pip);

@@ -18,7 +18,7 @@ class CfgVehicles {
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class level {
                 displayName = CSTRING(MedicalSettings_level_DisplayName);
@@ -147,7 +147,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class enableFor {
                 displayName = CSTRING(AdvancedMedicalSettings_enableFor_DisplayName);
@@ -239,7 +239,7 @@ class CfgVehicles {
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class enableRevive {
                 displayName = CSTRING(ReviveSettings_enableRevive_DisplayName);
@@ -280,7 +280,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicRoles_EnableList_DisplayName);
@@ -325,7 +325,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicVehicle_EnableList_DisplayName);
@@ -366,7 +366,7 @@ class CfgVehicles {
         isGlobal = 2;
         isTriggerActivated = 0;
         isDisposable = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class enabled {
                 displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
@@ -714,7 +714,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Bandage_Basic_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_fieldDressing {
@@ -727,7 +727,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Packing_Bandage_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_packingBandage {
@@ -740,7 +740,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Bandage_Elastic_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_elasticBandage {
@@ -753,7 +753,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Tourniquet_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_tourniquet {
@@ -766,7 +766,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Morphine_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_morphine {
@@ -779,7 +779,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Atropine_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_atropine {
@@ -792,7 +792,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Epinephrine_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_epinephrine {
@@ -805,7 +805,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Plasma_IV;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_plasmaIV {
@@ -819,7 +819,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Blood_IV;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_bloodIV {
@@ -832,7 +832,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Saline_IV;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_salineIV {
@@ -845,7 +845,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_QuikClot_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_quikClot {
@@ -858,7 +858,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Aid_Kit_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_personalAidKit {
@@ -871,7 +871,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_SurgicalKit_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_surgicalKit {
@@ -884,7 +884,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         displayName = $STR_ACE_Medical_Bodybag_Display;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_bodyBag {
@@ -900,7 +900,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = PATHTOF(data\ace_medcrate.p3d);
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class TransportItems {
             class ACE_fieldDressing {
                 name = "ACE_fieldDressing";

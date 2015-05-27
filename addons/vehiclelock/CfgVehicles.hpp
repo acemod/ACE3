@@ -67,7 +67,7 @@ class CfgVehicles {
         class ModuleDescription {};
     };
     class ACE_VehicleLock_ModuleSetup: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
@@ -105,7 +105,7 @@ class CfgVehicles {
     };
 
     class ACE_VehicleLock_ModuleSyncedAssign: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(VehicleKeyAssign_Module_DisplayName);
         function = QFUNC(moduleSync);

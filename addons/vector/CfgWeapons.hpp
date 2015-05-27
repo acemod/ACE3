@@ -2,7 +2,7 @@
 class CfgWeapons {
     class Binocular;
     class ACE_Vector: Binocular {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(VectorName);
         descriptionShort = CSTRING(VectorDescription);
         model = PATHTOF(ace_vector.p3d);

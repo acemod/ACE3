@@ -159,7 +159,7 @@ class CfgVehicles {
     };
 
     class GVAR(ModuleSurrender): Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(ModuleSurrender_DisplayName); //Make Unit Surrender
         function = QUOTE(DFUNC(moduleSurrender));

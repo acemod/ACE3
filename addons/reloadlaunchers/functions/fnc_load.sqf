@@ -38,7 +38,7 @@ _onSuccess =  {
 };
 
 _onFailure = {
-    [localize "STR_ACE_Common_ActionAborted"] call DEFUNC(common,displayTextStructured);
+    [localize ESTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
 };
 
 _condition = {

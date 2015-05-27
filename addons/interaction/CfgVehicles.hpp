@@ -2,7 +2,7 @@ class CfgVehicles {
 
   class Module_F;
   class ACE_ModuleInteraction: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+    author = ECSTRING(common,ACETeam);
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);
     function = "ACE_Interaction_fnc_moduleInteraction";

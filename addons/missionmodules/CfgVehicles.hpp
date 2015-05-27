@@ -15,7 +15,7 @@ class CfgVehicles {
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments    {
             class soundFiles {
                 displayName = CSTRING(AmbianceSounds_soundFiles_DisplayName);

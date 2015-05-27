@@ -22,7 +22,7 @@ class CfgWeapons {
 
         ACE_laserpointer = 1;
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_red";
         scope = 1;
         displayName = CSTRING(red);
@@ -71,7 +71,7 @@ class CfgWeapons {
         ACE_nextModeClass = "ACE_acc_pointer_green";
         ACE_modeDescription = CSTRING(IRLaser);
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
         scope = 1;
         displayName = CSTRING(green);
@@ -83,7 +83,7 @@ class CfgWeapons {
 
         ACE_laserpointer = 2;
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
         scope = 2;
         displayName = CSTRING(green);

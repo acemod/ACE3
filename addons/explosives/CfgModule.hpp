@@ -3,7 +3,7 @@ class Module_F: Logic {
     class ModuleDescription {};
 };
 class ACE_ModuleExplosive: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+    author = ECSTRING(common,ACETeam);
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);
     function = QUOTE(FUNC(module));
