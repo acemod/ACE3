@@ -26,7 +26,7 @@ if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
 };
 
 private "_timer";
-_timer = time + 5;
+_timer = ACE_time + 5;
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
@@ -46,7 +46,7 @@ if (_target isKindOf "CAManBase") then {
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
 
-    _timer = time + 15;
+    _timer = ACE_time + 15;
 
 } else {
 
@@ -62,7 +62,7 @@ if (_target isKindOf "CAManBase") then {
 [_unit, _target, true] call EFUNC(common,claim);
 
 
-// prevents draging and carrying at the same time
+// prevents draging and carrying at the same ACE_time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // required for aborting animation

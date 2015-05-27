@@ -22,7 +22,7 @@ if (count _intersectsWith > 0) then {
         if(!(_x in _foundObjects)) then {
             // diag_log text format["Adding HP: %1", _x];
             _index = (count GVAR(spallHPData));
-            _hpId = _x addEventHandler ["hitPart", format["[%1, _this] call " + QUOTE(FUNC(spallHP)), _index]];
+            _hpId = _x addEventHandler ["hitPart", compile format["[%1, _this] call " + QUOTE(FUNC(spallHP)), _index]];
             _foundObjects set[(count _foundObjects), _x];
             _foundObjectHPIds set[(count _foundObjectHPIds), _hpId];
             _data = [_hpId, _x, typeOf _round, _round, _curPos, _velocity, 0, _foundObjects, _foundObjectHPIds];

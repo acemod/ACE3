@@ -35,7 +35,7 @@
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
-    if (time > 0) exitWith {
+    if (ACE_time > 0) exitWith {
         [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
@@ -217,7 +217,7 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep time if you need it.
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -238,7 +238,7 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { time > 0 || isNull player } ) then {
+if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!(isNull player)) then {

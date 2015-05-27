@@ -59,7 +59,7 @@ if (GVAR(currentUnit) == 1) then {
 private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
-_bulletDiameter = parseNumber(ctrlText 120020);
+_bulletDiameter = parseNumber(ctrlText 120020) * 10;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _airFriction = 0.1 max parseNumber(ctrlText 120030) min 2;
 } else {
@@ -71,7 +71,7 @@ _zeroRange = parseNumber (ctrlText 120060);
 if (GVAR(currentUnit) != 2) then {
     _boreHeight = _boreHeight * 2.54;
     _bulletMass = _bulletMass * 0.06479891;
-    _bulletDiameter = _bulletDiameter * 10 * 2.54;
+    _bulletDiameter = _bulletDiameter * 2.54;
     _rifleTwist = _rifleTwist * 2.54;
     _muzzleVelocity = _muzzleVelocity / 3.2808399;
 };

@@ -1,1 +1,1 @@
-#include "\z\ace\Addons\laser_selfdesignate\script_component.hpp"
+#include "\z\ace\addons\laser_selfdesignate\script_component.hpp"

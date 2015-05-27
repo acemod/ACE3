@@ -41,7 +41,7 @@ GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", compile
 
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
-GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [time, _target, _requestID] spawn {
+GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [ACE_time, _target, _requestID] spawn {
     private["_id", "_t", "_requestID", "_target"];
     _t = (_this select 0) + 40;
     _target = _this select 1;
@@ -50,7 +50,7 @@ GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [time, _target, _requestID] spawn {
     waituntil {
         _id = _target getvariable _requestID;
 
-    (time > _t || isnil "_id")};
+    (ACE_time > _t || isnil "_id")};
     _target setvariable [_requestID, nil];
     GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = nil;
     if (!isnil QGVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT)) then {

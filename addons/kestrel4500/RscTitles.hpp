@@ -2,8 +2,7 @@
 #define ST_RIGHT 1
 #define ST_CENTER 2
 
-class Kestrel4500_RscText
-{
+class Kestrel4500_RscText {
     idc=-1;
     type=0;
     style=ST_CENTER;
@@ -19,8 +18,7 @@ class Kestrel4500_RscText
     sizeEx=0.04;
     shadow=0;
 };
-class Kestrel4500_RscButton
-{
+class Kestrel4500_RscButton {
     text="";
     colorText[]={0,0,0,1};
     colorDisabled[]={0,0,0,0};
@@ -49,8 +47,7 @@ class Kestrel4500_RscButton
     borderSize=0;
     shadow=0;
 };
-class Kestrel4500_Display
-{
+class Kestrel4500_Display {
     name="Kestrel4500_Display";
     idd=-1;
     onLoad="uiNamespace setVariable ['Kestrel4500_Display', (_this select 0)]";
@@ -58,10 +55,8 @@ class Kestrel4500_Display
     movingEnable=1;
     controlsBackground[]={};
     objects[]={};
-    class controls
-    {
-        class BACKGROUND
-        {
+    class controls {
+        class BACKGROUND {
             moving=1;
             type=0;
             font="TahomaB";
@@ -76,18 +71,16 @@ class Kestrel4500_Display
             colorText[]={1,1,1,1};
             text=PATHTOF(UI\Kestrel4500.paa);
         };
-        class POWER: Kestrel4500_RscButton
-        {
+        class POWER: Kestrel4500_RscButton {
             idc=-1;
             x=safezoneX+0.385;
             y=safezoneY+1.125;
             w=0.042;
             h=0.042*4/3;
-            action="closeDialog 0";
+            action=QUOTE(7 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_exit_button_click'";
         };
-        class ENTER: POWER
-        {
+        class ENTER: POWER {
             idc=-1;
             x=safezoneX+0.46;
             y=safezoneY+1.0;
@@ -95,8 +88,7 @@ class Kestrel4500_Display
             action=QUOTE(0 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_center_button_click'";
         };
-        class TOP: Kestrel4500_RscButton
-        {
+        class TOP: Kestrel4500_RscButton {
             idc=-1;
             x=safezoneX+0.46;
             y=safezoneY+0.93;
@@ -105,15 +97,13 @@ class Kestrel4500_Display
             action=QUOTE(1 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_top_button_click'";
         };
-        class BOTTOM: TOP
-        {
+        class BOTTOM: TOP {
             idc=-1;
             y=safezoneY+1.1;
             action=QUOTE(2 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_bottom_button_click'";
         };
-        class LEFT: Kestrel4500_RscButton
-        {
+        class LEFT: Kestrel4500_RscButton {
             idc=-1;
             x=safezoneX+0.4;
             y=safezoneY+0.97;
@@ -122,15 +112,13 @@ class Kestrel4500_Display
             action=QUOTE(3 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_left_button_click'";
         };
-        class RIGHT: LEFT
-        {
+        class RIGHT: LEFT {
             idc=-1;
             x=safezoneX+0.58;
             action=QUOTE(4 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_right_button_click'";
         };
-        class MEMORY: Kestrel4500_RscButton
-        {
+        class MEMORY: Kestrel4500_RscButton {
             idc=-1;
             x=safezoneX+0.395;
             y=safezoneY+0.87;
@@ -138,15 +126,13 @@ class Kestrel4500_Display
             h=0.045*4/3;
             action=QUOTE(5 call FUNC(buttonPressed));
         };
-        class BACKLIGHT: MEMORY
-        {
+        class BACKLIGHT: MEMORY {
             idc=-1;
             x=safezoneX+0.585;
             action=QUOTE(6 call FUNC(buttonPressed));
         };
         
-        class TEXT_TOP: Kestrel4500_RscText
-        {
+        class TEXT_TOP: Kestrel4500_RscText {
             idc=74100;
             x=safezoneX+0.40;
             y=safezoneY+0.58;
@@ -154,68 +140,86 @@ class Kestrel4500_Display
             h=0.04;
             text="";
         };
-        class TEXT_CENTER_BIG: TEXT_TOP
-        {
+        class TEXT_CENTER_BIG: TEXT_TOP {
             idc=74200;
             y=safezoneY+0.61;
             h=0.10;
             SizeEx=0.06;
-            text="";
         };
-        class TEXT_CENTER_LINE_1_LEFT: TEXT_TOP
-        {
+        class TEXT_CENTER: TEXT_TOP {
+            idc=74201;
+            y=safezoneY+0.64;
+        };
+        class TEXT_CENTER_LINE_1_LEFT: TEXT_TOP {
             idc=74300;
             y=safezoneY+0.60;
             style=ST_LEFT;
             h=0.10;
             SizeEx=0.05;
-            text="";
         };
-        class TEXT_CENTER_LINE2_LEFT: TEXT_CENTER_LINE_1_LEFT
-        {
+        class TEXT_CENTER_LINE2_LEFT: TEXT_CENTER_LINE_1_LEFT {
             idc=74301;
             y=safezoneY+0.64;
-            text="";
         };
-        class TEXT_CENTER_LINE_3_LEFT: TEXT_CENTER_LINE2_LEFT
-        {
+        class TEXT_CENTER_LINE_3_LEFT: TEXT_CENTER_LINE2_LEFT {
             idc=74302;
             y=safezoneY+0.68;
-            text="";
         };
-        class TEXT_CENTER_LINE_1_RIGHT: TEXT_CENTER_LINE_1_LEFT
-        {
+        class TEXT_CENTER_LINE_1_RIGHT: TEXT_CENTER_LINE_1_LEFT {
             idc=74303;
             style=ST_RIGHT;
         };
-        class TEXT_CENTER_LINE2_RIGHT: TEXT_CENTER_LINE2_LEFT
-        {
+        class TEXT_CENTER_LINE2_RIGHT: TEXT_CENTER_LINE2_LEFT {
             idc=74304;
             style=ST_RIGHT;
         };
-        class TEXT_CENTER_LINE_3_RIGHT: TEXT_CENTER_LINE_3_LEFT
-        {
+        class TEXT_CENTER_LINE_3_RIGHT: TEXT_CENTER_LINE_3_LEFT {
             idc=74305;
             style=ST_RIGHT;
         };
-        class TEXT_INFO_LINE_1: TEXT_TOP
-        {
+        class TEXT_INFO_LINE_1: TEXT_TOP {
             idc=74400;
-            y=safezoneY+0.69;
-            text="";
+            y=safezoneY+0.68;
         };
-        class TEXT_INFO_LINE_2: TEXT_TOP
-        {
+        class TEXT_INFO_LINE_2: TEXT_TOP {
             idc=74401;
             y=safezoneY+0.72;
-            text="";
+        };
+        class TEXT_BOTTOM_BIG: TEXT_TOP {
+            idc=74500;
+            y=safezoneY+0.67;
+            h=0.10;
+            SizeEx=0.06;
+        };
+        class TEXT_CENTER_LINE_1: TEXT_TOP {
+            idc=74600;
+            y=safezoneY+0.58;
+            SizeEx=0.03;
+        };
+        class TEXT_CENTER_LINE_2: TEXT_CENTER_LINE_1 {
+            idc=74601;
+            y=safezoneY+0.61;
+        };
+        class TEXT_CENTER_LINE_3: TEXT_CENTER_LINE_1 {
+            idc=74602;
+            y=safezoneY+0.64;
+        };
+        class TEXT_CENTER_LINE_4: TEXT_CENTER_LINE_1 {
+            idc=74603;
+            y=safezoneY+0.67;
+        };
+        class TEXT_CENTER_LINE_5: TEXT_CENTER_LINE_1 {
+            idc=74604;
+            y=safezoneY+0.70;
+        };
+        class TEXT_CENTER_LINE_6: TEXT_CENTER_LINE_1 {
+            idc=74605;
+            y=safezoneY+0.73;
         };
     };
 };
-class RscTitles
-{
-    class RscKestrel4500
-    {
+class RscTitles {
+    class RscKestrel4500 {
         idd=-1;
         onLoad="with uiNameSpace do { RscKestrel4500 = _this select 0 };";
         onUnload=(_this call FUNC(onCloseDisplay));
@@ -223,10 +227,8 @@ class RscTitles
         duration=60;
         fadeIn="false";
         fadeOut="false";
-        class controls
-        {
-            class RscKestrel4500
-            {
+        class controls {
+            class RscKestrel4500 {
                 idc=75000;
                 moving=0;
                 type=0;
@@ -241,8 +243,7 @@ class RscTitles
                 colorText[]={1,1,1,1};
                 text=PATHTOF(UI\Kestrel4500_0.paa);
             };
-            class RscTextTop: Kestrel4500_RscText
-            {
+            class RscTextTop: Kestrel4500_RscText {
                 idc=75100;
                 x=safezoneX-0.05+0.40*0.75;
                 y=safezoneY+0.7+0.58*0.75;
@@ -251,16 +252,18 @@ class RscTitles
                 SizeEx=0.04*0.75;
                 text="";
             };
-            class RscTextCenterBig: RscTextTop
-            {
+            class RscTextCenterBig: RscTextTop {
                 idc=75200;
                 y=safezoneY+0.7+0.61*0.75;
                 h=0.10*0.75;
                 SizeEx=0.06*0.75;
                 text="";
             };
-            class RscTextCenterLine1Left: RscTextTop
-            {
+            class RscTextCenter: RscTextTop {
+                idc=75201;
+                y=safezoneY+0.7+0.64*0.75;
+            };
+            class RscTextCenterLine1Left: RscTextTop {
                 idc=75300;
                 y=safezoneY+0.7+0.60*0.75;
                 style=ST_LEFT;
@@ -268,44 +271,69 @@ class RscTitles
                 SizeEx=0.05*0.75;
                 text="";
             };
-            class RscTextCenterLine2Left: RscTextCenterLine1Left
-            {
+            class RscTextCenterLine2Left: RscTextCenterLine1Left {
                 idc=75301;
                 y=safezoneY+0.7+0.64*0.75;
                 text="";
             };
-            class RscTextCenterLine3Left: RscTextCenterLine2Left
-            {
+            class RscTextCenterLine3Left: RscTextCenterLine2Left {
                 idc=75302;
                 y=safezoneY+0.7+0.68*0.75;
                 text="";
             };
-            class RscTextCenterLine1Right: RscTextCenterLine1Left
-            {
+            class RscTextCenterLine1Right: RscTextCenterLine1Left {
                 idc=75303;
                 style=ST_RIGHT;
             };
-            class RscTextCenterLine2Right: RscTextCenterLine2Left
-            {
+            class RscTextCenterLine2Right: RscTextCenterLine2Left {
                 idc=75304;
                 style=ST_RIGHT;
             };
-            class RscTextCenterLine3Right: RscTextCenterLine3Left
-            {
+            class RscTextCenterLine3Right: RscTextCenterLine3Left {
                 idc=75305;
                 style=ST_RIGHT;
             };
-            class RscTextInfoLine1: RscTextTop
-            {
+            class RscTextInfoLine1: RscTextTop {
                 idc=75400;
-                y=safezoneY+0.7+0.69*0.75;
+                y=safezoneY+0.7+0.68*0.75;
                 text="";
             };
-            class RscTextInfoLine2: RscTextTop
-            {
+            class RscTextInfoLine2: RscTextTop {
                 idc=75401;
                 y=safezoneY+0.7+0.72*0.75;
                 text="";
+            };
+            class RscTextBottomBig: RscTextTop {
+                idc=75500;
+                y=safezoneY+0.7+0.67*0.75;
+                h=0.10*0.75;
+                SizeEx=0.06*0.75;
+                text="";
+            };
+            class RscTextCenterLine1: RscTextTop {
+                idc=75600;
+                y=safezoneY+0.7+0.58*0.75;
+                SizeEx=0.03*0.75;
+            };
+            class RscTextCenterLine2: RscTextCenterLine1 {
+                idc=75601;
+                y=safezoneY+0.7+0.61*0.75;
+            };
+            class RscTextCenterLine3: RscTextCenterLine1 {
+                idc=75602;
+                y=safezoneY+0.7+0.64*0.75;
+            };
+            class RscTextCenterLine4: RscTextCenterLine1 {
+                idc=75603;
+                y=safezoneY+0.7+0.67*0.75;
+            };
+            class RscTextCenterLine5: RscTextCenterLine1 {
+                idc=75604;
+                y=safezoneY+0.7+0.70*0.75;
+            };
+            class RscTextCenterLine6: RscTextCenterLine1 {
+                idc=75605;
+                y=safezoneY+0.7+0.73*0.75;
             };
         };
     };

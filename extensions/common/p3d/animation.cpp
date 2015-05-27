@@ -2,7 +2,6 @@
 
 #include "p3d/animation.hpp"
 #include "read_helpers.hpp"
-#include "..\simulation\object.hpp"
 
 namespace ace {
     namespace p3d {
