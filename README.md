@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
     v3.0.1
-        <img src="http://img.shields.io/badge/version-3.0.1-blue.svg?style=flat&label=Version"
+        <img src="https://img.shields.io/badge/Version-3.0.1-blue.svg?style=flat"
              alt="ACE version">
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
