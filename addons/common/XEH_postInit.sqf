@@ -3,12 +3,6 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
-// Load settings from profile
-if (hasInterface) then {
-    call FUNC(loadSettingsFromProfile);
-    call FUNC(loadSettingsLocalizedText);
-};
-
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
     PARAMS_2(_name,_value);
@@ -253,3 +247,19 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+GVAR(commonPostInited) = true;
+
+// Create a pfh to wait until all postinits are ready and settings are initialized
+[{
+    // If post inits are not ready then wait
+    if !(SLX_XEH_MACHINE select 8) exitWith {};
+    // If settings are not initialized then wait
+    if !(GVAR(SettingsInitialized)) exitWith {};
+
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
+    diag_log text format["[ACE] Settings initialized"];
+    ["SettingsInitialized", []] call FUNC(localEvent);
+
+}, 0, []] call cba_fnc_addPerFrameHandler;

@@ -180,6 +180,7 @@ PREP(toHex);
 PREP(toNumber);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
+PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
@@ -293,9 +294,23 @@ GVAR(waitAndExecArray) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Wait for server settings to arrive
+GVAR(SettingsInitialized) = false;
+["ServerSettingsReceived", {
+    diag_log text format["[ACE] Settings received from server"];
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+    GVAR(SettingsInitialized) = true;
+}] call FUNC(addEventhandler);
+
+// Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
+    // Raise a local event for other modules to listen too
+    ["ServerSettingsReceived", []] call FUNC(localEvent);
 };
 
 ACE_player = player;
