@@ -56,8 +56,8 @@ if (count _collection > 0) then {
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
                 lbClear 400;
-                lbAdd [400, (localize STRING(Disabled))];
-                lbAdd [400, (localize STRING(Enabled))];
+                lbAdd [400, (localize LSTRING(Disabled))];
+                lbAdd [400, (localize LSTRING(Enabled))];
                 _settingsValue = [0, 1] select _settingsValue;
             } else {
                 lbClear 400;
@@ -77,10 +77,10 @@ if (count _collection > 0) then {
 
             // Created disable/enable options for bools
             _expectedType = switch (_setting select 1) do {
-                case "STRING": {STRING(stringType)};
-                case "ARRAY": {STRING(arrayType)};
-                case "SCALAR": {STRING(scalarType)};
-                default {STRING(unknownType)};
+                case "STRING": {LSTRING(stringType)};
+                case "ARRAY": {LSTRING(arrayType)};
+                case "SCALAR": {LSTRING(scalarType)};
+                default {LSTRING(unknownType)};
             };
             (_settingsMenu displayCtrl 414) ctrlSetText format["%1", _settingsValue];
             (_settingsMenu displayCtrl 415) ctrlSetText format[localize _expectedType];

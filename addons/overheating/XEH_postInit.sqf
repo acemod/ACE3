@@ -4,7 +4,7 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(unjamWeapon), localize STRING(UnjamWeapon),
+["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

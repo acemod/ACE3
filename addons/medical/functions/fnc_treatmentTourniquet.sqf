@@ -43,7 +43,7 @@ _removeItem = _items select 0;
 [[_target, _removeItem, _selectionName], QUOTE(DFUNC(treatmentTourniquetLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 
 [_target, _removeItem] call FUNC(addToTriageCard);
-[_target, "activity", STRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 
 
 true;

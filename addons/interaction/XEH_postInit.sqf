@@ -23,7 +23,7 @@ private ["_team"];
 
 
 // Add keybinds
-["ACE3 Common", QGVAR(openDoor), localize STRING(OpenDoor),
+["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -43,7 +43,7 @@ private ["_team"];
 [57, [false, true, false]], false] call cba_fnc_addKeybind; //Key CTRL+Space
 
 
-["ACE3 Common", QGVAR(tapShoulder), localize STRING(TapShoulder),
+["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -57,7 +57,7 @@ private ["_team"];
 {false},
 [20, [true, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3 Common", QGVAR(modifierKey), localize STRING(ModifierKey),
+["ACE3 Common", QGVAR(modifierKey), localize LSTRING(ModifierKey),
 {
     // Conditions: canInteract
     //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed

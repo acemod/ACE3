@@ -58,7 +58,7 @@ if (_actionID != -1) then {
 };
 
 _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize STRING(Drop)],
+    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
     QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(carriedObject)),objNull)])] call FUNC(dropObject_carry)),
     nil,
     20,

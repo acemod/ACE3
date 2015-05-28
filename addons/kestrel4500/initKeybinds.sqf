@@ -1,4 +1,4 @@
-["ACE3 Equipment", QGVAR(KestrelDialogKey), localize STRING(KestrelDialogKey),
+["ACE3 Equipment", QGVAR(KestrelDialogKey), localize LSTRING(KestrelDialogKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -13,7 +13,7 @@
 {false},
 [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
-["ACE3 Equipment", QGVAR(DisplayKestrelKey), localize STRING(DisplayKestrelKey),
+["ACE3 Equipment", QGVAR(DisplayKestrelKey), localize LSTRING(DisplayKestrelKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

@@ -22,7 +22,7 @@ private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
 if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
-    [localize STRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 // add a primary weapon if the unit has none.

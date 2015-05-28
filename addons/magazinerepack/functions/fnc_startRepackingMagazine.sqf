@@ -67,7 +67,7 @@ _totalTime,
 [_magazineClassname, _startingAmmoCounts, _simEvents],
 {_this call FUNC(magazineRepackFinish)},
 {_this call FUNC(magazineRepackFinish)},
-(localize STRING(RepackingMagazine)),
+(localize LSTRING(RepackingMagazine)),
 {_this call FUNC(magazineRepackProgress)},
 ["isNotInside"]
 ] call EFUNC(common,progressBar);

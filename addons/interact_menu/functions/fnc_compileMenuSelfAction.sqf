@@ -87,12 +87,12 @@ private ["_baseDisplayName", "_baseIcon"];
 _baseDisplayName = "";
 _baseIcon = "";
 if (_objectType isKindOf "CAManBase") then {
-    _baseDisplayName = localize STRING(SelfActionsRoot);
+    _baseDisplayName = localize LSTRING(SelfActionsRoot);
     _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
 } else {
     _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
     //Alt would be to just use a static text, if veh names end up being too long:
-    // _baseDisplayName = localize STRING(VehicleActionsRoot);
+    // _baseDisplayName = localize LSTRING(VehicleActionsRoot);
 
     //Pull the icon from the vehicle's config:
     _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");

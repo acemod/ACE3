@@ -75,6 +75,6 @@ FUNC(clipboardExport) = {
 };
 [_compiledConfig] call FUNC(clipboardExport);
 
-[STRING(settingsExported)] call EFUNC(common,displayTextStructured);
+[LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);
 
 

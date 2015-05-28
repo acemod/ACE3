@@ -29,7 +29,7 @@ if !(_unit in _cargo) exitWith {};
 GVAR(InteractionMenu_Crew) = _cargo;
 
 // Prepare: add header and "OK" button to select menu
-_actions = [localize STRING(InteractionMenu), localize STRING(Interact)] call FUNC(prepareSelectMenu);
+_actions = [localize LSTRING(InteractionMenu), localize LSTRING(Interact)] call FUNC(prepareSelectMenu);
 
 // Prepare: add all cargo units as options to select menu
 {

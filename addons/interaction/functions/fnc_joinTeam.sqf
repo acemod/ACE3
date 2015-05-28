@@ -25,10 +25,10 @@ _unit setVariable [QGVAR(assignedFireTeam), _team, true];
 
 if (_unit == ACE_player) then {
     _message = if (_team == "MAIN") then {
-        localize STRING(LeftTeam);
+        localize LSTRING(LeftTeam);
     } else {
-        _team = localize format [STRING(Team%1), _team];
-        format [localize STRING(JoinedTeam), _team];
+        _team = localize format [LSTRING(Team%1), _team];
+        format [localize LSTRING(JoinedTeam), _team];
     };
 
     [_message] call EFUNC(common,displayTextStructured);

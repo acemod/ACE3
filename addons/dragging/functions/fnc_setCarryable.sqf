@@ -49,8 +49,8 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses_carry) = _initializedClasses;
 
-_carryAction = [QGVAR(carry), localize STRING(Carry), "", {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);
-_dropAction = [QGVAR(drop_carry), localize STRING(Drop), "", {[_player, _target] call FUNC(dropObject_carry)}, {[_player, _target] call FUNC(canDrop_carry)}] call EFUNC(interact_menu,createAction);
+_carryAction = [QGVAR(carry), localize LSTRING(Carry), "", {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);
+_dropAction = [QGVAR(drop_carry), localize LSTRING(Drop), "", {[_player, _target] call FUNC(dropObject_carry)}, {[_player, _target] call FUNC(canDrop_carry)}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _carryAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);

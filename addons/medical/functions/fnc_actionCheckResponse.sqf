@@ -20,9 +20,9 @@ _target = _this select 1;
 
 _output = "";
 if ([_target] call EFUNC(common,isAwake)) then {
-    _output = STRING(Check_Response_Responsive);
+    _output = LSTRING(Check_Response_Responsive);
 } else {
-    _output = STRING(Check_Response_Unresponsive);
+    _output = LSTRING(Check_Response_Unresponsive);
 };
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);

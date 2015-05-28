@@ -38,4 +38,4 @@ DFUNC(SetTimer) = {
 buttonSetAction [8860, QUOTE(call DFUNC(SetTimer);)];
 buttonSetAction [8855, QUOTE(closeDialog 0;)];
 
-ctrlSetText [8870, format[localize STRING(TimerMenu),0, 30]];
+ctrlSetText [8870, format[localize LSTRING(TimerMenu),0, 30]];

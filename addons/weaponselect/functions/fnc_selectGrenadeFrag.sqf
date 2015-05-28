@@ -36,7 +36,7 @@ if (_nextMuzzle != "") then {
     // There is a no muzzle with magazines --> select nothing
     GVAR(CurrentGrenadeMuzzleFrag) = "";
     if (GVAR(DisplayText)) then {
-        _text = [localize STRING(NoFragsLeft), [1,0,0]] call EFUNC(common,stringToColoredText);
+        _text = [localize LSTRING(NoFragsLeft), [1,0,0]] call EFUNC(common,stringToColoredText);
         [composeText [lineBreak, _text]] call EFUNC(common,displayTextStructured);
     };
 };

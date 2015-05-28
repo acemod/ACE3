@@ -27,7 +27,7 @@ if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
 
 _listedItemClasses = [];
 
-_actions = [localize STRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
+_actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
 
 _allGear = [];
 

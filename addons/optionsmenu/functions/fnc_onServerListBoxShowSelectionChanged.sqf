@@ -26,7 +26,7 @@ _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
 
 switch (GVAR(optionMenu_openTab)) do {
 case (MENU_TAB_SERVER_OPTIONS): {
-    _localizedHeader = format ["%1: %2", (localize STRING(OpenConfigMenu)), (localize STRING(TabOptions))];
+    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabOptions))];
     ctrlSetText [13, _localizedHeader];
     lbClear 400;
 
@@ -43,7 +43,7 @@ case (MENU_TAB_SERVER_OPTIONS): {
     (_settingsMenu displayCtrl 416) ctrlEnable false;
   };
 case (MENU_TAB_SERVER_COLORS): {
-    _localizedHeader = format ["%1: %2", (localize STRING(OpenConfigMenu)), (localize STRING(TabColors))];
+    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabColors))];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;
@@ -67,7 +67,7 @@ case (MENU_TAB_SERVER_COLORS): {
     (_settingsMenu displayCtrl 416) ctrlEnable false;
   };
 case (MENU_TAB_SERVER_VALUES): {
-    _localizedHeader = format ["%1: %2", (localize STRING(OpenConfigMenu)), (localize STRING(TabValues))];
+    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabValues))];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;

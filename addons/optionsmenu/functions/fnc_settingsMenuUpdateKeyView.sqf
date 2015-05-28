@@ -56,8 +56,8 @@ if (count _collection > 0) then {
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
                 lbClear 400;
-                lbAdd [400, (localize STRING(Disabled))];
-                lbAdd [400, (localize STRING(Enabled))];
+                lbAdd [400, (localize LSTRING(Disabled))];
+                lbAdd [400, (localize LSTRING(Enabled))];
                 _settingsValue = [0, 1] select _settingsValue;
             } else {
                 lbClear 400;

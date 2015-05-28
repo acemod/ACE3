@@ -25,7 +25,7 @@ GVAR(rain_period_start_time) = ACE_time;
     };
 };
 
-["ACE3 Common", QGVAR(WindInfoKey), localize STRING(WindInfoKey),
+["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

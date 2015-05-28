@@ -6,5 +6,5 @@ _oldLaserCode = ACE_player getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 _laserCode = _oldLaserCode + 1;
 ACE_player setVariable [QGVAR(code), _laserCode, false];
 if(_laserCode != _oldLaserCode) then {
-[format ["%1: %2", localize STRING(laserCode), _laserCode]] call EFUNC(common,displayTextStructured);
+[format ["%1: %2", localize LSTRING(laserCode), _laserCode]] call EFUNC(common,displayTextStructured);
 };

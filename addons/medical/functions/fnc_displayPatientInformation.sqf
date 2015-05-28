@@ -50,22 +50,22 @@ if (_show) then {
         _genericMessages = [];
 
         if (GVAR(level) >= 2) then {
-            _partText = [STRING(Head), STRING(Torso), STRING(ArmLeft) ,STRING(ArmRight) ,STRING(LegLeft), STRING(LegRight)] select _selectionN;
+            _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(ArmLeft) ,LSTRING(ArmRight) ,LSTRING(LegLeft), LSTRING(LegRight)] select _selectionN;
             _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
         };
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize STRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
         if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-            _genericMessages pushback [localize STRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
-            _genericMessages pushback [localize STRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
-            _genericMessages pushback [localize STRING(Status_Pain), [1, 1, 1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
@@ -77,7 +77,7 @@ if (_show) then {
             };
         }foreach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
-            _genericMessages pushback [format[localize STRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+            _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _damaged = [false, false, false, false, false, false];
@@ -133,17 +133,17 @@ if (_show) then {
                 if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
                     _pointDamage = _target getHitPointDamage _x;
                     _severity = switch (true) do {
-                        case (_pointDamage > 0.5): {localize STRING(HeavilyWounded)};
-                        case (_pointDamage > 0.1): {localize STRING(LightlyWounded)};
-                        default                    {localize STRING(VeryLightlyWounded)};
+                        case (_pointDamage > 0.5): {localize LSTRING(HeavilyWounded)};
+                        case (_pointDamage > 0.1): {localize LSTRING(LightlyWounded)};
+                        default                    {localize LSTRING(VeryLightlyWounded)};
                     };
                     _part = localize ([
-                        STRING(Head),
-                        STRING(Torso),
-                        STRING(LeftArm),
-                        STRING(RightArm),
-                        STRING(LeftLeg),
-                        STRING(RightLeg)
+                        LSTRING(Head),
+                        LSTRING(Torso),
+                        LSTRING(LeftArm),
+                        LSTRING(RightArm),
+                        LSTRING(LeftLeg),
+                        LSTRING(RightLeg)
                     ] select _forEachIndex);
                     _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
                 };
@@ -186,7 +186,7 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
-            _lbCtrl lbAdd (localize STRING(NoInjuriesBodypart));
+            _lbCtrl lbAdd (localize LSTRING(NoInjuriesBodypart));
         };
 
         _logCtrl = (_display displayCtrl 302);

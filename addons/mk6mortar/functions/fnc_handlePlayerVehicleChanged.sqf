@@ -51,7 +51,7 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
         _currentChargeMode = _fireModes find _currentFireMode;
 
-        _text = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize STRING(rangetable_charge)), _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
+        _text = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
         _chargeText ctrlSetStructuredText parseText _text;
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
