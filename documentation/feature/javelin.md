@@ -1,28 +1,35 @@
 ---
 layout: wiki
 title: Javelin
+description: 
 group: feature
 parent: wiki
 ---
-# Overview
-## Sub-feature 1
-Short description of sub-feature 1.
-## Sub-feature 2
-Short description of sub-feature 2.
 
-# Usage
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+## 1. Overview
 
-Steps to lock titan/Javelin:
+### 1.1 Improved locking
+The locking capabilities of the Titan and Javelin got improved, you can now lock on anything that has a thermal signature, including houses.
 
-1. You must be zoomed ALL THE WAY IN
-2. You must be in thermal view
-3. You must have a missile loaded
-4. Hold TAB over a target, it will start beeping and the constraint boxes will appear
-5. Once the beeping changes to LOCK tone, and the lock crosshairs appear, click fire without releasing tab
+### 1.2 Fire mode switching
+The Titan / Javelin now posses the ability to be used in top down attack or direct.
 
-CTRL+TAB is default key to change firemode (configurable as a key)
 
-# Dependencies
-List of modules that must be present for this module to work.
+## 2. Usage
+
+### 2.1 Locking with the Titan / Javelin
+- For this feature you need to have a compatible launcher.
+- Fully zoom with the launcher.
+- Switch to thermals <kbd> n </kbd> (by default).
+- While keeping your aim steadily on target press and hold <kbd> tab </kbd>.
+- When the sound changes and a cross appears on the screen it's time to fire.
+
+### 2.2 Switching fire mode
+- For this feature you need to have a compatible launcher.
+- When aiming with your launcher press <kbd> ctrl+tab </kbd> (by default).
+- On the right side of the screen (for most launchers) you should see that `TOP`is now in green that means that your missile will be fired in top down mode.
+
+
+## 3. Dependencies
+
+`ace_main`, `ace_common`, `ace_missileguidance`

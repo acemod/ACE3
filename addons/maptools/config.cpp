@@ -12,12 +12,7 @@ class CfgPatches {
     };
 };
 
-class ACE_Settings {
-    class GVAR(EveryoneCanDrawOnBriefing) {
-        value = 1;
-        typeName = "BOOL";
-    };
-};
+#include "ACE_Settings.hpp"
 
 class RscControlsGroup;
 class RscActiveText;

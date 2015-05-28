@@ -12,10 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_muzzle"];
-
-_unit = _this select 0;
-_muzzle = _this select 1;
+PARAMS_2(_unit,_muzzle);
 
 private ["_uniformMags", "_vestMags", "_backpackMags", "_i", "_uniformMagsToRemove", "_vestMagsToRemove", "_backpackMagsToRemove", "_firstMagazine", "_throwMuzzleNames"];
 

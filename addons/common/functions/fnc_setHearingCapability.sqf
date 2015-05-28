@@ -10,10 +10,11 @@
 
 #include "script_component.hpp"
 
-private ["_id", "_settings", "_add", "_exists", "_map", "_lowestVolume"];
-_id       = _this select 0;
-_settings = _this select 1;
-_add      = true;
+private ["_add", "_exists", "_map", "_lowestVolume"];
+
+PARAMS_2(_id,_settings);
+
+_add = true;
 if (count _this > 2) then {
     _add = _this select 2;
 };

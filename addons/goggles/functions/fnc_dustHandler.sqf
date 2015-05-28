@@ -48,13 +48,13 @@ if (!_found) exitWith {};
 
 _bullets = GETDUSTT(DBULLETS);
 
-if ((diag_tickTime - GETDUSTT(DTIME)) > 1) then {
+if ((ACE_diagTime - GETDUSTT(DTIME)) > 1) then {
     _bullets = 0;
 };
 
 _bullets = _bullets + 1;
 SETDUST(DBULLETS,_bullets);
-SETDUST(DTIME,diag_tickTime);
+SETDUST(DTIME,ACE_diagTime);
 
 if (GETDUSTT(DAMOUNT) < 2) then {
     private "_bulletsRequired";

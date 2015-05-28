@@ -16,12 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_temperature", "_pressure", "_relativeHumidity"];
-_temperature      = _this select 0; // in C
-_pressure         = _this select 1; // in hPa
-_relativeHumidity = _this select 2; // as ratio 0-1
+PARAMS_3(_temperature,_pressure,_relativeHumidity);
 
-_pressure = _pressure * 100;
+_pressure = _pressure * 100; // hPa to Pa
 
 if (_relativeHumidity > 0) then {
     private ["_pSat", "_vaporPressure", "_partialPressure"];

@@ -190,7 +190,7 @@ class CfgVehicles {
     class ACE_Box_Ammo: NATO_Box_Base {
         scope = 2;
         accuracy = 1000;
-        displayName = "[ACE] Ammo Supply Crate";
+        displayName = "$STR_ACE_AmmoSupplyCrate_DisplayName";
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
         author = "$STR_ACE_Common_ACETeam";
         class TransportMagazines {

@@ -14,9 +14,9 @@
  */
 #include "script_component.hpp"
 
-private "_item";
+PARAMS_1(_item);
 
-_item = _this select 0;
+private ["_cfgType"];
 
 _cfgType = [_item] call FUNC(getConfigType);
 
@@ -46,7 +46,7 @@ switch (true) do {
     case (_type == 2^4): {["magazine","handgun"]}; // handgun
     case (_type == 2^8): {["magazine","primary"]}; // rifle
     case (_type == 2^9): {["magazine","secondary"]}; // rpg, mg, mines
-  //case (_type  < 2^11): {["magazine","unknown"]};
+    //case (_type  < 2^11): {["magazine","unknown"]};
 
     case (_type == 101): {["item","muzzle"]};
     case (_type == 201): {["item","optics"]};

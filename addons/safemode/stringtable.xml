@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_SafeMode_SafeMode">
             <English>Safe Mode</English>
             <German>Waffe sichern</German>
-            <Spanish>Seguro puesto</Spanish>
+            <Spanish>Poner seguro</Spanish>
             <Polish>Bezpiecznik</Polish>
             <Czech>Pojistka</Czech>
             <Hungarian>Biztonságos mód</Hungarian>
@@ -28,13 +28,13 @@
         <Key ID="STR_ACE_SafeMode_PutOnSafety">
             <English>Put on Safety</English>
             <German>Waffe gesichert</German>
-            <Spanish>Poner seguro</Spanish>
+            <Spanish>Seguro puesto</Spanish>
             <Polish>Zabezpieczono broń</Polish>
             <Czech>Přepnout pojistku</Czech>
             <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
             <Russian>Поставить на предохранитель</Russian>
             <French>Sécurité mise</French>
-            <Italian>Metti la sicura</Italian>
+            <Italian>Sicura inserita</Italian>
             <Portuguese>Colocar Segurança</Portuguese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">

@@ -1,18 +1,13 @@
 // ACE - Common
 #include "script_component.hpp"
 
-// Load settings from profile
-if (hasInterface) then {
-    call FUNC(loadSettingsFromProfile);
-    call FUNC(loadSettingsLocalizedText);
-};
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-
     PARAMS_2(_name,_value);
     if !(count _this > 2) exitWith {};
-
+    private ["_force", "_settingData"];
     _force = _this select 2;
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
@@ -40,7 +35,7 @@ if (hasInterface) then {
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
-    if (time > 0) exitWith {
+    if (ACE_time > 0) exitWith {
         [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
@@ -54,6 +49,7 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 
 [missionNamespace] call FUNC(executePersistent);
 
+private ["_currentVersion", "_previousVersion"];
 // check previous version number from profile
 _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
@@ -131,6 +127,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
 
 // PFH to raise varios events
 [{
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -212,6 +209,7 @@ GVAR(OldIsCamera) = false;
 [{
 
     // "activeCameraChanged" event
+    private ["_isCamera"];
     _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
@@ -219,7 +217,7 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep time if you need it.
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -240,7 +238,7 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { time > 0 || isNull player } ) then {
+if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!(isNull player)) then {
@@ -249,3 +247,19 @@ if(isMultiplayer && { time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+GVAR(commonPostInited) = true;
+
+// Create a pfh to wait until all postinits are ready and settings are initialized
+[{
+    // If post inits are not ready then wait
+    if !(SLX_XEH_MACHINE select 8) exitWith {};
+    // If settings are not initialized then wait
+    if !(GVAR(SettingsInitialized)) exitWith {};
+
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
+    diag_log text format["[ACE] Settings initialized"];
+    ["SettingsInitialized", []] call FUNC(localEvent);
+
+}, 0, []] call cba_fnc_addPerFrameHandler;

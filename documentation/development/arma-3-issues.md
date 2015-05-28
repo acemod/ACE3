@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Issues
+description: Keeping track of Arma 3 issues that need to be fixed. If you want to support us and help raise Bohemia's awareness of those issues, please upvote them. 
 group: development
 parent: wiki
 order: 6

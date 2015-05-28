@@ -27,7 +27,7 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = diag_tickTime;
+GVAR(keyDownTime) = ACE_diagTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
@@ -37,39 +37,35 @@ GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
                       {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
 
+// Delete existing controls in case there's any left
+GVAR(iconCount) = 0;
+for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
+    ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
+};
+GVAR(iconCtrls) resize GVAR(iconCount);
+
 if (GVAR(useCursorMenu)) then {
-    createDialog QGVAR(cursorMenu);
+    (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+    (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
-    ctrlEnable [91921, true];
     GVAR(cursorPos) = [0.5,0.5,0];
-    ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseMoving", {
-        if (GVAR(cursorKeepCentered)) then {
-            GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
-            setMousePosition [0.5, 0.5];
-        } else {
-            GVAR(cursorPos) = [_this select 1, _this select 2, 0];
-        };
-    }];
-    // handles LMB in cursor mode when action on keyrelease is disabled
-    ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseButtonDown", {
-        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
-            [GVAR(openedMenuType),true] call FUNC(keyUp);
-        };
-    }];
+
+    _ctrl = (findDisplay 91919) ctrlCreate ["RscStructuredText", 9922];
+    _ctrl ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];
+    _ctrl ctrlCommit 0;
+
+    // handles Mouse moving and LMB in cursor mode when action on keyrelease is disabled
+    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
+    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     setMousePosition [0.5, 0.5];
 };
 
 GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
                        ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
-
-private ["_wavesAtOrigin", "_wavesAtVirtualPoint"];
-
-_wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
-_wavesAtVirtualPoint = [(positionCameraToWorld [0, 0, 2])] call EFUNC(common,waveHeightAt);
-GVAR(selfMenuOffset) set [2, ((GVAR(selfMenuOffset) select 2) + _wavesAtOrigin - _wavesAtVirtualPoint)];
-
 
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 

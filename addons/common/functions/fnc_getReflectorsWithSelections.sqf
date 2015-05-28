@@ -13,9 +13,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_hitpoints", "_selections"];
+private ["_config", "_hitpoints", "_selections", "_i"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -24,8 +24,8 @@ _selections = [];
 
 // iterate through all parents
 while {isClass _config} do {
-	private "_class";
-	_class = _config >> "Reflectors";
+    private "_class";
+    _class = _config >> "Reflectors";
 
     for "_i" from 0 to (count _class - 1) do {
         private ["_entry", "_selection"];

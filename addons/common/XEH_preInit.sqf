@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
+
 ADDON = false;
 
 // ACE Common Function
@@ -170,7 +172,6 @@ PREP(sortAlphabeticallyBy);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
-PREP(subString);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
@@ -179,6 +180,7 @@ PREP(toHex);
 PREP(toNumber);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
+PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
@@ -285,15 +287,30 @@ PREP(_handleRequestSyncedEvent);
 PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(waitAndExecArray) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Wait for server settings to arrive
+GVAR(SettingsInitialized) = false;
+["ServerSettingsReceived", {
+    diag_log text format["[ACE] Settings received from server"];
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+    GVAR(SettingsInitialized) = true;
+}] call FUNC(addEventhandler);
+
+// Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
+    // Raise a local event for other modules to listen too
+    ["ServerSettingsReceived", []] call FUNC(localEvent);
 };
 
 ACE_player = player;
@@ -302,6 +319,7 @@ if (hasInterface) then {
     // PFH to update the ACE_player variable
     [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
+            private ["_oldPlayer"];
             _oldPlayer = ACE_player;
 
             ACE_player = call FUNC(player);
@@ -319,6 +337,8 @@ ACE_realTime = diag_tickTime;
 ACE_virtualTime = diag_tickTime;
 ACE_diagTime = diag_tickTime;
 ACE_gameTime = time;
+ACE_pausedTime = 0;
+ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
 [FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;

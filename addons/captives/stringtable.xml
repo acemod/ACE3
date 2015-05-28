@@ -193,5 +193,15 @@
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
             <Italian>Nessuna selezione</Italian>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
+            <English>Make Unit Surrender</English>
+            <Polish>Poddaj się!</Polish>
+            <Spanish>Hacer que la unidad se rinda</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
+            <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
+            <Polish>Zsynchronizuj z jednostką aby sprawić by się poddała&lt;br /&gt;Źródło: ace_captives</Polish>
+            <Spanish>Sincroniza una unidad para hacer que se rinda.&lt;br /&gt;Fuente: ace_captives</Spanish>
+        </Key>
     </Package>
 </Project>

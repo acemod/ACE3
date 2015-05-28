@@ -1,18 +1,22 @@
 ---
 layout: wiki
 title: Logistics - UAV Battery
+description: 
 group: feature
 parent: wiki
 ---
-# Overview
-## Sub-feature 1
-Short description of sub-feature 1.
-## Sub-feature 2
-Short description of sub-feature 2.
 
-# Usage
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+## 1. Overview
 
-# Dependencies
-List of modules that must be present for this module to work.
+### 1.1 Rechargeable darters.
+Adds an item `ACE_UAVBattery` that allows refuelling/recharging of the "Darter" quadcopter UAVs.
+
+## 2. Usage
+
+### 2.1 Recharging the darter
+- For this you need a `UAV battery` and the UAV needs to be a quadcopter.
+- INTERACTION LAYER NOT IMPLEMENTED YET TO BE COMPLETED.
+
+## 3. Dependencies
+
+`ace_interaction`

@@ -1,18 +1,24 @@
 ---
 layout: wiki
 title: Logistics - Wirecutter
+description: 
 group: feature
 parent: wiki
 ---
-# Overview
-## Sub-feature 1
-Short description of sub-feature 1.
-## Sub-feature 2
-Short description of sub-feature 2.
 
-# Usage
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+## 1. Overview
 
-# Dependencies
-List of modules that must be present for this module to work.
+### 1.1 Wirecutter
+Adds an item `ACE_wirecutter` that allows cutting of fences in A3 and AiA maps.
+
+## 2. Usage
+
+### 2.1 Using the wirecutter
+- For this you need a `Wirecutter`.
+- Approach the fence you want to cut.
+- Press the interaction key <kbd> left windows </kbd> (by default).
+- Find the interaction point and select `cut fence` (the only option).
+
+## 3. Dependencies
+
+`ace_interaction`

@@ -1,36 +1,37 @@
 /*
  * Author: esteldunedain
  *
- * Executes a code once with a given game time delay, using a PFH
+ * Executes a code once with a given game ACE_time delay, using a PFH
  *
  * Argument:
  * 0: Code to execute (Code)
  * 1: Parameters to run the code with (Array)
  * 2: Delay in seconds before executing the code (Number)
- * 3: Interval of time in which the execution is evaluated, 0 means every frame (Number)
  *
  * Return value:
- * PFH handler ID
+ * None
+ *
+ * Example:
+ * [{(_this select 0) setVelocity [0,0,200];}, [player], 10] call ace_common_fnc_waitAndExecute
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_func,_params,_delay,_interval);
+PARAMS_3(_func,_params,_delay);
 
-[
-    {
-        EXPLODE_2_PVT(_this,_params,_pfhId);
-        EXPLODE_2_PVT(_params,_delayedExecParams,_startTime);
-        EXPLODE_3_PVT(_delayedExecParams,_func,_funcParams,_delay);
+GVAR(waitAndExecArray) pushBack [(ACE_time + _delay), _func, _params];
+GVAR(waitAndExecArray) sort true;
 
-        // Exit if the time was not reached yet
-        if (time < _startTime + _delay) exitWith {};
-
-        // Remove the PFH
-        [_pfhId] call cba_fnc_removePerFrameHandler;
-
-        // Execute the function
-        _funcParams call _func;
-    },
-    _interval,
-    [_this, time]
-] call CBA_fnc_addPerFrameHandler
+if ((count GVAR(waitAndExecArray)) == 1) then {
+    [{
+        while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
+            private ["_entry"];
+            _entry = GVAR(waitAndExecArray) deleteAt 0;
+            (_entry select 2) call (_entry select 1);
+        };
+        if ((count GVAR(waitAndExecArray)) == 0) then {
+            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        };
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
+};

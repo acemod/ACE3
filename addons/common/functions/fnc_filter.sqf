@@ -15,10 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_array", "_code", "_newArray", "_index"];
+private ["_newArray", "_index"];
 
-_array = _this select 0;
-_code = _this select 1;
+PARAMS_2(_array,_code);
 
 if (isNil "_array") exitWith {
   diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
@@ -27,8 +26,8 @@ if (isNil "_array") exitWith {
 
 _newArray = [];
 for "_index" from 0 to (count _array - 1) do {
-  if ((_array select _index) call _code) then {
-    _newArray pushBack (_array select _index);
-  };
+    if ((_array select _index) call _code) then {
+        _newArray pushBack (_array select _index);
+    };
 };
 _newArray

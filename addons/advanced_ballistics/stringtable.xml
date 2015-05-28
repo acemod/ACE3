@@ -25,5 +25,118 @@
             <Czech>Zobrazit úhloměr</Czech>
             <Portuguese>Mostrar Transferidor</Portuguese>
         </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_DisplayName">
+            <English>Advanced Ballistics</English>
+            <Polish>Zaawansowana balistyka</Polish>
+            <Spanish>Balística avanzada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_enabled_DisplayName">
+            <English>Advanced Ballistics</English>
+            <Polish>Zaawansowana balistyka</Polish>
+            <Spanish>Balística avanzada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_enabled_Description">
+            <English>Enables advanced ballistics</English>
+            <Polish>Aktywuje zaawansowaną balistykę</Polish>
+            <Spanish>Activa la balística avanzada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_DisplayName">
+            <English>Enabled For Snipers</English>
+            <Spanish>Activada para francotiradores</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_Description">
+            <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
+            <Spanish>Activa la balística avanzada para francotiradores no locales (cuando se usa una mira telescópica)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_DisplayName">
+            <English>Enabled For Group Members</English>
+            <Spanish>Activada para miembros de grupo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForGroupMembers_Description">
+            <English>Enables advanced ballistics for non local group members</English>
+            <Spanish>Activada la balística avanzada para miembros de grupo no locales</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_DisplayName">
+            <English>Enabled For Everyone</English>
+            <Spanish>Activada para todos</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_Description">
+            <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
+            <Spanish>Activada la balística avanzada para todos los jugadores no locales (activarlo puede degradar el rendimiento durante grandes tiroteos en multijugador).</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName">
+            <English>Always Enabled For Group Members</English>
+            <Polish>Zawsze akt. dla czł. grupy</Polish>
+            <Spanish>Siempre activada para miembros de grupo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_Description">
+            <English>Always enables advanced ballistics when a group member fires</English>
+            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich członków grupy</Polish>
+            <Spanish>Activada la balística avanzada siempre cuando miembros de grupo disparan</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_DisplayName">
+            <English>Disabled In FullAuto Mode</English>
+            <Polish>Wył. podczas ognia auto.</Polish>
+            <Spanish>Desactivada en modo automático</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_disabledInFullAutoMod_Description">
+            <English>Disables the advanced ballistics during full auto fire</English>
+            <Polish>Dezaktywuje zaawansowaną balistykę podczas ognia automatycznego</Polish>
+            <Spanish>Desactivada la balística avanzada durante el fuego automático</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
+            <English>Enable Ammo Temperature Simulation</English>
+            <Polish>Symulacja temp. amunicji</Polish>
+            <Spanish>Activar simulación de temperatura de munición</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description">
+            <English>Muzzle velocity varies with ammo temperature</English>
+            <Polish>Prędkość wylotowa pocisku jest zależna od temperatury amunicji</Polish>
+            <Spanish>La velocidad de salida varía con la temperatura de la munición</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName">
+            <English>Enable Barrel Length Simulation</English>
+            <Polish>Symulacja długości lufy</Polish>
+            <Spanish>Habilitar la simulación de longitud del cañón</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description">
+            <English>Muzzle velocity varies with barrel length</English>
+            <Polish>Prędkość wylotowa pocisku jest zależna od długości lufy</Polish>
+            <Spanish>La velocidad de salidal varía con la longitud del cañón</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName">
+            <English>Enable Bullet Trace Effect</English>
+            <Polish>Efekt smugi pocisku</Polish>
+            <Spanish>Activar el efecto trazador de la bala</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_Description">
+            <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
+            <Polish>Aktywuje efekt smugi pocisku dla pocisków wysokokalibrowych (widoczne tylko podczas patrzenia przez optykę)</Polish>
+            <Spanish>Activa el efecto trazador de la balas de gran calibre (solo visible cuando se mira a través de una mira telescópica)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_DisplayName">
+            <English>Simulation Interval</English>
+            <Polish>Interwał symulacji</Polish>
+            <Spanish>Intervalo de simulación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_Description">
+            <English>Defines the interval between every calculation step</English>
+            <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+            <Spanish>Define el intervalo entre cada cálculo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_DisplayName">
+            <English>Simulation Radius</English>
+            <Polish>Zasięg symulacji</Polish>
+            <Spanish>Radio de simulación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_simulationRadius_Description">
+            <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
+            <Polish>Określa obszar naokoło gracza (w metrach), na którym zaawansowana balistyka jest aplikowana dla pocisków</Polish>
+            <Spanish>Define el radio alrededor del jugador (en metros) en el cual se aplica la balística avanzada a los proyectiles</Spanish>
+        </Key>
+        <Key ID="STR_ACE_AdvancedBallistics_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
+        </Key>
     </Package>
 </Project>

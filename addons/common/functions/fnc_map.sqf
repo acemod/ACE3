@@ -21,11 +21,11 @@ _array = + _this select 0;
 _code = _this select 1;
 
 if (isNil "_array") exitWith {
-  diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
-  []
+    diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
+    []
 };
 
 {
-  _array set [_forEachIndex, _x call _code];
+    _array set [_forEachIndex, _x call _code];
 } forEach _array;
 _array

@@ -20,4 +20,4 @@ _positions set[(count _positions), [(getPos _obj), _objSpd]];
 _data = [_origin, typeOf _origin, typeOf _obj, _objSpd, _positions, _color];
 
 GVAR(traces) set[_index, _data];
-[DFUNC(trackTrace), 0, [_obj, _index, time]] call cba_fnc_addPerFrameHandler;
+[DFUNC(trackTrace), 0, [_obj, _index, ACE_time]] call cba_fnc_addPerFrameHandler;
