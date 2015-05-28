@@ -37,6 +37,17 @@ class CfgMagazines {
             class Tripwire;
         };
     };
+    class ACE_APERSTripFlare_Wire_Mag: APERSTripMine_Wire_Mag {
+        ACE_SetupObject = "ACE_Explosives_Place_APERSTripwireFlare";
+        ammo = "ACE_APERSTripFlare_Wire_Ammo";
+        displayName = "$STR_ACE_Explosives_TripFlare_Name";
+        descriptionShort = "$STR_ACE_Explosives_TripFlare_Description";
+        class Library {libTextDesc = "$STR_ACE_Explosives_TripFlare_Description";};
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire_Flare"};
+            class Tripwire_Flare;
+        };
+    };
 
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
         ACE_Placeable = 1;
@@ -46,7 +57,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"Command"};
             class Command {
-            FuseTime = 0.5;
+                FuseTime = 0.5;
             };
         };
     };

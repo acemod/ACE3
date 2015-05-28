@@ -138,6 +138,11 @@ class CfgVehicles {
         displayName = "APERS Tripwire Mine";
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
         ACE_offset[] = {1,0,0};
+    };    
+    class ACE_Explosives_Place_APERSTripwireFlare: ACE_Explosives_Place_APERSTripwireMine {
+        displayName = "APERS Tripwire Flare";
+        model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
+        ACE_offset[] = {1,0,0};
     };
 
     class ACE_Explosives_Place_ATMine:ACE_Explosives_Place {
@@ -230,6 +235,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_DefusalKit,12);
             MACRO_ADDITEM(ACE_Deadmanswitch,6);
             MACRO_ADDITEM(ACE_Cellphone,10);
+            MACRO_ADDITEM(ACE_APERSTripFlare_Wire_Mag,10);
         };
     };
 

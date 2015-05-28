@@ -534,5 +534,11 @@
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
         </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name">
+            <English>Tripwire Flare</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Description">
+            <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
+        </Key>
     </Package>
 </Project>

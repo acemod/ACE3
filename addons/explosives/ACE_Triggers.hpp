@@ -50,5 +50,10 @@ onSetup parameters:
         displayName = $STR_ACE_Explosives_TripWire;
         picture = PATHTOF(Data\UI\Tripwire.paa);
         onPlace = "false";
+    };    
+    class Tripwire_Flare {
+        displayName = $STR_ACE_Explosives_TripWire;
+        picture = PATHTOF(Data\UI\Tripwire.paa);
+        onPlace = QUOTE(false);
     };
 };

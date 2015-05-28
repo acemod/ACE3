@@ -60,4 +60,6 @@ PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
 
+PREP(tripFlareExplosionEH);
+
 ADDON = true;
