@@ -16,9 +16,63 @@
  */
 #include "script_component.hpp"
 
+disableSerialization;
+#define __dsp (uiNamespace getVariable "RangleCard_Display")
+
+private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_mv", "_mvShift", "_offset", "_relativeHumidity", "_result", "_row", "_scopeBaseAngle", "_weaponConfig", "_zeroRange"];
+
 PARAMS_2(_ammoClass,_weaponClass);
 
 if (_ammoClass == "" || _weaponClass == "") exitWith {};
+
+{
+    ctrlDelete _x;
+} forEach GVAR(controls);
+GVAR(controls) = [];
+
+for "_row" from 0 to 49 do {
+    _offset = if (_row < 5) then {0} else {0.003};
+    _control = (__dsp ctrlCreate ["RangeCard_RscText", 790000 + _row]);
+    _control ctrlSetPosition [safeZoneX + 0.183, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.062, 0.025];
+    if (_row in [0, 8, 18, 28, 38, 48]) then {
+        _control ctrlSetTextColor [1, 1, 1, 1];
+    } else {
+        _control ctrlSetTextColor [0, 0, 0, 1];
+    };
+    _control ctrlCommit 0;
+    _control ctrlSetText Str(100 + _row * 50);
+    GVAR(controls) pushBack _control;
+};
+for "_column" from 0 to 8 do {
+    for "_row" from 0 to 49 do {
+    _offset = if (_row < 5) then {0} else {0.003};
+        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + _column * 100 + _row]);
+        _control ctrlSetPosition [safeZoneX + 0.249 + _column * 0.055, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.052, 0.025];
+        _control ctrlCommit 0;
+        _control ctrlSetText "-0.0";
+        GVAR(controls) pushBack _control;
+    };
+};
+for "_column" from 0 to 2 do {
+    for "_row" from 0 to 49 do {
+        _offset = if (_row < 5) then {0} else {0.003};
+        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (9 +_column) * 100 + _row]);
+        _control ctrlSetPosition [safeZoneX + 0.743 + _column * 0.049, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.047, 0.025];
+        _control ctrlCommit 0;
+        _control ctrlSetText "-0.0";
+        GVAR(controls) pushBack _control;
+    };
+};
+for "_column" from 0 to 2 do {
+    for "_row" from 0 to 49 do {
+        _offset = if (_row < 5) then {0} else {0.003};
+        _control = (__dsp ctrlCreate ["RangeCard_RscText", 90000 + (12 +_column) * 100 + _row]);
+        _control ctrlSetPosition [safeZoneX + 0.892 + _column * 0.049, safeZoneY + 0.374 + 0.027 * _row + _offset, 0.047, 0.025];
+        _control ctrlCommit 0;
+        _control ctrlSetText "-0.0";
+        GVAR(controls) pushBack _control;
+    };
+};
 
 lnbClear 770100;
 lnbClear 770200;
@@ -96,23 +150,25 @@ if (isNil {_cacheEntry}) then {
 
 lnbAddRow [770200, GVAR(rangeCardDataMVs)];
 
-for "_i" from 0 to 49 do {
-    lnbAddRow [770400, [Str(GVAR(rangeCardStartRange) + GVAR(rangeCardIncrement) * _i), (GVAR(rangeCardDataElevation) select 0) select _i, (GVAR(rangeCardDataElevation) select 1) select _i, (GVAR(rangeCardDataElevation) select 2) select _i,
-                                            (GVAR(rangeCardDataElevation) select 3) select _i, (GVAR(rangeCardDataElevation) select 4) select _i, (GVAR(rangeCardDataElevation) select 5) select _i,
-                                            (GVAR(rangeCardDataElevation) select 6) select _i, (GVAR(rangeCardDataElevation) select 7) select _i, (GVAR(rangeCardDataElevation) select 8) select _i,
-                                            (GVAR(rangeCardDataWindage) select 0) select _i, (GVAR(rangeCardDataWindage) select 3) select _i, (GVAR(rangeCardDataWindage) select 8) select _i,
-                                            (GVAR(rangeCardDataLead) select 0) select _i, (GVAR(rangeCardDataLead) select 3) select _i, (GVAR(rangeCardDataLead) select 8) select _i]];
-};
-
-#define __dsp (uiNamespace getVariable "RangleCard_Display")
-#define __ctrlListNBox (__dsp displayCtrl 770400)
-
-{
-    __ctrlListNBox lnbSetColor [[_x, 0], [1, 1, 1, 1]];
-} forEach [0, 8, 18, 28, 38, 48];
-
-{
-    for "_i" from (GVAR(lastValidRow) select _x) to 49 do {
-        __ctrlListNBox lnbSetColor [[_i, _forEachIndex + 1], [0, 0, 0, 0.6]];
+for "_column" from 0 to 8 do {
+    for "_row" from 0 to 49 do {
+        _control = (__dsp displayCtrl (90000 + _column * 100 + _row));
+        _control ctrlSetText ((GVAR(rangeCardDataElevation) select _column) select _row);
+        _control ctrlCommit 0;
     };
-} forEach [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 3, 8, 0, 3, 8];
+};
+{
+    for "_row" from 0 to 49 do {
+        _control = (__dsp displayCtrl (90000 + (9 + _forEachIndex) * 100 + _row));
+        _control ctrlSetText ((GVAR(rangeCardDataWindage) select _x) select _row);
+        _control ctrlCommit 0;
+    };
+} forEach [0, 3, 8];
+
+{
+    for "_row" from 0 to 49 do {
+        _control = (__dsp displayCtrl (90000 + (12 + _forEachIndex) * 100 + _row));
+        _control ctrlSetText ((GVAR(rangeCardDataLead) select _x) select _row);
+        _control ctrlCommit 0;
+    };
+} forEach [0, 3, 8];

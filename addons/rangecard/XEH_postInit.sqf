@@ -4,6 +4,8 @@
 
 GVAR(RangeCardOpened) = false;
 
+GVAR(controls) = [];
+
 GVAR(ammoClass) = "B_65x39_Caseless";
 GVAR(weaponClass) = "arifle_MXM_F";
 
