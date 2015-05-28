@@ -4,28 +4,29 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="http://img.shields.io/badge/Version-3.0.0-blue.svg?style=flat"
-             alt="ACE version">
+    v3.0.1
+        <img src="http://img.shields.io/badge/Wersja-3.0.1-blue.svg?style=flat"
+             alt="ACE wersja">
     </a>
-    <a href="https://github.com/acemod/ACE3/archive/master.zip">
-        <img src="http://img.shields.io/badge/Download-48.3_MB-green.svg?style=flat"
-             alt="ACE download">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
+    40.9 Mb
+        <img src="http://img.shields.io/badge/Pobierz-40.9_MB-green.svg?style=flat"
+             alt="ACE pobierz">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat&label=Issues"
-             alt="ACE issues">
+        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat&label=Zagadnienia"
+             alt="ACE zagadnienia">
     </a>
-    <a href="http://forums.bistudio.com/showthread.php?190433-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2910796&viewfull=1#post2910796">
-        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat"
-             alt="BIF thread">
+    <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
+        <img src="https://img.shields.io/badge/BIF-Wątek-lightgrey.svg?style=flat"
+             alt="BIF wątek">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="http://img.shields.io/badge/License-GPLv2-red.svg?style=flat"
-             alt="ACE license">
+        <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat"
+             alt="ACE licencja">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
-
 
 **ACE3** to efekt wspólnego wysiłku grup moderów odpowiedzialnych za **ACE2**, **AGM** oraz **CSE** w celu zwiększenia realizmu i autentyczności Arma 3.
 
