@@ -24,7 +24,7 @@ This guide will explain how to get ACE3 up and running faster than you can say b
 ## 4. Install ACE3 Optional components
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Skip this step if you're not using additional mods. If you are, consult with your mission maker before installing any of these components.</p>
+    <p>Skip this step if you're not using additional mods. If you are, consult with your mission maker before installing any of these components. If you are a Mod creator, please visit the [Modularity and PBO Structure](http://ace3mod.com/wiki/development/modularity-and-pbo-structure.html) page for more information.</p>
 </div>
 
 ### 4.1 What do they do?
