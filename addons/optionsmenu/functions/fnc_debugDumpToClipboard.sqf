@@ -15,42 +15,42 @@
  */
 #include "script_component.hpp"
 
-private ["_outputString", "_var", "_unit", "_countSent"];
+private ["_var", "_unit"];
 
-#define CHARS_PER_EXT_CALL 2000
-#define MIN_ARRAY_SIZE 0
+#define MIN_ARRAY_SIZE 10
 
-_outputString = "---ACE Debug---
+"ace_clipboard" callExtension "---ACE Debug---
 ";
 
-_outputString = _outputString + format ["--Performance--
+"ace_clipboard" callExtension format ["--Performance--
 diag_fps = %1
-count cba_common_perFrameHandlerArray = %2
-count diag_activeSQFScripts = %3
-count diag_activeSQSScripts = %4
-count diag_activeMissionFSMs = %5
+count ace_common_waitAndExecArray = %2
+count cba_common_perFrameHandlerArray = %3 (max %4)
+count diag_activeSQFScripts = %5
+count diag_activeSQSScripts = %6
+count diag_activeMissionFSMs = %7
 
-", diag_fps, count cba_common_perFrameHandlerArray, count diag_activeSQFScripts, count diag_activeSQSScripts,count diag_activeMissionFSMs];
+", diag_fps, count ace_common_waitAndExecArray, {!isNil "_x"} count cba_common_perFrameHandlerArray, count cba_common_perFrameHandlerArray, count diag_activeSQFScripts, count diag_activeSQSScripts,count diag_activeMissionFSMs];
 
-_outputString = _outputString + "--Player--
+"ace_clipboard" callExtension "--Player--
 ";
 if (isNull ACE_player) then {
-    _outputString = _outputString + "Null
+    "ace_clipboard" callExtension "Null
 
 ";
 } else {
-    _outputString = _outputString + format ["typeOf = %1
+    "ace_clipboard" callExtension format ["typeOf = %1
 animationState = %2
 
 ", typeOf ace_player, animationState ace_player];
 };
 
-_outputString = _outputString + format ["--Array Info (count >= %1)--
+"ace_clipboard" callExtension format ["--Array Info (count >= %1)--
 ", MIN_ARRAY_SIZE];
 {
     _var = missionNamespace getVariable [_x, nil];
     if(!isnil "_var" && {(typeName _var) == "ARRAY"} && {(count _var) > MIN_ARRAY_SIZE}) then {
-        _outputString = _outputString + format["%1 - ARRAY SIZE: %2
+        "ace_clipboard" callExtension format ["%1 - ARRAY SIZE: %2
 ", _x, (count _var)];
     };
 } forEach (allVariables missionNamespace);
@@ -60,16 +60,10 @@ _outputString = _outputString + format ["--Array Info (count >= %1)--
     {
         _var = _unit getVariable [_x, nil];
         if(!isnil "_var" && {(typeName _var) == "ARRAY"} && {(count _var) > MIN_ARRAY_SIZE}) then {
-            _outputString = _outputString + format["%1 on [%2] - ARRAY SIZE: %3
+            "ace_clipboard" callExtension format ["%1 on [%2] - ARRAY SIZE: %3
 ", _x, _unit, (count _var)];
         };
     } forEach (allVariables _unit);
 } forEach allUnits;
-
-_countSent = 0;
-while {_countSent < (count _outputString)} do {
-    "ace_clipboard" callExtension (_outputString select [_countSent, CHARS_PER_EXT_CALL]);
-    _countSent = _countSent + CHARS_PER_EXT_CALL;
-};
 
 "ace_clipboard" callExtension "--COMPLETE--";
