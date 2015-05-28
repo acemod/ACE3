@@ -22,4 +22,4 @@ private ["_version"];
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
 ((_this select 0) displayCtrl 68) ctrlSetText format ["Installed Version: %1", _version];
-((_this select 0) displayCtrl 69) htmlLoad "http://ace3mod.com/";
+((_this select 0) displayCtrl 69) htmlLoad "http://ace3mod.com/version.html";
