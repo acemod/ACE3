@@ -69,7 +69,12 @@ _recurseFnc = {
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            _runOnHover = false;
+            if (isText (_entryCfg >> "runOnHover")) then {
+                _runOnHover = compile getText (_entryCfg >> "runOnHover");
+            } else {
+                _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            };
 
             _condition = compile _condition;
             _children = [_entryCfg] call _recurseFnc;
