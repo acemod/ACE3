@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: AI (Artifical Intelligence)
+title: AI (Artificial Intelligence)
 description: Config based changes to AI to ensure compatibility with advanced AI modifications
 group: feature
 order: 5
@@ -10,7 +10,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Adjusted AI skill values
-The idea here is to reduce the AI's godlike aiming capabilties while retaining it's high intelligence. The AI should be smart enough to move through a town, but also be 'human' in their reaction time and aim.
+The idea here is to reduce the AI's godlike aiming capabilities while retaining it's high intelligence. The AI should be smart enough to move through a town, but also be 'human' in their reaction time and aim.
 Note: All these values can still be adjusted via scripts, these arrays just change what 0 & 1 are for setSkill.
 
 ### 1.2 Firing in burst mode

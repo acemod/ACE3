@@ -17,20 +17,19 @@ Changes the default rangefinders, including those in vehicles, to require manual
 ### 1.3 Air burst ammunition
 Anti air cannons can now use airburst ammunition. It will explode on the FCS' zeroed in range.
 
-
 ## 2. Usage
 
 ### 2.1 Engaging moving targets
-
 - Place the crosshair on the enemy vehicle.
-- Press and hold <kbd> tab </kbd> (by default) and follow the target for about 2 seconds.
-- Release <kbd> tab </kbd> 
+- Press and hold <kbd>TAB</kbd> (ACE 3 default keybind `Lock Target [Hold]`) and follow the target for about 2 seconds.
+- Release <kbd>TAB</kbd>.
 - The optic is now adjusted sideways to ensue a hit.
 
 ### 2.2 Ranging stationary targets
-
 - Place the crosshair on the object to range.
-- Tap <kbd> tab </kbd> (by default) the optic is now adjusted.
+- Tap <kbd>TAB</kbd> the optic is now adjusted.
+
+NOTE: GBU guidance is **DISABLED** as of ACE3 3.0.1
 
 ## 3. Dependencies
 
