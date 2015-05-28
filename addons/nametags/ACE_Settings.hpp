@@ -54,4 +54,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 0;
     };
+    class GVAR(tagSize) {
+        value = 2;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_NameTags_TagSize_Name";
+        description = "$STR_ACE_NameTags_TagSize_Description";
+        values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
+    };
 };

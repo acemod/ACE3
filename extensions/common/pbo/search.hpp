@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #pragma once
 
 #include "shared.hpp"
@@ -25,3 +27,5 @@ namespace ace {
         typedef std::shared_ptr<search> search_p;
     }
 }
+
+#endif

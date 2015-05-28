@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 private ["_val", "_index"];
-// diag_log text format["%1 HASH GET: %2", diag_tickTime, _this];
+// diag_log text format["%1 HASH GET: %2", ACE_diagTime, _this];
 
 PARAMS_2(_hash,_key);
 
@@ -23,4 +23,6 @@ try {
 } catch {
     HANDLECATCH;
 };
-_val
+
+if (isNil "_val") exitWith { nil };
+_val;

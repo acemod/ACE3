@@ -16,7 +16,7 @@ namespace ace {
             std::streampos _save = stream_.tellg();
             file_offset = begin_data_offset + entry->offset;
           
-            use_size = max(entry->size, entry->storage_size);
+            use_size = std::max(entry->size, entry->storage_size);
             output->data = new uint8_t[use_size];
 
             bytes_read = 0;

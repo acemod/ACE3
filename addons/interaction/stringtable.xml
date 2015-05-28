@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -796,14 +796,17 @@
         <Key ID="STR_ACE_InteractionSystem_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
+            <Spanish>Sistema de interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
             <Polish>Wł. zarządzanie drużyną</Polish>
+            <Spanish>Habilitar gestión de equipos</Spanish>
         </Key>
         <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
             <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
+            <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
         </Key>
         <Key ID="STR_ACE_InteractionSystem_Module_Description">
             <English></English>

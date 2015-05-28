@@ -55,7 +55,7 @@ class CfgMagazines {
         displayName = "$STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Name";
         displayNameShort = "$STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_NameShort";
         descriptionShort = "$STR_ACE_30Rnd_556x45_Stanag_M995_AP_mag_Description";
-        initSpeed = 1046;
+        initSpeed = 865;
     };
     class ACE_30Rnd_556x45_Stanag_Mk262_mag: 30Rnd_556x45_Stanag {
         author = "$STR_ACE_Common_ACETeam";

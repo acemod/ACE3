@@ -45,7 +45,7 @@ if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
     ACE_RAIN_PARAMS = [_lastRain, GVAR(current_rain), _transitionTime];
     TRACE_4("",_lastRain,_rainOverCast,_transitionTime,overcast);
 
-    GVAR(rain_period_start_time) = time;
+    GVAR(rain_period_start_time) = ACE_time;
     publicVariable "ACE_RAIN_PARAMS";
 };
 
@@ -91,7 +91,7 @@ if (GVAR(syncWind) && GVAR(wind_period_count) > GVAR(wind_next_period)) then {
     GVAR(current_wind_direction) = _windDirection;
     GVAR(current_wind_speed) = _windSpeed;
     
-    GVAR(wind_period_start_time) = time;
+    GVAR(wind_period_start_time) = ACE_time;
     publicVariable "ACE_WIND_PARAMS";
 };
 
