@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 #define PRECISION 0.1
 
-private ["_distance","_angleTarget","_maxElev","_initSpeed","_airFriction","_timeToLive","_timeToLive","_simulationStep","_angle","_posTargetX","_posTargetY","_posX","_posY","_velocityX","_velocityY","_velocityMagnitude"];
+private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle1", "_angle2", "_it2", "_f1", "_f2", "_temp", "_it1", "_angle"];
 
 _distance       = _this select 0;
 _angleTarget    = _this select 1;
@@ -32,7 +32,7 @@ _simulationStep = _this select 6;
 if (_simulationStep == 0) exitWith {_angleTarget};
 
 FUNC(traceBullet) = {
-    private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle", "_posTargetX", "_posTargetY", "_posX", "_posY", "_velocityX", "_velocityY", "_velocityMagnitude"];
+    private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle", "_posTargetX", "_posTargetY", "_posX", "_posY", "_velocityX", "_velocityY", "_velocityMagnitude", "_i"];
 
     _distance       = _this select 0;
     _angleTarget    = _this select 1;

@@ -26,7 +26,7 @@
 #define RADIANS(X) (X / (180 / M_PI))
 
 extern "C" {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
 
 std::vector<std::string> splitString(std::string input) {

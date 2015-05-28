@@ -32,7 +32,7 @@ FUNC(laserHudDesignatePFH) = {
     };
    
     if( (count _args) < 4) then {
-        _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+        _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
     };
     _forceUpdateTime = _args select 3;
 
@@ -57,9 +57,9 @@ FUNC(laserHudDesignatePFH) = {
     };
     */
     
-    if(diag_tickTime > _forceUpdateTime) then {
+    if(ACE_diagTime > _forceUpdateTime) then {
         ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
-         _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+         _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
     };
     
     _this set[0, _args];

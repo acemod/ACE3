@@ -1,25 +1,23 @@
 ---
 layout: wiki
 title: Dragging
-description: 
+description: Adds the option to drag and carry units and objects
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
-### Sub-feature 2
-Short description of sub-feature 2.
+This adds the option to drag or carry units or objects.
 
+## 2. Usage
 
-## Usage
+### 2.1 Dragging / Carrying units and objects
+- You can only drag or carry an unconscious unit.
+- Interact with the unit or object <kbd>Left Windows</kbd>
+- Choose `Drag` or `Carry`
+- To release, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>Left windows</kbd> and select `Release`.
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`
