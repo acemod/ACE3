@@ -4,12 +4,10 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-    v3.0.1
         <img src="http://img.shields.io/badge/Wersja-3.0.1-blue.svg"
              alt="ACE wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
-    40.9 Mb
         <img src="http://img.shields.io/badge/Pobierz-40.9_MB-green.svg"
              alt="ACE pobierz">
     </a>
