@@ -10,19 +10,19 @@
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
     40.9 Mb
-        <img src="http://img.shields.io/badge/download-40.9_MB-green.svg?style=flat&label=Download"
+        <img src="http://img.shields.io/badge/download-40.9_MB-green.svg"
              alt="ACE download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat&label=Issues"
+        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues"
              alt="ACE issues">
     </a>
     <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
-        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat"
+        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg"
              alt="BIF thread">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="http://img.shields.io/badge/License-GPLv2-red.svg?style=flat"
+        <img src="http://img.shields.io/badge/License-GPLv2-red.svg"
              alt="ACE license">
     </a>
 </p>
