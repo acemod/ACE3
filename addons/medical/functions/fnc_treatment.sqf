@@ -175,22 +175,22 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 };
 
 //Get treatment time
-if (isNumber (_config >> "treatmentTime")) then {
-    _treatmentTime = getNumber (_config >> "treatmentTime");
+_treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
+    getNumber (_config >> "treatmentTime");
 } else {
-    if (isText (_config >> "treatmentTime")) then {
+    if (isText (_config >> "treatmentTime")) exitwith {
         _treatmentTimeConfig = getText(_config >> "treatmentTime");
         if (isnil _treatmentTimeConfig) then {
             _treatmentTimeConfig = compile _treatmentTimeConfig;
         } else {
             _treatmentTimeConfig = missionNamespace getvariable _treatmentTimeConfig;
         };
-        if (typeName _treatmentTimeConfig == "SCALAR") then {
-            _treatmentTime = _treatmentTimeConfig;
-        } else {
-            _treatmentTime = [_caller, _target, _selectionName, _className] call _treatmentTimeConfig;
+        if (typeName _treatmentTimeConfig == "SCALAR") exitwith {
+            _treatmentTimeConfig;
         };
+        [_caller, _target, _selectionName, _className] call _treatmentTimeConfig;
     };
+    0;
 };
 
 // Start treatment
