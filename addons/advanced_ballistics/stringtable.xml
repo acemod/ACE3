@@ -42,7 +42,7 @@
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
-            <German>Für Sniper aktiviert</German>
+            <German>Für Scharfschützen aktiviert</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForSnipers_Description">
             <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
@@ -87,7 +87,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
             <Polish>Symulacja temp. amunicji</Polish>
-            <German>Munitionstemperatur-Simulation aktivieren</German>
+            <German>Simulation der Munitionstemperatur aktivieren</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -97,12 +97,12 @@
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
             <Polish>Symulacja długości lufy</Polish>
-            <German>Lauflängen-Simulation aktivieren</German>
+            <German>Simulation der Lauflänge aktivieren</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
             <Polish>Prędkość wylotowa pocisku jest zależna od długości lufy</Polish>
-            <German>Länge des Laufs verändert Mündungsgeschwindigkeit</German>
+            <German>Lauflänge beeinflusst Mündungsgeschwindigkeit</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -117,7 +117,7 @@
         <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
             <Polish>Interwał symulacji</Polish>
-            <German>Simulationsinterval</German>
+            <German>Simulationsintervall</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>

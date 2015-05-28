@@ -507,7 +507,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
-            <German>Teamverwaltung</German>
+            <German>Gruppenverwaltung</German>
             <Spanish>Gestión de equipo</Spanish>
             <French>Gestion d'équipe</French>
             <Polish>Zarządzanie oddziałem</Polish>
@@ -801,12 +801,12 @@
         <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
             <Polish>Wł. zarządzanie drużyną</Polish>
-            <German>Aktiviere Teamverwaltung</German>
+            <German>Aktiviere Gruppenverwaltung</German>
         </Key>
         <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
             <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
-            <German>Sollen Spieler das Teamverwaltungsmenü verwenden dürfen? Standard: Ja</German>
+            <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
         </Key>
         <Key ID="STR_ACE_InteractionSystem_Module_Description">
             <English></English>

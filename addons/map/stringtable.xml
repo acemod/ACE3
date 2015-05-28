@@ -57,7 +57,7 @@
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
             <Polish>Interwał</Polish>
-            <German>Interval</German>
+            <German>Intervall</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
