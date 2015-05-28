@@ -3,16 +3,16 @@
          height="112">
 </p>
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
+    <!--<a href="https://github.com/acemod/ACE3/releases">
     v3.0.1
         <img src="https://img.shields.io/badge/Version-3.0.1-blue.svg"
              alt="ACE version">
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
     40.9 Mb
-        <img src="http://img.shields.io/badge/download-40.9_MB-green.svg"
+        <img src="http://img.shields.io/badge/Download-40.9_MB-green.svg"
              alt="ACE download">
-    </a>
+    </a>-->
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues"
              alt="ACE issues">
