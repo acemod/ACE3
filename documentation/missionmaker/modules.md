@@ -11,34 +11,37 @@ parent: wiki
 ### 1.1 Advanced Ballistics
 *Part of: ace_advanced_ballistics*
 
-This module allows to enable advanced external- and internal ballistics.
+This module allows enabling and configuring advanced ballistic simulations.
 
 **Settings:**
 
 1. **Advanced Ballistics (Boolean)**<br>
 Enables advanced ballistics.<br>
 `Default value: No`
-2. **Always Enabled For Snipers (Boolean)**<br>
-Always enables advanced ballistics when high power optics are used.<br>
+2. **Enabled For Snipers (Boolean)**<br>
+Enables advanced ballistics for non local snipers (when using high power optics).<br>
 `Default value: Yes`
-3. **Disabled In FullAuto Mode (Boolean)**<br>
+3. **Enabled For Group Members (Boolean)**<br>
+Enables advanced ballistics for non local group members.<br>
+`Default value: No`
+4. **Enabled For Everyone (Boolean)**<br>
+Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
+`Default value: No`
+5. **Disabled In FullAuto Mode (Boolean)**<br>
 Disables the advanced ballistics during full auto fire.<br>
 `Default value: No`
-4. **Disabled For Non Local Players (Boolean)**<br>
-Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer).<br>
-`Default value: Yes`
-5. **Enable Ammo Temperature Simulation (Boolean)**<br>
+6. **Enable Ammo Temperature Simulation (Boolean)**<br>
 Muzzle velocity varies with ammo temperature.<br>
 `Default value: Yes`
-6. **Enable Barrel Length Simulation (Boolean)**<br>
+7. **Enable Barrel Length Simulation (Boolean)**<br>
 Muzzle velocity varies with barrel length.<br>
 `Default value: Yes`
-7. **Enable Bullet Trace Effect (Boolean)**<br>
+8. **Enable Bullet Trace Effect (Boolean)**<br>
 Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
-8. **Simulation Interval (Number)**<br>
+9. **Simulation Interval (Number)**<br>
 Defines the interval between every calculation step.<br>
 `Default value: 0.05`
-9. **Simulation Radius (Number)**<br>
+10. **Simulation Radius (Number)**<br>
 Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
 `Default value: 3000`
 
@@ -250,6 +253,7 @@ The "Respawn System" module enables players to respawn with the gear they had be
 Respawn with the gear a player had just before his death.<br>
 `Default value: No`
 
+
 ### 1.16 SwitchUnits System
 *Part of: ace_switchunits*
 
@@ -306,7 +310,22 @@ Default Time to lockpick (in seconds)<br>
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
 
 
-### 1.18 Weather
+### 1.18 View Distance Limiter
+*Part of: ace_viewdistance*
+
+This module allows disabling the ACE3 View Distance feature as well as setting a view distance limit.
+
+**Settings:**
+
+1. **Enable ACE viewdistance (Boolean)**<br>
+Enables ACE viewdistance<br>
+`Default value: Yes`
+2. **View Distance Limit (Number)**<br>
+Sets the limit for how high clients can raise their view distance (<= 10000)
+`Default value: 10000`
+
+
+### 1.19 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
@@ -315,7 +334,6 @@ This module allows you to customize the weather settings.
     <h5>Note:</h5>
     <p>ACE3 Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses. Weather synchronization occurs between all clients. <br>Adjustment of the weather is possible by modifying the <code>overcast</code> value (for example: <code>0.7</code> may result in intermittent rain).</p>
 </div>
-
 
 **Settings:**
 
@@ -346,7 +364,8 @@ Synchronizes lightnings, rainbow, fog, ...<br>
 Defines the interval (seconds) between weather updates.<br>
 `Default value: 60`
     
-### 1.19 Wind Deflection
+
+### 1.20 Wind Deflection
 *Part of: ace_winddeflection*
 
 This module allows you to define when wind deflection is active.
@@ -377,13 +396,14 @@ Defines the radius around the player (in meters) at which projectiles are wind d
 `Default value: 3000`
 
 
-### 1.20 LSD Vehicles
+### 1.21 LSD Vehicles
 *Part of: ace_core*
 
 And then there's the "LSD Vehicles" module &hellip; it does 'something' to all vehicles synced to that module.
 <div class="videoWrapper">
     <iframe src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
 </div>
+
 
 ## 2. ACE3 Medical
 *Part of: ace_medical*
@@ -557,3 +577,28 @@ Follow players. If set to false, loop will play sounds only nearby logic positio
 7. **Volume (Number)**<br>
 The volume of the sounds played<br>
 `Default value: 1`
+
+
+## 4. ACE3 Zeus
+*Part of: ace_zeus*
+
+### 4.1 Zeus Settings
+This module provides control over vanilla aspects of Zeus.
+
+**Settings:**
+
+1. **Ascension Messages (Option)**<br>
+Display global popup messages when a player is assigned as Zeus<br>
+`Default value: No`
+2. **Zeus Eagle (Boolean)**<br>
+Spawn an eagle that follows the Zeus camera<br>
+`Default value: No`
+3. **Wind Sounds (Boolean)**<br>
+Play wind sounds when Zeus remote controls a unit<br>
+`Default value: No`
+4. **Ordnance Warning (Boolean)**<br>
+Play a radio warning when Zeus uses ordnance<br>
+`Default value: No`
+5. **Reveal Mines (Scalar)**<br>
+Reveal mines to allies and/or place map markers<br>
+`Default value: Disabled`

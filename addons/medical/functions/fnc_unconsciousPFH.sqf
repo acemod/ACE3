@@ -121,13 +121,13 @@ if (_parachuteCheck) then {
 };
 
 if (!local _unit) exitwith {
-    _args set [3, _minWaitingTime - (time - _startingTime)];
+    _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-if ((time - _startingTime) >= _minWaitingTime) exitwith {
+if ((ACE_time - _startingTime) >= _minWaitingTime) exitwith {
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setvariable ["ACE_isUnconscious", false, true];
     };

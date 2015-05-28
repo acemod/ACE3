@@ -5,29 +5,29 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(alwaysSimulateForSnipers) {
-        displayName = "Always Enabled For Snipers";
-        description = "Always enables advanced ballistics when high power optics are used";
+    class GVAR(simulateForSnipers) {
+        displayName = "Enabled For Snipers";
+        description = "Enables advanced ballistics for non local snipers (when using high power optics)";
         typeName = "BOOL";
         value = 1;
     };
-    class GVAR(alwaysSimulateForGroupMembers) {
-        displayName = "Always Enabled For Group Members";
-        description = "Always enables advanced ballistics when a group member fires";
+    class GVAR(simulateForGroupMembers) {
+        displayName = "Enabled For Group Members";
+        description = "Enables advanced ballistics for non local group members";
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(simulateForEveryone) {
+        displayName = "Enabled For Everyone";
+        description = "Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)";
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(disabledInFullAutoMode) {
         displayName = "Disabled In FullAuto Mode";
-        description = "Disables the advanced ballistics during full auto fire";
+        description = "Disables advanced ballistics during full auto fire";
         typeName = "BOOL";
         value = 0;
-    };
-    class GVAR(onlyActiveForLocalPlayers) {
-        displayName = "Disabled For Non Local Players";
-        description = "Disables the advanced ballistics for bullets coming from other players (enable this if you encounter frame drops during heavy firefights in multiplayer)";
-        typeName = "BOOL";
-        value = 1;
     };
     /* // TODO: We currently do not have firedEHs on vehicles
     class GVAR(vehicleGunnerEnabled) {

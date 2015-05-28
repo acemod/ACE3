@@ -15,11 +15,11 @@ if (!_isEngineOn || {floor abs speed _vehicle > 0}) exitWith {};
     _time = _this select 0 select 1;
     _direction = _this select 0 select 2;
 
-    if (time > _time) exitWith {
+    if (ACE_time > _time) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
     _vehicle setVelocity [0, 0, 0];
     _vehicle setVectorDirAndUp _direction;
 
-} , 0, [_vehicle, time + STARTUP_DELAY, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;
+} , 0, [_vehicle, ACE_time + STARTUP_DELAY, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;

@@ -1,5 +1,5 @@
 #define COMPONENT realisticnames
-#include "\z\ace\Addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_REALISTICNAMES
     #define DEBUG_MODE_FULL
@@ -9,4 +9,4 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_REALISTICNAMES
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"

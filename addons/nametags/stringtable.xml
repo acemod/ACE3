@@ -112,50 +112,62 @@
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
             <English>Name Tags</English>
             <Polish>Ustawienia imion</Polish>
+            <Spanish>Etiquetas de nombre</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
             <Polish>Zasięg imion graczy</Polish>
+            <Spanish>Distancia de vision para nombres de jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
             <Polish>Dystans w metrach, na którym wyświetlane są imiona graczy. Domyślnie: 5</Polish>
+            <Spanish>Distancia en metros a la que se muestran los nombres de los jugadores. Por defecto: 5</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
             <Polish>Imiona AI</Polish>
+            <Spanish>¿Mostrar nombres para la IA?</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
             <Polish>Pokaż imiona i rangi przyjaznych jednostek AI? Domyślnie: Nie wymuszaj</Polish>
+            <Spanish>Muestra etiquetas de nombre y rango para las unidades IA amigas? Por defecto: No forzar</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_DoNotForce">
             <English>Do Not Force</English>
             <Polish>Nie wymuszaj</Polish>
+            <Spanish>No forzar</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceHide">
             <English>Force Hide</English>
             <Polish>Wymuś ukrycie</Polish>
+            <Spanish>Ocultar forzado</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
             <English>Force show</English>
             <Polish>Wymuś wyświetlanie</Polish>
+            <Spanish>Mostrar forzado</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
             <English>Show crew info?</English>
             <Polish>Pokaż załogę</Polish>
+            <Spanish>¿Mostrar información de la tripulación?</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_Description">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
             <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
+            <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
             <Polish>Pokaż dla pojazdów</Polish>
+            <Spanish>Mostrar para vehiculos</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No</English>
             <Polish>Pokazuj imię dowódcy pojazdu nad pojazdem (tylko jeżeli klient ma włączone imiona graczy). Domyślnie: Nie</Polish>
+            <Spanish>Muestra etiquetas de nombre en el cursor para el comandante del vehiculo (solo si el cliente tiene las etiquetas de nombre activadas) Por defecto: No</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English></English>
@@ -164,38 +176,51 @@
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
             <Polish>Wyłączone</Polish>
+            <Spanish>Desactivado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
             <Polish>Włączone</Polish>
+            <Spanish>Activado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_OnlyCursor">
             <English>Only Cursor</English>
             <Polish>Tylko pod kursorem</Polish>
+            <Spanish>Solo cursor</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_OnlyOnKeypress">
             <English>Only On Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
+            <Spanish>Solo al pulsar tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_OnlyCursorAndKeyPress">
             <English>Only Cursor and KeyPress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
+            <Spanish>En cursor y al pulsar tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_NameTagSettings">
             <English>Use Nametag settings</English>
             <Polish>Użyj ustawień imion</Polish>
+            <Spanish>Usar ajustes de etiquetas de nombre</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_AlwaysShowAll">
             <English>Always Show All</English>
             <Polish>Zawsze pokazuj wszystkie</Polish>
+            <Spanish>Mostrar siempre todo</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English></English>
-            <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -> ACE3.</Polish>
+            <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English></English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
+        </Key>
+        <Key ID="STR_ACE_nametags_tagsize_name">
+            <English>Nametags Size</English>
+        </Key>
+        <Key ID="STR_ACE_nametags_tagsize_description">
+            <English>Text and Icon Size Scaling</English>
         </Key>
     </Package>
 </Project>

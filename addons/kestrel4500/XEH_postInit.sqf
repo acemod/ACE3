@@ -11,7 +11,7 @@ GVAR(MinAvgMax) = false;
 GVAR(MinAvgMaxMode) = 0;
 GVAR(referenceHeadingMenu) = 0;
 GVAR(referenceHeadingAutoSet) = true;
-GVAR(manualSetCooldown) = diag_tickTime;
+GVAR(manualSetCooldown) = ACE_diagTime;
 GVAR(headingSetDisplayTimer) = 0;
 
 GVAR(Menu) = 1;
