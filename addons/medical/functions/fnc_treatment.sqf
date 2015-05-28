@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -174,8 +174,26 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
+//Get treatment time
+_treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
+    getNumber (_config >> "treatmentTime");
+} else {
+    if (isText (_config >> "treatmentTime")) exitwith {
+        _treatmentTimeConfig = getText(_config >> "treatmentTime");
+        if (isnil _treatmentTimeConfig) then {
+            _treatmentTimeConfig = compile _treatmentTimeConfig;
+        } else {
+            _treatmentTimeConfig = missionNamespace getvariable _treatmentTimeConfig;
+        };
+        if (typeName _treatmentTimeConfig == "SCALAR") exitwith {
+            _treatmentTimeConfig;
+        };
+        [_caller, _target, _selectionName, _className] call _treatmentTimeConfig;
+    };
+    0;
+};
+
 // Start treatment
-_treatmentTime = getNumber (_config >> "treatmentTime");
 [
     _treatmentTime,
     [_caller, _target, _selectionName, _className, _items, _usersOfItems],
