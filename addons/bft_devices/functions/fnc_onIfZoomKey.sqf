@@ -21,9 +21,9 @@
 private ["_displayName","_mapScale","_mapScaleMin","_mapScaleMax"];
 
 // bail if there is no interface open, or it is still being started
-if (GVAR(ifOpenStart) || (isNil QGVAR(ifOpen))) exitWith {false};
+if (GVAR(ifOpenStart) || (I_CLOSED)) exitWith {false};
 
-_displayName = GVAR(ifOpen) select 1;
+_displayName = I_GET_NAME;
 // bail if this is a dialog
 if ([_displayName] call FUNC(isDialog)) exitWith {false};
 

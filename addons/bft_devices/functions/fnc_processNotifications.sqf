@@ -23,8 +23,8 @@
 private ["_displayName","_display","_ctrl","_currentTime","_text","_notification"];
 
 // make sure there is no PFH already, the interface is open and notifications are available
-if (isNil QGVAR(processNotificationsPFH) && !(isNil QGVAR(ifOpen)) && count GVAR(notificationCache) != 0) then {
-    _displayName = GVAR(ifOpen) select 1;
+if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificationCache) != 0) then {
+    _displayName = I_GET_NAME;
     _display = uiNamespace getVariable _displayName;
     _ctrl = _display displayCtrl IDC_NOTIFICATION;
     
@@ -34,7 +34,7 @@ if (isNil QGVAR(processNotificationsPFH) && !(isNil QGVAR(ifOpen)) && count GVAR
         GVAR(processNotificationsPFH) = [{
             private ["_ctrl","_notification"];
             
-            if !(isNil QGVAR(ifOpen)) then {
+            if !(I_CLOSED) then {
                 if (count GVAR(notificationCache) != 0) then {
                     // grab and delete the oldest notification
                     _notification = GVAR(notificationCache) deleteAt 0;

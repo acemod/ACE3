@@ -24,18 +24,19 @@ private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_ve
 //[] call FUNC(deleteHelmetCam);
 //[] call FUNC(deleteUAVcam);
 
-if !(isNil QGVAR(ifOpen)) then {
-    // [_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
-    _ifType = GVAR(ifOpen) select 0;
-    _displayName = GVAR(ifOpen) select 1;
-    _player = GVAR(ifOpen) select 2;
-    _playerKilledEhId = GVAR(ifOpen) select 3;
-    _vehicle = GVAR(ifOpen) select 4;
-    _vehicleGetOutEhId = GVAR(ifOpen) select 5;
-    _draw3dEhId = GVAR(ifOpen) select 6;
-    _aceUnconciousEhId = GVAR(ifOpen) select 7;
-    _acePlayerInventoryChangedEhId = GVAR(ifOpen) select 8;
-    _acePlayerChangedEhId = GVAR(ifOpen) select 9;
+if !(I_CLOSED) then {
+    // [_deviceID,_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
+    _deviceID = I_GET_DEVICE;
+    _ifType = I_GET_TYPE;
+    _displayName = I_GET_NAME;
+    _player = GVAR(ifOpen) select 3;
+    _playerKilledEhId = GVAR(ifOpen) select 4;
+    _vehicle = GVAR(ifOpen) select 5;
+    _vehicleGetOutEhId = GVAR(ifOpen) select 6;
+    _draw3dEhId = GVAR(ifOpen) select 7;
+    _aceUnconciousEhId = GVAR(ifOpen) select 8;
+    _acePlayerInventoryChangedEhId = GVAR(ifOpen) select 9;
+    _acePlayerChangedEhId = GVAR(ifOpen) select 10;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};

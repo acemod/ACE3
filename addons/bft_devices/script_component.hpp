@@ -12,3 +12,5 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #include "\z\ace\addons\bft\device_getters.hpp"
+
+#include "ifOpen_macros.hpp"

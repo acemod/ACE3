@@ -25,8 +25,8 @@
 private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
 disableSerialization;
 
-if (isNil QGVAR(ifOpen)) exitWith {false};
-_displayName = GVAR(ifOpen) select 1;
+if (I_CLOSED) exitWith {false};
+_displayName = I_GET_NAME;
 _display = uiNamespace getVariable _displayName;
 _interfaceInit = false;
 _loadingCtrl = _display displayCtrl IDC_LOADINGTXT;

@@ -27,7 +27,7 @@
 private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex"];
 
 _display = _this select 0;
-_displayName = GVAR(ifOpen) select 1;
+_displayName = I_GET_NAME;
 _dikCode = _this select 1;
 _shiftKey = _this select 2;
 _ctrlKey = _this select 3;

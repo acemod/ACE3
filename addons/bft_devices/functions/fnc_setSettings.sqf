@@ -81,10 +81,10 @@ HASH_SET(GVAR(Settings),_propertyGroupName,_groupProperties);
 HASH_SET(GVAR(Settings),"COMMON",_commonProperties);
 
 // Finally, call an interface update for the updated properties, but only if the currently interface uses the same property group, if not, pass changed common properties only.
-if (!isNil QGVAR(ifOpen)) then {
+if (!I_CLOSED) then {
     call {
         if (!_updateInterface) exitWith {};
-        if ((HASH_GET(GVAR(displayPropertyGroups),GVAR(ifOpen) select 1) == _propertyGroupName) && {count _combinedPropertiesUpdate > 0}) exitWith {
+        if ((HASH_GET(GVAR(displayPropertyGroups),I_GET_NAME) == _propertyGroupName) && {count _combinedPropertiesUpdate > 0}) exitWith {
             [_combinedPropertiesUpdate] call FUNC(ifUpdate);
         };
         if (count _commonPropertiesUpdate > 0) then {

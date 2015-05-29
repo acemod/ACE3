@@ -21,9 +21,9 @@
 private ["_displayName"];
 
 // bail if there is no interface open
-if (isNil QGVAR(ifOpen)) exitWith {false};
+if (I_CLOSED) exitWith {false};
 
-_displayName = GVAR(ifOpen) select 1;
+_displayName = I_GET_NAME;
 
 if ([_displayName] call FUNC(isDialog)) then {
     // reset position to default

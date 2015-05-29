@@ -28,14 +28,14 @@ if (GVAR(ifOpenStart)) exitWith {_handled};
 _previousInterface = "";
 
 // close interface and exit if there is an interface open of the same type
-if (!isNil QGVAR(ifOpen) && {GVAR(ifOpen) select 0 == _this}) exitWith {
+if (!I_CLOSED && {I_GET_TYPE == _this}) exitWith {
     [] call FUNC(ifClose);
     true
 };
 
 // close interface if there is one open
-if !(isNil QGVAR(ifOpen)) then {
-    _previousInterface = GVAR(ifOpen) select 1;
+if !(I_CLOSED) then {
+    _previousInterface = I_GET_NAME;
     [] call FUNC(ifClose);
     _handled = true;
 };
@@ -84,14 +84,11 @@ _interfaceName = switch (_this) do {
 if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
     [{
-        if (isNil QGVAR(ifOpen)) then {
+        if (I_CLOSED) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
-            ((_this select 0 select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
-            
-            // send "bft_deviceOpened" event ---- to be moved to ifOnLoad function
-            ["bft_deviceOpened", [_this select 0 select 1]] call EFUNC(common,localEvent);
+            ((_this select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
         };
-    }, 0, [[_this, _interfaceName], _deviceID]] call CBA_fnc_addPerFrameHandler;
+    },0,[_deviceID,_this,_interfaceName]] call CBA_fnc_addPerFrameHandler;
 };
 
 true

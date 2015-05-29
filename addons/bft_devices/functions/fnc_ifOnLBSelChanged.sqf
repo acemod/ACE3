@@ -25,12 +25,12 @@ private [];
 #include "script_component.hpp"
 
 // ignore function call if the interface has not finished setup
-if (GVAR(ifOpenStart) || isNil QGVAR(ifOpen)) exitWith {true};
+if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 
 _function = _this select 0;
 _control = _this select 1 select 0;
 _display = ctrlParent _control;
-_displayName = GVAR(ifOpen) select 1;
+_displayName = I_GET_NAME;
 _selectedIndex = _this select 1 select 1;
 
 switch (_function) do {

@@ -20,9 +20,9 @@
 
 private ["_displayName","_display"];
 
-if !(isNil QGVAR(ifOpen)) then {
+if !(I_CLOSED) then {
     // [_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
-    _displayName = GVAR(ifOpen) select 1;
+    _displayName = I_GET_NAME;
     _display = uiNamespace getVariable [_displayName,displayNull];
     
     if !(isNull _display) then {
