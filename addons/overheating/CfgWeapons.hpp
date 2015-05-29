@@ -40,7 +40,25 @@ class CfgWeapons {
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
+    
+    class MMG_02_base_F : rifle_Base_F {
+        ACE_clearJamAction = "";
+        ACE_checkTemperatureAction = "";
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
 
+    class MMG_01_base_F : rifle_Base_F {
+        ACE_clearJamAction = "";
+        ACE_checkTemperatureAction = "";
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
+    
     class arifle_MX_SW_F : arifle_MX_Base_F {
         ACE_clearJamAction = "";              // Custom jam clearing action. Use empty string to undefine.
         ACE_Overheating_allowSwapBarrel = 1;  // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
