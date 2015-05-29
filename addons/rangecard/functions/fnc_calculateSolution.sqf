@@ -44,7 +44,7 @@
  */
 #include "script_component.hpp"
 
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot", "_speedOfSound"];
+private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;
 _boreHeight         = _this select 2;
@@ -71,16 +71,20 @@ _directionOfFire    = _this select 21;
 _rangeCardSlot      = _this select 22;
 
 if (_storeRangeCardData) then {
-    GVAR(rangeCardDataMVs) pushBack format[" %1", round(_muzzleVelocity)];
+    GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
 };
 
-private ["_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT"];
+private ["_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT", "_speedOfSound"];
 _bulletPos = [0, 0, 0];
 _bulletVelocity = [0, 0, 0];
 _bulletAccel = [0, 0, 0];
 _bulletSpeed = 0;
 _gravity = [0, sin(_scopeBaseAngle + _inclinationAngle) * -9.80665, cos(_scopeBaseAngle + _inclinationAngle) * -9.80665];
 _deltaT = 1 / _simSteps;
+_speedOfSound = 0;
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    _speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
+};
 
 private ["_elevation", "_windage1", "_windage2", "_lead", "_TOF", "_trueVelocity", "_trueSpeed", "_kineticEnergy", "_verticalCoriolis", "_verticalDeflection", "_horizontalCoriolis", "_horizontalDeflection", "_spinDrift", "_spinDeflection"];
 _elevation = 0;
@@ -136,8 +140,6 @@ _bulletVelocity set [0, 0];
 _bulletVelocity set [1, Cos(_scopeBaseAngle) * _muzzleVelocity];
 _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
-_speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
-
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     
@@ -146,7 +148,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _speedAverage = (_speedTotal / _stepsTotal);
     
     if (_speedAverage > 400 && _bulletSpeed < _speedOfSound) exitWith {};
-    if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.25) exitWith {};
+    if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
     
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
     _trueSpeed = vectorMagnitude _trueVelocity;

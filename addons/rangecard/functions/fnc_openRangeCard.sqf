@@ -18,12 +18,12 @@
 if (GVAR(RangeCardOpened)) exitWith {};
 
 if (_this) then {
-    if (GVAR(ammoClassCopy) != "" && GVAR(weaponClassCopy) != "") then {
+    if (GVAR(ammoClassCopy) != "" && GVAR(magazineClassCopy) != "" && GVAR(weaponClassCopy) != "") then {
         GVAR(RangeCardOpened) = true;
         
         createDialog "ACE_RangeCard_Dialog";
         
-        [GVAR(ammoClassCopy), GVAR(weaponClassCopy)] call FUNC(updateRangeCard);
+        [GVAR(ammoClassCopy), GVAR(magazineClassCopy), GVAR(weaponClassCopy)] call FUNC(updateRangeCard);
     };
 } else {
     if (ACE_player call FUNC(updateClassNames)) then {
@@ -31,6 +31,6 @@ if (_this) then {
         
         createDialog "ACE_RangeCard_Dialog";
         
-        [GVAR(ammoClass), GVAR(weaponClass)] call FUNC(updateRangeCard);
+        [GVAR(ammoClass), GVAR(magazineClass), GVAR(weaponClass)] call FUNC(updateRangeCard);
     };
 };

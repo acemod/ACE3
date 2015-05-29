@@ -15,4 +15,4 @@
  */
 #include "script_component.hpp"
 
-(GVAR(ammoClassCopy) != "" && GVAR(weaponClassCopy) != "" && !GVAR(RangeCardOpened) && !(underwater ACE_player) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))
+(GVAR(ammoClassCopy) != "" && GVAR(magazineClassCopy) != "" && GVAR(weaponClassCopy) != "" && !GVAR(RangeCardOpened) && !(underwater ACE_player) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))
