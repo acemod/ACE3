@@ -47,7 +47,7 @@ _temperature = GVAR(temperature);
 _barometricPressure = GVAR(barometricPressure);
 _relativeHumidity = GVAR(relativeHumidity);
 if (!GVAR(atmosphereModeTBH)) then {
-    _barometricPressure = (101325 * exp(-(_altitude) / 7990)) / 100;
+    _barometricPressure = 1013.25 * (1 - (0.0065 * _altitude) / (273.15 + _temperature + 0.0065 * _altitude)) ^ 5.255754495;
     _relativeHumidity = 50;
 };
 

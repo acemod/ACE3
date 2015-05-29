@@ -501,7 +501,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
         temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        pressure = (101325 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 1000 * bulletDatabase[index].overcast) / 100;
+        pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
             dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
