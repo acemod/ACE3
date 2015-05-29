@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Markers
-description: 
+description: improved markers
 group: feature
 parent: wiki
 ---

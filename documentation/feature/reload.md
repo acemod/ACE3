@@ -6,18 +6,16 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Ammo count
+### 1.1 Ammo count
 Hides the actual round count of magazines and removes the icon when the current magazine is emptied. The player can instead check the magazine weight, but that gives only estimated values for magazines with more than 10 rounds.
 
+## 2. Usage
 
-## Usage
+### 2.1 Checking your ammo
+- Press <kbd>CTRL</kbd> + <kbd>R</kbd> (ACE3 default keybind `Check Ammo`).
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

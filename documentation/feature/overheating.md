@@ -1,37 +1,45 @@
 ---
 layout: wiki
 title: Overheating
-description: 
-description: 
+description: Weapon temperature and jamming, barrel swapping.
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Weapon Jamming
-Adds a propability to jam a weapon when firing. Jams can be cleared by 
+### 1.1 Weapon Jamming
+Adds a probability to jam a weapon when firing. Jams can be cleared by 
 reloading or by using the clear jam-key.
 
-### Temperature simulation
+### 1.2 Temperature simulation
 Introduces weapon temperature simulation depending on weapon and bullet
 mass. Hot weapons are more prone to jamming. Depending on weapon type 
 the accuracy and in extreme cases the muzzle velocity might be reduced 
-on high temperatues. Adds smoke puff and heat refraction effects to 
+on high temperatures. Adds smoke puff and heat refraction effects to 
 indicate this.
 
-### Spare barrels
+### 1.3 Spare barrels
 Adds the ability to changes barrels on machine guns to compensate for those 
 effects.
 
 
-## Usage
-To clear a jammed weapon, press Shift+R.
+## 2. Usage
 
+### 2.1 Clearing a jammed weapon
+- To clear a jammed weapon, press <kbd>SHIFT</kbd> + <kbd>R</kbd> (ACE3 default keybind `Clear jam`).
 
-*needs documentation on swapping barrels*
+### 2.2 Swapping barrels
+- For this you need a `Spare barrel` and a compatible weapon.
+- Press self interaction <kbd>CTRL</kbd> + <kbd>left windows</kbd> (ACE3 default keybind `Self Interaction Key`).
+- Select `equipment`.
+- Select `Swap barrel`.
 
+### 2.3 Checking your barrel temperature
+- Press self interaction <kbd>CTRL</kbd> + <kbd>left windows</kbd>.
+- Select `equipment`.
+- Select `Check weapon temperature`. 
 
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

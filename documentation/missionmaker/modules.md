@@ -40,7 +40,7 @@ Muzzle velocity varies with barrel length.<br>
 Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
 9. **Simulation Interval (Number)**<br>
 Defines the interval between every calculation step.<br>
-`Default value: 0.05`
+`Default value: 0.00`
 10. **Simulation Radius (Number)**<br>
 Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
 `Default value: 3000`
