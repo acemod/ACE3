@@ -14,4 +14,4 @@
  */
 #include "script_component.hpp"
 
-(1013.25 * exp(-(GVAR(Altitude) + _this) / 7990) - 10 * overcast)
+(101325 * exp(-(GVAR(Altitude) + _this) / 7990) - 1000 * overcast) / 100
