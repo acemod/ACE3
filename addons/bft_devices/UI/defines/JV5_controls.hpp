@@ -161,10 +161,10 @@ class GVAR(JV5_OSD_hookDir): GVAR(JV5_OSD_hookGrid) {
 class GVAR(JV5_RscMapControl): GVAR(RscMapControl) {
     onDraw = onDrawBFT(0);
     text = "#(argb,8,8,3)color(1,1,1,1)";
-    x = pxToScreen_X(JV5_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(JV5_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(JV5_SCREEN_CONTENT_W);
-    h = pxToScreen_H(JV5_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
 
     maxSatelliteAlpha = 10000;
     alphaFadeStartScale = 10;
@@ -187,9 +187,9 @@ class GVAR(JV5_loadingtxt): GVAR(JV5_RscText) {
     idc = IDC_LOADINGTXT;
     style = ST_CENTER;
     text = "Loading"; //--- ToDo: Localize;
-    x = pxToScreen_X(JV5_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(JV5_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(JV5_SCREEN_CONTENT_W);
-    h = pxToScreen_H(JV5_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
     colorBackground[] = COLOR_BLACK;
 };

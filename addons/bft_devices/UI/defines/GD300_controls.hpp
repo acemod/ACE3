@@ -24,10 +24,10 @@ class GVAR(GD300_RscMapControl): GVAR(RscMapControl) {
     idc = IDC_SCREEN;
     onDraw = onDrawBFT(0);
     text = "#(argb,8,8,3)color(1,1,1,1)";
-    x = pxToScreen_X(GD300_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(GD300_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(GD300_SCREEN_CONTENT_W);
-    h = pxToScreen_H(GD300_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
     //type = CT_MAP;
     // allow to zoom out further (defines the maximum map scale, usually 1)
     scaleMax = 1000;
@@ -158,10 +158,10 @@ class GVAR(GD300_loadingtxt): GVAR(GD300_RscText) {
     idc = IDC_LOADINGTXT;
     style = ST_CENTER;
     text = "Loading"; //--- ToDo: Localize;
-    x = pxToScreen_X(GD300_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(GD300_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(GD300_SCREEN_CONTENT_W);
-    h = pxToScreen_H(GD300_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
     colorBackground[] = COLOR_LIGHT_BLUE;
 };
 class GVAR(GD300_windowsBG): GVAR(RscPicture) {

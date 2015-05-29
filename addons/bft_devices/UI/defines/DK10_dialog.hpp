@@ -77,10 +77,10 @@ class GVAR(DISPLAY_NAME) {
         // ---------- DESKTOP -----------
         class Desktop: GVAR(RscControlsGroup) {
             idc = IDC_GROUP_DESKTOP;
-            x = pxToScreen_X(DK10_SCREEN_CONTENT_X);
-            y = pxToScreen_Y(DK10_SCREEN_CONTENT_Y);
-            w = pxToScreen_W(DK10_SCREEN_CONTENT_W);
-            h = pxToScreen_H(DK10_SCREEN_CONTENT_H);
+            x = pxToScreen_X(SCREEN_CONTENT_X);
+            y = pxToScreen_Y(SCREEN_CONTENT_Y);
+            w = pxToScreen_W(SCREEN_CONTENT_W);
+            h = pxToScreen_H(SCREEN_CONTENT_H);
             class VScrollbar {};
             class HScrollbar {};
             class Scrollbar {};
@@ -89,8 +89,8 @@ class GVAR(DISPLAY_NAME) {
                     style = ST_PICTURE;
                     idc = IDC_ACTBFTTXT;
                     text = QUOTE(PATHTOF(UI\icons\appBFT.paa));
-                    x = pxToGroup_X(DK10_SCREEN_CONTENT_X + DK10_DESKTOP_ICON_OFFSET_X);
-                    y = pxToGroup_Y(DK10_SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y);
+                    x = pxToGroup_X(SCREEN_CONTENT_X + DK10_DESKTOP_ICON_OFFSET_X);
+                    y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y);
                     w = pxToScreen_W(DK10_DESKTOP_ICON_W);
                     h = pxToScreen_H(DK10_DESKTOP_ICON_H);
                     onMouseButtonUp = onMBU(modeBFT);
@@ -99,21 +99,21 @@ class GVAR(DISPLAY_NAME) {
                 class appUAV: appBFT {
                     idc = IDC_ACTUAVTXT;
                     text = QUOTE(PATHTOF(UI\icons\appUAV.paa));
-                    y = pxToGroup_Y(DK10_SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 2 + DK10_DESKTOP_ICON_H);
+                    y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 2 + DK10_DESKTOP_ICON_H);
                     onMouseButtonUp = onMBU(modeUAV);
                     toolTip = "UAV Video Feeds";
                 };
                 class appHCAM: appBFT {
                     idc = IDC_ACTVIDTXT;
                     text = QUOTE(PATHTOF(UI\icons\appHelmetCam.paa));
-                    y = pxToGroup_Y(DK10_SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 3 + DK10_DESKTOP_ICON_H * 2);
+                    y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 3 + DK10_DESKTOP_ICON_H * 2);
                     onMouseButtonUp = onMBU(modeHCAM);
                     toolTip = "Live Helmet Cam Video Feeds";
                 };
                 class appMAIL: appBFT {
                     idc = IDC_ACTMSGTXT;
                     text = QUOTE(PATHTOF(UI\icons\appMail.paa));
-                    y = pxToGroup_Y(DK10_SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 4 + DK10_DESKTOP_ICON_H * 3);
+                    y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 4 + DK10_DESKTOP_ICON_H * 3);
                     onMouseButtonUp = onMBU(modeMESSAGE);
                     toolTip = "Text Messaging System";
                 };
@@ -122,10 +122,10 @@ class GVAR(DISPLAY_NAME) {
         // ---------- UAV -----------
         class UAV: GVAR(RscControlsGroup) {
             idc = IDC_GROUP_UAV;
-            x = pxToScreen_X(DK10_SCREEN_CONTENT_X);
-            y = pxToScreen_Y(DK10_SCREEN_CONTENT_Y);
-            w = pxToScreen_W(DK10_SCREEN_CONTENT_W);
-            h = pxToScreen_H(DK10_SCREEN_CONTENT_H);
+            x = pxToScreen_X(SCREEN_CONTENT_X);
+            y = pxToScreen_Y(SCREEN_CONTENT_Y);
+            w = pxToScreen_W(SCREEN_CONTENT_W);
+            h = pxToScreen_H(SCREEN_CONTENT_H);
             class VScrollbar {};
             class HScrollbar {};
             class Scrollbar {};
@@ -174,10 +174,10 @@ class GVAR(DISPLAY_NAME) {
         // ---------- HELMET CAM -----------
         class HCAM: GVAR(RscControlsGroup) {
             idc = IDC_GROUP_HCAM;
-            x = pxToScreen_X(DK10_SCREEN_CONTENT_X);
-            y = pxToScreen_Y(DK10_SCREEN_CONTENT_Y);
-            w = pxToScreen_W(DK10_SCREEN_CONTENT_W);
-            h = pxToScreen_H(DK10_SCREEN_CONTENT_H);
+            x = pxToScreen_X(SCREEN_CONTENT_X);
+            y = pxToScreen_Y(SCREEN_CONTENT_Y);
+            w = pxToScreen_W(SCREEN_CONTENT_W);
+            h = pxToScreen_H(SCREEN_CONTENT_H);
             class VScrollbar {};
             class HScrollbar {};
             class Scrollbar {};
@@ -213,10 +213,10 @@ class GVAR(DISPLAY_NAME) {
         // ---------- MESSAGING -----------
         class MESSAGE: GVAR(RscControlsGroup) {
             idc = IDC_GROUP_MESSAGE;
-            x = pxToScreen_X(DK10_SCREEN_CONTENT_X);
-            y = pxToScreen_Y(DK10_SCREEN_CONTENT_Y);
-            w = pxToScreen_W(DK10_SCREEN_CONTENT_W);
-            h = pxToScreen_H(DK10_SCREEN_CONTENT_H);
+            x = pxToScreen_X(SCREEN_CONTENT_X);
+            y = pxToScreen_Y(SCREEN_CONTENT_Y);
+            w = pxToScreen_W(SCREEN_CONTENT_W);
+            h = pxToScreen_H(SCREEN_CONTENT_H);
             class VScrollbar {};
             class HScrollbar {};
             class Scrollbar {};
@@ -302,10 +302,10 @@ class GVAR(DISPLAY_NAME) {
         class HcamFull: GVAR(RscPicture) {
             idc = IDC_HCAM_FULL;
             text = "#(argb,512,512,1)r2t(rendertarget13,1.3096153846)";
-            x = pxToScreen_X(DK10_SCREEN_CONTENT_X);
-            y = pxToScreen_Y(DK10_SCREEN_CONTENT_Y);
-            w = pxToScreen_W(DK10_SCREEN_CONTENT_W);
-            h = pxToScreen_H(DK10_SCREEN_CONTENT_H);
+            x = pxToScreen_X(SCREEN_CONTENT_X);
+            y = pxToScreen_Y(SCREEN_CONTENT_Y);
+            w = pxToScreen_W(SCREEN_CONTENT_W);
+            h = pxToScreen_H(SCREEN_CONTENT_H);
         };
         // ---------- USER MARKER MENU ------------
         //#define cTab_IS_TABLET
