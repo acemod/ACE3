@@ -10,7 +10,7 @@
 #define IDC_ACTUAVTXT        1002
 #define IDC_ACTVIDTXT        1003
 #define IDC_ACTMSGTXT        1004
-#define IDC_BIGHTNESS        1005
+#define IDC_BRIGHTNESS        1005
 #define IDC_BACKGROUND       1200
 #define IDC_SCREEN           1201
 #define IDC_SCREEN_TOPO      1202

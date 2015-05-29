@@ -693,7 +693,7 @@ class GVAR(TAD_movingHandle_R): GVAR(TAD_movingHandle_L) {
 
 // transparent control that gets placed on top of the GUI to adjust brightness
 class GVAR(TAD_brightness): GVAR(TAD_RscText) {
-    idc = IDC_BIGHTNESS;
+    idc = IDC_BRIGHTNESS;
     x = pxToScreen_X(TAD_MAP_X);
     y = pxToScreen_Y(TAD_MAP_Y);
     w = pxToScreen_W(TAD_MAP_W);

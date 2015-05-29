@@ -109,7 +109,7 @@ if (isNil "_mode") then {
         // ------------ BRIGHTNESS ------------
         // Value ranges from 0 to 1, 0 being off and 1 being full brightness
         if (_x == "brightness") exitWith {
-            _osdCtrl = _display displayCtrl IDC_BIGHTNESS;
+            _osdCtrl = _display displayCtrl IDC_BRIGHTNESS;
             if (!isNull _osdCtrl) then {
                 _brightness = _value;
                 _nightMode = [_displayName,"nightMode"] call FUNC(getSettings);

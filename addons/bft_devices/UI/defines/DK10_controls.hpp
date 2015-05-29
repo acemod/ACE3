@@ -218,7 +218,7 @@ class GVAR(DK10_movingHandle_R): GVAR(DK10_movingHandle_L) {
 
 // transparent control that gets placed on top of the GUI to adjust brightness
 class GVAR(DK10_brightness): GVAR(DK10_RscText) {
-    idc = IDC_BIGHTNESS;
+    idc = IDC_BRIGHTNESS;
     x = pxToScreen_X(DK10_MAP_X);
     y = pxToScreen_Y(DK10_MAP_Y);
     w = pxToScreen_W(DK10_MAP_W);

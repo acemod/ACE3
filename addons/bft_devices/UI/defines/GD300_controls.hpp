@@ -202,7 +202,7 @@ class GVAR(GD300_movingHandle_R): GVAR(GD300_movingHandle_L) {
 
 // transparent control that gets placed on top of the GUI to adjust brightness
 class GVAR(GD300_brightness): GVAR(GD300_RscText) {
-    idc = IDC_BIGHTNESS;
+    idc = IDC_BRIGHTNESS;
     x = pxToScreen_X(GD300_MAP_X);
     y = pxToScreen_Y(GD300_MAP_Y);
     w = pxToScreen_W(GD300_MAP_W);
