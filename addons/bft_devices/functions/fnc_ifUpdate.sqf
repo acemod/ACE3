@@ -221,7 +221,7 @@ if (isNil "_mode") then {
                         
                         _mapTools = [_displayName,"mapTools"] call FUNC(getSettings);
                         if (!isNil "_mapTools" && {_mapTools}) then {
-                            _displayItemsToShow = _displayItemsToShow + [
+                            _displayItemsToShow append [
                                 IDC_OSD_HOOK_GRID,
                                 IDC_OSD_HOOK_ELEVATION,
                                 IDC_OSD_HOOK_DST,
