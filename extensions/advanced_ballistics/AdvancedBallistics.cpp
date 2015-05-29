@@ -577,7 +577,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         positionOffset[0] += sin(bulletDir + M_PI / 2) * spinDriftPartial;
         positionOffset[1] += cos(bulletDir + M_PI / 2) * spinDriftPartial;
 
-        if (bulletSpeed < 345 && bulletSpeedAvg > 340 && bulletSpeed > 335) {
+        float speedOfSound = 331.3 + (0.6 * temperature);
+        if (bulletSpeed < (speedOfSound + 5) && bulletSpeedAvg > speedOfSound && bulletSpeed > (speedOfSound - 5)) {
             std::uniform_real_distribution<double> distribution(0.0, 1.0);
             double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
