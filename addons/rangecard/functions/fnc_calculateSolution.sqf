@@ -101,15 +101,9 @@ _horizontalDeflection = 0;
 _spinDrift = 0;
 _spinDeflection = 0;
 
-private ["_n", "_range", "_rangeFactor"];
+private ["_n", "_range"];
 _n = 0;
 _range = 0;
-_rangeFactor = 1;
-if (_storeRangeCardData) then {
-    if (GVAR(currentUnit) == 1) then {
-        _rangeFactor = 1.0936133;
-    };
-};
 
 private ["_wind1", "_wind2", "_windDrift"];
 _wind1 = [cos(270 - _windDirection * 30) * _windSpeed1, sin(270 - _windDirection * 30) * _windSpeed1, 0];
@@ -123,14 +117,6 @@ private ["_speedTotal", "_stepsTotal", "_speedAverage"];
 _speedTotal = 0;
 _stepsTotal = 0;
 _speedAverage = 0;
-
-private ["_eoetvoesMultiplier"];
-_eoetvoesMultiplier = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    _eoetvoesMultiplier = 2 * (0.0000729 * _muzzleVelocity / -9.80665) * cos(_latitude) * sin(_directionOfFire);
-};
-
-_TOF = 0;
 
 _bulletPos set [0, 0];
 _bulletPos set [1, 0];
@@ -173,7 +159,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
 
     if (_storeRangeCardData) then {
         _range = GVAR(rangeCardStartRange) + _n * GVAR(rangeCardIncrement);
-        if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(rangeCardEndRange)) then {
+        if ((_bulletPos select 1) >= _range && _range <= GVAR(rangeCardEndRange)) then {
             if ((_bulletPos select 1) > 0) then {
                 _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
                 _windage1 = - atan((_bulletPos select 0) / (_bulletPos select 1));
