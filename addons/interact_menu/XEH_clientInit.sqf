@@ -62,3 +62,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 // disable firing while the interact menu is is is opened
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);
+
+["interactMenuOpened", { if (GVAR(blurScreen)) then {[QGVAR(blurScreen), true] call EFUNC(common,blurScreen);}; }] call EFUNC(common,addEventHandler);
+["interactMenuClosed", { if (GVAR(blurScreen)) then {[QGVAR(blurScreen), false] call EFUNC(common,blurScreen);}; }] call EFUNC(common,addEventHandler);
