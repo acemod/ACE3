@@ -13,7 +13,9 @@ Add the ability to reload someone else's launcher.
 ### 2. Usage
 
 ### 2.1 Reloading someone else's launcher
-- TBA
+- Press the interaction key <kbd>left windows</kbd> and aim at your buddy's launcher.
+- Select `reload launcher`.
+- Select the type of ammo.
 
 ## 3. Dependencies
 
