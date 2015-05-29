@@ -14,4 +14,4 @@ Common functions and systems used by most other components.
 
 `ace_main`
 
-Note: The Common module is required by nearly all other modules. Avoid disabling it!
+Note: The Common module is required by nearly all other modules. Do NOT remove it!

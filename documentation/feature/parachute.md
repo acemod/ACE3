@@ -17,7 +17,7 @@ item.
 Adds a non-steerable parachute variant for jet pilots.
 
 ### 1.3 Landing animation
-Smoother the parachute landing animation.
+Smoothens the parachute landing animation.
 
 ## 2. Usage
 

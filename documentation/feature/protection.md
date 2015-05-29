@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Tweaked protection values
-Fixes and tweaks the protection values of body armour, Helmets and uniforms.
+Fixes and tweaks the protection values of body armour, helmets and uniforms.
 
 ## 2. Dependencies
 

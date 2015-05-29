@@ -15,7 +15,7 @@ Adds ability to limit the max. speed of any vehicle.
 The engine has to be started before the vehicle can move. Starting the engine takes aprox. 1 to 2 seconds.
 
 ### 1.3 Fuel capacity
-The range of all vehicle gets significantly reduced to reflect ranges of their real life counterparts. Scaled down to match the relative short distances in Arma. A full vehicle on mission start should still most likely never need a refuelling during a mission.
+The range of all vehicle gets significantly reduced to reflect ranges of their real life counterparts. Scaled down to match the relative short distances in Arma. A full vehicle on mission start should still most likely never need a refueling during a mission.
 
 ### 1.4 Main gun muzzles
 APCs and Tanks now share a muzzle for all ammunition types of their main guns. This prevents an exploit that skips the reloading time of a round or clip while changing the ammunition type. Also makes it possible to switch between ammunition types using the scroll wheel like in Arma 2.

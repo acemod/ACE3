@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### Sniper Scope Adjustment
-Enables snipers to adjust their scopes horizontally and vertically in mils.
+Allows snipers to adjust their scopes horizontally and vertically in mils.
 
 ## 2. Usage
 
