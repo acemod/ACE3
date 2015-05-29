@@ -42,8 +42,6 @@ class CfgWeapons {
     };
     
     class MMG_02_base_F : rifle_Base_F {
-        ACE_clearJamAction = "";
-        ACE_checkTemperatureAction = "";
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
@@ -51,8 +49,6 @@ class CfgWeapons {
     };
 
     class MMG_01_base_F : rifle_Base_F {
-        ACE_clearJamAction = "";
-        ACE_checkTemperatureAction = "";
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
