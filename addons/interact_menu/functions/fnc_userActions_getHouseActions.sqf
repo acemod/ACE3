@@ -31,7 +31,7 @@ _fnc_getMemPointOffset = {
         _memPoints pushBack _memoryPoint;
         _memPointsActions pushBack [];
     } else {
-        _actionOffset set [2, 0.05 * (count (_memPointsActions select _memPointIndex))];
+        _actionOffset set [2, 0.0254 * (count (_memPointsActions select _memPointIndex))];
     };
     _actionOffset
 };
@@ -47,6 +47,7 @@ _fnc_userAction_Condition = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
     this = _target getVariable [QGVAR(building), objNull];
+    if (isNull this) exitWith {false};
     call _actionCondition;
 };
 
@@ -71,27 +72,9 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
     _iconImage = "";
 
-    /*
-    if (_actionDisplayNameDefault != "") then {
-        //something like: "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-        //find the end [.paa']
-        _endIndex = _actionDisplayNameDefault find ".paa'";
-        if (_endIndex == -1) exitWith {};
-        _startIndex = _endIndex - 1;
-        _endIndex = _endIndex + 4;
-        //work backwards to find the starting [']
-        while {(_startIndex > 0) && {_iconImage == ""}} do {
-            if ((_actionDisplayNameDefault select [_startIndex, 1]) == "'") then {
-                _startIndex = _startIndex + 1;
-                _iconImage = _actionDisplayNameDefault select [_startIndex, (_endIndex - _startIndex)];
-            };
-            _startIndex = _startIndex - 1;
-        };
-    }; */
     //extension ~4x as fast:
     _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
 
-    
     _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     _memPointIndex = _memPoints find _actionPosition;
 
@@ -104,24 +87,28 @@ _fnc_ladder_ladderUp = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
+    TRACE_3("Ladder Action - UP",_player,_building,_ladderIndex);
     _player action ["LadderUp", _building, _ladderIndex, 0];
 };
 _fnc_ladder_ladderDown = {
     PARAMS_3(_target,_player,_variable);
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
-    _player action ["LadderUp", _building, (_variable select 0), 1];
+    TRACE_3("Ladder Action - Down",_player,_building,_ladderIndex);
+    _player action ["LadderDown", _building, _ladderIndex, 1];
 };
 
-_fnc_ladder_conditional = { //Don't show actions if on a ladder
-    ((getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _player) >> "onLadder")) == 0)
+_fnc_ladder_conditional = {
+    PARAMS_2(_target,_player);
+    //(Check distance < 2) and (Don't show actions if on a ladder)
+    ((_target distance _player) < 2) && {((getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _player) >> "onLadder")) == 0)}
 };
 
 _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders");
 {
     EXPLODE_2_PVT(_x,_ladderBottomMemPoint,_ladderTopMemPoint);
 
-    _actionMaxDistance = 2;
+    _actionMaxDistance = 3; //interact_menu will check head -> target's offset; leave this high and do a precice distance check in condition
 
     _actionDisplayName = localize "str_action_ladderup";
     _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderup_ca.paa";

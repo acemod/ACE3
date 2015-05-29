@@ -18,6 +18,8 @@
 
 PARAMS_1(_interactionType);
 
+//Ignore if not enabled:
+if (!GVAR(addBuildingActions)) exitWith {};
 //Ignore self-interaction menu:
 if (_interactionType != 0) exitWith {};
 //Ignore when mounted:
@@ -75,7 +77,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             _actionSet = [_typeOfHouse] call FUNC(userActions_getHouseActions);
             EXPLODE_2_PVT(_actionSet,_memPoints,_memPointsActions);
 
-            systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
+            // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
                 _helperPos = (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x)) call EFUNC(common,positionToASL);
                 _helperObject = "Sign_Sphere25cm_F" createVehicleLocal _helperPos;
