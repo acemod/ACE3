@@ -21,3 +21,7 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"
 #include "UI\triagecard.hpp"
+
+class ACE_Extensions {
+    extensions[] += {"ace_medical"};
+};
