@@ -112,13 +112,16 @@ _atmosphereModel = _ammoConfig select 8;
 _boreHeight = 3.81;
 _zeroRange  = 100;
 
-_barometricPressure = EGVAR(weather,altitude) call EFUNC(weather,calculateBarometricPressure);
+_barometricPressure = 1013.25;
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    _barometricPressure = EGVAR(weather,altitude) call EFUNC(weather,calculateBarometricPressure);
+};
 _relativeHumidity = 0.5;
 
 ctrlSetText [770001, format["Drop Tables for B.P.: %1mb; Corrected for MVV at Air/Ammo Temperatures -15-35 °C", round(_barometricPressure * 100) / 100]];
 ctrlSetText [77004 , format["B.P.: %1mb", round(_barometricPressure * 100) / 100]];
 
-_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2), _ammoClass, _weaponClass];
+_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
     {
         _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
@@ -139,7 +142,7 @@ if (isNil {_cacheEntry}) then {
         };
     };
     
-    missionNamespace setVariable [format[QGVAR(%1_%2), _ammoClass, _weaponClass], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
+    missionNamespace setVariable [format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
 } else {
     GVAR(rangeCardDataElevation) = _cacheEntry select 0;
     GVAR(rangeCardDataWindage)   = _cacheEntry select 1;
