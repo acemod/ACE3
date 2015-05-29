@@ -193,3 +193,10 @@ class GVAR(JV5_loadingtxt): GVAR(JV5_RscText) {
     h = pxToScreen_H(SCREEN_CONTENT_H);
     colorBackground[] = COLOR_BLACK;
 };
+class GVAR(JV5_notification): GVAR(JV5_RscText) {
+    idc = IDC_NOTIFICATION;
+    x = pxToScreen_X(SCREEN_CONTENT_X + (SCREEN_CONTENT_W * 0.5) / 2);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y + SCREEN_CONTENT_H - 2 * JV5_OSD_TEXT_STD_SIZE);
+    w = pxToScreen_W(SCREEN_CONTENT_W * 0.5);
+    colorBackground[] = COLOR_BLACK;
+};

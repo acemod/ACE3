@@ -700,3 +700,11 @@ class GVAR(TAD_brightness): GVAR(TAD_RscText) {
     h = pxToScreen_H(TAD_MAP_H);
     colorBackground[] = COLOR_TRANSPARENT;
 };
+class GVAR(TAD_notification): GVAR(TAD_RscText) {
+    idc = IDC_NOTIFICATION;
+    x = pxToScreen_X(TAD_MAP_X + (TAD_MAP_W * 0.2) / 2);
+    y = pxToScreen_Y(TAD_OSD_EDGE_B - TAD_OSD_ELEMENT_STD_H * 3);
+    w = pxToScreen_W(MAP_W * 0.8);
+    colorText[] = COLOR_NAVYBLUE;
+    colorBackground[] = COLOR_WHITE;
+};

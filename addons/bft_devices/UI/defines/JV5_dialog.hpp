@@ -51,6 +51,8 @@ class GVAR(DISPLAY_NAME) {
         /*
             ### Overlays ###
         */
+        // ---------- NOTIFICATION ------------
+        class notification: GVAR(JV5_notification) {};
         // ---------- LOADING ------------
         class loadingtxt: GVAR(JV5_loadingtxt) {};
 

@@ -209,3 +209,10 @@ class GVAR(GD300_brightness): GVAR(GD300_RscText) {
     h = pxToScreen_H(GD300_MAP_H);
     colorBackground[] = COLOR_TRANSPARENT;
 };
+class GVAR(GD300_notification): GVAR(GD300_RscText) {
+    idc = IDC_NOTIFICATION;
+    x = pxToScreen_X(SCREEN_CONTENT_X + (SCREEN_CONTENT_W * 0.2) / 2);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y + SCREEN_CONTENT_H - 2 * GD300_OSD_TEXT_STD_SIZE);
+    w = pxToScreen_W(SCREEN_CONTENT_W * 0.8);
+    colorBackground[] = COLOR_BLACK;
+};

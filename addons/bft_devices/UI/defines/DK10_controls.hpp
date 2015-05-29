@@ -249,3 +249,10 @@ class GVAR(DK10_RscMapControl): GVAR(RscMapControl) {
     ptsPerSquareRoad = 1.5 / (0.86 / GUI_GRID_H);       // roads
     ptsPerSquareObj = 4 / (0.86 / GUI_GRID_H);      // other objects
 };
+class GVAR(DK10_notification): GVAR(DK10_RscText) {
+    idc = IDC_NOTIFICATION;
+    x = pxToScreen_X(SCREEN_CONTENT_X + (SCREEN_CONTENT_W * 0.5) / 2);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y + SCREEN_CONTENT_H - 2 * DK10_OSD_TEXT_STD_SIZE);
+    w = pxToScreen_W(SCREEN_CONTENT_W * 0.5);
+    colorBackground[] = COLOR_BLACK;
+};

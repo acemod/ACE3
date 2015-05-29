@@ -315,6 +315,8 @@ class GVAR(DISPLAY_NAME) {
         /*
             ### Overlays ###
         */
+        // ---------- NOTIFICATION ------------
+        class notification: GVAR(DK10_notification) {};
         // ---------- LOADING ------------
         class loadingtxt: GVAR(DK10_loadingtxt) {};
         // ---------- BRIGHTNESS ------------

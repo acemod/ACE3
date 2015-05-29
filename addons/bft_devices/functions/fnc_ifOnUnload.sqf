@@ -44,6 +44,12 @@ if !(isNil QGVAR(ifOpen)) then {
     if (!isNil "_acePlayerInventoryChangedEhId") then {["playerInventoryChanged",_acePlayerInventoryChangedEhId] call EFUNC(common,removeEventHandler)};
     if (!isNil "_acePlayerChangedEhId") then {["playerChanged",_acePlayerChangedEhId] call EFUNC(common,removeEventHandler)};
     
+    // remove notification system related PFHs
+    if !(isNil QGVAR(processNotificationsPFH)) then {
+        [GVAR(processNotificationsPFH)] call CBA_fnc_removePerFrameHandler;
+        GVAR(processNotificationsPFH) = nil;
+    };
+    
     // don't call this part if we are closing down before setup has finished
     if (!GVAR(ifOpenStart)) then {
         if ([_displayName] call FUNC(isDialog)) then {
