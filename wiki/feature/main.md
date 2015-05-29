@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Main
-description: 
+description: main module
 group: feature
 parent: wiki
 ---
@@ -9,7 +9,6 @@ parent: wiki
 ## 1. Overview
 
 Main module which acts as the ACE core module.
-
 
 ## 2. Dependencies
 

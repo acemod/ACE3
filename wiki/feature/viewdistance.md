@@ -10,7 +10,7 @@ parent: wiki
 ACE3 View Distance is enabled by default. It adds the ability to have different view distance settings when on foot, in a vehicle or in the air.
 
 ## 2. Usage
-- When ingame, push <kbd>ESC</kbd>.
+- When in-game, press <kbd>ESC</kbd>.
 - Click `ACE Options` in the top-left corner.
 - Scroll down to the `Client View Distance` settings.
 - Adjust to taste. 

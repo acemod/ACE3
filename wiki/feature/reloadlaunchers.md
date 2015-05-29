@@ -1,25 +1,22 @@
 ---
 layout: wiki
 title: Reload Launchers
-description: 
+description:
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+Add the ability to reload someone else's launcher.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+### 2. Usage
 
+### 2.1 Reloading someone else's launcher
+- Press the interaction key <kbd>left windows</kbd> and aim at your buddy's launcher.
+- Select `reload launcher`.
+- Select the type of ammo.
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

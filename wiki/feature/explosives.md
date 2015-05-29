@@ -20,19 +20,19 @@ Enables attaching explosives to vehicles.
 ## 2. Usage
 
 ### 2.1 Placing explosives
-- Use self interaction <kbd>Ctrl</kbd>+<kbd>Left Windows</kbd>
-- Select `Explosives`
-- Choose your explosive type and follow the instructions on the screen
+- Use self interaction <kbd>CTRL</kbd>+<kbd>Left Windows</kbd> (ACE3 default keybind `Self Interaction Key`).
+- Select `Explosives`.
+- Choose your explosive type and follow the instructions on the screen.
 
 ### 2.2 Arming and detonating explosives
-- Interact with the explosive <kbd>Left Windows</kbd>
-- Choose the arming method
-- For clackers use Self Interaction `Explosives` -> `Detonate` and choose the corresponding Firing Device
+- Interact with the explosive <kbd>Left Windows</kbd> (ACE3 default keybind `Interact Key`).
+- Choose the arming method.
+- For clackers use Self Interaction `Explosives` -> `Detonate` and choose the corresponding Firing Device.
 
 ### 2.3 Defusing explosives
-- A `Defusal Kit` is required
-- Interact with the explosive <kbd>Left Windows</kbd>
-- Choose `Disarm`
+- A `Defusal Kit` is required.
+- Interact with the explosive <kbd>Left Windows</kbd>.
+- Select `Disarm`.
 - You are safe to pick it up after the action is complete.
 
 ## 3. Dependencies

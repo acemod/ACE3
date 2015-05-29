@@ -1,29 +1,22 @@
 ---
 layout: wiki
 title: Recoil
-description: 
+description: Recoil overhaul
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Recoil adjustment
+### 1.1 Recoil adjustment
 Overhauls the recoil system reducing upwards recoil.
 
-### Advanced cam shake
+### 1.2 Advanced cam shake
 Introducing camshake when firing on foot or as vehicle gunner depending on stance and weapon type.
 
-### Burst dispersion
+### 1.3 Burst dispersion
 Firing in longer burst (> 3 rounds per burst) slightly reduces the accuracy. Firing machine guns in bursts is now useful.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

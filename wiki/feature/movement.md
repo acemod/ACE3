@@ -1,34 +1,39 @@
 ---
 layout: wiki
 title: Movement
-description: 
+description: Movement improvements
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Jumping
+### 1.1 Jumping
 Adds the ability to jump when pressing the vault key while moving. (V - key)
 
-### Minor animation tweaks
+### 1.2 Minor animation tweaks
 Walking slowly with the weapon lowered now has a less silly looking animation.
 
-### Fatigue adjustments
+### 1.3 Fatigue adjustments
 Soldiers get fatigued slower, but regain their stamina slower aswell. Fatigued soldiers have a faster walking speed and no longer turn into snails.
 
-### Weight display
+### 1.4 Weight display
 Adds a weight of the current loadout display in the inventory to estimate the fatigue gain while moving in combat. Can be adjusted to display lb. instead of kg in the ACE Options Menu.
 
-### Optics view in all stances
+### 1.5 Optics view in all stances
 The player can now use the sights of rifles and pistols in all prone stances.
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.1 Jumping
+- For this you need your weapon up
+- While jogging or running press <kbd>V</kbd>
 
+### 2.2 Climbing
+- Approach what you want to climb.
+- Press <kbd>ctrl</kbd> + <kbd>V</kbd> (ACE3 default keybind `Climb`).
+- Note that when climbing your character will put his weapon on his back.
 
 ## Dependencies
 
