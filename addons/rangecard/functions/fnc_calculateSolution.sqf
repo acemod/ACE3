@@ -44,7 +44,7 @@
  */
 #include "script_component.hpp"
 
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot"];
+private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot", "_speedOfSound"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;
 _boreHeight         = _this select 2;
@@ -136,6 +136,8 @@ _bulletVelocity set [0, 0];
 _bulletVelocity set [1, Cos(_scopeBaseAngle) * _muzzleVelocity];
 _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
+_speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
+
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     
@@ -143,7 +145,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _stepsTotal = _stepsTotal + 1;
     _speedAverage = (_speedTotal / _stepsTotal);
     
-    if (_speedAverage > 400 && _bulletSpeed < 340) exitWith {};
+    if (_speedAverage > 400 && _bulletSpeed < _speedOfSound) exitWith {};
     if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.25) exitWith {};
     
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
