@@ -206,8 +206,9 @@ class ACE_Medical_Actions {
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
-            treatmentTime = 10;
-            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
+            treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
+            callbackSuccess = "";
+            callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
             itemConsumed = QGVAR(consumeItem_SurgicalKit);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
