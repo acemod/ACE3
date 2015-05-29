@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset"];
+private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
 disableSerialization;
 
 if (isNil QGVAR(ifOpen)) exitWith {false};
@@ -566,6 +566,18 @@ if (_interfaceInit && _isDialog) then {setMousePosition [0.5,0.5];};
 
 // now hide the "Loading" control since we are done
 if (!isNull _loadingCtrl) then {
+    // move mouse cursor to the center of the screen if its a dialog
+    if (_interfaceInit && _isDialog) then {
+        _ctrlPos = ctrlPosition _loadingCtrl;
+        // put the mouse position in the center of the screen
+        _mousePos = [(_ctrlPos select 0) + ((_ctrlPos select 2) / 2),(_ctrlPos select 1) + ((_ctrlPos select 3) / 2)];
+        // delay moving the mouse cursor by one frame using a PFH, for some reason its not working without
+        [{
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            setMousePosition (_this select 0);
+        },0,_mousePos] call CBA_fnc_addPerFrameHandler;
+    };
+    
     _loadingCtrl ctrlShow false;
     while {ctrlShown _loadingCtrl} do {};
 };
