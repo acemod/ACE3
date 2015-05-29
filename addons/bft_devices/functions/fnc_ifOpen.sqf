@@ -14,7 +14,7 @@
  *       Parameter 6: ID of registered eventhandler for GetOut event (nil if no EH is registered)
  *       Parameter 7: ID of registered eventhandler for Draw3D event (nil if no EH is registered)
  *       Parameter 8: ID of registered eventhandler ACE_medical medical_onUnconscious event (nil if no EH is registered)
- *       Parameter 9: ID of registered eventhandler ACE playerInventoryChanged event (nil if no EH is registered)
+ *       Parameter 9: ID of registered eventhandler ACE bft_updateDeviceOwner event (nil if no EH is registered)
  *       Parameter 10: ID of registered eventhandler ACE playerChanged event (nil if no EH is registered)
  *
  * Arguments:
@@ -131,11 +131,13 @@ GVAR(ifOpen) set [8,
     }] call EFUNC(common,addEventHandler)
 ];
 
-// Register with ACE playerInventoryChanged event
-// use bft_updateDeviceOwner instead and check for 0: deviceID matches the currently open one and 1: owner == ACE_player
+// Register with ACE bft_updateDeviceOwner event
 GVAR(ifOpen) set [9,
-    ["playerInventoryChanged",{
-        _this call FUNC(onPlayerInventoryChanged);
+    ["bft_updateDeviceOwner",{
+        // if the device ID matches the one currently open and we aren't the owner anymore, close the interface
+        if ((_this select 0 == I_GET_DEVICE) && (_this select 1 != ACE_player)) then {
+            [] call FUNC(ifClose);
+        };
     }] call EFUNC(common,addEventHandler)
 ];
 

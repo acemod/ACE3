@@ -35,14 +35,14 @@ if !(I_CLOSED) then {
     _vehicleGetOutEhId = GVAR(ifOpen) select 6;
     _draw3dEhId = GVAR(ifOpen) select 7;
     _aceUnconciousEhId = GVAR(ifOpen) select 8;
-    _acePlayerInventoryChangedEhId = GVAR(ifOpen) select 9;
+    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 9;
     _acePlayerChangedEhId = GVAR(ifOpen) select 10;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};
     if (!isNil "_draw3dEhId") then {removeMissionEventHandler ["Draw3D",_draw3dEhId]};
     if (!isNil "_aceUnconciousEhId") then {["medical_onUnconscious",_aceUnconciousEhId] call EFUNC(common,removeEventHandler)};
-    if (!isNil "_acePlayerInventoryChangedEhId") then {["playerInventoryChanged",_acePlayerInventoryChangedEhId] call EFUNC(common,removeEventHandler)};
+    if (!isNil "_aceUpdateDeviceOwnerEhId") then {["bft_updateDeviceOwner",_aceUpdateDeviceOwnerEhId] call EFUNC(common,removeEventHandler)};
     if (!isNil "_acePlayerChangedEhId") then {["playerChanged",_acePlayerChangedEhId] call EFUNC(common,removeEventHandler)};
     
     // remove notification system related PFHs
