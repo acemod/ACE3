@@ -105,7 +105,7 @@ _airFriction = _ammoConfig select 0;
 _barrelTwist = _weaponConfig select 0;
 _barrelLength = _weaponConfig select 2;
 _muzzleVelocity = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+if (_barrelLength > 0 && missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _muzzleVelocity = [_barrelLength, _ammoConfig select 10, _ammoConfig select 11, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
 } else {
     _initSpeed     = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
@@ -121,7 +121,11 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     ctrlSetText [770000, format["%1'' - %2 gr (%3)", round((_ammoConfig select 1) * 39.3700787) / 1000, round((_ammoConfig select 3) * 15.4323584), _ammoClass]];
-    ctrlSetText [770002, format["Barrel: %1'' 1:%2'' twist", round(_barrelLength * 0.0393700787), round(_barrelTwist * 0.0393700787)]];
+    if (_barrelLength > 0 && _barrelTwist > 0) then {
+        ctrlSetText [770002, format["Barrel: %1'' 1:%2'' twist", round(_barrelLength * 0.0393700787), round(_barrelTwist * 0.0393700787)]];
+    } else {
+        ctrlSetText [770002, ""];
+    };
 } else {
     ctrlSetText [770000, getText (configFile >> "CfgMagazines" >> _magazineClass >> "displayNameShort")];
     ctrlSetText [770002, ""];
@@ -196,6 +200,11 @@ for "_column" from 0 to 8 do {
     for "_row" from 0 to 49 do {
         _control = (__dsp displayCtrl (90000 + _column * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataElevation) select _column) select _row);
+        if (_row >= (GVAR(lastValidRow) select _column)) then {
+            _control ctrlSetTextColor [0, 0, 0, 0.6];
+        } else {
+            _control ctrlSetTextColor [0, 0, 0, 1.0];
+        };
         _control ctrlCommit 0;
     };
 };
@@ -203,6 +212,11 @@ for "_column" from 0 to 8 do {
     for "_row" from 0 to 49 do {
         _control = (__dsp displayCtrl (90000 + (9 + _forEachIndex) * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataWindage) select _x) select _row);
+        if (_row >= (GVAR(lastValidRow) select _x)) then {
+            _control ctrlSetTextColor [0, 0, 0, 0.6];
+        } else {
+            _control ctrlSetTextColor [0, 0, 0, 1.0];
+        };
         _control ctrlCommit 0;
     };
 } forEach [0, 3, 8];
@@ -211,6 +225,11 @@ for "_column" from 0 to 8 do {
     for "_row" from 0 to 49 do {
         _control = (__dsp displayCtrl (90000 + (12 + _forEachIndex) * 100 + _row));
         _control ctrlSetText ((GVAR(rangeCardDataLead) select _x) select _row);
+        if (_row >= (GVAR(lastValidRow) select _x)) then {
+            _control ctrlSetTextColor [0, 0, 0, 0.6];
+        } else {
+            _control ctrlSetTextColor [0, 0, 0, 1.0];
+        };
         _control ctrlCommit 0;
     };
 } forEach [0, 3, 8];
