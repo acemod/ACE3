@@ -147,7 +147,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _stepsTotal = _stepsTotal + 1;
     _speedAverage = (_speedTotal / _stepsTotal);
     
-    if (_speedAverage > 400 && _bulletSpeed < _speedOfSound) exitWith {};
+    if (_speedAverage > 450 && _bulletSpeed < _speedOfSound) exitWith {};
     if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
     
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
