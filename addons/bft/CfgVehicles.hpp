@@ -6,4 +6,4 @@
         // what devices are available?
         GVAR(vehicleDevices)[] = {"FBCB2VehDevice"};
     };
-};/*
+};*/
