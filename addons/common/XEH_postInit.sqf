@@ -252,12 +252,17 @@ GVAR(commonPostInited) = true;
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
+    PARAMS_1(_args);
+    EXPLODE_1_PVT(_args,_waitingMsgSent);
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};
 
     // If settings are not initialized then wait
     if (isNil QGVAR(settings)) exitWith {
-        diag_log text format["[ACE] Waiting on settings from server"];
+        if (!_waitingMsgSent) then {
+            _args set [0, true];
+            diag_log text format["[ACE] Waiting on settings from server"];
+        };
     };
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
@@ -275,4 +280,4 @@ GVAR(commonPostInited) = true;
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, []] call cba_fnc_addPerFrameHandler;
+}, 0, [false]] call cba_fnc_addPerFrameHandler;
