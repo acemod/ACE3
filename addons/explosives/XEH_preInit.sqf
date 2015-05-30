@@ -36,6 +36,8 @@ PREP(handleScrollWheel);
 PREP(hasExplosives);
 PREP(hasPlacedExplosives);
 
+PREP(interactEH);
+
 PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
