@@ -476,8 +476,8 @@ class CfgWeapons
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class PSO {
-					discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
-					discreteDistanceInitIndex=3;
+                    discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
+                    discreteDistanceInitIndex=3;
                 };
             };
         };
@@ -490,8 +490,8 @@ class CfgWeapons
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class PSO {
-					discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
-					discreteDistanceInitIndex=3;
+                    discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
+                    discreteDistanceInitIndex=3;
                 };
             };
         };
