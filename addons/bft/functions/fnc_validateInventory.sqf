@@ -13,14 +13,15 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_magazine", "_previousMags", "_newMagName", "_newMags", "_magID", "_unMatchedDevices", "_ownedDevices", "_matchedIDs"];
-_unit = _this select 0;
+PARAMS_1(_unit);
+
+private ["_magazine", "_data", "_magID", "_unMatchedDevices", "_ownedDevices", "_matchedIDs"];
 
 if !(local _unit) exitwith {};
 
 {
     [_unit, _x] call FUNC(checkItem);
-}foreach items _unit;
+} forEach items _unit;
 
 _ownedDevices = _unit getvariable [QGVAR(ownedDevices), []];
 _matchedIDs = [];
@@ -35,7 +36,7 @@ _matchedIDs = [];
         [_magID, _unit] call FUNC(setDeviceOwner);
         _matchedIDs pushback _magID;
     } else {
-        _magazine = magazines _unit select _foreachIndex;
+        _magazine = (magazines _unit) select _forEachIndex;
         if (getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)) != "") then {
             ["bft_itemCreated", [_unit, getText (configFile >> "CfgMagazines" >> _magazine >> QGVAR(type)), _magazine, _magID]] call EFUNC(common,serverEvent);
         };
@@ -47,4 +48,4 @@ _unMatchedDevices = _ownedDevices - _matchedIDs;
     systemChat format["validate - no longer has ID: %1 %2", _unit, _x];
     diag_log format["validate - no longer has ID: %1 %2", _unit, _x];
     ["bft_updateDeviceOwner", [_x, objNull]] call EFUNC(common,globalEvent);
-}foreach _unMatchedDevices;
+} forEach _unMatchedDevices;

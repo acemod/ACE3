@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: element type <ARRAY>
  *
  * Return Value:
  * None
@@ -13,10 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_elementType", "_data", "_assignableInformation"];
-_deviceID = _this select 0;
-_elementType = _this select 1;
+PARAMS_2(_deviceID,_elementType);
 
+private ["_data", "_assignableInformation"];
 _data = [_deviceID] call FUNC(getDeviceData);
 _assignableInformation = _data select 2;
 _assignableInformation set [0, _elementType select 0];

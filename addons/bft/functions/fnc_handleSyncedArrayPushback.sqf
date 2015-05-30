@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: varName <STRING>
+ * 1: data <NUMBER>
  *
  * Return Value:
  * None
@@ -13,9 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_varName", "_data", "_variable"];
-_varName = _this select 0;
-_data = _this select 1;
+PARAMS_2(_varName,_data);
+
+private ["_variable"];
 
 systemChat format["handleSyncedArrayPushback: %1", _this];
 diag_log format["handleSyncedArrayPushback: %1", _this];

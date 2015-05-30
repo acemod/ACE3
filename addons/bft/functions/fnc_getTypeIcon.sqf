@@ -3,21 +3,21 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: side <SIDE>
+ * 1: type <STRING>
  *
  * Return Value:
- * None
+ * icon path <STRING>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_side", "_type"];
-_side = _this select 0;
-_type = _this select 1;
+PARAMS_2(_side,_type);
 
 if (isClass (configFile >> "ACE_BFT" >> "Types" >> _type)) exitwith {
     getText (configFile >> "ACE_BFT" >> "Types" >> _type >> "iconPath");
 };
-"\A3\ui_f\data\map\markers\nato\b_inf.paa";
+
+"\A3\ui_f\data\map\markers\nato\b_inf.paa"

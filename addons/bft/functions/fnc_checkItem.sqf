@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: object <OBJECT>
- * 1: item <string>
+ * 1: item <STRING>
  *
  * Return Value:
  * None
@@ -14,9 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_magazine", "_previousMags", "_newMagName", "_newMags", "_magID"];
-_unit = _this select 0;
-_item = _this select 1;
+PARAMS_2(_unit,_item);
+
+private ["_magazine", "_previousMags", "_newMagName", "_newMags", "_magID"];
 
 if !(local _unit) exitwith {};
 

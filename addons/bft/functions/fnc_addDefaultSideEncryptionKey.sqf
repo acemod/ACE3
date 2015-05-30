@@ -12,14 +12,13 @@
 
 #include "script_component.hpp"
 
-private ["_side", "_key"];
-_side = _this select 0;
-_key = _this select 1;
+PARAMS_2(_side,_key);
+
+private ["_variableName", "_keys"];
 
 _variableName = format[QGVAR(%1_encryptionKey), _side];
 _keys = missionNamespace getvariable [_variableName, []];
 if !(_key in _keys) then {
-
     _keys pushback _key;
     missionNamespace setvariable [_variableName, _keys];
     publicVariable "_variableName";

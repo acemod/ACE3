@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: device data <ARRAY>
  *
  * Return Value:
  * None
@@ -13,10 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID","_deviceData"];
-_deviceID = _this select 0;
-_deviceData = _this select 1;
+PARAMS_2(_deviceID,_deviceData);
 
+private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);
 
 if (count _data == 0) exitwith {};

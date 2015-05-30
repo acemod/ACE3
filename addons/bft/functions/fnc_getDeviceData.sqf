@@ -3,23 +3,24 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
  *
  * Return Value:
- * None
+ * device data <ARRAY>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_data"];
-_deviceID = _this select 0;
+PARAMS_1(_deviceID);
+
+private ["_data"];
 _data = [];
 {
-    if (_x select 0 == _deviceID) exitwith {
+    if (_x select 0 == _deviceID) exitWith {
         _data = _x; // GVAR(deviceData) select _foreachIndex;
     };
-}foreach GVAR(deviceData);
+} forEach GVAR(deviceData);
 
-_data;
+_data

@@ -68,6 +68,7 @@ GVAR(localOwnedEncyptionKeys) = [];
 
 GVAR(updateAvailableDevicesPositions) = true;
 
+private ["_a", "_b", "_g", "_r"];
 _r = profilenamespace getvariable ['Map_BLUFOR_R',0];
 _g = profilenamespace getvariable ['Map_BLUFOR_G',0.8];
 _b = profilenamespace getvariable ['Map_BLUFOR_B',1];
