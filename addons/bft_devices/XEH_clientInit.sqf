@@ -75,6 +75,7 @@ HASH_SET(GVAR(displayPropertyGroups),QGVAR(MicroDAGR_dlg),"MicroDAGR");
 // Define default settings for interface property groups
 GVAR(settings) = HASH_CREATE;
 
+private ["_tempHash", "_tempMapHash"];
 // COMMON settings
 _tempHash = HASH_CREATE;
 HASH_SET(_tempHash,"mode","BFT");

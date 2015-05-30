@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private [];
+private ["_className", "_deviceData", "_deviceID", "_dialogName", "_displayName", "_handled", "_interfaceName", "_playerDevices", "_previousInterface", "_vehicleDevices"];
 
 _handled = false;
 
