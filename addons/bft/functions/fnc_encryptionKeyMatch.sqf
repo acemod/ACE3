@@ -3,23 +3,23 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: keySetOne <ARRAY>
+ * 1: keySetTwo <ARRAY>
  *
  * Return Value:
- * None
+ * has common keys? <BOOLEAN>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_keySetTwo", "_keySetOne", "_return"];
-_keySetOne = _this select 0;
-_keySetTwo = _this select 1;
+PARAMS_2(_keySetOne,_keySetTwo);
 
+private ["_return"];
 _return = false;
 {
-    if (_x in _keySetTwo) exitwith {_return = true;};
-}foreach _keySetOne;
+    if (_x in _keySetTwo) exitWith { _return = true; };
+} forEach _keySetOne;
 
-_return;
+_return

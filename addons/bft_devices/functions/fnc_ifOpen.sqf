@@ -37,7 +37,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle"];
+private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle", "_deviceID", "_display", "_heading", "_isDialog", "_playerPos", "_veh"];
 
 // exit should we have an interface open already or are in the process of starting one
 if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};

@@ -3,7 +3,9 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: side <SIDE>
+ * 1: old key <STRING>
+ * 2: new key <STRING>
  *
  * Return Value:
  * None
@@ -13,8 +15,6 @@
 
 #include "script_component.hpp"
 
-private ["_side", "_oldKey", "_newKey"];
-_side = _this select 1;
-_oldKey = _this select 2;
-_newKey = _this select 3;
+PARAMS_3(_side, _oldKey, _newKey);
 
+// TODO

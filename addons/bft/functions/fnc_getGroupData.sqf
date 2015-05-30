@@ -3,24 +3,24 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: group ID <STRING>
  *
  * Return Value:
- * None
+ * orbat element data <ARRAY>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_groupID", "_data"];
-_groupID = _this select 0;
+PARAMS_1(_groupID);
 
+private ["_data"];
 _data = [_groupID, "", -1/*parent group ID*/];
 {
-    if (_x select 0 == _groupID) exitwith {
+    if (_x select 0 == _groupID) exitWith {
         _data = _x;
     };
-}foreach GVAR(orbatElements);
+} forEach GVAR(orbatElements);
 
-_data;
+_data

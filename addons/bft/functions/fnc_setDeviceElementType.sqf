@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: elementType <ARRAY>
  *
  * Return Value:
  * None
@@ -13,13 +14,13 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID","_elementType"];
-_deviceID = _this select 0;
-_elementType = _this select 1;
+PARAMS_2(_deviceID,_elementType);
 
+private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);
 
-if (count _data == 0) exitwith {};
+if (count _data < 3) exitwith {};
+if (count (_data select 2) < 2) exitwith {};
 if ((_elementType select 0) isEqualTo (_data select 2) select 0) exitwith {};
 if ((_elementType select 1) isEqualTo (_data select 2) select 1) exitwith {};
 

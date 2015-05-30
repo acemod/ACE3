@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [_dispaly] call ace_bft_devices_fnc_ifOnLoad;
+ *   [_display] call ace_bft_devices_fnc_ifOnLoad;
  *
  * Public: No
  */

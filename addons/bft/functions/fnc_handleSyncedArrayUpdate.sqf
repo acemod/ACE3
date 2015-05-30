@@ -16,9 +16,9 @@
 
 #include "script_component.hpp"
 
-private ["_varName", "_data", "_elementID", "_variable","_element", "_compareID"];
-_varName = _this select 0;
-_data = _this select 1;
+PARAMS_2(_varName,_data);
+
+private ["_elementID", "_variable", "_compareID"];
 
 systemChat format["handleSyncedArrayUpdate - %1", _this];
 diag_log format["handleSyncedArrayUpdate - %1", _this];
@@ -28,9 +28,9 @@ _variable = missionNamespace getvariable [_varName, []];
 {
     _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
     if (_compareID isEqualTo _elementID) exitwith {
-        _variable set[_foreachIndex, _data];
+        _variable set[_forEachIndex, _data];
     };
-}foreach _variable;
+} forEach _variable;
 
 systemChat format["handleSyncedArrayUpdate var- %1", _variable];
 diag_log format["handleSyncedArrayUpdate var- %1", _variable];

@@ -1,10 +1,10 @@
-
 /*
  * Author: Glowbal
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: varName <STRING>
+ * 1: data <ARRAY>
  *
  * Return Value:
  * None
@@ -14,9 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_varName", "_data"];
-_varName = _this select 0;
-_data = _this select 1;
+PARAMS_2(_varName,_data);
 
 if (typeName _data == "ARRAY" && (count _data == 0)) exitwith {};
 

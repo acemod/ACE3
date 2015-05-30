@@ -3,32 +3,31 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: group ID <STRING>
  *
  * Return Value:
- * None
+ * color <ARRAY>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_groupID", "_data"];
-_groupID = _this select 0;
+PARAMS_1(_groupID);
 
+private ["_data", "_found", "_color"];
 _data = [_groupID] call FUNC(getGroupData);
-
 _found = false;
-_color = GVAR(colorWest); // device color for blufor units
+_color = GVAR(colorWest);
 
 while {!_found} do {
-    if (_groupID < 0) exitwith {};
+    if (_groupID < 0) exitWith {};
     {
-        if (_x select 0 == _groupID) exitwith {
+        if (_x select 0 == _groupID) exitWith {
             _found = true;
             _color = _x select 1;
         };
-    }foreach GVAR(colorFilters);
+    } forEach GVAR(colorFilters);
 
     if (!_found) then {
         _groupID = _data select 2;
@@ -36,4 +35,4 @@ while {!_found} do {
     };
 };
 
-_color;
+_color

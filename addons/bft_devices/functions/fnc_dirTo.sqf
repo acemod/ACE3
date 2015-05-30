@@ -17,8 +17,7 @@
  * Public: No
  */
 
-private ["_pos1","_pos2","_vector","_dirTo"];
-
+private ["_pos1","_pos2","_dirTo"];
 _pos1 = _this select 0;
 _pos2 = _this select 1;
 

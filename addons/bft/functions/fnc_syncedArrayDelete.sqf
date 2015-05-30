@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: varName <STRING>
+ * 1: data ID <NUMBER>
  *
  * Return Value:
  * None
@@ -13,8 +14,6 @@
 
 #include "script_component.hpp"
 
-private ["_varName", "_dataID"];
-_varName = _this select 0;
-_dataID = _this select 1;
+PARAMS_2(_varName,_dataID);
 
 ["bft_syncedArrayDelete", [_varName, _dataID]] call EFUNC(common,globalEvent);

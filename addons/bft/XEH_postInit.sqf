@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+private ["_color", "_ctrl", "_device", "_groupID", "_i", "_newEncryptionKeys", "_viewModes"];
 
 ["bft_itemCreated", FUNC(handleItemCreated)] call EFUNC(common,addEventHandler);
 ["bft_addDeviceData", FUNC(handleAddDeviceData)] call EFUNC(common,addEventHandler);

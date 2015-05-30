@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: keys <ARRAY>
  *
  * Return Value:
  * None
@@ -13,10 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_keys", "_data", "_encryption"];
-_deviceID = _this select 0;
-_keys = _this select 1;
+PARAMS_2(_deviceID,_keys);
 
+private ["_data", "_encryption"];
 _data = [_deviceID] call FUNC(getDeviceData);
 _encryption = _data select 1;
 _encryption set [1, _keys];

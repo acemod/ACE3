@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: device ID <STRING>
+ * 1: new owner <OBJECT>
  *
  * Return Value:
  * None
@@ -13,13 +14,12 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_newOwner"];
-_deviceID = _this select 0;
-_newOwner = _this select 1;
+PARAMS_2(_deviceID,_newOwner);
 
+private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);
 
-if (count _data == 0) exitwith {};
+if (count _data < 6) exitwith {};
 if (_newOwner isEqualTo (_data select 5)) exitwith {};
 
 ["bft_updateDeviceOwner", [_deviceID, _newOwner]] call EFUNC(common,globalEvent);
