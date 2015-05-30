@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: ID <string>
+ * 1: data <ARRAY>
  *
  * Return Value:
  * None
@@ -13,10 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_newData", "_data"];
-_deviceID = _this select 0;
-_newData = _this select 1;
+PARAMS_2(_deviceID,_newData);
 
+private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);
 _data set [3, _newData];
 

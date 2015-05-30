@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: group ID <STRING>
  *
  * Return Value:
  * None
@@ -13,10 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_groupID", "_data", "_previousGroup"];
-_deviceID = _this select 0;
-_groupID = _this select 1;
+PARAMS_2(_deviceID,_groupID);
 
+private ["_data", "_previousGroup"];
 _data = [_deviceID] call FUNC(getDeviceData);
 _previousGroup = _data select 2;
 _previousGroup set [3, _groupID];

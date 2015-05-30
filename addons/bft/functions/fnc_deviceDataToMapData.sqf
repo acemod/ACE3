@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private [ "_deviceID", "_sideInformation", "_assignableInformation", "_owner","_deviceClass", "_encryptionKeys", "_access", "_typeIconPath", "_sizeIconPath", "_callsign","_groupID", "_position", "_refreshRate", "_viewModes"];
+private [ "_deviceID", "_sideInformation", "_assignableInformation", "_owner","_deviceClass", "_encryptionKeys", "_access", "_typeIconPath", "_sizeIconPath", "_callsign","_groupID", "_position", "_refreshRate", "_viewModes", "_color"];
 _deviceID = _this select 0;
 _sideInformation = _this select 1;
 _assignableInformation = _this select 2;

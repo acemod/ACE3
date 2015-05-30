@@ -3,7 +3,10 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: owner <OBJECT>
+ * 1: item <STRING>
+ * 2: magazine <STRING
+ * 3: magazine ID <STRING>
  *
  * Return Value:
  * None
@@ -13,11 +16,9 @@
 
 #include "script_component.hpp"
 
-private ["_owner", "_item", "_magazine", "_magID", "_deviceType", "_deviceSide", "_refreshRate", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists", "_deviceModes"];
-_owner = _this select 0;
-_item = _this select 1;
-_magazine = _this select 2;
-_magID = _this select 3;
+PARAMS_4(_owner,_item,_magazine,_magID);
+
+private ["_deviceType", "_deviceSide", "_refreshRate", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists", "_deviceModes", "_defaultValues", "_elementCallsign", "_elementSize", "_elementType", "_groupID"];
 
 /*
     Device ID
@@ -37,7 +38,7 @@ diag_log format["handleItemCreated: %1", _this];
 _exists = false;
 {
     if (_magID == (_x select 0)) exitwith {_exists = true};
-}foreach GVAR(deviceData);
+} forEach GVAR(deviceData);
 if (_exists) exitwith {};
 
 _deviceType = if (_magazine != "") then { getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) } else { _item };

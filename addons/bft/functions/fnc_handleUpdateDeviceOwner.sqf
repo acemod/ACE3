@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: device ID <STRING>
+ * 1: new owner <OBJECT>
  *
  * Return Value:
  * None
@@ -13,9 +14,9 @@
 
 #include "script_component.hpp"
 
-private ["_deviceID", "_newOwner", "_data", "_previousOwner", "_currentDevices"];
-_deviceID = _this select 0;
-_newOwner = _this select 1;
+PARAMS_2(_deviceID,_newOwner);
+
+private ["_data", "_newData", "_previousOwner", "_currentDevices"];
 
 systemChat format["handleUpdateDeviceOwner: %1", _this];
 diag_log format["handleUpdateDeviceOwner: %1", _this];

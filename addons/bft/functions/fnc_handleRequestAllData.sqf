@@ -3,7 +3,7 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * origin <OBJECT>
  *
  * Return Value:
  * None
@@ -13,11 +13,11 @@
 
 #include "script_component.hpp"
 
-private ["_origin", "_varName", "_variable"];
-_origin = _this select 0;
+PARAMS_1(_origin);
+
 {
     ["bft_addDeviceData", _x, _origin] call EFUNC(common,targetEvent);
-}foreach GVAR(deviceData);
+} forEach GVAR(deviceData);
 
 // Alternative:
 //if (count GVAR(deviceData) > 0) then {
@@ -25,15 +25,16 @@ _origin = _this select 0;
 //};
 
 {
+    private ["_varName", "_variable"];
     _varName = _x;
     _variable = missionNamespace getvariable [_varName, []];
+    
     {
         ["bft_syncedArrayPushback", [_varName, _x], _origin] call EFUNC(common,targetEvent);
-    }foreach _variable;
+    } forEach _variable;
 
     // Alternative:
     //if (count _variable > 0) then {
     //    (owner _origin) publicVariableClient _x;
     //};
-}foreach GVAR(syncedArrayVariables);
-
+} forEach GVAR(syncedArrayVariables);

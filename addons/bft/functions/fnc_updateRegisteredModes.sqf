@@ -3,7 +3,8 @@
  *
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: add <BOOLEAN>
+ * 1: modes <ARRAY>
  *
  * Return Value:
  * None
@@ -13,13 +14,14 @@
 
 #include "script_component.hpp"
 
-private ["_add", "_modes", "_difference"];
-_add = _this select 0;
-_modes = _this select 1;
+PARAMS_2(_add,_modes);
 
 if (_add) then {
+    private ["_difference"];
     _difference = _modes - GVAR(registeredViewModes);
-    { GVAR(registeredViewModes) pushback _x; }foreach _modes;
+    {
+        GVAR(registeredViewModes) pushBack _x;
+    } forEach _modes;
     _modes = _difference;
 } else {
     GVAR(registeredViewModes) = GVAR(registeredViewModes) - _modes;

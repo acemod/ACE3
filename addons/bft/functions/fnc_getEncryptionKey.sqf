@@ -12,9 +12,6 @@
 
 #include "script_component.hpp"
 
-private ["_side", "_key"];
-_side = _this select 0;
+PARAMS_1(_side);
 
-_key = missionNamespace getvariable [format[QGVAR(%1_encryptionKey), _side], [""]];
-
-_key;
+(missionNamespace getvariable [format[QGVAR(%1_encryptionKey), _side], [""]])

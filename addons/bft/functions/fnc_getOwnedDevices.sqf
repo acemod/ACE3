@@ -3,24 +3,26 @@
  *
  *
  * Arguments:
- * 0: ID <string>
+ * 0: owner <OBJECT>
  *
  * Return Value:
- * None
+ * device IDs <ARRAY>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
+PARAMS_1(_owner);
+
 // Or use OBJECT getvariable [QGVAR(ownedDevices), []]; ?
-private ["_owner", "_ids"];
-_owner = _this select 0;
+private ["_ids"];
 _ids = [];
+
 {
     if ((_x select 5) == _owner) then {
-        _ids pushback (_X select 0);
+        _ids pushback (_x select 0);
     };
-}foreach GVAR(deviceData);
+} forEach GVAR(deviceData);
 
-_ids;
+_ids

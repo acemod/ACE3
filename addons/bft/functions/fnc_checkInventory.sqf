@@ -13,8 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_magazine", "_previousMags", "_newMagName", "_newMags", "_magID"];
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 if !(local _unit) exitwith {};
 
