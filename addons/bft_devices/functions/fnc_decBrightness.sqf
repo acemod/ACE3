@@ -18,6 +18,8 @@
 
 #include "script_component.hpp"
 
+private ["_brightness", "_displayName"];
+
 _displayName = _this select 0;
 _brightness = [_displayName,"brightness"] call FUNC(getSettings);
 _brightness = _brightness - 0.1;

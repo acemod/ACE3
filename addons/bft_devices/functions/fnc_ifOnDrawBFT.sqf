@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private [];
+private ["_ctrlScreen", "_dirToSecondPos", "_display", "_dstToSecondPos", "_heading", "_isDialog", "_mode", "_position", "_vehicle"];
 
 _mode = _this select 0;
 _ctrlScreen = _this select 1 select 0;

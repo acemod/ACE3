@@ -24,6 +24,8 @@ private [];
 
 #include "script_component.hpp"
 
+private ["_control", "_display", "_displayName", "_function", "_selectedIndex"];
+
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 

@@ -58,6 +58,8 @@ if (isNil "_mode") then {
 
 {
     call {
+        private ["_value"];
+        
         _value = (_settings select 1) select _forEachIndex;
         if (isNil "_value") exitWith {};
         
