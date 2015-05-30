@@ -18,7 +18,7 @@ _ctrl = _this select 0;
 _mouseover = ["",[]];
 {
     // draw the icon
-    private ["_callsign","_pos","_tex","_sizeTex"];
+    private ["_callsign","_pos","_tex","_sizeTex","_color"];
     _callsign = AD_GET_CALLSIGN(_x);
     _pos = +AD_GET_POSITION(_x);
     _tex = AD_GET_TYPEICON(_x);

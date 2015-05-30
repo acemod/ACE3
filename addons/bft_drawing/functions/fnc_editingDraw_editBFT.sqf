@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 
 disableSerialization;
-private "_ctrl";
+private ["_ctrl", "_pos"];
 _ctrl = _this select 0;
 
 // Remove Eventhandler

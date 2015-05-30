@@ -10,6 +10,7 @@ if (typename _subtitle == typename "") then {_subtitle = parseText _subtitle};
 _information = _this select 3;
 if (typename _information == typename "") then {_information = parseText _information};
 
+private ["_idc"];
 _idc = IDC_TOOLTIP_TITLE;
 CTRL ctrlSetStructuredText _title;
 CTRL ctrlCommit 0;
