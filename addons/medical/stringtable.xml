@@ -123,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
-            <German>Druckverband anwenden</German>
+            <German>Tourniquet anwenden</German>
             <Spanish>Aplicar torniquete</Spanish>
             <Czech>Aplikovat škrtidlo</Czech>
             <Polish>Załóż stazę</Polish>
@@ -747,7 +747,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
-            <German>Druckverband [CAT]</German>
+            <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Tourniquet [CAT]</French>
@@ -2704,6 +2704,7 @@
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
             <Polish>ACE Opcje medyczne</Polish>
+            <German>ACE-Medicsystem</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_Module_DisplayName">
             <English>Medical Settings [ACE]</English>
@@ -2718,6 +2719,7 @@
         <Key ID="STR_ACE_MedicalSettings_level_Description">
             <English>What is the medical simulation level?</English>
             <Polish>Jaki jest poziom symulacji medycznej?</Polish>
+            <German>Wie hoch soll das medizinische Simulationslevel sein?</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_basic">
             <English>Basic</English>
@@ -2746,19 +2748,22 @@
         <Key ID="STR_ACE_MedicalSettings_allowLitterCreation_DisplayName">
             <English>Enable Litter</English>
             <Polish>Aktywuj odpadki</Polish>
-            <German>Abfall aktivieren</German>
+            <German>Abfälle aktivieren</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
             <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
+            <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_litterCleanUpDelay_DisplayName">
             <English>Life time of litter objects</English>
             <Polish>Długość życia odpadków</Polish>
+            <German>Dauer des angezeigten Abfalls</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
             <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
+            <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>
@@ -2778,6 +2783,7 @@
         <Key ID="STR_ACE_MedicalSettings_playerDamageThreshold_Description">
             <English>What is the damage a player can take before being killed?</English>
             <Polish>Jaki jest próg obrażeń, jakie gracz może otrzymać zanim zostanie zabity?</Polish>
+            <German>Wie viel Schaden kann ein Spieler erleiden, bevor er getötet wird?</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_AIDamageThreshold_DisplayName">
             <English>AI Damage</English>
@@ -2787,6 +2793,7 @@
         <Key ID="STR_ACE_MedicalSettings_AIDamageThreshold_Description">
             <English>What is the damage an AI can take before being killed?</English>
             <Polish>Jaki jest próg obrażeń, jakie AI może otrzymać zanim zostanie zabite?</Polish>
+            <German>Wie viel Schaden kann eine KI erleiden, bis sie getötet wird?</German>
         </Key>
         <Key ID="STR_ACE_MedicalSettings_enableUnconsciousnessAI_DisplayName">
             <English>AI Unconsciousness</English>
@@ -2936,6 +2943,7 @@
         <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Polish>Ogr. apteczek osobistych</Polish>
+            <German>Orte für Erstehilfekasten</German>
         </Key>
         <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_PAK_Description">
             <English>Where can the personal aid kit be used?</English>
@@ -2990,6 +2998,7 @@
         <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical kit (Adv)</English>
             <Polish>Ogr. zestawu chirurg.</Polish>
+            <German>Orte für Operationskästen (erweitert)</German>
         </Key>
         <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
             <English>Where can the Surgical kit be used?</English>
@@ -3064,6 +3073,7 @@
         <Key ID="STR_ACE_AssignMedicRoles_role_Description">
             <English></English>
             <Polish></Polish>
+            <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
         </Key>
         <Key ID="STR_ACE_AssignMedicRoles_role_none">
             <English>None</English>
