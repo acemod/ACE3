@@ -22,11 +22,11 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset"];
+private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
 disableSerialization;
 
-if (isNil QGVAR(ifOpen)) exitWith {false};
-_displayName = GVAR(ifOpen) select 1;
+if (I_CLOSED) exitWith {false};
+_displayName = I_GET_NAME;
 _display = uiNamespace getVariable _displayName;
 _interfaceInit = false;
 _loadingCtrl = _display displayCtrl IDC_LOADINGTXT;
@@ -109,7 +109,7 @@ if (isNil "_mode") then {
         // ------------ BRIGHTNESS ------------
         // Value ranges from 0 to 1, 0 being off and 1 being full brightness
         if (_x == "brightness") exitWith {
-            _osdCtrl = _display displayCtrl IDC_BIGHTNESS;
+            _osdCtrl = _display displayCtrl IDC_BRIGHTNESS;
             if (!isNull _osdCtrl) then {
                 _brightness = _value;
                 _nightMode = [_displayName,"nightMode"] call FUNC(getSettings);
@@ -185,7 +185,8 @@ if (isNil "_mode") then {
                     IDC_OSD_HOOK_GRID,
                     IDC_OSD_HOOK_ELEVATION,
                     IDC_OSD_HOOK_DST,
-                    IDC_OSD_HOOK_DIR]
+                    IDC_OSD_HOOK_DIR,
+                    IDC_NOTIFICATION]
                 };
                 if (_displayName == QGVAR(GD300_dlg)) exitWith {
                     [IDC_GROUP_MENU,
@@ -196,9 +197,10 @@ if (isNil "_mode") then {
                     IDC_OSD_HOOK_GRID,
                     IDC_OSD_HOOK_ELEVATION,
                     IDC_OSD_HOOK_DST,
-                    IDC_OSD_HOOK_DIR]
+                    IDC_OSD_HOOK_DIR,
+                    IDC_NOTIFICATION]
                 };
-                [] // default
+                [IDC_NOTIFICATION] // default
             };
             if !(_displayItems isEqualTo []) then {
                 _btnActCtrl = _display displayCtrl IDC_BTNACT;
@@ -221,7 +223,7 @@ if (isNil "_mode") then {
                         
                         _mapTools = [_displayName,"mapTools"] call FUNC(getSettings);
                         if (!isNil "_mapTools" && {_mapTools}) then {
-                            _displayItemsToShow = _displayItemsToShow + [
+                            _displayItemsToShow append [
                                 IDC_OSD_HOOK_GRID,
                                 IDC_OSD_HOOK_ELEVATION,
                                 IDC_OSD_HOOK_DST,
@@ -564,8 +566,23 @@ if (_interfaceInit && _isDialog) then {setMousePosition [0.5,0.5];};
 
 // now hide the "Loading" control since we are done
 if (!isNull _loadingCtrl) then {
+    // move mouse cursor to the center of the screen if its a dialog
+    if (_interfaceInit && _isDialog) then {
+        _ctrlPos = ctrlPosition _loadingCtrl;
+        // put the mouse position in the center of the screen
+        _mousePos = [(_ctrlPos select 0) + ((_ctrlPos select 2) / 2),(_ctrlPos select 1) + ((_ctrlPos select 3) / 2)];
+        // delay moving the mouse cursor by one frame using a PFH, for some reason its not working without
+        [{
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            setMousePosition (_this select 0);
+        },0,_mousePos] call CBA_fnc_addPerFrameHandler;
+    };
+    
     _loadingCtrl ctrlShow false;
     while {ctrlShown _loadingCtrl} do {};
 };
+
+// call notification system
+if (_interfaceInit) then {[] call FUNC(processNotifications)};
 
 true

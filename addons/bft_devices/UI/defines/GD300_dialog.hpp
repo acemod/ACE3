@@ -246,6 +246,8 @@ class GVAR(DISPLAY_NAME) {
         /*
             ### Overlays ###
         */
+        // ---------- NOTIFICATION ------------
+        class notification: GVAR(GD300_notification) {};
         // ---------- LOADING ------------
         class loadingtxt: GVAR(GD300_loadingtxt) {};
         // ---------- BRIGHTNESS ------------

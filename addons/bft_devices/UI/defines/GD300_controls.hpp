@@ -24,10 +24,10 @@ class GVAR(GD300_RscMapControl): GVAR(RscMapControl) {
     idc = IDC_SCREEN;
     onDraw = onDrawBFT(0);
     text = "#(argb,8,8,3)color(1,1,1,1)";
-    x = pxToScreen_X(GD300_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(GD300_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(GD300_SCREEN_CONTENT_W);
-    h = pxToScreen_H(GD300_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
     //type = CT_MAP;
     // allow to zoom out further (defines the maximum map scale, usually 1)
     scaleMax = 1000;
@@ -158,10 +158,10 @@ class GVAR(GD300_loadingtxt): GVAR(GD300_RscText) {
     idc = IDC_LOADINGTXT;
     style = ST_CENTER;
     text = "Loading"; //--- ToDo: Localize;
-    x = pxToScreen_X(GD300_SCREEN_CONTENT_X);
-    y = pxToScreen_Y(GD300_SCREEN_CONTENT_Y);
-    w = pxToScreen_W(GD300_SCREEN_CONTENT_W);
-    h = pxToScreen_H(GD300_SCREEN_CONTENT_H);
+    x = pxToScreen_X(SCREEN_CONTENT_X);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y);
+    w = pxToScreen_W(SCREEN_CONTENT_W);
+    h = pxToScreen_H(SCREEN_CONTENT_H);
     colorBackground[] = COLOR_LIGHT_BLUE;
 };
 class GVAR(GD300_windowsBG): GVAR(RscPicture) {
@@ -202,10 +202,17 @@ class GVAR(GD300_movingHandle_R): GVAR(GD300_movingHandle_L) {
 
 // transparent control that gets placed on top of the GUI to adjust brightness
 class GVAR(GD300_brightness): GVAR(GD300_RscText) {
-    idc = IDC_BIGHTNESS;
+    idc = IDC_BRIGHTNESS;
     x = pxToScreen_X(GD300_MAP_X);
     y = pxToScreen_Y(GD300_MAP_Y);
     w = pxToScreen_W(GD300_MAP_W);
     h = pxToScreen_H(GD300_MAP_H);
     colorBackground[] = COLOR_TRANSPARENT;
+};
+class GVAR(GD300_notification): GVAR(GD300_RscText) {
+    idc = IDC_NOTIFICATION;
+    x = pxToScreen_X(SCREEN_CONTENT_X + (SCREEN_CONTENT_W * 0.2) / 2);
+    y = pxToScreen_Y(SCREEN_CONTENT_Y + SCREEN_CONTENT_H - 2 * GD300_OSD_TEXT_STD_SIZE);
+    w = pxToScreen_W(SCREEN_CONTENT_W * 0.8);
+    colorBackground[] = COLOR_BLACK;
 };

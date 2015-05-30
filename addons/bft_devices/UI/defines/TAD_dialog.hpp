@@ -72,6 +72,8 @@ class GVAR(DISPLAY_NAME) {
         /*
             ### Overlays ###
         */
+        // ---------- NOTIFICATION ------------
+        class notification: GVAR(TAD_notification) {};
         // ---------- LOADING ------------
         class loadingtxt: GVAR(TAD_loadingtxt) {};
         // ---------- BRIGHTNESS ------------

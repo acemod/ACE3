@@ -3,6 +3,7 @@
 ADDON = false;
 
 // Function PREP (caching)
+PREP(addNotification);
 PREP(centerMapOnPlayerPosition);
 PREP(createHelmetCam);
 PREP(createUavCam);
@@ -35,6 +36,7 @@ PREP(onIfTogglePositionKey);
 PREP(onIfZoomKey);
 PREP(onPlayerChanged);
 PREP(onPlayerInventoryChanged);
+PREP(processNotifications);
 PREP(setInterfacePosition);
 PREP(setSettings);
 PREP(toggleIconText);

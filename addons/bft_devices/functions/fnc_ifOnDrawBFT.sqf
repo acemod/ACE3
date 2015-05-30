@@ -33,7 +33,7 @@ _position = getPosASL _vehicle;
 _heading = direction _vehicle;
 
 // temporary bodge
-_isDialog = [GVAR(ifOpen) select 1] call FUNC(isDialog);
+_isDialog = [I_GET_NAME] call FUNC(isDialog);
 
 if (_isDialog) then {
     GVAR(mapWorldPos) = [_ctrlScreen] call FUNC(ctrlMapCenter);

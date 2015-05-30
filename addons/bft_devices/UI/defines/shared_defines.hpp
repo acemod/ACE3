@@ -10,7 +10,7 @@
 #define IDC_ACTUAVTXT        1002
 #define IDC_ACTVIDTXT        1003
 #define IDC_ACTMSGTXT        1004
-#define IDC_BIGHTNESS        1005
+#define IDC_BRIGHTNESS        1005
 #define IDC_BACKGROUND       1200
 #define IDC_SCREEN           1201
 #define IDC_SCREEN_TOPO      1202
@@ -34,6 +34,7 @@
 #define IDC_BTNUP            1609
 #define IDC_BTNDWN           1610
 #define IDC_BTNACT           1611
+#define IDC_NOTIFICATION     1620
 
 #define IDC_UAVDISPLAY       1773
 #define IDC_UAVMAP           1774
@@ -129,3 +130,5 @@
 #define COLOR_PURPLE_ARR [255/255,0/255,255/255,1]
 #define COLOR_TRANSPARENT {0,0,0,0}
 #define COLOR_TRANSPARENT_ARR [0,0,0,0]
+#define COLOR_NAVYBLUE {0,0,128/255,1}
+#define COLOR_NAVYBLUE_ARR [0,0,128/255,1]

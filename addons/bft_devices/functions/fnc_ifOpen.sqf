@@ -5,16 +5,17 @@
  *   Handles dialog / display startup and registering of event handlers
  *       
  *   This function will define iffOpen, using the following format:
- *       Parameter 0: Interface type, 0 = Main, 1 = Secondary, 2 = Tertiary
- *       Parameter 1: Name of uiNameSpace variable for display / dialog (i.e. "ace_bft_devices_TAD_dlg")
- *       Parameter 2: Unit we registered the killed eventhandler for
- *       Parameter 3: ID of registered eventhandler for killed event
- *       Parameter 4: Vehicle we registered the GetOut eventhandler for (even if no EH is registered)
- *       Parameter 5: ID of registered eventhandler for GetOut event (nil if no EH is registered)
- *       Parameter 6: ID of registered eventhandler for Draw3D event (nil if no EH is registered)
- *       Parameter 7: ID of registered eventhandler ACE_medical medical_onUnconscious event (nil if no EH is registered)
- *       Parameter 8: ID of registered eventhandler ACE playerInventoryChanged event (nil if no EH is registered)
- *       Parameter 9: ID of registered eventhandler ACE playerChanged event (nil if no EH is registered)
+ *       Parameter 0: Device ID <STRING>
+ *       Parameter 1: Interface type, 0 = Main, 1 = Secondary, 2 = Tertiary
+ *       Parameter 2: Name of uiNameSpace variable for display / dialog (i.e. "ace_bft_devices_TAD_dlg")
+ *       Parameter 3: Unit we registered the killed eventhandler for
+ *       Parameter 4: ID of registered eventhandler for killed event
+ *       Parameter 5: Vehicle we registered the GetOut eventhandler for (even if no EH is registered)
+ *       Parameter 6: ID of registered eventhandler for GetOut event (nil if no EH is registered)
+ *       Parameter 7: ID of registered eventhandler for Draw3D event (nil if no EH is registered)
+ *       Parameter 8: ID of registered eventhandler ACE_medical medical_onUnconscious event (nil if no EH is registered)
+ *       Parameter 9: ID of registered eventhandler ACE bft_updateDeviceOwner event (nil if no EH is registered)
+ *       Parameter 10: ID of registered eventhandler ACE playerChanged event (nil if no EH is registered)
  *
  * Arguments:
  *   0: Interface type, 0 = Main, 1 = Secondary <INTEGER>
@@ -39,26 +40,37 @@
 private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle"];
 
 // exit should we have an interface open already or are in the process of starting one
-if (GVAR(ifOpenStart) || (!isNil QGVAR(ifOpen))) exitWith {false};
+if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
 
 GVAR(ifOpenStart) = true;
 
-_interfaceType = _this select 0;
-_displayName = _this select 1;
-_player = _this select 2;
-_vehicle = _this select 3;
+_deviceID = _this select 0;
+_interfaceType = _this select 1;
+_displayName = _this select 2;
+_player = _this select 3;
+_vehicle = _this select 4;
 _inVehicle = (_vehicle != _player);
 
 _isDialog = [_displayName] call FUNC(isDialog);
 
 // start setting up event-handlers
-GVAR(ifOpen) = [_interfaceType,_displayName,_player,
-    _player addEventHandler ["killed",{[] call FUNC(ifClose)}]
-,_vehicle,nil,nil,nil,nil];
+GVAR(ifOpen) = [
+    _deviceID,
+    _interfaceType,
+    _displayName,
+    _player,
+    _player addEventHandler ["killed",{[] call FUNC(ifClose)}],
+    _vehicle,
+    nil,
+    nil,
+    nil,
+    nil,
+    nil
+];
 
 // Only register the GetOut event handler for vehicle displays
 if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
-    GVAR(ifOpen) set [5,
+    GVAR(ifOpen) set [6,
         _vehicle addEventHandler ["GetOut",{if (_this select 2 == ACE_player) then {[] call FUNC(ifClose)}}]
     ];
 };
@@ -66,9 +78,9 @@ if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
 // Set up event handler to update display header / footer
 // Also set up vehicle icon
 if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
-    GVAR(ifOpen) set [6,
+    GVAR(ifOpen) set [7,
         addMissionEventHandler ["Draw3D",{
-            _display = uiNamespace getVariable (GVAR(ifOpen) select 1);
+            _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
             _playerPos = getPosASL _veh;
         
@@ -91,9 +103,9 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
         "\A3\ui_f\data\map\VehicleIcons\iconmanvirtual_ca.paa"
     };
 } else {
-    GVAR(ifOpen) set [6,
+    GVAR(ifOpen) set [7,
         addMissionEventHandler ["Draw3D",{
-            _display = uiNamespace getVariable (GVAR(ifOpen) select 1);
+            _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
             _heading = direction _veh;
             // update time
@@ -111,7 +123,7 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
 };
 
 // Register with ACE_medical medical_onUnconscious event
-GVAR(ifOpen) set [7,
+GVAR(ifOpen) set [8,
     ["medical_onUnconscious",{
         if (_this select 0 == ACE_player && _this select 1) then {
             [] call FUNC(ifClose);
@@ -119,15 +131,18 @@ GVAR(ifOpen) set [7,
     }] call EFUNC(common,addEventHandler)
 ];
 
-// Register with ACE playerInventoryChanged event
-GVAR(ifOpen) set [8,
-    ["playerInventoryChanged",{
-        _this call FUNC(onPlayerInventoryChanged);
+// Register with ACE bft_updateDeviceOwner event
+GVAR(ifOpen) set [9,
+    ["bft_updateDeviceOwner",{
+        // if the device ID matches the one currently open and we aren't the owner anymore, close the interface
+        if ((_this select 0 == I_GET_DEVICE) && (_this select 1 != ACE_player)) then {
+            [] call FUNC(ifClose);
+        };
     }] call EFUNC(common,addEventHandler)
 ];
 
 // Register with ACE playerChanged event
-GVAR(ifOpen) set [9,
+GVAR(ifOpen) set [10,
     ["playerChanged",{
         _this call FUNC(onPlayerChanged);
     }] call EFUNC(common,addEventHandler)

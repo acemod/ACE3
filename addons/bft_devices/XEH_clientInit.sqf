@@ -51,6 +51,9 @@ GVAR(textAndIconScaleFactor) = 12;
 GVAR(showBFTtext) = true;
 GVAR(playerVehicleIcon) = "";
 
+// Lists
+GVAR(notificationCache) = [];
+
 // Setup icon and text sizes
 [] call FUNC(updateTextAndIconSize);
 

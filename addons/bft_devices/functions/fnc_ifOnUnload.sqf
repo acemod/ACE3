@@ -24,25 +24,32 @@ private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_ve
 //[] call FUNC(deleteHelmetCam);
 //[] call FUNC(deleteUAVcam);
 
-if !(isNil QGVAR(ifOpen)) then {
-    // [_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
-    _ifType = GVAR(ifOpen) select 0;
-    _displayName = GVAR(ifOpen) select 1;
-    _player = GVAR(ifOpen) select 2;
-    _playerKilledEhId = GVAR(ifOpen) select 3;
-    _vehicle = GVAR(ifOpen) select 4;
-    _vehicleGetOutEhId = GVAR(ifOpen) select 5;
-    _draw3dEhId = GVAR(ifOpen) select 6;
-    _aceUnconciousEhId = GVAR(ifOpen) select 7;
-    _acePlayerInventoryChangedEhId = GVAR(ifOpen) select 8;
-    _acePlayerChangedEhId = GVAR(ifOpen) select 9;
+if !(I_CLOSED) then {
+    // [_deviceID,_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
+    _deviceID = I_GET_DEVICE;
+    _ifType = I_GET_TYPE;
+    _displayName = I_GET_NAME;
+    _player = GVAR(ifOpen) select 3;
+    _playerKilledEhId = GVAR(ifOpen) select 4;
+    _vehicle = GVAR(ifOpen) select 5;
+    _vehicleGetOutEhId = GVAR(ifOpen) select 6;
+    _draw3dEhId = GVAR(ifOpen) select 7;
+    _aceUnconciousEhId = GVAR(ifOpen) select 8;
+    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 9;
+    _acePlayerChangedEhId = GVAR(ifOpen) select 10;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};
     if (!isNil "_draw3dEhId") then {removeMissionEventHandler ["Draw3D",_draw3dEhId]};
     if (!isNil "_aceUnconciousEhId") then {["medical_onUnconscious",_aceUnconciousEhId] call EFUNC(common,removeEventHandler)};
-    if (!isNil "_acePlayerInventoryChangedEhId") then {["playerInventoryChanged",_acePlayerInventoryChangedEhId] call EFUNC(common,removeEventHandler)};
+    if (!isNil "_aceUpdateDeviceOwnerEhId") then {["bft_updateDeviceOwner",_aceUpdateDeviceOwnerEhId] call EFUNC(common,removeEventHandler)};
     if (!isNil "_acePlayerChangedEhId") then {["playerChanged",_acePlayerChangedEhId] call EFUNC(common,removeEventHandler)};
+    
+    // remove notification system related PFHs
+    if !(isNil QGVAR(processNotificationsPFH)) then {
+        [GVAR(processNotificationsPFH)] call CBA_fnc_removePerFrameHandler;
+        GVAR(processNotificationsPFH) = nil;
+    };
     
     // don't call this part if we are closing down before setup has finished
     if (!GVAR(ifOpenStart)) then {
