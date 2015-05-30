@@ -24,7 +24,9 @@
  * 18: Stability factor <NUMBER>
  * 19: Twist Direction <NUMBER>
  * 20: Latitude <NUMBER>
- * 21: Range Card Slot <NUMBER>
+ * 21: Direction of Fire <NUMBER>
+ * 22: Range Card Slot <NUMBER>
+ * 23: Use advanced ballistics config? <BOOL>
  *
  * Return Value:
  * 0: Elevation (MOA) <NUMBER>
@@ -44,7 +46,7 @@
  */
 #include "script_component.hpp"
 
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot"];
+private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot", "_useABConfig"];
 _scopeBaseAngle     = _this select 0;
 _bulletMass         = _this select 1;
 _boreHeight         = _this select 2;
@@ -69,6 +71,7 @@ _twistDirection     = _this select 19;
 _latitude           = _this select 20;
 _directionOfFire    = _this select 21;
 _rangeCardSlot      = _this select 22;
+_useABConfig        = _this select 23;
 
 if (_storeRangeCardData) then {
     GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
@@ -109,8 +112,15 @@ private ["_wind1", "_wind2", "_windDrift"];
 _wind1 = [cos(270 - _windDirection * 30) * _windSpeed1, sin(270 - _windDirection * 30) * _windSpeed1, 0];
 _wind2 = [cos(270 - _windDirection * 30) * _windSpeed2, sin(270 - _windDirection * 30) * _windSpeed2, 0];
 _windDrift = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+if (_useABConfig) then {
     _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
+};
+
+private ["_airFrictionCoef", "_airDensity"];
+_airFrictionCoef = 1;
+if (!_useABConfig && (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+    _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
+    _airFrictionCoef = _airDensity / 1.22498;
 };
 
 private ["_speedTotal", "_stepsTotal", "_speedAverage"];
@@ -139,7 +149,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
     _trueSpeed = vectorMagnitude _trueVelocity;
     
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    if (_useABConfig) then {
         _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
             parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
         } else {
@@ -147,7 +157,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
         };
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
-        _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
+        _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);
     };
 
     _bulletAccel = _bulletAccel vectorAdd _gravity;
