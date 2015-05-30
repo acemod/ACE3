@@ -69,25 +69,48 @@ class CfgAmmo {
     
     /*class DemoCharge_Remote_Ammo_Scripted: DemoCharge_Remote_Ammo;
     class SatchelCharge_Remote_Ammo_Scripted: SatchelCharge_Remote_Ammo;*/
-
-    class IEDUrbanBig_Remote_Ammo: PipeBombBase {
-        mineTrigger = "RangeTrigger";
-        triggerWhenDestroyed = 1;
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
-    };
-    class IEDLandBig_Remote_Ammo: PipeBombBase {
-        mineTrigger = "RangeTrigger";
-        triggerWhenDestroyed = 1;
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
-    };
-    class IEDUrbanSmall_Remote_Ammo: PipeBombBase {
-        mineTrigger = "RangeTrigger";
-        triggerWhenDestroyed = 1;
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
-    };
-    class IEDLandSmall_Remote_Ammo: PipeBombBase {
-        mineTrigger = "RangeTrigger";
-        triggerWhenDestroyed = 1;
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.562341, 1, 40};
-    };
+	
+	class IEDUrbanBig_Remote_Ammo: PipeBombBase {
+		triggerWhenDestroyed = 1;
+		soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+	};
+	class IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
+		mineTrigger = "RemoteTrigger";
+	};
+	class IEDUrbanBig_Range_Ammo: IEDUrbanBig_Remote_Ammo {
+		mineTrigger = "RangeTrigger";
+	};
+	
+	class IEDUrbanSmall_Remote_Ammo: PipeBombBase {
+		triggerWhenDestroyed = 1;
+		soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+	};	
+	class IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
+		mineTrigger = "RemoteTrigger";
+	};
+	class IEDUrbanSmall_Range_Ammo: IEDUrbanSmall_Remote_Ammo {
+		mineTrigger = "RangeTrigger";
+	};
+	
+	class IEDLandBig_Remote_Ammo: PipeBombBase {
+		triggerWhenDestroyed = 1;
+		soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+	};
+	class IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
+		mineTrigger = "RemoteTrigger";
+	};
+	class IEDLandBig_Range_Ammo: IEDLandBig_Remote_Ammo {
+		mineTrigger = "RangeTrigger";
+	};
+	
+	class IEDLandSmall_Remote_Ammo: PipeBombBase {
+		triggerWhenDestroyed = 1;
+		soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+	};
+	class IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {
+		mineTrigger = "RemoteTrigger";
+	};
+	class IEDLandSmall_Range_Ammo: IEDLandSmall_Remote_Ammo {
+		mineTrigger = "RangeTrigger";
+	};
 };
