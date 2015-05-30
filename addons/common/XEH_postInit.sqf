@@ -254,6 +254,7 @@ GVAR(commonPostInited) = true;
 [{
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};
+
     // If settings are not initialized then wait
     if (isNil QGVAR(settings)) exitWith {
         diag_log text format["[ACE] Waiting on settings from server"];
@@ -261,11 +262,16 @@ GVAR(commonPostInited) = true;
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 
+    diag_log text format["[ACE] Settings received from server"];
+
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+
     diag_log text format["[ACE] Settings initialized"];
-    
-    //Load from profile and localize settings:
-    ["ServerSettingsReceived", []] call FUNC(localEvent);
-    
+
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
