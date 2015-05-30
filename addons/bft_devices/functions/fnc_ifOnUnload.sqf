@@ -82,6 +82,9 @@ if !(I_CLOSED) then {
         };
     };
     
+    // send "bft_deviceClosed" event
+    ["bft_deviceClosed",[I_GET_DEVICE]] call EFUNC(common,localEvent);
+    
     uiNamespace setVariable [_displayName, displayNull];
     GVAR(ifOpen) = nil;
 };
