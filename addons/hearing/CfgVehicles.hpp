@@ -94,8 +94,8 @@ class CfgVehicles {
     };
 
 
-    class Module_F;
-    class ACE_ModuleHearing: Module_F {
+    class ACE_Module;
+    class ACE_ModuleHearing: ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_Hearing_Module_DisplayName";

@@ -1,8 +1,5 @@
-class Logic;
-class Module_F: Logic {
-    class ModuleDescription {};
-};
-class ACE_ModuleExplosive: Module_F {
+class ACE_Module;
+class ACE_ModuleExplosive: ACE_Module {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_Explosive_Module_DisplayName";

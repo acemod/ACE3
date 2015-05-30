@@ -62,11 +62,8 @@ class CfgVehicles {
         MACRO_LOCK_ACTIONS
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class ACE_VehicleLock_ModuleSetup: Module_F {
+    class ACE_Module;
+    class ACE_VehicleLock_ModuleSetup: ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_VehicleLock_Module_DisplayName";
@@ -99,12 +96,12 @@ class CfgVehicles {
                 defaultValue = "10";
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_VehicleLock_Module_Description";
         };
     };
 
-    class ACE_VehicleLock_ModuleSyncedAssign: Module_F {
+    class ACE_VehicleLock_ModuleSyncedAssign: ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName";
@@ -114,7 +111,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_VehicleKey_ca.paa));
         functionPriority = 0;
         class Arguments {};
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description";
             sync[] = {"AnyPlayer", "AnyVehicle"};
         };

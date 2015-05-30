@@ -1,6 +1,6 @@
 class CfgVehicles {
-  class Module_F;
-  class ACE_ModuleSwitchUnits: Module_F {
+  class ACE_Module;
+  class ACE_ModuleSwitchUnits: ACE_Module {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
     displayName = "$STR_ACE_SwitchUnits_Module_DisplayName";
