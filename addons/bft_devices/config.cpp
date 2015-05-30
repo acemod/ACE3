@@ -16,6 +16,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
+#include "ACE_BFT.hpp"
 
 // General UI defines and controls
 #include "UI\defines\shared_defines.hpp"

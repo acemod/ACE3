@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private [];
+private ["_handled","_previousInterface","_playerDevices","_vehicleDevices","_playerDeviceId","_vehicleDeviceId","_playerDeviceData","_vehicleDeviceData","_playerDeviceClassName","_vehicleDeviceClassName","_playerDeviceDisplayName","_playerDeviceDialogName","_vehicleDeviceDisplayName","_vehicleDeviceDialogName","_selectedInterface","_interfaceName","_deviceID"];
 
 _handled = false;
 
@@ -44,42 +44,79 @@ if !(I_CLOSED) then {
 _playerDevices = [ACE_player] call EFUNC(bft,getOwnedDevices);
 
 // get devices for the vehicle the player might be in
-_vehicleDevices =
-    if (ACE_player != vehicle ACE_player) then {
-        [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
-    } else {
-        [];
-    };
+_vehicleDevices = [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
 
 // select a device --- the first one for now
-_deviceId = if !(_playerDevices isEqualTo []) then {_playerDevices select 0} else {""};
+_playerDeviceId = if !(_playerDevices isEqualTo []) then {_playerDevices select 0} else {""};
+_vehicleDeviceId = if !(_vehicleDevices isEqualTo []) then {_vehicleDevices select 0} else {""};
 
 // bail if we could not retrieve a device ID
-if (_deviceId == "") exitWith {_handled};
+if (_playerDeviceId == "" && _vehicleDeviceId == "") exitWith {_handled};
 
 // get device data
-_deviceData = [_deviceId] call EFUNC(bft,getDeviceData);
+_playerDeviceData = if (_playerDeviceId != "") then {[_playerDeviceId] call EFUNC(bft,getDeviceData)} else {[]};
+_vehicleDeviceData = if (_vehicleDeviceId != "") then {[_vehicleDeviceId] call EFUNC(bft,getDeviceData)} else {[]};
 
 // bail if we could not receive device data
-if (_deviceData isEqualTo []) exitWith {_handled};
+if (_playerDeviceData isEqualTo [] && _vehicleDeviceData isEqualTo []) exitWith {_handled};
 
 // get class name for device
-_className = D_GET_CLASSNAME(_deviceData);
+_playerDeviceClassName = if !(_playerDeviceData isEqualTo []) then {D_GET_DEVICETYPE(_playerDeviceData)} else {""};
+_vehicleDeviceClassName = if !(_vehicleDeviceData isEqualTo []) then {D_GET_DEVICETYPE(_vehicleDeviceData)} else {""};
 
 // get uiNamespace variable names
-_displayName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(displayName));
-_dialogName = getText (configFile >> "CfgWeapons" >> _className >> QGVAR(dialogName));
+_playerDeviceDisplayName = if (_playerDeviceClassName != "") then {
+    if (isText (configFile >> "ACE_BFT" >> "Devices" >> _playerDeviceClassName >> QGVAR(displayName))) then {
+        getText (configFile >> "ACE_BFT" >> "Devices" >> _playerDeviceClassName >> QGVAR(displayName))
+    } else {""};
+} else {""};
+_playerDeviceDialogName = if (_playerDeviceClassName != "") then {
+    if (isText (configFile >> "ACE_BFT" >> "Devices" >> _playerDeviceClassName >> QGVAR(dialogName))) then {
+        getText (configFile >> "ACE_BFT" >> "Devices" >> _playerDeviceClassName >> QGVAR(dialogName))
+    } else {""};
+} else {""};
+_vehicleDeviceDisplayName = if (_vehicleDeviceClassName != "") then {
+    if (isText (configFile >> "ACE_BFT" >> "Devices" >> _vehicleDeviceClassName >> QGVAR(displayName))) then {
+        getText (configFile >> "ACE_BFT" >> "Devices" >> _vehicleDeviceClassName >> QGVAR(displayName))
+    } else {""};
+} else {""};
+_vehicleDeviceDialogName = if (_vehicleDeviceClassName != "") then {
+    if (isText (configFile >> "ACE_BFT" >> "Devices" >> _vehicleDeviceClassName >> QGVAR(dialogName))) then {
+        getText (configFile >> "ACE_BFT" >> "Devices" >> _vehicleDeviceClassName >> QGVAR(dialogName))
+    } else {""};
+} else {""};
 
 // logic to determine which interface to open
-_interfaceName = switch (_this) do {
+_selectedInterface = switch (_this) do {
     case 0: {
-        if (_displayName != "") then {_displayName} else {_dialogName};
+        // display first, vehicle device first
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
+        []
     };
     case 1: {
-        if (_dialogName != "") then {_dialogName} else {_displayName};
+        // dialog first, vehicle device first
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
+        []
     };
-    default {QGVAR(JV5_dlg)}; // ToDo: make dynamic
+    case 2: {
+        // dialog first, player device first
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
+        []
+    };
+    default {[]};
 };
+
+_interfaceName = _selectedInterface select 0;
+_deviceID = _selectedInterface select 1;
 
 if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down

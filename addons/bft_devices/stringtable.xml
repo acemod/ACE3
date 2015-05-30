@@ -1,16 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="BFT_Devices">
-        <Key ID="STR_ACE_BFT_Devices_DK10_itemName">
-            <English>DK10 Tablet</English>
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemName_b">
+            <English>DK10 Tablet (NATO)</English>
         </Key>
-        <Key ID="STR_ACE_BFT_Devices_DK10_itemDescription">
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemDescription_b">
             <English>DK10 rugged tablet PC</English>
         </Key>
-        <Key ID="STR_ACE_BFT_Devices_GD300_itemName">
-            <English>GD300 Android</English>
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemName_o">
+            <English>DK10 Tablet (CSAT)</English>
         </Key>
-        <Key ID="STR_ACE_BFT_Devices_GD300_itemDescription">
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemDescription_o">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemName_i">
+            <English>DK10 Tablet (AAF)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_DK10_itemDescription_i">
+            <English>DK10 rugged tablet PC</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemName_b">
+            <English>GD300 Android (NATO)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemDescription_b">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemName_o">
+            <English>GD300 Android (CSAT)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemDescription_o">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemName_i">
+            <English>GD300 Android (AAF)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_GD300_itemDescription_i">
             <English>GD300 rugged wearable computer</English>
         </Key>
         <Key ID="STR_ACE_BFT_Devices_MicroDAGR_itemName">
@@ -36,6 +60,15 @@
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>MicroDAGR ricevitore GPS avanzato</Italian>
             <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_b">
+            <English>[ACE] BFT Items (NATO)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_o">
+            <English>[ACE] BFT Items (CSAT)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_i">
+            <English>[ACE] BFT Items (AAF)</English>
         </Key>
         <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemName">
             <English>Helmet Camera</English>
