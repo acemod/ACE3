@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_modules"};
+        requiredAddons[] = {"ace_common"};
         author[] = {"SilentSpike"};
         authorUrl = "https://github.com/SilentSpike";
         VERSION_CONFIG;

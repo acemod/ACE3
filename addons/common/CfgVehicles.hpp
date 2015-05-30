@@ -24,8 +24,11 @@ class CfgVehicles {
 
   // += needs a non inherited entry in that class, otherwise it simply overwrites
   //#include <DefaultItems.hpp>
-
-   class ACE_Module;
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
    class ACE_ModuleCheckPBOs: ACE_Module {
     author = "$STR_ACE_Common_ACETeam";
     category = "ACE";
@@ -69,7 +72,7 @@ class CfgVehicles {
         };
       };
     };
-    class ModuleDescription {
+    class ModuleDescription: ModuleDescription {
         description = "$STR_ACE_Common_CheckPBO_Description";
     };
   };
@@ -84,7 +87,7 @@ class CfgVehicles {
     isGlobal = 1;
     class Arguments {
     };
-    class ModuleDescription {
+    class ModuleDescription: ModuleDescription {
         description = "$STR_ACE_Common_LSDVehicles_Description";
         sync[] = {"AnyVehicle"};
     };

@@ -62,7 +62,11 @@ class CfgVehicles {
         MACRO_LOCK_ACTIONS
     };
 
-    class ACE_Module;
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
     class ACE_VehicleLock_ModuleSetup: ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
@@ -111,7 +115,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_VehicleKey_ca.paa));
         functionPriority = 0;
         class Arguments {};
-        class ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description";
             sync[] = {"AnyPlayer", "AnyVehicle"};
         };
