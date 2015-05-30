@@ -253,6 +253,7 @@ class ACE_settingsMenu {
             text = "$STR_ACE_OptionsMenu_DumpDebug";
             x = X_PART(26.5);
             action = QUOTE([] call FUNC(debugDumpToClipboard));
+            tooltip = "$STR_ACE_OptionsMenu_DumpDebugTooltip";
         };
     };
 };
