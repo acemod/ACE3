@@ -332,4 +332,168 @@ class CfgWeapons
         ACE_barrelTwist=177.8;
         ACE_barrelLength=317.5;
     };
+    
+    class ItemCore;
+    class InventoryOpticsItem_Base_F;
+    
+    class CUP_optic_SB_3_12x50_PMII : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class LRR {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_LeupoldMk4 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class LRR {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_Leupold_VX3 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class StepScope {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_AN_PVS_10 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class NVScope {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_LeupoldM3LR : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class LRR {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_LeupoldMk4_10x40_LRT_Desert : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class LRR {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_LeupoldMk4_MRT_tan : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -4, 30 };
+        ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class MRT {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class CUP_optic_SB_11_4x20_PM : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -0.1, 10.1 };
+        ACE_ScopeAdjust_Horizontal[] = { -5.1, 5.1 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class ShortDot {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    
+    /*
+    // This would require MOA turrets
+    class CUP_optic_AN_PVS_4 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { -12, 50 };
+        ACE_ScopeAdjust_Horizontal[] = { -20, 20 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.25;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.25;
+        ACE_ScopeAdjust_Unit = "MOA";
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class ANPVS4 {
+                    discreteDistance[] = { 100 };
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    */
+    
+    class CUP_optic_PSO_1 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { 0, 0 };
+        ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.0;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.5;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class PSO {
+					discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
+					discreteDistanceInitIndex=3;
+                };
+            };
+        };
+    };
+    class CUP_optic_PSO_3 : ItemCore {
+        ACE_ScopeAdjust_Vertical[] = { 0, 0 };
+        ACE_ScopeAdjust_Horizontal[] = { -10, 10 };
+        ACE_ScopeAdjust_VerticalIncrement = 0.0;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.5;
+        class ItemInfo : InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class PSO {
+					discreteDistance[]={100, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
+					discreteDistanceInitIndex=3;
+                };
+            };
+        };
+    };
 };
