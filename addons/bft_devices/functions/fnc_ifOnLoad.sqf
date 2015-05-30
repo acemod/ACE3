@@ -36,7 +36,7 @@ _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
 [true,["MFD","FBCB2"]] call EFUNC(bft,updateRegisteredModes);
 
 // send "bft_deviceOpened" event
-["bft_deviceOpened", [I_GET_DEVICE]] call EFUNC(common,localEvent);
+["bft_deviceOpened",[I_GET_DEVICE]] call EFUNC(common,localEvent);
 
 GVAR(ifOpenStart) = false;
 
