@@ -87,6 +87,7 @@
         <Key ID="STR_ACE_mk6mortar_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
+            <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
         </Key>
     </Package>
 </Project>

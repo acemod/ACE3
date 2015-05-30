@@ -811,6 +811,7 @@
         <Key ID="STR_ACE_InteractionSystem_Module_Description">
             <English></English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
+            <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
         </Key>
     </Package>
 </Project>

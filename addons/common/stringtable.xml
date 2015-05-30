@@ -478,6 +478,7 @@
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English></English>
             <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
+            <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>

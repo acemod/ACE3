@@ -172,6 +172,7 @@
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
+            <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>

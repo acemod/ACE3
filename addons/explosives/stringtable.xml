@@ -533,6 +533,7 @@
         <Key ID="STR_ACE_Explosive_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
+            <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
         </Key>
     </Package>
 </Project>

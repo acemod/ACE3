@@ -14,6 +14,7 @@
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Calculate dynamic map illumination based on light conditions?</English>
             <Polish>Oblicza dynamiczne oświetlenie mapy bazujące na warunkach oświetleniowych</Polish>
+            <German>Berechne die Kartenauslichtung anhand des Umgebungslichts?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -48,6 +49,7 @@
         <Key ID="STR_ACE_Map_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
+            <German>Dieses Modul erweitert die Kartenfunktionen.</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -77,6 +79,7 @@
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English></English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
+            <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
         </Key>
     </Package>
 </Project>

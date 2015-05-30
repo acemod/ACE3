@@ -127,6 +127,7 @@
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English></English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
+            <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
         </Key>
     </Package>
 </Project>

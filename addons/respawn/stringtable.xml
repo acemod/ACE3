@@ -173,6 +173,7 @@
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
+            <German>Dieses Modul erlaubt es die Respawn-Einstellungen anzupassen.</German>
         </Key>
         <Key ID="STR_ACE_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
