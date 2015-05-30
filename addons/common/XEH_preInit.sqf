@@ -309,8 +309,8 @@ GVAR(SettingsInitialized) = false;
 // Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
-    // Raise a local event for other modules to listen too
-    ["ServerSettingsReceived", []] call FUNC(localEvent);
+    // Raise a global event to notify settings from the server have arrived
+    ["ServerSettingsReceived", []] call FUNC(globalEvent);
 };
 
 ACE_player = player;
