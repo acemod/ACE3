@@ -8,6 +8,7 @@ PREP(calculateBarometricPressure);
 PREP(calculateDewPoint);
 PREP(calculateHeatIndex);
 PREP(calculateRoughnessLength);
+PREP(calculateSpeedOfSound);
 PREP(calculateTemperatureAtHeight);
 PREP(calculateWetBulb);
 PREP(calculateWindChill);

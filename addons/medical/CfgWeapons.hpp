@@ -156,7 +156,7 @@ class CfgWeapons {
     class ACE_salineIV_500: ACE_salineIV {
         displayName = $STR_ACE_Medical_Saline_IV_500;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 2.5;
+            mass = 5;
         };
     };
     class ACE_salineIV_250: ACE_salineIV {

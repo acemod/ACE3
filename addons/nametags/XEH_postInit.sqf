@@ -58,5 +58,8 @@ GVAR(ShowNamesTime) = -10;
     };
 }, 5, []] call CBA_fnc_addPerFrameHandler;
 
-// Draw handle
-addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+// Wait until the colors are defined before starting to draw the nametags
+["SettingsInitialized", {
+    // Draw handle
+    addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+}] call EFUNC(common,addEventHandler);

@@ -216,5 +216,11 @@
             <English></English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
         </Key>
+        <Key ID="STR_ACE_nametags_tagsize_name">
+            <English>Nametags Size</English>
+        </Key>
+        <Key ID="STR_ACE_nametags_tagsize_description">
+            <English>Text and Icon Size Scaling</English>
+        </Key>
     </Package>
 </Project>

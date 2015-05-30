@@ -47,6 +47,8 @@ GVAR(DustHandler) = -1;
 GVAR(RainDrops) = objNull;
 GVAR(RainActive) = false;
 GVAR(RainLastLevel) = 0;
+GVAR(surfaceCache) = "";
+GVAR(surfaceCacheIsDust) = false;
 
 FUNC(CheckGlasses) = {
     if (GVAR(Current) != (goggles ace_player)) then {

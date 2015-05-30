@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="RangeCard">
+        <Key ID="STR_ACE_RangeCard_Name">
+            <English>Range Card</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_Description">
+            <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_OpenRangeCard">
+            <English>Open Range Card</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
+            <English>Open Range Card Copy</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
+            <English>Open Range Card</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
+            <English>Open Range Card Copy</English>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_CopyRangeCard">
+            <English>Copy Range Card</English>
+        </Key>
+    </Package>
+</Project>

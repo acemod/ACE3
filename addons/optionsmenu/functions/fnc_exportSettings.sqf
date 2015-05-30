@@ -18,8 +18,6 @@
 
 private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_value", "_compiledConfigEntry"];
 
-_compiledConfig = "
-";
 {
      /*_settingData = [
         _name,
@@ -55,25 +53,11 @@ class %1 {
     force = 1;
 };", _name, _value, format['"%1"', _typeName]];
 
-        _compiledConfig = _compiledConfig + _compiledConfigEntry;
+        "ace_clipboard" callExtension _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
 
-FUNC(clipboardExport) = {
-    private["_chunks"];
-    _chunks = [];
-    
-    _chunks = [_this select 0, ";"] call CBA_fnc_split;
-    
-    {
-        private["_chunk"];
-        _chunk = _x + ";";
-        "ace_clipboard" callExtension format["%1", _chunk];
-    } forEach _chunks;
-    
-    "ace_clipboard" callExtension "--COMPLETE--";
-};
-[_compiledConfig] call FUNC(clipboardExport);
+ "ace_clipboard" callExtension "--COMPLETE--";
 
 [LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);
 

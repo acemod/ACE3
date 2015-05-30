@@ -1,26 +1,19 @@
 ---
 layout: wiki
 title: Mission Modules
-description: 
+description: modules that can be used by mission makers.
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+Add modules that can be used by mission makers.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+### 1.1 Ambient sounds
 
+That module can be used to add ambient sounds around players, it let you choose the sounds and some parameters (distance, volume interval).
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`
