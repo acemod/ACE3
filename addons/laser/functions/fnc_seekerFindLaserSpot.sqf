@@ -48,7 +48,7 @@ _finalOwner = nil;
         if(IS_CODE(_method)) then {
             _laser = _x call _method;
         } else {
-            if(IS_LSTRING(_method)) then {
+            if(IS_STRING(_method)) then {
                 _laser = _x call (missionNamespace getVariable [_method, {}]);
             } else {
                 if(IS_ARRAY(_method)) then {

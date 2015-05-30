@@ -13,7 +13,7 @@ try {
         _index = (_hash select 0) find _key;
         if(_index != -1) then {
             _val = (_hash select 1) select _index;
-            if(IS_LSTRING(_val) && {_val == "ACREHASHREMOVEDONOTUSETHISVAL"}) then {
+            if(IS_STRING(_val) && {_val == "ACREHASHREMOVEDONOTUSETHISVAL"}) then {
                 _val = nil;
             };
         };
