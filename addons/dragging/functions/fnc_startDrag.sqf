@@ -43,7 +43,7 @@ _unit selectWeapon primaryWeapon _unit;
 // move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
-    _target setPos (getPos _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
+    _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
 
     [_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
 };
