@@ -1,4 +1,60 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class GVAR(BFT) {
+                    displayName = "BFT";
+                    condition = QUOTE(!(([ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])) || !(([vehicle ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])));
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                    exceptions[] = {"notOnMap", "isNotInside"};
+
+                    class openDisplay {
+                        displayName = "Open Overlay";
+                        condition = QUOTE(I_CLOSED);
+                        statement = QUOTE(0 call FUNC(onIfToggleKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class closeDisplay {
+                        displayName = "Close Overlay";
+                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
+                        statement = QUOTE([] call FUNC(ifClose));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class openDialog {
+                        displayName = "Open Interactive Mode";
+                        condition = QUOTE(I_CLOSED);
+                        statement = QUOTE(1 call FUNC(onIfToggleKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class toggleDisplayPosition {
+                        displayName = "Toggle Overlay Position (left/right)";
+                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
+                        statement = QUOTE([] call FUNC(onIfTogglePositionKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+                };
+            };
+        };
+    };
     // Boxes
     class Box_NATO_Support_F;
     class ACE_Box_BFT_b: Box_NATO_Support_F {
