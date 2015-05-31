@@ -7,7 +7,7 @@ parent: wiki
 ---
 
 ## 1. Overview
-ACE3 Weather is enabled by default. This feature simulates realistic weather according to map location, time of day, date, etc and makes sure every player experiences the same weather effects.
+ACE3 Weather simulates realistic weather effects, according to the geographical location of the map, the date and time. It also ensures that all players experience the same weather effects.
 
 ## 2. Usage
 
