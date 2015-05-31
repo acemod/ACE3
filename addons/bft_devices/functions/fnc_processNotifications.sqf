@@ -20,7 +20,9 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_displayName","_display","_ctrl","_currentTime","_text","_notification"];
+private ["_displayName","_display","_ctrl","_currentTime","_text","_notification","_decayTime","_counter"];
+
+disableSerialization;
 
 // make sure there is no PFH already, the interface is open and notifications are available
 if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificationCache) != 0) then {
@@ -38,17 +40,18 @@ if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificati
                 if (count GVAR(notificationCache) != 0) then {
                     // grab and delete the oldest notification
                     _notification = GVAR(notificationCache) deleteAt 0;
-                    
+                    _decayTime = _notification select 3;
+                    _counter = _notification select 4;
                     _currentTime = [] call FUNC(currentTime);
                     // see if notification was issued in the same minute, if so, omit showing the time
-                    if (_currentTime isEqualTo (_notification select 1)) then {
-                        _text = format ["%1",_notification select 2];
+                    _text = if (_currentTime isEqualTo (_notification select 1)) then {
+                        _notification select 2
                     } else {
-                        _text = format ["%1: %2",_notification select 1,_notification select 2];
+                        format ["%1: %2",_notification select 1,_notification select 2]
                     };
                     // if the counter on the notification is greater than 1, append the counter to the notification text
-                    if ((_notification select 3) > 1) then {
-                        _text = format ["%1 (x%2)",_text,_notification select 3];
+                    if (_counter > 1) then {
+                        _text = format ["%1 (x%2)",_text,_counter];
                     };
                     
                     // show the notification
@@ -66,7 +69,7 @@ if (isNil QGVAR(processNotificationsPFH) && !(I_CLOSED) && count GVAR(notificati
                     
                     // make the control fade out
                     _ctrl ctrlSetFade 1;
-                    _ctrl ctrlCommit 5;
+                    _ctrl ctrlCommit _decayTime;
                 } else {
                     [_this select 1] call CBA_fnc_removePerFrameHandler;
                     _ctrl ctrlShow false;
