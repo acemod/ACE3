@@ -24,14 +24,14 @@ You can surrender. While surrendering AI will cease fire.
 
 ### 2.1 Taking a unit into captivity
 - You need `Cable Tie`.
-- Approach the unit and Interact <kbd>Left Windows</kbd>.
+- Approach the unit and Interact <kbd>Left Windows</kbd> (ACE3 default keybind `Interact Key`).
 - The interaction is located around the hands in the form of a handcuffs icon.
 - Repeat to release.
 
 ### 2.2 Escorting a captive
 - Interact with the captive <kbd>Left Windows</kbd>.
 - Select the `Escort prisoner` option.
-- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>Left windows</kbd> and select `Release`.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>Left windows</kbd> and select `Release`.
 
 ### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the captive.

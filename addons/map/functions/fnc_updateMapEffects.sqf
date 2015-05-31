@@ -57,12 +57,12 @@ if (GVAR(mapShake)) then {
     } else {
         if (GVAR(isShaking)) then {
             // Stop shaking, return to original position
+            ctrlMapAnimClear _mapCtrl;
             _mapCtrl ctrlMapAnimAdd [0, _mapScale, GVAR(lastStillPosition)];
             ctrlMapAnimCommit _mapCtrl;
             GVAR(isShaking) = false;
         } else {
             // The map is still, store state
-            ctrlMapAnimClear _mapCtrl;
             GVAR(lastStillPosition) = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
             GVAR(lastStillTime) = ACE_time;
         };

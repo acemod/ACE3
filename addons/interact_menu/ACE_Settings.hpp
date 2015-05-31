@@ -4,7 +4,7 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
-    };    
+    };
     class GVAR(cursorKeepCentered) {
         value = 0;
         typeName = "BOOL";
@@ -54,7 +54,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_textSize";
         values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
-    };    
+    };
     class GVAR(shadowSetting) {
         value = 2;
         typeName = "SCALAR";
@@ -68,5 +68,12 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = "$STR_ACE_Interact_Menu_ActionOnKeyRelease";
+    };
+    class GVAR(blurScreen) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_Interact_Menu_blurScreen";
+        description = "$STR_ACE_Interact_Menu_blurScreenDesc";
     };
 };

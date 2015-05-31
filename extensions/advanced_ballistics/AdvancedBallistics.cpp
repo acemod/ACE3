@@ -501,7 +501,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
         temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        pressure = 1013.25 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 10 * bulletDatabase[index].overcast;
+        pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
             dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
@@ -577,7 +577,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         positionOffset[0] += sin(bulletDir + M_PI / 2) * spinDriftPartial;
         positionOffset[1] += cos(bulletDir + M_PI / 2) * spinDriftPartial;
 
-        if (bulletSpeed < 345 && bulletSpeedAvg > 340 && bulletSpeed > 335) {
+        double speedOfSound = 331.3 + (0.6 * temperature);
+        if (bulletSpeed < (speedOfSound + 5) && bulletSpeedAvg > speedOfSound && bulletSpeed > (speedOfSound - 5)) {
             std::uniform_real_distribution<double> distribution(0.0, 1.0);
             double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 

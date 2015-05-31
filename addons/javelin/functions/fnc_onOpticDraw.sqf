@@ -35,8 +35,17 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
-_configs = configProperties [configFile >> "CfgWeapons" >> (currentWeapon (vehicle ACE_player)), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
-if (((count _configs) < 1) || {(getNumber (_configs select 0)) != 1}) exitWith {
+private["_ammo", "_magazineConfig", "_weaponConfig"];
+_weaponConfig = configProperties [configFile >> "CfgWeapons" >> (currentWeapon _currentShooter), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+_magazineConfig = if ((currentMagazine _currentShooter) != "") then {
+    _ammo = getText (configFile >> "CfgMagazines" >> (currentMagazine _currentShooter) >> "ammo");
+    configProperties [(configFile >> "CfgAmmo" >> _ammo), "(configName _x) == 'ace_missileguidance'", false];
+} else {
+    []
+};
+
+//Only enable if both weapon and currentMagazine are enabled (bandaid to allow firing the "AP" missle)
+if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1} || {(count _magazineConfig) < 1} || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;

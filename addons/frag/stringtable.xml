@@ -4,29 +4,36 @@
         <Key ID="STR_ACE_frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Polish>Symulacja fragmentacji</Polish>
+            <Spanish>Simulación de fragmentación</Spanish>
         </Key>
         <Key ID="STR_ACE_frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
+            <Spanish>Activa la simulación de fragmentación ACE</Spanish>
             <Polish>Aktywuje symulację fragmentacji ACE</Polish>
         </Key>
         <Key ID="STR_ACE_frag_EnableSpall">
             <English>Spalling Simulation</English>
+            <Spanish>Simulación de astillamiento</Spanish>
             <Polish>Symulacja odprysków</Polish>
         </Key>
         <Key ID="STR_ACE_frag_EnableSpall_Desc">
             <English>Enable the ACE Spalling Simulation</English>
+            <Spanish>Activa la simulación de astillamiento ACE</Spanish>
             <Polish>Aktywuje symulację odprysków ACE</Polish>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
+            <Spanish>Máximos proyectiles rastreados</Spanish>
             <Polish>Maks. liczba śledzonych pocisków</Polish>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrack_Desc">
             <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
+            <Spanish>Este ajuste controla la cantidad máxima de proyectiles del sistema de fragmentación y astillamiento de los que se hará un seguimiento en cualquier momento dado. Si se disparan más proyectiles, no serán rastreados. Baja esta opción si no deseas una bajada de FPS en escenarios con muchos proyectiles (&gt;200 proyectiles en el aire a la vez)</Spanish>
             <Polish>To ustawienie kontroluje maksymalną ilość pocisków, jakie fragmentacja i odpryski symulują w danym momencie. Jeżeli więcej pocisków będzie wystrzelonych, wtedy nie będą one śledzone. Zmniejsz tą opcję jeżeli nie chcesz odczuwać spadków FPS podczas ciężkiej wymiany ognia (więcej niż 200 pocisków w powietrzu na raz).</Polish>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
+            <Spanish>Máximos proyectiles por cuadro</Spanish>
             <Polish>Maks. liczba pocisków na klatkę</Polish>
         </Key>
         <Key ID="STR_ACE_frag_MaxTrackPerFrame_Desc">
@@ -35,10 +42,12 @@
         </Key>
         <Key ID="STR_ACE_frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
+            <Spanish>(Solo SP) Seguimiento de depuración de Fragmentación/Astillamiento </Spanish>
             <Polish>(Tylko SP) Wizualny debug odł./odpr.</Polish>
         </Key>
         <Key ID="STR_ACE_frag_EnableDebugTrace_Desc">
             <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
+            <Spanish>(Solo SP) Requiere un reinicio misión/editor. Permite el seguimiento visual de la fragmentación y astillamientos de los proyectiles en modo SP.</Spanish>
             <Polish>(Tylko SP) Wymaga restartu misji/edytora. Aktywuje wizualne śledzenie odłamków oraz odprysków w trybie gry Single Player.</Polish>
         </Key>
     </Package>

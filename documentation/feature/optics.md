@@ -1,26 +1,15 @@
 ---
 layout: wiki
 title: Optics
-description: 
+description: 2D and PIP optics
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+Adds animated 2D and PIP variants of some optics (RCO/MRCO/ARCO/LRPS/MOS)
 
-### Sub-feature 2
-Short description of sub-feature 2.
-
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

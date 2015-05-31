@@ -217,5 +217,11 @@
             <Hungarian>Körvonal</Hungarian>
             <Italian>Contorno</Italian>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_blurScreen">
+            <English>Blur screen on interaction</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
+            <English>Blur the background while the interaction menu is open.</English>
+        </Key>
     </Package>
 </Project>
