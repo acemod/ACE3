@@ -9,7 +9,7 @@
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
             <Polish>Oświetlenie mapy</Polish>
-            <German>Kartenbeleuchtung</German>
+            <German>Kartenausleuchtung</German>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Calculate dynamic map illumination based on light conditions?</English>
