@@ -82,7 +82,7 @@ double calculateRoughnessLength(double posX, double posY) {
             return 1.6;
         }
 
-        return roughness_lengths[2 + std::min(nearBuildings, 6)];
+        return roughness_lengths[2 + (std::min)(nearBuildings, 6)];
     }
 
     return 0.0024;
