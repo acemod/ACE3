@@ -16,8 +16,8 @@
              alt="ACE zagadnienia">
     </a>
     <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
-        <img src="https://img.shields.io/badge/BIF-Wątek-lightgrey.svg"
-             alt="BIF wątek">
+        <img src="https://img.shields.io/badge/Temat-BIF-lightgrey.svg"
+             alt="Temat BIF">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg"
