@@ -33,7 +33,7 @@ _loadingCtrl = _display displayCtrl IDC_LOADINGTXT;
 _targetMapCtrl = controlNull;
 _targetMapScale = nil;
 _targetMapWorldPos = nil;
-_isDialog = [_displayName] call FUNC(isDialog);
+_isDialog = I_GET_ISDIALOG;
 
 if (count _this == 1) then {
     _settings = _this select 0;

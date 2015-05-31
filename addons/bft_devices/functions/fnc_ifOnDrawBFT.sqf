@@ -32,8 +32,7 @@ _vehicle = vehicle ACE_player;
 _position = getPosASL _vehicle;
 _heading = direction _vehicle;
 
-// temporary bodge
-_isDialog = [I_GET_NAME] call FUNC(isDialog);
+_isDialog = I_GET_ISDIALOG;
 
 if (_isDialog) then {
     GVAR(mapWorldPos) = [_ctrlScreen] call FUNC(ctrlMapCenter);

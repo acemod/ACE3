@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_handled","_previousInterface","_playerDevices","_vehicleDevices","_playerDeviceId","_vehicleDeviceId","_playerDeviceData","_vehicleDeviceData","_playerDeviceClassName","_vehicleDeviceClassName","_playerDeviceDisplayName","_playerDeviceDialogName","_vehicleDeviceDisplayName","_vehicleDeviceDialogName","_selectedInterface","_interfaceName","_deviceID"];
+private ["_handled","_previousInterface","_playerDevices","_vehicleDevices","_playerDeviceId","_vehicleDeviceId","_playerDeviceData","_vehicleDeviceData","_playerDeviceClassName","_vehicleDeviceClassName","_playerDeviceDisplayName","_playerDeviceDialogName","_vehicleDeviceDisplayName","_vehicleDeviceDialogName","_selectedInterface","_interfaceName","_deviceID","_isDialog"];
 
 _handled = false;
 
@@ -90,26 +90,26 @@ _vehicleDeviceDialogName = if (_vehicleDeviceClassName != "") then {
 _selectedInterface = switch (_this) do {
     case 0: {
         // display first, vehicle device first
-        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
-        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
-        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
-        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId,false]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId,false]};
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId,true]};
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId,true]};
         []
     };
     case 1: {
         // dialog first, vehicle device first
-        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
-        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
-        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
-        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId,true]};
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId,true]};
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId,false]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId,false]};
         []
     };
     case 2: {
         // dialog first, player device first
-        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId]};
-        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId]};
-        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId]};
-        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId]};
+        if (_playerDeviceDialogName != "") exitWith {[_playerDeviceDialogName,_playerDeviceId,true]};
+        if (_vehicleDeviceDialogName != "") exitWith {[_vehicleDeviceDialogName,_vehicleDeviceId,true]};
+        if (_playerDeviceDisplayName != "") exitWith {[_playerDeviceDisplayName,_playerDeviceId,false]};
+        if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceDisplayName,_vehicleDeviceId,false]};
         []
     };
     default {[]};
@@ -117,6 +117,7 @@ _selectedInterface = switch (_this) do {
 
 _interfaceName = _selectedInterface select 0;
 _deviceID = _selectedInterface select 1;
+_isDialog = _selectedInterface select 2;
 
 if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
@@ -125,7 +126,7 @@ if (_interfaceName != "" && _interfaceName != _previousInterface) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
             ((_this select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
         };
-    },0,[_deviceID,_this,_interfaceName]] call CBA_fnc_addPerFrameHandler;
+    },0,[_deviceID,_this,_interfaceName,_isDialog]] call CBA_fnc_addPerFrameHandler;
 };
 
 true

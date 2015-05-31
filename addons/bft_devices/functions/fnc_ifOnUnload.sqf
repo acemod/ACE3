@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID"];
+private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID","_isDialog"];
 
 // remove helmet and UAV cameras
 //[] call FUNC(deleteHelmetCam);
@@ -29,14 +29,15 @@ if !(I_CLOSED) then {
     _deviceID = I_GET_DEVICE;
     _ifType = I_GET_TYPE;
     _displayName = I_GET_NAME;
-    _player = GVAR(ifOpen) select 3;
-    _playerKilledEhId = GVAR(ifOpen) select 4;
-    _vehicle = GVAR(ifOpen) select 5;
-    _vehicleGetOutEhId = GVAR(ifOpen) select 6;
-    _draw3dEhId = GVAR(ifOpen) select 7;
-    _aceUnconciousEhId = GVAR(ifOpen) select 8;
-    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 9;
-    _acePlayerChangedEhId = GVAR(ifOpen) select 10;
+    _isDialog = I_GET_ISDIALOG;
+    _player = GVAR(ifOpen) select 4;
+    _playerKilledEhId = GVAR(ifOpen) select 5;
+    _vehicle = GVAR(ifOpen) select 6;
+    _vehicleGetOutEhId = GVAR(ifOpen) select 7;
+    _draw3dEhId = GVAR(ifOpen) select 8;
+    _aceUnconciousEhId = GVAR(ifOpen) select 9;
+    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 10;
+    _acePlayerChangedEhId = GVAR(ifOpen) select 11;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};
@@ -53,7 +54,7 @@ if !(I_CLOSED) then {
     
     // don't call this part if we are closing down before setup has finished
     if (!GVAR(ifOpenStart)) then {
-        if ([_displayName] call FUNC(isDialog)) then {
+        if (_isDialog) then {
             // convert mapscale to km
             _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
             

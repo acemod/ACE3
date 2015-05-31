@@ -25,7 +25,7 @@ if (I_CLOSED) exitWith {false};
 
 _displayName = I_GET_NAME;
 
-if ([_displayName] call FUNC(isDialog)) then {
+if (I_GET_ISDIALOG) then {
     // reset position to default
     [_displayName,[["dlgIfPosition",[]]],true,true] call FUNC(setSettings);
 } else {

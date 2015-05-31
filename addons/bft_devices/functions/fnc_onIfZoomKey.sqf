@@ -25,7 +25,7 @@ if (GVAR(ifOpenStart) || (I_CLOSED)) exitWith {false};
 
 _displayName = I_GET_NAME;
 // bail if this is a dialog
-if ([_displayName] call FUNC(isDialog)) exitWith {false};
+if (I_GET_ISDIALOG) exitWith {false};
 
 
 switch (_this) do {
