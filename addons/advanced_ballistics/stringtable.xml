@@ -62,7 +62,7 @@
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
-            <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das zu aktivieren könnte die Leistung während großen Feuergefechten im Multiplayer reduzieren)</German>
+            <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
         </Key>
         <Key ID="STR_ACE_AdvancedBallistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
