@@ -21,6 +21,8 @@
 
 private ["_displayName","_xOffset","_yOffset","_display","_isDialog","_backgroundCtrl","_backgroundClassName","_displayConfigContainers","_displayConfigClasses","_idc","_ctrl","_ctrlPosition"];
 
+disableSerialization;
+
 _displayName = _this select 0;
 _xOffset = _this select 1 select 0;
 _yOffset = _this select 1 select 1;
