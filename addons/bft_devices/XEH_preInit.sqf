@@ -35,7 +35,6 @@ PREP(onIfToggleKey);
 PREP(onIfTogglePositionKey);
 PREP(onIfZoomKey);
 PREP(onPlayerChanged);
-PREP(onPlayerInventoryChanged);
 PREP(processNotifications);
 PREP(setInterfacePosition);
 PREP(setSettings);

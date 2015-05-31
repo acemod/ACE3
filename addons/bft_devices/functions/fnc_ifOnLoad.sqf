@@ -32,8 +32,11 @@ _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
 	0 = [(_this select 0) displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
 } count (_mapTypes select 1);
 
+// register reporting modes
+[true,["MFD","FBCB2"]] call EFUNC(bft,updateRegisteredModes);
+
 // send "bft_deviceOpened" event
-["bft_deviceOpened", [I_GET_DEVICE]] call EFUNC(common,localEvent);
+["bft_deviceOpened",[I_GET_DEVICE]] call EFUNC(common,localEvent);
 
 GVAR(ifOpenStart) = false;
 
