@@ -3,12 +3,24 @@ class CfgVehicles {
     class ModuleEmpty_F;
     class ACE_Module;
 
-    class GVAR(moduleZeusSettings): ACE_Module {
+    class ModuleCurator_F: Module_F {
+        function = QFUNC(bi_moduleCurator);
+    };
+    class ModuleMine_F: ModuleEmpty_F {
+        function = QFUNC(bi_moduleMine);
+    };
+    class ModuleOrdnance_F: Module_F {
+        function = QFUNC(bi_moduleProjectile);
+    };
+    class ModuleRemoteControl_F: Module_F {
+        function = QFUNC(bi_moduleRemoteControl);
+    };
+    class GVAR(moduleSettings): ACE_Module {
         scope = 2;
         displayName = "$STR_ACE_Zeus_Module_DisplayName";
-        //icon = QUOTE(PATHTOF(iconGoesHere));
-        category = "ACE_zeus";
-        function = QUOTE(DFUNC(moduleZeusSettings));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa));
+        category = "ACE";
+        function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -64,17 +76,39 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-
-    class ModuleCurator_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleCurator));
+    class GVAR(moduleBase): Module_F {
+        author = "SilentSpike";
+        category = "ACE";
+        scopeCurator = 2;
     };
-    class ModuleMine_F: ModuleEmpty_F {
-        function = QUOTE(DFUNC(bi_moduleMine));
+    class GVAR(moduleCaptive): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "$STR_ACE_Zeus_ModuleCaptive_DisplayName";
+        function = QFUNC(moduleCaptive);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
+        class ModuleDescription {
+            description = "Flips the capture state of the specified unit.";
+            sync[] = {};
+        };
     };
-    class ModuleOrdnance_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleProjectile));
+    class GVAR(moduleSurrender): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "$STR_ACE_Zeus_ModuleSurrender_DisplayName";
+        function = QFUNC(moduleSurrender);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
+        class ModuleDescription {
+            description = "Flips the surrender state of the specified unit.";
+            sync[] = {};
+        };
     };
-    class ModuleRemoteControl_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleRemoteControl));
+    class GVAR(moduleUnconscious): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "$STR_ACE_Zeus_ModuleUnconscious_DisplayName";
+        function = QFUNC(moduleUnconscious);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        class ModuleDescription {
+            description = "Flips the unconscious state of the specified unit.";
+            sync[] = {};
+        };
     };
 };
