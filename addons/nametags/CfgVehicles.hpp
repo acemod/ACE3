@@ -1,9 +1,6 @@
 class CfgVehicles {
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class ACE_ModuleNameTags : Module_F {
+    class ACE_Module;
+    class ACE_ModuleNameTags: ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_NameTags_Module_DisplayName";
@@ -65,7 +62,7 @@ class CfgVehicles {
                 defaultValue = 0;
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_NameTags_Module_Description";
         };
     };
