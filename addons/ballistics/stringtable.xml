@@ -1596,6 +1596,7 @@
             <English>[ACE] Ammo Supply Crate</English>
             <Polish>[ACE] Skrzynka z amunicją</Polish>
             <Spanish>[ACE] Caja de suministros de munición</Spanish>
+            <German>[ACE] Munitionskiste</German>
         </Key>
     </Package>
 </Project>
