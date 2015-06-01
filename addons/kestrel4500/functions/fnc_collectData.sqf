@@ -29,8 +29,8 @@ _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
 _wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
-    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
-    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
+    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
+    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
 };
 
 {
