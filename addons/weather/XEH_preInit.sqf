@@ -5,6 +5,7 @@ ADDON = false;
 
 PREP(calculateAirDensity);
 PREP(calculateBarometricPressure);
+PREP(calculateDensityAltitude);
 PREP(calculateDewPoint);
 PREP(calculateHeatIndex);
 PREP(calculateRoughnessLength);
