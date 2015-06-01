@@ -18,6 +18,6 @@ class ACE_Settings {
     class GVAR(revealMines) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {"Disabled", "Partially", "Fully"};
+        values[] = {"$STR_ACE_Zeus_revealMines_disable", "$STR_ACE_Zeus_revealMines_partial", "$STR_ACE_Zeus_revealMines_full"};
     };
 };

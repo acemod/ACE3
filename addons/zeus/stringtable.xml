@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Zeus">
+        <Key ID="STR_ACE_Zeus_Module_DisplayName">
+            <English>Zeus Settings [ACE]</English>
+            <Polish>Ustawienia Zeusa [ACE]</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_Module_Description">
+            <English>Provides control over various aspects of Zeus.</English>
+            <Polish>Pozwala kontrolować różne aspekty Zeusa.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ascension_DisplayName">
+            <English>Ascension Messages</English>
+            <Polish>Wiad. o nowym Zeusie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ascension_Description">
+            <English>Display global popup messages when a player is assigned as Zeus.</English>
+            <Polish>Wyświetlaj globalną wiadomość kiedy gracz zostanie przydzielony jako Zeus</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_bird_DisplayName">
+            <English>Zeus Eagle</English>
+            <Polish>Orzeł Zeusa</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_bird_Description">
+            <English>Spawn an eagle that follows the Zeus camera.</English>
+            <Polish>Spawnuj orła, który podąrza za kamerą Zeusa.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
+            <English>Wind Sounds</English>
+            <Polish>Dźwięki wiatru</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_remoteWind_Description">
+            <English>Play wind sounds when Zeus remote controls a unit.</English>
+            <Polish>Odtwarzaj dźwięki wiatru kiedy Zeus zdalnie kontroluje jednostkę.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
+            <English>Ordnance Warning</English>
+            <Polish>Ostrz. o ostrzale arty.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
+            <English>Play a radio warning when Zeus uses ordnance.</English>
+            <Polish>Odtwarzaj wiadomość radiową kiedy Zeus używa artylerii.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
+            <English>Reveal Mines</English>
+            <Polish>Pokazuj miny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_Description">
+            <English>Reveal mines to allies and/or place map markers.</English>
+            <Polish>Pokazuj znaczniki min dla sojuszników i/lub twórz markery na mapie w miejscu min.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_disable">
+            <English>Disabled</English>
+            <Polish>Wyłączone</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_partial">
+            <English>Reveal to Allies</English>
+            <Polish>Pokaż dla sojuszników</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_full">
+            <English>Allies + Map Markers</English>
+            <Polish>Sojusznicy + markery na mapie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_category">
+            <English>ACE Zeus</English>
+            <Polish>ACE Zeus</Polish>
+        </Key>
+    </Package>
+</Project>
