@@ -11,7 +11,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ShowPlayerNames);
         description = CSTRING(ShowPlayerNames_Desc);
-        values[] = {CSTRING(Disabled), CSTRING(Enabled), CSTRING(OnlyCursor), CSTRING(OnlyOnKeypress), CSTRING(OnlyCursorAndKeyPress)};
+        values[] = {CSTRING(Disabled), CSTRING(Enabled), CSTRING(OnlyCursor), CSTRING(OnlyKeypress), CSTRING(OnlyCursorAndKeypress)};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
@@ -44,12 +44,12 @@ class ACE_Settings {
         description = CSTRING(ShowSoundWaves_Desc);
         values[] = {CSTRING(Disabled), CSTRING(NameTagSettings), CSTRING(AlwaysShowAll)};
     };
-    class GVAR(PlayerNamesViewDistance) {
+    class GVAR(playerNamesViewDistance) {
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
     };
-    class GVAR(PlayerNamesMaxAlpha) {
+    class GVAR(playerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;
@@ -58,8 +58,8 @@ class ACE_Settings {
         value = 2;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_nametags_tagsize_name";
-        description = "$STR_ACE_nametags_tagsize_description";
+        displayName = CSTRING(TagSize_Name);
+        description = CSTRING(TagSize_Description);
         values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
     };
 };

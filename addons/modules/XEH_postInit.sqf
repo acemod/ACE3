@@ -43,4 +43,4 @@
             };
         };
     }foreach GVAR(moduleInitCollection);
-}] call FUNC(addEventhandler);
+}] call EFUNC(common,addEventhandler);

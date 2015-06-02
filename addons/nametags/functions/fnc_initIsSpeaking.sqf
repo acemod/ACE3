@@ -4,13 +4,13 @@
  * Compatiblity with TFR/ACRE and Arma's VON
  *
  * Arguments:
- * NONE
+ * None
  *
  * Return Value:
- * NONE
+ * None
  *
  * Example:
- * [] call ACE_nametags_fnc_initIsSpeaking
+ * [] call ace_nametags_fnc_initIsSpeaking
  *
  * Public: No
  */

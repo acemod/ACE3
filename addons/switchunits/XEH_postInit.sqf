@@ -16,6 +16,7 @@
 
 #include "script_component.hpp"
 
+
 if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
     [player] call FUNC(startSwitchUnits);
 } else {
@@ -24,5 +25,5 @@ if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
         if ((_name == QGVAR(EnableSwitchUnits)) && {_value}) then {
             [player] call FUNC(startSwitchUnits);
         };
-    }] call EFUNC(common,addEventhandler); 
+    }] call EFUNC(common,addEventhandler);
 };

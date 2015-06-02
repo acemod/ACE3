@@ -66,7 +66,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(PlacingInBodyBag);
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 2;
+            treatmentTime = 4;
             items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));

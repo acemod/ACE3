@@ -152,7 +152,7 @@
             <German>Verstecken erzwingen</German>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
-            <English>Force show</English>
+            <English>Force Show</English>
             <Polish>Wymuś wyświetlanie</Polish>
             <Spanish>Mostrar forzado</Spanish>
             <German>Anzeigen erzwingen</German>
@@ -182,7 +182,7 @@
             <German>Zeige Maus-Namensanzeigen für Fahrzeugkommandanten (nur wenn der Client Namensanzeigen aktiviert hat). Standard: Nein</German>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
-            <English></English>
+            <English>This module allows you to customize settings and range of Name Tags.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
             <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
         </Key>
@@ -199,22 +199,31 @@
             <German>Aktiviert</German>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
-            <English>Only Cursor</English>
+            <English>Only on Cursor</English>
             <Polish>Tylko pod kursorem</Polish>
             <Spanish>Solo cursor</Spanish>
             <German>Nur bei Maus</German>
         </Key>
-        <Key ID="STR_ACE_NameTags_OnlyOnKeypress">
-            <English>Only On Keypress</English>
+        <Key ID="STR_ACE_NameTags_OnlyKeypress">
+            <English>Only on Keypress</English>
             <Polish>Tylko po wciśnięciu klawisza</Polish>
             <Spanish>Solo al pulsar tecla</Spanish>
             <German>Nur bei Tastendruck</German>
         </Key>
-        <Key ID="STR_ACE_NameTags_OnlyCursorAndKeyPress">
-            <English>Only Cursor and KeyPress</English>
+        <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
+            <English>Only on Cursor and Keypress</English>
             <Polish>Tylko pod kursorem i po wciśnięciu klawisza</Polish>
             <Spanish>En cursor y al pulsar tecla</Spanish>
             <German>Nur Maus und Tastendruck</German>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
+            <English>Force Show Only on Cursor</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
+            <English>Force Show Only on Keypress</English>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
+            <English>Force Show Only on Cursor and Keypress</English>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -229,17 +238,17 @@
             <German>Immer alle zeigen</German>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
-            <English></English>
+            <English>Show player names and set their activation. Default: Enabled</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
-            <English></English>
+            <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
         </Key>
-        <Key ID="STR_ACE_nametags_tagsize_name">
+        <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
         </Key>
-        <Key ID="STR_ACE_nametags_tagsize_description">
+        <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
         </Key>
     </Package>

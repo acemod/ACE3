@@ -15,6 +15,38 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 5;
             };
+            class showPlayerNames {
+                displayName = CSTRING(ShowPlayerNames);
+                description = CSTRING(ShowPlayerNames_Desc);
+                typeName = "NUMBER";
+                class values {
+                    class DoNotForce {
+                        default = 1;
+                        name = CSTRING(DoNotForce);
+                        value = -1;
+                    };
+                    class ForceHide {
+                        name = CSTRING(ForceHide);
+                        value = 0;
+                    };
+                    class ForceShow {
+                        name = CSTRING(ForceShow);
+                        value = 1;
+                    };
+                    class ForceShowOnlyCursor {
+                        name = CSTRING(ForceShowOnlyCursor);
+                        value = 2;
+                    };
+                    class ForceShowOnlyKeypress {
+                        name = CSTRING(ForceShowOnlyKeypress);
+                        value = 3;
+                    };
+                    class ForceShowOnlyCursorAndKeypress {
+                        name = CSTRING(ForceShowOnlyCursorAndKeypress);
+                        value = 4;
+                    };
+                };
+            };
             class showNamesForAI {
                 displayName = CSTRING(showNamesForAI_DisplayName);
                 description = CSTRING(showNamesForAI_Description);
