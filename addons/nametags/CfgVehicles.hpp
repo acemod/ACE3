@@ -9,12 +9,6 @@ class CfgVehicles {
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
-            class PlayerNamesViewDistance {
-                displayName = CSTRING(PlayerNamesViewDistance_DisplayName);
-                description = CSTRING(PlayerNamesViewDistance_Description);
-                typeName = "NUMBER";
-                defaultValue = 5;
-            };
             class showPlayerNames {
                 displayName = CSTRING(ShowPlayerNames);
                 description = CSTRING(ShowPlayerNames_Desc);
@@ -46,6 +40,12 @@ class CfgVehicles {
                         value = 4;
                     };
                 };
+            };
+            class playerNamesViewDistance {
+                displayName = CSTRING(PlayerNamesViewDistance_DisplayName);
+                description = CSTRING(PlayerNamesViewDistance_Description);
+                typeName = "NUMBER";
+                defaultValue = 5;
             };
             class showNamesForAI {
                 displayName = CSTRING(showNamesForAI_DisplayName);
