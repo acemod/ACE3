@@ -24,7 +24,7 @@ if (!isNull (GVAR(sandBag))) then {
     GVAR(sandBag) = objNull;
 };
 
-[GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
+[GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
 
 GVAR(sandBag) = objNull;
 GVAR(placer) = objNull;
