@@ -26,9 +26,9 @@ if (!isNull (GVAR(sandBag))) then {
 
 [GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
 
-GVAR(sandBag) = objNull;
-GVAR(placer) = objNull;
-
 call EFUNC(interaction,hideMouseHint);
 [GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(Common,removeActionEventHandler);
 [GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
+
+GVAR(sandBag) = objNull;
+GVAR(placer) = objNull;
