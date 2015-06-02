@@ -21,7 +21,6 @@ if (isNull GVAR(placer)) exitWith {};
 
 if (!isNull (GVAR(sandBag))) then {
     deleteVehicle GVAR(sandBag);
-    GVAR(sandBag) = objNull;
 };
 
 [GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
