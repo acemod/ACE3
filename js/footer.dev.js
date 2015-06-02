@@ -4208,12 +4208,12 @@ window.app.analytics = (function () {
 
     function sendEvent(category, action, label, value) {
 
-        if (!ga) {
-            return null;
+        if (!window.ga) {
+            return;
         }
 
         try {
-            return ga("send", "event", category, action, label, value);
+            ga("send", "event", category, action, label, value);
         } catch(ex)  {}
     }
 
