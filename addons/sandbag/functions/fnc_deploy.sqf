@@ -26,7 +26,7 @@ GVAR(sandBag) enableSimulationGlobal false;
 
 GVAR(deployPFH) = [{
     if (GVAR(placer) != ACE_player) exitWith {
-        call FUNC(deployCancle);
+        call FUNC(deployCancel);
     };
     GVAR(sandBag) setPosASL ((eyePos ACE_player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));
     GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
@@ -43,5 +43,5 @@ GVAR(placer) setVariable [QGVAR(Deploy),
 GVAR(placer) setVariable [QGVAR(Cancel),
     [GVAR(placer), "zoomtemp",
     {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployCancle);}
+    {call FUNC(deployCancel);}
 ] call EFUNC(common,AddActionEventHandler)];
