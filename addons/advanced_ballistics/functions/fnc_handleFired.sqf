@@ -133,7 +133,7 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
     
-    if (_bulletTraceVisible && _bulletSpeed > 600) then {
+    if (_bulletTraceVisible && _bulletSpeed > 500) then {
         drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.6],[0,0,0,0.4]],[1,0],0,0,"","",""];
     };
 
