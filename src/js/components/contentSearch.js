@@ -222,14 +222,14 @@ window.app.contentSearch = (function ($) {
 
     function handleLiveSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesLive);
-        app.analytics.sendEvent("LiveSearch", "Search", _searchTerm);
+        app.analytics.sendEvent("LiveSearch", "Search", "searchTerm", _searchTerm);
         showLiveResultList(results);
     }
 
     function openSearchPage(e) {
         e.preventDefault();
         var searchTerm = $liveSearchField.val().trim();
-        app.analytics.sendEvent("LiveSearch", "OpenSearchPage", searchTerm);
+        app.analytics.sendEvent("LiveSearch", "OpenSearchPage", "searchTerm", searchTerm);
         document.location.href = String.format("search.html?{0}={1}", searchTermParamName, encodeURIComponent(searchTerm));
         return false;
     }
@@ -298,7 +298,7 @@ window.app.contentSearch = (function ($) {
 
     function handleContentSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesContent);
-        app.analytics.sendEvent("ContentSearch", "Search", _searchTerm);
+        app.analytics.sendEvent("ContentSearch", "Search", "searchTerm", _searchTerm);
         showContentResultList(results);
     }
 

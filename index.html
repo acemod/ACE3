@@ -44,7 +44,7 @@ order: 0
                     <h2 class="subheader">{{ page.browserTitle }}</h2>
                 </div>
                 <div class="large-5 columns">
-                    <a class="button" href="{{site.githubUrl}}/releases/latest"><i class="fa fa-download"></i> Get ACE3 v3.0.1</a><br>
+                    <a class="button" target="_blank" href="{{site.githubUrl}}/releases/latest" onclick="app.analytics.sendEvent('ExternalLink', 'Click', 'href', this.href);"><i class="fa fa-download"></i> Get ACE3 v3.0.1</a><br>
                     <a href="{{site.baseurl}}/wiki/user/installation-guide.html">Installation Guide</a>
                 </div>
             </div>
@@ -61,11 +61,11 @@ order: 0
                     <br/>Everything you need to know about using the mod.</p>
             </div>
             <div class="large-4 medium-4 columns">
-                <p><a href="{{ site.githubUrl }}">ACE3 on Github</a><br/>Latest code, issue reports, feature requests
+                <p><a target="_blank" href="{{ site.githubUrl }}" onclick="app.analytics.sendEvent('ExternalLink', 'Click', 'href', this.href);">ACE3 on Github</a><br/>Latest code, issue reports, feature requests
                     and more.</p>
             </div>
             <div class="large-4 medium-4 columns">
-                <p><a href="http://twitter.com/ace3mod">@ace3mod</a><br/>Ping us on Twitter if you have questions.<br/>
+                <p><a target="_blank" href="http://twitter.com/ace3mod" onclick="app.analytics.sendEvent('ExternalLink', 'Click', 'href', this.href);">@ace3mod</a><br/>Ping us on Twitter if you have questions.<br/>
                     If you made something with this mod (screenshots, artwork, videos) we'd love to see it.</p>
             </div>
         </div>
