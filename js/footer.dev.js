@@ -4203,6 +4203,27 @@ utils.countOccurrences = function (text, searchTerm) {
 };
 
 window.app = window.app || {};
+window.app.analytics = (function () {
+
+
+    function sendEvent(category, action, label, value) {
+
+        if (!ga) {
+            return null;
+        }
+
+        try {
+            return ga("send", "event", category, action, label, value);
+        } catch(ex)  {}
+    }
+
+
+    return {
+        sendEvent: sendEvent
+    };
+})();
+
+window.app = window.app || {};
 window.app.storage = (function () {
 
     var prefix = "ace3_";
@@ -4469,12 +4490,14 @@ window.app.contentSearch = (function ($) {
 
     function handleLiveSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesLive);
+        app.analytics.sendEvent("LiveSearch", "Search", _searchTerm);
         showLiveResultList(results);
     }
 
     function openSearchPage(e) {
         e.preventDefault();
         var searchTerm = $liveSearchField.val().trim();
+        app.analytics.sendEvent("LiveSearch", "OpenSearchPage", searchTerm);
         document.location.href = String.format("search.html?{0}={1}", searchTermParamName, encodeURIComponent(searchTerm));
         return false;
     }
@@ -4543,6 +4566,7 @@ window.app.contentSearch = (function ($) {
 
     function handleContentSearchResult(response) {
         var results = findSearchTermInArray(response, _maxEntriesContent);
+        app.analytics.sendEvent("ContentSearch", "Search", _searchTerm);
         showContentResultList(results);
     }
 

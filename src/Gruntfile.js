@@ -13,6 +13,7 @@ module.exports = function (grunt) {
         "js/vendor/slick/slick.js",
         "js/vendor/jekyll-toc/jekyll-toc.js",
         "js/core/utils.js",
+        "js/components/analytics.js",
         "js/components/storage.js",
         "js/components/contentSearch.js",
         "js/app.js"

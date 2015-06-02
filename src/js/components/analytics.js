@@ -2,21 +2,15 @@ window.app = window.app || {};
 window.app.analytics = (function () {
 
 
-    function sendEvent(eventName, eventLabel) {
+    function sendEvent(category, action, label, value) {
 
-        if (!dataLayer) {
+        if (!ga) {
             return null;
         }
 
-        var event = {
-            "event": eventName
-        };
-
-        if (!!eventLabel && eventLabel != "") {
-            event["eventLabel"] = eventLabel;
-        }
-
-        dataLayer.push(event);
+        try {
+            return ga("send", "event", category, action, label, value);
+        } catch(ex)  {}
     }
 
 
