@@ -1,6 +1,6 @@
 class CfgVehicles {
-    class Module_F;
-    class ACE_ModuleMap: Module_F {
+    class ACE_Module;
+    class ACE_ModuleMap: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
@@ -39,6 +39,7 @@ class CfgVehicles {
         };
     };
 
+    class Module_F;
     class ACE_ModuleBlueForceTracking: Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";

@@ -269,6 +269,9 @@ GVAR(commonPostInited) = true;
 
     diag_log text format["[ACE] Settings received from server"];
 
+    // Event so that ACE_Modules have their settings loaded:
+    ["InitSettingsFromModules", []] call FUNC(localEvent);
+
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);

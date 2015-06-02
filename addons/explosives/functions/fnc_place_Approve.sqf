@@ -37,7 +37,7 @@ if (_dir > 180) then {
 } else {
     _dir = 180 + _dir;
 };
-_setup setVariable [QGVAR(Direction), _dir];
+_setup setVariable [QGVAR(Direction), _dir, true];
 _player setVariable [QGVAR(PlantingExplosive), true];
 [{_this setVariable [QGVAR(PlantingExplosive), false]}, _player, 1.5, 0.5] call EFUNC(common,waitAndExecute);
 _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];

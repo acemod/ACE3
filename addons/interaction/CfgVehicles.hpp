@@ -1,7 +1,6 @@
 class CfgVehicles {
-
-  class Module_F;
-  class ACE_ModuleInteraction: Module_F {
+  class ACE_Module;
+  class ACE_ModuleInteraction: ACE_Module {
     author = ECSTRING(common,ACETeam);
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);

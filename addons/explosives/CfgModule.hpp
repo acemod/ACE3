@@ -1,8 +1,5 @@
-class Logic;
-class Module_F: Logic {
-    class ModuleDescription {};
-};
-class ACE_ModuleExplosive: Module_F {
+class ACE_Module;
+class ACE_ModuleExplosive: ACE_Module {
     author = ECSTRING(common,ACETeam);
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);
@@ -24,7 +21,7 @@ class ACE_ModuleExplosive: Module_F {
             defaultValue = 1;
         };
     };
-    class ModuleDescription: ModuleDescription {
+    class ModuleDescription {
         description = CSTRING(Module_Description);
     };
 };

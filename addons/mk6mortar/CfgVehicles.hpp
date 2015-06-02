@@ -43,12 +43,9 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class GVAR(module): Module_F {
-        author = ECSTRING(common,ACETeam);
+    class ACE_Module;
+    class GVAR(module): ACE_Module {
+        author = "ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
@@ -76,7 +73,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = CSTRING(Module_Description);
         };
     };

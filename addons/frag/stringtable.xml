@@ -4,33 +4,41 @@
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Spanish>Simulación de fragmentación</Spanish>
+            <German>Splittersimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
             <Spanish>Activa la simulación de fragmentación ACE</Spanish>
+            <German>Aktiviere die ACE-Splittersimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall">
             <English>Spalling Simulation</English>
             <Spanish>Simulación de astillamiento</Spanish>
+            <German>Explosionssimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall_Desc">
             <English>Enable the ACE Spalling Simulation</English>
             <Spanish>Activa la simulación de astillamiento ACE</Spanish>
+            <German>Aktiviere ACE-Explosionssimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
             <Spanish>Máximos proyectiles rastreados</Spanish>
+            <German>Maximalzahl der verfolgten Projektile</German>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack_Desc">
             <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
             <Spanish>Este ajuste controla la cantidad máxima de proyectiles del sistema de fragmentación y astillamiento de los que se hará un seguimiento en cualquier momento dado. Si se disparan más proyectiles, no serán rastreados. Baja esta opción si no deseas una bajada de FPS en escenarios con muchos proyectiles (&gt;200 proyectiles en el aire a la vez)</Spanish>
+            <German>Diese Einstellung steuert die maximale Anzahl an Projektilen, die das Splitter- und Explosionssystem gleichzeitig verfolgen wird. Wenn mehr Projektile abgefeuert werden, werden sie nicht verfolgt werden. Diese Einstellung zu verringern, kann FPS-Einbrüche bei Szenarien mit vielen Projektilen verhindern (&gt;200 Objekte gleichzeitig in der Luft)</German>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
             <Spanish>Máximos proyectiles por cuadro</Spanish>
+            <German>Maximale Anzahl an Projektilen pro Frame</German>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
             <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
+            <German>Gibt die Anzahl der Explosionverfolgungsberechnungen an, die gleichzeitig ausgeführt werden. Das kann dabei helfen den FPS-Einfluss abzuschwächen, wenn Teile über mehrere Frames hinweg verfolgt werden.</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
@@ -39,6 +47,7 @@
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
             <Spanish>(Solo SP) Requiere un reinicio misión/editor. Permite el seguimiento visual de la fragmentación y astillamientos de los proyectiles en modo SP.</Spanish>
+            <German>(nur SP) Splitter-/Explosions-Debugging</German>
         </Key>
     </Package>
 </Project>

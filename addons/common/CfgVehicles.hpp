@@ -1,4 +1,3 @@
-
 class CfgVehicles {
   /*class Man;
   class CAManBase: Man {
@@ -24,12 +23,12 @@ class CfgVehicles {
 
   // += needs a non inherited entry in that class, otherwise it simply overwrites
   //#include <DefaultItems.hpp>
-
-   class Logic;
-   class Module_F: Logic {
-     class ModuleDescription {};
-   };
-   class ACE_ModuleCheckPBOs: Module_F {
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
+    class ACE_ModuleCheckPBOs: ACE_Module {
     author = CSTRING(ACETeam);
     category = "ACE";
     displayName = CSTRING(CheckPBO_DisplayName);
@@ -77,7 +76,7 @@ class CfgVehicles {
     };
   };
 
-  class ACE_ModuleLSDVehicles: Module_F {
+  class ACE_ModuleLSDVehicles: ACE_Module {
     author = CSTRING(ACETeam);
     category = "ACE";
     displayName = CSTRING(LSDVehicles_DisplayName);

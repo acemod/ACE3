@@ -41,14 +41,14 @@ class CfgWeapons {
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
     
-    class MMG_02_base_F : rifle_Base_F {
+    class MMG_02_base_F: Rifle_Long_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
 
-    class MMG_01_base_F : rifle_Base_F {
+    class MMG_01_base_F: Rifle_Long_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};

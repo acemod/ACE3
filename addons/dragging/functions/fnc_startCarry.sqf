@@ -41,7 +41,7 @@ if (_target isKindOf "CAManBase") then {
 
     // move a bit closer and adjust direction when trying to pick up a person
     _target setDir (getDir _unit + 180);
-    _target setPos (getPos _unit vectorAdd vectorDir _unit);
+    _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);

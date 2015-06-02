@@ -1,9 +1,6 @@
 class CfgVehicles {
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class ACE_ModuleRespawn: Module_F {
+    class ACE_Module;
+    class ACE_ModuleRespawn: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Module_DisplayName);
@@ -27,12 +24,12 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = CSTRING(Module_Description);
         };
     };
 
-    class ACE_ModuleFriendlyFire: Module_F {
+    class ACE_ModuleFriendlyFire: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(FriendlyFire_Module_DisplayName);
@@ -42,12 +39,12 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
 
         class Arguments {};
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = CSTRING(FriendlyFire_Module_Description);
         };
     };
 
-    class ACE_ModuleRallypoint: Module_F {
+    class ACE_ModuleRallypoint: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(Rallypoint_Module_DisplayName);
@@ -57,7 +54,7 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
 
         class Arguments {};
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = CSTRING(Rallypoint_Module_Description);
         };
     };
