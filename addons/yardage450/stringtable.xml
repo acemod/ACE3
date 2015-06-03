@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MX2A">
+        <Key ID="STR_ACE_Yardage450_DisplayName">
+            <English>Yardage 450</English>
+        </Key>
+        <Key ID="STR_ACE_Yardage450_Description">
+            <English>Laser Rangefinder</English>
+            <German>Laserentfernungsmesser</German>
+        </Key>
+        <Key ID="STR_ACE_Yardage450_PowerButtonKey">
+            <English>Yardage 450 - Power Button</English>
+            <German>Yardage 450 - Einschalt-Taste</German>
+        </Key>
+    </Package>
+</Project>
