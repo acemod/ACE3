@@ -169,6 +169,9 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
         // Pain effect
         _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
+        if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
+            _strength = _strength min 0.1;
+        };
         _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
         if (GVAR(painEffectType) == 1) then {
             GVAR(effectPainCC) ppEffectEnable false;
