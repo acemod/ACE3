@@ -3,6 +3,7 @@ class CfgWeapons
     class Pistol_Base_F;
     class Rifle_Base_F;
     class Rifle_Long_Base_F;
+    class Launcher_Base_F;
     class CUP_hgun_Colt1911 : Pistol_Base_F {
         ACE_barrelTwist=406.4;
         ACE_barrelLength=127.0;
@@ -495,5 +496,10 @@ class CfgWeapons
                 };
             };
         };
+    };
+    class CUP_launch_Igla: Launcher_Base_F {
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
+        GVAR(damage) = 0.5;
     };
 };
