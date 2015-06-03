@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
-            <English>Ear Plugs</English>
+            <English>Earplugs</English>
             <German>Ohrenstöpsel</German>
             <Spanish>Tapones para los oídos</Spanish>
             <Polish>Stopery do uszu</Polish>
@@ -14,7 +14,7 @@
             <Italian>Tappi auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
-            <English>Protective Ear Plugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
+            <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
             <German>Schützende Ohrenstöpsel, die es dem Träger ermöglichen, sich in der Nähe lauter Waffen aufzuhalten ohne Gehörschäden davonzutragen..</German>
             <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
@@ -74,7 +74,7 @@
             <Italian>Levati i tappi auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
-            <English>You have no ear plugs</English>
+            <English>You have no earplugs</English>
             <German>Keine Ohrenstöpsel im Inventar</German>
             <Spanish>No tienes tapones para los oídos</Spanish>
             <Polish>Nie masz stoperów</Polish>

@@ -107,7 +107,7 @@ ACE_M84 | M84 Stun Grenade |
 
 classname | in game name | type   |
 --------- | --------- | ---------
-ACE_EarPlugs | Ear Plugs | ACE_ItemCore |
+ACE_EarPlugs | Earplugs | ACE_ItemCore |
 
 ### Kestrel
 `added in 3.0.0.3`
