@@ -86,6 +86,7 @@ class CfgVehicles {
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
+                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
             };
             class ACE_StopSurrenderingSelf {
                 displayName = "$STR_ACE_Captives_StopSurrendering";
@@ -94,6 +95,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSurrendering"};
                 showDisabled = 0;
                 priority = 0;
+                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
             };
         };
     };
@@ -182,7 +184,7 @@ class CfgVehicles {
         displayName = "$STR_ACE_Captives_ModuleSettings_DisplayName";
         function = QFUNC(moduleSettings);
         scope = 2;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
         isGlobal = 1;
         class Arguments {
             class allowHandcuffOwnSide {
