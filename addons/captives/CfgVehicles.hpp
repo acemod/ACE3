@@ -162,7 +162,7 @@ class CfgVehicles {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_Captives_ModuleSurrender_DisplayName"; //Make Unit Surrender
-        function = QUOTE(DFUNC(moduleSurrender));
+        function = QFUNC(moduleSurrender);
         scope = 2;  //show in editor
         isGlobal = 1; //run global
         isTriggerActivated  = 1; //Wait for triggers
@@ -172,6 +172,35 @@ class CfgVehicles {
         class ModuleDescription: ModuleDescription {
             description = "$STR_ACE_Captives_ModuleSurrender_Description"; //Sync a unit to make them surrender.<br/>Source: ace_captives
             sync[] = {"AnyAI"};
+        };
+    };
+
+    class ACE_Module: Module_F {};
+    class GVAR(moduleSettings): ACE_Module {
+        author = "$STR_ACE_Common_ACETeam";
+        category = "ACE";
+        displayName = "$STR_ACE_Captives_ModuleSettings_DisplayName";
+        function = QFUNC(moduleSettings);
+        scope = 2;
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
+        isGlobal = 1;
+        class Arguments {
+            class allowHandcuffOwnSide {
+                displayName = "$STR_ACE_Captives_ModuleSettings_handcuffSide_name";
+                description = "$STR_ACE_Captives_ModuleSettings_handcuffSide_description";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class allowSurrender {
+                displayName = "$STR_ACE_Captives_ModuleSettings_allowSurrender_name";
+                description = "$STR_ACE_Captives_ModuleSettings_allowSurrender_description";
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription: ModuleDescription {
+            description = "$STR_ACE_Captives_ModuleSettings_Description";
+            sync[] = {};
         };
     };
 };
