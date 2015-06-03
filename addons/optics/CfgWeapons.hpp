@@ -253,6 +253,7 @@ class CfgWeapons {
     };
 
     class optic_LRPS: ItemCore {
+        GVAR(switchableTo)[] = {"optic_LRPS", "ACE_optic_LRPS_2D", "ACE_optic_LRPS_PIP"};
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip;
@@ -261,6 +262,8 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_2D: optic_LRPS {
+        GVAR(switchableTo)[] = {"optic_LRPS", "ACE_optic_LRPS_2D", "ACE_optic_LRPS_PIP"};
+        
         GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
         GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
@@ -288,6 +291,8 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
+        GVAR(switchableTo)[] = {"optic_LRPS", "ACE_optic_LRPS_2D", "ACE_optic_LRPS_PIP"};
+        
         author = "$STR_ACE_Common_ACETeam";
         _generalMacro = "ACE_optic_LRPS_PIP";
         //scopeArsenal = 1;

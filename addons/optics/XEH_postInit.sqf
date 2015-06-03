@@ -38,3 +38,25 @@ if (!hasInterface) exitWith {};
         GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
     };
 }] call EFUNC(common,addEventHandler);
+
+DFUNC(updateOptics) = {
+    if ((isNull ACE_player) || {!alive ACE_player} || {GVAR(prefferedOpticType) == 0}) exitWith {};
+
+    _currentScope = (primaryWeaponItems ACE_player) select 2;
+    if (_currentScope == "") exitWith {};
+
+    _configs = configProperties [configFile >> "CfgWeapons" >> _currentScope, QUOTE(configName _x == QUOTE(QGVAR(switchableTo))), false];
+    if ((count _configs) != 1) exitWith {};
+    _switchableToArray = getArray (_configs select 0);
+
+    if ((GVAR(prefferedOpticType) - 1) > (count _switchableToArray)) exitWith {};
+    _preferedScope = _switchableToArray select (GVAR(prefferedOpticType) - 1);
+
+    if ((_currentScope == _preferedScope) || {_preferedScope == ""}) exitWith {};
+
+    ACE_player removePrimaryWeaponItem _currentScope;
+    ACE_player addPrimaryWeaponItem _preferedScope;
+};
+
+["playerInventoryChanged", DFUNC(updateOptics)] call EFUNC(common,addEventHandler);
+["SettingChanged", {if ((_this select 0) == QGVAR(prefferedOpticType)) then {[] call FUNC(updateOptics)};}] call EFUNC(common,addEventhandler);
