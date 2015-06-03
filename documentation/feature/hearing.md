@@ -18,12 +18,12 @@ missile launchers will be equipped with those, but remember to put them in.
 ## 2. Usage
 
 ### 2.1 Equipping earplugs
-- For this you obviously need `Ear plugs`.
-- Press the self interaction key <kbd>CTRL</kbd> + <kbd>left windows</kbd> (ACE3 default  keybind `Self Interaction Key`).
-- Select `equipment`.
+- For this you need the `Ear plugs` item.
+- Press the self interaction key <kbd>CTRL</kbd> + <kbd>Left Windows</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Select `Equipment`.
 - Select `Earplugs in`.
 - Same method to remove them but the option is `Earplugs out`.
-- Note that you CAN re-use ear plugs.
+- Note: you're able to re-use ear plugs.
 
 ## 3. Dependencies
 
