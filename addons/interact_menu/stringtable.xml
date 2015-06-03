@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -219,9 +220,11 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreen">
             <English>Blur screen on interaction</English>
+            <Polish>Rozmyj ekran podczas interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
+            <Polish>Rozmywa tło na czas otwarcia menu interakcji</Polish>
         </Key>
     </Package>
 </Project>
