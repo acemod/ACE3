@@ -6,8 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"TaoSensai","commy2","Ruthberg"};
-        authorUrl = "https://github.com/Taosenai/tmr";
+        author[] = {"commy2","Ruthberg"};
         VERSION_CONFIG;
     };
 };

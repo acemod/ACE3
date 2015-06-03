@@ -1,3 +1,18 @@
+/*
+ * Author: <N/A>
+ * Draws names and icons.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_nametags_fnc_onDraw3d
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL", "_ambientBrightness", "_maxDistance"];
@@ -9,7 +24,7 @@ _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] sel
 _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 _onKeyPressAlphaMax = if ((GVAR(showPlayerNames) in [3,4])) then {
-    2 + (GVAR(ShowNamesTime) - ACE_time); //after release 1 second of full opacity, 1 second of fading to 0
+    2 + (GVAR(showNamesTime) - ACE_time); //after release 1 second of full opacity, 1 second of fading to 0
 } else {
     1
 };
@@ -29,10 +44,10 @@ if (GVAR(showCursorTagForVehicles) && {_onKeyPressAlphaMax > 0}) then {
         if ((!isNull _target) &&
                 {(side (group _target)) == (side (group ACE_player))} &&
                 {_target != ACE_player} &&
-                {GVAR(ShowNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+                {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
                 {!(_target getVariable ["ACE_hideName", false])}) then {
             _distance = ACE_player distance _target;
-            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(PlayerNamesMaxAlpha)) min _onKeyPressAlphaMax;
+            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
             [ACE_player, _target, _alpha, _distance * 0.026, _defaultIcon] call FUNC(drawNameTagIcon);
         };
     };
@@ -45,10 +60,10 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
             {_target isKindOf "CAManBase"} &&
             {(side (group _target)) == (side (group ACE_player))} &&
             {_target != ACE_player} &&
-            {GVAR(ShowNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+            {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
             {!(_target getVariable ["ACE_hideName", false])}) then {
         _distance = ACE_player distance _target;
-        _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(PlayerNamesMaxAlpha)) min _onKeyPressAlphaMax;
+        _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
         _icon = ICON_NONE;
         if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
             _icon = if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}) then {ICON_NAME} else {_defaultIcon};
@@ -87,7 +102,7 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
         if ((_icon != ICON_NONE) &&
                 {(side (group _target)) == (side (group ACE_player))} &&
                 {_target != ACE_player} &&
-                {GVAR(ShowNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+                {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
                 {!(_target getVariable ["ACE_hideName", false])}) then {
 
             _targetEyePosASL = eyePos _target;
@@ -97,7 +112,7 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
             _distance = vectorMagnitude _relPos;
             _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
 
-            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(PlayerNamesMaxAlpha)) min _onKeyPressAlphaMax;
+            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
 
             [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
         };

@@ -164,8 +164,6 @@ class CfgVehicles {
         displayName = "$STR_ACE_Captives_ModuleSurrender_DisplayName"; //Make Unit Surrender
         function = QUOTE(DFUNC(moduleSurrender));
         scope = 2;  //show in editor
-        scopeCurator = 2; //show in zeus
-        curatorCost = 0;  //???
         isGlobal = 1; //run global
         isTriggerActivated  = 1; //Wait for triggers
         icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));

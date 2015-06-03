@@ -55,7 +55,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
     //MenuBack isn't working for now (localize "STR_ACE_Attach_CancelAction")
-    [{[localize "STR_ACE_Attach_PlaceAction", ""] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+    [{[localize "STR_ACE_Attach_PlaceAction", ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = 1;}] call EFUNC(common,AddActionEventHandler)];
     // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
 
