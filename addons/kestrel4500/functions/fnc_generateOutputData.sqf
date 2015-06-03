@@ -16,7 +16,7 @@
 
 if (ACE_diagTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
-private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_dayOfWeek", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_dayOfWeek", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
 
 [] call FUNC(collectData);
 
@@ -52,6 +52,8 @@ _playerAltitude = (getPosASL ACE_player) select 2;
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 _humidity = EGVAR(weather,currentHumidity);
 _barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
+_airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
+_densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
 _chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
 _heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
 _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
@@ -284,7 +286,19 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                 _textCenterLine3Right = Str(round(GVAR(Max) select 12));
             };
         };
-        case 13: { // User Screen 1
+        case 13: { // DENSITY ALTITUDE
+            if (!GVAR(MinAvgMax)) then {
+                _textCenterBig = Str(round(_densityAltitude));
+            } else {
+                _textCenterLine1Left = "Min";
+                _textCenterLine2Left = "Avg";
+                _textCenterLine3Left = "Max";
+                _textCenterLine1Right = Str(round(GVAR(Min) select 13));
+                _textCenterLine2Right = Str(round((GVAR(Total) select 13) / (GVAR(Entries) select 13)));
+                _textCenterLine3Right = Str(round(GVAR(Max) select 13));
+            };
+        };
+        case 14: { // User Screen 1
             _textCenterLine1Left = Str(round(_playerDir));
             _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
             _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
@@ -292,7 +306,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             _textCenterLine2Right = "m";
             _textCenterLine3Right = "m/s";
         };
-        case 14: { // User Screen 2
+        case 15: { // User Screen 2
             _textCenterLine1Left = Str(round(_temperature * 10) / 10);
             _textCenterLine2Left = Str(round(_humidity * 100 * 10) / 10);
             _textCenterLine3Left = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);

@@ -157,49 +157,17 @@
             <Hungarian>Megadás abbahagyása</Hungarian>
             <Italian>Smetti di arrenderti</Italian>
         </Key>
-        <Key ID="STR_ACE_Captives_Zeus_OnlyAlive">
-            <English>Only use on alive units</English>
-            <French>Utiliser uniquement sur une unité vivante</French>
-            <German>Nur bei lebenden Einheiten verwendbar</German>
-            <Spanish>Utilizar solo en unidades vivas</Spanish>
-            <Czech>Použitelné jen na živé jednotky</Czech>
-            <Polish>Używaj tylko na żywych jednostkach</Polish>
-            <Russian>Применимо только к живым юнитам</Russian>
-            <Hungarian>Csak élő egységeken használni</Hungarian>
-            <Italian>Si può fare solo su persone vive</Italian>
-            <Portuguese>Usar somente em unidades vivas</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Captives_Zeus_OnlyInfantry">
-            <English>Only use on dismounted inf</English>
-            <French>Utiliser uniquement sur du personnel à pied</French>
-            <German>Nur bei abgesessener Infanterie verwendbar</German>
-            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
-            <Czech>Použitelné jen na pěsích jednotkách</Czech>
-            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
-            <Russian>Применимо только к пехоте вне техники</Russian>
-            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
-            <Italian>Si può usare solo su fanteria a piedi</Italian>
-            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Captives_Zeus_NothingSelected">
-            <English>Nothing under mouse</English>
-            <French>Rien sous le curseur</French>
-            <German>Es wurde nichts ausgewählt</German>
-            <Spanish>Nada bajo el ratón</Spanish>
-            <Portuguese>Nada debaixo do mouse</Portuguese>
-            <Czech>Nic není vybráno</Czech>
-            <Polish>Nie ma nic pod kursorem</Polish>
-            <Russian>Ничего не выделено</Russian>
-            <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Italian>Nessuna selezione</Italian>
-        </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>
             <Polish>Poddaj się!</Polish>
+            <Spanish>Hacer que la unidad se rinda</Spanish>
+            <German>Einheit kapitulieren lassen</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
             <Polish>Zsynchronizuj z jednostką aby sprawić by się poddała&lt;br /&gt;Źródło: ace_captives</Polish>
+            <Spanish>Sincroniza una unidad para hacer que se rinda.&lt;br /&gt;Fuente: ace_captives</Spanish>
+            <German>Einheit synchronisieren, um sie kapitulieren zu lassen.&lt;br /&gt;Quelle: ace_captives</German>
         </Key>
     </Package>
 </Project>

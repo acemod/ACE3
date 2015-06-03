@@ -11,7 +11,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowPlayerNames";
         description = "$STR_ACE_NameTags_ShowPlayerNames_Desc";
-        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_Enabled", "$STR_ACE_Common_OnlyCursor", "$STR_ACE_Common_OnlyOnKeypress", "$STR_ACE_Common_OnlyCursorAndKeyPress"};
+        values[] = {"$STR_ACE_NameTags_Disabled", "$STR_ACE_NameTags_Enabled", "$STR_ACE_NameTags_OnlyCursor", "$STR_ACE_NameTags_OnlyKeypress", "$STR_ACE_NameTags_OnlyCursorAndKeypress"};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
@@ -42,16 +42,24 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = "$STR_ACE_NameTags_ShowSoundWaves";
         description = "$STR_ACE_NameTags_ShowSoundWaves_Desc";
-        values[] = {"$STR_ACE_Common_Disabled", "$STR_ACE_Common_NameTagSettings", "$STR_ACE_Common_AlwaysShowAll"};
+        values[] = {"$STR_ACE_NameTags_Disabled", "$STR_ACE_NameTags_NameTagSettings", "$STR_ACE_NameTags_AlwaysShowAll"};
     };
-    class GVAR(PlayerNamesViewDistance) {
+    class GVAR(playerNamesViewDistance) {
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
     };
-    class GVAR(PlayerNamesMaxAlpha) {
+    class GVAR(playerNamesMaxAlpha) {
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;
+    };
+    class GVAR(tagSize) {
+        value = 2;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        displayName = "$STR_ACE_NameTags_TagSize_Name";
+        description = "$STR_ACE_NameTags_TagSize_Description";
+        values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
     };
 };

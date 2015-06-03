@@ -2,9 +2,12 @@
  * Author: Bohemia Interactive
  * Module function for initalizing zeus
  * Edited to remove eagle and global ascension message
+ * Added "zeusUnitAssigned" event call
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -168,6 +171,9 @@ if (_activated) then {
                 },[_logic,_player]] call EFUNC(common,execNextFrame);
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
+
+                // Added by ACE_zeus
+                ["zeusUnitAssigned", [_logic,_player]] call EFUNC(common,globalEvent);
 
                 //--- Forced interface
                 //if (_forced) then {

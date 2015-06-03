@@ -43,11 +43,8 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class GVAR(module): Module_F {
+    class ACE_Module;
+    class GVAR(module): ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_mk6mortar_Module_DisplayName";
@@ -76,7 +73,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_mk6mortar_Module_Description";
         };
     };

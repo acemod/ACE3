@@ -27,11 +27,11 @@ if (GVAR(syncRain) && GVAR(rain_period_count) > GVAR(rain_next_period)) then {
         _rainOverCast = (overcast - 0.7) / 0.3;
         if (GVAR(current_rain) == 0) then {
             // Initialize rain with a random strength depending on the current overcast value
-            GVAR(current_rain) = 0.25 + (random 0.25) + (random 0.5) * _rainOverCast;
+            GVAR(current_rain) = -0.25 + (random 0.75) + (random 0.5) * _rainOverCast;
         };
         
         GVAR(current_rain) = GVAR(current_rain) + GVAR(current_rain) * ((_rainOverCast * _overcastMultiplier) / 8) * GVAR(rain_current_range);
-        GVAR(current_rain) = 0.01 max GVAR(current_rain) min 1;
+        GVAR(current_rain) = 0 max GVAR(current_rain) min 1;
         
         GVAR(rain_current_range) = -1 + (random 2);
     } else {

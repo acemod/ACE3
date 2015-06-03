@@ -60,7 +60,7 @@ _perFrameFunction = {
     if (isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
         _errorCode = 1;
     } else {
-        if (ACE_player != _player) then {
+        if (ACE_player != _player || !alive _player) then {
             _errorCode = 2;
         } else {
             if (!([_args, _elapsedTime, _totalTime, _errorCode] call _condition)) then {

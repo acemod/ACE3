@@ -12,3 +12,4 @@ class CfgPatches {
 };
 
 #include "CfgAmmo.hpp"
+#include "CfgWeapons.hpp"

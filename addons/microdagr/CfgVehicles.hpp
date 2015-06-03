@@ -36,12 +36,8 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ArgumentsBaseUnits {};
-        class ModuleDescription {};
-    };
-    class GVAR(dagrModule): Module_F {
+    class ACE_Module;
+    class GVAR(dagrModule): ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
         displayName = "$STR_ACE_Dagr_Module_DisplayName";
@@ -62,7 +58,7 @@ class CfgVehicles {
                 };
             };
         };
-        class ModuleDescription: ModuleDescription {
+        class ModuleDescription {
             description = "$STR_ACE_Dagr_Module_Description";
         };
     };

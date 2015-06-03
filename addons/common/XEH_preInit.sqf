@@ -180,6 +180,7 @@ PREP(toHex);
 PREP(toNumber);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
+PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
@@ -286,13 +287,14 @@ PREP(_handleRequestSyncedEvent);
 PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(waitAndExecArray) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };

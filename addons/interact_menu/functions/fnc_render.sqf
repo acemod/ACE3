@@ -89,7 +89,17 @@ if (GVAR(openedMenuType) >= 0) then {
 
             // Execute the current action if it's run on hover
             private "_runOnHover";
-            _runOnHover = ((GVAR(selectedAction) select 0) select 9) select 3;
+            _tmp = ((GVAR(selectedAction) select 0) select 9) select 3;
+            _runOnHover = true;
+            if ((typeName _tmp) == "CODE" ) then {
+                _runOnHover = call _tmp;
+            } else {
+                if ((typeName _tmp) == "BOOL" ) then {
+                    _runOnHover = _tmp;
+                } else {
+                    _runOnHover = _tmp > 0;
+                };
+            };
             if (_runOnHover) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;
