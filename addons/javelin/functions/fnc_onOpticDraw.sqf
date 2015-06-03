@@ -44,8 +44,8 @@ _magazineConfig = if ((currentMagazine _currentShooter) != "") then {
     []
 };
 
-//Only enable if both weapon and currentMagazine are enabled (bandaid to allow firing the "AP" missle)
-if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1} || {(count _magazineConfig) < 1} || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
+//If weapon does not have "javelin enabled", then exit PFEH
+if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1}) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
@@ -71,15 +71,16 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 [] call FUNC(showFireMode);
         
         
-// bail on not loaded
-if( (vehicle ACE_player) != ACE_player) then {
-    if( (vehicle player) magazineTurretAmmo ["1Rnd_GAT_missiles", [0]] < 1) exitWith { 
-        TRACE_1("No turret ammo, exit", "");
+// not loaded or not "javelin enabled" for magazine, hide targeting and enable firing
+if (((count _magazineConfig) < 1) || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
+    __JavelinIGUITargeting ctrlShow false;
+    __JavelinIGUITargetingGate ctrlShow false;
+    __JavelinIGUITargetingLines ctrlShow false;
+    __JavelinIGUITargetingConstraints ctrlShow false;
+    
+    if(!isNil "_fireDisabledEH") then {
+        _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     };
-} else {
-    if (ACE_player ammo (currentWeapon ACE_player) < 1 ) exitWith { 
-        TRACE_1("No ammo, exit", "");
-    };  
 };
           
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
