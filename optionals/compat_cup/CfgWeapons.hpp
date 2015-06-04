@@ -545,6 +545,21 @@ class CfgWeapons
         EGVAR(overpressure,angle) = 45;
         EGVAR(overpressure,range) = 100;
         EGVAR(overpressure,damage) = 0.7;
+        ACE_UsedTube = "ACE_launch_M136_Used_F";      // The class name of the used tube.
+        magazines[] = {"ACE_PreloadedMissileDummy"};  // The dummy magazine
+    };
+    class ACE_launch_M136_Used_F: CUP_launch_M136 {
+        scope = 1;
+        ACE_isUsedLauncher = 1;
+        author = "$STR_ACE_Common_ACETeam";
+        //displayName = "$STR_ACE_Disposable_UsedTube";
+        //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = "Used M136";
+        descriptionShort = "Used M136 Tube";
+        magazines[] = {"ACE_FiredMissileDummy"};
+        //picture = "";              @todo
+        //model = "";                @todo
+        weaponPoolAvailable = 0;
     };
     class CUP_launch_NLAW: Launcher_Base_F {
         EGVAR(overpressure,angle) = 30;
