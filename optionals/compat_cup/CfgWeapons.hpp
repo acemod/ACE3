@@ -499,61 +499,61 @@ class CfgWeapons
     };
     // Non Disposable launchers
     class CUP_launch_Igla: Launcher_Base_F {
-        GVAR(angle) = 30;
-        GVAR(range) = 2;
-        GVAR(damage) = 0.5;
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
     };
     class CUP_launch_M47: Launcher_Base_F {
-        GVAR(angle) = 45;
-        GVAR(range) = 30;
-        GVAR(damage) = 0.7;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 0.7;
     };
     class CUP_launch_MAAWS: Launcher_Base_F {
-        GVAR(angle) = 60;
-        GVAR(range) = 28;
-        GVAR(damage) = 0.7;
+        EGVAR(overpressure,angle) = 60;
+        EGVAR(overpressure,range) = 28;
+        EGVAR(overpressure,damage) = 0.7;
     };
     class CUP_launch_MAAWS_Scope: CUP_launch_MAAWS {};
     class CUP_launch_Metis: Launcher_Base_F {
-        GVAR(angle) = 45;
-        GVAR(range) = 30;
-        GVAR(damage) = 0.5;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 0.5;
     };
     class CUP_launch_RPG7V: Launcher_Base_F {
-        GVAR(angle) = 45;
-        GVAR(range) = 20;
-        GVAR(damage) = 1;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 20;
+        EGVAR(overpressure,damage) = 1;
     };
     class CUP_launch_Mk153Mod0: Launcher_Base_F {
-        GVAR(angle) = 30;
-        GVAR(range) = 30;
-        GVAR(damage) = 1;
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 1;
     };
     class CUP_launch_Mk153Mod0_SMAWOptics: CUP_launch_Mk153Mod0 {};
     class CUP_launch_FIM92Stinger: Launcher_Base_F {
-        GVAR(angle) = 45;
-        GVAR(range) = 15;
-        GVAR(damage) = 0.3; // Main damage arises from debris rather than the actual backblast
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 0.3; // Main damage arises from debris rather than the actual backblast
     };
     class CUP_launch_9K32Strela: Launcher_Base_F {
-        GVAR(angle) = 30;
-        GVAR(range) = 2;
-        GVAR(damage) = 0.5;
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
     };
     // Disposable launchers under this line
     class CUP_launch_M136: Launcher_Base_F {
-        GVAR(angle) = 45;
-        GVAR(range) = 100;
-        GVAR(damage) = 0.7;
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 100;
+        EGVAR(overpressure,damage) = 0.7;
     };
     class CUP_launch_NLAW: Launcher_Base_F {
-        GVAR(angle) = 30;
-        GVAR(range) = 2;
-        GVAR(damage) = 0.5;
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
     };
     class CUP_launch_RPG18: Launcher_Base_F {
-        GVAR(angle) = 40;
-        GVAR(range) = 15;
-        GVAR(damage) = 1;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 1;
     };
 };
