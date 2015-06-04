@@ -14,7 +14,7 @@ Allows snipers to adjust their scopes horizontally and vertically in mils.
 ## 2. Usage
 
 ### 2.1 Adjusting your scope vertically
-Please not that the following key combinations are ACE3 default keybinds.
+Please not that the following key combinations are ACE3 default key binds.
 - Minor adjustment up <kbd>pageUP</kbd>.
 - Minor adjustment down <kbd>pageDOWN</kbd>.
 - Major adjustment up <kbd>Shift</kbd> + <kbd>pageUP</kbd>.

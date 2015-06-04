@@ -10,7 +10,7 @@ parent: wiki
 
 ### 1.1 Idle animations removed
 
-This removes idle animations, you're not going to be wiping your forhead with your rifle every 20 seconds anymore.
+This removes idle animations.
 
 ## 2. Dependencies
 
