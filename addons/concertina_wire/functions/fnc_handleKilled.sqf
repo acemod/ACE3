@@ -1,3 +1,18 @@
+/*
+ * Author: Rocko
+ *
+ * Handles wire and vehicle damage
+ *
+ * Arguments:
+ * 0: wire <OBJECT>
+ * 1: killer (vehicle) <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 PARAMS_2(_wire,_killer);

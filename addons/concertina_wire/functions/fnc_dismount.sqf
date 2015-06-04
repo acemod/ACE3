@@ -1,3 +1,18 @@
+/*
+ * Author: Ruthberg
+ *
+ * Start dismounting the concertina wire
+ *
+ * Arguments:
+ * 0: wire <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine

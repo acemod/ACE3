@@ -1,3 +1,17 @@
+/*
+ * Author: Rocko, Ruthberg
+ *
+ * Dismounts the concertina wire
+ *
+ * Arguments:
+ * 0: wire <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 PARAMS_1(_wire);

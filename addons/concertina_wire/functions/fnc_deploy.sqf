@@ -1,3 +1,18 @@
+/*
+ * Author: Rocko, Ruthberg
+ *
+ * Deploys the concertina wire
+ *
+ * Arguments:
+ * 0: wire coil <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 PARAMS_2(_wirecoil,_unit);
