@@ -14,7 +14,7 @@ Makes the inventory dialog bigger and increases the number of items that can be 
 ## 2. Usage
 
 ### 2.1 Changing the size of the UI
-- Press <kbd>escape</kbd>.
+- Press <kbd>Escape</kbd>.
 - Click on `ACE OPTIONS` on the top left corner of the screen.
 - Click on `Make Inventory Display Bigger`.
 - Choose the size desired on the right drop down menu.

@@ -69,11 +69,11 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ActionOnKeyRelease);
     };
-    class GVAR(blurScreen) {
+    class GVAR(menuBackground) {
         value = 0;
-        typeName = "BOOL";
+        typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = CSTRING(blurScreen);
-        description = CSTRING(blurScreenDesc);
+        displayName = CSTRING(background);
+        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(backgroundBlur), CSTRING(backgroundBlack)};
     };
 };

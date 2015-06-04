@@ -21,8 +21,8 @@ In its current form you're able to switch to infantry (vehicles, etc. are planne
 ### 2.1 Switching to a unit
 - Open your map
 - Find a unit you can access (they are showed with special icons and names on the map).
-- Press <kbd>LMB</kbd> then <kbd>RMB</kbd> in a rapid succession.
-- You'll control that unit until it dies, after that you'll be brought back to your original unit.
+- Press <kbd>LMB</kbd> on the desired unit.
+- You'll control that unit until it dies or until you switch to an other one. If the unit dies you'll be brought back to your original unit..
 
 ## 3. Dependencies
 

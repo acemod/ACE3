@@ -14,11 +14,11 @@ ACE3 adds wind deflection for shells as well as a rangetable to accurately take 
 ## 2. Usage
 
 ### 2.1 Switching charge
-- Press <kbd>F</kbd> (ARMA3 default keybind `fire mode switch`) to switch between charges
+- Press <kbd>F</kbd> (Arma 3 default key bind `Fire Mode Switch`) to switch between charges
 
 ### 2.2 Working with the rangetable
 - To open the table: 
-    - Self interact <kbd>CTRL</kbd> + <kbd>left windows</kbd>
+    - Self interact <kbd>CTRL</kbd> + <kbd>Left Windows</kbd>
     - Select `equipment`.
     - Select `Open 82mm Rangetable`.
 

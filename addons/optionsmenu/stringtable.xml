@@ -307,5 +307,11 @@
             <Spanish>Abajo</Spanish>
             <German>Unten</German>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_DumpDebug">
+            <English>Debug To Clipboard</English>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
+            <English>Sends debug information to RPT and clipboard.</English>
+        </Key>
     </Package>
 </Project>
