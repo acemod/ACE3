@@ -87,9 +87,9 @@ class CfgVehicles {
         class NVGMarker {
             diffuse[] = {0.006, 0.006, 0.006, 1};
             ambient[] = {0.005, 0.005, 0.005, 1};
-            brightness = 0.2;
+            brightness = 0.1;
             name = "pozicni blik";
-            drawLightSize = 0.2;
+            drawLightSize = 0.1;
             drawLightCenterSize = 0.003;
             activeLight = 0;
             blinking=1;
@@ -112,7 +112,7 @@ class CfgVehicles {
         magazines[] = {};
         nvTarget = 1;
         destrType = "DestructNo";
-        brightness = 20;
+        brightness = 10;
     };
 
     class NATO_Box_Base;
