@@ -546,4 +546,11 @@ class CfgWeapons
         GVAR(range) = 100;
         GVAR(damage) = 0.7;
     };
+    class CUP_launch_NLAW: Launcher_Base_F {
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
+        GVAR(damage) = 0.5;
+    };
+    
+    
 };
