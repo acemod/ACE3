@@ -56,7 +56,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class disable {
-                        name = CSTRING(revealMines_disable);
+                        name = "$STR_A3_OPTIONS_DISABLED";
                         value = 0;
                         default = 1;
                     };

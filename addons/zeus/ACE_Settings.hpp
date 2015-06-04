@@ -18,6 +18,6 @@ class ACE_Settings {
     class GVAR(revealMines) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(revealMines_disable), CSTRING(revealMines_partial), CSTRING(revealMines_full)};
+        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(revealMines_partial), CSTRING(revealMines_full)};
     };
 };
