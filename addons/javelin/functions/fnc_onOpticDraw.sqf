@@ -7,7 +7,7 @@ TRACE_1("enter", _this);
 
 private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
 private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
-private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"]; 
+private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"];
 private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
 private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
 
@@ -50,18 +50,18 @@ if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1}) 
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
-    
+
     if(!isNil "_fireDisabledEH") then {
         _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     };
-    
+
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
     uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
 };
 
 // Find a target within the optic range
 _newTarget = objNull;
-        
+
 // Bail on fast movement
 if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {    // keep it steady.
     ACE_player switchCamera "INTERNAL";
@@ -69,20 +69,20 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
 
 // Refresh the firemode
 [] call FUNC(showFireMode);
-        
-        
+
+_ammo = _currentShooter ammo (currentWeapon _currentShooter);
 // not loaded or not "javelin enabled" for magazine, hide targeting and enable firing
-if (((count _magazineConfig) < 1) || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
+if ((_ammo == 0) || {(count _magazineConfig) < 1} || {(getNumber ((_magazineConfig select 0) >> "enabled")) != 1}) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
-    
+
     if(!isNil "_fireDisabledEH") then {
         _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     };
 };
-          
+
 _range = parseNumber (ctrlText __JavelinIGUIRangefinder);
 TRACE_1("Viewing range", _range);
 if (_range > 50 && {_range < 2500}) then {
@@ -114,7 +114,7 @@ _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selecti
 _randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
 _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
-   
+
 _aposX = 0;
 _aposY = 0;
 if (count _apos < 2) then {
@@ -125,7 +125,7 @@ if (count _apos < 2) then {
     _aposY = (_apos select 1) + _offsetY;
 };
 
-if((call CBA_fnc_getFoV) select 1 > 9) then {  
+if((call CBA_fnc_getFoV) select 1 > 9) then {
     __JavelinIGUINFOV ctrlSetTextColor __ColorGreen;
     __JavelinIGUIWFOV ctrlSetTextColor __ColorGray;
 } else {
@@ -135,9 +135,9 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
 
 FUNC(disableFire) = {
     _firedEH = _this select 0;
-    
+
     if(_firedEH < 0 && difficulty > 0) then {
-        _firedEH = [ACE_player, "DefaultAction", {true}, { 
+        _firedEH = [ACE_player, "DefaultAction", {true}, {
             _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
             if(!isNil "_canFire") exitWith { false };
             true
@@ -147,7 +147,7 @@ FUNC(disableFire) = {
 };
 FUNC(enableFire) = {
     _firedEH = _this select 0;
-    
+
     if(_firedEH > 0 && difficulty > 0) then {
         [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
     };
@@ -158,38 +158,38 @@ if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;
     _lockTime = 0;
-    
+
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUITargetingGate ctrlShow false;
     __JavelinIGUITargetingLines ctrlShow false;
     __JavelinIGUITargetingConstraints ctrlShow false;
-    
-    _currentShooter setVariable ["ace_missileguidance_target",nil, false];  
-    
+
+    _currentShooter setVariable ["ace_missileguidance_target",nil, false];
+
     // Disallow fire
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
     _fov = [] call CBA_fnc_getFoV;
     TRACE_1("FOV", _fov);
     if (_newTarget distance ACE_player < 2500
-            && {(call CBA_fnc_getFoV) select 1 > 9} 
-             && { (currentVisionMode ACE_player == 2)}
-             && GVAR(isLockKeyDown)
-    ) then {
+            && {(call CBA_fnc_getFoV) select 1 > 9}
+            && { (currentVisionMode ACE_player == 2)}
+            && GVAR(isLockKeyDown)
+            ) then {
         // Lock on after 3 seconds
-         if(_currentTarget != _newTarget) then {
+        if(_currentTarget != _newTarget) then {
             TRACE_1("New Target, reseting locking", _newTarget);
             _lockTime = ACE_diagTime;
             _currentTarget = _newTarget;
-            
+
             playSound "ACE_Javelin_Locking";
         } else {
             if(ACE_diagTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
-                
+
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
-                
+
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingConstrains ctrlShow false;
                 __JavelinIGUITargetingGate ctrlShow true;
@@ -199,34 +199,34 @@ if (isNull _newTarget) then {
                 //__JavelinIGUITargetingLineV ctrlSetPosition [_aposX,ctrlPosition __JavelinIGUITargetingLineV select 1];
                 //__JavelinIGUITargetingLineH ctrlSetPosition [ctrlPosition __JavelinIGUITargetingLineH select 0,_aposY];
                 //{_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingLineH,__JavelinIGUITargetingLineV];
-                
+
                 _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
                 } else {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "zamerny"];
                 };
-                
+
                 _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
 
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
                 _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
                 _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
-                
+
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
-                
+
                 __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
                 __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
                 __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
-                
+
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
-                
+
                 _currentShooter setVariable["ace_missileguidance_target", _currentTarget, false];
-                
+
                 // Allow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-                
+
                 if(ACE_diagTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
                     _soundTime = ACE_diagTime + 0.25;
@@ -234,31 +234,31 @@ if (isNull _newTarget) then {
             } else {
                 __JavelinIGUITargeting ctrlShow true;
                 __JavelinIGUITargetingGate ctrlShow true;
-                 __JavelinIGUITargetingConstrains ctrlShow true;
+                __JavelinIGUITargetingConstrains ctrlShow true;
                 __JavelinIGUITargetingLines ctrlShow false;
 
                 _currentShooter setVariable["ace_missileguidance_target", nil, false];
-                
+
                 _boundsInput = if (_currentTarget isKindOf "CAManBase") then {
                     [_newTarget,[-1,-1,-2],_currentTarget selectionPosition "body"];
                 } else {
                     [_newTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
                 };
-                
+
                 _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-                
+
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
                 _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
                 _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
-                
+
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
-                                
+
                 __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
                 __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
                 __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
-                
+
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
                 if(ACE_diagTime > _soundTime) then {
@@ -266,25 +266,25 @@ if (isNull _newTarget) then {
                     _soundTime = ACE_diagTime + 0.25;
                 };
                 // Disallow fire
-               _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
+                _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
             };
         };
-   } else { 
+    } else {
         // No targets found
         _currentTarget = objNull;
         _lockTime = 0;
-        
+
         __JavelinIGUISeek ctrlSetTextColor __ColorGray;
         __JavelinIGUITargeting ctrlShow false;
         __JavelinIGUITargetingGate ctrlShow false;
         __JavelinIGUITargetingLines ctrlShow false;
         __JavelinIGUITargetingConstraints ctrlShow false;
-        
+
         _currentShooter setVariable ["ace_missileguidance_target",nil, false];
-        
+
         // Disallow fire
         _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
-    };  
+    };
 };
 
 //TRACE_2("", _newTarget, _currentTarget);
