@@ -21,21 +21,21 @@ private ["_unit","_surrendering"];
 if (!_activated) exitWith {};
 
 if (isNil QEFUNC(captives,setSurrendered)) then {
-    ["STR_ACE_Zeus_RequiresAddon"] call EFUNC(common,displayTextStructured);
+    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
     _unit = attachedTo _logic;
 
     if (isNull _unit) then {
-        ["STR_ACE_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);
+        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
     } else {
         if !(_unit isKindOf "CAManBase") then {
-            ["STR_ACE_Zeus_OnlyInfantry"] call EFUNC(common,displayTextStructured);
+            [LSTRING(OnlyInfantry)] call EFUNC(common,displayTextStructured);
         } else {
             if !(alive _unit) then {
-                ["STR_ACE_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
+                [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
             } else {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
-                    ["STR_ACE_Zeus_OnlyNonCaptive"] call EFUNC(common,displayTextStructured);
+                    [LSTRING(OnlyNonCaptive)] call EFUNC(common,displayTextStructured);
                 } else {
                     _surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
                     // Event initalized by ACE_Captives

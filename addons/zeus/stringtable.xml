@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
-        <Key ID="STR_ACE_Zeus_Module_DisplayName">
+        <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
             <Polish>Ustawienia Zeusa</Polish>
         </Key>
-        <Key ID="STR_ACE_Zeus_Module_Description">
+        <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
             <Polish>Pozwala kontrolować różne aspekty Zeusa.</Polish>
         </Key>
@@ -48,10 +48,6 @@
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
             <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_revealMines_disable">
-            <English>Disabled</English>
-            <Polish>Wyłączone</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
