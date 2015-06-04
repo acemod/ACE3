@@ -3,14 +3,17 @@
     <Package name="MX2A">
         <Key ID="STR_ACE_Yardage450_DisplayName">
             <English>Yardage 450</English>
+            <Polish>Yardage 450</Polish>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
             <German>Laserentfernungsmesser</German>
+            <Polish>Dalmierz laserowy</Polish>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
             <German>Yardage 450 - Einschalt-Taste</German>
+            <Polish>Yardage 450 - Przycisk zasilania</Polish>
         </Key>
     </Package>
 </Project>
