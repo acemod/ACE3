@@ -7,6 +7,10 @@ order: 11
 parent: wiki
 ---
 
+Everything is ordered alphabetically.
+
+You know an in-game name but want the classname? <kbd>CTRL</kbd> + <kbd>F</kbd>
+
 ### Atragmx 
 `added in 3.0.0.3`
 
@@ -100,7 +104,7 @@ ACE_HandFlare_White | M127A1 Hand Held Signal (White) | Grenade |
 ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
-ACE_M84 | M84 Stun Grenade |
+ACE_M84 | M84 Stun Grenade | Grenade |
 
 ### hearing
 `added in 3.0.0.3`
@@ -155,6 +159,7 @@ ACE_bloodIV | Blood IV (1000ml) | ACE_ItemCore |
 ACE_bloodIV_500 | Blood IV (500ml) | ACE_ItemCore |
 ACE_bloodIV_250 | Blood IV (250ml) | ACE_ItemCore |
 ACE_bodyBag | Bodybag | ACE_ItemCore |
+ACE_bodyBagObject | Bodybag (packed) | |
 ACE_epinephrine | Epinephrine autoinjector | ACE_ItemCore |
 ACE_morphine | Morphine autoinjector | ACE_ItemCore |
 ACE_packingBandage | Packing Bandage | ACE_ItemCore |
@@ -224,6 +229,12 @@ classname | in game name | type  |
 --------- | --------- | ---------
 ACE_Altimeter | Altimeter Watch | ACE_ItemCore |
 ACE_NonSteerableParachute | Non-Steerable Parachute | Backpack |
+
+### Rangecard
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_RangeCard | rangecard | ACE_ItemCore |
 
 ### Vector
 `added in 3.0.0.3`

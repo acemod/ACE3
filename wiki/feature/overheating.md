@@ -40,6 +40,9 @@ effects.
 - Select `equipment`.
 - Select `Check weapon temperature`. 
 
+**NOTE** When the bar is half full (yellow) it means the barrel is around 500°c. 
+Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
+
 ## 3. Dependencies
 
 `ace_interaction`
