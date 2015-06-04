@@ -29,5 +29,7 @@ call EFUNC(interaction,hideMouseHint);
 [GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(Common,removeActionEventHandler);
 [GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
 
+GVAR(placer) addItem "ACE_Sandbag_empty";
+
 GVAR(sandBag) = objNull;
 GVAR(placer) = objNull;

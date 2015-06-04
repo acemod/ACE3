@@ -50,11 +50,25 @@ class CfgVehicles {
         scope = 1;
         side = -1;
         model = PATHTOF(data\ace_sandbag_build.p3d);
-        icon = "";
         displayName = $STR_ACE_Sandbag;
-        EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,0.8,0};
-        EGVAR(dragging,dragDirection) = 0;
+        typicalCargo[] = {};
+        armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
+        mapSize = 0.4;
+        nameSound = "Bunker";
+        icon = PATHTOF(UI\icon_sandbag_ca.paa);
+        accuracy = 1000;
+
+        destrType = "DestructDefault";
+
+        class DestructionEffects {};
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                "z\ace\addons\sandbag\data\bag_destruct.rvmat",
+                "z\ace\addons\sandbag\data\bag_destruct.rvmat",
+                "z\ace\addons\sandbag\data\bag_destruct.rvmat"
+            };
+        };
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -71,9 +85,24 @@ class CfgVehicles {
                     priority = 5;
                     icon = PATHTOF(UI\icon_sandbag_ca.paa);
                 };
+                class ACE_Carry {
+                    selection = "";
+                    displayName = "$STR_ACE_AC_CARRYSB";
+                    distance = 4;
+                    condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
+                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(carry));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                };
             };
         };
-    };    
+    };
+    class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
+        scope = 1;
+        model = PATHTOF(data\ace_sandbag_nogeo.p3d);
+    };
     
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {

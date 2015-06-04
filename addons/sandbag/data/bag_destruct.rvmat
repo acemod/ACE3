@@ -17,7 +17,7 @@ class Stage1 {
     };
 };
 class Stage2 {
-    texture="ca\data\destruct\vehicle_destr1024_1024_mc.paa";
+    texture="z\ace\addons\apl\data\vehicle_destr1024_1024_mc.paa";
     uvSource="tex";
     class uvTransform {
         aside[]={1.000000,0.000000,0.000000};
@@ -37,7 +37,7 @@ class Stage3 {
     };
 };
 class Stage4 {
-    texture="ca\data\destruct\vehicle_destr1024_1024_smdi.paa";
+    texture="z\ace\addons\apl\data\vehicle_destr1024_1024_smdi.paa";
     uvSource="tex";
     class uvTransform {
         aside[]={1.000000,0.000000,0.000000};

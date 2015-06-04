@@ -35,7 +35,7 @@
             <Hungarian>Nem teheted ide</Hungarian>
         </Key>
         <Key ID="STR_ACE_AC_PICKUPSB">
-            <English>Pick up sandbag</English>
+            <English>Pick up Sandbag</English>
             <German>Sandsack abbauen</German>
             <Russian>Взять мешок с песком</Russian>
             <Polish>Zabierz worek</Polish>
@@ -46,7 +46,7 @@
             <Hungarian>Homokzsák felvétele</Hungarian>
         </Key>
         <Key ID="STR_ACE_AC_CARRYSB">
-            <English>Carry sandbag</English>
+            <English>Carry Sandbag</English>
             <German>Sandsack tragen</German>
             <Russian>Нести мешок с песком</Russian>
             <Polish>Przenieś worek</Polish>
@@ -57,7 +57,7 @@
             <Hungarian>Homokzsák cipelése</Hungarian>
         </Key>
         <Key ID="STR_ACE_AC_ENDCARRYSB">
-            <English>End carrying</English>
+            <English>End Carrying</English>
             <German>Tragen beenden</German>
             <Russian>Завершить переноску</Russian>
             <Polish>Zostaw worek</Polish>
@@ -68,7 +68,7 @@
             <Hungarian>Cipelés abbahagyása</Hungarian>
         </Key>
         <Key ID="STR_ACE_AC_DROP">
-            <English>Drop sandbag</English>
+            <English>Drop Sandbag</English>
             <German>Sandsack ablegen</German>
             <Russian>Положить мешок</Russian>
             <Polish>Upuść worek</Polish>
@@ -101,7 +101,7 @@
             <Hungarian>Visszavonás</Hungarian>
         </Key>
         <Key ID="STR_ACE_AC_BUILD">
-            <English>Deploy sandbag</English>
+            <English>Deploy Sandbag</English>
             <German>Sandsack aufbauen</German>
             <Russian>Установить мешок с песком</Russian>
             <Polish>Rozłóż worek z piaskiem</Polish>
@@ -112,7 +112,7 @@
             <Hungarian>Homokzsák lerakása</Hungarian>
         </Key>
         <Key ID="STR_ACE_V_SANDBOX">
-            <English>Sandbag box</English>
+            <English>Sandbag Box</English>
             <German>Sandsack Kiste</German>
             <Russian>Ящик мешков с песком</Russian>
             <Polish>Skrzynia worków na piasek</Polish>

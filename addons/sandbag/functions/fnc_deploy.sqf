@@ -21,7 +21,7 @@ GVAR(placer) = ACE_player;
 
 [GVAR(placer), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
 
-GVAR(sandBag) = createVehicle ["ACE_SandbagObject", [0,0,0], [], 0, "NONE"];
+GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0,0,0], [], 0, "NONE"];
 GVAR(sandBag) enableSimulationGlobal false;
 
 GVAR(deployPFH) = [{
