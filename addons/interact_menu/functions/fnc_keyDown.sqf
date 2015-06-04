@@ -34,6 +34,7 @@ GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
+                      (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
                       {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
 
@@ -46,7 +47,7 @@ for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
 GVAR(iconCtrls) resize GVAR(iconCount);
 
 if (GVAR(useCursorMenu)) then {
-    (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    (findDisplay ([312,46] select (isNull curatorCamera))) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
     (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:

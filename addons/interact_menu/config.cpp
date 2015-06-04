@@ -23,3 +23,5 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_break_line"};
 };
+
+#include "ACE_ZeusActions.hpp"

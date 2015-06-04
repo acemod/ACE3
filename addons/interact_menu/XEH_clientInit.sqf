@@ -72,3 +72,11 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call EFUNC(common,addEventHandler);
+
+// Let key work with zeus open (not perfect, enables all added hotkeys in zeus interface rather than only menu)
+["zeusDisplayChanged",{
+    if (_this select 1) then {
+        (finddisplay 312) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+        (finddisplay 312) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+    };
+}] call EFUNC(common,addEventHandler);
