@@ -554,7 +554,7 @@ class CfgWeapons
         author = "$STR_ACE_Common_ACETeam";
         //displayName = "$STR_ACE_Disposable_UsedTube";
         //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
-        displayName = "Used M136";
+        displayName = "M136 (Used)";
         descriptionShort = "Used M136 Tube";
         magazines[] = {"ACE_FiredMissileDummy"};
         //picture = "";              @todo
