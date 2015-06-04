@@ -518,4 +518,9 @@ class CfgWeapons
         GVAR(range) = 30;
         GVAR(damage) = 0.5;
     };
+    class CUP_launch_RPG7V: Launcher_Base_F {
+        GVAR(angle) = 45;
+        GVAR(range) = 20;
+        GVAR(damage) = 1;
+    };
 };
