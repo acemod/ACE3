@@ -52,12 +52,12 @@ Only use the optional components that correspond with your mod-pack.
 ### 6.1 Steam Launch Parameters
 - Not supported with the new Arma 3 Launcher
 
-### 6.2 ArmA3Sync
+### 6.2 Arma 3Sync
 - Inspect `Addon Options` and verify the `Addon Search Directories` are leading to your Arma 3 folder.
 - Return to the `Addons` tab and click `Refresh`.
 - Right-click inside `Addon Groups`, click `Create Group` and give it a name.
 - Drag and drop `@ace` and `@CBA_A3` from `Available Addons` into the new Group you created inside `Addon Groups` and make sure the checkboxes are ticked.
-<img src="{{ site.baseurl }}/img/wiki/user/installation2-a3s.jpg" width="529" height="222" alt="Arma3Sync Launcher" />
+<img src="{{ site.baseurl }}/img/wiki/user/installation2-a3s.jpg" width="529" height="222" alt="Arma 3Sync Launcher" />
 - Click `Start Game`
 
 ### 5.3 Play withSIX
