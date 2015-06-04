@@ -565,6 +565,21 @@ class CfgWeapons
         EGVAR(overpressure,angle) = 30;
         EGVAR(overpressure,range) = 2;
         EGVAR(overpressure,damage) = 0.5;
+        ACE_UsedTube = "ACE_launch_NLAW_Used_F";      // The class name of the used tube.
+        magazines[] = {"ACE_PreloadedMissileDummy_CUP"};  // The dummy magazine
+    };
+    class ACE_launch_NLAW_Used_F: CUP_launch_NLAW {
+        scope = 1;
+        ACE_isUsedLauncher = 1;
+        author = "$STR_ACE_Common_ACETeam";
+        //displayName = "$STR_ACE_Disposable_UsedTube";
+        //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = "NLAW (Used)";
+        descriptionShort = "Used NLAW Tube";
+        magazines[] = {"ACE_FiredMissileDummy_CUP"};
+        //picture = "";              @todo
+        //model = "";                @todo
+        weaponPoolAvailable = 0;
     };
     class CUP_launch_RPG18: Launcher_Base_F {
         EGVAR(overpressure,angle) = 40;
