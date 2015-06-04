@@ -88,10 +88,10 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 
 
     if ((count GVAR(newWaypointPosition)) == 0) then {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize "STR_ACE_microdagr_wpEnterCords");
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize LSTRING(wpEnterCords));
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize "STR_ACE_microdagr_wpEnterName"), mapGridPosition GVAR(newWaypointPosition)];
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize LSTRING(wpEnterName)), mapGridPosition GVAR(newWaypointPosition)];
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText format ["[%1]", mapGridPosition GVAR(newWaypointPosition)];
     };
     ctrlSetFocus (_display displayCtrl IDC_MODEMARK_CORDSEDIT);

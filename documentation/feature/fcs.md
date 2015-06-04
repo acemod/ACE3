@@ -21,15 +21,16 @@ Anti air cannons can now use airburst ammunition. It will explode on the FCS' ze
 
 ### 2.1 Engaging moving targets
 - Place the crosshair on the enemy vehicle.
-- Press and hold <kbd>TAB</kbd> (ACE 3 default keybind `Lock Target [Hold]`) and follow the target for about 2 seconds.
+- Press and hold <kbd>TAB</kbd> (ACE 3 default key bind `Lock Target [Hold]`) and follow the target for about 2 seconds.
 - Release <kbd>TAB</kbd>.
-- The optic is now adjusted sideways to ensue a hit.
+- The optic is now adjusted sideways to ensure a hit.
 
 ### 2.2 Ranging stationary targets
 - Place the crosshair on the object to range.
-- Tap <kbd>TAB</kbd> the optic is now adjusted.
+- Tap <kbd>TAB</kbd>
+- The optic is now adjusted.
 
-NOTE: GBU guidance is **DISABLED** as of ACE3 3.0.1
+*NOTE: GBU guidance is **DISABLED** as of ACE3 3.0.1*
 
 ## 3. Dependencies
 

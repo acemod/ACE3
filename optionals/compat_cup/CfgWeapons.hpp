@@ -3,6 +3,7 @@ class CfgWeapons
     class Pistol_Base_F;
     class Rifle_Base_F;
     class Rifle_Long_Base_F;
+    class Launcher_Base_F;
     class CUP_hgun_Colt1911 : Pistol_Base_F {
         ACE_barrelTwist=406.4;
         ACE_barrelLength=127.0;
@@ -495,5 +496,109 @@ class CfgWeapons
                 };
             };
         };
+    };
+    // Non Disposable launchers
+    class CUP_launch_Igla: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
+    };
+    class CUP_launch_M47: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 0.7;
+    };
+    class CUP_launch_MAAWS: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 60;
+        EGVAR(overpressure,range) = 28;
+        EGVAR(overpressure,damage) = 0.7;
+    };
+    class CUP_launch_MAAWS_Scope: CUP_launch_MAAWS {};
+    class CUP_launch_Metis: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 0.5;
+    };
+    class CUP_launch_RPG7V: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 20;
+        EGVAR(overpressure,damage) = 1;
+    };
+    class CUP_launch_Mk153Mod0: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,damage) = 1;
+    };
+    class CUP_launch_Mk153Mod0_SMAWOptics: CUP_launch_Mk153Mod0 {};
+    class CUP_launch_FIM92Stinger: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 0.3; // Main damage arises from debris rather than the actual backblast
+    };
+    class CUP_launch_9K32Strela: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
+    };
+    // Disposable launchers under this line
+    class CUP_launch_M136: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 45;
+        EGVAR(overpressure,range) = 100;
+        EGVAR(overpressure,damage) = 0.7;
+        ACE_UsedTube = "ACE_launch_M136_Used_F";      // The class name of the used tube.
+        magazines[] = {"ACE_PreloadedMissileDummy_CUP"};  // The dummy magazine
+    };
+    class ACE_launch_M136_Used_F: CUP_launch_M136 {
+        scope = 1;
+        ACE_isUsedLauncher = 1;
+        author = "$STR_ACE_Common_ACETeam";
+        //displayName = "$STR_ACE_Disposable_UsedTube";
+        //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = "M136 (Used)";
+        descriptionShort = "Used M136 Tube";
+        magazines[] = {"ACE_FiredMissileDummy_CUP"};
+        //picture = "";              @todo
+        //model = "";                @todo
+        weaponPoolAvailable = 0;
+    };
+    class CUP_launch_NLAW: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
+        ACE_UsedTube = "ACE_launch_NLAW_Used_F";      // The class name of the used tube.
+        magazines[] = {"ACE_PreloadedMissileDummy_CUP"};  // The dummy magazine
+    };
+    class ACE_launch_NLAW_Used_F: CUP_launch_NLAW {
+        scope = 1;
+        ACE_isUsedLauncher = 1;
+        author = "$STR_ACE_Common_ACETeam";
+        //displayName = "$STR_ACE_Disposable_UsedTube";
+        //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = "NLAW (Used)";
+        descriptionShort = "Used NLAW Tube";
+        magazines[] = {"ACE_FiredMissileDummy_CUP"};
+        //picture = "";              @todo
+        //model = "";                @todo
+        weaponPoolAvailable = 0;
+    };
+    class CUP_launch_RPG18: Launcher_Base_F {
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 1;
+        ACE_UsedTube = "ACE_launch_RPG18_Used_F";      // The class name of the used tube.
+        magazines[] = {"ACE_PreloadedMissileDummy_CUP"};  // The dummy magazine
+    };
+    class ACE_launch_RPG18_Used_F: CUP_launch_RPG18 {
+        scope = 1;
+        ACE_isUsedLauncher = 1;
+        author = "$STR_ACE_Common_ACETeam";
+        //displayName = "$STR_ACE_Disposable_UsedTube";
+        //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
+        displayName = "RPG18 (Used)";
+        descriptionShort = "Used RPG18 Tube";
+        magazines[] = {"ACE_FiredMissileDummy_CUP"};
+        //picture = "";              @todo
+        //model = "";                @todo
+        weaponPoolAvailable = 0;
     };
 };

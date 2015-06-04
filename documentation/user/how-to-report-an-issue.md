@@ -11,6 +11,8 @@ parent: wiki
 
 If you've found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only `@cba_a3` and `@ACE3` on a newly created mission.
 
+Indicate if the issue appears on stable or development version. In case it is the development version, please also include the commit SHA-1 hash.
+
 <div class="panel callout">
     <h5>Please note:</h5>
     <p>It's not a valid to simply remove <code>@ACE3</code> from the mod list to confirm that ACE3 is the culprit.</p>
@@ -23,6 +25,7 @@ Head over to the <a href="{{ site.githubUrl }}/issues" target="_blank">ACE3 GitH
 
 ```
 ACE3 Version: 3.x.x
+(indicate if stable or dev, if dev indicate the commit the version is based on)
 
 **Mods:**
 * @cba_a3

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="logistics_uavbattery">
-        <Key ID="STR_ACE_logistics_uavbattery_Full">
+    <Package name="Logistics_UAVbattery">
+        <Key ID="STR_ACE_Logistics_UAVbattery_Full">
             <English>Drone is full</English>
             <German>Drohne ist voll</German>
             <Spanish>El VANT está lleno</Spanish>
@@ -13,7 +13,7 @@
             <Italian>Il drone è pieno</Italian>
             <Russian>БПЛА полностью заряжен</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_uavbattery_NoBattery">
+        <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
             <German>Du brauchst eine UAV-Batterie</German>
             <Spanish>Necesitas una batería para VANT</Spanish>
@@ -25,7 +25,7 @@
             <Italian>Hai bisogno di una Batteria UAV</Italian>
             <Russian>Требуется аккумулятор для БПЛА</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_uavbattery_Recharge">
+        <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
             <German>Aufladen</German>
             <Spanish>Recargar</Spanish>
@@ -37,7 +37,7 @@
             <Italian>Ricarica</Italian>
             <Russian>Зарядить</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_uavbattery_Battery_Name">
+        <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
             <German>UAV-Batterie</German>
             <Spanish>Batería para VANT</Spanish>
@@ -49,7 +49,7 @@
             <Italian>Batteria UAV</Italian>
             <Russian>Аккумулятор БПЛА</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_uavbattery_Battery_Description">
+        <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
             <German>Verwendet zum Aufladen von tragbaren UAVs</German>
             <Spanish>Usada para reabastecer el VANT</Spanish>
@@ -61,7 +61,7 @@
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_uavbattery_Battery_Recharge">
+        <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging ...</English>
             <German>Aufladen ...</German>
             <Spanish>Recargando ...</Spanish>

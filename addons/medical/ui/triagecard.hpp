@@ -49,7 +49,7 @@ class GVAR(triageCard) {
             font = "PuristaMedium";
             colorText[] = {0,0,0,1};
             colorBackground[] = {0,0,0,0};
-            text = "$STR_ACE_Medical_Actions_TriageCard";
+            text = CSTRING(Actions_TriageCard);
         };
         class TriageList: ACE_gui_listBoxBase {
             idc = 200;
