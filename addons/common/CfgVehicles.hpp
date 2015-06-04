@@ -40,6 +40,7 @@ class CfgVehicles {
       class Action {
         displayName = CSTRING(CheckPBO_Action_DisplayName);
         description = CSTRING(CheckPBO_Action_Description);
+        typeName = "NUMBER";
         class values {
           class WarnOnce {
             default = 1;
