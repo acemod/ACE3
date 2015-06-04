@@ -523,4 +523,10 @@ class CfgWeapons
         GVAR(range) = 20;
         GVAR(damage) = 1;
     };
+    class CUP_launch_Mk153Mod0: Launcher_Base_F {
+        GVAR(angle) = 30;
+        GVAR(range) = 30;
+        GVAR(damage) = 1;
+    };
+    class CUP_launch_Mk153Mod0: CUP_launch_Mk153Mod0_SMAWOptics {};
 };
