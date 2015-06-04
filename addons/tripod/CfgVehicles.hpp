@@ -58,7 +58,7 @@ class CfgVehicles {
             class retract_leg_3: retract_leg_2 {};
         };
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,1,1.5};
+        EGVAR(dragging,dragPosition[]) = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions {
             class ACE_MainActions {
