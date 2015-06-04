@@ -793,25 +793,25 @@
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_Module_DisplayName">
+        <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
             <Spanish>Sistema de interacción</Spanish>
             <German>Interaktionssystem</German>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName">
+        <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
             <Polish>Wł. zarządzanie drużyną</Polish>
             <Spanish>Habilitar gestión de equipos</Spanish>
             <German>Aktiviere Gruppenverwaltung</German>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Description">
+        <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
             <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_Module_Description">
+        <Key ID="STR_ACE_Interaction_Module_Description">
             <English></English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>

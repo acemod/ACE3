@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Mission Modules">
+    <Package name="MissionModules">
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
             <English>ACE Mission Modules</English>
             <Polish>ACE Moduły misji</Polish>

@@ -14,7 +14,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(RefuelUAV) {
-                    displayName = "$STR_ACE_logistics_uavbattery_Recharge";
+                    displayName = CSTRING(Recharge);
                     distance = 4;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRefuelUAV));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(refuelUAV));

@@ -1,7 +1,7 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings) : ACE_Module {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         function = QUOTE(DFUNC(initModule));
         displayName = "$STR_ACE_ViewDistance_Module_DisplayName";
