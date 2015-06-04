@@ -502,4 +502,9 @@ class CfgWeapons
         GVAR(range) = 2;
         GVAR(damage) = 0.5;
     };
+    class CUP_launch_M47: Launcher_Base_F {
+        GVAR(angle) = 45;
+        GVAR(range) = 30;
+        GVAR(damage) = 0.7;
+    };
 };
