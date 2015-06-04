@@ -497,6 +497,7 @@ class CfgWeapons
             };
         };
     };
+    // Non Disposable launchers
     class CUP_launch_Igla: Launcher_Base_F {
         GVAR(angle) = 30;
         GVAR(range) = 2;
@@ -538,5 +539,11 @@ class CfgWeapons
         GVAR(angle) = 30;
         GVAR(range) = 2;
         GVAR(damage) = 0.5;
+    };
+    // Disposable launchers under this line
+    class CUP_launch_M136: Launcher_Base_F {
+        GVAR(angle) = 45;
+        GVAR(range) = 100;
+        GVAR(damage) = 0.7;
     };
 };
