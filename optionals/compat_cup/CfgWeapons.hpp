@@ -529,4 +529,10 @@ class CfgWeapons
         GVAR(damage) = 1;
     };
     class CUP_launch_Mk153Mod0: CUP_launch_Mk153Mod0_SMAWOptics {};
+    class CUP_launch_FIM92Stinger: Launcher_Base_F {
+        GVAR(angle) = 45;
+        GVAR(range) = 15;
+        GVAR(damage) = 0.3; // Main damage arises from debris rather than the actual backblast
+    };
+    
 };
