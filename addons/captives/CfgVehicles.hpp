@@ -181,27 +181,27 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         author = "$STR_ACE_Common_ACETeam";
         category = "ACE";
-        displayName = "$STR_ACE_Captives_ModuleSettings_DisplayName";
+        displayName = CSTRING(ModuleSettings_DisplayName);
         function = QFUNC(moduleSettings);
         scope = 2;
         icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
         isGlobal = 1;
         class Arguments {
             class allowHandcuffOwnSide {
-                displayName = "$STR_ACE_Captives_ModuleSettings_handcuffSide_name";
-                description = "$STR_ACE_Captives_ModuleSettings_handcuffSide_description";
+                displayName = CSTRING(ModuleSettings_handcuffSide_name);
+                description = CSTRING(ModuleSettings_handcuffSide_description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class allowSurrender {
-                displayName = "$STR_ACE_Captives_ModuleSettings_allowSurrender_name";
-                description = "$STR_ACE_Captives_ModuleSettings_allowSurrender_description";
+                displayName = CSTRING(ModuleSettings_allowSurrender_name);
+                description = CSTRING(ModuleSettings_allowSurrender_description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Captives_ModuleSettings_Description";
+            description = CSTRING(ModuleSettings_Description);
             sync[] = {};
         };
     };
