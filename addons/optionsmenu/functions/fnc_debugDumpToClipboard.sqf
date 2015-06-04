@@ -49,6 +49,18 @@ if (isNull ace_player) then {"null"} else {animationState ace_player}];
 
 
 _text = format ["
+------ACE Settings------"];
+[_text] call _outputText;
+
+
+{
+    _var = missionNamespace getVariable [(_x select 0), "ERROR: Not Defined"];
+    _text = format ["%1 - %2", (_x select 0), _var];
+    [_text] call _outputText;
+} forEach EGVAR(common,settings);
+
+
+_text = format ["
 ------Array Info (count >= %1)------", MIN_ARRAY_SIZE];
 [_text] call _outputText;
 
