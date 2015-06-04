@@ -534,5 +534,9 @@ class CfgWeapons
         GVAR(range) = 15;
         GVAR(damage) = 0.3; // Main damage arises from debris rather than the actual backblast
     };
-    
+    class CUP_launch_9K32Strela: Launcher_Base_F {
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
+        GVAR(damage) = 0.5;
+    };
 };
