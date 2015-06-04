@@ -546,7 +546,7 @@ class CfgWeapons
         EGVAR(overpressure,range) = 100;
         EGVAR(overpressure,damage) = 0.7;
         ACE_UsedTube = "ACE_launch_M136_Used_F";      // The class name of the used tube.
-        magazines[] = {"ACE_PreloadedMissileDummy"};  // The dummy magazine
+        magazines[] = {"ACE_PreloadedMissileDummy_CUP"};  // The dummy magazine
     };
     class ACE_launch_M136_Used_F: CUP_launch_M136 {
         scope = 1;
@@ -556,7 +556,7 @@ class CfgWeapons
         //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayName = "M136 (Used)";
         descriptionShort = "Used M136 Tube";
-        magazines[] = {"ACE_FiredMissileDummy"};
+        magazines[] = {"ACE_FiredMissileDummy_CUP"};
         //picture = "";              @todo
         //model = "";                @todo
         weaponPoolAvailable = 0;

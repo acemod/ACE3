@@ -9,7 +9,7 @@ class CfgMagazines {
         weaponPoolAvailable = 0;
         mass = 0;
     };
-    class ACE_FiredMissileDummy: ACE_PreloadedMissileDummy {
+    class ACE_FiredMissileDummy_CUP: ACE_PreloadedMissileDummy_CUP {
         count = 0;
     };
     class ACE_UsedTube_F: CUP_M136_M {
