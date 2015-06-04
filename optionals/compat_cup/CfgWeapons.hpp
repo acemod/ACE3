@@ -507,4 +507,11 @@ class CfgWeapons
         GVAR(range) = 30;
         GVAR(damage) = 0.7;
     };
+    class CUP_launch_MAAWS: Launcher_Base_F {
+        GVAR(angle) = 60;
+        GVAR(range) = 28;
+        GVAR(damage) = 0.7;
+    };
+    class CUP_launch_MAAWS_Scope: CUP_launch_MAAWS {};
+    
 };
