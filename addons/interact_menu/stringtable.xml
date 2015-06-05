@@ -85,6 +85,9 @@
             <Italian>Interazioni con veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
+            <English>Zeus Actions</English>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
