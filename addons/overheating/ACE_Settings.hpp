@@ -3,7 +3,7 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         value = 1;
-        displayName = "$STR_ACE_overheating_SettingDisplayTextName";
-        description = "$STR_ACE_overheating_SettingDisplayTextDesc";
+        displayName = CSTRING(SettingDisplayTextName);
+        description = CSTRING(SettingDisplayTextDesc);
     };
 };

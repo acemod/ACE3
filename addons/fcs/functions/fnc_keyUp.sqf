@@ -208,5 +208,5 @@ if(_playSound) then {
 };
 
 if(_showHint) then {
-    [format ["%1: %2", localize "STR_ACE_FCS_ZeroedTo", _distance]] call EFUNC(common,displayTextStructured);
+    [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
 };

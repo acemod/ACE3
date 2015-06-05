@@ -53,7 +53,12 @@ _recurseFnc = {
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            _runOnHover = true;
+            if (isText (_entryCfg >> "runOnHover")) then {
+                _runOnHover = compile getText (_entryCfg >> "runOnHover");
+            } else {
+                _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            };
 
             _condition = compile _condition;
             _children = [_entryCfg] call _recurseFnc;
@@ -87,12 +92,12 @@ private ["_baseDisplayName", "_baseIcon"];
 _baseDisplayName = "";
 _baseIcon = "";
 if (_objectType isKindOf "CAManBase") then {
-    _baseDisplayName = localize "STR_ACE_Interact_Menu_SelfActionsRoot";
+    _baseDisplayName = localize LSTRING(SelfActionsRoot);
     _baseIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
 } else {
     _baseDisplayName = getText (configFile >> "CfgVehicles" >> _objectType >> "displayName");
     //Alt would be to just use a static text, if veh names end up being too long:
-    // _baseDisplayName = localize "STR_ACE_Interact_Menu_VehicleActionsRoot";
+    // _baseDisplayName = localize LSTRING(VehicleActionsRoot);
 
     //Pull the icon from the vehicle's config:
     _baseIcon = getText (configFile >> "CfgVehicles" >> _objectType >> "Icon");

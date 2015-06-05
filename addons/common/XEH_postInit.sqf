@@ -248,18 +248,47 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
+
 GVAR(commonPostInited) = true;
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
+    PARAMS_1(_args);
+    EXPLODE_1_PVT(_args,_waitingMsgSent);
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};
+
     // If settings are not initialized then wait
-    if !(GVAR(SettingsInitialized)) exitWith {};
+    if (isNil QGVAR(settings)) exitWith {
+        if (!_waitingMsgSent) then {
+            _args set [0, true];
+            diag_log text format["[ACE] Waiting on settings from server"];
+        };
+    };
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 
+    diag_log text format["[ACE] Settings received from server"];
+
+    // Event so that ACE_Modules have their settings loaded:
+    ["InitSettingsFromModules", []] call FUNC(localEvent);
+
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+
     diag_log text format["[ACE] Settings initialized"];
+
+    //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, []] call cba_fnc_addPerFrameHandler;
+}, 0, [false]] call cba_fnc_addPerFrameHandler;

@@ -60,7 +60,7 @@ class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
     soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,1};
     soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,1};
     style = "0x02 + 0xC0";
-    text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
+    text = CSTRING(OpenConfigMenu);
     textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
     tooltip = "";
     tooltipColorBox[] = {1,1,1,1};

@@ -52,6 +52,6 @@ if (_weapon in _jammedWeapons) then {
   };
 
   if (GVAR(DisplayTextOnJam)) then {
-    [localize "STR_ACE_Overheating_WeaponUnjammed"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(WeaponUnjammed)] call EFUNC(common,displayTextStructured);
   };
 };

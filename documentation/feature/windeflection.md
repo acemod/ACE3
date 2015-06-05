@@ -15,7 +15,7 @@ ACE3 Wind Deflection is enabled by default. This feature simulates the wind defl
 </div>
 
 ## 2. Usage
-ACE3 Wind Deflection can be disabled or modified via a Module in the 2D editor.
+ACE3 Wind Deflection can be disabled or modified via a module in the 2D editor.
 
 
 ## 3. Dependencies

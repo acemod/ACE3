@@ -51,16 +51,8 @@ if (isText(_magazineTrigger >> "ammo")) then {
     _ammo = getText (_magazineTrigger >> "ammo");
 };
 _triggerSpecificVars pushBack _triggerConfig;
-private ["_defuseHelper"];
-_defuseHelper = createVehicle ["ACE_DefuseObject", _pos, [], 0, "NONE"];
-_defuseHelper setPosATL _pos;
 
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
-_defuseHelper attachTo [_explosive, [0,0,0], ""];
-_defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
-
-_expPos = getPosATL _explosive;
-_defuseHelper setPosATL (((getPosATL _defuseHelper) vectorAdd (_pos vectorDiff _expPos)));
 _explosive setPosATL _pos;
 
 if (!isNull _attachedTo) then {

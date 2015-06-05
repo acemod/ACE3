@@ -1,24 +1,17 @@
 ---
 layout: wiki
 title: No Radio
-description: 
+description: Disable callouts
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Silent avatar
+### 1.1 Silent avatar
 Mutes the player's automatic callouts ("Enemy man, 100 meters, front!").
 Does not mute AI callouts.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

@@ -20,11 +20,11 @@ class CfgWeapons {
     };
     class BWA3_G28_Standard: Rifle_Long_Base_F {
         ACE_barrelTwist=304.8;
-        ACE_barrelLength=419;
+        ACE_barrelLength=421;
     };
     class BWA3_G28_Assault: BWA3_G28_Standard {
         ACE_barrelTwist=304.8;
-        ACE_barrelLength=305;
+        ACE_barrelLength=421;
     };
     class BWA3_G27: BWA3_G28_Standard {
         ACE_barrelTwist=304.8;

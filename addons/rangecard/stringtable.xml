@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="RangeCard">
+        <Key ID="STR_ACE_RangeCard_Name">
+            <English>Range Card</English>
+            <Polish>Tabela balistyczna</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_Description">
+            <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
+            <Polish>Co 50 metrów - MRAD/MRAD (siatka/pokrętło)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_OpenRangeCard">
+            <English>Open Range Card</English>
+            <Polish>Otwórz tabelę balistyczną</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
+            <English>Open Range Card Copy</English>
+            <Polish>Otwórz kopię tabeli balistycznej</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
+            <English>Open Range Card</English>
+            <Polish>Otwórz tabelę balistyczną</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
+            <English>Open Range Card Copy</English>
+            <Polish>Otwórz kopię tabeli balistycznej</Polish>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_CopyRangeCard">
+            <English>Copy Range Card</English>
+            <Polish>Skopiuj tabelę balistyczną</Polish>
+        </Key>
+    </Package>
+</Project>

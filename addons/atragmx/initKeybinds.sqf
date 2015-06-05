@@ -1,4 +1,4 @@
-["ACE3 Equipment", QGVAR(ATragMXDialogKey), localize "STR_ACE_ATragMX_ATragMXDialogKey",
+["ACE3 Equipment", QGVAR(ATragMXDialogKey), localize LSTRING(ATragMXDialogKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
