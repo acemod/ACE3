@@ -3,8 +3,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_EarPlugs: ACE_ItemCore {
-        displayName = "$STR_ACE_Hearing_EarPlugs_Name";
-        descriptionShort = "$STR_ACE_Hearing_EarPlugs_Description";
+        displayName = CSTRING(EarPlugs_Name);
+        descriptionShort = CSTRING(EarPlugs_Description);
         model = PATHTOF(ACE_earplugs.p3d);
         picture = PATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;

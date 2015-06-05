@@ -1,4 +1,3 @@
-
 class CfgVehicles {
   /*class Man;
   class CAManBase: Man {
@@ -29,43 +28,44 @@ class CfgVehicles {
         class ModuleDescription;
     };
     class ACE_Module: Module_F {};
-   class ACE_ModuleCheckPBOs: ACE_Module {
-    author = "$STR_ACE_Common_ACETeam";
+    class ACE_ModuleCheckPBOs: ACE_Module {
+    author = CSTRING(ACETeam);
     category = "ACE";
-    displayName = "$STR_ACE_Common_CheckPBO_DisplayName";
+    displayName = CSTRING(CheckPBO_DisplayName);
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
     class Arguments {
       class Action {
-        displayName = "$STR_ACE_Common_CheckPBO_Action_DisplayName";
-        description = "$STR_ACE_Common_CheckPBO_Action_Description";
+        displayName = CSTRING(CheckPBO_Action_DisplayName);
+        description = CSTRING(CheckPBO_Action_Description);
+        typeName = "NUMBER";
         class values {
           class WarnOnce {
             default = 1;
-            name = "$STR_ACE_Common_CheckPBO_Action_WarnOnce";
+            name = CSTRING(CheckPBO_Action_WarnOnce);
             value = 0;
           };
           class Warn {
-            name = "$STR_ACE_Common_CheckPBO_Action_WarnPerm";
+            name = CSTRING(CheckPBO_Action_WarnPerm);
             value = 1;
           };
           class Kick {
-            name = "$STR_ACE_Common_CheckPBO_Action_Kick";
+            name = CSTRING(CheckPBO_Action_Kick);
             value = 2;
           };
         };
       };
       class CheckAll {
-        displayName = "$STR_ACE_Common_CheckPBO_CheckAll_DisplayName";
-        description = "$STR_ACE_Common_CheckPBO_CheckAll_Description";
+        displayName = CSTRING(CheckPBO_CheckAll_DisplayName);
+        description = CSTRING(CheckPBO_CheckAll_Description);
         typeName = "BOOL";
         defaultValue = 0;
       };
       class Whitelist {
-        displayName = "$STR_ACE_Common_CheckPBO_Whitelist_DisplayName";
-        description = "$STR_ACE_Common_CheckPBO_Whitelist_Description";
+        displayName = CSTRING(CheckPBO_Whitelist_DisplayName);
+        description = CSTRING(CheckPBO_Whitelist_Description);
         typeName = "STRING";
         class values {
             default = "[]";
@@ -73,14 +73,14 @@ class CfgVehicles {
       };
     };
     class ModuleDescription: ModuleDescription {
-        description = "$STR_ACE_Common_CheckPBO_Description";
+        description = CSTRING(CheckPBO_Description);
     };
   };
 
   class ACE_ModuleLSDVehicles: ACE_Module {
-    author = "$STR_ACE_Common_ACETeam";
+    author = CSTRING(ACETeam);
     category = "ACE";
-    displayName = "$STR_ACE_Common_LSDVehicles_DisplayName";
+    displayName = CSTRING(LSDVehicles_DisplayName);
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
@@ -88,15 +88,15 @@ class CfgVehicles {
     class Arguments {
     };
     class ModuleDescription: ModuleDescription {
-        description = "$STR_ACE_Common_LSDVehicles_Description";
+        description = CSTRING(LSDVehicles_Description);
         sync[] = {"AnyVehicle"};
     };
   };
 
   class Box_NATO_Support_F;
   class ACE_Box_Misc: Box_NATO_Support_F {
-    author = "$STR_ACE_Common_ACETeam";
-    displayName = "$STR_ACE_Common_MiscItems";
+    author = CSTRING(ACETeam);
+    displayName = CSTRING(MiscItems);
     transportMaxWeapons = 9001;
     transportMaxMagazines = 9001;
     transportMaxItems = 9001;
@@ -112,8 +112,8 @@ class CfgVehicles {
     class ACE_bananaItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_Common_bananaDisplayName";
-        author = "$STR_ACE_Common_ACETeam";
+        displayName = CSTRING(bananaDisplayName);
+        author = CSTRING(ACETeam);
         vehicleClass = "Items";
         class TransportItems
         {

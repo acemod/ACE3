@@ -181,18 +181,18 @@ case (APP_MODE_SETUP): {
         _settingListBox = _display displayCtrl IDC_MODESETTINGS;
         lbClear _settingListBox;
 
-        _settingListBox lbAdd (localize "STR_ACE_microdagr_settingUseMils");
+        _settingListBox lbAdd (localize LSTRING(settingUseMils));
         if (GVAR(settingUseMils)) then {
-            _settingListBox lbSetTextRight [0, (localize "STR_ACE_microdagr_settingMils")];
+            _settingListBox lbSetTextRight [0, (localize LSTRING(settingMils))];
         } else {
-            _settingListBox lbSetTextRight [0, (localize "STR_ACE_microdagr_settingDegrees")];
+            _settingListBox lbSetTextRight [0, (localize LSTRING(settingDegrees))];
         };
 
-        _settingListBox lbAdd (localize "STR_ACE_microdagr_settingShowWP");
+        _settingListBox lbAdd (localize LSTRING(settingShowWP));
         if (GVAR(settingShowAllWaypointsOnMap)) then {
-            _settingListBox lbSetTextRight [1, (localize "STR_ACE_microdagr_settingOn")];
+            _settingListBox lbSetTextRight [1, (localize LSTRING(settingOn))];
         } else {
-            _settingListBox lbSetTextRight [1, (localize "STR_ACE_microdagr_settingOff")];
+            _settingListBox lbSetTextRight [1, (localize LSTRING(settingOff))];
         };
     };
 };

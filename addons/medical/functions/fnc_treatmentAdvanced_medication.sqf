@@ -32,6 +32,6 @@ _items = _this select 4;
     };
 }foreach _items;
 
-[_target, "activity", "STR_ACE_Medical_Activity_usedItem", [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
+[_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
 
 true;

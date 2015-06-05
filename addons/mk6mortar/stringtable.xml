@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="mk6mortar">
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+    <Package name="Mk6Mortar">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
             <English>82mm Rangetable</English>
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
@@ -13,7 +13,7 @@
             <Czech>82mm Rangetable</Czech>
             <Italian>Tavola di tiro 82mm</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
@@ -25,7 +25,7 @@
             <Czech>Rangetable pro MK6 82mm minomet</Czech>
             <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
@@ -37,7 +37,7 @@
             <Czech>Otevřít 82mm Rangetable</Czech>
             <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
             <German>Ladung</German>
             <French>Charge</French>
@@ -49,49 +49,49 @@
             <Czech>Nabít</Czech>
             <Italian>Carica</Italian>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_Module_DisplayName">
+        <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>MK6 Settings</English>
             <Polish>Moździerz MK6 - Ustawienia</Polish>
             <Spanish>Ajustes MK6</Spanish>
             <German>MK6-Einstellungen</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_DisplayName">
+        <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
             <Polish>Opór powietrza</Polish>
             <Spanish>Resistencia al aire</Spanish>
             <German>Luftwiderstand</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_airResistanceEnabled_Description">
+        <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza MK6 przez graczy</Polish>
             <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName">
+        <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
             <Polish>Komputer MK6</Polish>
             <Spanish>Habilitar ordenador del MK6</Spanish>
             <German>Erlaube MK6-Computer</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_allowComputerRangefinder_Description">
+        <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
             <Polish>Zezwól na komputer i dalmierz (opcja ta MUSI zostać wyłączona jeżeli aktywowałeś opór powietrza)</Polish>
             <Spanish>Muestra el ordenador y el medidor de distancia (DEBEN ser quitados si se activa la resistecia al aire)</Spanish>
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_allowCompass_DisplayName">
+        <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>
             <Polish>Kompas MK6</Polish>
             <Spanish>Habilitar brujula del MK6</Spanish>
             <German>Erlaube MK6-Kompass</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_allowCompass_Description">
+        <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
             <Polish>Pokaż kompas MK6</Polish>
             <Spanish>Muestra la brujula digital en el MK6</Spanish>
             <German>Zeige MK6-Digitaler-Kompass</German>
         </Key>
-        <Key ID="STR_ACE_mk6mortar_Module_Description">
+        <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
             <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>

@@ -29,5 +29,5 @@ _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (_brightness + 1), 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
 GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
 
-[format [(localize "STR_ACE_NightVision_NVGBrightness"), (_brightness * 10)]] call EFUNC(common,displayTextStructured);
+[format [(localize LSTRING(NVGBrightness)), (_brightness * 10)]] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";

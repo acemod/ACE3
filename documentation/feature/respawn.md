@@ -15,7 +15,7 @@ Requires the Respawn Gear module to be placed. Respawned soldiers now have their
 Shows friendly fire warnings in system chat if the module is placed. Works even in higher difficulties where kill messages are normally disabled.
 
 ### 1.3 Rallypoints
-Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOBs. Requires some setup from the mission maker.
+Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOB's. Requires some setup from the mission maker.
 
 
 ## 2. Usage
@@ -23,7 +23,7 @@ Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOBs.
 ### 2.1 Using rallypoints
 - For this to work pre-emptive preparations need to be made by the mission maker.
 - Approach the rallypoint flagpole
-- Use the interaction key <kbd>left windows</kbd> (ACE3 default keybind `Interaction key`).
+- Use the interaction key <kbd>Left Windows</kbd> (ACE3 default key bind `Interaction key`).
 - Select teleport to (base / rallypoint).
 
 

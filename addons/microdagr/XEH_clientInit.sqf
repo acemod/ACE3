@@ -4,7 +4,7 @@
 if (!hasInterface) exitWith {};
 
 //Add Keybinds:
-["ACE3 Equipment", QGVAR(openGPS), (localize "STR_ACE_microdagr_toggleUnit"),
+["ACE3 Equipment", QGVAR(openGPS), (localize LSTRING(toggleUnit)),
 {
     // canInteractWith (can use on map)
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -17,7 +17,7 @@ if (!hasInterface) exitWith {};
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeGPS), (localize "STR_ACE_microdagr_closeUnit"),
+["ACE3 Equipment", QGVAR(closeGPS), (localize LSTRING(closeUnit)),
 {
     // canInteractWith (can use on map)
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};

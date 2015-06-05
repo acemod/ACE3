@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-This folder regroup all assets released under the APL license.
+This folder regroups all assets released under the APL license.
 
 ## 2. Dependencies
 

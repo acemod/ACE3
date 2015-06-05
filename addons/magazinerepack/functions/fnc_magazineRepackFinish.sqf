@@ -29,9 +29,9 @@ _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassna
 if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 _structuredOutputText = if (_errorCode == 0) then {
-    format ["<t align='center'>%1</t><br/>", (localize "STR_ACE_MagazineRepack_RepackComplete")];
+    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackComplete))];
 } else {
-    format ["<t align='center'>%1</t><br/>", (localize "STR_ACE_MagazineRepack_RepackInterrupted")];
+    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackInterrupted))];
 };
 
 _picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
@@ -51,6 +51,6 @@ _structuredOutputText = _structuredOutputText + format ["<img align='center' siz
         // };
     // };
 // } forEach (magazinesAmmoFull ACE_player);
-// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize "STR_ACE_MagazineRepack_RepackedMagazinesCount") + "</t>"), _fullMags, _partialMags];
+// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize LSTRING(RepackedMagazinesCount)) + "</t>"), _fullMags, _partialMags];
 
 [parseText _structuredOutputText, 2] call EFUNC(common,displayTextStructured);

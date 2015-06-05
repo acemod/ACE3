@@ -38,7 +38,7 @@ if (count _position == 0) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+[localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
 
 [{
     _rallypoint = _this select 0;
@@ -53,6 +53,6 @@ _position set [2, 0];
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
-    [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
 },
 [_rallypoint, _unit, _position, _rallypoint], 5, 1] call EFUNC(common,waitAndExecute);

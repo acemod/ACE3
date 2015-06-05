@@ -2707,120 +2707,120 @@
             <Spanish>Médico ACE</Spanish>
             <German>ACE-Medicsystem</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
             <English>Medical Settings [ACE]</English>
             <Polish>Ustawienia medyczne [ACE]</Polish>
             <Spanish>Ajustes médicos [ACE]</Spanish>
             <German>Medizinische Einstellungen [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_level_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_level_DisplayName">
             <English>Medical Level</English>
             <Polish>Poziom medyczny</Polish>
             <Spanish>Nivel médico</Spanish>
             <German>Medizinisches Level</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_level_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_level_Description">
             <English>What is the medical simulation level?</English>
             <Polish>Jaki jest poziom symulacji medycznej?</Polish>
             <Spanish>¿Cuál es el nivel de simulación médica?</Spanish>
             <German>Wie hoch soll das medizinische Simulationslevel sein?</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_basic">
+        <Key ID="STR_ACE_Medical_MedicalSettings_basic">
             <English>Basic</English>
             <Polish>Podstawowy</Polish>
             <Spanish>Básico</Spanish>
             <German>Standard</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_advanced">
+        <Key ID="STR_ACE_Medical_MedicalSettings_advanced">
             <English>Advanced</English>
             <Polish>Zaawansowany</Polish>
             <Spanish>Avanzado</Spanish>
             <German>Erweitert</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_medicSetting_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
             <Polish>Poziom medyków</Polish>
             <Spanish>Configuración médica</Spanish>
             <German>Medizinische Einstellungen</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_medicSetting_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Description">
             <English>What is the level of detail prefered for medics?</English>
             <Polish>Jaki jest poziom detali medycznych wyświetlanych dla medyków?</Polish>
             <Spanish>¿Cuál es el nivel de detalle preferido para los médicos?</Spanish>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_medicSetting_disable">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
             <Polish>Wyłącz medyków</Polish>
             <Spanish>Desactivar médicos</Spanish>
             <German>Sanitäter deaktivieren</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_allowLitterCreation_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
             <English>Enable Litter</English>
             <Polish>Aktywuj odpadki</Polish>
             <Spanish>Activar restos médicos</Spanish>
             <German>Abfälle aktivieren</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_allowLitterCreation_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
             <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
             <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
             <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_litterCleanUpDelay_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
             <English>Life time of litter objects</English>
             <Polish>Długość życia odpadków</Polish>
             <Spanish>Tiempo de vida de los restos médicos</Spanish>
             <German>Dauer des angezeigten Abfalls</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_litterCleanUpDelay_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
             <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
             <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
             <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_enableScreams_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>
             <Polish>Aktywuj wrzaski</Polish>
             <Spanish>Activar gritos</Spanish>
             <German>Schreie aktivieren</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_enableScreams_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_Description">
             <English>Enable screaming by injuried units</English>
             <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
             <Spanish>Activar gritos para unidades heridas</Spanish>
             <German>Aktiviere Schreie bei verletzten Einheiten</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_playerDamageThreshold_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
             <Polish>Próg obrażeń graczy</Polish>
             <Spanish>Daño de jugador</Spanish>
             <German>Spielerschaden</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_playerDamageThreshold_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_Description">
             <English>What is the damage a player can take before being killed?</English>
             <Polish>Jaki jest próg obrażeń, jakie gracz może otrzymać zanim zostanie zabity?</Polish>
             <Spanish>¿Cuál es el daño que un jugador puede sufrir antes de morir?</Spanish>
             <German>Wie viel Schaden kann ein Spieler erleiden, bevor er getötet wird?</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_AIDamageThreshold_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_DisplayName">
             <English>AI Damage</English>
             <Polish>Próg obrażeń AI</Polish>
             <Spanish>Daño IA</Spanish>
             <German>KI-Schaden</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_AIDamageThreshold_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_Description">
             <English>What is the damage an AI can take before being killed?</English>
             <Polish>Jaki jest próg obrażeń, jakie AI może otrzymać zanim zostanie zabite?</Polish>
             <Spanish>¿Cuál es el daño que la IA puede sufrir antes de morir?</Spanish>
             <German>Wie viel Schaden kann eine KI erleiden, bis sie getötet wird?</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_enableUnconsciousnessAI_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
             <English>AI Unconsciousness</English>
             <Polish>Nieprzytomność AI</Polish>
             <Spanish>Inconsciencia IA</Spanish>
             <German>KI-Bewusstlosigkeit</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_enableUnconsciousnessAI_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
             <Polish>Czy AI może być nieprzytomne od odniesionych obrażeń?</Polish>
             <Spanish>Permita a la IA caer inconsciente</Spanish>
@@ -2838,55 +2838,55 @@
             <Spanish>Desactivado</Spanish>
             <German>Aktiviert</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_preventInstaDeath_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
             <Polish>Wył. natychmiast. śmierć</Polish>
             <Spanish>Prevenir muerte instantánea</Spanish>
             <German>Verhindere direkten Tod</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_preventInstaDeath_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
             <English>Have a unit move to unconscious instead of death</English>
             <Polish>Spraw, aby jednostka została przeniesiona do stanu nieprzytomności zamiast ginąć na miejscu od śmiertelnych obrażeń</Polish>
             <Spanish>Mover una unidad a inconsciente en vez de a muerta</Spanish>
             <German>Lässt eine Einheit bewusstlos werden anstatt zu sterben</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_bleedingCoefficient_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
             <Polish>Mnożnik krwawienia</Polish>
             <Spanish>Coeficiente de sangrado</Spanish>
             <German>Verblutungsmultiplikator</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_bleedingCoefficient_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_Description">
             <English>Coefficient to modify the bleeding speed</English>
             <Polish>Mnożnik modyfikujący prędkość wykrwawiania się</Polish>
             <Spanish>Coeficiente para modificar la velocidad de sangrado</Spanish>
             <German>Multiplikator um die Verblutungsgeschwindigkeit zu verändern</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_painCoefficient_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_DisplayName">
             <English>Pain coefficient</English>
             <Polish>Mnożnik bólu</Polish>
             <Spanish>Coeficiente de dolor</Spanish>
             <German>Schmerzmultiplikator</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_painCoefficient_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_Description">
             <English>Coefficient to modify the pain intensity</English>
             <Polish>Mnożnik modyfikujący intensywność bólu</Polish>
             <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
             <German>Multiplikator um den Schmerzintensität zu verändern</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_keepLocalSettingsSynced_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
             <English>Sync status</English>
             <Polish>Synchronizuj status</Polish>
             <Spanish>Sincronizador estado</Spanish>
             <German>Status synchronisieren</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_keepLocalSettingsSynced_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_Description">
             <English>Keep unit status synced. Recommended on.</English>
             <Polish>Utrzymuj synchronizację statusu jednostek. Zalecane zostawienie tej opcji włączonej.</Polish>
             <Spanish>Mantener el estado de la unidad sincronizado. Recomendado activado</Spanish>
             <German>Status der Einheit synchron halten. Sollte aktiviert bleiben.</German>
         </Key>
-        <Key ID="STR_ACE_MedicalSettings_Module_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
             <Polish>Moduł ten dostarcza system medyczny dla graczy oraz AI.</Polish>
             <Spanish>Proporciona un sistema médico para  jugadores e IA.</Spanish>
@@ -2922,324 +2922,324 @@
             <Spanish>Jugadors e IA</Spanish>
             <German>Spieler und KI</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
             <English>Enable Advanced wounds</English>
             <Polish>Akt. zaawansowane rany</Polish>
             <Spanish>Activa heridas avanzadas</Spanish>
             <German>Aktiviere erweiterte Wunden</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableAdvancedWounds_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_Description">
             <English>Allow reopening of bandaged wounds?</English>
             <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
             <Spanish>Permitir la reapertura de las heridas vendadas?</Spanish>
             <German>Erlaube das Öffnen von bandagierten Wunden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
             <Polish>Obrażenia od kolizji</Polish>
             <Spanish>Accidentes de vehículos</Spanish>
             <German>Fahrzeugunfälle</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableVehicleCrashes_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
             <Polish>Czy jednostki otrzymują obrażenia w wyniku kolizji pojazdów?</Polish>
             <Spanish>¿Las unidades reciben daño de un accidente de tráfico?</Spanish>
             <German>Bekommen Einheiten von Fahrzeugunfällen Schaden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Polish>Ust. apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erstehilfekasten</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_medicSetting_PAK_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_Description">
             <English>Who can use the PAK for full heal?</English>
             <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
             <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
             <German>Wer kann den Erstehilfekasten für eine Endheilung verwenden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_anyone">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anyone">
             <English>Anyone</English>
             <Polish>Wszyscy</Polish>
             <Spanish>Nadie</Spanish>
             <German>Jeder</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_Medic">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Medic">
             <English>Medics only</English>
             <Polish>Tylko medycy</Polish>
             <Spanish>Solo médicos</Spanish>
             <German>Nur Sanitäter</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_Special">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
             <English>Doctors only</English>
             <Polish>Tylko doktorzy</Polish>
             <Spanish>Solo doctores</Spanish>
             <German>Nur Ärzte</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
             <Polish>Usuń apteczkę po użyciu</Polish>
             <Spanish>Eliminar EPA después del uso</Spanish>
             <German>Entferne Erstehilfekasten bei Verwendung</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_consumeItem_PAK_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_Description">
             <English>Should PAK be removed on usage?</English>
             <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
             <Spanish>El EPA será eliminado después de usarlo</Spanish>
             <German>Sollen Erstehilfekästen bei Verwendung entfernt werden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Polish>Ogr. apteczek osobistych</Polish>
             <Spanish>Ubicacions del EPA</Spanish>
             <German>Orte für Erstehilfekasten</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_PAK_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
             <English>Where can the personal aid kit be used?</English>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann der Erstehilfekasten verwendet werden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_anywhere">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
             <Polish>Wszędzie</Polish>
             <Spanish>Donde sea</Spanish>
             <German>Überall</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_vehicle">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicle">
             <English>Medical vehicles</English>
             <Polish>Pojazdy medyczne</Polish>
             <Spanish>Vehiculos médicos</Spanish>
             <German>Medizinische Fahrzeuge</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_facility">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_facility">
             <English>Medical facility</English>
             <Polish>Budynki medyczne</Polish>
             <Spanish>Centro médico</Spanish>
             <German>Medizinische Einrichtungen</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_vehicleAndFacility">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicleAndFacility">
             <English>Vehicles &amp; facility</English>
             <Polish>Pojazdy i budynki medyczne</Polish>
             <Spanish>Vehículos y centros</Spanish>
             <German>Fahrzeuge &amp; Einrichtungen</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_disabled">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_disabled">
             <English>Disabled</English>
             <Polish>Wyłączone</Polish>
             <Spanish>Desactivado</Spanish>
             <German>Deaktiviert</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical kit (Adv)</English>
             <Polish>Ust. zestawu chirurg.</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
             <German>Erlaube Operationskasten</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
             <English>Who can use the surgical kit?</English>
             <Polish>Kto może skorzystać z zestawu chirurgicznego w celu zszycia ran?</Polish>
             <Spanish>¿Quién puede utilizar el equipo quirúrgico?</Spanish>
             <German>Wer kann den Operationskasten verwenden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
             <English>Remove Surgical kit (Adv)</English>
             <Polish>Usuń zest. chir. po użyciu</Polish>
             <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
             <German>Enrtferne Operationskasten (erweitert)</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
             <English>Should Surgical kit be removed on usage?</English>
             <Polish>Czy zestaw chirurgiczny powinien zniknąć z ekwipunku po jego użyciu?</Polish>
             <Spanish>Eliminar el equipo quirúrgico después del uso</Spanish>
             <German>Entferne Operationskästen bei Verwendung?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical kit (Adv)</English>
             <Polish>Ogr. zestawu chirurg.</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
             <German>Orte für Operationskästen (erweitert)</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
             <English>Where can the Surgical kit be used?</English>
             <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
             <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
             <German>Wo kann der Operationskasten verwendet werden?</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_Module_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Medical</English>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>
             <German>Behandlungseinstellungen vom ACE-Medical konfigurieren</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_ReviveSettings_Module_DisplayName">
             <English>Revive Settings [ACE]</English>
             <Polish>Ustawienia wskrzeszania [ACE]</Polish>
             <Spanish>Sistema de resucitado [ACE]</Spanish>
             <German>Wiederbelebungseinstellungen [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_enableRevive_DisplayName">
+        <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_DisplayName">
             <English>Enable Revive</English>
             <Polish>Aktywuj wskrzeszanie</Polish>
             <Spanish>Habilitar resucitado</Spanish>
             <German>Erlaube Wiederbelebung</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_enableRevive_Description">
+        <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_Description">
             <English>Enable a basic revive system</English>
             <Polish>Aktywuj podstawowy system wskrzeszania</Polish>
             <Spanish>Habilitar un sistema básico de resucitado</Spanish>
             <German>Aktiviere Standard-Wiederbelebungssystem</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_maxReviveTime_DisplayName">
+        <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_DisplayName">
             <English>Max Revive time</English>
             <Polish>Maks. czas agonii</Polish>
             <Spanish>Tiempo máximo de resucitado</Spanish>
             <German>Maximale Wiederbelebungszeit</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_maxReviveTime_Description">
+        <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_Description">
             <English>Max amount of seconds a unit can spend in revive state</English>
             <Polish>Maksymalna długość agonii w sekundach (czas na wskrzeszenie)</Polish>
             <Spanish>Cantidad máxima de segundos que una unidad puede gastar en estado de resucitación</Spanish>
             <German>Maximale Zeitspanne in Sekunden die eine Einheit im Wiederbelebungszustand verbringen kann</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_amountOfReviveLives_DisplayName">
+        <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_DisplayName">
             <English>Max Revive lives</English>
             <Polish>Maks. ilość wskrzeszeń</Polish>
             <Spanish>Vidas máximas de resucitado</Spanish>
             <German>Maximale Leben bei Wiederbelebung</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_amountOfReviveLives_Description">
+        <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_Description">
             <English>Max amount of lives a unit. 0 or -1 is disabled.</English>
             <Polish>Maksymalna ilość wskrzeszeń. Wpisz 0 lub -1 aby wyłączyć.</Polish>
             <Spanish>Cantidad máxima de vidas por unidad. 0 o -1 es desactivado.</Spanish>
             <German>Maximale Anzahl von Leben einer Einheit. 0 or -1 bedeutet deaktiviert.</German>
         </Key>
-        <Key ID="STR_ACE_ReviveSettings_Module_Description">
+        <Key ID="STR_ACE_Medical_ReviveSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
             <Polish>Moduł ten aktywuje podstawowy system wskrzeszania. Jednostka po otrzymaniu śmiertelnych obrażeń przechodzi do stanu agonii, która trwa określoną długość czasu. W tym czasie aby wskrzesić i jednocześnie odratować jednostkę należy opatrzeć jej rany i wykonać RKO.</Polish>
             <Spanish>Proporciona un sistema médico para jugadores e IA.</Spanish>
             <German>Aktiviert das Medicsystem für Spieler und KI.</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_DisplayName">
             <English>Set Medic Class [ACE]</English>
             <Polish>Ustaw klasę medyka [ACE]</Polish>
             <Spanish>Establecer case médica [ACE]</Spanish>
             <German>Setze Sanitäterklassen [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_EnableList_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
             <Spanish>Lista</Spanish>
             <German>Liste</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_EnableList_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_Description">
             <English>List of unit names that will be classified as medic, separated by commas.</English>
             <Polish>Lista nazw jednostek, które są sklasyfikowane jako medycy, oddzielone przecinkami.</Polish>
             <Spanish>Lista de los nombres de las unidades que se clasifican como médico, separados por comas.</Spanish>
             <German>Liste von Namen, die als Sanitäter verwendet werden. Wird durch Kommas getrennt.</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_role_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_DisplayName">
             <English>Is Medic</English>
             <Polish>Klasa medyczna</Polish>
             <Spanish>Es médico</Spanish>
             <German>Ist Sanitäter</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_role_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English></English>
             <Polish></Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_role_none">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_none">
             <English>None</English>
             <Polish>Żadna</Polish>
             <Spanish>Nada</Spanish>
             <German>Keine</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_role_medic">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_medic">
             <English>Regular medic</English>
             <Polish>Zwykły medyk</Polish>
             <Spanish>Médico regular</Spanish>
             <German>Normaler Sanitäter</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_role_doctor">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
             <Polish>Doktor (tylko zaawansowani medycy)</Polish>
             <Spanish>Doctor (Solo medicina avanzada)</Spanish>
             <German>Arzt (nur erweiterte Sanitäter)</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicRoles_Module_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
             <Polish>Moduł ten przypisuje klasę medyka ACE do jednostek.</Polish>
             <Spanish>Asigna la clase médico ACE a una unidad</Spanish>
             <German>Weise die ACE-Sanitäterklasse einer Einheit zu</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_DisplayName">
             <English>Set Medical Vehicle [ACE]</English>
             <Polish>Ustaw pojazd medyczny [ACE]</Polish>
             <Spanish>Establecer vehículos médicos [ACE]</Spanish>
             <German>Setze medizinisches Fahrzeug [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_EnableList_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
             <Spanish>Lista</Spanish>
             <German>Liste</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_EnableList_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as medical vehicle, separated by commas.</English>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy medyczne, oddzielone przecinkami.</Polish>
             <Spanish>Lista de los vehículos que se clasifican como vehículo médicos, separados por comas.</Spanish>
             <German>Liste ovn Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_enabled_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
             <Polish>Jest pojazdem med.</Polish>
             <Spanish>Es vehículo médico</Spanish>
             <German>Ist medizinisches Fahrzeug</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_enabled_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_Description">
             <English>Whatever or not the objects in the list will be a medical vehicle.</English>
             <Polish>Czy pojazdy z tej listy są pojazdami medycznymi.</Polish>
             <Spanish>Cualquiera de la lista o fuera de ella será un vehículo médico.</Spanish>
             <German>Leg fest ob das Objekt in der Liste ein medizinisches Fahrzeug ist.</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicVehicle_Module_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
             <Polish>Moduł ten pozwala na przypisanie danym pojazdom statusu pojazdów medycznych. Wewnątrz takiego pojazdu można wykonywać zaawansowane zabiegi medyczne.</Polish>
             <Spanish>Asigna la clase médico ACE a una unidad</Spanish>
             <German>Weist die ACE-Sanitäterklasse einer Einheit zu</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicalFacility_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_DisplayName">
             <English>Set Medical Facility [ACE]</English>
             <Polish>Ustaw budynek medyczny [ACE]</Polish>
             <Spanish>Establece el centro médico [ACE]</Spanish>
             <German>Setze medizinische Einrichtung [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicalFacility_enabled_DisplayName">
+        <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
             <Polish>Jest budynkiem med.</Polish>
             <Spanish>Es centro médico</Spanish>
             <German>Ist eine medizinische Einrichtung</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicalFacility_enabled_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_Description">
             <English>Registers an object as a medical facility</English>
             <Polish>Przypisuje danemu obiektowi status budynku medycznego</Polish>
             <Spanish>Registra un objeto como un centro médico</Spanish>
             <German>Definiert ein Objekt als medizinische Einrichtung</German>
         </Key>
-        <Key ID="STR_ACE_AssignMedicalFacility_Module_Description">
+        <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_Description">
             <English>Defines an object as a medical facility. This allows for more advanced treatments. Can be used on buildings and vehicles.</English>
             <Polish>Moduł ten pozwala przypisać status budynku medycznego danemu obiektowi. Budynek taki pozwala na wykonywanie zaawansowanych zabiegów medycznych. Może być użyte na pojazdach i budynkach.</Polish>
             <Spanish>Define un objeto como un centro médico. Esto permite tratamientos más avanzados. Se puede utilizar en edificios y vehículos.</Spanish>
             <German>Definiert ein Objekt als medizinische Einrichtung. Das ermöglicht weitere Behandlungen. Kann bei Gebäuden und Fahrzeugen verwendet werden.</German>
         </Key>
-        <Key ID="STR_ACE_medicalSupplyCrate">
+        <Key ID="STR_ACE_Medical_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
             <German>[ACE] Medizinische Kiste (standard)</German>
         </Key>
-        <Key ID="STR_ACE_medicalSupplyCrate_advanced">
+        <Key ID="STR_ACE_Medical_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (zaawansowana)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Avanzada)</Spanish>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Optics">
-        <Key ID="STR_ACE_optic_hamr">
+        <Key ID="STR_ACE_Optics_hamr">
             <English>RCO (2D)</English>
             <Czech>RCO (2D)</Czech>
             <French>RCO (2D)</French>
@@ -13,7 +13,7 @@
             <Spanish>RCO (2D)</Spanish>
             <Hungarian>RCO (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_hamr_pip">
+        <Key ID="STR_ACE_Optics_hamr_pip">
             <English>RCO (PIP)</English>
             <Czech>RCO (PIP)</Czech>
             <French>RCO (PIP)</French>
@@ -25,7 +25,7 @@
             <Spanish>RCO (PIP)</Spanish>
             <Hungarian>RCO (PIP)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_arco">
+        <Key ID="STR_ACE_Optics_arco">
             <English>ARCO (2D)</English>
             <Czech>ARCO (2D)</Czech>
             <French>ARCO (2D)</French>
@@ -37,7 +37,7 @@
             <Spanish>ARCO (2D)</Spanish>
             <Hungarian>ARCO (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_arco_pip">
+        <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
             <Czech>ARCO (PIP)</Czech>
             <French>ARCO (PIP)</French>
@@ -49,7 +49,7 @@
             <Spanish>ARCO (PIP)</Spanish>
             <Hungarian>ARCO (PIP)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_valdada">
+        <Key ID="STR_ACE_Optics_valdada">
             <English>MRCO (2D)</English>
             <Czech>MRCO (2D)</Czech>
             <French>MRCO (2D)</French>
@@ -61,7 +61,7 @@
             <Spanish>MRCO (2D)</Spanish>
             <Hungarian>MRCO (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_valdada_pip">
+        <Key ID="STR_ACE_Optics_valdada_pip">
             <English>MRCO (PIP)</English>
             <Czech>MRCO (PIP)</Czech>
             <French>MRCO (PIP)</French>
@@ -73,7 +73,7 @@
             <Spanish>MRCO (PIP)</Spanish>
             <Hungarian>MRCO (PIP)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_sos">
+        <Key ID="STR_ACE_Optics_sos">
             <English>MOS (2D)</English>
             <Czech>MOS (2D)</Czech>
             <French>MOS (2D)</French>
@@ -85,7 +85,7 @@
             <Spanish>MOS (2D)</Spanish>
             <Hungarian>MOS (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_sos_pip">
+        <Key ID="STR_ACE_Optics_sos_pip">
             <English>MOS (PIP)</English>
             <Czech>MOS (PIP)</Czech>
             <French>MOS (PIP)</French>
@@ -97,7 +97,7 @@
             <Spanish>MOS (PIP)</Spanish>
             <Hungarian>MOS (PIP)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_lrps">
+        <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
             <Czech>LRPS (2D)</Czech>
             <French>LRPS (2D)</French>
@@ -109,7 +109,7 @@
             <Spanish>MPLD (2D)</Spanish>
             <Hungarian>LRPS (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_optic_lrps_pip">
+        <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
             <Czech>LRPS (PIP)</Czech>
             <French>LRPS (PIP)</French>

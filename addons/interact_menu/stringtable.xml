@@ -133,7 +133,7 @@
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
             <Portuguese>Interação - Min. de Sombra</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Interact_cursorKeepCentered">
+        <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
@@ -145,7 +145,7 @@
             <Portuguese>Manter o cursor centralizado</Portuguese>
             <Italian>Mantieni il cursore centrato</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_cursorKeepCenteredDescription">
+        <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
@@ -169,7 +169,7 @@
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_textSize">
+        <Key ID="STR_ACE_Interact_Menu_textSize">
             <English>Interaction Text Size</English>
             <Czech>Velikost textu interakce</Czech>
             <German>Menü-Schriftgröße</German>
@@ -181,7 +181,7 @@
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
             <Italian>Dimensione del testo d'interazione</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_shadowSetting">
+        <Key ID="STR_ACE_Interact_Menu_shadowSetting">
             <English>Interaction Text Shadow</English>
             <Czech>Stín textu interakce</Czech>
             <German>Menü-Hintergrundschatten</German>
@@ -193,7 +193,7 @@
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
             <Italian>Ombra del testo d'interazione</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_shadowSettingDescription">
+        <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
             <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
@@ -205,7 +205,7 @@
             <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
             <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_shadowOutline">
+        <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
             <Czech>Kontura</Czech>
             <German>Kontur</German>
@@ -217,13 +217,19 @@
             <Hungarian>Körvonal</Hungarian>
             <Italian>Contorno</Italian>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_blurScreen">
-            <English>Blur screen on interaction</English>
-            <Polish>Rozmyj ekran podczas interakcji</Polish>
+        <Key ID="STR_ACE_Interact_Menu_background">
+            <English>Interaction menu background</English>
+            <Polish>Tło menu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
             <Polish>Rozmywa tło na czas otwarcia menu interakcji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
+            <English>Blur screen</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
+            <English>Black</English>
         </Key>
     </Package>
 </Project>

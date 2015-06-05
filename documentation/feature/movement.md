@@ -9,7 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Jumping
-Adds the ability to jump when pressing the vault key while moving. (V - key)
+Adds the ability to jump when pressing the vault key while moving. (<kbd>V</kbd>)
 
 ### 1.2 Minor animation tweaks
 Walking slowly with the weapon lowered now has a less silly looking animation.
@@ -32,7 +32,7 @@ The player can now use the sights of rifles and pistols in all prone stances.
 
 ### 2.2 Climbing
 - Approach what you want to climb.
-- Press <kbd>ctrl</kbd> + <kbd>V</kbd> (ACE3 default keybind `Climb`).
+- Press <kbd>ctrl</kbd> + <kbd>V</kbd> (ACE3 default key bind `Climb`).
 - Note that when climbing your character will put his weapon on his back.
 
 ## Dependencies
