@@ -16,7 +16,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Item_Base_F;
     class ACE_Item_SpottingScope: Item_Base_F {
         author[] = {"Rocko", "Scubaman3D"};
@@ -31,21 +31,27 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_Item_SpottingScope,2);
         };
     };
-    
+
     class LandVehicle;
     class StaticWeapon: LandVehicle {
         class Turrets;
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
     };
     class StaticATWeapon: StaticWeapon {
         class Turrets: Turrets {
             class MainTurret;
+        };
+        class ACE_Actions: ACE_Actions{
+            class ACE_MainActions: ACE_MainActions {};
         };
     };
     class ACE_SpottingScopeObject: StaticATWeapon {
@@ -107,11 +113,9 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
-        class ACE_Actions {
-            class ACE_MainActions {
+        class ACE_Actions: ACE_Actions{
+            class ACE_MainActions: ACE_MainActions {
                 selection = "osaveze";
-                distance = 5;
-                condition = "true";
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);
