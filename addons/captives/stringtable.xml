@@ -169,5 +169,23 @@
             <Spanish>Sincroniza una unidad para hacer que se rinda.&lt;br /&gt;Fuente: ace_captives</Spanish>
             <German>Einheit synchronisieren, um sie kapitulieren zu lassen.&lt;br /&gt;Quelle: ace_captives</German>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
+            <English>Captives Settings</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_Description">
+            <English>Controls settings for surrender and cable ties</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
+            <English>Can handcuff own side</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
+            <English>Can players cabletie units on their own side</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
+            <English>Allow surrendering</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
+            <English>Players can surrender after holstering their weapon</English>
+        </Key>
     </Package>
 </Project>
