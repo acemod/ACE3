@@ -54,17 +54,18 @@ if (_state) then {
                 (_dlg displayCtrl _index) ctrlEnable false;
             };
 
-            _ctrl = _dlg displayctrl 103;
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
+            _ctrl = _dlg displayCtrl 104; // "Abort" or "Save & Exit" button
+            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize ([ARR_2('str_sure','str_msg_confirm_return_lobby_client')] select isMultiplayer),'',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; [false] call DFUNC(disableUserInput); failMission 'LOSER' }})];
             _ctrl ctrlEnable true;
-            _ctrl ctrlSetText "ABORT";
-            _ctrl ctrlSetTooltip "Abort.";
 
-            _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
-            _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
-            _ctrl ctrlSetText "RESPAWN";
-            _ctrl ctrlSetTooltip "Respawn.";
+            if (isMultiplayer) then {
+                _ctrl = _dlg displayctrl 1010; // "Respawn" button
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize 'str_a3_rscdisplaympinterrupt_respawnprompt','',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput) }})];
+                _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
+            } else {
+                _ctrl ctrlSetText localize "str_disp_int_abort"; // Change "Save & Exit" to "Abort"
+                _ctrl ctrlSetTooltip localize "STR_TOOLTIP_MAIN_ABORT";
+            };
         };
 
         if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
