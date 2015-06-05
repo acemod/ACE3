@@ -315,5 +315,11 @@
             <English>Sends debug information to RPT and clipboard.</English>
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_aceNews">
+            <English>ACE News</English>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
+            <English>Show News on Main Menu</English>
+        </Key>
     </Package>
 </Project>

@@ -108,15 +108,14 @@ class RscDisplayMain: RscStandardDisplay {
         };
 
         class ACE_news: RscControlsGroupNoScrollbars {
-            idc = -1;
+            idc = 80086;
             x = "safezoneX + safezoneW - (31 * (((safezoneW / safezoneH) min 1.2) / 40))";
             y = "safezoneY + (1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "16.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            class controls
-            {
+            h = "8.25 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            class controls {
                 class ACE_NewsTitle: RscText {
-                    text = "ACE News";
+                    text = CSTRING(aceNews);
                     colorBackground[] = {(162/255),(28/255),(28/255),0.8};
                     idc = -1;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -124,29 +123,28 @@ class RscDisplayMain: RscStandardDisplay {
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                 };
-                class ACE_VersionInfo: RscText
-                {
+                class ACE_VersionInfo: RscText {
                     idc = 68;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     y = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.4};
+                    colorBackground[] = {0,0,0,0.666};
                 };
                 class ACE_NewsBackground: RscText {
                     idc = -1;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "14 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.4};
+                    h = "5.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    colorBackground[] = {0,0,0,0.666};
                 };
                 class ACE_NewsText: RscHTML {
                     idc = 69;
                     x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     y = "2.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "14.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    h = "5.95 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 
                     shadow = 0;
                     class H1 {
