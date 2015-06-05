@@ -3,10 +3,12 @@
     <Package name="MX2A">
         <Key ID="STR_ACE_MX2A_DisplayName">
             <English>MX-2A</English>
+            <Polish>MX-2A</Polish>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
             <German>Wärmebildgerät</German>
+            <Polish>Monokular termowizyjny</Polish>
         </Key>
     </Package>
 </Project>

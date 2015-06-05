@@ -46,31 +46,37 @@
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
             <Spanish>Activada para francotiradores</Spanish>
+            <Polish>Akt. dla snajperów</Polish>
             <German>Für Scharfschützen aktiviert</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_Description">
             <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
             <Spanish>Activa la balística avanzada para francotiradores no locales (cuando se usa una mira telescópica)</Spanish>
+            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych snajperów (kiedy używają optyki)</Polish>
             <German>Aktiviert die erweiterte Ballistik für nicht lokale Scharfschützen (bei Benutzung von Optiken mit starker Vergrößerung)</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_DisplayName">
             <English>Enabled For Group Members</English>
             <Spanish>Activada para miembros de grupo</Spanish>
+            <Polish>Akt. dla czł. grupy</Polish>
             <German>Für Gruppenmitglieder aktiviert</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_Description">
             <English>Enables advanced ballistics for non local group members</English>
             <Spanish>Activada la balística avanzada para miembros de grupo no locales</Spanish>
+            <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych członków grupy</Polish>
             <German>Aktiviert die erweiterte Ballistik für nicht lokale Gruppenmitglieder</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_DisplayName">
             <English>Enabled For Everyone</English>
             <Spanish>Activada para todos</Spanish>
+            <Polish>Akt. dla wszystkich</Polish>
             <German>Für jeden aktiviert</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
             <Spanish>Activada la balística avanzada para todos los jugadores no locales (activarlo puede degradar el rendimiento durante grandes tiroteos en multijugador).</Spanish>
+            <Polish>Aktywuje zaawansowaną balistykę dla wszystkich nielokalnych graczy (aktywacja tej opcji może spodowować spory spadek wydajności podczas ciężkiej wymiany ognia)</Polish>
             <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_DisplayName">

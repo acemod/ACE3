@@ -219,15 +219,19 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_background">
             <English>Interaction menu background</English>
+            <Polish>Tło menu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
+            <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
+            <Polish>Rozmycie ekranu</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
+            <Polish>Przyciemnienie ekranu</Polish>
         </Key>
     </Package>
 </Project>

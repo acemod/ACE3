@@ -59,12 +59,15 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
+            <Polish>Przełącz nieprzytomność</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -92,6 +95,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
+            <Polish>Jednostka nie może być więźniem</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -107,6 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
+            <Polish>Wymaga addonu, który nie jest obecny</Polish>
         </Key>
     </Package>
 </Project>
