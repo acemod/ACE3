@@ -17,7 +17,7 @@
 
 #define DEFAULT_DELAY   (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_force"];
+private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_force", "_isDead"];
 _unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 _minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
@@ -47,12 +47,15 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
+_isDead = false;
 if (!([_unit] call EFUNC(common,isPlayer)) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
-    if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) exitWith {
+    if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
         [_unit, true] call FUNC(setDead);
+        _isDead = true;
     };
 };
+if (_isDead) exitWith {};
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
