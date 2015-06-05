@@ -22,7 +22,7 @@ class CfgVehicles {
         class Arguments {
             class level {
                 displayName = CSTRING(MedicalSettings_level_DisplayName);
-                description = CSTRING(MedicalSettings_);
+                description = CSTRING(MedicalSettings_level_Description);
                 typeName = "NUMBER";
                 class values {
                     class normal {
