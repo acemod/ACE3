@@ -16,9 +16,7 @@
 
 #define KEY_MODIFIERS [42, 54, 29, 157, 56, 184]
 
-private "_key";
-
-_key = _this select 0;
+PARAMS_1(_key);
 
 if (_key in KEY_MODIFIERS) exitWith {_key};
 

@@ -1,7 +1,7 @@
 /*
  * Author: Winter
  * Sets the player's current view distance according to whether s/he is on foot, in a land vehicle or in an air vehicle.
- * 
+ *
  *
  * Arguments:
  * 0: Show Prompt <BOOL>
@@ -20,6 +20,8 @@
 PARAMS_1(_show_prompt);
 
 private["_land_vehicle","_air_vehicle"];
+
+if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 
 _land_vehicle = (vehicle ACE_player) isKindOf "LandVehicle";
 _air_vehicle = (vehicle ACE_player) isKindOf "Air";

@@ -1,22 +1,16 @@
 ---
 layout: wiki
 title: Thermals
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Body Warmth
+### 1.1 Body Warmth
 Adjusts the thermal properties of humans making them less like torches.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

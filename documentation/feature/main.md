@@ -1,17 +1,17 @@
 ---
 layout: wiki
 title: Main
+description: main module
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-Main module which acts as the ACE core module.
+Main module which acts as the ACE3 core module.
 
+## 2. Dependencies
 
-## Dependencies
+`Arma 3` and `CBA_A3`
 
-Arma 3 and CBA
-
-Note: Note: The Main module is required by all other modules. Do not disable it!
+*Note: The Main module is required by all other modules. Do not remove it!*

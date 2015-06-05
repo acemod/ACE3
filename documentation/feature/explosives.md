@@ -1,28 +1,40 @@
 ---
 layout: wiki
 title: Explosives
+description: Adds numerous improvements to using and handling explosives
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Advanced explosives placement
+### 1.1 Advanced explosives placement
 Enables more precise placement of explosives.
 
-### More trigger types
+### 1.2 Numerous trigger types
 Offers different trigger types, like clackers and dead man switches.
 
-### Attack explosives to vehicles
+### 1.3 Attach explosives to vehicles
 Enables attaching explosives to vehicles.
 
+## 2. Usage
 
-## Usage
+### 2.1 Placing explosives
+- Use self interaction <kbd>CTRL</kbd>+<kbd>Left Windows</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Select `Explosives`.
+- Choose your explosive type and follow the instructions on the screen.
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.2 Arming and detonating explosives
+- Interact with the explosive <kbd>Left Windows</kbd> (ACE3 default key bind `Interact Key`).
+- Choose the arming method.
+- For clackers use Self Interaction `Explosives` &rarr; `Detonate` and choose the corresponding Firing Device.
 
+### 2.3 Defusing explosives
+- A `Defusal Kit` is required.
+- Interact with the explosive <kbd>Left Windows</kbd>.
+- Select `Disarm`.
+- You are safe to pick it up after the action has completed.
 
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_maxDistance", "_position", "_laser", "_intersects"];
+private ["_position", "_laser", "_intersects"];
 
-_maxDistance = _this select 0;
+PARAMS_1(_maxDistance);
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];

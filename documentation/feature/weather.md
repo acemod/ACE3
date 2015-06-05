@@ -1,25 +1,19 @@
 ---
 layout: wiki
 title: Weather
+description: The Weather module overrides the mission/editor weather setting with a synchronized realistic weather simulation
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
+ACE3 Weather simulates realistic weather effects, according to the geographical location of the map, the date and time. It also ensures that all players experience the same weather effects.
 
-### Sub-feature 1
-Short description of sub-feature 1.
+## 2. Usage
 
-### Sub-feature 2
-Short description of sub-feature 2.
+### 2.1 Wind info
+- Wind info is toggled on/off using <kbd>SHIFT</kbd> + <kbd>K</kbd>.
+- The arrow representing wind info is based on [Beaufort scale](http://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale)
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
-
+## 3. Dependencies
 `ace_common`, `ace_modules`

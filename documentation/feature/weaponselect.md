@@ -5,30 +5,31 @@ group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Weapon select
-The number key can be used to quickly switch between weapons. (1 key - pistol, 2 key - rifle, 3 key - grenade launcher, 4 key - rocket launcher, 5 key - binocular)
+### 1.1 Holster weapon
+Adds the ability to holster a weapon on the back.
 
-### Holster weapon
-Adds the ability to holster a weapon on the back. (0 key)
+### 1.2 Quick weapon select
+Adds key bindings to quickly switch weapons while on foot or in a vehicle. (Unbound by default).
 
-### Engine select
-Quickly turn engine on and off (1 key - turn off, 2 key - turn on)
+### 1.3 Quick vehicle engine on/off
+Adds key bindings to quickly turn a vehicle engine on or off.
 
-### Weapon select
-Quickly switch between vehicle weapons (1-3 key)
+### 1.4 Grenade select
+Changes the grenade selection key bindings to help prevent accidents.
 
-### Grenade select
-To prevent accidents a grenade has to be selected before it can be thrown. Toggles between explosive and non-explosive grenades. When spamming the throw key, the player won't automatically switch to frag grenades when all smokes are used up. Also shows an indicator to quickly see how many grenades are left when selecting and after throwing (6 key - switch between frag grenades, 7 key - switch between other grenades)
+## 2. Usage
 
+### 2.1 Weapons
 
-## Usage
+- Press <kbd>0</kbd> to holster and unholster a weapon. 
+- When a weapon is holstered, the weapon fire button will not pull the weapon out. This can be used as an additional level of safety or as a role-playing feature.
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+Quick weapon selection is not bound by default, but can be bound in the controls menu under `ACE3 Weapons`.
 
+Quick vehicle weapon selection is not bound by default, but can be bound in the controls menu under `ACE3 Vehicles`.
 
-## Dependencies
+## 3. Dependencies
 
 `ace_common`

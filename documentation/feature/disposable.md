@@ -1,22 +1,15 @@
 ---
 layout: wiki
 title: Disposable
+description: Makes NLAW disposable and allows addons to do the same
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### NLAW disposable anti tank weapon
-Makes the NLAW disposable and provides the tools for other addons to do the same.
+The NLAW is shoulder fired and disposable, firing just once before being needed to be disposed of. This feature makes the NLAW disposable and provides the tools for other addons to do the same.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

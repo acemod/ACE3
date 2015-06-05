@@ -1,29 +1,37 @@
 ---
 layout: wiki
 title: FCS (Fire Control System)
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Fire control system
+### 1.1 Fire control system
 Offers a custom fire control system for tanks and helicopters. It enables engaging stationary and moving targets. 
 
-### Manual lasing targets
+### 1.2 Manual lasing targets
 Changes the default rangefinders, including those in vehicles, to require manual lasing.
 
-### Air burst ammunition
+### 1.3 Air burst ammunition
 Anti air cannons can now use airburst ammunition. It will explode on the FCS' zeroed in range.
 
+## 2. Usage
 
-## Usage
+### 2.1 Engaging moving targets
+- Place the crosshair on the enemy vehicle.
+- Press and hold <kbd>TAB</kbd> (ACE 3 default key bind `Lock Target [Hold]`) and follow the target for about 2 seconds.
+- Release <kbd>TAB</kbd>.
+- The optic is now adjusted sideways to ensure a hit.
 
-To engage moving targets, place the crosshair on the enemy vehicle and press and hold tab. Follow the moving target with your crosshair for about 2 seconds and release tab. The optic will now be adjusted sideways to ensure a hit.
+### 2.2 Ranging stationary targets
+- Place the crosshair on the object to range.
+- Tap <kbd>TAB</kbd>
+- The optic is now adjusted.
 
-To use manual lasing, place the crosshair on the object to range and press and hold tab.
+*NOTE: GBU guidance is **DISABLED** as of ACE3 3.0.1*
 
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

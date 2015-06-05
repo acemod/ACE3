@@ -1,25 +1,23 @@
 ---
 layout: wiki
 title: Disarming
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Searching through a unit's inventory
+You can search the inventory and disarm captured or unconscious units.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+## 2. Usage
 
+### 2.1 Searching and disarming
+- Interact with the captured or unconscious unit <kbd>Left Windows</kbd> (ACE3 default key bind `Interaction Key`).
+- Select `Open inventory`.
+- Drag & Drop the items you wish to remove from the unit.
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

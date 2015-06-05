@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_respawnVariables"];
+private "_respawnVariables";
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 
@@ -21,5 +21,5 @@ _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 _respawnVariables pushBack "ACE_PersistentFunctions";
 
 {
-  _unit setVariable [_x, _unit getVariable _x, true];
+    _unit setVariable [_x, _unit getVariable _x, true];
 } forEach _respawnVariables;

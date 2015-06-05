@@ -24,6 +24,7 @@ PREP(handlePlayerChanged);
 PREP(handleRespawn);
 PREP(handleUnitInitPost);
 PREP(handleZeusDisplayChanged);
+PREP(moduleSettings);
 PREP(moduleSurrender);
 PREP(setHandcuffed);
 PREP(setSurrendered);

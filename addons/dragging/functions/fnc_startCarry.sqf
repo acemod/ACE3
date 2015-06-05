@@ -22,11 +22,11 @@ private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
 if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
-    [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private "_timer";
-_timer = time + 5;
+_timer = ACE_time + 5;
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
@@ -41,12 +41,12 @@ if (_target isKindOf "CAManBase") then {
 
     // move a bit closer and adjust direction when trying to pick up a person
     _target setDir (getDir _unit + 180);
-    _target setPos (getPos _unit vectorAdd vectorDir _unit);
+    _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
 
-    _timer = time + 15;
+    _timer = ACE_time + 15;
 
 } else {
 
@@ -62,7 +62,7 @@ if (_target isKindOf "CAManBase") then {
 [_unit, _target, true] call EFUNC(common,claim);
 
 
-// prevents draging and carrying at the same time
+// prevents draging and carrying at the same ACE_time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // required for aborting animation

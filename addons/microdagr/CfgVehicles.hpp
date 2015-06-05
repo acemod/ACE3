@@ -3,29 +3,27 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(configure) {
-                    //Opens the interactive dialog
-                    displayName = "$STR_ACE_microdagr_configure";
+                class GVAR(show) {
+                    //Opens the mini map
+                    displayName = CSTRING(show);
                     condition = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(canShow));
-                    statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
+                    statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
                     showDisabled = 0;
-                    priority = 0.1;
+                    priority = 0.2;
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap", "isNotInside"};
-
-                    //Sub Actions:
-                    class GVAR(show) {
-                        //Opens the background display (minimap)
-                        displayName = "$STR_ACE_microdagr_show";
-                        condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
-                        statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
+                    class GVAR(configure) {
+                        //Opens the dialog
+                        displayName = CSTRING(configure);
+                        condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
+                        statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                         showDisabled = 0;
-                        priority = 0.2;
+                        priority = 0.1;
                         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                         exceptions[] = {"notOnMap", "isNotInside"};
                     };
                     class GVAR(close) {
-                        displayName = "$STR_ACE_microdagr_closeUnit";
+                        displayName = CSTRING(closeUnit);
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                         statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                         showDisabled = 0;
@@ -38,15 +36,11 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ArgumentsBaseUnits {};
-        class ModuleDescription {};
-    };
-    class GVAR(dagrModule): Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+    class ACE_Module;
+    class GVAR(dagrModule): ACE_Module {
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "$STR_ACE_Dagr_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMapFill);
         scope = 2;
         isGlobal = 1;
@@ -54,18 +48,18 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class MapDataAvailable {
-                displayName = "$STR_ACE_Dagr_MapDataAvailable_DisplayName";
-                description = "$STR_ACE_Dagr_MapDataAvailable_Description";
+                displayName = CSTRING(MapDataAvailable_DisplayName);
+                description = CSTRING(MapDataAvailable_Description);
                 typeName = "NUMBER";
                 class values {
-                    class None {name = "$STR_ACE_Dagr_None"; value = MAP_DETAIL_SAT; default = 1;};
-                    class Side {name = "$STR_ACE_Dagr_Side"; value = MAP_DETAIL_TOPOROADS;};
-                    class Unique {name = "$STR_ACE_Dagr_Unique"; value = MAP_DETAIL_NONE;};
+                    class None {name = CSTRING(None); value = MAP_DETAIL_SAT; default = 1;};
+                    class Side {name = CSTRING(Side); value = MAP_DETAIL_TOPOROADS;};
+                    class Unique {name = CSTRING(Unique); value = MAP_DETAIL_NONE;};
                 };
             };
         };
-        class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_Dagr_Module_Description";
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
         };
     };
 
@@ -73,6 +67,19 @@ class CfgVehicles {
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_microDAGR,10);
+        };
+    };
+
+    class Item_Base_F;
+    class ACE_microDAGR_Item: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(itemName);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
+        class TransportItems {
+            MACRO_ADDITEM(ACE_microDAGR,1);
         };
     };
 };

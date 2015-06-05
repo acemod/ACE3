@@ -5,7 +5,9 @@
  * Edited to remove radio warning and add ballistics support
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -102,9 +104,9 @@ if (_activated) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
-                            if (time > _x getvariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
+                            if (ACE_time > _x getvariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
                                 [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
-                                _x setvariable ["BIS_fnc_moduleProjectile_radio",time + _delay];
+                                _x setvariable ["BIS_fnc_moduleProjectile_radio",ACE_time + _delay];
                             };
                         };
                     };

@@ -5,8 +5,14 @@ ADDON = false;
 
 PREP(calculateAirDensity);
 PREP(calculateBarometricPressure);
+PREP(calculateDensityAltitude);
+PREP(calculateDewPoint);
+PREP(calculateHeatIndex);
 PREP(calculateRoughnessLength);
+PREP(calculateSpeedOfSound);
 PREP(calculateTemperatureAtHeight);
+PREP(calculateWetBulb);
+PREP(calculateWindChill);
 PREP(calculateWindSpeed);
 PREP(displayWindInfo);
 PREP(getMapData);

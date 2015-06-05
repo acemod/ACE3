@@ -4,7 +4,7 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(SelectPistolNew), localize "STR_ACE_WeaponSelect_SelectPistol",
+["ACE3 Weapons", QGVAR(SelectPistolNew), localize LSTRING(SelectPistol),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -18,7 +18,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 1 Key)
 
-["ACE3 Weapons", QGVAR(SelectRifleNew), localize "STR_ACE_WeaponSelect_SelectRifle",
+["ACE3 Weapons", QGVAR(SelectRifleNew), localize LSTRING(SelectRifle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -32,7 +32,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 2 Key)
 
-["ACE3 Weapons", QGVAR(SelectRifleMuzzleNew), localize "STR_ACE_WeaponSelect_SelectRifleMuzzle",
+["ACE3 Weapons", QGVAR(SelectRifleMuzzleNew), localize LSTRING(SelectRifleMuzzle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -46,7 +46,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 3 Key)
 
-["ACE3 Weapons", QGVAR(SelectLauncherNew), localize "STR_ACE_WeaponSelect_SelectLauncher",
+["ACE3 Weapons", QGVAR(SelectLauncherNew), localize LSTRING(SelectLauncher),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -60,7 +60,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 4 Key)
 
-["ACE3 Weapons", QGVAR(SelectBinocularNew), localize "STR_ACE_WeaponSelect_SelectBinocular",
+["ACE3 Weapons", QGVAR(SelectBinocularNew), localize LSTRING(SelectBinocular),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -74,7 +74,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Weapons", QGVAR(SelectGrenadeFrag), localize "STR_ACE_WeaponSelect_SelectGrenadeFrag",
+["ACE3 Weapons", QGVAR(SelectGrenadeFrag), localize LSTRING(SelectGrenadeFrag),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -88,7 +88,7 @@ if !(hasInterface) exitWith {};
 {false},
 [7, [false, false, false]], false] call cba_fnc_addKeybind; //6 Key
 
-["ACE3 Weapons", QGVAR(SelectGrenadeOther), localize "STR_ACE_WeaponSelect_SelectGrenadeOther",
+["ACE3 Weapons", QGVAR(SelectGrenadeOther), localize LSTRING(SelectGrenadeOther),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -102,7 +102,7 @@ if !(hasInterface) exitWith {};
 {false},
 [8, [false, false, false]], false] call cba_fnc_addKeybind; //7 Key
 
-["ACE3 Weapons", QGVAR(HolsterWeapon), localize "STR_ACE_WeaponSelect_HolsterWeapon",
+["ACE3 Weapons", QGVAR(HolsterWeapon), localize LSTRING(HolsterWeapon),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -116,7 +116,7 @@ if !(hasInterface) exitWith {};
 {false},
 [11, [false, false, false]], false] call cba_fnc_addKeybind; //0 Key
 
-["ACE3 Vehicles", QGVAR(EngineOn), localize "STR_ACE_WeaponSelect_EngineOn",
+["ACE3 Vehicles", QGVAR(EngineOn), localize LSTRING(EngineOn),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -130,7 +130,7 @@ if !(hasInterface) exitWith {};
 {false},
 [3, [false, false, false]], false] call cba_fnc_addKeybind; //2 Key
 
-["ACE3 Vehicles", QGVAR(EngineOff), localize "STR_ACE_WeaponSelect_EngineOff",
+["ACE3 Vehicles", QGVAR(EngineOff), localize LSTRING(EngineOff),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -144,7 +144,7 @@ if !(hasInterface) exitWith {};
 {false},
 [2, [false, false, false]], false] call cba_fnc_addKeybind; //1 Key
 
-["ACE3 Vehicles", QGVAR(SelectMainGunNew), localize "STR_ACE_WeaponSelect_SelectMainGun",
+["ACE3 Vehicles", QGVAR(SelectMainGunNew), localize LSTRING(SelectMainGun),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -158,7 +158,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 3 Key)
 
-["ACE3 Vehicles", QGVAR(SelectMachineGunNew), localize "STR_ACE_WeaponSelect_SelectMachineGun",
+["ACE3 Vehicles", QGVAR(SelectMachineGunNew), localize LSTRING(SelectMachineGun),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -172,7 +172,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 4 Key)
 
-["ACE3 Vehicles", QGVAR(SelectMissilesNew), localize "STR_ACE_WeaponSelect_SelectMissiles",
+["ACE3 Vehicles", QGVAR(SelectMissilesNew), localize LSTRING(SelectMissiles),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -186,7 +186,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize "STR_ACE_WeaponSelect_FireSmokeLauncher",
+["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};

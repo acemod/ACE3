@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Setting Up The Development Environment
+description: This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching. 
 group: development
 parent: wiki
 order: 0
@@ -86,6 +87,7 @@ File Patching allows you to change the files in an addon while the game is runni
 ### 7.1 Enabling File Patching
 
 There are two ways to enable file patching:
+
 - Load cba_cache_disable.pbo (included in CBA's optional folder)
 - Add the following to your test missions description.ext:
 

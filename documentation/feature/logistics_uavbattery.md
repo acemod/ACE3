@@ -1,25 +1,23 @@
 ---
 layout: wiki
 title: Logistics - UAV Battery
+description: UAV recharging
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Rechargeable darters.
+Adds an item `ACE_UAVBattery` that allows refuelling / recharging of the "Darter" quad-copter UAVs.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+## 2. Usage
 
+### 2.1 Recharging the darter
+- For this you need a `UAV battery` and the UAV needs to be a quad-copter.
+- Interact with the UAV <kbd>Left Windows</kbd> (ACE3 default key bind `Interact Key`)
+- Select `Recharge`
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

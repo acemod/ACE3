@@ -1,22 +1,16 @@
 ---
 layout: wiki
 title: Difficulties
+description: Tweak to Vanilla hardest difficulty
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Elite mode adjustments
-Adjusts the default settings for the hardest difficulty to more closely resemble A2 settings. (No crosshair, stat screen, death messages...)
+### 1.1 Elite mode adjustments
+Adjusts the default settings of the hardest difficulty to better resemble Arma 2 settings (no crosshair, stat screen, death messages).
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

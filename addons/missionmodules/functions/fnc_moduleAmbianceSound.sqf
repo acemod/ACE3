@@ -72,7 +72,7 @@ if (_activated && local _logic) then {
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
 
-        if (time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
+        if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
             _ambianceSounds = _args select 1;
             _minimalDistance = _args select 2;
             _maximalDistance = _args select 3;
@@ -113,11 +113,11 @@ if (_activated && local _logic) then {
                 // If no unit is to close to this position, we will play the sound.
                 if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
                     playSound3D [_ambianceSounds select (round(random((count _ambianceSounds)-1))), ObjNull,  false, _newPos, _volume, 1, 1000];
-                    _args set [8, time];
+                    _args set [8, ACE_time];
                 };
             };
         };
-    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, time] ] call cba_fnc_addPerFrameHandler;
+    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, ACE_time] ] call cba_fnc_addPerFrameHandler;
 };
 
 true;

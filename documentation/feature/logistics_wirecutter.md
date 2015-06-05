@@ -1,25 +1,24 @@
 ---
 layout: wiki
 title: Logistics - Wirecutter
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Wirecutter
+Adds an item `ACE_wirecutter` that allows cutting of fences in Arma 3 and AllInArma maps.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+## 2. Usage
 
+### 2.1 Using the wirecutter
+- For this you need a `Wirecutter`.
+- Approach the fence you want to cut.
+- Press the interaction key <kbd>Left Windows</kbd> (ACE3 default key bind `Interaction Key`).
+- Find the interaction point and select `Cut Fence` (the only option).
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

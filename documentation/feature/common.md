@@ -1,17 +1,17 @@
 ---
 layout: wiki
 title: Common
+description: Common functions and systems used by most other components.
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-Module that provides common features required by many other modules.
+Common functions and systems used by most other components.
 
-
-## Dependencies
+## 2. Dependencies
 
 `ace_main`
 
-Note: The Common module is required by many other modules. Disabling it is not recommended.
+*Note: The Common module is required by nearly all other modules. Do NOT remove it!*

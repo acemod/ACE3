@@ -1,46 +1,44 @@
 ---
 layout: wiki
 title: Captives
+description: System for taking and handling captives
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Take captives
-Introduces a captivity system for taking and moving prisoners.
+### 1.1 Take captives
+Introduces a captivity system.
 
-### Load and unload captives into / from vehicles
-You can load and unload captives from vehicles using ACE 3 interactions.
+### 1.2 Load and unload captives into / from vehicles
+You can load and unload captives from vehicles using ACE3 interactions.
 
-### Frisk captives
+### 1.3 Frisk captives
 You can frisk a restrained captive.
 
-### Surrendering
-You can surrender, while surrendering AI will cease fire.
+### 1.4 Surrendering
+Allows players to surrender. It renders the unit unable to move and with the hands behind its head. When surrendered AI won't fire.
 
+## 2. Usage
 
-## Usage
+### 2.1 Taking a unit into captivity
+- You need `Cable Tie`.
+- Approach the unit and Interact <kbd>Left Windows</kbd> (ACE3 default key bind `Interact Key`).
+- The interaction is located around the hands in the form of a handcuffs icon.
+- Repeat to release.
 
-### Capturing someone
-- You need cable ties.
-- Approach the victim / convict and use the interaction button.
-- The interaction is around the hands in the form of a handcuffs icon.
-- To free someone it's the same
-- Use the interaction key, check around the hands for the handcuffs icon.
+### 2.2 Escorting a captive
+- Interact with the captive <kbd>Left Windows</kbd>.
+- Select the `Escort prisoner` option.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>Left Windows</kbd> and select `Release`.
 
-### Escorting a captive
-- Interact with the captive.
-- Select the escort prisoner option.
-- To stop escorting just scroll down or use self interaction.
+### 2.3 Loading and unloading a captive into/from a vehicle
+- Escort the captive.
+- Approach the vehicle you wish to load the captive unit into.
+- Interact with the vehicle <kbd>Left Windows</kbd> and select `Load captive`.
+- Interact with the vehicle to unload.
 
-### Loading and unloading a captive in  vehicle
-- Escort the person.
-- Approach the vehicle you desire to load the captive in.
-- Interact with the vehicle and load him.
-- Same for unloading, interact with the vehicle then unload.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_interaction`

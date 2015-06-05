@@ -48,7 +48,7 @@ if (GVAR(openedMenuType) >= 0) then {
     _closest = GVAR(currentOptions) select _closestSelection;
 
     _sPos = _closest select 1;
-    _cTime = diag_tickTime;
+    _cTime = ACE_diagTime;
     _delta = _cTime - GVAR(lastTime);
     GVAR(lastTime) = _cTime;
 
@@ -73,23 +73,33 @@ if (GVAR(openedMenuType) >= 0) then {
         } forEach GVAR(lastPath);
     };
 
-    if(_misMatch && {diag_tickTime-GVAR(expandedTime) > 0.25}) then {
-        GVAR(startHoverTime) = diag_tickTime;
+    if(_misMatch && {ACE_diagTime-GVAR(expandedTime) > 0.25}) then {
+        GVAR(startHoverTime) = ACE_diagTime;
         GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
     } else {
-        if(!GVAR(expanded) && diag_tickTime-GVAR(startHoverTime) > 0.25) then {
+        if(!GVAR(expanded) && ACE_diagTime-GVAR(startHoverTime) > 0.25) then {
             GVAR(expanded) = true;
 
             // Start the expanding menu animation only if the user is not going up the menu
             if !([GVAR(menuDepthPath),GVAR(lastPath)] call FUNC(isSubPath)) then {
-                GVAR(expandedTime) = diag_tickTime;
+                GVAR(expandedTime) = ACE_diagTime;
             };
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
             // Execute the current action if it's run on hover
             private "_runOnHover";
-            _runOnHover = ((GVAR(selectedAction) select 0) select 9) select 3;
+            _tmp = ((GVAR(selectedAction) select 0) select 9) select 3;
+            _runOnHover = true;
+            if ((typeName _tmp) == "CODE" ) then {
+                _runOnHover = call _tmp;
+            } else {
+                if ((typeName _tmp) == "BOOL" ) then {
+                    _runOnHover = _tmp;
+                } else {
+                    _runOnHover = _tmp > 0;
+                };
+            };
             if (_runOnHover) then {
                 this = GVAR(selectedTarget);
                 _player = ACE_Player;

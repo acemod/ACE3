@@ -10,9 +10,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_magazine"];
-_unit = _this select 0;
-_magazine = _this select 1;
+PARAMS_2(_unit,_magazine);
+
+private ["_return"];
 
 _return = 0;
 if (_unit isKindOf "CAManBase") then {
@@ -20,7 +20,7 @@ if (_unit isKindOf "CAManBase") then {
 } else {
     {
         _return = _return + {_x == _magazine} count magazines _x;
-    }foreach (crew _unit);
+    } forEach (crew _unit);
 
     _return = _return + ({_x == _magazine} count getMagazineCargo _unit);
 };

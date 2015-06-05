@@ -1,25 +1,17 @@
 ---
 layout: wiki
 title: Flash Suppressors
+description: 
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+This adds the ability to use the flash suppressors that are already in game but not accessible.
 
-### Sub-feature 2
-Short description of sub-feature 2.
+Flash suppressors are devices that reduce the muzzle flash while firing by cooling or dispersing the burning gases that exit the muzzle. Its intent is to reduce the chances that the shooter will be blinded in low-light shooting conditions as well as reducing the intensity of the flash visible to the enemy.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

@@ -97,7 +97,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_SetTrigger {
                     selection = "";
-                    displayName = "$STR_ACE_Explosives_TriggerMenu";
+                    displayName = CSTRING(TriggerMenu);
                     distance = 4;
                     condition = "true";
                     statement = "";
@@ -109,7 +109,7 @@ class CfgVehicles {
                 };
                 class ACE_PickUp {
                     selection = "";
-                    displayName = "$STR_ACE_Explosives_Pickup";
+                    displayName = CSTRING(Pickup);
                     distance = 4;
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);

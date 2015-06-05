@@ -1,24 +1,15 @@
 ---
 layout: wiki
 title: APL
+description: assets under APL license
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
-### Sub-feature 2
-Short description of sub-feature 2.
+This folder regroups all assets released under the APL license.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_main`

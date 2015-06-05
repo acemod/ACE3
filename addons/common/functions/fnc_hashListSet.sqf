@@ -1,11 +1,9 @@
 //fnc_hashListSet.sqf
 #include "script_component.hpp"
 
-private ["_hashList", "_index", "_value", "_vals"];
+private ["_vals"];
 
-_hashList = _this select 0;
-_index = _this select 1;
-_value = _this select 2;
+PARAMS_3(_hashList,_index,_value);
 ERRORDATA(3);
 try {
     if(VALIDHASH(_hashList)) then {

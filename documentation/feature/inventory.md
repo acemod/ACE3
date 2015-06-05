@@ -1,22 +1,25 @@
 ---
 layout: wiki
 title: Inventory
+description:
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Resized inventory UI
+### 1.1 Resized inventory UI
 Makes the inventory dialog bigger and increases the number of items that can be seen in the list at once.
 
+## 2. Usage
 
-## Usage
+### 2.1 Changing the size of the UI
+- Press <kbd>Escape</kbd>.
+- Click on `ACE OPTIONS` on the top left corner of the screen.
+- Click on `Make Inventory Display Bigger`.
+- Choose the size desired on the right drop down menu.
+- Press the `Close` button, your changes are automatically saved.
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 3. Dependencies
 
 `ace_common`

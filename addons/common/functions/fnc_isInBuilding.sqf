@@ -13,9 +13,9 @@
 
 #define DISTANCE 10
 
-private ["_unit", "_position", "_positionX", "_positionY", "_positionZ", "_intersections"];
+private ["_position", "_positionX", "_positionY", "_positionZ", "_intersections"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _position = eyePos _unit;
 _positionX = _position select 0;

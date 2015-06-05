@@ -1,25 +1,16 @@
 ---
 layout: wiki
 title: Protection
+description: Tweaks armor values
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+### 1.1 Tweaked protection values
+Fixes and tweaks the protection values of body armour, helmets and uniforms.
 
-### Sub-feature 2
-Short description of sub-feature 2.
-
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

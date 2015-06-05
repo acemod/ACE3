@@ -1,6 +1,7 @@
 // by commy2
+#include "script_component.hpp"
 
-private ["_configs", "_entries"];
+private ["_configs", "_entries", "_name"];
 
 _configs = "true" configClasses (configFile >> _this);
 

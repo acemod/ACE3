@@ -15,16 +15,14 @@
 
 private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval"];
 _unit = _this select 0;
-
-_interval = time - (_unit getVariable [QGVAR(lastMomentVitalsHandled), 0]);
-_unit setVariable [QGVAR(lastMomentVitalsHandled), time];
+_interval = _this select 1;
 
 if (_interval == 0) exitWith {};
 
 _lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
-_syncValues = (time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
+_syncValues = (ACE_time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
-    _unit setvariable [QGVAR(lastMomentValuesSynced), time];
+    _unit setvariable [QGVAR(lastMomentValuesSynced), ACE_time];
 };
 
 _bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
@@ -60,7 +58,7 @@ if (([_unit] call FUNC(getBloodLoss)) > 0) then {
 };
 
 _painStatus = _unit getvariable [QGVAR(pain), 0];
-if (_painStatus > 0) then {
+if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
     if !(_unit getvariable [QGVAR(hasPain), false]) then {
         _unit setvariable [QGVAR(hasPain), true, true];
     };
