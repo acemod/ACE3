@@ -47,7 +47,12 @@ for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
 GVAR(iconCtrls) resize GVAR(iconCount);
 
 if (GVAR(useCursorMenu)) then {
-    (findDisplay ([312,46] select (isNull curatorCamera))) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    // Don't close zeus interface if open
+    if (isNull curatorCamera) then {
+        (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    } else {
+        createDialog QGVAR(cursorMenu);
+    };
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
     (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:
