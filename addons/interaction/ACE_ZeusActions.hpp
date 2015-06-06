@@ -1,16 +1,10 @@
 class ACE_ZeusActions {
     // _target = curatorLogic
     // curatorSelected = [objects,groups,waypoints,markers]
-
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
 
-        class remoteControl {
-            displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
-            icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
-            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,''];";
-        };
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
 
@@ -35,16 +29,21 @@ class ACE_ZeusActions {
                 statement = "{_x setUnitPos 'AUTO';} forEach (curatorSelected select 0);";
             };
         };
+        class remoteControl {
+            displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
+            icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
+            statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,''];";
+        };
     };
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
 
         class behaviour {
-            displayName = "$STR_disp_arcwp_semaphore";
+            displayName = CSTRING(Zeus_Behaviour);
 
             class careless {
-                displayName = "$STR_careless";
+                displayName = CSTRING(Zeus_Behaviour_careless);
                 statement = "{ _x setBehaviour 'CARELESS'; } forEach (curatorSelected select 1);";
             };
             class safe {
@@ -69,7 +68,7 @@ class ACE_ZeusActions {
             };
         };
         class speed {
-            displayName = "$STR_disp_arcwp_speed";
+            displayName = CSTRING(Zeus_Speed);
 
             class limited {
                 displayName = "$STR_speed_limited";
@@ -112,7 +111,7 @@ class ACE_ZeusActions {
             };
         };
         class formation {
-            displayName = "$STR_disp_arcwp_form";
+            displayName = CSTRING(Zeus_Formation);
 
             class wedge {
                 displayName = "$STR_wedge";
@@ -166,10 +165,10 @@ class ACE_ZeusActions {
         icon = "\A3\UI_F_Curator\Data\CfgCurator\waypoint_ca.paa";
 
         class behaviour {
-            displayName = "$STR_disp_arcwp_semaphore";
+            displayName = CSTRING(Zeus_Behaviour);
 
             class careless {
-                displayName = "$STR_careless";
+                displayName = CSTRING(Zeus_Behaviour_careless);
                 statement = "{ _x setWaypointBehaviour 'CARELESS'; } forEach (curatorSelected select 2);";
             };
             class safe {
@@ -194,7 +193,7 @@ class ACE_ZeusActions {
             };
         };
         class speed {
-            displayName = "$STR_disp_arcwp_speed";
+            displayName = CSTRING(Zeus_Speed);
 
             class limited {
                 displayName = "$STR_speed_limited";
@@ -213,7 +212,7 @@ class ACE_ZeusActions {
             };
         };
         class formation {
-            displayName = "$STR_disp_arcwp_form";
+            displayName = CSTRING(Zeus_Formation);
 
             class wedge {
                 displayName = "$STR_wedge";
