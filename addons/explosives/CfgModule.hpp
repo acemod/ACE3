@@ -23,7 +23,7 @@ class ACE_ModuleExplosive: Module_F {
             typeName = "BOOL";
             defaultValue = 1;
         };
-		class ExplodeOnDefuse {
+        class ExplodeOnDefuse {
             displayName = "$STR_ACE_Explosive_ExplodeOnDefuse_DisplayName";
             description = "$STR_ACE_Explosive_ExplodeOnDefuse_Description";
             typeName = "BOOL";
