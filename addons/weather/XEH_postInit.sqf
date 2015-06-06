@@ -41,4 +41,4 @@ simulWeatherSync;
 [FUNC(updateTemperature), 20, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateHumidity), 20, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateWind), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(updateRain), 2, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(updateRain), 0, []] call CBA_fnc_addPerFrameHandler;
