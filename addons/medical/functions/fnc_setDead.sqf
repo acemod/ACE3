@@ -74,5 +74,8 @@ _unit setvariable ["ACE_isDead", true, true];
 if (isPLayer _unit) then {
     _unit setvariable ["isDeadPlayer", true, true];
 };
+
+["medical_onSetDead", _unit] call EFUNC(common,localEvent);
+
 _unit setdamage 1;
 true;
