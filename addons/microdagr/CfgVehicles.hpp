@@ -3,22 +3,18 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(show) {
-                    //Opens the mini map
-                    displayName = CSTRING(show);
-                    condition = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(canShow));
-                    statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
-                    showDisabled = 0;
-                    priority = 0.2;
+                class GVAR(configure) {
+                    //Opens the dialog
+                    displayName = CSTRING(configure);
+                    condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
+                    statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                     exceptions[] = {"notOnMap", "isNotInside"};
-                    class GVAR(configure) {
-                        //Opens the dialog
-                        displayName = CSTRING(configure);
-                        condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
-                        statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
-                        showDisabled = 0;
-                        priority = 0.1;
+                    class GVAR(show) {
+                        //Opens the mini map
+                        displayName = CSTRING(show);
+                        condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
+                        statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
                         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                         exceptions[] = {"notOnMap", "isNotInside"};
                     };
@@ -26,8 +22,6 @@ class CfgVehicles {
                         displayName = CSTRING(closeUnit);
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                         statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
-                        showDisabled = 0;
-                        priority = 0.3;
                         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
                         exceptions[] = {"notOnMap", "isNotInside"};
                     };

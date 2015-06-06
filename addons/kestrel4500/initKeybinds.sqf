@@ -25,6 +25,7 @@
 {false},
 [0, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
+
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];
 _conditonCode = {
@@ -32,7 +33,7 @@ _conditonCode = {
 };
 _toggleCode = {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
     
     // Statement
     if (!GVAR(Overlay)) then {
@@ -44,9 +45,6 @@ _toggleCode = {
     };
 };
 _closeCode = {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
-
     // Statement
     if (GVAR(Overlay)) then {
         //If dispaly is open, close it:
@@ -57,7 +55,5 @@ _closeCode = {
         GVAR(Kestrel4500) = false;
         closeDialog 0;
     };
-    false
 };
-
-[(localize "STR_ACE_Kestrel_Name"), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);

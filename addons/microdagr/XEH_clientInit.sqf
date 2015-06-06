@@ -6,19 +6,18 @@ if (!hasInterface) exitWith {};
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];
 _conditonCode = {
-    ("ACE_microDAGR" in (items ace_player))
+    ("ACE_microDAGR" in (items ACE_player))
 };
 _toggleCode = {
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
     [] call FUNC(openDisplay); //toggle display mode
-    true
 };
 _closeCode = {
-    if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {false};
+    if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {};
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
-    true
 };
-[(localize "STR_ACE_microdagr_itemName"), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(itemName)), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+
 
 //Add Eventhandler:
 ["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call EFUNC(common,addEventHandler);
