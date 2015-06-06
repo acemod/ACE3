@@ -106,7 +106,7 @@ class CfgMagazines {
             class DeadmanSwitch: Command{};
             class Cellphone: Command{};
             class PressurePlate{
-                displayName = $STR_ACE_Explosives_SLAME_Magnetic;
+                displayName = $STR_ACE_Explosives_PressurePlate;
                 digDistance = 0;
                 ammo = "IEDUrbanBig_Range_Ammo";
                 pitch = 0;
@@ -136,7 +136,7 @@ class CfgMagazines {
             class DeadmanSwitch: Command {};
             class Cellphone: Command {};
             class PressurePlate {
-                displayName = $STR_ACE_Explosives_SLAME_Magnetic;
+                displayName = $STR_ACE_Explosives_PressurePlate;
                 digDistance = 0;
                 ammo = "IEDUrbanSmall_Range_Ammo";
                 pitch = 0;

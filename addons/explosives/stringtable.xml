@@ -525,6 +525,12 @@
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
             <Polish>Zwiększyć ilość wymaganego czasu do ukończenia akcji dla nie-specjalistów? Domyślnie: Tak</Polish>
         </Key>
+		<Key ID="STR_ACE_Explosive_ExplodeOnDefuseChance_DisplayName">
+            <English>Explode chance?</English>
+        </Key>
+        <Key ID="STR_ACE_Explosive_ExplodeOnDefuseChance_Description">
+            <English>Chance for special explosives to explode on defuse? Default: 0.02 (2%)</English>
+        </Key>
         <Key ID="STR_ACE_Explosive_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>

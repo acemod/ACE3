@@ -23,6 +23,12 @@ class ACE_ModuleExplosive: Module_F {
             typeName = "BOOL";
             defaultValue = 1;
         };
+		class ExplodeOnDefuseChance {
+            displayName = "$STR_ACE_Explosive_ExplodeOnDefuseChance_DisplayName";
+            description = "$STR_ACE_Explosive_ExplodeOnDefuseChance_Description";
+            typeName = "NUMBER";
+            defaultValue = 0.02;
+        };
     };
     class ModuleDescription: ModuleDescription {
         description = "$STR_ACE_Explosive_Module_Description";
