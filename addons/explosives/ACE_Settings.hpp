@@ -7,8 +7,8 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
-	class GVAR(ExplodeOnDefuseChance) {
-        value = 0.02;
-        typeName = "SCALAR";
+	class GVAR(ExplodeOnDefuse) {
+        value = 1;
+        typeName = "BOOL";
     };
 };
