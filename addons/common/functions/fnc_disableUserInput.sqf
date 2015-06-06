@@ -70,10 +70,6 @@ if (_state) then {
                 };
             };
 
-            _ctrl = _dlg displayCtrl 104; // "Abort" or "Save & Exit" button
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize ([ARR_2('str_sure','str_msg_confirm_return_lobby_client')] select isMultiplayer),'',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; [false] call DFUNC(disableUserInput); failMission 'LOSER' }})];
-            _ctrl ctrlEnable true;
-
             if (isMultiplayer) then {
                 _ctrl = _dlg displayctrl 1010; // "Respawn" button
                 _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize 'str_a3_rscdisplaympinterrupt_respawnprompt','',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput) }})];
