@@ -32,7 +32,7 @@ GVAR(deployPFH) = [{
     GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-[localize "STR_ACE_AC_CONF", localize "STR_ACE_AC_CANCEL", localize "STR_ACE_Sandbag_ScrollAction"] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(ConfirmDeployment), localize LSTRING(CancelDeployment), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 GVAR(placer) setVariable [QGVAR(Deploy),
     [GVAR(placer), "DefaultAction",

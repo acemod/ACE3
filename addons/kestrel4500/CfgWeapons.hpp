@@ -4,7 +4,7 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_Kestrel4500: ACE_ItemCore {
-        author[] = {$STR_ACE_Common_ACETeam, "Ruthberg"};
+        author[] = {ECSTRING(common,ACETeam), "Ruthberg"};
         scope = 2;
         displayName = CSTRING(Name);
         descriptionShort = CSTRING(Description);

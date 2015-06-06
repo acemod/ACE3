@@ -250,10 +250,10 @@ class ACE_settingsMenu {
         };       
         class action_debug: actionClose {
             idc = 1102;
-            text = "$STR_ACE_OptionsMenu_DumpDebug";
+            text = CSTRING(DumpDebug);
             x = X_PART(26.5);
             action = QUOTE([] call FUNC(debugDumpToClipboard));
-            tooltip = "$STR_ACE_OptionsMenu_DumpDebugTooltip";
+            tooltip = CSTRING(DumpDebugTooltip);
         };
     };
 };

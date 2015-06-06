@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_Weapon {
                 class GVAR(copyRangeCard) {
-                    displayName = "$STR_ACE_RangeCard_CopyRangeCard";
+                    displayName = CSTRING(CopyRangeCard);
                     distance = 2.0;
                     condition = QUOTE(_target call FUNC(canCopy));
                     statement = QUOTE(_target call FUNC(updateClassNames));
@@ -15,7 +15,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(open) {
-                    displayName = "$STR_ACE_RangeCard_OpenRangeCard";
+                    displayName = CSTRING(OpenRangeCard);
                     condition = QUOTE(call FUNC(canShow) && !GVAR(RangeCardOpened));
                     statement = QUOTE(false call FUNC(openRangeCard));
                     showDisabled = 0;
@@ -24,7 +24,7 @@ class CfgVehicles {
                     exceptions[] = {"notOnMap"};
                 };
                 class GVAR(openCopy) {
-                    displayName = "$STR_ACE_RangeCard_OpenRangeCardCopy";
+                    displayName = CSTRING(OpenRangeCardCopy);
                     condition = QUOTE(call FUNC(canShowCopy) && !GVAR(RangeCardOpened));
                     statement = QUOTE(true call FUNC(openRangeCard));
                     showDisabled = 0;

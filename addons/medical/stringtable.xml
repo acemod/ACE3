@@ -2892,19 +2892,19 @@
             <Spanish>Proporciona un sistema médico para  jugadores e IA.</Spanish>
             <German>Aktiviert ein medizinisches System für Spieler und KI.</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
             <Polish>Zaawansowane ustawienia medyczne [ACE]</Polish>
             <Spanish>Ajustes médicos avanzados [ACE]</Spanish>
             <German>Erweiterte medizinische Einstellungen [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableFor_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
             <Polish>Aktywne dla</Polish>
             <Spanish>Hablitado para</Spanish>
             <German>Aktiviert für</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableFor_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
             <Polish>Wybierz dla kogo zaawansowany system medyczny będzie aktywny</Polish>
             <Spanish>Seleccione para qué unidades será habilitado el sistema médico avanzado</Spanish>
