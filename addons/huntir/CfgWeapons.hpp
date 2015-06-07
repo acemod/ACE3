@@ -5,9 +5,9 @@ class CfgWeapons {
     
     class ACE_HuntIR_monitor: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_HUNTIR_MON;
+        displayName = CSTRING(STR_ACE_HUNTIR_monitor_displayName);
         picture = PATHTOF(UI\w_huntir_monitor_ca.paa);
-        descriptionShort = $STR_ACE_HUNTIR_MON;
+        descriptionShort = CSTRING(STR_ACE_HUNTIR_monitor_displayName);
         model = PATHTOF(data\ace_huntir_monitor.p3d);
 
         class ItemInfo: InventoryItem_Base_F {
