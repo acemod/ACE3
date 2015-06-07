@@ -101,6 +101,9 @@ GVAR(no_cams) sort true;
         GVAR(cam) CameraEffect ["Terminate", "Back"];
         CamDestroy GVAR(cam);
         deleteVehicle GVAR(logic);
+        if (player != ACE_player) then {
+            player remoteControl ACE_player;
+        }; 
     };
 
     switch (GVAR(ZOOM)) do {
