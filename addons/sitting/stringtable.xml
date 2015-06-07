@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Sitting">
+        <Key ID="STR_ACE_Sitting_Sit">
+            <English>Sit Down</English>
+        </Key>
+        <Key ID="STR_ACE_Sitting_Stand">
+            <English>Stand Up</English>
+        </Key>
+    </Package>
+</Project>
