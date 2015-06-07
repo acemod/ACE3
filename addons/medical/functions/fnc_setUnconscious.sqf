@@ -46,8 +46,11 @@ if (_unit == ACE_player) then {
     };
 };
 
+// check if Zeus is remote controlling AI and treat him like one
+_isRemoteControl = (_unit == ACE_player && !isNull (missionNamespace getVariable ["BIS_fnc_moduleRemoteControl_unit", objNull]));
+
 // if we have unconsciousness for AI disabled, we will kill the unit instead
-if (!([_unit] call EFUNC(common,isPlayer)) && !_force) then {
+if ((!([_unit] call EFUNC(common,isPlayer)) || _isRemoteControl) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) exitWith {
         [_unit, true] call FUNC(setDead);
