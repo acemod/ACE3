@@ -8,6 +8,8 @@ GVAR(humidityShift) = (5 - random 10) / 100;
 GVAR(wind_period_start_time) = ACE_time;
 GVAR(rain_period_start_time) = ACE_time;
 
+GVAR(ACE_rain) = rain;
+
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = ACE_time; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = ACE_time; };
 "ACE_MISC_PARAMS" addPublicVariableEventHandler {
@@ -41,4 +43,9 @@ simulWeatherSync;
 [FUNC(updateTemperature), 20, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateHumidity), 20, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateWind), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(updateRain), 0, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(updateRain), 2, []] call CBA_fnc_addPerFrameHandler;
+[{
+    if (GVAR(syncRain)) then {
+        0 setRain GVAR(ACE_rain);
+    };
+}, 0, []] call CBA_fnc_addPerFrameHandler;
