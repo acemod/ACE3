@@ -54,14 +54,12 @@ switch (_this select 1) do {
             GVAR(NV) = 1;
             if (!GVAR(IRON)) then {
                 GVAR(IRON) = true;
-                ["ace_ir_on", []] call CBA_fnc_localEvent;
             };
         } else {
             setAperture -1;
             camUseNVG false;
             GVAR(NV) = 0;
             GVAR(IRON) = false;
-            ["ace_ir_off", []] call CBA_fnc_localEvent; // TODO: also on death etc?
         };
         _ret = true;
     };
