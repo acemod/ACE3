@@ -54,7 +54,7 @@ GVAR(pphandle) ppEffectEnable true;
 GVAR(stop) = false;
 call FUNC(huntirCompass);
 
-GVAR(no_cams) = ACE_player nearEntities ["ACE_HuntIR", 2000];
+GVAR(no_cams) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
 {
     GVAR(no_cams) set [_forEachIndex, [(getPosVisual ACE_player) vectorDistance (getPosVisual _x), _x]];
 } forEach GVAR(no_cams);
@@ -63,7 +63,7 @@ GVAR(no_cams) sort true;
     GVAR(no_cams) set [_forEachIndex, _x select 1];
 } forEach GVAR(no_cams);
 [{
-    GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", 2000];
+    GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
     {
         if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))}) then {
             GVAR(no_cams) pushBack _x;

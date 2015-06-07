@@ -42,5 +42,6 @@ _y = (_pos select 1) + _b;
         private ["_huntir"];
         _huntir = createVehicle ["ACE_HuntIR",  [_x, _y, _z], [], 0, "FLY"];
         _huntir setPosATL [_x, _y, _z];
+        systemChat Str(getMass _huntir);
     }, [_x, _y, ((getPosATL _projectile) select 2) + 400], 5, 0] call EFUNC(common,waitAndExecute);
 }, [_projectile, _x, _y], 5, 0] call EFUNC(common,waitAndExecute);

@@ -40,7 +40,7 @@ createDialog "ace_huntir_cam_dialog_off";
         [{
             private ["_elapsedTime", "_nearestHuntIRs"];
             _elapsedTime = ACE_time - GVAR(startTime);
-            _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", 2000];
+            _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
             
             if ((!dialog) || GVAR(done)) exitWith {
                 [_this select 1] call cba_fnc_removePerFrameHandler;
