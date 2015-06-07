@@ -130,7 +130,7 @@ if (_barrelLength > 0 && _useABConfig) then {
 if (_useABConfig) then {
     ctrlSetText [770000, format["%1'' - %2 gr (%3)", round((_ammoConfig select 1) * 39.3700787) / 1000, round((_ammoConfig select 3) * 15.4323584), _ammoClass]];
     if (_barrelLength > 0 && _barrelTwist > 0) then {
-        ctrlSetText [770002, format["Barrel: %1'' 1:%2'' twist", round(_barrelLength * 0.0393700787), round(_barrelTwist * 0.0393700787)]];
+        ctrlSetText [770002, format["Barrel: %1'' 1:%2'' twist", round(2 * _barrelLength * 0.0393700787) / 2, round(_barrelTwist * 0.0393700787)]];
     } else {
         ctrlSetText [770002, ""];
     };
