@@ -1,0 +1,13 @@
+#include "script_component.hpp"
+
+ADDON = false;
+
+PREP(DAGR_MENU_INIT);
+PREP(DAGR_OUTPUT_DATA);
+PREP(DAGR_OUTPUT_VECTOR);
+PREP(DAGR_OUTPUT_WP);
+PREP(DAGR_START);
+PREP(DAGR_VECTOR);
+PREP(mapCoord);
+
+ADDON = true;
