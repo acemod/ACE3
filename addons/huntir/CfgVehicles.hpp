@@ -6,7 +6,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(open) {
                     displayName = $STR_ACE_HUNTIR_MON_ACT;
-                    condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem) && !(underwater ACE_player));
+                    condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem));
                     statement = QUOTE(call FUNC(huntir));
                     showDisabled = 0;
                     priority = 2;
