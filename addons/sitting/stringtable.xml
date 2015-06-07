@@ -3,9 +3,11 @@
     <Package name="Sitting">
         <Key ID="STR_ACE_Sitting_Sit">
             <English>Sit Down</English>
+            <Polish>Usiądź</Polish>
         </Key>
         <Key ID="STR_ACE_Sitting_Stand">
             <English>Stand Up</English>
+            <Polish>Wstań</Polish>
         </Key>
     </Package>
 </Project>
