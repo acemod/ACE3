@@ -25,7 +25,7 @@ GVAR(cur_cam) = 0;
 GVAR(ROTATE) = 0;
 GVAR(ELEVAT) = 0.01;
 
-13521 cutText["","PLAIN"];
+HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 
 closedialog 0;
 createDialog "ace_huntir_cam_dialog";

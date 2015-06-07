@@ -48,13 +48,13 @@ _fnc_correctIt = {
     _pos
 };
 
-1234 cutRsc ["ace_huntir_cam_rose", "PLAIN"];
+HUNTIR_CAM_ROSE_LAYER_ID cutRsc ["ace_huntir_cam_rose", "PLAIN"];
 
 [{
     EXPLODE_1_PVT(_this select 0,_fnc_correctIt);
     
     if (GVAR(stop)) exitWith {
-        1234 cutText ["", "PLAIN"];
+        HUNTIR_CAM_ROSE_LAYER_ID cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
     

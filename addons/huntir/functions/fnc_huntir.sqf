@@ -19,12 +19,12 @@ if ((ACE_player call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     ACE_player playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
-13521 cutText ["", "BLACK", 0];
+HUNTIR_BACKGROUND_LAYER_ID cutText ["", "BLACK", 0];
 createDialog "ace_huntir_cam_dialog_off";
 
 [{
     if (!dialog) exitWith {
-        13521 cutText ["", "PLAIN", 0];
+        HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN", 0];
     };
     closeDialog 0;
     createDialog "ace_huntir_cam_dialog_inactive";
@@ -48,7 +48,7 @@ createDialog "ace_huntir_cam_dialog_off";
                 if (dialog && GVAR(state) == "connected") then {
                     [_nearestHuntIRs select 0] call FUNC(cam);
                 } else {
-                    13521 cutText ["", "PLAIN"];
+                    HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
                 };
             };
             switch (GVAR(state)) do {
@@ -84,7 +84,7 @@ createDialog "ace_huntir_cam_dialog_off";
                     [{
                         GVAR(done) = true;
                         closedialog 0;
-                        13521 cutText ["", "PLAIN"];
+                        HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
                     }, [], 3, 0] call EFUNC(common,waitAndExecute);
                 };
             };

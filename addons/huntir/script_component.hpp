@@ -10,3 +10,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define HUNTIR_BACKGROUND_LAYER_ID 13521
+#define HUNTIR_CAM_ROSE_LAYER_ID 13522
