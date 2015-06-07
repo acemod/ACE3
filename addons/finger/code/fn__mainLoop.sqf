@@ -6,7 +6,7 @@ LOG("Starting");
 //while {isNull (findDisplay 46)} do {sleep 1;};
 
 
-GVAR(FP_keyComb) = [41, false, true, false]; // Ctrl + Tilda	
+GVAR(FP_keyComb) = FP_DEFAULT_KEYBIND;
 
 GVAR(lastFPTime) = -FP_ACTION_TIMEOUT;
 	

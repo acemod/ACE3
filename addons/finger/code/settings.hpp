@@ -6,6 +6,8 @@
 
 #define FP_ICON "\z\ace\addons\finger\img\fp_icon.paa"
 
+#define FP_DEFAULT_KEYBIND [41, true, false, false] // Shift + Tilda	
+
 
 #define FP_TIMEOUT 2
 #define FP_ACTION_TIMEOUT 1
