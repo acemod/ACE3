@@ -25,7 +25,7 @@ class CfgVehicles {
                 condition = QUOTE(_player call FUNC(canStand));
                 statement = QUOTE(_player call FUNC(stand));
                 priority = 0;
-                //icon = PATHTOF(UI\sit_ca.paa);
+                icon = PATHTOF(UI\stand_ca.paa);
                 //add exception isNotSitting to everything that shouldn't be available (eg. medical)
             };
         };
