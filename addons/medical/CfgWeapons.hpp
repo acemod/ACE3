@@ -24,64 +24,64 @@ class CfgWeapons {
         scope = 2;
         model = QUOTE(PATHTOF(data\bandage.p3d));
         picture = QUOTE(PATHTOF(ui\items\fieldDressing_x_ca.paa));
-        displayName = $STR_ACE_Medical_Bandage_Basic_Display;
-        descriptionShort = $STR_ACE_Medical_Bandage_Basic_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Bandage_Basic_Desc_Use;
+        displayName = CSTRING(Bandage_Basic_Display);
+        descriptionShort = CSTRING(Bandage_Basic_Desc_Short);
+        descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Packing_Bandage_Display;
+        displayName = CSTRING(Packing_Bandage_Display);
         picture = QUOTE(PATHTOF(ui\items\packingBandage_x_ca.paa));
         model = QUOTE(PATHTOF(data\packingbandage.p3d));
-        descriptionShort = $STR_ACE_Medical_Packing_Bandage_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Packing_Bandage_Desc_Use;
+        descriptionShort = CSTRING(Packing_Bandage_Desc_Short);
+        descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Bandage_Elastic_Display;
+        displayName = CSTRING(Bandage_Elastic_Display);
         picture = QUOTE(PATHTOF(ui\items\elasticBandage_x_ca.paa));
         model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
-        descriptionShort = $STR_ACE_Medical_Bandage_Elastic_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Bandage_Elastic_Desc_Use;
+        descriptionShort = CSTRING(Bandage_Elastic_Desc_Short);
+        descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Tourniquet_Display;
+        displayName = CSTRING(Tourniquet_Display);
         picture = QUOTE(PATHTOF(ui\items\tourniquet_x_ca.paa));
         model = QUOTE(PATHTOF(data\tourniquet.p3d));
-        descriptionShort = $STR_ACE_Medical_Tourniquet_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Tourniquet_Desc_Use;
+        descriptionShort = CSTRING(Tourniquet_Desc_Short);
+        descriptionUse = CSTRING(Tourniquet_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_morphine: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Morphine_Display;
+        displayName = CSTRING(Morphine_Display);
         picture = QUOTE(PATHTOF(ui\items\morphine_x_ca.paa));
         model = QUOTE(PATHTOF(data\morphine.p3d));
-        descriptionShort = $STR_ACE_Medical_Morphine_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Morphine_Desc_Use;
+        descriptionShort = CSTRING(Morphine_Desc_Short);
+        descriptionUse = CSTRING(Morphine_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_atropine: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Atropine_Display;
+        displayName = CSTRING(Atropine_Display);
         picture = QUOTE(PATHTOF(ui\items\atropine_x_ca.paa));
         model = QUOTE(PATHTOF(data\atropine.p3d));
-        descriptionShort = $STR_ACE_Medical_Atropine_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Atropine_Desc_Use;
+        descriptionShort = CSTRING(Atropine_Desc_Short);
+        descriptionUse = CSTRING(Atropine_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
 
@@ -89,33 +89,33 @@ class CfgWeapons {
     };
     class ACE_epinephrine: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Epinephrine_Display;
+        displayName = CSTRING(Epinephrine_Display);
         picture = QUOTE(PATHTOF(ui\items\epinephrine_x_ca.paa));
         model = QUOTE(PATHTOF(data\epinephrine.p3d));
-        descriptionShort = $STR_ACE_Medical_Epinephrine_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Epinephrine_Desc_Use;
+        descriptionShort = CSTRING(Epinephrine_Desc_Short);
+        descriptionUse = CSTRING(Epinephrine_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_plasmaIV: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Plasma_IV;
+        displayName = CSTRING(Plasma_IV);
         picture = QUOTE(PATHTOF(ui\items\plasmaIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Plasma_IV_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Plasma_IV_Desc_Use;
+        descriptionShort = CSTRING(Plasma_IV_Desc_Short);
+        descriptionUse = CSTRING(Plasma_IV_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
     };
     class ACE_plasmaIV_500: ACE_plasmaIV {
-        displayName = $STR_ACE_Medical_Plasma_IV_500;
+        displayName = CSTRING(Plasma_IV_500);
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_plasmaIV_250: ACE_plasmaIV {
-        displayName = $STR_ACE_Medical_Plasma_IV_250;
+        displayName = CSTRING(Plasma_IV_250);
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
@@ -123,86 +123,86 @@ class CfgWeapons {
     class ACE_bloodIV: ACE_ItemCore {
         scope = 2;
         model = "\A3\Structures_F_EPA\Items\Medical\BloodBag_F.p3d";
-        displayName = $STR_ACE_Medical_Blood_IV;
+        displayName = CSTRING(Blood_IV);
         picture = QUOTE(PATHTOF(ui\items\bloodIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Blood_IV_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Blood_IV_Desc_Use;
+        descriptionShort = CSTRING(Blood_IV_Desc_Short);
+        descriptionUse = CSTRING(Blood_IV_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
     };
     class ACE_bloodIV_500: ACE_bloodIV {
-        displayName = $STR_ACE_Medical_Blood_IV_500;
+        displayName = CSTRING(Blood_IV_500);
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_bloodIV_250: ACE_bloodIV {
-        displayName = $STR_ACE_Medical_Blood_IV_250;
+        displayName = CSTRING(Blood_IV_250);
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
     };
     class ACE_salineIV: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Saline_IV;
+        displayName = CSTRING(Saline_IV);
         picture = QUOTE(PATHTOF(ui\items\salineIV_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Saline_IV_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Saline_IV_Desc_Use;
+        descriptionShort = CSTRING(Saline_IV_Desc_Short);
+        descriptionUse = CSTRING(Saline_IV_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
     };
     class ACE_salineIV_500: ACE_salineIV {
-        displayName = $STR_ACE_Medical_Saline_IV_500;
+        displayName = CSTRING(Saline_IV_500);
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_salineIV_250: ACE_salineIV {
-        displayName = $STR_ACE_Medical_Saline_IV_250;
+        displayName = CSTRING(Saline_IV_250);
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
     };
     class ACE_quikclot: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_QuikClot_Display;
+        displayName = CSTRING(QuikClot_Display);
         picture = QUOTE(PATHTOF(ui\items\quickclot_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_QuikClot_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_QuikClot_Desc_Use;
+        descriptionShort = CSTRING(QuikClot_Desc_Short);
+        descriptionUse = CSTRING(QuikClot_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
         scope = 2;
-        displayName = $STR_ACE_Medical_Aid_Kit_Display;
+        displayName = CSTRING(Aid_Kit_Display);
         picture = QUOTE(PATHTOF(ui\items\personal_aid_kit_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Aid_Kit_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Aid_Kit_Desc_Use;
+        descriptionShort = CSTRING(Aid_Kit_Desc_Short);
+        descriptionUse = CSTRING(Aid_Kit_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
     };
     class ACE_surgicalKit: ACE_ItemCore {
         scope=2;
-        displayName= $STR_ACE_Medical_SurgicalKit_Display;
+        displayName= CSTRING(SurgicalKit_Display);
         model = QUOTE(PATHTOF(data\surgical_kit.p3d));
         picture = QUOTE(PATHTOF(ui\items\surgicalKit_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_SurgicalKit_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_SurgicalKit_Desc_Use;
+        descriptionShort = CSTRING(SurgicalKit_Desc_Short);
+        descriptionUse = CSTRING(SurgicalKit_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 15;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {
         scope=2;
-        displayName= $STR_ACE_Medical_Bodybag_Display;
+        displayName= CSTRING(Bodybag_Display);
         model = QUOTE(PATHTOF(data\bodybagItem.p3d));
         picture = QUOTE(PATHTOF(ui\items\bodybag_x_ca.paa));
-        descriptionShort = $STR_ACE_Medical_Bodybag_Desc_Short;
-        descriptionUse = $STR_ACE_Medical_Bodybag_Desc_Use;
+        descriptionShort = CSTRING(Bodybag_Desc_Short);
+        descriptionUse = CSTRING(Bodybag_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 20;
         };

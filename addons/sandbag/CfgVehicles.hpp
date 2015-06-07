@@ -3,7 +3,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Sandbags {
-                displayName = $STR_ACE_AC_BUILD;
+                displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(call FUNC(canDeploy));
                 statement = QUOTE(call FUNC(deploy));
                 exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -16,10 +16,10 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_Item_Sandbag_empty: Item_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_M_SBEMPTY";
+        displayName = CSTRING(sandbagEmpty_displayName);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_Sandbag_empty {
@@ -30,10 +30,10 @@ class CfgVehicles {
     };
     /*
     class ACE_Item_Sandbag: Item_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_Sandbag";
+        displayName = CSTRING(sandbag_displayName);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_Sandbag {
@@ -45,12 +45,12 @@ class CfgVehicles {
     */
     class thingX;
     class ACE_SandbagObject: thingX {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         XEH_ENABLED;
         scope = 1;
         side = -1;
         model = PATHTOF(data\ace_sandbag_build.p3d);
-        displayName = $STR_ACE_Sandbag;
+        displayName = CSTRING(sandbag_displayName);
         typicalCargo[] = {};
         armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
         mapSize = 0.4;
@@ -76,7 +76,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_PickUp {
                     selection = "";
-                    displayName = "$STR_ACE_AC_PICKUPSB";
+                    displayName = CSTRING(PICKUPSB);
                     distance = 4;
                     condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
@@ -87,7 +87,7 @@ class CfgVehicles {
                 };
                 class ACE_Carry {
                     selection = "";
-                    displayName = "$STR_ACE_AC_CARRYSB";
+                    displayName = CSTRING(CARRYSB);
                     distance = 4;
                     condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(carry));
