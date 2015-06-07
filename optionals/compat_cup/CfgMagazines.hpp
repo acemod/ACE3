@@ -3,7 +3,7 @@ class CfgMagazines {
     class CUP_RPG18_M;
     class CUP_NLAW_M;
     class ACE_PreloadedMissileDummy_CUP: CUP_M136_M {              // The dummy magazine
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 1;
         scopeArsenal = 1;
         displayName = "Preloaded Missle";
@@ -16,7 +16,7 @@ class CfgMagazines {
         count = 0;
     };
     class ACE_UsedTube_M136_F: CUP_M136_M {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = "$STR_ACE_Disposable_UsedTube";
         descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayNameShort = "-";
@@ -26,7 +26,7 @@ class CfgMagazines {
         mass = 0;
     };
     class ACE_UsedTube_RPG18_F: CUP_RPG18_M {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = "$STR_ACE_Disposable_UsedTube";
         descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayNameShort = "-";
@@ -36,7 +36,7 @@ class CfgMagazines {
         mass = 0;
     };
     class ACE_UsedTube_NLAW_F: CUP_NLAW_M {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         displayName = "$STR_ACE_Disposable_UsedTube";
         descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayNameShort = "-";

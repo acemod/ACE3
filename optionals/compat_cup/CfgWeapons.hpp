@@ -551,7 +551,7 @@ class CfgWeapons
     class ACE_launch_M136_Used_F: CUP_launch_M136 {
         scope = 1;
         ACE_isUsedLauncher = 1;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         //displayName = "$STR_ACE_Disposable_UsedTube";
         //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayName = "M136 (Used)";
@@ -571,7 +571,7 @@ class CfgWeapons
     class ACE_launch_NLAW_Used_F: CUP_launch_NLAW {
         scope = 1;
         ACE_isUsedLauncher = 1;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         //displayName = "$STR_ACE_Disposable_UsedTube";
         //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayName = "NLAW (Used)";
@@ -591,7 +591,7 @@ class CfgWeapons
     class ACE_launch_RPG18_Used_F: CUP_launch_RPG18 {
         scope = 1;
         ACE_isUsedLauncher = 1;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         //displayName = "$STR_ACE_Disposable_UsedTube";
         //descriptionShort = "$STR_ACE_Disposable_UsedTubeDescription";
         displayName = "RPG18 (Used)";
