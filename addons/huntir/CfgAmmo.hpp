@@ -4,7 +4,7 @@ class CfgAmmo {
         model = PATHTOF(data\ace_m1070_armed.p3d);
         lightColor[] = {0, 0, 0, 0};
         smokeColor[] = {0, 0, 0, 0};
-        timeToLive = 10;
+        timeToLive = 6;
     };
     
     class ShellBase;
