@@ -30,8 +30,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
@@ -39,8 +37,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 ["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
