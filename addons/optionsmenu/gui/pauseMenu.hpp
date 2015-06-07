@@ -109,8 +109,8 @@ class RscDisplayMain: RscStandardDisplay {
 
         class ACE_news: RscControlsGroupNoScrollbars {
             idc = 80086;
-            x = "safezoneX + safezoneW - (31 * (((safezoneW / safezoneH) min 1.2) / 40))";
-            y = "safezoneY + (1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
+            x = "safezoneX + safezoneW - (16 * 			(			((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "safezoneY + (18.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "8.25 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             class controls {
@@ -129,7 +129,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.666};
+                    colorBackground[] = {0,0,0,0.5};
                 };
                 class ACE_NewsBackground: RscText {
                     idc = -1;
@@ -137,7 +137,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
                     h = "5.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.666};
+                    colorBackground[] = {0,0,0,0.5};
                 };
                 class ACE_NewsText: RscHTML {
                     idc = 69;
