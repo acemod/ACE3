@@ -4,7 +4,7 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_Sandbag_empty: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = "$STR_ACE_M_SBEMPTY";
         model = PATHTOF(data\ace_sandbag_m.p3d);
@@ -16,7 +16,7 @@ class CfgWeapons {
     };
     /*
     class ACE_Sandbag: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = "$STR_ACE_Sandbag";
         model = PATHTOF(data\ace_sandbag_build.p3d);

@@ -16,7 +16,7 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_Item_Sandbag_empty: Item_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_ACE_M_SBEMPTY";
@@ -30,7 +30,7 @@ class CfgVehicles {
     };
     /*
     class ACE_Item_Sandbag: Item_Base_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_ACE_Sandbag";
@@ -45,7 +45,7 @@ class CfgVehicles {
     */
     class thingX;
     class ACE_SandbagObject: thingX {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         XEH_ENABLED;
         scope = 1;
         side = -1;

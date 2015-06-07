@@ -179,7 +179,7 @@ class CfgVehicles {
 
     class ACE_Module: Module_F {};
     class GVAR(moduleSettings): ACE_Module {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(ModuleSettings_DisplayName);
         function = QFUNC(moduleSettings);
