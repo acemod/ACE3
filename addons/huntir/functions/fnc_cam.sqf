@@ -103,43 +103,43 @@ GVAR(no_cams) sort true;
         deleteVehicle GVAR(logic);
     };
 
-	switch (GVAR(ZOOM)) do {
-		case 0: {
-			GVAR(cam) camsetFOV 0.7;
-			GVAR(cam) camSetFocus [GVAR(pos) select 2, 1];
-		};
-		case 1: {
-			GVAR(cam) camsetFOV 0.35;
-			GVAR(cam) camSetFocus [(GVAR(pos) select 2)/2, 1];
-		};
-		case 2: {
-			GVAR(cam) camsetFOV 0.17;
-			GVAR(cam) camSetFocus [(GVAR(pos) select 2)/4, 1];
-		};
-		case 3: {
-			GVAR(cam) camsetFOV 0.1;
-			GVAR(cam) camSetFocus [(GVAR(pos) select 2)/8, 1];
-		};
-	};
+    switch (GVAR(ZOOM)) do {
+        case 0: {
+            GVAR(cam) camsetFOV 0.7;
+            GVAR(cam) camSetFocus [GVAR(pos) select 2, 1];
+        };
+        case 1: {
+            GVAR(cam) camsetFOV 0.35;
+            GVAR(cam) camSetFocus [(GVAR(pos) select 2)/2, 1];
+        };
+        case 2: {
+            GVAR(cam) camsetFOV 0.17;
+            GVAR(cam) camSetFocus [(GVAR(pos) select 2)/4, 1];
+        };
+        case 3: {
+            GVAR(cam) camsetFOV 0.1;
+            GVAR(cam) camSetFocus [(GVAR(pos) select 2)/8, 1];
+        };
+    };
 
     private ["_cam_coord_y", "_cam_coord_x", "_speed", "_cam_time", "_cam_pos"];
     
-	GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
-	GVAR(logic) setDir GVAR(ROTATE);
-	GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
-	GVAR(cam) CameraEffect ["internal", "BACK"];
-	_cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
-	_cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
-	GVAR(cam) camSetRelPos [_cam_coord_x, _cam_coord_y, 2];
-	GVAR(cam) camCommit 0;
+    GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
+    GVAR(logic) setDir GVAR(ROTATE);
+    GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
+    GVAR(cam) CameraEffect ["internal", "BACK"];
+    _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
+    _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
+    GVAR(cam) camSetRelPos [_cam_coord_x, _cam_coord_y, 2];
+    GVAR(cam) camCommit 0;
 
-	ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
-	ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-	_speed = 1 max abs((velocity GVAR(huntIR)) select 2);
-	_cam_time = ((GVAR(pos) select 2) - 20) / _speed;
-	ctrlSetText [3, format["%1 s", round(_cam_time)]];
-	_cam_pos = getPosVisual GVAR(huntIR);
-	_cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];
-	ctrlSetText [5, _cam_pos];
-	ctrlSetText [6, ""];
+    ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
+    ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
+    _speed = 1 max abs((velocity GVAR(huntIR)) select 2);
+    _cam_time = ((GVAR(pos) select 2) - 20) / _speed;
+    ctrlSetText [3, format["%1 s", round(_cam_time)]];
+    _cam_pos = getPosVisual GVAR(huntIR);
+    _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];
+    ctrlSetText [5, _cam_pos];
+    ctrlSetText [6, ""];
 }, 0, []] call CBA_fnc_addPerFrameHandler;
