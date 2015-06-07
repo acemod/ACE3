@@ -17,8 +17,7 @@ class CfgWeapons {
     
     class GrenadeLauncher;
     class UGL_F: GrenadeLauncher {
-        //magazines[] += {"ACE_HuntIR_M203"};
-        magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
+        magazines[] += {"ACE_HuntIR_M203"};
     };
     class GL_3GL_F: UGL_F {
         //magazines[] += {"ACE_HuntIR_M203"};
