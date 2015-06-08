@@ -1,7 +1,6 @@
 #include "script_component.hpp"
 
 DAGR_RUN = false;
-DAGR_STP = false;
 DAGR_MENU_RUN = false;
 DAGR_DIRECTION = true; // true -> degrees; false -> milliradian
 DAGR_GRID_VECTOR = "00000000"; // Default

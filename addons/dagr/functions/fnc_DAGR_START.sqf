@@ -32,13 +32,9 @@ if (DAGR_RUN) then {
     };
     [{
         EXPLODE_1_PVT(_this select 0,_vehicle);
-        if (DAGR_STP || (!alive ACE_player) || (cameraView == "GUNNER") || (vehicle ACE_player != _vehicle)) exitWith {
+        if (!DAGR_RUN || (!alive ACE_player) || (cameraView == "GUNNER") || (vehicle ACE_player != _vehicle)) exitWith {
             135471 cutText ["", "PLAIN"];
-            DAGR_RUN = false;
-            DAGR_STP = false;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     }, 0.1, [vehicle ACE_player]] call CBA_fnc_addPerFrameHandler;
-} else {
-    DAGR_STP = true;
 };

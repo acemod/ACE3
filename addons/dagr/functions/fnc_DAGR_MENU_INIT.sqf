@@ -24,8 +24,6 @@
     135471 cutText ["", "PLAIN"];
     
     DAGR_RUN = false;
-    DAGR_STP = false;
-
     DAGR_MENU_RUN = true;
     DAGR_Menu_Handler = [] execFSM QUOTE(PATHTOF(DAGR_MENU.fsm));
 };
