@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
+private ["_pos", "_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
@@ -31,8 +31,15 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
 
 if (DAGR_NO_DISPLAY) exitwith {};
 
+_pos = [GVAR(LAZPOS) select 0, GVAR(LAZPOS) select 1];
+
+// Incase grids go neg due to 99-00 boundry
+if (_pos select 0 < 0) then {_pos set [0, (_pos select 0) + 99999];};
+if (_pos select 1 < 0) then {_pos set [1, (_pos select 1) + 99999];};
+    
 // Find laser position
-_xGrid = toArray Str(round(GVAR(LAZPOS) select 0));
+_xGrid = toArray Str(round(_pos select 0));
+
 while {count _xGrid < 5} do {
     _xGrid = [48] + _xGrid;
 };
@@ -40,17 +47,13 @@ _xGrid resize 4;
 _xGrid = toString _xGrid;
 _xGrid = parseNumber _xGrid;
 
-_yGrid = toArray Str(round(GVAR(LAZPOS) select 1));
+_yGrid = toArray Str(round(_pos select 1));
 while {count _yGrid < 5} do {
     _yGrid = [48] + _yGrid;
 };
 _yGrid resize 4;
 _yGrid = toString _yGrid;
 _yGrid = parseNumber _yGrid;
-
-// Incase grids go neg due to 99-00 boundry
-if (_xGrid < 0) then {_xGrid = _xGrid + 9999;};
-if (_yGrid < 0) then {_yGrid = _yGrid + 9999;};
 
 _xCoord = switch true do {
     case (_xGrid >= 1000): { "" + Str(_xGrid) };

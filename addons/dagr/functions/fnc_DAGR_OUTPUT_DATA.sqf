@@ -38,6 +38,10 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
     
     // GRID
     _pos = getPosASL ACE_player;
+    
+    // Incase grids go neg due to 99-00 boundry
+    if (_pos select 0 < 0) then {_pos set [0, (_pos select 0) + 99999];};
+    if (_pos select 1 < 0) then {_pos set [1, (_pos select 1) + 99999];};
 
     _xGrid = toArray Str(round(_pos select 0));
     while {count _xGrid < 5} do {
@@ -54,10 +58,6 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
     _yGrid resize 4;
     _yGrid = toString _yGrid;
     _yGrid = parseNumber _yGrid;
-
-    // Incase grids go neg due to 99-00 boundry
-    if (_xgrid < 0) then {_xgrid = _xgrid + 9999;};
-    if (_ygrid < 0) then {_ygrid = _ygrid + 9999;};
 
     _xCoord = switch true do {
         case (_xGrid >= 1000): { "" + Str(_xGrid) };
