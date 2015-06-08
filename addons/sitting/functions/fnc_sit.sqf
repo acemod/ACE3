@@ -36,5 +36,5 @@ _player setPos (_seat modelToWorld _sitPosition);
 [_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation);
 
 // Set variables
-_player setVariable [QGVAR(sitting), true];
+_player setVariable [QGVAR(isSitting), true];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat

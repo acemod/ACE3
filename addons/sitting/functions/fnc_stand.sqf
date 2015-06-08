@@ -21,6 +21,6 @@ PARAMS_1(_player);
 [_player, "", 2] call EFUNC(common,doAnimation);
 
 // Set variables to nil
-_player setVariable [QGVAR(sitting), nil];
+_player setVariable [QGVAR(isSitting), nil];
 GVAR(seat) setVariable [QGVAR(seatOccupied), nil, true];
 GVAR(seat) = nil;

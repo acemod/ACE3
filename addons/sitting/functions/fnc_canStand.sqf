@@ -17,5 +17,5 @@
 
 PARAMS_1(_player);
 
-// If sitting
-(_player getVariable [QGVAR(sitting),false])
+// Sitting
+(_player getVariable [QGVAR(isSitting),false])
