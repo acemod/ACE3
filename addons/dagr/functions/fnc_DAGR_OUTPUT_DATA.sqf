@@ -28,7 +28,7 @@
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
 
 [{
-    private ["_pos", "_xgrid", "_ygrid", "_lastY", "_lastX", "_xcoord", "_ycoord", "_display", "_speed", "_vic", "_dagrHeading", "_dagrGrid", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation"];
+    private ["_pos", "_xgrid", "_ygrid", "_xcoord", "_ycoord", "_speed", "_dagrHeading", "_dagrGrid", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation"];
     
     // Abort Condition
     if !(DAGR_RUN && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {

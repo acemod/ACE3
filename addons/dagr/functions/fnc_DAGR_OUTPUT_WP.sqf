@@ -28,7 +28,7 @@
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
 
 [{
-    private ["_pos", "_xGrid", "_yGrid", "_lastY", "_lastX", "_xCoord", "_yCoord", "_speed", "_dagrHeading", "_WPHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
+    private ["_pos", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
     
     // Abort Condition
     if !(DAGR_RUN && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {

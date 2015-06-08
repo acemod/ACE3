@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_display", "_elevation", "_xCoord", "_yCoord"];
+private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
