@@ -1,22 +1,25 @@
-#define MACRO_SEAT_ACTION \
-    class ACE_Actions { \
-        class ACE_MainActions { \
-            displayName = ECSTRING(interaction,MainAction); \
-            selection = ""; \
-            distance = 1.25; \
-            condition = "true"; \
-            class GVAR(Sit) { \
-                displayName = CSTRING(Sit); \
-                condition = QUOTE(_this call FUNC(canSit)); \
-                statement = QUOTE(_this call FUNC(sit)); \
-                showDisabled = 0; \
-                priority = 0; \
-                icon = PATHTOF(UI\sit_ca.paa); \
-            }; \
-        }; \
+class CfgVehicles {
+    class ACE_Module;
+    class ACE_ModuleSitting: ACE_Module {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = CSTRING(ModuleDisplayName);
+        function = QFUNC(moduleInit);
+        scope = 2;
+        isGlobal = 1;
+        //icon = QUOTE(PATHTOF(UI\Icon_Module_Sitting_ca.paa));
+        class Arguments {
+            class enable {
+                displayName = CSTRING(Enable);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(ModuleDescription);
+        };
     };
 
-class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
@@ -30,6 +33,24 @@ class CfgVehicles {
             };
         };
     };
+
+    #define MACRO_SEAT_ACTION \
+        class ACE_Actions { \
+            class ACE_MainActions { \
+                displayName = ECSTRING(interaction,MainAction); \
+                selection = ""; \
+                distance = 1.25; \
+                condition = "true"; \
+                class GVAR(Sit) { \
+                    displayName = CSTRING(Sit); \
+                    condition = QUOTE(_this call FUNC(canSit)); \
+                    statement = QUOTE(_this call FUNC(sit)); \
+                    showDisabled = 0; \
+                    priority = 0; \
+                    icon = PATHTOF(UI\sit_ca.paa); \
+                }; \
+            }; \
+        };
 
     class ThingX;
     // Folding Chair

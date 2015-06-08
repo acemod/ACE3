@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"Jonpas"};
         authorUrl = "https://github.com/jonpas";
         VERSION_CONFIG;
@@ -13,4 +13,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
