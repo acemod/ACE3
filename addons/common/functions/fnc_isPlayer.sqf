@@ -6,16 +6,16 @@
  *
  * Arguments:
  * 0: unit to be checked (object)
- * 1: exclude curator controlled units (boolean)
+ * 1: exclude remote controlled units (boolean)
  *
  * Return Value:
  * Bool: is unit a player?
  */
 #include "script_component.hpp"
 
-private ["_unit", "_excludeRemote"];
+private ["_unit", "_excludeRemoteControlled"];
 
-_unit               = [_this, 0] call BIS_fnc_param;
-_excludeRemote      = [_this, 1, false] call BIS_fnc_param;
+_unit                         = _this select 0;
+_excludeRemoteControlled      = if (count _this > 1) then {_this select 1} else {false};
 
-isPlayer _unit || (!_excludeRemote && {_unit == call FUNC(player)})
+isPlayer _unit || (!_excludeRemoteControlled && {_unit == call FUNC(player)})

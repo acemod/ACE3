@@ -106,6 +106,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class remoteControlledAI {
+                displayName = CSTRING(MedicalSettings_remoteControlledAI_DisplayName);
+                description = CSTRING(MedicalSettings_remoteControlledAI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class preventInstaDeath {
                 displayName = CSTRING(MedicalSettings_preventInstaDeath_DisplayName);
                 description = CSTRING(MedicalSettings_preventInstaDeath_Description);
