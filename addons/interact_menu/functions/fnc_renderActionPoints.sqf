@@ -119,22 +119,9 @@ _fnc_renderSelfActions = {
 };
 
 _fnc_renderZeusActions = {
-    _target = _this;
-
-    // Iterate through zeus actions, find base level actions and render them if appropiate
-    _pos = if !(GVAR(useCursorMenu)) then {
-        _virtualPoint = (((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL)) vectorAdd GVAR(selfMenuOffset)) call EFUNC(common,ASLToPosition);
-        _wavesAtOrigin = [(positionCameraToWorld [0, 0, 0])] call EFUNC(common,waveHeightAt);
-        _wavesAtVirtualPoint = [_virtualPoint] call EFUNC(common,waveHeightAt);
-        _virtualPoint set [2, ((_virtualPoint select 2) - _wavesAtOrigin + _wavesAtVirtualPoint)];
-        _virtualPoint
-    } else {
-        [0.5, 0.5]
-    };
-
     {
         _action = _x;
-        [_target, _action, _pos] call FUNC(renderBaseMenu);
+        [_this, _action, [0.5, 0.5]] call FUNC(renderBaseMenu);
     } forEach GVAR(ZeusActions);
 };
 
