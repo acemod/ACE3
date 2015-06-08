@@ -10,3 +10,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define DEG_TO_MIL(d) (d / 360 * 6400)
+#define MIL_TO_DEG(d) (d / 6400 * 360)

@@ -12,110 +12,95 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
-
-disableSerialization;
-
-private ["_pos", "_x", "_y", "_xgrid", "_pos", "_ygrid", "_lastY", "_lastX", "_xcoord", "_ycoord", "_display", "_speed", "_vic", "_dagrHeading", "_dagrGrid", "_background", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation", "_elevationControl", "_grid", "_gridControl", "_headingControl", "_speedControl", "_timeControl"];
+#include "script_component.hpp"
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
-_display = (uiNameSpace getVariable "DAGR_DISPLAY");
 
-_gridControl = _display displayCtrl 266851;
-_speedControl = _display displayCtrl 266852;
-_elevationControl = _display displayCtrl 266853;
-_headingControl = _display displayCtrl 266854;
-_timeControl = _display displayCtrl 266855;
-_background = _display displayCtrl 266856;
+#define __display (uiNameSpace getVariable "DAGR_DISPLAY")
 
-_background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
+#define __gridControl (__display displayCtrl 266851)
+#define __speedControl (__display displayCtrl 266852)
+#define __elevationControl (__display displayCtrl 266853)
+#define __headingControl (__display displayCtrl 266854)
+#define __timeControl (__display displayCtrl 266855)
+#define __background (__display displayCtrl 266856)
 
-while {DAGR_RUN} do {
-    if (Dagr_Map_Info == "default") then {
-        _dagrGrid = mapGridPosition ACE_player;
-    } else {
-        //GRID
-        _pos = getPos ACE_player;
-        _x = _pos select 0;
-        _y = _pos select 1;
+__background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
 
-        _grid = ACE_player call FUNC(mapCoord);
-        _xgrid = floor (call compile (_grid select 0));
-        _ygrid = floor (call compile (_grid select 1));
+[{
+    private ["_pos", "_xgrid", "_ygrid", "_lastY", "_lastX", "_xcoord", "_ycoord", "_display", "_speed", "_vic", "_dagrHeading", "_dagrGrid", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation"];
+    
+    // Abort Condition
+    if !(DAGR_RUN && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+        135471 cutText ["", "PLAIN"];
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+    };
+    
+    // GRID
+    _pos = getPosASL ACE_player;
 
-        //Incase grids go neg due to 99-00 boundry
-        if (_xgrid < 0) then {_xgrid = _xgrid + 9999;};
-        if (_ygrid < 0) then {_ygrid = _ygrid + 9999;};
+    _xGrid = toArray Str(round(_pos select 0));
+    while {count _xGrid < 5} do {
+        _xGrid = [48] + _xGrid;
+    };
+    _xGrid resize 4;
+    _xGrid = toString _xGrid;
+    _xGrid = parseNumber _xGrid;
+    
+    _yGrid = toArray Str(round(_pos select 1));
+    while {count _yGrid < 5} do {
+        _yGrid = [48] + _yGrid;
+    };
+    _yGrid resize 4;
+    _yGrid = toString _yGrid;
+    _yGrid = parseNumber _yGrid;
 
-        _xcoord =
-            if (_xgrid >= 1000) then {
-                str _xgrid;
-            } else {
-                if (_xgrid >= 100) then {
-                    "0" + str _xgrid;
-                } else {
-                    if (_xgrid >= 10) then {
-                        "00" + str _xgrid;
-                    } else{
-                        "000" + str _xgrid;
-                    };
-                };
-            };
+    // Incase grids go neg due to 99-00 boundry
+    if (_xgrid < 0) then {_xgrid = _xgrid + 9999;};
+    if (_ygrid < 0) then {_ygrid = _ygrid + 9999;};
 
-        _ycoord =
-            if (_ygrid >= 1000) then {
-                str _ygrid;
-            } else {
-                if (_ygrid >= 100) then {
-                    "0" + str _ygrid;
-                } else {
-                    if (_ygrid >= 10) then {
-                        "00" + str _ygrid;
-                    } else{
-                        "000" + str _ygrid;
-                    };
-                };
-            };
-        _dagrGrid = _xcoord + " " + _ycoord;
+    _xCoord = switch true do {
+        case (_xGrid >= 1000): { "" + Str(_xGrid) };
+        case (_xGrid >= 100): { "0" + Str(_xGrid) };
+        case (_xGrid >= 10): { "00" + Str(_xGrid) };
+        default             { "000" + Str(_xGrid) };
     };
 
-    //SPEED
-    if (vehicle ACE_player != ACE_player) then {
-        _vic = vehicle ACE_player;
-        _speed = speed _vic;
-    } else{
-        _speed = speed ACE_player;
+    _yCoord = switch true do {
+        case (_yGrid >= 1000): { "" + Str(_yGrid) };
+        case (_yGrid >= 100): { "0" + Str(_yGrid) };
+        case (_yGrid >= 10): { "00" + Str(_yGrid) };
+        default             { "000" + Str(_yGrid) };
     };
-    _speed = floor (_speed *10) / 10;
+    
+    _dagrGrid = _xcoord + " " + _ycoord;
+    
+    // SPEED
+    _speed = speed (vehicle ACE_player);
+    _speed = floor (_speed * 10) / 10;
     _speed = abs(_speed);
     _dagrspeed = str _speed + "kph";
 
-    //Elevation
+    // Elevation
     _elevation = getPosASL ACE_player;
     _elevation = floor ((_elevation select 2) + EGVAR(weather,altitude));
     _dagrElevation = str _elevation + "m";
 
-    //Heading
-    if (vehicle ACE_player != ACE_player) then {
-        _vic = vehicle ACE_player;
-        _dagrHeading = if (!DAGR_DIRECTION) then {floor ((direction _vic)/360*6400)} else {floor (direction _vic);};
-    } else{
-        _dagrHeading = if (!DAGR_DIRECTION) then {floor ((direction ACE_player)/360*6400)} else {floor (direction ACE_player);};
+    // Heading
+    _dagrHeading = if (!DAGR_DIRECTION) then {
+        floor (DEG_TO_MIL(direction (vehicle ACE_player)))
+    } else {
+        floor (direction (vehicle ACE_player))
     };
 
-    //Time
+    // Time
     _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
 
-    //output
-    _gridControl ctrlSetText format ["%1", _dagrGrid];
-    _speedControl ctrlSetText format ["%1", _dagrSpeed];
-    _elevationControl ctrlSetText format ["%1", _dagrElevation];
-    _headingControl ctrlSetText (if (!DAGR_DIRECTION) then { format ["%1", _dagrHeading] } else { format ["%1 °", _dagrHeading] });
-    _timeControl ctrlSetText format ["%1", _dagrTime];
-
-    sleep DAGRSLEEP;
-    if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
-        DAGR_RUN = false;
-        135471 cutText ["", "PLAIN"];
-    };
-};
+    // Output
+    __gridControl ctrlSetText format ["%1", _dagrGrid];
+    __speedControl ctrlSetText format ["%1", _dagrSpeed];
+    __elevationControl ctrlSetText format ["%1", _dagrElevation];
+    __headingControl ctrlSetText (if (!DAGR_DIRECTION) then { format ["%1", _dagrHeading] } else { format ["%1 °", _dagrHeading] });
+    __timeControl ctrlSetText format ["%1", _dagrTime];
+    
+}, DAGR_UPDATE_INTERVAL, []] call CBA_fnc_addPerFrameHandler;

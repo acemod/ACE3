@@ -1504,7 +1504,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"DAGR_DISPLAY_SELECTION = ""DATA"";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _mainText) ctrlSetText ""Acquiring Data."";" \n
        "_wait = time + 0.5;" \n
-       "DAGR_EMPTYVECTOR = true;"/*%FSM</STATEINIT""">*/;
+       "DAGR_EMPTY_VECTOR = true;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -1934,7 +1934,7 @@ class FSM
     {
       name = "Remove_Menu";
       init = /*%FSM<STATEINIT""">*/"DAGR_SEL = false;" \n
-       "DAGR_EMPTYVECTOR = true;" \n
+       "DAGR_EMPTY_VECTOR = true;" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _Option0) ctrlSetText """";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _Option1) ctrlSetText """";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _Option2) ctrlSetText """";" \n
@@ -2218,7 +2218,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"DAGR_DISPLAY_SELECTION = ""VECTOR"";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _mainText) ctrlSetText ""Vector Connected"";" \n
        "_wait = time + 2.5;" \n
-       "DAGR_EMPTYVECTOR = false;"/*%FSM</STATEINIT""">*/;
+       "DAGR_EMPTY_VECTOR = false;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -5825,7 +5825,7 @@ class FSM
        "DAGR_RIGHT = false;" \n
        "DAGR_LEFT = false;" \n
        "DAGR_SEL = false;" \n
-       "_newSleep = DAGRSLEEP;" \n
+       "_newSleep = DAGR_UPDATE_INTERVAL;" \n
        "_text = str (_newSleep*1000) + ""ms"";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _mainText) ctrlSetText _text;" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _F1) ctrlSetText ""Save"";" \n
@@ -5907,7 +5907,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"((uiNameSpace getVariable _dsp) displayCtrl _F1) ctrlSetText """";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _F3) ctrlSetText """";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _mainText) ctrlSetText ""Updating."";" \n
-       "DAGRSLEEP = _newSleep;" \n
+       "DAGR_UPDATE_INTERVAL = _newSleep;" \n
        "_wait = time + 0.2;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -7457,7 +7457,7 @@ class FSM
       init = /*%FSM<STATEINIT""">*/"DAGR_DISPLAY_SELECTION = ""VECTOR"";" \n
        "((uiNameSpace getVariable _dsp) displayCtrl _mainText) ctrlSetText ""SOFLAM Connected"";" \n
        "_wait = time + 2.5;" \n
-       "DAGR_EMPTYVECTOR = false;"/*%FSM</STATEINIT""">*/;
+       "DAGR_EMPTY_VECTOR = false;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -7848,7 +7848,7 @@ class FSM
     {
       name = "__96";
       init = /*%FSM<STATEINIT""">*/"DAGR_SEL = false;" \n
-       "DAGR_EMPTYVECTOR = true;"/*%FSM</STATEINIT""">*/;
+       "DAGR_EMPTY_VECTOR = true;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

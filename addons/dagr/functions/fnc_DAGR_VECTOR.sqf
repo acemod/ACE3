@@ -17,14 +17,14 @@
  */
 #include "script_component.hpp"
 
-#define EMP_RF_ACC 5
+#define EMP_RF_ACC 5 // Rangefinder Accuracy
 
 PARAMS_3(_slopeDistance,_azimuth,_inclination);
 
-if (!DAGR_EMPTYVECTOR) then {
-    DAGRLAZPOS = (eyePos player) vectorAdd ([_slopeDistance, _azimuth, _inclination] call CBA_fnc_polar2vect);
-    DAGRLAZDIST = _slopeDistance * cos(_inclination);
-    DAGRLAZDIST = floor(DAGRLAZDIST / EMP_RF_ACC) *  EMP_RF_ACC;
-    DAGRLazHeading = _azimuth;
-    NODAGRDISPLAY = false;
+if (!DAGR_EMPTY_VECTOR) then {
+    GVAR(LAZPOS) = (eyePos player) vectorAdd ([_slopeDistance, _azimuth, _inclination] call CBA_fnc_polar2vect);
+    GVAR(LAZDIST) = _slopeDistance * cos(_inclination);
+    GVAR(LAZDIST) = floor (GVAR(LAZDIST) / EMP_RF_ACC) *  EMP_RF_ACC;
+    GVAR(LAZHEADING) = _azimuth;
+    DAGR_NO_DISPLAY = false;
 };

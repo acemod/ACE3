@@ -3,7 +3,6 @@
 DAGR_RUN = false;
 DAGR_STP = false;
 DAGR_MENU_RUN = false;
-Dagr_Map_Info = "default";
 DAGR_DIRECTION = true; // true -> degrees; false -> milliradian
 DAGR_GRID_VECTOR = "00000000"; // Default
 
@@ -18,11 +17,11 @@ DAGR_WP1 = 0;
 DAGR_WP2 = 0;
 DAGR_WP3 = 0;
 DAGR_WP4 = 0;
-DAGRSLEEP = 0.5;   // Update timer on DAGR, set for 0.5 seconds
-DAGR_EMPTYVECTOR = true;  // Keeps DAGR Vector display from filling up before use
+DAGR_UPDATE_INTERVAL = 0.5;   // Update timer on DAGR, set for 0.5 seconds
+DAGR_EMPTY_VECTOR = true;  // Keeps DAGR Vector display from filling up before use
 
 DAGR_DISPLAY_SELECTION = "DATA"; // Sets DAGR for data display
 
-NODAGRDISPLAY = true;
+DAGR_NO_DISPLAY = true;
 
 ["RangerfinderData", {_this call FUNC(DAGR_VECTOR)}] call EFUNC(common,addEventHandler);
