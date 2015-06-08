@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Animations Pool
-_animPool = [
+_animations = [
     "HubSittingChairUA_idle1",
     "HubSittingChairUA_idle2",
     "HubSittingChairUA_idle3",
@@ -43,13 +43,5 @@ _animPool = [
     "HubSittingChairC_move1"
 ];
 
-// Set all animation names to lower-case
-_animations = [];
-{
-    _animations pushBack (toLower _x);
-} forEach _animPool;
-
 // Select random animation
-_animation = _animations select (floor (random (count _animations)));
-
-_animation
+(_animations select (floor (random (count _animations))))

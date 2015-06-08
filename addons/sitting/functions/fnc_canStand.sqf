@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-// If sitting
-if (_this getVariable [QGVAR(sitting),false]) exitWith {true};
+PARAMS_1(_player);
 
-// Default
-false
+// If sitting
+(_player getVariable [QGVAR(sitting),false])

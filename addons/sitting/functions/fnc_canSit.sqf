@@ -19,9 +19,4 @@
 PARAMS_2(_seat,_player);
 
 // If seat object and not occupied
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(canSit)) == 1 &&
-    {isNil{_seat getVariable QGVAR(seatOccupied)}}
-) exitWith {true};
-
-// Default
-false
+(getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(canSit)) == 1 && {isNil{_seat getVariable QGVAR(seatOccupied)}})

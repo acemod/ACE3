@@ -15,9 +15,12 @@
  */
 #include "script_component.hpp"
 
+PARAMS_1(_player);
+
 // Restore animation
-[_this, "", 2] call EFUNC(common,doAnimation);
+[_player, "", 2] call EFUNC(common,doAnimation);
 
 // Set variables to nil
-_this setVariable [QGVAR(sitting), nil];
+_player setVariable [QGVAR(sitting), nil];
 GVAR(seat) setVariable [QGVAR(seatOccupied), nil, true];
+GVAR(seat) = nil;

@@ -33,8 +33,7 @@ _player setDir ((getDir _seat) + _sitDirection);
 _player setPos (_seat modelToWorld _sitPosition);
 
 // Get random animation and perform it
-_animation = call FUNC(getRandomAnimation);
-[_player, _animation, 2] call EFUNC(common,doAnimation);
+[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation);
 
 // Set variables
 _player setVariable [QGVAR(sitting), true];
