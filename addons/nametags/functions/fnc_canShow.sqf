@@ -1,19 +1,22 @@
 /*
-    Author: aeroson
-
-    Description:
-        Might be called several times a second
-
-    Parameters:
-        None
-
-    Returns:
-        true if CrewInfo can be shown, false otherwise
-*/
-
+ * Author: aeroson
+ * Checks if crew info can be shown.
+ * Might be called several times a second.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Can show Crew Info <BOOL>
+ *
+ * Example:
+ * call ace_nametags_fnc_doShow
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private["_player"];
+private ["_player"];
 
 _player = ACE_player;
 

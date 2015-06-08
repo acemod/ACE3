@@ -24,22 +24,30 @@ VKing <kauestad@gmail.com>
 Walter Pearce <jaynus@gmail.com>
 
 # CONTRIBUTORS
-11RDP-LoupVert <loupvert@11rdp.fr>
 [BIG]Bull
+11RDP-LoupVert <loupvert@11rdp.fr>
 ACCtomeek <tomeek99@gmail.com>
+adam3adam <br.ada@seznam.cz>
 Adanteh
 aeroson
-alef <alefor@gmail.com>
 Aggr094 <bastards4glory@gmail.com>
+alef <alefor@gmail.com>
+Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
 Anthariel <Contact@storm-simulation.com>
+Asgar Serran <piechottaf@web.de>
+Bla1337
+BlackPixxel
 BlackQwar
 Brakoviejo
 Brisse <brisse@outlook.com>
 BullHorn <bullhorn7@gmail.com>
 Clon1998 <ps.patti1998@gmail.com>
 Codingboy
+Coren <coren4@gmail.com>
 Crusty
+Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
+Dimaslg <dimaslg@telecable.es>
 eRazeri
 evromalarkey <evromalarkey@gmail.com>
 Falke75
@@ -49,53 +57,47 @@ Filip Basara <filip.basara93@googlemail.com>
 FreeZbe <freeseb@gmail.com>
 geraldbolso1899
 Ghost
+Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 GieNkoV <gienkov.grzegorz@gmail.com>
 gpgpgpgp
 Grzegorz
-Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 Hamburger SV
 Harakhti <shadowdragonphd@gmail.com>
 havena <silveredenis@gmail.com>
 Hawkins
-jokoho48
+jokoho482 <jokoho482@gmail.com>`
 Jonpas <jonpas33@gmail.com>
+Kavinsky <nmunozfernandez@gmail.com>
 Kllrt <kllrtik@gmail.com>
+legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
+Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
 Michail Nikolaev
 nic547 <nic547@outlook.com>
+nikolauska <nikolauska1@gmail.com>
 nomisum <nomisum@gmail.com>
+OnkelDisMaster <onkeldismaster@gmail.com>
 oscarmolinadev
 pokertour
+Professor <lukas.trneny@wo.cz>
 rakowozz
+ramius86 <pasini86@hotmail.com>
 Raspu86
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
-ramius86 <pasini86@hotmail.com>
+ruPaladin <happyworm24@rambler.ru>
 SilentSpike <SilentSpike100@gmail.com>
 simon84 <badguy360th@gmail.com>
 Sniperwolf572 <tenga6@gmail.com>
+SzwedzikPL <szwedzikpl@gmail.com>
 Tachi <zaveruha007@gmail.com>
 Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
-zGuba
-Aleksey EpMAK Yermakov <epmak777@gmail.com>
-ruPaladin <happyworm24@rambler.ru>
-BlackPixxel
-Asgar Serran <piechottaf@web.de>
-Kavinsky <nmunozfernandez@gmail.com>
-Coren <coren4@gmail.com>
-OnkelDisMaster <onkeldismaster@gmail.com>
-Dimaslg <dimaslg@telecable.e>
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
-Bla1337
-nikolauska <nikolauska1@gmail.com>
-adam3adam <br.ada@seznam.cz>
-Professor <lukas.trneny@wo.cz>
 Winter <simon@agius-muscat.net>
-Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
-legman <juicemelon@msn.com>
+zGuba

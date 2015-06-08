@@ -14,26 +14,28 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_altitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_updateMemory", "_windSpeed", "_crosswind", "_headwind"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_altitude", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_updateMemory", "_windSpeed", "_crosswind", "_headwind"];
 _playerDir = getDir ACE_player;
 _playerAltitude = (getPosASL ACE_player) select 2;
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 _humidity = EGVAR(weather,currentHumidity);
 _barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
 _altitude = EGVAR(weather,Altitude) + _playerAltitude;
+_airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
+_densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
 _chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
 _heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
 _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
 _wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
-    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
-    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude];
+    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
+    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
 };
 
 {
     GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12];
+} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 _fnc_updateMemory = {
     PARAMS_2(_slot,_value);
@@ -86,3 +88,4 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 [10, _wetBulb] call _fnc_updateMemory;
 [11, _barometricPressure] call _fnc_updateMemory;
 [12, _altitude] call _fnc_updateMemory;
+[13, _densityAltitude] call _fnc_updateMemory;

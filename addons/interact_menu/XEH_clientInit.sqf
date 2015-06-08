@@ -28,7 +28,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3 Common", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -37,7 +37,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 },{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3 Common", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -62,3 +62,13 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 // disable firing while the interact menu is is is opened
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);
+
+// background options
+["interactMenuOpened", {
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
+}] call EFUNC(common,addEventHandler);
+["interactMenuClosed", {
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+}] call EFUNC(common,addEventHandler);

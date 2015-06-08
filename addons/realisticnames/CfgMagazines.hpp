@@ -359,61 +359,61 @@ class CfgMagazines {
     class CA_Magazine;
     // http://en.wikipedia.org/wiki/M15_mine
     class ATMine_Range_Mag: CA_Magazine {
-        displayName = "$STR_ACE_RealisticNames_ATMine_Name";
+        displayName = CSTRING(ATMine_Name);
     };
     // http://en.wikipedia.org/wiki/VS-50_mine
     class APERSMine_Range_Mag: ATMine_Range_Mag {
-        displayName = "$STR_ACE_RealisticNames_APERSMine_Name";
+        displayName = CSTRING(APERSMine_Name);
     };
     // https://www.buymilsurp.com/us-m26-antipersonnel-bounding-mine-p-5419.html
     class APERSBoundingMine_Range_Mag: ATMine_Range_Mag {
-        displayName = "$STR_ACE_RealisticNames_APERSBoundingMine_Name";
+        displayName = CSTRING(APERSBoundingMine_Name);
     };
     // http://en.wikipedia.org/wiki/PMR-3_mine
     class APERSTripMine_Wire_Mag: ATMine_Range_Mag {
-        displayName = "$STR_ACE_RealisticNames_APERSTripwireMine_Name";
+        displayName = CSTRING(APERSTripwireMine_Name);
     };
     // the following ones can be found here: http://www.dtic.mil/dtic/tr/fulltext/u2/a567897.pdf
     class SLAMDirectionalMine_Wire_Mag: ATMine_Range_Mag {
-        displayName = "$STR_ACE_RealisticNames_SLAM_Name";
+        displayName = CSTRING(SLAM_Name);
     };
 
     // claymore
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
-        displayName = "$STR_ACE_RealisticNames_Claymore_Name";
+        displayName = CSTRING(Claymore_Name);
     };
 
     // satchels
     class SatchelCharge_Remote_Mag: CA_Magazine {
-        displayName = "$STR_ACE_RealisticNames_SatchelCharge_Name";
+        displayName = CSTRING(SatchelCharge_Name);
     };
     class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
-        displayName = "$STR_ACE_RealisticNames_DemoCharge_Name";
+        displayName = CSTRING(DemoCharge_Name);
     };
 
     // hand grenades
     class HandGrenade: CA_Magazine {
-        displayName = "$STR_ACE_RealisticNames_HandGrenade_Name";
+        displayName = CSTRING(HandGrenade_Name);
     };
     class SmokeShell: HandGrenade {
-        displayName = "$STR_ACE_RealisticNames_SmokeShell_Name";
+        displayName = CSTRING(SmokeShell_Name);
     };
     class SmokeShellBlue: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellBlue_Name";
+        displayName = CSTRING(SmokeShellBlue_Name);
     };
     class SmokeShellGreen: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellGreen_Name";
+        displayName = CSTRING(SmokeShellGreen_Name);
     };
     class SmokeShellOrange: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellOrange_Name";
+        displayName = CSTRING(SmokeShellOrange_Name);
     };
     class SmokeShellPurple: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellPurple_Name";
+        displayName = CSTRING(SmokeShellPurple_Name);
     };
     class SmokeShellRed: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellRed_Name";
+        displayName = CSTRING(SmokeShellRed_Name);
     };
     class SmokeShellYellow: SmokeShell {
-        displayName = "$STR_ACE_RealisticNames_SmokeShellYellow_Name";
+        displayName = CSTRING(SmokeShellYellow_Name);
     };
 };
