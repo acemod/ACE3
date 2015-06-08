@@ -47,6 +47,7 @@
             <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
             <Polish>Ilość obliczeń wykonywanych przez symulację odprysków w danej klatce. Ta opcja pomaga rozprzestrzenić obliczenia odprysków na więcej klatek, zmniejszając spadek FPS jeszcze bardziej.</Polish>
             <German>Gibt die Anzahl der Explosionverfolgungsberechnungen an, die gleichzeitig ausgeführt werden. Das kann dabei helfen den FPS-Einfluss abzuschwächen, wenn Teile über mehrere Frames hinweg verfolgt werden.</German>
+            <Spanish>El número de cálculos de esquirlas que se hará en cualquier cuadro. Esto ayuda a dispersar el impacto en FPS del seguimiento de esquirlas de balas a través de múltiples cuadros, lo que limita aún más su impacto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
