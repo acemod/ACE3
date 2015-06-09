@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+private ["_animations"];
+
 // Animations Pool
 _animations = [
     "HubSittingChairUA_idle1",

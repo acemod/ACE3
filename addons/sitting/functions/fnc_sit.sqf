@@ -25,6 +25,7 @@ GVAR(seat) = _seat;
 _player switchMove "amovpknlmstpsraswrfldnon";
 
 // Read config
+private ["_sitDirection", "_sitPosition"];
 _sitDirection = getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(sitDirection));
 _sitPosition = getArray (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(sitPosition));
 
