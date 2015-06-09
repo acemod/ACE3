@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(incomingFinger);
 PREP(keyPress);
+PREP(moduleSettings);
 PREP(perFrameEH);
 
 ADDON = true;

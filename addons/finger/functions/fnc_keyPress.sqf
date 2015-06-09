@@ -1,5 +1,5 @@
 /*
- * Author: TheDrill
+ * Author: TheDrill, PabstMirror
  * On keypress, point and send position to nearby players
  *
  * Arguments:

@@ -40,7 +40,7 @@ _iconSize = BASE_SIZE * _fovCorrection;
             _drawColor set [3, ((_drawColor select 3) * (_timeLeftToShow / 0.5))];
         };
 
-        drawIcon3D [FP_ICON, _drawColor, _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "PuristaMedium"];
+        drawIcon3D [QUOTE(PATHTOF(UI\fp_icon.paa)), _drawColor, _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "PuristaMedium"];
     };
 } forEach (GVAR(fingersHash) select 0);
 

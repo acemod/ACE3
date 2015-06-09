@@ -22,7 +22,20 @@
             <Russian>Действие "показать пальцем на"</Russian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
-            <English>Shows a virtual marker of where you are pointing to nearby units.</English>
+            <English>Points, and shows a virtual marker of where you are looking to nearby units.</English>
+        </Key>
+        <Key ID="STR_ACE_finger_moduleSettings_displayName">
+            <English>Finger Settings</English>
+        </Key>
+        <Key ID="STR_ACE_finger_maxRange_displayName">
+            <English>Finger Max Range</English>
+        </Key>
+        <Key ID="STR_ACE_finger_maxRange_description">
+            <English>How far away players can finger each other. Set to 0 to disable fingering. [default: 4]</English>
+        </Key>
+        <Key ID="STR_ACE_finger_indicatorColor_name">
+            <English>Finger indicator</English>
+            <Russian>Пальце-индикатор</Russian>
         </Key>
     </Package>
 </Project>

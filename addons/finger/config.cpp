@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 
-#define RECOMPILE 0
-
 class CfgPatches {
-    class ace_finger {
-        units[]={};
-        weapons[]={};
+    class ADDON {
+        units[] = {QGVAR(moduleSettings)};
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[]= {"Drill"};
+        author[] = {"Drill"};
         authorUrl = "https://github.com/TheDrill/";
         VERSION_CONFIG;
     };
 };
 
+
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
