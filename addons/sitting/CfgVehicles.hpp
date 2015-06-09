@@ -100,7 +100,7 @@ class CfgVehicles {
         MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
-        GVAR(sitPosition[]) = {0.07, 0.17, 1};
+        GVAR(sitPosition[]) = {0, -0.1, -1}; // Z must be -1 due to chair's geometry (magic floating seat point)
     };
     // Field Toilet
     class Land_FieldToilet_F:  ThingX {

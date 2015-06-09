@@ -29,12 +29,12 @@ private ["_sitDirection", "_sitPosition"];
 _sitDirection = getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(sitDirection));
 _sitPosition = getArray (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(sitPosition));
 
+// Get random animation and perform it (before moving player to ensure correct placement)
+[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation);
+
 // Set direction and position
 _player setDir ((getDir _seat) + _sitDirection);
 _player setPos (_seat modelToWorld _sitPosition);
-
-// Get random animation and perform it
-[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation);
 
 // Set variables
 _player setVariable [QGVAR(isSitting), true];
