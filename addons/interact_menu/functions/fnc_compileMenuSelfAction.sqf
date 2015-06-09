@@ -29,7 +29,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_icon", "_statement", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
+            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_iconColor"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -40,6 +40,13 @@ _recurseFnc = {
 
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
+
+            // Convert RGB to hex if necessary
+            _iconColor = if (isArray (_entryCfg >> "color")) then {
+                 (getArray (_entryCfg >> "color")) call BIS_fnc_colorRGBtoHTML
+            } else {
+                getText (_entryCfg >> "color")
+            };
 
             _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
@@ -75,7 +82,8 @@ _recurseFnc = {
                             [0,0,0],
                             10, //distace
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover],
-                            _modifierFunction
+                            _modifierFunction,
+                            _iconColor
                         ],
                         _children
                     ];
@@ -127,7 +135,9 @@ _actions = if (_isMan) then {
                 {},
                 "Spine3",
                 10,
-                [false,true,false]
+                [false,true,false],
+                {},
+                ""
             ],
             [_actionsCfg] call _recurseFnc
         ]

@@ -28,7 +28,7 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
 private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_iconColor"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
@@ -39,6 +39,13 @@ _recurseFnc = {
             _distance = getNumber (_entryCfg >> "distance");
             _icon = getText (_entryCfg >> "icon");
             _statement = compile (getText (_entryCfg >> "statement"));
+
+            // Convert RGB to hex if necessary
+            _iconColor = if (isArray (_entryCfg >> "color")) then {
+                 (getArray (_entryCfg >> "color")) call BIS_fnc_colorRGBtoHTML
+            } else {
+                getText (_entryCfg >> "color")
+            };
 
             // If the position entry is present, compile it
             _position = getText (_entryCfg >> "position");
@@ -91,7 +98,8 @@ _recurseFnc = {
                             _position,
                             _distance,
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover],
-                            _modifierFunction
+                            _modifierFunction,
+                            _iconColor
                         ],
                         _children
                     ];

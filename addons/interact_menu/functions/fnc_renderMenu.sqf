@@ -52,7 +52,7 @@ if(!_menuInSelectedPath) then {
 //END_COUNTER(constructing_colors);
 //BEGIN_COUNTER(fnc_renderIcons);
 
-[_actionData select 1, _actionData select 2, _sPos, _textSettings] call FUNC(renderIcon);
+[_actionData select 1, _actionData select 2, _actionData select 11, _sPos, _textSettings] call FUNC(renderIcon);
 
 //END_COUNTER(fnc_renderIcons);
 
