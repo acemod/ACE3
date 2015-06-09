@@ -11,7 +11,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\w_spottingscope_ca.paa);
-                    exceptions[] = {"isNotInside"};
                 };
             };
         };
