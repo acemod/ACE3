@@ -46,7 +46,8 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_red_ca.paa);
+                        icon = PATHTOF(UI\team\team_white_ca.paa);
+                        color = "#C80000";
                         priority = 2.4;
                         hotkey = "R";
                     };
@@ -55,7 +56,8 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_green_ca.paa);
+                        icon = PATHTOF(UI\team\team_white_ca.paa);
+                        color = "#00C700";
                         priority = 2.3;
                         hotkey = "G";
                     };
@@ -64,7 +66,8 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_blue_ca.paa);
+                        icon = PATHTOF(UI\team\team_white_ca.paa);
+                        color = "#0000C8";
                         priority = 2.2;
                         hotkey = "B";
                     };
@@ -73,7 +76,8 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_yellow_ca.paa);
+                        icon = PATHTOF(UI\team\team_white_ca.paa);
+                        color = "#E1E200";
                         priority = 2.1;
                         hotkey = "Y";
                     };
@@ -205,7 +209,8 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.4;
-                    icon = PATHTOF(UI\team\team_red_ca.paa);
+                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    color = "#C80000";
                     hotkey = "R";
                 };
                 class ACE_JoinTeamGreen {
@@ -215,7 +220,8 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.3;
-                    icon = PATHTOF(UI\team\team_green_ca.paa);
+                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    color = "#00C700";
                     hotkey = "G";
                 };
                 class ACE_JoinTeamBlue {
@@ -225,7 +231,8 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.2;
-                    icon = PATHTOF(UI\team\team_blue_ca.paa);
+                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    color = "#0000C8";
                     hotkey = "B";
                 };
                 class ACE_JoinTeamYellow {
@@ -235,7 +242,8 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.1;
-                    icon = PATHTOF(UI\team\team_yellow_ca.paa);
+                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    color = "#E1E200";
                     hotkey = "Y";
                 };
 
