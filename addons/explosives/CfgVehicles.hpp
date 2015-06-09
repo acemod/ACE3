@@ -6,7 +6,7 @@ class CfgVehicles {
                 displayName = $STR_ACE_Explosives_Menu;
                 condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
                 statement = "";
-                exceptions[] = {"isNotSwimming", "isNotInside"};
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
                 priority = 4;
                 icon = PATHTOF(UI\Explosives_Menu_ca.paa);
@@ -17,7 +17,7 @@ class CfgVehicles {
                     condition = QUOTE([_player] call FUNC(canDetonate));
                     statement = "";
                     insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
-                    exceptions[] = {"isNotSwimming", "isNotInside"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     icon = PATHTOF(UI\Explosives_Menu_ca.paa);
                     priority = 2;
@@ -38,7 +38,7 @@ class CfgVehicles {
                     displayName = $STR_ACE_Explosives_cellphone_displayName;
                     condition = "('ACE_Cellphone' in (items ace_player))";
                     statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
-                    exceptions[] = {"isNotSwimming", "isNotInside"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     icon = PATHTOF(Data\UI\Cellphone_UI.paa);
                     priority = 0.8;

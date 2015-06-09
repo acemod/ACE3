@@ -19,7 +19,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.2;
                     icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
                 class GVAR(hide) {
                     displayName = CSTRING(HideKestrel);
@@ -28,7 +28,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.3;
                     icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };

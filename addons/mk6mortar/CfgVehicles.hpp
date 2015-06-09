@@ -9,7 +9,7 @@ class CfgVehicles {
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
                     icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };
