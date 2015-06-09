@@ -16,23 +16,23 @@
 
 if (cameraView == "GUNNER") exitWith {};
 
-DAGR_RUN = !DAGR_RUN;
+GVAR(run) = !GVAR(run);
 
-if (DAGR_RUN) then {
-    switch (toUpper DAGR_DISPLAY_SELECTION) do {
+if (GVAR(run)) then {
+    switch (toUpper GVAR(displaySelection)) do {
         case "WP" : {
-            [] spawn FUNC(DAGR_OUTPUT_WP);
+            call FUNC(DAGR_OUTPUT_WP);
         };
         case "VECTOR" : {
-            [] spawn FUNC(DAGR_OUTPUT_VECTOR);
+            call FUNC(DAGR_OUTPUT_VECTOR);
         };
         case "DATA" : {
-            [] spawn FUNC(DAGR_OUTPUT_DATA);
+            call FUNC(DAGR_OUTPUT_DATA);
         };
     };
     [{
         EXPLODE_1_PVT(_this select 0,_vehicle);
-        if (!DAGR_RUN || (!alive ACE_player) || (cameraView == "GUNNER") || (vehicle ACE_player != _vehicle)) exitWith {
+        if (!GVAR(run) || (!alive ACE_player) || (cameraView == "GUNNER") || (vehicle ACE_player != _vehicle)) exitWith {
             135471 cutText ["", "PLAIN"];
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };

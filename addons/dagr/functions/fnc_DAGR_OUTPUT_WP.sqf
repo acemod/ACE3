@@ -31,7 +31,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
     private ["_pos", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
     
     // Abort Condition
-    if !(DAGR_RUN && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
@@ -103,7 +103,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
     _dagrDistance = str _distance + "m";
     
     // Heading
-    _dagrHeading = floor (if (DAGR_DIRECTION) then {
+    _dagrHeading = floor (if (GVAR(useDegrees)) then {
         direction (vehicle ACE_player)
     } else {
         DEG_TO_MIL(direction (vehicle ACE_player))
@@ -116,7 +116,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
     __gridControl ctrlSetText format ["%1", _dagrGrid];
     __speedControl ctrlSetText format ["%1", _bearing];
     __elevationControl ctrlSetText format ["%1", _dagrGrid2];
-    __headingControl ctrlSetText (if (!DAGR_DIRECTION) then { format ["%1", _dagrHeading] } else { format ["%1°", _dagrHeading] });
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1°", _dagrHeading] });
     __timeControl ctrlSetText format ["%1", _dagrDistance];
     
-}, DAGR_UPDATE_INTERVAL, []] call CBA_fnc_addPerFrameHandler;
+}, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

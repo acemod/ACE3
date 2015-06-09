@@ -31,7 +31,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
     private ["_pos", "_xgrid", "_ygrid", "_xcoord", "_ycoord", "_speed", "_dagrHeading", "_dagrGrid", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation"];
     
     // Abort Condition
-    if !(DAGR_RUN && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
@@ -87,7 +87,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
     _dagrElevation = str _elevation + "m";
 
     // Heading
-    _dagrHeading = if (!DAGR_DIRECTION) then {
+    _dagrHeading = if (!GVAR(useDegrees)) then {
         floor (DEG_TO_MIL(direction (vehicle ACE_player)))
     } else {
         floor (direction (vehicle ACE_player))
@@ -100,7 +100,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
     __gridControl ctrlSetText format ["%1", _dagrGrid];
     __speedControl ctrlSetText format ["%1", _dagrSpeed];
     __elevationControl ctrlSetText format ["%1", _dagrElevation];
-    __headingControl ctrlSetText (if (!DAGR_DIRECTION) then { format ["%1", _dagrHeading] } else { format ["%1 °", _dagrHeading] });
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1 °", _dagrHeading] });
     __timeControl ctrlSetText format ["%1", _dagrTime];
     
-}, DAGR_UPDATE_INTERVAL, []] call CBA_fnc_addPerFrameHandler;
+}, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

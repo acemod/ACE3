@@ -29,7 +29,7 @@ private ["_pos", "_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dag
 
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
 
-if (DAGR_NO_DISPLAY) exitwith {};
+if (GVAR(noVectorData)) exitwith {};
 
 _pos = [GVAR(LAZPOS) select 0, GVAR(LAZPOS) select 1];
 
@@ -81,18 +81,18 @@ _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
 // Bearing
 _bearing = GVAR(LAZHEADING);
 if (_bearing >= 360) then {_bearing = _bearing - 360;};
-if (!DAGR_DIRECTION) then {_bearing = DEG_TO_MIL(_bearing)};
+if (!GVAR(useDegrees)) then {_bearing = DEG_TO_MIL(_bearing)};
 _bearing = floor (_bearing);
 
 // Distance
 _dagrDist = str GVAR(LAZDIST) + "m";
 
-// put grid into variable so DAGR menu can access it TODO: check if it is safe to do it in this fashion
-DAGR_GRID_VECTOR = _dagrGrid;
+// Put grid into variable so DAGR menu can access it
+GVAR(vectorGrid) = _dagrGrid;
 
 // OUTPUT
 __gridControl ctrlSetText format ["%1", _dagrGrid];
 __speedControl ctrlSetText format ["%1", _dagrDist];
 __elevationControl ctrlSetText format ["%1", _dagrElevation];
-__headingControl ctrlSetText (if (!DAGR_DIRECTION) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
+__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
 __timeControl ctrlSetText format ["%1", _dagrTime];

@@ -144,7 +144,8 @@ class DAGR_Menu {
 	fadein = 0;
 	fadeout = 0;
 	name = "Dagr_Menu";
-	onLoad="uiNamespace setVariable ['DAGR_Menu', _this select 0]";
+	onLoad = "uiNamespace setVariable ['DAGR_Menu', _this select 0]";
+    onUnload = "DAGR_PWR = true";
 	controls[] = {"DAGR_MENU_UI", "DAGR_PWR_Button", "DAGR_UP_Button", "DAGR_DOWN_Button", "DAGR_LEFT_Button", "DAGR_RIGHT_Button", "DAGR_NEXT_Button",
 		"DAGR_SEL_Button", "DAGR_MENU_Button", "DAGR_F1_Button", "DAGR_F2_Button", "DAGR_F3_Button", "DAGR_F1_Text", "DAGR_F2_Text", "DAGR_F3_Text", "DAGR_MENU_OPTION0",
 		"DAGR_MENU_OPTION1", "DAGR_MENU_OPTION2", "DAGR_MENU_OPTION3", "DAGR_MENU_OPTION4", "DAGR_MENU_SELECTION0", "DAGR_MENU_SELECTION1", "DAGR_MENU_SELECTION2",

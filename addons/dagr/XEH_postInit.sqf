@@ -1,26 +1,25 @@
 #include "script_component.hpp"
 
-DAGR_RUN = false;
-DAGR_MENU_RUN = false;
-DAGR_DIRECTION = true; // true -> degrees; false -> milliradian
-DAGR_GRID_VECTOR = "00000000"; // Default
+GVAR(run) = false;
+GVAR(useDegrees) = true;
+GVAR(updateInterval) = 0.5;
 
-DAGR_WP_NUM = 0;  // Number of WPs entered into DAGR
-DAGR_WP0_String = "";  // Presets all WPs to empty
-DAGR_WP1_String = "";
-DAGR_WP2_String = "";
-DAGR_WP3_String = "";
-DAGR_WP4_String = "";
-DAGR_WP0 = 0;
-DAGR_WP1 = 0;
-DAGR_WP2 = 0;
-DAGR_WP3 = 0;
-DAGR_WP4 = 0;
-DAGR_UPDATE_INTERVAL = 0.5;   // Update timer on DAGR, set for 0.5 seconds
-DAGR_EMPTY_VECTOR = true;  // Keeps DAGR Vector display from filling up before use
+GVAR(numWaypoints) = 0;
+GVAR(wpString0) = "";
+GVAR(wpString1) = "";
+GVAR(wpString2) = "";
+GVAR(wpString3) = "";
+GVAR(wpString4) = "";
+GVAR(wp0) = 0;
+GVAR(wp1) = 0;
+GVAR(wp2) = 0;
+GVAR(wp3) = 0;
+GVAR(wp4) = 0;
 
-DAGR_DISPLAY_SELECTION = "DATA"; // Sets DAGR for data display
+GVAR(displaySelection) = "DATA";
 
-DAGR_NO_DISPLAY = true;
+GVAR(vectorConnected) = false;
+GVAR(noVectorData) = true;
+GVAR(vectorGrid) = "00000000";
 
 ["RangerfinderData", {_this call FUNC(DAGR_VECTOR)}] call EFUNC(common,addEventHandler);
