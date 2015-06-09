@@ -1585,6 +1585,13 @@
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_Check_Pulse_None">
+            <English>None</English>
+            <Russian>Нет</Russian>
+            <Polish>Żadna</Polish>
+            <Spanish>Nada</Spanish>
+            <German>Keine</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
             <German>Schwach</German>
