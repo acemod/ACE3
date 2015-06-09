@@ -26,6 +26,7 @@ class CfgVehicles {
             class GVAR(Stand) {
                 displayName = CSTRING(Stand);
                 condition = QUOTE(_player call FUNC(canStand));
+                exceptions[] = {"isNotSitting"};
                 statement = QUOTE(_player call FUNC(stand));
                 priority = 0;
                 icon = PATHTOF(UI\stand_ca.paa);
