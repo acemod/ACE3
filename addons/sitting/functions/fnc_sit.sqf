@@ -34,7 +34,7 @@ _sitPosition = getArray (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(si
 
 // Set direction and position
 _player setDir ((getDir _seat) + _sitDirection);
-_player setPos (_seat modelToWorld _sitPosition);
+_player setPosASL (_seat modelToWorld _sitPosition) call EFUNC(common,positionToASL);
 
 // Set variables
 _player setVariable [QGVAR(isSitting), true];
