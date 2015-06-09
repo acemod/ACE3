@@ -1,34 +1,28 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project name="ace_dfinger">
-  <Package name="strings">
-
-
-
-
-
-
-	<Key ID="STR_Addons_ACE__dfinger__indicator_for_self">
-		<Original>Show finger indicator to self</Original>
-		<Russian>Отображать пальце-индикатор для показывающего игрока</Russian>
-	</Key> 
- 	<Key ID="STR_Addons_ACE__dfinger__indicator_for_self__desc">
-		<Original>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</Original>
-		<Russian>Отображать индикатор для показывающего игрока. Эта настройка не влияет на то, будутт ли другие игроки видеть индикатор</Russian>
-	</Key> 
-
-	<Key ID="STR_Addons_ACE__dfinger__color">
-		<Original>Finger indicator</Original>
-		<Russian>Пальце-индикатор</Russian>
-	</Key> 
- 	<Key ID="STR_Addons_ACE__dfinger__color__desc">
-		<Original>Color of the finger-pointing indicator circle</Original>
-		<Russian>Цвет индикатора пальце-указания</Russian>
-	</Key> 
-
- 	<Key ID="STR_Addons_ACE__dfinger__keyComb">
-		<Original>Action "point a finger at"</Original>
-		<Russian>Действие "показать пальцем на"</Russian>
-	</Key> 
-
-  </Package>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="finger">
+        <Key ID="STR_ACE_finger_indicatorForSelf_name">
+            <English>Show finger indicator to self</English>
+            <Russian>Отображать пальце-индикатор для показывающего игрока</Russian>
+        </Key>
+        <Key ID="STR_ACE_finger_indicatorForSelf_description">
+            <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
+            <Russian>Отображать индикатор для показывающего игрока. Эта настройка не влияет на то, будутт ли другие игроки видеть индикатор</Russian>
+        </Key>
+        <Key ID="STR_ACE_finger_indicatorColor_name">
+            <English>Finger indicator</English>
+            <Russian>Пальце-индикатор</Russian>
+        </Key>
+        <Key ID="STR_ACE_finger_indicatorColor_description">
+            <English>Color of the finger-pointing indicator circle</English>
+            <Russian>Цвет индикатора пальце-указания</Russian>
+        </Key>
+        <Key ID="STR_ACE_finger_keyComb">
+            <English>Action "point a finger at"</English>
+            <Russian>Действие "показать пальцем на"</Russian>
+        </Key>
+        <Key ID="STR_ACE_finger_keyComb_description">
+            <English>Shows a virtual marker of where you are pointing to nearby units.</English>
+        </Key>
+    </Package>
 </Project>
