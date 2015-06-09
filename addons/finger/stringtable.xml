@@ -33,9 +33,5 @@
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>How far away players can finger each other. Set to 0 to disable fingering. [default: 4]</English>
         </Key>
-        <Key ID="STR_ACE_finger_indicatorColor_name">
-            <English>Finger indicator</English>
-            <Russian>Пальце-индикатор</Russian>
-        </Key>
     </Package>
 </Project>
