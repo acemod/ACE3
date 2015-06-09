@@ -9,6 +9,11 @@ class CfgVehicles {
         isGlobal = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {
+            class enabled {
+                displayName = CSTRING(enabled_DisplayName);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class maxRange {
                 displayName = CSTRING(maxRange_displayName);
                 description = CSTRING(maxRange_description);

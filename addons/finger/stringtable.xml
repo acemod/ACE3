@@ -27,11 +27,14 @@
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Finger Settings</English>
         </Key>
+        <Key ID="STR_ACE_finger_enabled_displayName">
+            <English>Finger Pointing Enabled</English>
+        </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Finger Max Range</English>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
-            <English>How far away players can finger each other. Set to 0 to disable fingering. [default: 4]</English>
+            <English>How far away players can finger each other. [default: 4]</English>
         </Key>
     </Package>
 </Project>

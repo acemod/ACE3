@@ -8,7 +8,7 @@ GVAR(pfeh_id) = -1;
 
 ["SettingsInitialized", {
     //If not enabled, dont't bother adding keybind or eventhandler
-    if (GVAR(maxRange) <= 0) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
     [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call EFUNC(common,addEventHandler);
     

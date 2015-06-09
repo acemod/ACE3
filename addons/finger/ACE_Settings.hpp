@@ -1,4 +1,9 @@
 class ACE_Settings {
+    class GVAR(enabled) {
+        value = 1;
+        typeName = "BOOL";
+        displayName = CSTRING(enabled_displayName);
+    };
     class GVAR(maxRange) {
         value = 4;
         typeName = "SCALAR";

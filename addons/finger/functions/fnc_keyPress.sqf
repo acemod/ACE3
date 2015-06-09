@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers"];
+private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers", "_nearbyMen"];
 
 if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
@@ -25,7 +25,7 @@ if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "Stat
 //Check camera view (not in GUNNER)
 if !(cameraView in ["INTERNAL", "EXTERNAL"]) exitWith {false};
 //Exit if run recently (run every 1 seconds)
-if (ACE_diagTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {false};
+if (ACE_diagTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
 
 GVAR(lastFPTime) = ACE_diagTime;
 
@@ -33,6 +33,12 @@ _fingerPosPrecise = positionCameraToWorld [0, 0, FP_DISTANCE];
 _playerEyePos = eyePos ACE_player;
 
 _sendFingerToPlayers = [];
+
+
+_nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
+{
+    _nearbyMen append (crew _x);
+} forEach (ACE_player nearObjects ["StaticWeapon", (GVAR(maxRange) + 2)]);
 
 {
     if ((((eyePos _x) vectorDistance _playerEyePos) < GVAR(maxRange)) &&
@@ -44,7 +50,7 @@ _sendFingerToPlayers = [];
 
         _sendFingerToPlayers pushBack _x;
     };
-} forEach allUnits;
+} forEach _nearbyMen;
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
