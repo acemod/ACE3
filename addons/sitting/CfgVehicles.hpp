@@ -76,7 +76,7 @@ class CfgVehicles {
         MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 90;
-        GVAR(sitPosition[]) = {-0.1, 0, -0.2};
+        GVAR(sitPosition[]) = {0, 0, -0.5};
     };
     // Chair (Wooden)
     class Land_ChairWood_F:  ThingX {
