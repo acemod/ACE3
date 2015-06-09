@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private["_drawColor", "_fovCorrection", "_iconSize", "_sourceUnit", "_timeLeftToShow"];
+private["_drawColor", "_fovCorrection", "_iconSize", "_timeLeftToShow"];
 
 if (!alive ACE_player) then {GVAR(fingersHash) = HASH_CREATE;};
 // Conditions: canInteract
@@ -27,7 +27,6 @@ _fovCorrection = ((worldToScreen (positionCameraToWorld [1000, 0, 10000])) selec
 _iconSize = BASE_SIZE * _fovCorrection;
 
 {
-    _sourceUnit = _x;
     _data = HASH_GET(GVAR(fingersHash), _x);
     EXPLODE_3_PVT(_data,_lastTime,_pos,_name);
     _timeLeftToShow = _lastTime + FP_TIMEOUT - ACE_diagTime;

@@ -22,7 +22,7 @@
             <Russian>Действие "показать пальцем на"</Russian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
-            <English>Points, and shows a virtual marker of where you are looking to nearby units.</English>
+            <English>Points, and shows a virtual marker of where you are looking to nearby units.  Can be held down.</English>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Finger Settings</English>
