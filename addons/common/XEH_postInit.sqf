@@ -266,7 +266,7 @@ GVAR(commonPostInited) = true;
     if !(SLX_XEH_MACHINE select 8) exitWith {};
 
     // If settings are not initialized then wait
-    if (isNil QGVAR(settings)) exitWith {
+    if (isNil QGVAR(settings) || {(!isServer) && (isNil QEGVAR(modules,serverModulesRead))}) exitWith {
         if (!_waitingMsgSent) then {
             _args set [0, true];
             diag_log text format["[ACE] Waiting on settings from server"];
