@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 1;
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_Sitting_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Sitting_ca.paa));
         class Arguments {
             class enable {
                 displayName = CSTRING(Enable);
@@ -30,7 +30,6 @@ class CfgVehicles {
                 statement = QUOTE(_player call FUNC(stand));
                 priority = 0;
                 icon = PATHTOF(UI\stand_ca.paa);
-                //add exception isNotSitting to everything that shouldn't be available (eg. medical)
             };
         };
     };
