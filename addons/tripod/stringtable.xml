@@ -25,15 +25,23 @@
         </Key>
         <Key ID="STR_ACE_Tripod_PickUp">
             <English>Pick up SSWT Kit</English>
+            <Polish>Podnieś trójnóg snajperski</Polish>
+            <Spanish>Coger equipo SSWT</Spanish>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
+            <Polish>Reguluj trójnóg snajperski</Polish>
+            <Spanish>Ajustar equipo SSWT</Spanish>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
+            <Polish>Gotowe</Polish>
+            <Spanish>Hecho</Spanish>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>+ Modifier, adjust</English>
+            <Polish>+ Modyfikator, regulacja</Polish>
+            <Spanish>+ Modificador, ajuste</Spanish>
         </Key>
     </Package>
 </Project>

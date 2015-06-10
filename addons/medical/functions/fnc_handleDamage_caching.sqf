@@ -50,7 +50,7 @@ if (((velocity _unit) select 2 < -5) && {(vehicle _unit == _unit)}) then {
     _unit setVariable [QGVAR(isFalling), True];
 };
 
-if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {};
+if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {0};
 if (_unit getVariable [QGVAR(isFalling), false]) then {
     _newDamage = _newDamage * 0.7;
 };
