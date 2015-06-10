@@ -32,7 +32,6 @@ if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _un
     [_unit] call FUNC(handleDamage_advancedSetDamage);
     0
 };
-_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {
     [_unit] call FUNC(handleDamage_advancedSetDamage);
@@ -48,6 +47,10 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
+if (_typeOfProjectile == "" && {_unit getVariable [QGVAR(isFalling), false]}) then {
+    _typeOfProjectile = "falling";
+};
+_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 // TODO Disabled until implemented fully
