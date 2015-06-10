@@ -27,7 +27,6 @@ _typeOfInjury = switch (true) do {
     case (_typeOfProjectile iskindof "LaserBombCore"): {"Explosive"};
     case (_typeOfProjectile iskindof "BombCore"): {"Explosive"};
     case (_typeOfProjectile iskindof "Grenade"): {"Grenade"};
-    case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
     default {_typeOfProjectile};
 };
 // TODO replace the capitalization on the switch results instead..
