@@ -64,6 +64,9 @@ if (_currentVersion != _previousVersion) then {
 "ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 "ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
 
+// Locality-based ACE per frame handlers
+["ACE_olpfh", FUNC(handleObjectLocalPerFrameHandler)] call FUNC(addEventHandler);
+
 // Synced ACE events
 // Handle JIP scenario
 if(!isServer) then {
