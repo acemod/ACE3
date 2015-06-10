@@ -29,14 +29,11 @@ _newDamage = _this select 5;
 
 // Most likely taking exessive fire damage. Lets exit.
 if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {
-    [_unit] call FUNC(handleDamage_advancedSetDamage);
     0
 };
+_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {
-    [_unit] call FUNC(handleDamage_advancedSetDamage);
-    0
-};
+if (_part < 0) exitwith {};
 
 _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage
@@ -47,7 +44,6 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
-_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 // TODO Disabled until implemented fully
