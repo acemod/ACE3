@@ -29,8 +29,6 @@ _unit setHitPointDamage ["hitBody", _torsoDamage min 0.95];
 _unit setHitPointDamage ["hitHands", (_handsDamageR + _handsDamageL) min 0.95];
 _unit setHitPointDamage ["hitLegs", (_legsDamageR + _legsDamageL) min 0.95];
 
-hintSilent Str(_bodyStatus);
-
 if (_bodyStatus isEqualTo [0,0,0,0,0,0]) then {
     _unit setDamage 0;
 };
