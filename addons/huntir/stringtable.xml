@@ -12,7 +12,7 @@
             <French>HuntIR Transport Box</French>
             <Hungarian>HuntIR Transport Box</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_ROUND">
+        <Key ID="STR_ACE_HUNTIR_magazine_displayName">
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
             <Spanish>HuntIR Round</Spanish>
@@ -23,7 +23,7 @@
             <French>Munition HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_MON">
+        <Key ID="STR_ACE_HUNTIR_monitor_displayName">
             <English>HuntIR monitor</English>
             <German>HuntIR Monitor</German>
             <Spanish>HuntIR monitor</Spanish>
@@ -34,7 +34,7 @@
             <French>Ecran HuntIR</French>
             <Hungarian>HuntIR monitor</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_MON_ACT">
+        <Key ID="STR_ACE_HUNTIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
             <German>HuntIR Monitor aktivieren</German>
             <Spanish>Activate HuntIR monitor</Spanish>

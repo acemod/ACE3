@@ -310,10 +310,12 @@
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
             <Polish>Debuguj do schowka</Polish>
+            <Spanish>Depurar al portapapeles</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
+            <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
         </Key>
     </Package>
 </Project>

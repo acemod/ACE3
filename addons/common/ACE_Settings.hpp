@@ -22,7 +22,7 @@ class ACE_Settings {
         value = 0;
         typeName = "SCALAR";
         isClientSettable = 0;
-        values[] = {"$STR_ACE_Common_CheckPBO_Action_WarnOnce", "$STR_ACE_Common_CheckPBO_Action_WarnPerm", "$STR_ACE_Common_CheckPBO_Action_Kick"};
+        values[] = {CSTRING(CheckPBO_Action_WarnOnce), CSTRING(CheckPBO_Action_WarnPerm), CSTRING(CheckPBO_Action_Kick)};
     };
     class GVAR(checkPBOsCheckAll) {
         value = 0;
@@ -38,7 +38,7 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Common_EnableNumberHotkeys";
+        displayName = CSTRING(EnableNumberHotkeys);
     };*/
     class GVAR(settingFeedbackIcons) {
         value = 1;

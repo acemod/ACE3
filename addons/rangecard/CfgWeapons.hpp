@@ -6,8 +6,8 @@ class CfgWeapons {
     class ACE_RangeCard: ACE_ItemCore {
         author[] = {"Ruthberg"};
         scope = 2;
-        displayName = "$STR_ACE_RangeCard_Name";
-        descriptionShort = "$STR_ACE_RangeCard_Description";
+        displayName = CSTRING(Name);
+        descriptionShort = CSTRING(Description);
         picture = PATHTOF(UI\RangeCard_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;

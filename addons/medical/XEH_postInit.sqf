@@ -6,9 +6,9 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
-["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
-["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
+["medical_propagateWound", FUNC(onPropagateWound)] call EFUNC(common,addEventHandler);
+["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
     if (local (_this select 0)) then {
@@ -30,7 +30,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
             if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
-}] call ace_common_fnc_addEventHandler;
+}] call EFUNC(common,addEventHandler);
 
 
 // Initialize all effects

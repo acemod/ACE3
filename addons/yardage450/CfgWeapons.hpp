@@ -2,9 +2,9 @@
 class CfgWeapons {
     class Binocular;
     class ACE_Yardage450: Binocular {
-        author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_Yardage450_DisplayName";
-        descriptionShort = "$STR_ACE_Yardage450_Description";
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(DisplayName);
+        descriptionShort = CSTRING(Description);
         model = PATHTOF(data\ace_yardage_pro_450.p3d);
         modelOptics = PATHTOF(data\bushnell_optic.p3d);
         picture = PATHTOF(UI\w_bushnell_ca.paa);

@@ -1585,6 +1585,13 @@
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_Check_Pulse_None">
+            <English>None</English>
+            <Russian>Нет</Russian>
+            <Polish>Żadna</Polish>
+            <Spanish>Nada</Spanish>
+            <German>Keine</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
             <German>Schwach</German>
@@ -2924,21 +2931,21 @@
             <Spanish>Proporciona un sistema médico para  jugadores e IA.</Spanish>
             <German>Aktiviert ein medizinisches System für Spieler und KI.</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
             <Russian>Настройки усложненной медицины [ACE]</Russian>
             <Polish>Zaawansowane ustawienia medyczne [ACE]</Polish>
             <Spanish>Ajustes médicos avanzados [ACE]</Spanish>
             <German>Erweiterte medizinische Einstellungen [ACE]</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableFor_DisplayName">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
             <Russian>Включено для</Russian>
             <Polish>Aktywne dla</Polish>
             <Spanish>Hablitado para</Spanish>
             <German>Aktiviert für</German>
         </Key>
-        <Key ID="STR_ACE_AdvancedMedicalSettings_enableFor_Description">
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
             <Russian>Выберите, на кого будет распространяться усложненная система медицины</Russian>
             <Polish>Wybierz dla kogo zaawansowany system medyczny będzie aktywny</Polish>

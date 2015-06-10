@@ -141,7 +141,7 @@ class ACE_Settings {
         displayName = CSTRING(painEffectType);
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
+        values[] = {CSTRING(painEffect_Flash), CSTRING(painEffect_Chroma)};
         isClientSettable = 1;
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
@@ -158,7 +158,7 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};
+        values[] = {CSTRING(useSelection)/*, CSTRING(useRadial)*/};
         // isClientSettable = 1;
     };
 };
