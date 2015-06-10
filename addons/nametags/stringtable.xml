@@ -185,6 +185,7 @@
             <English>This module allows you to customize settings and range of Name Tags.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia i zasięg wyświetlania imion.</Polish>
             <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
+            <Spanish>Este módulo permite personalizar la configuración y la distancia de las Etiquetas de nombre.</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_Disabled">
             <English>Disabled</English>
@@ -218,12 +219,18 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>
+            <Polish>Wymuś pod kursorem</Polish>
+            <Spanish>Forzar mostrar solo en el cursor</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
             <English>Force Show Only on Keypress</English>
+            <Polish>Wymuś po wciśnięciu klawisza</Polish>
+            <Spanish>Forzar mostrar solo al pulsar tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
             <English>Force Show Only on Cursor and Keypress</English>
+            <Polish>Wymuś pod kursorem i po wciśnięciu klawisza</Polish>
+            <Spanish>Forzar mostrar en el cursor y al pulsar tecla</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -240,16 +247,22 @@
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
+            <Spanish>Mostrar nombres de los jugadores y establecer su activación. Predeterminado: Habilitado</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
+            <Spanish>Efecto de ondas sonoras encima de las cabezas de los jugadores que hablan después de mantener  la tecla PTT. Esta opción funciona con TFAR y ACRE2.</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
+            <Polish>Rozmiar imion</Polish>
+            <Spanish>Tamaño de las Etiquetas de nombre</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
+            <Polish>Skalowanie tekstu oraz ikon</Polish>
+            <Spanish>Escala del texto y el icono</Spanish>
         </Key>
     </Package>
 </Project>

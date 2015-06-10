@@ -7,7 +7,6 @@ class GVAR(cursorMenu) {
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(cursorMenuOpened)),false)]);
 };
 class RscTitles {
-    class RscPicture;
     class GVAR(menuBackground) {
         idd = -1;
         onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuBackground)),_this select 0)]);
@@ -17,11 +16,7 @@ class RscTitles {
         movingEnable = false;
         duration = 10e10;
         name = QGVAR(menuBackground);
-        class controls {
-            class GVAR(menuBackground)_picutre: RscPicture {
-                idc = -1;
-            };
-        };
+        class controls {};
         class controlsBackground {
             class background {
                 idc = -1;

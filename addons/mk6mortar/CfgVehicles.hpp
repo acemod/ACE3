@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(rangetable) {
-                    displayName = "$STR_ACE_MK6MORTAR_rangetable_action";
+                    displayName = CSTRING(rangetable_action);
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
@@ -45,9 +45,9 @@ class CfgVehicles {
 
     class ACE_Module;
     class GVAR(module): ACE_Module {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "$STR_ACE_mk6mortar_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
@@ -55,26 +55,26 @@ class CfgVehicles {
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
-                displayName = "$STR_ACE_mk6mortar_airResistanceEnabled_DisplayName";
-                description = "$STR_ACE_mk6mortar_airResistanceEnabled_Description";
+                displayName = CSTRING(airResistanceEnabled_DisplayName);
+                description = CSTRING(airResistanceEnabled_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class allowComputerRangefinder {
-                displayName = "$STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName";
-                description = "$STR_ACE_mk6mortar_allowComputerRangefinder_Description";
+                displayName = CSTRING(allowComputerRangefinder_DisplayName);
+                description = CSTRING(allowComputerRangefinder_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class allowCompass {
-                displayName = "$STR_ACE_mk6mortar_allowCompass_DisplayName";
-                description = "$STR_ACE_mk6mortar_allowCompass_Description";
+                displayName = CSTRING(allowCompass_DisplayName);
+                description = CSTRING(allowCompass_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "$STR_ACE_mk6mortar_Module_Description";
+            description = CSTRING(Module_Description);
         };
     };
 };

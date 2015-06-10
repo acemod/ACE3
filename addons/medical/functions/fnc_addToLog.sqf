@@ -47,7 +47,7 @@ if (count _log >= 8) then {
 _log pushback [_message,_moment,_type, _arguments];
 
 _unit setvariable [_logVarName, _log, true];
-["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call ace_common_fnc_localEvent;
+["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
 
 _logs = _unit getvariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {

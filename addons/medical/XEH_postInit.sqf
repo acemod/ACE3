@@ -6,9 +6,9 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
-["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
-["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
+["medical_propagateWound", FUNC(onPropagateWound)] call EFUNC(common,addEventHandler);
+["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
     if (local (_this select 0)) then {
@@ -30,7 +30,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
             if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
-}] call ace_common_fnc_addEventHandler;
+}] call EFUNC(common,addEventHandler);
 
 
 // Initialize all effects
@@ -164,55 +164,63 @@ GVAR(lastHeartBeatSound) = ACE_time;
     if (_heartRate <= 0) exitwith {};
     _interval = 60 / (_heartRate min 50);
 
-    if (ACE_time > GVAR(lastHeartBeat) + _interval) then {
-        GVAR(lastHeartBeat) = ACE_time;
-
-        // Pain effect
-        _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
-        _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
+    if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
+            GVAR(effectPainCA) ppEffectEnable false;
+        } else {
             GVAR(effectPainCC) ppEffectEnable false;
-            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
-                _strength = _strength * 0.15;
-                GVAR(effectPainCA) ppEffectEnable true;
-                GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
-                GVAR(effectPainCA) ppEffectCommit 0.01;
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+        };
+    } else {
+        if ((ACE_time > GVAR(lastHeartBeat) + _interval)) then {
+            GVAR(lastHeartBeat) = ACE_time;
+
+            // Pain effect
+            _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
+            _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
+            if (GVAR(painEffectType) == 1) then {
+                GVAR(effectPainCC) ppEffectEnable false;
+                if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                    _strength = _strength * 0.15;
+                    GVAR(effectPainCA) ppEffectEnable true;
+                    GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
                     GVAR(effectPainCA) ppEffectCommit 0.01;
-                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                    [{
+                        GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                        GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                    }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                    [{
+                        GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                        GVAR(effectPainCA) ppEffectCommit 0.01;
+                    }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                    [{
+                        GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                        GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                    }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                } else {
+                    GVAR(effectPainCA) ppEffectEnable false;
+                };
             } else {
                 GVAR(effectPainCA) ppEffectEnable false;
-            };
-        } else {
-            GVAR(effectPainCA) ppEffectEnable false;
-            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
-                _strength = _strength * 0.9;
-                GVAR(effectPainCC) ppEffectEnable true;
-                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
-                GVAR(effectPainCC) ppEffectCommit 0.01;
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                    _strength = _strength * 0.9;
+                    GVAR(effectPainCC) ppEffectEnable true;
+                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
                     GVAR(effectPainCC) ppEffectCommit 0.01;
-                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
-            } else {
-                GVAR(effectPainCC) ppEffectEnable false;
+                    [{
+                        GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                        GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                    }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                    [{
+                        GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                        GVAR(effectPainCC) ppEffectCommit 0.01;
+                    }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                    [{
+                        GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                        GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                    }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                } else {
+                    GVAR(effectPainCC) ppEffectEnable false;
+                };
             };
         };
     };

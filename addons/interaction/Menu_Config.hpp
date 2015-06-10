@@ -105,7 +105,7 @@ class RscACE_SelectAnItem {
             h = 0.1;
             y = 0.605;
             style = 2;
-            text = $STR_ACE_Interaction_Back; //$STR_ACE_Interaction_CancelSelection;
+            text = CSTRING(Back);
             action = "call ACE_Interaction_fnc_hideMenu;";   //'Default' call ACE_Interaction_fnc_openMenu;    'Default' call ACE_Interaction_fnc_openMenuSelf;
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
@@ -119,7 +119,7 @@ class RscACE_SelectAnItem {
             h = 0.1;
             w = 0.15;
             style = 2;
-            text = $STR_ACE_Interaction_MakeSelection;
+            text = CSTRING(MakeSelection);
             action = "call ACE_Interaction_fnc_hideMenu;";
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
@@ -170,7 +170,7 @@ class RscTitles {
             class SelectText: RscInteractionText{
                 idc = 1000;
                 y = 17 * GUI_GRID_H;
-                text = $STR_ACE_Interaction_MakeSelection;
+                text = CSTRING(MakeSelection);
             };
             class GoBackIcon: RscInteractionHelperIcon{
                 idc = 1201;
@@ -180,7 +180,7 @@ class RscTitles {
             class GoBackText: RscInteractionText{
                 idc = 1001;
                 y = 19 * GUI_GRID_H;
-                text = $STR_ACE_Interaction_Back;
+                text = CSTRING(Back);
             };
             class ScrollIcon: RscInteractionHelperIcon{
                 idc = 1202;
@@ -190,7 +190,7 @@ class RscTitles {
             class ScrollText: RscInteractionText{
                 idc = 1002;
                 y = 18 * GUI_GRID_H;
-                text = $STR_ACE_Interaction_ScrollHint;
+                text = CSTRING(ScrollHint);
             };
         };
     };

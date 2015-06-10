@@ -71,7 +71,7 @@ class ACE_settingsMenu {
             SizeEx = H_PART(1);
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0};
-            text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
+            text = CSTRING(OpenConfigMenu);
         };
         class labelSubHeader: ACE_gui_staticBase {
             idc = 13;
@@ -83,7 +83,7 @@ class ACE_settingsMenu {
         };
         class selectionAction_1: ACE_gui_buttonBase {
             idc = 1000;
-            text = "$STR_ACE_OptionsMenu_TabOptions";
+            text = CSTRING(TabOptions);
             x = X_PART(1);
             y = Y_PART(2.1);
             w = W_PART(9.5);
@@ -109,7 +109,7 @@ class ACE_settingsMenu {
         };
         class selectionAction_2: selectionAction_1 {
             idc = 1001;
-            text = "$STR_ACE_OptionsMenu_TabColors";
+            text = CSTRING(TabColors);
             x = X_PART(10.5);
             action = QUOTE([MENU_TAB_COLORS] call FUNC(onListBoxShowSelectionChanged););
         };
@@ -158,7 +158,7 @@ class ACE_settingsMenu {
         class Label2: labelKey {
             idc = 301;
             y = Y_PART(7.3);
-            text = "$STR_ACE_OptionsMenu_Setting";
+            text = CSTRING(Setting);
             SizeEx = H_PART(1);
         };
         class comboBox1: ACE_gui_comboBoxBase {
@@ -238,22 +238,22 @@ class ACE_settingsMenu {
         };
         class action_reset: actionClose {
             idc = 1100;
-            text = "$STR_ACE_OptionsMenu_ResetAll";
+            text = CSTRING(ResetAll);
             x = X_PART(9.5);
             action = QUOTE([] call FUNC(resetSettings));
         };
         class action_exportServerConfig: actionClose {
             idc = 1102;
-            text = "$STR_ACE_OptionsMenu_OpenExport";
+            text = CSTRING(OpenExport);
             x = X_PART(18);
             action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {createDialog 'ACE_serverSettingsMenu'; });
         };       
         class action_debug: actionClose {
             idc = 1102;
-            text = "$STR_ACE_OptionsMenu_DumpDebug";
+            text = CSTRING(DumpDebug);
             x = X_PART(26.5);
             action = QUOTE([] call FUNC(debugDumpToClipboard));
-            tooltip = "$STR_ACE_OptionsMenu_DumpDebugTooltip";
+            tooltip = CSTRING(DumpDebugTooltip);
         };
     };
 };
@@ -273,7 +273,7 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
             SizeEx = H_PART(1);
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0};
-            text = "$STR_ACE_OptionsMenu_OpenConfigMenu";
+            text = CSTRING(OpenConfigMenu);
         };
         class labelSubHeader: ACE_gui_staticBase {
             idc = 13;
@@ -285,7 +285,7 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
         };
         class selectionAction_1: ACE_gui_buttonBase {
             idc = 1000;
-            text = "$STR_ACE_OptionsMenu_TabOptions";
+            text = CSTRING(TabOptions);
             x = X_PART(1);
             y = Y_PART(2.1);
             w = W_PART(9.5);
@@ -309,13 +309,13 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
         };
         class selectionAction_2: selectionAction_1 {
             idc = 1001;
-            text = "$STR_ACE_OptionsMenu_TabColors";
+            text = CSTRING(TabColors);
             x = X_PART(10.5);
             action = QUOTE([MENU_TAB_SERVER_COLORS] call FUNC(onServerListBoxShowSelectionChanged););
         };
         class selectionAction_3: selectionAction_1 {
             idc = 1002;
-            text = "$STR_ACE_OptionsMenu_TabValues";
+            text = CSTRING(TabValues);
             x = X_PART(20);
             action = QUOTE([MENU_TAB_SERVER_VALUES] call FUNC(onServerListBoxShowSelectionChanged););
         };
@@ -358,7 +358,7 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
         class Label2: labelKey {
             idc = 301;
             y = Y_PART(7.3);
-            text = "$STR_ACE_OptionsMenu_Setting";
+            text = CSTRING(Setting);
             SizeEx = H_PART(1);
         };
         class comboBox1: ACE_gui_comboBoxBase {
@@ -418,7 +418,7 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
         };
         class saveInputButton: selectionAction_1 {
             idc = 416;
-            text = "$STR_ACE_OptionsMenu_SaveInput";
+            text = CSTRING(SaveInput);
             x = X_PART(27.1);
             y = Y_PART(9.1);
             w = W_PART(11);
@@ -439,19 +439,19 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
         class actionClose;
         class action_reset: actionClose {
             idc = 1100;
-            text = "$STR_ACE_OptionsMenu_ResetAll";
+            text = CSTRING(ResetAll);
             x = X_PART(26.1);
             action = QUOTE([] call FUNC(serverResetSettings));
         };
         class action_exportServerConfig: actionClose {
             idc = 1101;
-            text = "$STR_ACE_OptionsMenu_Export";
+            text = CSTRING(Export);
             x = X_PART(1);
             action = QUOTE([] call FUNC(exportSettings));
         };
         class action_toggleIncludeClientSettings: actionClose {
             idc = 1102;
-            text = "$STR_ACE_OptionsMenu_inClientSettings";
+            text = CSTRING(inClientSettings);
             x = X_PART(9);
             action = QUOTE([] call FUNC(toggleIncludeClientSettings));
         };

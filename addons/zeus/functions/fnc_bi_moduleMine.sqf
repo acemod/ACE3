@@ -26,7 +26,7 @@ if (_activated) then {
         _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
         _explosive attachto [_logic];
 
-        // Added by ACE_zeus to control if mines are revealed
+        // Added by ace_zeus to control if mines are revealed
         if (GVAR(revealMines) > 0) then {
             //--- Reveal the mine to curator's side
             {
