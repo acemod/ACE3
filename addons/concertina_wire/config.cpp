@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {"ACE_ConcertinaWire", "ACE_ConcertinaWireNoGeo", "ACE_ConcertinaWireCoil"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_apl", "ace_interaction"};

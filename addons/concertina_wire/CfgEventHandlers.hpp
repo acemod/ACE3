@@ -31,4 +31,14 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DEFUNC(dragging,initObject));
         };
     };
+    class ACE_ConcertinaWire {
+        class ADDON {
+            init = QUOTE(call COMPILE_FILE(XEH_init));
+        };
+    };
+    class Land_Razorwire_F {
+        class ADDON {
+            init = QUOTE(call COMPILE_FILE(XEH_init));
+        };
+    };
 };
