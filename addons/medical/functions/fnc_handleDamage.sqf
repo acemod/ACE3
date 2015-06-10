@@ -53,7 +53,6 @@ if (GVAR(level) < 2) then {
     };
     _newDamage = _this call FUNC(handleDamage_caching);
     _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-    systemChat _typeOfDamage;
     
     _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
     _minLethalDamage = 0.01;

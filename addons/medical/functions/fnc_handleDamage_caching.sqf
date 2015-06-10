@@ -41,7 +41,8 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
     if (GVAR(enableVehicleCrashes)) then {
         _selectionName = _hitSelections select (floor(random(count _hitSelections)));
         _projectile = "vehiclecrash";
-        _this set [4, "vehiclecrash"];
+        _this set [1, _selectionName];
+        _this set [4, _projectile];
     };
 };
 
@@ -58,7 +59,6 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
         _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
     };
     _this set [1, _selectionName];
-    systemChat Str(_this);
     _newDamage = _newDamage * 0.7;
 };
 
