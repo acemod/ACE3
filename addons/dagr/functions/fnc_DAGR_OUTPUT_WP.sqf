@@ -28,7 +28,7 @@
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
 
 [{
-    private ["_pos", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
+    private ["_pos", "_mapSize", "_gridConfig", "_offsetX", "_offsetY", "_stepX", "_stepY", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
     
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
@@ -38,6 +38,17 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
     
     // GRID
     _pos = getPosASL ACE_player;
+    
+    _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
+    _gridConfig = (configFile >> "CfgWorlds" >> worldName >> "Grid");
+    _offsetX = getNumber (_gridConfig >> "offsetX");
+    _offsetY = getNumber (_gridConfig >> "offsetY");
+    _stepX = getNumber (_gridConfig >> "Zoom1" >> "stepX");
+    _stepY = getNumber (_gridConfig >> "Zoom1" >> "stepY");
+    
+    if (_stepY >= 0) then {
+        _pos set [1, (_mapSize - 100) - (_pos select 1) - _offsetY];
+    };
     
     // Incase grids go neg due to 99-00 boundry
     if (_pos select 0 < 0) then {_pos set [0, (_pos select 0) + 99999];};
