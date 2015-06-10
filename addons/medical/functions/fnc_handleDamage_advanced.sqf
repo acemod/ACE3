@@ -47,10 +47,8 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
-if (_typeOfProjectile == "" && {_unit getVariable [QGVAR(isFalling), false]}) then {
-    _typeOfProjectile = "falling";
-};
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
+systemChat _typeOfDamage;
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 // TODO Disabled until implemented fully

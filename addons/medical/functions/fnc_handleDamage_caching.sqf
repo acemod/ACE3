@@ -41,17 +41,24 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
     if (GVAR(enableVehicleCrashes)) then {
         _selectionName = _hitSelections select (floor(random(count _hitSelections)));
         _projectile = "vehiclecrash";
+        _this set [4, "vehiclecrash"];
     };
 };
 
 // From AGM medical:
 // Exclude falling damage to everything other than legs; reduce structural damage.
 if (((velocity _unit) select 2 < -5) && {(vehicle _unit == _unit)}) then {
-    _unit setVariable [QGVAR(isFalling), True];
+    _unit setVariable [QGVAR(isFalling), true];
+    _projectile = "falling";
+    _this set [4, "falling"];
 };
-
 if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {0};
 if (_unit getVariable [QGVAR(isFalling), false]) then {
+    if (_selectionName == "") then {
+        _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+    };
+    _this set [1, _selectionName];
+    systemChat Str(_this);
     _newDamage = _newDamage * 0.7;
 };
 
