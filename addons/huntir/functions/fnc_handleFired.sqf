@@ -33,15 +33,20 @@ if (_ammo != "F_HuntIR") exitWith {};
         _huntir setPosATL _position;
         [{
             EXPLODE_1_PVT(_this select 0,_huntir);
-            private ["_deltaT"];
             if (isNull _huntir) exitWith {
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             };
+            private ["_deltaT", "_velocity"];
+            _velocity = velocity _huntir;
             if (damage _huntir > 0) then {
                 _deltaT = ACE_time - (_huntir getVariable [QGVAR(lastTime), ACE_time]);
-                _huntir setVelocity (velocity _huntir vectorAdd [0, 0, -9.8066 * (damage _huntir) * _deltaT]);
+                _velocity = _velocity vectorAdd [0, 0, -9.8066 * (damage _huntir) * _deltaT];
                 _huntir setVariable [QGVAR(lastTime), ACE_time];
+            } else {
+                _velocity set [2, -1];
             };
+            _huntir setVelocity _velocity;
+            _huntir setVectorUp [0, 0, 1];
         }, 0.1, [_huntir]] call CBA_fnc_addPerFrameHandler;
-    }, [getPosATL _projectile vectorAdd [0, 0, 400]], 5, 0] call EFUNC(common,waitAndExecute);
+    }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call EFUNC(common,waitAndExecute);
 }, [_projectile], 5, 0] call EFUNC(common,waitAndExecute);
