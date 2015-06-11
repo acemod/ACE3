@@ -2204,6 +2204,11 @@
             <Czech>Pravá noha</Czech>
             <Portuguese>Perna Direita</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
+            <English>Bandaging removes bloodstains</English>
+            <German>Bandagieren entfernt Blutflecken</German>
+            <Polish>Bandażowanie usuwa ślady krwi</Polish>
+        </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
@@ -3133,6 +3138,16 @@
             <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
             <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
             <German>Wo kann der Operationskasten verwendet werden?</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
+            <English>Bloodstains</English>
+            <German>Blutflecken</German>
+            <Polish>Plamy krwi</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
+            <English>Bandaging removes bloodstains</English>
+            <German>Bandagieren entfernt Blutflecken</German>
+            <Polish>Bandażowanie usuwa ślady krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Medical</English>

@@ -134,8 +134,9 @@ class ACE_Settings {
         value = 1;
     };
     class GVAR(healHitPointAfterAdvBandage) {
+        displayName = CSTRING(healHitPointAfterAdvBandage);
         typeName = "BOOL";
-        value = 1;
+        value = 0;
     };
     class GVAR(painEffectType) {
         displayName = CSTRING(painEffectType);

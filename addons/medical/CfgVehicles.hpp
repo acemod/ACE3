@@ -221,7 +221,12 @@ class CfgVehicles {
                 displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
             };
-
+            class healHitPointAfterAdvBandage {
+                displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);  
+                typeName = "BOOL";
+                defaultValue = 0;              
+            };
         };
         class ModuleDescription {
             description = CSTRING(AdvancedMedicalSettings_Module_Description);
