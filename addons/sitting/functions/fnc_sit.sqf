@@ -57,6 +57,7 @@ _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues w
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
 
+    // Set direction to boundary when passing it
     _currentDirection = getDir _player;
     if (_currentDirection > _sitDirectionVisual + _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual + _sitRotation);
@@ -64,4 +65,4 @@ _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues w
     if (_currentDirection < _sitDirectionVisual - _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual - _sitRotation);
     };
-}, 0, [_player, _sitDirectionVisual, _sitRotation]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _sitDirectionVisual, _sitRotation]] call cba_fnc_addPerFrameHandler;
