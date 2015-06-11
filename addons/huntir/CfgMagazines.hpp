@@ -5,7 +5,7 @@ class CfgMagazines {
         displayName = CSTRING(magazine_displayName);
         displayNameShort = "HuntIR";
         descriptionShort = "";
-        picture = PATHTOF(UI\m_m1070_ca.paa);
+        picture = PATHTOF(data\m_m1070_ca.paa);
         ammo = "F_HuntIR";
     };
 };
