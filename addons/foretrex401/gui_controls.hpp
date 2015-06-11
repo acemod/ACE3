@@ -152,7 +152,7 @@ class controls {
     ////////////////////////////////////////////////////////
     // MENU TRACK 2
     ////////////////////////////////////////////////////////
-    class MenuTrack1: RscControlsGroupNoScrollbars {
+    class MenuTrack2: RscControlsGroupNoScrollbars {
         idc = 2110;
         x = 6 * GUI_GRID_W + GUI_GRID_X;
         y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -212,7 +212,7 @@ class controls {
                 sizeEx = 1.5 * GUI_GRID_H;
             };
 
-            class TitleMovAvg: GVAR(RscText) {
+            class TitleLocation: GVAR(RscText) {
                 idc = -1;
                 style = ST_LEFT;
                 text = "LOCATION";
@@ -246,13 +246,91 @@ class controls {
         };
     };
     ////////////////////////////////////////////////////////
-    // END MENU TRACK 1
+    // END MENU TRACK 2
+    ////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////
+    // MENU TRACK 3
+    ////////////////////////////////////////////////////////
+    class MenuTrack3: RscControlsGroupNoScrollbars {
+        idc = 2120;
+        x = 6 * GUI_GRID_W + GUI_GRID_X;
+        y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+        w = 20 * GUI_GRID_W;
+        h = 10 * GUI_GRID_H;
+        class controls {            
+            class Background: RscPicture {
+                idc = -1;
+                text = QUOTE(PATHTOF(images\menu_track_3_ca.paa));
+                x = 0;
+                y = 0;
+                w = 20 * GUI_GRID_W;
+                h = 10 * GUI_GRID_H;
+            };
+
+            class TitleLocation: GVAR(RscText) {
+                idc = -1;
+                style = ST_LEFT;
+                text = "LOCATION";
+                x = 0 * GUI_GRID_W;
+                y = 0 * GUI_GRID_H;
+                w = 19 * GUI_GRID_W;
+                h = 1 * GUI_GRID_H;
+                sizeEx = 0.7 * GUI_GRID_H;
+            };
+
+            class Location1: GVAR(RscText) {
+                idc = 2123;
+                style = ST_CENTER;
+                text = "N 38*51.395";
+                x = 0 * GUI_GRID_W;
+                y = 1 * GUI_GRID_H;
+                w = 19 * GUI_GRID_W;
+                h = 2 * GUI_GRID_H;
+                sizeEx = 1.2 * GUI_GRID_H;
+            };
+            class Location2: GVAR(RscText) {
+                idc = 2124;
+                style = ST_CENTER;
+                text = "W094*47.950";
+                x = 0 * GUI_GRID_W;
+                y = 3 * GUI_GRID_H;
+                w = 19 * GUI_GRID_W;
+                h = 2 * GUI_GRID_H;
+                sizeEx = 1.2 * GUI_GRID_H;
+            };
+
+            class TitleElevation: GVAR(RscText) {
+                idc = -1;
+                style = ST_LEFT;
+                text = "ELEVATION";
+                x = 0 * GUI_GRID_W;
+                y = 5 * GUI_GRID_H;
+                w = 19 * GUI_GRID_W;
+                h = 1 * GUI_GRID_H;
+                sizeEx = 0.7 * GUI_GRID_H;
+            };
+
+            class Elevation: GVAR(RscText) {
+                idc = 2125;
+                style = ST_CENTER;
+                text = "4425ft";
+                x = 0 * GUI_GRID_W;
+                y = 6 * GUI_GRID_H;
+                w = 19 * GUI_GRID_W;
+                h = 4 * GUI_GRID_H;
+                sizeEx = 2.2 * GUI_GRID_H;
+            };
+        };
+    };
+    ////////////////////////////////////////////////////////
+    // END MENU TRACK 3
     ////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////
     // MENU TIMER
     ////////////////////////////////////////////////////////
-    /*class MenuTimer: RscControlsGroupNoScrollbars {
+    class MenuTimer: RscControlsGroupNoScrollbars {
         idc = 2400;
         x = 6 * GUI_GRID_W + GUI_GRID_X;
         y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -312,7 +390,7 @@ class controls {
                 colorBackground[] = {0.1, 0.1, 0.1, 1};
             };
         };
-    };*/
+    };
     ////////////////////////////////////////////////////////
     // END MENU TIMER
     ////////////////////////////////////////////////////////
@@ -320,7 +398,7 @@ class controls {
     ////////////////////////////////////////////////////////
     // MENU ALTITUDE
     ////////////////////////////////////////////////////////
-    /*class MenuAltitude: RscControlsGroupNoScrollbars {
+    class MenuAltitude: RscControlsGroupNoScrollbars {
         idc = 2300;
         x = 6 * GUI_GRID_W + GUI_GRID_X;
         y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -407,7 +485,7 @@ class controls {
             ALTITUDE_MEDIAN(1,19);
             ALTITUDE_MEDIAN(0,19.5);
         };
-    };*/
+    };
     ////////////////////////////////////////////////////////
     // END MENU ALTITUDE
     ////////////////////////////////////////////////////////
