@@ -1,7 +1,7 @@
 ["ACE3 Equipment", QGVAR(RangeCardDialogKey), localize "STR_ACE_RangeCard_RangeCardDialogKey",
 {
     // Conditions: canInteract, canShow
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
         if (GVAR(RangeCardOpened)) exitWith {
         closeDialog 0;
         false
@@ -17,7 +17,7 @@
 ["ACE3 Equipment", QGVAR(RangeCardCopyDialogKey), localize "STR_ACE_RangeCard_RangeCardCopyDialogKey",
 {
     // Conditions: canInteract, canShowCopy
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if (GVAR(RangeCardOpened)) exitWith {
         closeDialog 0;
         false
