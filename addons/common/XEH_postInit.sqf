@@ -20,6 +20,8 @@
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
 
+["unloadPersonEvent", DFUNC(unloadPersonLocal)] call FUNC(addEventhandler);
+
 ["lockVehicle", {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
