@@ -4,7 +4,7 @@ class CfgVehicles {
         author[] = {"Spooner", "tcp"};
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_MX2A_DisplayName";
+        displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
         class TransportWeapons {
             MACRO_ADDWEAPON(ACE_MX2A,1);

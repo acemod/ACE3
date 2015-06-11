@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="tripod">
+        <Key ID="STR_ACE_SpottingScope_DisplayName">
+            <English>Spotting Scope</English>
+            <German>Teleskop</German>
+            <Russian>Зрительная труба</Russian>
+            <Polish>Teleskop</Polish>
+            <Spanish>Spotting Scope</Spanish>
+            <French>Téléscope de visée</French>
+            <Czech>Zaměřovací Dalekohled</Czech>
+            <Italian>Spotting Scope</Italian>
+            <Hungarian>Megfigyelő távcső</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_SpottingScope_PickUp">
+            <English>Pick up Spotting Scope</English>
+            <German>Teleskop aufnehmen</German>
+            <Russian>Поднять зрительная трубу</Russian>
+            <Polish>Zabierz teleskop</Polish>
+            <Spanish>Pick up Spotting Scope</Spanish>
+            <French>Prendre téléscope de visée</French>
+            <Czech>Zvednout Zaměřovací dalekohled</Czech>
+            <Italian>Raccogli spottingscope</Italian>
+            <Hungarian>Mefgigy. távcső felvétele</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_SpottingScope_PlaceDown">
+            <English>Place Spotting Scope</English>
+            <German>Teleskop aufstellen</German>
+            <Russian>Установить зрительная трубу</Russian>
+            <Polish>Ustaw teleskop</Polish>
+            <Spanish>Place Spotting Scope</Spanish>
+            <French>Placer téléscope de visée</French>
+            <Czech>Položit Zaměřovací dalekohled</Czech>
+            <Italian>Posiziona spottingscope</Italian>
+            <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
+        </Key>
+    </Package>
+</Project>

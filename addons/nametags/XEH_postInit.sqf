@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {};
 GVAR(showNamesTime) = -10;
 
 // Add keybinds
-["ACE3 Common", QGVAR(showNameTags), localize "STR_ACE_NameTags_ShowNames",
+["ACE3 Common", QGVAR(showNameTags), localize LSTRING(ShowNames),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

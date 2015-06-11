@@ -29,7 +29,7 @@ class CfgWeapons {
             reloadTime = 0.1;
         };
         class Burst: Mode_Burst {
-            displayName = "$STR_ACE_Aircraft_CMFlareLauncher_Burst_Name";
+            displayName = CSTRING(CMFlareLauncher_Burst_Name);
         };
     };
 
@@ -50,12 +50,12 @@ class CfgWeapons {
     };
 
     class ACE_gatling_20mm_Comanche: gatling_20mm {
-        displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
+        displayName = CSTRING(gatling_20mm_Name);
 
         class manual: manual {
             reloadTime = 0.04;
             dispersion = 0.006;
-            displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
+            displayName = CSTRING(gatling_20mm_Name);
         };
         class close: close {
             reloadTime = 0.04;

@@ -14,9 +14,9 @@ This adds the option to drag or carry units or objects.
 
 ### 2.1 Dragging / Carrying units and objects
 - You can only drag or carry an unconscious unit.
-- Interact with the unit or object <kbd>Left Windows</kbd> (ACE3 default keybind `Interact Key`).
+- Interact with the unit or object <kbd>Left Windows</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Drag` or `Carry`.
-- To release, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>Left windows</kbd> and select `Release`.
+- To release, use the mouse wheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>Left Windows</kbd> and select `Release`.
 
 ## 3. Dependencies
 

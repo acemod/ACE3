@@ -1,7 +1,7 @@
-["ACE3 Equipment", QGVAR(KestrelDialogKey), localize "STR_ACE_Kestrel4500_KestrelDialogKey",
+["ACE3 Equipment", QGVAR(KestrelDialogKey), localize LSTRING(KestrelDialogKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if (GVAR(Kestrel4500)) exitWith {
         closeDialog 0;
         false
@@ -13,10 +13,10 @@
 {false},
 [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // (empty default key)
 
-["ACE3 Equipment", QGVAR(DisplayKestrelKey), localize "STR_ACE_Kestrel4500_DisplayKestrelKey",
+["ACE3 Equipment", QGVAR(DisplayKestrelKey), localize LSTRING(DisplayKestrelKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     
     // Statement
     [] call FUNC(displayKestrel);

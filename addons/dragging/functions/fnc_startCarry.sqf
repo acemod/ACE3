@@ -22,7 +22,7 @@ private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
 if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
-    [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private "_timer";

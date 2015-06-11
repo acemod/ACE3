@@ -59,6 +59,6 @@ class %1 {
 
  "ace_clipboard" callExtension "--COMPLETE--";
 
-["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
+[LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);
 
 

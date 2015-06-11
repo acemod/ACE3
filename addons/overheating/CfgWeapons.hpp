@@ -3,8 +3,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_SpareBarrel: ACE_ItemCore {
-        displayname = "$STR_ACE_Overheating_SpareBarrelName";
-        descriptionshort = "$STR_ACE_Overheating_SpareBarrelDescription";
+        displayname = CSTRING(SpareBarrelName);
+        descriptionshort = CSTRING(SpareBarrelDescription);
         //model = "";
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         scope = 2;

@@ -9,8 +9,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Real names
-Changes the names of vehicles, magazines, weapons, grenades, explosive charges 
-and mines to their respective real-world counterparts whenever possible.
+Changes the names of vehicles, magazines, weapons, grenades, explosive charges and mines to their respective real-world counterparts whenever possible.
 
 ## 2. Dependencies
 

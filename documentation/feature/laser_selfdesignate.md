@@ -8,7 +8,7 @@ parent: wiki
 
 ## 1. Overview
 
-Allows gunners to lase their own targets. See [FCS] (http://ace3mod.com/wiki/feature/fcs.html) for more information.
+Allows gunners to lase their own targets. See [Feature: "FCS"]({{ site.productionUrl }}/wiki/feature/fcs.html) for more information.
 
 ## 2. Dependencies
 

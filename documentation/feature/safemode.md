@@ -14,8 +14,8 @@ You can now use the safety mode of any weapon. Switching weapon modes takes the 
 ## 2. Usage
 
 ### 2.1 Switching safety on / off
-- To turn it on press <kbd>CTRL</kbd> + <kbd>²</kbd> (ACE3 default keybind `Safe Mode`).
-- To turn it off press <kbd>CTRL</kbd> + <kbd>²</kbd> again or switch firing mode.
+- To turn it on press <kbd>CTRL</kbd> + <kbd>`</kbd> (QWERTY layout) (ACE3 default key bind `Safe Mode`).
+- To turn it off press <kbd>CTRL</kbd> + <kbd>`</kbd> (QWERTY layout) again or switch firing mode.
 
 ## 3. Dependencies
 

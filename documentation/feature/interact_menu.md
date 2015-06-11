@@ -14,4 +14,4 @@ This handles the interaction layer of ACE3.
 
 `ace_common`
 
-Note: The Interact Menu module is required by many other modules. Disabling it is not recommended.
+*Note: The Interact Menu module is required by most of the other modules. Do NOT remove it!*

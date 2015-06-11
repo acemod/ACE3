@@ -21,18 +21,18 @@ private ["_unit","_captive"];
 if (!_activated) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
-    ["STR_ACE_Zeus_RequiresAddon"] call EFUNC(common,displayTextStructured);
+    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
     _unit = attachedTo _logic;
 
     if (isNull _unit) then {
-        ["STR_ACE_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);
+        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
     } else {
         if !(_unit isKindOf "CAManBase") then {
-            ["STR_ACE_Zeus_OnlyInfantry"] call EFUNC(common,displayTextStructured);
+            [LSTRING(OnlyInfantry)] call EFUNC(common,displayTextStructured);
         } else {
             if !(alive _unit) then {
-                ["STR_ACE_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
+                [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
             } else {
                 _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
                 // Event initalized by ACE_Captives

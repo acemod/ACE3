@@ -248,6 +248,14 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
+
 GVAR(commonPostInited) = true;
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
