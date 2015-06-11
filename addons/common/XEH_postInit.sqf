@@ -3,6 +3,27 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
+//Singe PFEH to handle execNextFrame and waitAndExec:
+[{
+    private ["_entry"];
+    
+    //Handle the waitAndExec array:
+    while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
+        _entry = GVAR(waitAndExecArray) deleteAt 0;
+        (_entry select 2) call (_entry select 1);
+    };
+
+    //Handle the execNextFrame array:
+    {
+        (_x select 0) call (_x select 1);
+    } forEach GVAR(nextFrameBufferA);
+    //Swap double-buffer:
+    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
+    GVAR(nextFrameBufferB) = [];
+    GVAR(nextFrameNo) = diag_frameno + 1;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
+
+
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
     PARAMS_2(_name,_value);
