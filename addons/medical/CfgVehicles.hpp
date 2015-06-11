@@ -225,7 +225,13 @@ class CfgVehicles {
                 displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);  
                 typeName = "BOOL";
-                defaultValue = 0;              
+                defaultValue = 0;
+            };
+            class painIsOnlySuppressed {
+                displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);  
+                typeName = "BOOL";
+                defaultValue = 1;
             };
         };
         class ModuleDescription {

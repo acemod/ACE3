@@ -73,8 +73,15 @@ if (alive _target) then {
 
 if (_painReduce > 0) then {
     // Reduce the pain level
-    _painSuppress = _target getvariable [QGVAR(painSuppress), 0];
-    _target setvariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
+    if (GVAR(painIsOnlySuppressed)) then {
+        // Suppress the pain
+        _painSuppress = _target getvariable [QGVAR(painSuppress), 0];
+        _target setvariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
+    } else {
+        // Remove the pain
+        _pain = _target getvariable [QGVAR(pain), 0];
+        _target setvariable [QGVAR(pain), (_pain - _painReduce) max 0, true];
+    };
 };
 
 _resistance = _target getvariable [QGVAR(peripheralResistance), 100];

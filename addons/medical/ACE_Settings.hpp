@@ -138,6 +138,11 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
+    class GVAR(painIsOnlySuppressed) {
+        displayName = CSTRING(painIsOnlySuppressed);
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(painEffectType) {
         displayName = CSTRING(painEffectType);
         typeName = "SCALAR";
