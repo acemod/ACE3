@@ -1,6 +1,9 @@
 #include "script_component.hpp"
 
+#include "initKeybinds.sqf"
+
 GVAR(run) = false;
+GVAR(menuRun) = false;
 GVAR(useDegrees) = true;
 GVAR(updateInterval) = 0.5;
 
@@ -22,4 +25,4 @@ GVAR(vectorConnected) = false;
 GVAR(noVectorData) = true;
 GVAR(vectorGrid) = "00000000";
 
-["RangerfinderData", {_this call FUNC(DAGR_VECTOR)}] call EFUNC(common,addEventHandler);
+["RangerfinderData", {_this call FUNC(handleRangeFinderData)}] call EFUNC(common,addEventHandler);

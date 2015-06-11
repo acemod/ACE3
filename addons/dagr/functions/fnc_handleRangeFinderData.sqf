@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [1000, 45, 1] call ace_dagr_fnc_DAGR_VECTOR
+ * [1000, 45, 1] call ace_dagr_fnc_handleRangeFinderData
  *
  * Public: No
  */

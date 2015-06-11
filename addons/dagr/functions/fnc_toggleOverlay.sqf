@@ -21,13 +21,13 @@ GVAR(run) = !GVAR(run);
 if (GVAR(run)) then {
     switch (toUpper GVAR(displaySelection)) do {
         case "WP" : {
-            call FUNC(DAGR_OUTPUT_WP);
+            call FUNC(outputWP);
         };
         case "VECTOR" : {
-            call FUNC(DAGR_OUTPUT_VECTOR);
+            call FUNC(outputVector);
         };
         case "DATA" : {
-            call FUNC(DAGR_OUTPUT_DATA);
+            call FUNC(outputData);
         };
     };
     [{

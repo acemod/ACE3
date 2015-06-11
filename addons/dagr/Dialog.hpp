@@ -145,7 +145,7 @@ class DAGR_Menu {
 	fadeout = 0;
 	name = "Dagr_Menu";
 	onLoad = "uiNamespace setVariable ['DAGR_Menu', _this select 0]";
-    onUnload = "DAGR_PWR = true";
+    onUnload = QUOTE(GVAR(PWR) = true); // Simulate pressing the power button
 	controls[] = {"DAGR_MENU_UI", "DAGR_PWR_Button", "DAGR_UP_Button", "DAGR_DOWN_Button", "DAGR_LEFT_Button", "DAGR_RIGHT_Button", "DAGR_NEXT_Button",
 		"DAGR_SEL_Button", "DAGR_MENU_Button", "DAGR_F1_Button", "DAGR_F2_Button", "DAGR_F3_Button", "DAGR_F1_Text", "DAGR_F2_Text", "DAGR_F3_Text", "DAGR_MENU_OPTION0",
 		"DAGR_MENU_OPTION1", "DAGR_MENU_OPTION2", "DAGR_MENU_OPTION3", "DAGR_MENU_OPTION4", "DAGR_MENU_SELECTION0", "DAGR_MENU_SELECTION1", "DAGR_MENU_SELECTION2",
@@ -162,28 +162,28 @@ class DAGR_Menu {
 
 	class DAGR_PWR_Button : DAGR_Button {
 		idc = 266863;
-		action = "DAGR_PWR = true";
+		action = QUOTE(GVAR(PWR) = true);
 		x = 0.40;
 		y = 0.65;
 	};
 
 	class DAGR_UP_Button : DAGR_Button {
 		idc = 266864;
-		action = "DAGR_UP = true";
+		action = QUOTE(GVAR(UP) = true);
 		x = 0.50;
 		y = 0.675;
 	};
 
 	class DAGR_DOWN_Button : DAGR_Button {
 		idc = 266865;
-		action = "DAGR_Down = true";
+		action = QUOTE(GVAR(DOWN) = true);
 		x = 0.50;
 		y = 0.81;
 	};
 
 	class DAGR_LEFT_Button : DAGR_Button {
 		idc = 266866;
-		action = "DAGR_LEFT = true";
+		action = QUOTE(GVAR(LEFT) = true);
 		x = 0.40;
 		y = 0.735;
 		w = 0.05;
@@ -192,7 +192,7 @@ class DAGR_Menu {
 
 	class DAGR_RIGHT_Button : DAGR_Button {
 		idc = 266867;
-		action = "DAGR_RIGHT = true";
+		action = QUOTE(GVAR(RIGHT) = true);
 		x = 0.62;
 		y = 0.735;
 		w = 0.05;
@@ -201,14 +201,14 @@ class DAGR_Menu {
 
 	class DAGR_NEXT_Button : DAGR_Button {
 		idc = 266868;
-		action = "DAGR_NEXT = true";
+		action = QUOTE(DAGR_NEXT = true);
 		x = 0.60;
 		y = 0.65;
 	};
 
 	class DAGR_SEL_Button : DAGR_Button {
 		idc = 266869;
-		action = "DAGR_SEL = true";
+		action = QUOTE(GVAR(SEL) = true);
 		x = 0.54;
 		y = 0.735;
 		w = 0.06;
@@ -217,7 +217,7 @@ class DAGR_Menu {
 
 	class DAGR_MENU_Button : DAGR_Button {
 		idc = 266870;
-		action = "DAGR_MENU_B = true";
+		action = QUOTE(GVAR(MENU_B) = true);
 		x = 0.46;
 		y = 0.735;
 		w = 0.06;
@@ -226,21 +226,21 @@ class DAGR_Menu {
 
 	class DAGR_F1_Button : DAGR_Button {
 		idc = 266871;
-		action = "DAGR_F1 = true";
+		action = QUOTE(GVAR(F1) = true);
 		x = 0.40;
 		y = 0.575;
 	};
 
 	class DAGR_F2_Button : DAGR_Button {
 		idc = 266872;
-		action = "DAGR_F2 = true";
+		action = QUOTE(GVAR(F2) = true);
 		x = 0.495;
 		y = 0.575;
 	};
 
 	class DAGR_F3_Button : DAGR_Button {
 		idc = 266873;
-		action = "DAGR_F3 = true";
+		action = QUOTE(GVAR(F3) = true);
 		x = 0.59;
 		y = 0.575;
 	};

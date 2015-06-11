@@ -66,34 +66,35 @@ GVAR(showInfoUpdatin) = false;
 GVAR(showDeleting) = false;
 GVAR(showOutOfSpace) = false;
 
-DAGR_PWR = false;
+GVAR(PWR) = false;
+GVAR(menuRun) = true;
 [{
-    if (!dialog || DAGR_PWR) exitWith {
+    if (!dialog || GVAR(PWR)) exitWith {
         closeDialog 266860;
-        DAGR_MENU_RUN = false;
+        GVAR(menuRun) = false;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
     
-    if (DAGR_MENU_B) then {
+    if (GVAR(MENU_B)) then {
         GVAR(menu) = "main";
         GVAR(selection) = 0;
         GVAR(numSelections) = 5;
     };
     
     if (!GVAR(add) && !GVAR(edit)) then {
-        if (DAGR_DOWN) then {
+        if (GVAR(DOWN)) then {
             GVAR(selection) = (GVAR(numSelections) + GVAR(selection) + 1);
         };
-        if (DAGR_UP) then {
+        if (GVAR(UP)) then {
             GVAR(selection) = (GVAR(numSelections) + GVAR(selection) - 1);
         };
         GVAR(selection) = if (GVAR(numSelections) > 0) then { GVAR(selection) % GVAR(numSelections) } else { 0 };
     };
     
-    if (DAGR_LEFT) then {
+    if (GVAR(LEFT)) then {
         GVAR(pointer) = (8 + GVAR(pointer) - 1);
     };
-    if (DAGR_RIGHT) then {
+    if (GVAR(RIGHT)) then {
         GVAR(pointer) = (8 + GVAR(pointer) + 1);
     };
     GVAR(pointer) = GVAR(pointer) % 8;
@@ -126,7 +127,7 @@ DAGR_PWR = false;
     
     switch (GVAR(menu)) do {
         case "main": {
-            if (DAGR_SEL) then {
+            if (GVAR(SEL)) then {
                  switch (GVAR(selection)) do {
                     case 0: {
                         GVAR(displaySelection) = "DATA";
@@ -192,7 +193,7 @@ DAGR_PWR = false;
                     (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
                 };
             };
-            if (DAGR_SEL) then {
+            if (GVAR(SEL)) then {
                 GVAR(vectorConnected) = false;
                 GVAR(displaySelection) = "WP";
                 switch (GVAR(selection)) do {
@@ -240,7 +241,7 @@ DAGR_PWR = false;
                         (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
                     };
                 };
-                if (DAGR_F3 && GVAR(numWaypoints) > 0) then {
+                if (GVAR(F3) && GVAR(numWaypoints) > 0) then {
                     if (!GVAR(busy)) then {
                         switch (GVAR(selection)) do {
                             case 0: {
@@ -307,7 +308,7 @@ DAGR_PWR = false;
                         GVAR(busy) = false;
                     };
                 };
-                if (DAGR_F1) then {
+                if (GVAR(F1)) then {
                     if (GVAR(numWaypoints) == 5) then {
                         if (!GVAR(busy)) then {
                             GVAR(showOutOfSpace) = true;
@@ -334,7 +335,7 @@ DAGR_PWR = false;
                         GVAR(busy) = false;
                     };
                 };
-                if (DAGR_F2 && GVAR(numWaypoints) > 0) then {
+                if (GVAR(F2) && GVAR(numWaypoints) > 0) then {
                     GVAR(pointer) = 0;
                     GVAR(edit) = true;
                     GVAR(add) = false;
@@ -400,7 +401,7 @@ DAGR_PWR = false;
                     (__dsp displayCtrl __mainText) ctrlSetText GVAR(output);
                     (__dsp displayCtrl __PSelection1 + GVAR(pointer)) ctrlSetText QUOTE(PATHTOF(UI\DAGR_PSelection.paa));
                 };
-                if (DAGR_F1) then {
+                if (GVAR(F1)) then {
                     if (!GVAR(busy)) then {
                         if (GVAR(add)) then {
                             switch (GVAR(numWaypoints)) do {
@@ -445,7 +446,7 @@ DAGR_PWR = false;
                         GVAR(busy) = false;
                     };
                 };
-                if (DAGR_F2) then {
+                if (GVAR(F2)) then {
                     private ["_grid", "_gridVector"];
                     _grid = toArray GVAR(vectorGrid);
                     _grid deleteAt 4;
@@ -460,7 +461,7 @@ DAGR_PWR = false;
                     GVAR(digit7) = floor(_gridVector / 10- GVAR(digit6) * 10 - GVAR(digit5) * 100 - GVAR(digit4) * 1000 - GVAR(digit3) * 10000 - GVAR(digit2) * 100000 - GVAR(digit1) * 1000000);
                     GVAR(digit8) = floor(_gridVector - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                 };
-                if (DAGR_F3) then {
+                if (GVAR(F3)) then {
                     if (!GVAR(busy)) then {
                         GVAR(busy) = true;
                         GVAR(busyTimer) = ACE_time;
@@ -477,7 +478,7 @@ DAGR_PWR = false;
                         GVAR(busy) = false;
                     };
                 };
-                if (DAGR_UP) then {
+                if (GVAR(UP)) then {
                     switch (GVAR(pointer) + 1) do {
                         case 1: { GVAR(digit1) = (10 + GVAR(digit1) + 1) % 10 };
                         case 2: { GVAR(digit2) = (10 + GVAR(digit2) + 1) % 10 };
@@ -489,7 +490,7 @@ DAGR_PWR = false;
                         case 8: { GVAR(digit8) = (10 + GVAR(digit8) + 1) % 10 };
                     };
                 };
-                if (DAGR_DOWN) then {
+                if (GVAR(DOWN)) then {
                     switch (GVAR(pointer) + 1) do {
                         case 1: { GVAR(digit1) = (10 + GVAR(digit1) - 1) % 10 };
                         case 2: { GVAR(digit2) = (10 + GVAR(digit2) - 1) % 10 };
@@ -508,7 +509,7 @@ DAGR_PWR = false;
                 (__dsp displayCtrl __Option0) ctrlSetText "Vector 21";
                 (__dsp displayCtrl __Selection0) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
             };
-            if (DAGR_SEL) then {
+            if (GVAR(SEL)) then {
                 if (!GVAR(busy)) then {
                     GVAR(busy) = true;
                     GVAR(busyTimer) = ACE_time;
@@ -542,7 +543,7 @@ DAGR_PWR = false;
             (__dsp displayCtrl __Option0) ctrlSetText "Signal Delay";
             (__dsp displayCtrl __Option1) ctrlSetText (if (GVAR(useDegrees)) then { "Direction: Deg" } else { "Direction: MIL" });
             (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
-            if (DAGR_SEL) then {
+            if (GVAR(SEL)) then {
                 GVAR(vectorConnected) = false;
                 switch (GVAR(selection)) do {
                     case 0: { GVAR(menu) = "update_rate"; GVAR(numSelections) = 1; GVAR(tmpUpdateRate) = GVAR(updateInterval); };
@@ -551,7 +552,7 @@ DAGR_PWR = false;
             }
         };
         case "update_rate": {
-            if (DAGR_F1) then {
+            if (GVAR(F1)) then {
                 GVAR(updateInterval) = GVAR(tmpUpdateRate);
                 if (!GVAR(busy)) then {
                     GVAR(busy) = true;
@@ -572,13 +573,13 @@ DAGR_PWR = false;
                     GVAR(menu) = "options"; GVAR(numSelections) = 2;
                 };
             };
-            if (DAGR_F3) then {
+            if (GVAR(F3)) then {
                 GVAR(menu) = "options"; GVAR(numSelections) = 2;
             };
-            if (DAGR_DOWN) then {
+            if (GVAR(DOWN)) then {
                 GVAR(tmpUpdateRate) = GVAR(tmpUpdateRate) - 0.1;
             };
-            if (DAGR_UP) then {
+            if (GVAR(UP)) then {
                 GVAR(tmpUpdateRate) = GVAR(tmpUpdateRate) + 0.1;
             };
             GVAR(tmpUpdateRate) = 0.1 max GVAR(tmpUpdateRate) min 2.0;
@@ -591,16 +592,16 @@ DAGR_PWR = false;
     };
     
     if (!GVAR(busy)) then {
-        DAGR_F3 = false;
-        DAGR_F2 = false;
-        DAGR_F1 = false;
-        DAGR_MENU_B = false;
-        DAGR_SEL = false;
+        GVAR(F3) = false;
+        GVAR(F2) = false;
+        GVAR(F1) = false;
+        GVAR(MENU_B) = false;
+        GVAR(SEL) = false;
         DAGR_NEXT = false;
-        DAGR_RIGHT = false;
-        DAGR_LEFT = false;
-        DAGR_UP = false;
-        DAGR_Down = false;
-        DAGR_PWR = false;
+        GVAR(RIGHT) = false;
+        GVAR(LEFT) = false;
+        GVAR(UP) = false;
+        GVAR(DOWN) = false;
+        GVAR(PWR) = false;
     };
 }, 0, []] call CBA_fnc_addPerFrameHandler;
