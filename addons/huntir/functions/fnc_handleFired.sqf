@@ -32,7 +32,8 @@ if (_ammo != "F_HuntIR") exitWith {};
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
         _huntir setVariable [QGVAR(startTime), ACE_time, true];
-        _huntir addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
+        // TODO: Edit the .p3d to allow doing the following _huntir getHit "camera"; _huntir getHit "parachute";
+        //_huntir addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
         [{
             EXPLODE_1_PVT(_this select 0,_huntir);
             if (isNull _huntir) exitWith {
