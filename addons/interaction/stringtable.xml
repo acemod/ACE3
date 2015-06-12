@@ -793,6 +793,10 @@
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interaction_OpenBox">
+            <English>Open</English>
+            <Polish>Otwórz</Polish>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
@@ -816,5 +820,6 @@
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
         </Key>
+		
     </Package>
 </Project>
