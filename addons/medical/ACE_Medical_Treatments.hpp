@@ -219,7 +219,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
-            treatmentTime = "10 max (call {_sum = 0; { _sum = _sum + _x; } forEach ((_this select 1) getVariable ['ACE_Medical_bodyPartStatus', []]); _sum * 10}) min 120";
+            treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
