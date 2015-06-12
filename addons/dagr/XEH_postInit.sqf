@@ -3,6 +3,7 @@
 #include "initKeybinds.sqf"
 
 GVAR(run) = false;
+GVAR(hidden) = false;
 GVAR(menuRun) = false;
 GVAR(useDegrees) = true;
 GVAR(updateInterval) = 0.5;
