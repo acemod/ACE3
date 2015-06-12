@@ -53,14 +53,22 @@ if (((velocity _unit) select 2 < -5) && {(vehicle _unit == _unit)}) then {
     _projectile = "falling";
     _this set [4, "falling"];
 };
-if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {0};
 if (_unit getVariable [QGVAR(isFalling), false]) then {
-    if (_selectionName == "") then {
-        _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+    if !(_selectionName in ["", "leg_l", "leg_r"]) then {
+        if (_selectionName == "body") then {
+            _newDamage = _newDamage * 0.1;
+        } else {
+            _newDamage = _newDamage * 0.5;
+        };
+    } else {
+        if (_selectionName == "") then {
+            _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+            _this set [1, _selectionName];
+        };
+        _newDamage = _newDamage * 0.7;
     };
-    _this set [1, _selectionName];
-    _newDamage = _newDamage * 0.7;
 };
+diag_log format["[handleDamage_caching] Projectile: %1; Velocity: %2 m/s; SelectionName: %3; newDamage: %4", _projectile, (velocity _unit) select 2, _selectionName, _newDamage];
 
 // Finished with the current frame, reset variables
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
