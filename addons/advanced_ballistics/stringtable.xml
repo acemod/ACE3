@@ -30,21 +30,21 @@
             <Polish>Zaawansowana balistyka</Polish>
             <Spanish>Balística avanzada</Spanish>
             <German>Erweiterte Ballistik</German>
-            <Czech>Pokorčilá balistika</Czech>
+            <Czech>Pokročilá balistika</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_DisplayName">
             <English>Advanced Ballistics</English>
             <Polish>Zaawansowana balistyka</Polish>
             <Spanish>Balística avanzada</Spanish>
             <German>Erweiterte Ballistik</German>
-            <Czech>Pokorčilá balistika</Czech>
+            <Czech>Pokročilá balistika</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_Description">
             <English>Enables advanced ballistics</English>
             <Polish>Aktywuje zaawansowaną balistykę</Polish>
             <Spanish>Activa la balística avanzada</Spanish>
             <German>Aktiviert die erweiterte Ballistik</German>
-            <Czech>Aktivuje pokorčilou balistiku</Czech>
+            <Czech>Aktivuje pokročilou balistiku</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
@@ -86,7 +86,7 @@
             <Spanish>Activada la balística avanzada para todos los jugadores no locales (activarlo puede degradar el rendimiento durante grandes tiroteos en multijugador).</Spanish>
             <Polish>Aktywuje zaawansowaną balistykę dla wszystkich nielokalnych graczy (aktywacja tej opcji może spodowować spory spadek wydajności podczas ciężkiej wymiany ognia)</Polish>
             <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
-            <Czech>Aktivovat pokročilou balictiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles snímu za sekundu během těžké přestřelky v multiplayeru)</Czech>
+            <Czech>Aktivovat pokročilou balistiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles snímu za sekundu během těžké přestřelky v multiplayeru)</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
@@ -107,14 +107,14 @@
             <Polish>Wył. podczas ognia auto.</Polish>
             <Spanish>Desactivada en modo automático</Spanish>
             <German>Beim vollautomatischen Feuern deaktiviert</German>
-            <Czech>Zakázáno v režimu FullAuto</Czech>
+            <Czech>Zakázáno v automatickém režimu střelby</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_Description">
             <English>Disables the advanced ballistics during full auto fire</English>
             <Polish>Dezaktywuje zaawansowaną balistykę podczas ognia automatycznego</Polish>
             <Spanish>Desactivada la balística avanzada durante el fuego automático</Spanish>
             <German>Deaktiviert die erweiterte Ballistik beim vollautomatischen Feuern</German>
-            <Czech>Zákáže pokročilou balistiku během střelby v režimu Automat</Czech>
+            <Czech>Zákáže pokročilou balistiku během střelby v režimu automat</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

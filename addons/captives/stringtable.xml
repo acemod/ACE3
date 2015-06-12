@@ -181,7 +181,7 @@
             <English>Controls settings for surrender and cable ties</English>
             <Polish>Moduł ten kontroluje ustawienia kapitulacji oraz opasek zaciskowych</Polish>
             <Spanish>Ajustes de control para rendición y precintos</Spanish>
-            <Czech>Toto kontroluje nastavení kapitulace a svorek</Czech>
+            <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>

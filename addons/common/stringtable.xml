@@ -496,7 +496,7 @@
             <Polish>Co zrobić z graczami, którzy nie mają właściwych PBO?</Polish>
             <Spanish>¿Qué hacer con la gente que no tiene correctamente los PBOs?</Spanish>
             <German>Was soll mit Leuten passieren, die nicht die richtigen PBOs haben?</German>
-            <Czech>Co udělat s lidmi, co nemají správně addony?</Czech>
+            <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>

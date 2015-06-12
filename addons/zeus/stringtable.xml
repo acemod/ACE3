@@ -149,7 +149,7 @@
             <English>Requires an addon that is not present</English>
             <Polish>Wymaga addonu, który nie jest obecny</Polish>
             <Spanish>Requiere un addon que no está presente</Spanish>
-            <Czech>Vyžaduje addony, který není přítomen</Czech>
+            <Czech>Vyžaduje addon, který není přítomen</Czech>
         </Key>
     </Package>
 </Project>
