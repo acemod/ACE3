@@ -1,8 +1,26 @@
-/* ace_sys_sandbag (.pbo) | (c) 2009 by rocko */
-
+/*
+ * Author: Rocko, Ruthberg
+ * Pick up tactical ladder
+ *
+ * Arguments:
+ * 0: ladder <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * Success?
+ *
+ * Example:
+ * [_ladder, _unit] call ace_tacticalladder_fnc_pickupTL;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
+
+if ((backpack ACE_player) != "") exitWith { false };
 
 PARAMS_2(_ladder,_unit);
 
 deleteVehicle _ladder;
 _unit addBackpack "ACE_TacticalLadder_Pack";
+
+true

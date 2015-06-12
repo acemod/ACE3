@@ -1,4 +1,21 @@
+/*
+ * Author: Rocko, Ruthberg
+ * Deploy tactical ladder
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * call ace_tacticalladder_fnc_deployTL;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
+
+if ((backpack ACE_player) != "ACE_TacticalLadder_Pack") exitWith {};
 
 private ["_pos", "_offset", "_ladder"];
 

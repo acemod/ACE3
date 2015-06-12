@@ -1,3 +1,19 @@
+/*
+ * Author: Rocko, Ruthberg
+ * Position tactical ladder
+ *
+ * Arguments:
+ * 0: sandbag <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_ladder, _unit] call ace_tacticalladder_fnc_positionTL;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 #define __ANIMS ["extract_1","extract_2","extract_3","extract_4","extract_5","extract_6","extract_7","extract_8","extract_9","extract_10","extract_11"]
@@ -20,10 +36,16 @@ GVAR(ladder) = _ladder;
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
-call FUNC(ladderKey_add);
+["Confirm", "Cancel", "Adjust"] call EFUNC(interaction,showMouseHint);
 
-_action_drop = _unit addAction [localize "STR_ACE_DROP_TACLADDER", { call FUNC(cancelTLdeploy); }, _ladder];
-_action_deploy = _unit addAction [localize "STR_ACE_DEPLOY_TACLADDER", { call FUNC(confirmTLdeploy); }, _ladder];
+ACE_player setVariable [QGVAR(Deploy),
+    [ACE_player, "DefaultAction",
+    {!isNull GVAR(ladder)},
+    {GVAR(ladder) call FUNC(confirmTLdeploy);}
+] call EFUNC(common,AddActionEventHandler)];
 
-_unit setVariable [QGVAR(TLdeployAction), _action_deploy];
-_unit setVariable [QGVAR(TLdropAction), _action_drop];
+ACE_player setVariable [QGVAR(Cancel),
+    [ACE_player, "zoomtemp",
+    {!isNull GVAR(ladder)},
+    {GVAR(ladder) call FUNC(cancelTLdeploy);}
+] call EFUNC(common,AddActionEventHandler)];

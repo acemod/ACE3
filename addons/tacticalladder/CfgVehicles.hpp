@@ -64,7 +64,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = "$STR_ACE_PICKUP_TACLADDER";
                     distance = 4;
-                    condition = "true";
+                    condition = QUOTE((backpack ACE_player) == '');
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickupTL));
                     showDisabled = 0;
                     exceptions[] = {};
