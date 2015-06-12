@@ -125,7 +125,7 @@ GVAR(no_cams) sort true;
         };
     };
 
-    private ["_cam_coord_y", "_cam_coord_x", "_speed", "_cam_time", "_cam_pos"];
+    private ["_cam_coord_y", "_cam_coord_x", "_cam_time", "_cam_pos"];
     
     GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
     GVAR(logic) setDir GVAR(ROTATE);
@@ -138,8 +138,7 @@ GVAR(no_cams) sort true;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
     ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-    _speed = 1 max abs((velocity GVAR(huntIR)) select 2);
-    _cam_time = ((GVAR(pos) select 2) - 20) / _speed;
+    _cam_time = ACE_time - (GVAR(huntIR) getVariable [QGVAR(startTime), ACE_time]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
     _cam_pos = getPosVisual GVAR(huntIR);
     _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];
