@@ -138,7 +138,7 @@ GVAR(no_cams) sort true;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
     ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-    _cam_time = (GVAR(pos) select 2) - 20;
+    _cam_time = ACE_time - (GVAR(huntIR) getVariable [QGVAR(startTime), ACE_time]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
     _cam_pos = getPosVisual GVAR(huntIR);
     _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];

@@ -31,23 +31,20 @@ if (_ammo != "F_HuntIR") exitWith {};
         private ["_huntir"];
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
+        _huntir setVariable [QGVAR(startTime), ACE_time, true];
         _huntir addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
         [{
             EXPLODE_1_PVT(_this select 0,_huntir);
             if (isNull _huntir) exitWith {
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             };
-            private ["_deltaT", "_velocity"];
-            _velocity = velocity _huntir;
             if (damage _huntir > 0) then {
-                _deltaT = ACE_time - (_huntir getVariable [QGVAR(lastTime), ACE_time]);
-                _velocity = _velocity vectorAdd [0, 0, -9.8066 * (damage _huntir) * _deltaT];
-                _huntir setVariable [QGVAR(lastTime), ACE_time];
-            } else {
-                _velocity set [2, -1];
+                private ["_velocity"];
+                _velocity = velocity _huntir;
+                _velocity set [2, -1 min -20 * sqrt(damage _huntir)];
+                _huntir setVelocity _velocity;
+                _huntir setVectorUp [0, 0, 1];
             };
-            _huntir setVelocity _velocity;
-            _huntir setVectorUp [0, 0, 1];
-        }, 0.1, [_huntir]] call CBA_fnc_addPerFrameHandler;
+        }, 0, [_huntir]] call CBA_fnc_addPerFrameHandler;
     }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call EFUNC(common,waitAndExecute);
 }, [_projectile], 5, 0] call EFUNC(common,waitAndExecute);
