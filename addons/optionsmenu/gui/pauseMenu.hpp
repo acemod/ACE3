@@ -109,8 +109,8 @@ class RscDisplayMain: RscStandardDisplay {
 
         class ACE_news: RscControlsGroupNoScrollbars {
             idc = 80086;
-            x = "safezoneX + safezoneW - (16 * 			(			((safezoneW / safezoneH) min 1.2) / 40))";
-            y = "safezoneY + (18.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
+            x = "safezoneX + safezoneW - (16 *(((safezoneW / safezoneH) min 1.2) / 40))";
+            y = "safezoneY + (18.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "8.25 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             class controls {
@@ -118,46 +118,46 @@ class RscDisplayMain: RscStandardDisplay {
                     text = CSTRING(aceNews);
                     colorBackground[] = {(162/255),(28/255),(28/255),0.8};
                     idc = -1;
-                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 *(((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                 };
                 class ACE_VersionInfo: RscText {
                     idc = 68;
-                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "1.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     colorBackground[] = {0,0,0,0.5};
                 };
                 class ACE_NewsBackground: RscText {
                     idc = -1;
-                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "2.2 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "5.75 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "5.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     colorBackground[] = {0,0,0,0.5};
                 };
                 class ACE_NewsText: RscHTML {
                     idc = 69;
-                    x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "2.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "5.95 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    x = "0.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+                    y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    w = "14 *  (((safezoneW / safezoneH) min 1.2) / 40)";
+                    h = "5.75 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 
                     shadow = 0;
                     class H1 {
                         font = "PuristaMedium";
                         fontBold = "PuristaLight";
-                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
+                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
                     };
                     class H2: H1 {
-                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
                         font = "PuristaLight";
                     };
                     class P: H1 {
-                        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                         fontBold = "PuristaLight";
                     };
                     colorBold[] = {0.6,0.6,0.6,1};
