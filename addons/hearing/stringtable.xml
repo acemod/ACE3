@@ -114,23 +114,27 @@
             <Polish>Słuch</Polish>
             <Spanish>Audición</Spanish>
             <German>Gehör</German>
+            <Czech>Sluch</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
             <English>Enable combat deafness?</English>
             <Polish>Wł. głuchotę bojową</Polish>
             <Spanish>¿Habilitar sordera de combate?</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
+            <Czech>Povolitbojovou hluchotu?</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Enable combat deafness?</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
+            <Czech>Povolit ztrátu sluchu?</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English></English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
+            <Czech>Ztráta sluchu je možná ve chvíly, kdy se v naší bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a mi jme bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
         </Key>
     </Package>
 </Project>

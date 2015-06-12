@@ -8,7 +8,7 @@
             <Polish>Trójnóg snajperski</Polish>
             <Spanish>SSWT Kit</Spanish>
             <French>SSWT Kit</French>
-            <Czech>SSWT sada</Czech>
+            <Czech>SSWT souprava</Czech>
             <Italian>SSWT Kit</Italian>
             <Hungarian>SSWT Kit</Hungarian>
         </Key>
@@ -19,7 +19,7 @@
             <Polish>Postaw trójnóg snajperski</Polish>
             <Spanish>Place SSWT Kit</Spanish>
             <French>Place SSWT Kit</French>
-            <Czech>Rozlož sadu SSWT</Czech>
+            <Czech>Rozlož souprava SSWT</Czech>
             <Italian>Place SSWT Kit</Italian>
             <Hungarian>Place SSWT Kit</Hungarian>
         </Key>
@@ -27,21 +27,25 @@
             <English>Pick up SSWT Kit</English>
             <Polish>Podnieś trójnóg snajperski</Polish>
             <Spanish>Coger equipo SSWT</Spanish>
+            <Czech>Zvednout SSWT soupravu</Czech>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
             <Polish>Reguluj trójnóg snajperski</Polish>
             <Spanish>Ajustar equipo SSWT</Spanish>
+            <Czech>Regulovat SSWT soupravu</Czech>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
             <Polish>Gotowe</Polish>
             <Spanish>Hecho</Spanish>
+            <Czech>Hotovo</Czech>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>+ Modifier, adjust</English>
             <Polish>+ Modyfikator, regulacja</Polish>
             <Spanish>+ Modificador, ajuste</Spanish>
+            <Czech>+ Modifikátor, regulace</Czech>
         </Key>
     </Package>
 </Project>
