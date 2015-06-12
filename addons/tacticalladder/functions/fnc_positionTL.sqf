@@ -33,6 +33,7 @@ _ladder animate ["rotate", 0];
 } forEach ["extract_1", "extract_2", "extract_3"]; // Extract ladder at head height (extract_3)
 
 GVAR(ladder) = _ladder;
+GVAR(cancelTime) = ACE_time + 1; // Workaround to prevent accidental canceling
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
