@@ -24,4 +24,4 @@ _drag = if (count _this > 2) then {_this select 2} else {false};
 if (vehicle _target == _target) exitwith {};
 if (([_target] call EFUNC(common,isAwake))) exitwith {};
 
-["unloadPersonEvent",[_target]] call EFUNC(common,globalEvent)
+["unloadPersonEvent", _target, [_target, vehicle _target]] call EFUNC(common,targetEvent)
