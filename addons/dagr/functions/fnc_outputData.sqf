@@ -27,11 +27,14 @@
 
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
 
-[{
+if (GVAR(outputPFH) != -1) exitWith {};
+
+GVAR(outputPFH) = [{
     private ["_pos", "_mapSize", "_gridConfig", "_offsetX", "_offsetY", "_stepX", "_stepY", "_xgrid", "_ygrid", "_xcoord", "_ycoord", "_speed", "_dagrHeading", "_dagrGrid", "_dagrElevation", "_dagrSpeed", "_dagrTime", "_elevation"];
     
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+        GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
