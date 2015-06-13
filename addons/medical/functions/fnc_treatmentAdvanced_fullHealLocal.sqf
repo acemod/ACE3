@@ -44,6 +44,8 @@ if (alive _target) exitwith {
 
     // damage storage
     _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+    [_target, QGVAR(leftLegDamage), false] call EFUNC(common,setForceWalkStatus);
+    [_target, QGVAR(rightLegDamage), false] call EFUNC(common,setForceWalkStatus);
 
     // airway
     _target setvariable [QGVAR(airwayStatus), 100, true];
