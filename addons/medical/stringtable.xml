@@ -2215,7 +2215,7 @@
             <English>Pain is only temporarily suppressed</English>
             <German>Schmerzen werden nur vorübergehend unterdrückt</German>
             <Polish>Ból jest tymczasowo zwalczany</Polish>
-            <Czech>Bolest je potlačena pouza dočasně</Czech>
+            <Czech>Bolest je potlačena pouze dočasně</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -3461,7 +3461,7 @@
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
             <German>[ACE] Medizinische Kiste (standard)</German>
-            <Czech>[ACE] Zdravotnické zásoby (Základ)</Czech>
+            <Czech>[ACE] Zdravotnické zásoby (základní)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
@@ -3469,7 +3469,7 @@
             <Polish>[ACE] Skrzynka z zapasami medycznymi (zaawansowana)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Avanzada)</Spanish>
             <German>[ACE] Medizinische Kiste (erweitert)</German>
-            <Czech>[ACE] Zdravotnické zásoby (Pokročilé)</Czech>
+            <Czech>[ACE] Zdravotnické zásoby (pokročilé)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Yes">
             <English>Yes</English>
