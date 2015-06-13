@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
@@ -170,7 +170,7 @@
             <English>Esc - Exit help</English>
             <German>ESC - Hilfe verlassen</German>
             <Spanish>Esc - Exit help</Spanish>
-            <Czech>Esc - Ukončit Pomoc </Czech>
+            <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
             <Italian>Esc - Exit help</Italian>
             <Polish>Esc - wyjście z ekranu Pomocy</Polish>

@@ -221,7 +221,18 @@ class CfgVehicles {
                 displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
             };
-
+            class healHitPointAfterAdvBandage {
+                displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);  
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class painIsOnlySuppressed {
+                displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);  
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = CSTRING(AdvancedMedicalSettings_Module_Description);
@@ -666,7 +677,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = CSTRING(MainAction);
+                displayName = ECSTRING(interaction,MainAction);
                 distance = 5;
                 condition = QUOTE(true);
                 statement = "";

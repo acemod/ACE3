@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-// fixes laser when being captured. Needed, because the selectionpsoition of the right hand is used
+// fixes laser when being captured. Needed, because the selectionPosition of the right hand is used
 ["SetHandcuffed", {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call EFUNC(common,addEventHandler);
 
 //If user has ASDG JR without the compat patch, then ace's' laser pointers won't be compatible with anything

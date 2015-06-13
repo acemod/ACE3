@@ -23,15 +23,21 @@ private ["_actions"];
 _actions = [];
 
 {
-    private ["_unit"];
+    private ["_unit", "_icon"];
     _unit = _x;
     if ((_unit != _player) && {(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"}) then {
+        _icon = switch _unit do {
+            case (driver _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa) };
+            case (gunner _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa) };
+            case (commander _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa) };
+            default { "" };
+        };
         _actions pushBack
             [
                 [
                     str(_unit),
                     [_unit, true] call EFUNC(common,getName),
-                    "",
+                    _icon,
                     {},
                     {true},
                     {_this call FUNC(addPassengerActions);},
