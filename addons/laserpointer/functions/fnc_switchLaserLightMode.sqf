@@ -37,6 +37,11 @@ _nextPointer = getText (_config >> "ACE_nextModeClass");
 
 if (_nextPointer == "") exitWith {};
 
+//If system disabled, don't switch to a laser:
+private "_nextPointerIsLaser";
+_nextPointerIsLaser = getNumber (configFile >> "CfgWeapons" >> _nextPointer >> "ACE_laserpointer");
+if ((!GVAR(enabled)) && {_nextPointerIsLaser == 1}) exitWith {};
+
 // disable inheritance for this entry, because addons claim this as a base class for convenience
 if !((_config >> "ACE_nextModeClass") in configProperties [_config, "true", false]) exitWith {};
 

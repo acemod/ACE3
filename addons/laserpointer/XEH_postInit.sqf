@@ -14,26 +14,28 @@ if !(hasInterface) exitWith {};
 
 GVAR(nearUnits) = [];
 
-// @todo. Maybe move to common?
-[{
-    private "_nearUnits";
-    _nearUnits = [];
-
-    {
-        _nearUnits append crew _x;
-
-        if (count _nearUnits > 10) exitWith {
-            _nearUnits resize 10;
-        };
-
-    } forEach nearestObjects [positionCameraToWorld [0,0,0], ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
-
-    GVAR(nearUnits) = _nearUnits;
-
-}, 5, []] call CBA_fnc_addPerFrameHandler;
-
-addMissionEventHandler ["Draw3D", {
-    call FUNC(onDraw);
-}];
-
 #include "initKeybinds.sqf"
+
+["SettingsInitialized", {
+    //If not enabled, dont't add draw eventhandler or PFEH (for performance)
+    if (!GVAR(enabled)) exitWith {};
+
+    // @todo. Maybe move to common?
+    [{
+        private "_nearUnits";
+        _nearUnits = [];
+        {
+            _nearUnits append crew _x;
+            if (count _nearUnits > 10) exitWith {
+                _nearUnits resize 10;
+            };
+        } forEach nearestObjects [positionCameraToWorld [0,0,0], ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
+
+        GVAR(nearUnits) = _nearUnits;
+        
+    } , 5, []] call CBA_fnc_addPerFrameHandler;
+
+    addMissionEventHandler ["Draw3D", {
+        call FUNC(onDraw);
+    }];
+}] call EFUNC(common,addEventHandler);
