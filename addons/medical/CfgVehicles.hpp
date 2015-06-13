@@ -666,7 +666,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = CSTRING(MainAction);
+                displayName = ECSTRING(interaction,MainAction);
                 distance = 5;
                 condition = QUOTE(true);
                 statement = "";

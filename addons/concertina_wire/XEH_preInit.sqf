@@ -2,11 +2,10 @@
 
 ADDON = false;
 
-PREP(cam);
+PREP(deploy);
+PREP(dismount);
+PREP(dismountSuccess);
 PREP(handleDamage);
-PREP(handleFired);
-PREP(huntir);
-PREP(huntirCompass);
-PREP(keypressed);
+PREP(handleKilled);
 
 ADDON = true;
