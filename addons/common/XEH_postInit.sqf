@@ -314,4 +314,41 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     ] call FUNC(checkPBOs)
 }] call FUNC(addEventHandler);
 
+//Device Handler:
+GVAR(deviceKeyHandlingArray) = [];
+GVAR(deviceKeyCurrentIndex) = -1;
+
+["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
+    true
+},
+{false},
+[0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
+
+["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
+    true
+},
+{false},
+[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+
+["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
+{
+    [1] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    [_displayName, _iconImage] call FUNC(displayTextPicture);
+    true
+},
+{false},
+[0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
+
+
 GVAR(commonPostInited) = true;

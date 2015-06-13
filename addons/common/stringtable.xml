@@ -561,5 +561,14 @@
             <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
             <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
         </Key>
+        <Key ID="STR_ACE_Common_toggleHandheldDevice">
+            <English>Toggle Handheld Device</English>
+        </Key>
+        <Key ID="STR_ACE_Common_closeHandheldDevice">
+            <English>Close Handheld Device</English>
+        </Key>
+        <Key ID="STR_ACE_Common_cycleHandheldDevices">
+            <English>Cycle Handheld Devices</English>
+        </Key>
     </Package>
 </Project>
