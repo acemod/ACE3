@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_initSpeed", "_ammoConfig", "_caliber", "_parentClasses"];
+private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_muzzles", "_weaponMagazines", "_ammoType", "_initSpeed", "_ammoConfig", "_caliber", "_parentClasses"];
 
 PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
@@ -47,7 +47,24 @@ if (_silencer != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
 };
 
-_magazine = (getArray(configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0;
+_magazine = "";
+_muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+_weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
+{
+    if (_x != "this") then {
+        _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
+        _weaponMagazines append _muzzleMagazines;
+    };
+} forEach _muzzles;
+{
+    _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
+    if (_ammoType == _ammo) exitWith {
+        _magazine = _x;
+    };
+} forEach _weaponMagazines;
+
+if (_magazine == "") exitWith {};
+
 _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
 _parentClasses = [_ammoConfig, true] call BIS_fnc_returnParents;
@@ -65,6 +82,7 @@ _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
 
 //systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
+//systemChat format["%1 : %2 : %3", _weapon, _magazine, _initSpeed];
 
 if (_strength < 0.01) exitWith {};
 
