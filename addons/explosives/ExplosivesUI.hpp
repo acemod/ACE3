@@ -15,7 +15,7 @@ class RscEdit;
 
 class Rsc_ACE_CallScreen_Edit:RscEdit {
     canModify = 1;
-    colorBackground[] = {0,0,0,1};
+    colorBackground[] = {0,0,0,0};
     colorText[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
     colorSelection[] = {
