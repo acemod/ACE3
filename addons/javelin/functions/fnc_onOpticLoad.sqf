@@ -20,7 +20,7 @@ __JavelinIGUITargetingLines ctrlShow false;
 
 uiNameSpace setVariable [QGVAR(arguments), 
     [
-        0,         // Last runtime
+        ACE_diagTime,         // Last runtime
         objNull,   // currentTargetObject
         0,         // Run Time
         0,          // Lock Time

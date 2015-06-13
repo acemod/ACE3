@@ -5,7 +5,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(open) {
-                    displayName = $STR_ACE_HUNTIR_MON_ACT;
+                    displayName = CSTRING(activateMonitor);
                     condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem));
                     statement = QUOTE(call FUNC(huntir));
                     showDisabled = 0;
@@ -20,6 +20,7 @@ class CfgVehicles {
     class Parachute_02_base_F;
     class ACE_HuntIR: Parachute_02_base_F {
         scope = 1;
+        destrType = "DestructDefault";
         displayName = "HuntIR";
         model = PATHTOF(data\huntir.p3d);
         castDriverShadow = 0;
@@ -34,7 +35,7 @@ class CfgVehicles {
     class ACE_Item_HuntIR_monitor: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = $STR_ACE_HUNTIR_MON;
+        displayName = CSTRING(monitor_displayName);
         vehicleClass = "Items";
         class TransportItems {
             class ACE_HuntIR_monitor {

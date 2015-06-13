@@ -24,7 +24,7 @@ if (!alive _unit) then {
     _heartRate = 0;
 };
 _heartRateOutput = LSTRING(Check_Pulse_Output_5);
-_logOutPut = localize LSTRING(Check_Pulse_None);
+_logOutPut = LSTRING(Check_Pulse_None);
 
 if (_heartRate > 1.0) then {
     if ([_caller] call FUNC(isMedic)) then {
@@ -33,14 +33,14 @@ if (_heartRate > 1.0) then {
     } else {
         // non medical personel will only find a pulse/HR
         _heartRateOutput = LSTRING(Check_Pulse_Output_2);
-        _logOutPut = localize LSTRING(Check_Pulse_Weak);
+        _logOutPut = LSTRING(Check_Pulse_Weak);
         if (_heartRate > 60) then {
             if (_heartRate > 100) then {
                 _heartRateOutput = LSTRING(Check_Pulse_Output_3);
-                _logOutPut = localize LSTRING(Check_Pulse_Strong);
+                _logOutPut = LSTRING(Check_Pulse_Strong);
             } else {
                 _heartRateOutput = LSTRING(Check_Pulse_Output_4);
-                _logOutPut = localize LSTRING(Check_Pulse_Normal);
+                _logOutPut = LSTRING(Check_Pulse_Normal);
             };
         };
     };
@@ -49,5 +49,5 @@ if (_heartRate > 1.0) then {
 ["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
 if (_logOutPut != "") then {
-    [_unit,"activity", localize LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"activity", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
 };

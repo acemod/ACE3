@@ -4,30 +4,44 @@
         <Key ID="STR_ACE_RangeCard_Name">
             <English>Range Card</English>
             <Polish>Tabela balistyczna</Polish>
+            <Spanish>Tarjeta de distancias</Spanish>
+            <Czech>Vzdálenostní tabulka</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
             <Polish>Co 50 metrów - MRAD/MRAD (siatka/pokrętło)</Polish>
+            <Spanish>Incrementos de 50 METROS -- MRAD/MRAD (retícula/torretas)</Spanish>
+            <Czech>Přidat 50 METRŮ -- MRAD/MRAD (síťka/věže)</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
             <Polish>Otwórz tabelę balistyczną</Polish>
+            <Spanish>Abrir tarjeta de distancias</Spanish>
+            <Czech>Otevřít vzdálenostní tabulku</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
             <Polish>Otwórz kopię tabeli balistycznej</Polish>
+            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
+            <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
             <Polish>Otwórz tabelę balistyczną</Polish>
+            <Spanish>Abrir tarjeta de distancias</Spanish>
+            <Czech>Otevřít vzdálenostní tabulku</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
             <Polish>Otwórz kopię tabeli balistycznej</Polish>
+            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
+            <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
             <Polish>Skopiuj tabelę balistyczną</Polish>
+            <Spanish>Copiar tarjeta de distancias</Spanish>
+            <Czech>Kopírovat vzdálenostní tabulku</Czech>
         </Key>
     </Package>
 </Project>

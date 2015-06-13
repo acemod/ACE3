@@ -137,7 +137,7 @@ class ace_huntir_cam_dialog {
         soundEscape[] = { "", 0, 1 };
         x = __X + (2*0.8); y = __Y + 0.045;
         w = 0.05; h = 0.02;
-        text = "$STR_ACE_HUNTIR_HELP";
+        text = CSTRING(HELP);
         action = "createDialog 'ace_huntir_help_dialog'";
     };
     class CAM_BG {
@@ -173,11 +173,11 @@ class ace_huntir_cam_dialog {
     };
     class CAM_ALT: CAM_HEIGHT {
         x = __X + 0.35;
-        text = "$STR_ACE_HUNTIR_ALT";
+        text = CSTRING(ALT);
     };
     class CAM_No: CAM_HEIGHT {
         x = __X + __W - 0.64;
-        text = "$STR_ACE_HUNTIR_CAM";
+        text = CSTRING(CAM);
     };
     class CAM_NO_x: CAM_HEIGHT {
         idc = 2;
@@ -189,7 +189,7 @@ class ace_huntir_cam_dialog {
         x = __X + 0.35;
         y = __Y + __H - 0.65;
         w = 0.12;
-        text = "$STR_ACE_HUNTIR_TIME";
+        text = CSTRING(TIME);
     };
     class CAM_TIME_REMAIN: CAM_TIME {
         idc = 3;
@@ -272,7 +272,7 @@ class ace_huntir_cam_dialog_inactive: ace_huntir_cam_dialog {
         sizeEx = 0.02;
         colorText[] = {1, 1, 1, 1};
         colorBackground[] = {0,0,0,0};
-        text = "$STR_ACE_HUNTIR_ESC";
+        text = CSTRING(ESC);
         blinkingPeriod = 0;
     };
     class CAM_BG: CAM_BG {};
@@ -371,31 +371,31 @@ class ace_huntir_help_dialog: ace_huntir_cam_dialog {
         sizeEx = 0.022;
         colorText[] = { 1, 1, 1, 1 };
         colorBackground[] = {0,0,0,1};
-        text = "$STR_ACE_HUNTIR_HELP_EXIT";
+        text = CSTRING(HELP_EXIT);
         blinkingPeriod = 0;
     };
     class HELP1: HELP0 {
         y = __Y + 0.06;
-        text = "$STR_ACE_HUNTIR_HELP_ZOOM";
+        text = CSTRING(HELP_ZOOM);
     };
     class HELP2: HELP0 {
         y = __Y + 0.09;
-        text = "$STR_ACE_HUNTIR_HELP_CAM";
+        text = CSTRING(HELP_CAM);
     };
     class HELP3: HELP0 {
         y = __Y + 0.12;
-        text = "$STR_ACE_HUNTIR_HELP_ROT";
+        text = CSTRING(HELP_ROT);
     };
     class HELP4: HELP0 {
         y = __Y + 0.15;
-        text = "$STR_ACE_HUNTIR_HELP_ELV";
+        text = CSTRING(HELP_ELV);
     };
     class HELP5: HELP0 {
         y = __Y + 0.18;
-        text = "$STR_ACE_HUNTIR_HELP_MOD";
+        text = CSTRING(HELP_MOD);
     };
     class HELP6: HELP0 {
         y = __Y + 0.21;
-        text = "$STR_ACE_HUNTIR_HELP_RES";
+        text = CSTRING(HELP_RES);
     };
 };

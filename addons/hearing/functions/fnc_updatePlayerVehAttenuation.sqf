@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+private ["_effectType", "_newAttenuation", "_turretConfig", "_turretPath", "_vehicle"];
+
 _vehicle = vehicle ACE_player;
 
 if (isNull _vehicle) exitWith {};

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
@@ -12,7 +12,7 @@
             <French>HuntIR Transport Box</French>
             <Hungarian>HuntIR Transport Box</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_ROUND">
+        <Key ID="STR_ACE_HUNTIR_magazine_displayName">
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
             <Spanish>HuntIR Round</Spanish>
@@ -23,7 +23,7 @@
             <French>Munition HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_MON">
+        <Key ID="STR_ACE_HUNTIR_monitor_displayName">
             <English>HuntIR monitor</English>
             <German>HuntIR Monitor</German>
             <Spanish>HuntIR monitor</Spanish>
@@ -34,7 +34,7 @@
             <French>Ecran HuntIR</French>
             <Hungarian>HuntIR monitor</Hungarian>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_MON_ACT">
+        <Key ID="STR_ACE_HUNTIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
             <German>HuntIR Monitor aktivieren</German>
             <Spanish>Activate HuntIR monitor</Spanish>
@@ -170,7 +170,7 @@
             <English>Esc - Exit help</English>
             <German>ESC - Hilfe verlassen</German>
             <Spanish>Esc - Exit help</Spanish>
-            <Czech>Esc - Ukončit Pomoc </Czech>
+            <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
             <Italian>Esc - Exit help</Italian>
             <Polish>Esc - wyjście z ekranu Pomocy</Polish>
