@@ -10,7 +10,7 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
@@ -18,12 +18,13 @@
 private ["_loaded", "_emptyPos"];
 PARAMS_2(_unit,_vehicle);
 
-if (driver _vehicle == _unit) exitwith {false;};
+if (driver _vehicle == _unit) exitwith {TRACE_1("Exiting on Failed Driver Check", driver _vehicle == _unit); false;};
 TRACE_1("Vehicle Check", driver _vehicle == _unit);
-if !(speed _vehicle <1 && (((getPosASL _vehicle) select 2) < 2)) exitwith {false;};
+if !(speed _vehicle <1 && (((getPos _vehicle) select 2) < 2)) exitwith {TRACE_1("Exiting on Failed speed check", getPosASL _vehicle == _unit); false;};
+TRACE_1("getPosASL Vehicle Check", getPos _vehicle);
 
-_emptyPos = ((getPosASL _vehicle) findEmptyPosition [0, 10, typeof _unit]);
-if (count _emptyPos == 0) exitwith {false};
+_emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
+if (count _emptyPos == 0) exitwith {false};  //consider displaying text saying there are no safe places to exit the vehicle
 
 unassignVehicle _unit;
 [_unit] orderGetIn false;
@@ -32,7 +33,7 @@ _unit action ["Eject", vehicle _unit];
 [ {
     private "_anim";
     PARAMS_2(_unit,_emptyPos);
-    _unit setPosASL _emptyPos;
+    _unit setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
     if (!([_unit] call FUNC(isAwake))) then {
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
         if (driver _unit == _unit) then {
