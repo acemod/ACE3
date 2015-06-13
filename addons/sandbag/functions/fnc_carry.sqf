@@ -46,7 +46,7 @@ _unit setVariable [QGVAR(usingSandbag), true];
         GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-    [localize "STR_ACE_AC_DROP", "", ""] call EFUNC(interaction,showMouseHint);
+    [localize LSTRING(DropSandbag), "", ""] call EFUNC(interaction,showMouseHint);
 
     GVAR(carrier) setVariable [QGVAR(drop),
         [GVAR(carrier), "DefaultAction",

@@ -54,47 +54,55 @@
             <Polish>Moździerz MK6 - Ustawienia</Polish>
             <Spanish>Ajustes MK6</Spanish>
             <German>MK6-Einstellungen</German>
+            <Czech>MK6 - Nastavení</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
             <Polish>Opór powietrza</Polish>
             <Spanish>Resistencia al aire</Spanish>
             <German>Luftwiderstand</German>
+            <Czech>Odpor vzduchu</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza MK6 przez graczy</Polish>
             <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
+            <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
             <Polish>Komputer MK6</Polish>
             <Spanish>Habilitar ordenador del MK6</Spanish>
             <German>Erlaube MK6-Computer</German>
+            <Czech>MK6 - Povolit počítač</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
             <Polish>Zezwól na komputer i dalmierz (opcja ta MUSI zostać wyłączona jeżeli aktywowałeś opór powietrza)</Polish>
             <Spanish>Muestra el ordenador y el medidor de distancia (DEBEN ser quitados si se activa la resistecia al aire)</Spanish>
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
+            <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>
             <Polish>Kompas MK6</Polish>
             <Spanish>Habilitar brujula del MK6</Spanish>
             <German>Erlaube MK6-Kompass</German>
+            <Czech>MK6 - Povolit kompas</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
             <Polish>Pokaż kompas MK6</Polish>
             <Spanish>Muestra la brujula digital en el MK6</Spanish>
             <German>Zeige MK6-Digitaler-Kompass</German>
+            <Czech>MK6 - Zobrazit digitální kompas</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
             <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
+            <Czech>Tento modul umožňuje nastavení minometu MK6.</Czech>
         </Key>
     </Package>
 </Project>

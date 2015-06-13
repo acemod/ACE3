@@ -30,6 +30,10 @@ _hasMovedOut = _args select 4;
 _parachuteCheck = _args select 5;
 
 if (!alive _unit) exitwith {
+    if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
+        TRACE_1("Removing fake weapon [on death]",_unit);
+        _unit removeWeapon "ACE_FakePrimaryWeapon";
+    };
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
@@ -49,6 +53,11 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
     if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
+        if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
+            TRACE_1("Removing fake weapon [on wakeup]",_unit);
+            _unit removeWeapon "ACE_FakePrimaryWeapon";
+        };
+    
         if (vehicle _unit == _unit) then {
             if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
                 [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);

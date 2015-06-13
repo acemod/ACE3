@@ -12,7 +12,7 @@
  * 6: Type of Damage <STRING>
  *
  * Return Value:
- * Damage To Be Inflicted <NUMBER>
+ * Nothing
  *
  * Public: No
  */
@@ -28,10 +28,7 @@ _typeOfProjectile = _this select 4;
 _newDamage = _this select 5;
 
 // Most likely taking exessive fire damage. Lets exit.
-if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {
-    0
-};
-_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
+if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {};
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {};
 
@@ -44,6 +41,7 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
+_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
 
 // TODO Disabled until implemented fully
@@ -63,5 +61,3 @@ if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
         [_unit] call FUNC(setUnconscious);
     };
 };
-
-_amountOfDamage;

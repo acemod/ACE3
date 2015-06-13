@@ -3,6 +3,27 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
+//Singe PFEH to handle execNextFrame and waitAndExec:
+[{
+    private ["_entry"];
+    
+    //Handle the waitAndExec array:
+    while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
+        _entry = GVAR(waitAndExecArray) deleteAt 0;
+        (_entry select 2) call (_entry select 1);
+    };
+
+    //Handle the execNextFrame array:
+    {
+        (_x select 0) call (_x select 1);
+    } forEach GVAR(nextFrameBufferA);
+    //Swap double-buffer:
+    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
+    GVAR(nextFrameBufferB) = [];
+    GVAR(nextFrameNo) = diag_frameno + 1;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
+
+
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
     PARAMS_2(_name,_value);
@@ -79,6 +100,43 @@ if(!isServer) then {
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
 call FUNC(checkFiles);
+
+
+// Create a pfh to wait until all postinits are ready and settings are initialized
+[{
+    PARAMS_1(_args);
+    EXPLODE_1_PVT(_args,_waitingMsgSent);
+    // If post inits are not ready then wait
+    if !(SLX_XEH_MACHINE select 8) exitWith {};
+
+    // If settings are not initialized then wait
+    if (isNil QGVAR(settings) || {(!isServer) && (isNil QEGVAR(modules,serverModulesRead))}) exitWith {
+        if (!_waitingMsgSent) then {
+            _args set [0, true];
+            diag_log text format["[ACE] Waiting on settings from server"];
+        };
+    };
+
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
+    diag_log text format["[ACE] Settings received from server"];
+
+    // Event so that ACE_Modules have their settings loaded:
+    ["InitSettingsFromModules", []] call FUNC(localEvent);
+
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+
+    diag_log text format["[ACE] Settings initialized"];
+
+    //Event that settings are safe to use:
+    ["SettingsInitialized", []] call FUNC(localEvent);
+
+}, 0, [false]] call cba_fnc_addPerFrameHandler;
+
 
 /***************************************************************/
 /***************************************************************/
@@ -256,44 +314,6 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     ] call FUNC(checkPBOs)
 }] call FUNC(addEventHandler);
 
-GVAR(commonPostInited) = true;
-
-// Create a pfh to wait until all postinits are ready and settings are initialized
-[{
-    PARAMS_1(_args);
-    EXPLODE_1_PVT(_args,_waitingMsgSent);
-    // If post inits are not ready then wait
-    if !(SLX_XEH_MACHINE select 8) exitWith {};
-
-    // If settings are not initialized then wait
-    if (isNil QGVAR(settings)) exitWith {
-        if (!_waitingMsgSent) then {
-            _args set [0, true];
-            diag_log text format["[ACE] Waiting on settings from server"];
-        };
-    };
-
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
-
-    diag_log text format["[ACE] Settings received from server"];
-
-    // Event so that ACE_Modules have their settings loaded:
-    ["InitSettingsFromModules", []] call FUNC(localEvent);
-
-    // Load user settings from profile
-    if (hasInterface) then {
-        call FUNC(loadSettingsFromProfile);
-        call FUNC(loadSettingsLocalizedText);
-    };
-
-    diag_log text format["[ACE] Settings initialized"];
-
-    //Event that settings are safe to use:
-    ["SettingsInitialized", []] call FUNC(localEvent);
-
-}, 0, [false]] call cba_fnc_addPerFrameHandler;
-
-
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
@@ -330,3 +350,5 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
 
+
+GVAR(commonPostInited) = true;

@@ -21,7 +21,7 @@ if (_unit getvariable [QGVAR(inCardiacArrest),false]) exitwith {};
 _unit setvariable [QGVAR(inCardiacArrest), true,true];
 _unit setvariable [QGVAR(heartRate), 0];
 
-["Medical_onEnteredCardiacArrest", [_unit]] call ace_common_fnc_localEvent;
+["Medical_onEnteredCardiacArrest", [_unit]] call EFUNC(common,localEvent);
 
 [_unit, true] call FUNC(setUnconscious);
 _timeInCardiacArrest = 120 + round(random(600));

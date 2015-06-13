@@ -289,7 +289,12 @@ PREP(_handleRequestSyncedEvent);
 PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
+
+//GVARS for execNextFrame and waitAndExec
 GVAR(waitAndExecArray) = [];
+GVAR(nextFrameNo) = diag_frameno;
+GVAR(nextFrameBufferA) = [];
+GVAR(nextFrameBufferB) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 

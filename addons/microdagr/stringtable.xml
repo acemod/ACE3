@@ -270,7 +270,7 @@
             <German>Zeige MicroDAGR</German>
             <Spanish>Mostrar MicroDAGR</Spanish>
             <Russian>Показать MicroDAGR</Russian>
-            <Czech>Ukázat MicroDAGR GPS</Czech>
+            <Czech>Ukázat MicroDAGR</Czech>
             <Polish>Pokaż MicroDAGR</Polish>
             <French>Afficher MicroDAGR</French>
             <Hungarian>MicroDAGR mutatása</Hungarian>
@@ -282,7 +282,7 @@
             <German>Konfiguriere MicroDAGR</German>
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
-            <Czech>Konfigurovat MicroDAGR GPS</Czech>
+            <Czech>Konfigurovat MicroDAGR</Czech>
             <Polish>Konfiguruj MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
@@ -294,7 +294,7 @@
             <German>Schließe MicroDAGR</German>
             <Spanish>Cerrar MicroDAGR</Spanish>
             <Russian>Закрыть MicroDAGR</Russian>
-            <Czech>Zavřít MicroDAGR GPS</Czech>
+            <Czech>Zavřít MicroDAGR</Czech>
             <Polish>Zamknij MicroDAGR</Polish>
             <French>Fermer MicroDAGR</French>
             <Hungarian>MicroDAGR elrejtése</Hungarian>
@@ -305,41 +305,48 @@
             <English>MicroDAGR Map Fill</English>
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
             <Spanish>Relleno del mapa MicroDAGR</Spanish>
+            <Czech>MicroDAGR - Vyplnění mapy</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
             <Spanish>Relleno del mapa MicroDAGR</Spanish>
+            <Czech>MicroDAGR - Vyplnění mapy</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">
             <English>How much map data is filled on MicroDAGR's</English>
             <Polish>Jak duża część informacji mapy jest załadowana do MicroDAGR?</Polish>
             <Spanish>Cuanta información está disponible en el mapa del MicroDAG</Spanish>
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
+            <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_None">
             <English>Full Satellite + Buildings</English>
             <Polish>Pełna satelitarna + budynki</Polish>
             <Spanish>Satelite completo + Edificios</Spanish>
             <German>Satellitenbild + Gebäude</German>
+            <Czech>Satelit + Budovy</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Side">
             <English>Topographical + Roads</English>
             <Polish>Topograficzna + drogi</Polish>
             <Spanish>Topografico + Carreteras</Spanish>
             <German>Topografisch + Straßen</German>
+            <Czech>Topografické + Cesty</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Unique">
             <English>None (Cannot use map view)</English>
             <Polish>Żadna (wyłącza ekran mapy)</Polish>
             <Spanish>Nada (No se puede el mapa)</Spanish>
             <German>Keine (kann keine Kartenansicht verwenden)</German>
+            <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.&lt;br /&gt;Source: microDAGR.pbo</English>
             <Polish>Moduł ten pozwala kontrolować jak duża ilość informacji jest załadowana do przedmiotów MicroDAGR. Mniejsza ilość danych ogranicza widok mapy pokazując mniej rzeczy na minimapie.&lt;br /&gt;Źródło: microDAGR.pbo</Polish>
             <Spanish>Controla la cantidad de información disponible en el microDAGR. Menos datos limitan la vista del mapa a mostrar menos en el minimapa.&lt;br /&gt;Fuente: microDAGR.pbo</Spanish>
             <German>Steuert wie viel Daten auf dem microDAGR zu sehen ist. Weniger Daten schränken die Kartenansicht ein, um mehr auf der Minimap zu sehen.&lt;br /&gt;Quelle: microDAGR.pbo</German>
+            <Czech>Tento modul umožňuje kontrolovat, kolik informací je obsaženo v MicroDAGR. Menší množství dat omezené zobrazením mapy ukazují méně věcí na minimapě.&lt;br /&gt;Zdroj: microDAGR.pbo</Czech>
         </Key>
     </Package>
 </Project>

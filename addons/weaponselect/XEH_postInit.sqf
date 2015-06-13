@@ -110,7 +110,18 @@ if !(hasInterface) exitWith {};
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
     // Statement
-    [ACE_player] call FUNC(putWeaponAway);
+    if ((currentWeapon ACE_player) != "") then {
+        [ACE_player] call FUNC(putWeaponAway);
+    } else {
+        private ["_weapon"];
+        _weapon = switch (true) do {
+            case ((primaryWeapon ACE_player) != ""): {primaryWeapon ACE_player};
+            case ((handgunWeapon ACE_player) != ""): {handgunWeapon ACE_player};
+            case ((secondaryWeapon ACE_player) != ""): {secondaryWeapon ACE_player};
+            default {""};
+        };
+        if (_weapon != "") then {ACE_player selectWeapon _weapon};
+    };
     true
 },
 {false},
