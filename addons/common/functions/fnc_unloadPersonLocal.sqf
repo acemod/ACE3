@@ -20,9 +20,9 @@ PARAMS_2(_unit,_vehicle);
 
 if (driver _vehicle == _unit) exitwith {false;};
 TRACE_1("Vehicle Check", driver _vehicle == _unit);
-if !(speed _vehicle <1 && (((getpos _vehicle) select 2) < 2)) exitwith {false;};
+if !(speed _vehicle <1 && (((getPosASL _vehicle) select 2) < 2)) exitwith {false;};
 
-_emptyPos = ((getPos _vehicle) findEmptyPosition [0, 10, typeof _unit]);
+_emptyPos = ((getPosASL _vehicle) findEmptyPosition [0, 10, typeof _unit]);
 if (count _emptyPos == 0) exitwith {false};
 
 unassignVehicle _unit;
@@ -32,7 +32,7 @@ _unit action ["Eject", vehicle _unit];
 [ {
     private "_anim";
     PARAMS_2(_unit,_emptyPos);
-    _unit setPos _emptyPos;
+    _unit setPosASL _emptyPos;
     if (!([_unit] call FUNC(isAwake))) then {
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
         if (driver _unit == _unit) then {
