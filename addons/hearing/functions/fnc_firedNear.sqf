@@ -30,10 +30,11 @@ if (!GVAR(enableCombatDeafness)) exitWith {};
 //Only run if firedNear object is player or player's vehicle:
 if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
+if (_distance > 50) exitWith {};
 
 _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
 
-if (_distance < 1) then {_distance = 1;};
+_distance = 1 max _distance;
 
 _silencer = switch (_weapon) do {
     case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
@@ -81,7 +82,7 @@ _caliber = switch (true) do {
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
 
-//systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
+systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
 //systemChat format["%1 : %2 : %3", _weapon, _magazine, _initSpeed];
 
 if (_strength < 0.01) exitWith {};
