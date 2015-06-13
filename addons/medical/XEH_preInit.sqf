@@ -40,6 +40,7 @@ PREP(handleDamage_caching);
 PREP(handleDamage_fractures);
 PREP(handleDamage_internalInjuries);
 PREP(handleDamage_wounds);
+PREP(handleDamage_woundsOld);
 PREP(handleUnitVitals);
 PREP(handleKilled);
 PREP(handleLocal);
@@ -111,6 +112,8 @@ PREP(handleCreateLitter);
 
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
+
+DFUNC(handleDamage_assignWounds) = if ("ace_medical" callExtension "version" == "") then { DFUNC(handleDamage_woundsOld) } else { DFUNC(handleDamage_wounds)};
 
 call FUNC(parseConfigForInjuries);
 
