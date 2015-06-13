@@ -56,6 +56,13 @@ class CfgVehicles {
                     priority = 2.2;
                     hotkey = "L";
                 };
+                class GVAR(UnloadCaptive) {
+                    displayName = CSTRING(UnloadCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
+                    priority = 1.2;
+                };
                 class ACE_FriskPerson {
                     displayName = CSTRING(FriskPerson);
                     distance = 2;
@@ -109,13 +116,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting"}; \
-                    priority = 1.2; \
-                }; \
-                class GVAR(UnloadCaptive) { \
-                    displayName = CSTRING(UnloadCaptive); \
-                    distance = 4; \
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive)); \
                     priority = 1.2; \
                 }; \
             }; \
