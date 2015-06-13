@@ -50,15 +50,21 @@ if (_silencer != "") then {
 _magazine = (getArray(configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0;
 _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
 _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
-_caliber = getNumber(_ammoConfig >> "ACE_caliber");
 _parentClasses = [_ammoConfig, true] call BIS_fnc_returnParents;
-if ("RocketBase" in _parentClasses || "MissileBase" in _parentClasses) then {
-    _caliber = 200;
-} else {
-    if (_caliber <= 0) then { _caliber = 6.5; };
+_caliber = getNumber(_ammoConfig >> "ACE_caliber");
+_caliber = switch (true) do {
+    case ("ShellBase" in _parentClasses): { 80 };
+    case ("RocketBase" in _parentClasses): { 200 };
+    case ("MissileBase" in _parentClasses): { 600 };
+    case ("SubmunitionBase" in _parentClasses): { 80 };
+    default {
+        if (_caliber <= 0) then { 6.5 } else { _caliber };
+    };
 };
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
+
+//systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
 
 if (_strength < 0.01) exitWith {};
 
