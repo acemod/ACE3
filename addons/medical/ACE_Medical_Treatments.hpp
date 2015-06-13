@@ -328,6 +328,7 @@ class ACE_Medical_Advanced {
                 class Large {
                     name = CSTRING(Wounds_Abrasion_Large);
                     minDamage = 0.3;
+                    maxDamage = 0.5;
                     bleedingRate = 0.0002;
                 };
             };
