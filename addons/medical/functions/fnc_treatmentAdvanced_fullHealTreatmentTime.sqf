@@ -1,13 +1,18 @@
-/**
- * fn_healTreatmentTime.sqf
- * @Descr: N/A
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
+ * Calculates the personal aid kit treatment time based on amount of damage to heal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * unit <OBJECT>
+ *
+ * Return Value:
+ * treatment time <NUMBER>
+ *
+ * Example:
+ * [_target] call ace_medical_fnc_treatmentAdvanced_fullHealTreatmentTime
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_target", "_totalDamage"];
