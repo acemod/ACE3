@@ -74,7 +74,7 @@ _closeInDistance = (_closeInMax + _closeInMin) / 2;
 //Checks (too close to center or can't attach)
 if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
-    [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull and be useless)

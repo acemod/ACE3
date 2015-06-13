@@ -1,26 +1,30 @@
 class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings) : ACE_Module {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         function = QUOTE(DFUNC(initModule));
-        displayName = "View Distance Limiter";
+        displayName = CSTRING(Module_DisplayName);
         scope = 2;
         isGlobal = 1;
         //icon = ""; // needs an icon
         class Arguments {
             class moduleViewDistanceEnabled {
-                displayName = "Enable ACE viewdistance";
-                description = "Enables ACE viewdistance";
+                displayName = CSTRING(enabled_DisplayName);
+                description = CSTRING(enabled_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class moduleViewDistanceLimit {
-                displayName = "View Distance Limit";
-                description = "Sets the limit for how high clients can raise their view distance (<= 10000)";
+                displayName = CSTRING(limit_DisplayName);
+                description = CSTRING(limit_Description);
                 typeName = "NUMBER";
                 defaultValue = 10000;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
+            sync[] = {};
         };
     };
 };

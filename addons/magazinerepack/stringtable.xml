@@ -76,7 +76,7 @@
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
             <French>Réorganisation terminée</French>
-            <German>Wiederverpacken Fertig</German>
+            <German>Wiederverpacken fertig</German>
             <Spanish>Reorganización finalizada</Spanish>
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
             <French>Réorganisation interrompue</French>
-            <German>Umpacken Unterbrochen</German>
+            <German>Umpacken unterbrochen</German>
             <Spanish>Reorganización interrumpida</Spanish>
             <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>

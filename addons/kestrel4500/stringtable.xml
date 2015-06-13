@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Kestrel4500">
-        <Key ID="STR_ACE_Kestrel_Name">
+        <Key ID="STR_ACE_Kestrel4500_Name">
             <English>Kestrel 4500NV</English>
             <German>Kestrel 4500NV</German>
             <Spanish>Kestrel 4500NV</Spanish>
@@ -13,7 +13,7 @@
             <Portuguese>Kestrel 4500NV</Portuguese>
             <Russian>Kestrel 4500NV</Russian>
         </Key>
-        <Key ID="STR_ACE_Kestrel_Description">
+        <Key ID="STR_ACE_Kestrel4500_Description">
             <English>Kestrel 4500 Pocket Weather Tracker</English>
             <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
             <Russian>Карманная метеостанция Kestrel 4500NV</Russian>

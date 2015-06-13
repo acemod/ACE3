@@ -14,4 +14,4 @@ This provides interaction options between units.
 
 `ace_interact_menu`
 
-Note: The Interaction module is required by many other modules. Disabling it is not recommended.
+*Note: The Interaction module is required by most of the other modules. Do NOT remove it!*

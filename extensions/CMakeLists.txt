@@ -125,6 +125,7 @@ add_subdirectory(fcs)
 add_subdirectory(break_line)
 add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
+add_subdirectory(medical)
 add_subdirectory(parse_imagepath)
 
 # Test Extension for dynamically loading/unloading built extensions; does not build in release

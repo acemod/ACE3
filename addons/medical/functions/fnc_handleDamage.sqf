@@ -52,6 +52,8 @@ if (GVAR(level) < 2) then {
         _damageReturn = _this call FUNC(handleDamage_basic);
     };
     _newDamage = _this call FUNC(handleDamage_caching);
+    // handleDamage_caching may have modified the projectile string
+    _projectile = _this select 4;
     _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
     _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);

@@ -15,7 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_bullets", "_position", "_surface", "_found", "_weapon", "_cloudType", "_unit"];
+private ["_bullets", "_position", "_surface", "_weapon", "_cloudType", "_unit"];
 EXPLODE_2_PVT(_this,_unit,_weapon);
 if (_unit != ace_player) exitWith {true};
 _cloudType = "";
@@ -39,12 +39,14 @@ if (surfaceIsWater _position) exitWith {};
 if ((_position select 2) > 0.2) exitWith {};
 
 _surface = surfaceType _position;
-_surface = ([_surface, "#"] call CBA_fnc_split) select 1;
-_found = false;
 
-_found = getNumber (ConfigFile >> "CfgSurfaces" >> _surface >> "dust") >= 0.1;
+if (_surface != GVAR(surfaceCache)) then {
+    GVAR(surfaceCache) = _surface;
+    _surface = ([_surface, "#"] call CBA_fnc_split) select 1;
+    GVAR(surfaceCacheIsDust) = getNumber (ConfigFile >> "CfgSurfaces" >> _surface >> "dust") >= 0.1;
+};
 
-if (!_found) exitWith {};
+if (!GVAR(surfaceCacheIsDust)) exitWith {};
 
 _bullets = GETDUSTT(DBULLETS);
 

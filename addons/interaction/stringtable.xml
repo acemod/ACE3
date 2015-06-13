@@ -77,7 +77,7 @@
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Spanish>Pierna derecha</Spanish>
-            <Czech>Pravá hona</Czech>
+            <Czech>Pravá noha</Czech>
             <Polish>Prawa noga</Polish>
             <French>Jambe droite</French>
             <Russian>Правая нога</Russian>
@@ -111,7 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
-            <German>Interaktionsmenü (Selbst)</German>
+            <German>Interaktionsmenü (selbst)</German>
             <Spanish>Menú de interacción (Propio)</Spanish>
             <Polish>Menu interakcji (własne)</Polish>
             <Czech>Menu interakce (vlastní)</Czech>
@@ -495,7 +495,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_GetDown">
             <English>Get Down!</English>
-            <German>Auf Den Boden!</German>
+            <German>Auf den Boden!</German>
             <Spanish>Al suelo!</Spanish>
             <Polish>Padnij!</Polish>
             <Czech>K zemi!</Czech>
@@ -507,7 +507,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
-            <German>Team Management</German>
+            <German>Gruppenverwaltung</German>
             <Spanish>Gestión de equipo</Spanish>
             <French>Gestion d'équipe</French>
             <Polish>Zarządzanie oddziałem</Polish>
@@ -632,7 +632,7 @@
             <Polish>Dołącz do zielonych</Polish>
             <Portuguese>Entrar em Verde</Portuguese>
             <Hungarian>Belépés a Zöldbe</Hungarian>
-            <Czech> Připojit k zeleným</Czech>
+            <Czech>Připojit k zeleným</Czech>
             <Russian>Присоединиться к Зеленой группе</Russian>
             <French>Rejoindre vert</French>
             <Italian>Unirsi al team verde</Italian>
@@ -691,7 +691,7 @@
             <Spanish>Has dejado el equipo</Spanish>
             <French>Tu as quitté l'équipe</French>
             <Polish>Opuściłeś drużynę</Polish>
-            <Czech>Opustil si tým</Czech>
+            <Czech>Opustil jsi tým</Czech>
             <Russian>Вы покинули группу</Russian>
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
@@ -793,24 +793,32 @@
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_Module_DisplayName">
+        <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
             <Spanish>Sistema de interacción</Spanish>
+            <German>Interaktionssystem</German>
+            <Czech>Systém interakce</Czech>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_DisplayName">
+        <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
             <Polish>Wł. zarządzanie drużyną</Polish>
             <Spanish>Habilitar gestión de equipos</Spanish>
+            <German>Aktiviere Gruppenverwaltung</German>
+            <Czech>Povolit správu týmu</Czech>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_EnableTeamManagement_Description">
+        <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
             <Polish>Czy gracze mogą korzystać z menu zarządzania drużyną? Domyślnie: Tak</Polish>
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
+            <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
+            <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
         </Key>
-        <Key ID="STR_ACE_InteractionSystem_Module_Description">
+        <Key ID="STR_ACE_Interaction_Module_Description">
             <English></English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
+            <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
+            <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
         </Key>
     </Package>
 </Project>
