@@ -69,7 +69,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFriskPerson));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doFriskPerson));
                     showDisabled = 0;
-                    //icon = "";  //@todo
+                    icon = QUOTE(A3\ui_f\data\IGUI\Cfg\Actions\gear_ca.paa);
                     priority = 3;
                     hotkey = "F";
                 };
