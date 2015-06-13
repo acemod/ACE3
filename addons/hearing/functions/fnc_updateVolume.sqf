@@ -22,7 +22,6 @@ if !(GVAR(enableCombatDeafness)) exitWith {};
 
 // Check if new noises increase deafness
 GVAR(newStrength) = (((ACE_player getvariable [QGVAR(dv), 0]) min 20) / 20) ^ 2;
-systemChat Str(GVAR(newStrength));
 if (GVAR(newStrength) > GVAR(currentDeafness)) then {
     GVAR(currentDeafness) = GVAR(newStrength);
 };
