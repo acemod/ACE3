@@ -330,5 +330,11 @@
             <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_aceNews">
+            <English>ACE News</English>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
+            <English>Show News on Main Menu</English>
+        </Key>
     </Package>
 </Project>

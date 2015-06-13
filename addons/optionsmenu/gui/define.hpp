@@ -7,6 +7,9 @@ class ACE_gui_staticBase;
 class ACE_gui_listNBox;
 class ACE_gui_comboBoxBase;
 class RscXSliderH;
+class RscControlsGroupNoScrollbars;
+class RscHTML;
+class RscText;
 
 
 #ifndef ACE_DEFINE_H
