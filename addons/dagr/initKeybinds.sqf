@@ -3,8 +3,8 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
-    
+    if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
+
     // Statement
     if (!GVAR(menuRun)) then {
         [] call FUNC(menuInit);
@@ -20,8 +20,8 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
-    
+    if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
+
     // Statement
     [] call FUNC(toggleOverlay);
     true
