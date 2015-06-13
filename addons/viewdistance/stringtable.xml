@@ -5,126 +5,151 @@
             <English>View Distance Limiter</English>
             <Polish>Ogranicznik zasięgu widzenia</Polish>
             <Spanish>Limitador de distancia de visión</Spanish>
+            <Czech>Omezovač dohlednosti</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>
             <Polish>Pozwala ustawić maksymalny limit zasięgu widzenia.</Polish>
             <Spanish>Permite limitar la distancia máxima de visión que se puede establecer por los jugadores.</Spanish>
+            <Czech>Umožňuje určit maximální dohlednost, kterou si může hráč nastavit</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_DisplayName">
             <English>Enable ACE viewdistance</English>
             <Polish>Wł. zasięg widzenia ACE</Polish>
             <Spanish>Habilitar distancia de visión ACE</Spanish>
+            <Czech>Povolit ACE dohlednost</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_Description">
             <English>Enables ACE viewdistance</English>
             <Polish>Aktywuje możliwość zmiany zasięgu widzenia w menu ustawień ACE</Polish>
             <Spanish>Habilita la distancia de visión ACE</Spanish>
+            <Czech>Povolit ACE dohlednost</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_DisplayName">
             <English>View Distance Limit</English>
             <Polish>Limit zas. widzenia</Polish>
             <Spanish>Limite de distancia de visión</Spanish>
+            <Czech>Limit dohlednosti</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_Description">
             <English>Sets the limit for how high clients can raise their view distance (up to 10000)</English>
             <Polish>Ustawia maksymalny limit zasięgu widzenia jaki mogą ustawić gracze (do 10000)</Polish>
             <Spanish>Establece el límite de cuan alta pueden aumentar los clientes la distancia de visión (hasta 10.000)</Spanish>
+            <Czech>Stanoví limit jak daleko si může client zvýšit dohlednost (do 10000)</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
             <Polish>Limit zasięgu widzenia jest ustawiany tutaj i może zostać nadpisany poprzez moduł</Polish>
             <Spanish>Establecer aqui el límite para la distancia de visión de los clientes. Puede ser anulado por módulo</Spanish>
+            <Czech>Limit dohlednoti pro klienty se nastavuje zde a může být potlačeno pomocí modulu.</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
             <Polish>Zasięg widzenia (piechota)</Polish>
             <Spanish>Distancia de visión del cliente (A pie)</Spanish>
+            <Czech>Dohlednost (Pěšák)</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
             <Polish>Zmienia zasięg widzenia kiedy gracz porusza się na piechotę.</Polish>
             <Spanish>Cambia en juego la distancia de visión cuando el jugador va a pie.</Spanish>
+            <Czech>Změna dohlednosti pro hráče pokud jde po svých.</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_DisplayName">
             <English>Client View Distance (Land Vehicle)</English>
             <Polish>Zasięg widzenia (pojazdy naziemne)</Polish>
             <Spanish>Distancia de visión del cliente (Vehículo terrestre)</Spanish>
+            <Czech>Dohlednost (Pozemní technika)</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
             <Polish>Zmienia zasięg widzenia kiedy gracz porusza się pojazdami naziemnymi.</Polish>
             <Spanish>Cambia en juego la distancia de visión cuando el jugador va en un vehículo terrestre.</Spanish>
+            <Czech>Změna dohlednosti pro hráče pokud je v pozemní technice.</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
             <Polish>Zasięg widzenia (pojazdy lotnicze)</Polish>
             <Spanish>Distancia de visión del cliente (Vehículo aéreo)</Spanish>
+            <Czech>Dohlednost (Vzdušná technika)</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>
             <Polish>Zmienia zasięg widzenia kiedy gracz porusza się pojazdami lotniczymi.</Polish>
             <Spanish>Cambia en juego la distancia de visión cuando el jugador va en un vehículo aéreo.</Spanish>
+            <Czech>Změna dohlednosti pro hráče pokud je ve vzdušné technice.</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
             <Polish>Dynamiczny zasięg rysowania obiektów</Polish>
             <Spanish>Distancia de visión dinámica de objetos</Spanish>
+            <Czech>Dynamická dohlednost objektů</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_Description">
             <English>Sets the object view distance as a coefficient of the view distance.</English>
             <Polish>Zmienia zasięg rysowania obiektów jako mnożnik zasięgu widzenia.</Polish>
             <Spanish>Establece la distancia de visión de objetos como un coeficiente de la distancia de visión.</Spanish>
+            <Czech>Nastaví objekt dohlednosti jako koeficient dohlednosti.</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>
             <Polish>Wyłącz</Polish>
             <Spanish>Apagada</Spanish>
+            <Czech>Vypnout</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
             <Polish>Bardzo niski</Polish>
             <Spanish>Muy baja</Spanish>
+            <Czech>Velmi málo</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
             <Polish>Niski</Polish>
             <Spanish>Baja</Spanish>
+            <Czech>Málo</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
             <Polish>Średni</Polish>
             <Spanish>Media</Spanish>
+            <Czech>Středně</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
             <Polish>Wysoki</Polish>
             <Spanish>Alta</Spanish>
+            <Czech>Hodně</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
             <Polish>Bardzo wysoki</Polish>
             <Spanish>Muy alta</Spanish>
+            <Czech>Velmi hodně</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>
             <Polish>Zasięg widzenia:</Polish>
             <Spanish>Distancia de visión:</Spanish>
+            <Czech>Dohlednost:</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
             <Polish>Zasięg widzenia obiektów wynosi</Polish>
             <Spanish>La distancia de visión de objetos es:</Spanish>
+            <Czech>Dohlednost objektů je</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_invalid">
             <English>That option is invalid! The limit is</English>
             <Polish>Ta opcja jest nieprawidłowa! Limit wynosi</Polish>
             <Spanish>Esta opción no es valida! El limite es</Spanish>
+            <Czech>Tato volba je neplatná! Limit je</Czech>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
             <Polish>Ustawienia wideo</Polish>
             <Spanish>Ajustes de vídeo</Spanish>
+            <Czech>Nastavení videa</Czech>
         </Key>
     </Package>
 </Project>
