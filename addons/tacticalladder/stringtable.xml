@@ -19,7 +19,7 @@
             <Polish>Rozłóż drabinę</Polish>
             <Spanish>Deploy ladder</Spanish>
             <French>Deploy ladder</French>
-            <Czech>Umístit žebřík</Czech>
+            <Czech>Rozložit žebřík</Czech>
             <Italian>Deploy ladder</Italian>
             <Hungarian>Deploy ladder</Hungarian>
         </Key>
@@ -38,6 +38,7 @@
             <English>Adjust ladder</English>
             <German>Leiter einstellen</German>
             <Polish>Reguluj drabinę</Polish>
+            <Czech>Upravit žebřík</Czech>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -46,7 +47,7 @@
             <Polish>Postaw drabinę</Polish>
             <Spanish>Position ladder</Spanish>
             <French>Position ladder</French>
-            <Czech>Přemístit žebřík</Czech>
+            <Czech>Umístit žebřík</Czech>
             <Italian>Position ladder</Italian>
             <Hungarian>Position ladder</Hungarian>
         </Key>

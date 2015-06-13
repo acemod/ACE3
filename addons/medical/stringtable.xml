@@ -2209,11 +2209,13 @@
             <English>Bandaging removes bloodstains</English>
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Bandażowanie usuwa ślady krwi</Polish>
+            <Czech>Obvázání odstraňuje skvrny od krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
             <German>Schmerzen werden nur vorübergehend unterdrückt</German>
             <Polish>Ból jest tymczasowo zwalczany</Polish>
+            <Czech>Bolest je potlačena pouza dočasně</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -3210,21 +3212,25 @@
             <English>Bloodstains</English>
             <German>Blutflecken</German>
             <Polish>Plamy krwi</Polish>
+            <Czech>Skvrny od krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Bandaging removes bloodstains</English>
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Bandażowanie usuwa ślady krwi</Polish>
+            <Czech>Obvázání odstraňuje skvrny od krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
             <German>Schmerzunterdrückung</German>
             <Polish>Zwalczanie bólu</Polish>
+            <Czech>Potlačení bolesti</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
+            <Czech>Bolest je potlačena, ale jen dočastně</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Medical</English>
