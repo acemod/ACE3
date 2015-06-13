@@ -63,16 +63,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
                     priority = 1.2;
                 };
-                class ACE_FriskPerson {
-                    displayName = CSTRING(FriskPerson);
-                    distance = 2;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFriskPerson));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doFriskPerson));
-                    showDisabled = 0;
-                    //icon = "";  //@todo
-                    priority = 3;
-                    hotkey = "F";
-                };
             };
         };
 
