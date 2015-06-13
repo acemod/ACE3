@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tacticalladder">
-        <Key ID="STR_ACE_TACTICALLADDER">
+        <Key ID="STR_ACE_TacticalLadder_DisplayName">
             <English>Telescopic Ladder</English>
             <German>Teleskopleiter</German>
             <Russian>Телескопическая лестница</Russian>
@@ -12,7 +12,7 @@
             <Italian>Telescopic Ladder</Italian>
             <Hungarian>Telescopic Ladder</Hungarian>
         </Key>
-        <Key ID="STR_ACE_DEPLOY_TACLADDER">
+        <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
             <German>Leiter aufbauen</German>
             <Russian>Установить лестницу</Russian>
@@ -23,7 +23,7 @@
             <Italian>Deploy ladder</Italian>
             <Hungarian>Deploy ladder</Hungarian>
         </Key>
-        <Key ID="STR_ACE_DROP_TACLADDER">
+        <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
             <German>Leiter ablegen</German>
             <Russian>Положить лестницу</Russian>
@@ -34,7 +34,11 @@
             <Italian>Drop ladder</Italian>
             <Hungarian>Drop ladder</Hungarian>
         </Key>
-        <Key ID="STR_ACE_POSITION_TACLADDER">
+        <Key ID="STR_ACE_TacticalLadder_Adjust">
+            <English>Adjust ladder</English>
+            <German>Leiter einstellen</German>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
             <German>Leiter positionieren</German>
             <Russian>Перенести лестницу</Russian>
@@ -45,7 +49,7 @@
             <Italian>Position ladder</Italian>
             <Hungarian>Position ladder</Hungarian>
         </Key>
-        <Key ID="STR_ACE_PICKUP_TACLADDER">
+        <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
             <German>Leiter aufnehmen</German>
             <Russian>Взять лестницу</Russian>

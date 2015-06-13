@@ -4,7 +4,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_TacticalLadders {
-                displayName = $STR_ACE_DEPLOY_TACLADDER;
+                displayName = CSTRING(Deploy);
                 condition = QUOTE((backpack ACE_player) == QUOTE(QUOTE(ACE_TacticalLadder_Pack)));
                 statement = QUOTE(call FUNC(deployTL));
                 exceptions[] = {};
@@ -17,7 +17,7 @@ class CfgVehicles {
     class Bag_Base;
 	class ACE_TacticalLadder_Pack: Bag_Base {
 		scope = 2;
-		displayName = "$STR_ACE_TACTICALLADDER";
+		displayName = CSTRING(DisplayName);
         descriptionShort = "";
         model = PATHTOF(data\ace_tacticalladder_pack.p3d);
         picture = PATHTOF(UI\ace_tactical_ladder_pack_ca.paa); 
@@ -28,7 +28,7 @@ class CfgVehicles {
     class House;
     class ACE_Tactical_Ladder: House {
         XEH_ENABLED;
-        displayName = $STR_ACE_TACTICALLADDER;
+        displayName = CSTRING(DisplayName);
         class DestructionEffects {};
         model = PATHTOF(data\ace_tacticalladder.p3d);
         animated = 1;
@@ -62,7 +62,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_PickUp {
                     selection = "";
-                    displayName = "$STR_ACE_PICKUP_TACLADDER";
+                    displayName = CSTRING(Pickup);
                     distance = 4;
                     condition = QUOTE((backpack ACE_player) == '');
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickupTL));
@@ -72,7 +72,7 @@ class CfgVehicles {
                 };
                 class ACE_Position {
                     selection = "";
-                    displayName = "$STR_ACE_POSITION_TACLADDER";
+                    displayName = CSTRING(Position);
                     distance = 4;
                     condition = "true";
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(positionTL));

@@ -37,7 +37,7 @@ GVAR(cancelTime) = ACE_time + 1; // Workaround to prevent accidental canceling
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
-["Confirm", "Cancel", "Adjust"] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(Deploy), localize LSTRING(Drop), localize LSTRING(Adjust)] call EFUNC(interaction,showMouseHint);
 
 ACE_player setVariable [QGVAR(Deploy),
     [ACE_player, "DefaultAction",
