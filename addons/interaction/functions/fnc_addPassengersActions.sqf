@@ -32,6 +32,9 @@ _actions = [];
             case (commander _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_commander_ca.paa) };
             default { "" };
         };
+        if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
+            _icon = QUOTE(PATHTOEF(captives,UI\handcuff_ca.paa));
+        };
         _actions pushBack
             [
                 [
