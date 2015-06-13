@@ -2,7 +2,7 @@
 ["ACE3 Equipment", QGVAR(MenuKey), "Configure DAGR",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
 
     // Statement
@@ -19,7 +19,7 @@
 ["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
 
     // Statement
