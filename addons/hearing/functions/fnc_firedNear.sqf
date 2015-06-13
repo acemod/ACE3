@@ -87,7 +87,7 @@ _caliber = switch (true) do {
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
 
-systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
+//systemChat format["%1 : %2 : %3", _strength, _initSpeed, _parentClasses];
 //systemChat format["%1 : %2 : %3", _weapon, _magazine, _initSpeed];
 
 if (_strength < 0.01) exitWith {};
