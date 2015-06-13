@@ -47,10 +47,12 @@ if (_silencer != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
 };
 
-_audibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "audibleFire");
-
-_loudness = _audibleFireCoef * _audibleFire / 64;
-_strength = _vehAttenuation * (_loudness - (_loudness/50 * _distance)); // linear drop off
+_magazine = (getArray(configFile >> "CfgWeapons" >> _weapon >> "magazines")) select 0;
+_initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+_caliber = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
+if (_caliber <= 0) then { _caliber = 6.5; };
+_loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
+_strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
 
 if (_strength < 0.01) exitWith {};
 
