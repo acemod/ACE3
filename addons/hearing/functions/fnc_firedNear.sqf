@@ -48,7 +48,7 @@ if (_silencer != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
 };
 
-_weaponMagazines = missionNamespace getVariable [QEGVAR(common,weaponMagazines), []];
+_weaponMagazines = missionNamespace getVariable [format[QEGVAR(common,weaponMagazines_%1),_weapon], []];
 if (count _weaponMagazines == 0) then {
     _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
     _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
@@ -58,7 +58,7 @@ if (count _weaponMagazines == 0) then {
             _weaponMagazines append _muzzleMagazines;
         };
     } forEach _muzzles;
-    missionNamespace setVariable [QEGVAR(common,weaponMagazines), _weaponMagazines];
+    missionNamespace setVariable [format[QEGVAR(common,weaponMagazines_%1),_weapon], _weaponMagazines];
 };
 
 _magazine = "";
