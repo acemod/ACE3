@@ -48,7 +48,7 @@ if (_unit == ACE_player) then {
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
 _isDead = false;
-if (!([_unit] call EFUNC(common,isPlayer)) && !_force) then {
+if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
         [_unit, true] call FUNC(setDead);

@@ -2886,6 +2886,12 @@
             <German>KI kann bewusstlos werden</German>
             <Czech>Umožňuje AI upadnout do bezvědomí</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
+            <English>Remote Controlled AI</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
+            <English>Treat remote controlled units as AI not players?</English>
+        </Key>
         <Key ID="STR_ACE_Medical_disabled">
             <English>Disabled</English>
             <Russian>Отключено</Russian>

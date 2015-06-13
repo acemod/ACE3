@@ -59,6 +59,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(remoteControlledAI) {
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
         value = 0;
