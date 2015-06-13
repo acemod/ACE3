@@ -53,7 +53,6 @@ GVAR(earRingingPFH) = [{
             GVAR(beep2) = false;
         };
         if (!GVAR(beep2)) then {
-            systemChat format["Deafness %1", ((_unit getvariable [QGVAR(dv), 0]) - (_unit getvariable [QGVAR(prior), 0]))];
             playSound "ACE_Combat_Deafness";
             GVAR(beep2) = true;
             GVAR(time3) = ACE_time + 5;

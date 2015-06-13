@@ -12,7 +12,7 @@ class CfgSounds {
         titles[] = {};
     };
     class ACE_Combat_Deafness {
-        sound[] = {QUOTE(PATHTOF(sounds\deafness.ogg)),2,1};
+        sound[] = {QUOTE(PATHTOF(sounds\deafness.ogg)),1,1};
         titles[] = {};
     };
 	class ACE_Ring_Backblast {
