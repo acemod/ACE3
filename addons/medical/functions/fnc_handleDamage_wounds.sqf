@@ -28,7 +28,6 @@ _typeOfDamage = _this select 4;
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
 _woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
 
-diag_log format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
 _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
 
 _painToAdd = 0;

@@ -69,7 +69,6 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
     _projectile = "falling";
     _this set [4, "falling"];
 };
-diag_log format["[handleDamage_caching] Projectile: %1; Velocity: %2 m/s; SelectionName: %3; newDamage: %4", _projectile, (velocity _unit) select 2, _selectionName, _newDamage];
 
 // Finished with the current frame, reset variables
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
