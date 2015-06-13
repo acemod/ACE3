@@ -35,7 +35,7 @@ GVAR(earRingingPFH) = [{
     EXPLODE_1_PVT(_this select 0,_unit);
     private ["_prior"];
     _prior = (_unit getvariable [QGVAR(dv), 0]) min 20;
-    hintSilent Str(_prior);
+    
     if (!alive _unit || _prior <= 0) exitWith {
         _unit setVariable [QGVAR(dv), 0];
         _unit setVariable [QGVAR(prior), 0];
