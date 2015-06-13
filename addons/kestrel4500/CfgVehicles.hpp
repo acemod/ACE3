@@ -10,7 +10,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
-                    exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(show) {
                         displayName = CSTRING(ShowKestrel);
                         condition = QUOTE(call FUNC(canShow) && !GVAR(Overlay));
