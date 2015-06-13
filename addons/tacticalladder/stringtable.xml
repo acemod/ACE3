@@ -37,6 +37,7 @@
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Adjust ladder</English>
             <German>Leiter einstellen</German>
+            <Polish>Reguluj drabinę</Polish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
