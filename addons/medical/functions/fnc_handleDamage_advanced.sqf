@@ -39,6 +39,13 @@ _damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
+if (_damageBodyParts select 4 > 2) then {
+    [_unit, QGVAR(leftLegDamage), true] call EFUNC(common,setForceWalkStatus);
+};
+if (_damageBodyParts select 5 > 2) then {
+    [_unit, QGVAR(rightLegDamage), true] call EFUNC(common,setForceWalkStatus);
+};
+
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
