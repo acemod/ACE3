@@ -44,10 +44,11 @@ class CfgMagazines {
         ACE_SetupObject = "ACE_Explosives_Place_Claymore";
         ACE_DelayTime = 1.5;
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command"};
+            SupportedTriggers[] = {"Command", "MK16_Transmitter"};
             class Command {
-            FuseTime = 0.5;
+                FuseTime = 0.5;
             };
+            class MK16_Transmitter: Command {};
         };
     };
 
