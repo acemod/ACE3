@@ -17,6 +17,10 @@
 GVAR(run) = !GVAR(run);
 
 if (GVAR(run)) then {
+    if (GVAR(menuRun) && dialog) then {
+        GVAR(menuRun) = false;
+        closeDialog 0;
+    };
     GVAR(hidden) = true;
     [{
         EXPLODE_1_PVT(_this select 0,_vehicle);

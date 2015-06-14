@@ -69,7 +69,7 @@ GVAR(showOutOfSpace) = false;
 GVAR(PWR) = false;
 GVAR(menuRun) = true;
 [{
-    if (!dialog || GVAR(PWR)) exitWith {
+    if (!dialog || GVAR(PWR) || !GVAR(menuRun)) exitWith {
         closeDialog 266860;
         GVAR(menuRun) = false;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
