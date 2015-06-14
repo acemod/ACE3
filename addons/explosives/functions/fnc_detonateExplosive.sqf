@@ -7,7 +7,7 @@
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
  *     0: Explosive <OBJECT>
- *     1: Fuse time <NUMBER>
+ *     1: Fuse ACE_time <NUMBER>
  *
  * Return Value:
  * None
@@ -25,12 +25,6 @@ _ignoreRange = (_range == -1);
 _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
-
-_helpers = attachedObjects (_item select 0);
-{
-    detach _x;
-    deleteVehicle _x;  
-} forEach _helpers;
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];

@@ -44,10 +44,11 @@ class CfgMagazines {
         ACE_SetupObject = "ACE_Explosives_Place_Claymore";
         ACE_DelayTime = 1.5;
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command"};
+            SupportedTriggers[] = {"Command", "MK16_Transmitter"};
             class Command {
-            FuseTime = 0.5;
+                FuseTime = 0.5;
             };
+            class MK16_Transmitter: Command {};
         };
     };
 
@@ -78,13 +79,13 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"IRSensor","PressurePlate","Timer","Command"};
             class PressurePlate{
-                displayName = $STR_ACE_Explosives_SLAME_Magnetic;
+                displayName = CSTRING(SLAME_Magnetic);
                 digDistance = 0;
                 ammo = "SLAMDirectionalMine_Magnetic_Ammo";
                 pitch = 90;
             };
             class IRSensor{
-                displayName = $STR_ACE_Explosives_SLAME_IRSensor;
+                displayName = CSTRING(SLAME_IRSensor);
             };
             class Timer {
                 ammo = "SLAMDirectionalMine_Timer_Ammo";
@@ -103,10 +104,10 @@ class CfgMagazines {
                 FuseTime = 0.5;
 				ammo = "IEDUrbanBig_Command_Ammo";
             };
-            class DeadmanSwitch: Command{};
-            class Cellphone: Command{};
-            class PressurePlate{
-                displayName = $STR_ACE_Explosives_PressurePlate;
+            class DeadmanSwitch:Command {};
+            class Cellphone:Command {};
+            class PressurePlate {
+                displayName = CSTRING(PressurePlate);
                 digDistance = 0;
                 ammo = "IEDUrbanBig_Range_Ammo";
                 pitch = 0;
@@ -128,7 +129,7 @@ class CfgMagazines {
     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanSmall";
         class ACE_Triggers {
-            SupportedTriggers[] = {"Command","DeadmanSwitch", "Cellphone", "PressurePlate"};
+            SupportedTriggers[] = {"Command", "DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Command {
                 FuseTime = 0.5;
 				ammo = "IEDUrbanSmall_Command_Ammo";
@@ -136,7 +137,7 @@ class CfgMagazines {
             class DeadmanSwitch: Command {};
             class Cellphone: Command {};
             class PressurePlate {
-                displayName = $STR_ACE_Explosives_PressurePlate;
+                displayName = CSTRING(PressurePlate);
                 digDistance = 0;
                 ammo = "IEDUrbanSmall_Range_Ammo";
                 pitch = 0;

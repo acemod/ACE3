@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
+private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
 
 disableSerialization;
 
@@ -57,7 +57,6 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
     _projectile setVelocity _bulletVelocity;
-    _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
 
 
@@ -70,8 +69,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
 
-    _deltaT = time - _time;
-    _args set[2, time];
+    _deltaT = ACE_time - _time;
+    _args set[2, ACE_time];
 
     _bulletVelocity = velocity _shell;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -85,4 +84,4 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 
     _shell setVelocity _bulletVelocity;
 
-}, 0, [_projectile, MK6_82mm_AIR_FRICTION, time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_projectile, MK6_82mm_AIR_FRICTION, ACE_time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;

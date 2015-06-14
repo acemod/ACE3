@@ -26,21 +26,21 @@ _new_view_distance = [_index_requested] call FUNC(returnValue); // changes the s
 _object_view_distance_coeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
 _view_distance_limit = GVAR(limitViewDistance); // Grab the limit
 
-if (_show_prompt) then {
-    _text = if (_new_view_distance <= _view_distance_limit) then {
-            format ["<t align='center'>View Distance: %1m",str(_new_view_distance)];
-        } else {
-            format ["<t align='center'>That option is invalid! The limit is %1m",str(_view_distance_limit)];
-        };
-
-    if (GVAR(objectViewDistanceCoeff) > 0) then {
-        _text = _text + format ["<br/><t align='center'>Object View Distance is %1%2</t>",str(_object_view_distance_coeff * 100),"%"];
-    };
-    [parseText _text,2] call EFUNC(common,displayTextStructured);
-};
-
 setViewDistance (_new_view_distance min _view_distance_limit);
 
 if (_object_view_distance_coeff > 0) then {
-    setObjectViewDistance (_object_view_distance_coeff * _new_view_distance);
+    setObjectViewDistance (_object_view_distance_coeff * viewDistance);
+};
+
+if (_show_prompt) then {
+    _text = if (_new_view_distance <= _view_distance_limit) then {
+            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_infotext"), str(viewDistance)];
+        } else {
+            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_invalid"), str(viewDistance)];
+        };
+
+    if (GVAR(objectViewDistanceCoeff) > 0) then {
+        _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", (localize "STR_ACE_ViewDistance_objectinfotext"), str(_object_view_distance_coeff * 100),"%"];
+    };
+    [parseText _text,2] call EFUNC(common,displayTextStructured);
 };

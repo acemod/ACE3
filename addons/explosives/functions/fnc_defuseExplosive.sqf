@@ -22,10 +22,4 @@ if (GVAR(ExplodeOnDefuse) && _explode < getNumber(ConfigFile >> "CfgAmmo" >> typ
     [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };
 
-{
-    detach _x;
-    deleteVehicle _x;
-    false
-} count (attachedObjects (_explosive));
-
 _unit action ["Deactivate", _unit, _explosive];

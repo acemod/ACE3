@@ -45,7 +45,7 @@ _currentVelocity = [0, (_muzzleVelocity * cos _angleDeg), (_muzzleVelocity * sin
 _currentTime = 0;
 _lastPos = _currentPos;
 
-_kCoefficent = -1 * _relDensity * _airFriction;  //save time in the loop and compute once
+_kCoefficent = -1 * _relDensity * _airFriction;  //save ACE_time in the loop and compute once
 
 while {((_currentVelocity select 2) > 0) || ((_currentPos select 2) >= _heightOfTarget)} do {
     _lastPos = _currentPos;
@@ -64,7 +64,7 @@ _linConversion = linearConversion [(_lastPos select 2), (_currentPos select 2), 
 _middlePos = (_lastPos vectorMultiply (1 - _linConversion)) vectorAdd (_currentPos vectorMultiply (_linConversion));
 // _middlePosOld = (_lastPos vectorAdd _currentPos) vectorMultiply 0.5;
 
-//Same to find travel time
+//Same to find travel ACE_time
 _middleTotalTravelTime = _currentTime - (_timeStep * (1-_linConversion));
 
 //Find shot offset (from crosswind), in degrees

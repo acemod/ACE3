@@ -3,78 +3,112 @@ class CfgVehicles {
     class ModuleEmpty_F;
     class ACE_Module;
 
-    class GVAR(moduleZeusSettings): ACE_Module {
+    class ModuleCurator_F: Module_F {
+        function = QFUNC(bi_moduleCurator);
+    };
+    class ModuleMine_F: ModuleEmpty_F {
+        function = QFUNC(bi_moduleMine);
+    };
+    class ModuleOrdnance_F: Module_F {
+        function = QFUNC(bi_moduleProjectile);
+    };
+    class ModuleRemoteControl_F: Module_F {
+        function = QFUNC(bi_moduleRemoteControl);
+    };
+    class GVAR(moduleSettings): ACE_Module {
         scope = 2;
-        displayName = "Zeus Settings [ACE]";
-        //icon = QUOTE(PATHTOF(iconGoesHere));
-        category = "ACE_zeus";
-        function = QUOTE(DFUNC(moduleZeusSettings));
+        displayName = CSTRING(Settings_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa));
+        category = "ACE";
+        function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
         author = "SilentSpike";
         class Arguments {
             class zeusAscension {
-                displayName = "Ascension Messages";
-                description = "Display global popup messages when a player is assigned as Zeus.";
+                displayName = CSTRING(ascension_DisplayName);
+                description = CSTRING(ascension_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class zeusBird {
-                displayName = "Zeus Eagle";
-                description = "Spawn an eagle that follows the Zeus camera.";
+                displayName = CSTRING(bird_DisplayName);
+                description = CSTRING(bird_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class remoteWind {
-                displayName = "Wind Sounds";
-                description = "Play wind sounds when Zeus remote controls a unit.";
+                displayName = CSTRING(remoteWind_DisplayName);
+                description = CSTRING(remoteWind_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class radioOrdnance {
-                displayName = "Ordnance Warning";
-                description = "Play a radio warning when Zeus uses ordnance.";
+                displayName = CSTRING(radioOrdnance_DisplayName);
+                description = CSTRING(radioOrdnance_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class revealMines {
-                displayName = "Reveal Mines";
-                description = "Reveal mines to allies and/or place map markers.";
+                displayName = CSTRING(revealMines_DisplayName);
+                description = CSTRING(revealMines_Description);
                 typeName = "NUMBER";
                 class values {
                     class disable {
-                        name = "Disabled";
+                        name = "$STR_A3_OPTIONS_DISABLED";
                         value = 0;
                         default = 1;
                     };
                     class partial {
-                        name = "Reveal to Allies";
+                        name = CSTRING(revealMines_partial);
                         value = 1;
                     };
                     class full  {
-                        name = "Allies + Map Markers";
+                        name = CSTRING(revealMines_full);
                         value = 2;
                     };
                 };
             };
         };
         class ModuleDescription {
-            description = "Provides control over various aspects of Zeus.";
+            description = CSTRING(Settings_Description);
             sync[] = {};
         };
     };
-
-    class ModuleCurator_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleCurator));
+    class GVAR(moduleBase): Module_F {
+        author = "SilentSpike";
+        category = "ACE";
+        scopeCurator = 2;
     };
-    class ModuleMine_F: ModuleEmpty_F {
-        function = QUOTE(DFUNC(bi_moduleMine));
+    class GVAR(moduleCaptive): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleCaptive_DisplayName);
+        function = QFUNC(moduleCaptive);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
+        class ModuleDescription {
+            description = "Flips the capture state of the specified unit.";
+            sync[] = {};
+        };
     };
-    class ModuleOrdnance_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleProjectile));
+    class GVAR(moduleSurrender): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSurrender_DisplayName);
+        function = QFUNC(moduleSurrender);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
+        class ModuleDescription {
+            description = "Flips the surrender state of the specified unit.";
+            sync[] = {};
+        };
     };
-    class ModuleRemoteControl_F: Module_F {
-        function = QUOTE(DFUNC(bi_moduleRemoteControl));
+    class GVAR(moduleUnconscious): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleUnconscious_DisplayName);
+        function = QFUNC(moduleUnconscious);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        class ModuleDescription {
+            description = "Flips the unconscious state of the specified unit.";
+            sync[] = {};
+        };
     };
 };

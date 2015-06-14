@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="tacticalladder">
+        <Key ID="STR_ACE_TacticalLadder_DisplayName">
+            <English>Telescopic Ladder</English>
+            <German>Teleskopleiter</German>
+            <Russian>Телескопическая лестница</Russian>
+            <Polish>Drabina teleskopowa</Polish>
+            <Spanish>Telescopic Ladder</Spanish>
+            <French>Telescopic Ladder</French>
+            <Czech>Teleskopický žebřík</Czech>
+            <Italian>Telescopic Ladder</Italian>
+            <Hungarian>Telescopic Ladder</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Deploy">
+            <English>Deploy ladder</English>
+            <German>Leiter aufbauen</German>
+            <Russian>Установить лестницу</Russian>
+            <Polish>Rozłóż drabinę</Polish>
+            <Spanish>Deploy ladder</Spanish>
+            <French>Deploy ladder</French>
+            <Czech>Rozložit žebřík</Czech>
+            <Italian>Deploy ladder</Italian>
+            <Hungarian>Deploy ladder</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Drop">
+            <English>Drop ladder</English>
+            <German>Leiter ablegen</German>
+            <Russian>Положить лестницу</Russian>
+            <Polish>Zostaw drabinę</Polish>
+            <Spanish>Drop ladder</Spanish>
+            <French>Drop ladder</French>
+            <Czech>Položit žebřík</Czech>
+            <Italian>Drop ladder</Italian>
+            <Hungarian>Drop ladder</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Adjust">
+            <English>Adjust ladder</English>
+            <German>Leiter einstellen</German>
+            <Polish>Reguluj drabinę</Polish>
+            <Czech>Upravit žebřík</Czech>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Position">
+            <English>Position ladder</English>
+            <German>Leiter positionieren</German>
+            <Russian>Перенести лестницу</Russian>
+            <Polish>Postaw drabinę</Polish>
+            <Spanish>Position ladder</Spanish>
+            <French>Position ladder</French>
+            <Czech>Umístit žebřík</Czech>
+            <Italian>Position ladder</Italian>
+            <Hungarian>Position ladder</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_Pickup">
+            <English>Pickup ladder</English>
+            <German>Leiter aufnehmen</German>
+            <Russian>Взять лестницу</Russian>
+            <Polish>Zabierz drabinę</Polish>
+            <Spanish>Pickup ladder</Spanish>
+            <French>Pickup ladder</French>
+            <Czech>Vzít žebřík</Czech>
+            <Italian>Pickup ladder</Italian>
+            <Hungarian>Pickup ladder</Hungarian>
+        </Key>
+    </Package>
+</Project>
