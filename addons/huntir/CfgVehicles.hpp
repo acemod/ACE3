@@ -20,6 +20,7 @@ class CfgVehicles {
     class Parachute_02_base_F;
     class ACE_HuntIR: Parachute_02_base_F {
         scope = 1;
+        destrType = "DestructDefault";
         displayName = "HuntIR";
         model = PATHTOF(data\huntir.p3d);
         castDriverShadow = 0;

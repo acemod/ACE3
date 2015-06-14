@@ -25,4 +25,4 @@ _callBack = [_this, 3, {}, [{}]] call BIS_fnc_Param;
 _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushback [_value, _time, _callBack];
 _unit setvariable [QGVAR(heartRateAdjustments), _adjustment ];
-["Medical_onHeartRateAdjustmentAdded", [_unit, _value, _time]] call ace_common_fnc_localEvent;
+["Medical_onHeartRateAdjustmentAdded", [_unit, _value, _time]] call EFUNC(common,localEvent);

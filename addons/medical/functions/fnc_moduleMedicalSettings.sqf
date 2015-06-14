@@ -30,6 +30,7 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(playerDamageThreshold), "playerDamageThreshold"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(AIDamageThreshold), "AIDamageThreshold"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(enableUnconsciousnessAI), "enableUnconsciousnessAI"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(remoteControlledAI), "remoteControlledAI"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(preventInstaDeath), "preventInstaDeath"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bleedingCoefficient), "bleedingCoefficient"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(painCoefficient), "painCoefficient"] call EFUNC(common,readSettingFromModule);

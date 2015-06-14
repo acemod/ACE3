@@ -219,7 +219,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
-            treatmentTime = 10;
+            treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
@@ -328,6 +328,7 @@ class ACE_Medical_Advanced {
                 class Large {
                     name = CSTRING(Wounds_Abrasion_Large);
                     minDamage = 0.3;
+                    maxDamage = 0.5;
                     bleedingRate = 0.0002;
                 };
             };
