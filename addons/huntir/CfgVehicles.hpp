@@ -19,17 +19,26 @@ class CfgVehicles {
     
     class Parachute_02_base_F;
     class ACE_HuntIR: Parachute_02_base_F {
-        scope = 1;
+        author = ECSTRING(common,ACETeam);
+        castDriverShadow = 0;
         destrType = "DestructDefault";
         displayName = "HuntIR";
         model = PATHTOF(data\huntir.p3d);
-        castDriverShadow = 0;
-        soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
+        scope = 1;
         soundCrash[] = {"", db-30, 1 };
+        soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
         soundLandCrash[] = {"", db-30, 1 };
         soundWaterCrash[] = {"", db10, 1 };
-        mapSize = 0;
         class HitPoints {
+            class HitEngine {
+                armor = 0;
+                material = -1;
+                name = "";
+                visual = "";
+                radius = 0;
+                passThrough = 0;
+                explosionShielding = 0;
+            };
             class HitParachute {
                 armor = 0.0001;
                 material = -1;
