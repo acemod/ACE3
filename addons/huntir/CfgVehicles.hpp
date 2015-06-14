@@ -29,6 +29,26 @@ class CfgVehicles {
         soundLandCrash[] = {"", db-30, 1 };
         soundWaterCrash[] = {"", db10, 1 };
         mapSize = 0;
+        class HitPoints {
+            class HitParachute {
+                armor = 0.0001;
+                material = -1;
+                name = "parachute";
+                visual = "";
+                radius = 0.2;
+                passThrough = 1;
+                explosionShielding = 0;
+            };
+            class HitCamera {
+                armor = 0.001;
+                material = -1;
+                name = "camera";
+                visual = "";
+                radius = 0.025;
+                passThrough = 1;
+                explosionShielding = 1;
+            };
+        };
     };
 
     class Item_Base_F;
