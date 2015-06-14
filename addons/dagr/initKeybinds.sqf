@@ -14,7 +14,7 @@
     true
 },
 {false},
-[199, [false, true, false]], false] call cba_fnc_addKeybind;  // (CTRL + Home)
+[0, [false, true, false]], false] call cba_fnc_addKeybind;  // (empty default key)
 
 ["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
 {
@@ -27,4 +27,4 @@
     true
 },
 {false},
-[199, [false, false, false]], false] call cba_fnc_addKeybind;  // (Home)
+[0, [false, false, false]], false] call cba_fnc_addKeybind;  // (empty default key)
