@@ -563,12 +563,15 @@
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
+            <Spanish>Seleccionar dispositivo de mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
+            <Spanish>Cerrar dispositivo de mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
+            <Spanish>Cambiar dispositivos de mano</Spanish>
         </Key>
     </Package>
 </Project>
