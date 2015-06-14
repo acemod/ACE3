@@ -1,0 +1,336 @@
+##########################################
+Ammo Class: B_556x45_Ball
+MaxRanges (m): [300, 500, 500]
+MuzzleVelocities (m/s): [750, 870, 910]
+Max. velocity difference (m/s): 25.51
+Max. drop difference (cm): 2.05
+Max. tof difference (ms): 10.0
+Optimal airFriction: 0.00126466
+##########################################
+Ammo Class: ACE_556x45_Ball_Mk262
+MaxRanges (m): [600, 600]
+MuzzleVelocities (m/s): [810, 840]
+Max. velocity difference (m/s): 14.9
+Max. drop difference (cm): 2.67
+Max. tof difference (ms): 10.0
+Optimal airFriction: 0.00109563
+##########################################
+Ammo Class: ACE_556x45_Ball_Mk318
+MaxRanges (m): [300, 500, 500]
+MuzzleVelocities (m/s): [780, 880, 950]
+Max. velocity difference (m/s): 20.86
+Max. drop difference (cm): 2.29
+Max. tof difference (ms): 9.0
+Optimal airFriction: 0.00123318
+##########################################
+Ammo Class: ACE_556x45_Ball_M995_AP
+MaxRanges (m): [400, 500]
+MuzzleVelocities (m/s): [820, 880]
+Max. velocity difference (m/s): 17.92
+Max. drop difference (cm): 1.25
+Max. tof difference (ms): 7.0
+Optimal airFriction: 0.00123272
+##########################################
+Ammo Class: ACE_545x39_Ball_7N6M
+MaxRanges (m): [400, 500]
+MuzzleVelocities (m/s): [780, 880, 920]
+Max. velocity difference (m/s): 19.71
+Max. drop difference (cm): 2.04
+Max. tof difference (ms): 8.0
+Optimal airFriction: 0.00114744
+##########################################
+Ammo Class: B_65x39_Caseless
+MaxRanges (m): [400, 800, 800]
+MuzzleVelocities (m/s): [730, 800, 830]
+Max. velocity difference (m/s): 22.17
+Max. drop difference (cm): 4.83
+Max. tof difference (ms): 16.0
+Optimal airFriction: 0.00075308
+##########################################
+Ammo Class: ACE_65x47_Ball_Scenar
+MaxRanges (m): [500, 800]
+MuzzleVelocities (m/s): [730, 830]
+Max. velocity difference (m/s): 16.94
+Max. drop difference (cm): 2.67
+Max. tof difference (ms): 9.0
+Optimal airFriction: 0.00067037
+##########################################
+Ammo Class: ACE_65_Creedmor_Ball
+MaxRanges (m): [600, 1000]
+MuzzleVelocities (m/s): [750, 860]
+Max. velocity difference (m/s): 21.08
+Max. drop difference (cm): 4.29
+Max. tof difference (ms): 14.0
+Optimal airFriction: 0.00060887
+##########################################
+Ammo Class: B_762x51_Ball
+MaxRanges (m): [500, 800]
+MuzzleVelocities (m/s): [700, 833]
+Max. velocity difference (m/s): 27.7
+Max. drop difference (cm): 6.71
+Max. tof difference (ms): 23.0
+Optimal airFriction: 0.00100957
+##########################################
+Ammo Class: ACE_762x51_Ball_M118LR
+MaxRanges (m): [600, 800]
+MuzzleVelocities (m/s): [750, 795]
+Max. velocity difference (m/s): 23.28
+Max. drop difference (cm): 3.65
+Max. tof difference (ms): 17.0
+Optimal airFriction: 0.00082828
+##########################################
+Ammo Class: ACE_762x51_Ball_Mk316_Mod_0
+MaxRanges (m): [600, 800]
+MuzzleVelocities (m/s): [780, 810]
+Max. velocity difference (m/s): 23.39
+Max. drop difference (cm): 3.25
+Max. tof difference (ms): 16.0
+Optimal airFriction: 0.00082029
+##########################################
+Ammo Class: ACE_762x51_Ball_Mk319_Mod_0
+MaxRanges (m): [600, 800]
+MuzzleVelocities (m/s): [840, 910]
+Max. velocity difference (m/s): 19.18
+Max. drop difference (cm): 3.9
+Max. tof difference (ms): 17.0
+Optimal airFriction: 0.00102338
+##########################################
+Ammo Class: ACE_762x51_Ball_M993_AP
+MaxRanges (m): [600, 800]
+MuzzleVelocities (m/s): [875, 930]
+Max. velocity difference (m/s): 19.39
+Max. drop difference (cm): 4.08
+Max. tof difference (ms): 18.0
+Optimal airFriction: 0.00107148
+##########################################
+Ammo Class: ACE_30_06_M1_Ball
+MaxRanges (m): [600, 800, 900]
+MuzzleVelocities (m/s): [700, 800, 840]
+Max. velocity difference (m/s): 14.56
+Max. drop difference (cm): 7.89
+Max. tof difference (ms): 15.0
+Optimal airFriction: 0.000809
+##########################################
+Ammo Class: ACE_7_Remington_Magnum_Ball
+MaxRanges (m): [600, 800, 1000]
+MuzzleVelocities (m/s): [720, 812, 830]
+Max. velocity difference (m/s): 17.47
+Max. drop difference (cm): 4.54
+Max. tof difference (ms): 11.0
+Optimal airFriction: 0.00056738
+##########################################
+Ammo Class: ACE_243_Winchester_Ball
+MaxRanges (m): [700, 900, 900]
+MuzzleVelocities (m/s): [830, 900, 920]
+Max. velocity difference (m/s): 22.55
+Max. drop difference (cm): 4.78
+Max. tof difference (ms): 13.0
+Optimal airFriction: 0.00067875
+##########################################
+Ammo Class: ACE_762x67_Ball_Mk248_Mod_0
+MaxRanges (m): [800, 900, 900]
+MuzzleVelocities (m/s): [865, 900, 924]
+Max. velocity difference (m/s): 24.43
+Max. drop difference (cm): 5.17
+Max. tof difference (ms): 15.0
+Optimal airFriction: 0.0007053
+##########################################
+Ammo Class: ACE_762x67_Ball_Mk248_Mod_1
+MaxRanges (m): [800, 900, 900]
+MuzzleVelocities (m/s): [847, 867, 877]
+Max. velocity difference (m/s): 20.16
+Max. drop difference (cm): 2.99
+Max. tof difference (ms): 12.0
+Optimal airFriction: 0.00061188
+##########################################
+Ammo Class: ACE_762x67_Ball_Berger_Hybrid_OTM
+MaxRanges (m): [900, 1000, 1000]
+MuzzleVelocities (m/s): [800, 853, 884]
+Max. velocity difference (m/s): 19.65
+Max. drop difference (cm): 8.25
+Max. tof difference (ms): 16.0
+Optimal airFriction: 0.00053733
+##########################################
+Ammo Class: B_762x54_Ball
+MaxRanges (m): [500, 800, 800]
+MuzzleVelocities (m/s): [700, 820, 833]
+Max. velocity difference (m/s): 14.61
+Max. drop difference (cm): 5.74
+Max. tof difference (ms): 15.0
+Optimal airFriction: 0.00100023
+##########################################
+Ammo Class: ACE_762x35_Ball
+MaxRanges (m): [400, 500]
+MuzzleVelocities (m/s): [620, 675]
+Max. velocity difference (m/s): 4.17
+Max. drop difference (cm): 1.71
+Max. tof difference (ms): 4.0
+Optimal airFriction: 0.00128942
+##########################################
+Ammo Class: ACE_762x39_Ball
+MaxRanges (m): [400, 600]
+MuzzleVelocities (m/s): [650, 750]
+Max. velocity difference (m/s): 13.0
+Max. drop difference (cm): 3.78
+Max. tof difference (ms): 8.0
+Optimal airFriction: 0.00151621
+##########################################
+Ammo Class: ACE_762x54_Ball_7T2
+MaxRanges (m): [500, 800, 800]
+MuzzleVelocities (m/s): [680, 750, 800]
+Max. velocity difference (m/s): 9.79
+Max. drop difference (cm): 7.89
+Max. tof difference (ms): 11.0
+Optimal airFriction: 0.00103989
+##########################################
+Ammo Class: ACE_303_Ball
+MaxRanges (m): [900, 1000]
+MuzzleVelocities (m/s): [748, 765]
+Max. velocity difference (m/s): 7.24
+Max. drop difference (cm): 5.65
+Max. tof difference (ms): 11.0
+Optimal airFriction: 0.0008349
+##########################################
+Ammo Class: B_93x64_Ball
+MaxRanges (m): [900, 1000]
+MuzzleVelocities (m/s): [850, 880]
+Max. velocity difference (m/s): 11.18
+Max. drop difference (cm): 9.08
+Max. tof difference (ms): 15.0
+Optimal airFriction: 0.00108571
+##########################################
+Ammo Class: B_408_Ball
+MaxRanges (m): [1600, 1600]
+MuzzleVelocities (m/s): [905, 915]
+Max. velocity difference (m/s): 19.47
+Max. drop difference (cm): 9.17
+Max. tof difference (ms): 22.0
+Optimal airFriction: 0.00038944
+##########################################
+Ammo Class: ACE_106x83mm_Ball
+MaxRanges (m): [1400, 1400]
+MuzzleVelocities (m/s): [955, 965]
+Max. velocity difference (m/s): 23.44
+Max. drop difference (cm): 8.93
+Max. tof difference (ms): 25.0
+Optimal airFriction: 0.00052047
+##########################################
+Ammo Class: B_338_Ball
+MaxRanges (m): [1100, 1300]
+MuzzleVelocities (m/s): [880, 925]
+Max. velocity difference (m/s): 31.95
+Max. drop difference (cm): 9.97
+Max. tof difference (ms): 33.0
+Optimal airFriction: 0.00059133
+##########################################
+Ammo Class: B_338_NM_Ball
+MaxRanges (m): [1100, 1300]
+MuzzleVelocities (m/s): [790, 820]
+Max. velocity difference (m/s): 24.5
+Max. drop difference (cm): 8.87
+Max. tof difference (ms): 27.0
+Optimal airFriction: 0.00052201
+##########################################
+Ammo Class: ACE_338_Ball
+MaxRanges (m): [1200, 1300]
+MuzzleVelocities (m/s): [800, 830]
+Max. velocity difference (m/s): 23.06
+Max. drop difference (cm): 11.27
+Max. tof difference (ms): 25.0
+Optimal airFriction: 0.0005219
+##########################################
+Ammo Class: ACE_338_Ball_API526
+MaxRanges (m): [1200, 1300]
+MuzzleVelocities (m/s): [880, 920]
+Max. velocity difference (m/s): 17.05
+Max. drop difference (cm): 14.52
+Max. tof difference (ms): 29.0
+Optimal airFriction: 0.00069611
+##########################################
+Ammo Class: B_127x99_Ball
+MaxRanges (m): [1300, 1300]
+MuzzleVelocities (m/s): [895, 905]
+Max. velocity difference (m/s): 19.44
+Max. drop difference (cm): 9.36
+Max. tof difference (ms): 24.0
+Optimal airFriction: 0.00057503
+##########################################
+Ammo Class: ACE_127x99_Ball_AMAX
+MaxRanges (m): [1600, 1600]
+MuzzleVelocities (m/s): [855, 865]
+Max. velocity difference (m/s): 16.61
+Max. drop difference (cm): 9.1
+Max. tof difference (ms): 20.0
+Optimal airFriction: 0.00036645
+##########################################
+Ammo Class: B_127x108_Ball
+MaxRanges (m): [1300, 1300]
+MuzzleVelocities (m/s): [815, 825]
+Max. velocity difference (m/s): 10.66
+Max. drop difference (cm): 11.74
+Max. tof difference (ms): 22.0
+Optimal airFriction: 0.000638
+##########################################
+Ammo Class: ACE_762x51_Ball_Subsonic
+MaxRanges (m): [200, 300]
+MuzzleVelocities (m/s): [305, 340]
+Max. velocity difference (m/s): 7.92
+Max. drop difference (cm): 3.77
+Max. tof difference (ms): 9.0
+Optimal airFriction: 0.00049899
+##########################################
+Ammo Class: B_9x21_Ball
+MaxRanges (m): [200, 300, 300]
+MuzzleVelocities (m/s): [440, 460, 480]
+Max. velocity difference (m/s): 37.94
+Max. drop difference (cm): 5.27
+Max. tof difference (ms): 31.0
+Optimal airFriction: 0.00226847
+##########################################
+Ammo Class: ACE_9x18_Ball_57N181S
+MaxRanges (m): [100, 200, 200]
+MuzzleVelocities (m/s): [298, 330, 350]
+Max. velocity difference (m/s): 18.03
+Max. drop difference (cm): 4.41
+Max. tof difference (ms): 17.0
+Optimal airFriction: 0.00190333
+##########################################
+Ammo Class: ACE_9x19_Ball
+MaxRanges (m): [100, 200, 200]
+MuzzleVelocities (m/s): [340, 370, 400]
+Max. velocity difference (m/s): 17.59
+Max. drop difference (cm): 6.56
+Max. tof difference (ms): 10.0
+Optimal airFriction: 0.0018577
+##########################################
+Ammo Class: ACE_10x25_Ball
+MaxRanges (m): [200, 300, 300]
+MuzzleVelocities (m/s): [360, 400, 430]
+Max. velocity difference (m/s): 32.8
+Max. drop difference (cm): 8.8
+Max. tof difference (ms): 34.0
+Optimal airFriction: 0.00181928
+##########################################
+Ammo Class: ACE_765x17_Ball
+MaxRanges (m): [100, 200, 200]
+MuzzleVelocities (m/s): [282, 300, 320]
+Max. velocity difference (m/s): 11.18
+Max. drop difference (cm): 4.3
+Max. tof difference (ms): 13.0
+Optimal airFriction: 0.00163356
+##########################################
+Ammo Class: B_127x54_Ball
+MaxRanges (m): [500, 500]
+MuzzleVelocities (m/s): [295, 305]
+Max. velocity difference (m/s): 2.28
+Max. drop difference (cm): 4.52
+Max. tof difference (ms): 5.0
+Optimal airFriction: 0.00019268
+##########################################
+Ammo Class: B_45ACP_Ball
+MaxRanges (m): [100, 200, 200]
+MuzzleVelocities (m/s): [230, 250, 285]
+Max. velocity difference (m/s): 3.5
+Max. drop difference (cm): 2.99
+Max. tof difference (ms): 6.0
+Optimal airFriction: 0.00081221

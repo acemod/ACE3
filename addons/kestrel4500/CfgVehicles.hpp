@@ -4,31 +4,31 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(open) {
-                    displayName = "$STR_ACE_Kestrel4500_OpenKestrel";
+                    displayName = CSTRING(OpenKestrel);
                     condition = QUOTE(call FUNC(canShow) && !GVAR(Kestrel4500));
                     statement = QUOTE(call FUNC(createKestrelDialog));
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
                     exceptions[] = {"notOnMap"};
-                };
-                class GVAR(show) {
-                    displayName = "$STR_ACE_Kestrel4500_ShowKestrel";
-                    condition = QUOTE(call FUNC(canShow) && !GVAR(Overlay));
-                    statement = QUOTE(call FUNC(displayKestrel));
-                    showDisabled = 0;
-                    priority = 0.2;
-                    icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
-                };
-                class GVAR(hide) {
-                    displayName = "$STR_ACE_Kestrel4500_HideKestrel";
-                    condition = QUOTE(GVAR(Overlay));
-                    statement = QUOTE(call FUNC(displayKestrel));
-                    showDisabled = 0;
-                    priority = 0.3;
-                    icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    class GVAR(show) {
+                        displayName = CSTRING(ShowKestrel);
+                        condition = QUOTE(call FUNC(canShow) && !GVAR(Overlay));
+                        statement = QUOTE(call FUNC(displayKestrel));
+                        showDisabled = 0;
+                        priority = 0.2;
+                        icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+                    class GVAR(hide) {
+                        displayName = CSTRING(HideKestrel);
+                        condition = QUOTE(GVAR(Overlay));
+                        statement = QUOTE(call FUNC(displayKestrel));
+                        showDisabled = 0;
+                        priority = 0.3;
+                        icon = QUOTE(PATHTOF(UI\Kestrel4500_Icon.paa));
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
                 };
             };
         };

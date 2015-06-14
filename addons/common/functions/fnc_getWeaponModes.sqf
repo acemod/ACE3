@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_weapon", "_modes"];
+private ["_modes"];
 
-_weapon = _this select 0;
+PARAMS_1(_weapon);
 
 _modes = [];
 {

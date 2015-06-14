@@ -3,8 +3,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_SpareBarrel: ACE_ItemCore {
-        displayname = "$STR_ACE_Overheating_SpareBarrelName";
-        descriptionshort = "$STR_ACE_Overheating_SpareBarrelDescription";
+        displayname = CSTRING(SpareBarrelName);
+        descriptionshort = CSTRING(SpareBarrelDescription);
         //model = "";
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         scope = 2;
@@ -40,7 +40,21 @@ class CfgWeapons {
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
+    
+    class MMG_02_base_F: Rifle_Long_Base_F {
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
 
+    class MMG_01_base_F: Rifle_Long_Base_F {
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
+    
     class arifle_MX_SW_F : arifle_MX_Base_F {
         ACE_clearJamAction = "";              // Custom jam clearing action. Use empty string to undefine.
         ACE_Overheating_allowSwapBarrel = 1;  // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.

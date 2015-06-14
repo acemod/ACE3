@@ -3,7 +3,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_RepackMagazines {
-                displayName = "$STR_ACE_MagazineRepack_RepackMagazines";
+                displayName = CSTRING(RepackMagazines);
                 condition = QUOTE(true);
                 exceptions[] = {"isNotInside"};
                 insertChildren = QUOTE(_this call FUNC(getMagazineChildren));

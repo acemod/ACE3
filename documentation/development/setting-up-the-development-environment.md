@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Setting Up The Development Environment
+description: This page describes how you can setup your development environment for ACE3, allowing you to properly build ACE and utilize file patching. 
 group: development
 parent: wiki
 order: 0
@@ -16,8 +17,8 @@ This page describes how you can setup your development environment for ACE3, all
 - A properly setup P-drive
 - Run ArmA 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - Python 3.x, available [here](http://www.python.org)
-- The following Mikero Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, Rapify, MakePBO, PBOProject
-- A properly setup PATH variable (containing Python and the Mikero tools)
+- The following Mikero Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, DeOgg, Rapify, MakePBO, PBOProject
+- A properly setup PATH variable (containing Python ,the Mikero tools and git)
 
 
 ## 2. Why so complicated?
@@ -86,6 +87,7 @@ File Patching allows you to change the files in an addon while the game is runni
 ### 7.1 Enabling File Patching
 
 There are two ways to enable file patching:
+
 - Load cba_cache_disable.pbo (included in CBA's optional folder)
 - Add the following to your test missions description.ext:
 

@@ -1,28 +1,26 @@
 class CfgVehicles {
     class ACE_Module;
-    // TODO localization for all the modules
     class ACE_moduleAllowConfigExport: ACE_Module {
         scope = 2;
-        displayName = "Allow Config Export [ACE]";
+        displayName = CSTRING(AllowConfigExport_Module_DisplayName);
         //icon = "";
         category = "ACE";
         function = QUOTE(DFUNC(moduleAllowConfigExport));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class allowconfigurationExport {
-                displayName = "Allow";
-                description = "Allow export of all settings to a server config formatted.";
+                displayName = CSTRING(AllowConfigExport_allowconfigurationExport_DisplayName);
+                description = CSTRING(AllowConfigExport_allowconfigurationExport_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.";
+            description = CSTRING(AllowConfigExport_Module_Description);
             sync[] = {};
         };
     };
-
 };

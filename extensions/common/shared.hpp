@@ -3,6 +3,8 @@
 #include "targetver.h"
 #include <assert.h>
 #include <stdio.h>
+#include <math.h>
+
 #include <string>
 #include <vector>
 #include <list>
@@ -23,8 +25,11 @@
 #define EXTENSION_RETURN() return;
 #endif
 
-#ifdef _WINDOWS
+#ifdef _WIN32
 #define sleep(x) Sleep(x)
+#else
+#define _strdup strdup
+#define strtok_s strtok_r
 #endif
 
 namespace ace {
@@ -39,6 +44,11 @@ namespace ace {
 
     std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems);
     std::vector<std::string> split(const std::string &s, char delim);
+
+    template<typename T, typename... Args>
+    std::unique_ptr<T> make_unique(Args&&... args) {
+        return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+    }
 
     // trim from start
     static inline std::string &ltrim(std::string &s) {
@@ -74,4 +84,23 @@ namespace ace {
 #define ACE_ASSERT assert()
 #else
 #define ACE_ASSERT ace::runtime_assert()
+#endif
+
+#ifndef _WIN32
+#define __stdcall 
+#endif
+
+#if defined(_MSC_VER)
+    //  Microsoft 
+    #define EXPORT __declspec(dllexport)
+    #define IMPORT __declspec(dllimport)
+#elif defined(_GCC)
+    //  GCC
+    #define EXPORT __attribute__((visibility("default")))
+    #define IMPORT
+#else
+    //  do nothing and hope for the best?
+    #define EXPORT
+    #define IMPORT
+    #pragma warning Unknown dynamic link import/export semantics.
 #endif

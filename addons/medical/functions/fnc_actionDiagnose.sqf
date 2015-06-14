@@ -18,28 +18,28 @@ private ["_caller", "_target", "_genericMessages"];
 _caller = _this select 0;
 _target = _this select 1;
 
-_genericMessages = ["STR_ACE_Medical_diagnoseMessage"];
+_genericMessages = [LSTRING(diagnoseMessage)];
 
 _genericMessages pushBack ([_target] call EFUNC(common,getName));
 if (alive _target) then {
-    _genericMessages pushback "STR_ACE_Medical_diagnoseAlive";
+    _genericMessages pushback LSTRING(diagnoseAlive);
 } else {
-    _genericMessages pushback "STR_ACE_Medical_diagnoseDead";
+    _genericMessages pushback LSTRING(diagnoseDead);
 };
 if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
 	if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-		_genericMessages pushback "STR_ACE_Medical_lostBloodALot";
+		_genericMessages pushback LSTRING(lostBloodALot);
 	} else {
-		_genericMessages pushback "STR_ACE_Medical_lostBlood";
+		_genericMessages pushback LSTRING(lostBlood);
 	};
 } else {
-    _genericMessages pushback "STR_ACE_Medical_noBloodloss";
+    _genericMessages pushback LSTRING(noBloodloss);
 };
 
 if (_target getvariable[QGVAR(hasPain), false]) then {
-    _genericMessages pushback "STR_ACE_Medical_inPain";
+    _genericMessages pushback LSTRING(inPain);
 } else {
-    _genericMessages pushback "STR_ACE_Medical_noPain";
+    _genericMessages pushback LSTRING(noPain);
 };
 
 ["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);

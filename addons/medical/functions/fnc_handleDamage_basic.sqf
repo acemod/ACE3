@@ -54,7 +54,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
         [{
             private ["_unit", "_damagesum"];
             _unit = (_this select 0) select 0;
-            if (diag_tickTime - (_unit getvariable [QGVAR(structDamagePFH),-2]) >= 2) then {
+            if (ACE_diagTime - (_unit getvariable [QGVAR(structDamagePFH),-2]) >= 2) then {
                  _unit setVariable [QGVAR(structDamagePFH), nil];
                 _damagesum = (_unit getHitPointDamage "HitHead") +
                     (_unit getHitPointDamage "HitBody") +
@@ -69,7 +69,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
             };
         }, 0, [_unit]] call CBA_fnc_addPerFrameHandler;
     };
-    _unit setVariable [QGVAR(structDamagePFH), diag_tickTime]; // Assign starting time or reset it
+    _unit setVariable [QGVAR(structDamagePFH), ACE_diagTime]; // Assign starting ACE_time or reset it
 };
 
 _newDamage = _damage - (damage _unit);

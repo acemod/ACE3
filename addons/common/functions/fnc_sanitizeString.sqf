@@ -12,10 +12,10 @@
  */
 #include "script_component.hpp"
 
-private ["_string", "_removeTags", "_array", "_arrayNew"];
+private ["_array", "_arrayNew"];
 
-_string = _this select 0;
-_removeTags = _this select 1;
+PARAMS_2(_string,_removeTags);
+
 if (isNil "_removeTags") then {_removeTags = false};
 
 _array = toArray _string;

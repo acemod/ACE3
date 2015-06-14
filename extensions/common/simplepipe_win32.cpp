@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #include "simplepipe_win32.hpp"
 #include <Sddl.h>
 #include <AccCtrl.h>
@@ -177,3 +179,5 @@ namespace ace {
       return &buf_[0];
     }
 }
+
+#endif

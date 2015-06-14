@@ -48,10 +48,12 @@ if (GVAR(level) < 2) then {
 } else {
     if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
         // Because of the config changes, we cannot properly disable the medical system for a unit.
-        // lets use basic for the time being..
+        // lets use basic for the ACE_time being..
         _damageReturn = _this call FUNC(handleDamage_basic);
     };
     _newDamage = _this call FUNC(handleDamage_caching);
+    // handleDamage_caching may have modified the projectile string
+    _projectile = _this select 4;
     _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
     _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
@@ -83,6 +85,10 @@ if (GVAR(level) < 2) then {
 
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
+    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
+        [_unit] call EFUNC(common,unloadPerson);
+    };
+
     private "_delayedUnconsicous";
     _delayedUnconsicous = false;
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {

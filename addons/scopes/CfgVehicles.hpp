@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(adjustZero) {
                     // Updates the zero reference
-                    displayName = "$STR_ACE_Scopes_AdjustZero";
+                    displayName = CSTRING(AdjustZero);
                     condition = QUOTE([ACE_player] call FUNC(canAdjustZero));
                     statement = QUOTE([ACE_player] call FUNC(adjustZero));
                     showDisabled = 0;

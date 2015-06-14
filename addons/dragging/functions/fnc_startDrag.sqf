@@ -22,7 +22,7 @@ private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
 if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
-    [localize "STR_ACE_Dragging_UnableToDrag"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 // add a primary weapon if the unit has none.
@@ -43,12 +43,12 @@ _unit selectWeapon primaryWeapon _unit;
 // move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
-    _target setPos (getPos _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
+    _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
 
     [_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
 };
 
-// prevents draging and carrying at the same time
+// prevents draging and carrying at the same ACE_time
 _unit setVariable [QGVAR(isDragging), true, true];
 
-[FUNC(startDragPFH), 0.2, [_unit, _target, time + 5]] call CBA_fnc_addPerFrameHandler;
+[FUNC(startDragPFH), 0.2, [_unit, _target, ACE_time + 5]] call CBA_fnc_addPerFrameHandler;

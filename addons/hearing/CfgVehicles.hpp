@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class ACE_PutInEarplugs {
-                    displayName = "$STR_ACE_Hearing_EarPlugs_On";
+                    displayName = CSTRING(EarPlugs_On);
                     condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player} );
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
@@ -14,7 +14,7 @@ class CfgVehicles {
                     hotkey = "E";
                 };
                 class ACE_RemoveEarplugs {
-                    displayName = "$STR_ACE_Hearing_EarPlugs_Off";
+                    displayName = CSTRING(EarPlugs_Off);
                     condition = QUOTE( [_player] call FUNC(hasEarPlugsIn) );
                     exceptions[] = {"isNotInside"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
@@ -93,26 +93,25 @@ class CfgVehicles {
         };
     };
 
-
-    class Module_F;
-    class ACE_ModuleHearing: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+    class ACE_Module;
+    class ACE_ModuleHearing: ACE_Module {
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Hearing";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleHearing);
         scope = 2;
         isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
-                displayName = "Enable combat deafness?";
-                description = "Enable combat deafness?";
+                displayName = CSTRING(CombatDeafness_DisplayName);
+                description = CSTRING(CombatDeafness_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; default = 1; };
-                    class No { name = "No"; value = 0; };
-                };
+                defaultValue = 1;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
         };
     };
 };
