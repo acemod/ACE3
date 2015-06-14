@@ -2210,12 +2210,14 @@
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Bandażowanie usuwa ślady krwi</Polish>
             <Czech>Obvázání odstraňuje skvrny od krve</Czech>
+            <Spanish>El vendaje elimina las manchas de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
             <German>Schmerzen werden nur vorübergehend unterdrückt</German>
             <Polish>Ból jest tymczasowo zwalczany</Polish>
             <Czech>Bolest je potlačena pouze dočasně</Czech>
+            <Spanish>El dolor se suprime solo temporalmente</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -2890,9 +2892,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
+            <Spanish>IA controlada remotamente</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
+            <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_disabled">
             <English>Disabled</English>
@@ -3219,24 +3223,28 @@
             <German>Blutflecken</German>
             <Polish>Plamy krwi</Polish>
             <Czech>Skvrny od krve</Czech>
+            <Spanish>Manchas de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Bandaging removes bloodstains</English>
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Bandażowanie usuwa ślady krwi</Polish>
             <Czech>Obvázání odstraňuje skvrny od krve</Czech>
+            <Spanish>El vendaje elimina las manchas de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
             <German>Schmerzunterdrückung</German>
             <Polish>Zwalczanie bólu</Polish>
             <Czech>Potlačení bolesti</Czech>
+            <Spanish>Supresión del dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
             <German>Bandagieren entfernt Blutflecken</German>
             <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
             <Czech>Bolest je potlačena, ale jen dočastně</Czech>
+            <Spanish>El dolor se suprime solo temporalmente, no se elimina.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Medical</English>
