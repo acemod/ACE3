@@ -3,17 +3,27 @@
  * Called when the mk6's in game UI is loaded.  Hides rangefinder data if it is disabled.
  *
  * Arguments:
- * None
+ * 0: Display <DISPLAY>
+ * 1: Type <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_mk6mortar_fnc_turretDisplayLoaded
+ * [rsc,"Mk6Mortar"] call ace_mk6mortar_fnc_turretDisplayLoaded
  *
  * Public: No
  */
 #include "script_component.hpp"
+
+disableSerialization;
+
+PARAMS_2(_display,_rscType);
+
+if (_rscType != "Mk6Mortar") exitWith {};
+if (isNull _display) exitWith {};
+
+private ["_fnc_hideControl", "_xPos", "_yPos", "_wPos", "_hPos"];
 
 #define CTRL_CA_OPTICSPITCH (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSPITCH")
 #define CTRL_CA_OPTICSZOOM (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_OPTICSZOOM")
@@ -28,13 +38,6 @@
 #define CTRL_CA_HEADING (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_Heading")
 #define CTRL_CA_ELEV (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV")
 #define CTRL_CA_ELEV_NEED (configFile >> "RscInGameUI" >> "ACE_Mk6_RscWeaponRangeArtillery" >> "CA_IGUI_elements_group" >> "controls" >> "CA_ELEV_NEED")
-
-private ["_display", "_fnc_hideControl"];
-
-disableSerialization;
-
-_display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
-if (isNull _display) exitWith {};
 
 _fnc_hideControl = {
     private "_idc";
@@ -64,4 +67,3 @@ _fnc_hideControl = {
 [CTRL_CA_HEADING, true] call _fnc_hideControl;
 [CTRL_CA_ELEV, true] call _fnc_hideControl;
 [CTRL_CA_ELEV_NEED, true] call _fnc_hideControl;
-

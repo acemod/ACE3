@@ -3,8 +3,17 @@ class RscInGameUI {
         class CA_IGUI_elements_group: RscControlsGroup {};
     };
     class ACE_Mk6_RscWeaponRangeArtillery: RscWeaponRangeArtillery {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_Mk6_RscWeaponRangeArtillery',(_this select 0))]; _this call FUNC(turretDisplayLoaded););
-        controls[] = {"ACE_MILS_GROUP", "CA_IGUI_elements_group","CA_RangeElements_group"};
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_Mk6_RscWeaponRangeArtillery', _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Mk6Mortar')])]   call EFUNC(common,localEvent););
+        controls[] = {"ACE_ChargeDisplay", "ACE_MILS_GROUP", "CA_IGUI_elements_group","CA_RangeElements_group"};
+        class ACE_ChargeDisplay: RscStructuredText {
+            idc = 80085;
+            colorText[] = {1, 1, 1, 1};
+            colorBackground[] = {0, 0, 0, 0.1};
+            x = "(profilenamespace getvariable ['IGUI_GRID_WEAPON_X', ((safezoneX + safezoneW) - (12.4 * (((safezoneW / safezoneH) min 1.2) / 40)) - 0.5 * (((safezoneW / safezoneH) min 1.2) / 40))])";
+            y = "2.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (profilenamespace getvariable ['IGUI_GRID_WEAPON_Y', (safezoneY + 0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+            w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        };
         class ACE_MILS_GROUP: CA_IGUI_elements_group {
             idc = 80170;
             class controls {
