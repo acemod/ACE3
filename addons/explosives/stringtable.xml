@@ -542,17 +542,9 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English></English>
