@@ -264,7 +264,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(Actions_PerformingCPR);
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 22 + (random 2);
+            treatmentTime = "22 + (random 2)";
             items[] = {};
             condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
