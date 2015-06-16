@@ -176,36 +176,42 @@
             <Polish>Ustawienia więźniów</Polish>
             <Spanish>Ajustes de prisioneros</Spanish>
             <Czech>Nastavení zajatce</Czech>
+            <German>Gefangenen-Einstellungen</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
             <Polish>Moduł ten kontroluje ustawienia kapitulacji oraz opasek zaciskowych</Polish>
             <Spanish>Ajustes de control para rendición y precintos</Spanish>
             <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
+            <German>Einstellungen zur Aufgabe und Kabelbindern</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
             <Polish>Skuwanie sojuszników</Polish>
             <Spanish>Se puede  esposar el bando propio</Spanish>
             <Czech>Může spoutat spolubojovníky</Czech>
+            <German>Kann eigene Seite fesseln</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
             <Polish>Czy gracze mogą skuwać sojuszników?</Polish>
             <Spanish>Pueden los jugadores esposar unidades en su propio bando</Spanish>
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
+            <German>Können Spieler eigene Einheiten fesseln</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
             <Polish>Pozwól kapitulować</Polish>
             <Spanish>Permitir rendición</Spanish>
             <Czech>Povolit vzdávání</Czech>
+            <German>Aufgeben erlauben</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
             <Polish>Gracze mogą skapitulować po schowaniu swojej broni do kabury</Polish>
             <Spanish>Los jugadores pueden rendirse después de enfundar su arma</Spanish>
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
+            <German>Spieler können aufgeben nachdem sie ihre Waffe ins Holster gesteckt haben</German>
         </Key>
     </Package>
 </Project>
