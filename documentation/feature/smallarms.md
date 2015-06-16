@@ -15,8 +15,8 @@ Unifies the name formatting of magazines similar to Arma 2 standards.
 Assault rifles no longer have tracer rounds in their non-tracer magazines. This doesn't effect the additional tracers in the last rounds of machine gun magazines.
 
 ### 1.3 Real magazine round counts
-All pistol and sub machine gun magazines now have adjusted capacaties to match their real life counterparts.
+All pistol and sub machine gun magazines now have adjusted capacities to match their real life counterparts.
 
-## Dependencies
+## 2. Dependencies
 
 `ace_common`

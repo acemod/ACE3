@@ -16,72 +16,100 @@
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
             <Polish>Pogoda</Polish>
+            <Spanish>Clima</Spanish>
             <German>Wetter</German>
+            <Czech>Počasí</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
             <Polish>Synchronizowana pogoda ACE</Polish>
+            <Spanish>Modulo climático del ACE sincronizado en multijugador</Spanish>
             <German>ACE-Wettermodul (synchron im Multiplayer)</German>
+            <Czech>Synchronizovat ACE počasí v multiplayeru</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
             <English>Weather propagation</English>
             <Polish>Zmiany pogody</Polish>
+            <Spanish>Propagación del clima</Spanish>
             <German>Wetterübertragung</German>
+            <Czech>Změny počasí</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_Description">
             <English>Enables server side weather propagation</English>
             <Polish>Aktywuje zmiany pogody po stronie serwera</Polish>
+            <Spanish>Permite al servidor controlar la propagación del clima</Spanish>
             <German>Aktiviere serverseitige Wetterübertragung</German>
+            <Czech>Aktivuje změny počasí na straně serveru</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
             <English>ACE Weather</English>
             <Polish>Pogoda ACE</Polish>
+            <Spanish>Clima ACE</Spanish>
             <German>ACE-Wetter</German>
+            <Czech>ACE počasí</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_Description">
             <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
             <Polish>Nadpisuje domyślne ustawienia pogody (edytor, wywiad) przy użyciu pogody ACE (zależna od mapy)</Polish>
+            <Spanish>Sobreescribe el sistema climático por defecto (editor, ajustes de mision) con clima del ACE (basado en el mapa)</Spanish>
             <German>Überschreibt das Standardwetter (Editor, Missionseinstellungen) mit dem ACE-Wetter (kartenbasiert)</German>
+            <Czech>Přepíše výchozí počasí (editor, nastavení mise) s ACE počasím (podle mapy)</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_DisplayName">
             <English>Sync Rain</English>
             <Polish>Synchronizuj deszcz</Polish>
+            <Spanish>Sincronizar lluvia</Spanish>
             <German>Regen synchronisieren</German>
+            <Czech>Synchronizuj déšť</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_Description">
             <English>Synchronizes rain</English>
             <Polish>Synchronizuje deszcz</Polish>
+            <Spanish>Sincroniza la lluvia</Spanish>
             <German>Synchronisiert den Regen</German>
+            <Czech>Synchronizace deště</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_DisplayName">
             <English>Sync Wind</English>
             <Polish>Synchronizuj wiatr</Polish>
+            <Spanish>Sincronizar viento</Spanish>
             <German>Wind synchronisieren</German>
+            <Czech>Synchronizuj vítr</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_Description">
             <English>Synchronizes wind</English>
             <Polish>Synchronizuje wiatr</Polish>
+            <Spanish>Sincroniza el viento</Spanish>
             <German>Synchronisiert den Wind</German>
+            <Czech>Synchronizace větru</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
             <English>Sync Misc</English>
             <Polish>Synchronizuj różne</Polish>
+            <Spanish>Sincronizar otros</Spanish>
             <German>Sonstiges synchronisieren</German>
+            <Czech>Synchronizuj různé</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes lightnings, rainbow, fog, ...</English>
             <Polish>Synchronizuje pioruny, tęcze, mgłę, ...</Polish>
+            <Spanish>Sincroniza relampagos, arcoiris, niebla ...</Spanish>
             <German>Synchronisiert Blitze, Regenbögen, Nebel, ...</German>
+            <Czech>Synchronizace blesků, duhy, mlhy, ...</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
             <Polish>Interwał aktualizacji</Polish>
+            <Spanish>Intervalo de actualización</Spanish>
             <German>Aktualisierungsintervall</German>
+            <Czech>Interval aktualizace</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
             <Polish>Określa interwał (sekundy) pomiędzy aktualizacjami pogody</Polish>
+            <Spanish>Defina el intervalo (en segundos) entre actualizacions de clima</Spanish>
             <German>Definiert das Intervall (in Sekunden) zwischen Wetteraktualisierungen</German>
+            <Czech>Určit interval (v sekundách) mezi aktualizacemi počasí</Czech>
         </Key>
     </Package>
 </Project>

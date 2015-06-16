@@ -1,17 +1,13 @@
-class RscTitles
-{
-    class RscTurretDial
-    {
+class RscTitles {
+    class RscTurretDial {
         idd=-1;
         onLoad="with uiNameSpace do { RscTurretDial = _this select 0 };";
         movingEnable=0;
         duration=5;
         fadeIn="false";
         fadeOut="false";
-        class controls
-        {
-            class RscTurretDial
-            {
+        class controls {
+            class RscTurretDial {
                 idc=132949;
                 type=0;
                 style=128;
@@ -28,18 +24,15 @@ class RscTitles
         };
     };
 
-    class RscProtractor
-    {
+    class RscProtractor {
         idd=-1;
         onLoad="with uiNameSpace do { RscProtractor = _this select 0 };";
         movingEnable=0;
         duration=60;
         fadeIn="false";
         fadeOut="false";
-        class controls
-        {
-            class RscProtractorBase
-            {
+        class controls {
+            class RscProtractorBase {
                 idc=132950;
                 type=0;
                 style=48;
@@ -54,8 +47,7 @@ class RscTitles
                 sizeEx=0.027;
                 text="";
             };
-            class RscProtractorMarker : RscProtractorBase
-            {
+            class RscProtractorMarker : RscProtractorBase {
                 idc=132951;
             };
         };

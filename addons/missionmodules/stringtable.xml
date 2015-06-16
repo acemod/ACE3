@@ -1,90 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Mission Modules">
+    <Package name="MissionModules">
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
             <English>ACE Mission Modules</English>
             <Polish>ACE Moduły misji</Polish>
+            <Spanish>Módulo de misiones ACE</Spanish>
             <German>ACE-Missionsmodule</German>
+            <Czech>ACE Moduly mise</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds [ACE]</English>
             <Polish>Dźwięki [ACE]</Polish>
+            <Spanish>[ACE] Sonidos ambiente</Spanish>
             <German>Umgebungsgeräusche [ACE]</German>
+            <Czech>Zvuky prostředí [ACE]</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
             <Polish>Dźwięki</Polish>
+            <Spanish>Sonidos</Spanish>
             <German>Sounds</German>
+            <Czech>Zvuky</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
             <Polish>Class name-y dźwięków do odtwarzania. Oddzielone przy użyciu ','</Polish>
+            <Spanish>Class names de los sonidos ambiente que se reproducirán. Separados por ','</Spanish>
             <German>Klassennamen der Umgebungsgeräusche, die abgespielt werden sollen. Getrennt durch ","</German>
+            <Czech>Class names zvuků prostředí, které budou přehrány. Oddělené ',' </Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
             <Polish>Minimalny dystans</Polish>
+            <Spanish>Distancia mínima</Spanish>
             <German>Mindestabstand</German>
+            <Czech>Minimální vzdálenost</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
             <Polish>Używany do obliczania losowej pozycji a także ustawia minimalny dystans pomiędzy graczami a odtwarzanymi plikami dźwiękowymi</Polish>
+            <Spanish>Usado para calcular una posición aleatoria y establecer la distancia mínima entre los jugadores y los ficheros de sonido reproducidos</Spanish>
             <German>Wird verwendet, um eine zufällige Position zu bestimmen und setzt den Mindestabstand zwischen Spielern und der/den abzuspielenden Sounddatei(en) fest</German>
+            <Czech>Používá se pro výpočet náhodné pozice a určuje minimální vzdálenost mezi hráči a přehrávaným zvukem.</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
             <Polish>Maksymalny dystans</Polish>
+            <Spanish>Distancia máxima</Spanish>
             <German>Maximalabstand</German>
+            <Czech>Maximální vzdálenost</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
             <Polish>Używany do obliczania losowej pozycji a także ustawia maksymalny dystans pomiędzy graczami a odtwarzanymi plikami dźwiękowymi</Polish>
+            <Spanish>Usado para calcular una posición aleatoria y establecer la distancia máxima entre los jugadores y los ficheros de sonido reproducidos</Spanish>
             <German>Wird verwendet, um eine zufällige Position zu bestimmen und setzt den Maximalabstand zwischen Spielern und der/den abzuspielenden Sounddatei(en) fest</German>
+            <Czech>Používá se pro výpočet náhodné pozice a určuje maximální vzdálenost mezi hráči a přehrávaným zvukem.</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
             <Polish>Minimalne opóźnienie</Polish>
+            <Spanish>Retraso mínimo</Spanish>
             <German>Minimale Verzögerung</German>
+            <Czech>Minimální prodleva</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
             <Polish>Minimalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
+            <Spanish>Retraso mínimo entre los sonidos reproducidos</Spanish>
             <German>Minimale Verzögerung zwischen abzuspielenden Sounds</German>
+            <Czech>Minimální prodleva mezi přehrávanými zvuky</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
             <Polish>Maksymalne opóźnienie</Polish>
+            <Spanish>Retraso máximo</Spanish>
             <German>Maximale Verzögerung</German>
+            <Czech>Maximální prodleva</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
             <Polish>Maksymalne opóźnienie pomiędzy odtwarzanymi dźwiękami</Polish>
+            <Spanish>Retraso máximo entre los sonidos reproducidos</Spanish>
             <German>Maximale Verzögerung zwischen abzuspielenden Sounds</German>
+            <Czech>Maximální prodleva mezi přehrávanými zvuky</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
             <Polish>Podążaj za graczami</Polish>
+            <Spanish>Seguir jugadores</Spanish>
             <German>Spielern folgen</German>
+            <Czech>Následovat hráče</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
             <Polish>Podążaj za graczami. Jeżeli ustawione na 'Nie', pętla będzie odtwarzana tylko w pobliżu pozycji logiki.</Polish>
+            <Spanish>Seguir jugadores. Si esta desabilitado (false), se reproducirán sonidos en bucle solo cerca de la posición lógica.</Spanish>
             <German>Spielern folgen. Wenn auf falsch gesetzt, werden Sounds nur in der Nähe des Logikmoduls abgespielt.</German>
+            <Czech>Následuj hráče. Pokud je FALSE, smyčka zvuku bude přehrávána na nejbližší pozici logiki.</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
             <Polish>Głośność</Polish>
+            <Spanish>Volumen</Spanish>
             <German>Lautstärke</German>
+            <Czech>Hlasitost</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>
             <Polish>Głośność odtwarzanych dźwięków</Polish>
+            <Spanish>Volumen de los sonidos reproducidos</Spanish>
             <German>Lautstärke der abzuspielenden Sounds</German>
+            <Czech>Hlasitost přehrávaného zvuku</Czech>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
             <Polish>Pętla odtwarzania dzwięków (synchronizowana na MP)</Polish>
+            <Spanish>Bucle de sonidos ambiente (sincronizados en MP)</Spanish>
             <German>Umgebungsgeräusch-Schleife (im MP synchronisiert)</German>
+            <Czech>Smyčka okkolního zvuku (synchronizováno v MP)</Czech>
         </Key>
     </Package>
 </Project>

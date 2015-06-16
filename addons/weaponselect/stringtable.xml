@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
-        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
             <English>Display text on grenade throw</English>
             <German>Zeige Text beim Granatwurf</German>
             <Spanish>Mostrar texto al lanzar una granada</Spanish>
@@ -13,7 +13,7 @@
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrat texto ao lançar granada</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
             <German>Zeige Hinweis oder Text beim Granatwurf</German>
             <Spanish>Muestra una notificación o texto al lanzar una granada</Spanish>

@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
+private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
 
 disableSerialization;
 
@@ -57,7 +57,6 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
     _projectile setVelocity _bulletVelocity;
-    _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
 
 

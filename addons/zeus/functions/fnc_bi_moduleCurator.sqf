@@ -2,9 +2,12 @@
  * Author: Bohemia Interactive
  * Module function for initalizing zeus
  * Edited to remove eagle and global ascension message
+ * Added "zeusUnitAssigned" event call
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -123,13 +126,14 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waituntil {
                             sleep 0.01;
-                            {getplayeruid _x == _ownerVar} count playableunits > 0
+                            {getplayeruid _x == _ownerVar} count playableunits > 0 || isnull _logic
                         };
                     };
                     default {
-                        waituntil {isplayer (missionnamespace getvariable [_ownerVar,objnull])};
+                        waituntil {isplayer (missionnamespace getvariable [_ownerVar,objnull]) || isnull _logic};
                     };
                 };
+                if (isnull _logic) exitwith {};
 
                 //--- Assign
                 _player = objnull;
@@ -144,21 +148,22 @@ if (_activated) then {
                     };
                 };
 
-                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic)};
-                waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player};
+                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
+                waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isnull _logic};
+                if (isnull _logic) exitwith {};
 
                 //--- Add radio channels
                 {
                     _x radiochanneladd [_player];
                 } foreach (_logic getvariable ["channels",[]]);
 
-                // Added by ACE_zeus to delay ascension message at mission start
+                // Added by ace_zeus to delay ascension message at mission start
                 [{
                     _logic = _this select 0;
                     _player = _this select 1;
 
-                    if (GVAR(zeusAscension)) then {
-                        //--- Sent notification to all assigned players
+                    //--- Sent notification to all assigned players
+                    if ((_logic getvariable ["showNotification",true]) && GVAR(zeusAscension)) then {
                         {
                             if (isplayer _x) then {
                                 [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
@@ -168,6 +173,9 @@ if (_activated) then {
                 },[_logic,_player]] call EFUNC(common,execNextFrame);
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
+
+                // Added by ace_zeus
+                ["zeusUnitAssigned", [_logic,_player]] call EFUNC(common,globalEvent);
 
                 //--- Forced interface
                 //if (_forced) then {
@@ -179,13 +187,14 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         waituntil {
                             sleep 0.01;
-                            {getplayeruid _x == _ownerVar} count playableunits == 0
+                            {getplayeruid _x == _ownerVar} count playableunits == 0 || isnull _logic
                         };
                     };
                     default {
-                        waituntil {_player != missionnamespace getvariable [_ownerVar,objnull]};
+                        waituntil {_player != missionnamespace getvariable [_ownerVar,objnull] || isnull _logic};
                     };
                 };
+                if (isnull _logic) exitwith {};
 
                 //--- Add radio channels
                 {
@@ -193,7 +202,8 @@ if (_activated) then {
                 } foreach (_logic getvariable ["channels",[]]);
 
                 //--- Unassign
-                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic)};
+                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
+                if (isnull _logic) exitwith {};
             };
         };
 
@@ -212,7 +222,7 @@ if (_activated) then {
         } foreach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
 
-        // Added by ACE_zeus to delay bird code
+        // Added by ace_zeus to delay bird code
         [{
             _logic = _this select 0;
 

@@ -3,11 +3,26 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
-// Load settings from profile
-if (hasInterface) then {
-    call FUNC(loadSettingsFromProfile);
-    call FUNC(loadSettingsLocalizedText);
-};
+//Singe PFEH to handle execNextFrame and waitAndExec:
+[{
+    private ["_entry"];
+    
+    //Handle the waitAndExec array:
+    while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
+        _entry = GVAR(waitAndExecArray) deleteAt 0;
+        (_entry select 2) call (_entry select 1);
+    };
+
+    //Handle the execNextFrame array:
+    {
+        (_x select 0) call (_x select 1);
+    } forEach GVAR(nextFrameBufferA);
+    //Swap double-buffer:
+    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
+    GVAR(nextFrameBufferB) = [];
+    GVAR(nextFrameNo) = diag_frameno + 1;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
+
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
@@ -25,6 +40,8 @@ if (hasInterface) then {
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
+
+["unloadPersonEvent", DFUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
 ["lockVehicle", {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -85,6 +102,43 @@ if(!isServer) then {
 [FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
 call FUNC(checkFiles);
+
+
+// Create a pfh to wait until all postinits are ready and settings are initialized
+[{
+    PARAMS_1(_args);
+    EXPLODE_1_PVT(_args,_waitingMsgSent);
+    // If post inits are not ready then wait
+    if !(SLX_XEH_MACHINE select 8) exitWith {};
+
+    // If settings are not initialized then wait
+    if (isNil QGVAR(settings) || {(!isServer) && (isNil QEGVAR(modules,serverModulesRead))}) exitWith {
+        if (!_waitingMsgSent) then {
+            _args set [0, true];
+            diag_log text format["[ACE] Waiting on settings from server"];
+        };
+    };
+
+    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+
+    diag_log text format["[ACE] Settings received from server"];
+
+    // Event so that ACE_Modules have their settings loaded:
+    ["InitSettingsFromModules", []] call FUNC(localEvent);
+
+    // Load user settings from profile
+    if (hasInterface) then {
+        call FUNC(loadSettingsFromProfile);
+        call FUNC(loadSettingsLocalizedText);
+    };
+
+    diag_log text format["[ACE] Settings initialized"];
+
+    //Event that settings are safe to use:
+    ["SettingsInitialized", []] call FUNC(localEvent);
+
+}, 0, [false]] call cba_fnc_addPerFrameHandler;
+
 
 /***************************************************************/
 /***************************************************************/
@@ -253,3 +307,50 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
+
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
+
+//Device Handler:
+GVAR(deviceKeyHandlingArray) = [];
+GVAR(deviceKeyCurrentIndex) = -1;
+
+["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
+    true
+},
+{false},
+[0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
+
+["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
+{
+    [] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
+    true
+},
+{false},
+[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+
+["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
+{
+    [1] call FUNC(deviceKeyFindValidIndex);
+    if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
+    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    [_displayName, _iconImage] call FUNC(displayTextPicture);
+    true
+},
+{false},
+[0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
+
+
+GVAR(commonPostInited) = true;

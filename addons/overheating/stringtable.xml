@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
-        <Key ID="STR_ACE_overheating_SettingDisplayTextName">
+        <Key ID="STR_ACE_Overheating_SettingDisplayTextName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
             <Spanish>Mostrar texto al encasquillarse</Spanish>
@@ -13,7 +13,7 @@
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
         </Key>
-        <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_Overheating_SettingDisplayTextDesc">
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>

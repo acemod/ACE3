@@ -1,0 +1,135 @@
+/*
+ * Author: Rocko
+ *
+ * Handles wire and vehicle damage
+ *
+ * Arguments:
+ * 0: wire <OBJECT>
+ * 1: killer (vehicle) <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Return value:
+ * None
+ */
+#include "script_component.hpp"
+
+PARAMS_2(_wire,_killer);
+
+if (isNull _killer) then {    
+    _killer = _wire getVariable ["ace_concertina_wire_lastDamager", objNull];
+    if (isNull _killer) then {
+        _killer = nearestObject [_wire, "car"];
+    };
+};
+if (isNull _killer || {_killer == _wire} || {_killer == gunner (vehicle _killer)}) exitWith {};
+
+private ["_type", "_mode", "_distance", "_anim", "_parts", "_selectionPart", "_selection", "_pos_w", "_dir_w", "_vehicle"];
+_type = typeOf _wire;
+_mode = switch (_type) do {
+    case "ACE_ConcertinaWire": { 0 };
+    case "Land_Razorwire_F": { 1 };
+    default { -1 };
+};
+
+if (_mode == -1) exitWith {};
+
+// _mode = 0 = Single Coil
+// _mode = 1 = Triple Coil
+
+// --------------------------------
+// L              M               R
+//                                4.54929 (4)
+//              6.13564 (6)
+//9.78744 (10)
+
+_distance = _wire distance _killer;
+if (_distance > 14 || {_distance < 2}) exitWith {}; // Fix if shooting wire
+
+_type = typeOf _wire;
+_anim = _wire animationPhase "wire_2";
+_pos_w = getPos _wire;
+_dir_w = getDir _wire;
+_vehicle = vehicle _killer;
+
+if (_mode == 0) then {
+    private ["_x", "_y", "_found", "_wireCheckPosAr", "_no"];
+    _x = _pos_w select 0;
+    _y = _pos_w select 1;
+    // Check if two Single coils are placed next to each other (i.e playes have built a big wire obstacle)
+    _wireCheckPosAr = [
+        [_x + (sin (_dir_w+90) * 1.5),_y + (cos (_dir_w+90) * 1.5)],
+        [(_x-(sin _dir_w)) + (sin (_dir_w+90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w+90) * 1.5)],
+        [_x + (sin (_dir_w-90) * 1.5),_y + (cos (_dir_w-90) * 1.5)],
+        [(_x-(sin _dir_w)) + (sin (_dir_w-90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w-90) * 1.5)]
+    ];
+    {
+        _found = false;
+        _no = nearestObjects [_x, [typeOf _wire], 3]; 	//diag_log _no; diag_log ".....";
+        _no = _no - [_wire];							//diag_log _no;
+        if (count _no > 0) exitWith {
+            _found = true;								//diag_log "found";
+        };
+    } foreach _wireCheckPosAr;
+    // Double coil found!
+    if (_found) then {
+        _mode = 1;
+    } else {
+        // Randomly make a single coil also catch tanks, if speed is high
+        if (_vehicle isKindOf "Tank" && {20 > random 100} && {speed _vehicle > 30}) then {
+            _mode = 1;
+        } else {
+            if !(_vehicle isKindOf "Tank") then {
+                _mode = 1;
+            };
+        };
+    };
+};
+
+if (_mode == 1) then {
+    switch (true) do {
+        case (_vehicle isKindOf "Tank"): {
+            _parts = ["ltrack","rtrack"];		
+        };
+        case (_vehicle isKindOf "Wheeled_APC" || {_vehicle isKindOf "Car"}): {
+            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];		
+        };
+    };
+} else {
+    switch (true) do {
+        case (_vehicle isKindOf "Wheeled_APC" || {_vehicle isKindOf "Car"}): {
+            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];		
+        };
+    };
+};
+
+if (canMove _vehicle) then {
+    {
+        _selectionPart = "hit" + _x;
+        if (isText(configFile >> "CfgVehicles" >> typeOf _vehicle >> "hitpoints" >> _selectionPart >> "name")) then {
+            _selection = getText(configFile >> "CfgVehicles" >> typeOf _vehicle  >> "hitpoints" >> _selectionPart >> "name");
+            // TODO: Only the tires that have touched the wire should burst.
+            _vehicle setHit [_selection, 1];
+        };
+    } forEach _parts;
+};
+
+if (_mode == 1) then {
+    if (_vehicle isKindOf "StaticWeapon") exitWith {};
+    [{
+        PARAMS_2(_vehicle,_wire);
+        
+        _vehicle setVelocity ((velocity _vehicle) vectorMultiply 0.75);
+        
+        private ["_vPos", "_vDir"];
+        // Set vehicle back in front of wire, since the wire will make the vehicle jump, and a wire with no geometry lod is undestructible and not recognizeable
+        _vPos = getPosASL _vehicle;
+        _vDir = getDir _vehicle;
+        _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]); 
+        // TODO: Needs to be placed in safe distance to wire, so we do not constantly re-spawn new wires
+    }, [_vehicle, _wire], 0.1, 0] call EFUNC(common,waitAndExecute);
+};
+
+//TODO: Create broken geoless wire (two version)
+//TODO: Make wire remains stop vehicles

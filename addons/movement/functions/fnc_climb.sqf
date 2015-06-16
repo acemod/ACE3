@@ -20,7 +20,7 @@ private "_unit";
 _unit = _this select 0;
 
 if !([_unit] call FUNC(canClimb)) exitWith {
-    [localize "STR_ACE_Movement_CanNotClimb"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(CanNotClimb)] call EFUNC(common,displayTextStructured);
 };
 
 if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
