@@ -540,6 +540,12 @@
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
         </Key>
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
+            <English>Explode on defusal?</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
+            <English>Enable certain explosives to explode on defusal? Default: Yes</English>
+        </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
