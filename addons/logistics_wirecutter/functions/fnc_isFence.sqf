@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 //find is case sensitive, so keep everything lowercase
-#define FENCE_TYPENAMES ["land_net_fence_4m_f", "land_net_fence_8m_f", "land_net_fenced_8m_f", "land_new_wiredfence_5m_f", "land_new_wiredfence_10m_dam_f", "land_new_wiredfence_10m_f", "land_pipe_fence_4m_f", "land_pipe_fence_4mnolc_f", "land_sportground_fence_f", "land_wired_fence_4m_f", "land_wired_fence_4md_f", "land_wired_fence_8m_f", "land_wired_fence_8md_f", "land_razorwire_f"]
+#define FENCE_TYPENAMES ["land_net_fence_4m_f", "land_net_fence_8m_f", "land_net_fenced_8m_f", "land_new_wiredfence_5m_f", "land_new_wiredfence_10m_dam_f", "land_new_wiredfence_10m_f", "land_pipe_fence_4m_f", "land_pipe_fence_4mnolc_f", "land_sportground_fence_f", "land_wired_fence_4m_f", "land_wired_fence_4md_f", "land_wired_fence_8m_f", "land_wired_fence_8md_f", "land_razorwire_f", "ace_concertinawire"]
 
 #define FENCE_P3DS ["mil_wiredfence_f.p3d","wall_indfnc_3.p3d", "wall_indfnc_9.p3d", "wall_indfnc_corner.p3d", "pletivo_wired.p3d", "wall_fen1_5.p3d"]
 
