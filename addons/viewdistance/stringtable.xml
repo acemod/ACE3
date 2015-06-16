@@ -6,7 +6,7 @@
             <Polish>Ogranicznik zasięgu widzenia</Polish>
             <Spanish>Limitador de distancia de visión</Spanish>
             <Czech>Omezovač dohlednosti</Czech>
-            <German>Sichtweite von Müll</German>
+            <German>Sichtweitenbegrenzung</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>

@@ -41,7 +41,7 @@
             <Polish>Spawnuj orła, który podąrza za kamerą Zeusa.</Polish>
             <Spanish>Generar un águila que sigue la cámara Zeus.</Spanish>
             <Czech>Vytvoří orla, který následuje kameru Zeuse.</Czech>
-            <German>Spawne einen Adler, der der Zeus-Kamera folgt.</German>
+            <German>Erstelle einen Adler, der der Zeus-Kamera folgt.</German>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
