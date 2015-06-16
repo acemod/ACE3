@@ -28,24 +28,28 @@
             <Polish>Podnieś trójnóg snajperski</Polish>
             <Spanish>Coger equipo SSWT</Spanish>
             <Czech>Zvednout SSWT soupravu</Czech>
+            <German>SSWT-Kit aufheben</German>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
             <Polish>Reguluj trójnóg snajperski</Polish>
             <Spanish>Ajustar equipo SSWT</Spanish>
             <Czech>Regulovat SSWT soupravu</Czech>
+            <German>SSWT-Kit anpassen</German>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
             <Polish>Gotowe</Polish>
             <Spanish>Hecho</Spanish>
             <Czech>Hotovo</Czech>
+            <German>Fertig</German>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>+ Modifier, adjust</English>
             <Polish>+ Modyfikator, regulacja</Polish>
             <Spanish>+ Modificador, ajuste</Spanish>
             <Czech>+ Modifikátor, regulace</Czech>
+            <German>+ Modifikator, anpassen</German>
         </Key>
     </Package>
 </Project>

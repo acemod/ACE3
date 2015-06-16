@@ -323,20 +323,24 @@
             <Polish>Debuguj do schowka</Polish>
             <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
+            <German>Debug in die Zwischenablage</German>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
             <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
+            <German>Sendet Debug-Informationen ans RPT und in die Zwischenablage.</German>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
             <Spanish>Noticias ACE</Spanish>
+            <German>ACE-Neuigkeiten</German>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
             <Spanish>Mostrar noticias en el menú principal</Spanish>
+            <German>Zeige Neuigkeiten im Hauptmenü</German>
         </Key>
     </Package>
 </Project>

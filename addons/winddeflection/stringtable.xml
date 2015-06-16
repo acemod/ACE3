@@ -66,6 +66,7 @@
             <Polish>Wpływ wiatru</Polish>
             <Spanish>Desviación por viento</Spanish>
             <Czech>Účinky větru</Czech>
+            <German>Windablenkung</German>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
