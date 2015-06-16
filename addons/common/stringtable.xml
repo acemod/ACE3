@@ -564,7 +564,7 @@
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
             <Spanish>Seleccionar dispositivo de mano</Spanish>
-            <German>Handhelf-Gerät aufrufen</German>
+            <German>Handheld-Gerät aufrufen</German>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
