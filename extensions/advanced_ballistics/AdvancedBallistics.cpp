@@ -593,7 +593,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             velocityOffset[2] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
         };
         
-        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]); _bullet setPosASL (_bulletPosition vectorAdd [[" << positionOffset[0] << "," << positionOffset[1] << "," << positionOffset[2] << "]);";
+        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]); _bullet setPosASL (_bulletPosition vectorAdd [" << positionOffset[0] << "," << positionOffset[1] << "," << positionOffset[2] << "]);";
         strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
