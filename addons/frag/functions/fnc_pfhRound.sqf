@@ -14,12 +14,12 @@ _indirectRange = _this select 11;
 _force = _this select 12;
 _fragPower = _this select 13;
 
-if(_round in GVAR(blackList)) exitWith { 
+if(_round in GVAR(blackList)) exitWith {
     false
 };
 
-if (!alive _round) then {
-    if((diag_frameno - _firedFrame) > 1) then {
+if (!alive _round) exitWith {
+    if((diag_frameno - _firedFrame) > 1) then { //skip if deleted within a single frame
         if(_skip == 0) then {
             if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
                 [QGVAR(frag_eh), _this] call ace_common_fnc_serverEvent;
@@ -35,15 +35,15 @@ if (!alive _round) then {
             };
         } forEach _spallTrack;
     };
-} else {
+    false
+};
 
-    _params set[1, (getPosASL _round)];
-    _params set[2, (velocity _round)];
-    if(_doSpall) then {
-        private["_scale"];
-        _scale = ( (count GVAR(objects)) / GVAR(MaxTrackPerFrame) ) max 0.1;
-        [_round, _scale, _spallTrack, _foundObjectHPIds] call FUNC(spallTrack);
-    };
+_params set[1, (getPosASL _round)];
+_params set[2, (velocity _round)];
+if(_doSpall) then {
+    private["_scale"];
+    _scale = ( (count GVAR(objects)) / GVAR(MaxTrackPerFrame) ) max 0.1;
+    [_round, _scale, _spallTrack, _foundObjectHPIds] call FUNC(spallTrack);
 };
 
 true
