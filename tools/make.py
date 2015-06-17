@@ -51,6 +51,8 @@ import traceback
 import time
 import re
 
+from tempfile import mkstemp
+
 if sys.platform == "win32":
     import winreg
 
@@ -71,6 +73,7 @@ prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
 importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
+versionFiles = ["README.md", "mod.cpp"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -577,6 +580,54 @@ def get_ace_version():
     return ACE_VERSION
 
 
+def replace_file(filePath, oldSubstring, newSubstring):
+    #Create temp file
+    fh, absPath = mkstemp()
+    with open(absPath,'w') as newFile:
+        with open(filePath) as oldFile:
+            for line in oldFile:
+                newFile.write(line.replace(oldSubstring, newSubstring))
+    newFile.close()
+    #Remove original file
+    os.remove(filePath)
+    #Move new file
+    shutil.move(absPath, filePath)
+
+
+def set_version():
+    #newVersion = ACE_VERSION[:-2]
+    newVersion = "3.3.0"
+
+    print_blue("\nChecking for obsolete version numbers...")
+
+    # Change versions in files containing version
+    for i in versionFiles:
+        try:
+            # Get root and file path
+            root = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+            filePath = os.path.join(root, i)
+
+            # Save the file contents to a variable if the file exists
+            if os.path.isfile(filePath):
+                f = open(filePath, "r+")
+                fileText = f.read()
+                f.close()
+
+                if fileText:
+                    # Search and save version stamp
+                    versionFound = re.search(r"(\b[0.-9]+\b\.[0\.-9]+\b\.[0-9]+)", fileText).group(1)
+                    # Replace version stamp if any of the new version parts is higher than the one found
+                    if versionFound[0] < newVersion [0] or versionFound[2] < newVersion[2] or versionFound[4] < newVersion[4]:
+                        print_green("Changing version {} to {} => {}".format(versionFound, newVersion, filePath))
+                        replace_file(filePath, versionFound, newVersion)
+
+        except WindowsError as e:
+            # Temporary file is still "in use" by Python, pass this exception
+            pass
+        except Exception as e:
+            print_error("set_version error: {}".format(e))
+
+
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
@@ -904,6 +955,8 @@ See the make.cfg file for additional build options.
             print_error("Cannot create release directory")
             raise
 
+    # Update version stamp in all files that contain it
+    set_version();
 
     try:
         #Temporarily copy optionals_root for building. They will be removed later.
