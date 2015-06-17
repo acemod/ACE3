@@ -242,6 +242,8 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            animationCallerProne = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
             litter[] = {};
         };
