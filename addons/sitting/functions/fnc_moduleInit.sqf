@@ -16,8 +16,6 @@ PARAMS_3(_logic,_units,_activated);
 
 if !(_activated) exitWith {};
 
-GVAR(Module) = true;
-
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
 diag_log text "[ACE]: Sitting Module Initialized.";
