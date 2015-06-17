@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="entrenchingtool">
+        <Key ID="STR_ACE_entrenchingtool_EntrenchingToolName">
+            <English>Entrenching Tool</English>
+            <German></German>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <Czech></Czech>
+            <Polish></Polish>
+            <French></French>
+            <Hungarian></Hungarian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_entrenchingtool_EntrenchingToolDescription">
+            <English>Entrenching Tool</English>
+            <German></German>
+            <Spanish></Spanish>
+            <Russian></Russian>
+            <Czech></Czech>
+            <Polish></Polish>
+            <French></French>
+            <Hungarian></Hungarian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+    </Package>
+</Project>
