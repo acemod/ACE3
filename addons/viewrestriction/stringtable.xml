@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="View Restriction">
+        <Key ID="STR_ACE_ViewRestriction_ModuleDisplayName">
+            <English>View Restriction</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModuleDescription">
+            <English>View restriction settings to limit the usage of 1st of 3rd person views per vehicle type or overall.</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Mode">
+            <English>Mode</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeDesc">
+            <English>Sets overall mode. Default: Disabled</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFoot">
+            <English>Mode on Foot</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFootDesc">
+            <English>Sets selective mode forced on Foot. Default: Disabled (Requires Mode: Selective)</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveVehicle">
+            <English>Mode in Ground Vehicles</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveVehicleDesc">
+            <English>Sets selective mode forced in Ground Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAir">
+            <English>Mode in Air Vehicles</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAirDesc">
+            <English>Sets selective mode forced in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAV">
+            <English>Mode in UAVs</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAVDesc">
+            <English>Sets selective mode forced while controlling UAVs. Default: Disabled (Requires Mode: Selective)</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Disabled">
+            <English>Disables this mode, default Arma behaviour.</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_FirstPerson">
+            <English>Forces usage of First Person.</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ThirdPerson">
+            <English>Forces usage of Third Person.</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Selective">
+            <English>Allows further settings to be applied.</English>
+        </Key>
+    </Package>
+</Project>
