@@ -28,14 +28,14 @@
             <Polish>Podnieś trójnóg snajperski</Polish>
             <Spanish>Coger equipo SSWT</Spanish>
             <Czech>Zvednout SSWT soupravu</Czech>
-            <German>SSWT-Kit aufheben</German>
+            <German>SSWT-Werkzeug aufheben</German>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
             <Polish>Reguluj trójnóg snajperski</Polish>
             <Spanish>Ajustar equipo SSWT</Spanish>
             <Czech>Regulovat SSWT soupravu</Czech>
-            <German>SSWT-Kit anpassen</German>
+            <German>SSWT-Werkzeug anpassen</German>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>

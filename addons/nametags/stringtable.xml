@@ -240,7 +240,7 @@
             <Polish>Wymuś pod kursorem</Polish>
             <Spanish>Forzar mostrar solo en el cursor</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor</Czech>
-            <German>Erzwinge nur mit Cursor anzuzeigen</German>
+            <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
             <English>Force Show Only on Keypress</English>
@@ -254,7 +254,7 @@
             <Polish>Wymuś pod kursorem i po wciśnięciu klawisza</Polish>
             <Spanish>Forzar mostrar en el cursor y al pulsar tecla</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor a klávesu</Czech>
-            <German>Erzwinge nur mit Cursor und Tastendruck anzuzeigen</German>
+            <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -282,7 +282,7 @@
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
             <Spanish>Efecto de ondas sonoras encima de las cabezas de los jugadores que hablan después de mantener  la tecla PTT. Esta opción funciona con TFAR y ACRE2.</Spanish>
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
-            <German>Es werden Schallwellen über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit TFAR und ACRE2.</German>
+            <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit TFAR und ACRE2.</German>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
@@ -296,7 +296,7 @@
             <Polish>Skalowanie tekstu oraz ikon</Polish>
             <Spanish>Escala del texto y el icono</Spanish>
             <Czech>Velikost textu a ikon</Czech>
-            <German>Text- und Icon-Größenskalierung</German>
+            <German>Text- und Symbolgrößen</German>
         </Key>
     </Package>
 </Project>

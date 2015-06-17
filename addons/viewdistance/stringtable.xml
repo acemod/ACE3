@@ -41,21 +41,21 @@
             <Polish>Ustawia maksymalny limit zasięgu widzenia jaki mogą ustawić gracze (do 10000)</Polish>
             <Spanish>Establece el límite de cuan alta pueden aumentar los clientes la distancia de visión (hasta 10.000)</Spanish>
             <Czech>Stanoví limit jak daleko si může client zvýšit dohlednost (do 10000)</Czech>
-            <German>Setzt eine Grenze fest, wie weit Clienten deren Sichtweite erhöhen können (bis 10000)</German>
+            <German>Setze die Grenze fest, wie weit Spieler ihre Sichtweite erhöhen können (bis 10000)</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
             <Polish>Limit zasięgu widzenia jest ustawiany tutaj i może zostać nadpisany poprzez moduł</Polish>
             <Spanish>Establecer aqui el límite para la distancia de visión de los clientes. Puede ser anulado por módulo</Spanish>
             <Czech>Limit dohlednoti pro klienty se nastavuje zde a může být potlačeno pomocí modulu.</Czech>
-            <German>Stellt die Grenze für die Sichtweite des Clienten ein. Das kann von einem Modul überschrieben werden.</German>
+            <German>Stellt die Grenze für die Sichtweite des Spielers ein. Das kann von einem Modul überschrieben werden.</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
             <Polish>Zasięg widzenia (piechota)</Polish>
             <Spanish>Distancia de visión del cliente (A pie)</Spanish>
             <Czech>Dohlednost (Pěšák)</Czech>
-            <German>Client-Sichtweite (zu Fuß)</German>
+            <German>Spielersichtweite (zu Fuß)</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -69,7 +69,7 @@
             <Polish>Zasięg widzenia (pojazdy naziemne)</Polish>
             <Spanish>Distancia de visión del cliente (Vehículo terrestre)</Spanish>
             <Czech>Dohlednost (Pozemní technika)</Czech>
-            <German>Client-Sichtweite (Landfahrzeuge)</German>
+            <German>Spielersichtweite (Landfahrzeuge)</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -83,7 +83,7 @@
             <Polish>Zasięg widzenia (pojazdy lotnicze)</Polish>
             <Spanish>Distancia de visión del cliente (Vehículo aéreo)</Spanish>
             <Czech>Dohlednost (Vzdušná technika)</Czech>
-            <German>Client-Sichtweite (Luftfahrzeuge)</German>
+            <German>Spielersichtweite (Luftfahrzeuge)</German>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>

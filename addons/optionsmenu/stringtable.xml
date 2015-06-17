@@ -330,7 +330,7 @@
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
             <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
-            <German>Sendet Debug-Informationen ans RPT und in die Zwischenablage.</German>
+            <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>

@@ -190,7 +190,7 @@
             <Polish>Skuwanie sojuszników</Polish>
             <Spanish>Se puede  esposar el bando propio</Spanish>
             <Czech>Může spoutat spolubojovníky</Czech>
-            <German>Kann Teamkollegen Seite fesseln</German>
+            <German>Kann Teamkollegen fesseln</German>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -211,7 +211,7 @@
             <Polish>Gracze mogą skapitulować po schowaniu swojej broni do kabury</Polish>
             <Spanish>Los jugadores pueden rendirse después de enfundar su arma</Spanish>
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
-            <German>Spieler können kapitulieren, nachdem sie ihre Waffe ins Holster gesteckt haben</German>
+            <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
         </Key>
     </Package>
 </Project>
