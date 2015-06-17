@@ -1300,7 +1300,8 @@ See the make.cfg file for additional build options.
 
     # Make release
     if make_release:
-        print_blue("\nMaking release: {}_{}.zip".format(prefix, ACE_VERSION[:-2]))
+        release_name = "{}_{}".format(project.lstrip("@").lower(), ACE_VERSION[:-2])
+        print_blue("\nMaking release: {}.zip".format(release_name))
 
         try:
             # Delete all log files
@@ -1309,9 +1310,12 @@ See the make.cfg file for additional build options.
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
 
-            # Create a zip with the contents of release/ in it
-            release_zip = shutil.make_archive("{}_{}".format(prefix, ACE_VERSION[:-2]), "zip", release_dir)
-            # Move release zip to release/ folder
+            # Remove old zip from release folder to prevent zipping the zip
+            if os.path.isfile(os.path.join(release_dir, release_name + ".zip")):
+                os.remove(os.path.join(release_dir, release_name + ".zip"))
+            # Create a zip with the contents of release folder in it
+            release_zip = shutil.make_archive("{}".format(release_name), "zip", release_dir)
+            # Move release zip to release folder
             shutil.copy(release_zip, release_dir)
             os.remove(release_zip)
         except:
