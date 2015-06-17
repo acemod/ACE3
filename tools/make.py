@@ -595,6 +595,7 @@ def replace_file(filePath, oldSubstring, newSubstring):
 
 
 def set_version():
+    # Cut build away from version stamp
     #newVersion = ACE_VERSION[:-2]
     newVersion = "3.3.0"
 
@@ -602,11 +603,9 @@ def set_version():
 
     # Change versions in files containing version
     for i in versionFiles:
-        try:
-            # Get root and file path
-            root = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-            filePath = os.path.join(root, i)
+        filePath = os.path.join(module_root_parent, i)
 
+        try:
             # Save the file contents to a variable if the file exists
             if os.path.isfile(filePath):
                 f = open(filePath, "r+")
@@ -626,6 +625,9 @@ def set_version():
             pass
         except Exception as e:
             print_error("set_version error: {}".format(e))
+            return False
+
+    return True
 
 
 def get_private_keyname(commitID,module="main"):
@@ -700,6 +702,7 @@ def version_stamp_pboprefix(module,commitID):
 
     return True
 
+
 ###############################################################################
 
 
@@ -736,7 +739,7 @@ def main(argv):
     # Default behaviors
     test = False # Copy to Arma 3 directory?
     arg_modules = False # Only build modules on command line?
-    make_release = False # Make zip file from the release?
+    make_release = True # Make zip file from the release?
     release_version = 0 # Version of release
     use_pboproject = True # Default to pboProject build tool
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
@@ -1291,23 +1294,26 @@ See the make.cfg file for additional build options.
     # Delete the pboproject temp files if building a release.
     if make_release and build_tool == "pboproject":
         try:
-            shutil.rmtree(os.path.join(module_root, release_dir, project, "temp"), True)
+            shutil.rmtree(os.path.join(release_dir, project, "temp"), True)
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
 
     # Make release
     if make_release:
-        print_blue("\nMaking release: {}-{}.zip".format(project,release_version))
+        print_blue("\nMaking release: {}_{}.zip".format(prefix, ACE_VERSION[:-2]))
 
         try:
             # Delete all log files
-            for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "addons")):
+            for root, dirs, files in os.walk(os.path.join(release_dir, project, "addons")):
                 for currentFile in files:
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
 
             # Create a zip with the contents of release/ in it
-            shutil.make_archive(project + "-" + release_version, "zip", os.path.join(module_root, release_dir))
+            release_zip = shutil.make_archive("{}_{}".format(prefix, ACE_VERSION[:-2]), "zip", release_dir)
+            # Move release zip to release/ folder
+            shutil.copy(release_zip, release_dir)
+            os.remove(release_zip)
         except:
             raise
             print_error("Could not make release.")
