@@ -594,12 +594,15 @@ def replace_file(filePath, oldSubstring, newSubstring):
     shutil.move(absPath, filePath)
 
 
-def set_version():
-    # Cut build away from version stamp
-    #newVersion = ACE_VERSION[:-2]
-    newVersion = "3.3.0"
+def set_version_in_files():
+    newVersion = ACE_VERSION # MAJOR.MINOR.PATCH.BUILD
+    newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
 
     print_blue("\nChecking for obsolete version numbers...")
+
+    # Regex patterns
+    pattern = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH.BUILD
+    patternShort = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH
 
     # Change versions in files containing version
     for i in versionFiles:
@@ -613,18 +616,32 @@ def set_version():
                 f.close()
 
                 if fileText:
-                    # Search and save version stamp
-                    versionFound = re.search(r"(\b[0.-9]+\b\.[0\.-9]+\b\.[0-9]+)", fileText).group(1)
+                    # Search and save version stamp, search short if long not found
+                    versionFound = re.findall(pattern, fileText)
+                    if not versionFound:
+                        versionFound = re.findall(patternShort, fileText)
+
                     # Replace version stamp if any of the new version parts is higher than the one found
-                    if versionFound[0] < newVersion [0] or versionFound[2] < newVersion[2] or versionFound[4] < newVersion[4]:
-                        print_green("Changing version {} to {} => {}".format(versionFound, newVersion, filePath))
-                        replace_file(filePath, versionFound, newVersion)
+                    if versionFound:
+                        # First item in the list findall returns
+                        versionFound = versionFound[0]
+
+                        # Use the same version length as the one found
+                        if len(versionFound) == len(newVersion):
+                            newVersionUsed = newVersion
+                        if len(versionFound) == len(newVersionShort):
+                            newVersionUsed = newVersionShort
+
+                        # Print change and modify the file if changed
+                        if versionFound != newVersionUsed:
+                            print_green("Changing version {} to {} => {}".format(versionFound, newVersionUsed, filePath))
+                            replace_file(filePath, versionFound, newVersionUsed)
 
         except WindowsError as e:
             # Temporary file is still "in use" by Python, pass this exception
             pass
         except Exception as e:
-            print_error("set_version error: {}".format(e))
+            print_error("set_version_in_files error: {}".format(e))
             return False
 
     return True
@@ -739,8 +756,6 @@ def main(argv):
     # Default behaviors
     test = False # Copy to Arma 3 directory?
     arg_modules = False # Only build modules on command line?
-    make_release = True # Make zip file from the release?
-    release_version = 0 # Version of release
     use_pboproject = True # Default to pboProject build tool
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
     new_key = True # Make a new key and use it to sign?
@@ -792,10 +807,13 @@ See the make.cfg file for additional build options.
         argv.remove("test")
 
     if "release" in argv:
-        make_release = True
+        make_release_zip = True
         release_version = argv[argv.index("release") + 1]
         argv.remove(release_version)
         argv.remove("release")
+    else:
+        make_release_zip = False
+        release_version = ACE_VERSION
 
     if "target" in argv:
         make_target = argv[argv.index("target") + 1]
@@ -846,6 +864,9 @@ See the make.cfg file for additional build options.
 
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
+        
+        # Release archive prefix
+        zipPrefix = cfg.get(make_target, "zipPrefix", fallback=project.lstrip("@").lower())
 
         # Should we autodetect modules on a complete build?
         module_autodetect = cfg.getboolean(make_target, "module_autodetect", fallback=True)
@@ -903,7 +924,7 @@ See the make.cfg file for additional build options.
         sys.exit(1)
 
     # See if we have been given specific modules to build from command line.
-    if len(argv) > 1 and not make_release:
+    if len(argv) > 1 and not make_release_zip:
         arg_modules = True
         modules = argv[1:]
 
@@ -959,7 +980,7 @@ See the make.cfg file for additional build options.
             raise
 
     # Update version stamp in all files that contain it
-    set_version();
+    set_version_in_files();
 
     try:
         #Temporarily copy optionals_root for building. They will be removed later.
@@ -1292,15 +1313,17 @@ See the make.cfg file for additional build options.
         f.write(cache_out)
 
     # Delete the pboproject temp files if building a release.
-    if make_release and build_tool == "pboproject":
+    if make_release_zip and build_tool == "pboproject":
         try:
             shutil.rmtree(os.path.join(release_dir, project, "temp"), True)
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
 
     # Make release
-    if make_release:
-        release_name = "{}_{}".format(project.lstrip("@").lower(), ACE_VERSION[:-2])
+    if make_release_zip:
+        if not release_version:
+            release_version = ACE_VERSION
+        release_name = "{}_{}".format(zipPrefix, release_version)
         print_blue("\nMaking release: {}.zip".format(release_name))
 
         try:
@@ -1310,9 +1333,11 @@ See the make.cfg file for additional build options.
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
 
-            # Remove old zip from release folder to prevent zipping the zip
-            if os.path.isfile(os.path.join(release_dir, release_name + ".zip")):
-                os.remove(os.path.join(release_dir, release_name + ".zip"))
+            # Remove all zip files from release folder to prevent zipping the zip
+            for file in os.listdir(release_dir):
+                if file.endswith(".zip"):
+                    os.remove(os.path.join(release_dir, file))
+
             # Create a zip with the contents of release folder in it
             release_zip = shutil.make_archive("{}".format(release_name), "zip", release_dir)
             # Move release zip to release folder
