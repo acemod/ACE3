@@ -1321,8 +1321,6 @@ See the make.cfg file for additional build options.
 
     # Make release
     if make_release_zip:
-        if not release_version:
-            release_version = ACE_VERSION
         release_name = "{}_{}".format(zipPrefix, release_version)
         print_blue("\nMaking release: {}.zip".format(release_name))
 
