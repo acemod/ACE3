@@ -8,7 +8,7 @@
              alt="ACE version">
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.1.1/ace3_3.1.1.zip">
-        <img src="http://img.shields.io/badge/Download-52.2_MB-green.svg"
+        <img src="http://img.shields.io/badge/Download-51.7_MB-green.svg"
              alt="ACE download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
