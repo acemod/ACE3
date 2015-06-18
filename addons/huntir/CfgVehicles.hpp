@@ -56,4 +56,14 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_HuntIR_M203,20);
         };
     };
+
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_HuntIR_monitor,5);
+        };
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_HuntIR_M203,20);
+        };
+    };
 };
