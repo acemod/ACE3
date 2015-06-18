@@ -3241,7 +3241,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
-            <German>Bandagieren entfernt Blutflecken</German>
+            <German>Schmerzen werden nur vorübergehend unterdrückt, nicht entfernt</German>
             <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
             <Czech>Bolest je potlačena, ale jen dočastně</Czech>
             <Spanish>El dolor se suprime solo temporalmente, no se elimina.</Spanish>
