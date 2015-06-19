@@ -38,8 +38,9 @@ if (!alive _round) exitWith {
     false
 };
 
-_params set[1, (getPosASL _round)];
-_params set[2, (velocity _round)];
+_this set[1, (getPosASL _round)];
+_this set[2, (velocity _round)];
+
 if(_doSpall) then {
     private["_scale"];
     _scale = ( (count GVAR(objects)) / GVAR(MaxTrackPerFrame) ) max 0.1;
