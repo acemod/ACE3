@@ -28,14 +28,16 @@ if(_gun == ACE_player) then {
         };
     };
 };
+
+_doSpall = false;
 if(GVAR(SpallEnabled)) then {
     if(GVAR(spallIsTrackingCount) <= 0) then {
         GVAR(spallHPData) = [];
     };
     if(GVAR(spallIsTrackingCount) > 5) then {
         // ACE_player sideChat "LIMT!";
-        _doSpall = false;
     } else {
+        _doSpall = true;
         GVAR(spallIsTrackingCount) = GVAR(spallIsTrackingCount) + 1;
     };
 };
@@ -46,30 +48,27 @@ if(GVAR(autoTrace)) then {
 };
 
 // We only do the single track object check here.
-// We should do an {!(_round in GVAR(objects))}  
+// We should do an {!(_round in GVAR(objects))}
 // But we leave that out here for optimization. So this cannot be a framework function
 // Otherwise, it should only be added once and from the FiredEH
 if(_doFragTrack && alive _round) then {
     _spallTrack = [];
     _spallTrackID = [];
-    
+
     private["_args"];
     _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
-            (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
-            (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
-            (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")),
-            (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force))),
-            (getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
-        ];
+    (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
+    (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
+    (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")),
+    (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force))),
+    (getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
+    ];
     TRACE_1("Initializing track", _round);
     GVAR(objects) pushBack _round;
     GVAR(arguments) pushBack _args;
-    
+
     if(_doSpall) then {
         [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };
     // ACE_player sideChat "WTF2";
 };
-
-
-
