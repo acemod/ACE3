@@ -80,9 +80,11 @@ if (GVAR(level) < 2) then {
     } else {
         _damageReturn = _damageReturn min 0.89;
     };
+
 };
 [_unit] call FUNC(addToInjuredCollection);
 
+_unit setHit [_selection, _damageReturn];
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
@@ -98,8 +100,8 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
 
     if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
         if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
-            [_unit] call FUNC(setDead);
-            0.89
+            if ([_unit] call FUNC(setDead)) exitwith {1};
+            0;
         };
         if (_delayedUnconsicous) then {
             [{
@@ -110,9 +112,9 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
                 [_this select 0, true] call FUNC(setUnconscious);
             }, [_unit]] call EFUNC(common,execNextFrame);
         };
-        0.89
+        0;
     };
-    _damageReturn min 0.89;
+    0;
 };
 
 if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
@@ -120,8 +122,10 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
         [_unit] call EFUNC(common,unloadPerson);
     };
     [_unit] call FUNC(setDead);
-
-    0.89
+    0;
 };
 
-_damageReturn
+if (_damageReturn < 1) exitwith {
+    0;
+};
+1;
