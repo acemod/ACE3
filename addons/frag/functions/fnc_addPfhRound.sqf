@@ -1,8 +1,9 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private ["_enabled","_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
+private ["_enabled", "_doSpall", "_spallTrack", "_spallTrackID"];
 PARAMS_3(_gun,_type,_round);
+DEFAULT_PARAM(3,_doFragTrack,false);
 
 if (!GVAR(enabled)) exitWith {};
 
@@ -16,7 +17,6 @@ if(_round in GVAR(blackList)) exitWith {
 // Exit on max track
 if( (count GVAR(objects)) > GVAR(MaxTrack)) exitWith { };
 
-_doFragTrack = false;
 if(_gun == ACE_player) then {
     _doFragTrack = true;
 } else {

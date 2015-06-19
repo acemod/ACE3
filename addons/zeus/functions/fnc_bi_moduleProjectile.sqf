@@ -129,7 +129,7 @@ if (_activated) then {
 
            // Added by ace_zeus for ace_frag compatibility
             if (!isnil QEFUNC(frag,addPfhRound)) then {
-                [ACE_player, _ammo, _projectile] call EFUNC(frag,addPfhRound);
+                [objNull, _ammo, _projectile, true] call EFUNC(frag,addPfhRound);
             };
 
             //--- Play sound
