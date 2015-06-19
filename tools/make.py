@@ -1156,16 +1156,16 @@ See the make.cfg file for additional build options.
             if build_tool == "pboproject":
                 try:
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
+                    backup_config(module)
 
                     if (not os.path.isfile(nobinFilePath)):
-                        backup_config(module)
                         convert_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                        cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+                        cmd = [makepboTool, "-P","-A","-L","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
                         if check_external:
@@ -1299,7 +1299,7 @@ See the make.cfg file for additional build options.
 
     except Exception as e:
         print_yellow("Cancel or some error detected: {}".format(e))
-        
+
 
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
