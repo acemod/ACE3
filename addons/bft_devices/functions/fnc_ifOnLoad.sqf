@@ -34,7 +34,7 @@ _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
 } count (_mapTypes select 1);
 
 // register reporting modes
-[true,["MFD","FBCB2"]] call EFUNC(bft,updateRegisteredModes);
+[true,["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
 
 // send "bft_deviceOpened" event
 ["bft_deviceOpened",[_deviceID]] call EFUNC(common,localEvent);

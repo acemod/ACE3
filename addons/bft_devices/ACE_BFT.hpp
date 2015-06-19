@@ -190,5 +190,30 @@ class ACE_BFT {
         class TAD_Plane_i: TAD_Plane_b {
             deviceSide = "IND";
         };
+
+        // UAV
+        class UAV_b {
+            deviceSide = "NATO";
+            reportingModes[] = {"UAV"};
+            refreshRate = 1;
+            defaultInformation[] = {"UAV", 0, "", 0};
+        };
+        class UAV_o: UAV_b {
+            deviceSide = "EAST";
+        };
+        class UAV_i: UAV_b {
+            deviceSide = "IND";
+        };
+
+        // UGV
+        class UGV_b: UAV_b {
+            refreshRate = 5;
+        };
+        class UGV_o: UGV_b {
+            deviceSide = "EAST";
+        };
+        class UGV_i: UGV_b {
+            deviceSide = "IND";
+        };
     };
 };

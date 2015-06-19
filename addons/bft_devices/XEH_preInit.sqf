@@ -46,5 +46,6 @@ PREP(toggleMapTools);
 PREP(toggleMapType);
 PREP(toggleNightMode);
 PREP(updateTextAndIconSize);
+PREP(updateUAVList);
 
 ADDON = true;

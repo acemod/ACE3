@@ -22,7 +22,7 @@ private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_ve
 
 // remove helmet and UAV cameras
 //[] call FUNC(deleteHelmetCam);
-//[] call FUNC(deleteUAVcam);
+[] call FUNC(deleteUAVcam);
 
 if !(I_CLOSED) then {
     // [_deviceID,_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]

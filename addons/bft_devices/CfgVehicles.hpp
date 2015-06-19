@@ -167,4 +167,61 @@ class CfgVehicles {
     class Plane_Fighter_03_base_F: Plane_Base_F {
         EGVAR(bft,vehicleDevices)[] = {"TAD_Plane_i"};
     };
+
+    // UAVs
+    class UAV_01_base_F;
+    class B_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    class UAV_02_base_F;
+    class B_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    class UAV_02_CAS_base_F;
+    class B_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    // UGVs
+    class UGV_01_base_F;
+    class B_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_b"};
+    };
+    class O_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_o"};
+    };
+    class I_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_i"};
+    };
+
+    class UGV_01_rcws_base_F;
+    class B_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_b"};
+    };
+    class O_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_o"};
+    };
+    class I_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_i"};
+    };
 };
