@@ -17,6 +17,7 @@ PREP(deleteUavCam);
 PREP(dirTo);
 PREP(distance2D);
 PREP(getBackgroundPosition);
+PREP(getDeviceAppData);
 PREP(getSettings);
 PREP(ifClose);
 PREP(ifOnDrawBFT);
