@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID"];
+private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID", "_model"];
 
 PARAMS_3(_attachToVehicle,_unit,_args);
 _itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
@@ -47,26 +47,35 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachToVehicle setVariable [QGVAR(Objects), [_attachedItem], true];
     _attachToVehicle setVariable [QGVAR(ItemNames), [_itemClassname], true];
 } else {
-    GVAR(placeAction) = -1;
-
-    _tempObject = _itemVehClass createVehicleLocal [0,0,-10000];
-    _tempObject enableSimulationGlobal false;
+    GVAR(placeAction) = PLACE_WAITING;
 
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-    //MenuBack isn't working for now (localize "STR_ACE_Attach_CancelAction")
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = 1;}] call EFUNC(common,AddActionEventHandler)];
-    // _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {true}, {GVAR(placeAction) = 0;}] call EFUNC(common,AddActionEventHandler)];
+    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
-    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = 0}];
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
+
+    //Display to show virtual object:
+    private [];
+    _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");
+    if (_model == "") then {
+        _model = getText (configFile >> "CfgVehicles" >> _itemVehClass >> "model");
+    };
+    //"\A3\Weapons_F\empty.p3d" is fine, but ctrlSetModel ""; - will crash game!
+    if (_model == "") exitWith {ERROR("No Model");};
+    (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
+    ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _model;
 
     [{
         private "_startingPosition";
         PARAMS_2(_args,_pfID);
-        EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
+        EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID);
 
-        if ((GVAR(placeAction) != -1) ||
+        _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.5] vectorDiff positionCameraToWorld [0,0,0]);
+        _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+
+        if ((GVAR(placeAction) != PLACE_WAITING) ||
                 {_unit != ACE_player} ||
                 {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
@@ -75,16 +84,28 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
-            //[_unit, "MenuBack", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;
 
-            if (GVAR(placeAction) == 1) then {
-                _startingPosition = _tempObject modelToWorldVisual [0,0,0];
-                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _startingPosition] call FUNC(placeApprove);
+            (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+
+            if (GVAR(placeAction) == PLACE_APPROVE) then {
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _virtualPos] call FUNC(placeApprove);
             };
-            deleteVehicle _tempObject;
         } else {
-            _tempObject setPosATL ((ASLtoATL eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));;
+            //Show the virtual object:
+            if (lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player]) then {
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
+            } else {
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
+                _pos = worldToScreen _virtualPos;
+                _realDistance = _virtualPos distance (positionCameraToWorld [0,0,0]);
+                _pos = [(_pos select 0), _realDistance, (_pos select 1)];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _pos;
+                _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
+                _angle = asin (_dir select 2);
+                _up = [0, cos _angle, sin _angle];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
+            };
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _tempObject, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
 };
