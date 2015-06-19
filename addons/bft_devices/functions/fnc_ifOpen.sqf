@@ -151,6 +151,19 @@ GVAR(ifOpen) set [11,
     }] call EFUNC(common,addEventHandler)
 ];
 
+// get device owner
+_deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
+_deviceOwner = D_GET_OWNER(_deviceData);
+
+// if the device is a personal device, get settings from device appData store
+if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") then {
+    _deviceAppData = D_GET_APP_DATA(_deviceData);
+    if !(_deviceAppData isEqualTo []) then {
+        // write settings to local cache
+        HASH_SET(GVAR(settings),_deviceID,_deviceAppData);
+    };
+};
+
 // start the interface
 if (_isDialog) then {
     // Check if map and / or another dialog is open and close them

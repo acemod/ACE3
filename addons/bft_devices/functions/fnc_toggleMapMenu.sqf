@@ -5,24 +5,24 @@
  *   Toggle map menu on / off
  *
  * Arguments:
- *   0: Name of uiNamespace variable for interface <STRING>
+ *   0: Device ID <STRING>
  *
  * Return Value:
  *   TRUE <BOOL>
  *
  * Example:
- *   _drawMapTools = ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_toggleMapMenu;
+ *   ["deviceID"] call ace_bft_devices_toggleMapMenu;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_displayName","_showMenu"];
+private ["_deviceID","_showMenu"];
 
-_displayName = _this select 0;
-_showMenu = [_displayName,"showMenu"] call FUNC(getSettings);
+_deviceID = _this select 0;
+_showMenu = [_deviceID,"showMenu"] call FUNC(getSettings);
 _showMenu = !_showMenu;
-[_displayName,[["showMenu",_showMenu]]] call FUNC(setSettings);
+[_deviceID,[["showMenu",_showMenu]]] call FUNC(setSettings);
 
 true

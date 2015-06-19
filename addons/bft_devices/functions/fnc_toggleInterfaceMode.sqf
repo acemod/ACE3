@@ -5,23 +5,26 @@
  *   Toggle interface mode
  *
  * Arguments:
- *   0: Name of uiNamespace variable for interface <STRING>
+ *   NONE
  *
  * Return Value:
  *   TRUE <BOOL>
  *
  * Example:
- *   _drawMapTools = ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_toggleInterfaceMode;
+ *   [] call ace_bft_devices_toggleInterfaceMode;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_displayName","_mode"];
+private ["_displayName","_deviceID","_mode"];
 
-_displayName = _this select 0;
-_mode = [_displayName,"mode"] call FUNC(getSettings);
+if (I_CLOSED) exitWith {true};
+
+_displayName = I_GET_NAME;
+_deviceID = I_GET_DEVICE;
+_mode = [_deviceID,"mode"] call FUNC(getSettings);
 
 call {
     if (_displayName == QGVAR(GD300_dlg)) exitWith {
@@ -31,6 +34,6 @@ call {
         };
     };
 };
-[_displayName,[["mode",_mode]]] call FUNC(setSettings);
+[_deviceID,[["mode",_mode]]] call FUNC(setSettings);
 
 true

@@ -22,11 +22,12 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
+private ["_interfaceInit","_settings","_display","_displayName","_deviceID","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
 disableSerialization;
 
 if (I_CLOSED) exitWith {false};
 _displayName = I_GET_NAME;
+_deviceID = I_GET_DEVICE;
 _display = uiNamespace getVariable _displayName;
 _interfaceInit = false;
 _loadingCtrl = _display displayCtrl IDC_LOADINGTXT;
@@ -39,13 +40,13 @@ if (count _this == 1) then {
     _settings = _this select 0;
 } else {
     // Retrieve all settings for the currently open interface
-    _settings = [_displayName] call FUNC(getSettings);
+    _settings = [_deviceID] call FUNC(getSettings);
     _interfaceInit = true;
 };
 
 _mode = HASH_GET(_settings,"mode");
 if (isNil "_mode") then {
-    _mode = [_displayName,"mode"] call FUNC(getSettings);
+    _mode = [_deviceID,"mode"] call FUNC(getSettings);
     // do not show "Loading" control since we are not switching modes
     _loadingCtrl = displayNull;
 } else {
@@ -114,7 +115,7 @@ if (isNil "_mode") then {
             _osdCtrl = _display displayCtrl IDC_BRIGHTNESS;
             if (!isNull _osdCtrl) then {
                 _brightness = _value;
-                _nightMode = [_displayName,"nightMode"] call FUNC(getSettings);
+                _nightMode = [_deviceID,"nightMode"] call FUNC(getSettings);
                 // if we are running night mode, lower the brightness proportionally
                 if (!isNil "_nightMode") then {
                     if (_nightMode == 1 || {_nightMode == 2 && (sunOrMoon < 0.2)}) then {_brightness = _brightness * 0.7};
@@ -164,7 +165,7 @@ if (isNil "_mode") then {
                 (_display displayCtrl IDC_BACKGROUND) ctrlSetText _background;
                 // call brightness adjustment if this is outside of interface init
                 if (!_interfaceInit) then {
-                    _brightness = [_displayName,"brightness"] call FUNC(getSettings);
+                    _brightness = [_deviceID,"brightness"] call FUNC(getSettings);
                     HASH_SET(_settings,"brightness",_brightness);
                 };
             };
@@ -217,13 +218,13 @@ if (isNil "_mode") then {
                     };
                     // ---------- BFT -----------
                     if (_mode == "BFT") exitWith {
-                        _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
-                        _mapType = [_displayName,"mapType"] call FUNC(getSettings);
+                        _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
+                        _mapType = [_deviceID,"mapType"] call FUNC(getSettings);
                         _mapIDC = HASH_GET(_mapTypes,_mapType);
                         
                         _displayItemsToShow pushBack _mapIDC;
                         
-                        _mapTools = [_displayName,"mapTools"] call FUNC(getSettings);
+                        _mapTools = [_deviceID,"mapTools"] call FUNC(getSettings);
                         if (!isNil "_mapTools" && {_mapTools}) then {
                             _displayItemsToShow append [
                                 IDC_OSD_HOOK_GRID,
@@ -233,7 +234,7 @@ if (isNil "_mode") then {
                             ];
                         };
                         
-                        _showMenu = [_displayName,"showMenu"] call FUNC(getSettings);
+                        _showMenu = [_deviceID,"showMenu"] call FUNC(getSettings);
                         if (!isNil "_showMenu" && {_showMenu}) then {
                             _displayItemsToShow pushBack IDC_GROUP_MENU;
                         };
@@ -243,25 +244,25 @@ if (isNil "_mode") then {
                         // update scale and world position when not on interface init
                         if (!_interfaceInit) then {
                             if (_isDialog) then {
-                                _mapScale = [_displayName,"mapScaleDlg"] call FUNC(getSettings);
+                                _mapScale = [_deviceID,"mapScaleDlg"] call FUNC(getSettings);
                                 HASH_SET(_settings,"mapScaleDlg",_mapScale);
-                                _mapWorldPos = [_displayName,"mapWorldPos"] call FUNC(getSettings);
+                                _mapWorldPos = [_deviceID,"mapWorldPos"] call FUNC(getSettings);
                                 HASH_SET(_settings,"mapWorldPos",_mapWorldPos);
                             };
                         };
                     };
                     // ---------- _NOT_ BFT -----------
                     if (_isDialog) then {
-                        _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+                        _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
                         if (count _mapTypes > 1) then {
-                            _targetMapName = [_displayName,"mapType"] call FUNC(getSettings);
+                            _targetMapName = [_deviceID,"mapType"] call FUNC(getSettings);
                             _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
                             _targetMapCtrl = _display displayCtrl _targetMapIDC;
                             
                             // If we find the map to be shown, we are switching away from BFT. Lets save map scale and position
                             if (ctrlShown _targetMapCtrl) then {
                                 _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
-                                [_displayName,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale]],false] call FUNC(setSettings);
+                                [_deviceID,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale]],false] call FUNC(setSettings);
                             };
                         };
                     };
@@ -275,7 +276,7 @@ if (isNil "_mode") then {
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
                         HASH_SET(_settings,"uavListUpdate",true);
                         if (!_interfaceInit) then {
-                            HASH_SET(_settings,"uavCam",[_displayName,"uavCam"] call FUNC(getSettings));
+                            HASH_SET(_settings,"uavCam",[_deviceID,"uavCam"] call FUNC(getSettings));
                         };
                     };
                     // ---------- HELMET CAM -----------
@@ -288,7 +289,7 @@ if (isNil "_mode") then {
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                         HASH_SET(_settings,"hCamListUpdate",true);
                         if (!_interfaceInit) then {
-                            HASH_SET(_settings,"hCam",[_displayName,"hCam"] call FUNC(getSettings));
+                            HASH_SET(_settings,"hCam",[_deviceID,"hCam"] call FUNC(getSettings));
                         };
                     };
                     // ---------- MESSAGING -----------
@@ -306,7 +307,7 @@ if (isNil "_mode") then {
                     // ---------- FULLSCREEN HELMET CAM -----------
                     if (_mode == "HCAM_FULL") exitWith {
                         _displayItemsToShow = [IDC_HCAM_FULL];
-                        _data = [_displayName,"hCam"] call FUNC(getSettings);
+                        _data = [_deviceID,"hCam"] call FUNC(getSettings);
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                         ['rendertarget13',_data] call FUNC(createHelmetCam);
                     };
@@ -329,8 +330,8 @@ if (isNil "_mode") then {
             if (_mode == "BFT" && !_isDialog) then {
                 _mapScaleKm = _value;
                 // pre-Calculate map scales
-                _mapScaleMin = [_displayName,"mapScaleMin"] call FUNC(getSettings);
-                _mapScaleMax = [_displayName,"mapScaleMax"] call FUNC(getSettings);
+                _mapScaleMin = [_deviceID,"mapScaleMin"] call FUNC(getSettings);
+                _mapScaleMax = [_deviceID,"mapScaleMax"] call FUNC(getSettings);
                 _mapScaleKm = call {
                     if (_mapScaleKm >= _mapScaleMax) exitWith {_mapScaleMax};
                     if (_mapScaleKm <= _mapScaleMin) exitWith {_mapScaleMin};
@@ -338,7 +339,7 @@ if (isNil "_mode") then {
                     _mapScaleMin * 2 ^ round (log (_mapScaleKm / _mapScaleMin) / log (2))
                 };
                 if (_mapScaleKm != (_value)) then {
-                    [_displayName,[["mapScaleDsp",_mapScaleKm]],false] call FUNC(setSettings);
+                    [_deviceID,[["mapScaleDsp",_mapScaleKm]],false] call FUNC(setSettings);
                 };
                 GVAR(mapScale) = _mapScaleKm / GVAR(mapScaleFactor);
                 
@@ -374,7 +375,7 @@ if (isNil "_mode") then {
         };
         // ------------ MAP TYPE ------------
         if (_x == "mapType") exitWith {
-            _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+            _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
             if ((count (_mapTypes select 0) > 1) && (_mode == "BFT")) then {
                 _targetMapName = _value;
                 _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
@@ -483,15 +484,23 @@ if (isNil "_mode") then {
         // ------------ UAV List Update ------------
         if (_x == "uavListUpdate") exitWith {
             if (_mode == "UAV") then {
-                _data = [_displayName,"uavCam"] call FUNC(getSettings);
+                _data = [_deviceID,"uavCam"] call FUNC(getSettings);
                 _uavListCtrl = _display displayCtrl IDC_UAVLIST;
                 lbClear _uavListCtrl;
                 _uavListCtrl lbSetCurSel -1;
+                
+                // update list of UAVs (temporary implementation)
+                [] call FUNC(updateUAVList);
+                
                 // Populate list of UAVs
                 {
-                    if (!(crew _x isEqualTo [])) then {
-                        _index = _uavListCtrl lbAdd format ["%1:%2 (%3)",groupId group _x,[_x] call CBA_fnc_getGroupIndex,getText (configfile >> "cfgVehicles" >> typeOf _x >> "displayname")];
-                        _uavListCtrl lbSetData [_index,str _x];
+                    _uavDevice = _x select 0;
+                    _uavDeviceData = _x select 1;
+                    _uav = D_GET_OWNER(_uavDeviceData);
+                    
+                    if (!(crew _uav isEqualTo [])) then {
+                        _index = _uavListCtrl lbAdd format ["%1 (%2)",D_GET_CALLSIGN(_uavDeviceData),getText (configfile >> "cfgVehicles" >> typeOf _uav >> "displayname")];
+                        _uavListCtrl lbSetData [_index,_uavDevice];
                     };
                 } count GVAR(UAVlist);
                 lbSort [_uavListCtrl, "ASC"];
@@ -506,7 +515,7 @@ if (isNil "_mode") then {
                     };
                     // If no UAV could be selected, clear last selected UAV
                     if (lbCurSel _uavListCtrl == -1) then {
-                        [_displayName,[["uavCam",""]]] call FUNC(setSettings);
+                        [_deviceID,[["uavCam",""]]] call FUNC(setSettings);
                     };
                 };
             };
@@ -514,7 +523,7 @@ if (isNil "_mode") then {
         // ------------ HCAM List Update ------------
         if (_x == "hCamListUpdate") exitWith {
             if (_mode == "HCAM") then {
-                _data = [_displayName,"hCam"] call FUNC(getSettings);
+                _data = [_deviceID,"hCam"] call FUNC(getSettings);
                 _hcamListCtrl = _display displayCtrl IDC_HCAMLIST;
                 // Populate list of HCAMs
                 lbClear _hcamListCtrl;
@@ -535,7 +544,7 @@ if (isNil "_mode") then {
                     };
                     // If no hCam could be selected, clear last selected hCam
                     if (lbCurSel _hcamListCtrl == -1) then {
-                        [_displayName,[["hCam",""]]] call FUNC(setSettings);
+                        [_deviceID,[["hCam",""]]] call FUNC(setSettings);
                     };
                 };
             };
@@ -547,8 +556,8 @@ if (isNil "_mode") then {
 // update scale and world position if we have to. If so, fill in the blanks and make the changes
 if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {
     if (isNull _targetMapCtrl) then {
-        _targetMapName = [_displayName,"mapType"] call FUNC(getSettings);
-        _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+        _targetMapName = [_deviceID,"mapType"] call FUNC(getSettings);
+        _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
         _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
         _targetMapCtrl = _display displayCtrl _targetMapIDC;
     };

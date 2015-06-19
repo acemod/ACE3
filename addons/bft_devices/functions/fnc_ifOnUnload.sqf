@@ -79,12 +79,20 @@ if !(I_CLOSED) then {
             };
             
             // Save mapWorldPos, mapScaleDlg and background offset of current dialog so it can be restored later
-            [_displayName,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale],["dlgIfPosition",_backgroundOffset]],false] call FUNC(setSettings);
+            [_deviceID,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale],["dlgIfPosition",_backgroundOffset]],false] call FUNC(setSettings);
         };
     };
     
+    _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
+    _deviceOwner = D_GET_OWNER(_deviceData);
+
+    // if the device is a personal device, save settings to device appData store
+    if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") then {
+        [_deviceID,[-1,HASH_GET(GVAR(settings),_deviceID)]] call EFUNC(bft,handleUpdateDeviceAppData);
+    };
+    
     // send "bft_deviceClosed" event
-    ["bft_deviceClosed",[I_GET_DEVICE]] call EFUNC(common,localEvent);
+    ["bft_deviceClosed",[_deviceID]] call EFUNC(common,localEvent);
     
     uiNamespace setVariable [_displayName, displayNull];
     GVAR(ifOpen) = nil;
