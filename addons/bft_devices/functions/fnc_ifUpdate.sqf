@@ -572,9 +572,6 @@ if ((!isNil "_targetMapScale") || (!isNil "_targetMapWorldPos")) then {
     while {!(ctrlMapAnimDone _targetMapCtrl)} do {};
 };
 
-// move mouse cursor to the center of the screen if its a dialog
-if (_interfaceInit && _isDialog) then {setMousePosition [0.5,0.5];};
-
 // now hide the "Loading" control since we are done
 if (!isNull _loadingCtrl) then {
     // move mouse cursor to the center of the screen if its a dialog
