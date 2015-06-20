@@ -18,20 +18,20 @@
 
 #include "script_component.hpp"
 
-private ["_displayName"];
+private ["_deviceID"];
 
 // bail if there is no interface open
 if (I_CLOSED) exitWith {false};
 
-_displayName = I_GET_NAME;
+_deviceID = I_GET_DEVICE;
 
-if ([_displayName] call FUNC(isDialog)) then {
+if (I_GET_ISDIALOG) then {
     // reset position to default
-    [_displayName,[["dlgIfPosition",[]]],true,true] call FUNC(setSettings);
+    [_deviceID,[["dlgIfPosition",[]]],true,true] call FUNC(setSettings);
 } else {
-    _dspIfPosition = [_displayName,"dspIfPosition"] call FUNC(getSettings);
+    _dspIfPosition = [_deviceID,"dspIfPosition"] call FUNC(getSettings);
     // toggle position
-    [_displayName,[["dspIfPosition",!_dspIfPosition]]] call FUNC(setSettings);
+    [_deviceID,[["dspIfPosition",!_dspIfPosition]]] call FUNC(setSettings);
 };
 
 true

@@ -21,11 +21,13 @@
 
 private ["_displayName","_xOffset","_yOffset","_display","_isDialog","_backgroundCtrl","_backgroundClassName","_displayConfigContainers","_displayConfigClasses","_idc","_ctrl","_ctrlPosition"];
 
+disableSerialization;
+
 _displayName = _this select 0;
 _xOffset = _this select 1 select 0;
 _yOffset = _this select 1 select 1;
 _display = uiNamespace getVariable _displayName;
-_isDialog = [_displayName] call FUNC(isDialog);
+_isDialog = I_GET_ISDIALOG;
 
 // get both classes "controls" and "controlsBackground" if they exist
 _displayConfigContainers = if (_isDialog) then {

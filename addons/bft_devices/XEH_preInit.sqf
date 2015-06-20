@@ -17,6 +17,7 @@ PREP(deleteUavCam);
 PREP(dirTo);
 PREP(distance2D);
 PREP(getBackgroundPosition);
+PREP(getDeviceAppData);
 PREP(getSettings);
 PREP(ifClose);
 PREP(ifOnDrawBFT);
@@ -45,5 +46,6 @@ PREP(toggleMapTools);
 PREP(toggleMapType);
 PREP(toggleNightMode);
 PREP(updateTextAndIconSize);
+PREP(updateUAVList);
 
 ADDON = true;

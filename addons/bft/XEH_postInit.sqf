@@ -170,7 +170,7 @@ if(!isServer) then {
     if (GVAR(updateAvailableDevicesPositions)) then {
         {
             if (time - (_x select 8) >= (_x select 9)) then {
-                systemChat format["updating a device position: %1", _x];
+                //systemChat format["updating a device position: %1", _x];
                 _x set [8, time];
                 _x set [4, getPosASL (_x select 10)];
             };

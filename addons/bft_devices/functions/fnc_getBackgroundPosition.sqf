@@ -26,7 +26,7 @@ private ["_displayName","_display","_isDialog","_backgroundCtrl","_backgroundCla
 
 _displayName = _this select 0;
 _display = uiNamespace getVariable _displayName;
-_isDialog = [_displayName] call FUNC(isDialog);
+_isDialog = I_GET_ISDIALOG;
 
 // get both classes "controls" and "controlsBackground" if they exist
 _displayConfigContainers = if (_isDialog) then {

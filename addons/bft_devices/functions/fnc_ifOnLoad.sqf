@@ -18,25 +18,26 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_mapTypes"];
+private ["_displayName","_deviceID","_mapTypes"];
 
 _displayName = I_GET_NAME;
+_deviceID = I_GET_DEVICE;
 
 uiNamespace setVariable [_displayName,_this select 0];
 
 [] call FUNC(ifUpdate);
 
-// set up bft_drawing
-_mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
+// setup bft_drawing
+_mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
 {
 	0 = [(_this select 0) displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
 } count (_mapTypes select 1);
 
 // register reporting modes
-[true,["MFD","FBCB2"]] call EFUNC(bft,updateRegisteredModes);
+[true,["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
 
 // send "bft_deviceOpened" event
-["bft_deviceOpened",[I_GET_DEVICE]] call EFUNC(common,localEvent);
+["bft_deviceOpened",[_deviceID]] call EFUNC(common,localEvent);
 
 GVAR(ifOpenStart) = false;
 

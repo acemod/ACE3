@@ -5,7 +5,7 @@
  *   Read interface settings.
  *
  * Arguments:
- *   0: Name of uiNamespace display / dialog variable <STRING>
+ *   0: Device ID <STRING>
  *   
  *   (Optional)
  *   1: Name of individual property to read <STRING>
@@ -13,38 +13,42 @@
  * Return Value:
  *   (If only parameter 0 is specified)
  *      The whole property hash for that display / dialog is returned, like so: [["propertyName1","propertyName2"],[propertyValue1,propertyValue2]] <ARRAY>
- *      If the uiNamespace variable cannot be found in ace_bft_devices_displayPropertyGroups, nil is returned. <NIL>
  *   (If parameter 1 is specified)
  *      Value of individual property, nil if it does not exist <ANY>
  *
  * Example:
  *   // Return all settings for TAD
- *   ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_fnc_getSettings;
+ *   ["deviceID"] call ace_bft_devices_fnc_getSettings;
  *   
  *   // Return available map types for TAD
- *   ["ace_bft_devices_TAD_dlg","mapTypes"] call ace_bft_devices_fnc_getSettings;
+ *   ["deviceID","mapTypes"] call ace_bft_devices_fnc_getSettings;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_propertyGroupName","_commonProperties","_groupProperties","_combinedProperties","_property","_value"];
+private ["_commonProperties","_deviceAppData","_combinedProperties","_property","_value","_deviceID","_deviceData"];
 
-_propertyGroupName = HASH_GET(GVAR(displayPropertyGroups),_this select 0);
+_deviceID = _this select 0;
 
-// Exit with nil if uiNamespace variable cannot be found in GVAR(displayPropertyGroups)
-if (isNil "_propertyGroupName") exitWith {nil};
+// Fetch common and device specific property hashes
+_commonProperties = HASH_GET(GVAR(settings),"COMMON");
+_deviceAppData = HASH_GET(GVAR(settings),_deviceID);
 
-// Fetch common and interface group specific property hashes
-_commonProperties = HASH_GET(GVAR(Settings),"COMMON");
-_groupProperties = HASH_GET(GVAR(Settings),_propertyGroupName);
-if (isNil "_groupProperties") then {_groupProperties = HASH_CREATE;};
+// if no device appData could be retrieved from cache
+if (isNil "_deviceAppData") then {
+	// read from config
+	_deviceAppData = [_deviceID] call FUNC(getDeviceAppData);
+	
+	// write to cache
+	HASH_SET(GVAR(settings),_deviceID,_deviceAppData);
+};
 
 // Return value of requested property
-_property = _this select 1;
 if (count _this == 2) exitWith {
-    _value = HASH_GET(_groupProperties,_property);
+	_property = _this select 1;
+    _value = HASH_GET(_deviceAppData,_property);
     if (isNil "_value") then {
         _value = HASH_GET(_commonProperties,_property);
     };
@@ -54,7 +58,7 @@ if (count _this == 2) exitWith {
 // Return list of all property hashes
 _combinedProperties = +_commonProperties;
 {
-    HASH_SET(_combinedProperties,_x,(_groupProperties select 1) select _forEachIndex);
-} forEach (_groupProperties select 0);
+    HASH_SET(_combinedProperties,_x,(_deviceAppData select 1) select _forEachIndex);
+} forEach (_deviceAppData select 0);
 
 _combinedProperties

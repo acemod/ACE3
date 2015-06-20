@@ -24,46 +24,47 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex"];
+private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_deviceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex"];
 
 _display = _this select 0;
 _displayName = I_GET_NAME;
+_deviceID = I_GET_DEVICE;
 _dikCode = _this select 1;
 _shiftKey = _this select 2;
 _ctrlKey = _this select 3;
 _altKey = _this select 4;
 
 if (_dikCode == DIK_F1 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
-    [_displayName,[["mode","BFT"]]] call FUNC(setSettings);
+    [_deviceID,[["mode","BFT"]]] call FUNC(setSettings);
     true
 };
 if (_dikCode == DIK_F2 && {_displayName in [QGVAR(DK10_dlg)]}) exitWith {
-    [_displayName,[["mode","UAV"]]] call FUNC(setSettings);
+    [_deviceID,[["mode","UAV"]]] call FUNC(setSettings);
     true
 };
 if (_dikCode == DIK_F3 && {_displayName in [QGVAR(DK10_dlg)]}) exitWith {
-    [_displayName,[["mode","HCAM"]]] call FUNC(setSettings);
+    [_deviceID,[["mode","HCAM"]]] call FUNC(setSettings);
     true
 };
 if (_dikCode == DIK_F4 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
-    [_displayName,[["mode","MESSAGE"]]] call FUNC(setSettings);
+    [_deviceID,[["mode","MESSAGE"]]] call FUNC(setSettings);
     true
 };
 if (_dikCode == DIK_F5 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
-    [_displayName] call FUNC(toggleMapTools);
+    [_deviceID] call FUNC(toggleMapTools);
     true
 };
 if (_dikCode == DIK_F6 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
-    [_displayName] call FUNC(toggleMapType);
+    [_deviceID] call FUNC(toggleMapType);
     true
 };
 if (_dikCode == DIK_F7 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
-    [_displayName] call FUNC(centerMapOnPlayerPosition);
+    [_deviceID] call FUNC(centerMapOnPlayerPosition);
     true
 };
 if (_dikCode == DIK_DELETE && {GVAR(cursorOnMap)}) exitWith {
-    _mapTypes = [_displayName,"mapTypes"] call FUNC(getSettings);
-    _currentMapType = [_displayName,"mapType"] call FUNC(getSettings);
+    _mapTypes = [_deviceID,"mapTypes"] call FUNC(getSettings);
+    _currentMapType = [_deviceID,"mapType"] call FUNC(getSettings);
     _currentMapTypeIndex = (_mapTypes select 0) find _currentMapType;
     _ctrlScreen = _display displayCtrl ((_mapTypes select 1) select _currentMapTypeIndex);
     /*_markerIndex = [_ctrlScreen,GVAR(mapCursorPos)] call FUNC(findUserMarker);

@@ -1,4 +1,60 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class GVAR(BFT) {
+                    displayName = "BFT";
+                    condition = QUOTE(!(([ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])) || !(([vehicle ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])));
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                    exceptions[] = {"notOnMap", "isNotInside"};
+
+                    class openDisplay {
+                        displayName = "Open Overlay";
+                        condition = QUOTE(I_CLOSED);
+                        statement = QUOTE(0 call FUNC(onIfToggleKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class closeDisplay {
+                        displayName = "Close Overlay";
+                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
+                        statement = QUOTE([] call FUNC(ifClose));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class openDialog {
+                        displayName = "Open Interactive Mode";
+                        condition = QUOTE(I_CLOSED);
+                        statement = QUOTE(1 call FUNC(onIfToggleKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+
+                    class toggleDisplayPosition {
+                        displayName = "Toggle Overlay Position (left/right)";
+                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
+                        statement = QUOTE([] call FUNC(onIfTogglePositionKey));
+                        showDisabled = 0;
+                        priority = 2;
+                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                        exceptions[] = {"notOnMap", "isNotInside"};
+                    };
+                };
+            };
+        };
+    };
     // Boxes
     class Box_NATO_Support_F;
     class ACE_Box_BFT_b: Box_NATO_Support_F {
@@ -110,5 +166,62 @@ class CfgVehicles {
     };
     class Plane_Fighter_03_base_F: Plane_Base_F {
         EGVAR(bft,vehicleDevices)[] = {"TAD_Plane_i"};
+    };
+
+    // UAVs
+    class UAV_01_base_F;
+    class B_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_01_F: UAV_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    class UAV_02_base_F;
+    class B_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_02_F: UAV_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    class UAV_02_CAS_base_F;
+    class B_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_b"};
+    };
+    class O_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_o"};
+    };
+    class I_UAV_02_CAS_F : UAV_02_CAS_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UAV_i"};
+    };
+
+    // UGVs
+    class UGV_01_base_F;
+    class B_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_b"};
+    };
+    class O_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_o"};
+    };
+    class I_UGV_01_F : UGV_01_base_F{
+        EGVAR(bft,vehicleDevices)[] = {"UGV_i"};
+    };
+
+    class UGV_01_rcws_base_F;
+    class B_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_b"};
+    };
+    class O_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_o"};
+    };
+    class I_UGV_01_rcws_F : UGV_01_rcws_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"UGV_i"};
     };
 };

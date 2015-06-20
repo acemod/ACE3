@@ -5,23 +5,23 @@
  *   Toggle text next to BFT icons
  *
  * Arguments:
- *   0: Name of uiNamespace variable for interface <STRING>
+ *   0: Device ID <STRING>
  *
  * Return Value:
  *   TRUE <BOOL>
  *
  * Example:
- *   ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_fnc_toggleIconText;
+ *   ["deviceID"] call ace_bft_devices_fnc_toggleIconText;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_displayName"];
+private ["_deviceID"];
 
-_displayName = _this select 0;
+_deviceID = _this select 0;
 if (GVAR(showBFTtext)) then {GVAR(showBFTtext) = false} else {GVAR(showBFTtext) = true};
-[_displayName,[["showIconText",GVAR(showBFTtext)]]] call FUNC(setSettings);
+[_deviceID,[["showIconText",GVAR(showBFTtext)]]] call FUNC(setSettings);
 
 true

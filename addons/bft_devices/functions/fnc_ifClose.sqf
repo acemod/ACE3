@@ -28,7 +28,7 @@ if !(I_CLOSED) then {
     if !(isNull _display) then {
         _display closeDisplay 0;
         // only call ifOnUnload for displays (dialogs call ifOnUnload themselves when they close)
-        if !([_displayName] call FUNC(isDialog)) then {
+        if !(I_GET_ISDIALOG) then {
             [] call FUNC(ifOnUnload);
         };
     };
