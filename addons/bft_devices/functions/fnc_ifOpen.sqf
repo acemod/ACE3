@@ -31,7 +31,7 @@
  *
  * Example:
  *   // open TAD display as primary interface type
- *   [[vehicle ACE_player] call ace_bft_fnc_getOwnedDevices,0,"ace_bft_devices_TAD_dsp",false] call ace_bft_devices_ifOpen;
+ *   ["deviceID",0,"ace_bft_devices_TAD_dsp",false] call ace_bft_devices_ifOpen;
  *
  * Public: No
  */
