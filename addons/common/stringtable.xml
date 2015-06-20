@@ -564,17 +564,17 @@
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
             <Spanish>Seleccionar dispositivo de mano</Spanish>
-            <German>Handheld-Gerät aufrufen</German>
+            <German>Handheld aufrufen</German>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
             <Spanish>Cerrar dispositivo de mano</Spanish>
-            <German>Handheld-Gerät schließen</German>
+            <German>Handheld schließen</German>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
             <Spanish>Cambiar dispositivos de mano</Spanish>
-            <German>Handheld-Gerät wechseln</German>
+            <German>Handheld wechseln</German>
         </Key>
     </Package>
 </Project>
