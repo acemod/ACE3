@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_deviceID","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
+private ["_interfaceInit","_settings","_display","_displayName","_deviceID","_deviceData","_deviceType","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
 disableSerialization;
 
 if (I_CLOSED) exitWith {false};
@@ -130,38 +130,19 @@ if (isNil "_mode") then {
             _nightMode = _value;
             // transform nightMode into boolean
             _nightMode = if (_nightMode == 1 || {_nightMode == 2 && (sunOrMoon < 0.2)}) then {true} else {false};
-            _background = call {
-                if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) exitWith {
-                    if (_nightMode) then {
-                        QUOTE(PATHTOF(UI\images\TAD_background_night_ca.paa))
-                    } else {
-                        QUOTE(PATHTOF(UI\images\TAD_background_ca.paa))
-                    };
-                };
-                if (_displayName in [QGVAR(GD300_dsp),QGVAR(GD300_dlg)]) exitWith {
-                    if (_nightMode) then {
-                        QUOTE(PATHTOF(UI\images\GD300_background_night_ca.paa))
-                    } else {
-                        QUOTE(PATHTOF(UI\images\GD300_background_ca.paa))
-                    };
-                };
-                if (_displayName in [QGVAR(MicroDAGR_dsp),QGVAR(MicroDAGR_dlg)]) exitWith {
-                    if (_nightMode) then {
-                        QUOTE(PATHTOF(UI\images\MicroDAGR_background_night_ca.paa))
-                    } else {
-                        QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa))
-                    };
-                };
-                if (_displayName in [QGVAR(DK10_dlg)]) exitWith {
-                    if (_nightMode) then {
-                        QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa))
-                    } else {
-                        QUOTE(PATHTOF(UI\images\DK10_background_ca.paa))
-                    };
-                };
-                ""
+            _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
+            _deviceType = D_GET_DEVICETYPE(_deviceData);
+            
+            // get config path for background
+            _backgroundConfig = if (_nightMode) then {
+                configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> QGVAR(backgroundNight);
+            } else {
+                configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> QGVAR(backgroundDay);
             };
-            if (_background != "") then {
+            
+            // check for existence of background
+            if (isText _backgroundConfig) then {
+                _background = getText _backgroundConfig;
                 (_display displayCtrl IDC_BACKGROUND) ctrlSetText _background;
                 // call brightness adjustment if this is outside of interface init
                 if (!_interfaceInit) then {
