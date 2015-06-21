@@ -68,11 +68,12 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _model;
 
     [{
-        private "_startingPosition";
+        private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL"];
+        
         PARAMS_2(_args,_pfID);
         EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID);
 
-        _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.5] vectorDiff positionCameraToWorld [0,0,0]);
+        _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
 
         if ((GVAR(placeAction) != PLACE_WAITING) ||
@@ -97,10 +98,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
             } else {
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
-                _pos = worldToScreen _virtualPos;
+                _screenPos = worldToScreen _virtualPos;
+                if (_screenPos isEqualTo []) exitWith {
+                    ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
+                };
                 _realDistance = _virtualPos distance (positionCameraToWorld [0,0,0]);
-                _pos = [(_pos select 0), _realDistance, (_pos select 1)];
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _pos;
+                _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 _angle = asin (_dir select 2);
                 _up = [0, cos _angle, sin _angle];
