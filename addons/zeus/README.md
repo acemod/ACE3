@@ -1,7 +1,12 @@
 ace_zeus
 ==========
 
-Provides control over various aspects of zeus.
+Provides control over various aspects of zeus:
+- Ascension messages
+- Eagle
+- Wind sounds
+- Ordnance radio messages
+- Mine markers
 
 ## Maintainers
 
