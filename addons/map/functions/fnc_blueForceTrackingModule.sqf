@@ -24,7 +24,3 @@ GVAR(BFT_Enabled) = true;
 
 diag_log text "[ACE]: Blue Force Tracking Module initialized.";
 TRACE_2("[ACE]: Blue Force Tracking Module initialized.",GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));
-
-//start BFT:
-GVAR(BFT_markers) = [];
-[FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
