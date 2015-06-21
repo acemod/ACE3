@@ -230,7 +230,7 @@ class CfgWeapons {
     class InventoryMuzzleItem_Base_F;
 
     class ACE_muzzle_mzls_H: ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_H";
         htMin = 1;
         htMax = 600;
@@ -239,7 +239,7 @@ class CfgWeapons {
         mFact = 1;
         tBody = 100;
         scope = 2;
-        displayName = "$STR_ACE_muzzle_mzls_H";
+        displayName = CSTRING(muzzle_mzls_H);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_h_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F";
 
@@ -283,9 +283,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_B: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_B";
-        displayName = "$STR_ACE_muzzle_mzls_B";
+        displayName = CSTRING(muzzle_mzls_B);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_h_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F";
 
@@ -329,9 +329,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_L: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_L";
-        displayName = "$STR_ACE_muzzle_mzls_L";
+        displayName = CSTRING(muzzle_mzls_L);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_l_F";
 
@@ -375,9 +375,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_smg_01: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_smg_01";
-        displayName = "$STR_ACE_muzzle_mzls_smg_01";
+        displayName = CSTRING(muzzle_mzls_smg_01);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F"; //"\A3\weapons_f\acc\acca_mzls_smg_01_F";
 
@@ -421,9 +421,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_smg_02: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_smg_02";
-        displayName = "$STR_ACE_muzzle_mzls_smg_02";
+        displayName = CSTRING(muzzle_mzls_smg_02);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_l_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F"; //"\A3\weapons_f\acc\acca_mzls_smg_01_F";
 
@@ -467,9 +467,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_338: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_338";
-        displayName = "$STR_ACE_muzzle_mzls_338";
+        displayName = CSTRING(muzzle_mzls_338);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_h_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F";
 
@@ -513,9 +513,9 @@ class CfgWeapons {
     };
 
     class ACE_muzzle_mzls_93mmg: ACE_muzzle_mzls_H {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_muzzle_mzls_93mmg";
-        displayName = "$STR_ACE_muzzle_mzls_93mmg";
+        displayName = CSTRING(muzzle_mzls_93mmg);
         picture = "\A3\weapons_F\Data\UI\gear_acca_mzls_h_ca.paa";
         model = "\A3\weapons_f\acc\acca_mzls_H_F";
 

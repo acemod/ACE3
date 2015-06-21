@@ -9,12 +9,19 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-/*
-TODO: Move the addEventHandlers out of PostInit into here or separate eventHandlers,
-to enable them on all units, so unit switching works for explosives properly.
-class Extended_Init_EventHandlers {
-class CAManBase {
-init = "";
-}
-}
-*/
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        GVAR(killedHandler) = QUOTE(_this call FUNC(onKilled));
+    };
+};
+
+class Extended_Take_EventHandlers {
+    class CAManBase {
+        GVAR(takeHandler) = QUOTE([ARR_3(_this select 0, _this select 1, _this select 2)] call FUNC(onInventoryChanged));
+    };
+};
+class Extended_Put_EventHandlers {
+    class CAManBase {
+        GVAR(takeHandler) = QUOTE([ARR_3(_this select 1, _this select 0, _this select 2)] call FUNC(onInventoryChanged));
+    };
+};

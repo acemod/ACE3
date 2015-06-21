@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Add an event handler that executes every time the scroll wheel is used. This is needed, because adding a MouseZ display event handler to display 46 will break in save games. Argument will be [Interval] where 'Interval' is a number.
+ * Add an event handler that executes every ACE_time the scroll wheel is used. This is needed, because adding a MouseZ display event handler to display 46 will break in save games. Argument will be [Interval] where 'Interval' is a number.
  *
  * Argument:
  * 0: Code to execute (Code or String)
@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
+private ["_actionsVar", "_id", "_actionIDs", "_actions"];
 
-_statement = _this select 0;
+PARAMS_1(_statement);
 
 if (typeName _statement == "STRING") then {
   _statement = compile _statement;

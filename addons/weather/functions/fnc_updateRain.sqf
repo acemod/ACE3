@@ -14,12 +14,11 @@
 if (!GVAR(syncRain)) exitWith {};
 
 if (!isNil "ACE_RAIN_PARAMS") then {
-    
     EXPLODE_3_PVT(ACE_RAIN_PARAMS,_oldRain,_newRain,_period);
     
     private ["_periodPosition", "_periodPercent"];
-    _periodPosition = (time - GVAR(rain_period_start_time)) min _period;
+    _periodPosition = (ACE_time - GVAR(rain_period_start_time)) min _period;
     _periodPercent = (_periodPosition / _period) min 1;
 
-    0 setRain (_oldRain + (_newRain - _oldRain) * _periodPercent);
+    GVAR(ACE_Rain) = (_oldRain + (_newRain - _oldRain) * _periodPercent);
 };

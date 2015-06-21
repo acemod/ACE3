@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName","_damage", "_source","_projectile","_hitSelections","_hitPoints","_newDamage","_cache_hitpoints","_cache_projectiles","_cache_params","_cache_damages"];
+private ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
 _unit          = _this select 0;
 _selectionName = _this select 1;
 _damage        = _this select 2;
@@ -41,18 +41,33 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
     if (GVAR(enableVehicleCrashes)) then {
         _selectionName = _hitSelections select (floor(random(count _hitSelections)));
         _projectile = "vehiclecrash";
+        _this set [1, _selectionName];
+        _this set [4, _projectile];
     };
 };
 
-// From AGM medical:
-// Exclude falling damage to everything other than legs; reduce structural damage.
-if (((velocity _unit) select 2 < -5) && {(vehicle _unit == _unit)}) then {
-    _unit setVariable [QGVAR(isFalling), True];
+// Handle falling damage
+_impactVelocity = (velocity _unit) select 2;
+if (_impactVelocity < -5 && {vehicle _unit == _unit}) then {
+    _unit setVariable [QGVAR(isFalling), true];
+    _unit setVariable [QGVAR(impactVelocity), _impactVelocity];
 };
-
-if (_unit getVariable [QGVAR(isFalling), false] && {!(_selectionName in ["", "leg_l", "leg_r"])}) exitWith {};
 if (_unit getVariable [QGVAR(isFalling), false]) then {
-    _newDamage = _newDamage * 0.7;
+    if !(_selectionName in ["", "leg_l", "leg_r"]) then {
+        if (_selectionName == "body") then {
+            _newDamage = _newDamage * abs(_unit getVariable [QGVAR(impactVelocity), _impactVelocity]) / 50;
+        } else {
+            _newDamage = _newDamage * 0.5;
+        };
+    } else {
+        if (_selectionName == "") then {
+            _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+            _this set [1, _selectionName];
+        };
+        _newDamage = _newDamage * 0.7;
+    };
+    _projectile = "falling";
+    _this set [4, "falling"];
 };
 
 // Finished with the current frame, reset variables
@@ -88,7 +103,7 @@ if (_selectionName != "") then {
     private ["_index","_otherDamage"];
     _index = _cache_projectiles find _projectile;
     // Check if the current projectile has already been handled once
-    if (_index >= 0) exitwith {
+    if (_index >= 0 && {_projectile != "falling"}) exitwith {
         _cache_damages = _unit getVariable QGVAR(cachedDamages);
         // Find the previous damage this projectile has done
         _otherDamage = (_cache_damages select _index);

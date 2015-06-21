@@ -1,11 +1,11 @@
 //fnc_hashHasKey.sqf
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
-// diag_log text format["%1 HASH HAS KEY: %2", diag_tickTime, _this];
+private ["_val", "_index"];
+// diag_log text format["%1 HASH HAS KEY: %2", ACE_diagTime, _this];
 
-_hash = _this select 0;
-_key = _this select 1;
+PARAMS_2(_hash,_key);
+
 ERRORDATA(2);
 _val = false;
 try {

@@ -26,9 +26,10 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(ammoTemperatureEnabled), "ammoTemperatureEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(barrelLengthInfluenceEnabled), "barrelLengthInfluenceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bulletTraceEnabled), "bulletTraceEnabled"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(onlyActiveForLocalPlayers), "onlyActiveForLocalPlayers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForEveryone), "simulateForEveryone"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(disabledInFullAutoMode), "disabledInFullAutoMode"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(alwaysSimulateForSnipers), "alwaysSimulateForSnipers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForSnipers), "simulateForSnipers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForGroupMembers), "simulateForGroupMembers"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationInterval), "simulationInterval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationRadius), "simulationRadius"] call EFUNC(common,readSettingFromModule);
 

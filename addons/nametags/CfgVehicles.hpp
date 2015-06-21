@@ -1,69 +1,101 @@
 class CfgVehicles {
-    class Module_F;
-    class ACE_ModuleNameTags : Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+    class ACE_Module;
+    class ACE_ModuleNameTags: ACE_Module {
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Name Tags";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
         class Arguments {
-            class PlayerNamesViewDistance {
-                displayName = "Player Names View Dist.";
-                description = "Distance in meters at which player names are shown. Default: 5";
-                typeName = "NUMBER";
-                defaultValue = 5;
-            };
-            class showNamesForAI {
-                displayName = "Show name tags for AI?";
-                description = "Show the name and rank tags for friendly AI units? Default: Do not force";
+            class showPlayerNames {
+                displayName = CSTRING(ShowPlayerNames);
+                description = CSTRING(ShowPlayerNames_Desc);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = "Do Not Force";
+                        name = CSTRING(DoNotForce);
                         value = -1;
                     };
                     class ForceHide {
-                        name = "Force Hide";
+                        name = CSTRING(ForceHide);
                         value = 0;
                     };
                     class ForceShow {
-                        name = "Force show";
+                        name = CSTRING(ForceShow);
+                        value = 1;
+                    };
+                    class ForceShowOnlyCursor {
+                        name = CSTRING(ForceShowOnlyCursor);
+                        value = 2;
+                    };
+                    class ForceShowOnlyKeypress {
+                        name = CSTRING(ForceShowOnlyKeypress);
+                        value = 3;
+                    };
+                    class ForceShowOnlyCursorAndKeypress {
+                        name = CSTRING(ForceShowOnlyCursorAndKeypress);
+                        value = 4;
+                    };
+                };
+            };
+            class playerNamesViewDistance {
+                displayName = CSTRING(PlayerNamesViewDistance_DisplayName);
+                description = CSTRING(PlayerNamesViewDistance_Description);
+                typeName = "NUMBER";
+                defaultValue = 5;
+            };
+            class showNamesForAI {
+                displayName = CSTRING(showNamesForAI_DisplayName);
+                description = CSTRING(showNamesForAI_Description);
+                typeName = "NUMBER";
+                class values {
+                    class DoNotForce {
+                        default = 1;
+                        name = CSTRING(DoNotForce);
+                        value = -1;
+                    };
+                    class ForceHide {
+                        name = CSTRING(ForceHide);
+                        value = 0;
+                    };
+                    class ForceShow {
+                        name = CSTRING(ForceShow);
                         value = 1;
                     };
                 };
             };
             class showVehicleCrewInfo {
-                displayName = "Show crew info?";
-                description = "Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force";
+                displayName = CSTRING(showVehicleCrewInfo_DisplayName);
+                description = CSTRING(showVehicleCrewInfo_Description);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = "Do Not Force";
+                        name = CSTRING(DoNotForce);
                         value = -1;
                     };
                     class ForceHide {
-                        name = "Force Hide";
+                        name = CSTRING(ForceHide);
                         value = 0;
                     };
                     class ForceShow {
-                        name = "Force Show";
+                        name = CSTRING(ForceShow);
                         value = 1;
                     };
                 };
             };
             class showCursorTagForVehicles {
-                displayName = "Show for Vehicles";
-                description = "Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No";
+                displayName = CSTRING(showCursorTagForVehicles_DisplayName);
+                description = CSTRING(showCursorTagForVehicles_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes {name = "Yes"; value = 1;};
-                    class No {default = 1; name = "No"; value = 0;};
-                };
+                defaultValue = 0;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
         };
     };
 };

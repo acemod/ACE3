@@ -39,7 +39,7 @@ GVAR(AltimeterActive) = true;
     _minute = floor ((daytime - _hour) * 60);
 
     _height = (getPosASL _unit) select 2;
-    _curTime = time;
+    _curTime = ACE_time;
     _timeDiff = _curTime - _prevTime;
     _descentRate = if(_timeDiff > 0) then {floor((_oldHeight - _height) / _timeDiff)} else {0};
 
@@ -49,4 +49,4 @@ GVAR(AltimeterActive) = true;
 
     (_this select 0) set [2, _height];
     (_this select 0) set [3, _curTime];
-}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), time]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), ACE_time]] call CALLSTACK(cba_fnc_addPerFrameHandler);

@@ -1,23 +1,18 @@
 // by commy2
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_weapon);
+PARAMS_2(_unit,_weapon);
 
 private ["_sound"];
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 
 if (count _sound == 0) exitWith {
-  playSound "ACE_Sound_Click";
+    playSound "ACE_Sound_Click";
 };
 
 // add file extension
-if call {
-  {
-    if (toLower (_sound select 0) find _x == count toArray (_sound select 0) - count toArray _x - 1) exitWith {false};
-    true
-  } forEach [".wav", ".ogg", ".wss"];
-} then {
-  _sound set [0, (_sound select 0) + ".wss"];
+if ({(toLower (_sound select 0) find _x == (count toArray (_sound select 0) - count toArray _x) - 1)} count [".wav", ".ogg", ".wss"] == 0) then {
+    _sound set [0, (_sound select 0) + ".wss"];
 };
 
 // add default volume, pitch and distance

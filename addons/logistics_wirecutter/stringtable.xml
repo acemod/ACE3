@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Wirecutter">
-        <Key ID="STR_ACE_logistics_wirecutter_wirecutterName">
+    <Package name="Logistics_Wirecutter">
+        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
             <English>Wirecutter</English>
             <French>Pince coupante</French>
             <German>Drahtschneider</German>
@@ -10,10 +10,10 @@
             <Czech>Štípací kleště</Czech>
             <Polish>Nożyce do cięcia drutu</Polish>
             <Hungarian>Drótvágó</Hungarian>
-            <Italian>Pinze da Taglio</Italian>
+            <Italian>Trancia</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
         </Key>
-        <Key ID="STR_ACE_logistics_wirecutter_wirecutterDescription">
+        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
             <German>Schneidet Draht.</German>
             <Spanish>Cortador de cables</Spanish>
@@ -22,10 +22,10 @@
             <Polish>Służą do cięcia drutu i płotów</Polish>
             <French>Pince coupante</French>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
-            <Italian>Pinze da Taglio</Italian>
+            <Italian>Trancia da ferro</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
         </Key>
-        <Key ID="STR_ACE_logistics_wirecutter_CutFence">
+        <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
             <German>Zaun schneiden</German>
             <Spanish>Cortar alambrado</Spanish>
@@ -37,7 +37,7 @@
             <Hungarian>Drótkerítés átvágása</Hungarian>
             <Russian>Разрезать забор</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_wirecutter_CuttingFence">
+        <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires ...</English>
             <German>Zaun / Draht schneiden ...</German>
             <Spanish>Cortando alambrado / cables ...</Spanish>
@@ -49,7 +49,7 @@
             <Hungarian>Drótok elvágása ...</Hungarian>
             <Russian>Разрезаем забор / провода ...</Russian>
         </Key>
-        <Key ID="STR_ACE_logistics_wirecutter_FenceCut">
+        <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
             <German>Zaun geschnitten</German>
             <Spanish>Alambrado cortado</Spanish>

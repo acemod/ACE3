@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(debugDumpToClipboard);
 PREP(onListBoxSettingsChanged);
 PREP(onListBoxShowSelectionChanged);
 PREP(onSettingsMenuOpen);

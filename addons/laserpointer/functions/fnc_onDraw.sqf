@@ -1,18 +1,19 @@
 // by commy2
 #include "script_component.hpp"
 
-_brightness = 2 - call EFUNC(common,ambientBrightness);
-_isIR = currentVisionMode ACE_player;
+private ["_brightness", "_cacheName", "_isIR", "_laser", "_laserID", "_weapon"];
 
+_isIR = currentVisionMode ACE_player;
 if (_isIR == 2) exitWith {};
 
 _isIR = _isIR == 1;
+
+_brightness = 2 - call EFUNC(common,ambientBrightness);
 
 {
     _weapon = currentWeapon _x;
 
     _laser = switch (_weapon) do {
-        case (""): {""};
         case (primaryWeapon _x): {
             primaryWeaponItems _x select 1;
         };
@@ -34,7 +35,7 @@ _isIR = _isIR == 1;
         };
 
         if (_laserID > 0 && {_x isFlashlightOn _weapon}) then {
-            [_x, 50, _laserID == 2 || _isIR] call FUNC(drawLaserpoint);
+            [_x, 50, (_laserID == 2 || _isIR), _brightness] call FUNC(drawLaserpoint);
         };
     };
 

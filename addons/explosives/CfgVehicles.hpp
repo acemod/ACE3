@@ -3,7 +3,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Explosives {
-                displayName = $STR_ACE_Explosives_Menu;
+                displayName = CSTRING(Menu);
                 condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -13,7 +13,7 @@ class CfgVehicles {
                 hotkey = "X";
                 //Sub-menu items
                 class ACE_Detonate {
-                    displayName = $STR_ACE_Explosives_Detonate;
+                    displayName = CSTRING(Detonate);
                     condition = QUOTE([_player] call FUNC(canDetonate));
                     statement = "";
                     insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
@@ -24,7 +24,7 @@ class CfgVehicles {
                     hotkey = "T";
                 };
                 class ACE_Place {
-                    displayName = $STR_ACE_Explosives_Place;
+                    displayName = CSTRING(Place);
                     condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
                     statement = "";
                     insertChildren = QUOTE([_player] call FUNC(addExplosiveActions););
@@ -35,7 +35,7 @@ class CfgVehicles {
                     hotkey = "P";
                 };
                 class ACE_Cellphone {
-                    displayName = $STR_ACE_Explosives_cellphone_displayName;
+                    displayName = CSTRING(cellphone_displayName);
                     condition = "('ACE_Cellphone' in (items ace_player))";
                     statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
                     exceptions[] = {"isNotSwimming", "isNotInside"};
@@ -65,7 +65,7 @@ class CfgVehicles {
                 distance = 5;
                 condition = "true";
                 class ACE_Defuse {
-                    displayName = $STR_ACE_Explosives_Defuse;
+                    displayName = CSTRING(Defuse);
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
                     exceptions[] = {"isNotSwimming"};
@@ -97,24 +97,24 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_SetTrigger {
                     selection = "";
-                    displayName = "$STR_ACE_Explosives_TriggerMenu";
+                    displayName = CSTRING(TriggerMenu);
                     distance = 4;
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
                     showDisabled = 0;
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming"};
                     priority = 5;
                     icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
                 };
                 class ACE_PickUp {
                     selection = "";
-                    displayName = "$STR_ACE_Explosives_Pickup";
+                    displayName = CSTRING(Pickup);
                     distance = 4;
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming"};
                     priority = 5;
                     icon = "\A3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_takemine_ca.paa";
                 };

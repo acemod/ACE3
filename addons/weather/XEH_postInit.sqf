@@ -5,11 +5,13 @@ GVAR(temperatureShift) = 3 - random 6;
 GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
 GVAR(humidityShift) = (5 - random 10) / 100;
 
-GVAR(wind_period_start_time) = time;
-GVAR(rain_period_start_time) = time;
+GVAR(wind_period_start_time) = ACE_time;
+GVAR(rain_period_start_time) = ACE_time;
 
-"ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = time; };
-"ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = time; };
+GVAR(ACE_rain) = rain;
+
+"ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = ACE_time; };
+"ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = ACE_time; };
 "ACE_MISC_PARAMS" addPublicVariableEventHandler {
     if (!isServer) then {
         if (GVAR(syncMisc)) then {
@@ -25,7 +27,7 @@ GVAR(rain_period_start_time) = time;
     };
 };
 
-["ACE3 Common", QGVAR(WindInfoKey), localize "STR_ACE_Weather_WindInfoKey",
+["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -42,3 +44,8 @@ simulWeatherSync;
 [FUNC(updateHumidity), 20, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateWind), 1, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(updateRain), 2, []] call CBA_fnc_addPerFrameHandler;
+[{
+    if (GVAR(syncRain)) then {
+        0 setRain GVAR(ACE_rain);
+    };
+}, 0, []] call CBA_fnc_addPerFrameHandler;

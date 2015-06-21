@@ -1,6 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
+private["_client", "_clientVersion", "_count", "_error", "_files", "_index", "_missingAddon", "_missingAddonServer", "_missingAddons", "_missingAddonsServer", "_oldVersionClient", "_oldVersionServer", "_oldVersionsClient", "_oldVersionsServer", "_serverFiles", "_serverVersion", "_serverVersions", "_string", "_version", "_versions"];
+
 _files = [];
 
 {
@@ -47,7 +49,7 @@ if (!isServer) then {
 
         _index = _files find _x;
         if (_index == -1) then {
-                if (_x != "ace_serverconfig") then {_missingAddons pushBack _x;};
+                if (_x != "ace_server") then {_missingAddons pushBack _x;};
         } else {
 
             _clientVersion = _versions select _index;

@@ -16,7 +16,7 @@ call FUNC(determineZoom);
     waitUntil {(!isNull findDisplay 12)};
 
     GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = time;
+    GVAR(lastStillTime) = ACE_time;
     GVAR(isShaking) = false;
 
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];

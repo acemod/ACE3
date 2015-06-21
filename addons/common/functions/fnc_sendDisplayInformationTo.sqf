@@ -27,7 +27,7 @@ if (isPlayer _reciever) then {
         _localizationArray = [_title];
         {
             _localizationArray pushback _x;
-        }foreach _parameters;
+        } forEach _parameters;
         _title = format _localizationArray;
 
         {
@@ -35,7 +35,7 @@ if (isPlayer _reciever) then {
                 _localizationArray = [localize _x];
                 {
                     _localizationArray pushback _x;
-                }foreach _parameters;
+                } forEach _parameters;
 
                 _content set [_foreachIndex, format _localizationArray];
             };

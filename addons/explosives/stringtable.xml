@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -368,7 +368,7 @@
             <Polish>Wybierz zapalnik</Polish>
             <French>Sélectionner une mise à feu</French>
             <Czech>Zvolit Detonátor</Czech>
-            <Italian>Seleziona un Attivatore</Italian>
+            <Italian>Seleziona un attivatore</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
             <Russian>Выберите детонатор</Russian>
@@ -392,7 +392,7 @@
             <German>Druckplatte</German>
             <French>Plaque de pression</French>
             <Czech>Nášlapná nástraha</Czech>
-            <Italian>Piastra a Pressione</Italian>
+            <Italian>Piastra a pressione</Italian>
             <Hungarian>Nyomólap</Hungarian>
             <Portuguese>Placa de pressão</Portuguese>
             <Russian>Нажимная плита</Russian>
@@ -404,7 +404,7 @@
             <German>Stolperdraht</German>
             <French>Fil de détente</French>
             <Czech>Nástražný drát</Czech>
-            <Italian>Filo a Inciampo</Italian>
+            <Italian>Filo a inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
             <Portuguese>Linha de tração</Portuguese>
             <Russian>Растяжка</Russian>
@@ -440,7 +440,7 @@
             <German>Infrarotsensor (Seitenangriff)</German>
             <French>Capteur IR (de flanc)</French>
             <Czech>IR Značkovač (Výbuch stranou)</Czech>
-            <Italian>Sensore IR (Attacco laterale)</Italian>
+            <Italian>Sensore IR (attacco laterale)</Italian>
             <Hungarian>Infravörös szenzor (Side Attack)</Hungarian>
             <Portuguese>Sensor infravermelho (ataque lateral)</Portuguese>
             <Russian>ИК сенсор (детонация вбок)</Russian>
@@ -452,7 +452,7 @@
             <German>Magnetfeldsensor (Bodenangriff)</German>
             <French>Capteur magnétique (par le bas)</French>
             <Czech>Magnetický Senzor (Výbuch ze spoda)</Czech>
-            <Italian>Sensore Magnetico di Prossimità (Attacco inferiore)</Italian>
+            <Italian>Sensore Magnetico di Prossimità (attacco inferiore)</Italian>
             <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
             <Portuguese>Influência magnética (ataque inferior)</Portuguese>
             <Russian>Магнитный сенсор (детонация вверх)</Russian>
@@ -462,7 +462,7 @@
             <German>Keine Sprengladungen auf diesem Auslöser.</German>
             <Spanish>Ningún explosivo en el detonador.</Spanish>
             <French>Pas d'explosif à mettre à feu.</French>
-            <Italian>Nessun esplosivo sul sensore.</Italian>
+            <Italian>Nessun esplosivo</Italian>
             <Czech>Žádná výbušnina k odpálení.</Czech>
             <Hungarian>Nincs robbanóanyag a gyújtóeszközhöz kötve.</Hungarian>
             <Polish>Brak ładunków na zapalnik.</Polish>
@@ -491,7 +491,7 @@
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
             <Portuguese>Usado para detonar remotamente o explosivo quando solto.</Portuguese>
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
-            <Italian>Usato per attivare esplosivi al momento del rilascio</Italian>
+            <Italian>Usato per attivare a distanza esplosivi al momento del rilascio</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -504,6 +504,53 @@
             <Russian>Поднять</Russian>
             <Italian>Raccogli</Italian>
             <Portuguese>Pegar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_DisplayName">
+            <English>Explosive System</English>
+            <Polish>System ładunków wybuchowych</Polish>
+            <Spanish>Sistema de explosivos</Spanish>
+            <German>Sprengstoffsystem</German>
+            <Czech>Systém výbušnin</Czech>
+        </Key>
+        <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
+            <English>Require specialists?</English>
+            <Polish>Wymagaj specjalistów?</Polish>
+            <Spanish>¿Requiere especialista?</Spanish>
+            <German>Benötigt Sprengstoffexperten?</German>
+            <Czech>Vyžadovat specialistu?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
+            <English>Require explosive specialists to disable explosives? Default: No</English>
+            <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
+            <Spanish>Requiere especialista en explosivos para desactivar explosivos?. Por defecto: No</Spanish>
+            <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
+            <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
+        </Key>
+        <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
+            <English>Punish non-specialists?</English>
+            <Polish>Karaj nie-specjalistów?</Polish>
+            <Spanish>¿Penalizar a los no especialistas?</Spanish>
+            <German>Bestrafe Nicht-Sprengstoffexperten?</German>
+            <Czech>Potrestat, pokud není specialista?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
+            <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
+            <Polish>Zwiększyć ilość wymaganego czasu do ukończenia akcji dla nie-specjalistów? Domyślnie: Tak</Polish>
+            <Spanish>Aumenta el tiempo que lleva completar acciones para los no especialstas?. Por defecto: Si</Spanish>
+            <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
+            <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
+            <English>Explode on defusal?</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
+            <English>Enable certain explosives to explode on defusal? Default: Yes</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
+            <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
+            <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
         </Key>
     </Package>
 </Project>

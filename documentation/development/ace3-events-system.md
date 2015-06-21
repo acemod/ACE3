@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: ACE3 Events System
+description: Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 group: development
 parent: wiki
 order: 3

@@ -1,4 +1,3 @@
-
 class CfgVehicles {
   /*class Man;
   class CAManBase: Man {
@@ -24,79 +23,80 @@ class CfgVehicles {
 
   // += needs a non inherited entry in that class, otherwise it simply overwrites
   //#include <DefaultItems.hpp>
-
-  class Module_F;
-  class ACE_ModuleCheckPBOs: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
+    class ACE_ModuleCheckPBOs: ACE_Module {
+    author = CSTRING(ACETeam);
     category = "ACE";
-    displayName = "Check PBOs";
+    displayName = CSTRING(CheckPBO_DisplayName);
     function = QFUNC(moduleCheckPBOs);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
     class Arguments {
       class Action {
-        displayName = "Action";
-        description = "What to do with people who do not have the right PBOs?";
+        displayName = CSTRING(CheckPBO_Action_DisplayName);
+        description = CSTRING(CheckPBO_Action_Description);
+        typeName = "NUMBER";
         class values {
           class WarnOnce {
             default = 1;
-            name = "Warn once";
+            name = CSTRING(CheckPBO_Action_WarnOnce);
             value = 0;
           };
           class Warn {
-            name = "Warn (permanent)";
+            name = CSTRING(CheckPBO_Action_WarnPerm);
             value = 1;
           };
           class Kick {
-            name = "Kick";
+            name = CSTRING(CheckPBO_Action_Kick);
             value = 2;
           };
         };
       };
       class CheckAll {
-        displayName = "Check all addons";
-        description = "Check all addons instead of only those of ACE?";
+        displayName = CSTRING(CheckPBO_CheckAll_DisplayName);
+        description = CSTRING(CheckPBO_CheckAll_Description);
         typeName = "BOOL";
-        class values {
-          class WarnOnce {
-            default = 1;
-            name = "No";
-            value = 0;
-          };
-          class Warn {
-            name = "Yes";
-            value = 1;
-          };
-        };
+        defaultValue = 0;
       };
       class Whitelist {
-        displayName = "Whitelist";
-        description = "What addons are allowed regardless?";
+        displayName = CSTRING(CheckPBO_Whitelist_DisplayName);
+        description = CSTRING(CheckPBO_Whitelist_Description);
         typeName = "STRING";
         class values {
             default = "[]";
         };
       };
     };
+    class ModuleDescription: ModuleDescription {
+        description = CSTRING(CheckPBO_Description);
+    };
   };
 
-  class ACE_ModuleLSDVehicles: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+  class ACE_ModuleLSDVehicles: ACE_Module {
+    author = CSTRING(ACETeam);
     category = "ACE";
-    displayName = "LSD Vehicles";
+    displayName = CSTRING(LSDVehicles_DisplayName);
     function = "ACE_Common_fnc_moduleLSDVehicles";
     scope = 2;
     icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
     isGlobal = 1;
     class Arguments {
     };
+    class ModuleDescription: ModuleDescription {
+        description = CSTRING(LSDVehicles_Description);
+        sync[] = {"AnyVehicle"};
+    };
   };
 
   class Box_NATO_Support_F;
   class ACE_Box_Misc: Box_NATO_Support_F {
-    author = "$STR_ACE_Common_ACETeam";
-    displayName = "$STR_ACE_Common_MiscItems";
+    author = CSTRING(ACETeam);
+    displayName = CSTRING(MiscItems);
     transportMaxWeapons = 9001;
     transportMaxMagazines = 9001;
     transportMaxItems = 9001;
@@ -112,8 +112,8 @@ class CfgVehicles {
     class ACE_bananaItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = "$STR_ACE_Common_bananaDisplayName";
-        author = "$STR_ACE_Common_ACETeam";
+        displayName = CSTRING(bananaDisplayName);
+        author = CSTRING(ACETeam);
         vehicleClass = "Items";
         class TransportItems
         {

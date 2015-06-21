@@ -17,9 +17,9 @@ class CfgVehicles {
 
     class B_Parachute;
     class ACE_NonSteerableParachute: B_Parachute {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         scope = 2;
-        displayName = "$STR_ACE_Parachute_NonSteerableParachute";
+        displayName = CSTRING(NonSteerableParachute);
         //picture = "\A3\Characters_F\data\ui\icon_b_parachute_ca.paa";    // @todo
         //model = "\A3\Weapons_F\Ammoboxes\Bags\Backpack_Parachute";    // @todo
         // backpackSimulation = "ParachuteNonSteerable";    //ParachuteSteerable  //Bis broke this in 1.40

@@ -2,7 +2,7 @@
 * Author: Glowbal
 *
 * Draw progress bar and execute given function if succesful.
-* Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
+* Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
 *
 * Argument:
 * 0: icon ID <STRING>
@@ -42,11 +42,10 @@
 // other constants
 #define DEFAULT_TIME    6
 
-private ["_iconId", "_show", "_icon", "_allControls", "_refresh", "_timeAlive", "_list", "_color"];
-_iconId = _this select 0;
-_show = _this select 1;
-_icon = _this select 2;
-_color = _this select 3;
+private ["_allControls", "_refresh", "_timeAlive", "_list"];
+
+PARAMS_4(_iconId,_show,_icon,_color);
+
 _timeAlive = if (count _this > 4) then {_this select 4} else {DEFAULT_TIME};
 
 disableSerialization;
@@ -62,7 +61,7 @@ _refresh = {
 
     _allControls = [];
 
-    private ["_ctrl", "_setting"];
+    private ["_ctrl", "_setting", "_position"];
     _setting = missionNamespace getvariable[QGVAR(settingFeedbackIcons), 0];
     if (_setting > 0) then {
         {
@@ -87,13 +86,13 @@ _refresh = {
 
 if (_show) then {
     if ({(_x select 0 == _iconId)} count _list == 0) then {
-        _list pushback [_iconId, _icon, _color, time];
+        _list pushback [_iconId, _icon, _color, ACE_time];
     } else {
         {
             if (_x select 0 == _iconId) exitwith {
-                _list set [_foreachIndex, [_iconId, _icon, _color, time]];
+                _list set [_foreachIndex, [_iconId, _icon, _color, ACE_time]];
             };
-        }foreach _list;
+        } forEach _list;
     };
     missionNamespace setvariable [QGVAR(displayIconList), _list];
     call _refresh;
@@ -112,7 +111,7 @@ if (_show) then {
             if (_x select 0 != _iconId) then {
                 _newList pushback _x;
             };
-        }foreach _list;
+        } forEach _list;
 
         missionNamespace setvariable [QGVAR(displayIconList), _newList];
         call _refresh;

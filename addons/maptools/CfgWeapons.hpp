@@ -3,8 +3,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_MapTools: ACE_ItemCore {
-        displayName = "$STR_ACE_MapTools_Name";
-        descriptionShort = "$STR_ACE_MapTools_Description";
+        displayName = CSTRING(Name);
+        descriptionShort = CSTRING(Description);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = PATHTOF(UI\maptool_item.paa);
         scope = 2;

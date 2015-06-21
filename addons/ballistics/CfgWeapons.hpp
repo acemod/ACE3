@@ -1,16 +1,13 @@
 
+class Single;
+class Burst;
+class FullAuto;
 class Mode_SemiAuto;
+class Mode_Burst;
 class Mode_FullAuto;
 
 class CfgWeapons {
-    class DMR_02_base_F;
-    class DMR_03_base_F;
-    class DMR_04_base_F;
-    class DMR_05_base_F;
-    class DMR_06_base_F;
-    class GM6_base_F;
     class LMG_RCWS;
-    class LRR_base_F;
     class MGun;
     class MGunCore;
     class MMG_01_base_F;
@@ -22,19 +19,83 @@ class CfgWeapons {
     
     /* Long Rifles */
     
+    class GM6_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+    };
+    
+    class LRR_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00020; // radians. Equal to 0.70 MOA.
+        };
+    };
+    
+    class DMR_06_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+        
+        class FullAuto: Mode_FullAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+    };
+    
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+        
+        class FullAuto: Mode_FullAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+    };
+    
+    class DMR_04_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+    };
+    
+    class DMR_03_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00032; // radians. Equal to 1.10 MOA.
+        };
+        
+        class FullAuto: Mode_FullAuto {
+            dispersion = 0.00032; // radians. Equal to 1.10 MOA.
+        };
+    };
+    
+    class DMR_02_base_F: Rifle_Long_Base_F {
+        class Single: Mode_SemiAuto {
+            dispersion = 0.000262; // radians. Equal to 0.90 MOA.
+        };
+    };
+    
+    class DMR_01_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot: MuzzleSlot {
+                compatibleItems[] += {"ACE_muzzle_mzls_B"};
+            };
+        };
+        class Single: Mode_SemiAuto {
+            dispersion = 0.0004; // radians. Equal to 1.375 MOA.
+        };
+    };
+    
     class EBR_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
             };
         };
-    };
-
-    class DMR_01_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
+        };
+        
+        class FullAuto: Mode_FullAuto {
+            dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
     
@@ -45,14 +106,6 @@ class CfgWeapons {
             class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
-        };
-        class Single: Mode_SemiAuto {
-            dispersion = 0.000800; // radians. Equal to 2.75 MOA.
-            // Based on widely cited 2 MOA figure for new 5.56 ACR.
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
         };
     };
     class arifle_MX_SW_F: arifle_MX_Base_F {
@@ -74,14 +127,6 @@ class CfgWeapons {
                 compatibleItems[] = {"muzzle_snds_H","muzzle_snds_H_SW","ACE_muzzle_mzls_H"};
             };
         };
-        class Single: Mode_SemiAuto {
-            dispersion = 0.000800; // radians. Equal to 2.75 MOA.
-            // Based on widely cited 2 MOA figure for new 5.56 ACR.
-        };
-
-        class manual: FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
-        };
     };
     class arifle_MXM_F: arifle_MX_Base_F {
         magazines[] = {
@@ -95,12 +140,11 @@ class CfgWeapons {
         ACE_barrelTwist=228.6;
         ACE_barrelLength=457.2;
         class Single: Single {
-            dispersion = 0.00029; // radians. Equal to 1 MOA.
-            // 6.5mm is easily capable of this in a half-tuned rifle.
+            dispersion = 0.000436; // radians. Equal to 1.50 MOA.
         };
 
         class FullAuto: FullAuto {
-            dispersion = 0.000800; // radians. Equal to 2.75 MOA.
+            dispersion = 0.000436; // radians. Equal to 1.50 MOA.
         };
     };
 
@@ -111,15 +155,6 @@ class CfgWeapons {
             class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_H"};
             };
-        };
-        class Single: Mode_SemiAuto {
-            dispersion = 0.000800; // radians. Equal to 2.75 MOA.
-            // Based on widely cited 2 MOA figure for new 5.56 ACR?
-            // Use your imagination for fictional weapons!
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
         };
     };
 
@@ -139,13 +174,6 @@ class CfgWeapons {
         };
         ACE_barrelTwist=177.8;
         ACE_barrelLength=317.5;
-        class manual: Mode_FullAuto {
-            dispersion = 0.00175; // radians. Equal to 6 MOA.
-        };
-
-        class Single: manual {
-            dispersion = 0.00175; // radians. Equal to 6 MOA.
-        };
     };
     class LMG_Zafir_F: Rifle_Long_Base_F {
         initSpeed = -1.0;
@@ -156,13 +184,6 @@ class CfgWeapons {
         };
         ACE_barrelTwist=304.8;
         ACE_barrelLength=459.74;
-        class FullAuto: Mode_FullAuto {
-            dispersion = 0.00175; // radians. Equal to 6 MOA.
-        };
-
-        class Single: Mode_SemiAuto {
-            dispersion = 0.00175; // radians. Equal to 6 MOA.
-        };
     };
 
 
@@ -173,27 +194,12 @@ class CfgWeapons {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
         };
-        class Single: Mode_SemiAuto {
-            dispersion = 0.000727; // radians. Equal to 2.5 MOA, about the limit of mass-produced M855.
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
-        };
     };
     class mk20_base_F: Rifle_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_L"};
             };
-        };
-        class Single: Mode_SemiAuto {
-            dispersion = 0.0008727; // radians. Equal to 3 MOA, about the limit of mass-produced M855 plus
-            // some extra for these worn out Greek Army service rifles.
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
         };
     };
 
@@ -202,12 +208,15 @@ class CfgWeapons {
     class SDAR_base_F: Rifle_Base_F {
         initSpeed = -0.989;
         class Single: Mode_SemiAuto {
-            dispersion = 0.0008727; // radians. Equal to 3 MOA, about the limit of mass-produced M855 plus
-            // some extra because Kel-Tec.
+            dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
 
+        class Burst: Mode_Burst {
+            dispersion = 0.0008727; // radians. Equal to 3 MOA.
+        };
+        
         class FullAuto: Mode_FullAuto {
-            dispersion = 0.00147; // radians. Equal to 5.1 MOA.
+            dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
     };
     class pdw2000_base_F: Rifle_Base_F {
@@ -543,7 +552,7 @@ class CfgWeapons {
         };
         initSpeed = -1.0;
         ACE_barrelTwist=381.0;
-        ACE_barrelLength=929.64;
+        ACE_barrelLength=730;
     };
     class srifle_DMR_02_F: DMR_02_base_F {
         magazines[] = {
@@ -642,11 +651,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -675,11 +684,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -708,11 +717,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -741,11 +750,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -774,11 +783,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -807,11 +816,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -840,11 +849,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -873,11 +882,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";
@@ -906,11 +915,11 @@ class CfgWeapons {
             };
 
             class MuzzleCoef {
-                dispersionCoef = "0.8f";
+                dispersionCoef = "0.95f";
                 artilleryDispersionCoef = "1.0f";
                 fireLightCoef = "0.5f";
-                recoilCoef = "1.0f";
-                recoilProneCoef = "1.0f";
+                recoilCoef = "0.95f";
+                recoilProneCoef = "0.95f";
                 minRangeCoef = "1.0f";
                 minRangeProbabCoef = "1.0f";
                 midRangeCoef = "1.0f";

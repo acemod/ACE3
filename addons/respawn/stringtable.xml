@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Interaction">
+    <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds ...</English>
             <French>Déploiement dans 5 secondes ...</French>
@@ -35,6 +35,7 @@
             <French>Téléportation à la base</French>
             <Portuguese>Teletransportar para a Base</Portuguese>
             <Hungarian>Bázisra teleportálás</Hungarian>
+            <Italian>Teleporta alla base</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -46,6 +47,7 @@
             <French>Téléporation au point de ralliement</French>
             <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Italian>Teleporta al rallypoint</Italian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
@@ -142,6 +144,85 @@
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_DisplayName">
+            <English>Respawn System</English>
+            <Polish>System odrodzenia</Polish>
+            <Spanish>Sistema de reaparición</Spanish>
+            <German>Respawn-System</German>
+            <Czech>Systém znovuzrození</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
+            <English>Save Gear?</English>
+            <Polish>Zapisać ekwipunek?</Polish>
+            <Spanish>¿Guardar equipo?</Spanish>
+            <German>Ausrüstung speichern?</German>
+            <Czech>Uložit výbavu?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
+            <English>Respawn with the gear a soldier had just before his death?</English>
+            <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
+            <Spanish>Reaparece con el equipo que el soldado tenía justo antes de morir</Spanish>
+            <German>Mit der Ausrüstung, die ein Soldat vor seinem Tod hatte, respawnen?</German>
+            <Czech>Znovuubjevit s výbavou kterou měl voják před smrtí?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
+            <English>Remove bodies?</English>
+            <Polish>Usuwać ciała?</Polish>
+            <Spanish>¿Eliminar cuerpos?</Spanish>
+            <German>Körper entfernen?</German>
+            <Czech>Odstranit těla?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
+            <English>Remove player bodies after disconnect?</English>
+            <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
+            <Spanish>Elimina los cuerpos de los jugadores cuando se desconecten</Spanish>
+            <German>Entferne Spielerkörper nach dem Trennen einer Verbindung?</German>
+            <Czech>Odstranit hráčova těla po odpojení?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
+            <German>Dieses Modul erlaubt es die Respawn-Einstellungen anzupassen.</German>
+            <Czech>Tento modul umožňuje nastavení znovuzrození (spawn).</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
+            <English>Friendly Fire Messages</English>
+            <Polish>Wiadomości Friendly Fire</Polish>
+            <Spanish>Mensajes de fuego amigo</Spanish>
+            <German>Freundbeschuss-Nachrichten</German>
+            <Czech>Upozornění na přátelskou střelbu</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
+            <English></English>
+            <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
+            <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
+            <English>Rallypoint System</English>
+            <Polish>System punktu zbiórki</Polish>
+            <Spanish>Sistema de punto de reunión</Spanish>
+            <German>Rallypoint-System</German>
+            <Czech>Systém shromáždění</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
+            <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
+            <English>Move Rallypoint</English>
+            <Polish>Przenieś punkt zbiórki</Polish>
+            <Spanish>Mover punto de reunión</Spanish>
+            <German>Bewege Rallypoint</German>
+            <Czech>Přesun na shromaždiště</Czech>
+        </Key>
+        <Key ID="STR_ACE_Respawn_EditorCategory">
+            <English>ACE Respawn</English>
+            <Polish>ACE Odrodzenie</Polish>
+            <Spanish>Reaparición ACE</Spanish>
+            <German>ACE-Respawn</German>
+            <Czech>ACE Znovuzrození</Czech>
         </Key>
     </Package>
 </Project>
