@@ -221,21 +221,25 @@
             <English>Interaction menu background</English>
             <Polish>Tło menu interakcji</Polish>
             <Spanish>Fondo del menú de interacción</Spanish>
+            <Czech>Pozadí menu interakce</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
             <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
             <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
+            <Czech>Rozmazat obraz pokud je interakční menu otevřené.</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
             <Polish>Rozmycie ekranu</Polish>
             <Spanish>Pantalla de desenfoque</Spanish>
+            <Czech>Rozmazaný obraz</Czech>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
             <Polish>Przyciemnienie ekranu</Polish>
             <Spanish>Negra</Spanish>
+            <Czech>Černý obraz</Czech>
         </Key>
     </Package>
 </Project>

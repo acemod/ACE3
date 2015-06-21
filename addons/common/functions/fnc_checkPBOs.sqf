@@ -67,24 +67,26 @@ if (!isServer) then {
             //[_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
             diag_log text _error;
 
-            _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
+            if (_mode < 2) then {
+                _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 
-            _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
-            _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
+                _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
+                _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
-            disableSerialization;
-            _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
-            _ctrlHint ctrlSetStructuredText _text;
+                disableSerialization;
+                _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
+                _ctrlHint ctrlSetStructuredText _text;
 
-            if (_mode == 0) then {
-                sleep 10;
-                _rscLayer cutFadeOut 0.2;
+                if (_mode == 0) then {
+                    sleep 10;
+                    _rscLayer cutFadeOut 0.2;
+                };
             };
 
             if (_mode == 2) then {
-                sleep 10;
-                waitUntil {alive player};
-                [player] call FUNC(adminKick);
+                waitUntil {alive player}; // To be able to show list if using checkAll
+                _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
+                ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
             };
         };
     };

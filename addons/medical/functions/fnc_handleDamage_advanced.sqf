@@ -42,7 +42,7 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 [_unit] call FUNC(handleDamage_advancedSetDamage);
 
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
-[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
+[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 
 // TODO Disabled until implemented fully
 //if (GVAR(enableAirway)) then {

@@ -1,8 +1,13 @@
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 #include "initKeybinds.sqf"
 
+GVAR(outputPFH) = -1;
+
 GVAR(run) = false;
+GVAR(hidden) = true;
 GVAR(menuRun) = false;
 GVAR(useDegrees) = true;
 GVAR(updateInterval) = 0.5;

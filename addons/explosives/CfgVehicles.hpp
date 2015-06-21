@@ -103,7 +103,7 @@ class CfgVehicles {
                     statement = "";
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
                     showDisabled = 0;
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming"};
                     priority = 5;
                     icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
                 };
@@ -114,7 +114,7 @@ class CfgVehicles {
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
-                    exceptions[] = {};
+                    exceptions[] = {"isNotSwimming"};
                     priority = 5;
                     icon = "\A3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_takemine_ca.paa";
                 };

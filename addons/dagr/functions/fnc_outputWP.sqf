@@ -27,11 +27,14 @@
 
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
 
-[{
+if (GVAR(outputPFH) != -1) exitWith {};
+
+GVAR(outputPFH) = [{
     private ["_pos", "_mapSize", "_gridConfig", "_offsetX", "_offsetY", "_stepX", "_stepY", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
     
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+        GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };

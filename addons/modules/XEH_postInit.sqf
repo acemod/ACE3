@@ -43,4 +43,9 @@
             };
         };
     }foreach GVAR(moduleInitCollection);
+    
+    if (isServer) then {
+        GVAR(serverModulesRead) = true;
+        publicVariable QGVAR(serverModulesRead);
+    };
 }] call EFUNC(common,addEventhandler);
