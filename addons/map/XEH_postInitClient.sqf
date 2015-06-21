@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Exit on Headless as well
+if !(hasInterface) exitWith {};
+
 LOG(MSG_INIT);
 
 // Calculate the maximum zoom allowed for this map
@@ -17,9 +20,6 @@ call FUNC(determineZoom);
 
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];
 };
-
-// Client only from here
-if !(hasInterface) exitWith {};
 
 ["SettingsInitialized", {
     // Start Blue Force Tracking if Enabled
