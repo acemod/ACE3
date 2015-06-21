@@ -20,6 +20,7 @@ class CfgVehicles {
     
     class ACE_Comanche_Test : B_Heli_Attack_01_F {
         scope = 1;
+        scopeCurator = 0;
         displayName = "ACE_Comanche_Test";
         author = "ACE Team";
         class Library {
