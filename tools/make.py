@@ -598,8 +598,6 @@ def set_version_in_files():
     newVersion = ACE_VERSION # MAJOR.MINOR.PATCH.BUILD
     newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
 
-    print_blue("\nChecking for obsolete version numbers...")
-
     # Regex patterns
     pattern = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH.BUILD
     patternShort = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH
@@ -634,7 +632,7 @@ def set_version_in_files():
 
                         # Print change and modify the file if changed
                         if versionFound != newVersionUsed:
-                            print_green("Changing version {} to {} => {}".format(versionFound, newVersionUsed, filePath))
+                            print_green("Changing version {} => {} in {}".format(versionFound, newVersionUsed, filePath))
                             replace_file(filePath, versionFound, newVersionUsed)
 
         except WindowsError as e:
@@ -642,8 +640,37 @@ def set_version_in_files():
             pass
         except Exception as e:
             print_error("set_version_in_files error: {}".format(e))
-            return False
+            raise
 
+    return True
+
+
+def stash_version_files_for_building():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Temporarily stashing {} => {}.bak for version update".format(filePath, stashPath))
+            shutil.copy(filePath, "{}.bak".format(stashPath))
+    except:
+        print_error("Stashing version files failed")
+        raise
+
+    # Set version
+    set_version_in_files()
+    return True
+
+
+def restore_version_files():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Restoring {}".format(filePath))
+            shutil.move("{}.bak".format(stashPath), filePath)
+    except:
+        print_error("Restoring version files failed")
+        raise
     return True
 
 
@@ -836,6 +863,12 @@ See the make.cfg file for additional build options.
         check_external = True
     else:
         check_external = False
+    
+    if "version" in argv:
+        argv.remove("version")
+        version_update = True
+    else:
+        version_update = False
 
     print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
@@ -980,10 +1013,17 @@ See the make.cfg file for additional build options.
             raise
 
     # Update version stamp in all files that contain it
-    set_version_in_files();
+    # Update version only for release if full update not requested (backup and restore files)
+    print_blue("\nChecking for obsolete version numbers...")
+    if not version_update:
+        stash_version_files_for_building()
+    else:
+        # Set version
+        set_version_in_files();
+        print("Version in files has been changed, make sure you commit and push the updates!")
 
     try:
-        #Temporarily copy optionals_root for building. They will be removed later.
+        # Temporarily copy optionals_root for building. They will be removed later.
         optionals_modules = []
         optional_files = []
         copy_optionals_for_building(optionals_modules,optional_files)
@@ -1304,6 +1344,8 @@ See the make.cfg file for additional build options.
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
         cleanup_optionals(optionals_modules)
+        if not version_update:
+            restore_version_files()
 
     # Done building all modules!
 
