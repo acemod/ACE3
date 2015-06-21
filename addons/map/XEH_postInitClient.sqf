@@ -18,6 +18,9 @@ call FUNC(determineZoom);
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];
 };
 
+// Client only from here
+if !(hasInterface) exitWith {};
+
 ["SettingsInitialized", {
     // Start Blue Force Tracking if Enabled
     if (GVAR(BFT_Enabled)) then {

@@ -10,7 +10,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if !(isServer) exitWith {};
 
 PARAMS_3(_logic,_units,_activated);
 

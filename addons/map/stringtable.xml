@@ -78,7 +78,7 @@
             <Czech>Blue Force Tracking</Czech>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
-            <English>Enable</English>
+            <English>BFT Enable</English>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
