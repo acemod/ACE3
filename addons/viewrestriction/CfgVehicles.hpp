@@ -18,7 +18,7 @@ class CfgVehicles {
     class GVAR(ModuleSettings): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        function = QFUNC(moduleInit));
+        function = QFUNC(moduleInit);
         displayName = CSTRING(ModuleDisplayName);
         scope = 2;
         isGlobal = 1;
@@ -44,9 +44,9 @@ class CfgVehicles {
                     MACRO_OPTIONS
                 };
             };
-            class modeSelectiveVehicle {
-                displayName = CSTRING(ModeSelectiveVehicle);
-                description = CSTRING(ModeSelectiveVehicleDesc);
+            class modeSelectiveLand {
+                displayName = CSTRING(ModeSelectiveLand);
+                description = CSTRING(ModeSelectiveLandDesc);
                 typeName = "NUMBER";
                 class values {
                     MACRO_OPTIONS
@@ -60,14 +60,23 @@ class CfgVehicles {
                     MACRO_OPTIONS
                 };
             };
-            class modeSelectiveUAV {
+            class modeSelectiveSea {
+                displayName = CSTRING(ModeSelectiveSea);
+                description = CSTRING(ModeSelectiveSeaDesc);
+                typeName = "NUMBER";
+                class values {
+                    MACRO_OPTIONS
+                };
+            };
+            // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+            /*class modeSelectiveUAV {
                 displayName = CSTRING(ModeSelectiveUAV);
                 description = CSTRING(ModeSelectiveUAVDesc);
                 typeName = "NUMBER";
                 class values {
                     MACRO_OPTIONS
                 };
-            };
+            };*/
         };
         class ModuleDescription {
             description = CSTRING(ModuleDescription);

@@ -21,11 +21,13 @@ if !(_activated) exitWith {};
 // Read selective options only if selective mode selected
 if (GVAR(mode) == 3) then {
     [_logic, QGVAR(modeSelectiveFoot), "modeSelectiveFoot"] call EFUNC(common,readSettingFromModule);
-    [_logic, QGVAR(modeSelectiveVehicle), "modeSelectiveVehicle"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(modeSelectiveLand), "modeSelectiveLand"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(modeSelectiveAir), "modeSelectiveAir"] call EFUNC(common,readSettingFromModule);
-    [_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(modeSelectiveSea), "modeSelectiveSea"] call EFUNC(common,readSettingFromModule);
+    // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+    //[_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule);
 
-    diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1 (Foot: %2, Vehicle: %3, Air: %4, UAV: %5)", GVAR(mode), GVAR(modeSelectiveFoot), GVAR(modeSelectiveVehicle), GVAR(modeSelectiveAir), GVAR(modeSelectiveUAV)];
+    diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1 (Foot: %2, Land: %3, Air: %4, Sea: %5, UAV: %6)", GVAR(mode), GVAR(modeSelectiveFoot), GVAR(modeSelectiveLand), GVAR(modeSelectiveAir), GVAR(modeSelectiveSea), /*GVAR(modeSelectiveUAV)*/ "N/A"];
 } else {
     diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1", GVAR(mode)];
 };

@@ -16,11 +16,11 @@ class ACE_Settings {
         description = CSTRING(ModeSelectiveFootDesc);
         values[] = {MACRO_VALUES};
     };
-    class GVAR(modeSelectiveVehicle) {
+    class GVAR(modeSelectiveLand) {
         value = 0;
         typeName = "SCALAR";
-        displayName = CSTRING(ModeSelectiveVehicle);
-        description = CSTRING(ModeSelectiveVehicleDesc);
+        displayName = CSTRING(ModeSelectiveLand);
+        description = CSTRING(ModeSelectiveLandDesc);
         values[] = {MACRO_VALUES};
     };
     class GVAR(modeSelectiveAir) {
@@ -30,11 +30,19 @@ class ACE_Settings {
         description = CSTRING(ModeSelectiveAirDesc);
         values[] = {MACRO_VALUES};
     };
-    class GVAR(modeSelectiveUAV) {
+    class GVAR(modeSelectiveSea) {
+        value = 0;
+        typeName = "SCALAR";
+        displayName = CSTRING(ModeSelectiveSea);
+        description = CSTRING(ModeSelectiveSeaDesc);
+        values[] = {MACRO_VALUES};
+    };
+    // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+    /*class GVAR(modeSelectiveUAV) {
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveUAV);
         description = CSTRING(ModeSelectiveUAVDesc);
         values[] = {MACRO_VALUES};
-    };
+    };*/
 };

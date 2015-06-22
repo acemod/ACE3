@@ -5,49 +5,55 @@
             <English>View Restriction</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModuleDescription">
-            <English>View restriction settings to limit the usage of 1st of 3rd person views per vehicle type or overall.</English>
+            <English>View restriction settings to limit the usage of 1st of 3rd person views globally or per vehicle type.</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Mode">
             <English>Mode</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeDesc">
-            <English>Sets overall mode. Default: Disabled</English>
+            <English>Sets global mode. Default: Disabled</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFoot">
-            <English>Mode on Foot</English>
+            <English>(Selective) Foot</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFootDesc">
-            <English>Sets selective mode forced on Foot. Default: Disabled (Requires Mode: Selective)</English>
+            <English>Selective mode on Foot. Default: Disabled (Requires Mode: Selective)</English>
         </Key>
-        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveVehicle">
-            <English>Mode in Ground Vehicles</English>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLand">
+            <English>(Selective) Land Vehicles</English>
         </Key>
-        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveVehicleDesc">
-            <English>Sets selective mode forced in Ground Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLandDesc">
+            <English>Selective mode in Land Vehicles. Default: Disabled (Requires Mode: Selective)</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAir">
-            <English>Mode in Air Vehicles</English>
+            <English>(Selective) Air Vehicles</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAirDesc">
-            <English>Sets selective mode forced in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+            <English>Selective mode in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSea">
+            <English>(Selective) Sea Vehicles</English>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSeaDesc">
+            <English>Selective mode in Sea Vehicles. Default: Disabled (Requires Mode: Selective)</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAV">
-            <English>Mode in UAVs</English>
+            <English>(Selective) UAVs</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAVDesc">
-            <English>Sets selective mode forced while controlling UAVs. Default: Disabled (Requires Mode: Selective)</English>
+            <English>Selective mode in UAVs. Default: Disabled (Requires Mode: Selective)</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Disabled">
-            <English>Disables this mode, default Arma behaviour.</English>
+            <English>Disabled</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_FirstPerson">
-            <English>Forces usage of First Person.</English>
+            <English>Forced 1st Person</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ThirdPerson">
-            <English>Forces usage of Third Person.</English>
+            <English>Forced 3rd Person</English>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Selective">
-            <English>Allows further settings to be applied.</English>
+            <English>Selective</English>
         </Key>
     </Package>
 </Project>
