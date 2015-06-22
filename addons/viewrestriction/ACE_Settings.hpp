@@ -37,7 +37,7 @@ class ACE_Settings {
         description = CSTRING(ModeSelectiveSeaDesc);
         values[] = {MACRO_VALUES};
     };
-    // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+    // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
     /*class GVAR(modeSelectiveUAV) {
         value = 0;
         typeName = "SCALAR";

@@ -68,7 +68,7 @@ class CfgVehicles {
                     MACRO_OPTIONS
                 };
             };
-            // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+            // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
             /*class modeSelectiveUAV {
                 displayName = CSTRING(ModeSelectiveUAV);
                 description = CSTRING(ModeSelectiveUAVDesc);

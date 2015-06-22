@@ -21,7 +21,7 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
     if (GVAR(mode) == 1) exitWith {
         [{
             if (IS_UAV) exitWith {
-                // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
             };
             cameraOn switchCamera "Internal";
         }, 0, []] call cba_fnc_addPerFrameHandler;
@@ -31,7 +31,7 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
     if (GVAR(mode) == 2) exitWith {
         [{
             if (IS_UAV) exitWith {
-                // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
             };
             cameraOn switchCamera "External";
         }, 0, []] call cba_fnc_addPerFrameHandler;
@@ -65,7 +65,7 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
 
             // UAVs (must be evaluated before Air Vehicles due to inheritance tree)
             if (IS_UAV) exitWith {
-                // Reference comment in XEH_postClientInit.sqf, beginning of "SettingsInitialized" Event Handler
+                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
                 /*if (GVAR(modeSelectiveUAV) == 1) exitWith {
                     cameraOn switchCamera "Internal";
                 };
