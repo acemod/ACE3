@@ -18,7 +18,5 @@
 PARAMS_1(_player);
 
 if (_player getVariable [QGVAR(isSitting), false]) then {
-    _player setVariable [QGVAR(isSitting), nil];
-    GVAR(seat) setVariable [QGVAR(seatOccupied), nil, true];
-    GVAR(seat) = nil;
+    [_player] call FUNC(stand);
 };
