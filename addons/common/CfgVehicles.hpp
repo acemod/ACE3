@@ -67,9 +67,7 @@ class CfgVehicles {
         displayName = CSTRING(CheckPBO_Whitelist_DisplayName);
         description = CSTRING(CheckPBO_Whitelist_Description);
         typeName = "STRING";
-        class values {
-            default = "[]";
-        };
+        defaultValue = "[]";
       };
     };
     class ModuleDescription: ModuleDescription {
