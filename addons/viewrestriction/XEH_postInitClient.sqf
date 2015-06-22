@@ -20,6 +20,8 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
     // FirstPerson
     if (GVAR(mode) == 1) exitWith {
         [{
+            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
+
             if (IS_UAV) exitWith {
                 // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
             };
@@ -30,6 +32,8 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
     // ThirdPerson
     if (GVAR(mode) == 2) exitWith {
         [{
+            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
+
             if (IS_UAV) exitWith {
                 // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
             };
@@ -43,6 +47,8 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
         if (GVAR(modeSelectiveFoot) == 0 && {GVAR(modeSelectiveVehicle) == 0} && {GVAR(modeSelectiveAir) == 0} && {GVAR(modeSelectiveUAV) == 0}) exitWith {diag_log "selective disabled due to submodes"};
 
         [{
+            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
+
             // Foot
             if (cameraOn isKindOf "CAManBase") exitWith {
                 if (GVAR(modeSelectiveFoot) == 1) exitWith {
