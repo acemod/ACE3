@@ -24,15 +24,25 @@ if (_vehicle isKindOf "Ship" ) then {
     TRACE_1("SHIP Ground Check", getPosATL _vehicle );
     _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]); // TODO: if spot is underwater pick another spot.
 } else {
-    if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-    TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
+    if (_vehicle isKindOf "Air" ) then {
+        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
+        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
+        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
+        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
+    } else {
+        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
+        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
+        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
+    };
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitwith { diag_log format["Exiting on invalid vehicle state. Either moving or Not close enough on the ground. %1", getPos _vehicle]; false; };
+if (!_validVehiclestate) exitwith { diag_log format["Unable to unload patient because invalid vehicle state. Either moving or Not close enough on the ground. %1", getPos _vehicle]; false };
 
-if (count _emptyPos == 0) exitwith {false};  //consider displaying text saying there are no safe places to exit the vehicle
+diag_log str _emptyPos;
+
+if (count _emptyPos == 0) exitwith {diag_log format["No safe empty spots to unload patient. %1", _emptyPos]; false};  //consider displaying text saying there are no safe places to exit the vehicle
+
 
 unassignVehicle _unit;
 [_unit] orderGetIn false;
