@@ -6,7 +6,7 @@
 //Singe PFEH to handle execNextFrame and waitAndExec:
 [{
     private ["_entry"];
-    
+
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
         _entry = GVAR(waitAndExecArray) deleteAt 0;
