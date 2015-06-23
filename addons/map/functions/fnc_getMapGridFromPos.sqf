@@ -1,88 +1,43 @@
 /*
  * Author: VKing
- *
  * Gets a 10-digit map grid for the given world position
  *
  * Argument:
- * 0: Position (2D Position)
- * 1: Return type; false for array of easting and northing, true for single string (Bool)
+ * 0: Position (2D Position) <ARRAY>
+ * 1: Return type; false for array of easting and northing, true for single string <Bool>
  *
  * Return values:
- * 0: Easting (String)
- * 1: Northing (String)
+ * 0: Easting <String>
+ * 1: Northing <String>
+ *
+ * Example:
+ * [(getPos player)] call ace_map_fnc_getMapGridFromPos;
+ *
+ * Public: Yes
  */
 
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-// private "_pos";
-// _pos = getPos player;
-// TRACE_1("",_pos);
 PARAMS_1(_pos);
-DEFAULT_PARAM(1,_return,false);
+DEFAULT_PARAM(1,_returnSingleString,false);
 
-private ["_posX","_posY","_northingReversed","_mapsize","_originGrid","_originArray","_length","_offsetX","_offsetY","_offsetPadding","_gridX","_gridY"];
-
-// _northingReversed = [] call CBA_fnc_northingReversed;
-_northingReversed = false;
-if(isNil "cba_common_mapReversed") then {
-    _test = getNumber (configFile >> "CfgWorlds" >> worldName >> "Grid" >> "Zoom1" >> "stepY");
-    if(_test > 0) then {
-        _northingReversed = true;
-    };
-    cba_common_mapReversed = _northingReversed;
-} else {
-    _northingReversed = cba_common_mapReversed;
-};
-
-_mapsize = getNumber (ConfigFile >> "CfgWorlds" >> worldName >> "mapSize");
-TRACE_2("",_northingReversed,_mapsize);
-
-if (_northingReversed) then {
-    _originGrid = mapGridPosition [0,_mapsize,0];
-} else {
-    _originGrid = mapGridPosition [0,0,0];
-};
-// _originGrid = "123456";
-TRACE_1("",_originGrid);
-
-if (count _originGrid == 10) exitWith {
-    TRACE_1("",mapGridPosition _pos);
-    if (_return) then {
-        format ["%1%2",mapGridPosition _pos select [0,5], mapGridPosition _pos select [5,5]]
-    } else {
-        [mapGridPosition _pos select [0,5], mapGridPosition _pos select [5,5]]
-    };
-};
-
-_originArray = toArray _originGrid;
-_length = (count _originArray);
-_length = _length/2;
-_offsetPadding = switch (_length) do {
-    case 1: {"0000"};
-    case 2: {"000"};
-    case 3: {"00"};
-    case 4: {"0"};
-    default {};
-};
-_offsetX = parseNumber (toString (_originArray select [0,_length]) + _offsetPadding);
-_offsetY = parseNumber (toString (_originArray select [_length,_length]) + _offsetPadding);
-TRACE_2("",_offsetX,_offsetY);
+private["_posX", "_posY"];
 
 TRACE_2("",_pos select 0, _pos select 1);
 
-_posX = ceil(_pos select 0) + _offsetX;
-if (_posX < 0) then {_posX = 100000 + _posX};
+_posX = GVAR(gridOffsetX) + floor (_pos select 0);
 TRACE_1("",_posX);
-_posX = format ["%1",_posX];
-if (_northingReversed) then {
-    _posY = _mapSize - ceil(_pos select 1) + _offsetY -100;
+_posX = str ((100000 + _posX) % 100000);
+
+if (cba_common_mapReversed) then {
+    _posY = GVAR(gridOffsetY) - ceil(_pos select 1);
 } else {
-    _posY = ceil(_pos select 1) + _offsetY;
+    _posY = GVAR(gridOffsetY) + floor(_pos select 1);
 };
 TRACE_1("",_posY);
-if (_posY < 0) then {_posY = 100000 + _posY};
-_posY = format["%1",_posY];
+_posY = str ((100000 + _posY) % 100000);
+
 TRACE_2("",_posX,_posY);
 
 _posX = switch (count _posX) do {
@@ -101,7 +56,7 @@ _posY = switch (count _posY) do {
 };
 TRACE_3("",mapGridPosition _pos,_posX,_posY);
 
-if (_return) then {
+if (_returnSingleString) then {
     _posX+_posY
 } else {
     [_posX,_posY]
