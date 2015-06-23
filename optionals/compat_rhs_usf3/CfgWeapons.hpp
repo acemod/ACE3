@@ -15,7 +15,7 @@ class CfgWeapons
     class rhs_weap_m4_Base: arifle_MX_Base_F {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=368.3;
-		class  M203_GL : UGL_F {
+		class M203_GL : UGL_F {
 			magazines[] = {
 				"rhs_mag_M441_HE",
 				"rhs_mag_M433_HEDP",
@@ -61,7 +61,7 @@ class CfgWeapons
 				"ACE_HuntIR_M203"
 			};
 		};
-		class  M320_GL : M203_GL {
+		class M320_GL : M203_GL {
 			magazines[] = {
 				"rhs_mag_M441_HE",
 				"rhs_mag_M433_HEDP",
