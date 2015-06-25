@@ -77,6 +77,21 @@ classname | in game name | type   |
 --------- | --------- | ---------
 ACE_Banana | banana |  ACE_ItemCore |
 
+### Concertina_wire
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_ConcertinaWireCoil | Concertina Wire Coil |  ThingX |
+ACE_ConcertinaWire | Concertina Wire | deployed concertina wire |
+
+### Dagr
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_DAGR | DAGR | ACE_ItemCore | 
+
 ### Disposable
 `added in 3.0.0.3`
 
@@ -106,12 +121,21 @@ ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
 
-### hearing
+### Hearing
 `added in 3.0.0.3`
 
 classname | in game name | type   |
 --------- | --------- | ---------
 ACE_EarPlugs | Earplugs | ACE_ItemCore |
+
+### HuntIR
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
+ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
+ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
 ### Kestrel
 `added in 3.0.0.3`
@@ -187,6 +211,14 @@ classname | in game name | type   |
 --------- | --------- | ---------
 ACE_RangeTable_82mm | 82mm Rangetable | ACE_ItemCore |
 
+### M2XA
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_MX2A | MX-2A | Binocular |
+
+
 ### Nightvision
 `added in 3.0.0.3`
 
@@ -254,3 +286,42 @@ ACE_key_west | Vehicle Key: West | ACE_ItemCore |
 ACE_key_east | Vehicle Key: East | ACE_ItemCore |
 ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
 ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
+
+### Sandbag
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore | 
+ACE_SandbagObject | Sandbag | ThingX | 
+
+### Spotting scope
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_SpottingScope | Spotting Scope | ACE_ItemCore | 
+ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon | 
+
+### Tactical ladder
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack | 
+ACE_Tactical_Ladder | Telescopic Ladder (placed) | house | 
+
+### Tripod
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Tripod | SSWT Kit | ACE_ItemCore | 
+ACE_TripodObject | SSWT Kit (placed) | ThingX | 
+
+### Yardage 450
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Yardage450 | Yardage 450 | Binocular | 
