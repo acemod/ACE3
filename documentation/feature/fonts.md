@@ -7,14 +7,8 @@ parent: wiki
 
 ## 1. Overview
 
-### 1.1 Sub-feature 1
-Short description of sub-feature 1.
-
-### 1.2 Sub-feature 2
-Short description of sub-feature 2.
-
-## 2. Usage
+this module adds a font that will be used in the future, characters with equal widths to make it easy to structure correctly.
 
 ## 3. Dependencies
 
-`ace_something`
+`ace_main`
