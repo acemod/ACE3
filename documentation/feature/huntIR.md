@@ -8,7 +8,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 The HuntIR
-The **H**igh altitude **U**nit **N**avigated **T**actical **I**maging **R**ound (HuntIR) is designed to be fired from a grenade launcher, after being fired in the air the in built parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or get shot down.
+The **H**igh altitude **U**nit **N**avigated **T**actical **I**maging **R**ound (HuntIR) is designed to be fired from a grenade launcher. After being fired in the air the in built parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or get shot down.
 
 ## 2. Usage
 NOTE: the HuntIR round doesn't work with modded weapons without a compatibility fix made either by the ACE3 team or the mod team.
@@ -18,7 +18,7 @@ NOTE: the HuntIR round doesn't work with modded weapons without a compatibility 
 - Fire the HuntIR round as high as possible over the area you want to observe.
 - Open the `HuntIR monitor`.
   - To open the `HuntIR monitor` self interact <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd> (ACE3 default)
-  - Select `equipment`.
+  - Select `Equipment`.
   - Select `Activate HuntIR monitor`.
 - You now have control of the IR CMOS camera to close the monitor press <kbd>ESC</kbd> or <kbd>⊞ Win</kbd>
 

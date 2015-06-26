@@ -7,7 +7,7 @@ parent: wiki
 
 ## 1. Overview
 
-Adds the defense Advanced GPS Receiver.
+Adds the Defense Advanced GPS Receiver.
 
 ## 3. Dependencies
 

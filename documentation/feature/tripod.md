@@ -12,7 +12,7 @@ Adds a packable tripod deployable on the field. It features a flat part to deplo
 ## 2. Usage
 
 ### 2.1 deploying the tripod
-- Note that you need a `SSW kit` in your inventory.
+- Note that you need a `SSWT kit` in your inventory.
 - Self interact <kbd>CTRL</kbd>+<kbd>⊞ Win</kbd>.
 - Select `Equipment`
 - Select `Place SSWT kit`.
