@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_configFile", "_sitDirection", "_sitPosition", "_seatRotation", "_sitDirectionVisual"];
+private ["_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
 
 PARAMS_2(_seat,_player);
 
@@ -46,23 +46,18 @@ _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple peop
 // Add rotation control PFH
 _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
 [{
-    private ["_args", "_player", "_sitDirectionVisual", "_sitRotation", "_currentDirection"];
-    _args = _this select 0;
-    _player = _args select 0;
-    _sitDirectionVisual = _args select 1;
-    _sitRotation = _args select 2;
+    EXPLODE_3_PVT(_this select 0,_player,_sitDirectionVisual,_sitRotation);
     
-    // Remove PFH if not sitting anymore
+    // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
 
     // Set direction to boundary when passing it
-    _currentDirection = getDir _player;
-    if (_currentDirection > _sitDirectionVisual + _sitRotation) exitWith {
+    if (getDir _player > _sitDirectionVisual + _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual + _sitRotation);
     };
-    if (_currentDirection < _sitDirectionVisual - _sitRotation) exitWith {
+    if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual - _sitRotation);
     };
 }, 0, [_player, _sitDirectionVisual, _sitRotation]] call cba_fnc_addPerFrameHandler;
