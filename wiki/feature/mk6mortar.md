@@ -18,7 +18,7 @@ ACE3 adds wind deflection for shells as well as a rangetable to accurately take 
 
 ### 2.2 Working with the rangetable
 - To open the table: 
-    - Self interact <kbd>CTRL</kbd> + <kbd>Left Windows</kbd>
+    - Self interact <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd>
     - Select `equipment`.
     - Select `Open 82mm Rangetable`.
 
