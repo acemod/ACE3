@@ -77,6 +77,12 @@
             <German>Blue Force Tracking</German>
             <Czech>Blue Force Tracking</Czech>
         </Key>
+        <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
+            <English>BFT Enable</English>
+        </Key>
+        <Key ID="STR_ACE_Map_BFT_Enabled_Description">
+            <English>Enable Blue Force Tracking. Default: No</English>
+        </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
             <Polish>Interwał</Polish>
