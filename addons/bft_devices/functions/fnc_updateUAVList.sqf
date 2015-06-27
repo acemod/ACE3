@@ -18,6 +18,8 @@
 
 #include "script_component.hpp"
 
+private ["_deviceData","_deviceEncryption","_uavDevices","_uavDevice","_uavDeviceData","_uavEncryption"];
+
 // bail if no interface is open
 if (I_CLOSED) exitWith {};
 
