@@ -504,6 +504,9 @@ if (isNil "_mode") then {
         // ------------ HCAM List Update ------------
         if (_x == "hCamListUpdate") exitWith {
             if (_mode == "HCAM") then {
+                // temporary list update until implemented in BFT module
+                [] call FUNC(updateHCamList);
+                
                 _data = [_deviceID,"hCam"] call FUNC(getSettings);
                 _hcamListCtrl = _display displayCtrl IDC_HCAMLIST;
                 // Populate list of HCAMs
@@ -512,7 +515,7 @@ if (isNil "_mode") then {
                 {
                     _index = _hcamListCtrl lbAdd format ["%1:%2 (%3)",groupId group _x,[_x] call CBA_fnc_getGroupIndex,name _x];
                     _hcamListCtrl lbSetData [_index,str _x];
-                } count GVAR(Hcamlist);
+                } count GVAR(hCamList);
                 lbSort [_hcamListCtrl, "ASC"];
                 if (_data != "") then {
                     // Find last selected hCam and select if found

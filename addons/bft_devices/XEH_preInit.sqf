@@ -45,6 +45,7 @@ PREP(toggleMapMenu);
 PREP(toggleMapTools);
 PREP(toggleMapType);
 PREP(toggleNightMode);
+PREP(updateHCamList);
 PREP(updateTextAndIconSize);
 PREP(updateUAVList);
 

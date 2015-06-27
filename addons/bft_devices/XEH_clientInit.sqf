@@ -59,15 +59,13 @@ GVAR(textAndIconScaleFactor) = 12;
 GVAR(showBFTtext) = true;
 GVAR(playerVehicleIcon) = "";
 
-// Lists
-GVAR(notificationCache) = [];
-
 // Setup icon and text sizes
 [] call FUNC(updateTextAndIconSize);
 
 // List setup
+GVAR(notificationCache) = [];
 GVAR(UAVlist) = [];
-GVAR(Hcamlist) = [];
+GVAR(hCamList) = [];
 
 // Define default settings for interface property groups
 GVAR(settings) = HASH_CREATE;
