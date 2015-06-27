@@ -15,7 +15,7 @@
 
 private ["_ctrl","_mouseover"];
 _ctrl = _this select 0;
-_mouseover = ["",[]];
+_mouseover = [-1,[]];
 {
     // draw the icon
     private ["_callsign","_pos","_tex","_sizeTex","_color"];

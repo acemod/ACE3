@@ -27,7 +27,7 @@ GVAR(editingDraw_editBFT) = -1;
 GVAR(editkeydown) = false;
 GVAR(mousebuttondown) = false;
 GVAR(mousepos) = [0,0];
-GVAR(mouseover) = ["",[]];
+GVAR(mouseover) = [-1,[]];
 GVAR(selection) = ["",[]];
 
 ADDON = true;
