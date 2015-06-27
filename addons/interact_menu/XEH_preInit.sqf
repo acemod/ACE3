@@ -6,6 +6,7 @@ PREP(addActionToClass);
 PREP(addActionToObject);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
+PREP(compileMenuZeus);
 PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(ctrlSetParsedTextCached);
@@ -74,5 +75,8 @@ GVAR(lastTimeSearchedActions) = -1000;
 // Init CAManBase menus
 ["CAManBase"] call FUNC(compileMenu);
 ["CAManBase"] call FUNC(compileMenuSelfAction);
+
+// Init zeus menu
+[] call FUNC(compileMenuZeus);
 
 ADDON = true;
