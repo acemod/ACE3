@@ -43,7 +43,7 @@ switch (_function) do {
     };
     case "HCAMlist": {
         if (_selectedIndex != -1) then {
-            [_deviceID,[['uavCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
+            [_deviceID,[['hCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
         };
     };
 };
