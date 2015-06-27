@@ -37,6 +37,7 @@ PREP(onIfTogglePositionKey);
 PREP(onIfZoomKey);
 PREP(onPlayerChanged);
 PREP(processNotifications);
+PREP(remoteControlUAV);
 PREP(setInterfacePosition);
 PREP(setSettings);
 PREP(toggleIconText);
