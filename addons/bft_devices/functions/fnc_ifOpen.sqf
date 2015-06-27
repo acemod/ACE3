@@ -164,6 +164,12 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
     };
 };
 
+// temporary implemenation of setting the registred encryption key, should be implemented on deviceOpened event
+// remove current keys
+[false,EGVAR(bft,registeredEncyptionKeys)] call EFUNC(bft,updateRegisteredEncryptionKeys);
+// add device keys
+[true,D_GET_ENCRYPTION(_deviceData)] call EFUNC(bft,updateRegisteredEncryptionKeys);
+
 // start the interface
 if (_isDialog) then {
     // Check if map and / or another dialog is open and close them
