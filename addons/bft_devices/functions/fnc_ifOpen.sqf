@@ -170,6 +170,12 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
 // add device keys
 [true,D_GET_ENCRYPTION(_deviceData)] call EFUNC(bft,updateRegisteredEncryptionKeys);
 
+// temporary helmet cam list update until implemented in BFT module
+[] call FUNC(updateHCamList);
+
+// temporary UAV list update until implemented in BFT module
+[] call FUNC(updateUAVList);
+
 // start the interface
 if (_isDialog) then {
     // Check if map and / or another dialog is open and close them

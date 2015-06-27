@@ -470,9 +470,6 @@ if (isNil "_mode") then {
                 lbClear _uavListCtrl;
                 _uavListCtrl lbSetCurSel -1;
                 
-                // update list of UAVs (temporary implementation)
-                [] call FUNC(updateUAVList);
-                
                 // Populate list of UAVs
                 {
                     _uavDevice = _x select 0;
@@ -504,9 +501,6 @@ if (isNil "_mode") then {
         // ------------ HCAM List Update ------------
         if (_x == "hCamListUpdate") exitWith {
             if (_mode == "HCAM") then {
-                // temporary list update until implemented in BFT module
-                [] call FUNC(updateHCamList);
-                
                 _data = [_deviceID,"hCam"] call FUNC(getSettings);
                 _hcamListCtrl = _display displayCtrl IDC_HCAMLIST;
                 // Populate list of HCAMs
