@@ -17,3 +17,5 @@ if (isNull _map) exitWith {};
     ["MouseHolding",{GVAR(mousepos)=[_this select 1,_this select 2];}],
     ["Draw",FUNC(mapDraw)]
 ];
+
+true
