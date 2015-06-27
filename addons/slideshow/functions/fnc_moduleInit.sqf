@@ -35,4 +35,4 @@ _names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
 // Prepare with actions
 [_objects, _controllers, _images, _names] call FUNC(createSlideshow);
 
-diag_log text format ["[TAC]: Slideshow Module Initialized for: %1", _objects];
+diag_log text format ["[ACE]: Slideshow Module Initialized for: %1", _objects];
