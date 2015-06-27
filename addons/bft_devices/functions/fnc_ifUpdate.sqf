@@ -7,13 +7,13 @@
  *
  * Arguments:
  *   (Optional)
- *      0: Property pairs in the form of [["propertyName",propertyValue],[...]] <ARRAY>
+ *      0: Property hash in the form of [["propertyName1",...],[propertyValue1,...]] <ARRAY>
  *
  * Return Value:
  *   TRUE <BOOL>
  *
  * Example:
- *   [[["mapType","SAT"],["mapScaleDsp","4"]]] call ace_bft_devices_fnc_updateInterface;
+ *   [[["mapType","mapScaleDsp"],["SAT","4"]]] call ace_bft_devices_fnc_ifUpdate;
  *
  * Public: No
  */
