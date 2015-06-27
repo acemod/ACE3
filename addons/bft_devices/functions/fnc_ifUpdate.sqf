@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_deviceID","_deviceData","_deviceType","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos"];
+private ["_interfaceInit","_settings","_display","_displayName","_deviceID","_deviceData","_deviceType","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos","_uav","_hCam"];
 disableSerialization;
 
 if (I_CLOSED) exitWith {false};
@@ -257,7 +257,8 @@ if (isNil "_mode") then {
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
                         HASH_SET(_settings,"uavListUpdate",true);
                         if (!_interfaceInit) then {
-                            HASH_SET(_settings,"uavCam",[_deviceID,"uavCam"] call FUNC(getSettings));
+                            _uav = [_deviceID,"uavCam"] call FUNC(getSettings);
+                            HASH_SET(_settings,"uavCam",_uav);
                         };
                     };
                     // ---------- HELMET CAM -----------
@@ -270,7 +271,8 @@ if (isNil "_mode") then {
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                         HASH_SET(_settings,"hCamListUpdate",true);
                         if (!_interfaceInit) then {
-                            HASH_SET(_settings,"hCam",[_deviceID,"hCam"] call FUNC(getSettings));
+                            _hCam = [_deviceID,"hCam"] call FUNC(getSettings);
+                            HASH_SET(_settings,"hCam",_hCam);
                         };
                     };
                     // ---------- MESSAGING -----------
