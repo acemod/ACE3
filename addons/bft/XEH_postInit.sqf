@@ -186,7 +186,7 @@ if(!isServer) then {
 
 
 // Here for debug purpose until we have an interface implemented
-{
+/*{
     [{
         private ["_args","_idd","_idc"];
         _args = _this select 0;
@@ -205,4 +205,4 @@ if(!isServer) then {
         _ctrl drawIcon [_x select 2, (_x select 6) select 1, _x select 4, 30, 30, 0, _x select 1, 0, 0.05, 'PuristaMedium', 'right'];
     }foreach GVAR(availableDevices);
 
-}]]];
+}]]];*/
