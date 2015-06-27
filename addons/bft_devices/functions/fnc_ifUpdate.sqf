@@ -118,7 +118,7 @@ if (isNil "_mode") then {
                 _nightMode = [_deviceID,"nightMode"] call FUNC(getSettings);
                 // if we are running night mode, lower the brightness proportionally
                 if (!isNil "_nightMode") then {
-                    if (_nightMode == 1 || {_nightMode == 2 && (sunOrMoon < 0.2)}) then {_brightness = _brightness * 0.7};
+                    if (_nightMode == 1 || {_nightMode == 2 && ([] call EFUNC(common,ambientBrightness)) < 0.2}) then {_brightness = _brightness * 0.7};
                 };
                 _osdCtrl ctrlSetBackgroundColor [0,0,0,1 - _brightness];
             };
@@ -129,7 +129,7 @@ if (isNil "_mode") then {
         if (_x == "nightMode") exitWith {
             _nightMode = _value;
             // transform nightMode into boolean
-            _nightMode = if (_nightMode == 1 || {_nightMode == 2 && (sunOrMoon < 0.2)}) then {true} else {false};
+            _nightMode = if (_nightMode == 1 || {_nightMode == 2 && ([] call EFUNC(common,ambientBrightness)) < 0.2}) then {true} else {false};
             _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
             _deviceType = D_GET_DEVICETYPE(_deviceData);
             
