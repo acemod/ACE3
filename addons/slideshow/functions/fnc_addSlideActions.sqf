@@ -37,7 +37,7 @@ _actions = [];
             },
             {true},
             {},
-            [_objects,_x]
+            [_objects, _x]
         ] call EFUNC(interact_menu,createAction),
         [],
         _controller

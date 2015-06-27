@@ -54,6 +54,7 @@ class CfgVehicles {
             class Land_Laptop_unfolded_F {MACRO_SYNC BOTH};
             class Land_Laptop_device_F {MACRO_SYNC BOTH};
             class Land_PCSet_01_screen_F {MACRO_SYNC BOTH};
+            class Land_FlatTV_01_F {MACRO_SYNC BOTH};
 
             class Land_HandyCam_F {MACRO_SYNC CONTROLLER};
             class Land_MobilePhone_smart_F {MACRO_SYNC CONTROLLER};
@@ -98,6 +99,10 @@ class CfgVehicles {
     class Land_PCSet_01_screen_F: Items_base_F {
         MACRO_INTERACT_INIT
     };
+    class Land_FlatTV_01_F: Items_base_F {
+        MACRO_INTERACT_INIT
+    };
+
     class Land_HandyCam_F: Items_base_F {
         MACRO_INTERACT_INIT
     };
