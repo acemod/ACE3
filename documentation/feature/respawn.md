@@ -23,7 +23,7 @@ Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOB's
 ### 2.1 Using rallypoints
 - For this to work pre-emptive preparations need to be made by the mission maker.
 - Approach the rallypoint flagpole
-- Use the interaction key <kbd>Left Windows</kbd> (ACE3 default key bind `Interaction key`).
+- Use the interaction key <kbd>⊞ Win</kbd> (ACE3 default key bind `Interaction key`).
 - Select teleport to (base / rallypoint).
 
 

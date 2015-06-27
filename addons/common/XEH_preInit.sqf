@@ -11,7 +11,6 @@ PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
-PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
@@ -35,6 +34,8 @@ PREP(currentChannel);
 PREP(debug);
 PREP(debugModule);
 PREP(defineVariable);
+PREP(deviceKeyFindValidIndex);
+PREP(deviceKeyRegisterNew);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);
@@ -287,7 +288,12 @@ PREP(_handleRequestSyncedEvent);
 PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
+
+//GVARS for execNextFrame and waitAndExec
 GVAR(waitAndExecArray) = [];
+GVAR(nextFrameNo) = diag_frameno;
+GVAR(nextFrameBufferA) = [];
+GVAR(nextFrameBufferB) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 

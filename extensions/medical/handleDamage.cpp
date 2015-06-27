@@ -96,7 +96,8 @@ namespace ace {
                                 }
                                 else 
                                 { 
-                                    injuryToAdd = information.at(0); 
+                                    int indexNewInjuryToAdd = rand() % information.size();
+                                    injuryToAdd = information.at(indexNewInjuryToAdd); 
                                 }
 
                                 int bodyPartID = selection;

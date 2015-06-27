@@ -56,15 +56,12 @@ class CfgVehicles {
                     priority = 2.2;
                     hotkey = "L";
                 };
-                class ACE_FriskPerson {
-                    displayName = CSTRING(FriskPerson);
-                    distance = 2;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFriskPerson));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doFriskPerson));
-                    showDisabled = 0;
-                    //icon = "";  //@todo
-                    priority = 3;
-                    hotkey = "F";
+                class GVAR(UnloadCaptive) {
+                    displayName = CSTRING(UnloadCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
+                    priority = 1.2;
                 };
             };
         };
@@ -86,6 +83,7 @@ class CfgVehicles {
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
+                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
             };
             class ACE_StopSurrenderingSelf {
                 displayName = CSTRING(StopSurrendering);
@@ -94,6 +92,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSurrendering"};
                 showDisabled = 0;
                 priority = 0;
+                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
             };
         };
     };
@@ -107,13 +106,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
                     statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting"}; \
-                    priority = 1.2; \
-                }; \
-                class GVAR(UnloadCaptive) { \
-                    displayName = CSTRING(UnloadCaptive); \
-                    distance = 4; \
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive)); \
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive)); \
                     priority = 1.2; \
                 }; \
             }; \
@@ -162,7 +154,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(ModuleSurrender_DisplayName); //Make Unit Surrender
-        function = QUOTE(DFUNC(moduleSurrender));
+        function = QFUNC(moduleSurrender);
         scope = 2;  //show in editor
         isGlobal = 1; //run global
         isTriggerActivated  = 1; //Wait for triggers
@@ -172,6 +164,35 @@ class CfgVehicles {
         class ModuleDescription: ModuleDescription {
             description = CSTRING(ModuleSurrender_Description); //Sync a unit to make them surrender.<br/>Source: ace_captives
             sync[] = {"AnyAI"};
+        };
+    };
+
+    class ACE_Module: Module_F {};
+    class GVAR(moduleSettings): ACE_Module {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = CSTRING(ModuleSettings_DisplayName);
+        function = QFUNC(moduleSettings);
+        scope = 2;
+        icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
+        isGlobal = 1;
+        class Arguments {
+            class allowHandcuffOwnSide {
+                displayName = CSTRING(ModuleSettings_handcuffSide_name);
+                description = CSTRING(ModuleSettings_handcuffSide_description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class allowSurrender {
+                displayName = CSTRING(ModuleSettings_allowSurrender_name);
+                description = CSTRING(ModuleSettings_allowSurrender_description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription: ModuleDescription {
+            description = CSTRING(ModuleSettings_Description);
+            sync[] = {};
         };
     };
 };

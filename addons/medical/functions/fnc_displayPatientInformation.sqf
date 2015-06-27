@@ -50,7 +50,7 @@ if (_show) then {
         _genericMessages = [];
 
         if (GVAR(level) >= 2) then {
-            _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(ArmLeft) ,LSTRING(ArmRight) ,LSTRING(LegLeft), LSTRING(LegRight)] select _selectionN;
+            _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
             _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
         };
 

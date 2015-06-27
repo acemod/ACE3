@@ -1,74 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
-        <Key ID="STR_ACE_Zeus_Module_DisplayName">
+        <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
             <Polish>Ustawienia Zeusa</Polish>
+            <Spanish>Ajustes Zeus</Spanish>
+            <Czech>Nastavení Zeuse</Czech>
         </Key>
-        <Key ID="STR_ACE_Zeus_Module_Description">
+        <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
             <Polish>Pozwala kontrolować różne aspekty Zeusa.</Polish>
+            <Spanish>Proporciona control sobre diversos aspectos de Zeus.</Spanish>
+            <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
             <Polish>Wiad. o nowym Zeusie</Polish>
+            <Spanish>Mensajes de ascensión</Spanish>
+            <Czech>Zpráva o novém Zeusovi</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
             <Polish>Wyświetlaj globalną wiadomość kiedy gracz zostanie przydzielony jako Zeus</Polish>
+            <Spanish>Mostrar mensajes emergentes globales cuando a un jugador se le asigna como Zeus.</Spanish>
+            <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
             <Polish>Orzeł Zeusa</Polish>
+            <Spanish>Águila Zeus</Spanish>
+            <Czech>Orel Zeuse</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_Description">
             <English>Spawn an eagle that follows the Zeus camera.</English>
             <Polish>Spawnuj orła, który podąrza za kamerą Zeusa.</Polish>
+            <Spanish>Generar un águila que sigue la cámara Zeus.</Spanish>
+            <Czech>Vytvoří orla, který následuje kameru Zeuse.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
             <Polish>Dźwięki wiatru</Polish>
+            <Spanish>Sonidos de viento</Spanish>
+            <Czech>Zvuky větru</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_Description">
             <English>Play wind sounds when Zeus remote controls a unit.</English>
             <Polish>Odtwarzaj dźwięki wiatru kiedy Zeus zdalnie kontroluje jednostkę.</Polish>
+            <Spanish>Reproduce sonidos de viento cuando Zeus controle remotamente una unidad.</Spanish>
+            <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
             <English>Ordnance Warning</English>
             <Polish>Ostrz. o ostrzale arty.</Polish>
+            <Spanish>Advertencia de artefactos explosivos</Spanish>
+            <Czech>Varování před dělostřelectvem</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
             <English>Play a radio warning when Zeus uses ordnance.</English>
             <Polish>Odtwarzaj wiadomość radiową kiedy Zeus używa artylerii.</Polish>
+            <Spanish>Reproduce un aviso de radio cuando Zeus utiliza artefactos explosivos.</Spanish>
+            <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
             <English>Reveal Mines</English>
             <Polish>Pokazuj miny</Polish>
+            <Spanish>Revelar minas</Spanish>
+            <Czech>Odhalit miny</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
             <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
-        </Key>
-        <Key ID="STR_ACE_Zeus_revealMines_disable">
-            <English>Disabled</English>
-            <Polish>Wyłączone</Polish>
+            <Spanish>Revelar minas a aliados y establecer marcadores de mapa.</Spanish>
+            <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
             <Polish>Pokaż dla sojuszników</Polish>
+            <Spanish>Revelar a aliados</Spanish>
+            <Czech>Odhalit pro spojence</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
             <English>Allies + Map Markers</English>
             <Polish>Sojusznicy + markery na mapie</Polish>
+            <Spanish>Aliados + Marcas de mapa</Spanish>
+            <Czech>Spojenci + Značky na mapě</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
+            <Spanish>Alternar cautivo</Spanish>
+            <Czech>Přepnout - Vězeň</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
+            <Spanish>Alternar rendición</Spanish>
+            <Czech>Přepnout - Vzdávání</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
+            <Polish>Przełącz nieprzytomność</Polish>
+            <Spanish>Alternar inconsciencia</Spanish>
+            <Czech>Přepnout - Bezvědomí</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -96,6 +129,9 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
+            <Polish>Jednostka nie może być więźniem</Polish>
+            <Spanish>La unidad no debe estar cautiva</Spanish>
+            <Czech>Jednotka nemí být vězeň</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -103,7 +139,7 @@
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
             <Portuguese>Nada debaixo do mouse</Portuguese>
-            <Czech>Nic není vybráno</Czech>
+            <Czech>Umístni na jednotku</Czech>
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
@@ -111,6 +147,9 @@
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
+            <Polish>Wymaga addonu, który nie jest obecny</Polish>
+            <Spanish>Requiere un addon que no está presente</Spanish>
+            <Czech>Vyžaduje addon, který není přítomen</Czech>
         </Key>
     </Package>
 </Project>

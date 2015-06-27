@@ -15,7 +15,7 @@ class RscEdit;
 
 class Rsc_ACE_CallScreen_Edit:RscEdit {
     canModify = 1;
-    colorBackground[] = {0,0,0,1};
+    colorBackground[] = {0,0,0,0};
     colorText[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
     colorSelection[] = {
@@ -89,7 +89,7 @@ class RscACE_SelectTimeUI {
             h = 0.1;
             y = 0.09;
             style = ST_CENTER;
-            text = $STR_ACE_Explosives_Cancel;
+            text = CSTRING(Cancel);
             action = "closeDialog 0;";
         };
         class approveBtn: RscButton {
@@ -99,7 +99,7 @@ class RscACE_SelectTimeUI {
             h = 0.1;
             w = 0.15;
             style = ST_CENTER;
-            text = $STR_ACE_Explosives_SetTime;
+            text = CSTRING(SetTime);
             action = "closeDialog 0;";
         };
     };

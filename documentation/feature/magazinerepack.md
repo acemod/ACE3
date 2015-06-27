@@ -15,7 +15,7 @@ Adds the ability to repack magazines of the same type.
 
 ### 2.1 Repacking
 - For this you need multiple half empty mags of the same type.
-- Press the self interaction button <kbd>CTRL</kbd> + <kbd>Left Windows</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Press the self interaction button <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Repack magazines`.
 - Select the type of magazines you want to repack.
 

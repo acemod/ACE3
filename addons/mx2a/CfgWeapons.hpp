@@ -2,9 +2,9 @@
 class CfgWeapons {
     class Binocular;
     class ACE_MX2A: Binocular {
-        author = "$STR_ACE_Common_ACETeam";
-        displayName = "$STR_ACE_MX2A_DisplayName";
-        descriptionShort = "$STR_ACE_MX2A_Description";
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(DisplayName);
+        descriptionShort = CSTRING(Description);
         model = PATHTOF(data\ace_mx2a.p3d);
         modelOptics = QUOTE(PATHTOEF(apl,LWTS_optic.p3d));
         picture = PATHTOF(UI\w_mx2a_ca.paa);

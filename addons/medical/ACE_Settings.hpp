@@ -59,6 +59,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(remoteControlledAI) {
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
         value = 0;
@@ -134,6 +138,12 @@ class ACE_Settings {
         value = 1;
     };
     class GVAR(healHitPointAfterAdvBandage) {
+        displayName = CSTRING(healHitPointAfterAdvBandage);
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(painIsOnlySuppressed) {
+        displayName = CSTRING(painIsOnlySuppressed);
         typeName = "BOOL";
         value = 1;
     };
@@ -141,7 +151,7 @@ class ACE_Settings {
         displayName = CSTRING(painEffectType);
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_ACE_Medical_painEffect_Flash", "$STR_ACE_Medical_painEffect_Chroma"};
+        values[] = {CSTRING(painEffect_Flash), CSTRING(painEffect_Chroma)};
         isClientSettable = 1;
     };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
@@ -158,7 +168,7 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_ACE_Medical_useSelection"/*, "$STR_ACE_Medical_useRadial"*/};
+        values[] = {CSTRING(useSelection)/*, CSTRING(useRadial)*/};
         // isClientSettable = 1;
     };
 };

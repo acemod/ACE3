@@ -103,7 +103,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_Medical_Triage_Status_None;
+            text = CSTRING(Triage_Status_None);
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -121,7 +121,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_Medical_Triage_Status_Minor;
+            text = CSTRING(Triage_Status_Minor);
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -139,7 +139,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_Medical_Triage_Status_Delayed;
+            text = CSTRING(Triage_Status_Delayed);
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -157,7 +157,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_Medical_Triage_Status_Immediate;
+            text = CSTRING(Triage_Status_Immediate);
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -175,7 +175,7 @@ class GVAR(triageCard) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_Medical_Triage_Status_Deceased;
+            text = CSTRING(Triage_Status_Deceased);
             style = 0x02;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
