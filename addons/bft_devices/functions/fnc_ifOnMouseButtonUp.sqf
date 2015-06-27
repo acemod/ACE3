@@ -24,7 +24,7 @@ private [];
 
 #include "script_component.hpp"
 
-private ["_control","_display","_deviceID","_function","_mouseButton"];
+private ["_control","_display","_deviceID","_function","_mouseButton","_mode"];
 
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
@@ -40,6 +40,12 @@ switch (_function) do {
         [] call FUNC(ifClose);
     };
     case "btnACT": {
+        _mode = [_deviceID,"mode"] call FUNC(getSettings);
+        call {
+            if (_mode == "UAV") exitWith {[] call FUNC(remoteControlUAV)};
+            if (_mode == "HCAM") exitWith {[_deviceID,[["mode","HCAM_FULL"]]] call FUNC(setSettings)};
+            if (_mode == "HCAM_FULL") exitWith {[_deviceID,[["mode","HCAM"]]] call FUNC(setSettings)};
+        };
     };
     case "centerMapOnPlayerPosition": {
         [_deviceID] call FUNC(centerMapOnPlayerPosition);

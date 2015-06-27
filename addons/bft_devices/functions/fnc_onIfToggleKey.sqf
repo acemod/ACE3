@@ -27,6 +27,14 @@ if (GVAR(ifOpenStart)) exitWith {_handled};
 
 _previousInterface = "";
 
+// if UAV gunner view is open, exit the view
+if (GVAR(uavViewActive)) then {
+    objNull remoteControl (gunner GVAR(actUav));
+    vehicle ACE_player switchCamera 'internal';
+    GVAR(uavViewActive) = false;
+    true
+};
+
 // close interface and exit if there is an interface open of the same type
 if (!I_CLOSED && {I_GET_TYPE == _this}) exitWith {
     [] call FUNC(ifClose);
