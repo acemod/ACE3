@@ -190,6 +190,11 @@ if (isNil "_mode") then {
                 _btnActCtrl = _display displayCtrl IDC_BTNACT;
                 _displayItemsToShow = [];
                 
+                if (!_interfaceInit) then {
+                    [] call FUNC(deleteHelmetCam);
+                    [] call FUNC(deleteUAVcam);
+                };
+                
                 call {
                     // ---------- DESKTOP -----------
                     if (_mode == "DESKTOP") exitWith {
@@ -289,10 +294,26 @@ if (isNil "_mode") then {
                     };
                     // ---------- FULLSCREEN HELMET CAM -----------
                     if (_mode == "HCAM_FULL") exitWith {
-                        _displayItemsToShow = [IDC_HCAM_FULL];
                         _data = [_deviceID,"hCam"] call FUNC(getSettings);
+                        // see if camera could be set up
+                        if (['rendertarget13',_data] call FUNC(createHelmetCam)) then {
+                            _displayItemsToShow = [IDC_HCAM_FULL];
+                        } else {
+                            // drop back to HCAM mode if cam could not be set up
+                            [_deviceID,[["mode","HCAM"]],false] call FUNC(setSettings);
+                            _mode = "HCAM";
+                            _displayItemsToShow = [
+                                IDC_GROUP_HCAM,
+                                IDC_MINIMAPBG,
+                                IDC_HCAMMAP
+                            ];
+                            HASH_SET(_settings,"hCamListUpdate",true);
+                            if (!_interfaceInit) then {
+                                _hCam = [_deviceID,"hCam"] call FUNC(getSettings);
+                                HASH_SET(_settings,"hCam",_hCam);
+                            };
+                        };
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
-                        ['rendertarget13',_data] call FUNC(createHelmetCam);
                     };
                 };
                 
@@ -412,17 +433,19 @@ if (isNil "_mode") then {
         };
         // ------------ HCAM ------------
         if (_x == "hCam") exitWith {
-            _renderTarget = call {
-                if (_mode == "HCAM") exitWith {"rendertarget12"};
-                if (_mode == "HCAM_FULL") exitWith {"rendertarget13"}
-            };
-            if (!isNil "_renderTarget") then {
-                _data = _value;
-                if (_data != "") then {
-                    [_renderTarget,_data] call FUNC(createHelmetCam);
-                } else {
-                    [] call FUNC(deleteHelmetCam);
-                }
+            if (_mode == "HCAM") then {
+                _renderTarget = call {
+                    if (_mode == "HCAM") exitWith {"rendertarget12"};
+                    if (_mode == "HCAM_FULL") exitWith {"rendertarget13"}
+                };
+                if (!isNil "_renderTarget") then {
+                    _data = _value;
+                    if (_data != "") then {
+                        [_renderTarget,_data] call FUNC(createHelmetCam);
+                    } else {
+                        [] call FUNC(deleteHelmetCam);
+                    }
+                };
             };
         };
         // ------------ MAP TOOLS ------------

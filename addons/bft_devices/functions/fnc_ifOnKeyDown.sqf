@@ -24,7 +24,7 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_deviceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex"];
+private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_deviceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex","_mode"];
 
 _display = _this select 0;
 _displayName = I_GET_NAME;
@@ -43,7 +43,9 @@ if (_dikCode == DIK_F2 && {_displayName in [QGVAR(DK10_dlg)]}) exitWith {
     true
 };
 if (_dikCode == DIK_F3 && {_displayName in [QGVAR(DK10_dlg)]}) exitWith {
-    [_deviceID,[["mode","HCAM"]]] call FUNC(setSettings);
+    _mode = [_deviceID,"mode"] call FUNC(getSettings);
+    _mode = if (_mode == "HCAM") then {"HCAM_FULL"} else {"HCAM"};
+    [_deviceID,[["mode",_mode]]] call FUNC(setSettings);
     true
 };
 if (_dikCode == DIK_F4 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
