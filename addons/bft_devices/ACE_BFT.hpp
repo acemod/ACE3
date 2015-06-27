@@ -2,7 +2,7 @@ class ACE_BFT {
     class Devices {
         // Personal Devices
         class DK10_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             refreshRate = 5;
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
@@ -38,7 +38,7 @@ class ACE_BFT {
         };
 
         class GD300_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             refreshRate = 5;
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
@@ -75,7 +75,7 @@ class ACE_BFT {
         };
 
         class MicroDAGR_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             refreshRate = 5;
             reportingModes[] = {"GroupOnly"};
             defaultInformation[] = {"Inf", 0, "", 0};
@@ -111,7 +111,7 @@ class ACE_BFT {
 
         // Motorized
         class JV5_Mot_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             refreshRate = 5;
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Motorized", 0, "", 0};
@@ -152,7 +152,7 @@ class ACE_BFT {
 
         // Helicopter
         class TAD_Heli_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             reportingModes[] = {"MFD"};
             refreshRate = 0;
             defaultInformation[] = {"Helicopter", 0, "", 0};
@@ -201,7 +201,7 @@ class ACE_BFT {
 
         // UAV
         class UAV_b {
-            deviceSide = "NATO";
+            deviceSide = "WEST";
             reportingModes[] = {"UAV"};
             refreshRate = 1;
             defaultInformation[] = {"UAV", 0, "", 0};

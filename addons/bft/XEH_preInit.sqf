@@ -76,11 +76,11 @@ _a = profilenamespace getvariable ['Map_BLUFOR_A',0.8];
 GVAR(colorWest) = [_r,_g,_b,_a];
 
 
-["NATO", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
+["WEST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
 ["EAST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
 ["IND", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
 
 // FOR DEBUG PURPOSE
-GVAR(registeredEncyptionKeys) = ["NATO"] call FUNC(getEncryptionKey);
+GVAR(registeredEncyptionKeys) = ["WEST"] call FUNC(getEncryptionKey);
 
 ADDON = true;

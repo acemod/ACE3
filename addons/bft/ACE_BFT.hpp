@@ -1,4 +1,5 @@
 class ACE_BFT {
+    /*
     class Devices {
         class FBCB2Device {
             deviceSide = "NATO";
@@ -18,9 +19,10 @@ class ACE_BFT {
             defaultInformation[] = {"Plane", 0, "", 0};
         };
     };
+    */
 
     class Side {
-        class NATO {
+        class WEST {
             encryptionKeys[] = {""};
         };
         class EAST {
