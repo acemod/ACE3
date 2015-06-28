@@ -25,7 +25,7 @@
     PARAMS_1(_display);
 
     //Can't place markers when can't interact
-    if (!([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {
+    if (!([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
     };
 

@@ -7,7 +7,7 @@ if !(hasInterface) exitWith {};
 ["ACE3 Weapons", QGVAR(checkAmmo), localize LSTRING(checkAmmo),
 {
     // Conditions: canInteract
-    if !([ACE_player, (vehicle ACE_player), ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, (vehicle ACE_player), ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player] call EFUNC(common,canUseWeapon) || {(vehicle ACE_player) isKindOf "StaticWeapon"}) exitWith {false};
 

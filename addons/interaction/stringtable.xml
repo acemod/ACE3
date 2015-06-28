@@ -815,10 +815,22 @@
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
-            <English></English>
+            <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Zeus_Behaviour">
+            <English>Behaviour</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Zeus_Behaviour_careless">
+            <English>Careless</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Zeus_Formation">
+            <English>Formation</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Zeus_Speed">
+            <English>Speed Mode</English>
         </Key>
     </Package>
 </Project>

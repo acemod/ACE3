@@ -65,4 +65,8 @@ class CfgWeapons
         ACE_ScopeAdjust_VerticalIncrement = 0.0;
         ACE_ScopeAdjust_HorizontalIncrement = 0.5;
     };
+    class Launcher_Base_F;
+    class rhs_weap_rpg7: Launcher_Base_F {
+        ace_reloadlaunchers_enabled = 1;
+    };
 };
