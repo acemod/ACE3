@@ -66,7 +66,7 @@ class ACE_BFT {
             displayName = "";
             iconPath = "\A3\ui_f\data\map\markers\nato\b_med.paa";
         };
-        class Maintanance {
+        class Maintenance {
             displayName = "";
             iconPath = "\A3\ui_f\data\map\markers\nato\b_maint.paa";
         };

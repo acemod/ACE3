@@ -139,14 +139,80 @@ class ACE_BFT {
             deviceSide = "IND";
         };
 
+        // Mechanized
+        class JV5_Mech_b: JV5_Mot_b {
+            defaultInformation[] = {"Mechanized", 0, "", 0};
+        };
+        class JV5_Mech_o: JV5_Mech_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Mech_i: JV5_Mech_b {
+            deviceSide = "IND";
+        };
+
         // Armor
         class JV5_Armor_b: JV5_Mot_b {
-            defaultInformation[] = {"Motorized", 0, "", 0};
+            defaultInformation[] = {"Armor", 0, "", 0};
         };
         class JV5_Armor_o: JV5_Armor_b {
             deviceSide = "EAST";
         };
         class JV5_Armor_i: JV5_Armor_b {
+            deviceSide = "IND";
+        };
+
+        // Artillery
+        class JV5_Artillery_b: JV5_Mot_b {
+            defaultInformation[] = {"Artillery", 0, "", 0};
+        };
+        class JV5_Artillery_o: JV5_Artillery_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Artillery_i: JV5_Artillery_b {
+            deviceSide = "IND";
+        };
+
+        // Maintenance
+        class JV5_Maintenance_b: JV5_Mot_b {
+            defaultInformation[] = {"Maintenance", 0, "", 0};
+        };
+        class JV5_Maintenance_o: JV5_Maintenance_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Maintenance_i: JV5_Maintenance_b {
+            deviceSide = "IND";
+        };
+
+        // Medical
+        class JV5_Medical_b: JV5_Mot_b {
+            defaultInformation[] = {"Medical", 0, "", 0};
+        };
+        class JV5_Medical_o: JV5_Medical_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Medical_i: JV5_Medical_b {
+            deviceSide = "IND";
+        };
+
+        // Service
+        class JV5_Service_b: JV5_Mot_b {
+            defaultInformation[] = {"Service", 0, "", 0};
+        };
+        class JV5_Service_o: JV5_Service_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Service_i: JV5_Service_b {
+            deviceSide = "IND";
+        };
+
+        // Naval
+        class JV5_Naval_b: JV5_Mot_b {
+            defaultInformation[] = {"Naval", 0, "", 0};
+        };
+        class JV5_Naval_o: JV5_Naval_b {
+            deviceSide = "EAST";
+        };
+        class JV5_Naval_i: JV5_Naval_b {
             deviceSide = "IND";
         };
 

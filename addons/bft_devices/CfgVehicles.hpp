@@ -119,14 +119,172 @@ class CfgVehicles {
         EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_b"};
     };
 
-    // Armor
-
-    // Helicopters
-    class Heli_Attack_01_base_F;
-    class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
-        EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_b"};
+    class MRAP_01_hmg_base_F;
+    class B_MRAP_01_hmg_F : MRAP_01_hmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_b"};
     };
 
+    class MRAP_01_gmg_base_F;
+    class B_MRAP_01_gmg_F : MRAP_01_gmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_b"};
+    };
+
+    class MRAP_02_base_F;
+    class O_MRAP_02_F : MRAP_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_o"};
+    };
+
+    class MRAP_02_hmg_base_F;
+    class O_MRAP_02_hmg_F : MRAP_02_hmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_o"};
+    };
+
+    class MRAP_02_gmg_base_F;
+    class O_MRAP_02_gmg_F : MRAP_02_gmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_o"};
+    };
+
+    class MRAP_03_base_F;
+    class I_MRAP_03_F : MRAP_03_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_i"};
+    };
+
+    class MRAP_03_hmg_base_F;
+    class I_MRAP_03_hmg_F : MRAP_03_hmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_i"};
+    };
+
+    class MRAP_03_gmg_base_F;
+    class I_MRAP_03_gmg_F : MRAP_03_gmg_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_i"};
+    };
+
+    // Tanks
+    class B_MBT_01_base_F;
+    class B_MBT_01_cannon_F : B_MBT_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Armor_b"};
+    };
+
+    class O_MBT_02_base_F;
+    class O_MBT_02_cannon_F : O_MBT_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Armor_o"};
+    };
+
+    class I_MBT_03_base_F;
+    class I_MBT_03_cannon_F : I_MBT_03_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Armor_i"};
+    };
+
+    // Artillery
+    class B_MBT_01_arty_base_F;
+    class B_MBT_01_arty_F : B_MBT_01_arty_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Artillery_b"};
+    };
+
+    class B_MBT_01_mlrs_base_F;
+    class B_MBT_01_mlrs_F : B_MBT_01_mlrs_base_F { // Rocket artillery
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Artillery_b"};
+    };
+
+    class O_MBT_02_arty_base_F;
+    class O_MBT_02_arty_F : O_MBT_02_arty_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Artillery_o"};
+    };
+
+    // Tracked APCs
+    class B_APC_Tracked_01_base_F;
+    class B_APC_Tracked_01_rcws_F : B_APC_Tracked_01_base_F { // APC
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_b"};
+    };
+    class B_APC_Tracked_01_CRV_F : B_APC_Tracked_01_base_F { // Support (dozer)
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_b"};
+    };
+    class B_APC_Tracked_01_AA_F : B_APC_Tracked_01_base_F { // AA
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_b"};
+    };
+
+    class O_APC_Tracked_02_base_F;
+    class O_APC_Tracked_02_cannon_F : O_APC_Tracked_02_base_F { // APC
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_o"};
+    };
+    class O_APC_Tracked_02_AA_F : O_APC_Tracked_02_base_F { // AA
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_o"};
+    };
+
+    class I_APC_tracked_03_base_F;
+    class I_APC_tracked_03_cannon_F : I_APC_tracked_03_base_F { // APC
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_i"};
+    };
+
+    // Wheeled APCs
+    class B_APC_Wheeled_01_base_F;
+    class B_APC_Wheeled_01_cannon_F : B_APC_Wheeled_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_b"};
+    };
+
+    class O_APC_Wheeled_02_base_F;
+    class O_APC_Wheeled_02_rcws_F : O_APC_Wheeled_02_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_o"};
+    };
+
+    class I_APC_Wheeled_03_base_F;
+    class I_APC_Wheeled_03_cannon_F : I_APC_Wheeled_03_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mech_i"};
+    };
+
+    // Trucks
+    class Truck_01_base_F;
+    class B_Truck_01_transport_F : Truck_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_b"};
+    };
+    class B_Truck_01_mover_F : B_Truck_01_transport_F { // Towing, Box, Ammo, Fuel
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Service_b"};
+    };
+    class B_Truck_01_medical_F : B_Truck_01_transport_F { // Medical
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Medical_b"};
+    };
+    class B_Truck_01_Repair_F : B_Truck_01_mover_F { // Repair
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Maintenance_b"};
+    };
+
+    class Truck_03_base_F;
+    class O_Truck_03_transport_F : Truck_03_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_o"};
+    };
+    class O_Truck_03_covered_F : Truck_03_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Mot_o"};
+    };
+    class O_Truck_03_repair_F : Truck_03_base_F { // Repair
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Maintenance_o"};
+    };
+    class O_Truck_03_ammo_F : Truck_03_base_F { // Ammo
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Service_o"};
+    };
+    class O_Truck_03_fuel_F : Truck_03_base_F { // Fuel
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Service_o"};
+    };
+    class O_Truck_03_device_F : Truck_03_base_F { // Electrical generator
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Service_o"};
+    };
+    class O_Truck_03_medical_F : Truck_03_base_F { // Medical
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Medical_o"};
+    };
+
+    // Naval
+    class Boat_Armed_01_minigun_base_F;
+    class B_Boat_Armed_01_minigun_F : Boat_Armed_01_minigun_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Naval_b"};
+    };
+    class I_Boat_Armed_01_minigun_F : Boat_Armed_01_minigun_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Naval_i"};
+    };
+
+    class Boat_Armed_01_base_F;
+    class O_Boat_Armed_01_hmg_F : Boat_Armed_01_base_F {
+        EGVAR(bft,vehicleDevices)[] = {"JV5_Naval_o"};
+    };
+
+    // Helicopters
     class Heli_Light_01_armed_base_F;
     class B_Heli_Light_01_armed_F: Heli_Light_01_armed_base_F {
         EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_b"};
@@ -140,6 +298,17 @@ class CfgVehicles {
     class Heli_Transport_01_base_F;
     class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
         EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_b"};
+    };
+
+    class Helicopter_Base_F;
+    class Heli_Attack_01_base_F : Helicopter_Base_F {
+        EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_b"};
+    };
+    class Heli_Attack_02_base_F : Helicopter_Base_F {
+        EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_o"};
+    };
+    class Heli_light_03_base_F : Helicopter_Base_F {
+        EGVAR(bft,vehicleDevices)[] = {"TAD_Heli_i"};
     };
 
     class Helicopter_Base_H;
