@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
 private ["_ctrl", "_pos", "_displayNum"];
-PARAMS_4(_text,_icon,_sPos,_textSettings);
+PARAMS_5(_text,_icon,_iconColor,_sPos,_textSettings);
 
 //systemChat format ["Icon %1 - %2,%3", _text, _sPos select 0, _sPos select 1];
 
@@ -34,10 +34,14 @@ if(_icon == "") then {
     _icon = DEFAULT_ICON;
 };
 
+if(_iconColor == "") then {
+    _iconColor = "#FFFFFF";
+};
+
 _text = if (GVAR(UseListMenu)) then {
-    format ["<img image='%1' align='left'/><t %2>%3</t>", _icon, _textSettings, _text]
+    format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _icon, _iconColor, _textSettings, _text]
 } else {
-    format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_break_line" callExtension _text];
+    format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _icon, _iconColor, _textSettings, "ace_break_line" callExtension _text];
 };
 
 //_ctrl ctrlSetStructuredText parseText _text;
