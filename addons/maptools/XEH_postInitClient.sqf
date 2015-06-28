@@ -67,6 +67,18 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
 
     // Update the size and rotation of map tools
     [] call FUNC(updateMapToolMarkers);
-
-    [FUNC(mapStateUpdater), 0, []] call CBA_fnc_addPerFrameHandler;
 };
+
+["mapOpened", {
+    // Show and update map tools if required
+    [] call FUNC(updateMapToolMarkers);
+    // Show GPS if required
+    [GVAR(mapGpsShow)] call FUNC(openMapGps);
+}] call EFUNC(common,addEventHandler);
+
+["mapClosed", {
+    // Hide GPS
+    [false] call FUNC(openMapGps);
+    // Cancel drawing
+    call FUNC(cancelDrawing);
+}] call EFUNC(common,addEventHandler);

@@ -353,5 +353,23 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
 
+//Map opened/closed Events:
+GVAR(mapOpened) = false;
+[] spawn {
+    waitUntil {(!isNull findDisplay 12)};
+    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
+        if (!GVAR(mapOpened)) then {
+            GVAR(mapOpened) = true;
+            ["mapOpened", []] call FUNC(localEvent);
+            [{
+                if (!visibleMap) then {
+                    GVAR(mapOpened) = false;
+                    ["mapClosed", []] call FUNC(localEvent);
+                    [_this select 1] call CBA_fnc_removePerFrameHandler;
+                };
+            }, 0, []] call CBA_fnc_addPerFrameHandler;
+        };
+    }];
+};
 
 GVAR(commonPostInited) = true;
