@@ -31,4 +31,4 @@ if (!hasInterface) exitWith {};
     ["playerVehicleChanged",{
         [false] call FUNC(adaptViewDistance)
     }] call EFUNC(common,addEventHandler);
-}] call EFUNC(common,addEventHandler);]
+}] call EFUNC(common,addEventHandler);
