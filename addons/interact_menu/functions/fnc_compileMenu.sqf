@@ -28,12 +28,12 @@ if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
 private "_recurseFnc";
 _recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_i"];
+    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
     EXPLODE_1_PVT(_this,_actionsCfg);
     _actions = [];
 
-    for "_i" from 0 to (count _actionsCfg) - 1 do {
-        _entryCfg = _actionsCfg select _i;
+    {
+        _entryCfg = _x;
         if(isClass _entryCfg) then {
             _displayName = getText (_entryCfg >> "displayName");
             _distance = getNumber (_entryCfg >> "distance");
@@ -69,7 +69,12 @@ _recurseFnc = {
             _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
             _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
             _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            _runOnHover = false;
+            if (isText (_entryCfg >> "runOnHover")) then {
+                _runOnHover = compile getText (_entryCfg >> "runOnHover");
+            } else {
+                _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            };
 
             _condition = compile _condition;
             _children = [_entryCfg] call _recurseFnc;
@@ -92,7 +97,7 @@ _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-    };
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 

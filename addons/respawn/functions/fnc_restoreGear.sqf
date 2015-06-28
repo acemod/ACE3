@@ -98,7 +98,7 @@ if(format["%1", _backpack] != "") then {
 
 
 // primaryWeapon
-if (_primaryweapon != "") then {
+if ((_primaryweapon != "") && {_primaryweapon != "ACE_FakePrimaryWeapon"}) then {
     {
         _unit addMagazine _x;
     } forEach _primaryweaponmagazine;

@@ -18,26 +18,29 @@ You can load and unload captives from vehicles using ACE3 interactions.
 You can frisk a restrained captive.
 
 ### 1.4 Surrendering
-You can surrender. While surrendering AI will cease fire.
+Allows players to surrender. It renders the unit unable to move and with the hands behind its head. When surrendered AI won't fire.
 
 ## 2. Usage
 
 ### 2.1 Taking a unit into captivity
 - You need `Cable Tie`.
-- Approach the unit and Interact <kbd>Left Windows</kbd>.
+- Approach the unit and Interact <kbd>⊞ win</kbd> (ACE3 default).
 - The interaction is located around the hands in the form of a handcuffs icon.
 - Repeat to release.
 
 ### 2.2 Escorting a captive
-- Interact with the captive <kbd>Left Windows</kbd>.
+- Interact with the captive <kbd>⊞ win</kbd>.
 - Select the `Escort prisoner` option.
-- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>Left windows</kbd> and select `Release`.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>⊞ win</kbd> and select `Release`.
 
 ### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the captive.
 - Approach the vehicle you wish to load the captive unit into.
-- Interact with the vehicle <kbd>Left Windows</kbd> and select `Load captive`.
-- Interact with the vehicle to unload.
+- Interact with the vehicle <kbd>⊞ win</kbd> and select `Load captive`.
+- To unload the captive interact with the vehicle <kbd>⊞ win</kbd>
+- Select `Passengers`.
+- Select the captive.
+- Select `Unload captive`.
 
 ## 3. Dependencies
 

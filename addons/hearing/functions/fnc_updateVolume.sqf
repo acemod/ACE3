@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and esteldunedain
+ * Author: commy2 and esteldunedain and Ruthberg
  * Updates and applys the current deafness.  Called every 0.1 sec from a PFEH.
  *
  * Arguments:
@@ -15,19 +15,16 @@
  */
 #include "script_component.hpp"
 
-#define STRENGHTODEAFNESS 3
-#define MAXDEAFNESS 1.1
-
 private ["_recoverRate", "_volume"];
 
 // Exit if combat deafness is disabled
 if !(GVAR(enableCombatDeafness)) exitWith {};
 
 // Check if new noises increase deafness
-if (GVAR(newStrength) * STRENGHTODEAFNESS > GVAR(currentDeafness)) then {
-    GVAR(currentDeafness) = GVAR(newStrength) * STRENGHTODEAFNESS min MAXDEAFNESS;
+GVAR(newStrength) = (((ACE_player getvariable [QGVAR(dv), 0]) min 20) / 20) ^ 2;
+if (GVAR(newStrength) > GVAR(currentDeafness)) then {
+    GVAR(currentDeafness) = GVAR(newStrength);
 };
-GVAR(newStrength) = 0;
 
 // Recover rate is slower if deafness is severe
 _recoverRate = 0.01;

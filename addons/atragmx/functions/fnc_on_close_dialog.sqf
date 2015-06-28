@@ -2,4 +2,4 @@
 
 uiNamespace setVariable ['ATragMX_Display', nil];
 GVAR(active) = false;
-[GVAR(DialogPFH)] call removePerFrameHandler;
+[GVAR(DialogPFH)] call cba_fnc_removePerFrameHandler;

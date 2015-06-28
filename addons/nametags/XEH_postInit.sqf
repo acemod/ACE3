@@ -5,16 +5,16 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(ShowNamesTime) = -10;
+GVAR(showNamesTime) = -10;
 
 // Add keybinds
-["ACE3 Common", QGVAR(showNameTags), localize "STR_ACE_NameTags_ShowNames",
+["ACE3 Common", QGVAR(showNameTags), localize LSTRING(ShowNames),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    GVAR(ShowNamesTime) = ACE_time;
+    GVAR(showNamesTime) = ACE_time;
     if (call FUNC(canShow)) then{ call FUNC(doShow); };
     // Return false so it doesn't block other actions
     false
@@ -58,5 +58,16 @@ GVAR(ShowNamesTime) = -10;
     };
 }, 5, []] call CBA_fnc_addPerFrameHandler;
 
-// Draw handle
-addMissionEventHandler ["Draw3D", {_this call FUNC(onDraw3d);}];
+// Wait until the colors are defined before starting to draw the nametags
+["SettingsInitialized", {
+    // Draw handle
+    call FUNC(updateSettings);
+}] call EFUNC(common,addEventHandler);
+
+// Change settings accordingly when they are changed
+["SettingChanged", {
+    PARAMS_1(_name);
+    if (_name  == QGVAR(showPlayerNames)) then {
+        call FUNC(updateSettings);
+    };
+}] call EFUNC(common,addEventHandler);

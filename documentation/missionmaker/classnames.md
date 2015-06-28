@@ -7,6 +7,10 @@ order: 11
 parent: wiki
 ---
 
+Everything is ordered alphabetically.
+
+You know an in-game name but want the classname? <kbd>CTRL</kbd> + <kbd>F</kbd>
+
 ### Atragmx 
 `added in 3.0.0.3`
 
@@ -73,6 +77,21 @@ classname | in game name | type   |
 --------- | --------- | ---------
 ACE_Banana | banana |  ACE_ItemCore |
 
+### Concertina_wire
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_ConcertinaWireCoil | Concertina Wire Coil |  ThingX |
+ACE_ConcertinaWire | Concertina Wire | deployed concertina wire |
+
+### Dagr
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_DAGR | DAGR | ACE_ItemCore | 
+
 ### Disposable
 `added in 3.0.0.3`
 
@@ -100,14 +119,23 @@ ACE_HandFlare_White | M127A1 Hand Held Signal (White) | Grenade |
 ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
-ACE_M84 | M84 Stun Grenade |
+ACE_M84 | M84 Stun Grenade | Grenade |
 
-### hearing
+### Hearing
 `added in 3.0.0.3`
 
 classname | in game name | type   |
 --------- | --------- | ---------
-ACE_EarPlugs | Ear Plugs | ACE_ItemCore |
+ACE_EarPlugs | Earplugs | ACE_ItemCore |
+
+### HuntIR
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
+ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
+ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
 ### Kestrel
 `added in 3.0.0.3`
@@ -155,6 +183,7 @@ ACE_bloodIV | Blood IV (1000ml) | ACE_ItemCore |
 ACE_bloodIV_500 | Blood IV (500ml) | ACE_ItemCore |
 ACE_bloodIV_250 | Blood IV (250ml) | ACE_ItemCore |
 ACE_bodyBag | Bodybag | ACE_ItemCore |
+ACE_bodyBagObject | Bodybag (packed) | |
 ACE_epinephrine | Epinephrine autoinjector | ACE_ItemCore |
 ACE_morphine | Morphine autoinjector | ACE_ItemCore |
 ACE_packingBandage | Packing Bandage | ACE_ItemCore |
@@ -181,6 +210,14 @@ ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
 classname | in game name | type   |
 --------- | --------- | ---------
 ACE_RangeTable_82mm | 82mm Rangetable | ACE_ItemCore |
+
+### M2XA
+`added in 3.1.1`
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_MX2A | MX-2A | Binocular |
+
 
 ### Nightvision
 `added in 3.0.0.3`
@@ -225,6 +262,12 @@ classname | in game name | type  |
 ACE_Altimeter | Altimeter Watch | ACE_ItemCore |
 ACE_NonSteerableParachute | Non-Steerable Parachute | Backpack |
 
+### Rangecard
+
+classname | in game name | type   |
+--------- | --------- | ---------
+ACE_RangeCard | rangecard | ACE_ItemCore |
+
 ### Vector
 `added in 3.0.0.3`
 
@@ -243,3 +286,42 @@ ACE_key_west | Vehicle Key: West | ACE_ItemCore |
 ACE_key_east | Vehicle Key: East | ACE_ItemCore |
 ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
 ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
+
+### Sandbag
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore | 
+ACE_SandbagObject | Sandbag | ThingX | 
+
+### Spotting scope
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_SpottingScope | Spotting Scope | ACE_ItemCore | 
+ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon | 
+
+### Tactical ladder
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack | 
+ACE_Tactical_Ladder | Telescopic Ladder (placed) | house | 
+
+### Tripod
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Tripod | SSWT Kit | ACE_ItemCore | 
+ACE_TripodObject | SSWT Kit (placed) | ThingX | 
+
+### Yardage 450
+`added in 3.1.1`
+
+classname | in game name | type | 
+--------- | --------- | ---------
+ACE_Yardage450 | Yardage 450 | Binocular | 

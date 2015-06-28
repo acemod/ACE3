@@ -11,7 +11,6 @@ PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
-PREP(adminKick);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
@@ -35,6 +34,8 @@ PREP(currentChannel);
 PREP(debug);
 PREP(debugModule);
 PREP(defineVariable);
+PREP(deviceKeyFindValidIndex);
+PREP(deviceKeyRegisterNew);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);
@@ -180,6 +181,7 @@ PREP(toHex);
 PREP(toNumber);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
+PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
@@ -287,12 +289,18 @@ PREP(_handleRequestAllSyncedEvents);
 
 GVAR(syncedEvents) = HASH_CREATE;
 
+//GVARS for execNextFrame and waitAndExec
+GVAR(waitAndExecArray) = [];
+GVAR(nextFrameNo) = diag_frameno;
+GVAR(nextFrameBufferA) = [];
+GVAR(nextFrameBufferB) = [];
+
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };

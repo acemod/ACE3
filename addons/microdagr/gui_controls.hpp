@@ -172,7 +172,7 @@ class controls {
         class Controls {
             class MGRSNew: GVAR(RscText) {
                 idc = -1;
-                text = "$STR_ACE_microdagr_controlMGRS";
+                text = CSTRING(controlMGRS);
                 x = W_PART(0.5);
                 y = H_PART(0);
                 w = W_PART(10);
@@ -182,7 +182,7 @@ class controls {
             class WGD: GVAR(RscText) {
                 idc = -1;
                 style = ST_RIGHT;
-                text = "$STR_ACE_microdagr_controlWGD";
+                text = CSTRING(controlWGD);
                 x = W_PART(14.5);
                 y = H_PART(0);
                 w = W_PART(10);
@@ -345,7 +345,7 @@ class controls {
                     };
                     class TargetRangeText: GVAR(RscText) {
                         idc = -1;
-                        text = "$STR_ACE_microdagr_controlRange";
+                        text = CSTRING(controlRange);
                         x = W_PART(0.5);
                         y = H_PART(2);
                         w = W_PART(7.5);
@@ -408,7 +408,7 @@ class controls {
             class CompassHeader: GVAR(RscText) {
                 idc = -1;
                 style = ST_CENTER;
-                text = "$STR_ACE_microdagr_compasDirection";
+                text = CSTRING(compasDirection);
                 x = W_PART(0);
                 y = H_PART(0);
                 w = W_PART(25);
@@ -513,7 +513,7 @@ class controls {
             class TextTL: GVAR(RscText) {
                 idc = -1;
                 style = ST_CENTER;
-                text = "$STR_ACE_microdagr_menuMark";
+                text = CSTRING(menuMark);
                 x = W_PART(0);
                 y = H_PART(7.5);
                 w = W_PART(14);
@@ -521,17 +521,17 @@ class controls {
                 sizeEx = H_PART(1.2);
             };
             class TextTR: TextTL {
-                text = "$STR_ACE_microdagr_menuWaypoints";
+                text = CSTRING(menuWaypoints);
                 x = W_PART(11);
                 y = H_PART(7.5);
             };
             class TextBL: TextTL {
-                text = "$STR_ACE_microdagr_menuConnectTo";
+                text = CSTRING(menuConnectTo);
                 x = W_PART(0);
                 y = H_PART(16.5);
             };
             class TextBR: TextTL {
-                text = "$STR_ACE_microdagr_menuSettings";
+                text = CSTRING(menuSettings);
                 x = W_PART(11);
                 y = H_PART(16.5);
             };
@@ -678,7 +678,7 @@ class controls {
 
             class ButtonSetWP: RscButton {
                 idc = -1;
-                text = "$STR_ACE_microdagr_waypointsSet";
+                text = CSTRING(waypointsSet);
                 x = W_PART(1);
                 y = H_PART(17);
                 w = W_PART(7);
@@ -693,12 +693,12 @@ class controls {
                 onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonSetWP));
             };
             class ButtonAdd: ButtonSetWP {
-                text = "$STR_ACE_microdagr_waypointsAdd";
+                text = CSTRING(waypointsAdd);
                 x = W_PART(9);
                 onbuttonclick = QUOTE([APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode));
             };
             class ButtonDelete: ButtonSetWP {
-                text = "$STR_ACE_microdagr_waypointsDelete";
+                text = CSTRING(waypointsDelete);
                 x = W_PART(17);
                 onbuttonclick = QUOTE(_this call FUNC(appWaypointsButtonDeleteWP));
             };

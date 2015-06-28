@@ -12,19 +12,18 @@ parent: wiki
 Introduces hearing damage caused by nearby explosions and large-caliber weapons.
 
 ### 1.2  Earplugs
-Adds ear plugs to mitigate that effect. Soldiers with high caliber weapons or 
+Adds earplugs to mitigate that effect. Soldiers with high caliber weapons or 
 missile launchers will be equipped with those, but remember to put them in.
-
 
 ## 2. Usage
 
 ### 2.1 Equipping earplugs
-- For this you obviously need `Ear plugs`.
-- Press the self interaction key <kbd> ctrl+left windows </kbd> (by default).
-- Select `equipment`.
+- For this you need the `Earplugs` item.
+- Press the self interaction key <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Select `Equipment`.
 - Select `Earplugs in`.
 - Same method to remove them but the option is `Earplugs out`.
-- Note that you CAN re-use ear plugs.
+- Note: you're able to re-use earplugs.
 
 ## 3. Dependencies
 

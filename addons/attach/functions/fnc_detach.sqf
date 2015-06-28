@@ -49,7 +49,7 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 
 // Exit if can't add the item
 if !(_unit canAdd _itemName) exitWith {
-    [localize "STR_ACE_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Add item to inventory
@@ -60,7 +60,7 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
     // Delete attached item after 0.5 seconds
-    [{deleteVehicle (_this select 0)}, [_attachedObject], 0.5, 0] call EFUNC(common,waitAndExecute);
+    [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call EFUNC(common,waitAndExecute);
 } else {
     // Delete attached item
     deleteVehicle _attachedObject;
@@ -78,4 +78,4 @@ if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize "STR_ACE_Attach_Item_Detached", _itemDisplayName]] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);

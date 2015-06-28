@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {QGVAR(ModuleSurrender)};
+        units[] = {QGVAR(ModuleSettings), QGVAR(ModuleSurrender)};
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};
@@ -12,6 +12,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"

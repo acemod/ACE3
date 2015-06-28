@@ -3,6 +3,7 @@ class CfgAmmo {
     class FlareBase: FlareCore {
         intensity = 20000;
         flareSize = 12;
+        timeToLive = 60;
     };
     class F_40mm_White: FlareBase {
         intensity = 40000;
@@ -10,7 +11,7 @@ class CfgAmmo {
     };
     class F_20mm_White: FlareBase {
         intensity = 20000;
-        flareSize = 12;
+        flareSize = 6;
     };
     class F_Signal_Green: FlareBase {
         intensity = 20000;
@@ -19,6 +20,7 @@ class CfgAmmo {
     class Flare_82mm_AMOS_White: FlareCore {
         intensity = 80000;
         flareSize = 12;
+        timeToLive = 60;
     };
 
     class F_20mm_Red: F_20mm_White {};

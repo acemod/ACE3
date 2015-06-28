@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Map">
+    <Package name="MapTools">
         <Key ID="STR_ACE_MapTools_Name">
             <English>Map Tools</English>
             <Spanish>Herramientas de mapa</Spanish>
