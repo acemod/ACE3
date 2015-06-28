@@ -18,7 +18,7 @@
 PARAMS_1(_unit);
 
 // Exit if soldier has earplugs already in (persistence scenarios)
-if (FUNC(hasEarPlugsIn)) exitWith {};
+if ([_unit] call FUNC(hasEarPlugsIn)) exitWith {};
 
 private ["_launcher"];
 
