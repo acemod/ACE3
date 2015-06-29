@@ -7,7 +7,7 @@
  * 1: Controller Objects <ARRAY>
  * 2: Image Paths <ARRAY>
  * 3: Action Names <ARRAY>
- * 4: Duration <NUMBER> (0 disables automatic transitions)
+ * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
  * Parsed List <ARRAY>
@@ -58,31 +58,18 @@ TRACE_4("Information",_objects,_controllers,_images,_names);
 } forEach _controllers;
 
 
-// Exit if automatic transitions are not allowed
+// Exit if automatic transitions are disabled
 if (_duration == 0) exitWith {};
 
-
-// Number of slideshows and formatted global variable (multiple modules support)
-private ["_varString"];
+// Number of slideshows (multiple modules support)
 GVAR(slideshows) = GVAR(slideshows) + 1;
+
+// Formatted GVAR string (multiple modules support)
+private ["_varString"];
 _varString = str format [QGVAR(currentSlide%1), GVAR(slideshows)];
-missionNamespace setVariable [_varString, 0]; // First slide
 
-// Automatic transitions PFH
-[{
-    EXPLODE_3_PVT(_this select 0,_objects,_images,_varString);
+// Set formatted GVAR to first slide
+missionNamespace setVariable [_varString, 0];
 
-    // Get current slide number of this slideshow
-    _currentSlide = missionNamespace getVariable [_varString, 0];
-    // Increment slide or return to first slide if reached end
-    _currentSlide = (_currentSlide + 1) mod (count _images);
-    // Save slide back into global variable (PFH's local variables do not persist through PFH run)
-    missionNamespace setVariable [_varString, _currentSlide];
-
-    // Set slide
-    {
-        _x setObjectTextureGlobal [0, _images select _currentSlide];
-    } forEach _objects;
-
-    TRACE_3("Auto-transition",_images select _currentSlide,_currentSlide,count _images);
-}, _duration, [_objects, _images, _varString]] call cba_fnc_addPerFrameHandler;
+// Automatic transitions handler
+[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
