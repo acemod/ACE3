@@ -6,10 +6,10 @@
  * 0: Object <OBJECT>
  *
  * Return Value:
- * Has Slides <BOOL>
+ * Can Change Slides <BOOL>
  *
  * Example:
- * [object] call ace_slideshow_fnc_hasSlides;
+ * [object] call ace_slideshow_fnc_canChangeSlides;
  *
  * Public: No
  */
@@ -17,4 +17,7 @@
 
 PARAMS_1(_object);
 
-(!isNil {_object getVariable [QGVAR(Slides), nil]})
+private ["_slides"];
+_slides = _object getVariable [QGVAR(slides), nil];
+
+(!isNil "_slides" && {_slides select 3 == 0})

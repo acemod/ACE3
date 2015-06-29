@@ -19,7 +19,7 @@ PARAMS_1(_controller);
 
 private ["_slides", "_actions"];
 
-_slides = _controller getVariable QGVAR(Slides);
+_slides = _controller getVariable QGVAR(slides);
 EXPLODE_3_PVT(_slides,_objects,_images,_names);
 
 _actions = [];

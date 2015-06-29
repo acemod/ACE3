@@ -31,6 +31,12 @@
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
         </Key>
+        <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
+            <English>Slide Duration</English>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Duration_Description">
+            <English>Duration of each slide. Minor performance loss. Default: 0 (disabled)</English>
+        </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
         </Key>

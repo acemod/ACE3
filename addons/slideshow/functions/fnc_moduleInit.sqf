@@ -21,7 +21,7 @@ PARAMS_3(_logic,_units,_activated);
 
 if !(_activated) exitWith {};
 
-private ["_objects", "_controllers", "_return", "_images", "_names", "_controller"];
+private ["_objects", "_controllers", "_images", "_names", "_duration"];
 
 _logic = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _logic) exitWith {};
@@ -31,8 +31,9 @@ _objects = [_logic getVariable ["Objects", ""], true, true] call FUNC(makeList);
 _controllers = [_logic getVariable ["Controllers", ""], true, true] call FUNC(makeList);
 _images = [_logic getVariable ["Images", ""], true, false] call FUNC(makeList);
 _names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
+_duration = _logic getVariable ["Duration", ""];
 
 // Prepare with actions
-[_objects, _controllers, _images, _names] call FUNC(createSlideshow);
+[_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);
 
-diag_log text format ["[ACE]: Slideshow Module Initialized for: %1", _objects];
+diag_log text format ["[ACE]: Slideshow Module Initialized for: %1 with Duration: %2", _objects, _duration];

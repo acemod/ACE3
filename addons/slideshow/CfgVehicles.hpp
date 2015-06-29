@@ -35,6 +35,12 @@ class CfgVehicles {
                 typeName = "STRING";
                 defaultValue = "";
             };
+            class Duration {
+                displayName = CSTRING(Duration_DisplayName);
+                description = CSTRING(Duration_Description);
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Description);
@@ -68,7 +74,7 @@ class CfgVehicles {
     #define MACRO_SLIDES \
         class GVAR(Slides) { \
             displayName = CSTRING(Interaction); \
-            condition = QUOTE(_this call FUNC(hasSlides)); \
+            condition = QUOTE(_this call FUNC(canChangeSlides)); \
             insertChildren = QUOTE(_this call DFUNC(addSlideActions)); \
         };
 

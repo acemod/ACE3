@@ -3,8 +3,8 @@
 ADDON = false;
 
 PREP(addSlideActions);
+PREP(canChangeSlides);
 PREP(createSlideshow);
-PREP(hasSlides);
 PREP(makeList);
 PREP(moduleInit);
 
