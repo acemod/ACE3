@@ -8,7 +8,7 @@
     Arguments:
     0: Mode: "Init" is the only mission relevant one <String>
     1: <Array> (optional):
-        0: Whether player can escape from camera (true for MP spectator; false for SP photography) <Bool>
+        0: Whether player can escape from camera (false for MP spectator; true for SP photography) <Bool>
 
     Example:
     ["Init", [false]] call ace_spectator_fnc_camera;
