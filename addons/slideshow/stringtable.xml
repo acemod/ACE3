@@ -35,7 +35,7 @@
             <English>Slide Duration</English>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
-            <English>Duration of each slide. Minor performance loss. Default: 0 (disabled)</English>
+            <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
