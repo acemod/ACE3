@@ -8,4 +8,6 @@ PREP(createSlideshow);
 PREP(makeList);
 PREP(moduleInit);
 
+GVAR(slideshows) = 0;
+
 ADDON = true;
