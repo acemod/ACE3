@@ -17,7 +17,7 @@
  *
  * Public: Yes
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 PARAMS_5(_objects,_controllers,_images,_names,_duration);
