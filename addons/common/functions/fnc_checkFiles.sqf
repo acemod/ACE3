@@ -85,17 +85,16 @@ if (isMultiplayer) then {
                 };
             };
 
-            {
-                if !(_x in GVAR(ServerAddons)) then {
-                    _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addon: %1.",_x];
+            _addons = _addons - GVAR(ServerAddons);
+            if !(_addons isEqualTo []) then {
+                _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
-                    diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
 
-                    if (hasInterface) then {diag_log str "1";
-                        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-                    };
+                if (hasInterface) then {diag_log str "1";
+                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
-            } forEach _addons;
+            };
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         }, 1, [_version,_addons]] call CBA_fnc_addPerFrameHandler;
