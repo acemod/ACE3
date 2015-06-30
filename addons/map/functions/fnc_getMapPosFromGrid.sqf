@@ -4,21 +4,27 @@
  *
  * Argument:
  * 0: Grid Cords <STRING>
+ * 1: Get Center or bottom right <BOOL><OPTIONAL>
  *
  * Return values:
- * 0: Position <ARRAY>
+ * Position <ARRAY>
  *
  * Example:
  * ["6900080085"] call ace_map_fnc_getMapPosFromGrid
  *
  * Public: Yes
  */
-
-// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 PARAMS_1(_inputString);
 DEFAULT_PARAM(1,_getCenterOfGrid,true);
+
+private["_countInput", "_countInputHalf", "_xPart", "_xPos", "_yPart", "_yPos"];
+
+if ((count GVAR(mapGridData)) == 0) exitWith {
+    ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
+    (_this call BIS_fnc_gridToPos) select 0
+};
 
 EXPLODE_4_PVT(GVAR(mapGridData),_offsetX,_realOffsetY,_stepXat5,_stepYat5);
 

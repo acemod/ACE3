@@ -22,23 +22,43 @@
 PARAMS_1(_pos);
 DEFAULT_PARAM(1,_returnSingleString,false);
 
+private["_count", "_easting", "_nativeGrid", "_northing"];
+
+//Fallback, when map data is weird (letters)
 if ((count GVAR(mapGridData)) == 0) exitWith {
+    _nativeGrid = mapGridPosition _pos;
     if (_returnSingleString) then {
-        mapGridPosition _pos
+        _nativeGrid
     } else {
-        [(mapGridPosition _pos) select [0,5], (mapGridPosition _pos) select [5,5]]
+        _count = floor ((count _nativeGrid) / 2);
+        [(_nativeGrid select [0, _count]), (_nativeGrid select [_count, _count])]
     };
 };
 
 EXPLODE_4_PVT(GVAR(mapGridData),_offsetX,_realOffsetY,_stepXat5,_stepYat5);
-_easting = str floor (((_pos select 0) - _offsetX) / _stepXat5);
-_northing = str floor (((_pos select 1) - _realOffsetY) / _stepYat5);
+_easting = floor (((_pos select 0) - _offsetX) / _stepXat5);
+_northing = floor (((_pos select 1) - _realOffsetY) / _stepYat5);
 
-while {count _easting < 5} do {_easting = "0" + _easting;};
-while {count _northing < 5} do {_northing = "0" + _northing;};
+//Attempt to handle negative east/north (e.g.: moving west of map bounds)
+if (_easting > 0) then {
+    _easting = str _easting;
+    while {count _easting < 5} do {_easting = "0" + _easting;};
+} else {
+    _easting = str abs _easting;
+    while {count _easting < 4} do {_easting = "0" + _easting;};
+    _easting = "-" + _easting;
+};
+if (_northing > 0) then {
+    _northing = str _northing;
+    while {count _northing < 5} do {_northing = "0" + _northing;};
+} else {
+    _northing = str abs _northing;
+    while {count _northing < 4} do {_northing = "0" + _northing;};
+    _northing = "-" + _northing;
+};
 
 if (_returnSingleString) then {
-    _easting+_northing
+    _easting + _northing
 } else {
     [_easting, _northing]
 };
