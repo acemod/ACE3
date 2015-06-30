@@ -48,9 +48,7 @@ if (!alive _unit) exitwith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
-_max_wake_up_time = 300; // seconds. TODO: Module modifiable value
-
-if (GVAR(autoWakeUp) && {(GVAR(level) == 1) && ((ACE_time - _startingTime) >= _max_wake_up_time)}) then { // allow only if its basic medical
+if (GVAR(autoWakeUp) && {(GVAR(level) == 1) && ((ACE_time - _startingTime) >= GVAR(autoWakeUpTime))}) then { // allow only if its basic medical
     _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
 };
 

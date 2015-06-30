@@ -64,6 +64,11 @@ class ACE_Settings {
         value = 1; // default 0, left 1 for testing
         isClientSettable = 0;
     };
+    class GVAR(autoWakeUpTime) {
+        typeName = "SCALAR";
+        value = 300; // 5 minutes
+        isClientSettable = 0;
+    };
     class GVAR(remoteControlledAI) {
         typeName = "BOOL";
         value = 1;
