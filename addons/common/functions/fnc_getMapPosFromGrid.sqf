@@ -10,7 +10,7 @@
  * Position <ARRAY>
  *
  * Example:
- * ["6900080085"] call ace_map_fnc_getMapPosFromGrid
+ * ["6900080085"] call ace_common_fnc_getMapPosFromGrid
  *
  * Public: Yes
  */

@@ -8,9 +8,6 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-// Find MGRS zone and 100km grid for current map
-[] call FUNC(getMGRSdata);
-
 // This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
 [] spawn {

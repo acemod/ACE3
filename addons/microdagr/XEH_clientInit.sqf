@@ -39,8 +39,4 @@ GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
 
-
-GVAR(mapAltitude) = getNumber (configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
-
-GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(map,MGRS_data) select 0, EGVAR(map,MGRS_data) select 1];
-
+GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];

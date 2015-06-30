@@ -97,7 +97,7 @@ GVAR(outputPFH) = [{
 
     // Elevation
     _elevation = getPosASL ACE_player;
-    _elevation = floor ((_elevation select 2) + EGVAR(weather,altitude));
+    _elevation = floor ((_elevation select 2) + EGVAR(common,mapAltitude));
     _dagrElevation = str _elevation + "m";
 
     // Heading

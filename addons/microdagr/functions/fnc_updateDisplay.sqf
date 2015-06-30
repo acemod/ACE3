@@ -37,14 +37,14 @@ _waypoints = [] call FUNC(deviceGetWaypoints);
 switch (GVAR(currentApplicationPage)) do {
 case (APP_MODE_INFODISPLAY): {
         //Easting/Northing:
-        _posString = [getPos ACE_player] call EFUNC(map,getMapGridFromPos);
+        _posString = [getPos ACE_player] call EFUNC(common,getMapGridFromPos);
         _eastingText = (_posString select 0) + "e";
         _northingText = (_posString select 1) + "n";
         (_display displayCtrl IDC_MODEDISPLAY_EASTING) ctrlSetText _eastingText;
         (_display displayCtrl IDC_MODEDISPLAY_NORTHING) ctrlSetText _northingText;
 
         //Elevation:
-        _numASL = ((getPosASL ace_player) select 2) + GVAR(mapAltitude);
+        _numASL = ((getPosASL ace_player) select 2) + EGVAR(common,mapAltitude);
         _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
         _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
@@ -78,8 +78,8 @@ case (APP_MODE_INFODISPLAY): {
 
             if (GVAR(currentWaypoint) == -2) then {
                 if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
-                    _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(map,getMapGridFromPos);
-                    _targetPosName = format ["[%1 %2 %3]", EGVAR(map,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
+                    _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
+                    _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
                 };
             } else {
@@ -97,7 +97,7 @@ case (APP_MODE_INFODISPLAY): {
                 };
                 _2dDistanceKm = (((getPosASL ace_player) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
-                _numASL = (_targetPosLocationASL select 2) + GVAR(mapAltitude);
+                _numASL = (_targetPosLocationASL select 2) + EGVAR(common,mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
                 _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
             };
@@ -133,8 +133,8 @@ case (APP_MODE_COMPASS): {
 
             if (GVAR(currentWaypoint) == -2) then {
                 if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
-                    _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(map,getMapGridFromPos);
-                    _targetPosName = format ["[%1 %2 %3]", EGVAR(map,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
+                    _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
+                    _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
                 };
             } else {

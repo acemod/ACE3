@@ -1,3 +1,19 @@
+/*
+ * Author: PabstMirror (ideas from Nou's mapGridToPos and BIS_fnc_gridToPos)
+ * Finds real x/y offset and map step for a 10 digit grid
+ * Save time by preparing data one time at startup
+ *
+ * Argument:
+ * None
+ *
+ * Return values:
+ * None
+ *
+ * Example:
+ * [] call ace_map_fnc_getMapGridData
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private["_cfgGrid", "_formatX", "_formatY", "_heightOffset", "_offsetX", "_offsetY", "_originGrid", "_realOffsetY", "_startGrid", "_stepX", "_stepY", "_zoom", "_zoomMax", "_letterGrid"];
