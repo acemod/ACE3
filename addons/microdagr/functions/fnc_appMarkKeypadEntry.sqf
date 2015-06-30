@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_editText", "_gridPosTuple", "_actualPos"];
+private ["_display", "_editText", "_actualPos"];
 PARAMS_1(_keypadButton);
 
 disableSerialization;
@@ -34,8 +34,7 @@ _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 switch (_keypadButton) do {
 case ("ok"): {
         if ((count GVAR(newWaypointPosition)) == 0) then {
-            _gridPosTuple = [_editText] call BIS_fnc_gridToPos;
-            _actualPos = [(((_gridPosTuple select 0) select 0) + 0.5 * ((_gridPosTuple select 1) select 0)), (((_gridPosTuple select 0) select 1) + 0.5 * ((_gridPosTuple select 1) select 1))];
+            _actualPos = [_editText, true] call EFUNC(map,getMapPosFromGrid);
             _actualPos set [2, (getTerrainHeightASL _actualPos)];
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);
