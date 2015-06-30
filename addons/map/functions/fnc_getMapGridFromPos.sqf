@@ -22,42 +22,23 @@
 PARAMS_1(_pos);
 DEFAULT_PARAM(1,_returnSingleString,false);
 
-private["_posX", "_posY"];
-
-TRACE_2("",_pos select 0, _pos select 1);
-
-_posX = GVAR(gridOffsetX) + floor (_pos select 0);
-TRACE_1("",_posX);
-_posX = str ((100000 + _posX) % 100000);
-
-if (cba_common_mapReversed) then {
-    _posY = GVAR(gridOffsetY) - ceil(_pos select 1);
-} else {
-    _posY = GVAR(gridOffsetY) + floor(_pos select 1);
+if ((count GVAR(mapGridData)) == 0) exitWith {
+    if (_returnSingleString) then {
+        mapGridPosition _pos
+    } else {
+        [(mapGridPosition _pos) select [0,5], (mapGridPosition _pos) select [5,5]]
+    };
 };
-TRACE_1("",_posY);
-_posY = str ((100000 + _posY) % 100000);
 
-TRACE_2("",_posX,_posY);
+EXPLODE_4_PVT(GVAR(mapGridData),_offsetX,_realOffsetY,_stepXat5,_stepYat5);
+_easting = str floor (((_pos select 0) - _offsetX) / _stepXat5);
+_northing = str floor (((_pos select 1) - _realOffsetY) / _stepYat5);
 
-_posX = switch (count _posX) do {
-    case 1: {"0000"+_posX};
-    case 2: {"000"+_posX};
-    case 3: {"00"+_posX};
-    case 4: {"0"+_posX};
-    default {_posX};
-};
-_posY = switch (count _posY) do {
-    case 1: {"0000"+_posY};
-    case 2: {"000"+_posY};
-    case 3: {"00"+_posY};
-    case 4: {"0"+_posY};
-    default {_posY};
-};
-TRACE_3("",mapGridPosition _pos,_posX,_posY);
+while {count _easting < 5} do {_easting = "0" + _easting;};
+while {count _northing < 5} do {_northing = "0" + _northing;};
 
 if (_returnSingleString) then {
-    _posX+_posY
+    _easting+_northing
 } else {
-    [_posX,_posY]
+    [_easting, _northing]
 };
