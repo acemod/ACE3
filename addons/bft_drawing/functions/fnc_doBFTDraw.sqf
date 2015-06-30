@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 private ["_map"];
+disableSerialization;
 _map = _this select 0;
 
 if (isNull _map) exitWith {};
