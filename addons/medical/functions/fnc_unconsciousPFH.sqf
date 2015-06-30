@@ -48,10 +48,9 @@ if (!alive _unit) exitwith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
-_auto_wakeup_enabled = true; // TODO: Change to ACE Server Setting + module toggable, with default to false.
 _max_wake_up_time = 300; // seconds. TODO: Module modifiable value
 
-if (_auto_wakeup_enabled && GVAR(level) == 1) exitWith { // allow only if its basic medical
+if (GVAR(autoWakeUp) && GVAR(level) == 1) exitWith { // allow only if its basic medical
     if ((ACE_time - _startingTime) >= _max_wake_up_time) then {
         _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
     };

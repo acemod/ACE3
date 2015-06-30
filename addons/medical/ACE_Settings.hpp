@@ -59,6 +59,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(autoWakeUp) {
+        typeName = "BOOL";
+        value = 1; // default 0, left 1 for testing
+        isClientSettable = 0;
+    };
     class GVAR(remoteControlledAI) {
         typeName = "BOOL";
         value = 1;
