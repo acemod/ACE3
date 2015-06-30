@@ -26,6 +26,10 @@ if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
 };
 if (isNull _display) exitWith {ERROR("No Display");};
 
+//Fade "shell" at night
+_daylight = [] call EFUNC(common,ambientBrightness);
+(_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
+
 (_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
 
 _waypoints = [] call FUNC(deviceGetWaypoints);

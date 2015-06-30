@@ -9,7 +9,7 @@ _conditonCode = {
     ("ACE_microDAGR" in (items ACE_player))
 };
 _toggleCode = {
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
     [] call FUNC(openDisplay); //toggle display mode
 };
 _closeCode = {

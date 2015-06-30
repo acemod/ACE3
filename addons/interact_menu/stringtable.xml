@@ -85,6 +85,9 @@
             <Italian>Interazioni con veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
+            <English>Zeus Actions</English>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
@@ -222,24 +225,28 @@
             <Polish>Tło menu interakcji</Polish>
             <Spanish>Fondo del menú de interacción</Spanish>
             <Czech>Pozadí menu interakce</Czech>
+            <Portuguese>Fundo do menu de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
             <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
             <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
             <Czech>Rozmazat obraz pokud je interakční menu otevřené.</Czech>
+            <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
             <Polish>Rozmycie ekranu</Polish>
             <Spanish>Pantalla de desenfoque</Spanish>
             <Czech>Rozmazaný obraz</Czech>
+            <Portuguese>Desfoque de tela</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
             <Polish>Przyciemnienie ekranu</Polish>
             <Spanish>Negra</Spanish>
             <Czech>Černý obraz</Czech>
+            <Portuguese>Preto</Portuguese>
         </Key>
     </Package>
 </Project>
