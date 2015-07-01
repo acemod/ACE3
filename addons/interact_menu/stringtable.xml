@@ -248,5 +248,11 @@
             <Czech>Černý obraz</Czech>
             <Portuguese>Preto</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
+            <English>Show actions for buildings</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
+            <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+        </Key>
     </Package>
 </Project>

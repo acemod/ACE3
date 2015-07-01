@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(cachedBuildingTypes) = [];
+GVAR(cachedBuildingActionPairs) = [];
+
 GVAR(ParsedTextCached) = [];
 
 //Setup text/shadow/size/color settings matrix
@@ -16,6 +19,9 @@ GVAR(ParsedTextCached) = [];
 
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
+
+//Add Actions to Houses:
+["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
 
 // This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.

@@ -74,7 +74,7 @@ _recurseFnc = {
                             {},
                             [0,0,0],
                             10, //distace
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover, true],
                             _modifierFunction
                         ],
                         _children
