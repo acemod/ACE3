@@ -121,7 +121,7 @@
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
         </Key>
-        <Key ID="STR_ACE_IrStrobe_Name">
+        <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
             <German>IR-Stroboskop</German>
             <Spanish>Marcador IR</Spanish>
@@ -133,7 +133,7 @@
             <Hungarian>Infravörös jeladó</Hungarian>
             <Russian>ИК-маяк</Russian>
         </Key>
-        <Key ID="STR_ACE_IrStrobe_Description">
+        <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>

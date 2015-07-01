@@ -11,4 +11,12 @@ class CfgSounds {
         sound[] = {QUOTE(PATHTOF(sounds\ACE_earringing_heavy.wav)),8,1.7};
         titles[] = {};
     };
+    class ACE_Combat_Deafness {
+        sound[] = {QUOTE(PATHTOF(sounds\deafness.ogg)),3,1};
+        titles[] = {};
+    };
+	class ACE_Ring_Backblast {
+		sound[] = {QUOTE(PATHTOF(sounds\backblast_ring.ogg)),1,1};
+		titles[] = {};
+	};
 };

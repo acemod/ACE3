@@ -30,6 +30,10 @@ _hasMovedOut = _args select 4;
 _parachuteCheck = _args select 5;
 
 if (!alive _unit) exitwith {
+    if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
+        TRACE_1("Removing fake weapon [on death]",_unit);
+        _unit removeWeapon "ACE_FakePrimaryWeapon";
+    };
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
@@ -49,6 +53,11 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
     if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
+        if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
+            TRACE_1("Removing fake weapon [on wakeup]",_unit);
+            _unit removeWeapon "ACE_FakePrimaryWeapon";
+        };
+    
         if (vehicle _unit == _unit) then {
             if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
                 [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
@@ -121,13 +130,13 @@ if (_parachuteCheck) then {
 };
 
 if (!local _unit) exitwith {
-    _args set [3, _minWaitingTime - (time - _startingTime)];
+    _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-if ((time - _startingTime) >= _minWaitingTime) exitwith {
+if ((ACE_time - _startingTime) >= _minWaitingTime) exitwith {
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setvariable ["ACE_isUnconscious", false, true];
     };

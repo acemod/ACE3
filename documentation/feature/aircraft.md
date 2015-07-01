@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Aircraft
-description: Changes the flight behaviour of various aircraft
+description: Aircraft overhaul
 group: feature
 order: 5
 parent: wiki
@@ -32,12 +32,10 @@ Adds a laser marker to the copilot seat of the Wildcat.
 ### 1.7 HUD for AH-9
 Adds a HUD to the AH-9 based on the Comanche's HUD.
 
-
 ## 2. Usage
 
 ### 2.1 Switching flare modes
-- <kbd> ctrl+c </kbd> (by default)
-
+Press <kbd>CTRL</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 default key bind `countermeasure mode`)
 
 ## 3. Dependencies
 

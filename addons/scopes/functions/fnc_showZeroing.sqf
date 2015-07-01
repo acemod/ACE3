@@ -40,15 +40,15 @@ _horizontal = _display displayCtrl 13;
 _vertical ctrlSetText (str (_zeroing select 0));
 _horizontal ctrlSetText (str (_zeroing select 1));
 
-// Set the time when to hide the knobs
-GVAR(timeToHide) = diag_tickTime + 3.0;
+// Set the ACE_time when to hide the knobs
+GVAR(timeToHide) = ACE_diagTime + 3.0;
 
 if !(isNil QGVAR(fadePFH)) exitWith {};
 
 // Launch a PFH to wait and fade out the knobs
 GVAR(fadePFH) = [{
 
-    if (diag_tickTime >= GVAR(timeToHide)) exitWith {
+    if (ACE_diagTime >= GVAR(timeToHide)) exitWith {
         private "_layer";
         _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
         _layer cutFadeOut 2;

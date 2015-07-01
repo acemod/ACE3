@@ -16,6 +16,11 @@ EXPLODE_1_PVT(_this,_menuType);
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
+// Conditions: canInteract (these don't apply to zeus)
+if ((isNull curatorCamera) && {
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting"]] call EFUNC(common,canInteractWith))
+}) exitWith {false};
+
 while {dialog} do {
     closeDialog 0;
 };
@@ -27,13 +32,14 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = diag_tickTime;
+GVAR(keyDownTime) = ACE_diagTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
+                      (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
                       {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
 
@@ -46,7 +52,12 @@ for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
 GVAR(iconCtrls) resize GVAR(iconCount);
 
 if (GVAR(useCursorMenu)) then {
-    (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    // Don't close zeus interface if open
+    if (isNull curatorCamera) then {
+        (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    } else {
+        createDialog QGVAR(cursorMenu);
+    };
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
     (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:

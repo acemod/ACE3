@@ -64,11 +64,11 @@ if (isNull _holder) then {
 if (isNull _holder) exitWith {
     [_caller, _target, "Debug: Null Holder"] call FUNC(eventTargetFinish);
 };
-//Make sure only one drop operation at a time (using PFEH system as a queue)
+//Make sure only one drop operation at a ACE_time (using PFEH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     [{
         _this call FUNC(disarmDropItems);
-    }, _this, 0, 0] call EFUNC(common,waitAndExecute);
+    }, _this] call EFUNC(common,execNextFrame);
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
@@ -178,7 +178,7 @@ if (_holderIsEmpty) then {
     _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
-    if ((time < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
+    if ((ACE_time < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
         //action drop weapons (keeps loaded magazine and attachements)
         {
             if (_x in _listOfItemsToRemove) then {
@@ -234,7 +234,7 @@ if (_holderIsEmpty) then {
             clearItemCargoGlobal _holder;
         };
         //Verify we didn't timeout waiting on drop action
-        if (time >= _maxWaitTime)  exitWith {
+        if (ACE_time >= _maxWaitTime)  exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
@@ -264,4 +264,4 @@ if (_holderIsEmpty) then {
         [_caller, _target, ""] call FUNC(eventTargetFinish);
     };
 
-}, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;
+}, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (ACE_time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;

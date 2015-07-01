@@ -20,8 +20,8 @@ GVAR(PFH) = false;
 [_unit, "AmovPercMevaSrasWrflDf_AmovPknlMstpSrasWrflDnon", 2] call EFUNC(common,doAnimation);
 _unit setVariable [QGVAR(chuteIsCut), false];
 [{
-    if (time >= ((_this select 0) select 0) + 1) then {
+    if (ACE_time >= ((_this select 0) select 0) + 1) then {
         ((_this select 0) select 1) playActionNow "Crouch";
         [(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);
     };
-}, 1, [time,_unit]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}, 1, [ACE_time,_unit]] call CALLSTACK(cba_fnc_addPerFrameHandler);

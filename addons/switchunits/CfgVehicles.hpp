@@ -1,53 +1,53 @@
 class CfgVehicles {
-  class Module_F;
-  class ACE_ModuleSwitchUnits: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+  class ACE_Module;
+  class ACE_ModuleSwitchUnits: ACE_Module {
+    author = ECSTRING(common,ACETeam);
     category = "ACE";
-    displayName = "$STR_ACE_SwitchUnits_Module_DisplayName";
+    displayName = CSTRING(Module_DisplayName);
     function = FUNC(module);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_SwitchUnits_ca.paa));
     class Arguments {
       class SwitchToWest {
-        displayName = "$STR_ACE_SwitchUnits_SwitchToWest_DisplayName";
-        description = "$STR_ACE_SwitchUnits_SwitchToWest_Description";
+        displayName = CSTRING(SwitchToWest_DisplayName);
+        description = CSTRING(SwitchToWest_Description);
         typeName = "BOOL";
         defaultValue = 0;
       };
       class SwitchToEast {
-        displayName = "$STR_ACE_SwitchUnits_SwitchToEast_DisplayName";
-        description = "$STR_ACE_SwitchUnits_SwitchToEast_Description";
+        displayName = CSTRING(SwitchToEast_DisplayName);
+        description = CSTRING(SwitchToEast_Description);
         typeName = "BOOL";
         defaultValue = 0;
       };
       class SwitchToIndependent {
-        displayName = "$STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName";
-        description = "$STR_ACE_SwitchUnits_SwitchToIndependent_Description";
+        displayName = CSTRING(SwitchToIndependent_DisplayName);
+        description = CSTRING(SwitchToIndependent_Description);
         typeName = "BOOL";
         defaultValue = 0;
       };
       class SwitchToCivilian {
-        displayName = "$STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName";
-        description = "$STR_ACE_SwitchUnits_SwitchToCivilian_Description";
+        displayName = CSTRING(SwitchToCivilian_DisplayName);
+        description = CSTRING(SwitchToCivilian_Description);
         typeName = "BOOL";
         defaultValue = 0;
       };
       class EnableSafeZone {
-        displayName = "$STR_ACE_SwitchUnits_EnableSafeZone_DisplayName";
-        description = "$STR_ACE_SwitchUnits_EnableSafeZone_Description";
+        displayName = CSTRING(EnableSafeZone_DisplayName);
+        description = CSTRING(EnableSafeZone_Description);
         typeName = "BOOL";
         defaultValue = 1;
       };
       class SafeZoneRadius {
-        displayName = "$STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName";
-        description = "$STR_ACE_SwitchUnits_SafeZoneRadius_Description";
+        displayName = CSTRING(SafeZoneRadius_DisplayName);
+        description = CSTRING(SafeZoneRadius_Description);
         typeName = "NUMBER";
         defaultValue = 100;
       };
     };
     class ModuleDescription {
-      description = "$STR_ACE_SwitchUnits_Module_Description";
+      description = CSTRING(Module_Description);
     };
   };
 };

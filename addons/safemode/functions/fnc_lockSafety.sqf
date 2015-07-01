@@ -47,17 +47,19 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
         [_this select 1, currentWeapon (_this select 1), currentMuzzle (_this select 1)] call FUNC(unlockSafety);
     };
 
-    //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize "STR_ACE_SafeMode_TakeOffSafety"], "DefaultAction", _condition, {}, {true}, _statement, 10] call EFUNC(common,addActionMenuEventHandler);
+    //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize LSTRING(TakeOffSafety)], "DefaultAction", _condition, {}, {true}, _statement, 10] call EFUNC(common,addActionMenuEventHandler);
     _id = [_unit, "DefaultAction", _condition, {}] call EFUNC(common,addActionEventHandler);
 
     _unit setVariable [QGVAR(actionID), _id];
 };
 
-_unit selectWeapon _muzzle;//_weapon
+if ((typeName _muzzle) == (typeName "")) then {
+    _unit selectWeapon _muzzle;//_weapon
+};
 
 // play fire mode selector sound
 [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 
 private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize "STR_ACE_SafeMode_PutOnSafety", _picture] call EFUNC(common,displayTextPicture);
+[localize LSTRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);

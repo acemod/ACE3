@@ -4,7 +4,9 @@
  * Edited to remove global wind sound
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -47,7 +49,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             bis_fnc_moduleRemoteControl_unit = _unit;
             _unit setvariable ["bis_fnc_moduleRemoteControl_owner",player,true];
 
-            // Added by ACE_zeus to toggle remote control wind sound
+            // Added by ace_zeus to toggle remote control wind sound
             if (GVAR(remoteWind)) then {
                 //--- Play wind cue to all players
                 [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;

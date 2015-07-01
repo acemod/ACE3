@@ -1,0 +1,10 @@
+Density=2400;
+rough=0;
+dust=0;
+bulletPenetrability=50;
+soundEnviron=Empty;
+isWater=false;
+friction=0.1;
+restitution=0.1;
+impact = Hit_Glass;
+soundHit = glass;
