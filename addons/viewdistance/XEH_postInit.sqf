@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 ["SettingsInitialized", {
     // if not enabled, then bugger off.
-    if !(GVAR(enabled) exitWith {};
+    if !(GVAR(enabled)) exitWith {};
     
     // Force the view distance down to the limit.
     if (viewDistance > GVAR(limitViewDistance)) then {
