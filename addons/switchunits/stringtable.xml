@@ -23,63 +23,117 @@
             <French>Cette unité est trop proche des ennemis</French>
             <Hungarian>Ez az egység túl közel van az ellenséghez.</Hungarian>
             <Italian>Questa unità è troppo vicina al nemico.</Italian>
-            <Portuguese>Essa unidade  está muito perta do inimigo.</Portuguese>
+            <Portuguese>Essa unidade  está muito perto do inimigo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
             <Polish>System zmiany stron</Polish>
+            <Spanish>Sistema de cambio de unidad</Spanish>
+            <German>Einheiten-Switch-System?</German>
+            <Czech>Systém výměny stran</Czech>
+            <Portuguese>Sistema de troca de unidades</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
             <Polish>Zmiana na Zachód?</Polish>
+            <Spanish>¿Cambiar a Oeste?</Spanish>
+            <German>Nach BLUFOR wechseln?</German>
+            <Czech>Přesunout k BLUFOR?</Czech>
+            <Portuguese>Trocar para Oeste?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
             <Polish>Pozwolić zmieniać graczom stronę na Zachód?</Polish>
+            <Spanish>¿Permitir cambios a unidades del Oeste?</Spanish>
+            <German>Erlaube das Wechseln zu BLUFOR-Einheiten?</German>
+            <Czech>Povolit přesun k BLUFOR?</Czech>
+            <Portuguese>Permitir troca de unidades para o Oeste?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
             <Polish>Zmiana na Wschód?</Polish>
+            <Spanish>¿Cambiar a Este?</Spanish>
+            <German>Nach OPFOR wechseln?</German>
+            <Czech>Přesunout k OPFOR?</Czech>
+            <Portuguese>Trocar para Leste?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
             <Polish>Pozwolić zmieniać graczom stronę na Wschód?</Polish>
+            <Spanish>¿Permitir cambios a unidades del Este?</Spanish>
+            <German>Erlaube das Wechseln zu OPFOR-Einheiten?</German>
+            <Czech>Povolit přesun k OPFOR?</Czech>
+            <Portuguese>Permitir troca de unidades para o Leste?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
             <Polish>Zmiana na Ruch Oporu?</Polish>
+            <Spanish>¿Cambiar a Independiente?</Spanish>
+            <German>Nach INDFOR wechseln?</German>
+            <Czech>Přesunout k INDFOR?</Czech>
+            <Portuguese>Trocar para Indenpendente</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
             <Polish>Pozwolić zmieniać stronę na Ruch Oporu?</Polish>
+            <Spanish>¿Permitir cambios a unidades Independientes?</Spanish>
+            <German>Erlaube das Wechseln zu INDFOR-Einheiten?</German>
+            <Czech>Povolit přesun k INDFOR?</Czech>
+            <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
             <Polish>Zmiana na Cywili?</Polish>
+            <Spanish>¿Cambiar a Civil?</Spanish>
+            <German>Nach CIVILIAN wechseln?</German>
+            <Czech>Přesunout k CIVILISTŮM?</Czech>
+            <Portuguese>Trocar para Civis?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
             <Polish>Pozwolić zmieniać stronę na Cywili?</Polish>
+            <Spanish>¿Permitir cambios a unidades Civiles</Spanish>
+            <German>Erlaube das Wechseln zu CIVILIAN-Einheiten?</German>
+            <Czech>Povolit přesun k CIVILISTŮM?</Czech>
+            <Portuguese>Permitir troca de unidades para o Civil?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
             <Polish>Aktywuj bezp. strefę?</Polish>
+            <Spanish>¿Habilitar zona segura?</Spanish>
+            <German>Aktiviere Sicherheitszone?</German>
+            <Czech>Povolit bezpečné oblasti?</Czech>
+            <Portuguese>Habilitar zona segura?</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
             <Polish>Aktywuje bezpieczną strefę wokół jednostek przeciwnika. Gracze nie mogą zmieniać strony wewnątrz tej strefy.</Polish>
+            <Spanish>Habilita una zona segura alrededor de las unidades enemigas. Los jugadores no pueden cambiar de unidad dentro de la zona segura.</Spanish>
+            <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
+            <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
+            <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
             <Polish>Promień bezp. strefy</Polish>
+            <Spanish>Radio de la zona segura</Spanish>
+            <German>Sicherheitszonenradius</German>
+            <Czech>Oblast bezpečné zóny</Czech>
+            <Portuguese>Raio da zona segura</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
             <Polish>Promień bezpiecznej strefy wokół graczy z innych drużyn. Domyślnie: 200</Polish>
+            <Spanish>La zona segura alrededor de los jugadores de distintos equipos. Por defecto: 200</Spanish>
+            <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 200</German>
+            <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 200</Czech>
+            <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 200</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English></English>
             <Polish></Polish>
+            <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
+            <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
         </Key>
     </Package>
 </Project>

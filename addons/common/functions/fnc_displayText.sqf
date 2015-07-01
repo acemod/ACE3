@@ -36,7 +36,7 @@ if (isNil "_sound") then {_sound = DEFAULT_PLAY_SOUND};
 if (isNil "_delay") then {_delay = DEFAULT_DELAY};
 if (isNil "_priority") then {_priority = DEFAULT_PRIORITY};
 
-_time = time;
+_time = ACE_time;
 if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;
     if (_sound) then {playSound "ACE_Sound_Click"};

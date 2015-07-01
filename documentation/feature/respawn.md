@@ -1,29 +1,32 @@
 ---
 layout: wiki
 title: Respawn
-description: 
+description: Same gear on respawn, FF message, rallypoints
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Respawn with same gear
+### 1.1 Respawn with same gear
 Requires the Respawn Gear module to be placed. Respawned soldiers now have their loadout when killed.
 
-### Friendly Fire messages
+### 1.2 Friendly Fire messages
 Shows friendly fire warnings in system chat if the module is placed. Works even in higher difficulties where kill messages are normally disabled.
 
-### Rallypoints
-Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOBs. Requires some setup from the mission maker.
+### 1.3 Rallypoints
+Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOB's. Requires some setup from the mission maker.
 
 
-## Usage
+## 2. Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
+### 2.1 Using rallypoints
+- For this to work pre-emptive preparations need to be made by the mission maker.
+- Approach the rallypoint flagpole
+- Use the interaction key <kbd>⊞ Win</kbd> (ACE3 default key bind `Interaction key`).
+- Select teleport to (base / rallypoint).
 
 
-## Dependencies
+## 3. Dependencies
 
 `ace_common`

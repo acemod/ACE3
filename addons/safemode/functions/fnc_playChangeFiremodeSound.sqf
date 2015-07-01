@@ -11,12 +11,7 @@ if (count _sound == 0) exitWith {
 };
 
 // add file extension
-if call {
-    {
-        if (toLower (_sound select 0) find _x == count toArray (_sound select 0) - count toArray _x - 1) exitWith {false};
-        true
-    } forEach [".wav", ".ogg", ".wss"];
-} then {
+if ({(toLower (_sound select 0) find _x == (count toArray (_sound select 0) - count toArray _x) - 1)} count [".wav", ".ogg", ".wss"] == 0) then {
     _sound set [0, (_sound select 0) + ".wss"];
 };
 

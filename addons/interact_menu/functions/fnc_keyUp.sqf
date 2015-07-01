@@ -46,6 +46,8 @@ if(GVAR(actionSelected)) then {
     };
 };
 
+["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
@@ -53,7 +55,5 @@ GVAR(openedMenuType) = -1;
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
 
 true

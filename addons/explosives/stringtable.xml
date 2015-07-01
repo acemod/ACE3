@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -505,29 +505,60 @@
             <Italian>Raccogli</Italian>
             <Portuguese>Pegar</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_Module_DisplayName">
+        <Key ID="STR_ACE_Explosives_Module_DisplayName">
             <English>Explosive System</English>
             <Polish>System ładunków wybuchowych</Polish>
+            <Spanish>Sistema de explosivos</Spanish>
+            <German>Sprengstoffsystem</German>
+            <Czech>Systém výbušnin</Czech>
+            <Portuguese>Sistema de explosivos</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_RequireSpecialist_DisplayName">
+        <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
             <Polish>Wymagaj specjalistów?</Polish>
+            <Spanish>¿Requiere especialista?</Spanish>
+            <German>Benötigt Sprengstoffexperten?</German>
+            <Czech>Vyžadovat specialistu?</Czech>
+            <Portuguese>Requer especialista?</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_RequireSpecialist_Description">
+        <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
             <Polish>Wymagać saperów do rozbrajania ładunków wybuchowych? Domyślnie: Nie</Polish>
+            <Spanish>Requiere especialista en explosivos para desactivar explosivos?. Por defecto: No</Spanish>
+            <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
+            <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
+            <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_PunishNonSpecialists_DisplayName">
+        <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
             <Polish>Karaj nie-specjalistów?</Polish>
+            <Spanish>¿Penalizar a los no especialistas?</Spanish>
+            <German>Bestrafe Nicht-Sprengstoffexperten?</German>
+            <Czech>Potrestat, pokud není specialista?</Czech>
+            <Portuguese>Punir não especialistas?</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_PunishNonSpecialists_Description">
+        <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
             <Polish>Zwiększyć ilość wymaganego czasu do ukończenia akcji dla nie-specjalistów? Domyślnie: Tak</Polish>
+            <Spanish>Aumenta el tiempo que lleva completar acciones para los no especialstas?. Por defecto: Si</Spanish>
+            <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
+            <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
+            <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosive_Module_Description">
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
+            <English>Explode on defusal?</English>
+            <Portuguese>Explosão no desarmamento?</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
+            <English>Enable certain explosives to explode on defusal? Default: Yes</English>
+            <Portuguese>Ativa certos explosivos para detonar no desarmamento? Padrão: Sim</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
+            <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
+            <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
+            <Portuguese>Este módulo permite personalizar as definições relacionadas a explosivos.</Portuguese>
         </Key>
     </Package>
 </Project>

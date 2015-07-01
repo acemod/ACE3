@@ -22,7 +22,7 @@ private "_returnValue";
 
 _returnValue = if (_newSurrenderState) then {
     //no weapon equiped AND not currently surrendering and 
-    (currentWeapon _unit == "") && {!(_unit getVariable [QGVAR(isSurrendering), false])}
+    GVAR(allowSurrender) && {(currentWeapon _unit) == ""} && {!(_unit getVariable [QGVAR(isSurrendering), false])}
 } else {
     //is Surrendering
     (_unit getVariable [QGVAR(isSurrendering), false])

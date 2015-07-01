@@ -23,37 +23,13 @@ private ["_bisMouseOver", "_mouseOverObject"];
 if (!_activated) exitWith {};
 
 if (local _logic) then {
-    if ((!isnull curatorcamera) && {((count curatorMouseOver) == 2) && {(curatorMouseOver select 1) == _logic}}) then {//in zeus interface and we placed the module
-        _bisMouseOver = missionNamespace getVariable ["bis_fnc_curatorObjectPlaced_mouseOver", []];//bis caches the previous curatorMouseOver
-        if ((count _bisMouseOver) == 2) then {//check what mouse was over before the module was placed
-            _mouseOverObject = _bisMouseOver select 1;
-            if ((_mouseOverObject isKindOf "CAManBase") && {(vehicle _mouseOverObject) == _mouseOverObject}) then {
-                TRACE_2("Debug - module surrendering %1",_mouseOverObject,(name _mouseOverObject));
-                if (alive _mouseOverObject) then {
-                    if (!(_mouseOverObject getVariable [QGVAR(isSurrendering), false])) then {
-                        ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, true]] call EFUNC(common,targetEvent);
-                    } else {
-                        ["SetSurrendered", [_mouseOverObject], [_mouseOverObject, false]] call EFUNC(common,targetEvent);
-                    };
-                } else {
-                    ["STR_ACE_Captives_Zeus_OnlyAlive"] call EFUNC(common,displayTextStructured);
-                };
-            } else {
-                ["STR_ACE_Captives_Zeus_OnlyInfantry"] call EFUNC(common,displayTextStructured);
-            };
-        } else {
-            ["STR_ACE_Captives_Zeus_NothingSelected"] call EFUNC(common,displayTextStructured);
-        };
-    } else {
-        //an editor module
-        //Modules run before postInit can instal the event handler, so we need to wait a little bit
-        [{
-            PARAMS_1(_units);
-            {
-                ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
-            } forEach _units;
-        }, [_units], 0.05, 0.05]call EFUNC(common,waitAndExecute);
-    };
+    //Modules run before postInit can instal the event handler, so we need to wait a little bit
+    [{
+        PARAMS_1(_units);
+        {
+            ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
+        } forEach _units;
+    }, [_units], 0.05, 0.05]call EFUNC(common,waitAndExecute);
 
     deleteVehicle _logic;
 };

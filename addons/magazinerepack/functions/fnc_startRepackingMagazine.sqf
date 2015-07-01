@@ -31,7 +31,7 @@ _fullMagazineCount = getNumber (_magazineCfg >> "count");
 _isBelt = (isNumber (_magazineCfg >> "ACE_isBelt")) && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
 
 //Check canInteractWith:
-if (!([_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 [_player] call EFUNC(common,goKneeling);
 
@@ -67,7 +67,7 @@ _totalTime,
 [_magazineClassname, _startingAmmoCounts, _simEvents],
 {_this call FUNC(magazineRepackFinish)},
 {_this call FUNC(magazineRepackFinish)},
-(localize "STR_ACE_MagazineRepack_RepackingMagazine"),
+(localize LSTRING(RepackingMagazine)),
 {_this call FUNC(magazineRepackProgress)},
-["isNotInside"]
+["isNotInside", "isNotSitting"]
 ] call EFUNC(common,progressBar);

@@ -5,7 +5,9 @@
  * Edited to remove radio warning and add ballistics support
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -102,9 +104,9 @@ if (_activated) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
-                            if (time > _x getvariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
+                            if (ACE_time > _x getvariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
                                 [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
-                                _x setvariable ["BIS_fnc_moduleProjectile_radio",time + _delay];
+                                _x setvariable ["BIS_fnc_moduleProjectile_radio",ACE_time + _delay];
                             };
                         };
                     };
@@ -125,7 +127,7 @@ if (_activated) then {
             _projectile setvelocity _velocity;
             if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
 
-           	// This is our addition to this function
+           	// Added by ace_zeus for ace_frag compatibility
             if (!isnil "ace_frag_fnc_addManualTrack") then {
                 [_projectile] call ace_frag_fnc_addManualTrack
             };
@@ -136,7 +138,7 @@ if (_activated) then {
             //--- Create sound source
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
 
-            // Added by ACE_zeus to toggle ordnance radio message
+            // Added by ace_zeus to toggle ordnance radio message
             if (GVAR(radioOrdnance)) then {
                 //--- Play radio warning
                 [] call _fnc_playRadio;

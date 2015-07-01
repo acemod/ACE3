@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-ADDON = false;
+// Exit on Headless as well
+if !(hasInterface) exitWith {};
+
 LOG(MSG_INIT);
 
 // Calculate the maximum zoom allowed for this map
@@ -13,10 +15,16 @@ call FUNC(determineZoom);
     waitUntil {(!isNull findDisplay 12)};
 
     GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = time;
+    GVAR(lastStillTime) = ACE_time;
     GVAR(isShaking) = false;
 
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {[] call FUNC(updateMapEffects);}];
 };
 
-ADDON = true;
+["SettingsInitialized", {
+    // Start Blue Force Tracking if Enabled
+    if (GVAR(BFT_Enabled)) then {
+        GVAR(BFT_markers) = [];
+        [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
+    };
+}] call EFUNC(common,addEventHandler);

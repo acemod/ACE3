@@ -4,7 +4,9 @@
  * Edited to remove forced map markers and mines being revealed to players
  *
  * Arguments:
- * 0: The logic object <OBJECT>
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * nil
@@ -24,7 +26,7 @@ if (_activated) then {
         _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
         _explosive attachto [_logic];
 
-        // Added by ACE_zeus to control if mines are revealed
+        // Added by ace_zeus to control if mines are revealed
         if (GVAR(revealMines) > 0) then {
             //--- Reveal the mine to curator's side
             {

@@ -21,7 +21,7 @@ Example:
 
 private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTimeDelta", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result"];
 
-_startTime = diag_tickTime;
+_startTime = ACE_diagTime;
 
 _muzzleVelocity = _this select 0;
 _rangeToHit = _this select 1;
@@ -74,6 +74,6 @@ _lineAirDensDec = (_rangeToHit - (_lastTestResult select 0)) / 10;
 _lastTestResult = [_lineElevation, _muzzleVelocity, _airFriction, 15, 1.1, 0, 0, 0, TIME_STEP] call FUNC(dev_simulateShot);
 _lineAirDensInc = (_rangeToHit - (_lastTestResult select 0)) / 10;
 
-// systemChat format ["debug: Range %1 - in %2 sec", _rangeToHit, (diag_tickTime - _startTime)];
+// systemChat format ["debug: Range %1 - in %2 sec", _rangeToHit, (ACE_diagTime - _startTime)];
 
 [_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]

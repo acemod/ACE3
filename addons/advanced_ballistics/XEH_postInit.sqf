@@ -5,7 +5,7 @@
 GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
-GVAR(ProtractorStart) = time;
+GVAR(ProtractorStart) = ACE_time;
 
 GVAR(currentGrid) = 0;
 GVAR(initMessageEnabled) = false;

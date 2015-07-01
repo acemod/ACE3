@@ -4,66 +4,136 @@
         <Key ID="STR_ACE_Map_Module_DisplayName">
             <English>Map</English>
             <Polish>Mapa</Polish>
+            <Spanish>Mapa</Spanish>
+            <German>Karte</German>
+            <Czech>Mapa</Czech>
+            <Portuguese>Mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
             <Polish>Oświetlenie mapy</Polish>
+            <Spanish>¿Iluminación de mapa?</Spanish>
+            <German>Kartenausleuchtung</German>
+            <Czech>Osvětlení mapy</Czech>
+            <Portuguese>Iluminação do mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Calculate dynamic map illumination based on light conditions?</English>
             <Polish>Oblicza dynamiczne oświetlenie mapy bazujące na warunkach oświetleniowych</Polish>
+            <Spanish>Calcula la iluminación dinámica del mapa basandose en las condiciones de luz</Spanish>
+            <German>Berechne die Kartenauslichtung anhand des Umgebungslichts?</German>
+            <Czech>Vypočítat dynamické osvětlení mapy na základně světelných podmínek?</Czech>
+            <Portuguese>Calcular a iluminação dinâmica do mapa de acordo com as condições de luz?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
             <Polish>Drżenie mapy</Polish>
+            <Spanish>¿Temblor de mapa?</Spanish>
+            <German>Kamerawackeln</German>
+            <Czech>Třesení mapy?</Czech>
+            <Portuguese>Tremor de mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
             <Polish>Ekran mapy drży podczas ruchu</Polish>
+            <Spanish>Hace que el mapa tiemble cuando caminas</Spanish>
+            <German>Kamerawackeln beim Gehen?</German>
+            <Czech>Umožnit třesení mapy za pochodu?</Czech>
+            <Portuguese>Tremer o mapa enquanto caminha?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
             <Polish>Ograniczony zoom</Polish>
+            <Spanish>¿Limitar el zoom de mapa?</Spanish>
+            <German>Kartenzoom einschränken</German>
+            <Czech>Omezit přiblížení mapy?</Czech>
+            <Portuguese>Limitar zoom do mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
             <Polish>Ogranicza maksymalny stopień przybliżenia mapy</Polish>
+            <Spanish>Limita la cantidad de zoom disponible para el mapa</Spanish>
+            <German>Zoomstufe der Karte einschränken?</German>
+            <Czech>Omezit stupeň přiblížení pro mapu?</Czech>
+            <Portuguese>Limitar a quantidade de zoom disponível para o mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
             <Polish>Koordynaty pod kursorem</Polish>
+            <Spanish>¿Mostrar coordenadas de cursor?</Spanish>
+            <German>Zeige Cursor-Koordinaten?</German>
+            <Czech>Zobrazit souřadnice u kurzoru?</Czech>
+            <Portuguese>Mostrar coordenadas no cursor?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
             <Polish>Pokazuje pod kursorem koordynaty wskazanego kwadratu mapy</Polish>
+            <Spanish>Muestra las coordenadas de la cuadricula en el puntero del ratón</Spanish>
+            <German>Gitter-Koordinaten auf dem Mauszeiger anzeigen?</German>
+            <Czech>Zobrazit souřadnice u kurzoru v mapě?</Czech>
+            <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English></English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
+            <German>Dieses Modul erweitert die Kartenfunktionen.</German>
+            <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
+            <Portuguese>Este módulo permite que você personalize a tela de mapa.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
             <Polish>Blue Force Tracking</Polish>
+            <Spanish>Seguimiento de fuerzas amigas</Spanish>
+            <German>Blue Force Tracking</German>
+            <Czech>Blue Force Tracking</Czech>
+            <Portuguese>Rastreio de forças azuis</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
+            <English>BFT Enable</English>
+            <Portuguese>RFA ativo</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Map_BFT_Enabled_Description">
+            <English>Enable Blue Force Tracking. Default: No</English>
+            <Portuguese>Ativa Rastreio de Forças Azuis. Padrão: Não</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
             <Polish>Interwał</Polish>
+            <Spanish>Intervalo</Spanish>
+            <German>Intervall</German>
+            <Czech>Interval</Czech>
+            <Portuguese>Intervalo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
             <Polish>Jak często markery powinny być odświeżane (w sekundach)</Polish>
+            <Spanish>Frecuencia de actualización de los marcadores (en segundos)</Spanish>
+            <German>Wie oft sollen die Markierungen aktualisiert werden (in Sekunden)</German>
+            <Czech>Jak často budou značky aktualizovány (v sekundách)</Czech>
+            <Portuguese>Frequência em que os marcadores devem ser atualizados (em segundos)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
             <Polish>Ukryj grupy AI</Polish>
+            <Spanish>¿Ocultar grupos de IA?</Spanish>
+            <German>KI-Gruppen verstecken?</German>
+            <Czech>Skrýt AI skupiny?</Czech>
+            <Portuguese>Esconder grupos de IA?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
             <Polish>Ukrywa markery dla grup złożonych tylko z AI</Polish>
+            <Spanish>Oculta las marcas de grupos 'solo IA'</Spanish>
+            <German>Verstecke Marker für "nur KI"-Gruppen?</German>
+            <Czech>Skrýt značky pouze pro AI skupiny?</Czech>
+            <Portuguese>Esconder marcadores que pertencem ao grupo de IA?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English></English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
+            <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
+            <Czech>Umožňuje sledovat přátelské jednokty na mapě v rámci BFT.</Czech>
+            <Portuguese>Permite que você acompanhe as posições no mapa das unidades aliadas com marcadores RFA.</Portuguese>
         </Key>
     </Package>
 </Project>

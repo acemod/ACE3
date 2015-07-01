@@ -1,29 +1,22 @@
 ---
 layout: wiki
 title: Small Arms
-description: 
+description: Various improvements to small arms
 group: feature
 parent: wiki
 ---
 
-## Overview
+## 1. Overview
 
-### Magazine Names
+### 1.1 Magazine Names
 Unifies the name formatting of magazines similar to Arma 2 standards.
 
-### No tracers in non-tracer mags
+### 1.2 No tracers in non-tracer mags
 Assault rifles no longer have tracer rounds in their non-tracer magazines. This doesn't effect the additional tracers in the last rounds of machine gun magazines.
 
-### Real magazine round counts
-All pistol and sub machine gun magazines now have adjusted capacaties to match their real life counterparts.
+### 1.3 Real magazine round counts
+All pistol and sub machine gun magazines now have adjusted capacities to match their real life counterparts.
 
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings, 
-instructions. May not apply to all modules.
-
-
-## Dependencies
+## 2. Dependencies
 
 `ace_common`
