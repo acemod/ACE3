@@ -17,8 +17,8 @@
 
 PARAMS_1(_unit);
 
-// Exit if soldier has earplugs already in (persistence scenarios)
-if ([_unit] call FUNC(hasEarPlugsIn)) exitWith {};
+// Exit if hearing is disabled or soldier has earplugs already in (persistence scenarios)
+if (!GVAR(enableCombatDeafness) || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
 
 private ["_launcher"];
 

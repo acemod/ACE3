@@ -11,6 +11,7 @@
             <Czech>Teleskopický žebřík</Czech>
             <Italian>Telescopic Ladder</Italian>
             <Hungarian>Telescopic Ladder</Hungarian>
+            <Portuguese>Escada telescópica</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -22,6 +23,7 @@
             <Czech>Rozložit žebřík</Czech>
             <Italian>Deploy ladder</Italian>
             <Hungarian>Deploy ladder</Hungarian>
+            <Portuguese>Implantar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -33,6 +35,7 @@
             <Czech>Položit žebřík</Czech>
             <Italian>Drop ladder</Italian>
             <Hungarian>Drop ladder</Hungarian>
+            <Portuguese>Derrubar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Adjust ladder</English>
@@ -40,6 +43,7 @@
             <Polish>Reguluj drabinę</Polish>
             <Czech>Upravit žebřík</Czech>
             <Spanish>Ajustar escalera</Spanish>
+            <Portuguese>Ajustar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -51,6 +55,7 @@
             <Czech>Umístit žebřík</Czech>
             <Italian>Position ladder</Italian>
             <Hungarian>Position ladder</Hungarian>
+            <Portuguese>Posicionar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -62,6 +67,7 @@
             <Czech>Vzít žebřík</Czech>
             <Italian>Pickup ladder</Italian>
             <Hungarian>Pickup ladder</Hungarian>
+            <Portuguese>Pegar escada</Portuguese>
         </Key>
     </Package>
 </Project>

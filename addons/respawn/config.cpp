@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = { "ACE_Rallypoint_West", "ACE_Rallypoint_East", "ACE_Rallypoint_Independent", "ACE_RallypointExit_West", "ACE_RallypointExit_East", "ACE_RallypointExit_Independent" };
+        weapons[] = {"ACE_Rallypoint_West", "ACE_Rallypoint_East", "ACE_Rallypoint_Independent", "ACE_Rallypoint_West_Base", "ACE_Rallypoint_East_Base", "ACE_Rallypoint_Independent_Base"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = { "ace_common" };
         author[] = { "bux578", "commy2" };
