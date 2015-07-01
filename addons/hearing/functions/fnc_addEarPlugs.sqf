@@ -15,11 +15,12 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enableCombatDeafness)) exitWith {};
+PARAMS_1(_unit);
 
-private ["_unit", "_launcher"];
+// Exit if hearing is disabled or soldier has earplugs already in (persistence scenarios)
+if (!GVAR(enableCombatDeafness) || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
 
-_unit = _this select 0;
+private ["_launcher"];
 
 // add earplugs if the soldier has a rocket launcher
 _launcher = secondaryWeapon _unit;
