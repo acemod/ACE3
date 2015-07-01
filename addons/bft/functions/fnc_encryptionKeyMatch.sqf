@@ -17,6 +17,9 @@
 PARAMS_2(_keySetOne,_keySetTwo);
 
 private ["_return"];
+// ToDo: replace with arrayIntersect when available
+// count (_keySetOne arrayIntersect _keySetTwo) > 0
+
 _return = false;
 {
     if (_x in _keySetTwo) exitWith { _return = true; };

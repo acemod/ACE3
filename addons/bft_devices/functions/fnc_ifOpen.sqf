@@ -164,11 +164,8 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
     };
 };
 
-// temporary implemenation of setting the registred encryption key, should be implemented on deviceOpened event
-// remove current keys
-[false,EGVAR(bft,registeredEncyptionKeys)] call EFUNC(bft,updateRegisteredEncryptionKeys);
-// add device keys
-[true,D_GET_ENCRYPTION(_deviceData)] call EFUNC(bft,updateRegisteredEncryptionKeys);
+// register reporting modes
+[["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
 
 // temporary helmet cam list update until implemented in BFT module
 [] call FUNC(updateHCamList);

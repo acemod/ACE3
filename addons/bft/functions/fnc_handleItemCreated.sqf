@@ -46,7 +46,7 @@ _deviceSide = getText(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "de
 _deviceModes = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "reportingModes");
 _defaultValues = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "defaultInformation");
 
-_refreshRate = getNumber(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
+_refreshRate = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
 
 _deviceEncryptionKeys = [_deviceSide] call FUNC(getEncryptionKey); // getting the default encryption keys for this side
 
@@ -76,7 +76,7 @@ if (!isnil "_groupID") then {
 // format: app ID, app data
 _app = [-1, []];
 
-// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType]
+// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType, _refreshRate [TX, RX], _deviceModes]
 _deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes];
 
 ["bft_addDeviceData", _deviceInformation] call EFUNC(common,globalEvent);

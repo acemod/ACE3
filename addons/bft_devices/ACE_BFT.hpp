@@ -3,7 +3,7 @@ class ACE_BFT {
         // Personal Devices
         class DK10_b {
             deviceSide = "WEST";
-            refreshRate = 5;
+            refreshRate[] = {5,5};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
 
@@ -39,7 +39,7 @@ class ACE_BFT {
 
         class GD300_b {
             deviceSide = "WEST";
-            refreshRate = 5;
+            refreshRate[] = {5,5};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
 
@@ -76,7 +76,7 @@ class ACE_BFT {
 
         class MicroDAGR_b {
             deviceSide = "WEST";
-            refreshRate = 5;
+            refreshRate[] = {5,5};
             reportingModes[] = {"GroupOnly"};
             defaultInformation[] = {"Inf", 0, "", 0};
 
@@ -112,7 +112,7 @@ class ACE_BFT {
         // Motorized
         class JV5_Mot_b {
             deviceSide = "WEST";
-            refreshRate = 5;
+            refreshRate[] = {5,5};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Motorized", 0, "", 0};
 
@@ -220,7 +220,7 @@ class ACE_BFT {
         class TAD_Heli_b {
             deviceSide = "WEST";
             reportingModes[] = {"MFD"};
-            refreshRate = 0;
+            refreshRate[] = {1,1};
             defaultInformation[] = {"Helicopter", 0, "", 0};
 
             GVAR(displayName) = QGVAR(TAD_dsp);
@@ -269,7 +269,7 @@ class ACE_BFT {
         class UAV_b {
             deviceSide = "WEST";
             reportingModes[] = {"UAV"};
-            refreshRate = 1;
+            refreshRate[] = {1,-1};
             defaultInformation[] = {"UAV", 0, "", 0};
         };
         class UAV_o: UAV_b {
@@ -281,7 +281,7 @@ class ACE_BFT {
 
         // UGV
         class UGV_b: UAV_b {
-            refreshRate = 5;
+            refreshRate[] = {5,-1};
         };
         class UGV_o: UGV_b {
             deviceSide = "EAST";

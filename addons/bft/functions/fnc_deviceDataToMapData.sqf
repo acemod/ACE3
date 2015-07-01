@@ -13,16 +13,14 @@
 
 #include "script_component.hpp"
 
-private [ "_deviceID", "_sideInformation", "_assignableInformation", "_owner","_deviceClass", "_encryptionKeys", "_access", "_typeIconPath", "_sizeIconPath", "_callsign","_groupID", "_position", "_refreshRate", "_viewModes", "_color"];
-_deviceID = _this select 0;
-_sideInformation = _this select 1;
-_assignableInformation = _this select 2;
-_owner = _this select 5;
-_deviceClass = _this select 6;
-_refreshRate = _this select 8;
-_viewModes = _this select 9;
+private [ "_deviceID", "_owner","_deviceClass", "_encryptionKeys", "_access", "_typeIconPath", "_sizeIconPath", "_callsign","_groupID", "_position", "_direction", "_refreshRate", "_viewModes", "_color"];
+_deviceID = D_GET_ID(_this);
+_owner = D_GET_OWNER(_this);
+_deviceClass = D_GET_CLASSNAME(_this);
+_refreshRate = D_GET_REFRESH_RATE_TX(_this);
+_viewModes = D_GET_DEVICEMODES(_this);
 
-_encryptionKeys = _sideInformation select 1;
+_encryptionKeys = D_GET_ENCRYPTION(_this);
 /*_access = true;
 {
     if (_x in _encryptionKeys) exitwith {_access = true; };
@@ -30,12 +28,13 @@ _encryptionKeys = _sideInformation select 1;
 
 if !(_access) exitwith {[]};*/
 
-_typeIconPath = [_sideInformation select 0, _assignableInformation select 0] call FUNC(getTypeIcon);
-_sizeIconPath = [_sideInformation select 0, _assignableInformation select 1] call FUNC(getSizeIcon);
-_callsign = _assignableInformation select 2;
-_groupID = _assignableInformation select 3;
+_typeIconPath = [D_GET_SIDE(_this), D_GET_TYPE(_this)] call FUNC(getTypeIcon);
+_sizeIconPath = [D_GET_SIDE(_this), D_GET_SIZE(_this)] call FUNC(getSizeIcon);
+_callsign = D_GET_CALLSIGN(_this);
+_groupID = D_GET_GROUP_ID(_this);
 
-_position = getPosASL _owner;
+_position = getPosASL vehicle _owner;
+_direction = direction vehicle _owner;
 _color = [_groupID] call FUNC(getGroupColor);
 
-[_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes];
+[_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes, _direction];

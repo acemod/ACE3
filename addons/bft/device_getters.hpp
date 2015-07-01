@@ -1,5 +1,5 @@
 
-// [_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes];
+// [_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes, _direction];
 #define AD_GET_ID(DATA) (DATA select 0)
 #define AD_GET_CALLSIGN(DATA) (DATA select 1)
 #define AD_GET_TYPEICON(DATA) (DATA select 2)
@@ -13,10 +13,11 @@
 #define AD_GET_REFRESH_RATE(DATA) (DATA select 9)
 #define AD_GET_OWNER(DATA) (DATA select 10)
 #define AD_GET_VIEWMOES(DATA) (DATA select 11)
+#define AD_GET_DIRECTION(DATA) (DATA select 12)
 
 
 // [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes]
-// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType]
+// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType, _refreshRate [TX, RX], _deviceModes]
 
 #define D_GET_ID(DATA) (DATA select 0)
 #define D_GET_SIDE(DATA) ((DATA select 1) select 0)
@@ -31,3 +32,6 @@
 #define D_GET_OWNER(DATA) (DATA select 5)
 #define D_GET_CLASSNAME(DATA) (DATA select 6)
 #define D_GET_DEVICETYPE(DATA) (DATA select 7)
+#define D_GET_REFRESH_RATE_TX(DATA) ((DATA select 8) select 0)
+#define D_GET_REFRESH_RATE_RX(DATA) ((DATA select 8) select 1)
+#define D_GET_DEVICEMODES(DATA) (DATA select 9)
