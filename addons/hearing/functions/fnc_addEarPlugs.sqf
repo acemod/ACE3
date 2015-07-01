@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if (!GVAR(enableCombatDeafness)) exitWith {};
+
 private ["_unit", "_launcher"];
 
 _unit = _this select 0;
