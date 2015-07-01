@@ -793,6 +793,10 @@
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interaction_OpenBox">
+            <English>Open</English>
+            <Polish>Otwórz</Polish>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
