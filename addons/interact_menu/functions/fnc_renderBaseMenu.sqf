@@ -36,7 +36,7 @@ _pos = if((count _this) > 2) then {
 };
 
 // For non-self actions, exit if the action is too far away or ocluded
-if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
+if (GVAR(openedMenuType) == 0 && (vehicle ACE_player == ACE_player) && (isNull curatorCamera) &&
     {
         private ["_headPos","_actualDistance"];
         _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");

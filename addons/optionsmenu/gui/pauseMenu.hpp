@@ -112,7 +112,7 @@ class RscDisplayMain: RscStandardDisplay {
             x = "safezoneX + safezoneW - (16 *(((safezoneW / safezoneH) min 1.2) / 40))";
             y = "safezoneY + (18.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "8.25 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            h = "4.95 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             class controls {
                 class ACE_NewsTitle: RscText {
                     text = CSTRING(aceNews);
@@ -144,7 +144,7 @@ class RscDisplayMain: RscStandardDisplay {
                     x = "0.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
                     y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w = "14 *  (((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "5.75 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+                    h = "2.75 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 
                     shadow = 0;
                     class H1 {

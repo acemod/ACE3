@@ -140,6 +140,15 @@ call FUNC(checkFiles);
 }, 0, [false]] call cba_fnc_addPerFrameHandler;
 
 
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
+
+
 /***************************************************************/
 /***************************************************************/
 /***************************************************************/
@@ -307,14 +316,6 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
-["SettingsInitialized", {
-    [
-        GVAR(checkPBOsAction),
-        GVAR(checkPBOsCheckAll),
-        call compile GVAR(checkPBOsWhitelist)
-    ] call FUNC(checkPBOs)
-}] call FUNC(addEventHandler);
 
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];

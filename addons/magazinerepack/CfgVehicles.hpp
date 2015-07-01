@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_RepackMagazines {
                 displayName = CSTRING(RepackMagazines);
                 condition = QUOTE(true);
-                exceptions[] = {"isNotInside"};
+                exceptions[] = {"isNotInside", "isNotSitting"};
                 insertChildren = QUOTE(_this call FUNC(getMagazineChildren));
                 priority = -2;
                 icon = QUOTE(PATHTOF(UI\repack_ca.paa));

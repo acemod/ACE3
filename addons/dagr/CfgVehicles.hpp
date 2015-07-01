@@ -10,7 +10,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.1;
                     icon = QUOTE(PATHTOF(UI\DAGR_Icon.paa));
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     class GVAR(toggle) {
                         displayName = "Toggle DAGR";
                         condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));
@@ -18,7 +18,7 @@ class CfgVehicles {
                         showDisabled = 0;
                         priority = 0.2;
                         icon = QUOTE(PATHTOF(UI\DAGR_Icon.paa));
-                        exceptions[] = {"notOnMap", "isNotInside"};
+                        exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
                 };
             };

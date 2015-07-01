@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 #include "initKeybinds.sqf"
 
 GVAR(outputPFH) = -1;

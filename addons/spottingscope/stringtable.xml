@@ -11,6 +11,7 @@
             <Czech>Zaměřovací Dalekohled</Czech>
             <Italian>Spotting Scope</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
+            <Portuguese>Luneta de observador</Portuguese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -22,6 +23,7 @@
             <Czech>Zvednout Zaměřovací dalekohled</Czech>
             <Italian>Raccogli spottingscope</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
+            <Portuguese>Pegar luneta de observador</Portuguese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -33,6 +35,7 @@
             <Czech>Položit Zaměřovací dalekohled</Czech>
             <Italian>Posiziona spottingscope</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
+            <Portuguese>Colocar luneta de observador</Portuguese>
         </Key>
     </Package>
 </Project>

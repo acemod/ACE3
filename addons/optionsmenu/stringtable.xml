@@ -247,6 +247,7 @@
             <Spanish>[ACE] Permitir exportar configuración</Spanish>
             <German>Erlaube Config-Export [ACE]</German>
             <Czech>Povolit export natavení [ACE]</Czech>
+            <Portuguese>[ACE] Permitir exportação de configurações</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -254,6 +255,7 @@
             <Spanish>Permitir</Spanish>
             <German>Erlaube</German>
             <Czech>Povolit</Czech>
+            <Portuguese>Permitir</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -261,6 +263,7 @@
             <Spanish>Permitir la exportación de todos los ajustes de configuración a un servidor con formato.</Spanish>
             <German>Erlaube alle Einstellungen in einer Server-Config zu exportieren.</German>
             <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
+            <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -268,6 +271,7 @@
             <Spanish>Cuando esta permitido, se tiene acceso a los ajustes de modificación y exportación en SP. Pulsar en exportar copiara la configuración al portapapeles.</Spanish>
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
+            <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -275,6 +279,7 @@
             <Spanish>Ocultar</Spanish>
             <German>Verstecken</German>
             <Czech>Skrýt</Czech>
+            <Portuguese>Ocultar</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -282,6 +287,7 @@
             <Spanish>Arriba a la derecha, hacia abajo</Spanish>
             <German>Open rechts, nach unten</German>
             <Czech>Vpravo nahoře, dolů</Czech>
+            <Portuguese>Superior direito, para baixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -289,6 +295,7 @@
             <Spanish>Arriba a la derecha, hacia la izquierda</Spanish>
             <German>Von rechts nach links</German>
             <Czech>Vpravo nahoře, do leva</Czech>
+            <Portuguese>Superior direito, à esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -296,6 +303,7 @@
             <Spanish>Arriba a la izquierda, hacia abajo</Spanish>
             <German>Von links, nach unten</German>
             <Czech>Vlevo nahoře, dolů</Czech>
+            <Portuguese>Superior esquerdo, para baixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -303,6 +311,7 @@
             <Spanish>Arriba a la izquierda, hacia la derecha</Spanish>
             <German>Oben links nach rechts</German>
             <Czech>Vlevo nahoře, do prava</Czech>
+            <Portuguese>Superior esquerdo, para a direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -310,6 +319,7 @@
             <Spanish>Arriba</Spanish>
             <German>Oben</German>
             <Czech>Nahoře</Czech>
+            <Portuguese>Acima</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -317,24 +327,31 @@
             <Spanish>Abajo</Spanish>
             <German>Unten</German>
             <Czech>Dole</Czech>
+            <Portuguese>Abaixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
             <Polish>Debuguj do schowka</Polish>
             <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
+            <Portuguese>Depuração para área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
             <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
+            <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
+            <Spanish>Noticias ACE</Spanish>
+            <Portuguese>Notícias do ACE</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
+            <Spanish>Mostrar noticias en el menú principal</Spanish>
+            <Portuguese>Mostrar notícias no menu principal</Portuguese>
         </Key>
     </Package>
 </Project>

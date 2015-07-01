@@ -58,14 +58,18 @@ if (count _weaponMagazines == 0) then {
             _weaponMagazines append _muzzleMagazines;
         };
     } forEach _muzzles;
+    {
+        _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
+        _weaponMagazines set [_forEachIndex, [_x, _ammoType]];
+    } forEach _weaponMagazines;
     missionNamespace setVariable [format[QEGVAR(common,weaponMagazines_%1),_weapon], _weaponMagazines];
 };
 
 _magazine = "";
 {
-    _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
+    EXPLODE_2_PVT(_x,_magazineType,_ammoType)
     if (_ammoType == _ammo) exitWith {
-        _magazine = _x;
+        _magazine = _magazineType;
     };
 } forEach _weaponMagazines;
 
