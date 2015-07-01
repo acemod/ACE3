@@ -165,7 +165,7 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
 };
 
 // register reporting modes
-[["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
+[EGVAR(bft,allReportingModes)] call EFUNC(bft,updateRegisteredModes);
 
 // temporary helmet cam list update until implemented in BFT module
 [] call FUNC(updateHCamList);

@@ -39,7 +39,7 @@ GVAR(selection) = ["",[]];
         // only continue if the main map hasn't loaded yet
         if (isNull (findDisplay 12)) then {
             [[player] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,updateRegisteredEncryptionKeys);
-            [["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
+            [EGVAR(bft,allReportingModes)] call EFUNC(bft,updateRegisteredModes);
             [true,5] call FUNC(updateAvailableDevicesPosition);
         };
     } else {

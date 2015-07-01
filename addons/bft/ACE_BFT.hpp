@@ -1,26 +1,4 @@
 class ACE_BFT {
-    /*
-    class Devices {
-        class FBCB2Device {
-            deviceSide = "NATO";
-            refreshRate = 5;
-            reportingModes[] = {"FBCB2"};
-            defaultInformation[] = {"Inf", 0, "", 0};
-        };
-        class FBCB2VehDevice {
-            deviceSide = "NATO";
-            refreshRate = 5;
-            reportingModes[] = {"FBCB2"};
-            defaultInformation[] = {"Motorized", 0, "", 0};
-        };
-        class MDFDevice: FBCB2Device {
-            reportingModes[] = {"MFD"};
-            refreshRate = 0;
-            defaultInformation[] = {"Plane", 0, "", 0};
-        };
-    };
-    */
-
     class Side {
         class WEST {
             encryptionKeys[] = {""};

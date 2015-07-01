@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(checkInventory);
 PREP(checkItem);
+PREP(getAllReportingModes);
 PREP(getDeviceData);
 PREP(getMagazineID);
 PREP(getOwnedDevices);
@@ -59,8 +60,9 @@ GVAR(orbatElements) = [];
 
 
 GVAR(registeredEncyptionKeys) = [];
-GVAR(registeredViewModes) = ["FBCB2"];
+GVAR(registeredViewModes) = [];
 GVAR(availableDevices) = [];
+GVAR(allReportingModes) = [] call FUNC(getAllReportingModes);
 
 // local data collections
 GVAR(colorFilters) = [[1, [1,0,0,1]]];

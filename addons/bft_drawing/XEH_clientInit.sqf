@@ -22,7 +22,7 @@ GVAR(mapVisibleLastFrame) = false;
 // register with reporting channels when map is opened
 ["mapOpened",{
     // register reporting modes
-    [["MFD","FBCB2","UAV"]] call EFUNC(bft,updateRegisteredModes);
+    [EGVAR(bft,allReportingModes)] call EFUNC(bft,updateRegisteredModes);
     // set encryption key
     [[ACE_player] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,updateRegisteredEncryptionKeys);
     // start update loop
