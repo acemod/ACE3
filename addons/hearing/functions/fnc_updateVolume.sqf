@@ -46,6 +46,15 @@ if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
     _volume = _volume min GVAR(EarplugsVolume);
 };
 
+// Headgear can reduce hearing
+if(headgear ACE_player != "") then {
+    private ["_lowerVolume"];
+    _lowerVolume = (getNumber (configFile >> "CfgWeapons" >> (headgear ACE_player) >> QGVAR(lowerVolume))) min 1;
+    if(_lowerVolume > 0) then {
+        _volume = _volume min (1 - _lowerVolume);
+    };
+};
+
 // Reduce volume if player is unconscious
 if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
     _volume = _volume min GVAR(UnconsciousnessVolume);
