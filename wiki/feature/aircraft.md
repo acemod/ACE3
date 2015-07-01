@@ -35,7 +35,7 @@ Adds a HUD to the AH-9 based on the Comanche's HUD.
 ## 2. Usage
 
 ### 2.1 Switching flare modes
-Press <kbd>CTRL</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 default key bind `countermeasure mode`)
+Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 default key bind `countermeasure mode`)
 
 ## 3. Dependencies
 

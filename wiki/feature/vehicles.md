@@ -41,6 +41,10 @@ MBT main guns and mortars can no longer lock on enemies. The AT rounds of both n
 - To turn the engine on press <kbd>2</kbd>.
 - To turn the engine off press <kbd>1</kbd>.
 
+### 2.2 Turning the speed limiter on / off
+- To turn the speed limiter on press <kbd>Del</kbd>.
+- To turn it off press <kbd>Del</kbd> again.
+
 ## 3. Dependencies
 
 `ace_common`
