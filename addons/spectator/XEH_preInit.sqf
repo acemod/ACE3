@@ -18,7 +18,6 @@ PREP(killed);
 PREP(map);
 PREP(moduleSpectator);
 PREP(overlay);
-PREP(penPos);
 PREP(respawn);
 PREP(sideColour);
 PREP(status);
@@ -27,5 +26,7 @@ PREP(unitInfo);
 PREP(unitSide);
 PREP(unitVar);
 PREP(viewDistance);
+
+GVAR(penPos) = [-10e5,-10e5,0];
 
 ADDON = true;

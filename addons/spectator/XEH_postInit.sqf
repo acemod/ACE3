@@ -29,8 +29,6 @@
 
     if !(hasInterface) exitWith {};
 
-    call FUNC(penPos);
-
     GVAR(playerSide) = side (group player);
 
     if GVAR(tracking) then {
