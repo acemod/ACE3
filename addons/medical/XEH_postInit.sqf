@@ -92,7 +92,7 @@ GVAR(effectTimeBlood) = ACE_time;
 [{
     private["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
-    if (!(isNull (findDisplay 312)) or !(alive ACE_player)) exitWith {
+    if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
         GVAR(effectBlindingCC) ppEffectEnable false;
@@ -175,7 +175,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
             GVAR(lastHeartBeat) = ACE_time;
 
             // Pain effect, no pain effect in zeus camera
-            if (isNull (findDisplay 312)) then {
+            if (isNull curatorCamera) then {
                 _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
