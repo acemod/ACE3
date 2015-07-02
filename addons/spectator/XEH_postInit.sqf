@@ -43,6 +43,9 @@
     }];
 
     player addEventHandler ["Respawn", {
+        // Move the player ASAP
+        player setPosATL GVAR(penPos);
+
         if (!isNil QGVAR(cam)) then {["Exit"] call FUNC(camera)};
         if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {EGVAR(hearing,disableVolumeUpdate) = true};
         if (isClass (configFile >> "CfgPatches" >> "acre_sys_radio")) then {[true] call acre_api_fnc_setSpectator};
@@ -57,23 +60,19 @@
             };
         };
 
-        player addEventHandler ["HandleDamage", {0}];
+        // Disable damage (vanilla and ace_medical)
+        player allowDamage false;
+        player setVariable ["ace_medical_allowDamage", false];
+
+        // Hide the player
         [player] joinSilent grpNull;
-        removeAllWeapons player;
-        removeAllItems player;
-        removeAllAssignedItems player;
-        removeUniform player;
-        removeVest player;
-        player linkItem "ItemMap";
-        player linkItem "ItemRadio";
         hideObjectGlobal player;
 
+        // Prevent drowning and vision blur
         if (surfaceisWater GVAR(penPos)) then {
             player forceAddUniform "U_B_Wetsuit";
             player addVest "V_RebreatherB";
         };
-
-        player setPosATL GVAR(penPos);
 
         0 fadeSound 0;
         999999 cutText ["", "BLACK FADED", 0];
