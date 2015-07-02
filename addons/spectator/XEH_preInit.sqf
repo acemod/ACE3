@@ -19,6 +19,7 @@ PREP(map);
 PREP(moduleSpectator);
 PREP(overlay);
 PREP(respawn);
+PREP(setSpectator);
 PREP(sideColour);
 PREP(status);
 PREP(trackUnits);
