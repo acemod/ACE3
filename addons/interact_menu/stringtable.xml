@@ -87,6 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
+            <Polish>Akcje Zeusa</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -250,9 +251,11 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
+            <Polish>Pokazuj akcje dla budynków</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
         </Key>
     </Package>
 </Project>

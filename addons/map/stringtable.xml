@@ -91,10 +91,12 @@
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
             <English>BFT Enable</English>
             <Portuguese>RFA ativo</Portuguese>
+            <Polish>Aktywuj BFT</Polish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
             <Portuguese>Ativa Rastreio de Forças Azuis. Padrão: Não</Portuguese>
+            <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>

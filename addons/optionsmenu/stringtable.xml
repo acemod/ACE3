@@ -347,11 +347,13 @@
             <English>ACE News</English>
             <Spanish>Noticias ACE</Spanish>
             <Portuguese>Notícias do ACE</Portuguese>
+            <Polish>Wiadomości ACE</Polish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
             <Spanish>Mostrar noticias en el menú principal</Spanish>
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
+            <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
         </Key>
     </Package>
 </Project>

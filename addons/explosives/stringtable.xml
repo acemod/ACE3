@@ -548,10 +548,12 @@
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
             <Portuguese>Explosão no desarmamento?</Portuguese>
+            <Polish>Eksplozja przy rozbrajaniu?</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
             <Portuguese>Ativa certos explosivos para detonar no desarmamento? Padrão: Sim</Portuguese>
+            <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English></English>
