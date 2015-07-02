@@ -3,108 +3,48 @@
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
             <English>Spectator</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
             <English>Enable Spectator</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_Description">
             <English>Begin spectating on player death?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
             <English>Player Side Only</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_Description">
             <English>Only spectate units belonging to player's side?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_DisplayName">
             <English>Spectate AI</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_Description">
             <English>Allow spectating of AI units?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
             <English>Track Units</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_Description">
             <English>Track units' movements throughout mission?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_DisplayName">
             <English>Start Position</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_Description">
             <English>Use this module as a starting position for spectator camera?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_DisplayName">
             <English>End Mission</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_Description">
             <English>End mission when all players dead (default BIS behaviour)?</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Title">
             <English>View Distance</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Button">
             <English>OK</English>
-            <Polish></Polish>
-            <Spanish></Spanish>
-            <German></German>
-            <Czech></Czech>
         </Key>
     </Package>
 </Project>
