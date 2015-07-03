@@ -18,27 +18,28 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID","_isDialog","_interfaceID"];
+private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID","_isDialog","_interfaceID","_interfaceConfigName"];
 
 // remove helmet and UAV cameras
 [] call FUNC(deleteHelmetCam);
 [] call FUNC(deleteUAVcam);
 
 if !(I_CLOSED) then {
-    // [_deviceID,_interfaceID,_ifType,_displayName,_isDialog,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
+    // [_deviceID,_interfaceConfigName,_interfaceID,_ifType,_displayName,_isDialog,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
     _deviceID = I_GET_DEVICE;
+    _interfaceConfigName = I_GET_CONFIGNAME;
     _interfaceID = I_GET_ID;
     _ifType = I_GET_TYPE;
     _displayName = I_GET_NAME;
     _isDialog = I_GET_ISDIALOG;
-    _player = GVAR(ifOpen) select 5;
-    _playerKilledEhId = GVAR(ifOpen) select 6;
-    _vehicle = GVAR(ifOpen) select 7;
-    _vehicleGetOutEhId = GVAR(ifOpen) select 8;
-    _draw3dEhId = GVAR(ifOpen) select 9;
-    _aceUnconciousEhId = GVAR(ifOpen) select 10;
-    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 11;
-    _acePlayerChangedEhId = GVAR(ifOpen) select 12;
+    _player = GVAR(ifOpen) select 6;
+    _playerKilledEhId = GVAR(ifOpen) select 7;
+    _vehicle = GVAR(ifOpen) select 8;
+    _vehicleGetOutEhId = GVAR(ifOpen) select 9;
+    _draw3dEhId = GVAR(ifOpen) select 10;
+    _aceUnconciousEhId = GVAR(ifOpen) select 11;
+    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 12;
+    _acePlayerChangedEhId = GVAR(ifOpen) select 13;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};

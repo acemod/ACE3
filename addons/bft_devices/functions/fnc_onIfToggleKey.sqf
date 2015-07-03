@@ -84,23 +84,23 @@ diag_log str [_playerDeviceInterface,_vehicleDeviceInterface];
 
 // get uiNamespace variable names
 _playerDeviceDisplayName = if (_playerDeviceInterface != "") then {
-    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> QGVAR(displayName))) then {
-        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> QGVAR(displayName))
+    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "displayName")) then {
+        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "displayName")
     } else {""};
 } else {""};
 _playerDeviceDialogName = if (_playerDeviceInterface != "") then {
-    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> QGVAR(dialogName))) then {
-        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> QGVAR(dialogName))
+    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "dialogName")) then {
+        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "dialogName")
     } else {""};
 } else {""};
 _vehicleDeviceDisplayName = if (_vehicleDeviceInterface != "") then {
-    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> QGVAR(displayName))) then {
-        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> QGVAR(displayName))
+    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "displayName")) then {
+        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "displayName")
     } else {""};
 } else {""};
 _vehicleDeviceDialogName = if (_vehicleDeviceInterface != "") then {
-    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> QGVAR(dialogName))) then {
-        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> QGVAR(dialogName))
+    if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "dialogName")) then {
+        getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "dialogName")
     } else {""};
 } else {""};
 

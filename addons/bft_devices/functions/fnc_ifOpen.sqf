@@ -6,18 +6,19 @@
  *       
  *   This function will define iffOpen, using the following format:
  *       Parameter 0: Device ID <STRING>
- *       Parameter 1: Interface ID <STRING>
- *       Parameter 2: Interface type, 0 = Main, 1 = Secondary, 2 = Tertiary <INTEGER>
- *       Parameter 3: Name of uiNameSpace variable for display / dialog (i.e. "ace_bft_devices_TAD_dlg") <TRING>
- *       Parameter 4: isDialog (true if dialog, false if display) <BOOL>
- *       Parameter 5: Unit we registered the killed eventhandler for <OBJECT>
- *       Parameter 6: ID of registered eventhandler for killed event <INTEGER>
- *       Parameter 7: Vehicle we registered the GetOut eventhandler for (even if no EH is registered) <OBJECT>
- *       Parameter 8: ID of registered eventhandler for GetOut event (nil if no EH is registered) <INTEGER>
- *       Parameter 9: ID of registered eventhandler for Draw3D event (nil if no EH is registered) <INTEGER>
- *       Parameter 10: ID of registered eventhandler ACE_medical medical_onUnconscious event (nil if no EH is registered) <INTEGER>
- *       Parameter 11: ID of registered eventhandler ACE bft_updateDeviceOwner event (nil if no EH is registered) <INTEGER>
- *       Parameter 12: ID of registered eventhandler ACE playerChanged event (nil if no EH is registered) <INTEGER>
+ *       Parameter 1: Interface config name <STRING>
+ *       Parameter 2: Interface ID <STRING>
+ *       Parameter 3: Interface type, 0 = Main, 1 = Secondary, 2 = Tertiary <INTEGER>
+ *       Parameter 4: Name of uiNameSpace variable for display / dialog (i.e. "ace_bft_devices_TAD_dlg") <TRING>
+ *       Parameter 5: isDialog (true if dialog, false if display) <BOOL>
+ *       Parameter 6: Unit we registered the killed eventhandler for <OBJECT>
+ *       Parameter 7: ID of registered eventhandler for killed event <INTEGER>
+ *       Parameter 8: Vehicle we registered the GetOut eventhandler for (even if no EH is registered) <OBJECT>
+ *       Parameter 9: ID of registered eventhandler for GetOut event (nil if no EH is registered) <INTEGER>
+ *       Parameter 10: ID of registered eventhandler for Draw3D event (nil if no EH is registered) <INTEGER>
+ *       Parameter 11: ID of registered eventhandler ACE_medical medical_onUnconscious event (nil if no EH is registered) <INTEGER>
+ *       Parameter 12: ID of registered eventhandler ACE bft_updateDeviceOwner event (nil if no EH is registered) <INTEGER>
+ *       Parameter 13: ID of registered eventhandler ACE playerChanged event (nil if no EH is registered) <INTEGER>
  *
  * Arguments:
  *   0: Device ID <STRING>
@@ -42,7 +43,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle", "_deviceID", "_display", "_heading", "_isDialog", "_playerPos", "_veh","_interfaceID"];
+private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle", "_deviceID", "_display", "_heading", "_isDialog", "_playerPos", "_veh","_interfaceID","_interfaceConfigName"];
 
 // exit should we have an interface open already or are in the process of starting one
 if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
@@ -50,7 +51,7 @@ if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
 GVAR(ifOpenStart) = true;
 
 _deviceID = _this select 0;
-_interface = _this select 1;
+_interfaceConfigName = _this select 1;
 _interfaceType = _this select 2;
 _displayName = _this select 3;
 _isDialog = _this select 4;
@@ -59,11 +60,12 @@ _vehicle = _this select 6;
 _inVehicle = (_vehicle != _player);
 
 // genrate interface ID
-_interfaceID = format ["%1%2",_deviceID,_interface];
+_interfaceID = format ["%1%2",_deviceID,_interfaceConfigName];
 
 // start setting up event-handlers
 GVAR(ifOpen) = [
     _deviceID,
+    _interfaceConfigName,
     _interfaceID,
     _interfaceType,
     _displayName,
@@ -80,7 +82,7 @@ GVAR(ifOpen) = [
 
 // Only register the GetOut event handler for vehicle displays
 if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
-    GVAR(ifOpen) set [8,
+    GVAR(ifOpen) set [9,
         _vehicle addEventHandler ["GetOut",{if (_this select 2 == ACE_player) then {[] call FUNC(ifClose)}}]
     ];
 };
@@ -88,7 +90,7 @@ if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
 // Set up event handler to update display header / footer
 // Also set up vehicle icon
 if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
-    GVAR(ifOpen) set [9,
+    GVAR(ifOpen) set [10,
         addMissionEventHandler ["Draw3D",{
             _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
@@ -113,7 +115,7 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
         "\A3\ui_f\data\map\VehicleIcons\iconmanvirtual_ca.paa"
     };
 } else {
-    GVAR(ifOpen) set [9,
+    GVAR(ifOpen) set [10,
         addMissionEventHandler ["Draw3D",{
             _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
@@ -133,7 +135,7 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
 };
 
 // Register with ACE_medical medical_onUnconscious event
-GVAR(ifOpen) set [10,
+GVAR(ifOpen) set [11,
     ["medical_onUnconscious",{
         if (_this select 0 == ACE_player && _this select 1) then {
             [] call FUNC(ifClose);
@@ -142,7 +144,7 @@ GVAR(ifOpen) set [10,
 ];
 
 // Register with ACE bft_updateDeviceOwner event
-GVAR(ifOpen) set [11,
+GVAR(ifOpen) set [12,
     ["bft_updateDeviceOwner",{
         // if the device ID matches the one currently open and we aren't the owner anymore, close the interface
         if ((_this select 0 == I_GET_DEVICE) && (_this select 1 != ACE_player)) then {
@@ -152,7 +154,7 @@ GVAR(ifOpen) set [11,
 ];
 
 // Register with ACE playerChanged event
-GVAR(ifOpen) set [12,
+GVAR(ifOpen) set [13,
     ["playerChanged",{
         _this call FUNC(onPlayerChanged);
     }] call EFUNC(common,addEventHandler)
@@ -171,7 +173,7 @@ if (!(_deviceAppData isEqualTo []) && (_deviceOwner isKindOf "ParachuteBase" || 
     // if vehicle device, see if device app data is already cached, if not, retrieve from config
     if !(HASH_HASKEY(GVAR(settings),_interfaceID)) then {
         // read from config
-        _deviceAppData = [_interface] call FUNC(getInterfaceSettingsFromConfig);
+        _deviceAppData = [_interfaceConfigName] call FUNC(getInterfaceSettingsFromConfig);
         
         // write to cache
         HASH_SET(GVAR(settings),_interfaceID,_deviceAppData);

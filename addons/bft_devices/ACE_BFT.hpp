@@ -216,9 +216,9 @@ class ACE_BFT {
      */
     class Interfaces {
         class DK10 {
-            GVAR(dialogName) = QGVAR(DK10_dlg);
-            GVAR(backgroundDay) = QUOTE(PATHTOF(UI\images\DK10_background_ca.paa));
-            GVAR(backgroundNight) = QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa));
+            dialogName = QGVAR(DK10_dlg);
+            backgroundDay = QUOTE(PATHTOF(UI\images\DK10_background_ca.paa));
+            backgroundNight = QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa));
 
             class InterfaceSettings {
                 dlgIfPosition[] = {};
@@ -241,10 +241,10 @@ class ACE_BFT {
         };
 
         class GD300 {
-            GVAR(displayName) = QGVAR(GD300_dsp);
-            GVAR(dialogName) = QGVAR(GD300_dlg);
-            GVAR(backgroundDay) = QUOTE(PATHTOF(UI\images\GD300_background_ca.paa));
-            GVAR(backgroundNight) = QUOTE(PATHTOF(UI\images\GD300_background_night_ca.paa));
+            displayName = QGVAR(GD300_dsp);
+            dialogName = QGVAR(GD300_dlg);
+            backgroundDay = QUOTE(PATHTOF(UI\images\GD300_background_ca.paa));
+            backgroundNight = QUOTE(PATHTOF(UI\images\GD300_background_night_ca.paa));
 
             class InterfaceSettings {
                 dlgIfPosition[] = {};
@@ -267,10 +267,10 @@ class ACE_BFT {
         };
 
         class MicroDAGR {
-            GVAR(displayName) = QGVAR(GD300_dsp);
-            GVAR(dialogName) = QGVAR(GD300_dlg);
-            GVAR(backgroundDay) = QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa));
-            GVAR(backgroundNight) = QUOTE(PATHTOF(UI\images\MicroDAGR_background_night_ca.paa));
+            displayName = QGVAR(GD300_dsp);
+            dialogName = QGVAR(GD300_dlg);
+            backgroundDay = QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa));
+            backgroundNight = QUOTE(PATHTOF(UI\images\MicroDAGR_background_night_ca.paa));
 
             class InterfaceSettings {
                 dlgIfPosition[] = {};
@@ -291,7 +291,7 @@ class ACE_BFT {
         };
 
         class JV5 {
-            GVAR(dialogName) = QGVAR(dlg);
+            dialogName = QGVAR(JV5_dlg);
 
             class InterfaceSettings {
                 dlgIfPosition[] = {};
@@ -309,10 +309,10 @@ class ACE_BFT {
         };
 
         class TAD {
-            GVAR(displayName) = QGVAR(TAD_dsp);
-            GVAR(dialogName) = QGVAR(TAD_dlg);
-            GVAR(backgroundDay) = QUOTE(PATHTOF(UI\images\TAD_background_ca.paa));
-            GVAR(backgroundNight) = QUOTE(PATHTOF(UI\images\TAD_background_night_ca.paa));
+            displayName = QGVAR(TAD_dsp);
+            dialogName = QGVAR(TAD_dlg);
+            backgroundDay = QUOTE(PATHTOF(UI\images\TAD_background_ca.paa));
+            backgroundNight = QUOTE(PATHTOF(UI\images\TAD_background_night_ca.paa));
 
             class InterfaceSettings {
                 dlgIfPosition[] = {};

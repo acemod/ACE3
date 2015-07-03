@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_interfaceID","_deviceData","_deviceType","_null","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos","_uav","_hCam"];
+private ["_interfaceInit","_settings","_display","_displayName","_interfaceID","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos","_uav","_hCam"];
 disableSerialization;
 
 if (I_CLOSED) exitWith {false};
@@ -130,14 +130,12 @@ if (isNil "_mode") then {
             _nightMode = _value;
             // transform nightMode into boolean
             _nightMode = if (_nightMode == 1 || {_nightMode == 2 && ([] call EFUNC(common,ambientBrightness)) < 0.2}) then {true} else {false};
-            _deviceData = [I_GET_DEVICE] call EFUNC(bft,getDeviceData);
-            _deviceType = D_GET_DEVICETYPE(_deviceData);
             
             // get config path for background
             _backgroundConfig = if (_nightMode) then {
-                configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> QGVAR(backgroundNight);
+                configFile >> "ACE_BFT" >> "Interfaces" >> I_GET_CONFIGNAME >> "backgroundNight";
             } else {
-                configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> QGVAR(backgroundDay);
+                configFile >> "ACE_BFT" >> "Interfaces" >> I_GET_CONFIGNAME >> "backgroundDay";
             };
             
             // check for existence of background
