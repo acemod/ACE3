@@ -9,28 +9,6 @@ if (!hasInterface) exitWith {};
 GVAR(rscLayer) = [QGVAR(displays)] call BIS_fnc_rscLayer;
 GVAR(rscLayerMailNotification) = [QGVAR(mailNotification)] call BIS_fnc_rscLayer;
 
-/*
-Figure out the scaling factor based on the current map (island) being played
-*/
-GVAR(worldSize) = call {
-    private ["_ctrlMap","_mapPos1","_mapPos2"];
-    disableSerialization;
-    _ctrlMap = finddisplay 12 displayctrl 51;
-    if !(isNull _ctrlMap) then {
-    	_mapPos1 = _ctrlMap ctrlmapscreentoworld [0,0];
-    	_mapPos2 = _ctrlMap ctrlmapscreentoworld [1,0];
-    	_mapPos1 set [2,0];  _mapPos2 set [2,0];
-    	round ((_mapPos1 vectordistance _mapPos2) / ctrlmapscale _ctrlMap)
-    } else {
-    	// this will most likely only happen when we are loading a world while in ArmA main menu
-    	// meaning we don't have to return the real value; 8192 is the default worldSize for Stratis and VR
-    	8192
-	};
-};
-
-// still need to figure out if this is really required and how I actually got to this number (too long ago!)
-GVAR(mapScaleFactor) = GVAR(worldSize) / 2666.65;
-
 // ifOpenStart will be set to true while interface is starting and prevent further open attempts
 GVAR(ifOpenStart) = false;
 
