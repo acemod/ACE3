@@ -8,23 +8,23 @@ class ACE_ZeusActions {
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
 
-            class limited {
-                displayName = "$STR_A3_RscAttributeUnitPos_Down_tooltip";
+            class prone {
+                displayName = "$STR_Pos_Down";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
                 statement = "{_x setUnitPos 'DOWN';} forEach (curatorSelected select 0);";
             };
-            class normal {
-                displayName = "$STR_A3_RscAttributeUnitPos_Crouch_tooltip";
+            class crouch {
+                displayName = "$STR_Pos_Crouch";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa";
                 statement = "{_x setUnitPos 'MIDDLE';} forEach (curatorSelected select 0);";
             };
-            class full {
-                displayName = "$STR_A3_RscAttributeUnitPos_Up_tooltip";
+            class stand {
+                displayName = "$STR_Pos_Up";
                 icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa";
                 statement = "{_x setUnitPos 'UP';} forEach (curatorSelected select 0);";
             };
             class auto {
-                displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
+                displayName = "$STR_Pos_Automatic";
                 icon = "\A3\UI_F_Curator\Data\default_ca.paa";
                 statement = "{_x setUnitPos 'AUTO';} forEach (curatorSelected select 0);";
             };
@@ -40,7 +40,7 @@ class ACE_ZeusActions {
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
 
         class behaviour {
-            displayName = CSTRING(Zeus_Behaviour);
+            displayName = "$STR_Combat_Mode";
 
             class careless {
                 displayName = "$STR_Combat_Careless";
@@ -68,7 +68,7 @@ class ACE_ZeusActions {
             };
         };
         class speed {
-            displayName = CSTRING(Zeus_Speed);
+            displayName = "$STR_HC_Menu_Speed";
 
             class limited {
                 displayName = "$STR_Speed_Limited";
@@ -86,32 +86,8 @@ class ACE_ZeusActions {
                 statement = "{_x setSpeedMode 'FULL';} forEach (curatorSelected select 1);";
             };
         };
-        class stance {
-            displayName = "$STR_A3_RscAttributeUnitPos_Title";
-
-            class limited {
-                displayName = "$STR_A3_RscAttributeUnitPos_Down_tooltip";
-                icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_prone_ca.paa";
-                statement = "{ {_x setUnitPos 'DOWN'} forEach (units _x); } forEach (curatorSelected select 1);";
-            };
-            class normal {
-                displayName = "$STR_A3_RscAttributeUnitPos_Crouch_tooltip";
-                icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_crouch_ca.paa";
-                statement = "{ {_x setUnitPos 'MIDDLE'} forEach (units _x); } forEach (curatorSelected select 1);";
-            };
-            class full {
-                displayName = "$STR_A3_RscAttributeUnitPos_Up_tooltip";
-                icon = "\A3\UI_F\Data\IGUI\RscIngameUI\RscUnitInfo\SI_stand_ca.paa";
-                statement = "{ {_x setUnitPos 'UP'} forEach (units _x); } forEach (curatorSelected select 1);";
-            };
-            class auto {
-                displayName = "$STR_A3_RscAttributeUnitPos_Auto_tooltip";
-                icon = "\A3\UI_F_Curator\Data\default_ca.paa";
-                statement = "{ {_x setUnitPos 'AUTO'} forEach (units _x); } forEach (curatorSelected select 1);";
-            };
-        };
         class formation {
-            displayName = CSTRING(Zeus_Formation);
+            displayName = "$STR_Formation";
 
             class wedge {
                 displayName = "$STR_Wedge";
@@ -165,7 +141,7 @@ class ACE_ZeusActions {
         icon = "\A3\UI_F_Curator\Data\CfgCurator\waypoint_ca.paa";
 
         class behaviour {
-            displayName = CSTRING(Zeus_Behaviour);
+            displayName = "$STR_Combat_Mode";
 
             class careless {
                 displayName = "$STR_Combat_Careless";
@@ -193,7 +169,7 @@ class ACE_ZeusActions {
             };
         };
         class speed {
-            displayName = CSTRING(Zeus_Speed);
+            displayName = "$STR_HC_Menu_Speed";
 
             class limited {
                 displayName = "$STR_Speed_Limited";
@@ -212,7 +188,7 @@ class ACE_ZeusActions {
             };
         };
         class formation {
-            displayName = CSTRING(Zeus_Formation);
+            displayName = "$STR_Formation";
 
             class wedge {
                 displayName = "$STR_Wedge";
