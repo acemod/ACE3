@@ -238,6 +238,10 @@ class CfgVehicles {
             class useCondition_SurgicalKit: useCondition_PAK {
                 displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+                class values {
+                    class AnyTime { name = CSTRING(AnyTime); value = 0; default = 1; };
+                    class Stable { name = CSTRING(Stable); value = 1; };
+                };
             };
             class healHitPointAfterAdvBandage {
                 displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
