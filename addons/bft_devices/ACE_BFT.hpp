@@ -1,13 +1,13 @@
 class ACE_BFT {
     /*
      * To add a device to a vehicle reference the device class name on the vehicle
-     * EGVAR(bft,vehicleDevice) = "Motorized_b";
+     * EGVAR(bft,vehicleDevice) = "GroundVehicle_b";
      */
     class Devices {
         // Personal Devices
         class DK10_b {
             deviceSide = "WEST";
-            refreshRate[] = {5,5};
+            refreshRate[] = {5,2};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
             interface = "DK10";
@@ -21,7 +21,7 @@ class ACE_BFT {
 
         class GD300_b {
             deviceSide = "WEST";
-            refreshRate[] = {5,5};
+            refreshRate[] = {5,2};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
             interface = "GD300";
@@ -35,7 +35,7 @@ class ACE_BFT {
 
         class MicroDAGR_b {
             deviceSide = "WEST";
-            refreshRate[] = {5,5};
+            refreshRate[] = {5,2};
             reportingModes[] = {"GroupOnly"};
             defaultInformation[] = {"Inf", 0, "", 0};
             interface = "MicroDAGR";
@@ -47,88 +47,22 @@ class ACE_BFT {
             deviceSide = "IND";
         };
 
-        // Motorized
-        class Motorized_b {
+        // Ground Vehicle
+        class GroundVehicle_b {
             deviceSide = "WEST";
-            refreshRate[] = {5,5};
+            refreshRate[] = {3,2};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Motorized", 0, "", 0};
         };
-        class Motorized_o: Motorized_b {
+        class GroundVehicle_o: GroundVehicle_b {
             deviceSide = "EAST";
         };
-        class Motorized_i: Motorized_b {
-            deviceSide = "IND";
-        };
-
-        // Mechanized
-        class Mechanized_b: Motorized_b {
-            defaultInformation[] = {"Mechanized", 0, "", 0};
-        };
-        class Mechanized_o: Mechanized_b {
-            deviceSide = "EAST";
-        };
-        class Mechanized_i: Mechanized_b {
-            deviceSide = "IND";
-        };
-
-        // Armor
-        class Armor_b: Motorized_b {
-            defaultInformation[] = {"Armor", 0, "", 0};
-        };
-        class Armor_o: Armor_b {
-            deviceSide = "EAST";
-        };
-        class Armor_i: Armor_b {
-            deviceSide = "IND";
-        };
-
-        // Artillery
-        class Artillery_b: Motorized_b {
-            defaultInformation[] = {"Artillery", 0, "", 0};
-        };
-        class Artillery_o: Artillery_b {
-            deviceSide = "EAST";
-        };
-        class Artillery_i: Artillery_b {
-            deviceSide = "IND";
-        };
-
-        // Maintenance
-        class Maintenance_b: Motorized_b {
-            defaultInformation[] = {"Maintenance", 0, "", 0};
-        };
-        class Maintenance_o: Maintenance_b {
-            deviceSide = "EAST";
-        };
-        class Maintenance_i: Maintenance_b {
-            deviceSide = "IND";
-        };
-
-        // Medical
-        class Medical_b: Motorized_b {
-            defaultInformation[] = {"Medical", 0, "", 0};
-        };
-        class Medical_o: Medical_b {
-            deviceSide = "EAST";
-        };
-        class Medical_i: Medical_b {
-            deviceSide = "IND";
-        };
-
-        // Service
-        class Service_b: Motorized_b {
-            defaultInformation[] = {"Service", 0, "", 0};
-        };
-        class Service_o: Service_b {
-            deviceSide = "EAST";
-        };
-        class Service_i: Service_b {
+        class GroundVehicle_i: GroundVehicle_b {
             deviceSide = "IND";
         };
 
         // Naval
-        class Naval_b: Motorized_b {
+        class Naval_b: GroundVehicle_b {
             defaultInformation[] = {"Naval", 0, "", 0};
         };
         class Naval_o: Naval_b {
@@ -138,28 +72,17 @@ class ACE_BFT {
             deviceSide = "IND";
         };
 
-        // Helicopter
-        class TAD_Heli_b {
+        // Aircraft
+        class Aircraft_b {
             deviceSide = "WEST";
             reportingModes[] = {"MFD"};
-            refreshRate[] = {1,1};
+            refreshRate[] = {0.5,0.5};
             defaultInformation[] = {"Helicopter", 0, "", 0};
         };
-        class TAD_Heli_o: TAD_Heli_b {
+        class Aircraft_o: Aircraft_b {
             deviceSide = "EAST";
         };
-        class TAD_Heli_i: TAD_Heli_b {
-            deviceSide = "IND";
-        };
-
-        // Plane
-        class TAD_Plane_b: TAD_Heli_b {
-            defaultInformation[] = {"Plane", 0, "", 0};
-        };
-        class TAD_Plane_o: TAD_Plane_b {
-            deviceSide = "EAST";
-        };
-        class TAD_Plane_i: TAD_Plane_b {
+        class Aircraft_i: Aircraft_b {
             deviceSide = "IND";
         };
 
@@ -167,7 +90,7 @@ class ACE_BFT {
         class UAV_b {
             deviceSide = "WEST";
             reportingModes[] = {"UAV"};
-            refreshRate[] = {1,-1};
+            refreshRate[] = {0.5,-1};
             defaultInformation[] = {"UAV", 0, "", 0};
         };
         class UAV_o: UAV_b {

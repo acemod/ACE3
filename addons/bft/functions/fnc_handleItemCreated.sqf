@@ -44,7 +44,18 @@ if (_exists) exitwith {};
 _deviceType = if (_magazine != "") then { getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) } else { _item };
 _deviceSide = getText(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "deviceSide");
 _deviceModes = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "reportingModes");
-_defaultValues = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "defaultInformation");
+
+_defaultValues = [];
+// if this is a vehicle device, see if the default information is present on the vehicle
+if !(isNull _owner || {_owner isKindOf "ParachuteBase" || _owner isKindOf "CAManBase"}) then {
+    if (isArray (configFile >> "CfgVehicles" >> typeOf _owner >> QGVAR(defaultInformation))) then {
+        _defaultValues = getArray (configFile >> "CfgVehicles" >> typeOf _owner >> QGVAR(defaultInformation));
+    };
+};
+// otherwise, get the default information from the device
+if (_defaultValues isEqualTo []) then {
+    _defaultValues = getArray (configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "defaultInformation");
+};
 
 _refreshRate = getArray(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "refreshRate");
 
