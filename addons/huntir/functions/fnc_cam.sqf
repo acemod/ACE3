@@ -65,12 +65,12 @@ GVAR(no_cams) sort true;
 [{
     GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
     {
-        if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {damage _x < 0.5}) then {
+        if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {_x getHitPointDamage "HitCamera" < 0.25}) then {
             GVAR(no_cams) pushBack _x;
         };
     } forEach GVAR(nearHuntIRs);
     {
-        if (((getPosVisual _x) select 2) <= 20 || {!(_x in GVAR(nearHuntIRs))} || {damage _x >= 0.5}) then {
+        if (((getPosVisual _x) select 2) <= 20 || {!(_x in GVAR(nearHuntIRs))} || {_x getHitPointDamage "HitCamera" >= 0.25}) then {
             GVAR(no_cams) deleteAt _forEachIndex;
             if (_forEachIndex < GVAR(cur_cam)) then {
                 GVAR(cur_cam) = GVAR(cur_cam) - 1;

@@ -20,6 +20,12 @@ class ACE_ModuleExplosive: ACE_Module {
             typeName = "BOOL";
             defaultValue = 1;
         };
+        class ExplodeOnDefuse {
+            displayName = "$STR_ACE_Explosive_ExplodeOnDefuse_DisplayName";
+            description = "$STR_ACE_Explosive_ExplodeOnDefuse_Description";
+            typeName = "BOOL";
+            defaultValue = 1;
+        };
     };
     class ModuleDescription {
         description = CSTRING(Module_Description);

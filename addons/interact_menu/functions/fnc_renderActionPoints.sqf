@@ -118,24 +118,35 @@ _fnc_renderSelfActions = {
     } forEach _classActions;
 };
 
+_fnc_renderZeusActions = {
+    {
+        _action = _x;
+        [_this, _action, [0.5, 0.5]] call FUNC(renderBaseMenu);
+    } forEach GVAR(ZeusActions);
+};
+
 
 GVAR(collectedActionPoints) resize 0;
 
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
-
-    if (vehicle ACE_player == ACE_player) then {
-        if (ACE_diagTime > GVAR(lastTimeSearchedActions) + 0.20) then {
-            // Once every 0.2 secs, collect nearby objects active and visible action points and render them
-            call _fnc_renderNearbyActions;
+    if (isNull curatorCamera) then {
+        if (vehicle ACE_player == ACE_player) then {
+            if (ACE_diagTime > GVAR(lastTimeSearchedActions) + 0.20) then {
+                // Once every 0.2 secs, collect nearby objects active and visible action points and render them
+                call _fnc_renderNearbyActions;
+            } else {
+                // The rest of the frames just draw the same action points rendered the last frame
+                call _fnc_renderLastFrameActions;
+            };
         } else {
-            // The rest of the frames just draw the same action points rendered the last frame
-            call _fnc_renderLastFrameActions;
+            // Render vehicle self actions when in vehicle
+            (vehicle ACE_player) call _fnc_renderSelfActions;
         };
     } else {
-        (vehicle ACE_player) call _fnc_renderSelfActions;
+        // Render zeus actions when zeus open
+        (getAssignedCuratorLogic player) call _fnc_renderZeusActions;
     };
-
 } else {
     ACE_player call _fnc_renderSelfActions;
 };

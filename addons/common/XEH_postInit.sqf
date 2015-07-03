@@ -6,7 +6,7 @@
 //Singe PFEH to handle execNextFrame and waitAndExec:
 [{
     private ["_entry"];
-    
+
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
         _entry = GVAR(waitAndExecArray) deleteAt 0;
@@ -55,6 +55,10 @@
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+
+if (isServer) then {
+    ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
+};
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
@@ -138,6 +142,15 @@ call FUNC(checkFiles);
     ["SettingsInitialized", []] call FUNC(localEvent);
 
 }, 0, [false]] call cba_fnc_addPerFrameHandler;
+
+
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
 
 
 /***************************************************************/
@@ -307,14 +320,6 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
         };
     }, 0, []] call cba_fnc_addPerFrameHandler;
 };
-
-["SettingsInitialized", {
-    [
-        GVAR(checkPBOsAction),
-        GVAR(checkPBOsCheckAll),
-        call compile GVAR(checkPBOsWhitelist)
-    ] call FUNC(checkPBOs)
-}] call FUNC(addEventHandler);
 
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];

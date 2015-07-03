@@ -49,6 +49,12 @@ class CfgVehicles {
         isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
+            class Enabled {
+                displayName = CSTRING(BFT_Enabled_DisplayName);
+                description = CSTRING(BFT_Enabled_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class Interval {
                 displayName = CSTRING(BFT_Interval_DisplayName);
                 description = CSTRING(BFT_Interval_Description);
