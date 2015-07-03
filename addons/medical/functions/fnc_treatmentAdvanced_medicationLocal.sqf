@@ -60,12 +60,12 @@ _heartRate = _target getvariable [QGVAR(heartRate), 70];
 if (alive _target) then {
     if (_heartRate > 0) then {
         if (_heartRate <= 45) then {
-            [_target, ((_hrIncreaseLow select 0) + random((_hrIncreaseLow select 1))), (_hrIncreaseLow select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
+            [_target, ((_hrIncreaseLow select 0) + random ((_hrIncreaseLow select 1) - (_hrIncreaseLow select 0))), (_hrIncreaseLow select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
         } else {
             if (_heartRate > 120) then {
-                [_target, ((_hrIncreaseHigh select 0) + random((_hrIncreaseHigh select 1))), (_hrIncreaseHigh select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
+                [_target, ((_hrIncreaseHigh select 0) + random ((_hrIncreaseHigh select 1) - (_hrIncreaseHigh select 0))), (_hrIncreaseHigh select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
             } else {
-                [_target, ((_hrIncreaseNorm select 0) + random((_hrIncreaseNorm select 1))), (_hrIncreaseNorm select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
+                [_target, ((_hrIncreaseNorm select 0) + random ((_hrIncreaseNorm select 1) - (_hrIncreaseNorm select 0))), (_hrIncreaseNorm select 2), _hrCallback] call FUNC(addHeartRateAdjustment);
             };
         };
     };

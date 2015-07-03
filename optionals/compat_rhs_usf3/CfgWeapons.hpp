@@ -5,7 +5,7 @@ class CfgWeapons
     class Rifle_Base_F;
     class srifle_EBR_F;
     class launch_O_Titan_F;
-    
+
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist=254.0;
         ACE_barrelLength=609.6;
@@ -51,11 +51,13 @@ class CfgWeapons
         ACE_twistDirection=0;
         ACE_barrelLength=508.0;
     };
+
     class hgun_ACPC2_F;
     class rhsusf_weap_m1911a1: hgun_ACPC2_F {
         ACE_barrelTwist=406.4;
         ACE_barrelLength=127.0;
     };
+
     class rhsusf_acc_sniper_base;
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
@@ -69,13 +71,50 @@ class CfgWeapons
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
     };
+
     class rhs_weap_fgm148 : launch_O_Titan_F {
         ace_javelin_enabled = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";
-         
+
         canLock = 0;
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
+
+    class rhsusf_opscore_01;
+    class rhsusf_cvc_helmet: rhsusf_opscore_01 {
+        ace_hearing_protection = 1;
+        ace_hearing_lowerVolume = 0.80;
+    };
+    class rhsusf_cvc_green_helmet: rhsusf_cvc_helmet {};
+    class rhsusf_cvc_ess: rhsusf_cvc_helmet {};
+    class rhsusf_cvc_green_ess: rhsusf_cvc_ess {};
+
+    class H_PilotHelmetHeli_B;
+    class H_CrewHelmetHeli_B;
+    class rhsusf_hgu56p: H_PilotHelmetHeli_B
+    {
+        ace_hearing_protection = 0.75;
+        ace_hearing_lowerVolume = 0.70;
+    };
+    class rhsusf_hgu56p_mask: H_CrewHelmetHeli_B
+    {
+        ace_hearing_protection = 0.75;
+        ace_hearing_lowerVolume = 0.70;
+    };
+
+    class H_HelmetB;
+    class RHS_jetpilot_usaf: H_HelmetB {
+        ace_hearing_protection = 1;
+        ace_hearing_lowerVolume = 0.80;
+    };
+
+    class rhsusf_ach_helmet_ocp;
+    class rhsusf_opscore_01: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.60;
+    };
+    class rhsusf_opscore_01_tan: rhsusf_opscore_01 {};
+    class rhsusf_opscore_03_ocp: rhsusf_opscore_01 {};
 };

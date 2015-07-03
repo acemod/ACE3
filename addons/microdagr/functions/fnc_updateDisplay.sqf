@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_playerPos2d", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox", "_yearString", "_monthSring", "_dayString"];
+private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_playerPos2d", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox", "_yearString", "_monthSring", "_dayString", "_daylight"];
 
 disableSerialization;
 _display = displayNull;
@@ -25,6 +25,10 @@ if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
     _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
 };
 if (isNull _display) exitWith {ERROR("No Display");};
+
+//Fade "shell" at night
+_daylight = [] call EFUNC(common,ambientBrightness);
+(_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
 (_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
 
