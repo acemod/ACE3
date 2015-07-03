@@ -83,7 +83,7 @@
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
             <Polish>Blue Force Tracking</Polish>
-            <Spanish>Seguimiento de fuerzas amigas</Spanish>
+            <Spanish>Blue Force Tracking</Spanish>
             <German>Blue Force Tracking</German>
             <Czech>Blue Force Tracking</Czech>
             <Portuguese>Rastreio de forças azuis</Portuguese>
@@ -92,11 +92,13 @@
             <English>BFT Enable</English>
             <Portuguese>RFA ativo</Portuguese>
             <Polish>Aktywuj BFT</Polish>
+            <Spanish>Activar BFT</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
             <Portuguese>Ativa Rastreio de Forças Azuis. Padrão: Não</Portuguese>
             <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
+            <Spanish>Activar Blue Force Tracking. Por defecto: No</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
