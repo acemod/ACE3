@@ -7,7 +7,7 @@
  * 1: Class <NUMBER> <OPTIONAL>
  *
  * ReturnValue:
- * Is in of medic class <BOOL>
+ * Is in of engineer class <BOOL>
  *
  * Public: Yes
  */

@@ -35,7 +35,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = "Anyone"; value = 0; };
-                    class Medic { name = "Engineers only"; value = 1; default = 1; };
+                    class Engineer { name = "Engineers only"; value = 1; default = 1; };
                     class Special { name = "Repair Specialists only"; value = 2; };
                 };
             };
@@ -45,7 +45,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = "Anyone"; value = 0; default = 1; };
-                    class Medic { name = "Engineers only"; value = 1; };
+                    class Engineer { name = "Engineers only"; value = 1; };
                     class Special { name = "Repair Specialists only"; value = 2; };
                 };
             };
@@ -174,7 +174,7 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Truck_02_medical_base_F: Truck_02_box_base_F {
+    class Truck_02_engineeral_base_F: Truck_02_box_base_F {
         GVAR(canRepair) = 0;
     };
 
