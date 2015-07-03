@@ -28,6 +28,4 @@ PREP(unitSide);
 PREP(unitVar);
 PREP(viewDistance);
 
-GVAR(penPos) = [-10e5,-10e5,0];
-
 ADDON = true;
