@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Vector">
         <Key ID="STR_ACE_Vector_VectorName">
-            <English>Vector IV</English>
-            <German>Vector IV</German>
-            <Spanish>Vector IV</Spanish>
-            <French>Vector IV</French>
-            <Polish>Vector IV</Polish>
-            <Czech>Vector IV</Czech>
-            <Italian>Vector IV</Italian>
-            <Hungarian>Vector IV</Hungarian>
-            <Portuguese>Vector IV</Portuguese>
-            <Russian>Vector IV</Russian>
+            <English>Vector 21</English>
+            <German>Vector 21</German>
+            <Spanish>Vector 21</Spanish>
+            <French>Vector 21</French>
+            <Polish>Vector 21</Polish>
+            <Czech>Vector 21</Czech>
+            <Italian>Vector 21</Italian>
+            <Hungarian>Vector 21</Hungarian>
+            <Portuguese>Vector 21</Portuguese>
+            <Russian>Vector 21</Russian>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -23,7 +22,7 @@
             <Czech>Dálkoměr</Czech>
             <Italian>Telemetro</Italian>
             <Hungarian>Távolságmérő</Hungarian>
-            <Portuguese>Telêmetro</Portuguese>
+            <Portuguese>Medidor de Distância</Portuguese>
             <Russian>Дальномер</Russian>
         </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
@@ -45,7 +44,7 @@
             <French>Vector - Touche Distance</French>
             <Polish>Vector - Odległość</Polish>
             <Czech>Vector - Zobrazit vzdálenost</Czech>
-            <Italian>Vecto - Tasto Distanza</Italian>
+            <Italian>Vector - Tasto Distanza</Italian>
             <Portuguese>Vector - Tecla de Distância</Portuguese>
             <Hungarian>Vector - Távolság gomb</Hungarian>
             <Russian>Vector – Расстояние</Russian>

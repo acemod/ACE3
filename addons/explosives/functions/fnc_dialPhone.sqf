@@ -15,7 +15,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_arr", "_ran", "_i","_speedDial"];
+private ["_arr", "_ran", "_i"];
 EXPLODE_2_PVT(_this,_unit,_code);
 if (_unit getVariable [QGVAR(Dialing),false]) exitWith {};
 if !(alive _unit) exitWith {};

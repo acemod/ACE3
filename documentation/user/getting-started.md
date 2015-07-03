@@ -1,20 +1,16 @@
 ---
 layout: wiki
-title: Getting Started
+title: Getting started
+description: Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things like the medical system, or how to adjust your scope.
 group: user
 order: 0
 parent: wiki
 ---
 
+Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players and mission makers understand what's available to them.
 
-**This page will get updated soon.**
+- You don't know where to begin your ACE3 journey? [**Check out ACE3 features**](http://ace3mod.com/wiki/feature/)
 
+- You are a mission maker but you don't know what ACE3 have to offer? [**We have some documentation for you**](http://ace3mod.com/wiki/missionmaker/)
 
-## Table of Contents
-
-  1. [xx](#xx)
-  2. [yy](#yy)
-  3. [zz](#zz)
-
-
-## What ACE3 has to offer
+- Are you searching for ACE3 classnames ? [**Here they are**](http://ace3mod.com/wiki/missionmaker/classnames.html)

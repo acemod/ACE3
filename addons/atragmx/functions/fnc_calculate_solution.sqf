@@ -37,7 +37,7 @@
  * 8: Spin drift (MOA) <NUMBER>
  *
  * Example:
- * call ace_atragmx_calculate_target_range_assist
+ * call ace_atragmx_calculate_solution
  *
  * Public: No
  */
@@ -106,7 +106,7 @@ private ["_wind1", "_wind2", "_windDrift"];
 _wind1 = [cos(270 - _windDirection * 30) * _windSpeed1, sin(270 - _windDirection * 30) * _windSpeed1, 0];
 _wind2 = [cos(270 - _windDirection * 30) * _windSpeed2, sin(270 - _windDirection * 30) * _windSpeed2, 0];
 _windDrift = 0;
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
 };
 
@@ -117,7 +117,7 @@ _speedAverage = 0;
 
 private ["_eoetvoesMultiplier"];
 _eoetvoesMultiplier = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,EoetvoesEnabled), false]) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _eoetvoesMultiplier = 2 * (0.0000729 * _muzzleVelocity / -9.80665) * cos(_latitude) * sin(_directionOfFire);
 };
 
@@ -142,14 +142,12 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        if (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false]) then {
-            _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
-                parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
-            } else {
-                ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation))
-            };
-            _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
+        _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
+            parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
+        } else {
+            ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation))
         };
+        _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
     };
@@ -177,23 +175,20 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
             _kineticEnergy = _kineticEnergy * 0.737562149;
             
             if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {
-                if (missionNamespace getVariable [QEGVAR(advanced_ballistics,CoriolisEnabled), false]) then {
-                    _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
-                    _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
-                    _windage1 = _windage1 + _horizontalCoriolis;
-                    _windage2 = _windage2 + _horizontalCoriolis;
-                };
-                if (missionNamespace getVariable [QEGVAR(advanced_ballistics,EoetvoesEnabled), false]) then {
-                    _verticalDeflection = (_bulletPos select 2) * _eoetvoesMultiplier;
-                    _verticalCoriolis = - atan(_verticalDeflection / (_bulletPos select 1));
-                    _elevation = _elevation + _verticalCoriolis;
-                };
-                if (missionNamespace getVariable [QEGVAR(advanced_ballistics,SpinDriftEnabled), false]) then {
-                    _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
-                    _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-                    _windage1 = _windage1 + _spinDrift;
-                    _windage2 = _windage2 + _spinDrift;
-                };
+                // Coriolis
+                _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
+                _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
+                _windage1 = _windage1 + _horizontalCoriolis;
+                _windage2 = _windage2 + _horizontalCoriolis;
+                // Eoetvoes
+                _verticalDeflection = (_bulletPos select 2) * _eoetvoesMultiplier;
+                _verticalCoriolis = - atan(_verticalDeflection / (_bulletPos select 1));
+                _elevation = _elevation + _verticalCoriolis;
+                // Spin drift
+                _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
+                _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
+                _windage1 = _windage1 + _spinDrift;
+                _windage2 = _windage2 + _spinDrift;
             };
             
             GVAR(rangeCardData) set [_n, [_range, _elevation * 60, [_windage1 * 60, _windage2 * 60], _lead, _TOF, _bulletSpeed, _kineticEnergy]];
@@ -217,23 +212,20 @@ _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
 _kineticEnergy = _kineticEnergy * 0.737562149;
 
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,CoriolisEnabled), false]) then {
-        _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
-        _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
-        _windage1 = _windage1 + _horizontalCoriolis;
-        _windage2 = _windage2 + _horizontalCoriolis;
-    };
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,EoetvoesEnabled), false]) then {
-        _verticalDeflection = (_bulletPos select 2) * _eoetvoesMultiplier;
-        _verticalCoriolis = - atan(_verticalDeflection / (_bulletPos select 1));
-        _elevation = _elevation + _verticalCoriolis;
-    };
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,SpinDriftEnabled), false]) then {
-        _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
-        _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-        _windage1 = _windage1 + _spinDrift;
-        _windage2 = _windage2 + _spinDrift;
-    };
+    // Coriolis
+    _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
+    _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
+    _windage1 = _windage1 + _horizontalCoriolis;
+    _windage2 = _windage2 + _horizontalCoriolis;
+    // Eoetvoes
+    _verticalDeflection = (_bulletPos select 2) * _eoetvoesMultiplier;
+    _verticalCoriolis = - atan(_verticalDeflection / (_bulletPos select 1));
+    _elevation = _elevation + _verticalCoriolis;
+    // Spin drift
+    _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
+    _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
+    _windage1 = _windage1 + _spinDrift;
+    _windage2 = _windage2 + _spinDrift;
 };
 
 [_elevation * 60, [_windage1 * 60, _windage2 * 60], _lead, _TOF, _bulletSpeed, _kineticEnergy, _verticalCoriolis * 60, _horizontalCoriolis * 60, _spinDrift * 60]

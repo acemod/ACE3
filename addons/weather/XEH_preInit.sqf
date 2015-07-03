@@ -5,23 +5,26 @@ ADDON = false;
 
 PREP(calculateAirDensity);
 PREP(calculateBarometricPressure);
+PREP(calculateDensityAltitude);
+PREP(calculateDewPoint);
+PREP(calculateHeatIndex);
+PREP(calculateRoughnessLength);
+PREP(calculateSpeedOfSound);
+PREP(calculateTemperatureAtHeight);
+PREP(calculateWetBulb);
+PREP(calculateWindChill);
+PREP(calculateWindSpeed);
 PREP(displayWindInfo);
 PREP(getMapData);
 PREP(getWind);
+PREP(initModuleSettings);
 PREP(initWind);
 PREP(serverController);
+PREP(updateAceWeather);
 PREP(updateHumidity);
 PREP(updateRain);
 PREP(updateTemperature);
 PREP(updateWind);
-
-// Control server side weather propagation
-GVAR(enableServerController) = true;
-
-// Control client side weather effects
-GVAR(syncRain) = true; 
-GVAR(syncWind) = true; // Wind, Gusts, Waves
-GVAR(syncMisc) = true; // Lightnings, Rainbow, Fog
 
 // Make sure this data is read before client/server postInit
 call FUNC(getMapData);

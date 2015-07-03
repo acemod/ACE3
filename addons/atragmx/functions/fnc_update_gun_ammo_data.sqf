@@ -30,9 +30,9 @@ if (GVAR(currentUnit) != 2) then {
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 / 2.54 * 1000) / 1000)];
 } else {
-    ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) * 1000) / 1000)];
+    ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 * 1000) / 1000)];
 };
-if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (missionNamespace getVariable [QEGVAR(advanced_ballistics,AdvancedAirDragEnabled), false])) then {
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     ctrlSetText [120030, Str(Round((GVAR(workingMemory) select 15) * 1000) / 1000)];
 } else {
     ctrlSetText [120030, Str(Round((GVAR(workingMemory) select 4) * -1000 * 1000) / 1000)];

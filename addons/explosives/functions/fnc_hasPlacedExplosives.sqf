@@ -14,4 +14,6 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+// IGNORE_PRIVATE_WARNING(_hasPlacedExplosives);
+
 (count (_this call FUNC(getPlacedExplosives)) > 0)

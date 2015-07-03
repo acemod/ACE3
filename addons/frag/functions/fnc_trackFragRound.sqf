@@ -1,6 +1,6 @@
 //fnc_trackFragRound.sqf
 #include "script_component.hpp"
-private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+private ["_params", "_round", "_lastPos", "_lastVel", "_type", "_time", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 _params = _this select 0;
 _round = _params select 0;
 _lastPos = _params select 1;
@@ -13,13 +13,13 @@ _foundObjectHPIds = _params select 8;
 
 if (!alive _round) then {
     [_this select 1] call cba_fnc_removePerFrameHandler;
-    if(_time != time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
+    if(_time != ACE_time && {_round in GVAR(trackedObjects)} && {!(_round in GVAR(blackList))}) then {
         GVAR(trackedObjects) = GVAR(trackedObjects) - [_round];
-        _skip = getNumber (configFile >> "CfgAmmo" >> _type >> "ACE_FRAG_SKIP");
+        _skip = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip));
         if(_skip == 0) then {
             _explosive = getNumber (configFile >> "CfgAmmo" >> _type >> "explosive");
             _indirectRange = getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange");
-            _force = getNumber (configFile >> "CfgAmmo" >> _type >> "ACE_FRAG_FORCE");
+            _force = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force));
             _fragPower = getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt(_indirectRange));
             if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
                 [QGVAR(frag_eh), _params] call ace_common_fnc_serverEvent;

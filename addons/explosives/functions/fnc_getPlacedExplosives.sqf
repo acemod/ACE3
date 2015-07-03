@@ -16,6 +16,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+// IGNORE_PRIVATE_WARNING(_allExplosives,_deadmanExplosives);
+
 private ["_unit", "_clackerList", "_adjustedList", "_list", "_filter"];
 _unit = _this select 0;
 _filter = nil;

@@ -3,18 +3,20 @@
     <Package name="FCS">
         <Key ID="STR_ACE_FCS_LaseTarget">
             <English>Lase Target / Measure Distance</English>
-            <German>Ziel anlasern / Entfernung Messen</German>
+            <German>Ziel anlasern / Entfernung messen</German>
             <French>Télémétrer la cible</French>
             <Polish>Naświetl cel / Zmierz odległość</Polish>
             <Czech>Označit cíl / Změřit vzdálenost</Czech>
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
             <Russian>Подсветить цель / Замерить расстояние</Russian>
             <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+            <Italian>Misura la distanza</Italian>
+            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
             <German>Haltepunkt</German>
-            <Spanish>Fijado a</Spanish>
+            <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
             <French>Zéroté à</French>

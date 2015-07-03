@@ -56,7 +56,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 };
             } forEach [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
             TRACE_1("Line of sight count (out of 4)",_losCount);
-            if (_losCount == 0) then {
+            if (_losCount <= 1) then {
                 _strength = _strength / 10;
             };
 
@@ -103,7 +103,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                 GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
-                //PARTIALRECOVERY - start decreasing effect over time
+                //PARTIALRECOVERY - start decreasing effect over ACE_time
                 [{
                     PARAMS_1(_strength);
                     GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];

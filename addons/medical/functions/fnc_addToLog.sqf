@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog"];
+private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
 _unit = _this select 0;
 _type = _this select 1;
 _message = _this select 2;
@@ -47,7 +47,7 @@ if (count _log >= 8) then {
 _log pushback [_message,_moment,_type, _arguments];
 
 _unit setvariable [_logVarName, _log, true];
-["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call ace_common_fnc_localEvent;
+["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
 
 _logs = _unit getvariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {

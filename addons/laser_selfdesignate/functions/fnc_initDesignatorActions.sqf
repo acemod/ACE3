@@ -31,7 +31,7 @@ GVAR(initializedClasses) = _initializedClasses;
         // e.g.: _vehicle setVariable [format ["%1_%2", QGVAR(active),  _x], false];
 
         // Add actions
-        _onAction = [QGVAR(LaserOn), localize "STR_ACE_Laser_SelfDesignate_DesignatorOn", "",
+        _onAction = [QGVAR(LaserOn), localize LSTRING(DesignatorOn), "",
         {
             // Statement
             _this call FUNC(laserHudDesignateOn)
@@ -41,7 +41,7 @@ GVAR(initializedClasses) = _initializedClasses;
             !GVAR(active) && {[ACE_player] call FUNC(unitTurretHasDesignator)}
         }] call EFUNC(interact_menu,createAction);
 
-        _offAction = [QGVAR(LaserOff), localize "STR_ACE_Laser_SelfDesignate_DesignatorOff", "",
+        _offAction = [QGVAR(LaserOff), localize LSTRING(DesignatorOff), "",
         {
             // Statement
             _this call FUNC(laserHudDesignateOff)

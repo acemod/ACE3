@@ -3,17 +3,25 @@
 
 if (!hasInterface) exitWith {};
 
-//Setup text/shadow color matrix
+GVAR(cachedBuildingTypes) = [];
+GVAR(cachedBuildingActionPairs) = [];
+
+GVAR(ParsedTextCached) = [];
+
+//Setup text/shadow/size/color settings matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_2(_name,_value);
-    if ((_name == QGVAR(colorTextMax)) || {_name == QGVAR(colorTextMin)} || {_name == QGVAR(colorShadowMax)} || {_name == QGVAR(colorShadowMin)}) then {
+    PARAMS_1(_name);
+    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);
 
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
+
+//Add Actions to Houses:
+["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
 
 // This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
@@ -26,24 +34,18 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3", QGVAR(InteractKey), (localize "STR_ACE_Interact_Menu_InteractKey"),
+["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [0] call FUNC(keyDown)
-},
-{[0] call FUNC(keyUp)},
+},{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3", QGVAR(SelfInteractKey), (localize "STR_ACE_Interact_Menu_SelfInteractKey"),
+["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [1] call FUNC(keyDown)
-},
-{[1] call FUNC(keyUp)},
+},{[1,false] call FUNC(keyUp)},
 [219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
@@ -57,8 +59,26 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 
     GVAR(actionSelected) = false;
-    [] call FUNC(keyUp);
+    [GVAR(openedMenuType), false] call FUNC(keyUp);
 }] call EFUNC(common,addEventhandler);
 
 // disable firing while the interact menu is is is opened
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);
+
+// background options
+["interactMenuOpened", {
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
+}] call EFUNC(common,addEventHandler);
+["interactMenuClosed", {
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+}] call EFUNC(common,addEventHandler);
+
+// Let key work with zeus open (not perfect, enables all added hotkeys in zeus interface rather than only menu)
+["zeusDisplayChanged",{
+    if (_this select 1) then {
+        (finddisplay 312) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+        (finddisplay 312) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+    };
+}] call EFUNC(common,addEventHandler);

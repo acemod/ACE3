@@ -7,7 +7,7 @@
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
  *     0: Explosive <OBJECT>
- *     1: Fuse time <NUMBER>
+ *     1: Fuse ACE_time <NUMBER>
  *
  * Return Value:
  * None
@@ -19,18 +19,12 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_result", "_ignoreRange", "_helper"];
+private ["_result", "_ignoreRange", "_helpers", "_pos"];
 EXPLODE_3_PVT(_this,_unit,_range,_item);
 _ignoreRange = (_range == -1);
 _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {false};
-
-_helper = (attachedTo (_item select 0));
-if (!isNull(_helper)) then {
-    detach (_item select 0);
-    deleteVehicle _helper;
-};
 
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];
@@ -46,10 +40,11 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhe
     };
 };
 [{
-        _explosive = _this;
-        if (!isNull _explosive) then {
-            _explosive setDamage 1;
-        };
+    private ["_explosive"];
+    _explosive = _this;
+    if (!isNull _explosive) then {
+        _explosive setDamage 1;
+    };
 }, _item select 0, _item select 1, 0] call EFUNC(common,waitAndExecute);
 
 _result

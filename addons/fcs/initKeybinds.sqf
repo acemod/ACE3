@@ -1,6 +1,6 @@
 // by commy2
 
-["ACE3", QGVAR(lazeTarget), localize "STR_ACE_FCS_LaseTarget",
+["ACE3 Vehicles", QGVAR(lazeTarget), localize LSTRING(LaseTarget),
 {
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -30,7 +30,7 @@
 },
 [15, [false, false, false]], false] call cba_fnc_addKeybind;  //Tab Key
 
-["ACE3", QGVAR(adjustRangeUp), localize "STR_ACE_FCS_AdjustRangeUp",
+["ACE3 Vehicles", QGVAR(adjustRangeUp), localize LSTRING(AdjustRangeUp),
 {
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -44,7 +44,7 @@
 {false},
 [201, [false, false, false]], false] call cba_fnc_addKeybind;  //PageUp Key
 
-["ACE3", QGVAR(adjustRangDown), localize "STR_ACE_FCS_AdjustRangeDown",
+["ACE3 Vehicles", QGVAR(adjustRangDown), localize LSTRING(AdjustRangeDown),
 {
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};

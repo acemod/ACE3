@@ -1,8 +1,6 @@
 #define COMPONENT advanced_ballistics
 #include "\z\ace\addons\main\script_mod.hpp"
 
-#define USE_ADVANCEDBALLISTICS_DLL
-
 #ifdef DEBUG_ENABLED_ADVANCEDBALLISTICS
     #define DEBUG_MODE_FULL
 #endif
@@ -23,6 +21,5 @@
 #define SPECIFIC_GAS_CONSTANT_DRY_AIR 287.058
 #define STD_AIR_DENSITY_ICAO 1.22498
 #define STD_AIR_DENSITY_ASM 1.20885
-#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather,currentTemperature) - 0.0065 * (h))
 
 #define EXTENSION_REQUIRED_VERSION "1.0"

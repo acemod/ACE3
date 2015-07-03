@@ -18,8 +18,6 @@
 
 private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_value", "_compiledConfigEntry"];
 
-_compiledConfig = "
-";
 {
      /*_settingData = [
         _name,
@@ -55,13 +53,12 @@ class %1 {
     force = 1;
 };", _name, _value, format['"%1"', _typeName]];
 
-        //clipboard seems to be getting cuttoff, so do a backup dump to rpt:
-        diag_log text _compiledConfigEntry;
-        
-        _compiledConfig = _compiledConfig + _compiledConfigEntry;
+        "ace_clipboard" callExtension _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
 
-copyToClipboard format["%1",_compiledConfig];
+ "ace_clipboard" callExtension "--COMPLETE--";
 
-["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
+[LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);
+
+

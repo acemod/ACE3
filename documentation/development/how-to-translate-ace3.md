@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: How to translate ACE3
+description: This page describes in short how you can help translating ACE3 into your language. 
 group: development
 parent: wiki
 order: 20
@@ -24,3 +25,7 @@ This page describes in short how you can help translating ACE3 into your languag
 
 (The last three steps require some git knowledge, but there are a lot of tutorials out there)
 [GitHub for Windows help](https://windows.github.com/help.html)
+
+
+#### Community Translation Guides
+**Spanish:** [https://gist.github.com/Legolasindar/bf8a3b09cb835f72501f](https://gist.github.com/Legolasindar/bf8a3b09cb835f72501f)

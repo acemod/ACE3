@@ -11,10 +11,11 @@
             <French>Agrandir la taille d'affichage de l'inventaire</French>
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
             <Italian>Ingrandisci il menù inventario</Italian>
+            <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
-            <German>Im Regelfall wird die Inventargröße durch die Größe der Nutzeroberfläche bestimmt. Diese Einstellung erlaubt es das Inventar unter Ausschluss der Schriftgröße zu vergrößern. Dadurch können mehr Gegenstände angezeigt werden.</German>
+            <German>Im Regelfall wird die Inventargröße durch die Größe der Nutzeroberfläche bestimmt. Diese Einstellung erlaubt es, das Inventar unter Ausschluss der Schriftgröße zu vergrößern. Dadurch können mehr Gegenstände angezeigt werden.</German>
             <Spanish>Normalmente la pantalla de inventario se escala por el tamaño de la interfaz de usuario. Esto permite ampliar el tamaño de la interfaz de usuario de inventario, pero no aumenta el tamaño de fuente, permitiendo mostrar más filas.</Spanish>
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
@@ -22,6 +23,7 @@
             <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
+            <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
         </Key>
     </Package>
 </Project>

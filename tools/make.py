@@ -51,18 +51,29 @@ import traceback
 import time
 import re
 
+from tempfile import mkstemp
+
 if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
+project = "@ace"
+ACE_VERSION = "3.0.0"
+arma3tools_path = ""
 work_drive = ""
 module_root = ""
+make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "ace_preAlpha"
+key_name = "ace"
 key = ""
 dssignfile = ""
+prefix = "ace"
+pbo_name_prefix = "ace_"
+signature_blacklist = ["ace_server.pbo"]
+importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
+versionFiles = ["README.md", "mod.cpp"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -101,6 +112,8 @@ def  get_directory_hash(directory):
         traceback.print_exc()
         return -2
 
+    retVal = directory_hash.hexdigest()
+    #print_yellow("Hash Value for {} is {}".format(directory,retVal))
     return directory_hash.hexdigest()
 
 # Copyright (c) André Burgaud
@@ -280,7 +293,7 @@ def color(color):
 
 def print_error(msg):
     color("red")
-    print ("ERROR: " + msg)
+    print ("ERROR: {}".format(msg))
     color("reset")
 
 def print_green(msg):
@@ -302,21 +315,15 @@ def print_yellow(msg):
 def copy_important_files(source_dir,destination_dir):
 
     originalDir = os.getcwd()
-    importantFiles = ["mod.cpp",
-    "README.md",
-    "AUTHORS.txt",
-    "LICENSE",
-    "logo_ace3_ca.paa"
-    ]
-
-    print_yellow ("source_dir: " + source_dir)
-    print_yellow("destination_dir: " + destination_dir)
 
     #copy importantFiles
     try:
-        print_blue("\nSearching for important files in " + source_dir)
+        print_blue("\nSearching for important files in {}".format(source_dir))
+        print("Source_dir: {}".format(source_dir))
+        print("Destination_dir: {}".format(destination_dir))
+
         for file in importantFiles:
-            print_green("Copying file => " + os.path.join(source_dir,file))
+            print_green("Copying file => {}".format(os.path.join(source_dir,file)))
             shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
     except:
         print_error("COPYING IMPORTANT FILES.")
@@ -325,14 +332,14 @@ def copy_important_files(source_dir,destination_dir):
     #copy all extension dlls
     try:
         os.chdir(os.path.join(source_dir))
-        print_blue("\nSearching for DLLs in " + os.getcwd())
+        print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
         filenames = glob.glob("*.dll")
 
         if not filenames:
             print ("Empty SET")
 
         for dll in filenames:
-            print_green("Copying dll => " + os.path.join(source_dir,dll))
+            print_green("Copying dll => {}".format(os.path.join(source_dir,dll)))
             if os.path.isfile(dll):
                 shutil.copyfile(os.path.join(source_dir,dll),os.path.join(destination_dir,dll))
     except:
@@ -350,21 +357,21 @@ def copy_optionals_for_building(mod,pbos):
     try:
 
         #special server.pbo processing
-        files = glob.glob(os.path.join(release_dir, "@ace","optionals","*.pbo"))
+        files = glob.glob(os.path.join(release_dir, project, "optionals", "*.pbo"))
         for file in files:
             file_name = os.path.basename(file)
-            #print ("Adding the following file: " + file_name)
+            #print ("Adding the following file: {}".format(file_name))
             pbos.append(file_name)
-            pbo_path = os.path.join(release_dir, "@ace","optionals",file_name)
+            pbo_path = os.path.join(release_dir, project, "optionals", file_name)
             sigFile_name = file_name +"."+ key_name + ".bisign"
-            sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
+            sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
             if (os.path.isfile(pbo_path)):
-                print("Moving " + pbo_path + " for processing.")
-                shutil.move(pbo_path, os.path.join(release_dir,"@ace","addons",file_name))
+                print("Moving {} for processing.".format(pbo_path))
+                shutil.move(pbo_path, os.path.join(release_dir, project, "addons", file_name))
 
             if (os.path.isfile(sig_path)):
-                #print("Moving " + sig_path + " for processing.")
-                shutil.move(sig_path, os.path.join(release_dir,"@ace","addons",sigFile_name))
+                #print("Moving {} for processing.".format(sig_path))
+                shutil.move(sig_path, os.path.join(release_dir, project, "addons", sigFile_name))
     except:
         print_error("Error in moving")
         raise
@@ -378,14 +385,14 @@ def copy_optionals_for_building(mod,pbos):
             #userconfig requires special handling since it is not a PBO source folder.
             #CfgConvert fails to build server.pbo if userconfig is not found in P:\
             if (dir_name == "userconfig"):
-                if (os.path.exists(os.path.join(release_dir, "@ace","optionals",dir_name))):
-                    shutil.rmtree(os.path.join(release_dir, "@ace","optionals",dir_name), True)
-                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, "@ace","optionals",dir_name))
+                if (os.path.exists(os.path.join(release_dir, project, "optionals", dir_name))):
+                    shutil.rmtree(os.path.join(release_dir, project, "optionals", dir_name), True)
+                shutil.copytree(os.path.join(optionals_root,dir_name), os.path.join(release_dir, project, "optionals", dir_name))
                 destination = os.path.join(work_drive,dir_name)
             else:
                 destination = os.path.join(module_root,dir_name)
 
-            print("Temporarily copying " + os.path.join(optionals_root,dir_name) + " => " + destination + " for building.")
+            print("Temporarily copying {} => {} for building.".format(os.path.join(optionals_root,dir_name),destination))
             if (os.path.exists(destination)):
                 shutil.rmtree(destination, True)
             shutil.copytree(os.path.join(optionals_root,dir_name), destination)
@@ -406,25 +413,25 @@ def cleanup_optionals(mod):
             else:
                 destination = os.path.join(module_root,dir_name)
 
-            print("Cleaning " + destination)
+            print("Cleaning {}".format(destination))
 
             try:
-                file_name = "ace_{}.pbo".format(dir_name)
-                src_file_path = os.path.join(release_dir, "@ace","addons",file_name)
-                dst_file_path = os.path.join(release_dir, "@ace","optionals",file_name)
+                file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
+                src_file_path = os.path.join(release_dir, project, "addons", file_name)
+                dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
 
-                sigFile_name = file_name +"."+ key_name + ".bisign"
-                src_sig_path = os.path.join(release_dir, "@ace","addons",sigFile_name)
-                dst_sig_path = os.path.join(release_dir, "@ace","optionals",sigFile_name)
+                sigFile_name = "{}.{}.bisign".format(file_name,key_name)
+                src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
+                dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
 
                 if (os.path.isfile(src_file_path)):
-                    #print("Preserving " + file_name)
+                    #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
-                    #print("Preserving " + sigFile_name)
+                    #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
-                print_error(file_name + " already exists")
+                print_error("{} already exists".format(file_name))
                 continue
             shutil.rmtree(destination)
 
@@ -434,7 +441,7 @@ def cleanup_optionals(mod):
 
 
 def purge(dir, pattern, friendlyPattern="files"):
-    print_green("Deleting " + friendlyPattern + " files from directory: " + dir)
+    print_green("Deleting {} files from directory: {}".format(friendlyPattern,dir))
     for f in os.listdir(dir):
         if re.search(pattern, f):
             os.remove(os.path.join(dir, f))
@@ -443,27 +450,323 @@ def purge(dir, pattern, friendlyPattern="files"):
 def build_signature_file(file_name):
     global key
     global dssignfile
-    print("Signing with " + key + ".")
-    ret = subprocess.call([dssignfile, key, file_name])
+    global signature_blacklist
+    ret = 0
+    baseFile = os.path.basename(file_name)
+    #print_yellow("Sig_fileName: {}".format(baseFile))
+    if not (baseFile in signature_blacklist):
+        print("Signing with {}.".format(key))
+        ret = subprocess.call([dssignfile, key, file_name])
     if ret == 0:
         return True
     else:
         return False
+
+
+def check_for_obsolete_pbos(addonspath, file):
+    module = file[len(pbo_name_prefix):-4]
+    if not os.path.exists(os.path.join(addonspath, module)):
+        return True
+    return False
+
+
+def backup_config(module):
+    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+    global work_drive
+    global prefix
+
+    try:
+        configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+        if os.path.isfile(configpath):
+            shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
+        else:
+            print_error("$PBOPREFIX$ Does not exist for module: {}.".format(module))
+
+    except:
+        print_error("Error creating backup of $PBOPREFIX$ for module {}.".format(module))
+
+    try:
+        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
+        os.chdir(work_drive)
+    except:
+        print_error("Error creating backup of config.cpp for module {}.".format(module))
+
+    return True
+
+def convert_config(module):
+    try:
+        global work_drive
+        global prefix
+        global arma3tools_path
+
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
+            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
+            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
+            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+    except Exception as e:
+        print_error("Exception from convert_config=>CfgConvert: {}".format(e))
+        return False
+
+    return True
+
+
+def addon_restore(modulePath):
+    #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
+    #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
+    try:
+        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
+            os.remove(os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "config.backup")):
+            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "config.bin")):
+            os.remove(os.path.join(modulePath, "config.bin"))
+        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
+            os.remove(os.path.join(modulePath, "texHeaders.bin"))
+        if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
+            if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
+                os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
+            os.rename(os.path.join(modulePath, "$PBOPREFIX$.backup"), os.path.join(modulePath, "$PBOPREFIX$"))
+    except:
+        print_yellow("Some error occurred. Check your addon folder {} for integrity".format(modulePath))
+
+    return True
+
+
+def get_ace_version():
+    global ACE_VERSION
+    versionStamp = ACE_VERSION
+    #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
+
+    try:
+        scriptModPath = os.path.join(work_drive, prefix, "main\script_mod.hpp")
+
+        if os.path.isfile(scriptModPath):
+            f = open(scriptModPath, "r")
+            hpptext = f.read()
+            f.close()
+
+            if hpptext:
+                majorText = re.search(r"#define MAJOR (.*\b)", hpptext).group(1)
+                minorText = re.search(r"#define MINOR (.*\b)", hpptext).group(1)
+                patchlvlText = re.search(r"#define PATCHLVL (.*\b)", hpptext).group(1)
+                buildText = re.search(r"#define BUILD (.*\b)", hpptext).group(1)
+
+                if majorText:
+                    versionStamp = "{major}.{minor}.{patchlvl}.{build}".format(major=majorText,minor=minorText,patchlvl=patchlvlText,build=buildText)
+
+        else:
+            print_error("A Critical file seems to be missing or inaccessible: {}".format(scriptModPath))
+            raise FileNotFoundError("File Not Found: {}".format(scriptModPath))
+
+    except Exception as e:
+        print_error("Get_Ace_Version error: {}".format(e))
+        print_error("Check the integrity of the file: {}".format(scriptModPath))
+        versionStamp = ACE_VERSION
+        print_error("Resetting to the default version stamp: {}".format(versionStamp))
+        input("Press Enter to continue...")
+        print("Resuming build...")
+
+    print_yellow("{} VERSION set to {}".format(project.lstrip("@").upper(),versionStamp))
+    ACE_VERSION = versionStamp
+    return ACE_VERSION
+
+
+def replace_file(filePath, oldSubstring, newSubstring):
+    #Create temp file
+    fh, absPath = mkstemp()
+    with open(absPath,'w') as newFile:
+        with open(filePath) as oldFile:
+            for line in oldFile:
+                newFile.write(line.replace(oldSubstring, newSubstring))
+    newFile.close()
+    #Remove original file
+    os.remove(filePath)
+    #Move new file
+    shutil.move(absPath, filePath)
+
+
+def set_version_in_files():
+    newVersion = ACE_VERSION # MAJOR.MINOR.PATCH.BUILD
+    newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
+
+    # Regex patterns
+    pattern = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH.BUILD
+    patternShort = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH
+
+    # Change versions in files containing version
+    for i in versionFiles:
+        filePath = os.path.join(module_root_parent, i)
+
+        try:
+            # Save the file contents to a variable if the file exists
+            if os.path.isfile(filePath):
+                f = open(filePath, "r+")
+                fileText = f.read()
+                f.close()
+
+                if fileText:
+                    # Search and save version stamp, search short if long not found
+                    versionFound = re.findall(pattern, fileText)
+                    if not versionFound:
+                        versionFound = re.findall(patternShort, fileText)
+
+                    # Replace version stamp if any of the new version parts is higher than the one found
+                    if versionFound:
+                        # First item in the list findall returns
+                        versionFound = versionFound[0]
+
+                        # Use the same version length as the one found
+                        if len(versionFound) == len(newVersion):
+                            newVersionUsed = newVersion
+                        if len(versionFound) == len(newVersionShort):
+                            newVersionUsed = newVersionShort
+
+                        # Print change and modify the file if changed
+                        if versionFound != newVersionUsed:
+                            print_green("Changing version {} => {} in {}".format(versionFound, newVersionUsed, filePath))
+                            replace_file(filePath, versionFound, newVersionUsed)
+
+        except WindowsError as e:
+            # Temporary file is still "in use" by Python, pass this exception
+            pass
+        except Exception as e:
+            print_error("set_version_in_files error: {}".format(e))
+            raise
+
+    return True
+
+
+def stash_version_files_for_building():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Temporarily stashing {} => {}.bak for version update".format(filePath, stashPath))
+            shutil.copy(filePath, "{}.bak".format(stashPath))
+    except:
+        print_error("Stashing version files failed")
+        raise
+
+    # Set version
+    set_version_in_files()
+    return True
+
+
+def restore_version_files():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Restoring {}".format(filePath))
+            shutil.move("{}.bak".format(stashPath), filePath)
+    except:
+        print_error("Restoring version files failed")
+        raise
+    return True
+
+
+def get_private_keyname(commitID,module="main"):
+    global pbo_name_prefix
+
+    aceVersion = get_ace_version()
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
+    return keyName
+
+
+def get_commit_ID():
+    # Get latest commit ID
+    global make_root
+    curDir = os.getcwd()
+    try:
+        gitpath = os.path.join(os.path.dirname(make_root), ".git")
+        assert os.path.exists(gitpath)
+        os.chdir(make_root)
+
+        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
+        commit_id = str(commit_id, "utf-8")[:8]
+    except:
+        print_error("FAILED TO DETERMINE COMMIT ID.")
+        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
+        commit_id = "NOGIT"
+        raise
+    finally:
+        pass
+        os.chdir(curDir)
+
+    print_yellow("COMMIT ID set to {}".format(commit_id))
+    return commit_id
+
+
+def version_stamp_pboprefix(module,commitID):
+    ### Update pboPrefix with the correct version stamp. Use commit_id as the build number.
+    #This function will not handle any $PBOPREFIX$ backup or cleanup.
+    global work_drive
+    global prefix
+
+    configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
+
+    try:
+        f = open(configpath, "r")
+        configtext = f.read()
+        f.close()
+
+        if configtext:
+            patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
+            if patchestext:
+                if configtext:
+                    patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
+                    configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
+                    f = open(configpath, "w")
+                    f.write(configtext)
+                    f.close()
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+            else:
+                if configtext:
+                    #append version info
+                    f = open(configpath, "a")
+                    f.write("\nversion = {}".format(commitID))
+                    f.close()
+                else:
+                    os.remove(os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+                    os.rename(os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"), os.path.join(work_drive, prefix, module, "$PBOPREFIX$"))
+    except Exception as e:
+        print_error("Failed to include build number: {}".format(e))
+        return False
+
+    return True
+
+
 ###############################################################################
 
 
 def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
-    print_blue(("\nmake.py for Arma, modified for Advanced Combat Environment v" + __version__))
+    print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
+    global ACE_VERSION
+    global arma3tools_path
     global work_drive
     global module_root
+    global make_root
     global release_dir
     global module_root_parent
     global optionals_root
     global key_name
     global key
     global dssignfile
+    global prefix
+    global pbo_name_prefix
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -480,8 +783,6 @@ def main(argv):
     # Default behaviors
     test = False # Copy to Arma 3 directory?
     arg_modules = False # Only build modules on command line?
-    make_release = False # Make zip file from the release?
-    release_version = 0 # Version of release
     use_pboproject = True # Default to pboProject build tool
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
     new_key = True # Make a new key and use it to sign?
@@ -533,10 +834,13 @@ See the make.cfg file for additional build options.
         argv.remove("test")
 
     if "release" in argv:
-        make_release = True
+        make_release_zip = True
         release_version = argv[argv.index("release") + 1]
         argv.remove(release_version)
         argv.remove("release")
+    else:
+        make_release_zip = False
+        release_version = ACE_VERSION
 
     if "target" in argv:
         make_target = argv[argv.index("target") + 1]
@@ -559,25 +863,21 @@ See the make.cfg file for additional build options.
         check_external = True
     else:
         check_external = False
+    
+    if "version" in argv:
+        argv.remove("version")
+        version_update = True
+    else:
+        version_update = False
 
-    print_yellow("\nCheck external references is set to " + str(check_external))
+    print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
     # Get the directory the make script is in.
     make_root = os.path.dirname(os.path.realpath(__file__))
     make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
     os.chdir(make_root)
 
-    # Get latest commit ID
-    try:
-        gitpath = os.path.join(os.path.dirname(make_root), ".git")
-        assert os.path.exists(gitpath)
 
-        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
-        commit_id = str(commit_id, "utf-8")[:8]
-        key_name = str(key_name+"-"+commit_id)
-    except:
-        print_error("FAILED TO DETERMINE COMMIT ID.")
-        commit_id = "NOGIT"
 
     cfg = configparser.ConfigParser();
     try:
@@ -597,6 +897,9 @@ See the make.cfg file for additional build options.
 
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
+        
+        # Release archive prefix
+        zipPrefix = cfg.get(make_target, "zipPrefix", fallback=project.lstrip("@").lower())
 
         # Should we autodetect modules on a complete build?
         module_autodetect = cfg.getboolean(make_target, "module_autodetect", fallback=True)
@@ -618,6 +921,9 @@ See the make.cfg file for additional build options.
         # Release/build directory, relative to script dir
         release_dir = cfg.get(make_target, "release_dir", fallback="release")
 
+        #Directory to copy the final built PBO's for a test run.
+        test_dir = cfg.get(make_target, "test_dir", fallback=os.path.join(os.environ["USERPROFILE"],r"documents\Arma 3"))
+
         # Project PBO file prefix (files are renamed to prefix_name.pbo)
         pbo_name_prefix = cfg.get(make_target, "pbo_name_prefix", fallback=None)
 
@@ -625,21 +931,25 @@ See the make.cfg file for additional build options.
         module_root_parent = os.path.abspath(os.path.join(os.path.join(work_drive, prefix), os.pardir))
         module_root = cfg.get(make_target, "module_root", fallback=os.path.join(make_root_parent, "addons"))
         optionals_root = os.path.join(module_root_parent, "optionals")
-        print_green ("module_root: " + module_root)
+        extensions_root = os.path.join(module_root_parent, "extensions")
+
+        commit_id = get_commit_ID()
+        key_name = versionStamp = get_private_keyname(commit_id)
+        print_green ("module_root: {}".format(module_root))
 
         if (os.path.isdir(module_root)):
             os.chdir(module_root)
         else:
-            print_error ("Directory " + module_root + " does not exist.")
+            print_error ("Directory {} does not exist.".format(module_root))
             sys.exit()
 
         if (os.path.isdir(optionals_root)):
-            print_green ("optionals_root: " + optionals_root)
+            print_green ("optionals_root: {}".format(optionals_root))
         else:
-            print_error ("Directory " + optionals_root + " does not exist.")
+            print_error ("Directory {} does not exist.".format(optionals_root))
             sys.exit()
 
-        print_green ("release_dir: " + release_dir)
+        print_green ("release_dir: {}".format(release_dir))
 
     except:
         raise
@@ -647,7 +957,7 @@ See the make.cfg file for additional build options.
         sys.exit(1)
 
     # See if we have been given specific modules to build from command line.
-    if len(argv) > 1 and not make_release:
+    if len(argv) > 1 and not make_release_zip:
         arg_modules = True
         modules = argv[1:]
 
@@ -702,43 +1012,59 @@ See the make.cfg file for additional build options.
             print_error("Cannot create release directory")
             raise
 
-    #Temporarily copy optionals_root for building. They will be removed later.
-    optionals_modules = []
-    optional_files = []
-    copy_optionals_for_building(optionals_modules,optional_files)
+    # Update version stamp in all files that contain it
+    # Update version only for release if full update not requested (backup and restore files)
+    print_blue("\nChecking for obsolete version numbers...")
+    if not version_update:
+        stash_version_files_for_building()
+    else:
+        # Set version
+        set_version_in_files();
+        print("Version in files has been changed, make sure you commit and push the updates!")
 
-    # Get list of subdirs in make root.
-    dirs = next(os.walk(module_root))[1]
+    try:
+        # Temporarily copy optionals_root for building. They will be removed later.
+        optionals_modules = []
+        optional_files = []
+        copy_optionals_for_building(optionals_modules,optional_files)
 
-    # Autodetect what directories to build.
-    if module_autodetect and not arg_modules:
-        modules = []
-        for path in dirs:
-            # Any dir that has a config.cpp in its root is an addon to build.
-            config_path = os.path.join(path, 'config.cpp')
-            if os.path.isfile(config_path) and not path in ignore:
-                modules.append(path)
+        # Get list of subdirs in make root.
+        dirs = next(os.walk(module_root))[1]
 
-    # Make the key specified from command line if necessary.
-    if new_key:
-        if not os.path.isfile(os.path.join(private_key_path, key_name + ".biprivatekey")):
-            print_yellow("\nRequested key does not exist.")
-            try:
-                os.makedirs(private_key_path)
-            except:
-                pass
-            curDir = os.getcwd()
-            os.chdir(private_key_path)
-            ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
-            os.chdir(curDir)
-            if ret == 0:
-                print_green("Created: " + os.path.join(private_key_path, key_name + ".biprivatekey"))
-                print("Removing any old signature keys...")
-                purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
-                purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
-                purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
+        # Autodetect what directories to build.
+        if module_autodetect and not arg_modules:
+            modules = []
+            for path in dirs:
+                # Any dir that has a config.cpp in its root is an addon to build.
+                config_path = os.path.join(path, 'config.cpp')
+                if os.path.isfile(config_path) and not path in ignore:
+                    modules.append(path)
+
+        # Make the key specified from command line if necessary.
+        if new_key:
+            if not os.path.isfile(os.path.join(private_key_path, key_name + ".biprivatekey")):
+                print_yellow("\nRequested key does not exist.")
+                try:
+                    os.makedirs(private_key_path)
+                except:
+                    pass
+                curDir = os.getcwd()
+                os.chdir(private_key_path)
+                ret = subprocess.call([dscreatekey, key_name]) # Created in make_root
+                os.chdir(curDir)
+                if ret == 0:
+                    print_green("Created: {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
+                    print("Removing any old signature keys...")
+                    purge(os.path.join(module_root, release_dir, project, "addons"), "^.*\.bisign$","*.bisign")
+                    purge(os.path.join(module_root, release_dir, project, "optionals"), "^.*\.bisign$","*.bisign")
+                    purge(os.path.join(module_root, release_dir, project, "keys"), "^.*\.bikey$","*.bikey")
+                else:
+                    print_error("Failed to create key!")
+
+
+
             else:
-                print_error("Failed to create key!")
+                print_green("\nNOTE: Using key {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
 
             try:
                 print("Copying public key to release directory.")
@@ -748,287 +1074,278 @@ See the make.cfg file for additional build options.
                 except:
                     pass
 
-                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", key_name + ".bikey"))
+                # Use biKeyNameAbrev to attempt to minimize problems from this BI Bug REFERENCE: http://feedback.arma3.com/view.php?id=22133
+                biKeyNameAbrev = key_name.split("-")[0]
+                shutil.copyfile(os.path.join(private_key_path, key_name + ".bikey"), os.path.join(module_root, release_dir, project, "keys", "{}.bikey".format(biKeyNameAbrev)))
 
             except:
                 print_error("Could not copy key to release directory.")
                 raise
 
-        else:
-            print_green("\nNOTE: Using key " + os.path.join(private_key_path, key_name + ".biprivatekey"))
+            key = os.path.join(private_key_path, "{}.biprivatekey".format(key_name))
 
-        key = os.path.join(private_key_path, key_name + ".biprivatekey")
+        # Remove any obsolete files.
+        print_blue("\nChecking for obsolete files...")
+        obsolete_check_path = os.path.join(module_root, release_dir, project,"addons")
+        for file in os.listdir(obsolete_check_path):
+            if (file.endswith(".pbo") and os.path.isfile(os.path.join(obsolete_check_path,file))):
+                if check_for_obsolete_pbos(module_root, file):
+                    fileName = os.path.splitext(file)[0]
+                    print_yellow("Removing obsolete file => {}".format(file))
+                    purge(obsolete_check_path, "{}\..".format(fileName), "{}.*".format(fileName))
 
+        obsolete_check_path = os.path.join(module_root, release_dir, project)
+        for file in os.listdir(obsolete_check_path):
+            if (file.endswith(".dll") and os.path.isfile(os.path.join(obsolete_check_path,file))):
+                if check_for_obsolete_pbos(extensions_root, file):
+                    fileName = os.path.splitext(file)[0]
+                    print_yellow("Removing obsolete file => {}".format(file))
+                    try:
+                        os.remove(os.path.join(obsolete_check_path,file))
+                    except:
+                        print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
+                        pass
 
-    # For each module, prep files and then build.
-    print_blue("\nBuilding...")
-    for module in modules:
-        print_green("\nMaking " + module + "-"*max(1, (60-len(module))))
-        missing = False
-        sigMissing = False
+        # For each module, prep files and then build.
+        print_blue("\nBuilding...")
+        for module in modules:
+            print_green("\nMaking {}".format(module + "-"*max(1, (60-len(module)))))
+            missing = False
+            sigMissing = False
 
-        # Cache check
-        if module in cache:
-            old_sha = cache[module]
-        else:
-            old_sha = ""
+            # Cache check
+            if module in cache:
+                old_sha = cache[module]
+            else:
+                old_sha = ""
 
-        #We always build ACE_common so we can properly show the correct version stamp in the RPT file.
-        if module == "common":
-            old_sha = ""
+            # Hash the module
+            new_sha = get_directory_hash(os.path.join(module_root, module))
 
-        # Hash the module
-        new_sha = get_directory_hash(os.path.join(module_root, module))
+            # Is the pbo or sig file missing?
+            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+            sigFile = "{}{}.pbo.{}.bisign".format(pbo_name_prefix,module,key_name)
+            sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile))
 
-        # Is the pbo or sig file missing?
-        missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "ace_{}.pbo".format(module)))
-        sigFile = pbo_name_prefix+module + ".pbo." + key_name + ".bisign"
-        sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile ))
+            if missing:
+                print_yellow("Missing PBO file {}{}.pbo. Building...".format(pbo_name_prefix,module))
 
-        if missing:
-            print_yellow("Missing PBO file ace_{}.pbo".format(module) + ". Building...")
+            # Check if it needs rebuilt
+            # print ("Hash:", new_sha)
+            if old_sha == new_sha and not missing:
+                if not force_build:
+                    print("Module has not changed.")
+                    if sigMissing:
+                        if key:
+                            print("Missing Signature key {}".format(sigFile))
+                            build_signature_file(os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+                    # Skip everything else
+                    continue
 
-        # Check if it needs rebuilt
-        # print ("Hash:", new_sha)
-        if old_sha == new_sha and not missing:
-            if not force_build:
-                print("Module has not changed.")
-                if sigMissing:
-                    if key:
-                        print("Missing Signature key " + sigFile)
-                        build_signature_file(os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo"))
-                # Skip everything else
-                continue
+            # Only do this if the project isn't stored directly on the work drive.
+            # Split the path at the drive name and see if they are on the same drive (usually P:)
+            if os.path.splitdrive(module_root)[0] != os.path.splitdrive(work_drive)[0]:
+                try:
+                    # Remove old work drive version (ignore errors)
+                    shutil.rmtree(os.path.join(work_drive, prefix, module), True)
 
-        # Only do this if the project isn't stored directly on the work drive.
-        # Split the path at the drive name and see if they are on the same drive (usually P:)
-        if os.path.splitdrive(module_root)[0] != os.path.splitdrive(work_drive)[0]:
+                    # Copy module to the work drive
+                    shutil.copytree(module, os.path.join(work_drive, prefix, module))
+
+                except:
+                    raise
+                    print_error("ERROR: Could not copy module to work drive. Does the module exist?")
+                    input("Press Enter to continue...")
+                    print("Resuming build...")
+                    continue
+            #else:
+                #print("WARNING: Module is stored on work drive ({}).".format(work_drive))
+
             try:
-                # Remove old work drive version (ignore errors)
-                shutil.rmtree(os.path.join(work_drive, prefix, module), True)
+                # Remove the old pbo, key, and log
+                old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
+                files = glob.glob(old)
+                for f in files:
+                    os.remove(f)
 
-                # Copy module to the work drive
-                shutil.copytree(module, os.path.join(work_drive, prefix, module))
-
+                if pbo_name_prefix:
+                    old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
+                    files = glob.glob(old)
+                    for f in files:
+                        os.remove(f)
             except:
                 raise
                 print_error("ERROR: Could not copy module to work drive. Does the module exist?")
                 input("Press Enter to continue...")
                 print("Resuming build...")
                 continue
-        #else:
-            #print("WARNING: Module is stored on work drive (" + work_drive + ").")
 
-        try:
-            # Remove the old pbo, key, and log
-            old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
-            files = glob.glob(old)
-            for f in files:
-                os.remove(f)
+            # Build the module into a pbo
+            print_blue("Building: {}".format(os.path.join(work_drive, prefix, module)))
+            print_blue("Destination: {}".format(os.path.join(module_root, release_dir, project, "addons")))
 
-            if pbo_name_prefix:
-                old = os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module) + "*"
-                files = glob.glob(old)
-                for f in files:
-                    os.remove(f)
-        except:
-            raise
-            print_error("ERROR: Could not copy module to work drive. Does the module exist?")
-            input("Press Enter to continue...")
-            print("Resuming build...")
-            continue
-
-        # Build the module into a pbo
-        print_blue("Building: " + os.path.join(work_drive, prefix, module))
-        print_blue("Destination: " + os.path.join(module_root, release_dir, project, "addons"))
-
-        # Make destination folder (if needed)
-        try:
-            os.makedirs(os.path.join(module_root, release_dir, project, "addons"))
-        except:
-            pass
-
-        # Run build tool
-        build_successful = False
-        if build_tool == "pboproject":
+            # Make destination folder (if needed)
             try:
-                #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
-                shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-
-                os.chdir("P:\\")
-
-                cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
-                ret = subprocess.call(cmd)
-                if ret != 0:
-                    print_error("CfgConvert -bin return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
-                    os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                    shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-                cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
-                ret = subprocess.call(cmd)
-                if ret != 0:
-                    print_error("CfgConvert -txt return code == " + str(ret) + ". Usually means there is a syntax error within the config.cpp file.")
-                    os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                    shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+                os.makedirs(os.path.join(module_root, release_dir, project, "addons"))
+            except:
+                pass
 
 
-                # Include build number
+            # Run build tool
+            build_successful = False
+            if build_tool == "pboproject":
                 try:
-                    configpath = os.path.join(work_drive, prefix, module, "config.cpp")
-                    f = open(configpath, "r")
-                    configtext = f.read()
-                    f.close()
+                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
+                    backup_config(module)
 
-                    if configtext:
-                        patchestext = re.search(r"class CfgPatches\n\{(.*?)\n\}", configtext, re.DOTALL).group(1)
-                        patchestext = re.sub(r'version(.*?)="(.*?)"', r'version\1="\2-{}"'.format(commit_id), patchestext)
-                        configtext = re.sub(r"class CfgPatches\n\{(.*?)\n\}", "class CfgPatches\n{"+patchestext+"\n}", configtext, flags=re.DOTALL)
-                        f = open(configpath, "w")
-                        f.write(configtext)
-                        f.close()
+                    if (not os.path.isfile(nobinFilePath)):
+                        convert_config(module)
+
+                    version_stamp_pboprefix(module,commit_id)
+
+                    if os.path.isfile(nobinFilePath):
+                        print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
+                        cmd = [makepboTool, "-P","-A","-L","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+
                     else:
-                        os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                        os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
+                        if check_external:
+                            cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        else:
+                            cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+
+                    color("grey")
+                    if quiet:
+                        devnull = open(os.devnull, 'w')
+                        ret = subprocess.call(cmd, stdout=devnull)
+                        devnull.close()
+                    else:
+                        ret = subprocess.call(cmd)
+                    color("reset")
+
+                    if ret == 0:
+                        print_green("pboProject return code == {}".format(str(ret)))
+                        # Prettyprefix rename the PBO if requested.
+                        if pbo_name_prefix:
+                            try:
+                                os.rename(os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+                            except:
+                                raise
+                                print_error("Could not rename built PBO with prefix.")
+                        # Sign result
+                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist):
+                            print("Signing with {}.".format(key))
+                            if pbo_name_prefix:
+                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module))])
+                            else:
+                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module))])
+
+                            if ret == 0:
+                                build_successful = True
+                        else:
+                            build_successful = True
+
+                    if not build_successful:
+                        print_error("pboProject return code == {}".format(str(ret)))
+                        print_error("Module not successfully built/signed. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
+                        print ("Resuming build...")
+                        continue
+
+                    # Back to the root
+                    os.chdir(module_root)
+
                 except:
                     raise
-                    print_error("Failed to include build number")
+                    print_error("Could not run Addon Builder.")
+                    input("Press Enter to continue...")
+                    print ("Resuming build...")
                     continue
+                finally:
+                    addon_restore(os.path.join(work_drive, prefix, module))
 
+            elif build_tool== "addonbuilder":
+                # Detect $NOBIN$ and do not binarize if found.
                 if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
-                    print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                    cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
+                    do_binarize = False
+                    print("$NOBIN$ file found in module, packing only.")
                 else:
-                    if check_external:
-                        cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                    do_binarize = True
+                try:
+                    # Call AddonBuilder
+                    os.chdir("P:\\")
+
+                    cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "addons"), "-clear", "-project="+work_drive]
+                    if not do_binarize:
+                        cmd.append("-packonly")
+
+                    if quiet:
+                        previousDirectory = os.getcwd()
+                        os.chdir(arma3tools_path)
+                        devnull = open(os.devnull, 'w')
+                        ret = subprocess.call(cmd, stdout=devnull)
+                        devnull.close()
+                        os.chdir(previousDirectory)
                     else:
-                        cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
-
-                color("grey")
-                if quiet:
-                    devnull = open(os.devnull, 'w')
-                    ret = subprocess.call(cmd, stdout=devnull)
-                    devnull.close()
-                else:
-                    ret = subprocess.call(cmd)
-                color("reset")
-
-                if ret == 0:
-                    print_green("pboProject return code == " + str(ret))
+                        previousDirectory = os.getcwd()
+                        os.chdir(arma3tools_path)
+                        print_error("Current directory - {}".format(os.getcwd()))
+                        ret = subprocess.call(cmd)
+                        os.chdir(previousDirectory)
+                        print_error("Current directory - {}".format(os.getcwd()))
+                    color("reset")
+                    print_green("completed")
                     # Prettyprefix rename the PBO if requested.
                     if pbo_name_prefix:
                         try:
-                            os.rename(os.path.join(module_root, release_dir, project, "addons", module+".pbo"), os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
+                            os.rename(os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(make_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
                         except:
                             raise
                             print_error("Could not rename built PBO with prefix.")
-                    # Sign result
-                    if key:
-                        print("Signing with " + key + ".")
-                        if pbo_name_prefix:
-                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
+
+                    if ret == 0:
+                        # Sign result
+
+                        #print_yellow("Sig_fileName: ace_{}.pbo".format(module))
+                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
+                            print("Signing with {}.".format(key))
+                            if pbo_name_prefix:
+                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons","{}{}.pbo".format(pbo_name_prefix,module))])
+                            else:
+                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module))])
+
+                            if ret == 0:
+                                build_successful = True
                         else:
-                            ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", module + ".pbo")])
-
-                        if ret == 0:
                             build_successful = True
-                    else:
-                        build_successful = True
 
-                if not build_successful:
-                    print_error("pboProject return code == " + str(ret))
-                    print_error("Module not successfully built/signed.")
+                    if not build_successful:
+                        print_error("Module not successfully built. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
+
+                    # Back to the root
+                    os.chdir(make_root)
+
+                except:
+                    raise
+                    print_error("Could not run Addon Builder.")
+                    input("Press Enter to continue...")
                     print ("Resuming build...")
                     continue
 
-                #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-                #print_green("\Pabst (restoring): " + os.path.join(work_drive, prefix, module, "config.cpp"))
-                os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-                os.remove(os.path.join(work_drive, prefix, module, "config.bin"))
-                os.rename(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-                # Back to the root
-                os.chdir(module_root)
-
-            except:
-                raise
-                print_error("Could not run Addon Builder.")
-                input("Press Enter to continue...")
-                print ("Resuming build...")
-                continue
-
-        elif build_tool== "addonbuilder":
-            # Detect $NOBIN$ and do not binarize if found.
-            if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
-                do_binarize = False
-                print("$NOBIN$ file found in module, packing only.")
             else:
-                do_binarize = True
-            try:
-                # Call AddonBuilder
-                os.chdir("P:\\")
+                print_error("Unknown build_tool {}!".format(build_tool))
 
-                cmd = [addonbuilder, os.path.join(work_drive, prefix, module), os.path.join(make_root, release_dir, project, "addons"), "-clear", "-project="+work_drive]
-                if not do_binarize:
-                    cmd.append("-packonly")
+            # Update the hash for a successfully built module
+            if build_successful:
+                cache[module] = new_sha
 
-                if quiet:
-                    previousDirectory = os.getcwd()
-                    os.chdir(arma3tools_path)
-                    devnull = open(os.devnull, 'w')
-                    ret = subprocess.call(cmd, stdout=devnull)
-                    devnull.close()
-                    os.chdir(previousDirectory)
-                else:
-                    previousDirectory = os.getcwd()
-                    os.chdir(arma3tools_path)
-                    print_error("Current directory - " + os.getcwd())
-                    ret = subprocess.call(cmd)
-                    os.chdir(previousDirectory)
-                    print_error("Current directory - " + os.getcwd())
-                color("reset")
-                print_green("completed")
-                # Prettyprefix rename the PBO if requested.
-                if pbo_name_prefix:
-                    try:
-                        os.rename(os.path.join(make_root, release_dir, project, "addons", module+".pbo"), os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix+module+".pbo"))
-                    except:
-                        raise
-                        print_error("Could not rename built PBO with prefix.")
+    except Exception as e:
+        print_yellow("Cancel or some error detected: {}".format(e))
 
-                if ret == 0:
-                    # Sign result
-                    if key:
-                        print("Signing with " + key + ".")
-                        if pbo_name_prefix:
-                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", pbo_name_prefix + module + ".pbo")])
-                        else:
-                            ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", module + ".pbo")])
 
-                        if ret == 0:
-                            build_successful = True
-                    else:
-                        build_successful = True
-
-                if not build_successful:
-                    print_error("Module not successfully built.")
-
-                # Back to the root
-                os.chdir(make_root)
-
-            except:
-                raise
-                print_error("Could not run Addon Builder.")
-                input("Press Enter to continue...")
-                print ("Resuming build...")
-                continue
-
-        else:
-            print_error("Unknown build_tool " + build_tool + "!")
-
-        # Update the hash for a successfully built module
-        if build_successful:
-            cache[module] = new_sha
+    finally:
+        copy_important_files(module_root_parent,os.path.join(release_dir, project))
+        cleanup_optionals(optionals_modules)
+        if not version_update:
+            restore_version_files()
 
     # Done building all modules!
 
@@ -1038,30 +1355,34 @@ See the make.cfg file for additional build options.
         f.write(cache_out)
 
     # Delete the pboproject temp files if building a release.
-    if make_release and build_tool == "pboproject":
+    if make_release_zip and build_tool == "pboproject":
         try:
-            shutil.rmtree(os.path.join(module_root, release_dir, project, "temp"), True)
+            shutil.rmtree(os.path.join(release_dir, project, "temp"), True)
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
 
-    print_green("\nDone.")
-
-    copy_important_files(module_root_parent,os.path.join(release_dir, "@ace"))
-    cleanup_optionals(optionals_modules)
-
     # Make release
-    if make_release:
-        print_blue("\nMaking release: " + project + "-" + release_version + ".zip")
+    if make_release_zip:
+        release_name = "{}_{}".format(zipPrefix, release_version)
+        print_blue("\nMaking release: {}.zip".format(release_name))
 
         try:
             # Delete all log files
-            for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "addons")):
+            for root, dirs, files in os.walk(os.path.join(release_dir, project, "addons")):
                 for currentFile in files:
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
 
-            # Create a zip with the contents of release/ in it
-            shutil.make_archive(project + "-" + release_version, "zip", os.path.join(module_root, release_dir))
+            # Remove all zip files from release folder to prevent zipping the zip
+            for file in os.listdir(release_dir):
+                if file.endswith(".zip"):
+                    os.remove(os.path.join(release_dir, file))
+
+            # Create a zip with the contents of release folder in it
+            release_zip = shutil.make_archive("{}".format(release_name), "zip", release_dir)
+            # Move release zip to release folder
+            shutil.copy(release_zip, release_dir)
+            os.remove(release_zip)
         except:
             raise
             print_error("Could not make release.")
@@ -1081,12 +1402,20 @@ See the make.cfg file for additional build options.
         else:
             a3_path = cygwin_a3path
 
+        print_yellow("Path from the registry => {}".format(a3_path))
+        a3_path = test_dir
+
+        print_yellow("Copying build files to {}".format(a3_path))
+
         if os.path.exists(a3_path):
             try:
                 shutil.rmtree(os.path.join(a3_path, project), True)
                 shutil.copytree(os.path.join(module_root, release_dir, project), os.path.join(a3_path, project))
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
+
+    print_green("\nDone.")
+
 
 if __name__ == "__main__":
     main(sys.argv)

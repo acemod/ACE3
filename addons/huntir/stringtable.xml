@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HuntIR">
+        <Key ID="STR_DN_ACE_HUNTIRBOX">
+            <English>HuntIR Transport Box</English>
+            <German>HuntIR Transportkiste</German>
+            <Spanish>HuntIR Transport Box</Spanish>
+            <Czech>Trasnportní bedna HuntIR</Czech>
+            <Russian>Ящик с HuntIR</Russian>
+            <Italian>HuntIR Transport Box</Italian>
+            <Polish>Skrzynia HuntIR</Polish>
+            <French>HuntIR Transport Box</French>
+            <Hungarian>HuntIR Transport Box</Hungarian>
+            <Portuguese>Caixa de transporte do HuntIR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_magazine_displayName">
+            <English>HuntIR Round</English>
+            <German>HuntIR Granate</German>
+            <Spanish>HuntIR Round</Spanish>
+            <Czech>HuntIR Round</Czech>
+            <Russian>HuntIR снаряд</Russian>
+            <Italian>HuntIR Round</Italian>
+            <Polish>Nabój HuntIR</Polish>
+            <French>Munition HuntIR</French>
+            <Hungarian>HuntIR lövedék</Hungarian>
+            <Portuguese>Cartucho HuntIR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_monitor_displayName">
+            <English>HuntIR monitor</English>
+            <German>HuntIR Monitor</German>
+            <Spanish>HuntIR monitor</Spanish>
+            <Czech>HuntIR monitor</Czech>
+            <Russian>HuntIR монитор</Russian>
+            <Italian>HuntIR monitor</Italian>
+            <Polish>Odbiornik HuntIR</Polish>
+            <French>Ecran HuntIR</French>
+            <Hungarian>HuntIR monitor</Hungarian>
+            <Portuguese>Monitor HuntIR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_activateMonitor">
+            <English>Activate HuntIR monitor</English>
+            <German>HuntIR Monitor aktivieren</German>
+            <Spanish>Activate HuntIR monitor</Spanish>
+            <Czech>Zapnout HuntIR monitor</Czech>
+            <Russian>Включить HuntIR монитор</Russian>
+            <Italian>Activate HuntIR monitor</Italian>
+            <Polish>Włącz odbiornik HuntIR</Polish>
+            <French>Allumer écran HuntIR</French>
+            <Hungarian>HuntIR monitor aktiválása</Hungarian>
+            <Portuguese>Ativar monitor do HuntIR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_CAM">
+            <English>Camera:</English>
+            <German>Kamera:</German>
+            <Spanish>Camera:</Spanish>
+            <Czech>Kamera:</Czech>
+            <Russian>Камера:</Russian>
+            <Italian>Camera:</Italian>
+            <Polish>Kamera:</Polish>
+            <French>Caméra:</French>
+            <Hungarian>Kamera:</Hungarian>
+            <Portuguese>Câmera:</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_ALT">
+            <English>Altitude:</English>
+            <German>Höhe:</German>
+            <Spanish>Altitude:</Spanish>
+            <Czech>Výška:</Czech>
+            <Russian>Высота:</Russian>
+            <Italian>Altitude:</Italian>
+            <Polish>Wysokość:</Polish>
+            <French>Altitude:</French>
+            <Hungarian>Magasság:</Hungarian>
+            <Portuguese>Altitude:</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_TIME">
+            <English>Recording Time:</English>
+            <German>Aufnahmezeit:</German>
+            <Spanish>Recording Time:</Spanish>
+            <Czech>Čas nahrávání:</Czech>
+            <Russian>Время записи:</Russian>
+            <Italian>Recording Time:</Italian>
+            <Polish>Czas nagrywania:</Polish>
+            <French>Temps d'enregistrement:</French>
+            <Hungarian>Felvételi idő:</Hungarian>
+            <Portuguese>Tempo de gravação:</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_ESC">
+            <English>Press ESC to quit camera</English>
+            <German>Zum Verlassen ESC drücken</German>
+            <Spanish>Press ESC to quit camera</Spanish>
+            <Czech>Stiskni ESC pro opustění kamery</Czech>
+            <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
+            <Italian>Press ESC to quit camera</Italian>
+            <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
+            <French>Appuyer sur ESC pour quitter camera</French>
+            <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
+            <Portuguese>Pressione ESC para sair da câmera</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP">
+            <English>Help</English>
+            <German>Hilfe</German>
+            <Spanish>Help</Spanish>
+            <Czech>Pomoc</Czech>
+            <Russian>Помощь</Russian>
+            <Italian>Help</Italian>
+            <Polish>Pomoc</Polish>
+            <French>Aide</French>
+            <Hungarian>Súgó</Hungarian>
+            <Portuguese>Ajuda</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_ZOOM">
+            <English>A/D - Cycle zoom</English>
+            <German>A/D - Zoom</German>
+            <Spanish>A/D - Cycle zoom</Spanish>
+            <Czech>A/D - Změna přiblížení</Czech>
+            <Russian>A/D - Приближение</Russian>
+            <Italian>A/D - Cycle zoom</Italian>
+            <Polish>A/D - powiększenie</Polish>
+            <French>A/D - Changement zoom</French>
+            <Hungarian>A/D - Nagyítás</Hungarian>
+            <Portuguese>A/D - Troca zoom</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_CAM">
+            <English>W/S - Select camera</English>
+            <German>W/S - Wähle Kamera</German>
+            <Spanish>W/S - Select camera</Spanish>
+            <Czech>W/S - Výběr kamery</Czech>
+            <Russian>W/S - Выбрать камеру</Russian>
+            <Italian>W/S - Select camera</Italian>
+            <Polish>W/S - wybór kamery</Polish>
+            <French>W/S - Sélectionner caméra</French>
+            <Hungarian>W/S - Kamera váltás</Hungarian>
+            <Portuguese>W/S - Seleciona câmera</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_ROT">
+            <English>Left/Right - Rotate camera</English>
+            <German>Links/Rechts - Rotiere Kamera</German>
+            <Spanish>Left/Right - Rotate camera</Spanish>
+            <Czech>Levá/Pravá - Rotace kamery</Czech>
+            <Russian>Влево/Вправо - Вращать камеру</Russian>
+            <Italian>Left/Right - Rotate camera</Italian>
+            <Polish>Lewo/Prawo - obrót kamery w poziomie</Polish>
+            <French>Gauche/Droite - Rotation caméra</French>
+            <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
+            <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_ELV">
+            <English>Up/Down - Elevate/lower camera</English>
+            <German>Hoch/Runter - Neige Kamera</German>
+            <Spanish>Up/Down - Elevate/lower camera</Spanish>
+            <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
+            <Russian>Вверх/Вниз - Поднять/Опустить камеру</Russian>
+            <Italian>Up/Down - Elevate/lower camera</Italian>
+            <Polish>Góra/Dół - obrót kamery w pionie</Polish>
+            <French>Haut/Bas - Monter/descendre caméra</French>
+            <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
+            <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_MOD">
+            <English>N - Cycle IT modes</English>
+            <German>N - Sichtmodi</German>
+            <Spanish>N - Cycle IT modes</Spanish>
+            <Czech>N - Změna režimů kamery</Czech>
+            <Russian>N - Режимы камеры</Russian>
+            <Italian>N - Cycle IT modes</Italian>
+            <Polish>N - wybór trybu IT</Polish>
+            <French>N - Changement de modes IT</French>
+            <Hungarian>N - Hőkép módok</Hungarian>
+            <Portuguese>N - Troca modo IT</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_RES">
+            <English>R - Reset camera</English>
+            <German>R - Reset</German>
+            <Spanish>R - Reset camera</Spanish>
+            <Czech>R - Reset kamery</Czech>
+            <Russian>R - Сбросить настройки камеры</Russian>
+            <Italian>R - Reset camera</Italian>
+            <Polish>R - resetuj kamerę</Polish>
+            <French>R - Reset caméra</French>
+            <Hungarian>R - Kamera visszaállítása</Hungarian>
+            <Portuguese>R - Redefine a câmera</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_HUNTIR_HELP_EXIT">
+            <English>Esc - Exit help</English>
+            <German>ESC - Hilfe verlassen</German>
+            <Spanish>Esc - Exit help</Spanish>
+            <Czech>Esc - Ukončit pomoc </Czech>
+            <Russian>Esc - Выйти из помощи</Russian>
+            <Italian>Esc - Exit help</Italian>
+            <Polish>Esc - wyjście z ekranu Pomocy</Polish>
+            <French>Esc - Sortir de l'aide</French>
+            <Hungarian>Exit - Kilépés a súgóból</Hungarian>
+            <Portuguese>Esc - Sai do Ajuda</Portuguese>
+        </Key>
+    </Package>
+</Project>

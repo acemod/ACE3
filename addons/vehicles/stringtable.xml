@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler. -->
 <Project name="ACE">
     <Package name="Vehicles">
-        <Key ID="STR_ACE_SpeedLimiter_On">
+        <Key ID="STR_ACE_Vehicles_On">
             <English>Speed Limiter on</English>
             <German>Begrenzer an</German>
             <Spanish>Limitador de velocidad activado</Spanish>
@@ -14,7 +13,7 @@
             <Portuguese>Limitador de Velocidade Ativo</Portuguese>
             <Italian>Limitatore Attivo</Italian>
         </Key>
-        <Key ID="STR_ACE_SpeedLimiter_Off">
+        <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
             <German>Begrenzer aus</German>
             <Spanish>Limitador de velocidad desactivado</Spanish>
@@ -26,7 +25,7 @@
             <Portuguese>Limitador de Velocidade Desativado</Portuguese>
             <Italian>Limitatore Non Attivo</Italian>
         </Key>
-        <Key ID="STR_ACE_SpeedLimiter">
+        <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
             <German>Begrenzer</German>
             <Spanish>Limitador de velocidad</Spanish>

@@ -7,7 +7,7 @@ if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 
-private["_config", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
 private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
 
 PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -15,7 +15,11 @@ PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
 
-_config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
+//Verify ammo has explicity added guidance config (ignore inheritances)
+_configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
+if( (count _configs) < 1) exitWith {};
+
+_config = (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON));
 _enabled = getNumber ( _config >> "enabled");
 
 // Bail if guidance is not enabled
@@ -26,6 +30,10 @@ _targetPos = (vehicle _shooter) getVariable [QGVAR(targetPosition), nil];
 _seekerType = (vehicle _shooter) getVariable [QGVAR(seekerType), nil];
 _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 _lockMode  = (vehicle _shooter) getVariable [QGVAR(lockMode), nil];
+
+// @TODO: make this vehicle shooter, but we need to differentiate where its set in ace_laser
+_laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+_laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
 _launchPos = getPosASL (vehicle _shooter);
 
@@ -67,7 +75,8 @@ _args = [_this,
                 [_target, _targetPos, _launchPos], 
                 _seekerType, 
                 _attackProfile,
-                _lockMode
+                _lockMode,
+                _laserInfo
             ], 
             [
                 getNumber ( _config >> "minDeflection" ),
@@ -79,7 +88,7 @@ _args = [_this,
                 getNumber ( _config >> "seekerAccuracy" ),
                 getNumber ( _config >> "seekerMaxRange" )
             ],
-            [ diag_tickTime, [], [] ]
+            [ ACE_diagTime, [], [] ]
         ];
   
 // Hand off to the guiding unit. We just use local player so local PFH fires for now

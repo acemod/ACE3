@@ -28,7 +28,7 @@ GVAR(Setup) setVariable [QGVAR(class), _class, true];
 GVAR(TweakedAngle) = 180;
 
 [QGVAR(Placement),"OnEachFrame", {
-    private "_player";
+    private ["_player", "_pos"];
     _player = ACE_player;
     if (GVAR(placer) != _player) exitWith {
         call FUNC(place_Cancel);
@@ -41,8 +41,8 @@ GVAR(TweakedAngle) = 180;
     };
 }] call CALLSTACK(BIS_fnc_addStackedEventHandler);
 
-[localize "STR_ACE_Explosives_PlaceAction", localize "STR_ACE_Explosives_CancelAction",
-    localize "STR_ACE_Explosives_ScrollAction"] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(PlaceAction), localize LSTRING(CancelAction),
+    localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(Place), [_unit, "DefaultAction",
     {GVAR(pfeh_running) AND !isNull (GVAR(Setup))}, {call FUNC(place_Approve);}] call EFUNC(common,AddActionEventHandler)];
 _unit setVariable [QGVAR(Cancel), [_unit, "zoomtemp",

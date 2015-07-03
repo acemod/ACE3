@@ -10,9 +10,10 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_item","_return"];
-_unit = _this select 0;
-_item = _this select 1;
+PARAMS_2(_unit,_item);
+
+private ["_return", "_vehicleUsage"];
+
 _vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
 
 _return = false;

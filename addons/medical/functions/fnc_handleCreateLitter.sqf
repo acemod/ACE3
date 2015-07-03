@@ -5,6 +5,7 @@ if(!hasInterface) exitWith { false };
 
 PARAMS_3(_litterClass,_position,_direction);
 private["_litterObject", "_maxLitterCount"];
+//IGNORE_PRIVATE_WARNING(_values);
 
 if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(allCreatedLitter) = [];
@@ -13,7 +14,10 @@ if (isNil QGVAR(allCreatedLitter)) then {
 
 _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
-
+_litterObject setPosATL _position;
+// Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
+[{ (_this select 0) setPosATL (_this select 1); }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
+    
 _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail); 
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     // gank the first litter object, and spawn ours.
@@ -24,12 +28,12 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     } forEach (_oldLitter select 1);
 };
 
-GVAR(allCreatedLitter) pushBack [time, [_litterObject]];
+GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
     [{
         {
-            if (time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
+            if (ACE_time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
                 {
                     deleteVehicle _x;
                 } forEach (_x select 1);

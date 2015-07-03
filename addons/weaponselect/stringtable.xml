@@ -1,27 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
-        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextName">
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
             <English>Display text on grenade throw</English>
             <German>Zeige Text beim Granatwurf</German>
-            <Spanish>Mostrar texto al lanzar granada</Spanish>
+            <Spanish>Mostrar texto al lanzar una granada</Spanish>
             <Russian>Показывать текст при броске</Russian>
             <Czech>Zobrazí text při hodu granátem</Czech>
             <Polish>Wyświetl tekst przy rzucie granatem</Polish>
             <French>Afficher texte lors d'un lancé de grenade</French>
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
+            <Portuguese>Mostrat texto ao lançar granada</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Weaponselect_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
             <German>Zeige Hinweis oder Text beim Granatwurf</German>
-            <Spanish>Muestra una notificación o texto al lanzar granada</Spanish>
+            <Spanish>Muestra una notificación o texto al lanzar una granada</Spanish>
             <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
             <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
             <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
             <French>Afficher texte/info au lancé de grenade</French>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
-            <Italian>Mostra un suggerimento quando si lanciano granate</Italian>
+            <Italian>Mostra una notifica quando si lanciano granate</Italian>
+            <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
@@ -45,7 +47,7 @@
             <French>Sélectionner Fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
             <Portuguese>Selecionar Rifle</Portuguese>
-            <Italian>Seleziona il Fucile</Italian>
+            <Italian>Seleziona il fucile</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -53,23 +55,23 @@
             <Spanish>Seleccionar lanzador</Spanish>
             <Polish>Wybierz wyrzutnię</Polish>
             <Czech>Zvolit Raketomet</Czech>
-            <Russian>Выбрать гранатомет</Russian>
+            <Russian>Выбрать гранатомёт</Russian>
             <French>Sélectionner Lanceur</French>
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lançador</Portuguese>
-            <Italian>Seleziona il Lanciamissili</Italian>
+            <Italian>Seleziona il lanciamissili</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
             <German>Granatwerfer auswählen</German>
-            <Spanish>Seleccionar lanzador de granadas</Spanish>
+            <Spanish>Seleccionar lanzagranadas</Spanish>
             <Polish>Wybierz granatnik</Polish>
             <Czech>Zvolit Granátomet</Czech>
-            <Russian>Выбрать подствольный гранатомет</Russian>
+            <Russian>Выбрать подствольный гранатомёт</Russian>
             <French>Sélectionner Lance-grenades</French>
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lança-Granadas</Portuguese>
-            <Italian>Seleziona il Lanciagranate</Italian>
+            <Italian>Seleziona il lanciagranate</Italian>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -165,6 +167,7 @@
             <Russian>Граната %1</Russian>
             <French>Grenade %1</French>
             <Italian>Granata %1</Italian>
+            <Portuguese>Granada %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
@@ -176,6 +179,7 @@
             <Russian>Подготовить гранату</Russian>
             <French>Grenade prête</French>
             <Italian>Granata pronta</Italian>
+            <Portuguese>Granada pronta</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
@@ -204,7 +208,7 @@
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
             <German>Gewählte Granate werfen</German>
-            <Spanish>Arrojar granada seleccionada</Spanish>
+            <Spanish>Lanzar granada seleccionada</Spanish>
             <Polish>Rzuć wybrany granat</Polish>
             <French>Lancer la grenade sélectionnée</French>
             <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
@@ -223,11 +227,12 @@
             <Hungarian>Nincs több gránát</Hungarian>
             <Russian>Гранат не осталось</Russian>
             <Italian>Granate esaurite</Italian>
+            <Portuguese>Sem mais granadas</Portuguese>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
             <German>Keine explosiven Granaten übrig</German>
-            <Spanish>Sin granadas de fragmentación</Spanish>
+            <Spanish>No quedan granadas de fragmentación</Spanish>
             <Polish>Brak granatów odłamkowych</Polish>
             <French>Plus de grenades à fragmentation</French>
             <Hungarian>Nincs több repeszgránát</Hungarian>
@@ -239,7 +244,7 @@
         <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
             <English>No misc. grenades left</English>
             <German>Keine nichtexplosiven Granaten übrig</German>
-            <Spanish>Sin granadas de varias</Spanish>
+            <Spanish>Sin granadas misc.</Spanish>
             <Polish>Brak granatów nieodłamkowych</Polish>
             <French>Plus de grenades non-léthales</French>
             <Hungarian>Nincs több egyéb gránát</Hungarian>
@@ -270,6 +275,7 @@
             <Hungarian>Füstvető eltüzelése</Hungarian>
             <Russian>Пустить дымовую завесу</Russian>
             <Italian>Lancia fumogeno</Italian>
+            <Portuguese>Lançador de fumaça</Portuguese>
         </Key>
     </Package>
 </Project>

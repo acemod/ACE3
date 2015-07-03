@@ -35,8 +35,7 @@ _temperature = _overheat select 0;
 _time = _overheat select 1;
 
 // Get physical parameters
-// Bullet mass is read from config in grains and converted to grams
-_bulletMass = (getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass")) * 0.06480;
+_bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
 if (_bulletMass == 0) then {
   // If the bullet mass is not configured, estimate it directly in grams
   _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
@@ -45,12 +44,12 @@ _energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);
 _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, time - _time] call FUNC(cooldown);
+_temperature = [_temperature, _barrelMass, ACE_time - _time] call FUNC(cooldown);
 // Calculate heating
 _temperature = _temperature + _energyIncrement / (_barrelMass * 466); // Steel Heat Capacity = 466 J/(Kg.K)
 
 // set updated values
-_time = time;
+_time = ACE_time;
 _unit setVariable [_variableName, [_temperature, _time], false];
 _scaledTemperature = (_temperature / 1000) min 1 max 0;
 

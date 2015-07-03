@@ -1,12 +1,15 @@
 ---
 layout: wiki
 title: ACE3 Config Entries
+description: A list of all ACE3 config entries.
 group: development
 parent: wiki
 order: 2
 ---
 
-### CfgVehicles
+## 1. CfgVehicles
+Entries found in the `CfgVehicles.hpp` files
+
 
 ```c++
 ace_nightvision_grain
@@ -23,7 +26,9 @@ ace_offset
 ```
 
 
-### CfgWeapons
+## 2. CfgWeapons
+Entries found in the `CfgWeapons.hpp` files
+
 
 ```c++
 ace_recoil_shakemultiplier
@@ -46,17 +51,27 @@ ace_gforcecoef
 ace_protection
 ace_scopeadjust_horizontal
 ace_scopeadjust_vertical
+ace_scopeadjust_verticalincrement
+ace_scopeadjust_horizontalincrement
 ace_isusedlauncher
 ace_attachable
 ace_range
 ace_detonator
+ace_barrelTwist
+ace_twistDirection
+ace_barrelLength
+ace_laserpointer
+ace_nextmodeclass
+ace_modedescription
+ace_hearing_protection
+ace_hearing_lowerVolume
 ```
 
 
-### CfgAmmo
+## 3. CfgAmmo
+Entries found in the `CfgAmmo.hpp` files
 
 ```c++
-ace_bulletmass
 ace_recoil_shakemultiplier
 ace_frag_skip
 ace_frag_force
@@ -68,10 +83,22 @@ ace_frag_gurney_k
 ace_explodeondefuse
 ace_explosive
 ace_fcs_airburst
+ace_caliber
+ace_bulletlength
+ace_bulletmass
+ace_transonicstabilitycoef
+ace_ammotempmuzzlevelocityshifts
+ace_ballisticcoefficients
+ace_velocityboundaries
+ace_standardatmosphere
+ace_dragmodel
+ace_muzzlevelocities
+ace_barrellengths
 ```
 
 
-### CfgGlasses
+## 4. CfgGlasses
+Entries found in the `CfgGlasses.hpp` file
 
 ```c++
 ace_color
@@ -85,7 +112,8 @@ ace_dustpath
 ```
 
 
-### CfgMagazines
+## 5. CfgMagazines
+Entries found in the `CfgMagazines.hpp` files
 
 ```c++
 ace_isbelt

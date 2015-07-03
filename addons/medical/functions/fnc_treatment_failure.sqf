@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect"];
+private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect"];
 
 _args = _this select 0;
 _caller = _args select 0;
@@ -58,6 +58,6 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
-_args call FUNC(createLitter);
-
 _args call _callback;
+
+// _args call FUNC(createLitter);

@@ -17,8 +17,9 @@
 PARAMS_3(_unit,_turretAndDirection,_majorStep);
 
 if (!(_unit isKindOf "Man")) exitWith {false};
+if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
 
-private ["_weaponIndex", "_zeroing", "_optic", "_increment", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero", "_adjustment"];
+private ["_weaponIndex", "_zeroing", "_optic", "_verticalIncrement", "_horizontalIncrement", "_maxVertical", "_maxHorizontal", "_elevation", "_windage", "_zero", "_adjustment"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
@@ -33,28 +34,28 @@ if (isNil QGVAR(Optics)) then {
 };
 
 _optic = GVAR(Optics) select _weaponIndex;
-_increment = getNumber (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Increment");
+_verticalIncrement = getNumber (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_VerticalIncrement");
+_horizontalIncrement = getNumber (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_HorizontalIncrement");
 _maxVertical = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Vertical");
 _maxHorizontal = getArray (configFile >> "CfgWeapons" >> _optic >> "ACE_ScopeAdjust_Horizontal");
 
-if ((count _maxHorizontal < 2) or (count _maxVertical < 2)) exitWith {false};
+if ((count _maxHorizontal < 2) || (count _maxVertical < 2)) exitWith {false};
+if ((_verticalIncrement == 0) && (_horizontalIncrement == 0)) exitWith {false};
 
 _zeroing   = _adjustment select _weaponIndex;
 _elevation = _zeroing select 0;
 _windage   = _zeroing select 1;
 _zero      = _zeroing select 2;
 
-switch (_turretAndDirection) do
-{
-    case ELEVATION_UP:   { _elevation = _elevation + _increment };
-    case ELEVATION_DOWN: { _elevation = _elevation - _increment };
-    case WINDAGE_LEFT:   { _windage = _windage - _increment };
-    case WINDAGE_RIGHT:  { _windage = _windage + _increment };
+switch (_turretAndDirection) do {
+    case ELEVATION_UP:   { _elevation = _elevation + _verticalIncrement };
+    case ELEVATION_DOWN: { _elevation = _elevation - _verticalIncrement };
+    case WINDAGE_LEFT:   { _windage = _windage - _horizontalIncrement };
+    case WINDAGE_RIGHT:  { _windage = _windage + _horizontalIncrement };
 };
 
 if (_majorStep) then {
-    switch (_turretAndDirection) do
-    {
+    switch (_turretAndDirection) do {
         case ELEVATION_UP:   { _elevation = ceil(_elevation) };
         case ELEVATION_DOWN: { _elevation = floor(_elevation) };
         case WINDAGE_LEFT:   { _windage = floor(_windage) };

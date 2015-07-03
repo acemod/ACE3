@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_part","_damageThreshold", "_withDamage"];
+private ["_unit","_part","_damageThreshold", "_withDamage", "_damageBodyPart"];
 _unit = _this select 0;
 _part = _this select 1;
 _withDamage = if (count _this > 2) then { _this select 2} else {0};

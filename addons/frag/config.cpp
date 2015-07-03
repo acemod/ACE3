@@ -10,7 +10,6 @@ class CfgPatches {
     };
 };
 
-//PRELOAD_ADDONS;
-
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
+#include "ACE_Settings.hpp"

@@ -19,7 +19,7 @@ if (GVAR(pfeh_running)) then {
     [QGVAR(Placement),"OnEachFrame"] call CALLSTACK(BIS_fnc_removeStackedEventHandler);
     GVAR(pfeh_running) = false;
 };
-private ["_mag", "_setup", "_player"];
+private ["_setup", "_player", "_dir"];
 _setup = GVAR(Setup);
 GVAR(Setup) = objNull;
 [GVAR(placer), "ACE_Explosives", false] call EFUNC(Common,setForceWalkStatus);
@@ -37,10 +37,10 @@ if (_dir > 180) then {
 } else {
     _dir = 180 + _dir;
 };
-_setup setVariable [QGVAR(Direction), _dir];
+_setup setVariable [QGVAR(Direction), _dir, true];
 _player setVariable [QGVAR(PlantingExplosive), true];
 [{_this setVariable [QGVAR(PlantingExplosive), false]}, _player, 1.5, 0.5] call EFUNC(common,waitAndExecute);
 _setup addEventHandler ["EpeContactStart", FUNC(onLanded)];
 _setup enableSimulationGlobal true;
-_player playActionNow "MedicOther";
+_player playActionNow "PutDown";
 _player removeMagazine (_setup getVariable [QGVAR(Class), ""]);

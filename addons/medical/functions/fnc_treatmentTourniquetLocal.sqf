@@ -29,7 +29,7 @@ _tourniquets set[_part, _applyingTo];
 _target setvariable [QGVAR(tourniquets), _tourniquets, true];
 
 [{
-    private ["_args","_target","_applyingTo","_part", "_tourniquets"];
+    private ["_args","_target","_applyingTo","_part", "_tourniquets", "_time"];
     _args = _this select 0;
     _target = _args select 0;
     _applyingTo = _args select 1;
@@ -44,9 +44,9 @@ _target setvariable [QGVAR(tourniquets), _tourniquets, true];
         // Tourniquet has been removed
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
-    if (time - _time > 120) then {
+    if (ACE_time - _time > 120) then {
         _target setvariable [QGVAR(pain), (_target getvariable [QGVAR(pain), 0]) + 0.005];
     };
-}, 5, [_target, _applyingTo, _part, time] ] call CBA_fnc_addPerFrameHandler;
+}, 5, [_target, _applyingTo, _part, ACE_time] ] call CBA_fnc_addPerFrameHandler;
 
 true;
