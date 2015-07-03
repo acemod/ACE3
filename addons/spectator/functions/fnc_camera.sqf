@@ -30,23 +30,21 @@ _this = _this select 1;
 switch _mode do {
 
     case "Init": {
-    
+
         GVAR(noEscape) = if (count _this > 0) then {_this select 0} else {false};
-        
-        call FUNC(penPos);
 
         _camPos = if (!isNil QGVAR(startingPos)) then {
             GVAR(startingPos)
         } else {
             getPos cameraOn
         };
-        
+
         _camDir = if (!isNil QGVAR(startingDir)) then {
             GVAR(startingDir)
         } else {
             0
         };
-        
+
         _camPos set [2, (_camPos select 2) + 2];
         _cam = "camera" camCreate _camPos;
         _cam setDir _camDir;
@@ -55,7 +53,7 @@ switch _mode do {
         _cam camCommit 0;
         showCinemaBorder false;
         cameraEffectEnableHUD true;
-        
+
         //variables
         GVAR(cam) = _cam;
         GVAR(LMB) = false;
@@ -73,27 +71,27 @@ switch _mode do {
         GVAR(markers) = 3;
         GVAR(accTime) = 1;
         GVAR(third) = false;
-        
+
         //define only if doesn't exist (to preserve saved spots from a previous camera)
         if (isNil QGVAR(savedSpots)) then {
             GVAR(savedSpots) = [];
             for "_i" from 0 to 11 do {GVAR(savedSpots) set [_i, []]};
         };
-        
+
         if (isNil QGVAR(savedUnits)) then {
             GVAR(savedUnits) = [];
             for "_i" from 0 to 9 do {GVAR(savedUnits) set [_i, objNull]};
         };
-        
+
         GVAR(keys) = [];
         _DIKcodes = true call BIS_fnc_keyCode;
         _DIKlast = _DIKcodes select (count _DIKcodes - 1);
         for "_i" from 0 to (_DIKlast - 1) do {
             GVAR(keys) set [_i, false];
         };
-        
+
         _display = findDisplay 46;
-        
+
         GVAR(ehDraw3D) = addMissionEventhandler ["Draw3D", {['Draw3D', _this] call FUNC(draw3D)}];
         addMissionEventHandler ["Ended", {if (!isNil QGVAR(cam)) then {["Exit"] call FUNC(camera)}}];
         GVAR(ehKeyDown) = _display displayAddEventHandler ["keyDown", {['KeyDown', _this] call FUNC(camera)}];
@@ -116,40 +114,40 @@ switch _mode do {
         for "_i" from 1 to (count _layers - 1) step 2 do {
             (_layers select _i) cutText ["", "Plain"];
         };
-        
+
         clearRadio;
-        
+
         //crosshair
         _layer = [QGVAR(crosshair)] call BIS_fnc_rscLayer;
         _layer cutRsc [QGVAR(crosshair), "PLAIN", 2, true];
-        
+
         //compass
         _layer = [QGVAR(compass)] call BIS_fnc_rscLayer;
         _layer cutRsc [QGVAR(compass), "PLAIN", 2, true];
-        
+
         //status
         _layer = [QGVAR(status)] call BIS_fnc_rscLayer;
         _layer cutRsc [QGVAR(status), "PLAIN", 2, true];
-        
+
         //help
         _layer = [QGVAR(help)] call BIS_fnc_rscLayer;
         preloadTitleRsc [QGVAR(help), "PLAIN", 0, true];
-        
+
         if (isClass (configFile >> "CfgPatches" >> "ace_nametags")) then {
             GVAR(tags) = [EGVAR(nametags,showPlayerNames), EGVAR(nametags,showNamesForAI)];
             EGVAR(nametags,showPlayerNames) = 0;
             EGVAR(nametags,showNamesForAI) = false;
         };
-        
+
         if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             [QGVAR(interactCondition), {false}] call EFUNC(common,addCanInteractWithCondition);
         };
-        
+
         //add unit check, since if tracking were on it would already be present
         if !GVAR(tracking) then {
             [FUNC(checkUnits), 2] call CBA_fnc_addPerFrameHandler
         };
-        
+
         [FUNC(cameraIntro), 1] call CBA_fnc_addPerFrameHandler;
     };
 
@@ -157,7 +155,7 @@ switch _mode do {
     case "Mouse": {
         _mapOn = uiNamespace getVariable QGVAR(map);
         if (!isNull _mapOn) exitWith {};
-        
+
         _keys = GVAR(keys);
         _cam = GVAR(cam);
         _dir = GVAR(vector) select 0;
@@ -165,7 +163,7 @@ switch _mode do {
         _bank = GVAR(vector) select 2;
         _camPos = getPosASL _cam;
         _coef = (GVAR(moveScale) * (((getPosATL _cam) select 2) / 2)) min 50 max 0.001;
-        
+
         _move = {
             _inPos = _this;
             if !GVAR(cameraOn) exitWith {};
@@ -180,7 +178,7 @@ switch _mode do {
                 _cam setPosASL _inPos;
             };
         };
-        
+
         if (GVAR(LMB) || GVAR(RMB)) then {
             if GVAR(mouseBusy) exitWith {};
             _mX = (_this select 1) * (GVAR(accTime) max 0.05);
@@ -190,10 +188,10 @@ switch _mode do {
 
                 _dX = _mX;
                 _dY = -_mY;
-                
+
                 _camPos = [_camPos, _dY, getDir _cam] call BIS_fnc_relPos;
                 _camPos = [_camPos, _dX, getDir _cam + 90] call BIS_fnc_relPos;
-                
+
                 _camPos call _move;
 
             } else {
@@ -212,7 +210,7 @@ switch _mode do {
                 GVAR(vector) = [_dir, _pitch, _bank];
                 [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
             };
-        };        
+        };
 
         _camMove = {
             _dX = _this select 0;
@@ -226,11 +224,11 @@ switch _mode do {
                 (_pos select 2) + _dZ * _coef / 1.5
             ];
             //for some reason, at visual height = 0, cameras report 10cm higher than they actually are
-            _camPos set [2, (_camPos select 2) max (getTerrainHeightASL _camPos + 0.1)]; 
+            _camPos set [2, (_camPos select 2) max (getTerrainHeightASL _camPos + 0.1)];
 
             _camPos call _move;
         };
-        
+
         _camRotate = {
             if ((GVAR(lock) select 0) > -1) exitWith {};
             _dX = (_this select 0) * GVAR(fov) * _rotMod;
@@ -241,7 +239,7 @@ switch _mode do {
             GVAR(vector) = [_dir, _pitch, _bank];
             [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
         };
-        
+
         _camBank = {
             if ((GVAR(lock) select 0) > -1) exitWith {};
             _dZ = (_this select 0) * _rotMod;
@@ -251,7 +249,7 @@ switch _mode do {
             GVAR(vector) = [_dir, _pitch, _bank];
             [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
         };
-        
+
         _numPad0 = _keys select DIK_NUMPAD0;
         _numPadDel = _keys select DIK_DECIMAL;
         _rotMod = if (_numPad0 && !_numPadDel) then {
@@ -289,13 +287,13 @@ switch _mode do {
             _cam camPrepareFOV GVAR(fov);
             _cam camCommitPrepared 0;
         };
-        
+
         if (_keys select DIK_NUMPADENTER) then {
             GVAR(fov) = 0.7;
             _cam camPrepareFOV GVAR(fov);
             _cam camCommitPrepared 0;
         };
-        
+
         if (_keys select DIK_MINUS) then {
             _cur = GVAR(focus) select 0;
             if (_cur < 0) then {_cur = 1};
@@ -304,7 +302,7 @@ switch _mode do {
             _cam camSetFocus GVAR(focus);
             _cam camCommit 0;
         };
-        
+
         if (_keys select DIK_EQUALS) then {
             _cur = GVAR(focus) select 0;
             if (_cur < 0) then {_cur = 1};
@@ -313,7 +311,7 @@ switch _mode do {
             _cam camSetFocus GVAR(focus);
             _cam camCommit 0;
         };
-        
+
         if (_keys select DIK_LBRACKET)then {
             if (!isMultiplayer) then {
                 _cur = GVAR(accTime);
@@ -322,7 +320,7 @@ switch _mode do {
                 setAccTime GVAR(accTime);
             };
         };
-        
+
         if (_keys select DIK_RBRACKET)then {
             if (!isMultiplayer) then {
                 _cur = GVAR(accTime);
@@ -355,7 +353,7 @@ switch _mode do {
     case "MouseButtonUp": {
         _mapOn = uiNamespace getVariable QGVAR(map);
         if (!isNull _mapOn) exitWith {};
-        
+
         _button = _this select 1;
         switch (_button) do {
             case 0: {GVAR(LMB) = false};
@@ -367,7 +365,7 @@ switch _mode do {
     case "MouseZChanged": {
         _mapOn = uiNamespace getVariable QGVAR(map);
         if (!isNull _mapOn) exitWith {};
-        
+
         _diff = _this select 1;
         if (_diff > 0) then {
             GVAR(moveScale) = GVAR(moveScale) + (GVAR(moveScale) / 10) min 1;
@@ -392,7 +390,7 @@ switch _mode do {
         _lock = GVAR(lock) select 0;
 
         _camPos = [getPos _cam, GVAR(vector), GVAR(fov), GVAR(focus)];
-        
+
         _camSaveSpot = {
             _num = _this select 0;
             if (!isNull GVAR(attach)) then {
@@ -401,9 +399,9 @@ switch _mode do {
                 _vector set [0, _dir - (getDir GVAR(attach))];
                 _camPos set [1, _vector];
             };
-            GVAR(savedSpots) set [_num, _camPos];        
+            GVAR(savedSpots) set [_num, _camPos];
         };
-        
+
         _camLoadSpot = {
             _num = _this select 0;
             _arr = GVAR(savedSpots) select _num;
@@ -419,12 +417,12 @@ switch _mode do {
                 _cam camPrepareFocus (_arr select 3);
                 _cam camCommitPrepared 0;
                 GVAR(vector) = _vector;
-            };    
+            };
         };
-        
+
         _camSaveUnit = {
             _num = _this select 0;
-            
+
             if (!isNull _unit) then {
                 _alreadySaved = GVAR(savedUnits) find _unit;
                 if (_alreadySaved > -1) then {
@@ -433,7 +431,7 @@ switch _mode do {
                 GVAR(savedUnits) set [_num, _unit]
             };
         };
-        
+
         _camLoadUnit = {
             _num = _this select 0;
             _unit = GVAR(savedUnits) select _num;
@@ -456,15 +454,15 @@ switch _mode do {
                         ["Camera", ["SwitchUnit"]] call FUNC(camera);
                     };
                 };
-            };    
+            };
         };
-        
+
         _detach = {
             if (!isNull GVAR(attach)) then {
                 ["Camera", ["Attach"]] call FUNC(camera);
             };
         };
-        
+
         switch (_key) do {
 
             case (DIK_F1): {if (_ctrl) then {[0] call _camSaveSpot} else {[0] call _camLoadSpot}; _return = true};
@@ -490,7 +488,7 @@ switch _mode do {
             case (DIK_8): {if (_ctrl) then {[7] call _camSaveUnit} else {[7] call _camLoadUnit}; _return = true};
             case (DIK_9): {if (_ctrl) then {[8] call _camSaveUnit} else {[8] call _camLoadUnit}; _return = true};
             case (DIK_0): {if (_ctrl) then {[9] call _camSaveUnit} else {[9] call _camLoadUnit}; _return = true};
-            
+
             case (DIK_NUMPAD5): {
                 _dir = getDir _cam;
                 if (!isNull GVAR(attach)) then {_dir = _dir - getDir GVAR(attach)};
@@ -500,13 +498,13 @@ switch _mode do {
                 _cam camPrepareFOV GVAR(fov);
                 _cam camCommitPrepared 0;
             };
-            
+
             case (DIK_NUMPADENTER): {_return = true};
-            
+
             case (DIK_NUMPAD0): {_return = true};
-            
+
             case (DIK_DECIMAL): {_return = true};
-            
+
             case (DIK_BACKSPACE): {
                 GVAR(focus) = if (!_shift) then {
                     [-1, 1];
@@ -517,16 +515,16 @@ switch _mode do {
                 _cam camCommitPrepared 0;
                 _return = true;
             };
-            
+
             case (DIK_BACKSLASH): {
                 if (!isMultiplayer) then {
                     GVAR(accTime) = 1;
                     setAccTime GVAR(accTime);
                 };
             };
-            
+
             case (DIK_GRAVE): {_return = true};
-            
+
             case (DIK_SPACE): {
                 if (!_camOn) exitWith {};
                 if (_ctrl) then {
@@ -535,15 +533,15 @@ switch _mode do {
                     ["Camera", ["Lock"]] call FUNC(camera);
                 };
             };
-            
+
             case (DIK_LEFT): {
                 ["Camera", ["NewUnit", -1]] call FUNC(camera)
             };
-            
+
             case (DIK_RIGHT): {
                 ["Camera", ["NewUnit", 1]] call FUNC(camera)
             };
-            
+
             case (DIK_UP): {
                 if (isNull GVAR(unit)) exitWith {};
                 if (_lock > -1) then {["Camera", ["Lock"]] call FUNC(camera)};
@@ -556,7 +554,7 @@ switch _mode do {
                     };
                 };
             };
-            
+
             case (DIK_DOWN): {
                 if (isNull GVAR(unit)) exitWith {};
                 if (_lock > -1) then {["Camera", ["Lock"]] call FUNC(camera)};
@@ -569,17 +567,17 @@ switch _mode do {
                     };
                 };
             };
-            
+
             case (DIK_T): {
                 GVAR(markers) = GVAR(markers) + 1;
                 if (GVAR(markers) > 3) then {GVAR(markers) = 0};
                 if (GVAR(markers) == 0) then {clearRadio};
             };
-            
+
             case (DIK_U): {
                 _map = uiNameSpace getVariable [QGVAR(map), findDisplay 12202];
                 if (!isNull _map) exitWith {};
-            
+
                 _overlay = uiNamespace getVariable [QGVAR(overlay), findDisplay 12200];
                 if (isNull _overlay) then {
                     createDialog QGVAR(overlay);
@@ -587,7 +585,7 @@ switch _mode do {
                     closeDialog 0;
                 };
             };
-            
+
             case (DIK_X): {
                 _layer = [QGVAR(crosshair)] call BIS_fnc_rscLayer;
                 _xhair = uiNamespace getVariable QGVAR(crosshair);
@@ -598,7 +596,7 @@ switch _mode do {
                     _layer cutText ["", "PLAIN"];
                 };
             };
-            
+
             case (DIK_C): {
                 _layer = [QGVAR(compass)] call BIS_fnc_rscLayer;
                 if (isNull (uiNamespace getVariable QGVAR(compass))) then {
@@ -606,7 +604,7 @@ switch _mode do {
                 } else {
                     _layer cutText ["", "PLAIN"];
                 };
-                
+
                 _layer = [QGVAR(status)] call BIS_fnc_rscLayer;
                 if (isNull (uiNamespace getVariable QGVAR(status))) then {
                     _layer cutRsc [QGVAR(status), "PLAIN", 0, true];
@@ -614,16 +612,16 @@ switch _mode do {
                     _layer cutText ["", "PLAIN"];
                 };
             };
-            
+
             case (DIK_H): {
                 _layer = [QGVAR(help)] call BIS_fnc_rscLayer;
                 if (isNull (uiNamespace getVariable QGVAR(help))) then {
                     _layer cutRsc [QGVAR(help), "PLAIN", 0, true];
                 } else {
                     _layer cutText ["", "PLAIN"];
-                };                    
+                };
             };
-            
+
             case (DIK_M): {
                 _map = uiNameSpace getVariable [QGVAR(map), findDisplay 12202];
                 if (isNull _map) then {
@@ -653,7 +651,7 @@ switch _mode do {
                         camUseNVG false;
                         true SetCamUseTi 1;
                     };
-                    
+
                     case 4: {
                         camUseNVG false;
                         true SetCamUseTi 4;
@@ -674,7 +672,7 @@ switch _mode do {
             };
             default {};
         };
-        
+
         _return
     };
 
@@ -685,16 +683,16 @@ switch _mode do {
 
     //////////////////////////////////////////
     case "Camera": {
-    
+
         _mode = _this select 0;
-        
+
         _cam = GVAR(cam);
         _camOn = GVAR(cameraOn);
         _unit = GVAR(unit);
         _lock = GVAR(lock) select 0;
-        
+
         _findTarget = {
-        
+
             _ret = [];
             _screenPos = screenToWorld [0.5,0.5];
             _camPosASL = getPosASL _cam;
@@ -702,14 +700,14 @@ switch _mode do {
             _endPosASL = [_screenPos select 0, _screenPos select 1, getTerrainHeightASL _screenPos];
             _endPosReal = if (surfaceIsWater _endPosASL) then {_endPosASL} else {ASLtoATL _endPosASL};
             _objs = lineIntersectsWith [_camPosASL, _endPosASL, objNull, objNull, true];
-            
+
             if (count _objs > 0) then { //if vehicle/object found
                 _obj = _objs select (count _objs - 1);
                 _ret = _obj;
             } else { //check for units near endpoint instead
                 _units = allUnits;
                 if (count _units > 0) then {
-                    _nearestUnit = _units select 0;        
+                    _nearestUnit = _units select 0;
                     {if (_endPosReal distance _x < _endPosReal distance _nearestUnit) then {_nearestUnit = _x}} forEach _units;
                     _intersect = [_nearestUnit, "FIRE"] intersect [_camPosReal, _endPosReal];
                     if (count (_intersect) > 0) then {
@@ -724,13 +722,13 @@ switch _mode do {
                             _ret = _endPosReal;
                         };
                     };
-                };                
+                };
             };
             _ret
         };
-        
+
         switch (_mode) do {
-        
+
             case "Free": {
                 GVAR(cameraOn) = true;
                 GVAR(third) = false;
@@ -745,7 +743,7 @@ switch _mode do {
                 GVAR(vector) set [0, _dir];
                 [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
             };
-            
+
             case "First": {
                 if (_unit == player) exitWith {};
                 GVAR(cameraOn) = false;
@@ -754,7 +752,7 @@ switch _mode do {
                 _cam cameraEffect ["Terminate", "Back"];
                 vehicle _unit switchCamera "Internal";
             };
-            
+
             case "Third": {
                 if (_unit == player) exitWith {};
                 GVAR(third) = true;
@@ -774,29 +772,29 @@ switch _mode do {
                     vehicle _unit switchCamera "External";
                 };
             };
-            
+
             case "NewUnit": {
-            
+
                 _increment = _this select 1;
                 _units = [];
                 {
                     if (alive _x) then {_units pushBack _x};
                 } forEach GVAR(units);
-                
+
                 _count = count _units;
-                
+
                 if (_count > 0) then {
 
                     _index = _units find _unit;
                     _index = _index + _increment;
                     if (_index < 0) then {_index = _count - 1};
                     if (_index > (_count - 1)) then {_index = 0};
-                
+
                     GVAR(unit) = _units select _index;
                     if (!_camOn) then {["Camera", ["SwitchUnit"]] call FUNC(camera)};
-                };        
+                };
             };
-            
+
             case "SwitchUnit": {
                 if !GVAR(third) then {
                     ["Camera", ["First"]] call FUNC(camera);
@@ -804,12 +802,12 @@ switch _mode do {
                     ["Camera", ["Third"]] call FUNC(camera);
                 };
             };
-            
+
             case "Lock": {
                 if (_lock < 0) then {
-        
+
                     _target = call _findTarget;
-                    
+
                     if (typeName _target == "OBJECT") then {
                         GVAR(lock) = [1, _target];
                     } else {
@@ -817,7 +815,7 @@ switch _mode do {
                             GVAR(lock) = [1, _target];
                         };
                     };
-                    
+
                     _cam camPrepareTarget (GVAR(lock) select 1);
                     _cam camCommitPrepared 0;
                     call FUNC(crosshair);
@@ -844,10 +842,10 @@ switch _mode do {
                     };
                     GVAR(vector) = [_dir, _pitchBank select 0, 0];
                     [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
-                    call FUNC(crosshair);                
+                    call FUNC(crosshair);
                 };
             };
-            
+
             case "Attach": {
                 _dir = getDir _cam;
                 _pitchBank = _cam call BIS_fnc_getPitchBank;
@@ -870,15 +868,15 @@ switch _mode do {
                 [_cam, GVAR(vector)] call BIS_fnc_setObjectRotation;
             };
         };
-        
+
         call FUNC(crosshair);
     };
-      
+
     //////////////////////////////////////////
     case "Help": {
-        
+
         _dialog = _this;
-    
+
 _c1Action = parseText "<t align='left'>
 <t underline='true'>Camera:</t><br />
 <br />
@@ -992,26 +990,26 @@ _add2 = parseText "<t align='left'>
     _c2Action = composeText [_c2Action, _add1];
     _c2Control = composeText [_c2Control, _add2];
 };
-    
+
         (_dialog displayCtrl 1) ctrlSetStructuredText _c1Action;
         (_dialog displayCtrl 2) ctrlSetStructuredText _c1Control;
         (_dialog displayCtrl 3) ctrlSetStructuredText _c2Action;
         (_dialog displayCtrl 4) ctrlSetStructuredText _c2Control;
     };
-    
+
     //////////////////////////////////////////
     case "Exit": {
-        
+
         if (isClass (configFile >> "CfgPatches" >> "ace_nametags")) then {
             EGVAR(nametags,showPlayerNames) = GVAR(tags) select 0;
             EGVAR(nametags,showNamesForAI) = GVAR(tags) select 1;
             GVAR(tags) = nil;
         };
-        
+
         if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {
             EGVAR(hearing,disableVolumeUpdate) = false;
         };
-        
+
         if (isClass (configFile >> "CfgPatches" >> "ace_interact_menu")) then {
             [QGVAR(interactCondition)] call EFUNC(common,removeCanInteractWithCondition);
         };
@@ -1021,7 +1019,7 @@ _add2 = parseText "<t align='left'>
         false SetCamUseTi 0;
         camDestroy GVAR(cam);
         clearRadio;
-        
+
         GVAR(noEscape) = nil;
         GVAR(cam) = nil;
         GVAR(LMB) = nil;
@@ -1041,7 +1039,7 @@ _add2 = parseText "<t align='left'>
         GVAR(accTime) = nil;
 
         _display = findDisplay 46;
-        
+
         removeMissionEventHandler ["Draw3D", GVAR(ehDraw3D)];
         _display displayRemoveEventHandler ["keyDown", GVAR(ehKeyDown)];
         _display displayRemoveEventHandler ["keyUp", GVAR(ehKeyUp)];
@@ -1064,7 +1062,7 @@ _add2 = parseText "<t align='left'>
         for "_i" from 1 to (count _layers - 1) step 2 do {
             (_layers select _i) cutText ["", "Plain"];
         };
-        
+
         if (!isMultiplayer) then {setAccTime 1};
         ACE_player switchCamera "Internal";
     };

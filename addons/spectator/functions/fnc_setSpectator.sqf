@@ -27,13 +27,16 @@ if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 // Spectators aren't physical entities (todo: this command has to be executed on the server)
 _unit hideObjectGlobal _set;
 
-if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {EGVAR(hearing,disableVolumeUpdate) = _set};
-if (isClass (configFile >> "CfgPatches" >> "acre_sys_radio")) then {[_set] call acre_api_fnc_setSpectator};
-if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {[_unit, _set] call TFAR_fnc_forceSpectator};
+// Prevent player falling into water
+_unit enableSimulation !_set;
 
 if (_set) then {
     // Move the player ASAP to avoid being seen
-    _unit setPosATL GVAR(penPos);
+    _unit setPosASL (getMarkerPos QGVAR(respawn));
+    [_unit] joinSilent grpNull;
+
+    // Dead men can't talk
+    [_unit, "isSpectator"] call EFUNC(common,muteUnit);
 
     if !(GVAR(modulePos)) then {
         if !(isNull _target) then {
@@ -41,25 +44,21 @@ if (_set) then {
         };
     };
 
-    // Spectators shouldn't show in group UI
-    [_unit] joinSilent grpNull;
-
-    // Prevent drowning and vision blur
-    if (surfaceisWater GVAR(penPos)) then {
-        _unit forceAddUniform "U_B_Wetsuit";
-        _unit addVest "V_RebreatherB";
-    };
-
-    // Dead men can't talk
-    [_unit, "isSpectator"] call EFUNC(common,muteUnit);
-
     0 fadeSound 0;
     999999 cutText ["", "BLACK FADED", 0];
     ["Init", [true]] call FUNC(camera);
 } else {
     // Code to exit spectator and "respawn" player goes here (WIP)
     ["Exit"] call FUNC(camera);
+
+    // Living men can talk
+    [_unit, "isSpectator"] call EFUNC(common,unmuteUnit);
 };
+
+// Handle common addon audio
+if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {EGVAR(hearing,disableVolumeUpdate) = _set};
+if (isClass (configFile >> "CfgPatches" >> "acre_sys_radio")) then {[_set] call acre_api_fnc_setSpectator};
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {[_unit, _set] call TFAR_fnc_forceSpectator};
 
 // Spectators ignore damage (vanilla and ace_medical)
 _unit allowDamage !_set;

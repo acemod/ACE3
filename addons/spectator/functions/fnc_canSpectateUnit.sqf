@@ -22,9 +22,8 @@
 
 _unit = _this select 0;
 
-if (_unit distance GVAR(penPos) < 200) exitWith {false};
-if (_unit distance [0,0,0] < 100) exitWith {false};
-if (!GVAR(AI) && !isPlayer _unit) exitWith {false};
-if (GVAR(limitSide) && (([_unit] call FUNC(unitSide)) != GVAR(playerSide))) exitWith {false};
-
-true
+(simulationEnabled _unit) && // Simulation enabled
+//{!isObjectHidden _unit} && // Not hidden (currently dev branch only)
+{!(_unit getVariable [QGVAR(isSpectator), false])} && // Who watches the watchmen?
+{(GVAR(AI) || (isPlayer _unit))} && // Only allow AI when setting is enabled
+{!GVAR(limitSide) || (([_unit] call FUNC(unitSide)) == GVAR(playerSide))} // Only allow units of same side when setting is enabled
