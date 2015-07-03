@@ -116,55 +116,55 @@ class CfgVehicles {
     // MRAPs
     class MRAP_01_base_F;
     class B_MRAP_01_F: MRAP_01_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_b";
+        EGVAR(bft,vehicleDevice) = "Motorized_b";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_01_hmg_base_F;
     class B_MRAP_01_hmg_F : MRAP_01_hmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_b";
+        EGVAR(bft,vehicleDevice) = "Motorized_b";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_01_gmg_base_F;
     class B_MRAP_01_gmg_F : MRAP_01_gmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_b";
+        EGVAR(bft,vehicleDevice) = "Motorized_b";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_02_base_F;
     class O_MRAP_02_F : MRAP_02_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_o";
+        EGVAR(bft,vehicleDevice) = "Motorized_o";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_02_hmg_base_F;
     class O_MRAP_02_hmg_F : MRAP_02_hmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_o";
+        EGVAR(bft,vehicleDevice) = "Motorized_o";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_02_gmg_base_F;
     class O_MRAP_02_gmg_F : MRAP_02_gmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_o";
+        EGVAR(bft,vehicleDevice) = "Motorized_o";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_03_base_F;
     class I_MRAP_03_F : MRAP_03_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_i";
+        EGVAR(bft,vehicleDevice) = "Motorized_i";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_03_hmg_base_F;
     class I_MRAP_03_hmg_F : MRAP_03_hmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_i";
+        EGVAR(bft,vehicleDevice) = "Motorized_i";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
     class MRAP_03_gmg_base_F;
     class I_MRAP_03_gmg_F : MRAP_03_gmg_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_i";
+        EGVAR(bft,vehicleDevice) = "Motorized_i";
         EGVAR(bft,vehicleInterfaces)[] = {"JV5"};
     };
 
@@ -209,57 +209,57 @@ class CfgVehicles {
     // Tracked APCs
     class B_APC_Tracked_01_base_F;
     class B_APC_Tracked_01_rcws_F : B_APC_Tracked_01_base_F { // APC
-        EGVAR(bft,vehicleDevice) = "Mech_b";
+        EGVAR(bft,vehicleDevice) = "Mechanized_b";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
     class B_APC_Tracked_01_CRV_F : B_APC_Tracked_01_base_F { // Support (dozer)
-        EGVAR(bft,vehicleDevice) = "Mech_b";
+        EGVAR(bft,vehicleDevice) = "Mechanized_b";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
     class B_APC_Tracked_01_AA_F : B_APC_Tracked_01_base_F { // AA
-        EGVAR(bft,vehicleDevice) = "Mech_b";
+        EGVAR(bft,vehicleDevice) = "Mechanized_b";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     class O_APC_Tracked_02_base_F;
     class O_APC_Tracked_02_cannon_F : O_APC_Tracked_02_base_F { // APC
-        EGVAR(bft,vehicleDevice) = "Mech_o";
+        EGVAR(bft,vehicleDevice) = "Mechanized_o";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
     class O_APC_Tracked_02_AA_F : O_APC_Tracked_02_base_F { // AA
-        EGVAR(bft,vehicleDevice) = "Mech_o";
+        EGVAR(bft,vehicleDevice) = "Mechanized_o";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     class I_APC_tracked_03_base_F;
     class I_APC_tracked_03_cannon_F : I_APC_tracked_03_base_F { // APC
-        EGVAR(bft,vehicleDevice) = "Mech_i";
+        EGVAR(bft,vehicleDevice) = "Mechanized_i";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     // Wheeled APCs
     class B_APC_Wheeled_01_base_F;
     class B_APC_Wheeled_01_cannon_F : B_APC_Wheeled_01_base_F {
-        EGVAR(bft,vehicleDevice) = "Mech_b";
+        EGVAR(bft,vehicleDevice) = "Mechanized_b";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     class O_APC_Wheeled_02_base_F;
     class O_APC_Wheeled_02_rcws_F : O_APC_Wheeled_02_base_F {
-        EGVAR(bft,vehicleDevice) = "Mech_o";
+        EGVAR(bft,vehicleDevice) = "Mechanized_o";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     class I_APC_Wheeled_03_base_F;
     class I_APC_Wheeled_03_cannon_F : I_APC_Wheeled_03_base_F {
-        EGVAR(bft,vehicleDevice) = "Mech_i";
+        EGVAR(bft,vehicleDevice) = "Mechanized_i";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver","Turret"}}};
     };
 
     // Trucks
     class Truck_01_base_F;
     class B_Truck_01_transport_F : Truck_01_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_b";
+        EGVAR(bft,vehicleDevice) = "Motorized_b";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver",{"Cargo",{0}}}}};
     };
     class B_Truck_01_mover_F : B_Truck_01_transport_F { // Towing, Box, Ammo, Fuel
@@ -277,11 +277,11 @@ class CfgVehicles {
 
     class Truck_03_base_F;
     class O_Truck_03_transport_F : Truck_03_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_o";
+        EGVAR(bft,vehicleDevice) = "Motorized_o";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver",{"Cargo",{0}}}}};
     };
     class O_Truck_03_covered_F : Truck_03_base_F {
-        EGVAR(bft,vehicleDevice) = "Mot_o";
+        EGVAR(bft,vehicleDevice) = "Motorized_o";
         EGVAR(bft,vehicleInterfaces)[] = {{"JV5",{"Driver",{"Cargo",{0}}}}};
     };
     class O_Truck_03_repair_F : Truck_03_base_F { // Repair
