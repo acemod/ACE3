@@ -11,33 +11,34 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_ifOnload;
+ *   [] call ace_bft_devices_fnc_ifOnload;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID","_isDialog"];
+private ["_displayName","_mapScale","_ifType","_player","_playerKilledEhId","_vehicle","_vehicleGetOutEhId","_draw3dEhId","_aceUnconciousEhId","_acePlayerInventoryChangedEhId","_acePlayerChangedEhId","_backgroundPosition","_backgroundPositionX","_backgroundPositionY","_backgroundConfigPositionX","_backgroundConfigPositionY","_xOffset","_yOffset","_backgroundOffset","_aceUpdateDeviceOwnerEhId","_deviceID","_isDialog","_interfaceID"];
 
 // remove helmet and UAV cameras
 [] call FUNC(deleteHelmetCam);
 [] call FUNC(deleteUAVcam);
 
 if !(I_CLOSED) then {
-    // [_deviceID,_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
+    // [_deviceID,_interfaceID,_ifType,_displayName,_isDialog,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
     _deviceID = I_GET_DEVICE;
+    _interfaceID = I_GET_ID;
     _ifType = I_GET_TYPE;
     _displayName = I_GET_NAME;
     _isDialog = I_GET_ISDIALOG;
-    _player = GVAR(ifOpen) select 4;
-    _playerKilledEhId = GVAR(ifOpen) select 5;
-    _vehicle = GVAR(ifOpen) select 6;
-    _vehicleGetOutEhId = GVAR(ifOpen) select 7;
-    _draw3dEhId = GVAR(ifOpen) select 8;
-    _aceUnconciousEhId = GVAR(ifOpen) select 9;
-    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 10;
-    _acePlayerChangedEhId = GVAR(ifOpen) select 11;
+    _player = GVAR(ifOpen) select 5;
+    _playerKilledEhId = GVAR(ifOpen) select 6;
+    _vehicle = GVAR(ifOpen) select 7;
+    _vehicleGetOutEhId = GVAR(ifOpen) select 8;
+    _draw3dEhId = GVAR(ifOpen) select 9;
+    _aceUnconciousEhId = GVAR(ifOpen) select 10;
+    _aceUpdateDeviceOwnerEhId = GVAR(ifOpen) select 11;
+    _acePlayerChangedEhId = GVAR(ifOpen) select 12;
     
     if (!isNil "_playerKilledEhId") then {_player removeEventHandler ["killed",_playerKilledEhId]};
     if (!isNil "_vehicleGetOutEhId") then {_vehicle removeEventHandler ["GetOut",_vehicleGetOutEhId]};
@@ -79,7 +80,7 @@ if !(I_CLOSED) then {
             };
             
             // Save mapWorldPos, mapScaleDlg and background offset of current dialog so it can be restored later
-            [_deviceID,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale],["dlgIfPosition",_backgroundOffset]],false] call FUNC(setSettings);
+            [_interfaceID,[["mapWorldPos",GVAR(mapWorldPos)],["mapScaleDlg",_mapScale],["dlgIfPosition",_backgroundOffset]],false] call FUNC(setSettings);
         };
     };
     
@@ -88,7 +89,7 @@ if !(I_CLOSED) then {
 
     // if the device is a personal device, save settings to device appData store
     if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") then {
-        [_deviceID,[-1,HASH_GET(GVAR(settings),_deviceID)]] call EFUNC(bft,handleUpdateDeviceAppData);
+        [_deviceID,[-1,HASH_GET(GVAR(settings),_interfaceID)]] call EFUNC(bft,handleUpdateDeviceAppData);
     };
     
     // send "bft_deviceClosed" event

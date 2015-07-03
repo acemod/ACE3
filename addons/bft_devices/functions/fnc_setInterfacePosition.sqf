@@ -12,7 +12,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   ["ace_bft_devices_DK10_dlg",[0.2,0.1]] call ace_bft_setInterfacePosition;
+ *   ["ace_bft_devices_DK10_dlg",[0.2,0.1]] call ace_bft_fnc_setInterfacePosition;
  *
  * Public: No
  */

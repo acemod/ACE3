@@ -11,7 +11,7 @@
  *   2D world coordinates of map control center <ARRAY>
  *
  * Example:
- *   [_ctrlScreen] call ace_bft_devices_ctrlMapCenter;
+ *   [_ctrlScreen] call ace_bft_devices_fnc_ctrlMapCenter;
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_decTextSize;
+ *   [] call ace_bft_devices_fnc_decTextSize;
  *
  * Public: No
  */

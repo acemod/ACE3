@@ -24,7 +24,7 @@ private [];
 
 #include "script_component.hpp"
 
-private ["_control", "_display", "_deviceID", "_function", "_selectedIndex"];
+private ["_control", "_display", "_interfaceID", "_function", "_selectedIndex"];
 
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
@@ -32,18 +32,18 @@ if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 _function = _this select 0;
 _control = _this select 1 select 0;
 _display = ctrlParent _control;
-_deviceID = I_GET_DEVICE;
+_interfaceID = I_GET_ID;
 _selectedIndex = _this select 1 select 1;
 
 switch (_function) do {
     case "UAVlist": {
         if (_selectedIndex != -1) then {
-            [_deviceID,[['uavCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
+            [_interfaceID,[['uavCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
         };
     };
     case "HCAMlist": {
         if (_selectedIndex != -1) then {
-            [_deviceID,[['hCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
+            [_interfaceID,[['hCam',_control lbData _selectedIndex]]] call FUNC(setSettings);
         };
     };
 };

@@ -6,7 +6,7 @@
  *   Modified to include lessons learned from KK's excellent tutorial: http://killzonekid.com/arma-scripting-tutorials-uav-r2t-and-pip/
  *
  * Arguments:
- *   0: Device ID <STRING>
+ *   0: Device ID of the UAV <STRING>
  *   1: List of arrays with seats with render targets <ARRAY>
  *       0: Seat <INTEGER>
  *           0 = DRIVER

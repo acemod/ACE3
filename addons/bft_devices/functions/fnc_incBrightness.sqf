@@ -5,26 +5,26 @@
  *   Increases interface brightness
  *
  * Arguments:
- *   0: Device ID <STRING>
+ *   0: Interface ID <STRING>
  *
  * Return Value:
  *   TRUE <BOOL>
  *
  * Example:
- *   ["deviceID"] call ace_bft_devices_incBrightness;
+ *   ["interfaceID"] call ace_bft_devices_fnc_incBrightness;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_brightness", "_deviceID"];
+private ["_brightness", "_interfaceID"];
 
-_deviceID = _this select 0;
-_brightness = [_deviceID,"brightness"] call FUNC(getSettings);
+_interfaceID = _this select 0;
+_brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
 _brightness = _brightness + 0.1;
 // make sure brightness is not larger than 1
 if (_brightness > 1) then {_brightness = 1};
-[_deviceID,[["brightness",_brightness]]] call FUNC(setSettings);
+[_interfaceID,[["brightness",_brightness]]] call FUNC(setSettings);
 
 true

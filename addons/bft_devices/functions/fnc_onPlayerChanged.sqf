@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_onPlayerChanged;
+ *   [] call ace_bft_devices_fnc_onPlayerChanged;
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_processNotifications;
+ *   [] call ace_bft_devices_fnc_processNotifications;
  *
  * Public: No
  */

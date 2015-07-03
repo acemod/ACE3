@@ -25,6 +25,7 @@ PREP(validateInventory);
 PREP(deviceDataToMapData);
 PREP(getSizeIcon);
 PREP(getTypeIcon);
+PREP(getInterfaces);
 PREP(vehicleInit);
 PREP(encryptionKeyMatch);
 PREP(updateRegisteredEncryptionKeys);

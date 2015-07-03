@@ -11,20 +11,20 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_toggleInterfaceMode;
+ *   [] call ace_bft_devices_fnc_toggleInterfaceMode;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_displayName","_deviceID","_mode"];
+private ["_displayName","_interfaceID","_mode"];
 
 if (I_CLOSED) exitWith {true};
 
 _displayName = I_GET_NAME;
-_deviceID = I_GET_DEVICE;
-_mode = [_deviceID,"mode"] call FUNC(getSettings);
+_interfaceID = I_GET_ID;
+_mode = [_interfaceID,"mode"] call FUNC(getSettings);
 
 call {
     if (_displayName == QGVAR(GD300_dlg)) exitWith {
@@ -34,6 +34,6 @@ call {
         };
     };
 };
-[_deviceID,[["mode",_mode]]] call FUNC(setSettings);
+[_interfaceID,[["mode",_mode]]] call FUNC(setSettings);
 
 true

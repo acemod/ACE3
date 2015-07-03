@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   [] call ace_bft_devices_ifClose;
+ *   [] call ace_bft_devices_fnc_ifClose;
  *
  * Public: No
  */

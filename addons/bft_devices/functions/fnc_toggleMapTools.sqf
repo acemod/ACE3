@@ -5,23 +5,23 @@
  *   Toggle drawing of map tools
  *
  * Arguments:
- *   0: Device ID <STRING>
+ *   0: Interface ID <STRING>
  *
  * Return Value:
  *   Draw map tools <BOOL>
  *
  * Example:
- *   _drawMapTools = ["deviceID"] call ace_bft_devices_toggleMapTools;
+ *   _drawMapTools = ["interfaceID"] call ace_bft_devices_fnc_toggleMapTools;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_deviceID","_newMapTools"];
+private ["_interfaceID","_newMapTools"];
 
-_deviceID = _this select 0;
-_newMapTools = !([_deviceID,"mapTools"] call FUNC(getSettings));
-[_deviceID,[["mapTools",_newMapTools]]] call FUNC(setSettings);
+_interfaceID = _this select 0;
+_newMapTools = !([_interfaceID,"mapTools"] call FUNC(getSettings));
+[_interfaceID,[["mapTools",_newMapTools]]] call FUNC(setSettings);
 
 _newMapTools

@@ -13,7 +13,7 @@
  *      1: Interface config position in the form of [x,y,w,h], empty array if background could not be found <ARRAY>
  *
  * Example:
- *   ["ace_bft_devices_DK10_dlg"] call ace_bft_getBackgroundPosition;
+ *   ["ace_bft_devices_DK10_dlg"] call ace_bft_fnc_getBackgroundPosition;
  *
  * Public: No
  */

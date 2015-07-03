@@ -5,7 +5,7 @@
  *   Read interface settings.
  *
  * Arguments:
- *   0: Device ID <STRING>
+ *   0: Interface ID <STRING>
  *   
  *   (Optional)
  *   1: Name of individual property to read <STRING>
@@ -18,32 +18,23 @@
  *
  * Example:
  *   // Return all settings for TAD
- *   ["deviceID"] call ace_bft_devices_fnc_getSettings;
+ *   ["interfaceID"] call ace_bft_devices_fnc_getSettings;
  *   
  *   // Return available map types for TAD
- *   ["deviceID","mapTypes"] call ace_bft_devices_fnc_getSettings;
+ *   ["interfaceID","mapTypes"] call ace_bft_devices_fnc_getSettings;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_commonProperties","_deviceAppData","_combinedProperties","_property","_value","_deviceID","_deviceData"];
+private ["_commonProperties","_deviceAppData","_combinedProperties","_property","_value","_interfaceID","_deviceData"];
 
-_deviceID = _this select 0;
+_interfaceID = _this select 0;
 
 // Fetch common and device specific property hashes
 _commonProperties = HASH_GET(GVAR(settings),"COMMON");
-_deviceAppData = HASH_GET(GVAR(settings),_deviceID);
-
-// if no device appData could be retrieved from cache
-if (isNil "_deviceAppData") then {
-	// read from config
-	_deviceAppData = [_deviceID] call FUNC(getDeviceAppData);
-	
-	// write to cache
-	HASH_SET(GVAR(settings),_deviceID,_deviceAppData);
-};
+_deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
 
 // Return value of requested property
 if (count _this == 2) exitWith {

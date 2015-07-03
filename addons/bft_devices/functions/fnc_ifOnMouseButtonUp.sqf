@@ -24,7 +24,7 @@ private [];
 
 #include "script_component.hpp"
 
-private ["_control","_display","_deviceID","_function","_mouseButton","_mode"];
+private ["_control","_display","_interfaceID","_function","_mouseButton","_mode"];
 
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
@@ -33,31 +33,31 @@ _function = _this select 0;
 _control = _this select 1 select 0;
 _mouseButton = _this select 1 select 1;
 _display = ctrlParent _control;
-_deviceID = I_GET_DEVICE;
+_interfaceID = I_GET_ID;
 
 switch (_function) do {
     case "close": {
         [] call FUNC(ifClose);
     };
     case "btnACT": {
-        _mode = [_deviceID,"mode"] call FUNC(getSettings);
+        _mode = [_interfaceID,"mode"] call FUNC(getSettings);
         call {
             if (_mode == "UAV") exitWith {[] call FUNC(remoteControlUAV)};
-            if (_mode == "HCAM") exitWith {[_deviceID,[["mode","HCAM_FULL"]]] call FUNC(setSettings)};
-            if (_mode == "HCAM_FULL") exitWith {[_deviceID,[["mode","HCAM"]]] call FUNC(setSettings)};
+            if (_mode == "HCAM") exitWith {[_interfaceID,[["mode","HCAM_FULL"]]] call FUNC(setSettings)};
+            if (_mode == "HCAM_FULL") exitWith {[_interfaceID,[["mode","HCAM"]]] call FUNC(setSettings)};
         };
     };
     case "centerMapOnPlayerPosition": {
-        [_deviceID] call FUNC(centerMapOnPlayerPosition);
+        [_interfaceID] call FUNC(centerMapOnPlayerPosition);
     };
     case "toggleMapType": {
-        [_deviceID] call FUNC(toggleMapType);
+        [_interfaceID] call FUNC(toggleMapType);
     };
     case "toggleMapTools": {
-        [_deviceID] call FUNC(toggleMapTools);
+        [_interfaceID] call FUNC(toggleMapTools);
     };
     case "toggleIconText": {
-        [_deviceID] call FUNC(toggleIconText);
+        [_interfaceID] call FUNC(toggleIconText);
     };
     case "incTextSize": {
         [] call FUNC(incTextSize);
@@ -66,32 +66,32 @@ switch (_function) do {
         [] call FUNC(decTextSize);
     };
     case "incBrightness": {
-        [_deviceID] call FUNC(incBrightness);
+        [_interfaceID] call FUNC(incBrightness);
     };
     case "decBrightness": {
-        [_deviceID] call FUNC(decBrightness);
+        [_interfaceID] call FUNC(decBrightness);
     };
     case "modeBFT": {
-        [_deviceID,[['mode','BFT']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','BFT']]] call FUNC(setSettings);
     };
     case "modeUAV": {
-        [_deviceID,[['mode','UAV']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','UAV']]] call FUNC(setSettings);
     };
     case "modeHCAM": {
-        [_deviceID,[['mode','HCAM']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','HCAM']]] call FUNC(setSettings);
     };
     case "modeMESSAGE": {
-        [_deviceID,[['mode','MESSAGE']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','MESSAGE']]] call FUNC(setSettings);
     };
     case "modeCOMPOSE": {
-        [_deviceID,[['mode','COMPOSE']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','COMPOSE']]] call FUNC(setSettings);
     };
     case "modeDESKTOP": {
-        [_deviceID,[['mode','DESKTOP']]] call FUNC(setSettings);
+        [_interfaceID,[['mode','DESKTOP']]] call FUNC(setSettings);
     };
     case "toggleNightModeOrClose": {
         if (_mouseButton == 0) then {
-            [_deviceID] call FUNC(toggleNightMode);
+            [_interfaceID] call FUNC(toggleNightMode);
         } else {
             if (_mouseButton == 1) then {
                 [] call FUNC(ifClose);
@@ -99,7 +99,7 @@ switch (_function) do {
         };
     };
     case "toggleMapMenu": {
-        [_deviceID] call FUNC(toggleMapMenu);
+        [_interfaceID] call FUNC(toggleMapMenu);
     };
     case "toggleInterfaceMode": {
         [] call FUNC(toggleInterfaceMode);

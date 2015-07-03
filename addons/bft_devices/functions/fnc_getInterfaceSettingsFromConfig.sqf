@@ -2,29 +2,27 @@
  * Author: Gundy
  *
  * Description:
- *   Read InterfaceSettings for device from config
+ *   Read InterfaceSettings for interface from config
  *
  * Arguments:
- *   0: Device ID <STRING>
+ *   0: Interface config name <STRING>
  *
  * Return Value:
  *   HASH of InterfaceSettings config class <ARRAY>
  *
  * Example:
- *   ["deviceID"] call ace_bft_getDeviceAppData;
+ *   ["JV5"] call ace_bft_fnc_getInterfaceSettingsFromConfig;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_deviceID","_deviceData","_deviceType","_deviceConfigPath","_configHash"];
+private ["_interfaceConfigPath","_configHash","_interface"];
 
-_deviceID = _this select 0;
-_deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
-_deviceType = D_GET_DEVICETYPE(_deviceData);
+_interface = _this select 0;
 
-_deviceConfigPath =  configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "InterfaceSettings";
+_interfaceConfigPath = configFile >> "ACE_BFT" >> "Interfaces" >> _interface >> "InterfaceSettings";
 
 _configToHash = {
     private ["_config","_configProperties","_configHash","_key","_value","_tempValue"];
@@ -60,4 +58,4 @@ _configToHash = {
     _configHash
 };
 
-[_deviceConfigPath] call _configToHash;
+[_interfaceConfigPath] call _configToHash;

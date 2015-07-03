@@ -11,7 +11,7 @@
  *   Current in-game time in format "HH:MM" <STRING>
  *
  * Example:
- *   [] call ace_bft_devices_currentTime;
+ *   [] call ace_bft_devices_fnc_currentTime;
  *
  * Public: No
  */
