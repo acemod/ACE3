@@ -18,7 +18,7 @@
 
     if (GVAR(endMission) && isServer) then {
         [{
-            if ({isPlayer _x && alive _x && (_x distance GVAR(penPos)) > 200} count playableUnits == 0) then {
+            if ({(isPlayer _x) && (alive _x) && !(_x getVariable [QGVAR(isSpectator), false])} count playableUnits == 0) then {
                 [["endDeath", false], "BIS_fnc_endMission"] call BIS_fnc_MP;
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             };
