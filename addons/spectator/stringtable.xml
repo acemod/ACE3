@@ -40,11 +40,5 @@
         <Key ID="STR_ACE_Spectator_End_Description">
             <English>End mission when all players dead (default BIS behaviour)?</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_VD_Title">
-            <English>View Distance</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_VD_Button">
-            <English>OK</English>
-        </Key>
     </Package>
 </Project>
