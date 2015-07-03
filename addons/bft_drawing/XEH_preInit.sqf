@@ -35,7 +35,7 @@ GVAR(selection) = ["",[]];
 ["mapDisplayLoaded",{
     [(_this select 0) displayCtrl 51] call FUNC(doBFTDraw);
     // if we are loading the briefing screens set up encryption keys and register reporting channels
-    if ((_this select 1) find "Briefing" >= 0) then {
+    if ((_this select 1) != "Ingame") then {
         // only continue if the main map hasn't loaded yet
         if (isNull (findDisplay 12)) then {
             [[player] call EFUNC(bft,getEncryptionKey)] call EFUNC(bft,updateRegisteredEncryptionKeys);
