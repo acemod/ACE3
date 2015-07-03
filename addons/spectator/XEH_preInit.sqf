@@ -26,6 +26,5 @@ PREP(trackUnits);
 PREP(unitInfo);
 PREP(unitSide);
 PREP(unitVar);
-PREP(viewDistance);
 
 ADDON = true;
