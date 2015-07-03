@@ -55,7 +55,6 @@ switch _mode do {
         _cam camCommit 0;
         showCinemaBorder false;
         cameraEffectEnableHUD true;
-        setViewDistance 3000;
         
         //variables
         GVAR(cam) = _cam;
@@ -614,15 +613,6 @@ switch _mode do {
                 } else {
                     _layer cutText ["", "PLAIN"];
                 };
-            };
-                
-            case (DIK_G): {
-                _vd = uiNamespace getVariable [QGVAR(vd), findDisplay 12201];
-                if (isNull _vd) then {
-                    createDialog QGVAR(vd);
-                } else {
-                    closeDialog 0;
-                }
             };
             
             case (DIK_H): {
