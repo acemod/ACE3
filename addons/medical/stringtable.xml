@@ -2918,11 +2918,13 @@
             <English>Remote Controlled AI</English>
             <Spanish>IA controlada remotamente</Spanish>
             <Portuguese>IA controlada remotamente</Portuguese>
+            <Polish>Zdalnie sterowane AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
+            <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_disabled">
             <English>Disabled</English>
@@ -3436,7 +3438,7 @@
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English></English>
             <Russian></Russian>
-            <Polish></Polish>
+            <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>

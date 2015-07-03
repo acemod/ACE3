@@ -578,16 +578,19 @@
             <English>Toggle Handheld Device</English>
             <Spanish>Seleccionar dispositivo de mano</Spanish>
             <Portuguese>Ativa dispositivo de mão</Portuguese>
+            <Polish>Przełącz urządzenie podręczne</Polish>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
             <Spanish>Cerrar dispositivo de mano</Spanish>
             <Portuguese>Fecha dispositivo de mão</Portuguese>
+            <Polish>Zamknij urządzenie podręczne</Polish>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
             <Spanish>Cambiar dispositivos de mano</Spanish>
             <Portuguese>Troca dispositivos de mão</Portuguese>
+            <Polish>Następne urządzenie podręczne</Polish>
         </Key>
     </Package>
 </Project>
