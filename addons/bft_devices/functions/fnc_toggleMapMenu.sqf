@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID","_showMenu"];
+private ["_showMenu"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
+
 _showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
 _showMenu = !_showMenu;
 [_interfaceID,[["showMenu",_showMenu]]] call FUNC(setSettings);

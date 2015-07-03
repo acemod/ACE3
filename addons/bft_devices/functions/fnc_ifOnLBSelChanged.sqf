@@ -20,8 +20,6 @@
  * Public: No
  */
 
-private [];
-
 #include "script_component.hpp"
 
 private ["_control", "_display", "_interfaceID", "_function", "_selectedIndex"];

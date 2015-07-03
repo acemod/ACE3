@@ -18,8 +18,6 @@
 
 #include "script_component.hpp"
 
-private [];
-
 // close any interface that might still be open
 [] call FUNC(ifclose);
 

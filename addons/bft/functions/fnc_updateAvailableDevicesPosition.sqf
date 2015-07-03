@@ -23,10 +23,7 @@
 
 #include "script_component.hpp"
 
-private ["_startNewLoop","_refreshRateRX"];
-// ToDo: use params when available
-_startNewLoop = _this select 0;
-_refreshRateRX = _this select 1;
+PARAMS_2(_startNewLoop,_refreshRateRX)
 
 if (_startNewLoop) then {
     // if there is an ongoing position update loop running, close it down first

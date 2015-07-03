@@ -18,9 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceConfigPath","_configHash","_interface"];
+private ["_interfaceConfigPath","_configHash"];
 
-_interface = _this select 0;
+PARAMS_1(_interface);
 
 _interfaceConfigPath = configFile >> "ACE_BFT" >> "Interfaces" >> _interface >> "InterfaceSettings";
 

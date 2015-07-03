@@ -18,8 +18,6 @@
 
 #include "script_component.hpp"
 
-private [];
-
 [_this select 0,[["mapWorldPos",getPosASL vehicle ACE_player]],true,true] call FUNC(setSettings);
 
 true

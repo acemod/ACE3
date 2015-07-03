@@ -11,7 +11,7 @@
  *   TRUE <BOOL>
  *
  * Example:
- *   ["ace_bft_devices_DK10_dlg",[0.2,0.1]] call ace_bft_fnc_onIfTogglePositionKey;
+ *   [] call ace_bft_fnc_onIfTogglePositionKey;
  *
  * Public: No
  */

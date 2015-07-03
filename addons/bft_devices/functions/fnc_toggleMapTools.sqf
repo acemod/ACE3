@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID","_newMapTools"];
+private ["_newMapTools"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
+
 _newMapTools = !([_interfaceID,"mapTools"] call FUNC(getSettings));
 [_interfaceID,[["mapTools",_newMapTools]]] call FUNC(setSettings);
 

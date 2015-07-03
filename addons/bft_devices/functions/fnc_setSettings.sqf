@@ -29,9 +29,9 @@
 
 #include "script_component.hpp"
 
-private ["_commonProperties","_deviceAppData","_properties","_commonPropertiesUpdate","_combinedPropertiesUpdate","_key","_value","_currentValue","_updateInterface","_forceInterfaceUpdate","_interfaceID"];
+private ["_commonProperties","_deviceAppData","_properties","_commonPropertiesUpdate","_combinedPropertiesUpdate","_key","_value","_currentValue","_updateInterface","_forceInterfaceUpdate"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
 
 _commonProperties = HASH_GET(GVAR(settings),"COMMON");
 _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);

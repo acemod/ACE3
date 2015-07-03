@@ -22,9 +22,10 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_displayName","_display","_isDialog","_backgroundCtrl","_backgroundClassName","_backgroundPosition","_backgroundConfigPosition","_displayConfigContainers"];
+private ["_display","_isDialog","_backgroundCtrl","_backgroundClassName","_backgroundPosition","_backgroundConfigPosition","_displayConfigContainers"];
 
-_displayName = _this select 0;
+PARAMS_1(_displayName);
+
 _display = uiNamespace getVariable _displayName;
 _isDialog = I_GET_ISDIALOG;
 

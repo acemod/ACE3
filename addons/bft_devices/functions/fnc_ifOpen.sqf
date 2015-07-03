@@ -43,20 +43,15 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceType","_displayName","_player","_vehicle","_playerKilledEhId","_vehicleGetOutEhId","_inVehicle", "_deviceID", "_display", "_heading", "_isDialog", "_playerPos", "_veh","_interfaceID","_interfaceConfigName"];
+private ["_inVehicle","_interfaceID","_deviceData","_deviceOwner","_deviceAppData"];
 
 // exit should we have an interface open already or are in the process of starting one
 if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
 
 GVAR(ifOpenStart) = true;
 
-_deviceID = _this select 0;
-_interfaceConfigName = _this select 1;
-_interfaceType = _this select 2;
-_displayName = _this select 3;
-_isDialog = _this select 4;
-_player = _this select 5;
-_vehicle = _this select 6;
+PARAMS_7(_deviceID,_interfaceConfigName,_interfaceType,_displayName,_isDialog,_player,_vehicle);
+
 _inVehicle = (_vehicle != _player);
 
 // genrate interface ID
@@ -92,6 +87,7 @@ if (_inVehicle && (_isDialog || _displayName in [QGVAR(TAD_dsp)])) then {
 if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
     GVAR(ifOpen) set [10,
         addMissionEventHandler ["Draw3D",{
+            private ["_display","_veh","_playerPos"];
             _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
             _playerPos = getPosASL _veh;
@@ -117,6 +113,7 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
 } else {
     GVAR(ifOpen) set [10,
         addMissionEventHandler ["Draw3D",{
+            private ["_display","_veh","_heading"];
             _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
             _heading = direction _veh;

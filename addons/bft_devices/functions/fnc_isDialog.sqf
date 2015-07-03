@@ -22,9 +22,9 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceName","_subString"];
+private ["_subString"];
 
-_interfaceName = _this select 0;
+PARAMS_1(_interfaceName);
 
 // select the last three characters from the interface name
 _subString = _interfaceName select [(count _interfaceName) - 3];

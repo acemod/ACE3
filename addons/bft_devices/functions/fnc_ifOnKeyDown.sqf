@@ -24,15 +24,12 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-private["_display","_dikCode","_shiftKey","_ctrlKey","_altKey","_displayName","_interfaceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex","_mode"];
+private["_displayName","_interfaceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex","_mode"];
 
-_display = _this select 0;
+PARAMS_5(_display,_dikCode,_shiftKey,_ctrlKey,_altKey);
+
 _displayName = I_GET_NAME;
 _interfaceID = I_GET_ID;
-_dikCode = _this select 1;
-_shiftKey = _this select 2;
-_ctrlKey = _this select 3;
-_altKey = _this select 4;
 
 if (_dikCode == DIK_F1 && {_displayName in [QGVAR(DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
     [_interfaceID,[["mode","BFT"]]] call FUNC(setSettings);

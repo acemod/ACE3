@@ -18,9 +18,8 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID"];
+PARAMS_1(_interfaceID);
 
-_interfaceID = _this select 0;
 if (GVAR(showBFTtext)) then {GVAR(showBFTtext) = false} else {GVAR(showBFTtext) = true};
 [_interfaceID,[["showIconText",GVAR(showBFTtext)]]] call FUNC(setSettings);
 

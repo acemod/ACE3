@@ -19,10 +19,9 @@
 
 #include "script_component.hpp"
 
-private ["_renderTarget","_data","_newHost","_camOffSet","_targetOffSet","_oldCam","_oldHost","_nop","_target","_cam"];
+private ["_newHost","_camOffSet","_targetOffSet","_oldCam","_oldHost","_nop","_target","_cam"];
 
-_renderTarget = _this select 0;
-_data = _this select 1;
+PARAMS_2(_renderTarget,_data);
 
 _newHost = objNull;
 _camOffSet = [];

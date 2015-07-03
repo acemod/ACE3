@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID","_nightMode"];
+private ["_nightMode"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
+
 _nightMode = [_interfaceID,"nightMode"] call FUNC(getSettings);
 
 if (_nightMode != 2) then {

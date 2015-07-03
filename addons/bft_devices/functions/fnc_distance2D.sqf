@@ -17,9 +17,9 @@
  * Public: No
  */
 
-private ["_pos1","_pos2"];
-_pos1 = _this select 0;
-_pos2 = _this select 1;
+#include "script_component.hpp"
+
+PARAMS_2(_pos1,_pos2);
 
 // set height to 0;
 _pos1 set [2,0];

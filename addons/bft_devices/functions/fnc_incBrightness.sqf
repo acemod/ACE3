@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_brightness", "_interfaceID"];
+private ["_brightness"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
+
 _brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
 _brightness = _brightness + 0.1;
 // make sure brightness is not larger than 1

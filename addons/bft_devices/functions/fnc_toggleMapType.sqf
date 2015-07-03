@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID","_mapTypes","_currentMapType","_currentMapTypeIndex"];
+private ["_mapTypes","_currentMapType","_currentMapTypeIndex"];
 
-_interfaceID = _this select 0;
+PARAMS_1(_interfaceID);
+
 _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
 _currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);
 _currentMapTypeIndex = (_mapTypes select 0) find _currentMapType;

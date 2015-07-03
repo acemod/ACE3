@@ -20,11 +20,10 @@
 
 #include "script_component.hpp"
 
-private ["_appID","_notification","_time","_done","_decayTime"];
+private ["_time","_done"];
 
-_appID = _this select 0;
-_notification = _this select 1;
-_decayTime = _this select 2;
+PARAMS_3(_appID,_notification,_decayTime);
+
 _time = call FUNC(currentTime);
 _done = false;
 

@@ -18,9 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_dir","_octant"];
+private ["_octant"];
 
-_dir = _this select 0;
+PARAMS_1(_dir);
+
 _octant = round (_dir / 45);
 
 ["N ","NE","E ","SE","S ","SW","W ","NW","N "] select _octant
