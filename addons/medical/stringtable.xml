@@ -3123,12 +3123,18 @@
             <Czech>Lokace osobní lékárničky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
-            <English>Where can the personal aid kit be used?</English>
+            <English>Where can the Personal Aid Kit be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann der Erstehilfekasten verwendet werden?</German>
             <Czech>Kde může být osobní lékárnička použita?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
+            <English>Condition PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
+            <English>When can the Personal Aid Kit be used?</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3217,6 +3223,12 @@
             <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
             <German>Wo kann der Operationskasten verwendet werden?</German>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
+            <English>Condition Surgical kit (Adv)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
+            <English>When can the Surgical kit be used?</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3508,6 +3520,12 @@
             <Hungarian>Nem</Hungarian>
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_AnyTime">
+            <English>Anytime</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Stable">
+            <English>Stable</English>
         </Key>
     </Package>
 </Project>
