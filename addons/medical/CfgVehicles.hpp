@@ -86,6 +86,18 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
+            class maxUnconsciousTime {
+                displayName = "Base Maximum Unconscious Time";
+                description = "The base amount of time that a unit will spend unconscious before waking up without medical intervention."; // TODO: Stringtable
+                typeName = "NUMBER";
+                defaultValue = 10; // testing value: 10
+            };
+            class maxDynamicUnconsciousTime {
+                displayName = "Dynamic Maximum Unconscious Time";
+                description = "The amount of time on top of the base maximum unconscious time which will be randomised and rounded."; // TODO: Stringtable
+                typeName = "NUMBER";
+                defaultValue = 10; // testing value: 10
+            };
             class enableUnconsciousnessAI {
                 displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);
                 description = CSTRING(MedicalSettings_enableUnconsciousnessAI_Description);

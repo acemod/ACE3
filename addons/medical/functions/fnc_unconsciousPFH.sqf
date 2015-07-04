@@ -136,14 +136,14 @@ if (!local _unit) exitwith {
 };
 
 if (GVAR(maxUnconsciousTime) > 0 && {!(_unit getvariable [QGVAR(inReviveState), false])} && {(GVAR(level) == 1)}) then {
-    private ["maxUnitUnconsciousTime"];
-    maxUnitUnconsciousTime = if ((_unit getvariable [QGVAR(maxDynamicUnconsciousTime), 0]) > 0) then {
+    private ["_maxUnitUnconsciousTime"];
+    _maxUnitUnconsciousTime = if ((_unit getvariable [QGVAR(maxDynamicUnconsciousTime), 0]) > 0) then {
         // if a dynamic unconscious time is defined on the unit (round + random are applied in fnc_init), then it needs to be added onto the base maxUnconsciousTime
         (GVAR(maxUnconsciousTime) + (_unit getvariable [QGVAR(maxDynamicUnconsciousTime), 0])); 
     } else {
-        (GVAR(maxUnconsciousTime);
+        (GVAR(maxUnconsciousTime));
     };
-    if ((ACE_time - _startingTime) >= maxUnitUnconsciousTime) exitWith {
+    if ((ACE_time - _startingTime) >= _maxUnitUnconsciousTime) exitWith {
         _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
     };
 };
