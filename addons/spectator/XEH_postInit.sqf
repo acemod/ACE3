@@ -1,14 +1,19 @@
 #include "script_component.hpp"
 
+
+// Add interaction menu exception
+["isNotSpectating", {!((_this select 0) getVariable [QGVAR(isSpectator), false])}] call EFUNC(common,addCanInteractWithCondition);
+
+// Run spectator framework if enabled
 ["SettingsInitialized", {
     if !GVAR(enabled) exitWith {};
 
     //check if respawn is set up properly
     _fail = if (getNumber (missionConfigFile >> "respawn") != 3 && getText (missionConfigFile >> "respawn") != "Base") then {true} else {false};
     if (_fail) exitWith {
-        _text = "[ACE_Spectator] ERROR: This mission does not have respawn set up properly. Add 'respawn=3' or 'respawn=""BASE""' to description.ext.";
-        systemChat _text;
-        diag_log text _text;
+        _errorMsg = "This mission does not have respawn set up properly. Add 'respawn=3' or 'respawn=""BASE""' to description.ext.";
+        ["[ACE_Spectator] ERROR", _errorMsg, {}] call EFUNC(common,errorMessage);
+        diag_log text format ["[ACE_Spectator] ERROR: %1", _errorMsg];
     };
 
     if (GVAR(endMission) && isServer) then {
@@ -21,11 +26,6 @@
     };
 
     if !(hasInterface) exitWith {};
-
-    // Add interaction menu exception
-    ["isNotSpectating", {!((_this select 0) getVariable [QGVAR(isSpectator), false])}] call EFUNC(common,addCanInteractWithCondition);
-
-    GVAR(playerSide) = side (group player);
 
     if GVAR(tracking) then {
         [FUNC(checkUnits), 2] call CBA_fnc_addPerFrameHandler;

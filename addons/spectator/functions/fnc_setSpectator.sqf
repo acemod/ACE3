@@ -28,6 +28,10 @@ if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 _unit enableSimulation !_set;
 
 if (_set) then {
+    //Cache resettable info first
+    GVAR(cachedGroup) = group _unit;
+    GVAR(cachedSide) = side GVAR(cachedGroup);
+
     // Move and hide the player ASAP to avoid being seen
     _unit setPosASL (getMarkerPos QGVAR(respawn));
     [_unit] joinSilent grpNull;
@@ -42,8 +46,6 @@ if (_set) then {
         };
     };
 
-    0 fadeSound 0;
-    999999 cutText ["", "BLACK FADED", 0];
     ["Init", [true]] call FUNC(camera);
 } else {
     // Code to exit spectator and "respawn" player goes here (WIP)
@@ -52,6 +54,13 @@ if (_set) then {
     // Physical beings can talk
     [_unit, "isSpectator"] call EFUNC(common,unhideUnit);
     [_unit, "isSpectator"] call EFUNC(common,unmuteUnit);
+
+    // Don't create groups unless necessary (arma has a group limit)
+    if (isNull GVAR(cachedGroup)) then {
+        [_unit] joinSilent (createGroup GVAR(cachedSide));
+    } else {
+        [_unit] joinSilent GVAR(cachedGroup);
+    };
 };
 
 // Handle common addon audio
@@ -64,6 +73,6 @@ _unit allowDamage !_set;
 _unit setVariable [QGVAR(medical,allowDamage), !_set];
 
 // Mark spectator state for external reference
-[_unit,QGVAR(isSpectator),_set] call EFUNC(common,setVariableJIP);
+_unit setVariable [QGVAR(isSpectator),_set];
 
 ["spectatorChanged",[_set]] call EFUNC(common,localEvent);

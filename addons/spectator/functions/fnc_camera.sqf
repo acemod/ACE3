@@ -30,6 +30,8 @@ _this = _this select 1;
 switch _mode do {
 
     case "Init": {
+        0 fadeSound 0;
+        999999 cutText ["", "BLACK FADED", 0];
 
         GVAR(noEscape) = if (count _this > 0) then {
             _this select 0
