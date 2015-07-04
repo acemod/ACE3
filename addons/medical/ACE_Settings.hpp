@@ -59,14 +59,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
-    class GVAR(autoWakeUp) {
-        typeName = "BOOL";
-        value = 1; // default 0, left 1 for testing
-        isClientSettable = 0;
-    };
-    class GVAR(autoWakeUpTime) {
+    class GVAR(maxUnconsciousTime) {
+        displayName = "Maximum Unconscious Time";
+        description = "Time required before an unconscious unit will wake up without epinephrine."; // TODO: Needs stringtabling.
         typeName = "SCALAR";
-        value = 300; // 5 minutes
+        value = 300; // -1 for disabled. Left at 300 for testing
         isClientSettable = 0;
     };
     class GVAR(remoteControlledAI) {
