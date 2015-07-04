@@ -3,12 +3,11 @@
  * Sets local player to the given spectator state
  *
  * Arguments:
- * 0: Player unit (unused, result of EH) <OBJECT>
- * 1: Spectator camera target <OBJECT>
- * 2: New spectator state <BOOL> <OPTIONAL>
+ * 0: Spectator camera target <OBJECT>
+ * 1: New spectator state <BOOL> <OPTIONAL>
  *
  * Return Value:
- * nil
+ * None <NIL>
  *
  * Example:
  * [player, _killer] call ace_spectator_fnc_setSpectator
@@ -19,8 +18,8 @@
 #include "script_component.hpp"
 
 _unit = player;
-_target = _this select 1;
-_set = if (count _this > 2) then {_this select 2} else {true};
+_target = _this select 0;
+_set = if (count _this > 1) then {_this select 1} else {true};
 
 if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 
@@ -28,10 +27,6 @@ if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 _unit enableSimulation !_set;
 
 if (_set) then {
-    //Cache resettable info first
-    GVAR(cachedGroup) = group _unit;
-    GVAR(cachedSide) = side GVAR(cachedGroup);
-
     // Move and hide the player ASAP to avoid being seen
     _unit setPosASL (getMarkerPos QGVAR(respawn));
     [_unit] joinSilent grpNull;

@@ -13,6 +13,8 @@ PREP(drawMines3D);
 PREP(drawTracks2D);
 PREP(drawUnits2D);
 PREP(drawUnits3D);
+PREP(handleKilled);
+PREP(handleRespawn);
 PREP(killed);
 PREP(map);
 PREP(moduleSpectator);

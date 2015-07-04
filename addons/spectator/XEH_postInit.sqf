@@ -33,15 +33,9 @@
         [FUNC(trackUnits), 20] call CBA_fnc_addPerFrameHandler;
     };
 
-    player addEventHandler ["Killed", {
-        [player] joinSilent grpNull;
-        if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = true};
-        _delay = getNumber (missionConfigFile >> "respawnDelay");
-        _delay fadeSound 0;
-        999999 cutText ["", "BLACK", _delay];
-    }];
-
-    player addEventHandler ["Respawn", FUNC(setSpectator)];
+    // Add event handlers to correctly enter spectator upon death
+    player addEventHandler ["Killed", FUNC(handleKilled)];
+    player addEventHandler ["Respawn", FUNC(handleRespawn)];
 
     #include "initKeybinds.sqf";
 
