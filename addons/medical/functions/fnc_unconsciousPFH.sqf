@@ -135,8 +135,17 @@ if (!local _unit) exitwith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
-if (GVAR(maxUnconsciousTime) > 0 && {!(_unit getvariable [QGVAR(inReviveState), false])} && {(GVAR(level) == 1) && ((ACE_time - _startingTime) >= GVAR(maxUnconsciousTime))}) exitwith { // allow only if its basic medical
-    _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
+if (GVAR(maxUnconsciousTime) > 0 && {!(_unit getvariable [QGVAR(inReviveState), false])} && {(GVAR(level) == 1)}) then {
+    private ["maxUnitUnconsciousTime"];
+    maxUnitUnconsciousTime = if ((_unit getvariable [QGVAR(maxDynamicUnconsciousTime), 0]) > 0) then {
+        // if a dynamic unconscious time is defined on the unit (round + random are applied in fnc_init), then it needs to be added onto the base maxUnconsciousTime
+        (GVAR(maxUnconsciousTime) + (_unit getvariable [QGVAR(maxDynamicUnconsciousTime), 0])); 
+    } else {
+        (GVAR(maxUnconsciousTime);
+    };
+    if ((ACE_time - _startingTime) >= maxUnitUnconsciousTime) exitWith {
+        _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
+    };
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs

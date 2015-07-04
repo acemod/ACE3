@@ -34,4 +34,6 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(preventInstaDeath), "preventInstaDeath"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bleedingCoefficient), "bleedingCoefficient"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(painCoefficient), "painCoefficient"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(maxUnconsciousTime), "keepLocalSettingsSynced"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(maxDynamicUnconsciousTime), "maxDynamicUnconsciousTime"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(keepLocalSettingsSynced), "keepLocalSettingsSynced"] call EFUNC(common,readSettingFromModule);
