@@ -16,6 +16,7 @@
         diag_log text format ["[ACE_Spectator] ERROR: %1", _errorMsg];
     };
 
+    // Handle end mission setting
     if (GVAR(endMission) && isServer) then {
         [{
             if ({(isPlayer _x) && (alive _x) && !(_x getVariable [QGVAR(isSpectator), false])} count allUnits == 0) then {

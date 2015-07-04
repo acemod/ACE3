@@ -26,4 +26,4 @@ _unit = _this select 0;
 //{!isObjectHidden _unit} && // Not hidden (currently dev branch only)
 {!(_unit getVariable [QGVAR(isSpectator), false])} && // Who watches the watchmen?
 {(GVAR(AI) || (isPlayer _unit))} && // Only allow AI when setting is enabled
-{!GVAR(limitSide) || (([_unit] call FUNC(unitSide)) == GVAR(playerSide))} // Only allow units of same side when setting is enabled
+{!GVAR(limitSide) || (([_unit] call FUNC(unitSide)) == GVAR(cachedSide))} // Only allow units of same side when setting is enabled
