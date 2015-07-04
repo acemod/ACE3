@@ -22,6 +22,9 @@
 
     if !(hasInterface) exitWith {};
 
+    // Add interaction menu exception
+    ["isNotSpectating", {!((_this select 0) getVariable [QGVAR(isSpectator), false])}] call EFUNC(common,addCanInteractWithCondition);
+
     GVAR(playerSide) = side (group player);
 
     if GVAR(tracking) then {

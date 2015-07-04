@@ -187,10 +187,6 @@ switch _mode do {
             EGVAR(nametags,showNamesForAI) = false;
         };
 
-        if (["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
-            [QGVAR(interactCondition), {false}] call EFUNC(common,addCanInteractWithCondition);
-        };
-
         //add unit check, since if tracking were on it would already be present
         if !GVAR(tracking) then {
             [FUNC(checkUnits), 2] call CBA_fnc_addPerFrameHandler

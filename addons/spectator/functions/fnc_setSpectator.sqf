@@ -24,18 +24,16 @@ _set = if (count _this > 2) then {_this select 2} else {true};
 
 if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 
-// Spectators aren't physical entities (todo: this command has to be executed on the server)
-_unit hideObjectGlobal _set;
-
 // Prevent player falling into water
 _unit enableSimulation !_set;
 
 if (_set) then {
-    // Move the player ASAP to avoid being seen
+    // Move and hide the player ASAP to avoid being seen
     _unit setPosASL (getMarkerPos QGVAR(respawn));
     [_unit] joinSilent grpNull;
 
-    // Dead men can't talk
+    // Ghosts can't talk
+    [_unit, "isSpectator"] call EFUNC(common,hideUnit);
     [_unit, "isSpectator"] call EFUNC(common,muteUnit);
 
     if !(GVAR(modulePos)) then {
@@ -51,18 +49,19 @@ if (_set) then {
     // Code to exit spectator and "respawn" player goes here (WIP)
     ["Exit"] call FUNC(camera);
 
-    // Living men can talk
+    // Physical beings can talk
+    [_unit, "isSpectator"] call EFUNC(common,unhideUnit);
     [_unit, "isSpectator"] call EFUNC(common,unmuteUnit);
 };
 
 // Handle common addon audio
-if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {EGVAR(hearing,disableVolumeUpdate) = _set};
-if (isClass (configFile >> "CfgPatches" >> "acre_sys_radio")) then {[_set] call acre_api_fnc_setSpectator};
-if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {[_unit, _set] call TFAR_fnc_forceSpectator};
+if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};
+if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
+if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[_unit, _set] call TFAR_fnc_forceSpectator};
 
 // Spectators ignore damage (vanilla and ace_medical)
 _unit allowDamage !_set;
-_unit setVariable ["ace_medical_allowDamage", !_set];
+_unit setVariable [QGVAR(medical,allowDamage), !_set];
 
 // Mark spectator state for external reference
 [_unit,QGVAR(isSpectator),_set] call EFUNC(common,setVariableJIP);
