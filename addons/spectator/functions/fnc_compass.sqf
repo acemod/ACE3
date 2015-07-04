@@ -4,19 +4,19 @@
 
     Description:
     Orient and set compass.
-    
+
     Arguments:
     0: Compass <Display>
-    
+
     Example:
     [display] call ace_spectator_fnc_compass;
 
     Return Value:
     None
-    
+
     Public:
     No
-*/    
+*/
 
 #include "script_component.hpp"
 

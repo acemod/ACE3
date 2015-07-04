@@ -4,16 +4,16 @@
 
     Description:
     Compile array of units to spectate.
-    
+
     Arguments:
     None.
-    
+
     Example:
     call ace_spectator_fnc_checkUnits;
 
     Return Value:
     None
-    
+
     Public:
     No
 */
@@ -32,6 +32,6 @@ GVAR(units) = [];
         _x addEventHandler ["Respawn", {_this call FUNC(respawn)}];
         _x setVariable [QGVAR(listed), true];
     };
-    
+
     if ([_x] call FUNC(canSpectateUnit)) then {GVAR(units) pushback _x};
 } forEach _units;

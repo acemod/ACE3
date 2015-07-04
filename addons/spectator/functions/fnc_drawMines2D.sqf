@@ -1,7 +1,7 @@
 /*
     Author:
     voiper
-    
+
     Description:
     Draw mines on spectator map.
 

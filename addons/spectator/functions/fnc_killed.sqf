@@ -32,7 +32,7 @@ if (!isNull _killer) then {
     if (GVAR(markers) > 2 && !difficultyEnabled "deathMessages") then {
         _nameUnit = name _unit;
         _nameKiller = name _killer;
-        
+
         _text = if (_killer == _unit) then {
             format ["%1 died", _nameUnit]
         } else {

@@ -71,7 +71,7 @@ _textSize = (0.25 * _size) max (SCALE / 2) min (SCALE / 1.5);
         if (_isTarget) exitWith {
             _topIcon = [_icon, [1,1,0,1], _pos, _iconSize, _iconSize, _dir, _iconText, 1, _textSize, "PuristaBold", "RIGHT"];
         };
-            
+
         _map drawIcon [_icon, _colour, _pos, _iconSize, _iconSize, _dir, _iconText, 1, _textSize, "PuristaMedium", "RIGHT"]
     };
 } forEach GVAR(units);

@@ -1,7 +1,7 @@
 /*
     Author:
     voiper
-    
+
     Description:
     Draw mines in 3D.
 
@@ -33,23 +33,23 @@ _showText = (GVAR(markers) > 1);
 {
     _pos = getPos _x;
     _dist = (_cam distance _pos) + 0.1;
-    
+
     if (_dist < 2000) then {
-    
+
         _distScaled = SCALE / sqrt(_dist);
         _iconScale = 300 * _distScaled;
         //_iconSize = (20 * _size) max _scale min _min;
         _iconSize = _iconScale max ICONMAX min ICONMIN;
         _textSize = 0;
-        
+
         if (_showText) then {
             _textScale = 10 * _distScaled;
             _textSize = _textScale max TEXTMAX min TEXTMIN;
         };
-            
+
         _magName = getText (configFile >> "CfgAmmo" >> (typeOf _x) >> "defaultMagazine");
         _name = getText (configFile >> "CfgMagazines" >> _magName >> "displayName");
-        
+
         drawIcon3D [TEXTURE, [1,0.5,0,1], _pos, _iconSize, _iconSize, 0, _name, 1, _textSize, "PuristaMedium"];
     };
 } forEach allMines;

@@ -30,7 +30,7 @@ if (count GVAR(units) < 1) exitWith {};
     _unit = _x;
     _pos = getPos _unit;
     _pos resize 2;
-    
+
     _index = -1;
 
     {if ((_x select 0) == _unit) then {_index = _forEachIndex}} forEach GVAR(trackingArray);
@@ -43,12 +43,12 @@ if (count GVAR(units) < 1) exitWith {};
         _latestPos = _trackingArray select _latestIndex;
         _diffX = abs((_latestPos select 0) - (_pos select 0));
         _diffY = abs((_latestPos select 1) - (_pos select 1));
-        
+
         if !((_diffX < 20) && (_diffY < 20)) then {
-            _trackingArray pushBack _pos;        
+            _trackingArray pushBack _pos;
             _unitArray set [1, _trackingArray];
             GVAR(trackingArray) set [_index, _unitArray];
         };
     };
-    
+
 } forEach GVAR(units);

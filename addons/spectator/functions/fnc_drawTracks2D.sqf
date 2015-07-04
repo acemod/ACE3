@@ -26,12 +26,12 @@ _zoom = _this select 1;
 
 {
     _unit = _x select 0;
-    
+
     _info = [_unit] call FUNC(unitInfo);
     _colour = _info select 2;
-    
+
     if (_unit == GVAR(unit)) then {_colour = [1,1,0,_colour select 3]};
-    
+
     _positions = _x select 1;
     _count = count _positions;
     _step = floor (10 * _zoom) min 3 max 1;
@@ -47,10 +47,10 @@ _zoom = _this select 1;
             };
         };
     };
-    
+
     //((_count - _step + _count mod _step) max 0)
     if (alive _unit) then {
         _map drawLine [_positions select _lastIndex, getPosVisual _unit, _colour];
     };
-    
+
 } forEach GVAR(trackingArray);

@@ -32,7 +32,7 @@ _colour = switch _side do {
             GETCOLOUR('Map_BLUFOR_B', 0.6)
         ]
     };
-    
+
     case OPFOR: {
         [
             GETCOLOUR('Map_OPFOR_R', 0.5),
@@ -40,7 +40,7 @@ _colour = switch _side do {
             GETCOLOUR('Map_OPFOR_B', 0)
         ]
     };
-    
+
     case INDEPENDENT: {
         [
             GETCOLOUR('Map_Independent_R', 0),
@@ -48,7 +48,7 @@ _colour = switch _side do {
             GETCOLOUR('Map_Independent_B', 0)
         ]
     };
-    
+
     case CIVILIAN: {
         [
             GETCOLOUR('Map_Civilian_R', 0.4),

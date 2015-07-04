@@ -29,7 +29,7 @@
 _cam = GVAR(cam);
 _showText = (GVAR(markers) > 1);
 _topIcon = [];
-    
+
 {
     _unit = _x;
 
@@ -37,11 +37,11 @@ _topIcon = [];
         _veh = vehicle _unit;
         _inVeh = (_veh != _unit);
         _cmdr = if (_inVeh && (_unit == ((crew _veh) select 0))) then {true} else {false};
-            
+
         _obj = if (_inVeh && _cmdr) then {_veh} else {_unit};
         _pos = if (surfaceIsWater getPos _obj) then {getPosASLVisual _obj} else {getPosATLVisual _obj};
         _dist = (_cam distance _pos) + 0.1;
-            
+
         _isTarget = (_unit == GVAR(unit));
 
         //exit if too far
@@ -83,7 +83,7 @@ _topIcon = [];
         if (GVAR(markers) > 2) then {
             _text = _text + " [" + str ceil(_dist) + "]";
         };
-        
+
         if (_isTarget) exitWith {
             _topIcon = [_icon, [1,1,0,1], _pos, _iconSize, _iconSize, 0, _text, 2, _textSize, "PuristaBold", "CENTER", true];
         };
