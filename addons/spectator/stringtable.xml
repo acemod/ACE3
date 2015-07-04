@@ -5,27 +5,27 @@
             <English>Spectator</English>
             <Polish>Obserwator</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Zuschauer</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
             <English>Enable Spectator</English>
             <Polish>Aktywuj obserwatora</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Aktiviere Zuschauer</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_Description">
             <English>Begin spectating on player death?</English>
             <Polish>Włącz obserwatora po śmierci gracza?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Zuschauen starten, wenn der Spieler sirbt?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
             <English>Player Side Only</English>
             <Polish>Tylko strona gracza</Polish>
-            <Spanish></Spanish>
+            <Spanish>Nur Spieler seite</Spanish>
             <German></German>
             <Czech></Czech>
         </Key>
@@ -33,77 +33,77 @@
             <English>Only spectate units belonging to player's side?</English>
             <Polish>Pozwól obserwować jednostki będące tylko po stronie gracza?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Nur Einheiten zuschauen, wenn sie zur Seite des Spielers gehören?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_DisplayName">
             <English>Spectate AI</English>
             <Polish>Obserwacja AI</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>KI Zuschauen</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_Description">
             <English>Allow spectating of AI units?</English>
             <Polish>Pozwól obserwować jednostki AI?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Erlaube das zuschauen von KI Units?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
             <English>Track Units</English>
             <Polish>Śledź jednostki</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Einheiten verfolgen</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_Description">
             <English>Track units' movements throughout mission?</English>
             <Polish>Śledź ruch jednostek w trakcie misji?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Verfolge die Bewegungen der Einheiten durch die gesamte Mission?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_DisplayName">
             <English>Start Position</English>
             <Polish>Pozycja startowa</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Start Position</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_Description">
             <English>Use this module as a starting position for spectator camera?</English>
             <Polish>Użyj pozycji modułu jako pozycje startową dla kamery obserwatora?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Soll das Module als Startposition für die Zuschauer Kamera benutzt werden?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_DisplayName">
             <English>End Mission</English>
             <Polish>Zakończ misję</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Mission beenden</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_Description">
             <English>End mission when all players dead (default BIS behaviour)?</English>
             <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Mission beenden, wenn alle Spieler tot sind (Standart BIS Einstellung)?</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Title">
             <English>View Distance</English>
             <Polish>Zasięg widzenia</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>Sichtweite</German>
             <Czech></Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Button">
             <English>OK</English>
             <Polish>OK</Polish>
             <Spanish></Spanish>
-            <German></German>
+            <German>OK</German>
             <Czech></Czech>
         </Key>
     </Package>
