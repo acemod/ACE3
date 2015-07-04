@@ -1,12 +1,16 @@
 /*
- * Author: esteldunedain
- * Initializes the addon module.
+ * Author: voiper
+ * Read spectator settings from module
  *
  * Arguments:
- * Whatever the module provides.
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
- * None
+ * None <NIL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -22,7 +26,7 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(modulePos), "SpectatorPos"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(endMission), "SpectatorEnd"] call EFUNC(common,readSettingFromModule);
 
-if GVAR(modulePos) then {
+if (GVAR(modulePos)) then {
     GVAR(startingPos) = getPosATL _logic;
     GVAR(startingDir) = getDir _logic;
 };

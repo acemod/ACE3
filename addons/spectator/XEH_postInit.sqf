@@ -6,7 +6,7 @@
 
 // Run spectator framework if enabled
 ["SettingsInitialized", {
-    if !GVAR(enabled) exitWith {};
+    if !(GVAR(enabled)) exitWith {};
 
     //check if respawn is set up properly
     _fail = if (getNumber (missionConfigFile >> "respawn") != 3 && getText (missionConfigFile >> "respawn") != "Base") then {true} else {false};
@@ -28,7 +28,7 @@
 
     if !(hasInterface) exitWith {};
 
-    if GVAR(tracking) then {
+    if (GVAR(tracking)) then {
         [FUNC(checkUnits), 2] call CBA_fnc_addPerFrameHandler;
         [FUNC(trackUnits), 20] call CBA_fnc_addPerFrameHandler;
     };
