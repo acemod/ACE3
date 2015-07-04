@@ -48,10 +48,6 @@ if (!alive _unit) exitwith {
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };
 
-if (GVAR(autoWakeUp) && {(GVAR(level) == 1) && ((ACE_time - _startingTime) >= GVAR(autoWakeUpTime))}) then { // allow only if its basic medical
-    _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
-};
-
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
 if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
     // TODO, handle this with carry instead, so we can remove the PFH here.
@@ -137,6 +133,10 @@ if (!local _unit) exitwith {
     _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
+};
+
+if (GVAR(maxUnconsciousTime) > 0 && {!(_unit getvariable [QGVAR(inReviveState), false])} && {(GVAR(level) == 1) && ((ACE_time - _startingTime) >= GVAR(maxUnconsciousTime))}) exitwith { // allow only if its basic medical
+    _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
