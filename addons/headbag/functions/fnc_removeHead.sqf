@@ -3,7 +3,7 @@
  * Hides the height and velocity display while freefalling or parachuting on higher difficulties.
  *
  * Arguments:
- * 0:
+ * 0: 
  * 1:
  *
  * Return Value:
