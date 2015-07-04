@@ -2919,12 +2919,14 @@
             <Spanish>IA controlada remotamente</Spanish>
             <Portuguese>IA controlada remotamente</Portuguese>
             <Polish>Zdalnie sterowane AI</Polish>
+            <Czech>Vzdáleně ovládané AI</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
+            <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_disabled">
             <English>Disabled</English>
@@ -3184,14 +3186,16 @@
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann der Erstehilfekasten verwendet werden?</German>
-            <Czech>Kde může být osobní lékárnička použita?</Czech>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
+            <Czech>Podmínka osobní lékárničky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the Personal Aid Kit be used?</English>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3294,9 +3298,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical kit (Adv)</English>
+            <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical kit be used?</English>
+            <Czech>Kde může být použita chirurgická souprava?</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3625,9 +3631,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
+            <Czech>Kdykoli</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
+            <Czech>Stabilní</Czech>
         </Key>
     </Package>
 </Project>
