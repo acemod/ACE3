@@ -210,7 +210,6 @@
             <Portuguese>Define o raio ao redor do jogador (em metros) onde a balística avançada será aplicada aos projéteis</Portuguese>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_Description">
-            <English></English>
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
             <Czech>Tento modul umožňuje aktivovat pokročilou balistiku, která vypočítává trajektorii kulky a bere do úvahy věci jako je teplota vzduchu, atmosférický tlak, vlhkost vzduchu, gravitaci, typ munice a zbraň, ze které je náboj vystřelen. To vše přispívá k velmi přesné balistice.</Czech>
             <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, força de Coriolis, a gravidade, o modelo da arma no qual o disparo é realizado e o tipo de munição. Tudo isso acrescenta-se a um balística muito precisa.</Portuguese>
