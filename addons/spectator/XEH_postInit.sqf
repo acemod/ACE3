@@ -18,7 +18,7 @@
 
     if (GVAR(endMission) && isServer) then {
         [{
-            if ({(isPlayer _x) && (alive _x) && !(_x getVariable [QGVAR(isSpectator), false])} count playableUnits == 0) then {
+            if ({(isPlayer _x) && (alive _x) && !(_x getVariable [QGVAR(isSpectator), false])} count allUnits == 0) then {
                 [["endDeath", false], "BIS_fnc_endMission"] call BIS_fnc_MP;
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             };
@@ -36,12 +36,14 @@
 
     player addEventHandler ["Killed", {
         [player] joinSilent grpNull;
-        if (isClass (configFile >> "CfgPatches" >> "ace_hearing")) then {EGVAR(hearing,disableVolumeUpdate) = true};
+        if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = true};
         _delay = getNumber (missionConfigFile >> "respawnDelay");
         _delay fadeSound 0;
         999999 cutText ["", "BLACK", _delay];
     }];
 
     player addEventHandler ["Respawn", FUNC(setSpectator)];
+
+    #include "initKeybinds.sqf";
 
 }] call EFUNC(common,addEventHandler);

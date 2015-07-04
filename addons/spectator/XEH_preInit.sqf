@@ -3,7 +3,6 @@
 ADDON = false;
 
 PREP(camera);
-PREP(cameraIntro);
 PREP(canSpectateUnit);
 PREP(checkUnits);
 PREP(compass);
