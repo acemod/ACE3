@@ -29,6 +29,6 @@ if !(_reason in _setHiddenReasons) then {
     _unit setVariable [QGVAR(setHiddenReasons), _setHiddenReasons, true];
 };
 
-if !(isObjectHidden _unit) then {
+//if !(isObjectHidden _unit) then { (Uncomment when isObjectHidden hits stable branch)
     ["hideObjectGlobal",[_unit,true]] call FUNC(serverEvent);
-};
+//};
