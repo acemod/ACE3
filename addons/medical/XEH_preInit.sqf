@@ -65,6 +65,7 @@ PREP(onPropagateWound);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
 PREP(selectionNameToNumber);
+PREP(selectionNumberToName);
 PREP(setCardiacArrest);
 PREP(setDead);
 PREP(setHitPointDamage);
