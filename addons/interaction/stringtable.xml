@@ -796,6 +796,7 @@
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
             <Polish>Otwórz</Polish>
+            <Czech>Otevřít</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
