@@ -1,8 +1,3 @@
-/*
-    Author:
-    voiper
-*/
-
 #include "script_component.hpp"
 
 ["SettingsInitialized", {

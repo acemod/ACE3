@@ -3,42 +3,68 @@
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
             <English>Spectator</English>
+            <Polish>Obserwator</Polish>
+            <Czech>Pozorovatel</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
             <English>Enable Spectator</English>
+            <Polish>Aktywuj obserwatora</Polish>
+            <Czech>Povolit pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_Description">
             <English>Begin spectating on player death?</English>
+            <Polish>Włącz obserwatora po śmierci gracza?</Polish>
+            <Czech>Přepnout do pozorovatele po hráčově smrti?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
             <English>Player Side Only</English>
+            <Polish>Tylko strona gracza</Polish>
+            <Czech>Pouze strana hráče</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_Description">
             <English>Only spectate units belonging to player's side?</English>
+            <Polish>Pozwól obserwować jednostki będące tylko po stronie gracza?</Polish>
+            <Czech>Pozorovat pouze jednotky patřící k hráčově straně?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_DisplayName">
             <English>Spectate AI</English>
+            <Polish>Obserwacja AI</Polish>
+            <Czech>Pozorovat AI</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_Description">
             <English>Allow spectating of AI units?</English>
+            <Polish>Pozwól obserwować jednostki AI?</Polish>
+            <Czech>Umožnit pozorovat AI jednotky?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
             <English>Track Units</English>
+            <Polish>Śledź jednostki</Polish>
+            <Czech>Sledovat jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_Description">
             <English>Track units' movements throughout mission?</English>
+            <Polish>Śledź ruch jednostek w trakcie misji?</Polish>
+            <Czech>Sledovat pohyby jednotek napříč misí?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_DisplayName">
             <English>Start Position</English>
+            <Polish>Pozycja startowa</Polish>
+            <Czech>Počáteční pozice</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_Description">
             <English>Use this module as a starting position for spectator camera?</English>
+            <Polish>Użyj pozycji modułu jako pozycje startową dla kamery obserwatora?</Polish>
+            <Czech>Použít tento modul jako počáteční pozici pro pozorovací kameru?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_DisplayName">
             <English>End Mission</English>
+            <Polish>Zakończ misję</Polish>
+            <Czech>Konec mise</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_End_Description">
             <English>End mission when all players dead (default BIS behaviour)?</English>
+            <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
+            <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Exit">
             <English>Are you sure you want to exit camera mode?</English>
