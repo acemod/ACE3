@@ -18,9 +18,11 @@ private ["_unit","_killer","_delay"];
 _unit = _this select 0;
 _killer = _this select 1;
 
-//Cache resettable info first
-GVAR(cachedGroup) = group _unit;
-GVAR(cachedSide) = side GVAR(cachedGroup);
+//Cache resettable info if player died while not already a spectator
+if !(_unit getVariable [QGVAR(isSpectator),false]) then {
+    GVAR(cachedGroup) = group _unit;
+    GVAR(cachedSide) = side GVAR(cachedGroup);
+};
 
 [_unit] joinSilent grpNull;
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = true};
