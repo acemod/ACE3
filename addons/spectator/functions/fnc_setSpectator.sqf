@@ -21,7 +21,8 @@ _unit = player;
 _target = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
 
-if (_set isEqualTo (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
+// No change, no service (but allow spectators who respawn to be reset)
+if !(_set || (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
 
 // Prevent player falling into water
 _unit enableSimulation !_set;
@@ -67,7 +68,10 @@ if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[_unit, _set] cal
 _unit allowDamage !_set;
 _unit setVariable [QEGVAR(medical,allowDamage), !_set];
 
-// Mark spectator state for external reference
-_unit setVariable [QGVAR(isSpectator), _set];
+// No theoretical change if an existing spectator was reset
+if !(_set && (_unit getVariable [QGVAR(isSpectator), false])) then {
+    // Mark spectator state for reference
+    _unit setVariable [QGVAR(isSpectator), _set];
 
-["spectatorChanged",[_set]] call EFUNC(common,localEvent);
+    ["spectatorChanged",[_set]] call EFUNC(common,localEvent);
+};
