@@ -2874,13 +2874,21 @@
             <German>Wie viel Schaden kann eine KI erleiden, bis sie getötet wird?</German>
             <Czech>Jaké poškození může AI dostat než bude zabito?</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
-            <English>AI Unconsciousness</English>
-            <Russian>Потеря сознания ботами</Russian>
-            <Polish>Nieprzytomność AI</Polish>
-            <Spanish>Inconsciencia IA</Spanish>
-            <German>KI-Bewusstlosigkeit</German>
-            <Czech>Bezvědomí AI</Czech>
+        <Key ID="STR_ACE_Medical_MedicalSettings_maxUnconsciousTime_DisplayName">
+            <English>Maximum Unconscious Time</English>
+            <Russian>Максимальная Бессознательное Время</Russian>
+            <Polish>Maksymalny czas nieprzytomny</Polish>
+            <Spanish>Tiempo máximo de Inconsciente</Spanish>
+            <German>Maximale Unconscious Zeit</German>
+            <Czech>Maximální bezvědomí Time</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_maxUnconsciousTime_Description">
+            <English>Amount of time a unit will spend unconscious before waking up without medical intervention</English>
+            <Russian>Количество времени, устройство будет проводить без сознания до пробуждения без медицинского вмешательства</Russian>
+            <Polish>Ilość czasu urządzenie będzie wydawać nieprzytomny przed budzi się bez interwencji medycznej</Polish>
+            <Spanish>Cantidad de tiempo que una unidad pasará inconsciente antes de despertar sin intervención médica</Spanish>
+            <German>Zeit, die ein Gerät vor dem Aufwachen ohne medizinische Intervention verbringen bewusstlos</German>
+            <Czech>Množství času jednotky stráví před probudí bez lékařského zásahu v bezvědomí</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>

@@ -87,8 +87,8 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class maxUnconsciousTime {
-                displayName = "Max Unconscious Time";
-                description = "The maximum amount of time that a unit will spend unconscious before waking up without medical intervention."; // TODO: Stringtable
+                displayName = CSTRING(MedicalSettings_maxUnconsciousTime_DisplayName);
+                description = CSTRING(MedicalSettings_maxUnconsciousTime_Description);
                 typeName = "NUMBER";
                 defaultValue = 300; // TODO: Check on what this value should be
             };
