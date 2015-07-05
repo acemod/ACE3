@@ -87,10 +87,10 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class maxUnconsciousTime {
-                displayName = "Base Maximum Unconscious Time";
-                description = "The base amount of time that a unit will spend unconscious before waking up without medical intervention."; // TODO: Stringtable
+                displayName = "Max Unconscious Time";
+                description = "The maximum amount of time that a unit will spend unconscious before waking up without medical intervention."; // TODO: Stringtable
                 typeName = "NUMBER";
-                defaultValue = 10; // testing value: 10, default should be == to settings value.
+                defaultValue = 300; // TODO: Check on what this value should be
             };
             class enableUnconsciousnessAI {
                 displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);

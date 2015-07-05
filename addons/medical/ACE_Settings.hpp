@@ -63,7 +63,7 @@ class ACE_Settings {
         displayName = "Base Maximum Unconscious Time"; // TODO: Needs stringtabling.
         description = "Time required (in seconds) before an unconscious unit will wake up without epinephrine."; // TODO: Needs stringtabling.
         typeName = "SCALAR";
-        value = 300; // -1 for disabled, testing value: 300
+        value = -1; // -1 means disabled
         isClientSettable = 0;
     };
     class GVAR(remoteControlledAI) {
