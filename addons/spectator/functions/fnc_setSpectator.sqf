@@ -65,9 +65,9 @@ if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[_unit, _set] cal
 
 // Spectators ignore damage (vanilla and ace_medical)
 _unit allowDamage !_set;
-_unit setVariable [QGVAR(medical,allowDamage), !_set];
+_unit setVariable [QEGVAR(medical,allowDamage), !_set];
 
 // Mark spectator state for external reference
-_unit setVariable [QGVAR(isSpectator),_set];
+_unit setVariable [QGVAR(isSpectator), _set];
 
 ["spectatorChanged",[_set]] call EFUNC(common,localEvent);
