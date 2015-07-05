@@ -18,6 +18,13 @@ PREP(handleUpdateDeviceCallsign);
 PREP(handleUpdateDeviceKeys);
 PREP(handleUpdateDeviceAppData);
 
+PREP(handleDeviceDataChanged);
+PREP(handleRegisteredEncryptionKeysChanged);
+PREP(handleRegisteredModeChanged);
+PREP(handleColorFilteringChanged);
+PREP(handleDeviceOpened);
+PREP(handleDeviceClosed);
+
 PREP(handleRequestAllData);
 PREP(isDeviceOwned);
 PREP(setDeviceOwner);
