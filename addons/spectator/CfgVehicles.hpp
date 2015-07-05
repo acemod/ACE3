@@ -20,13 +20,13 @@ class CfgVehicles {
                 description = CSTRING(PlayerSide_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
-            }; 
+            };
             class SpectatorAI {
                 displayName = CSTRING(AI_DisplayName);
                 description = CSTRING(AI_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
-            };    
+            };
             class SpectatorTracking {
                 displayName = CSTRING(Tracking_DisplayName);
                 description = CSTRING(Tracking_Description);

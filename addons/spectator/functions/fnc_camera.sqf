@@ -716,10 +716,6 @@ switch _mode do {
             EGVAR(hearing,disableVolumeUpdate) = false;
         };
 
-        if (["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
-            [QGVAR(interactCondition)] call EFUNC(common,removeCanInteractWithCondition);
-        };
-
         GVAR(cam) cameraEffect ["terminate", "back"];
         camUseNVG false;
         false SetCamUseTi 0;

@@ -1,3 +1,4 @@
+#include "\z\ace\addons\common\define.hpp"
 #define PIXEL_X (safeZoneWAbs / (getResolution select 0))
 #define PIXEL_Y (safeZoneH / (getResolution select 1))
 #define XHAIR RESUNITS_X * 4
@@ -6,8 +7,41 @@
 #define COMPASS_X RESCENTRE_X - COMPASS_W / 2
 #define HELP_W RESUNITS_X * 75
 #define HELP_H RESUNITS_Y * 75
+// Fonts
+#define GUI_FONT_NORMAL PuristaMedium
+#define GUI_FONT_BOLD PuristaSemibold
+#define GUI_FONT_THIN PuristaLight
+#define GUI_FONT_MONO EtelkaMonospacePro
+#define GUI_FONT_NARROW EtelkaNarrowMediumPro
+#define GUI_FONT_CODE LucidaConsoleB
+#define GUI_FONT_SYSTEM TahomaB
 
-class ace_spectator_overlay {
+//colours
+
+#define COLOUR_GUI_TEXT {"profilenamespace getvariable ['GUI_TITLETEXT_RGB_R',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_G',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_B',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_A',1]"}
+
+#define COLOUR_GUI_BG {"profilenamespace getvariable ['GUI_BCG_RGB_R',0.8]", "profilenamespace getvariable ['GUI_BCG_RGB_G',0.8]","profilenamespace getvariable ['GUI_BCG_RGB_B',0.8]","profilenamespace getvariable ['GUI_BCG_RGB_A',0.8]"}
+
+#define COLOUR_IGUI_TEXT {"profilenamespace getvariable ['IGUI_TEXT_RGB_R',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_G',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_B',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_A',1]"}
+
+#define COLOUR_IGUI_BG {"profilenamespace getvariable ['IGUI_BCG_RGB_R',0.8]", "profilenamespace getvariable ['IGUI_BCG_RGB_G',0.5]","profilenamespace getvariable ['IGUI_BCG_RGB_B',0]","profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8]"}
+
+#define COLOUR_IGUI_WARN {"profilenamespace getvariable ['IGUI_TEXT_WARNING_R',0.8]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_G',0.5]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_B',0]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_A',0.8]"}
+
+// Grids
+#define GUI_GRID_CENTER_WAbs ((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_CENTER_HAbs (GUI_GRID_CENTER_WAbs / 1.2)
+#define GUI_GRID_CENTER_W (GUI_GRID_CENTER_WAbs / 40)
+#define GUI_GRID_CENTER_H (GUI_GRID_CENTER_HAbs / 25)
+#define GUI_GRID_CENTER_X (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+
+#define RESUNITS_X (safeZoneW / 100)
+#define RESUNITS_Y (safeZoneH / 100)
+#define RESCENTRE_X safeZoneX + safeZoneW / 2
+#define RESCENTRE_Y safeZoneY + safeZoneH / 2
+
+class GVAR(overlay) {
 
     idd = 12200;
     enableSimulation = 1;
@@ -16,13 +50,13 @@ class ace_spectator_overlay {
     onLoad = "uiNamespace setVariable ['ace_spectator_overlay', _this select 0]; ['Init', _this] call ace_spectator_fnc_overlay";
 
     class controls {
-    
+
         class Unitlist {
-            
+
             access = 0;
             idc = 0;
-            type = CT_TREE; 
-            style = ST_LEFT;  
+            type = CT_TREE;
+            style = ST_LEFT;
             default = 0;
             blinkingPeriod = 0;
 
@@ -77,202 +111,32 @@ class ace_spectator_overlay {
             onMouseExit = QUOTE(GVAR(mouseBusy) = false; false);
 
             onTreeDblClick = "['Select', _this] call ace_spectator_fnc_overlay; false";
-        };    
+        };
     };
 };
 
-class ace_spectator_map {
+class GVAR(map) {
 
     idd = 12202;
-    enableSimulation = 1; 
+    enableSimulation = 1;
     enableDisplay = 0;
     onLoad = "uiNameSpace setVariable ['ace_spectator_map', _this select 0]; ['Init', _this select 0] call ace_spectator_fnc_map";
     onUnload = "['Close', _this select 0] call ace_spectator_fnc_map";
     onKeyDown = "['KeyDown', _this] call ace_spectator_fnc_map";
-    
+
     class controls {
-        //changes stolen from ACE_map
-        class Map {
+        class Map: ACE_gui_mapBase {
             access = 0;
-            idc = 1; 
-            type = CT_MAP_MAIN;
-            style = ST_PICTURE;
-            default = 0;
-            blinkingPeriod = 0; 
-
-            x = safeZoneXAbs;
-            y = safeZoneY;
-            w = safeZoneWAbs;
-            h = safeZoneH;
-
-            sizeEx = GUI_GRID_CENTER_H;
-            font = GUI_FONT_NORMAL;
-            colorText[] = {0,0,0,1};
-            text = "#(argb,8,8,3)color(1,1,1,1)"; 
-
-            moveOnEdges = 1;
-
-            ptsPerSquareSea =    5;
-            ptsPerSquareTxt =    20;
-            ptsPerSquareCLn =    10;
-            ptsPerSquareExp =    10;
-            ptsPerSquareCost =    10;
-
-            ptsPerSquareFor =    9;
-            ptsPerSquareForEdge =    9;
-            ptsPerSquareRoad =    6;
-            ptsPerSquareObj =    9;
-
-            scaleMin = 0.001;
-            scaleMax = 1.0;
-            scaleDefault = 0.16;
-
-            alphaFadeStartScale = 2;
-            alphaFadeEndScale = 2;
-            maxSatelliteAlpha = 0.5;
-        
-            colorBackground[] = {0.929412, 0.929412, 0.929412, 1.0};
-            colorOutside[] = {0.929412, 0.929412, 0.929412, 1.0};
-            colorSea[] = {0.4,0.6,0.8,0.5}; 
-            colorForest[] = {0.6, 0.8, 0.2, 0.25};
-            colorForestBorder[] = {0.6,0.8,0.4,1}; 
-            colorRocks[] = {0.50, 0.50, 0.50, 0.50};  
-            colorRocksBorder[] = {0,0,0,1};
-            colorLevels[] = {0.0, 0.0, 0.0, 1.0};
-            colorMainCountlines[] = {0.858824, 0, 0,1};
-            colorCountlines[] = {0.647059, 0.533333, 0.286275, 1};
-            colorMainCountlinesWater[] = {0.5,0.6,0.7,0.6};
-            colorCountlinesWater[] = {0.5,0.6,0.7,0.3};
-            colorPowerLines[] = {0.1,0.1,0.1,1};
-            colorRailWay[] = {0.8,0.2,0,1};
-            colorNames[] = {1.1,0.1,1.1,0.9};
-            colorInactive[] = {1,1,0,0.5};
-            colorTracks[] = {0.2,0.13,0,1};
-            colorTracksFill[] = {1,0.88,0.65,0.3};
-            colorRoads[] = {0.2,0.13,0,1};
-            colorRoadsFill[] = {1,0.88,0.65,1};
-            colorMainRoads[] = {0.0,0.0,0.0,1};
-            colorMainRoadsFill[] = {0.94,0.69,0.2,1};
-            colorGrid[] = {0.05,0.1,0,0.6};
-            colorGridMap[] = {0.05,0.1,0,0.4};
-
-            fontLabel="PuristaMedium";
-            sizeExLabel="(            (            (            ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-            fontGrid="TahomaB";
-            sizeExGrid = 0.032;
-            fontUnits="TahomaB";
-            sizeExUnits="(            (            (            ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-            fontNames="EtelkaNarrowMediumPro";
-            sizeExNames="(            (            (            ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
-            fontInfo="PuristaMedium";
-            sizeExInfo="(            (            (            ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-            fontLevel="TahomaB";
-            sizeExLevel=0.03;
-            showCountourInterval = 1;
-
-            class Task {
-                icon = "#(argb,8,8,3)color(1,1,1,1)";
-                color[] = {1,1,0,1};
-
-                iconCreated = "#(argb,8,8,3)color(1,1,1,1)";
-                colorCreated[] = {0,0,0,1};
-
-                iconCanceled = "#(argb,8,8,3)color(1,1,1,1)";
-                colorCanceled[] = {0,0,0,0.5};
-
-                iconDone = "#(argb,8,8,3)color(1,1,1,1)";
-                colorDone[] = {0,1,0,1};
-
-                iconFailed = "#(argb,8,8,3)color(1,1,1,1)";
-                colorFailed[] = {1,0,0,1};
-
-                size = 8;
-                importance = 1;
-                coefMin = 1;
-                coefMax = 1;
-            };
-            class ActiveMarker { //includes icons spawned by drawIcon
-                color[] = {0,0,0,1};
-                size = 2;
-                coefMin = 1; //make sure icon doesnt scale
-            };
-            class Waypoint {
-                coefMax = 1;
-                coefMin = 4;
-                color[] = {0,0,0,1};
-                icon = "#(argb,8,8,3)color(0,0,0,1)";
-                importance = 1;
-                size = 2;
-            };
-            class WaypointCompleted: Waypoint{};
-            class CustomMark: Waypoint{};
-            class Command: Waypoint{};
-            class Bush {
-                icon = "";
-                color[] = {0.450000, 0.640000, 0.330000, 0.0};
-                size = 14;
-                importance = "0.2 * 14 * 0.05";
-                coefMin = 0.250000;
-                coefMax = 4;
-            };
-            class Rock: Waypoint{color[]={0.45,0.64,0.33,0.4}; importance="0.5 * 12 * 0.05";};
-            class SmallTree {
-                icon = "";
-                color[] = {0.450000, 0.640000, 0.330000, 0.0};
-                size = 12;
-                importance = "0.6 * 12 * 0.05";
-                coefMin = 0.250000;
-                coefMax = 4;
-            };
-            class Tree {
-                icon = "";
-                color[] = {0.450000, 0.640000, 0.330000, 0.0};
-                size = 12;
-                importance = "0.9 * 16 * 0.05";
-                coefMin = 0.250000;
-                coefMax = 4;
-            };
-            class Legend {
-                x = SafeZoneX+SafeZoneW-.340;
-                y = SafeZoneY+SafeZoneH-.152;
-                font = "PuristaMedium";
-                w = .340;
-                h = .152;
-                sizeEx = 0.039210;
-                colorBackground[] = {0.906000, 0.901000, 0.880000, 0.5};
-                color[] = {0, 0, 0, 0.75};
-            };
-            class BusStop: Waypoint{};
-            class FuelStation: Waypoint{};
-            class Hospital: Waypoint{};
-            class Church: Waypoint{};
-            class Lighthouse: Waypoint{};
-            class Power: Waypoint{};
-            class PowerSolar: Waypoint{};
-            class PowerWave: Waypoint{};
-            class PowerWind: Waypoint{};
-            class Quay: Waypoint{};
-            class Transmitter: Waypoint{};
-            class Watertower: Waypoint{};
-            class Cross: Waypoint{};
-            class Chapel: Waypoint{};
-            class Shipwreck: Waypoint{};
-            class Bunker: Waypoint{};
-            class Fortress: Waypoint{};
-            class Fountain: Waypoint{};
-            class Ruin: Waypoint{};
-            class Stack: Waypoint{};
-            class Tourism: Waypoint{};
-            class ViewTower: Waypoint{};
+            idc = 1;
         };
     };
 };
 
 class RscTitles {
-    class ace_spectator_crosshair {
+    class GVAR(crosshair) {
 
         onLoad = "uiNamespace setVariable ['ace_spectator_crosshair', _this select 0]";
-        
+
         idd=-1;
         movingEnable=0;
         fadein=0;
@@ -280,8 +144,8 @@ class RscTitles {
         duration=1e+011;
 
         class controls {
-        
-            class X: vip_rsc_picture {
+
+            class X: ACE_gui_backgroundBase {
                 idc = 0;
                 x = QUOTE(RESCENTRE_X - XHAIR / 2);
                 y = QUOTE(RESCENTRE_Y - XHAIR * 4/3 / 2);
@@ -289,11 +153,13 @@ class RscTitles {
                 h = QUOTE(XHAIR * 4/3);
                 text = "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa";
                 colorText[] = {1,1,1,0.8};
+                fixedWidth = 0;
+                shadow = 0;
             };
         };
     };
 
-    class ace_spectator_status {
+    class GVAR(status) {
 
         onLoad = "uiNamespace setVariable ['ace_spectator_status', _this select 0]; [_this select 0] call ace_spectator_fnc_status";
         idd = -1;
@@ -303,20 +169,22 @@ class RscTitles {
         duration=1e+011;
 
         class controls {
-        
-            class BGRight: vip_rsc_box {
+
+            class BGRight: ACE_gui_staticBase {
+                style = ST_CENTER;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(RESUNITS_X * 30);
                 h = QUOTE(COMPASS_H);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
-            
+
             class BGLeft: BGRight {
                 x = QUOTE(safeZoneX);
             };
-            
-            class SpeedFrame: vip_rsc_frame {
+
+            class SpeedFrame: ACE_gui_staticBase {
+                style = ST_FRAME;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 5);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(RESUNITS_X * 5);
@@ -324,72 +192,70 @@ class RscTitles {
                 shadow = 2;
                 colorText[]={1,1,1,1};
             };
-            
-            class Speed: vip_rsc_text {
+
+            class Speed: ACE_gui_staticBase {
                 idc = 0;
                 style = ST_CENTER;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 5);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(RESUNITS_X * 5);
                 h = QUOTE(COMPASS_H);
-                colorText[]={1,1,1,1};
+                colorBackground[] = {0,0,0,1};
                 sizeEx = QUOTE(RESUNITS_Y * 2);
-                font = GUI_FONT_NORMAL;
-                text = "";
             };
-            
+
             class FovFrame: SpeedFrame {
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 10.5);
             };
-            
+
             class Fov: Speed {
                 idc = 4;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 10.5);
             };
-            
+
             class TimeAccFrame: SpeedFrame {
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 21.5);
             };
-            
+
             class TimeAcc: Speed {
                 idc = 5;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 21.5);
             };
-            
+
             class FocusFrame: SpeedFrame {
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 16);
             };
-            
+
             class Focus: Speed {
                 idc = 6;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 16);
             };
-            
-            class NameFrame: SpeedFrame {    
+
+            class NameFrame: SpeedFrame {
                 x = QUOTE(safeZoneX);
                 w = QUOTE(RESUNITS_X * 24.5);
             };
-            
+
             class Name: Speed {
                 idc = 1;
                 x = QUOTE(safeZoneX);
                 w = QUOTE(RESUNITS_X * 24.5);
             };
-            
+
             class ModeFrame: SpeedFrame {
                 x = QUOTE(safeZoneX + RESUNITS_X * 25);
             };
-            
+
             class Mode: Speed {
                 idc = 2;
-                x = QUOTE(safeZoneX + RESUNITS_X * 25);    
+                x = QUOTE(safeZoneX + RESUNITS_X * 25);
             };
-            
+
             class TimeFrame: SpeedFrame {
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
                 w = QUOTE(RESUNITS_X * 8);
             };
-            
+
             class Time: Speed {
                 idc = 3;
                 x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
@@ -398,7 +264,7 @@ class RscTitles {
         };
     };
 
-    class ace_spectator_compass {
+    class GVAR(compass) {
 
         onLoad = "uiNamespace setVariable ['ace_spectator_compass', _this select 0]";
         onUnload = "";
@@ -409,16 +275,17 @@ class RscTitles {
         duration=1e+011;
 
         class controls {
-            
-            class BG: vip_rsc_box {
+
+            class BG: ACE_gui_staticBase {
+                style = ST_CENTER;
                 x = QUOTE(COMPASS_X);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(COMPASS_W);
                 h = QUOTE(COMPASS_H);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
-            
-            class 0_90: vip_rsc_picture {
+
+            class 0_90: ACE_gui_backgroundBase {
                 idc = 1;
                 x = QUOTE(RESCENTRE_X);
                 y = QUOTE(safeZoneY);
@@ -426,46 +293,49 @@ class RscTitles {
                 h = QUOTE(COMPASS_H);
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture180_ca.paa";
             };
-            
+
             class 90_180: 0_90 {
                 idc = 2;
                 x = QUOTE(RESCENTRE_X + COMPASS_W / 2);
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture270_ca.paa";
             };
-            
+
             class 180_270: 0_90 {
                 idc = 3;
                 x = QUOTE(RESCENTRE_X + COMPASS_W);
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
             };
-            
+
             class 270_0: 0_90 {
                 idc = 4;
                 x = QUOTE(RESCENTRE_X + COMPASS_W * 1.5);
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
             };
-            
-            class Post: vip_rsc_box {
+
+            class Post: ACE_gui_staticBase {
+                style = ST_CENTER;
                 x = QUOTE(COMPASS_X + COMPASS_W / 2);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(PIXEL_X * 2);
                 h = QUOTE(COMPASS_H);
                 colorBackground[]={1,0,0,1};
             };
-            
-            class LeftBlocker: vip_rsc_box {
+
+            class LeftBlocker: ACE_gui_staticBase {
+                style = ST_CENTER;
                 x = QUOTE(COMPASS_X - COMPASS_W / 2);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(COMPASS_W / 2);
                 h = QUOTE(COMPASS_H);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
-            
+
             class RightBlocker: LeftBlocker {
                 x = QUOTE(COMPASS_X + COMPASS_W);
             };
-            
-            class Frame: vip_rsc_frame {
+
+            class Frame: ACE_gui_staticBase {
+                style = ST_FRAME;
                 x = QUOTE(COMPASS_X);
                 y = QUOTE(safeZoneY);
                 w = QUOTE(COMPASS_W);
@@ -476,7 +346,7 @@ class RscTitles {
         };
     };
 
-    class ace_spectator_help {
+    class GVAR(help) {
 
         onLoad = "uiNamespace setVariable ['ace_spectator_help', _this select 0]; ['Help', _this select 0] call ace_spectator_fnc_camera";
         idd = -1;
@@ -486,8 +356,9 @@ class RscTitles {
         duration=1e+011;
 
         class controls {
-        
-            class BG: vip_rsc_box {
+
+            class BG: ACE_gui_staticBase {
+                style = ST_CENTER;
                 idc = -1;
                 x = QUOTE(RESCENTRE_X - HELP_W / 2);
                 y = QUOTE(RESCENTRE_Y - HELP_H / 2);
@@ -495,8 +366,8 @@ class RscTitles {
                 h = QUOTE(HELP_H);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
-            
-            class Title: vip_rsc_text {
+
+            class Title: ACE_gui_staticBase {
                 idc = 0;
                 style = ST_CENTER;
                 x = QUOTE(RESCENTRE_X - RESUNITS_X * 25);
@@ -505,10 +376,9 @@ class RscTitles {
                 h = QUOTE(RESUNITS_Y * 4);
                 colorText[]={1,1,1,1};
                 sizeEx = QUOTE(RESUNITS_Y * 4);
-                font = GUI_FONT_NORMAL;
                 text = "ACE Spectator Controls";
             };
-            
+
             class LeftColumn1 {
                 idc = 1;
                 type = CT_STRUCTURED_TEXT;
@@ -521,17 +391,17 @@ class RscTitles {
                 size = QUOTE(RESUNITS_Y * 2.5);
                 colorBackground[] = {0,0,0,0};
             };
-            
+
             class LeftColumn2: LeftColumn1 {
                 idc = 2;
                 x = QUOTE(RESCENTRE_X - HELP_W / 2 + RESUNITS_X * 19.75);
             };
-            
+
             class RightColumn1: LeftColumn1 {
                 idc = 3;
                 x = QUOTE(RESCENTRE_X + HELP_W / 2 - RESUNITS_X * 3 - RESUNITS_X * 29.5);
             };
-            
+
             class RightColumn2: LeftColumn1 {
                 idc = 4;
                 x = QUOTE(RESCENTRE_X + HELP_W / 2 - RESUNITS_X * 3 - RESUNITS_X * 11.75);

@@ -1,22 +1,15 @@
 /*
-    Author:
-    voiper
-
-    Description:
-    Check if a unit is suitable to spectate.
-
-    Arguments:
-    0: Unit to check <Object>
-
-    Example:
-    [unit] call ace_spectator_canSpectateUnit;
-
-    Return Value:
-    Whether is suitable to spectate <Bool>
-
-    Public:
-    No
-*/
+ * Author: SilentSpike
+ * Check if a unit is suitable to spectate
+ *
+ * Arguments:
+ * 0: Unit to check <Object>
+ *
+ * Return Value:
+ * Unit is suitable <BOOL>
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
