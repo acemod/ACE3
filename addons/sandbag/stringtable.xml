@@ -11,6 +11,7 @@
             <Czech>Pytel s pískem</Czech>
             <Italian>Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák</Hungarian>
+            <Portuguese>Saco de Areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -22,6 +23,7 @@
             <Czech>Pytel na písek (prázdný)</Czech>
             <Italian>Sacco di Sabbia (Vuoto)</Italian>
             <Hungarian>Homokzsák (üres)</Hungarian>
+            <Portuguese>Saco de Areia (vazio)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
@@ -33,6 +35,7 @@
             <Czech>Zde nelze postavit</Czech>
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
+            <Portuguese>Não pode contruir aqui</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -44,6 +47,7 @@
             <Czech>Zvednout pytel</Czech>
             <Italian>Prendi Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák felvétele</Hungarian>
+            <Portuguese>Pegar saco de areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -55,6 +59,7 @@
             <Czech>Nést pytel</Czech>
             <Italian>Trasporta Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák cipelése</Hungarian>
+            <Portuguese>Carregar saco de areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -66,6 +71,7 @@
             <Czech>Položit</Czech>
             <Italian>Fine Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
+            <Portuguese>Parar de carregar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -77,6 +83,7 @@
             <Czech>Odložit pytel</Czech>
             <Italian>Lascia Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák eldobása</Hungarian>
+            <Portuguese>Derrubar saco de areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -88,6 +95,7 @@
             <Czech>Potvrdit Položení</Czech>
             <Italian>Conferma Posizionamento</Italian>
             <Hungarian>Lerak</Hungarian>
+            <Portuguese>Confirmar implantação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -99,6 +107,7 @@
             <Czech>Zrušit Položení</Czech>
             <Italian>Cancella Posizionamento</Italian>
             <Hungarian>Visszavonás</Hungarian>
+            <Portuguese>Cancelar implantação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -110,6 +119,7 @@
             <Czech>Umístit pytel</Czech>
             <Italian>Posiziona Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák lerakása</Hungarian>
+            <Portuguese>Implantar saco de areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -121,6 +131,7 @@
             <Czech>Bedna na pytle s pískem</Czech>
             <Italian>Contenitore Sacchi di Sabbia</Italian>
             <Hungarian>Homokzsákos láda</Hungarian>
+            <Portuguese>Caixa de saco de areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -132,6 +143,7 @@
             <Czech>Tady není písek</Czech>
             <Italian>Qui non cè Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
+            <Portuguese>Aqui não tem areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>+ Modifier, rotates</English>

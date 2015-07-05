@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhs_c_weapons"};
+        requiredAddons[] = {"rhs_c_weapons", "rhs_c_troops"};
         author[]={"Ruthberg"};
         VERSION_CONFIG;
     };

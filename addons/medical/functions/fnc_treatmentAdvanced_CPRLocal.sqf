@@ -14,17 +14,15 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target", "_n"];
+private ["_caller","_target", "_reviveStartTime"];
 _caller = _this select 0;
 _target = _this select 1;
 
-_n = _target getvariable [QEGVAR(common,ENABLE_REVIVE_COUNTER),0];
-if (_n > 0) then {
-    _n = _n - random(20);
-    if (_n < 0) then {
-        _n = 0;
+if (_target getvariable [QGVAR(inReviveState), false]) exitwith {
+    _reviveStartTime = _target getvariable [QGVAR(reviveStartTime),0];
+    if (_reviveStartTime > 0) then {
+        _target setvariable [QGVAR(reviveStartTime), (_reviveStartTime + random(20)) min ACE_time];
     };
-    _target setvariable [QEGVAR(common,ENABLE_REVIVE_COUNTER), _n];
 };
 
 if (random(1)>= 0.6) exitwith {

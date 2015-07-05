@@ -63,6 +63,8 @@ ace_barrelLength
 ace_laserpointer
 ace_nextmodeclass
 ace_modedescription
+ace_hearing_protection
+ace_hearing_lowerVolume
 ```
 
 

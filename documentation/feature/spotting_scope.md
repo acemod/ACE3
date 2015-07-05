@@ -12,7 +12,7 @@ Adds a deployable spotting scope.
 ## 2. Usage
 
 ### 2.1 Deploying the spotting scope
-- Self interact <kbd>CTRL</kbd>+<kbd>⊞ Win</kbd> (ACE3 default).
+- Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Equipment`.
 - Select `Place spotting scope` (note that the scope will be at your feet).
 

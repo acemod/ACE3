@@ -5,13 +5,13 @@ class cfgMagazines {
     class rhs_100Rnd_762x54mmR: rhs_30Rnd_545x39_AK {
         ace_isbelt = 1;
     };
-    class rhs_100Rnd_762x54mmR_green: rhs_100Rnd_762x54mmR {
+    class rhs_mag_127x108mm_50: VehicleMagazine {
         ace_isbelt = 1;
     };
-    class rhs_mag_127x108mm_50 : VehicleMagazine {
-        ace_isbelt = 1;
+    class rhs_mag_127x108mm_150: rhs_mag_127x108mm_50 {
+        ace_isbelt = 0;
     };
-    class rhs_mag_127x108mm_150 : rhs_mag_127x108mm_50 {        
+    class rhs_mag_127x108mm_1470 : rhs_mag_127x108mm_50 {
         ace_isbelt = 0;
     };
 };
