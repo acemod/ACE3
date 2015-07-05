@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Cache necessary details and initalize spectator on death
+ * Cache necessary details and process unit for spectator on death
  *
  * Arguments:
  * 0: Corpse <OBJECT>
@@ -24,8 +24,5 @@ if !(_unit getVariable [QGVAR(isSpectator),false]) then {
     GVAR(cachedSide) = side GVAR(cachedGroup);
 };
 
+// Remove from group to prevent appearing on HUD upon respawn
 [_unit] joinSilent grpNull;
-if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = true};
-_delay = getNumber (missionConfigFile >> "respawnDelay");
-_delay fadeSound 0;
-999999 cutText ["", "BLACK", _delay];
