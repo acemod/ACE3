@@ -3,8 +3,8 @@
  * Start the spectator camera spectator on respawn
  *
  * Arguments:
- * 0: Corpse <OBJECT>
- * 1: Killer <OBJECT>
+ * 0: New unit <OBJECT>
+ * 1: Old unit <OBJECT>
  *
  * Return Value:
  * None <NIL>

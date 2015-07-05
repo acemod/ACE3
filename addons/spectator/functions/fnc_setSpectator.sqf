@@ -17,6 +17,7 @@
 
 #include "script_component.hpp"
 
+private ["_unit","_target","_set"];
 _unit = player;
 _target = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
@@ -44,7 +45,6 @@ if (_set) then {
 
     ["Init", [true]] call FUNC(camera);
 } else {
-    // Code to exit spectator and "respawn" player goes here (WIP)
     ["Exit"] call FUNC(camera);
 
     // Physical beings can talk
@@ -57,6 +57,10 @@ if (_set) then {
     } else {
         [_unit] joinSilent GVAR(cachedGroup);
     };
+
+    private ["_marker"];
+    _marker = ["respawn_west","respawn_east","respawn_guerrila","respawn_civilian"] select ([west,east,resistance,civilian] find GVAR(cachedSide));
+    _unit setPos (getMarkerPos _marker);
 };
 
 // Handle common addon audio
