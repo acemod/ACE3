@@ -60,8 +60,8 @@ class ACE_Settings {
         values[] = {"Disabled", "50/50", "Enabled"};
     };
     class GVAR(maxUnconsciousTime) {
-        displayName = "Base Maximum Unconscious Time"; // TODO: Needs stringtabling.
-        description = "Time required (in seconds) before an unconscious unit will wake up without epinephrine."; // TODO: Needs stringtabling.
+        displayName = CSTRING(MedicalSettings_maxUnconsciousTime_DisplayName);
+        description = CSTRING(MedicalSettings_maxUnconsciousTime_Description);
         typeName = "SCALAR";
         value = -1; // -1 means disabled
         isClientSettable = 0;
