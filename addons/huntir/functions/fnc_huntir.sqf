@@ -61,7 +61,7 @@ createDialog "ace_huntir_cam_dialog_off";
                         if (_elapsedTime > 10) then {
                             GVAR(state) = "noGDS";
                         };
-                        if (_elapsedTime > 5 && {count _nearestHuntIRs > 0}) then {
+                        if (_elapsedTime > 5 && {{_x getHitPointDamage "HitCamera" < 0.25} count _nearestHuntIRs > 0}) then {
                             GVAR(state) = "connecting";
                         };
                     };

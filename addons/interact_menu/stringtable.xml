@@ -85,6 +85,11 @@
             <Italian>Interazioni con veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
+            <English>Zeus Actions</English>
+            <Polish>Akcje Zeusa</Polish>
+            <Czech>Akce Zeuse</Czech>
+        </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
@@ -220,18 +225,40 @@
         <Key ID="STR_ACE_Interact_Menu_background">
             <English>Interaction menu background</English>
             <Polish>Tło menu interakcji</Polish>
+            <Spanish>Fondo del menú de interacción</Spanish>
+            <Czech>Pozadí menu interakce</Czech>
+            <Portuguese>Fundo do menu de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
             <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
+            <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
+            <Czech>Rozmazat obraz pokud je interakční menu otevřené.</Czech>
+            <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
             <Polish>Rozmycie ekranu</Polish>
+            <Spanish>Pantalla de desenfoque</Spanish>
+            <Czech>Rozmazaný obraz</Czech>
+            <Portuguese>Desfoque de tela</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
             <Polish>Przyciemnienie ekranu</Polish>
+            <Spanish>Negra</Spanish>
+            <Czech>Černý obraz</Czech>
+            <Portuguese>Preto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
+            <English>Show actions for buildings</English>
+            <Polish>Pokazuj akcje dla budynków</Polish>
+            <Czech>Zobrazit akci pro budovy</Czech>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
+            <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
+            <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
         </Key>
     </Package>
 </Project>

@@ -6,7 +6,7 @@ class CfgVehicles {
                 displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(call FUNC(canDeploy));
                 statement = QUOTE(call FUNC(deploy));
-                exceptions[] = {"isNotSwimming", "isNotInside"};
+                exceptions[] = {"isNotSwimming"};
                 showDisabled = 1;
                 priority = 4;
                 icon = PATHTOF(UI\icon_sandbag_ca.paa);

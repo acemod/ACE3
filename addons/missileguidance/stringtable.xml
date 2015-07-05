@@ -102,18 +102,24 @@
             <Polish>Wyłącz</Polish>
             <Spanish>Desactivado</Spanish>
             <German>Aus</German>
+            <Czech>Vypnout</Czech>
+            <Portuguese>Desligado</Portuguese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
             <Polish>Tylko gracz</Polish>
             <Spanish>Solo jugador</Spanish>
             <German>Nur Spieler</German>
+            <Czech>Pouze hráči</Czech>
+            <Portuguese>Somente jogador</Portuguese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
             <Polish>Gracz oraz AI</Polish>
             <Spanish>Jugador e IA</Spanish>
             <German>Spieler und KI</German>
+            <Czech>Hráči a AI</Czech>
+            <Portuguese>Jogador e IA</Portuguese>
         </Key>
     </Package>
 </Project>

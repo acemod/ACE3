@@ -66,6 +66,11 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
+        if (GVAR(level) >= 2) then {
+            if (_unit getvariable [QGVAR(heartRate), 60] > 0) then {
+                _unit setvariable [QGVAR(heartRate), 0];
+            };
+        };
     }, 1, [_unit] ] call CBA_fnc_addPerFrameHandler;
     false;
 };
@@ -74,5 +79,8 @@ _unit setvariable ["ACE_isDead", true, true];
 if (isPLayer _unit) then {
     _unit setvariable ["isDeadPlayer", true, true];
 };
+
+["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+
 _unit setdamage 1;
 true;

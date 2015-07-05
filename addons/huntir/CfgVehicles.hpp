@@ -19,15 +19,45 @@ class CfgVehicles {
     
     class Parachute_02_base_F;
     class ACE_HuntIR: Parachute_02_base_F {
-        scope = 1;
+        author = ECSTRING(common,ACETeam);
+        castDriverShadow = 0;
+        destrType = "DestructDefault";
         displayName = "HuntIR";
         model = PATHTOF(data\huntir.p3d);
-        castDriverShadow = 0;
-        soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
+        scope = 1;
         soundCrash[] = {"", db-30, 1 };
+        soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
         soundLandCrash[] = {"", db-30, 1 };
         soundWaterCrash[] = {"", db10, 1 };
-        mapSize = 0;
+        class HitPoints {
+            class HitEngine {
+                armor = 0;
+                material = -1;
+                name = "";
+                visual = "";
+                radius = 0;
+                passThrough = 0;
+                explosionShielding = 0;
+            };
+            class HitParachute {
+                armor = 0.0001;
+                material = -1;
+                name = "parachute";
+                visual = "";
+                radius = 0.2;
+                passThrough = 1;
+                explosionShielding = 0;
+            };
+            class HitCamera {
+                armor = 0.001;
+                material = -1;
+                name = "camera";
+                visual = "";
+                radius = 0.025;
+                passThrough = 1;
+                explosionShielding = 1;
+            };
+        };
     };
 
     class Item_Base_F;
@@ -48,6 +78,16 @@ class CfgVehicles {
     class ACE_HuntIR_Box: ReammoBox_F {
         model = PATHTOF(data\ace_huntirbox.p3d);
         displayName = $STR_DN_ACE_HUNTIRBOX;
+        class TransportItems {
+            MACRO_ADDITEM(ACE_HuntIR_monitor,5);
+        };
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_HuntIR_M203,20);
+        };
+    };
+
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_HuntIR_monitor,5);
         };

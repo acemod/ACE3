@@ -13,22 +13,23 @@
 
 #include "script_component.hpp"
 
-private ["_typeOfProjectile","_typeOfInjury"];
-_typeOfProjectile = _this select 0;
-_typeOfInjury = switch (true) do {
-    case (_typeOfProjectile iskindof "BulletBase"): {"Bullet"};
-    case (_typeOfProjectile iskindof "GrenadeCore"): {"Grenade"};
-    case (_typeOfProjectile iskindof "TimeBombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "MineCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "FuelExplosion"): {"Explosive"};
-    case (_typeOfProjectile iskindof "ShellBase"): {"Shell"};
-    case (_typeOfProjectile iskindof "RocketBase"): {"Explosive"};
-    case (_typeOfProjectile iskindof "MissileBase"): {"Explosive"};
-    case (_typeOfProjectile iskindof "LaserBombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "BombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "Grenade"): {"Grenade"};
-    case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
-    default {_typeOfProjectile};
+PARAMS_1(_typeOfProjectile);
+
+private ["_typeOfDamage"];
+
+_typeOfDamage = switch (true) do {
+    case (_typeOfProjectile isKindOf "BulletBase"): {"bullet"};
+    case (_typeOfProjectile isKindOf "GrenadeCore"): {"grenade"};
+    case (_typeOfProjectile isKindOf "TimeBombCore"): {"explosive"};
+    case (_typeOfProjectile isKindOf "MineCore"): {"explosive"};
+    case (_typeOfProjectile isKindOf "FuelExplosion"): {"explosive"};
+    case (_typeOfProjectile isKindOf "ShellBase"): {"shell"};
+    case (_typeOfProjectile isKindOf "RocketBase"): {"explosive"};
+    case (_typeOfProjectile isKindOf "MissileBase"): {"explosive"};
+    case (_typeOfProjectile isKindOf "LaserBombCore"): {"explosive"};
+    case (_typeOfProjectile isKindOf "BombCore"): {"explosive"};
+    case (_typeOfProjectile isKindOf "Grenade"): {"grenade"};
+    default {toLower _typeOfProjectile};
 };
-// TODO replace the capitalization on the switch results instead..
-toLower _typeOfInjury;
+
+_typeOfDamage

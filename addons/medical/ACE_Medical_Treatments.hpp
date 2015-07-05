@@ -11,6 +11,7 @@ class ACE_Medical_Actions {
             treatmentTimeSelfCoef = 1;
             items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
             condition = "";
+            patientStateCondition = 0;
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
@@ -107,6 +108,7 @@ class ACE_Medical_Actions {
             // Item required for the action. Leave empty for no item required.
             items[] = {"ACE_fieldDressing"};
             condition = "";
+            patientStateCondition = 0;
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
@@ -206,6 +208,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
+            patientStateCondition = QGVAR(useCondition_SurgicalKit);
             treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
             callbackSuccess = "";
             callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
@@ -219,7 +222,8 @@ class ACE_Medical_Actions {
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
-            treatmentTime = 10;
+            patientStateCondition = QGVAR(useCondition_PAK);
+            treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
@@ -266,10 +270,10 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -328,6 +332,7 @@ class ACE_Medical_Advanced {
                 class Large {
                     name = CSTRING(Wounds_Abrasion_Large);
                     minDamage = 0.3;
+                    maxDamage = 0.5;
                     bleedingRate = 0.0002;
                 };
             };

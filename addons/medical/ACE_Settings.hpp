@@ -59,6 +59,10 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(remoteControlledAI) {
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(preventInstaDeath) {
         typeName = "BOOL";
         value = 0;
@@ -129,11 +133,31 @@ class ACE_Settings {
         value = 2;
         values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
     };
+    class GVAR(useCondition_PAK) {
+        displayName = CSTRING(AdvancedMedicalSettings_useCondition_PAK_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anytime", "Stable"};
+    };
+    class GVAR(useCondition_SurgicalKit) {
+        displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anytime", "Stable"};
+    };
     class GVAR(keepLocalSettingsSynced) {
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(healHitPointAfterAdvBandage) {
+        displayName = CSTRING(healHitPointAfterAdvBandage);
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(painIsOnlySuppressed) {
+        displayName = CSTRING(painIsOnlySuppressed);
         typeName = "BOOL";
         value = 1;
     };
