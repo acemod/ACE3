@@ -90,7 +90,7 @@ class CfgVehicles {
                 displayName = CSTRING(MedicalSettings_maxUnconsciousTime_DisplayName);
                 description = CSTRING(MedicalSettings_maxUnconsciousTime_Description);
                 typeName = "NUMBER";
-                defaultValue = 300; // TODO: Check on what this value should be
+                defaultValue = -1;
             };
             class enableUnconsciousnessAI {
                 displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);
