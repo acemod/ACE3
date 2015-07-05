@@ -30,6 +30,8 @@ _this = _this select 1;
 switch _mode do {
 
     case "Init": {
+        if !(isNil QGVAR(cam)) exitWith {};
+
         GVAR(noEscape) = if (count _this > 0) then {
             _this select 0
         } else {
