@@ -18,3 +18,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "ACE_Settings.hpp"
+#include "ACE_repair.hpp"
