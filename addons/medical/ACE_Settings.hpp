@@ -59,6 +59,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(maxUnconsciousTime) {
+        displayName = "Base Maximum Unconscious Time"; // TODO: Needs stringtabling.
+        description = "Time required (in seconds) before an unconscious unit will wake up without epinephrine."; // TODO: Needs stringtabling.
+        typeName = "SCALAR";
+        value = -1; // -1 means disabled
+        isClientSettable = 0;
+    };
     class GVAR(remoteControlledAI) {
         typeName = "BOOL";
         value = 1;
