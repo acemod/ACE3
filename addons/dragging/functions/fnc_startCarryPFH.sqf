@@ -12,7 +12,7 @@ _target = _this select 0 select 1;
 _timeOut = _this select 0 select 2;
 
 // handle aborting carry
-if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
+if !(_unit getVariable [QGVAR(startCarrying), false]) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
 

@@ -63,7 +63,7 @@ if (_target isKindOf "CAManBase") then {
 
 
 // prevents draging and carrying at the same ACE_time
-_unit setVariable [QGVAR(isCarrying), true, true];
+_unit setVariable [QGVAR(startCarrying), true, true];
 
 // required for aborting animation
 _unit setVariable [QGVAR(carriedObject), _target, true];

@@ -49,6 +49,9 @@ if (_target isKindOf "CAManBase") then {
 };
 
 // prevents draging and carrying at the same ACE_time
-_unit setVariable [QGVAR(isDragging), true, true];
+_unit setVariable [QGVAR(startDragging), true, true];
+
+// required for aborting animation
+_unit setVariable [QGVAR(draggedObject), _target, true];
 
 [FUNC(startDragPFH), 0.2, [_unit, _target, ACE_time + 5]] call CBA_fnc_addPerFrameHandler;

@@ -46,6 +46,7 @@ if (_target isKindOf "CAManBase") then {
 };
 ["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
 
+_unit setVariable [QGVAR(startCarrying), false, true];
 _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
 

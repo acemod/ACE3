@@ -6,7 +6,7 @@ private ["_unit", "_weapon"];
 _unit = _this select 0;
 _weapon = _this select 1;
 
-if (_unit getVariable [QGVAR(isDragging), false]) then {
+if (_unit getVariable [QGVAR(startDragging), false] || _unit getVariable [QGVAR(isDragging), false]) then {
 
     // drop dragged object when selecting a non-primary weapon
     if (_weapon != primaryWeapon _unit) then {
@@ -18,7 +18,7 @@ if (_unit getVariable [QGVAR(isDragging), false]) then {
 
 };
 
-if (_unit getVariable [QGVAR(isCarrying), false]) then {
+if (_unit getVariable [QGVAR(startCarrying), false] || _unit getVariable [QGVAR(isCarrying), false]) then {
 
     private "_carriedObject";
     _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
