@@ -3,7 +3,9 @@
  * Initializes the check-PBOs module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * 0: The module logic <LOGIC>
+ * 1: units <ARRAY>
+ * 2: activated <BOOL>
  *
  * Return Value:
  * None
