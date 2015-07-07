@@ -2,17 +2,18 @@ class CfgVehicles {
     class UserTexture1m_F;
     class ACE_tagWall0 : UserTexture1m_F {
         hiddenSelectionsTextures[] = {"\z\ace\addons\tagging\UI\tag0.paa"};
+        scope = 1;
     };
-    class ACE_tagWall1 : UserTexture1m_F {
+    class ACE_tagWall1 : ACE_tagWall0 {
         hiddenSelectionsTextures[] = {"\z\ace\addons\tagging\UI\tag1.paa"};
     };
-    class ACE_tagWall2 : UserTexture1m_F {
+    class ACE_tagWall2 : ACE_tagWall0 {
         hiddenSelectionsTextures[] = {"\z\ace\addons\tagging\UI\tag2.paa"};
     };
-    class ACE_tagWall3 : UserTexture1m_F {
+    class ACE_tagWall3 : ACE_tagWall0 {
         hiddenSelectionsTextures[] = {"\z\ace\addons\tagging\UI\tag3.paa"};
     };
-    class ACE_tagWall4 : UserTexture1m_F {
+    class ACE_tagWall4 : ACE_tagWall0 {
         hiddenSelectionsTextures[] = {"\z\ace\addons\tagging\UI\tag4.paa"};
     };
 
@@ -27,9 +28,30 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\iconTagging.paa));
-                    hotkey = "T";
                 };
             };
+        };
+    };
+
+    class Item_Base_F;
+    class ACE_Item_Spraypaint: Item_Base_F {
+        author = "BaerMitUmlaut";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(spraypaint);
+        vehicleClass = "Items";
+        class TransportWeapons {
+            class ACE_Spraypaint {
+                name = "ACE_Spraypaint";
+                count = 1;
+            };
+        };
+    };
+
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportItems {
+            MACRO_ADDITEM(ACE_Spraypaint,5);
         };
     };
 };
