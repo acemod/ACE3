@@ -38,7 +38,7 @@ _sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber
 
 // Set direction and position
 _player setDir _sitDirection;
-// Can NOT use ASL/ATL as modelToWorld returns absolute world position
+// No need for ATL/ASL as modelToWorld returns in format position
 _player setPos (_seat modelToWorld _sitPosition);
 
 // Set variables

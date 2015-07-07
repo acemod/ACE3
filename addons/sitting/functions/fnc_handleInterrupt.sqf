@@ -3,7 +3,7 @@
  * Handles interruptions of sitting, like killed or unconsciousness.
  *
  * Arguments:
- * Player <OBJECT>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * None
