@@ -40,7 +40,7 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(spraypaint);
         vehicleClass = "Items";
-        class TransportWeapons {
+        class TransportItems {
             class ACE_Spraypaint {
                 name = "ACE_Spraypaint";
                 count = 1;
