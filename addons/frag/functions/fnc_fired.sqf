@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_gun", "_type", "_round", "_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
+private ["_enabled", "_gun", "_type", "_round", "_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
 
 if (!GVAR(enabled)) exitWith {};
 
@@ -8,9 +8,13 @@ _gun = _this select 0;
 _type = _this select 4;
 _round = _this select 6;
 
+_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
+if(_enabled < 1) exitWith {};
+
 if(_round in GVAR(blackList)) exitWith {
     GVAR(blackList) = GVAR(blackList) - [_round];
 };
+
 
 _doFragTrack = false;
 if(_gun == ACE_player) then {
@@ -46,7 +50,7 @@ if(_doFragTrack && alive _round) then {
     GVAR(trackedObjects) pushBack _round;
     _spallTrack = [];
     _spallTrackID = [];
-    [DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
+    [DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, ACE_time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
     if(_doSpall) then {
         [_round, 2, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };

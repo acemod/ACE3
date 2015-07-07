@@ -11,21 +11,21 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_turrets", "_doorTurrets", "_config"];
+private ["_turrets", "_doorTurrets", "_config"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _turrets = allTurrets [_vehicle, true];
 
 _doorTurrets = [];
 
 {
-  _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-  _config = [_config, _x] call FUNC(getTurretConfigPath);
+    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-  if ((getNumber (_config >> "isCopilot") == 0) && count (getArray (_config >> "weapons")) > 0 ) then {
-    _doorTurrets pushBack _x;
-  };
+    if ((getNumber (_config >> "isCopilot") == 0) && count (getArray (_config >> "weapons")) > 0 ) then {
+        _doorTurrets pushBack _x;
+    };
 } forEach _turrets;
 
 _doorTurrets

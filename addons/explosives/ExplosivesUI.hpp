@@ -15,7 +15,7 @@ class RscEdit;
 
 class Rsc_ACE_CallScreen_Edit:RscEdit {
     canModify = 1;
-    colorBackground[] = {0,0,0,1};
+    colorBackground[] = {0,0,0,0};
     colorText[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
     colorSelection[] = {
@@ -89,7 +89,7 @@ class RscACE_SelectTimeUI {
             h = 0.1;
             y = 0.09;
             style = ST_CENTER;
-            text = $STR_ACE_Explosives_Cancel;
+            text = CSTRING(Cancel);
             action = "closeDialog 0;";
         };
         class approveBtn: RscButton {
@@ -99,7 +99,7 @@ class RscACE_SelectTimeUI {
             h = 0.1;
             w = 0.15;
             style = ST_CENTER;
-            text = $STR_ACE_Explosives_SetTime;
+            text = CSTRING(SetTime);
             action = "closeDialog 0;";
         };
     };
@@ -215,7 +215,7 @@ class Rsc_ACE_PhoneInterface {
             y = 0.676 * safezoneH + safezoneY;
             w = 0.0309375 * safezoneW;
             h = 0.033 * safezoneH;
-            tooltip = "$STR_ACE_Explosives_Phone_AddToSpeedDial";
+            tooltip = CSTRING(Phone_AddToSpeedDial);
             action = QUOTE([ARR_2(ctrlText 1401,ctrlText 1400)] call FUNC(addToSpeedDial););
         };
         class clear: Rsc_ACE_HiddenButton {
@@ -224,7 +224,7 @@ class Rsc_ACE_PhoneInterface {
             y = 0.445 * safezoneH + safezoneY;
             w = 0.020625 * safezoneW;
             h = 0.033 * safezoneH;
-            tooltip = "$STR_ACE_Explosives_Clear";
+            tooltip = CSTRING(Clear);
             action = QUOTE(ctrlSetText [ARR_2(1400,'')];[ctrlText 1401] call FUNC(removeFromSpeedDial);ctrlSetText [ARR_2(1401,'')];);
         };
         class dial: Rsc_ACE_HiddenButton {
@@ -233,7 +233,7 @@ class Rsc_ACE_PhoneInterface {
             y = 0.445 * safezoneH + safezoneY;
             w = 0.04125 * safezoneW;
             h = 0.033 * safezoneH;
-            tooltip = "$STR_ACE_Explosives_Phone_Dial";
+            tooltip = CSTRING(Phone_Dial);
             action = QUOTE([ARR_2(ace_player,ctrlText 1400)] call FUNC(dialPhone););
         };
         class up: Rsc_ACE_HiddenButton {
@@ -242,7 +242,7 @@ class Rsc_ACE_PhoneInterface {
             y = 0.445 * safezoneH + safezoneY;
             w = 0.020625 * safezoneW;
             h = 0.033 * safezoneH;
-            tooltip = "$STR_ACE_Explosives_Phone_Up";
+            tooltip = CSTRING(Phone_Up);
             action = QUOTE([true] call FUNC(setSpeedDial));
         };
         class down: Rsc_ACE_HiddenButton {
@@ -251,7 +251,7 @@ class Rsc_ACE_PhoneInterface {
             y = 0.485 * safezoneH + safezoneY;
             w = 0.020625 * safezoneW;
             h = 0.033 * safezoneH;
-            tooltip = "$STR_ACE_Explosives_Phone_Down";
+            tooltip = CSTRING(Phone_Down);
             action = QUOTE([false] call FUNC(setSpeedDial));
         };
         class speedDial_Text: RscText {

@@ -36,10 +36,16 @@ PREP(handleScrollWheel);
 PREP(hasExplosives);
 PREP(hasPlacedExplosives);
 
+PREP(interactEH);
+
 PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
+PREP(module);
+
+PREP(onInventoryChanged);
+PREP(onKilled);
 PREP(onLanded);
 
 PREP(openTimerSetUI);

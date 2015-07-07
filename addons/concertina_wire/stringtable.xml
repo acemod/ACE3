@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="concertina_wire">
+        <Key ID="STR_ACE_CONCERTINA_WIRE">
+            <English>Concertina Wire</English>
+            <German>NATO-Draht</German>
+            <Russian>Проволочная спираль</Russian>
+            <Polish>Drut kolczasty</Polish>
+            <Spanish>Concertina wire</Spanish>
+            <French>Concertina wire</French>
+            <Czech>Ostnatý drát</Czech>
+            <Italian>Concertina wire</Italian>
+            <Hungarian>Concertina wire</Hungarian>
+            <Portuguese>Arame farpado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_CONCERTINA_WIRECOIL">
+            <English>Concertina Wire Coil</English>
+            <German>NATO-Draht Rolle</German>
+            <Russian>Проволочная спираль (моток)</Russian>
+            <Polish>Zwój drutu kolczastego</Polish>
+            <Spanish>Concertina wire coil</Spanish>
+            <French>Concertina wire coil</French>
+            <Czech>Smyčka ostnatého drátu</Czech>
+            <Italian>Concertina wire coil</Italian>
+            <Hungarian>Concertina wire coil</Hungarian>
+            <Portuguese>Bobina de arame farpado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_UNROLLWIRE">
+            <English>Dismount Concertina Wire</English>
+            <German>NATO-Draht abbauen</German>
+            <Russian>Демонтировать проволочную спираль</Russian>
+            <Polish>Zwiń drut kolczasty</Polish>
+            <Spanish>Dismount Concertina wire</Spanish>
+            <French>Dismount Concertina wire</French>
+            <Czech>Svinout ostnatý drát</Czech>
+            <Italian>Dismount Concertina wire</Italian>
+            <Hungarian>Dismount Concertina wire</Hungarian>
+            <Portuguese>Desmontar arame farpado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_ROLLWIRE">
+            <English>Deploy Concertina Wire</English>
+            <German>NATO-Draht verlegen</German>
+            <Russian>Монтировать проволочную спираль</Russian>
+            <Polish>Rozwiń drut kolczasty</Polish>
+            <Spanish>Deploy Concertina wire</Spanish>
+            <French>Deploy Concertina wire</French>
+            <Czech>Rozvinout ostnatý drát</Czech>
+            <Italian>Deploy Concertina wire</Italian>
+            <Hungarian>Deploy Concertina wire</Hungarian>
+            <Portuguese>Colocar arame farpado</Portuguese>
+        </Key>
+    </Package>
+</Project>

@@ -52,7 +52,7 @@ _scopeShiftY = _recoilCoef * linearConversion [0, 1, random 1, SCOPE_SHIFT_Y_MIN
 private ["_sizeX", "_sizeY"];
 
 _sizeX = (0.75+_recoilScope)/(getResolution select 5);
-_sizeY = _sizeX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+_sizeY = _sizeX*(4/3);
 
 private "_positionReticle";
 _positionReticle = [
@@ -83,7 +83,7 @@ _positionBody = [
 
 // Bring them all back
 _sizeX = 0.75/(getResolution select 5);
-_sizeY = _sizeX*safezoneW/safezoneH*(16/9)/(getResolution select 4);
+_sizeY = _sizeX*(4/3);
 
 _positionReticle = [
     safezoneX+0.5*safezoneW-0.5*_sizeX,

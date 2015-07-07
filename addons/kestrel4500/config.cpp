@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_Kestrel4500"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_common", "ACE_weather"};
-        author[] = {$STR_ACE_Common_ACETeam, "Ruthberg"};
+        author[] = {ECSTRING(common,ACETeam), "Ruthberg"};
         VERSION_CONFIG;
     };
 };

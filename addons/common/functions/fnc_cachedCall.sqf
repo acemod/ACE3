@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain and Jaynus
- * Returns the result of the function and caches it up to a given time or event
+ * Returns the result of the function and caches it up to a given ACE_time or event
  *
  * Arguments:
  * 0: Parameters <ARRAY>
@@ -17,10 +17,12 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_5_PVT(_this,_params,_function,_namespace,_uid,_duration);
+PARAMS_5(_params,_function,_namespace,_uid,_duration);
 
-if (((_namespace getVariable [_uid, [-99999]]) select 0) < diag_tickTime) then {
-    _namespace setVariable [_uid, [diag_tickTime + _duration, _params call _function]];
+//IGNORE_PRIVATE_WARNING("_eventName");
+
+if (((_namespace getVariable [_uid, [-99999]]) select 0) < ACE_diagTime) then {
+    _namespace setVariable [_uid, [ACE_diagTime + _duration, _params call _function]];
 
     // Does the cache needs to be cleared on an event?
     if (count _this > 5) then {

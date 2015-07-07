@@ -4,13 +4,13 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(open) {
-                    displayName = "$STR_ACE_ATragMX_OpenATragMXDialog";
+                    displayName = CSTRING(OpenATragMXDialog);
                     condition = QUOTE(call FUNC(can_show));
                     statement = QUOTE(call FUNC(create_dialog));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\ATRAG_Icon.paa);
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };

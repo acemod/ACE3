@@ -13,20 +13,18 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_reason", "_status", "_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
+private ["_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
 
-_unit = _this select 0;
-_reason = _this select 1;
-_status = _this select 2;
+PARAMS_3(_unit,_reason,_status);
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 
 // register new reason (these reasons are shared publicly, since units can change ownership, but keep their captivity status)
 if !(_reason in _captivityReasons) then {
-  _captivityReasons pushBack _reason;
+    _captivityReasons pushBack _reason;
 
-  ACE_captivityReasons = _captivityReasons;
-  publicVariable "ACE_captivityReasons";
+    ACE_captivityReasons = _captivityReasons;
+    publicVariable "ACE_captivityReasons";
 };
 
 // get reasons why the unit is captive already and update to the new status
@@ -34,7 +32,7 @@ _unitCaptivityReasons = [_unit] call FUNC(getCaptivityStatus);
 
 _captivityReasonsBooleans = [];
 {
-  _captivityReasonsBooleans set [_forEachIndex, (_captivityReasons select _forEachIndex) in _unitCaptivityReasons];
+    _captivityReasonsBooleans set [_forEachIndex, (_captivityReasons select _forEachIndex) in _unitCaptivityReasons];
 } forEach _captivityReasons;
 
 _captivityReasonsBooleans set [_captivityReasons find _reason, _status];

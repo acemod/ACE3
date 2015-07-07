@@ -1,4 +1,6 @@
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
+// BEGIN_COUNTER(blueForceTrackingUpdate);
 
 private ["_groupsToDrawMarkers", "_playerSide", "_anyPlayers", "_markerType", "_colour", "_marker"];
 
@@ -7,6 +9,7 @@ private ["_groupsToDrawMarkers", "_playerSide", "_anyPlayers", "_markerType", "_
     deleteMarkerLocal _x;
 } forEach GVAR(BFT_markers);
 
+GVAR(BFT_markers) = [];
 
 if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
 
@@ -38,3 +41,5 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
         GVAR(BFT_markers) pushBack _marker;
     } forEach _groupsToDrawMarkers;
 };
+
+// END_COUNTER(blueForceTrackingUpdate);

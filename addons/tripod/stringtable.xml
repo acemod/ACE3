@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="tripod">
+        <Key ID="STR_ACE_Tripod_DisplayName">
+            <English>SSWT Kit</English>
+            <German>Scharfschützenzweibein</German>
+            <Russian>Снайперский штатив</Russian>
+            <Polish>Trójnóg snajperski</Polish>
+            <Spanish>SSWT Kit</Spanish>
+            <French>SSWT Kit</French>
+            <Czech>SSWT souprava</Czech>
+            <Italian>SSWT Kit</Italian>
+            <Hungarian>SSWT Kit</Hungarian>
+            <Portuguese>Kit SSWT</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tripod_PlaceDown">
+            <English>Place SSWT Kit</English>
+            <German>Scharfschützenzweibein aufstellen</German>
+            <Russian>Установить снайперский штатив</Russian>
+            <Polish>Postaw trójnóg snajperski</Polish>
+            <Spanish>Place SSWT Kit</Spanish>
+            <French>Place SSWT Kit</French>
+            <Czech>Rozlož souprava SSWT</Czech>
+            <Italian>Place SSWT Kit</Italian>
+            <Hungarian>Place SSWT Kit</Hungarian>
+            <Portuguese>Colocar kit SSWT</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tripod_PickUp">
+            <English>Pick up SSWT Kit</English>
+            <Polish>Podnieś trójnóg snajperski</Polish>
+            <Spanish>Coger equipo SSWT</Spanish>
+            <Czech>Zvednout SSWT soupravu</Czech>
+            <Portuguese>Pegar kit SSWT</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tripod_Adjust">
+            <English>Adjust SSWT Kit</English>
+            <Polish>Reguluj trójnóg snajperski</Polish>
+            <Spanish>Ajustar equipo SSWT</Spanish>
+            <Czech>Regulovat SSWT soupravu</Czech>
+            <Portuguese>Ajustar kit SSWT</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tripod_Done">
+            <English>Done</English>
+            <Polish>Gotowe</Polish>
+            <Spanish>Hecho</Spanish>
+            <Czech>Hotovo</Czech>
+            <Portuguese>Feito</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tripod_ScrollAction">
+            <English>+ Modifier, adjust</English>
+            <Polish>+ Modyfikator, regulacja</Polish>
+            <Spanish>+ Modificador, ajuste</Spanish>
+            <Czech>+ Modifikátor, regulace</Czech>
+            <Portuguese>+ Modificador, ajuste</Portuguese>
+        </Key>
+    </Package>
+</Project>

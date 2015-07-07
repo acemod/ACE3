@@ -58,10 +58,10 @@ if (isClass (_config >> _className)) then {
 
 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
 _exist = false;
-_injuryId = _injury select 0;
+_injuryType = _injury select 1;
 _bandagedInjury = [];
 {
-    if ((_x select 0) == _injuryId) exitwith {
+    if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitwith {
         _exist = true;
         _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
@@ -73,16 +73,11 @@ _bandagedInjury = [];
 
 if !(_exist) then {
     // [ID, classID, bodypart, percentage treated, bloodloss rate]
-    _bandagedInjury = [_injuryId, _injury select 1, _injury select 2, _impact, _injury select 4];
+    _bandagedInjury = [_injury select 0, _injury select 1, _injury select 2, _impact, _injury select 4];
     _bandagedWounds pushback _bandagedInjury;
 };
 
-_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, !USE_WOUND_EVENT_SYNC];
-
-if (USE_WOUND_EVENT_SYNC) then {
-    // sync _bandagedInjury
-
-};
+_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 
 // Check if we are ever going to reopen this
 if (random(1) <= _reopeningChance) then {
@@ -95,22 +90,19 @@ if (random(1) <= _reopeningChance) then {
         _injuryIndex = _this select 3;
         _injury = _this select 4;
 
-        if (alive _target) then {
+        //if (alive _target) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
             if ((count _openWounds)-1 < _injuryIndex) exitwith {};
             _selectedInjury = _openWounds select _injuryIndex;
-            if (_selectedInjury select 0 == _injury select 0) then { // matching the IDs
+            if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
                 _selectedInjury set [3, (_selectedInjury select 3) + _impact];
                 _openWounds set [_injuryIndex, _selectedInjury];
-                _target setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
-                if (USE_WOUND_EVENT_SYNC) then {
-                    ["medical_propagateWound", [_target, _selectedInjury]] call EFUNC(common,globalEvent);
-                };
+
                 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
                 _exist = false;
-                _injuryId = _injury select 0;
+                _injuryId = _injury select 1;
                 {
-                    if ((_x select 0) == _injuryId) exitwith {
+                    if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitwith {
                         _exist = true;
                         _existingInjury = _x;
                         _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];
@@ -119,10 +111,11 @@ if (random(1) <= _reopeningChance) then {
                 }foreach _bandagedWounds;
 
                 if (_exist) then {
-                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, !USE_WOUND_EVENT_SYNC];
+                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+                    _target setvariable [QGVAR(openWounds), _openWounds, true];
                 };
             };
             // Otherwise something went wrong, we we don't reopen them..
-        };
-    }, [_target, _impact, _part, _injuryIndex, _injury], _delay, 0] call EFUNC(common,waitAndExecute);
+       //};
+    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay, 0] call EFUNC(common,waitAndExecute);
 };

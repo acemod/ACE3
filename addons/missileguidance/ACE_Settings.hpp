@@ -3,8 +3,8 @@ class ACE_Settings {
         value = 2;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_MissileGuidance";
-        description = "$STR_ACE_MissileGuidance_Desc";
-        values[] = {"Off", "Player Only", "Player and AI"};
+        displayName = CSTRING(Title);
+        description = CSTRING(Desc);
+        values[] = {CSTRING(Off), CSTRING(PlayerOnly), CSTRING(PlayerAndAi)};
     };
 };

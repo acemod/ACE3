@@ -1,46 +1,38 @@
 /*
-    Author: aeroson
-    
-    Description:
-        Gathers and caches data needed by AGM_CrewInfo_fnc_doShow
-        What really does make difference for the engine is simulation of CfgAmmo
-        Priority of roles  is: driver/pilot, gunner, copilot, commander, ffv, cargo
-    
-    Parameters: 
-        None
-    
-    Returns:
-        [
-            Is vehicle inherited from Air ?
-            Array categorizing each vehicle's turret
-        ]
-*/
-
+ * Author: aeroson
+ * Gathers and caches data needed by AGM_CrewInfo_fnc_doShow.
+ * What really does make difference for the engine is simulation of CfgAmmo.
+ * Priority of roles  is: driver/pilot, gunner, copilot, commander, FFV, cargo.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Data <ARRAY>
+ * 0: Vehicle inherits from Air <BOOL>
+ * 1: Categorized vehicle's turrets <ARRAY>
+ *
+ * Example:
+ * call ace_nametags_fnc_updateSettings
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #include "common.hpp";
 
+private ["_type", "_varName", "_data", "_isAir", "_config", "_fnc_addTurret", "_fnc_addTurretUnit"];
 
-private ["_type", "_varName", "_data"];
-
-_type = _this select 0;
+PARAMS_1(_type);
 
 _varName = format ["ACE_CrewInfo_Cache_%1", _type];
 _data = + (uiNamespace getVariable _varName);
 
-if (!isNil "_data") exitWith {
-    _data
-};
+if (!isNil "_data") exitWith {_data};
 
 _data = [];
-
-
-
-private ["_isAir", "_config", "_fnc_addTurret", "_fnc_addTurretUnit"];
-
 _isAir = _type isKindOf "Air";
 
 _fnc_addTurretUnit = {
-
     private  ["_config", "_path", "_role", "_simulationEmpty", "_simulationLaserDesignate", "_simulationOther", "_magazine", "_ammo", "_simulation"];
 
     _config = _this select 0;
@@ -83,7 +75,6 @@ _fnc_addTurretUnit = {
     };
 
     _data pushBack [_path, _role];  
-
 };
 
 
@@ -108,9 +99,7 @@ _fnc_addTurret = {
         } else {
             _offset = _offset + 1;
         };
-
     };
-
 };
 
 

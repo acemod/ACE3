@@ -23,4 +23,6 @@ PARAMS_2(_unit,_target);
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
-{!(_target getVariable ["ACE_isUnconscious", false])}
+{!(_target getVariable ["ACE_isUnconscious", false])} &&
+{(vehicle _unit) == _unit} &&
+{(vehicle _target) == _target}

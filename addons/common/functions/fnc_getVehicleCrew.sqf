@@ -12,10 +12,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_types", "_crew"];
+private ["_crew"];
 
-_vehicle = _this select 0;
-_types = _this select 1;
+PARAMS_2(_vehicle,_types);
 
 _crew = [];
 

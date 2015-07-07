@@ -28,7 +28,7 @@ private ["_classname", "_count", "_displayName", "_picture"];
     _classname = _x;
     _count = (_itemsCountArray select 1) select _forEachIndex;
 
-    if (_classname != DUMMY_ITEM) then { //Don't show the dummy potato
+    if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
 
         switch (true) do {
         case (isClass (configFile >> "CfgWeapons" >> _classname)): {
@@ -53,8 +53,8 @@ private ["_classname", "_count", "_displayName", "_picture"];
         };
 
         _listBoxCtrl lbAdd format ["%1", _displayName];
-        _listBoxCtrl lbSetData [_forEachIndex, _classname];
-        _listBoxCtrl lbSetPicture [_forEachIndex, _picture];
-        _listBoxCtrl lbSetTextRight [_forEachIndex, str _count];
+        _listBoxCtrl lbSetData [((lbSize _listBoxCtrl) - 1), _classname];
+        _listBoxCtrl lbSetPicture [((lbSize _listBoxCtrl) - 1), _picture];
+        _listBoxCtrl lbSetTextRight [((lbSize _listBoxCtrl) - 1), str _count];
     };
 } forEach (_itemsCountArray select 0);

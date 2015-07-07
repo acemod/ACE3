@@ -8,60 +8,60 @@ class CfgVehicles {
     // TODO make a curator variant for this
     class ACE_moduleAmbianceSound: Module_F {
         scope = 2;
-        displayName = "Ambiance Sounds [ACE]";
+        displayName = CSTRING(AmbianceSounds_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
         category = "ACE_missionModules";
         function = QUOTE(FUNC(moduleAmbianceSound));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments    {
             class soundFiles {
-                displayName = "Sounds";
-                description = "Classnames of the ambiance sounds played. Seperated by ','. ";
+                displayName = CSTRING(AmbianceSounds_soundFiles_DisplayName);
+                description = CSTRING(AmbianceSounds_soundFiles_Description);
                 typeName = "STRING";
                 defaultValue = "";
             };
             class minimalDistance {
-                displayName = "Minimal Distance";
-                description = "Minimal Distance";
+                displayName = CSTRING(AmbianceSounds_minimalDistance_DisplayName);
+                description = CSTRING(AmbianceSounds_minimalDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 400;
             };
             class maximalDistance {
-                displayName = "Maximal Distance";
-                description = "Maximal Distance";
+                displayName = CSTRING(AmbianceSounds_maximalDistance_DisplayName);
+                description = CSTRING(AmbianceSounds_maximalDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 900;
             };
             class minimalDelay {
-                displayName = "Minimal Delay";
-                description = "Minimal Delay between sounds played";
+                displayName = CSTRING(AmbianceSounds_minimalDelay_DisplayName);
+                description = CSTRING(AmbianceSounds_minimalDelay_Description);
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
             class maximalDelay {
-                displayName = "Maximal Delay";
-                description = "Maximal Delay between sounds played";
+                displayName = CSTRING(AmbianceSounds_maximalDelay_DisplayName);
+                description = CSTRING(AmbianceSounds_maximalDelay_Description);
                 typeName = "NUMBER";
                 defaultValue = 170;
             };
             class followPlayers {
-                displayName = "Follow Players";
-                description = "Follow players. If set to false, loop will play sounds only nearby logic position.";
+                displayName = CSTRING(AmbianceSounds_followPlayers_DisplayName);
+                description = CSTRING(AmbianceSounds_followPlayers_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class soundVolume {
-                displayName = "Volume";
-                description = "The volume of the sounds played";
+                displayName = CSTRING(AmbianceSounds_soundVolume_DisplayName);
+                description = CSTRING(AmbianceSounds_soundVolume_Description);
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = "Ambiance sounds loop (synced across MP)";
+            description = CSTRING(AmbianceSounds_Description);
             sync[] = {};
         };
     };

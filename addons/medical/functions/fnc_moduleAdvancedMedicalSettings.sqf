@@ -33,3 +33,7 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(consumeItem_SurgicalKit), "consumeItem_SurgicalKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_PAK), "useLocation_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_SurgicalKit), "useLocation_SurgicalKit"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useCondition_PAK), "useCondition_PAK"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useCondition_SurgicalKit), "useCondition_SurgicalKit"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(healHitPointAfterAdvBandage), "healHitPointAfterAdvBandage"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(painIsOnlySuppressed), "painIsOnlySuppressed"] call EFUNC(common,readSettingFromModule);

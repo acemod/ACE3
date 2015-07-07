@@ -19,7 +19,7 @@ _calledByClicking = _this select 1;
 if (GVAR(openedMenuType) < 0) exitWith {true};
 
 if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
-    closeDialog 0;
+    (findDisplay 91919) closeDisplay 2;
 };
 
 if(GVAR(actionSelected)) then {
@@ -46,6 +46,8 @@ if(GVAR(actionSelected)) then {
     };
 };
 
+["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
@@ -53,7 +55,5 @@ GVAR(openedMenuType) = -1;
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
 
 true

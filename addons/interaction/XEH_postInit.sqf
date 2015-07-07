@@ -15,6 +15,7 @@ if (!hasInterface) exitWith {};
 GVAR(isOpeningDoor) = false;
 
 // restore global fire teams for JIP
+private ["_team"];
 {
     _team = _x getVariable [QGVAR(assignedFireTeam), ""];
     if (_team != "") then {_x assignTeam _team};
@@ -22,7 +23,7 @@ GVAR(isOpeningDoor) = false;
 
 
 // Add keybinds
-["ACE3 Common", QGVAR(openDoor), localize "STR_ACE_Interaction_OpenDoor",
+["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -42,7 +43,7 @@ GVAR(isOpeningDoor) = false;
 [57, [false, true, false]], false] call cba_fnc_addKeybind; //Key CTRL+Space
 
 
-["ACE3 Common", QGVAR(tapShoulder), localize "STR_ACE_Interaction_TapShoulder",
+["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -50,13 +51,13 @@ GVAR(isOpeningDoor) = false;
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     // Statement
-    [ACE_player, cursorTarget] call FUNC(tapShoulder);
+    [ACE_player, cursorTarget, 0] call FUNC(tapShoulder);
     true
 },
 {false},
 [20, [true, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3 Common", QGVAR(modifierKey), localize "STR_ACE_Interaction_ModifierKey",
+["ACE3 Common", QGVAR(modifierKey), localize LSTRING(ModifierKey),
 {
     // Conditions: canInteract
     //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed

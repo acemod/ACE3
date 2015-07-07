@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Shortcuts
+description: A list containing all default shortcuts in ACE3
 group: user
 order: 5
 parent: wiki

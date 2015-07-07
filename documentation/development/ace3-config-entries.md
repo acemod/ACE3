@@ -1,13 +1,14 @@
 ---
 layout: wiki
 title: ACE3 Config Entries
+description: A list of all ACE3 config entries.
 group: development
 parent: wiki
 order: 2
 ---
 
 ## 1. CfgVehicles
-Entries from found in the `CfgVehicles.hpp` files
+Entries found in the `CfgVehicles.hpp` files
 
 
 ```c++
@@ -26,7 +27,7 @@ ace_offset
 
 
 ## 2. CfgWeapons
-Entries from found in the `CfgWeapons.hpp` files
+Entries found in the `CfgWeapons.hpp` files
 
 
 ```c++
@@ -50,7 +51,8 @@ ace_gforcecoef
 ace_protection
 ace_scopeadjust_horizontal
 ace_scopeadjust_vertical
-ace_scopeadjust_increment
+ace_scopeadjust_verticalincrement
+ace_scopeadjust_horizontalincrement
 ace_isusedlauncher
 ace_attachable
 ace_range
@@ -61,11 +63,13 @@ ace_barrelLength
 ace_laserpointer
 ace_nextmodeclass
 ace_modedescription
+ace_hearing_protection
+ace_hearing_lowerVolume
 ```
 
 
 ## 3. CfgAmmo
-Entries from found in the `CfgAmmo.hpp` files
+Entries found in the `CfgAmmo.hpp` files
 
 ```c++
 ace_recoil_shakemultiplier
@@ -94,7 +98,7 @@ ace_barrellengths
 
 
 ## 4. CfgGlasses
-Entries from found in the `CfgGlasses.hpp` file
+Entries found in the `CfgGlasses.hpp` file
 
 ```c++
 ace_color
@@ -109,7 +113,7 @@ ace_dustpath
 
 
 ## 5. CfgMagazines
-Entries from found in the `CfgMagazines.hpp` files
+Entries found in the `CfgMagazines.hpp` files
 
 ```c++
 ace_isbelt

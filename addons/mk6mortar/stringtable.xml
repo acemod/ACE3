@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="mk6mortar">
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_name">
+    <Package name="Mk6Mortar">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
             <English>82mm Rangetable</English>
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
@@ -11,8 +11,9 @@
             <Hungarian>82mm hatótáv-tábla</Hungarian>
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
+            <Italian>Tavola di tiro 82mm</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_description">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the MK6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm MK6</Polish>
@@ -22,8 +23,9 @@
             <Hungarian>Hatótáv-tábla a MK6 82mm-es mozsárhoz</Hungarian>
             <Portuguese>Tabela de distâncias para morteiro MK6 82mm</Portuguese>
             <Czech>Rangetable pro MK6 82mm minomet</Czech>
+            <Italian>Tavola di tiro per il mortaio calibro 82mm MK6</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_action">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
@@ -33,8 +35,9 @@
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
+            <Italian>Apri la tavola di tiro 82mm</Italian>
         </Key>
-        <Key ID="STR_ACE_MK6MORTAR_rangetable_charge">
+        <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
             <German>Ladung</German>
             <French>Charge</French>
@@ -44,6 +47,70 @@
             <Hungarian>Töltés</Hungarian>
             <Portuguese>Carregar</Portuguese>
             <Czech>Nabít</Czech>
+            <Italian>Carica</Italian>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
+            <English>MK6 Settings</English>
+            <Polish>Moździerz MK6 - Ustawienia</Polish>
+            <Spanish>Ajustes MK6</Spanish>
+            <German>MK6-Einstellungen</German>
+            <Czech>MK6 - Nastavení</Czech>
+            <Portuguese>Ajustes do MK6</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
+            <English>Air Resistance</English>
+            <Polish>Opór powietrza</Polish>
+            <Spanish>Resistencia al aire</Spanish>
+            <German>Luftwiderstand</German>
+            <Czech>Odpor vzduchu</Czech>
+            <Portuguese>Resistência do Ar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
+            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza MK6 przez graczy</Polish>
+            <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
+            <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
+            <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
+            <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
+            <English>Allow MK6 Computer</English>
+            <Polish>Komputer MK6</Polish>
+            <Spanish>Habilitar ordenador del MK6</Spanish>
+            <German>Erlaube MK6-Computer</German>
+            <Czech>MK6 - Povolit počítač</Czech>
+            <Portuguese>Permitir computador do MK6</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
+            <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
+            <Polish>Zezwól na komputer i dalmierz (opcja ta MUSI zostać wyłączona jeżeli aktywowałeś opór powietrza)</Polish>
+            <Spanish>Muestra el ordenador y el medidor de distancia (DEBEN ser quitados si se activa la resistecia al aire)</Spanish>
+            <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
+            <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
+            <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
+            <English>Allow MK6 Compass</English>
+            <Polish>Kompas MK6</Polish>
+            <Spanish>Habilitar brujula del MK6</Spanish>
+            <German>Erlaube MK6-Kompass</German>
+            <Czech>MK6 - Povolit kompas</Czech>
+            <Portuguese>Permitir bússula do MK6</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
+            <English>Show the MK6 Digital Compass</English>
+            <Polish>Pokaż kompas MK6</Polish>
+            <Spanish>Muestra la brujula digital en el MK6</Spanish>
+            <German>Zeige MK6-Digitaler-Kompass</German>
+            <Czech>MK6 - Zobrazit digitální kompas</Czech>
+            <Portuguese>Mostra a bússula digital do MK6</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_Module_Description">
+            <English></English>
+            <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
+            <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
+            <Czech>Tento modul umožňuje nastavení minometu MK6.</Czech>
+            <Portuguese>Este módulo permite que você ajuste o morteiro MK6.</Portuguese>
         </Key>
     </Package>
 </Project>

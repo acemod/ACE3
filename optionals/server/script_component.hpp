@@ -1,12 +1,12 @@
-#define COMPONENT serverconfig
-#include "\z\ace\Addons\main\script_mod.hpp"
+#define COMPONENT server
+#include "\z\ace\addons\main\script_mod.hpp"
 
-#ifdef DEBUG_ENABLED_SERVERCONFIG
+#ifdef DEBUG_ENABLED_SERVER
 	#define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_SERVERCONFIG
-	#define DEBUG_SETTINGS DEBUG_SETTINGS_SERVERCONFIG
+#ifdef DEBUG_SETTINGS_SERVER
+	#define DEBUG_SETTINGS DEBUG_SETTINGS_SERVER
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"

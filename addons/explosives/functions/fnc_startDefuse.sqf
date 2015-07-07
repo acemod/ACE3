@@ -59,6 +59,6 @@ if (ACE_player != _unit) then {
     _isEOD = [_unit] call EFUNC(Common,isEOD);
     _defuseTime = [_isEOD, _target] call _fnc_DefuseTime;
     if (_isEOD || {!GVAR(RequireSpecialist)}) then {
-        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize "STR_ACE_Explosives_DefusingExplosive")] call EFUNC(common,progressBar);
+        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive))] call EFUNC(common,progressBar);
     };
 };
