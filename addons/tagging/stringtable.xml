@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Tagging">
+        <Key ID="STR_ACE_tagging_tagWall">
+            <English>Tag wall</English>
+            <German>Wand markieren</German>
+        </Key>
+        <Key ID="STR_ACE_tagging_spraypaint">
+            <English>Spray paint</English>
+            <German>Sprühfarbe</German>
+        </Key>
+        <Key ID="STR_ACE_tagging_descSpraypaint">
+            <English>A can of spray paint for tagging walls.</English>
+            <German>Eine Farbsprühdose um Wände zu markieren.</German>
+        </Key>
+    </Package>
+</Project>
