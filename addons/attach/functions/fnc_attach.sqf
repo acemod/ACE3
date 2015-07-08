@@ -74,6 +74,9 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID);
 
         _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
+        if (cameraView == "EXTERNAL") then {
+            _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
+        };
         _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
         _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
 
