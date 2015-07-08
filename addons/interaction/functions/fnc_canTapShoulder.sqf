@@ -1,11 +1,22 @@
-// by commy2
-
+/*
+ * Author: commy2
+ * Checks if the player can tap a shoulder
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return value:
+ * Able to tap a shoulder <BOOL>
+ *
+ * Example:
+ * [player, target] call ace_interaction_fnc_canTapShoulder
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+PARAMS_2(_unit,_target);
 
 _target isKindOf "CAManBase" &&
 {alive _target} &&

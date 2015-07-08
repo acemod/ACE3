@@ -8,10 +8,8 @@
  * @PublicAPI: true
  */
 #include "script_component.hpp"
-private ["_id","_disable"];
-_id = _this select 0;
-_disable = _this select 1;
 
+PARAMS_2(_id,_disable);
 
 if (isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = [];

@@ -59,7 +59,7 @@ if (GVAR(currentUnit) == 1) then {
 private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
-_bulletDiameter = parseNumber(ctrlText 120020);
+_bulletDiameter = parseNumber(ctrlText 120020) * 10;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _airFriction = 0.1 max parseNumber(ctrlText 120030) min 2;
 } else {
@@ -71,7 +71,7 @@ _zeroRange = parseNumber (ctrlText 120060);
 if (GVAR(currentUnit) != 2) then {
     _boreHeight = _boreHeight * 2.54;
     _bulletMass = _bulletMass * 0.06479891;
-    _bulletDiameter = _bulletDiameter * 10 * 2.54;
+    _bulletDiameter = _bulletDiameter * 2.54;
     _rifleTwist = _rifleTwist * 2.54;
     _muzzleVelocity = _muzzleVelocity / 3.2808399;
 };
@@ -94,36 +94,6 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 };
 GVAR(workingMemory) set [1, _muzzleVelocity];
 GVAR(workingMemory) set [2, _zeroRange];
-
-private ["_elevationCur", "_windageCur", "_clickSize", "_clickNumber", "_clickInterval"];
-_elevationCur = GVAR(workingMemory) select 10;
-_windageCur = GVAR(workingMemory) select 11;
-
-switch (GVAR(currentScopeUnit)) do {
-    case 0: {
-        _elevationCur = _elevationCur * 3.38;
-        _windageCur = _windageCur * 3.38;
-    };
-    case 2: {
-        _elevationCur = _elevationCur / 1.047;
-        _windageCur = _windageCur / 1.047;
-    };
-    case 3: {
-        switch (GVAR(workingMemory) select 7) do {
-            case 0: { _clickSize = 1; };
-            case 1: { _clickSize = 1 / 1.047; };
-            case 2: { _clickSize = 3.38; };
-        };
-        _clickNumber = GVAR(workingMemory) select 8;
-        _clickInterval = _clickSize / _clickNumber;
-        
-        _elevationCur = Round(_elevationCur / _clickInterval);
-        _windageCur = Round(_windageCur / _clickInterval);
-    };
-};
-
-GVAR(workingMemory) set [10, _elevationCur];
-GVAR(workingMemory) set [11, _windageCur];
 
 [] call FUNC(update_gun);
 [] call FUNC(update_gun_ammo_data);

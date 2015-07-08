@@ -17,14 +17,8 @@
 #include "script_component.hpp"
 EXPLODE_2_PVT(_this,_unit,_explosive);
 
-if (getNumber (ConfigFile >> "CfgAmmo" >> typeof _explosive >> "ACE_explodeOnDefuse") == 1) exitWith {
+if (GVAR(ExplodeOnDefuse) && (random 1.0) < getNumber(ConfigFile >> "CfgAmmo" >> typeOf _explosive >> "ACE_explodeOnDefuse")) exitWith {
     [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };
-
-{
-    detach _x;
-    deleteVehicle _x;
-    false
-} count (attachedObjects (_explosive));
 
 _unit action ["Deactivate", _unit, _explosive];

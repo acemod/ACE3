@@ -13,12 +13,8 @@
  *
  */
 #include "script_component.hpp"
-
-private ["_unit", "_target", "_lockTarget"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_lockTarget = _this select 2;
+ 
+PARAMS_3(_unit,_target,_lockTarget);
 
 if (isNil "_lockTarget") then {_lockTarget = false};
 
@@ -26,7 +22,7 @@ private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-  diag_log text "[ACE] ERROR: Claiming already owned object.";
+    diag_log text "[ACE] ERROR: Claiming already owned object.";
 };
 
 // transfer this immediately

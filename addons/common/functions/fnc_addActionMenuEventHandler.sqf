@@ -18,33 +18,27 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", "_priority", "_name", "_actionsVar", "_id", "_actionIDs", "_actions", "_nameVar", "_addAction", "_actionID"];
+private ["_name", "_actionsVar", "_id", "_actionIDs", "_actions", "_nameVar", "_addAction", "_actionID"];
+//IGNORE_PRIVATE_WARNING("_target");
 
-_unit = _this select 0;
-_displayName = _this select 1;
-_action = _this select 2;
-_condition = _this select 3;
-_statement = _this select 4;
-_condition2 = _this select 5;
-_statement2 = _this select 6;
-_priority = _this select 7;
+PARAMS_8(_unit,_displayName,_action,_condition,_statement,_condition2,_statement2,_priority);
 
 if (isNil "_priority") then {_priority = 0};
 
 if (typeName _condition == "STRING") then {
-  _condition = compile _condition;
+    _condition = compile _condition;
 };
 
 if (typeName _statement == "STRING") then {
-  _statement = compile _statement;
+    _statement = compile _statement;
 };
 
 if (typeName _condition2 == "STRING") then {
-  _condition2 = compile _condition2;
+    _condition2 = compile _condition2;
 };
 
 if (typeName _statement2 == "STRING") then {
-  _statement2 = compile _statement2;
+    _statement2 = compile _statement2;
 };
 
 _name = format ["ACE_ActionMenu_%1", _action];
@@ -61,20 +55,20 @@ missionNamespace setVariable [_nameVar, [_condition, _statement, _condition2, _s
 _actionIDs pushBack _id;
 
 _addAction = call compile format [
-  "[
-    '%2',
-    {if (inputAction '%1' == 0) then {if (_this call (%3 select 2)) then {_this call (%3 select 3)}} else {_this call (%3 select 1)}},
-    nil,
-    %4,
-    false,
-    true,
-    '%1',
-    ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%3 select 0)""
-  ]",
-  _action,
-  _displayName,
-  _nameVar,
-  _priority
+    "[
+      '%2',
+      {if (inputAction '%1' == 0) then {if (_this call (%3 select 2)) then {_this call (%3 select 3)}} else {_this call (%3 select 1)}},
+      nil,
+      %4,
+      false,
+      true,
+      '%1',
+      ""if (_this != ACE_player || {vehicle _this != _target}) exitWith {false}; [_target, _this] call (%3 select 0)""
+    ]",
+    _action,
+    _displayName,
+    _nameVar,
+    _priority
 ];
 
 _actionID = _unit addAction _addAction;

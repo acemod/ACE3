@@ -12,17 +12,13 @@
  */
 #include "script_component.hpp"
 
-private "_unit";
+PARAMS_1(_unit);
 
-_unit = _this select 0;
+private ["_backpackObject","_holder"];
 
-private "_backpackObject";
 _backpackObject = backpackContainer _unit;
-
 _unit addBackpack "Bag_Base";
 removeBackpack _unit;
-
-private "_holder";
 _holder = objNull;
 
 {

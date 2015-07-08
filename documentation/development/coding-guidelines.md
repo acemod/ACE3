@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Coding Guidelines
+description: 
 group: development
 parent: wiki
 order: 1
@@ -106,12 +107,12 @@ Every function should have a header of the following format:
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument <OBJECT>
- *
+ * 
  * Return Value:
  * The return value <BOOL>
  *
  * Example:
- * _bool = ["something", player] call ace_common_fnc_imanexample
+ * ["something", player] call ace_common_fnc_imanexample
  *
  * Public: [Yes/No]
  */
@@ -121,34 +122,41 @@ Every function should have a header of the following format:
 ## 4. Macro Usage
 
 ### 4.1 Module/PBO specific Macro Usage
-The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls'
+The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
-* `GVAR(face)` is `ace_balls_face`
-* `QGVAR(face)` is `"ace_balls_face"`
-* `EGVAR(balls,face)` is `ace_balls_face`
-* `EGVAR(leg,face)` is `ace_leg_face`
-* `QEGVAR(leg,face)` is `"ace_leg_face"`
+ 
+| Macros |  is the same as | 
+| -------|---------| 
+| `GVAR(face)` | ace_balls_face | 
+|`QGVAR(face)` | ace_balls_face |
+| `EGVAR(balls,face)` | ace_balls_face |
+| `EGVAR(leg,face)` | ace_leg_face |
+| `QEGVAR(leg,face)` | ace_leg_face |
 
+There also exists the FUNC family of Macros:
 
-There also exists the FUNC family of Macros
-* `FUNC(face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
-* `EFUNC(balls,face)` is `ace_balls_fnc_face` or the call trace wrapper for that function.
-* `EFUNC(leg,face)` is `ace_leg_fnc_face` or the call trace wrapper for that function.
-* `DFUNC(face)` is `ace_balls_fnc_face` and will ALWAYS be the function global variable.
-* `DEFUNC(leg,face)` is `ace_leg_fnc_face` and will ALWAYS be the function global variable.
-* `QFUNC(face)` is `"ace_balls_fnc_face"`
-* `QEFUNC(leg,face)` is `"ace_leg_fnc_face"`
+| Macros  |  is the same as | 
+| -------|---------| 
+|`FUNC(face)` | ace_balls_fnc_face or the call trace wrapper for that function.|
+|`EFUNC(balls,face)` | ace_balls_fnc_face or the call trace wrapper for that function.|
+|`EFUNC(leg,face) `| ace_leg_fnc_face or the call trace wrapper for that function.|
+|`DFUNC(face)` | ace_balls_fnc_face and will ALWAYS be the function global variable.|
+|`DEFUNC(leg,face)` | ace_leg_fnc_face and will ALWAYS be the function global variable.|
+|`QFUNC(face)` | ace_balls_fnc_face |
+|`QEFUNC(leg,face)` |ace_leg_fnc_face|
 
 The `FUNC` and `EFUNC` macros should NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
 
-#### 4.1.1 FUNC Macros, Call Tracing, and Non-ACE/Anonymous Functions
+#### 4.1.1 FUNC Macros, Call Tracing, and Non-ACE3 /Anonymous Functions
 
-ACE implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
+ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
-* `CALLSTACK(functionName)` example: `[] call CALLSTACK(cba_fnc_someFunction)`
-* `CALLSTACK_NAMED(function,functionName)` example: `[] call CALLSTACK_NAMED(_anonymousFunction,'My anonymous function!')`
+| Macro  | example | 
+| -------|---------| 
+|`CALLSTACK(functionName)` | `[] call CALLSTACK(cba_fnc_someFunction)` |
+|`CALLSTACK_NAMED(function,functionName)` | `[] call CALLSTACK_NAMED(_anonymousFunction,'My anonymous function!')`|
 
 These macros will call these functions with the appropriate wrappers and enable call logging into them (but to no further calls inside obviously).
 
@@ -160,44 +168,64 @@ These macros will call these functions with the appropriate wrappers and enable 
 
 #### 4.2.1 setVariable, getVariable family macros
 
-* `GETVAR(player,MyVarName,false)`  
-  `player getVariable ["MyVarName", false]`
-* `GETMVAR(MyVarName,objNull)`  
-  `missionNamespace getVariable ["MyVarName", objNull]`
-* `GETUVAR(MyVarName,displayNull)`  
-  `uiNamespace getVariable ["MyVarName", displayNull]`
-* `SETVAR(player,MyVarName,127)`  
-  `player setVariable ["MyVarName", 127]`
-* `SETPVAR(player,MyVarName,127)`  
-  `player setVariable ["MyVarName", 127, true]`
-* `SETMVAR(MyVarName,player)`  
-  `missionNamespace setVariable ["MyVarName", player]`
-* `SETUVAR(MyVarName,_control)`  
-  `uiNamespace setVariable ["MyVarName", _control]`
+| Macro  | is the same as | 
+| -------|---------| 
+|`GETVAR(player,MyVarName,false)` | player getVariable ["MyVarName", false]|
+|`GETMVAR(MyVarName,objNull)` | missionNamespace getVariable ["MyVarName", objNull]|
+|`GETUVAR(MyVarName,displayNull)` | uiNamespace getVariable ["MyVarName", displayNull]|
+|`SETVAR(player,MyVarName,127)` |  player setVariable ["MyVarName", 127]  SETPVAR(player,MyVarName,127) player setVariable ["MyVarName", 127, true] |
+|`SETMVAR(MyVarName,player)` | missionNamespace setVariable ["MyVarName", player] |
+|`SETUVAR(MyVarName,_control)` | uiNamespace setVariable ["MyVarName", _control] |
+
+#### 4.2.2 STRING family macros
+
+Note that you need the strings in module stringtable.xml in the correct format 
+`STR_ACE_<module>_<string>`</br>
+Example:</br>
+`STR_Balls_Banana`</br>
+
+Script strings:
+
+| Macro  |  is the same as | 
+| -------|---------| 
+| `LSTRING(banana)` |  "STR_ACE_balls_banana"|
+| `ELSTRING(balls,banana)` | "STR_ACE_balls_banana"| 
+
+
+Config Strings (require `$` as first character):
+
+| Macro  |  is the same as | 
+| -------|---------| 
+| `CSTRING(banana)` |  "$STR_ACE_balls_banana" | 
+| `ECSTRING(balls,banana)` | "$STR_ACE_balls_banana" | 
 
 
 ## 5. Event Handlers
 
-Event handlers in ACE are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
+Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 
 The commands are listed below.
 
-* `[eventName, eventCodeBlock] call ace_common_fnc_addEventHandler` adds an event handler with the event name and returns the event handler id.
-* `[eventName, args] call ace_common_fnc_globalEvent` calls an event with the listed args on all machines, the local machine, and the server.
-* `[eventName, args] call ace_common_fnc_serverEvent` calls an event just on the server computer (dedicated or self-hosted).
-* `[eventName, targetObject(s), args] call ace_common_fnc_targetEvent` calls an event just on the targeted object or list of objects.
-* `[eventName, args] call ace_common_fnc_localEvent` calls an event just on the local machine, useful for inter-module events.
+| Even Handler  |  use | 
+| -------|---------| 
+|`[eventName, eventCodeBlock] call ace_common_fnc_addEventHandler` | adds an event handler with the event name and returns the event handler id.|
+| `[eventName, args] call ace_common_fnc_globalEvent` | calls an event with the listed args on all machines, the local machine, and the server. |
+|`[eventName, args] call ace_common_fnc_serverEvent` | calls an event just on the server computer (dedicated or self-hosted).|
+| `[eventName, targetObject(s), args] call ace_common_fnc_targetEvent` | calls an event just on the targeted object or list of objects.|
+|`[eventName, args] call ace_common_fnc_localEvent` | calls an event just on the local machine, useful for inter-module events.|
 
 Events can be removed or cleared with the following commands.
 
-* `[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.
-* `[eventName] call ace_common_fnc_removeAllEventHandlers` will remove all event handlers for that type of event.
+| Even Handler  |  use | 
+| -------|---------| 
+|`[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` | will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.|
+|`[eventName] call ace_common_fnc_removeAllEventHandlers` | will remove all event handlers for that type of event.|
 
-More information on the [ACE Events System](https://github.com/KoffeinFlummi/ACE3/wiki/ACE-Events-System) page.
+More information on the [ACE3 Events System](https://github.com/KoffeinFlummi/ACE3/wiki/ACE-Events-System) page.
 
 ## 6. Hashes
 
-Hashes are a variable type that store key value pairs. They are not implemented natively in SQF, so there are a number of macros and functions for their usage in ACE. If you are unfamiliar with the idea, they are similar in function to `setVariable`/`getVariable` but do not require an object to use.
+Hashes are a variable type that store key value pairs. They are not implemented natively in SQF, so there are a number of macros and functions for their usage in ACE3. If you are unfamiliar with the idea, they are similar in function to `setVariable`/`getVariable` but do not require an object to use.
 
 The following example is a simple usage using our macros which will be explained further below.
 
@@ -215,11 +243,13 @@ if(HASH_HASKEY(_hash, "key")) then {
 
 A description of the above macros is below.
 
-* `HASHCREATE` is used to create an empty hash.
-* `HASH_SET(hash, key, val)` will set the hash key to that value, a key can be anything, even objects.
-* `HASH_GET(hash, key)` will return the value of that key (or nil if it doesn't exist).
-* `HASH_HASKEY(hash, key)` will return true/false if that key exists in the hash.
-* `HASH_REM(hash, key)` will remove that hash key.
+| Macro  |  use | 
+| -------|---------| 
+|`HASHCREATE` | used to create an empty hash.|
+| `HASH_SET(hash, key, val)` | will set the hash key to that value, a key can be anything, even objects. |
+|`HASH_GET(hash, key)` | will return the value of that key (or nil if it doesn't exist). |
+| `HASH_HASKEY(hash, key)` | will return true/false if that key exists in the hash. |
+| `HASH_REM(hash, key)` | will remove that hash key.|
 
 ### 6.1 Hashlists
 
@@ -254,11 +284,14 @@ HASH_SET(_anotherHash, "anotherKey", "another value");
 
 As you can see above working with hashlists are fairly simple, a more in depth explanation of the macros is below.
 
-* `HASHLIST_CREATELIST(keys)` creates a new hashlist with the default keys, pass [] for no default keys.
-* `HASHLIST_CREATEHASH(hashlist)` returns a blank hash template from a hashlist.
-* `HASHLIST_PUSH(hashList, hash)` pushes a new hash onto the end of the list.
-* `HASHLIST_SELECT(hashlist, index)` returns the hash at that index in the list.
-* `HASHLIST_SET(hashlist, index, hash)` sets a specific index to that hash.
+
+| Macro  |  use | 
+| -------|---------| 
+|`HASHLIST_CREATELIST(keys)` | creates a new hashlist with the default keys, pass [] for no default keys.|
+|`HASHLIST_CREATEHASH(hashlist)` | returns a blank hash template from a hashlist.|
+|`HASHLIST_PUSH(hashList, hash)` | pushes a new hash onto the end of the list.|
+|`HASHLIST_SELECT(hashlist, index)` | returns the hash at that index in the list. |
+|`HASHLIST_SET(hashlist, index, hash)` | sets a specific index to that hash.|
 
 #### 6.1.1 A note on pass by reference and hashes
 

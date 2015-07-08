@@ -1,5 +1,5 @@
 #define COMPONENT javelin
-#include "\z\ace\Addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_JAVELIN
     #define DEBUG_MODE_FULL
@@ -9,7 +9,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_JAVELIN
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 #define ACE_JAV_FIREMODE_DIR 1
 #define ACE_JAV_FIREMODE_TOP 2

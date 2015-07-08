@@ -60,4 +60,4 @@ if (isNil _callback) then {
 
 _args call _callback;
 
-_args call FUNC(createLitter);
+// _args call FUNC(createLitter);

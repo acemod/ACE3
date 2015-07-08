@@ -128,7 +128,7 @@ if((count _spots) > 0) then {
         _avgY = 0;
         _avgZ = 0;
         {
-            player sideChat format["x: %1", _x];
+            //player sideChat format["x: %1", _x];
             _avgX = _avgX + ((_x select 0) select 0);
             _avgY = _avgY + ((_x select 0) select 1);
             _avgZ = _avgZ + ((_x select 0) select 2);

@@ -16,12 +16,10 @@
     BOOLEAN
 
   Example:
-    _isSpecialist = [player] call FUNC(isEOD);
+    isSpecialist = [player] call FUNC(isEOD);
 */
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _unit getVariable ["ACE_isEOD", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "canDeactivateMines") == 1]

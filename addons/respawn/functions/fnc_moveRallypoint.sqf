@@ -26,9 +26,11 @@ private ["_rallypoint", "_position"];
 _rallypoint = [
   objNull,
   missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-  missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-  missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
+  missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+  missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
 ] select ([west, east, independent] find _side) + 1;
+
+TRACE_3("moving rally",_unit, _rallypoint, (typeOf _rallypoint));
 
 if (isNull _rallypoint) exitWith {};
 
@@ -38,7 +40,7 @@ if (count _position == 0) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+[localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
 
 [{
     _rallypoint = _this select 0;
@@ -53,6 +55,6 @@ _position set [2, 0];
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
-    [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
 },
 [_rallypoint, _unit, _position, _rallypoint], 5, 1] call EFUNC(common,waitAndExecute);

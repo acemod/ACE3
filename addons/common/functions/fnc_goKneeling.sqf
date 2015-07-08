@@ -11,22 +11,22 @@
  */
 #include "script_component.hpp"
 
-private "_unit";
+PARAMS_1(_unit);
 
-_unit = _this select 0;
+//IGNORE_PRIVATE_WARNING("_exception");
 
 try {
-  if (_unit == vehicle _unit) then {
-    switch (currentWeapon _unit) do {
-      case "" : {throw "AmovPknlMstpSnonWnonDnon"};
-      case (primaryWeapon _unit) : {throw "AmovPknlMstpSlowWrflDnon"};
-      case (secondaryWeapon _unit) : {throw "AmovPknlMstpSrasWlnrDnon"};
-      case (handgunWeapon _unit) : {throw "AmovPknlMstpSlowWpstDnon"};
-      case (binocular _unit) : {throw "AmovPknlMstpSoptWbinDnon"};
+    if (_unit == vehicle _unit) then {
+        switch (currentWeapon _unit) do {
+            case "" : {throw "AmovPknlMstpSnonWnonDnon"};
+            case (primaryWeapon _unit) : {throw "AmovPknlMstpSlowWrflDnon"};
+            case (secondaryWeapon _unit) : {throw "AmovPknlMstpSrasWlnrDnon"};
+            case (handgunWeapon _unit) : {throw "AmovPknlMstpSlowWpstDnon"};
+            case (binocular _unit) : {throw "AmovPknlMstpSoptWbinDnon"};
+          };
     };
-  };
 } catch {
-  if (stance _unit != "PRONE") then {
-    [_unit, _exception] call FUNC(doAnimation);
-  };
+    if (stance _unit != "PRONE") then {
+        [_unit, _exception] call FUNC(doAnimation);
+    };
 };

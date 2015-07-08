@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_main"};
         author[] = {"Glowbal"};
         authorUrl = "";
         VERSION_CONFIG;
@@ -22,9 +22,6 @@ class CfgVehicles {
         class EventHandlers {
             init = QUOTE(_this call DFUNC(moduleInit));
         };
-    };
-    class ModuleOrdnance_F: Module_F {
-        function = "ace_modules_fnc_bi_moduleProjectile";
     };
 };
 

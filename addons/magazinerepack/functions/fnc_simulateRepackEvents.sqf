@@ -9,7 +9,7 @@
  * 2: Magazine is a belt <BOOL>
  *
  * Return Value:
- * Array in format [time, isBullet, array of ammo counts] <ARRAY>
+ * Array in format [ACE_time, isBullet, array of ammo counts] <ARRAY>
  *
  * Example:
  * [10, [1,2,3,8], false] call ace_magazinerepack_fnc_simulateRepackEvents =
@@ -24,7 +24,8 @@ private ["_newMagFnc", "_time", "_events", "_swapAmmoFnc", "_ammoSwaped", "_lowI
 PARAMS_3(_fullMagazineCount,_arrayOfAmmoCounts,_isBelt);
 
 // Sort Ascending - Don't modify original
-_arrayOfAmmoCounts = (+_arrayOfAmmoCounts) call BIS_fnc_sortNum;
+_arrayOfAmmoCounts = +_arrayOfAmmoCounts;
+_arrayOfAmmoCounts sort true;
 
 _newMagFnc = {
     _time = _time + GVAR(TimePerMagazine);

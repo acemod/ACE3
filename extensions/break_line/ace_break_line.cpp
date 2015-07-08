@@ -11,7 +11,7 @@
  * String with line breaks
  */
 
-#include "ace_common.h"
+#include "shared.hpp"
 
 #include <sstream>
 #include <vector>
@@ -20,7 +20,7 @@
 #define MAXCHARACTERS 14
 
 extern "C" {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 };
 
 std::vector<std::string> splitString(const std::string & input) {
@@ -65,12 +65,14 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
 #pragma warning( disable : 4996 )
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
+    ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
         strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize);
         output[outputSize - 1] = '\0';
     }
+    EXTENSION_RETURN();
 }
 
 #pragma warning( pop )

@@ -1,8 +1,8 @@
-#include "ace_common.h"
+#include "shared.hpp"
 
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <random>
 
 #define M_PI 3.14159265358979323846f
@@ -57,7 +57,7 @@ struct Map {
 };
 
 std::vector<Bullet> bulletDatabase;
-std::map<std::string, Map> mapDatabase;
+std::unordered_map<std::string, Map> mapDatabase;
 std::string worldName = "";
 Map* map = &mapDatabase[""];
 
@@ -82,7 +82,7 @@ double calculateRoughnessLength(double posX, double posY) {
             return 1.6;
         }
 
-        return roughness_lengths[2 + min(nearBuildings, 6)];
+        return roughness_lengths[2 + std::min(nearBuildings, 6)];
     }
 
     return 0.0024;
@@ -230,14 +230,16 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
 
 extern "C"
 {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+   EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 }
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
 {
+    ZERO_OUTPUT();
+    std::stringstream outputStr;
     if (!strcmp(function, "version")) {
-        int n = sprintf_s(output, outputSize, "%s", ACE_FULL_VERSION_STR);
-        return;
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        EXTENSION_RETURN();
     }
 
     char* input = _strdup(function);
@@ -256,8 +258,12 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         velocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
 
         retard = calculateRetard(dragModel, ballisticCoefficient, velocity);
-        int n = sprintf_s(output, outputSize, "%f", retard);
-        return;
+        // int n = sprintf(output,  "%f", retard);
+
+        outputStr << retard;
+        strncpy(output, outputStr.str().c_str(), outputSize);
+        
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "atmosphericCorrection")) {
         double ballisticCoefficient = 1.0;
         double temperature = 15.0;
@@ -272,8 +278,10 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         atmosphereModel = strtok_s(NULL, ":", &next_token);
 
         ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
-        int n = sprintf_s(output, outputSize, "%f", ballisticCoefficient);
-        return;
+        //int n = sprintf(output,  "%f", ballisticCoefficient);
+        outputStr << ballisticCoefficient;
+        strncpy(output, outputStr.str().c_str(), outputSize);
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
         double airFriction = 0.0;
@@ -367,8 +375,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].frames = 0.0;
         bulletDatabase[index].randSeed = 0;
 
-        int n = sprintf_s(output, outputSize, "%s", "");
-        return;
+        strncpy(output, "", outputSize);
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "simulate")) {
         // simulate:0:[-0.109985,542.529,-3.98301]:[3751.57,5332.23,214.252]:[0.598153,2.38829,0]:28.6:0:0.481542:0:215.16
         unsigned int index = 0;
@@ -499,7 +507,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
         temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
-        pressure = 1013.25 * exp(-(bulletDatabase[index].altitude + position[2]) / 7990) - 10 * bulletDatabase[index].overcast;
+        pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
 
         if (bulletDatabase[index].ballisticCoefficients.size() == bulletDatabase[index].velocityBoundaries.size() + 1) {
             dragRef = deltaT * bulletDatabase[index].airFriction * bulletSpeed * bulletSpeed;
@@ -575,7 +583,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         positionOffset[0] += sin(bulletDir + M_PI / 2) * spinDriftPartial;
         positionOffset[1] += cos(bulletDir + M_PI / 2) * spinDriftPartial;
 
-        if (bulletSpeed < 345 && bulletSpeedAvg > 340 && bulletSpeed > 335) {
+        double speedOfSound = 331.3 + (0.6 * temperature);
+        if (bulletSpeed < (speedOfSound + 5) && bulletSpeedAvg > speedOfSound && bulletSpeed > (speedOfSound - 5)) {
             std::uniform_real_distribution<double> distribution(0.0, 1.0);
             double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
@@ -583,9 +592,10 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             velocityOffset[1] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
             velocityOffset[2] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
         };
-
-        int n = sprintf_s(output, outputSize, "_bullet setVelocity (_bulletVelocity vectorAdd [%f, %f, %f]); _bullet setPosASL (_bulletPosition vectorAdd [%f, %f, %f]);", velocityOffset[0], velocityOffset[1], velocityOffset[2], positionOffset[0], positionOffset[1], positionOffset[2]);
-        return;
+        
+        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]); _bullet setPosASL (_bulletPosition vectorAdd [" << positionOffset[0] << "," << positionOffset[1] << "," << positionOffset[2] << "]);";
+        strncpy(output, outputStr.str().c_str(), outputSize);
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
         int height = 0;
         int numObjects = 0;
@@ -599,8 +609,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.push_back(numObjects);
         map->gridSurfaceIsWater.push_back(surfaceIsWater);
 
-        int n = sprintf_s(output, outputSize, "%s", "");
-        return;
+        strncpy(output, outputStr.str().c_str(), outputSize);
+        EXTENSION_RETURN();
     } else if (!strcmp(mode, "init")) {
         int mapSize = 0;
         int mapGrids = 0;
@@ -614,8 +624,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         map = &mapDatabase[worldName];
         if (map->gridHeights.size() == gridCells) {
-            int n = sprintf_s(output, outputSize, "%s", "Terrain already initialized");
-            return;
+            outputStr << "Terrain already initialized";
+            strncpy(output, outputStr.str().c_str(), outputSize);
+            EXTENSION_RETURN();
         }
 
         map->mapSize = mapSize;
@@ -627,10 +638,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.reserve(gridCells);
         map->gridSurfaceIsWater.reserve(gridCells);
 
-        int n = sprintf_s(output, outputSize, "%s", "");
-        return;
+        strncpy(output, outputStr.str().c_str(), outputSize);
+        EXTENSION_RETURN();
     }
-
-    int n = sprintf_s(output, outputSize, "%s", "");
-    return;
+    strncpy(output, outputStr.str().c_str(), outputSize);
+    EXTENSION_RETURN();
 }

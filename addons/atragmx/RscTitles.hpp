@@ -142,6 +142,7 @@ class ATragMX_Display {
     name="ATragMX_Display";
     idd=-1;
     onLoad="uiNamespace setVariable ['ATragMX_Display', (_this select 0)]";
+    onUnload=QUOTE(_this call FUNC(on_close_dialog));
     movingEnable=1;
     controlsBackground[]={};
     objects[]={};
@@ -151,7 +152,7 @@ class ATragMX_Display {
             type=0;
             font="TahomaB";
             SizeEX=0.025;
-            idc=-1;
+            idc=720000;
             style=48;
             x=0.55*safezoneW+safezoneX-0.256;
             y=0.265*safezoneH+safezoneY-0.1;
@@ -159,7 +160,7 @@ class ATragMX_Display {
             h=1.024*4/3;
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
-            text=PATHTOF(UI\atrag.paa);
+            text=PATHTOF(UI\atrag_d.paa);
         };
         class POWER: ATragMX_RscButton {
             idc=-1;

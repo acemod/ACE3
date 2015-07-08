@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed", "_muzzleVelocity", "_muzzleVelocityShift"];
+private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
 
 disableSerialization;
 
@@ -42,8 +42,7 @@ if (_bisAirFriction != 0) exitWith {ERROR("Non zero base airFriction");};
 
 //Calculate air density:
 _altitude = (getPosASL _vehicle) select 2;
-#define GET_TEMPERATURE_AT_HEIGHT(h) (EGVAR(weather,currentTemperature) - 0.0065 * (h))
-_temperature = GET_TEMPERATURE_AT_HEIGHT(_altitude);
+_temperature = _altitude call EFUNC(weather,calculateTemperatureAtHeight);
 _pressure = _altitude call EFUNC(weather,calculateBarometricPressure);
 _relativeHumidity = EGVAR(weather,currentHumidity);
 _airDensity = [_temperature, _pressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
@@ -58,7 +57,6 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
     _projectile setVelocity _bulletVelocity;
-    _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
 };
 
 
@@ -71,8 +69,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
 
-    _deltaT = time - _time;
-    _args set[2, time];
+    _deltaT = ACE_time - _time;
+    _args set[2, ACE_time];
 
     _bulletVelocity = velocity _shell;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -86,4 +84,4 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 
     _shell setVelocity _bulletVelocity;
 
-}, 0, [_projectile, MK6_82mm_AIR_FRICTION, time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_projectile, MK6_82mm_AIR_FRICTION, ACE_time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;

@@ -1,19 +1,32 @@
-// by commy2
+/*
+ * Author: commy2
+ * Opens door
+ *
+ * Arguments:
+ * 0: House <OBJECT>
+ * 1: Door <STRING>
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [house, "door"] call ace_interaction_fnc_openDoor
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_info", "_house", "_door", "_animations", "_lockedVariable"];
+private ["_info", "_phase", "_position", "_time", "_usedMouseWheel", "_getDoorAnimations"];
 
 _info = [2] call FUNC(getDoor);
 
-_house = _info select 0;
-_door = _info select 1;
+EXPLODE_2_PVT(_info,_house,_door);
 
 if (isNull _house) exitWith {};
 
-_animations = [_house, _door] call FUNC(getDoorAnimations);
+_getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
 
-_lockedVariable = _animations select 1;
-_animations = _animations select 0;
+EXPLODE_2_PVT(_getDoorAnimations,_animations,_lockedVariable);
 
 if (count _animations == 0) exitWith {};
 
@@ -26,13 +39,14 @@ GVAR(isOpeningDoor) = true;
 playSound "ACE_Sound_Click";
 
 [_house, _animations] spawn {
+    private ["_house", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
     _house = _this select 0;
     _animations = _this select 1;
 
     _phase = _house animationPhase (_animations select 0);
     _position = getPosASL ACE_player;
 
-    _time = time + 0.2;
+    _time = ACE_time + 0.2;
     _usedMouseWheel = false;
     waitUntil {
         if (inputAction "PrevAction" > 0 || {inputAction "NextAction" > 0}) then {
@@ -47,7 +61,7 @@ playSound "ACE_Sound_Click";
         !GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
     };
 
-    if (!_usedMouseWheel && {time < _time} && {[ACE_player, objNull, []] call EFUNC(common,canInteractWith)}) then {
+    if (!_usedMouseWheel && {ACE_time < _time} && {[ACE_player, objNull, []] call EFUNC(common,canInteractWith)}) then {
         _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
 
         {_house animate [_x, _phase]} forEach _animations;

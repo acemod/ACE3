@@ -1,76 +1,75 @@
 class CfgVehicles {
-    class Module_F;
-    class ACE_ModuleMap: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+    class ACE_Module;
+    class ACE_ModuleMap: ACE_Module {
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Map";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMap);
         scope = 2;
         isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_Map_ca.paa);
         class Arguments {
             class MapIllumination {
-                displayName = "Map illumination?";
-                description = "Calculate dynamic map illumination based on light conditions?";
+                displayName = CSTRING(MapIllumination_DisplayName);
+                description = CSTRING(MapIllumination_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; default = 1; };
-                    class No { name = "No"; value = 0; };
-                };
+                defaultValue = 1;
             };
             class MapShake {
-                displayName = "Map shake?";
-                description = "Make map shake when walking?";
+                displayName = CSTRING(MapShake_DisplayName);
+                description = CSTRING(MapShake_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; default = 1;};
-                    class No { name = "No"; value = 0; };
-                };
+                defaultValue = 1;
             };
             class MapLimitZoom {
-                displayName = "Limit map zoom?";
-                description = "Limit the amount of zoom available for the map?";
+                displayName = CSTRING(MapLimitZoom_DisplayName);
+                description = CSTRING(MapLimitZoom_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; };
-                    class No { name = "No"; value = 0; default = 1;};
-                };
+                defaultValue = 0;
             };
             class MapShowCursorCoordinates {
-                displayName = "Show cursor coordinates?";
-                description = "Show the grid coordinates on the mouse pointer?";
+                displayName = CSTRING(MapShowCursorCoordinates_DisplayName);
+                description = CSTRING(MapShowCursorCoordinates_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; };
-                    class No { name = "No"; value = 0; default = 1;};
-                };
+                defaultValue = 0;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
         };
     };
 
+    class Module_F;
     class ACE_ModuleBlueForceTracking: Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "Blue Force Tracking";
+        displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
         isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
+            class Enabled {
+                displayName = CSTRING(BFT_Enabled_DisplayName);
+                description = CSTRING(BFT_Enabled_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class Interval {
-                displayName = "Interval";
-                description = "How often the markers should be refreshed (in seconds)";
+                displayName = CSTRING(BFT_Interval_DisplayName);
+                description = CSTRING(BFT_Interval_Description);
+                typeName = "NUMBER";
                 defaultValue = 1;
             };
             class HideAiGroups {
-                displayName = "Hide AI groups?";
-                description = "Hide markers for 'AI only' groups?";
+                displayName = CSTRING(BFT_HideAiGroups_DisplayName);
+                description = CSTRING(BFT_HideAiGroups_Description);
                 typeName = "BOOL";
-                class values {
-                    class Yes { name = "Yes"; value = 1; };
-                    class No { name = "No"; value = 0; default = 1; };
-                };
+                defaultValue = 0;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(BFT_Module_Description);
         };
     };
 };

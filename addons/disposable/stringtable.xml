@@ -10,7 +10,7 @@
             <Spanish>Lanzador utilizado</Spanish>
             <Hungarian>Elhasznált kilövőcső</Hungarian>
             <Russian>Отстрелянная труба</Russian>
-            <Italian>Tubo utilizzato</Italian>
+            <Italian>Tubo usato</Italian>
             <Portuguese>Tubo utilizado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Disposable_UsedTubeDescription">
@@ -22,7 +22,7 @@
             <Spanish>Lanzador desechable utilizado</Spanish>
             <Hungarian>Elhasznált eldobható rakétavető</Hungarian>
             <Russian>Отстрелянная одноразовая пусковая установка</Russian>
-            <Italian>Lanciarazzi monouso utilizzato</Italian>
+            <Italian>Lanciarazzi monouso già utilizzato</Italian>
             <Portuguese>Lança foguetes descartável utilizado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
@@ -34,7 +34,7 @@
             <Spanish>Precargado misil inerte</Spanish>
             <Hungarian>Előtöltött műrakéta</Hungarian>
             <Russian>Предзаряженная ракетная болванка</Russian>
-            <Italian>Missile stupido precaricato</Italian>
+            <Italian>Missile inerte precaricato</Italian>
             <Portuguese>Míssel inerte pré-carregado</Portuguese>
         </Key>
     </Package>

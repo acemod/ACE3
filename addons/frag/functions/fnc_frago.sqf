@@ -8,14 +8,9 @@
 
 if(!isServer) exitWith { };
 
-// _startTime = diag_tickTime;
-private ["_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed",
-    "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom",
-    "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_target", "_boundingBox",
-    "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir",
-    "_currentCount", "_count", "_vecVar", "_i", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount",
-    "_sectorSize", "_sectorOffset", "_randomDir", "_endTime"];
+// _startTime = ACE_diagTime;
 
+private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
 
 _round = _this select 0;
 _lastPos = _this select 1;
@@ -111,8 +106,9 @@ _fragArcs set[360, 0];
     ACE_player sideChat format["_fragRange: %1", _fragRange];
     ACE_player sideChat format["_objects: %1", _objects];
 #endif
-_doRandom = false;
+_doRandom = true;
 if(_isArmed && (count _objects) > 0) then {
+    [_lastPos, _shellType] call FUNC(doReflections);
     {
         //if(random(1) > 0.5) then {
             _target = _x;
@@ -167,11 +163,8 @@ if(_isArmed && (count _objects) > 0) then {
                             _fragObj setPosASL _lastPos;
                             _fragObj setVectorDir _vec;
                             _fragObj setVelocity _vel;
-                            #ifdef DEBUG_MODE_FULL
-                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                                GVAR(traceFrags) = true;
-                            #endif
                             if(GVAR(traceFrags)) then {
+                                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                                 [ACE_player, _fragObj, [1,0,0,1]] call FUNC(addTrack);
                             };
                             _fragCount = _fragCount + 1;
@@ -185,7 +178,7 @@ if(_isArmed && (count _objects) > 0) then {
         if(_fragCount > MAX_FRAG_COUNT) exitWith {};
     } forEach _objects;
     if(_fragCount > MAX_FRAG_COUNT) exitWith {};
-    _randomCount = (ceil((MAX_FRAG_COUNT-_fragCount)*0.1)) max 0;
+    _randomCount = ((ceil((MAX_FRAG_COUNT-_fragCount)*0.1)) max 0)+20;
     _sectorSize = 360 / (_randomCount max 1);
     // _doRandom = false;
     if(_doRandom) then {
@@ -204,19 +197,18 @@ if(_isArmed && (count _objects) > 0) then {
             _fragObj setPosASL _lastPos;
             _fragObj setVectorDir _vec;
             _fragObj setVelocity _vel;
-            #ifdef DEBUG_MODE_FULL
-                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
-                GVAR(traceFrags) = true;
-            #endif
+            
             if(GVAR(traceFrags)) then {
+                GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                 [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(addTrack);
             };
             _fragCount = _fragCount + 1;
         };
     };
+    
 };
 // #ifdef DEBUG_MODE_FULL
     // ACE_player sideChat format["total frags: %1", GVAR(TOTALFRAGS)];
     // ACE_player sideChat format["tracks: %1", (count GVAR(trackedObjects))];
 // #endif
-// _endTime = diag_tickTime;
+// _endTime = ACE_diagTime;

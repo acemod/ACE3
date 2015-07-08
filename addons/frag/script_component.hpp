@@ -1,5 +1,5 @@
 #define COMPONENT frag
-#include "\z\ace\Addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_mod.hpp"
 
 //#define DEBUG_ENABLED_FRAG
 
@@ -11,6 +11,6 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_FRAG
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 #define ACE_TRACE_DRAW_INC    1

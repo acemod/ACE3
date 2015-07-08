@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_name);
+PARAMS_1(_name);
 
 private ["_value"];
 _value = [];
