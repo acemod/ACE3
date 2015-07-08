@@ -5,76 +5,91 @@
             <English>Spectator</English>
             <Polish>Obserwator</Polish>
             <Czech>Pozorovatel</Czech>
+            <Spanish>Espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
             <English>Enable Spectator</English>
             <Polish>Aktywuj obserwatora</Polish>
             <Czech>Povolit pozorovatele</Czech>
+            <Spanish>Activar espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Enabled_Description">
             <English>Begin spectating on player death?</English>
             <Polish>Włącz obserwatora po śmierci gracza?</Polish>
             <Czech>Přepnout do pozorovatele po hráčově smrti?</Czech>
+            <Spanish>¿Comenzar como espectador al morir el jugador?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
             <English>Player Side Only</English>
             <Polish>Tylko strona gracza</Polish>
             <Czech>Pouze strana hráče</Czech>
+            <Spanish>Sólo bando del jugador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_PlayerSide_Description">
             <English>Only spectate units belonging to player's side?</English>
             <Polish>Pozwól obserwować jednostki będące tylko po stronie gracza?</Polish>
             <Czech>Pozorovat pouze jednotky patřící k hráčově straně?</Czech>
+            <Spanish>¿Sólo observar unidades que pertenecen al bando del jugador?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_DisplayName">
             <English>Spectate AI</English>
             <Polish>Obserwacja AI</Polish>
             <Czech>Pozorovat AI</Czech>
+            <Spanish>Observar IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_AI_Description">
             <English>Allow spectating of AI units?</English>
             <Polish>Pozwól obserwować jednostki AI?</Polish>
             <Czech>Umožnit pozorovat AI jednotky?</Czech>
+            <Spanish>¿Permitir observar unidades de la IA?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
             <English>Track Units</English>
             <Polish>Śledź jednostki</Polish>
             <Czech>Sledovat jednotky</Czech>
+            <Spanish>Seguir unidades</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Tracking_Description">
             <English>Track units' movements throughout mission?</English>
             <Polish>Śledź ruch jednostek w trakcie misji?</Polish>
             <Czech>Sledovat pohyby jednotek napříč misí?</Czech>
+            <Spanish>¿Seguimiento de movimientos de unidades a lo largo de la misión?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_DisplayName">
             <English>Start Position</English>
             <Polish>Pozycja startowa</Polish>
             <Czech>Počáteční pozice</Czech>
+            <Spanish>Posición de inicio</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Pos_Description">
             <English>Use this module as a starting position for spectator camera?</English>
             <Polish>Użyj pozycji modułu jako pozycje startową dla kamery obserwatora?</Polish>
             <Czech>Použít tento modul jako počáteční pozici pro pozorovací kameru?</Czech>
+            <Spanish>¿Utiliza este módulo como una posición de inicio para la cámara de espectador?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_End_DisplayName">
             <English>End Mission</English>
             <Polish>Zakończ misję</Polish>
             <Czech>Konec mise</Czech>
+            <Spanish>Finalizar misión</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_End_Description">
             <English>End mission when all players dead (default BIS behaviour)?</English>
             <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
             <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
+            <Spanish>¿Finalizar misión cuando todos los jugadores mueran (comportamiento por defecto de BIS)?</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Title">
             <English>View Distance</English>
             <Polish>Zasięg widzenia</Polish>
             <Czech>Dohlednost</Czech>
+            <Spanish>Distancia de visión</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_VD_Button">
             <English>OK</English>
             <Polish>OK</Polish>
             <Czech>OK</Czech>
+            <Spanish>Aceptar</Spanish>
         </Key>
     </Package>
 </Project>

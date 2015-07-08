@@ -6,30 +6,35 @@
             <Polish>Usiądź</Polish>
             <Portuguese>Sentar</Portuguese>
             <Czech>Sednout si</Czech>
+            <Spanish>Sentarse</Spanish>
         </Key>
         <Key ID="STR_ACE_Sitting_Stand">
             <English>Stand Up</English>
             <Polish>Wstań</Polish>
             <Portuguese>Levantar</Portuguese>
             <Czech>Vstát</Czech>
+            <Spanish>Levantarse</Spanish>
         </Key>
         <Key ID="STR_ACE_Sitting_Enable">
             <English>Enable Sitting</English>
             <Portuguese>Habilitar opção para sentar</Portuguese>
             <Polish>Aktywuj siadanie</Polish>
             <Czech>Povolit sezení</Czech>
+            <Spanish>Acivar asiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDisplayName">
             <English>Sitting</English>
             <Portuguese>Sentado</Portuguese>
             <Polish>Siadanie</Polish>
             <Czech>Sedící</Czech>
+            <Spanish>Sentarse</Spanish>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDescription">
             <English>This module allows you to disable the ability to sit on chairs and toilets.</English>
             <Portuguese>Este módulo permite que você desabilite a capacidade de sentar-se em cadeiras e banheiros.</Portuguese>
             <Polish>Moduł ten pozwala na włączenie lub wyłączenie możliwości siadania na krzesłach i toaletach.</Polish>
             <Czech>Tento modul dovoluje zakázat možnost sedět na židlých a toaletách.</Czech>
+            <Spanish>Este módulo te permite desactivar la capacidad de sentarte en sillas y aseos.</Spanish>
         </Key>
     </Package>
 </Project>
