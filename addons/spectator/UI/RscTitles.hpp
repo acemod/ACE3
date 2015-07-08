@@ -1,45 +1,11 @@
 #include "\z\ace\addons\common\define.hpp"
-#define PIXEL_X (safeZoneWAbs / (getResolution select 0))
-#define PIXEL_Y (safeZoneH / (getResolution select 1))
-#define XHAIR RESUNITS_X * 4
-#define COMPASS_W RESUNITS_X * 20
-#define COMPASS_H COMPASS_W / 15
-#define COMPASS_X RESCENTRE_X - COMPASS_W / 2
-#define HELP_W RESUNITS_X * 75
-#define HELP_H RESUNITS_Y * 75
-// Fonts
-#define GUI_FONT_NORMAL PuristaMedium
-#define GUI_FONT_BOLD PuristaSemibold
-#define GUI_FONT_THIN PuristaLight
-#define GUI_FONT_MONO EtelkaMonospacePro
-#define GUI_FONT_NARROW EtelkaNarrowMediumPro
-#define GUI_FONT_CODE LucidaConsoleB
-#define GUI_FONT_SYSTEM TahomaB
 
-//colours
-
-#define COLOUR_GUI_TEXT {"profilenamespace getvariable ['GUI_TITLETEXT_RGB_R',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_G',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_B',1]", "profilenamespace getvariable ['GUI_TITLETEXT_RGB_A',1]"}
-
-#define COLOUR_GUI_BG {"profilenamespace getvariable ['GUI_BCG_RGB_R',0.8]", "profilenamespace getvariable ['GUI_BCG_RGB_G',0.8]","profilenamespace getvariable ['GUI_BCG_RGB_B',0.8]","profilenamespace getvariable ['GUI_BCG_RGB_A',0.8]"}
-
-#define COLOUR_IGUI_TEXT {"profilenamespace getvariable ['IGUI_TEXT_RGB_R',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_G',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_B',1]", "profilenamespace getvariable ['IGUI_TEXT_RGB_A',1]"}
-
-#define COLOUR_IGUI_BG {"profilenamespace getvariable ['IGUI_BCG_RGB_R',0.8]", "profilenamespace getvariable ['IGUI_BCG_RGB_G',0.5]","profilenamespace getvariable ['IGUI_BCG_RGB_B',0]","profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8]"}
-
-#define COLOUR_IGUI_WARN {"profilenamespace getvariable ['IGUI_TEXT_WARNING_R',0.8]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_G',0.5]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_B',0]", "profilenamespace getvariable ['IGUI_TEXT_WARNING_A',0.8]"}
-
-// Grids
-#define GUI_GRID_CENTER_WAbs ((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_CENTER_HAbs (GUI_GRID_CENTER_WAbs / 1.2)
-#define GUI_GRID_CENTER_W (GUI_GRID_CENTER_WAbs / 40)
-#define GUI_GRID_CENTER_H (GUI_GRID_CENTER_HAbs / 25)
-#define GUI_GRID_CENTER_X (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
-
-#define RESUNITS_X (safeZoneW / 100)
-#define RESUNITS_Y (safeZoneH / 100)
-#define RESCENTRE_X safeZoneX + safeZoneW / 2
-#define RESCENTRE_Y safeZoneY + safeZoneH / 2
+#define SIZEX ((safezoneW / safezoneH) min 1.2)
+#define SIZEY (SIZEX / 1.2)
+#define W_PART(num) (num * (SIZEX / 40))
+#define H_PART(num) (num * (SIZEY / 25))
+#define X_PART(num) (W_PART(num) + (safezoneX + (safezoneW - SIZEX)/2))
+#define Y_PART(num) (H_PART(num) + (safezoneY + (safezoneH - SIZEY)/2))
 
 class GVAR(overlay) {
 
@@ -60,10 +26,10 @@ class GVAR(overlay) {
             default = 0;
             blinkingPeriod = 0;
 
-            x = QUOTE(safeZoneX);
-            y = QUOTE(safeZoneY + RESUNITS_X * 4/3);
-            w = QUOTE(RESUNITS_X * 30);
-            h = QUOTE(RESUNITS_Y * 50);
+            x = safeZoneX;
+            y = safezoneY + H_PART(1);
+            w = W_PART(5);
+            h = safeZoneH - H_PART(1);
 
             colorBorder[] = {1,1,1,1};
 
@@ -72,8 +38,8 @@ class GVAR(overlay) {
             colorMarked[] = {1,0.5,0,0.5};
             colorMarkedSelected[] = {1,0.5,0,1};
 
-            sizeEx = QUOTE(RESUNITS_Y * 2);
-            font = GUI_FONT_NORMAL;
+            sizeEx = H_PART(1);
+            font = "PuristaMedium";
             shadow = 1;
             colorText[] = {1,1,1,1};
             colorSelectText[] = {1,1,1,1};
@@ -147,10 +113,10 @@ class RscTitles {
 
             class X: ACE_gui_backgroundBase {
                 idc = 0;
-                x = QUOTE(RESCENTRE_X - XHAIR / 2);
-                y = QUOTE(RESCENTRE_Y - XHAIR * 4/3 / 2);
-                w = QUOTE(XHAIR);
-                h = QUOTE(XHAIR * 4/3);
+                x = 0.5 - W_PART(2);
+                y = 0.5 - H_PART(2);
+                w = W_PART(4);
+                h = H_PART(4);
                 text = "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa";
                 colorText[] = {1,1,1,0.8};
                 fixedWidth = 0;
@@ -170,96 +136,90 @@ class RscTitles {
 
         class controls {
 
-            class BGRight: ACE_gui_staticBase {
+            class TopBar: ACE_gui_staticBase {
                 style = ST_CENTER;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(RESUNITS_X * 30);
-                h = QUOTE(COMPASS_H);
+                x = safeZoneX;
+                y = safeZoneY;
+                w = safeZoneW;
+                h = H_PART(1);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
-            class BGLeft: BGRight {
-                x = QUOTE(safeZoneX);
-            };
-
-            class SpeedFrame: ACE_gui_staticBase {
-                style = ST_FRAME;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 5);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(RESUNITS_X * 5);
-                h = QUOTE(COMPASS_H);
+            class Name: TopBar {
+                idc = 1;
+                x = safeZoneX;
+                w = safeZoneW * 0.2;
+                style = ST_CENTER;
                 shadow = 2;
                 colorText[]={1,1,1,1};
-            };
-
-            class Speed: ACE_gui_staticBase {
-                idc = 0;
-                style = ST_CENTER;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 5);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(RESUNITS_X * 5);
-                h = QUOTE(COMPASS_H);
                 colorBackground[] = {0,0,0,1};
-                sizeEx = QUOTE(RESUNITS_Y * 2);
+                sizeEx = H_PART(1);
             };
 
-            class FovFrame: SpeedFrame {
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 10.5);
+            class NameFrame: Name {
+                style = ST_FRAME;
             };
 
-            class Fov: Speed {
-                idc = 4;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 10.5);
-            };
-
-            class TimeAccFrame: SpeedFrame {
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 21.5);
-            };
-
-            class TimeAcc: Speed {
-                idc = 5;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 21.5);
-            };
-
-            class FocusFrame: SpeedFrame {
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 16);
-            };
-
-            class Focus: Speed {
-                idc = 6;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 16);
-            };
-
-            class NameFrame: SpeedFrame {
-                x = QUOTE(safeZoneX);
-                w = QUOTE(RESUNITS_X * 24.5);
-            };
-
-            class Name: Speed {
-                idc = 1;
-                x = QUOTE(safeZoneX);
-                w = QUOTE(RESUNITS_X * 24.5);
-            };
-
-            class ModeFrame: SpeedFrame {
-                x = QUOTE(safeZoneX + RESUNITS_X * 25);
-            };
-
-            class Mode: Speed {
+            class Mode: Name {
                 idc = 2;
-                x = QUOTE(safeZoneX + RESUNITS_X * 25);
+                x = safeZoneX + safeZoneW * 0.2;
+                w = safeZoneW * 0.05;
+                h = H_PART(1);
+                style = ST_CENTER;
             };
 
-            class TimeFrame: SpeedFrame {
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
-                w = QUOTE(RESUNITS_X * 8);
+            class ModeFrame: Mode {
+                style = ST_FRAME;
             };
 
-            class Time: Speed {
+            class Focus: Mode {
+                idc = 6;
+                x = safeZoneX + safeZoneW * 0.8;
+                style = ST_CENTER;
+            };
+
+            class FocusFrame: Focus {
+                style = ST_FRAME;
+            };
+
+            class Time: Mode {
                 idc = 3;
-                x = QUOTE(safeZoneX + safeZoneW - RESUNITS_X * 30);
-                w = QUOTE(RESUNITS_X * 8);
+                x = safeZoneX + safeZoneW * 0.75;
+                style = ST_CENTER;
+            };
+
+            class TimeFrame: Time {
+                style = ST_FRAME;
+            };
+
+            class TimeAcc: Mode {
+                idc = 5;
+                x = safeZoneX + safeZoneW * 0.85;
+                style = ST_CENTER;
+            };
+
+            class TimeAccFrame: TimeAcc {
+                style = ST_FRAME;
+            };
+
+            class Fov: Mode {
+                idc = 4;
+                x = safezoneX + safezoneW * 0.9;
+                style = ST_CENTER;
+            };
+
+            class FovFrame: Fov {
+                style = ST_FRAME;
+            };
+
+            class Velocity: Mode {
+                idc = 0;
+                x = safeZoneX + safeZoneW * 0.95;
+                y = safeZoneY;
+            };
+
+            class VelocityFrame: Velocity {
+                style = ST_FRAME;
             };
         };
     };
@@ -278,68 +238,68 @@ class RscTitles {
 
             class BG: ACE_gui_staticBase {
                 style = ST_CENTER;
-                x = QUOTE(COMPASS_X);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(COMPASS_W);
-                h = QUOTE(COMPASS_H);
+                x = 0.5 - safeZoneW * 0.25;
+                y = safeZoneY;
+                w = safeZoneW * 0.5;
+                h = H_PART(1);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
             class 0_90: ACE_gui_backgroundBase {
                 idc = 1;
-                x = QUOTE(RESCENTRE_X);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(COMPASS_W / 2);
-                h = QUOTE(COMPASS_H);
+                x = 0.5;
+                y = safeZoneY;
+                w = safeZoneW * 0.25;
+                h = H_PART(1);
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture180_ca.paa";
             };
 
             class 90_180: 0_90 {
                 idc = 2;
-                x = QUOTE(RESCENTRE_X + COMPASS_W / 2);
+                x = 0.5 + safezoneW * 0.25;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture270_ca.paa";
             };
 
             class 180_270: 0_90 {
                 idc = 3;
-                x = QUOTE(RESCENTRE_X + COMPASS_W);
+                x = 0.5 + safezoneW * 0.5;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
             };
 
             class 270_0: 0_90 {
                 idc = 4;
-                x = QUOTE(RESCENTRE_X + COMPASS_W * 1.5);
+                x = 0.5 + safeZoneW * 0.75;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
             };
 
             class Post: ACE_gui_staticBase {
                 style = ST_CENTER;
-                x = QUOTE(COMPASS_X + COMPASS_W / 2);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(PIXEL_X * 2);
-                h = QUOTE(COMPASS_H);
+                x = 0.5;
+                y = safeZoneY;
+                w = W_PART(0.1);
+                h = H_PART(1);
                 colorBackground[]={1,0,0,1};
             };
 
             class LeftBlocker: ACE_gui_staticBase {
                 style = ST_CENTER;
-                x = QUOTE(COMPASS_X - COMPASS_W / 2);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(COMPASS_W / 2);
-                h = QUOTE(COMPASS_H);
+                x = 0.5 - safezoneW * 0.5;
+                y = safeZoneY;
+                w = safeZoneW * 0.25;
+                h = H_PART(1);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
             class RightBlocker: LeftBlocker {
-                x = QUOTE(COMPASS_X + COMPASS_W);
+                x = 0.5 + safeZoneW * 0.25;
             };
 
             class Frame: ACE_gui_staticBase {
                 style = ST_FRAME;
-                x = QUOTE(COMPASS_X);
-                y = QUOTE(safeZoneY);
-                w = QUOTE(COMPASS_W);
-                h = QUOTE(COMPASS_H);
+                x = 0.5 - safeZoneW * 0.25;
+                y = safeZoneY;
+                w = safeZoneW * 0.5;
+                h = H_PART(1);
                 shadow=2;
                 colorText[]={1,1,1,1};
             };
@@ -360,22 +320,24 @@ class RscTitles {
             class BG: ACE_gui_staticBase {
                 style = ST_CENTER;
                 idc = -1;
-                x = QUOTE(RESCENTRE_X - HELP_W / 2);
-                y = QUOTE(RESCENTRE_Y - HELP_H / 2);
-                w = QUOTE(HELP_W);
-                h = QUOTE(HELP_H);
+                x = 0.5 - W_PART(8);
+                y = 0.5 - H_PART(8);
+                w = W_PART(16);
+                h = H_PART(16);
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
-            class Title: ACE_gui_staticBase {
+            class Title: BG {
                 idc = 0;
-                style = ST_CENTER;
-                x = QUOTE(RESCENTRE_X - RESUNITS_X * 25);
-                y = QUOTE(RESCENTRE_Y - (HELP_H / 2) + RESUNITS_Y * 3);
-                w = QUOTE(RESUNITS_X * 50);
-                h = QUOTE(RESUNITS_Y * 4);
+                h = H_PART(1);
                 colorText[]={1,1,1,1};
-                sizeEx = QUOTE(RESUNITS_Y * 4);
+                colorBackground[] = {
+                    "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
+                    "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
+                    "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
+                    1
+                };
+                sizeEx = H_PART(1);
                 text = "ACE Spectator Controls";
             };
 
@@ -383,10 +345,10 @@ class RscTitles {
                 idc = 1;
                 type = CT_STRUCTURED_TEXT;
                 style = ST_LEFT;
-                x = QUOTE(RESCENTRE_X - HELP_W / 2 + RESUNITS_X * 3);
-                y = QUOTE(RESCENTRE_Y - (HELP_H / 2) + RESUNITS_Y * 10);
-                w = QUOTE(RESUNITS_X * 16.75);
-                h = QUOTE(RESUNITS_Y * 63);
+                x = 0.5 - W_PART(8);
+                y = 0.5 - H_PART(7);
+                w = W_PART(4);
+                h = H_PART(7);
                 text = "";
                 size = QUOTE(RESUNITS_Y * 2.5);
                 colorBackground[] = {0,0,0,0};
@@ -394,17 +356,17 @@ class RscTitles {
 
             class LeftColumn2: LeftColumn1 {
                 idc = 2;
-                x = QUOTE(RESCENTRE_X - HELP_W / 2 + RESUNITS_X * 19.75);
+                x = 0.5 - H_PART(4);
             };
 
             class RightColumn1: LeftColumn1 {
                 idc = 3;
-                x = QUOTE(RESCENTRE_X + HELP_W / 2 - RESUNITS_X * 3 - RESUNITS_X * 29.5);
+                x = 0.5;
             };
 
             class RightColumn2: LeftColumn1 {
                 idc = 4;
-                x = QUOTE(RESCENTRE_X + HELP_W / 2 - RESUNITS_X * 3 - RESUNITS_X * 11.75);
+                x = 0.5 + H_PART(4);
             };
         };
     };
