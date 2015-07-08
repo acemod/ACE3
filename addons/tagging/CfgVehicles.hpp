@@ -35,7 +35,7 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_Item_Spraypaint: Item_Base_F {
-        author = "BaerMitUmlaut";
+        author = "jokoho48";
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(spraypaint);
