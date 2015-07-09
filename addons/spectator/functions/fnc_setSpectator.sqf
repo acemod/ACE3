@@ -1,29 +1,37 @@
 /*
  * Author: voiper, SilentSpike
- * Sets local player to the given spectator state
+ * Sets target unit to the given spectator state
  *
  * Arguments:
- * 0: Spectator camera target <OBJECT>
+ * 0: Unit to put into spectator state <OBJECT>
  * 1: New spectator state <BOOL> <OPTIONAL>
+ * 2: Spectator camera target <OBJECT> <OPTIONAL>
  *
  * Return Value:
  * None <NIL>
  *
  * Example:
- * [_killer] call ace_spectator_fnc_setSpectator
+ * [player, true] call ace_spectator_fnc_setSpectator
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit","_target","_set"];
-_unit = player;
-_target = _this select 0;
+private ["_unit","_set","_target"];
+_unit = _this select 0;
 _set = if (count _this > 1) then {_this select 1} else {true};
+_target = if (count _this > 2) then {_this select 2} else {objNull};
 
 // No change, no service (but allow spectators who respawn to be reset)
 if !(_set || (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
+
+// Only run for player units
+if !(isPlayer _unit) exitWith {};
+
+if !(local _unit) exitwith {
+    [[_unit, _set, _target], QFUNC(setSpectator), _unit] call EFUNC(common,execRemoteFnc);
+};
 
 // Prevent player falling into water
 _unit enableSimulation !_set;
@@ -31,11 +39,11 @@ _unit enableSimulation !_set;
 if (_set) then {
     // Move and hide the player ASAP to avoid being seen
     _unit setPosASL (getMarkerPos QGVAR(respawn));
-    [_unit] joinSilent grpNull;
+    [_unit, true, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);
 
     // Ghosts can't talk
-    [_unit, "isSpectator"] call EFUNC(common,hideUnit);
-    [_unit, "isSpectator"] call EFUNC(common,muteUnit);
+    [_unit, QGVAR(isSpectator)] call EFUNC(common,hideUnit);
+    [_unit, QGVAR(isSpectator)] call EFUNC(common,muteUnit);
 
     if !(GVAR(modulePos)) then {
         if !(isNull _target) then {
@@ -48,15 +56,11 @@ if (_set) then {
     ["Exit"] call FUNC(camera);
 
     // Physical beings can talk
-    [_unit, "isSpectator"] call EFUNC(common,unhideUnit);
-    [_unit, "isSpectator"] call EFUNC(common,unmuteUnit);
+    [_unit, QGVAR(isSpectator)] call EFUNC(common,unhideUnit);
+    [_unit, QGVAR(isSpectator)] call EFUNC(common,unmuteUnit);
 
-    // Don't create groups unless necessary (arma has a group limit)
-    if (isNull GVAR(cachedGroup)) then {
-        [_unit] joinSilent (createGroup GVAR(cachedSide));
-    } else {
-        [_unit] joinSilent GVAR(cachedGroup);
-    };
+    // Return to previous group
+    [_unit, false, QGVAR(isSpectator)] call EFUNC(common,switchToGroupSide);
 
     private ["_marker"];
     _marker = ["respawn_west","respawn_east","respawn_guerrila","respawn_civilian"] select ([west,east,resistance,civilian] find GVAR(cachedSide));
