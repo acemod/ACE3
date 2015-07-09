@@ -156,27 +156,27 @@ class RscTitles {
                 style = ST_FRAME;
             };
 
-            class Focus: Mode {
-                idc = 6;
-                x = safeZoneX + safeZoneW - TOOL_W;
-            };
-
-            class FocusFrame: Focus {
-                style = ST_FRAME;
-            };
-
             class Time: Mode {
                 idc = 3;
-                x = safeZoneX + safeZoneW - TOOL_W * 2;
+                x = safeZoneX + TOOL_W * 3;
             };
 
             class TimeFrame: Time {
                 style = ST_FRAME;
             };
 
+            class Focus: Mode {
+                idc = 6;
+                x = safeZoneX + safeZoneW - TOOL_W * 3;
+            };
+
+            class FocusFrame: Focus {
+                style = ST_FRAME;
+            };
+
             class TimeAcc: Mode {
                 idc = 5;
-                x = safeZoneX + safeZoneW - TOOL_W * 3;
+                x = safeZoneX + safeZoneW - TOOL_W * 4;
             };
 
             class TimeAccFrame: TimeAcc {
@@ -185,7 +185,7 @@ class RscTitles {
 
             class Fov: Mode {
                 idc = 4;
-                x = safezoneX + safezoneW - TOOL_W * 4;
+                x = safezoneX + safezoneW - TOOL_W * 2;
             };
 
             class FovFrame: Fov {
@@ -194,7 +194,7 @@ class RscTitles {
 
             class Velocity: Mode {
                 idc = 0;
-                x = safeZoneX + safeZoneW - TOOL_W * 5;
+                x = safeZoneX + safeZoneW - TOOL_W;
             };
 
             class VelocityFrame: Velocity {
@@ -258,13 +258,14 @@ class RscTitles {
             };
 
             class LeftBlocker: Post {
-                x = safeZoneX;
-                w = COMPASS_X - safeZoneX;
+                x = safeZoneXAbs;
+                w = COMPASS_X - safeZoneXAbs;
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
             class RightBlocker: LeftBlocker {
                 x = 0.5 + COMPASS_W * 0.5;
+                w = safeZoneWAbs - COMPASS_W * 0.5;
             };
 
             class Frame: BG {

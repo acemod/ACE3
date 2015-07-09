@@ -24,5 +24,5 @@
 #define TOOL_W W_PART(5)
 
 // Interface compass
-#define COMPASS_W (TOOL_W * 2.5)
+#define COMPASS_W (TOOL_W * 4)
 #define COMPASS_X (0.5 - (COMPASS_W * 0.5))
