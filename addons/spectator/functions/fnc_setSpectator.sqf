@@ -10,7 +10,7 @@
  * None <NIL>
  *
  * Example:
- * [player, _killer] call ace_spectator_fnc_setSpectator
+ * [_killer] call ace_spectator_fnc_setSpectator
  *
  * Public: Yes
  */

@@ -20,19 +20,15 @@
 
 #include "script_component.hpp"
 
-#define RESUNITS_X safeZoneW / 100
-#define CENTRE safeZoneX + safeZoneW / 2
-#define COMPASS_W RESUNITS_X * 20
-#define COMPASS_X CENTRE - COMPASS_W / 2
 #define ARC_W COMPASS_W / 2
 #define DEGUNIT COMPASS_W / 180
 
-_dialog = _this select 0;
+PARAMS_1(_dialog);
 
-_Q1 = _dialog displayCtrl 1;
-_Q2 = _dialog displayCtrl 2;
-_Q3 = _dialog displayCtrl 3;
-_Q4 = _dialog displayCtrl 4;
+_Q1 = _dialog displayCtrl 90;
+_Q2 = _dialog displayCtrl 91;
+_Q3 = _dialog displayCtrl 92;
+_Q4 = _dialog displayCtrl 93;
 _qOrder = [];
 
 _dir = if GVAR(cameraOn) then {getDir GVAR(cam)} else {getDir GVAR(unit)};
@@ -40,9 +36,9 @@ _angleFromCentre = _dir - floor(_dir / 90) * 90;
 _leftEdgePos = _angleFromCentre * DEGUNIT;
 
 _positions = [
-    [CENTRE - _leftEdgePos - ARC_W, safeZoneY],
-    [CENTRE - _leftEdgePos, safeZoneY],
-    [CENTRE - _leftEdgePos + ARC_W, safeZoneY],
+    [0.5 - _leftEdgePos - ARC_W, safeZoneY],
+    [0.5 - _leftEdgePos, safeZoneY],
+    [0.5 - _leftEdgePos + ARC_W, safeZoneY],
     [0, safeZoneY - 1]
 ];
 

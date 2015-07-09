@@ -1,12 +1,5 @@
 #include "\z\ace\addons\common\define.hpp"
 
-#define SIZEX ((safezoneW / safezoneH) min 1.2)
-#define SIZEY (SIZEX / 1.2)
-#define W_PART(num) (num * (SIZEX / 40))
-#define H_PART(num) (num * (SIZEY / 25))
-#define X_PART(num) (W_PART(num) + (safezoneX + (safezoneW - SIZEX)/2))
-#define Y_PART(num) (H_PART(num) + (safezoneY + (safezoneH - SIZEY)/2))
-
 class GVAR(overlay) {
 
     idd = 12200;
@@ -27,9 +20,9 @@ class GVAR(overlay) {
             blinkingPeriod = 0;
 
             x = safeZoneX;
-            y = safezoneY + H_PART(1);
-            w = W_PART(5);
-            h = safeZoneH - H_PART(1);
+            y = safezoneY + TOOL_H;
+            w = TOOL_W * 2;
+            h = safeZoneH - TOOL_H;
 
             colorBorder[] = {1,1,1,1};
 
@@ -136,24 +129,17 @@ class RscTitles {
 
         class controls {
 
-            class TopBar: ACE_gui_staticBase {
-                style = ST_CENTER;
-                x = safeZoneX;
-                y = safeZoneY;
-                w = safeZoneW;
-                h = H_PART(1);
-                colorBackground[] = {0.1,0.1,0.1,1};
-            };
-
-            class Name: TopBar {
+            class Name: ACE_gui_staticBase {
                 idc = 1;
                 x = safeZoneX;
-                w = safeZoneW * 0.2;
+                y = safeZoneY;
+                w = TOOL_W * 2;
+                h = TOOL_H;
                 style = ST_CENTER;
                 shadow = 2;
                 colorText[]={1,1,1,1};
-                colorBackground[] = {0,0,0,1};
-                sizeEx = H_PART(1);
+                colorBackground[] = {0.1,0.1,0.1,1};
+                sizeEx = TOOL_H;
             };
 
             class NameFrame: Name {
@@ -162,10 +148,8 @@ class RscTitles {
 
             class Mode: Name {
                 idc = 2;
-                x = safeZoneX + safeZoneW * 0.2;
-                w = safeZoneW * 0.05;
-                h = H_PART(1);
-                style = ST_CENTER;
+                x = safeZoneX + TOOL_W * 2;
+                w = TOOL_W;
             };
 
             class ModeFrame: Mode {
@@ -174,8 +158,7 @@ class RscTitles {
 
             class Focus: Mode {
                 idc = 6;
-                x = safeZoneX + safeZoneW * 0.8;
-                style = ST_CENTER;
+                x = safeZoneX + safeZoneW - TOOL_W;
             };
 
             class FocusFrame: Focus {
@@ -184,8 +167,7 @@ class RscTitles {
 
             class Time: Mode {
                 idc = 3;
-                x = safeZoneX + safeZoneW * 0.75;
-                style = ST_CENTER;
+                x = safeZoneX + safeZoneW - TOOL_W * 2;
             };
 
             class TimeFrame: Time {
@@ -194,8 +176,7 @@ class RscTitles {
 
             class TimeAcc: Mode {
                 idc = 5;
-                x = safeZoneX + safeZoneW * 0.85;
-                style = ST_CENTER;
+                x = safeZoneX + safeZoneW - TOOL_W * 3;
             };
 
             class TimeAccFrame: TimeAcc {
@@ -204,8 +185,7 @@ class RscTitles {
 
             class Fov: Mode {
                 idc = 4;
-                x = safezoneX + safezoneW * 0.9;
-                style = ST_CENTER;
+                x = safezoneX + safezoneW - TOOL_W * 4;
             };
 
             class FovFrame: Fov {
@@ -214,8 +194,7 @@ class RscTitles {
 
             class Velocity: Mode {
                 idc = 0;
-                x = safeZoneX + safeZoneW * 0.95;
-                y = safeZoneY;
+                x = safeZoneX + safeZoneW - TOOL_W * 5;
             };
 
             class VelocityFrame: Velocity {
@@ -238,68 +217,58 @@ class RscTitles {
 
             class BG: ACE_gui_staticBase {
                 style = ST_CENTER;
-                x = 0.5 - safeZoneW * 0.25;
+                x = COMPASS_X;
                 y = safeZoneY;
-                w = safeZoneW * 0.5;
-                h = H_PART(1);
+                w = COMPASS_W;
+                h = TOOL_H;
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
             class 0_90: ACE_gui_backgroundBase {
-                idc = 1;
+                idc = 90;
                 x = 0.5;
                 y = safeZoneY;
-                w = safeZoneW * 0.25;
-                h = H_PART(1);
+                w = COMPASS_W * 0.5;
+                h = TOOL_H;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture180_ca.paa";
             };
 
             class 90_180: 0_90 {
-                idc = 2;
-                x = 0.5 + safezoneW * 0.25;
+                idc = 91;
+                x = 0.5 + COMPASS_W * 0.5;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture270_ca.paa";
             };
 
             class 180_270: 0_90 {
-                idc = 3;
-                x = 0.5 + safezoneW * 0.5;
+                idc = 92;
+                x = 0.5 + COMPASS_W;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
             };
 
             class 270_0: 0_90 {
-                idc = 4;
-                x = 0.5 + safeZoneW * 0.75;
+                idc = 93;
+                x = 0.5 + COMPASS_W * 1.5;
                 text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
             };
 
-            class Post: ACE_gui_staticBase {
-                style = ST_CENTER;
-                x = 0.5;
-                y = safeZoneY;
-                w = W_PART(0.1);
-                h = H_PART(1);
+            class Post: BG {
+                x = 0.5 - COMPASS_W / 360;
+                w = COMPASS_W / 180;
                 colorBackground[]={1,0,0,1};
             };
 
-            class LeftBlocker: ACE_gui_staticBase {
-                style = ST_CENTER;
-                x = 0.5 - safezoneW * 0.5;
-                y = safeZoneY;
-                w = safeZoneW * 0.25;
-                h = H_PART(1);
+            class LeftBlocker: Post {
+                x = safeZoneX;
+                w = COMPASS_X - safeZoneX;
                 colorBackground[] = {0.1,0.1,0.1,1};
             };
 
             class RightBlocker: LeftBlocker {
-                x = 0.5 + safeZoneW * 0.25;
+                x = 0.5 + COMPASS_W * 0.5;
             };
 
-            class Frame: ACE_gui_staticBase {
+            class Frame: BG {
                 style = ST_FRAME;
-                x = 0.5 - safeZoneW * 0.25;
-                y = safeZoneY;
-                w = safeZoneW * 0.5;
-                h = H_PART(1);
                 shadow=2;
                 colorText[]={1,1,1,1};
             };
