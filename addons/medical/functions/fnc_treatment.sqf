@@ -201,37 +201,38 @@ _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
 };
 
 // Start treatment
-if (_caller == player) then {
-    [
-        _treatmentTime,
-        [_caller, _target, _selectionName, _className, _items, _usersOfItems],
-        DFUNC(treatment_success),
-        DFUNC(treatment_failure),
-        getText (_config >> "displayNameProgress"),
-        _callbackProgress,
-        ["isnotinside"]
-    ] call EFUNC(common,progressBar);
-
-    // Display Icon
-    _iconDisplayed = getText (_config >> "actionIconPath");
-    if (_iconDisplayed != "") then {
-        [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
-    };
-
-    // handle display of text/hints
-    _displayText = "";
-    if (_target != _caller) then {
-        _displayText = getText(_config >> "displayTextOther");
-    } else {
-        _displayText = getText(_config >> "displayTextSelf");
-    };
-
-    if (_displayText != "") then {
-        ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
-    };
-} else {
+if (_caller != ACE_player) exitWith {
+    // It's an AI that is doing the treatment
     sleep _treatmentTime;
     [[_caller, _target, _selectionName, _className, _items, _usersOfItems]] call DFUNC(treatment_success);
+    true;
+};
+[
+    _treatmentTime,
+    [_caller, _target, _selectionName, _className, _items, _usersOfItems],
+    DFUNC(treatment_success),
+    DFUNC(treatment_failure),
+    getText (_config >> "displayNameProgress"),
+    _callbackProgress,
+    ["isnotinside"]
+] call EFUNC(common,progressBar);
+
+// Display Icon
+_iconDisplayed = getText (_config >> "actionIconPath");
+if (_iconDisplayed != "") then {
+    [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
+};
+
+// handle display of text/hints
+_displayText = "";
+if (_target != _caller) then {
+    _displayText = getText(_config >> "displayTextOther");
+} else {
+    _displayText = getText(_config >> "displayTextSelf");
+};
+
+if (_displayText != "") then {
+    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 
 true;
