@@ -14,4 +14,4 @@
 
 #include "script_component.hpp"
 
-[_this select 1] call FUNC(setSpectator);
+[_this select 0] call FUNC(setSpectator);
