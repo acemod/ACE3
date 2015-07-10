@@ -29,24 +29,16 @@ _position = getPosASL _projectile;
 _direction = vectorDir _projectile;
 
 private ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
-
-_dangerZoneDamage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
-
-if (_dangerZoneDamage == 0) then {
-    _dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-    _dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-    _dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
-} else {
-    _dangerZoneAngle = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(angle)) / 2;
-    _dangerZoneRange = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
-};
+_dangerZoneDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
+_dangerZoneAngle = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
+_dangerZoneRange = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
 
 // Damage to others
 private "_affected";
 _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon,_magazine]] call EFUNC(common,targetEvent);
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL

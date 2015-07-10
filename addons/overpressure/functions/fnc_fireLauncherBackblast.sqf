@@ -15,7 +15,7 @@
  * Return value:
  * None
  */
-//#define DEBUG_MODE_FULL
+
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -29,16 +29,9 @@ _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
 private ["_backblastAngle", "_backblastRange", "_backblastDamage"];
-_backblastDamage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
-
-if (_backblastDamage == 0) then {
-    _backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-    _backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-    _backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
-} else {
-    _backblastAngle = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(angle)) / 2;
-    _backblastRange = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
-};
+_backblastAngle = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
+_backblastRange = missionNameSpace getVariable [(QGVAR(Range) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 1];
+_backblastDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
 
 // Damage to others
 private "_affected";

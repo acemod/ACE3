@@ -14,13 +14,12 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon);
+EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon,_magazine);
 
 private ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
-
-_overpressureAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-_overpressureRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-_overpressureDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+_overpressureAngle = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
+_overpressureRange = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
+_overpressureDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
 
 TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 
