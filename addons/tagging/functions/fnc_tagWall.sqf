@@ -16,8 +16,10 @@
 
 
 #include "script_component.hpp"
-private ["_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint", "_tag"];
+private ["_eyepos", "_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint", "_tag"];
 
+//Cache eyepos in case player moves
+_eyepos = eyePos ACE_player;
 _touchingPoints = [];
 
 {
@@ -33,10 +35,10 @@ _touchingPoints = [];
 		//This is done by checking if it is between the closer point and the point in between the two.
 
 		_posCheckCloser = ACE_player modelToWorldVisual [_x, _pointCloser, 0];
-		_posCheckCloser set [2, (eyePos ACE_player) select 2];
+		_posCheckCloser set [2, _eyepos select 2];
 
 		_posCheckFurther = ACE_player modelToWorldVisual [_x, (_pointCloser + ((_pointFurther - _pointCloser) / 2)), 0];
-		_posCheckFurther set [2, (eyePos ACE_player) select 2];
+		_posCheckFurther set [2, _eyepos select 2];
 
 		if (lineIntersects [_posCheckCloser, _posCheckFurther, ACE_player, objNull]) then {
 			//If it is, we move the further point to be closer to the closer point.
@@ -49,10 +51,13 @@ _touchingPoints = [];
 
 	//We do this 7 times each a bit to the left and right of the player - that's definitely precise enough.
 	_touchingPoint = ACE_player modelToWorldVisual [_x, _pointCloser, 0];
-	_touchingPoint set [2, (eyePos ACE_player) select 2];
+	_touchingPoint set [2, _eyepos select 2];
 	_touchingPoints pushBack (_touchingPoint);
 
 } foreach [-0.5, 0.5];
+
+ACE_player playActionNow "PutDown";
+playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (getPosASL ACE_player), 10, 1, 15];
 
 _tag = ("ACE_tagWall" + str (floor (random 5))) createVehicle [0,0,0];
 _tag setPosASL (((_touchingPoints select 0) vectorAdd (_touchingPoints select 1)) vectorMultiply 0.5);
