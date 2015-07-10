@@ -30,9 +30,16 @@ _direction = vectorDir _projectile;
 
 private ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 
-_dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-_dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-_dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+_dangerZoneDamage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
+
+if (_dangerZoneDamage == 0) then {
+    _dangerZoneAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
+    _dangerZoneRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
+    _dangerZoneDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+} else {
+    _dangerZoneAngle = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(angle)) / 2;
+    _dangerZoneRange = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
+};
 
 // Damage to others
 private "_affected";

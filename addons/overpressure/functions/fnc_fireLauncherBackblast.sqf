@@ -29,10 +29,16 @@ _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
 private ["_backblastAngle", "_backblastRange", "_backblastDamage"];
+_backblastDamage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
 
-_backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-_backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-_backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+if (_backblastDamage == 0) then {
+    _backblastAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
+    _backblastRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
+    _backblastDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+} else {
+    _backblastAngle = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(angle)) / 2;
+    _backblastRange = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
+};
 
 // Damage to others
 private "_affected";
