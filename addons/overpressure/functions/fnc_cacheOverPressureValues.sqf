@@ -17,7 +17,7 @@
  #include "script_component.hpp"
 
 EXPLODE_2_PVT(_this,_weapon,_magazine);
-
+if !(isNil (QGVAR(Damage) + _magazine)) exitWith {};
 private ["_damage","_angle","_range"];
 _damage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
 if (_damage == 0) then {
