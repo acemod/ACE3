@@ -203,10 +203,11 @@ _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
 // Start treatment
 if (_caller != ACE_player) exitWith {
     // It's an AI that is doing the treatment
-    sleep _treatmentTime;
-    [[_caller, _target, _selectionName, _className, _items, _usersOfItems]] call DFUNC(treatment_success);
+    [DFUNC(treatment_success), [[_caller, _target, _selectionName, _className, _items, _usersOfItems]], _treatmentTime]call EFUNC(common,waitAndExecute);
     true;
 };
+
+// Start treatment for player
 [
     _treatmentTime,
     [_caller, _target, _selectionName, _className, _items, _usersOfItems],
