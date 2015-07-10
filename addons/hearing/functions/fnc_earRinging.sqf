@@ -45,7 +45,7 @@ GVAR(earRingingPFH) = [{
     private ["_prior"];
     _prior = (_unit getvariable [QGVAR(dv), 0]) min 20;
 
-    if (!alive _unit || _prior <= 0) exitWith {
+    if (!alive _unit || _prior <= 0 || GVAR(DisableEarRinging)) exitWith {
         _unit setVariable [QGVAR(dv), 0];
         _unit setVariable [QGVAR(prior), 0];
         GVAR(beep) = false;
