@@ -13,4 +13,4 @@
 
 #include "script_component.hpp"
 
-(["head","body","hand_l","hand_r","leg_l","leg_r"] select (_this select 0));
+(GVAR(SELECTIONS) select (_this select 0));
