@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, ArcticSnowSky
  * Get the string representation of a selection index.
  *
  * Arguments:
