@@ -68,7 +68,7 @@ if (count _weaponMagazines == 0) then {
 
 _magazine = "";
 {
-    EXPLODE_2_PVT(_x,_magazineType,_ammoType)
+    EXPLODE_2_PVT(_x,_magazineType,_ammoType);
     if (_ammoType == _ammo) exitWith {
         _magazine = _magazineType;
     };
