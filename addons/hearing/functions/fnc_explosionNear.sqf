@@ -16,6 +16,9 @@
  */
 #include "script_component.hpp"
 
+//Only run if combatDeafness enabled:
+if (!GVAR(enableCombatDeafness)) exitWith {};
+
 PARAMS_2(_unit,_damage);
 
 private ["_strength"];

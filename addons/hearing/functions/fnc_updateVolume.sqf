@@ -15,31 +15,53 @@
  */
 #include "script_component.hpp"
 
-private ["_recoverRate", "_volume"];
+GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 
-// Exit if combat deafness is disabled
-if !(GVAR(enableCombatDeafness)) exitWith {};
-
-// Check if new noises increase deafness
-GVAR(newStrength) = (((ACE_player getvariable [QGVAR(dv), 0]) min 20) / 20) ^ 2;
-if (GVAR(newStrength) > GVAR(currentDeafness)) then {
-    GVAR(currentDeafness) = GVAR(newStrength);
-};
-
-// Recover rate is slower if deafness is severe
-_recoverRate = 0.01;
-if (GVAR(currentDeafness) > 0.7) then {
-    _recoverRate = 0.005;
-    if (GVAR(currentDeafness) > 0.9) then {
-        _recoverRate = 0.002;
+//If we got a big increase in the last second:
+if ((GVAR(deafnessDV) - GVAR(deafnessPrior)) > 2) then {
+    if (ACE_time > GVAR(time3)) then {
+        GVAR(beep2) = false;
+    };
+    if (!GVAR(beep2)) then {
+        playSound "ACE_Combat_Deafness";
+        GVAR(beep2) = true;
+        GVAR(time3) = ACE_time + 5;
     };
 };
 
-// Deafness recovers with ACE_time
-GVAR(currentDeafness) = GVAR(currentDeafness) - _recoverRate max 0;
+GVAR(deafnessPrior) = GVAR(deafnessDV);
+GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0;
 
-// needed until Bohemia fixes playSound to actually use the second argument
-_volume = (1 - GVAR(currentDeafness) max 0)^2 max 0.04;
+if (GVAR(deafnessDV) > 19.75) then {
+    ACE_player setvariable [QGVAR(deaf), true];
+    if (ACE_time > GVAR(time4)) then {
+        playSound "ACE_Combat_Deafness";
+        GVAR(beep2) = true;
+        GVAR(time3) = ACE_time + 10;
+        GVAR(time4) = ACE_time + 30;
+    };
+} else {
+    ACE_player setvariable [QGVAR(deaf), false];
+};
+
+if (GVAR(deafnessDV) > 10) then {
+    //check if the ringing is already being played
+    if (ACE_time > GVAR(time2)) then {
+        GVAR(beep) = false;
+    };
+    if (!GVAR(beep)) then {
+        playSound "ACE_Ring_Backblast";
+        GVAR(time2) = ACE_time + 22;
+        GVAR(beep) = true;
+    };
+};
+
+// Hearing takes longer to return to normal after it hits rock bottom
+GVAR(deafnessDV) =  (GVAR(deafnessDV) - (0.5 * (GVAR(volume) max 0.1))) max 0;
+
+systemChat format ["%1 - %2/%3", time, GVAR(deafnessDV), GVAR(volume)];
+
+_volume = GVAR(volume);
 
 // Earplugs reduce hearing 50%
 if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
@@ -61,8 +83,8 @@ if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
 };
 
 if (!(missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false])) then {
-    0.1 fadeSound _volume;
-    0.1 fadeSpeech _volume;
+    1 fadeSound _volume;
+    1 fadeSpeech _volume;
     ACE_player setVariable ["tf_globalVolume", _volume];
     if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};
 };
