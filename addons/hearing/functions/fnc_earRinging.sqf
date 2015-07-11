@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(DisableEarRinging)) exitWith {};
+if (!GVAR(enableCombatDeafness)) exitWith {};
 
 PARAMS_2(_unit,_strength);
 

@@ -30,7 +30,7 @@ GVAR(time4) = 0;
     GVAR(deafnessDV) = 0;
     GVAR(deafnessPrior) = 0;
     ACE_player setvariable [QGVAR(deaf), false];
-    
+
     GVAR(beep) = false;
     GVAR(beep2) = false;
     GVAR(time2) = 0;

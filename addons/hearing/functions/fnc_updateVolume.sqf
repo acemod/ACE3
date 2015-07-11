@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+private["_Volume"];
+
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 
 //If we got a big increase in the last second:
@@ -22,7 +24,7 @@ if ((GVAR(deafnessDV) - GVAR(deafnessPrior)) > 2) then {
     if (ACE_time > GVAR(time3)) then {
         GVAR(beep2) = false;
     };
-    if (!GVAR(beep2)) then {
+    if ((!GVAR(DisableEarRinging)) && {!GVAR(beep2)}) then {
         playSound "ACE_Combat_Deafness";
         GVAR(beep2) = true;
         GVAR(time3) = ACE_time + 5;
@@ -34,7 +36,7 @@ GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0;
 
 if (GVAR(deafnessDV) > 19.75) then {
     ACE_player setvariable [QGVAR(deaf), true];
-    if (ACE_time > GVAR(time4)) then {
+    if ((!GVAR(DisableEarRinging)) && {ACE_time > GVAR(time4)}) then {
         playSound "ACE_Combat_Deafness";
         GVAR(beep2) = true;
         GVAR(time3) = ACE_time + 10;
@@ -49,7 +51,7 @@ if (GVAR(deafnessDV) > 10) then {
     if (ACE_time > GVAR(time2)) then {
         GVAR(beep) = false;
     };
-    if (!GVAR(beep)) then {
+    if ((!GVAR(DisableEarRinging)) && {!GVAR(beep)}) then {
         playSound "ACE_Ring_Backblast";
         GVAR(time2) = ACE_time + 22;
         GVAR(beep) = true;
@@ -59,7 +61,7 @@ if (GVAR(deafnessDV) > 10) then {
 // Hearing takes longer to return to normal after it hits rock bottom
 GVAR(deafnessDV) =  (GVAR(deafnessDV) - (0.5 * (GVAR(volume) max 0.1))) max 0;
 
-systemChat format ["%1 - %2/%3", time, GVAR(deafnessDV), GVAR(volume)];
+TRACE_3("tick", GVAR(deafnessPrior), GVAR(deafnessDV), GVAR(volume));
 
 _volume = GVAR(volume);
 
