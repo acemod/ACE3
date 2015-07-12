@@ -31,7 +31,10 @@ _objects = [_logic getVariable ["Objects", ""], true, true] call FUNC(makeList);
 _controllers = [_logic getVariable ["Controllers", ""], true, true] call FUNC(makeList);
 _images = [_logic getVariable ["Images", ""], true, false] call FUNC(makeList);
 _names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
-_duration = _logic getVariable ["Duration", ""];
+_duration = _logic getVariable ["Duration", 0];
+
+// Exit if Images or Names fields are empty
+if (_images == "" || {_names == ""}) exitWith {diag_log "[ACE] ERROR: Slideshow Module NOT Initialized: Images or Names fields can NOT be empty!"};
 
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);

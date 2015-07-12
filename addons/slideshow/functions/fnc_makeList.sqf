@@ -29,8 +29,7 @@ _splittedList = [_list, ","] call BIS_fnc_splitString;
 _listNoWhitespace = [];
 if (_removeWhitespace) then {
     {
-        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
-        _listNoWhitespace pushBack _x;
+        _listNoWhitespace pushBack ([_x] call EFUNC(common,stringRemoveWhiteSpace));
     } forEach _splittedList;
     _list = _listNoWhitespace;
 };
