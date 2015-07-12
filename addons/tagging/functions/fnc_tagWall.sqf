@@ -16,7 +16,7 @@
 
 
 #include "script_component.hpp"
-private ["_eyepos", "_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint", "_tag"];
+private ["_eyepos", "_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint"];
 
 //Cache eyepos in case player moves
 _eyepos = eyePos ACE_player;
@@ -57,8 +57,11 @@ _touchingPoints = [];
 } foreach [-0.5, 0.5];
 
 ACE_player playActionNow "PutDown";
-playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (getPosASL ACE_player), 10, 1, 15];
 
-_tag = ("ACE_tagWall" + str (floor (random 5))) createVehicle [0,0,0];
-_tag setPosASL (((_touchingPoints select 0) vectorAdd (_touchingPoints select 1)) vectorMultiply 0.5);
-_tag setDir ((_touchingPoints call BIS_fnc_dirTo) - 90);
+[{
+	private ["_tag"];
+	playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (getPosASL ACE_player), 10, 1, 15];
+	_tag = ("ACE_tagWall" + str (floor (random 5))) createVehicle [0,0,0];
+	_tag setPosASL (((_this select 0) vectorAdd (_this select 1)) vectorMultiply 0.5);
+	_tag setDir ((_this call BIS_fnc_dirTo) - 90);
+}, _touchingPoints, 0.6] call EFUNC(common,waitAndExecute);
