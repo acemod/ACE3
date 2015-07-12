@@ -29,6 +29,14 @@ class CfgVehicles {
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\iconTagging.paa));
                 };
+                class ACE_tagGround {
+                    displayName = CSTRING(tagGround);
+                    condition = QUOTE('ACE_Spraypaint' in items ACE_player);
+                    statement = QUOTE([] call FUNC(tagGround));
+                    showDisabled = 0;
+                    priority = 3;
+                    icon = QUOTE(PATHTOF(UI\iconTagging.paa));
+                };
             };
         };
     };

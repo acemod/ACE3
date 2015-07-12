@@ -5,6 +5,10 @@
             <English>Tag wall</English>
             <German>Wand markieren</German>
         </Key>
+        <Key ID="STR_ACE_tagging_tagGround">
+            <English>Tag ground</English>
+            <German>Boden markieren</German>
+        </Key>
         <Key ID="STR_ACE_tagging_spraypaint">
             <English>Spray paint</English>
             <German>Sprühfarbe</German>
