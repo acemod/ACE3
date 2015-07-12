@@ -68,9 +68,9 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
             //Valid range, will fire at camera dir
             _lookVector = (ATLToASL (positionCameraToWorld [0,0,0])) vectorFromTo (ATLToASL (positionCameraToWorld [0,0,10]));
             _realAzimuth = ((_lookVector select 0) atan2 (_lookVector select 1));
-            _upVectorDir = (((vectorUp z1) select 0) atan2 ((vectorUp z1) select 1));
-            _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp z1) select 2);
-            _realElevation = ((180 / PI) * (z1 animationPhase "mainGun")) + 75 - _elevationDiff;
+            _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
+            _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
+            _realElevation = ((180 / PI) * (_mortarVeh animationPhase "mainGun")) + 75 - _elevationDiff;
         };
 
         //Update Heading Display:
