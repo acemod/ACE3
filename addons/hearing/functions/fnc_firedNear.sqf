@@ -21,8 +21,8 @@
  */
 #include "script_component.hpp"
 
-//Only run if combatDeafness enabled:
-if (!GVAR(enableCombatDeafness)) exitWith {};
+//Only run if deafness or ear ringing is enabled:
+if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
 PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 

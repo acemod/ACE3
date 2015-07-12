@@ -4,6 +4,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
+GVAR(volume) = 1;
 GVAR(playerVehAttenuation) = 1;
 
 GVAR(beep) = false;
@@ -13,12 +14,8 @@ GVAR(time3) = 0;
 GVAR(time4) = 0;
 
 ["SettingsInitialized", {
-    //If not enabled, dont't add draw eventhandler or PFEH (for performance)
-    if (!GVAR(enableCombatDeafness)) exitWith {};
-
     // Spawn volume updating process
-    [FUNC(updateVolume), 1, [] ] call CBA_fnc_addPerFrameHandler;
-
+    [FUNC(updateVolume), 1, [false] ] call CBA_fnc_addPerFrameHandler;
 }] call EFUNC(common,addEventHandler);
 
 //Update veh attunation when player veh changes

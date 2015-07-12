@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enableCombatDeafness)) exitWith {};
-
 PARAMS_2(_unit,_strength);
 
 if (_unit != ACE_player) exitWith {};
