@@ -4,7 +4,7 @@
         <Key ID="STR_DN_ACE_HUNTIRBOX">
             <English>HuntIR Transport Box</English>
             <German>HuntIR Transportkiste</German>
-            <Spanish>HuntIR Transport Box</Spanish>
+            <Spanish>Caja de transporte de HuntIR</Spanish>
             <Czech>Trasnportní bedna HuntIR</Czech>
             <Russian>Ящик с HuntIR</Russian>
             <Italian>HuntIR Transport Box</Italian>
@@ -16,7 +16,7 @@
         <Key ID="STR_ACE_HUNTIR_magazine_displayName">
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
-            <Spanish>HuntIR Round</Spanish>
+            <Spanish>Proyectil HuntIR</Spanish>
             <Czech>HuntIR Round</Czech>
             <Russian>HuntIR снаряд</Russian>
             <Italian>HuntIR Round</Italian>
@@ -28,7 +28,7 @@
         <Key ID="STR_ACE_HUNTIR_monitor_displayName">
             <English>HuntIR monitor</English>
             <German>HuntIR Monitor</German>
-            <Spanish>HuntIR monitor</Spanish>
+            <Spanish>Monitor HuntIR</Spanish>
             <Czech>HuntIR monitor</Czech>
             <Russian>HuntIR монитор</Russian>
             <Italian>HuntIR monitor</Italian>
@@ -40,7 +40,7 @@
         <Key ID="STR_ACE_HUNTIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
             <German>HuntIR Monitor aktivieren</German>
-            <Spanish>Activate HuntIR monitor</Spanish>
+            <Spanish>Activar monitor HuntIR</Spanish>
             <Czech>Zapnout HuntIR monitor</Czech>
             <Russian>Включить HuntIR монитор</Russian>
             <Italian>Activate HuntIR monitor</Italian>
@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_HUNTIR_CAM">
             <English>Camera:</English>
             <German>Kamera:</German>
-            <Spanish>Camera:</Spanish>
+            <Spanish>Camara:</Spanish>
             <Czech>Kamera:</Czech>
             <Russian>Камера:</Russian>
             <Italian>Camera:</Italian>
@@ -64,7 +64,7 @@
         <Key ID="STR_ACE_HUNTIR_ALT">
             <English>Altitude:</English>
             <German>Höhe:</German>
-            <Spanish>Altitude:</Spanish>
+            <Spanish>Altitud:</Spanish>
             <Czech>Výška:</Czech>
             <Russian>Высота:</Russian>
             <Italian>Altitude:</Italian>
@@ -76,7 +76,7 @@
         <Key ID="STR_ACE_HUNTIR_TIME">
             <English>Recording Time:</English>
             <German>Aufnahmezeit:</German>
-            <Spanish>Recording Time:</Spanish>
+            <Spanish>Tiempo de grabación:</Spanish>
             <Czech>Čas nahrávání:</Czech>
             <Russian>Время записи:</Russian>
             <Italian>Recording Time:</Italian>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_HUNTIR_ESC">
             <English>Press ESC to quit camera</English>
             <German>Zum Verlassen ESC drücken</German>
-            <Spanish>Press ESC to quit camera</Spanish>
+            <Spanish>Pulsar ESC para salir de la camara</Spanish>
             <Czech>Stiskni ESC pro opustění kamery</Czech>
             <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
             <Italian>Press ESC to quit camera</Italian>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP">
             <English>Help</English>
             <German>Hilfe</German>
-            <Spanish>Help</Spanish>
+            <Spanish>Ayuda</Spanish>
             <Czech>Pomoc</Czech>
             <Russian>Помощь</Russian>
             <Italian>Help</Italian>
@@ -112,7 +112,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_ZOOM">
             <English>A/D - Cycle zoom</English>
             <German>A/D - Zoom</German>
-            <Spanish>A/D - Cycle zoom</Spanish>
+            <Spanish>A/D - Cambiar zoom</Spanish>
             <Czech>A/D - Změna přiblížení</Czech>
             <Russian>A/D - Приближение</Russian>
             <Italian>A/D - Cycle zoom</Italian>
@@ -124,7 +124,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_CAM">
             <English>W/S - Select camera</English>
             <German>W/S - Wähle Kamera</German>
-            <Spanish>W/S - Select camera</Spanish>
+            <Spanish>W/S - Seleccionar camara</Spanish>
             <Czech>W/S - Výběr kamery</Czech>
             <Russian>W/S - Выбрать камеру</Russian>
             <Italian>W/S - Select camera</Italian>
@@ -136,7 +136,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_ROT">
             <English>Left/Right - Rotate camera</English>
             <German>Links/Rechts - Rotiere Kamera</German>
-            <Spanish>Left/Right - Rotate camera</Spanish>
+            <Spanish>Left/Right - Rotar camara</Spanish>
             <Czech>Levá/Pravá - Rotace kamery</Czech>
             <Russian>Влево/Вправо - Вращать камеру</Russian>
             <Italian>Left/Right - Rotate camera</Italian>
@@ -148,7 +148,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_ELV">
             <English>Up/Down - Elevate/lower camera</English>
             <German>Hoch/Runter - Neige Kamera</German>
-            <Spanish>Up/Down - Elevate/lower camera</Spanish>
+            <Spanish>Up/Down - Subir/bajar camara</Spanish>
             <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
             <Russian>Вверх/Вниз - Поднять/Опустить камеру</Russian>
             <Italian>Up/Down - Elevate/lower camera</Italian>
@@ -160,7 +160,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_MOD">
             <English>N - Cycle IT modes</English>
             <German>N - Sichtmodi</German>
-            <Spanish>N - Cycle IT modes</Spanish>
+            <Spanish>N - Cambiar modos de IT</Spanish>
             <Czech>N - Změna režimů kamery</Czech>
             <Russian>N - Режимы камеры</Russian>
             <Italian>N - Cycle IT modes</Italian>
@@ -172,7 +172,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_RES">
             <English>R - Reset camera</English>
             <German>R - Reset</German>
-            <Spanish>R - Reset camera</Spanish>
+            <Spanish>R - Reiniciar camara</Spanish>
             <Czech>R - Reset kamery</Czech>
             <Russian>R - Сбросить настройки камеры</Russian>
             <Italian>R - Reset camera</Italian>
@@ -184,7 +184,7 @@
         <Key ID="STR_ACE_HUNTIR_HELP_EXIT">
             <English>Esc - Exit help</English>
             <German>ESC - Hilfe verlassen</German>
-            <Spanish>Esc - Exit help</Spanish>
+            <Spanish>Esc - Salit de ayuda</Spanish>
             <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
             <Italian>Esc - Exit help</Italian>

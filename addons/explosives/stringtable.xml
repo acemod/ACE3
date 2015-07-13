@@ -550,15 +550,16 @@
             <Portuguese>Explosão no desarmamento?</Portuguese>
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
+            <Spanish>Explotar al desactivar?</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
             <Portuguese>Ativa certos explosivos para detonar no desarmamento? Padrão: Sim</Portuguese>
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
+            <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
-            <English></English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
             <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
             <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
