@@ -27,21 +27,9 @@ if (count _images != count _names || {count _images == 0} || {count _names == 0}
     diag_log "[ACE] ERROR: Slideshow Images or Names fields can NOT be empty and must have equal number of items!"
 };
 
-// Add controllers to objects if they support it
-{
-    if (typeOf _x in [CLASSNAMES_OBJECTS, CLASSNAMES_BOTH]) then {
-        _objects pushBack _x;
-    };
-} forEach _controllers;
-
 // Objects synced to the module
 {
-    if (typeOf _x in [CLASSNAMES_OBJECTS, CLASSNAMES_BOTH]) then {
-        _objects pushBack _x;
-    };
-    if (typeOf _x in [CLASSNAMES_BOTH, CLASSNAMES_CONTROLLERS]) then { 
-        _controllers pushBack _x;
-    };
+    _objects pushBack _x;
 } forEach (synchronizedObjects _logic);
 
 // If no controllers use objects as controllers
@@ -56,26 +44,32 @@ TRACE_4("Information",_objects,_controllers,_images,_names);
     _x setObjectTextureGlobal [0, _images select 0];
 } forEach _objects;
 
-// Set first image as default and set variable on controllers with necessary information
-{
-    _x setVariable [QGVAR(slides), [_objects, _images, _names, _duration], true];
-    TRACE_1("Assigning Slides to controllers",_x);
-} forEach _controllers;
-
-
-// Exit if automatic transitions are disabled
-if (_duration == 0) exitWith {};
-
 // Number of slideshows (multiple modules support)
 GVAR(slideshows) = GVAR(slideshows) + 1;
+private ["_currentSlideshow"];
+_currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
 
-// Formatted GVAR string (multiple modules support)
-private ["_varString"];
-_varString = format [QGVAR(currentSlide%1), GVAR(slideshows)];
-TRACE_1("Current Slide",_varString);
+// Add interactions if automatic transitions are disabled, else setup automatic transitions
+if (_duration == 0) then {
+    {
+        // Add MainAction if one does not already exist
+        //if !(main interaction already exist) then {
+            _mainAction = ["ACE_MainActions", localize LESTRING(interaction,MainAction), "", {}, {true}] call EFUNC(interact_menu,createAction);
+            [_x, 0, [], _mainAction] call EFUNC(interact_menu,addActionToObject);
+        //};
+        // Add Slides sub-action and populate with images
+        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects,_images,_names,_x,_currentSlideshow], [0,0,0], 2] call EFUNC(interact_menu,createAction);
+        [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
+    } forEach _controllers;
+} else {
+    // Formatted GVAR string (multiple modules support)
+    private ["_varString"];
+    _varString = format [QGVAR(slideshow%1), _currentSlideshow];
+    TRACE_1("Current Slide",_varString);
 
-// Set formatted GVAR to first slide
-missionNamespace setVariable [_varString, 0];
+    // Set formatted GVAR to first slide
+    missionNamespace setVariable [_varString, 0];
 
-// Automatic transitions handler
-[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
+    // Automatic transitions handler
+    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
+};

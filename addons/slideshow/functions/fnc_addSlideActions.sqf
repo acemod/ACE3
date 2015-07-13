@@ -3,37 +3,39 @@
  * Adds controller slide actions.
  *
  * Arguments:
- * 0: Controller <OBJECT>
+ * 0: Objects <ARRAY>
+ * 1: Images <ARRAY>
+ * 2: Names <ARRAY>
+ * 3: Controller <OBJECT>
+ * 4: Current Slideshow <NUMBER>
  *
  * Return Value:
- * Children Actions <ARRAY>
+ * None
  *
  * Example:
- * [controller] call ace_slideshow_fnc_addSlideActions;
+ * [[object], ["image"], ["name"], controller, 1] call ace_slideshow_fnc_addSlideActions
  *
  * Public: No
  */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_1(_controller);
+PARAMS_5(_objects,_images,_names,_controller,_currentSlideshow);
 
-private ["_slides", "_actions"];
-
-_slides = _controller getVariable QGVAR(slides);
-EXPLODE_3_PVT(_slides,_objects,_images,_names);
-
+private ["_actions"];
 _actions = [];
 {
     _actions pushBack
     [
         [
-            format ["Slide_%1", _forEachIndex],
+            format [QGVAR(slideshow%1_slide%2), _currentSlideshow, _forEachIndex + 1],
             _names select _forEachIndex,
             "",
             {
+                EXPLODE_2_PVT(_this select 2,_objects,_image);
                 {
-                    _x setObjectTextureGlobal [0, (_this select 2) select 1]
-                } forEach ((_this select 2) select 0);
+                    _x setObjectTextureGlobal [0, _image]
+                } forEach _objects;
             },
             {true},
             {},
@@ -43,5 +45,7 @@ _actions = [];
         _controller
     ];
 } forEach _images;
+
+TRACE_1("Children actions",_actions);
 
 _actions

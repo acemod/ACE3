@@ -4,7 +4,6 @@ ADDON = false;
 
 PREP(addSlideActions);
 PREP(autoTransition);
-PREP(canChangeSlides);
 PREP(createSlideshow);
 PREP(makeList);
 PREP(moduleInit);
