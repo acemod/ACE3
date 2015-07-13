@@ -17,10 +17,15 @@
  *
  * Public: Yes
  */
-//#define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 PARAMS_5(_objects,_controllers,_images,_names,_duration);
+
+// Verify data
+if (count _images != count _names || {count _images == 0} || {count _names == 0}) exitWith {
+    diag_log "[ACE] ERROR: Slideshow Images or Names fields can NOT be empty and must have equal number of items!"
+};
 
 // Add controllers to objects if they support it
 {
@@ -66,7 +71,8 @@ GVAR(slideshows) = GVAR(slideshows) + 1;
 
 // Formatted GVAR string (multiple modules support)
 private ["_varString"];
-_varString = str format [QGVAR(currentSlide%1), GVAR(slideshows)];
+_varString = format [QGVAR(currentSlide%1), GVAR(slideshows)];
+TRACE_1("Current Slide",_varString);
 
 // Set formatted GVAR to first slide
 missionNamespace setVariable [_varString, 0];
