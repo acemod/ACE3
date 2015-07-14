@@ -26,6 +26,12 @@ if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 _tubeWeaponName = (weapons _newVehicle) select 0;
 _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
+//Restore last firemode:
+_lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
+if (_lastFireMode != -1) then {
+    _player action ["SwitchWeapon", _newVehicle, _player, _lastFireMode];
+};
+
 [{
     private["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
     PARAMS_2(_args,_pfID);
@@ -41,6 +47,9 @@ _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes")
         _currentFireMode = (weaponState [_mortarVeh, [0]]) select 2;
         _currentChargeMode = _fireModes find _currentFireMode;
 
+        //Save firemode on vehicle:
+        _mortarVeh setVariable [QGVAR(lastFireMode), _currentChargeMode];
+        
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
             closeDialog 0;
