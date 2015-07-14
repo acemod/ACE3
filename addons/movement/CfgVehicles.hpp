@@ -1,6 +1,6 @@
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
-        maxGunElev = 80; // Allows look further up (default: 60)
+        maxGunElev = 80; // Allows looking further up (default: 60)
     };
 };
