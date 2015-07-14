@@ -43,10 +43,10 @@ _children = [];
                 format ["Explosive_%1", _forEachIndex],
                 format [_name + " (%1)", _itemCount select _foreachIndex],
                 getText(_x >> "picture"),
-                {(_this select 2) call FUNC(setupExplosive);},
+                {_this call FUNC(setupExplosive);},
                 {true},
                 {},
-                [_unit, configName _x]
+                (configName _x)
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit
