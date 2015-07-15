@@ -15,4 +15,4 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "UI\RscTitles.hpp"
+#include "ui\interface.hpp"

@@ -66,8 +66,9 @@
             <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
             <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
         </Key>
-        <Key ID="STR_ACE_Spectator_Exit">
-            <English>Are you sure you want to exit camera mode?</English>
+
+        <Key ID="STR_ACE_Spectator_HelpTitle">
+            <English>Spectator Controls</English>
         </Key>
 
         <!-- Keybinds -->

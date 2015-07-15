@@ -26,9 +26,9 @@
 PARAMS_1(_dialog);
 
 _Q1 = _dialog displayCtrl 90;
-_Q2 = _dialog displayCtrl 91;
-_Q3 = _dialog displayCtrl 92;
-_Q4 = _dialog displayCtrl 93;
+_Q2 = _dialog displayCtrl 180;
+_Q3 = _dialog displayCtrl 270;
+_Q4 = _dialog displayCtrl 360;
 _qOrder = [];
 
 _dir = if GVAR(cameraOn) then {getDir GVAR(cam)} else {getDir GVAR(unit)};
