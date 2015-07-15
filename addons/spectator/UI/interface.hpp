@@ -13,7 +13,7 @@ class GVAR(overlay) {
     onUnload = QUOTE([ARR_2('onUnload',_this)] call FUNC(handleInterface));
     onKeyDown = QUOTE([ARR_2('onKeyDown',_this)] call FUNC(handleInterface));
     onKeyUp = QUOTE([ARR_2('onKeyUp',_this)] call FUNC(handleInterface));
-    class controls {
+    class controlsBackground {
         class crosshair: RscActivePicture {
             idc = 52;
             x = 0.5 - W_PART(2);
@@ -24,6 +24,19 @@ class GVAR(overlay) {
             fixedWidth = 0;
             shadow = 0;
         };
+        class mouseHandler: RscControlsGroup {
+            x = safeZoneXAbs;
+            y = safeZoneY;
+            w = safeZoneWAbs;
+            h = safeZoneH;
+            colorBackground[] = {0,0,0,0};
+            onMouseButtonDown = QUOTE([ARR_2('onMouseButtonDown',_this)] call FUNC(handleInterface));
+            onMouseButtonUp = QUOTE([ARR_2('onMouseButtonUp',_this)] call FUNC(handleInterface));
+            onMouseZChanged = QUOTE([ARR_2('onMouseZChanged',_this)] call FUNC(handleInterface));
+            onMouseMoving = QUOTE([ARR_2('onMouseMoving',_this)] call FUNC(handleInterface));
+        };
+    };
+    class controls {
         class compassBack: RscText {
             idc = -1;
             x = COMPASS_X;

@@ -29,13 +29,33 @@ switch (toLower _mode) do {
         if !(isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
 
         // Initalize preserved variables
+        if (isNil QGVAR(camMode)) then { GVAR(camMode) = 0; };
+        if (isNil QGVAR(camPan)) then { GVAR(camPan) = 0; };
+        if (isNil QGVAR(camPos)) then { GVAR(camPos) = getPos cameraOn; };
+
         if (isNil QGVAR(savedSpots)) then { GVAR(savedSpots) = []; };
         if (isNil QGVAR(savedUnits)) then { GVAR(savedUnits) = []; };
 
+        // Initalize camera variables
+        GVAR(camBank) = 0;
+        GVAR(camBoom) = [false,false];
+        GVAR(camDolly) = [false,false,false,false];
+        GVAR(camFocus) = [-1,-1];
+        GVAR(camSpeed) = 0.8;
+        GVAR(camTilt) = -60;
+
+        // Initalize display variables
+        GVAR(ctrlKey) = false;
+        GVAR(mouse) = [false,false];
+        GVAR(mouseDelta) = [0.5,0.5];
+        GVAR(mousePos) = [0.5,0.5];
+        GVAR(mousePosOld) = [0.5,0.5];
+
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
-        GVAR(camera) setDir GVAR(camDir);
+        GVAR(camera) setDir GVAR(camPan);
         GVAR(camera) cameraEffect ["internal", "back"];
+        call FUNC(handleCamera);
 
         // Create the dialog
         createDialog QGVAR(overlay);
@@ -61,6 +81,21 @@ switch (toLower _mode) do {
         // Return to player view
         ACE_Player switchCamera "internal";
 
+        // Cleanup camera variables
+        GVAR(camera) = nil;
+        GVAR(camBank) = nil;
+        GVAR(camBoom) = nil;
+        GVAR(camDolly) = nil;
+        GVAR(camFocus) = nil;
+        GVAR(camSpeed) = nil;
+        GVAR(camTilt) = nil;
+
+        // Cleanup display variables
+        GVAR(mouse) = nil;
+        GVAR(mouseDelta) = nil;
+        GVAR(mousePos) = nil;
+        GVAR(mousePosOld) = nil;
+
         // Reset nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
             EGVAR(nametags,showPlayerNames) = GVAR(nametagSettingCache) select 0;
@@ -81,6 +116,9 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_MAP) ctrlShow false;
         (_display displayCtrl IDC_MAP) mapCenterOnCamera false;
 
+        // Set text values
+        (_display displayCtrl IDC_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
+
         // Populate unit tree
         //["onload",_display displayCtrl IDC_TREE] call FUNC(handleTree);
 
@@ -92,6 +130,29 @@ switch (toLower _mode) do {
         with uiNamespace do {
             GVAR(display) = nil;
         };
+    };
+    // Mouse events
+    case "onmousebuttondown": {
+        private ["_button"];
+        _button = _args select 1;
+        GVAR(mouse) set [_button,true];
+    };
+    case "onmousebuttonup": {
+        private ["_button"];
+        _button = _args select 1;
+        GVAR(mouse) set [_button,false];
+    };
+    case "onmousezchanged": {
+        private ["_zChange"];
+        _zChange = _args select 1;
+    };
+    case "onmousemoving": {
+        private ["_x","_y"];
+        _x = _args select 1;
+        _y = _args select 2;
+
+        GVAR(mousePos) = [_x,_y];
+        call FUNC(handleMouse);
     };
     // Keyboard events
     case "onkeydown": {
@@ -112,6 +173,27 @@ switch (toLower _mode) do {
                 _show = !ctrlShown _tree;
 
                 _tree ctrlShow _show;
+            };
+            case 16: { // Q
+                GVAR(camBoom) set [0,true];
+            };
+            case 17: { // W
+                GVAR(camDolly) set [0,true];
+            };
+            case 29: { // Ctrl
+                GVAR(ctrlKey) = true;
+            };
+            case 30: { // A
+                GVAR(camDolly) set [2,true];
+            };
+            case 31: { // S
+                GVAR(camDolly) set [1,true];
+            };
+            case 32: { // D
+                GVAR(camDolly) set [3,true];
+            };
+            case 44: { // Z
+                GVAR(camBoom) set [1,true];
             };
             case 50: { // M
                 private ["_map","_show"];
@@ -134,6 +216,27 @@ switch (toLower _mode) do {
         _alt = _args select 4;
 
         switch (_dik) do {
+            case 16: { // Q
+                GVAR(camBoom) set [0,false];
+            };
+            case 17: { // W
+                GVAR(camDolly) set [0,false];
+            };
+            case 29: { // Ctrl
+                GVAR(ctrlKey) = false;
+            };
+            case 30: { // A
+                GVAR(camDolly) set [2,false];
+            };
+            case 31: { // S
+                GVAR(camDolly) set [1,false];
+            };
+            case 32: { // D
+                GVAR(camDolly) set [3,false];
+            };
+            case 44: { // Z
+                GVAR(camBoom) set [1,false];
+            };
         };
 
         true
