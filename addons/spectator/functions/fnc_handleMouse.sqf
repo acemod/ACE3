@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-private ["_x","_y","_leftButton","_rightButton","_oldX","_oldY","_deltaX","_deltaY","_angleY","_angleX"];
+private ["_x","_y","_leftButton","_rightButton","_oldX","_oldY","_deltaX","_deltaY"];
 
 _x = GVAR(mousePos) select 0;
 _y = GVAR(mousePos) select 1;

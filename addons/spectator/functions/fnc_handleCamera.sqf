@@ -1,5 +1,22 @@
 #include "script_component.hpp"
 
+// Update camera values
+GVAR(camera) camSetFov GVAR(camFOV);
+
+// Commit changes
+GVAR(camera) camCommit 0;
+showCinemaBorder false;
+cameraEffectEnableHUD true;
+
+// If valid unit then apply camera view as appropriate
+if ((GVAR(camUnit) in GVAR(unitList)) && !isNull GVAR(camUnit)) then {
+    if (camMode == 1) then {
+        GVAR(camUnit) switchCamera "internal";
+    } else {
+        GVAR(camera) camSetTarget GVAR(camUnit);
+    };
+};
+
 // Don't recreate the PFH
 if !(isNil QGVAR(camPFH)) exitWith {};
 
@@ -47,6 +64,9 @@ GVAR(camPFH) = [
             GVAR(camera) setPosASL GVAR(camPos);
             GVAR(camera) setDir GVAR(camPan);
             [GVAR(camera), GVAR(camTilt), GVAR(camBank)] call BIS_fnc_setPitchBank;
+        };
+        case 1: { // Internal
+
         };
     };
 }, 0] call CBA_fnc_addPerFrameHandler;

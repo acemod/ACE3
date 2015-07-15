@@ -32,6 +32,7 @@ switch (toLower _mode) do {
         if (isNil QGVAR(camMode)) then { GVAR(camMode) = 0; };
         if (isNil QGVAR(camPan)) then { GVAR(camPan) = 0; };
         if (isNil QGVAR(camPos)) then { GVAR(camPos) = getPos cameraOn; };
+        if (isNil QGVAR(camUnit)) then { GVAR(camUnit) = objNull; };
 
         if (isNil QGVAR(savedSpots)) then { GVAR(savedSpots) = []; };
         if (isNil QGVAR(savedUnits)) then { GVAR(savedUnits) = []; };
@@ -41,8 +42,10 @@ switch (toLower _mode) do {
         GVAR(camBoom) = [false,false];
         GVAR(camDolly) = [false,false,false,false];
         GVAR(camFocus) = [-1,-1];
+        GVAR(camFOV) = 0.7;
         GVAR(camSpeed) = 0.8;
         GVAR(camTilt) = -60;
+        GVAR(camZoom) = 3;
 
         // Initalize display variables
         GVAR(ctrlKey) = false;
@@ -50,6 +53,7 @@ switch (toLower _mode) do {
         GVAR(mouseDelta) = [0.5,0.5];
         GVAR(mousePos) = [0.5,0.5];
         GVAR(mousePosOld) = [0.5,0.5];
+        GVAR(unitList) = [];
 
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
@@ -87,8 +91,10 @@ switch (toLower _mode) do {
         GVAR(camBoom) = nil;
         GVAR(camDolly) = nil;
         GVAR(camFocus) = nil;
+        GVAR(camFOV) = nil;
         GVAR(camSpeed) = nil;
         GVAR(camTilt) = nil;
+        GVAR(camZoom) = nil;
 
         // Cleanup display variables
         GVAR(mouse) = nil;
@@ -117,6 +123,8 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_MAP) mapCenterOnCamera false;
 
         // Set text values
+        (_display displayCtrl IDC_FOCUS) ctrlSetText str(GVAR(camFocus));
+        (_display displayCtrl IDC_FOV) ctrlSetText str(GVAR(camFOV));
         (_display displayCtrl IDC_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Populate unit tree
@@ -136,6 +144,13 @@ switch (toLower _mode) do {
         private ["_button"];
         _button = _args select 1;
         GVAR(mouse) set [_button,true];
+
+        // Detect right click
+        if ((_button == 1) && (GVAR(camMode) == 1)) then {
+            // In first person aim down sight toggle
+            GVAR(ads) = false;
+            GVAR(camUnit) switchCamera "internal";
+        };
     };
     case "onmousebuttonup": {
         private ["_button"];
@@ -145,6 +160,14 @@ switch (toLower _mode) do {
     case "onmousezchanged": {
         private ["_zChange"];
         _zChange = _args select 1;
+
+        // Scroll to zoom in 3rd person, modifier for FOV
+        if (GVAR(ctrlKey)) then {
+            GVAR(camFOV) = ((GVAR(camFOV) - (_zChange * GVAR(camFOV) * 0.2)) max 0.1) min 1;
+        } else {
+            GVAR(camZoom) = (GVAR(camZoom) - (_zChange * GVAR(camZoom) * 0.2)) max 0.1;
+        };
+        call FUNC(handleCamera);
     };
     case "onmousemoving": {
         private ["_x","_y"];
@@ -203,6 +226,23 @@ switch (toLower _mode) do {
                 _map ctrlShow _show;
                 _map mapCenterOnCamera _show;
                 //[_show] call FUNC(handleMap);
+            };
+            case 57: { // Spacebar
+                GVAR(camMode) = [1,2,0] select GVAR(camMode);
+
+                switch (GVAR(camMode)) do {
+                    case 0: {
+                        GVAR(camera) cameraEffect ["internal", "back"];
+                        GVAR(camUnit) = objNull;
+                    };
+                    case 1: {
+                        GVAR(camUnit) = ;
+                    };
+                    case 2: {
+
+                    };
+                };
+                call FUNC(handleCamera);
             };
         };
 
