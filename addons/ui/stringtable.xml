@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="UI">
+        <Key ID="STR_ACE_UI_WeaponInfo">
+            <English>Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_WeaponInfoDesc">
+            <English>Entire weapon info interface (weapon name, firing mode, magazine info, ammo count, magazine count, grenade count) except zeroing.</English>
+        </Key>
+        <Key ID="STR_ACE_UI_WeaponName">
+            <English>Weapon Name</English>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoCountDesc">
+            <English>Requires enabled Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoCount">
+            <English>Ammo Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoCountDesc">
+            <English>Requires enabled Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_MagCount">
+            <English>Magazine Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_MagCountDesc">
+            <English>Requires enabled Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GrenadeName">
+            <English>Grenade Name</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GrenadeNameDesc">
+            <English>Requires enabled Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GrenadeCount">
+            <English>Grenade Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GrenadeCountDesc">
+            <English>Requires enabled Weapon Info</English>
+        </Key>
+        <Key ID="STR_ACE_UI_Zeroing">
+            <English>Zeroing</English>
+        </Key>
+        <Key ID="STR_ACE_UI_ModuleDisplayName">
+            <English>User Interface</English>
+        </Key>
+        <Key ID="STR_ACE_UI_ModuleDescription">
+            <English>This module allows hiding of specific user interface parts.</English>
+        </Key>
+    </Package>
+</Project>
