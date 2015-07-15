@@ -46,6 +46,7 @@ switch (toLower _mode) do {
         GVAR(camSpeed) = 0.8;
         GVAR(camTilt) = -60;
         GVAR(camZoom) = 3;
+        GVAR(gunCam) = false;
 
         // Initalize display variables
         GVAR(ctrlKey) = false;
@@ -58,8 +59,14 @@ switch (toLower _mode) do {
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
-        GVAR(camera) cameraEffect ["internal", "back"];
-        call FUNC(handleCamera);
+        call FUNC(updateView);
+
+        // HUD stuff
+        showCinemaBorder false;
+        cameraEffectEnableHUD true;
+
+        // Handle camera movement
+        [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
 
         // Create the dialog
         createDialog QGVAR(overlay);
@@ -95,12 +102,14 @@ switch (toLower _mode) do {
         GVAR(camSpeed) = nil;
         GVAR(camTilt) = nil;
         GVAR(camZoom) = nil;
+        GVAR(gunCam) = nil;
 
         // Cleanup display variables
         GVAR(mouse) = nil;
         GVAR(mouseDelta) = nil;
         GVAR(mousePos) = nil;
         GVAR(mousePosOld) = nil;
+        GVAR(unitList) = nil;
 
         // Reset nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -128,7 +137,7 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Populate unit tree
-        //["onload",_display displayCtrl IDC_TREE] call FUNC(handleTree);
+        //["onload",_display displayCtrl IDC_TREE] call FUNC(updateUnits);
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
@@ -147,9 +156,9 @@ switch (toLower _mode) do {
 
         // Detect right click
         if ((_button == 1) && (GVAR(camMode) == 1)) then {
-            // In first person aim down sight toggle
-            GVAR(ads) = false;
-            GVAR(camUnit) switchCamera "internal";
+            // In first person toggle sights mode
+            GVAR(gunCam) = !GVAR(gunCam);
+            call FUNC(updateView);
         };
     };
     case "onmousebuttonup": {
@@ -229,20 +238,9 @@ switch (toLower _mode) do {
             };
             case 57: { // Spacebar
                 GVAR(camMode) = [1,2,0] select GVAR(camMode);
+                GVAR(gunCam) = false;
 
-                switch (GVAR(camMode)) do {
-                    case 0: {
-                        GVAR(camera) cameraEffect ["internal", "back"];
-                        GVAR(camUnit) = objNull;
-                    };
-                    case 1: {
-                        GVAR(camUnit) = ;
-                    };
-                    case 2: {
-
-                    };
-                };
-                call FUNC(handleCamera);
+                call FUNC(updateView);
             };
         };
 
