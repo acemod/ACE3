@@ -1,5 +1,5 @@
 /*
- * Author: voiper, SilentSpike
+ * Author: SilentSpike
  * Sets target unit to the given spectator state
  *
  * Arguments:
@@ -36,10 +36,12 @@ if !(local _unit) exitwith {
 // Prevent player falling into water
 _unit enableSimulation !_set;
 
+// Move to/from group as appropriate
+[_unit, _set, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);
+
 if (_set) then {
     // Move and hide the player ASAP to avoid being seen
     _unit setPosASL (getMarkerPos QGVAR(respawn));
-    [_unit, true, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);
 
     // Ghosts can't talk
     [_unit, QGVAR(isSpectator)] call EFUNC(common,hideUnit);
@@ -59,13 +61,13 @@ if (_set) then {
     [_unit, QGVAR(isSpectator)] call EFUNC(common,unhideUnit);
     [_unit, QGVAR(isSpectator)] call EFUNC(common,unmuteUnit);
 
-    // Return to previous group
-    [_unit, false, QGVAR(isSpectator)] call EFUNC(common,switchToGroupSide);
-
     private ["_marker"];
-    _marker = ["respawn_west","respawn_east","respawn_guerrila","respawn_civilian"] select ([west,east,resistance,civilian] find GVAR(cachedSide));
+    _marker = ["respawn_west","respawn_east","respawn_guerrila","respawn_civilian"] select ([west,east,resistance,civilian] find (side group _unit));
     _unit setPos (getMarkerPos _marker);
 };
+
+// Enable/disable input as appropriate
+[QGVAR(isSpectator), _set] call EFUNC(common,setDisableUserInputStatus);
 
 // Handle common addon audio
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};
@@ -79,7 +81,7 @@ _unit setVariable [QEGVAR(medical,allowDamage), !_set];
 // No theoretical change if an existing spectator was reset
 if !(_set && (_unit getVariable [QGVAR(isSpectator), false])) then {
     // Mark spectator state for reference
-    _unit setVariable [QGVAR(isSpectator), _set];
+    _unit setVariable [QGVAR(isSpectator), _set, true];
 
     ["spectatorChanged",[_set]] call EFUNC(common,localEvent);
 };
