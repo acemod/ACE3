@@ -49,13 +49,13 @@ if (_set) then {
 
     if !(GVAR(modulePos)) then {
         if !(isNull _target) then {
-            GVAR(startingPos) = getPosATL _target;
+            GVAR(camPos) = getPosATL _target;
         };
     };
 
-    ["Init", [true]] call FUNC(camera);
+    ["open"] call FUNC(handleInterface);
 } else {
-    ["Exit"] call FUNC(camera);
+    ["close"] call FUNC(handleInterface);
 
     // Physical beings can talk
     [_unit, QGVAR(isSpectator)] call EFUNC(common,unhideUnit);
@@ -67,7 +67,7 @@ if (_set) then {
 };
 
 // Enable/disable input as appropriate
-[QGVAR(isSpectator), _set] call EFUNC(common,setDisableUserInputStatus);
+//[QGVAR(isSpectator), _set] call EFUNC(common,setDisableUserInputStatus);
 
 // Handle common addon audio
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};

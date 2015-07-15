@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "initKeybinds.sqf";
+//#include "initKeybinds.sqf";
 
 // Add interaction menu exception
 ["isNotSpectating", {!((_this select 0) getVariable [QGVAR(isSpectator), false])}] call EFUNC(common,addCanInteractWithCondition);
@@ -28,10 +28,10 @@
 
     if !(hasInterface) exitWith {};
 
-    if (GVAR(tracking)) then {
+    /*if (GVAR(tracking)) then {
         [FUNC(checkUnits), 2] call CBA_fnc_addPerFrameHandler;
         [FUNC(trackUnits), 20] call CBA_fnc_addPerFrameHandler;
-    };
+    };*/
 
     // Add event handlers to correctly enter spectator upon death
     player addEventHandler ["Killed", FUNC(handleKilled)];

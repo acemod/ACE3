@@ -9,6 +9,10 @@ class GVAR(overlay) {
     idd = 12249;
     enableSimulation = 1;
     movingEnable = 0;
+    onLoad = QUOTE([ARR_2('onLoad',_this)] call FUNC(handleInterface));
+    onUnload = QUOTE([ARR_2('onUnload',_this)] call FUNC(handleInterface));
+    onKeyDown = QUOTE([ARR_2('onKeyDown',_this)] call FUNC(handleInterface));
+    onKeyUp = QUOTE([ARR_2('onKeyUp',_this)] call FUNC(handleInterface));
     class controls {
         class crosshair: RscActivePicture {
             idc = 52;
