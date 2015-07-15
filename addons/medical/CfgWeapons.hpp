@@ -113,16 +113,16 @@ class CfgWeapons {
         };
     };
     class ACE_plasmaIV_500: ACE_plasmaIV {
-        displayName = CSTRING(Plasma_500);
-        model = QUOTE(PATHTOF(data\IVBag_plasma_500ml.p3d));
+        displayName = CSTRING(Plasma_IV_500);
+        model = QUOTE(PATHTOF(data\IVBag_500ml.p3d));
         hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_plasma_500ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_plasmaIV_250: ACE_plasmaIV {
-        displayName = CSTRING(Plasma_250);
-        model = QUOTE(PATHTOF(data\IVBag_plasma_250ml.p3d));
+        displayName = CSTRING(Plasma_IV_250);
+        model = QUOTE(PATHTOF(data\IVBag_250ml.p3d));
         hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_plasma_250ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
