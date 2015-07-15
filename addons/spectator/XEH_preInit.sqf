@@ -9,6 +9,7 @@ PREP(handleMouse);
 PREP(handleRespawn);
 PREP(moduleSpectator);
 PREP(setSpectator);
+PREP(updateUnits);
 PREP(updateView);
 
 ADDON = true;
