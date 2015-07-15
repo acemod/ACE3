@@ -118,13 +118,13 @@ GVAR(TweakedAngle) = 0;
         (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            systemChat "place";
+            systemChat format ["place %1 - %2", _virtualPosASL, aslToAtl _virtualPosASL];;
             _placeAngle = 0;
             _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
             if (isNull _attachVehicle) then {
                 _placeAngle = _cameraAngle - GVAR(TweakedAngle) - 180;
                 _expSetupVehicle setPosAsl _virtualPosASL;
-                _expSetupVehicle setDir _angle;
+                _expSetupVehicle setDir _placeAngle;
             } else {
                 _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
