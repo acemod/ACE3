@@ -96,7 +96,7 @@ class CfgMagazines {
             };
         };
     };
-	
+
     class IEDUrbanBig_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanBig";
         class ACE_Triggers {
@@ -113,9 +113,9 @@ class CfgMagazines {
                 ammo = "IEDUrbanBig_Range_Ammo";
                 pitch = 0;
             };
-        };		
+        };
     };
-	
+
     class IEDLandBig_Remote_Mag: IEDUrbanBig_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDLandBig";
         class ACE_Triggers: ACE_Triggers {

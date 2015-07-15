@@ -15,12 +15,12 @@
  *
  * Public: Yes
  */
+#define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
-PARAMS_3(_vehicle,_player,_magClassname);
+PARAMS_3(_vehicle,_unit,_magClassname);
 
-[_player, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
-GVAR(TweakedAngle) = 0;
+[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
 
 //Get setup object vehicle and model:
 _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> "ACE_SetupObject");
@@ -28,10 +28,10 @@ if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
+//Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
-_player setVariable [QGVAR(placeActionEH), [_player, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
-_player setVariable [QGVAR(cancelActionEH), [_player, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
-
+_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+_unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
 
 //Display to show virtual object:
 (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
@@ -39,25 +39,65 @@ _player setVariable [QGVAR(cancelActionEH), [_player, "zoomtemp", {true}, {GVAR(
 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
+GVAR(TweakedAngle) = 0;
 
 
 [{
-    private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_badPosition"];
+    BEGIN_COUNTER(pfeh);
 
     PARAMS_2(_args,_pfID);
     EXPLODE_3_PVT(_args,_unit,_magClassname,_setupObjectClass);
 
-    _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1]) vectorDiff (positionCameraToWorld [0,0,0]);
-    if (cameraView == "EXTERNAL") then {
-        _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
-    };
-    _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-    _intersectsWith = lineIntersectsWith [eyePos ACE_player, _virtualPosASL, ACE_player];
+    _lookDirVector = (positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1]);
+    _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
 
-    hintSilent format ["IntersectsWith %1", _intersectsWith];
-    
-    _badPosition = (count _intersectsWith) > 0;
-    
+    _basePosASL = (eyePos _unit);
+    if (cameraView == "EXTERNAL") then {
+        _basePosASL = _basePosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
+    };
+
+    _testPositionIsValid = {
+        _testDistance = _this select 0;
+        _testBase = _basePosASL vectorAdd (_lookDirVector vectorMultiply _testDistance);
+        _return = true;
+        {
+            _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
+            drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
+            if (lineIntersects [eyePos _unit, _testPos, _unit]) exitWith {_return = false;};
+        } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
+        _return
+    };
+
+    _distanceFromBase = 1;
+    _badPosition = !([_distanceFromBase] call _testPositionIsValid);
+    _attachVehicle = objNull;
+
+
+    if (_badPosition && {!isNull cursorTarget} && {(cursorTarget isKindOf "Car")}) then {
+        _attachVehicle = cursorTarget;
+        if ([0.05] call _testPositionIsValid) then {
+            _min = 0.05;
+            _max = 1;
+            for "_index" from 0 to 5 do {
+                _distanceFromBase = (_min + _max) / 2;
+                if ([_distanceFromBase] call _testPositionIsValid) then {
+                    _min = _distanceFromBase;
+                } else {
+                    _max = _distanceFromBase;
+                };
+            };
+            _badPosition = false;
+            _distanceFromBase = ((_min + _max) / 2 + 0.075) min 1;
+            systemChat format ["Attaching, dist %1", _distanceFromBase];
+        };
+    };
+
+    _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
+    if ((getTerrainHeightASL _virtualPosASL) > (_virtualPosASL select 2)) then {
+        systemChat "adjusting height";
+        _virtualPosASL set [2, (getTerrainHeightASL _virtualPosASL)];
+    };
+
     //Don't allow placing in a bad position:
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
@@ -65,8 +105,7 @@ GVAR(placeAction) = PLACE_WAITING;
     if ((inputAction "zoomTemp") > 0) then {GVAR(placeAction) = PLACE_CANCEL;};
 
     if ((GVAR(placeAction) != PLACE_WAITING) ||
-            {_unit != ACE_player} ||
-            {(inputAction "optics") > 0})            then {
+            {_unit != ACE_player})            then {
 
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
@@ -80,80 +119,58 @@ GVAR(placeAction) = PLACE_WAITING;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             systemChat "place";
-            _dir = (positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1]);
-            _angle = ((_dir select 0) atan2 (_dir select 1)) - GVAR(TweakedAngle) - 180;
+            _placeAngle = 0;
+            _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
+            if (isNull _attachVehicle) then {
+                _placeAngle = _cameraAngle - GVAR(TweakedAngle) - 180;
+                _expSetupVehicle setPosAsl _virtualPosASL;
+                _expSetupVehicle setDir _angle;
+            } else {
+                _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
+                _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
+                _expSetupVehicle attachTo [_attachVehicle, _modelOffset];
+                _expSetupVehicle setVectorDirAndUp [[0,0,-1],[(sin _placeAngle),(cos _placeAngle),0]];
+            };
 
-            systemChat format ["Pos %1, Cam %2, Ang %3", _virtualPosASL, ((_dir select 0) atan2 (_dir select 1)), _angle];
 
-            _realObject = _setupObjectClass createVehicle _virtualPos;
-            _realObject setPosAsl _virtualPosASL;
-            _realObject setDir _angle;
-            // [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _virtualPos] call FUNC(placeApprove);
+            systemChat format ["Attach angel %1", _placeAngle];
+
+            _expSetupVehicle setVariable [QGVAR(class), _magClassname, true];
+            _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
+
+            _unit removeMagazine _magClassname;
+            _unit playActionNow "PutDown";
+            _unit setVariable [QGVAR(PlantingExplosive), true];
+            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
+
+            x3 = _expSetupVehicle;
+            systemChat format ["Mass %1", getMass _expSetupVehicle];
+            // x3 setMass 1;
         };
     } else {
-        // systemChat format ["A Running %1 - %2", time, _badPosition];
-        //Show the virtual object:
-        if (_badPosition) then {
+        _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));
+        if (_badPosition || {_screenPos isEqualTo []}) then {
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
         } else {
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
-            _screenPos = worldToScreen _virtualPos;
-            if (_screenPos isEqualTo []) exitWith {
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
-            };
-            _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+
+            _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
             _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
-            _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
-            _angle = asin (_dir select 2) + 90;
 
-            _modelUp = [0, (cos _angle), (sin _angle)];
-            _modelDir = [cos GVAR(TweakedAngle), sin GVAR(TweakedAngle), 0] vectorCrossProduct _modelUp;
+            _modelDir = [0,0,-1];
+            _modelUp = [0,-1,0];
+            if (isNull _attachVehicle) then {
+                _angle = acos (_lookDirVector select 2);
+                _modelUp = [0, (cos _angle), (sin _angle)];
+                _modelDir = [cos GVAR(TweakedAngle), sin GVAR(TweakedAngle), 0] vectorCrossProduct _modelUp;
+            };
 
-            // systemChat format ["Running %1", [_modelDir, _modelUp]];
+            // systemChat format ["Running %1 [%2]", [_modelDir, _modelUp], _attachVehicle];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_modelDir, _modelUp];
         };
     };
-}, 0, [_player, _magClassname, _setupObjectClass]] call CBA_fnc_addPerFrameHandler;
 
 
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-closeDialog 0;
-EXPLODE_2_PVT(_this,_unit,_class);
-GVAR(placer) = _unit;
-// TODO: check MP performance and MP compatible.
-GVAR(Setup) = createVehicle [getText(ConfigFile >> "CfgMagazines" >> _class >> "ACE_SetupObject"),[0,0,-10000],[], 0, "NONE"];
-
-GVAR(Setup) enableSimulationGlobal false;
-GVAR(Setup) setVariable [QGVAR(class), _class, true];
-
-
-
-
-[QGVAR(Placement),"OnEachFrame", {
-    private ["_player", "_pos"];
-    _player = ACE_player;
-    if (GVAR(placer) != _player) exitWith {
-        call FUNC(place_Cancel);
-    };
-    GVAR(pfeh_running) = true;
-    _pos = (ASLtoATL eyePos _player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
-    GVAR(Setup) setPosATL _pos;
-    if (ACE_Modifier == 0) then {
-        GVAR(Setup) setDir (GVAR(TweakedAngle) + getDir _player);
-    };
-}] call CALLSTACK(BIS_fnc_addStackedEventHandler);
-
- */
+    END_COUNTER(pfeh);
+}, 0, [_unit, _magClassname, _setupObjectClass]] call CBA_fnc_addPerFrameHandler;

@@ -17,18 +17,21 @@
 
 if !(hasInterface) exitWith {};
 
-["interactMenuOpened", {_this call FUNC(interactEH)}] call EFUNC(common,addEventHandler);
-
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
-//Cancel placement if interact menu opened
+
 ["interactMenuOpened", {
-    if (GVAR(pfeh_running) && {!isNull (GVAR(Setup))}) then {
-        call FUNC(place_Cancel)
+    //Cancel placement if interact menu opened
+    if (GVAR(pfeh_running)) then {
+        GVAR(placeAction) = PLACE_CANCEL;
     };
+
+    //Show defuse actions on cfgAmmos (allMines):
+    _this call FUNC(interactEH);
+
 }] call EFUNC(common,addEventHandler);
 
 [{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);

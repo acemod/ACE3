@@ -46,12 +46,8 @@ PREP(module);
 
 PREP(onInventoryChanged);
 PREP(onKilled);
-PREP(onLanded);
 
 PREP(openTimerSetUI);
-
-PREP(place_Approve);
-PREP(place_Cancel);
 
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);
