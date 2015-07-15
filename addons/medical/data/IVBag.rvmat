@@ -1,12 +1,5 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.97
-//Sat Jun 06 17:51:45 2015 : Source 'file' date Sat Jun 06 17:51:45 2015
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 
-//Class air_f : Heli_Light_01\Data\heli_light_01_glass.rvmat{
 class StageTI
 {
 	texture = "a3\data_f\default_ti_ca.paa";
@@ -104,4 +97,3 @@ class Stage7
 		pos[] = {0,0,0};
 	};
 };
-//};
