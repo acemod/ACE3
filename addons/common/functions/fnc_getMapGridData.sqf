@@ -47,17 +47,8 @@ if (_letterGrid) exitWith {
     diag_log text format ["[ACE] Map Grid Warning (%1) - Map uses letter grids [%2,%3]", worldName, _formatX, _formatY];
 };
 
-//Start at [0, 500] and move north until we get a change in grid
-_heightOffset = 500;
-_startGrid = mapGridPosition [0, _heightOffset];
-_originGrid = _startGrid;
-while {_startGrid == _originGrid} do {
-    _heightOffset = _heightOffset + 1;
-    _originGrid = mapGridPosition [0, _heightOffset];
-};
-
 //Calculate the real y offset
-_realOffsetY = parseNumber (_originGrid select [(count _formatX), (count _formatY)]) * _stepY + _heightOffset - 1;
+_realOffsetY = worldSize - _stepY - 1;
 
 //Calculate MGRS 10digit step - they should both be 1 meter:
 _stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
