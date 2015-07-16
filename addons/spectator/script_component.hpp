@@ -26,14 +26,24 @@
 
 // Interface compass
 #define COMPASS_W (TOOL_W * 4)
-#define COMPASS_X (0.5 - (COMPASS_W * 0.5))
+#define COMPASS_X (safeZoneW * 0.5 - (COMPASS_W * 0.5))
 
 // IDCs
-#define IDC_CLOCK 3002
-#define IDC_FOCUS 3003
-#define IDC_FOV 3004
-#define IDC_NAME 3000
-#define IDC_MAP 60187
-#define IDC_TREE 60791
-#define IDC_SPEED 3005
-#define IDC_VIEW 3001
+#define IDC_TOOL 3670
+#define IDC_COMP 4490
+#define IDC_TREE 6187
+#define IDC_MAP 6791
+#define IDC_HELP 7631
+
+#define IDC_TOOL_CLOCK 3002
+#define IDC_TOOL_FOCUS 3003
+#define IDC_TOOL_FOV 3004
+#define IDC_TOOL_NAME 3000
+#define IDC_TOOL_SPEED 3005
+#define IDC_TOOL_VIEW 3001
+
+#define IDC_COMP_0 5000
+#define IDC_COMP_90 5090
+#define IDC_COMP_180 5180
+#define IDC_COMP_270 5270
+

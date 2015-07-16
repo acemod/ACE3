@@ -286,7 +286,7 @@ switch (toLower _mode) do {
 
             // Only update camera mode when in free cam
             if (GVAR(camMode) == 0) then {
-                _newMode = = 1;
+                _newMode = 1;
             } else {
                 // When unit is reselected, toggle camera mode
                 if (_newUnit == GVAR(camUnit)) then {
