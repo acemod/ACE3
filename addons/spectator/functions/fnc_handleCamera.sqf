@@ -65,7 +65,7 @@ switch (GVAR(camMode)) do {
             {vehicle GVAR(camUnit) == GVAR(camUnit)} &&
             {GVAR(camUnit) in GVAR(unitList)}
         ) then {
-            call FUNC(updateView);
+            [] call FUNC(updateView);
         };
     };
 };

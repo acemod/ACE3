@@ -58,7 +58,7 @@ switch (toLower _mode) do {
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
-        call FUNC(updateView);
+        [] call FUNC(updateView);
 
         // Handle camera movement
         [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
@@ -156,7 +156,7 @@ switch (toLower _mode) do {
         if ((_button == 1) && (GVAR(camMode) == 1)) then {
             // In first person toggle sights mode
             GVAR(gunCam) = !GVAR(gunCam);
-            call FUNC(updateView);
+            [] call FUNC(updateView);
         };
     };
     case "onmousebuttonup": {
@@ -284,15 +284,11 @@ switch (toLower _mode) do {
             _netID = (_args select 0) tvData _sel;
             _newUnit = objectFromNetId _netID;
 
-            // Only update camera mode when in free cam
-            if (GVAR(camMode) == 0) then {
-                _newMode = 1;
-            } else {
-                // When unit is reselected, toggle camera mode
-                if (_newUnit == GVAR(camUnit)) then {
-                    _newMode = [0,2,1] select GVAR(camMode);
-                };
+            // When unit is reselected, toggle camera mode
+            if (_newUnit == GVAR(camUnit) || GVAR(camMode) == 0) then {
+                _newMode = [1,2,1] select GVAR(camMode);
             };
+
             GVAR(camUnit) = _newUnit;
             [_newMode] call FUNC(updateView);
         };
