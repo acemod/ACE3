@@ -37,6 +37,13 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _p3dModel;
 
+_isAttachable = false;
+_supportedTriggers = getArray (configFile >> "CfgMagazines" >> _magClassname >> "ACE_Triggers" >> "SupportedTriggers");
+{
+    if ((getNumber (configFile >> "ACE_Triggers" >> _x >> "isAttachable")) == 1) exitWith {_isAttachable = true;};
+} forEach _supportedTriggers;
+
+
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
 GVAR(TweakedAngle) = 0;
@@ -46,7 +53,7 @@ GVAR(TweakedAngle) = 0;
     BEGIN_COUNTER(pfeh);
 
     PARAMS_2(_args,_pfID);
-    EXPLODE_3_PVT(_args,_unit,_magClassname,_setupObjectClass);
+    EXPLODE_4_PVT(_args,_unit,_magClassname,_setupObjectClass,_isAttachable);
 
     _lookDirVector = (positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1]);
     _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
@@ -73,7 +80,7 @@ GVAR(TweakedAngle) = 0;
     _attachVehicle = objNull;
 
 
-    if (_badPosition && {!isNull cursorTarget} && {(cursorTarget isKindOf "Car")}) then {
+    if (_isAttachable && _badPosition && {!isNull cursorTarget} && {(cursorTarget isKindOf "Car")}) then {
         _attachVehicle = cursorTarget;
         if ([0.05] call _testPositionIsValid) then {
             _min = 0.05;
@@ -173,4 +180,4 @@ GVAR(TweakedAngle) = 0;
 
 
     END_COUNTER(pfeh);
-}, 0, [_unit, _magClassname, _setupObjectClass]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable]] call CBA_fnc_addPerFrameHandler;
