@@ -13,11 +13,11 @@
  * Parsed List <ARRAY>
  *
  * Example:
- * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow;
+ * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow
  *
  * Public: Yes
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 PARAMS_5(_objects,_controllers,_images,_names,_duration);
@@ -51,13 +51,16 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
-    private ["_mainAction", "_slidesAction"];
+    private ["_actionsObject", "_actionsClass", "_mainAction", "_slidesAction"];
     {
         // Add MainAction if one does not already exist
-        //if !(main interaction already exist) then {
+        _actionsObject = _x getVariable [QEGVAR(interact_menu,actions), []];
+        _actionsClass = missionNamespace getVariable [format [QEGVAR(interact_menu,Act_%1), typeOf _x], []];
+        if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
             _mainAction = ["ACE_MainActions", localize ELSTRING(interaction,MainAction), "", {}, {true}] call EFUNC(interact_menu,createAction);
             [_x, 0, [], _mainAction] call EFUNC(interact_menu,addActionToObject);
-        //};
+            TRACE_2("Adding ACE_MainActions",_actionsObject,_actionsClass);
+        };
 
         // Add Slides sub-action and populate with images
         _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects,_images,_names,_x,_currentSlideshow], [0,0,0], 2] call EFUNC(interact_menu,createAction);

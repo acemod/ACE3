@@ -11,7 +11,7 @@
  * Parsed List <ARRAY>
  *
  * Example:
- * ["text", true, false] call ace_slideshow_fnc_makeList;
+ * ["text", true, false] call ace_slideshow_fnc_makeList
  *
  * Public: No
  */

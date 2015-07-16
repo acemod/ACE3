@@ -1,6 +1,6 @@
 /*
  * Author: Jonpas
- * Handles automatic slide transitions using waitAndExecute in a PFH-like manner resulting in no performance loss
+ * Handles automatic slide transitions using waitAndExecute in a PFH-like manner resulting in no performance loss.
  *
  * Arguments:
  * 0: Objects <ARRAY>
@@ -13,7 +13,7 @@
  * Parsed List <ARRAY>
  *
  * Example:
- * [objects, controllers, images, actionNames, duration] call ace_slideshow_fnc_autoTransition;
+ * [objects, controllers, images, actionNames, duration] call ace_slideshow_fnc_autoTransition
  *
  * Public: No
  */
