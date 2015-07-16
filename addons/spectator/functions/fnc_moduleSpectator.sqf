@@ -21,7 +21,7 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(enabled), "SpectatorEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(limitSide), "SpectatorPlayerSide"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(AI), "SpectatorAI"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(allowAI), "SpectatorAI"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(tracking), "SpectatorTracking"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(modulePos), "SpectatorPos"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(endMission), "SpectatorEnd"] call EFUNC(common,readSettingFromModule);

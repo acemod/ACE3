@@ -43,7 +43,7 @@ switch (toLower _mode) do {
         GVAR(camDolly) = [false,false,false,false];
         GVAR(camFocus) = [-1,-1];
         GVAR(camFOV) = 0.7;
-        GVAR(camSpeed) = 0.8;
+        GVAR(camSpeed) = 0.1;
         GVAR(camTilt) = -60;
         GVAR(camZoom) = 3;
         GVAR(gunCam) = false;
@@ -54,7 +54,6 @@ switch (toLower _mode) do {
         GVAR(mouseDelta) = [0.5,0.5];
         GVAR(mousePos) = [0.5,0.5];
         GVAR(mousePosOld) = [0.5,0.5];
-        GVAR(unitList) = [];
 
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
@@ -67,6 +66,9 @@ switch (toLower _mode) do {
 
         // Handle camera movement
         [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
+
+        // Populate the unit list
+        [allUnits] call FUNC(updateUnits);
 
         // Create the dialog
         createDialog QGVAR(overlay);
@@ -109,7 +111,6 @@ switch (toLower _mode) do {
         GVAR(mouseDelta) = nil;
         GVAR(mousePos) = nil;
         GVAR(mousePosOld) = nil;
-        GVAR(unitList) = nil;
 
         // Reset nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -134,10 +135,11 @@ switch (toLower _mode) do {
         // Set text values
         (_display displayCtrl IDC_FOCUS) ctrlSetText str(GVAR(camFocus));
         (_display displayCtrl IDC_FOV) ctrlSetText str(GVAR(camFOV));
+        (_display displayCtrl IDC_SPEED) ctrlSetText format ["%1 m/s",GVAR(camSpeed)];
         (_display displayCtrl IDC_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
-        // Populate unit tree
-        call FUNC(updateUnits);
+        // Keep unit tree up to date
+        call FUNC(handleTree);
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];

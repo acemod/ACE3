@@ -7,7 +7,7 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
     };
-    class GVAR(AI) {
+    class GVAR(allowAI) {
         value = 0;
         typeName = "BOOL";
     };
