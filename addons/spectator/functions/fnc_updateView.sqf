@@ -4,6 +4,10 @@ GVAR(camera) camSetFOV GVAR(camFOV);
 
 if (GVAR(camMode) == 0) then { // Free
     GVAR(camera) cameraEffect ["internal", "back"];
+
+    // HUD stuff
+    showCinemaBorder false;
+    cameraEffectEnableHUD false;
 } else {
     // When no units available to spectate, exit to freecam
     if (unitList isEqualTo []) exitWith {
@@ -26,5 +30,9 @@ if (GVAR(camMode) == 0) then { // Free
     } else { // External
         GVAR(camUnit) switchCamera "external";
     };
+
+    // Terminate camera view
+    GVAR(camera) cameraEffect ["terminate", "back"];
+    cameraEffectEnableHUD true;
 };
 

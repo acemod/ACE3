@@ -44,7 +44,7 @@ switch (toLower _mode) do {
         GVAR(camFocus) = [-1,-1];
         GVAR(camFOV) = 0.7;
         GVAR(camSpeed) = 0.1;
-        GVAR(camTilt) = -60;
+        GVAR(camTilt) = -10;
         GVAR(camZoom) = 3;
         GVAR(gunCam) = false;
 
@@ -59,10 +59,6 @@ switch (toLower _mode) do {
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
         call FUNC(updateView);
-
-        // HUD stuff
-        showCinemaBorder false;
-        cameraEffectEnableHUD true;
 
         // Handle camera movement
         [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
@@ -291,6 +287,8 @@ switch (toLower _mode) do {
                 _netID = (_args select 0) tvData _sel;
                 GVAR(camUnit) = objectFromNetId _netID;
             };
+        } else {
+            GVAR(camMode) == 1;
         };
         call FUNC(updateView);
     };
