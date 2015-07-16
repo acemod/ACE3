@@ -288,7 +288,7 @@ switch (toLower _mode) do {
                 GVAR(camUnit) = objectFromNetId _netID;
             };
         } else {
-            GVAR(camMode) == 1;
+            GVAR(camMode) = 1;
         };
         call FUNC(updateView);
     };
