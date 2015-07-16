@@ -1,8 +1,16 @@
 #include "script_component.hpp"
 
+params [["_newMode",GVAR(camMode)]];
+
+// Reset gun cam if mode is changing
+if (_newMode != GVAR(camMode)) then {
+    GVAR(gunCam) = false;
+    GVAR(camMode) = _newMode;
+};
+
 GVAR(camera) camSetFOV GVAR(camFOV);
 
-if (GVAR(camMode) == 0) then { // Free
+if (_newMode == 0) then { // Free
     GVAR(camera) cameraEffect ["internal", "back"];
 
     // HUD stuff
@@ -11,8 +19,7 @@ if (GVAR(camMode) == 0) then { // Free
 } else {
     // When no units available to spectate, exit to freecam
     if (unitList isEqualTo []) exitWith {
-        GVAR(camMode) = 0;
-        call FUNC(updateView);
+        [0] call FUNC(updateView);
     };
 
     // First ensure valid unit is selected
@@ -20,7 +27,7 @@ if (GVAR(camMode) == 0) then { // Free
         GVAR(camUnit) = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 
-    if (GVAR(camMode) == 1) then { // Internal
+    if (_newMode == 1) then { // Internal
         // Handle gun cam
         if (GVAR(gunCam)) then {
             GVAR(camUnit) switchCamera "gunner";

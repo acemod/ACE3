@@ -234,10 +234,7 @@ switch (toLower _mode) do {
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
-                GVAR(camMode) = [1,2,0] select GVAR(camMode);
-                GVAR(gunCam) = false;
-
-                call FUNC(updateView);
+                [[1,2,0] select GVAR(camMode)] call FUNC(updateView);
             };
         };
 
@@ -279,19 +276,25 @@ switch (toLower _mode) do {
     // Tree events
     case "ontreedblclick": {
         // Update camera view when listbox unit is double clicked on
-        private ["_sel","_netID"];
+        private ["_sel","_netID","_newUnit","_newMode"];
         _sel = _args select 1;
 
         // Ensure a unit was selected
         if (count _sel == 2) then {
             _netID = (_args select 0) tvData _sel;
-            GVAR(camUnit) = objectFromNetId _netID;
+            _newUnit = objectFromNetId _netID;
 
             // Only update camera mode when in free cam
             if (GVAR(camMode) == 0) then {
-                GVAR(camMode) = 1;
+                _newMode = = 1;
+            } else {
+                // When unit is reselected, toggle camera mode
+                if (_newUnit == GVAR(camUnit)) then {
+                    _newMode = [0,2,1] select GVAR(camMode);
+                };
             };
-            call FUNC(updateView);
+            GVAR(camUnit) = _newUnit;
+            [_newMode] call FUNC(updateView);
         };
     };
 };
