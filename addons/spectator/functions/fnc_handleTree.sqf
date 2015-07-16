@@ -31,7 +31,7 @@ _ctrl = _display displayCtrl IDC_TREE;
 _curSelData = _ctrl tvData (tvCurSel _ctrl);
 
 // Clear the tree
-_ctrl tvDelete [];
+tvClear _ctrl;
 
 // Update the tree
 _cachedGrps = [];

@@ -8,26 +8,24 @@ if (_newMode != GVAR(camMode)) then {
     GVAR(camMode) = _newMode;
 };
 
-GVAR(camera) camSetFOV GVAR(camFOV);
+// When no units available to spectate, exit to freecam
+if (GVAR(unitList) isEqualTo []) then {
+    GVAR(camMode) = 0;
+};
 
-if (_newMode == 0) then { // Free
+if (GVAR(camMode) == 0) then { // Free
     GVAR(camera) cameraEffect ["internal", "back"];
 
     // HUD stuff
     showCinemaBorder false;
     cameraEffectEnableHUD false;
 } else {
-    // When no units available to spectate, exit to freecam
-    if (unitList isEqualTo []) exitWith {
-        [0] call FUNC(updateView);
-    };
-
     // First ensure valid unit is selected
     if !(GVAR(camUnit) in GVAR(unitList)) then {
         GVAR(camUnit) = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 
-    if (_newMode == 1) then { // Internal
+    if (GVAR(camMode) == 1) then { // Internal
         // Handle gun cam
         if (GVAR(gunCam)) then {
             GVAR(camUnit) switchCamera "gunner";
@@ -42,4 +40,3 @@ if (_newMode == 0) then { // Free
     GVAR(camera) cameraEffect ["terminate", "back"];
     cameraEffectEnableHUD true;
 };
-

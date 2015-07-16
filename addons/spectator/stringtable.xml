@@ -67,8 +67,12 @@
             <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
         </Key>
 
+        <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_RefreshList">
+            <English>Refresh List</English>
         </Key>
 
         <!-- Keybinds -->

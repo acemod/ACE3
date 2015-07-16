@@ -43,7 +43,8 @@ switch (toLower _mode) do {
         GVAR(camDolly) = [false,false,false,false];
         GVAR(camFocus) = [-1,-1];
         GVAR(camFOV) = 0.7;
-        GVAR(camSpeed) = 0.1;
+        GVAR(camPos) set [2,20];
+        GVAR(camSpeed) = 1;
         GVAR(camTilt) = -10;
         GVAR(camZoom) = 3;
         GVAR(gunCam) = false;
@@ -59,6 +60,8 @@ switch (toLower _mode) do {
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
         [] call FUNC(updateView);
+
+        GVAR(camera) camSetFOV GVAR(camFOV);
 
         // Handle camera movement
         [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
@@ -129,13 +132,13 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_MAP) mapCenterOnCamera false;
 
         // Set text values
-        (_display displayCtrl IDC_FOCUS) ctrlSetText str(GVAR(camFocus));
-        (_display displayCtrl IDC_FOV) ctrlSetText str(GVAR(camFOV));
-        (_display displayCtrl IDC_SPEED) ctrlSetText format ["%1 m/s",GVAR(camSpeed)];
-        (_display displayCtrl IDC_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
+        (_display displayCtrl IDC_TOOL_FOCUS) ctrlSetText str(GVAR(camFocus));
+        (_display displayCtrl IDC_TOOL_FOV) ctrlSetText str(GVAR(camFOV));
+        (_display displayCtrl IDC_TOOL_SPEED) ctrlSetText format ["%1 m/s",GVAR(camSpeed)];
+        (_display displayCtrl IDC_TOOL_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Keep unit tree up to date
-        call FUNC(handleTree);
+        [] call FUNC(handleTree);
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
@@ -223,8 +226,8 @@ switch (toLower _mode) do {
                 GVAR(camDolly) set [3,true];
             };
             case 35: { // H
-                private ["_help","_dsiplay","_show"];
-                _help = _dsiplay displayCtrl IDC_HELP;
+                private ["_help","_show"];
+                _help = _display displayCtrl IDC_HELP;
                 _show = !ctrlShown _help;
 
                 _help ctrlShow _show;

@@ -1,3 +1,4 @@
+class RscButtonMenu;
 class RscControlsGroup;
 class RscMapControl;
 class RscPicture;
@@ -28,11 +29,11 @@ class GVAR(overlay) {
     };
     class controls {
         class compass: RscControlsGroup {
-            idc = IDC_TOOL;
+            idc = IDC_COMP;
             x = safeZoneX;
             y = safeZoneY;
             w = safeZoneW;
-            h = H_PART(1);
+            h = TOOL_H;
             class controls {
                 class compassBack: RscText {
                     x = COMPASS_X;
@@ -85,7 +86,7 @@ class GVAR(overlay) {
             };
         };
         class nameTool: RscText {
-            idc = IDC_NAME;
+            idc = IDC_TOOL_NAME;
             x = safeZoneX;
             y = safeZoneY;
             w = TOOL_W * 2;
@@ -100,7 +101,7 @@ class GVAR(overlay) {
             style = 64;
         };
         class viewTool: nameTool {
-            idc = IDC_VIEW;
+            idc = IDC_TOOL_VIEW;
             x = safeZoneX + TOOL_W * 2 + MARGIN;
             w = TOOL_W;
         };
@@ -109,7 +110,7 @@ class GVAR(overlay) {
             style = 64;
         };
         class clockTool: viewTool {
-            idc = IDC_CLOCK;
+            idc = IDC_TOOL_CLOCK;
             x = safeZoneX + TOOL_W * 3 + MARGIN * 2;
         };
         class clockFrame: clockTool {
@@ -117,7 +118,7 @@ class GVAR(overlay) {
             style = 64;
         };
         class focusTool: viewTool {
-            idc = IDC_FOCUS;
+            idc = IDC_TOOL_FOCUS;
             x = safeZoneX + safeZoneW - TOOL_W * 3 - MARGIN * 2;
         };
         class focusFrame: focusTool {
@@ -125,7 +126,7 @@ class GVAR(overlay) {
             style = 64;
         };
         class fovTool: viewTool {
-            idc = IDC_FOV;
+            idc = IDC_TOOL_FOV;
             x = safeZoneX + safeZoneW - TOOL_W * 2 - MARGIN;
         };
         class fovFrame: fovTool {
@@ -133,7 +134,7 @@ class GVAR(overlay) {
             style = 64;
         };
         class speedTool: viewTool {
-            idc = IDC_SPEED;
+            idc = IDC_TOOL_SPEED;
             x = safeZoneX + safeZoneW - TOOL_W;
         };
         class speedFrame: speedTool {
@@ -145,7 +146,7 @@ class GVAR(overlay) {
             x = safeZoneX;
             y = safezoneY + TOOL_H * 2;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H * 4;
+            h = safeZoneH - TOOL_H * 5;
             borderSize = 1;
             colorBorder[] = {1,1,1,1};
             colorBackground[] = {0.1,0.1,0.1,0.8};
@@ -156,8 +157,17 @@ class GVAR(overlay) {
                 1
             };
             multiselectEnabled = 0;
-            maxHistoryDelay = 0;
+            maxHistoryDelay = -1;
             onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
+        };
+        class unitRefresh: RscButtonMenu {
+            x = safeZoneX;
+            y = safeZoneY + safeZoneH - TOOL_H * 3;
+            w = TOOL_W * 2;
+            h = TOOL_H;
+            sizeEx = TOOL_H;
+            text = CSTRING(RefreshList);
+            action = QUOTE([] call FUNC(handleTree));
         };
         class spectatorMap: RscMapControl {
             idc = IDC_MAP;
@@ -189,7 +199,7 @@ class GVAR(overlay) {
                         "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
                         1
                     };
-                    sizeEx = H_PART(1.2);
+                    sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
                 };
                 class helpColumnLeft: RscStructuredText {
