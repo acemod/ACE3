@@ -51,12 +51,14 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
+    private ["_mainAction", "_slidesAction"];
     {
         // Add MainAction if one does not already exist
         //if !(main interaction already exist) then {
-            _mainAction = ["ACE_MainActions", localize LESTRING(interaction,MainAction), "", {}, {true}] call EFUNC(interact_menu,createAction);
+            _mainAction = ["ACE_MainActions", localize ELSTRING(interaction,MainAction), "", {}, {true}] call EFUNC(interact_menu,createAction);
             [_x, 0, [], _mainAction] call EFUNC(interact_menu,addActionToObject);
         //};
+
         // Add Slides sub-action and populate with images
         _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects,_images,_names,_x,_currentSlideshow], [0,0,0], 2] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
