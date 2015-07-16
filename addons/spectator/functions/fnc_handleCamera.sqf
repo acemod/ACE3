@@ -1,3 +1,19 @@
+/*
+ * Author: SilentSpike
+ * Handles camera manipulation according to input
+ *
+ * Arguments:
+ * None <NIL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [ace_spectator_fnc_handleCamera, 0] call CBA_fnc_addPerFrameHandler;
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 // Kill PFH when display is closed
@@ -43,7 +59,12 @@ switch (GVAR(camMode)) do {
         [GVAR(camera), GVAR(camTilt), GVAR(camBank)] call BIS_fnc_setPitchBank;
     };
     case 1: { // Internal
-        if !(alive GVAR(camUnit)) then {
+        // Update view when state of unit changes
+        if !(
+            (alive GVAR(camUnit)) &&
+            {vehicle GVAR(camUnit) == GVAR(camUnit)} &&
+            {GVAR(camUnit) in GVAR(unitList)}
+        ) then {
             call FUNC(updateView);
         };
     };

@@ -160,6 +160,8 @@ class GVAR(overlay) {
             };
             multiselectEnabled = 0;
             maxHistoryDelay = 1;
+            onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
+            onTreeSelChanged = QUOTE([ARR_2('onTreeSelChanged',_this)] call FUNC(handleInterface));
         };
         class spectatorMap: RscMapControl {
             idc = IDC_MAP;

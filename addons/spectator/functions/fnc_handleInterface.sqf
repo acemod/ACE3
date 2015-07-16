@@ -235,7 +235,6 @@ switch (toLower _mode) do {
                 _show = !ctrlShown _map;
 
                 _map ctrlShow _show;
-                _map mapCenterOnCamera _show;
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
@@ -280,5 +279,31 @@ switch (toLower _mode) do {
         };
 
         true
+    };
+    // Tree events
+    case "ontreedblclick": {
+        if (GVAR(camMode) != 0) then {
+            private ["_sel","_netID"];
+            _sel = _args select 1;
+
+            // Ensure a unit was selected
+            if (count _sel == 2) then {
+                _netID = (_args select 0) tvData _sel;
+                GVAR(camUnit) = objectFromNetId _netID;
+            };
+        };
+        call FUNC(updateView);
+    };
+    case "ontreeselchanged": {
+        if (GVAR(camMode) == 0) then {
+            private ["_sel","_netID"];
+            _sel = _args select 1;
+
+            // Ensure a unit was selected
+            if (count _sel == 2) then {
+                _netID = (_args select 0) tvData _sel;
+                GVAR(camUnit) = objectFromNetId _netID;
+            };
+        };
     };
 };
