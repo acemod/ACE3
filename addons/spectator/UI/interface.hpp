@@ -146,9 +146,9 @@ class GVAR(overlay) {
         class unitTree: RscTree {
             idc = IDC_TREE;
             x = safeZoneX;
-            y = safezoneY + TOOL_H;
+            y = safezoneY + TOOL_H * 2;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H;
+            h = safeZoneH - TOOL_H * 4;
             borderSize = 1;
             colorBorder[] = {1,1,1,1};
             colorBackground[] = {0.1,0.1,0.1,0.8};
@@ -161,7 +161,6 @@ class GVAR(overlay) {
             multiselectEnabled = 0;
             maxHistoryDelay = 1;
             onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
-            onTreeSelChanged = QUOTE([ARR_2('onTreeSelChanged',_this)] call FUNC(handleInterface));
         };
         class spectatorMap: RscMapControl {
             idc = IDC_MAP;

@@ -278,30 +278,20 @@ switch (toLower _mode) do {
     };
     // Tree events
     case "ontreedblclick": {
-        if (GVAR(camMode) != 0) then {
-            private ["_sel","_netID"];
-            _sel = _args select 1;
+        // Update camera view when listbox unit is double clicked on
+        private ["_sel","_netID"];
+        _sel = _args select 1;
 
-            // Ensure a unit was selected
-            if (count _sel == 2) then {
-                _netID = (_args select 0) tvData _sel;
-                GVAR(camUnit) = objectFromNetId _netID;
-            };
-        } else {
-            GVAR(camMode) = 1;
-        };
-        call FUNC(updateView);
-    };
-    case "ontreeselchanged": {
-        if (GVAR(camMode) == 0) then {
-            private ["_sel","_netID"];
-            _sel = _args select 1;
+        // Ensure a unit was selected
+        if (count _sel == 2) then {
+            _netID = (_args select 0) tvData _sel;
+            GVAR(camUnit) = objectFromNetId _netID;
 
-            // Ensure a unit was selected
-            if (count _sel == 2) then {
-                _netID = (_args select 0) tvData _sel;
-                GVAR(camUnit) = objectFromNetId _netID;
+            // Only update camera mode when in free cam
+            if (GVAR(camMode) == 0) then {
+                GVAR(camMode) = 1;
             };
+            call FUNC(updateView);
         };
     };
 };

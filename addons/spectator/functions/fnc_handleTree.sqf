@@ -27,6 +27,9 @@ disableSerialization;
 _display = GETUVAR(GVAR(display),displayNull);
 _ctrl = _display displayCtrl IDC_TREE;
 
+// Cache current selection
+_curSelData = _ctrl tvData (tvCurSel _ctrl);
+
 // Clear the tree
 _ctrl tvDelete [];
 
@@ -52,6 +55,11 @@ _cachedGrps = [];
 
     _ctrl tvAdd [[_node], name _x];
     _ctrl tvSetData [[_node,_index], netID _x];
+
+    // Preserve the previous selection
+    if (_curSelData == (_ctrl tvData [_node,_index])) then {
+        _ctrl tvSetCurSel [_node,_index];
+    };
 
     _ctrl tvSort [[_node],false];
 } forEach GVAR(unitList);
