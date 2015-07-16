@@ -133,6 +133,20 @@ class ACE_Settings {
         value = 2;
         values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
     };
+    class GVAR(useCondition_PAK) {
+        displayName = CSTRING(AdvancedMedicalSettings_useCondition_PAK_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anytime", "Stable"};
+    };
+    class GVAR(useCondition_SurgicalKit) {
+        displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anytime", "Stable"};
+    };
     class GVAR(keepLocalSettingsSynced) {
         typeName = "BOOL";
         value = 1;

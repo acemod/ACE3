@@ -131,7 +131,7 @@
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English></English>
-            <Polish></Polish>
+            <Polish>Moduł ten pozwala na zmianę strony w trakcie gry.</Polish>
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
         </Key>

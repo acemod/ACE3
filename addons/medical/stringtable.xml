@@ -2918,11 +2918,15 @@
             <English>Remote Controlled AI</English>
             <Spanish>IA controlada remotamente</Spanish>
             <Portuguese>IA controlada remotamente</Portuguese>
+            <Polish>Zdalnie sterowane AI</Polish>
+            <Czech>Vzdáleně ovládané AI</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
+            <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
+            <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_disabled">
             <English>Disabled</English>
@@ -3177,13 +3181,23 @@
             <Portuguese>Localizações do KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
-            <English>Where can the personal aid kit be used?</English>
+            <English>Where can the Personal Aid Kit be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann der Erstehilfekasten verwendet werden?</German>
-            <Czech>Kde může být osobní lékárnička použita?</Czech>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
+            <English>Condition PAK</English>
+            <Czech>Podmínka osobní lékárničky</Czech>
+            <Spanish>Condición EPA</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
+            <English>When can the Personal Aid Kit be used?</English>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
+            <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3283,6 +3297,16 @@
             <German>Wo kann der Operationskasten verwendet werden?</German>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
+            <English>Condition Surgical kit (Adv)</English>
+            <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
+            <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
+            <English>When can the Surgical kit be used?</English>
+            <Czech>Kde může být použita chirurgická souprava?</Czech>
+            <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3434,9 +3458,7 @@
             <Portuguese>É médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
-            <English></English>
-            <Russian></Russian>
-            <Polish></Polish>
+            <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
@@ -3608,6 +3630,16 @@
             <Hungarian>Nem</Hungarian>
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_AnyTime">
+            <English>Anytime</English>
+            <Czech>Kdykoli</Czech>
+            <Spanish>Siempre</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Stable">
+            <English>Stable</English>
+            <Czech>Stabilní</Czech>
+            <Spanish>Estable</Spanish>
         </Key>
     </Package>
 </Project>

@@ -6,7 +6,7 @@
 //Singe PFEH to handle execNextFrame and waitAndExec:
 [{
     private ["_entry"];
-    
+
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
         _entry = GVAR(waitAndExecArray) deleteAt 0;
@@ -63,6 +63,10 @@
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+
+if (isServer) then {
+    ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
+};
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {

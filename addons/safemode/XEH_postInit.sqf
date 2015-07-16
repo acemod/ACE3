@@ -14,7 +14,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call EFUNC(common,canUseWeapon) && {currentWeapon ACE_player != binocular ACE_player}) exitWith {false};
 
     // Statement
     [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
