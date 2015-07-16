@@ -581,6 +581,13 @@ class CfgVehicles {
                 selection = "";
                 distance = 2;
                 condition = "true";
+                class ACE_OpenBox {
+                    displayName = CSTRING(OpenBox);
+                    condition = QUOTE(alive _target);
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
+                    showDisabled = 0;
+                    priority = -1;
+                };
             };
         };
         class ACE_SelfActions {};

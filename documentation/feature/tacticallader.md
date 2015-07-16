@@ -12,9 +12,9 @@ Adds a deployable ladder with adjustable height that you can transport on your b
 ## 2. Usage
 
 ### 2.1 Deploying the ladder
-- Self interact <kbd>CTRL</kbd>+<kbd>⊞ Win</kbd> (ACE3 default).
+- Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Deploy ladder`.
-- You can adjust it's position and height by interacting with it <kbd>⊞ Win</kbd> (ACE3 default) and following the instructions on screen.
+- You can adjust it's position and height by interacting with it <kbd>⊞&nbsp;Win</kbd> (ACE3 default) and following the instructions on screen.
 
 ## 3. Dependencies
 

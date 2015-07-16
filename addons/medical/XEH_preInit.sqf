@@ -56,6 +56,7 @@ PREP(isInMedicalFacility);
 PREP(isInMedicalVehicle);
 PREP(isMedic);
 PREP(isMedicalVehicle);
+PREP(isInStableCondition);
 PREP(itemCheck);
 PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
