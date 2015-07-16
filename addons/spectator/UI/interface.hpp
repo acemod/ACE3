@@ -1,6 +1,6 @@
-class RscActivePicture;
 class RscControlsGroup;
 class RscMapControl;
+class RscPicture;
 class RscStructuredText;
 class RscText;
 class RscTree;
@@ -14,7 +14,7 @@ class GVAR(overlay) {
     onKeyDown = QUOTE([ARR_2('onKeyDown',_this)] call FUNC(handleInterface));
     onKeyUp = QUOTE([ARR_2('onKeyUp',_this)] call FUNC(handleInterface));
     class controlsBackground {
-        class crosshair: RscActivePicture {
+        class crosshair: RscPicture {
             idc = 52;
             x = 0.5 - W_PART(2);
             y = 0.5 - H_PART(2);
@@ -45,7 +45,7 @@ class GVAR(overlay) {
             h = TOOL_H;
             colorBackground[] = {0.1,0.1,0.1,1};
         };
-        class compass0_90: RscActivePicture {
+        class compass0_90: RscPicture {
             idc = 90;
             x = 0.5;
             y = safeZoneY;
