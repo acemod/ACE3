@@ -49,7 +49,7 @@ _fnc_renderNearbyActions = {
                         _action = _x;
                         if ([_target, _action] call FUNC(renderBaseMenu)) then {
                             _numInteractions = _numInteractions + 1;
-                            GVAR(foundActions) pushBack [_target, _action];
+                            GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
                         };
                     };
                 } forEach GVAR(objectActionList);
@@ -61,7 +61,7 @@ _fnc_renderNearbyActions = {
                     // Try to render the menu
                     if ([_target, _action] call FUNC(renderBaseMenu)) then {
                         _numInteractions = _numInteractions + 1;
-                        GVAR(foundActions) pushBack [_target, _action];
+                        GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
                     };
                 } forEach _classActions;
 
@@ -78,7 +78,10 @@ _fnc_renderNearbyActions = {
 
 _fnc_renderLastFrameActions = {
     {
-        _x call FUNC(renderBaseMenu);
+        EXPLODE_3_PVT(_x,_target,_action,_objectActionList);
+
+        GVAR(objectActionList) = _objectActionList;
+        [_target, _action] call FUNC(renderBaseMenu);
     } forEach GVAR(foundActions);
 };
 
