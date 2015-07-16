@@ -222,6 +222,13 @@ switch (toLower _mode) do {
             case 32: { // D
                 GVAR(camDolly) set [3,true];
             };
+            case 35: { // H
+                private ["_help","_dsiplay","_show"];
+                _help = _dsiplay displayCtrl IDC_HELP;
+                _show = !ctrlShown _help;
+
+                _help ctrlShow _show;
+            };
             case 44: { // Z
                 GVAR(camBoom) set [1,true];
             };
