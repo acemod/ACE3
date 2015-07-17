@@ -1,5 +1,5 @@
 class RscButtonMenu;
-class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 class RscMapControl;
 class RscPicture;
 class RscStructuredText;
@@ -15,7 +15,7 @@ class GVAR(interface) {
     onKeyDown = QUOTE([ARR_2('onKeyDown',_this)] call FUNC(handleInterface));
     onKeyUp = QUOTE([ARR_2('onKeyUp',_this)] call FUNC(handleInterface));
     class controlsBackground {
-        class mouseHandler: RscControlsGroup {
+        class mouseHandler: RscControlsGroupNoScrollbars {
             x = safeZoneXAbs;
             y = safeZoneY;
             w = safeZoneWAbs;
@@ -28,7 +28,7 @@ class GVAR(interface) {
         };
     };
     class controls {
-        class compass: RscControlsGroup {
+        class compass: RscControlsGroupNoScrollbars {
             idc = IDC_COMP;
             x = safeZoneX;
             y = safeZoneY;
@@ -65,12 +65,12 @@ class GVAR(interface) {
                     x = COMPASS_X + COMPASS_W * 2;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
                 };
-                class compassPin: compassBack {
+                class compassCaret: compassBack {
                     x = COMPASS_X + COMPASS_W * 0.5 - COMPASS_W / 360;
                     w = COMPASS_W / 180;
                     colorBackground[]={1,0,0,1};
                 };
-                class compassLeftBlock: compassPin {
+                class compassLeftBlock: compassCaret {
                     x = 0;
                     w = (safeZoneW - COMPASS_W) * 0.5;
                     colorBackground[] = {0.1,0.1,0.1,1};
@@ -141,7 +141,7 @@ class GVAR(interface) {
             idc = -1;
             style = 64;
         };
-        class unitTools: RscControlsGroup {
+        class unitTools: RscControlsGroupNoScrollbars {
             idc = IDC_UNIT;
             x = safeZoneX;
             y = safeZoneY;
@@ -154,6 +154,7 @@ class GVAR(interface) {
                     y = TOOL_H * 2;
                     w = TOOL_W * 2;
                     h = safeZoneH - TOOL_H * 5;
+                    sizeEx = H_PART(0.8);
                     borderSize = 1;
                     colorBorder[] = {1,1,1,1};
                     colorBackground[] = {0.1,0.1,0.1,0.8};
@@ -164,10 +165,10 @@ class GVAR(interface) {
                         1
                     };
                     multiselectEnabled = 0;
-                    maxHistoryDelay = -1;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
                 };
                 class unitRefresh: RscButtonMenu {
+                    style = 2;
                     x = 0;
                     y = safeZoneH - TOOL_H * 3;
                     w = TOOL_W * 2;
@@ -185,7 +186,7 @@ class GVAR(interface) {
             w = safeZoneW;
             h = safeZoneH;
         };
-        class helpBox: RscControlsGroup {
+        class helpBox: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;
             x = 0.5 - W_PART(12);
             y = 0.5 - H_PART(12);
