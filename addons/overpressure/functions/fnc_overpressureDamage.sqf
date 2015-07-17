@@ -16,10 +16,14 @@
 
 EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon,_magazine);
 
-private ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
-_overpressureAngle = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
-_overpressureRange = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
-_overpressureDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
+private ["_var","_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
+_varName = (QGVAR(values) + _magazine);
+_var = if (isNil _varName) then {
+    [_weapon,_magazine] call FUNC(cacheOverPressureVales);
+} else {
+    missionNameSpace getVariable _varName;
+};
+_var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 
 TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 

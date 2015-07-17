@@ -29,8 +29,5 @@ if (_damage == 0) then {
     _range = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
 };
 
-missionNameSpace setVariable [(QGVAR(Angle) + _magazine),_angle];
-missionNameSpace setVariable [(QGVAR(Range) + _magazine),_range];
-missionNameSpace setVariable [(QGVAR(Damage) + _magazine),_damage];
-
+missionNameSpace setVariable [(QGVAR(values) + _magazine),[_angle, _range,_damage]];
 [_angle,_range,_damage]

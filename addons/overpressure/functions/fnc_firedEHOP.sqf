@@ -16,6 +16,13 @@
  * None
  */
 
- if (missionNameSpace getVariable [(QGVAR(Damage) + _this select 1),(([_this select 1,_this select 5] call DFUNC(cacheOverPressureVales)) select 2)]) then {
+private ["_var","_varName"];
+_varName = (QGVAR(values) + _this select 1);
+_var = if (isNil _varName) then {
+    ([_this select 1,_this select 5] call FUNC(cacheOverPressureVales)) select 2;
+} else {
+    (missionNameSpace getVariable _varName) select 2;
+};
+ if (_var > 0) then {
     _this call DFUNC(fireOverpressureZone)
  };

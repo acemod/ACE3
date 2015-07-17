@@ -28,10 +28,14 @@ private ["_position", "_direction"];
 _position = getPosASL _projectile;
 _direction = vectorDir _projectile;
 
-private ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
-_dangerZoneDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
-_dangerZoneAngle = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
-_dangerZoneRange = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
+private ["_var","_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+_varName = (QGVAR(values) + _magazine);
+_var = if (isNil _varName) then {
+    [_weapon,_magazine] call FUNC(cacheOverPressureVales);
+} else {
+    missionNameSpace getVariable _varName;
+};
+_var params["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
 
 // Damage to others
 private "_affected";

@@ -28,10 +28,15 @@ private ["_position", "_direction"];
 _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
-private ["_backblastAngle", "_backblastRange", "_backblastDamage"];
-_backblastAngle = missionNameSpace getVariable [(QGVAR(Angle) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 0];
-_backblastRange = missionNameSpace getVariable [(QGVAR(Range) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 1];
-_backblastDamage = missionNameSpace getVariable [(QGVAR(Damage) + _magazine),([_weapon,_magazine] call FUNC(cacheOverPressureVales)) select 2];
+private ["_var","_varName","_backblastAngle", "_backblastRange", "_backblastDamage"];
+_varName = (QGVAR(values) + _magazine);
+_var = if (isNil _varName) then {
+    [_weapon,_magazine] call FUNC(cacheOverPressureVales);
+} else {
+    missionNameSpace getVariable _varName;
+};
+_var params["_backblastAngle","_backblastRange","_backblastDamage"];
+
 
 // Damage to others
 private "_affected";
