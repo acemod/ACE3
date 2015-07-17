@@ -33,8 +33,8 @@ tvClear _ctrl;
 // Update the tree from the unit list
 _cachedGrps = [];
 {
-    // Exclude any currently dead units
-    if ((alive _x) && !(_x getVariable [QGVAR(isSpectator), false])) then {
+    // Exclude any currently dead/disabled units
+    if ((alive _x) && (simulationEnabled _x) && !(_x getVariable [QGVAR(isSpectator), false])) then {
         _grp = group _x;
         _node = 0;
         // If group already exists, find existing node

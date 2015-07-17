@@ -40,22 +40,18 @@ class CfgVehicles {
                 description = CSTRING(sides_Description);
                 typeName = "NUMBER";
                 class values {
-                    class none {
-                        name = "$STR_Special_None";
+                    class player {
+                        name = CSTRING(sides_player);
                         value = 0;
                         default = 1;
                     };
-                    class player {
-                        name = CSTRING(sides_player);
-                        value = 1;
-                    };
                     class friendly {
                         name = CSTRING(sides_friendly);
-                        value = 2;
+                        value = 1;
                     };
                     class all  {
                         name = CSTRING(sides_all);
-                        value = 3;
+                        value = 2;
                     };
                 };
             };

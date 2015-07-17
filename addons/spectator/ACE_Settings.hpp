@@ -11,10 +11,6 @@ class ACE_Settings {
     class GVAR(filterSides) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_Special_None", CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_all)};
-    };
-    class GVAR(endMission) {
-        typeName = "BOOL";
-        value = 0;
+        values[] = {CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_all)};
     };
 };
