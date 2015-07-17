@@ -41,16 +41,18 @@ _newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
 // Side filter
 private ["_playerSide","_sides"];
 _playerSide = side group player;
-_sides = [west,east,resistance,civilian];
 
 if (GVAR(filterSides) == 0) then {
     _sides = [_playerSide];
 } else {
-    {
-        if ((_x getFriend _playerSide) < 0.6) then {
-            _sides - [_x];
-        };
-    } forEach _sides;
+    _sides = [west,east,resistance,civilian];
+    if (GVAR(filterSides) == 1) then {
+        {
+            if ((_x getFriend _playerSide) < 0.6) then {
+                _sides = _sides - [_x];
+            };
+        } forEach _sides;
+    };
 };
 
 // Filter units and append to list
