@@ -20,3 +20,6 @@ _killer = _this select 1;
 
 // Remove from group to prevent appearing on HUD upon respawn
 [_unit, true, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);
+
+GVAR(camUnit) = _killer;
+GVAR(camMode) = 2;

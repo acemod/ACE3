@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Start the spectator camera spectator on respawn
+ * Start the interface on respawn
  *
  * Arguments:
  * 0: New unit <OBJECT>

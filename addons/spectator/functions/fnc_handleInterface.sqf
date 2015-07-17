@@ -177,7 +177,7 @@ switch (toLower _mode) do {
         } else {
             GVAR(camZoom) = (GVAR(camZoom) - (_zChange * GVAR(camZoom) * 0.2)) max 0.1;
         };
-        call FUNC(handleCamera);
+        [] call FUNC(handleCamera);
     };
     case "onmousemoving": {
         private ["_x","_y"];
@@ -185,7 +185,7 @@ switch (toLower _mode) do {
         _y = _args select 2;
 
         GVAR(mousePos) = [_x,_y];
-        call FUNC(handleMouse);
+        [] call FUNC(handleMouse);
     };
     // Keyboard events
     case "onkeydown": {

@@ -18,9 +18,7 @@
 
 #include "script_component.hpp"
 
-_newUnits = _this select 0;
-_append = if (count _this > 1) then {_this select 1} else {true};
-_permanent = if (count _this > 2) then {_this select 2} else {false};
+params [["_newUnits",[]],["_append",true,[true]],["_permanent",false,[false]]];
 
 if (_permanent) then {
     if (_append) then {

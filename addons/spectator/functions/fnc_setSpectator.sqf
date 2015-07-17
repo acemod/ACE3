@@ -18,10 +18,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_set","_target"];
-_unit = _this select 0;
-_set = if (count _this > 1) then {_this select 1} else {true};
-_target = if (count _this > 2) then {_this select 2} else {objNull};
+params ["_unit",["_set",true,[true]],["_target",objNull,[objNull]]];
 
 // No change, no service (but allow spectators who respawn to be reset)
 if !(_set || (_unit getVariable [QGVAR(isSpectator), false])) exitWith {};
@@ -47,10 +44,9 @@ if (_set) then {
     [_unit, QGVAR(isSpectator)] call EFUNC(common,hideUnit);
     [_unit, QGVAR(isSpectator)] call EFUNC(common,muteUnit);
 
-    if !(GVAR(modulePos)) then {
-        if !(isNull _target) then {
-            GVAR(camPos) = getPosATL _target;
-        };
+    if !(isNull _target) then {
+        GVAR(camPos) = getPosASL _target;
+        GVAR(camUnit) = _target;
     };
 
     ["open"] call FUNC(handleInterface);
