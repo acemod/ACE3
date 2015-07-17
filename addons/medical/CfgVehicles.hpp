@@ -196,11 +196,19 @@ class CfgVehicles {
             class consumeItem_PAK {
                 displayName = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_Description);
-
                 typeName = "NUMBER";
                 class values {
                     class keep { name = CSTRING(No); value = 0; };
                     class remove { name = CSTRING(Yes); value = 1; default = 1; };
+                };
+            };
+            class useCondition_PAK {
+                displayName = CSTRING(AdvancedMedicalSettings_useCondition_PAK_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
+                typeName = "NUMBER";
+                class values {
+                    class AnyTime { name = CSTRING(AnyTime); value = 0; };
+                    class Stable { name = CSTRING(Stable); value = 1; default = 1; };
                 };
             };
             class useLocation_PAK {
@@ -227,15 +235,23 @@ class CfgVehicles {
                 displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
             };
+            class useCondition_SurgicalKit: useCondition_PAK {
+                displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+                class values {
+                    class AnyTime { name = CSTRING(AnyTime); value = 0; default = 1; };
+                    class Stable { name = CSTRING(Stable); value = 1; };
+                };
+            };
             class healHitPointAfterAdvBandage {
                 displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
-                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);  
+                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class painIsOnlySuppressed {
                 displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
-                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);  
+                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -725,7 +741,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\litter_morphine.p3d));
     };
-
+    class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\));
+    };
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;

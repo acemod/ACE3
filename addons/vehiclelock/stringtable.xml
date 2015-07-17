@@ -139,6 +139,7 @@
             <Spanish>Configuración del cierre del vehiculo</Spanish>
             <German>Fahrzeugsperreinstellungen</German>
             <Czech>Nastavení zámku vozidla</Czech>
+            <Portuguese>Configuração de fechadura do veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>
@@ -146,6 +147,7 @@
             <Spanish>Bloquear inventario del vehículo</Spanish>
             <German>Sperre Fahrzeuginventar</German>
             <Czech>Inventář zamčeného vozidla</Czech>
+            <Portuguese>Bloquear inventário do veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
             <English>Locks the inventory of locked vehicles</English>
@@ -153,6 +155,7 @@
             <Spanish>Bloquea el inventario de los vehículos cerrados</Spanish>
             <German>Sperrt das Inventar von gesperrten Fahrzeugen</German>
             <Czech>Zamknout inventář u zamčených vozidel</Czech>
+            <Portuguese>Bloqueia o inventário de veículos fechados</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
             <English>Vehicle Starting Lock State</English>
@@ -160,6 +163,7 @@
             <Spanish>Estado inicial del cierre en vehículos</Spanish>
             <German>Fahrzeuge spawnen gesperrt</German>
             <Czech>Počáteční stav zámku vozidla</Czech>
+            <Portuguese>Estado inicial da fechadura dos veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
@@ -167,6 +171,7 @@
             <Spanish>Establece el estado de cierre para todos los vehículos (elimina estados de cierre ambiguos)</Spanish>
             <German>Setze Sperrstatus für alle Fahrzeuge (entfernt unklare Sperrzustände)</German>
             <Czech>Nastavit stav zámku u všech vozidel (odstraňuje nejednoznačné stavy zámků)</Czech>
+            <Portuguese>Definir estados de fechadura para todos os veículos (remove estados de fechadura ambíguos)</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
@@ -174,6 +179,7 @@
             <Spanish>Está</Spanish>
             <German>Unverändert</German>
             <Czech>Jak je</Czech>
+            <Portuguese>Como está</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
             <English>Locked</English>
@@ -181,6 +187,7 @@
             <Spanish>Cerrado</Spanish>
             <German>Gesperrt</German>
             <Czech>Zamčeno</Czech>
+            <Portuguese>Fechado</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
             <English>Unlocked</English>
@@ -188,6 +195,7 @@
             <Spanish>Abierto</Spanish>
             <German>Offen</German>
             <Czech>Odemčeno</Czech>
+            <Portuguese>Aberto</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
             <English>Default Lockpick Strength</English>
@@ -195,6 +203,7 @@
             <Spanish>Durabilidad de la ganzua por defecto</Spanish>
             <German>Standard-Pick-Stärke</German>
             <Czech>Výchozí síla páčidla</Czech>
+            <Portuguese>Durabilidade padrão da chave micha</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>
@@ -202,6 +211,7 @@
             <Spanish>Tiempo por defecto para forzar cerradura (en segundos). Por defecto: 10</Spanish>
             <German>Standardzeit um ein Schloss zu knacken (in Sekunden). Standard: 10</German>
             <Czech>Čas k vypáčení zámku (v sekundách). Výchozí: 10</Czech>
+            <Portuguese>Tempo padrão para forçar a fechadura (em segundos). Padrão: 10</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.&lt;br /&gt;Source: vehiclelock.pbo</English>
@@ -209,6 +219,7 @@
             <Spanish>Ajustes de la durabilidad de la ganzua y el estado inicial del cierre de los vehículos. Elimina estados de cierre ambiguos.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
             <German>Einstellungen für Pick-Stärke und anfänglichen Fahrzeugsperrzustand. Entfernt unklare Sperrzustände.&lt;br /&gt;Quelle: vehiclelock.pbo</German>
             <Czech>Nastavení síly vypáčení a počáteční stav zámku vozidla. Odstraňuje nejednoznačné stavy zámků.&lt;br /&gt;Zdroj: vehiclelock.pbo</Czech>
+            <Portuguese>Definições para a durabilidade da chave micha e estado inicial da fechadura do veículo. Remove estados de fechadura ambíguas &lt;br /&gt; Fonte: Vehiclelock.pbo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
@@ -216,6 +227,7 @@
             <Spanish>Asignacion de la llave del vehículo</Spanish>
             <German>Fahrzeugschlüsselzuweisung</German>
             <Czech>Přidělení klíče k vozidlu</Czech>
+            <Portuguese>Atribuição de chave de veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
@@ -223,6 +235,7 @@
             <Spanish>Sincronizar con vehiculos y jugadores. Distribuirá llaves personalizadas a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
             <German>Synchronisiere mit Fahrzeugen und Spielern. Wird eigene Schlüssel an Spieler für jedes synchronisierte Fahrzeuge aushändigen. Nur gültig für am Missionsstart existierende Fahrzeuge.&lt;br /&gt;Quelle: vehiclelock.pbo</German>
             <Czech>Synchronizuj s vozidly a hráči. Hráč dostane klíč ke každému synchonizovanému vozidlu. Platné pouze pro objekty přítomné na začátku mise.&lt;br /&gt;Zdroj: vehiclelock.pbo</Czech>
+            <Portuguese>Sincronizar com veículos e jogadores. Irá distribuir chaves personalizadas para os jogadores para cada veículo sincronizado. Só é válido para objetos presentes no início da missão &lt;br /&gt; Fonte: vehiclelock.pbo</Portuguese>
         </Key>
     </Package>
 </Project>

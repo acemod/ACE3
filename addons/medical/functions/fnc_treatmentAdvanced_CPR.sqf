@@ -23,7 +23,7 @@ _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
 
-// TODO replace by event system instead
-[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_CPRLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-
+if (alive _target && {(_target getvariable [QGVAR(inCardiacArrest), false] || _target getvariable [QGVAR(inReviveState), false])}) then {
+    [[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_CPRLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+};
 true;

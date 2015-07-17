@@ -98,9 +98,13 @@ class CfgWeapons {
             mass = 1;
         };
     };
+
     class ACE_plasmaIV: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(Plasma_IV);
+        model = QUOTE(PATHTOF(data\IVBag_1000ml.p3d));
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_plasma_1000ml_ca.paa)) };
         picture = QUOTE(PATHTOF(ui\items\plasmaIV_x_ca.paa));
         descriptionShort = CSTRING(Plasma_IV_Desc_Short);
         descriptionUse = CSTRING(Plasma_IV_Desc_Use);
@@ -110,21 +114,27 @@ class CfgWeapons {
     };
     class ACE_plasmaIV_500: ACE_plasmaIV {
         displayName = CSTRING(Plasma_IV_500);
+        model = QUOTE(PATHTOF(data\IVBag_500ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_plasma_500ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_plasmaIV_250: ACE_plasmaIV {
         displayName = CSTRING(Plasma_IV_250);
+        model = QUOTE(PATHTOF(data\IVBag_250ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_plasma_250ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
     };
     class ACE_bloodIV: ACE_ItemCore {
         scope = 2;
-        model = "\A3\Structures_F_EPA\Items\Medical\BloodBag_F.p3d";
+        model = QUOTE(PATHTOF(data\IVBag_1000ml.p3d));
         displayName = CSTRING(Blood_IV);
         picture = QUOTE(PATHTOF(ui\items\bloodIV_x_ca.paa));
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_blood_1000ml_ca.paa)) };
         descriptionShort = CSTRING(Blood_IV_Desc_Short);
         descriptionUse = CSTRING(Blood_IV_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
@@ -133,12 +143,16 @@ class CfgWeapons {
     };
     class ACE_bloodIV_500: ACE_bloodIV {
         displayName = CSTRING(Blood_IV_500);
+        model = QUOTE(PATHTOF(data\IVBag_500ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_blood_500ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_bloodIV_250: ACE_bloodIV {
         displayName = CSTRING(Blood_IV_250);
+        model = QUOTE(PATHTOF(data\IVBag_250ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_blood_250ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
@@ -146,6 +160,9 @@ class CfgWeapons {
     class ACE_salineIV: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(Saline_IV);
+        model = QUOTE(PATHTOF(data\IVBag_1000ml.p3d));
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_saline_1000ml_ca.paa)) };
         picture = QUOTE(PATHTOF(ui\items\salineIV_x_ca.paa));
         descriptionShort = CSTRING(Saline_IV_Desc_Short);
         descriptionUse = CSTRING(Saline_IV_Desc_Use);
@@ -155,12 +172,16 @@ class CfgWeapons {
     };
     class ACE_salineIV_500: ACE_salineIV {
         displayName = CSTRING(Saline_IV_500);
+        model = QUOTE(PATHTOF(data\IVBag_500ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_saline_500ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 5;
         };
     };
     class ACE_salineIV_250: ACE_salineIV {
         displayName = CSTRING(Saline_IV_250);
+        model = QUOTE(PATHTOF(data\IVBag_250ml.p3d));
+        hiddenSelectionsTextures[] = { QUOTE(PATHTOF(data\IVBag_saline_250ml_ca.paa)) };
         class ItemInfo: InventoryItem_Base_F {
             mass = 2.5;
         };
@@ -168,6 +189,7 @@ class CfgWeapons {
     class ACE_quikclot: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(QuikClot_Display);
+        model = QUOTE(PATHTOF(data\QuikClot.p3d))
         picture = QUOTE(PATHTOF(ui\items\quickclot_x_ca.paa));
         descriptionShort = CSTRING(QuikClot_Desc_Short);
         descriptionUse = CSTRING(QuikClot_Desc_Use);
