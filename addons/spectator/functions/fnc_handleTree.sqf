@@ -25,7 +25,7 @@ if !(isNil QGVAR(treePFH)) then {
 // Fetch tree
 disableSerialization;
 _display = GETUVAR(GVAR(display),displayNull);
-_ctrl = _display displayCtrl IDC_TREE;
+_ctrl = (_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE;
 
 // Cache current selection
 _curSelData = _ctrl tvData (tvCurSel _ctrl);
@@ -77,7 +77,7 @@ GVAR(treePFH) = [{
 
     disableSerialization;
     _display = GETUVAR(GVAR(display),displayNull);
-    _ctrl = _display displayCtrl IDC_TREE;
+    _ctrl = (_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE;
 
     _nodes = (_ctrl tvCount []) - 1;
     for "_n" from 0 to _nodes do {
@@ -88,7 +88,7 @@ GVAR(treePFH) = [{
 
             if (isNull _unit || !alive _unit) then {
                 _ctrl tvDelete [_n,_i];
-                GVAR(unitList) = GVAR(unitList) - [_unit];
+                [[_unit],false] call FUNC(updateUnits);
             };
         };
     };

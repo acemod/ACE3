@@ -70,7 +70,7 @@ switch (toLower _mode) do {
         [allUnits] call FUNC(updateUnits);
 
         // Create the dialog
-        createDialog QGVAR(overlay);
+        createDialog QGVAR(interface);
 
         // Cache and disable nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -202,7 +202,7 @@ switch (toLower _mode) do {
             };
             case 14: { // Backspace
                 private ["_tree","_show"];
-                _tree = _display displayCtrl IDC_TREE;
+                _tree = _display displayCtrl IDC_UNIT;
                 _show = !ctrlShown _tree;
 
                 _tree ctrlShow _show;

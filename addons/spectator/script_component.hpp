@@ -29,12 +29,16 @@
 #define COMPASS_X (safeZoneW * 0.5 - (COMPASS_W * 0.5))
 
 // IDCs
-#define IDC_TOOL 3000
 #define IDC_COMP 4490
-#define IDC_TREE 6187
-#define IDC_MAP 6791
-#define IDC_HELP 7631
+#define IDC_COMP_0 5000
+#define IDC_COMP_90 5090
+#define IDC_COMP_180 5180
+#define IDC_COMP_270 5270
 
+#define IDC_HELP 7631
+#define IDC_MAP 6791
+
+#define IDC_TOOL 3000
 #define IDC_TOOL_CLOCK 3003
 #define IDC_TOOL_FOCUS 3004
 #define IDC_TOOL_FOV 3005
@@ -42,7 +46,5 @@
 #define IDC_TOOL_SPEED 3006
 #define IDC_TOOL_VIEW 3002
 
-#define IDC_COMP_0 5000
-#define IDC_COMP_90 5090
-#define IDC_COMP_180 5180
-#define IDC_COMP_270 5270
+#define IDC_UNIT 6002
+#define IDC_UNIT_TREE 6187

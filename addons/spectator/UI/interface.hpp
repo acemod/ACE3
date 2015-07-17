@@ -6,7 +6,7 @@ class RscStructuredText;
 class RscText;
 class RscTree;
 
-class GVAR(overlay) {
+class GVAR(interface) {
     idd = 12249;
     enableSimulation = 1;
     movingEnable = 0;
@@ -141,33 +141,42 @@ class GVAR(overlay) {
             idc = -1;
             style = 64;
         };
-        class unitTree: RscTree {
-            idc = IDC_TREE;
+        class unitTools: RscControlsGroup {
+            idc = IDC_UNIT;
             x = safeZoneX;
-            y = safezoneY + TOOL_H * 2;
+            y = safeZoneY + TOOL_H * 2;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H * 5;
-            borderSize = 1;
-            colorBorder[] = {1,1,1,1};
-            colorBackground[] = {0.1,0.1,0.1,0.8};
-            colorSelect[] = {
-                "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-                1
+            h = safeZoneH - TOOL_H * 4;
+            class controls {
+                class unitTree: RscTree {
+                    idc = IDC_UNIT_TREE;
+                    x = 0;
+                    y = 0;
+                    w = TOOL_W * 2;
+                    h = safeZoneH - TOOL_H * 5;
+                    borderSize = 1;
+                    colorBorder[] = {1,1,1,1};
+                    colorBackground[] = {0.1,0.1,0.1,0.8};
+                    colorSelect[] = {
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
+                        1
+                    };
+                    multiselectEnabled = 0;
+                    maxHistoryDelay = -1;
+                    onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
+                };
+                class unitRefresh: RscButtonMenu {
+                    x = 0;
+                    y = safeZoneY + safeZoneH - TOOL_H * 3;
+                    w = TOOL_W * 2;
+                    h = TOOL_H;
+                    sizeEx = TOOL_H;
+                    text = CSTRING(RefreshList);
+                    action = QUOTE([] call FUNC(handleTree));
+                };
             };
-            multiselectEnabled = 0;
-            maxHistoryDelay = -1;
-            onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
-        };
-        class unitRefresh: RscButtonMenu {
-            x = safeZoneX;
-            y = safeZoneY + safeZoneH - TOOL_H * 3;
-            w = TOOL_W * 2;
-            h = TOOL_H;
-            sizeEx = TOOL_H;
-            text = CSTRING(RefreshList);
-            action = QUOTE([] call FUNC(handleTree));
         };
         class spectatorMap: RscMapControl {
             idc = IDC_MAP;
