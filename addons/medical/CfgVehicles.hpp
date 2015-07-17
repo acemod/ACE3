@@ -741,7 +741,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\litter_morphine.p3d));
     };
-
+    class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\));
+    };
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;
