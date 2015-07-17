@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params [["_newMode",GVAR(camMode)]];
+params [["_newMode",GVAR(camMode)],["_newUnit",GVAR(camUnit)]];
 
 // Reset gun cam if mode is changing
 if (_newMode != GVAR(camMode)) then {
@@ -11,6 +11,7 @@ if (_newMode != GVAR(camMode)) then {
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
     GVAR(camMode) = 0;
+    GVAR(camUnit) = objNull;
 };
 
 if (GVAR(camMode) == 0) then { // Free
@@ -21,20 +22,22 @@ if (GVAR(camMode) == 0) then { // Free
     cameraEffectEnableHUD false;
 } else {
     // First ensure valid unit is selected
-    if !(GVAR(camUnit) in GVAR(unitList)) then {
-        GVAR(camUnit) = GVAR(unitList) select floor(random(count GVAR(unitList)));
+    if !(_newUnit in GVAR(unitList)) then {
+        _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 
     if (GVAR(camMode) == 1) then { // Internal
         // Handle gun cam
         if (GVAR(gunCam)) then {
-            GVAR(camUnit) switchCamera "gunner";
+            _newUnit switchCamera "gunner";
         } else {
-            GVAR(camUnit) switchCamera "internal";
+            _newUnit switchCamera "internal";
         };
     } else { // External
-        GVAR(camUnit) switchCamera "external";
+        _newUnit switchCamera "external";
     };
+
+    GVAR(camUnit) = _newUnit;
 
     // Terminate camera view
     GVAR(camera) cameraEffect ["terminate", "back"];

@@ -299,8 +299,7 @@ switch (toLower _mode) do {
                 _newMode = [2,2,1] select GVAR(camMode);
             };
 
-            GVAR(camUnit) = _newUnit;
-            [_newMode] call FUNC(updateView);
+            [_newMode,_newUnit] call FUNC(updateView);
         };
     };
 };

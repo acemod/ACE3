@@ -170,7 +170,6 @@ class GVAR(interface) {
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
                 };
                 class unitRefresh: RscButtonMenu {
-                    style = 2;
                     x = 0;
                     y = safeZoneH - TOOL_H * 3;
                     w = TOOL_W * 2;
