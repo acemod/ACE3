@@ -169,7 +169,7 @@ class GVAR(interface) {
                 };
                 class unitRefresh: RscButtonMenu {
                     x = 0;
-                    y = safeZoneY + safeZoneH - TOOL_H * 3;
+                    y = safeZoneH - TOOL_H * 5;
                     w = TOOL_W * 2;
                     h = TOOL_H;
                     sizeEx = TOOL_H;
