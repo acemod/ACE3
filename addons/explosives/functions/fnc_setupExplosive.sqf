@@ -37,6 +37,7 @@ _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(plac
 (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _p3dModel;
 
+//Make sure it has a trigger that works when attached (eg, no tripwires that only do pressurePlate)
 _isAttachable = false;
 _supportedTriggers = getArray (configFile >> "CfgMagazines" >> _magClassname >> "ACE_Triggers" >> "SupportedTriggers");
 {
@@ -47,7 +48,6 @@ _supportedTriggers = getArray (configFile >> "CfgMagazines" >> _magClassname >> 
 GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
 GVAR(TweakedAngle) = 0;
-
 
 [{
     BEGIN_COUNTER(pfeh);
@@ -80,12 +80,19 @@ GVAR(TweakedAngle) = 0;
     _attachVehicle = objNull;
 
 
-    if (_isAttachable && _badPosition && {!isNull cursorTarget} && {(cursorTarget isKindOf "Car")}) then {
-        _attachVehicle = cursorTarget;
-        if ([0.05] call _testPositionIsValid) then {
+    if (_isAttachable && _badPosition) then {
+        _attachVehicle = objNull;
+        _testBase = _basePosASL vectorAdd _lookDirVector;
+        {
+            _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
+            _intersectsWith = lineIntersectsWith [eyePos _unit, _testPos, _unit];
+            if (count _intersectsWith == 1) exitWith {_attachVehicle = (_intersectsWith select 0);};
+        } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
+        if ((!isNull _attachVehicle) && {[0.05] call _testPositionIsValid} &&
+                {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
             _min = 0.05;
             _max = 1;
-            for "_index" from 0 to 5 do {
+            for "_index" from 0 to 6 do {
                 _distanceFromBase = (_min + _max) / 2;
                 if ([_distanceFromBase] call _testPositionIsValid) then {
                     _min = _distanceFromBase;
@@ -95,13 +102,15 @@ GVAR(TweakedAngle) = 0;
             };
             _badPosition = false;
             _distanceFromBase = ((_min + _max) / 2 + 0.075) min 1;
-            systemChat format ["Attaching, dist %1", _distanceFromBase];
+            systemChat format ["Attaching to %1 dist %2", _attachVehicle, _distanceFromBase];
+        } else {
+            _attachVehicle = objNull;
         };
     };
 
     _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
+    //Don't allow Placing bellow terrain
     if ((getTerrainHeightASL _virtualPosASL) > (_virtualPosASL select 2)) then {
-        systemChat "adjusting height";
         _virtualPosASL set [2, (getTerrainHeightASL _virtualPosASL)];
     };
 
@@ -129,9 +138,10 @@ GVAR(TweakedAngle) = 0;
             _placeAngle = 0;
             _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
             if (isNull _attachVehicle) then {
-                _placeAngle = _cameraAngle - GVAR(TweakedAngle) - 180;
+                _placeAngle = _cameraAngle - GVAR(TweakedAngle) + 180;
                 _expSetupVehicle setPosAsl _virtualPosASL;
                 _expSetupVehicle setDir _placeAngle;
+                _placeAngle = _placeAngle + 180; //CfgAmmos seem to be 180 for some reason
             } else {
                 _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
@@ -139,8 +149,7 @@ GVAR(TweakedAngle) = 0;
                 _expSetupVehicle setVectorDirAndUp [[0,0,-1],[(sin _placeAngle),(cos _placeAngle),0]];
             };
 
-
-            systemChat format ["Attach angel %1", _placeAngle];
+            systemChat format ["Place angel %1", _placeAngle];
 
             _expSetupVehicle setVariable [QGVAR(class), _magClassname, true];
             _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
@@ -172,12 +181,10 @@ GVAR(TweakedAngle) = 0;
                 _modelUp = [0, (cos _angle), (sin _angle)];
                 _modelDir = [cos GVAR(TweakedAngle), sin GVAR(TweakedAngle), 0] vectorCrossProduct _modelUp;
             };
-
             // systemChat format ["Running %1 [%2]", [_modelDir, _modelUp], _attachVehicle];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_modelDir, _modelUp];
         };
     };
-
 
     END_COUNTER(pfeh);
 }, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable]] call CBA_fnc_addPerFrameHandler;

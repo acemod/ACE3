@@ -11,13 +11,21 @@
  * None
  *
  * Example:
- * [_explosive, 150, 90] call ACE_Explosives_fnc_SetPos;
+ * [_explosive, 150, 90] call ACE_Explosives_fnc_setPosition;
  *
  * Public: Yes
  */
 #include "script_component.hpp"
+
 EXPLODE_3_PVT(_this,_explosive,_direction,_pitch);
-_explosive setDir _direction;
-if (_pitch != 0) then {
-    [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);
+
+if (isNull (attachedTo _explosive)) then {
+    _explosive setDir _direction;
+    if (_pitch != 0) then {
+        [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);
+    };
+} else {
+    _explosive setVectorDirAndUp [[0,0,1],[(sin _direction),(cos _direction),0]];
 };
+
+

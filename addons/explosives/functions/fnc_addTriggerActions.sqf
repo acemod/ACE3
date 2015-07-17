@@ -15,10 +15,11 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_hasRequiredItems","_triggerTypes", "_children", "_detonators", "_required", "_magTriggers"];
+private ["_hasRequiredItems","_triggerTypes", "_children", "_detonators", "_required", "_magTriggers", "_isAttached"];
 EXPLODE_2_PVT(_this,_magazine,_explosive);
-_detonators = [ACE_player] call FUNC(getDetonators);
 
+_isAttached = !isNull (attachedTo _explosive);
+_detonators = [ACE_player] call FUNC(getDetonators);
 _triggerTypes = [_magazine] call FUNC(triggerType);
 _magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
 _children = [];
@@ -30,7 +31,7 @@ _children = [];
             _hasRequiredItems = false;
         };
     } count _required;
-    if (_hasRequiredItems) then {
+    if (_hasRequiredItems && {(!_isAttached) || {(getNumber (_x >> "isAttachable")) == 1}}) then {
         _children pushBack
             [
                 [
