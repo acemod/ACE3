@@ -61,6 +61,7 @@ _cachedGrps = [];
         };
 
         _ctrl tvSort [[_node],false];
+        _ctrl tvExpand [_node];
     };
 } forEach GVAR(unitList);
 
