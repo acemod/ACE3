@@ -67,7 +67,7 @@ switch (toLower _mode) do {
         [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
 
         // Populate the unit list
-        [allUnits] call FUNC(updateUnits);
+        [] call FUNC(updateUnits);
 
         // Create the dialog
         createDialog QGVAR(interface);

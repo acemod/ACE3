@@ -1,26 +1,20 @@
 class ACE_Settings {
-    class GVAR(enabled) {
-        value = 0;
+    class GVAR(enabledSystem) {
         typeName = "BOOL";
+        value = 0;
     };
-    class GVAR(limitSide) {
+    class GVAR(filterUnits) {
+        typeName = "SCALAR";
         value = 0;
-        typeName = "BOOL";
+        values[] = {"$STR_Special_None", CSTRING(units_players), CSTRING(units_all)};
     };
-    class GVAR(allowAI) {
+    class GVAR(filterSides) {
+        typeName = "SCALAR";
         value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(tracking) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(modulePos) {
-        value = 0;
-        typeName = "BOOL";
+        values[] = {"$STR_Special_None", CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_all)};
     };
     class GVAR(endMission) {
-        value = 0;
         typeName = "BOOL";
+        value = 0;
     };
 };

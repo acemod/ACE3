@@ -8,7 +8,7 @@ PREP(handleKilled);
 PREP(handleMouse);
 PREP(handleRespawn);
 PREP(handleTree);
-PREP(moduleSpectator);
+PREP(moduleSpectatorSettings);
 PREP(setSpectator);
 PREP(updateUnits);
 PREP(updateView);

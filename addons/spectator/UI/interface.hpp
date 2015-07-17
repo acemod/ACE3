@@ -1,5 +1,6 @@
 class RscButtonMenu;
 class RscControlsGroupNoScrollbars;
+class RscFrame;
 class RscMapControl;
 class RscPicture;
 class RscStructuredText;
@@ -65,15 +66,16 @@ class GVAR(interface) {
                     x = COMPASS_X + COMPASS_W * 2;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
                 };
-                class compassCaret: compassBack {
-                    x = COMPASS_X + COMPASS_W * 0.5 - COMPASS_W / 360;
-                    w = COMPASS_W / 180;
-                    colorBackground[]={1,0,0,1};
+                class compassCaret: RscFrame {
+                    x = COMPASS_X + COMPASS_W * 0.5;
+                    y = 0;
+                    w = 0;
+                    h = TOOL_H;
+                    colorText[] = {1,0,0,1};
                 };
-                class compassLeftBlock: compassCaret {
+                class compassLeftBlock: compassBack {
                     x = 0;
                     w = (safeZoneW - COMPASS_W) * 0.5;
-                    colorBackground[] = {0.1,0.1,0.1,1};
                 };
                 class compassRightBlock: compassLeftBlock {
                     x = COMPASS_X + COMPASS_W;
@@ -81,7 +83,7 @@ class GVAR(interface) {
                 class compassFrame: compassBack {
                     style = 64;
                     shadow=2;
-                    colorText[]={1,1,1,1};
+                    colorText[] = {1,1,1,1};
                 };
             };
         };
@@ -175,7 +177,7 @@ class GVAR(interface) {
                     h = TOOL_H;
                     sizeEx = TOOL_H;
                     text = CSTRING(RefreshList);
-                    action = QUOTE([allUnits] call FUNC(updateUnits));
+                    action = QUOTE([] call FUNC(updateUnits));
                 };
             };
         };

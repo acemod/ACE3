@@ -1,61 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
-        <Key ID="STR_ACE_Spectator_Module_DisplayName">
-            <English>Spectator</English>
-            <Polish>Obserwator</Polish>
-            <Czech>Pozorovatel</Czech>
+        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
+            <English>Spectator Setings</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
-            <English>Enable Spectator</English>
-            <Polish>Aktywuj obserwatora</Polish>
-            <Czech>Povolit pozorovatele</Czech>
+        <Key ID="STR_ACE_Spectator_Settings_Descripton">
+            <English>Configure how the spectator system will operate by default.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Enabled_Description">
-            <English>Begin spectating on player death?</English>
-            <Polish>Włącz obserwatora po śmierci gracza?</Polish>
-            <Czech>Přepnout do pozorovatele po hráčově smrti?</Czech>
+        <Key ID="STR_ACE_Spectator_system_DisplayName">
+            <English>Spectator System</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
-            <English>Player Side Only</English>
-            <Polish>Tylko strona gracza</Polish>
-            <Czech>Pouze strana hráče</Czech>
+        <Key ID="STR_ACE_Spectator_system_Description">
+            <English>Enter spectator mode upon respawn.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_PlayerSide_Description">
-            <English>Only spectate units belonging to player's side?</English>
-            <Polish>Pozwól obserwować jednostki będące tylko po stronie gracza?</Polish>
-            <Czech>Pozorovat pouze jednotky patřící k hráčově straně?</Czech>
+        <Key ID="STR_ACE_Spectator_units_DisplayName">
+            <English>Spectatable Units</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_AI_DisplayName">
-            <English>Spectate AI</English>
-            <Polish>Obserwacja AI</Polish>
-            <Czech>Pozorovat AI</Czech>
+        <Key ID="STR_ACE_Spectator_units_Description">
+            <English>Units automatically made available to spectate.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_AI_Description">
-            <English>Allow spectating of AI units?</English>
-            <Polish>Pozwól obserwować jednostki AI?</Polish>
-            <Czech>Umožnit pozorovat AI jednotky?</Czech>
+        <Key ID="STR_ACE_Spectator_units_players">
+            <English>Only players</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
-            <English>Track Units</English>
-            <Polish>Śledź jednostki</Polish>
-            <Czech>Sledovat jednotky</Czech>
+        <Key ID="STR_ACE_Spectator_units_all">
+            <English>All units</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Tracking_Description">
-            <English>Track units' movements throughout mission?</English>
-            <Polish>Śledź ruch jednostek w trakcie misji?</Polish>
-            <Czech>Sledovat pohyby jednotek napříč misí?</Czech>
+        <Key ID="STR_ACE_Spectator_sides_DisplayName">
+            <English>Spectatable Sides</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Pos_DisplayName">
-            <English>Start Position</English>
-            <Polish>Pozycja startowa</Polish>
-            <Czech>Počáteční pozice</Czech>
+        <Key ID="STR_ACE_Spectator_sides_Description">
+            <English>Sides automatically made available to spectate.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Pos_Description">
-            <English>Use this module as a starting position for spectator camera?</English>
-            <Polish>Użyj pozycji modułu jako pozycje startową dla kamery obserwatora?</Polish>
-            <Czech>Použít tento modul jako počáteční pozici pro pozorovací kameru?</Czech>
+        <Key ID="STR_ACE_Spectator_sides_player">
+            <English>Player side</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_sides_friendly">
+            <English>Friendly sides</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_sides_all">
+            <English>All sides</English>
+        </Key>
+
         <Key ID="STR_ACE_Spectator_End_DisplayName">
             <English>End Mission</English>
             <Polish>Zakończ misję</Polish>
