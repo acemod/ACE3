@@ -144,14 +144,14 @@ class GVAR(interface) {
         class unitTools: RscControlsGroup {
             idc = IDC_UNIT;
             x = safeZoneX;
-            y = safeZoneY + TOOL_H * 2;
+            y = safeZoneY;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H * 4;
+            h = safeZoneH;
             class controls {
                 class unitTree: RscTree {
                     idc = IDC_UNIT_TREE;
                     x = 0;
-                    y = 0;
+                    y = TOOL_H * 2;
                     w = TOOL_W * 2;
                     h = safeZoneH - TOOL_H * 5;
                     borderSize = 1;
@@ -169,7 +169,7 @@ class GVAR(interface) {
                 };
                 class unitRefresh: RscButtonMenu {
                     x = 0;
-                    y = safeZoneH - TOOL_H * 5;
+                    y = safeZoneH - TOOL_H * 3;
                     w = TOOL_W * 2;
                     h = TOOL_H;
                     sizeEx = TOOL_H;
