@@ -1,3 +1,19 @@
+/*
+ * Author: F3 Project, Head, SilentSpike
+ * Processes the change in mouse position for the spectator camera
+ *
+ * Arguments:
+ * None <NIL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [] call ace_spectator_fnc_handleMouse;
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_x","_y","_leftButton","_rightButton","_oldX","_oldY","_deltaX","_deltaY"];

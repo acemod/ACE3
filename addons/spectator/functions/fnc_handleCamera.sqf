@@ -1,5 +1,5 @@
 /*
- * Author: SilentSpike
+ * Author: F3 Project, Head, SilentSpike
  * Handles camera manipulation according to input
  *
  * Arguments:

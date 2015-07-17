@@ -6,8 +6,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"voiper"};
-        authorUrl = "https://github.com/voiperr/";
+        author[] = {"F3 Project","Head","SilentSpike","voiper"};
+        authorUrl = "https://github.com/acemod";
         VERSION_CONFIG;
     };
 };
