@@ -63,6 +63,11 @@ GVAR(no_cams) sort true;
     GVAR(no_cams) set [_forEachIndex, _x select 1];
 } forEach GVAR(no_cams);
 [{
+    //Close monitor if we no longer have the item:
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+        closeDialog 0;
+    };
+
     GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
     {
         if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {_x getHitPointDamage "HitCamera" < 0.25}) then {
