@@ -198,7 +198,7 @@ switch (toLower _mode) do {
 
         switch (_dik) do {
             case 1: { // Esc
-                // Handle esc menu
+               ["close"] call FUNC(handleInterface); // Handle esc menu goes here, currently closes for purposes of testing
             };
             case 14: { // Backspace
                 private ["_tree","_show"];
