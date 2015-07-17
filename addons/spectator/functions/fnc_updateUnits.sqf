@@ -32,15 +32,14 @@ if (_permanent) then {
 };
 
 if (_append) then {
-    _newUnits = _newUnits - GVAR(unitList);
-
     // Append only valid units to the list
     {
         if (
-            (_x isKindOf "CAManBase") &&
-            {(side _x) in [west,east,resistance,civilian]} &&
+            (alive _x) &&
+            {(_x isKindOf "CAManBase")} &&
+            {(side _x) in [west,east,resistance,civilian]} && // Side filter
             {(isPlayer _x) || GVAR(allowAI)} && // AI restriction
-            {(simulationEnabled _x)} && //!isObjectHidden _unit} && // (currently dev branch only)
+            {(simulationEnabled _x) && !isObjectHidden _unit} &&
             {!(_x getVariable [QGVAR(isSpectator), false])} // Who watches the watchmen?
         ) then {
             GVAR(unitList) pushBack _x;
@@ -53,3 +52,5 @@ if (_append) then {
 // Apply whitelist and blacklist
 GVAR(unitList) append GVAR(unitWhitelist);
 GVAR(unitList) = GVAR(unitList) - GVAR(unitBlacklist);
+
+GVAR(unitList) arrayIntersect GVAR(unitList);

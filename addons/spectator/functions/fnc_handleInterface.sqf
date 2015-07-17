@@ -138,7 +138,7 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_TOOL_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Keep unit tree up to date
-        [] call FUNC(handleTree);
+        [FUNC(handleTree), 10] call CBA_fnc_addPerFrameHandler;
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];

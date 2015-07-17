@@ -174,7 +174,7 @@ class GVAR(interface) {
                     h = TOOL_H;
                     sizeEx = TOOL_H;
                     text = CSTRING(RefreshList);
-                    action = QUOTE([] call FUNC(handleTree));
+                    action = QUOTE([allUnits] call FUNC(updateUnits));
                 };
             };
         };
