@@ -244,7 +244,7 @@ switch (toLower _mode) do {
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
-                [[1,2,0] select GVAR(camMode)] call FUNC(updateView);
+                [[2,0,1] select GVAR(camMode)] call FUNC(updateView);
             };
         };
 
@@ -296,7 +296,7 @@ switch (toLower _mode) do {
 
             // When unit is reselected, toggle camera mode
             if (_newUnit == GVAR(camUnit) || GVAR(camMode) == 0) then {
-                _newMode = [1,2,1] select GVAR(camMode);
+                _newMode = [2,2,1] select GVAR(camMode);
             };
 
             GVAR(camUnit) = _newUnit;
