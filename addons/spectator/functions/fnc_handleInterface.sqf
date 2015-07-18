@@ -124,9 +124,10 @@ switch (toLower _mode) do {
         // Initalize the display
         _display = _args select 0;
 
-        // Hide the map
-        (_display displayCtrl IDC_MAP) ctrlShow false;
-        (_display displayCtrl IDC_MAP) mapCenterOnCamera false;
+        // Always show interface and hide map upon opening
+        GVAR(showInterface) = true;
+        GVAR(showMap) = false;
+        [] call FUNC(updateInterface);
 
         // Set text values
         (_display displayCtrl IDC_TOOL_FOCUS) ctrlSetText str(GVAR(camFocus));
@@ -195,20 +196,25 @@ switch (toLower _mode) do {
 
         switch (_dik) do {
             case 1: { // Esc
-               ["close"] call FUNC(handleInterface); // Handle esc menu goes here, currently closes for purposes of testing
+               [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
             };
             case 14: { // Backspace
-                private ["_tree","_show"];
-                _tree = _display displayCtrl IDC_UNIT;
-                _show = !ctrlShown _tree;
-
-                _tree ctrlShow _show;
+                GVAR(showInterface) = !GVAR(showInterface);
+                [] call FUNC(updateInterface);
             };
             case 16: { // Q
                 GVAR(camBoom) set [0,true];
             };
             case 17: { // W
                 GVAR(camDolly) set [0,true];
+            };
+            case 20: { // T
+                GVAR(showTool) = !GVAR(showTool);
+                [] call FUNC(updateInterface);
+            };
+            case 22: { // U
+                GVAR(showUnit) = !GVAR(showUnit);
+                [] call FUNC(updateInterface);
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = true;
@@ -223,21 +229,19 @@ switch (toLower _mode) do {
                 GVAR(camDolly) set [3,true];
             };
             case 35: { // H
-                private ["_help","_show"];
-                _help = _display displayCtrl IDC_HELP;
-                _show = !ctrlShown _help;
-
-                _help ctrlShow _show;
+                GVAR(showHelp) = !GVAR(showHelp);
+                [] call FUNC(updateInterface);
+            };
+            case 37: { // K
+                GVAR(showComp) = !GVAR(showComp);
+                [] call FUNC(updateInterface);
             };
             case 44: { // Z
                 GVAR(camBoom) set [1,true];
             };
             case 50: { // M
-                private ["_map","_show"];
-                _map = _display displayCtrl IDC_MAP;
-                _show = !ctrlShown _map;
-
-                _map ctrlShow _show;
+                GVAR(showMap) = !GVAR(showMap);
+                [] call FUNC(updateInterface);
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar

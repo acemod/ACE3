@@ -79,61 +79,70 @@ class GVAR(interface) {
                 };
             };
         };
-        class nameTool: RscText {
-            idc = IDC_TOOL_NAME;
+        class toolbar: RscControlsGroupNoScrollbars {
+            idc = IDC_TOOL;
             x = safeZoneX;
             y = safeZoneY;
-            w = TOOL_W * 2;
+            w = safeZoneW;
             h = TOOL_H;
-            shadow = 2;
-            colorText[]={COL_FORE};
-            colorBackground[] = {COL_BACK};
-            sizeEx = H_PART(1);
-        };
-        class nameFrame: nameTool {
-            idc = -1;
-            style = 64;
-        };
-        class viewTool: nameTool {
-            idc = IDC_TOOL_VIEW;
-            x = safeZoneX + TOOL_W * 2 + MARGIN;
-            w = TOOL_W;
-        };
-        class viewFrame: viewTool {
-            idc = -1;
-            style = 64;
-        };
-        class clockTool: viewTool {
-            idc = IDC_TOOL_CLOCK;
-            x = safeZoneX + TOOL_W * 3 + MARGIN * 2;
-        };
-        class clockFrame: clockTool {
-            idc = -1;
-            style = 64;
-        };
-        class focusTool: viewTool {
-            idc = IDC_TOOL_FOCUS;
-            x = safeZoneX + safeZoneW - TOOL_W * 3 - MARGIN * 2;
-        };
-        class focusFrame: focusTool {
-            idc = -1;
-            style = 64;
-        };
-        class fovTool: viewTool {
-            idc = IDC_TOOL_FOV;
-            x = safeZoneX + safeZoneW - TOOL_W * 2 - MARGIN;
-        };
-        class fovFrame: fovTool {
-            idc = -1;
-            style = 64;
-        };
-        class speedTool: viewTool {
-            idc = IDC_TOOL_SPEED;
-            x = safeZoneX + safeZoneW - TOOL_W;
-        };
-        class speedFrame: speedTool {
-            idc = -1;
-            style = 64;
+            class controls {
+                class nameTool: RscText {
+                    idc = IDC_TOOL_NAME;
+                    x = 0;
+                    y = 0;
+                    w = TOOL_W * 2;
+                    h = TOOL_H;
+                    shadow = 2;
+                    colorText[]={COL_FORE};
+                    colorBackground[] = {COL_BACK};
+                    sizeEx = H_PART(1);
+                };
+                class nameFrame: nameTool {
+                    idc = -1;
+                    style = 64;
+                };
+                class viewTool: nameTool {
+                    idc = IDC_TOOL_VIEW;
+                    x = TOOL_W * 2 + MARGIN;
+                    w = TOOL_W;
+                };
+                class viewFrame: viewTool {
+                    idc = -1;
+                    style = 64;
+                };
+                class clockTool: viewTool {
+                    idc = IDC_TOOL_CLOCK;
+                    x = TOOL_W * 3 + MARGIN * 2;
+                };
+                class clockFrame: clockTool {
+                    idc = -1;
+                    style = 64;
+                };
+                class focusTool: viewTool {
+                    idc = IDC_TOOL_FOCUS;
+                    x = safeZoneW - TOOL_W * 3 - MARGIN * 2;
+                };
+                class focusFrame: focusTool {
+                    idc = -1;
+                    style = 64;
+                };
+                class fovTool: viewTool {
+                    idc = IDC_TOOL_FOV;
+                    x = safeZoneW - TOOL_W * 2 - MARGIN;
+                };
+                class fovFrame: fovTool {
+                    idc = -1;
+                    style = 64;
+                };
+                class speedTool: viewTool {
+                    idc = IDC_TOOL_SPEED;
+                    x = safeZoneW - TOOL_W;
+                };
+                class speedFrame: speedTool {
+                    idc = -1;
+                    style = 64;
+                };
+            };
         };
         class unitTools: RscControlsGroupNoScrollbars {
             idc = IDC_UNIT;
@@ -153,9 +162,9 @@ class GVAR(interface) {
                     colorBorder[] = {COL_FORE};
                     colorBackground[] = {COL_BACK};
                     colorSelect[] = {
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
                         1
                     };
                     multiselectEnabled = 0;
@@ -167,19 +176,20 @@ class GVAR(interface) {
                     w = TOOL_W * 2;
                     h = TOOL_H;
                     sizeEx = TOOL_H;
+                    colorBackground[] = {COL_FORE_D};
                     text = CSTRING(RefreshList);
                     action = QUOTE([] call FUNC(updateUnits));
                 };
             };
         };
-        class spectatorMap: RscMapControl {
+        class mapOverlay: RscMapControl {
             idc = IDC_MAP;
             x = safeZoneX;
-            y = safeZoneY + TOOL_H;
+            y = safeZoneY;
             w = safeZoneW;
             h = safeZoneH;
         };
-        class helpBox: RscControlsGroupNoScrollbars {
+        class helpSplash: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;
             x = 0.5 - W_PART(12);
             y = 0.5 - H_PART(12);
@@ -196,12 +206,7 @@ class GVAR(interface) {
                 class helpTitle: helpBack {
                     h = H_PART(1);
                     colorText[]={COL_FORE};
-                    colorBackground[] = {
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-                        1
-                    };
+                    colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
                 };

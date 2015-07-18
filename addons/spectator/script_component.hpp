@@ -52,3 +52,4 @@
 // UI colours
 #define COL_BACK 0.1,0.1,0.1,0.8
 #define COL_FORE 1,1,1,1
+#define COL_FORE_D 0.1,0.1,0.1,1
