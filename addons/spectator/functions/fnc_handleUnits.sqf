@@ -23,6 +23,11 @@ if (isNull (GETUVAR(GVAR(display),displayNull))) exitWith { [_this select 1] cal
 GVAR(unitList) = GVAR(unitList) - allDead;
 GVAR(unitList) = GVAR(unitList) - [objNull];
 
+// Camera shouldn't stay on unit that isn't in the list
+if !(GVAR(camUnit) in GVAR(unitList)) then {
+    [0,objNull] call FUNC(updateCamera);
+};
+
 // Fetch tree
 disableSerialization;
 _display = GETUVAR(GVAR(display),displayNull);
@@ -65,10 +70,6 @@ _cachedGrps = [];
     _ctrl tvSort [[_node],false];
     _ctrl tvExpand [_node];
 } forEach GVAR(unitList);
-
-if ((tvCurSel _ctrl) isEqualTo []) then {
-    [0,objNull] call FUNC(updateCamera);
-};
 
 // Sort group nodes by side
 _ctrl tvSortByValue [[],false];
