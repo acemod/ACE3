@@ -28,12 +28,6 @@ switch (toLower _mode) do {
         // Prevent reopening
         if !(isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
 
-        // Initalize preserved variables
-        if (isNil QGVAR(camMode)) then { GVAR(camMode) = 0; };
-        if (isNil QGVAR(camPan)) then { GVAR(camPan) = 0; };
-        if (isNil QGVAR(camPos)) then { GVAR(camPos) = getPos cameraOn; };
-        if (isNil QGVAR(camUnit)) then { GVAR(camUnit) = objNull; };
-
         // Initalize camera variables
         GVAR(camBank) = 0;
         GVAR(camBoom) = [false,false];
@@ -56,7 +50,7 @@ switch (toLower _mode) do {
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
-        [] call FUNC(updateView);
+        [] call FUNC(updateCamera);
 
         GVAR(camera) camSetFOV GVAR(camFOV);
 
@@ -157,7 +151,7 @@ switch (toLower _mode) do {
         if ((_button == 1) && (GVAR(camMode) == 1)) then {
             // In first person toggle sights mode
             GVAR(gunCam) = !GVAR(gunCam);
-            [] call FUNC(updateView);
+            [] call FUNC(updateCamera);
         };
     };
     case "onmousebuttonup": {
@@ -245,7 +239,7 @@ switch (toLower _mode) do {
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
-                [[2,0,1] select GVAR(camMode)] call FUNC(updateView);
+                [[2,0,1] select GVAR(camMode)] call FUNC(updateCamera);
             };
         };
 
@@ -300,7 +294,7 @@ switch (toLower _mode) do {
                 _newMode = [2,2,1] select GVAR(camMode);
             };
 
-            [_newMode,_newUnit] call FUNC(updateView);
+            [_newMode,_newUnit] call FUNC(updateCamera);
         };
     };
 };

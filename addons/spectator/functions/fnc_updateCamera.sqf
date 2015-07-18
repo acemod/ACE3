@@ -11,11 +11,12 @@ if (_newMode != GVAR(camMode)) then {
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
     GVAR(camMode) = 0;
-    GVAR(camUnit) = objNull;
 };
 
 if (GVAR(camMode) == 0) then { // Free
     GVAR(camera) cameraEffect ["internal", "back"];
+
+    GVAR(camUnit) = GVAR(camera);
 
     // HUD stuff
     showCinemaBorder false;

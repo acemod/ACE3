@@ -10,9 +10,15 @@ PREP(handleRespawn);
 PREP(handleTree);
 PREP(moduleSpectatorSettings);
 PREP(setSpectator);
+PREP(updateCamera);
 PREP(updateInterface);
 PREP(updateUnits);
-PREP(updateView);
+
+// Permanent variables
+GVAR(camMode) = 0;
+GVAR(camPan) = 0;
+GVAR(camPos) = getPos cameraOn;
+GVAR(camUnit) = objNull;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;
