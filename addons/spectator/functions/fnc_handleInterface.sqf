@@ -234,10 +234,16 @@ switch (toLower _mode) do {
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
+                // Freecam attachment here, if in external then set cam pos and attach
+            };
+            case 200: { // Up arrow
                 [[2,0,1] select GVAR(camMode)] call FUNC(updateCamera);
             };
             case 203: { // Left arrow
 
+            };
+            case 204: { // Down arrow
+                [[1,2,0] select GVAR(camMode)] call FUNC(updateCamera);
             };
             case 205: { // Right arrow
 

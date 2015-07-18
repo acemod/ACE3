@@ -61,7 +61,7 @@ if (GVAR(filterSides) == 0) then {
         (alive _x) &&
         {(_x isKindOf "CAManBase")} &&
         {(side _x) in _sides} && // Side filter
-        {simulationEnabled _x}
+        {simulationEnabled _x} &&
         {!(_x getVariable [QGVAR(isSpectator), false])} // Who watches the watchmen?
     ) then {
         GVAR(unitList) pushBack _x;
