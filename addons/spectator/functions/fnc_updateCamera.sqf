@@ -11,19 +11,19 @@ if (_newMode != GVAR(camMode)) then {
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
     GVAR(camMode) = 0;
+    GVAR(camUnit) = objNull;
 };
 
 if (GVAR(camMode) == 0) then { // Free
+    // Preserve camUnit value for consistency when manually changing view
     GVAR(camera) cameraEffect ["internal", "back"];
-
-    GVAR(camUnit) = GVAR(camera);
 
     // HUD stuff
     showCinemaBorder false;
     cameraEffectEnableHUD false;
 } else {
-    // First ensure valid unit is selected
-    if !(_newUnit in GVAR(unitList)) then {
+    // When null unit is given choose random
+    if (isNull _newUnit) then {
         _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 

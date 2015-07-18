@@ -59,13 +59,5 @@ switch (GVAR(camMode)) do {
         [GVAR(camera), GVAR(camTilt), GVAR(camBank)] call BIS_fnc_setPitchBank;
     };
     case 1: { // Internal
-        // Update view when state of unit changes
-        if !(
-            (alive GVAR(camUnit)) &&
-            {vehicle GVAR(camUnit) == GVAR(camUnit)} &&
-            {GVAR(camUnit) in GVAR(unitList)}
-        ) then {
-            [] call FUNC(updateCamera);
-        };
     };
 };
