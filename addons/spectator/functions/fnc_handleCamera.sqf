@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 // Kill PFH when not in free cam (or display is closed)
-if ((GVAR(camMode) != 0) || isNull (GETUVAR(GVAR(display),displayNull))) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
+if (isNil QGVAR(camHandler)) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
 _oldPos = getPosASL GVAR(camera);
 _mX = 0;

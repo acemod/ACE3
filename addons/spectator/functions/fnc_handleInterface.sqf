@@ -135,6 +135,8 @@ switch (toLower _mode) do {
         with uiNamespace do {
             GVAR(display) = nil;
         };
+
+        GVAR(camHandler) = nil;
     };
     // Mouse events
     case "onmousebuttondown": {

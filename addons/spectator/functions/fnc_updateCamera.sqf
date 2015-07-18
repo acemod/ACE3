@@ -23,7 +23,7 @@ if (GVAR(camMode) == 0) then { // Free
     cameraEffectEnableHUD false;
 
     // Handle camera movement
-    [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
+    if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
 } else {
     // When null unit is given choose random
     if (isNull _newUnit) then {
@@ -45,5 +45,6 @@ if (GVAR(camMode) == 0) then { // Free
 
     // Terminate camera view
     GVAR(camera) cameraEffect ["terminate", "back"];
+    GVAR(camHandler) = nil;
     cameraEffectEnableHUD true;
 };
