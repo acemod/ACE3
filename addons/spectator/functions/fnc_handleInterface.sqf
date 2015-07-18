@@ -228,11 +228,11 @@ switch (toLower _mode) do {
             case 203: { // Left arrow
 
             };
-            case 204: { // Down arrow
-                [[1,2,0] select GVAR(camMode)] call FUNC(updateCamera);
-            };
             case 205: { // Right arrow
 
+            };
+            case 208: { // Down arrow
+                [[1,2,0] select GVAR(camMode)] call FUNC(updateCamera);
             };
         };
 
