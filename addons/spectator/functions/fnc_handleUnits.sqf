@@ -9,7 +9,7 @@
  * None <NIL>
  *
  * Example:
- * [] call ace_spectator_fnc_handleTree;
+ * [ace_spectator_fnc_handleUnits, 10] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */

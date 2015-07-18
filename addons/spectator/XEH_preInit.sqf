@@ -7,7 +7,7 @@ PREP(handleInterface);
 PREP(handleKilled);
 PREP(handleMouse);
 PREP(handleRespawn);
-PREP(handleTree);
+PREP(handleUnits);
 PREP(moduleSpectatorSettings);
 PREP(setSpectator);
 PREP(updateCamera);
@@ -30,6 +30,5 @@ GVAR(showUnit) = true;
 GVAR(unitList) = [];
 GVAR(unitBlacklist) = [];
 GVAR(unitWhitelist) = [];
-
 
 ADDON = true;

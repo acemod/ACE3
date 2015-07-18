@@ -130,7 +130,7 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_TOOL_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Keep unit tree up to date
-        [FUNC(handleTree), 10] call CBA_fnc_addPerFrameHandler;
+        [FUNC(handleUnits), 10] call CBA_fnc_addPerFrameHandler;
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
@@ -240,6 +240,12 @@ switch (toLower _mode) do {
             };
             case 57: { // Spacebar
                 [[2,0,1] select GVAR(camMode)] call FUNC(updateCamera);
+            };
+            case 203: { // Left arrow
+
+            };
+            case 205: { // Right arrow
+
             };
         };
 
