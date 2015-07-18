@@ -17,6 +17,6 @@
 
 if ((!GVAR(pfeh_running)) || {ACE_Modifier == 0}) exitWith {false};
 
-GVAR(TweakedAngle) = ((GVAR(TweakedAngle) + 5 * _this) + 360) % 360;
+GVAR(TweakedAngle) = ((GVAR(TweakedAngle) + 7.2 * _this) + 360) % 360;
 
 true

@@ -20,13 +20,15 @@
 
 PARAMS_3(_vehicle,_unit,_magClassname);
 
-[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
+private["_isAttachable", "_setupObjectClass", "_supportedTriggers"];
 
 //Get setup object vehicle and model:
 _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> "ACE_SetupObject");
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
+
+[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
@@ -49,12 +51,15 @@ GVAR(pfeh_running) = true;
 GVAR(placeAction) = PLACE_WAITING;
 GVAR(TweakedAngle) = 0;
 
+
 [{
     BEGIN_COUNTER(pfeh);
 
     PARAMS_2(_args,_pfID);
     EXPLODE_4_PVT(_args,_unit,_magClassname,_setupObjectClass,_isAttachable);
 
+    private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testDistance", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
+    
     _lookDirVector = (positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1]);
     _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
 
@@ -79,7 +84,6 @@ GVAR(TweakedAngle) = 0;
     _badPosition = !([_distanceFromBase] call _testPositionIsValid);
     _attachVehicle = objNull;
 
-
     if (_isAttachable && _badPosition) then {
         _attachVehicle = objNull;
         _testBase = _basePosASL vectorAdd _lookDirVector;
@@ -102,7 +106,6 @@ GVAR(TweakedAngle) = 0;
             };
             _badPosition = false;
             _distanceFromBase = ((_min + _max) / 2 + 0.075) min 1;
-            systemChat format ["Attaching to %1 dist %2", _attachVehicle, _distanceFromBase];
         } else {
             _attachVehicle = objNull;
         };
@@ -117,12 +120,14 @@ GVAR(TweakedAngle) = 0;
     //Don't allow placing in a bad position:
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
-    //Cancel on RMB, For some reason this works (when held) but AddActionEventHandler doesn't
-    if ((inputAction "zoomTemp") > 0) then {GVAR(placeAction) = PLACE_CANCEL;};
+    if (((inputAction "zoomTemp") > 0) || //Cancel on RMB, For some reason this works (when held) but AddActionEventHandler doesn't
+            {_unit != ACE_player} ||
+            {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
+            {!(_magClassname in (magazines _unit))}) then {
+        GVAR(placeAction) = PLACE_CANCEL;
+    };
 
-    if ((GVAR(placeAction) != PLACE_WAITING) ||
-            {_unit != ACE_player})            then {
-
+    if (GVAR(placeAction) != PLACE_WAITING) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
 
@@ -160,7 +165,6 @@ GVAR(TweakedAngle) = 0;
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
 
             x3 = _expSetupVehicle;
-            systemChat format ["Mass %1", getMass _expSetupVehicle];
             // x3 setMass 1;
         };
     } else {
@@ -168,6 +172,7 @@ GVAR(TweakedAngle) = 0;
         if (_badPosition || {_screenPos isEqualTo []}) then {
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
         } else {
+            //Show the model on the hud in aprox the same size/location as it will be placed:
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
 
             _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
@@ -181,7 +186,6 @@ GVAR(TweakedAngle) = 0;
                 _modelUp = [0, (cos _angle), (sin _angle)];
                 _modelDir = [cos GVAR(TweakedAngle), sin GVAR(TweakedAngle), 0] vectorCrossProduct _modelUp;
             };
-            // systemChat format ["Running %1 [%2]", [_modelDir, _modelUp], _attachVehicle];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_modelDir, _modelUp];
         };
     };

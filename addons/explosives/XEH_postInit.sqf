@@ -34,4 +34,4 @@ GVAR(CurrentSpeedDial) = 0;
 
 }] call EFUNC(common,addEventHandler);
 
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
+[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(common,addScrollWheelEventHandler);
