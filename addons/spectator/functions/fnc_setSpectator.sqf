@@ -38,7 +38,7 @@ _unit enableSimulation !_set;
 
 if (_set) then {
     // Move and hide the player ASAP to avoid being seen
-    _unit setPosASL (getMarkerPos QGVAR(respawn));
+    _unit setPos (getMarkerPos QGVAR(respawn));
 
     // Ghosts can't talk
     [_unit, QGVAR(isSpectator)] call EFUNC(common,hideUnit);
