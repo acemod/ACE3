@@ -21,6 +21,9 @@ if (GVAR(camMode) == 0) then { // Free
     // HUD stuff
     showCinemaBorder false;
     cameraEffectEnableHUD false;
+
+    // Handle camera movement
+    [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
 } else {
     // When null unit is given choose random
     if (isNull _newUnit) then {

@@ -43,9 +43,7 @@ switch (toLower _mode) do {
         // Initalize display variables
         GVAR(ctrlKey) = false;
         GVAR(mouse) = [false,false];
-        GVAR(mouseDelta) = [0.5,0.5];
         GVAR(mousePos) = [0.5,0.5];
-        GVAR(mousePosOld) = [0.5,0.5];
 
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
@@ -53,9 +51,6 @@ switch (toLower _mode) do {
         [] call FUNC(updateCamera);
 
         GVAR(camera) camSetFOV GVAR(camFOV);
-
-        // Handle camera movement
-        [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler;
 
         // Populate the unit list
         [] call FUNC(updateUnits);
@@ -169,15 +164,13 @@ switch (toLower _mode) do {
         } else {
             GVAR(camZoom) = (GVAR(camZoom) - (_zChange * GVAR(camZoom) * 0.2)) max 0.1;
         };
-        [] call FUNC(handleCamera);
     };
     case "onmousemoving": {
         private ["_x","_y"];
         _x = _args select 1;
         _y = _args select 2;
 
-        GVAR(mousePos) = [_x,_y];
-        [] call FUNC(handleMouse);
+        [_x,_y] call FUNC(handleMouse);
     };
     // Keyboard events
     case "onkeydown": {
