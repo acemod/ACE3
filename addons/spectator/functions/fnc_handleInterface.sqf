@@ -34,9 +34,6 @@ switch (toLower _mode) do {
         if (isNil QGVAR(camPos)) then { GVAR(camPos) = getPos cameraOn; };
         if (isNil QGVAR(camUnit)) then { GVAR(camUnit) = objNull; };
 
-        if (isNil QGVAR(savedSpots)) then { GVAR(savedSpots) = []; };
-        if (isNil QGVAR(savedUnits)) then { GVAR(savedUnits) = []; };
-
         // Initalize camera variables
         GVAR(camBank) = 0;
         GVAR(camBoom) = [false,false];

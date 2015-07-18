@@ -11,7 +11,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-// Interface grid
+// UI grid
 #define SIZEX ((safezoneW / safezoneH) min 1.2)
 #define SIZEY (SIZEX / 1.2)
 #define W_PART(num) (num * (SIZEX / 40))
@@ -19,16 +19,16 @@
 #define X_PART(num) (W_PART(num) + (safezoneX + (safezoneW - SIZEX)/2))
 #define Y_PART(num) (H_PART(num) + (safezoneY + (safezoneH - SIZEY)/2))
 
-// Interface tools
+// UI tools
 #define TOOL_H H_PART(1)
 #define TOOL_W W_PART(5)
 #define MARGIN TOOL_W * 0.05
 
-// Interface compass
+// UI compass
 #define COMPASS_W (TOOL_W * 4)
-#define COMPASS_X (safeZoneW * 0.5 - (COMPASS_W * 0.5))
+#define COMPASS_X (safeZoneX + safeZoneW * 0.5 - COMPASS_W * 0.5)
 
-// IDCs
+// UI IDCs
 #define IDC_COMP 4490
 #define IDC_COMP_0 5000
 #define IDC_COMP_90 5090
@@ -48,3 +48,7 @@
 
 #define IDC_UNIT 6002
 #define IDC_UNIT_TREE 6187
+
+// UI colours
+#define COL_BACK 0.1,0.1,0.1,0.8
+#define COL_FORE 1,1,1,1

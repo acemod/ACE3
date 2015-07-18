@@ -21,7 +21,6 @@ class GVAR(interface) {
             y = safeZoneY;
             w = safeZoneWAbs;
             h = safeZoneH;
-            colorBackground[] = {0,0,0,0};
             onMouseButtonDown = QUOTE([ARR_2('onMouseButtonDown',_this)] call FUNC(handleInterface));
             onMouseButtonUp = QUOTE([ARR_2('onMouseButtonUp',_this)] call FUNC(handleInterface));
             onMouseZChanged = QUOTE([ARR_2('onMouseZChanged',_this)] call FUNC(handleInterface));
@@ -31,21 +30,21 @@ class GVAR(interface) {
     class controls {
         class compass: RscControlsGroupNoScrollbars {
             idc = IDC_COMP;
-            x = safeZoneX;
+            x = COMPASS_X;
             y = safeZoneY;
-            w = safeZoneW;
+            w = COMPASS_W;
             h = TOOL_H;
             class controls {
                 class compassBack: RscText {
-                    x = COMPASS_X;
+                    x = 0;
                     y = 0;
                     w = COMPASS_W;
                     h = TOOL_H;
-                    colorBackground[] = {0.1,0.1,0.1,1};
+                    colorBackground[] = {COL_BACK};
                 };
                 class compass0_90: RscPicture {
                     idc = IDC_COMP_0;
-                    x = COMPASS_X + COMPASS_W * 0.5;
+                    x = COMPASS_W * 0.5;
                     y = 0;
                     w = COMPASS_W * 0.5;
                     h = TOOL_H;
@@ -53,37 +52,30 @@ class GVAR(interface) {
                 };
                 class compass90_180: compass0_90 {
                     idc = IDC_COMP_90;
-                    x = COMPASS_X + COMPASS_W;
+                    x = COMPASS_W;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture270_ca.paa";
                 };
                 class compass180_270: compass0_90 {
                     idc = IDC_COMP_180;
-                    x = COMPASS_X + COMPASS_W * 1.5;
+                    x = COMPASS_W * 1.5;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
                 };
                 class compass270_0: compass0_90 {
                     idc = IDC_COMP_270;
-                    x = COMPASS_X + COMPASS_W * 2;
+                    x = COMPASS_W * 2;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
                 };
                 class compassCaret: RscFrame {
-                    x = COMPASS_X + COMPASS_W * 0.5;
+                    x = COMPASS_W * 0.5;
                     y = 0;
                     w = 0;
                     h = TOOL_H;
-                    colorText[] = {1,0,0,1};
-                };
-                class compassLeftBlock: compassBack {
-                    x = 0;
-                    w = (safeZoneW - COMPASS_W) * 0.5;
-                };
-                class compassRightBlock: compassLeftBlock {
-                    x = COMPASS_X + COMPASS_W;
+                    colorText[] = {COL_FORE};
                 };
                 class compassFrame: compassBack {
                     style = 64;
                     shadow=2;
-                    colorText[] = {1,1,1,1};
+                    colorText[] = {COL_FORE};
                 };
             };
         };
@@ -94,8 +86,8 @@ class GVAR(interface) {
             w = TOOL_W * 2;
             h = TOOL_H;
             shadow = 2;
-            colorText[]={1,1,1,1};
-            colorBackground[] = {0.1,0.1,0.1,1};
+            colorText[]={COL_FORE};
+            colorBackground[] = {COL_BACK};
             sizeEx = H_PART(1);
         };
         class nameFrame: nameTool {
@@ -158,8 +150,8 @@ class GVAR(interface) {
                     h = safeZoneH - TOOL_H * 5;
                     sizeEx = H_PART(0.8);
                     borderSize = 1;
-                    colorBorder[] = {1,1,1,1};
-                    colorBackground[] = {0.1,0.1,0.1,0.8};
+                    colorBorder[] = {COL_FORE};
+                    colorBackground[] = {COL_BACK};
                     colorSelect[] = {
                         "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
                         "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
@@ -199,11 +191,11 @@ class GVAR(interface) {
                     y = 0;
                     w = W_PART(24);
                     h = H_PART(24);
-                    colorBackground[] = {0.1,0.1,0.1,1};
+                    colorBackground[] = {COL_BACK};
                 };
                 class helpTitle: helpBack {
                     h = H_PART(1);
-                    colorText[]={1,1,1,1};
+                    colorText[]={COL_FORE};
                     colorBackground[] = {
                         "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
                         "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
@@ -212,27 +204,6 @@ class GVAR(interface) {
                     };
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
-                };
-                class helpColumnLeft: RscStructuredText {
-                    idc = 5002;
-                    x = 0;
-                    y = H_PART(1);
-                    w = W_PART(6);
-                    h = H_PART(23);
-                    size = H_PART(0.8);
-                    colorBackground[] = {0,0,0,0};
-                };
-                class helpColumnCentreL: helpColumnLeft {
-                    idc = 5003;
-                    x = 0 + W_PART(6);
-                };
-                class helpColumnCentreR: helpColumnLeft {
-                    idc = 5004;
-                    x = 0 + W_PART(12);
-                };
-                class helpColumnRight: helpColumnLeft {
-                    idc = 5005;
-                    x = 0 + W_PART(18);
                 };
             };
         };
