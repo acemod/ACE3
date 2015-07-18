@@ -14,9 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_killer"];
-_unit = _this select 0;
-_killer = _this select 1;
+params ["_unit","_killer"];
 
 // Remove from group to prevent appearing on HUD upon respawn
 [_unit, true, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);

@@ -17,10 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_mode","_args"];
-
-_mode = _this select 0;
-_args = if (count _this > 1) then {_this select 1} else {[]};
+params ["_mode",["_args",[]]];
 
 switch (toLower _mode) do {
     // Safely open/close the interface
@@ -92,10 +89,9 @@ switch (toLower _mode) do {
         GVAR(gunCam) = nil;
 
         // Cleanup display variables
+        GVAR(ctrlKey) = nil;
         GVAR(mouse) = nil;
-        GVAR(mouseDelta) = nil;
         GVAR(mousePos) = nil;
-        GVAR(mousePosOld) = nil;
 
         // Reset nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -106,12 +102,11 @@ switch (toLower _mode) do {
     };
     // Dialog events
     case "onload": {
-        with uiNamespace do {
-            GVAR(display) = _args select 0;
-        };
+        _args params ["_display"];
 
-        // Initalize the display
-        _display = _args select 0;
+        with uiNamespace do {
+            GVAR(display) = _display;
+        };
 
         // Always show interface and hide map upon opening
         GVAR(showInterface) = true;
@@ -140,8 +135,7 @@ switch (toLower _mode) do {
     };
     // Mouse events
     case "onmousebuttondown": {
-        private ["_button"];
-        _button = _args select 1;
+        _args params ["_ctrl","_button"];
         GVAR(mouse) set [_button,true];
 
         // Detect right click
@@ -152,13 +146,12 @@ switch (toLower _mode) do {
         };
     };
     case "onmousebuttonup": {
-        private ["_button"];
-        _button = _args select 1;
+        _args params ["_ctrl","_button"];
+
         GVAR(mouse) set [_button,false];
     };
     case "onmousezchanged": {
-        private ["_zChange"];
-        _zChange = _args select 1;
+        _args params ["_ctrl","_zChange"];
 
         // Scroll to zoom in 3rd person, modifier for FOV
         if (GVAR(ctrlKey)) then {
@@ -168,20 +161,13 @@ switch (toLower _mode) do {
         };
     };
     case "onmousemoving": {
-        private ["_x","_y"];
-        _x = _args select 1;
-        _y = _args select 2;
+        _args params ["_ctrl","_x","_y"];
 
         [_x,_y] call FUNC(handleMouse);
     };
     // Keyboard events
     case "onkeydown": {
-        private ["_display","_dik","_shift","_ctrl","_alt"];
-        _display = _args select 0;
-        _dik = _args select 1;
-        _shift = _args select 2;
-        _ctrl = _args select 3;
-        _alt = _args select 4;
+        _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         switch (_dik) do {
             case 1: { // Esc
@@ -253,11 +239,7 @@ switch (toLower _mode) do {
         true
     };
     case "onkeyup": {
-        private ["_dik","_shift","_ctrl","_alt"];
-        _dik = _args select 1;
-        _shift = _args select 2;
-        _ctrl = _args select 3;
-        _alt = _args select 4;
+        _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         switch (_dik) do {
             case 16: { // Q
@@ -288,11 +270,11 @@ switch (toLower _mode) do {
     // Tree events
     case "ontreedblclick": {
         // Update camera view when listbox unit is double clicked on
-        private ["_sel","_netID","_newUnit","_newMode"];
-        _sel = _args select 1;
+        _args params ["_tree","_sel"];
 
         // Ensure a unit was selected
         if (count _sel == 2) then {
+            private ["_netID","_newUnit","_newMode"];
             _netID = (_args select 0) tvData _sel;
             _newUnit = objectFromNetId _netID;
 

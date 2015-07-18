@@ -1,6 +1,7 @@
 /*
  * Author: SilentSpike
- * Tracks the the unit list and updates the unit tree according to its status
+ * Maintains the unit list and updates the unit tree accordingly
+ * Also updates current camera unit when status changes
  *
  * Arguments:
  * None <NIL>
@@ -27,6 +28,8 @@ GVAR(unitList) = GVAR(unitList) - [objNull];
 if !(GVAR(camUnit) in GVAR(unitList)) then {
     [0,objNull] call FUNC(updateCamera);
 };
+
+private ["_display","_ctrl","_curSelData","_cachedGrps","_grp","_node","_side","_index"];
 
 // Fetch tree
 disableSerialization;

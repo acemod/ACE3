@@ -17,7 +17,7 @@ PREP(updateUnits);
 // Permanent variables
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
-GVAR(camPos) = getPos cameraOn;
+GVAR(camPos) = [worldSize,worldSize,0];
 GVAR(camUnit) = objNull;
 
 GVAR(showComp) = true;

@@ -57,7 +57,7 @@ if (_set) then {
     [_unit, QGVAR(isSpectator)] call EFUNC(common,unhideUnit);
     [_unit, QGVAR(isSpectator)] call EFUNC(common,unmuteUnit);
 
-    private ["_marker"];
+    private "_marker";
     _marker = ["respawn_west","respawn_east","respawn_guerrila","respawn_civilian"] select ([west,east,resistance,civilian] find (side group _unit));
     _unit setPos (getMarkerPos _marker);
 };

@@ -1,3 +1,23 @@
+/*
+ * Author: SilentSpike
+ * Updates the spectator camera view mode and unit
+ *
+ * Arguments:
+ * 0: Camera mode <NUMBER>
+ *   - 0: Free
+ *   - 1: Internal
+ *   - 2: External
+ * 1: Camera unit <OBJECT>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [0,objNull] call ace_spectator_fnc_updateCamera
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params [["_newMode",GVAR(camMode)],["_newUnit",GVAR(camUnit)]];
