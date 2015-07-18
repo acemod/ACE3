@@ -22,15 +22,15 @@ class CfgWeapons {
     class H_HelmetCrew_I: H_HelmetCrew_B {};
 
     class H_CrewHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.75;
-        GVAR(lowerVolume) = 0.70;
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
     class H_CrewHelmetHeli_O: H_CrewHelmetHeli_B {};
     class H_CrewHelmetHeli_I: H_CrewHelmetHeli_B {};
 
     class H_PilotHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.75;
-        GVAR(lowerVolume) = 0.70;
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
     class H_PilotHelmetHeli_O: H_PilotHelmetHeli_B {};
     class H_PilotHelmetHeli_I: H_PilotHelmetHeli_B {};
