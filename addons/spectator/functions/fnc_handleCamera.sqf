@@ -3,7 +3,8 @@
  * Handles free camera manipulation according to input
  *
  * Arguments:
- * None <NIL>
+ * 0: Parameters <ANY>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None <NIL>

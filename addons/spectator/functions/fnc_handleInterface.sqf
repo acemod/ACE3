@@ -49,9 +49,6 @@ switch (toLower _mode) do {
 
         GVAR(camera) camSetFOV GVAR(camFOV);
 
-        // Populate the unit list
-        [] call FUNC(updateUnits);
-
         // Create the dialog
         createDialog QGVAR(interface);
 
@@ -120,7 +117,10 @@ switch (toLower _mode) do {
         (_display displayCtrl IDC_TOOL_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
 
         // Keep unit tree up to date
-        [FUNC(handleUnits), 10] call CBA_fnc_addPerFrameHandler;
+        [FUNC(handleUnits), 20, _display] call CBA_fnc_addPerFrameHandler;
+
+        // Handle the compass heading
+        [FUNC(handleCompass), 0, _display] call CBA_fnc_addPerFrameHandler;
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];

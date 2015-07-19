@@ -56,8 +56,8 @@
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_RefreshList">
-            <English>Refresh Units</English>
+        <Key ID="STR_ACE_Spectator_RandomUnit">
+            <English>Random Unit</English>
         </Key>
 
         <!-- Keybinds -->

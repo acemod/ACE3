@@ -57,12 +57,12 @@ class GVAR(interface) {
                 };
                 class compass180_270: compass0_90 {
                     idc = IDC_COMP_180;
-                    x = COMPASS_W * 1.5;
+                    x = 0;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
                 };
                 class compass270_0: compass0_90 {
                     idc = IDC_COMP_270;
-                    x = COMPASS_W * 2;
+                    x = COMPASS_W * -0.5;
                     text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
                 };
                 class compassCaret: RscFrame {
@@ -147,14 +147,14 @@ class GVAR(interface) {
         class unitTools: RscControlsGroupNoScrollbars {
             idc = IDC_UNIT;
             x = safeZoneX;
-            y = safeZoneY;
+            y = safeZoneY + TOOL_H * 2;
             w = TOOL_W * 2;
             h = safeZoneH;
             class controls {
                 class unitTree: RscTree {
                     idc = IDC_UNIT_TREE;
                     x = 0;
-                    y = TOOL_H * 2;
+                    y = 0;
                     w = TOOL_W * 2;
                     h = safeZoneH - TOOL_H * 5;
                     sizeEx = H_PART(0.8);
@@ -170,15 +170,15 @@ class GVAR(interface) {
                     multiselectEnabled = 0;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
                 };
-                class unitRefresh: RscButtonMenu {
+                class unitRandom: RscButtonMenu {
                     x = 0;
-                    y = safeZoneH - TOOL_H * 3;
+                    y = safeZoneH - TOOL_H * 5;
                     w = TOOL_W * 2;
                     h = TOOL_H;
                     sizeEx = TOOL_H;
                     colorBackground[] = {COL_FORE_D};
-                    text = CSTRING(RefreshList);
-                    action = QUOTE([] call FUNC(updateUnits));
+                    text = CSTRING(RandomUnit);
+                    action = QUOTE([nil,objNull] call FUNC(updateCamera));
                 };
             };
         };

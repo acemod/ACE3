@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(handleCamera);
+PREP(handleCompass);
 PREP(handleInterface);
 PREP(handleKilled);
 PREP(handleMouse);

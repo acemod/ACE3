@@ -1,10 +1,11 @@
 /*
  * Author: SilentSpike
- * Maintains the unit list and updates the unit tree accordingly
+ * Maintains the spectatable unit list and updates the unit tree accordingly
  * Also updates current camera unit when status changes
  *
  * Arguments:
- * None <NIL>
+ * 0: Parameters <ANY>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None <NIL>
@@ -17,23 +18,22 @@
 
 #include "script_component.hpp"
 
+params ["_display"];
+
 // Kill PFH when display is closed
-if (isNull (GETUVAR(GVAR(display),displayNull))) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
+if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
 // Remove all dead and null units from the list
-GVAR(unitList) = GVAR(unitList) - allDead;
-GVAR(unitList) = GVAR(unitList) - [objNull];
+[] call FUNC(updateUnits);
 
 // Camera shouldn't stay on unit that isn't in the list
 if !(GVAR(camUnit) in GVAR(unitList)) then {
     [0,objNull] call FUNC(updateCamera);
 };
 
-private ["_display","_ctrl","_curSelData","_cachedGrps","_grp","_node","_side","_index"];
+private ["_ctrl","_curSelData","_cachedGrps","_grp","_node","_side","_index"];
 
 // Fetch tree
-disableSerialization;
-_display = GETUVAR(GVAR(display),displayNull);
 _ctrl = (_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE;
 
 // Cache current selection
