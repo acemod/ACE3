@@ -34,7 +34,7 @@ if !(GVAR(camUnit) in GVAR(unitList)) then {
 private ["_ctrl","_curSelData","_cachedGrps","_grp","_node","_side","_index"];
 
 // Fetch tree
-_ctrl = (_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE;
+_ctrl = _display displayCtrl IDC_UNIT;
 
 // Cache current selection
 _curSelData = _ctrl tvData (tvCurSel _ctrl);

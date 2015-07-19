@@ -47,7 +47,6 @@
 #define IDC_TOOL_VIEW 3002
 
 #define IDC_UNIT 6002
-#define IDC_UNIT_TREE 6187
 
 // UI colours
 #define COL_BACK 0.1,0.1,0.1,0.8

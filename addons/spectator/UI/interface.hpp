@@ -82,7 +82,7 @@ class GVAR(interface) {
         class toolbar: RscControlsGroupNoScrollbars {
             idc = IDC_TOOL;
             x = safeZoneX;
-            y = safeZoneY;
+            y = safeZoneY + safeZoneH - TOOL_H;
             w = safeZoneW;
             h = TOOL_H;
             class controls {
@@ -144,43 +144,24 @@ class GVAR(interface) {
                 };
             };
         };
-        class unitTools: RscControlsGroupNoScrollbars {
+        class unitTree: RscTree {
             idc = IDC_UNIT;
             x = safeZoneX;
             y = safeZoneY + TOOL_H * 2;
             w = TOOL_W * 2;
-            h = safeZoneH;
-            class controls {
-                class unitTree: RscTree {
-                    idc = IDC_UNIT_TREE;
-                    x = 0;
-                    y = 0;
-                    w = TOOL_W * 2;
-                    h = safeZoneH - TOOL_H * 5;
-                    sizeEx = H_PART(0.8);
-                    borderSize = 1;
-                    colorBorder[] = {COL_FORE};
-                    colorBackground[] = {COL_BACK};
-                    colorSelect[] = {
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
-                        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
-                        1
-                    };
-                    multiselectEnabled = 0;
-                    onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
-                };
-                class unitRandom: RscButtonMenu {
-                    x = 0;
-                    y = safeZoneH - TOOL_H * 5;
-                    w = TOOL_W * 2;
-                    h = TOOL_H;
-                    sizeEx = TOOL_H;
-                    colorBackground[] = {COL_FORE_D};
-                    text = CSTRING(RandomUnit);
-                    action = QUOTE([nil,objNull] call FUNC(updateCamera));
-                };
+            h = safeZoneH - TOOL_H * 4;
+            sizeEx = H_PART(0.8);
+            borderSize = 1;
+            colorBorder[] = {COL_FORE};
+            colorBackground[] = {COL_BACK};
+            colorSelect[] = {
+                "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
+                "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
+                "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
+                1
             };
+            multiselectEnabled = 0;
+            onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
         };
         class mapOverlay: RscMapControl {
             idc = IDC_MAP;
@@ -209,6 +190,17 @@ class GVAR(interface) {
                     colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
+                };
+                class helpExit: RscButtonMenu {
+                    x = W_PART(23);
+                    y = 0;
+                    h = H_PART(1);
+                    w = W_PART(1);
+                    colorText[]={COL_FORE};
+                    colorBackground[] = {COL_FORE_D};
+                    sizeEx = H_PART(1);
+                    text = "X";
+                    action = QUOTE(GVAR(showHelp) = false; [] call FUNC(updateInterface));
                 };
             };
         };
