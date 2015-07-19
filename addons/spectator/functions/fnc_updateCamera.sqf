@@ -22,19 +22,18 @@
 
 params [["_newMode",GVAR(camMode)],["_newUnit",GVAR(camUnit)]];
 
-// Reset gun cam if mode is changing
-if (_newMode != GVAR(camMode)) then {
-    GVAR(gunCam) = false;
-    GVAR(camMode) = _newMode;
-};
-
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
-    GVAR(camMode) = 0;
-    GVAR(camUnit) = objNull;
+    _newMode = 0;
+    _newUnit = objNull;
 };
 
-if (GVAR(camMode) == 0) then { // Free
+// Reset gun cam if not internal
+if (_newMode != 1) then {
+    GVAR(gunCam) = false;
+};
+
+if (_newMode == 0) then { // Free
     // Preserve camUnit value for consistency when manually changing view
     GVAR(camera) cameraEffect ["internal", "back"];
 
@@ -50,7 +49,7 @@ if (GVAR(camMode) == 0) then { // Free
         _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 
-    if (GVAR(camMode) == 1) then { // Internal
+    if (_newMode == 1) then { // Internal
         // Handle gun cam
         if (GVAR(gunCam)) then {
             _newUnit switchCamera "gunner";
@@ -68,3 +67,5 @@ if (GVAR(camMode) == 0) then { // Free
     GVAR(camHandler) = nil;
     cameraEffectEnableHUD true;
 };
+
+GVAR(camMode) = _newMode;
