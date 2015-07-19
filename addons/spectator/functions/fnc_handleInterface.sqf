@@ -142,7 +142,7 @@ switch (toLower _mode) do {
 
         // Scroll to change zoom, modifier for focus
         if (GVAR(ctrlKey)) then {
-            //GVAR(camFocus) set [0,(GVAR(camFocus) select 0) - (_zChange * (GVAR(camFocus) select 0) * 0.2)]
+            GVAR(camFocus) = (GVAR(camFocus) + _zChange) max 0;
         } else {
             GVAR(camZoom) = ((GVAR(camZoom) + (_zChange * 0.1)) max 0.01) min 2;
         };
