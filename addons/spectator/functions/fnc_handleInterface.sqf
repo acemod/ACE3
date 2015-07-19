@@ -122,6 +122,9 @@ switch (toLower _mode) do {
         // Handle the compass heading
         [FUNC(handleCompass), 0, _display] call CBA_fnc_addPerFrameHandler;
 
+        // Handle the clock time
+        [FUNC(handleClock), 1, _display] call CBA_fnc_addPerFrameHandler;
+
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
         //_display displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
