@@ -3,12 +3,12 @@
 ADDON = false;
 
 PREP(handleCamera);
-PREP(handleClock);
 PREP(handleCompass);
 PREP(handleInterface);
 PREP(handleKilled);
 PREP(handleMouse);
 PREP(handleRespawn);
+PREP(handleToolbar);
 PREP(handleUnits);
 PREP(moduleSpectatorSettings);
 PREP(setSpectator);
@@ -17,10 +17,13 @@ PREP(updateInterface);
 PREP(updateUnits);
 
 // Permanent variables
+GVAR(camFocus) = -1;
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
-GVAR(camPos) = [worldSize,worldSize,0];
+GVAR(camPos) = [worldSize * 0.5,worldSize * 0.5,0];
+GVAR(camSpeed) = 1;
 GVAR(camUnit) = objNull;
+GVAR(camZoom) = 1.3;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;

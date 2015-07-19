@@ -29,12 +29,8 @@ switch (toLower _mode) do {
         GVAR(camBank) = 0;
         GVAR(camBoom) = [false,false];
         GVAR(camDolly) = [false,false,false,false];
-        GVAR(camFocus) = [-1,-1];
-        GVAR(camFOV) = 0.7;
         GVAR(camPos) set [2,20];
-        GVAR(camSpeed) = 1;
         GVAR(camTilt) = -10;
-        GVAR(camZoom) = 3;
         GVAR(gunCam) = false;
 
         // Initalize display variables
@@ -46,8 +42,6 @@ switch (toLower _mode) do {
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
         [] call FUNC(updateCamera);
-
-        GVAR(camera) camSetFOV GVAR(camFOV);
 
         // Create the dialog
         createDialog QGVAR(interface);
@@ -78,11 +72,7 @@ switch (toLower _mode) do {
         GVAR(camBank) = nil;
         GVAR(camBoom) = nil;
         GVAR(camDolly) = nil;
-        GVAR(camFocus) = nil;
-        GVAR(camFOV) = nil;
-        GVAR(camSpeed) = nil;
         GVAR(camTilt) = nil;
-        GVAR(camZoom) = nil;
         GVAR(gunCam) = nil;
 
         // Cleanup display variables
@@ -110,20 +100,14 @@ switch (toLower _mode) do {
         GVAR(showMap) = false;
         [] call FUNC(updateInterface);
 
-        // Set text values
-        (_display displayCtrl IDC_TOOL_FOCUS) ctrlSetText str(GVAR(camFocus));
-        (_display displayCtrl IDC_TOOL_FOV) ctrlSetText str(GVAR(camFOV));
-        (_display displayCtrl IDC_TOOL_SPEED) ctrlSetText format ["%1 m/s",GVAR(camSpeed)];
-        (_display displayCtrl IDC_TOOL_VIEW) ctrlSetText (["FREE","FIRST","THIRD"] select GVAR(camMode));
-
         // Keep unit tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
 
         // Handle the compass heading
         [FUNC(handleCompass), 0, _display] call CBA_fnc_addPerFrameHandler;
 
-        // Handle the clock time
-        [FUNC(handleClock), 1, _display] call CBA_fnc_addPerFrameHandler;
+        // Handle the toolbar values
+        [FUNC(handleToolbar), 0, _display] call CBA_fnc_addPerFrameHandler;
 
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
@@ -156,11 +140,11 @@ switch (toLower _mode) do {
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
 
-        // Scroll to zoom in 3rd person, modifier for FOV
+        // Scroll to change zoom, modifier for focus
         if (GVAR(ctrlKey)) then {
-            GVAR(camFOV) = ((GVAR(camFOV) - (_zChange * GVAR(camFOV) * 0.2)) max 0.1) min 1;
+            //GVAR(camFocus) set [0,(GVAR(camFocus) select 0) - (_zChange * (GVAR(camFocus) select 0) * 0.2)]
         } else {
-            GVAR(camZoom) = (GVAR(camZoom) - (_zChange * GVAR(camZoom) * 0.2)) max 0.1;
+            GVAR(camZoom) = ((GVAR(camZoom) + (_zChange * 0.1)) max 0.01) min 2;
         };
     };
     case "onmousemoving": {

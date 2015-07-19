@@ -88,6 +88,7 @@ class GVAR(interface) {
             class controls {
                 class nameTool: RscText {
                     idc = IDC_TOOL_NAME;
+                    style = 2;
                     x = 0;
                     y = 0;
                     w = TOOL_W * 2;
