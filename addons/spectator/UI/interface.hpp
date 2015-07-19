@@ -48,22 +48,22 @@ class GVAR(interface) {
                     y = 0;
                     w = COMPASS_W * 0.5;
                     h = TOOL_H;
-                    text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture180_ca.paa";
+                    text = "A3\UI_F_Curator\Data\CfgIngameUI\compass\texture180_ca.paa";
                 };
                 class compass90_180: compass0_90 {
                     idc = IDC_COMP_90;
                     x = COMPASS_W;
-                    text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture270_ca.paa";
+                    text = "A3\UI_F_Curator\Data\CfgIngameUI\compass\texture270_ca.paa";
                 };
                 class compass180_270: compass0_90 {
                     idc = IDC_COMP_180;
                     x = 0;
-                    text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture0_ca.paa";
+                    text = "A3\UI_F_Curator\Data\CfgIngameUI\compass\texture0_ca.paa";
                 };
                 class compass270_0: compass0_90 {
                     idc = IDC_COMP_270;
                     x = COMPASS_W * -0.5;
-                    text = "A3\ui_f_curator\data\cfgIngameUI\compass\texture90_ca.paa";
+                    text = "A3\UI_F_Curator\Data\CfgIngameUI\compass\texture90_ca.paa";
                 };
                 class compassCaret: RscFrame {
                     x = COMPASS_W * 0.5;
@@ -191,17 +191,6 @@ class GVAR(interface) {
                     colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
-                };
-                class helpExit: RscButtonMenu {
-                    x = W_PART(23);
-                    y = 0;
-                    h = H_PART(1);
-                    w = W_PART(1);
-                    colorText[]={COL_FORE};
-                    colorBackground[] = {COL_FORE_D};
-                    sizeEx = H_PART(1);
-                    text = "X";
-                    action = QUOTE(GVAR(showHelp) = false; [] call FUNC(updateInterface));
                 };
             };
         };
