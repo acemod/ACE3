@@ -2,8 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_tagWall0", "ACE_tagWall1", "ACE_tagWall2", "ACE_tagWall3", "ACE_tagWall4", "ACE_Item_Spraypaint"};
-        weapons[] = {"ACE_Spraypaint"};
+        units[] = {"ACE_Item_SpraypaintBlack", "ACE_Item_SpraypaintRed", "ACE_Item_SpraypaintGreen", "ACE_Item_SpraypaintBlue"};
+        weapons[] = {"ACE_SpraypaintBlack", "ACE_SpraypaintRed", "ACE_SpraypaintGreen", "ACE_SpraypaintBlue"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"BaerMitUmlaut"};

@@ -3,20 +3,25 @@
  * Creates a tag on a wall that is within 2m on front of the player.
  *
  * Arguments:
- * None
+ * 0: The colour of the tag (valid colours are black, red, green and blue) <STRING>
  * 
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_tagging_fnc_tagWall
+ * ["blue"] call ace_tagging_fnc_tagWall
  *
  * Public: No
  */
 
 
 #include "script_component.hpp"
-private ["_eyepos", "_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint"];
+private ["_color", "_eyepos", "_touchingPoints", "_pointCloser", "_pointFurther", "_posCheckCloser", "_posCheckFurther", "_touchingPoint"];
+
+PARAMS_1(_color);
+if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
+	["%1 is not a valid tag colour.", _color] call BIS_fnc_error;
+};
 
 //Cache eyepos in case player moves
 _eyepos = eyePos ACE_player;
@@ -61,7 +66,8 @@ ACE_player playActionNow "PutDown";
 [{
 	private ["_tag"];
 	playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (getPosASL ACE_player), 10, 1, 15];
-	_tag = ("ACE_tagWall" + str (floor (random 5))) createVehicle [0,0,0];
-	_tag setPosASL (((_this select 0) vectorAdd (_this select 1)) vectorMultiply 0.5);
-	_tag setDir ((_this call BIS_fnc_dirTo) - 90);
-}, _touchingPoints, 0.6] call EFUNC(common,waitAndExecute);
+	_tag = "UserTexture1m_F" createVehicle [0,0,0];
+	_tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + (_this select 1) + '\' + str (floor (random 3)) + '.paa'];
+	_tag setPosASL (((_this select 0 select 0) vectorAdd (_this select 0 select 1)) vectorMultiply 0.5);
+	_tag setDir (((_this select 0) call BIS_fnc_dirTo) - 90);
+}, [_touchingPoints, _color], 0.6] call EFUNC(common,waitAndExecute);
