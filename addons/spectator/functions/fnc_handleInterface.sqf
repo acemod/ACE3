@@ -160,6 +160,18 @@ switch (toLower _mode) do {
             case 1: { // Esc
                [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
             };
+            case 2: { // 1
+                GVAR(showUnit) = !GVAR(showUnit);
+                [] call FUNC(updateInterface);
+            };
+            case 3: { // 2
+                GVAR(showTool) = !GVAR(showTool);
+                [] call FUNC(updateInterface);
+            };
+            case 4: { // 3
+                GVAR(showComp) = !GVAR(showComp);
+                [] call FUNC(updateInterface);
+            };
             case 14: { // Backspace
                 GVAR(showInterface) = !GVAR(showInterface);
                 [] call FUNC(updateInterface);
@@ -169,14 +181,6 @@ switch (toLower _mode) do {
             };
             case 17: { // W
                 GVAR(camDolly) set [0,true];
-            };
-            case 20: { // T
-                GVAR(showTool) = !GVAR(showTool);
-                [] call FUNC(updateInterface);
-            };
-            case 22: { // U
-                GVAR(showUnit) = !GVAR(showUnit);
-                [] call FUNC(updateInterface);
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = true;
@@ -192,10 +196,6 @@ switch (toLower _mode) do {
             };
             case 35: { // H
                 GVAR(showHelp) = !GVAR(showHelp);
-                [] call FUNC(updateInterface);
-            };
-            case 37: { // K
-                GVAR(showComp) = !GVAR(showComp);
                 [] call FUNC(updateInterface);
             };
             case 44: { // Z
