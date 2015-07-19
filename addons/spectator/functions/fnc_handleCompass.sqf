@@ -10,7 +10,7 @@
  * None <NIL>
  *
  * Example:
- * [ace_spectator_fnc_handleCompass, 0] call CBA_fnc_addPerFrameHandler;
+ * [ace_spectator_fnc_handleCompass, 0, _display] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */
@@ -21,6 +21,9 @@ params ["_display"];
 
 // Kill PFH when display is closed
 if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
+
+// Reduce overhead when compass is hidden
+if !(GVAR(showComp) && GVAR(showInterface)) exitWith {};
 
 private ["_compass","_NE","_ES","_SW","_WN","_compassW","_degree","_heading","_offset","_positions","_sequence"];
 
