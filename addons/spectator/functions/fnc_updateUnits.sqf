@@ -19,10 +19,11 @@
 
 params [["_newUnits",[],[[]]],["_blacklist",false,[false]]];
 
-// Function only matter on player clients
+// Function only matters on player clients
 if !(hasInterface) exitWith {};
 
-if !(_newUnits isEqualTo []) then {
+// If adding to a list we can exit here, since it won't show up until the UI refreshes anyway
+if !(_newUnits isEqualTo []) exitWith {
     if (_blacklist) then {
         GVAR(unitWhitelist) = GVAR(unitWhitelist) - _newUnits;
         GVAR(unitBlacklist) append _newUnits;
@@ -32,16 +33,13 @@ if !(_newUnits isEqualTo []) then {
     };
 };
 
-// Reset the filter list (removes any units that no longer apply)
-GVAR(unitList) = [];
+private ["_playerSide","_sides","_filteredUnits"];
 
-// Unit filter
+// Unit setting filter
 _newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
 
-// Side filter
-private ["_playerSide","_sides"];
+// Side setting filter
 _playerSide = side group player;
-
 if (GVAR(filterSides) == 0) then {
     _sides = [_playerSide];
 } else {
@@ -56,6 +54,7 @@ if (GVAR(filterSides) == 0) then {
 };
 
 // Filter units and append to list
+_filteredUnits = [];
 {
     if (
         (alive _x) &&
@@ -64,10 +63,10 @@ if (GVAR(filterSides) == 0) then {
         {simulationEnabled _x} &&
         {!(_x getVariable [QGVAR(isSpectator), false])} // Who watches the watchmen?
     ) then {
-        GVAR(unitList) pushBack _x;
+        _filteredUnits pushBack _x;
     };
 } forEach (_newUnits - GVAR(unitBlacklist));
+_filteredUnits append GVAR(unitWhitelist);
 
-// Apply whitelist
-GVAR(unitList) append GVAR(unitWhitelist);
-GVAR(unitList) = GVAR(unitList) arrayIntersect GVAR(unitList);
+// Replace previous list entirely (removes any no longer valid)
+GVAR(unitList) = _filteredUnits arrayIntersect _filteredUnits;
