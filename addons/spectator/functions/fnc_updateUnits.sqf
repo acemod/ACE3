@@ -33,25 +33,19 @@ if !(_newUnits isEqualTo []) exitWith {
     };
 };
 
-private ["_playerSide","_sides","_filteredUnits"];
+private ["_sides","_cond","_filteredUnits"];
 
 // Unit setting filter
 _newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
 
 // Side setting filter
-_playerSide = side group player;
-if (GVAR(filterSides) == 0) then {
-    _sides = [_playerSide];
-} else {
-    _sides = [west,east,resistance,civilian];
-    if (GVAR(filterSides) == 1) then {
-        {
-            if ((_x getFriend _playerSide) < 0.6) then {
-                _sides = _sides - [_x];
-            };
-        } forEach _sides;
+_sides = [];
+_cond = [{_this == playerSide},{(_this getFriend playerSide) >= 0.6},{(_this getFriend playerSide) < 0.6},{true}] select GVAR(filterSides);
+{
+    if (_x call _cond) then {
+        _sides pushBack _x;
     };
-};
+} forEach [west,east,resistance,civilian];
 
 // Filter units and append to list
 _filteredUnits = [];
@@ -59,7 +53,7 @@ _filteredUnits = [];
     if (
         (alive _x) &&
         {(_x isKindOf "CAManBase")} &&
-        {(side _x) in _sides} && // Side filter
+        {(side group _x) in _sides} && // Side filter
         {simulationEnabled _x} &&
         {!(_x getVariable [QGVAR(isSpectator), false])} // Who watches the watchmen?
     ) then {

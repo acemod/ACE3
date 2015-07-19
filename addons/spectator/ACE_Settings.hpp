@@ -11,6 +11,6 @@ class ACE_Settings {
     class GVAR(filterSides) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_all)};
+        values[] = {CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_hostile), CSTRING(sides_all)};
     };
 };

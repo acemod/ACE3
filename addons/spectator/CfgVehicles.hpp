@@ -49,9 +49,13 @@ class CfgVehicles {
                         name = CSTRING(sides_friendly);
                         value = 1;
                     };
+                    class hostile {
+                        name = CSTRING(sides_hostile);
+                        value = 2;
+                    };
                     class all  {
                         name = CSTRING(sides_all);
-                        value = 2;
+                        value = 3;
                     };
                 };
             };

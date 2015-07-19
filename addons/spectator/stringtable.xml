@@ -37,6 +37,9 @@
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_sides_hostile">
+            <English>Hostile sides</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
         </Key>
