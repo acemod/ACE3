@@ -46,8 +46,6 @@ _positions = [
     [_compassW + _offset, 0]
 ];
 
-systemChat str(_heading);
-
 _sequence = if (_heading < 90) then {
     [_SW, _WN, _NE, _ES]
 } else {
