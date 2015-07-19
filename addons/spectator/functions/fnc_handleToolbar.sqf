@@ -31,9 +31,10 @@ GVAR(camera) camSetFov -(linearConversion [0.1,2,GVAR(camZoom),-2,-0.1,true]);
 GVAR(camera) camCommit 0;
 
 // Reduce overhead when toolbar is hidden
-if !(GVAR(showTool) && GVAR(showInterface)) exitWith {};
+if !(ctrlShown (_display displayCtrl IDC_TOOL)) exitWith {};
 
 private ["_name","_focus","_fov","_speed","_mode","_time","_toolbar"];
+_toolbar = _display displayCtrl IDC_TOOL;
 
 // Find all tool values
 if (GVAR(camMode) == 0) then {
@@ -52,7 +53,6 @@ _mode = ["FREE","FIRST","THIRD"] select GVAR(camMode);
 _time = [daytime,"HH:MM"] call BIS_fnc_timeToString;
 
 // Update the UI tools
-_toolbar = _display displayCtrl IDC_TOOL;
 (_toolbar controlsGroupCtrl IDC_TOOL_CLOCK) ctrlSetText _time;
 (_toolbar controlsGroupCtrl IDC_TOOL_FOCUS) ctrlSetText _focus;
 (_toolbar controlsGroupCtrl IDC_TOOL_FOV) ctrlSetText _fov;

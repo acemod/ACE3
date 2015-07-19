@@ -23,7 +23,7 @@ params ["_display"];
 if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
 // Reduce overhead when compass is hidden
-if !(GVAR(showComp) && GVAR(showInterface)) exitWith {};
+if !(ctrlShown (_display displayCtrl IDC_COMP)) exitWith {};
 
 private ["_compass","_NE","_ES","_SW","_WN","_compassW","_degree","_heading","_offset","_positions","_sequence"];
 

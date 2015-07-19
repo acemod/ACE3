@@ -274,17 +274,14 @@ switch (toLower _mode) do {
         };
     };
     case "onunitsupdate": {
-        _args params ["_display"];
-        private ["_ctrl","_curSelData","_cachedGrps","_grp","_node","_side","_index"];
-
-        // Fetch tree
-        _ctrl = _display displayCtrl IDC_UNIT;
+        _args params ["_tree"];
+        private ["_curSelData","_cachedGrps","_grp","_node","_side","_index"];
 
         // Cache current selection
-        _curSelData = _ctrl tvData (tvCurSel _ctrl);
+        _curSelData = _tree tvData (tvCurSel _tree);
 
         // Clear the tree
-        tvClear _ctrl;
+        tvClear _tree;
 
         // Update the tree from the unit list
         _cachedGrps = [];
@@ -294,31 +291,31 @@ switch (toLower _mode) do {
             // If group already exists, find existing node
             if !(_grp in _cachedGrps) then {
                 _side = [west,east,resistance,civilian,sideLogic] find (side _grp);
-                _node = _ctrl tvCount [];
+                _node = _tree tvCount [];
 
-                _ctrl tvAdd [[], groupID _grp];
-                _ctrl tvSetValue [[_node], _side];
+                _tree tvAdd [[], groupID _grp];
+                _tree tvSetValue [[_node], _side];
 
                 _cachedGrps pushBack _grp;
             } else {
                 _node = _cachedGrps find _grp;
             };
 
-            _index = _ctrl tvCount [_node];
+            _index = _tree tvCount [_node];
 
-            _ctrl tvAdd [[_node], name _x];
-            _ctrl tvSetData [[_node,_index], netID _x];
+            _tree tvAdd [[_node], name _x];
+            _tree tvSetData [[_node,_index], netID _x];
 
             // Preserve the previous selection
-            if (_curSelData == (_ctrl tvData [_node,_index])) then {
-                _ctrl tvSetCurSel [_node,_index];
+            if (_curSelData == (_tree tvData [_node,_index])) then {
+                _tree tvSetCurSel [_node,_index];
             };
 
-            _ctrl tvSort [[_node],false];
-            _ctrl tvExpand [_node];
+            _tree tvSort [[_node],false];
+            _tree tvExpand [_node];
         } forEach GVAR(unitList);
 
         // Sort group nodes by side
-        _ctrl tvSortByValue [[],false];
+        _tree tvSortByValue [[],false];
     };
 };
