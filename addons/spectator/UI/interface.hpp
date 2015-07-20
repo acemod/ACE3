@@ -170,6 +170,7 @@ class GVAR(interface) {
             y = safeZoneY;
             w = safeZoneW;
             h = safeZoneH;
+            onMouseButtonDblClick = QUOTE([ARR_2('onMapDblClick',_this)] call FUNC(handleInterface));
         };
         class helpSplash: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;

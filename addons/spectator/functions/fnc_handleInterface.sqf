@@ -196,7 +196,8 @@ switch (toLower _mode) do {
             };
             case 50: { // M
                 [_display,nil,nil,nil,true] call FUNC(updateInterface);
-                //[_show] call FUNC(handleMap);
+                (_display displayCtrl IDC_MAP) ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
+                ctrlMapAnimCommit  (_display displayCtrl IDC_MAP);
             };
             case 57: { // Spacebar
                 // Freecam attachment here, if in external then set cam pos and attach
@@ -315,5 +316,15 @@ switch (toLower _mode) do {
         } forEach GVAR(unitList);
 
         { _tree tvSort [[_x], false]; } forEach [0,1,2,3,4];
+    };
+    // Map events
+    case "onmapdblclick": {
+        _args params ["_map","_button","_x","_y","_shift","_ctrl"];
+
+        if (GVAR(camMode == 0) && (_button == 0) && _ctrl) then {
+            _newPos = _map ctrlMapScreenToWorld [_x,_y];
+            _newPos set [2, 20];
+            GVAR(camera) setPosATL _newPos;
+        };
     };
 };
