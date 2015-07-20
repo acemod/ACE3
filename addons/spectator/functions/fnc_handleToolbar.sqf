@@ -36,7 +36,7 @@ if (GVAR(camMode) == 0) then {
     _depth = format ["%1 m", floor(getPosASL GVAR(camera) select 2)];
     _fov = format ["%1x", floor(GVAR(camZoom) * 100) * 0.01];
     _name = localize "STR_VOICE_MASK_NONE";
-    _speed = format ["%1 m/s", GVAR(camSpeed)];
+    _speed = format ["%1 m/s", floor(GVAR(camSpeed) * 100) * 0.01];
 } else {
     _depth = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
     _fov = WFSideText (group GVAR(camUnit));
