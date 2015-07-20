@@ -59,8 +59,14 @@
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_RandomUnit">
-            <English>Random Unit</English>
+        <Key ID="STR_ACE_Spectator_ViewFree">
+            <English>Free</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_ViewInternal">
+            <English>Internal</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_ViewExternal">
+            <English>External</English>
         </Key>
 
         <!-- Keybinds -->

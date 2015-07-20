@@ -17,7 +17,6 @@ PREP(updateInterface);
 PREP(updateUnits);
 
 // Permanent variables
-GVAR(camFocus) = 0;
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
 GVAR(camPos) = [worldSize * 0.5,worldSize * 0.5,0];

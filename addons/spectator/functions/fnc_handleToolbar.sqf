@@ -22,39 +22,34 @@ params ["_display"];
 // Kill PFH when display is closed
 if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
-if (GVAR(camFocus) == 0) then {
-    GVAR(camera) camSetFocus [-1,-1];
-} else {
-    GVAR(camera) camSetFocus [GVAR(camFocus),1];
-};
 GVAR(camera) camSetFov -(linearConversion [0.1,2,GVAR(camZoom),-2,-0.1,true]);
 GVAR(camera) camCommit 0;
 
 // Reduce overhead when toolbar is hidden
 if !(ctrlShown (_display displayCtrl IDC_TOOL)) exitWith {};
 
-private ["_name","_focus","_fov","_speed","_mode","_time","_toolbar"];
+private ["_name","_depth","_fov","_speed","_mode","_time","_toolbar"];
 _toolbar = _display displayCtrl IDC_TOOL;
 
 // Find all tool values
 if (GVAR(camMode) == 0) then {
-    _focus = ["AUTO FOCUS", format ["%1 m", round GVAR(camFocus)]] select (GVAR(camFocus) > 0);
+    _depth = format ["%1 m", floor(getPosASL GVAR(camera) select 2)];
     _fov = format ["%1x", floor(GVAR(camZoom) * 100) * 0.01];
-    _name = "None";
+    _name = localize "STR_VOICE_MASK_NONE";
     _speed = format ["%1 m/s", GVAR(camSpeed)];
 } else {
-    _focus = rank GVAR(camUnit);
+    _depth = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
     _fov = WFSideText (group GVAR(camUnit));
     _name = name GVAR(camUnit);
-    _speed = format ["%1 km/h", floor(speed GVAR(camUnit))];
+    _speed = format ["%1 km/h", floor(speed GVAR(camUnit)) max 0];
 };
 
-_mode = ["FREE","FIRST","THIRD"] select GVAR(camMode);
+_mode = [localize LSTRING(ViewFree),localize LSTRING(ViewInternal),localize LSTRING(ViewExternal)] select GVAR(camMode);
 _time = [daytime,"HH:MM"] call BIS_fnc_timeToString;
 
 // Update the UI tools
 (_toolbar controlsGroupCtrl IDC_TOOL_CLOCK) ctrlSetText _time;
-(_toolbar controlsGroupCtrl IDC_TOOL_FOCUS) ctrlSetText _focus;
+(_toolbar controlsGroupCtrl IDC_TOOL_DEPTH) ctrlSetText _depth;
 (_toolbar controlsGroupCtrl IDC_TOOL_FOV) ctrlSetText _fov;
 (_toolbar controlsGroupCtrl IDC_TOOL_NAME) ctrlSetText _name;
 (_toolbar controlsGroupCtrl IDC_TOOL_SPEED) ctrlSetText _speed;

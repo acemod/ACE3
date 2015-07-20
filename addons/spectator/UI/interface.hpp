@@ -111,27 +111,27 @@ class GVAR(interface) {
                     idc = -1;
                     style = 64;
                 };
+                class fovTool: viewTool {
+                    idc = IDC_TOOL_FOV;
+                    x = TOOL_W * 3 + MARGIN * 2;
+                };
+                class fovFrame: fovTool {
+                    idc = -1;
+                    style = 64;
+                };
                 class clockTool: viewTool {
                     idc = IDC_TOOL_CLOCK;
-                    x = TOOL_W * 3 + MARGIN * 2;
+                    x = safeZoneW - TOOL_W * 3 - MARGIN * 2;
                 };
                 class clockFrame: clockTool {
                     idc = -1;
                     style = 64;
                 };
-                class focusTool: viewTool {
-                    idc = IDC_TOOL_FOCUS;
-                    x = safeZoneW - TOOL_W * 3 - MARGIN * 2;
-                };
-                class focusFrame: focusTool {
-                    idc = -1;
-                    style = 64;
-                };
-                class fovTool: viewTool {
-                    idc = IDC_TOOL_FOV;
+                class depthTool: viewTool {
+                    idc = IDC_TOOL_DEPTH;
                     x = safeZoneW - TOOL_W * 2 - MARGIN;
                 };
-                class fovFrame: fovTool {
+                class depthFrame: depthTool {
                     idc = -1;
                     style = 64;
                 };
