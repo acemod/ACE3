@@ -40,7 +40,7 @@ _newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
 
 // Side setting filter
 _sides = [];
-_cond = [{_this == playerSide},{(_this getFriend playerSide) >= 0.6},{(_this getFriend playerSide) < 0.6},{true}] select GVAR(filterSides);
+_cond = [{_this == (side group player)},{(_this getFriend (side group player)) >= 0.6},{(_this getFriend (side group player)) < 0.6},{true}] select GVAR(filterSides);
 {
     if (_x call _cond) then {
         _sides pushBack _x;

@@ -44,7 +44,7 @@ if (GVAR(camMode) == 0) then {
     _speed = format ["%1 m/s", GVAR(camSpeed)];
 } else {
     _focus = rank GVAR(camUnit);
-    _fov = WFSideText GVAR(camUnit);
+    _fov = WFSideText (group GVAR(camUnit));
     _name = name GVAR(camUnit);
     _speed = format ["%1 km/h", floor(speed GVAR(camUnit))];
 };
