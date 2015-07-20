@@ -11,6 +11,7 @@ PREP(handleRespawn);
 PREP(handleToolbar);
 PREP(handleUnits);
 PREP(moduleSpectatorSettings);
+PREP(setCameraAttributes);
 PREP(setSpectator);
 PREP(transitionCamera);
 PREP(toggleInterface);
