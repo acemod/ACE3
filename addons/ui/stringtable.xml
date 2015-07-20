@@ -10,7 +10,7 @@
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
         </Key>
-        <Key ID="STR_ACE_UI_AmmoCountDesc">
+        <Key ID="STR_ACE_UI_WeaponNameDesc">
             <English>Requires enabled Weapon Info</English>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">

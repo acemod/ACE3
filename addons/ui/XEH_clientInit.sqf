@@ -53,7 +53,7 @@ CA_TextFlares = 151 (Grenade Count)
 CA_TextFlaresMode = 152 (Grenade Name)
 CA_Zeroing = 168 (Zeroing)
 Weapon = 118 (Weapon Name)
-WeaponInfoControlsGroupLeft = 2302 (entire Weapon Info without Zeroing and Stance)
+WeaponInfoControlsGroupLeft = 2302 (entire RscUnitInfo without Zeroing)
 WeaponInfoControlsGroupRight = 2303 (UNKNOWN)
 
 
