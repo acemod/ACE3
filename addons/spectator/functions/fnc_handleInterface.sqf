@@ -317,8 +317,8 @@ switch (toLower _mode) do {
 
         if (GVAR(camMode == 0) && (_button == 0) && _ctrl) then {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
-            _newPos set [2, 20];
-            GVAR(camera) setPosATL _newPos;
+            _newPos set [2, GVAR(camPos) select 2];
+            GVAR(camPos) = _newPos;
         };
     };
 };
