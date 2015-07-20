@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Updates the spectator camera view mode and unit
+ * Transitions the spectator camera view mode/unit
  *
  * Arguments:
  * 0: Camera mode <NUMBER>
@@ -13,7 +13,7 @@
  * None <NIL>
  *
  * Example:
- * [0,objNull] call ace_spectator_fnc_updateCamera
+ * [0,objNull] call ace_spectator_fnc_transitionCamera
  *
  * Public: No
  */

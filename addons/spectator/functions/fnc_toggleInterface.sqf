@@ -15,7 +15,7 @@
  * None <NIL>
  *
  * Example:
- * [] call ace_spectator_fnc_updateInterface
+ * [_dsiplay, nil, true] call ace_spectator_fnc_toggleInterface
  *
  * Public: No
  */

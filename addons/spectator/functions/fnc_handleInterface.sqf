@@ -29,7 +29,6 @@ switch (toLower _mode) do {
         GVAR(camBank) = 0;
         GVAR(camBoom) = [false,false];
         GVAR(camDolly) = [false,false,false,false];
-        GVAR(camPos) set [2,20];
         GVAR(camTilt) = -10;
         GVAR(gunCam) = false;
 
@@ -41,7 +40,7 @@ switch (toLower _mode) do {
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
         GVAR(camera) setDir GVAR(camPan);
-        [] call FUNC(updateCamera);
+        [] call FUNC(transitionCamera);
 
         // Create the dialog
         createDialog QGVAR(interface);
@@ -96,7 +95,7 @@ switch (toLower _mode) do {
         };
 
         // Always show interface and hide map upon opening
-        [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(updateInterface);
+        [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
 
         // Keep unit tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
@@ -127,7 +126,7 @@ switch (toLower _mode) do {
         if ((_button == 1) && (GVAR(camMode) == 1)) then {
             // In first person toggle sights mode
             GVAR(gunCam) = !GVAR(gunCam);
-            [] call FUNC(updateCamera);
+            [] call FUNC(transitionCamera);
         };
     };
     case "onmousebuttonup": {
@@ -159,16 +158,16 @@ switch (toLower _mode) do {
                [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
             };
             case 2: { // 1
-                [_display,nil,nil,nil,nil,nil,true] call FUNC(updateInterface);
+                [_display,nil,nil,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 3: { // 2
-                [_display,nil,nil,nil,nil,true] call FUNC(updateInterface);
+                [_display,nil,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 4: { // 3
-                [_display,true] call FUNC(updateInterface);
+                [_display,true] call FUNC(toggleInterface);
             };
             case 14: { // Backspace
-                [_display,nil,nil,true] call FUNC(updateInterface);
+                [_display,nil,nil,true] call FUNC(toggleInterface);
             };
             case 16: { // Q
                 GVAR(camBoom) set [0,true];
@@ -189,13 +188,13 @@ switch (toLower _mode) do {
                 GVAR(camDolly) set [3,true];
             };
             case 35: { // H
-                [_display,nil,true] call FUNC(updateInterface);
+                [_display,nil,true] call FUNC(toggleInterface);
             };
             case 44: { // Z
                 GVAR(camBoom) set [1,true];
             };
             case 50: { // M
-                [_display,nil,nil,nil,true] call FUNC(updateInterface);
+                [_display,nil,nil,nil,true] call FUNC(toggleInterface);
                 (_display displayCtrl IDC_MAP) ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
                 ctrlMapAnimCommit  (_display displayCtrl IDC_MAP);
             };
@@ -203,7 +202,7 @@ switch (toLower _mode) do {
                 // Freecam attachment here, if in external then set cam pos and attach
             };
             case 200: { // Up arrow
-                [[2,0,1] select GVAR(camMode)] call FUNC(updateCamera);
+                [[2,0,1] select GVAR(camMode)] call FUNC(transitionCamera);
             };
             case 203: { // Left arrow
 
@@ -212,7 +211,7 @@ switch (toLower _mode) do {
 
             };
             case 208: { // Down arrow
-                [[1,2,0] select GVAR(camMode)] call FUNC(updateCamera);
+                [[1,2,0] select GVAR(camMode)] call FUNC(transitionCamera);
             };
         };
 
@@ -263,7 +262,7 @@ switch (toLower _mode) do {
                 _newMode = [2,2,1] select GVAR(camMode);
             };
 
-            [_newMode,_newUnit] call FUNC(updateCamera);
+            [_newMode,_newUnit] call FUNC(transitionCamera);
         };
     };
     case "onunitsupdate": {
