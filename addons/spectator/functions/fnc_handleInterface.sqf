@@ -252,7 +252,7 @@ switch (toLower _mode) do {
         _args params ["_tree","_sel"];
 
         // Ensure a unit was selected
-        if (count _sel == 2) then {
+        if (count _sel == 3) then {
             private ["_netID","_newUnit","_newMode"];
             _netID = (_args select 0) tvData _sel;
             _newUnit = objectFromNetId _netID;
@@ -267,7 +267,7 @@ switch (toLower _mode) do {
     };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_curSelData","_cachedGrps","_grp","_node","_side","_index"];
+        private ["_curSelData","_cachedGrps","_grp","_sNode","_gNode","_uNode"];
 
         // Cache current selection
         _curSelData = _tree tvData (tvCurSel _tree);
@@ -275,39 +275,45 @@ switch (toLower _mode) do {
         // Clear the tree
         tvClear _tree;
 
+        // Add side nodes
+        {
+            _tree tvAdd [[], _x];
+            _tree tvExpand [_forEachIndex];
+        } forEach ["West","East","Resistance","Civilian","Unknown"];
+
         // Update the tree from the unit list
         _cachedGrps = [];
         {
             _grp = group _x;
-            _node = 0;
-            // If group already exists, find existing node
-            if !(_grp in _cachedGrps) then {
-                _side = [west,east,resistance,civilian,sideLogic] find (side _grp);
-                _node = _tree tvCount [];
 
-                _tree tvAdd [[], groupID _grp];
-                _tree tvSetValue [[_node], _side];
+            // Use correct side node
+            _sNode = [west,east,resistance,civilian] find (side _grp);
+            if (_sNode == -1) then { _sNode = 4 };
+
+            // Use correct group node
+            if !(_grp in _cachedGrps) then {
+                // Add group node
+                _gNode = _tree tvAdd [[_sNode], groupID _grp];
 
                 _cachedGrps pushBack _grp;
+                _cachedGrps pushBack _gNode;
             } else {
-                _node = _cachedGrps find _grp;
+                // If group already processed, use existing node
+                _gNode = _cachedGrps select ((_cachedGrps find _grp) + 1);
             };
 
-            _index = _tree tvCount [_node];
-
-            _tree tvAdd [[_node], name _x];
-            _tree tvSetData [[_node,_index], netID _x];
+            _uNode = _tree tvAdd [[_sNode,_gNode], name _x];
+            _tree tvSetData [[_sNode,_gNode,_uNode], netID _x];
 
             // Preserve the previous selection
-            if (_curSelData == (_tree tvData [_node,_index])) then {
-                _tree tvSetCurSel [_node,_index];
+            if (_curSelData == (_tree tvData [_sNode,_gNode,_uNode])) then {
+                _tree tvSetCurSel [_sNode,_gNode,_uNode];
             };
 
-            _tree tvSort [[_node],false];
-            _tree tvExpand [_node];
+            _tree tvSort [[_sNode,_gNode],false];
+            _tree tvExpand [_sNode,_gNode];
         } forEach GVAR(unitList);
 
-        // Sort group nodes by side
-        _tree tvSortByValue [[],false];
+        { _tree tvSort [[_x], false]; } forEach [0,1,2,3,4];
     };
 };
