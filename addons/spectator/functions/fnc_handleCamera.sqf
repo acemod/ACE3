@@ -56,4 +56,4 @@ GVAR(camPos) = [_x,_y,_z max (getTerrainHeightASL [_x,_y])];
 // Update camera position and rotation
 GVAR(camera) setPosASL GVAR(camPos);
 GVAR(camera) setDir GVAR(camPan);
-[GVAR(camera), GVAR(camTilt), GVAR(camBank)] call BIS_fnc_setPitchBank;
+[GVAR(camera), GVAR(camTilt), 0] call BIS_fnc_setPitchBank;

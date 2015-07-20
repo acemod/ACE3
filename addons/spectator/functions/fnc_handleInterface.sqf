@@ -26,10 +26,8 @@ switch (toLower _mode) do {
         if !(isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
 
         // Initalize camera variables
-        GVAR(camBank) = 0;
         GVAR(camBoom) = [false,false];
         GVAR(camDolly) = [false,false,false,false];
-        GVAR(camTilt) = -10;
         GVAR(gunCam) = false;
 
         // Initalize display variables
@@ -39,7 +37,6 @@ switch (toLower _mode) do {
 
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate GVAR(camPos);
-        GVAR(camera) setDir GVAR(camPan);
         [] call FUNC(transitionCamera);
 
         // Create the dialog
@@ -68,10 +65,8 @@ switch (toLower _mode) do {
 
         // Cleanup camera variables
         GVAR(camera) = nil;
-        GVAR(camBank) = nil;
         GVAR(camBoom) = nil;
         GVAR(camDolly) = nil;
-        GVAR(camTilt) = nil;
         GVAR(gunCam) = nil;
 
         // Cleanup display variables
