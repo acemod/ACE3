@@ -3,7 +3,13 @@
  * Correctly handles toggling of spectator interface elements for clean UX
  *
  * Arguments:
- * None <NIL>
+ * 0: Display
+ * 1: Toogle compass <BOOL> <OPTIONAL>
+ * 2: Toogle help <BOOL> <OPTIONAL>
+ * 3: Toogle interface <BOOL> <OPTIONAL>
+ * 4: Toogle map <BOOL> <OPTIONAL>
+ * 5: Toogle toolbar <BOOL> <OPTIONAL>
+ * 6: Toogle unit list <BOOL> <OPTIONAL>
  *
  * Return Value:
  * None <NIL>
@@ -16,25 +22,42 @@
 
 #include "script_component.hpp"
 
-private ["_display","_elements","_show"];
-disableSerialization;
+params ["_display", ["_toggleComp",false], ["_toggleHelp",false], ["_toggleInterface",false], ["_toggleMap",false], ["_toggleTool",false], ["_toggleUnit",false]];
 
-_display = GETUVAR(GVAR(display),displayNull);
-_elements = [IDC_COMP,IDC_TOOL,IDC_UNIT];
-_show = [GVAR(showComp),GVAR(showTool),GVAR(showUnit)];
+// Map and help operate outside of interface
+GVAR(showHelp) = [GVAR(showHelp), !GVAR(showHelp)] select _toggleHelp;
+GVAR(showMap) = [GVAR(showMap), !GVAR(showMap)] select _toggleMap;
 
-// Hide/show interface elements as appropriate
-if (GVAR(showInterface)) then {
-    // Hide while map is open to prevent active element weirdness
-    {
-        (_display displayCtrl _x) ctrlShow ([(_show select _forEachIndex),false] select GVAR(showMap));
-    } forEach _elements;
-} else {
-    {
-        (_display displayCtrl _x) ctrlShow GVAR(showInterface);
-    } forEach _elements;
+// When help changes with map open, minimise the map
+if (GVAR(showMap) && _toggleHelp) then {
+    GVAR(showHelp) = true;
+    GVAR(showMap) = false;
 };
 
-// Map and help operate seperate from interface
 (_display displayCtrl IDC_HELP) ctrlShow GVAR(showHelp);
 (_display displayCtrl IDC_MAP) ctrlShow GVAR(showMap);
+
+if (GVAR(showMap)) then {
+    // When map is shown, temporarily hide interface to stop overlapping
+    {
+        (_display displayCtrl _x) ctrlShow false;
+    } forEach [IDC_COMP,IDC_HELP,IDC_TOOL,IDC_UNIT];
+} else {
+    // Can only toggle interface with map minimised
+    GVAR(showInterface) = [GVAR(showInterface), !GVAR(showInterface)] select _toggleInterface;
+
+    if (GVAR(showInterface)) then {
+        // Can only toggle interface elements with interface shown
+        GVAR(showComp) = [GVAR(showComp), !GVAR(showComp)] select _toggleComp;
+        GVAR(showTool) = [GVAR(showTool), !GVAR(showTool)] select _toggleTool;
+        GVAR(showUnit) = [GVAR(showUnit), !GVAR(showUnit)] select _toggleUnit;
+
+        (_display displayCtrl IDC_COMP) ctrlShow GVAR(showComp);
+        (_display displayCtrl IDC_TOOL) ctrlShow GVAR(showTool);
+        (_display displayCtrl IDC_UNIT) ctrlShow GVAR(showUnit);
+    } else {
+        {
+            (_display displayCtrl _x) ctrlShow false;
+        } forEach [IDC_COMP,IDC_TOOL,IDC_UNIT];
+    };
+};

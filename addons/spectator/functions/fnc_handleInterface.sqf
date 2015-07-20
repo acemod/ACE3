@@ -96,9 +96,7 @@ switch (toLower _mode) do {
         };
 
         // Always show interface and hide map upon opening
-        GVAR(showInterface) = true;
-        GVAR(showMap) = false;
-        [] call FUNC(updateInterface);
+        [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(updateInterface);
 
         // Keep unit tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
@@ -161,20 +159,16 @@ switch (toLower _mode) do {
                [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
             };
             case 2: { // 1
-                GVAR(showUnit) = !GVAR(showUnit);
-                [] call FUNC(updateInterface);
+                [_display,nil,nil,nil,nil,nil,true] call FUNC(updateInterface);
             };
             case 3: { // 2
-                GVAR(showTool) = !GVAR(showTool);
-                [] call FUNC(updateInterface);
+                [_display,nil,nil,nil,nil,true] call FUNC(updateInterface);
             };
             case 4: { // 3
-                GVAR(showComp) = !GVAR(showComp);
-                [] call FUNC(updateInterface);
+                [_display,true] call FUNC(updateInterface);
             };
             case 14: { // Backspace
-                GVAR(showInterface) = !GVAR(showInterface);
-                [] call FUNC(updateInterface);
+                [_display,nil,nil,true] call FUNC(updateInterface);
             };
             case 16: { // Q
                 GVAR(camBoom) set [0,true];
@@ -195,15 +189,13 @@ switch (toLower _mode) do {
                 GVAR(camDolly) set [3,true];
             };
             case 35: { // H
-                GVAR(showHelp) = !GVAR(showHelp);
-                [] call FUNC(updateInterface);
+                [_display,nil,true] call FUNC(updateInterface);
             };
             case 44: { // Z
                 GVAR(camBoom) set [1,true];
             };
             case 50: { // M
-                GVAR(showMap) = !GVAR(showMap);
-                [] call FUNC(updateInterface);
+                [_display,nil,nil,nil,true] call FUNC(updateInterface);
                 //[_show] call FUNC(handleMap);
             };
             case 57: { // Spacebar
