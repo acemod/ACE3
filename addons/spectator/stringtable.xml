@@ -74,7 +74,7 @@
             <English>Night vision</English>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
-            <English>Thermal Imaging</English>
+            <English>Thermal imaging</English>
         </Key>
 
         <!-- Interface strings -->
@@ -89,6 +89,15 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionNormal">
+            <English>Normal</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionNight">
+            <English>Night</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionThermal">
+            <English>Thermal</English>
         </Key>
 
         <!-- Keybinds -->

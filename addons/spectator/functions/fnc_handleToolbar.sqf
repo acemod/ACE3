@@ -28,17 +28,17 @@ GVAR(camera) camCommit 0;
 // Reduce overhead when toolbar is hidden
 if !(ctrlShown (_display displayCtrl IDC_TOOL)) exitWith {};
 
-private ["_name","_depth","_fov","_speed","_mode","_time","_toolbar"];
+private ["_name","_vision","_fov","_speed","_mode","_time","_toolbar"];
 _toolbar = _display displayCtrl IDC_TOOL;
 
 // Find all tool values
 if (GVAR(camMode) == 0) then {
-    _depth = format ["%1 m", floor(getPosASL GVAR(camera) select 2)];
+    _vision = if (GVAR(camVision) >= 0) then {localize LSTRING(VisionThermal)} else { [localize LSTRING(VisionNight), localize LSTRING(VisionNormal)] select (GVAR(camVision) < -1) };
     _fov = format ["%1x", floor(GVAR(camZoom) * 100) * 0.01];
     _name = localize "STR_VOICE_MASK_NONE";
     _speed = format ["%1 m/s", floor(GVAR(camSpeed) * 100) * 0.01];
 } else {
-    _depth = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
+    _vision = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
     _fov = WFSideText (group GVAR(camUnit));
     _name = name GVAR(camUnit);
     _speed = format ["%1 km/h", floor(speed GVAR(camUnit)) max 0];
@@ -49,7 +49,7 @@ _time = [daytime,"HH:MM"] call BIS_fnc_timeToString;
 
 // Update the UI tools
 (_toolbar controlsGroupCtrl IDC_TOOL_CLOCK) ctrlSetText _time;
-(_toolbar controlsGroupCtrl IDC_TOOL_DEPTH) ctrlSetText _depth;
+(_toolbar controlsGroupCtrl IDC_TOOL_VISION) ctrlSetText _vision;
 (_toolbar controlsGroupCtrl IDC_TOOL_FOV) ctrlSetText _fov;
 (_toolbar controlsGroupCtrl IDC_TOOL_NAME) ctrlSetText _name;
 (_toolbar controlsGroupCtrl IDC_TOOL_SPEED) ctrlSetText _speed;

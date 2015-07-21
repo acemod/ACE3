@@ -127,11 +127,11 @@ class GVAR(interface) {
                     idc = -1;
                     style = 64;
                 };
-                class depthTool: viewTool {
-                    idc = IDC_TOOL_DEPTH;
+                class visionTool: viewTool {
+                    idc = IDC_TOOL_VISION;
                     x = safeZoneW - TOOL_W * 2 - MARGIN;
                 };
-                class depthFrame: depthTool {
+                class visionFrame: visionTool {
                     idc = -1;
                     style = 64;
                 };
