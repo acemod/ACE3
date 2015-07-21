@@ -26,8 +26,8 @@ switch (toLower _mode) do {
         if !(isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
 
         // Initalize camera variables
-        GVAR(camBoom) = [false,false];
-        GVAR(camDolly) = [false,false,false,false];
+        GVAR(camBoom) = 0;
+        GVAR(camDolly) = [0,0];
         GVAR(camGun) = false;
 
         // Initalize display variables
@@ -120,7 +120,7 @@ switch (toLower _mode) do {
         // Detect right click
         if ((_button == 1) && (GVAR(camMode) == 1)) then {
             // In first person toggle sights mode
-            GVAR(gunCam) = !GVAR(gunCam);
+            GVAR(camGun) = !GVAR(camGun);
             [] call FUNC(transitionCamera);
         };
     };
@@ -165,28 +165,28 @@ switch (toLower _mode) do {
                 [_display,nil,nil,true] call FUNC(toggleInterface);
             };
             case 16: { // Q
-                GVAR(camBoom) set [0,true];
+                GVAR(camBoom) = 0.5;
             };
             case 17: { // W
-                GVAR(camDolly) set [0,true];
+                GVAR(camDolly) set [0, GVAR(camSpeed)];
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = true;
             };
             case 30: { // A
-                GVAR(camDolly) set [2,true];
+                GVAR(camDolly) set [1, -GVAR(camSpeed)];
             };
             case 31: { // S
-                GVAR(camDolly) set [1,true];
+                GVAR(camDolly) set [0, -GVAR(camSpeed)];
             };
             case 32: { // D
-                GVAR(camDolly) set [3,true];
+                GVAR(camDolly) set [1, GVAR(camSpeed)];
             };
             case 35: { // H
                 [_display,nil,true] call FUNC(toggleInterface);
             };
             case 44: { // Z
-                GVAR(camBoom) set [1,true];
+                GVAR(camBoom) = -0.5;
             };
             case 49: { // N
                 [nil,nil,1] call FUNC(cycleCamera);
@@ -320,8 +320,9 @@ switch (toLower _mode) do {
 
         if (GVAR(camMode == 0) && (_button == 0) && _ctrl) then {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
-            _newPos set [2, GVAR(camPos) select 2];
-            GVAR(camPos) = _newPos;
+            _oldZ = (ASLtoATL GVAR(camPos)) select 2;
+            _newPos set [2, _oldZ]
+            GVAR(camPos) = (ATLtoASL _newPos);
         };
     };
 };

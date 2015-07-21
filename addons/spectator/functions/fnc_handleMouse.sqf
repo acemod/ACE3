@@ -30,9 +30,14 @@ _oldY = GVAR(mousePos) select 1;
 _deltaX = _oldX - _x;
 _deltaY = _oldY - _y;
 
-if (_rightButton && !_leftButton) then {
-    GVAR(camPan) = GVAR(camPan) - (_deltaX * 360);
-    GVAR(camTilt) = ((GVAR(camTilt) + (_deltaY * 180)) min 89) max -89;
+if (_leftButton && _rightButton) then {
+    GVAR(camDolly) set [0, _deltaX * GVAR(camSpeed)];
+    GVAR(camDolly) set [1, _deltaY * GVAR(camSpeed)];
+} else {
+    if (_rightButton) then {
+        GVAR(camPan) = GVAR(camPan) - (_deltaX * 360);
+        GVAR(camTilt) = ((GVAR(camTilt) + (_deltaY * 180)) min 89) max -89;
+    };
 };
 
 GVAR(mousePos) = [_x,_y];
