@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Transitions the spectator camera view mode/unit
+ * Transitions the spectator camera vision/view mode/unit
  *
  * Arguments:
  * 0: Camera mode <NUMBER>
@@ -8,6 +8,11 @@
  *   - 1: Internal
  *   - 2: External
  * 1: Camera unit <OBJECT>
+ * 2: Vision mode <NUMBER>
+ *   - -2: Normal
+ *   - -1: NV
+ *   -  0: White hot
+ *   -  1: Black hot
  *
  * Return Value:
  * None <NIL>
@@ -20,7 +25,7 @@
 
 #include "script_component.hpp"
 
-params [["_newMode",GVAR(camMode)],["_newUnit",GVAR(camUnit)]];
+params [["_newMode",GVAR(camMode)], ["_newUnit",GVAR(camUnit)], ["_newVision",GVAR(camVision)]];
 
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
@@ -30,7 +35,7 @@ if (GVAR(unitList) isEqualTo []) then {
 
 // Reset gun cam if not internal
 if (_newMode != 1) then {
-    GVAR(gunCam) = false;
+    GVAR(camGun) = false;
 };
 
 if (_newMode == 0) then { // Free
@@ -45,6 +50,15 @@ if (_newMode == 0) then { // Free
     showCinemaBorder false;
     cameraEffectEnableHUD false;
 
+    // Vision mode only applies to free cam
+    if (_newVision < 0) then {
+        false setCamUseTi 0;
+        camUseNVG (_newVision >= -1);
+    } else {
+        true setCamUseTi _newVision;
+    };
+    GVAR(camVision) = _newVision;
+
     // Handle camera movement
     if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
 } else {
@@ -55,7 +69,7 @@ if (_newMode == 0) then { // Free
 
     if (_newMode == 1) then { // Internal
         // Handle gun cam
-        if (GVAR(gunCam)) then {
+        if (GVAR(camGun)) then {
             _newUnit switchCamera "gunner";
         } else {
             _newUnit switchCamera "internal";

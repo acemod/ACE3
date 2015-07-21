@@ -28,7 +28,7 @@ switch (toLower _mode) do {
         // Initalize camera variables
         GVAR(camBoom) = [false,false];
         GVAR(camDolly) = [false,false,false,false];
-        GVAR(gunCam) = false;
+        GVAR(camGun) = false;
 
         // Initalize display variables
         GVAR(ctrlKey) = false;
@@ -67,7 +67,7 @@ switch (toLower _mode) do {
         GVAR(camera) = nil;
         GVAR(camBoom) = nil;
         GVAR(camDolly) = nil;
-        GVAR(gunCam) = nil;
+        GVAR(camGun) = nil;
 
         // Cleanup display variables
         GVAR(ctrlKey) = nil;
@@ -187,6 +187,9 @@ switch (toLower _mode) do {
             };
             case 44: { // Z
                 GVAR(camBoom) set [1,true];
+            };
+            case 49: { // N
+
             };
             case 50: { // M
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);

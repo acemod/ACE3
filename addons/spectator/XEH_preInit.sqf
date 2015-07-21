@@ -24,6 +24,7 @@ GVAR(camPos) = [worldSize * 0.5,worldSize * 0.5,20];
 GVAR(camSpeed) = 1;
 GVAR(camTilt) = -10;
 GVAR(camUnit) = objNull;
+GVAR(camVision) = -2;
 GVAR(camZoom) = 1.3;
 
 GVAR(showComp) = true;
