@@ -25,6 +25,7 @@ class GVAR(interface) {
             onMouseButtonUp = QUOTE([ARR_2('onMouseButtonUp',_this)] call FUNC(handleInterface));
             onMouseZChanged = QUOTE([ARR_2('onMouseZChanged',_this)] call FUNC(handleInterface));
             onMouseMoving = QUOTE([ARR_2('onMouseMoving',_this)] call FUNC(handleInterface));
+            onMouseHolding = QUOTE([ARR_2('onMouseMoving',_this)] call FUNC(handleInterface));
         };
     };
     class controls {
