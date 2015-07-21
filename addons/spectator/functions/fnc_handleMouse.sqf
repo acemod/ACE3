@@ -3,13 +3,14 @@
  * Processes the change in mouse position for the spectator camera
  *
  * Arguments:
- * None <NIL>
+ * 0: Mouse x coord <NUMBER>
+ * 1: Mouse y coord <NUMBER>
  *
  * Return Value:
  * None <NIL>
  *
  * Example:
- * [] call ace_spectator_fnc_handleMouse;
+ * [0.5, 0.5] call ace_spectator_fnc_handleMouse;
  *
  * Public: No
  */

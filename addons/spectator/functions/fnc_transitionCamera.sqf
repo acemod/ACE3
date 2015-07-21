@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Transitions the spectator camera vision/view mode/unit
+ * Transitions the spectator camera vision/view/unit
  *
  * Arguments:
  * 0: Camera mode <NUMBER>
