@@ -18,7 +18,6 @@
 #include "script_component.hpp"
 private ["_posCheck", "_objectsLeft", "_intersectsLeft", "_objectsRight", "_intersectsRight"];
 
-
 _posCheck = ACE_player modelToWorldVisual [-0.5, 2, 0];
 _posCheck set [2, (eyePos ACE_player) select 2];
 
