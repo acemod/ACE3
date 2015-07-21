@@ -220,25 +220,25 @@ switch (toLower _mode) do {
 
         switch (_dik) do {
             case 16: { // Q
-                GVAR(camBoom) set [0,false];
+                GVAR(camBoom) = 0;
             };
             case 17: { // W
-                GVAR(camDolly) set [0,false];
+                GVAR(camDolly) set [0, 0];
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = false;
             };
             case 30: { // A
-                GVAR(camDolly) set [2,false];
+                GVAR(camDolly) set [1, 0];
             };
             case 31: { // S
-                GVAR(camDolly) set [1,false];
+                GVAR(camDolly) set [0, 0];
             };
             case 32: { // D
-                GVAR(camDolly) set [3,false];
+                GVAR(camDolly) set [1, 0];
             };
             case 44: { // Z
-                GVAR(camBoom) set [1,false];
+                GVAR(camBoom) = 0;
             };
         };
 
