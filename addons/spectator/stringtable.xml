@@ -100,267 +100,74 @@
             <English>Thermal</English>
         </Key>
 
-        <!-- Keybinds -->
-        <Key ID="STR_ACE_Spectator_keyCamMoveForward">
+        <!-- Controls -->
+        <Key ID="STR_ACE_Spectator_freeCamControls">
+            <English>Free Camera Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Move Camera Forward</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamMoveBackward">
+        <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Move Camera Backward</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamMoveLeft">
+        <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Move Camera Left</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamMoveRight">
+        <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Move Camera Right</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamMoveUp">
+        <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Move Camera Up</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamMoveDown">
+        <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Move Camera Down</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotUp">
-            <English>Angle Camera Up</English>
+        <Key ID="STR_ACE_Spectator_freeCamLock">
+            <English>Lock Camera to Target</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotDown">
-            <English>Angle Camera Down</English>
+        <Key ID="STR_ACE_Spectator_freeCamZoom">
+            <English>Zoom In/Out</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotLeft">
-            <English>Angle Camera Left</English>
+        <Key ID="STR_ACE_Spectator_freeCamSpeed">
+            <English>Speed Up/Down</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotRight">
-            <English>Angle Camera Right</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotUpLeft">
-            <English>Angle Camera Up + Left</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotUpRight">
-            <English>Angle Camera Up + Right</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotDownLeft">
-            <English>Angle Camera Down + Left</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotDownRight">
-            <English>Angle Camera Down + Right</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamBankLeft">
-            <English>Bank Camera Left</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamBankRight">
-            <English>Bank Camera Right</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotMore">
-            <English>Angle/Bank Camera Faster (keyboard only)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamRotLess">
-            <English>Angle/Bank Camera Slower (keyboard only)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamBankMod">
-            <English>Bank Camera Modifier (with mouse)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamReset">
-            <English>Reset Camera Angle</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamLock">
-            <English>Follow Target or Position</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCamAttach">
-            <English>Attach Camera to Object</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot1">
-            <English>Save Position #1</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot2">
-            <English>Save Position #2</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot3">
-            <English>Save Position #3</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot4">
-            <English>Save Position #4</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot5">
-            <English>Save Position #5</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot6">
-            <English>Save Position #6</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot7">
-            <English>Save Position #7</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot8">
-            <English>Save Position #8</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot9">
-            <English>Save Position #9</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot10">
-            <English>Save Position #10</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot11">
-            <English>Save Position #11</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveSpot12">
-            <English>Save Position #12</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot1">
-            <English>Restore Position #1</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot2">
-            <English>Restore Position #2</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot3">
-            <English>Restore Position #3</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot4">
-            <English>Restore Position #4</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot5">
-            <English>Restore Position #5</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot6">
-            <English>Restore Position #6</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot7">
-            <English>Restore Position #7</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot8">
-            <English>Restore Position #8</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot9">
-            <English>Restore Position #9</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot10">
-            <English>Restore Position #10</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot11">
-            <English>Restore Position #11</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadSpot12">
-            <English>Restore Position #12</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit1">
-            <English>Save Unit #1</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit2">
-            <English>Save Unit #2</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit3">
-            <English>Save Unit #3</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit4">
-            <English>Save Unit #4</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit5">
-            <English>Save Unit #5</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit6">
-            <English>Save Unit #6</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit7">
-            <English>Save Unit #7</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit8">
-            <English>Save Unit #8</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit9">
-            <English>Save Unit #9</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keySaveUnit10">
-            <English>Save Unit #10</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit1">
-            <English>Restore Unit #1</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit2">
-            <English>Restore Unit #2</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit3">
-            <English>Restore Unit #3</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit4">
-            <English>Restore Unit #4</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit5">
-            <English>Restore Unit #5</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit6">
-            <English>Restore Unit #6</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit7">
-            <English>Restore Unit #7</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit8">
-            <English>Restore Unit #8</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit9">
-            <English>Restore Unit #9</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyLoadUnit10">
-            <English>Restore Unit #10</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFOVup">
-            <English>Increase FOV</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFOVdown">
-            <English>Decrease FOV</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFOVreset">
-            <English>Reset FOV</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFocusUp">
-            <English>Increase Focal Distance (PP must be enabled)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFocusDown">
-            <English>Decrease Focal Distance (PP must be enabled)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFocusReset">
-            <English>Reset Focal Distance (PP must be enabled)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyFocusInfinite">
-            <English>Disable Focus</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyTimeAccUp">
-            <English>Increase Time Acceleration (SP only)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyTimeAccDown">
-            <English>Decrease Time Acceleration (SP only)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyTimeAccReset">
-            <English>Reset Time Acceleration (SP only)</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyToggleMarkers">
-            <English>Toggle 2D/3D Marker Mode</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyUnitList">
-            <English>Toggle Unit List</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyCrosshair">
-            <English>Toggle Crosshair</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyStatus">
-            <English>Toggle Status Overlay</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyMap">
-            <English>Toggle Map</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_keyVision">
+        <Key ID="STR_ACE_Spectator_freeCamVision">
             <English>Toggle Vision Mode</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyUnitNext">
-            <English>Switch to Next Unit</English>
+
+        <Key ID="STR_ACE_Spectator_uiToggleInterface">
+            <English>Toggle Interface</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyUnitPrevious">
-            <English>Switch to Previous Unit</English>
+        <Key ID="STR_ACE_Spectator_uiToggleIcons">
+            <English>Toggle Unit Icons</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyPOVup">
-            <English>Unit POV In</English>
+        <Key ID="STR_ACE_Spectator_uiToggleUnits">
+            <English>Toggle Unit List</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyPOVdown">
-            <English>Unit POV Out</English>
+        <Key ID="STR_ACE_Spectator_uiToggleTools">
+            <English>Toggle Toolbar</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_keyExit">
-            <English>Exit Camera Key (mission dependent)</English>
+        <Key ID="STR_ACE_Spectator_uiToggleCompass">
+            <English>Toggle Compass</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleMap">
+            <English>Toggle Map</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleHelp">
+            <English>Toggle Help</English>
+        </Key>
+
+        <Key ID="STR_ACE_Spectator_prevCam">
+            <English>Next Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevCam">
+            <English>Previous Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextUnit">
+            <English>Next Unit</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevUnit">
+            <English>Previous Unit</English>
         </Key>
     </Package>
 </Project>

@@ -1,9 +1,9 @@
 class RscButtonMenu;
 class RscControlsGroupNoScrollbars;
 class RscFrame;
+class RscListNBox;
 class RscMapControl;
 class RscPicture;
-class RscStructuredText;
 class RscText;
 class RscTree;
 
@@ -193,6 +193,15 @@ class GVAR(interface) {
                     colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
+                };
+                class helpContent: RscListNBox {
+                    idc = IDC_HELP_LIST;
+                    x = W_PART(1);
+                    y = H_PART(2);
+                    W = W_PART(22);
+                    H = H_PART(21);
+                    default = 1;
+                    columns[] = {0.01,0.5};
                 };
             };
         };

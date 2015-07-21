@@ -36,6 +36,8 @@
 #define IDC_COMP_270 5270
 
 #define IDC_HELP 7631
+#define IDC_HELP_LIST 7622
+
 #define IDC_MAP 6791
 
 #define IDC_TOOL 3000

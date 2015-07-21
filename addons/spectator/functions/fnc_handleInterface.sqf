@@ -101,6 +101,21 @@ switch (toLower _mode) do {
         // Handle the toolbar values
         [FUNC(handleToolbar), 0, _display] call CBA_fnc_addPerFrameHandler;
 
+        // Populate the help splash
+        {
+            ((_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST) lnbAddRow _x;
+        } forEach [
+            [localize LSTRING(freeCamForward),"W"],
+            [localize LSTRING(freeCamBackward),"S"],
+            [localize LSTRING(freeCamLeft),"A"],
+            [localize LSTRING(freeCamRight),"D"],
+            [localize LSTRING(freeCamUp),"Q"],
+            [localize LSTRING(freeCamDown),"Z"],
+            [localize LSTRING(freeCamVision),"N"],
+            [localize LSTRING(freeCamSpeed),"Scrollwheel"],
+            [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"]
+        ];
+
         // Hacky way to enable keybindings
         //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
         //_display displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
