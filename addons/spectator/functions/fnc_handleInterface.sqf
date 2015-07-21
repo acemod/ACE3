@@ -128,6 +128,7 @@ switch (toLower _mode) do {
         _args params ["_ctrl","_button"];
 
         GVAR(mouse) set [_button,false];
+        if (_button == 0) then { GVAR(camDolly) = [0,0]; };
     };
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
@@ -168,19 +169,19 @@ switch (toLower _mode) do {
                 GVAR(camBoom) = 0.5;
             };
             case 17: { // W
-                GVAR(camDolly) set [0, GVAR(camSpeed)];
+                GVAR(camDolly) set [1, GVAR(camSpeed)];
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = true;
             };
             case 30: { // A
-                GVAR(camDolly) set [1, -GVAR(camSpeed)];
-            };
-            case 31: { // S
                 GVAR(camDolly) set [0, -GVAR(camSpeed)];
             };
+            case 31: { // S
+                GVAR(camDolly) set [1, -GVAR(camSpeed)];
+            };
             case 32: { // D
-                GVAR(camDolly) set [1, GVAR(camSpeed)];
+                GVAR(camDolly) set [0, GVAR(camSpeed)];
             };
             case 35: { // H
                 [_display,nil,true] call FUNC(toggleInterface);
@@ -223,19 +224,19 @@ switch (toLower _mode) do {
                 GVAR(camBoom) = 0;
             };
             case 17: { // W
-                GVAR(camDolly) set [0, 0];
+                GVAR(camDolly) set [1, 0];
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = false;
             };
             case 30: { // A
-                GVAR(camDolly) set [1, 0];
-            };
-            case 31: { // S
                 GVAR(camDolly) set [0, 0];
             };
-            case 32: { // D
+            case 31: { // S
                 GVAR(camDolly) set [1, 0];
+            };
+            case 32: { // D
+                GVAR(camDolly) set [0, 0];
             };
             case 44: { // Z
                 GVAR(camBoom) = 0;
