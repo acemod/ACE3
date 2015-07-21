@@ -31,8 +31,8 @@ _deltaX = _oldX - _x;
 _deltaY = _oldY - _y;
 
 if (_leftButton) then {
-    GVAR(camDolly) set [0, _deltaX * -10 * GVAR(camSpeed)];
-    GVAR(camDolly) set [1, _deltaY * 10 * GVAR(camSpeed)];
+    GVAR(camDolly) set [0, _deltaX * -100 * GVAR(camSpeed)];
+    GVAR(camDolly) set [1, _deltaY * 100 * GVAR(camSpeed)];
 } else {
     if (_rightButton) then {
         GVAR(camPan) = GVAR(camPan) - (_deltaX * 360);

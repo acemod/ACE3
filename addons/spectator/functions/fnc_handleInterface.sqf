@@ -137,7 +137,7 @@ switch (toLower _mode) do {
         if (GVAR(ctrlKey)) then {
             GVAR(camZoom) = ((GVAR(camZoom) + _zChange * 0.1) max 0.01) min 2;
         } else {
-            GVAR(camSpeed) = (GVAR(camSpeed) + _zChange * 0.2) max 0.05;
+            GVAR(camSpeed) = ((GVAR(camSpeed) + _zChange * 0.2) max 0.05) min 10;
         };
     };
     case "onmousemoving": {

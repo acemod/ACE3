@@ -52,8 +52,8 @@ if !(_vision in GVAR(availableVisions)) then {
 
 GVAR(camPan) = ((_heading % 360) max 0);
 GVAR(camPosition) = (ATLtoASL _position);
-GVAR(camSpeed) = _speed;
-GVAR(camTilt) = ((_heading min -90) max 90);
+GVAR(camSpeed) = (_speed min 0.05) max 10;
+GVAR(camTilt) = (_heading min -89) max 89;
 GVAR(camUnit) = _unit;
 GVAR(camVision) = _vision;
 GVAR(camZoom) = (_zoom min 2) max 0;
