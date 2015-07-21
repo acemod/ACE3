@@ -8,7 +8,6 @@
 ["SettingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
-    GVAR(camMode) = GVAR(availableModes) select 0;
 
     if !(hasInterface) exitWith {};
 

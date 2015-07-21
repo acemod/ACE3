@@ -31,7 +31,7 @@ GVAR(camSpeed) = 1;
 GVAR(camTilt) = -10;
 GVAR(camUnit) = objNull;
 GVAR(camVision) = -2;
-GVAR(camZoom) = 1.3;
+GVAR(camZoom) = 1.25;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;
