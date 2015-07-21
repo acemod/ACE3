@@ -203,10 +203,10 @@ switch (toLower _mode) do {
                 [-1] call FUNC(cycleCamera);
             };
             case 203: { // Left arrow
-
+                [nil,1] call FUNC(cycleCamera);
             };
             case 205: { // Right arrow
-
+                [nil,-1] call FUNC(cycleCamera);
             };
             case 208: { // Down arrow
                 [1] call FUNC(cycleCamera);

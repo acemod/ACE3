@@ -28,7 +28,7 @@ if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHand
 
 // Camera shouldn't stay on unit that isn't in the list
 if !(GVAR(camUnit) in GVAR(unitList)) then {
-    [0,objNull] call FUNC(transitionCamera);
+    [nil,1] call FUNC(cycleCamera);
 };
 
 // Reduce overhead when unit tree is hidden
