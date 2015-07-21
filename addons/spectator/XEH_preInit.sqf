@@ -16,7 +16,9 @@ PREP(setCameraAttributes);
 PREP(setSpectator);
 PREP(transitionCamera);
 PREP(toggleInterface);
+PREP(updateCameraModes);
 PREP(updateUnits);
+PREP(updateVisionModes);
 
 // Permanent variables
 GVAR(availableModes) = [0,1,2];
