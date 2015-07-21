@@ -22,16 +22,27 @@
 #include "script_component.hpp"
 
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];
+private ["_newModes","_currentModes"];
+
+_currentModes = GVAR(availableModes);
 
 // Restrict additions to only possible values
-_addModes = _addModes arrayIntersect [0,1,2];
-_addModes sort true;
+_newModes = _addModes arrayIntersect [0,1,2];
+_newModes append (_currentModes - _removeModes);
 
-// Remove and add new modes
-GVAR(availableModes) = GVAR(availableModes) - _removeModes;
+_newModes arrayIntersect _newModes;
+_newModes sort true;
 
-GVAR(availableModes) append _addModes;
-GVAR(availableModes) arrayIntersect GVAR(availableModes);
-GVAR(availableModes) sort true;
+// Can't become an empty array
+if (_newModes isEqualTo []) then {
+    [["[ACE Spectator]","Cannot remove all camera modes"],true,10] call EFUNC(common,displayStructuredText);
+} else {
+    GVAR(availableModes) = _newModes;
+};
 
-GVAR(availableModes)
+// Update camera in case of change
+if !(isNil QGVAR(camera)) then {
+    [] call FUNC(transitionCamera);
+};
+
+_newModes

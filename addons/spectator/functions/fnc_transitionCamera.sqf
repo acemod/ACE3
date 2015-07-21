@@ -27,9 +27,9 @@
 
 params [["_newMode",GVAR(camMode)], ["_newUnit",GVAR(camUnit)], ["_newVision",GVAR(camVision)]];
 
-// If new mode isn't available then keep current
+// If new mode isn't available then keep current (unless current also isn't)
 if !(_newMode in GVAR(availableModes)) then {
-    _newMode = GVAR(camMode);
+    _newMode = GVAR(availableModes) select ((GVAR(availableModes) find GVAR(camMode)) max 0);
 };
 
 // When no units available to spectate, exit to freecam
@@ -54,6 +54,11 @@ if (_newMode == 0) then { // Free
     // HUD stuff
     showCinemaBorder false;
     cameraEffectEnableHUD false;
+
+    // If new vision isn't available then keep current (unless current also isn't)
+    if !(_newVision in GVAR(availableVisions)) then {
+        _newVision = GVAR(availableVisions) select ((GVAR(availableVisions) find GVAR(camVision)) max 0);
+    };
 
     // Vision mode only applies to free cam
     if (_newVision < 0) then {

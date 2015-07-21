@@ -9,9 +9,9 @@
  *   -  1: Black hot
  *   -  2: Light Green Hot / Darker Green cold
  *   -  3: Black Hot / Darker Green cold
- *   -  4: Light Red Hot /Darker Red Cold
+ *   -  4: Light Red Hot / Darker Red Cold
  *   -  5: Black Hot / Darker Red Cold
- *   -  6: White Hot . Darker Red Col
+ *   -  6: White Hot / Darker Red Cold
  *   -  7: Thermal (Shade of Red and Green, Bodies are white)
  *
  * Arguments:
@@ -30,15 +30,27 @@
 #include "script_component.hpp"
 
 params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];
+private ["_newModes","_currentModes"];
+
+_currentModes = GVAR(availableVisions);
 
 // Restrict additions to only possible values
-_addModes = _addModes arrayIntersect [-2,-1,0,1,2,3,4,5,6,7];
+_newModes = _addModes arrayIntersect [-2,-1,0,1,2,3,4,5,6,7];
+_newModes append (_currentModes - _removeModes);
 
-// Remove and add new modes
-GVAR(availableVisions) = GVAR(availableVisions) - _removeModes;
+_newModes arrayIntersect _newModes;
+_newModes sort true;
 
-GVAR(availableVisions) append _addModes;
-GVAR(availableVisions) arrayIntersect GVAR(availableVisions);
-GVAR(availableVisions) sort true;
+// Can't become an empty array
+if (_newModes isEqualTo []) then {
+    [["[ACE Spectator]","Cannot remove all vision modes"],true,10] call EFUNC(common,displayStructuredText);
+} else {
+    GVAR(availableVisions) = _newModes;
+};
 
-GVAR(availableVisions)
+// Update camera in case of change
+if !(isNil QGVAR(camera)) then {
+    [] call FUNC(transitionCamera);
+};
+
+_newModes

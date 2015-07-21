@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
-            <English>Spectator Setings</English>
+            <English>Spectator Settings</English>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Descripton">
             <English>Configure how the spectator system will operate by default.</English>
