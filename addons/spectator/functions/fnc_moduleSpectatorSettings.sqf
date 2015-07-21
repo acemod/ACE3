@@ -22,3 +22,5 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(enabledSystem), "spectatorSystem"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(filterUnits), "spectatorUnits"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(filterSides), "spectatorSides"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(restrictModes), "cameraModes"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(restrictVisions), "visionModes"] call EFUNC(common,readSettingFromModule);

@@ -59,6 +59,58 @@ class CfgVehicles {
                     };
                 };
             };
+            class cameraModes {
+                displayName = CSTRING(modes_DisplayName);
+                description = CSTRING(modes_Description);
+                typeName = "NUMBER";
+                class values {
+                    class all {
+                        name = CSTRING(modes_all);
+                        value = 0;
+                        default = 1;
+                    };
+                    class unit {
+                        name = CSTRING(modes_unit);
+                        value = 1;
+                    };
+                    class free {
+                        name = CSTRING(modes_free);
+                        value = 2;
+                    };
+                    class internal  {
+                        name = CSTRING(modes_internal);
+                        value = 3;
+                    };
+                    class external  {
+                        name = CSTRING(modes_external);
+                        value = 4;
+                    };
+                };
+            };
+            class visionModes {
+                displayName = CSTRING(visions_DisplayName);
+                description = CSTRING(visions_Description);
+                typeName = "NUMBER";
+                class values {
+                    class all {
+                        name = CSTRING(modes_all);
+                        value = 0;
+                        default = 1;
+                    };
+                    class nv {
+                        name = CSTRING(visions_nv);
+                        value = 1;
+                    };
+                    class ti {
+                        name = CSTRING(visions_ti);
+                        value = 2;
+                    };
+                    class none  {
+                        name = "$STR_Special_None";
+                        value = 3;
+                    };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(Settings_Description);
