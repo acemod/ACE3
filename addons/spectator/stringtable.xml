@@ -81,6 +81,9 @@
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_NoUnits">
+            <English>No units available to spectate, entering free camera.</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
         </Key>

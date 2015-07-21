@@ -36,6 +36,7 @@ if !(_newMode in GVAR(availableModes)) then {
 if (GVAR(unitList) isEqualTo []) then {
     _newMode = 0;
     _newUnit = objNull;
+    [LSTRING(NoUnits)] call EFUNC(common,displayTextStructured);
 };
 
 // Reset gun cam if not internal

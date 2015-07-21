@@ -2,7 +2,7 @@
  * Author: SilentSpike
  * Adds or removes spectator camera modes from the selection available to the local player.
  * Possible camera modes are:
- *   - 0: Freecam
+ *   - 0: Free
  *   - 1: Internal
  *   - 2: External
  *
@@ -35,7 +35,7 @@ _newModes sort true;
 
 // Can't become an empty array
 if (_newModes isEqualTo []) then {
-    [["[ACE Spectator]","Cannot remove all camera modes"],true,10] call EFUNC(common,displayStructuredText);
+    [["[ACE Spectator]","Cannot remove all camera modes"]] call EFUNC(common,displayTextStructured);
 } else {
     GVAR(availableModes) = _newModes;
 };
