@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Classnames
-description: A list of all the classnames in ACE3, your wet dream came true.
+title: class names
+description: A list of all the class names in ACE3
 group: missionmaker
 order: 11
 parent: wiki
@@ -9,27 +9,27 @@ parent: wiki
 
 Everything is ordered alphabetically.
 
-You know an in-game name but want the classname? <kbd>CTRL</kbd> + <kbd>F</kbd>
+You know an in-game name but want the class name? <kbd>CTRL</kbd> + <kbd>F</kbd>
 
-### Atragmx 
+## AtragMX 
 `added in 3.0.0.3`
 
-classname | in game name  | type  | 
---------- | --------- | --------- |
+class name | in game name  | type  | 
+---------- | --------- | --------- |
 ACE_ATragMX | ATragMX  |  ACE_ItemCore |
 
-### Attachable
+## Attachable
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | --------- |
+class name | in game name | type   |
+---------- | --------- | --------- |
 ACE_IR_Strobe_Item | IR strobe  | ACE_ItemCore |
 
-### Ballistics
+## Ballistics
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | --------- |
+class name | in game name | type   |
+---------- | --------- | --------- |
 ACE_100Rnd_65x39_caseless_mag_Tracer_Dim | 6.5mm IR-DIM | Magazine |
 ACE_200Rnd_65x39_cased_Box_Tracer_Dim | 6.5mm IR-DIM | Magazine |
 ACE_30Rnd_65x39_caseless_mag_Tracer_Dim | 6.5mm IR-DIM | Magazine |
@@ -63,118 +63,118 @@ ACE_30Rnd_9x19_mag | 9x19mm | Magazine |
 ACE_16Rnd_9x19_mag | 9x19mm | Magazine |
 ACE_10Rnd_762x54_Tracer_mag | 7.62mm | Magazine |
 
-### Captive
+## Captive
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_CableTie | cable tie |  ACE_ItemCore |
 
-### Common
+## Common
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_Banana | banana |  ACE_ItemCore |
 
-### Concertina_wire
+## Concertina Wire
 `added in 3.1.1`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_ConcertinaWireCoil | Concertina Wire Coil |  ThingX |
 ACE_ConcertinaWire | Concertina Wire | deployed concertina wire |
 
-### Dagr
+## DAGR
 `added in 3.1.1`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_DAGR | DAGR | ACE_ItemCore | 
 
-### Disposable
+## Disposable
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_launch_NLAW_Used_F | used NLAW | Weapon |
 
-### Explosives
+## Explosives
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_Clacker| M57 Firing Device |  ACE_ItemCore |
 ACE_M26_Clacker| M26 Firing Device |  ACE_ItemCore |
 ACE_DefusalKit | Defusal Kit |  ACE_ItemCore |
 ACE_DeadManSwitch | Dead Man's Switch |  ACE_ItemCore |
 ACE_Cellphone | Cellphone |  ACE_ItemCore |
 
-### Grenades
+## Grenades
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_HandFlare_White | M127A1 Hand Held Signal (White) | Grenade |
 ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
 
-### Hearing
+## Hearing
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_EarPlugs | Earplugs | ACE_ItemCore |
 
-### HuntIR
+## HuntIR
 `added in 3.1.1`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
 ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
 ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
-### Kestrel
+## Kestrel
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_Kestrel4500 | Kestrel 4500NV | ACE_ItemCore |
 
-### Laser pointers
+## Laser Pointers
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 acc_pointer_IR | Laser Pointer (red) | Weapon accessory |
 ACE_acc_pointer_red | Laser Pointer (green) | Weapon accessory |
 ACE_acc_pointer_green_IR | Laser Pointer (green) | Weapon accessory |
 ACE_acc_pointer_green | Laser Pointer (green) | Weapon accessory |
 
-### logistics
+## Logistics
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_UAVBattery | UAV Battery | ACE_ItemCore |
 ACE_wirecutter | Wirecutter | ACE_ItemCore |
 
-### Map tools
+## Map Tools
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_MapTools | Map Tools | ACE_ItemCore |
 
-# Medical
+## Medical
 `added in 3.0.0.3`
 
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_atropine | Atropin autoinjector | ACE_ItemCore |
 ACE_fieldDressing | Bandage (Basic) | ACE_ItemCore |
 ACE_elasticBandage | Bandage (Elastic) | ACE_ItemCore |
@@ -197,33 +197,33 @@ ACE_salineIV_250 | Saline IV (250ml) | ACE_ItemCore |
 ACE_surgicalKit | Surgical Kit | ACE_ItemCore |
 ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
 
-### Microdagr
+## MicroDAGR
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
 
-### mk6 mortar
+## MK6 Mortar
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_RangeTable_82mm | 82mm Rangetable | ACE_ItemCore |
 
-### M2XA
+## M2XA
 `added in 3.1.1`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_MX2A | MX-2A | Binocular |
 
 
-### Nightvision
+## Nightvision
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_NVG_Gen1 | NV Goggles (Gen1) | Nvgs |
 ACE_NVG_Gen2 | NV Goggles (Gen2) | Nvgs |
 ACE_NVG_Gen3 | NV Goggles (Gen3) | Nvgs |
@@ -231,11 +231,11 @@ ACE_NVG_Gen4 | NV Goggles (Gen4) | Nvgs |
 ACE_NVG_Wide | NV Goggles (Wide) | Nvgs |
 
 
-### Optics
+## Optics
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_optic_Arco_2D | ARCO (2D) | Weapon accessory |
 ACE_optic_Arco_PIP | ARCO (PIP) | Weapon accessory |
 ACE_optic_LRPS_2D | LRPS (2D) | Weapon accessory |
@@ -247,39 +247,39 @@ ACE_optic_MRCO_PIP | MRCO (PIP) | Weapon accessory |
 ACE_optic_Hamr_2D | RCO (2D) | Weapon accessory |
 ACE_optic_Hamr_PIP | RCO (PIP) | Weapon accessory |
 
-### Overheating
+## Overheating
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_SpareBarrel | Spare barrel | ACE_ItemCore |
 
-### Parachute
+## Parachute
 `added in 3.0.0.3`
 
-classname | in game name | type  |
---------- | --------- | ---------
+class name | in game name | type  |
+---------- | --------- | ---------
 ACE_Altimeter | Altimeter Watch | ACE_ItemCore |
 ACE_NonSteerableParachute | Non-Steerable Parachute | Backpack |
 
-### Rangecard
+## Rangecard
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_RangeCard | rangecard | ACE_ItemCore |
 
-### Vector
+## Vector
 `added in 3.0.0.3`
 
-classname | in game name | type   |
+class name | in game name | type   |
 --------- | --------- | ---------
 ACE_Vector | Vector 21 | Binoculars |
 
-### Vehicle lock
+## Vehicle Lock
 `added in 3.0.0.3`
 
-classname | in game name | type   |
---------- | --------- | ---------
+class name | in game name | type   |
+---------- | --------- | ---------
 ACE_key_master | Vehicle Key: Master | ACE_ItemCore |
 ACE_key_lockpick | Lockpick | ACE_ItemCore |
 ACE_key_west | Vehicle Key: West | ACE_ItemCore |
@@ -287,41 +287,41 @@ ACE_key_east | Vehicle Key: East | ACE_ItemCore |
 ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
 ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
 
-### Sandbag
+## Sandbag
 `added in 3.1.1`
 
-classname | in game name | type | 
---------- | --------- | ---------
+class name | in game name | type | 
+---------- | --------- | ---------
 ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore | 
 ACE_SandbagObject | Sandbag | ThingX | 
 
-### Spotting scope
+## Spotting Scope
 `added in 3.1.1`
 
-classname | in game name | type | 
---------- | --------- | ---------
+class name | in game name | type | 
+---------- | --------- | ---------
 ACE_SpottingScope | Spotting Scope | ACE_ItemCore | 
 ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon | 
 
-### Tactical ladder
+## Tactical Ladder
 `added in 3.1.1`
 
-classname | in game name | type | 
---------- | --------- | ---------
+class name | in game name | type | 
+---------- | --------- | ---------
 ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack | 
 ACE_Tactical_Ladder | Telescopic Ladder (placed) | house | 
 
-### Tripod
+## Tripod
 `added in 3.1.1`
 
-classname | in game name | type | 
---------- | --------- | ---------
+class name | in game name | type | 
+---------- | --------- | ---------
 ACE_Tripod | SSWT Kit | ACE_ItemCore | 
 ACE_TripodObject | SSWT Kit (placed) | ThingX | 
 
-### Yardage 450
+## Yardage 450
 `added in 3.1.1`
 
-classname | in game name | type | 
---------- | --------- | ---------
+class name | in game name | type | 
+---------- | --------- | ---------
 ACE_Yardage450 | Yardage 450 | Binocular | 
