@@ -189,7 +189,7 @@ switch (toLower _mode) do {
                 GVAR(camBoom) set [1,true];
             };
             case 49: { // N
-
+                [nil,nil,1] call FUNC(cycleCamera);
             };
             case 50: { // M
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
@@ -200,7 +200,7 @@ switch (toLower _mode) do {
                 // Freecam attachment here, if in external then set cam pos and attach
             };
             case 200: { // Up arrow
-                [[2,0,1] select GVAR(camMode)] call FUNC(transitionCamera);
+                [-1] call FUNC(cycleCamera);
             };
             case 203: { // Left arrow
 
@@ -209,7 +209,7 @@ switch (toLower _mode) do {
 
             };
             case 208: { // Down arrow
-                [[1,2,0] select GVAR(camMode)] call FUNC(transitionCamera);
+                [1] call FUNC(cycleCamera);
             };
         };
 
@@ -260,7 +260,9 @@ switch (toLower _mode) do {
                 _newMode = [2,2,1] select GVAR(camMode);
             };
 
-            [_newMode,_newUnit] call FUNC(transitionCamera);
+            if (_newMode in GVAR(availableModes)) then {
+                [_newMode,_newUnit] call FUNC(transitionCamera);
+            };
         };
     };
     case "onunitsupdate": {

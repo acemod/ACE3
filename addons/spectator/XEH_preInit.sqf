@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(cycleCamera);
 PREP(handleCamera);
 PREP(handleCompass);
 PREP(handleInterface);
@@ -18,6 +19,9 @@ PREP(toggleInterface);
 PREP(updateUnits);
 
 // Permanent variables
+GVAR(availableModes) = [0,1,2];
+GVAR(availableVisions) = [-2,-1,0,1];
+
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
 GVAR(camPos) = [worldSize * 0.5,worldSize * 0.5,20];

@@ -43,16 +43,38 @@
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
         </Key>
-
-        <Key ID="STR_ACE_Spectator_End_DisplayName">
-            <English>End Mission</English>
-            <Polish>Zakończ misję</Polish>
-            <Czech>Konec mise</Czech>
+        <Key ID="STR_ACE_Spectator_modes_DisplayName">
+            <English>Camera modes</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_End_Description">
-            <English>End mission when all players dead (default BIS behaviour)?</English>
-            <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
-            <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
+        <Key ID="STR_ACE_Spectator_modes_Description">
+            <English>Camera modes that can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_all">
+            <English>All</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_free">
+            <English>Free only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_internal">
+            <English>Internal only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_external">
+            <English>External only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_unit">
+            <English>Internal and external</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_DisplayName">
+            <English>Vision modes</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_Description">
+            <English>Vision modes that can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_nv">
+            <English>Night vision</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_ti">
+            <English>Thermal Imaging</English>
         </Key>
 
         <!-- Interface strings -->

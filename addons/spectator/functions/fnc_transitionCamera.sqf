@@ -27,6 +27,11 @@
 
 params [["_newMode",GVAR(camMode)], ["_newUnit",GVAR(camUnit)], ["_newVision",GVAR(camVision)]];
 
+if !(_newMode in GVAR(availableModes)) exitWith {
+    [1] call FUNC(cycleCamera);
+    [nil, _newUnit, _newVision] call FUNC(transitionCamera);
+};
+
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
     _newMode = 0;
