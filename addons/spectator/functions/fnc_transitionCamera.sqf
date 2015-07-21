@@ -27,6 +27,11 @@
 
 params [["_newMode",GVAR(camMode)], ["_newUnit",GVAR(camUnit)], ["_newVision",GVAR(camVision)]];
 
+// If new mode isn't available then keep current
+if !(_newMode in GVAR(availableModes)) then {
+    _newMode = GVAR(camMode);
+};
+
 // When no units available to spectate, exit to freecam
 if (GVAR(unitList) isEqualTo []) then {
     _newMode = 0;

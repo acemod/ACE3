@@ -260,9 +260,7 @@ switch (toLower _mode) do {
                 _newMode = [2,2,1] select GVAR(camMode);
             };
 
-            if (_newMode in GVAR(availableModes)) then {
-                [_newMode,_newUnit] call FUNC(transitionCamera);
-            };
+            [_newMode,_newUnit] call FUNC(transitionCamera);
         };
     };
     case "onunitsupdate": {
