@@ -13,7 +13,7 @@
  *   - -1: Night vision
  *   -  0: Thermal white hot
  *   -  1: Thermal black hot
- * 3: Camera position (ASL) <ARRAY> <OPTIONAL>
+ * 3: Camera position (ATL) <ARRAY> <OPTIONAL>
  * 4: Camera pan (0 - 360) <NUMBER> <OPTIONAL>
  * 5: Camera tilt (-90 - 90) <NUMBER> <OPTIONAL>
  * 6: Camera zoom (0.1 - 2) <NUMBER> <OPTIONAL>
@@ -51,7 +51,7 @@ if !(_vision in GVAR(availableVisions)) then {
 };
 
 GVAR(camPan) = ((_heading % 360) max 0);
-GVAR(camPosition) = _position;
+GVAR(camPosition) = (ATLtoASL _position);
 GVAR(camSpeed) = _speed;
 GVAR(camTilt) = ((_heading min -90) max 90);
 GVAR(camUnit) = _unit;

@@ -36,7 +36,7 @@ switch (toLower _mode) do {
         GVAR(mousePos) = [0.5,0.5];
 
         // Initalize the camera view
-        GVAR(camera) = "Camera" camCreate GVAR(camPos);
+        GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
 
         // Create the dialog
@@ -321,7 +321,7 @@ switch (toLower _mode) do {
         if (GVAR(camMode == 0) && (_button == 0) && _ctrl) then {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
             _oldZ = (ASLtoATL GVAR(camPos)) select 2;
-            _newPos set [2, _oldZ]
+            _newPos set [2, _oldZ];
             GVAR(camPos) = (ATLtoASL _newPos);
         };
     };

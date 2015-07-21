@@ -24,7 +24,7 @@ GVAR(availableVisions) = [-2,-1,0,1];
 
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
-GVAR(camPos) = [worldSize * 0.5,worldSize * 0.5,20];
+GVAR(camPos) = ATLtoASL [worldSize * 0.5, worldSize * 0.5, 20];
 GVAR(camSpeed) = 1;
 GVAR(camTilt) = -10;
 GVAR(camUnit) = objNull;
