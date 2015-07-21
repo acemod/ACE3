@@ -266,7 +266,7 @@ switch (toLower _mode) do {
     };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_curSelData","_cachedGrps","_grp","_sNode","_gNode","_uNode"];
+        private ["_curSelData","_cachedGrps","_cachedSides","_grp","_side","_sNode","_gNode","_uNode"];
 
         // Cache current selection
         _curSelData = _tree tvData (tvCurSel _tree);
@@ -274,20 +274,24 @@ switch (toLower _mode) do {
         // Clear the tree
         tvClear _tree;
 
-        // Add side nodes
-        {
-            _tree tvAdd [[], _x];
-            _tree tvExpand [_forEachIndex];
-        } forEach ["West","East","Resistance","Civilian","Unknown"];
-
         // Update the tree from the unit list
         _cachedGrps = [];
+        _cachedSides = [];
         {
             _grp = group _x;
+            _side = WFSideText side _grp;
 
             // Use correct side node
-            _sNode = [west,east,resistance,civilian] find (side _grp);
-            if (_sNode == -1) then { _sNode = 4 };
+            if !(_side in _cachedSides) then {
+                // Add side node
+                _sNode = _tree tvAdd [[], _side];
+
+                _cachedSides pushBack _side;
+                _cachedSides pushBack _sNode;
+            } else {
+                // If side already processed, use existing node
+                _sNode = _cachedSides select ((_cachedSides find _side) + 1);
+            };
 
             // Use correct group node
             if !(_grp in _cachedGrps) then {
@@ -313,7 +317,14 @@ switch (toLower _mode) do {
             _tree tvExpand [_sNode,_gNode];
         } forEach GVAR(unitList);
 
-        { _tree tvSort [[_x], false]; } forEach [0,1,2,3,4];
+        {
+            if (typeName _x == "SCALAR") then {
+                _tree tvSort [[_x],false];
+                _tree tvExpand [_x];
+            };
+        } forEach _cachedSides;
+
+        _tree tvSort [[],false];
     };
     // Map events
     case "onmapdblclick": {
