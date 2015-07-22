@@ -35,13 +35,17 @@ _toolbar = _display displayCtrl IDC_TOOL;
 if (GVAR(camMode) == 0) then {
     _vision = if (GVAR(camVision) >= 0) then {localize LSTRING(VisionThermal)} else { [localize LSTRING(VisionNight), localize LSTRING(VisionNormal)] select (GVAR(camVision) < -1) };
     _fov = format ["%1x", floor(GVAR(camZoom) * 100) * 0.01];
-    _name = localize "STR_VOICE_MASK_NONE";
     _speed = format ["%1 m/s", floor(GVAR(camSpeed) * 100) * 0.01];
 } else {
     _vision = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
     _fov = WFSideText (group GVAR(camUnit));
-    _name = name GVAR(camUnit);
     _speed = format ["%1 km/h", floor(speed GVAR(camUnit)) max 0];
+};
+
+if (isNull GVAR(camUnit)) then {
+    _name = localize "STR_VOICE_MASK_NONE";
+} else {
+    _name = name GVAR(camUnit);
 };
 
 _mode = [localize LSTRING(ViewFree),localize LSTRING(ViewInternal),localize LSTRING(ViewExternal)] select GVAR(camMode);
