@@ -43,11 +43,11 @@ params [
 
 // Normalize input
 if !(_mode in GVAR(availableModes)) then {
-    _mode = GVAR(availableModes) select 0;
+    _mode = GVAR(availableModes) select ((GVAR(availableModes) find GVAR(camMode)) max 0);
 };
 
 if !(_vision in GVAR(availableVisions)) then {
-    _vision = GVAR(availableVisions) select 0;
+    _vision = GVAR(availableVisions) select ((GVAR(availableVisions) find GVAR(camVision)) max 0);
 };
 
 GVAR(camPan) = ((_heading % 360) max 0);
