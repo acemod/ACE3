@@ -13,12 +13,11 @@
  *
  * Public: No
  */
-#define ENABLE_PERFORMANCE_COUNTERS
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 [{
-    BEGIN_COUNTER(pfeh);
-
+    // BEGIN_COUNTER(pfeh);
     private["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_lastTime", "_trueSpeed", "_trueVelocity"];
 
     _lastTime = (_this select 0) select 0;
@@ -53,7 +52,5 @@
         };
 
     } forEach GVAR(trackedBullets);
-
-    END_COUNTER(pfeh);
-
+    // END_COUNTER(pfeh);
 }, GVAR(simulationInterval), [ACE_time]] call CBA_fnc_addPerFrameHandler;
