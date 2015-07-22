@@ -43,7 +43,7 @@ _newModes sort true;
 
 // Can't become an empty array
 if (_newModes isEqualTo []) then {
-    [["[ACE Spectator]","Cannot remove all vision modes"]] call EFUNC(common,displayTextStructured);
+    ["Cannot remove all vision modes (%1)", QFUNC(updateVisionModes)] call BIS_fnc_error;
 } else {
     GVAR(availableVisions) = _newModes;
 };

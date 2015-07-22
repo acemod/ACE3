@@ -35,7 +35,7 @@ _newModes sort true;
 
 // Can't become an empty array
 if (_newModes isEqualTo []) then {
-    [["[ACE Spectator]","Cannot remove all camera modes"]] call EFUNC(common,displayTextStructured);
+    ["Cannot remove all camera modes (%1)", QFUNC(updateCameraModes)] call BIS_fnc_error;
 } else {
     GVAR(availableModes) = _newModes;
 };
