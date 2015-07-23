@@ -21,15 +21,17 @@ class ACE_Settings {
     };
     class GVAR(showVehicleCrewInfo) {
         value = 1;
-        typeName = "BOOL";
+        typeName = "SCALAR";
         isClientSettable = 1;
         displayName = CSTRING(ShowVehicleCrewInfo);
+        values[] = {CSTRING(DoNotForce), CSTRING(ForceHide), CSTRING(ForceShow)};
     };
     class GVAR(showNamesForAI) {
         value = 0;
-        typeName = "BOOL";
+        typeName = "SCALAR";
         isClientSettable = 1;
         displayName = CSTRING(ShowNamesForAI);
+        values[] = {CSTRING(DoNotForce), CSTRING(ForceHide), CSTRING(ForceShow)};
     };
     class GVAR(showCursorTagForVehicles) {
         value = 0;
