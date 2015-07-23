@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect"];
+private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect", "_lastAnim"];
 
 _args = _this select 0;
 _caller = _args select 0;
@@ -30,7 +30,17 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-    [_caller, _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""], 1] call EFUNC(common,doAnimation);
+    _lastAnim = _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""];
+    //Don't play another medic animation (when player is rapidily treating)
+    TRACE_2("Reseting to old animation", animationState player, _lastAnim);
+    switch (true) do {
+        case (_lastAnim == "AinvPknlMstpSlayWrflDnon_medic"): {_lastAnim = "AmovPknlMstpSrasWrflDnon"};
+        case (_lastAnim == "AinvPpneMstpSlayWrflDnon_medic"): {_lastAnim = "AmovPpneMstpSrasWrflDnon"};
+        case (_lastAnim == "AinvPknlMstpSlayWnonDnon_medic"): {_lastAnim = "AmovPknlMstpSnonWnonDnon"};
+        case (_lastAnim == "AinvPpneMstpSlayWpstDnon_medic"): {_lastAnim = "AinvPpneMstpSlayWpstDnon"};
+        case (_lastAnim == "AinvPknlMstpSlayWpstDnon_medic"): {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
+    };
+    [_caller, _lastAnim, 1] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
