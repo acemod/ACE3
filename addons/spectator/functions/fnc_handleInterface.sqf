@@ -107,16 +107,30 @@ switch (toLower _mode) do {
         {
             ((_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST) lnbAddRow _x;
         } forEach [
+            [localize LSTRING(uiToggleHelp),"H"],
+            [localize LSTRING(uiToggleMap),"M"],
+            [localize LSTRING(uiToggleUnits),"1"],
+            [localize LSTRING(uiToggleTools),"2"],
+            [localize LSTRING(uiToggleCompass),"3"],
+            [localize LSTRING(uiToggleInterface),"Backspace"],
+
             [localize LSTRING(freeCamForward),"W"],
             [localize LSTRING(freeCamBackward),"S"],
             [localize LSTRING(freeCamLeft),"A"],
             [localize LSTRING(freeCamRight),"D"],
             [localize LSTRING(freeCamUp),"Q"],
             [localize LSTRING(freeCamDown),"Z"],
+            [localize LSTRING(freeCamPan),"RMB (Hold)"],
+            [localize LSTRING(freeCamDolly),"LMB (Hold)"],
+            [localize LSTRING(freeCamSpeed),"Scrollwheel"],
+            [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"],
             [localize LSTRING(freeCamNextVis),"N"],
             [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
-            [localize LSTRING(freeCamSpeed),"Scrollwheel"],
-            [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"]
+
+            [localize LSTRING(nextCam),"Up"],
+            [localize LSTRING(prevCam),"Down"],
+            [localize LSTRING(nextUnit),"Right"],
+            [localize LSTRING(prevUnit),"Left"]
         ];
 
         // Hacky way to enable keybindings

@@ -122,6 +122,12 @@
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Move Camera Down</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_freeCamPan">
+            <English>Pan Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamDolly">
+            <English>Dolly Camera</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
         </Key>
@@ -160,7 +166,7 @@
             <English>Toggle Help</English>
         </Key>
 
-        <Key ID="STR_ACE_Spectator_prevCam">
+        <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
