@@ -48,7 +48,7 @@ if (_newMode == 0) then { // Free
     GVAR(camera) cameraEffect ["internal", "back"];
 
     // Switch to player to stop AI group chat
-    ACE_Player switchCamera "internal";
+    GVAR(camera) switchCamera "internal";
     clearRadio;
 
     // HUD stuff

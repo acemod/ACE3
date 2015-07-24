@@ -42,6 +42,10 @@ if (GVAR(showMap)) then {
     {
         (_display displayCtrl _x) ctrlShow false;
     } forEach [IDC_COMP,IDC_HELP,IDC_TOOL,IDC_UNIT];
+
+    // Centre map on camera/unit
+    (_display displayCtrl IDC_MAP) ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
+    ctrlMapAnimCommit (_display displayCtrl IDC_MAP);
 } else {
     // Can only toggle interface with map minimised
     GVAR(showInterface) = [GVAR(showInterface), !GVAR(showInterface)] select _toggleInterface;

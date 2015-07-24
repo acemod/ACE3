@@ -234,8 +234,6 @@ switch (toLower _mode) do {
             };
             case 50: { // M
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
-                (_display displayCtrl IDC_MAP) ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
-                ctrlMapAnimCommit  (_display displayCtrl IDC_MAP);
             };
             case 57: { // Spacebar
                 // Freecam attachment here, if in external then set cam pos and attach
@@ -372,12 +370,40 @@ switch (toLower _mode) do {
     // Map events
     case "onmapdblclick": {
         _args params ["_map","_button","_x","_y","_shift","_ctrl"];
+        private ["_newPos","_oldZ"];
 
-        if (GVAR(camMode == 0) && (_button == 0) && _ctrl) then {
+        if ((GVAR(camMode) == 0) && (_button == 0) && _ctrl) then {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
             _oldZ = (ASLtoATL GVAR(camPos)) select 2;
             _newPos set [2, _oldZ];
             GVAR(camPos) = (ATLtoASL _newPos);
         };
+    };
+    case "ondraw": {
+        _args params ["_map"];
+
+        if (GVAR(camMode) == 0) then {
+            _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(camera),24,24,GVAR(camPan)];
+        };
+
+        private ["_cachedVehicles","_unit","_color","_icon"];
+        _cachedVehicles = [];
+        {
+            _unit = vehicle _x;
+
+            if !(_unit in _cachedVehicles) then {
+                _cachedVehicles pushBack _unit;
+
+                _color = [side group _unit] call BIS_fnc_sideColor;
+                _icon = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "Icon");
+
+                // Handle CfgVehicleIcons
+                if isText (configFile >> "CfgVehicleIcons" >> _icon) then {
+                    _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+                };
+
+                _map drawIcon [_icon, _color, _unit, 24, 24, getDir _unit];
+            };
+        } forEach GVAR(unitList);
     };
 };
