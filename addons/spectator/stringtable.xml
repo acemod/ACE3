@@ -144,6 +144,9 @@
             <English>Previous Vision Mode</English>
         </Key>
 
+        <Key ID="STR_ACE_Spectator_uiControls">
+            <English>Interface Controls</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
         </Key>
@@ -166,6 +169,9 @@
             <English>Toggle Help</English>
         </Key>
 
+        <Key ID="STR_ACE_Spectator_otherControls">
+            <English>Other Controls</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
         </Key>

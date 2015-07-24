@@ -104,9 +104,17 @@ switch (toLower _mode) do {
         [FUNC(handleToolbar), 0, _display] call CBA_fnc_addPerFrameHandler;
 
         // Populate the help splash
+        private "_help";
+        _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
         {
-            ((_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST) lnbAddRow _x;
+            // Add space before category titles
+            if (count _x == 1) then {
+                _help lnbAddRow [""];
+            };
+
+            _help lnbAddRow _x;
         } forEach [
+            [localize LSTRING(uiControls),""],
             [localize LSTRING(uiToggleHelp),"H"],
             [localize LSTRING(uiToggleMap),"M"],
             [localize LSTRING(uiToggleUnits),"1"],
@@ -129,6 +137,7 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamNextVis),"N"],
             [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
 
+            [localize LSTRING(otherControls)],
             [localize LSTRING(nextCam),"Up"],
             [localize LSTRING(prevCam),"Down"],
             [localize LSTRING(nextUnit),"Right"],
