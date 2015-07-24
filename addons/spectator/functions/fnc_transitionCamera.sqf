@@ -47,7 +47,7 @@ if (_newMode == 0) then { // Free
     // Preserve camUnit value for consistency when manually changing view
     GVAR(camera) cameraEffect ["internal", "back"];
 
-    // Switch to player to stop AI group chat
+    // Switch to camera to stop AI group chat
     GVAR(camera) switchCamera "internal";
     clearRadio;
 

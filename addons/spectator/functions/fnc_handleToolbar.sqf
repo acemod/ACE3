@@ -38,7 +38,7 @@ if (GVAR(camMode) == 0) then {
     _speed = format ["%1 m/s", floor(GVAR(camSpeed) * 100) * 0.01];
 } else {
     _vision = format ["%1 m", floor(getPosASL GVAR(camUnit) select 2)];
-    _fov = WFSideText (group GVAR(camUnit));
+    _fov = [side group GVAR(camUnit)] call BIS_fnc_sideName;
     _speed = format ["%1 km/h", floor(speed GVAR(camUnit)) max 0];
 };
 

@@ -320,7 +320,7 @@ switch (toLower _mode) do {
         _cachedSides = [];
         {
             _grp = group _x;
-            _side = WFSideText side _grp;
+            _side = [side _grp] call BIS_fnc_sideName;
 
             // Use correct side node
             if !(_side in _cachedSides) then {
