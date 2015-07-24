@@ -131,8 +131,11 @@
         <Key ID="STR_ACE_Spectator_freeCamSpeed">
             <English>Speed Up/Down</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_freeCamVision">
-            <English>Toggle Vision Mode</English>
+        <Key ID="STR_ACE_Spectator_freeCamNextVis">
+            <English>Next Vision Mode</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamPrevVis">
+            <English>Previous Vision Mode</English>
         </Key>
 
         <Key ID="STR_ACE_Spectator_uiToggleInterface">

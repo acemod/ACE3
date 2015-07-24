@@ -32,6 +32,7 @@ switch (toLower _mode) do {
 
         // Initalize display variables
         GVAR(ctrlKey) = false;
+        GVAR(heldKeys) = [];
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
 
@@ -71,6 +72,7 @@ switch (toLower _mode) do {
 
         // Cleanup display variables
         GVAR(ctrlKey) = nil;
+        GVAR(heldKeys) = nil;
         GVAR(mouse) = nil;
         GVAR(mousePos) = nil;
 
@@ -111,7 +113,8 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamRight),"D"],
             [localize LSTRING(freeCamUp),"Q"],
             [localize LSTRING(freeCamDown),"Z"],
-            [localize LSTRING(freeCamVision),"N"],
+            [localize LSTRING(freeCamNextVis),"N"],
+            [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
             [localize LSTRING(freeCamSpeed),"Scrollwheel"],
             [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"]
         ];
@@ -164,6 +167,10 @@ switch (toLower _mode) do {
     case "onkeydown": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
+        // Handle held keys (prevent repeat calling)
+        if (_dik in GVAR(heldKeys)) exitwith {};
+        GVAR(heldKeys) pushBack _dik;
+
         switch (_dik) do {
             case 1: { // Esc
                [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
@@ -205,7 +212,11 @@ switch (toLower _mode) do {
                 GVAR(camBoom) = -0.5;
             };
             case 49: { // N
-                [nil,nil,1] call FUNC(cycleCamera);
+                if (_ctrl) then {
+                    [nil,nil,-1] call FUNC(cycleCamera);
+                } else {
+                    [nil,nil,1] call FUNC(cycleCamera);
+                };
             };
             case 50: { // M
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
@@ -233,6 +244,9 @@ switch (toLower _mode) do {
     };
     case "onkeyup": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
+
+        // No longer being held
+        GVAR(heldKeys) = GVAR(heldKeys) - [_dik];
 
         switch (_dik) do {
             case 16: { // Q
