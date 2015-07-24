@@ -34,7 +34,7 @@ params [
     ["_mode",GVAR(camMode),[0]],
     ["_unit",GVAR(camUnit),[objNull]],
     ["_vision",GVAR(camVision),[0]],
-    ["_position",GVAR(camPos),[[]],3],
+    ["_position",ASLtoATL GVAR(camPos),[[]],3],
     ["_heading",GVAR(camPan),[0]],
     ["_tilt",GVAR(camTilt),[0]],
     ["_zoom",GVAR(camZoom),[0]],
