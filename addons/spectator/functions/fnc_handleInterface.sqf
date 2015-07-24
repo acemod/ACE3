@@ -112,8 +112,10 @@ switch (toLower _mode) do {
             [localize LSTRING(uiToggleUnits),"1"],
             [localize LSTRING(uiToggleTools),"2"],
             [localize LSTRING(uiToggleCompass),"3"],
+            [localize LSTRING(uiToggleIcons),"4"],
             [localize LSTRING(uiToggleInterface),"Backspace"],
 
+            [localize LSTRING(freeCamControls)],
             [localize LSTRING(freeCamForward),"W"],
             [localize LSTRING(freeCamBackward),"S"],
             [localize LSTRING(freeCamLeft),"A"],
@@ -197,6 +199,9 @@ switch (toLower _mode) do {
             };
             case 4: { // 3
                 [_display,true] call FUNC(toggleInterface);
+            };
+            case 5: { // 4
+                GVAR(showIcons) = !GVAR(showIcons);
             };
             case 14: { // Backspace
                 [_display,nil,nil,true] call FUNC(toggleInterface);
@@ -386,6 +391,8 @@ switch (toLower _mode) do {
             _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(camera),24,24,GVAR(camPan)];
         };
 
+        if !(GVAR(showIcons)) exitWith {};
+
         private ["_cachedVehicles","_unit","_color","_icon"];
         _cachedVehicles = [];
         {
@@ -399,7 +406,7 @@ switch (toLower _mode) do {
                     [_unit] call FUNC(cacheUnitInfo);
                 };
 
-                _color = GETVAR(_unit,GVAR(uColor),[0,0,0,0]);
+                _color = GETVAR(_unit,GVAR(uColor),[ARR_4(0,0,0,0)]);
                 _icon = GETVAR(_unit,GVAR(uIcon),"");
                 _map drawIcon [_icon, _color, _unit, 24, 24, getDir _unit];
             };

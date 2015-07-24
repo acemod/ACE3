@@ -36,6 +36,7 @@ GVAR(camZoom) = 1.25;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;
+GVAR(showIcons) = true;
 GVAR(showInterface) = true;
 GVAR(showMap) = false;
 GVAR(showTool) = true;
