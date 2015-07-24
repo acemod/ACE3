@@ -346,7 +346,7 @@ switch (toLower _mode) do {
                 _gNode = _cachedGrps select ((_cachedGrps find _grp) + 1);
             };
 
-            _uNode = _tree tvAdd [[_sNode,_gNode], name _x];
+            _uNode = _tree tvAdd [[_sNode,_gNode], GETVAR(_x,GVAR(uName),"")];
             _tree tvSetData [[_sNode,_gNode,_uNode], netID _x];
 
             // Preserve the previous selection
@@ -394,14 +394,13 @@ switch (toLower _mode) do {
             if !(_unit in _cachedVehicles) then {
                 _cachedVehicles pushBack _unit;
 
-                _color = [side group _unit] call BIS_fnc_sideColor;
-                _icon = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "Icon");
-
-                // Handle CfgVehicleIcons
-                if isText (configFile >> "CfgVehicleIcons" >> _icon) then {
-                    _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+                // Use previously cached info where possible
+                if (isNil { GETVAR(_unit,GVAR(uIcon),nil) }) then {
+                    [_unit] call FUNC(cacheUnitInfo);
                 };
 
+                _color = GETVAR(_unit,GVAR(uColor),[0,0,0,0]);
+                _icon = GETVAR(_unit,GVAR(uIcon),"");
                 _map drawIcon [_icon, _color, _unit, 24, 24, getDir _unit];
             };
         } forEach GVAR(unitList);

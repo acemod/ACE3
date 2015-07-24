@@ -33,7 +33,7 @@ if !(_newUnits isEqualTo []) exitWith {
     };
 };
 
-private ["_sides","_cond","_filteredUnits"];
+private ["_sides","_cond","_filteredUnits","_color","_icon"];
 
 // Unit setting filter
 _newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
@@ -61,6 +61,12 @@ _filteredUnits = [];
     };
 } forEach (_newUnits - GVAR(unitBlacklist));
 _filteredUnits append GVAR(unitWhitelist);
+
+// Cache icons and colour for drawing
+{
+    // Intentionally re-applied to units in case their status changes
+    [_x] call FUNC(cacheUnitInfo);
+} forEach _filteredUnits;
 
 // Replace previous list entirely (removes any no longer valid)
 GVAR(unitList) = _filteredUnits arrayIntersect _filteredUnits;

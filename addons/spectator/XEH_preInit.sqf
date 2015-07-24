@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(cacheUnitInfo);
 PREP(cycleCamera);
 PREP(handleCamera);
 PREP(handleCompass);
