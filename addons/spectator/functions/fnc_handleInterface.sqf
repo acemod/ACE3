@@ -40,6 +40,11 @@ switch (toLower _mode) do {
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
 
+        // Close all existing dialogs
+        while {dialog} do {
+            closeDialog 0;
+        };
+
         // Create the dialog
         createDialog QGVAR(interface);
 
