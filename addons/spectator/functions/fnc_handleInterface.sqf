@@ -99,14 +99,8 @@ switch (toLower _mode) do {
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
 
-        // Keep unit tree up to date
+        // Keep unit list and tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
-
-        // Handle the compass heading
-        [FUNC(handleCompass), 0, _display] call CBA_fnc_addPerFrameHandler;
-
-        // Handle the toolbar values
-        [FUNC(handleToolbar), 0, _display] call CBA_fnc_addPerFrameHandler;
 
         // Populate the help splash
         private "_help";
@@ -159,6 +153,8 @@ switch (toLower _mode) do {
         };
 
         GVAR(camHandler) = nil;
+        GVAR(compHandler) = nil;
+        GVAR(toolHandler) = nil;
     };
     // Mouse events
     case "onmousebuttondown": {
@@ -183,9 +179,9 @@ switch (toLower _mode) do {
 
         // Scroll to change speed, modifier for zoom
         if (GVAR(ctrlKey)) then {
-            GVAR(camZoom) = ((GVAR(camZoom) + _zChange * 0.1) max 0.01) min 2;
+            [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + _zChange * 0.1] call FUNC(setCameraAttributes);
         } else {
-            GVAR(camSpeed) = ((GVAR(camSpeed) + _zChange * 0.2) max 0.05) min 10;
+            [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + _zChange * 0.2] call FUNC(setCameraAttributes);
         };
     };
     case "onmousemoving": {

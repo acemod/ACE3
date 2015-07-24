@@ -16,8 +16,8 @@
  * 3: Camera position (ATL) <ARRAY> <OPTIONAL>
  * 4: Camera pan (0 - 360) <NUMBER> <OPTIONAL>
  * 5: Camera tilt (-90 - 90) <NUMBER> <OPTIONAL>
- * 6: Camera zoom (0.1 - 2) <NUMBER> <OPTIONAL>
- * 7: Camera speed (m/s) <NUMBER> <OPTIONAL>
+ * 6: Camera zoom (0.01 - 2) <NUMBER> <OPTIONAL>
+ * 7: Camera speed in m/s (0.05 - 10) <NUMBER> <OPTIONAL>
  *
  * Return Value:
  * None <NIL>
@@ -52,11 +52,11 @@ if !(_vision in GVAR(availableVisions)) then {
 
 GVAR(camPan) = ((_heading % 360) max 0);
 GVAR(camPosition) = (ATLtoASL _position);
-GVAR(camSpeed) = (_speed min 0.05) max 10;
-GVAR(camTilt) = (_heading min -89) max 89;
+GVAR(camSpeed) = (_speed max 0.05) min 10;
+GVAR(camTilt) = (_heading max -89) min 89;
 GVAR(camUnit) = _unit;
 GVAR(camVision) = _vision;
-GVAR(camZoom) = (_zoom min 2) max 0;
+GVAR(camZoom) = (_zoom min 2) max 0.01;
 
 // Apply if camera exists
 if !(isNil QGVAR(camera)) then {

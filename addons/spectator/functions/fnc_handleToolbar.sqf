@@ -19,14 +19,8 @@
 
 params ["_display"];
 
-// Kill PFH when display is closed
-if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
-
-GVAR(camera) camSetFov -(linearConversion [0.1,2,GVAR(camZoom),-2,-0.1,true]);
-GVAR(camera) camCommit 0;
-
-// Reduce overhead when toolbar is hidden
-if !(ctrlShown (_display displayCtrl IDC_TOOL)) exitWith {};
+// Kill PFH when toolbar hidden (or display is closed)
+if (isNil QGVAR(toolHandler)) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
 private ["_name","_vision","_fov","_speed","_mode","_time","_toolbar"];
 _toolbar = _display displayCtrl IDC_TOOL;

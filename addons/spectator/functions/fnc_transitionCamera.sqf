@@ -47,6 +47,10 @@ if (_newMode == 0) then { // Free
     // Preserve camUnit value for consistency when manually changing view
     GVAR(camera) cameraEffect ["internal", "back"];
 
+    // Apply the camera zoom
+    GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
+    GVAR(camera) camCommit 0;
+
     // Switch to camera to stop AI group chat
     GVAR(camera) switchCamera "internal";
     clearRadio;
@@ -86,6 +90,11 @@ if (_newMode == 0) then { // Free
         };
     } else { // External
         _newUnit switchCamera "external";
+    };
+
+    // Clear radio if group changed
+    if (group _newUnit != group GVAR(camUnit)) then {
+        clearRadio;
     };
 
     GVAR(camUnit) = _newUnit;
