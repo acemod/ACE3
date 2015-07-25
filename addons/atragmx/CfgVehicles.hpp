@@ -10,7 +10,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\ATRAG_Icon.paa);
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };

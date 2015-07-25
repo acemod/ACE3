@@ -2,6 +2,7 @@ class CfgWeapons {
     class Pistol_Base_F;
     class Rifle_Base_F;
     class Rifle_Long_Base_F;
+    class UGL_F;
     class BWA3_P8: Pistol_Base_F {
         ACE_barrelTwist=248.92;
         ACE_barrelLength=108;
@@ -30,6 +31,13 @@ class CfgWeapons {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=406;
     };
+    class BWA3_G27_AG: BWA3_G27 {
+        class AG40: UGL_F {
+            magazines[] += {
+                "ACE_HuntIR_M203"
+            };
+        };
+    };
     class BWA3_MG4: Rifle_Long_Base_F {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=480;
@@ -42,7 +50,11 @@ class CfgWeapons {
         ACE_barrelTwist=381.0;
         ACE_barrelLength=736.7;
     };
-    
+    class AG40: UGL_F {
+        magazines[] += {
+            "ACE_HuntIR_M203"
+        };
+    };
     class optic_Hamr;
     class InventoryOpticsItem_Base_F;
     

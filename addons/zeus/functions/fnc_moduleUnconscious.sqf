@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Flips the unconscious state of the unit the module is attached to.
+ * Flips the unconscious state of the unit the module is placed on.
  *
  * Arguments:
  * 0: The module logic <LOGIC>
@@ -16,18 +16,20 @@
 #include "script_component.hpp"
 
 PARAMS_3(_logic,_units,_activated);
-private ["_unit","_conscious"];
+private ["_mouseOver","_unit","_conscious"];
 
 if (!_activated) exitWith {};
 
 if (isNil QEFUNC(medical,setUnconscious)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
-    _unit = attachedTo _logic;
+    _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
-    if (isNull _unit) then {
+    if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
     } else {
+        _unit = effectivecommander (_mouseOver select 1);
+
         if !(_unit isKindOf "CAManBase") then {
             [LSTRING(OnlyInfantry)] call EFUNC(common,displayTextStructured);
         } else {

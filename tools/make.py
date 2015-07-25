@@ -51,6 +51,8 @@ import traceback
 import time
 import re
 
+from tempfile import mkstemp
+
 if sys.platform == "win32":
     import winreg
 
@@ -71,6 +73,7 @@ prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
 importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
+versionFiles = ["README.md", "mod.cpp"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -577,6 +580,100 @@ def get_ace_version():
     return ACE_VERSION
 
 
+def replace_file(filePath, oldSubstring, newSubstring):
+    #Create temp file
+    fh, absPath = mkstemp()
+    with open(absPath,'w') as newFile:
+        with open(filePath) as oldFile:
+            for line in oldFile:
+                newFile.write(line.replace(oldSubstring, newSubstring))
+    newFile.close()
+    #Remove original file
+    os.remove(filePath)
+    #Move new file
+    shutil.move(absPath, filePath)
+
+
+def set_version_in_files():
+    newVersion = ACE_VERSION # MAJOR.MINOR.PATCH.BUILD
+    newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
+
+    # Regex patterns
+    pattern = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH.BUILD
+    patternShort = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH
+
+    # Change versions in files containing version
+    for i in versionFiles:
+        filePath = os.path.join(module_root_parent, i)
+
+        try:
+            # Save the file contents to a variable if the file exists
+            if os.path.isfile(filePath):
+                f = open(filePath, "r+")
+                fileText = f.read()
+                f.close()
+
+                if fileText:
+                    # Search and save version stamp, search short if long not found
+                    versionFound = re.findall(pattern, fileText)
+                    if not versionFound:
+                        versionFound = re.findall(patternShort, fileText)
+
+                    # Replace version stamp if any of the new version parts is higher than the one found
+                    if versionFound:
+                        # First item in the list findall returns
+                        versionFound = versionFound[0]
+
+                        # Use the same version length as the one found
+                        if len(versionFound) == len(newVersion):
+                            newVersionUsed = newVersion
+                        if len(versionFound) == len(newVersionShort):
+                            newVersionUsed = newVersionShort
+
+                        # Print change and modify the file if changed
+                        if versionFound != newVersionUsed:
+                            print_green("Changing version {} => {} in {}".format(versionFound, newVersionUsed, filePath))
+                            replace_file(filePath, versionFound, newVersionUsed)
+
+        except WindowsError as e:
+            # Temporary file is still "in use" by Python, pass this exception
+            pass
+        except Exception as e:
+            print_error("set_version_in_files error: {}".format(e))
+            raise
+
+    return True
+
+
+def stash_version_files_for_building():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Temporarily stashing {} => {}.bak for version update".format(filePath, stashPath))
+            shutil.copy(filePath, "{}.bak".format(stashPath))
+    except:
+        print_error("Stashing version files failed")
+        raise
+
+    # Set version
+    set_version_in_files()
+    return True
+
+
+def restore_version_files():
+    try:
+        for file in versionFiles:
+            filePath = os.path.join(module_root_parent, file)
+            stashPath = os.path.join(release_dir, file)
+            print("Restoring {}".format(filePath))
+            shutil.move("{}.bak".format(stashPath), filePath)
+    except:
+        print_error("Restoring version files failed")
+        raise
+    return True
+
+
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
@@ -649,6 +746,7 @@ def version_stamp_pboprefix(module,commitID):
 
     return True
 
+
 ###############################################################################
 
 
@@ -685,8 +783,6 @@ def main(argv):
     # Default behaviors
     test = False # Copy to Arma 3 directory?
     arg_modules = False # Only build modules on command line?
-    make_release = False # Make zip file from the release?
-    release_version = 0 # Version of release
     use_pboproject = True # Default to pboProject build tool
     make_target = "DEFAULT" # Which section in make.cfg to use for the build
     new_key = True # Make a new key and use it to sign?
@@ -738,10 +834,13 @@ See the make.cfg file for additional build options.
         argv.remove("test")
 
     if "release" in argv:
-        make_release = True
+        make_release_zip = True
         release_version = argv[argv.index("release") + 1]
         argv.remove(release_version)
         argv.remove("release")
+    else:
+        make_release_zip = False
+        release_version = ACE_VERSION
 
     if "target" in argv:
         make_target = argv[argv.index("target") + 1]
@@ -764,6 +863,12 @@ See the make.cfg file for additional build options.
         check_external = True
     else:
         check_external = False
+    
+    if "version" in argv:
+        argv.remove("version")
+        version_update = True
+    else:
+        version_update = False
 
     print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
@@ -792,6 +897,9 @@ See the make.cfg file for additional build options.
 
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
+        
+        # Release archive prefix
+        zipPrefix = cfg.get(make_target, "zipPrefix", fallback=project.lstrip("@").lower())
 
         # Should we autodetect modules on a complete build?
         module_autodetect = cfg.getboolean(make_target, "module_autodetect", fallback=True)
@@ -849,7 +957,7 @@ See the make.cfg file for additional build options.
         sys.exit(1)
 
     # See if we have been given specific modules to build from command line.
-    if len(argv) > 1 and not make_release:
+    if len(argv) > 1 and not make_release_zip:
         arg_modules = True
         modules = argv[1:]
 
@@ -904,9 +1012,18 @@ See the make.cfg file for additional build options.
             print_error("Cannot create release directory")
             raise
 
+    # Update version stamp in all files that contain it
+    # Update version only for release if full update not requested (backup and restore files)
+    print_blue("\nChecking for obsolete version numbers...")
+    if not version_update:
+        stash_version_files_for_building()
+    else:
+        # Set version
+        set_version_in_files();
+        print("Version in files has been changed, make sure you commit and push the updates!")
 
     try:
-        #Temporarily copy optionals_root for building. They will be removed later.
+        # Temporarily copy optionals_root for building. They will be removed later.
         optionals_modules = []
         optional_files = []
         copy_optionals_for_building(optionals_modules,optional_files)
@@ -1079,16 +1196,16 @@ See the make.cfg file for additional build options.
             if build_tool == "pboproject":
                 try:
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
+                    backup_config(module)
 
                     if (not os.path.isfile(nobinFilePath)):
-                        backup_config(module)
                         convert_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                        cmd = [makepboTool, "-P","-A","-L","-N","-G", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+                        cmd = [makepboTool, "-P","-A","-L","-G","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
                         if check_external:
@@ -1222,11 +1339,13 @@ See the make.cfg file for additional build options.
 
     except Exception as e:
         print_yellow("Cancel or some error detected: {}".format(e))
-        
+
 
     finally:
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
         cleanup_optionals(optionals_modules)
+        if not version_update:
+            restore_version_files()
 
     # Done building all modules!
 
@@ -1236,25 +1355,34 @@ See the make.cfg file for additional build options.
         f.write(cache_out)
 
     # Delete the pboproject temp files if building a release.
-    if make_release and build_tool == "pboproject":
+    if make_release_zip and build_tool == "pboproject":
         try:
-            shutil.rmtree(os.path.join(module_root, release_dir, project, "temp"), True)
+            shutil.rmtree(os.path.join(release_dir, project, "temp"), True)
         except:
             print_error("ERROR: Could not delete pboProject temp files.")
 
     # Make release
-    if make_release:
-        print_blue("\nMaking release: {}-{}.zip".format(project,release_version))
+    if make_release_zip:
+        release_name = "{}_{}".format(zipPrefix, release_version)
+        print_blue("\nMaking release: {}.zip".format(release_name))
 
         try:
             # Delete all log files
-            for root, dirs, files in os.walk(os.path.join(module_root, release_dir, project, "addons")):
+            for root, dirs, files in os.walk(os.path.join(release_dir, project, "addons")):
                 for currentFile in files:
                     if currentFile.lower().endswith("log"):
                         os.remove(os.path.join(root, currentFile))
 
-            # Create a zip with the contents of release/ in it
-            shutil.make_archive(project + "-" + release_version, "zip", os.path.join(module_root, release_dir))
+            # Remove all zip files from release folder to prevent zipping the zip
+            for file in os.listdir(release_dir):
+                if file.endswith(".zip"):
+                    os.remove(os.path.join(release_dir, file))
+
+            # Create a zip with the contents of release folder in it
+            release_zip = shutil.make_archive("{}".format(release_name), "zip", release_dir)
+            # Move release zip to release folder
+            shutil.copy(release_zip, release_dir)
+            os.remove(release_zip)
         except:
             raise
             print_error("Could not make release.")

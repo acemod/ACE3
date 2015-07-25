@@ -12,7 +12,7 @@ class CfgWeapons {
         displayName = CSTRING(clacker_displayName);
         descriptionShort = CSTRING(clacker_description);
         picture = PATHTOF(Data\UI\Clacker.paa);
-        model = "\A3\weapons_F\ammo\mag_univ.p3d";
+        model = QUOTE(PATHTOF(data\ace_m57.p3d));
         ACE_Range = 250;
         ACE_Detonator = 1;
 

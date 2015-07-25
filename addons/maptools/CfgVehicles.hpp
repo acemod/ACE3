@@ -7,7 +7,7 @@ class CfgVehicles {
                 displayName = CSTRING(MapTools_Menu);
                 condition = QUOTE((call FUNC(canUseMapTools) || {call FUNC(canUseMapGPS)}));
                 statement = "";
-                exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 showDisabled = 0;
                 priority = 100;
 
@@ -15,7 +15,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapToolsHide);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
                     statement = QUOTE(GVAR(mapTool_Shown) = 0; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 5;
                 };
@@ -23,7 +23,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapToolsShowNormal);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 1}));
                     statement = QUOTE(GVAR(mapTool_Shown) = 1; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 4;
                 };
@@ -31,7 +31,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapToolsShowSmall);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 2}));
                     statement = QUOTE(GVAR(mapTool_Shown) = 2; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 3;
                 };
@@ -39,7 +39,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapToolsAlignNorth);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
                     statement = QUOTE(GVAR(mapTool_angle) = 0; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 2;
                 };
@@ -47,7 +47,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapToolsAlignCompass);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0} && {('ItemCompass' in assigneditems ACE_player) || {'ItemCompass' in assigneditems ACE_player}}));
                     statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 1;
                 };
@@ -55,7 +55,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapGpsShow);
                     condition = QUOTE((call FUNC(canUseMapGPS) && {!GVAR(mapGpsShow)}));
                     statement = QUOTE(GVAR(mapGpsShow) = true; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     priority = 0;
                 };
@@ -63,7 +63,7 @@ class CfgVehicles {
                     displayName = CSTRING(MapGpsHide);
                     condition = QUOTE((call FUNC(canUseMapGPS) && {GVAR(mapGpsShow)}));
                     statement = QUOTE(GVAR(mapGpsShow) = false; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     priority = 0;
                 };
