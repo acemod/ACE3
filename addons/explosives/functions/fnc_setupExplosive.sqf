@@ -61,23 +61,28 @@ GVAR(TweakedAngle) = 0;
     PARAMS_2(_args,_pfID);
     EXPLODE_4_PVT(_args,_unit,_magClassname,_setupObjectClass,_isAttachable);
 
-    private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testDistance", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
+    private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
 
     _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
-    _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
-
     _basePosASL = (eyePos _unit);
-    if (cameraView == "EXTERNAL") then {
+    if (cameraView == "EXTERNAL") then {  //If external, show explosive over the right shoulder
         _basePosASL = _basePosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
     };
+    if ((stance _unit) == "PRONE") then {
+        //If prone, lower base and increase up angle of look - Makes it much easier to attach to underside of vehicles
+        _basePosASL set [2, ((_basePosASL select 2) - 0.3)];
+        _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,3,10]) call EFUNC(common,positionToASL));
+    };
+    _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
 
     _testPositionIsValid = {
-        _testDistance = _this select 0;
-        _testBase = _basePosASL vectorAdd (_lookDirVector vectorMultiply _testDistance);
+        _testBase = _basePosASL vectorAdd (_lookDirVector vectorMultiply (_this select 0));
         _return = true;
         {
             _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
+            #ifdef DEBUG_MODE_FULL
             drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
+            #endif
             if (lineIntersects [eyePos _unit, _testPos, _unit]) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         _return
