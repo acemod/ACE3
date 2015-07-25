@@ -189,7 +189,7 @@ class CfgWeapons {
     class ACE_quikclot: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(QuikClot_Display);
-        model = QUOTE(PATHTOF(data\QuikClot.p3d))
+        model = QUOTE(PATHTOF(data\QuikClot.p3d));
         picture = QUOTE(PATHTOF(ui\items\quickclot_x_ca.paa));
         descriptionShort = CSTRING(QuikClot_Desc_Short);
         descriptionUse = CSTRING(QuikClot_Desc_Use);

@@ -23,7 +23,7 @@ class CfgVehicles {
      class CAManBase: Man {
          class ACE_SelfActions {
              class ACE_CutParachute {
-                 displayName = CSTRING("CutParachute");
+                 displayName = CSTRING(CutParachute);
                  exceptions[] = {"isNotInside"};
                  condition = QUOTE([_player] call FUNC(checkCutParachute));
                  statement = QUOTE([_player] call FUNC(cutParachute));
