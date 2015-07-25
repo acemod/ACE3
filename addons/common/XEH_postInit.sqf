@@ -37,6 +37,14 @@
     };
 }] call FUNC(addEventhandler);
 
+//~~~~~Get Map Data~~~~~
+//Find MGRS zone and 100km grid for current map
+[] call FUNC(getMGRSdata);
+//Prepare variables for FUNC(getMapGridFromPos)/FUNC(getMapPosFromGrid)
+[] call FUNC(getMapGridData);
+
+
+
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
