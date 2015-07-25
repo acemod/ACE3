@@ -95,6 +95,11 @@ class RscDisplayInterruptEditor3D: RscStandardDisplay {
         class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
     };
 };
+class RscDisplayMovieInterrupt: RscStandardDisplay {
+    class controls {
+        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {};
+    };
+};
 class RscDisplayMain: RscStandardDisplay {
     //Hide the button if there is no world (-world=empty)
     //Seems odd to use onMouseMoving, but I don't want to overload onLoad
