@@ -195,7 +195,7 @@ switch (toLower _mode) do {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         // Handle held keys (prevent repeat calling)
-        if (_dik in GVAR(heldKeys)) exitwith {};
+        if (_dik in GVAR(heldKeys)) exitwith { true };
         GVAR(heldKeys) pushBack _dik;
 
         switch (_dik) do {
@@ -385,10 +385,10 @@ switch (toLower _mode) do {
     };
     // Map events
     case "onmapdblclick": {
-        _args params ["_map","_button","_x","_y","_shift","_ctrl"];
+        _args params ["_map","_button","_x","_y"];
         private ["_newPos","_oldZ"];
 
-        if ((GVAR(camMode) == 0) && (_button == 0) && _ctrl) then {
+        if ((GVAR(camMode) == 0) && (_button == 0)) then {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
             _oldZ = (ASLtoATL GVAR(camPos)) select 2;
             _newPos set [2, _oldZ];
