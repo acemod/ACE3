@@ -577,6 +577,7 @@
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
             <Spanish>Seleccionar dispositivo de mano</Spanish>
+            <German>Handheld aufrufen</German>
             <Portuguese>Ativa dispositivo de mão</Portuguese>
             <Polish>Przełącz urządzenie podręczne</Polish>
             <Czech>Přepnout ruční zařízení</Czech>
@@ -584,6 +585,7 @@
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
             <Spanish>Cerrar dispositivo de mano</Spanish>
+            <German>Handheld schließen</German>
             <Portuguese>Fecha dispositivo de mão</Portuguese>
             <Polish>Zamknij urządzenie podręczne</Polish>
             <Czech>Zavřít ruční zařízení</Czech>
@@ -591,6 +593,7 @@
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
             <Spanish>Cambiar dispositivos de mano</Spanish>
+            <German>Handheld wechseln</German>
             <Portuguese>Troca dispositivos de mão</Portuguese>
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>

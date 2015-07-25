@@ -70,6 +70,7 @@
             <Spanish>(Solo SP) Seguimiento de depuración de Fragmentación/Astillamiento </Spanish>
             <Polish>(Tylko SP) Wizualny debug odł./odpr.</Polish>
             <Czech>(Pouze SP) Debug sledování Frag/Úlomků</Czech>
+            <German>(nur SP) Splitter-/Explosions-Debug-Verfolgung</German>
             <Portuguese>(Somente SP) Depuração de fragmentação e estilhaços traçantes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">

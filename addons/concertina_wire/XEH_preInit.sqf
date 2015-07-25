@@ -7,5 +7,6 @@ PREP(dismount);
 PREP(dismountSuccess);
 PREP(handleDamage);
 PREP(handleKilled);
+PREP(vehicleDamage);
 
 ADDON = true;

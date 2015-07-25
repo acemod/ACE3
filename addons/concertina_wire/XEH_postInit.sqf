@@ -9,3 +9,5 @@ GVAR(deployPFH) = -1;
         GVAR(placer) setVariable [QGVAR(wireDeployed), true];
     };
 }] call EFUNC(common,addEventHandler);
+
+[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call EFUNC(common,addEventHandler);
