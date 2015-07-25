@@ -22,10 +22,10 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 ### 2.1 Using map tools
 - For this you need to have `Map Tools`.
 - Open the map <kbd>M</kbd> (Arma 3 default key bind `Map`).
-- Press the self interaction key <kbd>CTRL</kbd> + <kbd>Left Windows</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Press the self interaction key <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Map tools`.
 - Select the type of tools you want to use.
-- Note that you can drag the Roamer (map tool) around with <kdd> LMB </kbd> and rotate it with <kbd>CTRL</kbd> + <kbd>LMB</kbd>.
+- Note that you can drag the Roamer (map tool) around with <kdd> LMB </kbd> and rotate it with <kbd>Ctrl</kbd> + <kbd>LMB</kbd>.
 
 ### 2.2 Drawing lines
 - To draw lines `Map Tools` are not required.

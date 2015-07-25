@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_EarPlugs"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction"};
+        requiredAddons[] = {"ace_interaction", "A3_Characters_F", "A3_Characters_F_Kart"};
         author[] = {"KoffeinFlummi", "esteldunedain", "HopeJ", "commy2", "Rocko", "Rommel", "Ruthberg"};
         authorUrl = "https://github.com/KoffeinFlummi/";
         VERSION_CONFIG;

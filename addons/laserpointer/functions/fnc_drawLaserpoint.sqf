@@ -1,7 +1,7 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
-private ["_brightness", "_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_intermediatePos", "_iteration", "_light", "_line", "_pL", "_pL2", "_pX", "_size", "_units", "_fnc_getDistanceToTerrain", "_fnc_doesIntersectWithMan"];
+private ["_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_intermediatePos", "_iteration", "_light", "_line", "_pL", "_pL2", "_pX", "_size", "_units", "_fnc_getDistanceToTerrain", "_fnc_doesIntersectWithMan"];
 
 // init object
 /*if (isNil QGVAR(laserdot)) then {
@@ -16,7 +16,7 @@ private ["_brightness", "_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_
     GVAR(laserdot) = _light;
 };*/
 
-EXPLODE_3_PVT(_this,_unit,_range,_isGreen);
+EXPLODE_4_PVT(_this,_unit,_range,_isGreen,_brightness);
 
 _p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
 

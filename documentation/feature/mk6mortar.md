@@ -18,7 +18,7 @@ ACE3 adds wind deflection for shells as well as a rangetable to accurately take 
 
 ### 2.2 Working with the rangetable
 - To open the table: 
-    - Self interact <kbd>CTRL</kbd> + <kbd>Left Windows</kbd>
+    - Self interact <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
     - Select `equipment`.
     - Select `Open 82mm Rangetable`.
 
@@ -34,7 +34,7 @@ ACE3 adds wind deflection for shells as well as a rangetable to accurately take 
  - Once you finished your maths, it's time to aim, get the cross of the mortar on target, if you don't see it use a waypoint if possible. In our case ELEV is 1339-2 = 1337.
     
  - On the right side of the screen, while looking through the mk6 scope you should see ELV, we need to match this number with the one we found.
-    - To adjust the ELV use <kbd>pageUP</kbd> and  <kbd>pageDOWN</kbd>.
+    - To adjust the ELV use <kbd>Page Up</kbd> and  <kbd>page Down</kbd>.
     - Once the number you found and ELV are the same FIRE !
     - On top of that you can calculate the time the shell will take to land by using the third row from the left, in our case the shell need to travel 2000m that's 20xthe number indicated. so 20x0,5 = 10s.
 

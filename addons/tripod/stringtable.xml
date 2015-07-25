@@ -11,6 +11,7 @@
             <Czech>SSWT souprava</Czech>
             <Italian>SSWT Kit</Italian>
             <Hungarian>SSWT Kit</Hungarian>
+            <Portuguese>Kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_PlaceDown">
             <English>Place SSWT Kit</English>
@@ -22,6 +23,7 @@
             <Czech>Rozlož souprava SSWT</Czech>
             <Italian>Place SSWT Kit</Italian>
             <Hungarian>Place SSWT Kit</Hungarian>
+            <Portuguese>Colocar kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_PickUp">
             <English>Pick up SSWT Kit</English>
@@ -29,6 +31,7 @@
             <Spanish>Coger equipo SSWT</Spanish>
             <Czech>Zvednout SSWT soupravu</Czech>
             <German>SSWT-Werkzeug aufheben</German>
+            <Portuguese>Pegar kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
@@ -36,6 +39,7 @@
             <Spanish>Ajustar equipo SSWT</Spanish>
             <Czech>Regulovat SSWT soupravu</Czech>
             <German>SSWT-Werkzeug anpassen</German>
+            <Portuguese>Ajustar kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -43,6 +47,7 @@
             <Spanish>Hecho</Spanish>
             <Czech>Hotovo</Czech>
             <German>Fertig</German>
+            <Portuguese>Feito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>+ Modifier, adjust</English>
@@ -50,6 +55,7 @@
             <Spanish>+ Modificador, ajuste</Spanish>
             <Czech>+ Modifikátor, regulace</Czech>
             <German>+ Modifikator, anpassen</German>
+            <Portuguese>+ Modificador, ajuste</Portuguese>
         </Key>
     </Package>
 </Project>

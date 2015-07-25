@@ -7,6 +7,7 @@
             <Spanish>MX-2A</Spanish>
             <Czech>MX-2A</Czech>
             <German>MX-2A</German>
+            <Portuguese>MX-2A</Portuguese>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
@@ -14,6 +15,7 @@
             <Polish>Monokular termowizyjny</Polish>
             <Spanish>Dispositivo de imagen térmica</Spanish>
             <Czech>Termální dalekohled</Czech>
+            <Portuguese>Dispositivo de imagem térmica</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -7,6 +7,7 @@
             <Spanish>Tarjeta de distancias</Spanish>
             <Czech>Vzdálenostní tabulka</Czech>
             <German>Entfernungsspinne</German>
+            <Portuguese>Tabela de distâncias</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -14,6 +15,7 @@
             <Spanish>Incrementos de 50 METROS -- MRAD/MRAD (retícula/torretas)</Spanish>
             <Czech>Přidat 50 METRŮ -- MRAD/MRAD (síťka/věže)</Czech>
             <German>50-Meter-Schritte MRAD/MRAD (Fadenkreuz/Geschützturm)</German>
+            <Portuguese>Incrementos de 50 METROS - MRAD/MRAD (retícula/torres)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -21,6 +23,7 @@
             <Spanish>Abrir tarjeta de distancias</Spanish>
             <Czech>Otevřít vzdálenostní tabulku</Czech>
             <German>Öffne Entfernungsspinne</German>
+            <Portuguese>Abrir tabela de distâncias</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -28,6 +31,7 @@
             <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
             <German>Öffne Kopie der Entfernungsspinne</German>
+            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -35,6 +39,7 @@
             <Spanish>Abrir tarjeta de distancias</Spanish>
             <Czech>Otevřít vzdálenostní tabulku</Czech>
             <German>Öffne Entfernungsspinne</German>
+            <Portuguese>Abrir tabela de distäncias</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -42,6 +47,7 @@
             <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
             <German>Öffne Kopie der Entfernungsspinne</German>
+            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -49,6 +55,7 @@
             <Spanish>Copiar tarjeta de distancias</Spanish>
             <Czech>Kopírovat vzdálenostní tabulku</Czech>
             <German>Kopiere Entfernungsspinne</German>
+            <Portuguese>Copiar tabela de distäncias</Portuguese>
         </Key>
     </Package>
 </Project>

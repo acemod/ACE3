@@ -76,4 +76,11 @@ class ACE_Settings {
         displayName = CSTRING(background);
         values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(backgroundBlur), CSTRING(backgroundBlack)};
     };
+    class GVAR(addBuildingActions) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        displayName = CSTRING(addBuildingActions);
+        description = CSTRING(addBuildingActionsDescription);
+    };
 };
