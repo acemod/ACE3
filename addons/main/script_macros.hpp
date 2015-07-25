@@ -68,6 +68,11 @@
   count = COUNT; \
 }
 
+#define MACRO_ADDBACKPACK(BACKPACK,COUNT) class _xx_##BACKPACK { \
+  backpack = #BACKPACK; \
+  count = COUNT; \
+}
+
 
 #ifdef DISABLE_COMPILE_CACHE
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
