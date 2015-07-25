@@ -31,6 +31,8 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
             };
         };
         class ACE_SelfActions {
