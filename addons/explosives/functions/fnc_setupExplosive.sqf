@@ -18,9 +18,12 @@
 #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
+#define PLACE_RANGE_MAX 1
+#define PLACE_RANGE_MIN 0.025
+
 PARAMS_3(_vehicle,_unit,_magClassname);
 
-private["_isAttachable", "_setupObjectClass", "_supportedTriggers"];
+private["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
 
 //Get setup object vehicle and model:
 _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> "ACE_SetupObject");
@@ -59,8 +62,8 @@ GVAR(TweakedAngle) = 0;
     EXPLODE_4_PVT(_args,_unit,_magClassname,_setupObjectClass,_isAttachable);
 
     private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testDistance", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
-    
-    _lookDirVector = (positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1]);
+
+    _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
     _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
 
     _basePosASL = (eyePos _unit);
@@ -80,7 +83,7 @@ GVAR(TweakedAngle) = 0;
         _return
     };
 
-    _distanceFromBase = 1;
+    _distanceFromBase = PLACE_RANGE_MAX;
     _badPosition = !([_distanceFromBase] call _testPositionIsValid);
     _attachVehicle = objNull;
 
@@ -92,10 +95,10 @@ GVAR(TweakedAngle) = 0;
             _intersectsWith = lineIntersectsWith [eyePos _unit, _testPos, _unit];
             if (count _intersectsWith == 1) exitWith {_attachVehicle = (_intersectsWith select 0);};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
-        if ((!isNull _attachVehicle) && {[0.05] call _testPositionIsValid} &&
+        if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
                 {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
-            _min = 0.05;
-            _max = 1;
+            _min = PLACE_RANGE_MIN;
+            _max = PLACE_RANGE_MAX;
             for "_index" from 0 to 6 do {
                 _distanceFromBase = (_min + _max) / 2;
                 if ([_distanceFromBase] call _testPositionIsValid) then {
@@ -112,6 +115,18 @@ GVAR(TweakedAngle) = 0;
     };
 
     _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
+
+    //Update mouse hint:
+    if (_badPosition) then {
+        ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(BlockedAction);
+    } else {
+        if (isNull _attachVehicle) then {
+            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(PlaceAction);
+        } else {
+            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(AttachAction);
+        };
+    };
+
     //Don't allow Placing bellow terrain
     if ((getTerrainHeightASL _virtualPosASL) > (_virtualPosASL select 2)) then {
         _virtualPosASL set [2, (getTerrainHeightASL _virtualPosASL)];
@@ -139,7 +154,6 @@ GVAR(TweakedAngle) = 0;
         (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            systemChat format ["place %1 - %2", _virtualPosASL, aslToAtl _virtualPosASL];;
             _placeAngle = 0;
             _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
             if (isNull _attachVehicle) then {
@@ -154,7 +168,7 @@ GVAR(TweakedAngle) = 0;
                 _expSetupVehicle setVectorDirAndUp [[0,0,-1],[(sin _placeAngle),(cos _placeAngle),0]];
             };
 
-            systemChat format ["Place angel %1", _placeAngle];
+            TRACE_1("Place angel",_placeAngle);
 
             _expSetupVehicle setVariable [QGVAR(class), _magClassname, true];
             _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
@@ -164,8 +178,6 @@ GVAR(TweakedAngle) = 0;
             _unit setVariable [QGVAR(PlantingExplosive), true];
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
 
-            x3 = _expSetupVehicle;
-            // x3 setMass 1;
         };
     } else {
         _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));
