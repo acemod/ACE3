@@ -21,16 +21,17 @@
  */
 #include "script_component.hpp"
 
-private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_muzzles", "_weaponMagazines", "_muzzleMagazines", "_ammoType", "_initSpeed", "_ammoConfig", "_caliber", "_parentClasses"];
+//Only run if deafness or ear ringing is enabled:
+if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
 PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
 
-//Only run if combatDeafness enabled:
-if (!GVAR(enableCombatDeafness)) exitWith {};
 //Only run if firedNear object is player or player's vehicle:
 if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
+
+private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_muzzles", "_weaponMagazines", "_muzzleMagazines", "_ammoType", "_initSpeed", "_ammoConfig", "_caliber", "_parentClasses"];
 
 _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
 
@@ -67,7 +68,7 @@ if (count _weaponMagazines == 0) then {
 
 _magazine = "";
 {
-    EXPLODE_2_PVT(_x,_magazineType,_ammoType)
+    EXPLODE_2_PVT(_x,_magazineType,_ammoType);
     if (_ammoType == _ammo) exitWith {
         _magazine = _magazineType;
     };
