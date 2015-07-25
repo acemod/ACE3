@@ -45,7 +45,7 @@ _cond = [{_this == (side group player)},{(_this getFriend (side group player)) >
     if (_x call _cond) then {
         _sides pushBack _x;
     };
-} forEach [west,east,resistance,civilian];
+} forEach GVAR(availableSides);
 
 // Filter units and append to list
 _filteredUnits = [];

@@ -18,11 +18,13 @@ PREP(setSpectator);
 PREP(transitionCamera);
 PREP(toggleInterface);
 PREP(updateCameraModes);
+PREP(updateSpectatableSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
 
 // Permanent variables
 GVAR(availableModes) = [0,1,2];
+GVAR(availableSides) = [west,east,resistance,civilian];
 GVAR(availableVisions) = [-2,-1,0,1];
 
 GVAR(camMode) = 0;
