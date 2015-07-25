@@ -1,11 +1,7 @@
 class ACE_Settings {
-    class GVAR(enabledSystem) {
-        typeName = "BOOL";
-        value = 0;
-    };
     class GVAR(filterUnits) {
         typeName = "SCALAR";
-        value = 0;
+        value = 1;
         values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_all)};
     };
     class GVAR(filterSides) {
@@ -22,5 +18,9 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {CSTRING(modes_all), CSTRING(visions_nv), CSTRING(visions_ti), "$STR_Special_None"};
+    };
+    class GVAR(unitIcons) {
+        typeName = "BOOL";
+        value = 1;
     };
 };

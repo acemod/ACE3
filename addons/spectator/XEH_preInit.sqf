@@ -6,6 +6,7 @@ PREP(cacheUnitInfo);
 PREP(cycleCamera);
 PREP(handleCamera);
 PREP(handleCompass);
+PREP(handleIcons);
 PREP(handleInterface);
 PREP(handleKilled);
 PREP(handleMouse);

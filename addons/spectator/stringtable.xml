@@ -7,12 +7,6 @@
         <Key ID="STR_ACE_Spectator_Settings_Descripton">
             <English>Configure how the spectator system will operate by default.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_system_DisplayName">
-            <English>Spectator System</English>
-        </Key>
-        <Key ID="STR_ACE_Spectator_system_Description">
-            <English>Enter spectator mode upon respawn.</English>
-        </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
         </Key>
@@ -78,6 +72,12 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_icons_DisplayName">
+            <English>Unit icons</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_icons_Description">
+            <English>Render icons above spectatable units.</English>
         </Key>
 
         <!-- Interface strings -->

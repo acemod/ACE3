@@ -9,12 +9,6 @@ class CfgVehicles {
         isGlobal = 1;
         author = ECSTRING(common,ACETeam);
         class Arguments {
-            class spectatorSystem {
-                displayName = CSTRING(system_DisplayName);
-                description = CSTRING(system_Description);
-                typeName = "BOOL";
-                defaultValue = 0;
-            };
             class unitsFilter {
                 displayName = CSTRING(units_DisplayName);
                 description = CSTRING(units_Description);
@@ -23,11 +17,11 @@ class CfgVehicles {
                     class none {
                         name = CSTRING(units_none);
                         value = 0;
-                        default = 1;
                     };
                     class players {
                         name = CSTRING(units_players);
                         value = 1;
+                        default = 1;
                     };
                     class all  {
                         name = CSTRING(units_all);
@@ -110,6 +104,12 @@ class CfgVehicles {
                         value = 3;
                     };
                 };
+            };
+            class unitIcons {
+                displayName = CSTRING(icons_DisplayName);
+                description = CSTRING(icons_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
             };
         };
         class ModuleDescription {

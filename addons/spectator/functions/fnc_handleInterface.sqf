@@ -154,6 +154,7 @@ switch (toLower _mode) do {
 
         GVAR(camHandler) = nil;
         GVAR(compHandler) = nil;
+        GVAR(iconHandler) = nil;
         GVAR(toolHandler) = nil;
     };
     // Mouse events
@@ -391,7 +392,7 @@ switch (toLower _mode) do {
             _newPos = _map ctrlMapScreenToWorld [_x,_y];
             _oldZ = (ASLtoATL GVAR(camPos)) select 2;
             _newPos set [2, _oldZ];
-            GVAR(camPos) = (ATLtoASL _newPos);
+            [nil,nil,nil, _newPos] call FUNC(setCameraAttributes);
         };
     };
     case "ondraw": {

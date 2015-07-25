@@ -24,7 +24,7 @@
 
 params ["_display", ["_toggleComp",false], ["_toggleHelp",false], ["_toggleInterface",false], ["_toggleMap",false], ["_toggleTool",false], ["_toggleUnit",false]];
 
-private ["_comp","_display","_help","_map","_tool","_unit"];
+private ["_comp","_help","_map","_tool","_unit"];
 _comp = _display displayCtrl IDC_COMP;
 _help = _display displayCtrl IDC_HELP;
 _map = _display displayCtrl IDC_MAP;
@@ -75,15 +75,15 @@ if (GVAR(showMap)) then {
     };
 };
 
-// Only run PFHs for toolbar and compass when respective control is shown, otherwise kill
+// Only run PFHs when respective control is shown, otherwise kill
 if (ctrlShown _comp) then {
-    if (isNil QGVAR(compHandler)) then { GVAR(compHandler) = [FUNC(handleCompass), 0] call CBA_fnc_addPerFrameHandler; };
+    if (isNil QGVAR(compHandler)) then { GVAR(compHandler) = [FUNC(handleCompass), 0, _display] call CBA_fnc_addPerFrameHandler; };
 } else {
     GVAR(compHandler) = nil;
 };
 
 if (ctrlShown _tool) then {
-    if (isNil QGVAR(toolHandler)) then { GVAR(toolHandler) = [FUNC(handleToolbar), 0] call CBA_fnc_addPerFrameHandler; };
+    if (isNil QGVAR(toolHandler)) then { GVAR(toolHandler) = [FUNC(handleToolbar), 0, _display] call CBA_fnc_addPerFrameHandler; };
 } else {
     GVAR(toolHandler) = nil;
 };
