@@ -2,20 +2,11 @@ class CfgVehicles {
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            class _xx_ACE_Altimeter {
-                name = "ACE_Altimeter";
-                count = 6;
-            };
+            MACRO_ADDITEM(ACE_Altimeter,6);
         };
         class TransportBackpacks {
-            class _xx_ACE_NonSteerableParachute {
-                backpack = "ACE_NonSteerableParachute";
-                count = 4;
-            };
-            class _xx_ACE_ReserveParachute {
-                backpack = "ACE_ReserveParachute";
-                count = 4;
-            };
+            MACRO_ADDBACKPACK(ACE_NonSteerableParachute,4);
+            MACRO_ADDBACKPACK(ACE_ReserveParachute,4);
         };
     };
 

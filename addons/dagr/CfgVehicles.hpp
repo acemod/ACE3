@@ -33,10 +33,7 @@ class CfgVehicles {
         displayName = "DAGR";
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_DAGR {
-                name = "ACE_DAGR";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_DAGR,1);
         };
     };
 

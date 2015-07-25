@@ -23,10 +23,7 @@ class CfgVehicles {
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Tripod {
-                name = "ACE_Tripod";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Tripod,1);
         };
     };
 
@@ -36,7 +33,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Tripod,2);
         };
     };
-    
+
     class thingX;
     class ACE_TripodObject: thingX {
         XEH_ENABLED;
@@ -49,7 +46,7 @@ class CfgVehicles {
                 animPeriod = 0.02;
                 initPhase = 0;
                 minValue = 0;
-                maxValue = 1;			
+                maxValue = 1;
             };
             class retract_leg_1: slide_down_tripod {};
             class retract_leg_2: retract_leg_1 {};
