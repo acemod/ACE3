@@ -3,42 +3,55 @@
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
             <English>Slideshow</English>
+            <Portuguese>Apresentação de Slides</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
+            <Portuguese>Este módulo permite que você monte apresentações de slides em diferentes objetos. Um módulo por lista de imagem. Somente objetos com hiddenSelection 0 são suportados.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
+            <Portuguese>Objetos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
+            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um. Referência INFO para suporte do objeto.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
+            <Portuguese>Controles</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
+            <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
+            <Portuguese>Imagens</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
+            <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
+            <Portuguese>Nomes de Interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
+            <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
+            <Portuguese>Duração do Slide</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
+            <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
+            <Portuguese>Slides</Portuguese>
         </Key>
     </Package>
 </Project>

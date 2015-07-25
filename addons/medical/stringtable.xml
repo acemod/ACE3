@@ -3193,11 +3193,13 @@
             <English>Condition PAK</English>
             <Czech>Podmínka osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
+            <Portuguese>Condição do KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the Personal Aid Kit be used?</English>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
+            <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3302,11 +3304,13 @@
             <English>Condition Surgical kit (Adv)</English>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
+            <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical kit be used?</English>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
+            <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3635,11 +3639,13 @@
             <English>Anytime</English>
             <Czech>Kdykoli</Czech>
             <Spanish>Siempre</Spanish>
+            <Portuguese>Sempre</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
             <Czech>Stabilní</Czech>
             <Spanish>Estable</Spanish>
+            <Portuguese>Estável</Portuguese>
         </Key>
     </Package>
 </Project>
