@@ -195,12 +195,12 @@ switch (toLower _mode) do {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         // Handle held keys (prevent repeat calling)
-        if (_dik in GVAR(heldKeys)) exitwith { true };
+        if (_dik in GVAR(heldKeys)) exitwith {};
         GVAR(heldKeys) pushBack _dik;
 
         switch (_dik) do {
             case 1: { // Esc
-               [player,false] call FUNC(setSpectator); // Handle esc menu goes here, currently closes for purposes of testing
+                ["escape", [_display]] call FUNC(handleInterface);
             };
             case 2: { // 1
                 [_display,nil,nil,nil,nil,nil,true] call FUNC(toggleInterface);
@@ -422,5 +422,54 @@ switch (toLower _mode) do {
                 _map drawIcon [_icon, _color, _unit, 24, 24, getDir _unit];
             };
         } forEach GVAR(unitList);
+    };
+    // Other
+    case "escape": {
+        _args params ["_display"];
+        private ["_dlg","_key","_index","_ctrl","_config"];
+
+        // Kill display
+        _display closeDisplay 0;
+
+        // Reset UI vars
+        GVAR(ctrlKey) = false;
+        GVAR(heldKeys) = [];
+        GVAR(mouse) = [false,false];
+        GVAR(mousePos) = [0.5,0.5];
+
+        // Below is from EFUNC(common,disableUserInput)
+        createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
+
+        disableSerialization;
+        _dlg = finddisplay 49;
+        _dlg displayAddEventHandler ["KeyDown", {
+            _key = _this select 1;
+            !(_key == 1)
+        }];
+
+        for "_index" from 100 to 2000 do {
+            (_dlg displayCtrl _index) ctrlEnable false;
+        };
+
+        _ctrl = _dlg displayctrl 103;
+        _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {dialog} do {closeDialog 0}; failMission 'LOSER';)];
+        _ctrl ctrlEnable true;
+        _ctrl ctrlSetText "ABORT";
+        _ctrl ctrlSetTooltip "Abort.";
+
+        _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
+        _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1;)];
+        _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
+        _ctrl ctrlSetText "RESPAWN";
+        _ctrl ctrlSetTooltip "Respawn.";
+
+        // PFH to re-open display when menu closes
+        [{
+            if !(isNull (findDisplay 49)) exitWith {};
+
+            createDialog QGVAR(interface);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+        },0] call CBA_fnc_addPerFrameHandler;
     };
 };
