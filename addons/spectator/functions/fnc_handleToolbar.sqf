@@ -37,7 +37,7 @@ if (GVAR(camMode) == 0) then {
 };
 
 if (isNull GVAR(camUnit)) then {
-    _name = localize "STR_VOICE_MASK_NONE";
+    _name = localize "STR_Special_None";
 } else {
     _name = GETVAR(GVAR(camUnit),GVAR(uName),"");
 };

@@ -6,7 +6,7 @@ class ACE_Settings {
     class GVAR(filterUnits) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {"$STR_Special_None", CSTRING(units_players), CSTRING(units_all)};
+        values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_all)};
     };
     class GVAR(filterSides) {
         typeName = "SCALAR";

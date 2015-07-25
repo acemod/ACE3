@@ -15,13 +15,13 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
-            class spectatorUnits {
+            class unitsFilter {
                 displayName = CSTRING(units_DisplayName);
                 description = CSTRING(units_Description);
                 typeName = "NUMBER";
                 class values {
                     class none {
-                        name = "$STR_Special_None";
+                        name = CSTRING(units_none);
                         value = 0;
                         default = 1;
                     };
@@ -35,7 +35,7 @@ class CfgVehicles {
                     };
                 };
             };
-            class spectatorSides {
+            class sidesFilter {
                 displayName = CSTRING(sides_DisplayName);
                 description = CSTRING(sides_Description);
                 typeName = "NUMBER";

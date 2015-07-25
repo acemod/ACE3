@@ -137,10 +137,10 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
 
             [localize LSTRING(otherControls)],
-            [localize LSTRING(nextCam),"Up"],
-            [localize LSTRING(prevCam),"Down"],
-            [localize LSTRING(nextUnit),"Right"],
-            [localize LSTRING(prevUnit),"Left"]
+            [localize LSTRING(nextCam),"Up Arrow"],
+            [localize LSTRING(prevCam),"Down Arrow"],
+            [localize LSTRING(nextUnit),"Right Arrow"],
+            [localize LSTRING(prevUnit),"Left Arrow"]
         ];
 
         // Hacky way to enable keybindings

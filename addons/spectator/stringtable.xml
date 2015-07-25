@@ -14,10 +14,13 @@
             <English>Enter spectator mode upon respawn.</English>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
-            <English>Spectatable Units</English>
+            <English>Unit filter</English>
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
-            <English>Units automatically made available to spectate.</English>
+            <English>Method of filtering spectatable units.</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_units_none">
+            <English>No units</English>
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
@@ -26,10 +29,10 @@
             <English>All units</English>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
-            <English>Spectatable Sides</English>
+            <English>Side filter</English>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
-            <English>Sides automatically made available to spectate.</English>
+            <English>Method of filtering spectatable sides.</English>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
@@ -105,22 +108,22 @@
             <English>Free Camera Controls</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
-            <English>Move Camera Forward</English>
+            <English>Camera Forward</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
-            <English>Move Camera Backward</English>
+            <English>Camera Backward</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
-            <English>Move Camera Left</English>
+            <English>Camera Left</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
-            <English>Move Camera Right</English>
+            <English>Camera Right</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
-            <English>Move Camera Up</English>
+            <English>Camera Up</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
-            <English>Move Camera Down</English>
+            <English>Camera Down</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
