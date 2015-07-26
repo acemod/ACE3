@@ -1,26 +1,30 @@
 class ACE_Settings {
-    class GVAR(enabled) {
-        value = 0;
+    class GVAR(onDeath) {
         typeName = "BOOL";
+        value = 0;
     };
-    class GVAR(limitSide) {
-        value = 0;
-        typeName = "BOOL";
+    class GVAR(filterUnits) {
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_all)};
     };
-    class GVAR(AI) {
+    class GVAR(filterSides) {
+        typeName = "SCALAR";
         value = 0;
-        typeName = "BOOL";
+        values[] = {CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_hostile), CSTRING(sides_all)};
     };
-    class GVAR(tracking) {
+    class GVAR(restrictModes) {
+        typeName = "SCALAR";
         value = 0;
-        typeName = "BOOL";
+        values[] = {CSTRING(modes_all), CSTRING(modes_unit), CSTRING(modes_free), CSTRING(modes_internal), CSTRING(modes_external)};
     };
-    class GVAR(modulePos) {
+    class GVAR(restrictVisions) {
+        typeName = "SCALAR";
         value = 0;
-        typeName = "BOOL";
+        values[] = {CSTRING(modes_all), CSTRING(visions_nv), CSTRING(visions_ti), "$STR_Special_None"};
     };
-    class GVAR(endMission) {
-        value = 0;
+    class GVAR(unitIcons) {
         typeName = "BOOL";
+        value = 1;
     };
 };
