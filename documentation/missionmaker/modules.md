@@ -487,25 +487,25 @@ This module provides control over vanilla aspects of Zeus.
 
 **Settings:**
 
-1. **Ascension Messages (Option)**<br>
-Display global popup messages when a player is assigned as Zeus<br>
+1. **Ascension Messages (Boolean)**<br>
+Display global popup messages when a player is assigned as Zeus.<br>
 `Default value: No`
 
 2. **Zeus Eagle (Boolean)**<br>
-Spawn an eagle that follows the Zeus camera<br>
+Spawn an eagle that follows the Zeus camera.<br>
 `Default value: No`
 
 3. **Wind Sounds (Boolean)**<br>
-Play wind sounds when Zeus remote controls a unit<br>
+Play wind sounds when Zeus remote controls a unit.<br>
 `Default value: No`
 
 4. **Ordnance Warning (Boolean)**<br>
-Play a radio warning when Zeus uses ordnance<br>
+Play a radio warning when Zeus uses ordnance.<br>
 `Default value: No`
 
-5. **Reveal Mines (Scalar)**<br>
-Reveal mines to allies and/or place map markers<br>
-`Default value: Disabled`
+5. **Reveal Mines (Option)**<br>
+Reveal mines to allies and place map markers.<br>
+`Default value: "Disabled"`
 
 ### 1.23 LSD Vehicles
 *Part of: ace_core*
