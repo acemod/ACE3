@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="trenches">
+        <Key ID="STR_ACE_trenches_EntrenchingToolName">
+            <English>Entrenching Tool</English>
+            <Polish>Saperka</Polish>
+        </Key>
+        <Key ID="STR_ACE_trenches_EntrenchingToolDescription">
+            <English>Entrenching Tool</English>
+            <Polish>Saperka, używana do budowy okopów</Polish>
+        </Key>
+        <Key ID="STR_ACE_trenches_EnvelopeSmallName">
+            <English>Envelope - Small</English>
+        </Key>
+        <Key ID="STR_ACE_trenches_EnevlopeSmallDescription">
+            <English>Small Personal Trench</English>
+        </Key>
+        <Key ID="STR_ACE_trenches_EnvelopeBigName">
+            <English>Envelope - Big</English>
+        </Key>
+        <Key ID="STR_ACE_trenches_EnevlopeBigDescription">
+            <English>Large Personal Trench</English>
+        </Key>
+    </Package>
+</Project>
