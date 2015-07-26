@@ -8,9 +8,71 @@ parent: wiki
 
 ## 1. Overview
 
+The ACE3 spectator system is designed to be as flexible as possible while remaining easy to configure. Most scenarios can be configured using only the settings framework, however public functions are provided for finer control of these configurable aspects.
+
+### 1.1 Spectator System
+
+### 1.2 Spectatable Units
+
+Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead mission designers have two tools at their disposal to tweak the list:
+- Unit filter
+- Unit whitelist/blacklist
+
+The unit filter determines which units will automatically be used to populate the spectatable unit list. It's controlled by setting `ace_spectator_filterUnits` and there are three possible options:
+- No units
+- Player units (default)
+- All units
+
+In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client). The function header details its use:
+```
+ * Arguments:
+ * 0: Units to add to the whitelist <ARRAY>
+ * 1: Use blacklist <BOOL> <OPTIONAL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [allUnits,true] call ace_spectator_fnc_updateUnits
+ *
+```
+
+### 1.3 Spectatable Sides
+
+Spectatable sides can simply be considered an extra level of filtering for the spectatable unit list. Again, there are two methods of controlling the spectatable sides:
+- Side filter
+- Side list
+
+The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list in order to dynamically adjust the spectatable sides in scenarios where their relation changes.
+The default side list is `[west,east,resistance,civilian]` and to update it function `ace_spectator_fnc_updateSpectatableSides` can be used:
+
+```
+ * Arguments:
+ * 0: Sides to add <ARRAY>
+ * 1: Sides to remove <ARRAY>
+ *
+ * Return Value:
+ * Spectatable sides <ARRAY>
+ *
+ * Example:
+ * [[west], [east,civilian]] call ace_spectator_fnc_updateSpectatableSides
+```
+
+The side filter determines how the side list will be evaluated each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
+- Player side (default)
+- Friendly sides
+- Hostile sides
+- All sides
+
+### 1.4 Camera Modes
+
+### 1.5 Vision Modes
+
 ## 2. Usage
 
 ### 2.1 Spectator Shortcuts
+
+Shortcuts are currently hardcoded in the ACE3 spectator system. Future versions are likely to change that.
 
 #### 2.1.1 Interface Shortcuts
 
