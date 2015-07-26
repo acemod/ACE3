@@ -1,6 +1,6 @@
 class ACE_Settings {
     class GVAR(enabled) {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         displayName = CSTRING(enabled_displayName);
     };
