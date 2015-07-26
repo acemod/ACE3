@@ -23,8 +23,7 @@ class CfgVehicles {
     };
     class StaticMortar: StaticWeapon {
         class Turrets: Turrets {
-            class MainTurret: MainTurret {
-            };
+            class MainTurret: MainTurret {};
         };
     };
     class Mortar_01_base_F: StaticMortar {
@@ -60,7 +59,7 @@ class CfgVehicles {
                 displayName = CSTRING(airResistanceEnabled_DisplayName);
                 description = CSTRING(airResistanceEnabled_Description);
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class allowComputerRangefinder {
                 displayName = CSTRING(allowComputerRangefinder_DisplayName);

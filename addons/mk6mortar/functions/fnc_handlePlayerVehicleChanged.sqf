@@ -18,7 +18,7 @@
 
 PARAMS_2(_player,_newVehicle);
 
-private["_tubeWeaponName" ,"_fireModes"];
+private["_tubeWeaponName" ,"_fireModes", "_lastFireMode"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
@@ -75,7 +75,7 @@ if (_lastFireMode != -1) then {
             _realElevation = asin (_weaponDir select 2);
         } else {
             //Valid range, will fire at camera dir
-            _lookVector = (ATLToASL (positionCameraToWorld [0,0,0])) vectorFromTo (ATLToASL (positionCameraToWorld [0,0,10]));
+            _lookVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
             _realAzimuth = ((_lookVector select 0) atan2 (_lookVector select 1));
             _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
             _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
