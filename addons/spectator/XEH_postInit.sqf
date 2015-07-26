@@ -7,4 +7,11 @@
 ["SettingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
+
+    if !(hasInterface) exitWith {};
+
+    if (GVAR(enableSystem)) then {
+        player addEventHandler ["Killed",FUNC(handleKilled)];
+        player addEventHandler ["Respawn",FUNC(handleRespawn)];
+    };
 }] call EFUNC(common,addEventHandler);

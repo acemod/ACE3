@@ -1,4 +1,8 @@
 class ACE_Settings {
+    class GVAR(onDeath) {
+        typeName = "BOOL";
+        value = 0;
+    };
     class GVAR(filterUnits) {
         typeName = "SCALAR";
         value = 1;

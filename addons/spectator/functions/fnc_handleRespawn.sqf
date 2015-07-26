@@ -1,6 +1,7 @@
 /*
  * Author: SilentSpike
  * Start the interface on respawn
+ * Part of the basic spectator system
  *
  * Arguments:
  * 0: New unit <OBJECT>

@@ -5,7 +5,6 @@
  * Arguments:
  * 0: Unit to put into spectator state <OBJECT>
  * 1: New spectator state <BOOL> <OPTIONAL>
- * 2: Spectator camera target <OBJECT> <OPTIONAL>
  *
  * Return Value:
  * None <NIL>
@@ -43,11 +42,6 @@ if (_set) then {
     // Ghosts can't talk
     [_unit, QGVAR(isSpectator)] call EFUNC(common,hideUnit);
     [_unit, QGVAR(isSpectator)] call EFUNC(common,muteUnit);
-
-    if !(isNull _target) then {
-        GVAR(camPos) = getPosASL _target;
-        GVAR(camUnit) = _target;
-    };
 
     ["open"] call FUNC(handleInterface);
 } else {

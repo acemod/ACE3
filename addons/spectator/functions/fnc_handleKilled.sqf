@@ -1,6 +1,7 @@
 /*
  * Author: SilentSpike
  * Cache necessary details and process unit for spectator on death
+ * Part of the basic spectator system
  *
  * Arguments:
  * 0: Corpse <OBJECT>
@@ -19,5 +20,8 @@ params ["_unit","_killer"];
 // Remove from group to prevent appearing on HUD upon respawn
 [_unit, true, QGVAR(isSpectator), side group _unit] call EFUNC(common,switchToGroupSide);
 
-GVAR(camUnit) = _killer;
-GVAR(camMode) = 2;
+if (isNull _killer) then {
+    [2,_unit] call FUNC(setCameraAttributes);
+} else {
+    [2,_killer] call FUNC(setCameraAttributes);
+};

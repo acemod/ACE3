@@ -7,6 +7,12 @@
         <Key ID="STR_ACE_Spectator_Settings_Descripton">
             <English>Configure how the spectator system will operate by default.</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_system_DisplayName">
+            <English>Spectate on death</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_system_Description">
+            <English>Enables spectator upon death.</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
         </Key>
