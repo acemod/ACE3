@@ -60,7 +60,10 @@ switch (toLower _mode) do {
         if (isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
 
         // Terminate interface
-        (GETUVAR(GVAR(display),displayNull)) closeDisplay 0;
+        while {dialog} do {
+            closeDialog 0;
+        };
+        GETUVAR(GVAR(display),displayNull) closeDisplay 0;
 
         // Terminate camera
         GVAR(camera) cameraEffect ["terminate", "back"];
