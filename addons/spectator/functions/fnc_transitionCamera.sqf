@@ -46,18 +46,16 @@ if (_newMode != 1) then {
 if (_newMode == 0) then { // Free
     // Preserve camUnit value for consistency when manually changing view
     GVAR(camera) cameraEffect ["internal", "back"];
+    showCinemaBorder false;
+    cameraEffectEnableHUD true;
 
     // Apply the camera zoom
     GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
     GVAR(camera) camCommit 0;
 
     // Switch to camera to stop AI group chat
-    GVAR(camera) switchCamera "internal";
+    ACE_Player switchCamera "internal";
     clearRadio;
-
-    // HUD stuff
-    showCinemaBorder false;
-    cameraEffectEnableHUD false;
 
     // If new vision isn't available then keep current (unless current also isn't)
     if !(_newVision in GVAR(availableVisions)) then {
