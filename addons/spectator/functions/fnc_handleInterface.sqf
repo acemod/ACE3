@@ -199,7 +199,10 @@ switch (toLower _mode) do {
 
         // Handle held keys (prevent repeat calling)
         if (_dik in GVAR(heldKeys)) exitwith {};
-        GVAR(heldKeys) pushBack _dik;
+        // Exclude movement keys so that speed can be adjusted on fly
+        if !(_dik in [17,30,31,32]) then {
+            GVAR(heldKeys) pushBack _dik;
+        };
 
         switch (_dik) do {
             case 1: { // Esc
@@ -434,7 +437,10 @@ switch (toLower _mode) do {
         // Kill display
         _display closeDisplay 0;
 
-        // Reset UI vars
+        // Reset cam/UI vars
+        GVAR(camBoom) = 0;
+        GVAR(camDolly) = [0,0];
+
         GVAR(ctrlKey) = false;
         GVAR(heldKeys) = [];
         GVAR(mouse) = [false,false];
