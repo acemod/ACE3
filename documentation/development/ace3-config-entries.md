@@ -23,6 +23,8 @@ ace_dragging_dragposition
 ace_dragging_dragdirection
 ace_gforcecoef
 ace_offset
+ace_hasReserveParachute
+ace_reserveParachute
 ```
 
 
