@@ -10,7 +10,7 @@
 
     if !(hasInterface) exitWith {};
 
-    if (GVAR(enableSystem)) then {
+    if (GVAR(onDeath)) then {
         player addEventHandler ["Killed",FUNC(handleKilled)];
         player addEventHandler ["Respawn",FUNC(handleRespawn)];
     };
