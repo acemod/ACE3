@@ -7,4 +7,4 @@ Spectator. Includes features from Splendid Cam, and much more.
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [voiper](https://github.com/voiperr)
+- [SilentSpike](https://github.com/SilentSpike)

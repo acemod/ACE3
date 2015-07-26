@@ -258,6 +258,7 @@
             <Polish>Wymuś pod kursorem</Polish>
             <Spanish>Forzar mostrar solo en el cursor</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor</Czech>
+            <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
             <Portuguese>Forçar mostrar somente no cursor</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
@@ -265,6 +266,7 @@
             <Polish>Wymuś po wciśnięciu klawisza</Polish>
             <Spanish>Forzar mostrar solo al pulsar tecla</Spanish>
             <Czech>Vynuceno zobrazit pouze na klávesu</Czech>
+            <German>Erzwinge nur mit Tastendruck anzuzeigen</German>
             <Portuguese>Forçar somente mostrar em tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
@@ -272,6 +274,7 @@
             <Polish>Wymuś pod kursorem i po wciśnięciu klawisza</Polish>
             <Spanish>Forzar mostrar en el cursor y al pulsar tecla</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor a klávesu</Czech>
+            <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
             <Portuguese>Forçar mostrar somente em cursor e tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
@@ -295,6 +298,7 @@
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
             <Spanish>Mostrar nombres de los jugadores y establecer su activación. Predeterminado: Habilitado</Spanish>
             <Czech>Zobrazit jména hráčů a nastavit jejich aktivaci. Výchozí: Povoleno</Czech>
+            <German>Erlaubt das Anzeigen von Spielernamen und stellt ein, ob sie standardmäßig aktiviert oder deaktiviert sind. Standard: aktiviert</German>
             <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
@@ -302,6 +306,7 @@
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
             <Spanish>Efecto de ondas sonoras encima de las cabezas de los jugadores que hablan después de mantener  la tecla PTT. Esta opción funciona con TFAR y ACRE2.</Spanish>
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
+            <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit TFAR und ACRE2.</German>
             <Portuguese>Efeito de ondas sonoras acima das cabeças dos jogadores que falam depois mantendo pressionada a tecla PTT. Esta opção funciona com TFAR e ACRE2.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
@@ -309,6 +314,7 @@
             <Polish>Rozmiar imion</Polish>
             <Spanish>Tamaño de las Etiquetas de nombre</Spanish>
             <Czech>Velikost jmenovky</Czech>
+            <German>Namensschildgröße</German>
             <Portuguese>Tamanho das etiquetas de nome</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
@@ -316,6 +322,7 @@
             <Polish>Skalowanie tekstu oraz ikon</Polish>
             <Spanish>Escala del texto y el icono</Spanish>
             <Czech>Velikost textu a ikon</Czech>
+            <German>Text- und Symbolgrößen</German>
             <Portuguese>Escala de tamanho dos ícones e textos</Portuguese>
         </Key>
     </Package>

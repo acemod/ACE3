@@ -22,10 +22,7 @@ class CfgVehicles {
         displayName = CSTRING(sandbagEmpty_displayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Sandbag_empty {
-                name = "ACE_Sandbag_empty";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Sandbag_empty,1);
         };
     };
     /*
@@ -103,7 +100,7 @@ class CfgVehicles {
         scope = 1;
         model = PATHTOF(data\ace_sandbag_nogeo.p3d);
     };
-    
+
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {

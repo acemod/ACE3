@@ -25,6 +25,12 @@ if (_ammo != "F_HuntIR") exitWith {};
 
 [{
     PARAMS_1(_projectile);
+ 
+    //If null (deleted or hit water) exit:
+    if (isNull _projectile) exitWith {};
+    //If it's not spinning (hit ground), bail:
+    if ((vectorMagnitude (velocity _projectile)) < 0.1) exitWith {};
+
     "ACE_HuntIR_Propell" createVehicle (getPosATL _projectile);
     [{
         PARAMS_1(_position);

@@ -20,7 +20,7 @@ class CfgWeapons {
         reloadTime = 0.01;
         magazineReloadTime = 0.1;
     };
-    
+
     // Manual Switching Of Flare Mode
     class SmokeLauncher;
     class CMFlareLauncher: SmokeLauncher {
@@ -106,12 +106,14 @@ class CfgWeapons {
 
     class M134_minigun: MGunCore {
         class LowROF: Mode_FullAuto {
-            reloadTime = 0.015; //0.03;     same as above   @todo
-            dispersion = 0.006; //0.0023;
+            reloadTime = 0.03; //0.03;     same as above   @todo
+            dispersion = 0.0064; //0.0023;
+            multiplier = 1;
         };
         class HighROF: LowROF {
-            reloadTime = 0.015; //0.03;
-            dispersion = 0.006; //0.0023;
+            reloadTime = 0.02; //0.03;
+            dispersion = 0.0064; //0.0023;
+            multiplier = 1;
         };
         class close: HighROF {};
         class short: close {};

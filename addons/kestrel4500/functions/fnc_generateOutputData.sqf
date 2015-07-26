@@ -276,7 +276,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 12: { // ALTITUDE
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
+                _textCenterBig = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
@@ -300,7 +300,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 14: { // User Screen 1
             _textCenterLine1Left = Str(round(_playerDir));
-            _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
+            _textCenterLine2Left = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
             _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
             _textCenterLine1Right = GVAR(Directions) select GVAR(Direction);
             _textCenterLine2Right = "m";
