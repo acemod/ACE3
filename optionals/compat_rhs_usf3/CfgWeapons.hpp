@@ -95,13 +95,13 @@ class CfgWeapons
     class H_CrewHelmetHeli_B;
     class rhsusf_hgu56p: H_PilotHelmetHeli_B
     {
-        ace_hearing_protection = 0.75;
-        ace_hearing_lowerVolume = 0.70;
+        ace_hearing_protection = 0.85;
+        ace_hearing_lowerVolume = 0.75;
     };
     class rhsusf_hgu56p_mask: H_CrewHelmetHeli_B
     {
-        ace_hearing_protection = 0.75;
-        ace_hearing_lowerVolume = 0.70;
+        ace_hearing_protection = 0.85;
+        ace_hearing_lowerVolume = 0.75;
     };
 
     class H_HelmetB;

@@ -1,4 +1,3 @@
-
 class CfgMovesBasic {
     class ManActions {
         ACE_Climb = "ACE_Climb";

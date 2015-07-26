@@ -5,7 +5,7 @@ class CfgWeapons {
     class ACE_EarPlugs: ACE_ItemCore {
         displayName = CSTRING(EarPlugs_Name);
         descriptionShort = CSTRING(EarPlugs_Description);
-        model = PATHTOF(ACE_earplugs.p3d);
+        model = QUOTE(PATHTOF(data\ace_earplugs.p3d));
         picture = PATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
@@ -22,15 +22,15 @@ class CfgWeapons {
     class H_HelmetCrew_I: H_HelmetCrew_B {};
 
     class H_CrewHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.75;
-        GVAR(lowerVolume) = 0.70;
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
     class H_CrewHelmetHeli_O: H_CrewHelmetHeli_B {};
     class H_CrewHelmetHeli_I: H_CrewHelmetHeli_B {};
 
     class H_PilotHelmetHeli_B: H_HelmetB {
-        GVAR(protection) = 0.75;
-        GVAR(lowerVolume) = 0.70;
+        GVAR(protection) = 0.85;
+        GVAR(lowerVolume) = 0.75;
     };
     class H_PilotHelmetHeli_O: H_PilotHelmetHeli_B {};
     class H_PilotHelmetHeli_I: H_PilotHelmetHeli_B {};
@@ -48,3 +48,4 @@ class CfgWeapons {
     };
     class H_Cap_marshal: H_Cap_headphones {};
 };
+

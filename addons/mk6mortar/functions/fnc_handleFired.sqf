@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
+private ["_shooterMan", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
 
 disableSerialization;
 
@@ -34,11 +34,6 @@ if (_vehicle distance ACE_player > 8000) exitWith {false};
 //AI will have no clue how to use:
 _shooterMan = gunner _vehicle;
 if (!([_shooterMan] call EFUNC(common,isPlayer))) exitWith {false};
-
-//Should be zero, just make sure:
-_bisAirFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-if (_bisAirFriction != 0) exitWith {ERROR("Non zero base airFriction");};
-
 
 //Calculate air density:
 _altitude = (getPosASL _vehicle) select 2;

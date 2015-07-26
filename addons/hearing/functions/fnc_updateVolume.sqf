@@ -3,7 +3,8 @@
  * Updates and applys the current deafness.  Called every 0.1 sec from a PFEH.
  *
  * Arguments:
- * None
+ * 0: Args <ARRAY>
+ * -----0: Just update volume (skip ringing/recovery) <BOOL><OPTIONAL>
  *
  * Return Value:
  * None
@@ -15,31 +16,62 @@
  */
 #include "script_component.hpp"
 
-private ["_recoverRate", "_volume"];
+//Only run if deafness or ear ringing is enabled:
+if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-// Exit if combat deafness is disabled
-if !(GVAR(enableCombatDeafness)) exitWith {};
+EXPLODE_1_PVT((_this select 0),_justUpdateVolume);
 
-// Check if new noises increase deafness
-GVAR(newStrength) = (((ACE_player getvariable [QGVAR(dv), 0]) min 20) / 20) ^ 2;
-if (GVAR(newStrength) > GVAR(currentDeafness)) then {
-    GVAR(currentDeafness) = GVAR(newStrength);
-};
+private["_volume", "_soundTransitionTime"];
 
-// Recover rate is slower if deafness is severe
-_recoverRate = 0.01;
-if (GVAR(currentDeafness) > 0.7) then {
-    _recoverRate = 0.005;
-    if (GVAR(currentDeafness) > 0.9) then {
-        _recoverRate = 0.002;
+GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
+GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0;
+
+if (!_justUpdateVolume) then {
+    //If we got a big increase in the last second:
+    if ((GVAR(deafnessDV) - GVAR(deafnessPrior)) > 2) then {
+        if (ACE_time > GVAR(time3)) then {
+            GVAR(beep2) = false;
+        };
+        if ((!GVAR(DisableEarRinging)) && {!GVAR(beep2)}) then {
+            playSound "ACE_Combat_Deafness";
+            GVAR(beep2) = true;
+            GVAR(time3) = ACE_time + 5;
+        };
     };
+
+    GVAR(deafnessPrior) = GVAR(deafnessDV);
+
+    if (GVAR(deafnessDV) > 19.75) then {
+        ACE_player setvariable [QGVAR(deaf), true];
+        if ((!GVAR(DisableEarRinging)) && {ACE_time > GVAR(time4)}) then {
+            playSound "ACE_Combat_Deafness";
+            GVAR(beep2) = true;
+            GVAR(time3) = ACE_time + 10;
+            GVAR(time4) = ACE_time + 30;
+        };
+    } else {
+        ACE_player setvariable [QGVAR(deaf), false];
+    };
+
+    if (GVAR(deafnessDV) > 10) then {
+        //check if the ringing is already being played
+        if (ACE_time > GVAR(time2)) then {
+            GVAR(beep) = false;
+        };
+        if ((!GVAR(DisableEarRinging)) && {!GVAR(beep)}) then {
+            playSound "ACE_Ring_Backblast";
+            GVAR(time2) = ACE_time + 22;
+            GVAR(beep) = true;
+        };
+    };
+
+    // Hearing takes longer to return to normal after it hits rock bottom
+    GVAR(deafnessDV) =  (GVAR(deafnessDV) - (0.5 * (GVAR(volume) max 0.1))) max 0;
 };
 
-// Deafness recovers with ACE_time
-GVAR(currentDeafness) = GVAR(currentDeafness) - _recoverRate max 0;
+if ((missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) || {!GVAR(enableCombatDeafness)}) exitWith {};
 
-// needed until Bohemia fixes playSound to actually use the second argument
-_volume = (1 - GVAR(currentDeafness) max 0)^2 max 0.04;
+_volume = GVAR(volume);
 
 // Earplugs reduce hearing 50%
 if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
@@ -60,11 +92,9 @@ if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
     _volume = _volume min GVAR(UnconsciousnessVolume);
 };
 
-if (!(missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false])) then {
-    0.1 fadeSound _volume;
-    0.1 fadeSpeech _volume;
-    ACE_player setVariable ["tf_globalVolume", _volume];
-    if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};
-};
+_soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
 
-//hintSilent format ["GVAR(currentDeafness), _Volume = %1, %2", GVAR(currentDeafness), _volume];
+_soundTransitionTime fadeSound _volume;
+_soundTransitionTime fadeSpeech _volume;
+ACE_player setVariable ["tf_globalVolume", _volume];
+if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};

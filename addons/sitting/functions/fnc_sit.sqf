@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
@@ -37,7 +38,8 @@ _sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber
 
 // Set direction and position
 _player setDir _sitDirection;
-_player setPosASL (_seat modelToWorld _sitPosition) call EFUNC(common,positionToASL);
+// No need for ATL/ASL as modelToWorld returns in format position
+_player setPos (_seat modelToWorld _sitPosition);
 
 // Set variables
 _player setVariable [QGVAR(isSitting), true];
@@ -45,12 +47,20 @@ _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple peop
 
 // Add rotation control PFH
 _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
+_seatPosOrig = getPosASL _seat;
 [{
-    EXPLODE_3_PVT(_this select 0,_player,_sitDirectionVisual,_sitRotation);
+    EXPLODE_5_PVT(_this select 0,_player,_sitDirectionVisual,_sitRotation,_seat,_seatPosOrig);
     
     // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
         [_this select 1] call cba_fnc_removePerFrameHandler;
+        TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting),false)]);
+    };
+
+    //  Stand up if chair moves
+    if ([_seat, _seatPosOrig] call FUNC(hasChairMoved)) exitWith {
+        _player call FUNC(stand);
+        TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
 
     // Set direction to boundary when passing it
@@ -60,4 +70,4 @@ _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues w
     if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual - _sitRotation);
     };
-}, 0, [_player, _sitDirectionVisual, _sitRotation]] call cba_fnc_addPerFrameHandler;
+}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call cba_fnc_addPerFrameHandler;

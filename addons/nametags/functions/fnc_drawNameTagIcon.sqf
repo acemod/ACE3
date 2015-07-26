@@ -35,7 +35,7 @@ if ((_iconType == ICON_NAME_SPEAK) || (_iconType == ICON_SPEAK)) then {
     _alpha = _alpha max 0.6;//Boost alpha when speaking
 } else {
     if (_iconType == ICON_NAME_RANK) then {
-        _icon = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target)) + 1);
+        _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa",(toLower(rank _target))];
         _size = 1;
     };
 };

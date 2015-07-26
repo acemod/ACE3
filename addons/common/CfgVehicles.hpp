@@ -113,10 +113,7 @@ class CfgVehicles {
         author = CSTRING(ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_banana {
-                name = "ACE_banana";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_banana,1);
         };
     };
 };

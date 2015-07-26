@@ -74,7 +74,6 @@
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
-            <English></English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
             <German>Dieses Modul erweitert die Kartenfunktionen.</German>
             <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
@@ -83,7 +82,7 @@
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
             <Polish>Blue Force Tracking</Polish>
-            <Spanish>Seguimiento de fuerzas amigas</Spanish>
+            <Spanish>Blue Force Tracking</Spanish>
             <German>Blue Force Tracking</German>
             <Czech>Blue Force Tracking</Czech>
             <Portuguese>Rastreio de forças azuis</Portuguese>
@@ -93,12 +92,14 @@
             <Portuguese>RFA ativo</Portuguese>
             <Polish>Aktywuj BFT</Polish>
             <Czech>Povolit BFT</Czech>
+            <Spanish>Activar BFT</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
             <Portuguese>Ativa Rastreio de Forças Azuis. Padrão: Não</Portuguese>
             <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
             <Czech>Povolit Blue Force Tracking. Výchozí: Ne</Czech>
+            <Spanish>Activar Blue Force Tracking. Por defecto: No</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -133,7 +134,6 @@
             <Portuguese>Esconder marcadores que pertencem ao grupo de IA?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
-            <English></English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
             <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
             <Czech>Umožňuje sledovat přátelské jednokty na mapě v rámci BFT.</Czech>
