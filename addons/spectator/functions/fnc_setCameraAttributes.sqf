@@ -50,7 +50,7 @@ if !(_vision in GVAR(availableVisions)) then {
     _vision = GVAR(availableVisions) select ((GVAR(availableVisions) find GVAR(camVision)) max 0);
 };
 
-GVAR(camPan) = ((_heading % 360) max 0);
+GVAR(camPan) = _heading % 360;
 GVAR(camPosition) = (ATLtoASL _position);
 GVAR(camSpeed) = (_speed max 0.05) min 10;
 GVAR(camTilt) = (_tilt max -89) min 89;
