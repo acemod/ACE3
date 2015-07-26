@@ -73,7 +73,7 @@ PREP(onTapShoulder);
             <td>"playerInventoryChanged"</td>
             <td>Inventory changed</td>
             <td>common</td>
-            <td>getAllGear-Array</td>
+            <td>[_player, getAllGear-Array]</td>
             <td>local</td>
         </tr>  
         </tr>    

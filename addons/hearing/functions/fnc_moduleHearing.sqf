@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain
- * Initializes the Map module.
+ * Initializes the Hearing module.
  *
  * Arguments:
  * Whatever the module provides. (I dunno.)
@@ -16,4 +16,4 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(enableCombatDeafness), "EnableCombatDeafness"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Interaction Module Initialized.";
+diag_log text "[ACE]: Hearing Module Initialized.";

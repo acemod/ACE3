@@ -9,7 +9,7 @@ class CfgVehicles {
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
                     icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };
@@ -23,14 +23,15 @@ class CfgVehicles {
     };
     class StaticMortar: StaticWeapon {
         class Turrets: Turrets {
-            class MainTurret: MainTurret {
-            };
+            class MainTurret: MainTurret {};
         };
     };
     class Mortar_01_base_F: StaticMortar {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
             };
         };
         class ACE_SelfActions {
@@ -58,7 +59,7 @@ class CfgVehicles {
                 displayName = CSTRING(airResistanceEnabled_DisplayName);
                 description = CSTRING(airResistanceEnabled_Description);
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class allowComputerRangefinder {
                 displayName = CSTRING(allowComputerRangefinder_DisplayName);

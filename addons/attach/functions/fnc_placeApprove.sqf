@@ -25,7 +25,7 @@
  */
 #include "script_component.hpp"
 
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_setupObject", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
+private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
 
 PARAMS_6(_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
 
@@ -36,9 +36,6 @@ _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
 _closeInMax = _startDistanceFromCenter;
 _closeInMin = 0;
-
-//Delete Local Placement Object
-deleteVehicle _setupObject;
 
 while {(_closeInMax - _closeInMin) > 0.01} do {
     _closeInDistance = (_closeInMax + _closeInMin) / 2;

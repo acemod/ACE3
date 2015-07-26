@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -53,9 +53,6 @@ if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
 
-// Check allowed locations
-_locations = getArray (_config >> "treatmentLocations");
-
 _return = true;
 if (isText (_config >> "Condition")) then {
     _condition = getText(_config >> "condition");
@@ -73,6 +70,16 @@ if (isText (_config >> "Condition")) then {
     };
 };
 if (!_return) exitwith {false};
+
+_patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
+    missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
+} else {
+    getNumber(_config >> "patientStateCondition")
+};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+
+// Check allowed locations
+_locations = getArray (_config >> "treatmentLocations");
 
 if ("All" in _locations) then {
     _return = true;

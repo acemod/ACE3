@@ -3,7 +3,6 @@
 ADDON = false;
 
 PREP(cam);
-PREP(handleDamage);
 PREP(handleFired);
 PREP(huntir);
 PREP(huntirCompass);

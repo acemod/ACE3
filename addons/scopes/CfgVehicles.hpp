@@ -11,7 +11,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0.2;
                     //icon = QUOTE(PATHTOF(UI\...)); // TODO
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };

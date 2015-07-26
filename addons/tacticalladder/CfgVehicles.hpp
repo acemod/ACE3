@@ -13,18 +13,25 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Bag_Base;
-	class ACE_TacticalLadder_Pack: Bag_Base {
-		scope = 2;
-		displayName = CSTRING(DisplayName);
+    class ACE_TacticalLadder_Pack: Bag_Base {
+        scope = 2;
+        displayName = CSTRING(DisplayName);
         descriptionShort = "";
         model = PATHTOF(data\ace_tacticalladder_pack.p3d);
-        picture = PATHTOF(UI\ace_tactical_ladder_pack_ca.paa); 
+        picture = PATHTOF(UI\ace_tactical_ladder_pack_ca.paa);
         maximumLoad = 0;
         mass = 50;
-	};
-    
+    };
+
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportBackpacks {
+            MACRO_ADDBACKPACK(ACE_TacticalLadder_Pack,3);
+        };
+    };
+
     class House;
     class ACE_Tactical_Ladder: House {
         XEH_ENABLED;

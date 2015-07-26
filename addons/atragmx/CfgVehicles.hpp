@@ -10,7 +10,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\ATRAG_Icon.paa);
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };
@@ -24,10 +24,7 @@ class CfgVehicles {
         displayName = "ATragMX";
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_ATragMX {
-                name = "ACE_ATragMX";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_ATragMX,1);
         };
     };
 
