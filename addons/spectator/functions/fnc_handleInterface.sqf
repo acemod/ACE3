@@ -468,6 +468,7 @@ switch (toLower _mode) do {
             if !(isNull (findDisplay 49)) exitWith {};
 
             createDialog QGVAR(interface);
+            [] call FUNC(transitionCamera);
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         },0] call CBA_fnc_addPerFrameHandler;
