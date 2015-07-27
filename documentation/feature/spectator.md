@@ -17,6 +17,7 @@ The current iteration of the ACE3 spectator system only officially supports scen
 By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. The setting `ace_spectator_onDeath` can be used to automatically put players into spectator mode each time they die.
 
 For mission makers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired:
+
 ```
  * Arguments:
  * 0: Unit to put into spectator state <OBJECT>
@@ -32,15 +33,18 @@ For mission makers who seek a more advanced setup (such as multiple lives or wav
 ### 1.2 Spectatable Units
 
 Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead mission makers have two tools at their disposal to tweak the list:
+
 - Unit filter
 - Unit whitelist/blacklist
 
 The unit filter determines which units will automatically be used to populate the spectatable unit list. It's controlled by setting `ace_spectator_filterUnits` and there are three possible options:
+
 - **No units**
 - **Player units** *(default)*
 - **All units**
 
 In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client):
+
 ```
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>
@@ -57,6 +61,7 @@ In cases where more specific control is required function `ace_spectator_fnc_upd
 ### 1.3 Spectatable Sides
 
 Spectatable sides can simply be considered an extra layer of filtering for the spectatable unit list. Again, there are two methods of controlling the spectatable sides:
+
 - Side filter
 - Side list
 
@@ -65,6 +70,7 @@ The side list is exactly what it sounds like, a list of sides spectatable by the
 Note that the unit whitelist/blacklist also serves to override this side filtering mechanism.
 
 The default side list is `[west,east,resistance,civilian]` and to update it (on the local client) function `ace_spectator_fnc_updateSpectatableSides` can be used:
+
 ```
  * Arguments:
  * 0: Sides to add <ARRAY>
@@ -78,6 +84,7 @@ The default side list is `[west,east,resistance,civilian]` and to update it (on 
 ```
 
 The side filter determines which sides from the side list are valid each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
+
 - **Player side** *(default)*
 - **Friendly sides**
 - **Hostile sides**
@@ -86,11 +93,13 @@ The side filter determines which sides from the side list are valid each time th
 ### 1.4 Camera Modes
 
 There are 3 possible camera modes:
+
 - **Free**
 - **Internal**
 - **External**
 
 Mission makers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
+
 ```
  * Arguments:
  * 0: Camera modes to add <ARRAY>
@@ -106,12 +115,14 @@ Mission makers can control the camera modes available to spectators via the sett
 ### 1.5 Vision Modes
 
 Vision modes are only available in free camera mode. By default there are 4 available vision modes:
+
 - **Normal**
 - **Night vision**
 - **Thermal imaging (white hot)**
 - **Thermal imaging (black hot)**
 
 Mission makers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
+
 ```
  * Possible vision modes are:
  *   - -2: Normal
@@ -139,6 +150,7 @@ Mission makers can control which of these vision modes are available to spectato
 ### 1.6 Camera Attributes
 
 The spectator camera has 8 manipulatable attributes:
+
 - **Camera mode:** The camera view
 - **Camera unit:** The unit used for internal and external view
 - **Camera vision:** The vision mode used by the free camera
@@ -149,6 +161,7 @@ The spectator camera has 8 manipulatable attributes:
 - **Camera speed:** The movement speed of the free camera
 
 Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at ay point (including before spectator has ever opened):
+
 ```
  * Arguments:
  * 0: Camera mode <NUMBER> <OPTIONAL>
