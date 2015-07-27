@@ -10,7 +10,7 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
