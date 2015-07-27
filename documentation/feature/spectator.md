@@ -36,9 +36,9 @@ Spectatable units are stored in an automatically maintained list (`ace_spectator
 - Unit whitelist/blacklist
 
 The unit filter determines which units will automatically be used to populate the spectatable unit list. It's controlled by setting `ace_spectator_filterUnits` and there are three possible options:
-- No units
-- Player units (default)
-- All units
+- **No units**
+- **Player units** *(default)*
+- **All units**
 
 In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client):
 ```
@@ -78,17 +78,17 @@ The default side list is `[west,east,resistance,civilian]` and to update it (on 
 ```
 
 The side filter determines which sides from the side list are valid each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
-- Player side (default)
-- Friendly sides
-- Hostile sides
-- All sides
+- **Player side** *(default)*
+- **Friendly sides**
+- **Hostile sides**
+- **All sides**
 
 ### 1.4 Camera Modes
 
 There are 3 possible camera modes:
-- Free
-- Internal
-- External
+- **Free**
+- **Internal**
+- **External**
 
 Mission makers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
 ```
@@ -106,10 +106,10 @@ Mission makers can control the camera modes available to spectators via the sett
 ### 1.5 Vision Modes
 
 Vision modes are only available in free camera mode. By default there are 4 available vision modes:
-- Normal
-- Night vision
-- Thermal imaging (white hot)
-- Thermal imaging (black hot)
+- **Normal**
+- **Night vision**
+- **Thermal imaging (white hot)**
+- **Thermal imaging (black hot)**
 
 Mission makers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
 ```
