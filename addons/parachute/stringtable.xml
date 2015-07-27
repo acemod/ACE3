@@ -52,10 +52,12 @@
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
             <German>Fallschirm abschneiden</German>
+            <Czech>Odříznout padák</Czech>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
             <German>Reserve Fallschirm</German>
+            <Czech>Záložní padák</Czech>
         </Key>
     </Package>
 </Project>
