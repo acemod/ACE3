@@ -39,11 +39,14 @@ In cases where more specific control is required function `ace_spectator_fnc_upd
 
 ### 1.3 Spectatable Sides
 
-Spectatable sides can simply be considered an extra level of filtering for the spectatable unit list. Again, there are two methods of controlling the spectatable sides:
+Spectatable sides can simply be considered an extra layer of filtering for the spectatable unit list. Again, there are two methods of controlling the spectatable sides:
 - Side filter
 - Side list
 
-The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list in order to dynamically adjust the spectatable sides in scenarios where their relation changes.
+The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list as the unit list is automatically maintained - meaning the unit list will update if the player changes side or if the side relations change.
+
+Note that the unit whitelist/blacklist also serves to override this side filtering mechanism.
+
 The default side list is `[west,east,resistance,civilian]` and to update it function `ace_spectator_fnc_updateSpectatableSides` can be used:
 
 ```
@@ -58,7 +61,7 @@ The default side list is `[west,east,resistance,civilian]` and to update it func
  * [[west], [east,civilian]] call ace_spectator_fnc_updateSpectatableSides
 ```
 
-The side filter determines how the side list will be evaluated each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
+The side filter determines which sides from the side list are valid each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
 - Player side (default)
 - Friendly sides
 - Hostile sides
@@ -67,6 +70,8 @@ The side filter determines how the side list will be evaluated each time the uni
 ### 1.4 Camera Modes
 
 ### 1.5 Vision Modes
+
+### 1.6 Camera Attributes
 
 ## 2. Usage
 
@@ -159,11 +164,11 @@ Shortcuts are currently hardcoded in the ACE3 spectator system. Future versions 
         </tr>
         <tr>
             <td><kbd>Scrollwheel</kbd></td>
-            <td>Zoom in/out</td>
+            <td>Zoom +/-</td>
         </tr>
         <tr>
             <td><kbd>Ctrl</kbd>+<kbd>Scrollwheel</kbd></td>
-            <td>Speed up/down</td>
+            <td>Speed +/-</td>
         </tr>
         <tr>
             <td><kbd>N</kbd></td>
