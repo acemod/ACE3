@@ -8,13 +8,31 @@ parent: wiki
 
 ## 1. Overview
 
-The ACE3 spectator system is designed to be as flexible as possible while remaining easy to configure. Most scenarios can be configured using only the settings framework, however public functions are provided for finer control of these configurable aspects.
+The ACE3 spectator system is designed to act as a flexible and easy to configure framework. Most scenarios can be set up as desired using only the settings provided, however public functions are available for finer control of these configurable aspects.
 
 ### 1.1 Spectator System
 
+The current itteration of the ACE3 spectator system only officially supports scenarios using respawn type 3 (or "BASE"). However there's nothing to stop its use alongside anything else, just be aware that it might not function entirely as expected.
+
+By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. The setting `ace_spectator_onDeath` can be used to automatically put players into spectator mode each time they die.
+
+For scenario designers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired.
+
+```
+ * Arguments:
+ * 0: Unit to put into spectator state <OBJECT>
+ * 1: New spectator state <BOOL> <OPTIONAL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [player, true] call ace_spectator_fnc_setSpectator
+```
+
 ### 1.2 Spectatable Units
 
-Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead mission designers have two tools at their disposal to tweak the list:
+Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead scenario designers have two tools at their disposal to tweak the list:
 - Unit filter
 - Unit whitelist/blacklist
 
