@@ -60,7 +60,7 @@ Spectatable sides can simply be considered an extra layer of filtering for the s
 - Side filter
 - Side list
 
-The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list as the unit list is automatically maintained - meaning the unit list will update if the player changes side or if the side relations change.
+The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list whenever the unit list is automatically maintained - meaning the unit list will update if the player changes side or if the side relations change.
 
 Note that the unit whitelist/blacklist also serves to override this side filtering mechanism.
 
