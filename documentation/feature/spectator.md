@@ -105,7 +105,7 @@ Scenario designers can control the camera modes available to spectators via the 
 
 ### 1.5 Vision Modes
 
-By default there are 4 available vision modes:
+Vision modes are only available in free camera mode. By default there are 4 available vision modes:
 - Normal
 - Night vision
 - Thermal imaging (white hot)
@@ -137,6 +137,42 @@ Scenario designers can control which of these vision modes are available to spec
 ```
 
 ### 1.6 Camera Attributes
+
+The spectator camera has 8 manipulatable attributes:
+- Camera mode: The camera view
+- Camera unit: The unit used for internal and external view
+- Camera vision: The vision mode used by the free camera
+- Camera position: The position of the free camera
+- Camera pan: The pan (direction/heading) of the free camera
+- Camera tilt: The tilt (pitch) of the free camera
+- Camera zoom: The zoom level of the free camera
+- Camera speed: The movement speed of the free camera
+
+Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at ay point (including before spectator has ever opened):
+```
+ * Arguments:
+ * 0: Camera mode <NUMBER> <OPTIONAL>
+ *   - 0: Free
+ *   - 1: Internal
+ *   - 2: External
+ * 1: Camera unit (objNull for random) <OBJECT> <OPTIONAL>
+ * 2: Camera vision <NUMBER> <OPTIONAL>
+ *   - -2: Normal
+ *   - -1: Night vision
+ *   -  0: Thermal white hot
+ *   -  1: Thermal black hot
+ * 3: Camera position (ATL) <ARRAY> <OPTIONAL>
+ * 4: Camera pan (0 - 360) <NUMBER> <OPTIONAL>
+ * 5: Camera tilt (-90 - 90) <NUMBER> <OPTIONAL>
+ * 6: Camera zoom (0.01 - 2) <NUMBER> <OPTIONAL>
+ * 7: Camera speed in m/s (0.05 - 10) <NUMBER> <OPTIONAL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [1, objNull] call ace_spectator_fnc_setCameraAttributes
+```
 
 ## 2. Usage
 
