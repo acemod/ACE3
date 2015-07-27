@@ -351,7 +351,7 @@
             <German>ACE-Neuigkeiten</German>
             <Portuguese>Notícias do ACE</Portuguese>
             <Polish>Wiadomości ACE</Polish>
-            <Czech>ACE Novinky</Czech>
+            <Czech>ACE Zprávy</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -359,7 +359,7 @@
             <German>Zeige Neuigkeiten im Hauptmenü</German>
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
-            <Czech>Zobrazit novinky v hlavním menu</Czech>
+            <Czech>Zobrazit zprávy v hlavním menu</Czech>
         </Key>
     </Package>
 </Project>
