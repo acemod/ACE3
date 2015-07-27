@@ -30,7 +30,7 @@ _currentModes = GVAR(availableModes);
 _newModes = _addModes arrayIntersect [0,1,2];
 _newModes append (_currentModes - _removeModes);
 
-_newModes arrayIntersect _newModes;
+_newModes = _newModes arrayIntersect _newModes;
 _newModes sort true;
 
 // Can't become an empty array

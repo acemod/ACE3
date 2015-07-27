@@ -38,7 +38,7 @@ _currentModes = GVAR(availableVisions);
 _newModes = _addModes arrayIntersect [-2,-1,0,1,2,3,4,5,6,7];
 _newModes append (_currentModes - _removeModes);
 
-_newModes arrayIntersect _newModes;
+_newModes = _newModes arrayIntersect _newModes;
 _newModes sort true;
 
 // Can't become an empty array

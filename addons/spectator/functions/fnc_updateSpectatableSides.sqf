@@ -26,7 +26,7 @@ params [["_addSides",[],[[]]], ["_removeSides",[],[[]]]];
 _addSides append (GVAR(availableSides) - _removeSides);
 
 // Only need array of unique sides
-_addSides arrayIntersect _addSides;
+_addSides = _addSides arrayIntersect _addSides;
 
 GVAR(availableSides) = _addSides;
 
