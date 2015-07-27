@@ -16,8 +16,7 @@ The current itteration of the ACE3 spectator system only officially supports sce
 
 By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. The setting `ace_spectator_onDeath` can be used to automatically put players into spectator mode each time they die.
 
-For scenario designers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired.
-
+For scenario designers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired:
 ```
  * Arguments:
  * 0: Unit to put into spectator state <OBJECT>
@@ -41,7 +40,7 @@ The unit filter determines which units will automatically be used to populate th
 - Player units (default)
 - All units
 
-In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client). The function header details its use:
+In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client):
 ```
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>
@@ -65,8 +64,7 @@ The side list is exactly what it sounds like, a list of sides spectatable by the
 
 Note that the unit whitelist/blacklist also serves to override this side filtering mechanism.
 
-The default side list is `[west,east,resistance,civilian]` and to update it function `ace_spectator_fnc_updateSpectatableSides` can be used:
-
+The default side list is `[west,east,resistance,civilian]` and to update it (on the local client) function `ace_spectator_fnc_updateSpectatableSides` can be used:
 ```
  * Arguments:
  * 0: Sides to add <ARRAY>
@@ -86,6 +84,24 @@ The side filter determines which sides from the side list are valid each time th
 - All sides
 
 ### 1.4 Camera Modes
+
+There are 3 possible camera modes:
+- Free
+- Internal
+- External
+
+Scenario designers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
+```
+ * Arguments:
+ * 0: Camera modes to add <ARRAY>
+ * 1: Camera modes to remove <ARRAY>
+ *
+ * Return Value:
+ * Available camera modes <ARRAY>
+ *
+ * Example:
+ * [[0], [1,2]] call ace_spectator_fnc_updateCameraModes
+```
 
 ### 1.5 Vision Modes
 
