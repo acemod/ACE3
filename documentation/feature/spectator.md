@@ -12,11 +12,11 @@ The ACE3 spectator system is designed to act as a flexible and easy to configure
 
 ### 1.1 Spectator System
 
-The current itteration of the ACE3 spectator system only officially supports scenarios using respawn type 3 (or "BASE"). However there's nothing to stop its use alongside anything else, just be aware that it might not function entirely as expected.
+The current iteration of the ACE3 spectator system only officially supports scenarios using [respawn type](https://community.bistudio.com/wiki/Arma_3_Respawn#Respawn_Types) 3 (or "BASE"). However there's nothing to stop its use alongside anything else, just be aware that it might not function entirely as expected.
 
 By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. The setting `ace_spectator_onDeath` can be used to automatically put players into spectator mode each time they die.
 
-For scenario designers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired:
+For mission makers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired:
 ```
  * Arguments:
  * 0: Unit to put into spectator state <OBJECT>
@@ -31,7 +31,7 @@ For scenario designers who seek a more advanced setup (such as multiple lives or
 
 ### 1.2 Spectatable Units
 
-Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead scenario designers have two tools at their disposal to tweak the list:
+Spectatable units are stored in an automatically maintained list (`ace_spectator_unitList`) on each client. However, directly accessing this list is not encouraged. Instead mission makers have two tools at their disposal to tweak the list:
 - Unit filter
 - Unit whitelist/blacklist
 
@@ -90,7 +90,7 @@ There are 3 possible camera modes:
 - Internal
 - External
 
-Scenario designers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
+Mission makers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
 ```
  * Arguments:
  * 0: Camera modes to add <ARRAY>
@@ -111,7 +111,7 @@ Vision modes are only available in free camera mode. By default there are 4 avai
 - Thermal imaging (white hot)
 - Thermal imaging (black hot)
 
-Scenario designers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
+Mission makers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
 ```
  * Possible vision modes are:
  *   - -2: Normal
@@ -139,14 +139,14 @@ Scenario designers can control which of these vision modes are available to spec
 ### 1.6 Camera Attributes
 
 The spectator camera has 8 manipulatable attributes:
-- Camera mode: The camera view
-- Camera unit: The unit used for internal and external view
-- Camera vision: The vision mode used by the free camera
-- Camera position: The position of the free camera
-- Camera pan: The pan (direction/heading) of the free camera
-- Camera tilt: The tilt (pitch) of the free camera
-- Camera zoom: The zoom level of the free camera
-- Camera speed: The movement speed of the free camera
+- **Camera mode:** The camera view
+- **Camera unit:** The unit used for internal and external view
+- **Camera vision:** The vision mode used by the free camera
+- **Camera position:** The position of the free camera
+- **Camera pan:** The pan (direction/heading) of the free camera
+- **Camera tilt:** The tilt (pitch) of the free camera
+- **Camera zoom:** The zoom level of the free camera
+- **Camera speed:** The movement speed of the free camera
 
 Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at ay point (including before spectator has ever opened):
 ```
@@ -340,12 +340,12 @@ Double click on the current unit to switch between internal and external view.
 
 The toolbar along the bottom of the screen displays various useful values. From left to right these are:
 
-* Unit name
-* Camera mode
-* Camera zoom/Unit side
-* 24-hour Clock
-* Vision mode/Unit depth
-* Camera/Unit speed
+- Unit name
+- Camera mode
+- Camera zoom/Unit side
+- 24-hour Clock
+- Vision mode/Unit depth
+- Camera/Unit speed
 
 #### 2.2.3 Map
 
