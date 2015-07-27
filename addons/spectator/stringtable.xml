@@ -184,11 +184,11 @@
             <Polish>Zablokuj kamerę na celu</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamZoom">
-            <English>Zoom In/Out</English>
+            <English>Zoom +/-</English>
             <Polish>Zoom +/-</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamSpeed">
-            <English>Speed Up/Down</English>
+            <English>Speed +/-</English>
             <Polish>Prędkość +/-</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamNextVis">
