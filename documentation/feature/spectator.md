@@ -105,6 +105,37 @@ Scenario designers can control the camera modes available to spectators via the 
 
 ### 1.5 Vision Modes
 
+By default there are 4 available vision modes:
+- Normal
+- Night vision
+- Thermal imaging (white hot)
+- Thermal imaging (black hot)
+
+Scenario designers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
+```
+ * Possible vision modes are:
+ *   - -2: Normal
+ *   - -1: Night vision
+ *   -  0: White hot
+ *   -  1: Black hot
+ *   -  2: Light Green Hot / Darker Green cold
+ *   -  3: Black Hot / Darker Green cold
+ *   -  4: Light Red Hot / Darker Red Cold
+ *   -  5: Black Hot / Darker Red Cold
+ *   -  6: White Hot / Darker Red Cold
+ *   -  7: Thermal (Shade of Red and Green, Bodies are white)
+ *
+ * Arguments:
+ * 0: Vision modes to add <ARRAY>
+ * 1: Vision modes to remove <ARRAY>
+ *
+ * Return Value:
+ * Available vision modes <ARRAY>
+ *
+ * Example:
+ * [[0], [1,2]] call ace_spectator_fnc_updateVisionModes
+```
+
 ### 1.6 Camera Attributes
 
 ## 2. Usage
