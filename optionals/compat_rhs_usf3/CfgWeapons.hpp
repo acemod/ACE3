@@ -56,7 +56,7 @@ class CfgWeapons
                 "3Rnd_SmokePurple_Grenade_shell",
                 "3Rnd_SmokeBlue_Grenade_shell",
                 "3Rnd_SmokeOrange_Grenade_shell",
-                
+
                 //ACE3 Compatibility
                 "ACE_HuntIR_M203"
             };
@@ -102,7 +102,7 @@ class CfgWeapons
                 "3Rnd_SmokePurple_Grenade_shell",
                 "3Rnd_SmokeBlue_Grenade_shell",
                 "3Rnd_SmokeOrange_Grenade_shell",
-                
+
                 //ACE3 Compatibility
                 "ACE_HuntIR_M203"
             };
@@ -175,7 +175,14 @@ class CfgWeapons
         lockedTargetSound[] = {"",0,1};
     };
 
-    class rhsusf_opscore_01;
+    class rhsusf_ach_helmet_ocp;
+    class rhsusf_opscore_01: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.60;
+    };
+    class rhsusf_opscore_01_tan: rhsusf_opscore_01 {};
+    class rhsusf_opscore_03_ocp: rhsusf_opscore_01 {};
+
     class rhsusf_cvc_helmet: rhsusf_opscore_01 {
         ace_hearing_protection = 1;
         ace_hearing_lowerVolume = 0.80;
@@ -202,12 +209,4 @@ class CfgWeapons
         ace_hearing_protection = 1;
         ace_hearing_lowerVolume = 0.80;
     };
-
-    class rhsusf_ach_helmet_ocp;
-    class rhsusf_opscore_01: rhsusf_ach_helmet_ocp {
-        ace_hearing_protection = 0.50;
-        ace_hearing_lowerVolume = 0.60;
-    };
-    class rhsusf_opscore_01_tan: rhsusf_opscore_01 {};
-    class rhsusf_opscore_03_ocp: rhsusf_opscore_01 {};
 };
