@@ -1,3 +1,4 @@
+
 class CfgMagazines {
     class CA_Magazine;
     class BWA3_200Rnd_556x45: CA_Magazine {
