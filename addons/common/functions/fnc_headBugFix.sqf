@@ -9,7 +9,7 @@
  */
 
 #include "script_component.hpp"
-if (player != vehicle player) exitWith {};
+if (player != vehicle player  || {(player getvariable ["ace_isUnconscious", false])}) exitWith {};
 titleCut ["", "BLACK"];
 _pos = getposATL player;
 // create invisible headbug fix vehicle
