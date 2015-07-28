@@ -28,11 +28,56 @@ class CfgVehicles {
 
     class Helicopter;
     class ParachuteBase: Helicopter {
-        ace_hasReserveParachute = 1;
-        ace_reserveParachute = "ACE_ReserveParachute";
+        MACRO_HASRESERVE
+    };
+    class ParachuteWest: ParachuteBase {
+        MACRO_HASRESERVE
+    };
+    class ParachuteEast: ParachuteBase {
+        MACRO_HASRESERVE
+    };
+    class ParachuteG: ParachuteBase {
+        MACRO_HASRESERVE
+    };
+    class Parachute: ParachuteWest {
+        MACRO_HASRESERVE
+    };
+    class NonSteerable_Parachute_F: Parachute {
+        MACRO_HASRESERVE
+    };
+    class Paraglide: ParachuteWest{
+        MACRO_HASRESERVE
+    };
+    class Steerable_Parachute_F: Paraglide{
+        MACRO_HASRESERVE
+    };
+    class parachuteBase;
+    class Parachute_02_base_F: parachuteBase {
+        MACRO_HASRESERVE
+    };
+    class B_Parachute_02_F: Parachute_02_base_F {
+        MACRO_HASRESERVE
+    };
+    class O_Parachute_02_F: Parachute_02_base_F {
+        MACRO_HASRESERVE
+    };
+    class I_Parachute_02_F: Parachute_02_base_F {
+        MACRO_HASRESERVE
+    };
+    class BagBase;
+    class B_Parachute:BagBase {
+        MACRO_HASRESERVE
+    };
+    class B_B_Parachute_02_F: B_Parachute {
+        MACRO_HASRESERVE
+    };
+    class B_O_Parachute_02_F: B_Parachute {
+        MACRO_HASRESERVE
+    };
+    class B_I_Parachute_02_F: B_Parachute {
+        MACRO_HASRESERVE
     };
 
-    class B_Parachute;
     class ACE_NonSteerableParachute: B_Parachute {
         author = ECSTRING(common,ACETeam);
         scope = 2;
@@ -41,6 +86,7 @@ class CfgVehicles {
         //model = "\A3\Weapons_F\Ammoboxes\Bags\Backpack_Parachute";    // @todo
         // backpackSimulation = "ParachuteNonSteerable";    //ParachuteSteerable  //Bis broke this in 1.40
         ParachuteClass = "NonSteerable_Parachute_F";
+        MACRO_HASRESERVE
         maximumLoad = 0;
         mass = 100;
     };
