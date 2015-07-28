@@ -63,8 +63,8 @@ class CfgVehicles {
     class I_Parachute_02_F: Parachute_02_base_F {
         MACRO_HASRESERVE
     };
-    class BagBase;
-    class B_Parachute:BagBase {
+    class Bag_Base;
+    class B_Parachute:Bag_Base {
         MACRO_HASRESERVE
     };
     class B_B_Parachute_02_F: B_Parachute {
