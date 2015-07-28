@@ -51,7 +51,6 @@ class CfgVehicles {
     class Steerable_Parachute_F: Paraglide{
         MACRO_HASRESERVE
     };
-    class parachuteBase;
     class Parachute_02_base_F: parachuteBase {
         MACRO_HASRESERVE
     };
