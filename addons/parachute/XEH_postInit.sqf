@@ -42,5 +42,6 @@ GVAR(PFH) = false;
 
 // don't show speed and height when in expert mode
 ["infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call EFUNC(common,addEventHandler);
+
 //[ACE_Player,([ACE_player] call EFUNC(common,getAllGear))] call FUNC(storeParachute);
 ["playerInventoryChanged", FUNC(storeParachute) ] call EFUNC(common,addEventHandler);
