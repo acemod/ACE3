@@ -53,10 +53,7 @@ class CfgVehicles {
         displayName = "Range Card";
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_RangeCard {
-                name = "ACE_RangeCard";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_RangeCard,1);
         };
     };
 

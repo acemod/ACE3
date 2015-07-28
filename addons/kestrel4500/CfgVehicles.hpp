@@ -42,10 +42,7 @@ class CfgVehicles {
         displayName = "Kestrel 4500";
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Kestrel4500 {
-                name = "ACE_Kestrel4500";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Kestrel4500,1);
         };
     };
 

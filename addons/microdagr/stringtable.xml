@@ -306,6 +306,7 @@
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
             <Spanish>Relleno del mapa MicroDAGR</Spanish>
             <Czech>MicroDAGR - Vyplnění mapy</Czech>
+            <German>MicroDAGR-Kartenfüllung</German>
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
@@ -313,6 +314,7 @@
             <Polish>Wypełnienie mapy MicroDAGR</Polish>
             <Spanish>Relleno del mapa MicroDAGR</Spanish>
             <Czech>MicroDAGR - Vyplnění mapy</Czech>
+            <German>MicroDAGR-Kartenfüllung</German>
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">

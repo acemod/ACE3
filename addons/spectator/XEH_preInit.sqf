@@ -2,30 +2,51 @@
 
 ADDON = false;
 
-PREP(camera);
-PREP(cameraIntro);
-PREP(canSpectateUnit);
-PREP(checkUnits);
-PREP(compass);
-PREP(crosshair);
-PREP(draw3D);
-PREP(drawMines2D);
-PREP(drawMines3D);
-PREP(drawTracks2D);
-PREP(drawUnits2D);
-PREP(drawUnits3D);
-PREP(killed);
-PREP(map);
-PREP(moduleSpectator);
-PREP(overlay);
-PREP(penPos);
-PREP(respawn);
-PREP(sideColour);
-PREP(status);
-PREP(trackUnits);
-PREP(unitInfo);
-PREP(unitSide);
-PREP(unitVar);
-PREP(viewDistance);
+PREP(cacheUnitInfo);
+PREP(cycleCamera);
+PREP(handleCamera);
+PREP(handleCompass);
+PREP(handleIcons);
+PREP(handleInterface);
+PREP(handleKilled);
+PREP(handleMouse);
+PREP(handleRespawn);
+PREP(handleToolbar);
+PREP(handleUnits);
+PREP(moduleSpectatorSettings);
+PREP(setCameraAttributes);
+PREP(setSpectator);
+PREP(transitionCamera);
+PREP(toggleInterface);
+PREP(updateCameraModes);
+PREP(updateSpectatableSides);
+PREP(updateUnits);
+PREP(updateVisionModes);
+
+// Permanent variables
+GVAR(availableModes) = [0,1,2];
+GVAR(availableSides) = [west,east,resistance,civilian];
+GVAR(availableVisions) = [-2,-1,0,1];
+
+GVAR(camMode) = 0;
+GVAR(camPan) = 0;
+GVAR(camPos) = ATLtoASL [worldSize * 0.5, worldSize * 0.5, 20];
+GVAR(camSpeed) = 1;
+GVAR(camTilt) = -10;
+GVAR(camUnit) = objNull;
+GVAR(camVision) = -2;
+GVAR(camZoom) = 1.25;
+
+GVAR(showComp) = true;
+GVAR(showHelp) = true;
+GVAR(showIcons) = true;
+GVAR(showInterface) = true;
+GVAR(showMap) = false;
+GVAR(showTool) = true;
+GVAR(showUnit) = true;
+
+GVAR(unitList) = [];
+GVAR(unitBlacklist) = [];
+GVAR(unitWhitelist) = [];
 
 ADDON = true;

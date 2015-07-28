@@ -10,3 +10,7 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define PLACE_WAITING -1
+#define PLACE_CANCEL 0
+#define PLACE_APPROVE 1

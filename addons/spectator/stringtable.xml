@@ -1,95 +1,197 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
-        <Key ID="STR_ACE_Spectator_Module_DisplayName">
-            <English>Spectator</English>
-            <Polish>Obserwator</Polish>
-            <Czech>Pozorovatel</Czech>
-            <Spanish>Espectador</Spanish>
+        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
+            <English>Spectator Settings</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Enabled_DisplayName">
-            <English>Enable Spectator</English>
-            <Polish>Aktywuj obserwatora</Polish>
-            <Czech>Povolit pozorovatele</Czech>
-            <Spanish>Activar espectador</Spanish>
+        <Key ID="STR_ACE_Spectator_Settings_Descripton">
+            <English>Configure how the spectator system will operate by default.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Enabled_Description">
-            <English>Begin spectating on player death?</English>
-            <Polish>Włącz obserwatora po śmierci gracza?</Polish>
-            <Czech>Přepnout do pozorovatele po hráčově smrti?</Czech>
-            <Spanish>¿Comenzar como espectador al morir el jugador?</Spanish>
+        <Key ID="STR_ACE_Spectator_system_DisplayName">
+            <English>Spectate on death</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_PlayerSide_DisplayName">
-            <English>Player Side Only</English>
-            <Polish>Tylko strona gracza</Polish>
-            <Czech>Pouze strana hráče</Czech>
-            <Spanish>Sólo bando del jugador</Spanish>
+        <Key ID="STR_ACE_Spectator_system_Description">
+            <English>Enables spectator upon death.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_PlayerSide_Description">
-            <English>Only spectate units belonging to player's side?</English>
-            <Polish>Pozwól obserwować jednostki będące tylko po stronie gracza?</Polish>
-            <Czech>Pozorovat pouze jednotky patřící k hráčově straně?</Czech>
-            <Spanish>¿Sólo observar unidades que pertenecen al bando del jugador?</Spanish>
+        <Key ID="STR_ACE_Spectator_units_DisplayName">
+            <English>Unit filter</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_AI_DisplayName">
-            <English>Spectate AI</English>
-            <Polish>Obserwacja AI</Polish>
-            <Czech>Pozorovat AI</Czech>
-            <Spanish>Observar IA</Spanish>
+        <Key ID="STR_ACE_Spectator_units_Description">
+            <English>Method of filtering spectatable units.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_AI_Description">
-            <English>Allow spectating of AI units?</English>
-            <Polish>Pozwól obserwować jednostki AI?</Polish>
-            <Czech>Umožnit pozorovat AI jednotky?</Czech>
-            <Spanish>¿Permitir observar unidades de la IA?</Spanish>
+        <Key ID="STR_ACE_Spectator_units_none">
+            <English>No units</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Tracking_DisplayName">
-            <English>Track Units</English>
-            <Polish>Śledź jednostki</Polish>
-            <Czech>Sledovat jednotky</Czech>
-            <Spanish>Seguir unidades</Spanish>
+        <Key ID="STR_ACE_Spectator_units_players">
+            <English>Only players</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Tracking_Description">
-            <English>Track units' movements throughout mission?</English>
-            <Polish>Śledź ruch jednostek w trakcie misji?</Polish>
-            <Czech>Sledovat pohyby jednotek napříč misí?</Czech>
-            <Spanish>¿Seguimiento de movimientos de unidades a lo largo de la misión?</Spanish>
+        <Key ID="STR_ACE_Spectator_units_all">
+            <English>All units</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Pos_DisplayName">
-            <English>Start Position</English>
-            <Polish>Pozycja startowa</Polish>
-            <Czech>Počáteční pozice</Czech>
-            <Spanish>Posición de inicio</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_DisplayName">
+            <English>Side filter</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_Pos_Description">
-            <English>Use this module as a starting position for spectator camera?</English>
-            <Polish>Użyj pozycji modułu jako pozycje startową dla kamery obserwatora?</Polish>
-            <Czech>Použít tento modul jako počáteční pozici pro pozorovací kameru?</Czech>
-            <Spanish>¿Utiliza este módulo como una posición de inicio para la cámara de espectador?</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_Description">
+            <English>Method of filtering spectatable sides.</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_End_DisplayName">
-            <English>End Mission</English>
-            <Polish>Zakończ misję</Polish>
-            <Czech>Konec mise</Czech>
-            <Spanish>Finalizar misión</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_player">
+            <English>Player side</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_End_Description">
-            <English>End mission when all players dead (default BIS behaviour)?</English>
-            <Polish>Zakończ misję kiedy wszyscy gracze będą martwi (domyślne zachowanie BIS)?</Polish>
-            <Czech>Ukončit misi když umřou všichni hráči (výchozí BIS chování)?</Czech>
-            <Spanish>¿Finalizar misión cuando todos los jugadores mueran (comportamiento por defecto de BIS)?</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_friendly">
+            <English>Friendly sides</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_VD_Title">
-            <English>View Distance</English>
-            <Polish>Zasięg widzenia</Polish>
-            <Czech>Dohlednost</Czech>
-            <Spanish>Distancia de visión</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_hostile">
+            <English>Hostile sides</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_VD_Button">
-            <English>OK</English>
-            <Polish>OK</Polish>
-            <Czech>OK</Czech>
-            <Spanish>Aceptar</Spanish>
+        <Key ID="STR_ACE_Spectator_sides_all">
+            <English>All sides</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_DisplayName">
+            <English>Camera modes</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_Description">
+            <English>Camera modes that can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_all">
+            <English>All</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_free">
+            <English>Free only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_internal">
+            <English>Internal only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_external">
+            <English>External only</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_unit">
+            <English>Internal and external</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_DisplayName">
+            <English>Vision modes</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_Description">
+            <English>Vision modes that can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_nv">
+            <English>Night vision</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_ti">
+            <English>Thermal imaging</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_icons_DisplayName">
+            <English>Unit icons</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_icons_Description">
+            <English>Render icons above spectatable units.</English>
+        </Key>
+
+        <!-- Interface strings -->
+        <Key ID="STR_ACE_Spectator_HelpTitle">
+            <English>Spectator Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_ViewFree">
+            <English>Free</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_ViewInternal">
+            <English>Internal</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_ViewExternal">
+            <English>External</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionNormal">
+            <English>Normal</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionNight">
+            <English>Night</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionThermal">
+            <English>Thermal</English>
+        </Key>
+
+        <!-- Controls -->
+        <Key ID="STR_ACE_Spectator_freeCamControls">
+            <English>Free Camera Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamForward">
+            <English>Camera Forward</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamBackward">
+            <English>Camera Backward</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamLeft">
+            <English>Camera Left</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamRight">
+            <English>Camera Right</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamUp">
+            <English>Camera Up</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamDown">
+            <English>Camera Down</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamPan">
+            <English>Pan Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamDolly">
+            <English>Dolly Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamLock">
+            <English>Lock Camera to Target</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamZoom">
+            <English>Zoom In/Out</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamSpeed">
+            <English>Speed Up/Down</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamNextVis">
+            <English>Next Vision Mode</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_freeCamPrevVis">
+            <English>Previous Vision Mode</English>
+        </Key>
+
+        <Key ID="STR_ACE_Spectator_uiControls">
+            <English>Interface Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleInterface">
+            <English>Toggle Interface</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleIcons">
+            <English>Toggle Unit Icons</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleUnits">
+            <English>Toggle Unit List</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleTools">
+            <English>Toggle Toolbar</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleCompass">
+            <English>Toggle Compass</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleMap">
+            <English>Toggle Map</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiToggleHelp">
+            <English>Toggle Help</English>
+        </Key>
+
+        <Key ID="STR_ACE_Spectator_otherControls">
+            <English>Other Controls</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextCam">
+            <English>Next Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevCam">
+            <English>Previous Camera</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextUnit">
+            <English>Next Unit</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevUnit">
+            <English>Previous Unit</English>
         </Key>
     </Package>
 </Project>

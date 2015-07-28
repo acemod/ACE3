@@ -1,6 +1,8 @@
 #define COMPONENT concertina_wire
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define DEBUG_MODE_FULL
+
 #ifdef DEBUG_ENABLED_CONCERTINA_WIRE
     #define DEBUG_MODE_FULL
 #endif

@@ -12,6 +12,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgActions.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
@@ -22,6 +23,3 @@ class CfgPatches {
 #include "UI\RscTitles.hpp"
 #include "UI\triagecard.hpp"
 
-class ACE_Extensions {
-    extensions[] += {"ace_medical"};
-};

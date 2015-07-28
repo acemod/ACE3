@@ -24,10 +24,7 @@ class CfgVehicles {
         displayName = "ATragMX";
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_ATragMX {
-                name = "ACE_ATragMX";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_ATragMX,1);
         };
     };
 
