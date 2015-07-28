@@ -71,24 +71,6 @@ class CfgVehicles {
         GVAR(sitPosition[]) = {0, -0.1, -0.45};
         GVAR(sitRotation) = 45;
     };
-    // Field Toilet
-    class Land_FieldToilet_F: ThingX {
-        XEH_ENABLED;
-        MACRO_SEAT_ACTION
-        GVAR(canSit) = 1;
-        GVAR(sitDirection) = 180;
-        GVAR(sitPosition[]) = {0, 0.75, -1.1};
-        GVAR(sitRotation) = 10;
-    };
-    // Toiletbox
-    class Land_ToiletBox_F: ThingX {
-        XEH_ENABLED;
-        MACRO_SEAT_ACTION
-        GVAR(canSit) = 1;
-        GVAR(sitDirection) = 180;
-        GVAR(sitPosition[]) = {0, 0.75, -1.1};
-        GVAR(sitRotation) = 10;
-    };
 
     class Furniture_base_F;
     // Chair (Plastic)

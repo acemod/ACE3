@@ -74,6 +74,7 @@
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
+            <English>This module allows you to customize the map screen.</English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
             <German>Dieses Modul erweitert die Kartenfunktionen.</German>
             <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
@@ -134,6 +135,7 @@
             <Portuguese>Esconder marcadores que pertencem ao grupo de IA?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
+            <English>This module allows the tracking of allied units with BFT map markers.</English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
             <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
             <Czech>Umožňuje sledovat přátelské jednokty na mapě v rámci BFT.</Czech>

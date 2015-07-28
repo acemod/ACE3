@@ -3458,6 +3458,7 @@
             <Portuguese>É médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
+            <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
