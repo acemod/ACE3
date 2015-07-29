@@ -3,6 +3,7 @@ layout: wiki
 title: Safe Mode
 description: Introduce safe mode
 group: feature
+category: equipment
 parent: wiki
 ---
 

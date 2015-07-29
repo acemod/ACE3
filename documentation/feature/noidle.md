@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: No Idle
-description: Disable idle animations
+description: Disables idle animations
 group: feature
+category: interaction
 parent: wiki
 ---
 

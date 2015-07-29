@@ -2,6 +2,7 @@
 layout: wiki
 title: HuntIR
 group: feature
+category: equipment
 parent: wiki
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Vector
-description: 
+description: Adds a realistic depiction of the Vector 21 rangefinder
 group: feature
+category: equipment
 parent: wiki
 ---
 

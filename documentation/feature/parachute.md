@@ -17,6 +17,9 @@ Adds a non-steerable parachute variant for jet pilots.
 ### 1.3 Landing animation
 Smoothens the parachute landing animation.
 
+### 1.4 Reserve parachute
+Adds a reserve parachute and the ability to cut the primary one.
+
 ## 2. Usage
 
 ### 2.1 bringing up the altimeter

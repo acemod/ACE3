@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Ragdolls
-description:
+description: Changes the ragdolls to react more to the force of shots and explosions.
 group: feature
+category: realism
 parent: wiki
 ---
 

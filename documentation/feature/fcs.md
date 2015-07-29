@@ -3,6 +3,7 @@ layout: wiki
 title: FCS (Fire Control System)
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

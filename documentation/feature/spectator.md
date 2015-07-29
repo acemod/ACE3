@@ -3,8 +3,14 @@ layout: wiki
 title: Spectator
 description: A flexible spectator system
 group: feature
+category: interaction
 parent: wiki
 ---
+
+<div class="panel callout">
+    <h5>Please note:</h5>
+    <p>This is not part of ACE3 yet. It will be released in a future version.</p>
+</div>
 
 ## 1. Overview
 
