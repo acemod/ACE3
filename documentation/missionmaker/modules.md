@@ -15,54 +15,29 @@ This module allows enabling and configuring advanced ballistic simulations.
 
 **Settings:**
 
-1. **Advanced Ballistics (Boolean)**<br>
-Enables advanced ballistics.<br>
-`Default value: No`
-
-2. **Enabled For Snipers (Boolean)**<br>
-Enables advanced ballistics for non local snipers (when using high power optics).<br>
-`Default value: Yes`
-
-3. **Enabled For Group Members (Boolean)**<br>
-Enables advanced ballistics for non local group members.<br>
-`Default value: No`
-
-4. **Enabled For Everyone (Boolean)**<br>
-Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer).<br>
-`Default value: No`
-
-5. **Disabled In FullAuto Mode (Boolean)**<br>
-Disables the advanced ballistics during full auto fire.<br>
-`Default value: No`
-
-6. **Enable Ammo Temperature Simulation (Boolean)**<br>
-Muzzle velocity varies with ammo temperature.<br>
-`Default value: Yes`
-
-7. **Enable Barrel Length Simulation (Boolean)**<br>
-Muzzle velocity varies with barrel length.<br>
-`Default value: Yes`
-
-8. **Enable Bullet Trace Effect (Boolean)**<br>
-Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics).<br>
-`default value: Yes `
-
-9. **Simulation Interval (Number)**<br>
-Defines the interval between every calculation step.<br>
-`Default value: 0.00`
-
-10. **Simulation Radius (Number)**<br>
-Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles.<br>
-`Default value: 3000`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Advanced Ballistics | Boolean | Enables advanced ballistics. | No
+Enabled For Snipers | Boolean | Enables advanced ballistics for non local snipers (when using high power optics). | Yes
+Enabled For Group Members | Boolean | Enables advanced ballistics for non local group members.| No
+Enabled For Everyone | Boolean | Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer). | No
+Disabled In FullAuto Mode | Boolean | Disables the advanced ballistics during full auto fire. | No
+Enable Ammo Temperature Simulation | Boolean | Muzzle velocity varies with ammo temperature. | Yes
+Enable Barrel Length Simulation | Boolean | Muzzle velocity varies with barrel length. | Yes
+Enable Bullet Trace Effect | Boolean | Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics). | Yes
+Simulation Interval | Number | Defines the interval between every calculation step. | 0.00
+Simulation Radius | Number | Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles. | 3000
 
 ### 1.2 Allow Config Export
 *Part of: ace_Optionmenu*
 
 This modules allows to export all current ACE3 settings from the ACE3 Option menu to the clipboard and RPT file.
 
-1. **Allow (Boolean)**<br>
-Enables the "export" button in the ACE3 Option menu<br>
-`Default value: Yes`
+**Settings:**
+
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Allow | Boolean | Enables the "export" button in the ACE3 Option menu. | Yes
 
 ### 1.3 BlueForceTracking
 *Part of: ace_map*
@@ -71,12 +46,11 @@ When adding the "Blue Force Tracking" module to your mission it adds map markers
 
 **Settings:**
 
-1. **Interval (Number)**<br>
-How often the markers should be refreshed (in seconds).<br>
-`Default value: 1`
-2. **Hide AI Groups (Boolean)**<br>
-Hide markers for "AI only" groups.<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+BFT Enable | Boolean | Enable blue force tracking | No
+Interval | Number | How often the markers should be refreshed (in seconds). | 1
+Hide AI Groups | Boolean | Hide markers for "AI only" groups. | No
 
 ### 1.4 Captives settings
 *Part of: ace_captives*
@@ -86,13 +60,10 @@ Very useful if you don't want your players to be able to restrict each others.
 
 **Settings:**
 
-1. **Can handcuff own side (Boolean)**<br>
-Determine if you are able to handcuff your own side or not.<br>
-`Default value: Yes`
-
-2. **Allow surrendering (Boolean)**<br>
-Determine if you are able to surrender or not when your weapon is holstered.<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Can handcuff own side | Boolean | Determine if you are able to handcuff your own side or not. | Yes
+Allow surrendering | Boolean | Determine if you are able to surrender or not when your weapon is holstered. | Yes
 
 ### 1.5 Check PBOs
 *Part of: ace_common*
@@ -105,15 +76,13 @@ If you are worried that players haven't updated ACE3 or other mods to the versio
 
 **Settings:**
 
-1. **Action (Option)**<br>
-What to do with people who do not have the right PBOs.<br>
-`Default value: "Warn once"`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Action | Option | What to do with people who do not have the right PBOs. | "Warn once"
+Check all addons | Boolean | Check all addons instead of only those of ACE3? | "No"
 
-2. **Check all addons (Boolean)**<br>
-Check all addons instead of only those of ACE3?<br>
-`Default value: "No"`
-
-3. **Whitelist**<br>
+ **Whitelist**
+ 
 You can make a whitelist of addons that don't have to be on the server. If you want to use the "Check all addons" option of this module and allow the usage of client side modifications like Blastcore or JSRS, you have to list them here.
 The list must be in the following format: `["ADDON1","ADDON2",...]` where the addons are CfgPatches references to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.
 
@@ -132,7 +101,6 @@ Example 3: @JSRS + @Blastcore-A3:<br>
 [TBD, "warfxpe","blastcore_vep"]
 ```
 
-
 ### 1.6 Explosive System
 *Part of: ace_explosive*
 
@@ -140,87 +108,87 @@ The "Explosive System" module lets you tweak the settings for the new explosive 
 
 **Settings:**
 
-1. **Require specialists? (Boolean)**<br>
-Require explosive specialists to disable explosives.<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Require specialists? | Boolean | Require explosive specialists to disable explosives. | No
+Punish non-specialists? | Boolean | Increase the time it takes to complete actions for non-specialists. | Yes
+Explode on defusal? | Boolean | Enables certain explosives to explode on defusal? | Yes
 
-2. **Punish non-specialists? (Boolean)**<br>
-Increase the time it takes to complete actions for non-specialists.<br>
-`Default value: Yes`
+### 1.7 Finger settings
+*Part of ace_finger*
 
+This module allow you to tweak settings for finger pointing such as is if it's enabled or the distance people can see you finger things
 
-### 1.7 Friendly Fire Messages
+**Settings:**
+
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Finger pointing enabled | Boolean |  | Yes
+Finger Max Range | Number | How far away players can finger each others (in meters) | 4
+
+### 1.8 Friendly Fire Messages
 *Part of: ace_respawn*
 
 The "Friendly Fire Messages" module triggers a message when a player kills a friendly or civilian unit. This module isn't needed on servers with a low difficulty setting.
 
-
-### 1.8 Hearing
+### 1.9 Hearing
 *Part of: ace_hearing*
 
-Placing this modules allows you to disable combat deafness usually triggerd by loud explosions or heavy weapons in a players proximity.
+Placing this modules allows you to disable combat deafness usually triggered by loud explosions or heavy weapons in a players proximity.
 
 **Settings:**
 
-1. **Enable combat deafness? (Boolean)***<br>
-Enable combat deafness?<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enable combat deafness? | Boolean | Enable combat deafness? | Yes
 
-
-### 1.9 Interaction System
+### 1.10 Interaction System
 *Part of: ace_interaction*
 
 This module allows you to tweak if players should be able to use team management functions (e.g. "switch group", "become leader").
 
 **Settings:**
 
-1. **Enable Team Management (Boolean)**<br>
-Should players be allowed to use the Team Management Menu?.<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enable Team Management | Boolean | Should players be allowed to use the Team Management Menu?. | Yes
 
-### 1.10 Make Unit Surrender
+### 1.11 LSD Vehicles
+*part of ace_common*
+
+Any vehicle linked to this module will become a seizure inducing machine of doom, no really.
+
+### 1.12 Make Unit Surrender
 *Part of: ace_captives*
 
-Syncing units to that module sets them in the captive state with their arms behind their back. Usefull for e.g. hostage rescue missions.
+Syncing units to that module sets them in the captive state with their arms behind their back. Useful for e.g. hostage rescue missions.
 
-
-### 1.11 Map
+### 1.13 Map
 *Part of: ace_map*
 
-ACE3 introdcues a bit more realism for the vanilla Arma 3 map and how it behaves. Some of these settings can be toggled by this module.
+ACE3 introduces a bit more realism for the vanilla Arma 3 map and how it behaves. Some of these settings can be toggled by this module.
 
 **Settings:**
 
-1. **Map illumination? (Boolean)**<br>
-Calculate dynamic map illumination based on light conditions?.<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Map illumination? | Boolean | Calculate dynamic map illumination based on light conditions?. | Yes
+Map shake? | Boolean | Make map shake when walking?. | Yes
+Limit map zoom? | Boolean | Limit the amount of zoom available for the map?. | No
+Show cursor coordinates? | Boolean | Show the grid coordinates on the mouse pointer?. | No
 
-2. **Map shake? (Boolean)**<br>
-Make map shake when walking?.<br>
-`Default value: Yes`
-
-3. **Limit map zoom? (Boolean)**<br>
-Limit the amount of zoom available for the map?.<br>
-`Default value: No`
-
-4. **Show cursor coordinates? (Boolean)**<br>
-Show the grid coordinates on the mouse pointer?.<br>
-`Default value: No`
-
-
-### 1.12 MicroDAGR Map Fill
+### 1.14 MicroDAGR Map Fill
 *Part of: ace_microdagr*
 
 Controls how much data is filled on the microDAGR items. Less data restricts the map view to show less on the minimap.
 
 **Settings:**
 
-1. **MicroDAGR Map Fill (Option)**<br>
-How much map data is filled on MicroDAGR's.<br>
-`Default value: "Full Satellite + Buildings"`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+MicroDAGR Map Fill | Option | How much map data is filled on MicroDAGR's. | "Full Satellite + Buildings"
 
-
-### 1.13 MK6 Settings
+### 1.15 MK6 Settings
 *Part of: ace_mk6mortar*
 
 ACE3 now includes the first iteration of getting a less arcady point and click mortar experience.
@@ -228,50 +196,31 @@ Placing this modules allows you to enable the increased realism in game.
 
 **Settings:**
 
-1. **Air Resistance (Boolean)**<br>
-For Player Shots, Model Air Resistance and Wind Effects.<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Air Resistance | Boolean | For Player Shots, Model Air Resistance and Wind Effects. | No
+Allow MK6 Computer | Boolean | Show the Computer and Rangefinder (these **NEED** to be removed if you enable air resistance). | No
+Allow MK6 Compass | Boolean | Show the MK6 Digital Compass. | Yes
 
-2. **Allow MK6 Computer (Boolean)**<br>
-Show the Computer and Rangefinder (these **NEED** to be removed if you enable air resistance).<br>
-`Default value: No`
-
-3. **Allow MK6 Compass (Boolean)**<br>
-Show the MK6 Digital Compass.<br>
-`Default value: Yes`
-
-### 1.14 Name Tags
+### 1.16 Name Tags
 *Part of: ace_nametags*
 
 This module allows you to tweak the settings for player names tags.
 
 **Settings:**
 
-1. **Show player names (Option)**<br>
-Let you choose when nametags appears.<br>
-`Default value: "Do Not Force"`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Show player names | Option | Let you choose when nametags appears. | "Do Not Force"
+layer Names View Distance | Number | Distance (in meters) at which player names are shown. | 5
+Show name tags for AI? | Option | Show the name and rank tags for friendly AI units, or by default allows players to choose it on their own. | "Do Not Force"
+Show crew info? | Option | Show vehicle crew info, or by default allows players to choose it on their own. | "Do Not Force"
+Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only if client has name tags enabled). | No
 
-2. **Player Names View Distance (Number)**<br>
-Distance (in meters) at which player names are shown.<br>
-`Default value: 5`
-
-3. **Show name tags for AI? (Option)**<br>
-Show the name and rank tags for friendly AI units, or by default allows players to choose it on their own.<br>
-`Default value: "Do Not Force"`
-
-4. **Show crew info? (Option)**<br>
-Show vehicle crew info, or by default allows players to choose it on their own.<br>
-`Default value: "Do Not Force"`
-
-5. **Show for Vehicles? (Boolean)**<br>
-Show cursor NameTag for vehicle commander (only if client has name tags enabled).<br>
-`Default value: No`
-
-
-### 1.15 Rallypoint System
+### 1.17 Rallypoint System
 *Part of: ace_respawn*
 
-This module enables Mission Makers to specificly enable units to move a rallypoint. Every unit that is synced with that module is able to move a rallypoint.
+This module enables Mission Makers to specifically enable units to move a rallypoint. Every unit that is synced with that module is able to move a rallypoint.
 
 <div class="panel callout">
     <h5>Note:</h5>
@@ -280,129 +229,81 @@ This module enables Mission Makers to specificly enable units to move a rallypoi
 
 To enable JIP players to move rally points have a look at [ACE3 Rallypoints](./mission-tools.html#1.-ace-rallypoints).
 
-
-### 1.16 Respawn System
+### 1.18 Respawn System
 *Part of: ace_respawn*
 
 The "Respawn System" module enables players to respawn with the gear they had before dying and to remove bodies of players after a configurable interval (in seconds).
 
 **Settings:**
 
-1. **Save Gear? (Boolean)**<br>
-Respawn with the gear a player had just before his death.<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Save Gear? | Boolean | Respawn with the gear a player had just before his death. | No
 
-### 1.17 Spectator Settings
-*Part of: ace_spectator*
+### 1.19 Sitting
+*part of ace_sitting*
 
-Configure how the spectator system will operate by default.
+This module is used to turn sitting on.
 
 **Settings:**
 
-1. **Spectate on death (Boolean)**<br>
-Enables spectator upon death.<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enable sitting | Boolean | | Yes
 
-2. **Unit filter (Option)**<br>
-Method of filtering spectatable units.<br>
-`Default value: "Only players"`
-
-3. **Side filter (Option)**<br>
-Method of filtering spectatable sides.<br>
-`Default value: "Player side"`
-
-4. **Camera modes (Option)**<br>
-Camera modes that can be used.<br>
-`Default value: "All"`
-
-5. **Vision modes (Option)**<br>
-Vision modes that can be used.<br>
-`Default value: "All"`
-
-6. **Unit icons (Boolean)**<br>
-Render icons above spectatable units.<br>
-`Default value: Yes`
-
-### 1.18 SwitchUnits System
+### 1.20 SwitchUnits System
 *Part of: ace_switchunits*
 
 The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map.
 
 **Settings:**
 
-1. **Switch To West? (Boolean)**<br>
-Allow switching to west units?<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Switch To West? | Boolean | Allow switching to west units? | No
+Switch To East? | Boolean | Allow switching to east units? | No
+Switch To Independent? | Boolean | Allow switching to independent units? | No
+Switch To Civilian? | Boolean | Allow switching to civilian units? | No
+Enable Safe Zone? | Boolean | Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone. |   Yes
+Safe Zone Radius | Number | The safe zone around players from a different team (in meters). | 200
 
-2. **Switch To East? (Boolean)**<br>
-Allow switching to east units?<br>
-`Default value: No`
-
-3. **Switch To Independent? (Boolean)**<br>
-Allow switching to independent units?<br>
-`Default value: No`
-
-4. **Switch To Civilian? (Boolean)**<br>
-Allow switching to civilian units?<br>
-`Default value: No`
-
-5. **Enable Safe Zone? (Boolean)**<br>
-Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.<br>
-`Default value: Yes`
-
-6. **Safe Zone Radius (Number)**<br>
-The safe zone around players from a different team (in meters)<br>
-`Default value: 200`
-
-
-### 1.19 Vehicle Lock
+### 1.21 Vehicle Lock
 *Part of: ace_vehiclelock*
 
 These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
 
-#### 1.19.1 Vehicle Key Assign
+#### 1.21.1 Vehicle Key Assign
 Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
 Example: `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a key to bob and program it to work only on car1
 
-#### 1.19.2.1 Vehicle Lock Setup
+#### 1.21.2.1 Vehicle Lock Setup
 Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.
 
 **Settings:**
 
-1. **Lock Vehicle Inventory? (Boolean)**<br>
-Locks the inventory of locked vehicles<br>
-`Default value: No`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Lock Vehicle Inventory? | Boolean | Locks the inventory of locked vehicles. | No
+Vehicle Starting Lock State | Option | Set lock state for all vehicles (removes ambiguous lock states). | "As Is"
+Default Lockpick Strength | Number | Default Time to lockpick (in seconds). | 10
 
-2. **Vehicle Starting Lock State (Option)**<br>
-Set lock state for all vehicles (removes ambiguous lock states)<br>
-`Default value: "As Is"`
-
-3. **Default Lockpick Strength (Number)**<br>
-Default Time to lockpick (in seconds)<br>
-`Default value: 10`
-
-#### 1.19.2.2 Vehicle setVariables
+#### 1.21.2.2 Vehicle setVariables
 * `ACE_VehicleLock_lockSide` - SIDE: overrides a vehicle's side, allowing locking and unlocking using a different side's key. For example: Unlocking INDEP vehicles with a BLUFOR key.
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
 
-
-### 1.20 View Distance Limiter
+### 1.22 View Distance Limiter
 *Part of: ace_viewdistance*
 
 This module allows disabling the ACE3 View Distance feature as well as setting a view distance limit.
 
 **Settings:**
 
-1. **Enable ACE viewdistance (Boolean)**<br>
-Enables ACE viewdistance<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enable ACE viewdistance | Boolean | Enables ACE viewdistance. | Yes
+View Distance Limit | Number | Sets the limit for how high clients can raise their view distance (<= 10 000) | 10000
 
-2. **View Distance Limit (Number)**<br>
-Sets the limit for how high clients can raise their view distance (<= 10000)
-`Default value: 10000`
-
-
-### 1.21 Weather
+### 1.23 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
@@ -414,40 +315,16 @@ This module allows you to customize the weather settings.
 
 **Settings:**
 
-1. **Weather propagation (Boolean)**<br>
-Enables sever side weather propagation.<br>
-`Default value: Yes`
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>This is responsible for synchronizing weather between all clients. Disabling it is <b>not</b> recommended.</p>
-</div>
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Weather propagation | Boolean | Enables sever side weather propagation.(This is responsible for synchronizing weather between all clients. Disabling it is **NOT** recommended). | Yes
+ACE3 Weather | Boolean | Overrides the default weather with ACE3 weather (map based)(This can be disabled without affecting the weather propagation above. Useful if you prefer changing weather settings manually). | Yes
+Sync Rain | Boolean | Synchronizes rain. | Yes
+Sync Wind | Boolean | Synchronizes wind. | Yes
+Sync Misc | Boolean | Synchronizes lightnings, rainbow, fog, ... | Yes
+Update Interval | Number | Defines the interval (seconds) between weather updates. | 60
 
-2. **ACE3 Weather (Boolean)**<br>
-Overrides the default weather with ACE3 weather (map based).<br>
-`Default value: Yes`
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>This can be disabled without affecting the weather propagation above. Useful if you prefer changing weather settings manually.</p>
-</div>
-
-3. **Sync Rain (Boolean)**<br>
-Synchronizes rain.<br>
-`Default value: Yes`
-
-4. **Sync Wind (Boolean)**<br>
-Synchronizes wind.<br>
-`Default value: Yes`
-
-5. **Sync Misc (Boolean)**<br>
-Synchronizes lightnings, rainbow, fog, ...<br>
-`Default value: Yes`
-
-6. **Update Interval (Number)**<br>
-Defines the interval (seconds) between weather updates.<br>
-`Default value: 60`
-
-
-### 1.22 Wind Deflection
+### 1.24 Wind Deflection
 *Part of: ace_winddeflection*
 
 This module allows you to define when wind deflection is active.
@@ -464,56 +341,27 @@ This module allows you to define when wind deflection is active.
 
 **Settings:**
 
-1. **Wind Deflection (Boolean)**<br>
-Enables wind deflection.<br>
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Wind Deflection | Boolean | Enables wind deflection. | Yes
+Vehicle Enabled | Boolean | Enables wind deflection for static/vehicle gunners. | Yes
+Simulation Interval | Number | Defines the interval between every calculation step. | 0.05
+Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
-2. **Vehicle Enabled (Boolean)**<br>
-Enables wind deflection for static/vehicle gunners.<br>
-`Default value: Yes`
-
-3. **Simulation Interval (Number)**<br>
-Defines the interval between every calculation step.<br>
-`Default value: 0.05`
-
-4. **Simulation Radius (Number)**<br>
-Defines the radius around the player (in meters) at which projectiles are wind deflected.<br>
-`Default value: 3000`
-
-### 1.23 Zeus Settings
+### 1.25 Zeus Settings
 *part of: ace_zeus*
 
 This module provides control over vanilla aspects of Zeus.
 
 **Settings:**
 
-1. **Ascension Messages (Boolean)**<br>
-Display global popup messages when a player is assigned as Zeus.<br>
-`Default value: No`
-
-2. **Zeus Eagle (Boolean)**<br>
-Spawn an eagle that follows the Zeus camera.<br>
-`Default value: No`
-
-3. **Wind Sounds (Boolean)**<br>
-Play wind sounds when Zeus remote controls a unit.<br>
-`Default value: No`
-
-4. **Ordnance Warning (Boolean)**<br>
-Play a radio warning when Zeus uses ordnance.<br>
-`Default value: No`
-
-5. **Reveal Mines (Option)**<br>
-Reveal mines to allies and place map markers.<br>
-`Default value: "Disabled"`
-
-### 1.23 LSD Vehicles
-*Part of: ace_core*
-
-And then there's the "LSD Vehicles" module &hellip; it does 'something' to all vehicles synced to that module.
-<div class="videoWrapper">
-    <iframe src="https://www.youtube.com/embed/X3e0LTexEok" frameborder="0" allowfullscreen></iframe>
-</div>
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Ascension Messages | Boolean | Display global pop-up messages when a player is assigned as Zeus. | No
+Zeus Eagle | Boolean | Spawn an eagle that follows the Zeus camera. | No
+Wind Sounds | Boolean | Play wind sounds when Zeus remote controls a unit. | No
+Ordnance Warning | Boolean | Play a radio warning when Zeus uses ordnance. | No
+Reveal Mines | Option | Reveal mines to allies and place map markers. | "Disabled"
 
 ## 2. ACE3 Medical
 *Part of: ace_medical*
@@ -524,58 +372,21 @@ This module allows to tweak all the medical settings used in ACE3
 
 **Settings:**
 
-1. **Medical Level (Option)**<br>
-What is the medical simulation level?<br>
-`Default value: "Basic"`
-
-2. **Medics setting (Option)**<br>
-What is the level of detail preferred for medics?<br>
-`Default value: "Normal"`
-
-3. **Enable Litter (Boolean)**<br>
-Enable litter being created upon treatment.<br>
-`Default value: "Yes"`
-
-4. **Life time of litter objects (Number)**<br>
-How long should litter objects stay? In seconds. -1 is forever.<br>
-`Default value: 1800`
-
-5. **Enable Screams (Boolean)**<br>
-Enable screaming by injured units.<br>
-`Default value: Yes`
-
-6. **Player Damage (Number)**<br>
-What is the damage a player can take before being killed?<br>
-`Default value: 1`
-
-7. **AI Damage (Number)**<br>
-What is the damage an AI can take before being killed?<br>
-`Default value: 1`
-
-8. **AI Unconsciousness (Option)**<br>
-Allow AI to go unconscious.<br>
-`Default value: "50/50"`
-
-9. **Remote controlled AI (Boolean)**<br>
-Treats remote controlled units as AI not players ?
-`Default value: Yes`
-
-10. **Prevent instant death (Boolean)**<br>
-Have a unit move to unconscious instead of death.<br>
-`Default value: No`
-
-11. **Bleeding coefficient (Number)**<br>
-Coefficient to modify the bleeding speed.<br>
-`Default value: 1`
-
-12. **Pain coefficient (Number)**<br>
-Coefficient to modify the pain intensity.<br>
-`Default value: 1`
-
-13. **Sync status (Boolean)**<br>
-Keep unit status synced. Recommended on.<br>
-`Default value: Yes`
-
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Medical Level | Option | What is the medical simulation level? | "Basic"
+Medics setting | Option | What is the level of detail preferred for medics? | "Basic"
+Enable Litter | Boolean | Enable litter being created upon treatment. | "Yes"
+Life time of litter objects | Number | How long should litter objects stay? In seconds. -1 is forever. | 1800
+Enable Screams | Boolean | Enable screaming by injured units. | Yes
+Player Damage | Number | What is the damage a player can take before being killed? | 1
+AI Damage | Number | What is the damage an AI can take before being killed? | 1
+AI Unconsciousness | Option | Allow AI to go unconscious. | "50/50"
+Remote controlled AI | Boolean | Treats remote controlled units as AI not players? | Yes
+Prevent instant death | Boolean | Have a unit move to unconscious instead of death. | No
+Bleeding coefficient | Number | Coefficient to modify the bleeding speed. | 1
+Pain coefficient | Number | Coefficient to modify the pain intensity. | 1
+Sync status | Boolean | Keep unit status synced. (Recommended on). | Yes
 
 ### 2.2 Advanced Medical Settings
 
@@ -583,49 +394,19 @@ This module allows you to change the default Advanced Medical Settings, when [2.
 
 **Settings:**
 
-1. **Enabled for (Option)**<br>
-Select what units the advanced medical system will be enabled for.<br>
-`Default value: "Players only"`
-
-2. **Enable Advanced wounds (Boolean)**<br>
-Allow reopening of bandaged wounds?<br>
-`Default value: No`
-
-3. **Vehicle Crashes (Boolean)**<br>
-Do units take damage from a vehicle crash?<br>
-`Default value: Yes`
-
-4. **Allow PAK (Option)**<br>
-Who can use the PAK for full heal?<br>
-`Default value: "Medics only"`
-
-5. **Remove PAK on use (Boolean)**<br>
-Should PAK be removed on usage?<br>
-`Default value: Yes`
-
-6. **Locations PAK (Option)**<br>
-Where can the personal aid kit be used?<br>
-`Default value: "Vehicles & facility"`
-
-7. **Allow Surgical kit (Option)**<br>
-Who can use the surgical kit?<br>
-`Default value: "Medics only"`
-
-8. **Remove Surgical kit (Boolean)**<br>
-Should Surgical kit be removed on usage?<br>
-`Default value: Yes`
-
-9. **Locations Surgical kit (Option)**<br>
-Where can the Surgical kit be used?<br>
-`Default value: "Vehicles & facility"`
-
-10. **Bloodstains (Boolean)**<br>
-Bandaging removes bloodstains.
-`Default value: No`
-
-11. **Pain supression (Boolean)**<br>
-Pain is only temporarly supressed not removed.
-`Default value: Yes`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enabled for | Option | Select what units the advanced medical system will be enabled for. | "Players only"
+Enable Advanced wounds | Boolean | Allow reopening of bandaged wounds? | No
+Vehicle Crashes | Boolean | Do units take damage from a vehicle crash? | Yes
+Allow PAK | Option | Who can use the PAK for full heal? | "Medics only"
+Remove PAK on use | Boolean | Should PAK be removed on usage? | Yes
+Locations PAK | Option | Where can the personal aid kit be used? | "Vehicles & facility"
+Allow Surgical kit | Option | Who can use the surgical kit? | "Medics only"
+Remove Surgical kit | Boolean | Should Surgical kit be removed on usage? | Yes
+Locations Surgical kit | Option | Where can the Surgical kit be used? | "Vehicles & facility"
+Bloodstains | Boolean | Bandaging removes bloodstains. | No
+Pain suppression | Boolean | Pain is only temporarily suppressed not removed. | Yes
 
 ### 2.3 Revive Settings
 
@@ -633,18 +414,11 @@ This modules allows a mission maker to limit the amount of revives for units in 
 
 **Settings:**
 
-1. **Enable Revive (Option)**<br>
-Enable a basic revive system<br>
-`Default value: "disable"`
-
-2. **Max Revive time (Number)**<br>
-Max amount of seconds a unit can spend in revive state<br>
-`Default value: 120`
-
-3. **Max Revive lives (Number)**<br>
-Max amount of lives a unit. 0 or -1 is disabled.<br>
-`Default value: -1`
-
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enable Revive | Option | Enable a basic revive system. | "disabled"
+Max Revive time | Number | Max amount of seconds a unit can spend in revive state | 120
+Max Revive lives | Number | Max amount of lives a unit. 0 or -1 is disabled. | -1
 
 ### 2.4 Set Medic Class
 
@@ -652,13 +426,10 @@ Using this module you can define which unit class is defined as a medic / doctor
 
 **Settings:**
 
-1. **List (String)**<br>
-List of unit names that will be classified as medic, separated by commas.<br>
-`Default value: ""`
-
-2. **Is Medic (Boolean)**<br>
-Medics allow for more advanced treatment in case of Advanced Medic roles enabled<br>
-`Default value: "Regular medic"`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+List | String | List of unit names that will be classified as medic, separated by commas. | ""
+Is Medic | Boolean | Medics allow for more advanced treatment in case of Advanced Medic roles enabled. | "Regular medic"
 
 
 ### 2.5 Set Medical Facility
@@ -667,10 +438,9 @@ Defines an object as a medical facility. This allows for more advanced treatment
 
 **Settings:**
 
-1. **Is Medical Facility (Boolean)**<br>
-Registers an object as a medical facility.<br>
-`Default value: Yes`
-
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Is Medical Facility | Boolean | Registers an object as a medical facility. | Yes
 
 ### 2.6 Set Medical Vehicle
 
@@ -678,14 +448,10 @@ Defines an object as a medical facility. This allows for more advanced treatment
 
 **Settings:**
 
-1. **List (String)**<br>
-List of vehicles that will be classified as medical vehicle, separated by commas.<br>
-`Default value: ""`
-
-2. **Is Medical Vehicle (Boolean)**<br>
-Whether or not the objects in the list will be a medical vehicle.<br>
-`Default value: Yes`
-
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+List | String | List of vehicles that will be classified as medical vehicle, separated by commas. | ""
+Is Medical Vehicle | Boolean | Whether or not the objects in the list will be a medical vehicle. | Yes
 
 ## 3. ACE3 Mission Modules
 *Part of: ace_missionmodules*
@@ -700,30 +466,27 @@ This module randomizes the time when the sound file is played and the position w
 
 **Settings:**
 
-1. **Sounds (String)**<br>
-Class names of the ambiance sounds played. Separated by ','. (Example: `radio_track_01, electricity_loop`).<br>
-`Default value: ""`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Sounds | String | Class names of the ambiance sounds played. Separated by ','. (Example: `radio_track_01, electricity_loop`)| ""
+Minimal Distance | Number | Used for calculating a random position and sets the minimal distance between the players and the played sound file(s) (in meters) | 400
+Maximum Distance | Number | Used for calculating a random position and sets the maximum distance between the players and the played sound file(s) (in meters) | 900
+Minimal Delay | Number | Minimal delay (in seconds) between sounds played | 10
+Maximum Delay | Number | Maximum delay (in seconds) between sounds played | 10
+Follow Players | Boolean | Follow players. If set to false, loop will play sounds only nearby logic position. | No
+Volume | Number | The volume of the sounds played. | 1
 
-2. **Minimal Distance (Number)**<br>
-Used for calculating a random position and sets the minimal distance between the players and the played sound file(s) (in meters)<br>
-`Default value: 400`
+### 3.2 Slideshow
+*part of ace_slideshow*
 
-3. **Maximum Distance (Number)**<br>
-Used for calculating a random position and sets the maximum distance between the players and the played sound file(s) (in meters)<br>
-`Default value: 900`
+This module is the core of ace_slideshow for more informations about slideshow check [the missiontools section](http://ace3mod.com/wiki/missionmaker/mission-tools.html)
 
-4. **Minimal Delay (Number)**<br>
-Minimal delay (in seconds) between sounds played<br>
-`Default value: 10`
+**settings:**
 
-5. **Maximum Delay (Number)**<br>
-Maximum delay (in seconds) between sounds played<br>
-`Default value: 10`
-
-6. **Follow Players (Boolean)**<br>
-Follow players. If set to false, loop will play sounds only nearby logic position.<br>
-`Default value: No`
-
-7. **Volume (Number)**<br>
-The volume of the sounds played<br>
-`Default value: 1`
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Objects | String | Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. | ""
+Controllers | String | Controller object names, separated by commas if multiple. | ""
+Images | String | List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa). | ""
+Interaction names | String | List of names that will be used for interaction entries, separated by commas, in order of images. | Number | | 0 ""
+Slide Duration | Number | Duration of each slide (in seconds) (0 = automatic slides disabled) | 0
