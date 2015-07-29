@@ -1,5 +1,5 @@
 /*
- * Author: Garth 'L-H' de Wet
+ * Author: Garth 'L-H' de Wet, SilentSpike
  * Turns 0-1 damage of explosion Event into a rating system of 0-3
  *
  * Arguments:
@@ -9,17 +9,12 @@
  * The rating [0-3] <NUMBER>
  *
  * Example:
- * 0.05 call ace_goggles_fnc_getExplosionIndex;
+ * [0.05] call ace_goggles_fnc_getExplosionIndex;
  *
  * Public: No
  */
-private ["_effectIndex"];
 
-_effectIndex = switch true do {
-       case (_this <= 0.04): {0};
-       case (_this <= 0.06): {1};
-       case (_this <= 0.09): {2};
-       default {3};
-};
+params [["_damage",0,[0]]];
 
-_effectIndex
+floor (linearConversion [0,0.1,_damage,0,3,true]);
+

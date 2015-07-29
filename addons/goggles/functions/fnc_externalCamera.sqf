@@ -15,6 +15,4 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(showInThirdPerson)) exitWith { false };
-
-(cameraView in ["EXTERNAL", "GROUP"] || {call EFUNC(common,isFeatureCameraActive)})
+(!GVAR(showInThirdPerson) && {cameraView in ["EXTERNAL", "GROUP"] || {call EFUNC(common,isFeatureCameraActive)}})

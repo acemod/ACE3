@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Performs rain checks and checks to see whether glasses effects have been applied or not.
+ * Performs rain checks and checks to see whether goggle effects have been applied or not.
  * Checks for external camera and removes effects.
  *
  * Arguments:
@@ -15,32 +15,36 @@
  * Public: No
  */
 #include "script_component.hpp"
-if (!alive ace_player) exitWith {};
-if (true) then {
-    // Detect if curator interface is open and disable effects
-    if (!isNull(findDisplay 312)) exitWith {
-        if (GVAR(EffectsActive)) then {
-            call FUNC(removeGlassesEffect);
-        };
+
+_unit = GETUNIT;
+
+// Detect if curator interface is open and disable effects
+if !(isNull curatorCamera) exitWith {
+    if (GVAR(effectsActive)) then {
+        [] call FUNC(removeGlassesEffect);
     };
-    call FUNC(checkGlasses);
-    if !([ace_player] call FUNC(isGogglesVisible)) exitWith {
-        if (GVAR(EffectsActive)) then {
-            call FUNC(removeGlassesEffect);
-        };
+};
+
+[] call DFUNC(checkGlasses);
+
+if !([_unit] call FUNC(isGogglesVisible)) exitWith {
+    if (GVAR(effectsActive)) then {
+        [] call FUNC(removeGlassesEffect);
     };
-    if (call FUNC(externalCamera)) exitWith {
-        if (GVAR(EffectsActive)) then {
-            call FUNC(removeGlassesEffect);
-        };
+};
+
+if ([] call FUNC(externalCamera)) exitWith {
+    if (GVAR(effectsActive)) then {
+        [] call FUNC(removeGlassesEffect);
     };
-    if !(GVAR(EffectsActive)) then {
-        [goggles ace_player] call FUNC(applyGlassesEffect);
-    } else {
-        if ([goggles ace_player] call FUNC(isDivingGoggles) && {underwater ace_player}) then {
-            call FUNC(removeRainEffect);
-            call FUNC(removeDirtEffect);
-            call FUNC(removeDustEffect);
-        };
+};
+
+if !(GVAR(effectsActive)) then {
+    [_unit, goggles _unit] call FUNC(applyGlassesEffect);
+} else {
+    if ([goggles _unit] call FUNC(isDivingGoggles) && {underwater _unit}) then {
+        [] call FUNC(removeRainEffect);
+        [] call FUNC(removeDirtEffect);
+        [] call FUNC(removeDustEffect);
     };
 };

@@ -12,8 +12,8 @@
  *     1: Amount of rotor wash. <NUMBER>
  *
  * Example:
- * if (([ace_player, 10] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
- * if (([ace_player] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+ * if (([player, 10] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+ * if (([player] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
  *
  * Public: Yes
  */

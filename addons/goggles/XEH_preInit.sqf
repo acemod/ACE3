@@ -1,18 +1,3 @@
-/*
- * Author: Garth 'L-H' de Wet
- * Initialises Goggles.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
 #include "script_component.hpp"
 
 ADDON = false;
@@ -21,11 +6,13 @@ PREP(applyDirtEffect);
 PREP(applyDust);
 PREP(applyGlassesEffect);
 
+PREP(changeUnit);
+
 PREP(checkGoggles);
 PREP(clearGlasses);
-PREP(dustHandler);
 PREP(externalCamera);
 PREP(getExplosionIndex);
+PREP(handleFired);
 
 PREP(isDivingGoggles);
 PREP(isGogglesVisible);
