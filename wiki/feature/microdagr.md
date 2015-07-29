@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: MicroDAGR
-description: A GPS device and much more !
+description: A GPS device and much more
 group: feature
+category: equipment
 parent: wiki
 ---
 

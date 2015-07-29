@@ -3,6 +3,7 @@ layout: wiki
 title: Reload Launchers
 description:
 group: feature
+category: interaction
 parent: wiki
 ---
 

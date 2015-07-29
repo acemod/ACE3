@@ -3,6 +3,7 @@ layout: wiki
 title: Logistics - Wirecutter
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

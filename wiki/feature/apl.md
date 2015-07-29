@@ -3,6 +3,7 @@ layout: wiki
 title: APL
 description: assets under APL license
 group: feature
+category: equipment
 parent: wiki
 ---
 
