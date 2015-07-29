@@ -156,7 +156,7 @@ Enable Team Management | Boolean | Should players be allowed to use the Team Man
 ### 1.11 LSD Vehicles
 *part of ace_common*
 
-Any vehicle linked to this module will become a seizure inducing machine of doom, no really.
+Any vehicle linked to this module will become a seizure inducing machine of doom, no, really.
 
 ### 1.12 Make Unit Surrender
 *Part of: ace_captives*

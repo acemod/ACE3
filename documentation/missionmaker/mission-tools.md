@@ -10,7 +10,7 @@ parent: wiki
 ## 1. ACE Rallypoints
 *Part of: ace_respawn*
 
-"ACE rally points" is a two way teleport system between two positions. Usually this is used to transport units that have died during a mission back to the front line. The rally points are portrayed by flagpoles (West, East and Independant flagpoles are available) that have a "Base" and an "Exit" version.
+"ACE Rallypoints" is a two way teleport system between two positions. Usually this is used to transport units that have died during a mission back to the front line. The rally points are portrayed by flagpoles (West, East and Independant flagpoles are available) that have a "Base" and an "Exit" version.
 
 They can be found in the editor under: "Empty" >> "ACE Respawn"
 
@@ -62,38 +62,38 @@ The [module settings](./modules.html#1.16-switchunits-system) define which side 
 ## 3. ACE Slideshow
 *Part of: ace_slideshow*
 
-Ace slideshow is a very powerful tool for mission makers and platoon leaders giving them the power to project images on some objects.
+"ACE Slideshow" is a very powerful tool for mission makers and platoon leaders giving them the power to project images on some objects.
 You will now learn how to set up everything for it to work properly.
 
 ### 3.1 The module explained
 Name | Explanation
 ---- | -----
-objects | Name of the objects used as screens
+Objects | Name of the objects used as screens
 Controllers | Name of the objects used as controllers
-images | Full path of the image from the mission
+Images | Full path of the image from the mission folder/file or from an other mod (even BI PBOs work)
 Interaction names | Name of your interactions
-Slide duration | 0 (0 = disabled number is in seconds)
+Slide duration | 0 (0 = disabled, number is in seconds)
 
-- Only objects with hiddenselection 0 can be used as "screens".
-- If you set a duration the remotes will be disabled.
+- Only objects with hiddenSelection 0 can be used as "screens".
+- If you set a duration the remotes will be disabled. (If the remotes are disabled `ace_interaction` is not needed)
 - You can have multiple sets of images on different screens, see the advanced slideshow below.
 
 ### 3.2 Basic slideshow
 *A set of 4 images that are swapped via a remote*
 
-note that all names and interaction names work, I use foo1, bar1 for example purposes.
+Note that all names and interaction names are examples.
 
 - First place the slideshow module down.
 - Place the object that will be used as a "screen" and give it the name `foo1`
-- Place the object you want to use as a remote and name it`bar1`
+- Place the object you want to use as a remote and name it `bar1`
 - In your mission folder create a new folder called images and drop your banana images there.
 - Place down the module and fill it as follows:
 
 Name | Written
 ---- | -----
-objects | foo1
+Objects | foo1
 Controllers | bar1
-images | images\banana1.jpg,images\banana2.jpg,images\banana3.jpg,images\banana4.jpg
+Images | images\banana1.jpg,images\banana2.jpg,images\banana3.jpg,images\banana4.jpg
 Interaction names | banana1,banana2,banana3,banana4
 Slide duration | 0
 
@@ -112,9 +112,9 @@ Slide duration | 0
   
 Name | Written
 ---- | -----
-objects | foo1
+Objects | foo1
 Controllers | bar1
-images | images\banana1.jpg,images\banana2.jpg
+Images | images\banana1.jpg,images\banana2.jpg
 Interaction names | banana1,banana2
 Slide duration | 0
 
@@ -129,8 +129,3 @@ Interaction names | banana3,banana4
 Slide duration | 0
   
 - You now have two set of "screens" with a remote each.
-
-
-
-
-
