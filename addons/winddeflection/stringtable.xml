@@ -108,6 +108,7 @@
             <German>Simulationsintervall</German>
             <Czech>Interval simulace</Czech>
             <Portuguese>Intervalo de simulação</Portuguese>
+            <Hungarian>Szimulációs intervallum</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -116,6 +117,7 @@
             <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
+            <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -124,6 +126,7 @@
             <German>Simulationsradius</German>
             <Czech>Oblast simulace</Czech>
             <Portuguese>Radio da Simulação</Portuguese>
+            <Hungarian>Szimulációs hatókör</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>

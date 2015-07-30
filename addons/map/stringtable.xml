@@ -17,6 +17,7 @@
             <German>Kartenausleuchtung</German>
             <Czech>Osvětlení mapy</Czech>
             <Portuguese>Iluminação do mapa?</Portuguese>
+            <Hungarian>Térkép megvilágítása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Calculate dynamic map illumination based on light conditions?</English>
@@ -25,6 +26,7 @@
             <German>Berechne die Kartenauslichtung anhand des Umgebungslichts?</German>
             <Czech>Vypočítat dynamické osvětlení mapy na základně světelných podmínek?</Czech>
             <Portuguese>Calcular a iluminação dinâmica do mapa de acordo com as condições de luz?</Portuguese>
+            <Hungarian>Számítódjon a térkép megvilágítottsága a környezeti fényviszonyokból?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -33,6 +35,7 @@
             <German>Kamerawackeln</German>
             <Czech>Třesení mapy?</Czech>
             <Portuguese>Tremor de mapa?</Portuguese>
+            <Hungarian>Térkép-rázkódás?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -41,6 +44,7 @@
             <German>Kamerawackeln beim Gehen?</German>
             <Czech>Umožnit třesení mapy za pochodu?</Czech>
             <Portuguese>Tremer o mapa enquanto caminha?</Portuguese>
+            <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
@@ -49,6 +53,7 @@
             <German>Kartenzoom einschränken</German>
             <Czech>Omezit přiblížení mapy?</Czech>
             <Portuguese>Limitar zoom do mapa?</Portuguese>
+            <Hungarian>Térkép-nagyítás korlátozása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -57,6 +62,7 @@
             <German>Zoomstufe der Karte einschränken?</German>
             <Czech>Omezit stupeň přiblížení pro mapu?</Czech>
             <Portuguese>Limitar a quantidade de zoom disponível para o mapa?</Portuguese>
+            <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
@@ -65,6 +71,7 @@
             <German>Zeige Cursor-Koordinaten?</German>
             <Czech>Zobrazit souřadnice u kurzoru?</Czech>
             <Portuguese>Mostrar coordenadas no cursor?</Portuguese>
+            <Hungarian>Kurzor-koordináták mutatása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -73,6 +80,7 @@
             <German>Gitter-Koordinaten auf dem Mauszeiger anzeigen?</German>
             <Czech>Zobrazit souřadnice u kurzoru v mapě?</Czech>
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
+            <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English>This module allows you to customize the map screen.</English>
@@ -80,6 +88,7 @@
             <German>Dieses Modul erweitert die Kartenfunktionen.</German>
             <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
             <Portuguese>Este módulo permite que você personalize a tela de mapa.</Portuguese>
+            <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -148,6 +157,7 @@
             <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
             <Czech>Umožňuje sledovat přátelské jednokty na mapě v rámci BFT.</Czech>
             <Portuguese>Permite que você acompanhe as posições no mapa das unidades aliadas com marcadores RFA.</Portuguese>
+            <Hungarian>Ez a modul lehetővé teszi a szövetséges egységek követését BFT térképjelzőjkkel.</Hungarian>
         </Key>
     </Package>
 </Project>

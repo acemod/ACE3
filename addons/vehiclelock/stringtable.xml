@@ -180,6 +180,7 @@
             <German>Unverändert</German>
             <Czech>Jak je</Czech>
             <Portuguese>Como está</Portuguese>
+            <Italian>Úgy-ahogy</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
             <English>Locked</English>
@@ -188,6 +189,7 @@
             <German>Gesperrt</German>
             <Czech>Zamčeno</Czech>
             <Portuguese>Fechado</Portuguese>
+            <Italian>Zárva</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
             <English>Unlocked</English>
@@ -196,6 +198,7 @@
             <German>Offen</German>
             <Czech>Odemčeno</Czech>
             <Portuguese>Aberto</Portuguese>
+            <Italian>Nyitva</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
             <English>Default Lockpick Strength</English>

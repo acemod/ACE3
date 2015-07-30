@@ -74,6 +74,7 @@
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
+            <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
@@ -91,6 +92,7 @@
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
             <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
             <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
+            <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>

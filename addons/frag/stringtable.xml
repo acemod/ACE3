@@ -26,6 +26,7 @@
             <German>Explosionssimulation</German>
             <Czech>Simulace úlomků</Czech>
             <Portuguese>Simulação de estilhaços</Portuguese>
+            <Hungarian>Pattogzás-szimuláció</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall_Desc">
             <English>Enable the ACE Spalling Simulation</English>
@@ -34,6 +35,7 @@
             <German>Aktiviere ACE-Explosionssimulation</German>
             <Czech>Povolit ACE simulaci úlomků</Czech>
             <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
+            <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
@@ -42,6 +44,7 @@
             <German>Maximalzahl der verfolgten Projektile</German>
             <Czech>Maximální počet sledovaných projektilů</Czech>
             <Portuguese>Máximo de projéteis rastreados</Portuguese>
+            <Hungarian>Maximum követett repeszek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack_Desc">
             <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
@@ -50,6 +53,7 @@
             <German>Diese Einstellung steuert die maximale Anzahl an Projektilen, die das Splitter- und Explosionssystem gleichzeitig verfolgen wird. Wenn mehr Projektile abgefeuert werden, werden sie nicht verfolgt werden. Diese Einstellung zu verringern, kann FPS-Einbrüche bei Szenarien mit vielen Projektilen verhindern (&gt;200 Objekte gleichzeitig in der Luft)</German>
             <Czech>Toto nastavení kontroluje maximální množství projektilů z fragmentace a úlomků, která jsou sledována v dané době. Pokud je vystřeleno více projektilů, tak nebudou sledovány. Snižte toto nastavení pokud si nepřejete propady FPS v situacích, kde je velké množství projektilů ( &gt;200 nábojů najednou ve vzduchu)</Czech>
             <Portuguese>Esta definição controla a quantidade máxima de projéteis que o sistema de fragmentação e estilhaçamento irá acompanhar em qualquer momento. Se mais projéteis são disparados, eles não serão rastreados. Diminua essa configuração se você não quiser que o FPS caia em cenários com alta contagem de projéteis (&gt; 200 projéteis no ar ao mesmo tempo)</Portuguese>
+            <Hungarian>Ez a beállítás szabályozza a repeszeződés és pattogzás által kilőtt objektumok követett számát. Ha több ez a szám, ezek az objektumok nem lesznek követve. Csökkentsd ezt a beállítást, ha nem akarsz lassulásokat magas-törmelékmennyiségű helyzetekben (200+ repesz a levegőben egyszerre)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
@@ -58,6 +62,7 @@
             <Polish>Maks. liczba pocisków na klatkę</Polish>
             <Czech>Maximální počet projektilů ze jeden snímek</Czech>
             <Portuguese>Projéteis máximos por quadro</Portuguese>
+            <Hungarian>Maximum repesz/képkocka</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
             <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
@@ -66,6 +71,7 @@
             <Spanish>El número de cálculos de esquirlas que se hará en cualquier cuadro. Esto ayuda a dispersar el impacto en FPS del seguimiento de esquirlas de balas a través de múltiples cuadros, lo que limita aún más su impacto.</Spanish>
             <Czech>Počet úlomků v daném snímku. Toto pomáhá rozšířit FPS dopad sledovaného úlomku napříč více snímky, omezuje jeho vliv ještě více.</Czech>
             <Portuguese>O número de cálculos por estilhaço rastreado para executar em qualquer quadro. Isso ajuda a distribuir o impacto no FPS do rastreamento de estilhaço em vários quadros, o que limita o seu impacto ainda mais.</Portuguese>
+            <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
@@ -74,6 +80,7 @@
             <Czech>(Pouze SP) Debug sledování Frag/Úlomků</Czech>
             <German>(nur SP) Splitter-/Explosions-Debug-Verfolgung</German>
             <Portuguese>(Somente SP) Depuração de fragmentação e estilhaços traçantes</Portuguese>
+            <Hungarian>(Csak SP) Repesz/Pattogzás debug követés</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
@@ -82,6 +89,7 @@
             <German>(nur SP) Splitter-/Explosions-Debugging</German>
             <Czech>(Pouze SP) Vyžaduje restart mise/editoru. Aktivuje vizuální stopování fragmentace a úlomů pouze v režimu jednoho hráče.</Czech>
             <Portuguese>(Somente SP) Requer um reinício de missão / editor. Habilita o rastreamento visual de projéteis de fragmentação e estilhaçamento apenas no modo de jogo SP.</Portuguese>
+            <Hungarian>(Csak SP) Küldetés/Editor újraindítás szükséges. Engedélyezi a repeszek és pattogzó lövedékek vizuális nyomkövetését, csak egyjátékos módok alatt.</Hungarian>
         </Key>
     </Package>
 </Project>

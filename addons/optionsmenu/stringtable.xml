@@ -266,6 +266,7 @@
             <German>Erlaube alle Einstellungen in einer Server-Config zu exportieren.</German>
             <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
             <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
+            <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -274,6 +275,7 @@
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
+            <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>

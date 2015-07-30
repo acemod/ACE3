@@ -8,6 +8,7 @@
             <Czech>Yardage 450</Czech>
             <German>Yardage 450</German>
             <Portuguese>Yardage 450</Portuguese>
+            <Hungarian>Yardage 450</Hungarian>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
@@ -16,6 +17,7 @@
             <Spanish>Telémetro láser</Spanish>
             <Czech>Laserový dálkoměr</Czech>
             <Portuguese>Medidor de Distância a laser</Portuguese>
+            <Hungarian>Lézeres távolságmérő</Hungarian>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -24,6 +26,7 @@
             <Spanish>Yardage 450 - Botón de encendido</Spanish>
             <Czech>Yardage 450 - Tlačítko napájení</Czech>
             <Portuguese>Yardage 450 - Botão de energia</Portuguese>
+            <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
         </Key>
     </Package>
 </Project>
