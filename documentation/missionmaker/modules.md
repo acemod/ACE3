@@ -479,7 +479,7 @@ Volume | Number | The volume of the sounds played. | 1
 ### 3.2 Slideshow
 *part of ace_slideshow*
 
-This module is the core of `ace_slideshow` for more informations about slideshow check [the mission-tools section](http://ace3mod.com/wiki/missionmaker/mission-tools.html)
+This module is the core of `ace_slideshow` for more informations about slideshow check [the mission-tools section](./mission-tools.html)
 
 **Settings:**
 
