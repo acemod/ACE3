@@ -13,6 +13,8 @@ redcarpet:
 
 timezone: UTC
 
+excerpt_separator: <!--more-->
+
 highlighter: pygments
 
 safe: true

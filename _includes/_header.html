@@ -13,11 +13,11 @@
         <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
 
         <meta property="og:title" content="{% if page.browserTitle != null %}{{ page.browserTitle }}{% else %}{{ page.title }}{% endif %}" />
-        <meta property="og:description" content="{% if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
+        <meta property="og:description" content="{% if page.excerpt != null %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
         <meta property="og:site_name" content="ACE3"/>
         <meta property="og:locale" content="en_US" />
         <meta property="og:url" content="{{ site.productionUrl }}{{ page.url }}" />
-        <meta property="og:image" content="{{ site.productionUrl }}/img/slider01.jpg" />
+        <meta property="og:image" content="{{ site.productionUrl }}{% if page.image != null %}{{ page.image }}{% else %}/img/slider01.jpg{% endif %}" />
 
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="16x16" />

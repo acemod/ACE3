@@ -1,0 +1,23 @@
+{% include _header.html %}
+
+<main>
+    <div class="row">
+        <div class="medium-8 columns">
+            <a href="{{site.productionUrl}}/news/" class="button tiny"><i class="fa fa-chevron-left"></i>&nbsp;Back</a><br/>
+            <article>
+                <header>
+                    <h1>{{ page.title }}</h1>
+
+                    <div class="meta">
+                        <time>{{ page.date | date: "%Y-%m-%d"}}</time>
+                    </div>
+                </header>
+                {{ content }}
+            </article>
+        </div>
+        <div class="medium-4 columns">
+        </div>
+    </div>
+</main>
+
+{% include _footer.html %}

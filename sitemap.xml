@@ -2,7 +2,7 @@
 title: Sitemap
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
@@ -20,5 +20,13 @@ title: Sitemap
         <priority>0.5</priority>
     </url>
     {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+    <url>
+        <loc>{{site.productionUrl}}{{ post.url }}</loc>
+        <lastmod>{{post.date | date: "%Y-%m-%d"}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
     {% endfor %}
 </urlset>

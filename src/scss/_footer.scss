@@ -1,4 +1,4 @@
-footer {
+body > footer {
     background-color: $oil;
     padding: rem-calc(40) 0;
     color: $aluminum;
@@ -6,7 +6,7 @@ footer {
     p,h1,h2,h3,h4,h5,h6 {
         color: inherit;
     }
-    
+
     a {
         color: lighten($primary-color, 10%);
     }
