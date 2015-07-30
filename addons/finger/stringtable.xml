@@ -4,37 +4,47 @@
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show finger indicator to self</English>
             <Russian>Отображать пальце-индикатор для показывающего игрока</Russian>
+            <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
             <Russian>Отображать индикатор для показывающего игрока. Эта настройка не влияет на то, будутт ли другие игроки видеть индикатор</Russian>
+            <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Finger indicator</English>
             <Russian>Пальце-индикатор</Russian>
+            <Hungarian>Ujj-indikátor</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the finger-pointing indicator circle</English>
             <Russian>Цвет индикатора пальце-указания</Russian>
+            <Hungarian>Mutatási indikátor körének színe</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
             <Russian>Действие "показать пальцем на"</Russian>
+            <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units.  Can be held down.</English>
+            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Finger Settings</English>
+            <Hungarian>Ujj beállításai</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Finger Pointing Enabled</English>
+            <Hungarian>Mutatás engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Finger Max Range</English>
+            <Hungarian>Ujj maximum hatótávja</Hungarian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>How far away players can finger each other. [default: 4]</English>
+            <Hungarian>Milyen messziről ujjazhatják egymást a játékosok. [alapértelmezett: 4]</Hungarian>
         </Key>
     </Package>
 </Project>

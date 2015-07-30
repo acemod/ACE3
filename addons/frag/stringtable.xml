@@ -8,6 +8,7 @@
             <German>Splittersimulation</German>
             <Czech>Simulace fragmentace</Czech>
             <Portuguese>Simulação de fragmentação</Portuguese>
+            <Hungarian>Repesz-szimuláció</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
@@ -16,6 +17,7 @@
             <German>Aktiviere die ACE-Splittersimulation</German>
             <Czech>Povolit ACE simulaci fragmentace</Czech>
             <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
+            <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall">
             <English>Spalling Simulation</English>

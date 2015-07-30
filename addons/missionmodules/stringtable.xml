@@ -8,6 +8,7 @@
             <German>ACE-Missionsmodule</German>
             <Czech>ACE Moduly mise</Czech>
             <Portuguese>Módulo de missões ACE</Portuguese>
+            <Hungarian>ACE küldetési modulok</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds [ACE]</English>
@@ -16,6 +17,7 @@
             <German>Umgebungsgeräusche [ACE]</German>
             <Czech>Zvuky prostředí [ACE]</Czech>
             <Portuguese>[ACE] Sons ambientes</Portuguese>
+            <Hungarian>Ambiens hangok [ACE]</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -24,6 +26,7 @@
             <German>Sounds</German>
             <Czech>Zvuky</Czech>
             <Portuguese>Sons</Portuguese>
+            <Hungarian>Hangok</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -40,6 +43,7 @@
             <German>Mindestabstand</German>
             <Czech>Minimální vzdálenost</Czech>
             <Portuguese>Distância mínima</Portuguese>
+            <Hungarian>Minimális távolság</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -56,6 +60,7 @@
             <German>Maximalabstand</German>
             <Czech>Maximální vzdálenost</Czech>
             <Portuguese>Distância máxima</Portuguese>
+            <Hungarian>Maximális távolság</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -72,6 +77,7 @@
             <German>Minimale Verzögerung</German>
             <Czech>Minimální prodleva</Czech>
             <Portuguese>Atraso mínimo</Portuguese>
+            <Hungarian>Minimum késleltetés</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -88,6 +94,7 @@
             <German>Maximale Verzögerung</German>
             <Czech>Maximální prodleva</Czech>
             <Portuguese>Atraso máximo</Portuguese>
+            <Hungarian>Maximum késleltetés</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -104,6 +111,7 @@
             <German>Spielern folgen</German>
             <Czech>Následovat hráče</Czech>
             <Portuguese>Seguir jogadores</Portuguese>
+            <Hungarian>Játékosok követése</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
@@ -120,6 +128,7 @@
             <German>Lautstärke</German>
             <Czech>Hlasitost</Czech>
             <Portuguese>Volume</Portuguese>
+            <Hungarian>Hangerő</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>

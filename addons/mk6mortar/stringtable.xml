@@ -56,6 +56,7 @@
             <German>MK6-Einstellungen</German>
             <Czech>MK6 - Nastavení</Czech>
             <Portuguese>Ajustes do MK6</Portuguese>
+            <Hungarian>MK6 beállítások</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -64,6 +65,7 @@
             <German>Luftwiderstand</German>
             <Czech>Odpor vzduchu</Czech>
             <Portuguese>Resistência do Ar</Portuguese>
+            <Hungarian>Légellenállás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
@@ -80,6 +82,7 @@
             <German>Erlaube MK6-Computer</German>
             <Czech>MK6 - Povolit počítač</Czech>
             <Portuguese>Permitir computador do MK6</Portuguese>
+            <Hungarian>MK6 számítógép engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -96,6 +99,7 @@
             <German>Erlaube MK6-Kompass</German>
             <Czech>MK6 - Povolit kompas</Czech>
             <Portuguese>Permitir bússula do MK6</Portuguese>
+            <Hungarian>MK6 iránytű engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
@@ -104,9 +108,9 @@
             <German>Zeige MK6-Digitaler-Kompass</German>
             <Czech>MK6 - Zobrazit digitální kompas</Czech>
             <Portuguese>Mostra a bússula digital do MK6</Portuguese>
+            <Hungarian>Az MK6 digitális iránytű megjelenítése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
-            <English></English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
             <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
             <Czech>Tento modul umožňuje nastavení minometu MK6.</Czech>

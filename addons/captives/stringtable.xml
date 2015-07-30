@@ -164,6 +164,7 @@
             <German>Einheit kapitulieren lassen</German>
             <Czech>Vzdávající se jednotka</Czech>
             <Portuguese>Fazer unidade se render</Portuguese>
+            <Hungarian>Egység kapitulálása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
@@ -172,6 +173,7 @@
             <German>Einheit synchronisieren, um sie kapitulieren zu lassen.&lt;br /&gt;Quelle: ace_captives</German>
             <Czech>Synchronizuj s jednotkou, která se má vzdát.&lt;br /&gt;Zdroj: ace_captives</Czech>
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda. &lt;br/&gt;Fonte: ace_captives</Portuguese>
+            <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -180,6 +182,7 @@
             <Czech>Nastavení zajatce</Czech>
             <German>Gefangenen-Einstellungen</German>
             <Portuguese>Ajustes de prisioneiros</Portuguese>
+            <Hungarian>Fogoly-beállítások</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -188,6 +191,7 @@
             <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
             <German>Einstellungen zur Kapitulation und Kabelbindern</German>
             <Portuguese>Controla as configurações de rendição e abraçadeiras</Portuguese>
+            <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
@@ -196,6 +200,7 @@
             <Czech>Může spoutat spolubojovníky</Czech>
             <German>Kann Teamkollegen fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
+            <Hungarian>Saját oldal megbilincselhető</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -204,6 +209,7 @@
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
             <German>Können Spieler eigene Einheiten fesseln</German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
+            <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -212,6 +218,7 @@
             <Czech>Povolit vzdávání</Czech>
             <German>Kapitulation erlauben</German>
             <Portuguese>Permite rendição</Portuguese>
+            <Hungarian>Kapituláció engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
@@ -220,6 +227,7 @@
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
             <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
+            <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
         </Key>
     </Package>
 </Project>
