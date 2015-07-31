@@ -114,8 +114,8 @@ Check all addons instead of only those of ACE3?<br>
 `Default value: "No"`
 
 3. **Whitelist**<br>
-You can make a whitelist of addons that don't have to be on the server. If you want to use the "Check all addons" option of this module and allow the usage of client side modifications like Blastcore or JSRS, you have to list them here.  
-The list must be in the following format: `["ADDON1","ADDON2",...]` where the addons are CfgPatches references to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.  
+You can make a whitelist of addons that don't have to be on the server. If you want to use the "Check all addons" option of this module and allow the usage of client side modifications like Blastcore or JSRS, you have to list them here.
+The list must be in the following format: `["ADDON1","ADDON2",...]` where the addons are CfgPatches references to all PBOs of the optional mod. To figure these out, you can use the scripting command `activatedAddons` in the editor while those mods are enabled.
 
 Example 1: @Blastcore-A3:<br>
 ```
@@ -181,13 +181,13 @@ Should players be allowed to use the Team Management Menu?.<br>
 ### 1.10 Make Unit Surrender
 *Part of: ace_captives*
 
-Syncing units to that module sets them in the captive state with their arms behind their back. Usefull for e.g. hostage rescue missions. 
+Syncing units to that module sets them in the captive state with their arms behind their back. Usefull for e.g. hostage rescue missions.
 
 
 ### 1.11 Map
 *Part of: ace_map*
 
-ACE3 introdcues a bit more realism for the vanilla Arma 3 map and how it behaves. Some of these settings can be toggled by this module. 
+ACE3 introdcues a bit more realism for the vanilla Arma 3 map and how it behaves. Some of these settings can be toggled by this module.
 
 **Settings:**
 
@@ -223,8 +223,8 @@ How much map data is filled on MicroDAGR's.<br>
 ### 1.13 MK6 Settings
 *Part of: ace_mk6mortar*
 
-ACE3 now includes the first iteration of getting a less arcady point and click mortar experience. 
-Placing this modules allows you to enable the increased realism in game. 
+ACE3 now includes the first iteration of getting a less arcady point and click mortar experience.
+Placing this modules allows you to enable the increased realism in game.
 
 **Settings:**
 
@@ -292,11 +292,41 @@ The "Respawn System" module enables players to respawn with the gear they had be
 Respawn with the gear a player had just before his death.<br>
 `Default value: No`
 
+### 1.17 Spectator Settings
+*Part of: ace_spectator*
 
-### 1.17 SwitchUnits System
+Configure how the spectator system will operate by default.
+
+**Settings:**
+
+1. **Spectate on death (Boolean)**<br>
+Enables spectator upon death.<br>
+`Default value: No`
+
+2. **Unit filter (Option)**<br>
+Method of filtering spectatable units.<br>
+`Default value: "Only players"`
+
+3. **Side filter (Option)**<br>
+Method of filtering spectatable sides.<br>
+`Default value: "Player side"`
+
+4. **Camera modes (Option)**<br>
+Camera modes that can be used.<br>
+`Default value: "All"`
+
+5. **Vision modes (Option)**<br>
+Vision modes that can be used.<br>
+`Default value: "All"`
+
+6. **Unit icons (Boolean)**<br>
+Render icons above spectatable units.<br>
+`Default value: Yes`
+
+### 1.18 SwitchUnits System
 *Part of: ace_switchunits*
 
-The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map. 
+The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map.
 
 **Settings:**
 
@@ -325,16 +355,16 @@ The safe zone around players from a different team (in meters)<br>
 `Default value: 200`
 
 
-### 1.18 Vehicle Lock
+### 1.19 Vehicle Lock
 *Part of: ace_vehiclelock*
 
 These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
 
-#### 1.18.1 Vehicle Key Assign
-Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.  
+#### 1.19.1 Vehicle Key Assign
+Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
 Example: `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a key to bob and program it to work only on car1
 
-#### 1.18.2.1 Vehicle Lock Setup
+#### 1.19.2.1 Vehicle Lock Setup
 Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.
 
 **Settings:**
@@ -351,12 +381,12 @@ Set lock state for all vehicles (removes ambiguous lock states)<br>
 Default Time to lockpick (in seconds)<br>
 `Default value: 10`
 
-#### 1.18.2.2 Vehicle setVariables
+#### 1.19.2.2 Vehicle setVariables
 * `ACE_VehicleLock_lockSide` - SIDE: overrides a vehicle's side, allowing locking and unlocking using a different side's key. For example: Unlocking INDEP vehicles with a BLUFOR key.
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
 
 
-### 1.19 View Distance Limiter
+### 1.20 View Distance Limiter
 *Part of: ace_viewdistance*
 
 This module allows disabling the ACE3 View Distance feature as well as setting a view distance limit.
@@ -372,7 +402,7 @@ Sets the limit for how high clients can raise their view distance (<= 10000)
 `Default value: 10000`
 
 
-### 1.20 Weather
+### 1.21 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
@@ -415,9 +445,9 @@ Synchronizes lightnings, rainbow, fog, ...<br>
 6. **Update Interval (Number)**<br>
 Defines the interval (seconds) between weather updates.<br>
 `Default value: 60`
-    
 
-### 1.21 Wind Deflection
+
+### 1.22 Wind Deflection
 *Part of: ace_winddeflection*
 
 This module allows you to define when wind deflection is active.
@@ -450,32 +480,32 @@ Defines the interval between every calculation step.<br>
 Defines the radius around the player (in meters) at which projectiles are wind deflected.<br>
 `Default value: 3000`
 
-### 1.22 Zeus Settings
+### 1.23 Zeus Settings
 *part of: ace_zeus*
 
 This module provides control over vanilla aspects of Zeus.
 
 **Settings:**
 
-1. **Ascension Messages (Option)**<br>
-Display global popup messages when a player is assigned as Zeus<br>
+1. **Ascension Messages (Boolean)**<br>
+Display global popup messages when a player is assigned as Zeus.<br>
 `Default value: No`
 
 2. **Zeus Eagle (Boolean)**<br>
-Spawn an eagle that follows the Zeus camera<br>
+Spawn an eagle that follows the Zeus camera.<br>
 `Default value: No`
 
 3. **Wind Sounds (Boolean)**<br>
-Play wind sounds when Zeus remote controls a unit<br>
+Play wind sounds when Zeus remote controls a unit.<br>
 `Default value: No`
 
 4. **Ordnance Warning (Boolean)**<br>
-Play a radio warning when Zeus uses ordnance<br>
+Play a radio warning when Zeus uses ordnance.<br>
 `Default value: No`
 
-5. **Reveal Mines (Scalar)**<br>
-Reveal mines to allies and/or place map markers<br>
-`Default value: Disabled`
+5. **Reveal Mines (Option)**<br>
+Reveal mines to allies and place map markers.<br>
+`Default value: "Disabled"`
 
 ### 1.23 LSD Vehicles
 *Part of: ace_core*
@@ -599,7 +629,7 @@ Pain is only temporarly supressed not removed.
 
 ### 2.3 Revive Settings
 
-This modules allows a mission maker to limit the amount of revives for units in basic and advanced medical. 
+This modules allows a mission maker to limit the amount of revives for units in basic and advanced medical.
 
 **Settings:**
 
@@ -618,7 +648,7 @@ Max amount of lives a unit. 0 or -1 is disabled.<br>
 
 ### 2.4 Set Medic Class
 
-Using this module you can define which unit class is defined as a medic / doctor. 
+Using this module you can define which unit class is defined as a medic / doctor.
 
 **Settings:**
 
@@ -662,7 +692,7 @@ Whether or not the objects in the list will be a medical vehicle.<br>
 
 ### 3.1 Ambiance Sounds
 
-Used for ambiance sounds loop (synced across MP). 
+Used for ambiance sounds loop (synced across MP).
 
 This module randomizes the time when the sound file is played and the position where the sound file is played (If "Follow Players" is set to No).
 `Minimal Distance` and `Maximal Distance` influence the position from where the sound file is played. Setting both values to 0 forces the module to play the sound from where it was placed in the editor.

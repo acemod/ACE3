@@ -3,6 +3,7 @@ layout: wiki
 title: Zeus
 description: The Zeus module improves the Vanilla functionality
 group: feature
+category: interaction
 parent: wiki
 ---
 

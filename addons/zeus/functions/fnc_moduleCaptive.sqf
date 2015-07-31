@@ -18,7 +18,7 @@
 PARAMS_3(_logic,_units,_activated);
 private ["_mouseOver","_unit","_captive"];
 
-if (!_activated) exitWith {};
+if !(_activated && local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);

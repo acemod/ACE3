@@ -3,6 +3,7 @@ layout: wiki
 title: Protection
 description: Tweaks armor values
 group: feature
+category: realism
 parent: wiki
 ---
 

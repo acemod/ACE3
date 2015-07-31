@@ -3,6 +3,7 @@ layout: wiki
 title: Mission Modules
 description: modules that can be used by mission makers.
 group: feature
+category: general
 parent: wiki
 ---
 

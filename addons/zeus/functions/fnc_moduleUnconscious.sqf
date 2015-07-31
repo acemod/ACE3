@@ -18,7 +18,7 @@
 PARAMS_3(_logic,_units,_activated);
 private ["_mouseOver","_unit","_conscious"];
 
-if (!_activated) exitWith {};
+if !(_activated && local _logic) exitWith {};
 
 if (isNil QEFUNC(medical,setUnconscious)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
@@ -38,7 +38,7 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
             } else {
                 _conscious = GETVAR(_unit,ACE_isUnconscious,false);
                 // Function handles locality for me
-                [_unit, !_conscious, round(random(10)+5), true] call EFUNC(medical,setUnconscious);
+                [_unit, !_conscious, 10e10, true] call EFUNC(medical,setUnconscious);
             };
         };
     };

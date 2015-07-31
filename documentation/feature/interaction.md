@@ -3,6 +3,7 @@ layout: wiki
 title: Interaction
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

@@ -116,4 +116,28 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_banana,1);
         };
     };
+
+    class Land_HelipadEmpty_F;
+    class ACE_LogicDummy: Land_HelipadEmpty_F {
+        scope = 1;
+        SLX_XEH_DISABLED = 1;
+        author = CSTRING(ACETeam);
+        class EventHandlers {
+            init = "(_this select 0) enableSimulation false";
+        };
+    };
+
+    class Bicycle;
+    class ACE_Headbug_Fix: Bicycle {
+        scope = 1;
+        side = 3;
+        model = PATHTOF(data\ACE_HeadBanger.p3d);
+        //model = QPATHTO_M(ACE_HeadBanger.p3d);
+        author = CSTRING(ACETeam);
+        displayName = " ";
+        soundEngine[] = {"", 20, 0.875};
+        soundEnviron[] = {"", 25, 0.925};
+        isBicycle = 1;
+        XEH_DISABLED;
+    };
 };

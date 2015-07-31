@@ -3,6 +3,7 @@ layout: wiki
 title: Scopes
 description: Scope adjustment
 group: feature
+category: equipment
 parent: wiki
 ---
 

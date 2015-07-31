@@ -106,6 +106,7 @@ PREP(goKneeling);
 PREP(hadamardProduct);
 PREP(hasItem);
 PREP(hasMagazine);
+PREP(headBugFix);
 PREP(hideUnit);
 PREP(inheritsFrom);
 PREP(insertionSort);

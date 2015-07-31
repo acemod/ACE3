@@ -3,6 +3,7 @@ layout: wiki
 title: Concertina Wire
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

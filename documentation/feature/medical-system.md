@@ -3,7 +3,7 @@ layout: wiki
 title: Medical System
 description: ACE provide users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics. 
 group: feature
-order: 4
+category: realism
 parent: wiki
 ---
 

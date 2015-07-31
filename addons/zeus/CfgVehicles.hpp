@@ -79,6 +79,10 @@ class CfgVehicles {
     class GVAR(moduleBase): Module_F {
         author = "SilentSpike";
         category = "ACE";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        scope = 1;
         scopeCurator = 2;
     };
     class GVAR(moduleCaptive): GVAR(moduleBase) {

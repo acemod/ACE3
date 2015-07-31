@@ -3,6 +3,7 @@ layout: wiki
 title: Map Tools
 description: Map tools, a roamer and pens
 group: feature
+category: equipment
 parent: wiki
 ---
 

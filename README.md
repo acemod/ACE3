@@ -4,11 +4,11 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.1.1-blue.svg"
+        <img src="https://img.shields.io/badge/Version-3.2.0-blue.svg"
              alt="ACE version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.1.1/ace3_3.1.1.zip">
-        <img src="http://img.shields.io/badge/Download-51.7_MB-green.svg"
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.0/ace3_3.2.0.zip">
+        <img src="http://img.shields.io/badge/Download-56.5_MB-green.svg"
              alt="ACE download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
