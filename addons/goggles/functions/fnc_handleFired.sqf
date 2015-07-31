@@ -20,7 +20,7 @@
 params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 private ["_bullets", "_position", "_surface", "_cloudType"];
 
-if (_unit != GETUNIT) exitWith {};
+if ((GVAR(showGoggles) == 0) || {_unit != GETUNIT}) exitWith {};
 
 // Rain cleans dust, no dust standing up
 if (((stance _unit) != "PRONE") || (rain > 0.1)) exitWith {};

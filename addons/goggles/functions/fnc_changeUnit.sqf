@@ -25,6 +25,9 @@ if (_newUnit == _oldUnit) exitWith {};
 GVAR(unit) = _newUnit;
 _newUnit = GETUNIT;
 
+// If disabled, no need to update anything more
+if (GVAR(showGoggles) == 0) exitWith {};
+
 [] call DFUNC(checkGlasses);
 
 // EHs not necessary for non men (considered to mean no goggles)
@@ -34,10 +37,10 @@ if !(_newUnit isKindOf "CAManBase") exitWith {};
 if !(GETVAR(_newUnit,GVAR(effects),false)) then {
     _newUnit addEventHandler ["Explosion", {
         params ["_unit","_damage"];
-        private ["_actualUnit","_effects"];
+        private ["_effects"];
 
         // Don't apply effects if not the current unit
-        if (_unit != GETUNIT) exitWith {};
+        if ((GVAR(showGoggles) == 0) || {_unit != GETUNIT}) exitWith {};
 
         if (alive _unit) then {
             [] call FUNC(applyDirtEffect);
@@ -67,9 +70,7 @@ if (_newUnit != player) exitWith {};
 
 // Add killed EH if it doesn't already exist
 if !(GETVAR(_newUnit,GVAR(handled),false)) then {
-    private "_killed";
-
-    _killed = _newUnit addEventHandler ["Killed",{
+    _newUnit addEventHandler ["Killed",{
         params ["_unit","_killer"];
 
         // End and reset all goggle effects on player death
@@ -77,13 +78,10 @@ if !(GETVAR(_newUnit,GVAR(handled),false)) then {
             GVAR(postProcessEyes) ppEffectEnable false;
 
             SETGLASSES(_unit,GLASSESDEFAULT);
-            GVAR(EffectsActive)=false;
+            GVAR(EffectsActive) = false;
             [] call FUNC(removeGlassesEffect);
 
             _unit setVariable ["ACE_EyesDamaged", false];
-            if (GVAR(EyesDamageScript) != -1) then {
-                [GVAR(EyesDamageScript)] call CBA_fnc_removePreFrameHandler;
-            };
 
             if ((GETVAR(_unit,GVAR(dustHandler),-1)) != -1) then {
                 [GETVAR(_unit,GVAR(dustHandler),-1)] call CBA_fnc_removePerFrameHandler;
