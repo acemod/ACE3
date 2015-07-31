@@ -224,7 +224,7 @@ switch (toLower _mode) do {
                 [_display,nil,nil,true] call FUNC(toggleInterface);
             };
             case 16: { // Q
-                GVAR(camBoom) = 0.5;
+                GVAR(camBoom) = 0.5 * GVAR(camSpeed);
             };
             case 17: { // W
                 GVAR(camDolly) set [1, GVAR(camSpeed)];
@@ -245,7 +245,7 @@ switch (toLower _mode) do {
                 [_display,nil,true] call FUNC(toggleInterface);
             };
             case 44: { // Z
-                GVAR(camBoom) = -0.5;
+                GVAR(camBoom) = -0.5 * GVAR(camSpeed);
             };
             case 49: { // N
                 if (_ctrl) then {
