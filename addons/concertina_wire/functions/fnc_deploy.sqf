@@ -37,7 +37,7 @@ deleteVehicle _wirecoil;
 _unit setVariable [QGVAR(wireDeployed), false];
 
 GVAR(deployPFH) = [{
-    EXPLODE_4_PVT(_this select 0,_wireNoGeo,_wireNoGeoPos,_unit,_action);
+    EXPLODE_3_PVT(_this select 0,_wireNoGeo,_wireNoGeoPos,_unit);
     
     private ["_range", "_posStart", "_posEnd", "_dirVect", "_dir", "_anim", "_wire"];
     _posStart = (_wireNoGeo modelToWorldVisual (_wireNoGeo selectionPosition "start")) call EFUNC(common,positionToASL);
@@ -73,12 +73,13 @@ GVAR(deployPFH) = [{
     {
         _wireNoGeo animate [_x, _anim];
     } foreach WIRE_FAST;
-}, 0, [_wireNoGeo, _wireNoGeoPos, _unit, _action]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
 [localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);
-    
-GVAR(placer) setVariable [QGVAR(Deploy),
-    [GVAR(placer), "DefaultAction",
-    {GVAR(deployPFH) != -1},
-    {GVAR(placer) setVariable [QGVAR(wireDeployed), true]}
-] call EFUNC(common,AddActionEventHandler)];
+[{  //wait a frame to handle "Do When releasing action menu key" option
+    GVAR(placer) setVariable [QGVAR(Deploy),
+        [GVAR(placer), "DefaultAction",
+        {GVAR(deployPFH) != -1},
+        {GVAR(placer) setVariable [QGVAR(wireDeployed), true]}
+    ] call EFUNC(common,AddActionEventHandler)];
+}, _this] call EFUNC(common,execNextFrame);

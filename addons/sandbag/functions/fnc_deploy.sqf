@@ -34,14 +34,17 @@ GVAR(deployPFH) = [{
 
 [localize LSTRING(ConfirmDeployment), localize LSTRING(CancelDeployment), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
-GVAR(placer) setVariable [QGVAR(Deploy),
-    [GVAR(placer), "DefaultAction",
-    {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployConfirm);}
-] call EFUNC(common,AddActionEventHandler)];
+[{  //wait a frame to handle "Do When releasing action menu key" option
+    GVAR(placer) setVariable [QGVAR(Deploy),
+        [GVAR(placer), "DefaultAction",
+        {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
+        {call FUNC(deployConfirm);}
+    ] call EFUNC(common,AddActionEventHandler)];
 
-GVAR(placer) setVariable [QGVAR(Cancel),
-    [GVAR(placer), "zoomtemp",
-    {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployCancel);}
-] call EFUNC(common,AddActionEventHandler)];
+    GVAR(placer) setVariable [QGVAR(Cancel),
+        [GVAR(placer), "zoomtemp",
+        {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
+        {call FUNC(deployCancel);}
+    ] call EFUNC(common,AddActionEventHandler)];
+    
+}, _this] call EFUNC(common,execNextFrame);

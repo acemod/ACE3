@@ -51,8 +51,12 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+    [{  //wait a frame to handle "Do When releasing action menu key"
+        PARAMS_1(_unit);
+        if (GVAR(placeAction) != PLACE_WAITING) exitWith {};
+        [localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint);
+        _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+    }, [_unit]] call EFUNC(common,execNextFrame);
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
 
@@ -71,7 +75,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
 
         PARAMS_2(_args,_pfID);
-        EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID,_startDiagTime);
+        EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID);
 
         _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         if (cameraView == "EXTERNAL") then {
@@ -80,10 +84,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
         _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
 
-        //Don't allow placing in a bad position or placing right away (click to interact option)
-        if ((GVAR(placeAction) == PLACE_APPROVE) && {_lineInterection || {ACE_diagTime < (_startDiagTime + 0.333)}}) then {
-            GVAR(placeAction) = PLACE_WAITING;
-        };
+        //Don't allow placing in a bad position:
+        if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
         if ((GVAR(placeAction) != PLACE_WAITING) ||
                 {_unit != ACE_player} ||
@@ -120,5 +122,5 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
             };
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _actionID, ACE_diagTime]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
 };
