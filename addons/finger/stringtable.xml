@@ -44,7 +44,7 @@
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>How far away players can finger each other. [default: 4]</English>
-            <Hungarian>Milyen messziről ujjazhatják egymást a játékosok. [alapértelmezett: 4]</Hungarian>
+            <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
         </Key>
     </Package>
 </Project>
