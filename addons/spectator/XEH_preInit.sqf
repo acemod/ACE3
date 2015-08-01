@@ -16,6 +16,7 @@ PREP(handleUnits);
 PREP(moduleSpectatorSettings);
 PREP(setCameraAttributes);
 PREP(setSpectator);
+PREP(stageSpectator);
 PREP(transitionCamera);
 PREP(toggleInterface);
 PREP(updateCameraModes);
