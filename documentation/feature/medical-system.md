@@ -8,10 +8,12 @@ parent: wiki
 ---
 
 ## 1. Overview
+
 ACE provide users with a more realistic medical system and comes in both a basic and advanced version. This page will detail the differences between both systems and what they do. It is split into two parts; basic and advanced. Both versions have overlap but each have their own unique characteristics. 
 
 
 ## 2. Basic Medical
+
 ACE's basic medical system is quite a bit more complex than Arma's default system, but not really difficult to grasp. ACE basic medical is a mixture between the ACE2 and AGM medical systems.
 
 The four main elements that basic medical introduces are:
@@ -33,16 +35,21 @@ To stop the bleeding, the combat life saver needs to bandage every wounded limb.
 Should a unit be in pain, materializing itself with a chromatic aberration screen effect, he can be given morphine.
 
 ### 2.2 Basic medical system - recommended gear
-* Soldier:
-  * 10 x Bandage (basic)
 
-* Medic:
+Soldier:
+
+  * 10 x Bandage (basic)
+  * 1 x Morphine Autoinjector
+
+Medic:
+
   * 15-25 x Bandage (basic)
   * 6 x Blood IV (500ml)
   * 10 x Morphine Autoinjector
   * 10 x Epinephrine Autoinjector
 
 ## 3. Advanced Medical
+
 The advanced medical system provides a more complex and detailed medical simulation and is based off the CSE/CMS medical system. It focuses on a more realistic model for injuries and treatment, thus resulting in a more important and prominent role for combat medics, and a bigger incentive to not get shot.
 
 The system behind advanced medical is designed to attempt to mimic important parts of the human body, as well as react to any injuries sustained and treatments applied in a realistic manner. The available treatments and supplies in advanced medical are based off the Tactical Combat Casualty Care (TCCC) guidelines, which are the same guidelines used by real-life combat medics around the world.
@@ -61,27 +68,38 @@ Besides the 4 elements introduced by basic medical, advanced introduces the foll
 Same as with basic, when hit an injury is sustained. Different though is that the type of injury and the severity of it are based upon how the damage was done and what caused it. This affects both blood loss and immediate consequences, such as being knocked out or being killed right away. When a player has sustained an injury, this will be indicated by flashing red of the screen; this means the player is bleeding.
 
 #### 3.1.1 Stopping bleeding
-In order to stop the bleeding, all injuries on every bodypart requires treatment. This is done by either applying a tourniquet to legs or arms as a temporarly solution, or by using bandages to stop the bleeding as a more permament fix. 
+
+In order to stop the bleeding, all injuries on every bodypart requires treatment. This is done by either applying a tourniquet to legs or arms as a temporarly solution, or by using proper bandages to stop the bleeding as a more permament fix. Depending on settings, wounds can also open by itself even if bandaged. This will happen more often if wrong type of bandage is used. To completely stop bleeding wounds should be stitched after bandaging by trained medic.
 
 #### 3.1.2 Vitals
+
 While a unit is bleeding however, the blood volume decreases which will result in a change of vitals.  Depending on the factors such as current blood volume, the blood loss rate, medication used, the blood pressure will start to drop. To counter this drop, also based upon the previously mentioned factors and others, the heart rate will adjust accordingly to attempt to keep blood pressure at safe levels. This means that for any patient it is required to keep an eye on the vitals. This is done through the interaction system by selecting check pulse or blood pressure on either the arms or head.
 
+Heart rate under 45BPM is considered **low**, different medications listed below will have different effects depending on heart rate.
+It should be noted, that too high or too low heart rate can cause cardiac arrest. CPR should be done immediately if it happens.
+
+It should also be noted, that too high or too low blood pressure will often cause unconsciousness, and in some situations will cause cardiac arrest and even death.
+
 #### 3.1.3 Medication
+
 To stabilize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
 
 * Atropine
 * Morphine
 * Epinephrine
 
-Atropine is a vagolytic and anticholinergic drug which in low dosages reduces heart rate but in high dosages increases it, countering effects of organophosphate poisoning (in NBC scenarios; anticholinesterase poisoning) and symptomatic bradycardia (in post-ROSC care and resuscitative medicine).
+Atropine is a vagolytic and anticholinergic drug which counters the effects of organophosphate poisoning (in NBC scenarios; anticholinesterase poisoning) and symptomatic bradycardia (in post-ROSC care and resuscitative medicine). In other words it can be used to counter effects of epinephrine as it will always lower the heart rate. 
 
-Morphine is used to alleviate large amounts of pain. Has an effect similar to Heroin due to its opiate properties. Must only ever be given once, and only when bleeding has been reduced to a minimum. Morphine must never be given to a casualty with a low heart rate, as it can stop the heart. It's effect lasts up to 15 minutes.
+Morphine is used to alleviate large amounts of pain. Has an effect similar to Heroin due to its opiate properties. Must only ever be given once, and only when bleeding has been reduced to a minimum. It must be noted that morphine will always decrease heart rate by various amount.  It's effect lasts up to 15 minutes. It will often lower your heart rate to such low amount, that you will start to hear your heart beating slowly, if it happens then you have many ways to increase it again, using other medications or simply by running for a while.
+
+_Morphine must never be given to a casualty with a low heart rate, as it can stop the heart._
 
 Epinephrine is used to increase heart rate and blood pressure and alleviate unconsciousness. Epinephrine is a synthetic form of Adrenaline, which is naturally produced in the body. It can also be applied to counter-act the effects of Atropine. Be careful though, as it may only be given once.
 
 _Epinephrine must never be given to a casualty with a high heart rate or blood pressure._
 
 #### 3.1.4 Types of wounds
+
 Advanced medical system brings more different types of wounds, each with its own effects on patient. We distinguish minor, medium and large wound sizes. Below there is a list of those wounds:
 
 * Abrasions (or scrapes)
@@ -98,6 +116,7 @@ Advanced medical system brings more different types of wounds, each with its own
   * Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
   * Sources: bullets, backblast, punches, vehicle crashes, falling.
   * Effects: pain - light, no bleeding.
+  * Special: cannot be bandaged.
 
 * Crush wounds
   * Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
@@ -125,83 +144,101 @@ Advanced medical system brings more different types of wounds, each with its own
   * Effects: pain - light, bleeding - slowly.
   
 We also distinguish different types of fractures (WIP/not implemented yet):
+
 * Broken femur
   * Description
   * Sources: bullets, vehicle crashes, backblast, explosions, artillery shells, grenades.
   * Effects: pain - extremely high, unable to stand until healed by medic.
  
 #### 3.1.5 Bandage types
+
 Advanced medical system brings 4 different types of bandages and also properly working tourniquet. Below there is a list of all bandage types with effectiveness vs different wound types. Higher effectiveness bandages needs to be applied fewer times than ones with lower effectiveness. That depends on wound size. Applying bad type of bandage on given wound can yield wound opening after a while if not stiched fast enough.
 All bandage types weights about 50 grams each.
 
-* Bandage (basic)
+* Bandage (basic) is best for:
   * Abrasions - highest effectiveness
-  * Avulsions - lowest effectiveness
-  * Contusions - highest effectiveness
-  * Crush wounds - low effectiveness
-  * Cut wounds - very low effectiveness
   * Lacerations - medium effectiveness
-  * Velocity wounds - lowest effectiveness
-  * Puncture wounds - low effectiveness
 
-* Bandage (packing)
+* Bandage (packing) is best for
   * Abrasions - highest effectiveness
   * Avulsions - highest effectiveness
-  * Contusions - highest effectiveness
-  * Crush wounds - low effectiveness
-  * Cut wounds - lowest effectiveness
-  * Lacerations - lowest effectiveness
   * Velocity wounds - highest effectiveness
-  * Puncture wounds - lowest effectiveness
 
-* Bandage (elastic)
+* Bandage (elastic) is best for:
   * Abrasions - highest effectiveness
-  * Avulsions - lowest effectiveness
-  * Contusions - highest effectiveness
   * Crush wounds - highest effectiveness
   * Cut wounds - highest effectiveness
   * Lacerations - highest effectiveness
-  * Velocity wounds - low effectiveness
   * Puncture wounds - high effectiveness
 
-* QuikClot
-  * Abrasions - medium effectiveness
-  * Avulsions - high effectiveness
-  * Contusions - medium effectiveness
-  * Crush wounds - medium effectiveness
-  * Cut wounds - medium effectiveness
-  * Lacerations - medium effectiveness
-  * Velocity wounds - high effectiveness
-  * Puncture wounds - high effectiveness
+* QuikClot is best for: 
+  * All types of wounds - medium effectiveness
+  * Special: It has lowest wound opening chance. It is often needed to apply it more than once, depening on wound type and size.
 
 * Tourniquet
   * Can only be applied on limbs
   * Stops bleeding from wounds
+  * Should be used only when there are more than one wounds
   * Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds
   * If not taken off for a while it will cause pain to patient, can cause death that way
 
 #### 3.1.6 Transfuzions
-In case of blood loss, blood could be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.
+
+In case of blood loss, identified by lower blood pressure, blood could be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.
 Transfuzing 250ml of given IV takes about 1 minute to complete!
 
-+#### 3.1.7 PAK and Surgical kit
-Using Personal Aid Kit brings patient to the best possible health state. Depending on module options, PAK can be used only in specified situations, specified place and by specified person.
+#### 3.1.7 PAK and Surgical kit
+
+Using Personal Aid Kit brings patient to the best possible health state. Depending on module options, PAK can be used only in specified situations, such as when all wounds are bandaged and patient is awake, specified place, such as medical vehicle or building, and by specified person, such as medic or doctor.
+
 Surgical kit is used to stich bandaged wounds so they will never open again. Depending on module options, surgical kit can be used only in specified situations, specified place and by specified person.
 
-### 3.2 Advanced medical system - recommended gear
- 
+### 3.2 Healing guideline
+
+Below you will find how to handle wounds if you play as a soldier or a medic.
+
+#### 3.2.1 Healing yourself as a soldier
+
+Follow steps below.
+
+ 1. Are you bleeding? If yes go to step 2, if no, go to step 5.
+ 2. Did your limbs got hit? If yes, apply tourniquet on them.
+ 3. Start applying proper bandages on your wounds.
+ 4. Remember to take off your tourniquet!
+ 5. Do you feel pain? If no, skip step below.
+ 6. Check your heart rate, if it's normal, apply morphine. You should be fine now.
+ 7. Always call for a medic if your wounds were severe. Tell him what wounds you sustained and what medications you used.
+
+#### 3.2.2 Healing other soldiers as a medic
+
+Follow steps below.
+
+ 1. Most important is to check if patient is conscious and how many wounds he sustained. Quickly check pulse and blood pressure. If there is no pulse, go to next step, if there is pulse but patient is unconscious, then you should do everything to stabilize patient status and he will wake up on his own after a while.
+ 2. Quickly start bandaging his wounds, always use proper bandages vs given wound type, call for a help, tell your assistant to do CPR while you are bandaging. If there are many wounds, apply tourniquet on wounded limbs. **Do not apply any medications** while patient has **no heart rate**! Wait until he wakes up from cardiac arrest! However, **if there is pain and patient is only unconcious and has heart rate**, apply morphine as too much pain will make him stay unconcious for a very long time.
+ 3. If patient blood pressure is low i.e. under 100/80 then you should apply 1000ml of IV. Tranfusion will take some time to complete and you should monitor patient health status until it finishes.
+ 4. If cariac arrest was sustained and CPR was successful, immediately check patient heart rate, if its low, apply epinephrine to raise it again.
+ 5. **If morphine was not applied before**, when heart rate raises to safe level (around 80BPM), apply morphine to counter pain.
+ 6. If patient heart rate is very high i.e. over 140, apply atropine as soon as possible.
+ 7. If patient has sustained many wounds, stiching may be required.
+ 8. If patient has sustained many wounds and lost a lot of blood, then medkit should be used.
+
+### 3.3 Advanced medical system - recommended gear
+
 * Soldier:
-  * 4 x Bandage (basic)
-  * 3 x Bandage (elastic)
-  * 3 x Bandage (packing)
-  * 3 x QuikClot
+  * 3-6 x Bandage (basic)
+  * 3-6 x Bandage (elastic)
+  * 3-6 x Bandage (packing)
+  * 3-6 x QuikClot
   * 1 x Morphine Autoinjector
+  * 1 x Atropine Autoinjector
+  * 1 x Epinephrine Autoinjector
   * 1 x Tourniquet
+  * **Optional**: 1 x Saline IV (500ml) - used only by qualified medic
 
 * Combat First Responder (CFR):
   * 10-15 x Bandage (basic)
-  * 15-20 x Bandage (elastic)
-  * 5-8 x Bandage (packing)
+  * 10-15 x Bandage (elastic)
+  * 10-15 x Bandage (packing)
   * 10-15 x QuikClot
   * 3 x Tourniquet
   * 4 x Saline IV (500ml)
@@ -212,7 +249,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
 * Medic:
   * 10-15 x Bandage (basic)
   * 15-20 x Bandage (elastic)
-  * 8 x Bandage (packing)
+  * 15-20 x Bandage (packing)
   * 10-15 x QuikClot
   * 5 x Tourniquet
   * 6 x Saline IV (500ml)
@@ -225,7 +262,7 @@ Surgical kit is used to stich bandaged wounds so they will never open again. Dep
 * Paramedic:
   * 10-15 x Bandage (basic)
   * 15-20 x Bandage (elastic)
-  * 8 x Bandage (packing)
+  * 15-20 x Bandage (packing)
   * 10-15 x QuikClot
   * 5 x Tourniquet
   * 2 x Saline IV (500ml)
