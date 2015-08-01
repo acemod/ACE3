@@ -58,6 +58,7 @@ class CfgAmmo {
         caliber = 4.17;
         airFriction = -0.00036;
         explosive = 0.35;
+        typicalSpeed = 1036;
         soundHit1[] = {PATHTOF(sounds\GAU8_Hit1),3.162278,1,2000};
         multiSoundHit[] = {"soundHit1",1};
         explosionSoundEffect = "DefaultExplosion";
@@ -66,16 +67,6 @@ class CfgAmmo {
         craterEffects = "HEShellCrater";
         tracersEvery = 0;
     };
-
-    // helper projectiles to simulate a rof > fps
-    class ACE_GAU8_30mm_Mix_Plane_CAS_01_Deploy: ACE_GAU8_30mm_Mix_Plane_CAS_01_F {
-        simulation = "shotSubmunitions";
-        triggerTime = 0;
-        submunitionAmmo = "ACE_GAU8_30mm_Mix_Plane_CAS_01_Sub";
-        submunitionConeType[] = {"custom", {{0,0}, {0,0}, {0,0}} };
-    };
-
-    class ACE_GAU8_30mm_Mix_Plane_CAS_01_Sub: ACE_GAU8_30mm_Mix_Plane_CAS_01_F {};
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
