@@ -1,0 +1,151 @@
+class CfgCloudlets
+{
+	class Gau8DefaultCldlt
+	{
+		angle = 0;
+		animationName = "";
+		animationSpeed[] = {1};
+		animationSpeedCoef = 1;
+		beforeDestroyScript = "";
+		circleRadius = 0;
+		circleVelocity[] = {0,0,0};
+		colorCoef[] = {1,1,1,1};
+		colorVar[] = {0,0,0,0};
+		lifeTimeVar = 0;
+		MoveVelocityVarConst[] = {0,0,0};
+		onTimerScript = "";
+		particleFSFrameCount = 1;
+		particleFSIndex = 0;
+		particleFSLoop = 1;
+		particleFSNtieth = 16;
+		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
+		particleType = "Billboard";
+		position[] = {0,0,0};
+		positionVar[] = {0,0,0};
+		positionVarConst[] = {0,0,0};
+		randomDirectionIntensity = 0;
+		randomDirectionIntensityVar = 0;
+		randomDirectionPeriod = 0;
+		randomDirectionPeriodVar = 0;
+		rotationVelocity = 0;
+		rotationVelocityVar = 0;
+		sizeCoef = 1;
+		timerPeriod = 1;
+	};
+	class Gau8ShellExplCldlt: Gau8DefaultCldlt
+	{
+		angleVar = 1;
+		color[] = {{ 1,1,1,-6 },{ 1,1,1,0 }};
+		interval = 0.03;
+		lifeTime = 0.5;
+		moveVelocity[] = {0,1,0};
+		MoveVelocityVar[] = {0.2,0.5,0.2};
+		particleFSFrameCount = 32;
+		particleFSLoop = 0;
+		positionVar[] = {0.4,0.1,0.4};
+		randomDirectionIntensity = 0.2;
+		randomDirectionPeriod = 0.2;
+		rotationVelocityVar = 90;
+		rubbing = 0.1;
+		size[] = {"0.0125 * intensity + 4","0.0125 * intensity + 1"};
+		sizeVar = 0.5;
+		volume = 7.9;
+		weight = 10;
+	};
+	class Gau8ShellSprksCldlt: Gau8DefaultCldlt
+	{
+		angleVar = 360;
+		animationSpeed[] = {1000};
+		color[] = {{ 1,1,1,-50 }};
+		interval = 0.003;
+		lifeTime = 4;
+		lifeTimeVar = 1;
+		moveVelocity[] = {0,5,0};
+		MoveVelocityVar[] = {4,2,4};
+		particleFSFrameCount = 2;
+		particleFSIndex = 13;
+		particleFSLoop = 0;
+		positionVar[] = {2,0.5,2};
+		rotationVelocity = 1;
+		rotationVelocityVar = 2;
+		rubbing = 0;
+		size[] = {0.5,0.4,0.4,0.4,0.4,0.3,0.3,0.3,0.2,0.1};
+		sizeVar = 0;
+		timerPeriod = 0;
+		volume = 8;
+		weight = 24;
+	};
+	class Gau8ShellSmkCldlt: Gau8DefaultCldlt
+	{
+		angleVar = 360;
+		animationSpeed[] = {1.5,0.5,0.25,0.25};
+		circleRadius = 2;
+		circleVelocity[] = {0.3,0,0.3};
+		color[] = {{ 0.5,0.5,0.5,0.4 },{ 0.5,0.5,0.5,0.22 },{ 0.6,0.6,0.6,0.09 },{ 0.8,0.8,0.8,0.01 }};
+		colorVar[] = {0,0,0,0.3};
+		interval = 0.007;
+		lifeTime = 6;
+		lifeTimeVar = 1.5;
+		moveVelocity[] = {0,12,0};
+		MoveVelocityVar[] = {0.5,12,0.5};
+		particleFSFrameCount = 48;
+		particleFSIndex = 7;
+		positionVar[] = {0.2,0.2,0.2};
+		randomDirectionIntensity = 0.1;
+		randomDirectionIntensityVar = 0.05;
+		randomDirectionPeriod = 0.2;
+		randomDirectionperiodVar = 0.2;
+		rotationVelocity = 1;
+		rotationVelocityVar = 120;
+		rubbing = 0.5;
+		size[] = {1,8};
+		sizeVar = 0.3;
+		volume = 1;
+		weight = 3;
+	};
+	class Gau8ShellDstCldlt: Gau8DefaultCldlt
+	{
+		angleVar = 0;
+		animationSpeed[] = {1000};
+		circleRadius = 5;
+		circleVelocity[] = {1,1,1};
+		color[] = {{ 0.08,0.067,0.052,0 },{ 0.6,0.5,0.4,0.5 },{ 0.6,0.5,0.4,0.4 },{ 0.6,0.5,0.4,0.3 },{ 0.6,0.5,0.4,0.15 },{ 0.6,0.5,0.4,0 }};
+		interval = 0.03;
+		lifeTime = 6;
+		lifeTimeVar = 3;
+		moveVelocity[] = {0,1,0};
+		MoveVelocityVar[] = {0.1,1,0.1};
+		particleFSFrameCount = 13;
+		particleFSIndex = 12;
+		particleFSLoop = 0;
+		positionVar[] = {2,1,2};
+		rotationVelocity = 1;
+		rotationVelocityVar = 20;
+		rubbing = 0.01;
+		size[] = {7,10};
+		sizeVar = 0.3;
+		volume = 0.04;
+		weight = 0.053;
+	};
+	class Gau8ShellDrtCldlt: Gau8DefaultCldlt
+	{
+		angleVar = 1;
+		animationSpeed[] = {1000};
+		color[] = {{ 0.6,0.6,1,1 },{ 0.6,0.6,1,0 }};
+		interval = "0.01 * interval + 0.01";
+		lifeTime = 5;
+		lifeTimeVar = 1.5;
+		moveVelocity[] = {0,"0.1 * intensity + 10",0};
+		MoveVelocityVar[] = {2,4,2};
+		particleFSFrameCount = 9;
+		particleFSIndex = 12;
+		particleFSLoop = 0;
+		rotationVelocity = 1;
+		rubbing = 0;
+		size[] = {1,3};
+		sizeVar = 0.2;
+		timerPeriod = 0.1;
+		volume = 0.1;
+		weight = 24;
+	};
+};

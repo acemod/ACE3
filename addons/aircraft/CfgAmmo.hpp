@@ -11,7 +11,7 @@ class CfgAmmo {
         explosive = 1.8;
         tracersEvery = 3;
         tracerEndTime = 3.5;
-        
+
         CraterEffects = "ExploAmmoCrater";
         explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
@@ -50,15 +50,32 @@ class CfgAmmo {
         timeToLive = 40;
     };
 
+    // Gau8 Mix ammo (AP&HE)
+    class ACE_GAU8_30mm_Mix_Plane_CAS_01_F: Gatling_30mm_HE_Plane_CAS_01_F {
+        hit = 300;
+        indirectHit = 110;
+        indirectHitRange = 3.5;
+        caliber = 4.17;
+        airFriction = -0.00036;
+        explosive = 0.35;
+        soundHit1[] = {PATHTOF(sounds\GAU8_Hit1),3.162278,1,2000};
+        multiSoundHit[] = {"soundHit1",1};
+        explosionSoundEffect = "DefaultExplosion";
+        explosionEffects = "Gau8ShellImpact";
+        //muzzleEffect = ""; @todo ??
+        craterEffects = "HEShellCrater";
+        tracersEvery = 0;
+    };
+
     // helper projectiles to simulate a rof > fps
-    class ACE_Gatling_30mm_HE_Plane_CAS_01_Deploy: Gatling_30mm_HE_Plane_CAS_01_F {
+    class ACE_GAU8_30mm_Mix_Plane_CAS_01_Deploy: ACE_GAU8_30mm_Mix_Plane_CAS_01_F {
         simulation = "shotSubmunitions";
         triggerTime = 0;
-        submunitionAmmo = "ACE_Gatling_30mm_HE_Plane_CAS_01_Sub";
+        submunitionAmmo = "ACE_GAU8_30mm_Mix_Plane_CAS_01_Sub";
         submunitionConeType[] = {"custom", {{0,0}, {0,0}, {0,0}} };
     };
 
-    class ACE_Gatling_30mm_HE_Plane_CAS_01_Sub: Gatling_30mm_HE_Plane_CAS_01_F {};
+    class ACE_GAU8_30mm_Mix_Plane_CAS_01_Sub: ACE_GAU8_30mm_Mix_Plane_CAS_01_F {};
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
