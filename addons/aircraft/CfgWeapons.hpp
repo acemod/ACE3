@@ -6,8 +6,7 @@ class Mode_FullAuto;
 class CfgWeapons {
 
     class RocketPods;
-    class ACE_AIR_SAFETY : RocketPods
-    {
+    class ACE_AIR_SAFETY : RocketPods {
         CanLock = 0;
         displayName = "SAFE";
         displayNameMagazine = "SAFE";
@@ -128,17 +127,14 @@ class CfgWeapons {
         modes[] = {"burstLO","burstHI","close","short","medium","far"};
         autoFire = 1;
         burst = 1;
-        class GunParticles
-        {
-            class Effect
-            {
+        class GunParticles {
+            class Effect {
                 effectName = "MachineGun3";
                 positionName = "Gatling_barrels_end";
                 directionName = "Gatling_barrels_start";
             };
         };
-        class burstBase: CannonCore
-        {
+        class burstBase: CannonCore {
             dispersion = 0.0078;
             soundContinuous = 0;
             initSpeed = 1030;
@@ -162,13 +158,11 @@ class CfgWeapons {
             aiDispersionCoefX = 10;
             aiDispersionCoefY = 10;
         };
-        class burstLO: burstBase
-        {
+        class burstLO: burstBase {
             displayName = "LO";
             textureType = "burst";
             sounds[] = {"StandardSound"};
-            class StandardSound
-            {
+            class StandardSound {
                 begin1[] = {PATHTOF(sounds\GAU8_LO),6.581072,1,4500};
                 soundBegin[] = {"begin1",1};
                 weaponSoundEffect = "DefaultRifle";
@@ -177,13 +171,11 @@ class CfgWeapons {
             burst = 27;
             reloadTime = 0.037;
         };
-        class burstHI: burstBase
-        {
+        class burstHI: burstBase {
             displayName = "HI";
             textureType = "fullAuto";
             sounds[] = {"StandardSound"};
-            class StandardSound
-            {
+            class StandardSound {
                 begin1[] = {PATHTOF(sounds\GAU8_HI),6.581072,1,4500};
                 soundBegin[] = {"begin1",1};
                 weaponSoundEffect = "DefaultRifle";
@@ -192,8 +184,7 @@ class CfgWeapons {
             burst = 35;
             reloadTime = 0.0128;
         };
-        class close: burstHI
-        {
+        class close: burstHI {
             showToPlayer = 0;
             aiRateOfFire = 0.5;
             aiRateOfFireDistance = 400;
@@ -204,8 +195,7 @@ class CfgWeapons {
             midRangeProbab = 0.2;
             maxRangeProbab = 0.1;
         };
-        class short: burstHI
-        {
+        class short: burstHI {
             showToPlayer = 0;
             aiRateOfFire = 1;
             aiRateOfFireDistance = 600;
@@ -216,8 +206,7 @@ class CfgWeapons {
             midRangeProbab = 0.2;
             maxRangeProbab = 0.1;
         };
-        class medium: burstHI
-        {
+        class medium: burstHI {
             showToPlayer = 0;
             aiRateOfFire = 2;
             aiRateOfFireDistance = 800;
@@ -228,8 +217,7 @@ class CfgWeapons {
             midRangeProbab = 0.2;
             maxRangeProbab = "0.1´";
         };
-        class far: burstHI
-        {
+        class far: burstHI {
             showToPlayer = 0;
             aiRateOfFire = 3;
             aiRateOfFireDistance = 1000;

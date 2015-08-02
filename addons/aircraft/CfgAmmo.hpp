@@ -63,7 +63,7 @@ class CfgAmmo {
         multiSoundHit[] = {"soundHit1",1};
         explosionSoundEffect = "DefaultExplosion";
         explosionEffects = "Gau8ShellImpact";
-        //muzzleEffect = ""; @todo ??
+        //muzzleEffect = ""; @todo
         craterEffects = "HEShellCrater";
         tracersEvery = 0;
     };

@@ -20,60 +20,53 @@ class CfgPatches {
 #include "CfgLights.hpp"
 #include "RscInGameUI.hpp"
 
-class Gau8ShellImpact
-{
-	class LightExp
-	{
-		simulation = "light";
-		type = "Gau8ShellExplLght";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class Explosion1
-	{
-		simulation = "particles";
-		type = "Gau8ShellExplCldlt";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class ExpSpark
-	{
-		simulation = "particles";
-		type = "Gau8ShellSprksCldlt";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class SmallSmoke1
-	{
-		simulation = "particles";
-		type = "Gau8ShellSmkCldlt";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class MedDust1
-	{
-		simulation = "particles";
-		type = "Gau8ShellDstCldlt";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class BigDirt1
-	{
-		simulation = "particles";
-		type = "Gau8ShellDrtCldlt";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
+class Gau8ShellImpact {
+    class LightExp {
+        simulation = "light";
+        type = "Gau8ShellExplLght";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
+    class Explosion1 {
+        simulation = "particles";
+        type = "Gau8ShellExplCldlt";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
+    class ExpSpark {
+        simulation = "particles";
+        type = "Gau8ShellSprksCldlt";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
+    class SmallSmoke1 {
+        simulation = "particles";
+        type = "Gau8ShellSmkCldlt";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
+    class MedDust1 {
+        simulation = "particles";
+        type = "Gau8ShellDstCldlt";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
+    class BigDirt1 {
+        simulation = "particles";
+        type = "Gau8ShellDrtCldlt";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 1;
+        lifeTime = 1;
+    };
 };
