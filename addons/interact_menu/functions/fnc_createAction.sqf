@@ -26,17 +26,19 @@
  */
 #include "script_component.hpp"
 
-private "_defaultParams";
-_defaultParams = [false, false, false, false, false];
-_defaultPosition = {[0, 0, 0]};
-
-PARAMS_5(_actionName,_displayName,_icon,_statement,_condition);
-DEFAULT_PARAM(5,_insertChildren,{});
-DEFAULT_PARAM(6,_customParams,[]);
-DEFAULT_PARAM(7,_position,_defaultPosition);
-DEFAULT_PARAM(8,_distance,2);
-DEFAULT_PARAM(9,_params,_defaultParams);
-DEFAULT_PARAM(10,_modifierFunction,{});
+params [
+    "_actionName",
+    "_displayName",
+    "_icon",
+    "_statement",
+    "_condition",
+    ["_insertChildren", {}],
+    ["_customParams", []],
+    ["_position", {[0, 0, 0]}],
+    ["_distance", 2],
+    ["_params", [false, false, false, false, false]],
+    ["_modifierFunction", {}]
+];
 
 _position = if (typeName (_position) == "STRING") then {
         // If the action is set to a selection, create the suitable code
