@@ -21,7 +21,7 @@ if (!isnil "_info") then {
     _requestMessage = _info select 3;
     _callBack = _info select 4;
     _replyParams = [_info, _accepted];
-    [_replyParams, QUOTE(FUNC(requestCallback)), _caller, false] call FUNC(execRemoteFnc);
+    [_replyParams, QFUNC(requestCallback), _caller, false] call FUNC(execRemoteFnc);
     _unit setvariable [_id, nil];
 };
 

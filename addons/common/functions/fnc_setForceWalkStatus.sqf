@@ -48,4 +48,4 @@ _bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
 _unit setVariable ["ACE_forceWalkStatusNumber", _bitmaskNumber, true];
 
 // actually apply the forceWalk command globaly
-[[_unit], QUOTE(FUNC(applyForceWalkStatus)), 2] call FUNC(execRemoteFnc);
+[[_unit], QFUNC(applyForceWalkStatus), 2] call FUNC(execRemoteFnc);

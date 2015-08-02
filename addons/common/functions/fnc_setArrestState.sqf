@@ -23,7 +23,7 @@ if (_setArrest) then {
         };
     };
     if (IsPlayer _unit) then {
-        [["arrested", true],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+        [["arrested", true],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
     _unit disableAI "Move";
     _unit disableAI "ANIM";
@@ -38,7 +38,7 @@ if (_setArrest) then {
         _unit enableAI "ANIM";
     };
     if (IsPlayer _unit) then {
-        [["arrested", false],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+        [["arrested", false],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
 };
 
