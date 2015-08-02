@@ -118,10 +118,12 @@ class CfgVehicles {
                         name = CSTRING(DoNotForce);
                         value = -1;
                     };
+                    /* Probably don't want to allow forcing ear ringing for people who have serious problems with the effect
                     class NotDisabled {
                         name = ECSTRING(common,No);
                         value = 0;
                     };
+                    */
                     class IsDisabled {
                         name = ECSTRING(common,Yes);
                         value = 1;
