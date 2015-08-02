@@ -76,10 +76,9 @@ GVAR(deployPFH) = [{
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
 [localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);
-[{  //wait a frame to handle "Do When releasing action menu key" option
-    GVAR(placer) setVariable [QGVAR(Deploy),
-        [GVAR(placer), "DefaultAction",
-        {GVAR(deployPFH) != -1},
-        {GVAR(placer) setVariable [QGVAR(wireDeployed), true]}
-    ] call EFUNC(common,AddActionEventHandler)];
-}, _this] call EFUNC(common,execNextFrame);
+    
+GVAR(placer) setVariable [QGVAR(Deploy),
+    [GVAR(placer), "DefaultAction",
+    {GVAR(deployPFH) != -1},
+    {GVAR(placer) setVariable [QGVAR(wireDeployed), true]}
+] call EFUNC(common,AddActionEventHandler)];

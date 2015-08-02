@@ -36,11 +36,8 @@ GVAR(adjustPFH) = [{
 
 [localize "STR_ACE_Tripod_Done", "", localize "STR_ACE_Tripod_ScrollAction"] call EFUNC(interaction,showMouseHint);
 
-[{  //wait a frame to handle "Do When releasing action menu key" option
-    if (!GVAR(adjusting)) exitWith {ERROR("Not Adjusting");};
-    ACE_player setVariable [QGVAR(Adjust),
-        [ACE_player, "DefaultAction",
-        {GVAR(adjustPFH) != -1 && GVAR(adjusting)},
-        {GVAR(adjusting) = false;}
-    ] call EFUNC(common,AddActionEventHandler)];
-}, _this] call EFUNC(common,execNextFrame);
+ACE_player setVariable [QGVAR(Adjust),
+    [ACE_player, "DefaultAction",
+    {GVAR(adjustPFH) != -1 && GVAR(adjusting)},
+    {GVAR(adjusting) = false;}
+] call EFUNC(common,AddActionEventHandler)];

@@ -51,12 +51,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-    [{  //wait a frame to handle "Do When releasing action menu key"
-        PARAMS_1(_unit);
-        if (GVAR(placeAction) != PLACE_WAITING) exitWith {};
-        [localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint);
-        _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
-    }, [_unit]] call EFUNC(common,execNextFrame);
+    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
 

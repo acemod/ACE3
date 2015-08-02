@@ -39,17 +39,14 @@ GVAR(currentAngle) = 0;
 
 [localize LSTRING(Deploy), localize LSTRING(Drop), localize LSTRING(Adjust)] call EFUNC(interaction,showMouseHint);
 
-[{  //wait a frame to handle "Do When releasing action menu key" option
-    ACE_player setVariable [QGVAR(Deploy),
-        [ACE_player, "DefaultAction",
-        {!isNull GVAR(ladder)},
-        {GVAR(ladder) call FUNC(confirmTLdeploy);}
-    ] call EFUNC(common,AddActionEventHandler)];
+ACE_player setVariable [QGVAR(Deploy),
+    [ACE_player, "DefaultAction",
+    {!isNull GVAR(ladder)},
+    {GVAR(ladder) call FUNC(confirmTLdeploy);}
+] call EFUNC(common,AddActionEventHandler)];
 
-    ACE_player setVariable [QGVAR(Cancel),
-        [ACE_player, "zoomtemp",
-        {!isNull GVAR(ladder)},
-        {GVAR(ladder) call FUNC(cancelTLdeploy);}
-    ] call EFUNC(common,AddActionEventHandler)];
-
-}, _this] call EFUNC(common,execNextFrame);
+ACE_player setVariable [QGVAR(Cancel),
+    [ACE_player, "zoomtemp",
+    {!isNull GVAR(ladder)},
+    {GVAR(ladder) call FUNC(cancelTLdeploy);}
+] call EFUNC(common,AddActionEventHandler)];
