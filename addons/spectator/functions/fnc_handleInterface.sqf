@@ -23,7 +23,8 @@ switch (toLower _mode) do {
     // Safely open/close the interface
     case "open": {
         // Prevent reopening
-        if !(isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
+        if (GVAR(open)) exitWith {};
+        GVAR(open) = true;
 
         // Initalize camera variables
         GVAR(camBoom) = 0;
@@ -57,13 +58,13 @@ switch (toLower _mode) do {
     };
     case "close": {
         // Can't close a second time
-        if (isNull (GETUVAR(GVAR(display),displayNull))) exitWith {};
+        if !(GVAR(open)) exitWith {};
+        GVAR(open) = false;
 
         // Terminate interface
         while {dialog} do {
             closeDialog 0;
         };
-        GETUVAR(GVAR(display),displayNull) closeDisplay 0;
 
         // Terminate camera
         GVAR(camera) cameraEffect ["terminate", "back"];
@@ -94,8 +95,6 @@ switch (toLower _mode) do {
     // Dialog events
     case "onload": {
         _args params ["_display"];
-
-        SETUVAR(GVAR(display),_display);
 
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
@@ -149,8 +148,7 @@ switch (toLower _mode) do {
         //_display displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     };
     case "onunload": {
-        SETUVAR(GVAR(display),nil);
-
+        // Kill GUI PFHs
         GVAR(camHandler) = nil;
         GVAR(compHandler) = nil;
         GVAR(iconHandler) = nil;

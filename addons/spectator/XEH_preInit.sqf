@@ -38,7 +38,7 @@ GVAR(camUnit) = objNull;
 GVAR(camVision) = -2;
 GVAR(camZoom) = 1.25;
 
-SETUVAR(GVAR(display),nil);
+GVAR(open) = false;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;
