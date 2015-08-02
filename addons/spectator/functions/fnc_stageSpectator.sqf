@@ -40,13 +40,16 @@ _unit enableSimulation !_set;
 [_unit, _set, QGVAR(isStaged), side group _unit] call EFUNC(common,switchToGroupSide);
 
 if (_set) then {
-    // Move and hide the player ASAP to avoid being seen
-    GVAR(oldPos) = getPosATL _unit;
-    _unit setPos (getMarkerPos QGVAR(respawn));
+    // Position should only be saved on first entry
+    if !(GETVAR(_unit,GVAR(isStaged),false)) then {
+        GVAR(oldPos) = getPosATL _unit;
+    };
 
     // Ghosts can't talk
     [_unit, QGVAR(isStaged)] call EFUNC(common,hideUnit);
     [_unit, QGVAR(isStaged)] call EFUNC(common,muteUnit);
+
+    _unit setPos (getMarkerPos QGVAR(respawn));
 } else {
     // Physical beings can talk
     [_unit, QGVAR(isStaged)] call EFUNC(common,unhideUnit);

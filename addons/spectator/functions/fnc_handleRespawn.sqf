@@ -15,4 +15,6 @@
 
 #include "script_component.hpp"
 
+params ["_unit","_oldUnit"];
+
 [_unit,false] call FUNC(setSpectator);
