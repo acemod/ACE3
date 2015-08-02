@@ -23,15 +23,17 @@ _dir = getDir ACE_player;
 titleCut ["", "BLACK"];
 
 // create invisible headbug fix vehicle
-_ACE_HeadbugFix = createVehicle ["ACE_Headbug_Fix", getposATL ACE_player, [], 0, "NONE"];
+_ACE_HeadbugFix = createVehicle ["ACE_Headbug_Fix", [0,0,10000], [], 0, "NONE"];
 _ACE_HeadbugFix setDir _dir;
 ACE_player moveInAny _ACE_HeadbugFix;
-sleep 1.0;
+_ACE_HeadbugFix setposATL _pos;
+sleep 0.1;
 unassignVehicle ACE_player;
 ACE_player action ["Eject", vehicle ACE_player];
+ACE_player setDir _dir;
+ACE_player setposATL _pos;
 sleep 1.0;
 deleteVehicle _ACE_HeadbugFix;
-ACE_player setposATL _pos;
-ACE_player setDir _dir;
+
 titleCut ["", "PLAIN"];
 true
