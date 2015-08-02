@@ -12,9 +12,8 @@
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
-private ["_caller", "_unit","_vehicle", "_loadcar", "_loadhelicopter", "_loadtank","_loadboat"];
-_caller = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_unit = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
+private ["_vehicle", "_loadcar", "_loadhelicopter", "_loadtank","_loadboat"];
+params [["_caller",ObjNull,[ObjNull]],["_unit",ObjNull,[ObjNull]]];
 _vehicle = ObjNull;
 
 if (!([_caller] call FUNC(canInteract)) || {_caller == _unit}) exitwith {_vehicle};

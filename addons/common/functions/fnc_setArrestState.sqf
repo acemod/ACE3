@@ -10,9 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_setArrest"];
-_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_Param;
-_setArrest = [_this, 1, false, [false]] call BIS_fnc_Param;
+params[["_unit",ObjNull,[ObjNull]],["_setArrest",false,[false]]];
 
 if (_setArrest) then {
     [_unit, QGVAR(StateArrested), true] call FUNC(setDefinedVariable);
@@ -22,7 +20,7 @@ if (_setArrest) then {
             [_unit,"UnaErcPoslechVelitele2",1] call FUNC(doAnimation);
         };
     };
-    if (IsPlayer _unit) then {
+    if (isPlayer _unit) then {
         [["arrested", true],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
     _unit disableAI "Move";
@@ -37,7 +35,7 @@ if (_setArrest) then {
         _unit enableAI "Move";
         _unit enableAI "ANIM";
     };
-    if (IsPlayer _unit) then {
+    if (isPlayer _unit) then {
         [["arrested", false],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
 };

@@ -13,7 +13,7 @@
 #define WHITE_SPACE [20]
 
 private ["_string", "_charArray", "_returnString"];
-_string = [_this, 0, "",[""]] call bis_fnc_param;
+_string = param [0,"",[""]];
 _charArray = toArray _string;
 _charArray = _charArray - [((toArray " ") select 0)];
 _returnString = toString _charArray;

@@ -11,7 +11,7 @@
 #include "script_component.hpp"
 
 private ["_reciever","_title","_content","_type", "_parameters", "_localizationArray"];
-params [["_reciever",ObjNull,[ObjNull]],["_title","",[""]],["_content","",[""]],["_type",0,[0]],["_parameters",[],[[]]]];
+params [["_reciever",ObjNull,[ObjNull]], ["_title","",[""]], ["_content","",[""]], ["_type",0,[0]], ["_parameters",[],[[]]]];
 
 if (isPlayer _reciever) then {
     if (!local _reciever) then {
