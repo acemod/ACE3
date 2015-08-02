@@ -126,7 +126,7 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
-            <English>Enable combat deafness?</English>
+            <English>Reduces the hearing ability as the player takes hearing damage</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
@@ -134,11 +134,19 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
-            <English></English>
+            <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
+        </Key>
+            <Key ID="STR_ACE_Hearing_DoNotForce">
+            <English>Do Not Force</English>
+            <Polish>Nie wymuszaj</Polish>
+            <Spanish>No forzar</Spanish>
+            <German>Nicht erzwingen</German>
+            <Czech>Nevynucovat</Czech>
+            <Portuguese>Não forçar</Portuguese>
         </Key>
     </Package>
 </Project>

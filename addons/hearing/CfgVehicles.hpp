@@ -109,6 +109,25 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class DisableEarRinging {
+                displayName = CSTRING(DisableEarRinging);
+                typeName = "NUMBER";
+                class values {
+                    class DoNotForce {
+                        default = 1;
+                        name = CSTRING(DoNotForce);
+                        value = -1;
+                    };
+                    class NotDisabled {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    class IsDisabled {
+                        name = ECSTRING(common,Yes);
+                        value = 1;
+                    };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);
