@@ -1,7 +1,7 @@
 /*
  * Author: SilentSpike
- * Start the interface on respawn
- * Part of the basic spectator system
+ * Un-set as spectator on respawn
+ * Part of the spectator during death system
  *
  * Arguments:
  * 0: New unit <OBJECT>
@@ -15,4 +15,4 @@
 
 #include "script_component.hpp"
 
-[_this select 0] call FUNC(setSpectator);
+[_unit,false] call FUNC(setSpectator);
