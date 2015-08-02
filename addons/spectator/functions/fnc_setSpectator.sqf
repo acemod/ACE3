@@ -23,6 +23,9 @@
 
 params ["_unit", ["_set",true,[true]]];
 
+// No change, no service (but allow spectators to be reset)
+if !(_set || (GETVAR(_unit,GVAR(isSet),false))) exitWith {};
+
 // Only run for player units
 if !(isPlayer _unit) exitWith {};
 
@@ -41,4 +44,10 @@ if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableV
 if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[_unit, _set] call TFAR_fnc_forceSpectator};
 
-["spectatorSet",[_set]] call EFUNC(common,localEvent);
+// No theoretical change if an existing spectator was reset
+if !(_set isEqualTo (GETVAR(_unit,GVAR(isSet),false))) then {
+    // Mark spectator state for reference
+    _unit setVariable [QGVAR(isSet), _set, true];
+
+    ["spectatorSet",[_set]] call EFUNC(common,localEvent);
+};

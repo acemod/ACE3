@@ -55,7 +55,7 @@ _filteredUnits = [];
         {(_x isKindOf "CAManBase")} &&
         {(side group _x) in _sides} && // Side filter
         {simulationEnabled _x} &&
-        {!(_x getVariable [QGVAR(isSpectator), false])} // Who watches the watchmen?
+        {!(_x getVariable [QGVAR(isStaged), false])} // Who watches the watchmen?
     ) then {
         _filteredUnits pushBack _x;
     };
