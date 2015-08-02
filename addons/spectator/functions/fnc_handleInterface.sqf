@@ -95,9 +95,7 @@ switch (toLower _mode) do {
     case "onload": {
         _args params ["_display"];
 
-        with uiNamespace do {
-            GVAR(display) = _display;
-        };
+        SETUVAR(GVAR(display),_display);
 
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
@@ -151,9 +149,7 @@ switch (toLower _mode) do {
         //_display displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     };
     case "onunload": {
-        with uiNamespace do {
-            GVAR(display) = nil;
-        };
+        SETUVAR(GVAR(display),nil);
 
         GVAR(camHandler) = nil;
         GVAR(compHandler) = nil;
