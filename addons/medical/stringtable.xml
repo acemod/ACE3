@@ -3523,7 +3523,7 @@
             <Russian>Список транспортных средств, которые будут считаться медицинским транспортом (через запятую).</Russian>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy medyczne, oddzielone przecinkami.</Polish>
             <Spanish>Lista de los vehículos que se clasifican como vehículo médicos, separados por comas.</Spanish>
-            <German>Liste ovn Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
+            <German>Liste von Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
             <Czech>Seznam vozidel které budou klasifikovány jako zdravotnická vozidla, oddělené čárkami.</Czech>
             <Portuguese>Lista de veículos que serão classificados como veículos médicos, separados por vírgulas.</Portuguese>
         </Key>
