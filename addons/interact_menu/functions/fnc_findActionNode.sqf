@@ -8,7 +8,7 @@
  * 1: Path <ARRAY>
  *
  * Return value:
- * Action node <ARRAY>.
+ * Action node <ARRAY> or <NIL> if not found 
  *
  * Example:
  * [_actionTree, ["ACE_TapShoulderRight","VulcanPinchAction"]] call ace_interact_menu_fnc_findActionNode;

@@ -28,6 +28,10 @@ if((count _actionList) == 0) then {
     _object setVariable [_varName, _actionList];
 };
 
+if (_parentPath isEqualTo ["ACE_MainActions"]) then {
+    [(typeOf _object), _typeNum] call FUNC(addMainAction);
+};
+
 // Add action and parent path to the list of object actions
 _actionList pushBack [_action, +_parentPath];
 
