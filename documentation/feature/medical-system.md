@@ -7,11 +7,7 @@ order: 4
 category: realism
 parent: wiki
 ---
-<p align="center">
-**Disclaimer**
-
-The documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
-</p>
+**Disclaimer:** The documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 
 ## 1. Overview
 ACE3 provides users with a more realistic medical system and comes in both a basic and an advanced version. This page will detail the differences between both systems and what they do as well as how to use them efficiently.
@@ -32,12 +28,12 @@ The system behind advanced medical is designed to attempt to mimic important par
 
 Besides the 4 elements introduced by basic medical, advanced introduces the following:
 
-- More detailed wound system
-- Accurate blood loss based upon sustained injuries
-- Vitals, including heart rate and blood pressure
-- Cardiac Arrest
+- More detailed wound system.
+- Accurate blood loss based upon sustained injuries.
+- Vitals, including heart rate and blood pressure.
+- Cardiac Arrest.
 - Various treatment methods such as CPR, different kinds of IVs and a working tourniquet.
-- A basic medication simulation
+- A basic medication simulation.
  
 ## 2. Usage
 
@@ -111,7 +107,7 @@ Atropine | Serves no use in basic
 #### 2.1.3 Additional informations
 
 - If the revive system is in place your character will not die until the revive timer is at 0. Even if a tank shoots your ass off an epinephrine shot will bring you back up after your wounds are treated. (The timer is invisible and may vary from mission to mission, it also depends on the amount of lives remaining you have.)
-- You can't do an overdose in basic
+- You can't do an overdose in basic.
 
 ### 2.2 Advanced
 
@@ -124,13 +120,13 @@ Same as with basic, when hit an injury is sustained. Different though is that th
 
 - They occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
 - Sources: falling, rope burn, vehicle crashes.
-- Effects: pain - extremely light, bleeding - extremely slowly
+- Effects: pain - extremely light, bleeding - extremely slowly.
 
 ##### 2.2.1.2 Avulsions
 
-- Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions. |
-- Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites. |
-- Effects: pain - extremely high, bleeding - extremely fast (depends on wound size). |
+- Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
+- Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites.
+- Effects: pain - extremely high, bleeding - extremely fast (depends on wound size).
 
 ##### 2.2.1.3 Contusions
 
@@ -147,14 +143,14 @@ Same as with basic, when hit an injury is sustained. Different though is that th
 ##### 2.2.1.5 Cut wounds**
 
 - Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
-- Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs
+- Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs.
 - Effects: pain - light, bleeding - speed depends on length and size of the wound.
 
 
 ##### 2.2.1.6 Lacerations (tears)
 
 - these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source or from an external source like a punch.
-- Sources: vehicle crashes, punches
+- Sources: vehicle crashes, punches.
 - Effects: pain - light, bleeding - slow to medium speed (depends on wound size).
 
 ##### 2.2.1.7 Velocity wound
@@ -184,9 +180,9 @@ QuikClot | medium | high | medium | medium | medium | medium | high | high
 
 ##### 2.2.1.10 Tourniquet
 
-- Can only be applied on limbs
-- Stops bleeding from wounds
-- Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds
+- Can only be applied on limbs.
+- Stops bleeding from wounds.
+- Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds.
 - If not taken off for a while it will cause pain to the patient.
 
 ##### 2.2.1.11 IVs
@@ -208,13 +204,15 @@ Atropine | lower the heart rate of the patient
 ##### 2.2.1.13 Surgical kit
 
 - Is only useful when advanced wounds (reopening) is enabled.
-- Stitch a wound to stop it from reopening (only happens if advanced wounds are enabled).
+- Stitch a wound to stop it from reopening.
 - It's use may be limited to a certain class and / or near a vehicle / facility.
+- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
 
 ##### 2.2.1.14 PAK
 
 - Used to fully heal someone. (Removes any injury, restore vitals to a stable state and reset the medical history, clears all medication in the system.)
 - It's use may be limited to a certain class and / or near a vehicle / facility.
+- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
 
 #### 2.2.2 Vitals
 
@@ -223,10 +221,10 @@ Atropine | lower the heart rate of the patient
  NOTE:the `systolic` blood pressure is the number on the left, the `diastolic` blood pressure is the number on the right.
 
 - Blood pressure is affected by the amount of blood lost as well as IVs and medication.
- - **Non existent:** 0 - 20
- - **Low:** 20 - 100 `systolic`
- - **Normal:** 100 - 160 `systolic`
- - **High:** 160 and above `systolic`
+ - **Non existent:** 0 - 20 `systolic`.
+ - **Low:** 20 - 100 `systolic`.
+ - **Normal:** 100 - 160 `systolic`.
+ - **High:** 160 and above `systolic`.
 
 ##### 2.2.2.2 Heart rate
 
@@ -238,12 +236,12 @@ Atropine | lower the heart rate of the patient
 
 ##### 2.2.2.3 Cardiac arrest
 
-A patient will enter cardiac arrest when:</br>
-- The heart rate is below 20.
-- The heart rate is above 200.
-- The systolic blood pressure is above 260.
-- The diastolic blood pressure is below 40 and the heart rate is above 190.
-- The systolic blood pressure is above 145 and the heart rate is above 150.
+- A patient will enter cardiac arrest when:</br>
+ - The heart rate is below 20.
+ - The heart rate is above 200.
+ - The systolic blood pressure is above 260.
+ - The diastolic blood pressure is below 40 and the heart rate is above 190.
+ - The systolic blood pressure is above 145 and the heart rate is above 150.
 
 
 #### 2.2.3 Treating the patient
@@ -280,12 +278,12 @@ This is a step by step guide, follow the steps from 1 to 6 in order unless state
  - **Yes:** You're done.
  - **No:** Stabilize his pulse / make sure he isn't in pain or missing blood.
 
-Note that keeping the patient's vitals stable is always needed while treating him.
+Note that keeping the patient's vitals stable is very important while treating him.
 
 #### 2.2.4 Additional informations
 
-- As an infantryman you can use a tourniquet to stop a limb from bleeding, note that this is supposed to be a temporary solution and leaving the tourniquet more than 5 minutes will induce pain cut and may kill you.
-- Epinephrine should **NEVER** be used in case of cardiac arrest, it will only make the patient harder to treat afterwards or might outright kill him (remember epi raise the blood pressure, a blood pressure too high might kill him).
+- As an infantryman you can use a tourniquet to stop a limb from bleeding, note that this is supposed to be a temporary solution and leaving the tourniquet more than 5 minutes will induce pain.
+- Epinephrine should **NEVER** be used in case of cardiac arrest, it will only make the patient harder to treat afterwards or might outright kill him (remember epinephrine raises the blood pressure, a blood pressure too high is deadly).
 - Pain is only suppressed and not removed by default.
 - You don't have to take epinephrine after you take morphine, just wait until your pulse stabilizes by itself (Provided that you are in a stable condition).
 - Giving too much morphine to a patient (more than one every 10 minutes) will put him in cardiac arrest because of a blood pressure / heart rate too low.
