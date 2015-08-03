@@ -78,7 +78,7 @@ _fnc_renderNearbyActions = {
 
 _fnc_renderLastFrameActions = {
     {
-        EXPLODE_3_PVT(_x,_target,_action,_objectActionList);
+        _x params ["_target", "_action", "_objectActionList"];
 
         GVAR(objectActionList) = _objectActionList;
         [_target, _action] call FUNC(renderBaseMenu);
@@ -176,6 +176,6 @@ if (count GVAR(collectedActionPoints) > 1) then {
 
 // Render the non-ocluded points
 {
-    EXPLODE_3_PVT(_x,_z,_sPos,_activeActionTree);
+    _x params ["_z", "_sPos", "_activeActionTree"];
     [[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
 } forEach GVAR(collectedActionPoints);

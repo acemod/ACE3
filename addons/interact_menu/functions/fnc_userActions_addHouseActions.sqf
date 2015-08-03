@@ -27,8 +27,8 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
     private ["_nearBuidlings", "_typeOfHouse", "_houseBeingScaned", "_actionSet", "_memPoints", "_memPointsActions", "_helperPos", "_helperObject"];
-    PARAMS_2(_args,_pfID);
-    EXPLODE_4_PVT(_args,_setPosition,_addedHelpers,_housesScaned,_housesToScanForActions);
+    params ["_args", "_pfID"];
+    _args params ["_setPosition", "_addedHelpers", "_housesScaned", "_housesToScanForActions"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
         {deleteVehicle _x;} forEach _addedHelpers;
@@ -75,7 +75,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             _housesScaned pushBack _houseBeingScaned;
 
             _actionSet = [_typeOfHouse] call FUNC(userActions_getHouseActions);
-            EXPLODE_2_PVT(_actionSet,_memPoints,_memPointsActions);
+            _actionSet params ["_memPoints", "_memPointsActions"];
 
             // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {

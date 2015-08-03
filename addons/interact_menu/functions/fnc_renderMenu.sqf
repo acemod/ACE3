@@ -18,8 +18,8 @@
 private ["_menuInSelectedPath", "_path", "_menuDepth", "_x", "_offset", "_newPos", "_forEachIndex", "_player", "_pos", "_target", "_textSettings"];
 
 params ["_parentPath", "_action", "_sPos", "_angles"];
-EXPLODE_3_PVT(_action,_actionData,_activeChildren,_actionObject);
-EXPLODE_2_PVT(_angles,_centerAngle,_maxAngleSpan);
+_action params ["_actionData", "_activeChildren", "_actionObject"];
+_angles params ["_centerAngle", "_maxAngleSpan"];
 
 _menuDepth = (count GVAR(menuDepthPath));
 

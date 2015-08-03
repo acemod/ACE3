@@ -19,7 +19,7 @@ BEGIN_COUNTER(fnc_renderBaseMenu)
 private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
 
 params ["_object", "_baseActionNode"];
-EXPLODE_1_PVT(_baseActionNode,_actionData);
+_baseActionNode params ["_actionData"];
 
 _distance = _actionData select 8;
 

@@ -31,10 +31,10 @@ _parentNode = [[],_actionTreeList];
 _foundParentNode = false;
 
 _fnc_findFolder = {
-    EXPLODE_3_PVT(_this,_parentPath,_level,_actionNode);
+    params ["_parentPath", "_level", "_actionNode"];
 
     {
-        EXPLODE_2_PVT(_x,_actionData,_actionChildren);
+        _x params ["_actionData", "_actionChildren"];
         if ((_actionData select 0) isEqualTo (_parentPath select _level)) exitWith {
 
             if (count _parentPath == _level + 1) exitWith {
