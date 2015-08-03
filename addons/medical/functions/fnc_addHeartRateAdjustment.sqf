@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_unit", "_value", "_time", "_adjustment", "_callBack"];
-params[["_unit",objNull,[objNull]],["_value",0,[0]],["_time",1,[0]],["_callBack",{},[{}]]];
+params [["_unit",objNull,[objNull]],["_value",0,[0]],["_time",1,[0]],["_callBack",{},[{}]]];
 
 _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushback [_value, _time, _callBack];

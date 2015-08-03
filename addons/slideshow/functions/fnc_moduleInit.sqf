@@ -23,7 +23,7 @@ if !(_activated) exitWith {};
 
 private ["_objects", "_controllers", "_images", "_names", "_duration"];
 
-if (isNill "_logic") exitWith {};
+if (isNil "_logic") exitWith {};
 
 // Extract variables from logic
 _objects = [_logic getVariable ["Objects", ""], true, true] call FUNC(makeList);

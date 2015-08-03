@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 
 private ["_logic", "_units", "_activated","_ambianceSounds", "_soundFiles", "_minimalDistance","_maximalDistance", "_minimalDistance", "_maxDelayBetweenSounds", "_allUnits", "_newPos", "_targetUnit", "_soundToPlay", "_soundPath", "_unparsedSounds", "_list", "_splittedList", "_nilCheckPassedList"];
-params[["_logic",objNull,[objNull]],["_units",[],[[]]],["_activated",true,[true]]];
+params [["_logic",objNull,[objNull]],["_units",[],[[]]],["_activated",true,[true]]];
 
 // We only play this on the locality of the logic, since the sounds are broadcasted across the network
 if (_activated && local _logic) then {
