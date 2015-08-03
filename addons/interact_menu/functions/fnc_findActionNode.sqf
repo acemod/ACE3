@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_actionTreeList,_parentPath);
+params ["_actionTreeList", "_parentPath"];
 
 private ["_parentNode", "_foundParentNode", "_fnc_findFolder", "_actionTree"];
 

@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp";
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
 private ["_objectType","_actionsVarName","_isMan"];
 _objectType = _target;

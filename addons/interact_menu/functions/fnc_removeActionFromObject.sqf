@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_object,_typeNum,_fullPath);
+params ["_object", "_typeNum", "_fullPath"];
 
 private ["_res","_varName","_actionList"];
 _res = _fullPath call FUNC(splitPath);

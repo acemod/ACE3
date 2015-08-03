@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_object,_origAction,_parentPath);
+params ["_object", "_origAction", "_parentPath"];
 EXPLODE_2_PVT(_origAction,_origActionData,_origActionChildren);
 
 private ["_target","_player","_fullPath","_activeChildren","_dynamicChildren","_action","_actionData","_x"];

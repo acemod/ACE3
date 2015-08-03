@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_interactionType);
+params ["_interactionType"];
 
 //Ignore if not enabled:
 if (!GVAR(addBuildingActions)) exitWith {};
