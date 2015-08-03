@@ -20,7 +20,7 @@
 PARAMS_2(_boat,_velocity);
 
 if !(local _boat) exitWith {
-    [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);
+    [_this, QFUNC(push), _boat] call EFUNC(common,execRemoteFnc);
 };
 
 _boat setVelocity _velocity;

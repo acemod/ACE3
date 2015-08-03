@@ -13,7 +13,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 private ["_loaded", "_emptyPos","_validVehiclestate"];
 params ["_unit", "_vehicle"];

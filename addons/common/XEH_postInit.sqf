@@ -305,7 +305,7 @@ GVAR(OldIsCamera) = false;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
-["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
+["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {

@@ -12,7 +12,7 @@
 
 private ["_return", "_vehicleUsage"];
 params ["_unit", "_magazine"];
-_vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
+_vehicleUsage = param[2, false, [false]];
 
 if (!_vehicleUsage) then {
     if (_magazine != "") then {
