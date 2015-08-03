@@ -16,7 +16,7 @@
 
 private ["_exceptions"];
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 _exceptions = if (count _this > 2) then {
     _this select 2;

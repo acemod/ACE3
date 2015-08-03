@@ -19,7 +19,7 @@ Example:
 
 private ["_forceWalkNumber"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _forceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
 
 _unit forceWalk (_forceWalkNumber > 0);

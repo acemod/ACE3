@@ -13,7 +13,7 @@
 
 private ["_type", "_index"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
 

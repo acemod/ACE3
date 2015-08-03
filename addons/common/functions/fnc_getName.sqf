@@ -14,7 +14,7 @@
 
 private ["_name"];
 
-PARAMS_2(_unit,_showEffective);
+params ["_unit", "_showEffective"];
 
 if (isNil "_showEffective") then {
     _showEffective = false;

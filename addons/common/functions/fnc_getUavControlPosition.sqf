@@ -22,7 +22,7 @@ Example:
 
 private ["_uav", "_positionArray", "_playerIndex"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _uav = getConnectedUAV _unit;
 if (isNull _uav) exitWith {""};
 _positionArray = UAVControl _uav;

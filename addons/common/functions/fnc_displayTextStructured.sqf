@@ -14,10 +14,8 @@
 
 #include "script_component.hpp"
 
-private ["_text", "_size", "_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position", "_target"];
-_text = _this select 0;
-_size = if (count _this > 1) then {_this select 1} else {1.5;};
-_target = if (count _this > 2) then {_this select 2} else {ACE_player};
+private ["_isShown", "_ctrlHint", "_yPos", "_xPos", "_wPos", "_hPos", "_position"];
+params ["_text", ["_size", 1.5], ["_target", ACE_player]];
 
 if (_target != ACE_player) exitWith {};
 

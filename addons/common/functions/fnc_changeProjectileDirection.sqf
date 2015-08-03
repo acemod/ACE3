@@ -16,7 +16,7 @@
 
 private ["_adjustSpeed", "_vdir", "_dir", "_up", "_vup", "_vel", "_vlat"];
 
-PARAMS_3(_projectile,_adjustDir,_adjustUp);
+params ["_projectile", "_adjustDir", "_adjustUp"];
 
 _adjustSpeed = if (count _this > 3) then {
     _this select 3

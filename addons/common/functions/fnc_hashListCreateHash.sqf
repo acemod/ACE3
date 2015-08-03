@@ -3,7 +3,7 @@
 
 private ["_hashKeys"];
 
-PARAMS_1(_hashList);
+params ["_hashList"];
 
 ERRORDATA(1);
 _hashKeys = [];

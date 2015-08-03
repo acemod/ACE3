@@ -13,7 +13,7 @@
 
 private ["_modes"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _modes = [];
 {

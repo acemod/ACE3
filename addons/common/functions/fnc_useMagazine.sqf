@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_return", "_vehicleUsage"];
-PARAMS_2(_unit,_magazine);
-_vehicleUsage = param[2, false, [false]];
+private ["_return"];
+params ["_unit", "_magazine", ["_vehicleUsage", false, [false]]];
 
 if (!_vehicleUsage) then {
     if (_magazine != "") then {

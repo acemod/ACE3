@@ -10,14 +10,9 @@
 
 #include "script_component.hpp"
 
-private ["_add", "_exists", "_map", "_lowestVolume"];
+private ["_exists", "_map", "_lowestVolume"];
 
-PARAMS_2(_id,_settings);
-
-_add = true;
-if (count _this > 2) then {
-    _add = _this select 2;
-};
+params ["_id", "_settings", ["_add", true]];
 
 _map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
 

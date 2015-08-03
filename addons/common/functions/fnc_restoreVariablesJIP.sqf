@@ -13,7 +13,7 @@
 
 private "_respawnVariables";
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 

@@ -13,7 +13,7 @@
 
 private ["_config", "_cargo", "_codrivers", "_index"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> _vehicle;
 

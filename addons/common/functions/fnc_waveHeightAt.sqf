@@ -12,9 +12,11 @@
  */
 #include "script_component.hpp"
 
+params ["_position"];
+
 if(isNil QGVAR(waveHeightLogic)) then {
     GVAR(waveHeightLogic) = "Logic" createVehicleLocal [0,0,0];
 };
-GVAR(waveHeightLogic) setPosASL (_this select 0);
+GVAR(waveHeightLogic) setPosASL _position;
 
 (((getPosASLW GVAR(waveHeightLogic)) select 2) -  ((getPosASL GVAR(waveHeightLogic)) select 2))

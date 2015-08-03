@@ -13,7 +13,7 @@
 
 private ["_vehicle", "_turrets", "_units", "_index"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {[]};

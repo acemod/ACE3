@@ -16,11 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_mode", "_checkAll", "_whitelist"];
-
-_mode = _this select 0;
-_checkAll = if (count _this > 1) then {_this select 1} else {false};
-_whitelist = if (count _this > 2) then {_this select 2} else {"[]"};
+params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
 
 _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
@@ -30,7 +26,7 @@ ACE_Version_Whitelist = _whitelist;
 if (!isServer) then {
     [_mode, _checkAll, _whitelist] spawn {
         private ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
-        PARAMS_3(_mode,_checkAll,_whitelist);
+        params ["_mode", "_checkAll", "_whitelist"];
 
         waitUntil {
             sleep 1;

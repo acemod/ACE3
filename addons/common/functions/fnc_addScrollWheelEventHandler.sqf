@@ -13,7 +13,7 @@
 
 private ["_actionsVar", "_id", "_actionIDs", "_actions"];
 
-PARAMS_1(_statement);
+params ["_statement"];
 
 if (typeName _statement == "STRING") then {
   _statement = compile _statement;

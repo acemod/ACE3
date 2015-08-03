@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_player,_magazineType,_ammoCount);
+params ["_player", "_magazineType", "_ammoCount"];
 
 private ["_magazines","_index","_isRemoved"];
 _isRemoved = false;

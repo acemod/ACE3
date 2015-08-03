@@ -15,7 +15,7 @@
 
 private ["_position", "_laser", "_line", "_distance", "_iteration"];
 
-PARAMS_3(_interval,_maxDistance,_minDistance);
+params ["_interval", "_maxDistance", "_minDistance"];
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];

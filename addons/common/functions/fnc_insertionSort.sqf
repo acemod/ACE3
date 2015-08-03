@@ -10,12 +10,10 @@
 
 #include "script_component.hpp"
 
-private ["_list", "_ascending", "_tmp", "_i", "_j"];
-_list = +(_this select 0);
-_ascending = true;
-if (count _this > 1) then {
-    _ascending = _this select 1;
-};
+params ["_array", ["_ascending", true]];
+
+private ["_list", "_tmp", "_i", "_j"];
+_list = +_array;
 
 for "_i" from 1 to (count _list) - 1 do {
     _tmp = _list select _i;

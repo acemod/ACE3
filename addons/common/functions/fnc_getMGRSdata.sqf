@@ -18,7 +18,7 @@
 
 private ["_zone","_band","_GZD","_long","_lat","_UTM","_easting","_northing", "_altitude"];
 
-DEFAULT_PARAM(0,_map,worldName);
+params [["_map", worldName]];
 
 _long = getNumber (ConfigFile >> "CfgWorlds" >> _map >> "longitude");
 _lat =  getNumber (ConfigFile >> "CfgWorlds" >> _map >> "latitude");

@@ -12,7 +12,7 @@
  */
  #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 private "_muzzles";
 _muzzles = [_weapon] call FUNC(getWeaponMuzzles);
@@ -65,6 +65,6 @@ _ammo = [];
     };
 } forEach magazinesAmmoFull _unit;
 
-_weaponInfo append [_muzzles, _magazines, _ammo]; 
+_weaponInfo append [_muzzles, _magazines, _ammo];
 
 _weaponInfo

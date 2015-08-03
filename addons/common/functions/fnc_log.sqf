@@ -4,15 +4,7 @@
 if ((_this select 0) in (missionNamespace getVariable ["ACE_Debug", []])) then {
     _this resize 4;
 
-    PARAMS_4(_type,_argument,_function,_showInGame);
-
-    if (isNil "_function") then {
-        _function = {_this};
-    };
-
-    if (isNil "_showInGame") then {
-        _showInGame = true;
-    };
+    params ["_type", "_argument", ["_function", {_this}], ["_showInGame", true]];
 
     private "_result";
     _result = _argument call _function;
