@@ -11,7 +11,7 @@
 
 private ["_distance", "_lower", "_upper", "_mid", "_intersections", "_result", "_dir"];
 
-PARAMS_3(_source,_destination,_accuracy);
+params ["_source", "_destination", "_accuracy"];
 
 _result = [false, [0, 0, 0]];
 

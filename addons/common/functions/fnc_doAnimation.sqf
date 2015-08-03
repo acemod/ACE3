@@ -16,21 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_force"];
-
-PARAMS_3(_unit,_animation,_priority);
-_force = False;
+params ["_unit", "_animation", ["_priority", 0], ["_force", false]];
 
 // no animation given
 if (isNil "_animation") exitWith {
     diag_log format ["[ACE] ERROR: No animation specified in %1", _fnc_scriptNameParent];
-};
-
-if (isNil "_priority") then {
-    _priority = 0;
-};
-if (count _this > 3) then {
-    _force = _this select 3;
 };
 
 // don't overwrite more important animations

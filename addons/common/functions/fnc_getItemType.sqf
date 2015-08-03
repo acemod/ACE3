@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_item);
+params ["_item"];
 
 private ["_cfgType"];
 

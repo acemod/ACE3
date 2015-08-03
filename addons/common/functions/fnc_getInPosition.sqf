@@ -20,10 +20,8 @@
 
 private ["_position", "_index"];
 
-PARAMS_2(_unit,_vehicle);
-
-_position = toLower (_this select 2);
-_index = _this select 3;  // optional, please don't use
+params ["_unit", "_vehicle", "_position", "_index"];
+_position = toLower _position;
 
 if (isNil "_index") then {_index = -1};
 

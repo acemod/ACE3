@@ -5,9 +5,9 @@
  *
  * Argument:
  * 0: Name (String)
- * 1: Handler (Code)  
+ * 1: Handler (Code)
  * 2: TTL (Number or Code) [Optional]
- * 
+ *
  * Return value:
  * Boolean of success
  */
@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 //IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
 
-PARAMS_2(_name,_handler);
+params ["_name", "_handler"];
 
 private["_ttl", "_eventId", "_data"];
 if( (count _this) > 2) then {

@@ -1,19 +1,19 @@
 /*
  * Author: jaynus
- * 
+ *
  * Handles synced events being received. Server will log them, and server/client will execute them.
  *
  * Arguments [Client] :
  * 0: eventName (String)
  * 1: arguments (Array)
  * 2: ttl (Scalar)
- * 
+ *
  * Return value:
  * Boolean of success
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_3(_name,_args,_ttl);
+params ["_name", "_args", "_ttl"];
 private["_internalData", "_eventLog", "_eventCode"];
 
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {

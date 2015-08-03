@@ -5,13 +5,13 @@
  *
  * Argument:
  * 0: client (object)
- * 
+ *
  * Return value:
  * Boolean of success
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_1(_client);
+params ["_client"];
 
 {
     private["_eventName", "_eventEntry", "_eventLog"];

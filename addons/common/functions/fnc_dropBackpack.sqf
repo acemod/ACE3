@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 private ["_backpackObject","_holder"];
 
@@ -25,6 +25,6 @@ _holder = objNull;
     if (_backpackObject in everyBackpack _x) exitWith {
         _holder = _x;
     };
-} forEach (position _unit nearObjects ["WeaponHolder", 5]); 
+} forEach (position _unit nearObjects ["WeaponHolder", 5]);
 
 _holder

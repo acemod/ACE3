@@ -16,9 +16,8 @@
 private ["_conditionName", "_conditionFunc"];
 //IGNORE_PRIVATE_WARNING("_player", "_target");
 
-
-_conditionName = toLower (_this select 0);
-_conditionFunc = _this select 1;
+params ["_conditionName", "_conditionFunc"];
+_conditionName = toLower _conditionName;
 
 private ["_conditions", "_conditionNames", "_conditionFuncs"];
 

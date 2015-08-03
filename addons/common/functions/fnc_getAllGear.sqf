@@ -22,7 +22,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 if (isNull _unit) exitWith {[
     "",

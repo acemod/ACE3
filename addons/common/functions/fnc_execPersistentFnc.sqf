@@ -14,14 +14,10 @@
  */
 #include "script_component.hpp"
 
-private ["_arguments", "_function", "_unit", "_name"];
-
 GVAR(remoteFnc) = _this;
 
-_arguments = _this select 0;
-_function = call compile (_this select 1);
-_unit = _this select 2;
-_name = _this select 3;
+params ["_arguments", "_function", "_unit", "_name"];
+_function = call compile _function;
 
 ["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 

@@ -21,13 +21,8 @@ private ["_arguments", "_function", "_unit", "_id"];
 
 GVAR(remoteFnc) = _this;
 
-_arguments = _this select 0;
-_function = call compile (_this select 1);
-_unit = _this select 2;
-
-if (isNil "_unit") then {
-    _unit = 2;
-};
+params ["_arguments", "_function", ["_unit", 2]];
+_function = call compile _function;
 
 ["Remote", [_arguments, _this select 1, _unit], {format ["%1 call %2 to: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 

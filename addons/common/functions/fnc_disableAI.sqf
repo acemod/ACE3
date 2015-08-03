@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_disable);
+params ["_unit", "_disable"];
 
 if ((local _unit) && {!([_unit] call EFUNC(common,isPlayer))}) then {
     if (_disable) then {

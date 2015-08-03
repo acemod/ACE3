@@ -13,9 +13,9 @@
 #include "script_component.hpp"
 
 _this spawn {
-    PARAMS_2(_target,_ignoreDead);
+    params ["_target", "_ignoreDead"];
     private["_inVehicle", "_position", "_vehiclePlayer", "_vehicleTarget"];
-    
+
     if (isNil "_ignoreDead") then {_ignoreDead = false};
 
     _vehicleTarget = vehicle _target;

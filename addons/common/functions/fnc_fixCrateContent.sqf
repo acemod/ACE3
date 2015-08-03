@@ -3,7 +3,7 @@
 
 private ["_weapons", "_items"];
 
-PARAMS_1(_crate);
+params ["_crate"];
 
 // get all weapons inside the crate
 _weapons = weaponCargo _crate;

@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_function);
+params ["_function"];
 
 if (typeName _function == "STRING") exitWith {_function};
 

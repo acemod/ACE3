@@ -11,8 +11,7 @@
 #include "script_component.hpp"
 
 private ["_return", "_val", "_category"];
-PARAMS_1(_object);
-_category = if (count _this > 1) then { _this select 1 } else { "" };
+params ["_object", ["_category", ""]];
 
 if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) exitwith {
     [];
