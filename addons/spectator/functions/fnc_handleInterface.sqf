@@ -57,6 +57,8 @@ switch (toLower _mode) do {
         };
     };
     case "close": {
+        _args params ["_unit"];
+
         // Can't close a second time
         if !(GVAR(open)) exitWith {};
         GVAR(open) = false;
@@ -71,7 +73,7 @@ switch (toLower _mode) do {
         camDestroy GVAR(camera);
 
         // Return to player view
-        ACE_Player switchCamera "internal";
+        _unit switchCamera "internal";
 
         // Cleanup camera variables
         GVAR(camera) = nil;

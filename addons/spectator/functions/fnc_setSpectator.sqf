@@ -36,7 +36,7 @@ if !(local _unit) exitwith {
 if (_set) then {
     ["open"] call FUNC(handleInterface);
 } else {
-    ["close"] call FUNC(handleInterface);
+    ["close",_unit] call FUNC(handleInterface);
 };
 
 // Handle common addon audio
