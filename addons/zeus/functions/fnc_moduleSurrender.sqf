@@ -15,8 +15,9 @@
 
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated);
-private ["_mouseOver","_unit","_surrendering"];
+private ["_mouseOver", "_unit", "_surrendering"];
+
+params ["_mouseOver", "_units", "_surrendering"];
 
 if !(_activated && local _logic) exitWith {};
 

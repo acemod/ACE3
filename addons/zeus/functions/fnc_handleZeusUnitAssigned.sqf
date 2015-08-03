@@ -19,11 +19,11 @@
 
 #include "script_component.hpp"
 
-private ["_logic","_removeAddons","_numCfgs","_cfg","_requiredAddon"];
+private ["_removeAddons", "_numCfgs", "_cfg", "_requiredAddon"];
 
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 
-_logic = _this select 0;
+params ["_logic"]
 _removeAddons = [];
 
 _numCfgs = count (configFile >> "ACE_Curator");
@@ -36,7 +36,7 @@ for "_n" from 0 to (_numCfgs - 1) do {
             if !(isClass (configFile >> "CfgPatches" >> _x)) exitWith {
                 _removeAddons pushBack (configName _cfg);
             };
-        } forEach _requiredAddon;
+        } forEach _requierdAddon;
     };
 
     if (isText _cfg) then {
