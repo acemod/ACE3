@@ -123,10 +123,10 @@ class CfgWeapons {
     class Gatling_30mm_Plane_CAS_01_F: CannonCore {
         displayName = "GAU-8";
         canLock = 2;
-        dispersion = 0.0078;
-        modes[] = {"burstLO","burstHI","close","short","medium","far"};
-        autoFire = 1;
-        burst = 1;
+        dispersion = 0.0082;
+        modes[] = {"autoLO","autoHI","close","near","short","medium","far"};
+        autoFire = 0;
+        burst = 20;
         class GunParticles {
             class Effect {
                 effectName = "MachineGun3";
@@ -134,99 +134,103 @@ class CfgWeapons {
                 directionName = "Gatling_barrels_start";
             };
         };
-        class burstBase: CannonCore {
-            dispersion = 0.0078;
-            soundContinuous = 0;
-            initSpeed = 1030;
-            showToPlayer = 1;
-            aiRateOfFire = 0.5;
-            aiRateOfFireDistance = 50;
-            autoFire = 0;
-            minRange = 1;
-            minRangeProbab = 0.001;
-            midRange = 2;
-            midRangeProbab = 0.001;
-            maxRange = 3;
-            maxRangeProbab = 0.001;
-            ffMagnitude = 0.5;
-            ffFrequency = 11;
-            ffCount = 6;
+        class autoLO: Mode_FullAuto {
+            displayName = "LO";
+            displayNameShort = "LO";
+            reloadTime = 0.012;
+            dispersion = 0.0082;
+            //sounds[] = {"StandardSound"};
+            //class StandardSound {
+            //    begin1[] = {PATHTOF(sounds\GAU8_LO),6.581072,1,4500};
+            //    soundBegin[] = {"begin1",1};
+            //    weaponSoundEffect = "DefaultRifle";
+            //};
+            soundContinuous = 1;
+            autoFire = 1;
             flash = "gunfire";
             flashSize = 0.1;
-            soundBurst = 1;
             recoil = "Empty";
             aiDispersionCoefX = 10;
             aiDispersionCoefY = 10;
-        };
-        class burstLO: burstBase {
-            displayName = "LO";
+            ffMagnitude = 0.5;
+            ffFrequency = 11;
+            ffCount = 6;
+            minRange = 1;
+            minRangeProbab = 0.06;
+            midRange = 2;
+            midRangeProbab = 0.06;
+            maxRange = 3;
+            maxRangeProbab = 0.004;
+            showToPlayer = 1;
             textureType = "burst";
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                begin1[] = {PATHTOF(sounds\GAU8_LO),6.581072,1,4500};
-                soundBegin[] = {"begin1",1};
-                weaponSoundEffect = "DefaultRifle";
-            };
-            multiplier = 2;
-            burst = 27;
-            reloadTime = 0.037;
         };
-        class burstHI: burstBase {
+        class autoHI: autoLO {
             displayName = "HI";
+            displayNameShort = "HI";
+            reloadTime = 0.008;
             textureType = "fullAuto";
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                begin1[] = {PATHTOF(sounds\GAU8_HI),6.581072,1,4500};
-                soundBegin[] = {"begin1",1};
-                weaponSoundEffect = "DefaultRifle";
-            };
-            multiplier = 3;
-            burst = 35;
-            reloadTime = 0.0128;
+            //class StandardSound {
+            //    begin1[] = {PATHTOF(sounds\GAU8_HI),6.581072,1,4500};
+            //    soundBegin[] = {"begin1",1};
+            //    weaponSoundEffect = "DefaultRifle";
+            //};
         };
-        class close: burstHI {
+        class close: autoLO {
             showToPlayer = 0;
-            aiRateOfFire = 0.5;
+            burst = 25;
+            aiRateOfFire = 0.25;
             aiRateOfFireDistance = 400;
-            minRange = 0;
+            minRange = 1;
+            minRangeProbab = 0.35;
             midRange = 200;
+            midRangeProbab = 0.88;
             maxRange = 400;
-            minRangeProbab = 0.04;
-            midRangeProbab = 0.2;
-            maxRangeProbab = 0.1;
+            maxRangeProbab = 0.3;
         };
-        class short: burstHI {
+        class near: close {
             showToPlayer = 0;
-            aiRateOfFire = 1;
+            burst = 20;
+            aiRateOfFire = 0.25;
+            aiRateOfFireDistance = 400;
+            minRange = 1;
+            minRangeProbab = 0.35;
+            midRange = 150;
+            midRangeProbab = 0.88;
+            maxRange = 300;
+            maxRangeProbab = 0.3;
+        };
+        class short: close {
+            burst = 15;
+            aiRateOfFire = 0.5;
             aiRateOfFireDistance = 600;
             minRange = 200;
-            midRange = 500;
-            maxRange = 800;
-            minRangeProbab = 0.1;
-            midRangeProbab = 0.2;
-            maxRangeProbab = 0.1;
+            minRangeProbab = 0.3;
+            midRange = 400;
+            midRangeProbab = 0.88;
+            maxRange = 600;
+            maxRangeProbab = 0.3;
         };
-        class medium: burstHI {
-            showToPlayer = 0;
-            aiRateOfFire = 2;
-            aiRateOfFireDistance = 800;
-            minRange = 600;
-            midRange = 800;
-            maxRange = 1000;
-            minRangeProbab = 0.1;
-            midRangeProbab = 0.2;
-            maxRangeProbab = "0.1´";
+        class medium: close {
+            burst = 10;
+            aiRateOfFire = 1;
+            aiRateOfFireDistance = 900;
+            minRange = 400;
+            minRangeProbab = 0.3;
+            midRange = 700;
+            midRangeProbab = 0.78;
+            maxRange = 900;
+            maxRangeProbab = 0.2;
         };
-        class far: burstHI {
-            showToPlayer = 0;
-            aiRateOfFire = 3;
-            aiRateOfFireDistance = 1000;
+        class far: close {
+            burst = 5;
+            aiRateOfFire = 1.5;
+            aiRateOfFireDistance = 1500;
             minRange = 800;
-            minRangeProbab = 0.1;
+            minRangeProbab = 0.2;
             midRange = 1000;
-            midRangeProbab = 0.2;
+            midRangeProbab = 0.6;
             maxRange = 1500;
-            maxRangeProbab = 0.4;
+            maxRangeProbab = 0.1;
         };
     };
 };

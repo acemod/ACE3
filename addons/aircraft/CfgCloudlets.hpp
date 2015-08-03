@@ -94,7 +94,7 @@ class CfgCloudlets {
         rotationVelocity = 1;
         rotationVelocityVar = 120;
         rubbing = 0.5;
-        size[] = {1,8};
+        size[] = {1,2};
         sizeVar = 0.3;
         volume = 1;
         weight = 3;

@@ -50,12 +50,12 @@ class CfgAmmo {
         timeToLive = 40;
     };
 
-    // Gau8 Mix ammo (AP&HE)
+    // GAU-8 Mix ammo (AP&HE)
     class ACE_GAU8_30mm_Mix_Plane_CAS_01_F: Gatling_30mm_HE_Plane_CAS_01_F {
-        hit = 300;
-        indirectHit = 110;
+        hit = 120;
+        indirectHit = 80;
         indirectHitRange = 3.5;
-        caliber = 4.17;
+        caliber = 4.16;
         airFriction = -0.00036;
         explosive = 0.35;
         typicalSpeed = 1036;
@@ -63,7 +63,7 @@ class CfgAmmo {
         multiSoundHit[] = {"soundHit1",1};
         explosionSoundEffect = "DefaultExplosion";
         explosionEffects = "Gau8ShellImpact";
-        //muzzleEffect = ""; @todo
+        muzzleEffect = ""; //replaced with Fired EH couse this not support fncs from preinit
         craterEffects = "HEShellCrater";
         tracersEvery = 0;
     };
