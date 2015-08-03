@@ -16,7 +16,8 @@
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 private ["_vehicle","_emptyPos"];
-PARAMS_1(_unit);
+
+params ["_unit"];
 _vehicle = vehicle _unit;
 
 if (_vehicle == _unit) exitwith {false;};

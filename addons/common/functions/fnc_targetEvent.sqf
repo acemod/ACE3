@@ -18,7 +18,7 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-PARAMS_3(_eventName,_eventTargets,_eventArgs);
+params ["_eventName", "_eventTargets", "_eventArgs"];
 
 #ifdef DEBUG_EVENTS
     diag_log text format[ARR_3("* Target Event: %1 - %2",_eventName,_eventTargets)];

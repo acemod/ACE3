@@ -13,7 +13,7 @@
 
 private ["_decimals"];
 
-PARAMS_1(_number);
+params ["_number"];
 
 _decimals = str (abs(_number) mod 1);
 _decimals = toArray _decimals;

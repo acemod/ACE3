@@ -13,7 +13,6 @@
  */
 #include "script_component.hpp"
 
-private ["_conditionName", "_conditionFunc"];
 //IGNORE_PRIVATE_WARNING("_player", "_target");
 
 params ["_conditionName", "_conditionFunc"];

@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_func,_params,_delay);
+params ["_func", "_params", "_delay"];
 
 GVAR(waitAndExecArray) pushBack [(ACE_time + _delay), _func, _params];
 GVAR(waitAndExecArray) sort true;

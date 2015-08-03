@@ -14,7 +14,7 @@
 
 private ["_unitPos","_lightLevel"];
 
-PARAMS_2(_unit,_lightSource);
+params ["_unit", "_lightSource"];
 
 _unitPos = _unit modelToWorld (_unit selectionPosition "spine3");
 _lightLevel = 0;

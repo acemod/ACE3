@@ -11,9 +11,9 @@
 
 private ["_code","_persistent"];
 
-// If not enough parameters are given, exit early.
-if (count _this < 3) exitWith {};
 params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persistent", false]];
+// If not enough parameters are given, exit early.
+if (isNil "_defaultGlobal") exitWith {};
 
 if (typeName _name != typeName "") exitwith {
     [format["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);

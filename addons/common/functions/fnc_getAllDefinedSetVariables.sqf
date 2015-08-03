@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-private ["_return", "_val", "_category"];
+private ["_return", "_val"];
 params ["_object", ["_category", ""]];
 
 if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) exitwith {

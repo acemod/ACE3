@@ -15,7 +15,6 @@
 
 private ["_unit", "_excludeRemoteControlled"];
 
-_unit                         = _this select 0;
-_excludeRemoteControlled      = if (count _this > 1) then {_this select 1} else {false};
+params ["_unit", ["_excludeRemoteControlled", false]];
 
 isPlayer _unit || (!_excludeRemoteControlled && {_unit == call FUNC(player)})

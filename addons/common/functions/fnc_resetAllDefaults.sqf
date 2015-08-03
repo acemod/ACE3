@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _unit setvariable ["ACE_isDead",nil,true];
 _unit setvariable ["ACE_isUnconscious", nil, true];

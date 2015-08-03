@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_5(_caller,_target,_requestID,_requestMessage,_callBack);
+params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
 _requestID = ("ace_recieveRequest_f_id_"+_requestID);
 

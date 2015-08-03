@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_arguments", "_function", "_unit", "_id"];
+private "_id";
 
 GVAR(remoteFnc) = _this;
 

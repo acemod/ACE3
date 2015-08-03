@@ -12,8 +12,9 @@ A hexadecimal number, String
 */
 #include "script_component.hpp"
 
-private ["_number"];
-_number = ((round abs (_this select 0)) max 0) min 255;
+params ["_number"];
+
+_number = ((round abs _number) max 0) min 255;
 
 if (isNil QGVAR(hexArray)) then {
     private ["_minLength", "_i", "_num", "_hex", "_rest"];

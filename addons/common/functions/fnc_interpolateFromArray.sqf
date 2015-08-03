@@ -3,7 +3,7 @@
 
 private ["_min", "_max"];
 
-PARAMS_2(_array,_value);
+params ["_array", "_value"];
 
 _min = _array select floor _value;
 _max = _array select ceil _value;

@@ -11,7 +11,7 @@
 #include "script_component.hpp"
 
 private ["_return"];
-PARAMS_2(_unit,_magazine);
+params ["_unit", "_magazine"];
 
 if (_magazine != "") then {
     _return =  (_magazine in magazines _unit);

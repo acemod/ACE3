@@ -11,4 +11,6 @@
  */
 #include "script_component.hpp"
 
-!isNull (_this select 0) && {alive (_this select 0)}
+params ["_object"];
+
+!isNull (_object) && {alive _object}

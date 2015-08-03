@@ -15,7 +15,6 @@
 
 #include "script_component.hpp"
 
-private ["_imageColor", "_target"];
 params ["_text", "_image", ["_imageColor", [1,1,1]], ["_target", ACE_player]];
 _imageColor resize 3;
 

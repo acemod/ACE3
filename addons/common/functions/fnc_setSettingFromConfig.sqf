@@ -12,12 +12,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_optionEntry);
+params ["_optionEntry"];
 
 private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData", "_valueConfig", "_text"];
 
 _fnc_getValueWithType = {
-    EXPLODE_2_PVT(_this,_optionEntry,_typeName);
+    params ["_optionEntry", "_typeName"];
 
     _valueConfig = (_optionEntry >> "value");
     _value = if (isNumber (_optionEntry >> "value")) then {getNumber (_optionEntry >> "value")} else {0};

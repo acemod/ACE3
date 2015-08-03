@@ -13,4 +13,4 @@
 
 params ["_unit"];
 
-(_unit call BIS_fnc_getPitchBank) + [getDir (_this select 0)]
+(_unit call BIS_fnc_getPitchBank) + [getDir _unit]

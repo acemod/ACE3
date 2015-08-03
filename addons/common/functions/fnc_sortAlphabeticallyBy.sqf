@@ -12,7 +12,7 @@
 
 private ["_elements","_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
 
-PARAMS_2(_array,_elementN);
+params ["_array", "_elementN"];
 
 _indexes = [];
 _elements = [];

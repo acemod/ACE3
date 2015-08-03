@@ -13,7 +13,7 @@
 
 private ["_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
-PARAMS_1(_id);
+params ["_id"];
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
