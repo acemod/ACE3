@@ -26,4 +26,3 @@ if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) then {
 GVAR(OBJECT_VARIABLES_STORAGE) pushback [_name,_value,_defaultGlobal,_category,_code, _persistent];
 
 missionNamespace setvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + _name, [_name,_value,_defaultGlobal,_category,_code, _persistent]];
-

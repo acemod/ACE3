@@ -27,4 +27,3 @@ deleteVehicle _ACE_HeadbugFix;
 player setposATL _pos;
 player setDir _dir;
 titleCut ["", "PLAIN"];
-
