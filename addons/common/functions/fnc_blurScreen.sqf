@@ -11,7 +11,7 @@
 #include "script_component.hpp"
 
 private ["_show"];
-PARAMS_1(_id);
+params ["_id"];
 _show = if (count _this > 1) then {_this select 1} else {false};
 
 if (isNil QGVAR(SHOW_BLUR_SCREEN_COLLECTION)) then {

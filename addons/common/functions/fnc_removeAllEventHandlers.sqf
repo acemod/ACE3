@@ -11,7 +11,8 @@
  */
 #include "script_component.hpp"
 private ["_eventNames", "_eventFunctions", "_eventIndex"];
-PARAMS_1(_eventName);
+
+params ["_eventName"];
 
 _eventNames = GVAR(events) select 0;
 _eventFunctions = [];

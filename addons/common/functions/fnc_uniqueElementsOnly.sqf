@@ -11,7 +11,8 @@
 #include "script_component.hpp"
 
 private ["_result", "_value"];
-PARAMS_1(_array);
+
+params ["_array"];
 
 _result = [];
 {

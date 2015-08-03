@@ -19,14 +19,10 @@
 #define CANGETINDRIVER      (isNull (driver _vehicle)             || {!alive driver _vehicle})               && {!lockedDriver _vehicle}           && {getNumber (_config >> "isUav") != 1}
 #define CANGETINTURRETINDEX (isNull (_vehicle turretUnit _turret) || {!alive (_vehicle turretUnit _turret)}) && {!(_vehicle lockedTurret _turret)} && {getNumber (_config >> "isUav") != 1}
 
-private ["_position", "_checkDistance", "_index"];
-
 _this resize 5;
 
-PARAMS_2(_unit,_vehicle);
-_position = toLower (_this select 2);
-_checkDistance = _this select 3;
-_index = _this select 4;  // optional, please don't use
+params ["_unit", "_vehicle", "_position", "_checkDistance", "_index"];
+_position = toLower _position;
 
 if (isNil "_checkDistance") then {_checkDistance = false};
 if (isNil "_index") then {_index = -1};

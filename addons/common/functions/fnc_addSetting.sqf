@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_8(_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
+params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_isForced", "_value"];
 
 private ["_settingData"];
 

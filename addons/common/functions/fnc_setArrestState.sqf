@@ -39,4 +39,3 @@ if (_setArrest) then {
         [["arrested", false],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
 };
-

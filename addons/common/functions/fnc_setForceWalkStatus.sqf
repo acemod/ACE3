@@ -22,7 +22,7 @@ Example:
 
 private ["_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
 
-PARAMS_3(_unit,_reason,_status);
+params ["_unit", "_reason", "_status"];
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 

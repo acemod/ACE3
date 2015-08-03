@@ -13,7 +13,7 @@
 
 private ["_turrets", "_doorTurrets", "_config"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _turrets = allTurrets [_vehicle, true];
 

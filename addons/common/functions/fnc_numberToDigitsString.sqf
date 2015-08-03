@@ -14,7 +14,7 @@
 
 private ["_length"];
 
-PARAMS_2(_number,_minLength);
+params ["_number", "_minLength"];
 
 _number = _number min 999999;
 

@@ -19,7 +19,7 @@ Example:
 
 private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 

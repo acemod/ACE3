@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_name);
+params ["_name"];
 
 private ["_value"];
 _value = [];

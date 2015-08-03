@@ -13,7 +13,7 @@
 
 private ["_muzzles"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
 

@@ -3,7 +3,8 @@
 
 private ["_vals"];
 
-PARAMS_3(_hashList,_index,_value);
+params ["_hashList", "_index", "_value"];
+
 ERRORDATA(3);
 try {
     if(VALIDHASH(_hashList)) then {

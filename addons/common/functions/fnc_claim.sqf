@@ -13,8 +13,8 @@
  *
  */
 #include "script_component.hpp"
- 
-PARAMS_3(_unit,_target,_lockTarget);
+
+params ["_unit", "_target", "_lockTarget"];
 
 if (isNil "_lockTarget") then {_lockTarget = false};
 

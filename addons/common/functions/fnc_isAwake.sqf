@@ -10,6 +10,6 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 (!(_unit getvariable ["ACE_isUnconscious",false]) && alive _unit && !(_unit getvariable ["ACE_isDead",false]));

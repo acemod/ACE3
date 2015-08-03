@@ -15,12 +15,10 @@
 
 private ["_position", "_positionX", "_positionY", "_positionZ", "_intersections"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _position = eyePos _unit;
-_positionX = _position select 0;
-_positionY = _position select 1;
-_positionZ = _position select 2;
+_position params ["_positionX", "_positionY", "_positionZ"];
 _intersections = 0;
 
 if (lineIntersects [_position, [_positionX, _positionY, _positionZ + DISTANCE]]) then {

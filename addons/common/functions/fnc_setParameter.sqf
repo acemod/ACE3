@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_name,_value);
+params ["_name", "_value"];
 
 // Hack to keep backward compatibility for the moment
 if ((typeName (missionNamespace getVariable _name)) == "BOOL") then {

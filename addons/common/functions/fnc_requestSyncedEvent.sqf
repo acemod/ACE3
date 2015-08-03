@@ -5,13 +5,14 @@
  *
  * Argument:
  * 0: eventName (String)
- * 
+ *
  * Return value:
  * Boolean of success
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_1(_eventName);
+
+params ["_eventName"];
 
 // Only JIP machines on initialization send this off, requesting sync on events with the serverCommand
 if(isServer) exitWith { false };

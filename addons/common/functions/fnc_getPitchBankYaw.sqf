@@ -11,4 +11,6 @@
  */
 #include "script_component.hpp"
 
-((_this select 0) call BIS_fnc_getPitchBank) + [getDir (_this select 0)]
+params ["_unit"];
+
+(_unit call BIS_fnc_getPitchBank) + [getDir _unit]

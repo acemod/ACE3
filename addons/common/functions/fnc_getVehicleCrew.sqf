@@ -14,7 +14,7 @@
 
 private ["_crew"];
 
-PARAMS_2(_vehicle,_types);
+params ["_vehicle", "_types"];
 
 _crew = [];
 

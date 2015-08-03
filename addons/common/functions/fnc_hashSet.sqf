@@ -4,7 +4,7 @@
 private ["_index"];
 // diag_log text format["%1 HASH SET: %2", ACE_diagTime, _this];
 
-PARAMS_3(_hash,_key,_val);
+params ["_hash", "_key", "_val"];
 
 ERRORDATA(3);
 try {

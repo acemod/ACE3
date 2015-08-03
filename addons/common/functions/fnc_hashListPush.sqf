@@ -1,7 +1,7 @@
 //fnc_hashListPush.sqf
 #include "script_component.hpp"
 
-PARAMS_2(_hashList,_value);
+params ["_hashList", "_value"];
 
 ERRORDATA(2);
 try {

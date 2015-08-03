@@ -14,7 +14,7 @@
 
 private ["_index", "_offset", "_config2", "_foundClasses", "_a"];
 
-PARAMS_2(_config,_turretIndex);
+params ["_config", "_turretIndex"];
 
 for "_index" from 0 to (count _turretIndex - 1) do {
     _config = _config >> "Turrets";

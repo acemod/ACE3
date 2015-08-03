@@ -13,7 +13,7 @@
 
 private ["_config", "_hitpoints", "_selections", "_i"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 

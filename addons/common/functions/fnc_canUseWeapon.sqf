@@ -5,7 +5,7 @@
 
 private ["_config"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 if (_unit == vehicle _unit) exitWith {true};
 

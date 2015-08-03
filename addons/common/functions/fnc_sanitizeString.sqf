@@ -14,7 +14,7 @@
 
 private ["_array", "_arrayNew"];
 
-PARAMS_2(_string,_removeTags);
+params ["_string", "_removeTags"];
 
 if (isNil "_removeTags") then {_removeTags = false};
 

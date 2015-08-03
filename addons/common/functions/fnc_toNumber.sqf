@@ -18,8 +18,10 @@
 */
 #include "script_component.hpp"
 
-if (typeName (_this select 0) == "SCALAR") exitWith {
-    (_this select 0)
+params ["_value"];
+
+if (typeName _value == "SCALAR") exitWith {
+    _value
 };
 
-(parseNumber (_this select 0))
+(parseNumber _value)

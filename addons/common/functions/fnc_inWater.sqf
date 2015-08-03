@@ -12,7 +12,7 @@
 
 private ["_return","_aslPos"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _return = false;
 
 if ((surfaceIsWater getPos _unit)) then {

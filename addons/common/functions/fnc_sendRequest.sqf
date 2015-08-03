@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_5(_caller,_target,_requestID,_requestMessage,_callBack);
+params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
 if (isPlayer _target) then {
     // Pass request on to target locality for player accept/decline.

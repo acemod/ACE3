@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_light);
+params ["_vehicle", "_light"];
 
 private "_config";
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Reflectors" >> _light;
