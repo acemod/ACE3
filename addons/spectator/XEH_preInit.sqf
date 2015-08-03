@@ -2,15 +2,21 @@
 
 ADDON = false;
 
+PREP(bi_respawnBase);
+PREP(bi_respawnCounter);
+PREP(bi_respawnEndMission);
+PREP(bi_respawnInstant);
+PREP(bi_respawnNone);
+PREP(bi_respawnSeagull);
+PREP(bi_respawnSpectator);
+PREP(bi_respawnWave);
 PREP(cacheUnitInfo);
 PREP(cycleCamera);
 PREP(handleCamera);
 PREP(handleCompass);
 PREP(handleIcons);
 PREP(handleInterface);
-PREP(handleKilled);
 PREP(handleMouse);
-PREP(handleRespawn);
 PREP(handleToolbar);
 PREP(handleUnits);
 PREP(moduleSpectatorSettings);
@@ -38,7 +44,7 @@ GVAR(camUnit) = objNull;
 GVAR(camVision) = -2;
 GVAR(camZoom) = 1.25;
 
-GVAR(open) = false;
+GVAR(isSet) = false;
 
 GVAR(showComp) = true;
 GVAR(showHelp) = true;

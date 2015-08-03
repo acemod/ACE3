@@ -30,7 +30,7 @@ if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 if !(isPlayer _unit) exitWith {};
 
 if !(local _unit) exitwith {
-    [[_unit, _set, _target], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
+    [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
 };
 
 // Prevent player falling into water
@@ -49,7 +49,7 @@ if (_set) then {
     [_unit, QGVAR(isStaged)] call EFUNC(common,hideUnit);
     [_unit, QGVAR(isStaged)] call EFUNC(common,muteUnit);
 
-    _unit setPos (getMarkerPos QGVAR(respawn));
+    _unit setPos (markerPos QGVAR(respawn));
 } else {
     // Physical beings can talk
     [_unit, QGVAR(isStaged)] call EFUNC(common,unhideUnit);

@@ -23,8 +23,7 @@ switch (toLower _mode) do {
     // Safely open/close the interface
     case "open": {
         // Prevent reopening
-        if (GVAR(open)) exitWith {};
-        GVAR(open) = true;
+        if (GVAR(isSet)) exitWith {};
 
         // Initalize camera variables
         GVAR(camBoom) = 0;
@@ -37,14 +36,16 @@ switch (toLower _mode) do {
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
 
-        // Camera starts with night vision if it's dark
-        if (sunOrMoon < 1) then {
-            [nil,nil,-1] call FUNC(setCameraAttributes);
-        };
-
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
+
+        // Close map
+        openMap [false,false];
+
+        // Close any BI layers/effects
+        BIS_fnc_feedback_allowPP = false;
+        ("BIS_fnc_respawnCounter" call BIS_fnc_rscLayer) cutText ["","plain"];
 
         // Close all existing dialogs
         while {dialog} do {
@@ -65,8 +66,7 @@ switch (toLower _mode) do {
         _args params ["_unit"];
 
         // Can't close a second time
-        if !(GVAR(open)) exitWith {};
-        GVAR(open) = false;
+        if !(GVAR(isSet)) exitWith {};
 
         // Terminate interface
         while {dialog} do {
@@ -79,6 +79,10 @@ switch (toLower _mode) do {
 
         // Return to player view
         _unit switchCamera "internal";
+
+        // Re-enable any BI effects
+        BIS_fnc_feedback_allowPP = true;
+        BIS_fnc_respawnNone_start = nil;
 
         // Cleanup camera variables
         GVAR(camera) = nil;
