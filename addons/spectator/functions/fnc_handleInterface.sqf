@@ -37,6 +37,11 @@ switch (toLower _mode) do {
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
 
+        // Camera starts with night vision if it's dark
+        if (sunOrMoon < 1) then {
+            [nil,nil,-1] call FUNC(setCameraAttributes);
+        };
+
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
