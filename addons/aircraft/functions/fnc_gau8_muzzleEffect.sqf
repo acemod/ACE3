@@ -19,8 +19,6 @@
 
 private ["_weapon", "_projectile", "_i", "_no"];
 
-odp = _this;
-
 _weapon =  param [1];
 _projectile = param [6];
 
