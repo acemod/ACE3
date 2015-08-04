@@ -10,7 +10,7 @@
  * 3: Account for obstacles <BOOL>
  *
  * Return Value:
- * 0: wind speed - m/s <NUMBER>
+ * wind speed - m/s <NUMBER>
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 
 private ["_windSpeed", "_windDir", "_height", "_newWindSpeed", "_windSource", "_roughnessLength"];
 
-PARAMS_4(_position,_windGradientEnabled,_terrainEffectEnabled,_obstacleEffectEnabled);
+params ["_position", "_windGradientEnabled", "_terrainEffectEnabled", "_obstacleEffectEnabled"];
 
 fnc_polar2vect = {
     private ["_mag2D"];
