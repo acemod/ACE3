@@ -43,11 +43,11 @@ if (vehicle _caller == _caller) then {
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
 _weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), []]);
-if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "") || {_previousWeapon in (weapons _caller)}}) then {
+if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "") && {_previousWeapon in (weapons _caller)}}) then {
     for "_index" from 0 to 99 do {
         _caller action ["SwitchWeapon", _caller, _caller, _index];
         //Just check weapon, muzzle and mode (ignore ammo in case they were reloading)
-        if (((weaponState _caller) select [0,3]) isEqualTo (_weaponSelect select [0,3])) exitWith {};
+        if (((weaponState _caller) select [0,3]) isEqualTo (_weaponSelect select [0,3])) exitWith {TRACE_1("Restoring", (weaponState _caller));};
         if ((weaponState _caller) isEqualTo ["","","","",0]) exitWith {ERROR("weaponState not found");};
     };
 } else {
