@@ -22,7 +22,7 @@
 
 private ["_vehLockpickStrenth","_condition","_returnValue"];
 
-PARAMS_3(_unit,_veh,_funcType);
+params ["_unit", "_veh", "_funcType"];
 
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};
@@ -41,25 +41,20 @@ if (_vehLockpickStrenth < 0) exitWith {false};
 
 //Condition check for progressBar
 _condition = {
-    PARAMS_1(_args);
-    EXPLODE_2_PVT(_args,_unit,_veh);
+    params ["_args"];
+    _args params ["_args", "_unit", "_veh"];
     ((_unit distance _veh) < 5) && {(speed _veh) < 0.1}
 };
 
 if (!([[_unit, _veh]] call _condition)) exitWith {false};
 
-_returnValue = false;
-switch (true) do {
-case (_funcType == "canLockpick"): {
-        _returnValue = true;
-    };
-case (_funcType == "startLockpick"): {
+_returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
+switch (_funcType) do {
+    case "startLockpick": {
         [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition] call EFUNC(common,progressBar);
-        _returnValue = true;
     };
-case (_funcType == "finishLockpick"): {
+    case "finishLockpick": {
         ["VehicleLock_SetVehicleLock", [_veh], [_veh, false]] call EFUNC(common,targetEvent);
-        _returnValue = true;
     };
     default {
         ERROR("bad function type");
