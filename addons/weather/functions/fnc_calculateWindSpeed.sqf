@@ -16,18 +16,20 @@
  */
 #include "script_component.hpp"
 
-private ["_windSpeed", "_windDir", "_height", "_newWindSpeed", "_windSource", "_roughnessLength"];
+private ["_fnc_polar2vect", "_windSpeed", "_windDir", "_windDirAdjusted", "_height", "_newWindSpeed", "_windSource", "_roughnessLength"];
 
 params ["_position", "_windGradientEnabled", "_terrainEffectEnabled", "_obstacleEffectEnabled"];
 
-fnc_polar2vect = {
+_fnc_polar2vect = {
     private ["_mag2D"];
-    _mag2D = (_this select 0) * cos((_this select 2));
-    [_mag2D * sin((_this select 1)), _mag2D * cos((_this select 1)), (_this select 0) * sin((_this select 2))];
+    params ["_x", "_y", "_z"];
+    _mag2D = _x * cos(_z);
+    [_mag2D * sin(_y), _mag2D * cos(_y), _x * sin(_z)];
 };
 
 _windSpeed = vectorMagnitude ACE_wind;
 _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+_windDirAdjusted = _windDir + 180;
 
 // Wind gradient
 if (_windGradientEnabled) then {
@@ -46,19 +48,19 @@ if (_terrainEffectEnabled) then {
     if (_windSpeed > 0.05) then {
         _newWindSpeed = 0;
         {
-            _windSource = [100, _windDir + 180, _x] call fnc_polar2vect;
+            _windSource = [100, _windDirAdjusted, _x] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
-            _windSource = [100, _windDir + 180 + _x, 0] call fnc_polar2vect;
+            _windSource = [100, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
-            _windSource = [100, _windDir + 180 - _x, 0] call fnc_polar2vect;
+            _windSource = [100, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
-        } forEach [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        } count [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         _windSpeed = _newWindSpeed;
     };
 };
@@ -68,19 +70,19 @@ if (_obstacleEffectEnabled) then {
     if (_windSpeed > 0.05) then {
         _newWindSpeed = 0;
         {
-            _windSource = [20, _windDir + 180, _x] call fnc_polar2vect;
+            _windSource = [20, _windDirAdjusted, _x] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
-            _windSource = [20, _windDir + 180 + _x, 0] call fnc_polar2vect;
+            _windSource = [20, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
-            _windSource = [20, _windDir + 180 - _x, 0] call fnc_polar2vect;
+            _windSource = [20, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
-        } forEach [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
+        } count [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
         _windSpeed = _newWindSpeed;
     };
 };
