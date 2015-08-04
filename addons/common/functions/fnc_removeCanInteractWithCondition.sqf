@@ -12,9 +12,8 @@
  */
 #include "script_component.hpp"
 
-private "_conditionName";
-
-_conditionName = toLower (_this select 0);
+params ["_conditionName"];
+_conditionName = toLower _conditionName;
 
 private ["_conditions", "_conditionNames", "_conditionFuncs"];
 

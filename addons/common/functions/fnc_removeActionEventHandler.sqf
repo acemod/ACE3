@@ -15,7 +15,7 @@
 
 private ["_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs"];
 
-PARAMS_3(_unit,_action,_id);
+params ["_unit", "_action", "_id"];
 
 if (_id == -1) exitWith {};
 

@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
 {
     if (isNil "_x") then {

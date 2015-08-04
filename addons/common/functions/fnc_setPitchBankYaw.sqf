@@ -15,12 +15,10 @@
  */
 #include "script_component.hpp"
 
-private ["_object", "_aroundX", "_aroundY", "_aroundZ", "_dirX", "_dirY", "_dirZ", "_upX", "_upY", "_upZ", "_dir", "_up", "_dirXTemp", "_upXTemp"];
+private ["_dirX", "_dirY", "_dirZ", "_upX", "_upY", "_upZ", "_dir", "_up", "_dirXTemp", "_upXTemp"];
 
-_object = _this select 0;
-_aroundX = _this select 1;
-_aroundY = _this select 2;
-_aroundZ = (360 - (_this select 3)) - 360;
+params ["_object", "_aroundX", "_aroundY", "_aroundZ"];
+_aroundZ = (360 - _aroundZ) - 360;
 
 _dirX = 0;
 _dirY = 1;

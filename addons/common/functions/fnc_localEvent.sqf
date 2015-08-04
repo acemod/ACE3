@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName", "_eventArgs"];
 
 private["_eventIndex", "_eventNames", "_events"];
 
@@ -24,7 +24,7 @@ if(_eventIndex != -1) then {
         diag_log text format[ARR_2("* Local Event: %1",_eventName)];
         diag_log text format[ARR_2("    args=%1",_eventArgs)];
     #endif
-    
+
     {
         if(!isNil "_x") then {
             _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Local Event %1 ID: %2",_eventName,_forEachIndex)]);

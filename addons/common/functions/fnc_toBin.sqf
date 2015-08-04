@@ -14,9 +14,7 @@ A binary number, String
 
 private ["_sign", "_bin", "_rest"];
 
-PARAMS_2(_number,_minLength);
-
-if (isNil "_minLength") then {_minLength = 1};
+params ["_number", ["_minLength", 1]];
 
 _sign = ["", "-"] select (_number < 0);
 

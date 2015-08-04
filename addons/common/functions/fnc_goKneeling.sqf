@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 //IGNORE_PRIVATE_WARNING("_exception");
 

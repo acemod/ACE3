@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_5(_params,_function,_namespace,_uid,_duration);
+params ["_params", "_function", "_namespace", "_uid", "_duration"];
 
 //IGNORE_PRIVATE_WARNING("_eventName");
 

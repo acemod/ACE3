@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 private ["_returnAnimation", "_animationState", "_unitAnimationCfg", "_unitActionsCfg", "_interpolateArray", "_indexAnimation", "_index"];
 

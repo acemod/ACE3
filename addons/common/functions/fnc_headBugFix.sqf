@@ -10,33 +10,20 @@
 
 #include "script_component.hpp"
 private ["_pos","_dir","_anim"];
-
-_anim = animationState ACE_player;
-["HeadbugFixUsed", [profileName, _anim]] call FUNC(serverEvent);
-["HeadbugFixUsed", [profileName, _anim]] call FUNC(localEvent);
-
-if (ACE_player != vehicle ACE_player  || { !([ACE_player, objNull, ["isNotSitting"]] call FUNC(canInteractWith)) } ) exitWith {false};
-
-_pos = getposATL ACE_player;
-_dir = getDir ACE_player;
-
+if (player != vehicle player  || {(player getvariable ["ace_isUnconscious", false])}) exitWith {};
 titleCut ["", "BLACK"];
-[ACE_Player, "headBugFix"] call FUNC(hideUnit);
-
+_pos = getposATL player;
+_dir = getDir player;
+_anim = animationState player;
 // create invisible headbug fix vehicle
-_ACE_HeadbugFix = "ACE_Headbug_Fix" createVehicleLocal _pos;
+_ACE_HeadbugFix = createVehicle ["ACE_Headbug_Fix", getposATL player, [], 0, "NONE"];
 _ACE_HeadbugFix setDir _dir;
-ACE_player moveInAny _ACE_HeadbugFix;
-sleep 0.1;
-
-unassignVehicle ACE_player;
-ACE_player action ["Eject", vehicle ACE_player];
-ACE_player setDir _dir;
-ACE_player setposATL _pos;
+player moveInAny _ACE_HeadbugFix;
 sleep 1.0;
-
+unassignVehicle player;
+player action ["Eject", vehicle player];
+sleep 1.0;
 deleteVehicle _ACE_HeadbugFix;
-
-[ACE_Player, "headBugFix"] call FUNC(unhideUnit);
+player setposATL _pos;
+player setDir _dir;
 titleCut ["", "PLAIN"];
-true

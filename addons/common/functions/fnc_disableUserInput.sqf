@@ -15,7 +15,7 @@
 
 private ["_dlg"];
 
-PARAMS_1(_state);
+params ["_state"];
 
 if (_state) then {
     disableSerialization;

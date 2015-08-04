@@ -10,11 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_side","_previousGroup","_newGroup", "_currentGroup", "_switch", "_originalSide", "_previousGroupsList", "_id"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_switch = [_this, 1, false,[false]] call BIS_fnc_Param;
-_id = [_this, 2, "", [""]] call BIS_fnc_Param;
-_side = [_this, 3, side _unit,[west]] call BIS_fnc_Param;
+private ["_previousGroup","_newGroup", "_currentGroup", "_originalSide", "_previousGroupsList"];
+params [["_unit",ObjNull,[ObjNull]], ["_switch",false,[false]], ["_id","",[""]],["_side",side _unit,[west]]];
 
 _previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo),[]];
 if (_switch) then {

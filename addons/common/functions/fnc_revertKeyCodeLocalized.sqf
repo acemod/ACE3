@@ -13,7 +13,7 @@
 
 private ["_key", "_alt", "_ctrl", "_shift"];
 
-PARAMS_1(_keyCode);
+params ["_keyCode"];
 
 _key = toString ((toArray keyName floor _keyCode) - [34]);
 

@@ -15,7 +15,7 @@
 
 private ["_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
 
-PARAMS_3(_unit,_reason,_status);
+params ["_unit", "_reason", "_status"];
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 

@@ -16,7 +16,7 @@
 
 #define KEY_MODIFIERS [42, 54, 29, 157, 56, 184]
 
-PARAMS_1(_key);
+params ["_key"];
 
 if (_key in KEY_MODIFIERS) exitWith {_key};
 

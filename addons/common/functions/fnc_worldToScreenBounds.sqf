@@ -7,7 +7,7 @@
 
 private ["_minX","_minY","_maxX","_maxY", "_bounds", "_boundsCorners", "_boundsMax", "_boundsMaxX", "_boundsMaxY", "_boundsMaxZ", "_boundsMin", "_boundsMinX", "_boundsMinY", "_boundsMinZ"];
 
-PARAMS_3(_object,_margins,_offsets);
+params ["_object", "_margins", "_offsets"];
 
 _minX = 10;
 _minY = 10;

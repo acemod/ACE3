@@ -16,7 +16,7 @@
 
 if !(isServer) exitWith {};
 
-PARAMS_3(_logic,_settingName,_moduleVariable);
+params ["_logic", "_settingName", "_moduleVariable"];
 
 // Check if the parameter is defined in the module
 if (isNil {_logic getVariable _moduleVariable}) exitWith {

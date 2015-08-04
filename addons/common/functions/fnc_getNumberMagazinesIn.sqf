@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_magazine);
+params ["_unit", "_magazine"];
 
 private ["_return"];
 

@@ -22,7 +22,7 @@ _this resize 4;
 
 private ["_lastHintTime", "_lastHintPriority", "_time"];
 
-PARAMS_4(_text,_sound,_delay,_priority);
+params ["_text", "_sound", "_delay", "_priority"];
 
 if (isNil QGVAR(lastHint)) then {
     GVAR(lastHint) = [0, 0];
@@ -43,5 +43,5 @@ if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     GVAR(lastHint) set [0, _time];
     GVAR(lastHint) set [1, _priority];
 
-    [{if ((_this select 0) == GVAR(lastHint) select 0) then {hintSilent ""};}, [_time], _delay, 0] call FUNC(waitAndExecute);
+    [{if (_this == GVAR(lastHint) select 0) then {hintSilent ""};}, _time, _delay, 0] call FUNC(waitAndExecute);
 };

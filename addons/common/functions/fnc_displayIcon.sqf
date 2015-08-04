@@ -44,9 +44,7 @@
 
 private ["_allControls", "_refresh", "_timeAlive", "_list"];
 
-PARAMS_4(_iconId,_show,_icon,_color);
-
-_timeAlive = if (count _this > 4) then {_this select 4} else {DEFAULT_TIME};
+params ["_iconId", "_show", "_icon", "_color", ["_timeAlive", DEFAULT_TIME]];
 
 disableSerialization;
 _list = missionNamespace getvariable [QGVAR(displayIconList),[]];
@@ -99,8 +97,8 @@ if (_show) then {
 
     if (_timeAlive >= 0) then {
         [{
-             [_this select 0, false, "", [0,0,0], 0] call FUNC(displayIcon);
-         }, [_iconId], _timeAlive, _timeAlive] call EFUNC(common,waitAndExecute);
+             [_this, false, "", [0,0,0], 0] call FUNC(displayIcon);
+         }, _iconId, _timeAlive, _timeAlive] call EFUNC(common,waitAndExecute);
     };
 
 } else {

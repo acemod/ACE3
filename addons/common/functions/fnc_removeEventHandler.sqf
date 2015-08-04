@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 private ["_eventNames", "_eventFunctions", "_eventIndex"];
 
-PARAMS_2(_eventName,_eventCodeIndex);
+params ["_eventName", "_eventCodeIndex"];
 
 _eventNames = GVAR(events) select 0;
 _eventFunctions = [];

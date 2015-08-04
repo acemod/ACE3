@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_moveTo","_previousGroup","_newGroup", "_currentGroup"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_moveTo = [_this, 1,false,[false]] call BIS_fnc_Param;
+private ["_previousGroup","_newGroup", "_currentGroup"];
+params[["_unit",ObjNull,[ObjNull]],["_moveTo",ObjNull,[ObjNull]]];
 
 if (_moveTo) then {
     _previousGroup = group _unit;

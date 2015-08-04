@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_func,_params);
+params ["_func", "_params"];
 
 if (diag_frameno != GVAR(nextFrameNo)) then {
     GVAR(nextFrameBufferA) pushBack [_params, _func];

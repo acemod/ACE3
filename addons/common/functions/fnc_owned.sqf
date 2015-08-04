@@ -12,6 +12,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
 !isNull (_target getVariable [QGVAR(owner), objNull])

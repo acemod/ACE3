@@ -13,7 +13,7 @@
 
 private ["_config", "_turret"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [_vehicle] call FUNC(getTurretGunner);

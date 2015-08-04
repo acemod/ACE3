@@ -3,7 +3,7 @@
 
 private ["_anim", "_stance"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _anim = toLower (animationState _unit);
 
 // stance is broken for some animations.

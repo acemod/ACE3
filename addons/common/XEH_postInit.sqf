@@ -37,13 +37,6 @@
     };
 }] call FUNC(addEventhandler);
 
-
-["HeadbugFixUsed", {
-    PARAMS_2(_profileName,_animation);
-    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
-}] call FUNC(addEventHandler);
-
-
 //~~~~~Get Map Data~~~~~
 //Find MGRS zone and 100km grid for current map
 [] call FUNC(getMGRSdata);
@@ -118,7 +111,7 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
 
 call FUNC(checkFiles);
 
@@ -156,7 +149,7 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, [false]] call CBA_fnc_addPerFrameHandler;
+}, 0, [false]] call cba_fnc_addPerFrameHandler;
 
 
 ["SettingsInitialized", {
@@ -280,7 +273,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
 
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0, []] call cba_fnc_addPerFrameHandler;
 
 
 // PFH to raise camera created event. Only works on these cams by BI.
@@ -305,14 +298,14 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call CBA_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
-["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
+["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
@@ -333,7 +326,7 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
-    }, 0, []] call CBA_fnc_addPerFrameHandler;
+    }, 0, []] call cba_fnc_addPerFrameHandler;
 };
 
 //Device Handler:
