@@ -12,9 +12,9 @@
  */
 #include "script_component.hpp"
 
-private ["_color", "_name", "_text", "_picture"];
-
 if !(GVAR(DisplayText)) exitwith {};
+
+private ["_color", "_name", "_text", "_picture"];
 
 params ["_magazine", "_numberofMagazines"];
 
