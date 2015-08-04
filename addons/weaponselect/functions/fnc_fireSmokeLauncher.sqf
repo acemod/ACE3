@@ -1,9 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Fire Vehicle Smoke Launcher.
+ *
+ * Argument:
+ * 0: Vehicle <OBJECT>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 private ["_turret", "_weapons"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _turret = [_vehicle] call EFUNC(common,getTurretCommander);
 

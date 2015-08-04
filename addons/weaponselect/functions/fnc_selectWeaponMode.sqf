@@ -4,14 +4,15 @@
  * The player will select the specified weapon or will change to the next firing mode if the weapon was already selected.
  *
  * Argument:
- * 0: A weapon (String)
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
  * Return value:
- * None.
+ * None
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {};
 

@@ -1,9 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Play the change firemode sound for specified weapon at units position.
+ *
+ * Argument:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 private ["_sound"];
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 
