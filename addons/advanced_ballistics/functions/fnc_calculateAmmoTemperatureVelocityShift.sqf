@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_muzzleVelocityShift", "_temperatureIndexA", "_temperatureIndexB", "_temperatureRatio"];
-params["_muzzleVelocityShiftTable"."_temperature"];
+params["_muzzleVelocityShiftTable", "_temperature"];
 
 if (count _muzzleVelocityShiftTable != 11) exitWith { 0 };
 
