@@ -37,6 +37,13 @@
     };
 }] call FUNC(addEventhandler);
 
+
+["HeadbugFixUsed", {
+    PARAMS_2(_profileName,_animation);
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
+
+
 //~~~~~Get Map Data~~~~~
 //Find MGRS zone and 100km grid for current map
 [] call FUNC(getMGRSdata);
