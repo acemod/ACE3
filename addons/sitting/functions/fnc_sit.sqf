@@ -70,4 +70,4 @@ _seatPosOrig = getPosASL _seat;
     if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual - _sitRotation);
     };
-}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call cba_fnc_addPerFrameHandler;
+}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;

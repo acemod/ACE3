@@ -43,7 +43,7 @@ _fnc_stopCurrentBurst = {
 _ammo = _unit ammo _weapon;
 if (_ammo > 0) then {
     _unit setAmmo [_weapon, 0];
-    [_fnc_stopCurrentBurst, 0, [_unit, _weapon, _ammo, diag_frameno]] call cba_fnc_addPerFrameHandler;
+    [_fnc_stopCurrentBurst, 0, [_unit, _weapon, _ammo, diag_frameno]] call CBA_fnc_addPerFrameHandler;
 };
 
 // only display the hint once, after you try to shoot an already jammed weapon
