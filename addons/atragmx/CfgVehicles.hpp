@@ -21,7 +21,7 @@ class CfgVehicles {
         author = "Ruthberg";
         scope = 2;
         scopeCurator = 2;
-        displayName = CSTRING(Name);
+        displayName = "ATragMX";
         vehicleClass = "Items";
         class TransportItems {
             MACRO_ADDITEM(ACE_ATragMX,1);
