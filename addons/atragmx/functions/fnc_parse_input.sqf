@@ -14,6 +14,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+private ["_inclinationAngleCosine", "_inclinationAngleDegree", "_boreHeight", "_bulletMass",
+         "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
 
 GVAR(altitude) = -1000 max parseNumber(ctrlText 130030) min 20000;
 GVAR(temperature) = -50 max parseNumber(ctrlText 130040) min 160;
@@ -25,7 +27,7 @@ if (GVAR(currentUnit) != 2) then {
     GVAR(barometricPressure) = GVAR(barometricPressure) * 33.86389;
 };
 
-private ["_inclinationAngleCosine", "_inclinationAngleDegree"];
+
 GVAR(latitude) set [GVAR(currentTarget), -90 max Round(parseNumber(ctrlText 140000)) min 90];
 GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrlText 140010))) min 359];
 GVAR(windSpeed1) set [GVAR(currentTarget), 0 max abs(parseNumber(ctrlText 140020)) min 50];
@@ -56,7 +58,7 @@ if (GVAR(currentUnit) == 1) then {
     GVAR(targetRange) set [GVAR(currentTarget), (GVAR(targetRange) select GVAR(currentTarget))  * 0.9144];
 };
 
-private ["_boreHeight", "_bulletMass", "_bulletDiameter", "_airFriction", "_rifleTwist", "_muzzleVelocity", "_zeroRange"];
+private [];
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
 _bulletDiameter = parseNumber(ctrlText 120020) * 10;

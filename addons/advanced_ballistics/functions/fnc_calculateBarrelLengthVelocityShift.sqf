@@ -17,11 +17,8 @@
  */
 #include "script_component.hpp"
 
-private ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
-_barrelLength        = _this select 0;
-_muzzleVelocityTable = _this select 1;
-_barrelLengthTable   = _this select 2;
-_muzzleVelocity      = _this select 3;
+private ["_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
+params ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity"];
 
 if (_barrelLength == 0) exitWith { 0 };
 if (count _muzzleVelocityTable != count _barrelLengthTable) exitWith { 0 };
