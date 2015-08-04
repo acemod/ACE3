@@ -1,31 +1,31 @@
 class ACE_Settings {
     class GVAR(enabled) {
-        displayName = CSTRING(enabled_DisplayName);
-        description = CSTRING(enabled_Description);
+        displayName = "Advanced Ballistics";
+        description = "Enables advanced ballistics";
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(simulateForSnipers) {
-        displayName = CSTRING(simulateForSnipers_DisplayName);
-        description = CSTRING(simulateForSnipers_Description);
+        displayName = "Enabled For Snipers";
+        description = "Enables advanced ballistics for non local snipers (when using high power optics)";
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(simulateForGroupMembers) {
-        displayName = CSTRING(simulateForGroupMembers_DisplayName);
-        description = CSTRING(simulateForGroupMembers_Description);
+        displayName = "Enabled For Group Members";
+        description = "Enables advanced ballistics for non local group members";
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(simulateForEveryone) {
-        displayName = CSTRING(simulateForEveryone_DisplayName);
-        description = CSTRING(simulateForEveryone_Description);
+        displayName = "Enabled For Everyone";
+        description = "Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)";
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(disabledInFullAutoMode) {
-        displayName = CSTRING(disabledInFullAutoMod_DisplayName);
-        description = CSTRING(disabledInFullAutoMod_Description);
+        displayName = "Disabled In FullAuto Mode";
+        description = "Disables advanced ballistics during full auto fire";
         typeName = "BOOL";
         value = 0;
     };
@@ -38,32 +38,32 @@ class ACE_Settings {
     };
     */
     class GVAR(ammoTemperatureEnabled) {
-        displayName = CSTRING(ammoTemperatureEnabled_DisplayName);
-        description = CSTRING(ammoTemperatureEnabled_Description);
+        displayName = "Enable Ammo Temperature Simulation";
+        description = "Muzzle velocity varies with ammo temperature";
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(barrelLengthInfluenceEnabled) {
-        displayName = CSTRING(barrelLengthInfluenceEnabled_DisplayName);
-        description = CSTRING(barrelLengthInfluenceEnabled_Description);
+        displayName = "Enable Barrel Length Simulation";
+        description = "Muzzle velocity varies with barrel length";
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(bulletTraceEnabled) {
-        displayName = CSTRING(bulletTraceEnabled_DisplayName);
-        description = CSTRING(bulletTraceEnabled_Description);
+        displayName = "Enable Bullet Trace Effect";
+        description = "Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)";
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(simulationInterval) {
-        displayName = CSTRING(simulationInterval_DisplayName);
-        description = CSTRING(simulationInterval_Description);
+        displayName = "Simulation Interval";
+        description = "Defines the interval between every calculation step";
         typeName = "SCALAR";
         value = 0.0;
     };
     class GVAR(simulationRadius) {
-        displayName = CSTRING(simulationRadius_DisplayName);
-        description = CSTRING(simulationRadius_Description);
+        displayName = "Simulation Radius";
+        description = "Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles";
         typeName = "SCALAR";
         value = 3000;
     };

@@ -18,18 +18,16 @@
 
 // Source: GNU Exterior Ballistics
 
-private ["_dragModel", "_dragCoefficient", "_velocity", "_A", "_M", "_result"];
-_dragModel       = _this select 0;
-_dragCoefficient = _this select 1;
-_velocity        = (_this select 2) * 3.2808399;
+private ["_A", "_M", "_result"];
+params ["_dragModel", "_dragCoefficient", "_velocity"];
+_velocity = _velocity * 3.2808399;
 
 _A = -1;
 _M = -1;
 _result = 0;
 
 switch _dragModel do {
-    case 1:
-    {
+    case 1: {
         switch true do {
             case (_velocity > 4230) : { _A = 0.0001477404177730177; _M = 1.9565; };
             case (_velocity > 3680) : { _A = 0.0001920339268755614; _M = 1.925 ; };
@@ -74,8 +72,7 @@ switch _dragModel do {
             case (_velocity >    0) : { _A = 0.00005206214107320588; _M = 2.000 ; };
         };
     };
-    case 2:
-    {
+    case 2: {
         switch true do {
             case (_velocity > 1674) : { _A = 0.0079470052136733; _M = 1.36999902851493; };
             case (_velocity > 1172) : { _A = 0.00100419763721974; _M = 1.65392237010294; };
@@ -86,8 +83,7 @@ switch _dragModel do {
             case (_velocity >    0) : { _A = 0.0000518033561289704; _M = 1.98160270524632; };
         };
     };
-    case 5:
-    {
+    case 5: {
         switch true do {
             case (_velocity > 1730) : { _A = 0.00724854775171929; _M = 1.41538574492812; };
             case (_velocity > 1228) : { _A = 0.0000350563361516117; _M = 2.13077307854948; };
@@ -98,8 +94,7 @@ switch _dragModel do {
             case (_velocity >    0) : { _A = 0.0000351963178524273; _M = 2.00477856801111; };
         };
     };
-    case 6:
-    {
+    case 6: {
         switch true do {
             case (_velocity > 3236) : { _A = 0.0455384883480781; _M = 1.15997674041274; };
             case (_velocity > 2065) : { _A = 0.07167261849653769; _M = 1.10704436538885; };
@@ -110,8 +105,7 @@ switch _dragModel do {
             case (_velocity >    0) : { _A = 0.0000750912466084823; _M = 1.92031057847052; };
         };
     };
-    case 7:
-    {
+    case 7: {
         switch true do {
             case (_velocity > 4200) : { _A = 0.00000000129081656775919; _M = 3.24121295355962; };
             case (_velocity > 3000) : { _A = 0.0171422231434847; _M = 1.27907168025204; };
@@ -124,8 +118,7 @@ switch _dragModel do {
             case (_velocity >    0) : { _A = 0.0000134504843776525; _M = 2.08702306738884; };
         };
     };
-    case 8:
-    {
+    case 8: {
         switch true do {
             case (_velocity > 3571) : { _A = 0.0112263766252305; _M = 1.33207346655961; };
             case (_velocity > 1841) : { _A = 0.0167252613732636; _M = 1.28662041261785; };
