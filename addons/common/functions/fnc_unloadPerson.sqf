@@ -13,10 +13,11 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 private ["_vehicle","_emptyPos"];
-PARAMS_1(_unit);
+
+params ["_unit"];
 _vehicle = vehicle _unit;
 
 if (_vehicle == _unit) exitwith {false;};
@@ -26,7 +27,7 @@ _emptyPos = ((getPos _vehicle) findEmptyPosition [0, 10, typeof _unit]);
 if (count _emptyPos == 0) exitwith {false};
 
 if (!isNull _vehicle) then {
-    [[_unit], QUOTE(FUNC(unloadPersonLocal)), _unit, false] call EFUNC(common,execRemoteFnc);
+    [[_unit], QFUNC(unloadPersonLocal), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 
 true;

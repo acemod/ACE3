@@ -17,15 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_force", "_settingData","_failed"];
+private ["_settingData", "_failed"];
 
-PARAMS_2(_name,_value);
-
-private ["_force"];
-_force = false;
-if (count _this > 2) then {
-    _force = _this select 2;
-};
+params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 
 _settingData = [_name] call FUNC(getSettingData);
 
@@ -66,7 +60,7 @@ if (_value isEqualTo (missionNamespace getVariable _name)) exitWith {};
 TRACE_2("Variable Updated",_name,_value);
 missionNamespace setVariable [_name, _value];
 
-if (isServer && {count _this > 3} && {_this select 3}) then {
+if (isServer && {_broadcastChanges}) then {
     // Publicize the new value
     publicVariable _name;
 

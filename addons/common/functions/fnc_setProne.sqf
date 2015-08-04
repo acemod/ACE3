@@ -11,7 +11,8 @@
 #include "script_component.hpp"
 
 private ["_unit"];
-_unit = [_this,0, ObjNull,[ObjNull]] call BIS_fnc_Param;
+_unit = param [0,ObjNull,[ObjNull]];
+
 switch (currentWeapon _unit) do {
     case (primaryWeapon _unit): {
         [_unit,"amovppnemstpsraswrfldnon"] call FUNC(localAnim);

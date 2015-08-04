@@ -14,7 +14,7 @@
  */
  #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {-1};
 

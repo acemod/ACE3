@@ -15,10 +15,10 @@
  */
 #include "script_component.hpp"
 
-private ["_array", "_code"];
+private "_array";
 
-_array = + _this select 0;
-_code = _this select 1;
+params ["_originalArray", "_code"];
+_array = +_originalArray;
 
 if (isNil "_array") exitWith {
     diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];

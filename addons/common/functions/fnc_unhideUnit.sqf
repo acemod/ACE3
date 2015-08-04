@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 

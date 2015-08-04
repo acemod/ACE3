@@ -13,7 +13,7 @@
 
 private ["_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 

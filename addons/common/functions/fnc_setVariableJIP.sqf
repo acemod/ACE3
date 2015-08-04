@@ -15,7 +15,7 @@
 
 private ["_respawnVariables"];
 
-PARAMS_3(_unit,_varName,_value);
+params ["_unit", "_varName", "_value"];
 
 _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 

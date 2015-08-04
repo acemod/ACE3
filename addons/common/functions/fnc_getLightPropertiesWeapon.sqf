@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 private "_config";
 _config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";

@@ -9,5 +9,7 @@
  */
  #include "script_component.hpp"
 
+params ["_unit", "_item"];
+
 // item classname in items unit
-((_this select 1) in items (_this select 0));
+(_item in items _unit);

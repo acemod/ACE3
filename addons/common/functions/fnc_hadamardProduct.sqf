@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_vector1,_vector2);
+params ["_vector1", "_vector2"];
 
 private ["_newVector", "_i"];
 

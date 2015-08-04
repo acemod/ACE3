@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_logic);
+parmas ["_logic"];
 
 [_logic, QGVAR(allowHandcuffOwnSide), "allowHandcuffOwnSide"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowSurrender), "allowSurrender"] call EFUNC(common,readSettingFromModule);

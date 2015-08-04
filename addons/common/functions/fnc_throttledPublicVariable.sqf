@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_varName,_maxDelay);
+params ["_unit", "_varName", "_maxDelay"];
 
 // Create the publish scheduler PFH the first ACE_time
 if (isNil QGVAR(publishSchedId)) then {

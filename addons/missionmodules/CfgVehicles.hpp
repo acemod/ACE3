@@ -11,7 +11,7 @@ class CfgVehicles {
         displayName = CSTRING(AmbianceSounds_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
         category = "ACE_missionModules";
-        function = QUOTE(FUNC(moduleAmbianceSound));
+        function = QFUNC(moduleAmbianceSound);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;

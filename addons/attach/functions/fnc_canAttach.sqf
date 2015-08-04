@@ -17,11 +17,10 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_attachToVehicle,_player,_args);
+private ["_attachLimit", "_attachedObjects","_playerPos"];
+params ["_attachToVehicle","_player","_args"];
+_args params [["_itemname",""]];
 
-private ["_itemName", "_attachLimit", "_attachedObjects","_playerPos"];
-
-_itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 _attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 

@@ -13,7 +13,7 @@
 
 private ["_config", "_turrets", "_fnc_addTurret", "_varName"];
 
-PARAMS_1(_type);
+params ["_type"];
 
 _varName = format ["ACE_CachedTurrets_%1", _type];
 _turrets = + (uiNamespace getVariable _varName);

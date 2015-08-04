@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 //IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName", "_eventArgs"];
 
 ACEg = [_eventName, _eventArgs];
 publicVariable "ACEg";

@@ -17,11 +17,11 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_object,_typeNum,_fullPath);
+params ["_object", "_typeNum", "_fullPath"];
 
 private ["_res","_varName","_actionList"];
 _res = _fullPath call FUNC(splitPath);
-EXPLODE_2_PVT(_res,_parentPath,_actionName);
+_res params ["_parentPath", "_actionName"];
 
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
 _actionList = _object getVariable [_varName, []];

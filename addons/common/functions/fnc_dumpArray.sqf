@@ -3,7 +3,7 @@
 
 private ["_pad", "_i", "_x"];
 
-PARAMS_2(_var,_depth);
+params ["_var", "_depth"];
 
 _pad = "";
 

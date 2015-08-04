@@ -3,7 +3,7 @@ class ACE_ModuleExplosive: ACE_Module {
     author = ECSTRING(common,ACETeam);
     category = "ACE";
     displayName = CSTRING(Module_DisplayName);
-    function = QUOTE(FUNC(module));
+    function = QFUNC(module);
     scope = 2;
     isGlobal = 1;
     icon = PATHTOF(UI\Icon_Module_Explosives_ca.paa);

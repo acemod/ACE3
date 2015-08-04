@@ -148,7 +148,7 @@ class CfgVehicles {
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAdvancedMedicalSettings));
+        function = QFUNC(moduleAdvancedMedicalSettings);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -308,7 +308,7 @@ class CfgVehicles {
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicRoles));
+        function = QFUNC(moduleAssignMedicRoles);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -353,7 +353,7 @@ class CfgVehicles {
         displayName = CSTRING(AssignMedicVehicle_Module_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicalVehicle));
+        function = QFUNC(moduleAssignMedicalVehicle);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -394,7 +394,7 @@ class CfgVehicles {
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicalFacility));
+        function = QFUNC(moduleAssignMedicalFacility);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;

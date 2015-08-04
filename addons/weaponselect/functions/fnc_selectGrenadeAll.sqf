@@ -4,7 +4,7 @@
  * Cycle through all grenades.
  *
  * Argument:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return value:
  * None
@@ -13,12 +13,11 @@
 
 private ["_text", "_nextMuzzle"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["All"] call FUNC(findNextGrenadeMuzzle);
 
 if (_nextMuzzle != "") then {
-
 
     private ["_magazines", "_magazine", "_count", "_return"];
     _magazines = GVAR(AllMagazines) select (GVAR(AllMuzzles) find _nextMuzzle);

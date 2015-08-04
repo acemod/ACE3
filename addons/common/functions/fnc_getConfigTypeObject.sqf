@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_object);
+params ["_object"];
 
 if (isClass (configFile >> "CfgVehicles" >> _object)) exitWith {"CfgVehicles"};
 

@@ -10,9 +10,11 @@
 
 #include "script_component.hpp"
 
-private ["_searchTerm", "_string", "_arraySearchTerm", "_arrayString", "_sizeSearchTerm", "_sizeString", "_matchingCharacters", "_searchIterator", "_targetIterator"];
-_string = toLower (_this select 0); // removes case sensitivity
-_searchTerm = toLower (_this select 1);
+params ["_string", "_searchTerm"];
+
+private ["_arraySearchTerm", "_arrayString", "_sizeSearchTerm", "_sizeString", "_matchingCharacters", "_searchIterator", "_targetIterator"];
+_string = toLower _string; // removes case sensitivity
+_searchTerm = toLower _searchTerm;
 
 
 _arraySearchTerm = toArray _searchTerm; // splits string into array of unicode decimals

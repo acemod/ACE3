@@ -20,6 +20,6 @@
 */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _unit getVariable ["ACE_isEOD", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "canDeactivateMines") == 1]

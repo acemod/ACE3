@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_state);
-
+params ["_unit","_state"];
 
 if (!local _unit) exitwith {
     ERROR("running surrender on remote unit");

@@ -17,10 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_gunID", "_restoreMemory", "_updateDisplay"];
-_gunID         = _this select 0;
-_restoreMemory = _this select 1;
-_updateDisplay = _this select 2;
+params ["_gunID", "_restoreMemory", "_updateDisplay"];
 
 if (_gunID < 0 || _gunID > (count GVAR(gunList)) - 1) exitWith {};
 

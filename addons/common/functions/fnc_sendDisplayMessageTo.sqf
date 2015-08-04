@@ -11,15 +11,17 @@
 #include "script_component.hpp"
 
 private ["_reciever","_title","_content","_type", "_parameters", "_localizationArray"];
-_reciever = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_title = [_this, 1, "",[""]] call BIS_fnc_Param;
-_content =  [_this, 2, "",[""]] call BIS_fnc_Param;
-_type =  [_this, 3, 0,[0]] call BIS_fnc_Param;
-_parameters = [_this, 4, [], [[]]] call BIS_fnc_Param;
+params [
+    ["_reciever",ObjNull,[ObjNull]],
+    ["_title","",[""]],
+    ["_content","",[""]],
+    ["_type",0,[0]],
+    ["_parameters",[],[[]]]
+];
 
 if (isPlayer _reciever) then {
     if (!local _reciever) then {
-        [_this, QUOTE(FUNC(sendDisplayMessageTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
+        [_this, QFUNC(sendDisplayMessageTo), _reciever, false] call EFUNC(common,execRemoteFnc);
     } else {
 
         if (isLocalized _title) then {

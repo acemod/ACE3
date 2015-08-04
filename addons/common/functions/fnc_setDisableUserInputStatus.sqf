@@ -9,7 +9,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_id,_disable);
+params ["_id", "_disable"];
 
 if (isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = [];

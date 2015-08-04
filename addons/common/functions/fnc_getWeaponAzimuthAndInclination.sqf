@@ -14,7 +14,7 @@
 
 private ["_direction", "_azimuth", "_inclination"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _direction = ACE_player weaponDirection _weapon;
 

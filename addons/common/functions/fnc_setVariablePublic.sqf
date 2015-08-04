@@ -14,11 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_object,_varName,_value,_sync);
-
-if (isNil "_sync") then {
-    _sync = 1;
-};
+params ["_object", "_varName", "_value", ["_sync", 1]];
 
 // set value locally
 _object setVariable [_varName, _value];

@@ -10,4 +10,6 @@
 
 #include "script_component.hpp"
 
-((_this select 0) getvariable [QGVAR(StateArrested),false])
+params ["_unit"];
+
+(_unit getvariable [QGVAR(StateArrested),false])

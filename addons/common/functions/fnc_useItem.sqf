@@ -10,11 +10,11 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_item);
+params ["_unit", "_item"];
 
 private ["_return", "_vehicleUsage"];
 
-_vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
+_vehicleUsage = param[2, false, [false]];
 
 _return = false;
 if (!_vehicleUsage) then {

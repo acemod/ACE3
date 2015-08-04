@@ -1,11 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Display Grenade information on grenade throw.
+ *
+ * Argument:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Magazine <STRING>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
-private ["_unit","_weapon","_magazine"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
-_magazine = _this select 5;
+params ["_unit", "_weapon", "_magazine"];
 
 if (_weapon != "Throw") exitWith {};
 

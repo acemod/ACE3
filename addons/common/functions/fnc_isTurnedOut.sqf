@@ -13,7 +13,8 @@
 
 private ["_vehicle", "_config", "_animation", "_action", "_inAction", "_turretIndex"];
 
-PARAMS_1(_unit);
+params ["_unit"];
+
 _vehicle = vehicle _unit;
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _animation = animationState _unit;

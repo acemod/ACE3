@@ -13,7 +13,7 @@
 
 private ["_position", "_laser", "_intersects"];
 
-PARAMS_1(_maxDistance);
+params ["_maxDistance"];
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];

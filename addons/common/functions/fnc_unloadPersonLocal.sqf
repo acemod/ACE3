@@ -13,10 +13,10 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 private ["_loaded", "_emptyPos","_validVehiclestate"];
-PARAMS_2(_unit,_vehicle);
+params ["_unit", "_vehicle"];
 _validVehiclestate = true;
 
 if (_vehicle isKindOf "Ship" ) then {

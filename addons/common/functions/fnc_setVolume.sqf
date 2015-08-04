@@ -15,7 +15,7 @@
 #define NO_SOUND    0
 
 private ["_setVolume"];
-_setVolume = [_this, 0, false, [false]] call BIS_fnc_Param;
+_setVolume = param [0,false,[false]];
 
 if (_setVolume) then {
     // Vanilla Game

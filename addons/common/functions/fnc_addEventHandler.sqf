@@ -14,7 +14,7 @@
 
 private ["_eventNames", "_eventFunctions", "_eventNameCount", "_eventIndex", "_eventFunctionCount"];
 
-PARAMS_2(_eventName,_eventCode);
+params ["_eventName", "_eventCode"];
 
 _eventNames = GVAR(events) select 0;
 _eventFunctions = [];

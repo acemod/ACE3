@@ -15,11 +15,8 @@
 
 #include "script_component.hpp"
 
-private ["_imageColor", "_target"];
-PARAMS_2(_text,_image);
-_imageColor = if (count _this > 2) then {_this select 2} else {[1,1,1]};
+params ["_text", "_image", ["_imageColor", [1,1,1]], ["_target", ACE_player]];
 _imageColor resize 3;
-_target = if (count _this > 3) then {_this select 3} else {ACE_player};
 
 if (_target != ACE_player) exitWith {};
 

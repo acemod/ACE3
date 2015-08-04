@@ -2,21 +2,20 @@
  * Author: commy2
  *
  * Returns the unit that has the given backpack object equipped.
- * 
+ *
  * Argument:
- * 0: A backpack object (Object)
- * 
+ * 0: Executing Unit (Object)
+ * 1: A backpack object (Object)
+ *
  * Return value:
  * Unit that has the backpack equipped. (Object)
  */
 #include "script_component.hpp"
+scopeName "main";
 
-private ["_backpack", "_unit"];
-
-_backpack = _this select 0;
-
-_unit = objNull;
+params ["_unit","_backpack"];
+_target = objNull;
 {
-    if (backpackContainer _x == _backpack) exitWith {_unit = _x};
-} forEach (allUnits + allDeadMen);
-_unit
+    if (backpackContainer _x == _backpack) then {_target = _x; breakTo "main"};
+} forEach nearestObjects [_unit, ["Man"],2];
+_target
