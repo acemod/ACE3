@@ -17,7 +17,7 @@
 
 private ["_mouseOver", "_unit", "_surrendering"];
 
-params ["_mouseOver", "_units", "_surrendering"];
+params ["_logic", "_units", "_activated"];
 
 if !(_activated && local _logic) exitWith {};
 
