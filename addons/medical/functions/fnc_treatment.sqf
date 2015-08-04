@@ -156,7 +156,7 @@ if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
 
-_caller setvariable [QGVAR(selectedWeaponOnTreatment), currentWeapon _caller];
+_caller setvariable [QGVAR(selectedWeaponOnTreatment), (weaponState _caller)];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {
