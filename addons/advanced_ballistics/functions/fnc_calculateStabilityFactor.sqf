@@ -19,14 +19,8 @@
  */
 #include "script_component.hpp"
 
-private ["_caliber", "_bulletLength", "_bulletMass", "_barrelTwist", "_muzzleVelocity", "_temperature", "_barometricPressure", "_l", "_t", "_stabilityFactor"];
-_caliber            = _this select 0;
-_bulletLength       = _this select 1;
-_bulletMass         = _this select 2;
-_barrelTwist        = _this select 3;
-_muzzleVelocity     = _this select 4;
-_temperature        = _this select 5;
-_barometricPressure = _this select 6;
+private ["_l", "_t", "_stabilityFactor"];
+params ["_caliber", "_bulletLength", "_bulletMass", "_barrelTwist", "_muzzleVelocity", "_temperature", "_barometricPressure"];
 
 // Source: http://www.jbmballistics.com/ballistics/bibliography/articles/miller_stability_1.pdf
 _t = _barrelTwist / _caliber;

@@ -19,13 +19,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet", "_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
-_unit     = _this select 0;
-_weapon   = _this select 1;
-_mode     = _this select 3;
-_ammo     = _this select 4;
-_magazine = _this select 5;
-_bullet   = _this select 6;
+private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
+params ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet"];
 
 _abort = false;
 if (!hasInterface) exitWith {};
@@ -118,21 +113,18 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 
 [{
     private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
-    _args = _this select 0;
-    _bullet = _args select 0;
-    _caliber = _args select 1;
-    _bulletTraceVisible = _args select 2;
-    _index = _args select 3;
-    
+    params ["_args","_idPFH"];
+    _args params["_bullet","_caliber","_bulletTraceVisible","_index"];
+
     _bulletVelocity = velocity _bullet;
     _bulletPosition = getPosASL _bullet;
-    
+
     _bulletSpeed = vectorMagnitude _bulletVelocity;
-    
+
     if (!alive _bullet || _bulletSpeed < 100) exitWith {
-        [_this select 1] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call cba_fnc_removePerFrameHandler;
     };
-    
+
     if (_bulletTraceVisible && _bulletSpeed > 500) then {
         drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
     };
