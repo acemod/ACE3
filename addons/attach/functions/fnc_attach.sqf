@@ -17,10 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID", "_model"];
-
-PARAMS_3(_attachToVehicle,_unit,_args);
-_itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
+private ["_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID", "_model"];
+params ["_attachToVehicle","_unit","_args"];
+_args params [["_itemClassname",""]];
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
 if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
@@ -69,9 +68,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
-
-        PARAMS_2(_args,_pfID);
-        EXPLODE_6_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_actionID);
+        params ["_args","_idPFH"];
+        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAtachText","_actionID"];
 
         _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         if (cameraView == "EXTERNAL") then {
@@ -88,7 +86,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
-            [_pfID] call CBA_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
             [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
