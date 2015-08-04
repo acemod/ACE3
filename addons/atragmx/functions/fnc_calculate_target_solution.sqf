@@ -19,7 +19,9 @@
 
 private [
     "_atmosphereModel", "_altitude", "_temperature", "_barometricPressure",
-    "_relativeHumidity","_bulletLength", "_stabilityFactor","_result"
+    "_relativeHumidity","_bulletLength", "_stabilityFactor","_result","_latitude",
+	"_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection",
+	"_inclinationAngle", "_targetSpeed", "_targetRange"
 ];
 
 GVAR(workingMemory) params [
@@ -53,7 +55,6 @@ if (_barrelTwist > 0) then {
 };
 _barrelTwist = abs(_barrelTwist);
 
-private [];
 _altitude = GVAR(altitude);
 _temperature = GVAR(temperature);
 _barometricPressure = GVAR(barometricPressure);
@@ -63,7 +64,6 @@ if (!GVAR(atmosphereModeTBH)) then {
     _relativeHumidity = 50;
 };
 
-private [];
 _bulletLength = 45.72;
 _stabilityFactor = 1.5;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
@@ -72,7 +72,6 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     };
 };
 
-private ["_latitude", "_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
 _latitude = GVAR(latitude) select GVAR(currentTarget);
 _directionOfFire = GVAR(directionOfFire) select GVAR(currentTarget);
 _windSpeed1 = GVAR(windSpeed1) select GVAR(currentTarget);
@@ -82,7 +81,6 @@ _inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
 _targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
 _targetRange = GVAR(targetRange) select GVAR(currentTarget);
 
-private [];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
           [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, false,
           _stabilityFactor, _twistDirection, _latitude, _directionOfFire] call FUNC(calculate_solution);

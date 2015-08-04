@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-
 {
     _x params ["_name","_var"];
     profileNamespace setVariable [format ["ACE_ATragMX_%1",_name],_var];

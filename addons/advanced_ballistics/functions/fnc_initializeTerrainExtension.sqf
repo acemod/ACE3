@@ -34,7 +34,7 @@ GVAR(currentGrid) = 0;
 
 [{
     params ["_args","_idPFH"];
-    _args params ["_mapGrids", "_gridCells", "_initStartTime"];;
+    _args params ["_mapGrids", "_gridCells", "_initStartTime"];
 
     if (GVAR(currentGrid) >= _gridCells) exitWith {
         if (GVAR(initMessageEnabled)) then {

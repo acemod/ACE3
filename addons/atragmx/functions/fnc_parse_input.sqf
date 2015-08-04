@@ -58,7 +58,6 @@ if (GVAR(currentUnit) == 1) then {
     GVAR(targetRange) set [GVAR(currentTarget), (GVAR(targetRange) select GVAR(currentTarget))  * 0.9144];
 };
 
-private [];
 _boreHeight = parseNumber(ctrlText 120000);
 _bulletMass = parseNumber(ctrlText 120010);
 _bulletDiameter = parseNumber(ctrlText 120020) * 10;

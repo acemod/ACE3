@@ -51,8 +51,6 @@ private [
     "_n", "_range", "_rangeFactor","_speedTotal", "_stepsTotal", "_speedAverage","_eoetvoesMultiplier"
 ];
 
-
-
 params [
     "_scopeBaseAngle",
     "_bulletMass",
