@@ -1,7 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Select weapon for unit in vehicle.
+ *
+ * Argument:
+ * 0: Unit <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Weapon index <NUMBER>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_vehicle,_index);
+params ["_unit", "_vehicle", "_index"];
 
 private "_turret";
 _turret = [_unit] call EFUNC(common,getTurretIndex);

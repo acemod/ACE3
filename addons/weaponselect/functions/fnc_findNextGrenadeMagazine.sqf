@@ -1,16 +1,24 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Find the next Grenade Magazine.
+ *
+ * Argument:
+ * 0: Grenade Type ("All", "Frag", "NonFrag") <STRING>
+ *
+ * Return value:
+ * Magazine classname <STRING>
+ */
 #include "script_component.hpp"
 
-private ["_allMags", "_allMuzzles", "_magazines"];
+private ["_allMags", "_allMuzzles", "_magazines", "_start", "_index", "_nextMagazine"];
 
-PARAMS_1(_type); //"All", "Frag" or "NonFrag"
+params ["_type"];
 
 _allMags = missionNamespace getVariable [format [QGVAR(%1Magazines), _type], []];
 _allMuzzles = missionNamespace getVariable [format [QGVAR(%1Muzzles), _type], []];
 
 _magazines = magazines ACE_player;
-
-private ["_start", "_index", "_nextMagazine"];
 
 _start = [GVAR(CurrentGrenadeMuzzleOther), GVAR(CurrentGrenadeMuzzleFrag)] select GVAR(CurrentGrenadeMuzzleIsFrag);
 _index = _allMuzzles find _start;

@@ -12,11 +12,11 @@
  */
 #include "script_component.hpp"
 
-if !(GVAR(DisplayText)) exitwith {};
-
-PARAMS_2(_magazine,_numberofMagazines);
+if !(GVAR(DisplayText)) exitWith {};
 
 private ["_color", "_name", "_text", "_picture"];
+
+params ["_magazine", "_numberofMagazines"];
 
 _color = [[1,0,0], [1,1,1]] select (_numberofMagazines > 0);
 _name = getText (configFile >> "CfgMagazines" >> _magazine >> "displayNameShort");
