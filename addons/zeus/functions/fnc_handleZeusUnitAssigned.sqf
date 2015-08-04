@@ -23,7 +23,7 @@ private ["_removeAddons", "_numCfgs", "_cfg", "_requiredAddon"];
 
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 
-params ["_logic"]
+params ["_logic"];
 _removeAddons = [];
 
 _numCfgs = count (configFile >> "ACE_Curator");
