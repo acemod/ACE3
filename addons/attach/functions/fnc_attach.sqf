@@ -68,7 +68,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
-        params ["_args","_idPFH"]
+        params ["_args","_idPFH"];
         _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAtachText","_actionID"];
 
         _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);

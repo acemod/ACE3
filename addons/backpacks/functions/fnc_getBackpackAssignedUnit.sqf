@@ -4,7 +4,8 @@
  * Returns the unit that has the given backpack object equipped.
  *
  * Argument:
- * 0: A backpack object (Object)
+ * 0: Executing Unit (Object)
+ * 1: A backpack object (Object)
  *
  * Return value:
  * Unit that has the backpack equipped. (Object)
