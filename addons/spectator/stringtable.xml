@@ -9,14 +9,6 @@
             <English>Configure how the spectator system will operate by default.</English>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
         </Key>
-        <Key ID="STR_ACE_Spectator_system_DisplayName">
-            <English>Spectate on death</English>
-            <Polish>Obserwator po śmierci</Polish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_system_Description">
-            <English>Enables spectator upon death.</English>
-            <Polish>Włącz obserwatora po śmierci</Polish>
-        </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
             <Polish>Filtr jednostek</Polish>

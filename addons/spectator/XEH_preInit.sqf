@@ -2,14 +2,6 @@
 
 ADDON = false;
 
-PREP(bi_respawnBase);
-PREP(bi_respawnCounter);
-PREP(bi_respawnEndMission);
-PREP(bi_respawnInstant);
-PREP(bi_respawnNone);
-PREP(bi_respawnSeagull);
-PREP(bi_respawnSpectator);
-PREP(bi_respawnWave);
 PREP(cacheUnitInfo);
 PREP(cycleCamera);
 PREP(handleCamera);
@@ -20,6 +12,7 @@ PREP(handleMouse);
 PREP(handleToolbar);
 PREP(handleUnits);
 PREP(moduleSpectatorSettings);
+PREP(respawnTemplate);
 PREP(setCameraAttributes);
 PREP(setSpectator);
 PREP(stageSpectator);
@@ -35,6 +28,7 @@ GVAR(availableModes) = [0,1,2];
 GVAR(availableSides) = [west,east,resistance,civilian];
 GVAR(availableVisions) = [-2,-1,0,1];
 
+GVAR(camAgent) = objNull;
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
 GVAR(camPos) = ATLtoASL [worldSize * 0.5, worldSize * 0.5, 20];

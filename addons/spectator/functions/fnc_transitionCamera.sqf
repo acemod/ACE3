@@ -53,8 +53,12 @@ if (_newMode == 0) then { // Free
     GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
     GVAR(camera) camCommit 0;
 
-    // Switch to camera to stop AI group chat
-    ACE_Player switchCamera "internal";
+    // Agent is switched to in free cam to hide death table and prevent AI chat
+    if (isNull GVAR(camAgent)) then {
+        GVAR(camAgent) = createAgent ["VirtualMan_F",markerPos QGVAR(respawn),[],0,""];
+    };
+
+    GVAR(camAgent) switchCamera "internal";
     clearRadio;
 
     // If new vision isn't available then keep current (unless current also isn't)

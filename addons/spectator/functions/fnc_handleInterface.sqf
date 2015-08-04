@@ -43,7 +43,7 @@ switch (toLower _mode) do {
         // Close map
         openMap [false,false];
 
-        // Close any BI layers/effects
+        // Disable BI damage effects and remove counter layer
         BIS_fnc_feedback_allowPP = false;
         ("BIS_fnc_respawnCounter" call BIS_fnc_rscLayer) cutText ["","plain"];
 
@@ -80,9 +80,8 @@ switch (toLower _mode) do {
         // Return to player view
         _unit switchCamera "internal";
 
-        // Re-enable any BI effects
+        // Re-enable BI damage effects
         BIS_fnc_feedback_allowPP = true;
-        BIS_fnc_respawnNone_start = nil;
 
         // Cleanup camera variables
         GVAR(camera) = nil;

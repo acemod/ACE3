@@ -9,12 +9,6 @@ class CfgVehicles {
         isGlobal = 1;
         author = ECSTRING(common,ACETeam);
         class Arguments {
-            class systemEnable {
-                displayName = CSTRING(system_DisplayName);
-                description = CSTRING(system_Description);
-                typeName = "BOOL";
-                defaultValue = 0;
-            };
             class unitsFilter {
                 displayName = CSTRING(units_DisplayName);
                 description = CSTRING(units_Description);
