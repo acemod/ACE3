@@ -17,8 +17,6 @@
 #define __ctrl1 (__dsp displayCtrl 132950)
 #define __ctrl2 (__dsp displayCtrl 132951)
 
-private ["_inclinationAngle", "_refPosition"];
-
 if (GVAR(Protractor)) exitWith {
     GVAR(Protractor) = false;
     1 cutText ["", "PLAIN"];
@@ -41,9 +39,6 @@ GVAR(Protractor) = true;
         [_idPFH] call cba_fnc_removePerFrameHandler;
     };
 
-    _inclinationAngle = asin((ACE_player weaponDirection currentWeapon ACE_player) select 2);
-    _inclinationAngle = -58 max _inclinationAngle min 58;
-
     1 cutRsc ["RscProtractor", "PLAIN", 1, false];
 
     __ctrl1 ctrlSetScale 1;
@@ -52,7 +47,7 @@ GVAR(Protractor) = true;
     __ctrl1 ctrlSetTextColor [1, 1, 1, 1];
 
     __ctrl2 ctrlSetScale 1;
-    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY + 0.001 - 0.0012 * _inclinationAngle, 0.2, 0.2 * 4/3];
+    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY + 0.001 - 0.0012 * (-58 max (asin((ACE_player weaponDirection currentWeapon ACE_player) select 2)) min 58), 0.2, 0.2 * 4/3];
     __ctrl2 ctrlCommit 0;
     __ctrl2 ctrlSetText QUOTE(PATHTOF(UI\protractor_marker.paa));
     __ctrl2 ctrlSetTextColor [1, 1, 1, 1];

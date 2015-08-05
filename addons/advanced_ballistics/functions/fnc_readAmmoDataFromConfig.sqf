@@ -4,7 +4,7 @@
  * Reads the ammo class config and updates the config cache
  *
  * Arguments:
- * 0: ammo - classname <STRING>
+ * ammo - classname <STRING>
  *
  * Return Value:
  * 0: _airFriction
@@ -25,50 +25,32 @@
 #include "script_component.hpp"
 
 private ["_ammo", "_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_result"];
-_ammo = _this;
+_ammoConfig = configFile >> "CfgAmmo" >> _this;
 
-_airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-_caliber = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
-_bulletLength = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_bulletLength");
-_bulletMass = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_bulletMass");
-_transonicStabilityCoef = 0.5;
-if (isNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef")) then {
-    _transonicStabilityCoef = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_transonicStabilityCoef");
+_airFriction = getNumber(_ammoConfig >> "airFriction");
+_caliber = getNumber(_ammoConfig >> "ACE_caliber");
+_bulletLength = getNumber(_ammoConfig >> "ACE_bulletLength");
+_bulletMass = getNumber(_ammoConfig >> "ACE_bulletMass");
+_transonicStabilityCoef = getNumber(_ammoConfig >> "ACE_transonicStabilityCoef");
+if (_transonicStabilityCoef == 0) then {
+    _transonicStabilityCoef = 0.5;
 };
-_dragModel = 1;
-_ballisticCoefficients = [];
-_velocityBoundaries = [];
-_atmosphereModel = "ICAO";
-if (isNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_dragModel")) then {
-    _dragModel = getNumber(configFile >> "CfgAmmo" >> _ammo >> "ACE_dragModel");
-    if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
-        _dragModel = 1;
-    };
+_dragModel = getNumber(_ammoConfig >> "ACE_dragModel");
+if (_dragModel == 0 || !(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+    _dragModel = 1;
 };
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ballisticCoefficients")) then {
-    _ballisticCoefficients = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ballisticCoefficients");
+_ballisticCoefficients = getArray(_ammoConfig >> "ACE_ballisticCoefficients");
+_velocityBoundaries = getArray(_ammoConfig >> "ACE_velocityBoundaries");
+_atmosphereModel = getText(_ammoConfig >> "ACE_standardAtmosphere");
+if (_atmosphereModel isEqualTo "") then {
+    _atmosphereModel = "ICAO";
 };
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_velocityBoundaries")) then {
-    _velocityBoundaries = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_velocityBoundaries");
-};
-if (isText(configFile >> "CfgAmmo" >> _ammo >> "ACE_standardAtmosphere")) then {
-    _atmosphereModel = getText(configFile >> "CfgAmmo" >> _ammo >> "ACE_standardAtmosphere");
-};
-_ammoTempMuzzleVelocityShifts = [];
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts")) then {
-    _ammoTempMuzzleVelocityShifts = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_ammoTempMuzzleVelocityShifts");
-};
-_muzzleVelocityTable = [];
-_barrelLengthTable = [];
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocities")) then {
-    _muzzleVelocityTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
-};
-if (isArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-    _barrelLengthTable = getArray(configFile >> "CfgAmmo" >> _ammo >> "ACE_barrelLengths");
-};
+_ammoTempMuzzleVelocityShifts = getArray(_ammoConfig >> "ACE_ammoTempMuzzleVelocityShifts");
+_muzzleVelocityTable = getArray(_ammoConfig >> "ACE_muzzleVelocities");
+_barrelLengthTable = getArray(_ammoConfig >> "ACE_barrelLengths");
 
 _result = [_airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable];
 
-uiNamespace setVariable [format[QGVAR(%1), _ammo], _result];
+uiNamespace setVariable [format[QGVAR(%1), _this], _result];
 
 _result
