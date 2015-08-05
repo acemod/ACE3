@@ -121,11 +121,11 @@ class GVAR(interface) {
                     idc = -1;
                     style = 64;
                 };
-                class fovTool: viewTool {
-                    idc = IDC_TOOL_FOV;
+                class visionTool: viewTool {
+                    idc = IDC_TOOL_VISION;
                     x = TOOL_W * 3 + MARGIN * 2;
                 };
-                class fovFrame: fovTool {
+                class visionFrame: visionTool {
                     idc = -1;
                     style = 64;
                 };
@@ -137,11 +137,11 @@ class GVAR(interface) {
                     idc = -1;
                     style = 64;
                 };
-                class visionTool: viewTool {
-                    idc = IDC_TOOL_VISION;
+                class fovTool: viewTool {
+                    idc = IDC_TOOL_FOV;
                     x = safeZoneW - TOOL_W * 2 - MARGIN;
                 };
-                class visionFrame: visionTool {
+                class fovFrame: fovTool {
                     idc = -1;
                     style = 64;
                 };
@@ -160,7 +160,7 @@ class GVAR(interface) {
             x = safeZoneX;
             y = safeZoneY + TOOL_H * 2;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H * 4;
+            h = safeZoneH - TOOL_H * 6;
             sizeEx = H_PART(0.8);
             borderSize = 1;
             colorBorder[] = {COL_FORE};
