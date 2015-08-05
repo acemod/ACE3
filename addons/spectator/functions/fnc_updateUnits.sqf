@@ -36,7 +36,7 @@ if !(_newUnits isEqualTo []) exitWith {
 private ["_sides","_cond","_filteredUnits","_color","_icon"];
 
 // Unit setting filter
-_newUnits = [[],allPlayers,allUnits] select GVAR(filterUnits);
+_newUnits = [[],allPlayers,playableUnits,allUnits] select GVAR(filterUnits);
 
 // Side setting filter
 _sides = [];

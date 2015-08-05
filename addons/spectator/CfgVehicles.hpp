@@ -21,11 +21,15 @@ class CfgVehicles {
                     class players {
                         name = CSTRING(units_players);
                         value = 1;
+                    };
+                    class playable {
+                        name = CSTRING(units_playable);
+                        value = 2;
                         default = 1;
                     };
                     class all  {
                         name = CSTRING(units_all);
-                        value = 2;
+                        value = 3;
                     };
                 };
             };

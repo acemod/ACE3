@@ -25,6 +25,9 @@
             <English>Only players</English>
             <Polish>Tylko gracze</Polish>
         </Key>
+        <Key ID="STR_ACE_Spectator_units_playable">
+            <English>Playable Units</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
             <Polish>Wszystkie jednostki</Polish>

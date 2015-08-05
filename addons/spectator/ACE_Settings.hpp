@@ -1,8 +1,8 @@
 class ACE_Settings {
     class GVAR(filterUnits) {
         typeName = "SCALAR";
-        value = 1;
-        values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_all)};
+        value = 2;
+        values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_playable), CSTRING(units_all)};
     };
     class GVAR(filterSides) {
         typeName = "SCALAR";
