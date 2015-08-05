@@ -78,6 +78,7 @@ switch (toLower _mode) do {
         camDestroy GVAR(camera);
 
         // Return to player view
+        clearRadio;
         _unit switchCamera "internal";
 
         // Re-enable BI damage effects

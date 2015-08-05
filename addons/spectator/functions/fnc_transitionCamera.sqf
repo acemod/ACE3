@@ -33,7 +33,7 @@ if !(_newMode in GVAR(availableModes)) then {
 };
 
 // When no units available to spectate, exit to freecam
-if (GVAR(unitList) isEqualTo []) then {
+if ((GVAR(unitList) isEqualTo []) && (alive _newUnit || isNull _newUnit)) then {
     _newMode = 0;
     _newUnit = objNull;
 };

@@ -26,9 +26,11 @@ if (isNull _display) exitWith { [_this select 1] call CBA_fnc_removePerFrameHand
 // Remove all dead and null units from the list
 [] call FUNC(updateUnits);
 
-// Camera shouldn't stay on unit that isn't in the list
+// Camera shouldn't stay on unit that isn't in the list (unless dead)
 if !(GVAR(camUnit) in GVAR(unitList)) then {
-    [nil,1] call FUNC(cycleCamera);
+    if (alive GVAR(camUnit) || isNull GVAR(camUnit)) then {
+        [nil,1] call FUNC(cycleCamera);
+    };
 };
 
 // Reduce overhead when unit tree is hidden
