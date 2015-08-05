@@ -21,9 +21,6 @@ private ["_A", "_M"];
 params ["_dragModel", "_dragCoefficient", "_velocity"];
 _velocity = _velocity * 3.2808399;
 
-_A = -1;
-_M = -1;
-
 switch _dragModel do {
     case 1: {
         call {
@@ -128,8 +125,8 @@ switch _dragModel do {
     };
 };
 
-if (_A != -1 && _M != -1 && _velocity > 0 && _velocity < 10000) then {
+if (!isNil "_A" && !isNil "_M" && _velocity > 0 && _velocity < 10000) then {
     (_A * (_velocity ^ _M) / _dragCoefficient) / 3.2808399
 } else {
     0
-}
+};
