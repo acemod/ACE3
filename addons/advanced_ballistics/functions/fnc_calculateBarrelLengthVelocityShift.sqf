@@ -14,6 +14,8 @@
  *
  * Return value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
