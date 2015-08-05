@@ -26,7 +26,7 @@ if (isNil "_muzzleVelocityShiftTableUpperLimit") exitWith { 0 };
 _temperatureIndexFunction = (_temperature + 15) / 5;
 
 // lower and upper data index used for interpolation
-_temperatureIndexA = (0 max (floor(_temperatureIndexFunction)) min 10;
+_temperatureIndexA = (0 max (floor(_temperatureIndexFunction))) min 10;
 _temperatureIndexB = (0 max (ceil(_temperatureIndexFunction))) min 10;
 
 // Interpolation ratio

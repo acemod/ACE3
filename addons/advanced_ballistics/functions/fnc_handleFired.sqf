@@ -20,7 +20,7 @@
 #include "script_component.hpp"
 
 private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
-params ["_unit", "_weapon", "_mode", "_ammo", "_magazine", "_caliber", "_bullet"];
+params ["_unit", "_weapon", "", "_mode", "_ammo", "_magazine", "_bullet"];
 
 _abort = false;
 if (!hasInterface) exitWith {};
