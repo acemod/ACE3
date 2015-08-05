@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: Tripod
+description: Adds a packable tripod deployable on the field
 group: feature
+category: equipment
 parent: wiki
 ---
 

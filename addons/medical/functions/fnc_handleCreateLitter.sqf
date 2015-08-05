@@ -46,7 +46,7 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             GVAR(litterPFHRunning) = false;
         }; 
-    }, 30, []] call cba_fnc_addPerFrameHandler;
+    }, 30, []] call CBA_fnc_addPerFrameHandler;
 };
 
 true

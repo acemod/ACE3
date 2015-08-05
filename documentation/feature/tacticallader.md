@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: Tactical ladder
+description: Adds a deployable ladder with adjustable height that you can transport on your back.
 group: feature
+category: equipment
 parent: wiki
 ---
 

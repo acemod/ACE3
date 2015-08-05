@@ -3,6 +3,7 @@ layout: wiki
 title: Small Arms
 description: Various improvements to small arms
 group: feature
+category: realism
 parent: wiki
 ---
 

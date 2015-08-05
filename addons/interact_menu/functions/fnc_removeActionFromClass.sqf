@@ -19,7 +19,7 @@
 
 EXPLODE_3_PVT(_this,_objectType,_typeNum,_fullPath);
 
-private ["_res","_varName","_actionTrees", "_actionIndex", "_parentLevel", "_parentNode"];
+private ["_res","_varName","_actionTrees", "_parentNode", "_found"];
 _res = _fullPath call FUNC(splitPath);
 EXPLODE_2_PVT(_res,_parentPath,_actionName);
 
@@ -30,10 +30,15 @@ _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
 if (isNil {_parentNode}) exitWith {};
 
 // Iterate through children of the father
+_found = false;
 {
     if (((_x select 0) select 0) == _actionName) exitWith {
+        TRACE_2("Deleting Action", _forEachIndex, _x);
+        _found = true;
         (_parentNode select 1) deleteAt _forEachIndex;
     };
 } forEach (_parentNode select 1);
 
-_parentLevel deleteAt _actionIndex;
+if (!_found) then {
+    WARNING("Failed to find action to delete");
+};

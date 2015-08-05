@@ -2,6 +2,7 @@
 layout: wiki
 title: Modules
 group: feature
+category: general
 parent: wiki
 ---
 

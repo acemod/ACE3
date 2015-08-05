@@ -3,6 +3,7 @@ layout: wiki
 title: Logistics - UAV Battery
 description: UAV recharging
 group: feature
+category: equipment
 parent: wiki
 ---
 

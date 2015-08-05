@@ -3,6 +3,7 @@ layout: wiki
 title: Missile Guidance
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

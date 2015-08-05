@@ -3193,11 +3193,13 @@
             <English>Condition PAK</English>
             <Czech>Podmínka osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
+            <Polish>Warunek apteczek</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the Personal Aid Kit be used?</English>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
+            <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3302,11 +3304,13 @@
             <English>Condition Surgical kit (Adv)</English>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
+            <Polish>Warunek zestawu chir.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical kit be used?</English>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
+            <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3458,6 +3462,7 @@
             <Portuguese>É médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
+            <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
@@ -3522,7 +3527,7 @@
             <Russian>Список транспортных средств, которые будут считаться медицинским транспортом (через запятую).</Russian>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy medyczne, oddzielone przecinkami.</Polish>
             <Spanish>Lista de los vehículos que se clasifican como vehículo médicos, separados por comas.</Spanish>
-            <German>Liste ovn Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
+            <German>Liste von Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
             <Czech>Seznam vozidel které budou klasifikovány jako zdravotnická vozidla, oddělené čárkami.</Czech>
             <Portuguese>Lista de veículos que serão classificados como veículos médicos, separados por vírgulas.</Portuguese>
         </Key>
@@ -3635,11 +3640,13 @@
             <English>Anytime</English>
             <Czech>Kdykoli</Czech>
             <Spanish>Siempre</Spanish>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
             <Czech>Stabilní</Czech>
             <Spanish>Estable</Spanish>
+            <Polish>Po stabilizacji</Polish>
         </Key>
     </Package>
 </Project>

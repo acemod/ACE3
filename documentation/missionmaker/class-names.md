@@ -255,18 +255,32 @@ class name | in game name | type   |
 ACE_SpareBarrel | Spare barrel | ACE_ItemCore |
 
 ## Parachute
-`added in 3.0.0.3`
+`last modified in 3.2.0`
 
 class name | in game name | type  |
 ---------- | --------- | ---------
 ACE_Altimeter | Altimeter Watch | ACE_ItemCore |
 ACE_NonSteerableParachute | Non-Steerable Parachute | Backpack |
+ACE_ReserveParachute | Reserve Parachute | Backpack |
 
 ## Rangecard
+`added in 3.1.1`
 
 class name | in game name | type   |
 ---------- | --------- | ---------
 ACE_RangeCard | rangecard | ACE_ItemCore |
+
+## Respawn
+`last modified in 3.2.0`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_Rallypoint_West | Rallypoint West | FlagCarrier |
+ACE_Rallypoint_East | Rallypoint East | FlagCarrier |
+ACE_Rallypoint_Independent | Rallypoint Independent | FlagCarrier |
+ACE_Rallypoint_West_Base | Rallypoint West (Base) | FlagCarrier |
+ACE_Rallypoint_East_Base | Rallypoint East (Base) | FlagCarrier |
+ACE_Rallypoint_Independent_Base | Rallypoint Independent (Base) | FlagCarrier |
 
 ## Vector
 `added in 3.0.0.3`

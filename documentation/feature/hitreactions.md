@@ -3,6 +3,7 @@ layout: wiki
 title: Hit Reactions
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

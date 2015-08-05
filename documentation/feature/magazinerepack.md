@@ -3,6 +3,7 @@ layout: wiki
 title: Magazine Repack
 description: Repacking magazines, and maybe your bananas.
 group: feature
+category: realism
 parent: wiki
 ---
 

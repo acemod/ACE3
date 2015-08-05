@@ -15,10 +15,11 @@
 
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated);
-private ["_mouseOver","_unit","_surrendering"];
+private ["_mouseOver", "_unit", "_surrendering"];
 
-if (!_activated) exitWith {};
+params ["_logic", "_units", "_activated"];
+
+if !(_activated && local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setSurrendered)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);

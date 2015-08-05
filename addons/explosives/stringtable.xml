@@ -576,6 +576,7 @@
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
+            <English>This module adjusts the settings related to explosives.</English>
             <Polish>Moduł ten pozwala dostosować opcje związane z ładunkami wybuchowymi, ich podkładaniem oraz rozbrajaniem.</Polish>
             <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
             <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
