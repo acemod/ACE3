@@ -43,9 +43,8 @@ switch (toLower _mode) do {
         // Close map
         openMap [false,false];
 
-        // Disable BI damage effects and remove counter layer
+        // Disable BI damage effects
         BIS_fnc_feedback_allowPP = false;
-        ("BIS_fnc_respawnCounter" call BIS_fnc_rscLayer) cutText ["","plain"];
 
         // Close all existing dialogs
         while {dialog} do {
@@ -81,7 +80,7 @@ switch (toLower _mode) do {
         clearRadio;
         _unit switchCamera "internal";
 
-        // Re-enable BI damage effects
+        // Enable BI damage effects
         BIS_fnc_feedback_allowPP = true;
 
         // Cleanup camera variables
@@ -154,9 +153,33 @@ switch (toLower _mode) do {
             [localize LSTRING(prevUnit),"Left Arrow"]
         ];
 
-        // Hacky way to enable keybindings
-        //_display displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-        //_display displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+        // Handle support for BI's respawn counter
+        [{
+            if !(isNull (GETUVAR(RscRespawnCounter,displayNull))) then {
+                disableSerialization;
+                private ["_counter","_title","_back","_timer","_frame","_x","_y"];
+                _counter = GETUVAR(RscRespawnCounter,displayNull);
+                _title = _counter displayCtrl 1001;
+                _back = _counter displayCtrl 1002;
+                _timer = _counter displayCtrl 1003;
+                _frame = _counter ctrlCreate ["RscFrame",1008];
+
+                _x = safeZoneX + safeZoneW - TOOL_W * 4 - MARGIN * 3;
+                _y = safeZoneY + safeZoneH - TOOL_H;
+
+                // Timer
+                _title ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
+                _back ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
+                _timer ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
+                _frame ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
+                _timer ctrlSetFontHeight TOOL_H;
+
+                _title ctrlCommit 0;
+                _back ctrlCommit 0;
+                _timer ctrlCommit 0;
+                _frame ctrlCommit 0;
+            };
+        },[],0.5] call EFUNC(common,waitAndExecute);
     };
     case "onunload": {
         // Kill GUI PFHs

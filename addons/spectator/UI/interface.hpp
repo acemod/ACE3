@@ -1,6 +1,15 @@
+// Temporary fix until BI take care of it
+class RscFrame {
+    x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+};
+
+
 class RscButtonMenu;
 class RscControlsGroupNoScrollbars;
-class RscFrame;
+//class RscFrame;
 class RscListNBox;
 class RscMapControl;
 class RscPicture;
