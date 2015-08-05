@@ -22,9 +22,9 @@ _initStartTime = ACE_time;
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
-    if (GVAR(initMessageEnabled)) then {
+    #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
-    };
+    #endIf
 };
 
 _mapGrids = ceil(_mapSize / 50) + 1;
@@ -37,9 +37,9 @@ GVAR(currentGrid) = 0;
     _args params ["_mapGrids", "_gridCells", "_initStartTime"];
 
     if (GVAR(currentGrid) >= _gridCells) exitWith {
-        if (GVAR(initMessageEnabled)) then {
+        #ifdef DEBUG_MODE_FULL
             systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", ceil(ACE_time - _initStartTime)];
-        };
+        #endif
         [_idPFH] call cba_fnc_removePerFrameHandler;
     };
 
