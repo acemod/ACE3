@@ -13,7 +13,7 @@
  * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */

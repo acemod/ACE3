@@ -8,10 +8,7 @@
  * 1: temperature - degrees celcius <NUMBER>
  *
  * Return Value:
- * 0: muzzle velocity shift - m/s <NUMBER>
- *
- * Return value:
- * None
+ * muzzle velocity shift - m/s <NUMBER>
  *
  * Public: No
  */

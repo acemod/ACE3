@@ -4,13 +4,21 @@
  * Reads the ammo class config and updates the config cache
  *
  * Arguments:
- * 0: ammo - classname <string>
+ * 0: ammo - classname <STRING>
  *
  * Return Value:
- * 0: [_airFriction, _caliber, _bulletLength, _bulletMass, _transonicStabilityCoef, _dragModel, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _ammoTempMuzzleVelocityShifts, _muzzleVelocityTable, _barrelLengthTable] <ARRAY>
- *
- * Return value:
- * None
+ * 0: _airFriction
+ * 1: _caliber
+ * 2: _bulletLength
+ * 3: _bulletMass
+ * 4: _transonicStabilityCoef
+ * 5: _dragModel
+ * 6: _ballisticCoefficients
+ * 7: _velocityBoundaries
+ * 8: _atmosphereModel
+ * 9: _ammoTempMuzzleVelocityShifts
+ * 10: _muzzleVelocityTable
+ * 11: _barrelLengthTable
  *
  * Public: No
  */

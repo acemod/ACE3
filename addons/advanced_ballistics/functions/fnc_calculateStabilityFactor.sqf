@@ -13,7 +13,7 @@
  * 6: barometric Pressure - hPA <NUMBER>
  *
  * Return Value:
- * 0: stability factor <NUMBER>
+ * stability factor <NUMBER>
  *
  * Public: No
  */

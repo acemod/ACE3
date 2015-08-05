@@ -3,10 +3,10 @@
  * Initializes the advanced ballistics dll extension with terrain data
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */

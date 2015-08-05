@@ -10,10 +10,7 @@
  * 3: muzzle velocity - m/s <NUMBER>
  *
  * Return Value:
- * 0: muzzle velocity shift - m/s <NUMBER>
- *
- * Return value:
- * None
+ * muzzle velocity shift - m/s <NUMBER>
  *
  * Public: No
  */

@@ -4,13 +4,12 @@
  * Reads the weapon class config and updates the config cache
  *
  * Arguments:
- * 0: weapon - classname <string>
+ * 0: weapon - classname <STRING>
  *
  * Return Value:
- * 0: [_barrelTwist, _twistDirection, _barrelLength] <ARRAY>
- *
- * Return value:
- * None
+ * 0: _barrelTwist
+ * 1: _twistDirection
+ * 2: _barrelLength
  *
  * Public: No
  */
