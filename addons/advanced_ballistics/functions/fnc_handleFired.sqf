@@ -60,11 +60,14 @@ if (isNil {_WeaponCacheEntry}) then {
      _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
 };
 
+_AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable"];
+_WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+
 _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
-    _muzzleVelocityShift = [_WeaponCacheEntry select 2, _AmmoCacheEntry select 10, _AmmoCacheEntry select 11, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
+    _muzzleVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
@@ -74,7 +77,7 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
 
 if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
-    _muzzleVelocityShift = [_AmmoCacheEntry select 9, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
+    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
@@ -95,12 +98,7 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
     };
 };
 
-_caliber = _AmmoCacheEntry select 1;
-_bulletLength = _AmmoCacheEntry select 2;
-_bulletMass = _AmmoCacheEntry select 3;
-_barrelTwist = _WeaponCacheEntry select 0;
 _stabilityFactor = 1.5;
-
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
     _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
     _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
@@ -109,7 +107,8 @@ if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) th
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), overcast, floor(ACE_time), ACE_time - floor(ACE_time)];
+_aceTimeSecond = floor ACE_time;
+"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), overcast, _aceTimeSecond, ACE_time - _aceTimeSecond];
 
 [{
     private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
@@ -129,6 +128,7 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
         drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
     };
 
-    call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, floor(ACE_time), ACE_time - floor(ACE_time)]);
+    _aceTimeSecond = floor ACE_time;
+    call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, _aceTimeSecond, ACE_time - _aceTimeSecond]);
 
 }, GVAR(simulationInterval), [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)]] call CBA_fnc_addPerFrameHandler;
