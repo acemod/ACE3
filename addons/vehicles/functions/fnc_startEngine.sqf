@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Delays engine engine start of vehicle.
+ * Delays engine start of vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
