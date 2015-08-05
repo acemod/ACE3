@@ -67,8 +67,13 @@ _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
-    _muzzleVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
-    if (_muzzleVelocityShift != 0) then {
+    _muzzleVelocityShift = uiNamespace getVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],nil];
+    if (isNil "_muzzleVelocityShift") then {
+        _muzzleVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
+        uiNamespace setVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],_muzzleVelocityShift];
+    };
+
+    if (_muzzleVelocityShift != 0) then { // @ combine with same functions
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
@@ -76,9 +81,9 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
 };
 
 if (GVAR(ammoTemperatureEnabled)) then {
-    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
-    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
-    if (_muzzleVelocityShift != 0) then {
+    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight); // @todo make it not Shoot dependent
+    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift); //@todo make it not Shoot dependent
+    if (_muzzleVelocityShift != 0) then { // @ combine with same functions
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
@@ -100,7 +105,7 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
 
 _stabilityFactor = 1.5;
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
+    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight); // @todo double call not neede and make it not shoot dependet
     _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
