@@ -15,6 +15,16 @@
  */
 #include "script_component.hpp"
 
+if (isServer) then {
+    //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
+    ["medical_onUnconscious", {
+        params ["_unit", "_isUnconscious"];
+        if (!_isUnconscious) exitWith {};
+        TRACE_1("Knocked Out, Doing Deadman", _unit);
+        [_unit] call FUNC(onIncapacitated);
+    }] call EFUNC(common,addEventHandler);
+};
+
 if !(hasInterface) exitWith {};
 
 GVAR(PlacedCount) = 0;

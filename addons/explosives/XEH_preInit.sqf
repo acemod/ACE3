@@ -44,8 +44,8 @@ PREP(getSpeedDialExplosive);
 
 PREP(module);
 
+PREP(onIncapacitated);
 PREP(onInventoryChanged);
-PREP(onKilled);
 
 PREP(openTimerSetUI);
 
