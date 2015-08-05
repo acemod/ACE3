@@ -457,10 +457,10 @@ switch (toLower _mode) do {
             };
         } forEach GVAR(unitList);
     };
-    // Other
+    // Break from interface for escape menu
     case "escape": {
         _args params ["_display"];
-        private ["_dlg","_key","_index","_ctrl","_config"];
+        private "_dlg";
 
         // Kill display
         _display closeDisplay 0;
@@ -474,7 +474,6 @@ switch (toLower _mode) do {
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
 
-        // Below is from EFUNC(common,disableUserInput)
         createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
 
         disableSerialization;
@@ -484,30 +483,35 @@ switch (toLower _mode) do {
             !(_key == 1)
         }];
 
-        for "_index" from 100 to 2000 do {
-            (_dlg displayCtrl _index) ctrlEnable false;
+        // Disable save, respawn, options & manual buttons
+        (_dlg displayCtrl 103) ctrlEnable false;
+        if !(alive player) then {
+            (_dlg displayCtrl 1010) ctrlEnable false;
         };
+        (_dlg displayCtrl 101) ctrlEnable false;
+        (_dlg displayCtrl 122) ctrlEnable false;
 
-        _ctrl = _dlg displayctrl 103;
-        _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {dialog} do {closeDialog 0}; failMission 'LOSER';)];
-        _ctrl ctrlEnable true;
-        _ctrl ctrlSetText "ABORT";
-        _ctrl ctrlSetTooltip "Abort.";
-
-        _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-        _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1;)];
-        _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
-        _ctrl ctrlSetText "RESPAWN";
-        _ctrl ctrlSetTooltip "Respawn.";
+        // Initalize abort button (the "spawn" is a necessary evil)
+        (_dlg displayCtrl 104) ctrlAddEventHandler ["ButtonClick",{_this spawn {
+            disableSerialization;
+            _display = ctrlparent (_this select 0);
+            _abort = [localize "str_msg_confirm_return_lobby",nil,localize "str_disp_xbox_hint_yes",localize "str_disp_xbox_hint_no",_display,nil,true] call BIS_fnc_guiMessage;
+            if (_abort) then {_display closeDisplay 2; failMission "loser"};
+        }}];
 
         // PFH to re-open display when menu closes
         [{
             if !(isNull (findDisplay 49)) exitWith {};
 
-            createDialog QGVAR(interface);
-            [] call FUNC(transitionCamera);
+            // If still a spectator then re-enter the interface
+            if (GVAR(isSet)) then {
+                createDialog QGVAR(interface);
+                [] call FUNC(transitionCamera);
+            };
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         },0] call CBA_fnc_addPerFrameHandler;
+
+        true
     };
 };
