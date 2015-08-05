@@ -161,6 +161,11 @@ GVAR(TweakedAngle) = 0;
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             _placeAngle = 0;
             _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
+
+            TRACE_1("Planting Mass", (getMass _expSetupVehicle));
+            //If the object is too heavy, it can kill a player if it colides
+            if ((getMass _expSetupVehicle) > 5) then {_expSetupVehicle setMass 5;};
+
             if (isNull _attachVehicle) then {
                 _placeAngle = _cameraAngle - GVAR(TweakedAngle) + 180;
                 _expSetupVehicle setPosAsl _virtualPosASL;

@@ -62,8 +62,8 @@ if (!isNull _attachedTo) then {
 
 if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
     call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
-    
-    systemChat format ["Placing %1 [%2]", _dir, _this];
-    
+
+
 [[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
+
 _explosive
