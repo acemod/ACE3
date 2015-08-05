@@ -225,6 +225,10 @@ switch (toLower _mode) do {
     case "onkeydown": {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
+        if ((alive player) && {_dik in (actionKeys "curatorInterface")} && {!isNull (getAssignedCuratorLogic player)}) exitWith {
+            ["zeus", [_display]] call FUNC(handleInterface);
+        };
+
         // Handle held keys (prevent repeat calling)
         if (_dik in GVAR(heldKeys)) exitwith {};
         // Exclude movement keys so that speed can be adjusted on fly
@@ -457,7 +461,7 @@ switch (toLower _mode) do {
             };
         } forEach GVAR(unitList);
     };
-    // Break from interface for escape menu
+    // Break from interface for eexternal events
     case "escape": {
         _args params ["_display"];
         private "_dlg";
@@ -511,6 +515,38 @@ switch (toLower _mode) do {
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         },0] call CBA_fnc_addPerFrameHandler;
+    };
+    case "zeus": {
+        _args params ["_display"];
+
+        // Kill display
+        _display closeDisplay 0;
+
+        // Reset cam/UI vars
+        GVAR(camBoom) = 0;
+        GVAR(camDolly) = [0,0];
+
+        GVAR(ctrlKey) = false;
+        GVAR(heldKeys) = [];
+        GVAR(mouse) = [false,false];
+        GVAR(mousePos) = [0.5,0.5];
+
+        openCuratorInterface;
+
+        [{
+            // PFH to re-open display when menu closes
+            [{
+                if !((isNull curatorCamera) && {isNull (GETMVAR(bis_fnc_moduleRemoteControl_unit,objNull))}) exitWith {};
+
+                // If still a spectator then re-enter the interface
+                if (GVAR(isSet)) then {
+                    createDialog QGVAR(interface);
+                    [] call FUNC(transitionCamera);
+                };
+
+                [_this select 1] call CBA_fnc_removePerFrameHandler;
+            },0] call CBA_fnc_addPerFrameHandler;
+        },[],5] call EFUNC(common,waitAndExecute);
 
         true
     };
