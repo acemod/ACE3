@@ -36,7 +36,7 @@ for "_n" from 0 to (_numCfgs - 1) do {
             if !(isClass (configFile >> "CfgPatches" >> _x)) exitWith {
                 _removeAddons pushBack (configName _cfg);
             };
-        } forEach _requierdAddon;
+        } forEach _requiredAddon;
     };
 
     if (isText _cfg) then {
