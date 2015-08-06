@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
-
+params ["_unit", "_target"];
 //Check sides, Player has cableTie, target is alive and not already handcuffed
 
 (GVAR(allowHandcuffOwnSide) || {(side _unit) != (side _target)}) &&
