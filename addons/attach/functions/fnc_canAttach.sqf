@@ -19,11 +19,12 @@
 
 private ["_attachLimit", "_attachedObjects","_playerPos"];
 params ["_attachToVehicle","_player","_args"];
-_args params [["_itemname",""]];
+_args params [["_itemClassname","", [""]]];
+TRACE_3("params",_attachToVehicle,_unit,_itemClassname);
 
 _attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 
 _playerPos = (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
 
-(canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};
+(canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemClassname in ((itemsWithMagazines _player) + [""])};

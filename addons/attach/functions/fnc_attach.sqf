@@ -19,7 +19,8 @@
 
 private ["_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID", "_model"];
 params ["_attachToVehicle","_unit","_args"];
-_args params [["_itemClassname",""]];
+_args params [["_itemClassname","", [""]]];
+TRACE_3("params",_attachToVehicle,_unit,_itemClassname);
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
 if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
