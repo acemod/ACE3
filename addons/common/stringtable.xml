@@ -644,5 +644,13 @@
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
         </Key>
+        <Key ID="STR_ACE_Common_DoNotForce">
+            <English>Do Not Force</English>
+            <Polish>Nie wymuszaj</Polish>
+            <Spanish>No forzar</Spanish>
+            <German>Nicht erzwingen</German>
+            <Czech>Nevynucovat</Czech>
+            <Portuguese>Não forçar</Portuguese>
+        </Key>
     </Package>
 </Project>

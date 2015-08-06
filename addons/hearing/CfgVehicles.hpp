@@ -115,7 +115,7 @@ class CfgVehicles {
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = CSTRING(DoNotForce);
+                        name = ECSTRING(common,DoNotForce);
                         value = -1;
                     };
                     /* Probably don't want to allow forcing ear ringing for people who have serious problems with the effect
