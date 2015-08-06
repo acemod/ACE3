@@ -19,17 +19,22 @@
  */
 #include "script_component.hpp"
 
+// Early Quiting
+if (!hasInterface) exitWith {};
+if (!GVAR(enabled)) exitWith {};
+
+// parameterization
 private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
 params ["_unit", "_weapon", "", "_mode", "_ammo", "_magazine", "_bullet"];
 
 _abort = false;
-if (!hasInterface) exitWith {};
-if (!alive _bullet) exitWith {};
-if (!GVAR(enabled)) exitWith {};
-if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
-if (underwater _unit) exitWith {};
+
+
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
+if (!alive _bullet) exitWith {};
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
+if (underwater _unit) exitWith {};
 if (!GVAR(simulateForEveryone) && !(local _unit)) then {
     // The shooter is non local
     _abort = true;
@@ -51,17 +56,19 @@ if (_abort || !(GVAR(extensionAvailable))) exitWith {
     [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
 };
 
+// Get Weapon and Ammo Configurations
 _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
-if (isNil {_AmmoCacheEntry}) then {
+if (isNil "_AmmoCacheEntry") then {
      _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
 };
 _WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
-if (isNil {_WeaponCacheEntry}) then {
+if (isNil "_WeaponCacheEntry") then {
      _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
 };
 
 _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable"];
 _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
+
 
 _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
@@ -72,24 +79,25 @@ if (GVAR(barrelLengthInfluenceEnabled)) then {
         _muzzleVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
         uiNamespace setVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],_muzzleVelocityShift];
     };
-
-    if (_muzzleVelocityShift != 0) then { // @ combine with same functions
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
-        _bullet setVelocity _bulletVelocity;
+    if (_muzzleVelocityShift != 0) then {
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
 };
 
 if (GVAR(ammoTemperatureEnabled)) then {
-    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight); // @todo make it not Shoot dependent
-    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift); //@todo make it not Shoot dependent
-    if (_muzzleVelocityShift != 0) then { // @ combine with same functions
-        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
-        _bullet setVelocity _bulletVelocity;
+    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
+    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
+    if (_muzzleVelocityShift != 0) then {
         _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
 };
 
+if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
+    if (_muzzleVelocityShift != 0) then {
+        _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
+        _bullet setVelocity _bulletVelocity;
+    };
+};
 _bulletTraceVisible = false;
 if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
     if (currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) then {
@@ -105,7 +113,9 @@ if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
 
 _stabilityFactor = 1.5;
 if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
-    _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight); // @todo double call not neede and make it not shoot dependet
+    if (isNil "_temperature") then {
+        _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
+    };
     _barometricPressure = ((getPosASL _bullet) select 2) call EFUNC(weather,calculateBarometricPressure);
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
@@ -121,13 +131,14 @@ _aceTimeSecond = floor ACE_time;
     _args params["_bullet","_caliber","_bulletTraceVisible","_index"];
 
     _bulletVelocity = velocity _bullet;
-    _bulletPosition = getPosASL _bullet;
 
     _bulletSpeed = vectorMagnitude _bulletVelocity;
 
     if (!alive _bullet || _bulletSpeed < 100) exitWith {
         [_idPFH] call cba_fnc_removePerFrameHandler;
     };
+
+    _bulletPosition = getPosASL _bullet;
 
     if (_bulletTraceVisible && _bulletSpeed > 500) then {
         drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
