@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
-["localize ELSTRING(common,ACEConfigCategoryCommon)", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses),
+[localize ELSTRING(common,ACEConfigCategoryCommon), QGVAR(wipeGlasses), localize LSTRING(WipeGlasses),
 {
     if (!(GETVAR(ace_player,ACE_isUnconscious,false))) exitWith {
         call FUNC(clearGlasses);

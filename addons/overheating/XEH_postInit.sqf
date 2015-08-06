@@ -4,7 +4,8 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
+[localize ELSTRING(common,ACEConfigCategoryWeapons)
+, QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
