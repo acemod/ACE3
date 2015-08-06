@@ -31,8 +31,8 @@ _hitpointClasses = [_config >> "HitPoints"];
     if (isClass _class) then {
         _hitpointClasses pushBack _class;
     };
-
-} forEach allTurrets _vehicle;
+    true
+} count allTurrets _vehicle;
 
 // iterate through all classes with hitpoints and their parents
 {
@@ -52,7 +52,7 @@ _hitpointClasses = [_config >> "HitPoints"];
 
         _class = inheritsFrom _class;
     };
-
-} forEach _hitpointClasses;
+    true
+} count _hitpointClasses;
 
 _hitpoints

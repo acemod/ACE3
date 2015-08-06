@@ -36,5 +36,6 @@ _return = [];
             _return pushback [_name, typeName _var, _var, _public, _persitents];
         };
     };
+    true
 } count GVAR(OBJECT_VARIABLES_STORAGE);
 _return

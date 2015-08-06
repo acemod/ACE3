@@ -28,5 +28,6 @@ _turret = [];
   if (getNumber (_config >> "primaryObserver") == 1) exitWith {
     _turret = _x;
   };
+  true
 } count _turrets;
 _turret

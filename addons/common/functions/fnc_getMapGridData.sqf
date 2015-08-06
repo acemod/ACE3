@@ -38,6 +38,7 @@ _stepY = 1e10;
         _stepX = getNumber (_x >> "stepX");
         _stepY = getNumber (_x >> "stepY");
     };
+    true
 } count configProperties [_cfgGrid, "isClass _x", false];
 
 _letterGrid = false;

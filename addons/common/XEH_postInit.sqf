@@ -43,7 +43,10 @@
 //Prepare variables for FUNC(getMapGridFromPos)/FUNC(getMapPosFromGrid)
 [] call FUNC(getMapGridData);
 
-
+["HeadbugFixUsed", {
+    PARAMS_2(_profileName,_animation);
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
 
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);

@@ -28,6 +28,7 @@ _turret = [];
     if (getNumber (_config >> "isCopilot") == 1 && {getNumber (_config >> "primaryGunner") != 1} && {getNumber (_config >> "primaryObserver") != 1}) exitWith {
         _turret = _x;
     };
+    true
 } count _turrets;
 
 _turret

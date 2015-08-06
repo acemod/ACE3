@@ -19,8 +19,9 @@ diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];
 if (!isNil "ACE_PFH_COUNTER") then {
     {
-        _x params["_pfh"];
-        diag_log text format["Registered PFH: id=%1, %1:%2", (_pfh select 0), (_pfh select 1), (_pfh select 2) ];
+        _x params ["_pfh"];
+        _pfh params ["_id","_pfh1","_pfh2"]
+        diag_log text format["Registered PFH: id=%1, %1:%2", _id, _pfh1, _pfh2];
     } count ACE_PFH_COUNTER;
 };
 
@@ -29,6 +30,7 @@ diag_log text format["-------------------------------------------"];
 {
     private ["_counterEntry", "_total", "_count", "_delta", "_averageResult"];
     _counterEntry = _x;
+    _counterEntry params ["_entry"];
     _total = 0;
     _count = 0;
     _averageResult = 0;
@@ -47,9 +49,9 @@ diag_log text format["-------------------------------------------"];
         _averageResult = (_total / _count) * 1000;
 
         // dump results
-        diag_log text format["%1: Average: %2s / %3 = %4ms", (_counterEntry select 0), _total, _count, _averageResult];
+        diag_log text format["%1: Average: %2s / %3 = %4ms", _entry, _total, _count, _averageResult];
     } else {
-        diag_log text format["%1: No results", (_counterEntry select 0) ];
+        diag_log text format["%1: No results", _entry];
     };
 } count ACE_COUNTERS;
 

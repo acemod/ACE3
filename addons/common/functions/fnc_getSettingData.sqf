@@ -26,6 +26,7 @@ private ["_value"];
 _value = [];
 {
     if ((_x select 0) == _name) exitWith {_value = _x};
+    true
 } count GVAR(settings);
 
 _value
