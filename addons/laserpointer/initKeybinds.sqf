@@ -1,6 +1,7 @@
 // by commy2
 
-["ACE3 Weapons", QGVAR(switchLaserLightMode), localize LSTRING(switchLaserLight),
+[localize ELSTRING(common,ACEConfigCategoryWeapons)
+, QGVAR(switchLaserLightMode), localize LSTRING(switchLaserLight),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};

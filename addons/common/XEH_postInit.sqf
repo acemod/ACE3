@@ -341,7 +341,7 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
-["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
@@ -351,7 +351,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
 {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
@@ -361,7 +361,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
 
-["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
 {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};

@@ -1,5 +1,5 @@
 
-["ACE3 Equipment", QGVAR(MenuKey), "Configure DAGR",
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(MenuKey), "Configure DAGR",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -16,7 +16,7 @@
 {false},
 [0, [false, true, false]], false] call cba_fnc_addKeybind;  // (empty default key)
 
-["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(ToggleKey), "Toggle DAGR",
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -37,7 +37,7 @@ _conditonCode = {
 _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
-    
+
     // Statement
     [] call FUNC(toggleOverlay);
     if (!GVAR(run)) then {

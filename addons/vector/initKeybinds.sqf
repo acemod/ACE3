@@ -1,6 +1,6 @@
 // by commy2
 
-["ACE3 Equipment", QGVAR(AzimuthKey), localize LSTRING(AzimuthKey),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(AzimuthKey), localize LSTRING(AzimuthKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -29,7 +29,7 @@
 [15, [false, false, false]], false, 0] call CBA_fnc_addKeybind; //Tab Key
 
 
-["ACE3 Equipment", QGVAR(DistanceKey), localize LSTRING(DistanceKey),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(DistanceKey), localize LSTRING(DistanceKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};

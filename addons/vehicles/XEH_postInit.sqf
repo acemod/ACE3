@@ -4,7 +4,8 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),
+[localize ELSTRING(common,ACEConfigCategoryVehicles)
+, QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isnotinside"]] call EFUNC(common,canInteractWith)) exitWith {false};

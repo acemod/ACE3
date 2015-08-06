@@ -9,7 +9,8 @@ if (!hasInterface) exitWith {};
 
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(safeMode), localize LSTRING(SafeMode),
+[localize ELSTRING(common,ACEConfigCategoryWeapons)
+, QGVAR(safeMode), localize LSTRING(SafeMode),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
