@@ -100,14 +100,6 @@
             <English>Thermal imaging</English>
             <Polish>Termowizja</Polish>
         </Key>
-        <Key ID="STR_ACE_Spectator_icons_DisplayName">
-            <English>Unit icons</English>
-            <Polish>Ikony jednostek</Polish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_icons_Description">
-            <English>Render icons above spectatable units.</English>
-            <Polish>Renderuj ikony nad głowami jednostek, które można obserwować.</Polish>
-        </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>

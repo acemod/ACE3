@@ -176,12 +176,13 @@ class GVAR(interface) {
         };
         class mapOverlay: RscMapControl {
             idc = IDC_MAP;
+            type = 100;
             x = safeZoneX;
             y = safeZoneY;
             w = safeZoneW;
             h = safeZoneH;
             onMouseButtonDown = QUOTE([ARR_2('onMapClick',_this)] call FUNC(handleInterface));
-            onDraw = QUOTE([ARR_2('onDraw',_this)] call FUNC(handleInterface));
+            onDraw = QUOTE(_this call FUNC(handleMap));
         };
         class helpSplash: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;

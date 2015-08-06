@@ -8,6 +8,7 @@ PREP(handleCamera);
 PREP(handleCompass);
 PREP(handleIcons);
 PREP(handleInterface);
+PREP(handleMap);
 PREP(handleMouse);
 PREP(handleToolbar);
 PREP(handleUnits);
@@ -51,5 +52,6 @@ GVAR(showUnit) = true;
 GVAR(unitList) = [];
 GVAR(unitBlacklist) = [];
 GVAR(unitWhitelist) = [];
+GVAR(groupList) = [];
 
 ADDON = true;

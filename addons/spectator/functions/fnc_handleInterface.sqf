@@ -114,6 +114,9 @@ switch (toLower _mode) do {
         // Keep unit list and tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
 
+        // Handle unit icons on map and 3D
+        GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
+
         // Populate the help splash
         private "_help";
         _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
@@ -187,6 +190,7 @@ switch (toLower _mode) do {
         // Kill GUI PFHs
         GVAR(camHandler) = nil;
         GVAR(compHandler) = nil;
+        removeMissionEventHandler ["Draw3D",GVAR(iconHandler)];
         GVAR(iconHandler) = nil;
         GVAR(toolHandler) = nil;
     };
@@ -434,34 +438,6 @@ switch (toLower _mode) do {
             _newPos set [2, _oldZ];
             [nil,nil,nil, _newPos] call FUNC(setCameraAttributes);
         };
-    };
-    case "ondraw": {
-        _args params ["_map"];
-
-        if (GVAR(camMode) == 0) then {
-            _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(camera),24,24,GVAR(camPan)];
-        };
-
-        if !(GVAR(showIcons)) exitWith {};
-
-        private ["_cachedVehicles","_unit","_color","_icon"];
-        _cachedVehicles = [];
-        {
-            _unit = vehicle _x;
-
-            if !(_unit in _cachedVehicles) then {
-                _cachedVehicles pushBack _unit;
-
-                // Use previously cached info where possible
-                if (isNil { GETVAR(_unit,GVAR(uIcon),nil) }) then {
-                    [_unit] call FUNC(cacheUnitInfo);
-                };
-
-                _color = GETVAR(_unit,GVAR(uColor),[ARR_4(0,0,0,0)]);
-                _icon = GETVAR(_unit,GVAR(uIcon),"");
-                _map drawIcon [_icon, _color, _unit, 24, 24, getDir _unit];
-            };
-        } forEach GVAR(unitList);
     };
     // Break from interface for eexternal events
     case "escape": {
