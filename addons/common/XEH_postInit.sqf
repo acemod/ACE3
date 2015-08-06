@@ -74,7 +74,7 @@ if (isServer) then {
         [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
-    call cba_common_fnc_onFrame;
+    call CBA_common_fnc_onFrame;
 }] call BIS_fnc_addStackedEventHandler;
 /////
 
@@ -111,7 +111,7 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+[FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 call FUNC(checkFiles);
 
@@ -131,7 +131,7 @@ call FUNC(checkFiles);
         };
     };
 
-    [_idPFH] call cba_fnc_removePerFrameHandler;
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     diag_log text format["[ACE] Settings received from server"];
 
@@ -149,7 +149,7 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, [false]] call cba_fnc_addPerFrameHandler;
+}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 ["SettingsInitialized", {
@@ -274,7 +274,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
 
-}, 0, []] call cba_fnc_addPerFrameHandler;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
 // PFH to raise camera created event. Only works on these cams by BI.
@@ -299,7 +299,7 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+}, 1, []] call CBA_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -326,9 +326,9 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     [{
         if(!(isNull player)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 //Device Handler:
@@ -343,7 +343,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
+[0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
 
 ["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
 {
@@ -353,7 +353,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+[0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
 
 ["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
 {
@@ -365,7 +365,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
+[0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
 GVAR(commonPostInited) = true;
