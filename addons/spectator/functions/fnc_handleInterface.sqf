@@ -40,8 +40,9 @@ switch (toLower _mode) do {
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
 
-        // Close map
+        // Close map and clear radio
         openMap [false,false];
+        clearRadio;
 
         // Disable BI damage effects
         BIS_fnc_feedback_allowPP = false;
@@ -76,8 +77,9 @@ switch (toLower _mode) do {
         GVAR(camera) cameraEffect ["terminate", "back"];
         camDestroy GVAR(camera);
 
-        // Return to player view
         clearRadio;
+
+        // Return to player view
         _unit switchCamera "internal";
 
         // Enable BI damage effects
@@ -232,7 +234,7 @@ switch (toLower _mode) do {
         // Handle held keys (prevent repeat calling)
         if (_dik in GVAR(heldKeys)) exitwith {};
         // Exclude movement keys so that speed can be adjusted on fly
-        if !(_dik in [17,30,31,32]) then {
+        if !(_dik in [16,17,30,31,32,44]) then {
             GVAR(heldKeys) pushBack _dik;
         };
 
@@ -422,8 +424,8 @@ switch (toLower _mode) do {
         _tree tvSort [[],false];
     };
     // Map events
-    case "onmapdblclick": {
-        _args params ["_map","_button","_x","_y"];
+    case "onmapclick": {
+        _args params ["_map","_button","_x","_y","_shift","_ctrl","_alt"];
         private ["_newPos","_oldZ"];
 
         if ((GVAR(camMode) == 0) && (_button == 0)) then {

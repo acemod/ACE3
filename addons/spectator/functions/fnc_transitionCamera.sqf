@@ -53,7 +53,9 @@ if (_newMode == 0) then { // Free
     GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
     GVAR(camera) camCommit 0;
 
-    // Agent is switched to in free cam to hide death table and prevent AI chat
+    // Agent is switched to in free cam to hide death table and prevent AI chat while allowing icons to draw
+    // However, map click events don't fire in free cam for some reason...
+    // (Why is so much stuff tied into the current camera unit BI?!)
     if (isNull GVAR(camAgent)) then {
         GVAR(camAgent) = createAgent ["VirtualMan_F",markerPos QGVAR(respawn),[],0,""];
     };
