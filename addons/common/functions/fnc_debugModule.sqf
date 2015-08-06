@@ -1,13 +1,16 @@
-/**
- * fn_debugModule.sqf
- * @Descr: N/A
- * @Author: Glowbal
+ /*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
-
+ * N/A?
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 params ["_entity"];

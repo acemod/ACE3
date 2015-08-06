@@ -1,4 +1,16 @@
-//fnc_dumpArray.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_pad", "_i", "_x"];
@@ -18,7 +30,7 @@ if (IS_ARRAY(_var)) then {
         diag_log text format["%1[", _pad];
         {
             [_x, _depth] call FUNC(dumpArray);
-        } forEach _var;
+        } count _var;
         diag_log text format["%1],", _pad];
     } else {
         diag_log text format["%1[],", _pad];

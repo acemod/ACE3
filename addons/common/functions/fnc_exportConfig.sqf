@@ -1,9 +1,19 @@
-// by commy2
 /*
-    usage:
-
-    (configFile >> "CfgAmmo") call FUNC(exportConfig);
-*/
+ * Author: commy2
+ *
+ * Export Config Entrys that Written in RTP
+ *
+ * Arguments:
+ * Config Path
+ *
+ * Return Value:
+ * None
+ *
+ * Usage:
+ * (configFile >> "CfgAmmo") call FUNC(exportConfig);
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private "_fnc_logEntries";

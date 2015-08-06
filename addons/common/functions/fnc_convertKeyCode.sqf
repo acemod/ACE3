@@ -11,17 +11,19 @@
  *
  * Return value:
  * Key code (Number)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 #define KEY_MODIFIERS [42, 54, 29, 157, 56, 184]
 
-params ["_key"];
+params ["_key","_stateShift","_stateCtrl","_stateAlt"];
 
 if (_key in KEY_MODIFIERS) exitWith {_key};
 
-if (_this select 1) then {_key = _key + 0.1};
-if (_this select 2) then {_key = _key + 0.2};
-if (_this select 3) then {_key = _key + 0.4};
+if (_stateShift) then {_key = _key + 0.1};
+if (_stateCtrl) then {_key = _key + 0.2};
+if (_stateAlt) then {_key = _key + 0.4};
 
 _key

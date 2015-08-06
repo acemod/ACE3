@@ -9,6 +9,8 @@
  *
  * Return value:
  * The name.
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

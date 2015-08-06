@@ -7,7 +7,9 @@
  * 0: Code (Code or String)
  *
  * Return value:
- * Code (String)
+ * Code (String),
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -16,7 +18,9 @@ params ["_function"];
 if (typeName _function == "STRING") exitWith {_function};
 
 _function = toArray str _function;
-_function set [0, -1];
-_function set [count _function - 1, -1];
-_function = toString (_function - [-1]);
+
+_function deleteAt 0;
+_function deleteAt ((count _function) -1);
+
+_function = toString _function;
 _function

@@ -1,4 +1,16 @@
-//fnc_dumpPerformanceCounters.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: No
+ */
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
@@ -9,28 +21,26 @@ if (!isNil "ACE_PFH_COUNTER") then {
     {
         _x params["_pfh"];
         diag_log text format["Registered PFH: id=%1, %1:%2", (_pfh select 0), (_pfh select 1), (_pfh select 2) ];
-    } forEach ACE_PFH_COUNTER;
+    } count ACE_PFH_COUNTER;
 };
 
 diag_log text format["ACE COUNTER RESULTS"];
 diag_log text format["-------------------------------------------"];
 {
-    private ["_counterEntry", "_iter", "_total", "_count", "_delta", "_averageResult"];
+    private ["_counterEntry", "_total", "_count", "_delta", "_averageResult"];
     _counterEntry = _x;
-    _iter = 0;
     _total = 0;
     _count = 0;
     _averageResult = 0;
     if( (count _counterEntry) > 3) then {
         // calc
         {
-            if(_iter > 2) then {
+            if(_forEachIndex > 2) then {
+                _x params ["_delta1", "_delta2"];
                 _count = _count + 1;
-                _delta = (_x select 1) - (_x select 0);
 
-                _total = _total + _delta;
+                _total = _total + (_delta1 - _delta2);
             };
-            _iter = _iter + 1;
         } forEach _counterEntry;
 
         // results
@@ -41,7 +51,7 @@ diag_log text format["-------------------------------------------"];
     } else {
         diag_log text format["%1: No results", (_counterEntry select 0) ];
     };
-} forEach ACE_COUNTERS;
+} count ACE_COUNTERS;
 
 /*
 // Dump PFH Trackers

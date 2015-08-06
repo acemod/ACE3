@@ -8,6 +8,8 @@
  *
  * Return value:
  * Vehicle codriver positions. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

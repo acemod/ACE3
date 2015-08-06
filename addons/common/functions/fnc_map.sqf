@@ -18,7 +18,7 @@
 private "_array";
 
 params ["_originalArray", "_code"];
-_array = +_originalArray;
+_array = +_originalArray; // is this needed after params?
 
 if (isNil "_array") exitWith {
     diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];

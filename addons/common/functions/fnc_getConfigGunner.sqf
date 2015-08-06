@@ -8,6 +8,8 @@
  *
  * Return value:
  * Gunner config (Config)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

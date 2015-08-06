@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Is the unit able to enter the vehicle in the given position?
+ * Is the unit able to enter the vehicle in the given position
  *
  * Arguments:
  * 0: Unit to enter the vehicle (Object)
@@ -12,25 +12,22 @@
  *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 #define CANGETINDRIVER      (isNull (driver _vehicle)             || {!alive driver _vehicle})               && {!lockedDriver _vehicle}           && {getNumber (_config >> "isUav") != 1}
 #define CANGETINTURRETINDEX (isNull (_vehicle turretUnit _turret) || {!alive (_vehicle turretUnit _turret)}) && {!(_vehicle lockedTurret _turret)} && {getNumber (_config >> "isUav") != 1}
 
-_this resize 5;
-
-params ["_unit", "_vehicle", "_position", "_checkDistance", "_index"];
+private ["_config", "_turret", "_radius", "_selectionPosition", "_selectionPosition2", "_enemiesInVehicle", "_return"];
+params ["_unit", "_vehicle", "_position", ["_checkDistance",false], ["_index",-1]];
 _position = toLower _position;
-
-if (isNil "_checkDistance") then {_checkDistance = false};
-if (isNil "_index") then {_index = -1};
 
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
 
-private ["_config", "_turret", "_radius", "_selectionPosition", "_selectionPosition2", "_enemiesInVehicle", "_return"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [];
@@ -40,7 +37,7 @@ _radius = 0;
 _enemiesInVehicle = false;   //Possible Side Restriction
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
-} forEach crew _vehicle;
+} count crew _vehicle;
 
 _return = false;
 switch (_position) do {

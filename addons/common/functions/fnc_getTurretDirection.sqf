@@ -9,6 +9,8 @@
  *
  * Return value:
  * [position, direction]
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

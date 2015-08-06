@@ -10,7 +10,9 @@
  * 3: Name. Will overwrite previously defined functions with that name (String)
  *
  * Return value:
- * Nothing.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -19,10 +21,10 @@ GVAR(remoteFnc) = _this;
 params ["_arguments", "_function", "_unit", "_name"];
 _function = call compile _function;
 
-["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
+["Remote", [_arguments, _idPFH, _name], {params ["_args","_function","_id"]; format ["%1 call %2 id: %3", _args, _function, _id]}, false] call FUNC(log);
 
 // execute function on every currently connected machine
-[[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);
+[[_arguments, _unit], _idPFH, 2] call FUNC(execRemoteFnc);
 
 // save persistent function for JIP
 private ["_persistentFunctions", "_index"];

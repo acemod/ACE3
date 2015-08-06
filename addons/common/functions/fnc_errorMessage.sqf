@@ -21,10 +21,10 @@ if (!hasInterface) exitWith {};
 // wait for display
 if (isNull (call BIS_fnc_displayMission)) exitWith {
     [{
+        params ["_args","_idPFH"]
         if (isNull (call BIS_fnc_displayMission)) exitWith {};
-
-        (_this select 0) call FUNC(errorMessage);
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _args call FUNC(errorMessage);
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     }, 1, _this] call CBA_fnc_addPerFrameHandler;
 };

@@ -4,10 +4,12 @@
  * What kind of Cfg is the item. Works for CfgMagaines, CfgWeapons and CfgGlasses
  *
  * Argument:
- * 0: A item's classname. (String)
+ * 0: A item's classname. (STRING)
  *
  * Return value:
- * CfgWhatever (String)
+ * What kind of the input is (STRING)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

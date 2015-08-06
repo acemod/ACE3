@@ -7,9 +7,11 @@
  * Vector to align the coordinate system with (Array)
  *
  * Return value:
- * 0: v1 (Array)
- * 1: v2 (Array)
- * 2: v3 (Array)
+ * 0: Vector Normalized (Array)
+ * 1: Normalized Cross Product Vector (Array)
+ * 2: Vector Cross Product (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

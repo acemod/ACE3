@@ -9,15 +9,14 @@
  * Return Value:
  * Stuff from config (Array)
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_vehicle", "_light"];
 
-private "_config";
+private ["_config", "_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Reflectors" >> _light;
-
-private ["_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 
 _intensity = getNumber (_config >> "intensity");
 _position = getText (_config >> "position");

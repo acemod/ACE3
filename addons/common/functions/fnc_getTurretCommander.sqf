@@ -8,6 +8,8 @@
  *
  * Return value:
  * Turret index of the vehicles commander. Empty array means no observer position. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,5 +28,5 @@ _turret = [];
   if (getNumber (_config >> "primaryObserver") == 1) exitWith {
     _turret = _x;
   };
-} forEach _turrets;
+} count _turrets;
 _turret

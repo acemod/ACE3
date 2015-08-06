@@ -8,6 +8,8 @@
  *
  * Return value:
  * Reasons, why the unit is a captive. An empty array is returned if the unit is not a captive (Array of Strings)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

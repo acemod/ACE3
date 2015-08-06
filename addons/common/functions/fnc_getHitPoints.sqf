@@ -8,6 +8,8 @@
  *
  * Return Value:
  * The hitpoints (Array)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

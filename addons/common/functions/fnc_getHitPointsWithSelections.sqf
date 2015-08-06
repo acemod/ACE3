@@ -8,6 +8,8 @@
  *
  * Return Value:
  * The hitpoints with selections. Format: [hitpoints, selections]. They correspond by index. (Array)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -31,7 +33,7 @@ _hitpointClasses = [_config >> "HitPoints"];
         _hitpointClasses pushBack _class;
     };
 
-} forEach allTurrets _vehicle;
+} count allTurrets _vehicle;
 
 // iterate through all classes with hitpoints and their parents
 {
@@ -55,6 +57,6 @@ _hitpointClasses = [_config >> "HitPoints"];
         _class = inheritsFrom _class;
     };
 
-} forEach _hitpointClasses;
+} count _hitpointClasses;
 
 [_hitpoints, _selections]

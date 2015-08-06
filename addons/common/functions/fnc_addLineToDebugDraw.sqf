@@ -10,6 +10,7 @@
  *
  * Return value:
  *
+ * Public : No
  */
 #include "script_component.hpp"
 
@@ -43,6 +44,6 @@ if (isNil QGVAR(debugDrawHandler)) then {
                 _p1 = ASLtoATL _p1;
             };
             drawLine3D [_p0, _p1, _x select 2];
-        } forEach GVAR(debugLines);
+        } count GVAR(debugLines);
     }];
 };

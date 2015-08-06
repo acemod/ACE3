@@ -10,11 +10,14 @@
  *
  * Return value:
  * Boolean of success
+ *
+ * Public : No
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-params ["_name", "_args", "_ttl"];
+
 private["_internalData", "_eventLog", "_eventCode"];
+params ["_name", "_args", "_ttl"];
 
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     diag_log text format["[ACE] Error, synced event key not found."];
@@ -34,3 +37,5 @@ if(isServer) then {
 
 _eventCode = _internalData select 0;
 _args call _eventCode;
+
+true // Return

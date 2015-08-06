@@ -8,6 +8,8 @@
  *
  * Return value:
  * The current channel. Can be "group", "side", "global", "command", "vehicle", "direct" or "custom_X" (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

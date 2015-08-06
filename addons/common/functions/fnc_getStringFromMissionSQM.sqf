@@ -8,6 +8,8 @@
  *
  * Return value:
  * Value of the entry. Note: If the entry does not exist, it might return an empty string or an entry with the same name of another class! (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

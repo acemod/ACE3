@@ -8,6 +8,8 @@
  *
  * Return value:
  * ID of the event script (used to remove it later).
+ *
+ * Public : No
  */
 #include "script_component.hpp"
 
@@ -21,9 +23,8 @@ if (typeName _statement == "STRING") then {
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
-_id = (_actionsVar select 0) + 1;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_id","_actionIDs","_actions"]
+_id = _id + 1;
 
 if (_id == 0) then {
     uiNamespace setVariable ["ACE_EventHandler_MapMarker", count allMapMarkers];
@@ -35,4 +36,4 @@ _actions pushBack _statement;
 
 missionNamespace setVariable ["ACE_EventHandler_MapMarker", [_id, _actionIDs, _actions]];
 
-_id
+_id // Return

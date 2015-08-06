@@ -7,19 +7,20 @@
  * 0: client (object)
  *
  * Return value:
- * Boolean of success
+ * Event is successed (BOOLEAN)
+ *
+ * Public : No
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 params ["_client"];
 
 {
-    private["_eventName", "_eventEntry", "_eventLog"];
-    _eventName = _x;
-    _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
+    private["_eventEntry", "_eventLog"];
+    _eventEntry = HASH_GET(GVAR(syncedEvents),_x);
     _eventLog = _eventEntry select 1;
 
-    ["SEH_s", _client, [_eventName, _eventLog] ] call FUNC(targetEvent);
-} forEach (GVAR(syncedEvents) select 0);
+    ["SEH_s", _client, [_x, _eventLog] ] call FUNC(targetEvent);
+} count (GVAR(syncedEvents) select 0);
 
-true
+true // Return

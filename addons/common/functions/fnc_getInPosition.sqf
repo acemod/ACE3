@@ -11,7 +11,9 @@
  *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -37,7 +39,7 @@ _script = {};
 _enemiesInVehicle = false;   //Possible Side Restriction
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
-} forEach crew _vehicle;
+} count crew _vehicle;
 
 switch (_position) do {
     case "driver" : {

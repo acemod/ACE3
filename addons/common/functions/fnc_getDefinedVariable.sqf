@@ -1,11 +1,15 @@
-/**
- * fn_getVariable.sqf
- * @Descr: Grabs a variable. If variable has not been set, attempts to use default defined value
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Grabs a variable. If variable has not been set, attempts to use default defined value
  *
- * @Arguments: [unit OBJECT, variableName STRING]
- * @Return: ANY
- * @PublicAPI: true
+ * Arguments:
+ * 0: unit (OBJECT)
+ * 1: Variable Name (STRING)
+ *
+ * Return Value:
+ * The Value that the Variable have or if the Variable is not defined the Default Value (ANY)
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

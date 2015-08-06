@@ -12,18 +12,18 @@
  * 1: client (Object)
  *
  * Return value:
- * Boolean of success
+ * Event is successed (BOOLEAN)
+ *
+ * Public : No
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
-
 //SEH_s
 if(isServer) then {
     // Find the event name, and shovel out the events to the client
-    params ["_eventName", "_client"];
     private["_eventEntry", "_eventLog"];
+    params ["_eventName", "_client"];
 
     if(!HASH_HASKEY(GVAR(syncedEvents),_eventName)) exitWith {
         diag_log text format["[ACE] Error, request for synced event - key not found."];
@@ -34,15 +34,15 @@ if(isServer) then {
 
     ["SEH_s", _client, [_eventName, _eventLog] ] call FUNC(targetEvent);
 } else {
-    params ["_eventName", "_eventLog"];
     private ["_eventArgs"];
+    params ["_eventName", "_eventLog"];
     // This is the client handling the response from the server
     // Start running the events
     {
-        _eventArgs = _x select 1;
-        [_eventName, _eventArgs, (_x select 2)] call FUNC(_handleSyncedEvent);
-    } forEach _eventLog;
+        _x params ["_eventArgs","_ttl"];
+        [_eventName, _eventArgs, _ttl] call FUNC(_handleSyncedEvent);
+    } count _eventLog;
     diag_log text format["[ACE] + [%1] synchronized", _eventName];
 };
 
-true
+true // Return

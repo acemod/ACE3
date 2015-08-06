@@ -8,6 +8,8 @@
  *
  * Return value:
  * Turret index array or config path. E.g: [0] for gunner or [0,0] for commander. Returns empty array if unit is not in a turret. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -23,7 +25,8 @@ _turrets = allTurrets [_vehicle, true];
 _units = [];
 {
   _units pushBack (_vehicle turretUnit _x);
-} forEach _turrets;
+  true
+} count _turrets;
 
 _index = _units find _unit;
 

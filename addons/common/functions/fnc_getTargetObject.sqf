@@ -8,6 +8,8 @@
  *
  * Return value:
  * Nearest object directly in line of sight, if none objNull (Object)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

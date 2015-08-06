@@ -14,7 +14,7 @@
  * 0: Added to player (Bool)
  * 1: weaponholder (OBJECT)
  *
- * Public: Yes
+ * Public: No
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
@@ -26,13 +26,13 @@ private ["_addedToPlayer", "_canAdd", "_type", "_pos"];
 _canAdd = false;
 _addedToPlayer = true;
 
-_type = [_classname] call EFUNC(common,getItemType);
+_type = [_classname] call FUNC(getItemType);
 
-switch (_container) do {
-    case "vest": { _canAdd = _unit canAddItemToVest _classname; };
-    case "backpack": { _canAdd = _unit canAddItemToBackpack _classname; };
-    case "uniform": { _canAdd = _unit canAddItemToUniform _classname; };
-    default {_canAdd = _unit canAdd _classname;};
+_canAdd = switch (_container) do {
+    case "vest": { _unit canAddItemToVest _classname };
+    case "backpack": { _unit canAddItemToBackpack _classname };
+    case "uniform": { _unit canAddItemToUniform _classname };
+    default { _unit canAdd _classname };
 };
 
 switch ((_type select 0)) do {
@@ -88,4 +88,4 @@ switch ((_type select 0)) do {
     default {diag_log format ["ACE: Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type];};
 };
 
-[_addedToPlayer,_unit]
+[_addedToPlayer,_unit] // Return

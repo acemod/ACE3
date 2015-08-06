@@ -38,7 +38,7 @@ _stepY = 1e10;
         _stepX = getNumber (_x >> "stepX");
         _stepY = getNumber (_x >> "stepY");
     };
-} foreach configProperties [_cfgGrid, "isClass _x", false];
+} count configProperties [_cfgGrid, "isClass _x", false];
 
 _letterGrid = false;
 if (((toLower _formatX) find "a") != -1) then {_letterGrid = true};

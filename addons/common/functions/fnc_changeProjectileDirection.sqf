@@ -10,28 +10,24 @@
  * 3: Adjust projectile speed this much. In m/s. (Number, optional default: 0 m/s)
  *
  * Return value:
- * None.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_adjustSpeed", "_vdir", "_dir", "_up", "_vup", "_vel", "_vlat"];
+private ["_vdir", "_dir", "_up", "_vup", "_vel", "_vlat"];
 
-params ["_projectile", "_adjustDir", "_adjustUp"];
-
-_adjustSpeed = if (count _this > 3) then {
-    _this select 3
-} else {
-    0
-};
+params ["_projectile", "_adjustDir", "_adjustUp", ["_adjustSpeed",0]];
 
 ["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call FUNC(log);
 
 // get old direction vector
 _vdir = vectorNormalized velocity _projectile;
-
+_vdir params ["_dirX", "_dirY", "_dirZ"];
 // get azimuth and inclination and apply corrections
-_dir = (_vdir select 0) atan2 (_vdir select 1) + _adjustDir;
-_up = asin (_vdir select 2) + _adjustUp;
+_dir = _dirX atan2 _dirY + _adjustDir;
+_up = asin _dirZ + _adjustUp;
 
 // get new direction vector (this is a unit vector)
 _vdir = [

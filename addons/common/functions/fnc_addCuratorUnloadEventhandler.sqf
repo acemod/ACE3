@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ *
+ * Arguments:
+ * Display where the Unload event was added
+ *
+ * Return Value:
+ * None
+ *
+ * Public : No
+ */
 #include "script_component.hpp"
 
 private "_dlg";

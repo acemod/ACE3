@@ -8,6 +8,8 @@
  *
  * Return value:
  * Ambient brightness (Number)
+ *
+ * Public : No
  */
 #include "script_component.hpp"
 

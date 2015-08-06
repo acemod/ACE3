@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Get Chidrens from a config entry
+ *
+ * Argument:
+ * 0: Unit (OBJECT)
+ *
+ * Return value:
+ * Childs form Parent Entry(CONFIG)
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_classes"];

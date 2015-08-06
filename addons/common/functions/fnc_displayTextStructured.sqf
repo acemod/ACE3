@@ -4,12 +4,14 @@
  * Display a structured text.
  *
  * Argument:
- * 0: Text <ANY>
- * 1: Size of the textbox <NUMBER> <OPTIONAL>
- * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> <OPTIONAL>
+ * 0: Text (ANY)
+ * 1: Size of the textbox (NUMBER) (OPTIONAL)
+ * 2: Target Unit. Will only display if target is the player controlled object (OBJECT) (OPTIONAL)
  *
  * Return value:
- * Nothing
+ * None
+ *
+  * Public: Yes
  */
 
 #include "script_component.hpp"

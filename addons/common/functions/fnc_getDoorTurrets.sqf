@@ -8,6 +8,8 @@
  *
  * Return value:
  * Turret indexes of the door gunner. Empty array means no gunner position. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,6 +28,6 @@ _doorTurrets = [];
     if ((getNumber (_config >> "isCopilot") == 0) && count (getArray (_config >> "weapons")) > 0 ) then {
         _doorTurrets pushBack _x;
     };
-} forEach _turrets;
+} count _turrets;
 
 _doorTurrets

@@ -8,6 +8,8 @@
  *
  * Return value:
  * Turret index of the vehicles gunner. Empty array means no ffv turrets. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,5 +28,6 @@ _turret = [];
     if (getNumber (_config >> "isPersonTurret") == 1) then {
         _turret pushBack _x;
     };
-} forEach _turrets;
+    true
+} count _turrets;
 _turret

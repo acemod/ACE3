@@ -24,7 +24,7 @@ _modes = [];
     if (_x == "this") then {
         _modes pushBack _weapon;
     };
-
-} forEach getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
+    true
+} count getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
 
 _modes

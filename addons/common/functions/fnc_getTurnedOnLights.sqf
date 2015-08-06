@@ -8,6 +8,8 @@
  *
  * Return Value:
  * All burning lights (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

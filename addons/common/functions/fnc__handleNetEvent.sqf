@@ -1,15 +1,25 @@
-//fnc__handleNetEvent.sqf
-// internal handler for net events
+/*
+ * Author: ?
+ *
+ * internal handler for net
+ *
+ * Arguments [Client] :
+ * 0: event Type (String)
+ * 1: event (Array)
+ *
+ * Return value:
+ * None
+ *
+ * Public : No
+ */
 #include "script_component.hpp"
 
 private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged", "_events"];
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-params ["_eventType", "_event"];
+param ["_eventType", "_event"];
 
 if (_eventType == "ACEg") then {
-    _eventName = _event select 0;
-    _eventArgs = _event select 1;
+    _event params ["_eventName","_eventArgs"];
 
     _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;
@@ -34,9 +44,7 @@ if (_eventType == "ACEg") then {
 
 if (_eventType == "ACEc") then {
     if (isServer) then {
-        _eventName = _event select 0;
-        _eventTargets = _event select 1;
-        _eventArgs = _event select 2;
+        _event params ["_eventName", "_eventTargets", "_eventArgs"];
 
         _sentEvents = [];
         if (!IS_ARRAY(_eventTargets)) then {
@@ -51,9 +59,10 @@ if (_eventType == "ACEc") then {
 
         _serverFlagged = false;
         {
-            _owner = _x;
-            if (IS_OBJECT(_x)) then {
-                 _owner = owner _x;
+            _owner = if (IS_OBJECT(_x)) then {
+                 owner _x;
+            } else {
+                _x
             };
             if (!(_owner in _sentEvents)) then {
                 PUSH(_sentEvents, _owner);
@@ -69,6 +78,6 @@ if (_eventType == "ACEc") then {
                     ["ACEg", ACEg] call FUNC(_handleNetEvent);
                 };
             };
-        } forEach _eventTargets;
+        } count _eventTargets;
     };
 };

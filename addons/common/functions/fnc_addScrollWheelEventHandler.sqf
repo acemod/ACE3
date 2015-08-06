@@ -8,6 +8,8 @@
  *
  * Return value:
  * ID of the event script (used to remove it later).
+ *
+ * Public : No
  */
 #include "script_component.hpp"
 
@@ -21,13 +23,12 @@ if (typeName _statement == "STRING") then {
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
-_id = (_actionsVar select 0) + 1;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_id","_actionIDs","_actions"]
+_id = _id + 1;
 
 _actionIDs pushBack _id;
 _actions pushBack _statement;
 
 missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_id, _actionIDs, _actions]];
 
-_id
+_id // Return

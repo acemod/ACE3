@@ -11,6 +11,8 @@
  * 0: "weapon", "item", "magazine" or "" (String)
  * 1: A description of the item (e.g. "primary" for a weapon or "vest" for a vest item)
  *
+ * Public: Yes
+ *
  */
 #include "script_component.hpp"
 

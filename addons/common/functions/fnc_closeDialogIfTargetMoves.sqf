@@ -5,16 +5,18 @@
  *
  * Arguments:
  * 0: Target unit
- * 1: Ignore the unit being dead? (Optional, default: No)
+ * 1: Ignore the unit being dead (Optional, default: No)
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 _this spawn {
     params ["_target", "_ignoreDead"];
-    private["_inVehicle", "_position", "_vehiclePlayer", "_vehicleTarget"];
+    private["_inVehicle", "_position", "_vehiclePlayer", "_vehicleTarget","_fnc_check"];
 
     if (isNil "_ignoreDead") then {_ignoreDead = false};
 

@@ -20,9 +20,10 @@
  */
 #include "script_component.hpp"
 
+private ["_settingData"];
+
 params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_isForced", "_value"];
 
-private ["_settingData"];
 
 _settingData = [_name] call FUNC(getSettingData);
 

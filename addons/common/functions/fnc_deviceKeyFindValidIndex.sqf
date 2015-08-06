@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-params [["_searchOffsetOrName", 0]];
-
 private ["_validIndex", "_offsetBy", "_realIndex", "_offset"];
+
+params [["_searchOffsetOrName", 0]];
 
 _validIndex = -1;
 
@@ -29,9 +29,10 @@ if ((typeName _searchOffsetOrName) == "STRING") then {
         };
     } forEach GVAR(deviceKeyHandlingArray);
 } else {
-    if ((count GVAR(deviceKeyHandlingArray)) > 0) then {
+    _keyHandler = count GVAR(deviceKeyHandlingArray);
+    if (_keyHandler > 0) then {
         _baseIndex = if (GVAR(deviceKeyCurrentIndex) == -1) then {0} else {GVAR(deviceKeyCurrentIndex) + _searchOffsetOrName};
-        for "_offset" from _baseIndex to ((count GVAR(deviceKeyHandlingArray)) - 1 + _baseIndex) do {
+        for "_offset" from _baseIndex to (_keyHandler - 1 + _baseIndex) do {
             _realIndex = _offset % (count GVAR(deviceKeyHandlingArray));
             if ([] call ((GVAR(deviceKeyHandlingArray) select _realIndex) select 2)) exitWith {
                 _validIndex = _realIndex;

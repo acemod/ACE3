@@ -7,13 +7,15 @@
  * 0: Function arguments (Array)
  * 1: Function to execute, has to be defined on the remote machine first (String)
  * 2: The function will be executed where this unit is local OR the mode were this function should be executed. (Object OR Number, optional default: 2)
- *     Mode 0: execute on this machine only
- *     Mode 1: execute on server
- *     Mode 2: execute on all clients + server
- *     Mode 3: execute on dedicated only
+ *     Mode 0 = execute on this machine only
+ *     Mode 1 = execute on server
+ *     Mode 2 = execute on all clients + server
+ *     Mode 3 = execute on dedicated only
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

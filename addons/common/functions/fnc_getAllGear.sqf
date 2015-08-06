@@ -19,6 +19,7 @@
  *    17: map, compass, watch, etc. (Array)
  *    18: binocluar (String)
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

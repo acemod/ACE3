@@ -4,19 +4,20 @@
  * Display a structured text with image.
  *
  * Argument:
- * 0: Text <ANY>
- * 1: Image <STRING>
- * 2: Image color <ARRAY> <OPTIONAL>
- * 3: Target Unit. Will only display if target is the player controlled object <OBJECT> <OPTIONAL>
+ * 0: Text (ANY)
+ * 1: Image (STRING)
+ * 2: Image color (ARRAY) (OPTIONAL)
+ * 3: Target Unit. Will only display if target is the player controlled object (OBJECT) (OPTIONAL)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
 params ["_text", "_image", ["_imageColor", [1,1,1]], ["_target", ACE_player]];
-_imageColor resize 3;
 
 if (_target != ACE_player) exitWith {};
 

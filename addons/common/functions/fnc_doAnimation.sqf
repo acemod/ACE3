@@ -7,12 +7,14 @@
  * 0: Unit (Object)
  * 1: Animation (String)
  * 2: Priority of the animation. (Number, optional default: 0)
- *     0: PlayMove
- *     1: PlayMoveNow
- *     2: SwitchMove (no transitional animation, doesn't overwrite priority 1)
+ *     0 = PlayMove
+ *     1 = PlayMoveNow
+ *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

@@ -8,6 +8,8 @@
  *
  * Return Value:
  * Marker Type (string)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -13,10 +13,8 @@
 
 params ["_weapon"];
 
-private "_config";
+private ["config", "_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 _config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";
-
-private ["_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 
 _intensity = getNumber (_config >> "intensity");
 _position = getText (_config >> "position");

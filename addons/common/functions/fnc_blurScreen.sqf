@@ -1,11 +1,15 @@
-/**
- * fn_gui_blurScreen.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * ?
+ *
+ * Argument:
+ * 0: ID (Number)
+ *
+ * Return value:
+ * Booleans (Array)
+ *
+ * Public : Yes
  */
 
 #include "script_component.hpp"

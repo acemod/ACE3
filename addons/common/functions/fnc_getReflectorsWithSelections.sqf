@@ -10,6 +10,8 @@
  *
  * Return Value:
  * The light names and selections (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

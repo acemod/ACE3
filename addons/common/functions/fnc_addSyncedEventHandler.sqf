@@ -10,19 +10,15 @@
  *
  * Return value:
  * Boolean of success
+ *
+ * Public : No
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
-
-params ["_name", "_handler"];
 
 private["_ttl", "_eventId", "_data"];
-if( (count _this) > 2) then {
-    _ttl = _this select 2;
-} else {
-    _ttl = 0;
-};
+
+params ["_name", "_handler",["_ttl",0]];
 
 if(HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     diag_log text format["[ACE] Error, duplicate synced event creation."];

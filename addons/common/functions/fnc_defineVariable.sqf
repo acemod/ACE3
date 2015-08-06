@@ -1,15 +1,22 @@
-/**
- * fn_defineVariable.sqf
- * @Descr: Define a variable for the ACE variable framework
- * @Author: Glowbal
+ /*
+ * Author: Glowbal
  *
- * @Arguments: [name STRING, defaultValue ANY, publicFlag BOOL, category STRING, type NUMBER, persistentFlag BOOL]
- * @Return:
- * @PublicAPI: true
- */
+ * Define a variable for the ACE variable framework
+ *
+ * Argument:
+ * 0: Name (STRING)
+ * 1: defaultValue (ANY)
+ * 2: publicFlag (BOOLEAN)
+ * 3: category (STRING)
+ * 4: type (NUMBER)(Optional)
+ * 5: persistentFlag (BOOLEAN)(Optional)
+ *
+ * Return value:
+ * None
+ *
+ * Public: Yes
+*/
 #include "script_component.hpp"
-
-private ["_code","_persistent"];
 
 params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persistent", false]];
 // If not enough parameters are given, exit early.

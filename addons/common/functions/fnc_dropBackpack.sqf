@@ -9,6 +9,7 @@
  * Return value:
  * Ground wepaon holder with backpack (Object)
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -25,6 +26,6 @@ _holder = objNull;
     if (_backpackObject in everyBackpack _x) exitWith {
         _holder = _x;
     };
-} forEach (position _unit nearObjects ["WeaponHolder", 5]);
+} count (position _unit nearObjects ["WeaponHolder", 5]);
 
 _holder

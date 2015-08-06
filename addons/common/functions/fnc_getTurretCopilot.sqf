@@ -8,6 +8,8 @@
  *
  * Return value:
  * Turret index of the vehicles gunner. Empty array means no copilot position. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,6 +28,6 @@ _turret = [];
     if (getNumber (_config >> "isCopilot") == 1 && {getNumber (_config >> "primaryGunner") != 1} && {getNumber (_config >> "primaryObserver") != 1}) exitWith {
         _turret = _x;
     };
-} forEach _turrets;
+} count _turrets;
 
 _turret

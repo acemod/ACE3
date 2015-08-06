@@ -12,6 +12,8 @@
  *
  * Usage:
  * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -11,6 +11,8 @@
  * 1: 100km square (String)
  * 2: GZD + 100km sq. as a single string (String)
  * Writes return values to GVAR(MGRS_data) if run on the current map
+ *
+ * Public: No
  */
 
 // #define DEBUG_MODE_FULL

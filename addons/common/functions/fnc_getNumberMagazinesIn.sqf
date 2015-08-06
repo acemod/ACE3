@@ -1,11 +1,16 @@
-/**
- * fn_getNumberMagazinesIn.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * N/A
+ *
+ * Argument:
+ * 0: Unit (OBJECT)
+ * 1: Magazine (STRING)
+ *
+ * Return value:
+ * Count of Input Magazine (NUMBER)
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

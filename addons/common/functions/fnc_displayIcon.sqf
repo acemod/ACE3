@@ -12,10 +12,12 @@
 * 4: timeAlive. -1 = forever <NUMBER> <OPTIONAL>
 *
 * Return value:
-* Nothing
+* None
 *
 * Example:
 * ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
+*
+* Public: Yes
 */
 
 

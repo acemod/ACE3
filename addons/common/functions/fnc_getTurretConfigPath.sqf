@@ -9,6 +9,8 @@
  *
  * Return value:
  * Turret config (Config)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

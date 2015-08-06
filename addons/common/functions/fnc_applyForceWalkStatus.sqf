@@ -1,19 +1,21 @@
 /*
-Name: FUNC(applyForceWalkStatus)
-
-Author: Pabst Mirror
-
-Description:
-  Applys the forceWalk status of an unit. Called from Extended_InitPost_EventHandlers.
-
-Parameters:
-  0: OBJECT - Unit
-
-Returns:
-  None
-
-Example:
-  [ACE_Player] call FUNC(applyForceWalkStatus)
+ * Name: FUNC(applyForceWalkStatus)
+ *
+ * Author: Pabst Mirror
+ *
+ * Description:
+ * Applys the forceWalk status of an unit. Called from Extended_InitPost_EventHandlers.
+ *
+ * Parameters:
+ * 0: OBJECT - Unit
+ *
+ * Returns:
+ * None
+ *
+ * Example:
+ * [ACE_Player] call FUNC(applyForceWalkStatus)
+ *
+ * Public : No
 */
 #include "script_component.hpp"
 

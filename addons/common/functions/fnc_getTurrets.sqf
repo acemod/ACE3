@@ -8,10 +8,12 @@
  *
  * Return value:
  * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_config", "_turrets", "_fnc_addTurret", "_varName"];
+private ["_fnc_addTurret", "_config", "_turrets", "_fnc_addTurret", "_varName"];
 
 params ["_type"];
 

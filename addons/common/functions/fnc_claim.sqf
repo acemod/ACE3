@@ -9,16 +9,16 @@
  * 2: Lock the claimed object aswell? (Bool)
  *
  * Return Value:
- * NONE
+ * None
  *
+ * Public: No
  */
 #include "script_component.hpp"
-
+private "_owner";
 params ["_unit", "_target", "_lockTarget"];
 
 if (isNil "_lockTarget") then {_lockTarget = false};
 
-private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {

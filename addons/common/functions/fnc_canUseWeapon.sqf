@@ -1,4 +1,15 @@
-// by commy2
+/*
+ * Author: commy2
+ * Check if the unit can use a Weapon
+ *
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ *
+ * Return Value:
+ * Can the Unit use Weapons (BOOLEAN)
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 // returns true if the unit is on foot or in a ffv position

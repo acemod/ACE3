@@ -8,6 +8,8 @@
  *
  * Return value:
  * Vehicle cargo positions. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

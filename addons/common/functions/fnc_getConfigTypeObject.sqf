@@ -7,7 +7,7 @@
  * 0: An object's classname. (String)
  *
  * Return value:
- * CfgWhatever (String)
+ * What kind of the input is (String)
  */
 #include "script_component.hpp"
 

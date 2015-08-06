@@ -1,13 +1,19 @@
-/**
- * fn_getFirstIntersection.sqf
- * @Descr: Returns the the first intersection with an object between two positions
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
  *
- * @Arguments: [position PositionASL, position PositionASL, accuracy FLOAT]
- * @Return: [intersects BOOL, intersection PositionASL]
- * @PublicAPI: true
+ * Returns the the first intersection with an object between two positions
+ *
+ * Argument:
+ * 0: PositionASL (ARRAY with Position)
+ * 1: PositionATL (Position with Position)
+ * 2: Accuracy (NUMBER)
+ * Return value:
+ * 0: Intersects (BOOLEAN)
+ * 1: Intersection (PositionASL)
+ *
+ * Public: Yes
  */
- #include "script_component.hpp"
+#include "script_component.hpp"
 
 private ["_distance", "_lower", "_upper", "_mid", "_intersections", "_result", "_dir"];
 

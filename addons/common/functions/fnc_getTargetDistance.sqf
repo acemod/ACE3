@@ -10,6 +10,8 @@
  *
  * Return value:
  * Measured distance in meters. Can return maximal or minimal distance (Number)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

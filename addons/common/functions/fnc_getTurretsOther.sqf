@@ -30,5 +30,6 @@ _turret = [];
     ) then {
         _turret pushBack _x;
     };
-} forEach _turrets;
+    true
+} count _turrets;
 _turret

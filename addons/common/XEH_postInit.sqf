@@ -118,8 +118,8 @@ call FUNC(checkFiles);
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
-    PARAMS_1(_args);
-    EXPLODE_1_PVT(_args,_waitingMsgSent);
+    params ["_args","_idPFH"];
+    _args params ["_waitingMsgSent"];
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};
 
@@ -131,7 +131,7 @@ call FUNC(checkFiles);
         };
     };
 
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [_idPFH] call cba_fnc_removePerFrameHandler;
 
     diag_log text format["[ACE] Settings received from server"];
 
@@ -174,8 +174,9 @@ call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
 DFUNC(mouseZHandler) = {
-    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    waitUntil {!isNull (findDisplay 46)};
+    sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", GVAR(onScrollWheel)];
     [false] call FUNC(disableUserInput);
 };
 
@@ -187,13 +188,13 @@ enableCamShake true;
 
 // Set the name for the current player
 ["playerChanged", {
-    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+    params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
-        [_newPlayer] call FUNC(setName)
+        [_newPlayer] call FUNC(setName);
     };
     if (alive _oldPlayer) then {
-        [_oldPlayer] call FUNC(setName)
+        [_oldPlayer] call FUNC(setName);
     };
 
 }] call FUNC(addEventhandler);
@@ -309,12 +310,13 @@ GVAR(OldIsCamera) = false;
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
+    params ["_player","_target"];
     // Players can always interact with himself if not boarded
-    vehicle (_this select 0) == (_this select 0) ||
+    vehicle _player == _player ||
     // Players can always interact with his vehicle
-    {vehicle (_this select 0) == (_this select 1)} ||
+    {vehicle _player == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
+    {!(_player isEqualTo _target) && {vehicle _player == vehicle _target}}
 }] call FUNC(addCanInteractWithCondition);
 
 // Lastly, do JIP events

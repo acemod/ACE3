@@ -9,6 +9,8 @@
  *
  * Return value:
  * Crew (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -31,6 +33,7 @@ _crew = [];
       _crew pushBack (_x select 0);
     };
   };
-} forEach fullCrew _vehicle;
+  true
+} count fullCrew _vehicle;
 
 _crew

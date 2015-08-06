@@ -15,11 +15,12 @@
  *
  * Return value:
  * ID of the action (used to remove it later).
+ *
+ * Public : No
  */
 #include "script_component.hpp"
 
 private ["_name", "_actionsVar", "_id", "_actionIDs", "_actions", "_nameVar", "_addAction", "_actionID"];
-//IGNORE_PRIVATE_WARNING("_target");
 
 params ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", "_priority"];
 

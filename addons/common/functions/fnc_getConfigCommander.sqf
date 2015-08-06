@@ -4,10 +4,12 @@
  * Get the commander config of a vehicles turret.
  *
  * Argument:
- * 0: vehicle (Object)
+ * 0: vehicle (OBJECT)
  *
  * Return value:
- * Commander config (Config)
+ * Commander config (CONFIG)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

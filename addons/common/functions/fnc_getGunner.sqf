@@ -9,6 +9,8 @@
  *
  * Return value:
  * The turret gunner with this weapon (Object)
+ *
+ * Public: Yes
  */
 
 params ["_vehicle", "_weapon"];
@@ -24,7 +26,7 @@ _gunner = objNull;
     if (_weapon in (_vehicle weaponsTurret _x)) exitWith {
         _gunner = _vehicle turretUnit _x;
     };
-} forEach allTurrets [_vehicle, true];
+} count allTurrets [_vehicle, true];
 
 // ensure that at least the pilot is returned if there is no gunner
 if (isManualFire _vehicle && {isNull _gunner}) then {
