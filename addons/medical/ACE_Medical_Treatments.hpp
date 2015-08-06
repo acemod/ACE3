@@ -6,6 +6,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(Bandaging);
             category = "bandage";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
@@ -30,6 +31,7 @@ class ACE_Medical_Actions {
         class Morphine: Bandage {
             displayName = CSTRING(Inject_Morphine);
             displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             category = "medication";
             treatmentTime = 2;
             items[] = {"ACE_morphine"};
@@ -40,6 +42,7 @@ class ACE_Medical_Actions {
         class Epinephrine: Bandage {
             displayName = CSTRING(Inject_Epinephrine);
             displayNameProgress = CSTRING(Injecting_Epinephrine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             category = "medication";
             requiredMedic = 1;
             treatmentTime = 3;
@@ -51,6 +54,7 @@ class ACE_Medical_Actions {
         class BloodIV: Bandage {
             displayName = CSTRING(Transfuse_Blood);
             displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             category = "advanced";
             requiredMedic = 1;
             treatmentTime = 20;
@@ -89,6 +93,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(Actions_Diagnosing);
             category = "examine";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"head"};
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
@@ -109,6 +114,7 @@ class ACE_Medical_Actions {
             category = "bandage";
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
             // The time it takes for a treatment action to complete. Time is in seconds.
@@ -146,6 +152,7 @@ class ACE_Medical_Actions {
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
             displayNameProgress = CSTRING(Applying_Tourniquet);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r", "body"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
@@ -155,6 +162,7 @@ class ACE_Medical_Actions {
         class Morphine: fieldDressing {
             displayName = CSTRING(Inject_Morphine);
             displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             category = "medication";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
@@ -177,6 +185,7 @@ class ACE_Medical_Actions {
         class BloodIV: fieldDressing {
             displayName = CSTRING(Actions_Blood4_1000);
             displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             category = "advanced";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
@@ -293,6 +302,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(Actions_PerformingCPR);
             category = "advanced";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"body"};
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
