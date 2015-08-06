@@ -109,12 +109,6 @@ class CfgVehicles {
                     };
                 };
             };
-            class unitIcons {
-                displayName = CSTRING(icons_DisplayName);
-                description = CSTRING(icons_Description);
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
         };
         class ModuleDescription {
             description = CSTRING(Settings_Description);
