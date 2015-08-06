@@ -31,6 +31,7 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
 GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
+    GVAR(litterPFHRunning) = true;
     [{
         {
             if (ACE_time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
