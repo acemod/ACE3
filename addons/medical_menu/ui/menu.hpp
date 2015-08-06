@@ -1,4 +1,4 @@
-#include "\z\ace\addons\main\define.hpp"
+#include "\z\ace\addons\common\define.hpp"
 
 class GVAR(medicalMenu) {
     idd = 314412;
@@ -63,15 +63,15 @@ class GVAR(medicalMenu) {
             colorText[] = {1, 1, 1.0, 0.9};
             colorBackground[] = {0,0,0,0};
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
-            text = $STR_ACE_UI_EXAMINE_TREATMENT;
+            text = $STR_ACE_Medical_Menu_EXAMINE_TREATMENT;
         };
         class CatagoryCenter: CatagoryLeft {
             x = "13.33 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = $STR_ACE_UI_STATUS;
+            text = $STR_ACE_Medical_Menu_STATUS;
         };
         class CatagoryRight: CatagoryCenter{
             x = "25.66 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = $STR_ACE_UI_OVERVIEW;
+            text = $STR_ACE_Medical_Menu_OVERVIEW;
         };
         class Line: ACE_gui_backgroundBase {
             idc = -1;
@@ -325,7 +325,7 @@ class GVAR(medicalMenu) {
             animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.0)";
             animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.0)";
             animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.0)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'head'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 0; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
         class selectTorso : selectHead {
             idc = 302;
@@ -333,7 +333,7 @@ class GVAR(medicalMenu) {
             y = "5.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "2.2 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "4.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'body'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 1; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
         class selectLeftArm: selectHead{
             idc = 303;
@@ -341,12 +341,12 @@ class GVAR(medicalMenu) {
             y = "5.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "4.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'hand_r'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 3; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
         class selectRightArm: selectLeftArm{
             idc = 304;
             x = "20.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'hand_l'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 2; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
         class selectLeftLeg :selectHead {
             idc = 305;
@@ -354,12 +354,12 @@ class GVAR(medicalMenu) {
             y = "9.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'leg_r'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 5; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
         class selectRightLeg :selectLeftLeg {
             idc = 306;
             x = "19.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE(GVAR(selectedBodyPart) = 'leg_l'; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 4; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
         };
 
 
@@ -404,35 +404,35 @@ class GVAR(medicalMenu) {
             colorText[] = {0.6, 0.7, 1.0, 1};
             colorBackground[] = {0,0,0,0};
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-            text = $STR_ACE_UI_ACTIVITY_LOG;
+            text = $STR_ACE_Medical_Menu_ACTIVITY_LOG;
         };
         class QuickViewHeader: ActivityLogHeader {
             x = "19.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = $STR_ACE_UI_QUICK_VIEW;
+            text = $STR_ACE_Medical_Menu_QUICK_VIEW;
         };
         class LineBottomHeaders: Line {
             y = "19.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
         };
         class ActivityLog: InjuryList {
             idc = 214;
-            style = 16;
-            type = 102;
-            rows=1;
-            colorBackground[] = {0, 0, 0, 1};
+            //style = 16;
+            //type = 102;
+            //rows=1;
+            colorBackground[] = {0, 0, 0, 0};
             x = "1.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "(19.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))";
             w = "18.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "6.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-            colorSelectBackground[] = {0, 0, 0, 0.0};
-            colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.0};
-            columns[] = {0.0, 0.08};
-            canDrag=true;
-            arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-             arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+            //colorSelectBackground[] = {0, 0, 0, 0.0};
+            //colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.0};
+            //columns[] = {0.0, 0.08};
+            //canDrag=true;
+            //arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+            // arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
             drawSideArrows = 0;
-            idcLeft = -1;
-            idcRight = -1;
+            //idcLeft = -1;
+            //idcRight = -1;
         };
 
         class QuikViewLog: InjuryList {
@@ -481,7 +481,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_UI_TRIAGE_NONE;
+            text = $STR_ACE_Medical_Menu_TRIAGE_NONE;
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -500,7 +500,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_UI_TRIAGE_MINOR;
+            text = $STR_ACE_Medical_Menu_TRIAGE_MINOR;
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -518,7 +518,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_UI_TRIAGE_DELAYED;
+            text = $STR_ACE_Medical_Menu_TRIAGE_DELAYED;
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -536,7 +536,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_UI_TRIAGE_IMMEDIATE;
+            text = $STR_ACE_Medical_Menu_TRIAGE_IMMEDIATE;
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
@@ -554,7 +554,7 @@ class GVAR(medicalMenu) {
             y = 0;
             w = 0;
             h = 0;
-            text = $STR_ACE_UI_TRIAGE_DECEASED;
+            text = $STR_ACE_Medical_Menu_TRIAGE_DECEASED;
             style = ST_CENTER;
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";

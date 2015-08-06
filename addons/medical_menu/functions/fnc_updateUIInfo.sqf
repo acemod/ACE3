@@ -1,215 +1,137 @@
-/**
- * fn_updateUIInfo.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Update all UI information in the medical menu
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: target <OBJECT>
+ * 1: display <DISPLAY>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_targetObj","_bodyPartText","_bodyPartN","_openWounds","_bandagedWounds","_fractures","_listOfWounds","_listOfBandagedWounds","_listOfFractures","_counter","_nameEntry","_untreatedWounds" ,"_remainder", "_numberOf", "_airwayStatus", "_airwayTreated"];
-_targetObj = _this select 0;
+private ["_targeT", "_display", "_genericMessages", "_totalIvVolume", "_damaged", "_selectionBloodLoss", "_allInjuryTexts"];
+_target = _this select 0;
+_display = _this select 1;
 
-_bodyPartText = (call FUNC(getSelectedBodyPart));
-_bodyPartN = [_bodyPartText] call FUNC(getBodyPartNumber);
+_selectionN = GVAR(selectedBodyPart);
+if (_selectionN < 0 || _selectionN > 5) exitwith {};
 
-if (_bodyPartN < 0 || _bodyPartN > 5) exitwith {};
-
-_openWounds = [_targetObj,QGVAR(openWounds)] call EFUNC(common,getDefinedVariable);
-_bandagedWounds = [_targetObj,QGVAR(bandagedWounds)] call EFUNC(common,getDefinedVariable);
-_fractures = [_targetObj,QGVAR(fractures)] call EFUNC(common,getDefinedVariable);
-_airwayStatus = [_targetObj,QGVAR(airway)] call EFUNC(common,getDefinedVariable);
-
-if (count _this > 1) then {
-    switch (_this select 1) do {
-        case QGVAR(openWounds): { _openWounds = _this select 2; };
-        case QGVAR(bandagedWounds): { _bandagedWounds = _this select 2; };
-        case QGVAR(fractures): { _fractures = _this select 2; };
-    };
+_genericMessages = [];
+if (EGVAR(medical,level) >= 2) then {
+    _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
+    _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 };
 
-[_openWounds,_bandagedWounds] call FUNC(updateBodyImg);
-_listOfWounds = _openWounds select _bodyPartN;
-_listOfBandagedWounds = _bandagedWounds select _bodyPartN;
-_listOfFractures = _fractures select _bodyPartN;
-
-// TODO collect all information first, then clear the lb and fill in with details. Also; use ctrl instead of IDC.
-_numberOf = 0;
-lbClear 213;
-
-_displayBodyPartText = switch (_bodyPartText) do {
-        case "head": {
-            localize "STR_ACE_UI_HEAD";
-        };
-        case "body": {
-            localize "STR_ACE_UI_TORSO";
-        };
-        case "hand_r": {
-            localize "STR_ACE_UI_ARM_R";
-        };
-        case "hand_l": {
-            localize "STR_ACE_UI_ARM_L";
-        };
-        case "leg_r": {
-            localize "STR_ACE_UI_LEG_R";
-        };
-        case "leg_l": {
-            localize "STR_ACE_UI_LEG_L";
-        };
-        default {"-"};
+if (_target getvariable[QGVAR(isBleeding), false]) then {
+    _genericMessages pushback [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
+};
+if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
+    _genericMessages pushback [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
 };
 
-
-lbadd[213,format[localize "STR_ACE_UI_SELECTED_BODY_PART",_displayBodyPartText]];
-lbSetData [213, _numberOf, ""];
-lbSetColor [213, _numberOf, [0.27, 0.40, 0.26, 1]];
-_numberOf = _numberOf + 1;
-
-if (GVAR(setting_allowAirwayInjuries)) then {
-    _airwayTreated = _targetObj getvariable [QGVAR(airwayTreated), false];
-
-    if (_airwayStatus > 0) then {
-        _nameEntry = switch (_airwayStatus) do {
-            case 0: {localize "STR_ACE_UI_NORMAL_BREATHING"};
-            case 1: {localize "STR_ACE_UI_DIFFICULT_BREATHING"};
-            case 2: {localize "STR_ACE_UI_ALMOST_NO_BREATHING"};
-            default {localize "STR_ACE_UI_NO_BREATHING"};
-        };
-
-        if (!(alive _targetObj) || (_targetObj getvariable [QEGVAR(common,isDead), false])) then {
-            lbadd[213,format["%1",localize "STR_ACE_UI_NO_BREATHING"]];
-        } else {
-            lbadd[213,format["%1",_nameEntry]];
-        };
-        lbSetData [213, _numberOf, ""];
-        _numberOf = _numberOf + 1;
-    } else {
-        if (!(alive _targetObj) || (_targetObj getvariable [QEGVAR(common,isDead), false])) then {
-            lbadd[213,format["%1",localize "STR_ACE_UI_NO_BREATHING"]];
-            lbSetData [213, _numberOf, ""];
-            _numberOf = _numberOf + 1;
-        };
-    };
-
-    if (_airwayTreated) then {
-        lbadd[213,localize "STR_ACE_UI_STATUS_NPA_APPLIED"];
-        lbSetData [213, _numberOf, ""];
-        lbSetColor [213, _numberOf, [0.5, 0.5, 0, 1]];
-        _numberOf = _numberOf + 1;
-    };
+if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
+    _genericMessages pushback [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+};
+if (_target getvariable[QGVAR(hasPain), false]) then {
+    _genericMessages pushback [localize ELSTRING(medical,Status_Pain), [1, 1, 1, 1]];
 };
 
-if (([_targetObj,QGVAR(isBleeding)] call EFUNC(common,getDefinedVariable))) then {
-    lbadd[213,localize "STR_ACE_UI_STATUS_BLEEDING"];
-    lbSetData [213, _numberOf, ""];
-    _numberOf = _numberOf + 1;
-};
-if (([_targetObj,QGVAR(hasLostBlood)] call EFUNC(common,getDefinedVariable))) then {
-    lbadd[213,localize "STR_ACE_UI_STATUS_LOST_BLOOD"];
-    lbSetData [213, _numberOf, ""];
-    _numberOf = _numberOf + 1;
-};
-
-if (([_targetObj,QGVAR(hasPain)] call EFUNC(common,getDefinedVariable))) then {
-    lbadd[213,localize "STR_ACE_UI_STATUS_PAIN"];
-    lbSetData [213, _numberOf, ""];
-    _numberOf = _numberOf + 1;
-};
-if (([_targetObj, _bodyPartText] call FUNC(hasTourniquetAppliedTo))) then {
-    lbadd[213,localize "STR_ACE_UI_STATUS_TOURNIQUET_APPLIED"];
-    lbSetColor [213, _numberOf, [0.5, 0.5, 0, 1]];
-    lbSetData [213, _numberOf, ""];
-    _numberOf = _numberOf + 1;
-};
-
-_counter = 0;
+_totalIvVolume = 0;
 {
-    if (_x > 0) then {
-        _untreatedWounds = floor _x;
-        _remainder = _x - (floor _x);
+    private "_value";
+    _value = _target getvariable _x;
+    if !(isnil "_value") then {
+        _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
+    };
+}foreach GVAR(IVBags);
+if (_totalIvVolume >= 1) then {
+    _genericMessages pushback [format[localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+};
 
-        _nameEntry = switch (_counter) do {
-            case 0: {localize "STR_ACE_UI_SMALL"};
-            case 1: {localize "STR_ACE_UI_MEDIUM"};
-            case 2: {localize "STR_ACE_UI_LARGE"};
-            default {localize "STR_ACE_UI_SMALL"};
-        };
+_damaged = [false, false, false, false, false, false];
+_selectionBloodLoss = [0,0,0,0,0,0];
 
-        if (_untreatedWounds > 1) then {
-            lbadd[213,format[localize "STR_ACE_UI_MULTIPLE_OPEN_WOUNDS",_nameEntry,_untreatedWounds]];
-            lbSetData [213, _numberOf, format["open_wound_%1",_counter]];
-            lbSetColor [213, _numberOf, [0.6, 0, 0, 1]];
-            _numberOf = _numberOf + 1;
-        } else {
-            if (_untreatedWounds == 1) then {
-                lbadd[213,format[localize "STR_ACE_UI_SINGLE_OPEN_WOUND",_nameEntry]];
-                lbSetData [213, _numberOf, format["open_wound_%1",_counter]];
-                lbSetColor [213, _numberOf, [0.6, 0, 0, 1]];
-                _numberOf = _numberOf + 1;
+
+_allInjuryTexts = [];
+if (EGVAR(medical,level) >= 2) then {
+    _openWounds = _target getvariable [QEGVAR(medical,openWounds), []];
+    private "_amountOf";
+    {
+        _amountOf = _x select 3;
+        // Find how much this bodypart is bleeding
+        if (_amountOf > 0) then {
+            _damaged set[_x select 2, true];
+            _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+
+            if (_selectionN == (_x select 2)) then {
+            // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                if (_amountOf >= 1) then {
+                    // TODO localization
+                    _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [1,1,1,1]];
+                } else {
+                    // TODO localization
+                    _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [1,1,1,1]];
+                };
             };
         };
+    }foreach _openWounds;
 
-        if (_remainder > 0) then {
-            lbadd[213,format[localize "STR_ACE_UI_PARTIAL_OPEN_WOUND",_nameEntry]];
-            lbSetData [213, _numberOf, format["open_wound_%1",_counter]];
-            lbSetColor [213, _numberOf, [0.6, 0, 0, 1]];
-            _numberOf = _numberOf + 1;
+    _bandagedwounds = _target getvariable [QEGVAR(medical,bandagedWounds), []];
+    {
+        _amountOf = _x select 3;
+        // Find how much this bodypart is bleeding
+        if !(_damaged select (_x select 2)) then {
+            _selectionBloodLoss set [(_x select 2), (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
         };
-    };
-    _counter = _counter + 1;
-}foreach _listOfWounds;
-
-_counter = 0;
-{
-    if (_x > 0) then {
-
-        _untreatedWounds = floor _x;
-        _remainder = _x - (floor _x);
-
-        _nameEntry = switch (_counter) do {
-            case 0: {localize "STR_ACE_UI_SMALL"};
-            case 1: {localize "STR_ACE_UI_MEDIUM"};
-            case 2: {localize "STR_ACE_UI_LARGE"};
-            default {localize "STR_ACE_UI_SMALL"};
-        };
-
-        if (_untreatedWounds > 1) then {
-            lbadd[213,format[localize "STR_ACE_UI_MULTIPLE_BANDAGED_WOUNDS",_nameEntry,_untreatedWounds]];
-            lbSetData [213, _numberOf, format["bandaged_wound_%1",_counter]];
-            _numberOf = _numberOf + 1;
-        } else {
-            if (_untreatedWounds == 1) then {
-                lbadd[213,format[localize "STR_ACE_UI_SINGLE_BANDAGED_WOUND",_nameEntry]];
-                lbSetData [213, _numberOf, format["bandaged_wound_%1",_counter]];
-                _numberOf = _numberOf + 1;
+        if (_selectionN == (_x select 2)) then {
+            // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+            if (_amountOf > 0) then {
+                if (_amountOf >= 1) then {
+                    // TODO localization
+                    _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
+                } else {
+                    // TODO localization
+                    _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                };
             };
         };
+    }foreach _bandagedwounds;
+} else {
+    _damaged = [true, true, true, true, true, true];
+    {
+        _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-        if (_remainder > 0) then {
-            lbadd[213,format[localize "STR_ACE_UI_PARTIAL_BANDAGED_WOUND",_nameEntry]];
-            lbSetData [213, _numberOf, format["bandaged_wound_%1",_counter]];
-            _numberOf = _numberOf + 1;
+        if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
+            _pointDamage = _target getHitPointDamage _x;
+            _severity = switch (true) do {
+                case (_pointDamage > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
+                case (_pointDamage > 0.1): {localize ELSTRING(medical,LightlyWounded)};
+                default                    {localize ELSTRING(medical,VeryLightlyWounded)};
+            };
+            _part = localize ([
+                ELSTRING(medical,Head),
+                ELSTRING(medical,Torso),
+                ELSTRING(medical,LeftArm),
+                ELSTRING(medical,RightArm),
+                ELSTRING(medical,LeftLeg),
+                ELSTRING(medical,RightLeg)
+            ] select _forEachIndex);
+            _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
         };
-    };
-    _counter = _counter + 1;
-}foreach _listOfBandagedWounds;
+    } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+};
 
-_counter = 0;
-{
-    if (_x > 0) then {
-        _nameEntry = switch (_counter) do {
-            case 0: {localize "STR_ACE_UI_SMALL"};
-            case 1: {localize "STR_ACE_UI_MEDIUM"};
-            case 2: {localize "STR_ACE_UI_LARGE"};
-            default {localize "STR_ACE_UI_SMALL"};
-        };
-        lbadd[213,format["%1 Fracture x%2",_nameEntry,_x]];
-        lbSetData [213, _numberOf, ""];
-        _numberOf = _numberOf + 1;
-    };
-    _counter = _counter + 1;
-}foreach _listOfFractures;
+[_selectionBloodLoss, _display] call FUNC(updateBodyImage);
+[_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
 
+_logs = _target getvariable [QEGVAR(medical,logFile_Activity), []];
+[_display, _logs] call FUNC(updateActivityLog);
+
+_triageStatus = [_target] call EFUNC(medical,getTriageStatus);
+(_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);
+(_display displayCtrl 2000) ctrlSetBackgroundColor (_triageStatus select 2);

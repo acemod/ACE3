@@ -1,11 +1,13 @@
-/**
- * fn_updateIcons.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Update the category icons
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

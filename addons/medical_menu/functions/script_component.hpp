@@ -1,1 +1,1 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "\z\ace\addons\medical_menu\script_component.hpp"

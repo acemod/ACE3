@@ -1,11 +1,13 @@
-/**
- * fn_handleUI_dropDownTriageCard.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Handle the triage card display
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

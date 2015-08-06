@@ -1,11 +1,14 @@
-/**
- * fn_displayOptions.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Display the available treatment options in category
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: Category name <STRING>
+ *
+ * Return Value:
+ * NONE
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -65,20 +68,20 @@ if (_name == "triage") exitwith {
 
 ctrlEnable[212,false];
 
-_entries = [ACE_player, GVAR(INTERACTION_TARGET),_name] call FUNC(getTreatmentOptions);
+_entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentOptions);
 
 {
     //player sidechat format["TRIGGERED: %1",_x];
     if (_foreachIndex > END_IDC) exitwith {};
     _ctrl = (_display displayCtrl (START_IDC + _foreachIndex));
     if (!(_foreachIndex > AMOUNT_OF_ENTRIES)) then {
-         _ctrl ctrlSetText (_x select 0);
-         _code = format["[ACE_player, ACE_medical_INTERACTION_TARGET] call %1;",(_x select 1)];
+        _ctrl ctrlSetText (_x select 0);
+        _code = format["ace_medical_menu_pendingReopen = true; call %1;",(_x select 3)];
         _ctrl ctrlSetEventHandler ["ButtonClick", _code];
-        _ctrl ctrlSetTooltip (_x select 2);
+        _ctrl ctrlSetTooltip (_x select 0); // TODO implement
         _ctrl ctrlShow true;
     } else {
-         _ctrl ctrlSetText "";
+        _ctrl ctrlSetText "";
         _ctrl ctrlSetEventHandler ["ButtonClick",""];
     };
     _ctrl ctrlCommit 0;
