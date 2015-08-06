@@ -3,9 +3,7 @@
  *
  * internal handler for net
  *
- * Arguments [Client] :
- * 0: event Type (String)
- * 1: event (Array)
+ * Arguments:
  *
  * Return value:
  * None
@@ -16,7 +14,7 @@
 
 private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged", "_events"];
 
-param ["_eventType", "_event"];
+params ["_eventType", "_event"];
 
 if (_eventType == "ACEg") then {
     _event params ["_eventName","_eventArgs"];
@@ -78,6 +76,7 @@ if (_eventType == "ACEc") then {
                     ["ACEg", ACEg] call FUNC(_handleNetEvent);
                 };
             };
+            true
         } count _eventTargets;
     };
 };
