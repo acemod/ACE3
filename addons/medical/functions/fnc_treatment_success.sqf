@@ -70,3 +70,5 @@ _args call FUNC(createLitter);
 if (!(_target getvariable [QGVAR(addedToUnitLoop),false])) then {
     [_target] call FUNC(addToInjuredCollection);
 };
+
+["medical_treatmentSuccess", [_caller, _target, _selectionName, _className]] call EFUNC(common,localEvent);
