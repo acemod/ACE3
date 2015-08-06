@@ -118,8 +118,9 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
-
+if (isServer) then {
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+};
 call FUNC(checkFiles);
 
 
