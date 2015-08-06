@@ -367,17 +367,43 @@ switch (toLower _mode) do {
     };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_curSelData","_cachedGrps","_cachedSides","_grp","_side","_sNode","_gNode","_uNode"];
+        private ["_cachedUnits","_cachedGrps","_cachedSides","_s","_g","_grp","_u","_unit","_side"];
 
-        // Cache current selection
-        _curSelData = _tree tvData (tvCurSel _tree);
-
-        // Clear the tree
-        tvClear _tree;
-
-        // Update the tree from the unit list
+        // Cache existing group and side nodes and cull removed data
+        _cachedUnits = [];
         _cachedGrps = [];
         _cachedSides = [];
+        for "_s" from 0 to ((_tree tvCount []) - 1) do {
+            for "_g" from 0 to ((_tree tvCount [_s]) - 1) do {
+                _grp = groupFromNetID (_tree tvData [_s,_g]);
+
+                if (_grp in GVAR(groupList)) then {
+                    _cachedGrps pushBack _grp;
+                    _cachedGrps pushBack _g;
+
+                    for "_u" from 0 to ((_tree tvCount [_s,_g])) do {
+                        _unit = objectFromNetId (_tree tvData [_s,_g,_u]);
+
+                        if (_unit in GVAR(unitList)) then {
+                            _cachedUnits pushBack _unit;
+                        } else {
+                            _tree tvDelete [_s,_g,_u];
+                        };
+                    };
+                } else {
+                    _tree tvDelete [_s,_g];
+                };
+            };
+
+            if ((_tree tvCount [_s]) > 0) then {
+                _cachedSides pushBack (_tree tvText [_s]);
+                _cachedSides pushBack _s;
+            } else {
+                _tree tvDelete [_s];
+            };
+        };
+
+        // Update the tree from the unit list
         {
             _grp = group _x;
             _side = [side _grp] call BIS_fnc_sideName;
@@ -385,47 +411,42 @@ switch (toLower _mode) do {
             // Use correct side node
             if !(_side in _cachedSides) then {
                 // Add side node
-                _sNode = _tree tvAdd [[], _side];
+                _s = _tree tvAdd [[], _side];
+                _tree tvExpand [_s];
 
                 _cachedSides pushBack _side;
-                _cachedSides pushBack _sNode;
+                _cachedSides pushBack _s;
             } else {
                 // If side already processed, use existing node
-                _sNode = _cachedSides select ((_cachedSides find _side) + 1);
+                _s = _cachedSides select ((_cachedSides find _side) + 1);
             };
 
             // Use correct group node
             if !(_grp in _cachedGrps) then {
                 // Add group node
-                _gNode = _tree tvAdd [[_sNode], groupID _grp];
+                _g = _tree tvAdd [[_s], groupID _grp];
+                _tree tvSetData [[_s,_g], netID _grp];
 
                 _cachedGrps pushBack _grp;
-                _cachedGrps pushBack _gNode;
+                _cachedGrps pushBack _g;
             } else {
                 // If group already processed, use existing node
-                _gNode = _cachedGrps select ((_cachedGrps find _grp) + 1);
+                _g = _cachedGrps select ((_cachedGrps find _grp) + 1);
             };
 
-            _uNode = _tree tvAdd [[_sNode,_gNode], GETVAR(_x,GVAR(uName),"")];
-            _tree tvSetData [[_sNode,_gNode,_uNode], netID _x];
+            _u = _tree tvAdd [[_s,_g], GETVAR(_x,GVAR(uName),"")];
+            _tree tvSetData [[_s,_g,_u], netID _x];
+            _tree tvSetPicture [[_s,_g,_u], GETVAR(_x,GVAR(uIcon),"")];
+            _tree tvSetPictureColor [[_s,_g,_u], GETVAR(_grp,GVAR(gColor),[ARR_4(1,1,1,1)])];
 
-            // Preserve the previous selection
-            if (_curSelData == (_tree tvData [_sNode,_gNode,_uNode])) then {
-                _tree tvSetCurSel [_sNode,_gNode,_uNode];
-            };
-
-            _tree tvSort [[_sNode,_gNode],false];
-            _tree tvExpand [_sNode,_gNode];
-        } forEach GVAR(unitList);
-
-        {
-            if (typeName _x == "SCALAR") then {
-                _tree tvSort [[_x],false];
-                _tree tvExpand [_x];
-            };
-        } forEach _cachedSides;
+            _tree tvSort [[_s,_g],false];
+        } forEach (GVAR(unitList) - _cachedUnits);
 
         _tree tvSort [[],false];
+
+        if ((_tree tvCount []) <= 0) then {
+            _tree tvAdd [[], localize LSTRING(units_none)];
+        };
     };
     // Map events
     case "onmapclick": {
@@ -439,7 +460,7 @@ switch (toLower _mode) do {
             [nil,nil,nil, _newPos] call FUNC(setCameraAttributes);
         };
     };
-    // Break from interface for eexternal events
+    // Break from interface for external events
     case "escape": {
         _args params ["_display"];
         private "_dlg";

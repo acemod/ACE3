@@ -158,9 +158,9 @@ class GVAR(interface) {
         class unitTree: RscTree {
             idc = IDC_UNIT;
             x = safeZoneX;
-            y = safeZoneY + TOOL_H * 2;
+            y = safeZoneY + TOOL_H * 6;
             w = TOOL_W * 2;
-            h = safeZoneH - TOOL_H * 6;
+            h = safeZoneH - TOOL_H * 13;
             sizeEx = H_PART(0.8);
             borderSize = 1;
             colorBorder[] = {COL_FORE};
