@@ -23,7 +23,7 @@
 if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 
-// parameterization
+// Parameterization
 private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
 params ["_unit", "_weapon", "", "_mode", "_ammo", "_magazine", "_bullet"];
 
@@ -74,30 +74,26 @@ _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
 if (GVAR(barrelLengthInfluenceEnabled)) then {
-    _muzzleVelocityShift = uiNamespace getVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],nil];
-    if (isNil "_muzzleVelocityShift") then {
-        _muzzleVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
+    _barrelVelocityShift = uiNamespace getVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],nil];
+    if (isNil "_barrelVelocityShift") then {
+        _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
         uiNamespace setVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],_muzzleVelocityShift];
-    };
-    if (_muzzleVelocityShift != 0) then {
-        _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
     };
 };
 
 if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
-    _muzzleVelocityShift = [_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift);
-    if (_muzzleVelocityShift != 0) then {
-        _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
-    };
+    _temperatureVelocityShift = ([_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift));
 };
 
 if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
     if (_muzzleVelocityShift != 0) then {
+        _muzzleVelocity = _muzzleVelocity + (_barrelVelocityShift + _ammoTemperatureVelocityShift);
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
     };
 };
+
 _bulletTraceVisible = false;
 if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
     if (currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) then {
