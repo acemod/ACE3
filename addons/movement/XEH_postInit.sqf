@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 
 }] call EFUNC(common,addEventHandler);
 
-["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
+["localize ELSTRING(common,ACEConfigCategoryMovement)", QGVAR(climb), localize LSTRING(Climb),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

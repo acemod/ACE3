@@ -10,7 +10,7 @@ GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};

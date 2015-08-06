@@ -598,5 +598,23 @@
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>
         </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryEquipment">
+            <English>ACE3 Equipment</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryCommon">
+            <English>ACE3 Common</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryWeapons">
+            <English>ACE3 Weapons</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryMovement">
+            <English>ACE3 Movement</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryScopeAdjustment">
+            <English>ACE3 Scope Adjustment</English>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEConfigCategoryVehicles">
+            <English>ACE3 Vehicles</English>
+        </Key>
     </Package>
 </Project>

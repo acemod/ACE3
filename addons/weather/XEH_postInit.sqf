@@ -27,7 +27,7 @@ GVAR(ACE_rain) = rain;
     };
 };
 
-["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
+["localize ELSTRING(common,ACEConfigCategoryCommon)", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};

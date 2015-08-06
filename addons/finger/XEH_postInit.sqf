@@ -11,8 +11,8 @@ GVAR(pfeh_id) = -1;
     if (!GVAR(enabled)) exitWith {};
 
     [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call EFUNC(common,addEventHandler);
-    
-    ["ACE3 Common",
+
+    [localize ELSTRING(common,ACEConfigCategoryCommon),
     QGVAR(finger),
     [(localize LSTRING(keyComb)), (localize LSTRING(keyComb_description))],
     {

@@ -1,4 +1,4 @@
-["ACE3 Equipment", QGVAR(ATragMXDialogKey), localize LSTRING(ATragMXDialogKey),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(ATragMXDialogKey), localize LSTRING(ATragMXDialogKey),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};

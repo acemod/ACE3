@@ -34,14 +34,14 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 };
 
 
-["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
+["localize ELSTRING(common,ACEConfigCategoryCommon)", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
 [219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
 
-["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
+["localize ELSTRING(common,ACEConfigCategoryCommon)", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
     // Statement
     [1] call FUNC(keyDown)

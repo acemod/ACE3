@@ -37,7 +37,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 
 // Add keybinds
-["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -51,7 +51,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 {false},
 [201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
 
-["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
+[localize ELSTRING(common,ACEConfigCategoryEquipment), QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};

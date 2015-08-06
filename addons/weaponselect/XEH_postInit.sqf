@@ -4,7 +4,7 @@
 if !(hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(SelectPistolNew), localize LSTRING(SelectPistol),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectPistolNew), localize LSTRING(SelectPistol),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -18,7 +18,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 1 Key)
 
-["ACE3 Weapons", QGVAR(SelectRifleNew), localize LSTRING(SelectRifle),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectRifleNew), localize LSTRING(SelectRifle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -32,7 +32,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 2 Key)
 
-["ACE3 Weapons", QGVAR(SelectRifleMuzzleNew), localize LSTRING(SelectRifleMuzzle),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectRifleMuzzleNew), localize LSTRING(SelectRifleMuzzle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -46,7 +46,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 3 Key)
 
-["ACE3 Weapons", QGVAR(SelectLauncherNew), localize LSTRING(SelectLauncher),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectLauncherNew), localize LSTRING(SelectLauncher),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -60,7 +60,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 4 Key)
 
-["ACE3 Weapons", QGVAR(SelectBinocularNew), localize LSTRING(SelectBinocular),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectBinocularNew), localize LSTRING(SelectBinocular),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -74,7 +74,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Weapons", QGVAR(SelectGrenadeFrag), localize LSTRING(SelectGrenadeFrag),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectGrenadeFrag), localize LSTRING(SelectGrenadeFrag),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -88,7 +88,7 @@ if !(hasInterface) exitWith {};
 {false},
 [7, [false, false, false]], false] call cba_fnc_addKeybind; //6 Key
 
-["ACE3 Weapons", QGVAR(SelectGrenadeOther), localize LSTRING(SelectGrenadeOther),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(SelectGrenadeOther), localize LSTRING(SelectGrenadeOther),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -102,7 +102,7 @@ if !(hasInterface) exitWith {};
 {false},
 [8, [false, false, false]], false] call cba_fnc_addKeybind; //7 Key
 
-["ACE3 Weapons", QGVAR(HolsterWeapon), localize LSTRING(HolsterWeapon),
+["localize ELSTRING(common,ACEConfigCategoryWeapons)", QGVAR(HolsterWeapon), localize LSTRING(HolsterWeapon),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -127,7 +127,7 @@ if !(hasInterface) exitWith {};
 {false},
 [11, [false, false, false]], false] call cba_fnc_addKeybind; //0 Key
 
-["ACE3 Vehicles", QGVAR(EngineOn), localize LSTRING(EngineOn),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(EngineOn), localize LSTRING(EngineOn),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -141,7 +141,7 @@ if !(hasInterface) exitWith {};
 {false},
 [3, [false, false, false]], false] call cba_fnc_addKeybind; //2 Key
 
-["ACE3 Vehicles", QGVAR(EngineOff), localize LSTRING(EngineOff),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(EngineOff), localize LSTRING(EngineOff),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -155,7 +155,7 @@ if !(hasInterface) exitWith {};
 {false},
 [2, [false, false, false]], false] call cba_fnc_addKeybind; //1 Key
 
-["ACE3 Vehicles", QGVAR(SelectMainGunNew), localize LSTRING(SelectMainGun),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(SelectMainGunNew), localize LSTRING(SelectMainGun),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -169,7 +169,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 3 Key)
 
-["ACE3 Vehicles", QGVAR(SelectMachineGunNew), localize LSTRING(SelectMachineGun),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(SelectMachineGunNew), localize LSTRING(SelectMachineGun),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -183,7 +183,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 4 Key)
 
-["ACE3 Vehicles", QGVAR(SelectMissilesNew), localize LSTRING(SelectMissiles),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(SelectMissilesNew), localize LSTRING(SelectMissiles),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -197,7 +197,7 @@ if !(hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call cba_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher),
+["localize ELSTRING(common,ACEConfigCategoryVehicles)", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher),
 {
     // Conditions: canInteract
     if !([ACE_player, (vehicle ACE_player), []] call EFUNC(common,canInteractWith)) exitWith {false};
