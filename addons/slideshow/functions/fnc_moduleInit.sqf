@@ -15,7 +15,8 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
+// Exit on Headless Client
+if (!hasInterface && !isDedicated) exitWith {};
 
 PARAMS_3(_logic,_units,_activated);
 
@@ -32,12 +33,6 @@ _controllers = [_logic getVariable ["Controllers", ""], true, true] call FUNC(ma
 _images = [_logic getVariable ["Images", ""], true, false] call FUNC(makeList);
 _names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
 _duration = _logic getVariable ["Duration", 0];
-
-// If interaction menu module is not present, set default duration value
-if (["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
-    _duration = 5;
-    diag_log "[ACE]: ace_interact_menu not present, assuming default Slideshow duration value.";
-};
 
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);
