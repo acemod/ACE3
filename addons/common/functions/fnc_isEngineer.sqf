@@ -4,10 +4,12 @@
  * Checks if a unit is an engineer.
  *
  * Arguments:
- * 0: unit to be checked (object)
+ * 0: unit to be checked (OBJECT)
  *
  * Return Value:
- * Bool: is the unit an engineer?
+ * is the unit an engineer (BOOLEAN)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

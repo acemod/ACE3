@@ -12,6 +12,8 @@
  *
  * Usage:
  * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

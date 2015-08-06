@@ -1,13 +1,16 @@
-/**
- * fn_loadPerson_f.sqf
- * @Descr: Loads a specified unit into any nearby vehicle
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Loads a specified unit into any nearby vehicle
  *
- * @Arguments: [caller OBJECT, unitToBeLoaded OBJECT]
- * @Return: OBJECT Returns the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit that will load (OBJECT)
+ * 1: Unit to be loaded (OBJECT)
+ *
+ * Return Value:
+ * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed (OBJECT)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)

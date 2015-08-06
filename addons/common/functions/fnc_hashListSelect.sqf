@@ -1,4 +1,16 @@
-//fnc_hashListSelect.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 private ["_hash", "_keys", "_hashes", "_values"];

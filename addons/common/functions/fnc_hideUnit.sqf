@@ -1,5 +1,6 @@
 /*
  * Author: SilentSpike (based on muteUnit)
+ *
  * Globally hides a unit. This allows the handling of more than one reason to hide an object globally.
  *
  * Arguments:

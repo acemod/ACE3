@@ -1,5 +1,6 @@
 /*
  * Author: esteldunedain
+ *
  * Load the parameters on the server.
  * Config < Server UserConfig < Mission Config
  *
@@ -30,7 +31,8 @@ _parseConfigForSettings = {
     if (GVAR(forceAllSettings)) then {
         {
             _x set [6, true];
-        } forEach GVAR(settings);
+            true
+        } count GVAR(settings);
     };
 };
 
@@ -54,4 +56,5 @@ publicVariable QGVAR(settings);
 // Publish all setting values
 {
     publicVariable (_x select 0);
-} forEach GVAR(settings);
+    true
+} count GVAR(settings);

@@ -1,11 +1,16 @@
-/**
- * fn_hasItem.sqf
- * @Descr: Check if unit has item
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT, item STRING (Classname of item)]
- * @Return: BOOL
- * @PublicAPI: true
+ * Check if unit has item
+ *
+ * Arguments:
+ * 0: Unit (OBJECT)
+ * 1: Item Classname (STRING)
+ *
+ * Return Value:
+ * has Item (BOOLEAN)
+ *
+ * Public: yes
  */
  #include "script_component.hpp"
 

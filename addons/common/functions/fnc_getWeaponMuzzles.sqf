@@ -8,6 +8,8 @@
  *
  * Return value:
  * All weapon muzzles (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

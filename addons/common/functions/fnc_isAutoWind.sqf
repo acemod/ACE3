@@ -8,6 +8,8 @@
  *
  * Return value:
  * This mission has automatic wind? (Bool)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

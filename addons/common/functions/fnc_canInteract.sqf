@@ -4,22 +4,12 @@
  * Check if unit can interact with enviroment. Unit has to be awake and not be in arrested state.
  *
  * Arguments:
- * 0: Unit that try to Interact (OBJECT
+ * 0: Unit that try to Interact (OBJECT)
  *
  * Return Value:
  * BOOLEAN True if unit can interact with enviroment.
  *
- * Public: No
- */
-
-/**
- * fn_canInteract.sqf
- * @Descr: Check if unit can interact with enviroment. Unit has to be awake and not be in arrested state.
- * @Author: Glowbal
- *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL True if unit can interact with enviroment.
- * @PublicAPI: true
+ * Public: Yes
  */
 #include "script_component.hpp"
 

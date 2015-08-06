@@ -10,6 +10,8 @@
  *
  * Return Value:
  * Hadamard Product
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

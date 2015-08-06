@@ -8,7 +8,9 @@
  * 1: Event args (any)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 //IGNORE_PRIVATE_WARNING("_handleNetEvent");

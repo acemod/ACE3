@@ -1,13 +1,16 @@
-/**
- * fn_isAwake.sqf
- * @Descr: Check if unit is awake. Will be false when death or unit is unconscious.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL True if unit is awake
- * @PublicAPI: true
+ * Check if unit is awake. Will be false when death or unit is unconscious.
+ *
+ * Argument:
+ * 0: Unit (OBJECT)
+ *
+ * Return value:
+ * if unit is awake (Bool)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_unit"];

@@ -1,13 +1,17 @@
-/**
- * fn_insertionSort.sqf
- * @Descr: Sorts an array of numbers
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
  *
- * @Arguments: [array ARRAY, (optional) ascending BOOL]
- * @Return: sortedArray ARRAY
- * @PublicAPI: true
+ * Sorts an array of numbers
+ *
+ * Arguments:
+ * 0: array (ARRAY)
+ * 1: ascending (BOOLEAN) (Optional)
+ *
+ * Return Value:
+ * sortedArray (ARRAY)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_array", ["_ascending", true]];

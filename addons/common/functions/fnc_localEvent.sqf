@@ -8,18 +8,19 @@
  * 1: Event args (any)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-params ["_eventName", "_eventArgs"];
-
 private["_eventIndex", "_eventNames", "_events"];
 
-_eventNames = GVAR(events) select 0;
+params ["_eventName", "_eventArgs"];
+GVAR(events) params ["_eventNames","_eventArray"];
 _eventIndex = _eventNames find _eventName;
 if(_eventIndex != -1) then {
-    _events = (GVAR(events) select 1) select _eventIndex;
+    _events = _eventArray select _eventIndex;
     #ifdef DEBUG_EVENTS
         diag_log text format[ARR_2("* Local Event: %1",_eventName)];
         diag_log text format[ARR_2("    args=%1",_eventArgs)];

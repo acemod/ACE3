@@ -1,13 +1,16 @@
-/**
- * fn_loadPersonLocal_f.sqf
- * @Descr: Load a person, local
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Load a person, local
  *
- * @Arguments: [unit OBJECT, vehicle OBJECT, caller OBJECT]
- * @Return: void
- * @PublicAPI: false
+ * Arguments:
+ * 0: unit to be loaded (OBJECT)
+ * 1: vehicle that will beloaded(OBJECT)
+ * 2: caller that will load(OBJECT)
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_unit","_vehicle","_caller","_handle","_loaded","_slotsOpen"];

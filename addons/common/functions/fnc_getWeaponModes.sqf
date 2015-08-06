@@ -8,6 +8,8 @@
  *
  * Return value:
  * All firing modes (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

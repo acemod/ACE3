@@ -5,11 +5,13 @@
  * Currently returns false for non-local remote controlled zeus units. (Remotes from another zeus machine)
  *
  * Arguments:
- * 0: unit to be checked (object)
- * 1: exclude remote controlled units (boolean)
+ * 0: unit to be checked (OBJECT)
+ * 1: exclude remote controlled units (BOOLEAN)
  *
  * Return Value:
- * Bool: is unit a player?
+ * is unit a player (BOOLEAN)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

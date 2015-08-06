@@ -4,10 +4,12 @@
  * Check if the unit is in a vehicle and turned out.
  *
  * Argument:
- * 0: Unit, not the vehicle (Object)
+ * 0: Unit, not the vehicle (OBJECT)
  *
  * Return value:
- * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (Bool)
+ * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (BOOLEAN)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

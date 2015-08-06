@@ -4,10 +4,12 @@
  * Check if the object still exists and is alive. This function exists because 'alive objNull' actually returns true.
  *
  * Argument:
- * 0: Any object (Object)
+ * 0: Any object (OBJECT)
  *
  * Return value:
- * The object exists and is alive (Bool).
+ * The object exists and is alive (BOOLEAN).
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

@@ -8,6 +8,8 @@
  *
  * Return value:
  * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 (Number)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -9,6 +9,7 @@
  * Return Value:
  * Brightest light level
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

@@ -17,9 +17,7 @@ private ["_name", "_isClientSetable", "_isForced", "_profileValue"];
 
 // Iterate through settings
 {
-    _name = _x select 0;
-    _isClientSetable = _x select 2;
-    _isForced = _x select 6;
+    _x params ["_name","","_isClientSetable","","","","_isForced"];
 
     // If setting is user setable
     if (_isClientSetable) then {
@@ -36,5 +34,5 @@ private ["_name", "_isClientSetable", "_isForced", "_profileValue"];
             };
         };
     };
-
-} forEach GVAR(settings);
+    true
+} count GVAR(settings);

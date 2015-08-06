@@ -1,10 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-if ((_this select 0) in (missionNamespace getVariable ["ACE_Debug", []])) then {
-    _this resize 4;
-
-    params ["_type", "_argument", ["_function", {_this}], ["_showInGame", true]];
+params ["_type", "_argument", ["_function", {_this}], ["_showInGame", true]];
+if (_type in (missionNamespace getVariable ["ACE_Debug", []])) then {
 
     private "_result";
     _result = _argument call _function;
