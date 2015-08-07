@@ -117,27 +117,27 @@ switch (toLower _mode) do {
         // Handle unit icons on map and 3D
         GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
 
-        // Populate the help splash
+        // Populate the help window
         private "_help";
         _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
         {
-            // Add space before category titles
-            if (count _x == 1) then {
-                _help lnbAddRow [""];
+            _i = _help lbAdd (_x select 0);
+            if ((_x select 1) == "") then {
+                _help lbSetPicture [_i,"\A3\ui_f\data\map\markers\military\dot_CA.paa"];
+                _help lbSetPictureColor [_i,[COL_FORE]];
+            } else {
+                _help lbSetTooltip [_i,_x select 1];
             };
-
-            _help lnbAddRow _x;
         } forEach [
             [localize LSTRING(uiControls),""],
-            [localize LSTRING(uiToggleHelp),"H"],
-            [localize LSTRING(uiToggleMap),"M"],
             [localize LSTRING(uiToggleUnits),"1"],
-            [localize LSTRING(uiToggleTools),"2"],
-            [localize LSTRING(uiToggleCompass),"3"],
-            [localize LSTRING(uiToggleIcons),"4"],
+            [localize LSTRING(uiToggleHelp),"2"],
+            [localize LSTRING(uiToggleTools),"3"],
+            [localize LSTRING(uiToggleCompass),"4"],
+            [localize LSTRING(uiToggleIcons),"5"],
+            [localize LSTRING(uiToggleMap),"M"],
             [localize LSTRING(uiToggleInterface),"Backspace"],
-
-            [localize LSTRING(freeCamControls)],
+            [localize LSTRING(freeCamControls),""],
             [localize LSTRING(freeCamForward),"W"],
             [localize LSTRING(freeCamBackward),"S"],
             [localize LSTRING(freeCamLeft),"A"],
@@ -150,8 +150,7 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"],
             [localize LSTRING(freeCamNextVis),"N"],
             [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
-
-            [localize LSTRING(otherControls)],
+            [localize LSTRING(otherControls),""],
             [localize LSTRING(nextCam),"Up Arrow"],
             [localize LSTRING(prevCam),"Down Arrow"],
             [localize LSTRING(nextUnit),"Right Arrow"],
@@ -250,12 +249,15 @@ switch (toLower _mode) do {
                 [_display,nil,nil,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 3: { // 2
-                [_display,nil,nil,nil,nil,true] call FUNC(toggleInterface);
+                [_display,nil,true] call FUNC(toggleInterface);
             };
             case 4: { // 3
-                [_display,true] call FUNC(toggleInterface);
+                [_display,nil,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 5: { // 4
+                [_display,true] call FUNC(toggleInterface);
+            };
+            case 6: { // 5
                 GVAR(showIcons) = !GVAR(showIcons);
             };
             case 14: { // Backspace
@@ -278,9 +280,6 @@ switch (toLower _mode) do {
             };
             case 32: { // D
                 GVAR(camDolly) set [0, GVAR(camSpeed)];
-            };
-            case 35: { // H
-                [_display,nil,true] call FUNC(toggleInterface);
             };
             case 44: { // Z
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed);

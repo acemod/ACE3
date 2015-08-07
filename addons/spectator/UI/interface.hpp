@@ -10,7 +10,7 @@ class RscFrame {
 class RscButtonMenu;
 class RscControlsGroupNoScrollbars;
 //class RscFrame;
-class RscListNBox;
+class RscListBox;
 class RscMapControl;
 class RscPicture;
 class RscText;
@@ -163,12 +163,13 @@ class GVAR(interface) {
             h = safeZoneH - TOOL_H * 13;
             sizeEx = H_PART(0.8);
             borderSize = 1;
+            colorText[] = {COL_FORE};
             colorBorder[] = {COL_FORE};
             colorBackground[] = {COL_BACK};
             colorSelect[] = {
-                "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
+                QUOTE(GETPRVAR(GUI_BCG_RGB_R,0.77)),
+                QUOTE(GETPRVAR(GUI_BCG_RGB_G,0.51)),
+                QUOTE(GETPRVAR(GUI_BCG_RGB_B,0.08)),
                 1
             };
             multiselectEnabled = 0;
@@ -184,35 +185,43 @@ class GVAR(interface) {
             onMouseButtonDown = QUOTE([ARR_2('onMapClick',_this)] call FUNC(handleInterface));
             onDraw = QUOTE(_this call FUNC(handleMap));
         };
-        class helpSplash: RscControlsGroupNoScrollbars {
+        class helpWindow: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;
-            x = 0.5 - W_PART(12);
-            y = 0.5 - H_PART(12);
-            w = W_PART(24);
-            h = H_PART(24);
+            x = safeZoneX + safeZoneW - TOOL_W * 2;
+            y = safeZoneY + TOOL_H * 6;
+            w = TOOL_W * 2;
+            h = safeZoneH - TOOL_H * 13;
+            colorText[] = {COL_FORE};
+            colorSelectBackground[] = {COL_FORE_D};
+            colorSelectBackground2[] = {COL_BACK};
+            colorBackground[] = {0,0,0,0};
             class controls {
-                class helpBack: RscText {
+                class helpTitle: RscText {
                     x = 0;
                     y = 0;
-                    w = W_PART(24);
-                    h = H_PART(24);
-                    colorBackground[] = {COL_BACK};
-                };
-                class helpTitle: helpBack {
+                    w = TOOL_W * 2;
                     h = H_PART(1);
-                    colorText[]={COL_FORE};
+                    colorText[] = {COL_FORE};
                     colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
                     text = CSTRING(HelpTitle);
                 };
-                class helpContent: RscListNBox {
+                class helpContent: RscListBox {
                     idc = IDC_HELP_LIST;
-                    x = W_PART(1);
-                    y = H_PART(2);
-                    W = W_PART(22);
-                    H = H_PART(21);
+                    x = 0;
+                    y = H_PART(1);
+                    w = TOOL_W * 2;
+                    h = safeZoneH - TOOL_H * 14;
+                    colorBackground[] = {COL_BACK};
                     default = 1;
-                    columns[] = {0.01,0.5};
+                };
+                class helpFrame: RscText {
+                    x = 0;
+                    y = 0;
+                    w = TOOL_W * 2;
+                    h = safeZoneH - TOOL_H * 13;
+                    colorText[] = {COL_FORE};
+                    style = 64;
                 };
             };
         };
