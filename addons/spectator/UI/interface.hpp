@@ -137,11 +137,11 @@ class GVAR(interface) {
                     idc = -1;
                     style = 64;
                 };
-                class fovTool: viewTool {
+                class zoomTool: viewTool {
                     idc = IDC_TOOL_FOV;
                     x = safeZoneW - TOOL_W * 2 - MARGIN;
                 };
-                class fovFrame: fovTool {
+                class zoomFrame: zoomTool {
                     idc = -1;
                     style = 64;
                 };
@@ -155,25 +155,52 @@ class GVAR(interface) {
                 };
             };
         };
-        class unitTree: RscTree {
+        class unitTree: RscControlsGroupNoScrollbars {
             idc = IDC_UNIT;
             x = safeZoneX;
             y = safeZoneY + TOOL_H * 6;
             w = TOOL_W * 2;
             h = safeZoneH - TOOL_H * 13;
-            sizeEx = H_PART(0.8);
-            borderSize = 1;
-            colorText[] = {COL_FORE};
-            colorBorder[] = {COL_FORE};
-            colorBackground[] = {COL_BACK};
-            colorSelect[] = {
-                "profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]",
-                "profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]",
-                "profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]",
-                1
+            class controls {
+                class unitTitle: RscText {
+                    x = 0;
+                    y = 0;
+                    w = TOOL_W * 2;
+                    h = H_PART(1);
+                    style = 2;
+                    colorText[] = {COL_FORE};
+                    colorBackground[] = {COL_FORE_D};
+                    sizeEx = H_PART(1);
+                    text = CSTRING(UnitTitle);
+                };
+                class unitTree: RscTree {
+                    idc = IDC_UNIT_TREE;
+                    x = 0;
+                    y = H_PART(1);
+                    w = TOOL_W * 2;
+                    h = safeZoneH - TOOL_H * 14;
+                    sizeEx = H_PART(0.8);
+                    colorText[] = {COL_FORE};
+                    colorBorder[] = {0,0,0,0};
+                    colorBackground[] = {COL_BACK};
+                    colorSelect[] = {
+                        "profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]",
+                        "profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]",
+                        "profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]",
+                        1
+                    };
+                    multiselectEnabled = 0;
+                    onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
+                };
+                class unitFrame: RscFrame {
+                    x = 0;
+                    y = 0;
+                    w = TOOL_W * 2;
+                    h = safeZoneH - TOOL_H * 13;
+                    shadow = 2;
+                    colorText[] = {COL_FORE};
+                };
             };
-            multiselectEnabled = 0;
-            onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
         };
         class mapOverlay: RscMapControl {
             idc = IDC_MAP;
@@ -191,16 +218,13 @@ class GVAR(interface) {
             y = safeZoneY + TOOL_H * 6;
             w = TOOL_W * 2;
             h = safeZoneH - TOOL_H * 13;
-            colorText[] = {COL_FORE};
-            colorSelectBackground[] = {COL_FORE_D};
-            colorSelectBackground2[] = {COL_BACK};
-            colorBackground[] = {0,0,0,0};
             class controls {
                 class helpTitle: RscText {
                     x = 0;
                     y = 0;
                     w = TOOL_W * 2;
                     h = H_PART(1);
+                    style = 2;
                     colorText[] = {COL_FORE};
                     colorBackground[] = {COL_FORE_D};
                     sizeEx = H_PART(1);
@@ -213,15 +237,16 @@ class GVAR(interface) {
                     w = TOOL_W * 2;
                     h = safeZoneH - TOOL_H * 14;
                     colorBackground[] = {COL_BACK};
+                    sizeEx = H_PART(0.8);
                     default = 1;
                 };
-                class helpFrame: RscText {
+                class helpFrame: RscFrame {
                     x = 0;
                     y = 0;
                     w = TOOL_W * 2;
                     h = safeZoneH - TOOL_H * 13;
+                    shadow = 2;
                     colorText[] = {COL_FORE};
-                    style = 64;
                 };
             };
         };

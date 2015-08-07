@@ -36,5 +36,5 @@ if !(GVAR(camUnit) in GVAR(unitList)) then {
 // Reduce overhead when unit tree is hidden
 if (ctrlShown (_display displayCtrl IDC_UNIT)) then {
     // Reduce overhead by spreading across frames
-    [FUNC(handleInterface),["onUnitsUpdate",[_display displayCtrl IDC_UNIT]],1] call EFUNC(common,waitAndExecute);
+    [FUNC(handleInterface),["onUnitsUpdate",[(_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE]],1] call EFUNC(common,waitAndExecute);
 };

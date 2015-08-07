@@ -101,6 +101,9 @@
             <Polish>Termowizja</Polish>
         </Key>
         <!-- Interface strings -->
+        <Key ID="STR_ACE_Spectator_UnitTitle">
+            <English>Spectator Units</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
             <Polish>Sterowanie obserwatorem</Polish>
