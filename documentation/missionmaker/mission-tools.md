@@ -78,6 +78,11 @@ Slide duration | 0 (0 = disabled, number is in seconds)
 - If you set a duration the remotes will be disabled. (If the remotes are disabled `ace_interaction` is not needed)
 - You can have multiple sets of images on different screens, see the advanced slideshow below.
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an [issue](http://feedback.arma3.com/view.php?id=22310) to prevent errors.</p>
+</div>
+
 ### 3.2 Basic slideshow
 *A set of 4 images that are swapped via a remote*
 

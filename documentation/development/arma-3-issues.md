@@ -22,6 +22,7 @@ Keeping track of Arma 3 issues that need to be fixed. If you want to support us 
 * [James2464: 0023725: All Environment Rocks Should Have PhysX LODs](http://feedback.arma3.com/view.php?id=23725)
 * [Jaynus: 0023679: Display event handler return values for mouse buttons should be respected](http://feedback.arma3.com/view.php?id=23679)
 * [Heisenberg: 0023741: Switching between optic modes of a sniper scope (AMS, DMS, MOS) will result in a blurred vision](http://feedback.arma3.com/view.php?id=23741)
+* [AgentRev: 0022310: setObjectTextureGlobal causing "Cannot load texture" errors when used with valid mission files](http://feedback.arma3.com/view.php?id=22310)
 
 **Resolved:**
 
