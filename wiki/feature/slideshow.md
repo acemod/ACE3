@@ -2,6 +2,7 @@
 layout: wiki
 title: Slideshow
 group: feature
+category: interaction
 parent: wiki
 ---
 
@@ -10,7 +11,7 @@ This adds the ability to have images shown on some objects and have other object
 Please note that only objects with hiddenSelection 0 can be used to render images (whiteboard, TV, PC Screen being the most notable examples).
 
 ## 2. Usage
-Note that this sections is for users, for mission makers refer to [the entry in mission-tools](./missionmaker/mission-tools.html)
+Note that this sections is for users, for mission makers refer to [the entry in mission-tools](../missionmaker/mission-tools.html)
 Also if no remotes are defined the "screen" object itself becomes the remote.
 
 ### 2.1 Switching between images

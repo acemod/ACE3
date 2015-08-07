@@ -2,8 +2,8 @@
 layout: wiki
 title: Interaction
 description:
-category: Interaction
 group: feature
+category: interaction
 parent: wiki
 ---
 
