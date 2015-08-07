@@ -11,6 +11,7 @@ PREP(handleUI_DisplayOptions);
 PREP(handleUI_dropDownTriageCard);
 PREP(getTreatmentOptions);
 PREP(updateActivityLog);
+PREP(updateQuickViewLog);
 PREP(updateBodyImage);
 PREP(updateInformationLists);
 PREP(setTriageStatus);

@@ -133,8 +133,11 @@ if (EGVAR(medical,level) >= 2) then {
 [_selectionBloodLoss, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
 
-_logs = _target getVariable [QEGVAR(medical,logFile_Activity), []];
+_logs = _target getVariable [QEGVAR(medical,logFile_activity_view), []];
 [_display, _logs] call FUNC(updateActivityLog);
+
+_logs = _target getVariable [QEGVAR(medical,logFile_quick_view), []];
+[_display, _logs] call FUNC(updateQuickViewLog);
 
 _triageStatus = [_target] call EFUNC(medical,getTriageStatus);
 (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);

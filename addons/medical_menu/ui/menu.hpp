@@ -437,10 +437,10 @@ class GVAR(medicalMenu) {
 
         class QuikViewLog: InjuryList {
             idc = 215;
-            style = 16;
-            type = 102;
-            rows=1;
-            colorBackground[] = {0, 0, 0, 1};
+            //style = 16;
+            //type = 102;
+            //rows=1;
+            colorBackground[] = {0, 0, 0, 0};
             x = "21.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "(19.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))";
             w = "18.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -449,13 +449,13 @@ class GVAR(medicalMenu) {
             colorSelectBackground[] = {0, 0, 0, 0.0};
             colorSelectBackground2[] = {0.0, 0.0, 0.0, 0.0};
 
-            columns[] = {0.0, 0.08};
-            canDrag=true;
-            arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-             arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+            //columns[] = {0.0, 0.08};
+            //canDrag=true;
+            //arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+            // arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
             drawSideArrows = 0;
-            idcLeft = -1;
-            idcRight = -1;
+            //idcLeft = -1;
+            //idcRight = -1;
         };
 
         class selectTriageStatus: ACE_gui_buttonBase {
