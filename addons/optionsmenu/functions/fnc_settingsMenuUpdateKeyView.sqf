@@ -37,7 +37,18 @@ if (count _collection > 0) then {
     if (_settingIndex < 0) then {
         _settingIndex = 0;
     };
+    diag_log format["_collection: %1", _collection];
     _setting = _collection select _settingIndex;
+
+    _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
+    if !(_selectedCategory == "All Categories" || _selectedCategory == (_setting select 8)) exitwith {
+        systemChat format["INCORRECT CATEGORY: %1 != %2", _selectedCategory, _setting];
+        diag_log format["INCORRECT CATEGORY: %1 != %2", _selectedCategory, _setting];
+        lbClear 400;
+        (_settingsMenu displayCtrl 250) ctrlSetText "No settings available";
+        (_settingsMenu displayCtrl 251) ctrlSetText "No settings available";
+        (_settingsMenu displayCtrl 300) ctrlSetText "No settings available";
+    };
 
     _entryName = _setting select 0;
     _localizedName = _setting select 3;
@@ -51,7 +62,7 @@ if (count _collection > 0) then {
     switch (GVAR(optionMenu_openTab)) do {
         case (MENU_TAB_OPTIONS): {
             _possibleValues = _setting select 5;
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
 
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
@@ -66,7 +77,7 @@ if (count _collection > 0) then {
             (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
         };
         case (MENU_TAB_COLORS): {
-            _currentColor = _setting select 8;
+            _currentColor = _setting select 9;
             {
                 sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
             } forEach [410, 411, 412, 413];

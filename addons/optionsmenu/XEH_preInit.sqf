@@ -10,6 +10,7 @@ PREP(onSliderPosChanged);
 PREP(onServerSaveInputField);
 PREP(onServerSettingsMenuOpen);
 PREP(onServerListBoxShowSelectionChanged);
+PREP(onCategorySelectChanged);
 PREP(resetSettings);
 PREP(serverResetSettings);
 PREP(settingsMenuUpdateKeyView);
@@ -29,5 +30,7 @@ GVAR(ClientSettingsExportIncluded) = false;
 GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
 GVAR(serverSideValues) = [];
+GVAR(categories) = [];
+GVAR(currentCategorySelection) = 0;
 
 ADDON = true;

@@ -32,7 +32,7 @@ switch (_type) do {
             _newValue = [false, true] select _newValue;
           };
 
-          if !((_x select 8) isEqualTo _newValue) then {
+          if !((_x select 9) isEqualTo _newValue) then {
             _changed = true;
             _x set [8, _newValue];
           } ;
@@ -42,7 +42,7 @@ switch (_type) do {
   };
   case (MENU_TAB_COLORS): {
       {
-        if (((_x select 0) == _name) && {!((_x select 8) isEqualTo _newValue)}) then {
+        if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
           _x set [8, _newValue];
         };
@@ -56,7 +56,7 @@ switch (_type) do {
             _newValue = [false, true] select _newValue;
           };
 
-          if !((_x select 8) isEqualTo _newValue) then {
+          if !((_x select 9) isEqualTo _newValue) then {
             _changed = true;
             _x set [8, _newValue];
           } ;
@@ -66,7 +66,7 @@ switch (_type) do {
   };
   case (MENU_TAB_SERVER_COLORS): {
       {
-        if (((_x select 0) == _name) && {!((_x select 8) isEqualTo _newValue)}) then {
+        if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
           _x set [8, _newValue];
         };
@@ -74,7 +74,7 @@ switch (_type) do {
   };
   case (MENU_TAB_SERVER_VALUES): {
       {
-        if (((_x select 0) == _name) && {!((_x select 8) isEqualTo _newValue)}) then {
+        if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
           _x set [8, _newValue];
         };

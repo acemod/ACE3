@@ -77,9 +77,19 @@ class ACE_settingsMenu {
             idc = 13;
             x = X_PART(2);
             y = Y_PART(3.4);
-            w = W_PART(30);
+            w = W_PART(15);
             h = H_PART(1);
             text = "";
+        };
+        class categorySelection: ACE_gui_comboBoxBase {
+            idc = 14;
+            x = X_PART(15);
+            y = Y_PART(3.4);
+            w = W_PART(9);
+            h = H_PART(1);
+            text = "";
+            onLBSelChanged = QUOTE( call FUNC(onCategorySelectChanged));
+            SizeEx = H_PART(0.9);
         };
         class selectionAction_1: ACE_gui_buttonBase {
             idc = 1000;

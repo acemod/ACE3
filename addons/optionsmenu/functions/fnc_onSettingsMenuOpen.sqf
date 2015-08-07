@@ -52,3 +52,10 @@ if (GVAR(serverConfigGeneration) == 0) then {
     (_menu displayCtrl 1102) ctrlEnable false;
     (_menu displayCtrl 1102) ctrlShow false;
 };
+
+{
+    if (_x == "") then {
+        _x = "All Categories";
+    };
+    (_menu displayCtrl 14) lbAdd _x;
+} forEach GVAR(categories);

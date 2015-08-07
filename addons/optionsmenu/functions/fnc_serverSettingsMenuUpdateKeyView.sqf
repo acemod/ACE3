@@ -52,7 +52,7 @@ if (count _collection > 0) then {
     switch (GVAR(optionMenu_openTab)) do {
         case (MENU_TAB_SERVER_OPTIONS): {
             _possibleValues = _setting select 5;
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
                 lbClear 400;
@@ -66,14 +66,14 @@ if (count _collection > 0) then {
             (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
         };
         case (MENU_TAB_SERVER_COLORS): {
-            _currentColor = _setting select 8;
+            _currentColor = _setting select 9;
             {
                 sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
             } forEach [410, 411, 412, 413];
         };
         case (MENU_TAB_SERVER_VALUES): {
             // TODO implement
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
 
             // Created disable/enable options for bools
             _expectedType = switch (_setting select 1) do {

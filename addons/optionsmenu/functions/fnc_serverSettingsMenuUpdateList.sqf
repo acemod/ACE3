@@ -33,7 +33,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _ctrlList lbadd (_x select 0);
             };
 
-            _settingsValue = _x select 8;
+            _settingsValue = _x select 9;
 
             // Created disable/enable options for bools
             _settingsText = if ((_x select 1) == "BOOL") then {
@@ -47,7 +47,7 @@ switch (GVAR(optionMenu_openTab)) do {
     };
     case (MENU_TAB_SERVER_COLORS): {
         {
-            _color = +(_x select 8);
+            _color = +(_x select 9);
             {
                 _color set [_forEachIndex, ((round (_x * 100))/100)];
             } forEach _color;
@@ -58,7 +58,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _ctrlList lbadd (_x select 0);
             };
             _ctrlList lbadd (_settingsColor);
-            _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 8)];
+            _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 9)];
         }foreach GVAR(serverSideColors);
     };
     case (MENU_TAB_SERVER_VALUES): {
@@ -68,7 +68,7 @@ switch (GVAR(optionMenu_openTab)) do {
             } else {
                 _ctrlList lbadd (_x select 0);
             };
-            _settingsValue = _x select 8;
+            _settingsValue = _x select 9;
             if (typeName _settingsValue != "STRINg") then {
                 _settingsValue = format["%1", _settingsValue];
             };
