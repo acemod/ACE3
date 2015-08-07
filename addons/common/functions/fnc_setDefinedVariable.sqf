@@ -1,13 +1,18 @@
-/**
- * fn_setVariable.sqf
- * @Descr: Setvariable value
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT, variableName STRING, value ANY]
- * @Return: void
- * @PublicAPI: true
+ * Setvariable value
+ *
+ * Argument:
+ * 0: Unit (OBJECT)
+ * 1: variableName (STRING)
+ * 2: value (ANY)
+ *
+ * Return value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_definedVariable"];
@@ -16,9 +21,7 @@ params ["_unit", "_variable", "_value", "_global"];
 
 if (isNil "_global") then {
     _definedVariable = ([_variable] call FUNC(getDefinedVariableInfo));
-    if (count _definedVariable > 2) then {
-        _global = _definedVariable select 2;
-    };
+    _definedVariable params ["", "",  ["_global",false];
 };
 
 if (!isNil "_value") exitwith {

@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * ?
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 terminate (missionNamespace getVariable [QGVAR(waitForAnimationHandle), scriptNull]);

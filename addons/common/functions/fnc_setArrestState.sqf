@@ -1,13 +1,17 @@
-/**
- * fn_setArrestState.sqf
- * @Descr: Set a unit in arrest state
- * @Author: Glowbal
+/*
+ * Author: esteldunedain
  *
- * @Arguments: [unitToBeArrested OBJECT, setArrested BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Set a unit in arrest state
+ *
+ * Argument:
+ * 0: Unit to be Arrested (OBJECT)
+ * 1: set Arrested (BOOL)
+ *
+ * Return value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params[["_unit",ObjNull,[ObjNull]],["_setArrest",false,[false]]];

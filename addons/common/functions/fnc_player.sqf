@@ -9,6 +9,8 @@
  *
  * Return Value:
  * Player controlled unit (object)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

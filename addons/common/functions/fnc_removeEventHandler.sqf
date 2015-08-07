@@ -8,18 +8,21 @@
  * 1: Event code (number)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 private ["_eventNames", "_eventFunctions", "_eventIndex"];
 
 params ["_eventName", "_eventCodeIndex"];
 
-_eventNames = GVAR(events) select 0;
+GVAR(events) params ["_eventNames", "_events"];
+
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 
 if (_eventIndex != -1) then {
-    _eventFunctions = (GVAR(events) select 1) select _eventIndex;
+    _eventFunctions = _events select _eventIndex;
     _eventFunctions set[_eventCodeIndex, nil];
 };

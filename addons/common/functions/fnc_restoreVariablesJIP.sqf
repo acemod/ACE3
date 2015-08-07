@@ -7,7 +7,9 @@
  * 0: Object (Object)
  *
  * Return value:
- * Nothing.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -22,4 +24,5 @@ _respawnVariables pushBack "ACE_PersistentFunctions";
 
 {
     _unit setVariable [_x, _unit getVariable _x, true];
-} forEach _respawnVariables;
+    true
+} count _respawnVariables;

@@ -1,13 +1,16 @@
-/**
- * fn_resetAllDefaults_f.sqf
- * @Descr: reset all variables that have been defined
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * reset all variables that have been defined
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_unit"];
@@ -26,14 +29,17 @@ if (isPlayer _unit) then {
         // clear all disable user input
         {
             [_x, false] call FUNC(setDisableUserInputStatus);
-        }foreach GVAR(DISABLE_USER_INPUT_COLLECTION);
+            true
+        } count GVAR(DISABLE_USER_INPUT_COLLECTION);
     };
 };
 
 {
-    if (!(_x select 4)) then {
-        _unit setvariable [(_x select 0),nil,_x select 3];
+    _x params ["_name", "", "", "_public", "_var"];
+    if (!_var) then {
+        _unit setvariable [_name, nil, _public];
     };
-} forEach ([_unit] call FUNC(getAllDefinedSetVariables));
+    true
+} count ([_unit] call FUNC(getAllDefinedSetVariables));
 
 _unit setVariable ["ACE_forceWalkStatusNumber", 0, true];

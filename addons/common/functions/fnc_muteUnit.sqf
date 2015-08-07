@@ -8,7 +8,9 @@
  * 1: Reason to mute the unit (String)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -17,7 +19,7 @@ params ["_unit", "_reason"];
 if (isNull _unit) exitWith {};
 
 // add reason to mute to the unit
-private "_muteUnitReasons";
+private ["_muteUnitReasons", "_speaker"];
 _muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
 
 if !(_reason in _muteUnitReasons) then {
@@ -25,7 +27,6 @@ if !(_reason in _muteUnitReasons) then {
     _unit setVariable [QGVAR(muteUnitReasons), _muteUnitReasons, true];
 };
 
-private "_speaker";
 _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};

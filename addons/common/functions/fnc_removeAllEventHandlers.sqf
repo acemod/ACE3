@@ -7,16 +7,17 @@
  * 0: Event name (string)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 private ["_eventNames", "_eventFunctions", "_eventIndex"];
 
 params ["_eventName"];
-
-_eventNames = GVAR(events) select 0;
+GVAR(events) params ["_eventNames", "_events"];
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 if (_eventIndex != -1) then {
-    (GVAR(events) select 1) set [_eventIndex, []];
+    _events set [_eventIndex, []];
 };

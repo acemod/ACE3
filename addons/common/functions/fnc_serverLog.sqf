@@ -1,4 +1,15 @@
-// by esteldunedain
+/*
+ * Author: esteldunedain
+ * ?
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * None
+ *
+ * Public: no
+ */
 #include "script_component.hpp"
 
 if (isServer) then {

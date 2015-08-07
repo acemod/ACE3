@@ -9,6 +9,7 @@
  * Return Value:
  * Is this object claimed by someone?
  *
+ * Public: No
  */
 #include "script_component.hpp"
 

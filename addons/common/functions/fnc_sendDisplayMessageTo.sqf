@@ -1,13 +1,19 @@
-/**
- * fn_sendDisplayMessageTo.sqf
- * @Descr: Displays a message on locality of receiver
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [receiver OBJECT, title STRING, content STRING, type NUMBER (Optional)]
- * @Return: void
- * @PublicAPI: true
+ * Displays a message on locality of receiver
+ *
+ * Arguments:
+ * 0: receiver (OBJECT)
+ * 1: title (STRING)
+ * 2: content (ARRAY)
+ * 3: type (NUMBER)(Optional)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_reciever","_title","_content","_type", "_parameters", "_localizationArray"];
@@ -34,13 +40,15 @@ if (isPlayer _reciever) then {
         _localizationArray = [_title];
         {
             _localizationArray pushback _x;
-        }foreach _parameters;
+            true
+        } count _parameters;
         _title = format _localizationArray;
 
         _localizationArray = [_content];
         {
             _localizationArray pushback _x;
-        }foreach _parameters;
+            true
+        } count _parameters;
         _content = format _localizationArray;
 
         [_title,_content,_type] call EFUNC(common,displayMessage);

@@ -9,6 +9,8 @@
  *
  * Return value:
  * Digits. The maximum length is six digits. (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

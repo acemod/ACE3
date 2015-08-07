@@ -1,16 +1,18 @@
-/**
- * fn_requestCallback.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * N/A
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 params ["_info", "_accepted"];
 _info params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 

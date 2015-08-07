@@ -8,6 +8,8 @@
  *
  * Return value:
  * The number as string (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

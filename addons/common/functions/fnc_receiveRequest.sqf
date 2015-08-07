@@ -1,13 +1,16 @@
-/**
- * fn_recieveRequest.sqf
- * @Descr: N/A
- * @Author: Glowbal
- *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
-
+ /*
+  * Author: Glowbal
+  *
+  * N/A
+  *
+  * Arguments:
+  * ?
+  *
+  * Return Value:
+  * None
+  *
+  * Public: No
+  */
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
@@ -43,14 +46,14 @@ GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
 GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [ACE_time, _target, _requestID] spawn {
     private["_id", "_t", "_requestID", "_target"];
-    _t = (_this select 0) + 40;
-    _target = _this select 1;
-    _requestID = _this select 2;
+    params ["_time", "_target", "_requestID"];
+    _time = _time + 40;
+
     _id = _target getvariable _requestID;
     waituntil {
         _id = _target getvariable _requestID;
 
-    (ACE_time > _t || isnil "_id")};
+    (ACE_time > _time || isnil "_id")};
     _target setvariable [_requestID, nil];
     GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = nil;
     if (!isnil QGVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT)) then {

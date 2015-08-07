@@ -8,10 +8,11 @@
  * 1: Event args (any)
  *
  * Return value:
- * Nothing
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
 params ["_eventName", "_eventArgs"];
 
@@ -20,7 +21,7 @@ params ["_eventName", "_eventArgs"];
     diag_log text format[ARR_2("    args=%1",_eventArgs)];
 #endif
 
-ACEg = [_eventName, _eventArgs];
+ACEg = _this;
 if (!isServer) then {
     publicVariableServer "ACEg";
 } else {

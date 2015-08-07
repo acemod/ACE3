@@ -9,7 +9,9 @@
  * 2: Is the reason still valid? True for setting this reason, false for removing it (Bool)
  *
  * Return value:
- * None.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

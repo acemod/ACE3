@@ -9,6 +9,8 @@
  *
  * Return value:
  * Digits. The maximum count is six digits. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

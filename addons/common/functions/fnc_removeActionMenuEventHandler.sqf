@@ -9,7 +9,9 @@
  * 2: ID of the action (Number)
  *
  * Return value:
- * None.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -23,17 +25,16 @@ _name = format ["ACE_ActionMenu_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
 
-_currentID = _actionsVar select 0;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_currentID", "_actionIDs", "_actions"];
 
 _id = _actionIDs find _id;
 
 if (_id == -1) exitWith {};
 
 _action = _actions select _id;
-_actionID = _action select 0;
-_nameVar = _action select 1;
+
+_action params ["_actionID", "_nameVar"];
+
 
 missionNamespace setVariable [_nameVar, nil];
 
@@ -42,4 +43,4 @@ _actions deleteAt _id;
 
 _unit removeAction _actionID;
 
-_unit setVariable [_name, [_currentID, _actionIDs, _actions], false];
+_unit setVariable [_name, [_currentID, _actionIDs, _actions], false]; // @todo Test use _actionVar is Posible

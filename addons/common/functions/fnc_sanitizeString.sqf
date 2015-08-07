@@ -9,6 +9,8 @@
  *
  * Return Value:
  * Sanitized string
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -37,6 +39,7 @@ _arrayNew = [];
             _arrayNew = _arrayNew + [_x];
         };
     };
-} forEach _array;
+    true
+} count _array;
 
 toString _arrayNew

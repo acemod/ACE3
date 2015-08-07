@@ -1,13 +1,19 @@
-/**
- * fn_sendDisplayInformationTo.sqf
- * @Descr: Sends a display information hint to a receiver
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [receiver OBJECT, title STRING, content ARRAY (An array with strings), type NUMBER (Optional)]
- * @Return: void
- * @PublicAPI: true
+ * Sends a display information hint to a receiver
+ *
+ * Arguments:
+ * 0: receiver (OBJECT)
+ * 1: title (STRING)
+ * 2: content (ARRAY)
+ * 3: type (NUMBER)(Optional)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_reciever","_title","_content","_type", "_parameters", "_localizationArray"];
@@ -24,7 +30,8 @@ if (isPlayer _reciever) then {
         _localizationArray = [_title];
         {
             _localizationArray pushback _x;
-        } forEach _parameters;
+            true
+        } count _parameters;
         _title = format _localizationArray;
 
         {
@@ -32,12 +39,13 @@ if (isPlayer _reciever) then {
                 _localizationArray = [localize _x];
                 {
                     _localizationArray pushback _x;
-                } forEach _parameters;
+                    true
+                } count _parameters;
 
-                _content set [_foreachIndex, format _localizationArray];
+                _content set [_forEachIndex, format _localizationArray];
             };
 
-        }foreach _content;
+        } forEach _content;
 
         [_title,_content,_type] call EFUNC(common,displayInformation);
     };

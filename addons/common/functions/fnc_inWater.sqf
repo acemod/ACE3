@@ -24,6 +24,8 @@ _return = if ((surfaceIsWater getPos _unit)) then {
     } else {
         false
     };
+} else {
+    false
 };
 
 _return

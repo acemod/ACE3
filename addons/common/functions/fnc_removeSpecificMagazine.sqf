@@ -9,6 +9,8 @@
  *
  * Return value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -23,15 +25,18 @@ _index = _magazines find [_magazineType,_ammoCount];
 if (_index > -1) exitWith {
     {
         _player removeItemFromUniform (_x select 0);
-    } forEach _magazines;
+        true
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (uniformContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            _x params ["_magazine", "_count"];
+            (uniformContainer _player) addMagazineAmmoCargo [_magazine, 1, _count];
         };
-    } forEach _magazines;
+        true
+    } count _magazines;
 };
 
 // Check vest
@@ -40,15 +45,18 @@ _index = _magazines find [_magazineType,_ammoCount];
 if (_index > -1) exitWith {
     {
         _player removeItemFromVest (_x select 0);
-    } forEach _magazines;
+        true
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (vestContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            _x params ["_magazine", "_count"];
+            (vestContainer _player) addMagazineAmmoCargo [_magazine, 1, _count];
         };
-    } forEach _magazines;
+        trues
+    } count _magazines;
 };
 
 // Check backpack
@@ -57,13 +65,16 @@ _index = _magazines find [_magazineType,_ammoCount];
 if (_index > -1) exitWith {
     {
         _player removeItemFromBackpack (_x select 0);
-    } forEach _magazines;
+        true
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (backpackContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            _x params ["_magazine", "_count"];
+            (backpackContainer _player) addMagazineAmmoCargo [_magazine, 1, _count];
         };
-    } forEach _magazines;
+        true
+    } count _magazines;
 };

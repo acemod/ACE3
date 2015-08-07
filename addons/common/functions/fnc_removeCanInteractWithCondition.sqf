@@ -9,20 +9,18 @@
  * Return Value:
  * Unit can interact?
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
+private ["_conditions", "_conditionNames", "_conditionFuncs", "_index"];
 params ["_conditionName"];
 _conditionName = toLower _conditionName;
 
-private ["_conditions", "_conditionNames", "_conditionFuncs"];
-
 _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 
-_conditionNames = _conditions select 0;
-_conditionFuncs = _conditions select 1;
+_conditions params ["_conditionNames", "_conditionFuncs"];
 
-private "_index";
 _index = _conditionNames find _conditionName;
 
 if (_index == -1) exitWith {};

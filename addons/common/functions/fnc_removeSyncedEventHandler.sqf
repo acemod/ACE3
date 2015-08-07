@@ -8,6 +8,8 @@
  *
  * Return value:
  * Boolean of success
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -29,5 +29,6 @@ if (isNil "_array") exitWith {
 
 {
     _array set [_forEachIndex, _x call _code];
-} forEach _array;
+    true
+} count _array;
 _array
