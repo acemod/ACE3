@@ -77,6 +77,7 @@ Slide duration | 0 (0 = disabled, number is in seconds)
 - Only objects with hiddenSelection 0 can be used as "screens".
 - If you set a duration the remotes will be disabled. (If the remotes are disabled `ace_interaction` is not needed)
 - You can have multiple sets of images on different screens, see the advanced slideshow below.
+- It is advisable images resolution sizes are powers of 2 (eg. 512x512) to avoid graphical glitches in them.
 
 <div class="panel callout">
     <h5>Note:</h5>
