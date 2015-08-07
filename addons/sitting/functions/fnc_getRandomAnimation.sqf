@@ -46,4 +46,4 @@ _animations = [
 ];
 
 // Select random animation
-(_animations select floor random count _animations)
+(_animations select (floor (random (count _animations))))
