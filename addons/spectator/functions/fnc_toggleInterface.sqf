@@ -31,17 +31,8 @@ _map = _display displayCtrl IDC_MAP;
 _tool = _display displayCtrl IDC_TOOL;
 _unit = _display displayCtrl IDC_UNIT;
 
-// Map and help operate outside of interface
-GVAR(showHelp) = [GVAR(showHelp), !GVAR(showHelp)] select _toggleHelp;
+// Map operates outside of interface
 GVAR(showMap) = [GVAR(showMap), !GVAR(showMap)] select _toggleMap;
-
-// When help changes with map open, minimise the map
-if (GVAR(showMap) && _toggleHelp) then {
-    GVAR(showHelp) = true;
-    GVAR(showMap) = false;
-};
-
-_help ctrlShow GVAR(showHelp);
 _map ctrlShow GVAR(showMap);
 
 if (GVAR(showMap)) then {
@@ -62,16 +53,18 @@ if (GVAR(showMap)) then {
     if (GVAR(showInterface)) then {
         // Can only toggle interface elements with interface shown
         GVAR(showComp) = [GVAR(showComp), !GVAR(showComp)] select _toggleComp;
+        GVAR(showHelp) = [GVAR(showHelp), !GVAR(showHelp)] select _toggleHelp;
         GVAR(showTool) = [GVAR(showTool), !GVAR(showTool)] select _toggleTool;
         GVAR(showUnit) = [GVAR(showUnit), !GVAR(showUnit)] select _toggleUnit;
 
         _comp ctrlShow GVAR(showComp);
+        _help ctrlShow GVAR(showHelp);
         _tool ctrlShow GVAR(showTool);
         _unit ctrlShow GVAR(showUnit);
     } else {
         {
             _x ctrlShow false;
-        } forEach [_comp,_tool,_unit];
+        } forEach [_comp,_help,_tool,_unit];
     };
 };
 
