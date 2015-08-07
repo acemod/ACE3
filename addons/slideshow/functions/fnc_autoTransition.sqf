@@ -34,7 +34,7 @@ missionNamespace setVariable [_varString, _currentSlide];
 // Set slide
 {
     _x setObjectTextureGlobal [0, _images select _currentSlide];
-} forEach _objects;
+} count _objects;
 
 TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
 
