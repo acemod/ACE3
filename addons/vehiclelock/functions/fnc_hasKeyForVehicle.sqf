@@ -18,7 +18,7 @@
 
 private ["_returnValue","_sideKeyName","_customKeys"];
 
-PARAMS_2(_unit,_veh);
+params ["_unit", "_veh"];
 
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};

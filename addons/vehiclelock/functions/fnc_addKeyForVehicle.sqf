@@ -20,7 +20,7 @@
 
 private ["_previousMags","_newMags","_keyMagazine","_keyName"];
 
-PARAMS_3(_unit,_veh,_useCustom);
+params ["_unit", "_veh", "_useCustom"];
 
 if (isNull _unit) exitWith {ERROR("null unit");};
 if (isNull _veh) exitWith {ERROR("null vehicle");};

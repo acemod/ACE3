@@ -17,7 +17,7 @@
 
 private ["_vehConfigSide","_vehSide","_returnValue"];
 
-PARAMS_1(_veh);
+params ["_veh"];
 
 if (isNull _veh) exitWith {ERROR("null vehicle"); "error"};
 
