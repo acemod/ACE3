@@ -24,7 +24,7 @@ _logCtrl = _display displayCtrl 214;
 lbClear _logCtrl;
 
 {
-    _x params ["_message", "_moment", "_arguments"];
+    _x params ["_message", "_moment", "_dummy", "_arguments"];
 
     if (isLocalized _message) then {
         _message = localize _message;
