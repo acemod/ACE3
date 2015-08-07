@@ -20,7 +20,10 @@
 
 private ["_previousMags","_newMags","_keyMagazine","_keyName"];
 
-params ["_unit", "_veh", "_useCustom"];
+if (!params [["_unit", objNull, [objNull]], ["_veh", objNull, [objNull]], ["_useCustom", false, [false]]]) exitWith {
+    ERROR("Input wrong type");
+};
+TRACE_3("params",_unit,_veh,_useCustom);
 
 if (isNull _unit) exitWith {ERROR("null unit");};
 if (isNull _veh) exitWith {ERROR("null vehicle");};

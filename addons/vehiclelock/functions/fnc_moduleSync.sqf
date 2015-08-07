@@ -20,6 +20,7 @@
 if (!isServer) exitWith {};
 
 params ["_logic", "_syncedObjects", "_activated"];
+TRACE_3("params",_logic,_syncedObjects,_activated);
 
 if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
 

@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit", "_container"];
+TRACE_2("params",_unit,_container);
 
 //Only check for player:
 if (_unit != ace_player) exitWith {false};

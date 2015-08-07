@@ -18,6 +18,7 @@
 private ["_vehConfigSide","_vehSide","_returnValue"];
 
 params ["_veh"];
+TRACE_1("params",_veh);
 
 if (isNull _veh) exitWith {ERROR("null vehicle"); "error"};
 
