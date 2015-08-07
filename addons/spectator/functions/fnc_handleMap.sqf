@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 params ["_map"];
-private ["_cachedVehicles","_unit","_color","_icon"];
+private ["_cachedVehicles","_unit","_color","_icon","_txt"];
 
 if (GVAR(camMode) == 0) then {
     _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(camera),20,20,GVAR(camPan)];
@@ -39,8 +39,9 @@ _cachedVehicles = [];
         // Function has caching built in
         _color = [side effectiveCommander _unit] call BIS_fnc_sideColor;
         _icon = GETVAR(_unit,GVAR(uIcon),"");
+        _txt = ["", GETVAR(_x,GVAR(uName),"")] select (isPlayer _x);
 
-        _map drawIcon [_icon, _color, _unit, 19, 19, getDir _unit];
+        _map drawIcon [_icon, _color, _unit, 19, 19, getDir _unit, _txt, 1, 0.03];
     };
     false
 } count GVAR(unitList);

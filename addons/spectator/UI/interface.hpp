@@ -167,9 +167,9 @@ class GVAR(interface) {
             colorBorder[] = {COL_FORE};
             colorBackground[] = {COL_BACK};
             colorSelect[] = {
-                QUOTE(GETPRVAR(GUI_BCG_RGB_R,0.77)),
-                QUOTE(GETPRVAR(GUI_BCG_RGB_G,0.51)),
-                QUOTE(GETPRVAR(GUI_BCG_RGB_B,0.08)),
+                "profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]",
+                "profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]",
+                "profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]",
                 1
             };
             multiselectEnabled = 0;
