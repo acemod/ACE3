@@ -23,9 +23,9 @@ if (isNil QGVAR(camHandler)) exitWith { [_this select 1] call CBA_fnc_removePerF
 private ["_oldPos","_mX","_mY","_mZ","_pan","_x","_y","_z"];
 
 _oldPos = getPosASL GVAR(camera);
-_mX = GVAR(camDolly) select 0;
-_mY = GVAR(camDolly) select 1;
-_mZ = GVAR(camBoom);
+_mX = (GVAR(camDolly) select 0) / ((GVAR(camZoom) * 0.8) max 1);
+_mY = (GVAR(camDolly) select 1) / ((GVAR(camZoom) * 0.8) max 1);
+_mZ = GVAR(camBoom) / ((GVAR(camZoom) * 0.8) max 1);
 
 _pan = (GVAR(camPan) + 360) % 360;
 _x = (_oldPos select 0) + (_mX * cos(_pan)) + (_mY * sin(_pan));
