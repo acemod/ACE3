@@ -53,7 +53,7 @@ private ["_currentSlideshow"];
 _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
 
 // If interaction menu module is not present, set default duration value
-if (["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
+if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
     _duration = 5;
     diag_log text format ["[ACE]: Slideshow: Interaction Menu module not present, defaulting duration value to %1", _duration];
 };
