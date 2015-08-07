@@ -221,5 +221,11 @@
             <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
+            <English>Require surrendering</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
+            <English>Require Players to surrender before they can be arrested</English>
+        </Key>
     </Package>
 </Project>
