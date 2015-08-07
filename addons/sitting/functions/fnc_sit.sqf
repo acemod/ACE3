@@ -14,12 +14,11 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
 
-PARAMS_2(_seat,_player);
+params ["_seat", "_player"];
 
 // Set global variable for standing up
 GVAR(seat) = _seat;
@@ -49,12 +48,13 @@ _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple peop
 _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
 _seatPosOrig = getPosASL _seat;
 [{
-    EXPLODE_5_PVT(_this select 0,_player,_sitDirectionVisual,_sitRotation,_seat,_seatPosOrig);
-    
+    params ["_args", "_pfhId"];
+    _args params ["_player", "_sitDirectionVisual", "_sitRotation", "_seat", "_seatPosOrig"];
+
     // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
-        [_this select 1] call cba_fnc_removePerFrameHandler;
-        TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting),false)]);
+        [_pfhId] call cba_fnc_removePerFrameHandler;
+        TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };
 
     //  Stand up if chair moves

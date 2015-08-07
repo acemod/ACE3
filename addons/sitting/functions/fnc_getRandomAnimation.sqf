@@ -9,13 +9,13 @@
  * Random Animation <STRING>
  *
  * Example:
- * _animation = call ace_sitting_fnc_getRandomAnimation;
+ * _animation = call ace_sitting_fnc_getRandomAnimation
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_animations"];
+private "_animations";
 
 // Animations Pool
 _animations = [
@@ -46,4 +46,4 @@ _animations = [
 ];
 
 // Select random animation
-(_animations select (floor (random (count _animations))))
+(_animations select floor random count _animations)
