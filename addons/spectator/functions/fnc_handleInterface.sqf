@@ -114,7 +114,7 @@ switch (toLower _mode) do {
         // Keep unit list and tree up to date
         [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
 
-        // Handle unit icons on map and 3D
+        // Handle 3D unit icons
         GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
 
         // Populate the help window
@@ -146,8 +146,9 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamDown),"Z"],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
-            [localize LSTRING(freeCamSpeed),"Scrollwheel"],
-            [localize LSTRING(freeCamZoom),"Ctrl + Scrollwheel"],
+            [localize LSTRING(freeCamZoom),"Scrollwheel"],
+            [localize LSTRING(freeCamSpeed),"Ctrl + Scrollwheel"],
+            [localize LSTRING(freeCamBoost),"Shift (Hold)"],
             [localize LSTRING(freeCamNextVis),"N"],
             [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
             [localize LSTRING(otherControls),""],
@@ -220,9 +221,9 @@ switch (toLower _mode) do {
 
         // Scroll to change speed, modifier for zoom
         if (GVAR(ctrlKey)) then {
-            [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + _zChange * 0.1] call FUNC(setCameraAttributes);
-        } else {
             [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + _zChange * 0.2] call FUNC(setCameraAttributes);
+        } else {
+            [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + _zChange * 0.1] call FUNC(setCameraAttributes);
         };
     };
     case "onmousemoving": {
@@ -268,31 +269,33 @@ switch (toLower _mode) do {
                 [_display,nil,nil,true] call FUNC(toggleInterface);
             };
             case 16: { // Q
-                GVAR(camBoom) = 0.5 * GVAR(camSpeed);
+                GVAR(camBoom) = 0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
             case 17: { // W
-                GVAR(camDolly) set [1, GVAR(camSpeed)];
+                GVAR(camDolly) set [1, GVAR(camSpeed) * ([1, 2] select _shift)];
             };
             case 29: { // Ctrl
                 GVAR(ctrlKey) = true;
             };
             case 30: { // A
-                GVAR(camDolly) set [0, -GVAR(camSpeed)];
+                GVAR(camDolly) set [0, -GVAR(camSpeed) * ([1, 2] select _shift)];
             };
             case 31: { // S
-                GVAR(camDolly) set [1, -GVAR(camSpeed)];
+                GVAR(camDolly) set [1, -GVAR(camSpeed) * ([1, 2] select _shift)];
             };
             case 32: { // D
-                GVAR(camDolly) set [0, GVAR(camSpeed)];
+                GVAR(camDolly) set [0, GVAR(camSpeed) * ([1, 2] select _shift)];
             };
             case 44: { // Z
-                GVAR(camBoom) = -0.5 * GVAR(camSpeed);
+                GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
             case 49: { // N
-                if (_ctrl) then {
-                    [nil,nil,-1] call FUNC(cycleCamera);
-                } else {
-                    [nil,nil,1] call FUNC(cycleCamera);
+                if (GVAR(camMode) == 0) then {
+                    if (_ctrl) then {
+                        [nil,nil,-1] call FUNC(cycleCamera);
+                    } else {
+                        [nil,nil,1] call FUNC(cycleCamera);
+                    };
                 };
             };
             case 50: { // M
