@@ -9,6 +9,8 @@
  *
  * Return Value:
  * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

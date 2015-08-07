@@ -1,11 +1,16 @@
-/**
- * fn_setDisableUserInputStatus.sqf
- * @Descr: Disables the user input. Works stacked.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [id STRING, disable BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Disables the user input. Works stacked.
+ *
+ * Argument:
+ * 0: id (STRING)
+ * 1: disable (BOOLEAN)
+ *
+ * Return value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

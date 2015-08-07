@@ -1,13 +1,17 @@
-/**
- * fn_stringCompare.sqf
- * @Descr: Determines whether one string matches another and how many characters match. Case insensitive.
- * @Author: bovine3dom
+/*
+ * Author: bovine3dom
  *
- * @Arguments: [stringA STRING, stringB STRING]
- * @Return: NUMBER Number of matching characters
- * @PublicAPI: true
+ * Determines whether one string matches another and how many characters match. Case insensitive.
+ *
+ * Argument:
+ * 0: stringA (STRING)
+ * 1: stringB (STRING)
+ *
+ * Return value:
+ * Number of matching characters (NUMBER)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_string", "_searchTerm"];

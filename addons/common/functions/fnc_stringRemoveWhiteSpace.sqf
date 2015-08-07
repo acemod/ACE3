@@ -1,13 +1,17 @@
-/**
- * fn_stringTrim.sqf
- * @Descr: Removes white spaces from string
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [string STRING]
- * @Return: STRING copy of string
- * @PublicAPI: true
+ * Removes white spaces from string
+ *
+ * Argument:
+ * 0: stringA (STRING)
+ * 1: stringB (STRING)
+ *
+ * Return value:
+ * copy of string (STRING)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 #define WHITE_SPACE [20]

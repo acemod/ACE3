@@ -1,14 +1,15 @@
 /*
-Author: commy2
-
-Description:
-Converts number to binary number
-
-Arguments:
-A number
-
-Return Value:
-A binary number, String
+ * Author: commy2
+ *
+ * Converts number to binary number
+ *
+ * Arguments:
+ * A number
+ *
+ * Return Value:
+ * A binary number, String
+ *
+ * Public: No
 */
 #include "script_component.hpp"
 

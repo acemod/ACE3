@@ -10,10 +10,12 @@
  * 3: Windup ACE_time (Number, optional. Default: 1)
  *
  * Return value:
- * Nothing.
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
+private ["_idName", "_allIdNames", "_syncTime"];
 params ["_object", "_varName", "_value", ["_sync", 1]];
 
 // set value locally
@@ -23,28 +25,26 @@ _object setVariable [_varName, _value];
 if (!isMultiplayer) exitWith {};
 
 // generate stacked eventhandler id
-private "_idName";
+
 _idName = format ["ACE_setVariablePublic_%1", _varName];
 
 // exit now if an eh for that variable already exists
-private "_allIdNames";
 _allIdNames = [GETMVAR(BIS_stackedEventHandlers_onEachFrame,[]), {_this select 0}] call FUNC(map);
 
 if (_idName in _allIdNames) exitWith {};
 
 // when to push the value
-private "_syncTime";
 _syncTime = ACE_diagTime + _sync;
 
 // add eventhandler
 [_idName, "onEachFrame", {
+    params ["_object", "_varName", "_syncTime", "_idName"];
     // wait to sync the variable
-    if (ACE_diagTime > _this select 2) then {
+    if (ACE_diagTime > _syncTime) then {
         // set value public
-        (_this select 0) setVariable [_this select 1, (_this select 0) getVariable (_this select 1), true];
+        _object setVariable [_varName, _object getVariable _varName, true];
 
         // remove eventhandler
-        [_this select 3, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
+        [_idName, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
     };
-}, [_object, _varName, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler;
-nil
+}, [_object, _varName, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler; // replace with CBA if Posible?

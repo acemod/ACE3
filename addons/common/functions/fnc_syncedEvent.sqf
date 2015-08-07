@@ -9,19 +9,17 @@
  * 2: TTL (Number or Code) [Optional] for this specific event call
  *
  * Return value:
- * Boolean of success
+ * Boolean of success (BOOLEAN)
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_name", "_args", ["_ttl", 0]];
-
-private["_eventData"];
 
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     diag_log text format["[ACE] Error, synced event key not found."];
     false
 };
 
-_eventData = [_name, _args,_ttl];
-["SEH", _eventData] call FUNC(globalEvent);
+["SEH", [_name, _args,_ttl]] call FUNC(globalEvent);

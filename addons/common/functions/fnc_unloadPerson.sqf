@@ -10,10 +10,7 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-
-#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 private ["_vehicle","_emptyPos"];
 
@@ -30,4 +27,4 @@ if (!isNull _vehicle) then {
     [[_unit], QFUNC(unloadPersonLocal), _unit, false] call EFUNC(common,execRemoteFnc);
 };
 
-true;
+true

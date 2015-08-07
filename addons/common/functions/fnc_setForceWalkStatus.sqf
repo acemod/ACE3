@@ -1,22 +1,21 @@
 /*
-Name: FUNC(setForceWalkStatus)
-
-Author: Pabst Mirror (from captivity by commy2)
-
-Description:
-  Sets the forceWalk status of an unit. This allows the handling of more than one reason to set forceWalk.
-  Unit will force walk until all reasons are removed.
-
-Parameters:
-  0: OBJECT - Unit
-  1: STRING - Reason for forcing walking
-  2: BOOL - Is the reason still valid.  True to force walk, false to remove restriction.
-
-Returns:
-  None
-
-Example:
-  [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
+ * Author: Pabst Mirror (from captivity by commy2)
+ *
+ * Sets the forceWalk status of an unit. This allows the handling of more than one reason to set forceWalk.
+ * Unit will force walk until all reasons are removed.
+ *
+ * Argument:
+ * 0: OBJECT - Unit
+ * 1: STRING - Reason for forcing walking
+ * 2: BOOL - Is the reason still valid.  True to force walk, false to remove restriction.
+ *
+ * Returns:
+ * None
+ *
+ * Example:
+ * [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
+ *
+ * Public: No
 */
 #include "script_component.hpp"
 

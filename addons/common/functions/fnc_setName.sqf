@@ -7,7 +7,9 @@
  * 0: Object (Object)
  *
  * Return value:
- * Nothing.
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

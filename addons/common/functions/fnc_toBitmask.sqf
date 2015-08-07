@@ -4,7 +4,7 @@
  * Convert an array of booleans into a number.
  *
  * Argument:
- * 0: Booleans (Array of Booleans)
+ * N: Booleans (Array of Booleans)
  *
  * Return value:
  * Bitmask (Number)

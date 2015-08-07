@@ -16,7 +16,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
+private "__publishVarName";
 params ["_unit", "_varName", "_maxDelay"];
 
 // Create the publish scheduler PFH the first ACE_time
@@ -31,7 +31,8 @@ if (isNil QGVAR(publishSchedId)) then {
             {
                 EXPLODE_2_PVT(_x,_unit,_varName);
                 _unit setVariable [_varName, (_unit getVariable _varName), true];
-            } forEach GVAR(publishVarNames);
+                true
+            } count GVAR(publishVarNames);
 
             GVAR(publishVarNames) = [];
             GVAR(publishNextTime) = 1e7;
@@ -40,8 +41,9 @@ if (isNil QGVAR(publishSchedId)) then {
 };
 
 // If the variable is not on the list
-if (GVAR(publishVarNames) find [_unit,_varName] == -1) exitWith {
-    GVAR(publishVarNames) pushBack [_unit,_varName];
+__publishVarName = [_unit,_varName];
+if (GVAR(publishVarNames) find __publishVarName == -1) exitWith {
+    GVAR(publishVarNames) pushBack __publishVarName;
     GVAR(publishNextTime) = GVAR(publishNextTime) min (ACE_diagTime + _maxDelay);
 };
 

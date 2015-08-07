@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public : No
+ */
 #include "script_component.hpp"
 
 private["_client", "_clientVersion", "_count", "_error", "_files", "_index", "_missingAddon", "_missingAddonServer", "_missingAddons", "_missingAddonsServer", "_oldVersionClient", "_oldVersionServer", "_oldVersionsClient", "_oldVersionsServer", "_serverFiles", "_serverVersion", "_serverVersions", "_string", "_version", "_versions"];
@@ -9,7 +21,8 @@ _files = [];
     if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
         _files pushBack _x;
     };
-} forEach activatedAddons;
+    true
+} count activatedAddons;
 
 _versions = [];
 {
@@ -33,12 +46,9 @@ if (!isServer) then {
     };
 
     _client = profileName;
+    ACE_Version_ClientVersions params ["_files", "_versions"];
 
-    _files = ACE_Version_ClientVersions select 0;
-    _versions = ACE_Version_ClientVersions select 1;
-
-    _serverFiles = ACE_Version_ServerVersions select 0;
-    _serverVersions = ACE_Version_ServerVersions select 1;
+    ACE_Version_ServerVersions params ["_serverFiles", "_serverVersions"];
 
     // Compare client and server files and versions
     _missingAddons = [];
@@ -126,8 +136,8 @@ if (!isServer) then {
 
         _error = format ["[ACE] %1: ERROR outdated addon(s): ", _client];
         {
-            _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
-
+            _x params ["_mod", "_clientVersion", "_serverVersion"];
+            _error = _error + format ["%1 (client: %2, server: %3), ", _mod, _clientVersion, _serverVersion];
             if (_forEachIndex > 9) exitWith {};//
         } forEach _oldVersionsClient;
 
@@ -143,8 +153,8 @@ if (!isServer) then {
 
         _error = format ["[ACE] %1: ERROR outdated server addon(s): ", _client];
         {
-            _error = _error + format ["%1 (client: %2, server: %3), ", _x select 0, _x select 1, _x select 2];
-
+            _x params ["_mod", "_clientVersion", "_serverVersion"];
+            _error = _error + format ["%1 (client: %2, server: %3), ", _mod, _clientVersion, _serverVersion];
             if (_forEachIndex > 9) exitWith {};//
         } forEach _oldVersionsServer;
 

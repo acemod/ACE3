@@ -1,13 +1,16 @@
-/**
- * fn_useItem.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * ?
+ *
+ * Argument:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_unit", "_item"];
@@ -31,6 +34,6 @@ if (!_vehicleUsage) then {
         };
     };
 };
-// TODO implement shared item functionality for with vehicles.
+// @TODO implement shared item functionality for with vehicles.
 
-_return;
+_return

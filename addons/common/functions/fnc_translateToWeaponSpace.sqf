@@ -1,3 +1,16 @@
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Returns:
+ * ?
+ *
+ * Public: ?
+*/
 #include "script_component.hpp"
 
 private["_origin", "_out"];
@@ -9,12 +22,16 @@ _matrix params ["_xVec", "_yVec", "_zVec"];
 
 _offset = _offset vectorDiff _origin;
 
-_offset params ["_x", "_y", "_z"];
+_offset params ["_Offx", "_Offy", "_Offz"];
+
+_xVec params ["_xVecx", "_xVecy", "_xVecz"];
+_yVec params ["_yVecx", "_yVecy", "_yVecz"];
+_zVec params ["_zVecx", "_zVecy", "_zVecz"];
 
 _out = [
-            ((_xVec select 0)*_x) + ((_xVec select 1)*_y) + ((_xVec select 2)*_z),
-            ((_yVec select 0)*_x) + ((_yVec select 1)*_y) + ((_yVec select 2)*_z),
-            ((_zVec select 0)*_x) + ((_zVec select 1)*_y) + ((_zVec select 2)*_z)
+            (_xVecx * _Offx) + (_xVecy * _Offy) + (_xVecz * _Offz),
+            (_yVecx * _Offx) + (_yVecy * _Offy) + (_yVecz * _Offz),
+            (_zVecx * _Offx) + (_zVecy * _Offy) + (_zVecz * _Offz)
         ];
 
 _out;

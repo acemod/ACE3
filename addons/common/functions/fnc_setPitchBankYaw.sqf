@@ -1,8 +1,7 @@
 /*
- * Taken From:
- * https://community.bistudio.com/wiki/BIS_fnc_setPitchBank
- * Edited By:
- * KoffeinFlummi
+ * Author: Bohemia Interactive edit by KoffeinFlummi
+ *
+ * Sets the value of an ACE_Parameter and makes it public.
  *
  * Arguments:
  * 0: Unit/Vehicle
@@ -12,6 +11,8 @@
  *
  * Return Value:
  * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

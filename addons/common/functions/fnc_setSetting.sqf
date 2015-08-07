@@ -5,10 +5,10 @@
  * If executed on server it can have global effect if the last parameter is set to true.
  *
  * Arguments:
- * 0: Setting name (String)
- * 1: Value (Any)
- * 2: Force it? (Bool) (Optional)
- * 3: Broadcast the change to all clients (Bool) (Optional)
+ * 0: Setting name (STRING)
+ * 1: Value (ANY)
+ * 2: Force it? (BOOLEAN) (Optional)
+ * 3: Broadcast the change to all clients (BOOLEAN) (Optional)
  *
  * Return Value:
  * None
@@ -23,17 +23,18 @@ params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 
 _settingData = [_name] call FUNC(getSettingData);
 
+_settingData params ["_check", "_type", "", "", "", "", "_forced"];
 // Exit if the setting does not exist
-if (count _settingData == 0) exitWith {};
+if (!isNil "_check") exitWith {};
 
 // Exit if the setting is already forced
-if (_settingData select 6) exitWith {};
+if (_forced) exitWith {};
 
 // If the type is not equal, try to cast it
 _failed = false;
-if ((typeName _value) != (_settingData select 1)) then {
+if ((typeName _value) != _type) then {
     _failed = true;
-    if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") then {
+    if (_type == "BOOL" and (typeName _value) == "SCALAR") then {
         // If value is not 0 or 1 consider it invalid and don't set anything
         if (_value isEqualTo 0) then {
             _value = false;
@@ -44,7 +45,7 @@ if ((typeName _value) != (_settingData select 1)) then {
             _failed = false;
         };
     };
-    if ((_settingData select 1) == "COLOR" and (typeName _value) == "ARRAY") then {
+    if (_type == "COLOR" and (typeName _value) == "ARRAY") then {
         _failed = false;
     };
 };

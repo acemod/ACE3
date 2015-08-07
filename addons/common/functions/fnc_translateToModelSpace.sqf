@@ -1,3 +1,16 @@
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Returns:
+ * ?
+ *
+ * Public: ?
+*/
 #include "script_component.hpp"
 
 private["_origin", "_out"];

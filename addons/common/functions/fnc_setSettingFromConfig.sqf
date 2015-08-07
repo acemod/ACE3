@@ -97,15 +97,15 @@ if (isNil _name) then {
 
     // Check if it's already forced and quit
     _settingData = [_name] call FUNC(getSettingData);
-    if (_settingData select 6) exitWith {};
+
+    _settingData params ["", "_type", "", "", "", "", "_forced"];
+    
+    if (_forced) exitWith {};
 
     // The setting is not forced, so update the value
 
-    // Get the type from the existing variable
-    _typeName = _settingData select 1;
-
     // Read entry and cast it to the correct type
-    _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
+    _value = [_optionEntry, _type] call _fnc_getValueWithType;
 
     // Update the variable
     missionNamespace setVariable [_name, _value];

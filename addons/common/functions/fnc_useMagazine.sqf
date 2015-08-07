@@ -1,13 +1,17 @@
-/**
- * fn_useMagazine.sqf
- * @Descr: Use magazine
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECt, magazine STRING]
- * @Return: BOOL True if magazine has been used.
- * @PublicAPI: true
+ * Use magazine
+ *
+ * Argument:
+ * 0: unit (OBJECT)
+ * 1: magazine (STRING)
+ *
+ * Return value:
+ * if magazine has been used. (BOOLEAN)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_return"];
@@ -23,5 +27,5 @@ if (!_vehicleUsage) then {
     [format["fnc_useMagazine: %1 | %2",_this,_return]] call FUNC(debug);
 _return
 } else {
-    // TODO implement shared magazine functionality
+    // @TODO implement shared magazine functionality
 };

@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
-
 params ["_eventName", "_eventTargets", "_eventArgs"];
 
 #ifdef DEBUG_EVENTS
@@ -25,7 +23,7 @@ params ["_eventName", "_eventTargets", "_eventArgs"];
     diag_log text format[ARR_2("    args=%1",_eventArgs)];
 #endif
 
-ACEc = [_eventName, _eventTargets, _eventArgs];
+ACEc = _this;
 if(!isServer) then {
     publicVariableServer "ACEc";
 } else {

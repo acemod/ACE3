@@ -1,4 +1,16 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 private["_lastTickTime", "_lastGameTime", "_delta"];

@@ -9,6 +9,8 @@ A number between 0 and 255 <NUMBER>
 
 Return Value:
 A hexadecimal number, String
+*
+* Public: No
 */
 #include "script_component.hpp"
 
