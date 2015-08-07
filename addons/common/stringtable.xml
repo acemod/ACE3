@@ -600,21 +600,27 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
+            <Polish>ACE3 Wyposażenie</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
+            <Polish>ACE3 Ogólne</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
+            <Polish>ACE3 Broń</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
+            <Polish>ACE3 Ruch</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
+            <Polish>ACE3 Regulacja optyki</Polish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
+            <Polish>ACE3 Pojazdy</Polish>
         </Key>
     </Package>
 </Project>
