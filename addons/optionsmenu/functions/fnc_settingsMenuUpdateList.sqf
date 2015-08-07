@@ -30,7 +30,7 @@ _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_OPTIONS): {
         {
-            if (_selectedCategory == "All Categories" || _selectedCategory == (_X select 8)) then {
+            if (_selectedCategory == "" || _selectedCategory == (_X select 8)) then {
                 _ctrlList lbadd (_x select 3);
                 _settingsValue = _x select 9;
 
@@ -46,7 +46,7 @@ switch (GVAR(optionMenu_openTab)) do {
     };
     case (MENU_TAB_COLORS): {
         {
-            if (_selectedCategory == "All Categories" || _selectedCategory == (_X select 8)) then {
+            if (_selectedCategory == "" || _selectedCategory == (_X select 8)) then {
                 _color = +(_x select 9);
                 {
                     _color set [_forEachIndex, ((round (_x * 100))/100)];

@@ -34,7 +34,7 @@ switch (_type) do {
 
           if !((_x select 9) isEqualTo _newValue) then {
             _changed = true;
-            _x set [8, _newValue];
+            _x set [9, _newValue];
           } ;
 
         };
@@ -44,7 +44,7 @@ switch (_type) do {
       {
         if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
-          _x set [8, _newValue];
+          _x set [9, _newValue];
         };
       } foreach GVAR(clientSideColors);
   };
@@ -58,7 +58,7 @@ switch (_type) do {
 
           if !((_x select 9) isEqualTo _newValue) then {
             _changed = true;
-            _x set [8, _newValue];
+            _x set [9, _newValue];
           } ;
 
         };
@@ -68,7 +68,7 @@ switch (_type) do {
       {
         if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
-          _x set [8, _newValue];
+          _x set [9, _newValue];
         };
       } foreach GVAR(serverSideColors);
   };
@@ -76,7 +76,7 @@ switch (_type) do {
       {
         if (((_x select 0) == _name) && {!((_x select 9) isEqualTo _newValue)}) then {
           _changed = true;
-          _x set [8, _newValue];
+          _x set [9, _newValue];
         };
       } foreach GVAR(serverSideValues);
   };

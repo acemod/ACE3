@@ -59,3 +59,7 @@ if (GVAR(serverConfigGeneration) == 0) then {
     };
     (_menu displayCtrl 14) lbAdd _x;
 } forEach GVAR(categories);
+
+(_menu displayCtrl 14) lbSetCurSel 0; //All Catagoies
+
+

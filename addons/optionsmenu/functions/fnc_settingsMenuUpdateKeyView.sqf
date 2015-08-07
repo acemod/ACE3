@@ -28,27 +28,24 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
     default {[]};
 };
 
-if (count _collection > 0) then {
+_selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
+_filteredCollection = [];
+{
+    if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
+        _filteredCollection pushBack _x;
+    };
+} forEach _collection;
+
+if (count _filteredCollection > 0) then {
     _settingIndex =  (lbCurSel _ctrlList);
-    if (_settingIndex > (count _collection)) then {
-        _settingIndex = count _collection  - 1;
+    if (_settingIndex > (count _filteredCollection)) then {
+        _settingIndex = count _filteredCollection  - 1;
     };
 
     if (_settingIndex < 0) then {
         _settingIndex = 0;
     };
-    diag_log format["_collection: %1", _collection];
-    _setting = _collection select _settingIndex;
-
-    _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
-    if !(_selectedCategory == "All Categories" || _selectedCategory == (_setting select 8)) exitwith {
-        systemChat format["INCORRECT CATEGORY: %1 != %2", _selectedCategory, _setting];
-        diag_log format["INCORRECT CATEGORY: %1 != %2", _selectedCategory, _setting];
-        lbClear 400;
-        (_settingsMenu displayCtrl 250) ctrlSetText "No settings available";
-        (_settingsMenu displayCtrl 251) ctrlSetText "No settings available";
-        (_settingsMenu displayCtrl 300) ctrlSetText "No settings available";
-    };
+    _setting = _filteredCollection select _settingIndex;
 
     _entryName = _setting select 0;
     _localizedName = _setting select 3;
