@@ -6,22 +6,23 @@
  * 0: Target <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [some_player] call ace_medical_menu_openMenu
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_interactionTarget"];
-_interactionTarget = _this select 0;
+params ["_interactionTarget"];
 
 if (dialog || isNull _interactionTarget) exitwith {
 	disableSerialization;
 
 	private "_display";
 	_display = uiNamespace getVariable QGVAR(medicalMenu);
-	if (!isnil "_display") then {
+	if (!isNil "_display") then {
 		closeDialog 314412;
 	};
 };
