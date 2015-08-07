@@ -176,7 +176,11 @@ switch (toLower _mode) do {
                 _back ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
                 _timer ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
                 _frame ctrlSetPosition [_x,_y,TOOL_W,TOOL_H];
+
+                _title ctrlSetBackgroundColor [0,0,0,0];
+                _back ctrlSetBackgroundColor [COL_BACK];
                 _timer ctrlSetFontHeight TOOL_H;
+                _frame ctrlSetTextColor [COL_FORE];
 
                 _title ctrlCommit 0;
                 _back ctrlCommit 0;
