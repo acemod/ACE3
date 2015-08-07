@@ -36,7 +36,6 @@ missionNamespace setVariable [_varString, _currentSlide];
     _x setObjectTextureGlobal [0, _images select _currentSlide];
 } count _objects;
 
+// Log current slide and execute Next slide
 TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
-
-// Next slide
 [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
