@@ -97,5 +97,9 @@
 // Time functions for accuracy per frame
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
 
+#define ACE_LOG(module,level,message) diag_log text format [QUOTE([ACE] (%1) %2: %3), module, level, message];
+#define ACE_LOGERROR(message) ACE_LOG(QUOTE(COMPONENT),"ERROR",message)
+#define ACE_LOGWARNING(message) ACE_LOG(QUOTE(COMPONENT),"WARNING",message)
+#define ACE_LOGINFO(message) ACE_LOG(QUOTE(COMPONENT),"INFO",message)
 
 #include "script_debug.hpp"
