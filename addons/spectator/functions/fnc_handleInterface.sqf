@@ -238,6 +238,9 @@ switch (toLower _mode) do {
         if ((alive player) && {_dik in (actionKeys "curatorInterface")} && {!isNull (getAssignedCuratorLogic player)}) exitWith {
             ["zeus", [_display]] call FUNC(handleInterface);
         };
+        if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
+            false
+        };
 
         // Handle held keys (prevent repeat calling)
         if (_dik in GVAR(heldKeys)) exitwith {};
