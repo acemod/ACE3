@@ -37,4 +37,8 @@ _position = getPosASL vehicle _owner;
 _direction = direction vehicle _owner;
 _color = [_groupID] call FUNC(getGroupColor);
 
+if (_callsign == "" && {_owner isKindOf "CAManBase"}) then {
+    _callsign = groupId group _owner;
+};
+
 [_deviceID, _callsign, _typeIconPath, _sizeIconPath, _position, _encryptionKeys, [_groupID, _color], _deviceClass, time, _refreshRate, _owner, _viewModes, _direction];

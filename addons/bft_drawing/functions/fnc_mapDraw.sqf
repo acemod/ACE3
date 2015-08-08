@@ -32,7 +32,7 @@ _mouseover = [-1,[]];
         _mouseover = [0, _x];
     };
 
-    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size,0, "", 0, 0.05, "TahomaB", "right"];
+    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size,0, _callsign, 0, 0.05, "TahomaB", "right"];
     _ctrl drawIcon [_sizeIcon, [COLOR_BLACK], _position, _size, _size, 0, "", 1,0, "TahomaB", "right"];
 
     // --- ToDo: make setting for displaying title
