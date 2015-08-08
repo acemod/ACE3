@@ -91,7 +91,7 @@ class CfgVehicles {
 
                 class ACE_JoinGroup {
                     displayName = CSTRING(JoinGroup);
-                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinGroup));
+                    condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
                     showDisabled = 0;
                     priority = 2.6;
