@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
@@ -116,6 +116,7 @@
             <German>Gehör</German>
             <Czech>Sluch</Czech>
             <Portuguese>Audição</Portuguese>
+            <French>Audition</French>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
             <English>Enable combat deafness?</English>
@@ -124,6 +125,7 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
+            <French>Activer la surdité au combat?</French>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Enable combat deafness?</English>
@@ -132,13 +134,14 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
+            <French>Activer la surdité au combat?</French>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
-            <English></English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
+            <French>Ce module active / désactivé la surdité au combat. Si active, des joueurs peuvent devenir sourds sans protection d'oreille, si une arme est utilisée ou une explosion a lieu à proximité</French>
         </Key>
     </Package>
 </Project>
