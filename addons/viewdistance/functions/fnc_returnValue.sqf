@@ -19,7 +19,7 @@
 
 private ["_return"];
 
-params ["_index"]
+params ["_index"];
 
 _return = switch (_index) do {
     case 0:   {-1};
