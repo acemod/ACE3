@@ -42,9 +42,14 @@ if (vehicle _caller == _caller) then {
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
-_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), ""]);
-if (_weaponSelect != "") then {
-    _caller selectWeapon _weaponSelect;
+_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), []]);
+if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "") && {_previousWeapon in (weapons _caller)}}) then {
+    for "_index" from 0 to 99 do {
+        _caller action ["SwitchWeapon", _caller, _caller, _index];
+        //Just check weapon, muzzle and mode (ignore ammo in case they were reloading)
+        if (((weaponState _caller) select [0,3]) isEqualTo (_weaponSelect select [0,3])) exitWith {TRACE_1("Restoring", (weaponState _caller));};
+        if ((weaponState _caller) isEqualTo ["","","","",0]) exitWith {ERROR("weaponState not found");};
+    };
 } else {
     _caller action ["SwitchWeapon", _caller, _caller, 99];
 };
@@ -62,8 +67,19 @@ if (isNil _callback) then {
     _callback = missionNamespace getvariable _callback;
 };
 
-_args call _callback;
+//Get current damage before treatment (for litter)
+_previousDamage = switch (toLower _selectionName) do {
+    case ("head"): {_target getHitPointDamage "HitHead"};
+    case ("body"): {_target getHitPointDamage "HitBody"};
+    case ("hand_l"): {_target getHitPointDamage "HitLeftArm"};
+    case ("hand_r"): {_target getHitPointDamage "HitRightArm"};
+    case ("leg_l"): {_target getHitPointDamage "HitLeftLeg"};
+    case ("leg_r"): {_target getHitPointDamage "HitRightLeg"};
+    default {damage _target};
+};
 
+_args call _callback;
+_args pushBack _previousDamage;
 _args call FUNC(createLitter);
 
 //If we're not already tracking vitals, start:

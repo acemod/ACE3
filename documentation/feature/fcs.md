@@ -2,8 +2,8 @@
 layout: wiki
 title: FCS (Fire Control System)
 description: 
-group: feature
 category: equipment
+group: feature
 parent: wiki
 ---
 
@@ -30,8 +30,6 @@ Anti air cannons can now use airburst ammunition. It will explode on the FCS' ze
 - Place the crosshair on the object to range.
 - Tap <kbd>Tab&nbsp;↹</kbd>
 - The optic is now adjusted.
-
-*NOTE: GBU guidance is **DISABLED** as of ACE3 3.0.1*
 
 ## 3. Dependencies
 

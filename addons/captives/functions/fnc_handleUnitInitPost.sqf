@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 // prevent players from throwing grenades (added to all units)
 [_unit, "Throw", {((_this select 1) getVariable [QGVAR(isHandcuffed), false]) || {(_this select 1) getVariable [QGVAR(isSurrendering), false]}}, {}] call EFUNC(common,addActionEventhandler);

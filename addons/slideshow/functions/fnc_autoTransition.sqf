@@ -4,25 +4,23 @@
  *
  * Arguments:
  * 0: Objects <ARRAY>
- * 1: Controller Objects <ARRAY>
- * 2: Image Paths <ARRAY>
- * 3: Action Names <ARRAY>
- * 4: Duration <NUMBER> (0 disables automatic transitions)
+ * 1: Image Paths <ARRAY>
+ * 2: State Variable Name <ARRAY>
+ * 3: Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
- * Parsed List <ARRAY>
+ * None
  *
  * Example:
- * [objects, controllers, images, actionNames, duration] call ace_slideshow_fnc_autoTransition
+ * [objects, images, "ace_slideshow_slideshow1", duration] call ace_slideshow_fnc_autoTransition
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_4(_objects,_images,_varString,_duration);
+private "_currentSlide";
 
-private ["_currentSlide"];
+params ["_objects", "_images", "_varString", "_duration"];
 
 // Get current slide number of this slideshow
 _currentSlide = missionNamespace getVariable [_varString, 0];
@@ -36,10 +34,8 @@ missionNamespace setVariable [_varString, _currentSlide];
 // Set slide
 {
     _x setObjectTextureGlobal [0, _images select _currentSlide];
-} forEach _objects;
+} count _objects;
 
+// Log current slide and execute Next slide
 TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
-
-
-// Next slide
 [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);

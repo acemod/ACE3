@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_target,_vehicle);
-
 private ["_cargoIndex"];
+
+params ["_target","_vehicle"];
 
 _target moveInCargo _vehicle;
 _target assignAsCargo _vehicle;

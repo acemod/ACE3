@@ -18,11 +18,12 @@
 
 [{
     // BEGIN_COUNTER(pfeh);
-    private["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_lastTime", "_trueSpeed", "_trueVelocity"];
+    private["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_trueSpeed", "_trueVelocity"];
 
-    _lastTime = (_this select 0) select 0;
+    params ["_args"];
+    _args params ["_lastTime"];
     _deltaT = ACE_time - _lastTime;
-    (_this select 0) set [0, ACE_time];
+    _args set [0, ACE_time];
     _deleted = 0;
     _isWind = (vectorMagnitude ACE_wind > 0);
 
