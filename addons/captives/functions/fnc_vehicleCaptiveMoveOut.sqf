@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
-
+params ["_unit"];
 _unit setVariable [QGVAR(CargoIndex), -1, true];
 
 moveOut _unit;

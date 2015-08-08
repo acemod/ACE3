@@ -1,19 +1,23 @@
 /*
  * Author: esteldunedain, commy2
- *
  * Cycle through frags.
  *
- * Argument:
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
  * None
  *
- * Return value:
- * None
+ * Example:
+ * [player] call ace_weaponselect_fnc_selectGrenadeFrag
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_text", "_nextMuzzle"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["Frag"] call FUNC(findNextGrenadeMuzzle);
 

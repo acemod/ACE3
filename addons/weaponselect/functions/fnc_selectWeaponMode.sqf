@@ -1,17 +1,22 @@
 /*
  * Author: commy2
- *
  * The player will select the specified weapon or will change to the next firing mode if the weapon was already selected.
  *
- * Argument:
- * 0: A weapon (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, currentWeapon player] call ace_weaponselect_fnc_selectWeaponMode
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {};
 

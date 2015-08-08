@@ -3,6 +3,7 @@ layout: wiki
 title: No Rearm
 description: Remove rearm from
 group: feature
+category: interaction
 parent: wiki
 ---
 

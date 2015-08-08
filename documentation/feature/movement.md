@@ -3,6 +3,7 @@ layout: wiki
 title: Movement
 description: Movement improvements
 group: feature
+category: realism
 parent: wiki
 ---
 

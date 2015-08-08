@@ -3,6 +3,7 @@ layout: wiki
 title: Dragging
 description: Adds the option to drag and carry units and objects
 group: feature
+category: interaction
 parent: wiki
 ---
 

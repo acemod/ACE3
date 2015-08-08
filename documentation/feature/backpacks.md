@@ -3,6 +3,7 @@ layout: wiki
 title: Backpacks
 description: Notifies a player when his backpack is opened
 group: feature
+category: equipment
 parent: wiki
 ---
 

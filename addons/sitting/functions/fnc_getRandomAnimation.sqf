@@ -9,40 +9,40 @@
  * Random Animation <STRING>
  *
  * Example:
- * _animation = call ace_sitting_fnc_getRandomAnimation;
+ * _animation = call ace_sitting_fnc_getRandomAnimation
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_animations"];
+private "_animations";
 
 // Animations Pool
 _animations = [
-    "HubSittingChairUA_idle1",
-    "HubSittingChairUA_idle2",
-    "HubSittingChairUA_idle3",
-    "HubSittingChairUA_move1",
-    "HubSittingChairUB_idle1",
-    "HubSittingChairUB_idle2",
-    "HubSittingChairUB_idle3",
-    "HubSittingChairUB_move1",
-    "HubSittingChairUC_idle1",
-    "HubSittingChairUC_idle2",
-    "HubSittingChairUC_idle3",
-    "HubSittingChairUC_move1",
-    "HubSittingChairA_idle1",
-    "HubSittingChairA_idle2",
-    "HubSittingChairA_idle3",
-    "HubSittingChairA_move1",
-    "HubSittingChairB_idle1",
-    "HubSittingChairB_idle2",
-    "HubSittingChairB_idle3",
-    "HubSittingChairB_move1",
-    "HubSittingChairC_idle1",
-    "HubSittingChairC_idle2",
-    "HubSittingChairC_idle3",
-    "HubSittingChairC_move1"
+    QGVAR(HubSittingChairA_idle1),
+    QGVAR(HubSittingChairA_idle2),
+    QGVAR(HubSittingChairA_idle3),
+    QGVAR(HubSittingChairA_move1),
+    QGVAR(HubSittingChairB_idle1),
+    QGVAR(HubSittingChairB_idle2),
+    QGVAR(HubSittingChairB_idle3),
+    QGVAR(HubSittingChairB_move1),
+    QGVAR(HubSittingChairC_idle1),
+    QGVAR(HubSittingChairC_idle2),
+    QGVAR(HubSittingChairC_idle3),
+    QGVAR(HubSittingChairC_move1),
+    QGVAR(HubSittingChairUA_idle1),
+    QGVAR(HubSittingChairUA_idle2),
+    QGVAR(HubSittingChairUA_idle3),
+    QGVAR(HubSittingChairUA_move1),
+    QGVAR(HubSittingChairUB_idle1),
+    QGVAR(HubSittingChairUB_idle2),
+    QGVAR(HubSittingChairUB_idle3),
+    QGVAR(HubSittingChairUB_move1),
+    QGVAR(HubSittingChairUC_idle1),
+    QGVAR(HubSittingChairUC_idle2),
+    QGVAR(HubSittingChairUC_idle3),
+    QGVAR(HubSittingChairUC_move1)
 ];
 
 // Select random animation

@@ -101,12 +101,12 @@ _args = [_this,
 //    _guidingUnit = ACE_player;
 //
 //    if(local _guidingUnit) then {
-//        [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+//        [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 //    } else {
 //        [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
 //    };
 //} else {
-    [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+    [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 //};
 
 

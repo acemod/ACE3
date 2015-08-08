@@ -4,37 +4,47 @@
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
             <Russian>Отображать пальце-индикатор для показывающего игрока</Russian>
+            <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
             <Russian>Отображать индикатор для показывающего игрока. Эта настройка не влияет на то, будутт ли другие игроки видеть индикатор</Russian>
+            <Polish> Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
             <Russian>Пальце-индикатор</Russian>
+            <Polish>Indykator palca</Polish>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
             <Russian>Цвет индикатора пальце-указания</Russian>
+            <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
             <Russian>Действие "показать пальцем на"</Russian>
+            <Polish>Akcja "wskaż palcem"</Polish>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
+            <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
+            <Polish>Ustawienia wskazywania palcem</Polish>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
+            <Polish>Aktywuj wskazywanie</Polish>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
+            <Polish>Maks. zasięg wskazywania</Polish>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
+            <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
         </Key>
     </Package>
 </Project>

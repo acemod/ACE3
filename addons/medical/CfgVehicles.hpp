@@ -717,6 +717,9 @@ class CfgVehicles {
         destrType = "DestructNo";
         model = QUOTE(PATHTOF(data\littergeneric.p3d));
     };
+    class ACE_MedicalLitter_clean: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_clean.p3d));
+    };
     class ACE_MedicalLitter_bandage1: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_bandages1.p3d));
     };

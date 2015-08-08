@@ -27,7 +27,8 @@
 
 private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
 
-PARAMS_6(_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
+params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAtachText", "_startingPosition"];
+TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
 
 _startingOffset = _attachToVehicle worldToModel _startingPosition;
 

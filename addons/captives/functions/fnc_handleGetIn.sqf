@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_vehicle,_dontcare,_unit);
+params ["_vehicle", "_dontcare","_unit"];
 
 if (local _unit) then {
     if (_unit getVariable [QGVAR(isEscorting), false]) then {
