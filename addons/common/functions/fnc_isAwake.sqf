@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit (OBJECT)
  *
- * Return value:
+ * Return Value:
  * if unit is awake (Bool)
  *
  * Public: Yes

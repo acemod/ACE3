@@ -6,7 +6,7 @@
  * Arguments:
  * N: Booleans <ARRAY of Booleans>
  *
- * Return value:
+ * Return Value:
  * Bitmask (Number)
  */
 #include "script_component.hpp"

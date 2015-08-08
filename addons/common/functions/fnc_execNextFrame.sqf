@@ -7,7 +7,7 @@
  * 0: Code to execute (CODE)
  * 1: Parameters to run the code with (ARRAY)
  *
- * Return value:
+ * Return Value:
  * PFH handler ID (NUMBER)
  * None
  *

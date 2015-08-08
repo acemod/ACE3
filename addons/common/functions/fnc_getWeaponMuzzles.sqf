@@ -6,7 +6,7 @@
  * Arguments:
  * 0: A weapon in cfgWeapons (String)
  *
- * Return value:
+ * Return Value:
  * All weapon muzzles (Array)
  *
  * Public: No

@@ -7,7 +7,7 @@
  * 0: Event name (string)
  * 1: Event args (any)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

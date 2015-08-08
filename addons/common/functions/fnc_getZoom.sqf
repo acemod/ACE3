@@ -6,7 +6,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Zoom (Number)
  */
 #include "script_component.hpp"

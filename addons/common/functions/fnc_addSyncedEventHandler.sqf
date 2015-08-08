@@ -7,7 +7,7 @@
  * 1: Handler <CODE>
  * 2: TTL (optional: 0) <NUMBER, CODE>
  *
- * Return value:
+ * Return Value:
  * Boolean of success <BOOL>
  *
  * Public: No

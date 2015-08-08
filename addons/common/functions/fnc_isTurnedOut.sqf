@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit, not the vehicle (OBJECT)
  *
- * Return value:
+ * Return Value:
  * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (BOOLEAN)
  *
  * Public: No

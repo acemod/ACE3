@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Optional: Map name, if undefined the current map is used (String)
  *
- * Return value:
+ * Return Value:
  * 0: Grid zone designator (String)
  * 1: 100km square (String)
  * 2: GZD + 100km sq. as a single string (String)

@@ -9,7 +9,7 @@
  * 2: Key state for ctrl left and ctrl right key (Bool)
  * 3: Key state for alt and alt gr key (Bool)
  *
- * Return value:
+ * Return Value:
  * Key code (Number)
  *
  * Public: No

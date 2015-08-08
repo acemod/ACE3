@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit (Object)
  *
- * Return value:
+ * Return Value:
  * Array with all the gear, format:
  *     0: headgear (String)
  *     1: goggles (String)

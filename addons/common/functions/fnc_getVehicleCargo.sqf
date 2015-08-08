@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle type (String)
  *
- * Return value:
+ * Return Value:
  * Vehicle cargo positions. (Array)
  *
  * Public: No

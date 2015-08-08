@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Maximal distance to search. (Number)
  *
- * Return value:
+ * Return Value:
  * Nearest object directly in line of sight, if none objNull (Object)
  *
  * Public: No

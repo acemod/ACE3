@@ -6,7 +6,7 @@
  * Arguments:
  * 0: vehicle (OBJECT)
  *
- * Return value:
+ * Return Value:
  * Commander config (CONFIG)
  *
  * Public: No

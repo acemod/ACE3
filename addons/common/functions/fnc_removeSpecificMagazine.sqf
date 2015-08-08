@@ -7,7 +7,7 @@
  * 1: Magazine <STRING>
  * 2: Ammo count <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

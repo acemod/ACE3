@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Key code (Number)
  *
- * Return value:
+ * Return Value:
  * What input will result in the given key code? (String)
  *
  * Public: No

@@ -9,7 +9,7 @@
  * 2: How long before hiding the message in seconds (Number, optional default: 2 sec)
  * 3: Priority, higher priority messages will override lesser important ones (Number, optional default: 0)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

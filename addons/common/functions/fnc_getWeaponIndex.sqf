@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * Weapon index <NUMBER>
  *
  * Public: No

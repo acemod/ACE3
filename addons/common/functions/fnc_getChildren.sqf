@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit (OBJECT)
  *
- * Return value:
+ * Return Value:
  * Childs form Parent Entry(CONFIG)
  *
  * Public: No

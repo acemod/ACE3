@@ -6,7 +6,7 @@
  * Arguments:
  * Vector to align the coordinate system with (Array)
  *
- * Return value:
+ * Return Value:
  * 0: Vector Normalized (Array)
  * 1: Normalized Cross Product Vector (Array)
  * 2: Vector Cross Product (Array)

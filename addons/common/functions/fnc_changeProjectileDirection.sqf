@@ -9,7 +9,7 @@
  * 2: Adjust inclination this much. (Number)
  * 3: Adjust projectile speed this much. In m/s. (Number, optional default: 0 m/s)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

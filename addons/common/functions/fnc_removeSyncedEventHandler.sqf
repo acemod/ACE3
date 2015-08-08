@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Name (String)
  *
- * Return value:
+ * Return Value:
  * Boolean of success
  *
  * Public: No

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Class name of the weapon (String)
  *
- * Return value:
+ * Return Value:
  * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 (Number)
  *
  * Public: No

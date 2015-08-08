@@ -11,7 +11,7 @@
 * 3: Icon color <ARRAY>
 * 4: timeAlive. -1 = forever <NUMBER> <OPTIONAL>
 *
-* Return value:
+* Return Value:
 * None
 *
 * Example:

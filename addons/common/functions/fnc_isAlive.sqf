@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Any object (OBJECT)
  *
- * Return value:
+ * Return Value:
  * The object exists and is alive (BOOLEAN).
  *
  * Public: Yes

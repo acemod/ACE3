@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Code (Code or String)
  *
- * Return value:
+ * Return Value:
  * Code (String),
  *
  * Public: No

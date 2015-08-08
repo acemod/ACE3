@@ -8,7 +8,7 @@
  * 1: Maximal distance to measure. (Number)
  * 2: Minimal distance to measure. (optional, Number)
  *
- * Return value:
+ * Return Value:
  * Measured distance in meters. Can return maximal or minimal distance (Number)
  *
  * Public: No

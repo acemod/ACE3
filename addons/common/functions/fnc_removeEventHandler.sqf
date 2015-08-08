@@ -7,7 +7,7 @@
  * 0: Event name (string)
  * 1: Event code (number)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

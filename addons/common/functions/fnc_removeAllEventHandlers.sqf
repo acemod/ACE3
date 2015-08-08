@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Event name (string)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

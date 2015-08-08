@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that has a backpack (Object)
  *
- * Return value:
+ * Return Value:
  * Ground wepaon holder with backpack (Object)
  *
  * Public: Yes

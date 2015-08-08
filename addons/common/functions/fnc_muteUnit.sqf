@@ -7,7 +7,7 @@
  * 0: Unit (Object)
  * 1: Reason to mute the unit (String)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

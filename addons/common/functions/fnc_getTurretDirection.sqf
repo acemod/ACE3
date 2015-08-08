@@ -7,7 +7,7 @@
  * 0: Vehicle (Object)
  * 1: Turret Position
  *
- * Return value:
+ * Return Value:
  * [position, direction]
  *
  * Public: No

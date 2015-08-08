@@ -6,7 +6,7 @@
  * Arguments:
  * 0: setVolume <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

@@ -7,7 +7,7 @@
  * 1: End point ASL <ARRAY>
  * 2: Color <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

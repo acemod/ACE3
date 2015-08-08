@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit (OBJECT)
  *
- * Return value:
+ * Return Value:
  * Is the unit in a building? (BOOLEAN)
  *
  * Public: Yes

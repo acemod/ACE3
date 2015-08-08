@@ -9,7 +9,7 @@
  * 2: Namespace to save that variable in (Object or Namespace)
  * 3: Name. Will overwrite previously defined functions with that name (String)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

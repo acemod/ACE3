@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle type (String)
  *
- * Return value:
+ * Return Value:
  * Vehicle codriver positions. (Array)
  *
  * Public: No

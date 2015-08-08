@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Code to execute <CODE, STRING>
  *
- * Return value:
+ * Return Value:
  * ID of the event script (used to remove it later). <NUMBER>
  *
  * Public: No

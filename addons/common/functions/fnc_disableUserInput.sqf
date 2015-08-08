@@ -5,7 +5,7 @@
  * Arguments:
  * 0: True to disable key inputs, false to re-enable them <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

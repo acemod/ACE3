@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (Object)
  *
- * Return value:
+ * Return Value:
  * Turret index of the vehicles gunner. Empty array means no gunner position. (Array)
  *
  * Public: No

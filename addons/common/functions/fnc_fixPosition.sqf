@@ -6,7 +6,7 @@
  * Arguments:
  * Object (Object)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

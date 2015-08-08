@@ -6,7 +6,7 @@
  * Arguments:
  * None.
  *
- * Return value:
+ * Return Value:
  * 0: Azimuth (Number)
  * 1: Inclination or 'slope' (Number)
  *

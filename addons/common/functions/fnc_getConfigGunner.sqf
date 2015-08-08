@@ -6,7 +6,7 @@
  * Arguments:
  * 0: vehicle (Object)
  *
- * Return value:
+ * Return Value:
  * Gunner config (Config)
  *
  * Public: No

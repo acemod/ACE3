@@ -6,7 +6,7 @@
  * Arguments:
  * None.
  *
- * Return value:
+ * Return Value:
  * This mission has automatic wind? (Bool)
  *
  * Public: No

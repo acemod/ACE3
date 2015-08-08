@@ -12,7 +12,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Is BI feature camera active (BOOLEAN)
  *
  * Example:

@@ -6,7 +6,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Wind direction. (String)
  *
  * Public: No

@@ -12,7 +12,7 @@
  *     Mode 2 = execute on all clients + server
  *     Mode 3 = execute on dedicated only
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

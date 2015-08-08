@@ -7,7 +7,7 @@
  * 0: Unit (OBJECT)
  * 1: category (STRING) (Optional. Only get the variables from the specified category. Default is "" == all)
  *
- * Return value:
+ * Return Value:
  * N: ARRAY
  *  0: Name (STRING)
  *  1: typeName (STRING)

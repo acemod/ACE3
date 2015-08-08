@@ -7,7 +7,7 @@
  * 0: A unit (Object)
  * 1: A weapon (String)
  *
- * Return value:
+ * Return Value:
  * Weapon info, format: [attachments, muzzles, magazines, ammo] (Array)
  *
  * Public: No

@@ -7,7 +7,7 @@
  * 0: The vehicle (Object)
  * 1: weapon of the vehicle (String)
  *
- * Return value:
+ * Return Value:
  * The turret gunner with this weapon (Object)
  *
  * Public: Yes

@@ -9,7 +9,7 @@
  * Return Value:
  * Booleans <ARRAY>
  *
- * Public : Yes
+ * Public: Yes
  */
 #include "script_component.hpp"
 

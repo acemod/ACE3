@@ -7,7 +7,7 @@
  * 0: Number to 'digitize' (Number)
  * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. (Number, optional)
  *
- * Return value:
+ * Return Value:
  * Digits. The maximum count is six digits. (Array)
  *
  * Public: No

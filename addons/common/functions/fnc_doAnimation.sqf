@@ -11,7 +11,7 @@
  *     1 = PlayMoveNow
  *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

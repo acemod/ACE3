@@ -5,7 +5,7 @@
  * Arguments:
  * ?
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: no

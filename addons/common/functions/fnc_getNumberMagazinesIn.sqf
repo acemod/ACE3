@@ -7,7 +7,7 @@
  * 0: Unit (OBJECT)
  * 1: Magazine (STRING)
  *
- * Return value:
+ * Return Value:
  * Count of Input Magazine (NUMBER)
  *
  * Public: No

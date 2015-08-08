@@ -6,7 +6,7 @@
  * Arguments:
  * 0: A item's classname. (STRING)
  *
- * Return value:
+ * Return Value:
  * What kind of the input is (STRING)
  *
  * Public: No

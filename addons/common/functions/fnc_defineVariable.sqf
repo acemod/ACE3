@@ -11,7 +11,7 @@
  * 4: type (NUMBER)(Optional)
  * 5: persistentFlag (BOOLEAN)(Optional)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

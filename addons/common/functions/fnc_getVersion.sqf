@@ -6,7 +6,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * String containing the version(STRING)
  *
  * Public: No

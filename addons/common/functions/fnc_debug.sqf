@@ -7,7 +7,7 @@
  * 0: Message (ANY)
  * 1: Level (Number) (Optional)
  *
- * Return value:
+ * Return Value:
  * Message is Printed (BOOLEAN)
  *
  * Public: Yes

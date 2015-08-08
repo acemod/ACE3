@@ -7,7 +7,7 @@
  * 0: Unit to be Arrested (OBJECT)
  * 1: set Arrested (BOOL)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

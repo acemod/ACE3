@@ -7,7 +7,7 @@
  * 0: id <STRING>
  * 1: disable <BOOLEAN>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

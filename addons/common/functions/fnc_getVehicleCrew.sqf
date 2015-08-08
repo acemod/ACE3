@@ -7,7 +7,7 @@
  * 0: Vehicle (Object)
  * 1: Slot types. Can contain "driver", "commander", "gunner", "turret", "cargo" and "ffv". Case sensitive (Array)
  *
- * Return value:
+ * Return Value:
  * Crew (Array)
  *
  * Public: No

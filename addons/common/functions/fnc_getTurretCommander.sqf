@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (Object)
  *
- * Return value:
+ * Return Value:
  * Turret index of the vehicles commander. Empty array means no observer position. (Array)
  *
  * Public: No

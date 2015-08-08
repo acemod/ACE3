@@ -13,7 +13,7 @@
  * 5: CODE - (Optional) Code to check each frame
  * 6: ARRAY - (Optional) Exceptions for checking EFUNC(common,canInteractWith)
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Example:

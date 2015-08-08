@@ -6,7 +6,7 @@
  * 0: Event name <STRING>
  * 1: Event code <CODE>
  *
- * Return value:
+ * Return Value:
  * Event handler ID number (for use with fnc_removeEventHandler) <NUMBER>
  *
  * Public: No

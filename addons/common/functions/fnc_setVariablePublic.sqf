@@ -9,7 +9,7 @@
  * 2: Value of the variable <ANY>
  * 3: Windup ACE_time <NUMBER> (default: 1)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

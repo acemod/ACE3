@@ -9,7 +9,7 @@
  * 2: Image color (ARRAY) (OPTIONAL)
  * 3: Target Unit. Will only display if target is the player controlled object (OBJECT) (OPTIONAL)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

@@ -11,7 +11,7 @@
  * 1: Check all PBOs? <BOOL> (Optional - default: false)
  * 2: Whitelist <STRING> (Optinal - default: "[]")
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

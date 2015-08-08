@@ -6,7 +6,7 @@
  * Arguments:
  * 0: ID of the event handler (Number)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

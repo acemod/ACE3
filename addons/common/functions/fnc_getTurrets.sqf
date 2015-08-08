@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle type (String)
  *
- * Return value:
+ * Return Value:
  * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
  *
  * Public: No

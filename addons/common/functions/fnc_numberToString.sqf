@@ -6,7 +6,7 @@
  * Arguments:
  * 0: A number (Number)
  *
- * Return value:
+ * Return Value:
  * The number as string (String)
  *
  * Public: No

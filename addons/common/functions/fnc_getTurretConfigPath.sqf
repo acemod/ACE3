@@ -7,7 +7,7 @@
  * 0: vehicles config (Config)
  * 1: Turret index (Array)
  *
- * Return value:
+ * Return Value:
  * Turret config (Config)
  *
  * Public: No

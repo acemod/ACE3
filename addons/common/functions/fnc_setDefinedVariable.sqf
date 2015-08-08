@@ -8,7 +8,7 @@
  * 1: variableName <STRING>
  * 2: value <ANY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

@@ -8,7 +8,7 @@
  * 1: The reason of the captivity <STRING>
  * 2: Is the reason still valid? True for setting this reason, false for removing it <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

@@ -7,7 +7,7 @@
  * 0: Object (Object)
  * 1: Show effective commander name? (Bool, optinal default: false)
  *
- * Return value:
+ * Return Value:
  * The name.
  *
  * Public: No

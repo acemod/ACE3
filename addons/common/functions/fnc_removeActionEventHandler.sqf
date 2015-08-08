@@ -8,7 +8,7 @@
  * 1: Name of the action, e.g. "DefaultAction" (String)
  * 2: ID of the action (Number)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
