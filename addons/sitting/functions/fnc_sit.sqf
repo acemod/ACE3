@@ -34,7 +34,8 @@ _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
 _sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber (_configFile >> QGVAR(sitRotation))} else {45}; // Apply default if config entry not present
 
 // Get random animation and perform it (before moving player to ensure correct placement)
-[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation);
+[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
+[_player, "", 1] call EFUNC(common,doAnimation); // Correctly applies animation's config values (such as disallow throwing of grenades, intercept keybinds... etc).
 
 // Set direction and position
 _player setDir _sitDirection;
@@ -70,4 +71,4 @@ _seatPosOrig = getPosASL _seat;
     if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
         _player setDir (_sitDirectionVisual - _sitRotation);
     };
-}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call cba_fnc_addPerFrameHandler;
+}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;
