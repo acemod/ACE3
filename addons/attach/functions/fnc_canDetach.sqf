@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_attachToVehicle,_unit);
-
 private ["_attachedObjects", "_inRange"];
+params ["_attachToVehicle", "_unit"];
+TRACE_2("params",_attachToVehicle,_unit);
 
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 

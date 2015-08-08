@@ -3,6 +3,7 @@ layout: wiki
 title: Realistic Names
 description: More realistic weapon names
 group: feature
+category: realism
 parent: wiki
 ---
 

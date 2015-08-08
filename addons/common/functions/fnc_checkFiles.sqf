@@ -56,20 +56,23 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 } forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
 
 ///////////////
-// check server version
+// check server version/addons
 ///////////////
 if (isMultiplayer) then {
     if (isServer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
+        GVAR(ServerAddons) = _addons;
         publicVariable QGVAR(ServerVersion);
+        publicVariable QGVAR(ServerAddons);
     } else {
-        // clients have to wait for the variable
+        // clients have to wait for the variables
         [{
-            if (isNil QGVAR(ServerVersion)) exitWith {};
+            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
 
-            private "_version";
-            _version = _this select 0;
+            private ["_version","_addons"];
+            _version = (_this select 0) select 0;
+            _addons = (_this select 0) select 1;
 
             if (_version != GVAR(ServerVersion)) then {
                 private "_errorMsg";
@@ -82,7 +85,18 @@ if (isMultiplayer) then {
                 };
             };
 
+            _addons = _addons - GVAR(ServerAddons);
+            if !(_addons isEqualTo []) then {
+                _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
+
+                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+
+                if (hasInterface) then {diag_log str "1";
+                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                };
+            };
+
             [_this select 1] call CBA_fnc_removePerFrameHandler;
-        }, 1, _version] call CBA_fnc_addPerFrameHandler;
+        }, 1, [_version,_addons]] call CBA_fnc_addPerFrameHandler;
     };
 };

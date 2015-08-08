@@ -3,6 +3,7 @@ layout: wiki
 title: Markers
 description: improved markers
 group: feature
+category: interaction
 parent: wiki
 ---
 

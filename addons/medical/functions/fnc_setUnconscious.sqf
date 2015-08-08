@@ -6,9 +6,13 @@
  * 0: The unit that will be put in an unconscious state <OBJECT>
  * 1: Set unconsciouns <BOOL> <OPTIONAL>
  * 2: Minimum unconscious ACE_time <NUMBER> <OPTIONAL>
+ * 3: Force AI Unconscious (skip random death chance) <BOOL> <OPTIONAL>
  *
  * ReturnValue:
  * nil
+ *
+ * Example:
+ * [bob, true] call ace_medical_fnc_setUnconscious;
  *
  * Public: yes
  */

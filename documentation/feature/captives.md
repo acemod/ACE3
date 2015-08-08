@@ -3,6 +3,7 @@ layout: wiki
 title: Captives
 description: System for taking and handling captives
 group: feature
+category: interaction
 parent: wiki
 ---
 
@@ -31,7 +32,7 @@ Allows players to surrender. It renders the unit unable to move and with the han
 ### 2.2 Escorting a captive
 - Interact with the captive <kbd>⊞ win</kbd>.
 - Select the `Escort prisoner` option.
-- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>⊞ win</kbd> and select `Release`.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>⊞ win</kbd> and select `Release`.
 
 ### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the captive.

@@ -10,13 +10,16 @@
  * Can Sit Down <BOOL>
  *
  * Example:
- * [seat, player] call ace_sitting_fnc_canSit;
+ * [seat, player] call ace_sitting_fnc_canSit
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_seat,_player);
+params ["_seat", "_player"];
 
-// Sitting enabled, is seat object and not occupied
-(GVAR(enable) && {getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(canSit)) == 1} && {isNil{_seat getVariable QGVAR(seatOccupied)}})
+// Sitting enabled, is seat object, not occupied and standing up (or not on a big slope)
+GVAR(enable) &&
+{getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(canSit)) == 1} &&
+{isNil {_seat getVariable QGVAR(seatOccupied)}} &&
+{round (vectorUp _seat select 0) == 0 && {round (vectorUp _seat select 1) == 0} && {round (vectorUp _seat select 2) == 1}}

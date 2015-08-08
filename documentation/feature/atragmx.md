@@ -3,6 +3,7 @@ layout: wiki
 title: ATragMX
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

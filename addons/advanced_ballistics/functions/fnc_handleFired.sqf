@@ -53,7 +53,9 @@ if (!GVAR(simulateForEveryone) && !(local _unit)) then {
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
 if (_abort || !(GVAR(extensionAvailable))) exitWith {
-    [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
+    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
+        EGVAR(windDeflection,trackedBullets) pushBack [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")];
+    };
 };
 
 _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
@@ -114,7 +116,7 @@ if (_caliber > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) th
 
 GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(weather,Latitude), EGVAR(weather,currentTemperature), EGVAR(weather,Altitude), EGVAR(weather,currentHumidity), overcast, floor(ACE_time), ACE_time - floor(ACE_time)];
+"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _AmmoCacheEntry select 0, _AmmoCacheEntry select 6, _AmmoCacheEntry select 7, _AmmoCacheEntry select 8, _AmmoCacheEntry select 5, _stabilityFactor, _WeaponCacheEntry select 1, _muzzleVelocity, _AmmoCacheEntry select 4, getPosASL _bullet, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), overcast, floor(ACE_time), ACE_time - floor(ACE_time)];
 
 [{
     private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];

@@ -3,6 +3,7 @@ layout: wiki
 title: Attach
 description: Allow players to attach items to vehicles or themselves
 group: feature
+category: interaction
 parent: wiki
 ---
 
@@ -17,14 +18,14 @@ Adds an attachable IR strobe, which is only visible using night vision devices a
 ## 2. Usage
 
 ### 2.1 Attaching to yourself
-- Use Self Interact <kbd>CTRL</kbd>+<kbd>⊞ Win</kbd> (ACE3 default).
+- Use Self Interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Equipment`.
 - Select `Attach item`.
 - Select which item you want to attach.
 - Repeat the process to detach.
 
 ### 2.2 Attaching to a vehicle
-- Interact with the vehicle <kbd>⊞ Win</kbd> (ACE3 default).
+- Interact with the vehicle <kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Attach item`.
 - Select your item and follow the instructions on the screen.
 - Repeat the process to detach.

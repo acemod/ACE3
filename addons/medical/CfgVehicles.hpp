@@ -196,11 +196,19 @@ class CfgVehicles {
             class consumeItem_PAK {
                 displayName = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_Description);
-
                 typeName = "NUMBER";
                 class values {
                     class keep { name = CSTRING(No); value = 0; };
                     class remove { name = CSTRING(Yes); value = 1; default = 1; };
+                };
+            };
+            class useCondition_PAK {
+                displayName = CSTRING(AdvancedMedicalSettings_useCondition_PAK_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
+                typeName = "NUMBER";
+                class values {
+                    class AnyTime { name = CSTRING(AnyTime); value = 0; };
+                    class Stable { name = CSTRING(Stable); value = 1; default = 1; };
                 };
             };
             class useLocation_PAK {
@@ -227,15 +235,23 @@ class CfgVehicles {
                 displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
                 description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
             };
+            class useCondition_SurgicalKit: useCondition_PAK {
+                displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
+                description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+                class values {
+                    class AnyTime { name = CSTRING(AnyTime); value = 0; default = 1; };
+                    class Stable { name = CSTRING(Stable); value = 1; };
+                };
+            };
             class healHitPointAfterAdvBandage {
                 displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
-                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);  
+                description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class painIsOnlySuppressed {
                 displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
-                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);  
+                description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -701,6 +717,9 @@ class CfgVehicles {
         destrType = "DestructNo";
         model = QUOTE(PATHTOF(data\littergeneric.p3d));
     };
+    class ACE_MedicalLitter_clean: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_clean.p3d));
+    };
     class ACE_MedicalLitter_bandage1: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_bandages1.p3d));
     };
@@ -711,21 +730,23 @@ class CfgVehicles {
         model = QUOTE(PATHTOF(data\littergeneric_bandages3.p3d));
     };
     class ACE_MedicalLitter_packingBandage: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\litter_packingBandage.p3d));
+        model = QUOTE(PATHTOF(data\littergeneric_packingBandage.p3d));
     };
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
     };
     class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\litter_atropine.p3d));
+        model = QUOTE(PATHTOF(data\littergeneric_atropine.p3d));
     };
     class ACE_MedicalLitter_epinephrine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\litter_epinephrine.p3d));
+        model = QUOTE(PATHTOF(data\littergeneric_epinephrine.p3d));
     };
     class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\litter_morphine.p3d));
+        model = QUOTE(PATHTOF(data\littergeneric_morphine.p3d));
     };
-
+    class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_Quikclot.p3d));
+    };
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
         scope = 2;
@@ -734,10 +755,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_fieldDressing {
-                name = "ACE_fieldDressing";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_fieldDressing,1);
         };
     };
     class ACE_packingBandageItem: Item_Base_F {
@@ -747,10 +765,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_packingBandage {
-                name = "ACE_packingBandage";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_packingBandage,1);
         };
     };
     class ACE_elasticBandageItem: Item_Base_F {
@@ -760,10 +775,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_elasticBandage {
-                name = "ACE_elasticBandage";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_elasticBandage,1);
         };
     };
     class ACE_tourniquetItem: Item_Base_F {
@@ -773,10 +785,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_tourniquet {
-                name = "ACE_tourniquet";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_tourniquet,1);
         };
     };
     class ACE_morphineItem: Item_Base_F {
@@ -786,10 +795,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_morphine {
-                name = "ACE_morphine";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_morphine,1);
         };
     };
     class ACE_atropineItem: Item_Base_F {
@@ -799,10 +805,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_atropine {
-                name = "ACE_atropine";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_atropine,1);
         };
     };
     class ACE_epinephrineItem: Item_Base_F {
@@ -812,10 +815,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_epinephrine {
-                name = "ACE_epinephrine";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_epinephrine,1);
         };
     };
     class ACE_plasmaIVItem: Item_Base_F {
@@ -825,10 +825,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_plasmaIV {
-                name = "ACE_plasmaIV";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_plasmaIV,1);
         };
     };
 
@@ -839,10 +836,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_bloodIV {
-                name = "ACE_bloodIV";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_bloodIV,1);
         };
     };
     class ACE_salineIVItem: Item_Base_F {
@@ -852,10 +846,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_salineIV {
-                name = "ACE_salineIV";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_salineIV,1);
         };
     };
     class ACE_quikClotItem: Item_Base_F {
@@ -865,10 +856,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_quikClot {
-                name = "ACE_quikclot";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_quikclot,1);
         };
     };
     class ACE_personalAidKitItem: Item_Base_F {
@@ -878,10 +866,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_personalAidKit {
-                name = "ACE_personalAidKit";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_personalAidKit,1);
         };
     };
     class ACE_surgicalKitItem: Item_Base_F {
@@ -891,10 +876,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_surgicalKit {
-                name = "ACE_surgicalKit";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_surgicalKit,1);
         };
     };
     class ACE_bodyBagItem: Item_Base_F {
@@ -904,10 +886,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_bodyBag {
-                name = "ACE_bodyBag";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_bodyBag,1);
         };
     };
 
@@ -919,119 +898,38 @@ class CfgVehicles {
         model = PATHTOF(data\ace_medcrate.p3d);
         author = ECSTRING(common,ACETeam);
         class TransportItems {
-            class ACE_fieldDressing {
-                name = "ACE_fieldDressing";
-                count = 50;
-            };
-            class ACE_morphine {
-                name = "ACE_morphine";
-                count = 25;
-            };
-            class ACE_epinephrine {
-                name = "ACE_epinephrine";
-                count = 25;
-            };
-            class ACE_bloodIV {
-                name = "ACE_bloodIV";
-                count = 15;
-            };
-            class ACE_bloodIV_500 {
-                name = "ACE_bloodIV_500";
-                count = 15;
-            };
-            class ACE_bloodIV_250 {
-                name = "ACE_bloodIV_250";
-                count = 15;
-            };
-            class ACE_bodyBag {
-                name = "ACE_bodyBag";
-                count = 10;
-            };
+            MACRO_ADDITEM(ACE_fieldDressing,50);
+            MACRO_ADDITEM(ACE_morphine,25);
+            MACRO_ADDITEM(ACE_epinephrine,25);
+            MACRO_ADDITEM(ACE_bloodIV,15);
+            MACRO_ADDITEM(ACE_bloodIV_500,15);
+            MACRO_ADDITEM(ACE_bloodIV_250,15);
+            MACRO_ADDITEM(ACE_bodyBag,10);
         };
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
         displayName = CSTRING(medicalSupplyCrate_advanced);
         class TransportItems {
-            class ACE_fieldDressing {
-                name = "ACE_fieldDressing";
-                count = 25;
-            };
-            class ACE_packingBandage {
-                name = "ACE_packingBandage";
-                count = 25;
-            };
-            class ACE_elasticBandage {
-                name = "ACE_elasticBandage";
-                count = 25;
-            };
-            class ACE_tourniquet {
-                name = "ACE_tourniquet";
-                count = 15;
-            };
-            class ACE_morphine {
-                name = "ACE_morphine";
-                count = 15;
-            };
-            class ACE_atropine {
-                name = "ACE_atropine";
-                count = 15;
-            };
-            class ACE_epinephrine {
-                name = "ACE_epinephrine";
-                count = 15;
-            };
-            class ACE_plasmaIV {
-                name = "ACE_plasmaIV";
-                count = 7;
-            };
-            class ACE_plasmaIV_500 {
-                name = "ACE_plasmaIV_500";
-                count = 7;
-            };
-            class ACE_plasmaIV_250 {
-                name = "ACE_plasmaIV_250";
-                count = 7;
-            };
-            class ACE_salineIV {
-                name = "ACE_salineIV";
-                count = 7;
-            };
-            class ACE_salineIV_500 {
-                name = "ACE_salineIV_500";
-                count = 7;
-            };
-            class ACE_salineIV_250 {
-                name = "ACE_salineIV_250";
-                count = 7;
-            };
-            class ACE_bloodIV {
-                name = "ACE_bloodIV";
-                count = 7;
-            };
-            class ACE_bloodIV_500 {
-                name = "ACE_bloodIV_500";
-                count = 7;
-            };
-            class ACE_bloodIV_250 {
-                name = "ACE_bloodIV_250";
-                count = 7;
-            };
-            class ACE_quikClot {
-                name = "ACE_quikclot";
-                count = 20;
-            };
-            class ACE_personalAidKit {
-                name = "ACE_personalAidKit";
-                count = 3;
-            };
-            class ACE_surgicalKit {
-                name = "ACE_surgicalKit";
-                count = 2;
-            };
-            class ACE_bodyBag {
-                name = "ACE_bodyBag";
-                count = 5;
-            };
+            MACRO_ADDITEM(ACE_fieldDressing,25);
+            MACRO_ADDITEM(ACE_packingBandage,25);
+            MACRO_ADDITEM(ACE_elasticBandage,25);
+            MACRO_ADDITEM(ACE_tourniquet,15);
+            MACRO_ADDITEM(ACE_morphine,15);
+            MACRO_ADDITEM(ACE_atropine,15);
+            MACRO_ADDITEM(ACE_epinephrine,15);
+            MACRO_ADDITEM(ACE_plasmaIV,7);
+            MACRO_ADDITEM(ACE_plasmaIV_500,7);
+            MACRO_ADDITEM(ACE_plasmaIV_250,7);
+            MACRO_ADDITEM(ACE_salineIV,7);
+            MACRO_ADDITEM(ACE_salineIV_500,7);
+            MACRO_ADDITEM(ACE_salineIV_250,7);
+            MACRO_ADDITEM(ACE_bloodIV,7);
+            MACRO_ADDITEM(ACE_bloodIV_500,7);
+            MACRO_ADDITEM(ACE_bloodIV_250,7);
+            MACRO_ADDITEM(ACE_quikClot,20);
+            MACRO_ADDITEM(ACE_personalAidKit,3);
+            MACRO_ADDITEM(ACE_surgicalKit,2);
+            MACRO_ADDITEM(ACE_bodyBag,5);
         };
     };
 };

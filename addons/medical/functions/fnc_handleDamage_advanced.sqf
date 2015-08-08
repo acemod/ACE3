@@ -39,8 +39,6 @@ _damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
-[_unit] call FUNC(handleDamage_advancedSetDamage);
-
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 

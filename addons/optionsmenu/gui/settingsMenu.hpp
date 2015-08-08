@@ -247,13 +247,21 @@ class ACE_settingsMenu {
             text = CSTRING(OpenExport);
             x = X_PART(18);
             action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {createDialog 'ACE_serverSettingsMenu'; });
-        };       
+        };
         class action_debug: actionClose {
             idc = 1102;
             text = CSTRING(DumpDebug);
-            x = X_PART(26.5);
+            x = X_PART(26.1);
             action = QUOTE([] call FUNC(debugDumpToClipboard));
             tooltip = CSTRING(DumpDebugTooltip);
+        };
+        class action_headBugFix: actionClose {
+            idc = 1102;
+            text = CSTRING(headBugFix);
+            x = X_PART(34);
+            w = W_PART(5);
+            action = QUOTE(0 spawn EFUNC(common,headBugFix); closedialog 0;);
+            tooltip = CSTRING(headBugFixTooltip);
         };
     };
 };

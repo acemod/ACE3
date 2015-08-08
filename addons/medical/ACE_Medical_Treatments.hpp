@@ -11,6 +11,7 @@ class ACE_Medical_Actions {
             treatmentTimeSelfCoef = 1;
             items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
             condition = "";
+            patientStateCondition = 0;
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
@@ -24,7 +25,7 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class Morphine: Bandage {
             displayName = CSTRING(Inject_Morphine);
@@ -107,6 +108,7 @@ class ACE_Medical_Actions {
             // Item required for the action. Leave empty for no item required.
             items[] = {"ACE_fieldDressing"};
             condition = "";
+            patientStateCondition = 0;
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
@@ -119,7 +121,7 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class PackingBandage: fieldDressing {
             items[] = {"ACE_packingBandage"};
@@ -206,6 +208,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
+            patientStateCondition = QGVAR(useCondition_SurgicalKit);
             treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
             callbackSuccess = "";
             callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
@@ -219,6 +222,7 @@ class ACE_Medical_Actions {
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
+            patientStateCondition = QGVAR(useCondition_PAK);
             treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QGVAR(consumeItem_PAK);
@@ -242,6 +246,8 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            animationCallerProne = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
             litter[] = {};
         };
@@ -266,10 +272,10 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";

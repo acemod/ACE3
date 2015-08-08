@@ -16,15 +16,3 @@
 #define ICON_NAME_RANK 2
 #define ICON_NAME_SPEAK 3
 #define ICON_SPEAK 4
-
-//todo?: custom rank icons??
-#define TEXTURES_RANKS [ \
-    "", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa", \
-    "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
-    ]

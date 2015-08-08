@@ -90,7 +90,7 @@ _recurseFnc = {
                             [],
                             _position,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover, false],
                             _modifierFunction
                         ],
                         _children

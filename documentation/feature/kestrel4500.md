@@ -3,6 +3,7 @@ layout: wiki
 title: Kestrel 4500
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 
