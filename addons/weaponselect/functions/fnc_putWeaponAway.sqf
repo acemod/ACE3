@@ -1,13 +1,17 @@
 /*
  * Author: commy2
- *
  * The unit will put its current weapon away.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player] call ace_weaponselect_fnc_putWeaponAway
+ *
+ * Public: NO
  */
 #include "script_component.hpp"
 

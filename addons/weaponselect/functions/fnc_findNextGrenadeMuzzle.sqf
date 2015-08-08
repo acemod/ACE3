@@ -1,13 +1,17 @@
 /*
  * Author: commy2
- *
  * Find the next Grenade Muzzle.
  *
- * Argument:
+ * Arguments:
  * 0: Grenade Type ("All", "Frag", "NonFrag") <STRING>
  *
- * Return value:
+ * Return Value:
  * Class name of next throw muzzle <STRING>
+ *
+ * Example:
+ * ["All"] call ace_weaponselect_fnc_findNextGrenadeMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

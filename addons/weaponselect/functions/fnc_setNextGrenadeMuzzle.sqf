@@ -1,14 +1,18 @@
 /*
  * Author: esteldunedain
- *
  * Select the next grenade muzzle to throw.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Muzzlename <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player, currentMuzzle player] call ace_weaponselect_fnc_setNextGrenadeMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

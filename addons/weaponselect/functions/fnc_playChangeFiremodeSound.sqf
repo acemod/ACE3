@@ -1,14 +1,18 @@
 /*
  * Author: commy2
- *
  * Play the change firemode sound for specified weapon at units position.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player, currentWeapon player] call ace_weaponselect_fnc_playChangeFiremodeSound
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

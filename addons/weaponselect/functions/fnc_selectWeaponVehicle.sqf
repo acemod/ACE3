@@ -1,15 +1,19 @@
 /*
  * Author: commy2
- *
  * Select weapon for unit in vehicle.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Weapon index <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player, vehicle player, 1] call ace_weaponselect_fnc_selectWeaponVehicle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

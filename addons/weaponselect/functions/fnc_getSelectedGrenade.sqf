@@ -1,13 +1,17 @@
 /*
  * Author: commy2
- *
  * Returns the selected Grenade Muzzle.
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
- * Class name of selected throw muzzle. <STRING>
+ * Return Value:
+ * Class name of selected throw muzzle <STRING>
+ *
+ * Example:
+ * [] call ace_weaponselect_fnc_getSelectedGrenade
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

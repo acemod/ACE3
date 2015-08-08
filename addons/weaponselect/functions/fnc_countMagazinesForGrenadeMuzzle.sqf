@@ -1,14 +1,19 @@
 /*
  * Author: esteldunedain
- *
  * Count how many grenade magazines the unit has on the uniform and vest.
  *
- * Argument:
- * 0: Muzzle name
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Muzzle Class <STRING>
  *
- * Return value:
- * 0: Number of magazines
- * 1: First magazine name
+ * Return Value:
+ * 0: Number of magazines <NUMBER>
+ * 1: First magazine name <STRING>
+ *
+ * Example:
+ * [player, currentMuzzle player] call ace_weaponselect_fnc_countMagazinesForGrenadeMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

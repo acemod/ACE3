@@ -1,13 +1,17 @@
 /*
  * Author: esteldunedain, commy2
- *
  * Cycle through non explosive grenades.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player] call ace_weaponselect_fnc_selectGrenadeOther
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

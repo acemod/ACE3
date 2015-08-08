@@ -1,9 +1,8 @@
 /*
  * Author: commy2
- *
  * Display Grenade information on grenade throw.
  *
- * Argument:
+ * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
  * 1: weapon - Fired weapon <STRING>
  * 2: muzzle - Muzzle that was used <STRING>
@@ -12,8 +11,13 @@
  * 5: magazine - magazine name which was used <STRING>
  * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] call ace_weaponselect_fnc_throwGrenade
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
