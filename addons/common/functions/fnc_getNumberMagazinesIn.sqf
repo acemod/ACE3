@@ -3,7 +3,7 @@
  *
  * N/A
  *
- * Argument:
+ * Arguments:
  * 0: Unit (OBJECT)
  * 1: Magazine (STRING)
  *

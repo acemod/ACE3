@@ -3,12 +3,12 @@
  *
  * Determines whether one string matches another and how many characters match. Case insensitive.
  *
- * Argument:
- * 0: stringA (STRING)
- * 1: stringB (STRING)
+ * Arguments:
+ * 0: stringA <STRING>
+ * 1: stringB <STRING>
  *
- * Return value:
- * Number of matching characters (NUMBER)
+ * Return Value:
+ * Number of matching characters >NUMBER>
  *
  * Public: Yes
  */

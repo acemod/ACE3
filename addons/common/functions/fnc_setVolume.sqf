@@ -3,8 +3,8 @@
  *
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
  *
- * Argument:
- * 0: setVolume (BOOLEAN)
+ * Arguments:
+ * 0: setVolume <BOOL>
  *
  * Return value:
  * None

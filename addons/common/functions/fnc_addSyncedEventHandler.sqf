@@ -3,7 +3,7 @@
  *
  * Register an event handler for an ACE synced event
  *
- * Argument:
+ * Arguments:
  * 0: Name (String)
  * 1: Handler (Code)
  * 2: TTL (Number or Code) [Optional]

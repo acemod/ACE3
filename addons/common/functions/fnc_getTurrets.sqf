@@ -3,7 +3,7 @@
  *
  * Get all turret indicies of a vehicle.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle type (String)
  *
  * Return value:

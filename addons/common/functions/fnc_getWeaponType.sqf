@@ -3,7 +3,7 @@
  *
  * Check what kind of weapon the given class name is. (primary, secondary or handgun)
  *
- * Argument:
+ * Arguments:
  * 0: Class name of the weapon (String)
  *
  * Return value:

@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Unit/Vehicle
- * 1: Pitch (degrees)
- * 2: Yaw (degrees)
- * 3: Bank (degrees)
+ * 1: Pitch <NUMBER>
+ * 2: Yaw <NUMBER>
+ * 3: Bank <NUMBER>
  *
  * Return Value:
  * None

@@ -3,13 +3,13 @@
  *
  * Stack group switches. Will always trace back to original group.
  *
- * Argument:
- * 0: Unit (OBJECT)
- * 1: switch (BOOLEAN)
- * 2: id (STRING)
- * 3: side (SIDE)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: switch <BOOLEAN>
+ * 2: id <STRING>
+ * 3: side <SIDE>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

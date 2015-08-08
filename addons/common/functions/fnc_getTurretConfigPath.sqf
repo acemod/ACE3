@@ -3,7 +3,7 @@
  *
  * Get the config path of a vehicles turret.
  *
- * Argument:
+ * Arguments:
  * 0: vehicles config (Config)
  * 1: Turret index (Array)
  *

@@ -3,7 +3,7 @@
  *
  * Handles a server-side request for synchronization ALL events on JIP to a client.
  *
- * Argument:
+ * Arguments:
  * 0: client (object)
  *
  * Return value:

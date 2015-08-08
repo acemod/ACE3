@@ -3,7 +3,7 @@
  * Load a setting from config if it was not previosuly forced. Force if neccesary.
  *
  * Arguments:
- * 0: Config entry (config entry)
+ * 0: Config entry <CONFIG>
  *
  * Return Value:
  * None
@@ -101,7 +101,7 @@ if (isNil _name) then {
     _settingData = [_name] call FUNC(getSettingData);
 
     _settingData params ["", "_type", "", "", "", "", "_forced"];
-    
+
     if (_forced) exitWith {};
 
     // The setting is not forced, so update the value

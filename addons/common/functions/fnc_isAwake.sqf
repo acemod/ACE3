@@ -3,7 +3,7 @@
  *
  * Check if unit is awake. Will be false when death or unit is unconscious.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (OBJECT)
  *
  * Return value:

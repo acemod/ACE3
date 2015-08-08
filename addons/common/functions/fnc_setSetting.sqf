@@ -5,10 +5,10 @@
  * If executed on server it can have global effect if the last parameter is set to true.
  *
  * Arguments:
- * 0: Setting name (STRING)
- * 1: Value (ANY)
- * 2: Force it? (BOOLEAN) (Optional)
- * 3: Broadcast the change to all clients (BOOLEAN) (Optional)
+ * 0: Setting name <STRING>
+ * 1: Value <ANY>
+ * 2: Force it? <BOOL> (default: false)
+ * 3: Broadcast the change to all clients <BOOL> (default: false)
  *
  * Return Value:
  * None

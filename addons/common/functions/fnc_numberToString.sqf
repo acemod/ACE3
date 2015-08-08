@@ -3,7 +3,7 @@
  *
  * Converts a number to a string without losing as much precission as str or format.
  *
- * Argument:
+ * Arguments:
  * 0: A number (Number)
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
  *
- * Argument:
+ * Arguments:
  * 0: Unit that has a backpack (Object)
  *
  * Return value:

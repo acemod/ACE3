@@ -3,7 +3,7 @@
  *
  * Returns the the first intersection with an object between two positions
  *
- * Argument:
+ * Arguments:
  * 0: PositionASL (ARRAY with Position)
  * 1: PositionATL (Position with Position)
  * 2: Accuracy (NUMBER)

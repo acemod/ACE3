@@ -3,7 +3,7 @@
  *
  * Get the turret index of a units current turret.
  *
- * Argument:
+ * Arguments:
  * 0: Unit, not the vehicle (as in not a car but the player) (Object)
  *
  * Return value:

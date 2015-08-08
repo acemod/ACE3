@@ -3,7 +3,7 @@
  * Gets the current map's MGRS grid zone designator and 100km square.
  * Also gets longitude, latitude and altitude offset for the map
  *
- * Argument:
+ * Arguments:
  * 0: Optional: Map name, if undefined the current map is used (String)
  *
  * Return value:

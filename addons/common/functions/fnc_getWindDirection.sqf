@@ -3,7 +3,7 @@
  *
  * Get the compass direction the wind is blowing from.
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:

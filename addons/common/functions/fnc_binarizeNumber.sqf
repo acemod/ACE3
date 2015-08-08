@@ -3,7 +3,7 @@
  *
  * Get a binary equivalent of a decimal number.
  *
- * Argument:
+ * Arguments:
  * 0: Decimal Number (Number)
  * 1: Minimum length of the returned Array, note: returned array can be larger (Number, optional default 8)
  *

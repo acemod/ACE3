@@ -3,7 +3,7 @@
  *
  * Returns an array containing all items of a given unit
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Object)
  *
  * Return value:

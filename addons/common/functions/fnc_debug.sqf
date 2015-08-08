@@ -3,7 +3,7 @@
  *
  * Print logging messages through the ACE framework.
  *
- * Argument:
+ * Arguments:
  * 0: Message (ANY)
  * 1: Level (Number) (Optional)
  *

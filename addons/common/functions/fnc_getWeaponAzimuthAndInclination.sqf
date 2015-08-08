@@ -3,7 +3,7 @@
  *
  * Get players weapon direction and slope
  *
- * Argument:
+ * Arguments:
  * 0: Weapon name (String)
  *
  * Return value:

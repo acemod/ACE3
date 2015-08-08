@@ -3,7 +3,7 @@
  *
  * Add an addAction event to a unit. Used to handle multiple addAction events and add a action to the mouse wheel menu. Global arguments, local effects. Does only work for player controlled units.
  *
- * Argument:
+ * Arguments:
  * 0: Unit the action should be assigned to (Object)
  * 1: Menu title of the action (String)
  * 2: Name of the action, e.g. "DefaultAction" (String)

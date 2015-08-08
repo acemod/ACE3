@@ -2,7 +2,7 @@
  * Author: PabstMirror
  * Gets position from grid cords
  *
- * Argument:
+ * Arguments:
  * 0: Grid Cords <STRING>
  * 1: Get Center or bottom right <BOOL><OPTIONAL>
  *

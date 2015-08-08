@@ -3,7 +3,7 @@
  *
  * Execute a local event on this client only.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *

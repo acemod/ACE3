@@ -3,7 +3,7 @@
  *
  * Called from respawn eventhandler. Resets all public object namespace variables that are added via FUNC(setVariableJIP).
  *
- * Argument:
+ * Arguments:
  * 0: Object (Object)
  *
  * Return value:

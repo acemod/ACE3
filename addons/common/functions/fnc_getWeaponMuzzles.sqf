@@ -3,7 +3,7 @@
  *
  * Get the muzzles of a weapon.
  *
- * Argument:
+ * Arguments:
  * 0: A weapon in cfgWeapons (String)
  *
  * Return value:

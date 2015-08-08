@@ -3,7 +3,7 @@
  *
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle type (String)
  *
  * Return value:

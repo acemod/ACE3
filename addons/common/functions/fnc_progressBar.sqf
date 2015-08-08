@@ -4,7 +4,7 @@
  * Draw progress bar and execute given function if succesful.
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
- * Argument:
+ * Arguments:
  * 0: NUMBER - Total Time (in game "ACE_time" seconds)
  * 1: ARRAY - Arguments, passed to condition, fail and finish
  * 2: CODE or STRING - On Finish: Code called or STRING raised as event.

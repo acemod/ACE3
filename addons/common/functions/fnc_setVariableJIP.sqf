@@ -3,12 +3,12 @@
  *
  * Sets a public object namespace variable that gets reset with the same value after respawn, so JIP clients keep the value.
  *
- * Argument:
- * 0: Object (Object)
- * 1: Variable name (String)
- * 2: Any value (Anything)
+ * Arguments:
+ * 0: Object <OBJECT>
+ * 1: Variable name <STRING>
+ * 2: Any value <ANY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

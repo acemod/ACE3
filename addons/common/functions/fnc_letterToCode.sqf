@@ -3,7 +3,7 @@
  *
  * ?
  *
- * Argument:
+ * Arguments:
  * ?
  *
  * Return value:

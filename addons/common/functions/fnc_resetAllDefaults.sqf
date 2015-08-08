@@ -3,7 +3,7 @@
  *
  * reset all variables that have been defined
  *
- * Argument:
+ * Arguments:
  * ?
  *
  * Return value:

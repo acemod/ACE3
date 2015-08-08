@@ -3,10 +3,10 @@
  *
  * ? deprecated
  *
- * Argument:
+ * Arguments:
  * ?
  *
- * Return value:
+ * Return Value:
  * ?
  *
  * Public: Yes

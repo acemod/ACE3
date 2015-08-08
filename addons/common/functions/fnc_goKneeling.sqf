@@ -3,7 +3,7 @@
  *
  * Abhocken! Unit goes kneeling if not prone already and lowers weapon. Try, throw, catch because I'm bored.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Object)
  *
  * Return value:

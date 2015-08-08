@@ -3,7 +3,7 @@
  *
  * Send a request to synchronize an event name from the client->server. Execute on client only.
  *
- * Argument:
+ * Arguments:
  * 0: eventName (String)
  *
  * Return value:

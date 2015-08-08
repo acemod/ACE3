@@ -3,7 +3,7 @@
  *
  * Execute an animation. This is used to not break things like the unconsciousness animation.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Object)
  * 1: Animation (String)
  * 2: Priority of the animation. (Number, optional default: 0)

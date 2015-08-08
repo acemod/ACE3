@@ -3,7 +3,7 @@
  *
  * Gets the turret index of door gunners
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (Object)
  *
  * Return value:

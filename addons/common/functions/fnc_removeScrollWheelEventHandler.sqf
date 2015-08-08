@@ -3,7 +3,7 @@
  *
  * Remove a scroll wheel event handler.
  *
- * Argument:
+ * Arguments:
  * 0: ID of the event handler (Number)
  *
  * Return value:

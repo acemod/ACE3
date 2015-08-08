@@ -3,7 +3,7 @@
  *
  * Add an addAction event to a unit. Used to handle multiple addAction events. Global arguments, local effects. Does only work for player controlled units.
  *
- * Argument:
+ * Arguments:
  * 0: Unit the action should be assigned to (Object)
  * 1: Name of the action, e.g. "DefaultAction" (String)
  * 2: Condition (Code or String)

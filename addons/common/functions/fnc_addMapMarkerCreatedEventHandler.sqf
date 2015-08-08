@@ -3,7 +3,7 @@
  *
  * Add a map marker creation event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Code to execute (Code or String)
  *
  * Return value:

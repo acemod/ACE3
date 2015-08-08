@@ -3,7 +3,7 @@
  *
  * Display a structured text with image.
  *
- * Argument:
+ * Arguments:
  * 0: Text (ANY)
  * 1: Image (STRING)
  * 2: Image color (ARRAY) (OPTIONAL)

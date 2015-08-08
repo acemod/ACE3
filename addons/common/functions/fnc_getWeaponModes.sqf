@@ -3,7 +3,7 @@
  *
  * Get the available firing modes of a weapon. Will ignore the ai helper modes.
  *
- * Argument:
+ * Arguments:
  * 0: A weapon in cfgWeapons (String)
  *
  * Return value:

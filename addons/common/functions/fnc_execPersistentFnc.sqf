@@ -3,7 +3,7 @@
  *
  * Execute a function on every machine. Function will also be called upon JIP (postInit). The arguments are stored in (_this select 0), while the assigned namespace is stored in (_this select 1).
  *
- * Argument:
+ * Arguments:
  * 0: Function arguments (Array)
  * 1: Function to execute, has to be defined on the remote machine first (String)
  * 2: Namespace to save that variable in (Object or Namespace)

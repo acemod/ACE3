@@ -3,7 +3,7 @@
  * Get the index of the weapon.
  * 0 = primary, 1 = secondary, 2 = handgun, -1 = other
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *

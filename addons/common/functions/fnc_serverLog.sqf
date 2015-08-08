@@ -2,7 +2,7 @@
  * Author: esteldunedain
  * ?
  *
- * Argument:
+ * Arguments:
  * ?
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * ?
  *
- * Argument:
+ * Arguments:
  * 0: Code (Code or String)
  *
  * Return value:

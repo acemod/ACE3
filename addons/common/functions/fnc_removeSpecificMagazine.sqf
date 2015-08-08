@@ -2,7 +2,7 @@
  * Author: esteldunedain
  * Removes a magazine from the unit that has an specific ammo count
  *
- * Argument:
+ * Arguments:
  * 0: Player <OBJECT>
  * 1: Magazine <STRING>
  * 2: Ammo count <NUMBER>

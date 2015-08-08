@@ -3,7 +3,7 @@
  *
  * Check if the unit is in a building. Will return true if the unit is sitting in a bush.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (OBJECT)
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * What kind of Cfg is the item. Works for CfgMagaines, CfgWeapons and CfgGlasses
  *
- * Argument:
+ * Arguments:
  * 0: A item's classname. (STRING)
  *
  * Return value:

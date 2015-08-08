@@ -3,7 +3,7 @@
  *
  * Removes the brackets around a code and returns the code as a string. It does nothing if the code is already a string.
  *
- * Argument:
+ * Arguments:
  * 0: Code (Code or String)
  *
  * Return value:

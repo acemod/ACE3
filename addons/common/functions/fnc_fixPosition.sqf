@@ -3,7 +3,7 @@
  *
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
  *
- * Argument:
+ * Arguments:
  * Object (Object)
  *
  * Return value:

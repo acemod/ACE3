@@ -4,7 +4,7 @@
  * Force a unit to go prone
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None

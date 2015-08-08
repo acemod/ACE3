@@ -3,7 +3,7 @@
  *
  * ?
  *
- * Argument:
+ * Arguments:
  * 0: ID (Number)
  *
  * Return value:

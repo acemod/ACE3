@@ -3,7 +3,7 @@
  *
  * Get the turret indices of ffv turrets.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (Object)
  *
  * Return value:

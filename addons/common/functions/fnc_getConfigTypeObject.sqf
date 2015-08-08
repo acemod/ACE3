@@ -3,7 +3,7 @@
  *
  * What kind of Cfg is the object. Works for CfgVehicles and CfgAmmo
  *
- * Argument:
+ * Arguments:
  * 0: An object's classname. (String)
  *
  * Return value:

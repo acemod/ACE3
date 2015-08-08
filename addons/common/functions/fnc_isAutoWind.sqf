@@ -3,7 +3,7 @@
  *
  * Check if wind is set on auto.
  *
- * Argument:
+ * Arguments:
  * None.
  *
  * Return value:

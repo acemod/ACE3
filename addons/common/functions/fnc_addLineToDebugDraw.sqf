@@ -3,7 +3,7 @@
  *
  * Add line to draw on debug
  *
- * Argument:
+ * Arguments:
  * 0: Start point ASL (Array)
  * 1: End point ASL (Array)
  * 2: Color (Array)
