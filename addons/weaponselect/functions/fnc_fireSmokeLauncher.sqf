@@ -1,13 +1,17 @@
 /*
  * Author: commy2
- *
  * Fire Vehicle Smoke Launcher.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [vehicle player] call ace_weaponselect_fnc_fireSmokeLauncher
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

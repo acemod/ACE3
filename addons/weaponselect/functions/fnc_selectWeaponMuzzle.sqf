@@ -1,14 +1,18 @@
 /*
  * Author: commy2
- *
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player, currentWeapon player] call ace_weaponselect_fnc_selectWeaponMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,13 +1,17 @@
 /*
  * Author: esteldunedain, commy2
- *
  * Cycle through frags.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [player] call ace_weaponselect_fnc_selectGrenadeFrag
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
