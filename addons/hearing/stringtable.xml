@@ -118,7 +118,7 @@
             <Portuguese>Audição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
-            <English>Enable combat deafness?</English>
+            <English>Combat Deafness</English>
             <Polish>Wł. głuchotę bojową</Polish>
             <Spanish>¿Habilitar sordera de combate?</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
@@ -139,6 +139,12 @@
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
+            <English>Effect Zeus RC</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
+            <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
         </Key>
     </Package>
 </Project>

@@ -21,4 +21,6 @@ if ((_logic getVariable "DisableEarRinging") != -1) then {
     [_logic, QGVAR(DisableEarRinging), "DisableEarRinging"] call EFUNC(common,readSettingFromModule);
 };
 
+[_logic, QGVAR(enabledForZeusUnits), "enabledForZeusUnits"] call EFUNC(common,readSettingFromModule);
+
 diag_log text "[ACE]: Hearing Module Initialized.";
