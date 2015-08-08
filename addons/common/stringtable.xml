@@ -598,5 +598,83 @@
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>
         </Key>
+        <Key ID="STR_ACE_Common_Disabled">
+            <English>Disabled</English>
+            <Czech>Zakázáno</Czech>
+            <French>Non</French>
+            <German>Deaktiviert</German>
+            <Italian>Disattivato</Italian>
+            <Polish>Wyłączone</Polish>
+            <Portuguese>Desativado</Portuguese>
+            <Russian>Откл.</Russian>
+            <Spanish>Desactivado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_Enabled">
+            <English>Enabled</English>
+            <Czech>Zapnuto</Czech>
+            <French>Oui</French>
+            <German>Aktiviert</German>
+            <Italian>Attivato</Italian>
+            <Polish>Włączone</Polish>
+            <Portuguese>Ativado</Portuguese>
+            <Russian>Вкл.</Russian>
+            <Spanish>Activado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_Yes">
+            <English>Yes</English>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
+            <Polish>Tak</Polish>
+            <Czech>Ano</Czech>
+            <French>Oui</French>
+            <Russian>Да</Russian>
+            <Hungarian>Igen</Hungarian>
+            <Portuguese>Sim</Portuguese>
+            <Italian>Si</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_No">
+            <English>No</English>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Polish>Nie</Polish>
+            <Czech>Ne</Czech>
+            <French>Non</French>
+            <Russian>Нет</Russian>
+            <Hungarian>Nem</Hungarian>
+            <Portuguese>Não</Portuguese>
+            <Italian>No</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_DoNotForce">
+            <English>Do Not Force</English>
+            <Polish>Nie wymuszaj</Polish>
+            <Spanish>No forzar</Spanish>
+            <German>Nicht erzwingen</German>
+            <Czech>Nevynucovat</Czech>
+            <Portuguese>Não forçar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
+            <English>ACE3 Equipment</English>
+            <Polish>ACE3 Wyposażenie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
+            <English>ACE3 Common</English>
+            <Polish>ACE3 Ogólne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
+            <English>ACE3 Weapons</English>
+            <Polish>ACE3 Broń</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
+            <English>ACE3 Movement</English>
+            <Polish>ACE3 Ruch</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
+            <English>ACE3 Scope Adjustment</English>
+            <Polish>ACE3 Regulacja optyki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
+            <English>ACE3 Vehicles</English>
+            <Polish>ACE3 Pojazdy</Polish>
+        </Key>
     </Package>
 </Project>

@@ -47,7 +47,7 @@ GVAR(WindInfo) = true;
     };
     
     if (_windSpeed > 0.2) then {
-        _playerDir = getDir ACE_player;
+        _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
         _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
         _windIndex = round(((_playerDir - _windDir + 360) % 360) / 30);
         _windIndex = _windIndex % 12;

@@ -123,7 +123,8 @@ class CfgVehicles {
                     displayName = "$STR_ACE_ROLLWIRE";
                     distance = 4;
                     condition = "true";
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(deploy));
+                    //wait a frame to handle "Do When releasing action menu key" option:
+                    statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

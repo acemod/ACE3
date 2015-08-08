@@ -19,6 +19,7 @@
 if (!isServer) exitWith {};
 
 params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
 [{
     //If the module wasn't placed, just exit (needs to be in wait because objectInitEH is before moduleInit)
@@ -41,4 +42,4 @@ params ["_vehicle"];
         };
     };
     //Delay call until mission start (so everyone has the eventHandler's installed)
-}, [_vehicle], 0.25, 0.25] call EFUNC(common,waitAndExecute);
+}, [_vehicle], 0.25] call EFUNC(common,waitAndExecute);

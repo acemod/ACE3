@@ -19,6 +19,7 @@
 private ["_returnValue","_sideKeyName","_customKeys"];
 
 params ["_unit", "_veh"];
+TRACE_2("params",_unit,_veh);
 
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};

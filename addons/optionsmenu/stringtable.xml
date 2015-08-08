@@ -73,30 +73,6 @@
             <Italian>Valori</Italian>
             <Portuguese>Valores</Portuguese>
         </Key>
-        <Key ID="STR_ACE_OptionsMenu_Enabled">
-            <English>Yes</English>
-            <German>Ja</German>
-            <Spanish>Si</Spanish>
-            <Polish>Tak</Polish>
-            <Czech>Ano</Czech>
-            <French>Oui</French>
-            <Russian>Да</Russian>
-            <Hungarian>Igen</Hungarian>
-            <Portuguese>Sim</Portuguese>
-            <Italian>Si</Italian>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Disabled">
-            <English>No</English>
-            <German>Nein</German>
-            <Spanish>No</Spanish>
-            <Polish>Nie</Polish>
-            <Czech>Ne</Czech>
-            <French>Non</French>
-            <Russian>Нет</Russian>
-            <Hungarian>Nem</Hungarian>
-            <Portuguese>Não</Portuguese>
-            <Italian>No</Italian>
-        </Key>
         <Key ID="STR_ACE_OptionsMenu_Setting">
             <English>Setting:</English>
             <Czech>Nastavení:</Czech>

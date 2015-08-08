@@ -2928,24 +2928,6 @@
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
             <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_disabled">
-            <English>Disabled</English>
-            <Russian>Отключено</Russian>
-            <Polish>Wyłączone</Polish>
-            <Spanish>Desactivado</Spanish>
-            <German>Deaktiviert</German>
-            <Czech>Zakázáno</Czech>
-            <Portuguese>Desativado</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_enabled">
-            <English>Enabled</English>
-            <Russian>Включено</Russian>
-            <Polish>Włączone</Polish>
-            <Spanish>Activado</Spanish>
-            <German>Aktiviert</German>
-            <Czech>Povoleno</Czech>
-            <Portuguese>Ativado</Portuguese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
             <Russian>Отключить мгновенную смерть</Russian>
@@ -3236,15 +3218,6 @@
             <German>Fahrzeuge &amp; Einrichtungen</German>
             <Czech>Vozidla a zařízení</Czech>
             <Portuguese>Veículos e instalações</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_disabled">
-            <English>Disabled</English>
-            <Russian>Отключено</Russian>
-            <Polish>Wyłączone</Polish>
-            <Spanish>Desactivado</Spanish>
-            <German>Deaktiviert</German>
-            <Czech>Zakázáno</Czech>
-            <Portuguese>Desativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical kit (Adv)</English>
@@ -3611,30 +3584,6 @@
             <German>[ACE] Medizinische Kiste (erweitert)</German>
             <Czech>[ACE] Zdravotnické zásoby (pokročilé)</Czech>
             <Portuguese>[ACE] Caixa com suprimentos médicos (Avançados)</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Yes">
-            <English>Yes</English>
-            <German>Ja</German>
-            <Spanish>Si</Spanish>
-            <Polish>Tak</Polish>
-            <Czech>Ano</Czech>
-            <French>Oui</French>
-            <Russian>Да</Russian>
-            <Hungarian>Igen</Hungarian>
-            <Portuguese>Sim</Portuguese>
-            <Italian>Si</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_No">
-            <English>No</English>
-            <German>Nein</German>
-            <Spanish>No</Spanish>
-            <Polish>Nie</Polish>
-            <Czech>Ne</Czech>
-            <French>Non</French>
-            <Russian>Нет</Russian>
-            <Hungarian>Nem</Hungarian>
-            <Portuguese>Não</Portuguese>
-            <Italian>No</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>

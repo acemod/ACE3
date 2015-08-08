@@ -20,7 +20,7 @@
 
 private ["_text","_new_view_distance","_view_distance_limit","_object_view_distance_coeff"];
 
-PARAMS_2(_index_requested,_show_prompt);
+params ["_index_requested", "_show_prompt"];
 
 _new_view_distance = [_index_requested] call FUNC(returnValue); // changes the setting index into an actual view distance value
 _object_view_distance_coeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.

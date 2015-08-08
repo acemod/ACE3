@@ -23,6 +23,7 @@
 private ["_vehLockpickStrenth","_condition","_returnValue"];
 
 params ["_unit", "_veh", "_funcType"];
+TRACE_3("params",_unit,_veh,_funcType);
 
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};
