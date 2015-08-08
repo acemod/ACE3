@@ -41,14 +41,23 @@ if (count _controllers == 0) then {
 
 TRACE_4("Information",_objects,_controllers,_images,_names);
 
-// Default images on whiteboards (first image)
-{
-    _x setObjectTextureGlobal [0, _images select 0];
-} count _objects;
+if (isServer) then {
+    // Default images on whiteboards (first image)
+    {
+        _x setObjectTextureGlobal [0, _images select 0];
+    } count _objects;
 
-// Number of slideshows (multiple modules support)
-GVAR(slideshows) = GVAR(slideshows) + 1;
+    // Number of slideshows (multiple modules support)
+    GVAR(slideshows) = GVAR(slideshows) + 1;
+};
+
 _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
+
+// If interaction menu module is not present, set default duration value
+if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
+    _duration = 5;
+    diag_log text format ["[ACE]: Slideshow: Interaction Menu module not present, defaulting duration value to %1", _duration];
+};
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
@@ -68,6 +77,8 @@ if (_duration == 0) then {
         nil
     } count _controllers;
 } else {
+    if !(isServer) exitWith {};
+
     // Formatted GVAR string (multiple modules support)
     _varString = format [QGVAR(slideshow%1), _currentSlideshow];
     TRACE_1("Current Slide",_varString);

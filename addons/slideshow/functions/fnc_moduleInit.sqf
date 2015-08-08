@@ -14,7 +14,8 @@
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
+// Exit on Headless Client
+if (!hasInterface && !isDedicated) exitWith {};
 
 private ["_objects", "_controllers", "_images", "_names", "_duration"];
 
