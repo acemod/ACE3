@@ -3,7 +3,7 @@
  * Grabs a variable. If variable has not been set, attempts to use default defined value
  *
  * Arguments:
- * 0: unit (OBJECT)
+ * 0: unit <OBJECT>
  * 1: Variable Name (STRING)
  *
  * Return Value:

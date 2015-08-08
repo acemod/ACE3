@@ -4,7 +4,7 @@
  * Get the turret index of a vehicles commander.
  *
  * Arguments:
- * 0: Vehicle (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Turret index of the vehicles commander. Empty array means no observer position. (Array)

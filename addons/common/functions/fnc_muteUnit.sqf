@@ -4,7 +4,7 @@
  * Mutes the unit. It won't trigger auto generated chat messages either.
  *
  * Arguments:
- * 0: Unit (Object)
+ * 0: Unit <OBJECT>
  * 1: Reason to mute the unit (String)
  *
  * Return Value:

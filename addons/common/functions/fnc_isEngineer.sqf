@@ -4,7 +4,7 @@
  * Checks if a unit is an engineer.
  *
  * Arguments:
- * 0: unit to be checked (OBJECT)
+ * 0: unit to be checked <OBJECT>
  *
  * Return Value:
  * is the unit an engineer (BOOLEAN)

@@ -3,7 +3,7 @@
  * Read properties of given vehicles light.
  *
  * Arguments:
- * 0: Object with lights (Object)
+ * 0: Object with lights <OBJECT>
  * 1: Light classname (String)
  *
  * Return Value:

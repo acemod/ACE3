@@ -4,7 +4,7 @@
  *
  *
  * Arguments:
- * 0: Crate (Object)
+ * 0: Crate <OBJECT>
  *
  * Return Value:
  * None

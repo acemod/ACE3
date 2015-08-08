@@ -4,7 +4,7 @@
  * Check if given unit has a magazine of given classname
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  * 1: Magazine Classname (STRING)
  *
  * Return Value:

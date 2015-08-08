@@ -3,11 +3,11 @@
  * Loads a specified unit into any nearby vehicle
  *
  * Arguments:
- * 0: Unit that will load (OBJECT)
- * 1: Unit to be loaded (OBJECT)
+ * 0: Unit that will load <OBJECT>
+ * 1: Unit to be loaded <OBJECT>
  *
  * Return Value:
- * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed (OBJECT)
+ * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed <OBJECT>
  *
  * Public: Yes
  */

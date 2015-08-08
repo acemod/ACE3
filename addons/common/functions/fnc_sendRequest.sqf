@@ -4,8 +4,8 @@
  * Send a request to an unit and execute code based upon results.
  *
  * Arguments:
- * 0: caller (OBJECT)
- * 1: target (OBJECT)
+ * 0: caller <OBJECT>
+ * 1: target <OBJECT>
  * 2: requestID (STRING)
  * 3: requestMessage Will be localized for other target object. (STRING)
  * 4: callback Code called upon accept or decline. (CODE)

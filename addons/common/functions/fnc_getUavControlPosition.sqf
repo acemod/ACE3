@@ -12,7 +12,7 @@
  * Parameters:
  * 0: OBJECT - Unit
  *
- * Returns:
+ * Return Value:
  * STRING - Position in the UAV that is currently being controled by the unit.
  *
  * Example:

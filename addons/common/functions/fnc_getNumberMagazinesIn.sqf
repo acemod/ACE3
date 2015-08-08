@@ -4,11 +4,11 @@
  * N/A
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  * 1: Magazine (STRING)
  *
  * Return Value:
- * Count of Input Magazine (NUMBER)
+ * Count of Input Magazine <NUMBER>
  *
  * Public: No
  */

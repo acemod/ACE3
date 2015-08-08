@@ -7,8 +7,8 @@
  * 0: Weapon name (String)
  *
  * Return Value:
- * 0: Azimuth (Number)
- * 1: Inclination or 'slope' (Number)
+ * 0: Azimuth <NUMBER>
+ * 1: Inclination or 'slope' <NUMBER>
  *
  * Public: No
  */

@@ -4,7 +4,7 @@
  * Return current state of the weapon. Attachments and magazines with ammo.
  *
  * Arguments:
- * 0: A unit (Object)
+ * 0: A unit <OBJECT>
  * 1: A weapon (String)
  *
  * Return Value:

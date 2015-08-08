@@ -4,10 +4,10 @@
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
  *
  * Arguments:
- * 0: Unit that has a backpack (Object)
+ * 0: Unit that has a backpack <OBJECT>
  *
  * Return Value:
- * Ground wepaon holder with backpack (Object)
+ * Ground wepaon holder with backpack <OBJECT>
  *
  * Public: Yes
  */

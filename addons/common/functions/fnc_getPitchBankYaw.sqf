@@ -4,7 +4,7 @@
  * Returns [pitch, bank, yaw] for given vehicle in degrees.
  *
  * Arguments:
- * 0: Unit/Vehicle(OBJECT)
+ * 0: Unit/Vehicle<OBJECT>
  *
  * Return Value:
  * 0: pitch

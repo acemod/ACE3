@@ -4,11 +4,11 @@
  * Get the gunner of a vehicle who uses the given weapon type. Requires every turret to have a different weapon.
  *
  * Arguments:
- * 0: The vehicle (Object)
+ * 0: The vehicle <OBJECT>
  * 1: weapon of the vehicle (String)
  *
  * Return Value:
- * The turret gunner with this weapon (Object)
+ * The turret gunner with this weapon <OBJECT>
  *
  * Public: Yes
  */

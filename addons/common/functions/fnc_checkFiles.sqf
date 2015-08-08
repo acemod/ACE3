@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Compares version numbers of PBOs and DLLs.
  *
  * Arguments:

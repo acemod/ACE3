@@ -4,7 +4,7 @@
  * Get the turret indices of other turrets (not gunner, commander, copilot or ffv).
  *
  * Arguments:
- * 0: Vehicle (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Turret index of the vehicles gunner. Empty array means no other turrets. (Array)

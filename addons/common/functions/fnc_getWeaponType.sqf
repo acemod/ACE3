@@ -7,7 +7,7 @@
  * 0: Class name of the weapon (String)
  *
  * Return Value:
- * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 (Number)
+ * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 <NUMBER>
  *
  * Public: No
  */

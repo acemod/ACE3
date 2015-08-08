@@ -4,7 +4,7 @@
  * Remove a map marker creation event handler.
  *
  * Arguments:
- * 0: ID of the event handler (Number)
+ * 0: ID of the event handler <NUMBER>
  *
  * Return Value:
  * None

@@ -4,7 +4,7 @@
  * Revert a key code to a readible text.
  *
  * Arguments:
- * 0: Key code (Number)
+ * 0: Key code <NUMBER>
  *
  * Return Value:
  * What input will result in the given key code? (String)

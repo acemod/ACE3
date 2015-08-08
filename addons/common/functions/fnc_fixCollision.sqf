@@ -3,7 +3,7 @@
  * Attempt to fix physx collisions causing unreasonable impact forces and damage.
  *
  * Arguments:
- * Object (OBJECT)
+ * Object <OBJECT>
  *
  * Return Value:
  * None

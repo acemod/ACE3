@@ -4,10 +4,10 @@
  * Displays a message on locality of receiver
  *
  * Arguments:
- * 0: receiver (OBJECT)
+ * 0: receiver <OBJECT>
  * 1: title (STRING)
  * 2: content (ARRAY)
- * 3: type (NUMBER)(Optional)
+ * 3: type <NUMBER>(Optional)
  *
  * Return Value:
  * None

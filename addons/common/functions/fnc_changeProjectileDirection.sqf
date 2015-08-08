@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Adjust a projectiles velocity and dir + up vector.
  *
  * Arguments:
- * 0: Projectile (Object, CfgAmmo)
- * 1: Adjust azimuth this much. (Number)
- * 2: Adjust inclination this much. (Number)
- * 3: Adjust projectile speed this much. In m/s. (Number, optional default: 0 m/s)
+ * 0: Projectile <OBJECT>
+ * 1: Adjust azimuth this much. <NUMBER>
+ * 2: Adjust inclination this much. <NUMBER>
+ * 3: Adjust projectile speed this much. In m/s. (optional: 0) <NUMBER>
  *
  * Return Value:
  * None

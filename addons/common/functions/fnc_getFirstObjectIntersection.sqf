@@ -6,7 +6,7 @@
  * Arguments:
  * 0: PositionASL (ARRAY with Position)
  * 1: PositionATL (Position with Position)
- * 2: Accuracy (NUMBER)
+ * 2: Accuracy <NUMBER>
  * Return Value:
  * 0: Intersects (BOOLEAN)
  * 1: Intersection (PositionASL)

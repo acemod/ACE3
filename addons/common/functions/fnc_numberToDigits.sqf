@@ -4,7 +4,7 @@
  * Transforms a number to an array of the correspondending digits.
  *
  * Arguments:
- * 0: Number to 'digitize' (Number)
+ * 0: Number to 'digitize' <NUMBER>
  * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. (Number, optional)
  *
  * Return Value:

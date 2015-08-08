@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Message (ANY)
- * 1: Level (Number) (Optional)
+ * 1: Level <NUMBER> (Optional)
  *
  * Return Value:
  * Message is Printed (BOOLEAN)

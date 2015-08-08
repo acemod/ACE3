@@ -1,13 +1,11 @@
 /*
  * Author: commy2
  *
- * ?
- *
  * Arguments:
- * 0: Code (Code or String)
+ * 0: Code <CODE, STRING>
  *
  * Return Value:
- * Code (String)
+ * Code <STRING>
  *
  * Public: No
  */

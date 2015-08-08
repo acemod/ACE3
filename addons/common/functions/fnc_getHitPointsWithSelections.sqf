@@ -4,7 +4,7 @@
  * Returns all hitpoints and their selections of any vehicle. Might contain duplicates if the turrets contain non unique hitpoints with different selection names.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * The hitpoints with selections. Format: [hitpoints, selections]. They correspond by index. (Array)

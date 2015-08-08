@@ -3,8 +3,8 @@
  * Calculate light intensity object 1 recieves from object 2
  *
  * Arguments:
- * 0: Object that recieves light (Object)
- * 1: Object that emits light (Object)
+ * 0: Object that recieves light <OBJECT>
+ * 1: Object that emits light <OBJECT>
  *
  * Return Value:
  * Brightest light level

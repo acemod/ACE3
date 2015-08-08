@@ -6,7 +6,7 @@
  * They behave like having an armor value of 0.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * The light names and selections (Array)

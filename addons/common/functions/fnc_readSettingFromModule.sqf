@@ -5,7 +5,7 @@
  * Must be called on the server, effect is global.
  *
  * Arguments:
- * 0: Module (Object)
+ * 0: Module <OBJECT>
  * 1: ACE_Parameter name (string)
  * 2: Module parameter name (string)
  *

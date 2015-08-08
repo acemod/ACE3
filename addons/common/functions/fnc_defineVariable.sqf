@@ -8,7 +8,7 @@
  * 1: defaultValue (ANY)
  * 2: publicFlag (BOOLEAN)
  * 3: category (STRING)
- * 4: type (NUMBER)(Optional)
+ * 4: type <NUMBER>(Optional)
  * 5: persistentFlag (BOOLEAN)(Optional)
  *
  * Return Value:

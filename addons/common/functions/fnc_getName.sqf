@@ -4,7 +4,7 @@
  * Returns the name of the object. Used to prevent issues with the name command.
  *
  * Arguments:
- * 0: Object (Object)
+ * 0: Object <OBJECT>
  * 1: Show effective commander name? (Bool, optinal default: false)
  *
  * Return Value:

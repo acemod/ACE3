@@ -9,7 +9,7 @@
  * Parameters:
  * 0: OBJECT - Unit
  *
- * Returns:
+ * Return Value:
  * ARRAY(of strings) - Reason why the unit is force walking
  *
  * Example:

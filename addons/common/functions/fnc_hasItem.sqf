@@ -4,7 +4,7 @@
  * Check if unit has item
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  * 1: Item Classname (STRING)
  *
  * Return Value:

@@ -4,7 +4,7 @@
  * Check if the object still exists and is alive. This function exists because 'alive objNull' actually returns true.
  *
  * Arguments:
- * 0: Any object (OBJECT)
+ * 0: Any object <OBJECT>
  *
  * Return Value:
  * The object exists and is alive (BOOLEAN).

@@ -1,12 +1,11 @@
 /*
  * Author: commy2
- *
  * Unit claims the ownership over an object. This is used to prevent multiple players from draging the same ammo box or using up the same wheel when repairing etc.
  *
  * Arguments:
- * 0: Unit that claims another object. ObjNull to remove claim. (Object)
- * 1: The object that gets claimed. (Object)
- * 2: Lock the claimed object aswell? (Bool)
+ * 0: Unit that claims another object. ObjNull to remove claim. <OBJECT>
+ * 1: The object that gets claimed. <OBJECT>
+ * 2: Lock the claimed object aswell? <BOOL>
  *
  * Return Value:
  * None

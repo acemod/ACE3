@@ -4,7 +4,7 @@
  * Moves a unit into a temporarly group and stores its original group to allow rejoining.
  *
  * Arguments:
- * 0: unit (OBJECT)
+ * 0: unit <OBJECT>
  * 1: move To Temp Group (BOOLEAN)
  *
  * Return Value:

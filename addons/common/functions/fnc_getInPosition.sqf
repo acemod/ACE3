@@ -4,8 +4,8 @@
  * Move unit into given vehicle position. Or switch to that position if the unit is already inside the vehicle.
  *
  * Arguments:
- * 0: Unit to enter the vehicle (Object)
- * 1: The vehicle to be entered (Object)
+ * 0: Unit to enter the vehicle <OBJECT>
+ * 1: The vehicle to be entered <OBJECT>
  * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" (String)
  * 3: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken.
  *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)

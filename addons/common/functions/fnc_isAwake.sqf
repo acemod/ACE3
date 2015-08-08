@@ -4,10 +4,10 @@
  * Check if unit is awake. Will be false when death or unit is unconscious.
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * if unit is awake (Bool)
+ * if unit is awake <BOOL>
  *
  * Public: Yes
  */

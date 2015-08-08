@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Event name (string)
- * 1: Event code (number)
+ * 1: Event code <NUMBER>
  *
  * Return Value:
  * None

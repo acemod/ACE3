@@ -7,7 +7,7 @@
  * 0: Path of the entry in the mission.sqm (Array)
  *
  * Return Value:
- * Value of the entry. Note: If the entry does not exist, it might return 0 or an entry with the same name of another class! (Number)
+ * Value of the entry. Note: If the entry does not exist, it might return 0 or an entry with the same name of another class! <NUMBER>
  *
  * Public: No
  */

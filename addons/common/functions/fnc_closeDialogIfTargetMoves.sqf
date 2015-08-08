@@ -1,11 +1,10 @@
 /*
  * Author: commy2
- *
  * Closes the current dialog if the target moves, changes vehicle etc.
  *
  * Arguments:
- * 0: Target unit
- * 1: Ignore the unit being dead (Optional, default: No)
+ * 0: Target unit <OBJECT>
+ * 1: Ignore the unit being dead (default: false) <BOOL>
  *
  * Return Value:
  * None

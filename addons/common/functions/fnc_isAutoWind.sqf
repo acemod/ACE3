@@ -7,7 +7,7 @@
  * None.
  *
  * Return Value:
- * This mission has automatic wind? (Bool)
+ * This mission has automatic wind? <BOOL>
  *
  * Public: No
  */

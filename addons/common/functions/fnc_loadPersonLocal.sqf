@@ -3,9 +3,9 @@
  * Load a person, local
  *
  * Arguments:
- * 0: unit to be loaded (OBJECT)
- * 1: vehicle that will beloaded(OBJECT)
- * 2: caller that will load(OBJECT)
+ * 0: unit to be loaded <OBJECT>
+ * 1: vehicle that will beloaded<OBJECT>
+ * 2: caller that will load<OBJECT>
  * Return Value:
  * None
  *

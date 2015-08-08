@@ -4,7 +4,7 @@
  * Returns an 2d array of all variables that have been set on the object
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  * 1: category (STRING) (Optional. Only get the variables from the specified category. Default is "" == all)
  *
  * Return Value:

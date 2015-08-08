@@ -5,10 +5,10 @@
  * Arguments:
  * 0: The player. <OBJECT>
  * 1: The interaction target. objNull to ignore. <OBJECT>
- * 2: Exceptions. What general conditions are to skip? <ARRAY> (Optional)
+ * 2: Exceptions. What general conditions are to skip? (default: []) <ARRAY>
  *
  * Return Value:
- * Can Unit Interact With Something(BOOLEAN)
+ * Can Unit Interact With Something <BOOL>
  *
  * Public: No
  */

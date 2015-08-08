@@ -4,7 +4,7 @@
  * Returns array of crew member objects.
  *
  * Arguments:
- * 0: Vehicle (Object)
+ * 0: Vehicle <OBJECT>
  * 1: Slot types. Can contain "driver", "commander", "gunner", "turret", "cargo" and "ffv". Case sensitive (Array)
  *
  * Return Value:

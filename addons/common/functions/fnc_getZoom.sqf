@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * Zoom (Number)
+ * Zoom <NUMBER>
  */
 #include "script_component.hpp"
 

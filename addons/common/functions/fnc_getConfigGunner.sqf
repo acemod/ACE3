@@ -4,7 +4,7 @@
  * Get the gunner config of a vehicles turret.
  *
  * Arguments:
- * 0: vehicle (Object)
+ * 0: vehicle <OBJECT>
  *
  * Return Value:
  * Gunner config (Config)

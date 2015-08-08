@@ -4,7 +4,7 @@
  * Check if unit is underwater
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * if unit is in the water (BOOLEAN)

@@ -8,7 +8,7 @@
  * 1: Parameters to run the code with (ARRAY)
  *
  * Return Value:
- * PFH handler ID (NUMBER)
+ * PFH handler ID <NUMBER>
  * None
  *
  * Public: No

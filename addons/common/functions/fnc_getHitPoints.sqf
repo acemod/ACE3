@@ -4,7 +4,7 @@
  * Returns all hitpoints of any vehicle. Non unique hitpoints in turrets are ignored.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * The hitpoints (Array)

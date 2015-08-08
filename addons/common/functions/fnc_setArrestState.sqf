@@ -4,8 +4,8 @@
  * Set a unit in arrest state
  *
  * Arguments:
- * 0: Unit to be Arrested (OBJECT)
- * 1: set Arrested (BOOL)
+ * 0: Unit to be Arrested <OBJECT>
+ * 1: set Arrested <BOOL>
  *
  * Return Value:
  * None

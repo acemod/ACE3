@@ -4,7 +4,7 @@
  * Returns an array containing all items of a given unit
  *
  * Arguments:
- * 0: Unit (Object)
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Array with all the gear, format:

@@ -5,7 +5,7 @@
  * Currently returns false for non-local remote controlled zeus units. (Remotes from another zeus machine)
  *
  * Arguments:
- * 0: unit to be checked (OBJECT)
+ * 0: unit to be checked <OBJECT>
  * 1: exclude remote controlled units (BOOLEAN)
  *
  * Return Value:

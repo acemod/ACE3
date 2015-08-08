@@ -7,7 +7,7 @@
  * 0: Text (ANY)
  * 1: Image (STRING)
  * 2: Image color (ARRAY) (OPTIONAL)
- * 3: Target Unit. Will only display if target is the player controlled object (OBJECT) (OPTIONAL)
+ * 3: Target Unit. Will only display if target is the player controlled object <OBJECT> (OPTIONAL)
  *
  * Return Value:
  * None

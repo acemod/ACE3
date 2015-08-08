@@ -7,7 +7,7 @@
  * unit setVariable ["ACE_isEOD", true]
  *
  * Arguments:
- * 0: Unit to check if is a specialist (OBJECT)
+ * 0: Unit to check if is a specialist <OBJECT>
  *
  * Return Value:
  * is the unit an EOD (BOOLEAN)

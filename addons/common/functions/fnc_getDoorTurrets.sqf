@@ -4,7 +4,7 @@
  * Gets the turret index of door gunners
  *
  * Arguments:
- * 0: Vehicle (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Turret indexes of the door gunner. Empty array means no gunner position. (Array)

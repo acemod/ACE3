@@ -4,7 +4,7 @@
  * Get Chidrens from a config entry
  *
  * Arguments:
- * 0: Unit (OBJECT)
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Childs form Parent Entry(CONFIG)

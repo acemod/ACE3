@@ -4,7 +4,7 @@
  * Returns all turned on lights of any vehicle or streetlamp.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * All burning lights (Array)
