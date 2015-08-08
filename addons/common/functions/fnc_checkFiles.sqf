@@ -35,15 +35,16 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     };
+    true
 } count _addons;
 
 ///////////////
 // check dlls
 ///////////////
 {
-    private "version";
-    _version = _x callExtension "version";
-    if (_version == "") then {
+    private "_versionEx";
+    _versionEx = _x callExtension "version";
+    if (versionEx == "") then {
         private "_errorMsg";
         _errorMsg = format ["Extension %1.dll not installed.", _x];
 
@@ -54,8 +55,9 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         };
     } else {
         // Print the current extension version
-        diag_log text format ["[ACE] Extension version: %1: %2", _x, _version];
+        diag_log text format ["[ACE] Extension version: %1: %2", _x, _versionEx];
     };
+    true
 } count getArray (configFile >> "ACE_Extensions" >> "extensions");
 
 ///////////////

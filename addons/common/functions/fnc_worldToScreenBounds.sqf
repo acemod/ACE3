@@ -63,7 +63,7 @@ _boundsCorners = [
 {
     _ppos = worldToScreen (_object modelToWorld _x);
     if (count _ppos >= 2) then {
-        _ppos ["_pposX", "_pposY"];
+        _ppos params ["_pposX", "_pposY"];
         if (_pposX < _minX) then {_minX = _pposX};
         if (_pposX > _maxX) then {_maxX = _pposX};
         if (_pposY < _minY) then {_minY = _pposY};

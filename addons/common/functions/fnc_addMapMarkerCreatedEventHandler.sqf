@@ -23,7 +23,7 @@ if (typeName _statement == "STRING") then {
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
-_actionsVar params ["_id","_actionIDs","_actions"]
+_actionsVar params ["_id","_actionIDs","_actions"];
 _id = _id + 1;
 
 if (_id == 0) then {

@@ -17,7 +17,7 @@
 private ["_string", "_color"];
 params ["_text","_color"];
 _string = format ["%1", _string];
-_color params ["_R","_G","_B"]
+_color params ["_R","_G","_B"];
 _color = (
   [255 * _R, 2] call FUNC(toHex)
 ) + (

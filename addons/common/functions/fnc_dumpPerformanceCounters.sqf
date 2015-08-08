@@ -20,7 +20,7 @@ diag_log text format["-------------------------------------------"];
 if (!isNil "ACE_PFH_COUNTER") then {
     {
         _x params ["_pfh"];
-        _pfh params ["_id","_pfh1","_pfh2"]
+        _pfh params ["_id","_pfh1","_pfh2"];
         diag_log text format["Registered PFH: id=%1, %1:%2", _id, _pfh1, _pfh2];
     } count ACE_PFH_COUNTER;
 };

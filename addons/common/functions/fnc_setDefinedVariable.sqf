@@ -21,7 +21,7 @@ params ["_unit", "_variable", "_value", "_global"];
 
 if (isNil "_global") then {
     _definedVariable = ([_variable] call FUNC(getDefinedVariableInfo));
-    _definedVariable params ["", "",  ["_global",false];
+    _definedVariable params ["", "",  ["_global",false]];
 };
 
 if (!isNil "_value") exitwith {

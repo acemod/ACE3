@@ -14,15 +14,15 @@
 #include "script_component.hpp"
 
 if(!isServer) exitWith { false };
-
+private "_newEventLog";
 // Walk through the local synced events and clean up anything thats already EOL
 // @TODO: This should be iteration limited to prevent FPS lag
 {
-    private["_data", "_newEventLog", "_name"];
+    private["_data", "_name"];
     _name = _x;
 
     _data = HASH_GET(GVAR(syncedEvents),_name);
-    _data params ["_eventLog", "_globalEventTTL"];
+    _data params ["", "_eventLog", "_globalEventTTL"];
     _newEventLog = [];
 
     // @TODO: This should be iteration limited to prevent FPS lag
@@ -52,7 +52,6 @@ if(!isServer) exitWith { false };
         if(_ttlReturn) then {
             _newEventLog pushBack _x;
         };
-        true
     } count _eventLog;
 
     _data set [1, _newEventLog];

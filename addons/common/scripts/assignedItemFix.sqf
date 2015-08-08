@@ -40,7 +40,7 @@ GVAR(AssignedItemsInfo) = [];
     {
         if !(_x in GVAR(AssignedItems)) then {
             GVAR(AssignedItems) pushBack _x;
-            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType")
+            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType");
         };
 
         private "_hideItemType";
@@ -67,7 +67,7 @@ GVAR(AssignedItemsInfo) = [];
     } count _assignedItems;
 
     //systemChat str _shownItems;
-    _shownItems params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"]
+    _shownItems params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];
     showMap _showMap;
     showCompass _showCompass;
     showWatch _showWatch;

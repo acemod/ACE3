@@ -23,12 +23,12 @@ if (typeName _statement == "STRING") then {
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
-_actionsVar params ["_id","_actionIDs","_actions"]
+_actionsVar params ["_id","_actionIDs","_actions"];
 _id = _id + 1;
 
 _actionIDs pushBack _id;
 _actions pushBack _statement;
 
-missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_id, _actionIDs, _actions]];
+missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_id, _actionIDs, _actions]];// Check if _this can be used
 
 _id // Return
