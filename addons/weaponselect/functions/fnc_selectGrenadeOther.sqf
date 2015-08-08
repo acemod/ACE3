@@ -4,7 +4,7 @@
  * Cycle through non explosive grenades.
  *
  * Argument:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return value:
  * None
@@ -13,7 +13,7 @@
 
 private ["_nextMuzzle", "_text"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["NonFrag"] call FUNC(findNextGrenadeMuzzle);
 
