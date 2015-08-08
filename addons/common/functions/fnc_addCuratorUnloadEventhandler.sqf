@@ -1,15 +1,13 @@
 /*
  * Author: commy2
  *
- *
- *
  * Arguments:
- * Display where the Unload event was added
+ * Display where the Unload event was added <DISPLAY>
  *
  * Return Value:
  * None
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

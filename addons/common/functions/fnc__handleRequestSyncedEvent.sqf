@@ -1,20 +1,19 @@
 /*
  * Author: jaynus
- *
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
  * Arguments [Client] :
- * 0: eventName (String)
- * 1: eventLog (Array)
+ * 0: eventName <STRING>
+ * 1: eventLog <ARRAY>
  *
  * Arguments [Server] :
- * 0: eventName (String)
- * 1: client (Object)
+ * 0: eventName <STRING>
+ * 1: client <OBJECT>
  *
- * Return value:
- * Event is successed (BOOLEAN)
+ * Return Value:
+ * Event is successed <BOOL>
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,22 +1,19 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Adds an item,weapon,magazine to the unit's inventory
- * or places it in a weaponHolder if no space.
+ * Adds an item,weapon,magazine to the unit's inventory or places it in a weaponHolder if no space.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Classname <STRING>
- * 2: Container (uniform, vest, backpack) <STRING><OPTIONAL>
- * 3: Magazine Ammo Count <NUMBER><OPTIONAL>
+ * 2: Container (uniform, vest, backpack) (default: "") <STRING>
+ * 3: Magazine Ammo Count (default: -1) <NUMBER>
  *
  * Return Value:
- * Array:
- * 0: Added to player (Bool)
- * 1: weaponholder (OBJECT)
+ * 0: Added to player <BOOL>
+ * 1: weaponholder <OBJECT>
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];

@@ -1,13 +1,11 @@
 /*
  * Author: Glowbal
  *
- * ?
- *
  * Argument:
- * 0: ID (Number)
+ * 0: ID <NUMBER>
  *
  * Return value:
- * Booleans (Array)
+ * Booleans <ARRAY>
  *
  * Public : Yes
  */

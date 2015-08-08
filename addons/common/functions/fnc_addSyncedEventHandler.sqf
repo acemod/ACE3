@@ -1,19 +1,17 @@
 /*
  * Author: jaynus
- *
  * Register an event handler for an ACE synced event
  *
  * Argument:
- * 0: Name (String)
- * 1: Handler (Code)
- * 2: TTL (Number or Code) [Optional]
+ * 0: Name <STRING>
+ * 1: Handler <CODE>
+ * 2: TTL (optional: 0) <NUMBER, CODE>
  *
  * Return value:
- * Boolean of success
+ * Boolean of success <BOOL>
  *
- * Public : No
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private["_ttl", "_eventId", "_data"];

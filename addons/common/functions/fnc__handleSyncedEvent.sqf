@@ -1,19 +1,17 @@
 /*
  * Author: jaynus
- *
  * Handles synced events being received. Server will log them, and server/client will execute them.
  *
  * Arguments [Client] :
- * 0: eventName (String)
- * 1: arguments (Array)
- * 2: ttl (Scalar)
+ * 0: eventName <STRING>
+ * 1: arguments <ARRAY>
+ * 2: ttl <SCALAR>
  *
- * Return value:
- * Boolean of success
+ * Return Value:
+ * Boolean of success <BOOL>
  *
- * Public : No
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private["_internalData", "_eventLog", "_eventCode"];

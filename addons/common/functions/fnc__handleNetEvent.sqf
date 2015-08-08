@@ -1,14 +1,14 @@
 /*
  * Author: ?
- *
- * internal handler for net
+ * Internal net event handler.
  *
  * Arguments:
- *
- * Return value:
  * None
  *
- * Public : No
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,5 +1,5 @@
 /*
- * Author: esteldunedain and Jaynus
+ * Author: esteldunedain, Jaynus
  * Returns the result of the function and caches it up to a given ACE_time or event
  *
  * Arguments:
@@ -8,7 +8,7 @@
  * 2: Namespace to store the cache on <NAMESPACE>
  * 3: Cache uid <STRING>
  * 4: Max duration of the cache <NUMBER>
- * 5: Event that clears the cache <STRING> (Optional)
+ * 5: Event that clears the cache (default: nil) <STRING>
  *
  * Return Value:
  * Result of the function <ANY>
@@ -17,17 +17,15 @@
  */
 #include "script_component.hpp"
 
-params ["_params", "_function", "_namespace", "_uid", "_duration"];
-
+params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
 
 if (((_namespace getVariable [_uid, [-99999]]) select 0) < ACE_diagTime) then {
     _namespace setVariable [_uid, [ACE_diagTime + _duration, _params call _function]];
 
     // Does the cache needs to be cleared on an event?
-    if (count _this > 5) then {
-        private ["_event","_varName","_cacheList"];
-        _event = _this select 5;
-        _varName = format [QGVAR(clearCache_%1),_event];
+    if (!isNil "_event") then {
+        private ["_varName", "_cacheList"];
+        _varName = format [QGVAR(clearCache_%1), _event];
         _cacheList = missionNamespace getVariable _varName;
 
         // If there was no EH to clear these caches, add one

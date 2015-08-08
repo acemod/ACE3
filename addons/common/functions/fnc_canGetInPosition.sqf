@@ -1,15 +1,14 @@
 /*
  * Author: commy2
- *
  * Is the unit able to enter the vehicle in the given position
  *
  * Arguments:
- * 0: Unit to enter the vehicle (Object)
- * 1: The vehicle to be entered (Object)
- * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" (String)
- * 3: Check current distance to vehicles memory point? (Bool, optional default: false)
+ * 0: Unit to enter the vehicle <OBJECT>
+ * 1: The vehicle to be entered <OBJECT>
+ * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" <STRING>
+ * 3: Check current distance to vehicles memory point? (default: false) <BOOL>
  * 4: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken.
- *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)
+ *    Note: This index is diffrent from Armas "cargoIndex". (default: next free index) <NUMBER>
  *
  * Return Value:
  * None

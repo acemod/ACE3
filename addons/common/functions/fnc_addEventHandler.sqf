@@ -1,16 +1,15 @@
 /*
  * Author: Nou
- *
  * Add a event handler.
  *
  * Argument:
- * 0: Event name (string)
- * 1: Event code (code)
+ * 0: Event name <STRING>
+ * 1: Event code <CODE>
  *
  * Return value:
- * Event handler ID number (for use with fnc_removeEventHandler)
+ * Event handler ID number (for use with fnc_removeEventHandler) <NUMBER>
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

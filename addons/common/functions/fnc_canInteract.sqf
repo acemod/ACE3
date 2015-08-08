@@ -1,13 +1,12 @@
 /*
  * Author: Glowbal
- *
  * Check if unit can interact with enviroment. Unit has to be awake and not be in arrested state.
  *
  * Arguments:
- * 0: Unit that try to Interact (OBJECT)
+ * 0: Unit that try to Interact <OBJECT>
  *
  * Return Value:
- * BOOLEAN True if unit can interact with enviroment.
+ * Can interact with enviroment <BOOL>
  *
  * Public: Yes
  */

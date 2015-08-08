@@ -1,18 +1,17 @@
 /*
  * Author: commy2
- *
  * Add an addAction event to a unit. Used to handle multiple addAction events. Global arguments, local effects. Does only work for player controlled units.
  *
  * Argument:
- * 0: Unit the action should be assigned to (Object)
- * 1: Name of the action, e.g. "DefaultAction" (String)
- * 2: Condition (Code or String)
- * 3: Code to execute (Code or String)
+ * 0: Unit the action should be assigned to <OBJECT>
+ * 1: Name of the action, e.g. "DefaultAction" <STRING>
+ * 2: Condition <CODE, STRING>
+ * 3: Code to execute <CODE, STRING>
  *
- * Return value:
- * ID of the action (used to remove it later).
+ * Return Value:
+ * ID of the action (used to remove it later) <NUMBER>
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

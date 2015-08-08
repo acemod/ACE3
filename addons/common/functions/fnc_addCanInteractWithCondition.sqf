@@ -1,16 +1,15 @@
 /*
  * Author: commy2
- *
  * Add a condition that gets checked by ace_common_fnc_canInteractWith.
  *
  * Arguments:
- * 0: The conditions id. Used to remove later or as exception name. An already existing name overwrites. (String)
- * 1: The condition to check. format of "_this" is "[_player, _target]". (Code)
+ * 0: The conditions id. Used to remove later or as exception name. An already existing name overwrites. <STRING>
+ * 1: The condition to check. format of "_this" is "[_player, _target]". <CODE>
  *
  * Return Value:
  * None
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

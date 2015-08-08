@@ -1,16 +1,16 @@
 /*
  * Author: esteldunedain
- *
  * Add line to draw on debug
  *
  * Argument:
- * 0: Start point ASL (Array)
- * 1: End point ASL (Array)
- * 2: Color (Array)
+ * 0: Start point ASL <ARRAY>
+ * 1: End point ASL <ARRAY>
+ * 2: Color <ARRAY>
  *
  * Return value:
+ * None
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

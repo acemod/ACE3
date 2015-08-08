@@ -11,7 +11,7 @@
  * 4: localizedDescription <STRING>
  * 5: possibleValues <ARRAY>
  * 6: isForced <BOOL>
- * 7: defaultValue (Any)
+ * 7: defaultValue <ANY>
  *
  * Return Value:
  * None

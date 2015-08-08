@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Get a binary equivalent of a decimal number.
  *
- * Argument:
- * 0: Decimal Number (Number)
- * 1: Minimum length of the returned Array, note: returned array can be larger (Number, optional default 8)
+ * Arguments:
+ * 0: Decimal Number <NUMBER>
+ * 1: Minimum length of the returned Array, note: returned array can be larger (default: 8) <NUMBER>
  *
- * Return value:
- * Booleans (Array)
+ * Return Value:
+ * Booleans <ARRAY>
  *
  * Public : Yes
  */

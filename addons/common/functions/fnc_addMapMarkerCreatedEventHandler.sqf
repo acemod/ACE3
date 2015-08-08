@@ -1,15 +1,14 @@
 /*
  * Author: commy2
- *
  * Add a map marker creation event handler.
  *
  * Argument:
- * 0: Code to execute (Code or String)
+ * 0: Code to execute <CODE, STRING>
  *
  * Return value:
- * ID of the event script (used to remove it later).
+ * ID of the event script (used to remove it later). <NUMBER>
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 
