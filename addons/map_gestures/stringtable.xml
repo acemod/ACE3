@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="map_gestures">
+        <Key ID="STR_ACE_map_gestures_moduleSettings_displayName">
+            <English>Map Gestures</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_enabled_displayName">
+            <English>Enabled</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_maxRange_displayName">
+            <English>Map Gesture Max Range</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_maxRange_description">
+            <English>Max range between players to show the map gesture indicator [default: 7 meters]</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_displayName">
+            <English>Lead Default Alpha</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_description">
+            <English>Fallback Alpha value for group leaders.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultAlpha_displayName">
+            <English>Default Alpha</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultAlpha_descriptions">
+            <English>Fallback Alpha value.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
+            <English>Lead Default Color</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
+            <English>Fallback Color value for group leaders.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
+            <English>Default Color</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_defaultColor_description">
+            <English>Fallback Color value.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_leadAlpha_displayName">
+            <English>Lead Alpha</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_leadAlpha_description">
+            <English>Alpha value for group leaders of groups synced with this module.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_alpha_displayName">
+            <English>Alpha</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_alpha_description">
+            <English>Alpha value for group members of groups synced with this module.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_leadColor_displayName">
+            <English>Lead Color</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_leadColor_description">
+            <English>Color value for group leaders of groups synced with this module.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_color_displayName">
+            <English>Color</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_color_description">
+            <English>Color value for group members of groups synced with this module.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
+            <English>Map Gestures - Group Settings</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_interval_displayName">
+            <English>Update Interval</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_interval_description">
+            <English>Time between data updates.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_displayName">
+            <English>Group color configurations</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_description">
+            <English>Group color configuration containing arrays of color pairs ([leadColor, color]).</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroups_description">
+            <English>Group color group name index, containing names of groups with configurations attached to them.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroups_displayName">
+            <English>Group color group name index</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroupIndex_displayName">
+            <English>Group color group name mapping index</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroupIndex_description">
+            <English>Group color group name mapping index, mapping the GroupColorConfigurationsGroups to the GroupColorConfigurations.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_enabled_description">
+            <English>Enables the Map Gestures.</English>
+        </Key>
+    </Package>
+</Project>
