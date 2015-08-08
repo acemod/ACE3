@@ -1,9 +1,3 @@
-class ACE_settingsMenu {
-    idd = 145246;
-    movingEnable = false;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', _this select 0)]; [] call FUNC(onSettingsMenuOpen););
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', nil)]; saveProfileNamespace;);
-
 #define SIZEX (((safezoneW / safezoneH) min 1.2))
 #define SIZEY (SIZEX / 1.2)
 #define X_ORIGINAL(num) (num * (SIZEX / 40) + (safezoneX + (safezoneW - SIZEX)/2))
@@ -20,6 +14,12 @@ class ACE_settingsMenu {
 #define Y_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(optionMenuDisplaySize)), 0)]), Y_ORIGINAL(num), Y_MAKEITBIGGA(num))])
 #define W_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(optionMenuDisplaySize)), 0)]), W_ORIGINAL(num), W_MAKEITBIGGA(num))])
 #define H_PART(num) QUOTE(linearConversion [ARR_5(0, 2, (missionNamespace getVariable [ARR_2(QUOTE(QGVAR(optionMenuDisplaySize)), 0)]), H_ORIGINAL(num), H_MAKEITBIGGA(num))])
+
+class ACE_settingsMenu {
+    idd = 145246;
+    movingEnable = false;
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', _this select 0)]; [] call FUNC(onSettingsMenuOpen););
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_settingsMenu', nil)]; saveProfileNamespace;);
 
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
@@ -77,9 +77,19 @@ class ACE_settingsMenu {
             idc = 13;
             x = X_PART(2);
             y = Y_PART(3.4);
-            w = W_PART(30);
+            w = W_PART(15);
             h = H_PART(1);
             text = "";
+        };
+        class categorySelection: ACE_gui_comboBoxBase {
+            idc = 14;
+            x = X_PART(14);
+            y = Y_PART(3.4);
+            w = W_PART(9);
+            h = H_PART(1);
+            text = "";
+            onLBSelChanged = QUOTE( call FUNC(onCategorySelectChanged));
+            SizeEx = H_PART(0.9);
         };
         class selectionAction_1: ACE_gui_buttonBase {
             idc = 1000;
@@ -290,6 +300,16 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
             w = W_PART(30);
             h = H_PART(1);
             text = "";
+        };
+        class categorySelection: ACE_gui_comboBoxBase {
+            idc = 14;
+            x = X_PART(14);
+            y = Y_PART(3.4);
+            w = W_PART(9);
+            h = H_PART(1);
+            text = "";
+            onLBSelChanged = QUOTE( call FUNC(onServerCategorySelectChanged));
+            SizeEx = H_PART(0.9);
         };
         class selectionAction_1: ACE_gui_buttonBase {
             idc = 1000;

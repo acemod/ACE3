@@ -31,7 +31,7 @@ _actions = [];
         if (getText (_item >> "ACE_Attachable") != "") then {
             _displayName = getText(_item >> "displayName");
             _picture = getText(_item >> "picture");
-            _action = [_x, _displayName, _picture, {_this call FUNC(attach)}, {_this call FUNC(canAttach)}, {}, [_x]] call EFUNC(interact_menu,createAction);
+            _action = [_x, _displayName, _picture, {[{_this call FUNC(attach)}, _this] call EFUNC(common,execNextFrame)}, {_this call FUNC(canAttach)}, {}, [_x]] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _target];
         };
     };
@@ -44,7 +44,7 @@ _actions = [];
         if (getText (_item >> "ACE_Attachable") != "") then {
             _displayName = getText(_item >> "displayName");
             _picture = getText(_item >> "picture");
-            _action = [_x, _displayName, _picture, {_this call FUNC(attach)}, {_this call FUNC(canAttach)}, {}, [_x]] call EFUNC(interact_menu,createAction);
+            _action = [_x, _displayName, _picture, {[{_this call FUNC(attach)}, _this] call EFUNC(common,execNextFrame)}, {_this call FUNC(canAttach)}, {}, [_x]] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _target];
         };
     };

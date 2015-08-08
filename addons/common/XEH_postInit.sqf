@@ -341,6 +341,14 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
+// Register localizations for the Keybinding categories
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
+
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
     [] call FUNC(deviceKeyFindValidIndex);

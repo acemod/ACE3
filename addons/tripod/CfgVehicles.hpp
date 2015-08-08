@@ -17,7 +17,7 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_Item_Tripod: Item_Base_F {
-		author[] = {"Rocko", "Scubaman3D"};
+        author[] = {"Rocko", "Scubaman3D"};
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(DisplayName);
@@ -76,7 +76,8 @@ class CfgVehicles {
                     displayName = CSTRING(Adjust);
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE(_target call FUNC(adjust));
+                    //wait a frame to handle "Do When releasing action menu key" option:
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [_target])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
