@@ -19,6 +19,7 @@ if (!hasInterface) exitwith {};
     if (!(_target isKindOf "CAManBase") || ACE_player distance _target > 10) then {_target = ACE_player};
     // Conditions: canInteract
     if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, _target] call FUNC(canOpenMenu)) exitwith {false};
 
     // Statement
     [_target] call FUNC(openMenu);
@@ -30,3 +31,4 @@ if (!hasInterface) exitwith {};
     };
 },
 [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+

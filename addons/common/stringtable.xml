@@ -644,6 +644,9 @@
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
         </Key>
+        <Key ID="STR_ACE_Common_VehiclesOnly">
+            <English>Vehicles only</English>
+        </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
             <Polish>Nie wymuszaj</Polish>

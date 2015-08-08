@@ -5,6 +5,7 @@ ADDON = false;
 PREP(onMenuOpen);
 PREP(openMenu);
 
+PREP(canOpenMenu);
 PREP(updateIcons);
 PREP(updateUIInfo);
 PREP(handleUI_DisplayOptions);
@@ -16,6 +17,7 @@ PREP(updateBodyImage);
 PREP(updateInformationLists);
 PREP(setTriageStatus);
 PREP(collectActions);
+PREP(module);
 
 GVAR(INTERACTION_TARGET) = objNull;
 GVAR(actionsOther) = [];

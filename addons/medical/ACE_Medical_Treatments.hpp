@@ -856,9 +856,9 @@ class ACE_Medical_Advanced {
             // specific details for the ACE_Morphine treatment action
             class Morphine {
                 painReduce = 15;
-                hrIncreaseLow[] = {-10, -30, 35};
-                hrIncreaseNormal[] = {-10, -50, 40};
-                hrIncreaseHigh[] = {-10, -40, 50};
+                hrIncreaseLow[] = {-10, -20, 35};
+                hrIncreaseNormal[] = {-10, -30, 35};
+                hrIncreaseHigh[] = {-10, -35, 50};
                 timeInSystem = 900;
                 maxDose = 4;
                 inCompatableMedication[] = {};
