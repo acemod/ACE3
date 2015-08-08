@@ -92,7 +92,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class disable {
-                        name = CSTRING(disabled);
+                        name = ECSTRING(common,Disabled);
                         value = 0;
                     };
                     class normal {
@@ -101,7 +101,7 @@ class CfgVehicles {
                         default = 1;
                     };
                     class full {
-                        name = CSTRING(enabled);
+                        name = ECSTRING(common,Enabled);
                         value = 2;
                     };
                 };
@@ -198,8 +198,8 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_Description);
                 typeName = "NUMBER";
                 class values {
-                    class keep { name = CSTRING(No); value = 0; };
-                    class remove { name = CSTRING(Yes); value = 1; default = 1; };
+                    class keep { name = ECSTRING(common,No); value = 0; };
+                    class remove { name = ECSTRING(common,Yes); value = 1; default = 1; };
                 };
             };
             class useCondition_PAK {
@@ -220,7 +220,7 @@ class CfgVehicles {
                     class vehicle { name = CSTRING(AdvancedMedicalSettings_vehicle); value = 1; };
                     class facility { name = CSTRING(AdvancedMedicalSettings_facility); value = 2; };
                     class vehicleAndFacility { name = CSTRING(AdvancedMedicalSettings_vehicleAndFacility); value = 3; default = 1; };
-                    class disabled { name = CSTRING(AdvancedMedicalSettings_disabled); value = 4;};
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
                 };
             };
             class medicSetting_SurgicalKit: medicSetting_PAK {
@@ -280,7 +280,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0;
                 class values {
-                    class disable { name = CSTRING(disabled); value = 0; default = 1;};
+                    class disable { name = ECSTRING(common,Disabled); value = 0; default = 1;};
                     class playerOnly { name = CSTRING(playeronly); value = 1; };
                     class playerAndAI { name = CSTRING(playersandai); value = 2; };
                 };
@@ -373,11 +373,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class none {
-                        name = CSTRING(No);
+                        name = ECSTRING(common,No);
                         value = 0;
                     };
                     class medic {
-                        name = CSTRING(Yes);
+                        name = ECSTRING(common,Yes);
                         value = 1;
                         default = 1;
                     };
