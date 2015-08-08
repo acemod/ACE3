@@ -65,7 +65,8 @@ if (isNil _name) then {
         localizedDescription,
         possibleValues,
         isForced,
-        defaultValue
+        defaultValue,
+        category
     ];*/
     _settingData = [
         _name,
@@ -75,7 +76,8 @@ if (isNil _name) then {
         getText (_optionEntry >> "description"),
         getArray (_optionEntry >> "values"),
         getNumber (_optionEntry >> "force") > 0,
-        _value
+        _value,
+        getText (_optionEntry >> "category")
     ];
 
     //Strings in the values array won't be localized from the config, so just do that now:

@@ -28,16 +28,24 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
     default {[]};
 };
 
-if (count _collection > 0) then {
+_selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
+_filteredCollection = [];
+{
+    if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
+        _filteredCollection pushBack _x;
+    };
+} forEach _collection;
+
+if (count _filteredCollection > 0) then {
     _settingIndex =  (lbCurSel _ctrlList);
-    if (_settingIndex > (count _collection)) then {
-        _settingIndex = count _collection  - 1;
+    if (_settingIndex > (count _filteredCollection)) then {
+        _settingIndex = count _filteredCollection  - 1;
     };
 
     if (_settingIndex < 0) then {
         _settingIndex = 0;
     };
-    _setting = _collection select _settingIndex;
+    _setting = _filteredCollection select _settingIndex;
 
     _entryName = _setting select 0;
     _localizedName = _setting select 3;
@@ -51,7 +59,7 @@ if (count _collection > 0) then {
     switch (GVAR(optionMenu_openTab)) do {
         case (MENU_TAB_OPTIONS): {
             _possibleValues = _setting select 5;
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
 
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
@@ -66,7 +74,7 @@ if (count _collection > 0) then {
             (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
         };
         case (MENU_TAB_COLORS): {
-            _currentColor = _setting select 8;
+            _currentColor = _setting select 9;
             {
                 sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
             } forEach [410, 411, 412, 413];
