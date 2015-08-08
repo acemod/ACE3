@@ -13,7 +13,7 @@ if (!hasInterface) exitwith {};
 }] call EFUNC(common,addEventhandler);
 
 
-["ACE3 Common", QGVAR(DisplayMenuKey), localize LSTRING(DisplayMenuKey),
+["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
 {
     _target = cursorTarget;
     if (!(_target isKindOf "CAManBase") || ACE_player distance _target > 10) then {_target = ACE_player};
@@ -29,4 +29,4 @@ if (!hasInterface) exitwith {};
         [ObjNull] call FUNC(openMenu);
     };
 },
-[0, [true, false, false]], false, 0] call CBA_fnc_addKeybind;
+[35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
