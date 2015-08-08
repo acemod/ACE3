@@ -6,10 +6,10 @@
  * None
  *
  * Return Value:
- * can deploy? <BOOLEAN>
+ * can deploy? <BOOL>
  *
  * Example:
- * call ace_sandbag_fnc_canDeploy;
+ * [] call ace_sandbag_fnc_canDeploy
  *
  * Public: No
  */
@@ -22,6 +22,7 @@ if (ACE_player getVariable [QGVAR(usingSandbag), false]) exitWith { false };
 if ((getPosATL ACE_player select 2) - (getPos ACE_player select 2) > 1E-5) exitWith { false };
 
 private ["_surfaceClass", "_surfaceType"];
+
 _surfaceClass = ([surfaceType (position ACE_player), "#"] call CBA_fnc_split) select 1;
 _surfaceType = getText (configfile >> "CfgSurfaces" >> _surfaceClass >> "soundEnviron");
 
