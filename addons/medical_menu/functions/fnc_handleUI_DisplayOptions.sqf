@@ -60,14 +60,32 @@ GVAR(LatestDisplayOptionMenu) = _name;
 // The triage card has no options available
 lbClear 212;
 if (_name isEqualTo "triage") exitwith {
+
     ctrlEnable [212, true];
-    _card = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageList);
+    private ["_log", "_triageCardTexts", "_message"];
+    _log = GVAR(INTERACTION_TARGET) getvariable [QEGVAR(medical,triageCard), []];
+    _triageCardTexts = [];
     {
-        lbAdd [212, format["%1 x%2", getText(configFile >> "CfgWeapons" >> (_x select 0) >> "displayName"), _x select 1]];
-    } forEach _card;
-    if (count _card == 0) then {
-        lbAdd [212, "No Entries"];
+        _x params ["_item", "_amount", "_time"];
+        _message = _item;
+        if (isClass(configFile >> "CfgWeapons" >> _item)) then {
+            _message = getText(configFile >> "CfgWeapons" >> _item >> "DisplayName");
+        } else {
+            if (isLocalized _message) then {
+                _message = localize _message;
+            };
+        };
+        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_time - _time) / 60)];
+        nil;
+    }count _log;
+
+    if (count _triageCardTexts == 0) exitwith {
+        lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
     };
+    {
+        lbAdd [212,_x];
+        nil;
+    }count _triageCardTexts;
 };
 
 ctrlEnable [212, false];
