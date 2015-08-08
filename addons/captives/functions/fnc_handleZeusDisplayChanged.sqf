@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_zeusIsOpen);
+params ["_unit","_zeusIsOpen"];
 
 //set showHUD based on unit status:
 if (!_zeusIsOpen) then {

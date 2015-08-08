@@ -9,13 +9,13 @@
  * None
  *
  * Example:
- * player call ace_sitting_fnc_handleInterrupt;
+ * player call ace_sitting_fnc_handleInterrupt
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 if (_player getVariable [QGVAR(isSitting), false]) then {
     _player call FUNC(stand);
