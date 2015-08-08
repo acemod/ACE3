@@ -373,11 +373,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class none {
-                        name = CSTRING(No);
+                        name = ECSTRING(common,No);
                         value = 0;
                     };
                     class medic {
-                        name = CSTRING(Yes);
+                        name = ECSTRING(common,Yes);
                         value = 1;
                         default = 1;
                     };
