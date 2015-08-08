@@ -269,6 +269,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
+            <Polish>Menu interakcji</Polish>
         </Key>
     </Package>
 </Project>

@@ -345,10 +345,10 @@
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
         </Key>
-		<Key ID="STR_ACE_OptionsMenu_headBugFix">
+        <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
         </Key>
-		<Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
+        <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
@@ -369,6 +369,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
+            <Polish>Wszystkie kategorie</Polish>
         </Key>
     </Package>
 </Project>
