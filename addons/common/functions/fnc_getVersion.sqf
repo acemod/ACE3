@@ -3,7 +3,7 @@
  *
  * Get the version number of the current ACE Build
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:

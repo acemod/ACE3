@@ -3,7 +3,7 @@
  *
  * Get the vehicle codriver positions.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle type (String)
  *
  * Return value:

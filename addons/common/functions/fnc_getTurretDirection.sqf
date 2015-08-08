@@ -3,7 +3,7 @@
  *
  * Get the absolute turret direction for FOV/PIP turret.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (Object)
  * 1: Turret Position
  *

@@ -2,7 +2,7 @@
  * Author: Nou
  * Add a event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Event name <STRING>
  * 1: Event code <CODE>
  *

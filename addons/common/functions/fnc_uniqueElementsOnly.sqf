@@ -4,10 +4,10 @@
  * Make a copy of an array with only the unique elements.
  *
  * Arguments:
- * 0: array (ARRAY)
+ * 0: array <ARRAY>
  *
  * Return Value:
- * Copy of original array (ARRAY)
+ * Copy of original array <ARRAY>
  *
  *
  * Public: Yes

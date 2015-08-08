@@ -4,7 +4,7 @@
 * Draw progress bar and execute given function if succesful.
 * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
 *
-* Argument:
+* Arguments:
 * 0: icon ID <STRING>
 * 1: show <BOOL>
 * 2: Icon Path <STRING>

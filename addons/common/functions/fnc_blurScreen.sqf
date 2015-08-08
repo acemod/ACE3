@@ -1,7 +1,7 @@
 /*
  * Author: Glowbal
  *
- * Argument:
+ * Arguments:
  * 0: ID <NUMBER>
  *
  * Return value:

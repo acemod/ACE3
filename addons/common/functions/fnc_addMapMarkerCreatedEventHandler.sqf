@@ -2,7 +2,7 @@
  * Author: commy2
  * Add a map marker creation event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Code to execute <CODE, STRING>
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * Transforms a number to an string of the correspondending digits.
  *
- * Argument:
+ * Arguments:
  * 0: Number to 'digitize' (Number)
  * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Number, optional)
  *

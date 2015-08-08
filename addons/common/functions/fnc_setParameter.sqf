@@ -4,7 +4,7 @@
  * Sets the value of an ACE_Parameter and makes it public.
  *
  * Arguments:
- * 0: Parameter name (string)
+ * 0: Parameter name <STRING>
  * 1: Value
  *
  * Return Value:

@@ -3,7 +3,7 @@
  *
  * Check if the unit is in a vehicle and turned out.
  *
- * Argument:
+ * Arguments:
  * 0: Unit, not the vehicle (OBJECT)
  *
  * Return value:

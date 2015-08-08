@@ -3,7 +3,7 @@
  *
  * Remove a synced event handler
  *
- * Argument:
+ * Arguments:
  * 0: Name (String)
  *
  * Return value:

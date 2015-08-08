@@ -2,7 +2,7 @@
  * Author: jaynus
  * Register an event handler for an ACE synced event
  *
- * Argument:
+ * Arguments:
  * 0: Name <STRING>
  * 1: Handler <CODE>
  * 2: TTL (optional: 0) <NUMBER, CODE>

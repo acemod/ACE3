@@ -3,7 +3,7 @@
  *
  * Execute a function on a remote machine in mp.
  *
- * Argument:
+ * Arguments:
  * 0: Function arguments (Array)
  * 1: Function to execute, has to be defined on the remote machine first (String)
  * 2: The function will be executed where this unit is local OR the mode were this function should be executed. (Object OR Number, optional default: 2)

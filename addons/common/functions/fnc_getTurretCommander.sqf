@@ -3,7 +3,7 @@
  *
  * Get the turret index of a vehicles commander.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (Object)
  *
  * Return value:

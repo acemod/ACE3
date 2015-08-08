@@ -3,7 +3,7 @@
  *
  * Executes a code on the next frame
  *
- * Argument:
+ * Arguments:
  * 0: Code to execute (CODE)
  * 1: Parameters to run the code with (ARRAY)
  *

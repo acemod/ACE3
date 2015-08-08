@@ -3,7 +3,7 @@
  *
  * Mutes the unit. It won't trigger auto generated chat messages either.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Object)
  * 1: Reason to mute the unit (String)
  *

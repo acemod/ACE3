@@ -3,7 +3,7 @@
  *
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
  *
- * Argument:
+ * Arguments:
  * 0: Maximal distance to search. (Number)
  *
  * Return value:

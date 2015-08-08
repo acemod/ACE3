@@ -3,7 +3,7 @@
  *
  * What kind of item is given classname
  *
- * Argument:
+ * Arguments:
  * 0: Classname of a item. (String)
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * Compares version numbers of PBOs and DLLs.
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:

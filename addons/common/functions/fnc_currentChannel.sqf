@@ -3,7 +3,7 @@
  *
  * Returns the current radio / chat / marker channel.
  *
- * Argument:
+ * Arguments:
  * NONE.
  *
  * Return value:

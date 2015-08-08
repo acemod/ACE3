@@ -3,10 +3,10 @@
  *
  * Setvariable value
  *
- * Argument:
- * 0: Unit (OBJECT)
- * 1: variableName (STRING)
- * 2: value (ANY)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: variableName <STRING>
+ * 2: value <ANY>
  *
  * Return value:
  * None

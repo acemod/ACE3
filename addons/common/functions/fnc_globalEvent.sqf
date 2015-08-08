@@ -3,7 +3,7 @@
  *
  * Execute a global event on all clients, including self.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *

@@ -3,7 +3,7 @@
  *
  * Returns a value depending on current zoom level.
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:

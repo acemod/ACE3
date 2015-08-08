@@ -3,7 +3,7 @@
  *
  * Display a message.
  *
- * Argument:
+ * Arguments:
  * 0: Message (String)
  * 1: Play a clicking sound (Bool, optional default: false)
  * 2: How long before hiding the message in seconds (Number, optional default: 2 sec)

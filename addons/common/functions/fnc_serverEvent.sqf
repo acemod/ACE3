@@ -3,7 +3,7 @@
  *
  * Execute a event only on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *

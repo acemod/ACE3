@@ -3,7 +3,7 @@
  *
  * Returns a orthonormal system of reference aligned with the supplied vector
  *
- * Argument:
+ * Arguments:
  * Vector to align the coordinate system with (Array)
  *
  * Return value:

@@ -3,12 +3,12 @@
  *
  * Removes white spaces from string
  *
- * Argument:
- * 0: stringA (STRING)
- * 1: stringB (STRING)
+ * Arguments:
+ * 0: stringA <STRING>
+ * 1: stringB <STRING>
  *
- * Return value:
- * copy of string (STRING)
+ * Return Value:
+ * copy of string <STRING>
  *
  * Public: Yes
  */

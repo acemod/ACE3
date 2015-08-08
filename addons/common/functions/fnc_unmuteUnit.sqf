@@ -3,11 +3,11 @@
  *
  * Unmutes the unit. Only unmutes if the last reason was removed.
  *
- * Argument:
- * 0: Unit (Object)
- * 1: Reason to unmute the unit. (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Reason to unmute the unit. <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

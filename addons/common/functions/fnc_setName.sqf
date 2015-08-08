@@ -3,10 +3,10 @@
  *
  * Sets the name variable of the object. Used to prevent issues with the name command.
  *
- * Argument:
- * 0: Object (Object)
+ * Arguments:
+ * 0: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

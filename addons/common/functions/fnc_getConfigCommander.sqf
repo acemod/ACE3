@@ -3,7 +3,7 @@
  *
  * Get the commander config of a vehicles turret.
  *
- * Argument:
+ * Arguments:
  * 0: vehicle (OBJECT)
  *
  * Return value:

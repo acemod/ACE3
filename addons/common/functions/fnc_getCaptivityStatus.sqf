@@ -3,7 +3,7 @@
  *
  * Return the captivity status of an unit.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Object)
  *
  * Return value:

@@ -3,7 +3,7 @@
  *
  * Remove an event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event code (number)
  *

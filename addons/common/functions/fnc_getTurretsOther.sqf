@@ -3,7 +3,7 @@
  *
  * Get the turret indices of other turrets (not gunner, commander, copilot or ffv).
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (Object)
  *
  * Return value:

@@ -3,12 +3,12 @@
  *
  * Create a centered, colored text.
  *
- * Argument:
- * 0: Text (Anything)
- * 1: Color (Array)
+ * Arguments:
+ * 0: Text <ANY>
+ * 1: Color <ARRAY>
  *
- * Return value:
- * Text (STRING)
+ * Return Value:
+ * Text <STRING>
  *
  * Public: Yes
  */

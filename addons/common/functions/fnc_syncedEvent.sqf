@@ -3,13 +3,13 @@
  *
  * Call and propegate a synced event
  *
- * Argument:
- * 0: Name (String)
- * 1: Arguments (Array)
- * 2: TTL (Number or Code) [Optional] for this specific event call
+ * Arguments:
+ * 0: Name <STRING>
+ * 1: Arguments <ARRAY>
+ * 2: TTL <NUMBER, CODE> [Optional] for this specific event call
  *
- * Return value:
- * Boolean of success (BOOLEAN)
+ * Return Value:
+ * Boolean of success <BOOL>
  *
  * Public: No
  */

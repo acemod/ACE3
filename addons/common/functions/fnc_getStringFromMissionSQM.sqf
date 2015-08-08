@@ -3,7 +3,7 @@
  *
  * Get a string from the mission.sqm file. Mission has to be saved in the Editor. The string cannot contain the ; character.
  *
- * Argument:
+ * Arguments:
  * 0: Path of the entry in the mission.sqm (Array)
  *
  * Return value:

@@ -3,16 +3,18 @@
  *
  * Execute a event only on specific clients.
  *
- * Argument:
- * 0: Event name (string)
- * 1: Event targets (object or array of objects)
- * 2: Event args (any)
+ * Arguments:
+ * 0: Event name (STRING)
+ * 1: Event targets <OBJECT, ARRAY<OBJECT>>
+ * 2: Event args <ANY>
  *
  * Note: If local executor is in list of targets, event will execute with
  * network delay, and not immediatly.
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -3,7 +3,7 @@
  *
  * Get Chidrens from a config entry
  *
- * Argument:
+ * Arguments:
  * 0: Unit (OBJECT)
  *
  * Return value:

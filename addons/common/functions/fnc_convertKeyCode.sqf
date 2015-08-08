@@ -3,7 +3,7 @@
  *
  * Get a key code used in ACE key input eh.
  *
- * Argument:
+ * Arguments:
  * 0: Arma DIK code (Number)
  * 1: Key state for shift left and shift right key (Bool)
  * 2: Key state for ctrl left and ctrl right key (Bool)

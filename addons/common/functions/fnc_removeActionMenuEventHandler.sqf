@@ -3,7 +3,7 @@
  *
  * Remove an addAction event from a unit.
  *
- * Argument:
+ * Arguments:
  * 0: Unit the action is assigned to (Object)
  * 1: Name of the action, e.g. "DefaultAction" (String)
  * 2: ID of the action (Number)

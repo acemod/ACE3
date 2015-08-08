@@ -3,9 +3,9 @@
  *
  * Disables the user input. Works stacked.
  *
- * Argument:
- * 0: id (STRING)
- * 1: disable (BOOLEAN)
+ * Arguments:
+ * 0: id <STRING>
+ * 1: disable <BOOLEAN>
  *
  * Return value:
  * None

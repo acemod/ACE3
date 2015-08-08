@@ -3,7 +3,7 @@
  *
  * Returns the name of the object. Used to prevent issues with the name command.
  *
- * Argument:
+ * Arguments:
  * 0: Object (Object)
  * 1: Show effective commander name? (Bool, optinal default: false)
  *

@@ -3,7 +3,7 @@
  *
  * Check if the object still exists and is alive. This function exists because 'alive objNull' actually returns true.
  *
- * Argument:
+ * Arguments:
  * 0: Any object (OBJECT)
  *
  * Return value:

@@ -6,7 +6,7 @@
  * Arguments:
  * ?
  *
- * Returns:
+ * Return Value:
  * ?
  *
  * Public: ?

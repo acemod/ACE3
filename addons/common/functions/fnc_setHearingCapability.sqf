@@ -3,12 +3,12 @@
  *
  * Handle set volume calls. Will use the lowest available volume setting.
  *
- * Argument:
- * 0: id (STRING)
- * 1: settings (NUMBER)
- * 2: add (BOOL)(Optional. True will add, false will remove. Default value is true)
+ * Arguments:
+ * 0: id <STRING>
+ * 1: settings <NUMBER>
+ * 2: add <BOOL> (default: true)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: Yes

@@ -2,7 +2,7 @@
  * Author: esteldunedain
  * Add line to draw on debug
  *
- * Argument:
+ * Arguments:
  * 0: Start point ASL <ARRAY>
  * 1: End point ASL <ARRAY>
  * 2: Color <ARRAY>

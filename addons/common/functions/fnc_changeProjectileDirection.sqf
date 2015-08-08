@@ -3,7 +3,7 @@
  *
  * Adjust a projectiles velocity and dir + up vector.
  *
- * Argument:
+ * Arguments:
  * 0: Projectile (Object, CfgAmmo)
  * 1: Adjust azimuth this much. (Number)
  * 2: Adjust inclination this much. (Number)

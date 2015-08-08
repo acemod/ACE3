@@ -3,7 +3,7 @@
  *
  * Revert a key code to a readible text.
  *
- * Argument:
+ * Arguments:
  * 0: Key code (Number)
  *
  * Return value:

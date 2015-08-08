@@ -3,11 +3,11 @@
  *
  * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
- * Argument:
- * 0: Object the variable should be assigned to (Object)
- * 1: Name of the variable (String)
- * 2: Value of the variable (Any)
- * 3: Windup ACE_time (Number, optional. Default: 1)
+ * Arguments:
+ * 0: Object the variable should be assigned to <OBJECT>
+ * 1: Name of the variable <STRING>
+ * 2: Value of the variable <ANY>
+ * 3: Windup ACE_time <NUMBER> (default: 1)
  *
  * Return value:
  * None

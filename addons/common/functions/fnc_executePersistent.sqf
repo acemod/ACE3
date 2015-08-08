@@ -3,7 +3,7 @@
  *
  * Execute all Persistent Functions
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return value:
@@ -17,7 +17,7 @@ params ["_target"];
 
 {
     if (isNil "_x") then {
-        diag_log text format ["[ACE] ERROR: No argument and function for remote function. ID: %1", _forEachIndex];
+        diag_log text format ["[ACE] ERROR: No Arguments and function for remote function. ID: %1", _forEachIndex];
     } else {
         if (typeName _x == "ARRAY") then {
             _x params ["_args","_function"];

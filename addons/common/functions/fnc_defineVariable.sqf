@@ -3,7 +3,7 @@
  *
  * Define a variable for the ACE variable framework
  *
- * Argument:
+ * Arguments:
  * 0: Name (STRING)
  * 1: defaultValue (ANY)
  * 2: publicFlag (BOOLEAN)

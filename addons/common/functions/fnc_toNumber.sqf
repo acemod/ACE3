@@ -4,10 +4,10 @@
  * Takes a string/number and returns the number.
  *
  * Arguments:
- * 0: TYPE - Value to attempt to convert to number or if number simply return number.
+ * 0: Value to attempt to convert to number or if number simply return number. <TYPE>
  *
- * Returns:
- * NUMBER
+ * Return Value:
+ * <NUMBER>
  *
  * Example:
  * number = ["102"] call FUNC(toNumber);

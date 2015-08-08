@@ -3,7 +3,7 @@
  *
  * Display a structured text.
  *
- * Argument:
+ * Arguments:
  * 0: Text (ANY)
  * 1: Size of the textbox (NUMBER) (OPTIONAL)
  * 2: Target Unit. Will only display if target is the player controlled object (OBJECT) (OPTIONAL)

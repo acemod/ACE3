@@ -3,12 +3,12 @@
  *
  * Use magazine
  *
- * Argument:
- * 0: unit (OBJECT)
- * 1: magazine (STRING)
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: magazine <STRING>
  *
- * Return value:
- * if magazine has been used. (BOOLEAN)
+ * Return Value:
+ * if magazine has been used. <BOOL>
  *
  * Public: Yes
  */

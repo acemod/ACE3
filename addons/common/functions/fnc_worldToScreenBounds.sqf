@@ -4,21 +4,21 @@
  * Function helper for framing objects on screen.
  *
  * Arguments:
- * 0: object (OBJECT)
- * 1: margins 3D (ARRAY)
- *   0: X (NUMBER)
- *   1: Y (NUMBER)
- *   2: Z (NUMBER)
- * 2: offset 3D (ARRAY)
- *   0: X (NUMBER)
- *   1: Y (NUMBER)
- *   2: Z (NUMBER)
+ * 0: object <OBJECT>
+ * 1: margins 3D <ARRAY>
+ *   0: X <NUMBER>
+ *   1: Y <NUMBER>
+ *   2: Z <NUMBER>
+ * 2: offset 3D <ARRAY>
+ *   0: X <NUMBER>
+ *   1: Y <NUMBER>
+ *   2: Z <NUMBER>
  *
  * Return Value:
- * 0: Minimal X (NUMMBER)
- * 1: Minimal Y (NUMMBER)
- * 2: Maximal X (NUMMBER)
- * 3: Maximal Y (NUMMBER)
+ * 0: Minimal X <NUMMBER>
+ * 1: Minimal Y <NUMMBER>
+ * 2: Maximal X <NUMMBER>
+ * 3: Maximal Y <NUMMBER>
  *
  * Public: No
  */

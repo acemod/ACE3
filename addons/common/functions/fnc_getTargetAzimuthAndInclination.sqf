@@ -3,7 +3,7 @@
  *
  * Get players viewing direction and slope
  *
- * Argument:
+ * Arguments:
  * None.
  *
  * Return value:

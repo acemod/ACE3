@@ -3,7 +3,7 @@
  *
  * Set a unit in arrest state
  *
- * Argument:
+ * Arguments:
  * 0: Unit to be Arrested (OBJECT)
  * 1: set Arrested (BOOL)
  *

@@ -3,8 +3,8 @@
  *
  * Convert an array of booleans into a number.
  *
- * Argument:
- * N: Booleans (Array of Booleans)
+ * Arguments:
+ * N: Booleans <ARRAY of Booleans>
  *
  * Return value:
  * Bitmask (Number)
