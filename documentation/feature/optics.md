@@ -3,6 +3,7 @@ layout: wiki
 title: Optics
 description: 2D and PIP optics
 group: feature
+category: equipment
 parent: wiki
 ---
 

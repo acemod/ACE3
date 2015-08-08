@@ -83,7 +83,7 @@ if(!GVAR(active)) then {
     // @TODO: Nou gets to field all tickets about missing lasers.
     //_localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
          
-    GVAR(selfDesignateHandle) = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call cba_fnc_addPerFrameHandler;
+    GVAR(selfDesignateHandle) = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call CBA_fnc_addPerFrameHandler;
 } else {
     [] call FUNC(laserHudDesignateOff);
     [] call FUNC(laserHudDesignateOn);

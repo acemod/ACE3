@@ -3,6 +3,7 @@ layout: wiki
 title: No Radio
 description: Disable callouts
 group: feature
+category: interaction
 parent: wiki
 ---
 

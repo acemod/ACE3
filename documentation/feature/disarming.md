@@ -3,6 +3,7 @@ layout: wiki
 title: Disarming
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

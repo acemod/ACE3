@@ -30,14 +30,14 @@ if (_vehicle isKindOf "Ship" ) then {
         _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
         _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
     } else {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
+        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
         TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
         _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
     };
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitwith { diag_log format["Unable to unload patient because invalid vehicle state. Either moving or Not close enough on the ground. %1", getPos _vehicle]; false };
+if (!_validVehiclestate) exitwith { diag_log format["Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4", _vehicle, getPos _vehicle, isTouchingGround _vehicle, speed _vehicle]; false };
 
 diag_log str _emptyPos;
 

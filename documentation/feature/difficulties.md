@@ -3,6 +3,7 @@ layout: wiki
 title: Difficulties
 description: Tweak to Vanilla hardest difficulty
 group: feature
+category: realism
 parent: wiki
 ---
 

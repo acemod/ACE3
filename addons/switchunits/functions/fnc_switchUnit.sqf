@@ -95,4 +95,4 @@ DFUNC(pfhSwitchUnit) = {
     };
 };
 
-[FUNC(pfhSwitchUnit), 0.2, [_unit, _oldUnit]] call cba_fnc_addPerFrameHandler;
+[FUNC(pfhSwitchUnit), 0.2, [_unit, _oldUnit]] call CBA_fnc_addPerFrameHandler;

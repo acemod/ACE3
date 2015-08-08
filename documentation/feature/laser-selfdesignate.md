@@ -3,6 +3,7 @@ layout: wiki
 title: Laser Self-Designate
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

@@ -3,6 +3,7 @@ layout: wiki
 title: Flash Suppressors
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 
