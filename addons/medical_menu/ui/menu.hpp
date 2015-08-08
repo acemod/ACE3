@@ -274,7 +274,7 @@ class GVAR(medicalMenu) {
             colorBackground[] = {1,1,1,1};
             colorPicture[] = {1,1,1,1};
             colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOF(data\body_background.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_background.paa));
         };
         class bodyImgHead: bodyImgBackground {
             idc = 50;
@@ -284,30 +284,30 @@ class GVAR(medicalMenu) {
             h = "12.33 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
             colorBackground[] = {1,1,1,1};
-            colorPicture[] = {1,1,1,1};
-            colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOF(data\body_head.paa));
+            colorPicture[] = {1,1,1,0.75};
+            colorText[] = {1,1,1,0.75};
+            text = QUOTE(PATHTOEF(medical,ui\body_head.paa));
         };
 
         class bodyImgTorso: bodyImgHead {
             idc = 51;
-            text = QUOTE(PATHTOF(data\body_torso.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_torso.paa));
         };
         class bodyImgArms_l: bodyImgHead {
             idc = 52;
-            text = QUOTE(PATHTOF(data\body_arm_left.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_arm_left.paa));
         };
         class bodyImgArms_r: bodyImgHead {
             idc = 53;
-            text = QUOTE(PATHTOF(data\body_arm_right.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_arm_right.paa));
         };
         class bodyImgLegs_l: bodyImgHead {
             idc = 54;
-            text = QUOTE(PATHTOF(data\body_leg_left.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_leg_left.paa));
         };
         class bodyImgLegs_r: bodyImgHead {
             idc = 55;
-            text = QUOTE(PATHTOF(data\body_leg_right.paa));
+            text = QUOTE(PATHTOEF(medical,ui\body_leg_right.paa));
         };
 
 
