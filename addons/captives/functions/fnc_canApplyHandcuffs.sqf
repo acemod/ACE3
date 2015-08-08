@@ -23,4 +23,4 @@ params ["_unit", "_target"];
 ("ACE_CableTie" in (items _unit)) &&
 {alive _target} &&
 {!(_target getVariable [QGVAR(isHandcuffed), false])} &&
-(!GVAR(requireSurrender) || (_target getVariable [QGVAR(isSurrendering), false]) || currentWeapon _target == "")
+(GVAR(requireSurrender) == 0 || ((_target getVariable [QGVAR(isSurrendering), false]) || (currentWeapon _target == "" && GVAR(requireSurrender) == 2)))

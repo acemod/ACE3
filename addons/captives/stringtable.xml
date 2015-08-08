@@ -227,5 +227,11 @@
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
         </Key>
+        <Key ID="STR_ACE_Captives_SurrenderOnly">
+            <English>Surrendering only</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
+            <English>Surrendering or No weapon</English>
+        </Key>
     </Package>
 </Project>
