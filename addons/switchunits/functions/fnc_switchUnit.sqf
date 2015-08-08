@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave", "_fnc_pfhSwitchUnit"];
+private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave"];
 
 params ["_unit"];
 
@@ -44,7 +44,7 @@ if (_leave) exitWith {
 //[_unit] joinSilent group player;
 [[_unit, player], QUOTE({(_this select 0) setVariable [ARR_3(QUOTE(QGVAR(OriginalOwner)), owner (_this select 0), true)]; (_this select 0) setOwner owner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
 
-_fnc_pfhSwitchUnit = {
+[{
     private ["_respawnEhId", "_oldOwner"];
     params ["_args", "_pfhId"];
     _args params ["_unit", "_oldUnit"];
@@ -78,6 +78,4 @@ _fnc_pfhSwitchUnit = {
 
         [_pfhId] call cba_fnc_removePerFrameHandler;
     };
-};
-
-[_fnc_pfhSwitchUnit, 0.2, [_unit, player]] call CBA_fnc_addPerFrameHandler;
+}, 0.2, [_unit, player]] call CBA_fnc_addPerFrameHandler;

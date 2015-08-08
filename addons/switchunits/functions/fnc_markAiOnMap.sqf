@@ -20,7 +20,7 @@ params ["_sidesToShow"];
 
 GVAR(AllMarkerNames) = [];
 
-_fnc_pfhMarkAiOnMap = {
+[{
     params ["_args"];
     _args params ["_sides"];
 
@@ -63,6 +63,4 @@ _fnc_pfhMarkAiOnMap = {
             };
         } count allUnits;
     };
-};
-
-[_fnc_pfhMarkAiOnMap, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;
+}, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

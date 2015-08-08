@@ -20,7 +20,7 @@ params ["_originalPlayerUnit"];
 
 [_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
-_fnc_pfhSwitchBack = {
+[{
     params ["_args", "_pfhId"];
     _args params ["_originalPlayerUnit", "_currentUnit"];
 
@@ -34,6 +34,4 @@ _fnc_pfhSwitchBack = {
 
         [_pfhId] call cba_fnc_removePerFrameHandler;
     };
-};
-
-[_fnc_pfhSwitchBack, 0.2, _this] call CBA_fnc_addPerFrameHandler;
+}, 0.2, _this] call CBA_fnc_addPerFrameHandler;
