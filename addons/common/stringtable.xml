@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -477,14 +477,15 @@
             <German>Überprüfe PBOs</German>
             <Czech>Zkontrolovat PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
+            <French>Vérifier les PBOs</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
-            <English></English>
             <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
             <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
             <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
+            <French>Ce module contrôle si les PBOs de chaque joueur sont corrects</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -493,6 +494,7 @@
             <German>Aktion</German>
             <Czech>Akce</Czech>
             <Portuguese>Ação</Portuguese>
+            <French>Action</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -501,6 +503,7 @@
             <German>Was soll mit Leuten passieren, die nicht die richtigen PBOs haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
+            <French>Que faire avec les personnes n'ayant pas les bon PBOs</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -509,6 +512,7 @@
             <German>Einmal verwarnen</German>
             <Czech>Upozornit jednou</Czech>
             <Portuguese>Avisar uma vez</Portuguese>
+            <French>Avertir une fois</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -517,6 +521,7 @@
             <German>Immer verwarnen</German>
             <Czech>Upozornit (permanentně)</Czech>
             <Portuguese>Avisar (permanente)</Portuguese>
+            <French>Avertir (permanent)</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -525,6 +530,7 @@
             <German>Kicken</German>
             <Czech>Vyhodit</Czech>
             <Portuguese>Chutar</Portuguese>
+            <French>Ejecter</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -533,6 +539,7 @@
             <German>Alle Addons überprüfen</German>
             <Czech>Zkontrolovat všechny addony</Czech>
             <Portuguese>Verificar todos addons</Portuguese>
+            <French>Vérifier tous les addons</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -541,6 +548,7 @@
             <German>Alle Addons anstatt nur ACE überprüfen?</German>
             <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
             <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
+            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -549,6 +557,7 @@
             <German>Whitelist</German>
             <Czech>Seznam povolených</Czech>
             <Portuguese>Lista branca</Portuguese>
+            <French>Liste blanche</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -557,6 +566,7 @@
             <German>Welche Addons werden dennoch erlaubt?</German>
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
+            <French>Quels addons sont tolérés</French>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -565,6 +575,7 @@
             <German>LSD-Fahrzeuge</German>
             <Czech>LSD vozidla</Czech>
             <Portuguese>Veículos LSD</Portuguese>
+            <French>LSD - Véhicules</French>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -573,6 +584,7 @@
             <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
             <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
             <Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
+            <French>Ajoute l'effet LSD aux véhicules synchronisés</French>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -581,6 +593,7 @@
             <Portuguese>Ativa dispositivo de mão</Portuguese>
             <Polish>Przełącz urządzenie podręczne</Polish>
             <Czech>Přepnout ruční zařízení</Czech>
+            <French>Allumer l'ordinateur de poche</French>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -589,6 +602,7 @@
             <Portuguese>Fecha dispositivo de mão</Portuguese>
             <Polish>Zamknij urządzenie podręczne</Polish>
             <Czech>Zavřít ruční zařízení</Czech>
+            <French>Fermer l'ordinateur de poche</French>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -597,6 +611,7 @@
             <Portuguese>Troca dispositivos de mão</Portuguese>
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>
+            <French>Changer (cycle) d'ordinateur de poche</French>
         </Key>
     </Package>
 </Project>
