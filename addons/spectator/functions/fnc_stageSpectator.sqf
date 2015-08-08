@@ -7,7 +7,7 @@
  * Upon unstage, units will be moved to the position they were in upon staging
  *
  * Arguments:
- * 0: Unit to put into spectator stage <OBJECT>
+ * 0: Unit to put into spectator stage <OBJECT> <OPTIONAL>
  * 1: Spectator stage <BOOL> <OPTIONAL>
  *
  * Return Value:
@@ -21,19 +21,16 @@
 
 #include "script_component.hpp"
 
-params ["_unit", ["_set",true,[true]]];
+params [["_unit",player,[objNull]], ["_set",true,[true]]];
 
 // No change, no service (but allow spectators to be reset)
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
-
-// Only run for player units
-if !(isPlayer _unit) exitWith {};
 
 if !(local _unit) exitwith {
     [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
 };
 
-// Prevent player falling into water
+// Prevent unit falling into water
 _unit enableSimulation !_set;
 
 // Move to/from group as appropriate

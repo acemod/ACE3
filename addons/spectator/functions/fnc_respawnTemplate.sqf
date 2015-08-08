@@ -21,6 +21,11 @@
 params [["_unit",objNull,[objNull]], ["_killer",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
 private ["_vision","_pos"];
 
+// End mission when all are dead with respawn type "None"
+if ((_respawn == 0) && {{alive _x} count allPlayers <= 0}) exitWith {
+    [["endDeath",false],"BIS_fnc_endMission"] call EFUNC(common,execRemoteFnc);
+};
+
 if (isNull _killer) then {_killer = _unit};
 _vision = [-2,-1] select (sunOrMoon < 1);
 _pos = (getPosATL _unit) vectorAdd [0,0,5];
@@ -29,11 +34,11 @@ if (alive _unit) then {
     if (_respawn == 1) then {
         [_unit,QGVAR(isSeagull)] call EFUNC(common,hideUnit);
         [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
-        [_unit] call FUNC(setSpectator);
+        [true] call FUNC(setSpectator);
     } else {
-        [_unit,false] call FUNC(setSpectator);
+        [false] call FUNC(setSpectator);
     };
 } else {
     [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
-    [_unit] call FUNC(setSpectator);
+    [true] call FUNC(setSpectator);
 };

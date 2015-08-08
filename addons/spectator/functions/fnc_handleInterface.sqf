@@ -80,7 +80,7 @@ switch (toLower _mode) do {
         clearRadio;
 
         // Return to player view
-        _unit switchCamera "internal";
+        player switchCamera "internal";
 
         // Enable BI damage effects
         BIS_fnc_feedback_allowPP = true;
