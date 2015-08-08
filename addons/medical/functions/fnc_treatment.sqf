@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition", "_allowedSelections"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -48,6 +48,9 @@ _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
 };
 
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
+
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
 
 // Check item
 _items = getArray (_config >> "items");
