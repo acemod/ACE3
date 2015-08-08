@@ -16,8 +16,11 @@
 
 #include "script_component.hpp"
 
-GVAR(currentCategorySelection) = lbCurSel 14;
+private ["_settingsMenu", "_ctrlComboBox"];
+disableSerialization;
+_settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
 
-systemChat format["Current selection: %1", GVAR(currentCategorySelection)];
+_ctrlComboBox = (_settingsMenu displayCtrl 14);
+GVAR(currentCategorySelection) = lbCurSel _ctrlComboBox;
 
 [false] call FUNC(serverSettingsMenuUpdateList);
