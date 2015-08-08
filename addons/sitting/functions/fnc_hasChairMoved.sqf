@@ -10,18 +10,21 @@
  * None
  *
  * Example:
- * [seat, seatPos] call ace_sitting_fnc_hasChairMoved;
+ * [seat, seatPos] call ace_sitting_fnc_hasChairMoved
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_2(_seat,_seatPosOrig);
+params ["_seat", "_seatPosOrig"];
 
 TRACE_2("Chair position",_seatPosOrig,getPosASL _seat);
 
+(getPosASL _seat) params ["_seatX", "_seatY", "_seatZ"];
+_seatPosOrig params ["_seatOrigX", "_seatOrigY", "_seatOrigZ"];
+
 // Check each coordinate due to possibility of tiny movements in simulation
-(getPosASL _seat) select 0 < (_seatPosOrig select 0) - 0.01 || {(getPosASL _seat) select 0 > (_seatPosOrig select 0) + 0.01} ||
-{(getPosASL _seat) select 1 < (_seatPosOrig select 1) - 0.01 || {(getPosASL _seat) select 1 > (_seatPosOrig select 1) + 0.01}} ||
-{(getPosASL _seat) select 2 < (_seatPosOrig select 2) - 0.01 || {(getPosASL _seat) select 2 > (_seatPosOrig select 2) + 0.01}}
+if (abs (_seatX - _seatOrigX) > 0.01) exitWith {true};
+if (abs (_seatY - _seatOrigY) > 0.01) exitWith {true};
+if (abs (_seatZ - _seatOrigZ) > 0.01) exitWith {true};
+false
