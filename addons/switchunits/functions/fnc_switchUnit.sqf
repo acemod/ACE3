@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave"];
+private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave", "_fnc_pfhSwitchUnit"];
 
 params ["_unit"];
 
