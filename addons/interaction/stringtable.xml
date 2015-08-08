@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -798,6 +798,7 @@
             <Polish>Otwórz</Polish>
             <Czech>Otevřít</Czech>
             <Spanish>Abrir</Spanish>
+            <French>Ouvrir</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -806,6 +807,7 @@
             <German>Interaktionssystem</German>
             <Czech>Systém interakce</Czech>
             <Russian>Sistema de interação</Russian>
+            <French>Système d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -814,6 +816,7 @@
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
             <Russian>Habilitar gestão de equipes</Russian>
+            <French>Active la gestion d'équipe</French>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -822,6 +825,7 @@
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
             <Russian>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Russian>
+            <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut: oui</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -830,6 +834,7 @@
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
             <Russian>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Russian>
             <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
+            <French>La gestion d'équipe permet l'allocation de couleur aux membres d'équipe, de prendre le commandement, de rejoindre ou quitter une équipe. </French>
         </Key>
     </Package>
 </Project>
