@@ -65,3 +65,12 @@ if (GVAR(ClientSettingsExportIncluded)) then {
 } else {
     (_settingsMenu displayCtrl 1102) ctrlSetText localize (LSTRING(inClientSettings));
 };
+
+{
+    if (_x == "") then {
+        _x = localize "STR_ACE_OptionsMenu_category_all";
+    };
+    (_menu displayCtrl 14) lbAdd if (isLocalized _x) then {localize _x} else {_x};
+} forEach GVAR(categories);
+
+(_menu displayCtrl 14) lbSetCurSel 0; //All Catagoies

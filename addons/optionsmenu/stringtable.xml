@@ -367,5 +367,8 @@
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
             <Czech>Zobrazit novinky v hlavním menu</Czech>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_category_all">
+            <English>All Categories</English>
+        </Key>
     </Package>
 </Project>
