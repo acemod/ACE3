@@ -20,7 +20,7 @@
 
 private ["_adjustment", "_weaponIndex", "_zeroing", "_adjustment"];
 
-prams ["_unit", "", "", "", "", "", "_projectile"];
+params ["_unit", "", "", "", "", "", "_projectile"];
 
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 
@@ -36,6 +36,6 @@ if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 
 // Convert zeroing from mils to degrees
 _zeroing = _zeroing vectorMultiply 0.05625;
-_zeroing params ["_elevation", "_windage", "_zero"]
+_zeroing params ["_elevation", "_windage", "_zero"];
 
 [_projectile, _elevation, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);
