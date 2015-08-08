@@ -29,6 +29,7 @@ _variable = missionNamespace getvariable [_varName, []];
     _compareID = if (typeName _x == "ARRAY") then {_x select 0} else {_x};
     if (_compareID isEqualTo _elementID) exitwith {
         _variable set[_forEachIndex, _data];
+        ["bft_syncedArrayChanged", [1, _data, _x]] call EFUNC(common,localEvent);
     };
 } forEach _variable;
 

@@ -24,7 +24,10 @@ _variable = missionNamespace getvariable [_varName, []];
     if ((_x select 0) isEqualTo _elementID) exitwith {
         systemChat format["handleSyncedArrayDelete deleting- %1", _x];
         diag_log format["handleSyncedArrayDelete deleting- %1", _x];
-        _variable deleteAt _foreachIndex;
+        private ["_removedElement"];
+        _removedElement = _variable deleteAt _foreachIndex;
+        ["bft_syncedArrayChanged", [2, _removedElement]] call EFUNC(common,localEvent);
+
     };
 } forEach _variable;
 
