@@ -18,7 +18,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_3(_list,_removeWhitespace,_checkNil);
+params ["_list", "_removeWhitespace", "_checkNil"];
 
 private ["_splittedList", "_listNoWhitespace", "_nilCheckPassedList"];
 
@@ -30,7 +30,8 @@ _listNoWhitespace = [];
 if (_removeWhitespace) then {
     {
         _listNoWhitespace pushBack ([_x] call EFUNC(common,stringRemoveWhiteSpace));
-    } forEach _splittedList;
+        nil
+    } count _splittedList;
     _list = _listNoWhitespace;
 };
 
@@ -45,7 +46,7 @@ if (_checkNil) then {
                 _nilCheckPassedList = _nilCheckPassedList + "," + _x;
             };
         };
-    } forEach _list;
+    } count _list;
 
     // Add Array characters and parse into array
     _list = "[" + _nilCheckPassedList + "]";
@@ -54,4 +55,4 @@ if (_checkNil) then {
 
 TRACE_4("Lists",_splittedList,_listNoWhitespace,_nilCheckPassedList,_list);
 
-_list
+_list // return
