@@ -27,8 +27,6 @@ lbclear _ctrlList;
 
 _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 
-systemChat format["_selectedCategory: %1", _selectedCategory];
-
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_SERVER_OPTIONS): {
