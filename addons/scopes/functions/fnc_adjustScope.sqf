@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_weaponIndex", "_zeroing", "_optic", "_verticalIncrement", "_horizontalIncrement", "_maxVertical", "_maxHorizontal", "_adjustment"];
+private ["_weaponIndex", "_zeroing", "_optic", "_opticConfig", "_verticalIncrement", "_horizontalIncrement", "_maxVertical", "_maxHorizontal", "_adjustment"];
 
 params ["_unit", "_turretAndDirection", "_majorStep"];
 
