@@ -148,17 +148,21 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamDown),"Z"],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
-            [localize LSTRING(freeCamFocus),"F"],
-            [localize LSTRING(freeCamNextVis),"N"],
-            [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
-            [localize LSTRING(freeCamZoom),"Scrollwheel"],
-            [localize LSTRING(freeCamSpeed),"Ctrl + Scrollwheel"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
-            [localize LSTRING(otherControls),""],
+            [localize LSTRING(freeCamFocus),"F"],
+            [localize LSTRING(attributeControls),""],
             [localize LSTRING(nextCam),"Up Arrow"],
             [localize LSTRING(prevCam),"Down Arrow"],
             [localize LSTRING(nextUnit),"Right Arrow"],
-            [localize LSTRING(prevUnit),"Left Arrow"]
+            [localize LSTRING(prevUnit),"Left Arrow"],
+            [localize LSTRING(nextVis),"N"],
+            [localize LSTRING(prevVis),"Ctrl + N"],
+            [localize LSTRING(adjZoom),"Scrollwheel"],
+            [localize LSTRING(adjSpeed),"Ctrl + Scrollwheel"],
+            [localize LSTRING(incZoom),"Num-/Num+"],
+            [localize LSTRING(incSpeed),"Ctrl + Num-/Num+"],
+            [localize LSTRING(reZoom),"Alt + Num-"],
+            [localize LSTRING(reSpeed),"Alt + Num+"]
         ];
 
         // Handle support for BI's respawn counter
@@ -247,8 +251,8 @@ switch (toLower _mode) do {
 
         // Handle held keys (prevent repeat calling)
         if (_dik in GVAR(heldKeys)) exitwith {};
-        // Exclude movement keys so that speed can be adjusted on fly
-        if !(_dik in [16,17,30,31,32,44]) then {
+        // Exclude movement/adjustment keys so that speed can be adjusted on fly
+        if !(_dik in [16,17,30,31,32,44,74,78]) then {
             GVAR(heldKeys) pushBack _dik;
         };
 
@@ -295,7 +299,7 @@ switch (toLower _mode) do {
             case 33: { // F
                 private ["_sel","_vector"];
                 _sel = GVAR(treeSel);
-                if !((GVAR(camMode) == 0) && {isNull _sel} && {_sel in GVAR(unitList)}) then {
+                if ((GVAR(camMode) == 0) && {!isNull _sel} && {_sel in GVAR(unitList)}) then {
                     _vector = (positionCameraToWorld [0,0,0]) vectorDiff (positionCameraToWorld [0,0,25]);
                     [nil,nil,nil,(getPosATL _sel) vectorAdd _vector] call FUNC(setCameraAttributes);
                 };
@@ -317,6 +321,22 @@ switch (toLower _mode) do {
             };
             case 57: { // Spacebar
                 // Freecam attachment here, if in external then set cam pos and attach
+            };
+            case 74: { // Num -
+                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil, 1.25] call FUNC(setCameraAttributes); };
+                if (_ctrl) then {
+                    [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) - 0.05] call FUNC(setCameraAttributes);
+                } else {
+                    [nil,nil,nil,nil,nil,nil, GVAR(camZoom) - 0.01] call FUNC(setCameraAttributes);
+                };
+            };
+            case 78: { // Num +
+                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 2.5] call FUNC(setCameraAttributes); };
+                if (_ctrl) then {
+                    [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + 0.05] call FUNC(setCameraAttributes);
+                } else {
+                    [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + 0.01] call FUNC(setCameraAttributes);
+                };
             };
             case 200: { // Up arrow
                 [-1] call FUNC(cycleCamera);

@@ -134,8 +134,7 @@
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
-            <English>Free Camera Controls</English>
-            <Polish>Wolne sterowanie kamerą</Polish>
+            <English>Free Camera</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
@@ -173,31 +172,14 @@
             <English>Lock Camera to Target</English>
             <Polish>Zablokuj kamerę na celu</Polish>
         </Key>
-        <Key ID="STR_ACE_Spectator_freeCamZoom">
-            <English>Zoom +/-</English>
-            <Polish>Zoom +/-</Polish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_freeCamSpeed">
-            <English>Speed +/-</English>
-            <Polish>Prędkość +/-</Polish>
-        </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamFocus">
             <English>Focus on Unit</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_freeCamNextVis">
-            <English>Next Vision Mode</English>
-            <Polish>Następny tryb wizji</Polish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_freeCamPrevVis">
-            <English>Previous Vision Mode</English>
-            <Polish>Poprzedni tryb wizji</Polish>
-        </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
-            <English>Interface Controls</English>
-            <Polish>Sterowanie interfejsem</Polish>
+            <English>Interface</English>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
@@ -227,9 +209,8 @@
             <English>Toggle Help</English>
             <Polish>Przełącz pomoc</Polish>
         </Key>
-        <Key ID="STR_ACE_Spectator_otherControls">
-            <English>Other Controls</English>
-            <Polish>Pozostałe sterowanie</Polish>
+        <Key ID="STR_ACE_Spectator_attributeControls">
+            <English>Camera Attributes</English>
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
@@ -246,6 +227,32 @@
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
             <Polish>Poprzednia jednostka</Polish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextVis">
+            <English>Next Vision Mode</English>
+            <Polish>Następny tryb wizji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevVis">
+            <English>Previous Vision Mode</English>
+            <Polish>Poprzedni tryb wizji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_adjZoom">
+            <English>Adjust Zoom</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_adjSpeed">
+            <English>Adjust Speed</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_incZoom">
+            <English>Increment Zoom</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_incSpeed">
+            <English>Increment Speed</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_reZoom">
+            <English>Reset Zoom</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_reSpeed">
+            <English>Reset Speed</English>
         </Key>
     </Package>
 </Project>
