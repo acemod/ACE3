@@ -24,4 +24,4 @@ _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 _ctrlComboBox = (_settingsMenu displayCtrl 14);
 GVAR(currentCategorySelection) = lbCurSel _ctrlComboBox;
 
-[false] call ACE_optionsmenu_fnc_settingsMenuUpdateList;
+[false] call FUNC(settingsMenuUpdateList);

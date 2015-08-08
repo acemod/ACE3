@@ -61,16 +61,19 @@ _menu = uiNamespace getvariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize (LSTRING(exClientSettings));
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (CSTRING(exClientSettings));
 } else {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize (LSTRING(inClientSettings));
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (CSTRING(inClientSettings));
 };
 
+
+lbClear (_menu displayCtrl 14);
 {
     if (_x == "") then {
         _x = localize "STR_ACE_OptionsMenu_category_all";
     };
-    (_menu displayCtrl 14) lbAdd if (isLocalized _x) then {localize _x} else {_x};
+    if (isLocalized _x) then {_x = localize _x};
+    (_menu displayCtrl 14) lbAdd _x;
 } forEach GVAR(categories);
 
-(_menu displayCtrl 14) lbSetCurSel 0; //All Catagoies
+(_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies

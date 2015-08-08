@@ -41,7 +41,6 @@ private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localize
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
         _value = missionNamespace getvariable [_name, _defaultValue];
         if (_typeName == "STRING") then {
-            _value = [_value, '"', "'"] call CBA_fnc_replace; // TODO improve the quotation replacement
             _value = format['"%1"', _value];
         };
         if (_typeName == "BOOL") then {

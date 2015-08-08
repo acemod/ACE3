@@ -53,13 +53,15 @@ if (GVAR(serverConfigGeneration) == 0) then {
     (_menu displayCtrl 1102) ctrlShow false;
 };
 
+lbClear (_menu displayCtrl 14);
 {
     if (_x == "") then {
         _x = localize "STR_ACE_OptionsMenu_category_all";
     };
-    (_menu displayCtrl 14) lbAdd if (isLocalized _x) then {localize _x} else {_x};
+    if (isLocalized _x) then {_x = localize _x};
+    (_menu displayCtrl 14) lbAdd _x;
 } forEach GVAR(categories);
 
-(_menu displayCtrl 14) lbSetCurSel 0; //All Catagoies
+(_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies
 
 

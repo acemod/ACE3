@@ -267,7 +267,7 @@
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Category_InteractionMenu">
+        <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
         </Key>
     </Package>
