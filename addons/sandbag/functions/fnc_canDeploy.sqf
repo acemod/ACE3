@@ -6,7 +6,7 @@
  * None
  *
  * Return Value:
- * can deploy? <BOOL>
+ * Can deploy <BOOL>
  *
  * Example:
  * [] call ace_sandbag_fnc_canDeploy
