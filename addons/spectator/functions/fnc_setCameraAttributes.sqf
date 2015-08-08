@@ -51,7 +51,6 @@ if !(_vision in GVAR(availableVisions)) then {
 };
 
 GVAR(camPan) = _heading % 360;
-GVAR(camPos) = (ATLtoASL _position);
 GVAR(camSpeed) = (_speed max 0.05) min 10;
 GVAR(camTilt) = (_tilt max -89) min 89;
 GVAR(camUnit) = _unit;
@@ -59,8 +58,10 @@ GVAR(camVision) = _vision;
 GVAR(camZoom) = (_zoom min 2) max 0.01;
 
 // Apply if camera exists
-if !(isNil QGVAR(camera)) then {
-    [_mode,_unit,_vision] call FUNC(transitionCamera);
-} else {
+if (isNil QGVAR(camera)) then {
     GVAR(camMode) = _mode;
+    GVAR(camPos) = (ATLtoASL _position);
+} else {
+    [_mode,_unit,_vision] call FUNC(transitionCamera);
+    GVAR(camera) setPosATL _position;
 };

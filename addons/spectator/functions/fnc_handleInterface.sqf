@@ -35,6 +35,7 @@ switch (toLower _mode) do {
         GVAR(heldKeys) = [];
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
+        GVAR(treeSel) = objNull;
 
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
@@ -96,6 +97,7 @@ switch (toLower _mode) do {
         GVAR(heldKeys) = nil;
         GVAR(mouse) = nil;
         GVAR(mousePos) = nil;
+        GVAR(treeSel) = nil;
 
         // Reset nametag settings
         if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -146,11 +148,12 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamDown),"Z"],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
+            [localize LSTRING(freeCamFocus),"F"],
+            [localize LSTRING(freeCamNextVis),"N"],
+            [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
             [localize LSTRING(freeCamZoom),"Scrollwheel"],
             [localize LSTRING(freeCamSpeed),"Ctrl + Scrollwheel"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
-            [localize LSTRING(freeCamNextVis),"N"],
-            [localize LSTRING(freeCamPrevVis),"Ctrl + N"],
             [localize LSTRING(otherControls),""],
             [localize LSTRING(nextCam),"Up Arrow"],
             [localize LSTRING(prevCam),"Down Arrow"],
@@ -289,6 +292,14 @@ switch (toLower _mode) do {
             case 32: { // D
                 GVAR(camDolly) set [0, GVAR(camSpeed) * ([1, 2] select _shift)];
             };
+            case 33: { // F
+                private ["_sel","_vector"];
+                _sel = GVAR(treeSel);
+                if !((GVAR(camMode) == 0) && {isNull _sel} && {_sel in GVAR(unitList)}) then {
+                    _vector = (positionCameraToWorld [0,0,0]) vectorDiff (positionCameraToWorld [0,0,25]);
+                    [nil,nil,nil,(getPosATL _sel) vectorAdd _vector] call FUNC(setCameraAttributes);
+                };
+            };
             case 44: { // Z
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
@@ -372,6 +383,15 @@ switch (toLower _mode) do {
             };
 
             [_newMode,_newUnit] call FUNC(transitionCamera);
+        };
+    };
+    case "ontreeselchanged": {
+        _args params ["_tree","_sel"];
+
+        if (count _sel == 3) then {
+            GVAR(treeSel) = objectFromNetId (_tree tvData _sel);
+        } else {
+            GVAR(treeSel) = objNull;
         };
     };
     case "onunitsupdate": {
@@ -485,6 +505,7 @@ switch (toLower _mode) do {
         GVAR(heldKeys) = [];
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
+        GVAR(treeSel) = objNull;
 
         createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
 
@@ -538,6 +559,7 @@ switch (toLower _mode) do {
         GVAR(heldKeys) = [];
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
+        GVAR(treeSel) = objNull;
 
         openCuratorInterface;
 

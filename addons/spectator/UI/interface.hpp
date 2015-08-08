@@ -155,7 +155,7 @@ class GVAR(interface) {
                 };
             };
         };
-        class unitTree: RscControlsGroupNoScrollbars {
+        class unitWindow: RscControlsGroupNoScrollbars {
             idc = IDC_UNIT;
             x = safeZoneX;
             y = safeZoneY + TOOL_H * 6;
@@ -191,6 +191,7 @@ class GVAR(interface) {
                     };
                     multiselectEnabled = 0;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
+                    onTreeSelChanged = QUOTE([ARR_2('onTreeSelChanged',_this)] call FUNC(handleInterface));
                 };
                 class unitFrame: RscFrame {
                     x = 0;
@@ -201,16 +202,6 @@ class GVAR(interface) {
                     colorText[] = {COL_FORE};
                 };
             };
-        };
-        class mapOverlay: RscMapControl {
-            idc = IDC_MAP;
-            type = 100;
-            x = safeZoneX;
-            y = safeZoneY;
-            w = safeZoneW;
-            h = safeZoneH;
-            onMouseButtonDown = QUOTE([ARR_2('onMapClick',_this)] call FUNC(handleInterface));
-            onDraw = QUOTE(_this call FUNC(handleMap));
         };
         class helpWindow: RscControlsGroupNoScrollbars {
             idc = IDC_HELP;
@@ -249,6 +240,16 @@ class GVAR(interface) {
                     colorText[] = {COL_FORE};
                 };
             };
+        };
+        class mapOverlay: RscMapControl {
+            idc = IDC_MAP;
+            type = 100;
+            x = safeZoneX;
+            y = safeZoneY;
+            w = safeZoneW;
+            h = safeZoneH;
+            onMouseButtonDown = QUOTE([ARR_2('onMapClick',_this)] call FUNC(handleInterface));
+            onDraw = QUOTE(_this call FUNC(handleMap));
         };
     };
 };

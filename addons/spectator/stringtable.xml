@@ -184,6 +184,9 @@
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
         </Key>
+        <Key ID="STR_ACE_Spectator_freeCamFocus">
+            <English>Focus on Unit</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_freeCamNextVis">
             <English>Next Vision Mode</English>
             <Polish>Następny tryb wizji</Polish>
