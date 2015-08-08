@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MX2A">
-        <Key ID="STR_ACE_MX2A_DisplayName">
-            <English>MX-2A</English>
-            <Polish>MX-2A</Polish>
-            <Spanish>MX-2A</Spanish>
-            <Czech>MX-2A</Czech>
-            <German>MX-2A</German>
-            <Portuguese>MX-2A</Portuguese>
-            <French>MX-2A</French>
+        <Key ID="STR_ACE_Yardage450_DisplayName">
+            <English>Yardage 450</English>
+            <Polish>Yardage 450</Polish>
+            <Spanish>Yardage 450</Spanish>
+            <Czech>Yardage 450</Czech>
+            <German>Yardage 450</German>
+            <Portuguese>Yardage 450</Portuguese>
+            <French>Yardage 450</French>
         </Key>
-        <Key ID="STR_ACE_MX2A_Description">
-            <English>Thermal imaging device</English>
-            <German>Wärmebildgerät</German>
-            <Polish>Monokular termowizyjny</Polish>
-            <Spanish>Dispositivo de imagen térmica</Spanish>
-            <Czech>Termální dalekohled</Czech>
-            <Portuguese>Dispositivo de imagem térmica</Portuguese>
-            <French>Appareil d'imagerie thermique</French>
+        <Key ID="STR_ACE_Yardage450_Description">
+            <English>Laser Rangefinder</English>
+            <German>Laserentfernungsmesser</German>
+            <Polish>Dalmierz laserowy</Polish>
+            <Spanish>Telémetro láser</Spanish>
+            <Czech>Laserový dálkoměr</Czech>
+            <Portuguese>Medidor de Distância a laser</Portuguese>
+            <French>Télémètre laser</French>
+        </Key>
+        <Key ID="STR_ACE_Yardage450_PowerButtonKey">
+            <English>Yardage 450 - Power Button</English>
+            <German>Yardage 450 - Einschalt-Taste</German>
+            <Polish>Yardage 450 - Przycisk zasilania</Polish>
+            <Spanish>Yardage 450 - Botón de encendido</Spanish>
+            <Czech>Yardage 450 - Tlačítko napájení</Czech>
+            <Portuguese>Yardage 450 - Botão de energia</Portuguese>
+            <French>Yardage 450 - Boutton d'allumage</French>
         </Key>
     </Package>
 </Project>
