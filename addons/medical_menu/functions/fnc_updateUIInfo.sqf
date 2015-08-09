@@ -29,19 +29,19 @@ if (EGVAR(medical,level) >= 2) then {
     _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 };
 
-if (_target getVariable [QGVAR(isBleeding), false]) then {
+if (_target getVariable [QEGVAR(medical,isBleeding), false]) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
 };
 
-if (_target getVariable [QGVAR(hasLostBlood), 0] > 1) then {
+if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 1) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Lost_Blood), [1, 0.1, 0.1, 1]];
 };
 
-if (((_target getVariable [QGVAR(tourniquets), [0, 0, 0, 0, 0, 0]]) select _selectionN) > 0) then {
+if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) select _selectionN) > 0) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
-if (_target getVariable [QGVAR(hasPain), false]) then {
+if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Pain), [1, 1, 1, 1]];
 };
 
@@ -52,7 +52,7 @@ _totalIvVolume = 0;
     if (!isNil "_value") then {
         _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
     };
-} count GVAR(IVBags);
+} count EGVAR(medical,IVBags);
 
 if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
