@@ -32,6 +32,7 @@ _deviceModes = D_GET_DEVICEMODES(_data);
 if (_this select 1) then { // add new
     if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitwith {}; // if the encryption key is not know, the device is not available
     if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitwith {}; // if the encryption key is not know, the device is not available
+    if (!(D_GET_OWNER(_data) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_data) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_data))}) exitwith {};
 
     _displayData = _data call FUNC(deviceDataToMapData);
     if (count _displayData > 0) then {
@@ -46,6 +47,10 @@ if (_this select 1) then { // add new
             if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitwith {
                 GVAR(availableDevices) deleteAt _forEachIndex; // no longer a match, so we remove it from available devices
             };
+            // TODO I don't think we need this check here? It should never make it in and otherwise be removed if the engine goes off?
+            //if (!(D_GET_OWNER(_data) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_data) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_data))}) exitwith {
+            //    GVAR(availableDevices) deleteAt _forEachIndex; // no longer a match, so we remove it from available devices
+            //};
             // we don't know what info has changed, so we just replace it completely.
             _displayData = _data call FUNC(deviceDataToMapData);
             GVAR(availableDevices) set [_forEachIndex, _displayData];
