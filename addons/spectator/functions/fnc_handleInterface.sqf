@@ -33,6 +33,7 @@ switch (toLower _mode) do {
         // Initalize display variables
         GVAR(ctrlKey) = false;
         GVAR(heldKeys) = [];
+        GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
         GVAR(treeSel) = objNull;
@@ -250,10 +251,10 @@ switch (toLower _mode) do {
         };
 
         // Handle held keys (prevent repeat calling)
-        if (_dik in GVAR(heldKeys)) exitwith {};
+        if (GVAR(heldKeys) param [_dik,false]) exitwith {};
         // Exclude movement/adjustment keys so that speed can be adjusted on fly
         if !(_dik in [16,17,30,31,32,44,74,78]) then {
-            GVAR(heldKeys) pushBack _dik;
+            GVAR(heldKeys) set [_dik,true];
         };
 
         switch (_dik) do {
@@ -358,7 +359,7 @@ switch (toLower _mode) do {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         // No longer being held
-        GVAR(heldKeys) = GVAR(heldKeys) - [_dik];
+        GVAR(heldKeys) set [_dik,nil];
 
         switch (_dik) do {
             case 16: { // Q
@@ -523,6 +524,7 @@ switch (toLower _mode) do {
 
         GVAR(ctrlKey) = false;
         GVAR(heldKeys) = [];
+        GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
         GVAR(treeSel) = objNull;
@@ -577,6 +579,7 @@ switch (toLower _mode) do {
 
         GVAR(ctrlKey) = false;
         GVAR(heldKeys) = [];
+        GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
         GVAR(treeSel) = objNull;
