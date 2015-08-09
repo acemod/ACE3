@@ -9,6 +9,7 @@
  * NONE
  */
 #include "script_component.hpp"
+#define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]
 
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
@@ -21,7 +22,6 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};
-
 // get all hitpoints
 private "_hitPoints";
 _hitPoints = [_vehicle] call EFUNC(common,getHitPointsWithSelections) select 0;
@@ -42,7 +42,8 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         private ["_icon", "_selection"];
 
         _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
-
+        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+        // textDefault = "<img image='\A3\ui_f\data\igui\cfg\actions\repair_ca.paa' size='1.8' shadow=2 />";
         _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
 
         private ["_name", "_text", "_condition", "_statement"];
@@ -89,16 +90,24 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
             _text = format [localize LSTRING(RepairHitpoint), _x];
         };
 
-        _icon = "";
+        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
         _selection = "";
-
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
-        _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repairVehicle)};
+        _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
-        private "_action";
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
-        [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+        /*if (_x in TRACK_HITPOINTS) then {
 
+            _selection = getText(configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "name");
+            diag_log format["Selection exists: %1", !(isNil {_vehicle getHit _selection})];
+            private "_action";
+            _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
+            [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+        } else {*/
+            private "_action";
+            _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
+            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+        //};
+        //diag_log format["Adding repair action for: %1 - %2", _type, _x];
     };
 } forEach _hitPoints;
 

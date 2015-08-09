@@ -24,7 +24,7 @@ class ACE_Settings {
         displayName = CSTRING(repairDamageThreshold_name);
         description = CSTRING(repairDamageThreshold_description);
         typeName = "SCALAR";
-        value = 0;
+        value = 0.3;
     };
     class GVAR(repairDamageThreshold_Engineer) {
         displayName = CSTRING(repairDamageThreshold_Engineer_name);

@@ -25,14 +25,14 @@ _hitPoints = [_vehicle] call EFUNC(common,getHitpoints);
 _hitPointsWithSelections = [_vehicle] call EFUNC(common,getHitpointsWithSelections) select 0;
 
 // exit if the hitpoint is not valid
-if !(_hitPoint in _hitPoints) exitWith {};
+if !(_hitPoint in _hitPoints) exitWith {systemChat format["NOT A VALID HITPOINT: %1",_hitpoint]};
 
 // save array with damage values of all hitpoints
 private "_hitPointDamages";
 _hitPointDamages = [];
 
 {
-    _hitPointDamages set [_forEachIndex, _vehicle getHitPointDamage _x];
+    _hitPointDamages set [_forEachIndex, (_vehicle getHitPointDamage _x)];
 } forEach _hitPoints;
 
 // save structural damage and sum of hitpoint damages
@@ -78,4 +78,4 @@ _vehicle setDamage _damageNew;
 } forEach _hitPoints;
 
 // normalize hitpoints
-[_vehicle] call FUNC(normalizeHitPoints);
+// [_vehicle] call FUNC(normalizeHitPoints);

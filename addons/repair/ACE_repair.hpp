@@ -8,7 +8,7 @@ class ACE_Repair {
             requiredEngineer = 0;
             repairingTime = 5;
             repairingTimeSelfCoef = 1;
-            items[] = {};
+            items[] = {"ToolKit"};
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
 

@@ -10,17 +10,14 @@
  */
 #include "script_component.hpp"
 
-params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["_unit", "_vehicle", "_hitPoint"];
-TRACE_5("params",_unit,_vehicle,_hitPoint,_elapsedTime,_totalTime);
+params ["_unit", "_vehicle", "_hitPoint"];
+TRACE_3("params",_unit,_vehicle,_hitPoint);
 
 // get current hitpoint damage
 private "_hitPointDamage";
 _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
-// subtract repaired damage
-_hitPointDamage = _hitPointDamage - _hitPointDamage * (_elapsedTime / _totalTime);
-
+_hitPointDamage = _hitPointDamage - 0.5;
 // don't use negative values for damage
 _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 

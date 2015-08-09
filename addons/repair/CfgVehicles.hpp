@@ -4,8 +4,8 @@
         class ACE_MainActions { \
             class GVAR(Repair) { \
                 displayName = CSTRING(Repair); \
-                condition = QUOTE([ARR_2(_this select 0, GVAR(engineerSetting_Repair))] call DFUNC(isEngineer)); \
-                statement = "'show a hint with the hitpart damage'"; \
+                condition = "true"; \
+                statement = ""; \
                 runOnHover = 1; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -53,13 +53,13 @@ class CfgVehicles {
                 displayName = CSTRING(repairDamageThreshold_name);
                 description = CSTRING(repairDamageThreshold_description);
                 typeName = "NUMBER";
-                defaultValue = 1;
+                defaultValue = 0.3;
             };
             class repairDamageThreshold_Engineer {
                 displayName = CSTRING(repairDamageThreshold_Engineer_name);
                 description = CSTRING(repairDamageThreshold_Engineer_description);
                 typeName = "NUMBER";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class consumeItem_ToolKit {
                 displayName = CSTRING(consumeItem_ToolKit_name);

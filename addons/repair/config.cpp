@@ -19,3 +19,13 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 #include "ACE_repair.hpp"
+
+class CfgActions {
+    class None;
+    class Repair: None {
+        show = 0;
+    };
+    class RepairVehicle: None {
+        show = 0;
+    };
+};
