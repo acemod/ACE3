@@ -24,10 +24,8 @@ _selectionN = GVAR(selectedBodyPart);
 if (_selectionN < 0 || _selectionN > 5) exitwith {};
 
 _genericMessages = [];
-if (EGVAR(medical,level) >= 2) then {
-    _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
-    _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
-};
+_partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
+_genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
 
 if (_target getVariable [QEGVAR(medical,isBleeding), false]) then {
     _genericMessages pushBack [localize ELSTRING(medical,Status_Bleeding), [1, 0.1, 0.1, 1]];
