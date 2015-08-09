@@ -11,12 +11,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_hitPoint = _this select 2;
-
+params ["_unit", "_vehicle", "_hitPoint"];
+TRACE_3("params",_unit,_vehicle,_hitPoint);
 
 // get current hitpoint damage
 private "_hitPointDamage";
@@ -38,5 +34,5 @@ _wheel setdamage _hitPointDamage;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [localize "STR_ACE_Repair_RemovedWheel"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(RemovedWheel)] call EFUNC(common,displayTextStructured);
 };

@@ -14,9 +14,8 @@
 
 #include "script_component.hpp"
 
-private ["_engineer", "_item", "_return","_crew"];
-_engineer = _this select 0;
-_item = _this select 1;
+params ["_engineer", "_item"];
+TRACE_2("params",_engineer,_item);
 
 if ([_engineer, _item] call EFUNC(common,hasItem)) exitwith {
     [[_engineer, _item], QUOTE(EFUNC(common,useItem)), _engineer] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

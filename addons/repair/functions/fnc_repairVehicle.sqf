@@ -13,11 +13,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_hitPoint = _this select 2;
+params ["_unit", "_vehicle", "_hitPoint"];
+TRACE_3("params",_unit,_vehicle,_hitPoint);
 
 // exit if not a valid hitpoint
 if !(_hitPoint in ([_vehicle] call EFUNC(common,getHitPoints))) exitWith {};
@@ -34,9 +31,9 @@ private "_text";
 _text = format ["STR_ACE_Repair_%1", _hitPoint];
 
 if (isLocalized _text) then {
-	_text = format [localize "STR_ACE_Repair_RepairingHitPoint", localize _text];
+    _text = format [localize LSTRING(RepairingHitPoint), localize _text];
 } else {
-	_text = localize "STR_ACE_Repair_Repairing";
+    _text = localize LSTRING(Repairing);
 };
 
 // open the loading bar

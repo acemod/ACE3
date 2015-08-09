@@ -13,14 +13,16 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle"];
+params ["_unit"];
+TRACE_1("params",_unit);
 
-_unit = _this select 0;
+private ["_nearObjects", "_return"];
+
 _nearObjects = nearestObjects [_unit, ["Air","LandVehicle"], 20];
 
 _return = false;
 {
     if ([_x] call FUNC(isRepairVehicle)) exitwith {_return = true;};
-}foreach _nearObjects;
+} forEach _nearObjects;
 
 _return;

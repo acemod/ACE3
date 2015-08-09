@@ -16,11 +16,10 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_hitPoint", "_className", "_config", "_engineerRequired", "_items", "_locations", "_return", "_condition", "_vehicleStateCondition"];
-_caller = _this select 0;
-_target = _this select 1;
-_hitPoint = _this select 2;
-_className = _this select 3;
+params ["_caller", "_target", "_hitPoint", "_className"];
+TRACE_4("params",_calller,_target,_hitPoint,_className);
+
+private ["_config", "_engineerRequired", "_items", "_locations", "_return", "_condition", "_vehicleStateCondition"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
@@ -86,7 +85,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
             _return = call _return;
         };
     };
-}foreach _locations;
+} forEach _locations;
 
 if !(_return && alive _target && {_target getHitPointDamage _hitPoint > ([_unit] call FUNC(getPostRepairDamage))}) exitwith {false};
 

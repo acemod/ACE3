@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
@@ -26,7 +26,6 @@
             <Hungarian>Pótkerék</Hungarian>
             <Russian>Запасное колесо</Russian>
         </Key>
-
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
             <German>Reifen wechseln</German>
@@ -67,7 +66,6 @@
             <English>Wheel removed</English>
             <German>Reifen entfernt</German>
         </Key>
-
         <Key ID="STR_ACE_Repair_RepairHitpoint">
             <English>Repair %1</English>
             <German>Reparieren %1</German>
@@ -92,14 +90,12 @@
             <Hungarian>Szerelés &gt;&gt;</Hungarian>
             <Russian>Ремонт &gt;&gt;</Russian>
         </Key>
-
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
         </Key>
-
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing ...</English>
             <German>Reparieren ...</German>
@@ -136,7 +132,6 @@
             <Hungarian>%1 megjavítva</Hungarian>
             <Russian>%1 отремонтирован</Russian>
         </Key>
-
         <Key ID="STR_ACE_Repair_RepairedFully">
             <English>Fully repaired part</English>
             <German>Bauteil vollständig repariert</German>
@@ -153,7 +148,6 @@
             <English>Partially repaired %1</English>
             <German>%1 teilweise repariert</German>
         </Key>
-
         <Key ID="STR_ACE_Repair_HitBody">
             <English>Body</English>
             <German>Karosserie</German>
@@ -481,6 +475,51 @@
             <Italian>Vetro 6</Italian>
             <Hungarian>Üveg 6</Hungarian>
             <Russian>Стекло 6</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_moduleName">
+            <English>Repair Settings</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_moduleDescription">
+            <English>Provides a repair system for all types of vehicles.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_engineerSetting_anyone">
+            <English>Anyone</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
+            <English>Engineer only</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
+            <English>Repair Specialist only</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
+            <English>Allow Wheel</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_enginerSetting_Wheel_description">
+            <English>Who can remove and replace wheels?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_enginerSetting_Repair_name">
+            <English>Allow Repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
+            <English>Who can use the toolkit to fully repair?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
+            <English>Repair Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
+            <English>What is the maximum damage that can be repaired with a toolkit?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
+            <English>Repair Threshold (Engineer)</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
+            <English>What is the maximum damage that can be repaired by an engineer?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
+            <English>Remove toolkit on use</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
+            <English>Should the toolkit be removed on usage?</English>
         </Key>
     </Package>
 </Project>

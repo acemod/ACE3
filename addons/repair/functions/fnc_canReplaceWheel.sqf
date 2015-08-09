@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Check if the unit can replace given wheel of the vehicle.
  *
  * Arguments:
@@ -13,12 +12,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_hitPoint", "_wheel"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_hitPoint = _this select 2;
-_wheel = ARR_SELECT(_this,3,false);
+params ["_unit", "_target", "_hitPoint", ["_wheel",false]];
+TRACE_4("params",_unit,_target,_hitPoint,_wheel);
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 

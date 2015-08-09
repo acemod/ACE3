@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Engineer <OBJECT>
- * 2: Items <ARRAY<STRING>>
+ * 1: Items <ARRAY<STRING>>
  *
  * ReturnValue:
  * <NIL>
@@ -14,9 +14,10 @@
 
 #include "script_component.hpp"
 
-private ["_engineer", "_patient", "_items", "_itemUsedInfo", "_itemsUsedBy"];
-_engineer = _this select 0;
-_items = _this select 1;
+params ["_engineer", "_items"];
+TRACE_2("params",_engineer,_items);
+
+private ["_itemUsedInfo", "_itemsUsedBy"];
 
 _itemsUsedBy = [];
 {
@@ -25,7 +26,7 @@ _itemsUsedBy = [];
         {
             _itemUsedInfo = [_engineer, _x] call FUNC(useItem);
             if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
-        }foreach _x;
+        } forEach _x;
     };
 
     // handle required item
@@ -33,6 +34,6 @@ _itemsUsedBy = [];
         _itemUsedInfo = [_engineer, _x] call FUNC(useItem);
         if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
     };
-}foreach _items;
+} forEach _items;
 
 [count _items == count _itemsUsedBy, _itemsUsedBy];

@@ -13,8 +13,11 @@
 
 #include "script_component.hpp"
 
-private ["_object","_position","_objects","_isInBuilding","_repairFacility"];
-_object = _this select 0;
+params ["_object"];
+TRACE_1("params",_object);
+
+private ["_position","_objects","_isInBuilding","_repairFacility"];
+
 _position = getPosASL _object;
 _isInBuilding = false;
 _repairFacility = [];
@@ -24,7 +27,7 @@ _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position sel
     if (((typeOf _x) in _repairFacility) || (_x getVariable [QGVAR(isRepairFacility),false])) exitwith {
         _isInBuilding = true;
     };
-}foreach _objects;
+} forEach _objects;
 
 if (!_isInBuilding) then {
     _objects = position _object nearObjects 7.5;
@@ -32,6 +35,6 @@ if (!_isInBuilding) then {
         if (((typeOf _x) in _repairFacility) || (_x getVariable [QGVAR(isRepairFacility),false])) exitwith {
             _isInBuilding = true;
         };
-    }foreach _objects;
+    } forEach _objects;
 };
 _isInBuilding;

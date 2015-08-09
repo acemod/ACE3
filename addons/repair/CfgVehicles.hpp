@@ -3,7 +3,7 @@
     class ACE_Actions { \
         class ACE_MainActions { \
             class GVAR(Repair) { \
-                displayName = "$STR_ACE_Repair_Repair"; \
+                displayName = CSTRING(Repair); \
                 condition = QUOTE([ARR_2(_this select 0, GVAR(engineerSetting_Repair))] call DFUNC(isEngineer)); \
                 statement = "'show a hint with the hitpart damage'"; \
                 runOnHover = 1; \
@@ -20,59 +20,59 @@ class CfgVehicles {
     // @todo localization for all the modules
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
-        displayName = "Repair Settings";
+        displayName = CSTRING(moduleName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
         category = "ACE";
         function = QUOTE(DFUNC(moduleRepairSettings));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(Common,ACETeam);
         class Arguments {
             class engineerSetting_Repair {
-                displayName = "Allow Repair";
-                description = "Who can use the toolkit to fully repair?";
+                displayName = CSTRING(enginerSetting_Repair_name);
+                description = CSTRING(enginerSetting_Repair_description);
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = "Anyone"; value = 0; };
-                    class Engineer { name = "Engineers only"; value = 1; default = 1; };
-                    class Special { name = "Repair Specialists only"; value = 2; };
+                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
+                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 1; };
+                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
                 };
             };
             class engineerSetting_Wheel {
-                displayName = "Allow Wheel";
-                description = "Who can remove and replace wheels?";
+                displayName = CSTRING(enginerSetting_Wheel_name);
+                description = CSTRING(enginerSetting_Wheel_description);
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = "Anyone"; value = 0; default = 1; };
-                    class Engineer { name = "Engineers only"; value = 1; };
-                    class Special { name = "Repair Specialists only"; value = 2; };
+                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };
+                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
+                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
                 };
             };
             class repairDamageThreshold {
-                displayName = "Repair Threshold";
-                description = "What is the maximum damage that can be repaired with a toolkit?";
+                displayName = CSTRING(repairDamageThreshold_name);
+                description = CSTRING(repairDamageThreshold_description);
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class repairDamageThreshold_Engineer {
-                displayName = "Repair Threshold (Engineer)";
-                description = "What is the maximum damage that can be repaired by an engineer?";
+                displayName = CSTRING(repairDamageThreshold_Engineer_name);
+                description = CSTRING(repairDamageThreshold_Engineer_description);
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
             class consumeItem_ToolKit {
-                displayName = "Remove toolkit on use";
-                description = "Should the toolkit be removed on usage?";
+                displayName = CSTRING(consumeItem_ToolKit_name);
+                description = CSTRING(consumeItem_ToolKit_description);
                 typeName = "NUMBER";
                 class values {
-                    class keep { name = "No"; value = 0; default = 1; };
-                    class remove { name = "Yes"; value = 1; };
+                    class keep { name = ECSTRING(common,No); value = 0; default = 1; };
+                    class remove { name = ECSTRING(common,Yes); value = 1; };
                 };
             };
         };
         class ModuleDescription {
-            description = "Provides a repair system for all types of vehicles.";
+            description = CSTRING(moduleDescription);
             sync[] = {};
         };
     };

@@ -4,8 +4,6 @@
  *
  * Arguments:
  * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
  *
  * Return Value:
  * None <NIL>
@@ -14,16 +12,14 @@
  */
 #include "script_component.hpp"
 
-private ["_logic", "_units", "_activated"];
+params ["_logic"];
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
-
-if !(_activated) exitWith {};
+if (!isServer) exitWith {};
 
 [_logic, QGVAR(engineerSetting_Repair), "engineerSetting_Repair"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(engineerSetting_Wheel), "engineerSetting_Wheel"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(consumeItem_ToolKit), "consumeItem_ToolKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(repairDamageThreshold), "repairDamageThreshold"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(repairDamageThreshold_Engineer), "repairDamageThreshold_Engineer"] call EFUNC(common,readSettingFromModule);
+
+diag_log text "[ACE]: Repair Module Initialized.";

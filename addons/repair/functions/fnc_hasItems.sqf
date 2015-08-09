@@ -12,21 +12,21 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_engineer", "_items", "_return"];
-_engineer = _this select 0;
-_items = _this select 1;
+params ["_engineer", "_items"];
+TRACE_2("params",_engineer,_items);
+
+private ["_return"];
 
 _return = true;
 {
-    if (typeName _x == "ARRAY" && {({[_engineer, _x] call EFUNC(common,hasItem)}count _x == 0)}) exitwith {
+    if (typeName _x == "ARRAY" && {({[_engineer, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitwith {
         _return = false;
     };
     if (typeName _x == "STRING" && {!([_engineer, _x] call EFUNC(common,hasItem))}) exitwith {
         _return = false;
     };
-}foreach _items;
+} forEach _items;
 
 _return;

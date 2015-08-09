@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Set the hitpoint damage and change the structural damage acordingly. Requires local vehicle.
  *
  * Arguments:
@@ -13,11 +12,8 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_hitPoint", "_hitPointDamage"];
-
-_vehicle = _this select 0;
-_hitPoint = _this select 1;
-_hitPointDamage = _this select 2;
+params ["_vehicle", "_hitPoint", "_hitPointDamage"];
+TRACE_3("params",_vehicle,_hitPoint,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {};

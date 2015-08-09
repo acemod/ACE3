@@ -1,24 +1,18 @@
 /*
  * Author: commy2
- *
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
  *
  * Arguments:
- * Stuff from progress bar.
+ * 0: Stuff from progress bar. <ARRAY>
  *
  * Return Value:
  * NONE
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint", "_elapsedTime", "_totalTime"];
-
-_unit = _this select 0 select 0;
-_vehicle = _this select 0 select 1;
-_hitPoint = _this select 0 select 2;
-
-_elapsedTime = _this select 1;
-_totalTime = _this select 2;
+params ["_args", "_elapsedTime", "_totalTime"];
+_args params ["_unit", "_vehicle", "_hitPoint"];
+TRACE_5("params",_unit,_vehicle,_hitPoint,_elapsedTime,_totalTime);
 
 // get current hitpoint damage
 private "_hitPointDamage";
@@ -39,9 +33,9 @@ if (GVAR(DisplayTextOnRepair)) then {
     _text = format ["STR_ACE_Repair_%1", _hitPoint];
 
     if (isLocalized _text) then {
-        _text = format [localize (["STR_ACE_Repair_RepairedHitPointFully", "STR_ACE_Repair_RepairedHitPointPartially"] select (_hitPointDamage > 0)), localize _text];
+        _text = format [localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0)), localize _text];
     } else {
-        _text = localize (["STR_ACE_Repair_RepairedFully", "STR_ACE_Repair_RepairedPartially"] select (_hitPointDamage > 0));
+        _text = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointDamage > 0));
     };
 
     [_text] call EFUNC(common,displayTextStructured);

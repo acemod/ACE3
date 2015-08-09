@@ -1,21 +1,18 @@
 /*
  * Author: commy2
- *
  * Sets the structural damage of a vehicle without altering the hitPoints. Requires local vehicle.
  *
  * Arguments:
- * 0: vehicle to damage (Object)
- * 1: Total damage (Number)
+ * 0: vehicle to damage <OBJECT>
+ * 1: Total damage <NUMBER>
  *
  * Return Value:
  * NONE
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_damage"];
-
-_vehicle = _this select 0;
-_damage = _this select 1;
+params ["_vehicle", "_damage"];
+TRACE_2("params",_vehicle,_damage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {};

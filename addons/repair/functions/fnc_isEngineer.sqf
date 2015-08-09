@@ -13,13 +13,13 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_engineerN", "_class"];
+params ["_unit", ["_engineerN", 1]];
+TRACE_2("params",_unit,_engineerN);
 
-_unit = _this select 0;
-_engineerN = if (count _this > 1) then {_this select 1} else {1};
+private ["_class"];
 
 _class = _unit getVariable [QGVAR(engineerClass),
     getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")
 ];
 
-_class >= _engineerN min GVAR(engineerSetting_Repair)
+_class >= (_engineerN min GVAR(engineerSetting_Repair))

@@ -13,11 +13,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_hitPoint = _this select 2;
+params ["_caller", "_vehicle", "_hitPoint"];
+TRACE_3("params",_caller,_vehicle,_hitPoint);
 
 // exit if not a valid hitpoint
 if !(_hitPoint in ([_vehicle] call EFUNC(common,getHitPoints))) exitWith {};
@@ -27,9 +24,9 @@ private "_time";
 _time = 10;
 
 // open the loading bar
-[_time, [_unit, _vehicle, _hitPoint], {(_this select 0) call DFUNC(doRemoveWheel)}, {[localize "STR_ACE_Common_ActionAborted"] call EFUNC(common,displayTextStructured);}, localize "STR_ACE_Repair_RemovingWheel", {(_this select 0) call DFUNC(canRemoveWheel)}, []] call EFUNC(common,progressBar);
+[_time, [_caller, _vehicle, _hitPoint], {(_this select 0) call DFUNC(doRemoveWheel)}, {[localize "STR_ACE_Common_ActionAborted"] call EFUNC(common,displayTextStructured);}, localize "STR_ACE_Repair_RemovingWheel", {(_this select 0) call DFUNC(canRemoveWheel)}, []] call EFUNC(common,progressBar);
 
 // do animation
-[_unit] call EFUNC(common,goKneeling);
+[_caller] call EFUNC(common,goKneeling);
 
 // @todo play sound

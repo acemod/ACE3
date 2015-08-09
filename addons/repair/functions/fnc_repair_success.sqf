@@ -17,12 +17,11 @@
 
 #include "script_component.hpp"
 
-private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_weaponSelect"];
-_args = _this select 0;
-_caller = _args select 0;
-_target = _args select 1;
-_selectionName = _args select 2;
-_className = _args select 3;
+params ["_args"];
+_args params ["_caller", "_target","_selectionName","_className"];
+TRACE_4("params",_caller,_target,_selectionName,_className);
+
+private ["_config","_callback", "_weaponSelect"];
 
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";

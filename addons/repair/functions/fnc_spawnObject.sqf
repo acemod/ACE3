@@ -1,13 +1,8 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_item", "_position", "_damage"];
-
-_item = _this select 0;
-_position = _this select 1;
-_damage = _this select 2;
-
-if (isNil "_damage") then {_damage = 0};
+params ["_item", "_position", ["_damage", 0]];
+TRACE_3("params",_item,_position,_damage);
 
 // randomized end position
 _position = _position vectorAdd [1 - random 2, 1 - random 2, 0];

@@ -1,19 +1,17 @@
 /*
  * Author: commy2
- *
  * Used to normalize dependant hitpoints. May overwrite some global variables that are named like hitpoints or "Total" though...
  *
  * Arguments:
- * 0: A local vehicle with hitpoints. (Object)
+ * 0: A local vehicle with hitpoints. <OBJECT>
  *
  * Return Value:
  * NONE
  */
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {};

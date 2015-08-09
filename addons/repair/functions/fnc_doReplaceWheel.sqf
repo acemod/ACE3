@@ -1,22 +1,17 @@
 /*
  * Author: commy2
- *
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
  *
  * Arguments:
- * Stuff from progress bar.
+ * 0: Stuff from progress bar. <ARRAY>
  *
  * Return Value:
  * NONE
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_hitPoint", "_wheel"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_hitPoint = _this select 2;
-_wheel = _this select 3;
+params ["_unit", "_vehicle", "_hitPoint", "_wheel"];
+TRACE_4("params",_unit,_vehicle,_hitPoint,_wheel);
 
 // get current hitpoint damage
 private "_hitPointDamage";
@@ -38,5 +33,5 @@ deleteVehicle _wheel;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [localize "STR_ACE_Repair_ReplacedWheel"] call EFUNC(common,displayTextStructured);
+    [LSTRING(ReplacedWheel)] call EFUNC(common,displayTextStructured);
 };

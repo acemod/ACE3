@@ -1,19 +1,17 @@
 /*
  * Author: commy2
- *
  * Returns the wheel hitpoints and their selections.
  *
  * Arguments:
- * 0: A vehicle (Object)
+ * 0: A vehicle <Object>
  *
  * Return Value:
- * Wheel positions in model coordinates. (Array)
+ * Wheel positions in model coordinates. <Array>
  */
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
 // get the vehicles wheel config
 private "_wheels";

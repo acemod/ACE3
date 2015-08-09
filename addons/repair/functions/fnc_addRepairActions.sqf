@@ -1,19 +1,17 @@
 /*
  * Author: commy2
- *
  * Called from init eventhandler. Checks if the vehicles class already has the actions initialized. Otherwise add all available repair options.
  *
  * Arguments:
- * 0: vehicle (Object)
+ * 0: vehicle <OBJECT>
  *
  * Return Value:
  * NONE
  */
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+params ["_vehicle"];
+TRACE_1("params", _vehicle);
 
 private ["_type", "_initializedClasses"];
 
@@ -43,8 +41,6 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
 
         private ["_icon", "_selection"];
 
-        _nameRemove = format ["Remove_%1", _x];
-
         _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
 
         _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
@@ -64,7 +60,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
 
         // replace wheel action
         _name = format  ["Replace_%1", _x];
-        _text = localize "STR_ACE_Repair_ReplaceWheel";
+        _text = localize LSTRING(ReplaceWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canReplaceWheel)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(replaceWheel)};
@@ -88,9 +84,9 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _text = format ["STR_ACE_Repair_%1", _x];
 
         if (isLocalized _text) then {
-            _text = format [localize "STR_ACE_Repair_RepairHitpoint", localize _text];
+            _text = format [localize LSTRING(RepairHitpoint), localize _text];
         } else {
-            _text = format [localize "STR_ACE_Repair_RepairHitpoint", _x];
+            _text = format [localize LSTRING(RepairHitpoint), _x];
         };
 
         _icon = "";

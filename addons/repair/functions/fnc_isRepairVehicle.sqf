@@ -12,8 +12,8 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle"];
-_vehicle = _this select 0;
+params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
 if (_vehicle isKindOf "CAManBase") exitwith {false};
 
