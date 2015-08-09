@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 ["inventoryDisplayLoaded", {[ACE_player, _this select 0] call FUNC(updateInventoryDisplay)}] call EFUNC(common,addEventHandler);
 ["playerInventoryChanged", {
-    params ["_unit"];
-    [_unit, _this select 1 select 11] call FUNC(takeLoadedATWeapon);
+    params ["_unit", "_items"];
+    [_unit, _items select 11] call FUNC(takeLoadedATWeapon);
     [_unit] call FUNC(updateInventoryDisplay);
 }] call EFUNC(common,addEventHandler);
