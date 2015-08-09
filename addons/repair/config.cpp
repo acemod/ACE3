@@ -2,12 +2,12 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {"ACE_SpareWheel"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common","ace_interact_menu"};
-        author[] = {"commy2"};
-        authorUrl = "https://github.com/commy2";
+        author[] = {"commy2", "Glowbal"};
+        authorUrl = "https://ace3mod.com";
         VERSION_CONFIG;
     };
 };
