@@ -13,7 +13,7 @@
 
 params ["_unit", "_vehicle", "_hitPoint"];
 TRACE_3("params",_unit,_vehicle,_hitPoint);
-
+// TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
 // get current hitpoint damage
 private "_hitPointDamage";
 _hitPointDamage = _vehicle getHitPointDamage _hitPoint;

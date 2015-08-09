@@ -9,10 +9,10 @@ class ACE_Repair {
             repairingTime = 5;
             repairingTimeSelfCoef = 1;
             items[] = {};
-            condition = "";
+            condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
 
-            callbackSuccess = QUOTE(DFUNC(repairBasic_bandage));
+            callbackSuccess = QUOTE(call FUNC(doReplaceWheel));
             callbackFailure = "";
             callbackProgress = "";
 
@@ -23,7 +23,10 @@ class ACE_Repair {
             litter[] = {};
         };
         class RemoveWheel: ReplaceWheel {
-
+            displayName = CSTRING(RemoveWheel);
+            displayNameProgress = CSTRING(RemovingWheel);
+            condition = QUOTE(call FUNC(canRemoveWheel));
+            callbackSuccess = QUOTE(call FUNC(doRemoveWheel));
         };
         class RepairEngine {
 
@@ -32,8 +35,10 @@ class ACE_Repair {
 
         };
         class MiscRepair: ReplaceWheel {
-            displayName = ""; // let's make empty string an auto generated string
-            displayNameProgress = CSTRING(Repairing);
+            displayName = CSTRING(Repairing); // let's make empty string an auto generated string
+            displayNameProgress = CSTRING(RepairingHitPoint);
+            condition = "";
+            callbackSuccess = QUOTE(call FUNC(doRepair));
         };
     };
 };

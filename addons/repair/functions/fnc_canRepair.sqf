@@ -52,6 +52,7 @@ if (getText (_config >> "condition") != "") then {
         _return = [_caller, _target, _hitPoint, _className] call _condition;
     };
 };
+
 if (!_return) exitwith {false};
 
 _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
@@ -87,4 +88,4 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     };
 } forEach _locations;
 
-_return && alive _target && {(_target getHitPointDamage _hitPoint) > ([_target] call FUNC(getPostRepairDamage))}
+_return && alive _target // && {(_target getHitPointDamage _hitPoint) > ([_target] call FUNC(getPostRepairDamage))}

@@ -51,8 +51,8 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _name = format  ["Remove_%1", _x];
         _text = localize "STR_ACE_Repair_RemoveWheel";
 
-        _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canRemoveWheel)};
-        _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(removeWheel)};
+        _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
+        _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
 
         private "_action";
         _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 2] call EFUNC(interact_menu,createAction);
@@ -62,8 +62,8 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _name = format  ["Replace_%1", _x];
         _text = localize LSTRING(ReplaceWheel);
 
-        _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canReplaceWheel)};
-        _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(replaceWheel)};
+        _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
+        _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
 
         _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
@@ -92,11 +92,11 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _icon = "";
         _selection = "";
 
-        _condition = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(canRepair)};
-        _statement = {[_this select 1, _this select 0, _this select 2 select 0] call DFUNC(repairVehicle)};
+        _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
+        _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repairVehicle)};
 
         private "_action";
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 4] call EFUNC(interact_menu,createAction);
+        _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
         [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
 
     };

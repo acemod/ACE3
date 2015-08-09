@@ -87,7 +87,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     };
 } forEach _locations;
 
-if !(_return && alive _target && {_target getHitPointDamage _hitPoint > ([_unit] call FUNC(getPostRepairDamage))}) exitwith {false};
+if !(_return && alive _target) exitwith {false};
 
 _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     getNumber (_config >> "itemConsumed");
@@ -144,11 +144,11 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 };
 
 //Get repair time
-_repairTime = if (isNumber (_config >> "repairTime")) then {
-    getNumber (_config >> "repairTime");
+_repairTime = if (isNumber (_config >> "repairingTime")) then {
+    getNumber (_config >> "repairingTime");
 } else {
-    if (isText (_config >> "repairTime")) exitwith {
-        _repairTimeConfig = getText(_config >> "repairTime");
+    if (isText (_config >> "repairingTime")) exitwith {
+        _repairTimeConfig = getText(_config >> "repairingTime");
         if (isnil _repairTimeConfig) then {
             _repairTimeConfig = compile _repairTimeConfig;
         } else {
@@ -162,13 +162,20 @@ _repairTime = if (isNumber (_config >> "repairTime")) then {
     0;
 };
 
+private ["_text", "_processText"];
+_processText = getText (_config >> "displayNameProgress");
+_text = format ["STR_ACE_Repair_%1", _hitPoint];
+if (isLocalized _text) then {
+    _text = format [_processText, localize _text];
+};
+
 // Start repair
 [
     _repairTime,
-    [_caller, _target, _selectionName, _className, _items, _usersOfItems],
+    [_caller, _target, _hitPoint, _className, _items, _usersOfItems],
     DFUNC(repair_success),
     DFUNC(repair_failure),
-    getText (_config >> "displayNameProgress"),
+    _text,
     _callbackProgress,
     []
 ] call EFUNC(common,progressBar);

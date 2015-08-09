@@ -18,8 +18,6 @@ TRACE_2("params",_unit,_engineerN);
 
 private ["_class"];
 
-_class = _unit getVariable [QGVAR(engineerClass),
-    getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")
-];
+_class = _unit getVariable [QGVAR(engineerClass), getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")];
 
-_class >= (_engineerN min GVAR(engineerSetting_Repair))
+_class >= (_engineerN min GVAR(engineerSetting_Repair));
