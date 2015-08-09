@@ -1,15 +1,14 @@
 /*
  * Author: esteldunedain
- *
  * Returns a orthonormal system of reference aligned with the supplied vector
  *
  * Arguments:
  * Vector to align the coordinate system with (Array)
  *
  * Return Value:
- * 0: Vector Normalized (Array)
- * 1: Normalized Cross Product Vector (Array)
- * 2: Vector Cross Product (Array)
+ * 0: Vector Normalized <ARRAY>
+ * 1: Normalized Cross Product Vector <ARRAY>
+ * 2: Vector Cross Product <ARRAY>
  *
  * Public: No
  */

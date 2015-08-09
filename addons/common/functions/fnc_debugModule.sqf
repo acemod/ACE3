@@ -1,8 +1,6 @@
  /*
  * Author: Glowbal
  *
- * N/A?
- *
  * Arguments:
  * None
  *

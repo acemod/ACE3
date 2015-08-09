@@ -1,13 +1,12 @@
 /*
  * Author: commy2, Glowbal
- *
  * Display a structured text with image.
  *
  * Arguments:
- * 0: Text (ANY)
- * 1: Image (STRING)
- * 2: Image color (ARRAY) (OPTIONAL)
- * 3: Target Unit. Will only display if target is the player controlled object <OBJECT> (OPTIONAL)
+ * 0: Text <ANY>
+ * 1: Image <STRING>
+ * 2: Image color (default: [0, 0, 0, 0]) <ARRAY>
+ * 3: Target Unit. Will only display if target is the player controlled object (default: ACE_player) <OBJECT>
  *
  * Return Value:
  * None

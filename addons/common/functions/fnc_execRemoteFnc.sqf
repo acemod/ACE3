@@ -1,16 +1,15 @@
 /*
  * Author: commy2
- *
  * Execute a function on a remote machine in mp.
  *
  * Arguments:
- * 0: Function arguments (Array)
- * 1: Function to execute, has to be defined on the remote machine first (String)
- * 2: The function will be executed where this unit is local OR the mode were this function should be executed. (Object OR Number, optional default: 2)
- *     Mode 0 = execute on this machine only
- *     Mode 1 = execute on server
- *     Mode 2 = execute on all clients + server
- *     Mode 3 = execute on dedicated only
+ * 0: Function arguments <ARRAY>
+ * 1: Function to execute, has to be defined on the remote machine first <STRING>
+ * 2: The function will be executed where this unit is local OR the mode were this function should be executed. (default: 2) <OBJECT, NUMBER>
+ *     0 = execute on this machine only
+ *     1 = execute on server
+ *     2 = execute on all clients + server
+ *     3 = execute on dedicated only
  *
  * Return Value:
  * None

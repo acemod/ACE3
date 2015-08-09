@@ -1,15 +1,14 @@
  /*
  * Author: Glowbal
- *
  * Define a variable for the ACE variable framework
  *
  * Arguments:
- * 0: Name (STRING)
- * 1: defaultValue (ANY)
- * 2: publicFlag (BOOLEAN)
- * 3: category (STRING)
- * 4: type <NUMBER>(Optional)
- * 5: persistentFlag (BOOLEAN)(Optional)
+ * 0: Name <STRING>
+ * 1: defaultValue <ANY>
+ * 2: publicFlag <BOOL>
+ * 3: category <STRING>
+ * 4: type (default: 0) <NUMBER>
+ * 5: persistentFlag (default: false) <BOOL>
  *
  * Return Value:
  * None

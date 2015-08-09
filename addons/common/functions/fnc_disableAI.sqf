@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob, true] call ace_common_fnc_disableAI;
+ * [bob, true] call ace_common_fnc_disableAI
  *
  * Public: No
  */

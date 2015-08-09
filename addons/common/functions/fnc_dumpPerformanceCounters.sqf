@@ -1,19 +1,17 @@
 /*
  * Author: ?
- *
- * ?
+ * Dumps performance counter statistics into Logs.
  *
  * Arguments:
- * ?
+ * None
  *
  * Return Value:
- * ?
+ * None
  *
  * Public: No
  */
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
-
 
 diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];

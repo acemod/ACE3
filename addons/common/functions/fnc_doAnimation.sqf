@@ -1,12 +1,11 @@
 /*
  * Author: commy2
- *
  * Execute an animation. This is used to not break things like the unconsciousness animation.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Animation (String)
- * 2: Priority of the animation. (Number, optional default: 0)
+ * 1: Animation <STRING>
+ * 2: Priority of the animation. (default: 0) <NUMBER>
  *     0 = PlayMove
  *     1 = PlayMoveNow
  *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)

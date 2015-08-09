@@ -1,15 +1,13 @@
 /*
  * Author: esteldunedain
- *
  * Executes a code on the next frame
  *
  * Arguments:
- * 0: Code to execute (CODE)
- * 1: Parameters to run the code with (ARRAY)
+ * 0: Code to execute <CODE>
+ * 1: Parameters to run the code with <ARRAY>
  *
  * Return Value:
  * PFH handler ID <NUMBER>
- * None
  *
  * Public: No
  */

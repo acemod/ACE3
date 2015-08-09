@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Get a key code used in ACE key input eh.
  *
  * Arguments:

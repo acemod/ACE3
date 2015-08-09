@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Display a message.
  *
  * Arguments:
- * 0: Message (String)
- * 1: Play a clicking sound (Bool, optional default: false)
- * 2: How long before hiding the message in seconds (Number, optional default: 2 sec)
- * 3: Priority, higher priority messages will override lesser important ones (Number, optional default: 0)
+ * 0: Message <STRING>
+ * 1: Play a clicking sound (default: false) <BOOL>
+ * 2: How long before hiding the message in seconds (default: 2) <NUMBER>
+ * 3: Priority, higher priority messages will override lesser important ones (default: 0) <NUMBER>
  *
  * Return Value:
  * None

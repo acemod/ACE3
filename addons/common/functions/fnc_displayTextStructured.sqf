@@ -1,17 +1,16 @@
 /*
  * Author: commy2, Glowbal
- *
  * Display a structured text.
  *
  * Arguments:
- * 0: Text (ANY)
- * 1: Size of the textbox <NUMBER> (OPTIONAL)
- * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> (OPTIONAL)
+ * 0: Text <ANY>
+ * 1: Size of the textbox (default: 1.5) <NUMBER>
+ * 2: Target Unit. Will only display if target is the player controlled object (default: ACE_player) <OBJECT>
  *
  * Return Value:
  * None
  *
-  * Public: Yes
+ * Public: Yes
  */
 
 #include "script_component.hpp"

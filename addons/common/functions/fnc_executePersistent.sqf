@@ -1,10 +1,9 @@
 /*
  * Author: commy2
- *
  * Execute all Persistent Functions
  *
  * Arguments:
- * None
+ * ?
  *
  * Return Value:
  * None
@@ -20,7 +19,7 @@ params ["_target"];
         diag_log text format ["[ACE] ERROR: No Arguments and function for remote function. ID: %1", _forEachIndex];
     } else {
         if (typeName _x == "ARRAY") then {
-            _x params ["_args","_function"];
+            _x params ["_args", "_function"];
             [_args, _target] call _function;
         };
     };

@@ -1,6 +1,5 @@
 /*
 * Author: Glowbal
-*
 * Draw progress bar and execute given function if succesful.
 * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
 *
@@ -9,7 +8,7 @@
 * 1: show <BOOL>
 * 2: Icon Path <STRING>
 * 3: Icon color <ARRAY>
-* 4: timeAlive. -1 = forever <NUMBER> <OPTIONAL>
+* 4: timeAlive. -1 = forever (default: 6) <NUMBER>
 *
 * Return Value:
 * None

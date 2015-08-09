@@ -1,14 +1,13 @@
 /*
  * Author: Glowbal
- *
  * Print logging messages through the ACE framework.
  *
  * Arguments:
- * 0: Message (ANY)
- * 1: Level <NUMBER> (Optional)
+ * 0: Message <ANY>
+ * 1: Level (default: 2) <NUMBER>
  *
  * Return Value:
- * Message is Printed (BOOLEAN)
+ * Message is Printed <BOOL>
  *
  * Public: Yes
  */

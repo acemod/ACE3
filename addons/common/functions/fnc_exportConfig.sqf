@@ -1,16 +1,15 @@
 /*
  * Author: commy2
- *
  * Export Config Entrys that Written in RTP
  *
  * Arguments:
- * Config Path
+ * Config Path <CONFIG>
  *
  * Return Value:
  * None
  *
- * Usage:
- * (configFile >> "CfgAmmo") call FUNC(exportConfig);
+ * Example:
+ * [(configFile >> "CfgAmmo")] call FUNC(exportConfig);
  *
  * Public: No
  */

@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
  *
  * Arguments:
@@ -15,7 +14,7 @@
 
 params ["_unit"];
 
-private ["_backpackObject","_holder"];
+private ["_backpackObject", "_holder"];
 
 _backpackObject = backpackContainer _unit;
 _unit addBackpack "Bag_Base";

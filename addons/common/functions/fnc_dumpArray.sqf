@@ -1,13 +1,12 @@
 /*
  * Author: ?
  *
- * ?
- *
  * Arguments:
- * ?
+ * 0: Array to be dumped <ARRAY>
+ * 1: Depth <NUMBER>
  *
  * Return Value:
- * ?
+ * None
  *
  * Public: No
  */
