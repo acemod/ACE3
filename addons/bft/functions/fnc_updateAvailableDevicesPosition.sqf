@@ -30,21 +30,29 @@ if (_startNewLoop) then {
     if (!isNil QGVAR(positionUpdatePFEH)) then {
         [GVAR(positionUpdatePFEH)] call cba_fnc_removePerFrameHandler;
     };
-    
+
     // bail if this device does not have a receiver
     if (_refreshRateRX < 0) exitWith {false};
-    
+
     // do not let the refresh rate sink below 0.1
-    if (_refreshRateRX < 0.1) then {_refreshRateRX = 0.1};
-    
+    _refreshRateRX = _refreshRateRX max 0.1;
+
     // start a new position update loop
     GVAR(positionUpdatePFEH) = [{
             {
                 if (ACE_time - (AD_GET_TIME(_x)) >= (AD_GET_REFRESH_RATE(_x))) then {
-                    //systemChat format["updating a device position: %1", _x];
-                    _x set [8, ACE_time];
-                    _x set [4, getPosASL vehicle AD_GET_OWNER(_x)];
-                    _x set [12, direction vehicle AD_GET_OWNER(_x)];
+                    if (AD_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL) then {
+                        //systemChat format["updating a device position: %1", _x];
+                        _x set [8, ACE_time];
+                        _x set [4, getPosASL vehicle AD_GET_OWNER(_x)];
+                        _x set [12, direction vehicle AD_GET_OWNER(_x)];
+                    } else {
+                        private ["_deviceState"];
+                        _deviceState = AD_GET_DEVICE_STATE(_x);
+                        (_x select 6) set [1, [0.6, 0.6, 0.6, (1 - ((ACE_time - (_deviceState select 3)) / 100)) max 0.4]];
+                        _x set [4, _deviceState select 1];
+                        _x set [12, _deviceState select 2];
+                    };
                 };
             } foreach GVAR(availableDevices);
     }, _refreshRateRX, []] call cba_fnc_addPerFrameHandler;

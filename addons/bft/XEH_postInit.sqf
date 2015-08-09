@@ -13,6 +13,8 @@
 ["bft_syncedArrayPushback", FUNC(handleSyncedArrayPushback)] call EFUNC(common,addEventHandler);
 ["bft_syncedArrayUpdate", FUNC(handleSyncedArrayUpdate)] call EFUNC(common,addEventHandler);
 
+["bft_vehicleDeviceKilled", FUNC(handleVehicleDeviceKilled)] call EFUNC(common,addEventHandler);
+
 if(!isServer) then {
     ["PlayerJip", {
         diag_log text format["[ACE] * JIP BFT Data Synchronization initialized"];

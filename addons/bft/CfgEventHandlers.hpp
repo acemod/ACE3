@@ -28,6 +28,23 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
+class Extended_Killed_EventHandlers {
+    class Air {
+        class ADDON {
+            Killed = QUOTE(call FUNC(handleKilled));
+        };
+    };
+    class LandVehicle {
+        class ADDON {
+            Killed = QUOTE(call FUNC(handleKilled));
+        };
+    };
+    class Ship {
+        class ADDON {
+            Killed = QUOTE(call FUNC(handleKilled));
+        };
+    };
+};
 
 /*
 class Extended_Init_EventHandlers {

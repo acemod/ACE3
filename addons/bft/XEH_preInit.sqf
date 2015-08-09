@@ -10,6 +10,8 @@ PREP(getMagazineID);
 PREP(getOwnedDevices);
 PREP(handleAddDeviceData);
 PREP(handleItemCreated);
+PREP(handleKilled);
+PREP(handleVehicleDeviceKilled);
 
 PREP(handleUpdateDeviceOwner);
 PREP(handleUpdateDeviceGroup);

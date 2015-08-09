@@ -87,7 +87,7 @@ if (!isnil "_groupID") then {
 // format: app ID, app data
 _app = [-1, []];
 
-// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType, _refreshRate [TX, RX], _deviceModes]
-_deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes];
+// format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType, _refreshRate [TX, RX], _deviceModes, deviceState]
+_deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes, [STATE_NORMAL]];
 
 ["bft_addDeviceData", _deviceInformation] call EFUNC(common,globalEvent);
