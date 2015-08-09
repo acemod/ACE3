@@ -31,4 +31,7 @@ if (random(1)>= 0.6) exitwith {
     _target setvariable [QGVAR(bloodPressure), [50,70]];
 };
 
+[_target, "activity", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+
 true;

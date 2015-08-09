@@ -16,9 +16,7 @@
 #include "script_component.hpp"
 
 disableSerialization;
-
-PARAMS_1(_player);
-DEFAULT_PARAM(1,_display,(findDisplay 602));
+params ["_player", ["_display",(findDisplay 602),[(findDisplay 602)]]]
 
 _player removeMagazines "ACE_PreloadedMissileDummy";
 _player removeMagazines "ACE_FiredMissileDummy";

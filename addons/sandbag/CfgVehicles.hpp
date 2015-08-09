@@ -5,7 +5,8 @@ class CfgVehicles {
             class ACE_Sandbags {
                 displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(call FUNC(canDeploy));
-                statement = QUOTE(call FUNC(deploy));
+                //wait a frame to handle "Do When releasing action menu key" option:
+                statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [])] call EFUNC(common,execNextFrame));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 1;
                 priority = 4;

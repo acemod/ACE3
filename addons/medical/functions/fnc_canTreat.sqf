@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_condition", "_patientStateCondition"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_condition", "_patientStateCondition", "_allowedSelections"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -44,6 +44,8 @@ if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
 
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
 
 _return = true;
 if (getText (_config >> "condition") != "") then {
