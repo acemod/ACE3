@@ -316,7 +316,7 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
+            condition = "(alive (_this select 1)) && !([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
