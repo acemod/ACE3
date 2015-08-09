@@ -3609,5 +3609,8 @@
             <Spanish>Médico</Spanish>
             <Hungarian>Orvosi</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_DistanceToFar">
+            <English>Distance to %1 has become to far for treatment</English>
+        </Key>
     </Package>
 </Project>
