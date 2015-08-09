@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private ["_pos", "_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
+private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
@@ -30,15 +30,14 @@ private ["_pos", "_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dag
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
 
 if (GVAR(noVectorData)) exitwith {};
-
-_pos = [GVAR(LAZPOS) select 0, GVAR(LAZPOS) select 1];
+GVAR(LAZPOS) params ["_lazPosX", "_lazPosY", "_lazPosZ"];
 
 // Incase grids go neg due to 99-00 boundry
-if (_pos select 0 < 0) then {_pos set [0, (_pos select 0) + 99999];};
-if (_pos select 1 < 0) then {_pos set [1, (_pos select 1) + 99999];};
-    
+if (_lazPosX < 0) then { _lazPosX = _lazPosX + 99999;};
+if (_lazPosY < 0) then {_lazPosY = _lazPosY + 99999;};
+
 // Find laser position
-_xGrid = toArray Str(round(_pos select 0));
+_xGrid = toArray Str(round _lazPosX);
 
 while {count _xGrid < 5} do {
     _xGrid = [48] + _xGrid;
@@ -47,7 +46,7 @@ _xGrid resize 4;
 _xGrid = toString _xGrid;
 _xGrid = parseNumber _xGrid;
 
-_yGrid = toArray Str(round(_pos select 1));
+_yGrid = toArray Str(round _lazPosY);
 while {count _yGrid < 5} do {
     _yGrid = [48] + _yGrid;
 };
@@ -72,7 +71,7 @@ _yCoord = switch true do {
 _dagrGrid = _xCoord + " " + _yCoord;
 
 // Find target elevation
-_elevation = floor ((GVAR(LAZPOS) select 2) + EGVAR(common,mapAltitude));
+_elevation = floor (_lazPosZ) + EGVAR(common,mapAltitude));
 _dagrElevation = str _elevation + "m";
 
 // Time
@@ -94,5 +93,5 @@ GVAR(vectorGrid) = _dagrGrid;
 __gridControl ctrlSetText format ["%1", _dagrGrid];
 __speedControl ctrlSetText format ["%1", _dagrDist];
 __elevationControl ctrlSetText format ["%1", _dagrElevation];
-__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
+__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1ï¿½", _bearing] });
 __timeControl ctrlSetText format ["%1", _dagrTime];
