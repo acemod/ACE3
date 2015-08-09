@@ -22,5 +22,6 @@ if !(_deviceData isEqualTo []) then {
     _refreshRateRX = D_GET_REFRESH_RATE_RX(_deviceData);
     [D_GET_ENCRYPTION(_deviceData)] call FUNC(updateRegisteredEncryptionKeys);
 };
+GVAR(currentOpenedDevice) = _deviceData;
 
 [true,_refreshRateRX] call FUNC(updateAvailableDevicesPosition);

@@ -37,6 +37,7 @@ PREP(vehicleInit);
 PREP(encryptionKeyMatch);
 PREP(updateRegisteredEncryptionKeys);
 PREP(updateRegisteredModes);
+PREP(removeDeviceByOwner);
 
 PREP(handleSyncedArrayPushback);
 PREP(handleSyncedArrayDelete);
@@ -57,6 +58,7 @@ PREP(updateAllEncryptionKeys);
 PREP(updateAvailableDevicesPosition);
 PREP(handleUpdateAllEncryptionKeys);
 
+
 // Synced data collections
 GVAR(syncedArrayVariables) = [];
 GVAR(saluteReports) = [];
@@ -76,6 +78,7 @@ GVAR(allReportingModes) = [] call FUNC(getAllReportingModes);
 GVAR(colorFilters) = [[1, [1,0,0,1]]];
 
 GVAR(localOwnedEncyptionKeys) = [];
+GVAR(currentOpenedDevice) = [];
 
 private ["_a", "_b", "_g", "_r"];
 _r = profilenamespace getvariable ['Map_BLUFOR_R',0];

@@ -55,3 +55,7 @@ if (_add) then {
         };
     };
 };
+if (count GVAR(currentOpenedDevice) > 0) then {
+    [GVAR(currentOpenedDevice)] call FUNC(removeDeviceByOwner);
+};
+
