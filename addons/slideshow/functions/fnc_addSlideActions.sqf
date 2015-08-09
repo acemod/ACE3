@@ -10,19 +10,19 @@
  * 4: Current Slideshow <NUMBER>
  *
  * Return Value:
- * None
+ * List of actions <ARRAY>
  *
  * Example:
  * [[object], ["image"], ["name"], controller, 1] call ace_slideshow_fnc_addSlideActions
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_5(_objects,_images,_names,_controller,_currentSlideshow);
+private "_actions";
 
-private ["_actions"];
+params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
+
 _actions = [];
 {
     _actions pushBack
@@ -32,10 +32,10 @@ _actions = [];
             _names select _forEachIndex,
             "",
             {
-                EXPLODE_2_PVT(_this select 2,_objects,_image);
+                (_this select 2) params ["_objects", "_image"];
                 {
                     _x setObjectTextureGlobal [0, _image]
-                } forEach _objects;
+                } count _objects;
             },
             {true},
             {},

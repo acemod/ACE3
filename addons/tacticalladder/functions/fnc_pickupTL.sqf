@@ -7,10 +7,10 @@
  * 1: unit <OBJECT>
  *
  * Return Value:
- * Success?
+ * Success <BOOL>
  *
  * Example:
- * [_ladder, _unit] call ace_tacticalladder_fnc_pickupTL;
+ * [_ladder, _unit] call ace_tacticalladder_fnc_pickupTL
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 
 if ((backpack ACE_player) != "") exitWith { false };
 
-PARAMS_2(_ladder,_unit);
+params ["_ladder", "_unit"];
 
 deleteVehicle _ladder;
 _unit addBackpack "ACE_TacticalLadder_Pack";

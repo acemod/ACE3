@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_object,_typeNum,_parentPath,_action);
+params ["_object", "_typeNum", "_parentPath", "_action"];
 
 private ["_varName","_actionList"];
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;

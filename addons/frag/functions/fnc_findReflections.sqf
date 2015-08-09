@@ -121,6 +121,6 @@ if(_zIndex < 5) then {
     // _dirvec = _pos vectorFromTo ((ATLtoASL (player modelToWorldVisual (player selectionPosition "Spine3"))));
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
-    [DFUNC(doExplosions), 0, [_explosions, 0]] call cba_fnc_addPerFrameHandler;
+    [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };

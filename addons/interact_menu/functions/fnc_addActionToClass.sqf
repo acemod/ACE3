@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_objectType,_typeNum,_parentPath,_action);
+params ["_objectType", "_typeNum", "_parentPath", "_action"];
 
 // Ensure the config menu was compiled first
 if (_typeNum == 0) then {

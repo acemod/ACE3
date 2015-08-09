@@ -3,13 +3,13 @@
  * Deploy tactical ladder
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_tacticalladder_fnc_deployTL;
+ * [] call ace_tacticalladder_fnc_deployTL
  *
  * Public: No
  */

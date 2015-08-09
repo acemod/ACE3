@@ -50,4 +50,5 @@ if (_heartRate > 1.0) then {
 
 if (_logOutPut != "") then {
     [_unit,"activity", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"quick_view", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
 };

@@ -17,9 +17,9 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_index);
-
 private ["_return"];
+
+params ["_index"];
 
 _return = switch (_index) do {
     case 0:   {-1};
