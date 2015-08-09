@@ -14,6 +14,7 @@
 
 private ["_ownedDevices"];
 params ["_object"];
+if (!isServer) exitwith {};
 
 _ownedDevices = _object getvariable [QGVAR(ownedDevices), []];
 

@@ -22,3 +22,18 @@ D_GET_DEVICE_STATE(_data) set [1, getPosASL vehicle D_GET_OWNER(_data)];
 D_GET_DEVICE_STATE(_data) set [2, direction vehicle D_GET_OWNER(_data)];
 D_GET_DEVICE_STATE(_data) set [3, ACE_time];
 
+
+if !(isNull D_GET_OWNER(_data)) then {
+    _encryptionKeys = D_GET_ENCRYPTION(_data);
+    if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitWith {};
+
+    _deviceModes = D_GET_DEVICEMODES(_data);
+    if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitWith {};
+
+    _displayData = _data call FUNC(deviceDataToMapData);
+    {
+        if (AD_GET_ID(_x) == _deviceId) exitwith {
+             GVAR(availableDevices) set[_foreachIndex, _displayData];
+        };
+    }foreach GVAR(availableDevices);
+};

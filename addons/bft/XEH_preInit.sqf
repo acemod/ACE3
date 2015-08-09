@@ -11,6 +11,7 @@ PREP(getOwnedDevices);
 PREP(handleAddDeviceData);
 PREP(handleItemCreated);
 PREP(handleKilled);
+PREP(handleEngine);
 PREP(handleVehicleDeviceKilled);
 
 PREP(handleUpdateDeviceOwner);

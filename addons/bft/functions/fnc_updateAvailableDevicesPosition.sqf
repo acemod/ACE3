@@ -42,10 +42,11 @@ if (_startNewLoop) then {
             {
                 if (ACE_time - (AD_GET_TIME(_x)) >= (AD_GET_REFRESH_RATE(_x))) then {
                     if (AD_GET_DEVICE_STATE_VALUE(_x) isEqualTo STATE_NORMAL) then {
+                        //if (!(D_GET_OWNER(_x) isKindOf "CAManBAse") && {!(isEngineOn D_GET_OWNER(_x))}) exitwith {};
                         //systemChat format["updating a device position: %1", _x];
                         _x set [8, ACE_time];
-                        _x set [4, getPosASL vehicle AD_GET_OWNER(_x)];
-                        _x set [12, direction vehicle AD_GET_OWNER(_x)];
+                        _x set [4, getPosASL AD_GET_OWNER(_x)];
+                        _x set [12, direction AD_GET_OWNER(_x)];
                     } else {
                         private ["_deviceState"];
                         _deviceState = AD_GET_DEVICE_STATE(_x);

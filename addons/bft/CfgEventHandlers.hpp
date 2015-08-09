@@ -45,6 +45,23 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
+class Extended_Engine_EventHandlers {
+    class Air {
+        class ADDON {
+            Engine = QUOTE(call FUNC(handleEngine));
+        };
+    };
+    class LandVehicle {
+        class ADDON {
+            Engine = QUOTE(call FUNC(handleEngine));
+        };
+    };
+    class Ship {
+        class ADDON {
+            Engine = QUOTE(call FUNC(handleEngine));
+        };
+    };
+};
 
 /*
 class Extended_Init_EventHandlers {
