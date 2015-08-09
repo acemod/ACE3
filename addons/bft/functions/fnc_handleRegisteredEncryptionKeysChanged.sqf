@@ -51,6 +51,7 @@ if (_add) then {
         _device = GVAR(availableDevices) select _i;
         if !([AD_GET_ENCRYPTION(_device), GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) then {
             GVAR(availableDevices) deleteAt _i;
+            _i = _i - 1;
         };
     };
 };
