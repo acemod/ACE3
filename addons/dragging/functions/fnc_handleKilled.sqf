@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Handle the Kill of the Dragger
+ * Handle death of the dragger
  *
  * Arguments:
  * 0: Unit <OBJECT>

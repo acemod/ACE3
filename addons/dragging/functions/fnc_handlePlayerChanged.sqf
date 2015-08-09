@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * Handle the Event if player is Changed
+ * Handle player changes.
  *
  * Arguments:
  * 0: New Player Unit <OBJECT>

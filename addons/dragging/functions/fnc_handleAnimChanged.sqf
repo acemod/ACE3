@@ -1,11 +1,11 @@
 /*
  * Author: commy2
  *
- * Handle the Animaion for a Unit for Dragging Module
+ * Handle the animaion for a Unit for Dragging Module
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Animaion <STRING>
+ * 1: animaion <STRING>
  *
  * Return Value:
  * None

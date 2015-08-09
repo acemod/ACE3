@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  *
- * PFH for Crarry Object
+ * PFH for Carry Object
  *
  * Arguments:
  * ?
@@ -17,7 +17,6 @@
     systemChat format ["%1 carryObjectPFH running", ACE_time];
 #endif
 
-private ["_unit", "_target"];
 params ["_args", "_idPFH"];
 _args params ["_unit","_target"];
 

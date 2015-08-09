@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_unit] call ace_dragging_fnc_handlePlayerWeaponChanged;
+ * [_unit] call ace_dragging_fnc_handleUnconscious;
  *
  * Public: No
 */

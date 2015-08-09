@@ -14,7 +14,6 @@
  */
 #include "script_component.hpp"
 
-private
 params ["_unit", "_target"];
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
