@@ -1,4 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Handle the Animaion for a Unit for Dragging Module
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Animaion <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_unit, "amovpercmstpsnonwnondnon"] call ace_dragging_fnc_handleAnimChanged;
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
 private ["_unit", "_anim"];

@@ -1,9 +1,22 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Handle the Kill of the Dragger
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_unit] call ace_dragging_fnc_handleKilled;
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+params ["_unit"];
 
 if (_unit getVariable [QGVAR(isDragging), false]) then {
     private "_draggedObject";

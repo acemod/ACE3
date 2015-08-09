@@ -4,18 +4,15 @@
  * Start the dragging process.
  *
  * Argument:
- * 0: Unit that should do the dragging (Object)
- * 1: Object to drag (Object)
+ * 0: Unit that should do the dragging <OBJECT>
+ * 1: Object to drag <OBJECT>
  *
  * Return value:
- * NONE.
+ * None
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // check weight
 private "_weight";
