@@ -5,7 +5,7 @@ class ACE_Repair {
             displayNameProgress = CSTRING(ReplacingWheel);
 
             locations[] = {"All"};
-            requiredEngineer = 0;
+            requiredEngineer = QGVAR(engineerSetting_Wheel);
             repairingTime = 5;
             repairingTimeSelfCoef = 1;
             items[] = {"ToolKit"};
@@ -28,17 +28,24 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canRemoveWheel));
             callbackSuccess = QUOTE(call FUNC(doRemoveWheel));
         };
-        class RepairEngine {
-
-        };
-        class Tracks: ReplaceWheel {
-
-        };
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
-            condition = "";
+            condition = QUOTE((_target getHitPointDamage _hitPoint) > ([_caller] call FUNC(getPostRepairDamage)));
+            requiredEngineer = 0;
             callbackSuccess = QUOTE(call FUNC(doRepair));
+        };
+        class RemoveTrack: MiscRepair {
+            displayName = CSTRING(RemoveTrack);
+            displayNameProgress = CSTRING(RemovingTrack);
+            condition = QUOTE(call FUNC(canRemoveTrack));
+            callbackSuccess = QUOTE(call FUNC(doRemoveTrack));
+        };
+        class ReplaceTrack: RemoveTrack {
+            displayName = CSTRING(ReplaceTrack);
+            displayNameProgress = CSTRING(ReplacingTrack);
+            condition = QUOTE(call FUNC(canReplaceTrack));
+            callbackSuccess = QUOTE(call FUNC(doReplaceTrack));
         };
     };
 };

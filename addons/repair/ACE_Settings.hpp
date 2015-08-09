@@ -24,13 +24,13 @@ class ACE_Settings {
         displayName = CSTRING(repairDamageThreshold_name);
         description = CSTRING(repairDamageThreshold_description);
         typeName = "SCALAR";
-        value = 0.3;
+        value = 0.6;
     };
     class GVAR(repairDamageThreshold_Engineer) {
         displayName = CSTRING(repairDamageThreshold_Engineer_name);
         description = CSTRING(repairDamageThreshold_Engineer_description);
         typeName = "SCALAR";
-        value = 0;
+        value = 0.4;
     };
     class GVAR(consumeItem_ToolKit) {
         displayName = CSTRING(consumeItem_ToolKit_name);

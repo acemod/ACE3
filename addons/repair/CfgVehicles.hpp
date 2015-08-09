@@ -53,13 +53,13 @@ class CfgVehicles {
                 displayName = CSTRING(repairDamageThreshold_name);
                 description = CSTRING(repairDamageThreshold_description);
                 typeName = "NUMBER";
-                defaultValue = 0.3;
+                defaultValue = 0.6;
             };
             class repairDamageThreshold_Engineer {
                 displayName = CSTRING(repairDamageThreshold_Engineer_name);
                 description = CSTRING(repairDamageThreshold_Engineer_description);
                 typeName = "NUMBER";
-                defaultValue = 0;
+                defaultValue = 0.4;
             };
             class consumeItem_ToolKit {
                 displayName = CSTRING(consumeItem_ToolKit_name);

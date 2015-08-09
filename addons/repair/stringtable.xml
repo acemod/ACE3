@@ -66,6 +66,24 @@
             <English>Wheel removed</English>
             <German>Reifen entfernt</German>
         </Key>
+        <Key ID="STR_ACE_Repair_ReplaceTrack">
+            <English>Change Track</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_ReplacingTrack">
+            <English>Replacing Track ...</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_ReplacedTrack">
+            <English>Track replaced</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemoveTrack">
+            <English>Remove Track</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemovingTrack">
+            <English>Removing Track ...</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_RemovedTrack">
+            <English>Track removed</English>
+        </Key>
         <Key ID="STR_ACE_Repair_RepairHitpoint">
             <English>Repair %1</English>
             <German>Reparieren %1</German>

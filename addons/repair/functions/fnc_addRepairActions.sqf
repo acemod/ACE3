@@ -95,19 +95,20 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
+        // impossible to remove tracks
         /*if (_x in TRACK_HITPOINTS) then {
-
-            _selection = getText(configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "name");
-            diag_log format["Selection exists: %1", !(isNil {_vehicle getHit _selection})];
+            //_selection = getText(configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "name"); // TODO this is a valid selection, it's just on the wrong position.
             private "_action";
-            _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
-            [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+            _action = [_name, localize LSTRING(RemoveTrack), _icon, _statement, _condition, {}, [_x, "RemoveTrack"], _selection, 4] call EFUNC(interact_menu,createAction);
+            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+
+            _action = [_name, localize LSTRING(ReplaceTrack), _icon, _statement, _condition, {}, [_x, "ReplaceTrack"], _selection, 4] call EFUNC(interact_menu,createAction);
+            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
         } else {*/
             private "_action";
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
             [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
         //};
-        //diag_log format["Adding repair action for: %1 - %2", _type, _x];
     };
 } forEach _hitPoints;
 

@@ -34,7 +34,7 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     0;
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitwith {false};
-
+if (isEngineOn _target) exitwith {false};
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitwith {false};
 

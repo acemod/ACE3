@@ -23,6 +23,7 @@ private ["_config", "_engineerRequired", "_items", "_locations", "_return", "_co
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
+if(isEngineOn _target) exitwith {false};
 
 _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     getNumber (_config >> "requiredEngineer");
@@ -88,4 +89,4 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     };
 } forEach _locations;
 
-_return && alive _target // && {(_target getHitPointDamage _hitPoint) > ([_target] call FUNC(getPostRepairDamage))}
+_return && alive _target;

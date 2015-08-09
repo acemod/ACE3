@@ -4,11 +4,15 @@ ADDON = false;
 
 PREP(addRepairActions);
 PREP(canRemoveWheel);
+PREP(canRemoveTrack);
 PREP(canRepair);
 PREP(canReplaceWheel);
+PREP(canReplaceTrack);
 PREP(doRemoveWheel);
+PREP(doRemoveTrack);
 PREP(doRepair);
 PREP(doReplaceWheel);
+PREP(doReplaceTrack);
 PREP(getPostRepairDamage);
 PREP(getWheelHitPointsWithSelections);
 PREP(hasItems);

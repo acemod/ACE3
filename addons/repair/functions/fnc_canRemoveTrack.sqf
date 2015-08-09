@@ -15,4 +15,4 @@
 params ["_unit", "_target", "_hitPoint"];
 TRACE_3("params",_unit,_target,_hitPoint);
 
-alive _target && {_target getHitPointDamage _hitPoint > 0} && {_target getHitPointDamage _hitPoint < 1}
+alive _target && {_target getHitPointDamage _hitPoint < 1}
