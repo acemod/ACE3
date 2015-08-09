@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_sourceUnit,_fingerPosPrecise);
-
 private ["_data", "_fingerPos"];
+
+params ["_sourceUnit", "_fingerPosPrecise"];
 
 //add some random float to location if it's not our own finger:
 _fingerPos = if (_sourceUnit == ACE_player) then {

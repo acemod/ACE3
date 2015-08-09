@@ -50,7 +50,7 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 
         _sendFingerToPlayers pushBack _x;
     };
-} forEach _nearbyMen;
+} count _nearbyMen;
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
