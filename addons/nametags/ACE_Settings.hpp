@@ -11,7 +11,7 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(ShowPlayerNames);
         description = CSTRING(ShowPlayerNames_Desc);
-        values[] = {ECSTRING(common,Disabled), CSTRING(Enabled), CSTRING(OnlyCursor), CSTRING(OnlyKeypress), CSTRING(OnlyCursorAndKeypress)};
+        values[] = {ECSTRING(common,Disabled), ECSTRING(common,Enabled), CSTRING(OnlyCursor), CSTRING(OnlyKeypress), CSTRING(OnlyCursorAndKeypress)};
     };
     class GVAR(showPlayerRanks) {
         value = 1;
