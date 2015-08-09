@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="C:\dev\ace\addons\repair\data\wheel_nohq.paa";
+	texture="z\ace\addons\repair\data\wheel_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="C:\dev\ace\addons\repair\data\default_as.paa";
+	texture="z\ace\addons\repair\data\default_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="C:\dev\ace\addons\repair\data\default_smdi.paa";
+	texture="z\ace\addons\repair\data\default_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
