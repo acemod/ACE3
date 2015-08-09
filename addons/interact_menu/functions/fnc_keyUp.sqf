@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-private "_calledByClicking";
-_calledByClicking = _this select 1;
+params ["_menuType", "_calledByClicking"];
 
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};

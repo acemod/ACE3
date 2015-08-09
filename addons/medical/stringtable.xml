@@ -3597,5 +3597,17 @@
             <Spanish>Estable</Spanish>
             <Polish>Po stabilizacji</Polish>
         </Key>
+        <Key ID="STR_ACE_Medical_Category_Medical">
+            <English>Medical</English>
+            <Czech>Zdravotní</Czech>
+            <French>Médical</French>
+            <German>Sanitäter</German>
+            <Italian>Medico</Italian>
+            <Polish>Medyczne</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медик</Russian>
+            <Spanish>Médico</Spanish>
+            <Hungarian>Orvosi</Hungarian>
+        </Key>
     </Package>
 </Project>

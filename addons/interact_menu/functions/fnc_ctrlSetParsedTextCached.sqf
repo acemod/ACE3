@@ -1,11 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_ctrl", "_index", "_text"];
-
-_ctrl = _this select 0;
-_index = _this select 1;
-_text = _this select 2;
+params ["_ctrl", "_index", "_text"];
 
 //systemChat str (_text != ARR_SELECT(GVAR(ParsedTextCached),_index,"-1"));
 
