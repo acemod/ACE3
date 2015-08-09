@@ -140,6 +140,7 @@ class ACE_Medical_Actions {
         class PackingBandage: fieldDressing {
             displayName = CSTRING(Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_packingBandage"}}};
         };
         class ElasticBandage: fieldDressing {
             displayName = CSTRING(Actions_ElasticBandage);
@@ -148,6 +149,7 @@ class ACE_Medical_Actions {
         class QuikClot: fieldDressing {
             displayName = CSTRING(Actions_QuikClot);
             items[] = {"ACE_quikclot"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_QuickClot"}}};
         };
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
@@ -262,7 +264,11 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} }, {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} },
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class CheckPulse: fieldDressing {
             displayName = CSTRING(Actions_CheckPulse);
@@ -294,10 +300,12 @@ class ACE_Medical_Actions {
         };
         class RemoveTourniquet: Tourniquet {
             displayName = CSTRING(Actions_RemoveTourniquet);
+            items[] = {};
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
             displayNameProgress = CSTRING(RemovingTourniquet);
+            litter[] = {};
         };
         class CPR: fieldDressing {
             displayName = CSTRING(Actions_CPR);

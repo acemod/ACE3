@@ -29,6 +29,6 @@ if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
     if (count _x >= 2) then {
         _optics set [_forEachIndex, _x select 2];
     };
-} count [primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit];
+} forEach [primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit];
 
 _optics

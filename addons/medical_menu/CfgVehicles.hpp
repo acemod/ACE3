@@ -2,14 +2,14 @@
 class CfgVehicles {
 
     class ACE_Module;
-    class ACE_moduleMedicalSettings: ACE_Module {
+    class ACE_moduleMedicalMenuSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(module_DisplayName);
         icon = QUOTE(PATHTOEF(medical,UI\Icon_Module_Medical_ca.paa));
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
-        isGlobal = 1;
+        isGlobal = 0;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {
