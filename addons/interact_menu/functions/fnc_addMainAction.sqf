@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_objectType,_typeNum);
+params ["_objectType", "_typeNum"];
 
 private["_actionTrees", "_mainAction", "_parentNode", "_varName"];
 
