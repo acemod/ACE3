@@ -29,7 +29,10 @@ switch (GVAR(optionMenu_openTab)) do {
                 _settingName = _setting select 0;
 
                 _convertedValue = switch (toUpper (_setting select 1)) do {
-                case "STRING": {format ['"%1"', _inputText]};
+                case "STRING": {
+                    ctrlSetText [414, _inputText call FUNC(stringEscape)];
+                    format ['%1', _inputText call FUNC(stringEscape)];
+                };
                 case "ARRAY": {format [call compile "[%1]", _inputText]};
                 case "SCALAR": {parseNumber _inputText;};
                     default {throw "Error"};

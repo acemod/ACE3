@@ -1,19 +1,20 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+
 // Bail if guidance is disabled
 // Bail on locality of the projectile, it should be local to us
 if(GVAR(enabled) < 1 || {!local _projectile} ) exitWith { false };
 
+//Bail if shooter isn't player AND system not enabled for AI:
 if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
-
-private["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
-private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
-
-PARAMS_7(_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false }; 
+
+private["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
 
 //Verify ammo has explicity added guidance config (ignore inheritances)
 _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
@@ -100,12 +101,12 @@ _args = [_this,
 //    _guidingUnit = ACE_player;
 //
 //    if(local _guidingUnit) then {
-//        [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+//        [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 //    } else {
 //        [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
 //    };
 //} else {
-    [FUNC(guidancePFH), 0, _args ] call cba_fnc_addPerFrameHandler;
+    [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 //};
 
 

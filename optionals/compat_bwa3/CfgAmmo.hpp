@@ -3,6 +3,7 @@ class CfgAmmo {
     class B_556x45_Ball_Tracer_Red;
     class B_762x51_Tracer_Red;
     class B_127x99_Ball_Tracer_Red;
+    class GrenadeHand;
     class BWA3_B_556x45_Ball: B_556x45_Ball_Tracer_Red {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
@@ -131,5 +132,11 @@ class CfgAmmo {
         ACE_velocityBoundaries[]={};
         ACE_muzzleVelocities[]={};
         ACE_barrelLengths[]={};
+    };
+    class BWA3_G_DM51A1: GrenadeHand {
+        ace_frag_metal = 296;
+        ace_frag_charge = 180;
+        ace_frag_gurney_c = 2930; // Gurney velocity constant for PETN
+        ace_frag_gurney_k = 1/2; // shape factor for a cylinder
     };
 };

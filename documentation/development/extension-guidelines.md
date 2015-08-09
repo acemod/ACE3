@@ -33,7 +33,7 @@ order: 9
 
 ```
 cd extensions\build
-cmake .. -G "Visual Studio 2014"
+cmake .. -G "Visual Studio 14 2015"
 ```
 
 A Visual studio project file will now be generated in your build directory.

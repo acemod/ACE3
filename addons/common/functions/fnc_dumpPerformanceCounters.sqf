@@ -7,9 +7,10 @@ diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];
 if (!isNil "ACE_PFH_COUNTER") then {
     {
-        private["_pfh"];
-        _pfh = _x select 0;
-        diag_log text format["Registered PFH: id=%1, %1:%2", (_pfh select 0), (_pfh select 1), (_pfh select 2) ]; 
+        private ["_isActive"];
+        _x params ["_pfh", "_parameters"];
+        _isActive = if (!isNil {cba_common_PFHhandles select (_pfh select 0)}) then {"ACTIVE"} else {"REMOVED"};
+        diag_log text format["Registered PFH: id=%1 [%2, delay %3], %4:%5", (_pfh select 0), (_isActive), (_parameters select 1), (_pfh select 1), (_pfh select 2) ]; 
     } forEach ACE_PFH_COUNTER;
 };
 

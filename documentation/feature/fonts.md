@@ -2,6 +2,7 @@
 layout: wiki
 title: Fonts
 group: feature
+category: general
 parent: wiki
 ---
 

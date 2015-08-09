@@ -27,3 +27,6 @@ _player addItem "ACE_EarPlugs";
 _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
 [localize LSTRING(EarPlugs_Are_Off)] call EFUNC(common,displayTextStructured);
+
+//Force an immediate fast volume update:
+[[true]] call FUNC(updateVolume);

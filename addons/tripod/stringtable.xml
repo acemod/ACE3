@@ -30,6 +30,7 @@
             <Polish>Podnieś trójnóg snajperski</Polish>
             <Spanish>Coger equipo SSWT</Spanish>
             <Czech>Zvednout SSWT soupravu</Czech>
+            <German>SSWT-Werkzeug aufheben</German>
             <Portuguese>Pegar kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
@@ -37,6 +38,7 @@
             <Polish>Reguluj trójnóg snajperski</Polish>
             <Spanish>Ajustar equipo SSWT</Spanish>
             <Czech>Regulovat SSWT soupravu</Czech>
+            <German>SSWT-Werkzeug anpassen</German>
             <Portuguese>Ajustar kit SSWT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
@@ -44,6 +46,7 @@
             <Polish>Gotowe</Polish>
             <Spanish>Hecho</Spanish>
             <Czech>Hotovo</Czech>
+            <German>Fertig</German>
             <Portuguese>Feito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
@@ -51,6 +54,7 @@
             <Polish>+ Modyfikator, regulacja</Polish>
             <Spanish>+ Modificador, ajuste</Spanish>
             <Czech>+ Modifikátor, regulace</Czech>
+            <German>+ Modifikator, anpassen</German>
             <Portuguese>+ Modificador, ajuste</Portuguese>
         </Key>
     </Package>

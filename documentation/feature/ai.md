@@ -3,7 +3,7 @@ layout: wiki
 title: AI (Artificial Intelligence)
 description: Config based changes to AI to ensure compatibility with advanced AI modifications
 group: feature
-order: 5
+category: realism
 parent: wiki
 ---
 

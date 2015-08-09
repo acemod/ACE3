@@ -1,14 +1,15 @@
 ---
 layout: wiki
 title: Test Missions
-description: 
+description: Adds an ACE3 Test Missions
 group: feature
+category: general
 parent: wiki
 ---
 
 ## 1. Overview
 
-adds ACE3 test missions
+Adds an ACE3 Test Missions
 
 ## 2. Dependencies
 

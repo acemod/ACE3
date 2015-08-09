@@ -69,7 +69,11 @@ PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapGridData);
+PREP(getMapGridFromPos);
+PREP(getMapPosFromGrid);
 PREP(getMarkerType);
+PREP(getMGRSdata);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);
@@ -102,6 +106,7 @@ PREP(goKneeling);
 PREP(hadamardProduct);
 PREP(hasItem);
 PREP(hasMagazine);
+PREP(headBugFix);
 PREP(hideUnit);
 PREP(inheritsFrom);
 PREP(insertionSort);
@@ -322,7 +327,7 @@ if (hasInterface) then {
             // Raise ACE event
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // Time handling
@@ -335,7 +340,7 @@ ACE_pausedTime = 0;
 ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
-[FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;
+[FUNC(timePFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);

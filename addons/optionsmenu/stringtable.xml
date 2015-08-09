@@ -73,30 +73,6 @@
             <Italian>Valori</Italian>
             <Portuguese>Valores</Portuguese>
         </Key>
-        <Key ID="STR_ACE_OptionsMenu_Enabled">
-            <English>Yes</English>
-            <German>Ja</German>
-            <Spanish>Si</Spanish>
-            <Polish>Tak</Polish>
-            <Czech>Ano</Czech>
-            <French>Oui</French>
-            <Russian>Да</Russian>
-            <Hungarian>Igen</Hungarian>
-            <Portuguese>Sim</Portuguese>
-            <Italian>Si</Italian>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_Disabled">
-            <English>No</English>
-            <German>Nein</German>
-            <Spanish>No</Spanish>
-            <Polish>Nie</Polish>
-            <Czech>Ne</Czech>
-            <French>Non</French>
-            <Russian>Нет</Russian>
-            <Hungarian>Nem</Hungarian>
-            <Portuguese>Não</Portuguese>
-            <Italian>No</Italian>
-        </Key>
         <Key ID="STR_ACE_OptionsMenu_Setting">
             <English>Setting:</English>
             <Czech>Nastavení:</Czech>
@@ -334,6 +310,7 @@
             <Polish>Debuguj do schowka</Polish>
             <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
+            <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
@@ -341,19 +318,34 @@
             <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
             <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
+            <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFix">
+            <English>Headbug Fix</English>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
+            <English>Resets your animation state.</English>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
             <Spanish>Noticias ACE</Spanish>
+            <German>ACE-Neuigkeiten</German>
             <Portuguese>Notícias do ACE</Portuguese>
             <Polish>Wiadomości ACE</Polish>
+            <Czech>ACE Novinky</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
             <Spanish>Mostrar noticias en el menú principal</Spanish>
+            <German>Zeige Neuigkeiten im Hauptmenü</German>
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
+            <Czech>Zobrazit novinky v hlavním menu</Czech>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_category_all">
+            <English>All Categories</English>
+            <Polish>Wszystkie kategorie</Polish>
         </Key>
     </Package>
 </Project>

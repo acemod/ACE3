@@ -2919,30 +2919,14 @@
             <Spanish>IA controlada remotamente</Spanish>
             <Portuguese>IA controlada remotamente</Portuguese>
             <Polish>Zdalnie sterowane AI</Polish>
+            <Czech>Vzdáleně ovládané AI</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_disabled">
-            <English>Disabled</English>
-            <Russian>Отключено</Russian>
-            <Polish>Wyłączone</Polish>
-            <Spanish>Desactivado</Spanish>
-            <German>Deaktiviert</German>
-            <Czech>Zakázáno</Czech>
-            <Portuguese>Desativado</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_enabled">
-            <English>Enabled</English>
-            <Russian>Включено</Russian>
-            <Polish>Włączone</Polish>
-            <Spanish>Activado</Spanish>
-            <German>Aktiviert</German>
-            <Czech>Povoleno</Czech>
-            <Portuguese>Ativado</Portuguese>
+            <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
@@ -3184,14 +3168,20 @@
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann der Erstehilfekasten verwendet werden?</German>
-            <Czech>Kde může být osobní lékárnička použita?</Czech>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
+            <Czech>Podmínka osobní lékárničky</Czech>
+            <Spanish>Condición EPA</Spanish>
+            <Polish>Warunek apteczek</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the Personal Aid Kit be used?</English>
+            <Czech>Kde může být použita osobní lékárnička?</Czech>
+            <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
+            <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3228,15 +3218,6 @@
             <German>Fahrzeuge &amp; Einrichtungen</German>
             <Czech>Vozidla a zařízení</Czech>
             <Portuguese>Veículos e instalações</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_disabled">
-            <English>Disabled</English>
-            <Russian>Отключено</Russian>
-            <Polish>Wyłączone</Polish>
-            <Spanish>Desactivado</Spanish>
-            <German>Deaktiviert</German>
-            <Czech>Zakázáno</Czech>
-            <Portuguese>Desativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical kit (Adv)</English>
@@ -3294,9 +3275,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical kit (Adv)</English>
+            <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
+            <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
+            <Polish>Warunek zestawu chir.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical kit be used?</English>
+            <Czech>Kde může být použita chirurgická souprava?</Czech>
+            <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
+            <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3448,8 +3435,7 @@
             <Portuguese>É médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
-            <English></English>
-            <Russian></Russian>
+            <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
             <German>Dieses Modul legt fest welche Einheit ein Sanitäter ist.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
@@ -3514,7 +3500,7 @@
             <Russian>Список транспортных средств, которые будут считаться медицинским транспортом (через запятую).</Russian>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy medyczne, oddzielone przecinkami.</Polish>
             <Spanish>Lista de los vehículos que se clasifican como vehículo médicos, separados por comas.</Spanish>
-            <German>Liste ovn Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
+            <German>Liste von Fahrzeugen, die als medizinische Fahrzeuge verwendet werden. Wird durch Kommas getrennt.</German>
             <Czech>Seznam vozidel které budou klasifikovány jako zdravotnická vozidla, oddělené čárkami.</Czech>
             <Portuguese>Lista de veículos que serão classificados como veículos médicos, separados por vírgulas.</Portuguese>
         </Key>
@@ -3599,35 +3585,29 @@
             <Czech>[ACE] Zdravotnické zásoby (pokročilé)</Czech>
             <Portuguese>[ACE] Caixa com suprimentos médicos (Avançados)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Yes">
-            <English>Yes</English>
-            <German>Ja</German>
-            <Spanish>Si</Spanish>
-            <Polish>Tak</Polish>
-            <Czech>Ano</Czech>
-            <French>Oui</French>
-            <Russian>Да</Russian>
-            <Hungarian>Igen</Hungarian>
-            <Portuguese>Sim</Portuguese>
-            <Italian>Si</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_No">
-            <English>No</English>
-            <German>Nein</German>
-            <Spanish>No</Spanish>
-            <Polish>Nie</Polish>
-            <Czech>Ne</Czech>
-            <French>Non</French>
-            <Russian>Нет</Russian>
-            <Hungarian>Nem</Hungarian>
-            <Portuguese>Não</Portuguese>
-            <Italian>No</Italian>
-        </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
+            <Czech>Kdykoli</Czech>
+            <Spanish>Siempre</Spanish>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
+            <Czech>Stabilní</Czech>
+            <Spanish>Estable</Spanish>
+            <Polish>Po stabilizacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Category_Medical">
+            <English>Medical</English>
+            <Czech>Zdravotní</Czech>
+            <French>Médical</French>
+            <German>Sanitäter</German>
+            <Italian>Medico</Italian>
+            <Polish>Medyczne</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медик</Russian>
+            <Spanish>Médico</Spanish>
+            <Hungarian>Orvosi</Hungarian>
         </Key>
     </Package>
 </Project>

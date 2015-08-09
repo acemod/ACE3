@@ -38,7 +38,7 @@ _onSuccess =  {
 };
 
 _onFailure = {
-    [localize LESTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
+    [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
 };
 
 _condition = {

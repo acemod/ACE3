@@ -24,10 +24,7 @@ class CfgVehicles {
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_SpottingScope {
-                name = "ACE_SpottingScope";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_SpottingScope,1);
         };
     };
 

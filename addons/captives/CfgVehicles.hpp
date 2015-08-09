@@ -189,6 +189,26 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class requireSurrender {
+                displayName = CSTRING(ModuleSettings_allowSurrender_name);
+                description = CSTRING(ModuleSettings_allowSurrender_description);
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    class Surrender  {
+                        name = CSTRING(SurrenderOnly);
+                        value = 1;
+                        default = 1;
+                    };
+                    class SurrenderOrNoWeapon  {
+                        name = CSTRING(SurrenderOrNoWeapon);
+                        value = 2;
+                    };
+                };
+            };
         };
         class ModuleDescription: ModuleDescription {
             description = CSTRING(ModuleSettings_Description);

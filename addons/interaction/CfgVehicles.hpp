@@ -91,7 +91,7 @@ class CfgVehicles {
 
                 class ACE_JoinGroup {
                     displayName = CSTRING(JoinGroup);
-                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinGroup));
+                    condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
                     showDisabled = 0;
                     priority = 2.6;
@@ -351,7 +351,7 @@ class CfgVehicles {
                     hotkey = "7";
                 };
                 class ACE_Gesture_Yes {
-                    displayName = CSTRING(Gestures_Yes);
+                    displayName = ECSTRING(common,Yes);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
                     showDisabled = 1;
@@ -359,7 +359,7 @@ class CfgVehicles {
                     hotkey = "8";
                 };
                 class ACE_Gesture_No {
-                    displayName = CSTRING(Gestures_No);
+                    displayName = ECSTRING(common,No);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureNo';);
                     showDisabled = 1;

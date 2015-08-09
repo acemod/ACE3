@@ -38,6 +38,11 @@ createDialog "ace_huntir_cam_dialog_off";
         GVAR(messageSearching) = toArray "Searching.....";            
         GVAR(messageConnecting) = toArray "Connecting.....";
         [{
+            //Close monitor if we no longer have item:
+            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+                closeDialog 0;
+            };
+        
             private ["_elapsedTime", "_nearestHuntIRs"];
             _elapsedTime = ACE_time - GVAR(startTime);
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];

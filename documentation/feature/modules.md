@@ -1,7 +1,8 @@
 ---
 layout: wiki
-title: modules
+title: Modules
 group: feature
+category: general
 parent: wiki
 ---
 
@@ -11,4 +12,4 @@ This is taking care of module initialization **DO NOT REMOVE**.
 
 ## 2. Dependencies
 
-`ace_main` reminder: **DO NOT REMOVE**.
+`ace_main`

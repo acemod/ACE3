@@ -3,6 +3,7 @@ layout: wiki
 title: Reload
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

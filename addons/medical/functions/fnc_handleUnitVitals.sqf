@@ -110,6 +110,11 @@ if (GVAR(level) >= 2) then {
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
     _unit setvariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
+    if (_painStatus > 0 && {_painStatus < 10}) then {
+        _painReduce = if (_painStatus > 5) then {0.002} else {0.001};
+        _unit setVariable [QGVAR(pain), (_painStatus - _painReduce * _interval) max 0, _syncValues];
+    };
+
     // TODO Disabled until implemented fully
     // Handle airway
     /*if (GVAR(setting_allowAirwayInjuries)) then {

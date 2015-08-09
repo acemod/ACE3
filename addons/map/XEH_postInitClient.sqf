@@ -47,6 +47,7 @@ call FUNC(determineZoom);
 ["SettingsInitialized", {
     // Start Blue Force Tracking if Enabled
     if (GVAR(BFT_Enabled)) then {
+        diag_log text "[ACE] Blue Force Tracking Enabled (client)";
         GVAR(BFT_markers) = [];
         [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
     };

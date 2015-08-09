@@ -3,6 +3,7 @@ layout: wiki
 title: Common
 description: Common functions and systems used by most other components.
 group: feature
+category: general
 parent: wiki
 ---
 

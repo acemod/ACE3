@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: Yardage 450
+description: Adds the Bushnell Yardage Pro Sport 450 Laser Rangefinder
 group: feature
+category: equipment
 parent: wiki
 ---
 

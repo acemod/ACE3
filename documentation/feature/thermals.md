@@ -3,6 +3,7 @@ layout: wiki
 title: Thermals
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

@@ -39,14 +39,13 @@ class CfgVehicles {
         };
     };
 
-    class Module_F;
-    class ACE_ModuleBlueForceTracking: Module_F {
+    class ACE_ModuleBlueForceTracking: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
-        isGlobal = 1;
+        isGlobal = 0;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
             class Enabled {
