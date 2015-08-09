@@ -3,13 +3,12 @@
  *
  * Returns true if the laser distance measurement can be read from the engine.
  *
- * Argument:
- * Nothing
+ * Arguments:
+ * None
  *
- * Return value:
- * Boolean (Bool)
+ * Return Value:
+ * Boolean <BOOL>
  */
-
 #include "script_component.hpp"
 
 !isNull ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151)

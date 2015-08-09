@@ -8,27 +8,19 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile", "_sumVelocity"];
-
-_vehicle = _this select 0;
-_weapon = _this select 1;
-_ammo = _this select 4;
-_magazine = _this select 5;
-_projectile = _this select 6;
-
-private ["_gunner", "_turret"];
+private ["_sumVelocity", "_gunner", "_turret", "_FCSMagazines", "_FCSElevation", "_offset", "_zeroing"];
+params ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile"]
 
 _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
 _turret = [_gunner] call EFUNC(common,getTurretIndex);
 
 // Exit if the unit isn't a player
 if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
-
-private ["_FCSMagazines", "_FCSElevation", "_offset"];
 
 _FCSMagazines = _vehicle getVariable [(format ["%1_%2", QGVAR(Magazines), _turret]), []];
 _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
@@ -46,7 +38,7 @@ _offset = 0;
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
-// Remove the platform velocity 
+// Remove the platform velocity
 if( (vectorMagnitude velocity _vehicle) > 2) then {
     _sumVelocity = (velocity _projectile) vectorDiff (velocity _vehicle);
     _projectile setVelocity _sumVelocity;
@@ -58,7 +50,6 @@ if( (vectorMagnitude velocity _vehicle) > 2) then {
 if (!local _gunner) exitWith {};
 
 if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
-    private "_zeroing";
     _zeroing = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _vehicle];
 
     if (_zeroing < 50) exitWith {};

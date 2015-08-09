@@ -4,20 +4,19 @@
  * Adjusts the currently zeroed distance.
  *
  * Arguments:
- * 0: The vehicle in question
- * 1: The amount to add to the distance (can be negative)
+ * 0: The vehicle in question <OBJECT>
+ * 1: The Turrets that the Vehicle has <ARRAY>
+ * 2: The amount to add to the distance (can be negative) <NUMMBER>
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_vehicle", "_turret", "_delta", "_turretConfig", "_min", "_max", "_distance"];
-
-_vehicle = _this select 0;
-_turret = _this select 1;
-_delta = _this select 2;
+params ["_vehicle", "_turret", "_delta"];
 
 _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 

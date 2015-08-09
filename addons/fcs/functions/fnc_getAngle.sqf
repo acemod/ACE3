@@ -4,44 +4,30 @@
  * Calculates the angle offset necessary to hit the current target.
  *
  * Arguments:
- * 0: distance to target in meters
- * 1: current angle of the turret
- * 2: maximum elevation of the turret
- * 3: initSpeed of the projectile
- * 4: airFriction of the projectile
- * 5: maximum timeToLive of the projectile
- * 6: simulationStep of the projectile
+ * 0: distance to target in meters <NUMBER>
+ * 1: current angle of the turret <NUMBER>
+ * 2: maximum elevation of the turret <NUMBER>
+ * 3: initSpeed of the projectile <NUMBER>
+ * 4: airFriction of the projectile <NUMBER>
+ * 5: maximum timeToLive of the projectile <NUMBER>
+ * 6: simulationStep of the projectile <NUMBER>
  *
  * Return Value:
- * offset from the current angle necessary to hit the target
+ * offset from the current angle necessary to hit the target <NUMBER>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 #define PRECISION 0.1
 
-private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle1", "_angle2", "_it2", "_f1", "_f2", "_temp", "_it1", "_angle"];
-
-_distance       = _this select 0;
-_angleTarget    = _this select 1;
-_maxElev        = _this select 2;
-_initSpeed      = _this select 3;
-_airFriction    = _this select 4;
-_timeToLive     = _this select 5;
-_simulationStep = _this select 6;
+private ["_angle1", "_angle2", "_it2", "_f1", "_f2", "_temp", "_it1", "_angle"];
+params ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep"]
 
 if (_simulationStep == 0) exitWith {_angleTarget};
 
 FUNC(traceBullet) = {
-    private ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle", "_posTargetX", "_posTargetY", "_posX", "_posY", "_velocityX", "_velocityY", "_velocityMagnitude", "_i"];
-
-    _distance       = _this select 0;
-    _angleTarget    = _this select 1;
-    _maxElev        = _this select 2;
-    _initSpeed      = _this select 3;
-    _airFriction    = _this select 4;
-    _timeToLive     = _this select 5;
-    _simulationStep = _this select 6;
-    _angle          = _this select 7;
+    private ["_posTargetX", "_posTargetY", "_posX", "_posY", "_velocityX", "_velocityY", "_velocityMagnitude", "_i"];
+    params ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_angle"];
 
     _angle = _angle - _angleTarget;
     _angleTarget = 0;
