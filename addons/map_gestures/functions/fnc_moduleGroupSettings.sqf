@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Initializes Settings for the groups modules and transcodes settings to a useable format.
  *
  * Arguments:

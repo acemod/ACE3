@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Initializes transmitting map gestures.
  *
  * Arguments:

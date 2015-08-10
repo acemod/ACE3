@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Receives and draws map gestures from nearby players.
  *
  * Arguments:

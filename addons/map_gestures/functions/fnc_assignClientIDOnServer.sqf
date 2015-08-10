@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Assign readable client ID to unit on the server.
  *
  * Arguments:

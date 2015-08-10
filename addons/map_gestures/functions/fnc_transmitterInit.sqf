@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Initializes the transmitting event handlers.
  *
  * Arguments:

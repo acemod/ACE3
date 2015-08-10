@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Initializes the receiver and hooks it to the Draw event of the map.
  *
  * Arguments:

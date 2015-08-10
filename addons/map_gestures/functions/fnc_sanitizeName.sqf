@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Cleans up unit names to be usable within variable names.
  *
  * Arguments:

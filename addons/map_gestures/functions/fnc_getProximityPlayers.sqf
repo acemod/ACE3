@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:

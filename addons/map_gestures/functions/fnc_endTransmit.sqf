@@ -1,5 +1,5 @@
 /*
- * Author: MikeMatrix
+ * Author: Dslyecxi, MikeMatrix
  * Ensure that all variables used to indicate transmission are disabled.
  *
  * Arguments:
