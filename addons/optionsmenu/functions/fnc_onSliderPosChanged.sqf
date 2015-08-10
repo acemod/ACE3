@@ -16,9 +16,13 @@
 
 #include "script_component.hpp"
 
-private ["_newColor", "_settingIndex"];
+private ["_newColor", "_settingIndex", "_settingsMenu"];
 
-_settingIndex =  lbCurSel 200;
+_settingIndex = -1;
+if (((lbCurSel 200) >= 0) && {(lbCurSel 200) < ((lbSize 200)/2)}) then {
+    _settingIndex = lbValue [200, (lbCurSel 200)];
+};
+if (_settingIndex == -1) exitWith {};
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_COLORS): {

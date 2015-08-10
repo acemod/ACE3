@@ -277,7 +277,7 @@ class ACE_settingsMenu {
 };
 class ACE_serverSettingsMenu: ACE_settingsMenu {
     onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', _this select 0)]; [] call FUNC(onServerSettingsMenuOpen););
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', nil)];);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', nil)]; [] call FUNC(onSettingsMenuOpen););
     class controls: controls {
         class HeaderName {
             idc = 1;

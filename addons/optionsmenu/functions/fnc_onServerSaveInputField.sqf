@@ -18,8 +18,12 @@
 
 private ["_settingIndex", "_inputText", "_setting", "_settingName", "_convertedValue"];
 
-_settingIndex =  lbCurSel 200;  //Index of left list
 _inputText = ctrlText 414;  //Index of right drop down
+
+_settingIndex = -1;
+if (((lbCurSel 200) >= 0) && {(lbCurSel 200) < ((lbSize 200)/2)}) then {
+    _settingIndex = lbValue [200, (lbCurSel 200)];
+};
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_SERVER_VALUES): {

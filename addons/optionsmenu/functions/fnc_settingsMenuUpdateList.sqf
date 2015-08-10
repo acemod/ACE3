@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue", "_selectedCategory"];
+private ["_added", "_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue", "_selectedCategory"];
 DEFAULT_PARAM(0,_updateKeyView,true);
 
 disableSerialization;
@@ -27,10 +27,11 @@ lbclear _ctrlList;
 
 _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 
+_added = 0;
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_OPTIONS): {
         {
-            if (_selectedCategory == "" || _selectedCategory == (_X select 8)) then {
+            if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
                 _ctrlList lbadd (_x select 3);
                 _settingsValue = _x select 9;
 
@@ -41,12 +42,15 @@ switch (GVAR(optionMenu_openTab)) do {
                     (_x select 5) select _settingsValue;
                 };
                 _ctrlList lbadd (_settingsText);
+                
+                _ctrlList lbSetValue [_added, _forEachIndex];
+                _added = _added + 1;
             };
-        }foreach GVAR(clientSideOptions);
+        } foreach GVAR(clientSideOptions);
     };
     case (MENU_TAB_COLORS): {
         {
-            if (_selectedCategory == "" || _selectedCategory == (_X select 8)) then {
+            if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
                 _color = +(_x select 9);
                 {
                     _color set [_forEachIndex, ((round (_x * 100))/100)];
@@ -55,6 +59,9 @@ switch (GVAR(optionMenu_openTab)) do {
                 _ctrlList lbadd (_x select 3);
                 _ctrlList lbadd (_settingsColor);
                 _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 9)];
+                
+                _ctrlList lbSetValue [_added, _forEachIndex];
+                _added = _added + 1;
             };
         }foreach GVAR(clientSideColors);
     };
