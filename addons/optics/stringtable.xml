@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Optics">
+        <Key ID="STR_ACE_Optics_hamr">
+            <English>RCO (2D)</English>
+            <Czech>RCO (2D)</Czech>
+            <French>RCO (2D)</French>
+            <German>RCO (2D)</German>
+            <Italian>RCO (2D)</Italian>
+            <Polish>RCO (2D)</Polish>
+            <Portuguese>RCO (2D)</Portuguese>
+            <Russian>RCO (2D)</Russian>
+            <Spanish>RCO (2D)</Spanish>
+            <Hungarian>RCO (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_hamr_pip">
+            <English>RCO (PIP)</English>
+            <Czech>RCO (PIP)</Czech>
+            <French>RCO (PIP)</French>
+            <German>RCO (BIB)</German>
+            <Italian>RCO (PIP)</Italian>
+            <Polish>RCO (PIP)</Polish>
+            <Portuguese>RCO (PIP)</Portuguese>
+            <Russian>RCO (PIP)</Russian>
+            <Spanish>RCO (PIP)</Spanish>
+            <Hungarian>RCO (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_arco">
+            <English>ARCO (2D)</English>
+            <Czech>ARCO (2D)</Czech>
+            <French>ARCO (2D)</French>
+            <German>ARCO (2D)</German>
+            <Italian>ARCO (2D)</Italian>
+            <Polish>ARCO (2D)</Polish>
+            <Portuguese>ARCO (2D)</Portuguese>
+            <Russian>ARCO (2D)</Russian>
+            <Spanish>ARCO (2D)</Spanish>
+            <Hungarian>ARCO (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_arco_pip">
+            <English>ARCO (PIP)</English>
+            <Czech>ARCO (PIP)</Czech>
+            <French>ARCO (PIP)</French>
+            <German>ARCO (BIB)</German>
+            <Italian>ARCO (PIP)</Italian>
+            <Polish>ARCO (PIP)</Polish>
+            <Portuguese>ARCO (PIP)</Portuguese>
+            <Russian>ARCO (PIP)</Russian>
+            <Spanish>ARCO (PIP)</Spanish>
+            <Hungarian>ARCO (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_valdada">
+            <English>MRCO (2D)</English>
+            <Czech>MRCO (2D)</Czech>
+            <French>MRCO (2D)</French>
+            <German>MRCO (2D)</German>
+            <Italian>MRCO (2D)</Italian>
+            <Polish>MRCO (2D)</Polish>
+            <Portuguese>MRCO (2D)</Portuguese>
+            <Russian>MRCO (2D)</Russian>
+            <Spanish>MRCO (2D)</Spanish>
+            <Hungarian>MRCO (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_valdada_pip">
+            <English>MRCO (PIP)</English>
+            <Czech>MRCO (PIP)</Czech>
+            <French>MRCO (PIP)</French>
+            <German>MRCO (BIB)</German>
+            <Italian>MRCO (PIP)</Italian>
+            <Polish>MRCO (PIP)</Polish>
+            <Portuguese>MRCO (PIP)</Portuguese>
+            <Russian>MRCO (PIP)</Russian>
+            <Spanish>MRCO (PIP)</Spanish>
+            <Hungarian>MRCO (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos">
+            <English>MOS (2D)</English>
+            <Czech>MOS (2D)</Czech>
+            <French>MOS (2D)</French>
+            <German>MOS (2D)</German>
+            <Italian>MOS (2D)</Italian>
+            <Polish>MOS (2D)</Polish>
+            <Portuguese>MOS (2D)</Portuguese>
+            <Russian>MOS (2D)</Russian>
+            <Spanish>MOS (2D)</Spanish>
+            <Hungarian>MOS (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos_pip">
+            <English>MOS (PIP)</English>
+            <Czech>MOS (PIP)</Czech>
+            <French>MOS (PIP)</French>
+            <German>MOS (BIB)</German>
+            <Italian>MOS (PIP)</Italian>
+            <Polish>MOS (PIP)</Polish>
+            <Portuguese>MOS (PIP)</Portuguese>
+            <Russian>MOS (PIP)</Russian>
+            <Spanish>MOS (PIP)</Spanish>
+            <Hungarian>MOS (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_lrps">
+            <English>LRPS (2D)</English>
+            <Czech>LRPS (2D)</Czech>
+            <French>LRPS (2D)</French>
+            <German>LRPS (2D)</German>
+            <Italian>LRPS (2D)</Italian>
+            <Polish>LRPS (2D)</Polish>
+            <Portuguese>LRPS (2D)</Portuguese>
+            <Russian>LRPS (2D)</Russian>
+            <Spanish>MPLD (2D)</Spanish>
+            <Hungarian>LRPS (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_lrps_pip">
+            <English>LRPS (PIP)</English>
+            <Czech>LRPS (PIP)</Czech>
+            <French>LRPS (PIP)</French>
+            <German>LRPS (BIB)</German>
+            <Italian>LRPS (PIP)</Italian>
+            <Polish>LRPS (PIP)</Polish>
+            <Portuguese>LRPS (PIP)</Portuguese>
+            <Russian>LRPS (PIP)</Russian>
+            <Spanish>MPLD (PIP)</Spanish>
+            <Hungarian>LRPS (PIP)</Hungarian>
+        </Key>
+    </Package>
+</Project>

@@ -13,10 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_show"];
+private ["_target", "_show", "_amount", "_item", "_log", "_message", "_triageCardTexts", "_triageStatus"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
-GVAR(currentSelectedSelectionN) = if (count _this > 2) then {_this select 2} else {0};
 
 GVAR(TriageCardTarget) = if (_show) then {_target} else {ObjNull};
 
@@ -25,7 +24,7 @@ if (_show) then {
     createDialog QGVAR(triageCard);
 
     [{
-        private ["_target", "_display", "_alphaLevel", "_damaged", "_availableSelections", "_openWounds", "_selectionBloodLoss", "_red", "_green", "_blue", "_alphaLevel", "_allInjuryTexts", "_lbCtrl", "_genericMessages"];
+        private ["_target", "_display", "_alphaLevel", "_alphaLevel", "_lbCtrl"];
         _target = (_this select 0) select 0;
         if (GVAR(TriageCardTarget) != _target) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -43,28 +42,27 @@ if (_show) then {
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
 
-        _log = _target getvariable ["myVariableTESTKOEAKJR", []];
+        _log = _target getvariable [QGVAR(triageCard), []];
         {
-            // [_message,_moment,_type, _arguments]
-            _message = _x select 0;
-            _moment = _x select 1;
-            _arguments = _x select 3;
-            if (isLocalized _message) then {
-                _message = localize _message;
-            };
-
-            {
-                if (typeName _x == "STRING" && {isLocalized _x}) then {
-                    _arguments set [_foreachIndex, localize _x];
+            _item = _x select 0;
+            _amount = _x select 1;
+            _message = _item;
+            if (isClass(configFile >> "CfgWeapons" >> _item)) then {
+                _message = getText(configFile >> "CfgWeapons" >> _item >> "DisplayName");
+            } else {
+                if (isLocalized _message) then {
+                    _message = localize _message;
                 };
-            }foreach _arguments;
-            _message = format([_message] + _arguments);
-            _lbCtrl lbAdd format["%1 %2", _moment, _message];
+            };
+            _triageCardTexts pushback format["%1x - %2", _amount, _message];
         }foreach _log;
 
         if (count _triageCardTexts == 0) then {
-            _lbCtrl lbAdd "No entries on this triage card..";
+            _lbCtrl lbAdd (localize LSTRING(TriageCard_NoEntry));
         };
+        {
+            _lbCtrl lbAdd _x;
+        }foreach _triageCardTexts;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
         (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);

@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and esteldunedain
+ * Author: KoffeinFlummi, esteldunedain, Ruthberg
  *
  * Watches for scope changes.
  * Defines key bindings
@@ -33,62 +33,133 @@ if !(hasInterface) exitWith {};
 
 
 // Add keybinds
-["ACE3", QGVAR(AdjustUp), localize "STR_ACE_Scopes_AdjustUp",
+["ACE3 Scope Adjustment", QGVAR(AdjustUpMinor), localize LSTRING(AdjustUpMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, 0.1] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0, 0.1] call FUNC(adjustScope);
-    true
+    [ACE_player, ELEVATION_UP, MINOR_INCREMENT] call FUNC(adjustScope);
 },
 {false},
-[201, [false, false, false]], false] call cba_fnc_addKeybind;
+[201, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustDown), localize "STR_ACE_Scopes_AdjustDown",
+["ACE3 Scope Adjustment", QGVAR(AdjustDownMinor), localize LSTRING(AdjustDownMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0, -0.1] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0, -0.1] call FUNC(adjustScope);
-    true
+    [ACE_player, ELEVATION_DOWN, MINOR_INCREMENT] call FUNC(adjustScope);
 },
 {false},
-[209, [false, false, false]], false] call cba_fnc_addKeybind;
+[209, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustLeft), localize "STR_ACE_Scopes_AdjustLeft",
+["ACE3 Scope Adjustment", QGVAR(AdjustLeftMinor), localize LSTRING(AdjustLeftMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, -0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, -0.1, 0] call FUNC(adjustScope);
-    true
+    [ACE_player, WINDAGE_LEFT, MINOR_INCREMENT] call FUNC(adjustScope);
 },
 {false},
-[209, [false, true, false]], false] call cba_fnc_addKeybind;
+[209, [false, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustRight), localize "STR_ACE_Scopes_AdjustRight",
+["ACE3 Scope Adjustment", QGVAR(AdjustRightMinor), localize LSTRING(AdjustRightMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    if !([ACE_player, 0.1, 0] call FUNC(canAdjustScope)) exitWith {false};
 
     // Statement
-    [ACE_player, 0.1, 0] call FUNC(adjustScope);
-    true
+    [ACE_player, WINDAGE_RIGHT, MINOR_INCREMENT] call FUNC(adjustScope);
 },
 {false},
-[201, [false, true, false]], false] call cba_fnc_addKeybind;
+[201, [false, true, false]], true] call cba_fnc_addKeybind;
+
+["ACE3 Scope Adjustment", QGVAR(AdjustUpMajor), localize LSTRING(AdjustUpMajor),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+
+    // Statement
+    [ACE_player, ELEVATION_UP, MAJOR_INCREMENT] call FUNC(adjustScope);
+},
+{false},
+[201, [true, false, false]], true] call cba_fnc_addKeybind;
+
+["ACE3 Scope Adjustment", QGVAR(AdjustDownMajor), localize LSTRING(AdjustDownMajor),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+
+    // Statement
+    [ACE_player, ELEVATION_DOWN, MAJOR_INCREMENT] call FUNC(adjustScope);
+},
+{false},
+[209, [true, false, false]], true] call cba_fnc_addKeybind;
+
+["ACE3 Scope Adjustment", QGVAR(AdjustLeftMajor), localize LSTRING(AdjustLeftMajor),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+
+    // Statement
+    [ACE_player, WINDAGE_LEFT, MAJOR_INCREMENT] call FUNC(adjustScope);
+},
+{false},
+[209, [true, true, false]], true] call cba_fnc_addKeybind;
+
+["ACE3 Scope Adjustment", QGVAR(AdjustRightMajor), localize LSTRING(AdjustRightMajor),
+{
+    // Conditions: canInteract
+    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Conditions: specific
+    [ACE_player] call FUNC(inventoryCheck);
+
+    // Statement
+    [ACE_player, WINDAGE_RIGHT, MAJOR_INCREMENT] call FUNC(adjustScope);
+},
+{false},
+[201, [true, true, false]], true] call cba_fnc_addKeybind;
+
+// init shortdot
+GVAR(showShortdot) = false;
+
+["playerInventoryChanged", {
+    if (_this select 1 isEqualTo []) exitWith {}; //@todo fix eh
+
+    private "_showShortdot";
+    _showShortdot = _this select 1 select 9 select 2 == "ACE_optic_DMS";
+
+    if (GVAR(showShortdot)) then {
+        if (!_showShortdot) then {
+            // hide control and turn onDraw handler off
+            (uiNamespace getVariable ["ACE_ctrlShortdotReticle", controlNull]) ctrlShow false;
+            GVAR(showShortdot) = false;
+        };
+    } else {
+        if (_showShortdot) then {
+            // create control and turn onDraw handler on
+            ([QGVAR(reticle)] call BIS_fnc_rscLayer) cutRsc ["ACE_Shortdot_Reticle", "PLAIN", 0, false];
+            (uiNamespace getVariable "ACE_ctrlShortdotReticle") ctrlSetText QUOTE(PATHTOF(data\reticles\ace_shortdot_reticle_1.paa));
+            GVAR(showShortdot) = true;
+        };
+    };
+}] call EFUNC(common,addEventHandler);
+
+addMissionEventHandler ["Draw3D", {if (GVAR(showShortdot)) then {call FUNC(onDrawShortdot)};}];

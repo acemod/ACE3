@@ -1,21 +1,24 @@
 /*
  * Author: commy2
- *
  * Check if the vehicle is in range of the player.
  *
- * Argument:
- * 0: Vehicke (Object)
- * 1: Distance in meters (Number)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Distance in meters <NUMBER>
  *
  * Return value:
- * (Bool)
+ * Vehicle in range of player <BOOL>
+ *
+ * Example:
+ * [target, 5] call ace_interaction_fnc_isInRange
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_distance", "_player"];
+PARAMS_2(_vehicle,_distance);
 
-_vehicle = _this select 0;
-_distance = _this select 1;
+private ["_player", "_position0", "_position1"];
 
 _player = ACE_player;
 
@@ -43,8 +46,8 @@ _position1 = ATLToASL positionCameraToWorld [0, 0, _distance];
 _position1 set [2, (_position1 select 2) - (getTerrainHeightASL _position1 min 0)];
 
 if (_vehicle in lineIntersectsWith [_position0, _position1] || {_player distance _vehicle < _distance}) then {
-	true
+    true
 } else {
-	["Not in Range"] call FUNC(addToTooltip);
-	false
+    ["Not in Range"] call FUNC(addToTooltip);
+    false
 }

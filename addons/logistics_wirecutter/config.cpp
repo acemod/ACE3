@@ -3,9 +3,9 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_wirecutter"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interact_menu"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"gpgpgpgp", "PabstMirror"};
         authorUrl = "";
         VERSION_CONFIG;
@@ -13,5 +13,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

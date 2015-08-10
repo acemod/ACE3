@@ -14,10 +14,10 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_exceptions"];
+private ["_exceptions"];
 
-_unit = _this select 0;
-_target = _this select 1;
+PARAMS_2(_unit,_target);
+
 _exceptions = if (count _this > 2) then {
     _this select 2;
 } else {

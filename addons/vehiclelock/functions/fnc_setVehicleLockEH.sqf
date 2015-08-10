@@ -18,7 +18,8 @@
 
 private ["_lockNumber"];
 
-PARAMS_2(_veh,_isLocked);
+params ["_veh", "_isLocked"];
+TRACE_2("params",_veh,_isLocked);
 
 _lockNumber = if (_isLocked) then {2} else {0};
 TRACE_2("Setting Lock State", _veh, _lockNumber);

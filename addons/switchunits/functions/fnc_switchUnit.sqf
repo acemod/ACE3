@@ -18,9 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allNearestPlayers", "_oldUnit", "_leave"];
+private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave"];
 
-_unit = _this select 1;
+PARAMS_1(_unit);
 
 // don't switch to original player units
 if (!([_unit] call FUNC(isValidAi))) exitWith {};
@@ -32,16 +32,16 @@ if (GVAR(EnableSafeZone)) then {
 
     _allNearestPlayers = [position _unit, GVAR(SafeZoneRadius)] call FUNC(nearestPlayers);
     _nearestEnemyPlayers = [_allNearestPlayers, {((side GVAR(OriginalGroup)) getFriend (side _this) < 0.6) && !(_this getVariable [QGVAR(IsPlayerControlled), false])}] call EFUNC(common,filter);
-          
+
     if (count _nearestEnemyPlayers > 0) exitWith {
         _leave = true;
     };
-    
+
 };
 
 // exitWith doesn't exit past the "if(EnableSafeZone)" block
 if (_leave) exitWith {
-    [localize "STR_ACE_SwitchUnits_TooCloseToEnemy"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(TooCloseToEnemy)] call EFUNC(common,displayTextStructured);
 };
 
 // should switch locality
@@ -56,14 +56,14 @@ DFUNC(pfhSwitchUnit) = {
 
     private ["_args", "_unit", "_oldUnit", "_respawnEhId", "_oldOwner"];
     _args = _this select 0;
-    
+
     _unit = _args select 0;
     _oldUnit = _args select 1;
-    
-    
-    
+
+
+
     if (local _unit) exitWith {
-        
+
         _oldUnit setVariable [QGVAR(IsPlayerControlled), false, true];
         _oldUnit setVariable [QGVAR(PlayerControlledName), "", true];
 
@@ -88,11 +88,11 @@ DFUNC(pfhSwitchUnit) = {
             [[_oldUnit, _oldOwner], QUOTE({(_this select 0) setOwner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
         };
 
-        [localize "STR_ACE_SwitchUnits_SwitchedUnit"] call EFUNC(common,displayTextStructured);
-        
+        [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);
+
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        
+
     };
 };
 
-[FUNC(pfhSwitchUnit), 0.2, [_unit, _oldUnit]] call cba_fnc_addPerFrameHandler;
+[FUNC(pfhSwitchUnit), 0.2, [_unit, _oldUnit]] call CBA_fnc_addPerFrameHandler;

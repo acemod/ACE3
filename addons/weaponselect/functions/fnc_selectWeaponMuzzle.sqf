@@ -1,20 +1,22 @@
 /*
  * Author: commy2
- *
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.
  *
- * Argument:
- * 0: A weapon (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, currentWeapon player] call ace_weaponselect_fnc_selectWeaponMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {};
 
@@ -39,7 +41,6 @@ _index = (_muzzles find currentMuzzle _unit) + 1;
 if (_index > count _muzzles - 1) then {_index = 1};
 
 _muzzle = _muzzles select _index;
-
 
 _index = 0;
 while {

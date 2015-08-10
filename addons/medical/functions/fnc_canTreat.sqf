@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_availableLevels", "_medicRequired", "_items", "_locations", "_return", "_condition"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_condition", "_patientStateCondition", "_allowedSelections"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -30,13 +30,22 @@ if (GVAR(level)>=2) then {
 };
 if !(isClass _config) exitwith {false};
 
-_medicRequired = getNumber (_config >> "requiredMedic");
+_medicRequired = if (isNumber (_config >> "requiredMedic")) then {
+    getNumber (_config >> "requiredMedic");
+} else {
+    // Check for required class
+    if (isText (_config >> "requiredMedic")) exitwith {
+        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+    };
+    0;
+};
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
 
-_locations = getArray (_config >> "treatmentLocations");
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
 
 _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -54,12 +63,36 @@ if (getText (_config >> "condition") != "") then {
 };
 if (!_return) exitwith {false};
 
+_patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
+    missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
+} else {
+    getNumber(_config >> "patientStateCondition")
+};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+
+_locations = getArray (_config >> "treatmentLocations");
 if ("All" in _locations) exitwith {true};
+
+private [ "_medFacility", "_medVeh"];
+_medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
+_medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isInMedicalVehicle))};
 
 {
     if (_x == "field") exitwith {_return = true;};
-    if (_x == "MedicalFacility" && {[_caller, _target] call FUNC(inMedicalFacility)}) exitwith {_return = true;};
-    if (_x == "MedicalVehicle" && {[_caller, _target] call FUNC(inMedicalVehicle)}) exitwith {_return = true;};
+    if (_x == "MedicalFacility" && _medFacility) exitwith {_return = true;};
+    if (_x == "MedicalVehicle" && _medVeh) exitwith {_return = true;};
+    if !(isnil _x) exitwith {
+        private "_val";
+        _val = missionNamespace getvariable _x;
+        if (typeName _val == "SCALAR") then {
+            _return = switch (_val) do {
+                case 0: {true};
+                case 1: _medVeh;
+                case 2: _medFacility;
+                case 3: {call _medFacility || call _medVeh};
+            };
+        };
+    };
 }foreach _locations;
 
 _return;

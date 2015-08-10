@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
     class ADDON: NO_CATEGORY {
-        displayName = "ACE Medical";
+        displayName = CSTRING(Category_DisplayName);
     };
 };

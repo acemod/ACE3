@@ -23,11 +23,6 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
-    class StaticMortar {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject));
-        };
-    };
     class ReammoBox_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));

@@ -1,90 +1,121 @@
 /*
- * Author: eRazeri and esteldunedain
+ * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit
  *
  * Arguments:
- * 0: unit doing the attach (player) <OBJECT>
- * 1: vehicle that it will be attached to (player or vehicle) <OBJECT>
- * 2: Name of the attachable item <STRING>
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array containing a string of the attachable item <ARRAY>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * Nothing
+ * [bob, bob, ["light"]] call ace_attach_fnc_attach;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_attachToVehicle,_itemName);
+private ["_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID", "_model"];
+params ["_attachToVehicle","_unit","_args"];
+_args params [["_itemClassname","", [""]]];
+TRACE_3("params",_attachToVehicle,_unit,_itemClassname);
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
-if !([_unit, _attachToVehicle, _itemName] call FUNC(canAttach)) exitWith {ERROR("Tried to attach, but check failed");};
+if ((_itemClassname == "") || {!(_this call FUNC(canAttach))}) exitWith {ERROR("Tried to attach, but check failed");};
 
-private ["_itemVehClass", "_onAtachText", "_selfAttachPosition"];
-
-_itemVehClass = "";
-_onAtachText = "";
 _selfAttachPosition = [_unit, [-0.05, 0, 0.12], "rightshoulder"];
 
-switch (true) do {
-    case (_itemName == "ACE_IR_Strobe_Item"): {
-        _itemVehClass = "ACE_IR_Strobe_Effect";
-        _onAtachText = localize "STR_ACE_Attach_IrStrobe_Attached";
-        //_selfAttachPosition = [_unit, [0, -0.11, 0.16], "pilot"];  //makes it attach to the head a bit better, shoulder is not good for visibility - eRazeri
-    };
-    case (_itemName == "B_IR_Grenade"): {
-        _itemVehClass = "B_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-    case (_itemName == "O_IR_Grenade"): {
-        _itemVehClass = "O_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-    case (_itemName == "I_IR_Grenade"): {
-        _itemVehClass = "I_IRStrobe";
-        _onAtachText = localize "STR_ACE_Attach_IrGrenade_Attached";
-    };
-    case (toLower _itemName in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]): {
-        _itemVehClass = _itemName;
-        _onAtachText = localize "STR_ACE_Attach_Chemlight_Attached";
-    };
+_itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
+_onAtachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+
+if (_itemVehClass == "") then {
+    _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
+    _onAtachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
 };
 
-if (_itemVehClass == "") exitWith {ERROR("no _itemVehClass for Item");};
+if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
+
+_onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
-    _unit removeItem _itemName;  // Remove item
+    _unit removeItem _itemClassname;  // Remove item
     _attachedItem = _itemVehClass createVehicle [0,0,0];
     _attachedItem attachTo _selfAttachPosition;
     [_onAtachText] call EFUNC(common,displayTextStructured);
     _attachToVehicle setVariable [QGVAR(Objects), [_attachedItem], true];
-    _attachToVehicle setVariable [QGVAR(ItemNames), [_itemName], true];
+    _attachToVehicle setVariable [QGVAR(ItemNames), [_itemClassname], true];
 } else {
-    GVAR(setupObject) = _itemVehClass createVehicleLocal [0,0,-10000];
-    GVAR(setupObject) enableSimulationGlobal false;
-    GVAR(SetupPlacmentText) = _onAtachText;
-    GVAR(SetupPlacmentItem) = _itemName;
-    GVAR(SetupAttachVehicle) = _attachToVehicle;
-    GVAR(placer) = _unit;
+    GVAR(placeAction) = PLACE_WAITING;
+
     [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-    [QGVAR(PlacementEachFrame),"OnEachFrame", {
-        private "_player";
-        _player = ACE_player;
-        //Stop if player switch or player gets to far from vehicle
-        if (GVAR(placer) != _player || {_player distance GVAR(SetupAttachVehicle) > 7}) exitWith {
-            call FUNC(placeCancel);
+    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+
+    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
+
+    //Display to show virtual object:
+    private [];
+    _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");
+    if (_model == "") then {
+        _model = getText (configFile >> "CfgVehicles" >> _itemVehClass >> "model");
+    };
+    //"\A3\Weapons_F\empty.p3d" is fine, but ctrlSetModel ""; - will crash game!
+    if (_model == "") exitWith {ERROR("No Model");};
+    (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
+    ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _model;
+
+    [{
+        private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
+        params ["_args","_idPFH"];
+        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAtachText","_actionID"];
+
+        _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
+        if (cameraView == "EXTERNAL") then {
+            _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
-        GVAR(pfeh_running) = true;
-        _pos = (ASLtoATL eyePos _player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
-        GVAR(setupObject) setPosATL _pos;
-    }] call BIS_fnc_addStackedEventHandler;     // @todo replace with CBA PFH
+        _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+        _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
 
-    //had to delay the mouseHint, not sure why
-    [{[localize "STR_ACE_Attach_PlaceAction", localize "STR_ACE_Attach_CancelAction"] call EFUNC(interaction,showMouseHint)}, [], 0, 0] call EFUNC(common,waitAndExecute);
+        //Don't allow placing in a bad position:
+        if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
-    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {GVAR(pfeh_running) && {!isNull (GVAR(setupObject))}}, {call FUNC(placeApprove);}] call EFUNC(common,AddActionEventHandler)];
-    _unit setVariable [QGVAR(cancelActionEH), [_unit, "MenuBack", {GVAR(pfeh_running) && {!isNull (GVAR(setupObject))}}, {call FUNC(placeCancel);}] call EFUNC(common,AddActionEventHandler)];
+        if ((GVAR(placeAction) != PLACE_WAITING) ||
+                {_unit != ACE_player} ||
+                {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
+                {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
+
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
+            [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+            [] call EFUNC(interaction,hideMouseHint);
+            [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+            _unit removeAction _actionID;
+
+            (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+
+            if (GVAR(placeAction) == PLACE_APPROVE) then {
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _virtualPos] call FUNC(placeApprove);
+            };
+        } else {
+            //Show the virtual object:
+            if (_lineInterection) then {
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
+            } else {
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
+                _screenPos = worldToScreen _virtualPos;
+                if (_screenPos isEqualTo []) exitWith {
+                    ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
+                };
+                _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+                _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
+                _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
+                _angle = asin (_dir select 2);
+                _up = [0, cos _angle, sin _angle];
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
+            };
+        };
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
 };

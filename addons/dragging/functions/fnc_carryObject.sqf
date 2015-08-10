@@ -36,7 +36,7 @@ if (_target isKindOf "CAManBase") then {
 
     // add height offset of model
     private "_offset";
-    _offset = (_target modelToWorld [0, 0, 0] select 2) - (_unit modelToWorld [0, 0, 0] select 2);
+    _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
     _position = _position vectorAdd [0, 0, _offset];
 
@@ -58,7 +58,7 @@ if (_actionID != -1) then {
 };
 
 _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Dragging_Drop"],
+    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
     QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(carriedObject)),objNull)])] call FUNC(dropObject_carry)),
     nil,
     20,

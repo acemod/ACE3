@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 EXPLODE_4_PVT(_this select 0,_unit,_i,_arr,_code);
 if ((_i mod 4) == 0) then {
-    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, (_unit ModelToWorld [0,0.2,2]), 15,1,2.5];
+    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, (_unit modelToWorldVisual [0,0.2,2]), 15,1,2.5];
 };
 ctrlSetText [1400,format["Calling%1",_arr select (_i - 4)]];
 

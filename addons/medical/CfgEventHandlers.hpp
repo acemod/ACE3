@@ -17,6 +17,11 @@ class Extended_Init_EventHandlers {
             init = QUOTE(call COMPILE_FILE(XEH_init));
         };
     };
+    class ACE_bodyBagObject {
+        class ADDON {
+            init = QUOTE(_this call DEFUNC(dragging,initObject));
+        };
+    };
 };
 
 class Extended_Respawn_EventHandlers {
@@ -39,14 +44,6 @@ class Extended_Local_EventHandlers {
     class CAManBase {
         class ADDON {
             local = QUOTE(call FUNC(handleLocal));
-        };
-    };
-};
-
-class Extended_Take_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            take = QUOTE(call FUNC(itemCheck));
         };
     };
 };

@@ -12,15 +12,13 @@
  * None
  *
  * Example:
- * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "CfgACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
+ * [player, _explosive, "SatchelCharge_Remote_Mag", [ConfigFile >> "ACE_Triggers" >> "Command"]] call ACE_Explosives_fnc_addClacker;
  *
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_unit", "_explosive", "_clacker", "_config", "_magazineClass", "_requiredItems", "_hasRequired"];
-_unit = _this select 0;
-_explosive = _this select 1;
-_magazineClass = _this select 2;
+private ["_clacker", "_config", "_requiredItems", "_hasRequired", "_detonators"];
+EXPLODE_3_PVT(_this,_unit,_explosive,_magazineClass);
 // Config is the last item in the list of passed in items.
 _config = (_this select 3) select (count (_this select 3) - 1);
 
@@ -28,9 +26,9 @@ _requiredItems = getArray(_config >> "requires");
 _hasRequired = true;
 _detonators = [_unit] call FUNC(getDetonators);
 {
-	if !(_x in _detonators) exitWith{
-		_hasRequired = false;
-	};
+    if !(_x in _detonators) exitWith{
+        _hasRequired = false;
+    };
 } count _requiredItems;
 
 if !(_hasRequired) exitWith {};
@@ -38,7 +36,9 @@ _config = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> co
 
 _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
-_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize "STR_ACE_Explosives_DetonateCode",
-	GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
+
+_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize LSTRING(DetonateCode),
+    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
+
 _unit setVariable [QGVAR(Clackers), _clacker, true];
-_unit sideChat format [localize "STR_ACE_Explosives_DetonateCode", GVAR(PlacedCount)];
+_unit sideChat format [localize LSTRING(DetonateCode), GVAR(PlacedCount)];

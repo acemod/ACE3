@@ -19,7 +19,11 @@ ADDON = false;
 
 PREP(addCellphoneIED);
 PREP(addClacker);
+PREP(addDetonateActions);
+PREP(addExplosiveActions);
 PREP(addToSpeedDial);
+PREP(addTransmitterActions);
+PREP(addTriggerActions);
 PREP(canDefuse);
 PREP(canDetonate);
 PREP(defuseExplosive);
@@ -32,15 +36,19 @@ PREP(handleScrollWheel);
 PREP(hasExplosives);
 PREP(hasPlacedExplosives);
 
+PREP(interactEH);
+
 PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
-PREP(openDetonateUI);
-PREP(openPlaceUI);
-PREP(openTransmitterUI);
+PREP(module);
+
+PREP(onInventoryChanged);
+PREP(onKilled);
+PREP(onLanded);
+
 PREP(openTimerSetUI);
-PREP(openTriggerSelectionUI);
 
 PREP(place_Approve);
 PREP(place_Cancel);

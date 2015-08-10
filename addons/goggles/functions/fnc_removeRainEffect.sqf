@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 if (!isNull (GVAR(RainDrops))) then {
-	deleteVehicle (GVAR(RainDrops));
+    deleteVehicle (GVAR(RainDrops));
 };
 GVAR(RainActive) = false;
 GVAR(RainLastLevel) = 0;

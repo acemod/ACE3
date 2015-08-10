@@ -34,7 +34,7 @@ private ["_unit","_bloodVolume","_bloodVolumeChange", "_ivVolume"];
 _unit = _this select 0;
 
 _bloodVolume = _unit getvariable [QGVAR(bloodVolume), 100];
-_bloodVolumeChange = -(_unit call FUNC(getBloodLoss));
+_bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
 if (_bloodVolume < 100.0) then {
     {
@@ -42,6 +42,12 @@ if (_bloodVolume < 100.0) then {
             _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
             _ivVolume = (_unit getvariable [_x, 0]) + IV_CHANGE_PER_SECOND;
             _unit setvariable [_x,_ivVolume];
+        };
+    }foreach GVAR(IVBags);
+} else {
+    {
+        if ((_unit getvariable [_x, 0]) > 0) then {
+            _unit setvariable [_x, 0]; // lets get rid of exessive IV volume
         };
     }foreach GVAR(IVBags);
 };

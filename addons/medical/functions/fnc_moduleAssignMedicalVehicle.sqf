@@ -37,14 +37,14 @@ if (!isNull _logic) then {
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["enabled", false];
+    _setting = _logic getvariable ["enabled", 0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
         {
             if (!isnil "_x") then {
                    if (typeName _x == typeName objNull) then {
                     if (local _x) then {
-                        _x setvariable [QGVAR(isMedicalVehicle), _setting, true];
+                        _x setvariable [QGVAR(medicClass), _setting, true];
                     };
                 };
             };
@@ -54,7 +54,7 @@ if (!isNull _logic) then {
         if (!isnil "_x") then {
                if (typeName _x == typeName objNull) then {
                 if (local _x) then {
-                    _x setvariable [QGVAR(isMedicalVehicle), _setting, true];
+                    _x setvariable [QGVAR(medicClass), _setting, true];
                 };
             };
         };

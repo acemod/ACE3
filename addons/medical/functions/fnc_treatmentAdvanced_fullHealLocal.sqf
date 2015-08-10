@@ -10,59 +10,65 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_caller", "_allUsedMedication"];
-_unit = _this select 0;
-_caller = _this select 1;
+private ["_target", "_caller", "_allUsedMedication"];
+_caller = _this select 0;
+_target = _this select 1;
 
-if (alive _unit) exitwith {
+if (alive _target) exitwith {
 
-    _unit setVariable [QGVAR(pain), 0, true];
-    _unit setVariable [QGVAR(morphine), 0, true];
-    _unit setVariable [QGVAR(bloodVolume), 100, true];
+    _target setVariable [QGVAR(pain), 0, true];
+    _target setVariable [QGVAR(morphine), 0, true];
+    _target setVariable [QGVAR(bloodVolume), 100, true];
 
     // tourniquets
-    _unit setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
+    _target setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
     // wounds and injuries
-    _unit setvariable [QGVAR(openWounds), [], true];
-    _unit setVariable [QGVAR(internalWounds), [], true];
+    _target setvariable [QGVAR(openWounds), [], true];
+    _target setvariable [QGVAR(bandagedWounds), [], true];
+    _target setVariable [QGVAR(internalWounds), [], true];
 
     // vitals
-    _unit setVariable [QGVAR(heartRate), 80];
-    _unit setvariable [QGVAR(heartRateAdjustments), []];
-    _unit setvariable [QGVAR(bloodPressure), [80, 120]];
-    _unit setVariable [QGVAR(peripheralResistance), 100];
+    _target setVariable [QGVAR(heartRate), 80];
+    _target setvariable [QGVAR(heartRateAdjustments), []];
+    _target setvariable [QGVAR(bloodPressure), [80, 120]];
+    _target setVariable [QGVAR(peripheralResistance), 100];
 
     // fractures
-    _unit setVariable [QGVAR(fractures), []];
+    _target setVariable [QGVAR(fractures), []];
 
     // IVs
-    _unit setVariable [QGVAR(salineIVVolume), 0];
-    _unit setVariable [QGVAR(plasmaIVVolume), 0];
-    _unit setVariable [QGVAR(bloodIVVolume), 0];
+    _target setVariable [QGVAR(salineIVVolume), 0];
+    _target setVariable [QGVAR(plasmaIVVolume), 0];
+    _target setVariable [QGVAR(bloodIVVolume), 0];
 
     // damage storage
-    _unit setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+    _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 
     // airway
-    _unit setvariable [QGVAR(airwayStatus), 0, true];
-    _unit setVariable [QGVAR(airwayOccluded), false, true];
-    _unit setvariable [QGVAR(airwayCollapsed), false, true];
+    _target setvariable [QGVAR(airwayStatus), 100, true];
+    _target setVariable [QGVAR(airwayOccluded), false, true];
+    _target setvariable [QGVAR(airwayCollapsed), false, true];
 
     // generic medical admin
-    _unit setvariable [QGVAR(addedToUnitLoop), false, true];
-    _unit setvariable [QGVAR(inCardiacArrest), false, true];
-    _unit setVariable ["ACE_isUnconscious", false, true];
-    _unit setvariable [QGVAR(hasLostBlood), false, true];
-    _unit setvariable [QGVAR(isBleeding), false, true];
-    _unit setvariable [QGVAR(hasPain), false, true];
+    _target setvariable [QGVAR(addedToUnitLoop), false, true];
+    _target setvariable [QGVAR(inCardiacArrest), false, true];
+    _target setvariable [QGVAR(inReviveState), false, true];
+    _target setVariable ["ACE_isUnconscious", false, true];
+    _target setvariable [QGVAR(hasLostBlood), 0, true];
+    _target setvariable [QGVAR(isBleeding), false, true];
+    _target setvariable [QGVAR(hasPain), false, true];
+    _target setvariable [QGVAR(painSuppress), 0, true];
 
     // medication
-    _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
+    _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
-       _unit setvariable [_x select 0, nil];
+       _target setvariable [_x select 0, nil];
     }foreach _allUsedMedication;
 
     // Resetting damage
-    _unit setDamage 0;
+    _target setDamage 0;
+
+    [_target, "activity", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+    [_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 };

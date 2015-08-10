@@ -14,17 +14,18 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target"];
+private ["_caller","_target", "_output"];
 _caller = _this select 0;
 _target = _this select 1;
 
 _output = "";
 if ([_target] call EFUNC(common,isAwake)) then {
-    _output = "STR_ACE_MEDICAL_CHECK_REPONSE_RESPONSIVE";
+    _output = LSTRING(Check_Response_Responsive);
 } else {
-    _output = "STR_ACE_MEDICAL_CHECK_REPONSE_UNRESPONSIVE";
+    _output = LSTRING(Check_Response_Unresponsive);
 };
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);
 
-[_target,"examine",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target,"activity",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target,"quick_view",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);

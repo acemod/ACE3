@@ -17,17 +17,17 @@
 
 #include "script_component.hpp"
 
-private ["_killedUnit"];
+PARAMS_1(_killedUnit);
 
-_killedUnit = _this select 0;
+// Saves the gear when the player! (and only him) is killed
+if (ACE_player == _killedUnit) then {
+    GVAR(unitGear) = [];
 
-// Saves the gear when the player is killed
-GVAR(unitGear) = [];
-
-if (GVAR(SavePreDeathGear)) then {
-    GVAR(unitGear) = [_killedUnit] call EFUNC(common,getAllGear);
+    if (GVAR(SavePreDeathGear)) then {
+        GVAR(unitGear) = [_killedUnit] call EFUNC(common,getAllGear);
+    };
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {
-    [_this, FUNC(showFriendlyFireMessage), 2] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(showFriendlyFireMessage)), 2] call EFUNC(common,execRemoteFnc);
 };

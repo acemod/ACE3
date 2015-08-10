@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
-    systemChat format ["%1 startDragPFH running", time];
+    systemChat format ["%1 startDragPFH running", ACE_time];
 #endif
 
 private ["_unit", "_target", "_timeOut"];
@@ -16,14 +16,14 @@ if !(_unit getVariable [QGVAR(isDragging), false]) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
 
-// same as dragObjectPFH, checks if object is deleted or dead.
-if !([_target] call EFUNC(common,isAlive)) then {
+// same as dragObjectPFH, checks if object is deleted or dead OR (target moved away from carrier (weapon disasembled))
+if ((!([_target] call EFUNC(common,isAlive))) || {(_unit distance _target) > 10}) then {
     [_unit, _target] call FUNC(dropObject);
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
 
-// timeout. Do nothing. Quit. time, because anim length is linked to ingame time.
-if (time > _timeOut) exitWith {
+// timeout. Do nothing. Quit. ACE_time, because anim length is linked to ingame ACE_time.
+if (ACE_time > _timeOut) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 
     // drop if in timeout

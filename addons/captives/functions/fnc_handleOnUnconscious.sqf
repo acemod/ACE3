@@ -16,15 +16,13 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_isUnconc);
+params ["_unit","_isUnconc"];
 
 if (!local _unit) exitWith {};
 
-systemChat format ["med: %1", _this];
-
 if (_isUnconc) then {
     //Knocked out: If surrendering, stop
-    if (_unit getVariable [QGVAR(isSurrendering), false]) then {  
+    if (_unit getVariable [QGVAR(isSurrendering), false]) then {
         [_unit, false] call FUNC(setSurrendered);
     };
 } else {

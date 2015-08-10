@@ -26,20 +26,20 @@ if (isnil QGVAR(setting_allowSharedEquipment)) then {
 
 if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitwith {
     [[_patient, _item], QUOTE(EFUNC(common,useItem)), _patient] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-    true;
+    [true, _patient];
 };
 
 if ([_medic, _item] call EFUNC(common,hasItem)) exitwith {
     [[_medic, _item], QUOTE(EFUNC(common,useItem)), _medic] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-    true;
+    [true, _medic];
 };
 
-_return = false;
+_return = [false, objNull];
 if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) then {
     _crew = crew vehicle _medic;
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitwith {
-            _return = true;
+            _return = [true, _x];
             [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
         };
     }foreach _crew;

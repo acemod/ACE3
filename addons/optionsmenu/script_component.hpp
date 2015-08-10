@@ -1,6 +1,6 @@
 #define COMPONENT optionsmenu
 
-#define DEBUG_MODE_FULL
+// #define DEBUG_MODE_FULL
 
 #include "\z\ace\addons\main\script_mod.hpp"
 
@@ -17,3 +17,6 @@
 #define MENU_TAB_OPTIONS 0
 #define MENU_TAB_COLORS 1
 
+#define MENU_TAB_SERVER_OPTIONS 10
+#define MENU_TAB_SERVER_COLORS 11
+#define MENU_TAB_SERVER_VALUES 12

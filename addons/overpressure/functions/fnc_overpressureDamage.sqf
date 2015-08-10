@@ -50,18 +50,13 @@ if (!surfaceIsWater _pos) then {
             _alpha = sqrt (1 - _distance / _overpressureRange);
             _beta = sqrt (1 - _angle / _overpressureAngle);
 
-            _damage = 2 * _alpha * _beta * _overpressureDamage;
+            _damage = _alpha * _beta * _overpressureDamage;
 
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
-            // TODO: Sort this interaction with medical
-            if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
-                [_x, "HitBody", ([_x, "", (_x getHitPointDamage "HitBody") + _damage, objNull, objNull] call EFUNC(medical,handleDamage))] call EFUNC(medical,setHitPointDamage);
-                _x spawn {
-                    sleep 0.5;
-                    [_this, "", 0, objNull, objNull] call EFUNC(medical,handleDamage);
-                };
+            if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
+                 [_x, "HitBody", [_x, "body", (_x getHitPointDamage "HitBody") + _damage, _firer, "backblast"] call EFUNC(medical,handleDamage)] call EFUNC(medical,setHitPointDamage);
             } else {
                 _x setDamage (damage _x + _damage);
             };

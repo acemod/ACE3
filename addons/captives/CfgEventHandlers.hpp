@@ -41,3 +41,11 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
+//make sure captiveNum is reset on respawn
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            respawn = QUOTE(_this call FUNC(handleRespawn));
+        };
+    };
+};

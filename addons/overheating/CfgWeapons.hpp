@@ -3,8 +3,8 @@ class CfgWeapons {
     class InventoryItem_Base_F;
 
     class ACE_SpareBarrel: ACE_ItemCore {
-        displayname = "$STR_ACE_Overheating_SpareBarrelName";
-        descriptionshort = "$STR_ACE_Overheating_SpareBarrelDescription";
+        displayname = CSTRING(SpareBarrelName);
+        descriptionshort = CSTRING(SpareBarrelDescription);
         //model = "";
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         scope = 2;
@@ -40,7 +40,21 @@ class CfgWeapons {
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
+    
+    class MMG_02_base_F: Rifle_Long_Base_F {
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
 
+    class MMG_01_base_F: Rifle_Long_Base_F {
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
+        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
+        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    };
+    
     class arifle_MX_SW_F : arifle_MX_Base_F {
         ACE_clearJamAction = "";              // Custom jam clearing action. Use empty string to undefine.
         ACE_Overheating_allowSwapBarrel = 1;  // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
@@ -127,54 +141,5 @@ class CfgWeapons {
         ACE_Overheating_Dispersion[] = {0, 0.001, 0.002, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
-    };
-};
-
-class CfgAmmo {
-    class BulletCore;
-    class BulletBase : BulletCore {
-        ACE_BulletMass = 0;       // Bullet mass in grams
-    };
-
-    // Rifle and MG rounds
-    class B_556x45_Ball : BulletBase {
-        ACE_BulletMass = 4.1;     // 5.56x45 NATO
-    };
-
-    class B_65x39_Caseless : BulletBase {
-        ACE_BulletMass = 8;       // 6.5mm Grendel
-    };
-
-    class B_762x51_Ball : BulletBase {
-        ACE_BulletMass = 10;      // 7.62x51 NATO
-    };
-    class ACE_B_762x51_M118LR : B_762x51_Ball {
-        ACE_BulletMass = 11;      // 7.62x51 NATO M118
-    };
-
-    class B_127x99_Ball : BulletBase {
-        ACE_BulletMass = 42;      // 12.7×99mm NATO (.50 BMG)
-    };
-
-    class B_127x108_Ball : BulletBase {
-        ACE_BulletMass = 48.3;    // 12.7x108
-    };
-
-    class B_408_Ball : BulletBase {
-        ACE_BulletMass = 27;      // .408 Cheyenne Tactical
-    };
-
-    // Pistol Rounds
-    class B_9x21_Ball : BulletBase {
-        ACE_BulletMass = 7.45;    // 9×21mm IMI
-    };
-    class B_9x19_Ball : B_9x21_Ball {
-        ACE_BulletMass = 7.45;    // 9×19mm Parabellum
-    };
-    class B_127x33_Ball : BulletBase {
-        ACE_BulletMass = 21;      // .50 AE
-    };
-    class B_45ACP_Ball : BulletBase {
-        ACE_BulletMass = 12;      // .45 ACP
     };
 };

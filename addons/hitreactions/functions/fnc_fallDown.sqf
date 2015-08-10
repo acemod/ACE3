@@ -10,6 +10,9 @@ _damage = _this select 2;
 // don't fall on collision damage
 if (_unit == _firer) exitWith {};
 
+//Exit if system disabled:
+if (GVAR(minDamageToTrigger) == -1) exitWith {};
+
 // cam shake for player
 if (_unit == ACE_player) then {
     addCamShake [3, 5, _damage + random 10];
@@ -27,12 +30,15 @@ if (_vehicle isKindOf "StaticWeapon") exitwith {
 };
 
 // don't fall after minor damage
-if (_damage < 0.1) exitWith {};
+if (_damage < GVAR(minDamageToTrigger)) exitWith {};
 
 // play sound
 if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
     [_unit] call EFUNC(medical,playInjuredSound);
 };
+
+//Don't do animations if in a vehicle (looks weird and animations never reset):
+if (_vehicle != _unit) exitWith {};
 
 // this checks most things, so it doesn't mess with being inside vehicles or while dragging etc.
 if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
@@ -52,18 +58,26 @@ _velocity = vectorMagnitude velocity _unit;
 if (_velocity < 2) exitWith {};
 
 // get correct animation by weapon
-private "_anim";
+private ["_isPlayer", "_isRunning", "_anim"];
+
+_isPlayer = [_unit] call EFUNC(common,isPlayer);
+_isRunning = _velocity > 4;
+
 _anim = switch (currentWeapon _unit) do {
     case (""): {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"};
     case (primaryWeapon _unit): {
+        if !(_isPlayer) exitWith {"AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"};
+
         [
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select (_velocity > 4),
+            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
+            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
             "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
             "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
         ] select floor random 4;
     };
     case (handgunWeapon _unit): {
+        if !(_isPlayer) exitWith {"AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon"};
+
         [
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",

@@ -31,7 +31,7 @@ class RscTitles {
             };
             class heading: RscText{
                 idc = 913590;
-                x = X_gps + W_gps * 0.25;
+                x = X_gps + W_gps * 0.225;
                 y = Y_gps + H_gps * 0.12;
                 w = W_gps * 0.2;
                 h = H_gps * 0.16;
@@ -46,7 +46,7 @@ class RscTitles {
             };
             class altitude: RscText{
                 idc = 913591;
-                x = X_gps + W_gps * 0.55;
+                x = X_gps + W_gps * 0.575;
                 y = Y_gps + H_gps * 0.12;
                 w = W_gps * 0.2;
                 h = H_gps * 0.16;
@@ -61,9 +61,9 @@ class RscTitles {
             };
             class coordinates: RscText{
                 idc = 913592;
-                x = X_gps + W_gps * 0.2;
+                x = X_gps + W_gps * 0.15;
                 y = Y_gps + H_gps * 0.33;
-                w = W_gps * 0.6;
+                w = W_gps * 0.7;
                 h = H_gps * 0.35;
                 style = ST_CENTER;
                 text = "012.3 115.1";

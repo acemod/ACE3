@@ -17,12 +17,10 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_sides"];
-_unit = _this select 0;
-_sides = _this select 1;
+PARAMS_2(_unit,_sides);
 
 ["theMapClick", "onMapSingleClick", {
-
+    // IGNORE_PRIVATE_WARNING(_pos,_shift,_alt)
     if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
         [_this, _pos, _shift, _alt] call FUNC(handleMapClick);
     };

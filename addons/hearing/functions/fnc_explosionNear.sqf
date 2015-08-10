@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, commy2
+ * Author: KoffeinFlummi, commy2, Ruthberg
  * Handles deafness due to explosions going off near the player.
  *
  * Arguments:
@@ -16,12 +16,13 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_damage", "_strength"];
+//Only run if deafness or ear ringing is enabled:
+if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-_unit = _this select 0;
-_damage = _this select 1;
+PARAMS_2(_unit,_damage);
 
-_strength = (_damage * 2) min 1;
+private ["_strength"];
+_strength = 0 max _damage;
 if (_strength < 0.01) exitWith {};
 
 [{_this call FUNC(earRinging)}, [_unit, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);

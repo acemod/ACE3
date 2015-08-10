@@ -37,12 +37,12 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 
 // Add keybinds
-["ACE3", QGVAR(IncreaseNVGBrightness), localize "STR_ACE_NightVision_IncreaseNVGBrightness",
+["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if ((currentVisionMode _player != 1)) exitWith {false};
+    if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
     // Statement
     [ACE_player, 1] call FUNC(changeNVGBrightness);
@@ -51,12 +51,12 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 {false},
 [201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
 
-["ACE3", QGVAR(DecreaseNVGBrightness), localize "STR_ACE_NightVision_DecreaseNVGBrightness",
+["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if ((currentVisionMode _player != 1)) exitWith {false};
+    if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
     // Statement
     [ACE_player, -1] call FUNC(changeNVGBrightness);

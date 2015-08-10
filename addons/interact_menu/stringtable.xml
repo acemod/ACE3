@@ -1,7 +1,275 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Interact_Menu">
-    <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
-      <English>Always display cursor for self interaction</English>
-    </Key>
+    <Package name="Interact_Menu">
+        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
+            <English>Always display cursor for self interaction</English>
+            <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
+            <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
+            <Russian>Показывать курсор (взаимодействия с собой)</Russian>
+            <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
+            <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
+            <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
+            <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
+            <Italian>Mostra sempre il cursore per le interazioni su se stessi</Italian>
+            <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
+            <English>Always display cursor for interaction</English>
+            <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
+            <French>Toujours afficher le curseur pour les interactions</French>
+            <Italian>Mostra sempre il cursore per le interazioni</Italian>
+            <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
+            <Russian>Показывать курсор (взаимодействие)</Russian>
+            <Czech>Zobrazit kurzor v menu pro interakci</Czech>
+            <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
+            <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
+            <Portuguese>Sempre mostrar cursor para interação</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_UseListMenu">
+            <English>Display interaction menus as lists</English>
+            <Spanish>Mostrar los menus de interacción como listas</Spanish>
+            <Russian>Меню взаимодействий в виде списка</Russian>
+            <French>Afficher le menu d'interaction sous forme de liste</French>
+            <Italian>Mostra il menù di interazione come lista</Italian>
+            <Polish>Wyświetlaj menu interakcji jako listę</Polish>
+            <Czech>Zobrazit menu interakce jako seznam</Czech>
+            <German>Interaktionsmenü in Listen anzeigen</German>
+            <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+            <Portuguese>Mostrar menu de interação como listas</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_InteractKey">
+            <English>Interact Key</English>
+            <German>Fremdinteraktionsmenü-Taste</German>
+            <Spanish>Tecla de interacción</Spanish>
+            <Russian>Клавиша взаимодействия</Russian>
+            <Czech>Klávesa pro interakci</Czech>
+            <Polish>Klawisz interakcji</Polish>
+            <French>Touche d'interaction</French>
+            <Hungarian>Cselekvő gomb</Hungarian>
+            <Italian>Tasto interazione</Italian>
+            <Portuguese>Tecla de Interação</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
+            <English>Self Interaction Key</English>
+            <German>Eigeninteraktionsmenü-Taste</German>
+            <Spanish>Tecla de interacción propia</Spanish>
+            <Russian>Клавиша взаимодействия (с собой)</Russian>
+            <Czech>Klávesa pro vlastní interakci</Czech>
+            <Polish>Klawisz własnej interakcji</Polish>
+            <French>Touche d'interaction personnelle</French>
+            <Hungarian>Saját cselekvő gomb</Hungarian>
+            <Italian>Tasto interazione su se stessi</Italian>
+            <Portuguese>Tecla de Interação Pessoal</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
+            <English>Self Actions</English>
+            <German>Selbst-Aktionen</German>
+            <Spanish>Acciones propias</Spanish>
+            <Russian>Действия с собой</Russian>
+            <Czech>Vlastní akce</Czech>
+            <Polish>Własne akcje</Polish>
+            <French>Interaction personnelle</French>
+            <Hungarian>Saját cselekvések</Hungarian>
+            <Italian>Interazioni su se stessi</Italian>
+            <Portuguese>Ações Pessoais</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
+            <English>Vehicle Actions</English>
+            <German>Fahrzeug-Aktionen</German>
+            <Spanish>Acciones de vehículo</Spanish>
+            <Russian>Действия на транспорте</Russian>
+            <Czech>Interakce s vozidly</Czech>
+            <Polish>Akcje pojazdu</Polish>
+            <French>Interaction véhicule</French>
+            <Hungarian>Járműves cselekvések</Hungarian>
+            <Italian>Interazioni con veicoli</Italian>
+            <Portuguese>Ações de Veículos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
+            <English>Zeus Actions</English>
+            <Polish>Akcje Zeusa</Polish>
+            <Czech>Akce Zeuse</Czech>
+            <Spanish>Acciones Zeus</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
+            <English>Interaction - Text Max</English>
+            <Polish>Interakcja - Tekst max</Polish>
+            <Czech>Interakce - Text Max</Czech>
+            <French>Interaction - Texte Max</French>
+            <German>Interaktionstextfarbe Max</German>
+            <Italian>Interazioni - Testo Massimo</Italian>
+            <Russian>Взаимодействие - Текст Макс.</Russian>
+            <Spanish>Interacción - Texto al max.</Spanish>
+            <Hungarian>Cselekvés - Szöveg max.</Hungarian>
+            <Portuguese>Interação - Max. de Texto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
+            <English>Interaction - Text Min</English>
+            <Polish>Interakcja - Tekst min</Polish>
+            <Czech>Interakce - Text Min</Czech>
+            <French>Interaction - Texte Min</French>
+            <German>Interaktionstextfarbe Min</German>
+            <Italian>Interazioni - Testo Minimo</Italian>
+            <Russian>Взаимодействие - Текст Мин.</Russian>
+            <Spanish>Interacción - Texto al min.</Spanish>
+            <Hungarian>Cselekvés - Szöveg min.</Hungarian>
+            <Portuguese>Interação - Min. de Texto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
+            <English>Interaction - Shadow Max</English>
+            <Polish>Interakcja - Cień max</Polish>
+            <Czech>Interakce - Stín Max</Czech>
+            <French>Interaction - Ombre Max</French>
+            <German>Interaktionstextschatten Max</German>
+            <Italian>Interazioni - Ombra Massima</Italian>
+            <Russian>Взаимодействие - Тень Макс.</Russian>
+            <Spanish>Interacción - Sombras al max.</Spanish>
+            <Hungarian>Cselekvés - Árnyék max.</Hungarian>
+            <Portuguese>Interação - Max. de Sombra</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
+            <English>Interaction - Shadow Min</English>
+            <Polish>Interakcja - Cień min</Polish>
+            <Czech>Interakce - Stín Min</Czech>
+            <French>Interaction - Ombre Min</French>
+            <German>Interaktionstextschatten Min</German>
+            <Italian>Interazioni - Ombra Minima</Italian>
+            <Russian>Взаимодействие - Тень Мин.</Russian>
+            <Spanish>Interacción - Sombras al min.</Spanish>
+            <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+            <Portuguese>Interação - Min. de Sombra</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
+            <English>Keep cursor centered</English>
+            <French>Garder le curseur au centre</French>
+            <Russian>Центрировать курсор</Russian>
+            <German>Cursor zentriert halten</German>
+            <Hungarian>Kurzor középen tartása</Hungarian>
+            <Polish>Utrzymaj kursor wyśrodkowany</Polish>
+            <Spanish>Mantener el cursor centrado</Spanish>
+            <Czech>Udržuj kurzor na středu</Czech>
+            <Portuguese>Manter o cursor centralizado</Portuguese>
+            <Italian>Mantieni il cursore centrato</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
+            <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
+            <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
+            <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
+            <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
+            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
+            <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
+            <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
+            <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
+            <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
+            <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
+            <English>Do action when releasing menu key</English>
+            <German>Aktion nach Loslassen der Taste ausführen</German>
+            <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
+            <Czech>Provést akci při pustění klávesy menu</Czech>
+            <French>Action au relachement de touche</French>
+            <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
+            <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
+            <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
+            <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
+            <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_textSize">
+            <English>Interaction Text Size</English>
+            <Czech>Velikost textu interakce</Czech>
+            <German>Menü-Schriftgröße</German>
+            <French>Taille du texte d'interaction</French>
+            <Russian>Размер текста (меню взаимодействия)</Russian>
+            <Spanish>Tamaño del texto de interacción</Spanish>
+            <Polish>Rozmiar tekstu interakcji</Polish>
+            <Portuguese>Tamanho do texto de interação</Portuguese>
+            <Hungarian>Cselekvő szöveg mérete</Hungarian>
+            <Italian>Dimensione del testo d'interazione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_shadowSetting">
+            <English>Interaction Text Shadow</English>
+            <Czech>Stín textu interakce</Czech>
+            <German>Menü-Hintergrundschatten</German>
+            <French>Ombre du texte d'interaction</French>
+            <Russian>Тень от текста (меню взаимодействия)</Russian>
+            <Spanish>Sombra del texto de interacción</Spanish>
+            <Polish>Cień tekstu interakcji</Polish>
+            <Portuguese>Sombra do texto de interação</Portuguese>
+            <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
+            <Italian>Ombra del testo d'interazione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
+            <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
+            <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
+            <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
+            <French>Permet de controler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
+            <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
+            <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
+            <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
+            <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
+            <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
+            <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_shadowOutline">
+            <English>Outline</English>
+            <Czech>Kontura</Czech>
+            <German>Kontur</German>
+            <French>Contour</French>
+            <Russian>Контур</Russian>
+            <Spanish>Contorno</Spanish>
+            <Polish>Kontur</Polish>
+            <Portuguese>Contorno</Portuguese>
+            <Hungarian>Körvonal</Hungarian>
+            <Italian>Contorno</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_background">
+            <English>Interaction menu background</English>
+            <Polish>Tło menu interakcji</Polish>
+            <Spanish>Fondo del menú de interacción</Spanish>
+            <Czech>Pozadí menu interakce</Czech>
+            <German>Interaktionsmenü-Hintergrund</German>
+            <Portuguese>Fundo do menu de interação</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
+            <English>Blur the background while the interaction menu is open.</English>
+            <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
+            <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
+            <Czech>Rozmazat obraz pokud je interakční menu otevřené.</Czech>
+            <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
+            <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
+            <English>Blur screen</English>
+            <Polish>Rozmycie ekranu</Polish>
+            <Spanish>Pantalla de desenfoque</Spanish>
+            <Czech>Rozmazaný obraz</Czech>
+            <German>Verschwommenes Bild</German>
+            <Portuguese>Desfoque de tela</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
+            <English>Black</English>
+            <Polish>Przyciemnienie ekranu</Polish>
+            <Spanish>Negro</Spanish>
+            <Czech>Černý obraz</Czech>
+            <Portuguese>Preto</Portuguese>
+            <German>Schwarz</German>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
+            <English>Show actions for buildings</English>
+            <Polish>Pokazuj akcje dla budynków</Polish>
+            <Czech>Zobrazit akci pro budovy</Czech>
+            <Spanish>Mostrar acciones para edificios</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
+            <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
+            <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
+            <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
+            <English>Interaction Menu</English>
+            <Polish>Menu interakcji</Polish>
+        </Key>
+    </Package>
 </Project>

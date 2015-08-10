@@ -19,9 +19,9 @@ private ["_explosive"];
 if (isNil QGVAR(CellphoneIEDs)) exitWith {[]};
 _explosive = [];
 {
-  if ((_x select 1) == _code) exitWith {
-    _explosive = _x;
-  };
-  false
+    if ((_x select 1) == _code) exitWith {
+        _explosive = _x;
+    };
+    false
 } count GVAR(CellphoneIEDs);
 _explosive

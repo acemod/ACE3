@@ -1,90 +1,91 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus
+ * Turns on laser self designation from this vehicle based on the turret.
+ * There are no arguments, because it is all strictly based on the users vehicle.
+ *
+ * Argument:
+ *
+ * Return value:
+ *    N/A
+ */
+ //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 TRACE_1("enter", _this);
 
-FUNC(magnitude) = {
-	 _this distance [0, 0, 0]
-};
-
-FUNC(mat_normalize3d) = {
-	private ["_mag"];
-	PARAMS_3(_vx,_vy,_vz);
-
-	_mag = _this call FUNC(magnitude);
-	if (_mag == 0) then {_mag = 1};
-	[(_vx/_mag), (_vy/_mag), (_vz/_mag)]
-};
+#define FCS_UPDATE_DELAY 1
 
 FUNC(laserHudDesignatePFH) = {
-	_args = _this select 0;
-	_laserTarget = _args select 0;
-	_shooter = _args select 1;
-	
-	_vehicle = vehicle _shooter;
-	_weapon = currentWeapon _vehicle;
-	
-	if(!alive _shooter || isNull _vehicle || isNull _laserTarget || !GVAR(laserActive) ) exitWith { 
-		[(_this select 1)] call cba_fnc_removePerFrameHandler; 
-	};
-	
-	// Retrieve the gunner and turret memory point information
-	_gunnerInfo = [_vehicle, _weapon] call CBA_fnc_getFirer;
-	
-	_turret = [_vehicle, _gunnerInfo select 1] call CBA_fnc_getTurret;
-	_pov = getText (_turret >> "memoryPointGunnerOptics");
-	_gunBeg = getText (_turret >> "gunBeg");
-	_gunEnd = getText (_turret >> "gunEnd");	
-	TRACE_3("", _pov, _gunBeg, _gunEnd);
+    private["_strongestResultPos", "_args", "_localLaserTarget", "_laserResultPosition", "_laserResult", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turretInfo", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
+    _args = _this select 0;
+    
+    _shooter = _args select 0;
+    _localLaserTarget = _args select 2;
+    _vehicle = vehicle _shooter;
+    TRACE_1("", _args);
+   
+    if((vehicle _shooter) == _shooter || {!alive _shooter} || {isNull _vehicle} || {!GVAR(active)} ) exitWith { 
+        _args call FUNC(laserHudDesignateOff);
+    };
+    if(!([_shooter] call FUNC(unitTurretHasDesignator)) ) exitWith {
+        _args call FUNC(laserHudDesignateOff);
+    };
+   
+    if( (count _args) < 4) then {
+        _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
+    };
+    _forceUpdateTime = _args select 3;
 
-	// Pull the PIP pov or barrel direction, depending on how the model is set up
-	_povPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _pov ) );
-	_povDir = [0,0,0];
-	if(_pov == "pip0_pos") then {
-		_pipDir = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition "pip0_dir" ) ); 
-		_povDir = [_povPos, _pipDir] call BIS_fnc_vectorDiff;
-	} else {
-		_gunBeginPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunBeg ) );
-		_gunEndPos = ATLtoASL ( _vehicle modelToWorld (_vehicle selectionPosition _gunEnd ) );
-		_povDir = [_gunEndPos, _gunBeginPos] call BIS_fnc_vectorDiff;
-	};
-	
-	TRACE_4("", _povDir, _povPos, _gunBeginPos, _gunEndPos);
-	
-	_result = [_povPos, _povDir] call EFUNC(laser,shootCone);
-	
-	if((count _result) > 0) then {
-		_resultPositions = _result select 2;
+    // @TODO: We don't have anything here we need to do the calculations for right now
+    /*
+    
+    _gunnerInfo = [_vehicle, (currentWeapon _vehicle)] call CBA_fnc_getFirer;
+    _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
+    _povPos = _turretInfo select 0;
+    
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
+    
+    
+    _laserResult = [_povPos, [_waveLength,_waveLength], _laserCode] call EFUNC(laser,seekerFindLaserSpot);
+    _laserResultPosition = _laserResult select 0;
+    TRACE_1("Search", _laserResult);
 
-		if((count _resultPositions) > 0) then {
-			_firstResult = _resultPositions select 0;
-			_pos = _firstResult select 0;
-			
-			// If the laser has moved less than a half meter, then dont move it.
-			// Just regular use of lasers will commonly make them move this much,
-			// but not across multiple close frames.
-			// This loses accuracy a little, but saves position updates per frame.
-			//if( ((getPosASL _laserTarget) distance _pos) > 0.5) then {
-				_laserTarget setPosATL (ASLToATL _pos);
-			//};
-#ifdef DEBUG_MODE_FULL
-			drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToATL _pos, 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-#endif
-		};
-	};
+    if((count _laserResult) > 0) then {
+        // @TODO: Nou gets to field all tickets about missing lasers.
+        //_localLaserTarget setPosASL _laserResultPosition;
+    };
+    */
+    
+    if(ACE_diagTime > _forceUpdateTime) then {
+        ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
+         _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
+    };
+    
+    _this set[0, _args];
 };
 
-if(isNil QGVAR(laser)) then {
-	_laserTarget = "LaserTarget" createVehicle (getpos player);
-	
-	GVAR(laserActive) = true;
-	
-	_handle = [FUNC(laserHudDesignatePFH), 0, [_laserTarget, player]] call cba_fnc_addPerFrameHandler;
-	_laserTarget setVariable ["ACE_PFH_HANDLE", _handle, false];
-	
-	GVAR(laser) = _laserTarget;
+private ["_laserTarget", "_handle", "_vehicle", "_laserUuid", "_waveLength", "_beamSpread", "_laserCode"];
+
+if(!GVAR(active)) then {
+    GVAR(active) = true;
+    
+    TRACE_1("Activating laser", "");
+    
+    // Get the self-designation variables, or use defaults
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
+    _beamSpread = (vehicle ACE_player) getVariable["ace_laser_beamSpread", ACE_DEFAULT_LASER_BEAMSPREAD];
+    
+    _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), _waveLength, _laserCode, _beamSpread] call EFUNC(laser,laserOn);
+    
+    // @TODO: Create the local target for the players side
+    // @TODO: Nou gets to field all tickets about missing lasers.
+    //_localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
+         
+    GVAR(selfDesignateHandle) = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call CBA_fnc_addPerFrameHandler;
 } else {
-	[] call FUNC(laserHudDesignateOff);
-	[] call FUNC(laserHudDesignateOn);
+    [] call FUNC(laserHudDesignateOff);
+    [] call FUNC(laserHudDesignateOn);
 };
 

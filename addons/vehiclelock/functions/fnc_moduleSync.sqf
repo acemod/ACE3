@@ -17,14 +17,18 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_syncedObjects,_activated);
+if (!isServer) exitWith {};
+
+params ["_logic", "_syncedObjects", "_activated"];
+TRACE_3("params",_logic,_syncedObjects,_activated);
 
 if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
-if (!isServer) exitWith {};
 
 [{
     private ["_listOfVehicles"];
-    PARAMS_1(_syncedObjects);
+
+    params ["_syncedObjects"];
+
     _listOfVehicles = [];
     {
         if ((_x isKindOf "Car") || (_x isKindOf "Tank") || (_x isKindOf "Helicopter")) then {
@@ -37,6 +41,7 @@ if (!isServer) exitWith {};
     };
 
     {
+        private "_unit";
         _unit = _x;
         if (_unit isKindOf "CAManBase") then {
             {

@@ -1,11 +1,10 @@
 /*
  * Author: esteldunedain
- *
  * Send request to remote player
  *
- * Argument:
- * 0: Player (Unit)
- * 0: Target player (Unit)
+ * Arguments:
+ * 0: Player <OBJECT>
+ * 0: Target player <OBJECT>
  *
  * Code Chain:
  * START:       copyMapStart: triggers event drawing_requestMarkers on remote

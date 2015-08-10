@@ -1,9 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ * Fire Vehicle Smoke Launcher.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [vehicle player] call ace_weaponselect_fnc_fireSmokeLauncher
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_weapons"];
+private ["_turret", "_weapons"];
 
-_vehicle = _this select 0;
+params ["_vehicle"];
 
 _turret = [_vehicle] call EFUNC(common,getTurretCommander);
 

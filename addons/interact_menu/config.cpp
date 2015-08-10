@@ -14,13 +14,12 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgActions.hpp"
+
 #include "CursorMenus.hpp"
 
-class ACE_Settings {
-    class GVAR(AlwaysUseCursorSelfInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSetable = 1;
-        displayName = "$STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction";
-    };
+#include "ACE_Settings.hpp"
+
+class ACE_Extensions {
+    extensions[] += {"ace_break_line", "ace_parse_imagepath"};
 };

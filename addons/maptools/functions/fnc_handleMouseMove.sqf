@@ -22,42 +22,43 @@ GVAR(mousePosition) set [2, 0];  //convert 2d pos to 3d
 
 // If cannot draw then exit
 if !(call FUNC(canDraw)) exitWith {
-  // If was drawing, cancel
-  if (GVAR(drawing_isDrawing)) then {
-    call FUNC(cancelDrawing);
-  };
-  false
+    // If was drawing, cancel
+    if (GVAR(drawing_isDrawing)) then {
+        call FUNC(cancelDrawing);
+    };
+    false
 };
 
 // Handle drawing
 if (GVAR(drawing_isDrawing)) exitWith {
-  GVAR(drawing_tempLineMarker) set [2, GVAR(mousePosition)];
-  GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
-  false
+    GVAR(drawing_tempLineMarker) set [2, GVAR(mousePosition)];
+    GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
+    false
 };
 
 // Handle Map tools
-if (isNil QGVAR(mapTool_markerRotatingFixed)) exitWith {false};
+if (GVAR(mapTool_Shown) == 0) exitWith {false};
 
 // Translation
 if (GVAR(mapTool_isDragging)) exitWith {
-  GVAR(mapTool_pos) set [0, (GVAR(mapTool_startPos) select 0) + (GVAR(mousePosition) select 0) - (GVAR(mapTool_startDragPos) select 0)];
-  GVAR(mapTool_pos) set [1, (GVAR(mapTool_startPos) select 1) + (GVAR(mousePosition) select 1) - (GVAR(mapTool_startDragPos) select 1)];
+    GVAR(mapTool_pos) set [0, (GVAR(mapTool_startPos) select 0) + (GVAR(mousePosition) select 0) - (GVAR(mapTool_startDragPos) select 0)];
+    GVAR(mapTool_pos) set [1, (GVAR(mapTool_startPos) select 1) + (GVAR(mousePosition) select 1) - (GVAR(mapTool_startDragPos) select 1)];
 
-  // Update the size and rotation of the maptool
-  [] call FUNC(updateMapToolMarkers);
-  true
+    // Update the size and rotation of the maptool
+    [] call FUNC(updateMapToolMarkers);
+    true
 };
 
 // Rotation
 if (GVAR(mapTool_isRotating)) exitWith {
-  // Get new angle
-  _angle =  (180 + ((GVAR(mousePosition) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mousePosition) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
-  GVAR(mapTool_angle) = GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle);
+    private "_angle";
+    // Get new angle
+    _angle =  (180 + ((GVAR(mousePosition) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mousePosition) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
+    GVAR(mapTool_angle) = GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle);
 
-  // Update the size and rotation of the maptool
-  [] call FUNC(updateMapToolMarkers);
-  true
+    // Update the size and rotation of the maptool
+    [] call FUNC(updateMapToolMarkers);
+    true
 };
 
 false

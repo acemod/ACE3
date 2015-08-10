@@ -14,10 +14,10 @@
 
 // ACRE
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-    [-1] call acre_core_fnc_handleMultiPttKeyPressUp;
-    [0] call acre_core_fnc_handleMultiPttKeyPressUp;
-    [1] call acre_core_fnc_handleMultiPttKeyPressUp;
-    [2] call acre_core_fnc_handleMultiPttKeyPressUp;
+    [-1] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
+    [0] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
+    [1] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
+    [2] call acre_sys_core_fnc_handleMultiPttKeyPressUp;
 };
 
 // TFAR

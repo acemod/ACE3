@@ -1,43 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="Vehicles">
-
-    <Key ID="STR_ACE_SpeedLimiter_On">
-      <English>Speed Limiter on</English>
-      <German>Begrenzer an</German>
-      <Spanish>Limitador de velocidad activado</Spanish>
-      <Polish>Ogranicznik prędkości włączony</Polish>
-      <Czech>Omezovač rychlosti zapnout</Czech>
-      <French>Limiteur de vitesse Activé</French>
-      <Russian>Ограничение скорости включено</Russian>
-      <Hungarian>Sebességkorlát bekapcsolva</Hungarian>
-      <Portuguese>Limitador de Velocidade Ativo</Portuguese>
-      <Italian>Limitatore Attivo</Italian>
-    </Key>
-    <Key ID="STR_ACE_SpeedLimiter_Off">
-      <English>Speed Limiter off</English>
-      <German>Begrenzer aus</German>
-      <Spanish>Limitador de velocidad desactivado</Spanish>
-      <Polish>Ogranicznik prędkości wyłączony</Polish>
-      <Czech>Omezovač rychlosti vypnout</Czech>
-      <French>Limiteur de vitesse Désactivé</French>
-      <Russian>Ограничение скорости выключено</Russian>
-      <Hungarian>Sebességkorlát kikapcsolva</Hungarian>
-      <Portuguese>Limitador de Velocidade Desativado</Portuguese>
-      <Italian>Limitatore Non Attivo</Italian>
-    </Key>
-
-    <Key ID="STR_ACE_SpeedLimiter">
-      <English>Speed Limiter</English>
-      <German>Begrenzer</German>
-      <Spanish>Limitador de velocidad</Spanish>
-      <Polish>Ogranicznik prędkości</Polish>
-      <Czech>Omezovač rychlosti</Czech>
-      <French>Limiteur de vitesse</French>
-      <Russian>Ограничение скорости</Russian>
-      <Hungarian>Sebességkorlát</Hungarian>
-      <Portuguese>Limitador de Velocidade</Portuguese>
-      <Italian>Limitatore di Velocità</Italian>
-    </Key>
-  </Package>
+    <Package name="Vehicles">
+        <Key ID="STR_ACE_Vehicles_On">
+            <English>Speed Limiter on</English>
+            <German>Begrenzer an</German>
+            <Spanish>Limitador de velocidad activado</Spanish>
+            <Polish>Ogranicznik prędkości włączony</Polish>
+            <Czech>Omezovač rychlosti zapnout</Czech>
+            <French>Limiteur de vitesse Activé</French>
+            <Russian>Ограничение скорости включено</Russian>
+            <Hungarian>Sebességkorlátozó bekapcsolva</Hungarian>
+            <Portuguese>Limitador de Velocidade Ativo</Portuguese>
+            <Italian>Limitatore Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_Off">
+            <English>Speed Limiter off</English>
+            <German>Begrenzer aus</German>
+            <Spanish>Limitador de velocidad desactivado</Spanish>
+            <Polish>Ogranicznik prędkości wyłączony</Polish>
+            <Czech>Omezovač rychlosti vypnout</Czech>
+            <French>Limiteur de vitesse Désactivé</French>
+            <Russian>Ограничение скорости выключено</Russian>
+            <Hungarian>Sebességkorlátozó kikapcsolva</Hungarian>
+            <Portuguese>Limitador de Velocidade Desativado</Portuguese>
+            <Italian>Limitatore Non Attivo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_SpeedLimiter">
+            <English>Speed Limiter</English>
+            <German>Begrenzer</German>
+            <Spanish>Limitador de velocidad</Spanish>
+            <Polish>Ogranicznik prędkości</Polish>
+            <Czech>Omezovač rychlosti</Czech>
+            <French>Limiteur de vitesse</French>
+            <Russian>Ограничение скорости</Russian>
+            <Hungarian>Sebességkorlátozó</Hungarian>
+            <Portuguese>Limitador de Velocidade</Portuguese>
+            <Italian>Limitatore di Velocità</Italian>
+        </Key>
+    </Package>
 </Project>

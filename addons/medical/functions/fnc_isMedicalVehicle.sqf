@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_veh"];
-_veh = _this select 0;
+private ["_vehicle"];
+_vehicle = _this select 0;
 
-if !(_veh getvariable [QGVAR(isMedicalVehicle), true]) exitwith {false}; // exit in case the false is set.
-((getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> QGVAR(isMedicalVehicle)) == 1) || (_veh getvariable [QGVAR(isMedicalVehicle), false]));
+(_vehicle getVariable [QGVAR(medicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "attendant")]) > 0

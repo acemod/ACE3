@@ -13,53 +13,41 @@
  */
 #include "script_component.hpp"
 
+private ["_parseConfigForSettings"];
+
 GVAR(settings) = [];
 
-// Load settings from main config
-_countOptions = count (configFile >> "ACE_Settings");
-for "_index" from 0 to (_countOptions - 1) do {
-    _optionEntry = (configFile >> "ACE_Settings") select _index;
+_parseConfigForSettings = {
+    private ["_config", "_countOptions", "_optionEntry", "_index"];
 
-    [_optionEntry] call FUNC(setSettingFromConfig);
-};
-// Check if all settings should be forced
-if (GVAR(forceAllSettings)) then {
-    {
-        _x set [6, true];
-    } forEach GVAR(settings);
-};
-
-// @todo
-// Load settings from server userconfig only if the ACE_ServerSettings is loaded
-/*if (isClass (configFile >> "CfgPatches" >> "ACE_ServerSettings")) then {
-    DFUNC(serverUserConfig) = compile preprocessFileLineNumbers "\userconfig\ACE\ACE_Settings.hpp";
-    if !(isNil DFUNC(serverUserConfig)) then {
-        [] call FUNC(serverUserConfig);
+    _config = _this select 0;
+    _countOptions = count _config;
+    for "_index" from 0 to (_countOptions - 1) do {
+        _optionEntry = _config select _index;
+        [_optionEntry] call FUNC(setSettingFromConfig);
     };
     // Check if all settings should be forced
     if (GVAR(forceAllSettings)) then {
         {
-            if !(missionNamespace getVariable format ["%1_forced", _x]) then {
-                missionNamespace setVariable format ["%1_forced", _x, true];
-                publicVariable format ["%1_forced", _name];
-            };
-        } forEach GVAR(settingsList);
+            _x set [6, true];
+        } forEach GVAR(settings);
     };
-};*/
-
-// Load settings from mission config
-_countOptions = count (missionConfigFile >> "ACE_Settings");
-for "_index" from 0 to (_countOptions - 1) do {
-    _optionEntry = (missionConfigFile >> "ACE_Settings") select _index;
-
-    [_optionEntry] call FUNC(setSettingFromConfig);
 };
-// Check if all settings should be forced
-if (GVAR(forceAllSettings)) then {
-    {
-        _x set [6, true];
-    } forEach GVAR(settings);
-};
+
+// Order is this way because:
+// ACE_Settings should never force any setting by default. Loading it first ensures that all settings from ACE_Settings exist.
+// This way, ACE_ServerSettings will override ACE_Settings, even if no force is used.
+// Mission settings will override the server config settings, if no force is used.
+// This ensures that all settings are of their correct type, in case an outdated or corrupt server config is used , as well as have their correct localized display name and description
+
+// Regular config
+[configFile >> "ACE_Settings"] call _parseConfigForSettings;
+
+// Server config
+[configFile >> "ACE_ServerSettings"] call _parseConfigForSettings;
+
+// mission side settings
+[missionConfigFile >> "ACE_Settings"] call _parseConfigForSettings;
 
 // Publish all settings data
 publicVariable QGVAR(settings);

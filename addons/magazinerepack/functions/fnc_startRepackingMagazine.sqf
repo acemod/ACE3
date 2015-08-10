@@ -5,7 +5,9 @@
  * Precalcs all the event timings and starts the progressBar.
  *
  * Arguments:
- * 0: Magazine Classname <STRING>
+ * 0: Target <OBJECT>
+ * 1: Player <OBJECT>
+ * 2: Magazine Classname <STRING>
  *
  * Return Value:
  * Nothing
@@ -17,18 +19,21 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_fullMagazineCount", "_startingAmmoCounts", "_simEvents", "_totalTime"];
+private ["_magazineCfg", "_fullMagazineCount", "_isBelt", "_startingAmmoCounts", "_simEvents", "_totalTime"];
 
-PARAMS_1(_magazineClassname);
+PARAMS_3(_target,_player,_magazineClassname);
+
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
-
-_unit = ACE_player;
-
-[ACE_player] call EFUNC(common,goKneeling);
-call EFUNC(interaction,hideMenu);//ToDo: Self Interaction Integration
-
+_magazineCfg = configfile >> "CfgMagazines" >> _magazineClassname;
 // Calculate actual ammo to transfer during repack
-_fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
+_fullMagazineCount = getNumber (_magazineCfg >> "count");
+//Is linked belt magazine:
+_isBelt = (isNumber (_magazineCfg >> "ACE_isBelt")) && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
+
+//Check canInteractWith:
+if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
+
+[_player] call EFUNC(common,goKneeling);
 
 _startingAmmoCounts = [];
 {
@@ -36,25 +41,25 @@ _startingAmmoCounts = [];
     if ((_xClassname == _magazineClassname) && {(_xCount != _fullMagazineCount) && {_xCount > 0}}) then {
         if (_xLoaded) then {
             //Try to Remove from weapon and add to inventory, otherwise ignore
-            if (_unit canAdd _magazineClassname) then {
+            if (_player canAdd _magazineClassname) then {
                 switch (_xType) do {
-                case (1): {_unit removePrimaryWeaponItem _magazineClassname;};
-                case (2): {_unit removeHandgunItem _magazineClassname;};
-                case (4): {_unit removeSecondaryWeaponItem _magazineClassname;};
+                case (1): {_player removePrimaryWeaponItem _magazineClassname;};
+                case (2): {_player removeHandgunItem _magazineClassname;};
+                case (4): {_player removeSecondaryWeaponItem _magazineClassname;};
                     default {ERROR("Loaded Location Invalid");};
                 };
-                _unit addMagazine [_magazineClassname, _xCount];
+                _player addMagazine [_magazineClassname, _xCount];
                 _startingAmmoCounts pushBack _xCount;
             };
         } else {
             _startingAmmoCounts pushBack _xCount;
         };
     };
-} forEach (magazinesAmmoFull _unit);
+} forEach (magazinesAmmoFull _player);
 
 if ((count _startingAmmoCounts) < 2) exitwith {ERROR("Not Enough Mags to Repack");};
 
-_simEvents = [_fullMagazineCount, _startingAmmoCounts] call FUNC(simulateRepackEvents);
+_simEvents = [_fullMagazineCount, _startingAmmoCounts, _isBelt] call FUNC(simulateRepackEvents);
 _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);
 
 [
@@ -62,6 +67,7 @@ _totalTime,
 [_magazineClassname, _startingAmmoCounts, _simEvents],
 {_this call FUNC(magazineRepackFinish)},
 {_this call FUNC(magazineRepackFinish)},
-(localize "STR_ACE_MagazineRepack_RepackingMagazine"),
-{_this call FUNC(magazineRepackProgress)}
+(localize LSTRING(RepackingMagazine)),
+{_this call FUNC(magazineRepackProgress)},
+["isNotInside", "isNotSitting"]
 ] call EFUNC(common,progressBar);

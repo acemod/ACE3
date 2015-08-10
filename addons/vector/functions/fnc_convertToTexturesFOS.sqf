@@ -35,75 +35,6 @@ switch (_coordinate) do {
             if (_digit1 == 0) then {
                 if (_digit2 == 0) then {
                     if (_digit3 == 0) then {
-                        _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
-                        _digit1 = "";
-                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                        _digit3 = "";
-                        _digit4 = "";
-                    } else {
-                        _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
-                        _digit1 = "";
-                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
-                        _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                        _digit4 = "";
-                    };
-                } else {
-                    _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
-                    _digit1 = "";
-                    _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
-                    _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
-                    _digit4 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                };
-            } else {
-                _digit0 = "";
-                _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit3 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit4 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-            };
-
-        } else {
-
-            if (_digit1 == 0) then {
-                if (_digit2 == 0) then {
-                    if (_digit3 == 0) then {
-                        _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
-                        _digit1 = "";
-                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                        _digit3 = "";
-                        _digit4 = "";
-                    } else {
-                        _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
-                        _digit1 = "";
-                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
-                        _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                        _digit4 = "";
-                    };
-                } else {
-                    _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
-                    _digit1 = "";
-                    _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
-                    _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
-                    _digit4 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
-                };
-            } else {
-                _digit0 = "";
-                _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit3 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit4 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-            };
-        };
-
-    };
-
-    case 1 : {
-
-        if (_isNegative) then {
-
-            if (_digit1 == 0) then {
-                if (_digit2 == 0) then {
-                    if (_digit3 == 0) then {
                         _digit0 = QUOTE(PATHTOF(rsc\vector_l.paa));
                         _digit1 = "";
                         _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
@@ -150,6 +81,75 @@ switch (_coordinate) do {
                     };
                 } else {
                     _digit0 = QUOTE(PATHTOF(rsc\vector_r.paa));
+                    _digit1 = "";
+                    _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
+                    _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                    _digit4 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                };
+            } else {
+                _digit0 = "";
+                _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit3 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit4 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+            };
+        };
+
+    };
+
+    case 1 : {
+
+        if (_isNegative) then {
+
+            if (_digit1 == 0) then {
+                if (_digit2 == 0) then {
+                    if (_digit3 == 0) then {
+                        _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
+                        _digit1 = "";
+                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                        _digit3 = "";
+                        _digit4 = "";
+                    } else {
+                        _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
+                        _digit1 = "";
+                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                        _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                        _digit4 = "";
+                    };
+                } else {
+                    _digit0 = QUOTE(PATHTOF(rsc\vector_d.paa));
+                    _digit1 = "";
+                    _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
+                    _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                    _digit4 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                };
+            } else {
+                _digit0 = "";
+                _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit3 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+                _digit4 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+            };
+
+        } else {
+
+            if (_digit1 == 0) then {
+                if (_digit2 == 0) then {
+                    if (_digit3 == 0) then {
+                        _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
+                        _digit1 = "";
+                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                        _digit3 = "";
+                        _digit4 = "";
+                    } else {
+                        _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
+                        _digit1 = "";
+                        _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                        _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit4];
+                        _digit4 = "";
+                    };
+                } else {
+                    _digit0 = QUOTE(PATHTOF(rsc\vector_a.paa));
                     _digit1 = "";
                     _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
                     _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];

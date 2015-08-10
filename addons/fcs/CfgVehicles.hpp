@@ -25,7 +25,7 @@ class CfgVehicles {
     class Car: LandVehicle {
         class ACE_SelfActions {
             class ResetFCS {
-                displayName = $STR_ACE_FCS_ResetFCS;
+                displayName = CSTRING(ResetFCS);
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
@@ -38,7 +38,7 @@ class CfgVehicles {
     class Tank: LandVehicle {
         class ACE_SelfActions {
             class ResetFCS {
-                displayName = $STR_ACE_FCS_ResetFCS;
+                displayName = CSTRING(ResetFCS);
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
@@ -136,14 +136,6 @@ class CfgVehicles {
         /*class Turrets: Turrets {
             class MainTurret: MainTurret {};
             class CommanderTurret: CommanderTurret {};
-        };*/
-    };
-
-    class Offroad_01_base_F: Car_F {};
-
-    class Offroad_01_armed_base_F: Offroad_01_base_F {
-        /*class Turrets: Turrets {
-            class M2_Turret: MainTurret {};
         };*/
     };
 

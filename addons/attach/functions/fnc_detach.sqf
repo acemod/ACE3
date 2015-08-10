@@ -3,27 +3,28 @@
  * Detach an item from a unit
  *
  * Arguments:
- * 0: unit doing the attaching (player) <STRING>
- * 1: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 0: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * Nothing
+ * [car, bob] call ace_attach_fnc_detach
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_attachToVehicle);
-
-private ["_attachedObjects", "_attachedItems"];
+private ["_attachedObjects", "_attachedItems", "_itemDisplayName",
+    "_attachedObject", "_attachedIndex", "_itemName", "_minDistance",
+    "_unitPos", "_objectPos"
+];
+params ["_attachToVehicle","_unit"],
+TRACE_2("params",_attachToVehicle,_unit);
 
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 _attachedItems = _attachToVehicle getVariable [QGVAR(ItemNames), []];
-
-private ["_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_unitPos", "_objectPos"];
 
 _attachedObject = objNull;
 _attachedIndex = -1;
@@ -49,7 +50,7 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 
 // Exit if can't add the item
 if !(_unit canAdd _itemName) exitWith {
-    [localize "STR_ACE_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Add item to inventory
@@ -60,7 +61,7 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
     // Delete attached item after 0.5 seconds
-    [{deleteVehicle (_this select 0)}, [_attachedObject], 0.5, 0] call EFUNC(common,waitAndExecute);
+    [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call EFUNC(common,waitAndExecute);
 } else {
     // Delete attached item
     deleteVehicle _attachedObject;
@@ -73,14 +74,9 @@ _attachToVehicle setVariable [QGVAR(Objects), _attachedObjects, true];
 _attachToVehicle setVariable [QGVAR(ItemNames), _attachedItems, true];
 
 // Display message
-switch (true) do {
-    case (_itemName == "ACE_IR_Strobe_Item") : {
-        [localize "STR_ACE_Attach_IrStrobe_Detached"] call EFUNC(common,displayTextStructured);
-    };
-    case (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) : {
-        [localize "STR_ACE_Attach_IrGrenade_Detached"] call EFUNC(common,displayTextStructured);
-    };
-    case (toLower _itemName in ["chemlight_blue", "chemlight_green", "chemlight_red", "chemlight_yellow"]) : {
-        [localize "STR_ACE_Attach_Chemlight_Detached"] call EFUNC(common,displayTextStructured);
-    };
+_itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
+if (_itemDisplayName == "") then {
+    _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
+
+[format [localize LSTRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);

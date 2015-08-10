@@ -1,22 +1,22 @@
 /*
  * Author: esteldunedain
- *
  * Return true if the position is inside the map marker (to allow dragging).
  *
- * Argument:
- * 0: x Position (in meters)
- * 1: y Position (in meters)
+ * Arguments:
+ * 0: x Position (in meters) <NUMBER>
+ * 1: y Position (in meters) <NUMBER>
  *
  * Return value:
  * Boolean
  */
-
 #include "script_component.hpp"
 
 #define TEXTURE_WIDTH_IN_M           6205
 #define DIST_BOTTOM_TO_CENTER_PERC  -0.33
 #define DIST_TOP_TO_CENTER_PERC      0.65
 #define DIST_LEFT_TO_CENTER_PERC     0.30
+
+private ["_textureWidth", "_relPos", "_dirVector", "_lambdaLong", "_lambdaTrasAbs", "_pos"];
 
 if (GVAR(mapTool_Shown) == 0) exitWith {false};
 _textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapTool_Shown) - 1);

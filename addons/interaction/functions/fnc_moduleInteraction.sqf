@@ -1,15 +1,23 @@
 /*
  * Author: bux578
- *
- * Initializes the Interaction module.
+ * Initializes the Interaction module
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * 0: Logic <NUMBER>
+ * 1: ???
+ * 2: Activation State <BOOL>
  *
- * Return Value:
+ * Return value:
  * None
+ *
+ * Example:
+ * [logic, ???, activationState] call ace_interaction_fnc_moduleInteraction
+ *
+ * Public: No
  */
 #include "script_component.hpp"
+
+private ["_logic", "_activated"];
 
 _logic = _this select 0;
 _activated = _this select 2;

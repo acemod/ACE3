@@ -3,14 +3,16 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {};// "ACE_Kestrel4500" };
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"q1184", "Rocko", "esteldunedain"};
+        author[] = {"q1184", "Rocko", "esteldunedain", "Ruthberg"};
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventhandlers.hpp"
-
 #include "CfgWorlds.hpp"
+#include "RscTitles.hpp"
+#include "CfgVehicles.hpp"
+#include "ACE_Settings.hpp"

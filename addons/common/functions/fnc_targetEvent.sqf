@@ -15,11 +15,15 @@
  * Nothing
  */
 #include "script_component.hpp"
-private ["_eventName", "_eventArgs", "_eventTargets"];
 
-_eventName = _this select 0;
-_eventTargets = _this select 1;
-_eventArgs = _this select 2;
+//IGNORE_PRIVATE_WARNING("_handleNetEvent");
+
+PARAMS_3(_eventName,_eventTargets,_eventArgs);
+
+#ifdef DEBUG_EVENTS
+    diag_log text format[ARR_3("* Target Event: %1 - %2",_eventName,_eventTargets)];
+    diag_log text format[ARR_2("    args=%1",_eventArgs)];
+#endif
 
 ACEc = [_eventName, _eventTargets, _eventArgs];
 if(!isServer) then {

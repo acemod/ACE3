@@ -95,29 +95,7 @@ class CfgVehicles {
         };
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        lockDetectionSystem = 12;
-        incomingMissileDetectionSystem = 16;
-        driverCanEject = 1;
-
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                canEject = 1;
-                showHMD = 1;
-                weapons[] = {"ACE_gatling_20mm_Comanche","missiles_DAGR","missiles_ASRAAM"};
-                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche","4Rnd_AAA_missiles","24Rnd_PG_missiles"};
-            };
-        };
-
-        class AnimationSources: AnimationSources {
-            class Gatling {
-                weapon = "ACE_gatling_20mm_Comanche";
-            };
-            class Muzzle_flash {
-                weapon = "ACE_gatling_20mm_Comanche";
-            };
-        };
-    };
+    #include "Heli_Attack_01_base_F.hpp"
 
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {};
 
@@ -198,8 +176,8 @@ class CfgVehicles {
             };
             class CargoRamp_Open: DoorL1_Open {
                 userActionID = 52;
-                displayName = "$STR_ACE_Aircraft_OpenCargoRamp";
-                textToolTip = "$STR_ACE_Aircraft_OpenCargoRamp";
+                displayName = CSTRING(OpenCargoRamp);
+                textToolTip = CSTRING(OpenCargoRamp);
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" < 0.5 AND Alive(this)";
@@ -207,8 +185,8 @@ class CfgVehicles {
             };
             class CargoRamp_Close: DoorL1_Close {
                 userActionID = 55;
-                displayName = "$STR_ACE_Aircraft_CloseCargoRamp";
-                textToolTip = "$STR_ACE_Aircraft_CloseCargoRamp";
+                displayName = CSTRING(CloseCargoRamp);
+                textToolTip = CSTRING(CloseCargoRamp);
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" > 0.5 AND Alive(this)";
@@ -222,7 +200,7 @@ class CfgVehicles {
         lockDetectionSystem = 0;
         incomingMissileDetectionSystem = 16;
         driverCanEject = 1;
-        weapons[] = {"M134_minigun","missiles_DAR","CMFlareLauncher"};
+        weapons[] = {"M134_minigun","missiles_DAR","CMFlareLauncher", "ACE_AIR_SAFETY" };
         magazines[] = {"5000Rnd_762x51_Yellow_Belt","24Rnd_missiles","168Rnd_CMFlare_Chaff_Magazine"};
 
         class Turrets: Turrets {

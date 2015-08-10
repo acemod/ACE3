@@ -10,18 +10,10 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_GetIn_EventHandlers {
-    class B_Heli_Attack_01_F {
+class Extended_Init_EventHandlers {
+    class Helicopter {
         class ADDON {
-            getIn = QUOTE(call FUNC(onGetin));
-        };
-    };
-};
-
-class Extended_GetOut_EventHandlers {
-    class B_Heli_Attack_01_F {
-        class ADDON {
-            getOut = QUOTE(call FUNC(onGetout));
+            init = QUOTE(_this call DFUNC(initDesignatorActions));
         };
     };
 };

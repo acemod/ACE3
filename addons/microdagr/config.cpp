@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {"ACE_microDAGR_Item"};
         weapons[] = {"ACE_microDAGR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
@@ -16,11 +16,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
-
-class ACE_Settings {
-    class GVAR(MapDataAvailable) {
-        value = 2;
-        typeName = "SCALAR";
-        isClientSetable = 0;
-    };
-};
+#include "ACE_Settings.hpp"

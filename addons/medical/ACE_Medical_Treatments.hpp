@@ -2,15 +2,17 @@
 class ACE_Medical_Actions {
     class Basic {
         class Bandage {
-            displayName = "$STR_ACE_Medical_Bandage";
-            displayNameProgress = "$STR_ACE_Medical_Bandaging";
-
+            displayName = CSTRING(Bandage);
+            displayNameProgress = CSTRING(Bandaging);
+            category = "bandage";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
             items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
             condition = "";
+            patientStateCondition = 0;
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
@@ -18,67 +20,101 @@ class ACE_Medical_Actions {
             callbackProgress = "";
 
             animationPatient = "";
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
-            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
+            animationCaller = "AinvPknlMstpSlayWrflDnon_medicOther";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class Morphine: Bandage {
-            displayName = "$STR_ACE_Medical_Inject_Morphine";
-            displayNameProgress = "$STR_ACE_Medical_Injecting_Morphine";
+            displayName = CSTRING(Inject_Morphine);
+            displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             treatmentTime = 2;
             items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
         class Epinephrine: Bandage {
-            displayName = "$STR_ACE_Medical_Inject_Epinephrine";
-            displayNameProgress = "$STR_ACE_Medical_Injecting_Epinephrine";
+            displayName = CSTRING(Inject_Epinephrine);
+            displayNameProgress = CSTRING(Injecting_Epinephrine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             requiredMedic = 1;
             treatmentTime = 3;
             items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
         class BloodIV: Bandage {
-            displayName = "$STR_ACE_Medical_Transfuse_Blood";
-            displayNameProgress = "$STR_ACE_Medical_Transfusing_Blood";
+            displayName = CSTRING(Transfuse_Blood);
+            displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "advanced";
             requiredMedic = 1;
             treatmentTime = 20;
-            items[] = {{"ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250"}};
+            items[] = {"ACE_bloodIV"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = {};
         };
-        class Carry: Bandage {
-            displayName = "";
-            displayNameProgress = "";
+        class BloodIV_500: BloodIV {
+            category = "advanced";
+            items[] = {"ACE_bloodIV_500"};
+        };
+        class BloodIV_250: BloodIV {
+            category = "advanced";
+            items[] = {"ACE_bloodIV_250"};
+        };
+        class BodyBag: Bandage {
+            displayName = CSTRING(PlaceInBodyBag);
+            displayNameProgress = CSTRING(PlacingInBodyBag);
+            category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 0;
-            items[] = {};
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
+            treatmentTime = 4;
+            items[] = {"ACE_bodyBag"};
+            condition = "!alive (_this select 1);";
+            callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
-            itemConsumed = 0;
             animationPatient = "";
-            animationCaller = "";
-            animationCallerProne = "";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
+            animationPatientUnconscious = "";
+            itemConsumed = 1;
+            litter[] = {};
         };
-        class Drag: Carry {
-            displayName = "";
-            displayNameProgress = "";
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
+        class Diagnose: Bandage {
+            displayName = CSTRING(Actions_Diagnose);
+            displayNameProgress = CSTRING(Actions_Diagnosing);
+            category = "examine";
+            treatmentLocations[] = {"All"};
+            allowedSelections[] = {"head"};
+            requiredMedic = 0;
+            treatmentTime = 1;
+            items[] = {};
+            callbackSuccess = QUOTE(DFUNC(actionDiagnose));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationCaller = ""; // TODO
+            itemConsumed = 0;
+            litter[] = {};
         };
     };
 
     class Advanced {
         class FieldDressing {
+            displayName = CSTRING(Actions_FieldDressing);
+            displayNameProgress = CSTRING(Bandaging);
+            category = "bandage";
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
             // The time it takes for a treatment action to complete. Time is in seconds.
@@ -86,96 +122,158 @@ class ACE_Medical_Actions {
             // Item required for the action. Leave empty for no item required.
             items[] = {"ACE_fieldDressing"};
             condition = "";
+            patientStateCondition = 0;
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
             itemConsumed = 1;
             animationPatient = "";
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic4";
-            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
+            animationCaller = "AinvPknlMstpSlayWrflDnon_medicOther";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class PackingBandage: fieldDressing {
+            displayName = CSTRING(Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_packingBandage"}}};
         };
         class ElasticBandage: fieldDressing {
+            displayName = CSTRING(Actions_ElasticBandage);
             items[] = {"ACE_elasticBandage"};
         };
         class QuikClot: fieldDressing {
+            displayName = CSTRING(Actions_QuikClot);
             items[] = {"ACE_quikclot"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_QuickClot"}}};
         };
         class Tourniquet: fieldDressing {
+            displayName = CSTRING(Apply_Tourniquet);
+            displayNameProgress = CSTRING(Applying_Tourniquet);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r", "body"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
             condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
+            litter[] = {};
         };
         class Morphine: fieldDressing {
+            displayName = CSTRING(Inject_Morphine);
+            displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
         class Atropine: Morphine {
+            displayName = CSTRING(Inject_Atropine);
+            displayNameProgress = CSTRING(Injecting_Atropine);
             items[] = {"ACE_atropine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
         };
         class Epinephrine: Morphine {
+            displayName = CSTRING(Inject_Epinephrine);
+            displayNameProgress = CSTRING(Injecting_Epinephrine);
             items[] = {"ACE_epinephrine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
         class BloodIV: fieldDressing {
+            displayName = CSTRING(Actions_Blood4_1000);
+            displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "advanced";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
             treatmentTime = 7;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = {};
         };
         class BloodIV_500: BloodIV {
+            displayName = CSTRING(Actions_Blood4_500);
             items[] = {"ACE_bloodIV_500"};
         };
         class BloodIV_250: BloodIV {
+            displayName = CSTRING(Actions_Blood4_250);
             items[] = {"ACE_bloodIV_250"};
         };
         class PlasmaIV: BloodIV {
+            displayName = CSTRING(Actions_Plasma4_1000);
+            displayNameProgress = CSTRING(Transfusing_Plasma);
             items[] = {"ACE_plasmaIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PlasmaIV_500: PlasmaIV {
+            displayName = CSTRING(Actions_Plasma4_500);
             items[] = {"ACE_plasmaIV_500"};
         };
         class PlasmaIV_250: PlasmaIV {
+            displayName = CSTRING(Actions_Plasma4_250);
             items[] = {"ACE_plasmaIV_250"};
         };
         class SalineIV: BloodIV {
+            displayName = CSTRING(Actions_Saline4_1000);
+            displayNameProgress = CSTRING(Transfusing_Saline);
             items[] = {"ACE_salineIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class SalineIV_500: SalineIV {
+         displayName = CSTRING(Actions_Saline4_500);
             items[] = {"ACE_salineIV_500"};
         };
         class SalineIV_250: SalineIV {
+            displayName = CSTRING(Actions_Saline4_250);
             items[] = {"ACE_salineIV_250"};
         };
         class SurgicalKit: fieldDressing {
+            displayName = CSTRING(Use_SurgicalKit);
+            displayNameProgress = CSTRING(TreatmentAction);
+            category = "advanced";
             items[] = {"ACE_surgicalKit"};
-            treatmentLocations[] = {"MedicalFacility", "MedicalVehicle"};
-            requiredMedic = 2;
-            treatmentTime = 15;
-            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_surgicalKit));
-            itemConsumed = 0;
+            treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
+            requiredMedic = QGVAR(medicSetting_SurgicalKit);
+            patientStateCondition = QGVAR(useCondition_SurgicalKit);
+            treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
+            callbackSuccess = "";
+            callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
+            itemConsumed = QGVAR(consumeItem_SurgicalKit);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
         };
         class PersonalAidKit: fieldDressing {
+            displayName = CSTRING(Use_Aid_Kit);
+            displayNameProgress = CSTRING(TreatmentAction);
+            category = "advanced";
             items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {"All"};
-            requiredMedic = 1;
-            treatmentTime = 15;
+            treatmentLocations[] = {QGVAR(useLocation_PAK)};
+            requiredMedic = QGVAR(medicSetting_PAK);
+            patientStateCondition = QGVAR(useCondition_PAK);
+            treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
-            itemConsumed = 0;
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+            itemConsumed = QGVAR(consumeItem_PAK);
+            animationPatient = "";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medicOther";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} },
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class CheckPulse: fieldDressing {
+            displayName = CSTRING(Actions_CheckPulse);
+            displayNameProgress = CSTRING(Check_Pulse_Content);
+            category = "examine";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -185,69 +283,69 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            animationCallerProne = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
+            litter[] = {};
         };
         class CheckBloodPressure: CheckPulse {
+            displayName = CSTRING(Actions_CheckBloodPressure);
             callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
+            displayNameProgress = CSTRING(Check_Bloodpressure_Content);
         };
         class CheckResponse: CheckPulse {
+            displayName = CSTRING(Check_Response);
             callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
+            displayNameProgress = CSTRING(Check_Response_Content);
         };
-        class RemoveTourniquet: CheckPulse {
+        class RemoveTourniquet: Tourniquet {
+            displayName = CSTRING(Actions_RemoveTourniquet);
+            items[] = {};
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
+            displayNameProgress = CSTRING(RemovingTourniquet);
+            litter[] = {};
         };
         class CPR: fieldDressing {
+            displayName = CSTRING(Actions_CPR);
+            displayNameProgress = CSTRING(Actions_PerformingCPR);
+            category = "advanced";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"body"};
             requiredMedic = 0;
-            treatmentTime = 25;
+            treatmentTime = 15;
             items[] = {};
-            condition = ""; // unconscious?
+            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "";
+            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
             animationPatient = "";
-            animationCaller = ""; // TODO
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
+            litter[] = {};
         };
         class BodyBag: fieldDressing {
+            displayName = CSTRING(PlaceInBodyBag);
+            displayNameProgress = CSTRING(PlacingInBodyBag);
+            category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 7.5;
+            treatmentTime = 2;
             items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
             animationPatient = "";
-            itemConsumed = 0;
+            animationPatientUnconscious = "";
+            itemConsumed = 1;
+            litter[] = {};
         };
-        class Carry: fieldDressing {
-            displayName = "";
-            displayNameProgress = "";
-            treatmentLocations[] = {"All"};
-            requiredMedic = 0;
-            treatmentTime = 0;
-            items[] = {};
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, true)] call  DFUNC(actionCarryUnit));
-            callbackFailure = "";
-            callbackProgress = "";
-            itemConsumed = 0;
-            animationPatient = "";
-            animationCaller = "";
-            animationCallerProne = "";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
-        };
-        class Drag: Carry {
-            displayName = "";
-            displayNameProgress = "";
-            condition = QUOTE(DFUNC(canCarry));
-            callbackSuccess = QUOTE([ARR_3(_this select 0, _this select 1, false)] call  DFUNC(actionCarryUnit));
-        };
-
     };
 };
 
@@ -260,43 +358,54 @@ class ACE_Medical_Advanced {
             // Source: Scarle
             //  Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
             class Abrasion {
-                name = "Scrape";
+                name = CSTRING(Wounds_Abrasion);
                 selections[] = {"All"};
                 bleedingRate = 0.0001;
                 pain = 0.01;
-                causes[] = {"falling", "ropeburn", "vehiclecrash"};
+                causes[] = {"falling", "ropeburn", "vehiclecrash", "unknown"};
                 minDamage = 0.01;
                 class Minor {
+                    name = CSTRING(Wounds_Abrasion_Minor);
                     minDamage = 0.01;
+                    maxDamage = 0.2;
                     bleedingRate = 0.0001;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Abrasion_Medium);
                     minDamage = 0.2;
+                    maxDamage = 0.3;
                     bleedingRate = 0.00015;
                 };
                 class Large {
+                    name = CSTRING(Wounds_Abrasion_Large);
                     minDamage = 0.3;
+                    maxDamage = 0.5;
                     bleedingRate = 0.0002;
                 };
             };
 
             // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
             class Avulsions {
-                name = "Avulsion";
+                name = CSTRING(Wounds_Avulsion);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.3;
                 causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
                 minDamage = 0.2;
                 class Minor {
+                    name = CSTRING(Wounds_Avulsion_Minor);
                     minDamage = 0.2;
+                    maxDamage = 0.3;
                     bleedingRate = 0.01;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Avulsion_Medium);
                     minDamage = 0.3;
+                    maxDamage = 0.6;
                     bleedingRate = 0.02;
                 };
                 class Large {
+                    name = CSTRING(Wounds_Avulsion_Large);
                     minDamage = 0.5;
                     bleedingRate = 0.05;
                 };
@@ -304,40 +413,52 @@ class ACE_Medical_Advanced {
 
             // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
             class Contusion {
-                name = "Bruise";
+                name = CSTRING(Wounds_Contusion);
                 selections[] = {"All"};
                 bleedingRate = 0.0;
                 pain = 0.05;
-                causes[] = {"bullet", "backblast", "punch","vehiclecrash","falling"};
+                causes[] = {"bullet", "backblast", "punch", "vehiclecrash", "falling"};
                 minDamage = 0.01;
+                maxDamage = 0.1;
                 class Minor {
+                    name = CSTRING(Wounds_Contusion_Minor);
                     minDamage = 0.01;
+                    maxDamage = 0.1;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Contusion_Medium);
                     minDamage = 0.1;
+                    maxDamage = 0.15;
                 };
                 class Large {
-                    minDamage = 0.3;
+                    name = CSTRING(Wounds_Contusion_Large);
+                    minDamage = 0.15;
+                    maxDamage = 0.2;
                 };
             };
 
             // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
             class CrushWound {
-                name = "Crushed tissue";
+                name = CSTRING(Wounds_Crush);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.1;
-                causes[] = {"falling", "vehiclecrash", "punch"};
+                causes[] = {"falling", "vehiclecrash", "punch", "unknown"};
                 minDamage = 0.1;
                 class Minor {
+                    name = CSTRING(Wounds_Crush_Minor);
                     minDamage = 0.1;
+                    maxDamage = 0.45;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Crush_Medium);
                     minDamage = 0.4;
+                    maxDamage = 0.7;
                     bleedingRate = 0.007;
                 };
                 class Large {
+                    name = CSTRING(Wounds_Crush_Large);
                     minDamage = 0.6;
                     bleedingRate = 0.0095;
                 };
@@ -345,21 +466,26 @@ class ACE_Medical_Advanced {
 
             // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
             class Cut {
-                name = "Cut";
+                name = CSTRING(Wounds_Cut);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
-                causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab"};
+                causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab", "unknown"};
                 minDamage = 0.1;
                 class Minor {
+                    name = CSTRING(Wounds_Cut_Minor);
                     minDamage = 0.1;
+                    maxDamage = 0.3;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Cut_Medium);
                     minDamage = 0.3;
+                    maxDamage = 0.65;
                     bleedingRate = 0.02;
                 };
                 class Large {
+                    name = CSTRING(Wounds_Cut_Large);
                     minDamage = 0.65;
                     bleedingRate = 0.05;
                 };
@@ -367,21 +493,26 @@ class ACE_Medical_Advanced {
 
             // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
             class Laceration {
-                name = "Tear";
+                name = CSTRING(Wounds_Laceration);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
                 causes[] = {"vehiclecrash", "punch"};
                 minDamage = 0.01;
                 class Minor {
+                    name = CSTRING(Wounds_Laceration_Minor);
                     minDamage = 0.1;
+                    maxDamage = 0.5;
                     bleedingRate = 0.005;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_Laceration_Medium);
                     minDamage = 0.5;
+                    maxDamage = 0.7;
                     bleedingRate = 0.01;
                 };
                 class Large {
+                    name = CSTRING(Wounds_Laceration_Large);
                     minDamage = 0.7;
                     bleedingRate = 0.03;
                 };
@@ -389,21 +520,25 @@ class ACE_Medical_Advanced {
 
             // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
             class velocityWound {
-                name = "Velocity Wound";
+                name = CSTRING(Wounds_VelocityWound);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.2;
-                causes[] = {"bullet", "grenade","explosive", "shell"};
+                causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
                 minDamage = 0.15;
                 class Minor {
+                    name = CSTRING(Wounds_VelocityWound_Minor);
                     minDamage = 0.15;
+                    maxDamage = 0.3;
                     bleedingRate = 0.025;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_VelocityWound_Medium);
                     minDamage = 0.3;
                     bleedingRate = 0.05;
                 };
                 class Large {
+                    name = CSTRING(Wounds_VelocityWound_Large);
                     minDamage = 0.75;
                     bleedingRate = 0.1;
                 };
@@ -411,21 +546,26 @@ class ACE_Medical_Advanced {
 
             // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
             class punctureWound {
-                name = "Puncture Wound";
+                name = CSTRING(Wounds_PunctureWound);
                 selections[] = {"All"};
                 bleedingRate = 0.01;
                 pain = 0.075;
                 causes[] = {"stab", "grenade"};
                 minDamage = 0.01;
                 class Minor {
+                    name = CSTRING(Wounds_PunctureWound_Minor);
                     minDamage = 0.01;
+                    maxDamage = 0.5;
                     bleedingRate = 0.01;
                 };
                 class Medium {
+                    name = CSTRING(Wounds_PunctureWound_Medium);
                     minDamage = 0.5;
+                    maxDamage = 0.75;
                     bleedingRate = 0.03;
                 };
                 class Large {
+                    name = CSTRING(Wounds_PunctureWound_Large);
                     minDamage = 0.65;
                     bleedingRate = 0.08;
                 };
@@ -433,7 +573,7 @@ class ACE_Medical_Advanced {
         };
         class fractures {
             class Femur {
-                name = "Broken Femur";
+                name = CSTRING(Wounds_Femur);
                 selections[] = {"Head", "Torso"};
                 pain = 0.2;
                 causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
@@ -443,6 +583,8 @@ class ACE_Medical_Advanced {
         class damageTypes {
             thresholds[] = {{0.1, 1}};
             selectionSpecific = 1;
+            lethalDamage = 0.01;
+
             class bullet {
                 // above damage, amount. Put the highest threshold to the left and lower the threshold with the elements to the right of it.
                 thresholds[] = {{0.1, 1}};
@@ -465,8 +607,9 @@ class ACE_Medical_Advanced {
                 selectionSpecific = 0;
             };
             class backblast {
-                thresholds[] = {{0.25, 5}};
+                thresholds[] = {{0, 2},{0.55, 5}, {1, 6}};
                 selectionSpecific = 0;
+                lethalDamage = 1;
             };
             class stab {
                 thresholds[] = {{0.1, 1}};
@@ -483,6 +626,9 @@ class ACE_Medical_Advanced {
             class ropeburn {
                 thresholds[] = {{0.1, 1}};
                 selectionSpecific = 1;
+            };
+            class unknown {
+                thresholds[] = {{0.1, 1}};
             };
         };
     };
@@ -717,11 +863,11 @@ class ACE_Medical_Advanced {
 
             // specific details for the ACE_Morphine treatment action
             class Morphine {
-                painReduce = 0.7;
-                hrIncreaseLow[] = {-10, -30, 35};
-                hrIncreaseNormal[] = {-10, -50, 40};
-                hrIncreaseHigh[] = {-10, -40, 50};
-                timeInSystem = 500;
+                painReduce = 15;
+                hrIncreaseLow[] = {-10, -20, 35};
+                hrIncreaseNormal[] = {-10, -30, 35};
+                hrIncreaseHigh[] = {-10, -35, 50};
+                timeInSystem = 900;
                 maxDose = 4;
                 inCompatableMedication[] = {};
                 viscosityChange = 10;
@@ -737,9 +883,9 @@ class ACE_Medical_Advanced {
             };
             class Atropine {
                 painReduce = 0;
-                hrIncreaseLow[] = {20, 30, 15};
-                hrIncreaseNormal[] = {-10, -50, 20};
-                hrIncreaseHigh[] = {-10, -40, 10};
+                hrIncreaseLow[] = {-5, -7, 15};
+                hrIncreaseNormal[] = {-10, -30, 20};
+                hrIncreaseHigh[] = {-10, -20, 10};
                 timeInSystem = 120;
                 maxDose = 6;
                 inCompatableMedication[] = {};

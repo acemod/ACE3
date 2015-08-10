@@ -13,13 +13,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
-class ACE_Settings {
-    class GVAR(DisplayText) {
-        typeName = "BOOL";
-        isClientSetable = 1;
-        value = 1;
-        displayName = "$STR_ACE_Weaponselect_SettingDisplayTextName";
-        description = "$STR_ACE_Weaponselect_SettingDisplayTextDesc";
-    };
-};
+#include "ACE_Settings.hpp"

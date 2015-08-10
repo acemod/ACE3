@@ -1,54 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-11 -->
 <Project name="ACE">
-  <Package name="Vector">
-    <Key ID="STR_ACE_Vector_VectorName">
-      <English>Vector IV</English>
-      <German>Vector IV</German>
-      <Spanish>Vector IV</Spanish>
-      <French>Vector IV</French>
-      <Polish>Vector IV</Polish>
-      <Czech>Vector IV</Czech>
-      <Italian>Vector IV</Italian>
-      <Hungarian>Vector IV</Hungarian>
-      <Portuguese>Vector IV</Portuguese>
-      <Russian>Vector IV</Russian>
-    </Key>
-    <Key ID="STR_ACE_Vector_VectorDescription">
-      <English>Rangefinder</English>
-      <German>Laserentfernungsmesser</German>
-      <Spanish>Telémetro</Spanish>
-      <French>Télémètre</French>
-      <Polish>Dalmierz</Polish>
-      <Czech>Dálkoměr</Czech>
-      <Italian>Telemetro</Italian>
-      <Hungarian>Távolságmérő</Hungarian>
-      <Portuguese>Telêmetro</Portuguese>
-      <Russian>Дальномер</Russian>
-    </Key>
-    <Key ID="STR_ACE_Vector_AzimuthKey">
-      <English>Vector - Azimuth Key</English>
-      <German>Vector - Azimuth-Taste</German>
-      <Spanish>Vector - Tecla de acimut</Spanish>
-      <French>Vector - Touche Azimuth</French>
-      <Polish>Vector - Azymut</Polish>
-      <Czech>Vector - Zobrazit Azimut</Czech>
-      <Italian>Vector - Tasto Azimuth</Italian>
-      <Portuguese>Vector - Tecla de Azimute</Portuguese>
-      <Hungarian>Vector - Irányszög gomb</Hungarian>
-      <Russian>Vector – Азимут</Russian>
-    </Key>
-    <Key ID="STR_ACE_Vector_DistanceKey">
-      <English>Vector - Distance Key</English>
-      <German>Vector - Entfernungs-Taste</German>
-      <Spanish>Vector - Tecla de distancia</Spanish>
-      <French>Vector - Touche Distance</French>
-      <Polish>Vector - Odległość</Polish>
-      <Czech>Vector - Zobrazit vzdálenost</Czech>
-      <Italian>Vecto - Tasto Distanza</Italian>
-      <Portuguese>Vector - Tecla de Distância</Portuguese>
-      <Hungarian>Vector - Távolság gomb</Hungarian>
-      <Russian>Vector – Расстояние</Russian>
-    </Key>
-  </Package>
+    <Package name="Vector">
+        <Key ID="STR_ACE_Vector_VectorName">
+            <English>Vector 21</English>
+            <German>Vector 21</German>
+            <Spanish>Vector 21</Spanish>
+            <French>Vector 21</French>
+            <Polish>Vector 21</Polish>
+            <Czech>Vector 21</Czech>
+            <Italian>Vector 21</Italian>
+            <Hungarian>Vector 21</Hungarian>
+            <Portuguese>Vector 21</Portuguese>
+            <Russian>Vector 21</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_VectorDescription">
+            <English>Rangefinder</English>
+            <German>Laserentfernungsmesser</German>
+            <Spanish>Telémetro</Spanish>
+            <French>Télémètre</French>
+            <Polish>Dalmierz laserowy</Polish>
+            <Czech>Dálkoměr</Czech>
+            <Italian>Telemetro</Italian>
+            <Hungarian>Távolságmérő</Hungarian>
+            <Portuguese>Medidor de Distância</Portuguese>
+            <Russian>Дальномер</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_AzimuthKey">
+            <English>Vector - Azimuth Key</English>
+            <German>Vector - Azimuth-Taste</German>
+            <Spanish>Vector - Tecla de acimut</Spanish>
+            <French>Vector - Touche Azimuth</French>
+            <Polish>Vector - Azymut</Polish>
+            <Czech>Vector - Zobrazit azimut</Czech>
+            <Italian>Vector - Tasto Azimuth</Italian>
+            <Portuguese>Vector - Tecla de Azimute</Portuguese>
+            <Hungarian>Vector - Irányszög gomb</Hungarian>
+            <Russian>Vector – Азимут</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_DistanceKey">
+            <English>Vector - Distance Key</English>
+            <German>Vector - Entfernungs-Taste</German>
+            <Spanish>Vector - Tecla de distancia</Spanish>
+            <French>Vector - Touche Distance</French>
+            <Polish>Vector - Odległość</Polish>
+            <Czech>Vector - Zobrazit vzdálenost</Czech>
+            <Italian>Vector - Tasto Distanza</Italian>
+            <Portuguese>Vector - Tecla de Distância</Portuguese>
+            <Hungarian>Vector - Távolság gomb</Hungarian>
+            <Russian>Vector – Расстояние</Russian>
+        </Key>
+    </Package>
 </Project>

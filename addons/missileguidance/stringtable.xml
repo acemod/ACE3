@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MissileGuidance">
+        <Key ID="STR_ACE_MissileGuidance_Title">
+            <English>Advanced Missile Guidance</English>
+            <Spanish>Guiado Avanzado de Misiles</Spanish>
+            <French>Guidage avancé de missile</French>
+            <Polish>Zaawansowane naprowadzanie rakiet</Polish>
+            <German>Erweitertes Raketenlenksystem</German>
+            <Czech>Pokročilé řízení střel</Czech>
+            <Italian>Guida missili avanzata</Italian>
+            <Portuguese>Avançado Missile Guidance</Portuguese>
+            <Hungarian>Fejlett rakétairányító</Hungarian>
+            <Russian>Продвинутое наведение ракет</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Desc">
+            <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
+            <Polish>Zaawansowane namierzanie rakiet, lub ZNR, dostarcza wiele poprawek do systemu namierzania rakiet oraz dodaje nowe tryby strzału. Jest to wymagana opcja dla broni rakietowych.</Polish>
+            <Italian>Guida dei missili avanzata, o AMG, offre diversi miglioramenti alla teleguida di missili. E' anche un sistema necessario per i tipi di armi missile.</Italian>
+            <Russian>Продвинутое наведение ракет, или ПНР, обеспечивает множество усовершествований для наведения и стрельбы ракет. Также, это система, необходимая для всех ракетных типов оружия.</Russian>
+            <Spanish>El guiado avanzado de misiles, o AMG en sus siglas en inglés, ofrece múltiples mejoras en el fijado y disparo de misiles. Es también un sistema requerido para armas de tipo misil.</Spanish>
+            <German>Das Erweiterte Raketenlenksystem, auch ERls genannt, bietet viele Verbesserungen zum Aufschalten und Feuern mittels gelenkter Raketen. </German>
+            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiple améliorations au verouillage et au tir de missiles. C'est aussi un framework requis pour tout arme de type missile.</French>
+            <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
+            <Portuguese>Orientação avançada de mísseis ou OAM, fornece vários aprimoramentos para travamento de mísseis e disparos. Também é um sistema requerido para disparar armas que utilizem mísseis.</Portuguese>
+            <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
+            <English>Hydra-70 DAGR Missile</English>
+            <Spanish>Misil Hydra-70 DAGR</Spanish>
+            <French>Hydra-70 DAGR</French>
+            <Polish>Hydra-70 DAGR</Polish>
+            <German>Hydra-70 DAGR Rackete</German>
+            <Czech>Hydra-70 DAGR</Czech>
+            <Italian>Missile Hydra-70 DAGR</Italian>
+            <Portuguese>Míssil Hydra-70 DAGR </Portuguese>
+            <Hungarian>Hydra-70 DAGR rakéta</Hungarian>
+            <Russian>Hydra-70 DAGR</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
+            <English>DAGR</English>
+            <Spanish>DAGR</Spanish>
+            <French>DAGR</French>
+            <Polish>DAGR</Polish>
+            <German>DAGR</German>
+            <Czech>DAGR</Czech>
+            <Italian>DAGR</Italian>
+            <Portuguese>DAGR</Portuguese>
+            <Hungarian>DAGR</Hungarian>
+            <Russian>DAGR</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
+            <English>Hydra-70 DAGR Laser Guided Missile</English>
+            <Spanish>Misil guiado por láser Hydra-70 DAGR</Spanish>
+            <French>Missile à guidage laser Hydra-70 DAGR</French>
+            <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
+            <German>Hydra-70 DAGR lasergelenkte Rakete</German>
+            <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
+            <Italian>Hydra-70 DAGR missile guida laser</Italian>
+            <Portuguese>Míssil guiado a laser Hydra-70 DAGR </Portuguese>
+            <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
+            <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
+            <English>Hellfire II AGM-114K Missile</English>
+            <Spanish>Misil Hellfire II AGM-114K</Spanish>
+            <French>Hellfire II AGM-114K</French>
+            <Polish>Hellfire II AGM-114K</Polish>
+            <German>Hellfire II AGM-114K</German>
+            <Czech>Hellfire II AGM-114K</Czech>
+            <Italian>Missile Hellfire II AGM-114K</Italian>
+            <Portuguese>Míssil Hellfire II AGM-114K</Portuguese>
+            <Hungarian>Hellfire II AGM-114K rakéta</Hungarian>
+            <Russian>Hellfire II AGM-114K</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
+            <English>AGM-114K</English>
+            <Spanish>AGM-114K</Spanish>
+            <French>AGM-114K</French>
+            <Polish>AGM-114K</Polish>
+            <German>AGM-114K</German>
+            <Czech>AGM-114K</Czech>
+            <Italian>AGM-114K</Italian>
+            <Portuguese>AGM-114K</Portuguese>
+            <Hungarian>AGM-114K</Hungarian>
+            <Russian>AGM-114K</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
+            <English>Hellfire II AGM-114K Laser Guided Missile</English>
+            <Spanish>Misil guiado por láser Hellfire II AGM-114K</Spanish>
+            <French>Missile à guidage laser Hellfire II AGM-114K</French>
+            <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
+            <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
+            <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
+            <Italian>Missile guida laser Hellfire II AGM-114K</Italian>
+            <Portuguese>Míssil guiado a laser Hellfire II AGM-114K</Portuguese>
+            <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
+            <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Off">
+            <English>Off</English>
+            <Polish>Wyłącz</Polish>
+            <Spanish>Desactivado</Spanish>
+            <German>Aus</German>
+            <Czech>Vypnout</Czech>
+            <Portuguese>Desligado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
+            <English>Player Only</English>
+            <Polish>Tylko gracz</Polish>
+            <Spanish>Solo jugador</Spanish>
+            <German>Nur Spieler</German>
+            <Czech>Pouze hráči</Czech>
+            <Portuguese>Somente jogador</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
+            <English>Player and AI</English>
+            <Polish>Gracz oraz AI</Polish>
+            <Spanish>Jugador e IA</Spanish>
+            <German>Spieler und KI</German>
+            <Czech>Hráči a AI</Czech>
+            <Portuguese>Jogador e IA</Portuguese>
+        </Key>
+    </Package>
+</Project>

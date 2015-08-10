@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
+private ["_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 
@@ -21,9 +21,9 @@ _unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call FUNC(bin
 
 _unitCaptivityReasons = [];
 {
-  if (_unitCaptivityStatus select _forEachIndex) then {
-    _unitCaptivityReasons pushBack _x;
-  };
+    if (_unitCaptivityStatus select _forEachIndex) then {
+        _unitCaptivityReasons pushBack _x;
+    };
 } forEach _captivityReasons;
 
 _unitCaptivityReasons

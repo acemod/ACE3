@@ -1,56 +1,76 @@
 /*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi, Ruthberg
  * Changes the adjustment for the current scope
  *
  * Argument:
  * 0: Unit <OBJECT>
- * 1: Horizontal adjustment <NUMBER>
- * 2: Vertical adjustment <NUMBER>
+ * 1: Turret and Direction <NUMBER>
+ * 2: Major Step <BOOL>
  *
  * Return value:
- * True <BOOL>
+ * Did we adjust anything? <BOOL>
+ *
+ * Example:
+ * [player, ELEVATION_UP, false] call ace_scopes_fnc_adjustScope
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapons", "_zeroing", "_pitchbankyaw", "_pitch", "_bank", "_yaw", "_hint"];
+private ["_weaponIndex", "_zeroing", "_optic", "_opticConfig", "_verticalIncrement", "_horizontalIncrement", "_maxVertical", "_maxHorizontal", "_adjustment"];
 
-_unit = _this select 0;
+params ["_unit", "_turretAndDirection", "_majorStep"];
+
+if (!(_unit isKindOf "Man")) exitWith {false};
+if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+if (_weaponIndex < 0) exitWith {false};
 
 _adjustment = _unit getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
-    _adjustment = [[0,0], [0,0], [0,0]];
-    _unit setVariable [QGVAR(Adjustment), _adjustment];
+    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]; // [Windage, Elevation, Zero]
 };
 
-_zeroing = _adjustment select _weaponIndex;
-_zeroing set [0, (round (((_zeroing select 0) + (_this select 1)) * 10)) / 10];
-_zeroing set [1, (round (((_zeroing select 1) + (_this select 2)) * 10)) / 10];
-
-// Change the adjustment array
-_adjustment set [_weaponIndex, _zeroing];
-[_unit, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
-
-playSound (["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"] select floor random 3);
-
-// slightly rotate the player if looking through optic
-if (cameraView == "GUNNER") then {
-
-    _pitchbankyaw = [_unit] call EFUNC(common,getPitchBankYaw);
-    // these are not exact mil-to-degree conversions, but instead chosen
-    // to minimize the effect of rounding errors
-    _pitch = (_pitchbankyaw select 0) + ((_this select 2) * -0.04);
-    _bank = _pitchbankyaw select 1;
-    _yaw = (_pitchbankyaw select 2) + ((_this select 1) * -0.04);
-    [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw)
-
-} else {
-
-    [] call FUNC(showZeroing);
-
+if (isNil QGVAR(Optics)) then {
+    GVAR(Optics) = ["", "", ""];
 };
+
+_optic = GVAR(Optics) select _weaponIndex;
+_opticConfig = configFile >> "CfgWeapons" >> _optic;
+_verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
+_horizontalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_HorizontalIncrement");
+_maxVertical = getArray (_opticConfig >> "ACE_ScopeAdjust_Vertical");
+_maxHorizontal = getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal");
+
+if ((count _maxHorizontal < 2) || (count _maxVertical < 2)) exitWith {false};
+if ((_verticalIncrement == 0) && (_horizontalIncrement == 0)) exitWith {false};
+
+_zeroing   = _adjustment select _weaponIndex;
+_zeroing params ["_elevation", "_windage", "_zero"];
+
+switch (_turretAndDirection) do {
+    case ELEVATION_UP:   { _elevation = _elevation + _verticalIncrement };
+    case ELEVATION_DOWN: { _elevation = _elevation - _verticalIncrement };
+    case WINDAGE_LEFT:   { _windage = _windage - _horizontalIncrement };
+    case WINDAGE_RIGHT:  { _windage = _windage + _horizontalIncrement };
+};
+
+if (_majorStep) then {
+    switch (_turretAndDirection) do {
+        case ELEVATION_UP:   { _elevation = ceil(_elevation) };
+        case ELEVATION_DOWN: { _elevation = floor(_elevation) };
+        case WINDAGE_LEFT:   { _windage = floor(_windage) };
+        case WINDAGE_RIGHT:  { _windage = ceil(_windage) };
+    };
+};
+
+_elevation = round(_elevation * 10) / 10;
+_windage = round(_windage * 10) / 10;
+
+if ((_elevation + _zero) < _maxVertical select 0 or (_elevation + _zero) > _maxVertical select 1) exitWith {false};
+if (_windage < _maxHorizontal select 0 or _windage > _maxHorizontal select 1) exitWith {false};
+
+[_unit, _elevation, _windage, _zero] call FUNC(applyScopeAdjustment);
 
 true

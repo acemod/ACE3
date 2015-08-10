@@ -1,11 +1,11 @@
 // by commy2
 
-["ACE3", QGVAR(AzimuthKey), localize "STR_ACE_Vector_AzimuthKey",
+["ACE3 Equipment", QGVAR(AzimuthKey), localize LSTRING(AzimuthKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
+    if !(currentWeapon ACE_player == "ACE_Vector" && {cameraView == "GUNNER"}) exitWith {false};
 
     // prevent holding down
     if (GETGVAR(isDownStateKey1,false)) exitWith {false};
@@ -20,7 +20,7 @@
     GVAR(isDownStateKey1) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     ["azimuth"] call FUNC(onKeyUp);
@@ -29,12 +29,12 @@
 [15, [false, false, false]], false, 0] call CBA_fnc_addKeybind; //Tab Key
 
 
-["ACE3", QGVAR(DistanceKey), localize "STR_ACE_Vector_DistanceKey",
+["ACE3 Equipment", QGVAR(DistanceKey), localize LSTRING(DistanceKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(currentWeapon ACE_player == "ACE_Vector" && {ACE_player == cameraOn} && {cameraView == "GUNNER"}) exitWith {false};
+    if !(currentWeapon ACE_player == "ACE_Vector" && {cameraView == "GUNNER"}) exitWith {false};
 
     // prevent holding down
     if (GETGVAR(isDownStateKey2,false)) exitWith {false};
@@ -49,7 +49,7 @@
     GVAR(isDownStateKey2) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     ["distance"] call FUNC(onKeyUp);

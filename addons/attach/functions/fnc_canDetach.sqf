@@ -3,22 +3,22 @@
  * Check if a unit has an item attached and if it can remove that item.
  *
  * Arguments:
- * 0: unit doing the detaching (player) <STRING>
- * 1: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 0: vehicle that it will be detached from (player or vehicle) <OBJECT>
+ * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
- * Boolean <BOOL>
+ * Can Detach <BOOL>
  *
  * Example:
- * Nothing
+ * [bob, bob] call ace_attach_fnc_canDetach;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_attachToVehicle);
-
 private ["_attachedObjects", "_inRange"];
+params ["_attachToVehicle", "_unit"];
+TRACE_2("params",_attachToVehicle,_unit);
 
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 

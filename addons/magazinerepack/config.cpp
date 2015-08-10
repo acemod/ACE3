@@ -15,14 +15,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-
-class ACE_Settings {
-    class GVAR(TimePerAmmo) {
-        value = 1.5;
-        typeName = "SCALAR";
-    };
-    class GVAR(TimePerMagazine) {
-        value = 2.0;
-        typeName = "SCALAR";
-    };
-};
+#include "ACE_Settings.hpp"

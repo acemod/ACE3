@@ -10,6 +10,6 @@
 
 #include "script_component.hpp"
 
-private ["_unit","_return"];
-_unit = _this select 0;
+PARAMS_1(_unit);
+
 (!(_unit getvariable ["ACE_isUnconscious",false]) && alive _unit && !(_unit getvariable ["ACE_isDead",false]));

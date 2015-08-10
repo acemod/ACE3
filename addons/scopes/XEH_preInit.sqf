@@ -3,7 +3,9 @@
 ADDON = false;
 
 PREP(adjustScope);
-PREP(canAdjustScope);
+PREP(adjustZero);
+PREP(applyScopeAdjustment);
+PREP(canAdjustZero);
 PREP(firedEH);
 PREP(getOptics);
 PREP(inventoryCheck);

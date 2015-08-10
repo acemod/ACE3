@@ -1,20 +1,43 @@
 class CfgVehicles {
-    class Module_F;
-    class GVAR(Module): Module_F {
-        author = "$STR_ACE_Common_ACETeam";
-        category = "ACE";
-        displayName = "Wind Deflection";
-        function = FUNC(enableModule);
+    class ACE_Module;
+    class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
-        isGlobal = 1;
+        displayName = CSTRING(windDeflection_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
+        category = "ACE";
+        function = QUOTE(DFUNC(initModuleSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
         class Arguments {
-            class EnableForAI {
-                displayName = "Enable for AI";
-                description = "Should the module be enabled for AI";
+            class enabled {
+                displayName = CSTRING(deflectionModule_DisplayName);
+                description = CSTRING(deflectionModule_Description);
                 typeName = "BOOL";
-                defaultValue = 0;
+                defaultValue = 1;
             };
+            class vehicleEnabled {
+                displayName = CSTRING(vehicleEnabled_DisplayName);
+                description = CSTRING(vehicleEnabled_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class simulationInterval {
+                displayName = CSTRING(simulationInterval_DisplayName);
+                description = CSTRING(simulationInterval_Description);
+                typeName = "NUMBER";
+                defaultValue = 0.05;
+            };
+            class simulationRadius {
+                displayName = CSTRING(simulationRadius_DisplayName);
+                description = CSTRING(simulationRadius_Description);
+                typeName = "NUMBER";
+                defaultValue = 3000;
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(windDeflection_Description);
         };
     };
 };

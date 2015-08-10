@@ -26,7 +26,6 @@ _waypoints = [] call FUNC(deviceGetWaypoints);
 
 if ((_newWpIndex < 0) || (_newWpIndex > ((count _waypoints) - 1))) exitWith {
     GVAR(currentWaypoint) = -1;
-    ERROR("out of bounds wp");
 };
 
 GVAR(currentWaypoint) = _newWpIndex;

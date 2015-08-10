@@ -3,25 +3,28 @@
  * Check if a unit can attach a specific item.
  *
  * Arguments:
- * 0: unit doing the attach (player) <OBJECT>
- * 1: vehicle that it will be attached to (player or vehicle) <OBJECT>
- * 2: Name of the attachable item <STRING>
+ * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 1: unit doing the attach (player) <OBJECT>
+ * 2: Array empty or containing a string of the attachable item <ARRAY>
  *
  * Return Value:
- * Boolean <BOOL>
+ * Can Attach <BOOL>
  *
  * Example:
- * Nothing
+ * [bob, bob, ["light"]] call ace_attach_fnc_canAttach;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_attachToVehicle,_item);
+private ["_attachLimit", "_attachedObjects","_playerPos"];
+params ["_attachToVehicle","_player","_args"];
+_args params [["_itemClassname","", [""]]];
+TRACE_3("params",_attachToVehicle,_unit,_itemClassname);
 
-private ["_attachLimit", "_attachedObjects"];
-
-_attachLimit = [10, 1] select (_unit == _attachToVehicle);
+_attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
 
-canStand _unit && {alive _attachToVehicle} && {count _attachedObjects < _attachLimit} && {_item in (itemsWithMagazines _unit + [""])}
+_playerPos = (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
+
+(canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemClassname in ((itemsWithMagazines _player) + [""])};

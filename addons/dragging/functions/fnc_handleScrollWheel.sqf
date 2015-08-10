@@ -36,7 +36,7 @@ if (_carriedItem isKindOf "CAManBase") exitWith {false};
 private ["_position", "_maxHeight"];
 
 _position = getPosATL _carriedItem;
-_maxHeight = (_unit ModelToWorld [0,0,0]) select 2;
+_maxHeight = (_unit modelToWorldVisual [0,0,0]) select 2;
 
 _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
 
