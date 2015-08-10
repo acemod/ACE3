@@ -77,8 +77,8 @@
         </Key>
 		<!-- Display Name for ACE Interaction -->
         <Key ID="STR_ACE_HANDSIGNALS_DISPLAYNAME">
-            <Original>Extra Gestures</Original>
-            <German>Exta Gesten</German>
+            <English>Extra Gestures</English>
+            <German>Extra Gesten</German>
             <Polish>Gesty dodatkowe</Polish>
         </Key>
     </Package>
