@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma3">
+    <Package name="ACE_HANDSIGNALS">
+        <Key ID="STR_ACE_HANDSIGNALS_NAME">
+            <English>ACE Hand Signals</English>
+            <German>ACE Hand Signale</German>
+        </Key>
+        <!-- STOP -->
+        <Key ID="STR_ACE_HANDSIGNALS_STOP">
+            <English>Stop</English>
+            <French>Stop</French>
+            <German>Stop</German>
+        </Key>
+
+        <!-- COVER -->
+        <Key ID="STR_ACE_HANDSIGNALS_COVER">
+            <English>Get cover</English>
+            <French>À couvert</French>
+            <German>Deckung Suchen</German>
+        </Key>
+
+        <!-- REGROUP -->
+        <Key ID="STR_ACE_HANDSIGNALS_REGROUP">
+            <English>Rally up</English>
+            <French>Regroupement</French>
+            <German>Sammeln</German>
+        </Key>
+
+        <!-- FORWARD -->
+        <Key ID="STR_ACE_HANDSIGNALS_FORWARD">
+            <English>Move forward</English>
+            <French>En avant</French>
+            <German>Vorwärts Bewegen</German>
+        </Key>
+
+        <!-- ENGAGE -->
+        <Key ID="STR_ACE_HANDSIGNALS_ENGAGE">
+            <English>Engage</English>
+            <French>Engager</French>
+        </Key>
+
+        <!-- POINT -->
+        <Key ID="STR_ACE_HANDSIGNALS_POINT">
+            <English>Point</English>
+            <French>Pointer</French>
+            <German>Zeigen</German>
+        </Key>
+
+        <!-- HOLD -->
+        <Key ID="STR_ACE_HANDSIGNALS_HOLD">
+            <English>Hold</English>
+            <French>Tenir</French>
+            <German>Anhalten</German>
+        </Key>
+
+        <!-- WARNING -->
+        <Key ID="STR_ACE_HANDSIGNALS_WARNING">
+            <English>Warning</English>
+            <French>Attention</French>
+            <German>Achtung</German>
+        </Key>
+        <!-- FREE LOOK -->
+        <Key ID="STR_ACE_HANDSIGNALS_FREELOOK">
+            <English> &#43; freelook</English>
+            <French> &#43; vue libre</French>
+            <German> &#43; Frei Blick</German>
+        </Key>
+        <Key ID="STR_ACE_HANDSIGNALS_DISPLAYNAME">
+            <Original>Extra Gestures</Original>
+            <German>Exta Gesten</German>
+        </Key>
+    </Package>
+</Project>
