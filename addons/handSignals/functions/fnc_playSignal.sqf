@@ -23,7 +23,6 @@ if (GVAR(ReloadMutex)) exitWith {
     } else {
         _this
     };
-    hint _gesture;
     player playAction _gesture;
     true
 };
