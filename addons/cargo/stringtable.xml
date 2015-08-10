@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Cargo">
+        <Key ID="STR_ACE_Cargo_loadObject">
+            <English>Load object</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadObject">
+            <English>Unload object</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_openMenu">
+            <English>Cargo Menu</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_cargoMenu">
+            <English>Cargo Menu</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_labelSpace">
+            <English>Cargo space left: %1</English>
+        </Key>
+    </Package>
+</Project>

@@ -10,3 +10,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define MAX_LOAD_DISTANCE 10

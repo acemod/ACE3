@@ -5,11 +5,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_interaction","ace_interact_menu"};
-        author[] = {"commy2"};
-        authorUrl = "https://github.com/commy2";
+        requiredAddons[] = {"ace_interaction"};
+        author[] = {"commy2", "Glowbal"};
+        authorUrl = "https://ace3mod.com/";
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
+#include "menu.hpp"
