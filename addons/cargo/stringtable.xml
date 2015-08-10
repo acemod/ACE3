@@ -2,13 +2,13 @@
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
-            <English>Load object</English>
+            <English>Load</English>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
-            <English>Unload object</English>
+            <English>Unload</English>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
-            <English>Cargo Menu</English>
+            <English>Cargo</English>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
