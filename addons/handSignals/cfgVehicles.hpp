@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_extraGestures {
                 displayName = CSTRING(DISPLAYNAME);
-                condition = (canStand _target && GVAR(ReloadMutex));
+                condition = QUOTE(canStand _target && GVAR(ReloadMutex));
                 showDisabled = 1;
                 priority = 3.4;
                 icon = QUOTE(PATHTOF(UI\gestures_plus_ca.paa));
