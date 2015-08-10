@@ -34,15 +34,13 @@ if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber
 
     _unit removeMagazines _magazine;
 
-    removeBackpack _unit;
-
     if (backpack _unit == "") then {
         _unit addBackpack "Bag_Base";
         _unit addMagazine _magazine;
         _didAdd = _magazine in (magazines _unit);
         _unit addWeapon _launcher;
         if (!_didAdd) then {
-            TRACE_1("Failed To Add Disposable Magazine Normaly, doing backup method",_unit);
+            TRACE_1("Failed To Add Disposable Magazine Normally, doing backup method (no backpack)",_unit);
             _unit addSecondaryWeaponItem _magazine;
         };
         removeBackpack _unit;
@@ -51,7 +49,7 @@ if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber
         _didAdd = _magazine in (magazines _unit);
         _unit addWeapon _launcher;
         if (!_didAdd) then {
-            TRACE_1("Failed To Add Disposable Magazine Normaly, doing backup method",_unit);
+            TRACE_2("Failed To Add Disposable Magazine Normally, doing backup method",_unit,(backpack _unit));
             _unit addSecondaryWeaponItem _magazine;
         };
     };
