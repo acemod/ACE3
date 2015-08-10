@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+scopeName "main";
+
 params ["_colorArray"];
 
 if (isNil "_colorArray") exitWith {false};
@@ -22,7 +24,7 @@ if ((typeName _colorArray) != "ARRAY") exitWith {false};
 if (count _colorArray != 4) exitWith {false};
 
 {
-    if ((typeName _x) != "SCALAR" || _x < 0 || _x > 1) exitWith {false};
+    if ((typeName _x) != "SCALAR" || _x < 0 || _x > 1) exitWith {false breakOut "main"};
 } count _colorArray;
 
 true
