@@ -46,7 +46,7 @@ _unit selectWeapon _replacementTube;
 // AI - Remove the ai's missle launcher tube after the missle has exploded
 if !([_unit] call EFUNC(common,isPlayer)) then {
     [{
-        params ["args","_idPFH"];
+        params ["_args","_idPFH"];
         _args params ["_unit", "_tube", "_projectile"];
 
         //don't do anything until projectile is null (exploded/max range)
