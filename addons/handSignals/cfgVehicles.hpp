@@ -34,8 +34,8 @@ class CfgVehicles {
                 };
 
                 class ACE_Gesture_Cover {
-                    displayName = CSTRING(COVERS);
-                    statement = QUOTE(QUOTE(QGVAR(COVERS)) call FUNC(playSignal));
+                    displayName = CSTRING(COVER);
+                    statement = QUOTE(QUOTE(QGVAR(COVER)) call FUNC(playSignal));
                     showDisabled = 1;
                     priority = 1.6;
                     hotkey = "4";
@@ -66,8 +66,8 @@ class CfgVehicles {
                 };
 
                 class ACE_Gesture_Warning {
-                    displayName = CSTRING(WARNING);
-                    statement = QUOTE(QUOTE(QGVAR(WARNING)) call FUNC(playSignal));
+                    displayName = CSTRING(WARNINGS);
+                    statement = QUOTE(QUOTE(QGVAR(WARNINGS)) call FUNC(playSignal));
                     showDisabled = 1;
                     priority = 1.2;
                     hotkey = "7";

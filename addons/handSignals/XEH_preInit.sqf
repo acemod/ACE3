@@ -16,7 +16,7 @@ CRP_var_ThsReloadMutex = true;
 
 {
     _x params ["_currentName","_Key"];
-    _code = (compile format [QUOTE('%1' call FUNC(playSignal)),QGVAR(ani_%2), _currentName]);
+    _code = (compile format [QUOTE('ace_handSignals_%1' call FUNC(playSignal)), _currentName]);
     [
         "ACE Hand Signals",
         _currentName,
@@ -40,13 +40,13 @@ CRP_var_ThsReloadMutex = true;
     true
 } count [
     ["STOP", DIK_2],
-    ["COVERS", DIK_3],
+    ["COVER", DIK_3],
     ["FORWARD", DIK_4],
     ["REGROUP", DIK_5],
     ["ENGAGE", DIK_6],
     ["POINT", DIK_7],
     ["HOLD", DIK_8],
-    ["WARNING", DIK_9]
+    ["WARNINGS", DIK_9]
 ];
 
 [{

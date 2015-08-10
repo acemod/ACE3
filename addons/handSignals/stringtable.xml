@@ -54,7 +54,7 @@
         </Key>
 
         <!-- WARNING -->
-        <Key ID="STR_ACE_HANDSIGNALS_WARNING">
+        <Key ID="STR_ACE_HANDSIGNALS_WARNINGS">
             <English>Warning</English>
             <French>Attention</French>
             <German>Achtung</German>
