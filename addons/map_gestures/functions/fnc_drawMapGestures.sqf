@@ -25,7 +25,7 @@ _proximityPlayers = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
     _nameSane = [name _x] call FUNC(sanitizeName);
     _drawPosVariableName = format [QGVAR(%1_DrawPos), _nameSane];
     if (!isNil _drawPosVariableName) then {
-        if (isNil {call compile _drawPosVariableName}) then {call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];}
+        if (isNil {call compile _drawPosVariableName}) then {call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];};
         _pos = call compile _drawPosVariableName;
         if (alive _x &&
             {_x getVariable QGVAR(Transmit)}) then {
