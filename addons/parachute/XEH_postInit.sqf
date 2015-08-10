@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if (!('ACE_Altimeter' in assignedItems ace_player)) exitWith {false};
     if (!(missionNamespace getVariable [QGVAR(AltimeterActive), false])) then {
-        [ace_player] call FUNC(showAltimeter);
+        [ACE_player] call FUNC(showAltimeter);
     } else {
         call FUNC(hideAltimeter);
     };
@@ -36,9 +36,12 @@ GVAR(PFH) = false;
 ["playerVehicleChanged",{
     if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
         GVAR(PFH) = true;
-        [FUNC(onEachFrame), 0.1, []] call CALLSTACK(cba_fnc_addPerFrameHandler);
+        [FUNC(onEachFrame), 0.1, []] call CALLSTACK(CBA_fnc_addPerFrameHandler);
     };
 }] call EFUNC(common,addEventHandler);
 
 // don't show speed and height when in expert mode
 ["infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call EFUNC(common,addEventHandler);
+
+//[ACE_Player,([ACE_player] call EFUNC(common,getAllGear))] call FUNC(storeParachute);
+["playerInventoryChanged", FUNC(storeParachute) ] call EFUNC(common,addEventHandler);

@@ -30,10 +30,7 @@ class CfgVehicles {
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            class _xx_ACE_UAVBattery {
-                count = 6;
-                name = "ACE_UAVBattery";
-            };
+            MACRO_ADDITEM(ACE_UAVBattery,6);
         };
     };
 };

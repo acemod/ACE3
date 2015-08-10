@@ -1,19 +1,23 @@
 /*
  * Author: esteldunedain, commy2
- *
  * Cycle through non explosive grenades.
  *
- * Argument:
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
  * None
  *
- * Return value:
- * None
+ * Example:
+ * [player] call ace_weaponselect_fnc_selectGrenadeOther
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_nextMuzzle", "_text"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["NonFrag"] call FUNC(findNextGrenadeMuzzle);
 

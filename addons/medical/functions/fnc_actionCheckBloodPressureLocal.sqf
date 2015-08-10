@@ -58,4 +58,5 @@ if ([_caller] call FUNC(isMedic)) then {
 
 if (_logOutPut != "") then {
     [_target,"activity", LSTRING(Check_Bloodpressure_Log), [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"quick_view", LSTRING(Check_Bloodpressure_Log), [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
 };

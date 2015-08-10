@@ -4,13 +4,15 @@ class ACE_Medical_Actions {
         class Bandage {
             displayName = CSTRING(Bandage);
             displayNameProgress = CSTRING(Bandaging);
-
+            category = "bandage";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
             items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
             condition = "";
+            patientStateCondition = 0;
             itemConsumed = 1;
 
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
@@ -24,11 +26,13 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class Morphine: Bandage {
             displayName = CSTRING(Inject_Morphine);
             displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             treatmentTime = 2;
             items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
@@ -38,6 +42,8 @@ class ACE_Medical_Actions {
         class Epinephrine: Bandage {
             displayName = CSTRING(Inject_Epinephrine);
             displayNameProgress = CSTRING(Injecting_Epinephrine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             requiredMedic = 1;
             treatmentTime = 3;
             items[] = {"ACE_epinephrine"};
@@ -48,6 +54,8 @@ class ACE_Medical_Actions {
         class BloodIV: Bandage {
             displayName = CSTRING(Transfuse_Blood);
             displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "advanced";
             requiredMedic = 1;
             treatmentTime = 20;
             items[] = {"ACE_bloodIV"};
@@ -56,14 +64,17 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class BloodIV_500: BloodIV {
+            category = "advanced";
             items[] = {"ACE_bloodIV_500"};
         };
         class BloodIV_250: BloodIV {
+            category = "advanced";
             items[] = {"ACE_bloodIV_250"};
         };
         class BodyBag: Bandage {
             displayName = CSTRING(PlaceInBodyBag);
             displayNameProgress = CSTRING(PlacingInBodyBag);
+            category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 4;
@@ -80,7 +91,9 @@ class ACE_Medical_Actions {
         class Diagnose: Bandage {
             displayName = CSTRING(Actions_Diagnose);
             displayNameProgress = CSTRING(Actions_Diagnosing);
+            category = "examine";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"head"};
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
@@ -96,10 +109,12 @@ class ACE_Medical_Actions {
 
     class Advanced {
         class FieldDressing {
-            displayName = CSTRING(Bandage);
+            displayName = CSTRING(Actions_FieldDressing);
             displayNameProgress = CSTRING(Bandaging);
+            category = "bandage";
             // Which locations can this treatment action be used? Available: Field, MedicalFacility, MedicalVehicle, All.
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"All"};
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
             // The time it takes for a treatment action to complete. Time is in seconds.
@@ -107,6 +122,7 @@ class ACE_Medical_Actions {
             // Item required for the action. Leave empty for no item required.
             items[] = {"ACE_fieldDressing"};
             condition = "";
+            patientStateCondition = 0;
             // Callbacks
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
@@ -119,20 +135,26 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
         };
         class PackingBandage: fieldDressing {
+            displayName = CSTRING(Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_packingBandage"}}};
         };
         class ElasticBandage: fieldDressing {
+            displayName = CSTRING(Actions_ElasticBandage);
             items[] = {"ACE_elasticBandage"};
         };
         class QuikClot: fieldDressing {
+            displayName = CSTRING(Actions_QuikClot);
             items[] = {"ACE_quikclot"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_QuickClot"}}};
         };
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
             displayNameProgress = CSTRING(Applying_Tourniquet);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r", "body"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 6;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
@@ -142,6 +164,8 @@ class ACE_Medical_Actions {
         class Morphine: fieldDressing {
             displayName = CSTRING(Inject_Morphine);
             displayNameProgress = CSTRING(Injecting_Morphine);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "medication";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
@@ -161,8 +185,10 @@ class ACE_Medical_Actions {
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
         };
         class BloodIV: fieldDressing {
-            displayName = CSTRING(Transfuse_Blood);
+            displayName = CSTRING(Actions_Blood4_1000);
             displayNameProgress = CSTRING(Transfusing_Blood);
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            category = "advanced";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
             treatmentTime = 7;
@@ -171,41 +197,49 @@ class ACE_Medical_Actions {
             litter[] = {};
         };
         class BloodIV_500: BloodIV {
+            displayName = CSTRING(Actions_Blood4_500);
             items[] = {"ACE_bloodIV_500"};
         };
         class BloodIV_250: BloodIV {
+            displayName = CSTRING(Actions_Blood4_250);
             items[] = {"ACE_bloodIV_250"};
         };
         class PlasmaIV: BloodIV {
-            displayName = CSTRING(Transfuse_Plasma);
+            displayName = CSTRING(Actions_Plasma4_1000);
             displayNameProgress = CSTRING(Transfusing_Plasma);
             items[] = {"ACE_plasmaIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class PlasmaIV_500: PlasmaIV {
+            displayName = CSTRING(Actions_Plasma4_500);
             items[] = {"ACE_plasmaIV_500"};
         };
         class PlasmaIV_250: PlasmaIV {
+            displayName = CSTRING(Actions_Plasma4_250);
             items[] = {"ACE_plasmaIV_250"};
         };
         class SalineIV: BloodIV {
-            displayName = CSTRING(Transfuse_Saline);
+            displayName = CSTRING(Actions_Saline4_1000);
             displayNameProgress = CSTRING(Transfusing_Saline);
             items[] = {"ACE_salineIV"};
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         };
         class SalineIV_500: SalineIV {
+         displayName = CSTRING(Actions_Saline4_500);
             items[] = {"ACE_salineIV_500"};
         };
         class SalineIV_250: SalineIV {
+            displayName = CSTRING(Actions_Saline4_250);
             items[] = {"ACE_salineIV_250"};
         };
         class SurgicalKit: fieldDressing {
-            displayName = "";
+            displayName = CSTRING(Use_SurgicalKit);
             displayNameProgress = CSTRING(TreatmentAction);
+            category = "advanced";
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
             requiredMedic = QGVAR(medicSetting_SurgicalKit);
+            patientStateCondition = QGVAR(useCondition_SurgicalKit);
             treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
             callbackSuccess = "";
             callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
@@ -214,11 +248,13 @@ class ACE_Medical_Actions {
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
         };
         class PersonalAidKit: fieldDressing {
-            displayName = "";
+            displayName = CSTRING(Use_Aid_Kit);
             displayNameProgress = CSTRING(TreatmentAction);
+            category = "advanced";
             items[] = {"ACE_personalAidKit"};
             treatmentLocations[] = {QGVAR(useLocation_PAK)};
             requiredMedic = QGVAR(medicSetting_PAK);
+            patientStateCondition = QGVAR(useCondition_PAK);
             treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QGVAR(consumeItem_PAK);
@@ -228,11 +264,16 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},  {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} }, {"All", "", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}} };
+            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} },
+                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class CheckPulse: fieldDressing {
-            displayName = "";
+            displayName = CSTRING(Actions_CheckPulse);
             displayNameProgress = CSTRING(Check_Pulse_Content);
+            category = "examine";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -242,34 +283,43 @@ class ACE_Medical_Actions {
             callbackProgress = "";
             animationPatient = "";
             animationCaller = ""; // TODO
+            animationCallerProne = "";
+            animationCallerSelfProne = "";
             itemConsumed = 0;
             litter[] = {};
         };
         class CheckBloodPressure: CheckPulse {
+            displayName = CSTRING(Actions_CheckBloodPressure);
             callbackSuccess = QUOTE(DFUNC(actionCheckBloodPressure));
             displayNameProgress = CSTRING(Check_Bloodpressure_Content);
         };
         class CheckResponse: CheckPulse {
+            displayName = CSTRING(Check_Response);
             callbackSuccess = QUOTE(DFUNC(actionCheckResponse));
             displayNameProgress = CSTRING(Check_Response_Content);
         };
-        class RemoveTourniquet: CheckPulse {
+        class RemoveTourniquet: Tourniquet {
+            displayName = CSTRING(Actions_RemoveTourniquet);
+            items[] = {};
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
             condition = QUOTE([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo));
             displayNameProgress = CSTRING(RemovingTourniquet);
+            litter[] = {};
         };
         class CPR: fieldDressing {
             displayName = CSTRING(Actions_CPR);
             displayNameProgress = CSTRING(Actions_PerformingCPR);
+            category = "advanced";
             treatmentLocations[] = {"All"};
+            allowedSelections[] = {"body"};
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "((_this select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "(((_this select 0) select 1) getvariable ['ACE_medical_inCardiacArrest', false])";
+            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
@@ -282,6 +332,7 @@ class ACE_Medical_Actions {
         class BodyBag: fieldDressing {
             displayName = CSTRING(PlaceInBodyBag);
             displayNameProgress = CSTRING(PlacingInBodyBag);
+            category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 2;
@@ -813,9 +864,9 @@ class ACE_Medical_Advanced {
             // specific details for the ACE_Morphine treatment action
             class Morphine {
                 painReduce = 15;
-                hrIncreaseLow[] = {-10, -30, 35};
-                hrIncreaseNormal[] = {-10, -50, 40};
-                hrIncreaseHigh[] = {-10, -40, 50};
+                hrIncreaseLow[] = {-10, -20, 35};
+                hrIncreaseNormal[] = {-10, -30, 35};
+                hrIncreaseHigh[] = {-10, -35, 50};
                 timeInSystem = 900;
                 maxDose = 4;
                 inCompatableMedication[] = {};

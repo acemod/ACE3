@@ -3,6 +3,7 @@ layout: wiki
 title: Laser
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

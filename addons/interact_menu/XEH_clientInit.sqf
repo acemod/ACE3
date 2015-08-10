@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(cachedBuildingTypes) = [];
+GVAR(cachedBuildingActionPairs) = [];
+
 GVAR(ParsedTextCached) = [];
 
 //Setup text/shadow/size/color settings matrix
@@ -17,6 +20,9 @@ GVAR(ParsedTextCached) = [];
 // Install the render EH on the main display
 addMissionEventHandler ["Draw3D", DFUNC(render)];
 
+//Add Actions to Houses:
+["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
+
 // This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
 [] spawn {
@@ -30,8 +36,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
@@ -39,8 +43,6 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 ["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
-    // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
@@ -71,4 +73,12 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 ["interactMenuClosed", {
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+}] call EFUNC(common,addEventHandler);
+
+// Let key work with zeus open (not perfect, enables all added hotkeys in zeus interface rather than only menu)
+["zeusDisplayChanged",{
+    if (_this select 1) then {
+        (finddisplay 312) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+        (finddisplay 312) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+    };
 }] call EFUNC(common,addEventHandler);

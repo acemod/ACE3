@@ -21,9 +21,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_bullet"];
-_unit = _this select 0;
-_bullet = _this select 6;
+params ["_unit", "", "", "", "_ammo", "", "_bullet"];
 
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && (_bullet isKindOf "BulletBase") && (_unit isKindOf "Man")) exitWith {false};
 
@@ -34,6 +32,6 @@ if (!((_bullet isKindOf "BulletBase") || (_bullet isKindOf "GrenadeBase"))) exit
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {false};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 
-[_bullet, getNumber(configFile >> "cfgAmmo" >> (_this select 4) >> "airFriction")] call FUNC(updateTrajectoryPFH);
+GVAR(trackedBullets) pushBack [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")];
 
 true;

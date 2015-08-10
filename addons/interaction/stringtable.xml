@@ -385,30 +385,6 @@
             <Portuguese>Olá</Portuguese>
             <Italian>Ciao</Italian>
         </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Yes">
-            <English>Yes</English>
-            <German>Ja</German>
-            <Spanish>Si</Spanish>
-            <Polish>Tak</Polish>
-            <Czech>Ano</Czech>
-            <French>Oui</French>
-            <Russian>Да</Russian>
-            <Hungarian>Igen</Hungarian>
-            <Portuguese>Sim</Portuguese>
-            <Italian>Si</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_No">
-            <English>No</English>
-            <German>Nein</German>
-            <Spanish>No</Spanish>
-            <Polish>Nie</Polish>
-            <Czech>Ne</Czech>
-            <French>Non</French>
-            <Russian>Нет</Russian>
-            <Hungarian>Nem</Hungarian>
-            <Portuguese>Não</Portuguese>
-            <Italian>No</Italian>
-        </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
             <German>Waffe wegstecken</German>
@@ -793,12 +769,19 @@
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interaction_OpenBox">
+            <English>Open</English>
+            <Polish>Otwórz</Polish>
+            <Czech>Otevřít</Czech>
+            <Spanish>Abrir</Spanish>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
             <Polish>System interakcji</Polish>
             <Spanish>Sistema de interacción</Spanish>
             <German>Interaktionssystem</German>
             <Czech>Systém interakce</Czech>
+            <Russian>Sistema de interação</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -806,6 +789,7 @@
             <Spanish>Habilitar gestión de equipos</Spanish>
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
+            <Russian>Habilitar gestão de equipes</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -813,12 +797,15 @@
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
+            <Russian>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
-            <English></English>
+            <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
+            <Russian>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Russian>
+            <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
         </Key>
     </Package>
 </Project>

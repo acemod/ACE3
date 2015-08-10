@@ -49,7 +49,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         _unit = _args select 0;
         _startTime = _unit getvariable [QGVAR(reviveStartTime), 0];
 
-        if (ACE_time - _startTime > GVAR(maxReviveTime)) exitwith {
+        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
             _unit setvariable [QGVAR(inReviveState), nil, true];
             _unit setvariable [QGVAR(reviveStartTime), nil];
@@ -65,6 +65,11 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
 
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        };
+        if (GVAR(level) >= 2) then {
+            if (_unit getvariable [QGVAR(heartRate), 60] > 0) then {
+                _unit setvariable [QGVAR(heartRate), 0];
+            };
         };
     }, 1, [_unit] ] call CBA_fnc_addPerFrameHandler;
     false;

@@ -3,6 +3,7 @@ layout: wiki
 title: Captives
 description: System for taking and handling captives
 group: feature
+category: interaction
 parent: wiki
 ---
 
@@ -24,20 +25,23 @@ Allows players to surrender. It renders the unit unable to move and with the han
 
 ### 2.1 Taking a unit into captivity
 - You need `Cable Tie`.
-- Approach the unit and Interact <kbd>Left Windows</kbd> (ACE3 default key bind `Interact Key`).
+- Approach the unit and Interact <kbd>⊞ win</kbd> (ACE3 default).
 - The interaction is located around the hands in the form of a handcuffs icon.
 - Repeat to release.
 
 ### 2.2 Escorting a captive
-- Interact with the captive <kbd>Left Windows</kbd>.
+- Interact with the captive <kbd>⊞ win</kbd>.
 - Select the `Escort prisoner` option.
-- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>CTRL</kbd>+<kbd>Left Windows</kbd> and select `Release`.
+- To stop escorting, use the mousewheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>⊞ win</kbd> and select `Release`.
 
 ### 2.3 Loading and unloading a captive into/from a vehicle
 - Escort the captive.
 - Approach the vehicle you wish to load the captive unit into.
-- Interact with the vehicle <kbd>Left Windows</kbd> and select `Load captive`.
-- Interact with the vehicle to unload.
+- Interact with the vehicle <kbd>⊞ win</kbd> and select `Load captive`.
+- To unload the captive interact with the vehicle <kbd>⊞ win</kbd>
+- Select `Passengers`.
+- Select the captive.
+- Select `Unload captive`.
 
 ## 3. Dependencies
 

@@ -16,3 +16,4 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "GUI_VirtualAmmo.hpp"

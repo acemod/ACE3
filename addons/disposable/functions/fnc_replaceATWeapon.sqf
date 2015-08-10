@@ -21,11 +21,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_projectile", "_replacementTube", "_items"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
-_projectile = _this select 6;
+private ["_replacementTube", "_items"];
+params ["_unit", "_weapon", "", "", "", "", "_projectile"];
 
 if (!local _unit) exitWith {};
 
@@ -43,19 +40,19 @@ _unit selectWeapon _replacementTube;
 //Re-add all attachments to the used tube
 {
     if (_x != "") then {_unit addSecondaryWeaponItem _x};
-} forEach _items;
+} count _items;
 
 
 // AI - Remove the ai's missle launcher tube after the missle has exploded
 if !([_unit] call EFUNC(common,isPlayer)) then {
     [{
-        EXPLODE_2_PVT(_this,_params,_pfhId);
-        EXPLODE_3_PVT(_params,_unit,_tube,_projectile);
+        params ["_args","_idPFH"];
+        _args params ["_unit", "_tube", "_projectile"];
 
         //don't do anything until projectile is null (exploded/max range)
         if (isNull _projectile) then {
             //Remove PFEH:
-            [_pfhId] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call cba_fnc_removePerFrameHandler;
 
             //If (tube is dropped) OR (is dead) OR (is player) just exit
             if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};
@@ -66,13 +63,13 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
-            
+
             //This will duplicate attachements, because we will be adding a weapon that may already have attachments on it
             //We either need a way to add a clean weapon, or a way to add a fully configured weapon to a container:
             // {
                 // if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
             // } forEach _items;
-            
+
             _unit removeWeaponGlobal _tube;
         };
     }, 1, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;

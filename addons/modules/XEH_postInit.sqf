@@ -26,12 +26,8 @@
                 _function = missionNamespace getvariable _function;
             };
 
-            if (_isGlobal) then {
-                [_logic, [], true] call _function;
-            } else {
-                if (isServer) then {
-                    [_logic, [], true] call _function;
-                };
+            if (_isGlobal || isServer) then {
+                [_logic, (synchronizedObjects _logic), true] call _function;
             };
 
             if !(_isPersistent) then {

@@ -3,6 +3,7 @@ layout: wiki
 title: G-Forces
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

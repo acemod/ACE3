@@ -6,7 +6,7 @@ class CfgVehicles {
                 class ACE_PutInEarplugs {
                     displayName = CSTRING(EarPlugs_On);
                     condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player} );
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
@@ -16,7 +16,7 @@ class CfgVehicles {
                 class ACE_RemoveEarplugs {
                     displayName = CSTRING(EarPlugs_Off);
                     condition = QUOTE( [_player] call FUNC(hasEarPlugsIn) );
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
@@ -108,6 +108,27 @@ class CfgVehicles {
                 description = CSTRING(CombatDeafness_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class DisableEarRinging {
+                displayName = CSTRING(DisableEarRinging);
+                typeName = "NUMBER";
+                class values {
+                    class DoNotForce {
+                        default = 1;
+                        name = ECSTRING(common,DoNotForce);
+                        value = -1;
+                    };
+                    /* Probably don't want to allow forcing ear ringing for people who have serious problems with the effect
+                    class NotDisabled {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    */
+                    class IsDisabled {
+                        name = ECSTRING(common,Yes);
+                        value = 1;
+                    };
+                };
             };
         };
         class ModuleDescription {

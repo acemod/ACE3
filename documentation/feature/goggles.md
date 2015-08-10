@@ -3,6 +3,7 @@ layout: wiki
 title: Goggles
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

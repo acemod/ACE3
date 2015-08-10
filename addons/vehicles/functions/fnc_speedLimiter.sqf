@@ -1,10 +1,24 @@
-// by commy2
+/*
+ * Author: commy2
+ * Toggle speed limiter for Driver in Vehicle.
+ *
+ * Arguments:
+ * 0: Driver <OBJECT>
+ * 1: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, car] call ace_vehicles_fnc_speedLimiter
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_driver", "_vehicle"];
+private "_maxSpeed";
 
-_driver = _this select 0;
-_vehicle = _this select 1;
+params ["_driver", "_vehicle"];
 
 if (GETGVAR(isSpeedLimiter,false)) exitWith {
     [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
@@ -16,19 +30,15 @@ if (GETGVAR(isSpeedLimiter,false)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-private "_maxSpeed";
 _maxSpeed = speed _vehicle max 10;
 
 [{
-    private ["_driver", "_vehicle", "_maxSpeed"];
-
-    _driver = _this select 0 select 0;
-    _vehicle = _this select 0 select 1;
-    _maxSpeed = _this select 0 select 2;
+    params ["_args", "_idPFH"];
+    _args params ["_driver", "_vehicle", "_maxSpeed"];
 
     if (!GVAR(isSpeedLimiter) || {_driver != driver _vehicle}) exitWith {
         GVAR(isSpeedLimiter) = false;
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     private "_speed";

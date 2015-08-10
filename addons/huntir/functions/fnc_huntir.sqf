@@ -38,6 +38,11 @@ createDialog "ace_huntir_cam_dialog_off";
         GVAR(messageSearching) = toArray "Searching.....";            
         GVAR(messageConnecting) = toArray "Connecting.....";
         [{
+            //Close monitor if we no longer have item:
+            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+                closeDialog 0;
+            };
+        
             private ["_elapsedTime", "_nearestHuntIRs"];
             _elapsedTime = ACE_time - GVAR(startTime);
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
@@ -61,7 +66,7 @@ createDialog "ace_huntir_cam_dialog_off";
                         if (_elapsedTime > 10) then {
                             GVAR(state) = "noGDS";
                         };
-                        if (_elapsedTime > 5 && {count _nearestHuntIRs > 0}) then {
+                        if (_elapsedTime > 5 && {{_x getHitPointDamage "HitCamera" < 0.25} count _nearestHuntIRs > 0}) then {
                             GVAR(state) = "connecting";
                         };
                     };

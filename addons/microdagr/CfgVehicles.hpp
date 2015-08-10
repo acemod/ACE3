@@ -9,21 +9,21 @@ class CfgVehicles {
                     condition = QUOTE(([DISPLAY_MODE_DIALOG] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DIALOG});
                     statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(openDisplay));
                     icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(show) {
                         //Opens the mini map
                         displayName = CSTRING(show);
                         condition = QUOTE(([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) && {GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY});
                         statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(openDisplay));
                         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                        exceptions[] = {"notOnMap", "isNotInside"};
+                        exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
                     class GVAR(close) {
                         displayName = CSTRING(closeUnit);
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                         statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(openDisplay));
                         icon = QUOTE(PATHTOF(UI\icon_microDAGR.paa));
-                        exceptions[] = {"notOnMap", "isNotInside"};
+                        exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
                 };
             };
