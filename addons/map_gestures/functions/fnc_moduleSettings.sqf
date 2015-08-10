@@ -27,9 +27,10 @@ if (!isServer) exitWith {};
 [_logic, QGVAR(interval), "interval"] call EFUNC(common,readSettingFromModule);
 
 _defaultLeadColor = call compile ("[" + (_logic getVariable ["defaultLeadColor", ""]) + "]");
-if (isNil "_leadColor" || !((typeName _leadColor) isEqualTo "ARRAY") || {count _leadColor != 4}) exitWith {};
-[QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
+if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
 
 _defaultColor = call compile ("[" + (_logic getVariable ["defaultColor", ""]) + "]");
-if (isNil "_color" || !((typeName _color) isEqualTo "ARRAY") || {count _color != 4}) exitWith {};
+if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
+
+[QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
 [QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);

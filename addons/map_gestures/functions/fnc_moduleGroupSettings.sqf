@@ -19,19 +19,22 @@
 
 params ["_logic", "_units", "_activated"];
 
+diag_log "Running";
+
 if (!_activated) exitWith {};
 if (!isServer) exitWith {};
 
 _leadColor = call compile ("[" + (_logic getVariable ["leadColor", ""]) + "]");
-if (isNil "_leadColor" || !((typeName _leadColor) isEqualTo "ARRAY") || {count _leadColor != 4}) exitWith {};
+if (!([_leadColor] call FUNC(isValidColorArray))) exitWith {ERROR("leadColor is not a valid color array.")};
 _color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
-if (isNil "_color" || !((typeName _color) isEqualTo "ARRAY") || {count _color != 4}) exitWith {};
+if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a valid color array.")};
 
-_configurationGroups = if (isNil QGVAR(GroupColorConfigurationsGroups) then { [] } else { +GVAR(GroupColorConfigurationsGroups) };
+_configurations = if (isNil QGVAR(GroupColorConfigurations)) then { [] } else { +GVAR(GroupColorConfigurations) };
+_configurationGroups = if (isNil QGVAR(GroupColorConfigurationsGroups)) then { [] } else { +GVAR(GroupColorConfigurationsGroups) };
+_configurationGroupsIndex = if (isNil QGVAR(GroupColorConfigurationsGroupIndex)) then { [] } else { +GVAR(GroupColorConfigurationsGroupIndex) };
 
-if (isNil "_configurationGroups") then {_configurationGroups = [];};
-if (isNil "_configurationGroupsIndex") then {_configurationGroupsIndex = [];};
 _completedGroups = [];
+_configurationIndex = _configurations pushBack [_leadColor, _color];
 {
     private "_group";
     _group = groupID (group _x);
