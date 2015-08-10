@@ -112,15 +112,15 @@ class CfgVehicles {
 
     class ACE_Track: ACE_RepairItem_Base {
         author = "Hawkins";
-        //scope = 2;
-        model = QUOTE(PATHTOF(ace_track.p3d));
+        scope = 2;
+        model = QUOTE(PATHTOF(data\ace_track.p3d));
         displayName = "$STR_ACE_Repair_SpareTrack";
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
         author = "Hawkins";
         scope = 2;
-        model = QUOTE(PATHTOF(ace_wheel.p3d));
+        model = QUOTE(PATHTOF(data\ace_wheel.p3d));
         displayName = "$STR_ACE_Repair_SpareWheel";
         picture = QUOTE(PATHTOF(ui\tire_ca.paa));
     };
