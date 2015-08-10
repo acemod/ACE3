@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="479" height="112">
+    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
