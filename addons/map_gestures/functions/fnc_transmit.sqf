@@ -30,13 +30,12 @@ TRACE_1("Near",_proximityPlayers)
 
 {
     _ownerID = _x getVariable QGVAR(owner_id);
-    if (isNil "_ownerID") exitWith {
+    if (isNil "_ownerID") then {
         [0, {[_this] call FUNC(assignClientIDOnServer)}, name _x] call cba_fnc_GlobalExecute;
-    };
-    _ownerID = _x getVariable QGVAR(owner_id);
-
-    if (_ownerID != ACE_player getVariable QGVAR(owner_id)) then {
-        _nameSane = [name ACE_player] call FUNC(sanitizeName);
-        _ownerID publicVariableClient format [QGVAR(%1_DrawPos), _nameSane];
+    } else {
+        if (_ownerID != ACE_player getVariable QGVAR(owner_id)) then {
+            _nameSane = [name ACE_player] call FUNC(sanitizeName);
+            _ownerID publicVariableClient format [QGVAR(%1_DrawPos), _nameSane];
+        };
     };
 } count _proximityPlayers;
