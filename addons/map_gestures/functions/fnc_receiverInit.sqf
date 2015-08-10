@@ -17,8 +17,8 @@
 
 {
     if (isPlayer _x) then {
-            _nameSane = [name _x] call FUNC(sanitizeName);
-            call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];
+        _nameSane = [name _x] call FUNC(sanitizeName);
+        call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];
     };
     nil
 } count allUnits;

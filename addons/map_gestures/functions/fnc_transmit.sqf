@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_nearDudes", "_ownerID", "_nameSane"];
+private ["_proximityPlayers", "_ownerID", "_nameSane"];
 
 params ["", "_pfhId"];
 
@@ -25,8 +25,8 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
     [_pfhId] call CBA_fnc_removePerFrameHandler;
 };
 
-_nearDudes = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
-TRACE_1("Near",_nearDudes)
+_proximityPlayers = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
+TRACE_1("Near",_proximityPlayers)
 
 {
     _ownerID = _x getVariable QGVAR(owner_id);
@@ -39,4 +39,4 @@ TRACE_1("Near",_nearDudes)
         _nameSane = [name ACE_player] call FUNC(sanitizeName);
         _ownerID publicVariableClient format [QGVAR(%1_DrawPos), _nameSane];
     };
-} count _nearDudes;
+} count _proximityPlayers;

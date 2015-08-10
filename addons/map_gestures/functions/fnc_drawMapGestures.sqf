@@ -20,24 +20,23 @@ if (!visibleMap) exitWith {};
 
 params ["_mapHandle"];
 
-_nearDudes = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
+_proximityPlayers = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
 {
     _nameSane = [name _x] call FUNC(sanitizeName);
     _drawPosVariableName = format [QGVAR(%1_DrawPos), _nameSane];
     if (!isNil _drawPosVariableName) then {
+        if (isNil {call compile _drawPosVariableName}) then {call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];}
         _pos = call compile _drawPosVariableName;
         if (alive _x &&
-            (_pos distance [0, 0, 0]) > 50 &&
             {_x getVariable QGVAR(Transmit)}) then {
             _group = group _x;
             _grpName = groupID _group;
 
-            _color = [1, 1, 1, 1];
-            if (_grpName in GVAR(GroupColorConfigurationsGroups)) then {
+            _color = if (_grpName in GVAR(GroupColorConfigurationsGroups)) then {
                 _grpNameIndex = GVAR(GroupColorConfigurationsGroups) find _grpName;
-                _color = (GVAR(GroupColorConfigurations) select (GVAR(GroupColorConfigurationsGroupIndex) select _grpNameIndex)) select (_x != leader _group);
+                (GVAR(GroupColorConfigurations) select (GVAR(GroupColorConfigurationsGroupIndex) select _grpNameIndex)) select (_x != leader _group)
             } else {
-                _color = if (_x == leader _group) then {GVAR(defaultLeadColor)} else {GVAR(defaultColor)};
+                if (_x == leader _group) then {GVAR(defaultLeadColor)} else {GVAR(defaultColor)};
             };
 
             _mapHandle drawIcon ["\a3\ui_f\data\gui\cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, 55, 55, 0, "", 1, 0.030, "PuristaBold", "left"];
@@ -45,4 +44,4 @@ _nearDudes = [ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers);
         };
     };
     nil
-} count _nearDudes;
+} count _proximityPlayers;

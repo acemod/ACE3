@@ -27,12 +27,7 @@ if (isNil "_leadColor" || !((typeName _leadColor) isEqualTo "ARRAY") || {count _
 _color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
 if (isNil "_color" || !((typeName _color) isEqualTo "ARRAY") || {count _color != 4}) exitWith {};
 
-_configurations = +GVAR(GroupColorConfigurations);
-if (isNil "_configurations") then {_configurations = []};
-_configurationIndex = _configurations pushBack [_leadColor, _color];
-
-_configurationGroups = +GVAR(GroupColorConfigurationsGroups);
-_configurationGroupsIndex = +GVAR(GroupColorConfigurationsGroupIndex);
+_configurationGroups = if (isNil QGVAR(GroupColorConfigurationsGroups) then { [] } else { +GVAR(GroupColorConfigurationsGroups) };
 
 if (isNil "_configurationGroups") then {_configurationGroups = [];};
 if (isNil "_configurationGroupsIndex") then {_configurationGroupsIndex = [];};
