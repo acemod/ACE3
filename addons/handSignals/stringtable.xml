@@ -13,7 +13,7 @@
         </Key>
 
         <!-- COVER -->
-        <Key ID="STR_ACE_HANDSIGNALS_COVER">
+        <Key ID="STR_ACE_HANDSIGNALS_COVERS">
             <English>Get cover</English>
             <French>À couvert</French>
             <German>Deckung Suchen</German>
@@ -65,6 +65,7 @@
             <French> &#43; vue libre</French>
             <German> &#43; Frei Blick</German>
         </Key>
+		<!-- Display Name for ACE Interaction -->
         <Key ID="STR_ACE_HANDSIGNALS_DISPLAYNAME">
             <Original>Extra Gestures</Original>
             <German>Exta Gesten</German>
