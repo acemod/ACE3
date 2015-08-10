@@ -30,7 +30,7 @@ TRACE_1("Near",_nearDudes)
 
 {
     _ownerID = _x getVariable QGVAR(owner_id);
-    if (isNil _ownerID) exitWith {
+    if (isNil "_ownerID") exitWith {
         [0, {[_this] call FUNC(assignClientIDOnServer)}, name _x] call cba_fnc_GlobalExecute;
     };
     _ownerID = _x getVariable QGVAR(owner_id);
