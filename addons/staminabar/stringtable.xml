@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="StaminaBar">
+        <Key ID="STR_ACE_StaminaBar_Show">
+            <English>Show Stamina Bar</English>
+        </Key>
+        <Key ID="STR_ACE_StaminaBar_ShowDescription">
+            <English>Shows fatigue visualization in a form of a bar.</English>
+        </Key>
+        <Key ID="STR_ACE_StaminaBar_ModuleDisplayName">
+            <English>Stamina Bar</English>
+        </Key>
+        <Key ID="STR_ACE_StaminaBar_ModuleDescription">
+            <English>This module allows you to show fatigue visualization in a form of a bar.</English>
+        </Key>
+    </Package>
+</Project>
