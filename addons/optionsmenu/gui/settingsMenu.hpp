@@ -256,7 +256,7 @@ class ACE_settingsMenu {
             idc = 1102;
             text = CSTRING(OpenExport);
             x = X_PART(18);
-            action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {createDialog 'ACE_serverSettingsMenu'; });
+            action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {closeDialog 0; createDialog 'ACE_serverSettingsMenu';});
         };
         class action_debug: actionClose {
             idc = 1102;
@@ -277,7 +277,7 @@ class ACE_settingsMenu {
 };
 class ACE_serverSettingsMenu: ACE_settingsMenu {
     onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', _this select 0)]; [] call FUNC(onServerSettingsMenuOpen););
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', nil)]; [] call FUNC(onSettingsMenuOpen););
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2('ACE_serverSettingsMenu', nil)];);
     class controls: controls {
         class HeaderName {
             idc = 1;
