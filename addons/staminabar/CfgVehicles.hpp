@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 1;
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_StaminaBar_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_StaminaBar_ca.paa));
         class Arguments {
             class enabled {
                 displayName = CSTRING(Show);
