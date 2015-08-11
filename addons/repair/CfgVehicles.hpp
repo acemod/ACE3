@@ -80,6 +80,15 @@ class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
+
+        class ACE_Cargo {
+            class Cargo {
+                class ACE_Wheel {
+                    type = "ACE_Wheel";
+                    amount = 1;
+                };
+            };
+        };
     };
 
     class Tank: LandVehicle {
