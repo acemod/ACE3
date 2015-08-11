@@ -120,6 +120,8 @@ class CfgVehicles {
     };
 
     class ACE_Track: ACE_RepairItem_Base {
+        ace_cargo_size = 2;
+        ace_cargo_canLoad = 1;
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_track.p3d));
@@ -127,6 +129,8 @@ class CfgVehicles {
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
+        ace_cargo_size = 1;
+        ace_cargo_canLoad = 1;
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_wheel.p3d));
