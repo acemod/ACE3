@@ -38,6 +38,9 @@ switch (toLower _mode) do {
         GVAR(mousePos) = [0.5,0.5];
         GVAR(treeSel) = objNull;
 
+        // Update units before opening to support pre-set camera unit
+        [] call FUNC(updateUnits);
+
         // Initalize the camera view
         GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
         [] call FUNC(transitionCamera);
