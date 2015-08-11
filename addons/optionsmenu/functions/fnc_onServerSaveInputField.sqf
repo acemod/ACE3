@@ -21,8 +21,8 @@ private ["_settingIndex", "_inputText", "_setting", "_settingName", "_convertedV
 _inputText = ctrlText 414;  //Index of right drop down
 
 _settingIndex = -1;
-if (((lbCurSel 200) >= 0) && {(lbCurSel 200) < ((lbSize 200)/2)}) then {
-    _settingIndex = lbValue [200, (lbCurSel 200)];
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
 };
 
 switch (GVAR(optionMenu_openTab)) do {

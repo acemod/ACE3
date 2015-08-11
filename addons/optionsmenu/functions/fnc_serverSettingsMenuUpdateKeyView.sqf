@@ -16,11 +16,10 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor", "_expectedType", "_filteredCollection", "_selectedCategory"];
+private ["_settingsMenu", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor", "_expectedType"];
 disableSerialization;
 
 _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
-_ctrlList = _settingsMenu displayCtrl 200;
 
 _collection = switch (GVAR(optionMenu_openTab)) do {
     case MENU_TAB_SERVER_OPTIONS: {GVAR(serverSideOptions)};
@@ -30,8 +29,8 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
 };
 
 _settingIndex = -1;
-if (((lbCurSel _ctrlList) >= 0) && {(lbCurSel _ctrlList) < ((lbSize _ctrlList)/2)}) then {
-    _settingIndex = _ctrlList lbValue (lbCurSel _ctrlList);
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
 };
 
 if ((_settingIndex >= 0) && {_settingIndex <= (count _collection)}) then {

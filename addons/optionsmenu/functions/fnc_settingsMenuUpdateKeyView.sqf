@@ -29,11 +29,9 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
 };
 
 _settingIndex = -1;
-if (((lbCurSel _ctrlList) >= 0) && {(lbCurSel _ctrlList) < ((lbSize _ctrlList)/2)}) then {
-    _settingIndex = _ctrlList lbValue (lbCurSel _ctrlList);
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
 };
-
-TRACE_3("Selected",_settingIndex,(lbCurSel _ctrlList),((lbSize _ctrlList)/2));
 
 if ((_settingIndex >= 0) && {_settingIndex <= (count _collection)}) then {
     _setting = _collection select _settingIndex;

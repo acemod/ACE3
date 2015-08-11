@@ -16,23 +16,22 @@
 
 #include "script_component.hpp"
 
-private ["_added", "_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue", "_selectedCategory"];
+private ["_settingName", "_added", "_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue", "_selectedCategory"];
 DEFAULT_PARAM(0,_updateKeyView,true);
 
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 _ctrlList = _settingsMenu displayCtrl 200;
 
-lbclear _ctrlList;
+lnbClear _ctrlList;
 
 _selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 
-_added = 0;
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_OPTIONS): {
         {
             if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
-                _ctrlList lbadd (_x select 3);
+                _settingName = (_x select 3);
                 _settingsValue = _x select 9;
 
                 // Created disable/enable options for bools
@@ -41,10 +40,8 @@ switch (GVAR(optionMenu_openTab)) do {
                 } else {
                     (_x select 5) select _settingsValue;
                 };
-                _ctrlList lbadd (_settingsText);
-                
-                _ctrlList lbSetValue [_added, _forEachIndex];
-                _added = _added + 1;
+                _added = _ctrlList lnbAddRow [_settingName, _settingsText];
+                _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
         } foreach GVAR(clientSideOptions);
     };
@@ -56,12 +53,11 @@ switch (GVAR(optionMenu_openTab)) do {
                     _color set [_forEachIndex, ((round (_x * 100))/100)];
                 } forEach _color;
                 _settingsColor = str _color;
-                _ctrlList lbadd (_x select 3);
-                _ctrlList lbadd (_settingsColor);
+                _settingName = (_x select 3);
+
+                _added = _ctrlList lnbAddRow [_settingName, _settingsColor];
                 _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 9)];
-                
-                _ctrlList lbSetValue [_added, _forEachIndex];
-                _added = _added + 1;
+                _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
         }foreach GVAR(clientSideColors);
     };
