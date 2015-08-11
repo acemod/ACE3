@@ -10,6 +10,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
+
 #include "cfgMovesBasic.hpp"
 #include "cfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"

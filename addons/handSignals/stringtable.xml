@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="Arma3">
-    <Package name="ACE_HANDSIGNALS">
+<Project name="ACE">
+    <Package name="HANDSIGNALS">
         <Key ID="STR_ACE_HANDSIGNALS_NAME">
             <English>ACE Hand Signals</English>
             <German>ACE Hand Signale</German>

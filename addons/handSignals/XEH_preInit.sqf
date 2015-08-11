@@ -6,11 +6,10 @@ PREP(playSignal);
 
 ADDON = true;
 
-
 if !(hasInterface) exitWith {};
 
 // reload mutex, you can't play signal while reloading
-CRP_var_ThsReloadMutex = true;
+GVAR(ReloadMutex) = true;
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
@@ -52,7 +51,6 @@ CRP_var_ThsReloadMutex = true;
 [{
     if (isNull (findDisplay 46)) exitWith {};
         // handle reloading
-        GVAR(ReloadMutex) = true;
         (findDisplay 46) displayAddEventHandler ["KeyDown", {
         if ((_this select 1) in actionKeys "ReloadMagazine") then {
             _weapon = currentWeapon ACE_player;
