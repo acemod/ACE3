@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_SpareWheel"};
+        units[] = {"ACE_Wheel", "ACE_Track"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common","ace_interact_menu"};

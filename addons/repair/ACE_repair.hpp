@@ -35,6 +35,12 @@ class ACE_Repair {
             requiredEngineer = 0;
             callbackSuccess = QUOTE(call FUNC(doRepair));
         };
+        class RepairTrack: MiscRepair {
+            displayName = CSTRING(Repairing);
+            displayNameProgress = CSTRING(RepairingHitPoint);
+            condition = QUOTE(call FUNC(canRepairTrack));
+            callbackSuccess = QUOTE(call FUNC(doRepairTrack));
+        };
         class RemoveTrack: MiscRepair {
             displayName = CSTRING(RemoveTrack);
             displayNameProgress = CSTRING(RemovingTrack);
