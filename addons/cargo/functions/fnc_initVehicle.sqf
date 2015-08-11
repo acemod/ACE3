@@ -17,9 +17,30 @@ params ["_vehicle"];
 TRACE_1("params", _vehicle);
 
 private ["_type", "_initializedClasses"];
-
 _type = typeOf _vehicle;
 _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
+
+
+if (isServer) then {
+    {
+        if (isClass _x) then {
+            private ["_className", "_amount","_position","_object"];
+            _className = getText (_x >> "type");
+            _amount = getNumber (_x >> "amount");
+            _position = getPos _vehicle;
+            _position set [2, (_position select 2) + 7.5];
+            _position set [1, (_position select 1) + 1];
+            for "_i" from 1 to _amount do {
+                _object = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
+                if !([_object, _vehicle] call FUNC(loadItem)) exitwith {
+                    deleteVehicle _object;
+                };
+            };
+        };
+        nil
+    }count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
+};
+
 
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};

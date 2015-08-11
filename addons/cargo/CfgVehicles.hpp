@@ -4,6 +4,15 @@ class CfgVehicles {
     class Car: LandVehicle {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
+        class ACE_Cargo {
+            /*
+            class Cargo {
+                class ACE_medicalSupplyCrate {
+                    type = "ACE_medicalSupplyCrate";
+                    amount = 1;
+                };*/
+            };
+        };
     };
 
     class Tank: LandVehicle {
