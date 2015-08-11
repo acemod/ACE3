@@ -37,6 +37,8 @@ _threshold = [
     _unit getVariable [QGVAR(damageThreshold), GVAR(AIDamageThreshold)],
     _unit getVariable [QGVAR(damageThreshold), GVAR(playerDamageThreshold)]
 ] select ([_unit] call EFUNC(common,isPlayer));
+if (_selectionName in ["leg_l", "leg_r", "hand_l", "hand_r"]) then {_threshold = _threshold * 1.7};
+
 _damage = _damage * (1 / _threshold);
 
 // This is a new hit, reset variables.
@@ -63,7 +65,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
                     (_unit getHitPointDamage "HitLeftLeg") +
                     (_unit getHitPointDamage "HitRightLeg");
                 if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
-                    _unit setHitPointDamage ["HitBody", damage _unit];
+                //    _unit setHitPointDamage ["HitBody", damage _unit];
                 };
                 [(_this select 1)] call cba_fnc_removePerFrameHandler;
             };
