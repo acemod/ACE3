@@ -568,4 +568,12 @@ class CfgWeapons {
             displayName = "L21A1 RARDEN";
         };
     };
+
+    //attachments
+
+    class Itemcore;
+
+    class acc_flashlight: ItemCore {
+        displayName = "UTG Defender 126";
+    };
 };
