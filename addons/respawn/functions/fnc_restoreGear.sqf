@@ -1,26 +1,24 @@
 /*
-  Name: ACE_Respawn_fnc_removeBody
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Restores previously saved gear
-  
-  Parameters:
-    0: OBJECT - unit
-    1: ARRAY<STRING> - Array containing all gear
-  
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Restores previously saved gear.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: All Gear <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_Player, stored_allGear] call ace_respawn_fnc_restoreGear
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_allGear);
+params ["_unit", "_allGear"];
 
-private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular", "_backpa", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine"];
-
+private ["_flagRemoveDummyBag", "_backpa"];
 
 // remove all starting gear of a player
 removeAllWeapons _unit;
@@ -32,26 +30,13 @@ removeAllAssignedItems _unit;
 clearAllItemsFromBackpack _unit;
 removeBackpack _unit;
 
-_headgear = _allGear select 0;
-_goggles = _allGear select 1;
-_uniform = _allGear select 2;
-_uniformitems = _allGear select 3;
-_vest = _allGear select 4;
-_vestitems = _allGear select 5;
-_backpack = _allGear select 6;
-_backpackitems = _allGear select 7;
-_primaryweapon = _allGear select 8;
-_primaryweaponitems = _allGear select 9;
-_primaryweaponmagazine = _allGear select 10;
-_secondaryweapon = _allGear select 11;
-_secondaryweaponitems = _allGear select 12;
-_secondaryweaponmagazine = _allGear select 13;
-_handgunweapon = _allGear select 14;
-_handgunweaponitems = _allGear select 15;
-_handgunweaponmagazine = _allGear select 16;
-_assigneditems = _allGear select 17;
-_binocular = _allGear select 18;
-
+_allGear params [
+    "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest",
+    "_vestitems", "_backpack", "_backpackitems", "_primaryweapon",
+    "_primaryweaponitems", "_primaryweaponmagazine", "_secondaryweapon",
+    "_secondaryweaponitems", "_secondaryweaponmagazine", "_handgunweapon",
+    "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular"
+];
 
 // start restoring the items
 if (_headgear != "") then {
@@ -69,16 +54,15 @@ if (_goggles != "") then {
 
 {
     _unit addItemToUniform _x;
-}forEach _uniformitems;
+} count _uniformitems;
 
 {
     _unit addItemToVest _x;
-}forEach _vestitems;
+} count _vestitems;
 
-private "_flagRemoveDummyBag";
 _flagRemoveDummyBag = false;
 
-if(format["%1", _backpack] != "") then {
+if (format ["%1", _backpack] != "") then {
     _unit addBackpack _backpack;
 
     _backpa = unitBackpack _unit;
@@ -87,8 +71,7 @@ if(format["%1", _backpack] != "") then {
     clearItemCargoGlobal _backpa;
     {
         _unit addItemToBackpack _x;
-    } forEach _backpackitems;
-
+    } count _backpackitems;
 } else {
     // dummy backpack to ensure mags being loaded
     _unit addBackpack "B_Kitbag_Base";
@@ -96,12 +79,11 @@ if(format["%1", _backpack] != "") then {
     _flagRemoveDummyBag = true;
 };
 
-
 // primaryWeapon
 if ((_primaryweapon != "") && {_primaryweapon != "ACE_FakePrimaryWeapon"}) then {
     {
         _unit addMagazine _x;
-    } forEach _primaryweaponmagazine;
+    } count _primaryweaponmagazine;
 
     _unit addWeapon _primaryweapon;
 
@@ -109,15 +91,14 @@ if ((_primaryweapon != "") && {_primaryweapon != "ACE_FakePrimaryWeapon"}) then 
         if (_x != "") then {
             _unit addPrimaryWeaponItem _x;
         };
-    } forEach _primaryweaponitems;
+    } count _primaryweaponitems;
 };
-
 
 // secondaryWeapon
 if (_secondaryweapon != "") then {
     {
         _unit addMagazine _x;
-    } forEach _secondaryweaponmagazine;
+    } count _secondaryweaponmagazine;
 
     _unit addWeapon _secondaryweapon;
 
@@ -125,15 +106,14 @@ if (_secondaryweapon != "") then {
         if (_x != "") then {
             _unit addSecondaryWeaponItem _x;
         };
-    } forEach _secondaryweaponitems;
+    } count _secondaryweaponitems;
 };
-
 
 // handgun
 if (_handgunweapon != "") then {
     {
         _unit addMagazine _x;
-    } forEach _handgunweaponmagazine;
+    } count _handgunweaponmagazine;
 
     _unit addWeapon _handgunweapon;
 
@@ -141,24 +121,26 @@ if (_handgunweapon != "") then {
         if (_x != "") then {
             _unit addHandgunItem _x;
         };
-    } forEach _handgunweaponitems;
+    } count _handgunweaponitems;
 };
-
 
 // remove dummy bagpack
 if (_flagRemoveDummyBag) then {
     removeBackpack _unit;
 };
 
-
 _assignedItems = _assignedItems - [_binocular];
 
 // items
-{_unit linkItem _x} forEach _assignedItems;
+{
+    _unit linkItem _x
+} count _assignedItems;
 
 _unit addWeapon _binocular;
 
 if ("Laserdesignator" in assignedItems _unit) then {
     _unit selectWeapon "Laserdesignator";
-    if (currentMagazine _unit == "") then {_unit addMagazine "Laserbatteries";};
+    if (currentMagazine _unit == "") then {
+        _unit addMagazine "Laserbatteries";
+    };
 };

@@ -1,44 +1,35 @@
-// by commy2
+/*
+ * Author: commy2
+ * Handle player changed event. Updates visibility of Rallypoint markers.
+ *
+ * Arguments:
+ * 0: New Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_player] call ace_respawn_fnc_handlePlayerChanged
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private "_newUnit";
+#define SIDES [west, east, independent]
+#define RALLYPOINTS ["ACE_Rallypoint_West", "ACE_Rallypoint_East", "ACE_Rallypoint_Independent"]
+#define BASE_RALLYPOINTS ["ACE_Rallypoint_West_Base", "ACE_Rallypoint_East_Base", "ACE_Rallypoint_Independent_Base"]
 
-_newUnit = _this select 0;
+params ["_newUnit"];
 
-switch (side group _newUnit) do {
-    case (west): {
-        ((missionNamespace getVariable ["ACE_Rallypoint_West", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_West_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-    };
+_sideIndex = SIDES find (side group _newUnit);
 
-    case (east): {
-        ((missionNamespace getVariable ["ACE_Rallypoint_West", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_West_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-    };
-
-    case (independent): {
-        ((missionNamespace getVariable ["ACE_Rallypoint_West", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-        ((missionNamespace getVariable ["ACE_Rallypoint_West_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 1;
-    };
-
-    default {
-        ((missionNamespace getVariable ["ACE_Rallypoint_West", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_West_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_East_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-        ((missionNamespace getVariable ["ACE_Rallypoint_Independent_Base", objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal 0;
-    };
-};
+{
+    private "_alpha";
+    _alpha = if (_forEachIndex == _sideIndex) then {1} else {0};
+    ((missionNamespace getVariable [_x, objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal _alpha;
+} forEach RALLYPOINTS;
+{
+    private "_alpha";
+    _alpha = if (_forEachIndex == _sideIndex) then {1} else {0};
+    ((missionNamespace getVariable [_x, objNull]) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal _alpha;
+} forEach BASE_RALLYPOINTS;
