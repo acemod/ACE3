@@ -75,7 +75,7 @@
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
-            <English></English>
+            <English>This module allows you to customize the map screen.</English>
             <Polish>Moduł ten pozwala dostosować opcje widoku ekranu mapy.</Polish>
             <German>Dieses Modul erweitert die Kartenfunktionen.</German>
             <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
