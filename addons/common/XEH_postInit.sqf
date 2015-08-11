@@ -37,6 +37,21 @@
     };
 }] call FUNC(addEventhandler);
 
+
+["HeadbugFixUsed", {
+    PARAMS_2(_profileName,_animation);
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
+
+
+//~~~~~Get Map Data~~~~~
+//Find MGRS zone and 100km grid for current map
+[] call FUNC(getMGRSdata);
+//Prepare variables for FUNC(getMapGridFromPos)/FUNC(getMapPosFromGrid)
+[] call FUNC(getMapGridData);
+
+
+
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
@@ -103,7 +118,9 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+if (isServer) then {
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+};
 
 call FUNC(checkFiles);
 
@@ -333,6 +350,14 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
+
+// Register localizations for the Keybinding categories
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
 
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
