@@ -6,7 +6,7 @@
  * 0: Show firemode <BOOL>
  *
  * Return Value:
- *
+ * None
  *
  * Example:
  * [true] call ace_safemode_fnc_setSafeModeVisual
