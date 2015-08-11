@@ -501,8 +501,8 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target < 1000 && {alive _target});
-                    statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call DFUNC(push););
+                    condition = QUOTE(((getMass _target) <= 2600) && {alive _target} && {(vectorMagnitude (velocity _target)) < 3});
+                    statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
                 };
