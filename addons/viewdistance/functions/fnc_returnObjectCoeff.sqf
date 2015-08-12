@@ -2,7 +2,6 @@
  * Author: Winter
  * Returns the object view distance coefficient according to the given index
  *
- *
  * Arguments:
  * 0: Object View Distance setting Index <SCALAR>
  *

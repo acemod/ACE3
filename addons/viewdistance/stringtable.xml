@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="View Distance">
+    <Package name="ViewDistance">
         <Key ID="STR_ACE_ViewDistance_Module_DisplayName">
             <English>View Distance Limiter</English>
             <Polish>Ogranicznik zasięgu widzenia</Polish>

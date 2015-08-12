@@ -2,7 +2,6 @@
  * Author: Winter
  * Sets the player's current view distance according to allowed values.
  *
- *
  * Arguments:
  * 0: View Distance setting INDEX <SCALAR>
  * 1: Show Prompt <BOOL>
@@ -11,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_viewdistance_fnc_changeViewDistance;
+ * [] call ace_viewdistance_fnc_changeViewDistance
  *
  * Public: No
  */

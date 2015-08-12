@@ -1,7 +1,6 @@
 /*
  * Author: Winter
- * Initialises the view distance limiter module
- *
+ * Initializes the view distance limiter module.
  *
  * Arguments:
  * 0: logic <OBJECT>
@@ -10,7 +9,6 @@
  *
  * Return Value:
  * None
- *
  */
 
 #include "script_component.hpp"
