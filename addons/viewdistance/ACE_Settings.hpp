@@ -39,7 +39,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index. Actual coefficient is given by functions/fnc_returnObjectCoeff.sqf
-        values[] = {CSTRING(object_off),CSTRING(object_verylow),CSTRING(object_low),CSTRING(object_medium),CSTRING(object_high),CSTRING(object_veryhigh)};
+        values[] = {CSTRING(object_off),CSTRING(object_verylow),CSTRING(object_low),CSTRING(object_medium),CSTRING(object_high),CSTRING(object_veryhigh),CSTRING(object_fovBased)};
         displayName = CSTRING(object_DisplayName);
         description = CSTRING(object_Description);
     };

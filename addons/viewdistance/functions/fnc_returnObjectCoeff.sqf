@@ -27,6 +27,7 @@ _return = switch (_index) do {
     case 3: {0.60}; // Medium
     case 4: {0.80}; // High
     case 5: {1.00}; // Very High
+    case 6: {"fov"}; // FoV Based
     default {0.50}; // something broke if this returns
 };
 
