@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2014-12-21 -->
+<Project name="ACE">
+    <Package name="Cargo">
+        <Key ID="STR_ACE_Cargo_LoadMenu">
+            <English>Load Menu</English>
+            <Spanish>Menú de carga</Spanish>
+            <French>Menu de chargement</French>
+            <Polish>Menu ladunku</Polish>
+            <German>Lademenü</German>
+            <Czech>Náklad vozidla</Czech>
+            <Portuguese>Menu de Carregamento</Portuguese>
+            <Italian>Menù di Caricamento</Italian>
+            <Hungarian>Berakodás menü</Hungarian>
+            <Russian>???? ????????</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_LoadItem">
+            <English>Load Item</English>
+            <Spanish>Cargar objeto</Spanish>
+            <French>Charger Objet</French>
+            <Polish>Zaladuj obiekt</Polish>
+            <German>Gegenstand laden</German>
+            <Czech>Naložit Predmet</Czech>
+            <Portuguese>Carregar Item</Portuguese>
+            <Italian>Carica Oggetto</Italian>
+            <Hungarian>Tárgy berakodása</Hungarian>
+            <Russian>????????? ??????</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_LoadingItem">
+            <English>Loading ...</English>
+            <Spanish>Cargando ...</Spanish>
+            <French>Chargement...</French>
+            <German>Verladen ...</German>
+            <Polish>Ladowanie ...</Polish>
+            <Czech>Nakládání ...</Czech>
+            <Portuguese>Carregando ...</Portuguese>
+            <Italian>Caricamento ...</Italian>
+            <Hungarian>Berakodás ...</Hungarian>
+            <Russian>????????? ...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadingItem">
+            <English>Unloading ...</English>
+            <German>Lade ab ...</German>
+            <Spanish>Descargando ...</Spanish>
+            <French>Déchargement ...</French>
+            <Polish>Rozladunek ...</Polish>
+            <Czech>Vykládání ...</Czech>
+            <Portuguese>Descarregando ...</Portuguese>
+            <Italian>Scaricamento ...</Italian>
+            <Hungarian>Kirakodás ...</Hungarian>
+            <Russian>?????????? ...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_LoadedItem">
+            <English>%1 loaded into %2</English>
+            <Spanish>%1 cargado en %2</Spanish>
+            <French>%1 chargé dans %2</French>
+            <German>%1 in %2 verladen</German>
+            <Polish>%1 zaladowano do %2</Polish>
+            <Czech>%1 naloženo do %2</Czech>
+            <Portuguese>%1 carregado em %2</Portuguese>
+            <Italian>%1 caricato su %2</Italian>
+            <Hungarian>%1 berakodva ide: %2</Hungarian>
+            <Russian>%1 ???????? ? %2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadedItem">
+            <English>Unloaded %1 from %2</English>
+            <German>%1 von %2 abgeladen</German>
+            <Spanish>Descargado/a %1 de %2</Spanish>
+            <French>Déchargé %1 de %2</French>
+            <Polish>%1 rozladowano z %2</Polish>
+            <Czech>Nezatížený %1 do %2</Czech>
+            <Portuguese>%1 descarregado de %2</Portuguese>
+            <Italian>Hai scaricato %1 da %2</Italian>
+            <Hungarian>1% kirakodva ebbol: %2</Hungarian>
+            <Russian>%1 ????????? ?? %2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadItem">
+            <English>Unload Item</English>
+            <Spanish>Descargar objecto</Spanish>
+            <French>Décharger Objet</French>
+            <Polish>Wyladuj obiekt</Polish>
+            <German>Gegenstand abladen</German>
+            <Czech>Vyložit Predmet</Czech>
+            <Portuguese>Descarregar Item</Portuguese>
+            <Italian>Scarica Oggetto</Italian>
+            <Hungarian>Tárgy kirakodása</Hungarian>
+            <Russian>?????????? ???????</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_Unload">
+            <English>Unload</English>
+            <German>Abladen</German>
+            <Spanish>Descargar</Spanish>
+            <French>Décharger</French>
+            <Polish>Wyladuj</Polish>
+            <Czech>Vyložit</Czech>
+            <Portuguese>Descarregar</Portuguese>
+            <Italian>Scarica</Italian>
+            <Hungarian>Kirakodás</Hungarian>
+            <Russian>??????????</Russian>
+        </Key>
+    </Package>
+</Project>
