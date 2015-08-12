@@ -12,4 +12,4 @@ GVAR(GForces_CC) ppEffectCommit 0.4;
 GVAR(lastUpdateTime) = 0;
 GVAR(oldVel) = [0,0,0];
 
-[FUNC(pfhUpdateGForces), 0, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(pfhUpdateGForces), INTERVAL, []] call CBA_fnc_addPerFrameHandler;
