@@ -13,17 +13,11 @@
  #include "script_component.hpp"
 
 
- if (isNull ACE_player) exitWith {};
+if (isNull ACE_player) exitWith {};
 
- if !(alive ACE_player) exitWith {};
+if !(alive ACE_player) exitWith {};
 
 private ["_player", "_newVel", "_accel", "_currentGForce", "_average", "_sum", "_classCoef", "_suitCoef", "_gBlackOut", "_gRedOut", "_g", "_gBO", "_coef", "_strength"];
-
-GVAR(lastUpdateTime) = ACE_time;
-if !(vehicle ACE_player isKindOf "Air") exitWith {
-    GVAR(GForces) = [];
-    GVAR(GForces_Index) = 0;
-};
 
 _newVel = velocity (vehicle ACE_player);
 
@@ -66,7 +60,7 @@ if (!isNil {GVAR(GForces) select 0}) then {
 
 _classCoef = ACE_player getVariable "ACE_GForceCoef";
 if (isNil "_classCoef") then {
-    _classCoef = getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef")];
+    _classCoef = getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "ACE_GForceCoef");
 };
 _suitCoef = if ((uniform ACE_player) != "") then {
     getNumber (configFile >> "CfgWeapons" >> (uniform ACE_player) >> "ACE_GForceCoef")
