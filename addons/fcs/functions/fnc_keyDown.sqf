@@ -15,12 +15,12 @@
 
 #include "script_component.hpp"
 
+if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
+
 private ["_distance", "_weaponDirection"];
 params ["_vehicle", "_turret"];
 
 _distance = call FUNC(getRange);
-
-if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
 GVAR(Time) = ACE_time;
