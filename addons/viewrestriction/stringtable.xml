@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="View Restriction">
+    <Package name="ViewRestriction">
         <Key ID="STR_ACE_ViewRestriction_ModuleDisplayName">
             <English>View Restriction</English>
         </Key>

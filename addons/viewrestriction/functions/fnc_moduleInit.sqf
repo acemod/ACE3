@@ -3,18 +3,20 @@
  * Initializes the View Restriction module.
  *
  * Arguments:
- * Whatever the module provides.
+ * 0: logic <OBJECT>
+ * 1: Synchronised Units <ARRAY>
+ * 2: Module Activated <BOOL>
  *
  * Return Value:
  * None
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated) exitWith {};
 
 [_logic, QGVAR(mode), "mode"] call EFUNC(common,readSettingFromModule);
 
