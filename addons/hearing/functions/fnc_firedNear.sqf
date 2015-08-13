@@ -38,9 +38,9 @@ _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_p
 _distance = 1 max _distance;
 
 _silencer = call {
-    if (primaryWeapon _firer) exitWith {(primaryWeaponItems _firer) select 0};
-    if (secondaryWeapon _firer) exitWith {(secondaryWeaponItems _firer) select 0};
-    if (handgunWeapon _firer) exitWith {(handgunItems _firer) select 0};
+    if (_weapon == primaryWeapon _firer) exitWith {(primaryWeaponItems _firer) select 0};
+    if (_weapon == secondaryWeapon _firer) exitWith {(secondaryWeaponItems _firer) select 0};
+    if (_weapon == handgunWeapon _firer) exitWith {(handgunItems _firer) select 0};
     ""
 };
 
@@ -68,7 +68,7 @@ if (count _weaponMagazines == 0) then {
 
 _magazine = "";
 {
-    params ["_magazineType", "_ammoType"];
+    _x params ["_magazineType", "_ammoType"];
     if (_ammoType == _ammo) exitWith {
         _magazine = _magazineType;
     };
