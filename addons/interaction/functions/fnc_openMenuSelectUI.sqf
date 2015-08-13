@@ -40,8 +40,7 @@ _actions = [localize LSTRING(InteractionMenu), localize LSTRING(Interact)] call 
             _forEachIndex
         ] call FUNC(addSelectableItem);
     };
-    true
-} count _cargo;
+} forEach _cargo;
 
 // Open select menu
 [
