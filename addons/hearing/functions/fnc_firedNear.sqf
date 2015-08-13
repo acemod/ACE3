@@ -37,11 +37,11 @@ _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_p
 
 _distance = 1 max _distance;
 
-_silencer = call {
-    if (_weapon == primaryWeapon _firer) exitWith {(primaryWeaponItems _firer) select 0};
-    if (_weapon == secondaryWeapon _firer) exitWith {(secondaryWeaponItems _firer) select 0};
-    if (_weapon == handgunWeapon _firer) exitWith {(handgunItems _firer) select 0};
-    ""
+_silencer = switch (_weapon) do {
+    case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
+    case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
+    case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
+    default {""};
 };
 
 _audibleFireCoef = 1;
