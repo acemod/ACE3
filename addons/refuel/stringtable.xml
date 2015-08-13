@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Logistics">
+        <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
+            <English>Refuel Settings</English>
+            <German>Tankeinstellungen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speed_DisplayName">
+            <English>Flow Rate</English>
+            <German>Fließrate</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
+            <English>How fast should a vehicle be refueled?</English>
+            <German>Wie schnell soll ein Fahrzeug aufgetankt sein?</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_basic">
+            <English>Fast</English>
+            <German>Schnell</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_advanced">
+            <English>Realistic</English>
+            <German>Realistisch</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_civ_fuel_DisplayName">
+            <English>Civilian Volume</English>
+            <German>Ziviles Volumen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_civ_fuel_Description">
+            <English>How many liters does a civilian tank truck hold? -1 is infinite.</English>
+            <German>Wieviele Liter enthält ein ziviler Tankwagen? -1 bedeutet unendlich.</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_mil_fuel_DisplayName">
+            <English>Military Volume</English>
+            <German>Militärisches Volumen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_mil_fuel_Description">
+            <English>How many liters does a military tank truck hold? -1 is infinite.</English>
+            <German>Wieviele Liter enthält ein militärischer Tankwagen? -1 bedeutet unendlich.</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_stationary_fuel_DisplayName">
+            <English>Stationary Volume</English>
+            <German>Stationäres Volumen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_stationary_fuel_Description">
+            <English>How many liters does a stationary object e.g. a fuel station hold? -1 is infinite.</English>
+            <German>Wieviele Liter enthält ein stationäres Objekt z.B. eine Tankstelle? -1 bedeutet unendlich.</German>
+        </Key>
+         <Key ID="STR_ACE_Refuel_TakeNozzle">
+            <English>Take fuel nozzle</English>
+            <German>Zapfpistole nehmen</German>
+        </Key>
+         <Key ID="STR_ACE_Refuel_Connect">
+            <English>Connect fuel nozzle</English>
+            <German>Zapfpistole anschließen</German>
+        </Key>
+         <Key ID="STR_ACE_Refuel_Disconnect">
+            <English>Disconnect fuel nozzle</English>
+            <German>Zapfpistole entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Connect_Action">
+            <English>Connect</English>
+            <German>Anschließen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_CheckFuel">
+            <English>Check remaining fuel</English>
+            <German>Verbleibenden Kraftstoff überprüfen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
+            <English>There are %1 liters left.</English>
+            <German>Es sind noch %1 Liter übrig.</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_Empty">
+            <English>There is no fuel left.</English>
+            <German>Es ist kein Treibstoff übrig.</German>
+        </Key> 
+        <Key ID="STR_ACE_Refuel_Cancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Failed">
+            <English>Failed</English>
+            <German>Gescheitert</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TurnOff">
+            <English>Close nozzle</English>
+            <German>Hahn zudrehen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_">
+            <English></English>
+            <German></German>
+        </Key>
+    </Package>
+</Project>
