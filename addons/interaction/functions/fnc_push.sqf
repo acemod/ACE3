@@ -14,10 +14,9 @@
  *
  * Public: No
  */
- 
-#include "script_component.hpp"
 
-PARAMS_2(_boat,_velocity);
+#include "script_component.hpp"
+params ["_boat", "_velocity"];
 
 if !(local _boat) exitWith {
     [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);

@@ -17,9 +17,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_distance);
-
 private ["_position0", "_position1", "_intersections", "_count", "_house", "_door"];
+params ["_distance"];
 
 _position0 = positionCameraToWorld [0, 0, 0];
 _position1 = positionCameraToWorld [0, 0, _distance];

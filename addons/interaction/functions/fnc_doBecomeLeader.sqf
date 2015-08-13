@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_target,_player);
+params ["_target", "_player"];
 
 [QGVAR(selectLeader), (units group _player), [(group _player), _player]] call EFUNC(common,targetEvent);

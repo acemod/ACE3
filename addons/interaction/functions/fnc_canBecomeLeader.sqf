@@ -15,7 +15,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_target,_player);
+params ["_target", "_player"];
 
 (count (units group _player) > 1) && {leader group _player != _player}

@@ -16,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_distance);
-
 private ["_player", "_position0", "_position1"];
+params ["_vehicle", "_distance"];
 
 _player = ACE_player;
 

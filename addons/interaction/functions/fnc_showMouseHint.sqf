@@ -22,16 +22,12 @@
 
 private ["_scroll", "_display"];
 
-PARAMS_2(_leftClick,_rightClick);
-_scroll = "";
-if (count _this > 2) then {
-    _scroll = _this select 2;
-};
+params ["_leftClick", "_rightClick", ["_scroll", ""]];
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutRsc [QGVAR(InteractionHelper), "PLAIN",0.5, false];
 disableSerialization;
 _display = uiNamespace getVariable ["ACE_Helper_Display", objNull];
-if (isNull _display) exitWith{};
+if (isNull _display) exitWith {};
 
 (_display displayCtrl 1000) ctrlSetText _leftClick;
 (_display displayCtrl 1001) ctrlSetText _rightClick;

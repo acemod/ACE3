@@ -16,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_vehicle);
-
 private ["_cargo", "_actions"];
+params ["_unit", "_vehicle"];
 
 // Allow interaction with all cargo slots and all FFV slots
 _cargo = [_vehicle, ["cargo", "ffv"], true] call EFUNC(common,getVehicleCrew);
@@ -41,7 +40,8 @@ _actions = [localize LSTRING(InteractionMenu), localize LSTRING(Interact)] call 
             _forEachIndex
         ] call FUNC(addSelectableItem);
     };
-} forEach _cargo;
+    true
+} count _cargo;
 
 // Open select menu
 [

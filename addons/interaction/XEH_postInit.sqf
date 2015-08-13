@@ -19,7 +19,8 @@ private ["_team"];
 {
     _team = _x getVariable [QGVAR(assignedFireTeam), ""];
     if (_team != "") then {_x assignTeam _team};
-} forEach allUnits;
+        true
+} count allUnits;
 
 
 // Add keybinds

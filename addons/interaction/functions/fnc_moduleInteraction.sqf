@@ -17,10 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_logic", "_activated"];
-
-_logic = _this select 0;
-_activated = _this select 2;
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 

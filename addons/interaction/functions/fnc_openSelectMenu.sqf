@@ -26,24 +26,24 @@
 
 private["_action", "_count", "_customActions", "_i"];
 
+params ["_customActions" ,"_selectAccept", "_selectCancel"];
 if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
-    GVAR(SelectAccept) = _this select 1;
-    GVAR(SelectCancel) = _this select 2;
+    GVAR(SelectAccept) = _selectAccept;
+    GVAR(SelectCancel) = _selectCancel;
     buttonSetAction [8855, QUOTE( call GVAR(SelectCancel); )]; // Cancel
     buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // Accept
     lbSetCurSel [8866, 0];
-}else{
-    PARAMS_1(_customActions);
-
+} else {
     private ["_count", "_action"];
+    params ["_customActions"];
 
     _count = count _customActions;
     if (_count == 0) exitWith {};
     _customActions call FUNC(sortOptionsByPriority);
     for "_i" from 0 to _count -1 do {
         _action = _customActions select _i;
-        _action set [1, (_this select 1)];
+        _action set [1, _selectAccept];
     };
     GVAR(Buttons) = _customActions;
-    [(_this select 2), true, true, false, ACE_player] call FUNC(initialiseInteraction);
+    [_selectCancel, true, true, false, ACE_player] call FUNC(initialiseInteraction);
 };

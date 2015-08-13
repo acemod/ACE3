@@ -53,10 +53,11 @@ for "_index" from 0 to 9 do {
 
     if (_index < _count) then {
         _action = GVAR(Buttons) select _index;
-        _ctrlInteractionDialog ctrlSetText (_action select 0);
-        _ctrlInteractionDialog ctrlEnable (call (_action select 2));
+        _action params ["_text", "", "_condition", "", "", "_icon"];
+        _ctrlInteractionDialog ctrlSetText _text;
+        _ctrlInteractionDialog ctrlEnable (call _condition);
 
-        _ctrlInteractionDialogIcon ctrlSetText (_action select 5);
+        _ctrlInteractionDialogIcon ctrlSetText _icon;
     } else {
         _ctrlInteractionDialog ctrlSetText "";
         _ctrlInteractionDialog ctrlEnable false;

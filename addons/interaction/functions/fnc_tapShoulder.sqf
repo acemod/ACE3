@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_tapper,_target,_shoulderNum);
+params ["_tapper", "_target", "_shoulderNum"];
 
 if (_target != ACE_player) exitWith {
     addCamShake [4, 0.5, 5];

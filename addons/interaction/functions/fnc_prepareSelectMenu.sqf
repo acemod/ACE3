@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_header,_buttonText);
+params ["_header", "_buttonText"];
 
 closeDialog 0;
 

@@ -11,16 +11,15 @@
  * Children actions <ARRAY>
  *
  * Example:
- * array = [target, player, [params]] call ace_interaction_fnc_addPassengerAction
+ * [target, player, [params]] call ace_interaction_fnc_addPassengerAction
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
-EXPLODE_1_PVT(_parameters,_unit);
-
 private ["_varName", "_actionTrees", "_actions"];
+params ["_vehicle", "_player", "_parameters"];
+_parameters params ["_unit"];
 
 _varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
 _actionTrees = missionNamespace getVariable [_varName, []];
@@ -29,8 +28,9 @@ _actions = [];
 // Mount unit MainActions menu
 
 {
-	EXPLODE_2_PVT(_x,_actionData,_children);
-	_actions pushBack [_actionData, _children, _unit];
-} forEach ((_actionTrees select 0) select 1);
+    _x params ["_actionData", "_children"];
+    _actions pushBack [_actionData, _children, _unit];
+    true
+} count ((_actionTrees select 0) select 1);
 
 _actions
