@@ -27,7 +27,7 @@ if (isNull _target) then {
 };
 
 if (isNull _vehicle) then {
-    _objects = nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship_F"], 10];
+    _objects = nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship"], 10];
     if ((count _objects) > 0) then {_vehicle = _objects select 0;};
 };
 

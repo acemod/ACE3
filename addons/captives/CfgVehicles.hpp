@@ -190,8 +190,8 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class requireSurrender {
-                displayName = CSTRING(ModuleSettings_allowSurrender_name);
-                description = CSTRING(ModuleSettings_allowSurrender_description);
+                displayName = CSTRING(ModuleSettings_requireSurrender_name);
+                description = CSTRING(ModuleSettings_requireSurrender_description);
                 typeName = "NUMBER";
                 class values {
                     class disable {
