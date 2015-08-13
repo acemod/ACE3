@@ -32,7 +32,7 @@ disableSerialization;
 private ["_fnc_correctIt"];
 
 _fnc_correctIt = {
-    PARAMS_2(_pos,_dir);
+    params ["_pos", "_dir"];
     if (_dir >= 270 || {_dir <= 90}) then {
         _pos set [1, (_pos select 1) + __OFFSET_Y]
     };
@@ -51,16 +51,17 @@ _fnc_correctIt = {
 HUNTIR_CAM_ROSE_LAYER_ID cutRsc ["ace_huntir_cam_rose", "PLAIN"];
 
 [{
-    EXPLODE_1_PVT(_this select 0,_fnc_correctIt);
-    
+    params ["_args", "_idPFH"];
+    _args params ["_fnc_correctIt"];
+
     if (GVAR(stop)) exitWith {
         HUNTIR_CAM_ROSE_LAYER_ID cutText ["", "PLAIN"];
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     private ["_dir", "_x1", "_y1", "_pos"];
     _dir = getDir GVAR(cam); // direction player;
-    
+
     _x1 = __CENTER_X - (__RADIUS * sin(_dir));
     _y1 = __CENTER_Y - (__RADIUS * cos(_dir));
     _pos = [[_x1, _y1], _dir] call _fnc_correctIt;
@@ -84,5 +85,5 @@ HUNTIR_CAM_ROSE_LAYER_ID cutRsc ["ace_huntir_cam_rose", "PLAIN"];
     _pos = [[_x1, _y1], _dir] call _fnc_correctIt;
     __CHAR_E ctrlSetPosition [_pos select 0, _pos select 1, __WIDTH, __HEIGHT];
     __CHAR_E ctrlCommit 0;
-    
+
 }, 0.01, [_fnc_correctIt]] call CBA_fnc_addPerFrameHandler;

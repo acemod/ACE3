@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_huntIR);
+parama ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;
 GVAR(pos) = getPosVisual GVAR(huntIR);
@@ -73,7 +73,8 @@ GVAR(no_cams) sort true;
         if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {_x getHitPointDamage "HitCamera" < 0.25}) then {
             GVAR(no_cams) pushBack _x;
         };
-    } forEach GVAR(nearHuntIRs);
+        true
+    } count GVAR(nearHuntIRs);
     {
         if (((getPosVisual _x) select 2) <= 20 || {!(_x in GVAR(nearHuntIRs))} || {_x getHitPointDamage "HitCamera" >= 0.25}) then {
             GVAR(no_cams) deleteAt _forEachIndex;
@@ -82,19 +83,19 @@ GVAR(no_cams) sort true;
             };
         };
     } forEach GVAR(no_cams);
-    
+
     GVAR(cur_cam) = 0 max GVAR(cur_cam) min ((count GVAR(no_cams)) - 1);
     if (count GVAR(no_cams) > 0) then {
         GVAR(huntIR) = GVAR(no_cams) select GVAR(cur_cam);
     };
-    
+
     GVAR(pos) = getPosVisual GVAR(huntIR);
-    
+
     if ((!dialog) || (count GVAR(no_cams) == 0) || ((GVAR(pos) select 2) <= 20)) exitWith {
         [_this select 1] call cba_fnc_removePerFrameHandler;
-        
+
         GVAR(stop) = true;
-        
+
         GVAR(pphandle) ppEffectEnable true;
         ppEffectDestroy GVAR(pphandle);
 
@@ -108,7 +109,7 @@ GVAR(no_cams) sort true;
         deleteVehicle GVAR(logic);
         if (player != ACE_player) then {
             player remoteControl ACE_player;
-        }; 
+        };
     };
 
     switch (GVAR(ZOOM)) do {
@@ -131,7 +132,7 @@ GVAR(no_cams) sort true;
     };
 
     private ["_cam_coord_y", "_cam_coord_x", "_cam_time", "_cam_pos"];
-    
+
     GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
     GVAR(logic) setDir GVAR(ROTATE);
     GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
