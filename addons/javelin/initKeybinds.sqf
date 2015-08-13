@@ -7,7 +7,7 @@
     GVAR(isLockKeyDown) = true;
 
     // Statement
-    [ACE_player] call FUNC(lockKeyDown);
+    TRACE_1("enter", ACE_player);
     // Return false so it doesn't block the rest weapon action
     false
 },
@@ -16,10 +16,10 @@
     GVAR(isLockKeyDown) = false;
 
     // Statement
-    [ACE_player] call FUNC(lockKeyUp);
+    TRACE_1("enter", ACE_player);
     false
 },
-[15, [false, false, false]], false] call cba_fnc_addKeybind;  //Tab Key
+[15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
 
 ["ACE3 Weapons", QGVAR(cycleFireMode), localize LSTRING(CycleFireMode),
 { false },
@@ -27,4 +27,4 @@
     [ACE_player] call FUNC(cycleFireMode);
     false
 },
-[15, [false, true, false]], false] call cba_fnc_addKeybind;  //Ctrl+Tab Key
+[15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key

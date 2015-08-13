@@ -1,4 +1,18 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: Jaynus
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_javelin_fnc_onOpticLoad
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
@@ -22,16 +36,14 @@ if(GVAR(pfehID) != -1) then {
     [] call FUNC(onOpticUnload); // Unload optic if it was already loaded
 };
 
-uiNameSpace setVariable [QGVAR(arguments), 
-    [
-        ACE_diagTime,         // Last runtime
-        objNull,   // currentTargetObject
-        0,         // Run Time
-        0,          // Lock Time
-        0,           // Sound timer
-        (random __LOCKONTIMERANDOM), // random lock ACE_time addition
-        -1
-    ]
-];
+QGVAR(arguments) = [
+                        ACE_diagTime,         // Last runtime
+                        objNull,   // currentTargetObject
+                        0,         // Run Time
+                        0,          // Lock Time
+                        0,           // Sound timer
+                        (random __LOCKONTIMERANDOM), // random lock ACE_time addition
+                        -1
+                    ];
 
 GVAR(pfehID) = [FUNC(onOpticDraw), 0, []] call CBA_fnc_addPerFrameHandler;
