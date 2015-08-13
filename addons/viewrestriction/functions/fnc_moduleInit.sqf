@@ -26,7 +26,7 @@ if (GVAR(mode) == 3) then {
     [_logic, QGVAR(modeSelectiveLand), "modeSelectiveLand"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(modeSelectiveAir), "modeSelectiveAir"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(modeSelectiveSea), "modeSelectiveSea"] call EFUNC(common,readSettingFromModule);
-    // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
+    // Disabled - Reference comment in FUNC(canChangeCamera)
     //[_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule);
 
     diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1 (Foot: %2, Land: %3, Air: %4, Sea: %5, UAV: %6)", GVAR(mode), GVAR(modeSelectiveFoot), GVAR(modeSelectiveLand), GVAR(modeSelectiveAir), GVAR(modeSelectiveSea), /*GVAR(modeSelectiveUAV)*/ "N/A"];

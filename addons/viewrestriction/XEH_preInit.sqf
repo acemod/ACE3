@@ -2,6 +2,9 @@
 
 ADDON = false;
 
+PREP(canChangeCamera);
+PREP(changeCamera);
 PREP(moduleInit);
+PREP(selectiveChangeCamera);
 
 ADDON = true;

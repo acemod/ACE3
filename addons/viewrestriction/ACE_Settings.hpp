@@ -37,7 +37,7 @@ class ACE_Settings {
         description = CSTRING(ModeSelectiveSeaDesc);
         values[] = {MACRO_VALUES};
     };
-    // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
+    // Disabled - Reference comment in FUNC(canChangeCamera)
     /*class GVAR(modeSelectiveUAV) {
         value = 0;
         typeName = "SCALAR";

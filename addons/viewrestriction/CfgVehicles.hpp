@@ -68,7 +68,7 @@ class CfgVehicles {
                     MACRO_OPTIONS
                 };
             };
-            // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
+            // Disabled - Reference comment in FUNC(canChangeCamera)
             /*class modeSelectiveUAV {
                 displayName = CSTRING(ModeSelectiveUAV);
                 description = CSTRING(ModeSelectiveUAVDesc);

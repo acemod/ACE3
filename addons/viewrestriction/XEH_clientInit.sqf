@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-// Exit on Server and Headless
+// Exit on Headless Client
 if !(hasInterface) exitWith {};
 
 // Exit if third person view is not available
@@ -10,95 +10,25 @@ if !(difficultyEnabled "3rdPersonView") exitWith {};
     // Exit if module is disabled
     if (GVAR(mode) == 0) exitWith {};
 
-    // Start proper PFH based on mode (separated from one PFH with many conditions to improve performance)
+    // Exit if all Selective Modes are Disabled
+    if (GVAR(mode) == 3 &&
+        {GVAR(modeSelectiveFoot) == 0} &&
+        {GVAR(modeSelectiveVehicle) == 0} &&
+        {GVAR(modeSelectiveAir) == 0} &&
+        {GVAR(modeSelectiveUAV) == 0}) exitWith {ERROR("Selective mode enabled, but all sub-modes are disabled")};
 
-    // Conditions with cameraView results in visible transitions, ongoing use of switchCamera does not
-    // UAVs break without cameraView condition (control returns to player object, camera is left on UAV object)
-    // UAVs are therefore left out of this module until fixed or suitable work-around is found
-    #define IS_UAV (cameraOn isKindOf "UAV" || {cameraOn isKindOf "UAV_01_base_F"})
+    // Make sure to load-in in correct mode
+    call FUNC(changeCamera);
 
-    // FirstPerson
-    if (GVAR(mode) == 1) exitWith {
-        [{
-            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
+    // Add Event Handler for changing camera
+    ["cameraViewChanged", {
+        call FUNC(changeCamera);
+    }] call EFUNC(common,addEventHandler);
 
-            if (IS_UAV) exitWith {
-                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
-            };
-            cameraOn switchCamera "Internal";
-        }, 0, []] call cba_fnc_addPerFrameHandler;
-    };
-
-    // ThirdPerson
-    if (GVAR(mode) == 2) exitWith {
-        [{
-            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
-
-            if (IS_UAV) exitWith {
-                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
-            };
-            cameraOn switchCamera "External";
-        }, 0, []] call cba_fnc_addPerFrameHandler;
-    };
-
-    // Selective
-    if (GVAR(mode) == 3) exitWith {
-        // Exit if all Selective Modes are Disabled
-        if (GVAR(modeSelectiveFoot) == 0 && {GVAR(modeSelectiveVehicle) == 0} && {GVAR(modeSelectiveAir) == 0} && {GVAR(modeSelectiveUAV) == 0}) exitWith {diag_log "selective disabled due to submodes"};
-
-        [{
-            if (isNull ACE_player || {!alive ACE_player}) exitWith {};
-
-            // Foot
-            if (cameraOn isKindOf "CAManBase") exitWith {
-                if (GVAR(modeSelectiveFoot) == 1) exitWith {
-                    cameraOn switchCamera "Internal";
-                };
-                if (GVAR(modeSelectiveFoot) == 2) exitWith {
-                    cameraOn switchCamera "External";
-                };
-            };
-
-            // Land Vehicles
-            if (cameraOn isKindOf "LandVehicle") exitWith {
-                if (GVAR(modeSelectiveLand) == 1) exitWith {
-                    cameraOn switchCamera "Internal";
-                };
-                if (GVAR(modeSelectiveLand) == 2) exitWith {
-                    cameraOn switchCamera "External";
-                };
-            };
-
-            // UAVs (must be evaluated before Air Vehicles due to inheritance tree)
-            if (IS_UAV) exitWith {
-                // Reference comment in XEH_postInitClient.sqf, beginning of "SettingsInitialized" Event Handler
-                /*if (GVAR(modeSelectiveUAV) == 1) exitWith {
-                    cameraOn switchCamera "Internal";
-                };
-                if (GVAR(modeSelectiveUAV) == 2) exitWith {
-                    cameraOn switchCamera "External";
-                };*/
-            };
-
-            // Air Vehicles (must be evaluated after UAVs due to inheritance tree)
-            if (cameraOn isKindOf "Air") exitWith {
-                if (GVAR(modeSelectiveAir) == 1) exitWith {
-                    cameraOn switchCamera "Internal";
-                };
-                if (GVAR(modeSelectiveAir) == 2) exitWith {
-                    cameraOn switchCamera "External";
-                };
-            };
-
-            // Sea Vehicles
-            if (cameraOn isKindOf "Ship") exitWith {
-                if (GVAR(modeSelectiveSea) == 1) exitWith {
-                    cameraOn switchCamera "Internal";
-                };
-                if (GVAR(modeSelectiveSea) == 2) exitWith {
-                    cameraOn switchCamera "External";
-                };
-            };
-        }, 0, []] call cba_fnc_addPerFrameHandler;
+    // Add Event Hander for exiting and entering a vehicle when on Selective mode
+    if (GVAR(mode) == 3) then {
+        ["playerVehicleChanged", {
+            call FUNC(changeCamera);
+        }] call EFUNC(common,addEventHandler);
     };
 }] call EFUNC(common,addEventHandler);
