@@ -7,7 +7,7 @@
  * 0: HuntIR <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */

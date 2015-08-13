@@ -4,10 +4,10 @@
  * HuntIR monitor compass
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
