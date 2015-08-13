@@ -24,7 +24,7 @@
 //Only run if deafness or ear ringing is enabled:
 if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-PARAMS_7(_object,_firer,_distance,_weapon,_muzzle,_mode,_ammo);
+params ["_object", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo"];
 
 //Only run if firedNear object is player or player's vehicle:
 if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
@@ -37,11 +37,11 @@ _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_p
 
 _distance = 1 max _distance;
 
-_silencer = switch (_weapon) do {
-    case (primaryWeapon _firer) : {(primaryWeaponItems _firer) select 0};
-    case (secondaryWeapon _firer) : {(secondaryWeaponItems _firer) select 0};
-    case (handgunWeapon _firer) : {(handgunItems _firer) select 0};
-    default {""};
+_silencer = call {
+    if (primaryWeapon _firer) exitWith {(primaryWeaponItems _firer) select 0};
+    if (secondaryWeapon _firer) exitWith {(secondaryWeaponItems _firer) select 0};
+    if (handgunWeapon _firer) exitWith {(handgunItems _firer) select 0};
+    ""
 };
 
 _audibleFireCoef = 1;
@@ -58,7 +58,7 @@ if (count _weaponMagazines == 0) then {
             _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
             _weaponMagazines append _muzzleMagazines;
         };
-    } forEach _muzzles;
+    } count _muzzles;
     {
         _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
         _weaponMagazines set [_forEachIndex, [_x, _ammoType]];
@@ -68,11 +68,11 @@ if (count _weaponMagazines == 0) then {
 
 _magazine = "";
 {
-    EXPLODE_2_PVT(_x,_magazineType,_ammoType);
+    params ["_magazineType", "_ammoType"];
     if (_ammoType == _ammo) exitWith {
         _magazine = _magazineType;
     };
-} forEach _weaponMagazines;
+} count _weaponMagazines;
 
 if (_magazine == "") exitWith {};
 
@@ -80,14 +80,12 @@ _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed")
 _ammoConfig = (configFile >> "CfgAmmo" >> _ammo);
 _parentClasses = [_ammoConfig, true] call BIS_fnc_returnParents;
 _caliber = getNumber(_ammoConfig >> "ACE_caliber");
-_caliber = switch (true) do {
-    case ("ShellBase" in _parentClasses): { 80 };
-    case ("RocketBase" in _parentClasses): { 200 };
-    case ("MissileBase" in _parentClasses): { 600 };
-    case ("SubmunitionBase" in _parentClasses): { 80 };
-    default {
-        if (_caliber <= 0) then { 6.5 } else { _caliber };
-    };
+_caliber = call {
+    if ("ShellBase" in _parentClasses) exitWith { 80 };
+    if ("RocketBase" in _parentClasses) exitWith { 200 };
+    if ("MissileBase" in _parentClasses) exitWith { 600 };
+    if ("SubmunitionBase" in _parentClasses) exitWith { 80 };
+    if (_caliber <= 0) then { 6.5 } else { _caliber };
 };
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
