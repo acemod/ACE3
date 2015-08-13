@@ -6,7 +6,7 @@
  * 0: The grenade <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [theGrenade] call ace_grenades_fnc_flashbangExplosionEH
@@ -16,8 +16,7 @@
 #include "script_component.hpp"
 
 private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount", "_dirToUnitVector", "_eyeDir", "_eyePos"];
-
-PARAMS_1(_grenade);
+params ["_grenade"];
 
 _affected = _grenade nearEntities ["CAManBase", 20];
 
@@ -34,7 +33,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             _x setSkill ((skill _x) / 50);
 
             [{
-                PARAMS_1(_unit);
+                params ["_unit"];
                 //Make sure we don't enable AI for unconscious units
                 if (!(_unit getVariable ["ace_isunconscious", false])) then {
                     [_unit, false] call EFUNC(common,disableAI);
@@ -54,7 +53,8 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 if (!lineIntersects [(_posGrenade vectorAdd _x), _eyePos, _grenade, ACE_player]) then {
                     _losCount = _losCount + 1;
                 };
-            } forEach [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
+                true
+            } count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
             TRACE_1("Line of sight count (out of 4)",_losCount);
             if (_losCount <= 1) then {
                 _strength = _strength / 10;
@@ -93,7 +93,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             //Delete the light after 0.1 seconds
             [{
-                PARAMS_1(_light);
+                params ["light"];
                 deleteVehicle _light;
             }, [_light], 0.1] call EFUNC(common,waitAndExecute);
 
@@ -105,7 +105,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
                 //PARTIALRECOVERY - start decreasing effect over ACE_time
                 [{
-                    PARAMS_1(_strength);
+                    params ["_strength"];
                     GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                     GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
                 }, [_strength], (7 * _strength), 0] call EFUNC(common,waitAndExecute);
@@ -117,4 +117,5 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             };
         };
     };
-} forEach _affected;
+    true
+} count _affected;
