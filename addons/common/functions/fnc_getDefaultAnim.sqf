@@ -1,9 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ * Get the Defualt animation for the unit
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return Value:
+ * animation <STRING>
+ *
+ * Example:
+ * [bob] call ace_common_fnc_getDefaultAnim;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_anim", "_stance"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 _anim = toLower (animationState _unit);
 
 // stance is broken for some animations.

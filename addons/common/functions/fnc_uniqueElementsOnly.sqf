@@ -1,17 +1,22 @@
-/**
- * fn_uniqueElementsOnly.sqf
- * @Descr: Make a copy of an array with only the unique elements.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [array ARRAY]
- * @Return: ARRAY Copy of original array
- * @PublicAPI: true
+ * Make a copy of an array with only the unique elements.
+ *
+ * Arguments:
+ * 0: array <ARRAY>
+ *
+ * Return Value:
+ * Copy of original array <ARRAY>
+ *
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_result", "_value"];
-PARAMS_1(_array);
+
+params ["_array"];
 
 _result = [];
 {
@@ -19,6 +24,7 @@ _result = [];
     if ({_x isEqualTo _value} count _result == 0) then {
         _result pushback _x;
     };
-} forEach _array;
+    true
+} count _array;
 
 _result;

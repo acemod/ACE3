@@ -3,15 +3,17 @@
  *
  * What kind of Cfg is the item. Works for CfgMagaines, CfgWeapons and CfgGlasses
  *
- * Argument:
- * 0: A item's classname. (String)
+ * Arguments:
+ * 0: A item's classname. (STRING)
  *
- * Return value:
- * CfgWhatever (String)
+ * Return Value:
+ * What kind of the input is (STRING)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_item);
+params ["_item"];
 
 if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
 

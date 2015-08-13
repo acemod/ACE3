@@ -3,19 +3,21 @@
  *
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.
  *
- * Argument:
- * 0: How accurate will the measurement be? In meters. (Number)
- * 1: Maximal distance to measure. (Number)
+ * Arguments:
+ * 0: How accurate will the measurement be? In meters. <NUMBER>
+ * 1: Maximal distance to measure. <NUMBER>
  * 2: Minimal distance to measure. (optional, Number)
  *
- * Return value:
- * Measured distance in meters. Can return maximal or minimal distance (Number)
+ * Return Value:
+ * Measured distance in meters. Can return maximal or minimal distance <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_position", "_laser", "_line", "_distance", "_iteration"];
 
-PARAMS_3(_interval,_maxDistance,_minDistance);
+params ["_interval", "_maxDistance", "_minDistance"];
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];

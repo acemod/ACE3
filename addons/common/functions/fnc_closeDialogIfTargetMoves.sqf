@@ -1,21 +1,22 @@
 /*
  * Author: commy2
- *
  * Closes the current dialog if the target moves, changes vehicle etc.
  *
  * Arguments:
- * 0: Target unit
- * 1: Ignore the unit being dead? (Optional, default: No)
+ * 0: Target unit <OBJECT>
+ * 1: Ignore the unit being dead (default: false) <BOOL>
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 _this spawn {
-    PARAMS_2(_target,_ignoreDead);
-    private["_inVehicle", "_position", "_vehiclePlayer", "_vehicleTarget"];
-    
+    params ["_target", "_ignoreDead"];
+    private["_inVehicle", "_position", "_vehiclePlayer", "_vehicleTarget","_fnc_check"];
+
     if (isNil "_ignoreDead") then {_ignoreDead = false};
 
     _vehicleTarget = vehicle _target;

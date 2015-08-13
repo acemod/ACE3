@@ -6,16 +6,18 @@
  * They behave like having an armor value of 0.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * The light names and selections (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_config", "_hitpoints", "_selections", "_i"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 

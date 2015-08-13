@@ -2,7 +2,7 @@
  * Author: PabstMirror
  * Gets position from grid cords
  *
- * Argument:
+ * Arguments:
  * 0: Grid Cords <STRING>
  * 1: Get Center or bottom right <BOOL><OPTIONAL>
  *
@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_inputString);
-DEFAULT_PARAM(1,_getCenterOfGrid,true);
+params ["_inputString", ["_getCenterOfGrid", true]];
 
 private["_countInput", "_countInputHalf", "_xPart", "_xPos", "_yPart", "_yPos"];
 

@@ -1,9 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ *
+ * Arguments:
+ * 0: Crate <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ */
 #include "script_component.hpp"
 
 private ["_weapons", "_items"];
 
-PARAMS_1(_crate);
+params ["_crate"];
 
 // get all weapons inside the crate
 _weapons = weaponCargo _crate;

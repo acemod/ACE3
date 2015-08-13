@@ -3,18 +3,20 @@
  *
  * Returns array of crew member objects.
  *
- * Argument:
- * 0: Vehicle (Object)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
  * 1: Slot types. Can contain "driver", "commander", "gunner", "turret", "cargo" and "ffv". Case sensitive (Array)
  *
- * Return value:
+ * Return Value:
  * Crew (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_crew"];
 
-PARAMS_2(_vehicle,_types);
+params ["_vehicle", "_types"];
 
 _crew = [];
 
@@ -31,6 +33,7 @@ _crew = [];
       _crew pushBack (_x select 0);
     };
   };
-} forEach fullCrew _vehicle;
+  true
+} count fullCrew _vehicle;
 
 _crew

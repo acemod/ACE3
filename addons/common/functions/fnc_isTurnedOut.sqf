@@ -3,17 +3,20 @@
  *
  * Check if the unit is in a vehicle and turned out.
  *
- * Argument:
- * 0: Unit, not the vehicle (Object)
+ * Arguments:
+ * 0: Unit, not the vehicle <OBJECT>
  *
- * Return value:
- * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (Bool)
+ * Return Value:
+ * Is the unit turned out or not? Will return false if there is no option to turn out in the first place. (BOOLEAN)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_vehicle", "_config", "_animation", "_action", "_inAction", "_turretIndex"];
 
-PARAMS_1(_unit);
+params ["_unit"];
+
 _vehicle = vehicle _unit;
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _animation = animationState _unit;

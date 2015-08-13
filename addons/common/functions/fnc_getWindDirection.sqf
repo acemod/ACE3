@@ -3,11 +3,13 @@
  *
  * Get the compass direction the wind is blowing from.
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
+ * Return Value:
  * Wind direction. (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -3,18 +3,19 @@
  * Calculate light intensity object 1 recieves from object 2
  *
  * Arguments:
- * 0: Object that recieves light (Object)
- * 1: Object that emits light (Object)
+ * 0: Object that recieves light <OBJECT>
+ * 1: Object that emits light <OBJECT>
  *
  * Return Value:
  * Brightest light level
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 private ["_unitPos","_lightLevel"];
 
-PARAMS_2(_unit,_lightSource);
+params ["_unit", "_lightSource"];
 
 _unitPos = _unit modelToWorld (_unit selectionPosition "spine3");
 _lightLevel = 0;

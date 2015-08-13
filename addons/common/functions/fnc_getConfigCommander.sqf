@@ -3,17 +3,19 @@
  *
  * Get the commander config of a vehicles turret.
  *
- * Argument:
- * 0: vehicle (Object)
+ * Arguments:
+ * 0: vehicle <OBJECT>
  *
- * Return value:
- * Commander config (Config)
+ * Return Value:
+ * Commander config (CONFIG)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_config", "_turret"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [_vehicle] call FUNC(getTurretCommander);

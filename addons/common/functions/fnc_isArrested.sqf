@@ -1,13 +1,18 @@
-/**
- * fn_isArrested.sqf
- * @Descr: Check if unit is in arrested state
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL Returns true if unit or object is in arrest state
- * @PublicAPI: true
+ * Check if unit is in arrested state
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * if unit or object is in arrest state (BOOLEAN)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-((_this select 0) getvariable [QGVAR(StateArrested),false])
+params ["_unit"];
+
+(_unit getvariable [QGVAR(StateArrested),false])

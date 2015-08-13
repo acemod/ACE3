@@ -3,11 +3,13 @@
  *
  * Get a string from the mission.sqm file. Mission has to be saved in the Editor. The string cannot contain the ; character.
  *
- * Argument:
+ * Arguments:
  * 0: Path of the entry in the mission.sqm (Array)
  *
- * Return value:
+ * Return Value:
  * Value of the entry. Note: If the entry does not exist, it might return an empty string or an entry with the same name of another class! (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

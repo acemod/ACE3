@@ -1,18 +1,20 @@
-/**
- * fn_setArrestState.sqf
- * @Descr: Set a unit in arrest state
- * @Author: Glowbal
+/*
+ * Author: esteldunedain
  *
- * @Arguments: [unitToBeArrested OBJECT, setArrested BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Set a unit in arrest state
+ *
+ * Arguments:
+ * 0: Unit to be Arrested <OBJECT>
+ * 1: set Arrested <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_setArrest"];
-_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_Param;
-_setArrest = [_this, 1, false, [false]] call BIS_fnc_Param;
+params[["_unit",ObjNull,[ObjNull]],["_setArrest",false,[false]]];
 
 if (_setArrest) then {
     [_unit, QGVAR(StateArrested), true] call FUNC(setDefinedVariable);
@@ -22,8 +24,8 @@ if (_setArrest) then {
             [_unit,"UnaErcPoslechVelitele2",1] call FUNC(doAnimation);
         };
     };
-    if (IsPlayer _unit) then {
-        [["arrested", true],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+    if (isPlayer _unit) then {
+        [["arrested", true],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
     _unit disableAI "Move";
     _unit disableAI "ANIM";
@@ -37,8 +39,7 @@ if (_setArrest) then {
         _unit enableAI "Move";
         _unit enableAI "ANIM";
     };
-    if (IsPlayer _unit) then {
-        [["arrested", false],QUOTE(FUNC(setDisableUserInputStatus)),_unit,false] call EFUNC(common,execRemoteFnc);
+    if (isPlayer _unit) then {
+        [["arrested", false],QFUNC(setDisableUserInputStatus),_unit,false] call EFUNC(common,execRemoteFnc);
     };
 };
-

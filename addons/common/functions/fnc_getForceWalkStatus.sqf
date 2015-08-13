@@ -1,25 +1,27 @@
 /*
-Name: FUNC(getForceWalkStatus)
-
-Author: Pabst Mirror (from captivity by commy2)
-
-Description:
-  Returns reasons why the unit is forceWalk-ing, empty if not forced.
-
-Parameters:
-  0: OBJECT - Unit
-
-Returns:
-  ARRAY(of strings) - Reason why the unit is force walking
-
-Example:
-  [ACE_Player] call FUNC(getForceWalkStatus)
-*/
+ * Name: FUNC(getForceWalkStatus)
+ *
+ * Author: Pabst Mirror (from captivity by commy2)
+ *
+ * Description:
+ * Returns reasons why the unit is forceWalk-ing, empty if not forced.
+ *
+ * Parameters:
+ * 0: OBJECT - Unit
+ *
+ * Return Value:
+ * ARRAY(of strings) - Reason why the unit is force walking
+ *
+ * Example:
+ * [ACE_Player] call FUNC(getForceWalkStatus)
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 

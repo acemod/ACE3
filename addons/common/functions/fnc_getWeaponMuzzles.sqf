@@ -3,17 +3,19 @@
  *
  * Get the muzzles of a weapon.
  *
- * Argument:
+ * Arguments:
  * 0: A weapon in cfgWeapons (String)
  *
- * Return value:
+ * Return Value:
  * All weapon muzzles (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_muzzles"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
 

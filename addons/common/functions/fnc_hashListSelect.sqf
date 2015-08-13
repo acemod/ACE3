@@ -1,9 +1,22 @@
-//fnc_hashListSelect.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 private ["_hash", "_keys", "_hashes", "_values"];
 
-PARAMS_2(_hashList,_index);
+params ["_hashList", "_index"];
+
 ERRORDATA(2);
 _hash = nil;
 try {

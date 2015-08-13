@@ -1,5 +1,6 @@
 /*
  * Author: ViperMaul
+ *
  * Unload a person from a vehicle, local
  *
  * Arguments:
@@ -10,13 +11,12 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 private ["_loaded", "_emptyPos","_validVehiclestate"];
-PARAMS_2(_unit,_vehicle);
+params ["_unit", "_vehicle"];
 _validVehiclestate = true;
 
 if (_vehicle isKindOf "Ship" ) then {
@@ -50,7 +50,7 @@ TRACE_1("Ejecting", alive _unit);
 _unit action ["Eject", vehicle _unit];
 [ {
     private "_anim";
-    PARAMS_2(_unit,_emptyPos);
+    params ["_unit", "_emptyPos"];
     _unit setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
     if (!([_unit] call FUNC(isAwake))) then {
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
@@ -58,8 +58,7 @@ _unit action ["Eject", vehicle _unit];
             _anim = [_unit] call EFUNC(common,getDeathAnim);
             [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
             [{
-                _unit = _this select 0;
-                _anim = _this select 1;
+                params ["_unit", "_anim"];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
                     [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
                 };

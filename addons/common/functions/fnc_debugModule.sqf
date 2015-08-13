@@ -1,16 +1,17 @@
-/**
- * fn_debugModule.sqf
- * @Descr: N/A
- * @Author: Glowbal
+ /*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
- */
- 
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
-PARAMS_1(_entity);
+params ["_entity"];
 
 GVAR(LOGDISPLAY_LEVEL) = call compile (_entity getvariable ["logDisplayLevel","4"]);
 GVAR(LOGLEVEL) = call compile (_entity getvariable ["logLevel","4"]);

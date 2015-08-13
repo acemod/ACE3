@@ -5,48 +5,37 @@
  * Arguments:
  * 0: The player. <OBJECT>
  * 1: The interaction target. objNull to ignore. <OBJECT>
- * 2: Exceptions. What general conditions are to skip? <ARRAY> (Optional)
+ * 2: Exceptions. What general conditions are to skip? (default: []) <ARRAY>
  *
  * Return Value:
- * Unit can interact?
+ * Can Unit Interact With Something <BOOL>
  *
  * Public: No
  */
 #include "script_component.hpp"
+scopeName "main";
+private ["_exceptions", "_owner", "_conditions", "_conditionNames", "_conditionFuncs", "_canInteract"];
 
-private ["_exceptions"];
-
-PARAMS_2(_unit,_target);
-
-_exceptions = if (count _this > 2) then {
-    _this select 2;
-} else {
-    [];
-};
+params ["_unit", "_target", ["_exceptions",[]]];
 
 _exceptions = [_exceptions, {toLower _this}] call FUNC(map);
 
 // exit if the target is not free to interact
-private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
 
-private ["_conditions", "_conditionNames", "_conditionFuncs"];
-
 _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
+_conditions params ["_conditionNames","_conditionFuncs"];
 
-_conditionNames = _conditions select 0;
-_conditionFuncs = _conditions select 1;
-
-private "_canInteract";
 _canInteract = true;
 
 {
     if (!(_x in _exceptions) && {!([_unit, _target] call (_conditionFuncs select _forEachIndex))}) exitWith {
         _canInteract = false;
+        breakTo "main";
     };
 } forEach _conditionNames;
 

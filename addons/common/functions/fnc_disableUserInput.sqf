@@ -5,8 +5,8 @@
  * Arguments:
  * 0: True to disable key inputs, false to re-enable them <BOOL>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
  *
  * Public: Yes
  */
@@ -15,7 +15,7 @@
 
 private ["_dlg"];
 
-PARAMS_1(_state);
+params ["_state"];
 
 if (_state) then {
     disableSerialization;
@@ -37,8 +37,8 @@ if (_state) then {
     _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
     _dlg displayAddEventHandler ["KeyDown", {
-        private ["_key", "_dlg", "_ctrl", "_config", "_acc", "_index"];
-        _key = _this select 1;
+        private ["_dlg", "_ctrl", "_config", "_acc", "_index"];
+        params ["_key"];
 
         if (_key == 1 && {alive player}) then {
             createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
@@ -46,7 +46,7 @@ if (_state) then {
             disableSerialization;
             _dlg = finddisplay 49;
             _dlg displayAddEventHandler ["KeyDown", {
-                _key = _this select 1;
+                params ["_key"];
                 !(_key == 1)
             }];
 
@@ -95,6 +95,7 @@ if (_state) then {
 
     _dlg displayAddEventHandler ["KeyUp", {true}];
 
+    //replace with CBA PFH
     ["ACE_DisableUserInput", "onEachFrame", {
         if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
             ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;

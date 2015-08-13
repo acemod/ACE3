@@ -5,22 +5,20 @@
  *
  * Arguments:
  * 0: Mode <NUMBER>
- *   0:  Warn once
- *   1:  Warn permanently
- *   2:  Kick
- * 1: Check all PBOs? <BOOL> (Optional - default: false)
- * 2: Whitelist <STRING> (Optinal - default: "[]")
+ *   0 = Warn once
+ *   1 = Warn permanently
+ *   2 = Kick
+ * 1: Check all PBOs? (default: false) <BOOL>
+ * 2: Whitelist (default: "[]") <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_mode", "_checkAll", "_whitelist"];
-
-_mode = _this select 0;
-_checkAll = if (count _this > 1) then {_this select 1} else {false};
-_whitelist = if (count _this > 2) then {_this select 2} else {"[]"};
+params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
 
 _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
@@ -29,18 +27,14 @@ ACE_Version_Whitelist = _whitelist;
 
 if (!isServer) then {
     [_mode, _checkAll, _whitelist] spawn {
-        private ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
-        PARAMS_3(_mode,_checkAll,_whitelist);
+        private ["_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
+        params ["_mode", "_checkAll", "_whitelist"];
 
         waitUntil {
             sleep 1;
             !isNil "ACE_Version_ClientErrors"
         };
-
-        _missingAddon = ACE_Version_ClientErrors select 0;
-        _missingAddonServer = ACE_Version_ClientErrors select 1;
-        _oldVersionClient = ACE_Version_ClientErrors select 2;
-        _oldVersionServer = ACE_Version_ClientErrors select 3;
+        ACE_Version_ClientErrors params ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
 
         // Display error message.
         if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {

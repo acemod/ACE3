@@ -3,11 +3,12 @@
  * Attempt to fix floating physx with disabled damage after setPosXXX commands.
  *
  * Arguments:
- * Physx object (Object)
+ * Physx object <OBJECT>
  *
  * Return Value:
  * Nothing
  *
+ * Public: No
  */
 #include "script_component.hpp"
 

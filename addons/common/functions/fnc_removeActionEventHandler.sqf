@@ -3,34 +3,32 @@
  *
  * Remove an addAction event from a unit.
  *
- * Argument:
- * 0: Unit the action is assigned to (Object)
+ * Arguments:
+ * 0: Unit the action is assigned to <OBJECT>
  * 1: Name of the action, e.g. "DefaultAction" (String)
- * 2: ID of the action (Number)
+ * 2: ID of the action <NUMBER>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs"];
 
-PARAMS_3(_unit,_action,_id);
+params ["_unit", "_action", "_id"];
 
 if (_id == -1) exitWith {};
 
 _name = format ["ACE_Action_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
+_actionsVar params ["_actionID", "_actions"];
 
-_actionID = _actionsVar select 0;
-_actions = _actionsVar select 1;
+_actions params ["_currentID", "_actionIDs", "_actions"];
 
-_currentID = _actions select 0;
-_actionIDs = _actions select 1;
-_actions = _actions select 2;
-
-if (_unit != _actionsVar select 2) exitWith {};
+if (_unit != _actions) exitWith {};
 
 _id = _actionIDs find _id;
 
@@ -47,4 +45,4 @@ if (count _actions == 0) then {
     _actionID = -1;
 };
 
-_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions], _unit], false];
+_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions], _unit], false]; // @todo Test use _actionVar is Posible

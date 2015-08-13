@@ -3,18 +3,20 @@
  *
  * Transforms a number to an string of the correspondending digits.
  *
- * Argument:
- * 0: Number to 'digitize' (Number)
+ * Arguments:
+ * 0: Number to 'digitize' <NUMBER>
  * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Number, optional)
  *
- * Return value:
+ * Return Value:
  * Digits. The maximum length is six digits. (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_length"];
 
-PARAMS_2(_number,_minLength);
+params ["_number", "_minLength"];
 
 _number = _number min 999999;
 

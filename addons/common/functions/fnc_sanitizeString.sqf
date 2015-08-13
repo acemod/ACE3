@@ -9,12 +9,14 @@
  *
  * Return Value:
  * Sanitized string
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_array", "_arrayNew"];
 
-PARAMS_2(_string,_removeTags);
+params ["_string", "_removeTags"];
 
 if (isNil "_removeTags") then {_removeTags = false};
 
@@ -37,6 +39,7 @@ _arrayNew = [];
             _arrayNew = _arrayNew + [_x];
         };
     };
-} forEach _array;
+    true
+} count _array;
 
 toString _arrayNew

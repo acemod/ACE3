@@ -3,17 +3,19 @@
  *
  * Converts a number to a string without losing as much precission as str or format.
  *
- * Argument:
- * 0: A number (Number)
+ * Arguments:
+ * 0: A number <NUMBER>
  *
- * Return value:
+ * Return Value:
  * The number as string (String)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_decimals"];
 
-PARAMS_1(_number);
+params ["_number"];
 
 _decimals = str (abs(_number) mod 1);
 _decimals = toArray _decimals;

@@ -3,15 +3,17 @@
  *
  * Remove a synced event handler
  *
- * Argument:
+ * Arguments:
  * 0: Name (String)
- * 
- * Return value:
+ *
+ * Return Value:
  * Boolean of success
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_name);
+params ["_name"];
 
 private ["_data", "_eventId"];
 

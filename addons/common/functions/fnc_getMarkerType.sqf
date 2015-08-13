@@ -8,12 +8,14 @@
  *
  * Return Value:
  * Marker Type (string)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_leader","_vehicle","_side"];
 
-PARAMS_1(_group);
+params ["_group"];
 
 _leader = leader _group;
 _vehicle = vehicle _leader;

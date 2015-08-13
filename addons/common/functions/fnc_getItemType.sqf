@@ -3,18 +3,20 @@
  *
  * What kind of item is given classname
  *
- * Argument:
+ * Arguments:
  * 0: Classname of a item. (String)
  *
- * Return value:
+ * Return Value:
  * Item type. (Array)
  * 0: "weapon", "item", "magazine" or "" (String)
  * 1: A description of the item (e.g. "primary" for a weapon or "vest" for a vest item)
  *
+ * Public: Yes
+ *
  */
 #include "script_component.hpp"
 
-PARAMS_1(_item);
+params ["_item"];
 
 private ["_cfgType"];
 

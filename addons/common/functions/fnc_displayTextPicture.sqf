@@ -1,25 +1,22 @@
 /*
  * Author: commy2, Glowbal
- *
  * Display a structured text with image.
  *
- * Argument:
+ * Arguments:
  * 0: Text <ANY>
  * 1: Image <STRING>
- * 2: Image color <ARRAY> <OPTIONAL>
- * 3: Target Unit. Will only display if target is the player controlled object <OBJECT> <OPTIONAL>
+ * 2: Image color (default: [0, 0, 0, 0]) <ARRAY>
+ * 3: Target Unit. Will only display if target is the player controlled object (default: ACE_player) <OBJECT>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_imageColor", "_target"];
-PARAMS_2(_text,_image);
-_imageColor = if (count _this > 2) then {_this select 2} else {[1,1,1]};
-_imageColor resize 3;
-_target = if (count _this > 3) then {_this select 3} else {ACE_player};
+params ["_text", "_image", ["_imageColor", [1,1,1]], ["_target", ACE_player]];
 
 if (_target != ACE_player) exitWith {};
 

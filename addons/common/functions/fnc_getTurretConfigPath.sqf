@@ -3,18 +3,20 @@
  *
  * Get the config path of a vehicles turret.
  *
- * Argument:
+ * Arguments:
  * 0: vehicles config (Config)
  * 1: Turret index (Array)
  *
- * Return value:
+ * Return Value:
  * Turret config (Config)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_index", "_offset", "_config2", "_foundClasses", "_a"];
 
-PARAMS_2(_config,_turretIndex);
+params ["_config", "_turretIndex"];
 
 for "_index" from 0 to (count _turretIndex - 1) do {
     _config = _config >> "Turrets";

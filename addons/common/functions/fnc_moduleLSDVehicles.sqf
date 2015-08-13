@@ -8,12 +8,14 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated);
-
 private["_colors", "_hSCount", "_hiddenSelections", "_i", "_index", "_vehicle"];
+
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -21,8 +23,7 @@ if !(_activated) exitWith {};
     _hiddenSelections = count (getArray (configFile >> "CfgVehicles" >> (typeOf _x) >> "hiddenSelections"));
     if (_hiddenSelections > 0) then {
         nul = [_x, _hiddenSelections] spawn {
-            _vehicle = _this select 0;
-            _hSCount = _this select 1;
+            params ["_vehicle","_hSCount"];
             _colors = [
                 "#(argb,8,8,3)color(1,0,0,1,co)",
                 "#(argb,8,8,3)color(1,0.5,0,1,co)",
@@ -44,4 +45,4 @@ if !(_activated) exitWith {};
     };
 } count _units;
 
-diag_log text "[ACE]: WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.";
+diag_log text "[ACE]: WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED.";

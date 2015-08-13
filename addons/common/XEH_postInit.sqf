@@ -10,13 +10,16 @@
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
         _entry = GVAR(waitAndExecArray) deleteAt 0;
-        (_entry select 2) call (_entry select 1);
+        _entry params ["", "_code", "_args"];
+        _args call _code;
     };
 
     //Handle the execNextFrame array:
     {
-        (_x select 0) call (_x select 1);
-    } forEach GVAR(nextFrameBufferA);
+        params ["_code", "_args"];
+        _args call _code;
+        true
+    } count GVAR(nextFrameBufferA);
     //Swap double-buffer:
     GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
     GVAR(nextFrameBufferB) = [];
@@ -26,10 +29,9 @@
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-    PARAMS_2(_name,_value);
-    if !(count _this > 2) exitWith {};
-    private ["_force", "_settingData"];
-    _force = _this select 2;
+
+    if !(params ["_name", "_value", "_force"]) exitWith {};
+    private "_settingData";
     if (_force) then {
         _settingData = [_name] call FUNC(getSettingData);
         if (count _settingData == 0) exitWith {};
@@ -37,20 +39,16 @@
     };
 }] call FUNC(addEventhandler);
 
-
-["HeadbugFixUsed", {
-    PARAMS_2(_profileName,_animation);
-    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
-}] call FUNC(addEventHandler);
-
-
 //~~~~~Get Map Data~~~~~
 //Find MGRS zone and 100km grid for current map
 [] call FUNC(getMGRSdata);
 //Prepare variables for FUNC(getMapGridFromPos)/FUNC(getMapPosFromGrid)
 [] call FUNC(getMapGridData);
 
-
+["HeadbugFixUsed", {
+    params ["_profileName", "_animation"];
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
 
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
@@ -67,12 +65,12 @@
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call FUNC(addEventhandler);
 
-["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
-["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
-["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+["setDir", {params ["_object", "_dir"]; _object setDir _dir}] call FUNC(addEventhandler);
+["setFuel", {params ["_object", "_value"]; _object setFuel _value}] call FUNC(addEventhandler);
+["setSpeaker", {params ["_object", "_speaker"]; _object setSpeaker _speaker}] call FUNC(addEventhandler);
 
 if (isServer) then {
-    ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
+    ["hideObjectGlobal", {params ["_object", "_status"]; _object hideObjectGlobal _status}] call FUNC(addEventHandler);
 };
 
 // hack to get PFH to work in briefing
@@ -81,7 +79,7 @@ if (isServer) then {
         [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     };
 
-    call cba_common_fnc_onFrame;
+    call CBA_common_fnc_onFrame;
 }] call BIS_fnc_addStackedEventHandler;
 /////
 
@@ -114,20 +112,20 @@ if(!isServer) then {
         ["SEH_all", [player]] call FUNC(serverEvent);
     }] call FUNC(addEventHandler);
 } else {
-    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+    ["SEH_all", DFUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
 };
-["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
-["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+["SEH", DFUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+["SEH_s", DFUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 if (isServer) then {
-    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+    [DFUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 call FUNC(checkFiles);
 
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
-    PARAMS_1(_args);
-    EXPLODE_1_PVT(_args,_waitingMsgSent);
+    params ["_args","_idPFH"];
+    _args params ["_waitingMsgSent"];
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};
 
@@ -139,7 +137,7 @@ call FUNC(checkFiles);
         };
     };
 
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     diag_log text format["[ACE] Settings received from server"];
 
@@ -182,8 +180,9 @@ call COMPILE_FILE(scripts\assignedItemFix);
 call COMPILE_FILE(scripts\initScrollWheel);
 
 DFUNC(mouseZHandler) = {
-    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
+    waitUntil {!isNull (findDisplay 46)};
+    sleep 0.1;
+    findDisplay 46 displayAddEventHandler ["MouseZChanged", GVAR(onScrollWheel)];
     [false] call FUNC(disableUserInput);
 };
 
@@ -195,13 +194,13 @@ enableCamShake true;
 
 // Set the name for the current player
 ["playerChanged", {
-    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+    params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
-        [_newPlayer] call FUNC(setName)
+        [_newPlayer] call FUNC(setName);
     };
     if (alive _oldPlayer) then {
-        [_oldPlayer] call FUNC(setName)
+        [_oldPlayer] call FUNC(setName);
     };
 
 }] call FUNC(addEventhandler);
@@ -313,16 +312,22 @@ GVAR(OldIsCamera) = false;
 
 ["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
 ["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
-["medical_onUnconscious", {if (local (_this select 0) && {!(_this select 1)}) then {[ _this select 0, false, QUOTE(FUNC(loadPerson)), west /* dummy side */] call FUNC(switchToGroupSide);};}] call FUNC(addEventhandler);
+["medical_onUnconscious", {
+    params ["_unit", "_isUnconc"];
+    if (local _unit && {!_isUnconc}) then {
+        [_unit, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);
+    };
+}] call FUNC(addEventhandler);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 ["isNotInside", {
+    params ["_player","_target"];
     // Players can always interact with himself if not boarded
-    vehicle (_this select 0) == (_this select 0) ||
+    vehicle _player == _player ||
     // Players can always interact with his vehicle
-    {vehicle (_this select 0) == (_this select 1)} ||
+    {vehicle _player == _target} ||
     // Players can always interact with passengers of the same vehicle
-    {!((_this select 0) isEqualTo (_this select 1)) && {vehicle (_this select 0) == vehicle (_this select 1)}}
+    {!(_player isEqualTo _target) && {vehicle _player == vehicle _target}}
 }] call FUNC(addCanInteractWithCondition);
 
 // Lastly, do JIP events
@@ -332,7 +337,7 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
     [{
         if(!(isNull player)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
@@ -342,12 +347,12 @@ GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
 // Register localizations for the Keybinding categories
-["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
-["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
-["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
-["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
-["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
-["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
 
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
@@ -357,7 +362,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, false, false]], false] call cba_fnc_addKeybind;  //Home Key
+[0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
 
 ["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"),
 {
@@ -367,7 +372,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, true, false]], false] call cba_fnc_addKeybind;  //CTRL + Home Key
+[0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
 
 ["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"),
 {
@@ -379,7 +384,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
+[0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
 GVAR(commonPostInited) = true;

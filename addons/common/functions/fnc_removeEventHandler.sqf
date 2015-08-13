@@ -3,23 +3,26 @@
  *
  * Remove an event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
- * 1: Event code (number)
+ * 1: Event code <NUMBER>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 private ["_eventNames", "_eventFunctions", "_eventIndex"];
 
-PARAMS_2(_eventName,_eventCodeIndex);
+params ["_eventName", "_eventCodeIndex"];
 
-_eventNames = GVAR(events) select 0;
+GVAR(events) params ["_eventNames", "_events"];
+
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 
 if (_eventIndex != -1) then {
-    _eventFunctions = (GVAR(events) select 1) select _eventIndex;
+    _eventFunctions = _events select _eventIndex;
     _eventFunctions set[_eventCodeIndex, nil];
 };

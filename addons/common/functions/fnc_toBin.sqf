@@ -1,22 +1,21 @@
 /*
-Author: commy2
-
-Description:
-Converts number to binary number
-
-Arguments:
-A number
-
-Return Value:
-A binary number, String
+ * Author: commy2
+ *
+ * Converts number to binary number
+ *
+ * Arguments:
+ * A number
+ *
+ * Return Value:
+ * A binary number, String
+ *
+ * Public: No
 */
 #include "script_component.hpp"
 
 private ["_sign", "_bin", "_rest"];
 
-PARAMS_2(_number,_minLength);
-
-if (isNil "_minLength") then {_minLength = 1};
+params ["_number", ["_minLength", 1]];
 
 _sign = ["", "-"] select (_number < 0);
 

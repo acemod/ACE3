@@ -3,17 +3,19 @@
  *
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle type (String)
  *
- * Return value:
+ * Return Value:
  * Vehicle cargo positions. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_config", "_cargo", "_codrivers", "_index"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> _vehicle;
 

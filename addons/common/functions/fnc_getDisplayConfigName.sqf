@@ -1,4 +1,15 @@
-// by commy2
+/*
+ * Author: commy2
+ * N/A
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * (CONFIG)
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_configName", "_index", "_config"];

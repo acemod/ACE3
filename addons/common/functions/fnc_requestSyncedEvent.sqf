@@ -3,15 +3,17 @@
  *
  * Send a request to synchronize an event name from the client->server. Execute on client only.
  *
- * Argument:
+ * Arguments:
  * 0: eventName (String)
- * 
- * Return value:
+ *
+ * Return Value:
  * Boolean of success
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_1(_eventName);
+
+params ["_eventName"];
 
 // Only JIP machines on initialization send this off, requesting sync on events with the serverCommand
 if(isServer) exitWith { false };

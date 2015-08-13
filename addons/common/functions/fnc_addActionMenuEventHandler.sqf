@@ -1,27 +1,27 @@
 /*
  * Author: commy2
- *
  * Add an addAction event to a unit. Used to handle multiple addAction events and add a action to the mouse wheel menu. Global arguments, local effects. Does only work for player controlled units.
  *
- * Argument:
- * 0: Unit the action should be assigned to (Object)
- * 1: Menu title of the action (String)
- * 2: Name of the action, e.g. "DefaultAction" (String)
- * 3: Condition (Code or String)
- * 4: Code to execute by the action (Code or String)
- * 5: Condition for the menu action (Code or String)
- * 6: Code to execute from the menu (Code or String)
- * 7: Priority of the action (Number, optional default: 0)
+ * Arguments:
+ * 0: Unit the action should be assigned to <OBJECT>
+ * 1: Menu title of the action <STRING>
+ * 2: Name of the action, e.g. "DefaultAction" <STRING>
+ * 3: Condition <CODE, STRING>
+ * 4: Code to execute by the action <CODE, STRING>
+ * 5: Condition for the menu action <CODE, STRING>
+ * 6: Code to execute from the menu <CODE, STRING>
+ * 7: Priority of the action (default: 0) <NUMBER>
  *
- * Return value:
- * ID of the action (used to remove it later).
+ * Return Value:
+ * ID of the action (used to remove it later) <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_name", "_actionsVar", "_id", "_actionIDs", "_actions", "_nameVar", "_addAction", "_actionID"];
-//IGNORE_PRIVATE_WARNING("_target");
 
-PARAMS_8(_unit,_displayName,_action,_condition,_statement,_condition2,_statement2,_priority);
+params ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", "_priority"];
 
 if (isNil "_priority") then {_priority = 0};
 

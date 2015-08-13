@@ -3,24 +3,25 @@
  *
  * Execute a event only on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName", "_eventArgs"];
 
-    #ifdef DEBUG_EVENTS
-        diag_log text format[ARR_2("* Server Event: %1",_eventName)];
-        diag_log text format[ARR_2("    args=%1",_eventArgs)];
-    #endif
+#ifdef DEBUG_EVENTS
+    diag_log text format[ARR_2("* Server Event: %1",_eventName)];
+    diag_log text format[ARR_2("    args=%1",_eventArgs)];
+#endif
 
-ACEg = [_eventName, _eventArgs];
+ACEg = _this;
 if (!isServer) then {
     publicVariableServer "ACEg";
 } else {

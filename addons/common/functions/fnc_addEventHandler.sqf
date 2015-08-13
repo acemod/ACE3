@@ -1,33 +1,32 @@
 /*
  * Author: Nou
- *
  * Add a event handler.
  *
- * Argument:
- * 0: Event name (string)
- * 1: Event code (code)
+ * Arguments:
+ * 0: Event name <STRING>
+ * 1: Event code <CODE>
  *
- * Return value:
- * Event handler ID number (for use with fnc_removeEventHandler)
+ * Return Value:
+ * Event handler ID number (for use with fnc_removeEventHandler) <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_eventNames", "_eventFunctions", "_eventNameCount", "_eventIndex", "_eventFunctionCount"];
 
-PARAMS_2(_eventName,_eventCode);
+params ["_eventName", "_eventCode"];
 
-_eventNames = GVAR(events) select 0;
+GVAR(events) params ["_eventNames","_event"];
+_eventNames = _eventNames;
 _eventFunctions = [];
 _eventIndex = _eventNames find _eventName;
 if (_eventIndex != -1) then {
-    _eventFunctions = (GVAR(events) select 1) select _eventIndex;
+    _eventFunctions = _event select _eventIndex;
 } else {
     _eventNameCount = count _eventNames;
     _eventNames set[_eventNameCount, _eventName];
-    (GVAR(events) select 1) set[_eventNameCount, _eventFunctions];
+    _event set[_eventNameCount, _eventFunctions];
 };
 
-_eventFunctionCount = count _eventFunctions;
-_eventFunctions set [_eventFunctionCount, _eventCode];
-
-_eventFunctionCount;
+_eventFunctions pushBack _eventCode // Return

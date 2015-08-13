@@ -1,5 +1,6 @@
 /*
  * Author: SilentSpike (based on unmuteUnit)
+ *
  * Globally unhides a unit. Only unhides if the last reason was removed.
  *
  * Arguments:
@@ -7,17 +8,16 @@
  * 1: Reason to unhide the unit <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_unhideUnit
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 

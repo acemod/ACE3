@@ -1,19 +1,21 @@
-/**
- * fn_setCanInteract.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * N/A
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_unit","_to","_return"];
+params[["_unit",ObjNull,[ObjNull]],"_to"];
 
-_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_to = _this select 1;
 _return = false;
 
 if (((typeName _to) == "SCALAR")) then {

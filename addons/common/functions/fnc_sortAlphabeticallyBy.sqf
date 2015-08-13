@@ -1,18 +1,22 @@
-/**
- * fn_sortAlphabeticallyBy.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * ? deprecated
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
-
+hint "Warning You use a deprecated Function! Please Replace it With the New BI Command Sort.";
+diag_log "Warning You use a deprecated Function! Please Replace it With the New BI Command Sort.";
 private ["_elements","_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
 
-PARAMS_2(_array,_elementN);
+params ["_array", "_elementN"];
 
 _indexes = [];
 _elements = [];
@@ -39,6 +43,7 @@ for "_i" from 1 to (count _elements) - 1 do {
 _returnArray = [];
 {
     _returnArray pushback (_array select _x);
-} forEach _indexes;
+    true
+} count _indexes;
 
-_returnArray;
+_returnArray

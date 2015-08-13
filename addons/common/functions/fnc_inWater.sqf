@@ -1,25 +1,31 @@
-/**
- * fn_inWater_f.sqf
- * @Descr: Check if unit is underwater
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL True if unit is in the water
- * @PublicAPI: true
+ * Check if unit is underwater
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * if unit is in the water (BOOLEAN)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_return","_aslPos"];
 
-PARAMS_1(_unit);
-_return = false;
+params ["_unit"];
 
-if ((surfaceIsWater getPos _unit)) then {
+_return = if ((surfaceIsWater getPos _unit)) then {
     _aslPos = _unit modelToWorldVisual (_unit selectionPosition "head");
     if ((_aslPos select 2) <= 0) then {
-        _return = true;
+        true;
+    } else {
+        false
     };
+} else {
+    false
 };
 
-_return;
+_return

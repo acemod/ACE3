@@ -3,11 +3,13 @@
  *
  * Check if wind is set on auto.
  *
- * Argument:
+ * Arguments:
  * None.
  *
- * Return value:
- * This mission has automatic wind? (Bool)
+ * Return Value:
+ * This mission has automatic wind? <BOOL>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

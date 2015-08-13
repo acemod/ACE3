@@ -4,7 +4,7 @@
  * Draw progress bar and execute given function if succesful.
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
- * Argument:
+ * Arguments:
  * 0: NUMBER - Total Time (in game "ACE_time" seconds)
  * 1: ARRAY - Arguments, passed to condition, fail and finish
  * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
@@ -13,22 +13,19 @@
  * 5: CODE - (Optional) Code to check each frame
  * 6: ARRAY - (Optional) Exceptions for checking EFUNC(common,canInteractWith)
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Example:
  * [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
-PARAMS_4(_totalTime,_args,_onFinish,_onFail);
-DEFAULT_PARAM(4,_localizedTitle,"");
-DEFAULT_PARAM(5,_condition,{true});
-DEFAULT_PARAM(6,_exceptions,[]);
-private ["_player", "_perFrameFunction", "_ctrlPos"];
-
-_player = ACE_player;
+params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", true], ["_exceptions", []]];
+private ["_ctrlPos"];
 
 //Open Dialog and set the title
 closeDialog 0;
@@ -48,10 +45,10 @@ _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / 
 
 
 
-_perFrameFunction = {
-    PARAMS_2(_parameters,_pfhID);
-    EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
+[{
     private ["_elapsedTime", "_errorCode"];
+    params ["_parameters", "_idPFH"];
+    _parameters params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions"];
 
     _elapsedTime = ACE_time - _startTime;
     _errorCode = -1;
@@ -84,7 +81,7 @@ _perFrameFunction = {
         if (!isNull (uiNamespace getVariable [QGVAR(ctrlProgressBar), controlNull])) then {
             closeDialog 0;
         };
-        [_pfhID] call CBA_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
 
         if (_errorCode == 0) then {
             if ((typeName _onFinish) == (typeName "")) then {
@@ -103,6 +100,4 @@ _perFrameFunction = {
         //Update Progress Bar (ratio of elepased:total)
         (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition (_elapsedTime / _totalTime);
     };
-};
-
-[_perFrameFunction, 0, [_args, _onFinish, _onFail, _condition, _player, ACE_time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_args, _onFinish, _onFail, _condition, ACE_player, ACE_time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;

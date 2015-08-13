@@ -3,7 +3,7 @@
  * Finds real x/y offset and map step for a 10 digit grid
  * Save time by preparing data one time at startup
  *
- * Argument:
+ * Arguments:
  * None
  *
  * Return values:
@@ -38,7 +38,8 @@ _stepY = 1e10;
         _stepX = getNumber (_x >> "stepX");
         _stepY = getNumber (_x >> "stepY");
     };
-} foreach configProperties [_cfgGrid, "isClass _x", false];
+    true
+} count configProperties [_cfgGrid, "isClass _x", false];
 
 _letterGrid = false;
 if (((toLower _formatX) find "a") != -1) then {_letterGrid = true};

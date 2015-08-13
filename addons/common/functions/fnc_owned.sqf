@@ -4,14 +4,15 @@
  * Counterpart of ace_common_fnc_claim. Check if the given object is claimed by another unit.
  *
  * Arguments:
- * 0: Any object. (Object)
+ * 0: Any object. <OBJECT>
  *
  * Return Value:
  * Is this object claimed by someone?
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
 !isNull (_target getVariable [QGVAR(owner), objNull])

@@ -1,27 +1,34 @@
-//fnc__handleNetEvent.sqf
-// internal handler for net events
+/*
+ * Author: ?
+ * Internal net event handler.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTargets", "_sentEvents", "_owner", "_serverFlagged", "_events"];
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-
-PARAMS_2(_eventType,_event);
+params ["_eventType", "_event"];
 
 if (_eventType == "ACEg") then {
-    _eventName = _event select 0;
-    _eventArgs = _event select 1;
-    
+    _event params ["_eventName","_eventArgs"];
+
     _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;
     if (_eventIndex != -1) then {
         _events = (GVAR(events) select 1) select _eventIndex;
-        
+
         #ifdef DEBUG_EVENTS
             diag_log text format[ARR_2("* Net Event %1",_eventName)];
             diag_log text format[ARR_2("    args=%1",_eventArgs)];
         #endif
-        
+
         {
             if (!isNil "_x") then {
                 _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Net Event %1 ID: %2",_eventName,_forEachIndex)]);
@@ -35,10 +42,8 @@ if (_eventType == "ACEg") then {
 
 if (_eventType == "ACEc") then {
     if (isServer) then {
-        _eventName = _event select 0;
-        _eventTargets = _event select 1;
-        _eventArgs = _event select 2;
-        
+        _event params ["_eventName", "_eventTargets", "_eventArgs"];
+
         _sentEvents = [];
         if (!IS_ARRAY(_eventTargets)) then {
             _eventTargets = [_eventTargets];
@@ -52,9 +57,10 @@ if (_eventType == "ACEc") then {
 
         _serverFlagged = false;
         {
-            _owner = _x;
-            if (IS_OBJECT(_x)) then {
-                 _owner = owner _x;
+            _owner = if (IS_OBJECT(_x)) then {
+                 owner _x;
+            } else {
+                _x
             };
             if (!(_owner in _sentEvents)) then {
                 PUSH(_sentEvents, _owner);
@@ -70,6 +76,7 @@ if (_eventType == "ACEc") then {
                     ["ACEg", ACEg] call FUNC(_handleNetEvent);
                 };
             };
-        } forEach _eventTargets;
+            true
+        } count _eventTargets;
     };
 };

@@ -12,12 +12,14 @@
  *
  * Usage:
  * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_newArray", "_index"];
 
-PARAMS_2(_array,_code);
+params ["_array", "_code"];
 
 if (isNil "_array") exitWith {
   diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];

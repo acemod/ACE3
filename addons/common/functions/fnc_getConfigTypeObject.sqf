@@ -3,15 +3,15 @@
  *
  * What kind of Cfg is the object. Works for CfgVehicles and CfgAmmo
  *
- * Argument:
+ * Arguments:
  * 0: An object's classname. (String)
  *
- * Return value:
- * CfgWhatever (String)
+ * Return Value:
+ * What kind of the input is (String)
  */
 #include "script_component.hpp"
 
-PARAMS_1(_object);
+params ["_object"];
 
 if (isClass (configFile >> "CfgVehicles" >> _object)) exitWith {"CfgVehicles"};
 

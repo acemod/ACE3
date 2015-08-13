@@ -3,11 +3,12 @@
  * Attempt to fix physx collisions causing unreasonable impact forces and damage.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * Object <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
+ * Public: No
  */
 #include "script_component.hpp"
 

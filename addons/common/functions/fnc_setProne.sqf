@@ -1,17 +1,20 @@
-/**
- * fn_setProne.sqf
- * @Descr: Force a unit to go prone
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT]
- * @Return: void
- * @PublicAPI: true
+ * Force a unit to go prone
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit"];
-_unit = [_this,0, ObjNull,[ObjNull]] call BIS_fnc_Param;
+params [[_unit,ObjNull,[ObjNull]]];
+
 switch (currentWeapon _unit) do {
     case (primaryWeapon _unit): {
         [_unit,"amovppnemstpsraswrfldnon"] call FUNC(localAnim);

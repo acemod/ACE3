@@ -3,7 +3,7 @@
  * Load a setting from config if it was not previosuly forced. Force if neccesary.
  *
  * Arguments:
- * 0: Config entry (config entry)
+ * 0: Config entry <CONFIG>
  *
  * Return Value:
  * None
@@ -12,12 +12,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_optionEntry);
+params ["_optionEntry"];
 
 private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData", "_valueConfig", "_text"];
 
 _fnc_getValueWithType = {
-    EXPLODE_2_PVT(_this,_optionEntry,_typeName);
+    params ["_optionEntry", "_typeName"];
 
     _valueConfig = (_optionEntry >> "value");
     _value = if (isNumber (_optionEntry >> "value")) then {getNumber (_optionEntry >> "value")} else {0};
@@ -99,15 +99,15 @@ if (isNil _name) then {
 
     // Check if it's already forced and quit
     _settingData = [_name] call FUNC(getSettingData);
-    if (_settingData select 6) exitWith {};
+
+    _settingData params ["", "_type", "", "", "", "", "_forced"];
+
+    if (_forced) exitWith {};
 
     // The setting is not forced, so update the value
 
-    // Get the type from the existing variable
-    _typeName = _settingData select 1;
-
     // Read entry and cast it to the correct type
-    _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
+    _value = [_optionEntry, _type] call _fnc_getValueWithType;
 
     // Update the variable
     missionNamespace setVariable [_name, _value];

@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return value:
+ * ?
+ *
+ * Public : No
+ */
 #include "script_component.hpp"
 
 private ["_config"];
@@ -13,10 +25,9 @@ GVAR(AssignedItems) = [];
 GVAR(AssignedItemsInfo) = [];
 
 ["playerInventoryChanged", {
-    private ["_unit", "_assignedItems", "_shownItems"];
-
-    _unit = _this select 0;
-    _assignedItems = _this select 1 select 17;
+    private ["_assignedItems", "_shownItems"];
+    params ["_unit", "_items"];
+    _assignedItems = _items select 17;
 
     _shownItems = [
         ACE_isMapEnabled,
@@ -29,7 +40,7 @@ GVAR(AssignedItemsInfo) = [];
     {
         if !(_x in GVAR(AssignedItems)) then {
             GVAR(AssignedItems) pushBack _x;
-            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType")
+            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType");
         };
 
         private "_hideItemType";
@@ -52,13 +63,14 @@ GVAR(AssignedItemsInfo) = [];
                 _shownItems set [4, false];
             };
         };
-    } forEach _assignedItems;
+        true
+    } count _assignedItems;
 
     //systemChat str _shownItems;
-
-    showMap     (_shownItems select 0);
-    showCompass (_shownItems select 1);
-    showWatch   (_shownItems select 2);
-    showRadio   (_shownItems select 3);
-    showGPS     (_shownItems select 4 || {cameraOn == getConnectedUAV _unit});  //If player is activly controling a UAV, showGPS controls showing the map (m key)
+    _shownItems params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];
+    showMap _showMap;
+    showCompass _showCompass;
+    showWatch _showWatch;
+    showRadio _showRadio;
+    showGPS (_showGPS || {cameraOn == getConnectedUAV _unit});  //If player is activly controling a UAV, showGPS controls showing the map (m key)
 }] call FUNC(addEventHandler);

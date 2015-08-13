@@ -1,19 +1,20 @@
 /*
  * Author: commy2
- *
  * Add a map marker creation event handler.
  *
- * Argument:
- * 0: Code to execute (Code or String)
+ * Arguments:
+ * 0: Code to execute <CODE, STRING>
  *
- * Return value:
- * ID of the event script (used to remove it later).
+ * Return Value:
+ * ID of the event script (used to remove it later). <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_actionsVar", "_id", "_actionIDs", "_actions"];
 
-PARAMS_1(_statement);
+params ["_statement"];
 
 if (typeName _statement == "STRING") then {
     _statement = compile _statement;
@@ -21,9 +22,8 @@ if (typeName _statement == "STRING") then {
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
-_id = (_actionsVar select 0) + 1;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_id","_actionIDs","_actions"];
+_id = _id + 1;
 
 if (_id == 0) then {
     uiNamespace setVariable ["ACE_EventHandler_MapMarker", count allMapMarkers];
@@ -35,4 +35,4 @@ _actions pushBack _statement;
 
 missionNamespace setVariable ["ACE_EventHandler_MapMarker", [_id, _actionIDs, _actions]];
 
-_id
+_id // Return

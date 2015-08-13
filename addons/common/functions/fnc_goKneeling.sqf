@@ -3,15 +3,17 @@
  *
  * Abhocken! Unit goes kneeling if not prone already and lowers weapon. Try, throw, catch because I'm bored.
  *
- * Argument:
- * 0: Unit (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 //IGNORE_PRIVATE_WARNING("_exception");
 

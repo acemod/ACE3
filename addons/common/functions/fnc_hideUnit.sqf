@@ -1,5 +1,6 @@
 /*
  * Author: SilentSpike (based on muteUnit)
+ *
  * Globally hides a unit. This allows the handling of more than one reason to hide an object globally.
  *
  * Arguments:
@@ -17,7 +18,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 

@@ -8,7 +8,9 @@
  * NONE.
  *
  * Return Value:
- * Player controlled unit (object)
+ * Player controlled unit <OBJECT>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

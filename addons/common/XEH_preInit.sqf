@@ -340,7 +340,7 @@ ACE_pausedTime = 0;
 ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
-[FUNC(timePFH), 0, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(timePFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);

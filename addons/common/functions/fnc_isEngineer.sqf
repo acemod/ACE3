@@ -4,13 +4,15 @@
  * Checks if a unit is an engineer.
  *
  * Arguments:
- * 0: unit to be checked (object)
+ * 0: unit to be checked <OBJECT>
  *
  * Return Value:
- * Bool: is the unit an engineer?
+ * is the unit an engineer (BOOLEAN)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1]

@@ -3,17 +3,19 @@
  *
  * Return the captivity status of an unit.
  *
- * Argument:
- * 0: Unit (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Reasons, why the unit is a captive. An empty array is returned if the unit is not a captive (Array of Strings)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 private ["_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 

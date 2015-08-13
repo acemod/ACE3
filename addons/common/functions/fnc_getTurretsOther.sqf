@@ -3,17 +3,17 @@
  *
  * Get the turret indices of other turrets (not gunner, commander, copilot or ffv).
  *
- * Argument:
- * 0: Vehicle (Object)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Turret index of the vehicles gunner. Empty array means no other turrets. (Array)
  */
 #include "script_component.hpp"
 
 private ["_turrets", "_turret", "_config"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _turrets = allTurrets [_vehicle, true];
 
@@ -30,5 +30,6 @@ _turret = [];
     ) then {
         _turret pushBack _x;
     };
-} forEach _turrets;
+    true
+} count _turrets;
 _turret

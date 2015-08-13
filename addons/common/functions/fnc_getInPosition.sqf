@@ -4,26 +4,24 @@
  * Move unit into given vehicle position. Or switch to that position if the unit is already inside the vehicle.
  *
  * Arguments:
- * 0: Unit to enter the vehicle (Object)
- * 1: The vehicle to be entered (Object)
+ * 0: Unit to enter the vehicle <OBJECT>
+ * 1: The vehicle to be entered <OBJECT>
  * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" (String)
  * 3: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken.
  *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 #define CANGETINDRIVER      (isNull (driver _vehicle)             || {!alive driver _vehicle})               && {!lockedDriver _vehicle}           && {getNumber (_config >> "isUav") != 1}
 #define CANGETINTURRETINDEX (isNull (_vehicle turretUnit _turret) || {!alive (_vehicle turretUnit _turret)}) && {!(_vehicle lockedTurret _turret)} && {getNumber (_config >> "isUav") != 1}
 
-private ["_position", "_index"];
-
-PARAMS_2(_unit,_vehicle);
-
-_position = toLower (_this select 2);
-_index = _this select 3;  // optional, please don't use
+params ["_unit", "_vehicle", "_position", "_index"];
+_position = toLower _position;
 
 if (isNil "_index") then {_index = -1};
 
@@ -41,7 +39,7 @@ _script = {};
 _enemiesInVehicle = false;   //Possible Side Restriction
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
-} forEach crew _vehicle;
+} count crew _vehicle;
 
 switch (_position) do {
     case "driver" : {

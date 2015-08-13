@@ -3,17 +3,19 @@
  *
  * Execute a global event on all clients, including self.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 //IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName", "_eventArgs"];
 
 ACEg = [_eventName, _eventArgs];
 publicVariable "ACEg";

@@ -1,30 +1,41 @@
-/**
- * fn_getAllSetVariables.sqf
- * @Descr: Returns an 2d array of all variables that have been set on the object
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT, category STRING (Optional. Only get the variables from the specified category. Default is "" == all)]
- * @Return: ARRAY REturns an array with the format  [ [name STRING, typeName STRING, value ANY, publicFlag BOOL, peristentFlag BOOL] ]
- * @PublicAPI: true
+ * Returns an 2d array of all variables that have been set on the object
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: category (STRING) (Optional. Only get the variables from the specified category. Default is "" == all)
+ *
+ * Return Value:
+ * N: ARRAY
+ *  0: Name (STRING)
+ *  1: typeName (STRING)
+ *  2: value (ANY)
+ *  3: publicFlag (BOOLEAN)
+ *  4: peristentFlag (BOOLEAN)
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_return", "_val", "_category"];
-PARAMS_1(_object);
-_category = if (count _this > 1) then { _this select 1 } else { "" };
+private ["_return", "_val"];
+params ["_object", ["_category", ""]];
 
-if (isnil QGVAR(OBJECT_VARIABLES_STORAGE)) exitwith {
-    [];
+if (isnil QGVAR(OBJECT_VARIABLES_STORAGE) || {GVAR(OBJECT_VARIABLES_STORAGE) isEqualTo []}) exitwith {
+    []
 };
 
 _return = [];
 {
-    _val = _object getvariable (_x select 0);
-    if (!isnil "_val") then {
-        if (_category == "" || _category == _x select 3) then {
-            _return pushback [_x select 0, typeName _val, _val, _x select 2, _x select 5];
+    _x params ["_name","","_public","_varCategory","","_persitents","",""];
+    _var = _object getvariable _name;
+    if (!isnil "_var") then {
+        if (_category == "" || {_category == _varCategory}) then {
+            _return pushback [_name, typeName _var, _var, _public, _persitents];
         };
     };
-}foreach GVAR(OBJECT_VARIABLES_STORAGE);
+    true
+} count GVAR(OBJECT_VARIABLES_STORAGE);
 _return

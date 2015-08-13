@@ -1,24 +1,24 @@
-/**
- * fn_debug.sqf
- * @Descr: Print logging messages through the ACE framework.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Print logging messages through the ACE framework.
  *
- * @Arguments: [message ANY, level NUMBER (Optional)]
- * @Return:  BOOL True if message has been printed
- * @PublicAPI: true
+ * Arguments:
+ * 0: Message <ANY>
+ * 1: Level (default: 2) <NUMBER>
+ *
+ * Return Value:
+ * Message is Printed <BOOL>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 #define DEFAULT_LOGGING_LEVEL -1
 #define DEFAULT_TEXT_DISPLAY -1
 
-private ["_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message"];
-PARAMS_1(_msg);
-_level = if (count _this > 1) then {_this select 1} else { 2 };
+private ["_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message"];
+params ["_msg", ["_level", 2, [2]]];
 
-if (typeName _level != "NUMBER") then {
-    _level = 2;
-};
 
 _defaultLoglevel = if (isNil QGVAR(LOGLEVEL)) then {
     DEFAULT_LOGGING_LEVEL;

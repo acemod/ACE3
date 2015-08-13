@@ -3,17 +3,19 @@
  *
  * Check what kind of weapon the given class name is. (primary, secondary or handgun)
  *
- * Argument:
+ * Arguments:
  * 0: Class name of the weapon (String)
  *
- * Return value:
- * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 (Number)
+ * Return Value:
+ * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_type", "_index"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
 

@@ -3,17 +3,19 @@
  *
  * Get all turret indicies of a vehicle.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle type (String)
  *
- * Return value:
+ * Return Value:
  * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_config", "_turrets", "_fnc_addTurret", "_varName"];
+private ["_fnc_addTurret", "_config", "_turrets", "_fnc_addTurret", "_varName"];
 
-PARAMS_1(_type);
+params ["_type"];
 
 _varName = format ["ACE_CachedTurrets_%1", _type];
 _turrets = + (uiNamespace getVariable _varName);

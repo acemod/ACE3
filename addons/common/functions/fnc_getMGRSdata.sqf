@@ -3,14 +3,16 @@
  * Gets the current map's MGRS grid zone designator and 100km square.
  * Also gets longitude, latitude and altitude offset for the map
  *
- * Argument:
+ * Arguments:
  * 0: Optional: Map name, if undefined the current map is used (String)
  *
- * Return value:
+ * Return Value:
  * 0: Grid zone designator (String)
  * 1: 100km square (String)
  * 2: GZD + 100km sq. as a single string (String)
  * Writes return values to GVAR(MGRS_data) if run on the current map
+ *
+ * Public: No
  */
 
 // #define DEBUG_MODE_FULL
@@ -18,7 +20,7 @@
 
 private ["_zone","_band","_GZD","_long","_lat","_UTM","_easting","_northing", "_altitude"];
 
-DEFAULT_PARAM(0,_map,worldName);
+params [["_map", worldName]];
 
 _long = getNumber (ConfigFile >> "CfgWorlds" >> _map >> "longitude");
 _lat =  getNumber (ConfigFile >> "CfgWorlds" >> _map >> "latitude");

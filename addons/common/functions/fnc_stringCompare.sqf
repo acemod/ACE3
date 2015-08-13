@@ -1,18 +1,24 @@
-/**
- * fn_stringCompare.sqf
- * @Descr: Determines whether one string matches another and how many characters match. Case insensitive.
- * @Author: bovine3dom
+/*
+ * Author: bovine3dom
  *
- * @Arguments: [stringA STRING, stringB STRING]
- * @Return: NUMBER Number of matching characters
- * @PublicAPI: true
+ * Determines whether one string matches another and how many characters match. Case insensitive.
+ *
+ * Arguments:
+ * 0: stringA <STRING>
+ * 1: stringB <STRING>
+ *
+ * Return Value:
+ * Number of matching characters >NUMBER>
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_searchTerm", "_string", "_arraySearchTerm", "_arrayString", "_sizeSearchTerm", "_sizeString", "_matchingCharacters", "_searchIterator", "_targetIterator"];
-_string = toLower (_this select 0); // removes case sensitivity
-_searchTerm = toLower (_this select 1);
+params ["_string", "_searchTerm"];
+
+private ["_arraySearchTerm", "_arrayString", "_sizeSearchTerm", "_sizeString", "_matchingCharacters", "_searchIterator", "_targetIterator"];
+_string = toLower _string; // removes case sensitivity
+_searchTerm = toLower _searchTerm;
 
 
 _arraySearchTerm = toArray _searchTerm; // splits string into array of unicode decimals

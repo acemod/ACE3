@@ -1,15 +1,16 @@
 /*
  * Author: esteldunedain
- *
  * Returns a orthonormal system of reference aligned with the supplied vector
  *
- * Argument:
+ * Arguments:
  * Vector to align the coordinate system with (Array)
  *
- * Return value:
- * 0: v1 (Array)
- * 1: v2 (Array)
- * 2: v3 (Array)
+ * Return Value:
+ * 0: Vector Normalized <ARRAY>
+ * 1: Normalized Cross Product Vector <ARRAY>
+ * 2: Vector Cross Product <ARRAY>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

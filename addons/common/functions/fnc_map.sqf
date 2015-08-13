@@ -12,13 +12,15 @@
  *
  * Usage:
  * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_array", "_code"];
+private "_array";
 
-_array = + _this select 0;
-_code = _this select 1;
+params ["_originalArray", "_code"];
+_array = +_originalArray; // is this needed after params?
 
 if (isNil "_array") exitWith {
     diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
@@ -27,5 +29,6 @@ if (isNil "_array") exitWith {
 
 {
     _array set [_forEachIndex, _x call _code];
-} forEach _array;
+    true
+} count _array;
 _array

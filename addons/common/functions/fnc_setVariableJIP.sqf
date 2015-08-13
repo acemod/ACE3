@@ -3,19 +3,21 @@
  *
  * Sets a public object namespace variable that gets reset with the same value after respawn, so JIP clients keep the value.
  *
- * Argument:
- * 0: Object (Object)
- * 1: Variable name (String)
- * 2: Any value (Anything)
+ * Arguments:
+ * 0: Object <OBJECT>
+ * 1: Variable name <STRING>
+ * 2: Any value <ANY>
  *
- * Return value:
- * Nothing.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_respawnVariables"];
 
-PARAMS_3(_unit,_varName,_value);
+params ["_unit", "_varName", "_value"];
 
 _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 

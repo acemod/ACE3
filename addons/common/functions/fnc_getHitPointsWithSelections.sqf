@@ -4,16 +4,18 @@
  * Returns all hitpoints and their selections of any vehicle. Might contain duplicates if the turrets contain non unique hitpoints with different selection names.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
  * The hitpoints with selections. Format: [hitpoints, selections]. They correspond by index. (Array)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 private ["_config", "_hitpoints", "_selections", "_i"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -30,8 +32,8 @@ _hitpointClasses = [_config >> "HitPoints"];
     if (isClass _class) then {
         _hitpointClasses pushBack _class;
     };
-
-} forEach allTurrets _vehicle;
+    true
+} count allTurrets _vehicle;
 
 // iterate through all classes with hitpoints and their parents
 {
@@ -54,7 +56,7 @@ _hitpointClasses = [_config >> "HitPoints"];
 
         _class = inheritsFrom _class;
     };
-
-} forEach _hitpointClasses;
+    true
+} count _hitpointClasses;
 
 [_hitpoints, _selections]

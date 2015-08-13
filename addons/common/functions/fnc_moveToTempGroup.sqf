@@ -1,18 +1,21 @@
-/**
- * fn_moveToTempGroup_f.sqf
- * Moves a unit into a temporarly group and stores its original group to allow rejoining.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT, moveToTempGroup BOOL]
- * @Return: void
- * @PublicAPI: false
+ * Moves a unit into a temporarly group and stores its original group to allow rejoining.
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: move To Temp Group (BOOLEAN)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_moveTo","_previousGroup","_newGroup", "_currentGroup"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_moveTo = [_this, 1,false,[false]] call BIS_fnc_Param;
+private ["_previousGroup","_newGroup", "_currentGroup"];
+params[["_unit",ObjNull,[ObjNull]],["_moveTo",ObjNull,[ObjNull]]];
 
 if (_moveTo) then {
     _previousGroup = group _unit;

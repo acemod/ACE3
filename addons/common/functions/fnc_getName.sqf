@@ -3,18 +3,20 @@
  *
  * Returns the name of the object. Used to prevent issues with the name command.
  *
- * Argument:
- * 0: Object (Object)
+ * Arguments:
+ * 0: Object <OBJECT>
  * 1: Show effective commander name? (Bool, optinal default: false)
  *
- * Return value:
+ * Return Value:
  * The name.
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_name"];
 
-PARAMS_2(_unit,_showEffective);
+params ["_unit", "_showEffective"];
 
 if (isNil "_showEffective") then {
     _showEffective = false;

@@ -1,28 +1,27 @@
 /*
-Name: FUNC(setForceWalkStatus)
-
-Author: Pabst Mirror (from captivity by commy2)
-
-Description:
-  Sets the forceWalk status of an unit. This allows the handling of more than one reason to set forceWalk.
-  Unit will force walk until all reasons are removed.
-
-Parameters:
-  0: OBJECT - Unit
-  1: STRING - Reason for forcing walking
-  2: BOOL - Is the reason still valid.  True to force walk, false to remove restriction.
-
-Returns:
-  None
-
-Example:
-  [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
+ * Author: Pabst Mirror (from captivity by commy2)
+ *
+ * Sets the forceWalk status of an unit. This allows the handling of more than one reason to set forceWalk.
+ * Unit will force walk until all reasons are removed.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Reason for forcing walking <STRING>
+ * 2: Is the reason still valid.  True to force walk, false to remove restriction. <BOOL>
+ *
+ * Returns:
+ * None
+ *
+ * Example:
+ * [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
+ *
+ * Public: No
 */
 #include "script_component.hpp"
 
 private ["_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
 
-PARAMS_3(_unit,_reason,_status);
+params ["_unit", "_reason", "_status"];
 
 _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 
@@ -48,4 +47,4 @@ _bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
 _unit setVariable ["ACE_forceWalkStatusNumber", _bitmaskNumber, true];
 
 // actually apply the forceWalk command globaly
-[[_unit], QUOTE(FUNC(applyForceWalkStatus)), 2] call FUNC(execRemoteFnc);
+[[_unit], QFUNC(applyForceWalkStatus), 2] call FUNC(execRemoteFnc);

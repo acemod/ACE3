@@ -3,17 +3,19 @@
  *
  * Get the available firing modes of a weapon. Will ignore the ai helper modes.
  *
- * Argument:
+ * Arguments:
  * 0: A weapon in cfgWeapons (String)
  *
- * Return value:
+ * Return Value:
  * All firing modes (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_modes"];
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
 _modes = [];
 {
@@ -24,7 +26,7 @@ _modes = [];
     if (_x == "this") then {
         _modes pushBack _weapon;
     };
-
-} forEach getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
+    true
+} count getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
 
 _modes

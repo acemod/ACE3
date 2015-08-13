@@ -1,20 +1,23 @@
-/**
- * fn_switchToGroupSide_f.sqf
- * @Descr: Stack group switches. Will always trace back to original group.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [unit OBJECT, switch BOOL, id STRING, side SIDE]
- * @Return: void
- * @PublicAPI: true
+ * Stack group switches. Will always trace back to original group.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: switch <BOOLEAN>
+ * 2: id <STRING>
+ * 3: side <SIDE>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_side","_previousGroup","_newGroup", "_currentGroup", "_switch", "_originalSide", "_previousGroupsList", "_id"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_switch = [_this, 1, false,[false]] call BIS_fnc_Param;
-_id = [_this, 2, "", [""]] call BIS_fnc_Param;
-_side = [_this, 3, side _unit,[west]] call BIS_fnc_Param;
+private ["_previousGroup","_newGroup", "_currentGroup", "_originalSide", "_previousGroupsList"];
+params [["_unit",ObjNull,[ObjNull]], ["_switch",false,[false]], ["_id","",[""]],["_side",side _unit,[west]]];
 
 _previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo),[]];
 if (_switch) then {
@@ -39,25 +42,24 @@ if (_switch) then {
             _previousGroupsList set [_foreachIndex, _x];
             [format["found group with ID: %1", _id]] call FUNC(debug);
         };
-    }foreach _previousGroupsList;
+    } foreach _previousGroupsList;
     reverse _previousGroupsList;
 
     {
-        if (_x select 3) exitwith {}; // stop at first id set to true
-        if !(_x select 3) then {
-            _currentGroup = group _unit;
-            if (!isNull (_x select 0)) then {
-                [_unit] joinSilent (_x select 0);
-            } else {
-                _newGroup = createGroup (_x select 1);
-                [_unit] joinSilent _newGroup;
-            };
-            if (count units _currentGroup == 0) then {
-                deleteGroup _currentGroup;
-            };
-            _previousGroupsList set [_foreachIndex, ObjNull];
+        _x params ["_previousGroup", "_originalSide", "_id", "_firstIDBool"];
+        if (_firstIDBool) exitwith {}; // stop at first id set to true
+        _currentGroup = group _unit;
+        if (!isNull "_previousGroup") then {
+            [_unit] joinSilent _previousGroup;
+        } else {
+            _newGroup = createGroup _originalSide;
+            [_unit] joinSilent _newGroup;
         };
-    }foreach _previousGroupsList;
+        if (count units _currentGroup == 0) then {
+            deleteGroup _currentGroup;
+        };
+        _previousGroupsList set [_foreachIndex, ObjNull];
+    } foreach _previousGroupsList;
     _previousGroupsList = _previousGroupsList - [objNull];
     reverse _previousGroupsList;    // we have to reverse again, to ensure the list is in the right order.
     _unit setvariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];

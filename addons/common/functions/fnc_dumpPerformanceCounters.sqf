@@ -1,49 +1,57 @@
-//fnc_dumpPerformanceCounters.sqf
+/*
+ * Author: ?
+ * Dumps performance counter statistics into Logs.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
-
 
 diag_log text format["REGISTERED ACE PFH HANDLERS"];
 diag_log text format["-------------------------------------------"];
 if (!isNil "ACE_PFH_COUNTER") then {
     {
-        private ["_isActive"];
-        _x params ["_pfh", "_parameters"];
-        _isActive = if (!isNil {cba_common_PFHhandles select (_pfh select 0)}) then {"ACTIVE"} else {"REMOVED"};
-        diag_log text format["Registered PFH: id=%1 [%2, delay %3], %4:%5", (_pfh select 0), (_isActive), (_parameters select 1), (_pfh select 1), (_pfh select 2) ]; 
-    } forEach ACE_PFH_COUNTER;
+        _x params ["_pfh"];
+        _pfh params ["_id","_pfh1","_pfh2"];
+        diag_log text format["Registered PFH: id=%1, %1:%2", _id, _pfh1, _pfh2];
+    } count ACE_PFH_COUNTER;
 };
 
 diag_log text format["ACE COUNTER RESULTS"];
 diag_log text format["-------------------------------------------"];
 {
-    private ["_counterEntry", "_iter", "_total", "_count", "_delta", "_averageResult"];
+    private ["_counterEntry", "_total", "_count", "_delta", "_averageResult"];
     _counterEntry = _x;
-    _iter = 0;
+    _counterEntry params ["_entry"];
     _total = 0;
     _count = 0;
     _averageResult = 0;
     if( (count _counterEntry) > 3) then {
         // calc
         {
-            if(_iter > 2) then {
+            if(_forEachIndex > 2) then {
+                _x params ["_delta1", "_delta2"];
                 _count = _count + 1;
-                _delta = (_x select 1) - (_x select 0);
-                
-                _total = _total + _delta;
+
+                _total = _total + (_delta1 - _delta2);
             };
-            _iter = _iter + 1;
         } forEach _counterEntry;
-        
+
         // results
         _averageResult = (_total / _count) * 1000;
-        
+
         // dump results
-        diag_log text format["%1: Average: %2s / %3 = %4ms", (_counterEntry select 0), _total, _count, _averageResult]; 
+        diag_log text format["%1: Average: %2s / %3 = %4ms", _entry, _total, _count, _averageResult];
     } else {
-        diag_log text format["%1: No results", (_counterEntry select 0) ];
+        diag_log text format["%1: No results", _entry];
     };
-} forEach ACE_COUNTERS;
+} count ACE_COUNTERS;
 
 /*
 // Dump PFH Trackers
@@ -53,7 +61,7 @@ diag_log text format["-------------------------------------------"];
     private["_delay"];
     _delay = _x select 2;
     //if(_delay > 0) then { _delay = _delay / 1000; };
-    
+
     diag_log text format["%1: %2s, delay=%3, handle=%4",(_x select 0), _delay, (_x select 3), (_x select 4)];
 } forEach ACE_PERFORMANCE_EXCESSIVE_STEP_TRACKER;
 

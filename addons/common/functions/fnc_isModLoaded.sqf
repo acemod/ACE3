@@ -1,13 +1,22 @@
-/**
- * fn_isModLoaded_f.sqf
- * Descr: Check in cfgPatches if modification is loaded
+/*
  * Author: Glowbal
  *
- * Arguments: [modName STRING (Classname of the mod in cfgPatches)]
- * Return: BOOL true if modification is loaded
- * PublicAPI: true
+ * Check in cfgPatches if modification is loaded
+ *
+ * Arguments:
+ * 0: Mod Name or Classname of the mod in cfgPatches (STRING)
+ * 1: modName STRING
+ *
+ * Return Value:
+ * if modification is loaded (BOOLEAN)
+ *
+ * Example:
+ * isSpecialist = [player] call FUNC(isEOD);
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-(isClass (configFile >> "cfgPatches" >> (_this select 0)))
+params ["_modName"];
+
+(isClass (configFile >> "cfgPatches" >> _modName))

@@ -1,19 +1,20 @@
-/**
- * fn_loadPersonLocal_f.sqf
- * @Descr: Load a person, local
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Load a person, local
  *
- * @Arguments: [unit OBJECT, vehicle OBJECT, caller OBJECT]
- * @Return: void
- * @PublicAPI: false
+ * Arguments:
+ * 0: unit to be loaded <OBJECT>
+ * 1: vehicle that will beloaded<OBJECT>
+ * 2: caller that will load<OBJECT>
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 private ["_unit","_vehicle","_caller","_handle","_loaded","_slotsOpen"];
-_unit = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_vehicle = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_caller = [_this, 2, ObjNull,[ObjNull]] call BIS_fnc_Param;
+params [["_unit",ObjNull,[ObjNull]],["_vehicle",ObjNull,[ObjNull]],["_caller",ObjNull,[ObjNull]]];
 _slotsOpen = false;
 
 if (!alive _unit) then {

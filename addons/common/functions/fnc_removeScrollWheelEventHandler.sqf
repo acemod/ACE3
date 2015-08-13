@@ -3,23 +3,23 @@
  *
  * Remove a scroll wheel event handler.
  *
- * Argument:
- * 0: ID of the event handler (Number)
+ * Arguments:
+ * 0: ID of the event handler <NUMBER>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_actionsVar", "_currentId", "_actionIDs", "_actions"];
 
-PARAMS_1(_id);
+params ["_id"];
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
-_currentId = _actionsVar select 0;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_currentId", "_actionIDs", "_actions"];
 
 _id = _actionIDs find _id;
 
@@ -31,4 +31,4 @@ _actionIDs = _actionIDs - [-1];
 _actions set [_id, []];//{}
 _actions = _actions - [[]];//[{}]
 
-missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_currentId, _actionIDs, _actions]];
+missionNamespace setVariable ["ACE_EventHandler_ScrollWheel", [_currentId, _actionIDs, _actions]]; // @todo Test use _actionVar is Posible

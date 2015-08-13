@@ -1,9 +1,18 @@
-// by commy2
 /*
-    usage:
-
-    (configFile >> "CfgAmmo") call FUNC(exportConfig);
-*/
+ * Author: commy2
+ * Export Config Entrys that Written in RTP
+ *
+ * Arguments:
+ * Config Path <CONFIG>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [(configFile >> "CfgAmmo")] call FUNC(exportConfig);
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private "_fnc_logEntries";
@@ -11,7 +20,7 @@ private "_fnc_logEntries";
 _fnc_logEntries = {
     private ["_p", "_t", "_e", "_a", "_i"];
 
-    PARAMS_2(_c,_d);
+    params ["_c", "_d"];
 
     _p = inheritsFrom _c;
 

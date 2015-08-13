@@ -11,7 +11,7 @@
  * 4: localizedDescription <STRING>
  * 5: possibleValues <ARRAY>
  * 6: isForced <BOOL>
- * 7: defaultValue (Any)
+ * 7: defaultValue <ANY>
  *
  * Return Value:
  * None
@@ -20,9 +20,10 @@
  */
 #include "script_component.hpp"
 
-PARAMS_8(_name,_typeName,_isClientSetable,_localizedName,_localizedDescription,_possibleValues,_isForced,_value);
-
 private ["_settingData"];
+
+params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_isForced", "_value"];
+
 
 _settingData = [_name] call FUNC(getSettingData);
 

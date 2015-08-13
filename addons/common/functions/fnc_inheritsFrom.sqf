@@ -1,17 +1,21 @@
-/**
- * fn_inheritsFrom.sqf
- * @Descr: Checks whether a given configuration name appears in the inheritance tree of a specific configuration entry.
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
  *
- * @Arguments: [configEntry CONFIG, configname STRING]
- * @Return: BOOL
- * @PublicAPI: true
+ * Checks whether a given configuration name appears in the inheritance tree of a specific configuration entry.
+ *
+ * Arguments:
+ * 0: configEntry (CONFIG)
+ * 1: configname (STING)
+ *
+ * Return Value:
+ * BOOLEAN
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
- private ["_match"];
-PARAMS_2(_configEntry,_configMatch);
+private ["_match"];
+params ["_configEntry", "_configMatch"];
 
 if (configName _configEntry == _configMatch) exitWith { true };
 if (configName _configEntry == ",") exitWith { false };

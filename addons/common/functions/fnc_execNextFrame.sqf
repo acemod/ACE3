@@ -1,19 +1,18 @@
 /*
  * Author: esteldunedain
- *
  * Executes a code on the next frame
  *
- * Argument:
- * 0: Code to execute (Code)
- * 1: Parameters to run the code with (Array)
+ * Arguments:
+ * 0: Code to execute <CODE>
+ * 1: Parameters to run the code with <ARRAY>
  *
- * Return value:
- * PFH handler ID
+ * Return Value:
+ * PFH handler ID <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_func,_params);
-
+params ["_params", "_func"];
 if (diag_frameno != GVAR(nextFrameNo)) then {
     GVAR(nextFrameBufferA) pushBack [_params, _func];
 } else {

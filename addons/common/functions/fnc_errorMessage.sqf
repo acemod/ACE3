@@ -21,19 +21,15 @@ if (!hasInterface) exitWith {};
 // wait for display
 if (isNull (call BIS_fnc_displayMission)) exitWith {
     [{
+        params ["_args","_idPFH"];
         if (isNull (call BIS_fnc_displayMission)) exitWith {};
-
-        (_this select 0) call FUNC(errorMessage);
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _args call FUNC(errorMessage);
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
 
     }, 1, _this] call CBA_fnc_addPerFrameHandler;
 };
 
-private ["_onOK", "_onCancel"];
-
-PARAMS_2(_textHeader,_textMessage);
-_onOK = ARR_SELECT(_this,2,{});
-_onCancel = ARR_SELECT(_this,3,{});
+params ["_textHeader", "_textMessage", ["_onOK", {}], ["_onCancel", {}]];
 
 if (typeName _textMessage == "STRING") then {
     _textMessage = parseText _textMessage;

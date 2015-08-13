@@ -10,7 +10,7 @@
  * 4: Close Code (on ctrl-home press) <CODE>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [(localize "STR_ACE_microdagr_itemName"), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditionCode, _toggleCode, _closeCode] call ace_common_fnc_deviceKeyRegisterNew
@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_5(_displayName,_iconImage,_conditionCode,_toggleCode,_closeCode);
+params ["_displayName", "_iconImage", "_conditionCode", "_toggleCode", "_closeCode"];
 
 GVAR(deviceKeyHandlingArray) pushBack [_displayName,_iconImage,_conditionCode,_toggleCode,_closeCode];
 [] call FUNC(deviceKeyFindValidIndex);

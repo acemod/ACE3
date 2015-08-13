@@ -1,10 +1,22 @@
-//fnc_hashGet.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 private ["_val", "_index"];
 // diag_log text format["%1 HASH GET: %2", ACE_diagTime, _this];
 
-PARAMS_2(_hash,_key);
+params ["_hash", "_key"];
 
 ERRORDATA(2);
 _val = nil;

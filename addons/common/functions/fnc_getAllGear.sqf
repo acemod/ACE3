@@ -3,10 +3,10 @@
  *
  * Returns an array containing all items of a given unit
  *
- * Argument:
- * 0: Unit (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Array with all the gear, format:
  *     0: headgear (String)
  *     1: goggles (String)
@@ -19,10 +19,11 @@
  *    17: map, compass, watch, etc. (Array)
  *    18: binocluar (String)
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 if (isNull _unit) exitWith {[
     "",

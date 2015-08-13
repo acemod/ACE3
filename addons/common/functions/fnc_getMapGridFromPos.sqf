@@ -2,7 +2,7 @@
  * Author: VKing, PabstMirror
  * Gets a 10-digit map grid for the given world position
  *
- * Argument:
+ * Arguments:
  * 0: Position (2D Position) <ARRAY>
  * 1: Return type; false for array of easting and northing, true for single string <Bool>
  *
@@ -18,8 +18,7 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_1(_pos);
-DEFAULT_PARAM(1,_returnSingleString,false);
+params ["_pos", ["_returnSingleString", false]];
 
 private["_count", "_easting", "_nativeGrid", "_northing"];
 

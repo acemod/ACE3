@@ -1,20 +1,23 @@
-/**
- * fn_useItem.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_item);
+params ["_unit", "_item"];
 
 private ["_return", "_vehicleUsage"];
 
-_vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
+_vehicleUsage = param[2, false, [false]];
 
 _return = false;
 if (!_vehicleUsage) then {
@@ -31,6 +34,6 @@ if (!_vehicleUsage) then {
         };
     };
 };
-// TODO implement shared item functionality for with vehicles.
+// @TODO implement shared item functionality for with vehicles.
 
-_return;
+_return

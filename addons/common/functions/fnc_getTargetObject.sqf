@@ -3,17 +3,19 @@
  *
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
  *
- * Argument:
- * 0: Maximal distance to search. (Number)
+ * Arguments:
+ * 0: Maximal distance to search. <NUMBER>
  *
- * Return value:
- * Nearest object directly in line of sight, if none objNull (Object)
+ * Return Value:
+ * Nearest object directly in line of sight, if none objNull <OBJECT>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_position", "_laser", "_intersects"];
 
-PARAMS_1(_maxDistance);
+params ["_maxDistance"];
 
 _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];

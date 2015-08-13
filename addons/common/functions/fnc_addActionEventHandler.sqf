@@ -1,26 +1,24 @@
 /*
  * Author: commy2
- *
  * Add an addAction event to a unit. Used to handle multiple addAction events. Global arguments, local effects. Does only work for player controlled units.
  *
- * Argument:
- * 0: Unit the action should be assigned to (Object)
- * 1: Name of the action, e.g. "DefaultAction" (String)
- * 2: Condition (Code or String)
- * 3: Code to execute (Code or String)
+ * Arguments:
+ * 0: Unit the action should be assigned to <OBJECT>
+ * 1: Name of the action, e.g. "DefaultAction" <STRING>
+ * 2: Condition <CODE, STRING>
+ * 3: Code to execute <CODE, STRING>
  *
- * Return value:
- * ID of the action (used to remove it later).
+ * Return Value:
+ * ID of the action (used to remove it later) <NUMBER>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_action", "_condition", "_statement", "_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
-//IGNORE_PRIVATE_WARNING("_count", "_index", "_return", "_target");
+private ["_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
 
-_unit = _this select 0;
-_action = _this select 1;
-_condition = _this select 2;
-_statement = _this select 3;
+
+params ["_unit","_action","_condition","_statement"];
 
 if (typeName _condition == "STRING") then {
   _condition = compile _condition;
@@ -72,4 +70,4 @@ if (_actionID == -1) then {
 
 _unit setVariable [_name, [_actionID, [_id, _actionIDs, _actions], _unit], false];
 
-_id
+_id // Return

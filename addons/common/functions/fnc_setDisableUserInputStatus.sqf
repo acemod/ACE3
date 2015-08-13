@@ -1,15 +1,20 @@
-/**
- * fn_setDisableUserInputStatus.sqf
- * @Descr: Disables the user input. Works stacked.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: [id STRING, disable BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Disables the user input. Works stacked.
+ *
+ * Arguments:
+ * 0: id <STRING>
+ * 1: disable <BOOLEAN>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_2(_id,_disable);
+params ["_id", "_disable"];
 
 if (isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = [];
