@@ -19,7 +19,9 @@
  */
 #include "script_component.hpp"
 
-params ["_object", "_typeNum", "_parentPath", "_action"];
+if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
+    ERROR("Bad Params");
+};
 
 private ["_varName","_actionList"];
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
