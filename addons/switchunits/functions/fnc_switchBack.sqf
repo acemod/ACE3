@@ -28,6 +28,11 @@ DFUNC(pfhSwitchBack) = {
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;
         deleteVehicle _currentUnit;
+
+        private "_layer";
+        _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
+        _layer cuttext ["","plain"];
+
         [(_this select 1)] call cba_fnc_removePerFrameHandler;
     };
 };

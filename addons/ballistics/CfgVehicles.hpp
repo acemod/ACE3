@@ -225,5 +225,27 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_API_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);
         };
+        class AnimationSources {
+            class Ammo_source {
+                source = "user";
+                animPeriod = 1;
+                initPhase = 0;
+            };
+            class AmmoOrd_source {
+                source = "user";
+                animPeriod = 1;
+                initPhase = 1;
+            };
+            class Grenades_source {
+                source = "user";
+                animPeriod = 1;
+                initPhase = 1;
+            };
+            class Support_source {
+                source = "user";
+                animPeriod = 1;
+                initPhase = 1;
+            };
+        };
     };
 };

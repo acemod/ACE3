@@ -16,7 +16,7 @@ private ["_menuDepth", "_mixColor", "_pathCount", "_row", "_shadowColor", "_text
 
 //Mixes 2 colors (number arrays) and makes a color string "#AARRGGBB" for structured text
 _mixColor = {
-    PARAMS_3(_color1,_color2,_ratio);
+    params ["_color1", "_color2", "_ratio"];
     private ["_return", "_mix", "_index"];
     _return = "";
     for "_index" from 0 to 3 do {

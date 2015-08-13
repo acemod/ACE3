@@ -17,7 +17,8 @@
 
 private ["_unit", "_launcher", "_config"];
 
-PARAMS_1(_unit);
+params ["_unit"];
+
 if (!local _unit) exitWith {};
 
 _launcher = secondaryWeapon _unit;

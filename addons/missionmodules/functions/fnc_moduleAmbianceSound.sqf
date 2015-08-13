@@ -117,7 +117,7 @@ if (_activated && local _logic) then {
                 };
             };
         };
-    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, ACE_time] ] call cba_fnc_addPerFrameHandler;
+    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, ACE_time] ] call CBA_fnc_addPerFrameHandler;
 };
 
 true;

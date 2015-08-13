@@ -27,19 +27,22 @@ DFUNC(pfhMarkAiOnMap) = {
     _args = _this select 0;
     _sides = _args select 0;
 
-    
+
     // delete markers
     {
       deleteMarkerLocal _x;
     } forEach GVAR(AllMarkerNames);
 
-     if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
-                
+    // reset the array
+    GVAR(AllMarkerNames) = [];
+
+    if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
+
         // create markers
         {
             if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
                 private ["_markerName", "_marker", "_markerColor"];
-                
+
                 _markerName = str _x;
 
                 _marker = createMarkerLocal [_markerName, position _x];

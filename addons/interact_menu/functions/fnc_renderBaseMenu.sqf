@@ -18,8 +18,8 @@ BEGIN_COUNTER(fnc_renderBaseMenu)
 
 private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
 
-EXPLODE_2_PVT(_this,_object,_baseActionNode);
-EXPLODE_1_PVT(_baseActionNode,_actionData);
+params ["_object", "_baseActionNode"];
+_baseActionNode params ["_actionData"];
 
 _distance = _actionData select 8;
 
@@ -36,7 +36,7 @@ _pos = if((count _this) > 2) then {
 };
 
 // For non-self actions, exit if the action is too far away or ocluded
-if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
+if (GVAR(openedMenuType) == 0 && (vehicle ACE_player == ACE_player) && (isNull curatorCamera) &&
     {
         private ["_headPos","_actualDistance"];
         _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
@@ -44,7 +44,7 @@ if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
 
         if (_actualDistance > _distance) exitWith {true};
 
-        if (_actualDistance > 1.5) exitWith {
+        if ((_actualDistance > 1.5) && {!((_actionData select 9) select 4)}) exitWith {
             // If distance to action is greater than 1.5 m, check LOS
             _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
             lineIntersects _line

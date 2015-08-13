@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-private "_calledByClicking";
-_calledByClicking = _this select 1;
+params ["_menuType", "_calledByClicking"];
 
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};
@@ -46,6 +45,8 @@ if(GVAR(actionSelected)) then {
     };
 };
 
+["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
@@ -53,7 +54,5 @@ GVAR(openedMenuType) = -1;
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
 
 true

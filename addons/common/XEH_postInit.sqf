@@ -6,7 +6,7 @@
 //Singe PFEH to handle execNextFrame and waitAndExec:
 [{
     private ["_entry"];
-    
+
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
         _entry = GVAR(waitAndExecArray) deleteAt 0;
@@ -37,6 +37,21 @@
     };
 }] call FUNC(addEventhandler);
 
+
+["HeadbugFixUsed", {
+    PARAMS_2(_profileName,_animation);
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
+
+
+//~~~~~Get Map Data~~~~~
+//Find MGRS zone and 100km grid for current map
+[] call FUNC(getMGRSdata);
+//Prepare variables for FUNC(getMapGridFromPos)/FUNC(getMapPosFromGrid)
+[] call FUNC(getMapGridData);
+
+
+
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
@@ -55,6 +70,10 @@
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+
+if (isServer) then {
+    ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
+};
 
 // hack to get PFH to work in briefing
 [QGVAR(onBriefingPFH), "onEachFrame", {
@@ -99,8 +118,9 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
-
+if (isServer) then {
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+};
 call FUNC(checkFiles);
 
 
@@ -137,7 +157,16 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, [false]] call cba_fnc_addPerFrameHandler;
+}, 0, [false]] call CBA_fnc_addPerFrameHandler;
+
+
+["SettingsInitialized", {
+    [
+        GVAR(checkPBOsAction),
+        GVAR(checkPBOsCheckAll),
+        call compile GVAR(checkPBOsWhitelist)
+    ] call FUNC(checkPBOs)
+}] call FUNC(addEventHandler);
 
 
 /***************************************************************/
@@ -252,7 +281,7 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
 
-}, 0, []] call cba_fnc_addPerFrameHandler;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
 // PFH to raise camera created event. Only works on these cams by BI.
@@ -277,7 +306,7 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+}, 1, []] call CBA_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -305,20 +334,20 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
-
-["SettingsInitialized", {
-    [
-        GVAR(checkPBOsAction),
-        GVAR(checkPBOsCheckAll),
-        call compile GVAR(checkPBOsWhitelist)
-    ] call FUNC(checkPBOs)
-}] call FUNC(addEventHandler);
 
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
+
+// Register localizations for the Keybinding categories
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
 
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {

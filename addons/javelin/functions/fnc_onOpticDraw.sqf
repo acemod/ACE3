@@ -56,7 +56,7 @@ if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1}) 
     };
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
-    uiNamespace setVariable["ACE_RscOptics_javelin_PFH", nil];
+    GVAR(pfehID) = -1;
 };
 
 // Find a target within the optic range

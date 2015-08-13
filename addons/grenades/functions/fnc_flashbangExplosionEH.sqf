@@ -40,7 +40,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                     [_unit, false] call EFUNC(common,disableAI);
                 };
                 _unit setSkill (skill _unit * 50);
-            }, [_x], (7 * _strength), 0.1] call EFUNC(common,waitAndExecute);  //0.1 precision is fine for AI
+            }, [_x], (7 * _strength)] call EFUNC(common,waitAndExecute);
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
@@ -62,7 +62,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             //Add ace_hearing ear ringing sound effect
             if ((isClass (configFile >> "CfgPatches" >> "ACE_Hearing")) && {_strength > 0}) then {
-                [_x, 0.5 + (_strength / 2)] call EFUNC(hearing,earRinging);
+                [_x, (20 * _strength)] call EFUNC(hearing,earRinging);
             };
 
             // account for people looking away by slightly
@@ -95,7 +95,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             [{
                 PARAMS_1(_light);
                 deleteVehicle _light;
-            }, [_light], 0.1, 0] call EFUNC(common,waitAndExecute);
+            }, [_light], 0.1] call EFUNC(common,waitAndExecute);
 
             // blind player
             if (_strength > 0.1) then {
@@ -113,7 +113,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 //FULLRECOVERY - end effect
                 [{
                     GVAR(flashbangPPEffectCC) ppEffectEnable false;
-                }, [], (17 * _strength), 0] call EFUNC(common,waitAndExecute);
+                }, [], (17 * _strength)] call EFUNC(common,waitAndExecute);
             };
         };
     };

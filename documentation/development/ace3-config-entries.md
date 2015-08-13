@@ -23,6 +23,8 @@ ace_dragging_dragposition
 ace_dragging_dragdirection
 ace_gforcecoef
 ace_offset
+ace_hasReserveParachute
+ace_reserveParachute
 ```
 
 
@@ -63,6 +65,8 @@ ace_barrelLength
 ace_laserpointer
 ace_nextmodeclass
 ace_modedescription
+ace_hearing_protection
+ace_hearing_lowerVolume
 ```
 
 
