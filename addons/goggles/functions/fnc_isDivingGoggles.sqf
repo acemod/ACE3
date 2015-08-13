@@ -14,8 +14,8 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_result", "_glasses"];
-_glasses = _this select 0;
+private ["_result"];
+params ["_glasses"];
 _result = _glasses == "G_Diving";
 if (_result) exitWith {true};
 _result = [configFile >> "CfgGlasses" >> _glasses, configFile >> "CfgGlasses" >> "G_Diving"] call CBA_fnc_inheritsFrom;

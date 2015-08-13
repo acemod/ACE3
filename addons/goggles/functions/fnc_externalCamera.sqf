@@ -17,4 +17,4 @@
 
 if (GVAR(showInThirdPerson)) exitWith { false };
 
-(cameraView in ["EXTERNAL", "GROUP"] || {call EFUNC(common,isFeatureCameraActive)})
+(cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive))

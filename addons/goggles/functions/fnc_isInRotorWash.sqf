@@ -19,11 +19,7 @@
  */
 #include "script_component.hpp"
 private ["_heli", "_unit", "_result", "_radius"];
-_unit = _this select 0;
-_radius = 15;
-if (count _this > 1) then {
-    _radius = _this select 1;
-};
+params ["_unit", ["_radius", 15]];
 _result = [false, _radius + 2];
 
 _heli = (getPosATL _unit) nearEntities [["Helicopter"], _radius];

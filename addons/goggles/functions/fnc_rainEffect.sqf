@@ -17,8 +17,8 @@
 private ["_fnc_underCover"];
 if (isNull(ace_player) || {!(alive ace_player)}) exitWith {};
 _fnc_underCover = {
-    private ["_pos", "_unit"];
-    _unit = (_this select 0);
+    private "_pos";
+    params ["_unit"];
     if (vehicle _unit != _unit && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {true};
     _pos = eyePos _unit;
     ((positionCameraToWorld [0,0,1] select 2) < ((positionCameraToWorld [0,0,0] select 2) - 0.4)) || {(lineIntersects [_pos, _pos vectorAdd [0,0,15], _unit])}

@@ -14,12 +14,7 @@
  * Public: No
  */
 private ["_effectIndex"];
-
-_effectIndex = switch true do {
-       case (_this <= 0.04): {0};
-       case (_this <= 0.06): {1};
-       case (_this <= 0.09): {2};
-       default {3};
-};
-
-_effectIndex
+if (_this <= 0.04) exitWith {0};
+if (_this <= 0.06)) exitWith {1};
+if (_this <= 0.09) exitWith {2};
+3

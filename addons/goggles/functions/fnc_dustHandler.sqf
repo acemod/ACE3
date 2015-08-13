@@ -10,14 +10,14 @@
  * None
  *
  * Example:
- *ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call ace_goggles_fnc_dustHandler;}];
+ * ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call ace_goggles_fnc_dustHandler;}];
  *
  * Public: No
  */
 #include "script_component.hpp"
 private ["_bullets", "_position", "_surface", "_weapon", "_cloudType", "_unit"];
-EXPLODE_2_PVT(_this,_unit,_weapon);
-if (_unit != ace_player) exitWith {true};
+params ["_unit", "_weapon"];
+if (_unit != ACE_Player) exitWith {true};
 _cloudType = "";
 
 if (rain > 0.1) exitWith {true};

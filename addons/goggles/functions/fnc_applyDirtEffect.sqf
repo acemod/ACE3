@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (cameraOn != ace_player || {call FUNC(externalCamera)}) exitWith{false};
+if (cameraOn != ace_player ||  FUNC(externalCamera)) exitWith{false};
 private ["_dirtImage", "_applied", "_effects"];
 _effects = GETGLASSES(ace_player);
 _effects set [DIRT, true];
