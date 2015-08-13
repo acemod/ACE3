@@ -7,7 +7,7 @@
  * 1: ???
  * 2: Activation State <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

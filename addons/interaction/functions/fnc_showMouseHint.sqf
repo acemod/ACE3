@@ -7,7 +7,7 @@
  * 1: Right Click Text <STRING>
  * 2: Scroll Text <STRING> (Optional)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to join a group <BOOL>
  *
  * Example:

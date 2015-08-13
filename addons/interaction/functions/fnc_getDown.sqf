@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to interact with civilian <BOOL>
  *
  * Example:

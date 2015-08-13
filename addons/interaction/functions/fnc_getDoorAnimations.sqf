@@ -6,7 +6,7 @@
  * 0: House <OBJECT>
  * 1: Door <STRING>
  *
- * Return value:
+ * Return Value:
  * Animation and Locked variable <ARRAY>
  * 0: Animation <STRING>
  * 1: Locked variable <STRING>

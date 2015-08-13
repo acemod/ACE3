@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

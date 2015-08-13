@@ -7,7 +7,7 @@
  * 1: Target <OBJECT>
  * 2: Shoulder which was tapped <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

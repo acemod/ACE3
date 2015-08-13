@@ -6,7 +6,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Distance in meters <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Vehicle in range of player <BOOL>
  *
  * Example:

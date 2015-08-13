@@ -14,7 +14,7 @@
  * 1: Select Action <CODE>
  * 2: Cancel Action <CODE>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

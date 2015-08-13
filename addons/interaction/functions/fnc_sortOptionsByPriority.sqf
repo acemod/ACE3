@@ -5,7 +5,7 @@
  * Arguments:
  * Actions <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

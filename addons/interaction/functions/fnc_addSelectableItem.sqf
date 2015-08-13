@@ -8,7 +8,7 @@
  * 2: Picture <STRING>
  * 3: Data <STRING/CODE>
  *
- * Return value:
+ * Return Value:
  * Container <ARRAY/NUMBER>
  *
  * Example:

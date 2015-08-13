@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Distance <NUMBER>
  *
- * Return value:
+ * Return Value:
  * House objects and door <ARRAY>
  * 0: House <OBJECT>
  * 1: Door Name <STRING>

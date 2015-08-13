@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Team <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

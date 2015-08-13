@@ -7,7 +7,7 @@
  * 1: X Coordinate <NUMBER>
  * 2: Y Coordinate <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

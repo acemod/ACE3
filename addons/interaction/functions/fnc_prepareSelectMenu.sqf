@@ -6,7 +6,7 @@
  * 0: Header Text <STRING>
  * 1: Approve Button Text <STRING>
  *
- * Return value:
+ * Return Value:
  * Container object <NUMBER>
  *
  * Example:
