@@ -38,7 +38,7 @@ if (GVAR(DustHandler) != -1) exitWith { // should be fixed in dev CBA
 };
 GVAR(DustHandler) = [{
     if (GVAR(removePFHonNextFrame)) exitWith {
-        [_this select 1] call CALLSTACK(cba_fnc_removePerFrameHandler);
+        [_this select 1] call CALLSTACK(CBA_fnc_removePerFrameHandler);
         GVAR(DustHandler) = -1;
     };
     if (ACE_diagTime >= GETDUSTT(DTIME) + 3) then {
@@ -55,7 +55,7 @@ GVAR(DustHandler) = [{
             [{GVAR(PostProcessEyes) ppEffectEnable false;}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
             SETDUST(DACTIVE,false);
             SETDUST(DBULLETS,0);
-            [_this select 1] call CALLSTACK(cba_fnc_removePerFrameHandler);
+            [_this select 1] call CALLSTACK(CBA_fnc_removePerFrameHandler);
             GVAR(DustHandler) = -1;
         };
     };

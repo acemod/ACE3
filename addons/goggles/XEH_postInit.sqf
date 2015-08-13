@@ -88,13 +88,13 @@ player addEventHandler ["Killed",{
         [GVAR(EyesDamageScript)] call CALLSTACK(cba_fnc_removePreFrameHandler);
     };
     if (GVAR(DustHandler) != -1) then {
-        [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+        [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
         GVAR(DustHandler) = -1;
     };
 }];
 player addEventHandler ["Fired", DFUNC(dustHandler)];
-player AddEventHandler ["Take", DFUNC(checkGlasses)];
-player AddEventHandler ["Put", DFUNC(checkGlasses)];
+player addEventHandler ["Take", DFUNC(checkGlasses)];
+player addEventHandler ["Put", DFUNC(checkGlasses)];
 
 ["GlassesChanged",{
     SETGLASSES(ace_player,GLASSESDEFAULT);

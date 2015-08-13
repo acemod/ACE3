@@ -28,7 +28,7 @@ if !(_rwEnabled) exitWith {
     if (GVAR(PostProcessEyes_Enabled)) then {
         GVAR(PostProcessEyes_Enabled) = false;
         if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-            [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+            [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
             GVAR(DustHandler) = -1;
         };
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
@@ -67,7 +67,7 @@ if ((_rotorWash select 1) <= 15) then {
     };
     _scale = 1 - _scale;
     if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-        [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+        [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
         GVAR(DustHandler) = -1;
     };
     if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
