@@ -17,8 +17,8 @@
 
 private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL", "_ambientBrightness", "_maxDistance"];
 
-//don't show nametags in spectator
-if ((isNull ACE_player) || {!alive ACE_player}) exitWith {};
+//don't show nametags in spectator or if RscDisplayMPInterrupt is open
+if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
 _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
 _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
