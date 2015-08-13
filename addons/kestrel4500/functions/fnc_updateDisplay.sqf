@@ -3,10 +3,10 @@
  * Updates the Kestrel 4500 dialog text boxes.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  *
@@ -22,29 +22,9 @@ private ["_outputData"];
 
 _outputData = [] call FUNC(generateOutputData);
 
-ctrlSetText [74100, _outputData select 0];
-ctrlSetText [74200, _outputData select 1];
-ctrlSetText [74201, _outputData select 2];
-
-ctrlSetText [74300, _outputData select 3];
-ctrlSetText [74301, _outputData select 4];
-ctrlSetText [74302, _outputData select 5];
-
-ctrlSetText [74303, _outputData select 6];
-ctrlSetText [74304, _outputData select 7];
-ctrlSetText [74305, _outputData select 8];
-
-ctrlSetText [74400, _outputData select 9];
-ctrlSetText [74401, _outputData select 10];
-
-ctrlSetText [74500, _outputData select 11];
-
-ctrlSetText [74600, _outputData select 12];
-ctrlSetText [74601, _outputData select 13];
-ctrlSetText [74602, _outputData select 14];
-ctrlSetText [74603, _outputData select 15];
-ctrlSetText [74604, _outputData select 16];
-ctrlSetText [74605, _outputData select 17];
+{
+    ctrlSetText [_x , _outputData select _foreachindex];
+} forEach [74100, 74200, 74201, 74300, 74301, 74302, 74303, 74304, 74305, 74400, 74401, 74500, 74600, 74601, 74602, 74603, 74604, 74605];
 
 if (GVAR(referenceHeadingMenu) == 1) then {
     if (GVAR(referenceHeadingAutoSet)) then {
