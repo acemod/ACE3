@@ -17,5 +17,6 @@ params ["_unit","_backpack"];
 _target = objNull;
 {
     if (backpackContainer _x == _backpack) then {_target = _x; breakTo "main"};
-} forEach nearestObjects [_unit, ["Man"],2];
+} count nearestObjects [_unit, ["Man"], 5];
+if (isNull _target) exitWith {ACE_Player};
 _target
