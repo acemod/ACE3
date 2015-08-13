@@ -49,7 +49,7 @@ GVAR(oldVel) = _newVel;
 */
 
 _average = 0;
-if (!isNil {GVAR(GForces) select 0}) then {
+if !(GVAR(GForces) isEqualTo []) then {
     _sum = 0;
     _sumDif = {
         _sum = _sum + _x;
