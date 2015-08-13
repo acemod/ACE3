@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 
 private ["_sumVelocity", "_gunner", "_turret", "_FCSMagazines", "_FCSElevation", "_offset", "_zeroing"];
-params ["_vehicle", "_weapon", "_ammo", "_magazine", "_projectile"]
+params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine", "_projectile"]
 
 _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
 _turret = [_gunner] call EFUNC(common,getTurretIndex);
