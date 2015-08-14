@@ -4,15 +4,15 @@
  *
  * Arguments:
  * 0: The unit <OBJECT>
- * 0: The object holding the nozzle <OBJECT>
+ * 1: The object holding the nozzle <OBJECT>
  *
  * Return Value:
- * Can disconnect
+ * Can disconnect <BOOL>
  *
  * Example:
  * [player, truck] call ace_refuel_fnc_canDisconnect
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

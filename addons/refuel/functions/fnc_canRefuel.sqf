@@ -6,12 +6,12 @@
  * 0: The target <OBJECT>
  *
  * Return Value:
- * Can refuel
+ * Can refuel <BOOL>
  *
  * Example:
  * [unit, target] call ace_refuel_fnc_canRefuel
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 private ["_fuel"];

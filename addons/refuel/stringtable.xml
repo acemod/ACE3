@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Logistics">
+    <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
             <English>Refuel Settings</English>
             <German>Tankeinstellungen</German>
@@ -84,6 +84,26 @@
         <Key ID="STR_ACE_Refuel_TurnOff">
             <English>Close nozzle</English>
             <German>Hahn zudrehen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
+            <English>%1 Liters fueled</English>
+            <German>%1 Liters getankt</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_SourceEmpty">
+            <English>The fuel source is empty.</English>
+            <German>Die Treibstoffquelle ist leer.</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_TooFar">
+            <English>Maximum fuel hose length reached.</English>
+            <German>Maximale Schlauchlänge erreicht.</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_Completed">
+            <English>Fueling completed</English>
+            <German>Betankung abgeschlossen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_Stopped">
+            <English>Fueling stopped</English>
+            <German>Betankung angehalten</German>
         </Key>
         <Key ID="STR_ACE_Refuel_">
             <English></English>

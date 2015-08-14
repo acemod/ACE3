@@ -10,17 +10,16 @@
  * 3: The nozzle <OBJECT>
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
  * [player, tank, [0,0,0], nozzle] call ace_refuel_fnc_connectNozzleAction
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 #define FLOWRATE_GND 0.165 // TODO ace_vehicles messes with fuel capacity -  why?
 #define FLOWRATE_AIR 0.67
-#define RATE 1 // FIXME use global var from module
 
 private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_endASL", "_rate", "_maxFuel"];
 
@@ -87,10 +86,10 @@ _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 
 _source = _nozzle getVariable QGVAR(source);
 if (_source == _target) exitWith {
-    _source setVariable [QGVAR(connected), nil, true]; 
+    _source setVariable [QGVAR(isConnected), false, true]; 
     ropeDestroy (_nozzle getVariable QGVAR(rope));
     deleteVehicle _nozzle;
-    _unit setVariable [QGVAR(isRefueling), nil];
+    _unit setVariable [QGVAR(isRefueling), false];
 };
 
 _nozzle attachTo [_target, _endPosTestOffset];
@@ -98,9 +97,9 @@ _nozzle setVariable [QGVAR(sink), _target, true];
 _nozzle setVariable [QGVAR(fueling), 1, true];
 _target setVariable [QGVAR(nozzle), _nozzle, true];
 
-_rate = if (_target isKindOf "Air") then { FLOWRATE_AIR * RATE
+_rate = if (_target isKindOf "Air") then { FLOWRATE_AIR * GVAR(rate)
 } else {
-    FLOWRATE_GND * RATE
+    FLOWRATE_GND * GVAR(rate)
 };
 _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "fuelCapacity");
 

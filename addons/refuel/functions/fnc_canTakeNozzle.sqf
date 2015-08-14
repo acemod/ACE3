@@ -7,26 +7,18 @@
  * 1: The target <OBJECT>
  *
  * Return Value:
- * Can connect
+ * Can connect <BOOL>
  *
  * Example:
  * [player, target] call ace_refuel_fnc_canTakeNozzle
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_connected"];
 params ["_unit", "_target"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > 3.5}) exitWith {false};
+if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 // Check if the fuel source is already in use
-_connected = _target getVariable [QGVAR(connected), nil];
-if !(isNil "_connected") exitWith {false};
-
-// Check if the player is already carrying another fuel nozzle
-_connected = _unit getVariable [QGVAR(isRefueling), nil];
-if !(isNil "_connected") exitWith {false};
-
-true
+!(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

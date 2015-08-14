@@ -8,7 +8,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
@@ -20,6 +20,3 @@ params ["_logic", "_units", "_activated"];
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(rate), "rate"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(civ_fuel), "civ_fuel"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(mil_fuel), "mil_fuel"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(stationary_fuel), "stationary_fuel"] call EFUNC(common,readSettingFromModule);

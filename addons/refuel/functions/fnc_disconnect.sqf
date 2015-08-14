@@ -7,12 +7,12 @@
  * 1: The object holding the nozzle <OBJECT>
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
  * [unit, truck] call ace_refuel_fnc_disconnect
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

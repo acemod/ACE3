@@ -7,39 +7,24 @@
  * 1: The target <OBJECT>
  *
  * Return Value:
- * Number of liters left
+ * Fuel left (in liters) <NUMBER>
  *
  * Example:
  * [unit, target] call ace_refuel_fnc_getFuel
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
-private ["_fuel", "_type"];
+private ["_fuel"];
 params ["_unit", "_target"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > 7}) exitWith {0};
+if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit}) exitWith {0};
 
-_fuel = _target getVariable [QGVAR(fuel), -2];
+_fuel = _target getVariable [QGVAR(currentFuelCargo), -2];
+
 if (_fuel == -2) then {
-    _type = getText (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_type");
-    if (_type == "mil") then {
-        //_fuel = GVAR(mil_fuel); // FIXME
-        _fuel = 20000; // FIXME
-        _target setVariable [QGVAR(fuel), _fuel, true];
-    } else {
-        if (_type == "civ") then {
-            _fuel = GVAR(civ_fuel);
-            _target setVariable [QGVAR(fuel), _fuel, true];
-        } else {
-            if (_type == "stationary") then {
-                _fuel = GVAR(stationary_fuel);
-                _target setVariable [QGVAR(fuel), _fuel, true];
-            } else {
-                _fuel = 0;
-            };
-        };
-    };
+    _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(fuelCargo));
+    _target setVariable [QGVAR(currentFuelCargo), _fuel, true];
 };
 
 _fuel

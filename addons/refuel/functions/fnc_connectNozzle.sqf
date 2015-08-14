@@ -9,12 +9,12 @@
  * 2: The nozzle <OBJECT> (optional)
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
  * [unit, target, nozzle] call ace_refuel_fnc_connectNozzle
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -25,7 +25,7 @@
 private ["_nozzle", "_actionID"];
 params ["_unit", "_target"];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), nil];
+_nozzle = _unit getVariable QGVAR(nozzle);
 if (isNil "_nozzle") exitWith {};
 
 GVAR(placeAction) = PLACE_WAITING;
@@ -38,7 +38,7 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
 [{ 
     private["_virtualPos", "_virtualPosASL", "_lineInterection"];
     params ["_args","_pfID"];
-    EXPLODE_4_PVT(_args,_unit,_target,_nozzle,_actionID);
+    _args params ["_unit", "_target", "_nozzle", "_actionID"];
     
     _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {

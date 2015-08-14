@@ -7,19 +7,19 @@
  * 1: The target <OBJECT>
  *
  * Return Value:
- * NIL
+ * Can Connect Nozzle <BOOL>
  *
  * Example:
- * [unit, target, nozzle] call ace_refuel_fnc_connectNozzle
+ * [unit] call ace_refuel_fnc_canConnectNozzle
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_nozzle"];
-params ["_unit", "_target"];
+params ["_unit"];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), nil];
+_nozzle = _unit getVariable QGVAR(nozzle);
 if (isNil "_nozzle") exitWith {false};
 
 true

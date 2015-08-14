@@ -12,7 +12,7 @@
  * Example:
  * [player, nozzle] call ace_refuel_fnc_canTurnOff
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

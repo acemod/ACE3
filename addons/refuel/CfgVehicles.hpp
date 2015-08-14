@@ -26,7 +26,7 @@
                 class GVAR(connect) { \
                     displayName = CSTRING(connect); \
                     distance = REFUEL_ACTION_DISTANCE; \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
+                    condition = QUOTE([ARR_1(_player)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
@@ -78,7 +78,7 @@ class CfgVehicles {
         category = "ACE";
         function = QUOTE(DFUNC(moduleRefuelSettings));
         functionPriority = 1;
-        isGlobal = 1;
+        isGlobal = 0;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {
@@ -97,24 +97,6 @@ class CfgVehicles {
                         default = 1;
                     };
                 };
-            };
-            class civ_fuel {
-                displayName = CSTRING(RefuelSettings_civ_fuel_DisplayName);
-                description = CSTRING(RefuelSettings_civ_fuel_Description);
-                typeName = "NUMBER";
-                defaultValue = 5000;
-            };
-            class mil_fuel {
-                displayName = CSTRING(RefuelSettings_mil_fuel_DisplayName);
-                description = CSTRING(RefuelSettings_mil_fuel_Description);
-                typeName = "NUMBER";
-                defaultValue = 20000;
-            };
-            class stationary_fuel {
-                displayName = CSTRING(RefuelSettings_stationary_fuel_DisplayName);
-                description = CSTRING(RefuelSettings_stationary_fuel_Description);
-                typeName = "NUMBER";
-                defaultValue = -1;
             };
         };
     };
@@ -155,17 +137,17 @@ class CfgVehicles {
     class Car_F : Car {};
     class Offroad_01_base_f : Car_F {};
     class Truck_F : Car_F {};
-	class Truck_01_base_F: Truck_F {};
-	class Truck_02_base_F : Truck_F {};
-	class Truck_03_base_F : Truck_F {};
-	class Van_01_base_F : Truck_F {};
+    class Truck_01_base_F: Truck_F {};
+    class Truck_02_base_F : Truck_F {};
+    class Truck_03_base_F : Truck_F {};
+    class Van_01_base_F : Truck_F {};
     class Van_01_fuel_base_F : Van_01_base_F {};
-	
-	class Tank_F : Tank {};
-	class APC_Tracked_01_base_F: Tank_F {};
-	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
-	class B_Truck_01_transport_F : Truck_01_base_F {};
-	class B_Truck_01_mover_F: B_Truck_01_transport_F {};
+    
+    class Tank_F : Tank {};
+    class APC_Tracked_01_base_F: Tank_F {};
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
+    class B_Truck_01_transport_F : Truck_01_base_F {};
+    class B_Truck_01_mover_F: B_Truck_01_transport_F {};
     
     class ReammoBox_F;
     class Slingload_01_Base_F : ReammoBox_F {
@@ -182,69 +164,69 @@ class CfgVehicles {
     class B_APC_Tracked_01_CRV_F : B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
     };
 
-	class C_Van_01_fuel_F : Van_01_fuel_base_F {
-		transportFuel = 0; //1k
+    class C_Van_01_fuel_F : Van_01_fuel_base_F {
+        transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "civ";
-	};
-	class I_G_Van_01_fuel_F : Van_01_fuel_base_F {
-		transportFuel = 0; //1k
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 5000;
+    };
+    class I_G_Van_01_fuel_F : Van_01_fuel_base_F {
+        transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "civ";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 5000;
     };
     
-	class I_Truck_02_fuel_F : Truck_02_base_F {
-		transportFuel = 0; //3k
+    class I_Truck_02_fuel_F : Truck_02_base_F {
+        transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
-	};
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
+    };
     class O_Truck_02_fuel_F : Truck_02_base_F {
-		transportFuel = 0; //3k
+        transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
-	};
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
+    };
     
-	class B_Truck_01_fuel_F : B_Truck_01_mover_F {
-		transportFuel = 0; //3k
+    class B_Truck_01_fuel_F : B_Truck_01_mover_F {
+        transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
-	};
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
+    };
     
-	class O_Truck_03_fuel_F : Truck_03_base_F {
-		transportFuel = 0; //3k
+    class O_Truck_03_fuel_F : Truck_03_base_F {
+        transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
-	};
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
+    };
     
     class B_Slingload_01_Fuel_F : Slingload_01_Base_F  {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
     };
     
     class O_Heli_Transport_04_fuel_F : Heli_Transport_04_base_F  {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
     };
     
     class Land_Pod_Heli_Transport_04_fuel_F : Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "mil";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = 20000;
     };
 
     class Static;
@@ -263,57 +245,57 @@ class CfgVehicles {
     class Land_Fuelstation_Feed_F : House_Small_F {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_fs_feed_F : House_Small_F {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     
     class FuelStation : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_Fuelstation : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_Fuelstation_army : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_Benzina_schnell : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_A_FuelStation_Feed : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_Ind_FuelStation_Feed_EP1 : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     class Land_FuelStation_Feed_PMC : Strategic {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        ace_refuel_hooks[] = {{0,0,0}};
-        ace_refuel_type = "stationary";
+        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(fuelCargo) = -1;
     };
     
     /*  // Barrels from rhs?
