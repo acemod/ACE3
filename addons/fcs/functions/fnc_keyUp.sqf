@@ -24,6 +24,8 @@ params ["_vehicle", "_turret", "_distance", ["_showHint",false], ["_playSound"]]
 _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 if (isNil "_distance" || {_distance > -1}) then {
     _distance = call FUNC(getRange);
+} else {
+    call FUNC(getRange);
 };
 
 _weapons = _vehicle weaponsTurret _turret;
