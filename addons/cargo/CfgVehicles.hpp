@@ -125,7 +125,8 @@ class CfgVehicles {
         GVAR(size) = 50;
         XEH_ENABLED;
     };
-    class Land_Cargo20_military_ruins_F: Cargo_base_F {
+    class Ruins_F;
+    class Land_Cargo20_military_ruins_F: Ruins_F {
         GVAR(space) = 49;
         GVAR(size) = 50;
         XEH_ENABLED;
@@ -197,7 +198,7 @@ class CfgVehicles {
         GVAR(size) = 100;
         XEH_ENABLED;
     };
-    class Land_Cargo40_military_ruins_F: Cargo_base_F {
+    class Land_Cargo40_military_ruins_F: Ruins_F {
         GVAR(space) = 99;
         GVAR(size) = 100;
         XEH_ENABLED;

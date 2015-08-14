@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-private ["_loaded", "_position", "_validVehiclestate", "_emptyPos"];
+private ["_loaded", "_validVehiclestate", "_emptyPos"];
 params ["_item", "_vehicle"];
 _loaded = _vehicle getvariable [QGVAR(loaded), []];
 if !(_item in _loaded) exitwith {false};

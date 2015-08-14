@@ -41,5 +41,5 @@ uiNamespace setvariable [QGVAR(menuDisplay), _display];
         true
     } count _loaded;
 
-    _label ctrlSetText format[localize "STR_ACE_Cargo_labelSpace", [GVAR(interactionVehicle)] call DFUNC(getCargoSpaceLeft)];
+    _label ctrlSetText format[localize LSTRING(labelSpace), [GVAR(interactionVehicle)] call DFUNC(getCargoSpaceLeft)];
 }, 0, []] call CBA_fnc_addPerFrameHandler;

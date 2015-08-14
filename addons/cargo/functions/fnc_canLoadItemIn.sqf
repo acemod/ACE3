@@ -3,8 +3,8 @@
  * Check if item can be loaded into other Object
  *
  * Arguments:
- * 0: Any object <OBJECT>
- * 1: Object <OBJECT>
+ * 0: Item Object <OBJECT>
+ * 1: Holder Object (vehicle) <OBJECT>
  *
  * Return value:
  * Can load in <BOOL>

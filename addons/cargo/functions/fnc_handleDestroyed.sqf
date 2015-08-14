@@ -15,6 +15,8 @@
 
 params ["_vehicle"];
 
+private["_loaded"];
+
 _loaded = _vehicle getvariable [QGVAR(loaded), []];
 if (count _loaded == 0) exitwith {};
 
