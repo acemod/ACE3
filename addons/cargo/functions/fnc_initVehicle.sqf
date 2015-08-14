@@ -28,8 +28,8 @@ if (isServer) then {
             _className = getText (_x >> "type");
             _amount = getNumber (_x >> "amount");
             _position = getPos _vehicle;
-            _position set [2, (_position select 2) + 7.5];
             _position set [1, (_position select 1) + 1];
+            _position set [2, (_position select 2) + 7.5];
             for "_i" from 1 to _amount do {
                 _object = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
                 if !([_object, _vehicle] call FUNC(loadItem)) exitwith {
@@ -38,7 +38,7 @@ if (isServer) then {
             };
         };
         nil
-    }count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
+    } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
 
 

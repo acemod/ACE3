@@ -38,7 +38,8 @@ uiNamespace setvariable [QGVAR(menuDisplay), _display];
     lbClear _ctrl;
     {
         _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> typeOf _x >> "displayName"));
-    }foreach _loaded;
+        true
+    } count _loaded;
 
     _label ctrlSetText format[localize "STR_ACE_Cargo_labelSpace", [GVAR(interactionVehicle)] call DFUNC(getCargoSpaceLeft)];
 }, 0, []] call CBA_fnc_addPerFrameHandler;
