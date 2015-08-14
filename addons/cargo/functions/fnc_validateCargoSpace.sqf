@@ -23,7 +23,8 @@ _totalSpaceOccupied = 0;
         _newLoaded pushback _x;
         _totalSpaceOccupied = _totalSpaceOccupied + ([_x] call FUNC(getSizeItem));
     };
-}foreach _loaded;
+    true
+} count _loaded;
 
 if (count _loaded != count _newLoaded) then {
     _vehicle setvariable [QGVAR(loaded), _newLoaded, true];

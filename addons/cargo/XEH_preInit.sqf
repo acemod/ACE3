@@ -20,7 +20,7 @@ PREP(startUnload);
 GVAR(initializedItemClasses) = [];
 
 if (isServer) then {
-    ["cargo_hideItem", {(_this select 0) hideObjectGlobal (_this select 1);}] call EFUNC(common,addEventHandler);
+    ["cargo_hideItem", {params ["_object", "_status"]; _object hideObjectGlobal _status;}] call EFUNC(common,addEventHandler);
 };
 
 ADDON = true;

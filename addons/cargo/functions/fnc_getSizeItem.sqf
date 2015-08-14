@@ -6,15 +6,17 @@
  * 0: Object <OBJECT>
  *
  * Return value:
- * Cargo size. -1 is not a size defined <NUMBER>
+ * Cargo size. <NUMBER> (default: -1)
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
+private "_config";
 params ["_item"];
-if (isNumber (configFile >> "CfgVehicles" >> typeof _item >> QGVAR(size))) exitwith {
-    _item getvariable [QGVAR(size), getNumber (configFile >> "CfgVehicles" >> typeof _item >> QGVAR(size))];
+_config = (configFile >> "CfgVehicles" >> typeof _item >> QGVAR(size));
+if (isNumber (_config)) exitwith {
+    _item getvariable [QGVAR(size), getNumber (_config)];
 };
--1;
+-1

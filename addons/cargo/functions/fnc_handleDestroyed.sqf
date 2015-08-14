@@ -22,6 +22,6 @@ if (count _loaded == 0) exitwith {};
     // TODO deleteVehicle or just delete vehicle? Do we want to be able to recover destroyed equipment?
     deleteVehicle _x;
     //_x setDamage 1;
-}foreach _loaded;
+} count _loaded;
 
 [_vehicle] call FUNC(validateCargoSpace);

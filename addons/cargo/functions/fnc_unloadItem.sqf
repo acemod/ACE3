@@ -44,7 +44,7 @@ if (_vehicle isKindOf "Ship" ) then {
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
 if (!_validVehiclestate) exitwith { false };
 
-if (count _emptyPos == 0) exitwith { false};  //consider displaying text saying there are no safe places to exit the vehicle
+if (count _emptyPos == 0) exitwith { false };  //consider displaying text saying there are no safe places to exit the vehicle
 
 _loaded = _vehicle getvariable [QGVAR(loaded), []];
 _loaded = _loaded - [_item];
@@ -52,7 +52,7 @@ _vehicle setvariable [QGVAR(loaded), _loaded, true];
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
-_vehicle setvariable [QGVAR(space), _space + _itemSize, true];
+_vehicle setvariable [QGVAR(space), (_space + _itemSize), true];
 
 detach _item;
 _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
