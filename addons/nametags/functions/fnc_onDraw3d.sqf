@@ -63,6 +63,7 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
             {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
             {!(_target getVariable ["ACE_hideName", false])}) then {
         _distance = ACE_player distance _target;
+        if (_distance > (_maxDistance + 5)) exitWith {};
         _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
         _icon = ICON_NONE;
         if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
@@ -116,5 +117,6 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
 
             [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
         };
-    } forEach _targets;
+        nil
+    } count _targets;
 };
