@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-parama ["_huntIR"];
+params ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;
 GVAR(pos) = getPosVisual GVAR(huntIR);
