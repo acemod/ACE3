@@ -84,6 +84,26 @@
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
         </Key>
+
+        <Key ID="STR_ACE_Repair_fullRepair">
+            <English>Full Repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_fullyRepairing">
+            <English>Repairing Vehicle ...</English>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_fullRepairLocation">
+            <English>Full Repair Locations</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_fullRepairLocation_description">
+            <English>At what locations can a vehicle be fully repaired?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
+            <English>Allow Full Repair</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
+            <English>Who can perform a full repair on a vehicle?</English>
+        </Key>
         <Key ID="STR_ACE_Repair_RepairHitpoint">
             <English>Repair %1</English>
             <German>Reparieren %1</German>
@@ -519,7 +539,7 @@
             <English>Allow Repair</English>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
-            <English>Who can use the toolkit to fully repair?</English>
+            <English>Who can perform repair actions?</English>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
@@ -538,6 +558,45 @@
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
             <English>Should the toolkit be removed on usage?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_useAnywhere">
+            <English>Anywhere</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairVehicleOnly">
+            <English>Repair Vehicle only</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_repairFacilityOnly">
+            <English>Repair Facility only</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_vehicleAndFacility">
+            <English>Repair Facility or Vehicle</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_DisplayName">
+            <English>Assign Engineer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_DisplayName">
+            <English>List</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
+            <English>List of unit names that will be classified as engineer, separated by commas.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_DisplayName">
+            <English>Is Engineer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_Description">
+            <English>Select the engineering skill level of the unit</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_none">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
+            <English>Engineer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
+            <English>Specialist</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
+            <English>Assign one or multiple units as an engineer</English>
         </Key>
     </Package>
 </Project>

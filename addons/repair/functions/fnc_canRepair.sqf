@@ -82,7 +82,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
                 case 0: {true};
                 case 1: _repairVeh;
                 case 2: _repairFacility;
-                case 3: {call _repairFacility || call _repairVeh};
+                case 3: {{call _repairFacility || call _repairVeh}};
             };
             _return = call _return;
         };

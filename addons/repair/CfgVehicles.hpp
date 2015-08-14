@@ -70,12 +70,81 @@ class CfgVehicles {
                     class remove { name = ECSTRING(common,Yes); value = 1; };
                 };
             };
+            class fullRepairLocation {
+                displayName = CSTRING(fullRepairLocation);
+                description = CSTRING(fullRepairLocation_description);
+                typeName = "NUMBER";
+                class values {
+                    class anywhere { name = CSTRING(useAnywhere); value = 0; };
+                    class vehicle { name = CSTRING(repairVehicleOnly); value = 1; };
+                    class facility { name = CSTRING(repairFacilityOnly); value = 2; default = 1; };
+                    class vehicleAndFacility { name = CSTRING(vehicleAndFacility); value = 3; };
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
+                };
+            };
+            class engineerSetting_fullRepair {
+                displayName = CSTRING(engineerSetting_fullRepair_name);
+                description = CSTRING(engineerSetting_fullRepair_description);
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
+                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
+                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(moduleDescription);
             sync[] = {};
         };
     };
+
+    class Module_F;
+    class ACE_moduleAssignEngineerRoles: Module_F {
+        scope = 2;
+        displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE";
+        function = QUOTE(DFUNC(moduleAssignEngineer));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class EnableList {
+                displayName = CSTRING(AssignEngineerRole_EnableList_DisplayName);
+                description = CSTRING(AssignEngineerRole_EnableList_Description);
+                defaultValue = "";
+                typeName = "STRING";
+            };
+            class role {
+                displayName = CSTRING(AssignEngineerRole_role_DisplayName);
+                description = CSTRING(AssignEngineerRole_role_Description);
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = CSTRING(AssignEngineerRole_role_none);
+                        value = 0;
+                    };
+                    class medic {
+                        name = CSTRING(AssignEngineerRole_role_engineer);
+                        value = 1;
+                        default = 1;
+                    };
+                    class doctor {
+                        name = CSTRING(AssignEngineerRole_role_specialist);
+                        value = 2;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(AssignEngineerRole_Module_Description);
+            sync[] = {};
+        };
+    };
+
 
     class LandVehicle;
     class Car: LandVehicle {

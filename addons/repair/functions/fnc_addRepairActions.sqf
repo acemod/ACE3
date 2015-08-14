@@ -95,16 +95,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
-        // impossible to remove tracks
         if (_x in TRACK_HITPOINTS) then {
-            /*//_selection = getText(configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "name"); // TODO this is a valid selection, it's just on the wrong position.
-            private "_action";
-            _action = [_name, localize LSTRING(RemoveTrack), _icon, _statement, _condition, {}, [_x, "RemoveTrack"], _selection, 4] call EFUNC(interact_menu,createAction);
-            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
-
-            _action = [_name, localize LSTRING(ReplaceTrack), _icon, _statement, _condition, {}, [_x, "ReplaceTrack"], _selection, 4] call EFUNC(interact_menu,createAction);
-            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);*/
-
             if (_x == "HitLTrack") then {
                 _selection = [-1.75, 0, -1.75];
             } else {
@@ -121,6 +112,12 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
     };
 } forEach _hitPoints;
 
+private ["_action", "_condition", "_statement"];
+
+_condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
+_statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
+_action = [QGVAR(fullRepair), localize LSTRING(fullRepair), "A3\ui_f\data\igui\cfg\actions\repair_ca.paa", _statement, _condition, {}, ["", "fullRepair"], "", 4] call EFUNC(interact_menu,createAction);
+[_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
 // set class as initialized
 _initializedClasses pushBack _type;
 

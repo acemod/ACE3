@@ -80,7 +80,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
                 case 0: {true};
                 case 1: _repairVeh;
                 case 2: _repairFacility;
-                case 3: {call _repairFacility || call _repairVeh};
+                case 3: {{call _repairFacility || call _repairVeh}};
             };
             _return = call _return;
         };
@@ -167,6 +167,8 @@ _processText = getText (_config >> "displayNameProgress");
 _text = format ["STR_ACE_Repair_%1", _hitPoint];
 if (isLocalized _text) then {
     _text = format [_processText, localize _text];
+} else {
+    _text = _processText;
 };
 
 // Start repair

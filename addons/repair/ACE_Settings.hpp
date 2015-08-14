@@ -39,4 +39,19 @@ class ACE_Settings {
         value = 1;
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
     };
+
+    class GVAR(fullRepairLocation) {
+        displayName = CSTRING(fullRepairLocation);
+        description = CSTRING(fullRepairLocation_description);
+        typeName = "SCALAR";
+        value = 2;
+        values[] = {CSTRING(useAnywhere), CSTRING(repairVehicleOnly), CSTRING(repairFacilityOnly), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
+    };
+    class GVAR(engineerSetting_fullRepair) {
+        displayName = CSTRING(engineerSetting_fullRepair_name);
+        description = CSTRING(engineerSetting_fullRepair_description);
+        typeName = "SCALAR";
+        value = 3;
+        values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+    };
 };

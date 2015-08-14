@@ -17,7 +17,10 @@ params ["_unit", ["_engineerN", 1]];
 TRACE_2("params",_unit,_engineerN);
 
 private ["_class"];
+_class = _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")];
 
-_class = _unit getVariable [QGVAR(engineerClass), getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")];
+// This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
+// We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
+if (typeName _class == "BOOL") then {_class = 1};
 
 _class >= (_engineerN min GVAR(engineerSetting_Repair));
