@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_sound", "_position", "_soundCount"];
+private ["_sound", "_position"];
 
 params ["_unit", "_weapon"];
 
@@ -31,14 +31,8 @@ if ({(toLower (_sound select 0) find _x == (count toArray (_sound select 0) - co
     _sound set [0, (_sound select 0) + ".wss"];
 };
 
-// add default volume, pitch and distance
-_soundCount = count _sound;
-if (_soundCount < 2) then {_sound pushBack 1};
-if (_soundCount < 3) then {_sound pushBack 1};
-if (_soundCount < 4) then {_sound pushBack 0};
-
 _position = _unit modelToWorldVisual (_unit selectionPosition "RightHand");
 _position set [2, (_position select 2) + ((getPosASLW _unit select 2) - (getPosATL _unit select 2) max 0)];
 
-_sound params ["_filename", "_volume", "_soundPitch", "_distance"];
+_sound params ["_filename", ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]];
 playSound3D [_filename, objNull, false, _position, _volume, _soundPitch, _distance];
