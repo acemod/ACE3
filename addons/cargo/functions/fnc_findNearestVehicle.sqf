@@ -17,7 +17,7 @@ private ["_loadCar", "_loadHelicopter", "_loadTank", "_loadShip"];
 params ["_unit"];
 
 _loadCar = nearestObject [_unit, "car"];
-if (_unit distance _vehicle <= MAX_LOAD_DISTANCE) exitwith {_vehicle};
+if (_unit distance _loadCar <= MAX_LOAD_DISTANCE) exitwith {_loadCar};
 
 _loadHelicopter = nearestObject [_unit, "air"];
 if (_unit distance _loadHelicopter <= MAX_LOAD_DISTANCE) exitwith {_loadHelicopter};
