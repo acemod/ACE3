@@ -40,5 +40,5 @@ if (_soundCount < 4) then {_sound pushBack 0};
 _position = _unit modelToWorldVisual (_unit selectionPosition "RightHand");
 _position set [2, (_position select 2) + ((getPosASLW _unit select 2) - (getPosATL _unit select 2) max 0)];
 
-_sound params ["_filename", "_volume", "_soundPitch", "_distance"]
+_sound params ["_filename", "_volume", "_soundPitch", "_distance"];
 playSound3D [_filename, objNull, false, _position, _volume, _soundPitch, _distance];
