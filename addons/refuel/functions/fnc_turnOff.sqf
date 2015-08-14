@@ -7,7 +7,7 @@
  * 1: The object holding the nozzle <OBJECT>
  *
  * Return Value:
- * Can turn off
+ * Can turn off <BOOL>
  *
  * Example:
  * [player, nozzle] call ace_refuel_fnc_canTurnOff
