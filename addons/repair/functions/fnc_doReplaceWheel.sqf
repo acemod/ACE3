@@ -14,6 +14,8 @@ params ["_unit", "_vehicle", "_hitPoint", "_classname"];
 TRACE_4("params",_unit,_vehicle,_hitPoint,_classname);
 // TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
 
+private ["_hitPointDamage", "_wheel"];
+
 _wheel = objNull;
 
 {
@@ -24,7 +26,6 @@ _wheel = objNull;
 if (isNull _wheel) exitwith {};
 
 // get current hitpoint damage
-private "_hitPointDamage";
 _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
 // can't replace not destroyed wheel

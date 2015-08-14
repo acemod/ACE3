@@ -19,7 +19,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private ["_config", "_engineerRequired", "_items", "_locations", "_return", "_condition", "_vehicleStateCondition"];
+private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
@@ -157,7 +157,7 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
         if (typeName _repairTimeConfig == "SCALAR") exitwith {
             _repairTimeConfig;
         };
-        [_caller, _target, _selectionName, _className] call _repairTimeConfig;
+        [_caller, _target, _hitPoint, _className] call _repairTimeConfig;
     };
     0;
 };
