@@ -18,6 +18,14 @@ params ["_player", "_object"];
 
 private ["_nearestVehicle"];
 _nearestVehicle = [_player] call FUNC(findNearestVehicle);
+
+if (_nearestVehicle isKindOf "Cargo_Base_F" || isNull _nearestVehicle) then {
+
+    {
+        if ([_object, _x] call FUNC(canLoadItemIn)) exitwith {_nearestVehicle = _x};
+    }foreach (nearestObjects [_player, ["Cargo_base_F"], MAX_LOAD_DISTANCE]);
+};
+
 if (isNull _nearestVehicle) exitwith {false};
 
 [_object, _nearestVehicle] call FUNC(canLoadItemIn);

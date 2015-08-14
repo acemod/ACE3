@@ -18,7 +18,6 @@ private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];
 params ["_item", "_vehicle"];
 
 if !([_item, _vehicle] call FUNC(canUnloadItem)) exitwith {
-    systemChat format["Can not unload item"];
     false
 };
 

@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_loadCar", "_loadHelicopter", "_loadTank", "_loadShip"];
+private ["_loadCar", "_loadHelicopter", "_loadTank", "_loadShip", "_loadContainer"];
 params ["_unit"];
 
 _loadCar = nearestObject [_unit, "car"];
@@ -27,5 +27,8 @@ if (_unit distance _loadTank <= MAX_LOAD_DISTANCE) exitwith {_loadTank};
 
 _loadShip = nearestObject [_unit, "ship"];
 if (_unit distance _loadShip <= MAX_LOAD_DISTANCE) exitwith {_loadShip};
+
+_loadContainer = nearestObject [_unit,"Cargo_base_F"];
+if (_unit distance _loadContainer <= MAX_LOAD_DISTANCE) exitwith {_loadContainer};
 
 objNull;
