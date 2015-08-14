@@ -19,7 +19,9 @@
  */
 #include "script_component.hpp"
 
-params ["_objectType", "_typeNum", "_parentPath", "_action"];
+if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
+    ERROR("Bad Params");
+};
 
 // Ensure the config menu was compiled first
 if (_typeNum == 0) then {
