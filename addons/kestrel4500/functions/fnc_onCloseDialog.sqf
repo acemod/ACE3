@@ -1,6 +1,6 @@
 /*
  * Author: Ruthberg
- * Called if Kestrell Dialog is closed
+ * Called if Kestrel Dialog is closed
  *
  * Arguments:
  * None

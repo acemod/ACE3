@@ -25,7 +25,7 @@
  * 15: Center Line 6 <STRING>
  *
  * Example:
- * _var = call ace_kestrell4500_fnc_generateOutputData
+ * _var = call ace_kestrel4500_fnc_generateOutputData
  *
  * Public: No
  */

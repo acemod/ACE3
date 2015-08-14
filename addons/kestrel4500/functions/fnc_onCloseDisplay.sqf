@@ -1,6 +1,6 @@
 /*
  * Author: Ruthberg
- * Called if Kestrell Display is closed
+ * Called if Kestrel Display is closed
  *
  * Arguments:
  * None

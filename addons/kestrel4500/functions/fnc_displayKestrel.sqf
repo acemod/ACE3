@@ -6,10 +6,10 @@
  * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_kestrel4500_fnc_displayKestrell
+ * call ace_kestrel4500_fnc_displayKestrel
  *
  * Public: No
  */
