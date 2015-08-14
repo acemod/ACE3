@@ -13,7 +13,8 @@
 
 #include "script_component.hpp"
 
-params ["_item", "_config"];
+private "_config";
+params ["_item"];
 _config = (configFile >> "CfgVehicles" >> typeof _item >> QGVAR(size));
 if (isNumber (_config)) exitwith {
     _item getvariable [QGVAR(size), getNumber (_config)];
