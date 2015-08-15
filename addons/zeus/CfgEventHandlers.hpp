@@ -8,7 +8,7 @@ class Extended_PreInit_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class AllVehicles {
         class ADDON {
-            init = QUOTE(call FUNC(addObjectToCurator));
+            serverInit = QUOTE(call FUNC(addObjectToCurator));
         };
     };
 };
