@@ -2,15 +2,17 @@
  * Author: esteldunedain
  * Checks if the turret occupied by the given unit has a laser designator
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Has designator? <BOOL>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
 
 // Get the player turret path
 private ["_turret","_config","_turretConfig"];
