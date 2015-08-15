@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Verifies magazines moved with exact ammo counts preserved.
  * Arrays will be in format from magazinesAmmo/magazinesAmmoCargo
  * e.g.: [["30Rnd_65x39_caseless_mag",15], ["30Rnd_65x39_caseless_mag",30]]
@@ -36,6 +37,6 @@ _problem = false;
     _index = _beginingArray find _x;
     if (_index == -1) exitWith {_problem = true;};
     _beginingArray deleteAt _index;
-} forEach (_endA + _endB);
+} count (_endA + _endB);
 
 (!_problem) && {_beginingArray isEqualTo []}
