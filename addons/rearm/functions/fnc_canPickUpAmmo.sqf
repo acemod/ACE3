@@ -18,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-!(isNull ace_player  || {!(ace_player isKindOf "CAManBase")} || {!local ace_player} || { (_target distance ace_player) > 7})
+!(isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > 7})
