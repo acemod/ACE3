@@ -14,13 +14,15 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+
 private "_speedDial";
+
 _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 if (count _speedDial == 0) exitWith {};
 {
     if ((_x select 0) == (_this select 0)) exitWith {
-        _speedDial set [_foreachIndex, "x"];
+        _speedDial set [_forEachIndex, "x"];
         _speedDial = _speedDial - ["x"];
         ace_player setVariable [QGVAR(SpeedDial),_speedDial];
     };
-} foreach _speedDial;
+} forEach _speedDial;

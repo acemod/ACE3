@@ -15,11 +15,13 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);  //Extended_Killed_EventHandlers runs only where _unit is local
+//NOTE: Extended_Killed_EventHandlers runs only where _unit is local
+params ["_unit"];
+TRACE_1("params",_unit);
 
 private ["_deadman"];
 
 _deadman = [_unit, "DeadManSwitch"] call FUNC(getPlacedExplosives);
 {
     [_unit, -1, _x, true] call FUNC(detonateExplosive);
-} foreach _deadman;
+} forEach _deadman;

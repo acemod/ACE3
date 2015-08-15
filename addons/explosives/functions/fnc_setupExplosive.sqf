@@ -21,7 +21,8 @@
 #define PLACE_RANGE_MAX 1
 #define PLACE_RANGE_MIN 0.025
 
-PARAMS_3(_vehicle,_unit,_magClassname);
+params ["_vehicle", "_unit", "_magClassname"];
+TRACE_3("params",_vehicle,_unit,_magClassname);
 
 private["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
 
@@ -58,8 +59,8 @@ GVAR(TweakedAngle) = 0;
 [{
     BEGIN_COUNTER(pfeh);
 
-    PARAMS_2(_args,_pfID);
-    EXPLODE_4_PVT(_args,_unit,_magClassname,_setupObjectClass,_isAttachable);
+    params ["_args", "_pfID"];
+    _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable"];
 
     private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
 

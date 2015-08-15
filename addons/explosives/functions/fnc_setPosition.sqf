@@ -17,7 +17,8 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_explosive,_direction,_pitch);
+params ["_explosive", "_direction", "_pitch"];
+TRACE_3("params",_explosive,_direction,_pitch);
 
 if (isNull (attachedTo _explosive)) then {
     _explosive setDir _direction;

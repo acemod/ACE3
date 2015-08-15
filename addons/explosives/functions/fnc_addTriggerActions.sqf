@@ -15,8 +15,11 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+params ["_magazine", "_explosive"];
+TRACE_2("params",_magazine,_explosive);
+
 private ["_hasRequiredItems","_triggerTypes", "_children", "_detonators", "_required", "_magTriggers", "_isAttached"];
-EXPLODE_2_PVT(_this,_magazine,_explosive);
 
 _isAttached = !isNull (attachedTo _explosive);
 _detonators = [ACE_player] call FUNC(getDetonators);
@@ -51,6 +54,6 @@ _children = [];
                 ACE_Player
             ];
     };
-} foreach _triggerTypes;
+} forEach _triggerTypes;
 
 _children
