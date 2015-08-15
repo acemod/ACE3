@@ -194,9 +194,9 @@ if (currentWeapon _unit != "") then {
     private ["_index"];
     _index = 0;
     while {
-      _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}
+        _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}
     } do {
-      _unit action ["SwitchWeapon", _unit, _unit, _index];
-      _index = _index + 1;
+        _unit action ["SwitchWeapon", _unit, _unit, _index];
+        _index = _index + 1;
     };
 };
