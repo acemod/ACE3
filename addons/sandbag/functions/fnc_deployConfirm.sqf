@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_sandbag_fnc_deployConfirm;
+ * [] call ace_sandbag_fnc_deployConfirm
  *
  * Public: No
  */
@@ -36,16 +36,16 @@ GVAR(placer) setVariable [QGVAR(usingSandbag), true];
     private ["_sandBag", "_position", "_direction"];
     _position = getPosASL GVAR(sandBag);
     _direction = getDir GVAR(sandBag);
-    
+
     deleteVehicle GVAR(sandBag);
-    
-    _sandBag = createVehicle ["ACE_SandbagObject", [0,0,0], [], 0, "NONE"];
+
+    _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
     _sandBag enableSimulationGlobal true;
     _sandBag setPosASL _position;
     _sandBag setDir _direction;
-    
+
     GVAR(placer) removeItem "ACE_Sandbag_empty";
-    
+
     GVAR(sandBag) = objNull;
     GVAR(placer) = objNull;
 }, [], 1.0, 0.5] call EFUNC(common,waitAndExecute);

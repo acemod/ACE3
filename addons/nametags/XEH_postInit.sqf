@@ -66,8 +66,8 @@ GVAR(showNamesTime) = -10;
 
 // Change settings accordingly when they are changed
 ["SettingChanged", {
-    PARAMS_1(_name);
-    if (_name  == QGVAR(showPlayerNames)) then {
+    params ["_name"];
+    if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
 }] call EFUNC(common,addEventHandler);
