@@ -3,21 +3,20 @@
  * Assigns a medic role from the medical module to a unit
  *
  * Arguments:
- * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
+ * 0: The module logic <OBJECT>
+ * 1: Synchronized units <ARRAY>
+ * 2: Activated <BOOL>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None <NIL>
  *
- * Public: no
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_mouseOver", "_unit"];
-
 params ["_logic", "_units", "_activated"];
+private ["_mouseOver", "_unit"];
 
 if !(_activated && local _logic) exitWith {};
 
