@@ -1,16 +1,22 @@
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: ? <?>
+ *
+ * Return Value:
+ * ? <?>
+ *
+ * Example:
+ * [?] call ace_laser_fnc_shootCone
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-//#define DEBUG_MODE_FULL
 private ["_i", "_divergence","_pos","_vec","_longestReturn","_shortestReturn","_resultPositions","_p1","_p2","_p","_v","_cp","_vecRotateMap","_result", "_resultPos","_distance","_count","_pos2","_radOffset","_offset","_offsetPos","_offsetVector"];
-_divergence = 0.3;
-_pos = _this select 0;
-_vec = _this select 1;
-if(count _this > 2) then {
-    _divergence = _this select 2;
-};
-_count = 3;
-if(count _this > 3) then {
-    _count = _this select 3;
-};
+params ["_pos", "_vec", ["_divergence", 0.3], ["_count", "3"]];
+
 _longestReturn = -1000000000;
 _shortestReturn = 1000000000;
 _resultPositions = [];

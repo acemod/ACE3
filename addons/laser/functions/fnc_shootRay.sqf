@@ -1,9 +1,22 @@
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: ? <?>
+ *
+ * Return Value:
+ * ? <?>
+ *
+ * Example:
+ * [?] call ace_laser_fnc_shootRay
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-
-private ["_pos", "_vec", "_distance", "_resultPos", "_fidelity", "_lastPos", "_i", "_nextPos"];
+private ["_distance", "_resultPos", "_fidelity", "_lastPos", "_i", "_nextPos"];
 scopeName "main";
-_pos = _this select 0;
-_vec = _this select 1;
+ params ["_pos", "_vec"];
 _distance = 0;
 _resultPos = nil;
 _fidelity = [1000,100,10,1,0.1];

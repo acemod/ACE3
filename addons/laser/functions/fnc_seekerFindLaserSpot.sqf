@@ -3,29 +3,29 @@
  * Turn a laser designator on.
  *
  * Arguments:
- * 0: Position of seeker (ASL) <position>
- * 1: Direction vector (will be normalized) <vector>
- * 2: Seeker FOV in degrees <number>
- * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
- * 4: Seeker laser code. <number>
+ * 0: Position of seeker (ASL) <POSITION>
+ * 1: Direction vector (will be normalized) <VECTOR>
+ * 2: Seeker FOV in degrees <NUMBER>
+ * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
+ * 4: Seeker laser code. <NUMBER>
  *
  * Return value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"];
-private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"];
-private ["_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
-private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"];
+private ["_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_laser",
+    "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index", "_testPos",
+    "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners",
+    "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner",
+    "_dir", "_seekerCos", "_testDotProduct", "_testPoint", "_testPointVector"
+];
 
-_pos = _this select 0;
-_dir = vectorNormalized (_this select 1);
-_seekerFov = _this select 2;
-_seekerWavelengths = _this select 3;
-_seekerCode = _this select 4;
-
+param ["_pos", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode"];
+_dir = vectorNormalized _dir;
 
 _seekerCos = cos _seekerFov;
 
@@ -37,12 +37,7 @@ _finalPos = nil;
 _finalOwner = nil;
 
 {
-    _obj = _x select 0;
-    _owner = _x select 1;
-    _method = _x select 2;
-    _emitterWavelength = _x select 3;
-    _laserCode = _x select 4;
-    _divergence = _x select 5;
+    _x params ["_obj", "_owner", "_method", "_emitterWavelength", "_laserCode", "_divergence"];
     if(alive _obj && {_emitterWavelength >= (_seekerWavelengths select 0)} && {_emitterWavelength <= (_seekerWavelengths select 1)} && {_laserCode == _seekerCode}) then {
         _laser = [];
         if(IS_CODE(_method)) then {
@@ -62,7 +57,7 @@ _finalOwner = nil;
                 };
             };
         };
-        
+
         //Handle Weird Data Return
         if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
             _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);

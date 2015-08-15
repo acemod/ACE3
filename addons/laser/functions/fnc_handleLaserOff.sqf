@@ -1,8 +1,20 @@
-//fnc_handleLaserOff.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: ? <?>
+ *
+ * Return Value:
+ * ? <ß>
+ *
+ * Example:
+ * [ß] call ace_laser_fnc_handleLaserOff
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-
-private ["_uuid"];
-_uuid = _this select 0;
+params ["_uudi"];
 if(HASH_HASKEY(GVAR(laserEmitters), _uuid)) then {
     HASH_REM(GVAR(laserEmitters), _uuid);
 };

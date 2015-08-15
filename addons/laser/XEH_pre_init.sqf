@@ -18,7 +18,7 @@ PREP(handleLaserOff);
 
 PREP(drawVisibleLaserTargets);
 
-PREP(laser_init);
+PREP(laserInit);
 PREP(vanillaLaserSeekerHandler);
 PREP(laserTargetPFH);
 
