@@ -20,7 +20,9 @@ private ["_cargoIndex"];
 
 params ["_target","_vehicle"];
 
-_target moveInCargo _vehicle;
+_cargoIndex = [_vehicle] call FUNC(findEmptyNonFFVCargoSeat);
+if (_cargoIndex < 0) exitWith {ERROR("No Seat Avail");};
+
+_target moveInCargo [_vehicle, _cargoIndex];
 _target assignAsCargo _vehicle;
-_cargoIndex = _vehicle getCargoIndex _target;
 _target setVariable [QGVAR(CargoIndex), _cargoIndex, true];

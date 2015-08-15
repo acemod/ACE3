@@ -30,4 +30,5 @@ if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
     };
 
     [_unit, "ACE_AmovPercMstpScapWnonDnon", 2] call EFUNC(common,doAnimation);
+    [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
 };

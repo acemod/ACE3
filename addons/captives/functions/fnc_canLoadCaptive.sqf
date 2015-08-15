@@ -35,4 +35,4 @@ if (isNull _vehicle) then {
 && {!isNull _vehicle}
 && {_unit getVariable [QGVAR(isEscorting), false]}
 && {_target getVariable [QGVAR(isHandcuffed), false]}
-&& {_vehicle emptyPositions "cargo" > 0}
+&& {([_vehicle] call FUNC(findEmptyNonFFVCargoSeat)) != -1}
