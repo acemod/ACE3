@@ -15,13 +15,13 @@ class CfgVehicles {
         class Arguments {
             class enable {
                 displayName = CSTRING(ModuleSettings_enable);
-                description = CSTRING(ModuleSettings_enable_desc);
+                description = CSTRING(ModuleSettings_enable_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = CSTRING(SettingsModule_Desc);
+            description = CSTRING(SettingsModule_Description);
             sync[] = {};
         };
     };
