@@ -36,7 +36,7 @@ GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
         };
 
         _nameSane = [name ACE_player] call FUNC(sanitizeName);
-        call compile format [QUOTE(GVAR(%1_DrawPos) = %2), _nameSane, _control ctrlMapScreenToWorld [_posX, _posY]];
+        missionNamespace setVariable [format [QGVAR(%1_DrawPos), _nameSane], _control ctrlMapScreenToWorld [_posX, _posY]];
     };
 }];
 

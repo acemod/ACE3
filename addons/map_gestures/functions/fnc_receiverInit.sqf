@@ -18,7 +18,7 @@
 {
     if (isPlayer _x) then {
         _nameSane = [name _x] call FUNC(sanitizeName);
-        call compile format [QUOTE(GVAR(%1_DrawPos) = [ARR_3(1,1,1)];), _nameSane];
+        missionNamespace setVariable [format [QGVAR(%1_DrawPos), _nameSane], [1, 1, 1]];
     };
     nil
 } count allUnits;
