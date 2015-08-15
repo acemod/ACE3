@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Assign an engineer role to a unit
+ * Assign an repair facility
  *
  * Arguments:
  * 0: The module logic <LOGIC>
@@ -22,8 +22,8 @@ if (!isNull _logic) then {
     _list = _logic getvariable ["EnableList",""];
     _setting = _logic getvariable ["role",0];
 
-    [_list, "ACE_IsEngineer", _setting, true] call EFUNC(common,assignObjectsInList);
-    [synchronizedObjects _logic, "ACE_IsEngineer", _setting, true] call EFUNC(common,assignObjectsInList);
+    [_list, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);
+    [synchronizedObjects _logic, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);
  };
 
 true

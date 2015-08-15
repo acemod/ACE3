@@ -17,4 +17,4 @@ TRACE_1("params",_vehicle);
 
 if (_vehicle isKindOf "CAManBase") exitwith {false};
 
-((_vehicle getVariable [QGVAR(engineerClass), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canRepair))]) > 0);
+((_vehicle getVariable ["ACE_isRepairVehicle", getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canRepair))]) > 0);

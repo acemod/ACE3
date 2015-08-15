@@ -144,6 +144,78 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class ACE_moduleAssignRepairVehicle: Module_F {
+        scope = 2;
+        displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE";
+        function = QUOTE(DFUNC(moduleAssignRepairVehicle));
+        functionPriority = 10;
+        isGlobal = 2;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class EnableList {
+                displayName = CSTRING(AssignRepairVehicle_EnableList_DisplayName);
+                description = CSTRING(AssignRepairVehicle_EnableList_Description);
+                defaultValue = "";
+                typeName = "STRING";
+            };
+            class role {
+                displayName = CSTRING(AssignRepairVehicle_role_DisplayName);
+                description = CSTRING(AssignRepairVehicle_role_Description);
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    class isVehicle {
+                        name = ECSTRING(common,Yes);
+                        value = 1;
+                        default = 1;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(AssignRepairVehicle_Module_Description);
+            sync[] = {};
+        };
+    };
+    class ACE_moduleAssignRepairFacility: ACE_moduleAssignRepairVehicle {
+        displayName = CSTRING(AssignRepairFacility_Module_DisplayName);
+        function = QUOTE(DFUNC(moduleAssignRepairFacility));
+        class Arguments {
+            class EnableList {
+                displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
+                description = CSTRING(AssignRepairFacility_EnableList_Description);
+                defaultValue = "";
+                typeName = "STRING";
+            };
+            class role {
+                displayName = CSTRING(AssignRepairFacility_role_DisplayName);
+                description = CSTRING(AssignRepairFacility_role_Description);
+                typeName = "NUMBER";
+                class values {
+                    class none {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    class isFacility {
+                        name = ECSTRING(common,Yes);
+                        value = 1;
+                        default = 1;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(AssignRepairFacility_Module_Description);
+            sync[] = {};
+        };
+    };
 
 
     class LandVehicle;

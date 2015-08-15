@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
@@ -597,6 +597,43 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
+            <English>Assign Repair Vehicle</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
+            <English>List</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
+            <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
+            <English>Is Repair Vehicle</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
+            <English>Is the vehicle classified as a repair vehicle?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
+            <English>Assign one or multiple vehicles as a repair vehicle</English>
+        </Key>
+
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
+            <English>Assign Repair Facility</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
+            <English>List</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
+            <English>List of objects that will be classified as repair Facility, separated by commas.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
+            <English>Is Repair Facility</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
+            <English>Is the object classified as a repair Facility?</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
+            <English>Assign one or multiple objects as a repair Facility</English>
         </Key>
     </Package>
 </Project>

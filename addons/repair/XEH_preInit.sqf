@@ -25,6 +25,8 @@ PREP(isNearRepairVehicle);
 PREP(isRepairVehicle);
 PREP(moduleRepairSettings);
 PREP(moduleAssignEngineer);
+PREP(moduleAssignRepairVehicle);
+PREP(moduleAssignRepairFacility);
 PREP(normalizeHitPoints);
 PREP(repair);
 PREP(repair_failure);
