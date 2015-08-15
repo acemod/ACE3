@@ -5,7 +5,7 @@ class CfgVehicles {
     class ACE_moduleCargoSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(SettingsModule_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Cargo_ca.paa));
         category = "ACE";
         function = QUOTE(DFUNC(moduleSettings));
         functionPriority = 1;
@@ -96,6 +96,26 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+
+    class Scrapyard_base_F;
+    class Land_PaperBox_closed_F: Scrapyard_base_F {
+        GVAR(space) = 10;
+        GVAR(hasCargo) = 1;
+        GVAR(size) = 11;
+        GVAR(canLoad) = 1;
+        XEH_ENABLED;
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+            };
+        };
+    };
+
     class Cargo_base_F: ThingX {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;

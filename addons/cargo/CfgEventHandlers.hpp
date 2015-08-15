@@ -17,6 +17,7 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+
     class ReammoBox_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
@@ -28,12 +29,20 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
     };
+
     class CargoNet_01_box_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
     };
+
     class Land_CargoBox_V1_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
+        };
+    };
+
+    class Land_PaperBox_closed_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };

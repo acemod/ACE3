@@ -22,7 +22,7 @@ if (isNull _nearestVehicle || _nearestVehicle isKindOf "Cargo_Base_F") then {
 
     {
         if ([_object, _x] call FUNC(canLoadItemIn)) exitwith {_nearestVehicle = _x};
-    }foreach (nearestObjects [_player, ["Cargo_base_F"], MAX_LOAD_DISTANCE]);
+    }foreach (nearestObjects [_player, ["Cargo_base_F", "Land_PaperBox_closed_F"], MAX_LOAD_DISTANCE]);
 };
 
 if (isNull _nearestVehicle) exitwith {false};
