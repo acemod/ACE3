@@ -29,11 +29,11 @@ _cal = 8;
 if (_tmpCal > 0) then {
     _cal = _tmpCal;
 } else {
-    _tmpCal = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_logistics_caliber");
+    _tmpCal = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(caliber));
     if (_tmpCal > 0) then {
         _cal = _tmpCal;
     } else {
-        diag_log format ["ACE_Logistics: Undefined Ammo [%1 : %2]", _ammo, inheritsFrom (configFile >> "CfgAmmo" >> _ammo)];
+        diag_log format ["ACE_Rearm: Undefined Ammo [%1 : %2]", _ammo, inheritsFrom (configFile >> "CfgAmmo" >> _ammo)];
         if (_ammo isKindOf "BulletBase") then {
             _cal = 8;
         } else {
