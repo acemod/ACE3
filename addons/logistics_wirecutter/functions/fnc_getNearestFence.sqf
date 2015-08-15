@@ -16,13 +16,13 @@
 #include "script_component.hpp"
 
 private "_nearestFence";
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nearestFence = objNull;
 {
     if ((isNull _nearestFence) && {[_x] call FUNC(isFence)}) then {
         _nearestFence = _x;
     };
-} forEach nearestObjects [_unit, [], 15];
+} count nearestObjects [_unit, [], 15];
 
 _nearestFence

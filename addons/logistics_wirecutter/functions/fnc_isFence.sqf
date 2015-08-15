@@ -22,7 +22,7 @@
 #define FENCE_P3DS ["mil_wiredfence_f.p3d","wall_indfnc_3.p3d", "wall_indfnc_9.p3d", "wall_indfnc_corner.p3d", "pletivo_wired.p3d", "wall_fen1_5.p3d"]
 
 private ["_typeOf", "_returnValue"];
-PARAMS_1(_object);
+params ["_object"];
 
 _typeOf = toLower (typeOf _object);
 _returnValue = false;

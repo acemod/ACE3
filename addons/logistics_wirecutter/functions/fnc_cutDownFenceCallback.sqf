@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_fenceObject);
+params ["_fenceObject"];
 
 _fenceObject setdamage 1;
 // [localize LSTRING(FenceCut)] call EFUNC(common,displayTextStructured);
