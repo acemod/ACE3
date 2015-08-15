@@ -6,8 +6,6 @@
  * 0: The unit <OBJECT>
  * 1: The target <OBJECT>
  * 2: The nozzle <OBJECT>
- * 3: The rate <NUMBER>
- * 4: The maximum fuel volume <NUMBER>
  *
  * Return Value:
  * None
@@ -17,11 +15,14 @@
 
 #include "script_component.hpp"
 
-private ["_sink"];
-params ["_unit", "_target", "_nozzle", "_rate", "_maxFuel"];
+private ["_sink", "_rate", "_maxFuel"];
+params ["_unit", "_target", "_nozzle"];
 
 _sink = _nozzle getVariable [QGVAR(sink), objNull];
 if (isNull _sink) exitWith {};
+
+_rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate);
+_maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
 
 [{ 
     private ["_source", "_sink", "_fuelInSource", "_fuelInSink", "_finished", "_fueling"];

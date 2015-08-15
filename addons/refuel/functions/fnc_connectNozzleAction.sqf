@@ -18,9 +18,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#define FLOWRATE_GND 0.165 // TODO ace_vehicles messes with fuel capacity -  why?
-#define FLOWRATE_AIR 0.67
-
 private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_endASL", "_rate", "_maxFuel"];
 
 params ["_unit", "_target", "_startingPosition", "_nozzle"];
@@ -97,12 +94,6 @@ _nozzle setVariable [QGVAR(sink), _target, true];
 _nozzle setVariable [QGVAR(fueling), 1, true];
 _target setVariable [QGVAR(nozzle), _nozzle, true];
 
-_rate = if (_target isKindOf "Air") then { FLOWRATE_AIR * GVAR(rate)
-} else {
-    FLOWRATE_GND * GVAR(rate)
-};
-_maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "fuelCapacity");
-
-[_unit, _target, _nozzle, _rate, _maxFuel] call FUNC(refuel);
+[_unit, _target, _nozzle] call FUNC(refuel);
 
 true
