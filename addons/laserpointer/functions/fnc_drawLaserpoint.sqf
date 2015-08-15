@@ -1,7 +1,24 @@
-// by commy2 and esteldunedain
+/*
+ * Author: commy2
+ * Draw a Laser Point
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Range <NUMBER>
+ * 2: is Green <BOOL>
+ * 3: Brightness <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, 10, false, 2] call ace_laserpointer_fnc_drawLaserpoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-
 private ["_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_intermediatePos", "_iteration", "_light", "_line", "_pL", "_pL2", "_pX", "_size", "_units", "_fnc_getDistanceToTerrain", "_fnc_doesIntersectWithMan"];
+params ["_unit", "_range", "_isGreen", "_brightness"];
 
 // init object
 /*if (isNil QGVAR(laserdot)) then {
@@ -15,8 +32,6 @@ private ["_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_inte
 
     GVAR(laserdot) = _light;
 };*/
-
-EXPLODE_4_PVT(_this,_unit,_range,_isGreen,_brightness);
 
 _p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
 
@@ -121,13 +136,13 @@ drawLine3D [
 _size = 2 * (_range - (positionCameraToWorld [0,0,0] vectorDistance _pL)) / _range;
 
 _camPos = positionCameraToWorld [0,0,0.2];
-if (count ([_unit,      "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
+if (count ([_unit, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
 if (count ([ACE_player, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
 
 // Convert _camPos to ASL
 if (!surfaceIsWater _camPos) then { _camPos = ATLtoASL _camPos; };
-if (                  terrainIntersectASL [_camPos, _pL2])     exitWith {};
-if (                       lineIntersects [_camPos, _pL2])     exitWith {};
+if (terrainIntersectASL [_camPos, _pL2]) exitWith {};
+if (lineIntersects [_camPos, _pL2]) exitWith {};
 
 //GVAR(laserdot) setPos _pL;
 

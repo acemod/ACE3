@@ -32,7 +32,7 @@ GVAR(nearUnits) = [];
         } forEach nearestObjects [positionCameraToWorld [0,0,0], ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
 
         GVAR(nearUnits) = _nearUnits;
-        
+
     } , 5, []] call CBA_fnc_addPerFrameHandler;
 
     addMissionEventHandler ["Draw3D", {
