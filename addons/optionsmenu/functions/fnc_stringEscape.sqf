@@ -14,7 +14,7 @@
  * Public: No
  */
 
-private ["_str", "_array", "_maxIndex"];
+private ["_str", "_array", "_maxIndex", "_isEven"];
 _str = _this;
 
 _isEven = {
