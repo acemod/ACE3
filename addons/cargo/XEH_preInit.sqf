@@ -11,6 +11,7 @@ PREP(GetSizeItem);
 PREP(initObject);
 PREP(initVehicle);
 PREP(handleDestroyed);
+PREP(moduleSettings);
 PREP(loadItem);
 PREP(onMenuOpen);
 PREP(unloadItem);

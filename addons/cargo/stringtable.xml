@@ -16,5 +16,20 @@
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
         </Key>
+        <Key ID="STR_ACE_Cargo_settingsCategory">
+            <English>Cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
+            <English>Enable Cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_setting_ModuleSettings_descr">
+            <English>Enable the load in cargo module</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
+            <English>Cargo Settings</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName_descr">
+            <English>Configure the cargo module settings</English>
+        </Key>
     </Package>
 </Project>

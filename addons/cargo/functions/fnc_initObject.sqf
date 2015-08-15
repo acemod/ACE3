@@ -24,5 +24,5 @@ _type = typeOf _object;
 if (_type in GVAR(initializedItemClasses)) exitWith {};
 GVAR(initializedItemClasses) pushBack _type;
 
-_action = [QGVAR(load), localize LSTRING(loadObject), "", {[_player, _target] call FUNC(startLoadIn)}, {[_player, _target] call FUNC(canLoad)}] call EFUNC(interact_menu,createAction);
+_action = [QGVAR(load), localize LSTRING(loadObject), QUOTE(PATHTOF(UI\Icon_load.paa)), {[_player, _target] call FUNC(startLoadIn)}, {GVAR(enable) && {[_player, _target] call FUNC(canLoad)}] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);

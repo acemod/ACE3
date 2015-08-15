@@ -1,5 +1,32 @@
 
 class CfgVehicles {
+
+    class ACE_Module;
+    class ACE_moduleCargoSettings: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(SettingsModule_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        category = "ACE";
+        function = QUOTE(DFUNC(moduleSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class enable {
+                displayName = CSTRING(ModuleSettings_enable);
+                description = CSTRING(ModuleSettings_enable_desc);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(SettingsModule_Desc);
+            sync[] = {};
+        };
+    };
+
+
     class LandVehicle;
     class Car: LandVehicle {
         GVAR(space) = 4;
