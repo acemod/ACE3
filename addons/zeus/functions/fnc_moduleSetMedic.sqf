@@ -21,7 +21,7 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated && local _logic) exitWith {};
 
-if (isNil QEFUNC(captives,setSurrendered)) then {
+if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
     _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
