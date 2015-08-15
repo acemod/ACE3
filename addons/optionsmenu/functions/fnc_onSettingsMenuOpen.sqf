@@ -56,9 +56,8 @@ if (GVAR(serverConfigGeneration) == 0) then {
 lbClear (_menu displayCtrl 14);
 {
     if (_x == "") then {
-        _x = localize "STR_ACE_OptionsMenu_category_all";
+        _x = localize LSTRING(category_all);
     };
-    if (isLocalized _x) then {_x = localize _x};
     (_menu displayCtrl 14) lbAdd _x;
 } forEach GVAR(categories);
 

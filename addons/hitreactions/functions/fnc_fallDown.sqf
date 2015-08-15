@@ -1,11 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-private ["_unit", "_firer", "_damage"];
-
-_unit = _this select 0;
-_firer = _this select 1;
-_damage = _this select 2;
+params ["_unit", "_firer", "_damage"];
 
 // don't fall on collision damage
 if (_unit == _firer) exitWith {};

@@ -20,6 +20,7 @@ _parseConfigForDisplayNames = {
     if !(isClass _optionEntry) exitwith {false};
     _x set [3, getText (_optionEntry >> "displayName")];
     _x set [4, getText (_optionEntry >> "description")];
+    _x set [8, getText (_optionEntry >> "category")];
 
     private "_values";
     _values = _x select 5;
