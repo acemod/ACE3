@@ -14,7 +14,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_uudi"];
+params ["_uuid"];
 if(HASH_HASKEY(GVAR(laserEmitters), _uuid)) then {
     HASH_REM(GVAR(laserEmitters), _uuid);
 };
