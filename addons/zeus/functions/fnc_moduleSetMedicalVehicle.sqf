@@ -30,8 +30,8 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     } else {
         _unit = (_mouseOver select 1);
 
-        if (_unit isKindOf "CAManBase") then {
-            [LSTRING(NoMan)] call EFUNC(common,displayTextStructured);
+        if (_unit isKindOf "Man" || {_unit isKindOf "Building"}) then {
+            [LSTRING(OnlyVehicles)] call EFUNC(common,displayTextStructured);
         } else {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);

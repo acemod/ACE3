@@ -137,13 +137,13 @@
             <German>Bewusstlosigkeit umschalten</German>
             <Portuguese>Alternar inconsciência</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleSetMedic_DisplayName">
+        <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleSetMedicalVehicle_DisplayName">
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_moduleSetMedicalFacility_DisplayName">
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
@@ -170,11 +170,11 @@
             <Italian>Si può usare solo su fanteria a piedi</Italian>
             <Portuguese>Usar somente em infantaria desmontada</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Zeus_OnlyVehicles">
-            <English>Object must be a vehicle</English>
+        <Key ID="STR_ACE_Zeus_OnlyStructures">
+            <English>Unit must be a structure</English>
         </Key>
-        <Key ID="STR_ACE_Zeus_NoMan">
-            <English>Object must not be a man</English>
+        <Key ID="STR_ACE_Zeus_OnlyVehicles">
+            <English>Unit must be a vehicle</English>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>

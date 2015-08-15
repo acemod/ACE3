@@ -117,7 +117,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(moduleSetMedic_displayName);
+        displayName = CSTRING(ModuleSetMedic_displayName);
         function = QFUNC(moduleSetMedic);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
@@ -127,7 +127,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(moduleSetMedicalVehicle_displayName);
+        displayName = CSTRING(ModuleSetMedicalVehicle_displayName);
         function = QFUNC(moduleSetMedicalVehicle);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
@@ -137,7 +137,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(moduleSetMedicalFacility_displayName);
+        displayName = CSTRING(ModuleSetMedicalFacility_displayName);
         function = QFUNC(moduleSetMedicalFacility);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
