@@ -635,5 +635,8 @@
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
         </Key>
+        <Key ID="STR_ACE_Repair_categoryName">
+            <English>Vehicle Repair</English>
+        </Key>
     </Package>
 </Project>

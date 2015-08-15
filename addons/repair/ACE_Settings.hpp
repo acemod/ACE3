@@ -3,8 +3,9 @@ class ACE_Settings {
         displayName = CSTRING(SettingDisplayTextName);
         description = CSTRING(SettingDisplayTextDesc);
         typeName = "BOOL";
-        isClientSetable = 1;
+        isClientSettable = 1;
         value = 1;
+        category = CSTRING(categoryName);
     };
     class GVAR(engineerSetting_Repair) {
         displayName = CSTRING(enginerSetting_Repair_name);
@@ -12,6 +13,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
         values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        category = CSTRING(categoryName);
     };
     class GVAR(engineerSetting_Wheel) {
         displayName = CSTRING(enginerSetting_Wheel_name);
@@ -19,18 +21,21 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        category = CSTRING(categoryName);
     };
     class GVAR(repairDamageThreshold) {
         displayName = CSTRING(repairDamageThreshold_name);
         description = CSTRING(repairDamageThreshold_description);
         typeName = "SCALAR";
         value = 0.6;
+        category = CSTRING(categoryName);
     };
     class GVAR(repairDamageThreshold_Engineer) {
         displayName = CSTRING(repairDamageThreshold_Engineer_name);
         description = CSTRING(repairDamageThreshold_Engineer_description);
         typeName = "SCALAR";
         value = 0.4;
+        category = CSTRING(categoryName);
     };
     class GVAR(consumeItem_ToolKit) {
         displayName = CSTRING(consumeItem_ToolKit_name);
@@ -38,6 +43,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+        category = CSTRING(categoryName);
     };
 
     class GVAR(fullRepairLocation) {
@@ -46,6 +52,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 2;
         values[] = {CSTRING(useAnywhere), CSTRING(repairVehicleOnly), CSTRING(repairFacilityOnly), CSTRING(vehicleAndFacility), ECSTRING(common,Disabled)};
+        category = CSTRING(categoryName);
     };
     class GVAR(engineerSetting_fullRepair) {
         displayName = CSTRING(engineerSetting_fullRepair_name);
@@ -53,5 +60,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 3;
         values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
+        category = CSTRING(categoryName);
     };
 };
