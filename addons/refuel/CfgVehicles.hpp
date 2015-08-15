@@ -18,6 +18,14 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
+                class GVAR(connect) { \
+                    displayName = CSTRING(Return); \
+                    distance = REFUEL_ACTION_DISTANCE; \
+                    condition = QUOTE([ARR_1(_player)] call FUNC(canConnectNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                }; \
             }; \
         }; 
 #define MACRO_CONNECT_ACTIONS \

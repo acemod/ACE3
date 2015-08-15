@@ -82,8 +82,8 @@
             <German>Gescheitert</German>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOff">
-            <English>Close nozzle</English>
-            <German>Hahn zudrehen</German>
+            <English>Stop fueling</English>
+            <German>Betankung anhalten</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -105,9 +105,9 @@
             <English>Fueling stopped</English>
             <German>Betankung angehalten</German>
         </Key>
-        <Key ID="STR_ACE_Refuel_">
-            <English></English>
-            <German></German>
+        <Key ID="STR_ACE_Refuel_Return">
+            <English>Return fuel nozzle</English>
+            <German>Zapfpistole zurückstecken</German>
         </Key>
     </Package>
 </Project>
