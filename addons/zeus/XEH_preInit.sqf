@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(addObjectToCurator);
 PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);

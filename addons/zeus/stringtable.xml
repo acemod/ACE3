@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -188,6 +188,12 @@
             <Czech>Vyžaduje addon, který není přítomen</Czech>
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
+            <English>Add Objects to Curator</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
+            <English>Adds any spawned object to all curators in the mission</English>
         </Key>
     </Package>
 </Project>
