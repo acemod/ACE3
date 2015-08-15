@@ -49,8 +49,8 @@ SETMVAR(GVAR(initializedClasses),_initializedClasses);
 if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitwith {};
 
 private ["_text", "_condition", "_statement", "_icon", "_action"];
-_text = localize "STR_ACE_Cargo_openMenu";
 _condition = {GVAR(enable)};
+_text = localize LSTRING(openMenu);
 _statement = {GVAR(interactionVehicle) = _target; createDialog QGVAR(menu);};
 _icon = "";
 
