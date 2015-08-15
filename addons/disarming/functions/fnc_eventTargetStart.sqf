@@ -31,12 +31,12 @@ _itemsToAdd = [];
     if (_x == (vest _target)) then {
         _itemsToAdd = _itemsToAdd + (vestItems _target);
     };
-} count _listOfObjectsToRemove;
+} forEach _listOfObjectsToRemove;
 
 {
     if (!(_x in _listOfObjectsToRemove)) then {
         _listOfObjectsToRemove pushBack _x;
     };
-} count _itemsToAdd;
+} forEach _itemsToAdd;
 
 [_caller, _target, _listOfObjectsToRemove] call FUNC(disarmDropItems);

@@ -18,15 +18,14 @@
 
 params ["_target"];
 
-private ["_allGear"];
-
+private ["_items", "_counts"];
 
 _items = [];
 _counts = [];
 {
     _x params ["_item", "_count"];
-    _item append _item;
-    _count append _count;
-} count [(getWeaponCargo _target), (getItemCargo _target), (getMagazineCargo _target), (getBackpackCargo _target)];
+    _items append _item;
+    _counts append _count;
+} forEach [(getWeaponCargo _target), (getItemCargo _target), (getMagazineCargo _target), (getBackpackCargo _target)];
 
 [_items,_counts] // Return

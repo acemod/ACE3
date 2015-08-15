@@ -37,6 +37,6 @@ _problem = false;
     _index = _beginingArray find _x;
     if (_index == -1) exitWith {_problem = true;};
     _beginingArray deleteAt _index;
-} count (_endA + _endB);
+} forEach (_endA + _endB);
 
 (!_problem) && {_beginingArray isEqualTo []}

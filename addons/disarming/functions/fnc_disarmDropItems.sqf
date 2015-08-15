@@ -123,7 +123,7 @@ _addToCrateCount = [];
             _addToCrateCount pushBack 1;
         };
     };
-} count _targetItemsStart;
+} forEach _targetItemsStart;
 
 //Add the items to the holder (combined to reduce addItemCargoGlobal calls)
 {

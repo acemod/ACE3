@@ -50,6 +50,6 @@ _classnamesCount = [];
         _uniqueClassnames pushBack _x;
         _classnamesCount pushBack 1;
     };
-} count _allItems;
+} forEach _allItems;
 
 [_uniqueClassnames, _classnamesCount]
