@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Rearm">
+        <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
+            <English>Rearm Settings</English>
+            <German>Aufmunitioniereinstellungen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_speed_DisplayName">
+            <English>Rearm speed</English>
+            <German>Aufmunitioniergeschwindigkeit</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_speed_Description">
+            <English>How fast should a vehicle be rearmed?</English>
+            <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
+            <English>Entire vehicle</English>
+            <German>Gesamtes Fahrzeug</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_magazine">
+            <English>Entire Magazine</English>
+            <German>Gesamtes Magazin</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_caliber">
+            <English>Amount based on caliber</English>
+            <German>Kaliberbasierte Anzahl</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Rearm">
+            <English>Rearm</English>
+            <German>Aufmunitionieren</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmAction">
+            <English>Rearming %1 with %2</English>
+            <German>Munitioniere %1 auf mit %2</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_PickUpAction">
+            <English>Taking %1 for %2</English>
+            <German>Nehme %1 für %2</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_PickUpAmmo">
+            <English>Pick up ammo</English>
+            <German>Munition nehmen</German>
+        </Key>
+    </Package>
+</Project>
