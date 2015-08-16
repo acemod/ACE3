@@ -53,4 +53,4 @@ _dragAction = [QGVAR(drag), localize LSTRING(Drag), "", {[_player, _target] call
 _dropAction = [QGVAR(drop), localize LSTRING(Drop), "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _dragAction] call EFUNC(interact_menu,addActionToClass);
-[_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);
+[_type, 0, ["ACE_MainActions"], _dropAction] call EFUNC(interact_menu,addActionToClass);
