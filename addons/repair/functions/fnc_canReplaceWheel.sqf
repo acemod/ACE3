@@ -6,7 +6,7 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpoint <STRING>
- * 3: Wheel <OBJECT> (Optional)
+ * 3: Wheel <OBJECT>/<BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target", "_hitPoint", ["_wheel",false]];
+params ["_unit", "_target", "_hitPoint", ["_wheel", false]];
 TRACE_4("params",_unit,_target,_hitPoint,_wheel);
 // TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
 //if !([_unit, _target, _hitpoint, "ReplaceWheel"] call FUNC(canRepair)) exitwith {false};

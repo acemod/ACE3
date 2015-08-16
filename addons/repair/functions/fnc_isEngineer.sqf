@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Class <NUMBER> (Optional)
+ * 1: Class <NUMBER> (default: 1)
  *
  * Return Value:
  * Is Engineer Class <BOOL>
