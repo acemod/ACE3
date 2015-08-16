@@ -35,7 +35,7 @@ if (_turnedOn) then {
         _deviceData = [_x] call FUNC(getDeviceData);
 
         if !(isNull D_GET_OWNER(_deviceData)) then {
-            if !(D_GET_DEVICE_STATE_VALUE(_device) isEqualTo STATE_NORMAL) exitwith {}; // means we didn't remove it
+            if !(D_GET_DEVICE_STATE_VALUE(_deviceData) isEqualTo STATE_NORMAL) exitwith {}; // means we didn't remove it
             _encryptionKeys = D_GET_ENCRYPTION(_deviceData);
             if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitWith {};
 
