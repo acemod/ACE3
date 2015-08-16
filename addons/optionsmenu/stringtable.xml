@@ -323,9 +323,11 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
+            <Polish>Fix Headbug</Polish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
+            <Polish>Resetuje aktualną animację.</Polish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
