@@ -77,12 +77,12 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
         _val = missionNamespace getvariable _x;
         if (typeName _val == "SCALAR") then {
             _return = switch (_val) do {
-                case 0: {true};
-                case 1: _repairVeh;
-                case 2: _repairFacility;
-                case 3: {{call _repairFacility || call _repairVeh}};
+                case 0: {true}; //useAnywhere
+                case 1: {call _repairVeh}; //repairVehicleOnly
+                case 2: {call _repairFacility}; //repairFacilityOnly
+                case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
+                default {false}; //Disabled
             };
-            _return = call _return;
         };
     };
 } forEach _locations;
