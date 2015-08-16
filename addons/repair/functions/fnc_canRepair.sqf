@@ -30,7 +30,7 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 } else {
     // Check for required class
     if (isText (_config >> "requiredEngineer")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "requiredEngineer")), 0];
+        missionNamespace getVariable [(getText (_config >> "requiredEngineer")), 0];
     };
     0;
 };
@@ -45,7 +45,7 @@ if (getText (_config >> "condition") != "") then {
     if (isnil _condition) then {
         _condition = compile _condition;
     } else {
-        _condition = missionNamespace getvariable _condition;
+        _condition = missionNamespace getVariable _condition;
     };
     if (typeName _condition == "BOOL") then {
         _return = _condition;
@@ -57,7 +57,7 @@ if (getText (_config >> "condition") != "") then {
 if (!_return) exitwith {false};
 
 _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
-    missionNamespace getvariable [getText(_config >> "vehicleStateCondition"), 0]
+    missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
 } else {
     getNumber(_config >> "vehicleStateCondition")
 };
@@ -76,7 +76,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     if (_x == "RepairVehicle" && _repairVeh) exitwith {_return = true;};
     if !(isnil _x) exitwith {
         private "_val";
-        _val = missionNamespace getvariable _x;
+        _val = missionNamespace getVariable _x;
         if (typeName _val == "SCALAR") then {
             _return = switch (_val) do {
                 case 0: {true};

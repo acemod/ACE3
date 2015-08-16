@@ -45,7 +45,6 @@ class ACE_Settings {
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
         category = CSTRING(categoryName);
     };
-
     class GVAR(fullRepairLocation) {
         displayName = CSTRING(fullRepairLocation);
         description = CSTRING(fullRepairLocation_description);

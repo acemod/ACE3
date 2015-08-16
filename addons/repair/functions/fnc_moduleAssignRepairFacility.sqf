@@ -19,8 +19,8 @@ params ["_logic"];
 
 if (!isNull _logic) then {
     private ["_list", "_setting"];
-    _list = _logic getvariable ["EnableList",""];
-    _setting = _logic getvariable ["role",0];
+    _list = _logic getVariable ["EnableList",""];
+    _setting = _logic getVariable ["role",0];
 
     [_list, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);
     [synchronizedObjects _logic, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);

@@ -26,11 +26,11 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-    [_caller, _caller getvariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
+    [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(repairPrevAnimCaller), nil];
 
-_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnrepair), ""]);
+_weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {
     _caller selectWeapon _weaponSelect;
 } else {
@@ -48,7 +48,7 @@ _callback = getText (_config >> "callbackFailure");
 if (isNil _callback) then {
     _callback = compile _callback;
 } else {
-    _callback = missionNamespace getvariable _callback;
+    _callback = missionNamespace getVariable _callback;
 };
 
 _args call _callback;
