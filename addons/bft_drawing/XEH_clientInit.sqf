@@ -4,21 +4,22 @@
 if (!hasInterface) exitWith {};
 
 // setup of mapOpened and mapClosed events, temporary as they are in the process of being implemented in common
-GVAR(mapVisibleLastFrame) = false;
+/*GVAR(mapVisibleLastFrame) = false;
 [{
     // "mapOpened" event
     if ((!GVAR(mapVisibleLastFrame)) && (visibleMap)) then {
         GVAR(mapVisibleLastFrame) = true;
         ["mapOpened", []] call EFUNC(common,localEvent);
     };
-    
+
     // "mapClosed" event
     if (GVAR(mapVisibleLastFrame) && (!visibleMap)) then {
         GVAR(mapVisibleLastFrame) = false;
         ["mapClosed", []] call EFUNC(common,localEvent);
     };
 }, 0, []] call cba_fnc_addPerFrameHandler;
-
+*/
+/*
 // register with reporting channels when map is opened
 ["mapOpened",{
     // register reporting modes
@@ -31,4 +32,4 @@ GVAR(mapVisibleLastFrame) = false;
 
 ["mapClosed",{
     [false] call EFUNC(bft,updateAvailableDevicesPosition);
-}] call EFUNC(common,addEventHandler);
+}] call EFUNC(common,addEventHandler);*/

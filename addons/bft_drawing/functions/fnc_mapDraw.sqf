@@ -32,15 +32,15 @@ _mouseover = [-1,[]];
         _mouseover = [0, _x];
     };
 
-    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size,0, _callsign, 0, 0.05, "TahomaB", "right"];
+    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size, 0, _callsign, 0, 0.05, "TahomaB", "right"];
     _ctrl drawIcon [_sizeIcon, [COLOR_BLACK], _position, _size, _size, 0, "", 1,0, "TahomaB", "right"];
 
-    // --- ToDo: make setting for displaying title
-    // --- ToDo: make setting for font size
+    // TODO: make setting for displaying title
+    // TODO: make setting for font size
 } forEach EGVAR(BFT_DATA_ADDON,availableDevices);
 
 {
-    // --- ToDo
+    // TODO Implement
 } forEach EGVAR(BFT_DATA_ADDON,saluteReports);
 
 // Show the spotrep

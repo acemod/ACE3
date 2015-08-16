@@ -3,7 +3,7 @@
  *
  * Description:
  *   Handles dialog / display startup and registering of event handlers
- *       
+ *
  *   This function will define iffOpen, using the following format:
  *       Parameter 0: Device ID <STRING>
  *       Parameter 1: Interface config name <STRING>
@@ -91,16 +91,16 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
             _display = I_GET_DISPLAY;
             _veh = vehicle ACE_player;
             _playerPos = getPosASL _veh;
-        
+
             // update time
             (_display displayCtrl IDC_OSD_TIME) ctrlSetText call FUNC(currentTime);
-            
+
             // update grid position
             (_display displayCtrl IDC_OSD_GRID) ctrlSetText format ["%1", mapGridPosition _playerPos];
-            
+
             // update current heading
             (_display displayCtrl IDC_OSD_DIR_DEGREE) ctrlSetText format ["%1°",[direction _veh,3] call CBA_fnc_formatNumber];
-            
+
             // update current elevation (ASL) on TAD
             (_display displayCtrl IDC_OSD_ELEVATION) ctrlSetText format ["%1m",[round (_playerPos select 2),4] call CBA_fnc_formatNumber];
         }]
@@ -119,10 +119,10 @@ if (_displayName in [QGVAR(TAD_dsp),QGVAR(TAD_dlg)]) then {
             _heading = direction _veh;
             // update time
             (_display displayCtrl IDC_OSD_TIME) ctrlSetText call FUNC(currentTime);
-            
+
             // update grid position
             (_display displayCtrl IDC_OSD_GRID) ctrlSetText format ["%1", mapGridPosition getPosASL _veh];
-            
+
             // update current heading
             (_display displayCtrl IDC_OSD_DIR_DEGREE) ctrlSetText format ["%1°",[_heading,3] call CBA_fnc_formatNumber];
             (_display displayCtrl IDC_OSD_DIR_OCTANT) ctrlSetText format ["%1",[_heading] call FUNC(degreeToOctant)];
@@ -171,7 +171,7 @@ if (!(_deviceAppData isEqualTo []) && (_deviceOwner isKindOf "ParachuteBase" || 
     if !(HASH_HASKEY(GVAR(settings),_interfaceID)) then {
         // read from config
         _deviceAppData = [_interfaceConfigName] call FUNC(getInterfaceSettingsFromConfig);
-        
+
         // write to cache
         HASH_SET(GVAR(settings),_interfaceID,_deviceAppData);
     };

@@ -23,7 +23,7 @@ if(!isServer) then {
 } else {
     ["bft_requestAllData", FUNC(handleRequestAllData)] call EFUNC(common,addEventHandler);
 
-    [QGVAR(messages), [0, "Message content!"]] call FUNC(syncedArrayPushback);
+    /*[QGVAR(messages), [0, "Message content!"]] call FUNC(syncedArrayPushback);
     [QGVAR(messages), ["0/1", "Message content!"]] call FUNC(syncedArrayPushback);
     [QGVAR(messages), [2, "Message content!"]] call FUNC(syncedArrayPushback);
     [QGVAR(messages), [3, "Message content!"]] call FUNC(syncedArrayPushback);
@@ -35,7 +35,7 @@ if(!isServer) then {
     [QGVAR(messages), 0] call FUNC(syncedArrayDelete);
     [QGVAR(messages), "0/1"] call FUNC(syncedArrayDelete);
     [QGVAR(messages), 2] call FUNC(syncedArrayDelete);
-    [QGVAR(messages), 3] call FUNC(syncedArrayDelete);
+    [QGVAR(messages), 3] call FUNC(syncedArrayDelete);*/
 
     // this setvariable ["ace_bft_assignableInformation_MDFDevice", ["elementType", 0, "elementCallsign", 1]];
 };

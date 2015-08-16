@@ -14,3 +14,4 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "dialog.hpp"
+#include "ACE_BFT.hpp"
