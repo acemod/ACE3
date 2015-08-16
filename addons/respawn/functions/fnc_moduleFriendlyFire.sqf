@@ -28,4 +28,6 @@
     publicVariable QGVAR(showFriendlyFireMessage);
 
     diag_log text "[ACE]: Friendly Fire Messages Module Initialized.";
+
+    ["_pfhId"] call CBA_fnc_removePerFrameHandler;
 }, 0, _this] call CBA_fnc_addPerFrameHandler;
