@@ -19,7 +19,7 @@
 private ["_nozzle", "_sink", "_fueling"];
 params ["_unit", "_nozzleHolder"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_nozzleHolder distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
+if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_nozzleHolder distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 _nozzle = _nozzleHolder getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle) exitWith {false};

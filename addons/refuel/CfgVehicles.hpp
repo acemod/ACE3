@@ -25,7 +25,7 @@
                 }; \
                 class GVAR(CheckFuel) { \
                     displayName = CSTRING(CheckFuel); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(getFuel) >= 0); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckFuel)); \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
@@ -47,7 +47,7 @@
                 icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 class GVAR(Connect) { \
                     displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_1(_player)] call FUNC(canConnectNozzle)); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \

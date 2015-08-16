@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(canCheckFuel);
 PREP(canConnectNozzle);
 PREP(canDisconnect);
 PREP(canRefuel);
