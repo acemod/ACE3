@@ -34,4 +34,4 @@ if (_unit distance _loadShip <= MAX_LOAD_DISTANCE) exitWith {_loadShip};
 _loadContainer = nearestObject [_unit,"Cargo_base_F"];
 if (_unit distance _loadContainer <= MAX_LOAD_DISTANCE) exitWith {_loadContainer};
 
-objNull;
+objNull

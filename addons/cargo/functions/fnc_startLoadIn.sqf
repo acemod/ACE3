@@ -6,7 +6,7 @@
  * 0: Object <OBJECT>
  *
  * Return value:
- * None
+ * Object loaded <BOOL>
  *
  * Example:
  * [object] call ace_cargo_fnc_starLoadIn
@@ -27,4 +27,5 @@ if (isNull _nearestVehicle || _nearestVehicle isKindOf "Cargo_Base_F") then {
 };
 
 if (isNull _nearestVehicle) exitWith {false};
-[_object, _nearestVehicle] call FUNC(loadItem);
+
+[_object, _nearestVehicle] call FUNC(loadItem)

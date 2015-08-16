@@ -22,7 +22,7 @@ params ["_item"];
 _config = (configFile >> "CfgVehicles" >> typeof _item >> QGVAR(size));
 
 if (isNumber (_config)) exitWith {
-    _item getVariable [QGVAR(size), getNumber (_config)];
+    _item getVariable [QGVAR(size), getNumber (_config)]
 };
 
 -1

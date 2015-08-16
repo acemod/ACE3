@@ -17,4 +17,4 @@
 
 params ["_object"];
 
-_object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeof _object >> QGVAR(space))];
+_object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeof _object >> QGVAR(space))]

@@ -7,7 +7,7 @@
  * 1: Vehicle <OBJECT>
  *
  * Return value:
- * None
+ * Object loaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_loadItem
@@ -34,4 +34,4 @@ detach _item;
 _item attachTo [_vehicle,[0,0,100]];
 ["cargo_hideItem", [_item, true]] call EFUNC(common,serverEvent);
 
-true;
+true

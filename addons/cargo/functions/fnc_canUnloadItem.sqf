@@ -40,4 +40,5 @@ if (_vehicle isKindOf "Ship" ) then {
 };
 
 if (!_validVehiclestate) exitWith {false};
-(count _emptyPos != 0);
+
+(count _emptyPos != 0)

@@ -7,7 +7,7 @@
  * 1: Vehicle <OBJECT>
  *
  * Return value:
- * None
+ * Object unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
@@ -44,9 +44,9 @@ if (_vehicle isKindOf "Ship" ) then {
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitWith { false };
+if (!_validVehiclestate) exitWith {false};
 
-if (count _emptyPos == 0) exitWith { false };  //consider displaying text saying there are no safe places to exit the vehicle
+if (count _emptyPos == 0) exitWith {false};  //consider displaying text saying there are no safe places to exit the vehicle
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded = _loaded - [_item];
@@ -62,4 +62,4 @@ _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
 
 // TOOO maybe drag/carry the unloaded item?
 
-true;
+true

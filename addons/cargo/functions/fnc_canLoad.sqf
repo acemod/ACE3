@@ -29,4 +29,4 @@ if (_nearestVehicle isKindOf "Cargo_Base_F" || isNull _nearestVehicle) then {
 
 if (isNull _nearestVehicle) exitWith {false};
 
-[_object, _nearestVehicle] call FUNC(canLoadItemIn);
+[_object, _nearestVehicle] call FUNC(canLoadItemIn)
