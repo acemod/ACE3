@@ -81,14 +81,6 @@ _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel);
 _unit selectWeapon _weaponSelect;
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 
-_source = _nozzle getVariable QGVAR(source);
-if (_source == _target) exitWith {
-    _source setVariable [QGVAR(isConnected), false, true]; 
-    ropeDestroy (_nozzle getVariable QGVAR(rope));
-    deleteVehicle _nozzle;
-    _unit setVariable [QGVAR(isRefueling), false];
-};
-
 _nozzle attachTo [_target, _endPosTestOffset];
 _nozzle setVariable [QGVAR(sink), _target, true];
 _nozzle setVariable [QGVAR(fueling), 1, true];

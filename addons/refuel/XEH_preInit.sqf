@@ -13,6 +13,7 @@ PREP(connectNozzleAction);
 PREP(disconnect);
 PREP(getFuel);
 PREP(moduleRefuelSettings);
+PREP(returnNozzle);
 PREP(setFuel);
 PREP(takeNozzle);
 PREP(turnOff);
