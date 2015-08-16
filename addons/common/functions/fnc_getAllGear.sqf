@@ -18,6 +18,7 @@
  * 14-16: pistol (String, Array, Array)
  *    17: map, compass, watch, etc. (Array)
  *    18: binocluar (String)
+ *    19: active weapon, active muzzle, active weaponMode (Array)
  *
  */
 #include "script_component.hpp"
@@ -34,7 +35,8 @@ if (isNull _unit) exitWith {[
     "", ["","","",""], [],
     "", ["","","",""], [],
     [],
-    ""
+    "",
+    ["","",""]
 ]};
 
 [
@@ -47,5 +49,6 @@ if (isNull _unit) exitWith {[
     secondaryWeapon _unit, secondaryWeaponItems _unit, secondaryWeaponMagazine _unit,
     handgunWeapon _unit, handgunItems _unit, handgunMagazine _unit,
     assignedItems _unit,
-    binocular _unit
+    binocular _unit,
+    [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit]
 ]
