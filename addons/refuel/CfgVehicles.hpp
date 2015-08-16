@@ -18,17 +18,17 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
-                class GVAR(CheckFuel) { \
-                    displayName = CSTRING(CheckFuel); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(getFuel) >= 0); \
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_1(_player)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                }; \
+                class GVAR(CheckFuel) { \
+                    displayName = CSTRING(CheckFuel); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(getFuel) >= 0); \
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \

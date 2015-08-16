@@ -25,9 +25,15 @@ _nozzle = _unit getVariable QGVAR(nozzle);
 
 if (_source != _target || {isNil "_nozzle"}) exitWith {false};
 
-_source setVariable [QGVAR(isConnected), false, true];
+_unit setVariable [QGVAR(nozzle), nil];
+detach _nozzle;
+[_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+_unit selectWeapon (_unit getVariable QGVAR(selectedWeaponOnRefuel));
+_unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+_unit setVariable [QGVAR(isRefueling), false];
+
+_target setVariable [QGVAR(isConnected), false, true];
 ropeDestroy (_nozzle getVariable QGVAR(rope));
 deleteVehicle _nozzle;
-_unit setVariable [QGVAR(isRefueling), false];
 
 true
