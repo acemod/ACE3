@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -950,7 +950,7 @@
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
-            <English>Atropin autoinjector</English>
+            <English>Atropine autoinjector</English>
             <Russian>Атропин в пневмошприце</Russian>
             <Spanish>Atropina auto-inyectable</Spanish>
             <French>Auto-injecteur d'Atropine</French>
