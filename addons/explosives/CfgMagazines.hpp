@@ -26,7 +26,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.025;
+                digDistance = 0.02;
             };
         };
     };
