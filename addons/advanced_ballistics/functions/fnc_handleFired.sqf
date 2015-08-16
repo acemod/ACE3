@@ -121,26 +121,9 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 _aceTimeSecond = floor ACE_time;
 "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _muzzleVelocity, _transonicStabilityCoef, getPosASL _bullet, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), overcast, _aceTimeSecond, ACE_time - _aceTimeSecond];
 
-[{
-    private ["_args", "_index", "_bullet", "_caliber", "_bulletTraceVisible", "_bulletVelocity", "_bulletPosition"];
-    params ["_args","_idPFH"];
-    _args params["_bullet","_caliber","_bulletTraceVisible","_index"];
+GVAR(allBullets) pushBack [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)];
 
-    _bulletVelocity = velocity _bullet;
-
-    _bulletSpeed = vectorMagnitude _bulletVelocity;
-
-    if (!alive _bullet || _bulletSpeed < 100) exitWith {
-        [_idPFH] call cba_fnc_removePerFrameHandler;
-    };
-
-    _bulletPosition = getPosASL _bullet;
-
-    if (_bulletTraceVisible && _bulletSpeed > 500) then {
-        drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
-    };
-
-    _aceTimeSecond = floor ACE_time;
-    call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, _aceTimeSecond, ACE_time - _aceTimeSecond]);
-
-}, GVAR(simulationInterval), [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)]] call CBA_fnc_addPerFrameHandler;
+if (isNil QGVAR(BulletPFH)) then {
+    diag_log "Add PFH";
+    GVAR(BulletPFH) = [FUNC(handleFirePFH), GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
+};
