@@ -1,4 +1,3 @@
-
 #include "\z\ace\addons\common\define.hpp"
 
 class GVAR(menu) {
