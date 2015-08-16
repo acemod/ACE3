@@ -1,391 +1,396 @@
-<?xml version="1.0"encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="Combat Space Enhancement">
     <Package name="Combat Medical System">
-        <Container name="UI">
-            <Key ID="STR_ACE_Medical_Menu_OpenMenu">
-                <English>Medical Menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_allow">
-                <English>Allow Medical Menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_allow_Descr">
-                <English>Allow clients to use the medical menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_useMenu">
-                <English>Use Medical menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
-                <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
-                <English>Re-open Medical menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
-                <English>Re-open the medical menu after succesful treatment</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
-                <English>Open Medical Menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
-                <English>Medical Menu Settings</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_module_Desc">
-                <English>Configure the usage of the Medical Menu</English>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
-                <Original>EXAMINE &amp; TREATMENT</Original>
-                <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
-                <English>EXAMINE &amp; TREATMENT</English>
-                <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
-                <French>EXAMINER &amp; TRAITEMENTS</French>
-                <Polish>BADANIE &amp; LECZENIE</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS">
-                <Original>STATUS</Original>
-                <Russian>СОСТОЯНИЕ</Russian>
-                <English>STATUS</English>
-                <Spanish>ESTADO</Spanish>
-                <French>ÉTATS</French>
-                <Polish>STATUS</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
-                <Original>OVERVIEW</Original>
-                <Russian>ОБЩАЯ ИНФОРМАЦИЯ</Russian>
-                <English>OVERVIEW</English>
-                <Spanish>DESCRIPCIÓN</Spanish>
-                <French>DESCRIPTION</French>
-                <Polish>OPIS</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
-                <Original>ACTIVITY LOG</Original>
-                <Russian>ПРОВЕДЕННЫЕ МАНИПУЛЯЦИИ</Russian>
-                <English>ACTIVITY LOG</English>
-                <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
-                <French>REGISTRE DES SOINS</French>
-                <Polish>LOGI AKTYWNOŚCI</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
-                <Original>QUICK VIEW</Original>
-                <Russian>БЫСТРЫЙ ОСМОТР</Russian>
-                <English>QUICK VIEW</English>
-                <Spanish>VISTA RÁPIDA</Spanish>
-                <French>VUE RAPIDE</French>
-                <Polish>SZYBKI PODGLĄD</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TRIAGE_NONE">
-                <Original>None</Original>
-                <Russian>Не ранен</Russian>
-                <Spanish>Ninguno</Spanish>
-                <French>Aucun</French>
-                <Polish>Brak</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TRIAGE_MINOR">
-                <Original>Minor</Original>
-                <Russian>Несрочная помощь</Russian>
-                <Spanish>Menor</Spanish>
-                <French>Mineur</French>
-                <Polish>Normalny</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TRIAGE_DELAYED">
-                <Original>Delayed</Original>
-                <Russian>Срочная помощь</Russian>
-                <Spanish>Diferido</Spanish>
-                <French>Urgent</French>
-                <Polish>Opóźniony</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TRIAGE_IMMEDIATE">
-                <Original>Immediate</Original>
-                <Russian>Неотложная помощь</Russian>
-                <Spanish>Inmediato</Spanish>
-                <French>Immédiat</French>
-                <Polish>Natychmiastowy</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TRIAGE_DECEASED">
-                <Original>Deceased</Original>
-                <Russian>Морг</Russian>
-                <Spanish>Fallecido</Spanish>
-                <French>Décédé</French>
-                <Polish>Nie żyje</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
-                <Original>View triage Card</Original>
-                <Russian>Смотреть первичную карточку</Russian>
-                <Spanish>Ver Triage</Spanish>
-                <French>Voir Carte de Triage</French>
-                <Polish>Pokaż kartę segregacyjną</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
-                <Original>Examine Patient</Original>
-                <Russian>Осмотреть пациента</Russian>
-                <Spanish>Examinar Paciente</Spanish>
-                <French>Examiner Patient</French>
-                <Polish>Zbadaj pacjenta</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
-                <Original>Bandage / Fractures</Original>
-                <Russian>Раны / переломы</Russian>
-                <Spanish>Vendajes/Fracturas </Spanish>
-                <French>Bandages / Fractures</French>
-                <Polish>Bandaże / Złamania</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_MEDICATION">
-                <Original>Medication</Original>
-                <Russian>Медикаменты</Russian>
-                <Spanish>Medicación</Spanish>
-                <French>Médications</French>
-                <Polish>Leki</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
-                <Original>Airway Management</Original>
-                <Russian>Дыхательные пути</Russian>
-                <Spanish>Vías Aéreas</Spanish>
-                <French>Gestion Des Voie REspiratoire</French>
-                <Polish>Drogi oddechowe</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
-                <Original>Advanced Treatments</Original>
-                <Russian>Специальная медпомощь</Russian>
-                <Spanish>Tratamientos Avanzados</Spanish>
-                <French>Traitement Avancé</French>
-                <Polish>Zaawansowane zabiegi</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
-                <Original>Drag/Carry</Original>
-                <Russian>Тащить/нести</Russian>
-                <Spanish>Arrastrar/Cargar</Spanish>
-                <French>Glisser/Porter</French>
-                <Polish>Ciągnij/Nieś</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
-                <Original>Toggle (Self)</Original>
-                <Russian>Лечить себя/другого раненого</Russian>
-                <French>Activer (sois)</French>
-                <Polish>Przełącz (na siebie)</Polish>
-                <Spanish>Alternar</Spanish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
-                <Original>Select triage status</Original>
-                <Russian>Сортировка</Russian>
-                <Spanish>Seleccionar estado de Triage</Spanish>
-                <French>Selectioner l'état de Triage</French>
-                <Polish>Wybierz priorytet</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
-                <Original>Select Head</Original>
-                <Russian>Выбрать голову</Russian>
-                <Spanish>Seleccionar Cabeza</Spanish>
-                <French>Selectioner Tête</French>
-                <Polish>Wybierz głowę</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
-                <Original>Select Torso</Original>
-                <Russian>Выбрать торс</Russian>
-                <Spanish>Seleccionar Torso</Spanish>
-                <French>Selectioner Torse</French>
-                <Polish>Wybierz tors</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
-                <Original>Select Left Arm</Original>
-                <Russian>Выбрать левую руку</Russian>
-                <Spanish>Seleccionar Brazo Izquierdo</Spanish>
-                <French>Selectioner Bras Gauche</French>
-                <Polish>Wybierz lewą rękę</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
-                <Original>Select Right Arm</Original>
-                <Russian>Выбрать правую руку</Russian>
-                <Spanish>Seleccionar Brazo Derecho</Spanish>
-                <French>Selectioner Bras Droit</French>
-                <Polish>Wybierz prawą rękę</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
-                <Original>Select Left Leg</Original>
-                <Russian>Выбрать левую ногу</Russian>
-                <Spanish>Seleccionar Pierna Izquierda</Spanish>
-                <French>Selectioner Jambe Gauche</French>
-                <Polish>Wybierz lewą nogę</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
-                <Original>Select Right Leg</Original>
-                <Russian>Выбрать правую ногу</Russian>
-                <Spanish>Seleccionar Pierna Derecha</Spanish>
-                <French>Selectioner Jambe Droite</French>
-                <Polish>Wybierz prawą nogę</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_HEAD">
-                <Original>Head</Original>
-                <Russian>Голова</Russian>
-                <Spanish>Cabeza</Spanish>
-                <French>Tête</French>
-                <Polish>Głowa</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_TORSO">
-                <Original>Torso</Original>
-                <Russian>Торс</Russian>
-                <French>Torse</French>
-                <Polish>Tors</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_ARM_L">
-                <Original>Left Arm</Original>
-                <Russian>Левая рука</Russian>
-                <Spanish>Brazo Izquierdo</Spanish>
-                <French>Bras Gauche</French>
-                <Polish>Lewa ręka</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_ARM_R">
-                <Original>Right Arm</Original>
-                <Russian>Правая рука</Russian>
-                <Spanish>Brazo Derecho</Spanish>
-                <French>Bras Droit</French>
-                <Polish>Prawa ręka</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_LEG_L">
-                <Original>Left Leg</Original>
-                <Russian>Левая нога</Russian>
-                <Spanish>Pierna Izquierda</Spanish>
-                <French>Jambe Gauche</French>
-                <Polish>Lewa noga</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_LEG_R">
-                <Original>Right Leg</Original>
-                <Russian>Правая нога</Russian>
-                <Spanish>Pierna Derecha</Spanish>
-                <French>Jambe Droite</French>
-                <Polish>Prawa noga</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
-                <Original>Body Part: %1</Original>
-                <Russian>Часть тела: %1</Russian>
-                <Spanish>Parte del cuerpo: %1</Spanish>
-                <French>Partie du corps: %1</French>
-                <Polish>Część ciała: %1</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SMALL">
-                <Original>Small</Original>
-                <Russian>малого размера</Russian>
-                <Spanish>Pequeña</Spanish>
-                <French>Petite</French>
-                <Polish>małym</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_MEDIUM">
-                <Original>Medium</Original>
-                <Russian>среднего размера</Russian>
-                <Spanish>Mediana</Spanish>
-                <French>moyenne</French>
-                <Polish>średnim</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_LARGE">
-                <Original>Large</Original>
-                <Russian>большого размера</Russian>
-                <Spanish>Grande</Spanish>
-                <French>Grande</French>
-                <Polish>dużym</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
-                <Original>There are %2 %1 Open Wounds</Original>
-                <Russian>%2 открытые раны %1</Russian>
-                <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-                <French>Il y a %2 %1 Blessure Ouverte</French>
-                <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
-                <Original>There is 1 %1 Open Wound</Original>
-                <Russian>Открытая рана %1</Russian>
-                <Spanish>Hay 1 Herida Abierta %1</Spanish>
-                <French>Il y a 1 blessure ouverte %1</French>
-                <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
-                <Original>There is a partial %1 Open wound</Original>
-                <Russian>Частично открытая рана %1</Russian>
-                <Spanish>Hay una herida parcial abierta %1</Spanish>
-                <French>Il y a une Blessure Patiellement Ouverte %1</French>
-                <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
-                <Original>There are %2 %1 Bandaged Wounds</Original>
-                <Russian>%2 перевязанные раны %1</Russian>
-                <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-                <French>Il y a %2 %1 Blessure Bandée</French>
-                <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
-                <Original>There is 1 %1 Bandaged Wound</Original>
-                <Russian>1 перевязанная рана %1</Russian>
-                <Spanish>Hay 1 Herida Vendada %1</Spanish>
-                <French>Il y a 1 %1 Blessure Bandée</French>
-                <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
-                <Original>There is a partial %1 Bandaged wound</Original>
-                <Russian>Частично перевязанная рана %1</Russian>
-                <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
-                <French>Il y a %1 Blessure Partielment Bandée</French>
-                <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
-                <Original>Normal breathing</Original>
-                <Russian>Дыхание в норме</Russian>
-                <Spanish>Respiración normal</Spanish>
-                <French>Respiration Normale</French>
-                <Polish>Normalny oddech</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
-                <Original>No breathing</Original>
-                <Russian>Дыхания нет</Russian>
-                <Spanish>No respira</Spanish>
-                <French>Apnée</French>
-                <Polish>Brak oddechu</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
-                <Original>Difficult breathing</Original>
-                <Russian>Дыхание затруднено</Russian>
-                <Spanish>Dificultad para respirar</Spanish>
-                <French>Difficultée Respiratoire</French>
-                <Polish>Trudności z oddychaniem</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
-                <Original>Almost no breathing</Original>
-                <Russian>Дыхания почти нет</Russian>
-                <Spanish>Casi sin respirar</Spanish>
-                <French>Respiration Faible</French>
-                <Polish>Prawie brak oddechu</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
-                <Original>Bleeding</Original>
-                <Russian>Кровотечение</Russian>
-                <Spanish>Sangrando</Spanish>
-                <French>Seignement</French>
-                <Polish>Krwawienie zewnętrzne</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
-                <Original>in Pain</Original>
-                <Russian>Испытывает боль</Russian>
-                <Spanish>Con Dolor</Spanish>
-                <French>A De La Douleur</French>
-                <Polish>W bólu</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
-                <Original>Lost a lot of Blood</Original>
-                <Russian>Большая кровопотеря</Russian>
-                <Spanish>Mucha Sangre perdida</Spanish>
-                <French>A Perdu Bcp de Sang</French>
-                <Polish>Stracił dużo krwi</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
-                <Original>Tourniquet [CAT]</Original>
-                <Russian>Жгут</Russian>
-                <Spanish>Torniquete [CAT]</Spanish>
-                <French>Garot [CAT]</French>
-                <Polish>Opaska uciskowa [CAT]</Polish>
-            </Key>
-            <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
-                <Original>Nasopharyngeal Tube [NPA]</Original>
-                <Russian>Назотрахеальная трубка</Russian>
-                <Spanish>Torniquete [CAT]</Spanish>
-                <French>Canule Naseaupharyngée [NPA]</French>
-                <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
-            </Key>
-        </Container>
+        <Key ID="STR_ACE_Medical_Menu_OpenMenu">
+            <English>Medical Menu</English>
+            <Polish>Menu medyczne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_allow">
+            <English>Allow Medical Menu</English>
+            <Polish>Akt. menu medyczne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_allow_Descr">
+            <English>Allow clients to use the medical menu</English>
+            <Polish>Zezwalaj graczom korzystać z menu medycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_useMenu">
+            <English>Use Medical menu</English>
+            <Polish>Użyj menu medycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
+            <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
+            <Polish>Jeżeli zezwolone przez serwer, aktywuj menu medyczne poprzez skrót klawiszowy i menu interakcji.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
+            <English>Re-open Medical menu</English>
+            <Polish>Otwieraj ponownie menu medyczne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
+            <English>Re-open the medical menu after succesful treatment</English>
+            <Polish>Otwórz ponownie menu medyczne po udanym zakończeniu leczenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
+            <English>Open Medical Menu</English>
+            <Polish>Otwórz menu medyczne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
+            <English>Medical Menu Settings</English>
+            <Polish>Ustawienia menu medycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_module_Desc">
+            <English>Configure the usage of the Medical Menu</English>
+            <Polish>Skonfiguruj opcje menu medycznego</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
+            <English>EXAMINE &amp; TREATMENT</English>
+            <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
+            <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
+            <French>EXAMINER &amp; TRAITEMENTS</French>
+            <Polish>BADANIE &amp; LECZENIE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS">
+            <English>STATUS</English>
+            <Russian>СОСТОЯНИЕ</Russian>
+            <Spanish>ESTADO</Spanish>
+            <French>ÉTATS</French>
+            <Polish>STATUS</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
+            <English>OVERVIEW</English>
+            <Russian>ОБЩАЯ ИНФОРМАЦИЯ</Russian>
+            <Spanish>DESCRIPCIÓN</Spanish>
+            <French>DESCRIPTION</French>
+            <Polish>OPIS</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
+            <English>ACTIVITY LOG</English>
+            <Russian>ПРОВЕДЕННЫЕ МАНИПУЛЯЦИИ</Russian>
+            <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
+            <French>REGISTRE DES SOINS</French>
+            <Polish>LOGI AKTYWNOŚCI</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
+            <English>QUICK VIEW</English>
+            <Russian>БЫСТРЫЙ ОСМОТР</Russian>
+            <Spanish>VISTA RÁPIDA</Spanish>
+            <French>VUE RAPIDE</French>
+            <Polish>SZYBKI PODGLĄD</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TRIAGE_NONE">
+            <English>None</English>
+            <Russian>Не ранен</Russian>
+            <Spanish>Ninguno</Spanish>
+            <French>Aucun</French>
+            <Polish>Brak</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TRIAGE_MINOR">
+            <English>Minor</English>
+            <Russian>Несрочная помощь</Russian>
+            <Spanish>Menor</Spanish>
+            <French>Mineur</French>
+            <Polish>Normalny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TRIAGE_DELAYED">
+            <English>Delayed</English>
+            <Russian>Срочная помощь</Russian>
+            <Spanish>Diferido</Spanish>
+            <French>Urgent</French>
+            <Polish>Opóźniony</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TRIAGE_IMMEDIATE">
+            <English>Immediate</English>
+            <Russian>Неотложная помощь</Russian>
+            <Spanish>Inmediato</Spanish>
+            <French>Immédiat</French>
+            <Polish>Natychmiastowy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TRIAGE_DECEASED">
+            <English>Deceased</English>
+            <Russian>Морг</Russian>
+            <Spanish>Fallecido</Spanish>
+            <French>Décédé</French>
+            <Polish>Nie żyje</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
+            <English>View triage Card</English>
+            <Russian>Смотреть первичную карточку</Russian>
+            <Spanish>Ver Triage</Spanish>
+            <French>Voir Carte de Triage</French>
+            <Polish>Pokaż kartę segregacyjną</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
+            <English>Examine Patient</English>
+            <Russian>Осмотреть пациента</Russian>
+            <Spanish>Examinar Paciente</Spanish>
+            <French>Examiner Patient</French>
+            <Polish>Zbadaj pacjenta</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
+            <English>Bandage / Fractures</English>
+            <Russian>Раны / переломы</Russian>
+            <Spanish>Vendajes/Fracturas </Spanish>
+            <French>Bandages / Fractures</French>
+            <Polish>Bandaże / Złamania</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_MEDICATION">
+            <English>Medication</English>
+            <Russian>Медикаменты</Russian>
+            <Spanish>Medicación</Spanish>
+            <French>Médications</French>
+            <Polish>Leki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
+            <English>Airway Management</English>
+            <Russian>Дыхательные пути</Russian>
+            <Spanish>Vías Aéreas</Spanish>
+            <French>Gestion Des Voie REspiratoire</French>
+            <Polish>Drogi oddechowe</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
+            <English>Advanced Treatments</English>
+            <Russian>Специальная медпомощь</Russian>
+            <Spanish>Tratamientos Avanzados</Spanish>
+            <French>Traitement Avancé</French>
+            <Polish>Zaawansowane zabiegi</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
+            <English>Drag/Carry</English>
+            <Russian>Тащить/нести</Russian>
+            <Spanish>Arrastrar/Cargar</Spanish>
+            <French>Glisser/Porter</French>
+            <Polish>Ciągnij/Nieś</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
+            <English>Toggle (Self)</English>
+            <Russian>Лечить себя/другого раненого</Russian>
+            <French>Activer (sois)</French>
+            <Polish>Przełącz (na siebie)</Polish>
+            <Spanish>Alternar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
+            <English>Select triage status</English>
+            <Russian>Сортировка</Russian>
+            <Spanish>Seleccionar estado de Triage</Spanish>
+            <French>Selectioner l'état de Triage</French>
+            <Polish>Wybierz priorytet</Polish>
+
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
+            <English>Select Head</English>
+            <Russian>Выбрать голову</Russian>
+            <Spanish>Seleccionar Cabeza</Spanish>
+            <French>Selectioner Tête</French>
+            <Polish>Wybierz głowę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
+            <English>Select Torso</English>
+            <Russian>Выбрать торс</Russian>
+            <Spanish>Seleccionar Torso</Spanish>
+            <French>Selectioner Torse</French>
+            <Polish>Wybierz tors</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
+            <English>Select Left Arm</English>
+            <Russian>Выбрать левую руку</Russian>
+            <Spanish>Seleccionar Brazo Izquierdo</Spanish>
+            <French>Selectioner Bras Gauche</French>
+            <Polish>Wybierz lewą rękę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
+            <English>Select Right Arm</English>
+            <Russian>Выбрать правую руку</Russian>
+            <Spanish>Seleccionar Brazo Derecho</Spanish>
+            <French>Selectioner Bras Droit</French>
+            <Polish>Wybierz prawą rękę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
+            <English>Select Left Leg</English>
+            <Russian>Выбрать левую ногу</Russian>
+            <Spanish>Seleccionar Pierna Izquierda</Spanish>
+            <French>Selectioner Jambe Gauche</French>
+            <Polish>Wybierz lewą nogę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
+            <English>Select Right Leg</English>
+            <Russian>Выбрать правую ногу</Russian>
+            <Spanish>Seleccionar Pierna Derecha</Spanish>
+            <French>Selectioner Jambe Droite</French>
+            <Polish>Wybierz prawą nogę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_HEAD">
+            <English>Head</English>
+            <Russian>Голова</Russian>
+            <Spanish>Cabeza</Spanish>
+            <French>Tête</French>
+            <Polish>Głowa</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_TORSO">
+            <English>Torso</English>
+            <Russian>Торс</Russian>
+            <French>Torse</French>
+            <Polish>Tors</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_ARM_L">
+            <English>Left Arm</English>
+            <Russian>Левая рука</Russian>
+            <Spanish>Brazo Izquierdo</Spanish>
+            <French>Bras Gauche</French>
+            <Polish>Lewa ręka</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_ARM_R">
+            <English>Right Arm</English>
+            <Russian>Правая рука</Russian>
+            <Spanish>Brazo Derecho</Spanish>
+            <French>Bras Droit</French>
+            <Polish>Prawa ręka</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_LEG_L">
+            <English>Left Leg</English>
+            <Russian>Левая нога</Russian>
+            <Spanish>Pierna Izquierda</Spanish>
+            <French>Jambe Gauche</French>
+            <Polish>Lewa noga</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_LEG_R">
+            <English>Right Leg</English>
+            <Russian>Правая нога</Russian>
+            <Spanish>Pierna Derecha</Spanish>
+            <French>Jambe Droite</French>
+            <Polish>Prawa noga</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
+            <English>Body Part: %1</English>
+            <Russian>Часть тела: %1</Russian>
+            <Spanish>Parte del cuerpo: %1</Spanish>
+            <French>Partie du corps: %1</French>
+            <Polish>Część ciała: %1</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SMALL">
+            <English>Small</English>
+            <Russian>малого размера</Russian>
+            <Spanish>Pequeña</Spanish>
+            <French>Petite</French>
+            <Polish>małym</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_MEDIUM">
+            <English>Medium</English>
+            <Russian>среднего размера</Russian>
+            <Spanish>Mediana</Spanish>
+            <French>moyenne</French>
+            <Polish>średnim</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_LARGE">
+            <English>Large</English>
+            <Russian>большого размера</Russian>
+            <Spanish>Grande</Spanish>
+            <French>Grande</French>
+            <Polish>dużym</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
+            <English>There are %2 %1 Open Wounds</English>
+            <Russian>%2 открытые раны %1</Russian>
+            <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
+            <French>Il y a %2 %1 Blessure Ouverte</French>
+            <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
+            <English>There is 1 %1 Open Wound</English>
+            <Russian>Открытая рана %1</Russian>
+            <Spanish>Hay 1 Herida Abierta %1</Spanish>
+            <French>Il y a 1 blessure ouverte %1</French>
+            <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
+            <English>There is a partial %1 Open wound</English>
+            <Russian>Частично открытая рана %1</Russian>
+            <Spanish>Hay una herida parcial abierta %1</Spanish>
+            <French>Il y a une Blessure Patiellement Ouverte %1</French>
+            <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
+            <English>There are %2 %1 Bandaged Wounds</English>
+            <Russian>%2 перевязанные раны %1</Russian>
+            <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
+            <French>Il y a %2 %1 Blessure Bandée</French>
+            <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
+            <English>There is 1 %1 Bandaged Wound</English>
+            <Russian>1 перевязанная рана %1</Russian>
+            <Spanish>Hay 1 Herida Vendada %1</Spanish>
+            <French>Il y a 1 %1 Blessure Bandée</French>
+            <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
+            <English>There is a partial %1 Bandaged wound</English>
+            <Russian>Частично перевязанная рана %1</Russian>
+            <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
+            <French>Il y a %1 Blessure Partielment Bandée</French>
+            <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
+            <English>Normal breathing</English>
+            <Russian>Дыхание в норме</Russian>
+            <Spanish>Respiración normal</Spanish>
+            <French>Respiration Normale</French>
+            <Polish>Normalny oddech</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
+            <English>No breathing</English>
+            <Russian>Дыхания нет</Russian>
+            <Spanish>No respira</Spanish>
+            <French>Apnée</French>
+            <Polish>Brak oddechu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
+            <English>Difficult breathing</English>
+            <Russian>Дыхание затруднено</Russian>
+            <Spanish>Dificultad para respirar</Spanish>
+            <French>Difficultée Respiratoire</French>
+            <Polish>Trudności z oddychaniem</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
+            <English>Almost no breathing</English>
+            <Russian>Дыхания почти нет</Russian>
+            <Spanish>Casi sin respirar</Spanish>
+            <French>Respiration Faible</French>
+            <Polish>Prawie brak oddechu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
+            <English>Bleeding</English>
+            <Russian>Кровотечение</Russian>
+            <Spanish>Sangrando</Spanish>
+            <French>Seignement</French>
+            <Polish>Krwawienie zewnętrzne</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
+            <English>in Pain</English>
+            <Russian>Испытывает боль</Russian>
+            <Spanish>Con Dolor</Spanish>
+            <French>A De La Douleur</French>
+            <Polish>W bólu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
+            <English>Lost a lot of Blood</English>
+            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Mucha Sangre perdida</Spanish>
+            <French>A Perdu Bcp de Sang</French>
+            <Polish>Stracił dużo krwi</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
+            <English>Tourniquet [CAT]</English>
+            <Russian>Жгут</Russian>
+            <Spanish>Torniquete [CAT]</Spanish>
+            <French>Garot [CAT]</French>
+            <Polish>Opaska uciskowa [CAT]</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
+            <English>Nasopharyngeal Tube [NPA]</English>
+            <Russian>Назотрахеальная трубка</Russian>
+            <Spanish>Torniquete [CAT]</Spanish>
+            <French>Canule Naseaupharyngée [NPA]</French>
+            <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
+            <English>Nasopharyngeal Tube [NPA]</English>
+        </Key>
     </Package>
-</Project> 
+</Project>

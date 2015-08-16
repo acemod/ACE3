@@ -11,6 +11,7 @@ PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
+PREP(assignObjectsInList);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
 PREP(ASLToPosition);

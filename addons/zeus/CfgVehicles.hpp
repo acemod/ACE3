@@ -115,4 +115,34 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class GVAR(moduleSetMedic): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedic_displayName);
+        function = QFUNC(moduleSetMedic);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalVehicle_displayName);
+        function = QFUNC(moduleSetMedicalVehicle);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalFacility_displayName);
+        function = QFUNC(moduleSetMedicalFacility);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
 };
