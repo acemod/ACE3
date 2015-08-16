@@ -1,6 +1,6 @@
 /*
- * Author: SilentSpike
- * Flips the capture state of the unit the module is placed on.
+ * Author: SilentSpike, Glowbal
+ * Assigns a medic role from the medical module to a unit
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -16,11 +16,11 @@
 #include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
-private ["_mouseOver", "_unit", "_captive"];
+private ["_mouseOver", "_unit", "_medicN"];
 
 if !(_activated && local _logic) exitWith {};
 
-if (isNil QEFUNC(captives,setHandcuffed)) then {
+if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
     _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
@@ -36,9 +36,14 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
             } else {
-                _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
-                // Event initalized by ACE_Captives
-                ["SetHandcuffed", _unit, [_unit, !_captive]] call EFUNC(common,targetEvent);
+                if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
+                    [LSTRING(OnlyNonCaptive)] call EFUNC(common,displayTextStructured);
+                } else {
+                    _medicN = GETVAR(_unit,EGVAR(medical,medicClass),0);
+                    if (_medicN < 1) then {
+                        _unit setvariable [QEGVAR(medical,medicClass), 1, true];
+                    };
+                };
             };
         };
     };
