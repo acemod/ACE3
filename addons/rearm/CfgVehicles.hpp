@@ -30,7 +30,12 @@
                 }; \
             }; \
         };
-        
+
+#define DUMMY_PROPERTIES \
+        displayName = QGVAR(dummy_obj); \
+        scope = 2; \
+        scopeCurator = 2;
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRearmSettings : ACE_Module {
@@ -121,5 +126,98 @@ class CfgVehicles {
     class O_Truck_03_ammo_F : Truck_03_base_F {
         transportAmmo = 0;
         MACRO_REARM_PICKUPAMMO
+    };
+
+    // Dummy vehicles
+    class ThingX;
+    class GVAR(Bo_GBU12_LGB) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";
+    };
+
+    class GVAR(Bo_Mk82) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Bomb_02_F";
+    };
+
+    class GVAR(Bomb_04_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
+    };
+
+    class GVAR(Bomb_03_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Bomb_03_F.p3d";
+    };
+
+    class GVAR(Missile_AA_04_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_04_F.p3d";
+    };
+
+    class GVAR(Missile_AA_03_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
+    };
+
+    class GVAR(Missile_AGM_02_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
+    };
+
+    class GVAR(Missile_AGM_01_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
+    };
+
+    class GVAR(R_230mm_fly) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
+    };
+
+    class GVAR(R_230mm_HE) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
+    };
+
+    class GVAR(M_PG_AT) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Rocket_01_F";
+    };
+
+    class GVAR(Rocket_04_HE_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_HE_F.p3d";
+    };
+
+    class GVAR(Rocket_03_HE_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(Rocket_04_AP_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_AP_F.p3d";
+    };
+
+    class GVAR(Rocket_03_AP_F) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_AP_F.p3d";
+    };
+
+    // Using wrong model
+    class GVAR(R_80mm_HE) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(R_60mm_HE) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(R_Hydra_HE) : ThingX {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
 };

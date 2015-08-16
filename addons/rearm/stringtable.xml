@@ -49,7 +49,7 @@
             <English>Rearmed %1 rounds of %2 on %3</English>
             <German>%1 Schuss %2 an %3 aufmunitioniert</German>
         </Key>
-        <Key ID="STR_ACE_Rearm_smokelauncher">
+        <Key ID="STR_ACE_Rearm_SmokeLauncherMag">
             <Original>Smoke Screen</Original>
             <English>Smoke Screen</English>
             <Czech>Kouřová clona</Czech>
@@ -61,7 +61,7 @@
             <Russian>Дым. завеса</Russian>
             <Spanish>Pantalla de humo</Spanish>
         </Key>
-        <Key ID="STR_ACE_Rearm_flarelauncher">
+        <Key ID="STR_ACE_Rearm_60Rnd_CMFlareMagazine">
             <Original>Flares</Original>
             <English>Flares</English>
             <Czech>Světlice</Czech>
@@ -72,6 +72,54 @@
             <Portuguese>Sinalizadores</Portuguese>
             <Russian>ЛТЦ</Russian>
             <Spanish>Bengalas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Rearm_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
+            <English>30mm HEI</English>
+            <German>30mm HEI</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_500Rnd_Cannon_30mm_Plane_CAS_02_F">
+            <English>30mm HEI-T</English>
+            <German>30mm HEI-T</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_2Rnd_Missile_AA_04_F">
+            <English>AIM-9 Sidewinder</English>
+            <German>AIM-9 Sidewinder</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_2Rnd_Missile_AA_03_F">
+            <English>Wympel R-73</English>
+            <German>Wympel R-73</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_6Rnd_Missile_AGM_02_F">
+            <English>AGM-65 Maverick</English>
+            <German>AGM-65 Maverick</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_4Rnd_Missile_AGM_01_F">
+            <English>Kh-25MTP</English>
+            <German>Kh-25MTP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_7Rnd_Rocket_04_HE_F">
+            <English>Hydra 70 HE</English>
+            <German>Hydra 70 HE</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_20Rnd_Rocket_03_HE_F">
+            <English>S-8 HE</English>
+            <German>S-8 HE</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_7Rnd_Rocket_04_AP_F">
+            <English>Hydra 70 AP</English>
+            <German>Hydra 70 AP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_20Rnd_Rocket_03_AP_F">
+            <English>S-8 AP</English>
+            <German>S-8 AP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_4Rnd_Bomb_04_F">
+            <English>GBU-12</English>
+            <German>GBU-12</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_2Rnd_Bomb_03_F">
+            <English>FAB-250M-54</English>
+            <German>FAB-250M-54</German>
         </Key>
     </Package>
 </Project>

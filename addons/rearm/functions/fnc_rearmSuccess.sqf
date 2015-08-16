@@ -21,23 +21,24 @@
  */
 #include "script_component.hpp"
 
-#define REARM_SUCCESS \
-    [_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus); \
-    _dummy = _unit getVariable [QGVAR(dummy), objNull]; \
-    if !(isNull _dummy) then { \
-        detach _dummy; \
-        deleteVehicle _dummy; \
-    }; \
-    _unit setVariable [QGVAR(carriedMagazine), nil, true]; \
-    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
-    _unit selectWeapon _weaponSelect; \
-    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
-
 private ["_rounds", "_currentRounds", "_maxMagazines", "_dummy"];
 params ["_args"];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazine", "_numRounds"];
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazine, _numRounds];
+
+if (local _unit) then {
+    [_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus);
+    _dummy = _unit getVariable [QGVAR(dummy), objNull];
+    if !(isNull _dummy) then {
+        detach _dummy;
+        deleteVehicle _dummy;
+    };
+    _unit setVariable [QGVAR(carriedMagazine), nil, true];
+    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm);
+    _unit selectWeapon _weaponSelect;
+    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
+};
 
 if !(local _target) exitWith {
     [_this, QUOTE(DFUNC(rearmSuccess)), _target] call EFUNC(common,execRemoteFnc);
@@ -58,8 +59,6 @@ if (_maxMagazines == 1) then {
     [[LSTRING(Hint_RearmedTriple), _numRounds,
         getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
         getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit] call EFUNC(common,displayTextStructured);
-    
-    REARM_SUCCESS
 } else {
     for "_idx" from 1 to _maxMagazines do {
         _currentRounds = _target magazineTurretAmmo [_magazine, _turretPath];
@@ -87,8 +86,6 @@ if (_maxMagazines == 1) then {
             [[LSTRING(Hint_RearmedTriple), _rounds,
                 getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
                 getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit] call EFUNC(common,displayTextStructured);
-            
-            REARM_SUCCESS
         };
         _target removeMagazineTurret [_magazine, _turretPath];
         _numMagazines = _numMagazines - 1;

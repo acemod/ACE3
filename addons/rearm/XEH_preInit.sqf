@@ -13,5 +13,6 @@ PREP(rearmEntireVehicle);
 PREP(rearmEntireVehicleSuccess);
 PREP(rearmSuccess);
 PREP(moduleRearmSettings);
+PREP(turn);
 
 ADDON = true;
