@@ -23,7 +23,7 @@
 
 private ["_rounds", "_currentRounds", "_maxMagazines"];
 params ["_args"];
-_args params ["_target", "_caller", "_turretPath", "_numMagazines", "_magazine", "_numRounds"];
+_args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazine", "_numRounds"];
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazine, _numRounds];
 
@@ -36,23 +36,41 @@ _currentRounds = 0;
 
 _maxMagazines = [_target, _turretPath, _magazine] call FUNC(getMaxMagazines);
 if (_maxMagazines == 1) then {
-    _target setMagazineTurretAmmo [_magazine, ((_target magazineTurretAmmo [_magazine, _turretPath]) + _numRounds) min _rounds, _turretPath];
-    ace_player setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
+    if (GVAR(level) == 1) then {
+        // Fill magazine completely
+        _target setMagazineTurretAmmo [_magazine, _rounds, _turretPath];
+    } else {
+        // Fill only at most _numRounds
+        _target setMagazineTurretAmmo [_magazine, ((_target magazineTurretAmmo [_magazine, _turretPath]) + _numRounds) min _rounds, _turretPath];
+    };
+    _unit setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
 } else {
     for "_idx" from 1 to _maxMagazines do {
         _currentRounds = _target magazineTurretAmmo [_magazine, _turretPath];
         if (_currentRounds > 0) exitWith {
-            if ((_currentRounds + _numRounds) > _rounds) then {
+            if (GVAR(level) == 2) then {
+                //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMaxMagazines %4\nMagazine: %5\nNumRounds: %6\nMagazine: %7", _target, _turretPath, _numMagazines, _maxMagazines, _currentRounds, _numRounds, _magazine];
+                // Fill only at most _numRounds
+                if ((_currentRounds + _numRounds) > _rounds) then {
+                    _target setMagazineTurretAmmo [_magazine, _rounds, _turretPath];
+                    if (_numMagazines  < _maxMagazines) then {
+                        _target addMagazineTurret [_magazine, _turretPath];
+                        _target setMagazineTurretAmmo [_magazine, _currentRounds + _numRounds - _rounds, _turretPath];
+                    };
+                } else {
+                    _target setMagazineTurretAmmo [_magazine, _currentRounds + _numRounds, _turretPath];
+                };
+            } else {
+                // Fill current magazine completely and fill next magazine partially
                 _target setMagazineTurretAmmo [_magazine, _rounds, _turretPath];
                 if (_numMagazines  < _maxMagazines) then {
                     _target addMagazineTurret [_magazine, _turretPath];
-                    _target setMagazineTurretAmmo [_magazine, _currentRounds + _numRounds - _rounds, _turretPath];
+                    _target setMagazineTurretAmmo [_magazine, _currentRounds, _turretPath];
                 };
-            } else {
-                _target setMagazineTurretAmmo [_magazine, _currentRounds + _numRounds, _turretPath];
             };
-            ace_player setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
+            _unit setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
         };
         _target removeMagazineTurret [_magazine, _turretPath];
+        _numMagazines = _numMagazines - 1;
     };
 };

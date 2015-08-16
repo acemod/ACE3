@@ -27,7 +27,7 @@ if ((_target magazineTurretAmmo [_magazine, _path]) < getNumber (configFile >> "
     }; \
 };
 
-private ["_ammo", "_tmpCal", "_cal", "_idx", "_cnt","_return"];
+private ["_ammo", "_tmpCal", "_cal", "_idx", "_return", "_cnt", "_magazineDisplayName"];
 params ["_unit", "_vehicle"];
 
 _magazine = _unit getVariable QGVAR(carriedMagazine);
@@ -98,18 +98,24 @@ if (!_return) then {
         _path = [2];
         GETRETURNVALUE
     } else {
-        diag_log format ["ACE_Rearm: Could not find turret for %1 in %2", _magazine, (typeOf _target)];
+        diag_log format ["ACE_Rearm: Could not find turret for %1 in %2", _magazine, typeOf _target];
     };
 };
 
 //hint format ["Magazine: %1\nAmmo: %2\nCaliber: %3\nIndex: %4\nTurretPath: %5\nDURATION_REARM: %6\nCount: %7", _magazine, _ammo, _cal, _idx, _turretPath, (DURATION_REARM select _idx), (COUNT select _idx)];
+
+_magazineDisplayName =  getText(configFile >> "CfgMagazines" >> _magazine >> "displayName");
+if (_magazineDisplayName == "") then {
+    _magazineDisplayName = _magazine;
+    diag_log format ["ACE_Rearm: Magazine is missing display name [%1]", _magazine];
+};
 
 [
     (DURATION_REARM select _idx),
     [_target, _unit, _turretPath, _cnt, _magazine, (COUNT select _idx)],
     FUNC(rearmSuccess),
     "",
-    format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), getText(configFile >> "CfgMagazines" >> _magazine >> "displayName")],
+    format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

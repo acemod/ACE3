@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicles", "_magazine", "_magazines", "_path", "_return", "_cnt"];
+private ["_magazine", "_return", "_magazines", "_path", "_cnt"];
 params ["_unit", "_vehicle"];
 
 #define GETRETURNVALUE \
@@ -29,12 +29,10 @@ if ((_vehicle magazineTurretAmmo [_magazine, _path]) < getNumber (configFile >> 
     }; \
 };
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_vehicle distance _unit) > 7}) exitWith {false};
+if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_vehicle distance _unit) > 7} || {GVAR(level) == 0}) exitWith {false};
 
 _magazine = _unit getVariable QGVAR(carriedMagazine);
 if (isNil "_magazine") exitWith {false};
-
-// TODO move into loop
 
 _return = false;
 _magazines = _vehicle magazinesTurret [-1];

@@ -9,6 +9,8 @@ PREP(getMaxMagazines);
 PREP(pickUpAmmo);
 PREP(pickUpSuccess);
 PREP(rearm);
+PREP(rearmEntireVehicle);
+PREP(rearmEntireVehicleSuccess);
 PREP(rearmSuccess);
 PREP(moduleRearmSettings);
 

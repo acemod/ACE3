@@ -10,7 +10,7 @@
  * Can rearm
  *
  * Example:
- * [tank] call ace_rearm_fnc_canPickUpAmmo
+ * [player, tank] call ace_rearm_fnc_canPickUpAmmo
  *
  * Public: No
  */

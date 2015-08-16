@@ -37,13 +37,25 @@ _vehicleActions = [];
                 _magazine = _x;
                 _cnt = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
                 if ((_cnt < ([_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines))) && !(_magazine in _magazineHelper)) then {
-                    _action = [_magazine, getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"), getText(configFile >> "CfgMagazines" >> _magazine >> "picture"), {_this call FUNC(pickUpAmmo)}, {true}, {}, [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
+                    _action = [_magazine, 
+                        getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"), 
+                        getText(configFile >> "CfgMagazines" >> _magazine >> "picture"), 
+                        {_this call FUNC(pickUpAmmo)}, 
+                        {true}, 
+                        {}, 
+                        [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
                     _actions pushBack [_action, [], _target];
                     _magazineHelper pushBack _magazine;
                     _needToAdd = true;
                 } else {
                     if (((_vehicle magazineTurretAmmo [_magazine, _turretPath]) < getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")) && !(_magazine in _magazineHelper)) then {
-                        _action = [_magazine, getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"), getText(configFile >> "CfgMagazines" >> _magazine >> "picture"), {_this call FUNC(pickUpAmmo)}, {true}, {}, [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
+                        _action = [_magazine, 
+                            getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"), 
+                            getText(configFile >> "CfgMagazines" >> _magazine >> "picture"), 
+                            {_this call FUNC(pickUpAmmo)}, 
+                            {true}, 
+                            {}, 
+                            [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
                         _actions pushBack [_action, [], _target];
                         _magazineHelper pushBack _magazine;
                         _needToAdd = true;
@@ -57,9 +69,27 @@ _vehicleActions = [];
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
         };
-        _action = [_vehicle, getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"), _icon, "", {true}, {}, []] call EFUNC(interact_menu,createAction);
-        _vehicleActions pushBack [_action, _actions, _target];
+        if (GVAR(level) == 0) then {
+            _action = [_vehicle, 
+                getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"), 
+                _icon, 
+                {_this call FUNC(rearmEntireVehicle)}, 
+                {true}, 
+                {}, 
+                _vehicle] call EFUNC(interact_menu,createAction);
+            _vehicleActions pushBack [_action, [], _target];
+        } else {
+            _action = [_vehicle, 
+                getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"), 
+                _icon, 
+                {}, 
+                {true}, 
+                {}, 
+                []] call EFUNC(interact_menu,createAction);
+            _vehicleActions pushBack [_action, _actions, _target];
+        };
     };
 } foreach _vehicles;
+
 
 _vehicleActions

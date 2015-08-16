@@ -5,11 +5,11 @@
             <English>Rearm Settings</English>
             <German>Aufmunitioniereinstellungen</German>
         </Key>
-        <Key ID="STR_ACE_Rearm_RearmSettings_speed_DisplayName">
-            <English>Rearm speed</English>
-            <German>Aufmunitioniergeschwindigkeit</German>
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
+            <English>Rearm amount</English>
+            <German>Aufmunitioniermenge</German>
         </Key>
-        <Key ID="STR_ACE_Rearm_RearmSettings_speed_Description">
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
             <English>How fast should a vehicle be rearmed?</English>
             <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
         </Key>
@@ -32,6 +32,10 @@
         <Key ID="STR_ACE_Rearm_RearmAction">
             <English>Rearming %1 with %2</English>
             <German>Munitioniere %1 auf mit %2</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_BasicRearmAction">
+            <English>Rearming %1</English>
+            <German>Munitioniere %1 auf</German>
         </Key>
         <Key ID="STR_ACE_Rearm_PickUpAction">
             <English>Taking %1 for %2</English>
