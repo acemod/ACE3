@@ -1,5 +1,3 @@
-#define REFUEL_ACTION_DISTANCE 4.5
-
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -20,7 +18,7 @@
                 }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
-                    condition = QUOTE([ARR_1(_player)] call FUNC(canConnectNozzle)); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
@@ -64,7 +62,7 @@
                 class GVAR(TurnOff) { \
                     displayName = CSTRING(TurnOff); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
+                    statement = QUOTE([_target] call DFUNC(turnOff)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
