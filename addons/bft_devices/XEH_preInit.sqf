@@ -2,6 +2,11 @@
 
 ADDON = false;
 
+PREP(canOpenDevice);
+PREP(openDevice);
+PREP(createAction);
+PREP(getBFTActionChildren);
+
 // Function PREP (caching)
 PREP(addNotification);
 PREP(centerMapOnPlayerPosition);

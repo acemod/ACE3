@@ -5,56 +5,52 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(BFT) {
                     displayName = "BFT";
-                    condition = QUOTE(!(([ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])) || !(([vehicle ACE_player] call EFUNC(bft,getOwnedDevices) isEqualTo [])));
+                    condition = QUOTE(count ([_player] call EFUNC(bft,getOwnedDevices)) > 0);
                     statement = "";
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\inventory\DK10_icon.paa);
-                    exceptions[] = {"notOnMap", "isNotInside"};
-
-                    class openDisplay {
-                        displayName = "Open Overlay";
-                        condition = QUOTE(I_CLOSED);
-                        statement = QUOTE(0 call FUNC(onIfToggleKey));
-                        showDisabled = 0;
-                        priority = 2;
-                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
-                        exceptions[] = {"notOnMap", "isNotInside"};
-                    };
-
-                    class closeDisplay {
-                        displayName = "Close Overlay";
-                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
-                        statement = QUOTE([] call FUNC(ifClose));
-                        showDisabled = 0;
-                        priority = 2;
-                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
-                        exceptions[] = {"notOnMap", "isNotInside"};
-                    };
-
-                    class openDialog {
-                        displayName = "Open Interactive Mode";
-                        condition = QUOTE(I_CLOSED);
-                        statement = QUOTE(1 call FUNC(onIfToggleKey));
-                        showDisabled = 0;
-                        priority = 2;
-                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
-                        exceptions[] = {"notOnMap", "isNotInside"};
-                    };
-
-                    class toggleDisplayPosition {
-                        displayName = "Toggle Overlay Position (left/right)";
-                        condition = QUOTE(I_OPEN && {!I_GET_ISDIALOG});
-                        statement = QUOTE([] call FUNC(onIfTogglePositionKey));
-                        showDisabled = 0;
-                        priority = 2;
-                        icon = PATHTOF(UI\inventory\DK10_icon.paa);
-                        exceptions[] = {"notOnMap", "isNotInside"};
-                    };
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
+                    insertChildren = QUOTE(_this call FUNC(getBFTActionChildren));
                 };
             };
         };
     };
+
+    #define MACRO_ADD_BFT_ACTIONS \
+            class ACE_SelfActions { \
+                class GVAR(BFT) { \
+                    displayName = "BFT"; \
+                    distance = 4; \
+                    condition = QUOTE(count ([_target] call EFUNC(bft,getOwnedDevices)) > 0); \
+                    statement = ""; \
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"}; \
+                    priority = 2; \
+                    insertChildren = QUOTE(_this call FUNC(getBFTActionChildren)); \
+                }; \
+            };
+
+        class LandVehicle;
+        class Car: LandVehicle {
+            MACRO_ADD_BFT_ACTIONS
+        };
+        class Tank: LandVehicle {
+            MACRO_ADD_BFT_ACTIONS
+        };
+
+        class Air;
+        class Helicopter: Air {
+            MACRO_ADD_BFT_ACTIONS
+        };
+        class Plane: Air {
+            MACRO_ADD_BFT_ACTIONS
+        };
+
+        class Ship;
+        class Ship_F: Ship {
+            MACRO_ADD_BFT_ACTIONS
+        };
+
     // Boxes
     class Box_NATO_Support_F;
     class ACE_Box_BFT_b: Box_NATO_Support_F {
