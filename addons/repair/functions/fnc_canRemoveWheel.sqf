@@ -4,11 +4,16 @@
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
- * 1: vehicle to repair <OBJECT>
+ * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpoint <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canRemoveWheel
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

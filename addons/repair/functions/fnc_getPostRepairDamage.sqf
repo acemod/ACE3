@@ -1,4 +1,18 @@
-// by comm2
+/*
+ * Author: commy2
+ * Returns the damage threshold based on settings and unit type.
+ *
+ * Arguments:
+ * 0: Unit that does the repairing <OBJECT>
+ *
+ * Return Value:
+ * 0: Rpair Damage Threshold <NUMBER>
+ *
+ * Example:
+ * [unit] call ace_repair_fnc_getPostRepairDamage
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_unit"];

@@ -1,20 +1,22 @@
 /*
  * Author: KoffeinFlummi, Glowbal
- * Callback when the repair is completed
+ * Callback when repair completes.
  *
  * Arguments:
- * 0: The engineer <OBJECT>
- * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: Treatment classname <STRING>
- * 4: Items available <ARRAY<STRING>>
+ * 0: Arguments <ARRAY>
+ *   0: Unit that does the repairing <OBJECT>
+ *   1: Vehicle to repair <OBJECT
+ *   2: Selected hitpoint <STRING>
+ *   3: Repair Action Classname <STRING>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [[unit, vehicle, "hitpoint", "classname"]] call ace_repair_fnc_repair_success
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_args"];

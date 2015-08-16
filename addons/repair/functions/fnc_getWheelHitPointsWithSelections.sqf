@@ -3,10 +3,16 @@
  * Returns the wheel hitpoints and their selections.
  *
  * Arguments:
- * 0: A vehicle <Object>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Wheel positions in model coordinates. <Array>
+ * 0: Wheel hitpoints <ARRAY>
+ * 1: Wheel hitpoint selections in model coordinates <ARRAY>
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_getWheelHitPointsWithSelections
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

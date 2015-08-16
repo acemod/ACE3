@@ -1,19 +1,21 @@
 /*
  * Author: Glowbal, KoffeinFlummi
- * Starts the repair process
+ * Starts the repair process.
  *
  * Arguments:
- * 0: The engineer <OBJECT>
- * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: repair classname <STRING>
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT
+ * 2: Selected hitpoint <STRING>
+ * 3: Repair Action Classname <STRING>
  *
  * Return Value:
- * Succesful repair started <BOOL>
+ * Succesful Repair Started <BOOL>
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint", "classname"] call ace_repair_fnc_repair
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];

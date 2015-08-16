@@ -3,17 +3,19 @@
  * Check if the repair action can be performed.
  *
  * Arguments:
- * 0: The caller <OBJECT>
- * 1: The target <OBJECT>
- * 2: Selection name <STRING>
- * 3: ACE_Engineeral_Treatments Classname <STRING>
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT>
+ * 2: Selected hitpoint <STRING>
+ * 3: Repair Action Classname <STRING>
  *
- * ReturnValue:
- * Can Treat <BOOL>
+ * Return Value:
+ * Can Repair <BOOL>
+ *
+ * Example:
+ * ["something", player] call ace_repair_fnc_canRepair
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];

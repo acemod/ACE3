@@ -1,18 +1,20 @@
 /*
  * Author: Glowbal
- * Assign an engineer role to a unit
+ * Assign an engineer role to a unit.
  *
  * Arguments:
- * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
+ * 0: The module logic <OBJECT>
+ * 1: Synchronized units <ARRAY>
+ * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * function = "ace_repair_fnc_moduleAssignEngineer"
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_logic"];

@@ -1,4 +1,20 @@
-// by commy2
+/*
+ * Author: commy2
+ * Spawns an object of specified string, at specified position with specified damage taken.
+ *
+ * Arguments:
+ * 0: Item classname <STRING>
+ * 1: Position <ARRAY>
+ * 2: Damage <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["classname", [0, 0, 0], 1] call ace_repair_fnc_spawnObject
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_item", "_position", ["_damage", 0]];

@@ -1,15 +1,19 @@
 /*
  * Author: commy2
- *
- * Start a repair action and open progress bar.
+ * Starts a repair action with a progress bar.
  *
  * Arguments:
- * 0: Unit that does the repairing (Object)
- * 1: vehicle to repair (Object)
- * 2: Selected hitpoint (String)
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT
+ * 2: Selected hitpoint <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_repairVehicle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
