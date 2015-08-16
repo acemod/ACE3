@@ -13,10 +13,10 @@ PREP(connectNozzleAction);
 PREP(disconnect);
 PREP(getFuel);
 PREP(moduleRefuelSettings);
+PREP(refuel);
 PREP(returnNozzle);
 PREP(setFuel);
 PREP(takeNozzle);
 PREP(turnOff);
-PREP(refuel);
 
 ADDON = true;
