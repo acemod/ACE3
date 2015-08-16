@@ -1,16 +1,18 @@
 /*
  * Author: Glowbal
- * initalize vehicle. Adds open caro menu action if available
+ * Initializes vehicle, adds open caro menu action if available.
  *
  * Arguments:
- * 0: vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * [vehicle] call ace_cargo_fnc_initVehicle
+ *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_vehicle"];
@@ -31,7 +33,7 @@ if (isServer) then {
             _position set [2, (_position select 2) + 7.5];
             for "_i" from 1 to _amount do {
                 _object = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
-                if !([_object, _vehicle] call FUNC(loadItem)) exitwith {
+                if !([_object, _vehicle] call FUNC(loadItem)) exitWith {
                     deleteVehicle _object;
                 };
             };
@@ -46,7 +48,7 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 SETMVAR(GVAR(initializedClasses),_initializedClasses);
 
-if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitwith {};
+if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
 
 private ["_text", "_condition", "_statement", "_icon", "_action"];
 _condition = {GVAR(enable)};
