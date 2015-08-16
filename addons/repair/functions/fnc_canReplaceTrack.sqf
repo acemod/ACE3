@@ -6,6 +6,7 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpoint <STRING>
+ * 3: Track <OBJECT> (Optional)
  *
  * Return Value:
  * None

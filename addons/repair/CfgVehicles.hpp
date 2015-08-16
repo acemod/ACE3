@@ -22,7 +22,7 @@ class CfgVehicles {
         displayName = CSTRING(moduleName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
         category = "ACE";
-        function = QUOTE(DFUNC(moduleRepairSettings));
+        function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -104,7 +104,7 @@ class CfgVehicles {
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
         category = "ACE";
-        function = QUOTE(DFUNC(moduleAssignEngineer));
+        function = QFUNC(moduleAssignEngineer);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -148,7 +148,7 @@ class CfgVehicles {
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
         category = "ACE";
-        function = QUOTE(DFUNC(moduleAssignRepairVehicle));
+        function = QFUNC(moduleAssignRepairVehicle);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -185,7 +185,7 @@ class CfgVehicles {
     };
     class ACE_moduleAssignRepairFacility: ACE_moduleAssignRepairVehicle {
         displayName = CSTRING(AssignRepairFacility_Module_DisplayName);
-        function = QUOTE(DFUNC(moduleAssignRepairFacility));
+        function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
@@ -220,7 +220,6 @@ class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
-
         class ACE_Cargo {
             class Cargo {
                 class ACE_Wheel {
