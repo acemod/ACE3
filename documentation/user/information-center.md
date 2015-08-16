@@ -39,10 +39,14 @@ Downloaded ACE3 and have no idea where to start? This page serves as a starting 
 **A:** Fun fact, it isn't, you need to come from the direction of the laser, (laser is pointing to the east, you come from the west) and you drop the GBU, it will then guide itself to the target. The reasoning behind that is that the vehicle or building laser designated would obstruct the laser and the GBU would then be unable to lock on it. </br>
 
 **Q:** I take vanilla damage with ACE 3.1.1</br>
-**A:** This has been fixed on ACE3 master and will be fixed in the next release, in the meantime Basic medical doesn't have that issue. </br>
+**A:** This has been fixed in 3.2.0</br>
 
 **Q:** I'm having dll errors.</br>
-**A:** Remove ACE3 from your Arma 3 folder and repeat the installation process (don't forget to re-download).</br>
+**A:** Start the game once with the arma3 launcher, close it then open it with your usual launcher (arma3sync or PW6).</br>
+The simple explanation to that is that battleye break itself and only starting it with the arma3 launcher fixes it.</br>
+
+**Q:** ACE fonts is outdated.</br>
+**A:** This happens because you're using the mod (stable) with the dev version on your P drive, remove simlinks in ARMA3 root and the P drive.
 
 ### 1.3 Compatibility
 

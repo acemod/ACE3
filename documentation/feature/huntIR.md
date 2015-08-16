@@ -29,7 +29,7 @@ Shortcut | Action
 ------------ | -------------
 <kbd>A</kbd>  | Lower zoom level
 <kbd>D</kbd> | Increase zoom level
-<kbd>N</kbd> | Toggle NV and TI modes
+<kbd>N</kbd> | Toggle NV
 <kbd>S</kbd> | Next camera
 <kbd>W</kbd> | Previous camera
 <kbd>←</kbd> | Rotate camera anticlockwise
