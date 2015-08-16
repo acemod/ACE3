@@ -11,6 +11,7 @@ class ACE_BFT {
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
             interface = "DK10";
+            icon = PATHTOF(UI\icon_bft_DK10.paa);
         };
         class DK10_o: DK10_b {
             deviceSide = "EAST";
@@ -25,6 +26,7 @@ class ACE_BFT {
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Inf", 0, "", 0};
             interface = "GD300";
+            icon = PATHTOF(UI\icon_bft_GD300.paa);
         };
         class GD300_o: GD300_b {
             deviceSide = "EAST";
@@ -53,6 +55,7 @@ class ACE_BFT {
             refreshRate[] = {3,2};
             reportingModes[] = {"FBCB2"};
             defaultInformation[] = {"Motorized", 0, "", 0};
+            icon = PATHTOF(UI\icon_bft_JV5.paa);
         };
         class GroundVehicle_o: GroundVehicle_b {
             deviceSide = "EAST";
@@ -78,6 +81,7 @@ class ACE_BFT {
             reportingModes[] = {"MFD"};
             refreshRate[] = {0.5,0.5};
             defaultInformation[] = {"Helicopter", 0, "", 0};
+            icon = PATHTOF(UI\icon_bft_TAD.paa);
         };
         class Aircraft_o: Aircraft_b {
             deviceSide = "EAST";
