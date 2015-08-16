@@ -1,3 +1,13 @@
+#define DUMMY_PROPERTIES \
+        effectsSmoke = ""; \
+        explosive = 0; \
+        fuseDistance = 10000; \
+        hit = 0; \
+        indirectHit = 0; \
+        muzzleEffect = ""; \
+        simulation = "shotMine"; \
+        timeToLive = 3600;
+
 class CfgAmmo {
     
     class BombCore;
@@ -11,29 +21,57 @@ class CfgAmmo {
     class MissileBase : MissileCore {
         GVAR(caliber) = 250; // Default caliber for missiles
     };
+    class Missile_AA_04_F : MissileBase {
+        GVAR(dummy) = QGVAR(Missile_AA_04_F);
+    };
+    class Missile_AA_03_F : Missile_AA_04_F {
+        GVAR(dummy) = QGVAR(Missile_AA_03_F);
+    };
+    
     class Rocket_04_HE_F : MissileBase {
         GVAR(caliber) = 70;
+        GVAR(dummy) = QGVAR(Rocket_04_HE_F);
+    };
+    class Rocket_03_HE_F : Rocket_04_HE_F {
+        GVAR(dummy) = QGVAR(Rocket_03_HE_F);
+    };
+    class Rocket_04_AP_F : Rocket_04_HE_F {
+        GVAR(dummy) = QGVAR(Rocket_04_AP_F);
+    };
+    class Rocket_03_AP_F : Rocket_04_AP_F {
+        GVAR(dummy) = QGVAR(Rocket_03_AP_F);
     };
     class M_PG_AT : MissileBase {
         GVAR(caliber) = 100;
+        GVAR(dummy) = QGVAR(M_PG_AT);
     };
     class ACE_Hydra70_DAGR : M_PG_AT {
         GVAR(caliber) = 70;
     };
-    
+    class Missile_AGM_02_F : MissileBase {
+        GVAR(dummy) = QGVAR(Missile_AGM_02_F);
+    };
+    class Missile_AGM_01_F : Missile_AGM_02_F {
+        GVAR(dummy) = QGVAR(Missile_AGM_01_F);
+    };
+
     class RocketCore;
     class RocketBase : RocketCore {
         GVAR(caliber) = 70; // Default caliber for rockets
     };
     class R_80mm_HE : RocketBase {
         GVAR(caliber) = 80;
+        GVAR(dummy) = QGVAR(R_80mm_HE);
     };
     class R_60mm_HE : R_80mm_HE {
         GVAR(caliber) = 60;
+        GVAR(dummy) = QGVAR(R_60mm_HE);
+    };
+    class R_Hydra_HE : RocketBase {
+        GVAR(dummy) = QGVAR(R_Hydra_HE);
     };
     
     class BulletBase;
-    
     class B_19mm_HE : BulletBase {
         GVAR(caliber) = 19; 
     };
@@ -79,6 +117,10 @@ class CfgAmmo {
     };
  
     class ShellBase;
+    class R_230mm_fly : ShellBase {
+        GVAR(dummy) = QGVAR(R_230mm_fly);
+    };
+
     class Sh_120mm_APFSDS : Shellbase {
         GVAR(caliber) = 120; 
     };
@@ -174,16 +216,120 @@ class CfgAmmo {
         GVAR(caliber) = 70; 
     };
     
-    class Bomb_04_F : LaserBombCore {
-        GVAR(caliber) = 250; // Default caliber for bombs
+    class Bo_Mk82 : BombCore {
+        GVAR(dummy) = QGVAR(Bo_Mk82);
     };
+    
     class Bo_GBU12_LGB : LaserBombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
+        GVAR(dummy) = QGVAR(Bo_GBU12_LGB);
     };
+    
+    class Bomb_04_F : LaserBombCore {
+        GVAR(caliber) = 250; // Default caliber for bombs
+        GVAR(dummy) = QGVAR(Bomb_04_F);
+    };
+    
+    class Bomb_03_F : Bomb_04_F {
+        GVAR(dummy) = QGVAR(Bomb_03_F);
+    };
+    
+    // Dummy Ammo
+    class GVAR(Bo_GBU12_LGB) : Bo_GBU12_LGB {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";
+    };
+
+    class GVAR(Bo_Mk82) : Bo_Mk82 {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Bomb_02_F";
+    };
+
+    class GVAR(Bomb_04_F) : Bomb_04_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
+    };
+
+    class GVAR(Bomb_03_F) : Bomb_04_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Bomb_03_F.p3d";
+    };
+
+    class GVAR(Missile_AA_04_F) : Missile_AA_04_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_04_F.p3d";
+    };
+
+    class GVAR(Missile_AA_03_F) : Missile_AA_03_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
+    };
+
+    class GVAR(Missile_AGM_02_F) : Missile_AGM_02_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
+    };
+
+    class GVAR(Missile_AGM_01_F) : Missile_AGM_01_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
+    };
+
+    class GVAR(R_230mm_fly) : R_230mm_fly {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
+    };
+
+    class GVAR(R_230mm_HE) : R_230mm_HE {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
+    };
+
+    class GVAR(M_PG_AT) : M_PG_AT {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F\Ammo\Rocket_01_F";
+    };
+
+    class GVAR(Rocket_04_HE_F) : Rocket_04_HE_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_HE_F.p3d";
+    };
+
+    class GVAR(Rocket_03_HE_F) : Rocket_03_HE_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(Rocket_04_AP_F) : Rocket_04_HE_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_AP_F.p3d";
+    };
+
+    class GVAR(Rocket_03_AP_F) : Rocket_03_AP_F {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_AP_F.p3d";
+    };
+
+    // Using wrong model
+    class GVAR(R_80mm_HE) : R_80mm_HE {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(R_60mm_HE) : R_60mm_HE {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    class GVAR(R_Hydra_HE) : R_Hydra_HE {
+        DUMMY_PROPERTIES
+        model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+    };
+
+    // F18 Mod
     class js_a_fa18_wing_tank : LaserBombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
     };
-    
     class js_a_fa18x_MK82 : BombCore {};
     class js_a_fa18x_GBU39_SDB : js_a_fa18x_MK82 {
         GVAR(caliber) = 250; // Default caliber for bombs

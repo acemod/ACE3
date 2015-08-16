@@ -21,7 +21,19 @@
  */
 #include "script_component.hpp"
 
-private ["_rounds", "_currentRounds", "_maxMagazines"];
+#define REARM_SUCCESS \
+    [_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus); \
+    _dummy = _unit getVariable [QGVAR(dummy), objNull]; \
+    if !(isNull _dummy) then { \
+        detach _dummy; \
+        deleteVehicle _dummy; \
+    }; \
+    _unit setVariable [QGVAR(carriedMagazine), nil, true]; \
+    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
+    _unit selectWeapon _weaponSelect; \
+    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
+
+private ["_rounds", "_currentRounds", "_maxMagazines", "_dummy"];
 params ["_args"];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazine", "_numRounds"];
 
@@ -43,7 +55,11 @@ if (_maxMagazines == 1) then {
         // Fill only at most _numRounds
         _target setMagazineTurretAmmo [_magazine, ((_target magazineTurretAmmo [_magazine, _turretPath]) + _numRounds) min _rounds, _turretPath];
     };
-    _unit setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
+    [[LSTRING(Hint_RearmedTriple), _numRounds,
+        getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
+        getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit] call EFUNC(common,displayTextStructured);
+    
+    REARM_SUCCESS
 } else {
     for "_idx" from 1 to _maxMagazines do {
         _currentRounds = _target magazineTurretAmmo [_magazine, _turretPath];
@@ -68,7 +84,11 @@ if (_maxMagazines == 1) then {
                     _target setMagazineTurretAmmo [_magazine, _currentRounds, _turretPath];
                 };
             };
-            _unit setVariable [QGVAR(carriedMagazine), nil]; // TODO replace by item
+            [[LSTRING(Hint_RearmedTriple), _rounds,
+                getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
+                getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit] call EFUNC(common,displayTextStructured);
+            
+            REARM_SUCCESS
         };
         _target removeMagazineTurret [_magazine, _turretPath];
         _numMagazines = _numMagazines - 1;

@@ -17,7 +17,25 @@
  */
 #include "script_component.hpp"
 
+private ["_dummy"];
 params ["_args"];
 _args params ["_unit", "_magazine"];
 
-_unit setVariable [QGVAR(carriedMagazine), _magazine]; // TODO replace by item
+_unit setVariable [QGVAR(carriedMagazine), _magazine];
+[_unit, QGVAR(vehRearm), true] call EFUNC(common,setForceWalkStatus);
+
+_dummy = _unit getVariable [QGVAR(dummy), objNull];
+if !(isNull _dummy) then {
+    detach _dummy;
+    deleteVehicle _dummy;
+    _unit setVariable [QGVAR(dummy), objNull];
+};
+_ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+_dummy = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
+if !(_dummy == "") then {
+    _dummy = _dummy createVehicle (position _unit);
+    _dummy attachTo [_unit, [0,0.5,0], "pelvis"]; 
+    _dummy setDir 90; 
+    _dummy allowDamage false;
+    _unit setVariable [QGVAR(dummy), _dummy];
+};

@@ -45,5 +45,33 @@
             <English>Pick up ammo</English>
             <German>Munition nehmen</German>
         </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
+            <English>Rearmed %1 rounds of %2 on %3</English>
+            <German>%1 Schuss %2 an %3 aufmunitioniert</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_smokelauncher">
+            <Original>Smoke Screen</Original>
+            <English>Smoke Screen</English>
+            <Czech>Kouřová clona</Czech>
+            <French>Écran de fumée</French>
+            <German>Rauchwand</German>
+            <Italian>Cortina fumogena</Italian>
+            <Polish>Zasłona dymna</Polish>
+            <Portuguese>Cortina de fumaça</Portuguese>
+            <Russian>Дым. завеса</Russian>
+            <Spanish>Pantalla de humo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Rearm_flarelauncher">
+            <Original>Flares</Original>
+            <English>Flares</English>
+            <Czech>Světlice</Czech>
+            <French>Fusées</French>
+            <German>Leuchtkörper</German>
+            <Italian>Razzi luminosi</Italian>
+            <Polish>Flary</Polish>
+            <Portuguese>Sinalizadores</Portuguese>
+            <Russian>ЛТЦ</Russian>
+            <Spanish>Bengalas</Spanish>
+        </Key>
     </Package>
 </Project>

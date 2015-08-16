@@ -47,6 +47,9 @@ if (_idx == -1 ) then {
     _idx = 2;
 };
 
+_unit setVariable [QGVAR(selectedWeaponOnRearm), currentWeapon _unit];
+_unit action ["SwitchWeapon", _unit, _unit, 99];
+
 [
     (DURATION_PICKUP select _idx),
     [_unit, _magazine],
