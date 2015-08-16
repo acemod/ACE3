@@ -15,23 +15,21 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_caller,_target);
-
 private ["_onFinish", "_onFailure"];
+params ["_caller", "_target"];
 
 if (!(_this call FUNC(canRefuelUAV))) exitWith {};
 
 _onFinish = {
-   EXPLODE_2_PVT((_this select 0),_caller,_target);
-  _caller removeItem "ACE_UAVBattery";
-  playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
-  ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
+    (_this select 0) params ["_caller", "_target"];
+    _caller removeItem "ACE_UAVBattery";
+    playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
+      ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
 };
 
 _onFailure = {
-  EXPLODE_2_PVT((_this select 0),_caller,_target);
-  [_caller, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    (_this select 0) params ["_caller", "_target"];
+    [_caller, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
 };
 
 [_caller, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);

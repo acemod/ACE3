@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_caller,_target);
+params ["_caller", "_target"];
 
 ("ACE_UAVBattery" in (items _caller)) && {(fuel _target) < 1} && {(speed _target) < 1} && {!(isEngineOn _target)} && {(_target distance _caller) <= 4}

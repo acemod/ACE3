@@ -3,6 +3,7 @@ layout: wiki
 title: Finger
 description: Finger pointing
 group: feature
+category: realism
 parent: wiki
 ---
 

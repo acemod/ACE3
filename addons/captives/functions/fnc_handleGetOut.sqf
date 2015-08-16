@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_vehicle,_dontcare,_unit);
+params ["_vehicle", "_dontcare","_unit"];
 
 if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
     private ["_cargoIndex"];

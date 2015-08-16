@@ -125,13 +125,6 @@ class RscDisplayDiary {
             };
         };
     };
-    // scale up the compass
-    class objects {
-        class Compass: RscObject {
-            scale = 0.7;
-            zoomDuration = 0;
-        };
-    };
 };
 
 // BRIEFING SCREEN
@@ -149,13 +142,6 @@ class RscDisplayGetReady: RscDisplayMainMap {
             #include "MapControls.hpp"
         };
     };
-    // scale up the compass
-    class objects {
-        class Compass: RscObject {
-            scale = 0.7;
-            zoomDuration = 0;
-        };
-    };
 };
 class RscDisplayClientGetReady: RscDisplayGetReady {
     // get rid of the "center to player position" - button (as it works even on elite)
@@ -164,26 +150,12 @@ class RscDisplayClientGetReady: RscDisplayGetReady {
             #include "MapControls.hpp"
         };
     };
-    // scale up the compass
-    class objects {
-        class Compass: RscObject {
-            scale = 0.7;
-            zoomDuration = 0;
-        };
-    };
 };
 class RscDisplayServerGetReady: RscDisplayGetReady {
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {
         class TopRight: RscControlsGroup {
             #include "MapControls.hpp"
-        };
-    };
-    // scale up the compass
-    class objects {
-        class Compass: RscObject {
-            scale = 0.7;
-            zoomDuration = 0;
         };
     };
 };

@@ -16,42 +16,49 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue"];
+private ["_settingName", "_added", "_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue", "_selectedCategory"];
 DEFAULT_PARAM(0,_updateKeyView,true);
 
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 _ctrlList = _settingsMenu displayCtrl 200;
 
-lbclear _ctrlList;
+lnbClear _ctrlList;
+
+_selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_OPTIONS): {
         {
-            _ctrlList lbadd (_x select 3);
+            if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
+                _settingName = (_x select 3);
+                _settingsValue = _x select 9;
 
-            _settingsValue = _x select 8;
-
-            // Created disable/enable options for bools
-            _settingsText = if ((_x select 1) == "BOOL") then {
-                [(localize LSTRING(Disabled)), (localize LSTRING(Enabled))] select _settingsValue;
-            } else {
-                (_x select 5) select _settingsValue;
+                // Created disable/enable options for bools
+                _settingsText = if ((_x select 1) == "BOOL") then {
+                    [(localize  ELSTRING(common,No)), (localize ELSTRING(common,Yes))] select _settingsValue;
+                } else {
+                    (_x select 5) select _settingsValue;
+                };
+                _added = _ctrlList lnbAddRow [_settingName, _settingsText];
+                _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-
-            _ctrlList lbadd (_settingsText);
-        }foreach GVAR(clientSideOptions);
+        } foreach GVAR(clientSideOptions);
     };
     case (MENU_TAB_COLORS): {
-    {
-            _color = +(_x select 8);
-            {
-                _color set [_forEachIndex, ((round (_x * 100))/100)];
-            } forEach _color;
-            _settingsColor = str _color;
-            _ctrlList lbadd (_x select 3);
-            _ctrlList lbadd (_settingsColor);
-            _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 8)];
+        {
+            if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
+                _color = +(_x select 9);
+                {
+                    _color set [_forEachIndex, ((round (_x * 100))/100)];
+                } forEach _color;
+                _settingsColor = str _color;
+                _settingName = (_x select 3);
+
+                _added = _ctrlList lnbAddRow [_settingName, _settingsColor];
+                _ctrlList lnbSetColor [[_added, 1], (_x select 9)];
+                _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
+            };
         }foreach GVAR(clientSideColors);
     };
 };
