@@ -29,10 +29,10 @@ _items = _this select 4;
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
 }foreach _items;
 
-[_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog); // TODO expand message
 
 true;

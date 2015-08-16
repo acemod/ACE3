@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu"];
+private ["_settingsMenu", "_ctrlComboBox"];
 
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
@@ -24,4 +24,4 @@ _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 _ctrlComboBox = (_settingsMenu displayCtrl 14);
 GVAR(currentCategorySelection) = lbCurSel _ctrlComboBox;
 
-[false] call FUNC(settingsMenuUpdateList);
+[true] call FUNC(settingsMenuUpdateList);
