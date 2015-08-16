@@ -15,7 +15,7 @@
  *
  * Public: Yes
  */
-#define ENABLE_PERFORMANCE_COUNTERS
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 #define PLACE_RANGE_MAX 1

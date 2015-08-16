@@ -15,6 +15,9 @@
  */
 #include "script_component.hpp"
 
+//Event for setting explosive placement angle/pitch:
+[QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
+
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
 if (isServer) then {

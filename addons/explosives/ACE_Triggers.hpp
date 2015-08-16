@@ -38,7 +38,7 @@ onSetup parameters:
         isAttachable = 0;
         displayName = CSTRING(PressurePlate);
         picture = PATHTOF(Data\UI\PressurePlate.paa);
-        onPlace = "_dist=GetNumber(ConfigFile >> 'CfgMagazines' >> (_this select 2) >> 'ACE_Triggers' >> 'PressurePlate' >> 'digDistance');_ex=_this select 1;_ex setPosATL ((getPosATL _ex) vectorDiff ((VectorUp _ex) vectorCrossProduct [0,0,_dist]));false";
+        onPlace = QUOTE(false);
     };
     class IRSensor {
         isAttachable = 0;

@@ -25,6 +25,8 @@ private ["_config"];
 _config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
 // If the onSetup function returns true, it is handled elsewhere
-if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {};
+if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {
+    TRACE_2("onSetup returned true",_explosive,_trigger);
+};
 
 [ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(Direction), 0],_magazine, _trigger, [], _explosive] call FUNC(placeExplosive);

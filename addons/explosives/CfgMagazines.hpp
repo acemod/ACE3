@@ -8,7 +8,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.1;
+                digDistance = 0.06;
             };
         };
     };
@@ -17,7 +17,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.075;
+                digDistance = 0.08;
             };
         };
     };
@@ -26,7 +26,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.05;
+                digDistance = 0.025;
             };
         };
     };

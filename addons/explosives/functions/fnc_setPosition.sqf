@@ -13,7 +13,7 @@
  * Example:
  * [_explosive, 150, 90] call ACE_Explosives_fnc_setPosition;
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,7 +26,6 @@ if (isNull (attachedTo _explosive)) then {
         [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);
     };
 } else {
+    //Attaching to a vehicle (dirAndUp based on vehicle)
     _explosive setVectorDirAndUp [[0,0,1],[(sin _direction),(cos _direction),0]];
 };
-
-
