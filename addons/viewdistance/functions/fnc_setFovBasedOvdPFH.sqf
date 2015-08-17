@@ -13,10 +13,10 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
+
 #include "script_component.hpp"
 
-#define VD_NORMAL_ZOOM 1.00041
+#define VD_ZOOM_NORMAL 1.00041
 #define VD_ZOOM_DIVISION 35
 #define VD_ZOOM_DIVISION_AIR 10
 
@@ -33,7 +33,7 @@ _zoom = (call CBA_fnc_getFov) select 1;
 
 // Air
 if ((vehicle ACE_player) isKindOf "Air") exitWith {
-    if (_zoom > VD_NORMAL_ZOOM) then {
+    if (_zoom > VD_ZOOM_NORMAL) then {
         // Dynamically set Object View Distance based on player's Zoom Level and View Distance
     	setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION_AIR * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
     } else {
@@ -43,7 +43,7 @@ if ((vehicle ACE_player) isKindOf "Air") exitWith {
 };
 
 // Land
-if (_zoom > VD_NORMAL_ZOOM) then {
+if (_zoom > VD_ZOOM_NORMAL) then {
     // Dynamically set Object View Distance based on player's Zoom Level and View Distance
 	setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
 } else {
