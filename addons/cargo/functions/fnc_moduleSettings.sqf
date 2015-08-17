@@ -3,19 +3,26 @@
  * Module for adjusting the cargo settings
  *
  * Arguments:
- * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
+ * 0: The module logic <OBJECT>
+ * 1: Synchronized units <ARRAY>
+ * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
+ * Example:
+ * function = "ace_cargo_fnc_loadItem"
+ *
  * Public: No
  */
-
 #include "script_component.hpp"
 
+if (!isServer) exitWith {};
+
 params ["_logic", "_units", "_activated"];
-if !(_activated) exitWith {};
+
+if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
+
+diag_log text "[ACE]: Cargo Module Initialized.";

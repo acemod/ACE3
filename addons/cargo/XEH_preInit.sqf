@@ -2,22 +2,23 @@
 
 ADDON = false;
 
+PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
-PREP(canLoad);
 PREP(findNearestVehicle);
 PREP(getCargoSpaceLeft);
-PREP(GetSizeItem);
+PREP(getSizeItem);
+PREP(handleDestroyed);
 PREP(initObject);
 PREP(initVehicle);
-PREP(handleDestroyed);
-PREP(moduleSettings);
 PREP(loadItem);
+PREP(moduleSettings);
 PREP(onMenuOpen);
-PREP(unloadItem);
-PREP(validateCargoSpace);
 PREP(startLoadIn);
 PREP(startUnload);
+PREP(unloadItem);
+PREP(validateCargoSpace);
+
 GVAR(initializedItemClasses) = [];
 
 if (isServer) then {

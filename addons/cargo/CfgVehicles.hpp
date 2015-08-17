@@ -1,13 +1,11 @@
-
 class CfgVehicles {
-
     class ACE_Module;
     class ACE_moduleCargoSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(SettingsModule_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Cargo_ca.paa));
         category = "ACE";
-        function = QUOTE(DFUNC(moduleSettings));
+        function = QFUNC(moduleSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -41,11 +39,11 @@ class CfgVehicles {
             };*/
         };
     };
-
     class Tank: LandVehicle {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
+
     class Car_F;
     class Truck_F: Car_F {
         GVAR(space) = 8;
@@ -53,25 +51,20 @@ class CfgVehicles {
     };
 
     class Air;
-    // Repair helicopters
     class Helicopter: Air {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
     };
-
     class Heli_Transport_02_base_F;
     class I_Heli_Transport_02_F : Heli_Transport_02_base_F {
         GVAR(space) = 20;
         GVAR(hasCargo) = 1;
     };
-
-    // Repair fixed wing aircraft
     class Plane: Air {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
 
-    // boats
     class Ship;
     class Ship_F: Ship {
         GVAR(space) = 4;
