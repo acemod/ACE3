@@ -17,9 +17,9 @@
 #include "script_component.hpp"
 
 private ["_nozzle"];
-params ["_unit"];
+params ["_unit", "_target"];
 
 _nozzle = _unit getVariable QGVAR(nozzle);
-if (isNil "_nozzle") exitWith {false};
+if (isNil "_nozzle" || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 true

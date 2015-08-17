@@ -18,9 +18,7 @@
 private ["_fuel", "_type"];
 params ["_unit", "_target"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > 7}) exitWith {0};
-
-_fuel = [_unit, _target] call FUNC(getFuel);
+_fuel = [_target] call FUNC(getFuel);
 
 [
     5,
@@ -40,4 +38,3 @@ _fuel = [_unit, _target] call FUNC(getFuel);
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);
-

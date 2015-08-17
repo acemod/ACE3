@@ -1,28 +1,26 @@
 /*
- * Author: GitHawk
- * Get the remaining fuel amount
+ * Author: GitHawk, Jonpas
+ * Get the remaining fuel amount.
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
+ * 0: Target <OBJECT>
  *
  * Return Value:
  * Fuel left (in liters) <NUMBER>
  *
  * Example:
- * [unit, target] call ace_refuel_fnc_getFuel
+ * [target] call ace_refuel_fnc_getFuel
  *
  * Public: No
  */
 #include "script_component.hpp"
+
 private ["_fuel"];
-params ["_unit", "_target"];
+params ["_target"];
 
-if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit}) exitWith {0};
+_fuel = _target getVariable [QGVAR(currentFuelCargo), nil];
 
-_fuel = _target getVariable [QGVAR(currentFuelCargo), -2];
-
-if (_fuel == -2) then {
+if (isNil "_fuel") then {
     _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(fuelCargo));
     _target setVariable [QGVAR(currentFuelCargo), _fuel, true];
 };

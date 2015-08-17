@@ -10,3 +10,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define REFUEL_ACTION_DISTANCE 7

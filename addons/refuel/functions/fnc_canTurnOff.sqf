@@ -16,7 +16,6 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle", "_fueling"];
 params ["_unit", "_nozzleHolder"];
 
 if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_nozzleHolder distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};

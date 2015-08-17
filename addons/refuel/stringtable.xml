@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -45,15 +45,18 @@
             <English>How many liters does a stationary object e.g. a fuel station hold? -1 is infinite.</English>
             <German>Wieviele Liter enthält ein stationäres Objekt z.B. eine Tankstelle? -1 bedeutet unendlich.</German>
         </Key>
-         <Key ID="STR_ACE_Refuel_TakeNozzle">
+        <Key ID="STR_ACE_Refuel_Refuel">
+           <English>Refuel</English>
+       </Key>
+        <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
             <German>Zapfpistole nehmen</German>
         </Key>
-         <Key ID="STR_ACE_Refuel_Connect">
+        <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
             <German>Zapfpistole anschließen</German>
         </Key>
-         <Key ID="STR_ACE_Refuel_Disconnect">
+        <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
             <German>Zapfpistole entfernen</German>
         </Key>
@@ -72,7 +75,7 @@
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
             <German>Es ist kein Treibstoff übrig.</German>
-        </Key> 
+        </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
             <German>Abbrechen</German>

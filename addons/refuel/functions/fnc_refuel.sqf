@@ -24,13 +24,13 @@ if (isNull _sink) exitWith {};
 _rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate);
 _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
 
-[{ 
+[{
     private ["_source", "_sink", "_fuelInSource", "_fuelInSink", "_finished", "_fueling"];
     params ["_args", "_pfID"];
     _args params ["_unit", "_nozzle", "_rate", "_startFuel", "_maxFuel"];
-    
+
     _fueling = _nozzle getVariable [QGVAR(fueling), 0];
-    
+
     _source = _nozzle getVariable [QGVAR(source), objNull];
     _sink = _nozzle getVariable [QGVAR(sink), objNull];
     if (isNull _source || {isNull _sink} || {(_source distance _sink) > 10}) exitWith {
@@ -40,7 +40,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         _nozzle setVariable [QGVAR(sink), objNull];
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
-    _fuelInSource = [_unit, _source] call FUNC(getFuel);
+    _fuelInSource = [_source] call FUNC(getFuel);
     if (_fuelInSource == 0) exitWith {
         [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
         _nozzle setVariable [QGVAR(fueling), 0, true];
@@ -53,7 +53,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         _finished = true;
         [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
     };
-    
+
     _fuelInSink = fuel _sink  + ( _rate / _maxFuel);
     if (_fuelInSink > 1) then {
         _fuelInSink = 1;
@@ -66,7 +66,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         _sink setFuel _fuelInSink;
     };
     [_unit, _source, _fuelInSource] call FUNC(setFuel);
-    
+
     if (_finished || {_fueling == 0}) exitWith {
         if (_fueling == 0) then {
             [LSTRING(Hint_Stopped), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -74,8 +74,8 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         _nozzle setVariable [QGVAR(fueling), 0, true];
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
-    
-    // display flickers even at 1 second intervals 
+
+    // display flickers even at 1 second intervals
     //["displayTextStructured", [_unit], [[localize LSTRING(Hint_FuelProgress), round((_fuelInSink - _startFuel) * _maxFuel)], 2, _unit]] call EFUNC(common,targetEvent);
     //[[LSTRING(Hint_FuelProgress), round((_fuelInSink - _startFuel) * _maxFuel)], 2, _unit] call EFUNC(common,displayTextStructured);
 }, 1, [_unit, _nozzle, _rate, fuel _target, _maxFuel]] call cba_fnc_addPerFrameHandler;
