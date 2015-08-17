@@ -1,12 +1,15 @@
 /*
  * Author: Glowbal
- * Check if vehicle is a engineeral vehicle
+ * Check if vehicle is a engineering vehicle.
  *
  * Arguments:
- * 0: The Vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * ReturnValue:
- * Is in of engineer class <BOOL>
+ * Is engineering vehicle <BOOL>
+ *
+ * Example:
+ * [vehicle] call ace_repair_fnc_isRepairVehicle
  *
  * Public: Yes
  */
