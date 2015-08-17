@@ -3,7 +3,7 @@ class CfgVehicles {
     class Fence;
     class thingX;
     class NonStrategic;
-    
+
     class ACE_ConcertinaWireNoGeo: Fence {
         XEH_ENABLED;
         scope = 1;
@@ -48,7 +48,7 @@ class CfgVehicles {
             class wire_16: wire_2{};
             class wire_17: wire_2{};
             class wire_18: wire_2{};
-            
+
             class wire_2_1: wire_2 {
                 animPeriod = 8;
             };
@@ -67,7 +67,7 @@ class CfgVehicles {
             class wire_15_1: wire_2_1 {};
             class wire_16_1: wire_2_1 {};
             class wire_17_1: wire_2_1 {};
-            class wire_18_1: wire_2_1 {};			
+            class wire_18_1: wire_2_1 {};
         };
     };
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
@@ -113,6 +113,8 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -133,7 +135,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Land_Razorwire_F: NonStrategic {
         XEH_ENABLED;
     };
