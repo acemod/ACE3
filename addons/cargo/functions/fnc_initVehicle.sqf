@@ -22,6 +22,8 @@ private ["_type", "_initializedClasses"];
 _type = typeOf _vehicle;
 _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 
+if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
+
 if (isServer) then {
     {
         if (isClass _x) then {
@@ -47,8 +49,6 @@ if (_type in _initializedClasses) exitWith {};
 // set class as initialized
 _initializedClasses pushBack _type;
 SETMVAR(GVAR(initializedClasses),_initializedClasses);
-
-if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
 
 private ["_text", "_condition", "_statement", "_icon", "_action"];
 _condition = {GVAR(enable)};
