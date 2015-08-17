@@ -5,17 +5,7 @@ if (!hasInterface) exitWith {};
 ["SettingsInitialized", {
     // if not enabled, then bugger off.
     if !(GVAR(enabled)) exitWith {};
-    
-    // Force the view distance down to the limit.
-    if (viewDistance > GVAR(limitViewDistance)) then {
-        setViewDistance GVAR(limitViewDistance);
-    };
-    
-    // Adapt view distance when the player is created or changed according to whether client is on foot or vehicle.
-    ["playerChanged",{
-        [false] call FUNC(adaptViewDistance);
-    }] call EFUNC(common,addEventHandler);
-    
+
     // Set the EH which waits for any of the view distance settings to be changed, so that the effect is show immediately
     ["SettingChanged",{
         if ((_this select 0  == QGVAR(viewDistanceOnFoot)) ||
@@ -28,6 +18,7 @@ if (!hasInterface) exitWith {};
     }] call EFUNC(common,addEventHandler);
 
     // Set the EH which waits for a vehicle change to automatically swap between On Foot/In Land Vehicle/In Air Vehicle
+    // Will also run when SettingsInitialized runs and take care of the limit on load
     ["playerVehicleChanged",{
         [false] call FUNC(adaptViewDistance)
     }] call EFUNC(common,addEventHandler);
