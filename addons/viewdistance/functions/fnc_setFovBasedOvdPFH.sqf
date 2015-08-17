@@ -9,13 +9,13 @@
  * None
  *
  * Example:
- * [] call ace_viewdistance_fnc_setFovBasedObjectViewDistance
+ * [] call ace_viewdistance_fnc_setFovBasedOvdPFH
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_args", "_idPFH"];
+params ["", "_idPFH"];
 
 // Remove PFH and set Object View Distance back to what it was before
 if (GVAR(objectViewDistanceCoeff) < 6) exitWith {
