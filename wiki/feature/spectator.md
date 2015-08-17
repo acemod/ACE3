@@ -19,6 +19,7 @@ The ACE3 spectator system is designed to act as a flexible and easy to configure
 ### 1.1 Spectator System
 
 By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. There are two tools available to enable the spectator system in your missions:
+
 - An `"ace_spectator"` [respawn template](https://community.bistudio.com/wiki/Arma_3_Respawn)
 - Public functions `ace_spectator_fnc_setSpectator` and `ace_spectator_fnc_stageSpectator`
 
@@ -36,6 +37,7 @@ respawnTemplatesWest[] = {"ace_spectator","Counter","Wave"};
 For groups using custom respawn frameworks - or for missions where you want finer control over who, how and when players enter spectator - the two following functions are provided:
 
 `ace_spectator_fnc_setSpectator`
+
 ```
 * Sets local client to the given spectator state (virtually)
 * To physically handle a spectator see ace_spectator_fnc_stageSpectator
@@ -54,6 +56,7 @@ For groups using custom respawn frameworks - or for missions where you want fine
 ```
 
 `ace_spectator_fnc_stageSpectator`
+
 ```
 * Sets target unit to the given spectator state (physically)
 * To virtually handle a spectator see ace_spectator_fnc_setSpectator
