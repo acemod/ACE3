@@ -1243,7 +1243,7 @@
             <French>Trousse de premiers soins</French>
             <Spanish>Equipo de primeros auxilios</Spanish>
             <Polish>Apteczka osobista</Polish>
-            <German>Persönliches Verbandpäckchen</German>
+            <German>Persönliches Erste-Hilfe-Set</German>
             <Hungarian>Elsősegélycsomag</Hungarian>
             <Italian>Pronto soccorso personale</Italian>
             <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
@@ -1275,7 +1275,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
-            <German>Verbandpäckchen benutzen</German>
+            <German>Erste-Hilfe-Set benutzen</German>
             <Russian>Использовать аптечку</Russian>
             <French>Utiliser la Trousse de premier soins</French>
             <Polish>Użyj apteczki osobistej</Polish>
