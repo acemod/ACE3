@@ -36,7 +36,7 @@ private ["_name", "_default", "_lastSelected"];
     [MENU_TAB_SERVER_VALUES, _name, _default] call FUNC(updateSetting);
 } forEach GVAR(serverSideVakyes);
 
-_lastSelected = lbCurSel 200;
+_lastSelected = lnbCurSelRow 200;
 [GVAR(optionMenu_openTab)] call FUNC(onserverListBoxShowSelectionChanged);
 if (_lastSelected != -1) then {
     lbSetCurSel [200, _lastSelected];

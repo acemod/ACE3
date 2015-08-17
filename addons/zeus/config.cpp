@@ -19,7 +19,10 @@ class CfgPatches {
     };
     class GVAR(medical): ADDON {
         units[] = {
-            QGVAR(moduleUnconscious)
+            QGVAR(moduleUnconscious),
+            QGVAR(moduleSetMedic),
+            QGVAR(moduleSetMedicalVehicle),
+            QGVAR(moduleSetMedicalFacility)
         };
     };
 };

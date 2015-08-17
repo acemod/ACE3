@@ -9,13 +9,13 @@
  * handled <BOOL>
  *
  * Example:
- * 1.2 call ace_sandbag_fnc_handleScrollWheel;
+ * [1.2] call ace_sandbag_fnc_handleScrollWheel
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_scroll);
+params ["_scroll"];
 
 if (GETMVAR(ACE_Modifier,0) == 0 || GVAR(deployPFH) == -1) exitWith { false };
 

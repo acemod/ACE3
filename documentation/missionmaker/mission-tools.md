@@ -15,13 +15,14 @@ parent: wiki
 They can be found in the editor under: "Empty" >> "ACE Respawn"
 
 **Classnames:**
-* `ACE_Rallypoint_West`, `ACE_Rallypoint_West_Base`
-* `ACE_Rallypoint_East`, `ACE_Rallypoint_East_Base`
-* `ACE_Rallypoint_Independent`, `ACE_Rallypoint_Independent_Base`
+- `ACE_Rallypoint_West`, `ACE_Rallypoint_West_Base`
+- `ACE_Rallypoint_East`, `ACE_Rallypoint_East_Base`
+- `ACE_Rallypoint_Independent`, `ACE_Rallypoint_Independent_Base`
 
 Using the Interaction Menu on a rallypoint offers the ability to teleport from one flagpole to the other flagpole and vice versa.
 
 If you want to change the texture of the flag use this line:
+
 ```c++
 this setFlagTexture 'path\to\my\texture\my_awesome_clan_logo.paa';
 ```
@@ -32,7 +33,7 @@ All units synced to the ["Rallypoint System" module](./modules.html#1.14-rallypo
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>It's important to mention that this doesn't work for player who join during a mission (JIP = Join in progress). That's something we can't change because that's the way Bohemia has implemented their module framework.</p>
+    <p>It's important to mention that this doesn't work for player who join during a mission (JIP = Join in progress). That's something we can't change because that's the way Bohemia Interactive has implemented their module framework.</p>
 </div>
 
 To enable other units to move them add this to the unit's initialization code:
@@ -77,6 +78,12 @@ Slide duration | 0 (0 = disabled, number is in seconds)
 - Only objects with hiddenSelection 0 can be used as "screens".
 - If you set a duration the remotes will be disabled. (If the remotes are disabled `ace_interaction` is not needed)
 - You can have multiple sets of images on different screens, see the advanced slideshow below.
+- It is advisable images resolution sizes are powers of 2 (eg. 512x512) to avoid graphical glitches in them.
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an [issue](http://feedback.arma3.com/view.php?id=22310) to prevent errors.</p>
+</div>
 
 ### 3.2 Basic slideshow
 *A set of 4 images that are swapped via a remote*

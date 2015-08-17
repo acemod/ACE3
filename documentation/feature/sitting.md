@@ -3,6 +3,7 @@ layout: wiki
 title: Sitting
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

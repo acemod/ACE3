@@ -12,18 +12,16 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
-PARAMS_3(_logic,_units,_activated);
-
-if !(_activated) exitWith {};
+// Exit on Headless Client
+if (!hasInterface && !isDedicated) exitWith {};
 
 private ["_objects", "_controllers", "_images", "_names", "_duration"];
 
-_logic = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+params [["_logic", objNull, [objNull]], "_units", "_activated"];
+
+if !(_activated) exitWith {};
 if (isNull _logic) exitWith {};
 
 // Extract variables from logic

@@ -75,16 +75,6 @@ if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
 };
 
-// hack to get PFH to work in briefing
-[QGVAR(onBriefingPFH), "onEachFrame", {
-    if (ACE_time > 0) exitWith {
-        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-    };
-
-    call cba_common_fnc_onFrame;
-}] call BIS_fnc_addStackedEventHandler;
-/////
-
 QGVAR(remoteFnc) addPublicVariableEventHandler {
     (_this select 1) call FUNC(execRemoteFnc);
 };
@@ -118,8 +108,9 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
-
+if (isServer) then {
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+};
 call FUNC(checkFiles);
 
 
@@ -339,6 +330,14 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
+
+// Register localizations for the Keybinding categories
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
 
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {

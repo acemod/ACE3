@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_typeOfBuilding);
+params ["_typeOfBuilding"];
 
 private["_action", "_actionDisplayName", "_actionDisplayNameDefault", "_actionMaxDistance", "_actionOffset", "_actionPath", "_actionPosition", "_building", "_configPath", "_endIndex", "_iconImage", "_index", "_ladders", "_memPointIndex", "_memPoints", "_memPointsActions", "_startIndex"];
 
@@ -24,7 +24,7 @@ _memPointsActions = [];
 
 //Get the offset for a memory point:
 _fnc_getMemPointOffset = {
-    PARAMS_1(_memoryPoint);
+    params ["_memoryPoint"];
     _memPointIndex = _memPoints find _memoryPoint;
     _actionOffset = [0,0,0];
     if (_memPointIndex == -1) then {
@@ -38,14 +38,14 @@ _fnc_getMemPointOffset = {
 
 // Add UserActions for the building:
 _fnc_userAction_Statement = {
-    PARAMS_3(_target,_player,_variable);
-    EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
+    params ["_target", "_player", "_variable"];
+    _variable params ["_actionStatement", "_actionCondition"];
     this = _target getVariable [QGVAR(building), objNull];
     call _actionStatement;
 };
 _fnc_userAction_Condition = {
-    PARAMS_3(_target,_player,_variable);
-    EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
+    params ["_target", "_player", "_variable"];
+    _variable params ["_actionStatement", "_actionCondition"];
     this = _target getVariable [QGVAR(building), objNull];
     if (isNull this) exitWith {false};
     call _actionCondition;
@@ -84,29 +84,29 @@ for "_index" from 0 to ((count _configPath) - 1) do {
 
 // Add Ladder Actions for the building:
 _fnc_ladder_ladderUp = {
-    PARAMS_3(_target,_player,_variable);
-    EXPLODE_1_PVT(_variable,_ladderIndex);
+    params ["_target", "_player", "_variable"];
+    _variable params ["_ladderIndex"];
     _building = _target getVariable [QGVAR(building), objNull];
     TRACE_3("Ladder Action - UP",_player,_building,_ladderIndex);
     _player action ["LadderUp", _building, _ladderIndex, 0];
 };
 _fnc_ladder_ladderDown = {
-    PARAMS_3(_target,_player,_variable);
-    EXPLODE_1_PVT(_variable,_ladderIndex);
+    params ["_target", "_player", "_variable"];
+    _variable params ["_ladderIndex"];
     _building = _target getVariable [QGVAR(building), objNull];
     TRACE_3("Ladder Action - Down",_player,_building,_ladderIndex);
     _player action ["LadderDown", _building, _ladderIndex, 1];
 };
 
 _fnc_ladder_conditional = {
-    PARAMS_2(_target,_player);
+    params ["_target", "_player"];
     //(Check distance < 2) and (Don't show actions if on a ladder)
     ((_target distance _player) < 2) && {((getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _player) >> "onLadder")) == 0)}
 };
 
 _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders");
 {
-    EXPLODE_2_PVT(_x,_ladderBottomMemPoint,_ladderTopMemPoint);
+    _x params ["_ladderBottomMemPoint", "_ladderTopMemPoint"];
 
     _actionMaxDistance = 3; //interact_menu will check head -> target's offset; leave this high and do a precice distance check in condition
 

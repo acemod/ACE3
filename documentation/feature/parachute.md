@@ -3,6 +3,7 @@ layout: wiki
 title: Parachute
 description: Add an altimeter and a non-steerable parachute
 group: feature
+category: equipment
 parent: wiki
 ---
 

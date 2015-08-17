@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
+["flashbangExplosion", DFUNC(flashbangExplosionEH)] call EFUNC(common,addEventHandler);
 
 if !(hasInterface) exitWith {};
 

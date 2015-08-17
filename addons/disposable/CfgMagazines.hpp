@@ -1,6 +1,6 @@
 class CfgMagazines {
     class NLAW_F;
-    class ACE_PreloadedMissileDummy: NLAW_F {              // The dummy magazine
+    class ACE_PreloadedMissileDummy: NLAW_F {  // The dummy magazine
         author = ECSTRING(common,ACETeam);
         scope = 1;
         scopeArsenal = 1;
@@ -11,15 +11,5 @@ class CfgMagazines {
     };
     class ACE_FiredMissileDummy: ACE_PreloadedMissileDummy {
         count = 0;
-    };
-    class ACE_UsedTube_F: NLAW_F {
-        author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(UsedTube);
-        descriptionShort = CSTRING(UsedTubeDescription);
-        displayNameShort = "-";
-        count = 0;
-        weaponPoolAvailable = 0;
-        modelSpecial = "";
-        mass = 0;
     };
 };

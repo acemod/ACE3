@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 // Restore animation
 [_player, "", 2] call EFUNC(common,doAnimation);

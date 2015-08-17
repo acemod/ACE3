@@ -16,12 +16,13 @@
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
-private ["_target", "_className", "_config", "_litter", "_createLitter", "_position", "_createdLitter", "_caller", "_selectionName", "_usersOfItems"];
+private ["_target", "_className", "_config", "_litter", "_createLitter", "_position", "_createdLitter", "_caller", "_selectionName", "_usersOfItems", "_previousDamage"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
 _className = _this select 3;
 _usersOfItems = _this select 5;
+_previousDamage = _this select 6;
 
 if !(GVAR(allowLitterCreation)) exitwith {};
 if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
@@ -76,7 +77,7 @@ _createdLitter = [];
                 _litterCondition = missionNamespace getvariable _litterCondition;
                 if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
             };
-            if !([_caller, _target, _selectionName, _className, _usersOfItems] call _litterCondition) exitwith {};
+            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitwith {};
 
             if (typeName _litterOptions == "ARRAY") then {
                 // Loop through through the litter options and place the litter

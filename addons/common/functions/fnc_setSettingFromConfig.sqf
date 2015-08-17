@@ -65,17 +65,19 @@ if (isNil _name) then {
         localizedDescription,
         possibleValues,
         isForced,
-        defaultValue
+        defaultValue,
+        category
     ];*/
     _settingData = [
         _name,
         _typeName,
         (getNumber (_optionEntry >> "isClientSettable")) > 0,
-        getText (_optionEntry >> "displayName"),
-        getText (_optionEntry >> "description"),
-        getArray (_optionEntry >> "values"),
+        "", //getText (_optionEntry >> "displayName"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
+        "", //getText (_optionEntry >> "description"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
+        [], //getArray (_optionEntry >> "values"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
         getNumber (_optionEntry >> "force") > 0,
-        _value
+        _value,
+        "" //getText (_optionEntry >> "category")   //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
     ];
 
     //Strings in the values array won't be localized from the config, so just do that now:
