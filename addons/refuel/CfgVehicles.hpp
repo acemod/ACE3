@@ -115,7 +115,6 @@ class CfgVehicles {
     };
 
     class Sign_Sphere10cm_F;
-
     class ACE_refuel_fuelNozzle : Sign_Sphere10cm_F {
         XEH_ENABLED;
         MACRO_NOZZLE_ACTIONS
@@ -125,16 +124,7 @@ class CfgVehicles {
 
     class Static : All {};
 
-    class Building : Static {
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = ECSTRING(interaction,MainAction);
-                selection = "";
-                distance = 10;
-                condition = "true";
-            };
-        };
-    };
+    class Building : Static {};
 
     class NonStrategic : Building {};
 
@@ -144,9 +134,16 @@ class CfgVehicles {
 
     class House_F : House {};
 
-    class House_Small_F : House_F {};
-
-    class Strategic : Building {};
+    class House_Small_F : House_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                selection = "";
+                distance = 10;
+                condition = "true";
+            };
+        };
+    };
 
     class AllVehicles : All {
         GVAR(flowRate) = 1;
@@ -291,14 +288,14 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 80;
     };
 
-    class Van_01_fuel_base_F : Van_01_base_F {
+    class Van_01_fuel_base_F: Van_01_base_F {
         transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
 
-    class Tank_F : Tank {
+    class Tank_F: Tank {
         GVAR(fuelCapacity) = 1200;
     };
 
@@ -310,14 +307,14 @@ class CfgVehicles {
 
     class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
 
-    class B_APC_Tracked_01_CRV_F : B_APC_Tracked_01_base_F {
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{-1.08,-4.81,-.8}};
         GVAR(fuelCargo) = 1000;
     };
 
-    class APC_Tracked_02_base_F: Tank_F {
+    class APC_Tracked_02_base_F : Tank_F {
         // BM-2T
         // Assuming 1 L/km
         GVAR(fuelCapacity) = 1000;
@@ -432,31 +429,24 @@ class CfgVehicles {
     };
 
     // Vanilla fuel vehicles
-    class I_Truck_02_fuel_F : Truck_02_base_F {
+    class Truck_02_fuel_base_F : Truck_02_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = 10000;
-    };
-
-    class O_Truck_02_fuel_F : Truck_02_base_F {
-        transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
     };
 
     class B_Truck_01_fuel_F : B_Truck_01_mover_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Truck_03_fuel_F : Truck_03_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -474,90 +464,45 @@ class CfgVehicles {
     };
 
     class B_Slingload_01_Fuel_F : Slingload_01_Base_F  {
+        XEH_ENABLED;
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Heli_Transport_04_fuel_F : Heli_Transport_04_base_F  {
+        XEH_ENABLED;
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{-1.52,1.14,-1.18}};
         GVAR(fuelCargo) = 10000;
     };
 
     class Pod_Heli_Transport_04_base_F : StaticWeapon {};
-
     class Land_Pod_Heli_Transport_04_fuel_F : Pod_Heli_Transport_04_base_F {
+        XEH_ENABLED;
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
+        GVAR(hooks[]) = {{-1.49,1.41,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
     // Vanilla buildings
     class Land_Fuelstation_Feed_F : House_Small_F {
+        XEH_ENABLED;
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
+        GVAR(hooks[]) = {{0,0,-1}};
+        GVAR(fuelCargo) = INFINITE_FUEL;
     };
 
     class Land_fs_feed_F : House_Small_F {
+        XEH_ENABLED;
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class FuelStation : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_Fuelstation : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_Fuelstation_army : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_Benzina_schnell : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_A_FuelStation_Feed : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_Ind_FuelStation_Feed_EP1 : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
-    };
-
-    class Land_FuelStation_Feed_PMC : Strategic {
-        transportFuel = 0; //50k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,0}};
-        GVAR(fuelCargo) = -1;
+        GVAR(hooks[]) = {{-0.4,0.022,-.23}};
+        GVAR(fuelCargo) = INFINITE_FUEL;
     };
 
     /*  // Barrels from rhs?

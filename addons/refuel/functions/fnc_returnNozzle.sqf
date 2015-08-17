@@ -1,5 +1,5 @@
 /*
- * Author: GitHawk et.al., Jonpas
+ * Author: GitHawk, Jonpas
  * Returns the nozzle back to source vehicle.
  *
  * Arguments:
@@ -16,14 +16,13 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle"];
-
+private ["_nozzle", "_dummy"];
 params ["_unit", "_target"];
 
-_source = _nozzle getVariable QGVAR(source);
 _nozzle = _unit getVariable QGVAR(nozzle);
+_source = _nozzle getVariable QGVAR(source);
 
-if (_source != _target || {isNil "_nozzle"}) exitWith {false};
+if (isNil "_nozzle" || {_source != _target}) exitWith {false};
 
 _unit setVariable [QGVAR(nozzle), nil];
 detach _nozzle;

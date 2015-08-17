@@ -80,12 +80,11 @@ detach _nozzle;
 _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel);
 _unit selectWeapon _weaponSelect;
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+_unit setVariable [QGVAR(isRefueling), false];
 
 _nozzle attachTo [_target, _endPosTestOffset];
 _nozzle setVariable [QGVAR(sink), _target, true];
-_nozzle setVariable [QGVAR(fueling), 1, true];
+_nozzle setVariable [QGVAR(isRefueling), true, true];
 _target setVariable [QGVAR(nozzle), _nozzle, true];
 
 [_unit, _target, _nozzle] call FUNC(refuel);
-
-true

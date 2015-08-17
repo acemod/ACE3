@@ -20,6 +20,5 @@ params ["_unit", "_target"];
 if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 _fuel = [_target] call FUNC(getFuel);
-if (_fuel > 0 || {_fuel == -1}) exitWith {true};
 
-false
+(_fuel > 0 || {_fuel == -1})

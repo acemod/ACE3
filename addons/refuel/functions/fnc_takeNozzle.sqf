@@ -26,19 +26,27 @@ _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit];
 _unit action ["SwitchWeapon", _unit, _unit, 99];
 
 if (isNull _nozzle) then { // func is called on fuel truck
-    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_hooks") select 0;
+    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_hooks");
+    if (count _endPosOffset == 2) then {
+        if (_unit distance (_target modelToWorld (_endPosOffset select 0)) <  _unit distance (_target modelToWorld (_endPosOffset select 1))) then {
+            _endPosOffset = _endPosOffset select 0;
+        } else {
+            _endPosOffset = _endPosOffset select 1;
+        };
+    } else {
+        _endPosOffset = _endPosOffset select 0;
+    };
 
     // TODO add pickup animation ?
 
     [{
-        params ["_unit", "_target"];
+        params ["_unit", "_target", "_endPosOffset"];
         _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
         _newNozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
         _unit setVariable [QGVAR(nozzle), _newNozzle];
 
-        // Create rope with offset -1 to prevent wrapping over interaction base point
-        _rope = ropeCreate [_target, [0, 0, -1], _newNozzle, [0, 0, 0], 12];
-
+        _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], 12];
+        _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
         _newNozzle setVariable [QGVAR(source), _target, true];
         _newNozzle setVariable [QGVAR(rope), _rope, true];
         _target setVariable [QGVAR(isConnected), true, true];
@@ -47,14 +55,15 @@ if (isNull _nozzle) then { // func is called on fuel truck
     [{
         private ["_nozzle"];
         params ["_args", "_pfID"];
-        _args params ["_unit", "_target"];
+        _args params ["_unit", "_source", "_endPosOffset"];
 
-        if ((_unit distance _target) > 10) exitWith {
+        if (_unit distance (_source modelToWorld _endPosOffset) > 10) exitWith {
             _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
             if !(isNull _nozzle) then {
                 detach _nozzle;
                 _nozzle setPosATL [(getPosATL _unit) select 0,(getPosATL _unit) select 1, 0];
                 _nozzle setVelocity [0,0,0];
+                _nozzle setVariable [QGVAR(isRefueling), false, true];
                 _unit setVariable [QGVAR(isRefueling), false];
                 _unit setVariable [QGVAR(nozzle), objNull];
 
@@ -67,7 +76,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             };
             [_pfID] call cba_fnc_removePerFrameHandler;
         };
-    }, 0, [_unit, _target]] call cba_fnc_addPerFrameHandler;
+    }, 0, [_unit, _target, _endPosOffset]] call cba_fnc_addPerFrameHandler;
 
     _unit setVariable [QGVAR(isRefueling), true];
 } else { // func is called in muzzle either connected or on ground

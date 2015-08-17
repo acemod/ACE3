@@ -20,5 +20,4 @@ params ["_unit", "_target"];
 
 if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
-// Check if the fuel source is already in use
 !(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

@@ -17,4 +17,4 @@
 
 params ["_nozzleHolder"];
 
-(_nozzleHolder getVariable QGVAR(nozzle)) setVariable [QGVAR(fueling), 0];
+(_nozzleHolder getVariable QGVAR(nozzle)) setVariable [QGVAR(isRefueling), false, true];

@@ -20,4 +20,4 @@ params ["_unit", "_nozzleHolder"];
 
 if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_nozzleHolder distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
-!(isNull (_nozzleHolder getVariable [QGVAR(nozzle), objNull])) && {(_nozzleHolder getVariable QGVAR(nozzle)) getVariable [QGVAR(fueling), 0] != 0}
+!(isNull (_nozzleHolder getVariable [QGVAR(nozzle), objNull])) && {(_nozzleHolder getVariable QGVAR(nozzle)) getVariable [QGVAR(isRefueling), false]}

@@ -1,5 +1,5 @@
 /*
- * Author: Jonpas
+ * Author: Jonpas, GitHawk
  * Checks if unit can check fuel.
  *
  * Arguments:
@@ -18,6 +18,8 @@
 
 params ["_unit", "_target"];
 
-if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
-
-true
+!(isNull _unit ||
+    {!(_unit isKindOf "CAManBase")} ||
+    {!local _unit} ||
+    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
+    {(_target call FUNC(getFuel) == INFINITE_FUEL)})

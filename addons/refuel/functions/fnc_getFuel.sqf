@@ -18,7 +18,7 @@
 private ["_fuel"];
 params ["_target"];
 
-_fuel = _target getVariable [QGVAR(currentFuelCargo), nil];
+_fuel = _target getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
     _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(fuelCargo));

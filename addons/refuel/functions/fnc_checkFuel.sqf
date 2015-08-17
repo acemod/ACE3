@@ -15,7 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_fuel", "_type"];
+private ["_fuel"];
 params ["_unit", "_target"];
 
 _fuel = [_target] call FUNC(getFuel);
