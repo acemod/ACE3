@@ -203,7 +203,7 @@ The spectator camera has 8 manipulatable attributes:
 - **Camera zoom:** The zoom level of the free camera
 - **Camera speed:** The movement speed of the free camera
 
-Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at ay point (including before spectator has ever opened):
+Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at any point (including before spectator has ever opened):
 
 ```
  * Arguments:
