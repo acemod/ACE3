@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(addCargoItem);
 PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
