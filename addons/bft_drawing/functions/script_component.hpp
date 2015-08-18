@@ -30,7 +30,10 @@
 #define     COLOR_CIV_DARK              0.4,0,0.5,1
 
 // sizes
-#define     MAP_ICON_SIZE               40
+#define     MAP_ICON_SIZE               30
+#define     MAP_TEXT_SIZE               0.05
+#define     SIZE_MULTIPLIER_MIN         0.5
+#define     SIZE_MULTIPLIER_MAX         2
 
 // --- GUI --- //
 // tooltip macros

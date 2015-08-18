@@ -26,13 +26,16 @@ _mouseover = [-1,[]];
     _color = AD_GET_COLOR(_x);
 
     private "_size";
-    _size = MAP_ICON_SIZE; // * ([_x select 2] call FUNC(size_indexToMultiplier));
+    _size = GVAR(mapIconSize);
+    // shouldn't use fixed distance since distance is totally relying on the current zoom level
     if ((_position distance (_ctrl ctrlMapScreenToWorld GVAR(mousepos))) / _size < 0.0007) then {
+        // we should probably defer drawing of icons that the mouse is over, since there might be multiple ones and we want the one that is closest to the cursor, so we would need to figure that out later
         _size = _size * 1.5;
+        // also change colour, or change colour instead of size?
         _mouseover = [0, _x];
     };
-
-    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size, 0, _callsign, 0, 0.05, "TahomaB", "right"];
+    
+    _ctrl drawIcon [_typeIcon, _color, _position, _size, _size, 0, _callsign, 0, GVAR(mapTextSize), "TahomaB", "right"];
     _ctrl drawIcon [_sizeIcon, [COLOR_BLACK], _position, _size, _size, 0, "", 1,0, "TahomaB", "right"];
 
     // TODO: make setting for displaying title

@@ -58,10 +58,10 @@ switch (_function) do {
         [_interfaceID] call FUNC(toggleIconText);
     };
     case "incTextSize": {
-        [] call FUNC(incTextSize);
+        [_interfaceID] call FUNC(incTextSize);
     };
     case "decTextSize": {
-        [] call FUNC(decTextSize);
+        [_interfaceID] call FUNC(decTextSize);
     };
     case "incBrightness": {
         [_interfaceID] call FUNC(incBrightness);

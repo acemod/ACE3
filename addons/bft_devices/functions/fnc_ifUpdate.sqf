@@ -22,7 +22,7 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_interfaceInit","_settings","_display","_displayName","_interfaceID","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos","_uav","_hCam"];
+private ["_interfaceInit","_settings","_display","_displayName","_interfaceID","_osdCtrl","_text","_mode","_mapTypes","_mapType","_mapIDC","_targetMapName","_targetMapIDC","_targetMapCtrl","_previousMapCtrl","_previousMapIDC","_renderTarget","_loadingCtrl","_targetMapScale","_mapScale","_mapScaleKm","_mapScaleMin","_mapScaleMax","_mapScaleTxt","_mapWorldPos","_targetMapWorldPos","_displayItems","_btnActCtrl","_displayItemsToShow","_mapTools","_showMenu","_data","_uavListCtrl","_hcamListCtrl","_index","_isDialog","_background","_backgroundConfig","_brightness","_nightMode","_backgroundPosition","_backgroundPositionX","_backgroundPositionW","_backgroundConfigPositionX","_xOffset","_dspIfPosition","_backgroundOffset","_ctrlPos","_mousePos","_uav","_hCam","_drawSizeMultiplier"];
 disableSerialization;
 
 if (I_CLOSED) exitWith {false};
@@ -547,6 +547,16 @@ if (isNil "_mode") then {
                     if (lbCurSel _hcamListCtrl == -1) then {
                         [_interfaceID,[["hCam",""]]] call FUNC(setSettings);
                     };
+                };
+            };
+        };
+        // ------------ Draw Size Multiplier ------------
+        if (_x == "drawSizeMultiplier") exitWith {
+            if (_interfaceInit) then {
+                _drawSizeMultiplier = _value;
+                _drawSizeMultiplier = [_drawSizeMultiplier] call EFUNC(bft_drawing,updateDrawSize);
+                if (_drawSizeMultiplier != _value) then {
+                    [_interfaceID,[["drawSizeMultiplier",_drawSizeMultiplier]],false] call FUNC(setSettings);
                 };
             };
         };

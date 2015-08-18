@@ -159,6 +159,7 @@ class ACE_BFT {
                     TOPO = IDC_SCREEN_TOPO;
                 };
                 mapType = "SAT";
+                drawSizeMultiplier = 1;
                 uavCam = "";
                 hCam = "";
                 mapTools = "true";
@@ -186,6 +187,7 @@ class ACE_BFT {
                     TOPO = IDC_SCREEN_TOPO;
                 };
                 mapType = "SAT";
+                drawSizeMultiplier = 1;
                 showMenu = "false";
                 mapTools = "true";
                 nightMode = 2;
@@ -211,6 +213,7 @@ class ACE_BFT {
                     TOPO = IDC_SCREEN_TOPO;
                 };
                 mapType = "SAT";
+                drawSizeMultiplier = 1;
                 mapTools = "true";
                 nightMode = 2;
                 brightness = 0.9;
@@ -231,6 +234,7 @@ class ACE_BFT {
                     TOPO = IDC_SCREEN_TOPO;
                 };
                 mapType = "SAT";
+                drawSizeMultiplier = 1;
                 mapTools = "true";
             };
         };
@@ -255,6 +259,7 @@ class ACE_BFT {
                     BLK = IDC_SCREEN_BLACK;
                 };
                 mapType = "SAT";
+                drawSizeMultiplier = 1;
                 mapTools = "true";
                 nightMode = 0;
                 brightness = 0.8;
