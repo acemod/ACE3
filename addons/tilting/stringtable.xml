@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Tilting">
+        <Key ID="STR_ACE_Tilting_Connect">
+            <English>Connect tilting cable</English>
+            <German>Aufrichtseil verbinden</German>
+            <Russian>Прицепить трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tilting_ConnectCable">
+            <English>Connect cable</English>
+            <German>Seil verbinden</German>
+            <Russian>Прицепить трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tilting_Disconnect">
+            <English>Disconnect tilting cable</English>
+            <Russian>Отцепить трос</Russian>
+            <German>Aufrichtseil entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Tilting_Failed">
+            <English>Failed connecting cable</English>
+            <Russian>Не можем прицепить трос</Russian>
+        </Key>
+    </Package>
+</Project>
