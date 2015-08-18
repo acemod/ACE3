@@ -56,4 +56,9 @@ HASH_SET(_tempHash,"mapScaleMin",0.1);
 HASH_SET(_tempHash,"mapScaleMax",2 ^ round(sqrt(GVAR(worldSize) / 1024)));
 HASH_SET(GVAR(settings),"COMMON",_tempHash);
 
+// when main map is opened, close any open interface
+["mapOpened",{
+    [] call FUNC(ifClose);
+}] call EFUNC(common,addEventHandler);
+
 #include "initKeybinds.sqf"

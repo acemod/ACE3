@@ -186,10 +186,11 @@ if (!(_deviceAppData isEqualTo []) && (_deviceOwner isKindOf "ParachuteBase" || 
 // temporary UAV list update until implemented in BFT module
 [] call FUNC(updateUAVList);
 
+// Check if map and / or another dialog is open and close them
+if (visibleMap) then {openMap false};
+
 // start the interface
 if (_isDialog) then {
-    // Check if map and / or another dialog is open and close them
-    if (visibleMap) then {openMap false};
     while {dialog} do {
         closeDialog 0;
     };
