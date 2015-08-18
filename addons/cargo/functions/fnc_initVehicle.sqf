@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Initializes vehicle, adds open caro menu action if available.
+ * Initializes vehicle, adds open cargo menu action if available.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -25,7 +25,7 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (isServer) then {
     {
         if (isClass _x) then {
-            [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")] call FUNC(addItem);
+            ["AddCargoItem", [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")]] call EFUNC(common,localEvent);
         };
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
