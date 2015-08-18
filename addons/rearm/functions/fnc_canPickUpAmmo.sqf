@@ -3,8 +3,8 @@
  * Check if a unit can pick up ammo.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can Pick Up Ammo <BOOL>
@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+params ["_target", "_unit"];
 
 !(isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REARM_ACTION_DISTANCE})

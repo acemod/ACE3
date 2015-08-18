@@ -4,7 +4,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Vehicle <OBJECT>
  *
  * Return Value:
  * None
@@ -17,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_magazineClass", "_ammo", "_tmpCal", "_cal", "_idx", "_needRearmMags", "_magazineDisplayName"];
-params ["_unit", "_vehicle"];
+params ["_unit"];
 
 _magazineClass = _unit getVariable QGVAR(carriedMagazine);
 if (isNil "_magazineClass") exitWith {false};

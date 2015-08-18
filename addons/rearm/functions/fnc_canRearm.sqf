@@ -3,8 +3,8 @@
  * Check if a unit can rearm.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can Rearm <BOOL>
@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_magazineClass", "_magazines", "_turretPath"];
-params ["_unit", "_target"];
+params ["_target", "_unit"];
 
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE}) exitWith {false};
 

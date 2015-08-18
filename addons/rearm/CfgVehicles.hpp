@@ -4,8 +4,8 @@
                 class GVAR(Rearm) { \
                     displayName = CSTRING(Rearm); \
                     distance = REARM_ACTION_DISTANCE; \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canRearm)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(rearm)); \
+                    condition = QUOTE(_this call FUNC(canRearm)); \
+                    statement = QUOTE(_player call FUNC(rearm)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
@@ -18,8 +18,8 @@
                 class GVAR(PickUpAmmo) { \
                     displayName = CSTRING(PickUpAmmo); \
                     distance = REARM_ACTION_DISTANCE; \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPickUpAmmo)); \
-                    insertChildren = QUOTE([_target] call FUNC(addRearmActions)); \
+                    condition = QUOTE(_this call FUNC(canPickUpAmmo)); \
+                    insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
