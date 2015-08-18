@@ -22,8 +22,7 @@ params ["_unit", "_target", "_nozzle"];
 
 [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-_unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit];
-_unit action ["SwitchWeapon", _unit, _unit, 99];
+REFUEL_HOLSTER_WEAPON
 
 if (isNull _nozzle) then { // func is called on fuel truck
     _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_hooks");
@@ -60,16 +59,8 @@ if (isNull _nozzle) then { // func is called on fuel truck
         if (_unit distance (_source modelToWorld _endPosOffset) > 10) exitWith {
             _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
             if !(isNull _nozzle) then {
-                detach _nozzle;
-                _nozzle setPosATL [(getPosATL _unit) select 0,(getPosATL _unit) select 1, 0];
-                _nozzle setVelocity [0,0,0];
-                _nozzle setVariable [QGVAR(isRefueling), false, true];
-                _unit setVariable [QGVAR(isRefueling), false];
-                _unit setVariable [QGVAR(nozzle), objNull];
-
-                _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel);
-                _unit selectWeapon _weaponSelect;
-                _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+                REFUEL_UNIT_DROP_NOZZLE
+                REFUEL_UNHOLSTER_WEAPON
 
                 [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
                 [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);

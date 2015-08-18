@@ -18,6 +18,10 @@
 
 params ["_unit", "_target"];
 
-if (isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
+if (isNull _unit ||
+    {!(_unit isKindOf "CAManBase")} ||
+    {!local _unit} ||
+    {!alive _target} ||
+    {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 !(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

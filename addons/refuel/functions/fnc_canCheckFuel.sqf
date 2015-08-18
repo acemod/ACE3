@@ -21,5 +21,6 @@ params ["_unit", "_target"];
 !(isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
+    {!alive _target} ||
     {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
-    {(_target call FUNC(getFuel) == INFINITE_FUEL)})
+    {(_target call FUNC(getFuel) == REFUEL_INFINITE_FUEL)})

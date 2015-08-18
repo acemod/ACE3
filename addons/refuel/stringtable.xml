@@ -65,6 +65,10 @@
             <English>Stop fueling</English>
             <German>Betankung anhalten</German>
         </Key>
+        <Key ID="STR_ACE_Refuel_TurnOn">
+            <English>Start fueling</English>
+            <German>Betankung beginnen</German>
+        </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
             <German>%1 Liters getankt</German>

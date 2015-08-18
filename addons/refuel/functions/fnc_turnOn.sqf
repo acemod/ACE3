@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Turn off a fuel nozzle
+ * Turn on a fuel nozzle
  *
  * Arguments:
  * 0: The object holding the nozzle <OBJECT>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [tank] call ace_refuel_fnc_turnOff
+ * [tank] call ace_refuel_fnc_turnOn
  *
  * Public: No
  */
@@ -17,4 +17,4 @@
 
 params ["_nozzleHolder"];
 
-(_nozzleHolder getVariable QGVAR(nozzle)) setVariable [QGVAR(isRefueling), false, true];
+(_nozzleHolder getVariable QGVAR(nozzle)) setVariable [QGVAR(isRefueling), true, true];

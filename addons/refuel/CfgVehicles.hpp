@@ -52,6 +52,13 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
+                class GVAR(TurnOn) { \
+                    displayName = CSTRING(TurnOn); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
+                    statement = QUOTE([_target] call DFUNC(turnOn)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                }; \
                 class GVAR(Disconnect) { \
                     displayName = CSTRING(Disconnect); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
@@ -89,7 +96,7 @@ class CfgVehicles {
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_refuel.paa));
         category = "ACE";
-        function = QUOTE(DFUNC(moduleRefuelSettings));
+        function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -451,7 +458,6 @@ class CfgVehicles {
     };
 
     class ReammoBox_F;
-
     class Slingload_01_Base_F : ReammoBox_F {
         class ACE_Actions {
             class ACE_MainActions {
@@ -494,7 +500,7 @@ class CfgVehicles {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks[]) = {{0,0,-1}};
-        GVAR(fuelCargo) = INFINITE_FUEL;
+        GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
     class Land_fs_feed_F : House_Small_F {
@@ -502,7 +508,7 @@ class CfgVehicles {
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks[]) = {{-0.4,0.022,-.23}};
-        GVAR(fuelCargo) = INFINITE_FUEL;
+        GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
     /*  // Barrels from rhs?
