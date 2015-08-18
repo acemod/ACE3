@@ -46,7 +46,7 @@ if (_idx == -1) then {
 };
 
 // Get magazines that can be rearmed
-_needRearmMags = [_target, _magazines, _magazineClass] call FUNC(getNeedRearmMagazines);
+_needRearmMags = [_target, _magazineClass] call FUNC(getNeedRearmMagazines);
 _needRearmMags params ["_needRearm", "_turretPath", "_cnt"];
 
 // Exit if no magazines need rearming

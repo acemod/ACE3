@@ -24,8 +24,8 @@ private "_dummy";
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 
 if (!isNull _dummy) then {
+    _dummy setVariable [QGVAR(carriedMagazine), _unit getVariable QGVAR(carriedMagazine)];
     detach _dummy;
-    deleteVehicle _dummy; // TODO remove when moved to CfgVehicles
 };
 
 _unit setVariable [QGVAR(dummy), nil];

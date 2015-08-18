@@ -4,24 +4,25 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Magazines <ARRAY>
- * 2: Magazine Classname <STRING>
- * 3: Turret Path <ARRAY>
+ * 1: Magazine Classname <STRING>
  *
  * Return Value:
- * Return Value <BOOL>
+ * Return Value <ARRAY>
+ * 0: Can Rearm <BOOL>
+ * 1: TurretPath <ARRAY>
+ * 2: Magazine Classname <STRING>
  *
  * Example:
- * [tank, ["mag1", "mag2"], "mag", [0]] call ace_rearm_fnc_getNeedRearmMagazines
+ * [tank, "mag"] call ace_rearm_fnc_getNeedRearmMagazines
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_return", "_cnt"];
-params ["_target", "_magazines", "_magazineClass"];
+private ["_return", "_magazines", "_cnt"];
+params ["_target", "_magazineClass"];
 
-_return = [false];
+_return = [false, [], 0];
 {
     _magazines = _target magazinesTurret _x;
 
