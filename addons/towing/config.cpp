@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"GitHawk"};
-        authorUrl = "";
+        authorUrl = "https://ace3mod.com";
         VERSION_CONFIG;
     };
 };

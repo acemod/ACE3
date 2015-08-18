@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Calculates a connection for tilting
+ * Calculates a connection for tilting.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -14,7 +14,7 @@
  * Example:
  * [player, tank, [0,0,0]] call ace_towing_fnc_tiltConnect
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 

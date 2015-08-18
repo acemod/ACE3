@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Tows a vehicle
+ * Tows a vehicle.
  *
  * Arguments:
  * 0: ...
@@ -11,15 +11,15 @@
  * Example:
  * [towTruck, towedVehicle] call ace_towing_fnc_towVehicle
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
 params ["_towTruck", "_towedTruck"];
 
 [{
-    params ["_args"];
-    _args params ["_towTruck", "_vehicle"]
+    params ["_args", "_idPFH"];
+    _args params ["_towTruck", "_vehicle"];
 
     _posTowTruck = getPosATL _towTruck;
     _posTow = _posTowTruck vectorAdd ((vectorDir _towTruck) vectorMultiply -5);
@@ -103,10 +103,10 @@ params ["_towTruck", "_towedTruck"];
         _vehicle setVariable [QGVAR(lastPosVeh), nil];
         _vehicle getVariable [QGVAR(towState), nil];
         _vehicle enableSimulation true;
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call cba_fnc_removePerFrameHandler;
     };
 
-}, 0, [_towTruck, _towedVehicle] ] call cba_fnc_addPerFrameHandler;
+}, 0, [_towTruck, _towedTruck] ] call cba_fnc_addPerFrameHandler;
 
 
 _towedTruck setVariable [QGVAR(towState), 1];

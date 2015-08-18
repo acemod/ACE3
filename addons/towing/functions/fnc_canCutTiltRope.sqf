@@ -1,27 +1,25 @@
 /*
  * Author: GitHawk
- * Check if a unit can cut a tilt rope
+ * Check if a unit can cut a tilt rope.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can Disconnect <BOOL>
  *
  * Example:
- * [tank] call ace_logistics_fnc_canCutTiltRope
+ * [tank, player] call ace_logistics_fnc_canCutTiltRope
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit","_target"];
+params ["_target", "_unit"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > 7}) exitWith {false};
+if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > TOWING_DISTANCE}) exitWith {false};
 
 if !((_target getVariable [QGVAR(tiltUp), _unit]) == _unit) exitWith {false};
 
-if ((_unit getVariable [QGVAR(isTilting), 0]) == 2) exitWith {true};
-
-false
+_unit getVariable [QGVAR(isTilting), 0] == 2

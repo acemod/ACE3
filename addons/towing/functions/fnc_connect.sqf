@@ -1,18 +1,18 @@
 /*
  * Author: GitHawk
- * Connects a tilting rope to a vehicle
+ * Connects a tilting rope to a vehicle.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
- * [tank] call ace_towing_fnc_connect
+ * [tank, player] call ace_towing_fnc_connect
  *
- * Public: Yes
+ * Public: no
  */
 #include "script_component.hpp"
 
@@ -20,14 +20,14 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-params ["_unit","_target"];
+params ["_target", "_unit"];
 
 GVAR(placeAction) = PLACE_WAITING;
 
 [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
 [{[localize LSTRING(TiltingActionShort), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,addActionEventHandler)];
 
 _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL; [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);}];
 
@@ -61,5 +61,3 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
         };
     }; // TODO add model like in attach/functions/fnc_attach
 }, 0, [_unit, _target, _actionID] ] call cba_fnc_addPerFrameHandler;
-
-true

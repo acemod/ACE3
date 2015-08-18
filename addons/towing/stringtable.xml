@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Towing">
         <Key ID="STR_ACE_Towing_TiltingAction">
@@ -16,6 +16,9 @@
         <Key ID="STR_ACE_Towing_Cancel">
             <English>Cancel</English>
             <German>Abbrechen</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_Failed">
+            <English>Failed connecting tilting cable</English>
         </Key>
     </Package>
 </Project>

@@ -1,18 +1,18 @@
 #define MACRO_TOWING_ACTIONS \
-        class ACE_Actions : ACE_Actions { \
-            class ACE_MainActions : ACE_MainActions { \
-                class GVAR(tilting) { \
+        class ACE_Actions { \
+            class ACE_MainActions { \
+                class GVAR(Tilting) { \
                     displayName = CSTRING(TiltingAction); \
                     distance = TOWING_DISTANCE; \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnect)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(connect)); \
+                    condition = QUOTE(_this call FUNC(canConnect)); \
+                    statement = QUOTE(_this call FUNC(connect)); \
                     exceptions[] = {"isNotInside"}; \
                 }; \
-                class GVAR(tiltingFinished) { \
+                class GVAR(TiltingFinished) { \
                     displayName = CSTRING(TiltingFinishedAction); \
                     distance = TOWING_DISTANCE; \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCutTiltRope)); \
-                    statement = QUOTE([ARR_1(_player)] call FUNC(cutTiltRope)); \
+                    condition = QUOTE(_this call FUNC(canCutTiltRope)); \
+                    statement = QUOTE(_player call FUNC(cutTiltRope)); \
                     exceptions[] = {"isNotInside"}; \
                 }; \
             }; \
