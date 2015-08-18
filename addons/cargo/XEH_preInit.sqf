@@ -21,8 +21,4 @@ PREP(validateCargoSpace);
 
 GVAR(initializedItemClasses) = [];
 
-if (isServer) then {
-    ["cargo_hideItem", {params ["_object", "_status"]; _object hideObjectGlobal _status;}] call EFUNC(common,addEventHandler);
-};
-
 ADDON = true;
