@@ -17,8 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_tmpCal", "_cal"];
-params ["_target", "_unit", "_vehicle"];
+params ["_target", "_unit", "_vehicle"];  // _target is for future possible finite ammo, _unit placeholder
 
 [
     10,

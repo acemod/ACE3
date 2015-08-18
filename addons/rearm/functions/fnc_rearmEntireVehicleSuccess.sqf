@@ -32,14 +32,15 @@ if !(local _vehicle) exitWith {
         _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
         _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
 
-        //diag_log format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMaxMagazines %4\nNumRounds: %5\nMaxRounds: %6\nMagazine: %7", _vehicle, _turretPath, _currentMagazines, _maxMagazines, _currentRounds, _maxRounds, _magazine];
+        TRACE_7("Rearmed Turret",_vehicle,_turretPath,_currentMagazines,_maxMagazines,_currentRounds,_maxRounds,_magazine);
+
         if (_currentMagazines < _maxMagazines) then {
             _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
             for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
                 _vehicle addMagazineTurret [_magazine, _turretPath];
             };
         } else {
-            if (_currentRounds > 0) then {
+            if (_currentRounds > 0 || {_magazine == "SmokeLauncherMag"}) then { // When SmokeLauncherMag is empty removeMagazineTurret has no effect
                 _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
             } else {
                 _vehicle removeMagazineTurret [_magazine, _turretPath];
