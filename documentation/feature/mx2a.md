@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: MX-2A
+description: Movement improvements
 group: feature
+category: equipment
 parent: wiki
 ---
 

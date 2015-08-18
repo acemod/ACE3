@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_target,_state);
+params ["_unit", "_target","_state"];
 
 if (_state) then {
     if (_unit getVariable [QGVAR(isEscorting), false]) exitWith {};

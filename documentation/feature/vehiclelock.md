@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Vehicle Lock
-description: The Vehiclelock module enables locking vehicles and their inventory
+description: The vehicle lock module enables locking vehicles and their inventory
 group: feature
+category: interaction
 parent: wiki
 ---
 

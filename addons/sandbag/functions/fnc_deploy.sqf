@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_sandbag_fnc_deploy;
+ * [] call ace_sandbag_fnc_deploy
  *
  * Public: No
  */
@@ -21,14 +21,14 @@ GVAR(placer) = ACE_player;
 
 [GVAR(placer), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
 
-GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0,0,0], [], 0, "NONE"];
+GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 GVAR(sandBag) enableSimulationGlobal false;
 
 GVAR(deployPFH) = [{
     if (GVAR(placer) != ACE_player) exitWith {
         call FUNC(deployCancel);
     };
-    GVAR(sandBag) setPosASL ((eyePos ACE_player) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));
+    GVAR(sandBag) setPosASL ((eyePos ACE_player) vectorAdd (positionCameraToWorld [0, 0, 1] vectorDiff positionCameraToWorld [0, 0, 0]));
     GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 

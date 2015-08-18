@@ -3,6 +3,7 @@ layout: wiki
 title: Reload
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 
@@ -14,7 +15,7 @@ Hides the actual round count of magazines and removes the icon when the current 
 ## 2. Usage
 
 ### 2.1 Checking your ammo
-- Press <kbd>CTRL</kbd> + <kbd>R</kbd> (ACE3 default key bind `Check Ammo`).
+- Press <kbd>Ctrl</kbd> + <kbd>R</kbd> (ACE3 default key bind `Check Ammo`).
 
 ## 3. Dependencies
 

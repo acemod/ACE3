@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Vector
-description: 
+description: Adds a realistic depiction of the Vector 21 rangefinder
 group: feature
+category: equipment
 parent: wiki
 ---
 
@@ -32,12 +33,12 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 #### 2.2 Azimuth
 <img src="{{ site.baseurl }}/img/wiki/user/vector2.jpg" width="500" height="160" alt="Measuring Azimuth" />
 
-- Press and hold the <kbd>TAB</kbd> until the azimuth is displayed.
+- Press and hold the <kbd>Tab&nbsp;↹</kbd> until the azimuth is displayed.
 
 #### 2.3 Slope distance and Azimuth
 <img src="{{ site.baseurl }}/img/wiki/user/vector3.jpg" width="500" height="160" alt="Measuring Slope distance and Azimuth" />
 
-- Press and hold both <kbd>R</kbd> and <kbd>TAB</kbd> until the red pointing circle appears. 
+- Press and hold both <kbd>R</kbd> and <kbd>Tab&nbsp;↹</kbd> until the red pointing circle appears. 
 - Sight the circle on the object and release both keys.
 
 #### 2.4 Horizontal distance and height difference
@@ -49,35 +50,35 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 #### 2.5 Azimuth and Inclination
 <img src="{{ site.baseurl }}/img/wiki/user/vector5.jpg" width="500" height="160" alt="Measuring Azimuth and Inclination"/>
 
-- Tap <kbd>TAB</kbd> once then press and hold it until the azimuth and inclination is displayed.
+- Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth and inclination is displayed.
 
 #### 2.6 Distance between two points
 <img src="{{ site.baseurl }}/img/wiki/user/vector6.jpg" width="500" height="160" alt="Measuring Distance between two points"/>
 
 - Press and hold <kbd>R</kbd> until the red pointing circle appears.
-- Sight the circle on the first object and tap <kbd>TAB</kbd> while further holding <kbd>R</kbd>. The first measurement is confirmed ("1-P" = first point). 
+- Sight the circle on the first object and tap <kbd>Tab&nbsp;↹</kbd> while further holding <kbd>R</kbd>. The first measurement is confirmed ("1-P" = first point). 
 - Sight the second object and release <kbd>R</kbd>.
 
 #### 2.7 Horizontal and vertical distance between two points
 <img src="{{ site.baseurl }}/img/wiki/user/vector7.jpg" width="500" height="160" alt="Measuring Horizontal and vertical distance between two points"/>
 
 - Tap <kbd>R</kbd> once then press and hold it until the red pointing circle appears. 
-- Sight the circle on the object and tap <kbd>TAB</kbd> once. The first measurement is confirmed ("1-P" = first point). 
+- Sight the circle on the object and tap <kbd>Tab&nbsp;↹</kbd> once. The first measurement is confirmed ("1-P" = first point). 
 - Sight the second object and release <kbd>R</kbd>.
 
 #### 2.8 Horizontal distance and azimuth between two points
 <img src="{{ site.baseurl }}/img/wiki/user/vector8.jpg" width="500" height="160" alt="Measuring Horizontal distance and azimuth between two points"/>
 
-- Press and hold <kbd>TAB</kbd> until the azimuth appears. 
-- Sight the circle on the first object and tap <kbd>R</kbd> while further holding <kbd>TAB</kbd>. The first measurement is confirmed ("1-P" = first point). 
-- Sight the second object and release <kbd>TAB</kbd>.
+- Press and hold <kbd>Tab&nbsp;↹</kbd> until the azimuth appears. 
+- Sight the circle on the first object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point). 
+- Sight the second object and release <kbd>Tab&nbsp;↹</kbd>.
 
 ### 2.9 Fall of shot
 <img src="{{ site.baseurl }}/img/wiki/user/vector9.jpg" width="500" height="160" alt="Measuring Fall of shot"/>
 
-- Tap <kbd>TAB</kbd> once then press and hold it until the azimuth appears. 
-- Sight the circle on the object and tap <kbd>R</kbd> while further holding <kbd>TAB</kbd>. The first measurement is confirmed ("1-P" = first point). 
-- Sight the Fall of shot and release <kbd>TAB</kbd>. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If <kbd>R</kbd> is tapped the height correction values will be displayed (`UP` and `dn`).
+- Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth appears. 
+- Sight the circle on the object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point). 
+- Sight the Fall of shot and release <kbd>Tab&nbsp;↹</kbd>. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If <kbd>R</kbd> is tapped the height correction values will be displayed (`UP` and `dn`).
 
 ## 3. Dependencies
 

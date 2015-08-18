@@ -115,6 +115,7 @@
             <Spanish>Etiquetas de nombre</Spanish>
             <German>Namensanzeigen</German>
             <Czech>Jmenovky</Czech>
+            <Portuguese>Etiquetas de nome</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
@@ -122,6 +123,7 @@
             <Spanish>Distancia de vision para nombres de jugadores</Spanish>
             <German>Spielernamen-Distanz</German>
             <Czech>Vzdálenost zobrazení jména hráčů</Czech>
+            <Portuguese>Distância de visão dos nomes dos jogadores</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
@@ -129,6 +131,7 @@
             <Spanish>Distancia en metros a la que se muestran los nombres de los jugadores. Por defecto: 5</Spanish>
             <German>Distanz in Metern bei der Spielernamen angezeigt werden. Standard: 5</German>
             <Czech>Vzdálenost v metrech pro zobrazení jména. Výchozí: 5</Czech>
+            <Portuguese>Distância em metros que os nomes dos jogadores são mostrados. Padrão: 5</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
@@ -136,6 +139,7 @@
             <Spanish>¿Mostrar nombres para la IA?</Spanish>
             <German>Zeige Namensanzeigen für KI?</German>
             <Czech>Zobrazit jmenovky pro AI?</Czech>
+            <Portuguese>Mostrar nomes para IA?</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
@@ -143,13 +147,7 @@
             <Spanish>Muestra etiquetas de nombre y rango para las unidades IA amigas? Por defecto: No forzar</Spanish>
             <German>Zeige den Namen und Rang für freundliche KI-Einheiten? Standard: nicht erwzingen</German>
             <Czech>Zobrazit jména a hodnosti pro spřátelené AI jednotky? Výchozí: Nevynucovat</Czech>
-        </Key>
-        <Key ID="STR_ACE_NameTags_DoNotForce">
-            <English>Do Not Force</English>
-            <Polish>Nie wymuszaj</Polish>
-            <Spanish>No forzar</Spanish>
-            <German>Nicht erzwingen</German>
-            <Czech>Nevynucovat</Czech>
+            <Portuguese>Mostra o nome e patente para unidades IA aliadas? Padrão: Não forçar</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceHide">
             <English>Force Hide</English>
@@ -157,6 +155,7 @@
             <Spanish>Ocultar forzado</Spanish>
             <German>Verstecken erzwingen</German>
             <Czech>Vynuceno skrýt</Czech>
+            <Portuguese>Ocultar forçado</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
             <English>Force Show</English>
@@ -164,6 +163,7 @@
             <Spanish>Mostrar forzado</Spanish>
             <German>Anzeigen erzwingen</German>
             <Czech>Vynuceno zobrazit</Czech>
+            <Portuguese>Mostrar forçado</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
             <English>Show crew info?</English>
@@ -171,6 +171,7 @@
             <Spanish>¿Mostrar información de la tripulación?</Spanish>
             <German>Zeige Besatzungsinfo?</German>
             <Czech>Zobrazit informace o posádce?</Czech>
+            <Portuguese>Mostrar informação de tripulação?</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_Description">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
@@ -178,6 +179,7 @@
             <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
             <German>Zeige Fahrzeugbesatzungsinfo oder erlaube Spielern es auszuwählen. Standard: nicht erzwingen.</German>
             <Czech>Zobrazit informace o posádce, nebo nechat aby si hráč vybral sám. Výchozí: Nevynucovat </Czech>
+            <Portuguese>Mostrar informações de tripulação ou por padrão permitir a escolha dos jogadores. Padrão: Não forçar.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
@@ -185,6 +187,7 @@
             <Spanish>Mostrar para vehiculos</Spanish>
             <German>Zeige bei Fahrzeugen</German>
             <Czech>Zobrazit pro vozidla</Czech>
+            <Portuguese>Mostrar para veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled)Default: No</English>
@@ -192,6 +195,7 @@
             <Spanish>Muestra etiquetas de nombre en el cursor para el comandante del vehiculo (solo si el cliente tiene las etiquetas de nombre activadas) Por defecto: No</Spanish>
             <German>Zeige Maus-Namensanzeigen für Fahrzeugkommandanten (nur wenn der Client Namensanzeigen aktiviert hat). Standard: Nein</German>
             <Czech>Zobrazit jmenovky pro velitele vozidla (pouze pokud má klient jmenovky povolené). Výchozí: Ne</Czech>
+            <Portuguese>Mostrar o nome no cursor para o comandante do veículo (somente se o cliente tiver etiquetas de nomes ativada). Padrão: Não</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English>This module allows you to customize settings and range of Name Tags.</English>
@@ -199,20 +203,7 @@
             <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
             <Spanish>Este módulo permite personalizar la configuración y la distancia de las Etiquetas de nombre.</Spanish>
             <Czech>Tento modul umožňuje si přizpůsobit nastavení a vzdálenost jmenovky.</Czech>
-        </Key>
-        <Key ID="STR_ACE_NameTags_Disabled">
-            <English>Disabled</English>
-            <Polish>Wyłączone</Polish>
-            <Spanish>Desactivado</Spanish>
-            <German>Deaktiviert</German>
-            <Czech>Zakázáno</Czech>
-        </Key>
-        <Key ID="STR_ACE_NameTags_Enabled">
-            <English>Enabled</English>
-            <Polish>Włączone</Polish>
-            <Spanish>Activado</Spanish>
-            <German>Aktiviert</German>
-            <Czech>Povoleno</Czech>
+            <Portuguese>Este módulo permite que você personalize as configurações e distâncias de etiquetas de nome.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -220,6 +211,7 @@
             <Spanish>Solo cursor</Spanish>
             <German>Nur bei Maus</German>
             <Czech>Pouze na kurzor</Czech>
+            <Portuguese>Somente no cursor</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyKeypress">
             <English>Only on Keypress</English>
@@ -227,6 +219,7 @@
             <Spanish>Solo al pulsar tecla</Spanish>
             <German>Nur bei Tastendruck</German>
             <Czech>Pouze na klávesu</Czech>
+            <Portuguese>Somente em tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
             <English>Only on Cursor and Keypress</English>
@@ -234,24 +227,31 @@
             <Spanish>En cursor y al pulsar tecla</Spanish>
             <German>Nur Maus und Tastendruck</German>
             <Czech>Pouze na kurzor a klávesu</Czech>
+            <Portuguese>Somente em cursor ou tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>
             <Polish>Wymuś pod kursorem</Polish>
             <Spanish>Forzar mostrar solo en el cursor</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor</Czech>
+            <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
+            <Portuguese>Forçar mostrar somente no cursor</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
             <English>Force Show Only on Keypress</English>
             <Polish>Wymuś po wciśnięciu klawisza</Polish>
             <Spanish>Forzar mostrar solo al pulsar tecla</Spanish>
             <Czech>Vynuceno zobrazit pouze na klávesu</Czech>
+            <German>Erzwinge nur mit Tastendruck anzuzeigen</German>
+            <Portuguese>Forçar somente mostrar em tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
             <English>Force Show Only on Cursor and Keypress</English>
             <Polish>Wymuś pod kursorem i po wciśnięciu klawisza</Polish>
             <Spanish>Forzar mostrar en el cursor y al pulsar tecla</Spanish>
             <Czech>Vynuceno zobrazit pouze na kurzor a klávesu</Czech>
+            <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
+            <Portuguese>Forçar mostrar somente em cursor e tecla ativada</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -259,6 +259,7 @@
             <Spanish>Usar ajustes de etiquetas de nombre</Spanish>
             <German>Verwende Namenanzeigen</German>
             <Czech>Použít nastavení jmenovky</Czech>
+            <Portuguese>Usar ajustes de etiquetas de nome</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
@@ -266,30 +267,39 @@
             <Spanish>Mostrar siempre todo</Spanish>
             <German>Immer alle zeigen</German>
             <Czech>Vždy zobrazit vše</Czech>
+            <Portuguese>Sempre mostrar tudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania imion nad głowami graczy. Opcja "Tylko po wciśnięciu klawisza" wyświetla imiona tylko przytrzymania klawisza "Modyfikator" dostępnego w menu ustawień addonów -&gt; ACE3.</Polish>
             <Spanish>Mostrar nombres de los jugadores y establecer su activación. Predeterminado: Habilitado</Spanish>
             <Czech>Zobrazit jména hráčů a nastavit jejich aktivaci. Výchozí: Povoleno</Czech>
+            <German>Erlaubt das Anzeigen von Spielernamen und stellt ein, ob sie standardmäßig aktiviert oder deaktiviert sind. Standard: aktiviert</German>
+            <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
             <Polish>Opcja ta pozwala dostosować sposób wyświetlania efektu fal dźwiękowych nad głowami mówiących graczy, wyświetlanych po przytrzymaniu klawisza PTT. Opcja ta współpracuje z TFAR oraz ACRE2.</Polish>
             <Spanish>Efecto de ondas sonoras encima de las cabezas de los jugadores que hablan después de mantener  la tecla PTT. Esta opción funciona con TFAR y ACRE2.</Spanish>
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
+            <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit TFAR und ACRE2.</German>
+            <Portuguese>Efeito de ondas sonoras acima das cabeças dos jogadores que falam depois mantendo pressionada a tecla PTT. Esta opção funciona com TFAR e ACRE2.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
             <Polish>Rozmiar imion</Polish>
             <Spanish>Tamaño de las Etiquetas de nombre</Spanish>
             <Czech>Velikost jmenovky</Czech>
+            <German>Namensschildgröße</German>
+            <Portuguese>Tamanho das etiquetas de nome</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
             <Polish>Skalowanie tekstu oraz ikon</Polish>
             <Spanish>Escala del texto y el icono</Spanish>
             <Czech>Velikost textu a ikon</Czech>
+            <German>Text- und Symbolgrößen</German>
+            <Portuguese>Escala de tamanho dos ícones e textos</Portuguese>
         </Key>
     </Package>
 </Project>

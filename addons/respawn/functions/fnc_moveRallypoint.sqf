@@ -26,9 +26,11 @@ private ["_rallypoint", "_position"];
 _rallypoint = [
   objNull,
   missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-  missionNamespace getVariable ["ACE_RallypointExit_East", objNull],
-  missionNamespace getVariable ["ACE_RallypointExit_Independent", objNull]
+  missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+  missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
 ] select ([west, east, independent] find _side) + 1;
+
+TRACE_3("moving rally",_unit, _rallypoint, (typeOf _rallypoint));
 
 if (isNull _rallypoint) exitWith {};
 

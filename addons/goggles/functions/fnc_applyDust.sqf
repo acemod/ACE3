@@ -56,4 +56,4 @@ GVAR(DustHandler) = [{
             GVAR(DustHandler) = -1;
         };
     };
-},0,[]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+},0,[]] call CALLSTACK(CBA_fnc_addPerFrameHandler);

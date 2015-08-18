@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 ["MoveOutCaptive", [_target], [_target]] call EFUNC(common,targetEvent);

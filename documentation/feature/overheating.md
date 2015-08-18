@@ -3,6 +3,7 @@ layout: wiki
 title: Overheating
 description: Weapon temperature and jamming, barrel swapping.
 group: feature
+category: realism
 parent: wiki
 ---
 
@@ -25,12 +26,12 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 
 ### 2.2 Swapping barrels
 - For this you need a `Spare barrel` and a compatible weapon.
-- Press self interaction <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd> (ACE3 default key bind `Self Interaction Key`).
+- Press self interaction <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Equipment`.
 - Select `Swap barrel`.
 
 ### 2.3 Checking your barrel temperature
-- Press self interaction <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd>.
+- Press self interaction <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>.
 - Select `Equipment`.
 - Select `Check weapon temperature`. 
 

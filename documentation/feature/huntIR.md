@@ -2,6 +2,7 @@
 layout: wiki
 title: HuntIR
 group: feature
+category: equipment
 parent: wiki
 ---
 
@@ -17,10 +18,10 @@ NOTE: the HuntIR round doesn't work with modded weapons without a compatibility 
 - To be able to connect to the IR CMOS camera you'll need a `HuntIR monitor`.
 - Fire the HuntIR round as high as possible over the area you want to observe.
 - Open the `HuntIR monitor`.
-  - To open the `HuntIR monitor` self interact <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd> (ACE3 default)
+  - To open the `HuntIR monitor` self interact <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default)
   - Select `Equipment`.
   - Select `Activate HuntIR monitor`.
-- You now have control of the IR CMOS camera to close the monitor press <kbd>ESC</kbd> or <kbd>⊞ Win</kbd>
+- You now have control of the IR CMOS camera to close the monitor press <kbd>ESC</kbd> or <kbd>⊞&nbsp;Win</kbd>
 
 ### 2.2 IR CMOS camera controls
 

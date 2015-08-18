@@ -21,8 +21,8 @@ class ACE_ModuleExplosive: ACE_Module {
             defaultValue = 1;
         };
         class ExplodeOnDefuse {
-            displayName = "$STR_ACE_Explosive_ExplodeOnDefuse_DisplayName";
-            description = "$STR_ACE_Explosive_ExplodeOnDefuse_Description";
+            displayName = CSTRING(ExplodeOnDefuse_DisplayName);
+            description = CSTRING(ExplodeOnDefuse_Description);
             typeName = "BOOL";
             defaultValue = 1;
         };

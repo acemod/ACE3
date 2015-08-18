@@ -36,7 +36,7 @@ if (isNil QGVAR(publishSchedId)) then {
             GVAR(publishVarNames) = [];
             GVAR(publishNextTime) = 1e7;
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // If the variable is not on the list

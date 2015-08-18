@@ -3,6 +3,7 @@ layout: wiki
 title: Laser Pointer
 description: Switching laser modes, daylight lasers
 group: feature
+category: equipment
 parent: wiki
 ---
 

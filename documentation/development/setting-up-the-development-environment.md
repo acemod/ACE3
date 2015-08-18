@@ -23,7 +23,7 @@ This page describes how you can setup your development environment for ACE3, all
 
 ## 2. Why so complicated?
 
-If you have contributed to AGM you might be used to an easier build process, where there was even an .exe you could use for building. ACE3, however, makes use of CBA macros to simplify things and give the developer access to a better debug process, which requires a stricter build environment. Additionally, Mikero's tools are stricter and report more errors than AddonBuilder does. The structure of this development environment also allows for [file patching](#file-patching), which is very useful for debugging.
+If you have contributed to AGM you might be used to an easier build process, where there was even an .exe you could use for building. ACE3, however, makes use of CBA macros to simplify things and give the developer access to a better debug process, which requires a stricter build environment. Additionally, Mikero's tools are stricter and report more errors than AddonBuilder does. The structure of this development environment also allows for [file patching](#7-file-patching), which is very useful for debugging.
 
 Not offering .exes for the Python scripts we use allows us to make easy changes without the hassle of compiling self-extracting exes all the time.
 

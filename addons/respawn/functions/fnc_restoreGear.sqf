@@ -1,16 +1,16 @@
 /*
-  Name: ACE_Respawn_fnc_removeBody
-  
+  Name: ACE_Respawn_fnc_restoreGear
+
   Author(s):
     bux578
-  
+
   Description:
     Restores previously saved gear
-  
+
   Parameters:
     0: OBJECT - unit
-    1: ARRAY<STRING> - Array containing all gear
-  
+    1: ARRAY<String, Array, ...> - Array containing all gear (result of ACE_common_fnc_getAllGear)
+
   Returns:
     VOID
 */
@@ -19,7 +19,15 @@
 
 PARAMS_2(_unit,_allGear);
 
-private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular", "_backpa", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine"];
+private ["_unit", "_allGear", "_headgear", "_goggles",
+"_uniform", "_uniformitems",
+"_vest", "_vestitems",
+"_backpack", "_backpackitems", "_backpa",
+"_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine",
+"_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine",
+"_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine",
+"_assigneditems", "_binocular",
+"_activeWeaponAndMuzzle", "_activeWeapon", "_activeMuzzle", "_activeWeaponMode"];
 
 
 // remove all starting gear of a player
@@ -51,6 +59,7 @@ _handgunweaponitems = _allGear select 15;
 _handgunweaponmagazine = _allGear select 16;
 _assigneditems = _allGear select 17;
 _binocular = _allGear select 18;
+_activeWeaponAndMuzzle = _allGear select 19;
 
 
 // start restoring the items
@@ -69,16 +78,16 @@ if (_goggles != "") then {
 
 {
     _unit addItemToUniform _x;
-}forEach _uniformitems;
+} forEach _uniformitems;
 
 {
     _unit addItemToVest _x;
-}forEach _vestitems;
+} forEach _vestitems;
 
 private "_flagRemoveDummyBag";
 _flagRemoveDummyBag = false;
 
-if(format["%1", _backpack] != "") then {
+if (format["%1", _backpack] != "") then {
     _unit addBackpack _backpack;
 
     _backpa = unitBackpack _unit;
@@ -158,7 +167,36 @@ _assignedItems = _assignedItems - [_binocular];
 
 _unit addWeapon _binocular;
 
+// reload Laserdesignator
+// we assume that if the unit had a Laserdesignator it probably had batteries for it
 if ("Laserdesignator" in assignedItems _unit) then {
     _unit selectWeapon "Laserdesignator";
-    if (currentMagazine _unit == "") then {_unit addMagazine "Laserbatteries";};
+
+    if (currentMagazine _unit == "") then {
+        _unit addMagazine "Laserbatteries";
+    };
+};
+
+// restore the last active weapon, muzzle and weaponMode
+_activeWeapon = _activeWeaponAndMuzzle select 0;
+_activeMuzzle = _activeWeaponAndMuzzle select 1;
+_activeWeaponMode = _activeWeaponAndMuzzle select 2;
+
+if (_activeMuzzle != "" and _activeMuzzle != _activeWeapon) then {
+    _unit selectWeapon _activeMuzzle;
+} else {
+    if (_activeWeapon != "") then {
+        _unit selectWeapon _activeWeapon;
+    };
+};
+
+if (currentWeapon _unit != "") then {
+    private ["_index"];
+    _index = 0;
+    while {
+        _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}
+    } do {
+        _unit action ["SwitchWeapon", _unit, _unit, _index];
+        _index = _index + 1;
+    };
 };

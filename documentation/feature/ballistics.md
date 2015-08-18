@@ -3,7 +3,7 @@ layout: wiki
 title: Ballistics
 description: Realistic ballistic improvements
 group: feature
-order: 5
+category: realism
 parent: wiki
 ---
 

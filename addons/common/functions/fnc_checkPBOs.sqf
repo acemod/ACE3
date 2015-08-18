@@ -8,8 +8,8 @@
  *   0:  Warn once
  *   1:  Warn permanently
  *   2:  Kick
- * 1: Check all PBOs? <BOOL> (Optional - default: "[]")
- * 2: Whitelist <STRING> (Optinal - default: false)
+ * 1: Check all PBOs? <BOOL> (Optional - default: false)
+ * 2: Whitelist <STRING> (Optinal - default: "[]")
  *
  * Return value:
  * None
@@ -26,6 +26,8 @@ _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
+
+if (!_checkAll) exitWith {}; //ACE is checked by FUNC(checkFiles)
 
 if (!isServer) then {
     [_mode, _checkAll, _whitelist] spawn {

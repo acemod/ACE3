@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig"];
+private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition", "_allowedSelections"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -49,12 +49,12 @@ _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
 
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
+
 // Check item
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
-
-// Check allowed locations
-_locations = getArray (_config >> "treatmentLocations");
 
 _return = true;
 if (isText (_config >> "Condition")) then {
@@ -73,6 +73,16 @@ if (isText (_config >> "Condition")) then {
     };
 };
 if (!_return) exitwith {false};
+
+_patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
+    missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
+} else {
+    getNumber(_config >> "patientStateCondition")
+};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+
+// Check allowed locations
+_locations = getArray (_config >> "treatmentLocations");
 
 if ("All" in _locations) then {
     _return = true;
@@ -149,7 +159,7 @@ if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
 
-_caller setvariable [QGVAR(selectedWeaponOnTreatment), currentWeapon _caller];
+_caller setvariable [QGVAR(selectedWeaponOnTreatment), (weaponState _caller)];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {

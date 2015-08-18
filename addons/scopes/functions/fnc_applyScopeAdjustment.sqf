@@ -11,20 +11,23 @@
  * Return value:
  * True <BOOL>
  *
+ * Example:
+ * [player, 1.3, 0.3, 0.1] call ace_scopes_fnc_applyScopeAdjustment
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_unit,_elevation,_windage,_zero);
+private ["_adjustmentDifference", "_pitchBankYaw", "_adjustment", "_weaponIndex"];
 
-private ["_adjustmentDifference", "_pitchbankyaw", "_pitch", "_bank", "_yaw", "_adjustment", "_weaponIndex"];
+params ["_unit", "_elevation", "_windage", "_zero"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 
 _adjustment = _unit getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
     // [Windage, Elevation, Zero]
-    _adjustment = [[0,0,0], [0,0,0], [0,0,0]];
+    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     _unit setVariable [QGVAR(Adjustment), _adjustment];
 };
 
@@ -39,10 +42,11 @@ playSound (["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"] se
 if (cameraView == "GUNNER") then {
     // Convert adjustmentDifference from mils to degrees
     _adjustmentDifference = [_adjustmentDifference, {_this * 0.05625}] call EFUNC(common,map);
-    _pitchbankyaw = [_unit] call EFUNC(common,getPitchBankYaw);
-    _pitch = (_pitchbankyaw select 0) + (_adjustmentDifference select 0);
-    _bank  = (_pitchbankyaw select 1);
-    _yaw   = (_pitchbankyaw select 2) + (_adjustmentDifference select 1);
+    _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
+    _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
+    _pitchBankYaw params ["_pitch", "_bank", "_yaw"];
+    _pitch = _pitch + _elevationDifference;
+    _yaw = _yaw + _windageDifference;
     [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
 } else {
     [] call FUNC(showZeroing);

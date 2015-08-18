@@ -3,6 +3,7 @@ layout: wiki
 title: Recoil
 description: Recoil overhaul
 group: feature
+category: realism
 parent: wiki
 ---
 

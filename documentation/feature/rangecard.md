@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Rangecard
-description: Add a range card for your weapons
+description: Adds a range card for your weapons
 group: feature
+category: equipment
 parent: wiki
 ---
 
@@ -13,7 +14,7 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 ## 2. Usage
 
 ### 2.1 Opening the range card
-- Open the self interaction menu <kbd>CTRL</kbd> + <kbd>⊞ Win</kbd>
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
 - Select `Equipment`
 - Select `Open Range Card`
 

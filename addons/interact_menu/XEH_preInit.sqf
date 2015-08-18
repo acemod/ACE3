@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(addActionToClass);
 PREP(addActionToObject);
+PREP(addMainAction);
 PREP(compileMenu);
 PREP(compileMenuSelfAction);
 PREP(compileMenuZeus);
@@ -25,6 +26,8 @@ PREP(renderMenu);
 PREP(renderSelector);
 PREP(setupTextColors);
 PREP(splitPath);
+PREP(userActions_addHouseActions);
+PREP(userActions_getHouseActions);
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {

@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
-
+params ["_unit", "_target"];
 //Alive, handcuffed, not being escored, and not unconscious
 
 (_target getVariable [QGVAR(isHandcuffed), false]) &&
