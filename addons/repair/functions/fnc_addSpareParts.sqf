@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * _added = [vehicle] call ace_repair_fnc_addSpareParts
+ * [vehicle] call ace_repair_fnc_addSpareParts
  *
  * Public: No
  */
@@ -42,5 +42,4 @@ if (_part == "") then {
 if (_part == "") exitWith {};
 
 // Load
-//["LoadItem", [_part, _vehicle]] call EFUNC(cargo,loadItem);
-[_part, _vehicle, _amount] call EFUNC(cargo,addItem); // Change to above event
+["AddCargoItem", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);
