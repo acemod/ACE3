@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Handle mouse buttons.
  *
  * Argument:
@@ -13,23 +12,18 @@
 
 #include "script_component.hpp"
 
-private ["_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos", "_altKey", "_gui", "_marker"];
+params ["_dir", "_params"];
+_params params ["_control", "_button", "_screenPosX", "_screenPosY", "_shiftKey", "_ctrlKey", "_altKey"];
 
-PARAMS_2(_dir,_params);
-_control   = _params select 0;
-_button    = _params select 1;
-_screenPos = [_params select 2, _params select 3];
-_shiftKey  = _params select 4;
-_ctrlKey   = _params select 5;
-_altKey    = _params select 6;
-_handled   = false;
+private["_gui", "_handled", "_marker", "_pos"];
 
+_handled = false;
 
 // If it's not a left button event, exit
-if (_button != 0) exitWith {};
+if (_button != 0) exitWith {_handled};
 
 // If releasing
-if (_dir != 1 && (GVAR(mapTool_isDragging) or GVAR(mapTool_isRotating))) exitWith {
+if ((_dir != 1) && {(GVAR(mapTool_isDragging) || GVAR(mapTool_isRotating))}) exitWith {
     GVAR(mapTool_isDragging) = false;
     GVAR(mapTool_isRotating) = false;
     _handled = true;
@@ -42,7 +36,7 @@ if (_dir == 1) exitWith {
     if !(call FUNC(canDraw)) exitWith {_handled = false;};
 
     // Transform mouse screen position to coordinates
-    _pos  = _control ctrlMapScreenToWorld _screenPos;
+    _pos  = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
     _pos set [count _pos, 0];
 
     if (GVAR(drawing_isDrawing)) exitWith {
@@ -52,7 +46,7 @@ if (_dir == 1) exitWith {
             // [GVAR(drawing_tempLineMarker), "FUNC(addLineMarker)", 2] call EFUNC(common,execRemoteFnc);
             ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
             // Log who drew on the briefing screen
-            (text format ["[ACE] Server: Player %1 drew on the briefing screen", name player]) call EFUNC(common,serverLog);
+            (text format ["[ACE] Server: Player %1 drew on the briefing screen", profileName]) call EFUNC(common,serverLog);
         } else {
             GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
             GVAR(drawing_lineMarkers) pushBack (+GVAR(drawing_tempLineMarker));
@@ -96,6 +90,8 @@ if (_dir == 1) exitWith {
         };
         _handled = true;
     };
+    
+    _handled
 };
 
 _handled

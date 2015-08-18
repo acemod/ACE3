@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Handle mouse movement over the map tool.
  *
  * Argument:
@@ -13,11 +12,11 @@
 
 #include "script_component.hpp"
 
+params ["_control", "_mousePosX", "_mousePosY"];
+
 private ["_control", "_pos"];
 
-_control = _this select 0;
-_pos = [_this select 1, _this select 2];
-GVAR(mousePosition) = _control ctrlMapScreenToWorld _pos;
+GVAR(mousePosition) = _control ctrlMapScreenToWorld [_mousePosX, _mousePosY];
 GVAR(mousePosition) set [2, 0];  //convert 2d pos to 3d
 
 // If cannot draw then exit

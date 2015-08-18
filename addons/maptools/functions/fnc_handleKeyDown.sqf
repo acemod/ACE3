@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_5(_display,_code,_shiftKey,_ctrlKey,_altKey);
+params ["", "_code"];
 
 private ["_handled", "_relPos", "_diffVector", "_magDiffVector", "_lambdaLong", "_lambdaTrasAbs"];
 
@@ -30,6 +30,7 @@ if (_code == DIK_ESCAPE) exitWith {
         call FUNC(cancelDrawing);
         _handled = true;
     };
+    _handled
 };
 
 if (_code == DIK_DELETE) exitWith {
@@ -65,6 +66,7 @@ if (_code == DIK_DELETE) exitWith {
             };
         } forEach GVAR(drawing_lineMarkers);
     };
+    _handled
 };
 
 _handled
