@@ -1,11 +1,11 @@
 /*
  * Author: GitHawk
- * Rearms an entire vehicle
+ * Starts progress bar for rearming an entire vehicle.
  *
  * Arguments:
- * 0: The Ammo Truck <OBJECT>
- * 1: The Player <OBJECT>
- * 2: The Vehicle to be armed <OBJECT>
+ * 0: Ammo Truck <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: Vehicle to be armed <OBJECT>
  *
  * Return Value:
  * None
@@ -17,8 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_tmpCal", "_cal"];
-params ["_target","_unit","_vehicle"];
+params ["_target", "_unit", "_vehicle"];  // _target is for future possible finite ammo, _unit placeholder
 
 [
     10,

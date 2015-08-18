@@ -1,5 +1,5 @@
 class CfgAmmo {
-    
+
     class BombCore;
     class BombBase : BombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
@@ -17,7 +17,7 @@ class CfgAmmo {
     class Missile_AA_03_F : Missile_AA_04_F {
         GVAR(dummy) = QGVAR(Missile_AA_03_F);
     };
-    
+
     class Rocket_04_HE_F : MissileBase {
         GVAR(caliber) = 70;
         GVAR(dummy) = QGVAR(Rocket_04_HE_F);
@@ -34,9 +34,6 @@ class CfgAmmo {
     class M_PG_AT : MissileBase {
         GVAR(caliber) = 100;
         GVAR(dummy) = QGVAR(M_PG_AT);
-    };
-    class ACE_Hydra70_DAGR : M_PG_AT {
-        GVAR(caliber) = 70;
     };
     class Missile_AGM_02_F : MissileBase {
         GVAR(dummy) = QGVAR(Missile_AGM_02_F);
@@ -60,181 +57,144 @@ class CfgAmmo {
     class R_Hydra_HE : RocketBase {
         GVAR(dummy) = QGVAR(R_Hydra_HE);
     };
-    
+
     class BulletBase;
     class B_19mm_HE : BulletBase {
-        GVAR(caliber) = 19; 
+        GVAR(caliber) = 19;
     };
-    
+
     class B_20mm : BulletBase {
-        GVAR(caliber) = 20; 
+        GVAR(caliber) = 20;
     };
-    
+
     class B_25mm : BulletBase {
-        GVAR(caliber) = 25; 
+        GVAR(caliber) = 25;
     };
 
     class B_30mm_AP : BulletBase {
-        GVAR(caliber) = 30; 
+        GVAR(caliber) = 30;
     };
     class B_30mm_HE : B_19mm_HE {
-        GVAR(caliber) = 30; 
+        GVAR(caliber) = 30;
     };
     class Gatling_30mm_HE_Plane_CAS_01_F : BulletBase {
-        GVAR(caliber) = 30; 
+        GVAR(caliber) = 30;
     };
-    
+
     class B_35mm_AA : BulletBase {
-        GVAR(caliber) = 35; 
+        GVAR(caliber) = 35;
     };
-    
+
     class B_30mm_APFSDS;
     class B_40mm_APFSDS : B_30mm_APFSDS {
-        GVAR(caliber) = 40; 
+        GVAR(caliber) = 40;
     };
-    
+
     class B_40mm_GPR : B_30mm_HE {
-        GVAR(caliber) = 40; 
+        GVAR(caliber) = 40;
     };
 
     class GrenadeBase;
     class G_40mm_HE : GrenadeBase {
-        GVAR(caliber) = 40; 
+        GVAR(caliber) = 40;
     };
 
-    class RDS_B_127x107_Ball : BulletBase {
-        GVAR(caliber) = 12.7; 
-    };
- 
     class ShellBase;
     class R_230mm_fly : ShellBase {
         GVAR(dummy) = QGVAR(R_230mm_fly);
     };
 
     class Sh_120mm_APFSDS : Shellbase {
-        GVAR(caliber) = 120; 
+        GVAR(caliber) = 120;
     };
     class Sh_105mm_APFSDS : Sh_120mm_APFSDS {
-        GVAR(caliber) = 105; 
+        GVAR(caliber) = 105;
     };
     class Sh_125mm_APFSDS : Sh_120mm_APFSDS {
-        GVAR(caliber) = 125; 
+        GVAR(caliber) = 125;
     };
-    
+
     class Sh_120mm_HE : ShellBase {
-        GVAR(caliber) = 120; 
+        GVAR(caliber) = 120;
     };
     class Sh_125mm_HE : Sh_120mm_HE {
-        GVAR(caliber) = 125; 
+        GVAR(caliber) = 125;
     };
     class Sh_125mm_HEAT : Sh_125mm_HE {
-        GVAR(caliber) = 125; 
+        GVAR(caliber) = 125;
     };
     class Sh_105mm_HEAT_MP : Sh_125mm_HEAT {
-        GVAR(caliber) = 105; 
+        GVAR(caliber) = 105;
     };
-    
+
     class Sh_155mm_AMOS : ShellBase {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
     class Sh_82mm_AMOS : Sh_155mm_AMOS {
-        GVAR(caliber) = 82; 
+        GVAR(caliber) = 82;
     };
-    class RDS_Sh_122_HE : Sh_155mm_AMOS {
-        GVAR(caliber) = 122; 
-    };
-    class RDS_Sh_105_HE : Sh_155mm_AMOS {
-        GVAR(caliber) = 105; 
-    };
-    
+
     class Sh_82mm_AMOS_LG;
     class Sh_155mm_AMOS_LG : Sh_82mm_AMOS_LG {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
-    class RDS_Sh_122_LASER : Sh_155mm_AMOS_LG {
-        GVAR(caliber) = 122; 
-    };
-    class RDS_Sh_105_LASER : Sh_155mm_AMOS_LG {
-        GVAR(caliber) = 105; 
-    };
-    
+
     class ShotDeployBase;
     class Smoke_82mm_AMOS_White : ShotDeployBase {
-        GVAR(caliber) = 82; 
+        GVAR(caliber) = 82;
     };
-    
+
     class FlareCore;
     class Flare_82mm_AMOS_White : FlareCore {
-        GVAR(caliber) = 82; 
+        GVAR(caliber) = 82;
     };
-        
+
     class SmokeLauncherAmmo : BulletBase {
-        GVAR(caliber) = 250; 
+        GVAR(caliber) = 250;
     };
-    
+
     class CMflareAmmo : BulletBase {
         GVAR(caliber) = 40;
     };
-    
+
     class SubmunitionBase;
     class Sh_82mm_AMOS_guided : SubmunitionBase {
-        GVAR(caliber) = 82; 
+        GVAR(caliber) = 82;
     };
     class Sh_155mm_AMOS_guided : Sh_82mm_AMOS_guided {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
     class R_230mm_HE : SubmunitionBase {
-        GVAR(caliber) = 230; 
-    };
-    class rhs_ammo_127x108mm_x5 : SubmunitionBase {
-        GVAR(caliber) = 12.7; 
+        GVAR(caliber) = 230;
     };
     class Mine_155mm_AMOS_range : SubmunitionBase {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
     class Cluster_155mm_AMOS : SubmunitionBase {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
     class Smoke_120mm_AMOS_White : SubmunitionBase {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
     class AT_Mine_155mm_AMOS_range : SubmunitionBase {
-        GVAR(caliber) = 155; 
+        GVAR(caliber) = 155;
     };
-    
-    class rhs_ammo_rpgShell_base : ShellBase {
-        GVAR(caliber) = 70; 
-    };
-    
+
     class Bo_Mk82 : BombCore {
         GVAR(dummy) = QGVAR(Bo_Mk82);
     };
-    
+
     class Bo_GBU12_LGB : LaserBombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bo_GBU12_LGB);
     };
-    
+
     class Bomb_04_F : LaserBombCore {
         GVAR(caliber) = 250; // Default caliber for bombs
         GVAR(dummy) = QGVAR(Bomb_04_F);
     };
-    
+
     class Bomb_03_F : Bomb_04_F {
         GVAR(dummy) = QGVAR(Bomb_03_F);
-    };
-    
-    // F18 Mod
-    class js_a_fa18_wing_tank : LaserBombCore {
-        GVAR(caliber) = 250; // Default caliber for bombs
-    };
-    class js_a_fa18x_MK82 : BombCore {};
-    class js_a_fa18x_GBU39_SDB : js_a_fa18x_MK82 {
-        GVAR(caliber) = 250; // Default caliber for bombs
-    };
-    
-    class js_a_fa18_GBU12_LGB : LaserBombCore {};
-    class js_a_fa18_GBU38_JDAM : js_a_fa18_GBU12_LGB {
-        GVAR(caliber) = 250; // Default caliber for bombs
     };
 };

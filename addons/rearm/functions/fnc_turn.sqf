@@ -1,16 +1,16 @@
 /*
  * Author: GitHawk
- * Turns an object
+ * Turns an object.
  *
  * Arguments:
- * 0: The Player <OBJECT>
- * 1: The dirAndUp vector <ARRAY>
+ * 0: Object <OBJECT>
+ * 1: Vector dirAndUp <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_dummy, [[1,0,0],[0,0,1]]] call ace_rearm_fnc_turn
+ * [dummy, [[1,0,0],[0,0,1]]] call ace_rearm_fnc_turn
  *
  * Public: No
  */

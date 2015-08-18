@@ -1,11 +1,11 @@
 /*
  * Author: GitHawk
- * Picks up a magazine
+ * Picks up a magazine.
  *
  * Arguments:
- * 0: The Params <ARRAY>
- * 0,0: The Unit <OBJECT>
- * 0,1: The Magazine <STRING>
+ * 0: Params <ARRAY>
+ *   0: Unit <OBJECT>
+ *   1: Magazine <STRING>
  *
  * Return Value:
  * None
@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_dummy"];
+private ["_dummy", "_ammo"];
 params ["_args"];
 _args params ["_unit", "_magazine"];
 
@@ -30,6 +30,7 @@ if !(isNull _dummy) then {
     deleteVehicle _dummy;
     _unit setVariable [QGVAR(dummy), objNull];
 };
+
 _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 _dummy = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
 if !(_dummy == "") then {
