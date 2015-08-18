@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Towing">
+        <Key ID="STR_ACE_Towing_TiltingAction">
+            <English>Connect tilting cable</English>
+            <German>Aufrichtseil verbinden</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_TiltingActionShort">
+            <English>Connect cable</English>
+            <German>Seil verbinden</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_TiltingFinishedAction">
+            <English>Disconnect tilting cable</English>
+            <German>Aufrichtseil entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_Cancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+        </Key>
+    </Package>
+</Project>
