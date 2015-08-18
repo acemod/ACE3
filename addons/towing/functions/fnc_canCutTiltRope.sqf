@@ -18,8 +18,6 @@
 
 params ["_target", "_unit"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > TOWING_DISTANCE}) exitWith {false};
-
-if !((_target getVariable [QGVAR(tiltUp), _unit]) == _unit) exitWith {false};
-
-_unit getVariable [QGVAR(isTilting), 0] == 2
+!(_target distance _unit > TOWING_DISTANCE) &&
+{_target getVariable [QGVAR(tiltUp), _unit] == _unit} &&
+{_unit getVariable [QGVAR(isTilting), 0] == 2}

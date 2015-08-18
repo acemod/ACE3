@@ -18,9 +18,6 @@
 
 params ["_target", "_unit"];
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_target distance _unit) > TOWING_DISTANCE}) exitWith {false};
-
-_tiltUp = _target getVariable [QGVAR(tiltUp), nil];
-if !(isNil "_tiltUp") exitWith {false};
-
-((vectorUp _target) select 2) < 0.7 || {_unit getVariable [QGVAR(isTilting), 0] == 1}
+!(_target distance _unit > TOWING_DISTANCE) &&
+{isNil {_target getVariable QGVAR(tiltUp)}} &&
+{((vectorUp _target) select 2) < 0.7 || _unit getVariable [QGVAR(isTilting), 0] == 1}
