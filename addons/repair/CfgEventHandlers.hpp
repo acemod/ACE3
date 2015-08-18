@@ -40,9 +40,4 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(addRepairActions));
         };
     };
-    class ACE_RepairItem_Base {
-        class ADDON {
-            init = QUOTE(if (!isnil QUOTE(QEFUNC(cargo,initObject))) then {_this call EFUNC(cargo,initObject)});
-        };
-    };
 };
