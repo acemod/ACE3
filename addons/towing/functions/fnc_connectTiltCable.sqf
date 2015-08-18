@@ -26,7 +26,7 @@ GVAR(placeAction) = PLACE_WAITING;
 
 [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-[{[localize LSTRING(TiltingActionShort), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+[{[localize LSTRING(TiltConnectCable), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,addActionEventHandler)];
 
 _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL; [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);}];
@@ -57,7 +57,7 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
         _unit removeAction _actionID;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            [_unit, _attachToVehicle, _virtualPos] call FUNC(tiltConnect);
+            [_unit, _attachToVehicle, _virtualPos] call FUNC(attachTiltCable);
         };
     }; // TODO add model like in attach/functions/fnc_attach
 }, 0, [_unit, _target, _actionID] ] call cba_fnc_addPerFrameHandler;

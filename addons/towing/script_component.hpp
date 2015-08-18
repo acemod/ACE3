@@ -12,4 +12,4 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 
-#define TOWING_DISTANCE 10
+#define TOWING_ACTION_DISTANCE 7

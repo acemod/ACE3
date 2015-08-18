@@ -1,18 +1,18 @@
 #define MACRO_TOWING_ACTIONS \
         class ACE_Actions { \
             class ACE_MainActions { \
-                class GVAR(Tilting) { \
-                    displayName = CSTRING(TiltingAction); \
-                    distance = TOWING_DISTANCE; \
-                    condition = QUOTE(_this call FUNC(canConnect)); \
-                    statement = QUOTE(_this call FUNC(connect)); \
+                class GVAR(TiltConnect) { \
+                    displayName = CSTRING(TiltConnect); \
+                    distance = TOWING_ACTION_DISTANCE; \
+                    condition = QUOTE(_this call FUNC(canConnectTiltCable)); \
+                    statement = QUOTE(_this call FUNC(connectTiltCable)); \
                     exceptions[] = {"isNotInside"}; \
                 }; \
-                class GVAR(TiltingFinished) { \
-                    displayName = CSTRING(TiltingFinishedAction); \
-                    distance = TOWING_DISTANCE; \
-                    condition = QUOTE(_this call FUNC(canCutTiltRope)); \
-                    statement = QUOTE(_player call FUNC(cutTiltRope)); \
+                class GVAR(TiltDisconnect) { \
+                    displayName = CSTRING(TiltDisconnect); \
+                    distance = TOWING_ACTION_DISTANCE; \
+                    condition = QUOTE(_this call FUNC(canDisconnectTiltCable)); \
+                    statement = QUOTE(_player call FUNC(disconnectTiltCable)); \
                     exceptions[] = {"isNotInside"}; \
                 }; \
             }; \
