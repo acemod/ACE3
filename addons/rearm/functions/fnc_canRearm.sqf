@@ -1,13 +1,13 @@
 /*
- * Author: GitHawk
- * Check if a unit can rearm
+ * Author: GitHawk, Jonpas
+ * Check if a unit can rearm.
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
  *
  * Return Value:
- * Can rearm <BOOL>
+ * Can Rearm <BOOL>
  *
  * Example:
  * [player, tank] call ace_rearm_fnc_canRearm
@@ -16,64 +16,12 @@
  */
 #include "script_component.hpp"
 
-private ["_magazine", "_return", "_magazines", "_path", "_cnt"];
-params ["_unit", "_vehicle"];
+private ["_magazineClass", "_magazines", "_turretPath"];
+params ["_unit", "_target"];
 
-#define GETRETURNVALUE \
-if ((_vehicle magazineTurretAmmo [_magazine, _path]) < getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")) then { \
-    _return = true; \
-} else { \
-    _cnt = { _x == _magazine } count _magazines; \
-    if (_cnt < ([_vehicle, _path, _magazine] call FUNC(getMaxMagazines))) then { \
-        _return = true; \
-    }; \
-};
+if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE}) exitWith {false};
 
-if (isNull _unit  || {!(_unit isKindOf "CAManBase")} || {!local _unit} || { (_vehicle distance _unit) > 7} || {GVAR(level) == 0}) exitWith {false};
+_magazineClass = _unit getVariable QGVAR(carriedMagazine);
+if (isNil "_magazineClass") exitWith {false};
 
-_magazine = _unit getVariable QGVAR(carriedMagazine);
-if (isNil "_magazine") exitWith {false};
-
-_return = false;
-_magazines = _vehicle magazinesTurret [-1];
-if (_magazine in _magazines) then {
-    _path = [-1];
-    GETRETURNVALUE
-};
-if (!_return) then {
-    _magazines = _vehicle magazinesTurret [0];
-    if (_magazine in _magazines) then {
-        _path = [0];
-        GETRETURNVALUE
-    };
-};
-if (!_return) then {
-    _magazines = _vehicle magazinesTurret [0,0];
-    if (_magazine in _magazines) then {
-        _path = [0,0];
-        GETRETURNVALUE
-    };
-};
-if (!_return) then {
-    _magazines = _vehicle magazinesTurret [0,1];
-    if (_magazine in _magazines) then {
-        _path = [0,1];
-        GETRETURNVALUE
-    };
-};
-if (!_return) then {
-    _magazines = _vehicle magazinesTurret [1];
-    if (_magazine in _magazines) then {
-        _path = [1];
-        GETRETURNVALUE
-    };
-};
-if (!_return) then {
-    _magazines = _vehicle magazinesTurret [2];
-    if (_magazine in _magazines) then {
-        _path = [2];
-        GETRETURNVALUE
-    };
-};
-
-_return
+([_target, _magazines, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0

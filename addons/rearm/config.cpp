@@ -7,13 +7,14 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"GitHawk"};
-        authorUrl = "";
+        authorUrl = "https://ace3mod.com";
         VERSION_CONFIG;
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
+#include "CfgEventHandlers.hpp"
+
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgVehicles.hpp"

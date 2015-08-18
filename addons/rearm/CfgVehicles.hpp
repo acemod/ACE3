@@ -1,13 +1,8 @@
-#define REARM_ACTION_DISTANCE 4.5
 #define MACRO_REARM_ACTIONS \
         class ACE_Actions { \
             class ACE_MainActions { \
-                displayName = ECSTRING(interaction,MainAction); \
-                selection = ""; \
-                distance = 10; \
-                condition = "true"; \
-                class GVAR(rearm) { \
-                    displayName = CSTRING(rearm); \
+                class GVAR(Rearm) { \
+                    displayName = CSTRING(Rearm); \
                     distance = REARM_ACTION_DISTANCE; \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canRearm)); \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(rearm)); \
@@ -15,23 +10,23 @@
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
-        }; 
+        };
 
 #define MACRO_REARM_PICKUPAMMO \
         class ACE_Actions : ACE_Actions { \
             class ACE_MainActions : ACE_MainActions { \
-                class GVAR(pickUpAmmo) { \
-                    displayName = CSTRING(pickUpAmmo); \
+                class GVAR(PickUpAmmo) { \
+                    displayName = CSTRING(PickUpAmmo); \
                     distance = REARM_ACTION_DISTANCE; \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPickUpAmmo)); \
-                    insertChildren = QUOTE([ARR_1(_target)] call DFUNC(addRearmActions)); \
+                    insertChildren = QUOTE([_target] call FUNC(addRearmActions)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
 
-#define DUMMY_PROPERTIES \
+#define MACRO_DUMMY_PROPERTIES \
         displayName = QGVAR(dummy_obj); \
         scope = 2; \
         scopeCurator = 2;
@@ -43,7 +38,7 @@ class CfgVehicles {
         displayName = CSTRING(RearmSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_rearm.paa));
         category = "ACE";
-        function = QUOTE(DFUNC(moduleRearmSettings));
+        function = QFUNC(moduleRearmSettings);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -70,6 +65,9 @@ class CfgVehicles {
                 };
             };
         };
+        class ModuleDescription {
+            description = CSTRING(RearmSettings_Module_Description);
+        };
     };
 
     class LandVehicle;
@@ -80,7 +78,7 @@ class CfgVehicles {
     class Tank : LandVehicle {
         MACRO_REARM_ACTIONS
     };
-    
+
     class StaticWeapon : LandVehicle {
         MACRO_REARM_ACTIONS
     };
@@ -99,125 +97,110 @@ class CfgVehicles {
         MACRO_REARM_ACTIONS
     };
 
+
+    // Ammo Vehicles (with full inheritance for granted ACE_Actions)
     class Car_F : Car {};
     class Truck_F : Car_F {};
-    class Truck_01_base_F: Truck_F {};
-    class Truck_02_base_F : Truck_F {};
+
     class Truck_03_base_F : Truck_F {};
-    
-    class B_Truck_01_transport_F : Truck_01_base_F {};
-    class B_Truck_01_mover_F: B_Truck_01_transport_F {};
-    
-    class I_Truck_02_ammo_F : Truck_02_base_F {
-        transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
-    };
-
-    class B_Truck_01_ammo_F : B_Truck_01_mover_F {
-        transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
-    };
-    
-    class O_Truck_02_Ammo_F : Truck_02_base_F {
-        transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
-    };
-
     class O_Truck_03_ammo_F : Truck_03_base_F {
         transportAmmo = 0;
         MACRO_REARM_PICKUPAMMO
     };
 
-    // Dummy vehicles
+    class Truck_02_base_F : Truck_F {};
+    class Truck_02_Ammo_base_F : Truck_02_base_F {};
+    class I_Truck_02_ammo_F : Truck_02_Ammo_base_F {
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+    class O_Truck_02_Ammo_F : Truck_02_Ammo_base_F {
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+
+    class Truck_01_base_F : Truck_F {};
+    class B_Truck_01_transport_F : Truck_01_base_F {};
+    class B_Truck_01_mover_F : B_Truck_01_transport_F {};
+    class B_Truck_01_ammo_F : B_Truck_01_mover_F {
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+
+
+    // Dummy Vehicles
     class ThingX;
     class GVAR(Bo_GBU12_LGB) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";
     };
-
     class GVAR(Bo_Mk82) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F\Ammo\Bomb_02_F";
     };
-
     class GVAR(Bomb_04_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
     };
-
     class GVAR(Bomb_03_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_03_F.p3d";
     };
-
     class GVAR(Missile_AA_04_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_04_F.p3d";
     };
-
     class GVAR(Missile_AA_03_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
     };
-
     class GVAR(Missile_AGM_02_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
     };
-
     class GVAR(Missile_AGM_01_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
     };
-
     class GVAR(R_230mm_fly) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-
     class GVAR(R_230mm_HE) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-
     class GVAR(M_PG_AT) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F\Ammo\Rocket_01_F";
     };
-
     class GVAR(Rocket_04_HE_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_HE_F.p3d";
     };
-
     class GVAR(Rocket_03_HE_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-
     class GVAR(Rocket_04_AP_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_AP_F.p3d";
     };
-
     class GVAR(Rocket_03_AP_F) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_AP_F.p3d";
     };
-
     // Using wrong model
     class GVAR(R_80mm_HE) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-
     class GVAR(R_60mm_HE) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-
     class GVAR(R_Hydra_HE) : ThingX {
-        DUMMY_PROPERTIES
+        MACRO_DUMMY_PROPERTIES
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
 };

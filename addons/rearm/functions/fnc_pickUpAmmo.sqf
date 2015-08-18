@@ -1,13 +1,13 @@
 /*
  * Author: GitHawk
- * Picks up a specific kind of magazine from an ammo truck
+ * Starts progress bar for picking up a specific kind of magazine from an ammo truck.
  *
  * Arguments:
- * 0: The Ammo Truck <OBJECT>
- * 1: The Player <OBJECT>
- * 2: The Params <ARRAY>
- * 2,0: The Magazine <STRING>
- * 2,1: The Vehicle to be armed <OBJECT>
+ * 0: Ammo Truck <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: Params <ARRAY>
+ *   0: Magazine <STRING>
+ *   1: Vehicle to be armed <OBJECT>
  *
  * Return Value:
  * None
@@ -19,8 +19,9 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_tmpCal", "_cal"];
-params ["_target","_unit","_args"];
+private ["_ammo", "_tmpCal", "_cal", "_idx"];
+
+params ["_target", "_unit", "_args"]; // _target is for future possible finite ammo
 _args params ["_magazine", "_vehicle"];
 
 _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
@@ -42,7 +43,7 @@ if (_tmpCal > 0) then {
     };
 };
 _cal = round _cal;
-_idx = CALIBERS find _cal;
+_idx = REARM_CALIBERS find _cal;
 if (_idx == -1 ) then {
     _idx = 2;
 };
@@ -51,7 +52,7 @@ _unit setVariable [QGVAR(selectedWeaponOnRearm), currentWeapon _unit];
 _unit action ["SwitchWeapon", _unit, _unit, 99];
 
 [
-    (DURATION_PICKUP select _idx),
+    (REARM_DURATION_PICKUP select _idx),
     [_unit, _magazine],
     FUNC(pickUpSuccess),
     "",

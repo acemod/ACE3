@@ -3,16 +3,19 @@
 ADDON = false;
 
 PREP(addRearmActions);
-PREP(canRearm);
 PREP(canPickupAmmo);
+PREP(canRearm);
 PREP(getMaxMagazines);
+PREP(getNeedRearmMagazines);
+PREP(handleKilled);
+PREP(handleUnconscious);
+PREP(moduleRearmSettings);
 PREP(pickUpAmmo);
 PREP(pickUpSuccess);
 PREP(rearm);
 PREP(rearmEntireVehicle);
 PREP(rearmEntireVehicleSuccess);
 PREP(rearmSuccess);
-PREP(moduleRearmSettings);
 PREP(turn);
 
 ADDON = true;

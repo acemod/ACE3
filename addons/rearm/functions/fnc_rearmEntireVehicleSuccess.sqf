@@ -1,9 +1,9 @@
 /*
  * Author: GitHawk
- * Rearm an entire vehicle 
+ * Rearm an entire vehicle.
  *
  * Arguments:
- * 0: The Vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
@@ -15,11 +15,11 @@
  */
 #include "script_component.hpp"
 
-private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_rounds"];
+private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
 params ["_vehicle"];
 
 if !(local _vehicle) exitWith {
-    [_this, QUOTE(DFUNC(rearmEntireVehicleSuccess)), _vehicle] call EFUNC(common,execRemoteFnc);
+    [_this, QFUNC(rearmEntireVehicleSuccess), _vehicle] call EFUNC(common,execRemoteFnc);
 };
 
 {
@@ -31,7 +31,7 @@ if !(local _vehicle) exitWith {
         _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
         _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
         _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
-        
+
         //diag_log format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMaxMagazines %4\nNumRounds: %5\nMaxRounds: %6\nMagazine: %7", _vehicle, _turretPath, _currentMagazines, _maxMagazines, _currentRounds, _maxRounds, _magazine];
         if (_currentMagazines < _maxMagazines) then {
             _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
@@ -46,4 +46,4 @@ if !(local _vehicle) exitWith {
             };
         };
     } foreach _magazines;
-} foreach [[-1], [0], [0,0], [0,1], [1], [2]];
+} foreach REARM_TURRET_PATHS;
