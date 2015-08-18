@@ -85,6 +85,7 @@ _unit setVariable [QGVAR(isRefueling), false];
 _nozzle attachTo [_target, _endPosTestOffset];
 _nozzle setVariable [QGVAR(sink), _target, true];
 _nozzle setVariable [QGVAR(isRefueling), true, true];
+_nozzle setVariable [QGVAR(isConnected), true, true];
 _target setVariable [QGVAR(nozzle), _nozzle, true];
 
 [_unit, _target, _nozzle] call FUNC(refuel);

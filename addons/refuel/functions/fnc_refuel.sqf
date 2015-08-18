@@ -33,11 +33,16 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
 
     _source = _nozzle getVariable [QGVAR(source), objNull];
     _sink = _nozzle getVariable [QGVAR(sink), objNull];
-    if (isNull _source || {isNull _sink} || {(_sink distance (_source modelToWorld (_nozzle getVariable [QGVAR(attachPos), [0,0,0]]))) > 10}) exitWith {
+    if (isNull _source ||
+            {isNull _sink} ||
+            {(_sink distance (_source modelToWorld (_nozzle getVariable [QGVAR(attachPos), [0,0,0]]))) > 10} ||
+            {!alive _source} ||
+            {!alive _sink}) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
         detach _nozzle;
         _nozzle setPosATL [(getPosATL _nozzle) select 0,(getPosATL _nozzle) select 1, 0];
         _nozzle setVelocity [0, 0, 0];
+        _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
@@ -77,7 +82,6 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
             [LSTRING(Hint_Stopped), 2, _unit] call EFUNC(common,displayTextStructured);
         };
         _nozzle setVariable [QGVAR(isRefueling), false, true];
-        [_pfID] call cba_fnc_removePerFrameHandler;
     };
 
     // display flickers even at 1 second intervals
