@@ -104,6 +104,12 @@
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
         </Key>
+        <Key ID="STR_ACE_Repair_addSpareParts_name">
+            <English>Add Spare Parts</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_addSpareParts_description">
+            <English>Add spare parts to vehicles (requires Cargo component)?</English>
+        </Key>
         <Key ID="STR_ACE_Repair_RepairHitpoint">
             <English>Repair %1</English>
             <German>Reparieren %1</German>
@@ -635,6 +641,32 @@
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
         </Key>
+
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
+            <English>Add Spare Parts</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
+            <English>Add spare parts to one or multiple objects</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
+            <English>List</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
+            <English>List of objects that will get spare parts added, separated by commas.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
+            <English>Part</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
+            <English>Spare part.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
+            <English>Amount</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
+            <English>Number of selected spare parts.</English>
+        </Key>
+
         <Key ID="STR_ACE_Repair_categoryName">
             <English>Vehicle Repair</English>
         </Key>
