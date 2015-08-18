@@ -373,21 +373,24 @@ GVAR(deviceKeyCurrentIndex) = -1;
 
 //Map opened/closed Events:
 GVAR(mapOpened) = false;
-[] spawn {
-    waitUntil {(!isNull findDisplay 12)};
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
-        if (!GVAR(mapOpened)) then {
-            GVAR(mapOpened) = true;
-            ["mapOpened", []] call FUNC(localEvent);
-            [{
-                if (!visibleMap) then {
-                    GVAR(mapOpened) = false;
-                    ["mapClosed", []] call FUNC(localEvent);
-                    [_this select 1] call CBA_fnc_removePerFrameHandler;
-                };
-            }, 0, []] call CBA_fnc_addPerFrameHandler;
-        };
-    }];
-};
+[{
+    if (!isNull (findDisplay 12)) then {
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        TRACE_1("Installing Map Draw EH for MapOpened event");
+        ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {
+            if (!GVAR(mapOpened)) then {
+                GVAR(mapOpened) = true;
+                ["mapOpened", []] call FUNC(localEvent);
+                [{
+                    if (!visibleMap) then {
+                        GVAR(mapOpened) = false;
+                        ["mapClosed", []] call FUNC(localEvent);
+                        [_this select 1] call CBA_fnc_removePerFrameHandler;
+                    };
+                }, 0, []] call CBA_fnc_addPerFrameHandler;
+            };
+        }];
+    };
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 GVAR(commonPostInited) = true;
