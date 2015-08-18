@@ -18,7 +18,7 @@
 private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
 params ["_vehicle"];
 
-if !(local _vehicle) exitWith {
+if !(local _vehicle) exitWith { // TODO if there are players inside the turrets they will not be rearmed due to locality issues
     [_this, QFUNC(rearmEntireVehicleSuccess), _vehicle] call EFUNC(common,execRemoteFnc);
 };
 

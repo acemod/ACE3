@@ -9,6 +9,7 @@ PREP(getMaxMagazines);
 PREP(getNeedRearmMagazines);
 PREP(handleKilled);
 PREP(handleUnconscious);
+PREP(makeDummy);
 PREP(moduleRearmSettings);
 PREP(pickUpAmmo);
 PREP(pickUpSuccess);
@@ -16,6 +17,5 @@ PREP(rearm);
 PREP(rearmEntireVehicle);
 PREP(rearmEntireVehicleSuccess);
 PREP(rearmSuccess);
-PREP(turn);
 
 ADDON = true;

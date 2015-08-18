@@ -35,8 +35,10 @@ _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 _dummy = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
 if !(_dummy == "") then {
     _dummy = _dummy createVehicle (position _unit);
-    _dummy attachTo [_unit, [0,0.5,0], "pelvis"];
-    [[_dummy, [[-1,0,0],[0,0,1]]], QUOTE(DFUNC(turn)), 2] call EFUNC(common,execRemoteFnc);
     _dummy allowDamage false;
+    _dummy attachTo [_unit, [0,0.5,0], "pelvis"];
+    {
+        [[_dummy, [[-1,0,0],[0,0,1]]], QUOTE(DFUNC(makeDummy)), _x] call EFUNC(common,execRemoteFnc);
+    } count (position _unit nearObjects ["CAManBase", 100]);
     _unit setVariable [QGVAR(dummy), _dummy];
 };

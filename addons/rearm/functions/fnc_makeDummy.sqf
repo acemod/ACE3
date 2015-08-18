@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Turns an object.
+ * Make a dummy object by disabling collision and turning it.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [dummy, [[1,0,0],[0,0,1]]] call ace_rearm_fnc_turn
+ * [dummy, [[1,0,0],[0,0,1]]] call ace_rearm_fnc_makeDummy
  *
  * Public: No
  */
@@ -19,3 +19,4 @@
 params ["_obj", "_dirAndUp"];
 
 _obj setVectorDirAndUp _dirAndUp;
+player disableCollisionWith _obj;
