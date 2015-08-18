@@ -81,14 +81,14 @@ class GVAR(DISPLAY_NAME) {
                     IDC_COUNTER
                     text = "Icon Size +"; //--- ToDo: Localize;
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(2));
-                    onMouseButtonDown = QFUNC(incTextSize);
+                    onMouseButtonUp = onMBU(incTextSize);
                     tooltip = "Increase Font";
                 };
                 class btnIconSizedwn: btnTextonoff {
                     IDC_COUNTER
                     text = "Icon Size -"; //--- ToDo: Localize;
                     y = pxToMenu_Y(GD300_OSD_MENU_ELEMENT_Y(3));
-                    onMouseButtonDown = QFUNC(decTextSize);
+                    onMouseButtonUp = onMBU(decTextSize);
                     tooltip = "Decrease Font";
                 };
                 class btnF5: btnTextonoff {

@@ -66,12 +66,12 @@ class GVAR(DISPLAY_NAME) {
         };
         class btnbrtpls: GVAR(JV5_btnBRTplus) {
             idc = IDC_BTNUP;
-            onMouseButtonDown = QFUNC(incTextSize);
+            onMouseButtonUp = onMBU(incTextSize);
             tooltip = "Increase Font";
         };
         class btnbrtmns: GVAR(JV5_btnBRTminus) {
             idc = IDC_BTNDWN;
-            onMouseButtonDown = QFUNC(decTextSize);
+            onMouseButtonUp = onMBU(decTextSize);
             tooltip = "Decrease Font";
         };
         class btnfunction: GVAR(JV5_btnFCN) {
