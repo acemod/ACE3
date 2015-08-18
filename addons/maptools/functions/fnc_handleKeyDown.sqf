@@ -16,10 +16,11 @@
 #include "script_component.hpp"
 
 params ["", "_code"];
+TRACE_1("params",_code);
 
 private ["_handled", "_relPos", "_diffVector", "_magDiffVector", "_lambdaLong", "_lambdaTrasAbs"];
 
-_handled   = false;
+_handled = false;
 
 #define DIK_ESCAPE          0x01
 #define DIK_DELETE          0xD3

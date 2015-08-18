@@ -14,6 +14,7 @@
 
 params ["_dir", "_params"];
 _params params ["_control", "_button", "_screenPosX", "_screenPosY", "_shiftKey", "_ctrlKey", "_altKey"];
+TRACE_2("params",_dir,_params);
 
 private["_gui", "_handled", "_marker", "_pos"];
 
@@ -23,16 +24,14 @@ _handled = false;
 if (_button != 0) exitWith {_handled};
 
 // If releasing
-if ((_dir != 1) && {(GVAR(mapTool_isDragging) || GVAR(mapTool_isRotating))}) exitWith {
-    GVAR(mapTool_isDragging) = false;
-    GVAR(mapTool_isRotating) = false;
-    _handled = true;
-    _handled
-};
-
-// If clicking
-if (_dir == 1) exitWith {
-
+if (_dir != 1) then {
+    if (GVAR(mapTool_isDragging) || GVAR(mapTool_isRotating)) then {
+        GVAR(mapTool_isDragging) = false;
+        GVAR(mapTool_isRotating) = false;
+        _handled = true;
+    };
+} else {
+    // If clicking
     if !(call FUNC(canDraw)) exitWith {_handled = false;};
 
     // Transform mouse screen position to coordinates
@@ -43,7 +42,6 @@ if (_dir == 1) exitWith {
         // Already drawing -> Add tempLineMarker to permanent list
         if (GVAR(drawing_syncMarkers)) then {
             deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
-            // [GVAR(drawing_tempLineMarker), "FUNC(addLineMarker)", 2] call EFUNC(common,execRemoteFnc);
             ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
             // Log who drew on the briefing screen
             (text format ["[ACE] Server: Player %1 drew on the briefing screen", profileName]) call EFUNC(common,serverLog);
@@ -90,8 +88,9 @@ if (_dir == 1) exitWith {
         };
         _handled = true;
     };
-    
     _handled
 };
+
+diag_log text format ["HJa %1", _handled];
 
 _handled

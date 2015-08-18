@@ -14,6 +14,7 @@
 #include "script_component.hpp"
 
 params ["_name", "_startPos", "_endPos", "_color"];
+TRACE_4("params",_name,_startPos,_endPos,_color);
 
 private ["_difPos", "_mag"];
 

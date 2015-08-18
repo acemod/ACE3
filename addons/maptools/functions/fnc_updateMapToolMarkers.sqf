@@ -21,7 +21,7 @@ params ["_theMap"];
 private ["_rotatingTexture", "_textureWidth", "_scale", "_xPos", "_yPos"];
 
 // Show/Hide draw buttons
-if ("ACE_MapTools" in items ACE_player) then {
+if ([] call FUNC(canDraw)) then {
     { ((findDisplay 12) displayCtrl _x) ctrlShow true; } forEach GVAR(drawing_controls);
 } else {
     { ((findDisplay 12) displayCtrl _x) ctrlShow false; } forEach GVAR(drawing_controls);

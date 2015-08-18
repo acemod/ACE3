@@ -13,6 +13,7 @@
 #include "script_component.hpp"
 
 params ["_control", "_mousePosX", "_mousePosY"];
+TRACE_3("params",_control,_mousePosX,_mousePosY);
 
 private ["_control", "_pos"];
 
@@ -31,6 +32,7 @@ if !(call FUNC(canDraw)) exitWith {
 // Handle drawing
 if (GVAR(drawing_isDrawing)) exitWith {
     GVAR(drawing_tempLineMarker) set [2, GVAR(mousePosition)];
+    TRACE_1("updating line pos",GVAR(mousePosition));
     GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
     false
 };
@@ -43,8 +45,6 @@ if (GVAR(mapTool_isDragging)) exitWith {
     GVAR(mapTool_pos) set [0, (GVAR(mapTool_startPos) select 0) + (GVAR(mousePosition) select 0) - (GVAR(mapTool_startDragPos) select 0)];
     GVAR(mapTool_pos) set [1, (GVAR(mapTool_startPos) select 1) + (GVAR(mousePosition) select 1) - (GVAR(mapTool_startDragPos) select 1)];
 
-    // Update the size and rotation of the maptool
-    [] call FUNC(updateMapToolMarkers);
     true
 };
 
@@ -55,8 +55,6 @@ if (GVAR(mapTool_isRotating)) exitWith {
     _angle =  (180 + ((GVAR(mousePosition) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mousePosition) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
     GVAR(mapTool_angle) = GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle);
 
-    // Update the size and rotation of the maptool
-    [] call FUNC(updateMapToolMarkers);
     true
 };
 

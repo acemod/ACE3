@@ -64,9 +64,6 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
     // Install event handlers on the map control and display (control = 51)
     GVAR(drawing_syncMarkers) = false;
     12 call _fnc_installMapEvents;
-
-    // Update the size and rotation of map tools
-    [] call FUNC(updateMapToolMarkers);
 };
 
 ["mapOpened", {
