@@ -80,8 +80,6 @@ _vehicleDeviceInterface = if !(_vehicleDeviceData isEqualTo []) then {
     if (count _interfaces > 0) then {_interfaces select 0} else {""};
 } else {""};
 
-diag_log str [_playerDeviceInterface,_vehicleDeviceInterface];
-
 // get uiNamespace variable names
 _playerDeviceDisplayName = if (_playerDeviceInterface != "") then {
     if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "displayName")) then {
@@ -103,8 +101,6 @@ _vehicleDeviceDialogName = if (_vehicleDeviceInterface != "") then {
         getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "dialogName")
     } else {""};
 } else {""};
-
-diag_log str [_playerDeviceDisplayName,_playerDeviceDialogName,_vehicleDeviceDisplayName,_vehicleDeviceDialogName];
 
 // logic to determine which interface to open
 _selectedInterface = switch (_this) do {
