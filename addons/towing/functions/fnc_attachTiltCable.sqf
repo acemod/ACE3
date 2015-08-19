@@ -71,7 +71,7 @@ _closeInDistance = _closeInDistance - 0.0085;
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, _startingOffset select 2];
 
-_stage = ACE_player getVariable [QGVAR(isTilting), 0] + 1;
+_stage = (ACE_player getVariable [QGVAR(isTilting), 0]) + 1;
 
 _attachToVehicle setVariable [QGVAR(tiltUp), _unit, true];
 

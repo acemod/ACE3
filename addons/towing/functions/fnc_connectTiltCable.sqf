@@ -12,7 +12,7 @@
  * Example:
  * [tank, player] call ace_towing_fnc_connectTiltCable
  *
- * Public: no
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -35,7 +35,7 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
 [{
     private ["_virtualPos", "_virtualPosASL", "_lineInterection"];
     params ["_args","_pfID"];
-    _args params ["_unit", "_attachToVehicle", "_actionID");
+    _args params ["_unit", "_attachToVehicle", "_actionID"];
 
     _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {
