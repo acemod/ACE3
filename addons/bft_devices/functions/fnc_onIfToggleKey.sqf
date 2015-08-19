@@ -20,6 +20,8 @@
 
 private ["_handled","_previousInterface","_playerDevices","_vehicleDevices","_playerDeviceId","_vehicleDeviceId","_playerDeviceData","_vehicleDeviceData","_playerDeviceInterface","_vehicleDeviceInterface","_playerDeviceDisplayName","_playerDeviceDialogName","_vehicleDeviceDisplayName","_vehicleDeviceDialogName","_selectedInterface","_interfaceName","_deviceID","_isDialog","_interface","_interfaces"];
 
+params ["_type"];
+
 _handled = false;
 
 // exit if we have already an interface starting up
@@ -36,7 +38,7 @@ if (GVAR(uavViewActive)) then {
 };
 
 // close interface and exit if there is an interface open of the same type
-if (!I_CLOSED && {I_GET_TYPE == _this}) exitWith {
+if (!I_CLOSED && {I_GET_TYPE == _type}) exitWith {
     [] call FUNC(ifClose);
     true
 };
@@ -103,7 +105,7 @@ _vehicleDeviceDialogName = if (_vehicleDeviceInterface != "") then {
 } else {""};
 
 // logic to determine which interface to open
-_selectedInterface = switch (_this) do {
+_selectedInterface = switch (_type) do {
     case 0: {
         // display first, vehicle device first
         if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceInterface,_vehicleDeviceDisplayName,_vehicleDeviceId,false]};
@@ -143,7 +145,7 @@ if (_interfaceName != "" && _interfaceName != _previousInterface) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
             ((_this select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
         };
-    },0,[_deviceID,_interface,_this,_interfaceName,_isDialog]] call CBA_fnc_addPerFrameHandler;
+    },0,[_deviceID,_interface,_type,_interfaceName,_isDialog]] call CBA_fnc_addPerFrameHandler;
 };
 
 true
