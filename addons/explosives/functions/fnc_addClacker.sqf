@@ -45,4 +45,6 @@ _clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localiz
     GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
 
 _unit setVariable [QGVAR(Clackers), _clacker, true];
-_unit sideChat format [localize LSTRING(DetonateCode), GVAR(PlacedCount)];
+
+//display clacker code message:
+[format [localize LSTRING(DetonateCode), GVAR(PlacedCount)]] call EFUNC(common,displayTextStructured);

@@ -51,6 +51,9 @@ if (isNil QGVAR(CellphoneIEDs)) then {
 _count = GVAR(CellphoneIEDs) pushBack [_explosive,_code,GetNumber(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> "Cellphone" >> "FuseTime")];
 _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
-_unit sideChat format ["IED %1 code: %2", _count,_code];
+
+//display IDE number message:
+[format ["IED %1 code: %2", _count,_code]] call EFUNC(common,displayTextStructured);
+
 if !(_hasRequired) exitWith {};
 [format ["IED %1", _count],_code] call FUNC(addToSpeedDial);
