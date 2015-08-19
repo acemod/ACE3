@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [tank, player] call ace_towing_fnc_connect
+ * [tank, player] call ace_towing_fnc_connectTiltCable
  *
  * Public: no
  */

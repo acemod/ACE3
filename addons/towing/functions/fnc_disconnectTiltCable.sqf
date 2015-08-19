@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [player] call ace_towing_fnc_cutTiltRope
+ * [player] call ace_towing_fnc_disconnectTiltCable
  *
  * Public: no
  */

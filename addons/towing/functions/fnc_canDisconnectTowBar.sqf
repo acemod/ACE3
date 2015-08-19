@@ -1,6 +1,6 @@
 /*
- * Author: GitHawk
- * Check if a unit can cut a tilt rope.
+ * Author: Jonpas
+ * Check if a unit can disconnect a tow bar.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -10,7 +10,7 @@
  * Can Disconnect <BOOL>
  *
  * Example:
- * [tank, player] call ace_logistics_fnc_canDisconnectTiltCable
+ * [tank, player] call ace_logistics_fnc_canDisconnectTowBar
  *
  * Public: No
  */
@@ -19,5 +19,5 @@
 params ["_target", "_unit"];
 
 !(_target distance _unit > TOWING_ACTION_DISTANCE) &&
-{_target getVariable [QGVAR(tiltUp), _unit] == _unit} &&
-{_unit getVariable [QGVAR(isTilting), 0] == 2}
+{!isNil {_target getVariable QGVAR(isTowing)}} &&
+{!isNil {_target getVariable QGVAR(isTowed)}}

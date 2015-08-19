@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, tank, [0,0,0]] call ace_towing_fnc_tiltConnect
+ * [player, tank, [0,0,0]] call ace_towing_fnc_attachTiltCable
  *
  * Public: No
  */

@@ -13,6 +13,12 @@
             <English>Disconnect tilting cable</English>
             <German>Aufrichtseil entfernen</German>
         </Key>
+        <Key ID="STR_ACE_Towing_TowConnect">
+            <English>Connect towing bar</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_TowDisconnect">
+            <English>Disconnect towing bar</English>
+        </Key>
         <Key ID="STR_ACE_Towing_Cancel">
             <English>Cancel</English>
             <German>Abbrechen</German>

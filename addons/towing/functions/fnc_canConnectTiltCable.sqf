@@ -10,7 +10,7 @@
  * Can Connect <BOOL>
  *
  * Example:
- * [tank, player] call ace_towing_fnc_canConnect
+ * [tank, player] call ace_towing_fnc_canConnectTiltCable
  *
  * Public: No
  */
