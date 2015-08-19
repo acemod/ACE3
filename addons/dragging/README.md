@@ -1,13 +1,12 @@
-ace_ballistics
+ace_dragging
 ==============
 
-Changes to weapon, magazine and ammunition values.
+Adds ability to drag and carry objects.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
-- [KoffeinFlummi](https://github.com/KoffeinFlummi)
+- [Garth "L-H" de Wet](https://github.com/CorruptedHeart)
 - [commy2](https://github.com/commy2)

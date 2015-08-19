@@ -1,7 +1,7 @@
 ace_logistics_uavbattery
 ===========
 
-Adds an item `ACE_UAVBattery` that allows refueling/recharging of the "Dartar" quadcopter UAVs.
+Adds an item that allows refueling/recharging of the Darter quadcopter UAVs.
 
 
 ## Maintainers

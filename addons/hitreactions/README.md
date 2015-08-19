@@ -1,11 +1,11 @@
-ace_captives
-============
+ace_hitreactions
+===========
 
-Adds ability to handcuff and surrender.
+Adds reactions when getting shot.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [PabstMirror](https://github.com/PabstMirror)
+- [commy2](https://github.com/commy2)

@@ -1,11 +1,11 @@
-ace_captives
-============
+ace_modules
+===========
 
-Adds ability to handcuff and surrender.
+Provides framework for module handling.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [PabstMirror](https://github.com/PabstMirror)
+- [Glowbal](https://github.com/Glowbal)

@@ -1,12 +1,12 @@
-ace_parachute
+ace_interact_menu
 ===========
 
-Improves parachutes and adds an altimeter.
+Base framework for interaction menu.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [CorruptedHeart](https://github.com/CorruptedHeart)
+- [NouberNou](https://github.com/NouberNou)
 - [esteldunedain](https://github.com/esteldunedain)

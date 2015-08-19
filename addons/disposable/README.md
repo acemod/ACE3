@@ -1,7 +1,7 @@
 ace_disposable
 ==============
 
-Makes the NLAW a disposable one-shot weapon.
+Makes the NLAW a disposable one-shot weapon and provides disposable launchers framework for use by other mods.
 
 
 ## Maintainers

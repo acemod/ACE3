@@ -1,7 +1,7 @@
-ace_inventory
-=============
+ace_reloadlaunchers
+===========
 
-Adds options to increase the size of the inventory dialog.
+Add the ability to reload someone else's launcher.
 
 
 ## Maintainers
@@ -9,4 +9,3 @@ Adds options to increase the size of the inventory dialog.
 The people responsible for merging changes to this component or answering potential questions.
 
 - [commy2](https://github.com/commy2)
-- [PabstMirror](https://github.com/PabstMirror)

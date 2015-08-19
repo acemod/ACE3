@@ -1,7 +1,7 @@
-ace_advanced_ballistics
-===============
+ace_huntir
+===========
 
-The Advanced Ballistics module introduces advanced external- and internal ballistics to the game.
+Adds High-altitude Unit Navigated Tactical Imaging Round and its Monitor.
 
 
 ## Maintainers

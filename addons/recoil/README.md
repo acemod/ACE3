@@ -1,11 +1,11 @@
-ace_captives
-============
+ace_recoil
+===========
 
-Adds ability to handcuff and surrender.
+Tweaks weapon recoils and adds camera shake.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [PabstMirror](https://github.com/PabstMirror)
+- [commy2](https://github.com/commy2)

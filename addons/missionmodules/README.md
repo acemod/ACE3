@@ -1,11 +1,11 @@
-ace_captives
-============
+ace_missionmodules
+===========
 
-Adds ability to handcuff and surrender.
+Adds mission modules.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [PabstMirror](https://github.com/PabstMirror)
+- [Glowbal](https://github.com/Glowbal)

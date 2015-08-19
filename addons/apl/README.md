@@ -1,11 +1,11 @@
-ace_captives
+ace_apl
 ============
 
-Adds ability to handcuff and surrender.
+Assets licensed under Arma Public License (APL).
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [PabstMirror](https://github.com/PabstMirror)
+- None
