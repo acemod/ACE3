@@ -1,24 +1,25 @@
 /*
  * Author: GitHawk
- * Calculates a connection for tilting
+ * Checks if valid attach position and attaches a tilt cable.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
- * 2: Visual position <ARRAY>
- * 3: Towing stage <NUMBER>
+ * 0: Unit <OBJECT>
+ * 1: Attach Target <OBJECT>
+ * 2: Virtual Position <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, tank, [0,0,0]] call ace_towing_fnc_tiltConnect
+ * [player, tank, [0,0,0]] call ace_towing_fnc_attachTiltCable
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_attachToVehicle", "_startingPosition", "_stage"];
+private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_stage", "_helper", "_rope", "_weaponSelect"];
+params ["_unit", "_attachToVehicle", "_startingPosition"];
+
 _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
 _startDistanceFromCenter = vectorMagnitude _startingOffset;
@@ -59,18 +60,18 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
+if (((_startDistanceFromCenter - _closeInDistance) < 0.1)) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
-_closeInDistance = (_closeInDistance - 0.0085);
+_closeInDistance = _closeInDistance - 0.0085;
 
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-_endPosTestOffset set [2, (_startingOffset select 2)];
+_endPosTestOffset set [2, _startingOffset select 2];
 
-_stage = ((ace_player getVariable [QGVAR(isTilting), 0])+1);
+_stage = (ACE_player getVariable [QGVAR(isTilting), 0]) + 1;
 
 _attachToVehicle setVariable [QGVAR(tiltUp), _unit, true];
 

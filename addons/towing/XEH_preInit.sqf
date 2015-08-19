@@ -2,10 +2,15 @@
 
 ADDON = false;
 
-PREP(canConnect);
-PREP(canCutTiltRope);
-PREP(connect);
-PREP(cutTiltRope);
-PREP(tiltConnect);
+PREP(attachTiltCable);
+PREP(canConnectTiltCable);
+PREP(canConnectTowBar);
+PREP(canDisconnectTiltCable);
+PREP(canDisconnectTowBar);
+PREP(connectTiltCable);
+PREP(connectTowBar);
+PREP(disconnectTiltCable);
+PREP(disconnectTowBar);
+PREP(towVehicle);
 
 ADDON = true;

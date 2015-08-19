@@ -1,17 +1,17 @@
 /*
  * Author: GitHawk
- * Disconnects the tilting rope
+ * Disconnects the tilt cable.
  *
  * Arguments:
- * 0: The target <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
- * [player] call ace_towing_fnc_cutTiltRope
+ * [player] call ace_towing_fnc_disconnectTiltCable
  *
- * Public: Yes
+ * Public: no
  */
 #include "script_component.hpp"
 
@@ -30,5 +30,3 @@ _unit setVariable [QGVAR(tiltVehicle), nil];
 _unit setVariable [QGVAR(tiltVehicleTow), nil];
 _unit setVariable [QGVAR(isTilting), nil];
 _unit setVariable [QGVAR(tiltRope), nil];
-
-true

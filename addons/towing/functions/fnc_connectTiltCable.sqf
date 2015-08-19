@@ -1,18 +1,18 @@
 /*
  * Author: GitHawk
- * Connects a tilting rope to a vehicle
+ * Handles connecting a tilt cable to a vehicle using attach system.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
- * NIL
+ * None
  *
  * Example:
- * [tank] call ace_towing_fnc_connect
+ * [tank, player] call ace_towing_fnc_connectTiltCable
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -20,22 +20,22 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-params ["_unit","_target"];
+private ["_actionID"];
+params ["_target", "_unit"];
 
 GVAR(placeAction) = PLACE_WAITING;
 
 [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
-[{[localize LSTRING(TiltingActionShort), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+[{[localize LSTRING(TiltConnectCable), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,addActionEventHandler)];
 
 _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL; [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);}];
 
 [{
-    private["_virtualPos", "_virtualPosASL", "_lineInterection"];
-
+    private ["_virtualPos", "_virtualPosASL", "_lineInterection"];
     params ["_args","_pfID"];
-    EXPLODE_3_PVT(_args,_unit,_attachToVehicle,_actionID);
+    _args params ["_unit", "_attachToVehicle", "_actionID"];
 
     _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {
@@ -57,9 +57,7 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
         _unit removeAction _actionID;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
-            [_unit, _attachToVehicle, _virtualPos] call FUNC(tiltConnect);
+            [_unit, _attachToVehicle, _virtualPos] call FUNC(attachTiltCable);
         };
     }; // TODO add model like in attach/functions/fnc_attach
-}, 0, [_unit, _target, _actionID] ] call cba_fnc_addPerFrameHandler;
-
-true
+}, 0, [_unit, _target, _actionID] ] call CBA_fnc_addPerFrameHandler;
