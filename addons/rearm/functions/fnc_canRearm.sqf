@@ -16,12 +16,14 @@
  */
 #include "script_component.hpp"
 
-private ["_magazineClass", "_turretPath"];
+private ["_dummy","_magazineClass"];
 params ["_target", "_unit"];
 
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE}) exitWith {false};
 
-_magazineClass = _unit getVariable QGVAR(carriedMagazine);
+_dummy = _unit getVariable [QGVAR(dummy), objNull];
+if (isNull _dummy) exitwith {false};
+_magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
 ([_target, _magazineClass] call FUNC(getNeedRearmMagazines)) select 0

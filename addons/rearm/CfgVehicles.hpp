@@ -122,9 +122,10 @@ class CfgVehicles {
         MACRO_REARM_PICKUPAMMO
     };
 
-    class Heli_Transport_04_base_F;
+    class Helicopter_Base_F : Helicopter {};
+    class Helicopter_Base_H : Helicopter_Base_F {};
+    class Heli_Transport_04_base_F : Helicopter_Base_H {};
     class O_Heli_Transport_04_ammo_F : Heli_Transport_04_base_F {
-        XEH_ENABLED;
         transportAmmo = 0;
         MACRO_REARM_PICKUPAMMO
     };
@@ -158,13 +159,12 @@ class CfgVehicles {
     // Dummy Vehicles
     class ThingX;
     class GVAR(defaultCarriedObject) : ThingX {
-        EGVAR(dragging,canCarry) = 1;
-        EGVAR(dragging,carryPosition[]) = {0,0.5,0};
-        EGVAR(dragging,carryDirection) = 0;
+        XEH_ENABLED;
         displayName = QGVAR(dummy_obj);
         scope = 2;
         scopeCurator = 2;
-        model = "\A3\Weapons_F\AmmoBoxes\AmmoBox_F.p3d"; // TODO replace with custom model
+        // TODO add pickup code
+        model = "\A3\Weapons_F\AmmoBoxes\AmmoBox_F.p3d";
     };
     class GVAR(Bo_GBU12_LGB) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";

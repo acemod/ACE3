@@ -18,7 +18,9 @@
 private ["_magazineClass", "_ammo", "_tmpCal", "_cal", "_idx", "_needRearmMags", "_magazineDisplayName"];
 params ["_unit"];
 
-_magazineClass = _unit getVariable QGVAR(carriedMagazine);
+_dummy = _unit getVariable [QGVAR(dummy), objNull];
+if (isNull _dummy) exitwith {false};
+_magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
 _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");

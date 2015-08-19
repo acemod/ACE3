@@ -34,7 +34,6 @@ if (local _unit) then {
         detach _dummy;
         deleteVehicle _dummy;
     };
-    _unit setVariable [QGVAR(carriedMagazine), nil, true];
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm);
     _unit selectWeapon _weaponSelect;
     _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
