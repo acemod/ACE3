@@ -1,4 +1,4 @@
-﻿#include "script_component.hpp"
+#include "script_component.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -541,7 +541,7 @@ class CfgPatches {
             "a3_weapons_f_vests",
             "a3data",
             "map_vr",
-            "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3"
+            "extended_eventhandlers", "cba_ui", "cba_xeh", "cba_xeh_a3", "cba_jr"
         };
         author[] = {"ACE Team"};
         authorUrl = "";
