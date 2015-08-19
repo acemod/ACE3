@@ -1,5 +1,5 @@
 /*
- * Author:
+ * Author: Jonpas
  * Connects a tow bar to a vehicle.
  *
  * Arguments:
@@ -16,6 +16,23 @@
  */
 #include "script_component.hpp"
 
+private ["_connectingVehicle"];
 params ["_target", "_unit"];
 
-diag_log "connectTowBar";
+_connectingVehicle = _unit getVariable QGVAR(towConnecting);
+
+if (isNil "_connectingVehicle") then {
+    // Set connecting and temporary towing variable
+    _unit setVariable [QGVAR(towConnecting), _target];
+    _target setVariable [QGVAR(isTowing), true, true];
+} else {
+    // Remove connecting variables
+    _unit setVariable [QGVAR(towConnecting), nil];
+
+    // Set variables on both vehicles
+    _target setVariable [QGVAR(isTowed), _connectingVehicle, true];
+    _connectingVehicle setVariable [QGVAR(isTowing), _target, true];
+
+    // Start towing
+    [_connectingVehicle, _target] call FUNC(towVehicle);
+};

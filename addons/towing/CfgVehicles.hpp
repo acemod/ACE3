@@ -26,7 +26,7 @@
                     displayName = CSTRING(TowDisconnect); \
                     distance = TOWING_ACTION_DISTANCE; \
                     condition = QUOTE(_this call FUNC(canDisconnectTowBar)); \
-                    statement = QUOTE(_player call FUNC(disconnectTowBar)); \
+                    statement = QUOTE(_this call FUNC(disconnectTowBar)); \
                     exceptions[] = {"isNotInside"}; \
                 }; \
             }; \
