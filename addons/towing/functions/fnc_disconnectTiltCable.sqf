@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Disconnects the tilting rope.
+ * Disconnects the tilt cable.
  *
  * Arguments:
  * 0: Unit <OBJECT>

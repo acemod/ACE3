@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Check if a unit can connect a tilt rope.
+ * Check if a unit can connect a tilt cable.
  *
  * Arguments:
  * 0: Target <OBJECT>
