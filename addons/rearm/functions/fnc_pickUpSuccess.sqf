@@ -17,28 +17,33 @@
  */
 #include "script_component.hpp"
 
-private ["_dummy", "_ammo"];
+private ["_ammo", "_dummyName", "_dummyObj"];
 params ["_args"];
 _args params ["_unit", "_magazine"];
 
-_unit setVariable [QGVAR(carriedMagazine), _magazine];
+_unit setVariable [QGVAR(carriedMagazine), _magazine]; // TODO move to carried object
 [_unit, QGVAR(vehRearm), true] call EFUNC(common,setForceWalkStatus);
 
-_dummy = _unit getVariable [QGVAR(dummy), objNull];
-if !(isNull _dummy) then {
-    detach _dummy;
-    deleteVehicle _dummy;
-    _unit setVariable [QGVAR(dummy), objNull];
+// TODO use ace carry
+_dummyObj = _unit getVariable [QGVAR(dummy), objNull];
+if !(isNull _dummyObj) then {
+    detach _dummyObj;
+    deleteVehicle _dummyObj;
+    _dummyObj setVariable [QGVAR(dummy), objNull];
 };
 
 _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-_dummy = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
-if !(_dummy == "") then {
-    _dummy = _dummy createVehicle (position _unit);
-    _dummy allowDamage false;
-    _dummy attachTo [_unit, [0,0.5,0], "pelvis"];
-    {
-        [[_dummy, [[-1,0,0],[0,0,1]]], QUOTE(DFUNC(makeDummy)), _x] call EFUNC(common,execRemoteFnc);
-    } count (position _unit nearObjects ["CAManBase", 100]);
-    _unit setVariable [QGVAR(dummy), _dummy];
+_dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
+_dummyObj = objNull;
+if !(_dummyName == "") then {
+    _dummyObj = _dummyName createVehicle (position _unit);
+} else {
+    _dummyObj = QGVAR(defaultCarriedObject) createVehicle (position _unit);
 };
+_dummyObj allowDamage false;
+_dummyObj attachTo [_unit, [0,0.5,0], "pelvis"];
+{
+    [[_dummyObj, [[-1,0,0],[0,0,1]]], QUOTE(DFUNC(makeDummy)), _x] call EFUNC(common,execRemoteFnc);
+} count (position _unit nearObjects ["CAManBase", 100]);
+_dummyObj setVariable [QGVAR(magazineClass), _magazine, true];
+_unit setVariable [QGVAR(dummy), _dummyObj];

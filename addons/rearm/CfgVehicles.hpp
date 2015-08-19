@@ -26,11 +26,6 @@
             }; \
         };
 
-#define MACRO_DUMMY_PROPERTIES \
-        displayName = QGVAR(dummy_obj); \
-        scope = 2; \
-        scopeCurator = 2;
-
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRearmSettings : ACE_Module {
@@ -127,80 +122,103 @@ class CfgVehicles {
         MACRO_REARM_PICKUPAMMO
     };
 
+    class Heli_Transport_04_base_F;
+    class O_Heli_Transport_04_ammo_F : Heli_Transport_04_base_F {
+        XEH_ENABLED;
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+
+    class Land_Pod_Heli_Transport_04_base_F  : StaticWeapon {};
+    class Land_Pod_Heli_Transport_04_ammo_F : Land_Pod_Heli_Transport_04_base_F {
+        XEH_ENABLED;
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+
+    class ReammoBox_F;
+    class Slingload_01_Base_F : ReammoBox_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                selection = "";
+                distance = 10;
+                condition = "true";
+            };
+        };
+    };
+
+    class B_Slingload_01_Ammo_F : Slingload_01_Base_F {
+        XEH_ENABLED;
+        transportAmmo = 0;
+        MACRO_REARM_PICKUPAMMO
+    };
+
 
     // Dummy Vehicles
     class ThingX;
-    class GVAR(Bo_GBU12_LGB) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(defaultCarriedObject) : ThingX {
+        EGVAR(dragging,canCarry) = 1;
+        EGVAR(dragging,carryPosition[]) = {0,0.5,0};
+        EGVAR(dragging,carryDirection) = 0;
+        displayName = QGVAR(dummy_obj);
+        scope = 2;
+        scopeCurator = 2;
+        model = "\A3\Weapons_F\AmmoBoxes\AmmoBox_F.p3d"; // TODO replace with custom model
+    };
+    class GVAR(Bo_GBU12_LGB) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";
     };
-    class GVAR(Bo_Mk82) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Bo_Mk82) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_02_F";
     };
-    class GVAR(Bomb_04_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Bomb_04_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
     };
-    class GVAR(Bomb_03_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Bomb_03_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_03_F.p3d";
     };
-    class GVAR(Missile_AA_04_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Missile_AA_04_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_04_F.p3d";
     };
-    class GVAR(Missile_AA_03_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Missile_AA_03_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
     };
-    class GVAR(Missile_AGM_02_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Missile_AGM_02_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
     };
-    class GVAR(Missile_AGM_01_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Missile_AGM_01_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
     };
-    class GVAR(R_230mm_fly) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(R_230mm_fly) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-    class GVAR(R_230mm_HE) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(R_230mm_HE) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-    class GVAR(M_PG_AT) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(M_PG_AT) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Rocket_01_F";
     };
-    class GVAR(Rocket_04_HE_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Rocket_04_HE_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_HE_F.p3d";
     };
-    class GVAR(Rocket_03_HE_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Rocket_03_HE_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(Rocket_04_AP_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Rocket_04_AP_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_AP_F.p3d";
     };
-    class GVAR(Rocket_03_AP_F) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(Rocket_03_AP_F) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_AP_F.p3d";
     };
     // Using wrong model
-    class GVAR(R_80mm_HE) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(R_80mm_HE) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(R_60mm_HE) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(R_60mm_HE) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(R_Hydra_HE) : ThingX {
-        MACRO_DUMMY_PROPERTIES
+    class GVAR(R_Hydra_HE) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
 };
