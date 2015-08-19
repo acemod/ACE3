@@ -18,7 +18,7 @@
 private ["_vehicleActions", "_actions", "_action", "_vehicles", "_vehicle", "_needToAdd", "_magazineHelper", "_turretPath", "_magazines", "_magazine", "_icon", "_cnt"];
 params ["_target"];
 
-_vehicles = nearestObjects [_target, ["AllVehicles"], 20];
+_vehicles = nearestObjects [_target, ["AllVehicles"], 20]; // FIXME remove players
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
 
 _vehicleActions = [];
@@ -27,11 +27,16 @@ _vehicleActions = [];
     _vehicle = _x;
     _needToAdd = false;
     _action = [];
-    if !(_vehicle == _target) then {
+    if !((_vehicle == _target) || (_vehicle isKindOf "CAManBase")) then {
         _magazineHelper = [];
         {
             _turretPath = _x;
-            _magazines = _vehicle magazinesTurret _turretPath;
+            _magazines = [];
+            if (_turretPath isEqualTo [-1]) then {
+                _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
+            } else {
+                _magazines = _vehicle magazinesTurret _turretPath;
+            };
             {
                 _magazine = _x;
                 _cnt = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);

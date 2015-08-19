@@ -42,8 +42,12 @@ if (local _unit) then {
 
 if (isServer) then {
     _turretOwnerID = _target turretOwner _turretPath;
-    EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
-    _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+    if (_turretOwnerID == 0) then {
+        [_this, QUOTE(DFUNC(rearmSuccessLocal)), _target] call EFUNC(common,execRemoteFnc);
+    } else {
+        EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
+        _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+    };
 } else {
     [_this, QUOTE(DFUNC(rearmSuccess)), 1] call EFUNC(common,execRemoteFnc);
 };

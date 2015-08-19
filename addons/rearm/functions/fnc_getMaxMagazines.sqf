@@ -22,35 +22,5 @@ params ["_target", "_turretPath", "_magazine"];
 
 if (isNull _target) exitWith {0};
 
-_cfg = configFile >> "CfgVehicles" >> (typeOf _target) >> "Turrets";
-
-if (count _turretPath == 1) then {
-    _turretPath params ["_subPath"];
-
-    if (_subPath == -1) exitWith {
-        _cfg = configFile >> "CfgVehicles" >> (typeOf _target);
-    };
-
-    if (count _cfg > _subPath) then {
-        _cfg = _cfg select _subPath;
-    } else {
-        _cfg = nil;
-    };
-} else {
-    _turretPath params ["", "_subPath"];
-    if (count _cfg > 0) then {
-        _cfg = (_cfg select 0) >> "Turrets";
-        if (count _cfg > _subPath) then {
-            _cfg = _cfg select _subPath;
-        } else {
-            _cfg = nil;
-        };
-    } else {
-        _cfg = nil;
-    };
-};
-
-if !(isClass _cfg) exitWith {0};
-
-_count = {_x == _magazine} count getArray (_cfg  >> "magazines");
+_count = {_x == _magazine} count ([_target, _turretPath] call FUNC(getConfigMagazines));
 _count

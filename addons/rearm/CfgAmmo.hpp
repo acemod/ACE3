@@ -32,7 +32,7 @@ class CfgAmmo {
         GVAR(dummy) = QGVAR(Rocket_03_AP_F);
     };
     class M_PG_AT : MissileBase {
-        GVAR(caliber) = 100;
+        GVAR(caliber) = 70;
         GVAR(dummy) = QGVAR(M_PG_AT);
     };
     class Missile_AGM_02_F : MissileBase {
