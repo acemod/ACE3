@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -348,6 +348,9 @@
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
             <Polish>Wszystkie kategorie</Polish>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
+            <English>Logistics</English>
         </Key>
     </Package>
 </Project>
