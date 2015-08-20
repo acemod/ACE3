@@ -8,16 +8,53 @@ parent: wiki
 ---
 
     <div class="row">
-        <div class="large-4 medium-4 columns">
+        <div class="large-12 columns">
             <h1>Features</h1>
             <p>Overviews and details on feature usage and implementations.</p>
         </div>
-        <div class="large-8 medium-8 columns">
+    </div>
+    <div class="row">
+        <div class="large-3 medium-4 small-6 columns">
+            <h2>General</h2>
             <nav>
                 <ul>
-                    {% assign pages_list = site.pages | sort: "title" %}
+                    {% assign feature_list = site.pages | sort: "title" %}
                     {% assign group = 'feature' %}
-                    {% include pages_list %}
+                    {% assign category = 'general' %}
+                    {% include feature_list %}
+                </ul>
+            </nav>
+        </div>
+        <div class="large-3 medium-4 small-6 columns">
+            <h2>Interaction</h2>
+            <nav>
+                <ul>
+                    {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign group = 'feature' %}
+                    {% assign category = 'interaction' %}
+                    {% include feature_list %}
+                </ul>
+            </nav>
+        </div>
+        <div class="large-3 medium-4 small-6 columns">
+            <h2>Realism</h2>
+            <nav>
+                <ul>
+                    {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign group = 'feature' %}
+                    {% assign category = 'realism' %}
+                    {% include feature_list %}
+                </ul>
+            </nav>
+        </div>
+        <div class="large-3 medium-4 small-6 columns">
+            <h2>Equipment</h2>
+            <nav>
+                <ul>
+                    {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign group = 'feature' %}
+                    {% assign category = 'equipment' %}
+                    {% include feature_list %}
                 </ul>
             </nav>
         </div>
