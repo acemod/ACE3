@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HANDSIGNALS">
+        <Key ID="STR_ACE_HANDSIGNALS_NAME">
+            <English>ACE Hand Signals</English>
+            <German>ACE Hand Signale</German>
+            <Polish>ACE Sygnały ręką</Polish>
+        </Key>
+        <!-- STOP -->
+        <Key ID="STR_ACE_HANDSIGNALS_STOP">
+            <English>Stop</English>
+            <French>Stop</French>
+            <German>Stop</German>
+            <Polish>Stop</Polish>
+        </Key>
+
+        <!-- COVER -->
+        <Key ID="STR_ACE_HANDSIGNALS_COVERS">
+            <English>Get cover</English>
+            <French>À couvert</French>
+            <German>Deckung Suchen</German>
+            <Polish>Do osłon</Polish>
+        </Key>
+
+        <!-- REGROUP -->
+        <Key ID="STR_ACE_HANDSIGNALS_REGROUP">
+            <English>Rally up</English>
+            <French>Regroupement</French>
+            <German>Sammeln</German>
+            <Polish>Zbiórka</Polish>
+        </Key>
+
+        <!-- FORWARD -->
+        <Key ID="STR_ACE_HANDSIGNALS_FORWARD">
+            <English>Move forward</English>
+            <French>En avant</French>
+            <German>Vorwärts Bewegen</German>
+            <Polish>Naprzód</Polish>
+        </Key>
+
+        <!-- ENGAGE -->
+        <Key ID="STR_ACE_HANDSIGNALS_ENGAGE">
+            <English>Engage</English>
+            <French>Engager</French>
+            <Polish>Atak</Polish>
+        </Key>
+
+        <!-- POINT -->
+        <Key ID="STR_ACE_HANDSIGNALS_POINT">
+            <English>Point</English>
+            <French>Pointer</French>
+            <German>Zeigen</German>
+            <Polish>Wskaż</Polish>
+        </Key>
+
+        <!-- HOLD -->
+        <Key ID="STR_ACE_HANDSIGNALS_HOLD">
+            <English>Hold</English>
+            <French>Tenir</French>
+            <German>Anhalten</German>
+            <Polish>Wstrzymać</Polish>
+        </Key>
+
+        <!-- WARNING -->
+        <Key ID="STR_ACE_HANDSIGNALS_WARNINGS">
+            <English>Warning</English>
+            <French>Attention</French>
+            <German>Achtung</German>
+            <Polish>Uwaga</Polish>
+        </Key>
+        <!-- FREE LOOK -->
+        <Key ID="STR_ACE_HANDSIGNALS_FREELOOK">
+            <English> &#43; freelook</English>
+            <French> &#43; vue libre</French>
+            <German> &#43; Frei Blick</German>
+            <Polish> &#43; rozglądanie się</Polish>
+        </Key>
+		<!-- Display Name for ACE Interaction -->
+        <Key ID="STR_ACE_HANDSIGNALS_DISPLAYNAME">
+            <English>Extra Gestures</English>
+            <German>Extra Gesten</German>
+            <Polish>Gesty dodatkowe</Polish>
+        </Key>
+    </Package>
+</Project>

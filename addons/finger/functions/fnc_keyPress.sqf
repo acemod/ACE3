@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers", "_nearbyMen"];
+private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers", "_nearbyMen", "_gesture"];
 
 if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
@@ -57,6 +57,12 @@ TRACE_1("sending finger to",_sendFingerToPlayers);
 
 [QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call EFUNC(common,targetEvent);
 
-ACE_player playActionNow "GestureGo";
+_gesture = if (["ace_handSignals"] call EFUNC(common,isModLoaded)) then {
+    ["GestureGo","ace_handSignals_POINT"] select random 1;
+} else {
+    "GestureGo"
+};
+
+ACE_player playActionNow _gesture
 
 true
