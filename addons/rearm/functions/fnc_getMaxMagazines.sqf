@@ -18,9 +18,9 @@
 #include "script_component.hpp"
 
 private ["_count", "_cfg"];
-params ["_target", "_turretPath", "_magazine"];
+params ["_target", "_turretPath", "_magazineClass"];
 
 if (isNull _target) exitWith {0};
 
-_count = {_x == _magazine} count ([_target, _turretPath] call FUNC(getConfigMagazines));
+_count = {_x == _magazineClass} count ([_target, _turretPath] call FUNC(getConfigMagazines));
 _count

@@ -20,4 +20,4 @@ params ["_unit"];
 if (!local _unit) exitWith {};
 
 _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
-_unit setVariable [QGVAR(carriedMagazine), nil];
+[_unit, false, false] call FUNC(dropAmmo);

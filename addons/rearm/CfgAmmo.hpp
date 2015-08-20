@@ -96,7 +96,7 @@ class CfgAmmo {
 
     class GrenadeBase;
     class G_40mm_HE : GrenadeBase {
-        GVAR(caliber) = 40;
+        GVAR(caliber) = 39;
     };
 
     class ShellBase;
@@ -154,7 +154,7 @@ class CfgAmmo {
     };
 
     class CMflareAmmo : BulletBase {
-        GVAR(caliber) = 40;
+        GVAR(caliber) = 39;
     };
 
     class SubmunitionBase;

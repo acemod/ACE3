@@ -12,16 +12,33 @@
             }; \
         };
 
-#define MACRO_REARM_PICKUPAMMO \
+#define MACRO_REARM_TRUCK_ACTIONS \
         class ACE_Actions : ACE_Actions { \
             class ACE_MainActions : ACE_MainActions { \
-                class GVAR(PickUpAmmo) { \
-                    displayName = CSTRING(PickUpAmmo); \
+                class GVAR(Rearm) { \
+                    displayName = CSTRING(Rearm); \
                     distance = REARM_ACTION_DISTANCE; \
-                    condition = QUOTE(_this call FUNC(canPickUpAmmo)); \
-                    insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
-                    exceptions[] = {"isNotInside"}; \
+                    condition = "true"; \
+                    statement = ""; \
+                    showDisabled = 0; \
+                    priority = 2; \
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    class GVAR(TakeAmmo) { \
+                        displayName = CSTRING(TakeAmmo); \
+                        distance = REARM_ACTION_DISTANCE; \
+                        condition = QUOTE(_this call FUNC(canTakeAmmo)); \
+                        insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
+                        exceptions[] = {"isNotInside"}; \
+                        icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    }; \
+                    class GVAR(StoreAmmo) { \
+                        displayName = CSTRING(StoreAmmo); \
+                        distance = REARM_ACTION_DISTANCE; \
+                        condition = QUOTE(_this call FUNC(canStoreAmmo)); \
+                        statement = QUOTE(_this call FUNC(storeAmmo)); \
+                        exceptions[] = {"isNotInside"}; \
+                        icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    }; \
                 }; \
             }; \
         };
@@ -100,18 +117,18 @@ class CfgVehicles {
     class Truck_03_base_F : Truck_F {};
     class O_Truck_03_ammo_F : Truck_03_base_F {
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class Truck_02_base_F : Truck_F {};
     class Truck_02_Ammo_base_F : Truck_02_base_F {};
     class I_Truck_02_ammo_F : Truck_02_Ammo_base_F {
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
     class O_Truck_02_Ammo_F : Truck_02_Ammo_base_F {
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class Truck_01_base_F : Truck_F {};
@@ -119,7 +136,7 @@ class CfgVehicles {
     class B_Truck_01_mover_F : B_Truck_01_transport_F {};
     class B_Truck_01_ammo_F : B_Truck_01_mover_F {
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class Helicopter_Base_F : Helicopter {};
@@ -127,14 +144,14 @@ class CfgVehicles {
     class Heli_Transport_04_base_F : Helicopter_Base_H {};
     class O_Heli_Transport_04_ammo_F : Heli_Transport_04_base_F {
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Land_Pod_Heli_Transport_04_base_F  : StaticWeapon {};
+    class Land_Pod_Heli_Transport_04_base_F : StaticWeapon {};
     class Land_Pod_Heli_Transport_04_ammo_F : Land_Pod_Heli_Transport_04_base_F {
         XEH_ENABLED;
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class ReammoBox_F;
@@ -152,7 +169,7 @@ class CfgVehicles {
     class B_Slingload_01_Ammo_F : Slingload_01_Base_F {
         XEH_ENABLED;
         transportAmmo = 0;
-        MACRO_REARM_PICKUPAMMO
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
 
@@ -163,8 +180,27 @@ class CfgVehicles {
         displayName = QGVAR(dummy_obj);
         scope = 2;
         scopeCurator = 2;
-        // TODO add pickup code
         model = "\A3\Weapons_F\AmmoBoxes\AmmoBox_F.p3d";
+        EGVAR(cargo,size) = 1;
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(Rearm);
+                distance = REARM_ACTION_DISTANCE;
+                condition = "true";
+                statement = "";
+                showDisabled = 0;
+                priority = 2;
+                icon = PATHTOF(ui\icon_rearm_interact.paa);
+                class GVAR(PickUpAmmo) {
+                    displayName = CSTRING(PickUpAmmo);
+                    distance = REARM_ACTION_DISTANCE;
+                    condition = QUOTE(_this call FUNC(canTakeAmmo));
+                    statement = QUOTE(_this call FUNC(grabAmmo));
+                    exceptions[] = {"isNotInside"};
+                    icon = PATHTOF(ui\icon_rearm_interact.paa);
+                };
+            };
+        };
     };
     class GVAR(Bo_GBU12_LGB) : GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";

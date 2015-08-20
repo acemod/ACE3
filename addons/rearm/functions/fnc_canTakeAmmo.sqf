@@ -10,7 +10,7 @@
  * Can Pick Up Ammo <BOOL>
  *
  * Example:
- * [player, tank] call ace_rearm_fnc_canPickUpAmmo
+ * [player, tank] call ace_rearm_fnc_canTakeAmmo
  *
  * Public: No
  */
@@ -18,4 +18,8 @@
 
 params ["_target", "_unit"];
 
-!(isNull _unit || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {(_target distance _unit) > REARM_ACTION_DISTANCE})
+!(isNull _unit ||
+    {!(_unit isKindOf "CAManBase")} ||
+    {!local _unit} ||
+    {(_target distance _unit) > REARM_ACTION_DISTANCE} ||
+    {!isNull (_unit getVariable [QGVAR(dummy), objNull])})

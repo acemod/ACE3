@@ -18,7 +18,7 @@
 private ["_vehicleActions", "_actions", "_action", "_vehicles", "_vehicle", "_needToAdd", "_magazineHelper", "_turretPath", "_magazines", "_magazine", "_icon", "_cnt"];
 params ["_target"];
 
-_vehicles = nearestObjects [_target, ["AllVehicles"], 20]; // FIXME remove players
+_vehicles = nearestObjects [_target, ["AllVehicles"], 20];
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
 
 _vehicleActions = [];
@@ -44,7 +44,7 @@ _vehicleActions = [];
                     _action = [_magazine,
                         getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
                         getText(configFile >> "CfgMagazines" >> _magazine >> "picture"),
-                        {_this call FUNC(pickUpAmmo)},
+                        {_this call FUNC(takeAmmo)},
                         {true},
                         {},
                         [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
@@ -56,7 +56,7 @@ _vehicleActions = [];
                         _action = [_magazine,
                             getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
                             getText(configFile >> "CfgMagazines" >> _magazine >> "picture"),
-                            {_this call FUNC(pickUpAmmo)},
+                            {_this call FUNC(takeAmmo)},
                             {true},
                             {},
                             [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);

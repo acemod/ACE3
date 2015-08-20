@@ -28,25 +28,17 @@ _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClas
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazineClass, _numRounds];
 
 if (local _unit) then {
-    [_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus);
-    _dummy = _unit getVariable [QGVAR(dummy), objNull];
-    if !(isNull _dummy) then {
-        detach _dummy;
-        deleteVehicle _dummy;
-    };
-    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm);
-    _unit selectWeapon _weaponSelect;
-    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
+    [_unit, true, true] call FUNC(dropAmmo);
 };
 
 if (isServer) then {
     _turretOwnerID = _target turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
-        [_this, QUOTE(DFUNC(rearmSuccessLocal)), _target] call EFUNC(common,execRemoteFnc);
+        [_this, QFUNC(rearmSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
     } else {
         EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
         _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
     };
 } else {
-    [_this, QUOTE(DFUNC(rearmSuccess)), 1] call EFUNC(common,execRemoteFnc);
+    [_this, QFUNC(rearmSuccess), 1] call EFUNC(common,execRemoteFnc);
 };

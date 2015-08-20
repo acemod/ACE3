@@ -10,7 +10,7 @@
  * Magazine classes in TurretPath <ARRAY>
  *
  * Example:
- * [vehicle, [0]] call ace_rearm_fnc_getMaxMagazines
+ * [vehicle, [0]] call ace_rearm_fnc_getConfigMagazines
  *
  * Public: No
  */

@@ -34,7 +34,7 @@ if (_turretPath isEqualTo [-1]) then {
     TRACE_7("Rearmed Turret",_vehicle,_turretPath,_currentMagazines,_maxMagazines,_currentRounds,_maxRounds,_magazine);
 
     if (_turretPath isEqualTo [-1] && _currentMagazines == 0) then {
-        // On driver, the an empty magazine is still there, but is not returned by magazinesTurret
+        // On driver, the empty magazine is still there, but is not returned by magazinesTurret
         _currentMagazines =  _currentMagazines + 1;
     };
     if (_currentMagazines < _maxMagazines) then {

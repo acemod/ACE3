@@ -40,13 +40,29 @@
             <English>Rearming %1 ...</English>
             <German>Munitioniere %1 auf ...</German>
         </Key>
-        <Key ID="STR_ACE_Rearm_PickUpAction">
+        <Key ID="STR_ACE_Rearm_TakeAction">
             <English>Taking %1 for %2 ...</English>
             <German>Nehme %1 für %2 ...</German>
         </Key>
+        <Key ID="STR_ACE_Rearm_TakeAmmo">
+            <English>Take ammo</English>
+            <German>Munition nehmen</German>
+        </Key>
         <Key ID="STR_ACE_Rearm_PickUpAmmo">
             <English>Pick up ammo</English>
-            <German>Munition nehmen</German>
+            <German>Munition aufnehmen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmo">
+            <English>Store ammo</English>
+            <German>Munition verstauen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmoAction">
+            <English>Storing %1 in %2 ...</English>
+            <German>Verstaue %1 in %2 ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_GrabAction">
+            <English>Picking up ammo ...</English>
+            <German>Nehme Munition ...</German>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
