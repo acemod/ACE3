@@ -17,22 +17,31 @@
  */
 #include "script_component.hpp"
 
-private ["_objects"];
 params ["_unit", "_target","_vehicle"];
 
-if (isNull _target) then {
-    _objects = attachedObjects _unit;
-    _objects = [_objects, {_this getVariable [QGVAR(isHandcuffed), false]}] call EFUNC(common,filter);
-    if ((count _objects) > 0) then {_target = _objects select 0;};
+if ((isNull _target) && {_unit getVariable [QGVAR(isEscorting), false]}) then {
+    //Looking at a vehicle while escorting, get target from attached objects:
+    {
+        if (_x getVariable [QGVAR(isHandcuffed), false]) exitWith {
+            _target = _x;
+        };
+    } forEach (attachedObjects _unit);
 };
+if ((isNull _target) || {(vehicle _target) != _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {false};
 
 if (isNull _vehicle) then {
-    _objects = nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship"], 10];
-    if ((count _objects) > 0) then {_vehicle = _objects select 0;};
+    //Looking at a captive unit, search for nearby vehicles with valid seats:
+    {
+        // if (([_x] call FUNC(findEmptyNonFFVCargoSeat)) != -1) exitWith {
+        if ((_x emptyPositions "cargo") > 0) exitWith {
+            _vehicle = _x;
+        };
+    } forEach (nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship"], 10]);
+} else {
+    // if (([_vehicle] call FUNC(findEmptyNonFFVCargoSeat)) == -1) then {
+    if ((_vehicle emptyPositions "cargo") == 0) then {
+        _vehicle = objNull;
+    };
 };
 
-(!isNull _target)
-&& {!isNull _vehicle}
-&& {_unit getVariable [QGVAR(isEscorting), false]}
-&& {_target getVariable [QGVAR(isHandcuffed), false]}
-&& {([_vehicle] call FUNC(findEmptyNonFFVCargoSeat)) != -1}
+(!isNull _vehicle)

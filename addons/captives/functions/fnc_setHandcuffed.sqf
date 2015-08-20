@@ -48,6 +48,9 @@ if (_state) then {
         if ((vehicle _unit) == _unit) then {
             [_unit] call EFUNC(common,fixLoweredRifleAnimation);
             [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+        } else {
+            [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
+            [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
         };
 
         //Adds an animation changed eh
@@ -63,10 +66,11 @@ if (_state) then {
                     [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
                 };
             } else {
+
                 // _turretPath = [];
                 // {
-                    // _x params ["_xUnit", "", "", "_xTurretPath"];
-                    // if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
+                // _x params ["_xUnit", "", "", "_xTurretPath"];
+                // if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
                 // } forEach (fullCrew (vehicle _unit));
                 // TRACE_1("turret Path",_turretPath);
                 // if (_turretPath isEqualTo []) exitWith {};
@@ -75,6 +79,10 @@ if (_state) then {
                 // TRACE_1("reseting to",_gunnerAction);
                 // [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
                 // [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+
+
+                [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
+                [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
             };
         }];
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
