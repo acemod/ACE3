@@ -3,7 +3,7 @@
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
             <English>Refuel Settings</English>
-            <German>Betankung</German>
+            <German>Betankungseinst.</German>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_DisplayName">
             <English>Flow Rate</English>
@@ -12,14 +12,6 @@
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
             <German>Wie schnell soll ein Fahrzeug aufgetankt sein?</German>
-        </Key>
-        <Key ID="STR_ACE_Refuel_RefuelSettings_basic">
-            <English>Fast</English>
-            <German>Schnell</German>
-        </Key>
-        <Key ID="STR_ACE_Refuel_RefuelSettings_advanced">
-            <English>Realistic</English>
-            <German>Realistisch</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
            <English>Refuel</English>
@@ -88,6 +80,10 @@
         <Key ID="STR_ACE_Refuel_Hint_Stopped">
             <English>Fueling stopped</English>
             <German>Betankung angehalten</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_Started">
+            <English>Fueling started</English>
+            <German>Betankung begonnen</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>

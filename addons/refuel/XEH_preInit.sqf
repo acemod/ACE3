@@ -5,7 +5,7 @@ ADDON = false;
 PREP(canCheckFuel);
 PREP(canConnectNozzle);
 PREP(canDisconnect);
-PREP(canRefuel);
+PREP(canReturnNozzle);
 PREP(canTakeNozzle);
 PREP(canTurnOff);
 PREP(canTurnOn);

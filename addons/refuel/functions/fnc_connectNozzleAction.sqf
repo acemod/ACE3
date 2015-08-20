@@ -1,13 +1,13 @@
 /*
- * Author: GitHawk et.al
- * Calculates a connection for tilting
+ * Author: GitHawk et.al.
+ * Calculates a connection for refueling.
  * With code from ace_attach
  *
  * Arguments:
- * 0: The player <OBJECT>
- * 1: The target <OBJECT>
- * 2: The visual position <ARRAY>
- * 3: The nozzle <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Visual Position <ARRAY>
+ * 3: Nozzle <OBJECT>
  *
  * Return Value:
  * None
@@ -74,18 +74,14 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
 // TODO put animation and delayed connect ?
 
 _unit setVariable [QGVAR(nozzle), nil];
-detach _nozzle;
-[_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-
-_weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel);
-_unit selectWeapon _weaponSelect;
-_unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 _unit setVariable [QGVAR(isRefueling), false];
+[_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+REFUEL_UNHOLSTER_WEAPON
 
+detach _nozzle;
 _nozzle attachTo [_target, _endPosTestOffset];
 _nozzle setVariable [QGVAR(sink), _target, true];
-_nozzle setVariable [QGVAR(isRefueling), true, true];
 _nozzle setVariable [QGVAR(isConnected), true, true];
 _target setVariable [QGVAR(nozzle), _nozzle, true];
 
-[_unit, _target, _nozzle] call FUNC(refuel);
+[_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);

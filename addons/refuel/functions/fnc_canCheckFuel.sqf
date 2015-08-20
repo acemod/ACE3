@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Fuel Truck/Station <OBJECT>
  *
  * Return Value:
  * Can Check Fuel <BOOL>

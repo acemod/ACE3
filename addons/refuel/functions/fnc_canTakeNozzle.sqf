@@ -3,14 +3,14 @@
  * Check if a unit can take a fuel nozzle
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Fuel Station or Nozzle <OBJECT>
  *
  * Return Value:
  * Can connect <BOOL>
  *
  * Example:
- * [player, target] call ace_refuel_fnc_canTakeNozzle
+ * [player, nozzle] call ace_refuel_fnc_canTakeNozzle
  *
  * Public: No
  */

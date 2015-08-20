@@ -4,6 +4,5 @@ class ACE_Settings {
         description = CSTRING(RefuelSettings_speed_Description);
         value = 1;
         typeName = "SCALAR";
-        values[] = {CSTRING(RefuelSettings_basic), CSTRING(RefuelSettings_advanced)};
     };
 };

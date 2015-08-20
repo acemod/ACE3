@@ -16,9 +16,16 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
+                class GVAR(Connect) { \
+                    displayName = CSTRING(Connect); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
@@ -52,27 +59,6 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = PATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
-                class GVAR(TurnOn) { \
-                    displayName = CSTRING(TurnOn); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
-                    statement = QUOTE([_target] call DFUNC(turnOn)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(Disconnect) { \
-                    displayName = CSTRING(Disconnect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(TurnOff) { \
-                    displayName = CSTRING(TurnOff); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
-                    statement = QUOTE([_target] call DFUNC(turnOff)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
             }; \
         }; \
     };
@@ -80,12 +66,41 @@
 #define MACRO_NOZZLE_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
-            displayName = CSTRING(TakeNozzle); \
-            distance = 2; \
-            condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-            statement = QUOTE([ARR_3(_player,_target,_target)] call FUNC(TakeNozzle)); \
-            exceptions[] = {"isNotInside"}; \
+            displayName = CSTRING(Refuel); \
+            distance = 3; \
+            condition = "true"; \
+            statement = ""; \
+            showDisabled = 0; \
+            priority = 2; \
             icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            class GVAR(PickUpNozzle) { \
+                displayName = CSTRING(TakeNozzle); \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
+                statement = QUOTE([ARR_3(_player,_target,_target)] call FUNC(TakeNozzle)); \
+                exceptions[] = {"isNotInside"}; \
+                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            }; \
+            class GVAR(TurnOn) { \
+                displayName = CSTRING(TurnOn); \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
+                exceptions[] = {"isNotInside"}; \
+                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            }; \
+            class GVAR(TurnOff) { \
+                displayName = CSTRING(TurnOff); \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
+                exceptions[] = {"isNotInside"}; \
+                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            }; \
+            class GVAR(Disconnect) { \
+                displayName = CSTRING(Disconnect); \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
+                exceptions[] = {"isNotInside"}; \
+                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            }; \
         }; \
     };
 
@@ -106,17 +121,7 @@ class CfgVehicles {
                 displayName = CSTRING(RefuelSettings_speed_DisplayName);
                 description = CSTRING(RefuelSettings_speed_Description);
                 typeName = "NUMBER";
-                class values {
-                    class fast {
-                        name = CSTRING(RefuelSettings_basic);
-                        value = 10;
-                    };
-                    class realistic  {
-                        name = CSTRING(RefuelSettings_advanced);
-                        value = 1;
-                        default = 1;
-                    };
-                };
+                defaultValue = 10;
             };
         };
     };
@@ -163,6 +168,7 @@ class CfgVehicles {
 
     class Tank : LandVehicle {
         MACRO_CONNECT_ACTIONS
+        GVAR(flowRate) = 4;
     };
 
     class StaticWeapon : LandVehicle {
@@ -266,6 +272,7 @@ class CfgVehicles {
 
     class Truck_F : Car_F {
         GVAR(fuelCapacity) = 400;
+        GVAR(flowRate) = 2;
     };
 
     class Truck_01_base_F: Truck_F {
@@ -499,7 +506,7 @@ class CfgVehicles {
         XEH_ENABLED;
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,-1}};
+        GVAR(hooks[]) = {{0,0,-0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
@@ -511,7 +518,7 @@ class CfgVehicles {
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
-    /*  // Barrels from rhs?
+    /* // Barrels found in config  \
         BarrelHelper : Misc_thing 100
         BarrelBase : BarrelHelper 100
         Barrels : BarrelBase 400

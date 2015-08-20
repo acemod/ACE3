@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Module for adjusting the refuel settings
+ * Module for adjusting the refuel settings.
  *
  * Arguments:
  * 0: The module logic <LOGIC>

@@ -3,24 +3,25 @@
  * Check if a unit can turn off a fuel nozzle
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The object holding the nozzle <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Nozzle <OBJECT>
  *
  * Return Value:
  * Can turn off <BOOL>
  *
  * Example:
- * [player, truck] call ace_refuel_fnc_canTurnOff
+ * [player, nozzle] call ace_refuel_fnc_canTurnOff
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_nozzleHolder"];
+params ["_unit", "_nozzle"];
 
 if (isNull _unit  ||
+    {isNull _nozzle} ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
-    {(_nozzleHolder distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
+    {(_nozzle distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
-!(isNull (_nozzleHolder getVariable [QGVAR(nozzle), objNull])) && {(_nozzleHolder getVariable QGVAR(nozzle)) getVariable [QGVAR(isRefueling), false]}
+(_nozzle getVariable [QGVAR(isRefueling), false])

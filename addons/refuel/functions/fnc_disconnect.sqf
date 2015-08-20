@@ -1,10 +1,10 @@
 /*
  * Author: GitHawk
- * Disconnect a fuel nozzle
+ * Disconnect a fuel nozzle.
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The object holding the nozzle <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Nozzle <OBJECT>
  *
  * Return Value:
  * None
@@ -16,14 +16,15 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle"];
-params ["_unit", "_nozzleHolder"];
+private ["_sink"];
+params ["_unit", "_nozzle"];
 
-_nozzle = _nozzleHolder getVariable QGVAR(nozzle);
+_sink = _nozzle getVariable [QGVAR(sink), objNull];
+if (isNull _sink) exitWith {};
 
-detach _nozzle;
+_sink setVariable [QGVAR(nozzle), objNull, true];
 _nozzle setVariable [QGVAR(sink), objNull, true];
-_nozzleHolder setVariable [QGVAR(nozzle), objNull, true];
+REFUEL_DROP_NOZZLE(_nozzle)
 _unit setVariable [QGVAR(nozzle), _nozzle];
 
-[_unit, _nozzleHolder, _nozzle] call FUNC(takeNozzle);
+[_unit, objNull, _nozzle] call FUNC(takeNozzle);

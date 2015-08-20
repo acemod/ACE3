@@ -1,11 +1,11 @@
 /*
  * Author: GitHawk
- * Set the remaining fuel amount
+ * Set the remaining fuel amount.
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
- * 2: The amout <NUMBER>
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Amount (in liters)<NUMBER>
  *
  * Return Value:
  * None

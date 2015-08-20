@@ -1,11 +1,12 @@
 /*
  * Author: GitHawk
- * Refuels the vehicle
+ * Refuels the vehicle.
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
- * 2: The nozzle <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Nozzle <OBJECT>
+ * 3: Connection Point <OBJECT>
  *
  * Return Value:
  * None
@@ -15,35 +16,28 @@
 
 #include "script_component.hpp"
 
-private ["_sink", "_rate", "_maxFuel"];
-params ["_unit", "_target", "_nozzle"];
+#define PFH_STEPSIZE 0.1
 
-_sink = _nozzle getVariable [QGVAR(sink), objNull];
-if (isNull _sink) exitWith {};
+private ["_rate", "_maxFuel"];
+params ["_unit", "_target", "_nozzle", "_connectToPoint"];
 
-_rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate);
+_rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate) * PFH_STEPSIZE;
 _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
 
 [{
-    private ["_source", "_sink", "_tooFar", "_fuelInSource", "_fuelInSink", "_finished", "_fueling"];
+    private ["_source", "_tooFar", "_fuelInSource", "_fuelInSink", "_finished", "_fueling"];
     params ["_args", "_pfID"];
-    _args params ["_unit", "_nozzle", "_rate", "_startFuel", "_maxFuel"];
+    _args params ["_source", "_sink", "_unit", "_nozzle", "_rate", "_startFuel", "_maxFuel", "_connectFromPoint", "_connectToPoint"];
 
     _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
-
-    _source = _nozzle getVariable [QGVAR(source), objNull];
-    _sink = _nozzle getVariable [QGVAR(sink), objNull];
-    if (isNull _source ||
-            {!alive _source} ||
-            {isNull _sink} ||
-            {!alive _sink}) exitWith {
+    if (!alive _source || {!alive _sink}) exitWith {
         REFUEL_DROP_NOZZLE(_nozzle)
         _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
-    _tooFar = (_sink distance (_source modelToWorld (_nozzle getVariable [QGVAR(attachPos), [0,0,0]]))) > 10;
+    _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > 10;
     if (_tooFar) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
 
@@ -84,10 +78,18 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         [_unit, _source, _fuelInSource] call FUNC(setFuel);
     };
 
-    if (_finished || {!_fueling}) exitWith {
-        if !(_fueling) then {
-            [LSTRING(Hint_Stopped), 2, _unit] call EFUNC(common,displayTextStructured);
-        };
+    if (_finished) exitWith {
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };
-}, 1, [_unit, _nozzle, _rate, fuel _target, _maxFuel]] call cba_fnc_addPerFrameHandler;
+},
+PFH_STEPSIZE,
+[_nozzle getVariable QGVAR(source),
+    _target,
+    _unit,
+    _nozzle,
+    _rate,
+    fuel _target,
+    _maxFuel,
+    _nozzle getVariable [QGVAR(attachPos), [0,0,0]],
+    _connectToPoint]
+] call cba_fnc_addPerFrameHandler;

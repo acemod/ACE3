@@ -3,14 +3,14 @@
  * Check if a unit can connect a fuel nozzle
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
  *
  * Return Value:
  * Can Connect Nozzle <BOOL>
  *
  * Example:
- * [unit] call ace_refuel_fnc_canConnectNozzle
+ * [unit, tank] call ace_refuel_fnc_canConnectNozzle
  *
  * Public: No
  */
@@ -21,4 +21,6 @@ params ["_unit", "_target"];
 
 _nozzle = _unit getVariable QGVAR(nozzle);
 
-!(isNil "_nozzle" || {(_target distance _unit) > REFUEL_ACTION_DISTANCE})
+!(isNil "_nozzle" ||
+    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
+    {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines

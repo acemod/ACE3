@@ -3,7 +3,7 @@
  * Returns the nozzle back to source vehicle.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
@@ -33,5 +33,8 @@ _unit setVariable [QGVAR(isRefueling), false];
 _target setVariable [QGVAR(isConnected), false, true];
 ropeDestroy (_nozzle getVariable QGVAR(rope));
 deleteVehicle _nozzle;
+
+_target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
+_target setVariable [QGVAR(engineHit), nil, true];
 
 true

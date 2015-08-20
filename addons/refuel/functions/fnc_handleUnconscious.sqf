@@ -23,7 +23,7 @@ if (!local _unit || {!_isUnconscious}) exitWith {};
 private "_nozzle";
 
 [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-_nozzle = _unit setVariable [QGVAR(nozzle), objNull];
+_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if !(isNull _nozzle) then {
     REFUEL_UNIT_DROP_NOZZLE
 };

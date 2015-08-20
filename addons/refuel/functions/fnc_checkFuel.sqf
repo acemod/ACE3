@@ -3,8 +3,8 @@
  * Get the remaining fuel amount
  *
  * Arguments:
- * 0: The unit <OBJECT>
- * 1: The target <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Fuel Truck <OBJECT>
  *
  * Return Value:
  * None
