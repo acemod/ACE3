@@ -18,10 +18,10 @@
 GVAR(EffectsActive) = false;
 GVAR(PostProcess) ppEffectEnable false;
 
-if (!isNull(GLASSDISPLAY)) then {
+if !(isNull GLASSDISPLAY) then {
     GLASSDISPLAY closeDisplay 0;
 };
 
-call FUNC(removeDirtEffect);
-call FUNC(removeRainEffect);
-call FUNC(removeDustEffect);
+[] call FUNC(removeDirtEffect);
+[] call FUNC(removeRainEffect);
+[] call FUNC(removeDustEffect);

@@ -15,14 +15,16 @@
  */
 #include "script_component.hpp"
 
-if (cameraOn != ace_player || {call FUNC(externalCamera)}) exitWith{false};
-private ["_dirtImage", "_applied", "_effects"];
-_effects = GETGLASSES(ace_player);
-_effects set [DIRT, true];
-SETGLASSES(ace_player,_effects);
+_unit = GETUNIT;
 
-if ([ace_player] call FUNC(isGogglesVisible)) then{
-    _dirtImage = getText(ConfigFile >> "CfgGlasses" >> (goggles ace_player) >> "ACE_OverlayDirt");
+if (cameraOn != _unit || {call FUNC(externalCamera)}) exitWith {false};
+private ["_dirtImage", "_applied", "_effects"];
+_effects = GETGLASSES(_unit);
+_effects set [DIRT, true];
+SETGLASSES(_unit,_effects);
+
+if ([_unit] call FUNC(isGogglesVisible)) then {
+    _dirtImage = getText (ConfigFile >> "CfgGlasses" >> (goggles _unit) >> "ACE_OverlayDirt");
     if (_dirtImage != "") then {
         100 cutRsc["RscACE_GogglesEffects", "PLAIN",0.1, false];
 

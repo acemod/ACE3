@@ -3,57 +3,63 @@
  * Checks whether the player is in the downwash of a helicopter and handles applying effects of that.
  *
  * Arguments:
- * None
+ * 0: Arguments <ANY>
+ * 1: PFH handle <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["ACE_Goggles_RotorWash", "OnEachFrame", "call ace_goggles_fnc_OnEachFrame;"] call BIS_fnc_addStackedEventHandler;
+ * [ace_goggles_fnc_OnEachFrame, 0] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */
+
 #include "script_component.hpp"
-if (isNull(ace_player)) exitWith {};
+
+private ["_unit"];
+_unit = GETUNIT;
+
+if (isNull _unit) exitWith {};
+
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
 if (GVAR(FrameEvent) select 0) exitWith {
-    if (vehicle ace_player != ace_player && {!([ace_player] call EFUNC(common,isTurnedOut))}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };
-    GVAR(FrameEvent) set [1, ([ace_player] call FUNC(isInRotorWash))];
+    if ((vehicle _unit != _unit) && {!([_unit] call EFUNC(common,isTurnedOut))}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };
+    GVAR(FrameEvent) set [1, ([_unit] call FUNC(isInRotorWash))];
 };
 private ["_rotorWash","_safe"];
 _rotorWash = GVAR(FrameEvent) select 1;
 _safe = false;
 if !(_rotorWash select 0) exitWith {
-    if (GVAR(PostProcessEyes_Enabled)) then {
-        GVAR(PostProcessEyes_Enabled) = false;
-        if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-            [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-            GVAR(DustHandler) = -1;
+    if (GVAR(postProcessEyes_Enabled)) then {
+        GVAR(postProcessEyes_Enabled) = false;
+        if ((GETVAR(_unit,GVAR(dustHandler),-1)) != -1) then {
+            [GETVAR(_unit,GVAR(dustHandler),-1)] call CBA_fnc_removePerFrameHandler;
+            SETVAR(_unit,GVAR(dustHandler),-1);
         };
-        GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
-        GVAR(PostProcessEyes) ppEffectCommit 2;
-        GVAR(DustHandler) = [{
-            GVAR(PostProcessEyes) ppEffectEnable false;
-            GVAR(DustHandler) = -1;
+        GVAR(postProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
+        GVAR(postProcessEyes) ppEffectCommit 2;
+        [{
+            GVAR(postProcessEyes) ppEffectEnable false;
         }, [], 2, 0.5] call EFUNC(common,waitAndExecute);
     };
 };
-if ((headgear ace_player) != "") then {
-    _safe = (getNumber (ConfigFile >> "CfgWeapons" >> (headgear ace_player) >> "ACE_Protection") == 1);
+if ((headgear _unit) != "") then {
+    _safe = (getNumber (ConfigFile >> "CfgWeapons" >> (headgear _unit) >> "ACE_Protection") == 1);
 };
 if !(_safe) then {
-    if !([ace_player] call FUNC(isGogglesVisible)) exitWith{};
-    if (GETDUSTT(DAMOUNT) < 2) then {
-        if (!GETDUSTT(DACTIVE)) then {
-            SETDUST(DACTIVE,true);
-            call FUNC(ApplyDust);
+    if !([_unit] call FUNC(isGogglesVisible)) exitWith {};
+    if (GETDUSTT(_unit,DAMOUNT) < 2) then {
+        if (!GETDUSTT(_unit,DACTIVE)) then {
+            SETDUST(_unit,DACTIVE,true);
+            [] call FUNC(applyDust);
         } else {
             if ((_rotorWash select 1) > 0.5) then {
-                call FUNC(ApplyDust);
+                [] call FUNC(applyDust);
             };
         };
     };
-    _safe = (getNumber (ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Protection") == 1);
+    _safe = (getNumber (ConfigFile >> "CfgGlasses" >> (goggles _unit) >> "ACE_Protection") == 1);
 };
 if (_safe) exitWith {};
 if ((_rotorWash select 1) <= 15) then {
@@ -65,14 +71,14 @@ if ((_rotorWash select 1) <= 15) then {
         _scale = 0.1;
     };
     _scale = 1 - _scale;
-    if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-        [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-        GVAR(DustHandler) = -1;
+    if ((GETVAR(_unit,GVAR(dustHandler),-1)) != -1) then {
+        [GETVAR(_unit,GVAR(dustHandler),-1)] call CBA_fnc_removePerFrameHandler;
+        SETVAR(_unit,GVAR(dustHandler),-1);
     };
-    if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
-        GVAR(PostProcessEyes_Enabled) = true;
-        GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [_scale,_scale,_scale,_scale],[1,1,1,0]];
-        GVAR(PostProcessEyes) ppEffectCommit 0.5;
-        GVAR(PostProcessEyes) ppEffectEnable true;
+    if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
+        GVAR(postProcessEyes_Enabled) = true;
+        GVAR(postProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [_scale,_scale,_scale,_scale],[1,1,1,0]];
+        GVAR(postProcessEyes) ppEffectCommit 0.5;
+        GVAR(postProcessEyes) ppEffectEnable true;
     };
 };

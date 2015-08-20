@@ -14,46 +14,61 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-if (call FUNC(ExternalCamera)) exitWith {};
-if ([ace_player] call FUNC(isGogglesVisible)) exitWith {
-    100 cutRsc["RscACE_GogglesEffects", "PLAIN",2,false];
-    (uiNamespace getVariable ["ACE_Goggles_DisplayEffects", displayNull] displayCtrl 10662) ctrlSetText format[getText(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_DustPath"), GETDUSTT(DAMOUNT)+1];
-    SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)+1,0,1));
-    SETDUST(DBULLETS,0);
+if ([] call FUNC(ExternalCamera)) exitWith {};
+
+_unit = GETUNIT;
+
+if ([_unit] call FUNC(isGogglesVisible)) exitWith {
+    100 cutRsc ["RscACE_GogglesEffects","PLAIN",2,false];
+    ((GETUVAR(GVAR(displayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> (goggles _unit) >> "ACE_DustPath"), GETDUSTT(_unit,DAMOUNT)+1];
+    SETDUST(_unit,DAMOUNT,CLAMP(GETDUSTT(_unit,DAMOUNT)+1,0,1));
+    SETDUST(_unit,DBULLETS,0);
 };
 
-if (GETVAR(ace_player,ACE_EyesDamaged,false)) exitWith {SETDUST(DACTIVE,false);SETDUST(DBULLETS,0);SETDUST(DAMOUNT,0);};
-SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)+1,0,2));
+if (GETVAR(_unit,ACE_EyesDamaged,false)) exitWith {SETDUST(_unit,DACTIVE,false);SETDUST(_unit,DBULLETS,0);SETDUST(_unit,DAMOUNT,0);};
+SETDUST(_unit,DAMOUNT,CLAMP(GETDUSTT(_unit,DAMOUNT)+1,0,2));
 
 private "_amount";
-_amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
+_amount = 1 - (GETDUSTT(_unit,DAMOUNT) * 0.125);
 
-GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
-GVAR(PostProcessEyes) ppEffectCommit 1;
-GVAR(PostProcessEyes) ppEffectEnable true;
-SETDUST(DBULLETS,0);
+GVAR(postProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
+GVAR(postProcessEyes) ppEffectCommit 1;
+GVAR(postProcessEyes) ppEffectEnable true;
+SETDUST(_unit,DBULLETS,0);
 
-if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-    [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-    GVAR(DustHandler) = -1;
+if ((GETVAR(_unit,GVAR(dustHandler),-1)) != -1) then {
+    [GETVAR(_unit,GVAR(dustHandler),-1)] call CBA_fnc_removePerFrameHandler;
+    SETVAR(_unit,GVAR(dustHandler),-1);
 };
-GVAR(DustHandler) = [{
-    if (ACE_diagTime >= GETDUSTT(DTIME) + 3) then {
-        SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
+
+_handle = [{
+    (_this select 0) params ["_unit"];
+
+    if (_unit != GETUNIT) exitWith {
+        SETVAR(_unit,GVAR(dustHandler),-1);
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+    };
+
+    if (ACE_diagTime >= GETDUSTT(_unit,DTIME) + 3) then {
+        SETDUST(_unit,DAMOUNT,CLAMP(GETDUSTT(_unit,DAMOUNT)-1,0,2));
         private "_amount";
-        _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
-        if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {
-            GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
-            GVAR(PostProcessEyes) ppEffectCommit 0.5;
+        _amount = 1 - (GETDUSTT(_unit,DAMOUNT) * 0.125);
+
+        if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
+            GVAR(postProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [_amount,_amount,_amount,_amount],[1,1,1,0]];
+            GVAR(postProcessEyes) ppEffectCommit 0.5;
         };
-        if (GETDUSTT(DAMOUNT) <= 0) then {
-            GVAR(PostProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
-            GVAR(PostProcessEyes) ppEffectCommit 2;
-            [{GVAR(PostProcessEyes) ppEffectEnable false;}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
-            SETDUST(DACTIVE,false);
-            SETDUST(DBULLETS,0);
-            [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-            GVAR(DustHandler) = -1;
+
+        if (GETDUSTT(_unit,DAMOUNT) <= 0) then {
+            GVAR(postProcessEyes) ppEffectAdjust[1, 1, 0, [0,0,0,0], [1,1,1,1],[1,1,1,0]];
+            GVAR(postProcessEyes) ppEffectCommit 2;
+            [{GVAR(postProcessEyes) ppEffectEnable false;}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
+            SETDUST(_unit,DACTIVE,false);
+            SETDUST(_unit,DBULLETS,0);
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            SETVAR(_unit,GVAR(dustHandler),-1);
         };
     };
-},0,[]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+},0,[_unit]] call CBA_fnc_addPerFrameHandler;
+
+SETVAR(_unit,GVAR(dustHandler),_handle);

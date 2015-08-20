@@ -14,8 +14,12 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+_unit = GETUNIT;
+
 private ["_fnc_underCover"];
-if (isNull(ace_player) || {!(alive ace_player)}) exitWith {};
+if (isNull _unit || {!alive _unit}) exitWith {};
+
 _fnc_underCover = {
     private ["_pos", "_unit"];
     _unit = (_this select 0);
@@ -23,28 +27,29 @@ _fnc_underCover = {
     _pos = eyePos _unit;
     ((positionCameraToWorld [0,0,1] select 2) < ((positionCameraToWorld [0,0,0] select 2) - 0.4)) || {(lineIntersects [_pos, _pos vectorAdd [0,0,15], _unit])}
 };
-if (!isNull(findDisplay 312)) exitWith {
-    if (GVAR(RainActive)) then {
-        call FUNC(RemoveRainEffect);
-    };
+
+if !(isNull curatorCamera) exitWith {
+    [] call FUNC(removeRainEffect);
 };
-// Ignore if ace_player is under water
-if (!GVAR(EffectsActive) || {underwater ace_player}) exitWith{call FUNC(RemoveRainEffect);};
+
+// Ignore if unit is under water
+if (!GVAR(EffectsActive) || {underwater _unit}) exitWith {[] call FUNC(removeRainEffect);};
+
 if (GVAR(RainLastLevel) != rain) then {
-    call FUNC(RemoveRainEffect);
+    [] call FUNC(removeRainEffect);
     GVAR(RainLastLevel) = rain;
     // Rain is happening
-    if (GVAR(RainLastLevel) > 0.05 && {!([ace_player] call _fnc_underCover)}) then {
+    if (GVAR(RainLastLevel) > 0.05 && {!([_unit] call _fnc_underCover)}) then {
         GVAR(RainActive) = true;
-        GVAR(RainDrops) = "#particlesource" createVehicleLocal GetPos ace_player;
+        GVAR(RainDrops) = "#particlesource" createVehicleLocal getPosASL _unit;
         GVAR(RainDrops) setParticleClass "ACERainEffect";
         GVAR(RainDrops) setDropInterval (0.07 * (1.1 - GVAR(RainLastLevel)));
-        GVAR(RainDrops) attachTo [vehicle ace_player,[0,0,0]];
+        GVAR(RainDrops) attachTo [vehicle _unit,[0,0,0]];
     };
 }else{
     if (GVAR(RainLastLevel) > 0.05) then {
-        if (GVAR(RainActive) && {[ace_player] call _fnc_underCover}) exitWith {
-            call FUNC(RemoveRainEffect);
+        if (GVAR(RainActive) && {[_unit] call _fnc_underCover}) exitWith {
+            [] call FUNC(removeRainEffect);
         };
         if (!GVAR(RainActive)) then {
             GVAR(RainLastLevel) = -1;

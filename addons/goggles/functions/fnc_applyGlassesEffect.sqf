@@ -5,27 +5,30 @@
  * Sets dirt/rain overlay for glasses.
  *
  * Arguments:
- * 0: Glasses classname to be applied <STRING>
+ * 0: Unit wearing glasses <STRING>
+ * 1: Glasses classname to be applied <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [goggles ace_player] call ace_goggles_fnc_ApplyGlassesEffect;
+ * [] call ace_goggles_fnc_applyGlassesEffect;
  *
  * Public: No
  */
 #include "script_component.hpp"
-private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
 
-_glassesClassname = _this select 0;
-_postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
-_postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
+private ["_unit","_goggles","_postProcessColour", "_postProcessTintAmount", "_glassImagePath"];
 
-call FUNC(removeGlassesEffect);
+_unit = GETUNIT;
+_goggles = goggles _unit;
+_postProcessColour = getArray (configFile >> "CfgGlasses" >> _goggles >> "ACE_Color");
+_postProcessTintAmount = getNumber (configFile >> "CfgGlasses" >> _goggles >> "ACE_TintAmount");
+
+[] call FUNC(removeGlassesEffect);
 GVAR(EffectsActive) = true;
 
-if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
+if (_postProcessTintAmount != 0 && GVAR(UsePP)) then {
     _postProcessColour set [3, _postProcessTintAmount/100];
     GVAR(PostProcess) ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
     GVAR(PostProcess) ppEffectCommit 0;
@@ -35,20 +38,19 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
     GVAR(PostProcess) ppEffectCommit 30;
 };
 
-_glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Overlay");
-if GETBROKEN then {
-    _glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_OverlayCracked");
-};
+_glassImagePath = ["ACE_Overlay","ACE_OverlayCracked"] select GETBROKEN(_unit);
+_glassImagePath = getText (configFile >> "CfgGlasses" >> _goggles >> _glassImagePath);
+
 if (_glassImagePath != "") then {
-    150 cutRsc["RscACE_Goggles", "PLAIN",1, false];
+    150 cutRsc ["RscACE_Goggles", "PLAIN",1, false];
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText _glassImagePath;
 };
 
-if GETDIRT then {
-    call FUNC(applyDirtEffect);
+if (GETDIRT(_unit)) then {
+    [] call FUNC(applyDirtEffect);
 };
 
-if GETDUSTT(DACTIVE) then {
-    SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-    call FUNC(applyDust);
+if GETDUSTT(_unit,DACTIVE) then {
+    SETDUST(_unit,DAMOUNT,CLAMP(GETDUSTT(_unit,DAMOUNT)-1,0,2));
+    [] call FUNC(applyDust);
 };
