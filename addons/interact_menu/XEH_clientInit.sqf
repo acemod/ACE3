@@ -75,10 +75,24 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call EFUNC(common,addEventHandler);
 
-// Let key work with zeus open (not perfect, enables all added hotkeys in zeus interface rather than only menu)
+// Let key work with zeus open (not perfect, contains workaround to prevent other CBA keybindings)
 ["zeusDisplayChanged",{
     if (_this select 1) then {
-        (finddisplay 312) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-        (finddisplay 312) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+        (finddisplay 312) displayAddEventHandler ["KeyUp", {
+            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
+            _key = (_key select 5) select 0;
+
+            if ((_this select 1) == _key) then {
+                [_this,'keyup'] call CBA_events_fnc_keyHandler
+            };
+        }];
+        (finddisplay 312) displayAddEventHandler ["KeyDown", {
+            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
+            _key = (_key select 5) select 0;
+
+            if ((_this select 1) == _key) then {
+                [_this,'keydown'] call CBA_events_fnc_keyHandler
+            };
+        }];
     };
 }] call EFUNC(common,addEventHandler);
