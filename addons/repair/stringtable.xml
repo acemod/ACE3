@@ -666,9 +666,5 @@
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
             <English>Number of selected spare parts.</English>
         </Key>
-
-        <Key ID="STR_ACE_Repair_categoryName">
-            <English>Vehicle Repair</English>
-        </Key>
     </Package>
 </Project>

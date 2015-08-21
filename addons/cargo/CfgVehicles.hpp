@@ -4,7 +4,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(SettingsModule_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Cargo_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleSettings);
         functionPriority = 1;
         isGlobal = 1;

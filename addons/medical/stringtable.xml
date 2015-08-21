@@ -2098,6 +2098,9 @@
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Activity_CPR">
+            <English>%1 performed CPR</English>
+        </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
@@ -3608,6 +3611,9 @@
             <Russian>Медик</Russian>
             <Spanish>Médico</Spanish>
             <Hungarian>Orvosi</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Medical_DistanceToFar">
+            <English>Distance to %1 has become to far for treatment</English>
         </Key>
     </Package>
 </Project>

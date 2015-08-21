@@ -16,12 +16,11 @@
 
 class CfgVehicles {
     class ACE_Module;
-    // @todo localization for all the modules
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(moduleName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
-        category = "ACE";
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE_Logistics";
         function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
@@ -109,7 +108,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleAssignEngineer);
         functionPriority = 10;
         isGlobal = 2;
@@ -153,7 +152,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleAssignRepairVehicle);
         functionPriority = 10;
         isGlobal = 2;
@@ -298,7 +297,7 @@ class CfgVehicles {
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
-        vehicleClass = QGVAR(items);
+        vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo";
     };
 
@@ -308,7 +307,7 @@ class CfgVehicles {
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_track.p3d));
-        displayName = "$STR_ACE_Repair_SpareTrack";
+        displayName = CSTRING(SpareTrack);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -317,7 +316,7 @@ class CfgVehicles {
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_wheel.p3d));
-        displayName = "$STR_ACE_Repair_SpareWheel";
+        displayName = CSTRING(SpareWheel);
         picture = QUOTE(PATHTOF(ui\tire_ca.paa));
     };
 

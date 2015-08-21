@@ -76,4 +76,22 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initVehicle));
         };
     };
+
+    class ACE_RepairItem_Base {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+
+    class ACE_bodyBagObject {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+
+    class ACE_ConcertinaWireCoil {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };

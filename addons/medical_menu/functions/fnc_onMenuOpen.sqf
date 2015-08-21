@@ -14,6 +14,7 @@
  * Public: No
  */
 #include "script_component.hpp"
+#define MAX_DISTANCE 10
 
 private "_target";
 
@@ -72,6 +73,12 @@ setMousePosition [0.4, 0.4];
     _status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus);
     (_display displayCtrl 2000) ctrlSetText (_status select 0);
     (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
+
+    if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        closeDialog 314412;
+        ["displayTextStructured", [ACE_player], [[ELSTRING(medical,DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
+    };
+
  }, [_display]] call BIS_fnc_addStackedEventHandler;
 
  ["Medical_onMenuOpen", [ACE_player, _interactionTarget]] call EFUNC(common,localEvent);

@@ -4,6 +4,6 @@ class ACE_Settings {
         description = CSTRING(ModuleSettings_enable_Description);
         typeName = "BOOL";
         value = 1;
-        category = CSTRING(settingsCategory);
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
 };
