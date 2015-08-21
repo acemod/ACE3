@@ -12,6 +12,7 @@ PREP(handleMap);
 PREP(handleMouse);
 PREP(handleToolbar);
 PREP(handleUnits);
+PREP(interrupt);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setCameraAttributes);
@@ -39,6 +40,7 @@ GVAR(camUnit) = objNull;
 GVAR(camVision) = -2;
 GVAR(camZoom) = 1.25;
 
+GVAR(interrupts) = [];
 GVAR(isSet) = false;
 
 GVAR(showComp) = true;

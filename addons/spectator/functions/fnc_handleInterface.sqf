@@ -24,6 +24,7 @@ switch (toLower _mode) do {
     case "open": {
         // Prevent reopening
         if (GVAR(isSet)) exitWith {};
+        GVAR(interrupts) = [];
 
         // Initalize camera variables
         GVAR(camBoom) = 0;
@@ -68,15 +69,17 @@ switch (toLower _mode) do {
         };
     };
     case "close": {
-        _args params ["_unit"];
-
         // Can't close a second time
         if !(GVAR(isSet)) exitWith {};
+        GVAR(interrupts) = [];
 
         // Terminate interface
         while {dialog} do {
             closeDialog 0;
         };
+
+        // Kill the display
+        (findDisplay 12249) closeDisplay 0;
 
         // Terminate camera
         GVAR(camera) cameraEffect ["terminate", "back"];
@@ -203,11 +206,21 @@ switch (toLower _mode) do {
     };
     case "onunload": {
         // Kill GUI PFHs
+        removeMissionEventHandler ["Draw3D",GVAR(iconHandler)];
         GVAR(camHandler) = nil;
         GVAR(compHandler) = nil;
-        removeMissionEventHandler ["Draw3D",GVAR(iconHandler)];
         GVAR(iconHandler) = nil;
         GVAR(toolHandler) = nil;
+
+        // Reset variables
+        GVAR(camBoom) = 0;
+        GVAR(camDolly) = [0,0];
+        GVAR(ctrlKey) = false;
+        GVAR(heldKeys) = [];
+        GVAR(heldKeys) resize 255;
+        GVAR(mouse) = [false,false];
+        GVAR(mousePos) = [0.5,0.5];
+        GVAR(treeSel) = objNull;
     };
     // Mouse events
     case "onmousebuttondown": {
@@ -247,7 +260,8 @@ switch (toLower _mode) do {
         _args params ["_display","_dik","_shift","_ctrl","_alt"];
 
         if ((alive player) && {_dik in (actionKeys "curatorInterface")} && {!isNull (getAssignedCuratorLogic player)}) exitWith {
-            ["zeus", [_display]] call FUNC(handleInterface);
+            [QGVAR(zeus)] call FUNC(interrupt);
+            ["zeus"] call FUNC(handleInterface);
         };
         if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
             false
@@ -262,7 +276,8 @@ switch (toLower _mode) do {
 
         switch (_dik) do {
             case 1: { // Esc
-                ["escape", [_display]] call FUNC(handleInterface);
+                [QGVAR(escape)] call FUNC(interrupt);
+                ["escape"] call FUNC(handleInterface);
             };
             case 2: { // 1
                 [_display,nil,nil,nil,nil,nil,true] call FUNC(toggleInterface);
@@ -515,22 +530,7 @@ switch (toLower _mode) do {
     };
     // Break from interface for external events
     case "escape": {
-        _args params ["_display"];
         private "_dlg";
-
-        // Kill display
-        _display closeDisplay 0;
-
-        // Reset cam/UI vars
-        GVAR(camBoom) = 0;
-        GVAR(camDolly) = [0,0];
-
-        GVAR(ctrlKey) = false;
-        GVAR(heldKeys) = [];
-        GVAR(heldKeys) resize 255;
-        GVAR(mouse) = [false,false];
-        GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
 
         createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
 
@@ -562,31 +562,12 @@ switch (toLower _mode) do {
             if !(isNull (findDisplay 49)) exitWith {};
 
             // If still a spectator then re-enter the interface
-            if (GVAR(isSet)) then {
-                createDialog QGVAR(interface);
-                [] call FUNC(transitionCamera);
-            };
+            [QGVAR(escape),false] call FUNC(interrupt);
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         },0] call CBA_fnc_addPerFrameHandler;
     };
     case "zeus": {
-        _args params ["_display"];
-
-        // Kill display
-        _display closeDisplay 0;
-
-        // Reset cam/UI vars
-        GVAR(camBoom) = 0;
-        GVAR(camDolly) = [0,0];
-
-        GVAR(ctrlKey) = false;
-        GVAR(heldKeys) = [];
-        GVAR(heldKeys) resize 255;
-        GVAR(mouse) = [false,false];
-        GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
-
         openCuratorInterface;
 
         [{
@@ -595,10 +576,7 @@ switch (toLower _mode) do {
                 if !((isNull curatorCamera) && {isNull (GETMVAR(bis_fnc_moduleRemoteControl_unit,objNull))}) exitWith {};
 
                 // If still a spectator then re-enter the interface
-                if (GVAR(isSet)) then {
-                    createDialog QGVAR(interface);
-                    [] call FUNC(transitionCamera);
-                };
+                [QGVAR(zeus),false] call FUNC(interrupt)
 
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             },0] call CBA_fnc_addPerFrameHandler;
