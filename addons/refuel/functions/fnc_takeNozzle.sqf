@@ -4,14 +4,15 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Fuel Truck <OBJECT>
  * 2: Nozzle <OBJECT> (optional)
  *
  * Return Value:
  * None
  *
  * Example:
- * [unit, target, truck] call ace_refuel_fnc_takeNozzle
+ * [player, fuelTruck] call ace_refuel_fnc_takeNozzle
+ * [player, objNull, nozzle] call ace_refuel_fnc_takeNozzle
  *
  * Public: No
  */
@@ -23,8 +24,6 @@ params ["_unit", "_target", ["_nozzle", objNull]];
 [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
 
 REFUEL_HOLSTER_WEAPON
-
-// TODO add pickup animation
 
 _endPosOffset = [0, 0, 0];
 if (isNull _nozzle) then { // func is called on fuel truck
@@ -42,24 +41,78 @@ if (isNull _nozzle) then { // func is called on fuel truck
     } else {
         _endPosOffset = _endPosOffset select 0;
     };
+    [
+        2,
+        [_unit, _target, _endPosOffset],
+        {
+            private ["_newNozzle", "_rope", "_actionID"];
+            params ["_args"];
+            _args params ["_unit", "_target", "_endPosOffset"];
 
-    [{
-        params ["_unit", "_target", "_endPosOffset"];
-        _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
-        _newNozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
-        _unit setVariable [QGVAR(nozzle), _newNozzle];
+            _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
+            _newNozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
+            _unit setVariable [QGVAR(nozzle), _newNozzle];
 
-        _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], 12];
-        _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
-        _newNozzle setVariable [QGVAR(source), _target, true];
-        _newNozzle setVariable [QGVAR(rope), _rope, true];
-    }, [_unit, _target, _endPosOffset], 2, 0] call EFUNC(common,waitAndExecute);
+            _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], 12];
+            _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
+            _newNozzle setVariable [QGVAR(source), _target, true];
+            _newNozzle setVariable [QGVAR(rope), _rope, true];
+
+            _unit setVariable [QGVAR(isRefueling), true];
+            _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+            if (_actionID != -1) then {
+                _unit removeAction _actionID;
+            };
+            _actionID = _unit addAction [
+                format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+                'params ["_unit"]; _nozzle = _unit getVariable QGVAR(nozzle); REFUEL_UNIT_DROP_NOZZLE',
+                nil,
+                20,
+                false,
+                true,
+                "",
+                '!isNull (_target getVariable [QGVAR(nozzle), objNull])'
+            ];
+            _unit setVariable [QGVAR(ReleaseActionID), _actionID];
+        },
+        "",
+        localize LSTRING(TakeNozzleAction),
+        {true},
+        ["isnotinside"]
+    ] call EFUNC(common,progressBar);
 } else { // func is called in muzzle either connected or on ground
-    [{
-        params ["_unit", "_nozzle"];
-        _nozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
-        _unit setVariable [QGVAR(nozzle), _nozzle];
-    }, [_unit, _nozzle], 2, 0] call EFUNC(common,waitAndExecute);
+    [
+        2,
+        [_unit, _nozzle],
+        {
+            private ["_actionID"];
+            params ["_args"];
+            _args params ["_unit", "_nozzle"];
+            _nozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
+            _unit setVariable [QGVAR(nozzle), _nozzle];
+
+            _unit setVariable [QGVAR(isRefueling), true];
+            _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+            if (_actionID != -1) then {
+                _unit removeAction _actionID;
+            };
+            _actionID = _unit addAction [
+                format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+                'params ["_unit"]; _nozzle = _unit getVariable QGVAR(nozzle); REFUEL_UNIT_DROP_NOZZLE',
+                nil,
+                20,
+                false,
+                true,
+                "",
+                '!isNull (_target getVariable [QGVAR(nozzle), objNull])'
+            ];
+            _unit setVariable [QGVAR(ReleaseActionID), _actionID];
+        },
+        "",
+        localize LSTRING(TakeNozzleAction),
+        {true},
+        ["isnotinside"]
+    ] call EFUNC(common,progressBar);
 
     _target = _nozzle getVariable QGVAR(source);
     _endPosOffset = _nozzle getVariable QGVAR(attachPos);
@@ -81,5 +134,3 @@ if (isNull _nozzle) then { // func is called on fuel truck
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
 }, 0, [_unit, _target, _endPosOffset]] call cba_fnc_addPerFrameHandler;
-
-_unit setVariable [QGVAR(isRefueling), true];

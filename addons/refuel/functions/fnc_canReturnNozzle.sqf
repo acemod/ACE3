@@ -4,13 +4,13 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 1: Fuel truck <OBJECT>
  *
  * Return Value:
  * Can Return Nozzle <BOOL>
  *
  * Example:
- * [unit, tank] call ace_refuel_fnc_canReturnNozzle
+ * [player, fuelTruck] call ace_refuel_fnc_canReturnNozzle
  *
  * Public: No
  */

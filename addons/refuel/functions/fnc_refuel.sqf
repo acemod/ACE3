@@ -31,7 +31,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
 
     _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (!alive _source || {!alive _sink}) exitWith {
-        REFUEL_DROP_NOZZLE(_nozzle)
+        REFUEL_DROP_NOZZLE
         _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
@@ -41,7 +41,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
     if (_tooFar) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
 
-        REFUEL_DROP_NOZZLE(_nozzle)
+        REFUEL_DROP_NOZZLE
         _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
@@ -75,7 +75,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         } else {
             _sink setFuel _fuelInSink;
         };
-        [_unit, _source, _fuelInSource] call FUNC(setFuel);
+        [_source, _fuelInSource] call FUNC(setFuel);
     };
 
     if (_finished) exitWith {

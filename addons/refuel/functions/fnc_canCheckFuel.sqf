@@ -10,7 +10,7 @@
  * Can Check Fuel <BOOL>
  *
  * Example:
- * [unit, target] call ace_refuel_fnc_canCheckFuel
+ * [player, truck] call ace_refuel_fnc_canCheckFuel
  *
  * Public: No
  */

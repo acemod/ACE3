@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [unit, target] call ace_refuel_fnc_checkFuel
+ * [player, fuelTruck] call ace_refuel_fnc_checkFuel
  *
  * Public: No
  */
@@ -34,7 +34,7 @@ _fuel = [_target] call FUNC(getFuel);
         true
     },
     {true},
-    localize LSTRING(CheckFuel),
+    localize LSTRING(CheckFuelAction),
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [unit, true] call ace_refuel_fnc_handleUnconscious
+ * [player, true] call ace_refuel_fnc_handleUnconscious
  *
  * Public: No
  */

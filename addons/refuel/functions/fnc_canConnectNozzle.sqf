@@ -10,7 +10,7 @@
  * Can Connect Nozzle <BOOL>
  *
  * Example:
- * [unit, tank] call ace_refuel_fnc_canConnectNozzle
+ * [player, tank] call ace_refuel_fnc_canConnectNozzle
  *
  * Public: No
  */

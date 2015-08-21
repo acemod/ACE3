@@ -9,7 +9,7 @@
  * Fuel left (in liters) <NUMBER>
  *
  * Example:
- * [target] call ace_refuel_fnc_getFuel
+ * [fuelTruck] call ace_refuel_fnc_getFuel
  *
  * Public: No
  */

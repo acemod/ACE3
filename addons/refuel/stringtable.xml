@@ -21,9 +21,17 @@
             <English>Take fuel nozzle</English>
             <German>Zapfpistole nehmen</German>
         </Key>
+        <Key ID="STR_ACE_Refuel_TakeNozzleAction">
+            <English>Taking fuel nozzle ...</English>
+            <German>Nehme Zapfpistole ...</German>
+        </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
             <German>Zapfpistole anschließen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_ConnectAction">
+            <English>Connecting fuel nozzle ...</English>
+            <German>Zapfpistole anschließen ...</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
@@ -34,8 +42,12 @@
             <German>Anschließen</German>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
-            <English>Check remaining fuel ...</English>
-            <German>Verbleibenden Kraftstoff überprüfen ...</German>
+            <English>Check remaining fuel</English>
+            <German>Verbleibenden Kraftstoff überprüfen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_CheckFuelAction">
+            <English>Checking remaining fuel ...</English>
+            <German>Überprüfe verbleibenden Kraftstoff ...</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
             <English>There are %1 liters left.</English>
@@ -43,7 +55,7 @@
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
-            <German>Es ist kein Treibstoff übrig.</German>
+            <German>Es ist kein Kraftstoff übrig.</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
@@ -55,11 +67,19 @@
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOff">
             <English>Stop fueling</English>
-            <German>Betankung anhalten</German>
+            <German>Betankung stoppen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TurnOffAction">
+            <English>Stopping fueling ...</English>
+            <German>Stoppe Betankung ...</German>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
             <German>Betankung beginnen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_TurnOnAction">
+            <English>Starting fueling ...</English>
+            <German>Beginne Betankung ...</German>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -88,6 +108,18 @@
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
             <German>Zapfpistole zurückstecken</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_CheckFuelCounter">
+            <English>Check fuel counter</English>
+            <German>Tankuhr ansehen</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
+            <English>>Checking fuel counter ...</English>
+            <German>Betrachte Tankuhr ...</German>
+        </Key>
+        <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
+            <English>%1 liters have been fueled.</English>
+            <German>%1 Liter wurden getankt.</German>
         </Key>
     </Package>
 </Project>

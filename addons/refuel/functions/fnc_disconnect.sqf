@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [unit, truck] call ace_refuel_fnc_disconnect
+ * [player, nozzle] call ace_refuel_fnc_disconnect
  *
  * Public: No
  */
@@ -24,7 +24,6 @@ if (isNull _sink) exitWith {};
 
 _sink setVariable [QGVAR(nozzle), objNull, true];
 _nozzle setVariable [QGVAR(sink), objNull, true];
-REFUEL_DROP_NOZZLE(_nozzle)
-_unit setVariable [QGVAR(nozzle), _nozzle];
+REFUEL_DETACH_NOZZLE
 
 [_unit, objNull, _nozzle] call FUNC(takeNozzle);

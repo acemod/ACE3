@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [unit] call ace_refuel_fnc_handleKilled
+ * [player] call ace_refuel_fnc_handleKilled
  *
  * Public: No
  */

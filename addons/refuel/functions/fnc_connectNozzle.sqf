@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [unit, target] call ace_refuel_fnc_connectNozzle
+ * [player, tank] call ace_refuel_fnc_connectNozzle
  *
  * Public: No
  */

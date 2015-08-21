@@ -71,17 +71,33 @@ _closeInDistance = (_closeInDistance - 0.0085);
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, (_startingOffset select 2)];
 
-// TODO put animation and delayed connect ?
+[
+    2,
+    [_unit, _nozzle, _target, _endPosTestOffset],
+    {
+        private "_actionID";
+        params ["_args"];
+        _args params ["_unit", "_nozzle", "_target", "_endPosTestOffset"];
+        _unit setVariable [QGVAR(nozzle), nil];
+        _unit setVariable [QGVAR(isRefueling), false];
+        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        REFUEL_UNHOLSTER_WEAPON
+        _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+        if (_actionID != -1) then {
+            _unit removeAction _actionID;
+            _unit setVariable [QGVAR(ReleaseActionID), nil];
+        };
 
-_unit setVariable [QGVAR(nozzle), nil];
-_unit setVariable [QGVAR(isRefueling), false];
-[_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-REFUEL_UNHOLSTER_WEAPON
+        detach _nozzle;
+        _nozzle attachTo [_target, _endPosTestOffset];
+        _nozzle setVariable [QGVAR(sink), _target, true];
+        _nozzle setVariable [QGVAR(isConnected), true, true];
+        _target setVariable [QGVAR(nozzle), _nozzle, true];
 
-detach _nozzle;
-_nozzle attachTo [_target, _endPosTestOffset];
-_nozzle setVariable [QGVAR(sink), _target, true];
-_nozzle setVariable [QGVAR(isConnected), true, true];
-_target setVariable [QGVAR(nozzle), _nozzle, true];
-
-[_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
+        [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
+    },
+    "",
+    localize LSTRING(ConnectAction),
+    {true},
+    ["isnotinside"]
+] call EFUNC(common,progressBar);
