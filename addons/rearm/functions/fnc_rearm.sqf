@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [player, vehicle] call ace_rearm_fnc_rearm
+ * [player] call ace_rearm_fnc_rearm
  *
  * Public: No
  */

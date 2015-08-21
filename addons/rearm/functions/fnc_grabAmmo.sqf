@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player, dummy] call ace_rearm_fnc_grabAmmo
+ * [dummy, player] call ace_rearm_fnc_grabAmmo
  *
  * Public: No
  */
@@ -33,11 +33,9 @@ REARM_HOLSTER_WEAPON
         _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
             _unit removeAction _actionID;
-            _unit setVariable [QGVAR(ReleaseActionID), nil];
         };
         _actionID = _unit addAction [
-            format ["<t color='#FF0000'>%1</t>",
-            localize ELSTRING(dragging,Drop)],
+            format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
             '(_this select 0) call FUNC(dropAmmo)',
             nil,
             20,
