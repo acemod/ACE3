@@ -1,32 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
+            <Polish>Załaduj</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
+            <Polish>Wyładuj</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
+            <Polish>Ładunek</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
+            <Polish>Menu ładunku</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
+            <Polish>Pozostałe miejsce: %1</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
+            <Polish>Aktywuj cargo</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
+            <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
+            <Polish>Ustawienia cargo</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
+            <Polish>Skonfiguruj ustawienia modułu cargo</Polish>
         </Key>
     </Package>
 </Project>
