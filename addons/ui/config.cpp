@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"VKing"};
-        authorUrl = "https://github.com/ACEMod/";
+        authorUrl = "http://ace3mod.com/";
         VERSION_CONFIG;
     };
 };

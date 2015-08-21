@@ -1,11 +1,11 @@
-ace_atragmx
-===============
+ace_norearm
+===========
 
-ATragMX - Handheld ballistics calculator
+Removes rearm action.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
+- [commy2](https://github.com/commy2)

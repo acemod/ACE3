@@ -1,11 +1,11 @@
-ace_atragmx
-===============
+ace_missionmodules
+===========
 
-ATragMX - Handheld ballistics calculator
+Adds mission modules.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
+- [Glowbal](https://github.com/Glowbal)

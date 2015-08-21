@@ -1,11 +1,11 @@
-ace_atragmx
-===============
+ace_apl
+============
 
-ATragMX - Handheld ballistics calculator
+Assets licensed under Arma Public License (APL).
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
+- None

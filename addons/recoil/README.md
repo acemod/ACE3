@@ -1,11 +1,11 @@
-ace_atragmx
-===============
+ace_recoil
+===========
 
-ATragMX - Handheld ballistics calculator
+Tweaks weapon recoils and adds camera shake.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
+- [commy2](https://github.com/commy2)

@@ -1,11 +1,11 @@
-ace_atragmx
-===============
+ace_noidle
+===========
 
-ATragMX - Handheld ballistics calculator
+Removes idle animations.
 
 
 ## Maintainers
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [Ruthberg](http://github.com/Ulteq)
+- [commy2](https://github.com/commy2)
