@@ -204,5 +204,11 @@
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
+            <English>Add Objects to Curator</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
+            <English>Adds any spawned object to all curators in the mission</English>
+        </Key>
     </Package>
 </Project>
