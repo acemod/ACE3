@@ -1,16 +1,18 @@
 /*
  * Author: Glowbal
- * Checks if a unit is in a repair facility
+ * Checks if a unit is in a repair facility.
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Is inside a repair facility <BOOL>
+ *
+ * Example:
+ * [unit] call ace_repair_fnc_isInRepairFacility
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_object"];

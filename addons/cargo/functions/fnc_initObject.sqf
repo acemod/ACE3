@@ -1,21 +1,23 @@
 /*
  * Author: Glowbal
- * Initialize variables for loadable objects. Called from init EH.
+ * Initializes variables for loadable objects. Called from init EH.
  *
  * Arguments:
- * 0: Any object <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return value:
  * None
  *
+ * Example:
+ * [object] call ace_cargo_fnc_initObject
+ *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_object"];
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(canLoad)) != 1) exitwith {};
+if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(canLoad)) != 1) exitWith {};
 
 private ["_type", "_action"];
 _type = typeOf _object;

@@ -1,14 +1,19 @@
 /*
  * Author: commy2
- * Set the hitpoint damage and change the structural damage acordingly. Requires local vehicle.
+ * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
  *
  * Arguments:
- * 0: vehicle
- * 1: hitpoint
- * 2: damage
+ * 0: Local Vehicle to Damage <OBJECT>
+ * 1: Selected hitpoint <STRING>
+ * 2: Total Damage <NUMBER>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [vehicle, "hitpoint", 0.5] call ace_repair_fnc_setHitPointDamage
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,4 +1,3 @@
-
 #define MACRO_REPAIRVEHICLE \
     class ACE_Actions { \
         class ACE_MainActions { \
@@ -17,13 +16,12 @@
 
 class CfgVehicles {
     class ACE_Module;
-    // @todo localization for all the modules
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(moduleName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
-        category = "ACE";
-        function = QUOTE(DFUNC(moduleRepairSettings));
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -104,8 +102,8 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
-        function = QUOTE(DFUNC(moduleAssignEngineer));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleAssignEngineer);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -148,8 +146,8 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
-        function = QUOTE(DFUNC(moduleAssignRepairVehicle));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleAssignRepairVehicle);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -186,7 +184,7 @@ class CfgVehicles {
     };
     class ACE_moduleAssignRepairFacility: ACE_moduleAssignRepairVehicle {
         displayName = CSTRING(AssignRepairFacility_Module_DisplayName);
-        function = QUOTE(DFUNC(moduleAssignRepairFacility));
+        function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
@@ -221,7 +219,6 @@ class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
-
         class ACE_Cargo {
             class Cargo {
                 class ACE_Wheel {
@@ -256,26 +253,26 @@ class CfgVehicles {
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
-        vehicleClass = QGVAR(items);
+        vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo";
     };
 
     class ACE_Track: ACE_RepairItem_Base {
-        ace_cargo_size = 2;
-        ace_cargo_canLoad = 1;
+        EGVAR(cargo,size) = 2;
+        EGVAR(cargo,canLoad) = 1;
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_track.p3d));
-        displayName = "$STR_ACE_Repair_SpareTrack";
+        displayName = CSTRING(SpareTrack);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
-        ace_cargo_size = 1;
-        ace_cargo_canLoad = 1;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_wheel.p3d));
-        displayName = "$STR_ACE_Repair_SpareWheel";
+        displayName = CSTRING(SpareWheel);
         picture = QUOTE(PATHTOF(ui\tire_ca.paa));
     };
 

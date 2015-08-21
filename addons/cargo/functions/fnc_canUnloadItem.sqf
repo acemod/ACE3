@@ -1,23 +1,27 @@
 /*
  * Author: Glowbal, ViperMaul
- * Check if item can be unloaded
+ * Check if item can be unloaded.
  *
  * Arguments:
- * 0: loaded object <OBJECT>
+ * 0: loaded Object <OBJECT>
  * 1: Object <OBJECT>
  *
  * Return value:
  * Can be unloaded <BOOL>
  *
+ * Example:
+ * [item, holder] call ace_cargo_fnc_canUnloadItem
+ *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_loaded", "_validVehiclestate", "_emptyPos"];
+
 params ["_item", "_vehicle"];
-_loaded = _vehicle getvariable [QGVAR(loaded), []];
-if !(_item in _loaded) exitwith {false};
+
+_loaded = _vehicle getVariable [QGVAR(loaded), []];
+if !(_item in _loaded) exitWith {false};
 
 _validVehiclestate = true;
 _emptyPos = [];
@@ -35,5 +39,6 @@ if (_vehicle isKindOf "Ship" ) then {
     };
 };
 
-if (!_validVehiclestate) exitwith { false };
-(count _emptyPos != 0);
+if (!_validVehiclestate) exitWith {false};
+
+(count _emptyPos != 0)

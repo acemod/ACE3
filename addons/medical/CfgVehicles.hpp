@@ -697,6 +697,8 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
