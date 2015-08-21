@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -139,12 +139,15 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
+            <Polish>Przydziel medyka</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
+            <Polish>Przydziel pojazd medyczny</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
+            <Polish>Przydziel budynek medyczny</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -172,9 +175,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
+            <Polish>Jednostka musi być budynkiem</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
+            <Polish>Jednostka musi być pojazdem</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -206,9 +211,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
+            <Polish>Dodaj obiekt do kuratora</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
+            <Polish>Dodaje każdy zespawnowany obiekt do wszystkich kuratorów podczas misji</Polish>
         </Key>
     </Package>
 </Project>
