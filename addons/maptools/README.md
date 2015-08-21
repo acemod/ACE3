@@ -1,10 +1,11 @@
 ace_maptools
 ============
 
-Map tools:
+Adds the following map tools:
 - Roamer
 - Map drawing
 - Showing GPS on map
+
 
 ## Maintainers
 

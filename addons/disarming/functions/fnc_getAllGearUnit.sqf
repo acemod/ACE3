@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Helper function to get all gear of a unit.
  *
  * Arguments:
@@ -15,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
 private ["_allItems", "_classnamesCount", "_index", "_uniqueClassnames"];
 

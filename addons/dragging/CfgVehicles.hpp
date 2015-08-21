@@ -83,4 +83,18 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
+
+    class ACE_RepairItem_Base: ThingX {};
+
+    class ACE_Track: ACE_RepairItem_Base {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 0;
+    };
+
+    class ACE_Wheel: ACE_RepairItem_Base {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 0;
+    };
 };

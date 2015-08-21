@@ -26,9 +26,10 @@ if (!hasInterface) exitwith {};
     false
 },
 {
-    if (ACE_time - GVAR(lastOpenedOn) > 0.5) then {
+    if (ACE_time - GVAR(lastOpenedOn) > 0.5) exitWith {
         [ObjNull] call FUNC(openMenu);
     };
+    false
 },
 [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 

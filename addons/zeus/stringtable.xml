@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -137,6 +137,15 @@
             <German>Bewusstlosigkeit umschalten</German>
             <Portuguese>Alternar inconsciência</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
+            <English>Assign Medic</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
+            <English>Assign Medical Vehicle</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
+            <English>Assign Medical Facility</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>
@@ -160,6 +169,12 @@
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
             <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyStructures">
+            <English>Unit must be a structure</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyVehicles">
+            <English>Unit must be a vehicle</English>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -188,6 +203,12 @@
             <Czech>Vyžaduje addon, který není přítomen</Czech>
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
+            <English>Add Objects to Curator</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
+            <English>Adds any spawned object to all curators in the mission</English>
         </Key>
     </Package>
 </Project>

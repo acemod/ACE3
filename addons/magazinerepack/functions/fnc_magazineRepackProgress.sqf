@@ -20,17 +20,19 @@
 
 private ["_currentAmmoCount", "_addedMagazines", "_missingAmmo", "_index", "_updateMagazinesOnPlayerFnc"];
 
-PARAMS_3(_args,_elapsedTime,_totalTime);
-EXPLODE_3_PVT(_args,_magazineClassname,_lastAmmoCount,_simEvents);
-if ((count _simEvents) == 0) exitWith {ERROR("No Event"); false};
-EXPLODE_3_PVT((_simEvents select 0),_nextEventTime,_nextEventIsBullet,_nextEventMags);
+params ["_ars", "_elapsedTime", "_totalTime"];
+_args params ["_magazineClassname", "_lastAmmoCount", "_simEvents"];
 
-if (_nextEventTime > _elapsedTime) exitWith {true};//waiting on next event
+if !((_simEvents select 0) params ["_nextEventTime", "_nextEventIsBullet", "_nextEventMags"]) exitWith { ERROR("No Event"); false };
+
+
+
+if (_nextEventTime > _elapsedTime) exitWith { true };//waiting on next event
 
 //Verify we aren't missing any ammo
 _currentAmmoCount = [];
 {
-    EXPLODE_2_PVT(_x,_xClassname,_xCount);
+    _x params ["_xClassname", "_xCount"];
     if (_xClassname == _magazineClassname) then {
         _currentAmmoCount pushBack _xCount;
     };
@@ -50,7 +52,7 @@ _missingAmmo = false;
     };
 } forEach _lastAmmoCount;
 
-if (_missingAmmo) exitWith {false};  //something removed ammo that was being repacked (could be other players or scripts)
+if (_missingAmmo) exitWith { false };  //something removed ammo that was being repacked (could be other players or scripts)
 
 _updateMagazinesOnPlayerFnc = {
     ACE_player removeMagazines _magazineClassname;  //remove inventory magazines
@@ -75,4 +77,4 @@ if (_nextEventIsBullet) then {
 
 _simEvents deleteAt 0; //pop off the event
 
-true;
+true
