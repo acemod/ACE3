@@ -67,20 +67,15 @@ if (_state) then {
                 };
             } else {
 
-                // _turretPath = [];
-                // {
-                // _x params ["_xUnit", "", "", "_xTurretPath"];
-                // if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
-                // } forEach (fullCrew (vehicle _unit));
-                // TRACE_1("turret Path",_turretPath);
-                // if (_turretPath isEqualTo []) exitWith {};
-                // _turretConfig = [(configFile >> "CfgVehicles" >> (typeOf (vehicle _unit))), _turretPath] call EFUNC(common,getTurretConfigPath);
-                // _gunnerAction = getText (_turretConfig >> "gunnerAction");
-                // TRACE_1("reseting to",_gunnerAction);
-                // [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-                // [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+                _turretPath = [];
+                {
+                    _x params ["_xUnit", "", "", "_xTurretPath"];
+                    if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
+                } forEach (fullCrew (vehicle _unit));
+                TRACE_1("turret Path",_turretPath);
+                if (_turretPath isEqualTo []) exitWith {};
 
-
+                TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
                 [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
                 [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
             };

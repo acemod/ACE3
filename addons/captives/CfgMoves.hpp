@@ -64,7 +64,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class ACE_HandcuffedFFV: ACE_AmovPercMstpScapWnonDnon {
             file = "\A3\cargoposes_F_heli\anim\passenger_flatground_3idleunarmed.rtm";
             actions = "ACE_CivilHandCuffedFFVActions";
-            ConnectTo[] = {"ACE_AmovPercMstpScapWnonDnon",0.1};
+            ConnectTo[] = {};
         };
 
 
