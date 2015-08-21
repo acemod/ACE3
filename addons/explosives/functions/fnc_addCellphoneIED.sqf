@@ -52,7 +52,7 @@ _count = GVAR(CellphoneIEDs) pushBack [_explosive,_code,GetNumber(ConfigFile >> 
 _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
 
-//display IDE number message:
+//display IED number message:
 [format ["IED %1 code: %2", _count,_code]] call EFUNC(common,displayTextStructured);
 
 if !(_hasRequired) exitWith {};
