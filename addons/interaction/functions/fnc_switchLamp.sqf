@@ -4,7 +4,6 @@
  *
  * Arguments:
  * 0: Lamp <OBJECT>
- * 1: On/Off <SCALAR>
  *
  * Return value:
  * None
@@ -53,6 +52,6 @@ if(_isOff) then {
 	//this lamp is off
 	{_newobject sethit [_x select 0, (_x select 1) max DISABLED_LAMP_DMG];nil} count _hitpointsdmg;
 } else {
-	//new lamp is on
+	//this lamp is on
 	{if((_x select 1) > DISABLED_LAMP_DMG) then {_newobject sethit _x;};nil} count _hitpointsdmg;
 };
