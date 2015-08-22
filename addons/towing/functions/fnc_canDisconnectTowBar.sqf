@@ -19,4 +19,4 @@
 params ["_target", "_unit"];
 
 !(_target distance _unit > TOWING_ACTION_DISTANCE) &&
-{!isNil {_target getVariable QGVAR(isTowing)} || !isNil {_target getVariable QGVAR(isTowed)}}
+    {!isNil {_target getVariable QGVAR(isTowing)} || !isNil {_target getVariable QGVAR(isTowed)}}

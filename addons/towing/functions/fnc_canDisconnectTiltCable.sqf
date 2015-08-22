@@ -19,5 +19,5 @@
 params ["_target", "_unit"];
 
 !(_target distance _unit > TOWING_ACTION_DISTANCE) &&
-{_target getVariable [QGVAR(tiltUp), _unit] == _unit} &&
-{_unit getVariable [QGVAR(isTilting), 0] == 2}
+    {_target getVariable [QGVAR(tiltUp), _unit] == _unit} &&
+    {_unit getVariable [QGVAR(isTilting), 0] == 2}
