@@ -3,10 +3,11 @@
  * Sets Object View Distance dynamically based on current Field of View, between Object View Distance (minimal value) and View Distance (maximum value) set before this PFH starts.
  *
  * Arguments:
- * None
+ * 0: PFH Arguments <ARRAY>
+ * 1: PFH Handle <NUMBER>
  *
  * Return Value:
- * None
+ * PFH Handle <NUMBER>
  *
  * Example:
  * [] call ace_viewdistance_fnc_setFovBasedOvdPFH
