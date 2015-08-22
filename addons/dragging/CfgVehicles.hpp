@@ -97,4 +97,18 @@ class CfgVehicles {
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;
     };
+
+    class Lamps_base_F;
+    class Land_PortableLight_single_F: Lamps_base_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryDirection) = 180;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 180;
+    };
+    class Land_PortableLight_single_off_F: Land_PortableLight_single_F {};
+    class Land_PortableLight_double_F: Land_PortableLight_single_F {};
+    class Land_PortableLight_double_off_F: Land_PortableLight_double_F {};
 };

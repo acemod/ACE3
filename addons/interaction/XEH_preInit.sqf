@@ -34,5 +34,6 @@ PREP(sendAway);
 PREP(showMouseHint);
 PREP(sortOptionsByPriority);
 PREP(tapShoulder);
+PREP(switchLamp);
 
 ADDON = true;

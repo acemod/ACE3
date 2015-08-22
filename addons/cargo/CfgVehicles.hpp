@@ -289,6 +289,16 @@ class CfgVehicles {
                 selection = "";
             };
         };
-   };
+    };
+
+    class Lamps_base_F;
+    class Land_PortableLight_single_F: Lamps_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+    class Land_PortableLight_double_F: Land_PortableLight_single_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
 
 };
