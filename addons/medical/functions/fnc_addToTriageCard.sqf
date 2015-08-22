@@ -13,7 +13,7 @@
  */
 
 #include "script_component.hpp"
-d
+
 private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 

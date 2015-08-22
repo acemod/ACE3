@@ -32,7 +32,8 @@ _woundsCreated = [];
 call compile _extensionOutput;
 _foundIndex = -1;
 {
-    _x params ["_toAddClassID", "_bodyPartNToAdd"];
+    _toAddClassID = _x select 1;
+    _bodyPartNToAdd = _x select 2;
     {
         // Check if we have an id of the given class on the given bodypart already
         if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitwith {
