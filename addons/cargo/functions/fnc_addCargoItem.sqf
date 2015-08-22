@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * ["item", vehicle] call ace_cargo_fnc_addItem
+ * ["item", vehicle] call ace_cargo_fnc_addCargoItem
  *
  * Public: No
  */
@@ -34,5 +34,5 @@ for "_i" from 1 to _amount do {
     };
 
     // Invoke listenable event
-    ["cargo_itemAdded", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
+    ["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
 };

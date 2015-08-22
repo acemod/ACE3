@@ -63,6 +63,6 @@ _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
 // TOOO maybe drag/carry the unloaded item?
 
 // Invoke listenable event
-["cargo_itemUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
 
 true

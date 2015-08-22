@@ -35,6 +35,6 @@ _item attachTo [_vehicle,[0,0,100]];
 ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
 
 // Invoke listenable event
-["cargo_itemLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
 
 true

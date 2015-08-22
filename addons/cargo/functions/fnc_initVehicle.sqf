@@ -25,7 +25,7 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (isServer) then {
     {
         if (isClass _x) then {
-            ["AddCargoItem", [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")]] call EFUNC(common,localEvent);
+            ["AddCargoByClass", [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")]] call EFUNC(common,localEvent);
         };
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
