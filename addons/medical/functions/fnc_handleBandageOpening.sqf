@@ -18,15 +18,10 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage", "_classID", "_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
-_target = _this select 0;
-_impact = _this select 1;
-_part = _this select 2;
-_injuryIndex = _this select 3;
-_injury = _this select 4;
-_bandage = _this select 5;
+private ["_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
+params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
-_classID = _injury select 1;
+_injury parmas ["_classID", "_injuryType"];
 _className = GVAR(woundClassNames) select _classID;
 
 // default, just in case..
@@ -58,10 +53,10 @@ if (isClass (_config >> _className)) then {
 
 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
 _exist = false;
-_injuryType = _injury select 1;
 _bandagedInjury = [];
 {
-    if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitwith {
+    _x params ["", "_injuryTypeX", "_injuryX"];
+    if (_injuryTypeX == _injuryType && _injuryTypeX == (_injury select 2)) exitwith {
         _exist = true;
         _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
@@ -69,7 +64,7 @@ _bandagedInjury = [];
 
         _bandagedInjury = _existingInjury;
     };
-}foreach _bandagedWounds;
+} foreach _bandagedWounds;
 
 if !(_exist) then {
     // [ID, classID, bodypart, percentage treated, bloodloss rate]
@@ -83,12 +78,8 @@ _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 if (random(1) <= _reopeningChance) then {
     _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
     [{
-        private ["_target", "_impact", "_part", "_injuryIndex", "_bandage", "_injury", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
-        _target = _this select 0;
-        _impact = _this select 1;
-        _part = _this select 2;
-        _injuryIndex = _this select 3;
-        _injury = _this select 4;
+        private ["_bandage", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
+        params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
 
         //if (alive _target) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
@@ -102,13 +93,14 @@ if (random(1) <= _reopeningChance) then {
                 _exist = false;
                 _injuryId = _injury select 1;
                 {
-                    if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitwith {
+                    _x params ["_injuryIdX", "_injuryX"];
+                    if (_injuryIdX == _injuryId && _injuryX == (_injury select 2)) exitwith {
                         _exist = true;
                         _existingInjury = _x;
                         _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];
                         _bandagedWounds set [_foreachIndex, _existingInjury];
                     };
-                }foreach _bandagedWounds;
+                } foreach _bandagedWounds;
 
                 if (_exist) then {
                     _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];

@@ -17,12 +17,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
-_unit       = _this select 0;
-_selection  = _this select 1;
-_damage     = _this select 2;
-_shooter    = _this select 3;
-_projectile = _this select 4;
+private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
+params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
 
 if !(local _unit) exitWith {nil};
 
@@ -53,7 +49,6 @@ if (GVAR(level) < 2) then {
     };
     _newDamage = _this call FUNC(handleDamage_caching);
     // handleDamage_caching may have modified the projectile string
-    _projectile = _this select 4;
     _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
     _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
@@ -123,4 +118,4 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
     0.89;
 };
 
-_damageReturn;
+_damageReturn

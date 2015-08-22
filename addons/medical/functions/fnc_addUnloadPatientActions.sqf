@@ -13,8 +13,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
+params ["_vehicle", "_player", "_parameters"];
 
 private ["_actions", "_unit"];
 _actions = [];
@@ -28,7 +27,7 @@ _actions = [];
                     str(_unit),
                     [_unit, true] call EFUNC(common,getName),
                     "",
-                    {[_player, (_this select 2) select 0] call FUNC(actionUnloadUnit);},
+                    {[_player, _parameters select 0] call FUNC(actionUnloadUnit);},
                     {true},
                     {},
                     [_unit]

@@ -8,17 +8,15 @@
  * 2: SelectionName <STRING>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_part", "_selectionName", "_tourniquets", "_output"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
+private ["_part", "_tourniquets", "_output"];
+params ["_caller", "_target", "_selectionName"];
 
 // grab the required data
 _part = [_selectionName] call FUNC(selectionNameToNumber);

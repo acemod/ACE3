@@ -24,13 +24,8 @@
 #define ARMDAMAGETRESHOLD2 1.7
 #define UNCONSCIOUSNESSTRESHOLD 0.7
 
-private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
-
-_unit          = _this select 0;
-_selectionName = _this select 1;
-_damage        = _this select 2;
-_shooter       = _this select 3;
-_projectile    = _this select 4;
+private ["_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
+params ["_unit", "_selectionName", "_damage", "_shooter", "_projectile"];
 
 // Apply damage treshold / coefficient
 _threshold = [
@@ -52,8 +47,10 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
     if (isnil {_unit getvariable QGVAR(structDamagePFH)}) then {
     // Assign orphan structural damage to torso
         [{
-            private ["_unit", "_damagesum"];
-            _unit = (_this select 0) select 0;
+            private "_damagesum";
+            params ["_args", "_idPFH"];
+            _args params ["_unit"];
+
             if (ACE_diagTime - (_unit getvariable [QGVAR(structDamagePFH),-2]) >= 2) then {
                  _unit setVariable [QGVAR(structDamagePFH), nil];
                 _damagesum = (_unit getHitPointDamage "HitHead") +
@@ -65,7 +62,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
                 if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
                     _unit setHitPointDamage ["HitBody", damage _unit];
                 };
-                [(_this select 1)] call cba_fnc_removePerFrameHandler;
+                [_idPFH] call CBA_fnc_removePerFrameHandler;
             };
         }, 0, [_unit]] call CBA_fnc_addPerFrameHandler;
     };

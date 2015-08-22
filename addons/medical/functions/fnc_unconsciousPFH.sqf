@@ -45,7 +45,7 @@ if (!alive _unit) exitwith {
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
 
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
 
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
@@ -99,7 +99,7 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
 
         ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
         // EXIT PFH
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        [(_this select 1)] call CBA_fnc_removePerFrameHandler;
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
@@ -132,7 +132,7 @@ if (_parachuteCheck) then {
 if (!local _unit) exitwith {
     _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
