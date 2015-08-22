@@ -97,38 +97,29 @@ _towed setVariable [QGVAR(towState), 1];
 
         // Calculate new position for towed vehicle
         _posVeh = _posTow vectorAdd (_dirV vectorMultiply -7);
-        // Get direction vector
-        _dirV = _lastPosVeh vectorFromTo _posVeh;
         // Get compass direction for towed vehicle
         _dir = (_dirV select 0) atan2 (_dirV select 1);
-
-        // Flip direction if tow truck is driving backwards
-        _angle = (velocity _towing) vectorCos (vectorDir _towing);
-        if (_angle < 0) then {
-            _dir = _dir - 180;
-        };
         // Ensure _dir is [0...360]
         if (_dir < 0) then {_dir = 360 + _dir};
+        _vehicle setDir _dir;
 
         // Only calculate direction if vehicle moved more then 0.1m
         if ((_posVeh distance _lastPosVeh) > 0.1) then {
-            _vehicle setDir _dir;
-            _vehicle setVariable [QGVAR(dir), _dir];
             _vehicle setVariable [QGVAR(lastPosVeh), _posVeh];
-        } else {
-            _vehicle setDir (_vehicle getVariable QGVAR(dir));
         };
         // Prevent vehicle from sinking into terrain
-        _atlZ = (ASLtoATL _posVeh) select 2;
+        (ASLtoATL _posVeh) params ["", "", "_atlZ"];
+        _collision = lineIntersects [_posVeh, _posVeh vectorDiff [0, 0, 1], _vehicle];
         if (_atlZ < 0) then {
             _posVeh = _posVeh vectorDiff [0, 0, _atlZ];
-            hint format ["z-fix %1\n%2", _atlZ, _posVeh];
+        } else {
+            if !(_collision) then {
+                _posVeh = _posVeh vectorDiff [0, 0, _atlZ];
+            };
         };
 
         _normal = [0,0,1];
-
-        _collObj = [_vehicle, "GEOM"] intersect [_posVeh, _posVeh vectorDiff [0, 0, 1]];
-        if (_atlZ < 0.4) then {
+        if !(_collision) then {
             {
                 _normal = _normal vectorAdd (surfaceNormal (_posVeh vectorAdd _x));
             } foreach [[1,0,0], [0,1,0], [-1,0,0], [0,-1,0]];
