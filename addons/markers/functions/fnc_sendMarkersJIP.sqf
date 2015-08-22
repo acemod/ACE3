@@ -6,7 +6,7 @@
  * 0: Logic <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [onUnloadEvent] call ace_markers_fnc_sendMarkerJIP;
@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_logic);
 
-[QGVAR(setMarkerJIP), [_logic], [
-GETGVAR(allMapMarkers,[]),
-GETGVAR(allMapMarkersProperties,[]),
-_logic
-]
+[
+    QGVAR(setMarkerJIP),
+    _this,
+    [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[]), _logic]
 ] call EFUNC(common,targetEvent);

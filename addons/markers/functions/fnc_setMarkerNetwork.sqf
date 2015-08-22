@@ -8,7 +8,7 @@
  * 1: Marker Data <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
@@ -19,8 +19,8 @@
 
 private ["_config"];
 
-PARAMS_2(_marker,_data);
-EXPLODE_4_PVT(_data,_markerClassname,_colorClassname,_markerPos,_markerDir);
+params ["_marker", "_data"];
+_data params ["_markerClassname", "_colorClassname", "_markerPos", "_markerDir"];
 
 _config = (configfile >> "CfgMarkers") >> _markerClassname;
 if (!isClass _config) then {
