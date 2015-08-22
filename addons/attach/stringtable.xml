@@ -5,7 +5,7 @@
             <English>Attach item &gt;&gt;</English>
             <German>Gegenstand befestigen &gt;&gt;</German>
             <Spanish>Acoplar objeto &gt;&gt;</Spanish>
-            <Polish>Przyczep przedmiot &gt;&gt;</Polish>
+            <Polish>Przyczep &gt;&gt;</Polish>
             <French>Attacher l'objet &gt;&gt;</French>
             <Czech>Připnout předmět &gt;&gt;</Czech>
             <Portuguese>Fixar item &gt;&gt;</Portuguese>
@@ -185,7 +185,7 @@
             <English>%1&lt;br/&gt;Attached</English>
             <German>%1&lt;br/&gt;befestigt</German>
             <Spanish>%1&lt;br/&gt;acoplada</Spanish>
-            <Polish>%1&lt;br/&gt;przyczepiono</Polish>
+            <Polish>Przyczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;attachée</French>
             <Czech>%1&lt;br/&gt;Připnutý</Czech>
             <Portuguese>%1&lt;br/&gt;Fixada</Portuguese>
@@ -197,7 +197,7 @@
             <English>%1&lt;br/&gt;Detached</English>
             <German>%1&lt;br/&gt;entfernt</German>
             <Spanish>%1&lt;br/&gt;quitada</Spanish>
-            <Polish>%1&lt;br/&gt;odczepiono</Polish>
+            <Polish>Odczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;détachée</French>
             <Czech>%1&lt;br/&gt;Odepnutý</Czech>
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
