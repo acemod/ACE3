@@ -29,9 +29,7 @@ if ((random 1) >= 0.6) then {
     _target setvariable [QGVAR(inCardiacArrest), nil,true];
     _target setvariable [QGVAR(heartRate), 40];
     _target setvariable [QGVAR(bloodPressure), [50,70]];
-}
-else
-{
+} else {
     [ARR_4(_caller, _target, 'body', 'CPR')] call DFUNC(treatment);
 };
 
