@@ -76,41 +76,6 @@
             <French>VUE RAPIDE</French>
             <Polish>SZYBKI PODGLĄD</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Menu_TRIAGE_NONE">
-            <English>None</English>
-            <Russian>Не ранен</Russian>
-            <Spanish>Ninguno</Spanish>
-            <French>Aucun</French>
-            <Polish>Brak</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Menu_TRIAGE_MINOR">
-            <English>Minor</English>
-            <Russian>Несрочная помощь</Russian>
-            <Spanish>Menor</Spanish>
-            <French>Mineur</French>
-            <Polish>Normalny</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Menu_TRIAGE_DELAYED">
-            <English>Delayed</English>
-            <Russian>Срочная помощь</Russian>
-            <Spanish>Diferido</Spanish>
-            <French>Urgent</French>
-            <Polish>Opóźniony</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Menu_TRIAGE_IMMEDIATE">
-            <English>Immediate</English>
-            <Russian>Неотложная помощь</Russian>
-            <Spanish>Inmediato</Spanish>
-            <French>Immédiat</French>
-            <Polish>Natychmiastowy</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Menu_TRIAGE_DECEASED">
-            <English>Deceased</English>
-            <Russian>Морг</Russian>
-            <Spanish>Fallecido</Spanish>
-            <French>Décédé</French>
-            <Polish>Nie żyje</Polish>
-        </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
             <Russian>Смотреть первичную карточку</Russian>
