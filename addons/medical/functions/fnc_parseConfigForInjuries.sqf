@@ -9,7 +9,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage", "_defaultMinLethalDamage", "_minLethalDamage", "_allFoundDamageTypes", "_classID", "_configDamageTypes", "_i", "_parseForSubClassWounds", "_subClass", "_subClassConfig", "_subClassbloodLoss", "_subClasscauses", "_subClassminDamage", "_subClasspain", "_subClassselections", "_subClasstype", "_type", "_varName", "_woundTypes"];
@@ -140,9 +139,9 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
 // Extension loading
 
 {
-    private ["_className", "_allowedSelections", "_causes"];
+    private ["_classID", "_className", "_allowedSelections", "_bloodLoss", "_pain", "_minDamage", "_maxDamage", "_causes", "_classDisplayName", "_extensionInput", "_selections", "_causesArray"];
     // add shit to addInjuryType
-    params ["_classID", "_selections", "_bloodLoss", "_pain", "_damage", "_causesArray", "_classDisplayName"];
+    _x params ["_classID", "_selections", "_bloodLoss", "_pain", "_damage", "_causesArray", "_classDisplayName"];
     _damage params ["_minDamage", "_maxDamage"];
     _className = GVAR(woundClassNames) select _forEachIndex;
     _allowedSelections = "";
@@ -162,6 +161,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
             _causes = _causes + ":";
         };
     } foreach _causesArray;
+    _classDisplayName = _x select 6;
 
     "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
