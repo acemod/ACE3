@@ -17,9 +17,10 @@
 private ["_bloodPressure", "_logOutPut", "_output"];
 params ["_caller", "_target"];
 
-_bloodPressure = [_target] call FUNC(getBloodPressure);
-if (!alive _target) then {
-    _bloodPressure = [0,0];
+_bloodPressure = if (!alive _target) then {
+    [0,0]
+} else {
+    [_target] call FUNC(getBloodPressure)
 };
 _bloodPressure params ["_bloodPressureLow", "_bloodPressureLow"];
 _output = "";

@@ -27,7 +27,7 @@ _actions = [];
                     str(_unit),
                     [_unit, true] call EFUNC(common,getName),
                     "",
-                    {[_player, _parameters select 0] call FUNC(actionUnloadUnit);},
+                    {[_player, (_this select 2) select 0] call FUNC(actionUnloadUnit);},
                     {true},
                     {},
                     [_unit]

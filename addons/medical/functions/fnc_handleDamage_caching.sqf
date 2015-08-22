@@ -75,7 +75,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
     [{
         private ["_args", "_params"];
         params ["_args", "_idPFH"];
-        params ["_unit", "_frameno"];
+        _args params ["_unit", "_frameno"];
         if (diag_frameno > _frameno + 2) then {
             _unit setDamage 0;
 

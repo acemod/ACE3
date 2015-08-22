@@ -13,5 +13,5 @@
 */
 
 #include "script_component.hpp"
-
-[_this, QUOTE(DFUNC(actionCheckBloodPressureLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+params ["_caller", "_target"];
+[[_caller, _target], QUOTE(DFUNC(actionCheckBloodPressureLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

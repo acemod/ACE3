@@ -28,4 +28,4 @@ call {
     if (_typeOfProjectile isKindOf "BombCore") exitWith {"explosive"};
     if (_typeOfProjectile isKindOf "Grenade") exitWith {"grenade"};
     toLower _typeOfProjectile
-};
+}

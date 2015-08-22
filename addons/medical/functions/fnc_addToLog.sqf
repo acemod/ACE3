@@ -17,13 +17,13 @@
 #include "script_component.hpp"
 
 private ["_moment", "_logVarName", "_log","_newLog", "_logs"];
-params ["_unit", "_type", "_allMapMarkers", "_arguments"];
+params ["_unit", "_type", "_message", "_arguments"];
 
 if (!local _unit) exitwith {
-    [_this, QUOTE(DFUNC(addToLog)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [_this, QFUNC(addToLog), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-date params ["_minute", "_hour"];
+date params ["", "", "", "_minute", "_hour"];
 
 _moment = if (_minute < 10) then {
     format["%1:0%2", _hour, _minute]
