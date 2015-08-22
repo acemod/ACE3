@@ -13,6 +13,7 @@ PREP(checkFuel);
 PREP(connectNozzle);
 PREP(connectNozzleAction);
 PREP(disconnect);
+PREP(dropNozzle);
 PREP(getFuel);
 PREP(handleKilled);
 PREP(handleUnconscious);

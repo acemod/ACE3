@@ -19,8 +19,8 @@
 private ["_nozzle"];
 params ["_unit", "_target"];
 
-_nozzle = _unit getVariable QGVAR(nozzle);
+_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 
-!(isNil "_nozzle" ||
+!(isNull _nozzle ||
     {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
     {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines

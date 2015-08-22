@@ -133,10 +133,14 @@ class CfgVehicles {
         };
     };
 
-    class Sign_Sphere10cm_F;
-    class ACE_refuel_fuelNozzle : Sign_Sphere10cm_F {
+    class ThingX;
+    class ACE_refuel_fuelNozzle : ThingX {
         XEH_ENABLED;
         MACRO_NOZZLE_ACTIONS
+        displayName = QGVAR(fuelNozzle);
+        scope = 2;
+        scopeCurator = 2;
+        model = "\A3\Structures_F_Heli\VR\Helpers\Sign_sphere10cm_F.p3d";
     };
 
     class All;

@@ -24,6 +24,7 @@ if (isNull _sink) exitWith {};
 
 _sink setVariable [QGVAR(nozzle), objNull, true];
 _nozzle setVariable [QGVAR(sink), objNull, true];
-REFUEL_DETACH_NOZZLE
+_nozzle setVariable [QGVAR(isConnected), false, true];
+[objNull, _nozzle, true] call FUNC(dropNozzle);
 
 [_unit, objNull, _nozzle] call FUNC(takeNozzle);

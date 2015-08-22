@@ -31,7 +31,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
 
     _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (!alive _source || {!alive _sink}) exitWith {
-        REFUEL_DROP_NOZZLE
+        [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
@@ -41,7 +41,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
     if (_tooFar) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
 
-        REFUEL_DROP_NOZZLE
+        [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
         _nozzle setVariable [QGVAR(sink), objNull, true];
         _sink setVariable [QGVAR(nozzle), objNull, true];
@@ -64,18 +64,22 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
         };
 
-        _fuelInSink = fuel _sink  + ( _rate / _maxFuel);
+        _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rate / _maxFuel);
         if (_fuelInSink > 1) then {
             _fuelInSink = 1;
             _finished = true;
             [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
         };
+        _unit setVariable [QGVAR(tempFuel), _fuelInSink];
+
         if !(local _sink) then {
-            [[_sink, _fuelInSink], QUOTE({(_this select 0) setFuel (_this select 1)}), _sink] call EFUNC(common,execRemoteFnc);
+            [[_sink, _fuelInSink], "{(_this select 0) setFuel (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
         } else {
             _sink setFuel _fuelInSink;
         };
         [_source, _fuelInSource] call FUNC(setFuel);
+    } else {
+        _unit setVariable [QGVAR(tempFuel), fuel _sink];
     };
 
     if (_finished) exitWith {

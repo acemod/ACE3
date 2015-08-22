@@ -24,8 +24,8 @@
 private ["_nozzle", "_actionID"];
 params ["_unit", "_target"];
 
-_nozzle = _unit getVariable QGVAR(nozzle);
-if (isNil "_nozzle") exitWith {};
+_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+if (isNull _nozzle) exitWith {};
 
 GVAR(placeAction) = PLACE_WAITING;
 

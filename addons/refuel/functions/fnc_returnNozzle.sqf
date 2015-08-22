@@ -19,10 +19,10 @@
 private ["_nozzle", "_dummy", "_actionID"];
 params ["_unit", "_target"];
 
-_nozzle = _unit getVariable QGVAR(nozzle);
+_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 _source = _nozzle getVariable QGVAR(source);
 
-if (isNil "_nozzle" || {_source != _target}) exitWith {false};
+if (isNull _nozzle || {_source != _target}) exitWith {false};
 
 [
     2,
@@ -46,11 +46,15 @@ if (isNil "_nozzle" || {_source != _target}) exitWith {false};
         ropeDestroy (_nozzle getVariable QGVAR(rope));
         deleteVehicle _nozzle;
 
-        _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
+        if !(local _target) then {
+            [[_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]], "{(_this select 0) setHitPointDamage (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
+        } else {
+            _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
+        };
         _target setVariable [QGVAR(engineHit), nil, true];
     },
     "",
-    localize LSTRING(ConnectAction),
+    localize LSTRING(ReturnAction),
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

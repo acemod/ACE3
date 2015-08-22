@@ -109,6 +109,10 @@
             <English>Return fuel nozzle</English>
             <German>Zapfpistole zurückstecken</German>
         </Key>
+        <Key ID="STR_ACE_Refuel_ReturnAction">
+            <English>Returning fuel nozzle ...</English>
+            <German>Stecke Zapfpistole zurück ...</German>
+        </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
             <German>Tankuhr ansehen</German>
