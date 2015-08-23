@@ -44,9 +44,9 @@ if (_barrelLength >= (_barrelLengthTable select _barrelLengthTableCount - 1)) ex
 
 // Find closest bordering values for barrel length
 {
-    if (_barrelLength >= _x && _barrelLength <= (_barrelLengthTable select _forEachIndex + 1)) then {
-        _lowerDataIndex = _forEachIndex;
-        _upperDataIndex = _lowerDataIndex + 1;
+    if (_barrelLength <= _x) then {
+        _upperDataIndex = _forEachIndex;
+        _lowerDataIndex = _upperDataIndex - 1;
         breakTo "main";
     };
 } forEach _barrelLengthTable;
