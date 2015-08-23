@@ -12,7 +12,7 @@ parent: wiki
 ```c++
 class CfgWeapons {
 
-    class Rifle_Long_Base_F;
+    class Rifle_Long_Base_F;  // base class for LMGs and MMGs
     class your_MMG: Rifle_Long_Base_F {
 
         // Dispersion, SlowdownFactor and JamChance arrays have 4 values for different temperatures, which are interpolated between.
