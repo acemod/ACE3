@@ -35,7 +35,7 @@ if (_muzzleVelocityTableCount == 1) exitWith { (_muzzleVelocityTable select 0) -
 
 // If we have the precise barrel length value, return result immediately
 if (_barrelLength in _barrelLengthTable) exitWith {
-    _muzzleVelocityTable select (_barrelLengthTable find _barrelLength) - _muzzleVelocity
+    (_muzzleVelocityTable select (_barrelLengthTable find _barrelLength)) - _muzzleVelocity
 };
 
 // Limit values to lower and upper bound of data we have available
