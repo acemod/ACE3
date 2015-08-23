@@ -108,11 +108,11 @@ if (_type in _initializedClasses) exitWith {};
         } else {
             private "_action";
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
-            if (_selection isEqualTo [0, 0, 0]) then {
-                [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
-            } else {
-                [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
-            }
+            [   _type,
+                0,
+                if (_selection isEqualTo [0, 0 ,0]) then { ["ACE_MainActions", QGVAR(Repair)] } else { [] },
+                _action
+            ] call EFUNC(interact_menu,addActionToClass);
         };
     };
 } forEach _hitPoints;
