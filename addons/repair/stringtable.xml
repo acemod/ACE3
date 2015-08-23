@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
@@ -117,18 +117,6 @@
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
             <Polish>Kto może przeprowadzić pełną naprawę pojazdu?</Polish>
-        </Key>
-        <Key ID="STR_ACE_Repair_RepairHitpoint">
-            <English>Repair %1</English>
-            <German>Reparieren %1</German>
-            <Spanish>Reparación %1</Spanish>
-            <French>Réparer %1</French>
-            <Polish>Napraw %1</Polish>
-            <Czech>Opravit %1</Czech>
-            <Portuguese>Reparar %1</Portuguese>
-            <Italian>Ripara %1</Italian>
-            <Hungarian>Szerelés %1</Hungarian>
-            <Russian>Ремонт %1</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>

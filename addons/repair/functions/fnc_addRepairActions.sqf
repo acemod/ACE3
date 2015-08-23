@@ -90,9 +90,9 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _text = format ["STR_ACE_Repair_%1", _x];
 
         if (isLocalized _text) then {
-            _text = format [localize LSTRING(RepairHitpoint), localize _text];
+            _text = localize _text;
         } else {
-            _text = format [localize LSTRING(RepairHitpoint), _x];
+            _text = _x;
         };
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
