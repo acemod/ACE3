@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit","_state"];
+TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitwith {
     ERROR("running setHandcuffed on remote unit");
@@ -56,7 +57,7 @@ if (_state) then {
         //Adds an animation changed eh
         //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
         private "_animChangedEHID";
-        TRACE_1("Adding animChangedEH",_unit);
+
         _animChangedEHID = _unit addEventHandler ["AnimChanged", {
             params ["_unit", "_newAnimation"];
             TRACE_2("AnimChanged",_unit,_newAnimation);
@@ -80,6 +81,7 @@ if (_state) then {
                 [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
             };
         }];
+        TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 
     }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
@@ -90,6 +92,7 @@ if (_state) then {
     //remove AnimChanged EH
     private "_animChangedEHID";
     _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+    TRACE_1("removing animChanged EH",_animChangedEHID);
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
 
