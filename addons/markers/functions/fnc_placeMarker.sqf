@@ -18,6 +18,7 @@
 
 disableserialization;
 params ["_display", "_closeNum"];
+TRACE_2("params",_display,_closeNum);
 
 if (_closeNum == 1) then {
 

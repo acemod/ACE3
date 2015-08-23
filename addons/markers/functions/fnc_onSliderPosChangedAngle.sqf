@@ -19,6 +19,7 @@
 private ["_direction"];
 
 params ["_ctrl", "_data"];
+TRACE_2("params",_ctrl,_data);
 
 _direction = round _data;
 if (_direction < 0) then {

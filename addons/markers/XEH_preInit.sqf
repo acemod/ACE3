@@ -47,7 +47,7 @@ if (isNil QGVAR(MarkerColorsCache)) then {
                 };
             } forEach _rgba;
             _rgba params ["_red", "_green", "_blue", "_alpha"];
-            _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _blue];
+            _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
             GVAR(MarkerColorsCache) pushBack [_name, _a, _icon];
         };

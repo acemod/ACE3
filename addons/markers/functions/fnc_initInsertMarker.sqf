@@ -23,7 +23,8 @@
 
     disableserialization;
     params ["_display"];
-
+    TRACE_1("params",_display);
+    
     //Can't place markers when can't interact
     if (!([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button

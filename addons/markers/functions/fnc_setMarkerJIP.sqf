@@ -17,9 +17,8 @@
  */
 #include "script_component.hpp"
 
-
-
 params ["_allMapMarkers", "_allMapMarkersProperties", "_logic"];
+TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
 
 {
     private ["_index", "_data", "_config"];

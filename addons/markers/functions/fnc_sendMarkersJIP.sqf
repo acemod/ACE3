@@ -15,9 +15,11 @@
  */
 #include "script_component.hpp"
 
+params ["_logic"];
+TRACE_1("params",_logic);
 
 [
     QGVAR(setMarkerJIP),
-    _this,
+    [_logic],
     [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[]), _logic]
 ] call EFUNC(common,targetEvent);

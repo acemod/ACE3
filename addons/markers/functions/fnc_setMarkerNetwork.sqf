@@ -21,6 +21,8 @@ private ["_config"];
 
 params ["_marker", "_data"];
 _data params ["_markerClassname", "_colorClassname", "_markerPos", "_markerDir"];
+TRACE_2("params",_marker,_data);
+
 
 _config = (configfile >> "CfgMarkers") >> _markerClassname;
 if (!isClass _config) then {

@@ -19,6 +19,8 @@
 private ["_data", "_config"];
 
 params ["_ctrl", "_index"];
+TRACE_2("params",_ctrl,_index);
+
 _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerShape) = _index;
