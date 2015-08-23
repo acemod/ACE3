@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Fragmentation Configuration
+title: Fragmentation framework
 description: The fragmentation system (ace_frag) in ACE3 is a significant improvement over the fragmentation system in ACE2.
 group: framework
 parent: wiki
