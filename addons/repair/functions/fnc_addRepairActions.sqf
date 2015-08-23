@@ -13,14 +13,11 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 #define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]
 
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
-
-if (typeOf _vehicle != "O_Heli_Transport_04_F") exitWith {}; // test
 
 private ["_type", "_initializedClasses"];
 
