@@ -22,7 +22,7 @@
 #define ARMDAMAGETRESHOLD2 1.7
 
 private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal", "_armdamage", "_legdamage"];
-params ["_unit", "_selection", "_damage", ["_disalbed", false]];
+params ["_unit", "_selection", "_damage", ["_disabled", false]];
 
 // Unit isn't local, give function to machine where it is.
 if !(local _unit) exitWith {
@@ -30,7 +30,7 @@ if !(local _unit) exitWith {
 };
 
 // Check if overall damage adjustment is disabled
-if (_disalbed) exitWith {
+if (_disabled) exitWith {
     _unit setHitPointDamage [_selection, _damage];
 };
 

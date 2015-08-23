@@ -17,11 +17,7 @@
 private ["_output"];
 params ["_caller", "_target"];
 
-_output = if ([_target] call EFUNC(common,isAwake)) then {
-    LSTRING(Check_Response_Responsive)
-} else {
-    LSTRING(Check_Response_Unresponsive)
-};
+_output = [LSTRING(Check_Response_Unresponsive), LSTRING(Check_Response_Responsive)] select ([_target] call EFUNC(common,isAwake));
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);
 
