@@ -230,6 +230,15 @@
             <Hungarian>Motor</Hungarian>
             <Russian>Двигатель</Russian>
         </Key>
+        <Key ID="STR_ACE_Repair_HitHStabilizerL1">
+            <English>Left Horizontal Stabilizer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitHStabilizerR1">
+            <English>Right Horizontal Stabilizer</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitVStabilizer1">
+            <English>Vertical Stabilizer</English>
+        </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
             <German>Tank</German>
@@ -241,6 +250,24 @@
             <Italian>Serbatoio</Italian>
             <Hungarian>Üzemanyagtank</Hungarian>
             <Russian>Топливный бак</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitTransmission">
+            <English>Transmission</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGear">
+            <English>Gear</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitStarter">
+            <English>Starter</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitTail">
+            <English>Tail</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitPilotTube">
+            <English>Pilot Tube</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitStaticPort">
+            <English>Static Port</English>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Main Turret</English>
@@ -451,77 +478,17 @@
             <Hungarian>Bal szélvédő</Hungarian>
             <Russian>Стекло (слава)</Russian>
         </Key>
-        <Key ID="STR_ACE_Repair_HitGlass1">
-            <English>Glass 1</English>
-            <German>Scheibe 1</German>
-            <Spanish>Ventana 1</Spanish>
-            <French>Vitre 1</French>
-            <Polish>Szyba 1</Polish>
-            <Czech>Sklo 1</Czech>
-            <Portuguese>Vidro 1</Portuguese>
-            <Italian>Vetro 1</Italian>
-            <Hungarian>Üveg 1</Hungarian>
-            <Russian>Стекло 1</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass2">
-            <English>Glass 2</English>
-            <German>Scheibe 2</German>
-            <Spanish>Ventana 2</Spanish>
-            <French>Vitre 2</French>
-            <Polish>Szyba 2</Polish>
-            <Czech>Sklo 2</Czech>
-            <Portuguese>Vidro 2</Portuguese>
-            <Italian>Vetro 2</Italian>
-            <Hungarian>Üveg 2</Hungarian>
-            <Russian>Стекло 2</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass3">
-            <English>Glass 3</English>
-            <German>Scheibe 3</German>
-            <Spanish>Ventana 3</Spanish>
-            <French>Vitre 3</French>
-            <Polish>Szyba 3</Polish>
-            <Czech>Sklo 3</Czech>
-            <Portuguese>Vidro 3</Portuguese>
-            <Italian>Vetro 3</Italian>
-            <Hungarian>Üveg 3</Hungarian>
-            <Russian>Стекло 3</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass4">
-            <English>Glass 4</English>
-            <German>Scheibe 4</German>
-            <Spanish>Ventana 4</Spanish>
-            <French>Vitre 4</French>
-            <Polish>Szyba 4</Polish>
-            <Czech>Sklo 4</Czech>
-            <Portuguese>Vidro 4</Portuguese>
-            <Italian>Vetro 4</Italian>
-            <Hungarian>Üveg 4</Hungarian>
-            <Russian>Стекло 4</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass5">
-            <English>Glass 5</English>
-            <German>Scheibe 5</German>
-            <Spanish>Ventana 5</Spanish>
-            <French>Vitre 5</French>
-            <Polish>Szyba 5</Polish>
-            <Czech>Sklo 5</Czech>
-            <Portuguese>Vidro 5</Portuguese>
-            <Italian>Vetro 5</Italian>
-            <Hungarian>Üveg 5</Hungarian>
-            <Russian>Стекло 5</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass6">
-            <English>Glass 6</English>
-            <German>Scheibe 6</German>
-            <Spanish>Ventana 6</Spanish>
-            <French>Vitre 6</French>
-            <Polish>Szyba 6</Polish>
-            <Czech>Sklo 6</Czech>
-            <Portuguese>Vidro 6</Portuguese>
-            <Italian>Vetro 6</Italian>
-            <Hungarian>Üveg 6</Hungarian>
-            <Russian>Стекло 6</Russian>
+        <Key ID="STR_ACE_Repair_HitGlass">
+            <English>Glass</English>
+            <German>Scheibe</German>
+            <Spanish>Ventana</Spanish>
+            <French>Vitre</French>
+            <Polish>Szyba</Polish>
+            <Czech>Sklo</Czech>
+            <Portuguese>Vidro</Portuguese>
+            <Italian>Vetro</Italian>
+            <Hungarian>Üveg</Hungarian>
+            <Russian>Стекло</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
