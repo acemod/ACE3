@@ -30,8 +30,7 @@ _muzzleVelocityTableCount = count _muzzleVelocityTable;
 _barrelLengthTableCount = count _barrelLengthTable;
 
 // Exit if tables are different sizes, have no elements or have only one element
-if (_muzzleVelocityTableCount != _barrelLengthTableCount) exitWith { 0 };
-if (_muzzleVelocityTableCount == 0 || _barrelLengthTableCount == 0) exitWith { 0 };
+if (_muzzleVelocityTableCount != _barrelLengthTableCount || _muzzleVelocityTableCount == 0 || _barrelLengthTableCount == 0) exitWith { 0 };
 if (_muzzleVelocityTableCount == 1) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
 
 // If we have the precise barrel length value, return result immediately
@@ -45,7 +44,7 @@ if (_barrelLength >= (_barrelLengthTable select _barrelLengthTableCount - 1)) ex
 
 // Find closest bordering values for barrel length
 {
-    if (_barrelLength >= _x) then {
+    if (_barrelLength >= _x && _barrelLength <= (_barrelLengthTable select _forEachIndex + 1)) then {
         _lowerDataIndex = _forEachIndex;
         _upperDataIndex = _lowerDataIndex + 1;
         breakTo "main";
@@ -67,5 +66,5 @@ _interpolationRatio = if (abs (_lowerBarrelLength - _upperBarrelLength) > 0) the
     0
 };
 
-// Calculate interpolated muzzle velocity
+// Calculate interpolated muzzle velocity shift
 (_lowerMuzzleVelocity + ((_upperMuzzleVelocity - _lowerMuzzleVelocity) * (1 - _interpolationRatio))) - _muzzleVelocity // Return
