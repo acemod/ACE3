@@ -60,7 +60,7 @@ _hitPointsAddedAmount = [];
 
         // remove wheel action
         _name = format  ["Remove_%1", _x];
-        _text = localize "STR_ACE_Repair_RemoveWheel";
+        _text = localize LSTRING(RemoveWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
