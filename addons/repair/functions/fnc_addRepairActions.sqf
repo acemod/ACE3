@@ -27,17 +27,13 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};
-// get all hitpoints
-private "_hitPoints";
-_hitPoints = [_vehicle] call EFUNC(common,getHitPointsWithSelections) select 0;
+
+// get all hitpoints and selections
+([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitPoints", "_hitPointsSelections"];
 
 // get hitpoints of wheels with their selections
-private ["_wheelHitPointsWithSelections", "_wheelHitPoints", "_wheelHitPointSelections"];
+([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
 
-_wheelHitPointsWithSelections = [_vehicle] call FUNC(getWheelHitPointsWithSelections);
-
-_wheelHitPoints = _wheelHitPointsWithSelections select 0;
-_wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
 
 // add repair events to this vehicle class
 {
@@ -96,7 +92,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         };
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-        _selection = "";
+        _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
@@ -112,7 +108,11 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         } else {
             private "_action";
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
-            [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+            if (_selection isEqualTo [0, 0, 0]) then {
+                [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+            } else {
+                [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
+            }
         };
     };
 } forEach _hitPoints;
