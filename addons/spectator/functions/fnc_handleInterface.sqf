@@ -20,100 +20,6 @@
 params ["_mode",["_args",[]]];
 
 switch (toLower _mode) do {
-    // Safely open/close the interface
-    case "open": {
-        // Prevent reopening
-        if (GVAR(isSet)) exitWith {};
-        GVAR(interrupts) = [];
-
-        // Initalize camera variables
-        GVAR(camBoom) = 0;
-        GVAR(camDolly) = [0,0];
-        GVAR(camGun) = false;
-
-        // Initalize display variables
-        GVAR(ctrlKey) = false;
-        GVAR(heldKeys) = [];
-        GVAR(heldKeys) resize 255;
-        GVAR(mouse) = [false,false];
-        GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
-
-        // Update units before opening to support pre-set camera unit
-        [] call FUNC(updateUnits);
-
-        // Initalize the camera view
-        GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
-        [] call FUNC(transitionCamera);
-
-        // Close map and clear radio
-        openMap [false,false];
-        clearRadio;
-
-        // Disable BI damage effects
-        BIS_fnc_feedback_allowPP = false;
-
-        // Close all existing dialogs
-        while {dialog} do {
-            closeDialog 0;
-        };
-
-        // Create the dialog
-        createDialog QGVAR(interface);
-
-        // Cache and disable nametag settings
-        if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
-            GVAR(nametagSettingCache) = [EGVAR(nametags,showPlayerNames), EGVAR(nametags,showNamesForAI)];
-            EGVAR(nametags,showPlayerNames) = 0;
-            EGVAR(nametags,showNamesForAI) = false;
-        };
-    };
-    case "close": {
-        // Can't close a second time
-        if !(GVAR(isSet)) exitWith {};
-        GVAR(interrupts) = [];
-
-        // Terminate interface
-        while {dialog} do {
-            closeDialog 0;
-        };
-
-        // Kill the display
-        (findDisplay 12249) closeDisplay 0;
-
-        // Terminate camera
-        GVAR(camera) cameraEffect ["terminate", "back"];
-        camDestroy GVAR(camera);
-
-        clearRadio;
-
-        // Return to player view
-        player switchCamera "internal";
-
-        // Enable BI damage effects
-        BIS_fnc_feedback_allowPP = true;
-
-        // Cleanup camera variables
-        GVAR(camera) = nil;
-        GVAR(camBoom) = nil;
-        GVAR(camDolly) = nil;
-        GVAR(camGun) = nil;
-
-        // Cleanup display variables
-        GVAR(ctrlKey) = nil;
-        GVAR(heldKeys) = nil;
-        GVAR(mouse) = nil;
-        GVAR(mousePos) = nil;
-        GVAR(treeSel) = nil;
-
-        // Reset nametag settings
-        if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
-            EGVAR(nametags,showPlayerNames) = GVAR(nametagSettingCache) select 0;
-            EGVAR(nametags,showNamesForAI) = GVAR(nametagSettingCache) select 1;
-            GVAR(nametagSettingCache) = nil;
-        };
-    };
-    // Dialog events
     case "onload": {
         _args params ["_display"];
 
@@ -528,7 +434,7 @@ switch (toLower _mode) do {
             [nil,nil,nil, _newPos] call FUNC(setCameraAttributes);
         };
     };
-    // Break from interface for external events
+    // Interrupt events
     case "escape": {
         private "_dlg";
 
@@ -576,7 +482,7 @@ switch (toLower _mode) do {
                 if !((isNull curatorCamera) && {isNull (GETMVAR(bis_fnc_moduleRemoteControl_unit,objNull))}) exitWith {};
 
                 // If still a spectator then re-enter the interface
-                [QGVAR(zeus),false] call FUNC(interrupt)
+                [QGVAR(zeus),false] call FUNC(interrupt);
 
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             },0] call CBA_fnc_addPerFrameHandler;
