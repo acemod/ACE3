@@ -1,6 +1,22 @@
+/*
+ * Author: PabstMirror
+ * Finds a free cargo seat, searching non FFV first
+ *
+ * Arguments:
+ * 0: The Vehicle <OBJECT>
+ *
+ * Return Value:
+ * ARRAY [seat index <NUMBER>, is FFV <BOOL>]
+ *
+ * Example:
+ * [car1] call ACE_captives_fnc_findEmptyNonFFVCargoSeat
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_vehicle"];
+TRACE_1("params", _vehicle);
 
 _vehicleConfig = configFile >> "CfgVehicles" >> (typeOf _vehicle);
 
@@ -30,10 +46,21 @@ _occupiedSeats = [];
 
 TRACE_3("Searching for empty seat",_realCargoCount,_ffvCargoIndexes,_occupiedSeats);
 
-_emptyCargoSeatReturn = -1;
+_emptyCargoSeatReturn = [-1, false];
+
+//First seach for non-ffv seats:
 for "_index" from 0 to (_realCargoCount - 1) do {
     if ((!(_index in _ffvCargoIndexes)) && {!(_index in _occupiedSeats)}) exitWith {
-        _emptyCargoSeatReturn = _index;
+        _emptyCargoSeatReturn = [_index, false];
+    };
+};
+
+//Only use FFV if none found:
+if (_emptyCargoSeatReturn isEqualTo [-1, false]) then {
+    for "_index" from 0 to (_realCargoCount - 1) do {
+        if (!(_index in _occupiedSeats)) exitWith {
+            _emptyCargoSeatReturn = [_index, true];
+        };
     };
 };
 
