@@ -88,12 +88,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _name = format ["Repair_%1", _x];
 
         _text = format ["STR_ACE_Repair_%1", _x];
-
-        if (isLocalized _text) then {
-            _text = localize _text;
-        } else {
-            _text = _x;
-        };
+        _text = if (isLocalized _text) then {localize _text} else {_x};
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
         _selection = "";
