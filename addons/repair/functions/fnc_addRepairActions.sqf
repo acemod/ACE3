@@ -95,6 +95,7 @@ _hitPointsAddedAmount = [];
 
         _name = format ["Repair_%1", _x];
 
+
         // Prepare first part of the string from stringtable
         _text = LSTRING(Hit);
 
@@ -117,7 +118,7 @@ _hitPointsAddedAmount = [];
 
             // Use already added hitpoint if one found above and numerize
             if (_hitPointFoundIndex != -1) exitWith {
-                _text = (_hitPointsAddedNames select _hitPointFoundIndex) + " " + str(_hitPointsAddedAmount select _hitPointFoundIndex);
+                _text = localize (_hitPointsAddedStrings select _hitPointFoundIndex) + " " + str(_hitPointsAddedAmount select _hitPointFoundIndex);
                 _hitPointsAddedAmount set [_hitPointFoundIndex, (_hitPointsAddedAmount select _hitPointFoundIndex) + 1]; // Set amount
                 TRACE_2("Same hitpoint found",_toFind,_hitPointsAddedNames);
             };
@@ -143,7 +144,6 @@ _hitPointsAddedAmount = [];
         if (_text == LSTRING(Hit)) then {
             _text = _x;
         };
-
 
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
