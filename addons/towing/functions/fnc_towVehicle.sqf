@@ -108,21 +108,36 @@ _towed setVariable [QGVAR(towState), 1];
             _vehicle setVariable [QGVAR(lastPosVeh), _posVeh];
         };
         // Prevent vehicle from sinking into terrain
+        (boundingBoxReal _vehicle) params ["_min", "_max"];
+        _min params ["_minX", "_minY", "_minZ"];
+        _max params ["_maxX", "_maxY"];
+        _positions = [_vehicle modelToWorldVisual [_minX, _minY, _minZ],
+            _vehicle modelToWorldVisual [_maxX, _maxY, _minZ],
+            _posVeh,
+            _vehicle modelToWorldVisual [_maxX, _minY, _minZ],
+            _vehicle modelToWorldVisual [_minX, _maxY, _minZ]];
+        _collision = false;
+        {
+            _collision = _collision || lineIntersects [_x vectorAdd [0, 0, 1], _x vectorDiff [0, 0, 1], _vehicle];
+            if (_collision) exitWith {};
+        } forEach _positions;
+
+        // Calculate new normal vector
+        _normal = [0, 0, 1];
+        if !(_collision) then {
+            {
+                _normal = _normal vectorAdd (surfaceNormal _x);
+            } count _positions;
+        };
+
+        // Calculate z-coordinate
         (ASLtoATL _posVeh) params ["", "", "_atlZ"];
-        _collision = lineIntersects [_posVeh, _posVeh vectorDiff [0, 0, 1], _vehicle];
         if (_atlZ < 0) then {
             _posVeh = _posVeh vectorDiff [0, 0, _atlZ];
         } else {
             if !(_collision) then {
                 _posVeh = _posVeh vectorDiff [0, 0, _atlZ];
             };
-        };
-
-        _normal = [0,0,1];
-        if !(_collision) then {
-            {
-                _normal = _normal vectorAdd (surfaceNormal (_posVeh vectorAdd _x));
-            } foreach [[1,0,0], [0,1,0], [-1,0,0], [0,-1,0]];
         };
         _vehicle setVectorUp _normal;
         _vehicle setPosASL _posVeh;
