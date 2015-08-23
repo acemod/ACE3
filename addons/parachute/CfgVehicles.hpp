@@ -94,7 +94,7 @@ class CfgVehicles {
         displayName = CSTRING(ReserveParachute);
         scope = 1;
         mass = 70;
-        ParachuteClass = "NonSteerable_Parachute_F";
+        ParachuteClass = "Steerable_Parachute_F";
         ace_reserveParachute = "";
         ace_hasReserveParachute = 0;
     };
