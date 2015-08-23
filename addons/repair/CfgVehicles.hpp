@@ -224,7 +224,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AddSpareParts_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleAddSpareParts);
         functionPriority = 10;
         isGlobal = 0;
