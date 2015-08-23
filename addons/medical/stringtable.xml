@@ -3104,7 +3104,7 @@
             <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
             <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
             <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
-            <German>Wer kann den Erste-Hilfe-Set für eine Endheilung verwenden?</German>
+            <German>Wer kann das Erste-Hilfe-Set für eine Endheilung verwenden?</German>
             <Czech>Kdo může použít osobní lékárničku pro plné vyléčení?</Czech>
             <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
         </Key>
@@ -3149,7 +3149,7 @@
             <Russian>Нужно ли удалять аптечки после использования?</Russian>
             <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
             <Spanish>El EPA será eliminado después de usarlo</Spanish>
-            <German>Sollen Erste-Hilfe-Se bei Verwendung entfernt werden?</German>
+            <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
             <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
             <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
         </Key>
@@ -3167,7 +3167,7 @@
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
-            <German>Wo kann der Erste-Hilfe-Set verwendet werden?</German>
+            <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
