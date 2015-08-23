@@ -124,6 +124,5 @@ _aceTimeSecond = floor ACE_time;
 GVAR(allBullets) pushBack [_bullet, _caliber, _bulletTraceVisible, GVAR(currentbulletID)];
 
 if (isNil QGVAR(BulletPFH)) then {
-    diag_log "Add PFH";
     GVAR(BulletPFH) = [FUNC(handleFirePFH), GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
 };

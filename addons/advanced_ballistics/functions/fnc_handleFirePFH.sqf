@@ -42,7 +42,6 @@ _deleted = 0;
 } forEach GVAR(allBullets);
 
 if (GVAR(allBullets) isEqualTo []) then {
-    diag_log "Remove PFH";
     [_this select 1] call CBA_fnc_removePerFrameHandler;
     GVAR(BulletPFH) = nil;
 };
