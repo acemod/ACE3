@@ -77,14 +77,8 @@ class controlsBackground {
         sizeExLevel = 0;
         sizeEx = H_PART(1);
 
-        ptsPerSquareSea = 5;
-        ptsPerSquareTxt = 20;
-        ptsPerSquareRoad = 0.01;
+        ptsPerSquareRoad = 0.75;
         ptsPerSquareObj = 2000; //don't show buildings
-        ptsPerSquareCLn = 100;
-        ptsPerSquareCost = 200;
-        ptsPerSquareFor = 9;
-        ptsPerSquareForEdge = 9;
 
         showCountourInterval = 0;
 
@@ -116,14 +110,7 @@ class controlsBackground {
         onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
         onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
 
-        // ptsPerSquareSea = 5;
-        // ptsPerSquareTxt = 20;
-        // ptsPerSquareRoad = 0.01;
         ptsPerSquareObj = 9;
-        // ptsPerSquareCLn = 100;
-        // ptsPerSquareCost = 200;
-        // ptsPerSquareFor = 9;
-        // ptsPerSquareForEdge = 9;
 
         maxSatelliteAlpha = 0.5;
 
