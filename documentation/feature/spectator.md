@@ -18,22 +18,61 @@ The ACE3 spectator system is designed to act as a flexible and easy to configure
 
 ### 1.1 Spectator System
 
-The current iteration of the ACE3 spectator system only officially supports scenarios using [respawn type](https://community.bistudio.com/wiki/Arma_3_Respawn#Respawn_Types) 3 (or "BASE"). However there's nothing to stop its use alongside anything else, just be aware that it might not function entirely as expected.
+By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. There are two tools available to enable the spectator system in your missions:
 
-By default, the ACE3 spectator system does nothing - meaning existing missions will behave exactly as before. The setting `ace_spectator_onDeath` can be used to automatically put players into spectator mode each time they die.
+- An `"ace_spectator"` [respawn template](https://community.bistudio.com/wiki/Arma_3_Respawn)
+- Public functions `ace_spectator_fnc_setSpectator` and `ace_spectator_fnc_stageSpectator`
 
-For mission makers who seek a more advanced setup (such as multiple lives or wave respawning) the function `ace_spectator_fnc_setSpectator` is provided to transition players to/from spectator mode as desired:
+With respawn template `"ace_spectator"` in effect players will enter spectator mode upon death and exit upon respawn. The template is compatible with all respawn types and allows you to take advantage of the vanilla framework's flexibility (combining templates, side specific templates, etc.). This makes for very simple combination of a wide variety of spectator and respawn setups.
+
+An example description.ext file using the respawn template:
 
 ```
- * Arguments:
- * 0: Unit to put into spectator state <OBJECT>
- * 1: New spectator state <BOOL> <OPTIONAL>
- *
- * Return Value:
- * None <NIL>
- *
- * Example:
- * [player, true] call ace_spectator_fnc_setSpectator
+respawn = 3;
+respawnDelay = 180;
+respawnTemplates[] = {"ace_spectator"};
+respawnTemplatesWest[] = {"ace_spectator","Counter","Wave"};
+```
+
+For groups using custom respawn frameworks - or for missions where you want finer control over who, how and when players enter spectator - the two following functions are provided:
+
+`ace_spectator_fnc_setSpectator`
+
+```
+* Sets local client to the given spectator state (virtually)
+* To physically handle a spectator see ace_spectator_fnc_stageSpectator
+*
+* Client will be able to communicate in ACRE/TFAR as appropriate
+* The spectator interface will be opened/closed
+*
+* Arguments:
+* 0: Spectator state of local client <BOOL> (default: true)
+*
+* Return Value:
+* None <NIL>
+*
+* Example:
+* [true] call ace_spectator_fnc_setSpectator
+```
+
+`ace_spectator_fnc_stageSpectator`
+
+```
+* Sets target unit to the given spectator state (physically)
+* To virtually handle a spectator see ace_spectator_fnc_setSpectator
+*
+* Units will be gathered at marker ace_spectator_respawn (or [0,0,0] by default)
+* Upon unstage, units will be moved to the position they were in upon staging
+*
+* Arguments:
+* 0: Unit to put into spectator stage <OBJECT> (default: player)
+* 1: Spectator stage <BOOL> (default: true)
+*
+* Return Value:
+* None <NIL>
+*
+* Example:
+* [player, false] call ace_spectator_fnc_stageSpectator
 ```
 
 ### 1.2 Spectatable Units
@@ -43,10 +82,11 @@ Spectatable units are stored in an automatically maintained list (`ace_spectator
 - Unit filter
 - Unit whitelist/blacklist
 
-The unit filter determines which units will automatically be used to populate the spectatable unit list. It's controlled by setting `ace_spectator_filterUnits` and there are three possible options:
+The unit filter determines which units will automatically be used to populate the spectatable unit list. It's controlled by setting `ace_spectator_filterUnits` and there are four possible options:
 
 - **No units**
-- **Player units** *(default)*
+- **Player units**
+- **Playable units** *(default)*
 - **All units**
 
 In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client):
@@ -166,7 +206,7 @@ The spectator camera has 8 manipulatable attributes:
 - **Camera zoom:** The zoom level of the free camera
 - **Camera speed:** The movement speed of the free camera
 
-Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at ay point (including before spectator has ever opened):
+Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at any point (including before spectator has ever opened):
 
 ```
  * Arguments:
@@ -210,28 +250,28 @@ Shortcuts are currently hardcoded in the ACE3 spectator system. Future versions 
     </thead>
     <tbody>
         <tr>
-            <td><kbd>H</kbd></td>
-            <td>Toggle help</td>
-        </tr>
-        <tr>
-            <td><kbd>M</kbd></td>
-            <td>Toggle map</td>
-        </tr>
-        <tr>
             <td><kbd>1</kbd></td>
             <td>Toggle unit list</td>
         </tr>
         <tr>
             <td><kbd>2</kbd></td>
-            <td>Toggle toolbar</td>
+            <td>Toggle help</td>
         </tr>
         <tr>
             <td><kbd>3</kbd></td>
-            <td>Toggle compass</td>
+            <td>Toggle toolbar</td>
         </tr>
         <tr>
             <td><kbd>4</kbd></td>
+            <td>Toggle compass</td>
+        </tr>
+        <tr>
+            <td><kbd>5</kbd></td>
             <td>Toggle unit icons</td>
+        </tr>
+        <tr>
+            <td><kbd>M</kbd></td>
+            <td>Toggle map</td>
         </tr>
         <tr>
             <td><kbd>Backspace</kbd></td>
@@ -275,58 +315,25 @@ Shortcuts are currently hardcoded in the ACE3 spectator system. Future versions 
             <td>Camera down</td>
         </tr>
         <tr>
+            <td><kbd>RMB</kbd></td>
+            <td>Pan camera</td>
+        </tr>
+        <tr>
             <td><kbd>LMB</kbd></td>
-            <td>Camera dolly</td>
+            <td>Dolly camera</td>
         </tr>
         <tr>
-            <td><kbd>RMB</kbd></td>
-            <td>Camera pan and tilt</td>
+            <td><kbd>⇧&nbsp;Shift</kbd></td>
+            <td>Speed boost</td>
         </tr>
         <tr>
-            <td><kbd>Scrollwheel</kbd></td>
-            <td>Zoom +/-</td>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd>+<kbd>Scrollwheel</kbd></td>
-            <td>Speed +/-</td>
-        </tr>
-        <tr>
-            <td><kbd>N</kbd></td>
-            <td>Next vision mode</td>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd>+<kbd>N</kbd></td>
-            <td>Previous vision mode</td>
+            <td><kbd>F</kbd></td>
+            <td>Focus on unit</td>
         </tr>
     </tbody>
 </table>
 
-#### 2.1.3 Unit Camera Shortcuts
-
-<table>
-    <thead>
-        <tr>
-            <th>Shortcut</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><kbd>Right arrow</kbd></td>
-            <td>Next unit</td>
-        </tr>
-        <tr>
-            <td><kbd>Left arrow</kbd></td>
-            <td>Previous unit</td>
-        </tr>
-        <tr>
-            <td><kbd>RMB</kbd></td>
-            <td>Toggle gun camera</td>
-        </tr>
-    </tbody>
-</table>
-
-#### 2.1.4 General shortcuts
+#### 2.1.3 Camera Attribute Shortcuts
 
 <table>
     <thead>
@@ -343,6 +350,46 @@ Shortcuts are currently hardcoded in the ACE3 spectator system. Future versions 
         <tr>
             <td><kbd>Down arrow</kbd></td>
             <td>Previous camera</td>
+        </tr>
+        <tr>
+            <td><kbd>Right arrow</kbd></td>
+            <td>Next unit</td>
+        </tr>
+        <tr>
+            <td><kbd>Left arrow</kbd></td>
+            <td>Previous unit</td>
+        </tr>
+        <tr>
+            <td><kbd>N</kbd></td>
+            <td>Next vision mode</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>N</kbd></td>
+            <td>Previous vision mode</td>
+        </tr>
+        <tr>
+            <td><kbd>Scrollwheel</kbd></td>
+            <td>Adjust zoom</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Scrollwheel</kbd></td>
+            <td>Adjust speed</td>
+        </tr>
+        <tr>
+            <td><kbd>Num-</kbd>/<kbd>Num+</kbd></td>
+            <td>Increment zoom</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd>+<kbd>Num-</kbd>/<kbd>Num+</kbd></td>
+            <td>Increment speed</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd>+<kbd>Num-</kbd></td>
+            <td>Reset zoom</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd>+<kbd>Num+</kbd></td>
+            <td>Reset speed</td>
         </tr>
     </tbody>
 </table>
@@ -361,14 +408,14 @@ The toolbar along the bottom of the screen displays various useful values. From 
 
 - Unit name
 - Camera mode
-- Camera zoom/Unit side
+- Vision mode/Unit side
 - 24-hour Clock
-- Vision mode/Unit depth
+- Camera zoom/Unit depth
 - Camera/Unit speed
 
 #### 2.2.3 Map
 
-The map overlay will show the current position of the free camera and all spectatable units. The unit icons are tied into the unit icon toggle shortcut. When spectating a unit the map will also show the icons of units it knows about. In free camera you can double click on the map to teleport the camera to the position of the mouse.
+The map overlay will show the current position of the free camera and all spectatable units. In free camera you can alt-click on the map to teleport the camera to the position of the cursor.
 
 ## 3. Dependencies
 

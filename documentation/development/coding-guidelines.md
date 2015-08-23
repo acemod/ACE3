@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Coding Guidelines
-description: 
+description:
 group: development
 parent: wiki
 order: 1
@@ -107,7 +107,7 @@ Every function should have a header of the following format:
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument <OBJECT>
- * 
+ *
  * Return Value:
  * The return value <BOOL>
  *
@@ -124,26 +124,26 @@ Every function should have a header of the following format:
 ### 4.1 Module/PBO specific Macro Usage
 The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
- 
-| Macros |  is the same as | 
-| -------|---------| 
-| `GVAR(face)` | ace_balls_face | 
-|`QGVAR(face)` | ace_balls_face |
+
+| Macros |  Expands to |
+| -------|---------|
+| `GVAR(face)` | ace_balls_face |
+|`QGVAR(face)` | "ace_balls_face" |
 | `EGVAR(balls,face)` | ace_balls_face |
 | `EGVAR(leg,face)` | ace_leg_face |
-| `QEGVAR(leg,face)` | ace_leg_face |
+| `QEGVAR(leg,face)` | "ace_leg_face" |
 
 There also exists the FUNC family of Macros:
 
-| Macros  |  is the same as | 
-| -------|---------| 
+| Macros  |  Expands to |
+| -------|---------|
 |`FUNC(face)` | ace_balls_fnc_face or the call trace wrapper for that function.|
 |`EFUNC(balls,face)` | ace_balls_fnc_face or the call trace wrapper for that function.|
 |`EFUNC(leg,face) `| ace_leg_fnc_face or the call trace wrapper for that function.|
 |`DFUNC(face)` | ace_balls_fnc_face and will ALWAYS be the function global variable.|
 |`DEFUNC(leg,face)` | ace_leg_fnc_face and will ALWAYS be the function global variable.|
-|`QFUNC(face)` | ace_balls_fnc_face |
-|`QEFUNC(leg,face)` |ace_leg_fnc_face|
+|`QFUNC(face)` | "ace_balls_fnc_face" |
+|`QEFUNC(leg,face)` | "ace_leg_fnc_face" |
 
 The `FUNC` and `EFUNC` macros should NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
@@ -153,8 +153,8 @@ Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for i
 
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
-| Macro  | example | 
-| -------|---------| 
+| Macro  | example |
+| -------|---------|
 |`CALLSTACK(functionName)` | `[] call CALLSTACK(cba_fnc_someFunction)` |
 |`CALLSTACK_NAMED(function,functionName)` | `[] call CALLSTACK_NAMED(_anonymousFunction,'My anonymous function!')`|
 
@@ -168,8 +168,8 @@ These macros will call these functions with the appropriate wrappers and enable 
 
 #### 4.2.1 setVariable, getVariable family macros
 
-| Macro  | is the same as | 
-| -------|---------| 
+| Macro  | Expands to |
+| -------|---------|
 |`GETVAR(player,MyVarName,false)` | player getVariable ["MyVarName", false]|
 |`GETMVAR(MyVarName,objNull)` | missionNamespace getVariable ["MyVarName", objNull]|
 |`GETUVAR(MyVarName,displayNull)` | uiNamespace getVariable ["MyVarName", displayNull]|
@@ -179,25 +179,25 @@ These macros will call these functions with the appropriate wrappers and enable 
 
 #### 4.2.2 STRING family macros
 
-Note that you need the strings in module stringtable.xml in the correct format 
+Note that you need the strings in module stringtable.xml in the correct format
 `STR_ACE_<module>_<string>`</br>
 Example:</br>
 `STR_Balls_Banana`</br>
 
 Script strings:
 
-| Macro  |  is the same as | 
-| -------|---------| 
+| Macro  |  Expands to |
+| -------|---------|
 | `LSTRING(banana)` |  "STR_ACE_balls_banana"|
-| `ELSTRING(balls,banana)` | "STR_ACE_balls_banana"| 
+| `ELSTRING(balls,banana)` | "STR_ACE_balls_banana"|
 
 
 Config Strings (require `$` as first character):
 
-| Macro  |  is the same as | 
-| -------|---------| 
-| `CSTRING(banana)` |  "$STR_ACE_balls_banana" | 
-| `ECSTRING(balls,banana)` | "$STR_ACE_balls_banana" | 
+| Macro  |  Expands to |
+| -------|---------|
+| `CSTRING(banana)` |  "$STR_ACE_balls_banana" |
+| `ECSTRING(balls,banana)` | "$STR_ACE_balls_banana" |
 
 
 ## 5. Event Handlers
@@ -206,8 +206,8 @@ Event handlers in ACE3 are implemented through our event system. They should be 
 
 The commands are listed below.
 
-| Even Handler  |  use | 
-| -------|---------| 
+| Even Handler  |  Use |
+| -------|---------|
 |`[eventName, eventCodeBlock] call ace_common_fnc_addEventHandler` | adds an event handler with the event name and returns the event handler id.|
 | `[eventName, args] call ace_common_fnc_globalEvent` | calls an event with the listed args on all machines, the local machine, and the server. |
 |`[eventName, args] call ace_common_fnc_serverEvent` | calls an event just on the server computer (dedicated or self-hosted).|
@@ -216,8 +216,8 @@ The commands are listed below.
 
 Events can be removed or cleared with the following commands.
 
-| Even Handler  |  use | 
-| -------|---------| 
+| Even Handler  |  Use |
+| -------|---------|
 |`[eventName, eventHandlerId] call ace_common_fnc_removeEventHandler` | will remove a specific event handler of the event name, using the ID returned from `ace_common_fnc_addEventHandler`.|
 |`[eventName] call ace_common_fnc_removeAllEventHandlers` | will remove all event handlers for that type of event.|
 
@@ -243,8 +243,8 @@ if(HASH_HASKEY(_hash, "key")) then {
 
 A description of the above macros is below.
 
-| Macro  |  use | 
-| -------|---------| 
+| Macro  |  Use |
+| -------|---------|
 |`HASHCREATE` | used to create an empty hash.|
 | `HASH_SET(hash, key, val)` | will set the hash key to that value, a key can be anything, even objects. |
 |`HASH_GET(hash, key)` | will return the value of that key (or nil if it doesn't exist). |
@@ -276,7 +276,7 @@ _anotherHash = HASHLIST_SELECT(_hashList, 0);
 // this should print "val: 1"
 player sideChat format["val: %1", HASH_GET(_anotherHash, "key1")];
 
-//Say we need to add a new key to the hashlist 
+//Say we need to add a new key to the hashlist
 //that we didn't initialize it with? We can simply
 //set a new key using the standard HASH_SET macro
 HASH_SET(_anotherHash, "anotherKey", "another value");
@@ -285,8 +285,8 @@ HASH_SET(_anotherHash, "anotherKey", "another value");
 As you can see above working with hashlists are fairly simple, a more in depth explanation of the macros is below.
 
 
-| Macro  |  use | 
-| -------|---------| 
+| Macro  |  Use |
+| -------|---------|
 |`HASHLIST_CREATELIST(keys)` | creates a new hashlist with the default keys, pass [] for no default keys.|
 |`HASHLIST_CREATEHASH(hashlist)` | returns a blank hash template from a hashlist.|
 |`HASHLIST_PUSH(hashList, hash)` | pushes a new hash onto the end of the list.|

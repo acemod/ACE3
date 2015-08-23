@@ -13,6 +13,7 @@
  */
 
 #include "script_component.hpp"
+#define MAX_DISTANCE 10
 
 // Exit for basic medical
 if (GVAR(level) < 2) exitWith {};
@@ -38,6 +39,11 @@ if (_show) then {
 
         if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
+        };
+        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+            ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            ["displayTextStructured", [ACE_player], [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
         };
 
         disableSerialization;

@@ -67,7 +67,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 };
 
                 _added = _ctrlList lnbAddRow [_settingName, _settingsColor];
-                _ctrlList lnbSetColor [[_forEachIndex, 1], (_x select 9)];
+                _ctrlList lnbSetColor [[_added, 1], (_x select 9)];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
         }foreach GVAR(serverSideColors);

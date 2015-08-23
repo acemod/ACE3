@@ -234,7 +234,7 @@ class ACE_Medical_Actions {
         };
         class SurgicalKit: fieldDressing {
             displayName = CSTRING(Use_SurgicalKit);
-            displayNameProgress = CSTRING(TreatmentAction);
+            displayNameProgress = CSTRING(Stitching);
             category = "advanced";
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};

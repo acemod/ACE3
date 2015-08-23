@@ -176,8 +176,17 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setvariable [QGVAR(treatmentPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+    if (isWeaponDeployed _caller) then {
+        TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
+        [_caller, "", 0] call EFUNC(common,doAnimation);
+    };
+    
+    if ((stance _caller) == "STAND") then {
+        switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
+            case ("rfl"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
+            case ("pst"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
+            case ("non"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+        };
     } else {
         _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     };

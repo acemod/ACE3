@@ -479,7 +479,6 @@
             <Portuguese>Verificar PBOs</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
-            <English></English>
             <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
             <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
             <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
@@ -646,6 +645,7 @@
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
+            <Polish>Tylko pojazdy</Polish>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
