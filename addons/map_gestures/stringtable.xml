@@ -76,17 +76,11 @@
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_description">
             <English>Group color configuration containing arrays of color pairs ([leadColor, color]).</English>
         </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroups_description">
-            <English>Group color group name index, containing names of groups with configurations attached to them.</English>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_description">
+            <English>Hash of Group ID mapped to the Group color configuration index.</English>
         </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroups_displayName">
-            <English>Group color group name index</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroupIndex_displayName">
-            <English>Group color group name mapping index</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationsGroupIndex_description">
-            <English>Group color group name mapping index, mapping the GroupColorConfigurationsGroups to the GroupColorConfigurations.</English>
+        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_displayName">
+            <English>GroupID Color configuration mapping</English>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>

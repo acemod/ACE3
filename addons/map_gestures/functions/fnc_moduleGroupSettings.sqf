@@ -29,25 +29,15 @@ if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a va
 
 // If we already have color configurations from another source, use those, otherwise use default.
 _configurations = if (isNil QGVAR(GroupColorConfigurations)) then { [] } else { +GVAR(GroupColorConfigurations) };
-_configurationGroups = if (isNil QGVAR(GroupColorConfigurationsGroups)) then { [] } else { +GVAR(GroupColorConfigurationsGroups) };
-_configurationGroupsIndex = if (isNil QGVAR(GroupColorConfigurationsGroupIndex)) then { [] } else { +GVAR(GroupColorConfigurationsGroupIndex) };
+_configurationGroupMappings = if(isNil QGVAR(GroupColorConfigurationMapping)) then { HASH_CREATE } else { +GVAR(GroupColorConfigurationMapping) };
 
 // Save custom color configuration and keep the index of the entry.
 _configurationIndex = _configurations pushBack [_leadColor, _color];
 
 // Add all synchronized groups and reference custom configuration for them
-_completedGroups = [];
 {
-    private "_group";
-    _group = groupID (group _x);
-    if (!(_group in _completedGroups)) then {
-        _index = if (_group in _configurationGroups) then {_configurationGroups find _group} else {_configurationGroups pushBack _group};
-        _configurationGroupsIndex set [_index, _configurationIndex];
-        _completedGroups pushBack _group;
-    };
-    nil
+    HASH_SET(_configurationGroupMappings,groupID (group _x),_configurationIndex);
 } count _units;
 
 [QGVAR(GroupColorConfigurations), _configurations, false, true] call EFUNC(common,setSetting);
-[QGVAR(GroupColorConfigurationsGroups), _configurationGroups, false, true] call EFUNC(common,setSetting);
-[QGVAR(GroupColorConfigurationsGroupIndex), _configurationGroupsIndex, false, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurationMapping), _configurationGroupMappings, false, true] call EFUNC(common,setSetting);
