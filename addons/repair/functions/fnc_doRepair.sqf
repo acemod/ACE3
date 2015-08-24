@@ -33,14 +33,35 @@ _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    private "_text";
-    _text = format ["STR_ACE_Repair_%1", _hitPoint];
+    private ["_text", "_toFind", "_combinedString"];
 
-    if (isLocalized _text) then {
-        _text = format [localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0)), localize _text];
+    // Prepare first part of the string from stringtable
+    _text = LSTRING(Hit);
+
+    // Remove "Hit" from hitpoint name if one exists
+    _toFind = if (_x find "Hit" == 0) then {
+        [_x, 3] call CBA_fnc_substr
     } else {
+        _x
+    };
+
+    // Loop through always shorter part of the hitpoint name to find the string from stringtable
+    for "_i" from 0 to (count _x) do {
+        // Localize if localization found
+        _combinedString = _text + _toFind;
+        if (isLocalized _combinedString) exitWith {
+            _text = format [localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0)), localize _combinedString];
+        };
+
+        // Cut off one character
+        _toFind = [_toFind, 0, count _toFind - 1] call CBA_fnc_substr;
+    };
+
+    // Don't display part name if no string is found in stringtable
+    if (_text == LSTRING(Hit)) then {
         _text = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointDamage > 0));
     };
 
+    // Display text
     [_text] call EFUNC(common,displayTextStructured);
 };

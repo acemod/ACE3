@@ -164,14 +164,36 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_text", "_processText"];
+private ["_processText", "_text", "_toFind", "_combinedString"];
 _processText = getText (_config >> "displayNameProgress");
-_text = format ["STR_ACE_Repair_%1", _hitPoint];
-if (isLocalized _text) then {
-    _text = format [_processText, localize _text];
+
+// Prepare first part of the string from stringtable
+_text = LSTRING(Hit);
+
+// Remove "Hit" from hitpoint name if one exists
+_toFind = if (_x find "Hit" == 0) then {
+    [_x, 3] call CBA_fnc_substr
 } else {
+    _x
+};
+
+// Loop through always shorter part of the hitpoint name to find the string from stringtable
+for "_i" from 0 to (count _x) do {
+    // Localize if localization found
+    _combinedString = _text + _toFind;
+    if (isLocalized _combinedString) exitWith {
+        _text = format [_processText, localize _combinedString];
+    };
+
+    // Cut off one character
+    _toFind = [_toFind, 0, count _toFind - 1] call CBA_fnc_substr;
+};
+
+// Don't display part name if no string is found in stringtable
+if (_text == LSTRING(Hit)) then {
     _text = _processText;
 };
+
 
 // Start repair
 [
