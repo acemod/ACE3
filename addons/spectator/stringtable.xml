@@ -104,7 +104,7 @@
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
             <English>Spectator Units</English>
-            <Polish>Obserwatorzy</Polish>
+            <Polish>Jednostki obserwatora</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
