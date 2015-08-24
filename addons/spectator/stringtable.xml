@@ -27,6 +27,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
+            <Polish>Grywalne jednostki</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
@@ -103,6 +104,7 @@
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
             <English>Spectator Units</English>
+            <Polish>Obserwatorzy</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
@@ -135,6 +137,7 @@
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
             <English>Free Camera</English>
+            <Polish>Kamera swobodna</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
@@ -174,12 +177,15 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
+            <Polish>Przyśpieszenie kamery</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamFocus">
             <English>Focus on Unit</English>
+            <Polish>Skup na jednostce</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
+            <Polish>Interfejs</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
@@ -211,6 +217,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
+            <Polish>Atrybuty kamery</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
@@ -238,21 +245,27 @@
         </Key>
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
+            <Polish>Reguluj zoom</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
+            <Polish>Reguluj prędkość</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
+            <Polish>Reguluj zoom (krok)</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
+            <Polish>Reguluj prędkość (krok)</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
+            <Polish>Resetuj zoom</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
+            <Polish>Resetuj prędkość</Polish>
         </Key>
     </Package>
 </Project>
