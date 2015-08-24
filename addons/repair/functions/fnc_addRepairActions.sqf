@@ -71,6 +71,9 @@ if (_type in _initializedClasses) exitWith {};
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
     } else {
+        // exit if the hitpoint is in the blacklist, e.g. glasses
+-       if (_x in IGNORED_HITPOINTS) exitWith {};
+
         // exit if the hitpoint is virtual
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};
 
