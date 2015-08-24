@@ -25,7 +25,7 @@ PREP(updateHumidity);
 PREP(updateRain);
 PREP(updateTemperature);
 PREP(updateWind);
-
+PREP(playerBreath);
 // Make sure this data is read before client/server postInit
 call FUNC(getMapData);
 
