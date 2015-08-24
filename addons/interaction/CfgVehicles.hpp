@@ -1,3 +1,23 @@
+#define MACRO_PORTABLELIGHTSACTIONS(var1) \
+    class ACE_Actions { \
+        class ACE_MainActions { \
+            displayName = CSTRING(MainAction); \
+            selection = ""; \
+            distance = 2; \
+            condition = "true"; \
+            class ACE_SwitchLamp { \
+                displayName = CSTRING(var1); \
+                condition = QUOTE(alive _target); \
+                statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp)); \
+                selection = ""; \
+                distance = 2; \
+                showDisabled = 0; \
+                priority = -1; \
+            }; \
+        }; \
+    }; \
+    class ACE_SelfActions {}
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleInteraction: ACE_Module {
@@ -610,91 +630,24 @@ class CfgVehicles {
         scope = 2;
         GVAR(switchLampClass) = "Land_PortableLight_single_off_F";
         XEH_ENABLED;
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(MainAction);
-                selection = "";
-                distance = 2;
-                condition = "true";
-                class ACE_SwitchLamp {
-                    displayName = CSTRING(TurnOff);
-                    condition = QUOTE(alive _target);
-                    statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
-                    showDisabled = 0;
-                    priority = -1;
-                };
-            };
-        };
-        class ACE_SelfActions {};
+        MACRO_PORTABLELIGHTSACTIONS(TurnOff);
     };
     class Land_PortableLight_single_off_F: Land_PortableLight_single_F {
         scope = 1;
         GVAR(switchLampClass) = "Land_PortableLight_single_F";
         GVAR(switchLampOff) = 1;
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(MainAction);
-                selection = "";
-                distance = 2;
-                condition = "true";
-                class ACE_SwitchLamp {
-                    displayName = CSTRING(TurnOn);
-                    condition = QUOTE(alive _target);
-                    statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
-                    showDisabled = 0;
-                    priority = -1;
-                };
-            };
-        };
+        MACRO_PORTABLELIGHTSACTIONS(TurnOn);
     };
     class Land_PortableLight_double_F: Land_PortableLight_single_F {
         scope = 2;
         GVAR(switchLampClass) = "Land_PortableLight_double_off_F";
         XEH_ENABLED;
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(MainAction);
-                selection = "";
-                distance = 2;
-                condition = "true";
-                class ACE_SwitchLamp {
-                    displayName = CSTRING(TurnOff);
-                    condition = QUOTE(alive _target);
-                    statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
-                    showDisabled = 0;
-                    priority = -1;
-                };
-            };
-        };
-        class ACE_SelfActions {};
+        MACRO_PORTABLELIGHTSACTIONS(TurnOff);
     };
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
         GVAR(switchLampClass) = "Land_PortableLight_double_F";
         GVAR(switchLampOff) = 1;
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(MainAction);
-                selection = "";
-                distance = 2;
-                condition = "true";
-                class ACE_SwitchLamp {
-                    displayName = CSTRING(TurnOn);
-                    condition = QUOTE(alive _target);
-                    statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp));
-                    selection = "";
-                    distance = 2;
-                    showDisabled = 0;
-                    priority = -1;
-                };
-            };
-        };
-        class ACE_SelfActions {};
+        MACRO_PORTABLELIGHTSACTIONS(TurnOn);
     };
 };

@@ -31,10 +31,11 @@ private ["_vectors", "_pos", "_reflectors", "_hitpointsdmg"];
 _vectors = [vectorDir _object, vectorUp _object];
 _pos = getPosATL _object;
 
-_reflectors = (configfile >> "CfgVehicles" >> _objectClass >> "Reflectors") call BIS_fnc_getCfgSubClasses;
+_reflectors = "true" configClasses (configfile >> "CfgVehicles" >> _objectClass >> "Reflectors");
 _hitpointsdmg = [];
 {
-	_hitpoint = getText (configfile >> "CfgVehicles" >> _objectClass >> "Reflectors" >> _x >> "hitpoint");
+	private "_hitpoint";
+	_hitpoint = getText (_x >> "hitpoint");
 	_hitpointsdmg pushback [_hitpoint, _object getHit _hitpoint];
 	nil
 } count _reflectors;
