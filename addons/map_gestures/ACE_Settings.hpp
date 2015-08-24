@@ -3,7 +3,6 @@ class ACE_Settings {
         displayName = CSTRING(enabled_displayName);
         description = CSTRING(enabled_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "BOOL";
         value = 1;
     };
@@ -11,7 +10,6 @@ class ACE_Settings {
         displayName = CSTRING(maxRange_displayName);
         description = CSTRING(maxRange_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "SCALAR";
         value = 7;
     };
@@ -19,7 +17,6 @@ class ACE_Settings {
         displayName = CSTRING(interval_displayName);
         description = CSTRING(interval_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "SCALAR";
         value = 0.03;
     };
@@ -51,7 +48,6 @@ class ACE_Settings {
         displayName = CSTRING(GroupColorConfigurations_displayName);
         description = CSTRING(GroupColorConfigurations_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "ARRAY";
         value[] = {};
     };
@@ -59,7 +55,6 @@ class ACE_Settings {
         displayName = CSTRING(GroupColorConfigurationsGroups_displayName);
         description = CSTRING(GroupColorConfigurationsGroups_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "ARRAY";
         value[] = {};
     };
@@ -67,7 +62,6 @@ class ACE_Settings {
         displayName = CSTRING(GroupColorConfigurationsGroupIndex_displayName);
         description = CSTRING(GroupColorConfigurationsGroupIndex_description);
         category = CSTRING(mapGestures_category);
-        isClientSettable = 0;
         typeName = "ARRAY";
         value[] = {};
     };
