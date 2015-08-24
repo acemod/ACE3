@@ -13,11 +13,11 @@
  */
 #include "script_component.hpp"
 
-terminate (missionNamespace getVariable [QGVAR(MonitorFnc), scriptNull]);
-
-GVAR(MonitorFnc) = _this spawn {
-    waitUntil {
-      hintSilent str (call _this);
-      false
-    };
+if (!isNil QGVAR(MonitorID)) then {
+    [GVAR(MonitorID)] call CBA_fnc_removePerFrameHandler;
+    GVAR(MonitorID) = nil;
 };
+
+[{
+    hintSilent str(call ((_this select 0) select 0))
+},0, [_this]] call CBA_fnc_addPerFrameHandler;

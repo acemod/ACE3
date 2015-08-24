@@ -24,6 +24,7 @@ PREP(canUseWeapon);
 PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
+PREP(checkVersionNumber);
 PREP(claim);
 PREP(closeDialogIfTargetMoves);
 PREP(codeToLetter);
@@ -264,6 +265,7 @@ PREP(removeAlLEventHandlers);
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addScrollWheelEventHandler);
+PREP(handleScrollWheel);
 PREP(addMapMarkerCreatedEventHandler);
 
 PREP(removeActionEventHandler);

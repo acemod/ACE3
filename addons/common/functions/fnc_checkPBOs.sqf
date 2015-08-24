@@ -26,15 +26,12 @@ ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
 
 if (!isServer) then {
-    [_mode, _checkAll, _whitelist] spawn {
-        private ["_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
-        params ["_mode", "_checkAll", "_whitelist"];
-
-        waitUntil {
-            sleep 1;
-            !isNil "ACE_Version_ClientErrors"
-        };
+     [{
+        if (isNil "ACE_Version_ClientErrors") exitWith {};
+        private ["_text", "_error", "_rscLayer", "_ctrlHint"];
         ACE_Version_ClientErrors params ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
+        params ["_args", "_idPFH"];
+        _args params ["_mode", "_checkAll", "_whitelist"];
 
         // Display error message.
         if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
@@ -83,9 +80,10 @@ if (!isServer) then {
                 ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
             };
         };
-    };
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
+    }, 0, [_mode, _checkAll, _whitelist]] call CBA_fnc_addPerFrameHandler;
 };
 
 if (_checkAll) then {
-    0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
+    call FUNC(checkVersionNumber);
 };

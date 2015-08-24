@@ -176,19 +176,11 @@ call FUNC(checkFiles);
 // everything that only player controlled machines need, goes below this
 if (!hasInterface) exitWith {};
 
-call COMPILE_FILE(scripts\assignedItemFix);
-call COMPILE_FILE(scripts\initScrollWheel);
+call FUNC(assignedItemFix);
+GVAR(ScrollWheelFrame) = diag_frameno;
 
-DFUNC(mouseZHandler) = {
-    waitUntil {!isNull (findDisplay 46)};
-    sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", GVAR(onScrollWheel)];
-    [false] call FUNC(disableUserInput);
-};
-
-addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
-[] spawn FUNC(mouseZHandler);
-
+addMissionEventHandler ["Loaded", {call FUNC(mouseZHandler)}];
+call FUNC(mouseZHandler);
 
 enableCamShake true;
 
