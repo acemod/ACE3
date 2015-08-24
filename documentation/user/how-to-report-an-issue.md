@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: How to report an issue
-description: If you've found an issue with ACE3 please read this entry before reporting it. 
+description: If you've found an issue with ACE3 please read this entry before reporting it.
 group: user
 order: 10
 parent: wiki
@@ -24,6 +24,8 @@ Indicate if the issue appears on stable or development version. In case it is th
 Head over to the <a href="{{ site.githubUrl }}/issues" target="_blank">ACE3 GitHub issue tracker</a> and press the <a href="{{ site.githubUrl }}/issues/new" target="_blank">"New issue"</a> button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
 
 ```
+*PRO-TIP :The english language allows individuals to correct each other's mistakes  in a respectful manner.*
+
 ACE3 Version: 3.x.x
 (indicate if stable or dev, if dev indicate the commit the version is based on)
 
