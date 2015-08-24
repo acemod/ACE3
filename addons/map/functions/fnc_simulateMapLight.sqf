@@ -3,10 +3,10 @@
 * Draw nearby lighting and sexy flashlight beams on main map.
 *
 * Arguments:
-* 0: Map control (Control)
-* 1: Map zoom level (Number)
-* 2: Current map centre (Array)
-* 3: Light level from ace_map_fnc_determineMapLight (Array)
+* 0: Map control <CONTROL>
+* 1: Map zoom level <NUMBER>
+* 2: Current map centre <ARRAY>
+* 3: Light level from ace_map_fnc_determineMapLight <ARRAY>
 *
 * Return Value:
 * None
@@ -55,6 +55,7 @@ if (_flashlight == "") then {
 
     //flashlight settings
     _colour = getText (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour");
+    if !(_colour in ["white", "red", "green", "blue", "yellow"]) then {_colour = "white"};
     _size = getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Size");
     _flashTex = format[QUOTE(PATHTOF_SYS(ace,flashlights,UI\Flashlight_Beam_%1_ca.paa)), _colour];
     _beamSize = _screenSize / _size;
