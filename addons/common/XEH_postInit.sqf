@@ -158,7 +158,7 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, [false]] call cba_fnc_addPerFrameHandler;
+}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 ["SettingsInitialized", {
@@ -316,7 +316,7 @@ GVAR(OldIsCamera) = false;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+}, 1, []] call CBA_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -344,7 +344,7 @@ if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 //Device Handler:
