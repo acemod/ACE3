@@ -19,8 +19,6 @@
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 
 _hmd = hmd ACE_player;
-_nvgOn = (((getText (configFile >> 'CfgWeapons' >> _hmd >> 'simulation')) == 'NVGoggles') && (currentVisionMode ACE_player == 1));
-_aceNVG = GVAR(aceNVG);
 _flashlight = GVAR(flashlightInUse);
 
 //map width (on screen) in pixels

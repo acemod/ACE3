@@ -65,7 +65,6 @@ call FUNC(determineZoom);
     //illumination settings
     if (GVAR(mapIllumination)) then {
         GVAR(flashlightInUse) = "";
-        GVAR(aceNVG) = ["ace_nightvision"] call EFUNC(common,isModLoaded);
         GVAR(glow) = objNull;
 
         ["playerInventoryChanged", {
