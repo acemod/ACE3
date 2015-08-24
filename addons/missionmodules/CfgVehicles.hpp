@@ -65,4 +65,16 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+
+    class ACE_playerBreathing: Module_F {
+        scope = 2;
+        displayName = CSTRING(AmbianceSounds_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
+        category = "ACE_missionModules";
+        function = QUOTE(FUNC(moduleAmbianceSound));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
+    };
 };

@@ -3,5 +3,6 @@
 ADDON = false;
 
 PREP(moduleAmbianceSound);
+PREP(playerBreath);
 
 ADDON = true;
