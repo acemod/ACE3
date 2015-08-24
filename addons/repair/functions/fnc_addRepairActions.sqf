@@ -79,7 +79,7 @@ if (_type in _initializedClasses) exitWith {};
 
         // add misc repair action
 
-        private ["_name", "_text", "_icon", "_selection", "_customSelectionsCfg", "_customSelectionsIndex", "_customSelection", "_condition", "_statement"];
+        private ["_name", "_text", "_icon", "_selection", "_customSelectionsConfig", "_currentHitpoint", "_condition", "_statement"];
 
         _name = format ["Repair_%1", _x];
 
@@ -94,21 +94,27 @@ if (_type in _initializedClasses) exitWith {};
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
         _selection = "";
+
         // Get custom position if available
-        _customSelectionsCfg = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
-        if (isArray _customSelectionsCfg) then {
-            _customSelectionsCfg = getArray _customSelectionsCfg;
-            _customSelectionsIndex = _customSelectionsCfg find _x;
-            if (_customSelectionsIndex != -1) then {
-                _customSelection = _customSelectionsCfg select (_customSelectionsIndex + 1);
-                // If comma is present assume position in array, else selection name
-                if (_customSelection find "," != -1) then {
-                    _selection = call compile ("[" + _customSelection + "]")
-                } else {
-                    _selection = _vehicle selectionPosition _customSelection;
+        _customSelectionsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
+        if (isArray _customSelectionsConfig) then {
+            // Loop through custom hitpoint positions array
+            _currentHitpoint = _x;
+            {
+                _x params ["_hitpoint", "_position"];
+                // Exit with supplied custom position when same hitpoint name found or print RPT error if it's invalid
+                if (_hitpoint == _currentHitpoint) exitWith {
+                    if (typeName _position == "ARRAY") exitWith {
+                        _selection = _position; // Position in model space
+                    };
+                    if (typeName _position == "STRING") exitWith {
+                        _selection = _vehicle selectionPosition _position; // Selection name
+                    };
+                    diag_log text format ["[ACE] ERROR: Invalid custom position %1 of hitpoint %2 in vehicle %3", _position, _hitpoint, _vehicle];
                 };
-            };
+            } forEach (getArray _customSelectionsConfig);
         };
+
         // If position still empty (not a position array or selection name) try extracting from model
         if (typeName _selection == "STRING" && {_selection == ""}) then {
             _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));

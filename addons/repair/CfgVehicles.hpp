@@ -337,6 +337,6 @@ class CfgVehicles {
 
     class Quadbike_01_base_F;
     class B_Quadbike_01_F: Quadbike_01_base_F {
-        GVAR(hitpointPositions[]) = {"HitEngine", "0, 0.5, -0.7", "HitFuel", "0, 0, -0.5"};
+        GVAR(hitpointPositions[]) = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
 };
