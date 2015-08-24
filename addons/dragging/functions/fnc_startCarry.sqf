@@ -21,7 +21,7 @@ params ["_unit", "_target"];
 // check weight
 _weight = [_target] call FUNC(getWeight);
 
-if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 

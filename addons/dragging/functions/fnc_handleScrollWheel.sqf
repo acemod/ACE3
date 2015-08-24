@@ -13,12 +13,12 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_carriedItem", "_position", "_maxHeight", ]
+private ["_unit", "_carriedItem", "_position", "_maxHeight"];
 
 params ["_scrollAmount"];
 
 // requires modifier key to be hold down
-if (GETMVAR(ACE_Modifier,0) == 0) exitWith {false};
+if (missionNamespace getVariable ["ACE_Modifier", 0] == 0) exitWith {false};
 
 _unit = ACE_player;
 
