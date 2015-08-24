@@ -22,7 +22,7 @@ params ["", "_pfhId"];
 
 if (!visibleMap) then {
     call FUNC(endTransmit);
-}
+};
 
 if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
     [_pfhId] call CBA_fnc_removePerFrameHandler;
