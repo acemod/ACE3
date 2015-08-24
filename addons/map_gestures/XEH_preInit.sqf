@@ -11,7 +11,6 @@ PREP(isValidColorArray);
 PREP(moduleGroupSettings);
 PREP(moduleSettings);
 PREP(receiverInit);
-PREP(sanitizeName);
 PREP(transmit);
 PREP(transmitterInit);
 

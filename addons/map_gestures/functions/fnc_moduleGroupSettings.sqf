@@ -19,22 +19,24 @@
 
 params ["_logic", "_units", "_activated"];
 
-diag_log "Running";
+if (!_activated || !isServer) exitWith {};
 
-if (!_activated) exitWith {};
-if (!isServer) exitWith {};
-
+// Transcode string setting into usable array. Example: "1,1,1,1" -> [1, 1, 1, 1]
 _leadColor = call compile ("[" + (_logic getVariable ["leadColor", ""]) + "]");
 if (!([_leadColor] call FUNC(isValidColorArray))) exitWith {ERROR("leadColor is not a valid color array.")};
 _color = call compile ("[" + (_logic getVariable ["color", ""]) + "]");
 if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a valid color array.")};
 
+// If we already have color configurations from another source, use those, otherwise use default.
 _configurations = if (isNil QGVAR(GroupColorConfigurations)) then { [] } else { +GVAR(GroupColorConfigurations) };
 _configurationGroups = if (isNil QGVAR(GroupColorConfigurationsGroups)) then { [] } else { +GVAR(GroupColorConfigurationsGroups) };
 _configurationGroupsIndex = if (isNil QGVAR(GroupColorConfigurationsGroupIndex)) then { [] } else { +GVAR(GroupColorConfigurationsGroupIndex) };
 
-_completedGroups = [];
+// Save custom color configuration and keep the index of the entry.
 _configurationIndex = _configurations pushBack [_leadColor, _color];
+
+// Add all synchronized groups and reference custom configuration for them
+_completedGroups = [];
 {
     private "_group";
     _group = groupID (group _x);

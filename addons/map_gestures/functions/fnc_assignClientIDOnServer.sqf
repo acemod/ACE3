@@ -18,7 +18,7 @@
 params ["_unitName"];
 
 {
-    if (name _x == _unitName) then {
+    if (name _x == _unitName) exitWith {
         _x setVariable [QGVAR(owner_id), owner _x, true];
     };
 } count playableUnits;

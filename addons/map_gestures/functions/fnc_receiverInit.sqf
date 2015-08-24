@@ -15,14 +15,6 @@
  */
 #include "script_component.hpp"
 
-{
-    if (isPlayer _x) then {
-        _nameSane = [name _x] call FUNC(sanitizeName);
-        missionNamespace setVariable [format [QGVAR(%1_DrawPos), _nameSane], [1, 1, 1]];
-    };
-    nil
-} count allUnits;
-
 ACE_player setVariable [QGVAR(Transmit), false, true];
 GVAR(EnableTransmit) = false;
 
