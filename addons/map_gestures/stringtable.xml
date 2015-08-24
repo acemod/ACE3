@@ -91,5 +91,14 @@
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
         </Key>
+        <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
+            <English>Name Text Color</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_nameTextColor_description">
+            <English>Color of the name tag text besides the map gestures mark.</English>
+        </Key>
+        <Key ID="STR_ACE_map_gestures_mapGestures_category">
+            <English>Map Gestures</English>
+        </Key>
     </Package>
 </Project>

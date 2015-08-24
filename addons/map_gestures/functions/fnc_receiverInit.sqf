@@ -19,6 +19,7 @@ ACE_player setVariable [QGVAR(Transmit), false, true];
 GVAR(EnableTransmit) = false;
 
 if (!isNil QGVAR(DrawMapHandlerID)) then {
-    (findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)]; GVAR(DrawMapHandlerID) = nil;
+    (findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
+    GVAR(DrawMapHandlerID) = nil;
 };
 GVAR(DrawMapHandlerID) = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", FUNC(drawMapGestures)];

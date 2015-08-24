@@ -31,7 +31,7 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
 {
     _ownerID = _x getVariable QGVAR(owner_id);
     if (isNil "_ownerID") then {
-        [MAP_GESTURES_NO_OWNER_ID_EVENT, [name _x]] call EFUNC(common,serverEvent);
+        [EVENT_PLAYER_HAS_NO_OWNER_ID, [name _x]] call EFUNC(common,serverEvent);
     } else {
         _playerOwnerID = ACE_player getVariable QGVAR(owner_id);
         if (!isNil "_playerOwnerID" && _ownerID != _playerOwnerID) then {

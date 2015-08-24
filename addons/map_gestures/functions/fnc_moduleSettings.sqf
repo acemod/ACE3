@@ -32,5 +32,5 @@ if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaul
 _defaultColor = call compile ("[" + (_logic getVariable ["defaultColor", ""]) + "]");
 if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
 
-[QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
-[QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);
+[QGVAR(defaultLeadColor), _defaultLeadColor, false, true] call EFUNC(common,setSetting);
+[QGVAR(defaultColor), _defaultColor, false, true] call EFUNC(common,setSetting);

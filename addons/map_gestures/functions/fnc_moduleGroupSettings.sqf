@@ -48,6 +48,6 @@ _completedGroups = [];
     nil
 } count _units;
 
-[QGVAR(GroupColorConfigurations), _configurations, true, true] call EFUNC(common,setSetting);
-[QGVAR(GroupColorConfigurationsGroups), _configurationGroups, true, true] call EFUNC(common,setSetting);
-[QGVAR(GroupColorConfigurationsGroupIndex), _configurationGroupsIndex, true, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurations), _configurations, false, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurationsGroups), _configurationGroups, false, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurationsGroupIndex), _configurationGroupsIndex, false, true] call EFUNC(common,setSetting);
