@@ -17,12 +17,14 @@
 
 params ["_interactionType"];
 
-//Ignore self-interaction menu
-if (_interactionType != 0) exitWith {};
+//Ignore self-interaction menu or mounted vehicle interaction
+if ((_interactionType != 0) || {(vehicle ACE_player) != ACE_player}) exitWith {};
 
 //for performance only do stuff it they have a wirecutter item
 //(if they somehow get one durring keydown they'll just have to reopen)
 if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
+
+TRACE_1("Starting wire-cut action PFEH",_interactionType);
 
 [{
     private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper", "_action"];

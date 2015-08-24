@@ -1,6 +1,8 @@
 #define COMPONENT logistics_wirecutter
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define DEBUG_MODE_FULL
+
 #ifdef DEBUG_ENABLED_LOGISTICS_WIRECUTTER
     #define DEBUG_MODE_FULL
 #endif

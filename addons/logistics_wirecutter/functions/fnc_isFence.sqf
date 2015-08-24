@@ -21,7 +21,7 @@ TRACE_1("params",_object);
 
 private ["_typeOf", "_returnValue"];
 
-_typeOf = toLower (typeOf _object);
+_typeOf = typeOf _object;
 _returnValue = false;
 
 if (_typeOf != "") then {
