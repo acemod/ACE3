@@ -3,9 +3,9 @@
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
 
-//Singe PFEH to handle execNextFrame and waitAndExec:
+//Singe PFEH to handle execNextFrame, waitAndExec and waitUntilAndExec:
 [{
-    private ["_entry"];
+    private ["_entry", "_deleted"];
 
     //Handle the waitAndExec array:
     while {((count GVAR(waitAndExecArray)) > 0) && {((GVAR(waitAndExecArray) select 0) select 0) <= ACE_Time}} do {
@@ -17,6 +17,18 @@
     {
         (_x select 0) call (_x select 1);
     } forEach GVAR(nextFrameBufferA);
+
+
+    _deleted = 0;
+    {
+        _x params ["_condition", "_code", "_args"];
+        if ((_args call _condition)) then {
+            GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex + _deleted);
+            _deleted = _deleted + 1;
+            _args call _code;
+        };
+    } forEach GVAR(waitUntilAndExecArray);
+
     //Swap double-buffer:
     GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
     GVAR(nextFrameBufferB) = [];
