@@ -71,15 +71,12 @@ if (_type in _initializedClasses) exitWith {};
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
     } else {
-        // exit if the hitpoint is in the blacklist, e.g. glasses
-        if (_x in IGNORED_HITPOINTS) exitWith {};
-
         // exit if the hitpoint is virtual
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};
 
         // add misc repair action
 
-        private ["_name", "_text", "_icon", "_selection", "_condition", "_statement"];
+        private ["_name", "_text", "_icon", "_selection", "_customSelectionsCfg", "_customSelectionsIndex", "_customSelection", "_condition", "_statement"];
 
         _name = format ["Repair_%1", _x];
 
@@ -92,7 +89,28 @@ if (_type in _initializedClasses) exitWith {};
         };
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-        _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));
+
+        _selection = "";
+        // Get custom position if available
+        _customSelectionsCfg = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
+        if (isArray _customSelectionsCfg) then {
+            _customSelectionsCfg = getArray _customSelectionsCfg;
+            _customSelectionsIndex = _customSelectionsCfg find _x;
+            if (_customSelectionsIndex != -1) then {
+                _customSelection = _customSelectionsCfg select (_customSelectionsIndex + 1);
+                // If comma is present assume position in array, else selection name
+                if (_customSelection find "," != -1) then {
+                    _selection = call compile ("[" + _customSelection + "]")
+                } else {
+                    _selection = _vehicle selectionPosition _customSelection;
+                };
+            };
+        };
+        // If position still empty (not a position array or selection name) try extracting from model
+        if (typeName _selection == "STRING" && {_selection == ""}) then {
+            _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));
+        };
+
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
@@ -110,7 +128,7 @@ if (_type in _initializedClasses) exitWith {};
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
             [   _type,
                 0,
-                if (_selection isEqualTo [0, 0 ,0]) then { ["ACE_MainActions", QGVAR(Repair)] } else { [] },
+                if (_selection isEqualTo [0, 0 ,0]) then { ["ACE_MainActions", QGVAR(Repair)] } else { [] }, // Put inside main actions if no other position was found above
                 _action
             ] call EFUNC(interact_menu,addActionToClass);
         };
