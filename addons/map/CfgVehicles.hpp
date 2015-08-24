@@ -61,8 +61,7 @@ class CfgVehicles {
         };
     };
 
-    class Module_F;
-    class ACE_ModuleBlueForceTracking: Module_F {
+    class ACE_ModuleBlueForceTracking: ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(BFT_Module_DisplayName);
