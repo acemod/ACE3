@@ -36,8 +36,8 @@ class ACE_module_sampleSetting {
 
 Settings are defined from the mod's config but can be adjusted through the following methods:
 
-* Optional config entries
-* Mission modules
+- Optional config entries
+- Mission modules
 
 
 ## 2. Load order
@@ -58,18 +58,18 @@ In the 'how do they work' chapter an example of settings was shown. This is the 
 
 The server config setting entries are done through our optional `ace_server.pbo`, which can be found in the optionals folder of `@ace`. It also contains a `userconfig` folder, which inside contains the file `ace\serverconfig.hpp`. This is the location where ACE3 settings are placed. There is no need for a sub-class.
 
-### 3.1 Getting all the settings!
+### 3.1 Exporting the settings
 
 ACE3 contains a lot of settings, for that reason tweaking everything to your liking manually can be quite a task. We have provided the option to export all settings in the editor (single-player). For this, follow these simple steps:
 
-* Open the editor (single-player).
-* Under modules (<kbd>F7</kbd>), find ACE, `Allow Config Export [ACE]`.
-* Place down the module, ensure that the `Allow` parameter is set to `Yes`.
-* Press preview, once in the game, press <kbd>Esc</kbd> and open the ACE3 Options dialog (top left)
-* This is the dialog where you can modify client side settings. On the bottom left of it, you will now see a button called `Config Export`. Press it and a new dialog opens.
-* You are now in the dialog that allows you to adjust all settings from ACE3. Tweak this to your liking.
-* Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
-* Paste the settings in your `serverconfig.hpp` file and you're done.
+- Open the editor (single-player).
+- Under modules (<kbd>F7</kbd>), find ACE, `Allow Config Export [ACE]`.
+- Place down the module, ensure that the `Allow` parameter is set to `Yes`.
+- Press preview, once in the game, press <kbd>Esc</kbd> and open the ACE3 Options dialog (top left)
+- This is the dialog where you can modify client side settings. On the bottom left of it, you will now see a button called `Config Export`. Press it and a new dialog opens.
+- You are now in the dialog that allows you to adjust all settings from ACE3. Tweak this to your liking.
+- Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
+- Paste the settings in your `serverconfig.hpp` file and you're done.
 
 Note that the format copied to your clipboard by this can also be used in the mission config (`description.ext`), as long as they are in the class `ACE_Settings`.
 
@@ -78,6 +78,21 @@ class ACE_Settings {
     // Add exported settings here
 };
 ```
+
+#### 3.1.1 Notes
+
+- If a setting is forced it cannot be changed further down the line, see `2. Load order` for the hierarchy.
+- Client settings can be forced, include them while exporting (the button is right next to export on the UI)
+- You can use `ACE_common_forceAllSettings` to force settings in a mission, it will lock **all** the settings (which are not already forced) to the values they are set in either modules or server config
+    - example of `ACE_common_forceAllSettings`
+    ```c++
+    //^^ rest of your description.ext
+    //------------------------- ACE settings
+    class ACE_common_forceAllSettings {
+        value = 1;
+        typeName = "BOOL";
+    };
+    ```
 
 ### 3.2 Loading up the server config
 
