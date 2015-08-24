@@ -31,7 +31,7 @@ _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 // raise event to set the new hitpoint damage
 ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
 
-// Repair the rest in the group (don't need to worry about specific damage as it's not checked)
+// Repair the rest in the group (no specific damage, main hitpoint is enough)
 _hitpointGroup = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroup);
 _hitpointGroup = if (isArray _hitpointGroup) then {getArray _hitpointGroup} else {[]};
 if (count _hitpointGroup > 0) then {
