@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, bob] call ACE_captives_fnc_canLoadCaptive
+ * [player, bob, car] call ACE_captives_fnc_canLoadCaptive
  *
  * Public: No
  */
@@ -32,13 +32,12 @@ if ((isNull _target) || {(vehicle _target) != _target} || {!(_target getVariable
 if (isNull _vehicle) then {
     //Looking at a captive unit, search for nearby vehicles with valid seats:
     {
-        // if (([_x] call FUNC(findEmptyNonFFVCargoSeat)) != -1) exitWith {
         if ((_x emptyPositions "cargo") > 0) exitWith {
             _vehicle = _x;
         };
     } forEach (nearestObjects [_unit, ["Car", "Tank", "Helicopter", "Plane", "Ship"], 10]);
 } else {
-    // if (([_vehicle] call FUNC(findEmptyNonFFVCargoSeat)) == -1) then {
+    //We have a vehicle picked, make sure it has empty seats:
     if ((_vehicle emptyPositions "cargo") == 0) then {
         _vehicle = objNull;
     };
