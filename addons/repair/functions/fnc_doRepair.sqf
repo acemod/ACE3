@@ -32,7 +32,7 @@ _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
 
 // Get hitpoint groups if available
-_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroup);
+_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
 _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
     // Loop through hitpoint groups

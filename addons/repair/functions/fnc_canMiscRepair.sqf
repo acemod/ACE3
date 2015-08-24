@@ -21,7 +21,7 @@ private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return
 params ["_caller", "_target", "_hitPoint"];
 
 // Get hitpoint groups if available
-_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroup);
+_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);
 _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
     // Loop through hitpoint groups
@@ -46,5 +46,9 @@ _return = false;
         _return = true;
     };
 } forEach _hitpointGroup;
+
+if (typeOf _target == "B_MRAP_01_F") then {
+    diag_log format ["%1 - %2", _hitPoint, _hitpointGroup];
+};
 
 _return
