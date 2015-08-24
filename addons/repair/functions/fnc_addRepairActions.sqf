@@ -88,60 +88,15 @@ _hitPointsAddedAmount = [];
 
         // add misc repair action
 
-        private ["_name", "_text", "_icon", "_selection", "_condition", "_statement", "_toFind", "_hitPointFoundIndex", "_combinedString"];
+        private ["_name", "_icon", "_selection", "_condition", "_statement"];
 
         _name = format ["Repair_%1", _x];
 
-
-        // Prepare first part of the string from stringtable
-        _text = LSTRING(Hit);
-
-        // Remove "Hit" from hitpoint name if one exists
-        _toFind = if (_x find "Hit" == 0) then {
-            [_x, 3] call CBA_fnc_substr
-        } else {
-            _x
-        };
-
-        // Loop through always shorter part of the hitpoint name to find the string from stringtable or use an already found one
-        for "_i" from 0 to (count _x) do {
-            // Loop through already added hitpoints and save index
-            _hitPointFoundIndex = -1;
-            {
-                if (_x == _toFind) exitWith {
-                    _hitPointFoundIndex = _forEachIndex;
-                };
-            } forEach _hitPointsAddedNames;
-
-            // Use already added hitpoint if one found above and numerize
-            if (_hitPointFoundIndex != -1) exitWith {
-                _text = localize (_hitPointsAddedStrings select _hitPointFoundIndex) + " " + str(_hitPointsAddedAmount select _hitPointFoundIndex);
-                _hitPointsAddedAmount set [_hitPointFoundIndex, (_hitPointsAddedAmount select _hitPointFoundIndex) + 1]; // Set amount
-                TRACE_2("Same hitpoint found",_toFind,_hitPointsAddedNames);
-            };
-
-            // Localize if localization found and save all variables for possible hitpoints of same type
-            _combinedString = _text + _toFind;
-            if (isLocalized _combinedString) exitWith {
-                // Add hitpoint to the list
-                _hitPointsAddedNames pushBack _toFind;
-                _hitPointsAddedStrings pushBack _combinedString;
-                _hitPointsAddedAmount pushBack 2;
-
-                // Localize text
-                _text = localize _combinedString;
-                TRACE_1("Hitpoint localized",_toFind);
-            };
-
-            // Cut off one character
-            _toFind = [_toFind, 0, count _toFind - 1] call CBA_fnc_substr;
-        };
-
-        // Display part name directly if no string is found in stringtable
-        if (_text == LSTRING(Hit)) then {
-            _text = _x;
-        };
-
+        // Find localized string and track those added for numerization
+        ([_x, "%1", _x, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
+        _hitPointsAddedNames = _trackArray select 0;
+        _hitPointsAddedStrings = _trackArray select 1;
+        _hitPointsAddedAmount = _trackArray select 2;
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
         _selection = "";
