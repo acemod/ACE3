@@ -75,11 +75,27 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
     } else {
-        private "_hitpointGroup";
-        // Exit if the hitpoint is in group and not main group hitpoint (which gets added as group repair action)
-        _hitpointGroup = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroup);
-        _hitpointGroup = if (isArray _hitpointGroup) then {getArray _hitpointGroup} else {[]};
-        if (count _hitpointGroup > 0 && {_x in _hitpointGroup} && {_x != _hitpointGroup select 0}) exitWith {};
+        private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
+
+        // Get hitpoint groups if available
+        _hitpointGroupConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
+        _inHitpointSubGroup = false;
+        if (isArray _hitpointGroupConfig) then {
+            // Loop through hitpoint groups
+            _currentHitpoint = _x;
+            {
+                // Loop through sub-group
+                {
+                    // Current hitpoint is in a sub-group, set it so
+                    if (_x == _currentHitpoint) exitWith {
+                        _inHitpointSubGroup = true;
+                    };
+                } forEach (_x select 1);
+            } forEach (getArray _hitpointGroupConfig);
+        };
+
+        // Exit if current hitpoint is not a group leader (only they get actions)
+        if (_inHitpointSubGroup) exitWith {};
 
         // exit if the hitpoint is virtual
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};

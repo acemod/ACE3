@@ -31,19 +31,27 @@ _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 // raise event to set the new hitpoint damage
 ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
 
-// Repair the rest in the group (no specific damage, main hitpoint is enough)
-_hitpointGroup = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroup);
-_hitpointGroup = if (isArray _hitpointGroup) then {getArray _hitpointGroup} else {[]};
-if (count _hitpointGroup > 0) then {
-    ([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitpoints"];
-    _hitpointGroup deleteAt 0; // Remove main group hitpoint
+// Get hitpoint groups if available
+_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroup);
+_hitpointGroup = [];
+if (isArray _hitpointGroupConfig) then {
+    // Loop through hitpoint groups
     {
-        if (_x in _hitpoints) then {
-            _vehicle setHitPointDamage [_x, 0];
-        } else {
-            diag_log text format ["[ACE] ERROR: Invalid hitpoint %1 in hitpointGroup of %2", _x, _vehicle];
+        // Exit using found hitpoint group if this hitpoint is leader of any
+        if (_x select 0 == _hitPoint) exitWith {
+            ([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitpoints"];
+            // Loop through the found group
+            {
+                // If hitpoint is valid set damage to 0, else print RPT error
+                if (_x in _hitpoints) then {
+                    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _x, 0]] call EFUNC(common,targetEvent);
+                } else {
+                    diag_log text format ["[ACE] ERROR: Invalid hitpoint %1 in hitpointGroups of %2", _x, _vehicle];
+                };
+
+            } forEach (_x select 1);
         };
-    } forEach _hitpointGroup;
+    } forEach (getArray _hitpointGroupConfig);
 };
 
 // display text message if enabled

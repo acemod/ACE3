@@ -17,19 +17,29 @@
  */
 #include "script_component.hpp"
 
-private ["_hitpointGroup", "_postRepairDamage", "_return"];
+private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return"];
 params ["_caller", "_target", "_hitPoint"];
 
-// Check hitpoint group
-_hitpointGroup = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroup);
-_hitpointGroup = if (isArray _hitpointGroup) then {getArray _hitpointGroup} else {[]};
-
-if !(_hitPoint in _hitpointGroup) then {
-    _hitpointGroup pushBack _hitPoint;
+// Get hitpoint groups if available
+_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroup);
+_hitpointGroup = [];
+if (isArray _hitpointGroupConfig) then {
+    // Loop through hitpoint groups
+    {
+        // Exit using found hitpoint group if this hitpoint is leader of any
+        if (_x select 0 == _hitPoint) exitWith {
+            _hitpointGroup = _x select 1;
+        };
+    } forEach (getArray _hitpointGroupConfig);
 };
 
+// Add current hitpoint to the group
+_hitpointGroup pushBack _hitPoint;
+
+// Get post repair damage
 _postRepairDamage = [_caller] call FUNC(getPostRepairDamage);
 
+// Return true if damage can be repaired on any hitpoint in the group, else false
 _return = false;
 {
     if ((_target getHitPointDamage _x) > _postRepairDamage) exitWith {
