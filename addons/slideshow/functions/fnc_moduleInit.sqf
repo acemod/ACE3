@@ -25,10 +25,10 @@ if !(_activated) exitWith {};
 if (isNull _logic) exitWith {};
 
 // Extract variables from logic
-_objects = [_logic getVariable ["Objects", ""], true, true] call FUNC(makeList);
-_controllers = [_logic getVariable ["Controllers", ""], true, true] call FUNC(makeList);
-_images = [_logic getVariable ["Images", ""], true, false] call FUNC(makeList);
-_names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
+_objects = [_logic getVariable ["Objects", ""], true, true] call EFUNC(common,parseList);
+_controllers = [_logic getVariable ["Controllers", ""], true, true] call EFUNC(common,parseList);
+_images = [_logic getVariable ["Images", ""], false, false] call EFUNC(common,parseList);
+_names = [_logic getVariable ["Names", ""], false, false] call EFUNC(common,parseList);
 _duration = _logic getVariable ["Duration", 0];
 
 // Prepare with actions
