@@ -1,19 +1,21 @@
 /*
  * Author: Glowbal, KoffeinFlummi
- * Starts the repair process
+ * Starts the repair process.
  *
  * Arguments:
- * 0: The engineer <OBJECT>
- * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: repair classname <STRING>
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT
+ * 2: Selected hitpoint <STRING>
+ * 3: Repair Action Classname <STRING>
  *
  * Return Value:
- * Succesful repair started <BOOL>
+ * Succesful Repair Started <BOOL>
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint", "classname"] call ace_repair_fnc_repair
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];
@@ -29,7 +31,7 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 } else {
     // Check for required class
     if (isText (_config >> "requiredEngineer")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "requiredEngineer")), 0];
+        missionNamespace getVariable [(getText (_config >> "requiredEngineer")), 0];
     };
     0;
 };
@@ -44,7 +46,7 @@ if (getText (_config >> "condition") != "") then {
     if (isnil _condition) then {
         _condition = compile _condition;
     } else {
-        _condition = missionNamespace getvariable _condition;
+        _condition = missionNamespace getVariable _condition;
     };
     if (typeName _condition == "BOOL") then {
         _return = _condition;
@@ -55,7 +57,7 @@ if (getText (_config >> "condition") != "") then {
 if (!_return) exitwith {false};
 
 _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
-    missionNamespace getvariable [getText(_config >> "vehicleStateCondition"), 0]
+    missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
 } else {
     getNumber(_config >> "vehicleStateCondition")
 };
@@ -74,15 +76,15 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     if (_x == "RepairVehicle" && _repairVeh) exitwith {_return = true;};
     if !(isnil _x) exitwith {
         private "_val";
-        _val = missionNamespace getvariable _x;
+        _val = missionNamespace getVariable _x;
         if (typeName _val == "SCALAR") then {
             _return = switch (_val) do {
-                case 0: {true};
-                case 1: _repairVeh;
-                case 2: _repairFacility;
-                case 3: {{call _repairFacility || call _repairVeh}};
+                case 0: {true}; //useAnywhere
+                case 1: {call _repairVeh}; //repairVehicleOnly
+                case 2: {call _repairFacility}; //repairFacilityOnly
+                case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
+                default {false}; //Disabled
             };
-            _return = call _return;
         };
     };
 } forEach _locations;
@@ -94,7 +96,7 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
 } else {
     // Check for required class
     if (isText (_config >> "itemConsumed")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "itemConsumed")), 0];
+        missionNamespace getVariable [(getText (_config >> "itemConsumed")), 0];
     };
     0;
 };
@@ -112,7 +114,7 @@ if (_callbackProgress == "") then {
 if (isNil _callbackProgress) then {
     _callbackProgress = compile _callbackProgress;
 } else {
-    _callbackProgress = missionNamespace getvariable _callbackProgress;
+    _callbackProgress = missionNamespace getVariable _callbackProgress;
 };
 
 
@@ -152,7 +154,7 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
         if (isnil _repairTimeConfig) then {
             _repairTimeConfig = compile _repairTimeConfig;
         } else {
-            _repairTimeConfig = missionNamespace getvariable _repairTimeConfig;
+            _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
         };
         if (typeName _repairTimeConfig == "SCALAR") exitwith {
             _repairTimeConfig;

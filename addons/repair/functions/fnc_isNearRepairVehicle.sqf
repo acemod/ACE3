@@ -1,16 +1,18 @@
 /*
  * Author: KoffeinFlummi
- * Checks if a unit is in a engineeral vehicle.
+ * Checks if a unit is near an engineering vehicle.
  *
  * Arguments:
- * 0: unit to be checked <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * Is unit in engineeral vehicle? <BOOL>
+ * Is near engineering vehicle <BOOL>
+ *
+ * Example:
+ * [unit] call ace_repair_fnc_isNearRepairVehicle
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_unit"];

@@ -1,13 +1,16 @@
 /*
  * Author: Glowbal, KoffeinFlummi, commy2
- * Check if a unit is any engineer class
+ * Check if a unit is any engineer class.
  *
  * Arguments:
- * 0: The Unit <OBJECT>
- * 1: Class <NUMBER> <OPTIONAL>
+ * 0: Unit <OBJECT>
+ * 1: Class <NUMBER> (default: 1)
  *
- * ReturnValue:
- * Is in of engineer class <BOOL>
+ * Return Value:
+ * Is Engineer Class <BOOL>
+ *
+ * Example:
+ * [unit, 1] call ace_repair_fnc_isEngineer
  *
  * Public: Yes
  */

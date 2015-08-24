@@ -1,12 +1,17 @@
 /*
  * Author: commy2
- * Module for adjusting the repair damage settings
+ * Adjusts repair damage settings.
  *
  * Arguments:
- * 0: The module logic <LOGIC>
+ * 0: The module logic <OBJECT>
+ * 1: Synchronized units <ARRAY>
+ * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * function = "ace_repair_fnc_moduleRepairSettings"
  *
  * Public: No
  */

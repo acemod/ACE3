@@ -1,26 +1,28 @@
 /*
  * Author: Glowbal
- * Assign an repair facility
+ * Assign a repair facility.
  *
  * Arguments:
- * 0: The module logic <LOGIC>
- * 1: units <ARRAY>
- * 2: activated <BOOL>
+ * 0: The module logic <OBJECT>
+ * 1: Synchronized units <ARRAY>
+ * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * function = "ace_repair_fnc_moduleAssignRepairFacility"
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_logic"];
 
 if (!isNull _logic) then {
     private ["_list", "_setting"];
-    _list = _logic getvariable ["EnableList",""];
-    _setting = _logic getvariable ["role",0];
+    _list = _logic getVariable ["EnableList",""];
+    _setting = _logic getVariable ["role",0];
 
     [_list, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);
     [synchronizedObjects _logic, "ACE_isRepairFacility", _setting, true] call EFUNC(common,assignObjectsInList);

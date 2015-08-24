@@ -25,7 +25,7 @@ class ACE_Repair {
         class RemoveWheel: ReplaceWheel {
             displayName = CSTRING(RemoveWheel);
             displayNameProgress = CSTRING(RemovingWheel);
-            condition = QUOTE(call FUNC(canRemoveWheel));
+            condition = QUOTE(call FUNC(canRemove));
             callbackSuccess = QUOTE(call FUNC(doRemoveWheel));
         };
         class MiscRepair: ReplaceWheel {
@@ -46,7 +46,7 @@ class ACE_Repair {
         class RemoveTrack: MiscRepair {
             displayName = CSTRING(RemoveTrack);
             displayNameProgress = CSTRING(RemovingTrack);
-            condition = QUOTE(call FUNC(canRemoveTrack));
+            condition = QUOTE(call FUNC(canRemove));
             callbackSuccess = QUOTE(call FUNC(doRemoveTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
         };

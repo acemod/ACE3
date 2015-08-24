@@ -21,4 +21,4 @@ params ["_caller", "_target"];
 if !(GVAR(allow) == 1 || (GVAR(allow) == 2 && {vehicle _caller != _caller || vehicle _target != _target} && {alive ACE_player})) exitwith {false};
 if !(GVAR(useMenu) == 1 || (GVAR(useMenu) == 2 && {vehicle _caller != _caller || vehicle _target != _target} && {alive ACE_player})) exitwith {false};
 
-true;
+true

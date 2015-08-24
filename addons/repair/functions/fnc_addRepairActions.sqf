@@ -1,12 +1,17 @@
 /*
  * Author: commy2
- * Called from init eventhandler. Checks if the vehicles class already has the actions initialized. Otherwise add all available repair options.
+ * Checks if the vehicles class already has the actions initialized, otherwise add all available repair options. Calleed from init EH.
  *
  * Arguments:
- * 0: vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [vehicle] call ace_repair_fnc_addRepairActions
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 #define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]

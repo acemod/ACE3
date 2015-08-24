@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Validate the vehicle cargo space
+ * Validate the vehicle cargo space.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -8,14 +8,19 @@
  * Return value:
  * None
  *
+ * Example:
+ * [object] call ace_cargo_fnc_validateCargoSpace
+ *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_loaded", "_newLoaded", "_totalSpaceOccupied"];
+
 params ["_vehicle"];
-_loaded = _vehicle getvariable [QGVAR(loaded), []];
+
+_loaded = _vehicle getVariable [QGVAR(loaded), []];
+
 _newLoaded = [];
 _totalSpaceOccupied = 0;
 {
@@ -27,6 +32,7 @@ _totalSpaceOccupied = 0;
 } count _loaded;
 
 if (count _loaded != count _newLoaded) then {
-    _vehicle setvariable [QGVAR(loaded), _newLoaded, true];
+    _vehicle setVariable [QGVAR(loaded), _newLoaded, true];
 };
-_vehicle setvariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];
+
+_vehicle setVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];
