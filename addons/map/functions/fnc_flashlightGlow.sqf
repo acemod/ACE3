@@ -24,12 +24,13 @@ if (!isNull _light) then {deleteVehicle _light};
 if (_flashlight != "") then {
     _colour = getText (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour");
 
-    _class = switch (_colour) do {
+    _class = switch (toLower _colour) do {
         case "white": {"ACE_FlashlightProxy_White"};
         case "red": {"ACE_FlashlightProxy_Red"};
         case "green": {"ACE_FlashlightProxy_Green"};
         case "blue": {"ACE_FlashlightProxy_Blue"};
         case "yellow": {"ACE_FlashlightProxy_Yellow"};
+        default {"ACE_FlashlightProxy_White"};
     };
 
     _light = _class createVehicle [0,0,0];
