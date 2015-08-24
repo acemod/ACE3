@@ -291,7 +291,7 @@ GVAR(OldVisibleMap) = false;
         ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
     };
     
-}, 0, []] call cba_fnc_addPerFrameHandler;
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
 // PFH to raise camera created event. Only works on these cams by BI.
