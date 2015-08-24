@@ -10,7 +10,7 @@ class CfgAmmo {
         effectFlare = "FlareShell";
         
         triggerTime = 0;
-        intensity = 1;
+        intensity = 0.5;
         flareSize = 1;
         timeToLive = 10e10;
         
@@ -27,22 +27,22 @@ class CfgAmmo {
     };
     
     class ACE_FlashlightProxy_Red: ACE_FlashlightProxy_White {
-        intensity = 2.5;
+        intensity = 1;
         lightColor[] = {1,0,0,1};
     };
     
     class ACE_FlashlightProxy_Green: ACE_FlashlightProxy_White {
-        intensity = 1.5;
+        intensity = 1;
         lightColor[] = {0,1,0,1};
     };
     
     class ACE_FlashlightProxy_Blue: ACE_FlashlightProxy_White {
-        intensity = 2.5;
+        intensity = 1.5;
         lightColor[] = {0.25,0.25,1,1};
     };
     
     class ACE_FlashlightProxy_Yellow: ACE_FlashlightProxy_White {
-        intensity = 1.5;
+        intensity = 1;
         lightColor[] = {1,1,0.5,1};
     };
 };
