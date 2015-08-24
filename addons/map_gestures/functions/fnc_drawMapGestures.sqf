@@ -26,6 +26,8 @@
 
 if (!GVAR(enabled) || !visibleMap) exitWith {};
 
+private["_color", "_drawPosVariableName", "_group", "_grpName", "_pos", "_unitUID"];
+
 params ["_mapHandle"];
 
 // Iterate over all nearby players and render their pointer if player is transmitting.

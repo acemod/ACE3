@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_proximityPlayers", "_ownerID", "_unitUID", "_drawPosVariableName"];
+private ["_ownerID", "_unitUID", "_drawPosVariableName", "_playerOwnerID"];
 
 params ["", "_pfhId"];
 

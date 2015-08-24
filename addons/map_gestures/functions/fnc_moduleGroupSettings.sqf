@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+private ["_color", "_configurationGroupMappings", "_configurationIndex", "_configurations", "_leadColor"];
+
 params ["_logic", "_units", "_activated"];
 
 if (!_activated || !isServer) exitWith {};

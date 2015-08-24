@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+private "_proximityPlayers";
+
 params ["_unit", "_range"];
 
 _proximityPlayers = (getPos _unit) nearEntities [["CAMAnBase"], _range];
