@@ -75,8 +75,11 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
     } else {
-        // exit if the hitpoint is in the blacklist, e.g. glasses
-        if (_x in IGNORED_HITPOINTS) exitWith {};
+        private "_hitpointGroup";
+        // Exit if the hitpoint is in group and not main group hitpoint (which gets added as group repair action)
+        _hitpointGroup = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroup);
+        _hitpointGroup = if (isArray _hitpointGroup) then {getArray _hitpointGroup} else {[]};
+        if (count _hitpointGroup > 0 && {_x in _hitpointGroup} && {_x != _hitpointGroup select 0}) exitWith {};
 
         // exit if the hitpoint is virtual
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};
