@@ -39,56 +39,56 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `ace_dragging_fnc_setDraggable`
 
- Arguments |    | Type | Optional (default value)
---- | --------- | ---- | ------------------------
-0   | Any object | Object | Required
-1   | Enable dragging, true to enable, false to disable | Boolean | Required
-2   | Position to offset the object from player | Array | Optional (default: `[0, 0, 0]`)
-3   | Direction in degree to rotate the object | Number | Optional (default: `0`)
-**R** | None | None | Return value
+|   | Arguments | Type | Optional (default value)
+| - | --------- | ---- | ------------------------
+| 0 | Any object | Object | Required
+| 1 | Enable dragging, true to enable, false to disable | Boolean | Required
+| 2 | Position to offset the object from player | Array | Optional (default: `[0, 0, 0]`)
+| 3 | Direction in degree to rotate the object | Number | Optional (default: `0`)
+| **R** | None | None | Return value
 
 #### 2.1.1 Example 1
 
 `[foo, true, [0, 2, 0], 45] call ace_dragging_fnc_setDraggable;`
 
-Arguments |    | Explanation
---- | --------- | -----------
-0   | `foo` | My object
-1   | `true` | Dragging is enabled
-2   | `[0,2,0]` | 0 meters sideways, 2 meters forward, 0 meters upwards
-3   | `45` | Rotated by 45°
+|   | Arguments | Explanation
+| - | --------- | -----------
+| 0 | `foo` | My object
+| 1 | `true` | Dragging is enabled
+| 2 | `[0,2,0]` | 0 meters sideways, 2 meters forward, 0 meters upwards
+| 3 | `45` | Rotated by 45°
 
 #### 2.1.2 Example 2
 
 `[bar, false, [3, -2, 2], 20] call ace_dragging_fnc_setDraggable;`
 
-Arguments |     | Explanation
---- | --------- | -----------
-0   | `bar` | My object
-1   | `false` | Dragging is disabled
-2   | `[3, -2, 2]` | 3 meters sideways, 2 meters backwards, 2 meters upwards
-3   | `20` | Rotated by 20°
+|   | Arguments | Explanation
+| - | --------- | -----------
+| 0 | `bar` | My object
+| 1 | `false` | Dragging is disabled
+| 2 | `[3, -2, 2]` | 3 meters sideways, 2 meters backwards, 2 meters upwards
+| 3 | `20` | Rotated by 20°
 
 
 ### 2.2 Enabling / disabling carrying
 
 `ace_dragging_fnc_setCarryable`
 
-Arguments |     | Type | Optional (default value)
---- | --------- | ---- | ------------------------
-0   | Any object | Object | Required
-1   | Enable carrying, true to enable, false to disable | Boolean | Required
-2   | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`)
-3   | Direction in degree to rotate the object | Number | Optional (default: `0`)
-**R** | None | None | Return value
+|   | Arguments | Type | Optional (default value)
+| - | --------- | ---- | ------------------------
+| 0 | Any object | Object | Required
+| 1 | Enable carrying, true to enable, false to disable | Boolean | Required
+| 2 | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`)
+| 3 | Direction in degree to rotate the object | Number | Optional (default: `0`)
+| **R** | None | None | Return value
 
 #### 2.2.1 Example
 
 `[foo, true, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;`
 
-Arguments |    | Explanation
---- | --------- | -----------
-0   |  `foo` | My object
-1   |  `true`| Carrying is enabled
-2   | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards
-3   | `10` | Rotated by 10°
+|   | Arguments | Explanation
+| - | --------- | -----------
+| 0 |  `foo` | My object
+| 1 |  `true`| Carrying is enabled
+| 2 | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards
+| 3 | `10` | Rotated by 10°
