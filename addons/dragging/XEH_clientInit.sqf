@@ -11,8 +11,8 @@ if (isNil "ACE_maxWeightCarry") then {
     ACE_maxWeightCarry = 600;
 };
 
-["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
-["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
+["isNotDragging", {!((_this select 0) getVariable [QGVAR(startDragging), false] || (_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
+["isNotCarrying", {!((_this select 0) getVariable [QGVAR(startCarrying), false] || (_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
 ["playerChanged", {_this call DFUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);

@@ -213,6 +213,23 @@ _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
 };
 
 // Start treatment
+if (_caller != ACE_player) exitWith {
+    // It's an AI that is doing the treatment
+    //[DFUNC(treatment_success), [[_caller, _target, _selectionName, _className, _items, _usersOfItems]], _treatmentTime]call EFUNC(common,waitAndExecute);
+    [
+        _treatmentTime,
+        [_caller, _target, _selectionName, _className, _items, _usersOfItems],
+        DFUNC(treatment_success),
+        DFUNC(treatment_failure),
+        _caller,
+        _target,
+        _callbackProgress,
+        ["isnotinside"]
+    ] call EFUNC(common,progress);
+    true;
+};
+
+// Start treatment for player
 [
     _treatmentTime,
     [_caller, _target, _selectionName, _className, _items, _usersOfItems],

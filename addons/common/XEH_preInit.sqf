@@ -148,6 +148,7 @@ PREP(player);
 PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
+PREP(progress);
 PREP(queueAnimation);
 PREP(readSettingFromModule);
 PREP(receiveRequest);

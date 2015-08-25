@@ -18,7 +18,7 @@ private "_unit";
 _unit = ACE_player;
 
 // EH is always assigned. Exit and don't overwrite input if not carrying
-if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {false};
+if !(_unit getVariable [QGVAR(startCarrying), false] || _unit getVariable [QGVAR(isCarrying), false]) exitWith {false};
 
 private "_scrollAmount";
 

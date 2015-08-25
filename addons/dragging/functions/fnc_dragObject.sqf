@@ -37,6 +37,7 @@ if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
 };
 
+_unit setVariable [QGVAR(startDragging), false, true];
 _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 

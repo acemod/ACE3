@@ -9,7 +9,7 @@ _isUnconscious = _this select 1;
 private "_player";
 _player = ACE_player;
 
-if (_player getVariable [QGVAR(isDragging), false]) then {
+if (_player getVariable [QGVAR(startDragging), false] || _player getVariable [QGVAR(isDragging), false]) then {
 
     private "_draggedObject";
     _draggedObject = _player getVariable [QGVAR(draggedObject), objNull];
@@ -26,7 +26,7 @@ if (_player getVariable [QGVAR(isDragging), false]) then {
 
 };
 
-if (_player getVariable [QGVAR(isCarrying), false]) then {
+if (_player getVariable [QGVAR(startCarrying), false] || _player getVariable [QGVAR(isCarrying), false]) then {
 
     private "_carriedObject";
     _carriedObject = _player getVariable [QGVAR(carriedObject), objNull];
