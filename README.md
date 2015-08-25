@@ -27,51 +27,51 @@ The project is entirely **open-source** and all contributions are welcome. Feel 
 The mod is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, a team can maintain its own tailored version of ACE3 by simply excluding any components they don't need, or those possibly in conflict with other mods. Modules themselves, e.g. the medical system, also include various customization options, allowing mission designers to tweak the overall experience.
 
 ### Core features
-* Brand new 3D interaction/action system
-* Performance and reliability framework
-* Focus on modularity and customization
-* New flexible client and server settings & configuration
-* Improved medical system with various levels (basic/advanced) focus on gameplay/realism
-* Proper & consistent network-synced weather
-* Wind and weather-based ballistics
-* Captivity system
-* Explosives system, including different trigger types
-* Map screen improvements – marker placement and map tools
-* Advanced missile guidance and laser designation
+- Brand new 3D interaction/action system
+- Performance and reliability framework
+- Focus on modularity and customization
+- New flexible client and server settings & configuration
+- Improved medical system with various levels (basic/advanced) focus on gameplay/realism
+- Proper & consistent network-synced weather
+- Wind and weather-based ballistics
+- Captivity system
+- Explosives system, including different trigger types
+- Map screen improvements – marker placement and map tools
+- Advanced missile guidance and laser designation
 
 #### Additional features
-* Carrying and dragging
-* Realistic names for vehicles and weapons
-* A fire control system (FCS) for armored vehicles and helicopters
-* Realistic ballistics/FCS calculated in C/C++ extensions
-* Backblast area and overpressure simulation
-* Disposable launchers
-* Realistic G-forces
-* Vehicle locking
-* Realistic night and thermal vision modes
-* Magazine repacking
-* Realistic weapon overheating mechanic
-* Combat deafness (temporary loss of hearing) simulation
-* Improved ragdoll physics
-* Improved interactions for AARs and ammo bearers
-* Adjustable sniper scopes
-* No idle animation with lowered weapon
-* No talking player avatar
-* Jumping over obstacles, climbing over walls and cutting down fences
-* Vector, MicroDAGR and Kestrel devices<br>
+- Carrying and dragging
+- Realistic names for vehicles and weapons
+- A fire control system (FCS) for armored vehicles and helicopters
+- Realistic ballistics/FCS calculated in C/C++ extensions
+- Backblast area and overpressure simulation
+- Disposable launchers
+- Realistic G-forces
+- Vehicle locking
+- Realistic night and thermal vision modes
+- Magazine repacking
+- Realistic weapon overheating mechanic
+- Combat deafness (temporary loss of hearing) simulation
+- Improved ragdoll physics
+- Improved interactions for AARs and ammo bearers
+- Adjustable sniper scopes
+- No idle animation with lowered weapon
+- No talking player avatar
+- Jumping over obstacles, climbing over walls and cutting down fences
+- Vector, MicroDAGR and Kestrel devices<br>
 ***and much more...***
 
 ### Guides & how-tos
 If you installed ACE3 but have trouble understanding how it all works, or where to start, read this first:
-* [Getting started](http://ace3mod.com/wiki/user/getting-started.html)
+- [Getting started](http://ace3mod.com/wiki/user/getting-started.html)
 
 #### Contributing
 You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. To contribute something to ACE3, simply fork this repository and submit your pull requests for review by other collaborators. Remember to add yourself to the author array of any PBO you will be editing and the [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) file; including a valid email address.
 
 Please, use our [Issue Tracker](https://github.com/acemod/ACE3/issues) to report a bug, propose a feature, or suggest changes to the existing ones. See also:
-* [How to report an issue](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-* [How to make a feature request](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [How to report an issue](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
+- [How to make a feature request](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testing & building
 To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build:
-* [Setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE3 for testing purposes.
+- [Setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – step-by-step instructions on how to properly setup and build a version of ACE3 for testing purposes.
