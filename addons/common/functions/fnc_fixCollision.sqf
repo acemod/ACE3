@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Attempt to fix physx collisions causing unreasonable impact forces and damage.
+ * Attempt to fix PhysX collisions causing unreasonable impact forces and damage.
  *
  * Arguments:
  * Object <OBJECT>

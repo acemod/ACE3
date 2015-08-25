@@ -3,10 +3,10 @@
  * Attempt to fix floating physx with disabled damage after setPosXXX commands.
  *
  * Arguments:
- * Physx object <OBJECT>
+ * PhysX object <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */

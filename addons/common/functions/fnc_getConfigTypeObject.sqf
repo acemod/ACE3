@@ -1,13 +1,14 @@
 /*
  * Author: commy2
- *
- * What kind of Cfg is the object. Works for CfgVehicles and CfgAmmo
+ * Determins type of object. Can be CfgVehicles or CfgAmmo.
  *
  * Arguments:
- * 0: An object's classname. (String)
+ * 0: Object Classname <STRING>
  *
  * Return Value:
- * What kind of the input is (String)
+ * Config Category ("CfgVehicles", "CfgAmmo", "") <STRING>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

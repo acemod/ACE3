@@ -17,7 +17,7 @@ private ["_eventName", "_eventArgs", "_eventNames", "_eventIndex", "_eventTarget
 params ["_eventType", "_event"];
 
 if (_eventType == "ACEg") then {
-    _event params ["_eventName","_eventArgs"];
+    _event params ["_eventName", "_eventArgs"];
 
     _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;

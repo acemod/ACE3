@@ -1,19 +1,15 @@
 /*
- * Name: FUNC(getForceWalkStatus)
+ * Author: PabstMirror, commy2
+ * Returns reasons why the unit is forceWalk-ing.
  *
- * Author: Pabst Mirror (from captivity by commy2)
- *
- * Description:
- * Returns reasons why the unit is forceWalk-ing, empty if not forced.
- *
- * Parameters:
- * 0: OBJECT - Unit
+ * Arguments:
+ * 0: unit <OBJECT>
  *
  * Return Value:
- * ARRAY(of strings) - Reason why the unit is force walking
+ * Force Walk reasons <ARRAY>
  *
  * Example:
- * [ACE_Player] call FUNC(getForceWalkStatus)
+ * [ACE_Player] call ace_common_fnc_getForceWalkStatus
  *
  * Public: No
  */

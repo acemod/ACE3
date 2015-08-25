@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Export Config Entrys that Written in RTP
+ * Export Config Entrys to RPT logs
  *
  * Arguments:
  * Config Path <CONFIG>
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [(configFile >> "CfgAmmo")] call FUNC(exportConfig);
+ * [(configFile >> "CfgAmmo")] call ace_common_fnc_exportConfig;
  *
  * Public: No
  */

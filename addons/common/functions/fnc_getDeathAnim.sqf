@@ -9,15 +9,15 @@
  * animation <STRING>
  *
  * Example:
- * [bob] call ace_common_fnc_getDeathAnim;
+ * [bob] call ace_common_fnc_getDeathAnim
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit"];
-
 private ["_returnAnimation", "_animationState", "_unitAnimationCfg", "_unitActionsCfg", "_interpolateArray", "_indexAnimation", "_index"];
+
+params ["_unit"];
 
 _returnAnimation = "";
 

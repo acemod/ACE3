@@ -3,13 +3,15 @@
  * Get the variable Informations
  *
  * Arguments:
- * 0: Variable Name (STRING)
+ * 0: Variable Name <STRING>
  *
  * Return Value:
- * the Informations form the defined Variable (ANY)
+ * Variable Metadata <ARRAY>
  *
  * Public: No
  */
-
 #include "script_component.hpp"
-+(missionNamespace getvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + (_this select 0),[]])
+
+params ["_variableName"];
+
++(missionNamespace getVariable [format [QGVAR(OBJECT_VARIABLES_STORAGE_%1), _variableName], []])

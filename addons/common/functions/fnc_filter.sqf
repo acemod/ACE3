@@ -4,14 +4,14 @@
  * Filters array and removes every element not fitting the condition
  *
  * Arguments:
- * 0: Array to be filtered.
- * 1: Code to be evaluated.
+ * 0: Array to be filtered <ARRAY>
+ * 1: Code to be evaluated <CODE>
  *
  * Return Value:
- * Final array
+ * Filtered array <ARRAY>
  *
  * Usage:
- * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
+ * [[0, 1, 2, 3, 4], {_this > 2}] call ace_common_fnc_filter ==> [3, 4]
  *
  * Public: No
  */
@@ -26,10 +26,11 @@ if (isNil "_array") exitWith {
   []
 };
 
-_newArray = [];
-for "_index" from 0 to (count _array - 1) do {
-    if ((_array select _index) call _code) then {
-        _newArray pushBack (_array select _index);
-    };
-};
-_newArray
+_result = [];
+{
+    if (_x call _code) then {
+        _result pushBack _x;
+    }
+} forEach _array;
+
+_result

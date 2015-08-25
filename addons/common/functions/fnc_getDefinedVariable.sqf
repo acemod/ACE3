@@ -4,23 +4,22 @@
  *
  * Arguments:
  * 0: unit <OBJECT>
- * 1: Variable Name (STRING)
+ * 1: Variable Name <STRING>
  *
  * Return Value:
- * The Value that the Variable have or if the Variable is not defined the Default Value (ANY)
+ * Value of variable or default value, if the variable is undefined <ANY>
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_unit", "_variable"];
 
 private "_value";
 
-_value = _unit getvariable _variable;
-if (isnil "_value") then {
-    if (count _this >2) then {
+_value = _unit getVariable _variable;
+if (isNil "_value") then {
+    if (count _this > 2) then {
         _value = _this select 2;
     } else {
         private "_definedVariable";
@@ -29,7 +28,7 @@ if (isnil "_value") then {
             _value = _definedVariable select 1;
         };
     };
-    if (isnil "_value") then {
+    if (isNil "_value") then {
         _value = 0;
     };
 };

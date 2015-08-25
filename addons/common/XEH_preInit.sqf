@@ -234,7 +234,6 @@ PREP(getTurretsOther);
 // ACE_Debug
 PREP(exportConfig);
 PREP(getChildren);
-PREP(getDisplayConfigName);
 PREP(log);
 PREP(logControls);
 PREP(logDisplays);

@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
  *
  * Arguments:

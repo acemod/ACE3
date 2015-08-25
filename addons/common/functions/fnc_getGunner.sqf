@@ -1,17 +1,17 @@
 /*
  * Author: commy2
- *
- * Get the gunner of a vehicle who uses the given weapon type. Requires every turret to have a different weapon.
+ * Returns gunner using specified weapon type in vehicle. Only works if all turrets have different weapons.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
- * 1: weapon of the vehicle (String)
+ * 0: Vehicle <OBJECT>
+ * 1: Weapon <STRING>
  *
  * Return Value:
- * The turret gunner with this weapon <OBJECT>
+ * Gunner <OBJECT>
  *
  * Public: Yes
  */
+#include "script_component.hpp"
 
 params ["_vehicle", "_weapon"];
 

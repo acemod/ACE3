@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Return the captivity status of an unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Reasons, why the unit is a captive. An empty array is returned if the unit is not a captive (Array of Strings)
+ * Captivity Reasons, empty if not captive <ARRAY>
  *
  * Public: Yes
  */

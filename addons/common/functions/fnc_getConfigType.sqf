@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
- * What kind of Cfg is the item. Works for CfgMagaines, CfgWeapons and CfgGlasses
+ * Determins type of item. Can be CfgWeapons, CfgMagaines or CfgGlasses.
  *
  * Arguments:
- * 0: A item's classname. (STRING)
+ * 0: Item Classname <STRING>
  *
  * Return Value:
- * What kind of the input is (STRING)
+ * Config category ("CfgWeapons", "Cfgmagazines", "CfgGlasses", "") <STRING>
  *
  * Public: No
  */

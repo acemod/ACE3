@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the gunner config of a vehicles turret.
  *
  * Arguments:
  * 0: vehicle <OBJECT>
  *
  * Return Value:
- * Gunner config (Config)
+ * Gunner config <CONFIG>
  *
  * Public: No
  */

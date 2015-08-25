@@ -1,13 +1,12 @@
 /*
  * Author: bux578
- *
- * Gets the turret index of door gunners
+ * Returns all turret indecies of door gunners.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Turret indexes of the door gunner. Empty array means no gunner position. (Array)
+ * All turret indecies of the Vehicle <ARRAY>
  *
  * Public: No
  */
@@ -28,6 +27,7 @@ _doorTurrets = [];
     if ((getNumber (_config >> "isCopilot") == 0) && count (getArray (_config >> "weapons")) > 0 ) then {
         _doorTurrets pushBack _x;
     };
+    nil
 } count _turrets;
 
 _doorTurrets

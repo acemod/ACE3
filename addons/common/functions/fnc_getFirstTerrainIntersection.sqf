@@ -1,15 +1,15 @@
 /*
  * Author: Ruthberg
- *
  * Returns the the first intersection with an object between two positions
  *
  * Arguments:
- * 0: PositionASL (ARRAY with Position)
- * 1: PositionATL (Position with Position)
+ * 0: PositionASL <ARRAY>
+ * 1: PositionATL <ARRAY>
  * 2: Accuracy <NUMBER>
+
  * Return Value:
- * 0: Intersects (BOOLEAN)
- * 1: Intersection (PositionASL)
+ * 0: Intersects <BOOL>
+ * 1: Intersection Position ASL <ARRAY>
  *
  * Public: Yes
 */
