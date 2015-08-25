@@ -1,23 +1,21 @@
 /*
  * Author: Glowbal
- *
- * N/A
+ * Count magazines of unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Magazine (STRING)
+ * 1: Magazine <STRING>
  *
  * Return Value:
- * Count of Input Magazine <NUMBER>
+ * Magazine amount <NUMBER>
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-params ["_unit", "_magazine"];
+private "_return";
 
-private ["_return"];
+params ["_unit", "_magazine"];
 
 _return = 0;
 if (_unit isKindOf "CAManBase") then {

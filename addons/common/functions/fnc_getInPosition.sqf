@@ -1,14 +1,12 @@
 /*
  * Author: commy2
- *
- * Move unit into given vehicle position. Or switch to that position if the unit is already inside the vehicle.
+ * Move unit into given vehicle position or switch to that position if the unit is already inside the vehicle.
  *
  * Arguments:
- * 0: Unit to enter the vehicle <OBJECT>
- * 1: The vehicle to be entered <OBJECT>
- * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" (String)
- * 3: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken.
- *    Note: This index is diffrent from Armas "cargoIndex". (Number, optional default: next free index)
+ * 0: Unit <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Position ("Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver", "Cargo") <STRING>
+ * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") (default: next free index) <NUMBER>
  *
  * Return Value:
  * None
@@ -17,18 +15,16 @@
  */
 #include "script_component.hpp"
 
-#define CANGETINDRIVER      (isNull (driver _vehicle)             || {!alive driver _vehicle})               && {!lockedDriver _vehicle}           && {getNumber (_config >> "isUav") != 1}
+#define CANGETINDRIVER (isNull (driver _vehicle) || {!alive driver _vehicle}) && {!lockedDriver _vehicle} && {getNumber (_config >> "isUav") != 1}
 #define CANGETINTURRETINDEX (isNull (_vehicle turretUnit _turret) || {!alive (_vehicle turretUnit _turret)}) && {!(_vehicle lockedTurret _turret)} && {getNumber (_config >> "isUav") != 1}
 
-params ["_unit", "_vehicle", "_position", "_index"];
-_position = toLower _position;
+private ["_config", "_turret", "_isInside", "_script", "_enemiesInVehicle"];
 
-if (isNil "_index") then {_index = -1};
+params ["_unit", "_vehicle", "_position", ["_index", -1]];
+_position = toLower _position;
 
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
-
-private ["_config", "_turret", "_isInside", "_script", "_enemiesInVehicle"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [];
@@ -232,11 +228,3 @@ if (_position == "cargo") exitWith {
 };
 
 call _script;
-
-/*
-  sleep 0.1;
-  if ((vehicle _unit) != _vehicle) then {
-    ["fn_getInPosition.sqf - Side Restriction, failed to move _unit into vehicle"] call bis_fnc_error;
-    _unit moveInAny _vehicle;  //attempt to fail gracefully
-  };
-*/

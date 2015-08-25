@@ -1,19 +1,18 @@
 /*
  * Author: commy2
- *
  * Returns all hitpoints of any vehicle. Non unique hitpoints in turrets are ignored.
  *
  * Arguments:
- * 0: A vehicle, not the classname <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * The hitpoints (Array)
+ * Hitpoints <ARRAY>
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_config", "_hitpoints", "_i"];
+private ["_config", "_hitpoints", "_i", "_hitpointClasses"];
 
 params ["_vehicle"];
 
@@ -22,7 +21,6 @@ _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _hitpoints = [];
 
 // get all classes that can contain hitpoints
-private "_hitpointClasses";
 _hitpointClasses = [_config >> "HitPoints"];
 {
     private "_class";
@@ -31,7 +29,7 @@ _hitpointClasses = [_config >> "HitPoints"];
     if (isClass _class) then {
         _hitpointClasses pushBack _class;
     };
-    true
+    nil
 } count allTurrets _vehicle;
 
 // iterate through all classes with hitpoints and their parents
@@ -52,7 +50,7 @@ _hitpointClasses = [_config >> "HitPoints"];
 
         _class = inheritsFrom _class;
     };
-    true
+    nil
 } count _hitpointClasses;
 
 _hitpoints

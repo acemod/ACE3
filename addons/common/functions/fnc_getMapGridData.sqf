@@ -1,7 +1,8 @@
 /*
- * Author: PabstMirror (ideas from Nou's mapGridToPos and BIS_fnc_gridToPos)
+ * Author: PabstMirror
  * Finds real x/y offset and map step for a 10 digit grid
  * Save time by preparing data one time at startup
+ * Ideas from Nou's mapGridToPos and BIS_fnc_gridToPos
  *
  * Arguments:
  * None

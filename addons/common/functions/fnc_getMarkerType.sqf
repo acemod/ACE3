@@ -1,13 +1,12 @@
 /*
  * Author: KoffeinFlummi
- *
  * Get the apropriate marker for a group.
  *
  * Arguments:
  * 0: Group
  *
  * Return Value:
- * Marker Type (string)
+ * Marker Type <STRING>
  *
  * Public: No
  */

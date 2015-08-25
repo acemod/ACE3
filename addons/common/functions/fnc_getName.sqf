@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Returns the name of the object. Used to prevent issues with the name command.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Show effective commander name? (Bool, optinal default: false)
+ * 1: Use effective commander name (default: false) <BOOL>
  *
  * Return Value:
- * The name.
+ * Object Name <STRING>
  *
  * Public: No
  */

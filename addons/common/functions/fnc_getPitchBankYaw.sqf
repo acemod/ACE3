@@ -1,15 +1,14 @@
 /*
  * Author: KoffeinFlummi
- *
- * Returns [pitch, bank, yaw] for given vehicle in degrees.
+ * Returns pitch, bank, yaw for given vehicle in degrees.
  *
  * Arguments:
- * 0: Unit/Vehicle<OBJECT>
+ * 0: Unit/Vehicle <OBJECT>
  *
  * Return Value:
- * 0: pitch
- * 1: bank
- * 2: yaw
+ * 0: pitch <NUMBER>
+ * 1: bank <NUMBER>
+ * 2: yaw <NUMBER>
  *
  * Public: No
  */

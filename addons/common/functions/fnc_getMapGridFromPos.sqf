@@ -4,18 +4,17 @@
  *
  * Arguments:
  * 0: Position (2D Position) <ARRAY>
- * 1: Return type; false for array of easting and northing, true for single string <Bool>
+ * 1: Return type; false for array of easting and northing, true for single string <BOOL>
  *
  * Return values:
  * 0: Easting <String>
  * 1: Northing <String>
  *
  * Example:
- * [(getPos player)] call ace_common_fnc_getMapGridFromPos;
+ * [(getPos player)] call ace_common_fnc_getMapGridFromPos
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_pos", ["_returnSingleString", false]];
