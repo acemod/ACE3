@@ -1,11 +1,13 @@
 ---
 layout: wiki
 title: Fragmentation Framework
-description: The fragmentation system in ACE3 is a significant improvement over the fragmentation system in ACE2.
+description: Explains how to set-up fragmentation system for explosives using ACE3 fragmentation system.
 group: framework
 parent: wiki
 order: 7
 ---
+
+## 1. Overview
 
 The fragmentation system in ACE3 is a significant improvement over the fragmentation system in ACE2. Previously the system relied on fuzzy math from the values of `indirectHit` and `indirectHitRange` in `CfgAmmo` to calculate roughly the velocity and range of fragmentation. This had some serious drawbacks, especially in the case of smaller explosives such as hand grenades and 40mm grenades where casualty production was lower than desired.
 
@@ -13,9 +15,8 @@ In ACE3 the system has moved away from what "feels" right to actual explosive en
 
 The system for the end-developer is easy to use, and only requires minimal research into the type of ammo being represented.
 
-Below is an example set of explosives configuration properties (in this case an M67 hand grenade):
 
-## 1. Config Values
+## 2. Config Values
 
 ```c++
 class CfgAmmo {
