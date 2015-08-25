@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # vim: set fileencoding=utf-8 :
 
 # make.py
@@ -73,8 +73,8 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
-importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
-versionFiles = ["README.md", "mod.cpp"]
+importantFiles = ["mod.cpp", "README.md", "documentation\\README_DE.md", "documentation\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
+versionFiles = ["README.md", "documentation\\README_DE.md", "documentation\\README_PL.md", "mod.cpp"]
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -331,15 +331,20 @@ def copy_important_files(source_dir,destination_dir):
 
     originalDir = os.getcwd()
 
-    #copy importantFiles
+    # Copy importantFiles
     try:
         print_blue("\nSearching for important files in {}".format(source_dir))
         print("Source_dir: {}".format(source_dir))
         print("Destination_dir: {}".format(destination_dir))
 
         for file in importantFiles:
+            filePath = os.path.join(module_root_parent, file)
+            # Take only file name for destination path (to put it into root of release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             print_green("Copying file => {}".format(os.path.join(source_dir,file)))
-            shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
+            shutil.copyfile(os.path.join(source_dir,filePath),os.path.join(destination_dir,file))
     except:
         print_error("COPYING IMPORTANT FILES.")
         raise
@@ -664,6 +669,10 @@ def stash_version_files_for_building():
     try:
         for file in versionFiles:
             filePath = os.path.join(module_root_parent, file)
+            # Take only file name for stash location if in subfolder (otherwise it gets removed when removing folders from release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             stashPath = os.path.join(release_dir, file)
             print("Temporarily stashing {} => {}.bak for version update".format(filePath, stashPath))
             shutil.copy(filePath, "{}.bak".format(stashPath))
@@ -680,6 +689,10 @@ def restore_version_files():
     try:
         for file in versionFiles:
             filePath = os.path.join(module_root_parent, file)
+            # Take only file name for stash path if in subfolder (otherwise it gets removed when removing folders from release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             stashPath = os.path.join(release_dir, file)
             print("Restoring {}".format(filePath))
             shutil.move("{}.bak".format(stashPath), filePath)
