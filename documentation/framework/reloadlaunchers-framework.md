@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: reloadlaunchers framework
-description:
+title: Reload Launchers Framework
+description: Explains how to set-up launchers with ACE3 reload launchers system.
 group: framework
 order: 5
 parent: wiki
@@ -11,11 +11,16 @@ parent: wiki
 
 ```c++
 class CfgWeapons {
-
-    class Launcher_Base_F;  // launcher base class
-
-    class yourlauncher: Launcher_Base_F {  // launcher class
-        ACE_reloadlaunchers_enabled = 1;  // enable third party reload (your buddies reloading for you)
+    class MyLauncher {
+        ace_reloadlaunchers_enabled = 1;  // Allow your buddies reloading for you (0-disabled, 1-enabled)
     };
 };
 ```
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`"reloadLauncher"` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target

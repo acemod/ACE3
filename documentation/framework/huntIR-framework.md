@@ -1,20 +1,26 @@
 ---
 layout: wiki
-title: huntIR framework
-description: Explains how to add huntIR support to your weapons
+title: HuntIR Framework
+description: Explains how to add HuntIR support to a weapon.
 group: framework
 order: 5
 parent: wiki
 ---
 
-## 1. Adding huntIR support for your weapons
+## 1. Config Values
 
 ```c++
 class CfgWeapons {
-  class Rifle_Base_F;
-  class your_rifle_base_class: Rifle_Base_F {
-      class your_gl_class: UGL_F {
-          magazines[] = {<all of your other UGL mags>,"ACE_HuntIR_M203"};
+  class MyRifle {
+      class MyGL: UGL_F {
+          magazines[] = {
+              // All default UGL magazines
+              "MyFirstMag",
+              "MySecondMag",
+              "MyLastMag",
+              // HUntIR magazine
+              "ACE_HuntIR_M203"
+          };
       };  
   };
 };

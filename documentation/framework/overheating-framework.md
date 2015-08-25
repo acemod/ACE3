@@ -1,48 +1,78 @@
 ---
 layout: wiki
-title: overheating framework
-description:
+title: Overheating Framework
+description: Explains how to set-up weapon overheating with ACE3 overheating system.
 group: framework
 order: 5
 parent: wiki
 ---
 
-## 1. Adding barrel switching
+## 1. Config Values
+
+### 1.1 Barrel Switching
 
 ```c++
 class CfgWeapons {
-
-    class Rifle_Long_Base_F;  // base class for LMGs and MMGs
-    class your_MMG: Rifle_Long_Base_F {
-
-        // Dispersion, SlowdownFactor and JamChance arrays have 4 values for different temperatures, which are interpolated between.
-        // These values correspond to temperatures Converted to real life values: 0: 0°C, 1: 333°C, 2: 666°C, 3: 1000°C.
-
-        ACE_Overheating_allowSwapBarrel = 1;  // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
-
-        // Dispersion in radians. First value is for temp. 0, second for temp. 1 and so on. Values inbetween get interpolated. Negative values get ignored and can be used to move the starting point to hotter temperatures.
-        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
-
-        // How much the projectile gets slowed down before leaving the barrel. 0.9 means the bullet will lose 10% velocity. Values inbetween get interpolated. Numbers greater 1 increase the velocity, smaller 1 decrease it.
-        ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
-
-        // Chance to jam the weapon. 0.0003 means 3 malfunctions on 10,000 rounds fired at this temperature. Values inbetween get interpolated. Negative values get ignored and can be used to move the starting point to hotter temperatures.
-        // When no reliable data exists for temperature vs. jam chance except MRBS, the following uniform criteria was adopted: [0, 1/MRBS, 5/MRBS, 25/MRBS].
-        ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
+    class MyMG {
+        ace_overheating_allowSwapBarrel = 1;  // Enable barrel swap (0-disabled, 1-enabled) - information below
+        ace_overheating_dispersion[] = {0, -0.001, 0.001, 0.004};  // Bullet dispersion (in radians) - information below
+        ace_overheating_slowdownFactor[] = {1, 1, 1, 0.9};  // Slowdown factor inside the barrel - information below
+        ace_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};  // Jam chance - information below
     };
 };
 ```
 
-## 2. Adding custom animations
+#### 1.1.1 Temperatures
+
+`ace_overheating_dispersion[]`  
+`ace_overheating_slowdownFactor[]`  
+`ace_overheating_jamChance[]`
+
+Above arrays have 4 values for different temperatures, which are interpolated between. These values correspond to temperatures converted to real life values from.
+
+Config | Real Life
+------ | ---------
+0      | 0°C
+1      | 333°C
+2      | 666°C
+3      | 1000°C
+
+### 1.1.2 Barrel Swapping
+
+`ace_overheating_allowSwapBarrel`
+
+Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+
+### 1.1.3 Dispersion
+
+`ace_overheating_dispersion[]`
+
+Dispersion in radians. First value is for temperature 0, second for temperature 1 and so on. Values in-between get interpolated. Negative values are ignored and can be used to move the starting point to hotter temperatures.
+
+### 1.1.4 Slowdown Factor
+
+`ace_overheating_slowdownFactor[]`
+
+How much the projectile gets slowed down before leaving the barrel. `0.9` means the bullet will lose 10% velocity. Values in-between get interpolated. Numbers greater than `1` increase the velocity, smaller decrease it.
+
+### 1.1.5 Jam Chance
+
+`ace_overheating_jamChance[]`
+
+Chance to jam the weapon. `0.0003` means 3 malfunctions on 10,000 rounds fired at this temperature. Values in-between get interpolated. Negative values are ignored and can be used to move the starting point to hotter temperatures.
+
+When no reliable data exists for temperature versus jam chance except MRBS, the following uniform criteria was adopted.  
+`[0, 1/MRBS, 5/MRBS, 25/MRBS]`
+
+
+### 1.2 Custom Animations
 
 ```c++
 class CfgWeapons {
-
-    class Rifle_Long_Base_F;
-    class your_MMG: Rifle_Long_Base_F {
-        ACE_clearJamAction = "GestureReload";  // Custom jam clearing action. Default uses reload animation.
-        ACE_checkTemperatureAction = "Gear";  // Custom check temperature action. Default uses gear animation.
-        ACE_clearJamAction = "";  // Custom jam clearing action. Use empty string to undefine.
+    class MyMG {
+        ace_clearJamAction = "GestureReload";  // Custom jam clearing action, default uses reload animation
+        ace_checkTemperatureAction = "Gear";  // Custom check temperature action, default uses gear animation
+        ace_clearJamAction = "";  // Custom jam clearing action, use empty string to undefine
     };
 };
 ```

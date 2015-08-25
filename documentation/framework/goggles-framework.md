@@ -1,22 +1,35 @@
 ---
 layout: wiki
-title: Goggles framework
-description:
+title: Goggles Framework
+description: Explains how to set-up goggles with ACE3 goggles system.
 group: framework
 order: 5
 parent: wiki
 ---
 
-## 1.
+## 1. Config Values
 
 ```c++
 class CfgGlasses {
-    class None;
-
-    class G_bananas:None{
-        ACE_TintAmount=COLOUR*2;  // Amount of tint, the color is picked from ACE_Color
-        ACE_Color[] = {0,0,-1};  // If anyone knows please do tell
-        ACE_Resistance = 1;  // Resistance to breaking.
+    class MyGoggles {
+        ace_color[] = {0, 0, -1};  // Post-proccess color
+        ace_tintAmount = 8;  // Amount of tint applied to the color
+        ace_resistance = 1;  // Resistance to breaking (0 or 1 or 2)
+        ace_protection = 0;  // Provides protection (0-no, 1-yes)
+        ace_overlay = "";  // (Optional) Default overlay image path ("" for none)
+        ace_overlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";  // (Optional) Dirt overlay image path
+        ace_overlayCracked = "mod\textures\HUD\Cracked.paa";  // (Optional) Cracked overlay image path
+        ace_dustPath = "mod\textures\fx\dust\dust1.paa";  // (Optional) Dust overlay image path
     };
 };
 ```
+
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`"GlassesChanged"` | Glasses Changed | `[_glassesClass]` | Local
+`"GlassesCracked"` | Glasses Cracked | `[_unit]` | Local
