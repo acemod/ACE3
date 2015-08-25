@@ -25,11 +25,11 @@ class CfgGlasses {
 ```
 
 
-## 5. Events
+## 2. Events
 
-### 5.1 Listenable
+### 2.1 Listenable
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
 `"GlassesChanged"` | Glasses Changed | `[_glassesClass]` | Local
-`"GlassesCracked"` | Glasses Cracked | `[_player]` | Local
+`"GlassesCracked"` | Glasses Cracked | `[_unit]` | Local

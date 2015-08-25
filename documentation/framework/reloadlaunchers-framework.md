@@ -16,3 +16,11 @@ class CfgWeapons {
     };
 };
 ```
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`"reloadLauncher"` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target
