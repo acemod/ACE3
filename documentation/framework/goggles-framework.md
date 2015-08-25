@@ -23,3 +23,13 @@ class CfgGlasses {
     };
 };
 ```
+
+
+## 5. Events
+
+### 5.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`"GlassesChanged"` | Glasses Changed | `[_glassesClass]` | Local
+`"GlassesCracked"` | Glasses Cracked | `[_player]` | Local
