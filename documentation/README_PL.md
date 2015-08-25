@@ -1,27 +1,21 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg"
-         height="112">
+    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="http://img.shields.io/badge/Wersja-3.0.1-blue.svg"
-             alt="ACE wersja">
+        <img src="https://img.shields.io/badge/Wersja-3.2.1-blue.svg" alt="ACE3 Wersja">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.0.1/ace3_3.0.1.zip">
-        <img src="http://img.shields.io/badge/Pobierz-40.9_MB-green.svg"
-             alt="ACE pobierz">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
+        <img src="http://img.shields.io/badge/Pobierz-56.5_MB-green.svg" alt="ACE3 Pobierz">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia"
-             alt="ACE zagadnienia">
+        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia" alt="ACE3 Zagadnienia">
     </a>
-    <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
-        <img src="https://img.shields.io/badge/Temat-BIF-lightgrey.svg"
-             alt="Temat BIF">
+    <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
+        <img src="https://img.shields.io/badge/Temat-BIF-lightgrey.svg" alt="Temat BIF">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg"
-             alt="ACE licencja">
+        <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg" alt="ACE3 Licencja">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
@@ -30,7 +24,7 @@
 
 Projekt ten jest całkowicie **otwarty źródłowo** i wszelki wkład w rozwój jest mile widziany. Możesz bez przeszkód prowadzić swoją własną dostosowaną wersję, o ile zmiany jakie wprowadzisz będą otwarte dla publiki zgodnie z GNU General Public License ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
 
-Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczony plik PBO może zostać łatwo usunięty z konfiguracji. Dzięki temu, grupa może prowadzić własną, dostosowaną do siebie, wersję ACE wyłączając elementy, których nie potrzebują, lub które po prostu nie działają z innymi addonami. Moduły same w sobie np. system medyczny, posiadają wiele możliwości konfiguracji, pozwalając mission designerom dostosować ogólne doświadczenie z gry.
+Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczony plik PBO może zostać łatwo usunięty z konfiguracji. Dzięki temu, grupa może prowadzić własną, dostosowaną do siebie, wersję ACE3 wyłączając elementy, których nie potrzebują, lub które po prostu nie działają z innymi addonami. Moduły same w sobie np. system medyczny, posiadają wiele możliwości konfiguracji, pozwalając mission designerom dostosować ogólne doświadczenie z gry.
 
 ### Główne cechy
 * Całkowicie nowy system akcji/interakcji 3D
@@ -72,7 +66,7 @@ Jeżeli zainstalowałeś ACE3 lecz masz problem ze zrozumieniem jak to wszystko 
 * [Wprowadzenie](http://ace3mod.com/wiki/user/getting-started.html)
 
 #### Współpraca
-Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
+Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
 
 Używaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zgłaszać bugi, proponować nowe funkcje lub sugerować zmiany do aktualnie istniejących. Zobacz także:
 * [Jak zgłosić bug-a](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
@@ -80,4 +74,4 @@ Używaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zg�
 
 #### Testowanie i budowanie
 Aby pomóc nam w testowaniu najnowszych zmian rozwojowych, pobierz nasz master branch ([bezpośrednio](https://github.com/acemod/ACE3/archive/master.zip), lub [korzystając z git](https://help.github.com/articles/fetching-a-remote/)), a następnie złóż testowego build-a:
-* [Konfiguracja środowiska do testów](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE do celów testowych.
+* [Konfiguracja środowiska do testów](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html) – intrukcja krok-po-kroku jak poprawnie ustawić i zbudować wersję ACE3 do celów testowych.
