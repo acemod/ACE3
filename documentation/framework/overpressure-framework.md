@@ -34,3 +34,12 @@ class CfgWeapons {
 ```
 
 - You can note that the angle range and damage values are higher, that's because this is a cannon and the backblast area is bigger.
+
+
+## 2. Events
+
+### 2.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`"overpressure"` | Overpressure damage inflicted | `[_firer, _position, _direction, _weapon]` | Target
