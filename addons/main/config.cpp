@@ -541,50 +541,25 @@ class CfgPatches {
             "a3_weapons_f_vests",
             "a3data",
             "map_vr",
-            "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3",
-            "ace_common"
+            "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3"
         };
-        author[] = {ELSTRING(common,ACETeam)};
+        author[] = {ECSTRING(common,ACETeam)};
         authorUrl = "http://ace3mod.com/";
         versionDesc = "ACE3";
-        //versionAct = QUOTE(['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';);
-        versionAct = "";
         VERSION_CONFIG;
     };
 };
 
 class CfgMods {
     class PREFIX {
-        dir = "@ACE3";
+        dir = "@ace";
         name = "Advanced Combat Environment 3";
         picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
         hidePicture = "true";
         hideName = "true";
         actionName = "Website";
         action = "http://ace3mod.com/";
-        description = "Bugtracker: https://github.com/acemod/ACE3/issues";
-    };
-};
-
-class CfgSettings {
-    class CBA {
-        class Versioning {
-            class PREFIX {
-                level = DEFAULT_VERSIONING_LEVEL;
-                handler = "ace_common_fnc_mismatch";
-                class Dependencies {
-                    CBA[]={"cba_main", {1,0,0}, "true"};
-                    XEH[]={"cba_xeh", {1,0,0}, "true"};
-                };
-            };
-        };
-        /*
-    class Registry {
-    class PREFIX {
-        removed[] = {};
-    };
-    };
- */
+        description = "Issue Tracker: https://github.com/acemod/ACE3/issues";
     };
 };
 
