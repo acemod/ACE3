@@ -1243,7 +1243,7 @@
             <French>Trousse de premiers soins</French>
             <Spanish>Equipo de primeros auxilios</Spanish>
             <Polish>Apteczka osobista</Polish>
-            <German>Persönliches Verbandpäckchen</German>
+            <German>Persönliches Erste-Hilfe-Set</German>
             <Hungarian>Elsősegélycsomag</Hungarian>
             <Italian>Pronto soccorso personale</Italian>
             <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
@@ -1265,7 +1265,7 @@
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
-            <German>Persönliches Verbandspäckchen zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
+            <German>Persönliches Erste-Hilfe-Set zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
             <French>Trousse de premiers soins pour coudre sur le terrain et traitements avancés.</French>
             <Spanish>Equipo de primeros auxilios para sutura de campaña o tratamientos avanzados</Spanish>
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
@@ -1275,7 +1275,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
-            <German>Verbandpäckchen benutzen</German>
+            <German>Erste-Hilfe-Set benutzen</German>
             <Russian>Использовать аптечку</Russian>
             <French>Utiliser la Trousse de premier soins</French>
             <Polish>Użyj apteczki osobistej</Polish>
@@ -3099,7 +3099,7 @@
             <Russian>Использование аптечки</Russian>
             <Polish>Ust. apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
-            <German>Erlaube Erstehilfekasten</German>
+            <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky</Czech>
             <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
         </Key>
@@ -3108,7 +3108,7 @@
             <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
             <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
             <Spanish>¿Quién puede utilizar el EPA para una cura completa?</Spanish>
-            <German>Wer kann den Erstehilfekasten für eine Endheilung verwenden?</German>
+            <German>Wer kann das Erste-Hilfe-Set für eine Endheilung verwenden?</German>
             <Czech>Kdo může použít osobní lékárničku pro plné vyléčení?</Czech>
             <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
         </Key>
@@ -3144,7 +3144,7 @@
             <Russian>Удалять аптечки после использования</Russian>
             <Polish>Usuń apteczkę po użyciu</Polish>
             <Spanish>Eliminar EPA después del uso</Spanish>
-            <German>Entferne Erstehilfekasten bei Verwendung</German>
+            <German>Entferne Erste-Hilfe-Set bei Verwendung</German>
             <Czech>Odebrat osobní lékárničku po použití</Czech>
             <Portuguese>Remover o KPS depois do uso</Portuguese>
         </Key>
@@ -3153,7 +3153,7 @@
             <Russian>Нужно ли удалять аптечки после использования?</Russian>
             <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
             <Spanish>El EPA será eliminado después de usarlo</Spanish>
-            <German>Sollen Erstehilfekästen bei Verwendung entfernt werden?</German>
+            <German>Sollen Erste-Hilfe-Sets bei Verwendung entfernt werden?</German>
             <Czech>Má se osobní lékárnička odstranit po použití?</Czech>
             <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
         </Key>
@@ -3162,7 +3162,7 @@
             <Russian>Место использования аптечки</Russian>
             <Polish>Ogr. apteczek osobistych</Polish>
             <Spanish>Ubicacions del EPA</Spanish>
-            <German>Orte für Erstehilfekasten</German>
+            <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Lokace osobní lékárničky</Czech>
             <Portuguese>Localizações do KPS</Portuguese>
         </Key>
@@ -3171,7 +3171,7 @@
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
-            <German>Wo kann der Erstehilfekasten verwendet werden?</German>
+            <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
