@@ -541,26 +541,28 @@ class CfgPatches {
             "a3_weapons_f_vests",
             "a3data",
             "map_vr",
-            "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3"
+            "extended_eventhandlers", "CBA_UI", "CBA_XEH", "CBA_XEH_A3",
+            "ace_common"
         };
-        author[] = {"ACE Team"};
-        authorUrl = "";
-        versionDesc = "A.C.E.";
-        versionAct = QUOTE(['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';);
+        author[] = {ELSTRING(common,ACETeam)};
+        authorUrl = "http://ace3mod.com/";
+        versionDesc = "ACE3";
+        //versionAct = QUOTE(['MAIN',_this] execVM '\z\ace\addons\main\about.sqf';);
+        versionAct = "";
         VERSION_CONFIG;
     };
 };
 
 class CfgMods {
     class PREFIX {
-        dir = "@ACE";
-        name = "Core - Advanced Combat Environment";
+        dir = "@ACE3";
+        name = "Advanced Combat Environment 3";
         picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
         hidePicture = "true";
         hideName = "true";
         actionName = "Website";
-        action = "http://ace.dev-heaven.net";
-        description = "Bugtracker: ";
+        action = "http://ace3mod.com/";
+        description = "Bugtracker: https://github.com/acemod/ACE3/issues";
     };
 };
 
