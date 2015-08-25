@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: HuntIR Framework
-description: Explains how to add HuntIR support to your weapons.
+description: Explains how to add HuntIR support to a weapon.
 group: framework
 order: 5
 parent: wiki
