@@ -17,20 +17,22 @@ Part of this settings framework are global settings and client settings. Both us
 Settings are entries in the config that get translated to `missionNamespace` global variables. An example settings entry looks like this:
 
 ```c++
-class ACE_module_sampleSetting {
-    // Following 2 entries are redundant if isClientSettable = 0
-    displayName = "$STR_ACE_Common_SettingName";  // Stringtable entry with the setting name
-    description = "$STR_ACE_Common_SettingDescription";  // Stringtable entry with the setting description
+class ACE_Settings {
+    class ACE_module_sampleSetting {
+        // Following 2 entries are redundant if isClientSettable = 0
+        displayName = "$STR_ACE_Common_SettingName";  // Stringtable entry with the setting name
+        description = "$STR_ACE_Common_SettingDescription";  // Stringtable entry with the setting description
 
-    isClientSettable = 1;  // Show in client options menu (0-no, 1-yes)
-    typeName = "SCALAR";  // Type (BOOL/SCALAR/STRING/ARRAY/COLOR)
-    value = 1;  // Value
+        isClientSettable = 1;  // Show in client options menu (0-no, 1-yes)
+        typeName = "SCALAR";  // Type (BOOL/SCALAR/STRING/ARRAY/COLOR)
+        value = 1;  // Value
 
-    // Following entry is redundant if typeName is NOT "SCALAR"
-    values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};  // (Optional) Stringtable entries that describe the options
+        // Following entry is redundant if typeName is NOT "SCALAR"
+        values[] = {"Disabled", "Enabled", "Only Cursor", "Only On Keypress", "Only Cursor and KeyPress"};  // (Optional) Stringtable entries that describe the options
 
-    // Following entry is present only in export
-    force = 0;  // Force the setting (0-no, 1-yes), exported settings are forced by default
+        // Following entry is present only in export
+        force = 0;  // Force the setting (0-no, 1-yes), exported settings are forced by default
+    };
 };
 ```
 
@@ -82,17 +84,19 @@ class ACE_Settings {
 #### 3.1.1 Notes
 
 - If a setting is forced it cannot be changed further down the line, see `2. Load order` for the hierarchy.
-- Client settings can be forced, include them while exporting (the button is right next to export on the UI)
+- Client settings can be forced, include while exporting (the button is next to export on the UI)
 - You can use `ACE_common_forceAllSettings` to force settings in a mission, it will lock **all** the settings (which are not already forced) to the values they are set in either modules or server config
-    - example of `ACE_common_forceAllSettings`
-    ```c++
-    //^^ rest of your description.ext
-    //------------------------- ACE settings
+
+Example of `ACE_common_forceAllSettings`:
+```c++
+class ACE_Settings {
     class ACE_common_forceAllSettings {
         value = 1;
         typeName = "BOOL";
     };
-    ```
+};
+```
+
 
 ### 3.2 Loading up the server config
 
