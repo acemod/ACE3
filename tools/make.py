@@ -30,7 +30,7 @@
 
 ###############################################################################
 
-__version__ = "0.4"
+__version__ = "0.6"
 
 import sys
 
@@ -49,6 +49,7 @@ import configparser
 import json
 import traceback
 import time
+import timeit
 import re
 
 from tempfile import mkstemp
@@ -115,6 +116,20 @@ def  get_directory_hash(directory):
     retVal = directory_hash.hexdigest()
     #print_yellow("Hash Value for {} is {}".format(directory,retVal))
     return directory_hash.hexdigest()
+
+def Fract_Sec(s):
+    temp = float()
+    temp = float(s) / (60*60*24)
+    d = int(temp)
+    temp = (temp - d) * 24
+    h = int(temp)
+    temp = (temp - h) * 60
+    m = int(temp)
+    temp = (temp - m) * 60
+    sec = temp
+    return d,h,m,sec
+    #endef Fract_Sec
+
 
 # Copyright (c) André Burgaud
 # http://www.burgaud.com/bring-colors-to-the-windows-console-with-python/
@@ -863,7 +878,7 @@ See the make.cfg file for additional build options.
         check_external = True
     else:
         check_external = False
-    
+
     if "version" in argv:
         argv.remove("version")
         version_update = True
@@ -897,7 +912,7 @@ See the make.cfg file for additional build options.
 
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
-        
+
         # Release archive prefix
         zipPrefix = cfg.get(make_target, "zipPrefix", fallback=project.lstrip("@").lower())
 
@@ -1418,5 +1433,8 @@ See the make.cfg file for additional build options.
 
 
 if __name__ == "__main__":
+    start_time = timeit.default_timer()
     main(sys.argv)
+    d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
+    print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
 input("Press Enter to continue...")
