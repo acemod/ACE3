@@ -39,8 +39,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `ace_dragging_fnc_setDraggable`
 
-  | Arguments | Type | Optional (default value) |
-- | --------- | ---- | ------------------------ |
+  | Arguments | Type | Optional (default value)
+- | --------- | ---- | ------------------------
 0 | Any object | Object | Required
 1 | Enable dragging, true to enable, false to disable | Boolean | Required
 2 | Position to offset the object from player | Array | Optional (default: `[0, 0, 0]`)
@@ -51,8 +51,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `[foo, true, [0, 2, 0], 45] call ace_dragging_fnc_setDraggable;`
 
-  | Arguments | Explanation |
-- | --------- | ----------- |
+  | Arguments | Explanation
+- | --------- | -----------
 0 | `foo` | My object
 1 | `true` | Dragging is enabled
 2 | `[0,2,0]` | 0 meters sideways, 2 meters forward, 0 meters upwards
@@ -62,8 +62,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `[bar, false, [3, -2, 2], 20] call ace_dragging_fnc_setDraggable;`
 
-  | Arguments | Explanation |
-- | --------- | ----------- |
+  | Arguments | Explanation
+- | --------- | -----------
 0 | `bar` | My object
 1 | `false` | Dragging is disabled
 2 | `[3, -2, 2]` | 3 meters sideways, 2 meters backwards, 2 meters upwards
@@ -75,7 +75,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 `ace_dragging_fnc_setCarryable`
 
   | Arguments | Type | Optional (default value)
-- | --------- | ---- | ------------------------ |
+- | --------- | ---- | ------------------------
 0 | Any object | Object | Required
 1 | Enable carrying, true to enable, false to disable | Boolean | Required
 2 | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`)
@@ -86,8 +86,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `[foo, true, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;`
 
-  | Arguments | Explanation |
-- | --------- | ----------- |
+  | Arguments | Explanation
+- | --------- | -----------
 0 |  `foo` | My object
 1 |  `true`| Carrying is enabled
 2 | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards
