@@ -18,7 +18,12 @@
         (_x select 0) call (_x select 1);
     } forEach GVAR(nextFrameBufferA);
 
-
+    //Swap double-buffer for execNextFrame:
+    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
+    GVAR(nextFrameBufferB) = [];
+    GVAR(nextFrameNo) = diag_frameno + 1;
+    
+    //Handle the waitUntilAndExec array:
     _deleted = 0;
     {
         _x params ["_condition", "_code", "_args"];
@@ -28,11 +33,6 @@
             _args call _code;
         };
     } forEach GVAR(waitUntilAndExecArray);
-
-    //Swap double-buffer:
-    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
-    GVAR(nextFrameBufferB) = [];
-    GVAR(nextFrameNo) = diag_frameno + 1;
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
