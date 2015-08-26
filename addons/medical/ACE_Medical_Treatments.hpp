@@ -335,7 +335,7 @@ class ACE_Medical_Actions {
             category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 2;
+            treatmentTime = 15;
             items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
