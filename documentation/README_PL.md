@@ -18,7 +18,7 @@
         <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg" alt="ACE3 Licencja">
     </a>
 </p>
-<p align="center"><sup><strong>Wymaga najnowszej wersji <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
+<p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
 **ACE3** to efekt wspólnego wysiłku grup moderów odpowiedzialnych za **ACE2**, **AGM** oraz **CSE** w celu zwiększenia realizmu i autentyczności Arma 3.
 
