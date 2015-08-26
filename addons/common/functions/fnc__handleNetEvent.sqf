@@ -24,7 +24,7 @@ if (_eventType == "ACEg") then {
 
         {
             if (!isNil "_x") then {
-                _eventArgs call CALLSTACK_NAMED(_x, format [ARR_3("Net Event %1 ID: %2", _eventName, _forEachIndex)]);
+                _eventArgs call CALLSTACK_NAMED(_x, FORMAT_2("Net Event %1 ID: %2",_eventName,_forEachIndex);
                 #ifdef DEBUG_EVENTS_CALLSTACK
                     ACE_LOGINFO_1("    ID: %1",_forEachIndex);
                 #endif
