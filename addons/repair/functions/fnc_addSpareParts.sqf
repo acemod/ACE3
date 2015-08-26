@@ -42,4 +42,4 @@ if (_part == "") then {
 if (_part == "") exitWith {};
 
 // Load
-["AddCargoItem", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);
+["AddCargoByClass", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);

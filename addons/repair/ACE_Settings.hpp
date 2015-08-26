@@ -66,6 +66,6 @@ class ACE_Settings {
         description = CSTRING(addSpareParts_description);
         typeName = "BOOL";
         value = 1;
-        category = CSTRING(categoryName);
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
 };
