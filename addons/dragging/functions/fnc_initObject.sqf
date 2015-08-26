@@ -26,7 +26,7 @@ if (getNumber (_config >> QGVAR(canDrag)) == 1) then {
     [_object, true, _position, _direction] call FUNC(setDraggable);
 };
 
-if (getNumber (_config >> QGVAR(canCarry)) == 1) then
+if (getNumber (_config >> QGVAR(canCarry)) == 1) then {
     _position = getArray (_config >> QGVAR(carryPosition));
     _direction = getNumber (_config >> QGVAR(carryDirection));
 
