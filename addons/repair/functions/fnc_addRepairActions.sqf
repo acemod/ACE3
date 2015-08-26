@@ -14,7 +14,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]
 
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
@@ -73,6 +72,26 @@ if (_type in _initializedClasses) exitWith {};
     } else {
         // exit if the hitpoint is in the blacklist, e.g. glasses
         if (_x in IGNORED_HITPOINTS) exitWith {};
+
+        private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
+
+        // Get hitpoint groups if available
+        _hitpointGroupConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
+        _inHitpointSubGroup = false;
+        if (isArray _hitpointGroupConfig) then {
+            // Set variable if current hitpoint is in a sub-group (to be excluded from adding action)
+            _currentHitpoint = _x;
+            {
+                {
+                    if (_x == _currentHitpoint) exitWith {
+                        _inHitpointSubGroup = true;
+                    };
+                } forEach (_x select 1);
+            } forEach (getArray _hitpointGroupConfig);
+        };
+
+        // Exit if current hitpoint is in sub-group (only main hitpoints get actions)
+        if (_inHitpointSubGroup) exitWith {};
 
         // exit if the hitpoint is virtual
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};

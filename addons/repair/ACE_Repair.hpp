@@ -31,7 +31,7 @@ class ACE_Repair {
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
-            condition = QUOTE((_target getHitPointDamage _hitPoint) > ([_caller] call FUNC(getPostRepairDamage)));
+            condition = QUOTE(call FUNC(canMiscRepair));
             requiredEngineer = 0;
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
