@@ -1,33 +1,32 @@
 /*
  * Author: commy2
- *
  * Get the compass direction the wind is blowing from.
  *
  * Arguments:
  * None
  *
  * Return Value:
- * Wind direction. (String)
+ * Wind cardinal direction <STRING>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 switch (round (windDir / 360 * 16)) do {
-    case 1 :  {localize QUOTE(DOUBLES(STR,GVAR(SSW)))};
-    case 2 :  {localize QUOTE(DOUBLES(STR,GVAR(SW)))};
-    case 3 :  {localize QUOTE(DOUBLES(STR,GVAR(WSW)))};
-    case 4 :  {localize QUOTE(DOUBLES(STR,GVAR(W)))};
-    case 5 :  {localize QUOTE(DOUBLES(STR,GVAR(WNW)))};
-    case 6 :  {localize QUOTE(DOUBLES(STR,GVAR(NW)))};
-    case 7 :  {localize QUOTE(DOUBLES(STR,GVAR(NNW)))};
-    case 8 :  {localize QUOTE(DOUBLES(STR,GVAR(N)))};
-    case 9 :  {localize QUOTE(DOUBLES(STR,GVAR(NNE)))};
-    case 10 : {localize QUOTE(DOUBLES(STR,GVAR(NE)))};
-    case 11 : {localize QUOTE(DOUBLES(STR,GVAR(ENE)))};
-    case 12 : {localize QUOTE(DOUBLES(STR,GVAR(E)))};
-    case 13 : {localize QUOTE(DOUBLES(STR,GVAR(ESE)))};
-    case 14 : {localize QUOTE(DOUBLES(STR,GVAR(SE)))};
-    case 15 : {localize QUOTE(DOUBLES(STR,GVAR(SSE)))};
-    default   {localize QUOTE(DOUBLES(STR,GVAR(S)))};
+    case 1 :  {localize LSTRING(SSW)};
+    case 2 :  {localize LSTRING(SW)};
+    case 3 :  {localize LSTRING(WSW)};
+    case 4 :  {localize LSTRING(W)};
+    case 5 :  {localize LSTRING(WNW)};
+    case 6 :  {localize LSTRING(NW)};
+    case 7 :  {localize LSTRING(NNW)};
+    case 8 :  {localize LSTRING(N)};
+    case 9 :  {localize LSTRING(NNE)};
+    case 10 : {localize LSTRING(NE)};
+    case 11 : {localize LSTRING(ENE)};
+    case 12 : {localize LSTRING(E)};
+    case 13 : {localize LSTRING(ESE)};
+    case 14 : {localize LSTRING(SE)};
+    case 15 : {localize LSTRING(SSE)};
+    default   {localize LSTRING(S)};
 };

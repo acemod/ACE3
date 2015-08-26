@@ -1,11 +1,10 @@
 /*
  * Author: Nou
- *
  * Execute a global event on all clients, including self.
  *
  * Arguments:
- * 0: Event name (string)
- * 1: Event args (any)
+ * 0: Event name <STRING>
+ * 1: Event args <ANY>
  *
  * Return Value:
  * None

@@ -1,15 +1,14 @@
 /*
  * Author: commy2
- *
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.
  *
  * Arguments:
- * 0: How accurate will the measurement be? In meters. <NUMBER>
- * 1: Maximal distance to measure. <NUMBER>
- * 2: Minimal distance to measure. (optional, Number)
+ * 0: Messurement Accuracy <NUMBER>
+ * 1: Maximal messure distance <NUMBER>
+ * 2: Minimal messure distance (default: nil) <NUMBER>
  *
  * Return Value:
- * Measured distance in meters. Can return maximal or minimal distance <NUMBER>
+ * Distance in meters <NUMBER>
  *
  * Public: No
  */
@@ -28,9 +27,7 @@ _line = [_position, _laser];
 _distance = _maxDistance;
 _iteration = _distance;
 
-while {
-    _iteration > _interval / 2
-} do {
+while {_iteration > _interval / 2} do {
     _iteration = _iteration / 2;
 
     _laser = ATLToASL positionCameraToWorld [0, 0, _distance];
@@ -44,6 +41,6 @@ _distance = _interval * round (_distance / _interval);
 
 _distance = _distance min _maxDistance;
 
-if !(isNil "_minDistance") then {_distance = _distance max _minDistance};
+if (!isNil "_minDistance") then {_distance = _distance max _minDistance};
 
 _distance

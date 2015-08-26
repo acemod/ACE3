@@ -1,13 +1,16 @@
 /*
  * Author: commy2
- *
  * Check what kind of weapon the given class name is. (primary, secondary or handgun)
  *
  * Arguments:
- * 0: Class name of the weapon (String)
+ * 0: Weapons <STRING>
  *
  * Return Value:
- * Slot index of the given class name, 1: primary, 2: secondary, 3: handgun, else: -1 <NUMBER>
+ * Slot index <NUMBER>
+ *   1 = primary
+ *   2 = secondary
+ *   3 = handgun
+ *   -1 = other
  *
  * Public: No
  */

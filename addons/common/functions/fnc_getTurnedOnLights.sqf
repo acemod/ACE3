@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Returns all turned on lights of any vehicle or streetlamp.
  *
  * Arguments:
- * 0: A vehicle, not the classname <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * All burning lights (Array)
+ * All burning lights <ARRAY>
  *
  * Public: No
  */
@@ -20,7 +19,6 @@ if (!isLightOn _vehicle) exitWith {[]};
 private ["_reflectorsWithSelections", "_lights", "_hitpoints"];
 
 _reflectorsWithSelections = [[_vehicle], FUNC(getReflectorsWithSelections), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getReflectorsWithSelections)), typeOf _vehicle], 1E11] call FUNC(cachedCall);
-//_reflectorsWithSelections = [_vehicle] call FUNC(getReflectorsWithSelections);
 
 _lights = _reflectorsWithSelections select 0;
 _hitpoints = _reflectorsWithSelections select 1;

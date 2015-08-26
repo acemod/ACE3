@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_newArray", "_index"];
+private "_result";
 
 params ["_array", "_code"];
 

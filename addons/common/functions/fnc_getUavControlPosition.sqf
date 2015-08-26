@@ -1,25 +1,21 @@
 /*
- * Name: FUNC(getUavControlPosition)
+ * Author: PabstMirror
+ * Returns the seat position of a UAV that the unit is activly controling.
  *
- * Author: Pabst Mirror
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Description:
- * Gets the seat position of a UAV that the unit is activly controlling.
- *   "" - not connected to anything or not activly controling
+ * Return Value:
+ * Position <STRING>
+ *   "" = not connected to anything or activly controling
  *   "DRIVER"
  *   "GUNNER"
  *
- * Parameters:
- * 0: OBJECT - Unit
- *
- * Return Value:
- * STRING - Position in the UAV that is currently being controled by the unit.
- *
  * Example:
- * [ACE_Player] call FUNC(getUavControlPosition)
+ * [ACE_Player] call ace_common_fnc_getUavControlPosition
  *
  * Public: No
-*/
+ */
 #include "script_component.hpp"
 
 private ["_uav", "_positionArray", "_playerIndex"];

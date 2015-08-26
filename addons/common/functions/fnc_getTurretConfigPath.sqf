@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Get the config path of a vehicles turret.
  *
  * Arguments:
- * 0: vehicles config (Config)
- * 1: Turret index (Array)
+ * 0: Vehicle Config <CONFIG>
+ * 1: Turret indecies <ARRAY>
  *
  * Return Value:
- * Turret config (Config)
+ * Turret config <CONFIG>
  *
  * Public: No
  */

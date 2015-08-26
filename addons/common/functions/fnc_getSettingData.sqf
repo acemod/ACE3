@@ -3,30 +3,32 @@
  * Returns the metadata of a setting if it exists
  *
  * Arguments:
- * 0: Name of the setting (String)
+ * 0: Setting Name <STRING>
  *
  * Return Value:
  * Setting Data (Array)
- * 0: _name
- * 1: _typeName
- * 2: _isClientSetable
- * 3: _localizedName
- * 4: _localizedDescription
- * 5: _possibleValues
- * 6: _isForced
- * 7: _defaultValue
+ * 0: Name <STRING>
+ * 1: Type Name <STRING>
+ * 2: Is Client Settable <BOOL>
+ * 3: Localized Name <STRING>
+ * 4: Localized Description <STRING>
+ * 5: Possible Values <ARRAY>
+ * 6: Is Forced <BOOL>
+ * 7: Default Value <ANY>
+ * 8: Localized Category <STRING>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
+private ["_value"];
+
 params ["_name"];
 
-private ["_value"];
 _value = [];
 {
     if ((_x select 0) == _name) exitWith {_value = _x};
-    true
+    nil
 } count GVAR(settings);
 
 _value

@@ -1,13 +1,14 @@
 /*
  * Author: commy2
- *
- * Get a string from the mission.sqm file. Mission has to be saved in the Editor. The string cannot contain the ; character.
+ * Get a string from the mission.sqm file. Mission has to be saved in the Editor.
+ * The string cannot contain the ; character.
+ * If the entry does not exist, it might return an empty string or an entry with the same name of another class!
  *
  * Arguments:
- * 0: Path of the entry in the mission.sqm (Array)
+ * 0: Path of the entry in the mission.sqm <ARRAY>
  *
  * Return Value:
- * Value of the entry. Note: If the entry does not exist, it might return an empty string or an entry with the same name of another class! (String)
+ * Value of the entry.  (String)
  *
  * Public: No
  */

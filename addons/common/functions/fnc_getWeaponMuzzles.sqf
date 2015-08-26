@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the muzzles of a weapon.
  *
  * Arguments:
- * 0: A weapon in cfgWeapons (String)
+ * 0: Weapon <STRING>
  *
  * Return Value:
- * All weapon muzzles (Array)
+ * All weapon muzzles <ARRAY>
  *
  * Public: No
  */

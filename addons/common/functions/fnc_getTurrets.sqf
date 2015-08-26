@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get all turret indicies of a vehicle.
  *
  * Arguments:
- * 0: Vehicle type (String)
+ * 0: Vehicle type <STRING>
  *
  * Return Value:
- * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
+ * Turret Indecies <ARRAY>
  *
  * Public: No
  */
@@ -28,7 +27,7 @@ _turrets = [];
 _fnc_addTurret = {
     private ["_count", "_offset", "_index", "_path2", "_config2"];
 
-    PARAMS_2(_config,_path);
+    params ["_config", "_path"];
 
     _config = _config >> "Turrets";
     _count = count _config;

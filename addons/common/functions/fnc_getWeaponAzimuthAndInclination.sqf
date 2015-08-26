@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Get players weapon direction and slope
  *
  * Arguments:
- * 0: Weapon name (String)
+ * 0: Weapon name <STRING>
  *
  * Return Value:
  * 0: Azimuth <NUMBER>
- * 1: Inclination or 'slope' <NUMBER>
+ * 1: Inclination <NUMBER>
  *
  * Public: No
  */

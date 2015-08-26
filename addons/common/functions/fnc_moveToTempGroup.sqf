@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 
 private ["_previousGroup","_newGroup", "_currentGroup"];
-params[["_unit",ObjNull,[ObjNull]],["_moveTo",ObjNull,[ObjNull]]];
+params[["_unit", ObjNull, [ObjNull]], ["_moveTo", ObjNull, [ObjNull]]];
 
 if (_moveTo) then {
     _previousGroup = group _unit;

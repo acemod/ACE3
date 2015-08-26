@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the nearest object the player is looking at. Used for laser designator instead of cursorTarget.
  *
  * Arguments:
- * 0: Maximal distance to search. <NUMBER>
+ * 0: Maximum search distance <NUMBER>
  *
  * Return Value:
- * Nearest object directly in line of sight, if none objNull <OBJECT>
+ * Nearest object in line of sight, objNull if none are found <OBJECT>
  *
  * Public: No
  */

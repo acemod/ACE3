@@ -1,20 +1,19 @@
 /*
  * Author: ?
- *
- * ?
+ * Returns value attached to key in given hash.
  *
  * Arguments:
- * ?
+ * 0: Hash <ARRAY>
+ * 1: Key <STRING>
  *
  * Return Value:
- * ?
+ * Value <ANY>
  *
- * Public: ?
+ * Public: No
  */
 #include "script_component.hpp"
 
 private ["_val", "_index"];
-// diag_log text format["%1 HASH GET: %2", ACE_diagTime, _this];
 
 params ["_hash", "_key"];
 
@@ -37,4 +36,5 @@ try {
 };
 
 if (isNil "_val") exitWith { nil };
-_val;
+
+_val

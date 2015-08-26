@@ -17,7 +17,6 @@
 
 private ["_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
 
-
 params ["_unit","_action","_condition","_statement"];
 
 if (typeName _condition == "STRING") then {

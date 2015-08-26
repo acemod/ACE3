@@ -61,6 +61,7 @@ _boundsCorners = [
 ];
 
 {
+    private "_ppos";
     _ppos = worldToScreen (_object modelToWorld _x);
     if (count _ppos >= 2) then {
         _ppos params ["_pposX", "_pposY"];

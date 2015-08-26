@@ -1,22 +1,22 @@
 /*
  * Author: jaynus
- *
  * Get the absolute turret direction for FOV/PIP turret.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Turret Position
+ * 1: Turret Position <ARRAY>
  *
  * Return Value:
- * [position, direction]
+ * 0: Position ASL <ARRAY>
+ * 1: Direction <ARRAY>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_position"];
-
 private ["_turret", "_povPos", "_povDir", "_gunBeginPos", "_gunEndPos", "_pov", "_gunBeg", "_gunEnd", "_pipDir"];
+
+params ["_vehicle", "_position"];
 
 _turret = [_vehicle, _position] call CBA_fnc_getTurret;
 _pov = getText (_turret >> "memoryPointGunnerOptics");

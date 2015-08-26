@@ -1,7 +1,6 @@
 /*
  * Author: commy2
  * Get the index of the weapon.
- * 0 = primary, 1 = secondary, 2 = handgun, -1 = other
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,6 +8,10 @@
  *
  * Return Value:
  * Weapon index <NUMBER>
+ *   0 = primary
+ *   1 = secondary
+ *   2 = handgun
+ *   -1 = other
  *
  * Public: No
  */

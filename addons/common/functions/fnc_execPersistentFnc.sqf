@@ -20,7 +20,7 @@ GVAR(remoteFnc) = _this;
 params ["_arguments", "_function", "_unit", "_name"];
 _function = call compile _function;
 
-["Remote", [_arguments, _idPFH, _name], {params ["_args","_function","_id"]; format ["%1 call %2 id: %3", _args, _function, _id]}, false] call FUNC(log);
+["Remote", [_arguments, _idPFH, _name], {params ["_args", "_function", "_id"]; format ["%1 call %2 id: %3", _args, _function, _id]}, false] call FUNC(log);
 
 // execute function on every currently connected machine
 [[_arguments, _unit], _idPFH, 2] call FUNC(execRemoteFnc);

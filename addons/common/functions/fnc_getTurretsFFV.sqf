@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the turret indices of ffv turrets.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Turret index of the vehicles gunner. Empty array means no ffv turrets. (Array)
+ * Vehicle FFV Turret indecies <ARRAY>
  *
  * Public: No
  */

@@ -45,4 +45,4 @@ if (count _actions == 0) then {
     _actionID = -1;
 };
 
-_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions], _unit], false]; // @todo Test use _actionVar is Posible
+_unit setVariable [_name, [_actionID, [_currentID, _actionIDs, _actions], _unit], false]; // @todo Test use _actionsVar is Posible

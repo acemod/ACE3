@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the vehicle codriver positions.
  *
  * Arguments:
- * 0: Vehicle type (String)
+ * 0: Vehicle type <STRING>
  *
  * Return Value:
- * Vehicle codriver positions. (Array)
+ * Vehicle codriver positions <ARRAY>
  *
  * Public: No
  */

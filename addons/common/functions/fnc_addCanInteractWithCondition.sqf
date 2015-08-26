@@ -14,10 +14,9 @@
 #include "script_component.hpp"
 
 private ["_conditions", "_conditionNames", "_conditionFuncs", "_index"];
+
 params ["_conditionName", "_conditionFunc"];
 _conditionName = toLower _conditionName;
-
-
 
 _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 _conditions params ["_conditionNames","_conditionFuncs"];

@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a vehicles commander.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Turret index of the vehicles commander. Empty array means no observer position. (Array)
+ * Vehicle commander turrent indecies <ARRAY>
  *
  * Public: No
  */
@@ -30,4 +29,5 @@ _turret = [];
   };
   true
 } count _turrets;
+
 _turret

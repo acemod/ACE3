@@ -30,4 +30,4 @@ _actionIDs = _actionIDs - [-1];
 _actions set [_id, []];//{}
 _actions = _actions - [[]];//[{}]
 
-missionNamespace setVariable ["ACE_EventHandler_MapMarker", [_currentId, _actionIDs, _actions]]; // @todo Test use _actionVar is Posible
+missionNamespace setVariable ["ACE_EventHandler_MapMarker", [_currentId, _actionIDs, _actions]]; // @todo Test use _actionsVar is Posible

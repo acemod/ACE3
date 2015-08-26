@@ -1,19 +1,18 @@
 /*
  * Author: commy2
- *
- * Get the available firing modes of a weapon. Will ignore the ai helper modes.
+ * Get the available firing modes of a weapon. Will ignore the AI helper modes.
  *
  * Arguments:
- * 0: A weapon in cfgWeapons (String)
+ * 0: Weapon <STRING>
  *
  * Return Value:
- * All firing modes (Array)
+ * Firing Modes <ARRAY>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_modes"];
+private "_modes";
 
 params ["_weapon"];
 

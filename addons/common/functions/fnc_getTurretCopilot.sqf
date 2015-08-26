@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a vehicles copilot.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Turret index of the vehicles gunner. Empty array means no copilot position. (Array)
+ * Vehicle Copilot Turret indecies <ARRAY>
  *
  * Public: No
  */

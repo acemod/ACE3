@@ -1,7 +1,6 @@
 /*
  * Author: commy2
- *
- * Abhocken! Unit goes kneeling if not prone already and lowers weapon. Try, throw, catch because I'm bored.
+ * Move unit to kneeling position.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -15,20 +14,17 @@
 
 params ["_unit"];
 
-//IGNORE_PRIVATE_WARNING("_exception");
+if (_unit == vehicle _unit && stance _unit != "PRONE") then {
+    _animation = switch (currentWeapon _unit) do {
+        case "": {"AmovPknlMstpSnonWnonDnon"};
+        case (primaryWeapon _unit): {"AmovPknlMstpSlowWrflDnon"};
+        case (secondaryWeapon _unit): {"AmovPknlMstpSrasWlnrDnon"};
+        case (handgunWeapon _unit): {"AmovPknlMstpSlowWpstDnon"};
+        case (binocular _unit): {"AmovPknlMstpSoptWbinDnon"};
+        default {nil};
+    };
 
-try {
-    if (_unit == vehicle _unit) then {
-        switch (currentWeapon _unit) do {
-            case "" : {throw "AmovPknlMstpSnonWnonDnon"};
-            case (primaryWeapon _unit) : {throw "AmovPknlMstpSlowWrflDnon"};
-            case (secondaryWeapon _unit) : {throw "AmovPknlMstpSrasWlnrDnon"};
-            case (handgunWeapon _unit) : {throw "AmovPknlMstpSlowWpstDnon"};
-            case (binocular _unit) : {throw "AmovPknlMstpSoptWbinDnon"};
-          };
-    };
-} catch {
-    if (stance _unit != "PRONE") then {
-        [_unit, _exception] call FUNC(doAnimation);
-    };
+    if (isNil "_animation") exitWith {};
+
+    [_unit, _animation] call FUNC(doAnimation);
 };

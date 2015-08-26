@@ -1,15 +1,15 @@
 /*
  * Author: commy2
- *
  * Returns all lighting hitpoints of any vehicle.
  * Note: These are actual selections that are affected by setHit and getHit, not getHitPointDamage or setHitpointDamage.
  * They behave like having an armor value of 0.
  *
  * Arguments:
- * 0: A vehicle, not the classname <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * The light names and selections (Array)
+ * 0: Light Hitpoints <ARRAY>
+ * 1: Selections <ARRAY>
  *
  * Public: No
  */

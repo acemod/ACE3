@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
  *
  * Arguments:
- * 0: Vehicle type (String)
+ * 0: Vehicle type <STRING>
  *
  * Return Value:
- * Vehicle cargo positions. (Array)
+ * Vehicle cargo positions <ARRAY>
  *
  * Public: No
  */

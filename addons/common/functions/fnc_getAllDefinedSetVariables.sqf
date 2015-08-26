@@ -19,7 +19,7 @@
 
 #include "script_component.hpp"
 
-private ["_return", "_val"];
+private ["_return", "_var"];
 
 params ["_object", ["_category", ""]];
 

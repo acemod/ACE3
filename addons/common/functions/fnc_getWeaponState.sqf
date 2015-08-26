@@ -1,14 +1,16 @@
 /*
  * Author: commy2
- *
  * Return current state of the weapon. Attachments and magazines with ammo.
  *
  * Arguments:
- * 0: A unit <OBJECT>
- * 1: A weapon (String)
+ * 0: unit <OBJECT>
+ * 1: weapon <STRING>
  *
  * Return Value:
- * Weapon info, format: [attachments, muzzles, magazines, ammo] (Array)
+ * 0: Attachements <ARRAY>
+ * 1: Muzzles <ARRAY>
+ * 2: Magazines <ARRAY>
+ * 3: Ammo <ARRAY>
  *
  * Public: No
  */

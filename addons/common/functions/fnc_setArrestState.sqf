@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-params[["_unit",ObjNull,[ObjNull]],["_setArrest",false,[false]]];
+params[["_unit", ObjNull, [ObjNull]], ["_setArrest", false, [false]]];
 
 if (_setArrest) then {
     [_unit, QGVAR(StateArrested), true] call FUNC(setDefinedVariable);

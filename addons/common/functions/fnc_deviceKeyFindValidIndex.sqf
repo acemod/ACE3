@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_validIndex", "_offsetBy", "_realIndex", "_offset"];
+private ["_validIndex", "_offsetBy", "_realIndex", "_offset", "_baseIndex", "_keyHandler"];
 
 params [["_searchOffsetOrName", 0]];
 

@@ -18,7 +18,7 @@
 
 // Todo: Can weapons themselves still have flashlights (no attachment)?
 
-private ["config", "_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
+private ["_config", "_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
 
 params ["_weapon"];
 

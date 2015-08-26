@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Returns array of crew member objects.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Slot types. Can contain "driver", "commander", "gunner", "turret", "cargo" and "ffv". Case sensitive (Array)
+ * 1: Slot types ("driver", "commander", "gunner", "turret", "cargo", "ffv") <ARRAY>
  *
  * Return Value:
- * Crew (Array)
+ * Crew <ARRAY>
  *
  * Public: No
  */

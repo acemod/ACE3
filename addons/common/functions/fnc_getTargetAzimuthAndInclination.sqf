@@ -1,14 +1,13 @@
 /*
  * Author: commy2
- *
  * Get players viewing direction and slope
  *
  * Arguments:
- * None.
+ * None
  *
  * Return Value:
  * 0: Azimuth <NUMBER>
- * 1: Inclination or 'slope' <NUMBER>
+ * 1: Inclination <NUMBER>
  *
  * Public: No
  */
