@@ -9,7 +9,7 @@ class CfgVehicles {
     class ACE_moduleAmbianceSound: Module_F {
         scope = 2;
         displayName = CSTRING(AmbianceSounds_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Breathing_ca.paa));
         category = "ACE_missionModules";
         function = QUOTE(FUNC(moduleAmbianceSound));
         functionPriority = 1;

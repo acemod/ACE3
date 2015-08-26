@@ -2,11 +2,11 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"cse_moduleAmbianceSound"};
+        units[] = {"ACE_moduleAmbianceSound"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Glowbal"};
+        author[] = {"Glowbal", "joko // Jonas", "Exikas"};
         authorUrl = "";
         VERSION_CONFIG;
     };

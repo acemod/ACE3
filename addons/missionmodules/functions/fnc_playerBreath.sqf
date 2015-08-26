@@ -1,5 +1,5 @@
 /*
- * Author: joko // Jonas and Exo
+ * Author: joko // Jonas and Exikas
  * Create a PFH for a Breathing Effect for player in closer distance
  *
  * Arguments:
