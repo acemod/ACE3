@@ -63,7 +63,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = 30;
-            condition = "damage (_this select 1) > 0";
+            condition = "damage _target > 0";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
         };
     };
