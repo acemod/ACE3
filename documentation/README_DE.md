@@ -18,8 +18,7 @@
         <img src="http://img.shields.io/badge/License-GPLv2-red.svg" alt="ACE3 License">
     </a>
 </p>
-<p align="center"><sup><strong>Benötigt eine Aktuelle Version von <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> | <a href="#">BIF thread</a></strong></sup></p>
-<p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Besucht uns auf <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
+<p align="center"><sup><strong>Benötigt eine Aktuelle Version von <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Besucht uns auf <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
 **ACE3** ist ein Gemeinschaftsprojekt der sich zusammengeschlossenen Moddinggruppen von **ACE2**, **AGM** und **CSE** mit dem Ziel den Realismus und die Spieltiefe von Arma 3 zu steigern.
 
