@@ -21,7 +21,9 @@ _allHitpointsAndSelections = getAllHitPointsDamage _vehicle;
 _allHitpointsAndSelections params ["_allHitpoints", "_allHitselections"];
 
 {
-    if(!(_x in _hitpoints) && (_x != "")) then {_hitpoints pushback _x;};
+    if(!(_x in _hitpoints) && (_x != "")) then {
+        _hitpoints pushback _x;
+    };
     nil
 } count _allHitpoints;
 
@@ -30,7 +32,10 @@ if(_includeHitSelections) then {
 
     _hitselections = [];
     {
-        if(!(_x in _hitselections) && (_x != "")) then {_hitselections pushback _x;};nil
+        if(!(_x in _hitselections) && (_x != "")) then {
+            _hitselections pushback _x;
+        };
+        nil
     } count _allHitselections;
 
     [_hitpoints, _hitselections]
