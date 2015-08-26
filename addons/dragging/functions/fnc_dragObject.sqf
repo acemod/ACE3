@@ -46,7 +46,7 @@ if (_actionID != -1) then {
 
 _actionID = _unit addAction [
     format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
-    QUOTE(param ['_unit']; [ARR_2('_unit', ('_unit') getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
+    QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
     nil,
     20,
     false,
