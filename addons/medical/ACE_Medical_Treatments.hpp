@@ -154,7 +154,7 @@ class ACE_Medical_Actions {
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
             displayNameProgress = CSTRING(Applying_Tourniquet);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r", "body"};
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 4;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
