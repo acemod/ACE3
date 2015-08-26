@@ -49,7 +49,7 @@ if (_heartRate > 1.0) then {
 if ([_unit, _selectionName] call FUNC(hasTourniquetAppliedTo)) then {
     _heartRateOutput = LSTRING(Check_Pulse_Output_5);
     _logOutPut = LSTRING(Check_Pulse_None);
-	};
+};
 
 ["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
 
