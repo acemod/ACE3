@@ -9,26 +9,18 @@
  * None
  *
  * Example:
- * call ace_weather_fnc_playerBreath
+ * call ace_missionModules_fnc_playerBreath
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-#ifdef DEBUG_MODE_FULL
-    #define USEDUNITS allUnits
-#endif
 
-#ifndef DEBUG_MODE_FULL
-    #define USEDUNITS allPlayers
-#endif
 
 if !(hasInterface) exitWith {};
 if !(GVAR(breathEnabled)) exitWith {};
-if (!GVAR(breathIsForced) || {EGVAR(weather,currentTemperature) <= GVAR(breathTemperature)} || {(GVAR(breathTimeStart) > ACE_time && {GVAR(breathTimeEnd) < ACE_time})}) exitWith {};
 if !(local ACE_player) exitWith {};
-
 
 DFUNC(crateBreathingEffect) = {
     private ["_source", "_fog"];
@@ -77,27 +69,29 @@ DFUNC(crateBreathingEffect) = {
 };
 
 
-[{
+GVAR(debugPFHID) = [{
     if !(GVAR(breathEnabled)) exitWith {};
     if (!GVAR(breathIsForced) || {GVAR(currentTemperature) <= GVAR(breathTemperature)} || {(GVAR(breathTimeStart) > ACE_time && {GVAR(breathTimeEnd) < ACE_time})}) exitWith {};
+
+    scopeName "PFHBreath";
+    private ["_unit", "_array"];
 
     if (GVAR(bySpeaking)) then {
         {
             if (_x distance ACE_player <= GVAR(MaxBreathingDistance) && {!(_x getVariable [QGVAR(breath), true])} && {_x call EFUNC(nametags,isSpeaking)}) then {
                 _x call FUNC(crateBreathingEffect);
             };
-        } count USEDUNITS;
+        } count allPlayers;
     };
 
-    scopeName "PFHBreath";
-    private ["_unit", "_array"];
+
 
     {
         if !(_x getVariable [QGVAR(breath), true] && {_x distance ACE_player <= GVAR(MaxBreathingDistance)}) then {
             _unit = _x;
             breakTo "PFHBreath";
         };
-    } count allPlayers;
+    } count ([allUnits, allPlayers] select GVAR(onlyPlayer));
 
     // create Breathing Effect
     if (isNil "_unit") exitWith {};
