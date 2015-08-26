@@ -3,12 +3,14 @@
  *
  * Check if unit can drag the object. Doesn't check weight.
  *
- * Argument:
- * 0: Unit that should do the dragging (Object)
- * 1: Object to drag (Object)
+ * Arguments:
+ * 0: Unit that should do the dragging <OBJECT>
+ * 1: Object to drag <OBJECT>
  *
- * Return value:
- * Can the unit drag the object? (Bool)
+ * Return Value:
+ * Can the unit drag the object? <BOOL>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

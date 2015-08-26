@@ -111,6 +111,7 @@ if(!isServer) then {
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
+
 call FUNC(checkFiles);
 
 
@@ -203,10 +204,11 @@ GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
+GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
-    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -270,7 +272,15 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         GVAR(OldPlayerWeapon) = _newPlayerWeapon;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
-
+    
+    // "visibleMapChanged" event
+    _newVisibleMap = visibleMap;
+    if (!_newVisibleMap isEqualTo GVAR(OldVisibleMap)) then {
+        // Raise ACE event locally
+        GVAR(OldVisibleMap) = _newVisibleMap;
+        ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
+    };
+    
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 

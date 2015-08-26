@@ -27,7 +27,7 @@ if (dialog || isNull _interactionTarget) exitwith {
         closeDialog 314412;
         _handled = true;
     };
-    
+
     _handled
 };
 

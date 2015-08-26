@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Initializes vehicle, adds open caro menu action if available.
+ * Initializes vehicle, adds open cargo menu action if available.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -25,20 +25,8 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (isServer) then {
     {
         if (isClass _x) then {
-            private ["_className", "_amount","_position","_object"];
-            _className = getText (_x >> "type");
-            _amount = getNumber (_x >> "amount");
-            _position = getPos _vehicle;
-            _position set [1, (_position select 1) + 1];
-            _position set [2, (_position select 2) + 7.5];
-            for "_i" from 1 to _amount do {
-                _object = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
-                if !([_object, _vehicle] call FUNC(loadItem)) exitWith {
-                    deleteVehicle _object;
-                };
-            };
+            ["AddCargoByClass", [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")]] call EFUNC(common,localEvent);
         };
-        nil
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
 

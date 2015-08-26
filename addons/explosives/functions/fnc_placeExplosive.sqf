@@ -21,9 +21,11 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_ammo", "_explosive", "_attachedTo", "_expPos", "_magazineTrigger"];
-EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
-DEFAULT_PARAM(6,_setupPlaceholderObject,objNull);
+
+params ["_unit", "_pos", "_dir", "_magazineClass", "_triggerConfig", "_triggerSpecificVars", ["_setupPlaceholderObject", objNull]];
+TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars,_setupPlaceholderObject);
+
+private ["_ammo", "_explosive", "_attachedTo", "_magazineTrigger", "_pitch", "_digDistance", "_canDigDown", "_soundEnviron", "_surfaceType"];
 
 _unit playActionNow "PutDown";
 
@@ -52,6 +54,28 @@ if (isText(_magazineTrigger >> "ammo")) then {
 };
 _triggerSpecificVars pushBack _triggerConfig;
 
+//Dig the explosive down into the ground (usually on "pressurePlate")
+if (isNumber (_magazineTrigger >> "digDistance")) then {
+    _digDistance = getNumber (_magazineTrigger >> "digDistance");
+
+    //Get Surface Type:
+    _canDigDown = true;
+    _surfaceType = surfaceType _pos;
+    if ((_surfaceType select [0,1]) == "#") then {_surfaceType = _surfaceType select [1, 99];};
+    if ((_surfaceType != "") || {isClass (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
+        _soundEnviron = getText (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
+        TRACE_2("Dig Down Surface",_surfaceType,_soundEnviron);
+        _canDigDown = !(_soundEnviron in ["road", "tarmac", "concrete", "concrete_int", "int_concrete", "concrete_ext"]);
+    };
+    //Don't dig down if pos ATL is high (in a building or A2 road)
+    if (_canDigDown && {(_pos select 2) < 0.1}) then {
+        TRACE_2("Can Dig Down",_digDistance,_pos);
+        _pos = _pos vectorAdd [0,0, (-1 * _digDistance)];
+    } else {
+        TRACE_2("Can NOT Dig Down",_digDistance,_pos);
+    };
+};
+
 _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
 _explosive setPosATL _pos;
 
@@ -60,7 +84,17 @@ if (!isNull _attachedTo) then {
     _explosive attachTo [_attachedTo];
 };
 
-if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars]
-    call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {_explosive};
-[[_explosive, _dir, getNumber (_magazineTrigger >> "pitch")], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
+//If trigger has "onPlace" and it returns true, just exitWith the explosive
+if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_triggerSpecificVars] call compile (getText (_triggerConfig >> "onPlace"))}) exitWith {
+    TRACE_1("onPlace returns true",_explosive);
+    _explosive
+};
+
+//TODO: placing explosives on hills looks funny
+
+_pitch = getNumber (_magazineTrigger >> "pitch");
+
+//Globaly set the position angle:
+[QGVAR(place), [_explosive, _dir, _pitch]] call EFUNC(common,globalEvent);
+
 _explosive

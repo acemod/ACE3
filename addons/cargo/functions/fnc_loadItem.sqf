@@ -32,6 +32,9 @@ _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
 detach _item;
 _item attachTo [_vehicle,[0,0,100]];
-["cargo_hideItem", [_item, true]] call EFUNC(common,serverEvent);
+["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
+
+// Invoke listenable event
+["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
 
 true
