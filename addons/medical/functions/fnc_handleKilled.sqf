@@ -13,8 +13,8 @@
 
 #include "script_component.hpp"
 
-private["_unit", "_openWounds"];
-_unit = _this select 0;
+private "_openWounds";
+params ["_unit"];
 if (!local _unit) exitwith {};
 
 _unit setvariable [QGVAR(pain), 0];

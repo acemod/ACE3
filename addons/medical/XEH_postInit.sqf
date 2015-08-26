@@ -11,10 +11,9 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
-    if (local (_this select 0)) then {
-        private ["_unit"];
-        _unit = _this select 0;
-        if (_this select 1) then {
+    params ["_unit", "_status"];
+    if (local _unit) then {
+        if (_status) then {
             _unit setVariable ["tf_globalVolume", 0.4];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
@@ -35,10 +34,8 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 // Initialize all effects
 _fnc_createEffect = {
-    private ["_type", "_layer", "_default", "_effect"];
-    _type = _this select 0;
-    _layer = _this select 1;
-    _default = _this select 2;
+    private "_effect";
+    params ["_type", "_layer", "_default"];
 
     _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;

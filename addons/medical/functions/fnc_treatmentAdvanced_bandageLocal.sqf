@@ -15,19 +15,16 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_specificClass", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
-_target = _this select 0;
-_bandage = _this select 1;
-_selectionName = _this select 2;
-_specificClass = if (count _this > 3) then {_this select 3} else { -1 };
+private ["_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
+params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {};
+if (_part < 0) exitwith {false};
 
 // Get the open wounds for this unit
 _openWounds = _target getvariable [QGVAR(openWounds), []];
-if (count _openWounds == 0) exitwith {}; // nothing to do here!
+if (count _openWounds == 0) exitwith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
 _config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
@@ -43,10 +40,10 @@ _effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
 _exit = false;
 {
+    params ["", "_classID", "_partX"];
     // Only parse injuries that are for the selected bodypart.
-    if (_x select 2 == _part) then {
+    if (_partX == _part) then {
         _woundEffectivenss = _effectiveness;
-        _classID = (_x select 1);
 
         // Select the classname from the wound classname storage
         _className = GVAR(woundClassNames) select _classID;
@@ -74,7 +71,7 @@ _exit = false;
         };
     };
     if (_exit) exitwith {};
-}foreach _openWounds;
+} foreach _openWounds;
 
 if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
 
