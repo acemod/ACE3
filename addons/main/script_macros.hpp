@@ -98,12 +98,12 @@
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
 
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
-#define ACE_LOGFORMAT(module,level,message) format [QUOTE([ACE] (module) level: %1), message]
-#define ACE_LOGERROR(message) ACE_LOG(COMPONENT,ERROR,message)
-#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT(COMPONENT,ERROR,message)
-#define ACE_LOGWARNING(message) ACE_LOG(COMPONENT,WARNING,message)
-#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,WARNING,message)
-#define ACE_LOGINFO(message) ACE_LOG(COMPONENT,INFO,message)
-#define ACE_INFOFORMAT(message) ACE_LOGFORMAT(COMPONENT,INFO,message)
+#define ACE_LOGFORMAT(module,level,message) format [QUOTE([ACE] (module) %1: %2), level, message]
+#define ACE_LOGERROR(message) ACE_LOG(COMPONENT,"ERROR",message)
+#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT(COMPONENT,"ERROR",message)
+#define ACE_LOGWARNING(message) ACE_LOG(COMPONENT,"WARNING",message)
+#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"WARNING",message)
+#define ACE_LOGINFO(message) ACE_LOG(COMPONENT,"INFO",message)
+#define ACE_INFOFORMAT(message) ACE_LOGFORMAT(COMPONENT,"INFO",message)
 
 #include "script_debug.hpp"
