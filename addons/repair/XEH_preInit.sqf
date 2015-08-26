@@ -16,6 +16,7 @@ PREP(doRepair);
 PREP(doRepairTrack);
 PREP(doReplaceTrack);
 PREP(doReplaceWheel);
+PREP(getHitPointString);
 PREP(getPostRepairDamage);
 PREP(getWheelHitPointsWithSelections);
 PREP(hasItems);
