@@ -8,7 +8,7 @@
  * 2: Module Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [module, [], true] call ace_microdagr_fnc_moduleMapFill
@@ -17,10 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_syncedUnits,_activated);
+if !(isServer) exitWith {};
+params ["_logic", "_syncedUnits", "_activated"];
 
 if (!_activated) exitWith {WARNING("Module Placed but not active");};
-
-if (isServer) then {
-  [_logic, QGVAR(MapDataAvailable), "MapDataAvailable"] call EFUNC(common,readSettingFromModule);
-};
