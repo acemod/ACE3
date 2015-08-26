@@ -38,12 +38,12 @@ if (_vehicle isKindOf "Ship" ) then {
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
 if (!_validVehiclestate) exitwith {
-    ACE_LOGWARNING(format [ARR_5("Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4", _vehicle, getPos _vehicle, isTouchingGround _vehicle, speed _vehicle)]);
+    ACE_LOGWARNING_4("Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4",_vehicle,getPos _vehicle,isTouchingGround _vehicle,speed _vehicle);
     false
 };
 
 if (count _emptyPos == 0) exitwith {
-    ACE_LOGWARNING(format [ARR_2("No safe empty spots to unload patient. %1", _emptyPos)]);
+    ACE_LOGWARNING_1("No safe empty spots to unload patient. %1",_emptyPos);
     false
 };  //consider displaying text saying there are no safe places to exit the vehicle
 

@@ -40,7 +40,7 @@
 
 ["HeadbugFixUsed", {
     PARAMS_2(_profileName,_animation);
-    ACE_LOGINFO(format [ARR_3("Headbug Used: Name: %1, Animation: %2", _profileName, _animation)]);
+    ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call FUNC(addEventHandler);
 
 

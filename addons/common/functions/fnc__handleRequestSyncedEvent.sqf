@@ -42,7 +42,7 @@ if(isServer) then {
         _eventArgs = _x select 1;
         [_eventName, _eventArgs, (_x select 2)] call FUNC(_handleSyncedEvent);
     } forEach _eventLog;
-    ACE_LOGINFO(format [ARR_2("[%1] synchronized", _eventName)]);
+    ACE_LOGINFO_1("[%1] synchronized",_eventName);
 };
 
 true

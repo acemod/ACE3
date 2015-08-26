@@ -44,7 +44,7 @@ if (_parentPath isEqualTo ["ACE_MainActions"]) then {
 _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
 if (isNil {_parentNode}) exitWith {
     ERROR("Failed to add action");
-    ACE_LOGERROR(format [ARR_5("action (%1) to parent %2 on object %3 [%4]", (_action select 0), _parentPath, _objectType, _typeNum)]);
+    ACE_LOGERROR_4("action (%1) to parent %2 on object %3 [%4]",(_action select 0),_parentPath,_objectType,_typeNum);
 };
 
 // Add action node as children of the correct node of action tree

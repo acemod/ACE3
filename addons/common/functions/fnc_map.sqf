@@ -21,7 +21,7 @@ _array = + _this select 0;
 _code = _this select 1;
 
 if (isNil "_array") exitWith {
-    ACE_LOGERROR(format [ARR_2("No array for function map in %1.", _fnc_scriptNameParent)]);
+    ACE_LOGERROR_1("No array for function map in %1.",_fnc_scriptNameParent);
     []
 };
 

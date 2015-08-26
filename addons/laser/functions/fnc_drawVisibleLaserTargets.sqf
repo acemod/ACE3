@@ -4,6 +4,6 @@
 ACE_LOGINFO("Laser Emitter Dump");
 
 {
-    ACE_LOGINFO(format["  %1", _x]);
-    ACE_LOGINFO(format["    %2", HASH_GET(GVAR(laserEmitters), _x)]);
+    ACE_LOGINFO_1("  %1", _x);
+    ACE_LOGINFO_1("    %1",HASH_GET(GVAR(laserEmitters),_x));
 } forEach GVAR(laserEmitters) select 0;

@@ -26,4 +26,4 @@ if (!_activated) exitWith {
 [_logic, QGVAR(enabled),"moduleViewDistanceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(limitViewDistance),"moduleViewDistanceLimit"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO(format [ARR_2("View Distance Limit Module Initialized. Limit set by module: %1", GVAR(limitViewDistance))]);
+ACE_LOGINFO_1("View Distance Limit Module Initialized. Limit set by module: %1",GVAR(limitViewDistance));

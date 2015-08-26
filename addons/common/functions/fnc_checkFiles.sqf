@@ -17,7 +17,7 @@
 private "_version";
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-ACE_LOGINFO(format [ARR_2("ACE is version %1.", _version)]);
+ACE_LOGINFO_1("ACE is version %1.",_version);
 
 private "_addons";
 _addons = activatedAddons;
@@ -51,7 +51,7 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         };
     } else {
         // Print the current extension version
-        ACE_LOGINFO(format [ARR_3("Extension version: %1: %2", _x, (_x callExtension "version"))]);
+        ACE_LOGINFO_2("Extension version: %1: %2",_x,(_x callExtension "version"));
     };
 } forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
 

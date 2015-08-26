@@ -36,7 +36,7 @@ if (!isNull _setupPlaceholderObject) then {
 };
 
 if (isNil "_triggerConfig") exitWith {
-    ACE_LOGERROR(format [ARR_2("Config not passed to PlaceExplosive: %1",_this)]);
+    ACE_LOGERROR_1("Config not passed to PlaceExplosive: %1",_this);
     objNull
 };
 
@@ -44,7 +44,7 @@ _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Trigge
 _triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-    ACE_LOGERROR(format [ARR_2("Config not found in PlaceExplosive: %1",_this)]);
+    ACE_LOGERROR_1("Config not found in PlaceExplosive: %1",_this);
     objNull
 };
 
