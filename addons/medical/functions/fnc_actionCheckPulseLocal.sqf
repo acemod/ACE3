@@ -46,7 +46,7 @@ if (_heartRate > 1.0) then {
     };
 };
 
-if ([_unit, _selectionName] call FUNC(hasTourniquetAppliedTo)) then {
+if (_selectionName in ["hand_l","hand_r"] && [_unit, _selectionName] call FUNC(hasTourniquetAppliedTo)) then {
     _heartRateOutput = LSTRING(Check_Pulse_Output_5);
     _logOutPut = LSTRING(Check_Pulse_None);
 };
