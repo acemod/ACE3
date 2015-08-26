@@ -1,6 +1,6 @@
 /*
  * Author: Jonpas
- * Finds the localized string of the given hitpoint name.
+ * Finds the localized string of the given hitpoint name or uses default text if none found.
  *
  * Arguments:
  * 0: Hitpoint <STRING>

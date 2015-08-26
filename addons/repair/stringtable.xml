@@ -269,15 +269,18 @@
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
         </Key>
+        <Key ID="STR_ACE_Repair_HitAmmo">
+            <English>Ammo</English>
+        </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
-            <English>Main Turret</English>
+            <English>Turret</English>
             <German>Turm</German>
-            <Spanish>Torreta príncipal</Spanish>
+            <Spanish>Torreta</Spanish>
             <French>Tourelle</French>
             <Polish>Wieżyczka</Polish>
-            <Czech>Hlavní Věž</Czech>
-            <Portuguese>Torre principal</Portuguese>
-            <Italian>Torretta principale</Italian>
+            <Czech>Věž</Czech>
+            <Portuguese>Torre</Portuguese>
+            <Italian>Torretta</Italian>
             <Hungarian>Lövegtorony</Hungarian>
             <Russian>Башню</Russian>
         </Key>
@@ -292,6 +295,9 @@
             <Italian>Cannone</Italian>
             <Hungarian>Ágyú</Hungarian>
             <Russian>Пушку</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitMissiles">
+            <English>Missiles</English>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
