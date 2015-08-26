@@ -18,12 +18,13 @@
             <Portuguese>Iluminação do mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
-            <English>Calculate dynamic map illumination based on light conditions?</English>
-            <Polish>Oblicza dynamiczne oświetlenie mapy bazujące na warunkach oświetleniowych</Polish>
-            <Spanish>Calcula la iluminación dinámica del mapa basandose en las condiciones de luz</Spanish>
-            <German>Berechne die Kartenauslichtung anhand des Umgebungslichts?</German>
-            <Czech>Vypočítat dynamické osvětlení mapy na základně světelných podmínek?</Czech>
-            <Portuguese>Calcular a iluminação dinâmica do mapa de acordo com as condições de luz?</Portuguese>
+            <English>Simulate map lighting based on ambient lighting and player's items?</English>
+        </Key>
+        <Key ID="STR_ACE_Map_MapGlow_DisplayName">
+            <English>Map flashlight glow?</English>
+        </Key>
+        <Key ID="STR_ACE_Map_MapGlow_Description">
+            <English>Add external glow to players who use flashlight on map?</English>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -83,7 +84,7 @@
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
             <Polish>Blue Force Tracking</Polish>
-            <Spanish>Blue Force Tracking</Spanish>
+            <Spanish>Seguimiento de fuerzas amigas</Spanish>
             <German>Blue Force Tracking</German>
             <Czech>Blue Force Tracking</Czech>
             <Portuguese>Rastreio de forças azuis</Portuguese>
@@ -140,6 +141,30 @@
             <German>Dieses Modul ermöglicht es verbündete Einheiten mit dem BFT auf der Karte zu verfolgen.</German>
             <Czech>Umožňuje sledovat přátelské jednokty na mapě v rámci BFT.</Czech>
             <Portuguese>Permite que você acompanhe as posições no mapa das unidades aliadas com marcadores RFA.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_Flashlights">
+            <English>Flashlights</English>
+            <Polish>Latarki</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_NVG">
+            <English>NVG</English>
+            <Polish>Noktowizja</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_NVGOn">
+            <English>On</English>
+            <Polish>Włącz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_NVGOff">
+            <English>Off</English>
+            <Polish>Wyłącz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_NVGUp">
+            <English>Increase Brightness</English>
+            <Polish>Zwiększ czułość</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Action_NVGDown">
+            <English>Decrease Brightness</English>
+            <Polish>Zmniejsz czułość</Polish>
         </Key>
     </Package>
 </Project>
