@@ -113,6 +113,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0600;
             };
+            class bySpeaking {
+                displayName = "Simulate by Speaking";
+                description = "Simulate the fog if a player speaks with ACRE/TFAR/or inGame Audio";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
     };
 };
