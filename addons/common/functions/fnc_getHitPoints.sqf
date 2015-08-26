@@ -11,46 +11,29 @@
  */
 #include "script_component.hpp"
 
-private ["_config", "_hitpoints", "_i"];
+params ["_vehicle", ["_includeHitSelections", false]];
 
-PARAMS_1(_vehicle);
-
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private ["_hitpoints", "_allHitpointsAndSelections"];
 
 _hitpoints = [];
 
-// get all classes that can contain hitpoints
-private "_hitpointClasses";
-_hitpointClasses = [_config >> "HitPoints"];
+_allHitpointsAndSelections = getAllHitPointsDamage _vehicle;
+_allHitpointsAndSelections params ["_allHitpoints", "_allHitselections"];
+
 {
-    private "_class";
-    _class = ([_config, _x] call FUNC(getTurretConfigPath)) >> "HitPoints";
+    if(!(_x in _hitpoints) && (_x != "")) then {_hitpoints pushback _x;};
+    nil
+} count _allHitpoints;
 
-    if (isClass _class) then {
-        _hitpointClasses pushBack _class;
-    };
+if(_includeHitSelections) then {
+    private "_hitselections";
 
-} forEach allTurrets _vehicle;
+    _hitselections = [];
+    {
+        if(!(_x in _hitselections) && (_x != "")) then {_hitselections pushback _x;};nil
+    } count _allHitselections;
 
-// iterate through all classes with hitpoints and their parents
-{
-    private "_class";
-    _class = _x;
-
-    while {isClass _class} do {
-
-        for "_i" from 0 to (count _class - 1) do {
-            private "_entry";
-            _entry = configName (_class select _i);
-
-            if (!(_entry in _hitpoints) && {!isNil {_vehicle getHitPointDamage _entry}}) then {
-                _hitpoints pushBack _entry;
-            };
-        };
-
-        _class = inheritsFrom _class;
-    };
-
-} forEach _hitpointClasses;
-
-_hitpoints
+    [_hitpoints, _hitselections]
+} else {
+    _hitpoints
+};
