@@ -27,5 +27,6 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(breathTemperature), "breathTemperature"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(breathTimeStart), "breathTimeStart"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(breathTimeEnd), "breathTimeEnd"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(bySpeaking), "bySpeaking"] call EFUNC(common,readSettingFromModule);
 
 diag_log text "[ACE]: Player Breathing Module Initialized.";
