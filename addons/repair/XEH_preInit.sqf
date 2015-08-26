@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(addRepairActions);
 PREP(addSpareParts);
+PREP(canMiscRepair);
 PREP(canRemove);
 PREP(canRepair);
 PREP(canRepairTrack);
