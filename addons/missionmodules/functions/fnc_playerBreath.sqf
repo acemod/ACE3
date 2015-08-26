@@ -16,23 +16,25 @@
 
 #include "script_component.hpp"
 
-
-
 if !(hasInterface) exitWith {};
 if !(GVAR(breathEnabled)) exitWith {};
 if !(local ACE_player) exitWith {};
 
+
+// define the Crate Breathing Effect Function
 DFUNC(crateBreathingEffect) = {
     private ["_source", "_fog"];
+
+    // create the Logic where the Partice Effect emitt from and create the particlesource.
     _source = "logic" createVehicleLocal (getpos _this);
     _fog = "#particlesource" createVehicleLocal getpos _source;
 
+    // attacht the Particle effect that it look like the particle came out of the mouth
+    _source attachto [_this, [0,0.15,0], "neck"];
 
+    // set the Partice effect Parameter
     _fog setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
     _fog setDropInterval 0.01;
-
-    _source attachto [_this, [0,0.15,0], "neck"]; // get fog to come out of player mouth
-
     _fog setParticleParams [
         [
             "\A3\data_f\ParticleEffects\Universal\Universal",
@@ -76,20 +78,18 @@ GVAR(debugPFHID) = [{
     scopeName "PFHBreath";
     private ["_unit", "_array"];
 
-    if (GVAR(bySpeaking)) then {
-        {
+
+    {
+        // Check if a Player in the current Distance is Speaking
+        if (GVAR(bySpeaking)) then {
             if (_x distance ACE_player <= GVAR(MaxBreathingDistance) && {!(_x getVariable [QGVAR(breath), true])} && {_x call EFUNC(nametags,isSpeaking)}) then {
                 _x call FUNC(crateBreathingEffect);
             };
-        } count allPlayers;
-    };
+        };
 
-
-
-    {
-        if !(_x getVariable [QGVAR(breath), true] && {_x distance ACE_player <= GVAR(MaxBreathingDistance)}) then {
+        //Chec if a Unit that is in Distance dont have a Breathing Effect and _unit is not assigned
+        if (isNil "_unit" && !(_x getVariable [QGVAR(breath), false]) && {_x distance ACE_player <= GVAR(MaxBreathingDistance)}) then {
             _unit = _x;
-            breakTo "PFHBreath";
         };
     } count ([allUnits, allPlayers] select GVAR(onlyPlayer));
 
