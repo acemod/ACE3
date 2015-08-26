@@ -40,7 +40,34 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {_damageOld};
 // Get return damage
 _damageReturn = _damage;
 if (GVAR(level) < 2) then {
-    _damageReturn = _this call FUNC(handleDamage_basic);
+    _newDamage = _this call FUNC(handleDamage_basic2);
+    _projectile = _this select 4;
+    _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+
+    _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+    _minLethalDamage = 0.01;
+    if (_typeIndex >= 0) then {
+        _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+    };
+
+    if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
+        if (GVAR(enableVehicleCrashes)) then {
+            _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+        };
+    };
+
+    if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+        if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
+            _damageReturn = 0.9;
+        };
+        if ([_unit] call FUNC(setDead)) then {
+            _damageReturn = 1;
+        } else {
+            _damageReturn = _damageReturn min 0.89;
+        };
+    } else {
+        _damageReturn = _damageReturn min 0.89;
+    };
 } else {
     if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
         // Because of the config changes, we cannot properly disable the medical system for a unit.
