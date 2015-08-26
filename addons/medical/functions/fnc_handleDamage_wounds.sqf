@@ -20,11 +20,15 @@
 private ["_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 
+systemChat format["input: %1", _this];
+diag_log format["input: %1", _this];
+
 // Administration for open wounds and ids
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
 _woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
 
 _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
+systemChat format["EXTENSION OUTPUT: %1", _extensionOutput];
 
 _painToAdd = 0;
 _woundsCreated = [];

@@ -40,7 +40,8 @@ _effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
 _exit = false;
 {
-    params ["", "_classID", "_partX"];
+    _x params ["", "_classID", "_partX"];
+    diag_log format["OPENWOUND: %1", _x];
     // Only parse injuries that are for the selected bodypart.
     if (_partX == _part) then {
         _woundEffectivenss = _effectiveness;
@@ -56,6 +57,7 @@ _exit = false;
             };
         };
 
+        diag_log format["_specificClass: %1 vs classId %2", _specificClass, _classID];
         if (_specificClass == _classID) exitwith {
             _effectivenessFound = _woundEffectivenss;
             _mostEffectiveSpot = _foreachIndex;

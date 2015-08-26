@@ -39,7 +39,7 @@ _litter = getArray (_config >> "litter");
 
 _createLitter = {
     private["_position", "_direction"];
-    params ["_unit", "_litter"];
+    params ["_unit", "_litterClass"];
     // @TODO: handle carriers over water
     // For now, don't spawn litter if we are over water to avoid floating litter
     if(surfaceIsWater (getPos _unit)) exitWith { false };
@@ -55,7 +55,7 @@ _createLitter = {
 
     // Create the litter, and timeout the event based on the cleanup delay
     // The cleanup delay for events in MP is handled by the server side
-    [QGVAR(createLitter), [_litterClass,_position,_direction], 0] call EFUNC(common,syncedEvent);
+    [QGVAR(createLitter), [_litterClass, _position, _direction], 0] call EFUNC(common,syncedEvent);
 
     true
 };
@@ -65,7 +65,7 @@ _createdLitter = [];
     if (typeName _x == "ARRAY") then {
         if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
 
-        params ["_selection", "_litterCondition", "_litterOptions"];
+        _x params ["_selection", "_litterCondition", "_litterOptions"];
 
         if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
 

@@ -22,7 +22,7 @@ _bloodPressure = if (!alive _target) then {
 } else {
     [_target] call FUNC(getBloodPressure)
 };
-_bloodPressure params ["_bloodPressureLow", "_bloodPressureLow"];
+_bloodPressure params ["_bloodPressureHigh", "_bloodPressureLow"];
 _output = "";
 _logOutPut = "";
 if ([_caller] call FUNC(isMedic)) then {

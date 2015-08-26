@@ -20,7 +20,7 @@
 #include "script_component.hpp"
 
 private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
-params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage", "_newDamage"];
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_newDamage"];
 
 // Most likely taking exessive fire damage. Lets exit.
 if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {};
@@ -35,7 +35,11 @@ _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
-[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
+
+
+systemChat format["ASSIGNING INJURIES: %1", _unit];
+
+[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds); //FUNC(handleDamage_assignWounds);
 
 // TODO Disabled until implemented fully
 //if (GVAR(enableAirway)) then {

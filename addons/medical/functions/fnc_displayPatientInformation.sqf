@@ -18,8 +18,8 @@
 
 // Exit for basic medical
 if (GVAR(level) < 2) exitWith {};
-private ["_target", "_show", "_selectionN", "_amountOfGeneric", "_bandagedwounds", "_logCtrl", "_part", "_partText", "_pointDamage", "_severity", "_total", "_totalIvVolume", "_triageStatus", "_type"];
-params ["_target", ["_target", true], ["_selectionN", 0]];
+private ["_amountOfGeneric", "_bandagedwounds", "_logCtrl", "_part", "_partText", "_pointDamage", "_severity", "_total", "_totalIvVolume", "_triageStatus", "_type"];
+params ["_target", ["_show", true], ["_selectionN", 0]];
 
 GVAR(currentSelectedSelectionN) = if (typeName _selectionN == "SCALAR") then {_selectionN} else {0};
 GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
@@ -203,7 +203,7 @@ if (_show) then {
         _logs = _target getvariable [QGVAR(logFile_Activity), []];
         {
             // [_message,_moment,_type, _arguments]
-            _x params ["_message", "_moment", "_arguments"];
+            _x params ["_message", "_moment", "_type", "_arguments"];
             if (isLocalized _message) then {
                 _message = localize _message;
             };

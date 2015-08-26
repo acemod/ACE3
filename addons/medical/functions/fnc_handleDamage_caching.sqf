@@ -79,15 +79,17 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
         if (diag_frameno > _frameno + 2) then {
             _unit setDamage 0;
 
-            _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
-            _cache_damages = _unit getVariable QGVAR(cachedDamages);
-            {
-                _params = _x + [_cache_damages select _foreachIndex];
-                _params call FUNC(handleDamage_advanced);
-            } foreach _cache_params;
-
-            [_unit] call FUNC(handleDamage_advancedSetDamage);
-
+            if (GVAR(level) < 2 || {!([_unit] call FUNC(hasMedicalEnabled))}) then {
+                [_unit] call FUNC(handleDamage_basic2);
+            } else {
+                _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+                _cache_damages = _unit getVariable QGVAR(cachedDamages);
+                {
+                    _params = _x + [_cache_damages select _foreachIndex];
+                    _params call FUNC(handleDamage_advanced);
+                } foreach _cache_params;
+                [_unit] call FUNC(handleDamage_advancedSetDamage);
+            };
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, [_unit, diag_frameno] ] call CBA_fnc_addPerFrameHandler;
