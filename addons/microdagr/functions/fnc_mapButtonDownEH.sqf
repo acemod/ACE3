@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-params ["_theMap", "_mouseButton", "_xPos", "_yPos"];
+params ["", "_mouseButton"];
 
 //Only handle RMB
 if (_mouseButton != 1) exitWith {};

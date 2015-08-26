@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_oldShowMode", "_args", "_pfID", "_player"];
+private ["_oldShowMode", "_args", "_player"];
 
 params [["_newDisplayShowMode", -1, [-1]]];
 _oldShowMode = GVAR(currentShowMode);
@@ -28,7 +28,6 @@ if (_newDisplayShowMode == -1) then {
 
 if ((_newDisplayShowMode == DISPLAY_MODE_DISPLAY) && {!([DISPLAY_MODE_DISPLAY] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
 if ((_newDisplayShowMode == DISPLAY_MODE_DIALOG) && {!([DISPLAY_MODE_DIALOG] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
-
 
 
 //On first-startup

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPos", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_playerPos2d", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox", "_yearString", "_monthSring", "_dayString"];
+private ["_display", "_waypoints", "_posString", "_eastingText", "_northingText", "_numASL", "_aboveSeaLevelText", "_compassAngleText", "_targetPos", "_targetPosName", "_targetPosLocationASL", "_bearingText", "_rangeText", "_targetName", "_bearing", "_2dDistanceKm", "_SpeedText", "_wpListBox", "_currentIndex", "_wpName", "_wpPos", "_settingListBox", "_yearString", "_monthSring", "_dayString", "_daylight"];
 
 disableSerialization;
 _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
@@ -91,7 +91,7 @@ case (APP_MODE_INFODISPLAY): {
                 } else {
                     ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
-                _2dDistanceKm = (((getPosASL ACE_player) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
+                _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
                 _numASL = (_targetPosLocationASL select 2) + EGVAR(common,mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
@@ -122,8 +122,6 @@ case (APP_MODE_COMPASS): {
             (_display displayCtrl IDC_MODECOMPASS_RANGE) ctrlSetText "";
             (_display displayCtrl IDC_MODECOMPASS_TARGET) ctrlSetText "";
         } else {
-            _playerPos2d = (getPosASL ACE_player) select [0,2];
-
             _targetPosName = "";
             _targetPosLocationASL = [];
 
@@ -149,7 +147,7 @@ case (APP_MODE_COMPASS): {
                 } else {
                     ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
-                _2dDistanceKm = (((getPosASL ACE_player) select [0,2]) distance (_targetPosLocationASL select [0,2])) / 1000;
+                _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
             };
 
@@ -165,9 +163,9 @@ case (APP_MODE_WAYPOINTS): {
 
         lbClear _wpListBox;
         {
-            EXPLODE_2_PVT(_x,_wpName,_wpPos);
+            _x params ["_wpName", "_wpPos"];
             _wpListBox lbAdd _wpName;
-            _2dDistanceKm = (((getPosASL ACE_player) select [0,2]) distance (_wpPos select [0,2])) / 1000;
+            _2dDistanceKm = ((getPosASL ACE_player) distance2D _wpPos) / 1000;
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)])];
         } forEach _waypoints;
 
