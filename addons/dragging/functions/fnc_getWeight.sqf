@@ -4,7 +4,7 @@
  * Returns the weight of a crate.
  *
  * Arguments:
- * Crate to get weight of <OBJECT>
+ * 0: Crate to get weight of <OBJECT>
  *
  * Return Value:
  * Total Weight <NUMBER>
@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private "_totalWeight";
-
+params ["_object"];
 // Initialize the total weight.
 _totalWeight = 0;
 
@@ -32,14 +32,14 @@ _totalWeight = 0;
     } forEach _item;
     true
 } count [
-    [getMagazineCargo _this, {configFile >> "CfgMagazines" >> _x}],
-    [getBackpackCargo _this, {configFile >> "CfgVehicles" >> _x}],
-    [getItemCargo _this, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],
-    [getWeaponCargo _this, {configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo"}]
+    [getMagazineCargo _object, {configFile >> "CfgMagazines" >> _x}],
+    [getBackpackCargo _object, {configFile >> "CfgVehicles" >> _x}],
+    [getItemCargo _object, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],
+    [getWeaponCargo _object, {configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo"}]
 ];
 
 // add Weight of create to totalWeight
-_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> _this >> "mass"));
+_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> _object >> "mass"));
 
 // Mass in Arma isn't an exact amount but rather a volume/weight value. This attempts to work around that by making it a usable value. (sort of).
 _totalWeight * 0.5
