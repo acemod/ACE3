@@ -54,13 +54,13 @@ if (isArray _hitpointGroupConfig) then {
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    _text = format ["STR_ACE_Repair_%1", _hitPoint];
+    private ["_textLocalized", "_textDefault"];
 
-    if (isLocalized _text) then {
-        _text = format [localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0)), localize _text];
-    } else {
-        _text = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointDamage > 0));
-    };
+    // Find localized string
+    _textLocalized = localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0));
+    _textDefault = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointDamage > 0));
+    ([_hitPoint, _textLocalized, _textDefault] call FUNC(getHitPointString)) params ["_text"];
 
+    // Display text
     [_text] call EFUNC(common,displayTextStructured);
 };

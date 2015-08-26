@@ -34,6 +34,11 @@ if (_type in _initializedClasses) exitWith {};
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
 
 
+private ["_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
+_hitPointsAddedNames = [];
+_hitPointsAddedStrings = [];
+_hitPointsAddedAmount = [];
+
 // add repair events to this vehicle class
 {
     if (_x in _wheelHitPoints) then {
@@ -50,7 +55,7 @@ if (_type in _initializedClasses) exitWith {};
 
         // remove wheel action
         _name = format  ["Remove_%1", _x];
-        _text = localize "STR_ACE_Repair_RemoveWheel";
+        _text = localize LSTRING(RemoveWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
@@ -97,18 +102,15 @@ if (_type in _initializedClasses) exitWith {};
         if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {};
 
         // add misc repair action
-
-        private ["_name", "_text", "_icon", "_selection", "_customSelectionsConfig", "_currentHitpoint", "_condition", "_statement"];
+        private ["_name", "_icon", "_selection", "_condition", "_statement"];
 
         _name = format ["Repair_%1", _x];
 
-        _text = format ["STR_ACE_Repair_%1", _x];
-
-        if (isLocalized _text) then {
-            _text = format [localize LSTRING(RepairHitpoint), localize _text];
-        } else {
-            _text = format [localize LSTRING(RepairHitpoint), _x];
-        };
+        // Find localized string and track those added for numerization
+        ([_x, "%1", _x, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
+        _hitPointsAddedNames = _trackArray select 0;
+        _hitPointsAddedStrings = _trackArray select 1;
+        _hitPointsAddedAmount = _trackArray select 2;
 
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
