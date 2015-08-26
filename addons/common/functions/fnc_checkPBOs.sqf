@@ -67,7 +67,7 @@ if (!isServer) then {
             };
 
             //[_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
-            diag_log text _error;
+            ACE_LOGERROR(_error);
 
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];

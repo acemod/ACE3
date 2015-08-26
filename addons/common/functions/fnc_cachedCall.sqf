@@ -40,7 +40,7 @@ if (((_namespace getVariable [_uid, [-99999]]) select 0) < ACE_diagTime) then {
                 private ["_varName","_cacheList"];
                 // _eventName is defined on the function that calls the event
                 #ifdef DEBUG_MODE_FULL
-                    diag_log text format ["ACE: Clear cached variables on event: %1", _eventName];
+                    ACE_LOGINFO(format ["Clear cached variables on event: %1", _eventName]);
                 #endif
                 // Get the list of caches to clear
                 _varName = format [QGVAR(clearCache_%1),_eventName];
@@ -58,9 +58,9 @@ if (((_namespace getVariable [_uid, [-99999]]) select 0) < ACE_diagTime) then {
         _cacheList pushBack [_namespace, _uid];
     };
 #ifdef DEBUG_MODE_FULL
-    diag_log format ["Calculated result: %1 %2", _namespace, _uid];
+    ACE_LOGINFO(format ["Calculated result: %1 %2", _namespace, _uid]);
 } else {
-    diag_log format ["Cached result    : %1 %2", _namespace, _uid];
+    ACE_LOGINFO(format ["Cached result: %1 %2", _namespace, _uid]);
 #endif
 };
 

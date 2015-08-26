@@ -31,4 +31,4 @@ if (!isServer) exitWith {};
 [_logic, QGVAR(fullRepairLocation), "fullRepairLocation"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(engineerSetting_fullRepair), "engineerSetting_fullRepair"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Repair Module Initialized.";
+ACE_LOGINFO("Repair Module Initialized.");

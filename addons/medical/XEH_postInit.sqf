@@ -284,7 +284,7 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 if (hasInterface) then {
     ["PlayerJip", {
-        diag_log format["[ACE] JIP Medical init for player"];
+        ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call EFUNC(common,addEventHandler);
 };

@@ -34,4 +34,4 @@ _duration = _logic getVariable ["Duration", 0];
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);
 
-diag_log text format ["[ACE]: Slideshow Module Initialized for: %1 with Duration: %2", _objects, _duration];
+ACE_LOGINFO(format ["Slideshow Module Initialized for: %1 with Duration: %2", _objects, _duration]);

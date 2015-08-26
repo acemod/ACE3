@@ -23,4 +23,4 @@ params ["_caller", "_target", "_errorMsg"];
 if (_caller != ACE_player) exitWith {};
 
 systemChat format ["Debug-Caller: Disarm finished from [%1] with code [%2]", _target, _errorMsg];
-diag_log text format ["[ACE_Disarming] %1 - eventCallerFinish: %2", ACE_time, _this];
+ACE_LOGINFO(format ["%1 - eventCallerFinish: %2", ACE_time, _this]);

@@ -23,7 +23,7 @@ _force = False;
 
 // no animation given
 if (isNil "_animation") exitWith {
-    diag_log format ["[ACE] ERROR: No animation specified in %1", _fnc_scriptNameParent];
+    ACE_LOGERROR(format ["No animation specified in %1.", _fnc_scriptNameParent]);
 };
 
 if (isNil "_priority") then {

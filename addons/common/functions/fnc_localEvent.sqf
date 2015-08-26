@@ -21,15 +21,15 @@ _eventIndex = _eventNames find _eventName;
 if(_eventIndex != -1) then {
     _events = (GVAR(events) select 1) select _eventIndex;
     #ifdef DEBUG_EVENTS
-        diag_log text format[ARR_2("* Local Event: %1",_eventName)];
-        diag_log text format[ARR_2("    args=%1",_eventArgs)];
+        ACE_LOGINFO(format ["* Local Event: %1", _eventName]);
+        ACE_LOGINFO(format ["    args=%1", _eventArgs]);
     #endif
-    
+
     {
         if(!isNil "_x") then {
-            _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Local Event %1 ID: %2",_eventName,_forEachIndex)]);
+            _eventArgs call CALLSTACK_NAMED(_x, format ["Local Event %1 ID: %2", _eventName, _forEachIndex]);
             #ifdef DEBUG_EVENTS_CALLSTACK
-                diag_log text format[ARR_2("    ID: %1",_forEachIndex)];
+                ACE_LOGINFO(format ["    ID: %1", _forEachIndex]);
             #endif
         };
     } forEach _events;

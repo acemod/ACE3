@@ -67,7 +67,7 @@ _gC = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_GURNEY_C");
 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
 if(_warn) then {
-    diag_log text format["Ammo class %1 lacks proper explosive properties definitions for frag!", _shellType]; //TODO: turn this off when we get closer to release
+    ACE_LOGWARNING(format ["Ammo class %1 lacks proper explosive properties definitions for frag!", _shellType]); //TODO: turn this off when we get closer to release
 };
 
 _fragPower = (((_m/_c)+_k)^-(1/2))*_gC;
@@ -187,9 +187,9 @@ if(_isArmed && (count _objects) > 0) then {
             _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
             _randomDir = random(_sectorSize);
             _vec = [cos(_sectorOffset + _randomDir), sin(_sectorOffset + _randomDir), sin(30 - (random 45))];
-            
+
             _fp = (_fragPower-(random (_fragPowerRandom)));
-            
+
             _vel = _vec vectorMultiply _fp;
 
             _fragType = round (random ((count _fragTypes)-1));
@@ -197,7 +197,7 @@ if(_isArmed && (count _objects) > 0) then {
             _fragObj setPosASL _lastPos;
             _fragObj setVectorDir _vec;
             _fragObj setVelocity _vel;
-            
+
             if(GVAR(traceFrags)) then {
                 GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                 [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(addTrack);
@@ -205,7 +205,7 @@ if(_isArmed && (count _objects) > 0) then {
             _fragCount = _fragCount + 1;
         };
     };
-    
+
 };
 // #ifdef DEBUG_MODE_FULL
     // ACE_player sideChat format["total frags: %1", GVAR(TOTALFRAGS)];

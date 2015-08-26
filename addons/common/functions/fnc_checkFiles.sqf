@@ -17,7 +17,7 @@
 private "_version";
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-diag_log text format ["[ACE]: ACE is version %1.", _version];
+ACE_LOGINFO(format ["ACE is version %1.", _version]);
 
 private "_addons";
 _addons = activatedAddons;
@@ -28,7 +28,7 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         private "_errorMsg";
         _errorMsg = format ["File %1.pbo is outdated.", _x];
 
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ACE_LOGERROR(_errorMsg);
 
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
@@ -44,14 +44,14 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         private "_errorMsg";
         _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ACE_LOGERROR(_errorMsg);
 
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     } else {
         // Print the current extension version
-        diag_log text format ["[ACE] Extension version: %1: %2", _x, (_x callExtension "version")];
+        ACE_LOGINFO(format ["Extension version: %1: %2", _x, (_x callExtension "version")]);
     };
 } forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
 
@@ -78,9 +78,9 @@ if (isMultiplayer) then {
                 private "_errorMsg";
                 _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
-                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+                ACE_LOGERROR(_errorMsg);
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
@@ -89,9 +89,9 @@ if (isMultiplayer) then {
             if !(_addons isEqualTo []) then {
                 _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
-                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+                ACE_LOGERROR(_errorMsg);
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
