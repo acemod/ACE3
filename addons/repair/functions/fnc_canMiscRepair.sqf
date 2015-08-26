@@ -24,7 +24,7 @@ params ["_caller", "_target", "_hitPoint"];
 _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);
 _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
-    // Loop through hitpoint groups
+    // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {
         // Exit using found hitpoint group if this hitpoint is leader of any
         if (_x select 0 == _hitPoint) exitWith {

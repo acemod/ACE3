@@ -35,14 +35,12 @@ _hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
 _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
 _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
-    // Loop through hitpoint groups
+    // Retrieve group if current hitpoint is leader of any
     {
-        // Exit using found hitpoint group if this hitpoint is leader of any
         if (_x select 0 == _hitPoint) exitWith {
             ([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitpoints"];
-            // Loop through the found group
+            // Set all sub-group hitpoints' damage to 0, if a hitpoint is invalid print RPT error
             {
-                // If hitpoint is valid set damage to 0, else print RPT error
                 if (_x in _hitpoints) then {
                     ["setVehicleHitPointDamage", _vehicle, [_vehicle, _x, 0]] call EFUNC(common,targetEvent);
                 } else {

@@ -81,12 +81,10 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         _hitpointGroupConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
         _inHitpointSubGroup = false;
         if (isArray _hitpointGroupConfig) then {
-            // Loop through hitpoint groups
+            // Set variable if current hitpoint is in a sub-group (to be excluded from adding action)
             _currentHitpoint = _x;
             {
-                // Loop through sub-group
                 {
-                    // Current hitpoint is in a sub-group, set it so
                     if (_x == _currentHitpoint) exitWith {
                         _inHitpointSubGroup = true;
                     };
@@ -94,7 +92,7 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
             } forEach (getArray _hitpointGroupConfig);
         };
 
-        // Exit if current hitpoint is not a group leader (only they get actions)
+        // Exit if current hitpoint is in sub-group (only main hitpoints get actions)
         if (_inHitpointSubGroup) exitWith {};
 
         // exit if the hitpoint is virtual
