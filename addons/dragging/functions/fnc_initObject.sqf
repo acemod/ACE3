@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private ["_position", "_direction", "config"];
+private ["_position", "_direction", "_config"];
 
 params ["_object"];
 
