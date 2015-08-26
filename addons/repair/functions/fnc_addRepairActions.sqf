@@ -14,7 +14,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-#define TRACK_HITPOINTS ["HitLTrack", "HitRTrack"]
 
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
@@ -75,6 +74,9 @@ _wheelHitPointSelections = _wheelHitPointsWithSelections select 1;
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
     } else {
+        // exit if the hitpoint is in the blacklist, e.g. glasses
+        if (_x in IGNORED_HITPOINTS) exitWith {};
+
         private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
 
         // Get hitpoint groups if available
