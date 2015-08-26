@@ -56,7 +56,7 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
     _duration = 5;
-    ACE_LOGINFO(format ["Interaction Menu module not present, defaulting duration value to %1", _duration]);
+    ACE_LOGINFO(format [ARR_2("Interaction Menu module not present, defaulting duration value to %1", _duration)]);
 };
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions

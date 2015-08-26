@@ -88,7 +88,7 @@ switch ((_type select 0)) do {
         };
     };
     default {
-        ACE_LOGWARNING(format ["Incorrect item type passed to %1, passed: %2", QFUNC(AddToInventory), _type]);
+        ACE_LOGWARNING(format [ARR_3("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type)]);
     };
 };
 

@@ -16,7 +16,7 @@ PARAMS_1(_name);
 private ["_data", "_eventId"];
 
 if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR(format ["Synced event key not found."]);
+    ACE_LOGERROR("Synced event key not found.");
     false
 };
 

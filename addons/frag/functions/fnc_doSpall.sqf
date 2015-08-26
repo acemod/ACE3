@@ -86,7 +86,7 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
                 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
                 if(_warn) then {
-                    ACE_LOGWARNING(format ["Ammo class %1 lacks proper explosive properties definitions for frag!", _roundType]); //TODO: turn this off when we get closer to release
+                    ACE_LOGWARNING(format [ARR_2("Ammo class %1 lacks proper explosive properties definitions for frag!", _roundType)]); //TODO: turn this off when we get closer to release
                 };
 
                 _fragPower = (((_m/_c)+_k)^-(1/2))*_gC;

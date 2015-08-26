@@ -18,15 +18,15 @@ if (_eventType == "ACEg") then {
         _events = (GVAR(events) select 1) select _eventIndex;
 
         #ifdef DEBUG_EVENTS
-            ACE_LOGINFO(format ["* Net Event %1", _eventName]);
-            ACE_LOGINFO(format ["    args=%1", _eventArgs]);
+            ACE_LOGINFO(format [ARR_2("* Net Event %1", _eventName)]);
+            ACE_LOGINFO(format [ARR_2("    args=%1", _eventArgs)]);
         #endif
 
         {
             if (!isNil "_x") then {
-                _eventArgs call CALLSTACK_NAMED(_x, format ["Net Event %1 ID: %2", _eventName, _forEachIndex]);
+                _eventArgs call CALLSTACK_NAMED(_x, format [ARR_3("Net Event %1 ID: %2", _eventName, _forEachIndex)]);
                 #ifdef DEBUG_EVENTS_CALLSTACK
-                    ACE_LOGINFO(format ["    ID: %1", _forEachIndex]);
+                    ACE_LOGINFO(format [ARR_2("    ID: %1", _forEachIndex)]);
                 #endif
             };
         } forEach _events;

@@ -42,7 +42,7 @@ _parseConfigForDisplayNames = {
     if !([configFile >> "ACE_Settings" >> _name] call _parseConfigForDisplayNames) then {
         if !([configFile >> "ACE_ServerSettings" >> _name] call _parseConfigForDisplayNames) then {
             if !([missionConfigFile >> "ACE_Settings" >> _name] call _parseConfigForDisplayNames) then {
-                ACE_LOGWARNING(format ["Setting found, but couldn't localize [%1] (server has but we don't?)", _name]);
+                ACE_LOGWARNING(format [ARR_2("Setting found, but couldn't localize [%1] (server has but we don't?)", _name)]);
             };
         };
     };

@@ -16,8 +16,8 @@
 PARAMS_2(_eventName,_eventArgs);
 
     #ifdef DEBUG_EVENTS
-        ACE_LOGINFO(format ["* Server Event: %1", _eventName]);
-        ACE_LOGINFO(format ["    args=%1", _eventArgs]);
+        ACE_LOGINFO(format [ARR_2("* Server Event: %1", _eventName)]);
+        ACE_LOGINFO(format [ARR_2("    args=%1", _eventArgs)]);
     #endif
 
 ACEg = [_eventName, _eventArgs];
