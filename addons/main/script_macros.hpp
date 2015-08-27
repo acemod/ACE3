@@ -160,4 +160,24 @@
 #define ACE_INFOFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_INFOFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_INFOFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_INFOFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
+#define ACE_LOGDEBUG(message) ACE_LOG(COMPONENT,"DEBUG",message)
+#define ACE_LOGDEBUG_1(message,arg1) ACE_LOGDEBUG(FORMAT_1(message,arg1))
+#define ACE_LOGDEBUG_2(message,arg1,arg2) ACE_LOGDEBUG(FORMAT_2(message,arg1,arg2))
+#define ACE_LOGDEBUG_3(message,arg1,arg2,arg3) ACE_LOGDEBUG(FORMAT_3(message,arg1,arg2,arg3))
+#define ACE_LOGDEBUG_4(message,arg1,arg2,arg3,arg4) ACE_LOGDEBUG(FORMAT_4(message,arg1,arg2,arg3,arg4))
+#define ACE_LOGDEBUG_5(message,arg1,arg2,arg3,arg4,arg5) ACE_LOGDEBUG(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
+#define ACE_LOGDEBUG_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_LOGDEBUG(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
+#define ACE_LOGDEBUG_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGDEBUG(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
+#define ACE_LOGDEBUG_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGDEBUG(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
+
+#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"DEBUG",message)
+#define ACE_DEBUGFORMAT_1(message,arg1) ACE_DEBUGFORMAT(FORMAT_1(message,arg1))
+#define ACE_DEBUGFORMAT_2(message,arg1,arg2) ACE_DEBUGFORMAT(FORMAT_2(message,arg1,arg2))
+#define ACE_DEBUGFORMAT_3(message,arg1,arg2,arg3) ACE_DEBUGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
+#define ACE_DEBUGFORMAT_4(message,arg1,arg2,arg3,arg4) ACE_DEBUGFORMAT(FORMAT_4(message,arg1,arg2,arg3,arg4))
+#define ACE_DEBUGFORMAT_5(message,arg1,arg2,arg3,arg4,arg5) ACE_DEBUGFORMAT(FORMAT_5(message,arg1,arg2,arg3,arg4,arg5))
+#define ACE_DEBUGFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_DEBUGFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
+#define ACE_DEBUGFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_DEBUGFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
+#define ACE_DEBUGFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_DEBUGFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
+
 #include "script_debug.hpp"
