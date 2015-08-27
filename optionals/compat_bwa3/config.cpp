@@ -5,12 +5,15 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"BWA3_Weapons"};
-        author[]={"Ruthberg"};
+        requiredAddons[] = {"BWA3_Common", "BWA3_Weapons", "BWA3_Tracked", "BWA3_Units"};
+        author[]={"Ruthberg","commy2"};
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgGlasses.hpp"
+#include "CfgRecoils.hpp"
