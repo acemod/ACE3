@@ -13,9 +13,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood", "_bloodPressureH", "_bloodPressureL", "_interval"];
-_unit = _this select 0;
-_interval = _this select 1;
+private ["_heartRate","_bloodPressure","_bloodVolume","_painStatus", "_lastTimeValuesSynced", "_syncValues", "_airwayStatus", "_blood"];
+params ["_unit", "_interval"];
 
 if (_interval == 0) exitWith {};
 
@@ -140,8 +139,7 @@ if (GVAR(level) >= 2) then {
 
     // Check vitals for medical status
     // TODO check for in revive state instead of variable
-    _bloodPressureL = _bloodPressure select 0;
-    _bloodPressureH = _bloodPressure select 1;
+    _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
     if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
         if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
@@ -180,6 +178,6 @@ if (GVAR(level) >= 2) then {
             if !(isnil "_value") then {
                 _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
             };
-        }foreach GVAR(IVBags);
+        } foreach GVAR(IVBags);
     };
 };

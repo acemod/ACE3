@@ -9,7 +9,7 @@
  * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
@@ -17,11 +17,8 @@
 #include "script_component.hpp"
 #define BANDAGEHEAL 0.8
 
-private ["_caller", "_target","_selection","_className","_target","_hitSelections","_hitPoints","_point", "_damage"];
-_caller = _this select 0;
-_target = _this select 1;
-_selection = _this select 2;
-_className = _this select 3;
+private ["_hitSelections", "_hitPoints", "_point", "_damage"];
+params ["_caller", "_target", "_selection", "_className"];
 
 if (_selection == "all") then {
     _target setDamage ((damage _target - BANDAGEHEAL) max 0);

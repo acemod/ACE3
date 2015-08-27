@@ -13,9 +13,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_allUsedMedication", "_logs"];
-
-_unit = _this select 0;
+private ["_allUsedMedication", "_logs"];
+params ["_unit"];
 
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(morphine), 0, true];

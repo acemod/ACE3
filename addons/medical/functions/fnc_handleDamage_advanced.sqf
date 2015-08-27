@@ -12,20 +12,15 @@
  * 6: Type of Damage <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage", "_part", "_damageBodyParts", "_newDamage", "_hitPoints"];
-_unit = _this select 0;
-_selectionName = _this select 1;
-_amountOfDamage = _this select 2;
-_sourceOfDamage = _this select 3;
-_typeOfProjectile = _this select 4;
-_newDamage = _this select 5;
+private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage", "_newDamage"];
 
 // Most likely taking exessive fire damage. Lets exit.
 if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {};
