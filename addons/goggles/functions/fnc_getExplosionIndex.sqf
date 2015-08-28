@@ -14,7 +14,4 @@
  * Public: No
  */
 #include "script_component.hpp"
-if (_this <= 0.04) exitWith {0};
-if (_this <= 0.06)) exitWith {1};
-if (_this <= 0.09) exitWith {2};
-3
+floor (linearConversion [0, 0.1, _this, 0, 3, true])

@@ -14,9 +14,4 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_result"];
-params ["_glasses"];
-_result = _glasses == "G_Diving";
-if (_result) exitWith {true};
-_result = [configFile >> "CfgGlasses" >> _glasses, configFile >> "CfgGlasses" >> "G_Diving"] call CBA_fnc_inheritsFrom;
-_result
+_glasses isKindOf ["G_Diving", configFile >> "CfgGlasses"]
