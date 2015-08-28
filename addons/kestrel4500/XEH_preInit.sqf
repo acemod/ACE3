@@ -16,5 +16,5 @@ PREP(storeUserData);
 PREP(updateDisplay);
 PREP(updateImpellerState);
 PREP(updateMemory);
-PREP(dayOfWeek)
+PREP(dayOfWeek);
 ADDON = true;

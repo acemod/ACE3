@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 params ["_slot", "_value"];
 GVAR(MIN)   set [_slot, (GVAR(MIN) select _slot) min _value];
 GVAR(MAX)   set [_slot, _value max (GVAR(MAX) select _slot)];

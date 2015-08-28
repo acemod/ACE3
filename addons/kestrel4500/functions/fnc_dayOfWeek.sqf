@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+#include "script_component.hpp"
 private "_table";
 params ["_year", "_month", "_day"];
 

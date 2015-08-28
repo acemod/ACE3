@@ -102,7 +102,7 @@ GVAR(Overlay) = true;
         __ctrlInfoLine1 ctrlSetText _ctrlInfoLine1;
         __ctrlInfoLine2 ctrlSetText _ctrlInfoLine2;
 
-        __ctrlBottomBig ctrlSetText _ctrlBottomBig ;
+        __ctrlBottomBig ctrlSetText _ctrlBottomBig;
 
         __ctrlCenterLine1 ctrlSetText _ctrlCenterLine1;
         __ctrlCenterLine2 ctrlSetText _ctrlCenterLine2;
