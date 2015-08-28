@@ -3,10 +3,10 @@
  * Updates all gun column input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_gun
@@ -38,13 +38,13 @@ GVAR(workingMemory) params [
 
 ctrlSetText [1000, _profile];
 if (GVAR(currentUnit) != 2) then {
-    ctrlSetText [100, Str(Round(_boreHeight) / 2.54 * 100) / 100)];
+    ctrlSetText [100, Str(Round(_boreHeight / 2.54 * 100) / 100)];
     ctrlSetText [110, Str(Round(_bulletMass * 15.4323584))];
-    ctrlSetText [130, Str(Round(_muzzleVelocity) * 3.2808399))];
+    ctrlSetText [130, Str(Round(_muzzleVelocity * 3.2808399))];
 } else {
-    ctrlSetText [100, Str(Round(_boreHeight * 100) / 100)];
+    ctrlSetText [100, Str(Round((_boreHeight * 100) / 100))];
     ctrlSetText [110, Str(Round(_bulletMass))];
-    ctrlSetText [130, Str(Round(_muzzleVelocity)];
+    ctrlSetText [130, Str(Round(_muzzleVelocity))];
 };
 
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {

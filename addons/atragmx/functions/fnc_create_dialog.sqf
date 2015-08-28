@@ -3,10 +3,10 @@
  * Creates the ATragMX dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_create_dialog

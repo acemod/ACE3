@@ -230,7 +230,7 @@ class ATragMX_Display {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.315;
         };
-        
+
         class TEXT_GUN_FRAME: ATragMX_RscText {
             idc=1001;
             style=64;
@@ -263,7 +263,7 @@ class ATragMX_Display {
             h=0.03;
             style=ST_LEFT;
             sizeEx=0.025;
-            text="";
+            text="here must be stand something different";
         };
         class TEXT_D: ATragMX_RscButton {
             idc=600;
@@ -610,7 +610,7 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.27;
             text="4";
             action=QUOTE(call FUNC(toggle_solution_setup));
-        };        
+        };
         class TEXT_CALCULATE: TEXT_SCOPE_UNIT {
             idc=3000;
             style=ST_RIGHT;
@@ -1059,7 +1059,7 @@ class ATragMX_Display {
             text="Cancel";
             action=QUOTE(false call FUNC(show_add_new_gun); true call FUNC(show_gun_list));
         };
-        
+
         class TEXT_GUN_AMMO_DATA_BORE_HEIGHT: TEXT_BORE_HEIGHT {
             idc=12000;
             w=0.22;
@@ -1147,7 +1147,7 @@ class ATragMX_Display {
         class TEXT_GUN_AMMO_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=12011;
         };
-        
+
         class TEXT_ATMO_ENV_DATA_DEFAULT: TEXT_LEAD {
             idc=13000;
             w=0.08;
@@ -1231,7 +1231,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.29;
             text="Calc Method";
         };
-        
+
         class TEXT_TARGET_DATA_LATITUDE: TEXT_BORE_HEIGHT {
             idc=14000;
             w=0.22;
@@ -1379,7 +1379,7 @@ class ATragMX_Display {
         class TEXT_TARGET_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=14011;
         };
-        
+
         class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
             idc=15000;
             style=64;

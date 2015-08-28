@@ -3,10 +3,10 @@
  * Adds a new (default) gun profile to the profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_add_new_gun

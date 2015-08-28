@@ -8,7 +8,7 @@
  * 2: Inclination (Degrees) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [1000, 45, 1] call ace_microdagr_fnc_recieveRangefinderData

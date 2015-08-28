@@ -3,10 +3,10 @@
  * Calculates the fireing solution and updates the result input/output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_calculate_target_solution

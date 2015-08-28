@@ -8,7 +8,7 @@
  * update display <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_change_gun

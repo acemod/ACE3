@@ -6,7 +6,7 @@
  * change gun? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * false call ace_atragmx_fnc_toggle_gun_list

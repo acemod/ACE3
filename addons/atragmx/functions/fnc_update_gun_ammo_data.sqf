@@ -3,10 +3,10 @@
  * Updates the gun ammo data fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_gun_ammo_data
@@ -41,11 +41,11 @@ GVAR(workingMemory) params [
 if (GVAR(currentUnit) != 2) then {
     ctrlSetText [120000, Str(Round(_boreHeight / 2.54 * 100) / 100)];
     ctrlSetText [120010, Str(Round(_bulletMass * 15.4323584))];
-    ctrlSetText [120020, Str(Round((GVAR(workingMemory) select 13) / 10 / 2.54 * 1000) / 1000)];
+    ctrlSetText [120020, Str(Round(_bulletDiameter / 10 / 2.54 * 1000) / 1000)];
     ctrlSetText [120040, Str(Round(_barrelTwist / 2.54 * 10) / 10)];
     ctrlSetText [120050, Str(Round(_muzzleVelocity * 3.2808399))];
 } else {
-    ctrlSetText [120000, Str(Round((GVAR(workingMemory) select 5) * 100) / 100)];
+    ctrlSetText [120000, Str(Round(_boreHeight * 100) / 100)];
     ctrlSetText [120010, Str(Round(_bulletMass))];
     ctrlSetText [120020, Str(Round(_bulletDiameter / 10 * 1000) / 1000)];
     ctrlSetText [120040, Str(Round(_barrelTwist * 100) / 100)];

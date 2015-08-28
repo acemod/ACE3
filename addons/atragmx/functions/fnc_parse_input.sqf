@@ -3,10 +3,10 @@
  * Parses all input fields in the gun, atmosphere and target column and the result input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_parse_input

@@ -6,7 +6,7 @@
  * update speed? <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_target_speed_assist

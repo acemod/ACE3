@@ -6,7 +6,7 @@
  * Apply new range card settings <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_range_card_setup

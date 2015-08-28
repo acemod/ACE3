@@ -3,10 +3,10 @@
  * Cycles through the target directions left/right
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_cycle_target_direction
