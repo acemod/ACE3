@@ -16,15 +16,12 @@
  */
 #include "script_component.hpp"
 
-private ["_attachedObjects", "_attachedItems", "_itemDisplayName",
-    "_attachedObject", "_attachedIndex", "_itemName", "_minDistance",
-    "_unitPos", "_objectPos"
-];
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);
 
-_attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
-_attachedItems = _attachToVehicle getVariable [QGVAR(ItemNames), []];
+private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_unitPos", "_objectPos"];
+
+_attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 
 _attachedObject = objNull;
 _attachedIndex = -1;
@@ -32,18 +29,17 @@ _itemName = "";
 
 //Find closest attached object
 _minDistance = 1000;
-_unitPos = getPos _unit;
-_unitPos set [2,0];
+
 {
-    _objectPos = getPos _x;
-    _objectPos set [2, 0];
-    if (_objectPos distance _unitPos < _minDistance) then {
-        _minDistance = _objectPos distance _unitPos;
-        _attachedObject = _x;
-        _itemName = _attachedItems select _forEachIndex;
+    _x params ["_xObject", "_xItemName"];
+
+    if (((getPos _unit) distance2d (getPos _xObject)) < _minDistance) then {
+        _minDistance = ((getPos _unit) distance2d (getPos _xObject));
+        _attachedObject = _xObject;
+        _itemName = _xItemName;
         _attachedIndex = _forEachIndex;
     };
-} forEach _attachedObjects;
+} forEach _attachedList;
 
 // Check if unit has an attached item
 if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find attached object")};
@@ -68,10 +64,8 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
 };
 
 // Reset unit variables
-_attachedObjects deleteAt _attachedIndex;
-_attachedItems deleteAt _attachedIndex;
-_attachToVehicle setVariable [QGVAR(Objects), _attachedObjects, true];
-_attachToVehicle setVariable [QGVAR(ItemNames), _attachedItems, true];
+_attachedList deleteAt _attachedIndex;
+_attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
 
 // Display message
 _itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
