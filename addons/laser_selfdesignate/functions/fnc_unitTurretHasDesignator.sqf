@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Has designator? <BOOL>
+ * Has unit designator <BOOL>
  *
  * Public: No
  */

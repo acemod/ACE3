@@ -6,7 +6,7 @@
  * 0: Emitter <OBJECT>
  *
  * Return Value:
- * 0: position <POSTION>
+ * 0: position <ARRAY>
  * 1: direction <ARRAY>
  *
  * Public: No
