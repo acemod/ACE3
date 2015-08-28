@@ -27,12 +27,15 @@ _distance = _actionData select 8;
 _pos = if((count _this) > 2) then {
     _this select 2
 } else {
-    // Setup scope variables for position code
-    private ["_target"];
-    _target = _object;
-
-    // Get action position
-    _object modelToWorldVisual (call (_actionData select 7))
+    if ((_object isEqualTo GVAR(firstCursorTarget)) && {(_actionData select 0) == "ACE_MainActions"} && {!(_object isKindOf "CAManBase")}) then {
+        _object modelToWorldVisual GVAR(firstCursorTargetPos);
+    } else {
+        // Setup scope variables for position code
+        private ["_target"];
+        _target = _object;
+        // Get action position
+        _object modelToWorldVisual (call (_actionData select 7))
+    };
 };
 
 // For non-self actions, exit if the action is too far away or ocluded

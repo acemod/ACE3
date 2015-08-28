@@ -95,4 +95,40 @@ if (GVAR(menuAnimationSpeed) > 0) then {
                        
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 
+GVAR(firstCursorTarget) = objNull;
+GVAR(firstCursorTargetPos) = [0,0,0];
+_cursorTargets = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), (AGLtoASL positionCameraToWorld [0,0,10]), ACE_player];
+if ((count _cursorTargets) > 0) then {
+    (_cursorTargets select 0) params ["_intsectPosASL", "", "_intersectObject"];
+
+    _target = _intersectObject;
+    _targetInterestPos = _intersectObject worldToModelVisual (ASLtoAGL _intsectPosASL);
+
+    _actionsVarName = format [QGVAR(Act_%1), typeOf _intersectObject];
+    _classActions = missionNamespace getVariable [_actionsVarName, []];
+    _fnc_posOverlaps = {
+        _return = false;
+        {
+            if ((count _x) > 0) then {
+                _baseAction = _x select 0;
+                if ((_baseAction select 0) != "ACE_MainActions") then {
+                    _actionPosition = call (_baseAction select 7);
+                    diag_log text format ["%1 from %2", (_actionPosition vectorDistance _targetInterestPos), _x];
+                    if ((_actionPosition vectorDistance _targetInterestPos) < 0.4) then {
+                        _return = true;
+                    };
+                };
+            };
+        } forEach _classActions;
+        _return
+    };
+
+    while _fnc_posOverlaps do {
+        _targetInterestPos = _targetInterestPos vectorAdd [0,0,0.05];
+    };
+
+    GVAR(firstCursorTarget) = _intersectObject;
+    GVAR(firstCursorTargetPos) = _targetInterestPos;
+};
+
 true
