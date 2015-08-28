@@ -3,19 +3,18 @@
  *
  * Drop a carried object.
  *
- * Argument:
- * 0: Unit that carries the other object (Object)
- * 1: Carried object to drop (Object)
+ * Arguments:
+ * 0: Unit that carries the other object <OBJECT>
+ * 1: Carried object to drop <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // remove scroll wheel action
 _unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);

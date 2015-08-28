@@ -6,7 +6,6 @@ class CfgVehicles {
         };
         class TransportBackpacks {
             MACRO_ADDBACKPACK(ACE_NonSteerableParachute,4);
-            MACRO_ADDBACKPACK(ACE_ReserveParachute,4);
         };
     };
 
@@ -93,7 +92,7 @@ class CfgVehicles {
     class ACE_ReserveParachute: ACE_NonSteerableParachute {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(ReserveParachute);
-        scope = 2;
+        scope = 1;
         mass = 70;
         ParachuteClass = "NonSteerable_Parachute_F";
         ace_reserveParachute = "";

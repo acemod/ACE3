@@ -10,6 +10,13 @@ ACE_Modifier = 0;
     _group selectLeader _leader;
 }] call EFUNC(common,addEventHandler);
 
+//Pushing boats from FUNC(push)
+[QGVAR(pushBoat), {
+    params ["_boat", "_newVelocity"];
+    _boat setVelocity _newVelocity;
+}] call EFUNC(common,addEventHandler);
+
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;

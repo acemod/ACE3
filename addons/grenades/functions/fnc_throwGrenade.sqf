@@ -12,7 +12,7 @@
  * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_grenades_fnc_throwGrenade
@@ -21,11 +21,8 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon", "_projectile", "_mode", "_fuzeTime"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
-_projectile = _this select 6;
+private ["_mode", "_fuzeTime"];
+params ["_unit", "_weapon", "", "", "", "", "_projectile"];
 
 if (_unit != ACE_player) exitWith {};
 if (_weapon != "Throw") exitWith {};

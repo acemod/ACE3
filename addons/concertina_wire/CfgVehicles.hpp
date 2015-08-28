@@ -3,7 +3,7 @@ class CfgVehicles {
     class Fence;
     class thingX;
     class NonStrategic;
-    
+
     class ACE_ConcertinaWireNoGeo: Fence {
         XEH_ENABLED;
         scope = 1;
@@ -48,7 +48,7 @@ class CfgVehicles {
             class wire_16: wire_2{};
             class wire_17: wire_2{};
             class wire_18: wire_2{};
-            
+
             class wire_2_1: wire_2 {
                 animPeriod = 8;
             };
@@ -67,13 +67,14 @@ class CfgVehicles {
             class wire_15_1: wire_2_1 {};
             class wire_16_1: wire_2_1 {};
             class wire_17_1: wire_2_1 {};
-            class wire_18_1: wire_2_1 {};			
+            class wire_18_1: wire_2_1 {};
         };
     };
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRE;
         model = PATHTOF(data\ACE_ConcertinaWire.p3d);
+        EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -113,6 +114,8 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -123,7 +126,8 @@ class CfgVehicles {
                     displayName = "$STR_ACE_ROLLWIRE";
                     distance = 4;
                     condition = "true";
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(deploy));
+                    //wait a frame to handle "Do When releasing action menu key" option:
+                    statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
@@ -132,7 +136,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Land_Razorwire_F: NonStrategic {
         XEH_ENABLED;
     };

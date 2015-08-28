@@ -1,27 +1,21 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg"
-         height="112">
+    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.2.1-blue.svg"
-             alt="ACE version">
+        <img src="https://img.shields.io/badge/Version-3.2.1-blue.svg" alt="ACE3 version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.0/ace3_3.2.1.zip">
-        <img src="http://img.shields.io/badge/Download-56.5_MB-green.svg"
-             alt="ACE download">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
+        <img src="http://img.shields.io/badge/Download-56.5_MB-green.svg" alt="ACE3 download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues"
-             alt="ACE issues">
+        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 issues">
     </a>
     <a href="http://forums.bistudio.com/showthread.php?191716-ACE3-A-collaborative-merger-between-AGM-CSE-and-ACE&p=2935435&viewfull=1#post2935435">
-        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg"
-             alt="BIF thread">
+        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg" alt="BIF thread">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="http://img.shields.io/badge/License-GPLv2-red.svg"
-             alt="ACE license">
+        <img src="http://img.shields.io/badge/License-GPLv2-red.svg" alt="ACE3 license">
     </a>
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>

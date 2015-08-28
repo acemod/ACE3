@@ -15,6 +15,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 ["SetHandcuffed", [_target], [_target, false]] call EFUNC(common,targetEvent);

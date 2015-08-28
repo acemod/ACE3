@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi and esteldunedain
+ * Author: KoffeinFlummi, esteldunedain
  * Adjusts the flight path of the bullet according to the zeroing
  *
  * Argument:
@@ -18,11 +18,11 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_adjustment", "_projectile", "_weaponIndex", "_zeroing", "_adjustment"];
-_unit = _this select 0;
-_projectile = _this select 6;
+private ["_adjustment", "_weaponIndex", "_zeroing", "_adjustment"];
 
-if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
+params ["_unit", "", "", "", "", "", "_projectile"];
+
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 
 _adjustment = _unit getVariable [QGVAR(Adjustment), []];
 if (_adjustment isEqualTo []) exitWith {};
@@ -32,9 +32,10 @@ if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;
 
-if (_zeroing isEqualTo [0,0,0]) exitWith {};
+if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 
 // Convert zeroing from mils to degrees
 _zeroing = _zeroing vectorMultiply 0.05625;
+_zeroing params ["_elevation", "_windage", "_zero"];
 
-[_projectile, (_zeroing select 1), (_zeroing select 0) + (_zeroing select 2), 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, _windage, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);

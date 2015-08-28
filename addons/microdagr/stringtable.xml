@@ -283,7 +283,7 @@
             <Spanish>Configurar MicroDAGR</Spanish>
             <Russian>Настроить MicroDAGR</Russian>
             <Czech>Konfigurovat MicroDAGR</Czech>
-            <Polish>Konfiguruj MicroDAGR</Polish>
+            <Polish>Otwórz MicroDAGR</Polish>
             <French>Configurer MicroDAGR</French>
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
             <Italian>ConfiguraMicroDAGR</Italian>
@@ -325,7 +325,7 @@
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
         </Key>
-        <Key ID="STR_ACE_MicroDAGR_None">
+        <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
             <English>Full Satellite + Buildings</English>
             <Polish>Pełna satelitarna + budynki</Polish>
             <Spanish>Satelite completo + Edificios</Spanish>
@@ -333,7 +333,7 @@
             <Czech>Satelit + Budovy</Czech>
             <Portuguese>Satélite completo + Edifícios</Portuguese>
         </Key>
-        <Key ID="STR_ACE_MicroDAGR_Side">
+        <Key ID="STR_ACE_MicroDAGR_MapFill_OnlyRoads">
             <English>Topographical + Roads</English>
             <Polish>Topograficzna + drogi</Polish>
             <Spanish>Topografico + Carreteras</Spanish>
@@ -341,7 +341,7 @@
             <Czech>Topografické + Cesty</Czech>
             <Portuguese>Topográfico + Estradas</Portuguese>
         </Key>
-        <Key ID="STR_ACE_MicroDAGR_Unique">
+        <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
             <Polish>Żadna (wyłącza ekran mapy)</Polish>
             <Spanish>Nada (No se puede el mapa)</Spanish>
