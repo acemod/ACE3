@@ -6,22 +6,19 @@
  * 0: unit <OBJECT>
  *
  * Return Value:
- * Boolean
+ * Valid AI <BOOL>
  *
  * Example:
- * [_unit] call FUNC(isValidAi)
+ * [_unit] call ace_switchunits_fnc_isValidAi
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+params ["_unit"];
 
 !([_unit] call EFUNC(common,isPlayer)
 || {_unit in playableUnits}
-|| {vehicle _unit != _unit} 
-|| {_unit getVariable [QGVAR(IsPlayerUnit), false]} 
-|| {_unit getVariable [QGVAR(IsPlayerControlled), false]})
+|| {vehicle _unit != _unit}
+|| {_unit getVariable [QGVAR(IsPlayerUnit), false]}
+|| {_unit getVariable [QGVAR(IsPlayerControlled), false]}) // return

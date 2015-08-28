@@ -3,28 +3,25 @@
  *
  * Drag an object. Called from ace_dragging_fnc_startDrag
  *
- * Argument:
- * 0: Unit that should do the dragging (Object)
- * 1: Object to drag (Object)
+ * Arguments:
+ * 0: Unit that should do the dragging <OBJECT>
+ * 1: Object to drag <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+private ["_position", "_direction", "_offset", "_actionID"];
+params ["_unit", "_target"];
 
 // get attachTo offset and direction.
-private ["_position", "_direction"];
-
 _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
 _direction = _target getVariable [QGVAR(dragDirection), 0];
 
 // add height offset of model
-private "_offset";
 _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
 _position = _position vectorAdd [0, 0, _offset];
@@ -41,7 +38,6 @@ _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add scrollwheel action to release object
-private "_actionID";
 _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
 
 if (_actionID != -1) then {

@@ -4,7 +4,7 @@
  * Device saving not implemented yet, just save to player object
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * Waypoints <ARRAY>
@@ -16,4 +16,4 @@
  */
 #include "script_component.hpp"
 
-(ace_player getVariable [QGVAR(waypoints), []])
+(ACE_player getVariable [QGVAR(waypoints), []])

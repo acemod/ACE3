@@ -103,7 +103,7 @@
             <Spanish>Abrir menú de exportación</Spanish>
             <Russian>Открыть меню экспорта</Russian>
             <Czech>Otevřít exportovací menu</Czech>
-            <Polish>Otwórz menu eksportowania</Polish>
+            <Polish>Eksport ustawień</Polish>
             <French>Ouvrir le menu d'exportation</French>
             <Hungarian>Exportálási menü megnyitása</Hungarian>
             <Italian>Apri menù esportazione</Italian>
@@ -175,7 +175,7 @@
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>
-            <Polish>Zawrzyj ustawienia klienta</Polish>
+            <Polish>Zaw. ustaw. klienta</Polish>
             <French>Inclure paramètres client</French>
             <Hungarian>Kliens-beállítások melléklése</Hungarian>
             <Italian>Includi i parametri del client</Italian>
@@ -219,7 +219,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
-            <Polish>Pozwól na eksport ustawień [ACE]</Polish>
+            <Polish>Pozwól na eksport ustawień</Polish>
             <Spanish>[ACE] Permitir exportar configuración</Spanish>
             <German>Erlaube Config-Export [ACE]</German>
             <Czech>Povolit export natavení [ACE]</Czech>
@@ -307,7 +307,7 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
-            <Polish>Debuguj do schowka</Polish>
+            <Polish>Debug do schowka</Polish>
             <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
             <German>Debug in die Zwischenablage</German>
@@ -323,9 +323,11 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
+            <Polish>Fix Headbug</Polish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
+            <Polish>Resetuje aktualną animację.</Polish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -346,6 +348,10 @@
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
             <Polish>Wszystkie kategorie</Polish>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
+            <English>Logistics</English>
+            <Polish>Logistyka</Polish>
         </Key>
     </Package>
 </Project>

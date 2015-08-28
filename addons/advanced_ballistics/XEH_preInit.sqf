@@ -13,5 +13,5 @@ PREP(initializeTerrainExtension);
 PREP(initModuleSettings);
 PREP(readAmmoDataFromConfig);
 PREP(readWeaponDataFromConfig);
-
+PREP(handleFirePFH);
 ADDON = true;

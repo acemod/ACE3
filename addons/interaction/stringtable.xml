@@ -414,7 +414,7 @@
             <Spanish>Te tocaron el hombro DERECHO</Spanish>
             <German>Dir wurde auf die rechte Schulter geklopft</German>
             <French>On te tape sur l'épaule droite</French>
-            <Polish>Zostałeś klepnięty w prawe ramię</Polish>
+            <Polish>Zostałeś klepnięty w prawe ramię.</Polish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
@@ -426,7 +426,7 @@
             <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
             <German>Dir wurde auf die linke Schulter geklopft</German>
             <French>On te tape sur l'épaule gauche</French>
-            <Polish>Zostałeś klepnięty w lewe ramię</Polish>
+            <Polish>Zostałeś klepnięty w lewe ramię.</Polish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
@@ -486,7 +486,7 @@
             <German>Gruppenverwaltung</German>
             <Spanish>Gestión de equipo</Spanish>
             <French>Gestion d'équipe</French>
-            <Polish>Zarządzanie oddziałem</Polish>
+            <Polish>Drużyna</Polish>
             <Czech>Správa týmu</Czech>
             <Russian>Управление группой</Russian>
             <Portuguese>Gerenciamento de Equipe</Portuguese>
