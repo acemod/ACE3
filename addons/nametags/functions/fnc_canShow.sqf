@@ -10,16 +10,12 @@
  * Can show Crew Info <BOOL>
  *
  * Example:
- * call ace_nametags_fnc_doShow
+ * call ace_nametags_fnc_canShow
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_player"];
-
-_player = ACE_player;
-
-vehicle _player != _player &&
+((vehicle ACE_player) != ACE_player) &&
 {GVAR(ShowCrewInfo)} &&
-{!(vehicle _player isKindOf "ParachuteBase")};
+{!(vehicle ACE_player isKindOf "ParachuteBase")};

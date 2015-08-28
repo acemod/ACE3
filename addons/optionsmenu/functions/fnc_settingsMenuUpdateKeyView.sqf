@@ -28,24 +28,13 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
     default {[]};
 };
 
-_selectedCategory = GVAR(categories) select GVAR(currentCategorySelection);
-_filteredCollection = [];
-{
-    if (_selectedCategory == "" || {_selectedCategory == (_x select 8)}) then {
-        _filteredCollection pushBack _x;
-    };
-} forEach _collection;
+_settingIndex = -1;
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
+};
 
-if (count _filteredCollection > 0) then {
-    _settingIndex =  (lbCurSel _ctrlList);
-    if (_settingIndex > (count _filteredCollection)) then {
-        _settingIndex = count _filteredCollection  - 1;
-    };
-
-    if (_settingIndex < 0) then {
-        _settingIndex = 0;
-    };
-    _setting = _filteredCollection select _settingIndex;
+if ((_settingIndex >= 0) && {_settingIndex <= (count _collection)}) then {
+    _setting = _collection select _settingIndex;
 
     _entryName = _setting select 0;
     _localizedName = _setting select 3;

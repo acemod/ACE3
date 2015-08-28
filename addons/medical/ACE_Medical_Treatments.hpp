@@ -118,7 +118,7 @@ class ACE_Medical_Actions {
             // What is the level of medical skill required for this treatment action? 0 = all soldiers, 1 = medic, 2 = doctor
             requiredMedic = 0;
             // The time it takes for a treatment action to complete. Time is in seconds.
-            treatmentTime = 5;
+            treatmentTime = 8;
             // Item required for the action. Leave empty for no item required.
             items[] = {"ACE_fieldDressing"};
             condition = "";
@@ -154,9 +154,9 @@ class ACE_Medical_Actions {
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
             displayNameProgress = CSTRING(Applying_Tourniquet);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r", "body"};
+            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             items[] = {"ACE_tourniquet"};
-            treatmentTime = 6;
+            treatmentTime = 4;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
             condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call FUNC(hasTourniquetAppliedTo)));
             litter[] = {};
@@ -234,7 +234,7 @@ class ACE_Medical_Actions {
         };
         class SurgicalKit: fieldDressing {
             displayName = CSTRING(Use_SurgicalKit);
-            displayNameProgress = CSTRING(TreatmentAction);
+            displayNameProgress = CSTRING(Stitching);
             category = "advanced";
             items[] = {"ACE_surgicalKit"};
             treatmentLocations[] = {QGVAR(useLocation_SurgicalKit)};
@@ -335,7 +335,7 @@ class ACE_Medical_Actions {
             category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 2;
+            treatmentTime = 15;
             items[] = {"ACE_bodyBag"};
             condition = "!alive (_this select 1);";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));

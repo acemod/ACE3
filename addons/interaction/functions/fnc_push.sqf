@@ -4,22 +4,23 @@
  *
  * Arguments:
  * 0: Boat <OBJECT>
- * 1: Velocity <ARRAY>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [target, [vector]] call ace_interaction_fnc_push
+ * [Boats, Jose] call ace_interaction_fnc_push
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-params ["_boat", "_velocity"];
 
-if !(local _boat) exitWith {
-    [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);
-};
+params ["_boat", "_player"];
 
-_boat setVelocity _velocity;
+private ["_newVelocity"];
+
+_newVelocity = [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5];
+
+[QGVAR(pushBoat), [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);

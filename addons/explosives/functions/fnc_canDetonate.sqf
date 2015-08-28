@@ -14,7 +14,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private "_unit";
-_unit = _this select 0;
 
-[_unit] call FUNC(hasPlacedExplosives) and {count ([_unit] call FUNC(getDetonators)) > 0}
+params ["_unit"];
+
+([_unit] call FUNC(hasPlacedExplosives)) && {(count ([_unit] call FUNC(getDetonators))) > 0}

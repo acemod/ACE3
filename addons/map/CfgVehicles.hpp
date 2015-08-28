@@ -1,4 +1,20 @@
 class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_MapFlashlight {
+                displayName = CSTRING(Action_Flashlights);
+                icon = QUOTE(\a3\ui_f\data\IGUI\Cfg\VehicleToggles\lightsiconon_ca.paa);
+                condition = QUOTE(GVAR(mapIllumination) && visibleMap && (count ([ACE_player] call FUNC(getUnitFlashlights)) > 0));
+                statement = "true";
+                exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
+                insertChildren = QUOTE(_this call DFUNC(compileFlashlightMenu));
+                showDisabled = 0;
+                priority = 99;
+            };
+        };
+    };
+
     class ACE_Module;
     class ACE_ModuleMap: ACE_Module {
         author = ECSTRING(common,ACETeam);
@@ -12,6 +28,12 @@ class CfgVehicles {
             class MapIllumination {
                 displayName = CSTRING(MapIllumination_DisplayName);
                 description = CSTRING(MapIllumination_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class MapGlow {
+                displayName = CSTRING(MapGlow_DisplayName);
+                description = CSTRING(MapGlow_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -45,7 +67,7 @@ class CfgVehicles {
         displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
-        isGlobal = 0;
+        isGlobal = 1;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
             class Enabled {

@@ -15,16 +15,16 @@
 private ["_parseConfigForDisplayNames", "_name"];
 
 _parseConfigForDisplayNames = {
-    private "_optionEntry";
+    private ["_optionEntry", "_values", "_text"];
     _optionEntry = _this select 0;
     if !(isClass _optionEntry) exitwith {false};
+    _values = getArray (_optionEntry >> "values");
     _x set [3, getText (_optionEntry >> "displayName")];
     _x set [4, getText (_optionEntry >> "description")];
+    _x set [5, _values];
+    _x set [8, getText (_optionEntry >> "category")];
 
-    private "_values";
-    _values = _x select 5;
     {
-        private "_text";
         _text = _x;
         if (((typeName _text) == "STRING") && {(count _text) > 1} && {(_text select [0,1]) == "$"}) then {
             _text = localize (_text select [1, ((count _text) - 1)]); //chop off the leading $
@@ -41,7 +41,9 @@ _parseConfigForDisplayNames = {
 
     if !([configFile >> "ACE_Settings" >> _name] call _parseConfigForDisplayNames) then {
         if !([configFile >> "ACE_ServerSettings" >> _name] call _parseConfigForDisplayNames) then {
-            [missionConfigFile >> "ACE_Settings" >> _name] call _parseConfigForDisplayNames;
+            if !([missionConfigFile >> "ACE_Settings" >> _name] call _parseConfigForDisplayNames) then {
+                diag_log text format ["[ACE] - Setting found, but couldn't localize [%1] (server has but we don't?)", _name];
+            };
         };
     };
 

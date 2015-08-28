@@ -1,9 +1,26 @@
-// by commy2
+/*
+ * Author: commy2
+ * Take weapon of safety lock.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Muzzle <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_unlockSafety
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_weapon,_muzzle);
+private ["_safedWeapons", "_id", "_picture"];
 
-private ["_safedWeapons"];
+params ["_unit", "_weapon", "_muzzle"];
+
 _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 if (_weapon in _safedWeapons) then {
@@ -12,7 +29,6 @@ if (_weapon in _safedWeapons) then {
     _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 
     if (count _safedWeapons == 0) then {
-        private "_id";
         _id = _unit getVariable [QGVAR(actionID), -1];
 
         //[_unit, "DefaultAction", _id] call EFUNC(common,removeActionMenuEventHandler);
@@ -36,7 +52,8 @@ if (inputAction "nextWeapon" > 0) then {
         if (_x == "this") then {
             _modes pushBack _weapon;
         };
-    } forEach getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
+        nil
+    } count getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
 
     // select last mode
     _mode = _modes select (count _modes - 1);
@@ -57,6 +74,5 @@ if (inputAction "nextWeapon" > 0) then {
 // player hud
 [true] call FUNC(setSafeModeVisual);
 
-private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 [localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
