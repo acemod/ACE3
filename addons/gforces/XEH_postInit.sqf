@@ -9,7 +9,6 @@ GVAR(GForces_CC) ppEffectForceInNVG true;
 GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,0,0.1,0.5]];
 GVAR(GForces_CC) ppEffectCommit 0.4;
 
-GVAR(lastUpdateTime) = 0;
 GVAR(oldVel) = [0,0,0];
 
-[FUNC(pfhUpdateGForces), 0, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(pfhUpdateGForces), INTERVAL, []] call CBA_fnc_addPerFrameHandler;
