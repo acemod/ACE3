@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2 and esteldunedain
  * Draw a Laser Point
  *
  * Arguments:
