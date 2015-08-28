@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+ADDON = false;
 PREP(lockKeyDown);
 PREP(lockKeyUp);
 
@@ -35,3 +36,4 @@ FUNC(enableFire) = {
     };
     -1
 };
+ADDON = true;
