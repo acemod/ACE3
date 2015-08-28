@@ -24,7 +24,7 @@
  */
 #include "script_component.hpp"
 
-private["_action", "_count", "_customActions", "_i"];
+private["_action", "_count", "_i"];
 
 params ["_customActions" ,"_selectAccept", "_selectCancel"];
 if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
@@ -35,7 +35,6 @@ if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
     lbSetCurSel [8866, 0];
 } else {
     private ["_count", "_action"];
-    params ["_customActions"];
 
     _count = count _customActions;
     if (_count == 0) exitWith {};
