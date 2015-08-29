@@ -4,54 +4,67 @@
         <Key ID="STR_ACE_Slideshow_DisplayName">
             <English>Slideshow</English>
             <Polish>Pokaz slajdów</Polish>
+            <Hungarian>Vetítés</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
             <Polish>Ten moduł pozwala skonfigurować pokaz slajdów na różnych obiektach. Jeden moduł na jedną liste slajdów. Tylko obiekty z hiddenSelection 0 są wspierane.</Polish>
+            <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
             <Polish>Obiekty</Polish>
+            <Hungarian>Objektumok</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
             <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1. Sprawdź opis modułu aby dowiedzieć się jakie obiekty są wspierane przez moduł.</Polish>
+            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
             <Polish>Kontroler</Polish>
+            <Hungarian>Vezérlők</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
+            <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
             <Polish>Obrazy</Polish>
+            <Hungarian>Képek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
             <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
+            <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
             <Polish>Nazwy interakcji</Polish>
+            <Hungarian>Interakciós nevek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
             <Polish>Lista nazw, które zostaną użyte do nazwania wpisów interakcji, oddzielone przecinkiem, w kolejności obrazów.</Polish>
+            <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
             <Polish>Czas trwania slajdów</Polish>
+            <Hungarian>Dia időtartam</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
+            <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
             <Polish>Slajdy</Polish>
+            <Hungarian>Diák</Hungarian>
         </Key>
     </Package>
 </Project>
