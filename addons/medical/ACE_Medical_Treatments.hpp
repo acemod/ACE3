@@ -93,7 +93,7 @@ class ACE_Medical_Actions {
             displayNameProgress = CSTRING(Actions_Diagnosing);
             category = "examine";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"head"};
+            allowedSelections[] = {"head", "body"};
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
