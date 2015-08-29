@@ -37,7 +37,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMapFill);
         scope = 2;
-        isGlobal = 1;
+        isGlobal = 0;
         icon = QUOTE(PATHTOF(UI\Icon_Module_microDAGR_ca.paa));
         functionPriority = 0;
         class Arguments {
@@ -46,9 +46,9 @@ class CfgVehicles {
                 description = CSTRING(MapDataAvailable_Description);
                 typeName = "NUMBER";
                 class values {
-                    class None {name = CSTRING(None); value = MAP_DETAIL_SAT; default = 1;};
-                    class Side {name = CSTRING(Side); value = MAP_DETAIL_TOPOROADS;};
-                    class Unique {name = CSTRING(Unique); value = MAP_DETAIL_NONE;};
+                    class Full {name = CSTRING(MapFill_Full); value = MAP_DETAIL_SAT; default = 1;};
+                    class Roads {name = CSTRING(MapFill_OnlyRoads); value = MAP_DETAIL_TOPOROADS;};
+                    class Disabled {name = CSTRING(MapFill_None); value = MAP_DETAIL_NONE;};
                 };
             };
         };

@@ -13,5 +13,7 @@
 */
 
 #include "script_component.hpp"
-params ["_caller","_target"];
-[[_caller, _target], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+
+params ["_caller","_target", "_selectionName"];
+[[_caller, _target, _selectionName], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+

@@ -74,6 +74,7 @@ class CfgVehicles {
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRE;
         model = PATHTOF(data\ACE_ConcertinaWire.p3d);
+        EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";

@@ -18,6 +18,8 @@
 
 params ["_player", "_object"];
 
+if (!([_player, _object, []] call EFUNC(common,canInteractWith))) exitWith {false};
+
 private ["_nearestVehicle"];
 _nearestVehicle = [_player] call FUNC(findNearestVehicle);
 

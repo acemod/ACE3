@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 
 private ["_bloodPressure", "_logOutPut", "_output"];
-params ["_caller", "_target"];
+params ["_caller", "_target", "_selectionName"];
 
 _bloodPressure = if (!alive _target) then {
     [0,0]
@@ -50,6 +50,11 @@ if ([_caller] call FUNC(isMedic)) then {
             //Fail to find pressure, no logoutput
         };
     };
+};
+
+if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(hasTourniquetAppliedTo)}) then {
+    _output = LSTRING(Check_Bloodpressure_Output_6);
+    _logOutPut = "";
 };
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller]] call EFUNC(common,targetEvent);
