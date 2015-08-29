@@ -36,10 +36,7 @@ _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 
-
-systemChat format["ASSIGNING INJURIES: %1", _unit];
-
-[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds); //FUNC(handleDamage_assignWounds);
+[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 
 // TODO Disabled until implemented fully
 //if (GVAR(enableAirway)) then {
