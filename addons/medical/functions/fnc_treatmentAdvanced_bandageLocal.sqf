@@ -95,7 +95,7 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
-if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {_x select 3 > 0}}count _openWounds == 0}) then {
+if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {((_x select 4) * (_x select 3)) > 0}}count _openWounds == 0}) then {
     _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
     _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
     _point = _hitPoints select (_hitSelections find _selectionName);
