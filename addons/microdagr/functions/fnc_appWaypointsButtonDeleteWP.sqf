@@ -3,13 +3,13 @@
  * Handles clicking the delete button from the waypoint application
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * [] call ace_microdagr_fnc_appWaypointsButtonDeleteWP
+ * call ace_microdagr_fnc_appWaypointsButtonDeleteWP
  *
  * Public: No
  */
@@ -18,12 +18,8 @@
 private ["_display", "_wpIndex"];
 
 disableSerialization;
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select GVAR(currentShowMode) == DISPLAY_MODE_DIALOG, displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
 _wpIndex = lbCurSel (_display displayCtrl IDC_MODEWAYPOINTS_LISTOFWAYPOINTS);

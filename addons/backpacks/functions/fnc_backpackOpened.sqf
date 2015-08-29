@@ -2,18 +2,18 @@
  * Author: commy2
  *
  * Someone opened your backpack. Execute locally.
- * 
+ *
  * Argument:
  * 0: Who accessed your inventory? (Object)
  * 1: Unit that wields the backpack (Object)
  * 2: The backpack object (Object)
- * 
+ *
  * Return value:
  * None.
  */
 #include "script_component.hpp"
-
-PARAMS_3(_unit,_target,_backpack);
+private ["_sounds", "_position"];
+params ["_target", "_backpack"];
 
 // do cam shake if the target is the player
 if ([_target] call EFUNC(common,isPlayer)) then {
@@ -21,7 +21,6 @@ if ([_target] call EFUNC(common,isPlayer)) then {
 };
 
 // play a rustling sound
-private ["_sounds", "_position"];
 
 _sounds = [
     /*"a3\sounds_f\characters\ingame\AinvPknlMstpSlayWpstDnon_medic.wss",

@@ -17,7 +17,7 @@
 
 if (!isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
 if (!_activated) exitWith {
     diag_log text "[ACE]: View Distance Limit Module is placed but NOT active.";

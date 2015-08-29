@@ -11,6 +11,7 @@ PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
+PREP(assignObjectsInList);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
@@ -327,7 +328,7 @@ if (hasInterface) then {
             // Raise ACE event
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 // Time handling
@@ -340,7 +341,7 @@ ACE_pausedTime = 0;
 ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
-[FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;
+[FUNC(timePFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);

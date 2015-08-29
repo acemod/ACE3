@@ -5,7 +5,7 @@
             <English>Explosives</English>
             <German>Sprengstoffe</German>
             <Spanish>Explosivos</Spanish>
-            <Polish>Ładunki wybuchowe</Polish>
+            <Polish>Mat. wybuchowe</Polish>
             <French>Explosifs</French>
             <Czech>Výbušniny</Czech>
             <Italian>Esplosivi</Italian>
@@ -60,6 +60,22 @@
             <Hungarian>Elhelyezés</Hungarian>
             <Portuguese>Colocar</Portuguese>
             <Russian>Установить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_AttachAction">
+            <English>Attach</English>
+            <German>Befestigen</German>
+            <Spanish>Acoplar</Spanish>
+            <Polish>Przyczep</Polish>
+            <French>Attacher</French>
+            <Czech>Připnout</Czech>
+            <Portuguese>Fixar</Portuguese>
+            <Italian>Attacca</Italian>
+            <Hungarian>Hozzácsatolás</Hungarian>
+            <Russian>Прикрепить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_BlockedAction">
+            <English>Blocked</English>
+            <Spanish>Obstruido</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>

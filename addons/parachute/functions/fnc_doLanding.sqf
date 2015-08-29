@@ -24,4 +24,4 @@ _unit setVariable [QGVAR(chuteIsCut), false, true];
         ((_this select 0) select 1) playActionNow "Crouch";
         [(_this select 1)] call CALLSTACK(cba_fnc_removePerFrameHandler);
     };
-}, 1, [ACE_time,_unit]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}, 1, [ACE_time,_unit]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
