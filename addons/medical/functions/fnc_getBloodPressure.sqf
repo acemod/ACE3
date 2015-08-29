@@ -30,4 +30,4 @@ _resistance = _unit getvariable [QGVAR(peripheralResistance), 100];
 _bloodPressureHigh = (_cardiacOutput * MODIFIER_BP_HIGH) * _resistance;
 _bloodPressureLow = (_cardiacOutput * MODIFIER_BP_LOW) * _resistance;
 
-[_bloodPressureLow, _bloodPressureHigh]
+[_bloodPressureLow max 0, _bloodPressureHigh max 0]
