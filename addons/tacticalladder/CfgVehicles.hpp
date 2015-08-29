@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_TacticalLadders {
                 displayName = CSTRING(Deploy);
-                condition = QUOTE((backpack ACE_player) == QUOTE(QUOTE(ACE_TacticalLadder_Pack)));
+                condition = QUOTE((backpack _player) == QUOTE(QUOTE(ACE_TacticalLadder_Pack)));
                 statement = QUOTE(call FUNC(deployTL));
                 exceptions[] = {};
                 showDisabled = 1;
@@ -70,7 +70,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(Pickup);
                     distance = 4;
-                    condition = QUOTE((backpack ACE_player) == '' && {([ARR_3(animationState ACE_player,0,6)] call CBA_fnc_substr) != 'ladder'});
+                    condition = QUOTE((backpack _player) == '' && {getNumber (configFile >> 'CfgMovesMaleSdr' >> 'States' >> (animationState _player) >> 'onLadder') == 0});
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickupTL));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -80,7 +80,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(Position);
                     distance = 4;
-                    condition = QUOTE(([ARR_3(animationState ACE_player,0,6)] call CBA_fnc_substr) != 'ladder');
+                    condition = QUOTE(getNumber (configFile >> 'CfgMovesMaleSdr' >> 'States' >> (animationState _player) >> 'onLadder') == 0);
                     //wait a frame to handle "Do When releasing action menu key" option:
                     statement = QUOTE([ARR_2({_this call FUNC(positionTL)}, [ARR_2(_target,_player)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
