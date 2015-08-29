@@ -1,6 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ * ?
+ *
+ * Arguments:
+ * 0: ? <?>
+ *
+ * Return Value:
+ * ? <?>
+ *
+ * Example:
+ * [?] call ACE_laserpointer_fnc_onDraw
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-
 private ["_brightness", "_cacheName", "_isIR", "_laser", "_laserID", "_weapon"];
 
 _isIR = currentVisionMode ACE_player;
@@ -15,13 +28,13 @@ _brightness = 2 - call EFUNC(common,ambientBrightness);
 
     _laser = switch (_weapon) do {
         case (primaryWeapon _x): {
-            primaryWeaponItems _x select 1;
+            (primaryWeaponItems _x) select 1;
         };
         case (secondaryWeapon _x): {
-            secondaryWeaponItems _x select 1;
+            (secondaryWeaponItems _x) select 1;
         };
         case (handgunWeapon _x): {
-            handgunItems _x select 1;
+            (handgunItems _x) select 1;
         };
         default {""};
     };
