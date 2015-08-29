@@ -3234,6 +3234,7 @@
             <Spanish>Condición EPA</Spanish>
             <Polish>Warunek apteczek</Polish>
             <Hungarian>Elsősegélycsomag állapot</Hungarian>
+            <Portuguese>Condição do KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the Personal Aid Kit be used?</English>
@@ -3241,6 +3242,7 @@
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
+            <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3348,6 +3350,7 @@
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <Polish>Warunek zestawu chir.</Polish>
             <Hungarian>Sebészkészlet állapot</Hungarian>
+            <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical kit be used?</English>
@@ -3355,6 +3358,7 @@
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
             <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
             <Hungarian>Mikor lehet a sebészkészletet használni?</Hungarian>
+            <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Bloodstains</English>
@@ -3696,6 +3700,7 @@
             <Spanish>Siempre</Spanish>
             <Polish>Zawsze</Polish>
             <Hungarian>Akármikor</Hungarian>
+            <Portuguese>Sempre</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
@@ -3703,6 +3708,7 @@
             <Spanish>Estable</Spanish>
             <Polish>Po stabilizacji</Polish>
             <Hungarian>Stabil</Hungarian>
+            <Portuguese>Estável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
