@@ -80,7 +80,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
             _unit setDamage 0;
 
             if (GVAR(level) < 2 || {!([_unit] call FUNC(hasMedicalEnabled))}) then {
-                [_unit] call FUNC(handleDamage_basic2);
+                [_unit] call FUNC(handleDamage_basic);
             } else {
                 _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
                 _cache_damages = _unit getVariable QGVAR(cachedDamages);

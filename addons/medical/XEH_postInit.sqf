@@ -257,8 +257,6 @@ if (USE_WOUND_EVENT_SYNC) then {
     };
 };
 
-
-
 ["SettingsInitialized", {
     if (GVAR(level) == 2) exitwith {
         [

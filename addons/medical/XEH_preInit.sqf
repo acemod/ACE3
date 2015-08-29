@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(handleDamage_basic2);
-
 PREP(actionCheckBloodPressure);
 PREP(actionCheckBloodPressureLocal);
 PREP(actionCheckPulse);
