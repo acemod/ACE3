@@ -232,15 +232,15 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
-            <Polish>Stabilizator horyzontalny lewy</Polish>
+            <Polish>Lewy statecznik poziomy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
-            <Polish>Stabilizator horyzontalny prawy</Polish>
+            <Polish>Prawy statecznik poziomy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
-            <Polish>Stabilizator wertykalny</Polish>
+            <Polish>Statecznik pionowy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
