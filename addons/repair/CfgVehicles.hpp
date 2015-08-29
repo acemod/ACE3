@@ -285,7 +285,10 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Heli_Transport_04_base_F;
+    class Helicopter_Base_H;
+    class Heli_Transport_04_base_F: Helicopter_Base_H {
+        GVAR(hitpointGroups[]) = { {"HitEngine", {"HitEngine1", "HitEngine2"}}, {"Glass_1_hitpoint", {"Glass_2_hitpoint", "Glass_3_hitpoint", "Glass_4_hitpoint", "Glass_5_hitpoint", "Glass_6_hitpoint", "Glass_7_hitpoint", "Glass_8_hitpoint", "Glass_9_hitpoint", "Glass_10_hitpoint", "Glass_11_hitpoint", "Glass_12_hitpoint", "Glass_13_hitpoint", "Glass_14_hitpoint", "Glass_15_hitpoint", "Glass_16_hitpoint", "Glass_17_hitpoint", "Glass_18_hitpoint", "Glass_19_hitpoint", "Glass_20_hitpoint"}} };
+    };
     class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
@@ -303,10 +306,17 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Offroad_01_base_F;
+    class Car_F;
+    class Offroad_01_base_F: Car_F {
+        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2"}} };
+    };
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
+    };
+
+    class MRAP_01_base_F: Car_F {
+        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
     };
 
     class B_Truck_01_mover_F;

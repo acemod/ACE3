@@ -327,7 +327,7 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
+if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!(isNull player)) then {

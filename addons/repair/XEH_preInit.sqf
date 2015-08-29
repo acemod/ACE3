@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(addRepairActions);
+PREP(canMiscRepair);
 PREP(canRemove);
 PREP(canRepair);
 PREP(canRepairTrack);
@@ -15,6 +16,7 @@ PREP(doRepair);
 PREP(doRepairTrack);
 PREP(doReplaceTrack);
 PREP(doReplaceWheel);
+PREP(getHitPointString);
 PREP(getPostRepairDamage);
 PREP(getWheelHitPointsWithSelections);
 PREP(hasItems);
