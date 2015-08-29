@@ -16,12 +16,11 @@
 
 class CfgVehicles {
     class ACE_Module;
-    // @todo localization for all the modules
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(moduleName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));   //@todo
-        category = "ACE";
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE_Logistics";
         function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
@@ -103,7 +102,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleAssignEngineer);
         functionPriority = 10;
         isGlobal = 2;
@@ -147,7 +146,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleAssignRepairVehicle);
         functionPriority = 10;
         isGlobal = 2;
@@ -254,7 +253,7 @@ class CfgVehicles {
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
-        vehicleClass = QGVAR(items);
+        vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo";
     };
 
@@ -264,7 +263,7 @@ class CfgVehicles {
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_track.p3d));
-        displayName = "$STR_ACE_Repair_SpareTrack";
+        displayName = CSTRING(SpareTrack);
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -273,7 +272,7 @@ class CfgVehicles {
         author = "Hawkins";
         scope = 2;
         model = QUOTE(PATHTOF(data\ace_wheel.p3d));
-        displayName = "$STR_ACE_Repair_SpareWheel";
+        displayName = CSTRING(SpareWheel);
         picture = QUOTE(PATHTOF(ui\tire_ca.paa));
     };
 
@@ -286,7 +285,10 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Heli_Transport_04_base_F;
+    class Helicopter_Base_H;
+    class Heli_Transport_04_base_F: Helicopter_Base_H {
+        GVAR(hitpointGroups[]) = { {"HitEngine", {"HitEngine1", "HitEngine2"}}, {"Glass_1_hitpoint", {"Glass_2_hitpoint", "Glass_3_hitpoint", "Glass_4_hitpoint", "Glass_5_hitpoint", "Glass_6_hitpoint", "Glass_7_hitpoint", "Glass_8_hitpoint", "Glass_9_hitpoint", "Glass_10_hitpoint", "Glass_11_hitpoint", "Glass_12_hitpoint", "Glass_13_hitpoint", "Glass_14_hitpoint", "Glass_15_hitpoint", "Glass_16_hitpoint", "Glass_17_hitpoint", "Glass_18_hitpoint", "Glass_19_hitpoint", "Glass_20_hitpoint"}} };
+    };
     class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
@@ -304,10 +306,17 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Offroad_01_base_F;
+    class Car_F;
+    class Offroad_01_base_F: Car_F {
+        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2"}} };
+    };
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
+    };
+
+    class MRAP_01_base_F: Car_F {
+        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
     };
 
     class B_Truck_01_mover_F;
@@ -334,5 +343,10 @@ class CfgVehicles {
     class O_Truck_03_repair_F: Truck_03_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
+    };
+
+    class Quadbike_01_base_F;
+    class B_Quadbike_01_F: Quadbike_01_base_F {
+        GVAR(hitpointPositions[]) = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
 };

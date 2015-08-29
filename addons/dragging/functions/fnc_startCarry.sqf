@@ -3,29 +3,28 @@
  *
  * Start the carrying process.
  *
- * Argument:
- * 0: Unit that should do the carrying (Object)
- * 1: Object to carry (Object)
+ * Arguments:
+ * 0: Unit that should do the carrying <OBJECT>
+ * 1: Object to carry <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
+private ["_weight", "_timer"];
 
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // check weight
-private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
-if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-private "_timer";
 _timer = ACE_time + 5;
 
 // handle objects vs persons

@@ -2,6 +2,7 @@
 
 ADDON = false;
 
+PREP(addCargoItem);
 PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
@@ -20,9 +21,5 @@ PREP(unloadItem);
 PREP(validateCargoSpace);
 
 GVAR(initializedItemClasses) = [];
-
-if (isServer) then {
-    ["cargo_hideItem", {params ["_object", "_status"]; _object hideObjectGlobal _status;}] call EFUNC(common,addEventHandler);
-};
 
 ADDON = true;

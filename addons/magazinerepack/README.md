@@ -1,7 +1,8 @@
 ace_magazinerepack
 ==================
 
-Adds the ability to consolidate multiple half-empty magazines.
+Adds the ability to consolidate multiple unfull magazines.
+
 
 ## Maintainers
 

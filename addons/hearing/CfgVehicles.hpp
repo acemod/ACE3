@@ -130,6 +130,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class enabledForZeusUnits {
+                displayName = CSTRING(enabledForZeusUnits_DisplayName);
+                description = CSTRING(enabledForZeusUnits_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);

@@ -33,7 +33,7 @@ _fnc_compileActionsLevel = {
             _actions pushBack [_displayName, _category, compile _condition, compile _statement];
         };
         nil
-    }count ("true" configClasses _config);
+    } count ("true" configClasses _config);
 
     _actions // return
 };
