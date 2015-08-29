@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Checks the conditions for being able to disarm a unit
  *
  * Arguments:
@@ -16,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_player,_target);
+params ["_player", "_target"];
 
-([_target] call FUNC(canBeDisarmed)) && 
+([_target] call FUNC(canBeDisarmed)) &&
 {([_player, _target, []] call EFUNC(common,canInteractWith))}

@@ -10,7 +10,7 @@
  * Player units <ARRAY<OBJECT>>
  *
  * Example:
- * [[300,300,0], 100] call FUNC(nearestPlayers)
+ * [[300,300,0], 100] call ace_switchunits_fnc_nearestPlayers
  *
  * Public: Yes
  */
@@ -18,10 +18,7 @@
 
 private ["_nearestPlayers"];
 
-PARAMS_2(_position,_radius);
-
-_position = _this select 0;
-_radius = _this select 1;
+params ["_position", "_radius"];
 
 _nearestPlayers = [];
 

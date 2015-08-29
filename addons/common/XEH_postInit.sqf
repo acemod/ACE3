@@ -75,16 +75,6 @@ if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
 };
 
-// hack to get PFH to work in briefing
-[QGVAR(onBriefingPFH), "onEachFrame", {
-    if (ACE_time > 0) exitWith {
-        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-    };
-
-    call cba_common_fnc_onFrame;
-}] call BIS_fnc_addStackedEventHandler;
-/////
-
 QGVAR(remoteFnc) addPublicVariableEventHandler {
     (_this select 1) call FUNC(execRemoteFnc);
 };
@@ -121,6 +111,7 @@ if(!isServer) then {
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
+
 call FUNC(checkFiles);
 
 
@@ -213,10 +204,11 @@ GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
+GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
-    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -280,7 +272,15 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         GVAR(OldPlayerWeapon) = _newPlayerWeapon;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
-
+    
+    // "visibleMapChanged" event
+    _newVisibleMap = visibleMap;
+    if (!_newVisibleMap isEqualTo GVAR(OldVisibleMap)) then {
+        // Raise ACE event locally
+        GVAR(OldVisibleMap) = _newVisibleMap;
+        ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
+    };
+    
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
@@ -327,7 +327,7 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
+if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!(isNull player)) then {
