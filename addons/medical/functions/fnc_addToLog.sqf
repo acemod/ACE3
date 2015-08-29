@@ -25,7 +25,7 @@ if (!local _unit) exitwith {
 
 date params ["", "", "", "_minute", "_hour"];
 
-_moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute]
+_moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute];
 
 _logVarName = format[QGVAR(logFile_%1), _type];
 
