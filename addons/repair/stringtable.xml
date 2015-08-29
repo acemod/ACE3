@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
@@ -232,12 +232,15 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
+            <Polish>Stabilizator horyzontalny lewy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
+            <Polish>Stabilizator horyzontalny prawy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
+            <Polish>Stabilizator wertykalny</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -253,24 +256,31 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
+            <Polish>Skrzynia biegów</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
+            <Polish>Podwozie</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
+            <Polish>Zapłon</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
+            <Polish>Ogon</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitPilotTube">
             <English>Pilot Tube</English>
+            <Polish>Rurka Pitota</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
+            <Polish>Port statyczny</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
+            <Polish>Amunicja</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -298,6 +308,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
+            <Polish>Rakiety</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
