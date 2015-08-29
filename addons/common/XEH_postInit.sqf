@@ -22,13 +22,13 @@
     GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
     GVAR(nextFrameBufferB) = [];
     GVAR(nextFrameNo) = diag_frameno + 1;
-    
+
     //Handle the waitUntilAndExec array:
     _deleted = 0;
     {
         _x params ["_condition", "_code", "_args"];
         if ((_args call _condition)) then {
-            GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex + _deleted);
+            GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex - _deleted);
             _deleted = _deleted + 1;
             _args call _code;
         };
