@@ -19,7 +19,7 @@
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);
 
-private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_unitPos", "_objectPos"];
+private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance"];
 
 _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 

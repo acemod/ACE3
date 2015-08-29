@@ -27,7 +27,7 @@ private ["_attachedList"];
 _attachedList = _unit getVariable [QGVAR(attached), []];
 if ((count _attachedList) == 0) exitWith {};
 
-(_attachedList select 0) params ["_xObject", "_xItemName"];
+(_attachedList select 0) params ["_xObject"];
 if (!isNull _xObject) then {
     detach _xObject;
     _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);

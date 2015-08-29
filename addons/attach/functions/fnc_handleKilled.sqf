@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * Handles when vehicle or man is killed.
+ * Handles when vehicle or man is killed. 
+ * Note: Runs where unit is local.
  *
  * Arguments:
  * 0: DeadVehicle <OBJECT>
@@ -15,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["_deadUnit"];
+TRACE_1("params",_deadUnit);
 
 private ["_attachedList"];
 
@@ -26,7 +26,8 @@ _attachedList = _deadUnit getVariable [QGVAR(attached), []];
 if ((count _attachedList) == 0) exitWith {};
 
 {
-    _x params ["_xObject", "_xItemName"];
+    _x params ["_xObject"];
+    TRACE_2("detaching",_xObject,_deadUnit);
     detach _xObject;
 } forEach _attachedList;
 
