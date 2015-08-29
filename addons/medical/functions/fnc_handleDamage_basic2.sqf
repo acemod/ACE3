@@ -24,9 +24,25 @@ _cache_damages = _target getVariable QGVAR(cachedDamages);
     if !(isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) then {
         _part = [_selectionName] call FUNC(selectionNameToNumber);
         if (_part < 0) exitwith {};
-        _damageBodyParts set [_part, (_damageBodyParts select _part) + (_cache_damages select _foreachIndex)];
+
+        private ["_newDamage", "_pain"];
+        _newDamage = (_cache_damages select _foreachIndex);
+        _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
+        _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts];
+
+        if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
+            // If it reaches this, we can assume that the hit did not kill this unit, as this function is called 3 frames after the damage has been passed.
+            if ([_unit, _part, if (_part > 1) then {_newDamage * 1.3} else {_newDamage * 2}] call FUNC(determineIfFatal)) then {
+                [_unit] call FUNC(setUnconscious);
+            };
+        };
+        _pain = _unit getVariable [QGVAR(pain), 0];
+        _pain = _pain + _newDamage * (1 - (_unit getVariable [QGVAR(morphine), 0]));
+        _unit setVariable [QGVAR(pain), _pain min 1, true];
     };
 }foreach _cache_params;
+
+// We broadcast the value across the net here, in order to avoid broadcasting it multiple times earlier in the above code block
 _target setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 EXPLODE_6_PVT(_damageBodyParts,_headDamage,_torsoDamage,_handsDamageR,_handsDamageL,_legsDamageR,_legsDamageL);
