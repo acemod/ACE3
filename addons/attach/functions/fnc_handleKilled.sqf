@@ -29,6 +29,11 @@ if ((count _attachedList) == 0) exitWith {};
     _x params ["_xObject"];
     TRACE_2("detaching",_xObject,_deadUnit);
     detach _xObject;
+    //If it's a vehicle, also delete the attached
+    if (!(_deadUnit isKindOf "CAManBase")) then {
+        _xObject setPos ((getPos _deadUnit) vectorAdd [0, 0, -1000]);
+        [{deleteVehicle (_this select 0)}, [_xObject], 2] call EFUNC(common,waitAndExecute);
+    };
 } forEach _attachedList;
 
 _deadUnit setVariable [QGVAR(attached), nil, true];
