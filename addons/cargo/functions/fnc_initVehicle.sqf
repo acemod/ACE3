@@ -39,7 +39,10 @@ SETMVAR(GVAR(initializedClasses),_initializedClasses);
 if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
 
 private ["_text", "_condition", "_statement", "_icon", "_action"];
-_condition = {GVAR(enable)};
+_condition = {
+    params ["_target", "_player"];
+    GVAR(enable) && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+};
 _text = localize LSTRING(openMenu);
 _statement = {GVAR(interactionVehicle) = _target; createDialog QGVAR(menu);};
 _icon = "";
