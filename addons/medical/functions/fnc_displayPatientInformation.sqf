@@ -21,8 +21,8 @@ if (GVAR(level) < 2) exitWith {};
 private ["_amountOfGeneric", "_bandagedwounds", "_logCtrl", "_part", "_partText", "_pointDamage", "_severity", "_total", "_totalIvVolume", "_triageStatus", "_type"];
 params ["_target", ["_show", true], ["_selectionN", 0]];
 
-GVAR(currentSelectedSelectionN) = if (typeName _selectionN == "SCALAR") then {_selectionN} else {0};
-GVAR(displayPatientInformationTarget) = if (_show) then {_target} else {ObjNull};
+GVAR(currentSelectedSelectionN) = [0, _selectionN] select (IS_SCALAR(_selectionN));
+GVAR(displayPatientInformationTarget) = [ObjNull, _target] select _show;
 
 if (USE_WOUND_EVENT_SYNC) then {
     [_target, ACE_player] call FUNC(requestWoundSync);

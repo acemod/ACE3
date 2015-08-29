@@ -22,11 +22,8 @@ params ["_caller", "_target", "_selectionName", "_className"];
 if !(_target isKindOf "CAManBase") exitWith { false };
 
 
-_config = if (GVAR(level)>=2) then {
-    (ConfigFile >> "ACE_Medical_Actions" >> "Advanced" >> _className)
-} else {
-    (ConfigFile >> "ACE_Medical_Actions" >> "Basic" >> _className)
-};
+_config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
+
 if !(isClass _config) exitwith {false};
 
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {

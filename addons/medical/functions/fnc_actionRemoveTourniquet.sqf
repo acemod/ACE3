@@ -24,7 +24,7 @@ _tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
 if ((_tourniquets select _part) == 0) exitwith {
-    _output = localize LSTRING(noTourniquetOnBodyPart);
+    _output = LSTRING(noTourniquetOnBodyPart);
     ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 

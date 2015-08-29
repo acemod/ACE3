@@ -18,7 +18,7 @@ private "_vehicle";
 params ["_caller", "_target"];
 
 if ([_target] call EFUNC(common,isAwake)) exitwith {
-    ["displayTextStructured", [_caller], [[localize LSTRING(CanNotLoaded), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    ["displayTextStructured", [_caller], [[LSTRING(CanNotLoaded), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 if ([_target] call FUNC(isBeingCarried)) then {
     [_caller, _target] call EFUNC(dragging,dropObject_carry);

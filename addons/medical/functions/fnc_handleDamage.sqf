@@ -32,11 +32,11 @@ if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
 
 // Exit if we disable damage temporarily
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
-    _damageOld = damage _unit;
     if (_selection in GVAR(SELECTIONS)) then {
-        _damageOld = _unit getHit _selection;
+        _unit getHit _selection
+    } else {
+        damage _unit
     };
-    _damageOld;
 };
 
 // Get return damage
@@ -47,9 +47,10 @@ _newDamage = _this call FUNC(handleDamage_caching);
 _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
 _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
-_minLethalDamage = 0.01;
-if (_typeIndex >= 0) then {
-    _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+_minLethalDamage = if (_typeIndex >= 0) then {
+    GVAR(minLethalDamages) select _typeIndex
+} else {
+    0.01
 };
 
 if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
