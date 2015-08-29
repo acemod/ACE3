@@ -99,8 +99,7 @@ if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {_x select 
     _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
     _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
     _point = _hitPoints select (_hitSelections find _selectionName);
-    [_target, _point, 0] call FUNC(setHitPointDamage);
-    // _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+    _target setHitPointDamage [_point, 0];
 };
 
 true;
