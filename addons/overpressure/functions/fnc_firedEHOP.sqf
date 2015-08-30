@@ -15,6 +15,7 @@
  * Return value:
  * None
  */
+#include "script_component.hpp"
 private ["_var","_varName"];
 params ["", "_weapon", "", "", "_ammo", "_magazine", ""];
 
@@ -26,6 +27,6 @@ _var = if (isNil _varName) then {
     (missionNameSpace getVariable _varName) select 2;
 };
 
- if (_var > 0) then {
+if (_var > 0) then {
     _this call DFUNC(fireOverpressureZone)
- };
+};

@@ -15,6 +15,7 @@
  * Return value:
  * None
  */
+#include "script_component.hpp"
 private ["_var","_varName"];
 params ["", "_weapon", "", "", "_ammo", "_magazine", ""];
 
