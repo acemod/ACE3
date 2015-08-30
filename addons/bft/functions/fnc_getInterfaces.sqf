@@ -39,13 +39,11 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
 } else {
     // vehicle device
     _vehicleInterfaces = _deviceOwner getvariable [QGVAR(vehicleInterfaces), getArray (configFile >> "CfgVehicles" >> typeOf _deviceOwner >> QGVAR(vehicleInterfaces))];
-    diag_log str ["config",_vehicleInterfaces];
     
     // bail if there are no interfaces defined
     if (isNil "_vehicleInterfaces" || {_vehicleInterfaces isEqualTo []}) exitWith {};
     
     _assignedVehicleRole = assignedVehicleRole _unit;
-    diag_log str ["assigned",_assignedVehicleRole];
     
     // bail if unit is not in a vehicle
     if (_assignedVehicleRole isEqualTo []) exitWith {};
@@ -56,8 +54,6 @@ if (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase") 
         if (_roleName == "Turret") exitWith {_assignedVehicleRole select 1 select 0};
         0
     };
-    
-    diag_log str ["role",_roleName,_roleIndex];
     
     {
         switch (typeName _x) do {
