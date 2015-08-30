@@ -214,7 +214,7 @@ class CfgVehicles {
         };
     };
     
-        class ACE_MiscItems_Can_Dented_Item: ACE_MiscItem_F {
+    class ACE_MiscItems_Can_Dented_Item: ACE_MiscItem_F {
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(Can_Dented_DisplayName);
