@@ -16,11 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_rallypoint", "_respawnMarker", "_side"];
-
-_rallypoint = _this select 0;
-_respawnMarker = _this select 1;
-_side = _this select 2;
+PARAMS_3(_rallypoint,_respawnMarker,_side);
 
 private "_name";
 _name = typeOf _rallypoint;
@@ -29,12 +25,11 @@ _name = typeOf _rallypoint;
 if (hasInterface) then {
     // fix init having wrong position, vars etc.
     [_rallypoint, _respawnMarker, _side, _name] spawn {
-        _rallypoint = _this select 0;
-        _respawnMarker = _this select 1;
-        _side = _this select 2;
-        _name = _this select 3;
-
-        _marker = format ["ACE_Marker_%1", _name];
+        PARAMS_4(_rallypoint,_respawnMarker,_side,_name);
+        
+        private ["_marker", "_type"];
+       
+       _marker = format ["ACE_Marker_%1", _name];
 
         // exit if it already exist
         if (_marker in allMapMarkers) exitWith {};

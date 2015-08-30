@@ -15,6 +15,7 @@
 PARAMS_1(_lineMarkers);
 
 {
+    private "_marker";
     _marker = _x;
     //Add marker if we don't already have it
     if (({(_x select 0) == (_marker select 0)} count GVAR(drawing_lineMarkers)) == 0) then {

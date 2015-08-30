@@ -16,14 +16,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_attachToVehicle,_unit);
+params ["_attachToVehicle","_unit"],
+TRACE_2("params",_attachToVehicle,_unit);
 
-private ["_attachedObjects", "_attachedItems"];
+private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance"];
 
-_attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
-_attachedItems = _attachToVehicle getVariable [QGVAR(ItemNames), []];
-
-private ["_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_unitPos", "_objectPos"];
+_attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 
 _attachedObject = objNull;
 _attachedIndex = -1;
@@ -31,25 +29,24 @@ _itemName = "";
 
 //Find closest attached object
 _minDistance = 1000;
-_unitPos = getPos _unit;
-_unitPos set [2,0];
+
 {
-    _objectPos = getPos _x;
-    _objectPos set [2, 0];
-    if (_objectPos distance _unitPos < _minDistance) then {
-        _minDistance = _objectPos distance _unitPos;
-        _attachedObject = _x;
-        _itemName = _attachedItems select _forEachIndex;
+    _x params ["_xObject", "_xItemName"];
+
+    if (((getPos _unit) distance2d (getPos _xObject)) < _minDistance) then {
+        _minDistance = ((getPos _unit) distance2d (getPos _xObject));
+        _attachedObject = _xObject;
+        _itemName = _xItemName;
         _attachedIndex = _forEachIndex;
     };
-} forEach _attachedObjects;
+} forEach _attachedList;
 
 // Check if unit has an attached item
 if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find attached object")};
 
 // Exit if can't add the item
 if !(_unit canAdd _itemName) exitWith {
-    [localize "STR_ACE_Attach_Inventory_Full"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Add item to inventory
@@ -60,17 +57,15 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
     // Delete attached item after 0.5 seconds
-    [{deleteVehicle (_this select 0)}, [_attachedObject], 0.5, 0] call EFUNC(common,waitAndExecute);
+    [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call EFUNC(common,waitAndExecute);
 } else {
     // Delete attached item
     deleteVehicle _attachedObject;
 };
 
 // Reset unit variables
-_attachedObjects deleteAt _attachedIndex;
-_attachedItems deleteAt _attachedIndex;
-_attachToVehicle setVariable [QGVAR(Objects), _attachedObjects, true];
-_attachToVehicle setVariable [QGVAR(ItemNames), _attachedItems, true];
+_attachedList deleteAt _attachedIndex;
+_attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
 
 // Display message
 _itemDisplayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
@@ -78,4 +73,4 @@ if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize "STR_ACE_Attach_Item_Detached", _itemDisplayName]] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(Item_Detached), _itemDisplayName]] call EFUNC(common,displayTextStructured);

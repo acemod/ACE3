@@ -8,7 +8,7 @@
  * 1: Path <ARRAY>
  *
  * Return value:
- * Action node <ARRAY>.
+ * Action node <ARRAY> or <NIL> if not found 
  *
  * Example:
  * [_actionTree, ["ACE_TapShoulderRight","VulcanPinchAction"]] call ace_interact_menu_fnc_findActionNode;
@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_actionTreeList,_parentPath);
+params ["_actionTreeList", "_parentPath"];
 
-private ["_parentNode", "_foundParentNode", "_fnc_findFolder"];
+private ["_parentNode", "_foundParentNode", "_fnc_findFolder", "_actionTree"];
 
 // Hack to make this work on the root node too
 if (count _parentPath == 0) exitWith {
@@ -31,10 +31,10 @@ _parentNode = [[],_actionTreeList];
 _foundParentNode = false;
 
 _fnc_findFolder = {
-    EXPLODE_3_PVT(_this,_parentPath,_level,_actionNode);
+    params ["_parentPath", "_level", "_actionNode"];
 
     {
-        EXPLODE_2_PVT(_x,_actionData,_actionChildren);
+        _x params ["_actionData", "_actionChildren"];
         if ((_actionData select 0) isEqualTo (_parentPath select _level)) exitWith {
 
             if (count _parentPath == _level + 1) exitWith {

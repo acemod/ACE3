@@ -1,29 +1,29 @@
 /*
  * Author: esteldunedain
- *
  * Count how many grenade magazines the unit has on the uniform and vest.
  *
- * Argument:
- * 0: Muzzle name
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Muzzle Class <STRING>
  *
- * Return value:
- * 0: Number of magazines
- * 1: First magazine name
+ * Return Value:
+ * 0: Number of magazines <NUMBER>
+ * 1: First magazine name <STRING>
+ *
+ * Example:
+ * [player, currentMuzzle player] call ace_weaponselect_fnc_countMagazinesForGrenadeMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_muzzle"];
+private ["_uniformMags", "_vestMags", "_backpackMags", "_numberOfMagazines", "_magazineClasses", "_firstMagazine"];
 
-_unit = _this select 0;
-_muzzle = _this select 1;
-
-private ["_uniformMags", "_vestMags", "_backPackMags"];
+params ["_unit", "_muzzle"];
 
 _uniformMags = getMagazineCargo uniformContainer _unit;
 _vestMags = getMagazineCargo vestContainer _unit;
-_backPackMags = getMagazineCargo backpackContainer _unit;
-
-private ["_numberOfMagazines", "_magazineClasses", "_firstMagazine"];
+_backpackMags = getMagazineCargo backpackContainer _unit;
 
 _numberOfMagazines = 0;
 _magazineClasses = getArray (configFile >> "CfgWeapons" >> "Throw" >> _muzzle >> "magazines");

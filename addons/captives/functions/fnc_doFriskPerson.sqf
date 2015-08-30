@@ -18,7 +18,7 @@
 
 private ["_weapon", "_listedItemClasses", "_actions", "_allGear"];
 
-PARAMS_2(_player,_unit);
+params ["_player", "_unit"];
 
 _weapon = currentWeapon _player;
 if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
@@ -27,7 +27,7 @@ if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
 
 _listedItemClasses = [];
 
-_actions = [localize "STR_ACE_Captives_FriskMenuHeader", ""] call ACE_Interaction_fnc_prepareSelectMenu;
+_actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
 
 _allGear = [];
 

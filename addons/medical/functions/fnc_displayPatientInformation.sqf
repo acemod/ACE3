@@ -13,8 +13,11 @@
  */
 
 #include "script_component.hpp"
+#define MAX_DISTANCE 10
 
-private ["_target", "_show", "_selectionN"];
+// Exit for basic medical
+if (GVAR(level) < 2) exitWith {};
+private ["_target", "_show", "_selectionN", "_amountOfGeneric", "_bandagedwounds", "_logCtrl", "_part", "_partText", "_pointDamage", "_severity", "_total", "_totalIvVolume", "_triageStatus", "_type"];
 _target = _this select 0;
 _show = if (count _this > 1) then {_this select 1} else {true};
 _selectionN = if (count _this > 2) then {_this select 2} else {0};
@@ -37,6 +40,11 @@ if (_show) then {
         if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
+        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+            ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            ["displayTextStructured", [ACE_player], [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
+        };
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(DisplayInformation);
@@ -48,22 +56,22 @@ if (_show) then {
         _genericMessages = [];
 
         if (GVAR(level) >= 2) then {
-            _partText = ["STR_ACE_Interaction_Head", "STR_ACE_Interaction_Torso", "STR_ACE_Interaction_ArmLeft" ,"STR_ACE_Interaction_ArmRight" ,"STR_ACE_Interaction_LegLeft", "STR_ACE_Interaction_LegRight"] select _selectionN;
+            _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
             _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
         };
 
         if (_target getvariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_BLEEDING", [1, 0.1, 0.1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
-        if (_target getvariable[QGVAR(hasLostBlood), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_LOST_BLOOD", [1, 0.1, 0.1, 1]];
+        if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
+            _genericMessages pushback [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
         if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_TOURNIQUET_APPLIED", [0.77, 0.51, 0.08, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
         if (_target getvariable[QGVAR(hasPain), false]) then {
-            _genericMessages pushback [localize "STR_ACE_MEDICAL_STATUS_PAIN", [1, 1, 1, 1]];
+            _genericMessages pushback [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
@@ -75,7 +83,7 @@ if (_show) then {
             };
         }foreach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
-            _genericMessages pushback [format[localize "STR_ACE_MEDICAL_receivingIvVolume", floor _totalIvVolume], [1, 1, 1, 1]];
+            _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _damaged = [false, false, false, false, false, false];
@@ -131,17 +139,17 @@ if (_show) then {
                 if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
                     _pointDamage = _target getHitPointDamage _x;
                     _severity = switch (true) do {
-                        case (_pointDamage > 0.5): {localize "STR_ACE_Medical_HeavilyWounded"};
-                        case (_pointDamage > 0.1): {localize "STR_ACE_Medical_LightlyWounded"};
-                        default                    {localize "STR_ACE_Medical_VeryLightlyWounded"};
+                        case (_pointDamage > 0.5): {localize LSTRING(HeavilyWounded)};
+                        case (_pointDamage > 0.1): {localize LSTRING(LightlyWounded)};
+                        default                    {localize LSTRING(VeryLightlyWounded)};
                     };
                     _part = localize ([
-                        "STR_ACE_Medical_Head",
-                        "STR_ACE_Medical_Torso",
-                        "STR_ACE_Medical_LeftArm",
-                        "STR_ACE_Medical_RightArm",
-                        "STR_ACE_Medical_LeftLeg",
-                        "STR_ACE_Medical_RightLeg"
+                        LSTRING(Head),
+                        LSTRING(Torso),
+                        LSTRING(LeftArm),
+                        LSTRING(RightArm),
+                        LSTRING(LeftLeg),
+                        LSTRING(RightLeg)
                     ] select _forEachIndex);
                     _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
                 };
@@ -184,13 +192,13 @@ if (_show) then {
             _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _x select 1];
         }foreach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
-            _lbCtrl lbAdd "No injuries on this bodypart..";
+            _lbCtrl lbAdd (localize LSTRING(NoInjuriesBodypart));
         };
 
         _logCtrl = (_display displayCtrl 302);
         lbClear _logCtrl;
 
-        private ["_logs", "_log", "_message", "_moment", "_arguments", "_lbCtrl"];
+        private ["_logs", "_message", "_moment", "_arguments", "_lbCtrl"];
         _logs = _target getvariable [QGVAR(logFile_Activity), []];
         {
             // [_message,_moment,_type, _arguments]

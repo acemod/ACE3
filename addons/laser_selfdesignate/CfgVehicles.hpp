@@ -21,4 +21,29 @@ class CfgVehicles {
             };
         };
     };
+    
+    class Plane: Air {};
+    class Plane_Base_F: Plane {
+        class Turrets {
+            class CopilotTurret;
+        };
+    };
+    
+    /* @TODO: LGB GBU
+    class Plane_CAS_01_base_F: Plane_Base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;      // Enable laser self-designation
+            };
+        };
+    };
+
+    class Plane_CAS_02_base_F: Plane_Base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;      // Enable laser self-designation
+            };
+        };
+    };
+    */
 };

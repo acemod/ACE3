@@ -16,34 +16,41 @@
 
 BEGIN_COUNTER(fnc_renderBaseMenu)
 
-private ["_distance","_pos","_weaponDir","_ref","_cameraPos","_sPos","_activeActionTree"];
+private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
 
-EXPLODE_2_PVT(_this,_object,_baseActionNode);
-EXPLODE_1_PVT(_baseActionNode,_actionData);
+params ["_object", "_baseActionNode"];
+_baseActionNode params ["_actionData"];
 
 _distance = _actionData select 8;
 
 // Obtain a 3D position for the action
-if((count _this) > 2) then {
-    _pos = _this select 2;
+_pos = if((count _this) > 2) then {
+    _this select 2
 } else {
-    if(typeName (_actionData select 7) == "ARRAY") then {
-        _pos = _object modelToWorldVisual (_actionData select 7);
-    } else {
-        if ((_actionData select 7) == "weapon") then {
-            // Craft a suitable position for weapon interaction
-            _weaponDir = _object weaponDirection currentWeapon _object;
-            _ref = _weaponDir call EFUNC(common,createOrthonormalReference);
-            _pos = (_object modelToWorldVisual (_object selectionPosition "righthand")) vectorAdd ((_ref select 2) vectorMultiply 0.1);
-        } else {
-            _pos = _object modelToWorldVisual (_object selectionPosition (_actionData select 7));
-        };
-    };
+    // Setup scope variables for position code
+    private ["_target"];
+    _target = _object;
+
+    // Get action position
+    _object modelToWorldVisual (call (_actionData select 7))
 };
 
-// For non-self actions, exit if the action is too far away
-if (GVAR(openedMenuType) == 0 && vehicle ACE_player == ACE_player &&
-    {(ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot")) distance _pos >= _distance}) exitWith {false};
+// For non-self actions, exit if the action is too far away or ocluded
+if (GVAR(openedMenuType) == 0 && (vehicle ACE_player == ACE_player) && (isNull curatorCamera) &&
+    {
+        private ["_headPos","_actualDistance"];
+        _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
+        _actualDistance = _headPos distance _pos;
+
+        if (_actualDistance > _distance) exitWith {true};
+
+        if ((_actualDistance > 1.5) && {!((_actionData select 9) select 4)}) exitWith {
+            // If distance to action is greater than 1.5 m, check LOS
+            _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
+            lineIntersects _line
+        };
+        false
+    }) exitWith {false};
 
 // Exit if the action is behind you
 _sPos = if (count _pos != 2) then {
@@ -86,11 +93,17 @@ _fnc_print = {
 // Check if there's something left for rendering
 if (count _activeActionTree == 0) exitWith {false};
 
-//EXPLODE_2_PVT(_activeActionTree,_actionData,_actionChildren);
-
 BEGIN_COUNTER(fnc_renderMenus);
 
-[[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
+// IGNORE_PRIVATE_WARNING(_cameraPos,_cameraDir);
+if (count _pos > 2) then {
+    _sPos pushBack (((_pos call EFUNC(common,positionToASL)) vectorDiff _cameraPos) vectorDotProduct _cameraDir);
+} else {
+    _sPos pushBack 0;
+};
+
+// Add action point for oclusion and rendering
+GVAR(collectedActionPoints) pushBack [_sPos select 2, _sPos, _activeActionTree];
 
 END_COUNTER(fnc_renderMenus);
 

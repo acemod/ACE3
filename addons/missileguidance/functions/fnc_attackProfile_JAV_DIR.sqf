@@ -9,6 +9,7 @@
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
 private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_state"];
+private["_cruisAlt", "_distanceShooterToTarget", "_shooterPos"];
 _seekerTargetPos = _this select 0;
 _launchParams = _this select 1;
 
@@ -53,7 +54,7 @@ switch( (_state select 0) ) do {
     };
     case STAGE_TERMINAL: {
         TRACE_1("STAGE_TERMINAL","");
-        _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget * 0.002];
+        _returnTargetPos = _seekerTargetPos;
     };
 };
 

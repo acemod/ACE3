@@ -6,7 +6,7 @@
  * 0: String of the map button pressed <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["autotrack"] call ace_microdagr_fnc_modeMapButtons
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_mode);
+params ["_mode"];
 
 [-1] call FUNC(saveCurrentAndSetNewMode); //backup current draw pos/zoom
 

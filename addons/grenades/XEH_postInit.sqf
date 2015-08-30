@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
+["flashbangExplosion", DFUNC(flashbangExplosionEH)] call EFUNC(common,addEventHandler);
 
 if !(hasInterface) exitWith {};
 
@@ -10,7 +10,7 @@ GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 
 // Add keybinds
-["ACE3", QGVAR(switchGrenadeMode), localize "STR_ACE_Grenades_SwitchGrenadeMode",
+["ACE3 Weapons", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};

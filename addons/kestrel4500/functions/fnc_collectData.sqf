@@ -14,37 +14,46 @@
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_windSpeed", "_windDir", "_crosswind", "_headwind", "_humidity", "_temperature", "_humidity", "_barometricPressure", "_altitude"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_altitude", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_updateMemory", "_windSpeed", "_crosswind", "_headwind"];
+_playerDir = getDir ACE_player;
+_playerAltitude = (getPosASL ACE_player) select 2;
+_temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
+_humidity = EGVAR(weather,currentHumidity);
+_barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
+_altitude = EGVAR(common,mapAltitude) + _playerAltitude;
+_airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
+_densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
+_chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
+_heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
+_dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
+_wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
 
 if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
-    _temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
-    _humidity = EGVAR(weather,currentHumidity);
-    _barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
-    _altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
-    GVAR(MIN) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
-    GVAR(MAX) = [0, 0, 0, 0, _temperature, _humidity, _barometricPressure, _altitude];
+    GVAR(MIN) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
+    GVAR(MAX) = [0, _playerDir, 0, 0, 0, _temperature, _chill, _humidity, _heatIndex, _dewPoint, _wetBulb, _barometricPressure, _altitude, _densityAltitude];
 };
 
 {
     GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-} forEach [0, 4, 5, 6 ,7];
+} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-// Direction
-_playerDir = getDir ACE_player;
-GVAR(MIN) set [0, (GVAR(MIN) select 0) min _playerDir];
-GVAR(MAX) set [0, _playerDir max (GVAR(MAX) select 0)];
-GVAR(TOTAL) set [0, (GVAR(TOTAL) select 0) + _playerDir];
+_fnc_updateMemory = {
+    PARAMS_2(_slot,_value);
+    GVAR(MIN)   set [_slot, (GVAR(MIN) select _slot) min _value];
+    GVAR(MAX)   set [_slot, _value max (GVAR(MAX) select _slot)];
+    GVAR(TOTAL) set [_slot, (GVAR(TOTAL) select _slot) + _value];
+};
+
+[0, _playerDir] call _fnc_updateMemory;
 
 if (GVAR(MinAvgMaxMode) == 1) then {
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-    } forEach [1, 2, 3];
+    } forEach [2, 3, 4];
 
     // Wind SPD
     _windSpeed = call FUNC(measureWindSpeed);
-    GVAR(MIN) set [1, (GVAR(MIN) select 1) min abs(_windSpeed)];
-    GVAR(MAX) set [1, abs(_windSpeed) max (GVAR(MAX) select 1)];
-    GVAR(TOTAL) set [1, (GVAR(TOTAL) select 1) + abs(_windSpeed)];
+    [2, _windSpeed] call _fnc_updateMemory;
 
     // CROSSWIND
     _crosswind = 0;
@@ -53,42 +62,30 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     } else {
         _crosswind = abs(sin(GVAR(RefHeading)) * _windSpeed);
     };
-    GVAR(MIN) set [2, (GVAR(MIN) select 2) min _crosswind];
-    GVAR(MAX) set [2, _crosswind max (GVAR(MAX) select 2)];
-    GVAR(TOTAL) set [2, (GVAR(TOTAL) select 2) + _crosswind];
+    [3, _crosswind] call _fnc_updateMemory;
 
     // HEADWIND
     _headwind = 0;
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        _headwind = abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed);
+        _headwind = cos(GVAR(RefHeading) - _playerDir) * _windSpeed;
     } else {
-        _headwind = abs(cos(GVAR(RefHeading)) * _windSpeed);
+        _headwind = cos(GVAR(RefHeading)) * _windSpeed;
     };
-    GVAR(MIN) set [3, (GVAR(MIN) select 3) min _headwind];
-    GVAR(MAX) set [3, _headwind max (GVAR(MAX) select 3)];
-    GVAR(TOTAL) set [3, (GVAR(TOTAL) select 3) + _headwind];
+    if (abs(_headwind) > abs(GVAR(MAX) select 4)) then {
+        GVAR(MAX) set [4, _headwind];
+    };
+    if (abs(_headwind) < abs(GVAR(MIN) select 4)) then {
+        GVAR(MIN) set [4, _headwind];
+    };
+    GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _headwind];
 };
 
-// TEMP
-_temperature = GET_TEMPERATURE_AT_HEIGHT((getPosASL ACE_player) select 2);
-GVAR(MIN) set [4, (GVAR(MIN) select 4) min _temperature];
-GVAR(MAX) set [4, _temperature max (GVAR(MAX) select 4)];
-GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _temperature];
-
-// HUMIDITY
-_humidity = EGVAR(weather,currentHumidity);
-GVAR(MIN) set [5, (GVAR(MIN) select 5) min _humidity];
-GVAR(MAX) set [5, _humidity max (GVAR(MAX) select 5)];
-GVAR(TOTAL) set [5, (GVAR(TOTAL) select 5) + _humidity];
-
-// BARO
-_barometricPressure = 1013.25 * exp(-(EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2)) / 7990) - 10 * overcast;
-GVAR(MIN) set [6, (GVAR(MIN) select 6) min _barometricPressure];
-GVAR(MAX) set [6, _barometricPressure max (GVAR(MAX) select 6)];
-GVAR(TOTAL) set [6, (GVAR(TOTAL) select 6) + _barometricPressure];
-
-// ALTITUDE
-_altitude = EGVAR(weather,Altitude) + ((getPosASL ACE_player) select 2);
-GVAR(MIN) set [7, (GVAR(MIN) select 7) min _altitude];
-GVAR(MAX) set [7, _altitude max (GVAR(MAX) select 7)];
-GVAR(TOTAL) set [7, (GVAR(TOTAL) select 7) + _altitude];
+[5, _temperature] call _fnc_updateMemory;
+[6, _chill] call _fnc_updateMemory;
+[7, _humidity] call _fnc_updateMemory;
+[8, _heatIndex] call _fnc_updateMemory;
+[9, _dewPoint] call _fnc_updateMemory;
+[10, _wetBulb] call _fnc_updateMemory;
+[11, _barometricPressure] call _fnc_updateMemory;
+[12, _altitude] call _fnc_updateMemory;
+[13, _densityAltitude] call _fnc_updateMemory;

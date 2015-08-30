@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items", "_removeItem"];
+private ["_caller", "_target", "_selectionName", "_className", "_items"];
 _caller = _this select 0;
 _target = _this select 1;
 _selectionName = _this select 2;
@@ -29,9 +29,10 @@ _items = _this select 4;
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
 }foreach _items;
 
-[_target, "activity", "STR_ACE_MEDICAL_ACTIVITY_usedItem", [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
 
 true;

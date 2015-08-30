@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
-        <Key ID="STR_ACE_overheating_SettingDisplayTextName">
+        <Key ID="STR_ACE_Overheating_SettingDisplayTextName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
-            <Spanish>Mostrar texto al encasquillar</Spanish>
+            <Spanish>Mostrar texto al encasquillarse</Spanish>
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
             <Polish>Wyświetl tekst przy zacięciu broni</Polish>
             <French>Affiche texte si enrayé</French>
             <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
+            <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
+            <Italian>Visualizza testo in caso di inceppamento</Italian>
         </Key>
-        <Key ID="STR_ACE_overheating_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_Overheating_SettingDisplayTextDesc">
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
@@ -20,6 +22,8 @@
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
             <French>Affiche une notification lors d'un enrayement</French>
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
+            <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
+            <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -94,15 +98,15 @@
             <Italian>Sostiuisci la canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
-            <English>Swapping barrel...</English>
-            <German>Lauf wird gewechselt...</German>
-            <Spanish>Cambiando el cañón...</Spanish>
-            <Polish>Wymienianie lufy...</Polish>
+            <English>Swapping barrel ...</English>
+            <German>Lauf wird gewechselt ...</German>
+            <Spanish>Cambiando el cañón ...</Spanish>
+            <Polish>Wymienianie lufy ...</Polish>
             <Czech>Vyměňuji hlaveň ...</Czech>
-            <French>Changement du canon...</French>
+            <French>Changement du canon ...</French>
             <Russian>Смена ствола ...</Russian>
-            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
-            <Portuguese>Substituindo cano...</Portuguese>
+            <Hungarian>Cső kicserélése folyamatban ...</Hungarian>
+            <Portuguese>Substituindo cano ...</Portuguese>
             <Italian>Sto sostituendo la canna ...</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
@@ -112,13 +116,13 @@
             <Polish>Lufa wymieniona</Polish>
             <Czech>Hlaveň vyměněna</Czech>
             <French>Canon changé</French>
-            <Russian>Ствол сменен</Russian>
+            <Russian>Ствол заменён</Russian>
             <Hungarian>Cső kicserélve</Hungarian>
             <Portuguese>Cano substituído</Portuguese>
             <Italian>Canna sostituita</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperature">
-            <English>Check weapons temperature</English>
+            <English>Check weapon temperature</English>
             <German>Temperatur der Waffe prüfen</German>
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
@@ -131,12 +135,15 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
             <English>Check weapon temperature</English>
+            <German>Waffentemperatur prüfen</German>
             <Spanish>Verificar temperatura del arma</Spanish>
             <Polish>Sprawdź temperaturę broni</Polish>
             <Czech>Zkontrolovat teplotu zbraně</Czech>
             <French>Vérifier la température</French>
             <Hungarian>Fegyverhő ellenőrzése</Hungarian>
             <Russian>Проверить температуру оружия</Russian>
+            <Portuguese>Conferir temperatura</Portuguese>
+            <Italian>Controlla la temperatura della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature ...</English>

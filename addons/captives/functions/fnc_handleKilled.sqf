@@ -15,10 +15,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_oldUnit);
+params ["_oldUnit"];
+
+if (!local _oldUnit) exitWith {};
 
 if (_oldUnit getVariable [QGVAR(isHandcuffed), false]) then {
-    [_oldUnit, false] call FUNC(setSurrendered);
+    [_oldUnit, false] call FUNC(setHandcuffed);
 };
 
 if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {

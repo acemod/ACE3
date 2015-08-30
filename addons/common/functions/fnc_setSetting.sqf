@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_name","_value"];
-_name = _this select 0;
-_value = _this select 1;
+private ["_force", "_settingData","_failed"];
+
+PARAMS_2(_name,_value);
 
 private ["_force"];
 _force = false;
@@ -41,11 +41,11 @@ if ((typeName _value) != (_settingData select 1)) then {
     _failed = true;
     if ((_settingData select 1) == "BOOL" and (typeName _value) == "SCALAR") then {
         // If value is not 0 or 1 consider it invalid and don't set anything
-        if (_value == 0) then {
+        if (_value isEqualTo 0) then {
             _value = false;
             _failed = false;
         };
-        if (_value == 1) then {
+        if (_value isEqualTo 1) then {
             _value = true;
             _failed = false;
         };

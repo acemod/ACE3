@@ -1,6 +1,6 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
     class ACE_missionModules: NO_CATEGORY {
-        displayName = "ACE Mission Modules";
+        displayName = CSTRING(Category_DisplayName);
     };
 };

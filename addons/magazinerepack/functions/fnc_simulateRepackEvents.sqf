@@ -9,7 +9,7 @@
  * 2: Magazine is a belt <BOOL>
  *
  * Return Value:
- * Array in format [time, isBullet, array of ammo counts] <ARRAY>
+ * Array in format [ACE_time, isBullet, array of ammo counts] <ARRAY>
  *
  * Example:
  * [10, [1,2,3,8], false] call ace_magazinerepack_fnc_simulateRepackEvents =
@@ -19,19 +19,20 @@
  */
 #include "script_component.hpp"
 
-private ["_newMagFnc", "_time", "_events", "_swapAmmoFnc", "_ammoSwaped", "_lowIndex", "_highIndex", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded"];
+private ["_fnc_newMag", "_time", "_events", "_fnc_swapAmmo", "_ammoSwaped", "_lowIndex", "_highIndex", "_ammoToTransfer", "_ammoAvailable", "_ammoNeeded", "_swapProgress"];
 
-PARAMS_3(_fullMagazineCount,_arrayOfAmmoCounts,_isBelt);
+params ["_fullMagazineCount", "_arrayOfAmmoCounts", "_isBelt"];
 
 // Sort Ascending - Don't modify original
-_arrayOfAmmoCounts = (+_arrayOfAmmoCounts) call BIS_fnc_sortNum;
+_arrayOfAmmoCounts = +_arrayOfAmmoCounts;
+_arrayOfAmmoCounts sort true;
 
-_newMagFnc = {
+_fnc_newMag = {
     _time = _time + GVAR(TimePerMagazine);
     _events pushBack [_time, false, +_arrayOfAmmoCounts];
 };
 
-_swapAmmoFnc = if (_isBelt) then {
+_fnc_swapAmmo = if (_isBelt) then {
     {
         _time = _time + GVAR(TimePerBeltLink);
         _arrayOfAmmoCounts set [_lowIndex, ((_arrayOfAmmoCounts select _lowIndex) - _ammoSwaped)];
@@ -63,14 +64,14 @@ while {_lowIndex < _highIndex} do {
 
     if (_ammoAvailable == 0) then {
         _lowIndex = _lowIndex + 1;
-        call _newMagFnc;
+        call _fnc_newMag;
     } else {
         if (_ammoNeeded == 0) then {
             _highIndex = _highIndex - 1;
-            call _newMagFnc;
+            call _fnc_newMag;
         } else {
             _ammoSwaped = _ammoAvailable min _ammoNeeded;
-            call _swapAmmoFnc;
+            call _fnc_swapAmmo;
         };
     };
 };

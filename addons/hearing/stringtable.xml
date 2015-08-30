@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
-            <English>Ear Plugs</English>
+            <English>Earplugs</English>
             <German>Ohrenstöpsel</German>
             <Spanish>Tapones para los oídos</Spanish>
             <Polish>Stopery do uszu</Polish>
@@ -14,12 +14,12 @@
             <Italian>Tappi auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
-            <English>Protective Ear Plugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
+            <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
             <German>Schützende Ohrenstöpsel, die es dem Träger ermöglichen, sich in der Nähe lauter Waffen aufzuhalten ohne Gehörschäden davonzutragen..</German>
             <Spanish>Los tapones para los oídos permiten al usuario operar armamento ruidoso sin sufrir pérdida de audición.</Spanish>
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
-            <Russian>Беруши позволяют избежать потери слуха при близкой громкой стрельбе.</Russian>
+            <Russian>Беруши позволяют носителю находиться возле громкого вооружения без потери слуха.</Russian>
             <French>Bouchons Anti-Bruits pour la prévention des traumatismes sonores aigus.</French>
             <Hungarian>Erősebb hanghatásoktól védő füldugó, megakadályozza a nagy hanggal járó fegyverzettől való halláskárosodást.</Hungarian>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
@@ -31,7 +31,7 @@
             <Spanish>Poner tapones</Spanish>
             <Polish>Włóż stopery</Polish>
             <Czech>Dát špunty do uší</Czech>
-            <Russian>Беруши надеты</Russian>
+            <Russian>Надеть беруши</Russian>
             <French>Bouchons mis</French>
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
@@ -43,7 +43,7 @@
             <Spanish>Quitar tapones</Spanish>
             <Polish>Wyjmij stopery</Polish>
             <Czech>Vyndat špunty z uší</Czech>
-            <Russian>Беруши сняты</Russian>
+            <Russian>Снять беруши</Russian>
             <French>Bouchons enlevés</French>
             <Hungarian>Füldugó kivéve</Hungarian>
             <Portuguese>Protetores retirados</Portuguese>
@@ -74,13 +74,13 @@
             <Italian>Levati i tappi auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
-            <English>You have no ear plugs</English>
+            <English>You have no earplugs</English>
             <German>Keine Ohrenstöpsel im Inventar</German>
             <Spanish>No tienes tapones para los oídos</Spanish>
             <Polish>Nie masz stoperów</Polish>
             <Czech>Nemáš žádné špunty</Czech>
             <Russian>У вас нет беруш</Russian>
-            <French>Vous n'avez pas de Bouchons Anti-Bruits</French>
+            <French>Vous n'avez pas de bouchons anti-bruits</French>
             <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
@@ -106,6 +106,48 @@
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
             <Hungarian>Fülcsengés letiltása</Hungarian>
+            <Italian>Disabilita i fischi nelle orecchie</Italian>
+            <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_Module_DisplayName">
+            <English>Hearing</English>
+            <Polish>Słuch</Polish>
+            <Spanish>Audición</Spanish>
+            <German>Gehör</German>
+            <Czech>Sluch</Czech>
+            <Portuguese>Audição</Portuguese>
+            <Hungarian>Hallás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
+            <English>Combat Deafness</English>
+            <Polish>Wł. głuchotę bojową</Polish>
+            <Spanish>¿Habilitar sordera de combate?</Spanish>
+            <German>Aktiviere Taubheit im Gefecht?</German>
+            <Czech>Povolit ztrátu sluchu?</Czech>
+            <Portuguese>Ativar surdez em combate?</Portuguese>
+            <Hungarian>Harci süketség engedélyezése?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
+            <English>Reduces the hearing ability as the player takes hearing damage</English>
+            <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
+            <Spanish>Habilita la sordera de combate</Spanish>
+            <German>Aktiviere Taubheit im Gefecht?</German>
+            <Czech>Povolit ztrátu sluchu?</Czech>
+            <Portuguese>Ativar surdez em combate?</Portuguese>
+            <Hungarian>Harci süketség engedélyezése?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Hearing_Module_Description">
+            <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
+            <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
+            <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
+            <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
+            <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
+            <English>Effect Zeus RC</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
+            <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
         </Key>
     </Package>
 </Project>

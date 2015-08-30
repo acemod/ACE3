@@ -4,22 +4,26 @@
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOn">
             <English>Laser Designator On</English>
             <German>Lasermarkierer an</German>
-            <Spanish>Laser Designador encendido</Spanish>
+            <Spanish>Designador láser encendido</Spanish>
             <Russian>ЛЦУ ВКЛ</Russian>
             <Czech>Laserový značkovač zapnut</Czech>
             <Polish>Desygnator laserowy wł.</Polish>
-            <French>Désignateur Laser Allumé</French>
+            <French>Désignateur laser allumé</French>
             <Hungarian>Lézeres Megjelölő Be</Hungarian>
+            <Italian>Designatore laser acceso</Italian>
+            <Portuguese>Designador Laser Ligado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
             <English>Laser Designator Off</English>
             <German>Lasermarkierer aus</German>
-            <Spanish>Laser Designador apagado</Spanish>
+            <Spanish>Designador láser apagado</Spanish>
             <Russian>ЛЦУ ВЫКЛ</Russian>
             <Czech>Laserový značkovat vypnut</Czech>
             <Polish>Desygnator laserowy wył.</Polish>
-            <French>Désignateur Laser Éteint</French>
+            <French>Désignateur laser éteint</French>
             <Hungarian>Lézeres Megjelölő Ki</Hungarian>
+            <Italian>Designatore laser spento</Italian>
+            <Portuguese>Designador Laser Desligado</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain
- * Initializes the Map module.
+ * Initializes the Hearing module.
  *
  * Arguments:
  * Whatever the module provides. (I dunno.)
@@ -9,12 +9,17 @@
  * None
  */
 #include "script_component.hpp"
-
-_logic = _this select 0;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(enableCombatDeafness), "EnableCombatDeafness"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Interaction Module Initialized.";
+// Do Not Force - read module setting only non-default is set due to using SCALAR
+if ((_logic getVariable "DisableEarRinging") != -1) then {
+    [_logic, QGVAR(DisableEarRinging), "DisableEarRinging"] call EFUNC(common,readSettingFromModule);
+};
+
+[_logic, QGVAR(enabledForZeusUnits), "enabledForZeusUnits"] call EFUNC(common,readSettingFromModule);
+
+diag_log text "[ACE]: Hearing Module Initialized.";

@@ -7,7 +7,7 @@
             <Spanish>Arrastrar</Spanish>
             <Polish>Ciągnij</Polish>
             <Czech>Táhnout</Czech>
-            <French>Tracter</French>
+            <French>Trainer</French>
             <German>Ziehen</German>
             <Portuguese>Arrastar</Portuguese>
             <Italian>Trascina</Italian>
@@ -21,19 +21,19 @@
             <Czech>Položit</Czech>
             <French>Lâcher</French>
             <German>Loslassen</German>
-            <Portuguese>Largar</Portuguese>
+            <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
-            <English>Item to heavy</English>
+            <English>Item too heavy</English>
             <German>Gegenstand ist zu schwer</German>
-            <Spanish>Articulo demasiado pesado</Spanish>
-            <Polish>Przedmiot zbyt ciężki</Polish>
+            <Spanish>Objeto demasiado pesado</Spanish>
+            <Polish>Przedmiot jest zbyt ciężki</Polish>
             <French>Objet trop lourd</French>
-            <Portuguese>Não é possível carregar o item devido a seu peso</Portuguese>
-            <Italian>Non è possibile trascinare l'oggetto a causa del suo peso</Italian>
-            <Russian>Слишком тяжело</Russian>
+            <Portuguese>Objeto muito pesado</Portuguese>
+            <Italian>L'oggetto pesa troppo</Italian>
+            <Russian>Предмет слишком тяжёлый</Russian>
             <Czech>Moc težké</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
         </Key>
@@ -45,8 +45,8 @@
             <French>Porter</French>
             <Czech>Nést</Czech>
             <Portuguese>Carregar</Portuguese>
-            <Italian>Trascina</Italian>
             <Hungarian>Felvevés</Hungarian>
+            <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
         </Key>
     </Package>

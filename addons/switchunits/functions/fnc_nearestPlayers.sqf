@@ -10,24 +10,22 @@
  * Player units <ARRAY<OBJECT>>
  *
  * Example:
- * [_pos, 100] call FUNC(nearestPlayers)
+ * [[300,300,0], 100] call ace_switchunits_fnc_nearestPlayers
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_position", "_radius", "_nearestPlayers"];
+private ["_nearestPlayers"];
 
-_position = _this select 0;
-_radius = _this select 1;
+params ["_position", "_radius"];
 
 _nearestPlayers = [];
 
 {
-  if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
-    _nearestPlayers pushBack _x;
-  };
+    if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
+        _nearestPlayers pushBack _x;
+    };
 } forEach (nearestObjects [_position, ["Man"], _radius]);
 
- _nearestPlayers
+_nearestPlayers

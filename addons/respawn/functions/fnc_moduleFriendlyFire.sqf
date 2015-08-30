@@ -19,17 +19,13 @@
 #include "script_component.hpp"
 
 _this spawn {
-    _logic = _this select 0;
-    _units = _this select 1;
-    _activated = _this select 2;
+    PARAMS_3(_logic,_units,_activated); 
 
     if !(_activated) exitWith {};
 
     if (isServer) then {
-        _varName = QGVAR(showFriendlyFireMessage);
-
-        missionNamespace setVariable [_varName, true];
-        publicVariable _varName;
+        missionNamespace setVariable [QGVAR(showFriendlyFireMessage), true];
+        publicVariable QGVAR(showFriendlyFireMessage);
     };
 
     diag_log text "[ACE]: Friendly Fire Messages Module Initialized.";

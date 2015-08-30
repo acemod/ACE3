@@ -5,7 +5,7 @@
 
 #include "script_component.hpp"
 
-private ["_minX","_minY","_maxX","_maxY"];
+private ["_minX","_minY","_maxX","_maxY", "_bounds", "_boundsCorners", "_boundsMax", "_boundsMaxX", "_boundsMaxY", "_boundsMaxZ", "_boundsMin", "_boundsMinX", "_boundsMinY", "_boundsMinZ"];
 
 PARAMS_3(_object,_margins,_offsets);
 
@@ -40,12 +40,13 @@ if (true) then {
 
 	{
 		_ppos = worldToScreen (_object modelToWorld _x);
-		_pposX = _ppos select 0;
-		_pposY = _ppos select 1;
-		if (_pposX < _minX) then {_minX = _pposX};
-		if (_pposX > _maxX) then {_maxX = _pposX};
-		if (_pposY < _minY) then {_minY = _pposY};
-		if (_pposY > _maxY) then {_maxY = _pposY};
+        if (count _ppos >= 2) then {
+            EXPLODE_2_PVT(_ppos,_pposX,_pposY);
+            if (_pposX < _minX) then {_minX = _pposX};
+            if (_pposX > _maxX) then {_maxX = _pposX};
+            if (_pposY < _minY) then {_minY = _pposY};
+            if (_pposY > _maxY) then {_maxY = _pposY};
+        }; //else - what to do if it is offscreen?
 	} forEach _boundsCorners;
 };
 

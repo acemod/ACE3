@@ -6,7 +6,7 @@
  * 0: Display Mode to show the microDAGR in <NUMBER><OPTIONAL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [1] call ace_microdagr_fnc_openDisplay
@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_oldShowMode", "_args", "_pfID", "_player"];
+private ["_oldShowMode", "_args", "_player"];
 
-DEFAULT_PARAM(0,_newDisplayShowMode,-1);
+params [["_newDisplayShowMode", -1, [-1]]];
 _oldShowMode = GVAR(currentShowMode);
 
 if (_newDisplayShowMode == -1) then {
@@ -30,11 +30,10 @@ if ((_newDisplayShowMode == DISPLAY_MODE_DISPLAY) && {!([DISPLAY_MODE_DISPLAY] c
 if ((_newDisplayShowMode == DISPLAY_MODE_DIALOG) && {!([DISPLAY_MODE_DIALOG] call FUNC(canShow))}) then {_newDisplayShowMode = DISPLAY_MODE_HIDDEN};
 
 
-
 //On first-startup
 if (GVAR(currentApplicationPage) == APP_MODE_NULL) then {
     GVAR(currentApplicationPage) = APP_MODE_INFODISPLAY;
-    GVAR(mapPosition) = getPos ace_player;
+    GVAR(mapPosition) = getPos ACE_player;
 };
 
 if (_newDisplayShowMode in [DISPLAY_MODE_CLOSED, DISPLAY_MODE_HIDDEN]) then {
@@ -74,16 +73,15 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
     //Start a pfeh to update display and handle hiding display
 
     [{
-        PARAMS_2(_args,_pfID);
-        EXPLODE_1_PVT(_args,_player);
-        if ((isNull ace_player) || {!alive ace_player} || {ace_player != _player} || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
+        params ["_args", "_idPFH"];
+        _args params ["_player"];
+        if ((isNull ACE_player) || {!alive ACE_player} || {ACE_player != _player} || {!("ACE_microDAGR" in (items ACE_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
             //Close Display if still open:
             if (GVAR(currentShowMode) != DISPLAY_MODE_CLOSED) then {
                 [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
             };
-            [_pfID] call CBA_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
         } else {
-            GVAR(gpsPositionASL) = getPosAsl ace_player;
             if (GVAR(currentShowMode) == DISPLAY_MODE_HIDDEN) then {
                 //If display is hidden, and we can show, then swithc modes:
                 if ([DISPLAY_MODE_DISPLAY] call FUNC(canShow)) then {
@@ -97,5 +95,5 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
                 };
             };
         };
-    }, 0.1, [ace_player]] call CBA_fnc_addPerFrameHandler;
+    }, 0.1, [ACE_player]] call CBA_fnc_addPerFrameHandler;
 };

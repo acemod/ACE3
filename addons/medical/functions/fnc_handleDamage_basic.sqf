@@ -24,38 +24,52 @@
 #define ARMDAMAGETRESHOLD2 1.7
 #define UNCONSCIOUSNESSTRESHOLD 0.7
 
-private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage"];
+private ["_unit", "_selectionName", "_damage", "_shooter", "_projectile", "_damage", "_armdamage", "_hitPoint", "_index", "_legdamage", "_newDamage", "_otherDamage", "_pain", "_restore"];
 
-_unit         = _this select 0;
-_selectionName    = _this select 1;
-_damage       = _this select 2;
-_shooter      = _this select 3;
-_projectile   = _this select 4;
+_unit          = _this select 0;
+_selectionName = _this select 1;
+_damage        = _this select 2;
+_shooter       = _this select 3;
+_projectile    = _this select 4;
+
+// Apply damage treshold / coefficient
+_threshold = [
+    _unit getVariable [QGVAR(damageThreshold), GVAR(AIDamageThreshold)],
+    _unit getVariable [QGVAR(damageThreshold), GVAR(playerDamageThreshold)]
+] select ([_unit] call EFUNC(common,isPlayer));
+_damage = _damage * (1 / _threshold);
 
 // This is a new hit, reset variables.
 // Note: sometimes handleDamage spans over 2 or even 3 frames.
-if (diag_frameno > (_unit getVariable [QGVAR(frameNo), -3]) + 2) then {
-    _unit setVariable [QGVAR(frameNo), diag_frameno];
+if (diag_frameno > (_unit getVariable [QGVAR(basic_frameNo), -3]) + 2) then {
+    _unit setVariable [QGVAR(basic_frameNo), diag_frameno];
     _unit setVariable [QGVAR(isFalling), false];
     _unit setVariable [QGVAR(projectiles), []];
     _unit setVariable [QGVAR(hitPoints), []];
     _unit setVariable [QGVAR(damages), []];
     _unit setVariable [QGVAR(structDamage), 0];
-    _unit setVariable [QGVAR(preventDeath), false];
+
+    if (isnil {_unit getvariable QGVAR(structDamagePFH)}) then {
     // Assign orphan structural damage to torso
-    [{
-        private ["_unit", "_damagesum"];
-        _unit = _this select 0;
-        _damagesum = (_unit getHitPointDamage "HitHead") +
-            (_unit getHitPointDamage "HitBody") +
-            (_unit getHitPointDamage "HitLeftArm") +
-            (_unit getHitPointDamage "HitRightArm") +
-            (_unit getHitPointDamage "HitLeftLeg") +
-            (_unit getHitPointDamage "HitRightLeg");
-        if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
-            _unit setHitPointDamage ["HitBody", damage _unit];
-        };
-    }, [_unit], 2, 0.1] call EFUNC(common,waitAndExecute);
+        [{
+            private ["_unit", "_damagesum"];
+            _unit = (_this select 0) select 0;
+            if (ACE_diagTime - (_unit getvariable [QGVAR(structDamagePFH),-2]) >= 2) then {
+                 _unit setVariable [QGVAR(structDamagePFH), nil];
+                _damagesum = (_unit getHitPointDamage "HitHead") +
+                    (_unit getHitPointDamage "HitBody") +
+                    (_unit getHitPointDamage "HitLeftArm") +
+                    (_unit getHitPointDamage "HitRightArm") +
+                    (_unit getHitPointDamage "HitLeftLeg") +
+                    (_unit getHitPointDamage "HitRightLeg");
+                if (_damagesum < 0.06 and damage _unit > 0.06 and alive _unit) then {
+                    _unit setHitPointDamage ["HitBody", damage _unit];
+                };
+                [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            };
+        }, 0, [_unit]] call CBA_fnc_addPerFrameHandler;
+    };
+    _unit setVariable [QGVAR(structDamagePFH), ACE_diagTime]; // Assign starting ACE_time or reset it
 };
 
 _newDamage = _damage - (damage _unit);
@@ -172,11 +186,7 @@ if (_selectionName == "" and
     _damage < 1 and
     !(_unit getVariable ["ACE_isUnconscious", False]
 )) then {
-    if (_unit getVariable [QGVAR(allowUnconscious), ([_unit] call EFUNC(common,isPlayer)) or random 1 > 0.3]) then {
-        [_unit, true] call FUNC(setUnconscious);
-    } else {
-        _damage = 1;
-    };
+    [_unit, true] call FUNC(setUnconscious);
 };
 
 _damage

@@ -8,17 +8,13 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic","_units", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -26,9 +22,10 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(ammoTemperatureEnabled), "ammoTemperatureEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(barrelLengthInfluenceEnabled), "barrelLengthInfluenceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(bulletTraceEnabled), "bulletTraceEnabled"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(onlyActiveForLocalPlayers), "onlyActiveForLocalPlayers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForEveryone), "simulateForEveryone"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(disabledInFullAutoMode), "disabledInFullAutoMode"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(alwaysSimulateForSnipers), "alwaysSimulateForSnipers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForSnipers), "simulateForSnipers"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(simulateForGroupMembers), "simulateForGroupMembers"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationInterval), "simulationInterval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(simulationRadius), "simulationRadius"] call EFUNC(common,readSettingFromModule);
 

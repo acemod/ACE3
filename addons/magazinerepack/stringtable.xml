@@ -5,10 +5,10 @@
             <English>Repack Magazines</English>
             <German>Magazine umpacken</German>
             <Spanish>Reorganizar cargadores</Spanish>
-            <French>Réorganiser chargeurs</French>
+            <French>Réorganiser les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat Zásobníky</Czech>
-            <Italian>Ricarica Caricatori</Italian>
+            <Italian>Ricarica caricatori</Italian>
             <Portuguese>Reorganizar Carregadores</Portuguese>
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
@@ -20,7 +20,7 @@
             <French>Sélectionner menu des chargeurs</French>
             <Polish>Menu wyboru magazynków</Polish>
             <Czech>Zvolit Menu zásobníků</Czech>
-            <Italian>Seleziona Menù di Ricarica</Italian>
+            <Italian>Seleziona menù di ricarica</Italian>
             <Portuguese>Menu de Seleção de Carregador</Portuguese>
             <Hungarian>Fegyvertár menü kiválasztás</Hungarian>
             <Russian>Меню выбора магазинов</Russian>
@@ -32,7 +32,7 @@
             <French>Sélectionner chargeur</French>
             <Polish>Wybierz magazynek</Polish>
             <Czech>Zvolit zásobník</Czech>
-            <Italian>Seleziona Caricatore</Italian>
+            <Italian>Seleziona caricatore</Italian>
             <Portuguese>Selecionar Carregador</Portuguese>
             <Hungarian>Tár kiválasztása</Hungarian>
             <Russian>Выбрать магазин</Russian>
@@ -66,9 +66,9 @@
             <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
             <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
             <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en rab</French>
-            <Polish>Pełnych magazynków: %1.&lt;br /&gt; Dodatkowych naboi: %2.</Polish>
+            <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
-            <Italian>%1 caricatore/i pieno e %2 munizioni extra</Italian>
+            <Italian>%1 caricatore(i) pieno e %2 munizioni extra</Italian>
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
@@ -76,32 +76,38 @@
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
             <French>Réorganisation terminée</French>
-            <German>Wiederverpacken Fertig</German>
-            <Spanish>Reembalaje finalizado</Spanish>
+            <German>Wiederverpacken fertig</German>
+            <Spanish>Reorganización finalizada</Spanish>
             <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
+            <Italian>Riempi caricatore</Italian>
+            <Portuguese>Reorganização Terminada</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
             <French>Réorganisation interrompue</French>
-            <German>Umpacken Unterbrochen</German>
-            <Spanish>Reembalaje interrumpido</Spanish>
+            <German>Umpacken unterbrochen</German>
+            <Spanish>Reorganización interrumpida</Spanish>
             <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
+            <Italian>Riempimento interrotto</Italian>
+            <Portuguese>Reorganização Interrompida</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
             <French>%1 plein(s) et %2 partiel(s)</French>
             <German>%1 Vollständigen und %2 Teilweisen</German>
-            <Spanish>%1 Total y %2 Parcial</Spanish>
+            <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
-            <Polish>Pełnych: %1.&lt;br /&gt;Częściowo pełnych: %2.</Polish>
+            <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
+            <Portuguese>%1 Total e %2 Parcial </Portuguese>
         </Key>
     </Package>
 </Project>

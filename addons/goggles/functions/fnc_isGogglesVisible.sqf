@@ -14,8 +14,10 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_currentGlasses", "_result", "_unit"];
-_unit = _this select 0;
+
+PARAMS_1(_unit);
+
+private ["_currentGlasses", "_result", "_position", "_visible"];
 
 _currentGlasses = goggles _unit;
 _result = false;

@@ -2,27 +2,42 @@ class CfgVehicles {
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
-        displayName = "Wind Deflection";
+        displayName = CSTRING(windDeflection_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
+            class enabled {
+                displayName = CSTRING(deflectionModule_DisplayName);
+                description = CSTRING(deflectionModule_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class vehicleEnabled {
+                displayName = CSTRING(vehicleEnabled_DisplayName);
+                description = CSTRING(vehicleEnabled_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class simulationInterval {
-                displayName = "Simulation Interval";
-                description = "Defines the interval between every calculation step";
+                displayName = CSTRING(simulationInterval_DisplayName);
+                description = CSTRING(simulationInterval_Description);
                 typeName = "NUMBER";
                 defaultValue = 0.05;
             };
             class simulationRadius {
-                displayName = "Simulation Radius";
-                description = "Defines the radius (in meters) in which advanced ballistics are applied";
+                displayName = CSTRING(simulationRadius_DisplayName);
+                description = CSTRING(simulationRadius_Description);
                 typeName = "NUMBER";
                 defaultValue = 3000;
             };
+        };
+        class ModuleDescription {
+            description = CSTRING(windDeflection_Description);
         };
     };
 };

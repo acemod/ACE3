@@ -25,9 +25,10 @@
  */
 #include "script_component.hpp"
 
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_setupObject", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
+private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_attachList"];
 
-PARAMS_6(_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
+params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAtachText", "_startingPosition"];
+TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
 
 _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
@@ -36,9 +37,6 @@ _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
 _closeInMax = _startDistanceFromCenter;
 _closeInMin = 0;
-
-//Delete Local Placement Object
-deleteVehicle _setupObject;
 
 while {(_closeInMax - _closeInMin) > 0.01} do {
     _closeInDistance = (_closeInMax + _closeInMin) / 2;
@@ -74,7 +72,7 @@ _closeInDistance = (_closeInMax + _closeInMin) / 2;
 //Checks (too close to center or can't attach)
 if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
-    [localize "STR_ACE_Attach_Failed"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull and be useless)
@@ -89,12 +87,9 @@ _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 //Remove Item from inventory
 _unit removeItem _itemClassname;
 
-//Add Object to ACE_AttachedObjects and ACE_AttachedItemNames
-_currentObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
-_currentObjects pushBack _attachedObject;
-_attachToVehicle setVariable [QGVAR(Objects), _currentObjects, true];
-_currentItemNames = _attachToVehicle getVariable [QGVAR(ItemNames), []];
-_currentItemNames pushBack _itemClassname;
-_attachToVehicle setVariable [QGVAR(ItemNames), _currentItemNames, true];
+//Add Object to attached array
+_attachList = _attachToVehicle getVariable [QGVAR(attached), []];
+_attachList pushBack [_attachedObject, _itemClassname];
+_attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
 [_onAtachText] call EFUNC(common,displayTextStructured);

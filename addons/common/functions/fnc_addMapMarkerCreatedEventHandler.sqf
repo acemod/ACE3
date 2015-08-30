@@ -11,12 +11,12 @@
  */
 #include "script_component.hpp"
 
-private ["_statement", "_actionsVar", "_id", "_actionIDs", "_actions"];
+private ["_actionsVar", "_id", "_actionIDs", "_actions"];
 
-_statement = _this select 0;
+PARAMS_1(_statement);
 
 if (typeName _statement == "STRING") then {
-  _statement = compile _statement;
+    _statement = compile _statement;
 };
 
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
@@ -26,8 +26,8 @@ _actionIDs = _actionsVar select 1;
 _actions = _actionsVar select 2;
 
 if (_id == 0) then {
-  uiNamespace setVariable ["ACE_EventHandler_MapMarker", count allMapMarkers];
-  ("ACE_EventHandlerHelper2" call BIS_fnc_rscLayer) cutRsc ["ACE_EventHandlerHelper2", "PLAIN"];
+    uiNamespace setVariable ["ACE_EventHandler_MapMarker", count allMapMarkers];
+    ("ACE_EventHandlerHelper2" call BIS_fnc_rscLayer) cutRsc ["ACE_EventHandlerHelper2", "PLAIN"];
 };
 
 _actionIDs pushBack _id;

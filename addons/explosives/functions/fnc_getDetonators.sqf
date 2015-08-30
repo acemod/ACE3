@@ -14,14 +14,19 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_unit", "_items", "_result", "_config"];
-_unit = _this select 0;
+// IGNORE_PRIVATE_WARNING(_detonators);
+
+params ["_unit"];
+TRACE_1("params",_unit);
+
+private ["_items", "_result", "_config"];
+
 _items = (items _unit);
 _result = [];
 
 {
     _config = ConfigFile >> "CfgWeapons" >> _x;
-    if (getNumber (_config >> "ACE_Detonator") == 1) then {
+    if (getNumber (_config >> "ACE_Detonator") == 1 && {!(_x in _result)}) then {
         _result pushBack _x;
     };
 } forEach _items;

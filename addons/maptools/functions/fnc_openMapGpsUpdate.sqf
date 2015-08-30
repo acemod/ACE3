@@ -3,6 +3,8 @@
 
 #include "script_component.hpp"
 
+private ["_mapGpsDisplay", "_ctrl"];
+
 if ((!("ItemGPS" in assigneditems ACE_player)) || {isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull])}) exitWith {
     ("RscACE_MapGps" call BIS_fnc_rscLayer) cutText ["","PLAIN"];  //close GPS RSC
     [(_this select 1)] call CBA_fnc_removePerFrameHandler;  //remove frameHandler

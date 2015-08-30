@@ -15,14 +15,12 @@
  */
 #include "script_component.hpp"
 
-#define _dsp (uiNamespace getVariable "ATragMX_Display")
-
 if !(ctrlVisible 9000) then {
 
     false call FUNC(show_target_speed_assist);
     true call FUNC(show_target_speed_assist_timer);
 
-    ctrlSetFocus (_dsp displayCtrl 9002);
+    ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 9002);
     
     [{
         private ["_args", "_startTime"];
@@ -32,7 +30,7 @@ if !(ctrlVisible 9000) then {
         if (!(GVAR(speedAssistTimer))) exitWith {
             GVAR(speedAssistTimer) = true;
             
-            ctrlSetText [8006, Str(Round((time - _startTime) * 10) / 10)];
+            ctrlSetText [8006, Str(Round((ACE_time - _startTime) * 10) / 10)];
 
             [] call FUNC(calculate_target_speed_assist);
 
@@ -42,7 +40,7 @@ if !(ctrlVisible 9000) then {
             [_this select 1] call cba_fnc_removePerFrameHandler;
         };
         
-        ctrlSetText [9001, Str(Round((time - _startTime) * 10) / 10)];
+        ctrlSetText [9001, Str(Round((ACE_time - _startTime) * 10) / 10)];
         
-    }, 0.1, [time]] call CBA_fnc_addPerFrameHandler;
+    }, 0.1, [ACE_time]] call CBA_fnc_addPerFrameHandler;
 };

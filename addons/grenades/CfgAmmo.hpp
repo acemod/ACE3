@@ -3,6 +3,7 @@ class CfgAmmo {
     class FlareBase: FlareCore {
         intensity = 20000;
         flareSize = 12;
+        timeToLive = 60;
     };
     class F_40mm_White: FlareBase {
         intensity = 40000;
@@ -10,7 +11,7 @@ class CfgAmmo {
     };
     class F_20mm_White: FlareBase {
         intensity = 20000;
-        flareSize = 12;
+        flareSize = 6;
     };
     class F_Signal_Green: FlareBase {
         intensity = 20000;
@@ -19,6 +20,7 @@ class CfgAmmo {
     class Flare_82mm_AMOS_White: FlareCore {
         intensity = 80000;
         flareSize = 12;
+        timeToLive = 60;
     };
 
     class F_20mm_Red: F_20mm_White {};
@@ -82,7 +84,7 @@ class CfgAmmo {
         SmokeShellSoundHit3[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
         SmokeShellSoundLoop1[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop1",0.125893,1,70};
         SmokeShellSoundLoop2[] = {"A3\Sounds_F\weapons\smokeshell\smoke_loop2",0.125893,1,70};
-        timeToLive = 60;
+        timeToLive = 6;
         fuseDistance = 2.3;
         model = PATHTOF(models\ACE_m84_thrown.p3d);
     };

@@ -11,53 +11,46 @@
  * 4: Condition <CODE>
  * 5: Insert children code <CODE> (Optional)
  * 6: Action parameters <ANY> (Optional)
- * 7: Position (Position or Selection Name) <POSITION> or <STRING> (Optional)
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
  * 8: Distance <NUMBER> (Optional)
  * 9: Other parameters <ARRAY> (Optional)
+ * 10: Modifier function <CODE> (Optional)
  *
  * Return value:
  * Action <ARRAY>
  *
  * Example:
- * [VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
+ * ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_5_PVT(_this,_actionName,_displayName,_icon,_statement,_condition);
+params [
+    "_actionName",
+    "_displayName",
+    "_icon",
+    "_statement",
+    "_condition",
+    ["_insertChildren", {}],
+    ["_customParams", []],
+    ["_position", {[0, 0, 0]}],
+    ["_distance", 2],
+    ["_params", [false, false, false, false, false]],
+    ["_modifierFunction", {}]
+];
 
-private ["_insertChildren","_customParams","_position","_distance","_params"];
-
-_insertChildren = if (count _this > 5) then {
-    _this select 5
-} else {
-    {}
-};
-
-_customParams = if (count _this > 6) then {
-    _this select 6
-} else {
-    []
-};
-
-_position = if (count _this > 7) then {
-    _this select 7
-} else {
-    [0,0,0]
-};
-
-_distance = if (count _this > 8) then {
-    _this select 8
-} else {
-    2
-};
-
-_params = if (count _this > 9) then {
-    _this select 9
-} else {
-    [false,false,false,false]
-};
+_position = if (typeName (_position) == "STRING") then {
+        // If the action is set to a selection, create the suitable code
+        compile format ["_target selectionPosition '%1'", _position];
+    } else {
+        if (typeName (_position) == "ARRAY") then {
+            // If the action is set to a array position, create the suitable code
+            compile format ["%1", _position];
+        } else {
+            _position;
+        };
+    };
 
 [
     _actionName,
@@ -70,5 +63,6 @@ _params = if (count _this > 9) then {
     _customParams,
     _position,
     _distance,
-    _params
+    _params,
+    _modifierFunction
 ]

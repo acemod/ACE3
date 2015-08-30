@@ -21,7 +21,7 @@ switch (_this select 0) do {
     case ("azimuth"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeAzimuth) + 0.2;
 
         [false] call FUNC(showCenter);
 
@@ -42,7 +42,7 @@ switch (_this select 0) do {
     case ("distance"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -66,7 +66,7 @@ switch (_this select 0) do {
         call FUNC(showAzimuth);
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -89,7 +89,7 @@ switch (_this select 0) do {
     case ("azimuth+inclination"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeAzimuth) + 0.2;
 
         [false] call FUNC(showCenter);
 
@@ -110,7 +110,7 @@ switch (_this select 0) do {
     case ("height+distance"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -132,7 +132,7 @@ switch (_this select 0) do {
     case ("relative_distance"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeAzimuth) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -155,7 +155,7 @@ switch (_this select 0) do {
     case ("relative_height+length"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeAzimuth) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -178,7 +178,7 @@ switch (_this select 0) do {
     case ("relative_azimuth+distance"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -201,7 +201,7 @@ switch (_this select 0) do {
     case ("fall_of_shot"): {
 
         private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        _isReady = ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -223,8 +223,8 @@ switch (_this select 0) do {
     };
 
     case ("settings"): {
-        if (diag_tickTime < GVAR(keyDownTimeMenu) + 1) exitWith {
-            GVAR(keyDownTimeAzimuth) = diag_tickTime;
+        if (ACE_diagTime < GVAR(keyDownTimeMenu) + 1) exitWith {
+            GVAR(keyDownTimeAzimuth) = ACE_diagTime;
         };
 
         [["meter", "feet"] select (GVAR(configTemp) select 0)] call FUNC(showText);
@@ -247,7 +247,7 @@ switch (_this select 0) do {
             };
         };
 
-        if (GVAR(keyDownTabCountAzimuth) > 0 && {diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5}) exitWith {
+        if (GVAR(keyDownTabCountAzimuth) > 0 && {ACE_diagTime > GVAR(keyDownTimeAzimuth) + 0.5}) exitWith {
 
             ["clear_left"] call FUNC(showText);
             ["clear_right"] call FUNC(showText);
@@ -264,8 +264,8 @@ switch (_this select 0) do {
     };
 
     case ("config"): {
-        if (diag_tickTime < GVAR(keyDownTimeMenu) + 1) exitWith {
-            GVAR(keyDownTimeDistance) = diag_tickTime;
+        if (ACE_diagTime < GVAR(keyDownTimeMenu) + 1) exitWith {
+            GVAR(keyDownTimeDistance) = ACE_diagTime;
         };
 
         switch (GVAR(configTemp)) do {
@@ -315,7 +315,7 @@ switch (_this select 0) do {
             };
         };
 
-        if (GVAR(keyDownTabCountDistance) > 0 && {diag_tickTime > GVAR(keyDownTimeDistance) + 0.5}) exitWith {
+        if (GVAR(keyDownTabCountDistance) > 0 && {ACE_diagTime > GVAR(keyDownTimeDistance) + 0.5}) exitWith {
 
             ["clear_left"] call FUNC(showText);
             ["clear_right"] call FUNC(showText);

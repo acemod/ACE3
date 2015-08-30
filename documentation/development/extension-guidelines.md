@@ -1,43 +1,44 @@
 ---
 layout: wiki
 title: Extension Guidelines
+description: 
 group: development
 parent: wiki
 order: 9
 ---
 
-## Basics
+## 1. Basics
 
-### Requirements
+### 1.1 Requirements
 
 - A compiler (VS/GCC/Clang) 
-    - If starting with visual studio, you need to make sure to use the Visual studio command prompt
+    - If starting with Visual Studio, you need to make sure to use the Visual studio command prompt
 - cmake 3.0 or later in your path
 
-### Cross-Platform Guidelines
+### 1.2 Cross-Platform Guidelines
 
-### C++ basic style and naming guide
+### 1.3 C++ basic style and naming guide
 
-### ace_common cpp library
+### 1.4 ace_common cpp library
 
 ---
 
-## Building Extensions on Windows
+## 2 Building Extensions on Windows
 
-### Compiling 
+###  2.1 Compiling 
 
-#### Windows - Creating a Visual Studio Project
+####  2.1.1 Windows - Creating a Visual Studio Project
 1. Open your compiling command prompt (which has cmake and your compiler)
 2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
 
 ```
 cd extensions\build
-cmake .. -G "Visual Studio 2014"
+cmake .. -G "Visual Studio 14 2015"
 ```
 
 A Visual studio project file will now be generated in your build directory.
 
-#### Windows - Visual Studio - Compile only (nmake)
+#### 2.1.2 Windows - Visual Studio - Compile only (nmake)
 1. Open your compiling command prompt (which has cmake and your compiler)
 2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
 
@@ -56,4 +57,4 @@ extensions\
         somethingElse\ace_somethingElse.dll
 ```
 
-### Creating a New Extension
+### 2.2 Creating a New Extension

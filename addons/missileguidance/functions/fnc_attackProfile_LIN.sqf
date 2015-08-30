@@ -3,7 +3,7 @@
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
-private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos"];
+private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_shooterPos"];
 _seekerTargetPos = _this select 0;
 _launchParams = _this select 1;
 

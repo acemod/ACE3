@@ -18,6 +18,8 @@
 
 PARAMS_1(_theMap);
 
+private ["_rotatingTexture", "_textureWidth", "_scale", "_xPos", "_yPos"];
+
 if (!("ACE_MapTools" in items ACE_player)|| {GVAR(mapTool_Shown) == 0}) exitWith {};
 
 _rotatingTexture = "";

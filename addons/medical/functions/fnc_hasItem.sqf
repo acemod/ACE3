@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_medic", "_patient", "_item", "_return"];
+private ["_medic", "_patient", "_item", "_return", "_crew"];
 _medic = _this select 0;
 _patient = _this select 1;
 _item = _this select 2;

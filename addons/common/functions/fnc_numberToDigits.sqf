@@ -12,10 +12,9 @@
  */
 #include "script_component.hpp"
 
-private ["_number", "_minLength", "_length", "_digits"];
+private ["_length", "_digits"];
 
-_number = _this select 0;
-_minLength = _this select 1;
+PARAMS_2(_number,_minLength);
 
 _number = _number min 999999;
 

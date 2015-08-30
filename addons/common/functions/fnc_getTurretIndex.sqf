@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_turrets", "_units", "_index"];
+private ["_vehicle", "_turrets", "_units", "_index"];
 
-_unit = _this select 0;
+PARAMS_1(_unit);
 _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {[]};

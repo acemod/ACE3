@@ -51,6 +51,7 @@ if (GVAR(mapTool_isDragging)) exitWith {
 
 // Rotation
 if (GVAR(mapTool_isRotating)) exitWith {
+    private "_angle";
     // Get new angle
     _angle =  (180 + ((GVAR(mousePosition) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mousePosition) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
     GVAR(mapTool_angle) = GVAR(mapTool_startAngle) + _angle - GVAR(mapTool_startDragAngle);

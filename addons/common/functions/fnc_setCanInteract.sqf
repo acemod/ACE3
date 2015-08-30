@@ -11,9 +11,11 @@
 #include "script_component.hpp"
 
 private ["_unit","_to","_return"];
+
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _to = _this select 1;
 _return = false;
+
 if (((typeName _to) == "SCALAR")) then {
     if (_to <-1) then {
         _to = -1;

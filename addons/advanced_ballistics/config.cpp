@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_ballistics", "ace_weather", "ace_modules"};
+        requiredAddons[] = {"ace_ballistics", "ace_weather"};
         author[] = {"Ruthberg"};
         authorUrl = "https://github.com/ulteq";
         VERSION_CONFIG;
@@ -16,3 +16,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_Extensions {
+    extensions[] += {"ace_advanced_ballistics"};
+};

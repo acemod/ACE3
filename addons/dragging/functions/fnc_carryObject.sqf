@@ -3,19 +3,18 @@
  *
  * Carry an object.
  *
- * Argument:
- * 0: Unit that should do the carrying (Object)
- * 1: Object to carry (Object)
+ * Arguments:
+ * 0: Unit that should do the carrying <OBJECT>
+ * 1: Object to carry <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // get attachTo offset and direction.
 private ["_position", "_direction"];
@@ -58,7 +57,7 @@ if (_actionID != -1) then {
 };
 
 _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize "STR_ACE_Dragging_Drop"],
+    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
     QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(carriedObject)),objNull)])] call FUNC(dropObject_carry)),
     nil,
     20,

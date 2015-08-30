@@ -11,9 +11,9 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_hitpoints", "_selections"];
+private ["_config", "_hitpoints", "_selections", "_i"];
 
-_vehicle = _this select 0;
+PARAMS_1(_vehicle);
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -41,14 +41,15 @@ _hitpointClasses = [_config >> "HitPoints"];
     while {isClass _class} do {
 
         for "_i" from 0 to (count _class - 1) do {
-            private ["_entry", "_selection"];
+            if (isClass (_class select _i)) then {
+                private ["_entry", "_selection"];
+                _entry = configName (_class select _i);
+                _selection = getText (_class select _i >> "name");
 
-            _entry = configName (_class select _i);
-            _selection = getText (_class select _i >> "name");
-
-            if (!(_selection in _selections) && {!isNil {_vehicle getHit _selection}}) then {
-                _hitpoints pushBack _entry;
-                _selections pushBack _selection;
+                if (!(_selection in _selections) && {!isNil {_vehicle getHit _selection}}) then {
+                    _hitpoints pushBack _entry;
+                    _selections pushBack _selection;
+                };
             };
         };
 

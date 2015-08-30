@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Zeus">
+        <Key ID="STR_ACE_Zeus_Settings_DisplayName">
+            <English>Zeus Settings</English>
+            <Polish>Ustawienia Zeusa</Polish>
+            <Spanish>Ajustes Zeus</Spanish>
+            <Czech>Nastavení Zeuse</Czech>
+            <German>Zeus-Einstellungen</German>
+            <Portuguese>Ajustes do Zeus</Portuguese>
+            <Hungarian>Zeus beállítások</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_Settings_Description">
+            <English>Provides control over various aspects of Zeus.</English>
+            <Polish>Pozwala kontrolować różne aspekty Zeusa.</Polish>
+            <Spanish>Proporciona control sobre diversos aspectos de Zeus.</Spanish>
+            <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
+            <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
+            <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
+            <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ascension_DisplayName">
+            <English>Ascension Messages</English>
+            <Polish>Wiad. o nowym Zeusie</Polish>
+            <Spanish>Mensajes de ascensión</Spanish>
+            <Czech>Zpráva o novém Zeusovi</Czech>
+            <German>Aufstiegsnachrichten</German>
+            <Portuguese>Mensagens de ascensão</Portuguese>
+            <Hungarian>Felemelkedési üzenetek</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ascension_Description">
+            <English>Display global popup messages when a player is assigned as Zeus.</English>
+            <Polish>Wyświetlaj globalną wiadomość kiedy gracz zostanie przydzielony jako Zeus</Polish>
+            <Spanish>Mostrar mensajes emergentes globales cuando a un jugador se le asigna como Zeus.</Spanish>
+            <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
+            <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
+            <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
+            <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_bird_DisplayName">
+            <English>Zeus Eagle</English>
+            <Polish>Orzeł Zeusa</Polish>
+            <Spanish>Águila Zeus</Spanish>
+            <Czech>Orel Zeuse</Czech>
+            <German>Zeus-Adler</German>
+            <Portuguese>Águia do Zeus</Portuguese>
+            <Hungarian>Zeus sas</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_bird_Description">
+            <English>Spawn an eagle that follows the Zeus camera.</English>
+            <Polish>Spawnuj orła, który podąrza za kamerą Zeusa.</Polish>
+            <Spanish>Generar un águila que sigue la cámara Zeus.</Spanish>
+            <Czech>Vytvoří orla, který následuje kameru Zeuse.</Czech>
+            <German>Erstelle einen Adler, der der Zeus-Kamera folgt.</German>
+            <Portuguese>Cria uma águia que segue a câmera do Zeus</Portuguese>
+            <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
+            <English>Wind Sounds</English>
+            <Polish>Dźwięki wiatru</Polish>
+            <Spanish>Sonidos de viento</Spanish>
+            <Czech>Zvuky větru</Czech>
+            <German>Windgeräusche</German>
+            <Portuguese>Sons de vento</Portuguese>
+            <Hungarian>Szélhangok</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_remoteWind_Description">
+            <English>Play wind sounds when Zeus remote controls a unit.</English>
+            <Polish>Odtwarzaj dźwięki wiatru kiedy Zeus zdalnie kontroluje jednostkę.</Polish>
+            <Spanish>Reproduce sonidos de viento cuando Zeus controle remotamente una unidad.</Spanish>
+            <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
+            <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
+            <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
+            <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
+            <English>Ordnance Warning</English>
+            <Polish>Ostrz. o ostrzale arty.</Polish>
+            <Spanish>Advertencia de artefactos explosivos</Spanish>
+            <Czech>Varování před dělostřelectvem</Czech>
+            <German>Artilleriewarnung</German>
+            <Portuguese>Aviso de explosivos</Portuguese>
+            <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
+            <English>Play a radio warning when Zeus uses ordnance.</English>
+            <Polish>Odtwarzaj wiadomość radiową kiedy Zeus używa artylerii.</Polish>
+            <Spanish>Reproduce un aviso de radio cuando Zeus utiliza artefactos explosivos.</Spanish>
+            <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
+            <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
+            <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
+            <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
+            <English>Reveal Mines</English>
+            <Polish>Pokazuj miny</Polish>
+            <Spanish>Revelar minas</Spanish>
+            <Czech>Odhalit miny</Czech>
+            <German>Enthülle Minen</German>
+            <Portuguese>Revelar minas</Portuguese>
+            <Hungarian>Aknák feltárása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_Description">
+            <English>Reveal mines to allies and place map markers.</English>
+            <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
+            <Spanish>Revelar minas a aliados y establecer marcadores de mapa.</Spanish>
+            <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
+            <German>Enthülle Minen gegenüber Verbündeten und platziere Kartenmarkierungen.</German>
+            <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
+            <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_partial">
+            <English>Reveal to Allies</English>
+            <Polish>Pokaż dla sojuszników</Polish>
+            <Spanish>Revelar a aliados</Spanish>
+            <Czech>Odhalit pro spojence</Czech>
+            <German>An Verbündete weitergeben</German>
+            <Portuguese>Revelar para aliados</Portuguese>
+            <Hungarian>Feltárás a szövetségeseknek</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_revealMines_full">
+            <English>Allies + Map Markers</English>
+            <Polish>Sojusznicy + markery na mapie</Polish>
+            <Spanish>Aliados + Marcas de mapa</Spanish>
+            <Czech>Spojenci + Značky na mapě</Czech>
+            <German>Verbündete + Kartenmarkierungen</German>
+            <Portuguese>Aliados + Marcadores no mapa</Portuguese>
+            <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
+            <English>Toggle Captive</English>
+            <Polish>Przełącz więźnia</Polish>
+            <Spanish>Alternar cautivo</Spanish>
+            <Czech>Přepnout - Vězeň</Czech>
+            <German>Gefangennahme umschalten</German>
+            <Portuguese>Alternar prisioneiro</Portuguese>
+            <Hungarian>Elfogott állapot váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
+            <English>Toggle Surrender</English>
+            <Polish>Przełącz kapitulację</Polish>
+            <Spanish>Alternar rendición</Spanish>
+            <Czech>Přepnout - Vzdávání</Czech>
+            <German>Aufgabe umschalten</German>
+            <Portuguese>Alternar rendição</Portuguese>
+            <Hungarian>Kapituláló állapot váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
+            <English>Toggle Unconscious</English>
+            <Polish>Przełącz nieprzytomność</Polish>
+            <Spanish>Alternar inconsciencia</Spanish>
+            <Czech>Přepnout - Bezvědomí</Czech>
+            <German>Bewusstlosigkeit umschalten</German>
+            <Portuguese>Alternar inconsciência</Portuguese>
+            <Hungarian>Eszméletlen állapot váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
+            <English>Assign Medic</English>
+            <Polish>Przydziel medyka</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
+            <English>Assign Medical Vehicle</English>
+            <Polish>Przydziel pojazd medyczny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
+            <English>Assign Medical Facility</English>
+            <Polish>Przydziel budynek medyczny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyAlive">
+            <English>Unit must be alive</English>
+            <French>Utiliser uniquement sur une unité vivante</French>
+            <German>Nur bei lebenden Einheiten verwendbar</German>
+            <Spanish>Utilizar solo en unidades vivas</Spanish>
+            <Czech>Použitelné jen na živé jednotky</Czech>
+            <Polish>Używaj tylko na żywych jednostkach</Polish>
+            <Russian>Применимо только к живым юнитам</Russian>
+            <Hungarian>Csak élő egységeken használni</Hungarian>
+            <Italian>Si può fare solo su persone vive</Italian>
+            <Portuguese>Usar somente em unidades vivas</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyInfantry">
+            <English>Unit must be infantry</English>
+            <French>Utiliser uniquement sur du personnel à pied</French>
+            <German>Nur bei abgesessener Infanterie verwendbar</German>
+            <Spanish>Utilizar solo en infanteria desmontada</Spanish>
+            <Czech>Použitelné jen na pěsích jednotkách</Czech>
+            <Polish>Używaj tylko na piechocie poza wszelkimi pojazdami</Polish>
+            <Russian>Применимо только к пехоте вне техники</Russian>
+            <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
+            <Italian>Si può usare solo su fanteria a piedi</Italian>
+            <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyStructures">
+            <English>Unit must be a structure</English>
+            <Polish>Jednostka musi być budynkiem</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyVehicles">
+            <English>Unit must be a vehicle</English>
+            <Polish>Jednostka musi być pojazdem</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
+            <English>Unit must not be captive</English>
+            <Polish>Jednostka nie może być więźniem</Polish>
+            <Spanish>La unidad no debe estar cautiva</Spanish>
+            <Czech>Jednotka nemí být vězeň</Czech>
+            <German>Einheit darf nicht gefangen sein</German>
+            <Portuguese>Unidade não pode ser prisioneira</Portuguese>
+            <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_NothingSelected">
+            <English>Place on a unit</English>
+            <French>Rien sous le curseur</French>
+            <German>Es wurde nichts ausgewählt</German>
+            <Spanish>Nada bajo el ratón</Spanish>
+            <Portuguese>Coloque em uma unidade</Portuguese>
+            <Czech>Umístni na jednotku</Czech>
+            <Polish>Nie ma nic pod kursorem</Polish>
+            <Russian>Ничего не выделено</Russian>
+            <Hungarian>Semmi sincs az egér alatt</Hungarian>
+            <Italian>Nessuna selezione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_RequiresAddon">
+            <English>Requires an addon that is not present</English>
+            <Polish>Wymaga addonu, który nie jest obecny</Polish>
+            <Spanish>Requiere un addon que no está presente</Spanish>
+            <Czech>Vyžaduje addon, který není přítomen</Czech>
+            <German>Benötigt ein Addon, das nicht vorhanden ist</German>
+            <Portuguese>Requer um addon que não está presente</Portuguese>
+            <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
+            <English>Add Objects to Curator</English>
+            <Polish>Dodaj obiekt do kuratora</Polish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
+            <English>Adds any spawned object to all curators in the mission</English>
+            <Polish>Dodaje każdy zespawnowany obiekt do wszystkich kuratorów podczas misji</Polish>
+        </Key>
+    </Package>
+</Project>

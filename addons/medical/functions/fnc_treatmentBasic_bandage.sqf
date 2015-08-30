@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 #define BANDAGEHEAL 0.8
 
-private ["_caller", "_target","_selection","_className","_target","_hitSelections","_hitPoints","_point"];
+private ["_caller", "_target","_selection","_className","_target","_hitSelections","_hitPoints","_point", "_damage"];
 _caller = _this select 0;
 _target = _this select 1;
 _selection = _this select 2;

@@ -12,9 +12,14 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_menuType);
+params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
+
+// Conditions: canInteract (these don't apply to zeus)
+if ((isNull curatorCamera) && {
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting"]] call EFUNC(common,canInteractWith))
+}) exitWith {false};
 
 while {dialog} do {
     closeDialog 0;
@@ -27,21 +32,46 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = diag_tickTime;
+GVAR(keyDownTime) = ACE_diagTime;
 GVAR(openedMenuType) = _menuType;
+GVAR(lastTimeSearchedActions) = -1000;
+GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
-                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}};
+                      (!isNull curatorCamera) ||
+                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
+                      {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
+
+// Delete existing controls in case there's any left
+GVAR(iconCount) = 0;
+for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
+    ctrlDelete (GVAR(iconCtrls) select _i);
+    GVAR(ParsedTextCached) set [_i, ""];
+};
+GVAR(iconCtrls) resize GVAR(iconCount);
+
 if (GVAR(useCursorMenu)) then {
-    createDialog QGVAR(cursorMenu);
+    // Don't close zeus interface if open
+    if (isNull curatorCamera) then {
+        (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    } else {
+        createDialog QGVAR(cursorMenu);
+    };
+    (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+    (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
-    ctrlEnable [91921, true];
-    ((finddisplay 91919) displayctrl 91921) ctrlAddEventHandler ["MouseMoving", {
-        GVAR(cursorPos) = [_this select 1, _this select 2, 0];
-    }];
+    GVAR(cursorPos) = [0.5,0.5,0];
+
+    _ctrl = (findDisplay 91919) ctrlCreate ["RscStructuredText", 9922];
+    _ctrl ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];
+    _ctrl ctrlCommit 0;
+
+    // handles Mouse moving and LMB in cursor mode when action on keyrelease is disabled
+    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
+    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     setMousePosition [0.5, 0.5];
 };
 

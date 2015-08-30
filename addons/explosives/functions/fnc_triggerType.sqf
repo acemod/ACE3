@@ -9,14 +9,19 @@
  * Supported triggers as ACE_Triggers config entries <ARRAY>
  *
  * Example:
- * _supports = ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType
+ * ["SatchelCharge_Remote_Mag"] call ACE_Explosives_fnc_TriggerType
  *
  * Public: Yes
  */
 #include "script_component.hpp"
-private "_result";
+
+params ["_magazineClassname"];
+TRACE_1("params",_magazineClassname);
+
+private["_result", "_config", "_count", "_index"];
+
 _result = [];
-_config = getArray (ConfigFile >> "CfgMagazines" >> (_this select 0) >> "ACE_Triggers" >> "SupportedTriggers");
+_config = getArray (ConfigFile >> "CfgMagazines" >> _magazineClassname >> "ACE_Triggers" >> "SupportedTriggers");
 _count = count _config;
 
 for "_index" from 0 to (_count - 1) do {

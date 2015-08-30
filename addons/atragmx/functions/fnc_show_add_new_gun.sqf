@@ -15,4 +15,6 @@
  */
 #include "script_component.hpp"
 
+GVAR(showAddNewGun) = _this;
+
 {ctrlShow [_x, _this]} forEach [11000, 11001, 11002, 11003];

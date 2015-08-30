@@ -1,22 +1,26 @@
 /*
  * Author: KoffeinFlummi
- *
- * Pushes a boat away from the player.
+ * Pushes a boat away from the player
  *
  * Arguments:
- * 0: Boat (object)
- * 1: Velocity (vectorlike array)
+ * 0: Boat <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [Boats, Jose] call ace_interaction_fnc_push
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
-_boat = _this select 0;
-_velocity = _this select 1;
+params ["_boat", "_player"];
 
-if !(local _boat) exitWith {
-  [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);
-};
+private ["_newVelocity"];
 
-_boat setVelocity _velocity;
+_newVelocity = [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5];
+
+[QGVAR(pushBoat), [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);

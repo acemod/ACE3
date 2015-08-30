@@ -5,46 +5,109 @@
             <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>
             <Russian>Малая корректировка ВВЕРХ</Russian>
+            <Spanish>Ajuste menor arriba</Spanish>
+            <Italian>Regola leggermente alzata in alto</Italian>
+            <French>Hausse +</French>
+            <German>Kleine Korrektur nach oben</German>
+            <Hungarian>Enyhe állítás fel</Hungarian>
+            <Portuguese>Pequeno ajuste para cima</Portuguese>
+            <Czech>Korekce mírně nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
             <Polish>Zerowanie powoli w dół</Polish>
             <Russian>Малая корректировка ВНИЗ</Russian>
+            <Spanish>Ajuste menor abajo</Spanish>
+            <Italian>Regola leggermente alzata in basso</Italian>
+            <French>Hausse -</French>
+            <German>Kleine Korrektur nach unten</German>
+            <Hungarian>Enyhe állítás le</Hungarian>
+            <Portuguese>Pequeno ajuste para baixo</Portuguese>
+            <Czech>Korekce mírně dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
             <Polish>Zerowanie powoli w prawo</Polish>
             <Russian>Малая корректировка ВПРАВО</Russian>
+            <Spanish>Ajuste menor derecha</Spanish>
+            <Italian>Regola leggermente il tiro a destra</Italian>
+            <French>Dérive +</French>
+            <German>Kleine Korrektur nach rechts</German>
+            <Hungarian>Enyhe állítás jobbra</Hungarian>
+            <Portuguese>Pequeno ajuste para direita</Portuguese>
+            <Czech>Korekce mírně doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
             <Polish>Zerowanie powoli w lewo</Polish>
             <Russian>Малая корректировка ВЛЕВО</Russian>
+            <Spanish>Ajuste menor izquierda</Spanish>
+            <Italian>Regola leggermete il tiro a sinistra</Italian>
+            <French>Dérive -</French>
+            <German>Kleine Korrektur nach links</German>
+            <Hungarian>Enyhe állítás balra</Hungarian>
+            <Portuguese>Pequeno ajuste para esquerda</Portuguese>
+            <Czech>Korekce mírně doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
             <Polish>Zerowanie w górę</Polish>
             <Russian>Большая корректировка ВВЕРХ</Russian>
+            <Spanish>Ajuste mayor arriba</Spanish>
+            <Italian>Regola l'alzata in alto</Italian>
+            <French>Hausse +++</French>
+            <German>Große Korrektur nach oben</German>
+            <Hungarian>Nagy állítás fel</Hungarian>
+            <Portuguese>Ajuste grande para cima</Portuguese>
+            <Czech>Korekce nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMajor">
             <English>Major adjustment down</English>
             <Polish>Zerowanie w dół</Polish>
             <Russian>Большая корректировка ВНИЗ</Russian>
+            <Spanish>Ajuste mayor abajo</Spanish>
+            <Italian>Regola l'alzata in basso</Italian>
+            <French>Hausse ---</French>
+            <German>Große Korrektur nach unten</German>
+            <Hungarian>Nagy állítás le</Hungarian>
+            <Portuguese>Ajuste grande para baixo</Portuguese>
+            <Czech>Korekce dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMajor">
             <English>Major adjustment right</English>
             <Polish>Zerowanie w prawo</Polish>
             <Russian>Большая корректировка ВПРАВО</Russian>
+            <Spanish>Ajuste mayor derecha</Spanish>
+            <Italian>Regola il tiro a destra</Italian>
+            <French>Dérive +++</French>
+            <German>Große Korrektur nach rechts</German>
+            <Hungarian>Nagy állítás jobbra</Hungarian>
+            <Portuguese>Ajuste grande para direita</Portuguese>
+            <Czech>Korekce doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMajor">
             <English>Major adjustment left</English>
             <Polish>Zerowanie w lewo</Polish>
             <Russian>Большая корректировка ВЛЕВО</Russian>
+            <Spanish>Ajuste mayor izquierda</Spanish>
+            <Italian>Regola il tiro a sinistra</Italian>
+            <French>Dérive ---</French>
+            <German>Große Korrektur nach links</German>
+            <Hungarian>Nagy állítás balra</Hungarian>
+            <Portuguese>Ajuste grande para esquerda</Portuguese>
+            <Czech>Korekce doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustZero">
             <English>Set zero adjustment</English>
             <Polish>Zresetuj wyzerowanie</Polish>
             <Russian>Сбросить корректировку</Russian>
+            <Spanish>Establecer ajuste a cero</Spanish>
+            <Italian>Resetta i valori del tiro</Italian>
+            <French>RAZ corrections</French>
+            <German>Auf 0 justieren</German>
+            <Hungarian>Állítások nullázása</Hungarian>
+            <Portuguese>Zerar ajuste</Portuguese>
+            <Czech>Vynulovat korekci</Czech>
         </Key>
     </Package>
 </Project>

@@ -1,6 +1,8 @@
 // by commy2 and esteldunedain
 #include "script_component.hpp"
 
+private ["_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_intermediatePos", "_iteration", "_light", "_line", "_pL", "_pL2", "_pX", "_size", "_units", "_fnc_getDistanceToTerrain", "_fnc_doesIntersectWithMan"];
+
 // init object
 /*if (isNil QGVAR(laserdot)) then {
     _light = "#lightpoint" createVehicleLocal [0,0,0];
@@ -14,7 +16,7 @@
     GVAR(laserdot) = _light;
 };*/
 
-EXPLODE_3_PVT(_this,_unit,_range,_isGreen);
+EXPLODE_4_PVT(_this,_unit,_range,_isGreen,_brightness);
 
 _p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
 
@@ -47,7 +49,7 @@ _p1    = _p0    vectorAdd (_v1 vectorMultiply _range);
 //Debugaaa = lineIntersectsObjs [_p0, _p1, objNull, _unit, false, 2];
 
 _fnc_getDistanceToTerrain = {
-    private "_distance";
+    private ["_distance"];
 
     _pX = + _p0;
     _line = [_p0, _pX];
@@ -55,9 +57,7 @@ _fnc_getDistanceToTerrain = {
     _distance = _this;
     _iteration = _distance;
 
-    while {
-        _iteration > 0.05 / 2
-    } do {
+    while {_iteration > 0.05 / 2} do {
         _iteration = _iteration / 2;
 
         _pX = _p0 vectorAdd (_v1 vectorMultiply _distance);
