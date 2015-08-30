@@ -1,12 +1,29 @@
-// by commy2
+/*
+ * Author: commy2
+ * Put weapon on safety, or take it off safety if safety is already put on.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ * 2: Muzzle <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_lockSafety
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-
-PARAMS_3(_unit,_weapon,_muzzle);
 
 // don't immediately switch back
 if (inputAction "nextWeapon" > 0) exitWith {};
 
-private ["_safedWeapons"];
+private ["_safedWeapons", "_condition", "_statement", "_id", "_picture"];
+
+params ["_unit", "_weapon", "_muzzle"];
+
 _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 if (_weapon in _safedWeapons) exitWith {
@@ -18,15 +35,14 @@ _safedWeapons pushBack _weapon;
 _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 
 if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
-    private ["_condition", "_statement", "_id"];
-
     _condition = {
+        params ["", "_caller"];
         if (
-          [_this select 1] call EFUNC(common,canUseWeapon)
+          [_caller] call EFUNC(common,canUseWeapon)
           && {
-              if (currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(safedWeapons), []])) then {
+              if (currentMuzzle _caller in (_caller getVariable [QGVAR(safedWeapons), []])) then {
                   if (inputAction "nextWeapon" > 0) exitWith {
-                      [_this select 1, currentWeapon (_this select 1), currentMuzzle (_this select 1)] call FUNC(unlockSafety);
+                      [_this select 1, currentWeapon _caller, currentMuzzle _caller] call FUNC(unlockSafety);
                       false
                   };
                   true
@@ -44,7 +60,8 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
     };
 
     _statement = {
-        [_this select 1, currentWeapon (_this select 1), currentMuzzle (_this select 1)] call FUNC(unlockSafety);
+        params ["", "_caller"];
+        [_caller, currentWeapon _caller, currentMuzzle _caller] call FUNC(unlockSafety);
     };
 
     //_id = [_unit, format ["<t color=""#FFFF00"" >%1</t>", localize LSTRING(TakeOffSafety)], "DefaultAction", _condition, {}, {true}, _statement, 10] call EFUNC(common,addActionMenuEventHandler);
@@ -54,12 +71,11 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
 };
 
 if ((typeName _muzzle) == (typeName "")) then {
-    _unit selectWeapon _muzzle;//_weapon
+    _unit selectWeapon _muzzle; //_weapon
 };
 
 // play fire mode selector sound
 [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 
-private "_picture";
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 [localize LSTRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);

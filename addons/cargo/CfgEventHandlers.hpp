@@ -1,7 +1,12 @@
-
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
+    };
+};
+
+class Extended_PostInit_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
@@ -75,6 +80,24 @@ class Extended_Init_EventHandlers {
     class Ship_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initVehicle));
+        };
+    };
+
+    class ACE_RepairItem_Base {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+
+    class ACE_bodyBagObject {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+
+    class ACE_ConcertinaWireCoil {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
         };
     };
 };

@@ -104,6 +104,7 @@
             <German>Aus</German>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligado</Portuguese>
+            <Hungarian>Ki</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -112,6 +113,7 @@
             <German>Nur Spieler</German>
             <Czech>Pouze hráči</Czech>
             <Portuguese>Somente jogador</Portuguese>
+            <Hungarian>Csak játékosok</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -120,6 +122,7 @@
             <German>Spieler und KI</German>
             <Czech>Hráči a AI</Czech>
             <Portuguese>Jogador e IA</Portuguese>
+            <Hungarian>Játékosok és AI</Hungarian>
         </Key>
     </Package>
 </Project>

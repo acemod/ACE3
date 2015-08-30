@@ -2,26 +2,24 @@
 
 ADDON = false;
 
+PREP(addCargoItem);
+PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
-PREP(canLoad);
 PREP(findNearestVehicle);
 PREP(getCargoSpaceLeft);
-PREP(GetSizeItem);
+PREP(getSizeItem);
+PREP(handleDestroyed);
 PREP(initObject);
 PREP(initVehicle);
-PREP(handleDestroyed);
-PREP(moduleSettings);
 PREP(loadItem);
+PREP(moduleSettings);
 PREP(onMenuOpen);
-PREP(unloadItem);
-PREP(validateCargoSpace);
 PREP(startLoadIn);
 PREP(startUnload);
-GVAR(initializedItemClasses) = [];
+PREP(unloadItem);
+PREP(validateCargoSpace);
 
-if (isServer) then {
-    ["cargo_hideItem", {params ["_object", "_status"]; _object hideObjectGlobal _status;}] call EFUNC(common,addEventHandler);
-};
+GVAR(initializedItemClasses) = [];
 
 ADDON = true;

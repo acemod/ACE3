@@ -3,12 +3,17 @@
  * Check if the unit can replace given wheel of the vehicle.
  *
  * Arguments:
- * 0: Unit that does the repairing (Object)
- * 1: vehicle to repair (Object)
- * 2: Selected hitpoint (String)
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT>
+ * 2: Selected hitpoint <STRING>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canRepairTrack
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -34,4 +39,3 @@ if (typeName _wheel == "OBJECT") then {
 if (isNull _wheel || damage _wheel >= 1) exitWith {false};
 
 alive _target && {_target getHitPointDamage _hitPoint > 0}
-

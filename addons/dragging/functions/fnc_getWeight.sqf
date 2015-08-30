@@ -1,54 +1,45 @@
 /*
-     Name: AGM_Drag_fnc_GetWeight
-     
-     Author(s):
-        L-H, edited by commy2
-
-     Description:
-        Returns the weight of a crate.
-    
-    Parameters:
-        0: OBJECT - Crate to get weight of
-     
-     Returns:
-        NUMBER - Weight
-     
-     Example:
-        _weight = Crate1 call AGM_Drag_fnc_GetWeight;
+ * Author: L-H, edited by commy2, rewritten by joko // Jonas
+ *
+ * Returns the weight of a crate.
+ *
+ * Arguments:
+ * 0: Crate to get weight of <OBJECT>
+ *
+ * Return Value:
+ * Total Weight <NUMBER>
+ *
+ * Example:
+ * _weight = Crate1 call ace_dragging_fnc_getweight;
+ *
+ * Public: No
 */
 #include "script_component.hpp"
 
-private "_object";
-
-_object = _this select 0;
-
-private ["_totalWeight", "_fnc","_fnc_Extra"];
+private "_totalWeight";
+params ["_object"];
+// Initialize the total weight.
 _totalWeight = 0;
-_fnc_Extra = {
-    private ["_weight", "_items"];
-    _items = _this select 0;
-    _weight = 0;
-    {
-        _weight = _weight + (getNumber (ConfigFile >> (_this select 1) >> _x >> (_this select 2) >> "mass") * ((_items select 1) select _foreachIndex));
-    } foreach (_items select 0);
-    
-    _weight
-};
-_fnc = {
-    private ["_weight", "_items"];
-    _items = _this select 0;
-    _weight = 0;
-    {
-        _weight = _weight + (getNumber (ConfigFile >> (_this select 1) >> _x >> "mass") * ((_items select 1) select _foreachIndex));
-    } foreach (_items select 0);
-    
-    _weight
-};
-_totalWeight = ([getMagazineCargo _object, "CfgMagazines"] call _fnc);
-_totalWeight = _totalWeight + ([getItemCargo _object, "CfgWeapons", "ItemInfo"] call _fnc_Extra);
-_totalWeight = _totalWeight + ([getWeaponCargo _object, "CfgWeapons", "WeaponSlotsInfo"] call _fnc_Extra);
-_totalWeight = _totalWeight + ([getBackpackCargo _object, "CfgVehicles"] call _fnc);
 
-_totalWeight = _totalWeight * 0.5; // Mass in Arma isn't an exact amount but rather a volume/weight value. This attempts to work around that by making it a usable value. (sort of).
+// Cycle through all item types with their assigned config paths.
+{
+    _x params["_items","_getConfigCode"];
+    _items params ["_item", "_count"];
+    // Cycle through all items and read their mass out of the config.
+    {
+        // Multiply mass with amount of items and add the mass to the total weight.
+        _totalWeight = _totalWeight + (getNumber ((call _getConfigCode) >> "mass") * (_count select _forEachIndex));
+    } forEach _item;
+    true
+} count [
+    [getMagazineCargo _object, {configFile >> "CfgMagazines" >> _x}],
+    [getBackpackCargo _object, {configFile >> "CfgVehicles" >> _x}],
+    [getItemCargo _object, {configFile >> "CfgWeapons" >> _x >> "ItemInfo"}],
+    [getWeaponCargo _object, {configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo"}]
+];
 
-_totalWeight
+// add Weight of create to totalWeight
+_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> typeof _object >> "mass"));
+
+// Mass in Arma isn't an exact amount but rather a volume/weight value. This attempts to work around that by making it a usable value. (sort of).
+_totalWeight * 0.5

@@ -1,23 +1,26 @@
 /*
  * Author: Glowbal, ViperMaul
- * Unload object from vehicle
+ * Unload object from vehicle.
  *
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Vehicle <OBJECT>
  *
  * Return value:
- * None
+ * Object unloaded <BOOL>
+ *
+ * Example:
+ * [object, vehicle] call ace_cargo_fnc_unloadItem
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];
+
 params ["_item", "_vehicle"];
 
-if !([_item, _vehicle] call FUNC(canUnloadItem)) exitwith {
+if !([_item, _vehicle] call FUNC(canUnloadItem)) exitWith {
     false
 };
 
@@ -41,22 +44,25 @@ if (_vehicle isKindOf "Ship" ) then {
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitwith { false };
+if (!_validVehiclestate) exitWith {false};
 
-if (count _emptyPos == 0) exitwith { false };  //consider displaying text saying there are no safe places to exit the vehicle
+if (count _emptyPos == 0) exitWith {false};  //consider displaying text saying there are no safe places to exit the vehicle
 
-_loaded = _vehicle getvariable [QGVAR(loaded), []];
+_loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded = _loaded - [_item];
-_vehicle setvariable [QGVAR(loaded), _loaded, true];
+_vehicle setVariable [QGVAR(loaded), _loaded, true];
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
-_vehicle setvariable [QGVAR(space), (_space + _itemSize), true];
+_vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 detach _item;
 _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
-["cargo_hideItem", [_item, false]] call EFUNC(common,serverEvent);
+["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
 
 // TOOO maybe drag/carry the unloaded item?
 
-true;
+// Invoke listenable event
+["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+
+true

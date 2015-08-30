@@ -19,7 +19,7 @@
 //Only run if deafness or ear ringing is enabled:
 if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-PARAMS_2(_unit,_damage);
+params ["_unit", "_damage"];
 
 private ["_strength"];
 _strength = 0 max _damage;

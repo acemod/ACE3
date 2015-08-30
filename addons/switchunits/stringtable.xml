@@ -32,6 +32,7 @@
             <German>Einheiten-Switch-System?</German>
             <Czech>Systém výměny stran</Czech>
             <Portuguese>Sistema de troca de unidades</Portuguese>
+            <Hungarian>Egységváltó-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -40,6 +41,7 @@
             <German>Nach BLUFOR wechseln?</German>
             <Czech>Přesunout k BLUFOR?</Czech>
             <Portuguese>Trocar para Oeste?</Portuguese>
+            <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -48,6 +50,7 @@
             <German>Erlaube das Wechseln zu BLUFOR-Einheiten?</German>
             <Czech>Povolit přesun k BLUFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Oeste?</Portuguese>
+            <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -56,6 +59,7 @@
             <German>Nach OPFOR wechseln?</German>
             <Czech>Přesunout k OPFOR?</Czech>
             <Portuguese>Trocar para Leste?</Portuguese>
+            <Hungarian>Átváltás OPFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -64,6 +68,7 @@
             <German>Erlaube das Wechseln zu OPFOR-Einheiten?</German>
             <Czech>Povolit přesun k OPFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Leste?</Portuguese>
+            <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -72,6 +77,7 @@
             <German>Nach INDFOR wechseln?</German>
             <Czech>Přesunout k INDFOR?</Czech>
             <Portuguese>Trocar para Indenpendente</Portuguese>
+            <Hungarian>Átváltás INDFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -80,6 +86,7 @@
             <German>Erlaube das Wechseln zu INDFOR-Einheiten?</German>
             <Czech>Povolit přesun k INDFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
+            <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -88,6 +95,7 @@
             <German>Nach CIVILIAN wechseln?</German>
             <Czech>Přesunout k CIVILISTŮM?</Czech>
             <Portuguese>Trocar para Civis?</Portuguese>
+            <Hungarian>Átváltás civilre?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -96,6 +104,7 @@
             <German>Erlaube das Wechseln zu CIVILIAN-Einheiten?</German>
             <Czech>Povolit přesun k CIVILISTŮM?</Czech>
             <Portuguese>Permitir troca de unidades para o Civil?</Portuguese>
+            <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -104,6 +113,7 @@
             <German>Aktiviere Sicherheitszone?</German>
             <Czech>Povolit bezpečné oblasti?</Czech>
             <Portuguese>Habilitar zona segura?</Portuguese>
+            <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -112,6 +122,7 @@
             <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
             <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
             <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
+            <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -120,6 +131,7 @@
             <German>Sicherheitszonenradius</German>
             <Czech>Oblast bezpečné zóny</Czech>
             <Portuguese>Raio da zona segura</Portuguese>
+            <Hungarian>Biztonságos zóna hatóköre</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
@@ -128,9 +140,9 @@
             <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 200</German>
             <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 200</Czech>
             <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 200</Portuguese>
+            <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 200</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
-            <English></English>
             <Polish>Moduł ten pozwala na zmianę strony w trakcie gry.</Polish>
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>

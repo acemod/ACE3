@@ -1,13 +1,18 @@
 /*
  * Author: commy2
- * Sets the structural damage of a vehicle without altering the hitPoints. Requires local vehicle.
+ * Sets the structural damage of a vehicle without altering the hitPoints, requires local vehicle.
  *
  * Arguments:
- * 0: vehicle to damage <OBJECT>
- * 1: Total damage <NUMBER>
+ * 0: Local Vehicle to Damage <OBJECT>
+ * 1: Total Damage <NUMBER>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [vehicle, 0.5] call ace_repair_fnc_setDamage
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

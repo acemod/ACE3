@@ -103,7 +103,7 @@
             <Spanish>Abrir menú de exportación</Spanish>
             <Russian>Открыть меню экспорта</Russian>
             <Czech>Otevřít exportovací menu</Czech>
-            <Polish>Otwórz menu eksportowania</Polish>
+            <Polish>Eksport ustawień</Polish>
             <French>Ouvrir le menu d'exportation</French>
             <Hungarian>Exportálási menü megnyitása</Hungarian>
             <Italian>Apri menù esportazione</Italian>
@@ -175,7 +175,7 @@
             <Spanish>Incluir configuración de cliente</Spanish>
             <Russian>Включить настройки клиента</Russian>
             <Czech>Zahrnout nastavení klienta</Czech>
-            <Polish>Zawrzyj ustawienia klienta</Polish>
+            <Polish>Zaw. ustaw. klienta</Polish>
             <French>Inclure paramètres client</French>
             <Hungarian>Kliens-beállítások melléklése</Hungarian>
             <Italian>Includi i parametri del client</Italian>
@@ -219,11 +219,12 @@
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
-            <Polish>Pozwól na eksport ustawień [ACE]</Polish>
+            <Polish>Pozwól na eksport ustawień</Polish>
             <Spanish>[ACE] Permitir exportar configuración</Spanish>
             <German>Erlaube Config-Export [ACE]</German>
             <Czech>Povolit export natavení [ACE]</Czech>
             <Portuguese>[ACE] Permitir exportação de configurações</Portuguese>
+            <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -232,6 +233,7 @@
             <German>Erlaube</German>
             <Czech>Povolit</Czech>
             <Portuguese>Permitir</Portuguese>
+            <Hungarian>Engedélyezés</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -240,6 +242,7 @@
             <German>Erlaube alle Einstellungen in einer Server-Config zu exportieren.</German>
             <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
             <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
+            <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -248,6 +251,7 @@
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
+            <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -256,6 +260,7 @@
             <German>Verstecken</German>
             <Czech>Skrýt</Czech>
             <Portuguese>Ocultar</Portuguese>
+            <Hungarian>Elrejtés</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -264,6 +269,7 @@
             <German>Open rechts, nach unten</German>
             <Czech>Vpravo nahoře, dolů</Czech>
             <Portuguese>Superior direito, para baixo</Portuguese>
+            <Hungarian>Jobb felül, lefele</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -272,6 +278,7 @@
             <German>Von rechts nach links</German>
             <Czech>Vpravo nahoře, do leva</Czech>
             <Portuguese>Superior direito, à esquerda</Portuguese>
+            <Hungarian>Jobb felül, balra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -280,6 +287,7 @@
             <German>Von links, nach unten</German>
             <Czech>Vlevo nahoře, dolů</Czech>
             <Portuguese>Superior esquerdo, para baixo</Portuguese>
+            <Hungarian>Bal felül, lefele</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -288,6 +296,7 @@
             <German>Oben links nach rechts</German>
             <Czech>Vlevo nahoře, do prava</Czech>
             <Portuguese>Superior esquerdo, para a direita</Portuguese>
+            <Hungarian>Bal felül, jobbra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -296,6 +305,7 @@
             <German>Oben</German>
             <Czech>Nahoře</Czech>
             <Portuguese>Acima</Portuguese>
+            <Hungarian>Fent</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -304,14 +314,16 @@
             <German>Unten</German>
             <Czech>Dole</Czech>
             <Portuguese>Abaixo</Portuguese>
+            <Hungarian>Alul</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
-            <Polish>Debuguj do schowka</Polish>
+            <Polish>Debug do schowka</Polish>
             <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
             <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
+            <Hungarian>Debug a vágólapra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -320,14 +332,17 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
+            <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
             <Polish>Fix Headbug</Polish>
+            <Hungarian>"Fejhiba" fix</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
             <Polish>Resetuje aktualną animację.</Polish>
+            <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -336,6 +351,7 @@
             <Portuguese>Notícias do ACE</Portuguese>
             <Polish>Wiadomości ACE</Polish>
             <Czech>ACE Novinky</Czech>
+            <Hungarian>ACE hírek</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -344,10 +360,15 @@
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
             <Czech>Zobrazit novinky v hlavním menu</Czech>
+            <Hungarian>Hírek mutatása a főmenüben</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
             <Polish>Wszystkie kategorie</Polish>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
+            <English>Logistics</English>
+            <Polish>Logistyka</Polish>
         </Key>
     </Package>
 </Project>

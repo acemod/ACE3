@@ -38,4 +38,4 @@ if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 _zeroing = _zeroing vectorMultiply 0.05625;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
-[_projectile, _elevation, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, _windage, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);
