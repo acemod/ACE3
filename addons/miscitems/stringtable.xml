@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Miscitems">
+        <Key ID="STR_ACE_Miscitems_Category">
+            <English>Items (Misc)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_FMRadio_DisplayName">
+            <English>FM Radio</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_ExtensionCord_DisplayName">
+            <English>Extension Cord</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Handycam_DisplayName">
+            <English>Handycam</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Laptop_DisplayName">
+            <English>Laptop</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Mobilephone_Old_DisplayName">
+            <English>Mobile</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_MobilePhone_Smart_DisplayName">
+            <English>Smartphone</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PortableLongRangeRadio_DisplayName">
+            <English>Portable Long Range Radio</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_SatellitePhone_DisplayName">
+            <English>Satellite Phone</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_SurvivalRadio_DisplayName">
+            <English>Survival Radio</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_File1_DisplayName">
+            <English>File #1</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_File2_DisplayName">
+            <English>File #2</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_FilePhotos_DisplayName">
+            <English>File Photos</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Map_DisplayName">
+            <English>Civilian Map</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Notepad_DisplayName">
+            <English>Notepad</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Photos_V1_DisplayName">
+            <English>Photo</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_BottlePlastic_V1_DisplayName">
+            <English>Large Water Bottle</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Can_Dented_DisplayName">
+            <English>Can (Old)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Can_Rusty_DisplayName">
+            <English>Can (Rusty)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Can_V1_DisplayName">
+            <English>Can (Spirit)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Can_V2_DisplayName">
+            <English>Can (Franta)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Can_V3_DisplayName">
+            <English>Can (Redgull)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_TacticalBacon_DisplayName">
+            <English>Can (Bacon)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Suitcase_DisplayName">
+            <English>Suitcase</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PenBlack_DisplayName">
+            <English>Pen (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PenRed_DisplayName">
+            <English>Pen (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PencilBlue_DisplayName">
+            <English>Pencil (Blue)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PencilGreen_DisplayName">
+            <English>Pencil (Green)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PencilRed_DisplayName">
+            <English>Pencil (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PencilYellow_DisplayName">
+            <English>Pencil (Yellow)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PensAndPencils_DisplayName">
+            <English>Pens and Pencils</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Axe_DisplayName">
+            <English>Axe</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Axe_fire_DisplayName">
+            <English>Firefighter Axe</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_DrillAku_DisplayName">
+            <English>Electric Drill</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_DustMask_DisplayName">
+            <English>Dust Mask</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_File_Tool_DisplayName">
+            <English>Tool File</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Gloves_DisplayName">
+            <English>Gloves</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Grinder_DisplayName">
+            <English>Angle Grinder</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Hammer_DisplayName">
+            <English>Hammer</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Meter3m_DisplayName">
+            <English>Tape Measure</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_MultiMeter_DisplayName">
+            <English>Multimeter</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Pliers_DisplayName">
+            <English>Pliers</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Saw_DisplayName">
+            <English>Hand Saw</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Screwdriver_V1_DisplayName">
+            <English>Screwdriver (Slot)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Screwdriver_V2_DisplayName">
+            <English>Screwdriver (Phillips)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Wrench_DisplayName">
+            <English>Wrench</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Money_DisplayName">
+            <English>Money</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Battery_DisplayName">
+            <English>Battery</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_BakedBeans_DisplayName">
+            <English>Baked Beans</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_BottlePlastic_V2_DisplayName">
+            <English>Small Water Bottle</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Money_DisplayName">
+            <English>Money</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Canteen_DisplayName">
+            <English>Canteen</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_CerealsBox_DisplayName">
+            <English>Cereal Box</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PowderedMilk_DisplayName">
+            <English>Powdered Milk</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_RiceBox_DisplayName">
+            <English>Rice Box</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Antibiotic_DisplayName">
+            <English>Antibiotics</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Bandage_DisplayName">
+            <English>Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Bloodbag_DisplayName">
+            <English>Blood Bag</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Defibrillator_DisplayName">
+            <English>Defibrillator</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_DisinfectantSpray_DisplayName">
+            <English>Disinfectant Spray</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_HeatPack_DisplayName">
+            <English>Heat Pack</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_PainKillers_DisplayName">
+            <English>Painkillers</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_VitaminBottle_DisplayName">
+            <English>Vitamins</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_WaterPurificationTablets_DisplayName">
+            <English>Water Purification Tablets</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_ButaneCanister_DisplayName">
+            <English>Butane Can</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_ButaneTorch_DisplayName">
+            <English>Butane Torch</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_CanOpener_DisplayName">
+            <English>Can Opener</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_DuctTape_DisplayName">
+            <English>Duct Tape</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_FireExtinguisher_DisplayName">
+            <English>Fire Extinguisher</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_GasCanister_DisplayName">
+            <English>Gas Burner</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_GasCooker_DisplayName">
+            <English>Gas Stove</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Matches_DisplayName">
+            <English>Matches</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_MetalWire_DisplayName">
+            <English>Metal Wire</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Shovel_DisplayName">
+            <English>Shovel</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Map_Altis_DisplayName">
+            <English>Map (Altis)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Map_Blank_DisplayName">
+            <English>Map (Blank)</English>
+        </Key>
+        <Key ID="STR_ACE_Miscitems_Map_Stratis_DisplayName">
+            <English>Map (Stratis)</English>
+        </Key>
+    </Package>
+</Project>
