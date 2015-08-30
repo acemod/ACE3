@@ -215,6 +215,7 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getSelectionsWithoutHitPoints);
 PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
