@@ -16,17 +16,17 @@
  * None
  */
 #include "script_component.hpp"
-private ["_var","_varName"];
+private ["_damage","_varName"];
 params ["", "_weapon", "", "", "_ammo", "_magazine", ""];
 
 // Bake Variable Name and Check if the Variable Exist else call the Cache Function
 _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-_var = if (isNil _varName) then {
-    ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureVales)) select 2;
+_damage = if (isNil _varName) then {
+    ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues)) select 2;
 } else {
     (missionNameSpace getVariable _varName) select 2;
 };
 
-if (_var > 0) then {
+if (_damage > 0) then {
     _this call DFUNC(fireLauncherBackblast)
 };

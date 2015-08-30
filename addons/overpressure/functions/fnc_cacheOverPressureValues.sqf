@@ -17,7 +17,7 @@
  */
  #include "script_component.hpp"
 
-params ["_weapon", "_magazine", "_ammo"];
+params ["_weapon", "_ammo", "_magazine"];
 TRACE_3("Parameter",_weapon,_magazine,_ammo);
 
 private ["_array", "_type", "_return", "_config"];
@@ -58,7 +58,7 @@ _return = [
     (getNumber (_config >> QGVAR(damage)))
 ];
 TRACE_1("Return",_return);
-
+_varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 missionNameSpace setVariable [format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine], _return];
 
 _return

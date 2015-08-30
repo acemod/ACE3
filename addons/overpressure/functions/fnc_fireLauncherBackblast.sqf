@@ -31,7 +31,7 @@ _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 private ["_var","_varName","_backblastAngle", "_backblastRange", "_backblastDamage"];
 _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 _var = if (isNil _varName) then {
-    [_weapon,_magazine] call FUNC(cacheOverPressureVales);
+    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
 } else {
     missionNameSpace getVariable _varName;
 };
