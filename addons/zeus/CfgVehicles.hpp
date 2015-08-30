@@ -79,6 +79,10 @@ class CfgVehicles {
     class GVAR(moduleBase): Module_F {
         author = "SilentSpike";
         category = "ACE";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        scope = 1;
         scopeCurator = 2;
     };
     class GVAR(moduleCaptive): GVAR(moduleBase) {
@@ -108,6 +112,36 @@ class CfgVehicles {
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedic): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedic_displayName);
+        function = QFUNC(moduleSetMedic);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalVehicle_displayName);
+        function = QFUNC(moduleSetMedicalVehicle);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalFacility_displayName);
+        function = QFUNC(moduleSetMedicalFacility);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
             sync[] = {};
         };
     };

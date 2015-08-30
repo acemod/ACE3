@@ -6,7 +6,7 @@
  * 0: String version of Keypad entry ["ok","del","1",...] <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["ok"] call ace_microdagr_fnc_appMarkKeypadEntry
@@ -15,16 +15,13 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_editText", "_gridPosTuple", "_actualPos"];
-PARAMS_1(_keypadButton);
+private ["_display", "_editText", "_actualPos"];
+
+params ["_keypadButton"];
 
 disableSerialization;
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) != APP_MODE_MARK) exitWith {};
@@ -34,8 +31,7 @@ _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 switch (_keypadButton) do {
 case ("ok"): {
         if ((count GVAR(newWaypointPosition)) == 0) then {
-            _gridPosTuple = [_editText] call BIS_fnc_gridToPos;
-            _actualPos = [(((_gridPosTuple select 0) select 0) + 0.5 * ((_gridPosTuple select 1) select 0)), (((_gridPosTuple select 0) select 1) + 0.5 * ((_gridPosTuple select 1) select 1))];
+            _actualPos = [_editText, true] call EFUNC(common,getMapPosFromGrid);
             _actualPos set [2, (getTerrainHeightASL _actualPos)];
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);

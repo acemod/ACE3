@@ -30,7 +30,7 @@ __background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private ["_pos", "_mapSize", "_gridConfig", "_offsetX", "_offsetY", "_stepX", "_stepY", "_xGrid", "_yGrid", "_xCoord", "_yCoord", "_dagrHeading", "_dagrGrid", "_bearing", "_MYpos", "_WPpos", "_dagrDistance", "_distance"];
+    private["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
     
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
@@ -40,54 +40,8 @@ GVAR(outputPFH) = [{
     };
     
     // GRID
-    _pos = getPosASL ACE_player;
-    
-    _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
-    _gridConfig = (configFile >> "CfgWorlds" >> worldName >> "Grid");
-    _offsetX = getNumber (_gridConfig >> "offsetX");
-    _offsetY = getNumber (_gridConfig >> "offsetY");
-    _stepX = getNumber (_gridConfig >> "Zoom1" >> "stepX");
-    _stepY = getNumber (_gridConfig >> "Zoom1" >> "stepY");
-    
-    if (_stepY >= 0) then {
-        _pos set [1, (_mapSize - 100) - (_pos select 1) - _offsetY];
-    };
-    
-    // Incase grids go neg due to 99-00 boundry
-    if (_pos select 0 < 0) then {_pos set [0, (_pos select 0) + 99999];};
-    if (_pos select 1 < 0) then {_pos set [1, (_pos select 1) + 99999];};
-
-    _xGrid = toArray Str(round(_pos select 0));
-    while {count _xGrid < 5} do {
-        _xGrid = [48] + _xGrid;
-    };
-    _xGrid resize 4;
-    _xGrid = toString _xGrid;
-    _xGrid = parseNumber _xGrid;
-
-    _yGrid = toArray Str(round(_pos select 1));
-    while {count _yGrid < 5} do {
-        _yGrid = [48] + _yGrid;
-    };
-    _yGrid resize 4;
-    _yGrid = toString _yGrid;
-    _yGrid = parseNumber _yGrid;
-
-    _xCoord = switch true do {
-        case (_xGrid >= 1000): { "" + Str(_xGrid) };
-        case (_xGrid >= 100): { "0" + Str(_xGrid) };
-        case (_xGrid >= 10): { "00" + Str(_xGrid) };
-        default             { "000" + Str(_xGrid) };
-    };
-
-    _yCoord = switch true do {
-        case (_yGrid >= 1000): { "" + Str(_yGrid) };
-        case (_yGrid >= 100): { "0" + Str(_yGrid) };
-        case (_yGrid >= 10): { "00" + Str(_yGrid) };
-        default             { "000" + Str(_yGrid) };
-    };
-
-    _dagrGrid = _xCoord + " " + _yCoord;
+    _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
+    _dagrGrid = format ["%1 %2", ((_gridArray select 0) select [0,4]), ((_gridArray select 1) select [0,4])];
 
     // WP Grid
     _xGrid2 = floor (DAGR_WP_INFO / 10000);
@@ -110,8 +64,8 @@ GVAR(outputPFH) = [{
     _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
-    _WPpos = [[_xCoord2, _yCoord2], true] call CBA_fnc_mapGridToPos;
-    _MYpos = [[_xCoord, _yCoord], true] call CBA_fnc_mapGridToPos;
+    _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
+    _MYpos = [_dagrGrid, true] call EFUNC(common,getMapPosFromGrid);
     _distance = _MYpos distance _WPpos;
     _distance = floor (_distance * 10) / 10;
     _dagrDistance = str _distance + "m";

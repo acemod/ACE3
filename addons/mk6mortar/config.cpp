@@ -12,10 +12,13 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
+
+//UI Stuff:
 class RscText;
 class RscListbox;
 class RscListNBox;
@@ -23,7 +26,7 @@ class RscPicture;
 class RscControlsGroup;
 class ScrollBar;
 class RscActiveText;
+class RscStructuredText;
 
 #include "RscInGameUI.hpp"
 #include "RscRangeTable.hpp"
-#include "ACE_Settings.hpp"

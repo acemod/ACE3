@@ -2,6 +2,7 @@
 layout: wiki
 title: Dagr
 group: feature
+category: equipment
 parent: wiki
 ---
 

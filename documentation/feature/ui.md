@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: UI
+description: 
 group: feature
+category: general
 parent: wiki
 ---
 
@@ -9,7 +11,6 @@ parent: wiki
 
 Changes the chat contrast on the map to allow easier reading.
 
-
-## 3. Dependencies
+## 2. Dependencies
 
 `ace_common`

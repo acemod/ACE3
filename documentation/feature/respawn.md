@@ -3,6 +3,7 @@ layout: wiki
 title: Respawn
 description: Same gear on respawn, FF message, rallypoints
 group: feature
+category: interaction
 parent: wiki
 ---
 

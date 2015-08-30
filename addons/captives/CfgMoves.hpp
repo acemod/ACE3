@@ -18,6 +18,11 @@ class CfgMovesBasic {
             default = "ACE_AmovPercMstpSsurWnonDnon";
             PutDown = "";
         };
+        class ACE_CivilHandCuffedFFVActions: ACE_CivilStandHandcuffedActions {
+            stop = "ACE_HandcuffedFFV";
+            StopRelaxed = "ACE_HandcuffedFFV";
+            default = "ACE_HandcuffedFFV";
+        };
     };
 };
 
@@ -54,6 +59,14 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.1};
             InterpolateTo[] = {"Unconscious",0.01,"ACE_AmovPercMstpSnonWnonDnon_AmovPercMstpScapWnonDnon",0.1};
         };
+
+        //Handcuffed-FFV:
+        class ACE_HandcuffedFFV: ACE_AmovPercMstpScapWnonDnon {
+            file = "\A3\cargoposes_F_heli\anim\passenger_flatground_3idleunarmed.rtm";
+            actions = "ACE_CivilHandCuffedFFVActions";
+            ConnectTo[] = {};
+        };
+
 
         //Surrender Anims:
         class ACE_AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon: CutSceneAnimationBase {

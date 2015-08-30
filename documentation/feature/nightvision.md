@@ -3,6 +3,7 @@ layout: wiki
 title: Nightvision
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

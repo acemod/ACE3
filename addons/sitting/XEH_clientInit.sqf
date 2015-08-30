@@ -9,4 +9,3 @@ if !(hasInterface) exitWith {};
 // Handle interruptions
 ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
 ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-["SetSurrendered", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);

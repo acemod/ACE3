@@ -72,7 +72,7 @@ _yCoord = switch true do {
 _dagrGrid = _xCoord + " " + _yCoord;
 
 // Find target elevation
-_elevation = floor ((GVAR(LAZPOS) select 2) + EGVAR(weather,altitude));
+_elevation = floor ((GVAR(LAZPOS) select 2) + EGVAR(common,mapAltitude));
 _dagrElevation = str _elevation + "m";
 
 // Time

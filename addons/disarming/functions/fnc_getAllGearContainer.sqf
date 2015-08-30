@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Helper function to get all gear of a container
  *
  * Arguments:
@@ -15,15 +16,16 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
-private ["_allGear"];
+private ["_items", "_counts"];
 
-_allGear = [[],[]];
-
+_items = [];
+_counts = [];
 {
-    (_allGear select 0) append (_x select 0);
-    (_allGear select 1) append (_x select 1);
+    _x params ["_item", "_count"];
+    _items append _item;
+    _counts append _count;
 } forEach [(getWeaponCargo _target), (getItemCargo _target), (getMagazineCargo _target), (getBackpackCargo _target)];
 
-_allGear
+[_items,_counts] // Return

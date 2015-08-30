@@ -91,7 +91,7 @@ class CfgVehicles {
 
                 class ACE_JoinGroup {
                     displayName = CSTRING(JoinGroup);
-                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinGroup));
+                    condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
                     showDisabled = 0;
                     priority = 2.6;
@@ -351,7 +351,7 @@ class CfgVehicles {
                     hotkey = "7";
                 };
                 class ACE_Gesture_Yes {
-                    displayName = CSTRING(Gestures_Yes);
+                    displayName = ECSTRING(common,Yes);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
                     showDisabled = 1;
@@ -359,7 +359,7 @@ class CfgVehicles {
                     hotkey = "8";
                 };
                 class ACE_Gesture_No {
-                    displayName = CSTRING(Gestures_No);
+                    displayName = ECSTRING(common,No);
                     condition = QUOTE(canStand _target);
                     statement = QUOTE(_target playActionNow 'gestureNo';);
                     showDisabled = 1;
@@ -501,8 +501,8 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target < 1000 && {alive _target});
-                    statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call DFUNC(push););
+                    condition = QUOTE(((getMass _target) <= 2600) && {alive _target} && {(vectorMagnitude (velocity _target)) < 3});
+                    statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
                 };
@@ -548,7 +548,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
     class HMG_01_high_base_F: HMG_01_base_F {
@@ -557,14 +557,14 @@ class CfgVehicles {
                   position = "[-0.172852,0.164063,-0.476091]";
               };
           };
-    };   
+    };
     class AA_01_base_F: StaticMGWeapon {
           class ACE_Actions: ACE_Actions {
               class ACE_MainActions: ACE_MainActions {
                   position = "[0,0.515869,-0.200671]";
               };
           };
-    };   
+    };
     class AT_01_base_F: StaticMGWeapon {
           class ACE_Actions: ACE_Actions {
               class ACE_MainActions: ACE_MainActions {
@@ -588,6 +588,18 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = -1;
                 };
+            };
+        };
+        class ACE_SelfActions {};
+    };
+
+    class ACE_RepairItem_Base: thingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
             };
         };
         class ACE_SelfActions {};

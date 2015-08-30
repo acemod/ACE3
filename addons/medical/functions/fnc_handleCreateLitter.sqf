@@ -31,6 +31,7 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
 GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
+    GVAR(litterPFHRunning) = true;
     [{
         {
             if (ACE_time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
@@ -46,7 +47,7 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             GVAR(litterPFHRunning) = false;
         }; 
-    }, 30, []] call cba_fnc_addPerFrameHandler;
+    }, 30, []] call CBA_fnc_addPerFrameHandler;
 };
 
 true

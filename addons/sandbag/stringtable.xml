@@ -6,7 +6,7 @@
             <German>Sandsack</German>
             <Russian>Мешок с песком</Russian>
             <Polish>Worek z piaskiem</Polish>
-            <Spanish>Sandbag</Spanish>
+            <Spanish>Saco de arena</Spanish>
             <French>Sac de sable</French>
             <Czech>Pytel s pískem</Czech>
             <Italian>Sacco di Sabbia</Italian>
@@ -18,7 +18,7 @@
             <German>Sandsack (leer)</German>
             <Russian>Мешок с песком (пустой)</Russian>
             <Polish>Worek na piasek</Polish>
-            <Spanish>Sandbag (empty)</Spanish>
+            <Spanish>Saco de arena (vacio)</Spanish>
             <French>Sac de sable (vide)</French>
             <Czech>Pytel na písek (prázdný)</Czech>
             <Italian>Sacco di Sabbia (Vuoto)</Italian>
@@ -30,7 +30,7 @@
             <German>Nicht möglich</German>
             <Russian>Установка на этом месте невозможна</Russian>
             <Polish>Nie można tu budować</Polish>
-            <Spanish>Cannot build here</Spanish>
+            <Spanish>No se puede construir aqui</Spanish>
             <French>Impossible de construire ici</French>
             <Czech>Zde nelze postavit</Czech>
             <Italian>Impossibile costruire qui</Italian>
@@ -42,7 +42,7 @@
             <German>Sandsack abbauen</German>
             <Russian>Взять мешок с песком</Russian>
             <Polish>Zabierz worek</Polish>
-            <Spanish>Pick up sandbag</Spanish>
+            <Spanish>Coger saco de arena</Spanish>
             <French>Prendre sac de sable</French>
             <Czech>Zvednout pytel</Czech>
             <Italian>Prendi Sacco di Sabbia</Italian>
@@ -54,7 +54,7 @@
             <German>Sandsack tragen</German>
             <Russian>Нести мешок с песком</Russian>
             <Polish>Przenieś worek</Polish>
-            <Spanish>Carry sandbag</Spanish>
+            <Spanish>Portar saco de arena</Spanish>
             <French>Porter sac de sable</French>
             <Czech>Nést pytel</Czech>
             <Italian>Trasporta Sacco di Sabbia</Italian>
@@ -66,7 +66,7 @@
             <German>Tragen beenden</German>
             <Russian>Завершить переноску</Russian>
             <Polish>Zostaw worek</Polish>
-            <Spanish>End carrying</Spanish>
+            <Spanish>Dejar de portar</Spanish>
             <French>Arreter de porter</French>
             <Czech>Položit</Czech>
             <Italian>Fine Trasporto</Italian>
@@ -78,7 +78,7 @@
             <German>Sandsack ablegen</German>
             <Russian>Положить мешок</Russian>
             <Polish>Upuść worek</Polish>
-            <Spanish>Drop sandbag</Spanish>
+            <Spanish>Soltar saco de arena</Spanish>
             <French>Lacher sac de sable</French>
             <Czech>Odložit pytel</Czech>
             <Italian>Lascia Sacco di Sabbia</Italian>
@@ -90,7 +90,7 @@
             <German>Aufbauen</German>
             <Russian>Подтвердить установку</Russian>
             <Polish>Potwierdź rozłożenie</Polish>
-            <Spanish>Confirm Deployment</Spanish>
+            <Spanish>Confirmar despliegue</Spanish>
             <French>Confirmer Déploiement</French>
             <Czech>Potvrdit Položení</Czech>
             <Italian>Conferma Posizionamento</Italian>
@@ -102,7 +102,7 @@
             <German>Abbrechen</German>
             <Russian>Отменить установку</Russian>
             <Polish>Anuluj rozłożenie</Polish>
-            <Spanish>Cancel Deployment</Spanish>
+            <Spanish>Cancelar despliegue</Spanish>
             <French>Annuler Déploiement</French>
             <Czech>Zrušit Položení</Czech>
             <Italian>Cancella Posizionamento</Italian>
@@ -114,7 +114,7 @@
             <German>Sandsack aufbauen</German>
             <Russian>Установить мешок с песком</Russian>
             <Polish>Rozłóż worek z piaskiem</Polish>
-            <Spanish>Deploy sandbag</Spanish>
+            <Spanish>Desplegar saco de arena</Spanish>
             <French>Deployer sac de sable</French>
             <Czech>Umístit pytel</Czech>
             <Italian>Posiziona Sacco di Sabbia</Italian>
@@ -126,7 +126,7 @@
             <German>Sandsack Kiste</German>
             <Russian>Ящик мешков с песком</Russian>
             <Polish>Skrzynia worków na piasek</Polish>
-            <Spanish>Sandbag box</Spanish>
+            <Spanish>Caja de sacos de arena</Spanish>
             <French>Caisse de sacs de sable</French>
             <Czech>Bedna na pytle s pískem</Czech>
             <Italian>Contenitore Sacchi di Sabbia</Italian>
@@ -138,7 +138,7 @@
             <German>Hier gibt es keinen Sand</German>
             <Russian>Здесь нет песка</Russian>
             <Polish>Tu nie ma piasku</Polish>
-            <Spanish>Here is no sand</Spanish>
+            <Spanish>Aqui no hay arena</Spanish>
             <French>Pas de sable ici</French>
             <Czech>Tady není písek</Czech>
             <Italian>Qui non cè Sabbia</Italian>
