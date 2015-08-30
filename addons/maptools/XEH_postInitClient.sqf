@@ -66,14 +66,15 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
     12 call _fnc_installMapEvents;
 };
 
-["mapOpened", {
-    // Show GPS if required
-    [GVAR(mapGpsShow)] call FUNC(openMapGps);
-}] call EFUNC(common,addEventHandler);
-
-["mapClosed", {
-    // Hide GPS
-    [false] call FUNC(openMapGps);
-    // Cancel drawing
-    call FUNC(cancelDrawing);
+["visibleMapChanged", {
+    params ["", "_mapOn"];
+    if (_mapOn) then {
+        // Show GPS if required
+        [GVAR(mapGpsShow)] call FUNC(openMapGps);
+    } else {
+        // Hide GPS
+        [false] call FUNC(openMapGps);
+        // Cancel drawing
+        call FUNC(cancelDrawing);
+    };
 }] call EFUNC(common,addEventHandler);
