@@ -3,8 +3,18 @@
 
 if (!hasInterface) exitWith {};
 
+#define ALL_CAMERAS [ \
+    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
+    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
+    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
+    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull], \
+    missionNamespace getVariable ["ACE_CustomCamera", objNull] \
+]
+
 0 = 0 spawn {
     waituntil {!isNull ACE_player};
+    waituntil {sleep 0.5; {!isNull _x} count ALL_CAMERAS == 0};
 
     // PiP technique by BadBenson
     GVAR(camera) = "camera" camCreate positioncameratoworld [0,0,0];
