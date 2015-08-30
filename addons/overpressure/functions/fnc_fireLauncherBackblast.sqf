@@ -3,14 +3,14 @@
  *
  * Handle fire of local launchers
  *
- * Argument:
- * 0: Unit that fired (Object)
- * 1: Weapon fired (String)
- * 2: Muzzle (String)
- * 3: Mode (String)
- * 4: Ammo (String)
- * 5: Magazine (String)
- * 6: Projectile (Object)
+ * Arguments:
+ * 0: Unit that fired <OBJECT>
+ * 1: Weapon fired <STRING>
+ * 2: Muzzle <STRING>
+ * 3: Mode <STRING>
+ * 4: Ammo <STRING>
+ * 5: Magazine <STRING>
+ * 6: Projectile <OBJECT>
  *
  * Return value:
  * None
@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+params ["_firer", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
 // Prevent AI from causing backblast damage
 if !([_firer] call EFUNC(common,isPlayer)) exitWith {};
@@ -29,7 +29,7 @@ _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
 private ["_var","_varName","_backblastAngle", "_backblastRange", "_backblastDamage"];
-_varName = (QGVAR(values) + _magazine);
+_varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 _var = if (isNil _varName) then {
     [_weapon,_magazine] call FUNC(cacheOverPressureVales);
 } else {

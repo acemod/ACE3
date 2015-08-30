@@ -4,30 +4,57 @@
  * Handle fire of local launchers
  *
  * Argument:
- * 0: Magazine (String)
- * 1:
+ * 0: Weapon <STRING>
+ * 1: Magazine <STRING>
+ * 2: Ammo <STRING>
  *
  * Return value:
  * Array:
- *  0:
- *  1:
- *  2:
+ *  0: Angle <Number>
+ *  1: Range <Number>
+ *  2: Damage <Number>
  *
  */
  #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_weapon,_magazine);
-if !(isNil (QGVAR(Damage) + _magazine)) exitWith {};
-private ["_damage","_angle","_range"];
-_damage = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(damage));
-if (_damage == 0) then {
-    _angle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-    _range = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-    _damage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
-} else {
-    _angle = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(angle)) / 2;
-    _range = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(range));
-};
+params ["_weapon", "_magazine", "_ammo"];
 
-missionNameSpace setVariable [(QGVAR(values) + _magazine),[_angle, _range,_damage]];
-[_angle,_range,_damage]
+private ["_array", "_type", "_return", "_config"];
+
+// get Priority Array from Config
+_array = [
+    getNumber (configFile >> "CfgWeapons" >> QGVAR(priority)),
+    getNumber (configFile >> "CfgMagazines" >> QGVAR(priority)),
+    getNumber (configFile >> "CfgAmmo" >> QGVAR(priority))
+];
+
+// define Fist Values for Types
+_type = 0;
+_array params ["_max"];
+
+// get Highest Entry out the the Priority Array
+{
+    if (_max < _x) then {
+        _max = _x;
+        _type = _forEachIndex;
+    };
+} forEach _array;
+
+// create the Config entry Point
+[
+    (configFile >> "CfgWeapons" >> _weapon),
+    (configFile >> "CfgMagazines" >> _magazine),
+    (configFile >> "CfgMagazines" >> _ammo)
+] select _type;
+
+// get the Variables out of the Configes and create a array with then
+_return = [
+    (getNumber (_config >> QGVAR(angle))),
+    (getNumber (_config >> QGVAR(range))),
+    (getNumber (_config >> QGVAR(damage)))
+];
+
+
+missionNameSpace setVariable [format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine], _return];
+
+_return
