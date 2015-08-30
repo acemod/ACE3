@@ -7,7 +7,7 @@ GVAR(camera) = objNull;
 
 0 = 0 spawn {
     waituntil {!isNull ACE_player};
-    waituntil {sleep 0.5; !(call EFUNC(common,isfeatureCameraActive)) && isNull (missionNamespace getVariable ["ACE_CustomCamera", objNull])};
+    waituntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0};
 
     GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
     camDestroy GVAR(camera);
