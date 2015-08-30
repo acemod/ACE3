@@ -41,10 +41,10 @@ _array params ["_max"];
 } forEach _array;
 
 // create the Config entry Point
-[
+_return = [
     (configFile >> "CfgWeapons" >> _weapon),
     (configFile >> "CfgMagazines" >> _magazine),
-    (configFile >> "CfgMagazines" >> _ammo)
+    (configFile >> "CfgAmmo" >> _ammo)
 ] select _type;
 
 // get the Variables out of the Configes and create a array with then
