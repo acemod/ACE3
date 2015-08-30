@@ -19,7 +19,7 @@
 private ["_damage","_varName"];
 params ["", "_weapon", "", "", "_ammo", "_magazine", ""];
 
-// Bake Variable Name and Check if the Variable Exist else call the Cache Function
+// Bake variable name and check if the variable exists, call the caching function otherwise
 _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 _damage = if (isNil _varName) then {
     ([_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues)) select 2;

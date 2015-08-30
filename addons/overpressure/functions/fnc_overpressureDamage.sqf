@@ -19,7 +19,7 @@
 private ["_var","_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
-// Bake Variablen Name and Check if the Variable Exist else call the Cache Function
+// Bake variable name and check if the variable exists, call the caching function otherwise
 _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 _var = if (isNil _varName) then {
     [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);

@@ -29,6 +29,7 @@ _position = getPosASL _projectile;
 _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 
 private ["_var","_varName","_backblastAngle", "_backblastRange", "_backblastDamage"];
+// Bake variable name and check if the variable exists, call the caching function otherwise
 _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 _var = if (isNil _varName) then {
     [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
