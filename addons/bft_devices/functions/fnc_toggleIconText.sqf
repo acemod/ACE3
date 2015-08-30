@@ -8,7 +8,7 @@
  *   0: Interface ID <STRING>
  *
  * Return Value:
- *   TRUE <BOOL>
+ *   Show icon text <BOOL>
  *
  * Example:
  *   ["interfaceID"] call ace_bft_devices_fnc_toggleIconText;
@@ -18,9 +18,11 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_interfaceID);
+private ["_showIconText"];
 
-if (GVAR(showBFTtext)) then {GVAR(showBFTtext) = false} else {GVAR(showBFTtext) = true};
-[_interfaceID,[["showIconText",GVAR(showBFTtext)]]] call FUNC(setSettings);
+params ["_interfaceID"];
 
-true
+_showIconText = !([_interfaceID,"showIconText"] call FUNC(getSettings));
+[_interfaceID,[["showIconText",_showIconText]]] call FUNC(setSettings);
+
+_showIconText

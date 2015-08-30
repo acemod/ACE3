@@ -11,6 +11,7 @@ PREP(editingDraw_editBFT);
 PREP(KeyDown);
 PREP(KeyUp);
 PREP(mapDraw);
+PREP(setDrawText);
 PREP(updateDrawSize);
 PREP(MouseButtonDown);
 PREP(MouseButtonUp);

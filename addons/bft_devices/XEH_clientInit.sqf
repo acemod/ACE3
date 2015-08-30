@@ -34,7 +34,6 @@ GVAR(mapCursorPos) = [0,0];
 GVAR(mapWorldPos) = [];
 GVAR(mapScale) = 0.5;
 GVAR(textAndIconScaleFactor) = 12;
-GVAR(showBFTtext) = true;
 GVAR(playerVehicleIcon) = "";
 
 // Setup icon and text sizes

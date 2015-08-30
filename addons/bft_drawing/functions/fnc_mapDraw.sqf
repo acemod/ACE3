@@ -19,7 +19,7 @@ _mouseover = [-1,[]];
 {
     // draw the icon
     private ["_callsign","_position","_typeIcon","_sizeIcon","_color"];
-    _callsign = AD_GET_CALLSIGN(_x);
+    _callsign = if (GVAR(mapDrawText)) then {AD_GET_CALLSIGN(_x)} else {""};
     _position = AD_GET_POSITION(_x);
     _typeIcon = AD_GET_TYPEICON(_x);
     _sizeIcon = AD_GET_SIZEICON(_x);

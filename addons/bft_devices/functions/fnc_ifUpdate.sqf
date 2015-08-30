@@ -321,6 +321,7 @@ if (isNil "_mode") then {
         };
         // ------------ SHOW ICON TEXT ------------
         if (_x == "showIconText") exitWith {
+            [_value] call EFUNC(bft_drawing,setDrawText);
             _osdCtrl = _display displayCtrl IDC_OSD_TXT_TGGL;
             if (!isNull _osdCtrl) then {
                 _text = if (_value) then {"ON"} else {"OFF"};

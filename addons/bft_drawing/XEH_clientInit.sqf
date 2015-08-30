@@ -5,6 +5,7 @@ if (!hasInterface) exitWith {};
 
 // setup draw size variables
 [1] call FUNC(updateDrawSize);
+[true] call FUNC(setDrawText);
 
 // setup of mapOpened and mapClosed events, temporary as they are in the process of being implemented in common
 GVAR(mapVisibleLastFrame) = false;
@@ -26,7 +27,8 @@ GVAR(mapVisibleLastFrame) = false;
 // register with reporting channels when map is opened
 ["mapOpened",{
     // set icon size back to default
-    [1] call EFUNC(bft_drawing,updateDrawSize);
+    [1] call FUNC(updateDrawSize);
+    [true] call FUNC(setDrawText);
     // register reporting modes
     [EGVAR(bft,allReportingModes)] call EFUNC(bft,updateRegisteredModes);
     // set encryption key
