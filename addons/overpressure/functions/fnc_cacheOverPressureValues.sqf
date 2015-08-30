@@ -18,6 +18,7 @@
  #include "script_component.hpp"
 
 params ["_weapon", "_magazine", "_ammo"];
+TRACE_3("Parameter",_weapon,_magazine,_ammo);
 
 private ["_array", "_type", "_return", "_config"];
 
@@ -28,6 +29,7 @@ _array = [
     getNumber (configFile >> "CfgAmmo" >> QGVAR(priority))
 ];
 
+TRACE_1("Proiroity Array",_array);
 // define Fist Values for Types
 _type = 0;
 _array params ["_max"];
@@ -40,12 +42,14 @@ _array params ["_max"];
     };
 } forEach _array;
 
+TRACE_2("Highest Value",_max,_type);
 // create the Config entry Point
-_return = [
+_config = [
     (configFile >> "CfgWeapons" >> _weapon),
     (configFile >> "CfgMagazines" >> _magazine),
     (configFile >> "CfgAmmo" >> _ammo)
 ] select _type;
+TRACE_1("ConfigPath",_config);
 
 // get the Variables out of the Configes and create a array with then
 _return = [
@@ -53,7 +57,7 @@ _return = [
     (getNumber (_config >> QGVAR(range))),
     (getNumber (_config >> QGVAR(damage)))
 ];
-
+TRACE_1("Return",_return);
 
 missionNameSpace setVariable [format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine], _return];
 
