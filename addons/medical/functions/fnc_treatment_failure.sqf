@@ -19,7 +19,7 @@
 
 private ["_config", "_callback", "_weaponSelect", "_lastAnim"];
 params ["_args"];
-_args params ["_caller", "_target", "_selectionName", "_className", "_usersOfItems"];
+_args params ["_caller", "_target", "_selectionName", "_className", "_items", "_usersOfItems"];
 
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
