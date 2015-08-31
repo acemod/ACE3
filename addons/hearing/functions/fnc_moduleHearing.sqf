@@ -9,9 +9,8 @@
  * None
  */
 #include "script_component.hpp"
-params ["_logic", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+params ["_logic"];
 
 [_logic, QGVAR(enableCombatDeafness), "EnableCombatDeafness"] call EFUNC(common,readSettingFromModule);
 
