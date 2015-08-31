@@ -1,4 +1,6 @@
 // ACE - Common
+
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
@@ -208,6 +210,7 @@ GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
+    BEGIN_COUNTER(stateChecker);
     private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
@@ -280,6 +283,8 @@ GVAR(OldVisibleMap) = false;
         GVAR(OldVisibleMap) = _newVisibleMap;
         ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
     };
+    
+    END_COUNTER(stateChecker);
     
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
@@ -380,6 +385,5 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
-
 
 GVAR(commonPostInited) = true;

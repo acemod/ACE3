@@ -16,7 +16,6 @@ PREP(handleMouseButton);
 PREP(handleMouseMove);
 PREP(handleMouseZChanged);
 PREP(isInsideMapTool);
-PREP(mapStateUpdater);
 PREP(openMapGps);
 PREP(openMapGpsUpdate);
 PREP(removeLineMarker);
