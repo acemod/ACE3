@@ -2,12 +2,12 @@
 #define MEDICAL_ACTION_DISTANCE 1.75
 
 class CfgVehicles {
-
     class Logic;
     class Module_F: Logic {
         class ArgumentsBaseUnits {
         };
     };
+
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
@@ -19,6 +19,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class level {
                 displayName = CSTRING(MedicalSettings_level_DisplayName);
@@ -137,6 +138,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(MedicalSettings_Module_Description);
             sync[] = {};
@@ -154,6 +156,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enableFor {
                 displayName = CSTRING(AdvancedMedicalSettings_enableFor_DisplayName);
@@ -256,12 +259,12 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AdvancedMedicalSettings_Module_Description);
             sync[] = {};
         };
     };
-
 
     class ACE_moduleReviveSettings: ACE_Module {
         scope = 2;
@@ -273,6 +276,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enableRevive {
                 displayName = CSTRING(ReviveSettings_enableRevive_DisplayName);
@@ -298,11 +302,13 @@ class CfgVehicles {
                 defaultValue = -1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(ReviveSettings_Module_Description);
             sync[] = {};
         };
     };
+
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
@@ -314,6 +320,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicRoles_EnableList_DisplayName);
@@ -342,6 +349,7 @@ class CfgVehicles {
                 };
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicRoles_Module_Description);
             sync[] = {};
@@ -359,6 +367,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicVehicle_EnableList_DisplayName);
@@ -384,11 +393,13 @@ class CfgVehicles {
                 };
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicVehicle_Module_Description);
             sync[] = {};
         };
     };
+
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
@@ -400,6 +411,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enabled {
                 displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
@@ -407,199 +419,56 @@ class CfgVehicles {
                 typeName = "BOOL";
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicalFacility_Module_Description);
             sync[] = {};
         };
     };
 
-    #define ARM_LEG_ARMOR_DEFAULT 2
-    #define ARM_LEG_ARMOR_BETTER  3
-    #define ARM_LEG_ARMOR_CSAT    4
+    #define ARM_LEG_ARMOR_DEFAULT 1
+    #define ARM_LEG_ARMOR_BETTER  8
+    #define ARM_LEG_ARMOR_CSAT    6
 
     class Land;
     class Man: Land {
         class HitPoints {
-            class HitHead {
-                visual = "";
-                armor = 1;
-                material = -1;
-                name = "head";
-                passThrough = 1;
-                radius = 0.1;
-                explosionShielding = 0.5;
-                minimalHit = 0;
-            };
-            class HitBody {
-                armor = 1;
-                material = -1;
-                name = "body";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 10;
-                visual = "injury_body";
-                minimalHit = 0;
-            };
-            class HitHands {
-                armor = 999; //armor = 2;
-                explosionShielding = 0; //explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "";
-                passThrough = 1;
-                radius = 0; //radius = 0.06;
-                visual = "injury_hands";
-            };
-            class HitLegs {
-                armor = 999; //armor = 2;
-                explosionShielding = 0; //explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "";
-                passThrough = 1;
-                radius = 0; //radius = 0.08;
-                visual = "injury_legs";
-            };
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
         };
     };
+
     class CAManBase: Man {
         class HitPoints: HitPoints {
-
-            class HitFace: HitHead {
-                armor = 999;
-                material = -1;
-                name = "face_hub";
-                passThrough = 1;
-                radius = 0.08;
-                explosionShielding = 0.1;
-                minimalHit = 0.01;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-                material = -1;
-                name = "neck";
-                passThrough = 1;
-                radius = 0.08;
-                explosionShielding = 0.5;
-                minimalHit = 0.01;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-                material = -1;
-                name = "head";
-                passThrough = 1;
-                radius = 0.1;
-                explosionShielding = 0.5;
-                minimalHit = 0.01;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                material = -1;
-                name = "pelvis";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 0.5;
-                visual = "injury_body";
-                minimalHit = 0.01;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                material = -1;
-                name = "spine1";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 1;
-                visual = "injury_body";
-                minimalHit = 0.01;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                material = -1;
-                name = "spine2";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 6;
-                visual = "injury_body";
-                minimalHit = 0.01;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                material = -1;
-                name = "spine3";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 6;
-                visual = "injury_body";
-                minimalHit = 0.01;
-            };
-            class HitBody: HitChest {
-                armor = 1;
-                material = -1;
-                name = "body";
-                passThrough = 1;
-                radius = 0.15;
-                explosionShielding = 10;
-                visual = "injury_body";
-                minimalHit = 0.01;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                material = -1;
-                name = "arms";
-                passThrough = 1;
-                radius = 0.08;
-                explosionShielding = 1;
-                visual = "injury_hands";
-                minimalHit = 0.01;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                material = -1;
-                name = "hands";
-                passThrough = 1;
-                radius = 0.08;
-                explosionShielding = 1;
-                visual = "injury_hands";
-                minimalHit = 0.01;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                material = -1;
-                name = "legs";
-                passThrough = 1;
-                radius = 0.1;
-                explosionShielding = 1;
-                visual = "injury_legs";
-                minimalHit = 0.01;
-            };
-
-            class HitLeftArm {
-                armor = ARM_LEG_ARMOR_DEFAULT; //2;
-                explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "hand_l";
-                passThrough = 1;
-                radius = 0.06;
-                visual = "injury_hands";
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
+                armor = ARM_LEG_ARMOR_DEFAULT;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
             class HitRightArm: HitLeftArm {
-                name = "hand_r";
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitLeftLeg {
-                armor = ARM_LEG_ARMOR_DEFAULT; //2;
-                explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
+            class HitLeftLeg: HitLegs {
+                armor = ARM_LEG_ARMOR_DEFAULT;
                 name = "leg_l";
-                passThrough = 1;
-                radius = 0.08;
-                visual = "injury_legs";
             };
             class HitRightLeg: HitLeftLeg {
                 name = "leg_r";
             };
         };
+
         class ACE_SelfActions {
             #include "ACE_Medical_SelfActions.hpp"
         };
@@ -658,141 +527,60 @@ class CfgVehicles {
 
     class B_Soldier_04_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 2;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
 
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 3;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "hand_l";
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r";
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
@@ -801,293 +589,177 @@ class CfgVehicles {
 
     class I_Soldier_03_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 2;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
 
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 3;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_BETTER;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
 
     class O_Soldier_base_F: SoldierEB {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 4;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
 
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace: HitHead {
-                armor = 999;
-            };
-            class HitNeck: HitFace {
-                armor = 999;
-            };
-            class HitHead: HitNeck {
-                armor = 1;
-            };
-            class HitPelvis: HitBody {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitAbdomen: HitPelvis {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitDiaphragm: HitAbdomen {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitChest: HitDiaphragm {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitBody: HitChest {
-                armor = 4;
-                passThrough = 0.5;
-                explosionShielding = 2.4;
-            };
-            class HitArms: HitHands {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitHands: HitArms {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-            class HitLegs: HitLegs {
-                armor = 999;
-                passThrough = 0.5;
-                explosionShielding = 1.2;
-            };
-
-            class HitLeftArm: HitLeftArm {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-
-            class HitLeftLeg: HitLeftLeg {
+            class HitLeftLeg: HitLegs {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+                name = "leg_l";
             };
-
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
             };
         };
     };
+
+    class O_officer_F: O_Soldier_base_F {
+        class HitPoints: HitPoints {
+            class HitFace;
+            class HitNeck;
+            class HitHead;
+            class HitPelvis;
+            class HitAbdomen;
+            class HitDiaphragm;
+            class HitChest;
+            class HitBody;
+            class HitArms;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
+                armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
+            };
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
+            };
+            class HitLeftLeg: HitLegs {
+                armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
+                name = "leg_l";
+            };
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
+            };
+        };
+    };
+
+    class O_Protagonist_VR_F: O_Soldier_base_F {
+        class HitPoints: HitPoints {
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitHands {
+                armor = 2;
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
+            };
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
+            };
+            class HitLeftLeg: HitLegs {
+                armor = 2;
+                name = "leg_l";
+            };
+            class HitRightLeg: HitLeftLeg {
+                name = "leg_r";
+            };
+        };
+    };
+
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {
         XEH_ENABLED;
