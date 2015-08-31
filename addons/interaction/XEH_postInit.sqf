@@ -82,3 +82,4 @@ private ["_team"];
 [29, [false, false, false]], false] call cba_fnc_addKeybind;
 
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
