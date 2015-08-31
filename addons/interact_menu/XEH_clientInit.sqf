@@ -80,18 +80,26 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (_this select 1) then {
         (finddisplay 312) displayAddEventHandler ["KeyUp", {
             _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = (_key select 5) select 0;
+            _key = _key select 5;
+            _dik = _key select 0;
+            _mods = _key select 1;
 
-            if ((_this select 1) == _key) then {
-                [_this,'keyup'] call CBA_events_fnc_keyHandler
+            if ((_this select 1) == _dik) then {
+                if ((_this select [2,3]) isEqualTo _mods) then {
+                    [_this,'keyup'] call CBA_events_fnc_keyHandler
+                };
             };
         }];
         (finddisplay 312) displayAddEventHandler ["KeyDown", {
             _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = (_key select 5) select 0;
+            _key = _key select 5;
+            _dik = _key select 0;
+            _mods = _key select 1;
 
-            if ((_this select 1) == _key) then {
-                [_this,'keydown'] call CBA_events_fnc_keyHandler
+            if ((_this select 1) == _dik) then {
+                if ((_this select [2,3]) isEqualTo _mods) then {
+                    [_this,'keydown'] call CBA_events_fnc_keyHandler
+                };
             };
         }];
     };
