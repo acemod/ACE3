@@ -15,14 +15,16 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
-
+params ["_unit"];
 private ["_currentGlasses", "_result", "_position", "_visible"];
 
 _currentGlasses = goggles _unit;
 _result = false;
 
-if ((vehicle _unit) != _unit) exitWith {(cameraView != "GUNNER")};
+if ((vehicle _unit) != _unit) exitWith {
+    (cameraView != "GUNNER") ||
+    {[_unit] call EFUNC(common,canUseWeapon)}
+};
 
 if (_currentGlasses != "") then {
     _position =(getPosASLW _unit);
