@@ -18,7 +18,7 @@
 
 private ["_info", "_phase", "_position", "_time", "_usedMouseWheel", "_getDoorAnimations"];
 
-_info = [2] call FUNC(getDoor);
+_info = [MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor);
 
 EXPLODE_2_PVT(_info,_house,_door);
 
@@ -36,7 +36,7 @@ if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_l
 };
 
 GVAR(isOpeningDoor) = true;
-playSound "ACE_Sound_Click";
+playSound "ACE_Sound_Click"; //@todo replace with smth. more fitting
 
 [_house, _animations] spawn {
     private ["_house", "_animations", "_phase", "_position", "_time", "_usedMouseWheel"];
