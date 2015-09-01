@@ -32,13 +32,13 @@ if (isNil "ACE_maxWeightCarry") then {
         // End Dragging
         if !(isNull _draggedObject) then {
             [ACE_player, _draggedObject] call FUNC(dropObject);
-            _return = true
+            _return = true;
         };
         _carriedObject = (ACE_player getVariable [QGVAR(carriedObject),objNull]);
         // End Carry
         if (!isNull _carriedObject) then {
             [ACE_player, _carriedObject] call FUNC(dropObject_carry);
-            _return = true
+            _return = true;
         };
         _return
     },
