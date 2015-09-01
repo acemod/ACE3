@@ -17,8 +17,7 @@
  */
 #include "script_component.hpp"
 private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
-
-_glassesClassname = _this select 0;
+params ["_glassesClassname"];
 _postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
 _postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
 

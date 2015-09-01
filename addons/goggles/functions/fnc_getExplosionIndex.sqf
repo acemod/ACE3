@@ -13,13 +13,5 @@
  *
  * Public: No
  */
-private ["_effectIndex"];
-
-_effectIndex = switch true do {
-       case (_this <= 0.04): {0};
-       case (_this <= 0.06): {1};
-       case (_this <= 0.09): {2};
-       default {3};
-};
-
-_effectIndex
+#include "script_component.hpp"
+floor (linearConversion [0, 0.1, _this, 0, 3, true])

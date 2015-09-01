@@ -33,11 +33,14 @@ GVAR(PostProcessEyes) ppEffectCommit 1;
 GVAR(PostProcessEyes) ppEffectEnable true;
 SETDUST(DBULLETS,0);
 
-if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-    [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
-    GVAR(DustHandler) = -1;
+if (GVAR(DustHandler) != -1) exitWith { // should be fixed in dev CBA
+    GVAR(removePFHonNextFrame) = true;
 };
 GVAR(DustHandler) = [{
+    if (GVAR(removePFHonNextFrame)) exitWith {
+        [_this select 1] call CALLSTACK(CBA_fnc_removePerFrameHandler);
+        GVAR(DustHandler) = -1;
+    };
     if (ACE_diagTime >= GETDUSTT(DTIME) + 3) then {
         SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
         private "_amount";
@@ -52,7 +55,7 @@ GVAR(DustHandler) = [{
             [{GVAR(PostProcessEyes) ppEffectEnable false;}, [], 2, 0.5] call EFUNC(common,waitAndExecute);
             SETDUST(DACTIVE,false);
             SETDUST(DBULLETS,0);
-            [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+            [_this select 1] call CALLSTACK(CBA_fnc_removePerFrameHandler);
             GVAR(DustHandler) = -1;
         };
     };

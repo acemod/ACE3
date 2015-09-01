@@ -77,6 +77,7 @@ player addEventHandler ["Explosion", {
         ["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);
     };
 }];
+
 player addEventHandler ["Killed",{
     GVAR(PostProcessEyes) ppEffectEnable false;
     SETGLASSES(ace_player,GLASSESDEFAULT);
@@ -87,13 +88,13 @@ player addEventHandler ["Killed",{
         [GVAR(EyesDamageScript)] call CALLSTACK(cba_fnc_removePreFrameHandler);
     };
     if (GVAR(DustHandler) != -1) then {
-        [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+        [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
         GVAR(DustHandler) = -1;
     };
 }];
-player addEventHandler ["Fired",{[_this select 0, _this select 1] call FUNC(dustHandler);}];
-player AddEventHandler ["Take",{call FUNC(checkGlasses);}];
-player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
+player addEventHandler ["Fired", DFUNC(dustHandler)];
+player addEventHandler ["Take", DFUNC(checkGlasses)];
+player addEventHandler ["Put", DFUNC(checkGlasses)];
 
 ["GlassesChanged",{
     SETGLASSES(ace_player,GLASSESDEFAULT);
@@ -101,7 +102,7 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
     if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
 
     if ([ace_player] call FUNC(isGogglesVisible)) then {
-        [_this select 0] call FUNC(applyGlassesEffect);
+        _this call FUNC(applyGlassesEffect);
     } else {
         call FUNC(removeGlassesEffect);
     };
@@ -126,6 +127,6 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
     }, [], 25, 5] call EFUNC(common,waitAndExecute);
 }] call EFUNC(common,addEventHandler);
 call FUNC(checkGlasses);
-[FUNC(CheckGoggles), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(rainEffect), 0.5, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(CheckGoggles), 1, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(rainEffect), 0.5, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;

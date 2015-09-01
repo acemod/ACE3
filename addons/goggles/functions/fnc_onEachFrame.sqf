@@ -22,12 +22,13 @@ if (GVAR(FrameEvent) select 0) exitWith {
 };
 private ["_rotorWash","_safe"];
 _rotorWash = GVAR(FrameEvent) select 1;
+_rotorWash params ["_rwEnabled", "_rwDistance"]
 _safe = false;
-if !(_rotorWash select 0) exitWith {
+if !(_rwEnabled) exitWith {
     if (GVAR(PostProcessEyes_Enabled)) then {
         GVAR(PostProcessEyes_Enabled) = false;
         if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-            [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+            [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
             GVAR(DustHandler) = -1;
         };
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0,0,0,0], [0,0,0,1],[1,1,1,0]];
@@ -48,7 +49,7 @@ if !(_safe) then {
             SETDUST(DACTIVE,true);
             call FUNC(ApplyDust);
         } else {
-            if ((_rotorWash select 1) > 0.5) then {
+            if (_rwDistance > 0.5) then {
                 call FUNC(ApplyDust);
             };
         };
@@ -59,14 +60,14 @@ if (_safe) exitWith {};
 if ((_rotorWash select 1) <= 15) then {
     private "_scale";
     _scale = 0.7;
-    if ((_rotorWash select 1) != 0) then {
-        _scale = CLAMP(0.3*(_rotorWash select 1),0.1,0.3);
+    if (_rwDistance != 0) then {
+        _scale = CLAMP(0.3 * _rwDistance ,0.1,0.3);
     } else {
         _scale = 0.1;
     };
     _scale = 1 - _scale;
     if (GVAR(DustHandler) != -1) then { // should be fixed in dev CBA
-        [GVAR(DustHandler)] call CALLSTACK(cba_fnc_removePerFrameHandler);
+        [GVAR(DustHandler)] call CALLSTACK(CBA_fnc_removePerFrameHandler);
         GVAR(DustHandler) = -1;
     };
     if !(ace_player getVariable ["ACE_EyesDamaged", false]) then {

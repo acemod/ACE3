@@ -15,9 +15,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
-
 private ["_currentGlasses", "_result", "_position", "_visible"];
+params ["_unit"];
 
 _currentGlasses = goggles _unit;
 _result = false;
