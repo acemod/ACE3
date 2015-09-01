@@ -545,7 +545,6 @@ class CfgPatches {
         };
         author[] = {ECSTRING(common,ACETeam)};
         authorUrl = "http://ace3mod.com/";
-        versionDesc = "ACE3";
         VERSION_CONFIG;
     };
 };

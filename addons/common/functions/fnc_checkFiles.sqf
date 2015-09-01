@@ -20,7 +20,9 @@ _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 diag_log text format ["[ACE]: ACE is version %1.", _version];
 
 private "_addons";
-_addons = activatedAddons;
+//_addons = activatedAddons; // broken with High-Command module, see #2134
+_addons = "true" configClasses (configFile >> "CfgPatches");//
+_addons = [_addons, {toLower configName _this}] call FUNC(map);//
 _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 
 {
@@ -63,25 +65,16 @@ if (isMultiplayer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
         GVAR(ServerAddons) = _addons;
-        diag_log text format ["[ACE] DEBUG: ServerVersion - %1", GVAR(ServerVersion)];
-        diag_log text format ["[ACE] DEBUG: ServerAddons - %1", GVAR(ServerAddons)];
         publicVariable QGVAR(ServerVersion);
         publicVariable QGVAR(ServerAddons);
     } else {
         // clients have to wait for the variables
         [{
-            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {
-                diag_log text "[ACE] DEBUG: Waiting for file info from server.";
-            };
+            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
 
             private ["_version","_addons"];
             _version = (_this select 0) select 0;
             _addons = (_this select 0) select 1;
-
-            diag_log text format ["[ACE] DEBUG: ServerVersion - %1", GVAR(ServerVersion)];
-            diag_log text format ["[ACE] DEBUG: ServerAddons - %1", GVAR(ServerAddons)];
-            diag_log text format ["[ACE] DEBUG: ClientVersion - %1", _version];
-            diag_log text format ["[ACE] DEBUG: ClientAddons - %1", _addons];
 
             if (_version != GVAR(ServerVersion)) then {
                 private "_errorMsg";
