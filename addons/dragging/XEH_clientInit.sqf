@@ -24,23 +24,23 @@ if (isNil "ACE_maxWeightCarry") then {
 
 [
     "ACE3 Common",
+    QGVAR(Drop),
     (localize LSTRING(Drop)),
     {
-        private ["_return", "_draggedObject", "_carriedObject"];
-        _return = false;
+        private ["_draggedObject", "_carriedObject"];
         _draggedObject = (ACE_player getVariable [QGVAR(draggedObject),objNull]);
         // End Dragging
         if !(isNull _draggedObject) then {
             [ACE_player, _draggedObject] call FUNC(dropObject);
-            _return = true;
+            true
         };
         _carriedObject = (ACE_player getVariable [QGVAR(carriedObject),objNull]);
         // End Carry
-        if (!isNull _carriedObject) then {
+        if !(isNull _carriedObject) then {
             [ACE_player, _carriedObject] call FUNC(dropObject_carry);
-            _return = true;
+            true
         };
-        _return
+        false
     },
     { false },
     [0, [false, false, false]]
