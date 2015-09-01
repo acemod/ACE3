@@ -27,7 +27,7 @@ private["_hitPointDamage", "_wheel"];
 _wheel = objNull;
 
 {
-    if ([_unit, _x, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {
+    if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
         _wheel = _x;
     };
 } forEach nearestObjects [_unit, ["ACE_Track"], 5];
