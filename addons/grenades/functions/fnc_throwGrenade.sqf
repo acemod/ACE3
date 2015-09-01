@@ -21,22 +21,45 @@
  */
 #include "script_component.hpp"
 
-private ["_mode", "_fuzeTime"];
-params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 
-if (_unit != ACE_player) exitWith {};
 if (_weapon != "Throw") exitWith {};
 
+// handle speial grenades
+if (local _unit) then {
+    if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flashbang)) == 1) then {
+        private "_fuzeTime";
+        _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+    };
+
+    if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
+        private ["_fuzeTime", "_timeToLive", "_color", "_intensity"];
+
+        _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+        _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
+        _color = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(color));
+        _intensity = _color select 3;
+        _color resize 3;
+
+        [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+    };
+};
+
+// handle throw modes
+if (_unit != ACE_player) exitWith {};
+
+private "_mode";
 _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode != 0) then {
     private "_velocity";
-
     _velocity = velocity _projectile;
 
     switch (_mode) do {
         //high throw
-    case 1 : {
+        case 1 : {
             _velocity = [
             0.5 * (_velocity select 0),
             0.5 * (_velocity select 1),
@@ -44,24 +67,18 @@ if (_mode != 0) then {
             ];
         };
         //precise throw
-    case 2 : {
+        case 2 : {
             _velocity = (_unit weaponDirection _weapon) vectorMultiply (vectorMagnitude _velocity);
         };
         //roll grande
-    case 3 : {
+        case 3 : {
             //@todo
         };
         //drop grenade
-    case 4 : {
+        case 4 : {
             _velocity = [0, 0, 0];
         };
     };
 
     _projectile setVelocity _velocity;
-};
-
-if (typeOf _projectile == "ACE_G_M84") then {
-    _fuzeTime = getNumber (configFile >> "CfgAmmo" >> typeOf _projectile >> "fuseDistance");
-    // _fuzeTime = getNumber (configFile >> "CfgAmmo" >> typeOf _projectile >> "explosionTime");  //@toDo pretty sure this should be explosionTime not fuseDistance
-    [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
 };
