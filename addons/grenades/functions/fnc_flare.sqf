@@ -1,4 +1,21 @@
-// by commy2
+/*
+ * Author: commy2
+ * Makes flare shine.
+ *
+ * Arguments:
+ * 0: The flare <OBJECT>
+ * 1: Color of flare <ARRAY>
+ * 2: Intensity of flare <NUMBER>
+ * 3: Flare lifetime <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_nade, [0.5,0.5,0.5], 0.5, 60] call ace_grenades_fnc_flare
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_projectile", "_color", "_intensity", "_timeToLive"];
