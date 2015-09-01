@@ -71,6 +71,12 @@ class CfgMovesBasic {
 class CfgMovesMaleSdr: CfgMovesBasic {
     class StandBase;
     class States {
+        // jumping. don't force awkward freelook in mid air.
+        class AovrPercMstpSrasWrflDf;
+        class AovrPercMrunSrasWrflDf: AovrPercMstpSrasWrflDf {
+            forceAim = 0;
+        };
+
         // better slow walk with lowered rifle animation
         class AmovPercMstpSrasWrflDnon;
         class AmovPercMrunSrasWrflDf: AmovPercMstpSrasWrflDnon {
