@@ -25,6 +25,11 @@ params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 
 if (_weapon != "Throw") exitWith {};
 
+// http://feedback.arma3.com/view.php?id=12340
+if (isNull _projectile) then {
+    _projectile = nearestObject [_unit, _ammo];
+};
+
 // handle speial grenades
 if (local _unit) then {
     if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flashbang)) == 1) then {
@@ -33,18 +38,18 @@ if (local _unit) then {
 
         [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
     };
+};
 
-    if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
-        private ["_fuzeTime", "_timeToLive", "_color", "_intensity"];
+if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
+    private ["_fuzeTime", "_timeToLive", "_color", "_intensity"];
 
-        _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
-        _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
-        _color = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(color));
-        _intensity = _color select 3;
-        _color resize 3;
+    _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+    _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
+    _color = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(color));
+    _intensity = _color select 3;
+    _color resize 3;
 
-        [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
-    };
+    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
 };
 
 // handle throw modes
