@@ -10,7 +10,7 @@
             <French>Telescopic Ladder</French>
             <Czech>Teleskopický žebřík</Czech>
             <Italian>Telescopic Ladder</Italian>
-            <Hungarian>Telescopic Ladder</Hungarian>
+            <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
@@ -22,7 +22,7 @@
             <French>Deploy ladder</French>
             <Czech>Rozložit žebřík</Czech>
             <Italian>Deploy ladder</Italian>
-            <Hungarian>Deploy ladder</Hungarian>
+            <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
@@ -34,7 +34,7 @@
             <French>Drop ladder</French>
             <Czech>Položit žebřík</Czech>
             <Italian>Drop ladder</Italian>
-            <Hungarian>Drop ladder</Hungarian>
+            <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
@@ -44,6 +44,7 @@
             <Czech>Upravit žebřík</Czech>
             <Spanish>Ajustar escalera</Spanish>
             <Portuguese>Ajustar escada</Portuguese>
+            <Hungarian>Létra állítása</Hungarian>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -54,7 +55,7 @@
             <French>Position ladder</French>
             <Czech>Umístit žebřík</Czech>
             <Italian>Position ladder</Italian>
-            <Hungarian>Position ladder</Hungarian>
+            <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
@@ -66,7 +67,7 @@
             <French>Pickup ladder</French>
             <Czech>Vzít žebřík</Czech>
             <Italian>Pickup ladder</Italian>
-            <Hungarian>Pickup ladder</Hungarian>
+            <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
         </Key>
     </Package>

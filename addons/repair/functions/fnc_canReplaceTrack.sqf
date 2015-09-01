@@ -31,7 +31,7 @@ if (typeName _track == "OBJECT") then {
     _track = objNull;
 
     {
-        if ([_unit, _x, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {
+        if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
             _track = _x;
         };
     } forEach nearestObjects [_unit, ["ACE_Track"], 5];

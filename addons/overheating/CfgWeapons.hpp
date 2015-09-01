@@ -9,7 +9,7 @@ class CfgWeapons {
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 50;
+            mass = 30;
         };
     };
 

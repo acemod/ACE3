@@ -9,6 +9,7 @@
             <German>Entfernungsspinne</German>
             <Portuguese>Tabela de distâncias</Portuguese>
             <French>Table de tir</French>
+            <Hungarian>Távolsági kártya</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -18,6 +19,7 @@
             <German>50-Meter-Schritte MRAD/MRAD (Fadenkreuz/Geschützturm)</German>
             <Portuguese>Incrementos de 50 METROS - MRAD/MRAD (retícula/torres)</Portuguese>
             <French>Intervalle 50 mètres -- millième/millième (réticule/tambours)</French>
+            <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -27,6 +29,7 @@
             <German>Öffne Entfernungsspinne</German>
             <Portuguese>Abrir tabela de distâncias</Portuguese>
             <French>Afficher table de tir</French>
+            <Hungarian>Távolsági kártya kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -36,6 +39,7 @@
             <German>Öffne Kopie der Entfernungsspinne</German>
             <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
             <French>Afficher table de tir copiée</French>
+            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -45,6 +49,7 @@
             <German>Öffne Entfernungsspinne</German>
             <Portuguese>Abrir tabela de distäncias</Portuguese>
             <French>Afficher table de tir</French>
+            <Hungarian>Távolsági kártya kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -54,6 +59,7 @@
             <German>Öffne Kopie der Entfernungsspinne</German>
             <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
             <French>Afficher table de tir copiée</French>
+            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -63,6 +69,7 @@
             <German>Kopiere Entfernungsspinne</German>
             <Portuguese>Copiar tabela de distäncias</Portuguese>
             <French>Copier table de tir</French>
+            <Hungarian>Távolsági kártya másolása</Hungarian>
         </Key>
     </Package>
 </Project>

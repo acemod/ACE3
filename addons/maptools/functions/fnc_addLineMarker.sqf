@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_name,_startPos,_endPos,_color);
+params ["_name", "_startPos", "_endPos", "_color"];
 
 private ["_marker", "_difPos", "_mag"];
 

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 // Plugs in inventory, putting them in
 _player removeItem "ACE_EarPlugs";

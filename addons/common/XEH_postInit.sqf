@@ -1,4 +1,6 @@
 // ACE - Common
+
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
@@ -208,6 +210,7 @@ GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
+    BEGIN_COUNTER(stateChecker);
     private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
@@ -281,17 +284,10 @@ GVAR(OldVisibleMap) = false;
         ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
     };
 
+    END_COUNTER(stateChecker);
+
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-
-// PFH to raise camera created event. Only works on these cams by BI.
-#define ALL_CAMERAS [ \
-    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
-    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
-    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
-]
 
 GVAR(OldIsCamera) = false;
 
@@ -299,7 +295,7 @@ GVAR(OldIsCamera) = false;
 
     // "activeCameraChanged" event
     private ["_isCamera"];
-    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    _isCamera = call FUNC(isfeatureCameraActive);
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _isCamera;
@@ -380,6 +376,5 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
-
 
 GVAR(commonPostInited) = true;
