@@ -63,16 +63,25 @@ if (isMultiplayer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
         GVAR(ServerAddons) = _addons;
+        diag_log text format ["[ACE] DEBUG: ServerVersion - %1", GVAR(ServerVersion)];
+        diag_log text format ["[ACE] DEBUG: ServerAddons - %1", GVAR(ServerAddons)];
         publicVariable QGVAR(ServerVersion);
         publicVariable QGVAR(ServerAddons);
     } else {
         // clients have to wait for the variables
         [{
-            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
+            if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {
+                diag_log text "[ACE] DEBUG: Waiting for file info from server.";
+            };
 
             private ["_version","_addons"];
             _version = (_this select 0) select 0;
             _addons = (_this select 0) select 1;
+
+            diag_log text format ["[ACE] DEBUG: ServerVersion - %1", GVAR(ServerVersion)];
+            diag_log text format ["[ACE] DEBUG: ServerAddons - %1", GVAR(ServerAddons)];
+            diag_log text format ["[ACE] DEBUG: ClientVersion - %1", _version];
+            diag_log text format ["[ACE] DEBUG: ClientAddons - %1", _addons];
 
             if (_version != GVAR(ServerVersion)) then {
                 private "_errorMsg";
@@ -80,7 +89,7 @@ if (isMultiplayer) then {
 
                 diag_log text format ["[ACE] ERROR: %1", _errorMsg];
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
@@ -91,7 +100,7 @@ if (isMultiplayer) then {
 
                 diag_log text format ["[ACE] ERROR: %1", _errorMsg];
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
