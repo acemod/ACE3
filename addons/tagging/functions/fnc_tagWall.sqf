@@ -25,7 +25,7 @@ if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
 
 _posIntersect = ACE_player modelToWorldVisual [0, 2, 0];
 _posIntersect set [2, (eyepos ACE_player) select 2];
-((lineIntersectsSurfaces [eyepos ACE_player, _posIntersect, ACE_player, objNull, true, 1, "FIRE", "NONE"]) select 0) params ["_touchingPoint", "_surfaceNormal", "", "_object"];
+((lineIntersectsSurfaces [eyepos ACE_player, _posIntersect, ACE_player, objNull, true, 1, "FIRE", "GEOM"]) select 0) params ["_touchingPoint", "_surfaceNormal", "", "_object"];
 
 ACE_player playActionNow "PutDown";
 
