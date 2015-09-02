@@ -1,11 +1,7 @@
 //fnc_findReflections.sqf
 #include "script_component.hpp"
 
-private ["_split", "_radi", "_params", "_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_indirectHitRange", 
-    "_indirectHit", "_distanceCount", "_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", 
-    "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", 
-    "_rand", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec"];
-
+private ["_split", "_radi", "_params", "_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_indirectHitRange", "_indirectHit", "_distanceCount", "_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_rand", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
 
 _params = _this select 0;
 _pos = _params select 0;
@@ -46,7 +42,7 @@ if(_zIndex < 5) then {
                 // } forEach _res;
                 // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
                 // TEST_PAIRS pushBack [_pos, _lastPos, [1,0,0,1]];
-                
+
             };
             // if(terrainIntersectASL [_pos, _testPos]) exitWith {};
             _lastPos = _testPos;
@@ -91,7 +87,7 @@ if(_zIndex < 5) then {
         _avgX = 0;
         _avgY = 0;
         _avgZ = 0;
-        
+
         {
             _avgX = _avgX + (_x select 0);
             _avgY = _avgY + (_x select 1);
@@ -99,7 +95,7 @@ if(_zIndex < 5) then {
         } forEach _blist;
         _c = count _blist;
         _bpos = [_avgX/_c, _avgY/_c, _avgZ/_c];
-        
+
         _distance = _pos vectorDistance _bpos;
         _hitFactor = 1-(((_distance/(_indirectHitRange*4)) min 1) max 0);
         // _hitFactor = 1/(_distance^2);
@@ -108,16 +104,16 @@ if(_zIndex < 5) then {
         _hit = _hit - (_hit%10);
         _range = (floor (_indirectHitRange-(_distance/4))) min 100;
         _range = _range - (_range%2);
-        
+
         if(_hit >= 10 && _range > 0) then {
             // TEST_ICONS pushBack [_bpos, format["h: %1, r: %2, hf: %3 d: %4 ihr: %5", _hit, _range, _hitFactor, _distance, _indirectHitRange*4]];
             // TEST_PAIRS pushBack [_pos, _bpos, [1,0,0,1]];
             _refExp = format["ace_explosion_reflection_%1_%2", _range, _hit];
             // _refExp createVehicle (ASLtoATL _bpos);
             // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _bpos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
-            
+
             _explosions pushBack [_refExp, _bpos, _hit, _distance, _indirectHitRange/4, _depth];
-            
+
         };
         if(count _explosions > (_radi*2)/_depth) exitWith {};
     } forEach _buckets;
@@ -125,6 +121,6 @@ if(_zIndex < 5) then {
     // _dirvec = _pos vectorFromTo ((ATLtoASL (player modelToWorldVisual (player selectionPosition "Spine3"))));
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
-    [DFUNC(doExplosions), 0, [_explosions, 0]] call cba_fnc_addPerFrameHandler;
+    [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 };

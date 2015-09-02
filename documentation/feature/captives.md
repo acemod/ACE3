@@ -3,6 +3,7 @@ layout: wiki
 title: Captives
 description: System for taking and handling captives
 group: feature
+category: interaction
 parent: wiki
 ---
 

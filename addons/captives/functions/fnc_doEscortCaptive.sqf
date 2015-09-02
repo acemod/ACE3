@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_target,_state);
+params ["_unit", "_target","_state"];
 
 if (_state) then {
     if (_unit getVariable [QGVAR(isEscorting), false]) exitWith {};
@@ -35,7 +35,9 @@ if (_state) then {
     nil, 20, false, true, "", QUOTE(!isNull (GETVAR(_target,QGVAR(escortedUnit),objNull)))];
 
     [{
-        EXPLODE_3_PVT((_this select 0),_unit,_target,_actionID);
+        params ["_args", "_pfID"];
+        _args params ["_unit", "_target", "_actionID"];
+        
         if (_unit getVariable [QGVAR(isEscorting), false]) then {
             if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
                 _unit setVariable [QGVAR(isEscorting), false, true];

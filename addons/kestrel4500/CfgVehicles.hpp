@@ -39,13 +39,10 @@ class CfgVehicles {
         author = "Ruthberg";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Kestrel 4500";
+        displayName = CSTRING(Name);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Kestrel4500 {
-                name = "ACE_Kestrel4500";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Kestrel4500,1);
         };
     };
 

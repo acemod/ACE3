@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_sPos,_icon);
+params ["_sPos", "_icon"];
 
 private ["_displayNum", "_ctrl", "_pos"];
 

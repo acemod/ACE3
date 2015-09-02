@@ -3,6 +3,7 @@ layout: wiki
 title: Nametags
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

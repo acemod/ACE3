@@ -3,6 +3,7 @@ layout: wiki
 title: Grenades
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

@@ -16,10 +16,17 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_damage);
+//Only run if deafness or ear ringing is enabled:
+if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
+
+params ["_unit", "_damage"];
+
+if (_unit != ACE_player) exitWith {};
+
+TRACE_2("explosion near player",_unit,_damage);
 
 private ["_strength"];
-_strength = 0 max _damage;
+_strength = (0 max _damage) * 30;
 if (_strength < 0.01) exitWith {};
 
-[{_this call FUNC(earRinging)}, [_unit, _strength], 0.2, 0] call EFUNC(common,waitAndExecute);
+[{_this call FUNC(earRinging)}, [_unit, _strength], 0.2] call EFUNC(common,waitAndExecute);

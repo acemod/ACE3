@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 // Plugs in inventory, putting them in
 _player removeItem "ACE_EarPlugs";
@@ -23,6 +23,9 @@ _player removeItem "ACE_EarPlugs";
 _player setVariable ["ACE_hasEarPlugsIn", true, true];
 
 [localize LSTRING(EarPlugs_Are_On)] call EFUNC(common,displayTextStructured);
+
+//Force an immediate fast volume update:
+[[true]] call FUNC(updateVolume);
 
 /*// No Earplugs in inventory, telling user
 [localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);*/

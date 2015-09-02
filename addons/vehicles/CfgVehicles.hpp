@@ -331,4 +331,97 @@ class CfgVehicles {
             };
         };
     };
+
+    // static mgs shouldn't use 500 rnd mags.
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret; //: NewTurret {};
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class HMG_01_base_F: StaticMGWeapon {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag","100Rnd_127x99_mag","100Rnd_127x99_mag","100Rnd_127x99_mag","100Rnd_127x99_mag"};
+            };
+        };
+    };
+
+    class B_HMG_01_F: HMG_01_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
+            };
+        };
+    };
+
+    class O_HMG_01_F: HMG_01_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green"};
+            };
+        };
+    };
+
+    class I_HMG_01_F: HMG_01_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow"};
+            };
+        };
+    };
+
+    class HMG_01_high_base_F: HMG_01_base_F {};
+
+    class B_HMG_01_high_F: HMG_01_high_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
+            };
+        };
+    };
+
+    class O_HMG_01_high_F: HMG_01_high_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green"};
+            };
+        };
+    };
+
+    class I_HMG_01_high_F: HMG_01_high_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow"};
+            };
+        };
+    };
+
+    class HMG_01_A_base_F: HMG_01_base_F {};
+
+    class B_HMG_01_A_F: HMG_01_A_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
+            };
+        };
+    };
+
+    class O_HMG_01_A_F: HMG_01_A_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green","100Rnd_127x99_mag_Tracer_Green"};
+            };
+        };
+    };
+
+    class I_HMG_01_A_F: HMG_01_A_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                magazines[] = {"100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow","100Rnd_127x99_mag_Tracer_Yellow"};
+            };
+        };
+    };
 };

@@ -28,6 +28,11 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class ACE_RepairItem_Base {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };
 
 class Extended_Killed_EventHandlers {

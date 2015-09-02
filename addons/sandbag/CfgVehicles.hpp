@@ -5,7 +5,8 @@ class CfgVehicles {
             class ACE_Sandbags {
                 displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(call FUNC(canDeploy));
-                statement = QUOTE(call FUNC(deploy));
+                //wait a frame to handle "Do When releasing action menu key" option:
+                statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [])] call EFUNC(common,execNextFrame));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 1;
                 priority = 4;
@@ -22,10 +23,7 @@ class CfgVehicles {
         displayName = CSTRING(sandbagEmpty_displayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Sandbag_empty {
-                name = "ACE_Sandbag_empty";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Sandbag_empty,1);
         };
     };
     /*
@@ -103,7 +101,7 @@ class CfgVehicles {
         scope = 1;
         model = PATHTOF(data\ace_sandbag_nogeo.p3d);
     };
-    
+
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {

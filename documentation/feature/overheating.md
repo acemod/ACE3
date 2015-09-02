@@ -3,6 +3,7 @@ layout: wiki
 title: Overheating
 description: Weapon temperature and jamming, barrel swapping.
 group: feature
+category: realism
 parent: wiki
 ---
 

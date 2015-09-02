@@ -2,15 +2,15 @@
 
 #define COLOUR 8.0
 class CfgPatches {
-  class ADDON {
-    units[] = {};
-    weapons[] = {};
-    requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common"};
-    author[] = {"Garth 'L-H' de Wet"};
-    authorUrl = "http://garth.snakebiteink.co.za/";
-    VERSION_CONFIG;
-  };
+    class ADDON {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common"};
+        author[] = {"Garth 'L-H' de Wet"};
+        authorUrl = "http://garth.snakebiteink.co.za/";
+        VERSION_CONFIG;
+    };
 };
 
 #include "CfgEventHandlers.hpp"
@@ -163,10 +163,6 @@ class CfgGlasses {
     class G_Lady_Mirror:None{
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
-    };
-
-    class AV_ESS_blk:None{
-        COMBAT_GOGGLES
     };
 
     class G_Balaclava_blk;

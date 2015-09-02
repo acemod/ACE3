@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_longPath,_shortPath);
+params ["_longPath", "_shortPath"];
 
 private ["_isSubPath","_i"];
 _isSubPath = true;

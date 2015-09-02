@@ -16,7 +16,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Parachute_02_base_F;
     class ACE_HuntIR: Parachute_02_base_F {
         author = ECSTRING(common,ACETeam);
@@ -67,13 +67,10 @@ class CfgVehicles {
         displayName = CSTRING(monitor_displayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_HuntIR_monitor {
-                name = "ACE_HuntIR_monitor";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_HuntIR_monitor,1);
         };
     };
-    
+
     class ReammoBox_F;
     class ACE_HuntIR_Box: ReammoBox_F {
         model = PATHTOF(data\ace_huntirbox.p3d);
