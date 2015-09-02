@@ -43,6 +43,7 @@ if (GVAR(level) >= 2) then {
     // cap the blood loss to be no greater as the current cardiac output
     //(_totalBloodLoss min _cardiacOutput);
 } else {
-     _totalBloodLoss = BLOODLOSSRATE_BASIC * (damage _unit);
+    { _totalBloodLoss = _totalBloodLoss + _x } forEach (_unit getvariable [QGVAR(bodyPartStatus), []]);
+    _totalBloodLoss = (_totalBloodLoss / 6) * BLOODLOSSRATE_BASIC;
 };
 _totalBloodLoss * ((_unit getVariable [QGVAR(bleedingCoefficient), GVAR(bleedingCoefficient)]) max 0);
