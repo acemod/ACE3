@@ -116,6 +116,7 @@
             <German>Gehör</German>
             <Czech>Sluch</Czech>
             <Portuguese>Audição</Portuguese>
+            <Hungarian>Hallás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
             <English>Combat Deafness</English>
@@ -124,6 +125,7 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
+            <Hungarian>Harci süketség engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -132,6 +134,7 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
+            <Hungarian>Harci süketség engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>

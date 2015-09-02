@@ -10,6 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
+                exceptions[] = {"isNotOnLadder"}; \
             }; \
         }; \
     };

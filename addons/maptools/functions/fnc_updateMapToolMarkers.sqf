@@ -16,9 +16,19 @@
 #define CENTER_OFFSET_Y_PERC  0.1606
 #define CONSTANT_SCALE        0.2
 
-PARAMS_1(_theMap);
+params ["_theMap"];
 
 private ["_rotatingTexture", "_textureWidth", "_scale", "_xPos", "_yPos"];
+
+// Show/Hide draw buttons
+if ([] call FUNC(canDraw)) then {
+    { ((findDisplay 12) displayCtrl _x) ctrlShow true; } forEach GVAR(drawing_controls);
+} else {
+    { ((findDisplay 12) displayCtrl _x) ctrlShow false; } forEach GVAR(drawing_controls);
+    if (GVAR(drawing_isDrawing)) then {
+        call FUNC(cancelDrawing);
+    };
+};
 
 if (!("ACE_MapTools" in items ACE_player)|| {GVAR(mapTool_Shown) == 0}) exitWith {};
 

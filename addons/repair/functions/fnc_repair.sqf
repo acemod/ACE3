@@ -177,7 +177,7 @@ _processText = getText (_config >> "displayNameProgress");
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    []
+    ["isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon
