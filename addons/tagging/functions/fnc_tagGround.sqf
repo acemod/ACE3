@@ -16,9 +16,9 @@
 
 
 #include "script_component.hpp"
-private ["_color", "_tagPos", "_groundPos", "_vectorDirAndUp"];
+private ["_tagPos", "_groundPos", "_vectorDirAndUp"];
 
-PARAMS_1(_color);
+params ["_color"];
 if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
     ["%1 is not a valid tag colour.", _color] call BIS_fnc_error;
 };
@@ -42,9 +42,12 @@ ACE_player playActionNow "PutDown";
 
 [{
     private ["_tag"];
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (getPosASL ACE_player), 10, 1, 15];
+    params ["_tagPos", "_vectorDirAndUp", "_color"];
+
+    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), ACE_player, false, (eyePos ACE_player), 10, 1, 15];
+
     _tag = "UserTexture1m_F" createVehicle [0,0,0];
-    _tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + (_this select 2) + '\' + str (floor (random 3)) + '.paa'];
-    _tag setPosATL (_this select 0);
-    _tag setVectorDirAndUp (_this select 1);
+    _tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + _color + '\' + str (floor (random 3)) + '.paa'];
+    _tag setPosATL _tagPos;
+    _tag setVectorDirAndUp _vectorDirAndUp;
 }, [_tagPos, _vectorDirAndUp, _color], 0.6] call EFUNC(common,waitAndExecute);

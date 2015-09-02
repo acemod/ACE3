@@ -25,7 +25,7 @@ _objectsLeft = lineIntersectsWith [eyePos ACE_player, _posCheck, ACE_player, obj
 _intersectsLeft = false;
 {
     if (_x isKindOf "Static") exitWith {_intersectsLeft = true};
-} foreach _objectsLeft;
+} count _objectsLeft;
 
 if (!_intersectsLeft) exitWith {false};
 
@@ -37,7 +37,7 @@ _objectsRight = lineIntersectsWith [eyePos ACE_player, _posCheck, ACE_player, ob
 _intersectsRight = false;
 {
     if (_x isKindOf "Static") exitWith {_intersectsRight = true};
-} foreach _objectsRight;
+} count _objectsRight;
 
 
 //for readability...

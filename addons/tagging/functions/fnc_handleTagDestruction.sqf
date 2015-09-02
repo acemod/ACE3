@@ -3,11 +3,11 @@
  * Handles tag destruction when the object they are attached to gets destroyed.
  *
  * Arguments:
- * None
- * 
- * Return Value:
  * 0: The tag that should get destroyed <OBJECT>
  * 1: The object the tag is attached to <OBJECT>
+ * 
+ * Return Value:
+ * None
  *
  * Example:
  * [tag, object] call ace_tagging_fnc_handleTagDestruction
@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 private ["_tag", "_attachedTags", "_object"];
 
-PARAMS_2(_tag,_object);
+params ["_tag", "_object"];
 
 if (count (_object getVariable [QGVAR(attachedTags), []]) == 0) then {
     _object setVariable [QGVAR(attachedTags), [_tag]];
