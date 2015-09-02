@@ -78,5 +78,5 @@ if (isPLayer _unit) then {
 
 ["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
 
-_unit setdamage 1;
+[_unit, 1] call FUNC(setStructuralDamage);
 true;
