@@ -21,7 +21,7 @@ params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
 // bug, apparently can fire for remote units in special cases
 if !(local _unit) exitWith {
     #ifdef DEBUG_ENABLED_MEDICAL
-        ACE_LOGDEBUG_3("HandleDamage on remote unit! - %1 - %2 - %3",diag_frameno,_unit,isServer);
+        ACE_LOGDEBUG_3("HandleDamage on remote unit! - %1 - %2 - %3", diag_frameno, _unit, isServer);
     #endif
     nil
 };
@@ -35,8 +35,12 @@ private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_
 };*/
 
 #ifdef DEBUG_ENABLED_MEDICAL
-    ACE_LOGDEBUG_3("HandleDamage - %1 - %2 - %3",diag_frameno,_selection,_damage);
+    ACE_LOGDEBUG_3("HandleDamage - %1 - %2 - %3", diag_frameno, _selection, _damage);
 #endif
+
+// If damage is in dummy hitpoints, "hands" and "legs", don't change anything
+if (_selection == "hands") exitWith {_unit getHit "hands"};
+if (_selection == "legs") exitWith {_unit getHit "legs"};
 
 // If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
 if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
@@ -48,7 +52,12 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     } else {
         _unit getHit _selection
     };
+    #ifdef DEBUG_ENABLED_MEDICAL
+        ACE_LOGDEBUG_3("HandleDamage damage disabled. - %1 - %2 - %3", diag_frameno, _unit, _selection);
+    #endif
 };
+
+//if (true) exitWith {nil};//
 
 // Get return damage
 _damageReturn = _damage;
