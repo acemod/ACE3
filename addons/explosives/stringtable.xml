@@ -76,6 +76,7 @@
         <Key ID="STR_ACE_Explosives_BlockedAction">
             <English>Blocked</English>
             <Spanish>Obstruido</Spanish>
+            <Czech>Blokováno</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>

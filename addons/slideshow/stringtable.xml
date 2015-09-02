@@ -6,6 +6,7 @@
             <Polish>Pokaz slajdów</Polish>
             <Hungarian>Vetítés</Hungarian>
             <Portuguese>Apresentação de Slides</Portuguese>
+            <Czech>Prezentace</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -18,6 +19,7 @@
             <Polish>Obiekty</Polish>
             <Hungarian>Objektumok</Hungarian>
             <Portuguese>Objetos</Portuguese>
+            <Czech>Objekty</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
@@ -42,6 +44,7 @@
             <Polish>Obrazy</Polish>
             <Hungarian>Képek</Hungarian>
             <Portuguese>Imagens</Portuguese>
+            <Czech>Obrázky</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -54,6 +57,7 @@
             <Polish>Nazwy interakcji</Polish>
             <Hungarian>Interakciós nevek</Hungarian>
             <Portuguese>Nomes de Interação</Portuguese>
+            <Czech>Názvy Interakcí</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>

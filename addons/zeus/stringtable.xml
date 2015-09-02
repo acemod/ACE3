@@ -157,14 +157,17 @@
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
             <Polish>Przydziel medyka</Polish>
+            <Czech>Přiřadit Zdravotníka</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
             <Polish>Przydziel pojazd medyczny</Polish>
+            <Czech>Přiřadit Zdravotnické Vozidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
             <Polish>Przydziel budynek medyczny</Polish>
+            <Czech>Přiřadit Zdravotnické Zařízení</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>

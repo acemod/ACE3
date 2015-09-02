@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Main_Category_Logistics">
             <English>ACE Logistics</English>
             <Polish>ACE Logistyka</Polish>
+            <Czech>ACE Logistika</Czech>
         </Key>
     </Package>
 </Project>

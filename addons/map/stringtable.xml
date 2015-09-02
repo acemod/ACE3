@@ -162,26 +162,32 @@
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
             <Polish>Latarki</Polish>
+            <Czech>Svítilny</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
             <Polish>Noktowizja</Polish>
+            <Czech>NVG</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
             <Polish>Włącz</Polish>
+            <Czech>Zapnout</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
             <Polish>Wyłącz</Polish>
+            <Czech>Vypnout</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
             <Polish>Zwiększ czułość</Polish>
+            <Czech>Zvýšit jas</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
             <Polish>Zmniejsz czułość</Polish>
+            <Czech>Snížit jas</Czech>
         </Key>
     </Package>
 </Project>
