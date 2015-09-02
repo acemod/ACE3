@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, Glowbal
+ * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
  *
  * Arguments:
@@ -14,28 +14,39 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
 
-if !(local _unit) exitWith {nil};
-
-if (typeName _projectile == "OBJECT") then {
-    _projectile = typeOf _projectile;
-    _this set [4, _projectile];
+// bug, apparently can fire for remote units in special cases
+if !(local _unit) exitWith {
+    #ifdef DEBUG_ENABLED_MEDICAL
+        ACE_LOGDEBUG_3("HandleDamage on remote unit! - %1 - %2 - %3",diag_frameno,_unit,isServer);
+    #endif
+    nil
 };
 
-// If the damage is being weird, we just tell it to fuck off.
-if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
+private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
+
+// bug, assumed fixed, @todo excessive testing, if nothing happens remove
+/*if (typeName _projectile == "OBJECT") then {
+    _projectile = typeOf _projectile;
+    _this set [4, _projectile];
+};*/
+
+#ifdef DEBUG_ENABLED_MEDICAL
+    ACE_LOGDEBUG_3("HandleDamage - %1 - %2 - %3",diag_frameno,_selection,_damage);
+#endif
+
+// If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
+if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
 
 // Exit if we disable damage temporarily
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
-    if (_selection in GVAR(SELECTIONS)) then {
-        _unit getHit _selection
-    } else {
+    if (_selection == "") then {
         damage _unit
+    } else {
+        _unit getHit _selection
     };
 };
 

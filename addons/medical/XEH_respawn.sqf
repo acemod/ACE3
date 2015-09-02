@@ -2,8 +2,7 @@
 
 params ["_unit"];
 
-if !(local _unit) exitWith {};
-
+// reset all variables. @todo GROUP respawn?
 [_unit] call FUNC(init);
 
 // Reset captive status for respawning unit

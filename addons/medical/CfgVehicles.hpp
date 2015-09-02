@@ -432,37 +432,33 @@ class CfgVehicles {
 
     class Land;
     class Man: Land {
-        class HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-        };
+        class HitPoints;
     };
 
     class CAManBase: Man {
-        class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
-            class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
-            class HitBody;
-            class HitArms;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitHands {
+        class HitPoints: HitPoints { // custom hitpoints. addons might want to adjust these accordingly
+            class HitLeftArm {
                 armor = ARM_LEG_ARMOR_DEFAULT;
+                material = -1;
                 name = "hand_l"; // @todo hopefully these still include the whole arm + hands
+                passThrough = 1;
+                radius = 0.08;
+                explosionShielding = 1;
+                visual = "injury_hands";
+                minimalHit = 0.01;
             };
             class HitRightArm: HitLeftArm {
                 name = "hand_r"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitLeftLeg: HitLegs {
+            class HitLeftLeg {
                 armor = ARM_LEG_ARMOR_DEFAULT;
+                material = -1;
                 name = "leg_l";
+                passThrough = 1;
+                radius = 0.1;
+                explosionShielding = 1;
+                visual = "injury_legs";
+                minimalHit = 0.01;
             };
             class HitRightLeg: HitLeftLeg {
                 name = "leg_r";
@@ -527,60 +523,42 @@ class CfgVehicles {
 
     class B_Soldier_04_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
             };
         };
     };
 
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "hand_l";
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r";
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
             };
         };
     };
@@ -589,150 +567,105 @@ class CfgVehicles {
 
     class I_Soldier_03_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
             };
         };
     };
 
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_BETTER;
             };
         };
     };
 
     class O_Soldier_base_F: SoldierEB {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
             };
         };
     };
 
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
             };
         };
     };
 
     class O_officer_F: O_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitFace;
-            class HitNeck;
             class HitHead;
-            class HitPelvis;
-            class HitAbdomen;
-            class HitDiaphragm;
-            class HitChest;
             class HitBody;
-            class HitArms;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
+            class HitRightArm: HitRightArm {
+                armor = ARM_LEG_ARMOR_CSAT;
             };
-            class HitLeftLeg: HitLegs {
-                armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
-                name = "leg_l";
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
             };
         };
     };
@@ -743,19 +676,17 @@ class CfgVehicles {
             class HitBody;
             class HitHands;
             class HitLegs;
-            class HitLeftArm: HitHands {
+            class HitLeftArm: HitLeftArm {
                 armor = 2;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
             };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg: HitLegs {
+            class HitRightArm: HitRightArm {
                 armor = 2;
-                name = "leg_l";
             };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
+            class HitLeftLeg: HitLeftLeg {
+                armor = 2;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = 2;
             };
         };
     };

@@ -1,6 +1,8 @@
 #define COMPONENT medical
 #include "\z\ace\addons\main\script_mod.hpp"
 
+#define DEBUG_ENABLED_MEDICAL true
+
 #ifdef DEBUG_ENABLED_MEDICAL
     #define DEBUG_MODE_FULL
 #endif
