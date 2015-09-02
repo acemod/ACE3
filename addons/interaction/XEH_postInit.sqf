@@ -77,5 +77,5 @@ GVAR(isOpeningDoor) = false;
 {false},
 [20, [true, false, false]], false] call CBA_fnc_addKeybind;
 
-["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSwimming", {diag_log text format ["%1 - !underwater %2", diag_frameno, _this select 0]; !underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
