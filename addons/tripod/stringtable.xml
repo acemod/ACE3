@@ -33,6 +33,7 @@
             <German>SSWT-Werkzeug aufheben</German>
             <Portuguese>Pegar kit SSWT</Portuguese>
             <Hungarian>SSWT készlet felvétele</Hungarian>
+            <Russian>Подобрать снайперский штатив</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
@@ -42,6 +43,7 @@
             <German>SSWT-Werkzeug anpassen</German>
             <Portuguese>Ajustar kit SSWT</Portuguese>
             <Hungarian>SSWT készlet állítása</Hungarian>
+            <Russian>Выровнять снайперский штатив</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -51,6 +53,7 @@
             <German>Fertig</German>
             <Portuguese>Feito</Portuguese>
             <Hungarian>Kész</Hungarian>
+            <Russian>Готово</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>+ Modifier, adjust</English>
@@ -60,6 +63,7 @@
             <German>+ Modifikator, anpassen</German>
             <Portuguese>+ Modificador, ajuste</Portuguese>
             <Hungarian>+ Módosító, szabályzás</Hungarian>
+            <Russian>+ Модификатор, подстройка</Russian>
         </Key>
     </Package>
 </Project>

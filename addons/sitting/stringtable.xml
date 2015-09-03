@@ -8,6 +8,7 @@
             <Czech>Sednout si</Czech>
             <Spanish>Sentarse</Spanish>
             <Hungarian>Leülés</Hungarian>
+            <Russian>Сесть</Russian>
         </Key>
         <Key ID="STR_ACE_Sitting_Stand">
             <English>Stand Up</English>
@@ -16,6 +17,7 @@
             <Czech>Vstát</Czech>
             <Spanish>Levantarse</Spanish>
             <Hungarian>Felállás</Hungarian>
+            <Russian>Встать</Russian>
         </Key>
         <Key ID="STR_ACE_Sitting_Enable">
             <English>Enable Sitting</English>
@@ -24,6 +26,7 @@
             <Czech>Povolit sezení</Czech>
             <Spanish>Acivar asiento</Spanish>
             <Hungarian>Ülés engedélyezése</Hungarian>
+            <Russian>Разрешить сидение</Russian>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDisplayName">
             <English>Sitting</English>
@@ -32,6 +35,7 @@
             <Czech>Sedící</Czech>
             <Spanish>Sentarse</Spanish>
             <Hungarian>Ülés</Hungarian>
+            <Russian>Сидение</Russian>
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDescription">
             <English>This module allows you to disable the ability to sit on chairs and toilets.</English>
@@ -40,6 +44,7 @@
             <Czech>Tento modul dovoluje zakázat možnost sedět na židlých a toaletách.</Czech>
             <Spanish>Este módulo te permite desactivar la capacidad de sentarte en sillas y aseos.</Spanish>
             <Hungarian>Ez a modul lehetővé teszi a székekre és toalettekre való leülés letiltását.</Hungarian>
+            <Russian>Этот модуль позволяет вам запретить возможность садиться на стулья и туалеты.</Russian>
         </Key>
     </Package>
 </Project>

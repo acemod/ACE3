@@ -1,45 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="Combat Space Enhancement">
     <Package name="Combat Medical System">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
             <English>Medical Menu</English>
             <Polish>Menu medyczne</Polish>
+            <Russian>Медицинское меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
             <Polish>Akt. menu medyczne</Polish>
+            <Russian>Разрешить мед. меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
             <Polish>Zezwalaj graczom korzystać z menu medycznego</Polish>
+            <Russian>Разрешает клиентам использовать медицинское меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
             <Polish>Użyj menu medycznego</Polish>
+            <Russian>Использовать медицинское меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
             <Polish>Jeżeli zezwolone przez serwer, aktywuj menu medyczne poprzez skrót klawiszowy i menu interakcji.</Polish>
+            <Russian>Если разрешено сервером, включает опцию использования медицинского меню с помощью горячих главиш или меню взаимодействия</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
             <Polish>Otwieraj ponownie menu medyczne</Polish>
+            <Russian>Переоткрывать мед. меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
             <Polish>Otwórz ponownie menu medyczne po udanym zakończeniu leczenia</Polish>
+            <Russian>Переоткрывать медицинское меню после удачного лечения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
             <Polish>Otwórz menu medyczne</Polish>
+            <Russian>Открыть медицинское меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
             <Polish>Ustawienia menu medycznego</Polish>
+            <Russian>Настройки медицинского меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
             <Polish>Skonfiguruj opcje menu medycznego</Polish>
+            <Russian>Настройки использования медицинского меню</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -138,7 +148,6 @@
             <Spanish>Seleccionar estado de Triage</Spanish>
             <French>Selectioner l'état de Triage</French>
             <Polish>Wybierz priorytet</Polish>
-
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>

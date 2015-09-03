@@ -57,6 +57,7 @@
             <Czech>MK6 - Nastavení</Czech>
             <Portuguese>Ajustes do MK6</Portuguese>
             <Hungarian>MK6 beállítások</Hungarian>
+            <Russian>Настройки MK6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -66,6 +67,7 @@
             <Czech>Odpor vzduchu</Czech>
             <Portuguese>Resistência do Ar</Portuguese>
             <Hungarian>Légellenállás</Hungarian>
+            <Russian>Сопротивление воздуха</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
@@ -75,6 +77,7 @@
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
+            <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
@@ -84,6 +87,7 @@
             <Czech>MK6 - Povolit počítač</Czech>
             <Portuguese>Permitir computador do MK6</Portuguese>
             <Hungarian>MK6 számítógép engedélyezése</Hungarian>
+            <Russian>Разрешить компьютер MK6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -93,6 +97,7 @@
             <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
             <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
+            <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>
@@ -102,6 +107,7 @@
             <Czech>MK6 - Povolit kompas</Czech>
             <Portuguese>Permitir bússula do MK6</Portuguese>
             <Hungarian>MK6 iránytű engedélyezése</Hungarian>
+            <Russian>Разрешить компас MK6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
@@ -111,12 +117,14 @@
             <Czech>MK6 - Zobrazit digitální kompas</Czech>
             <Portuguese>Mostra a bússula digital do MK6</Portuguese>
             <Hungarian>Az MK6 digitális iránytű megjelenítése</Hungarian>
+            <Russian>Показывает цифровой компас MK6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
             <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
             <Czech>Tento modul umožňuje nastavení minometu MK6.</Czech>
             <Portuguese>Este módulo permite que você ajuste o morteiro MK6.</Portuguese>
+            <Russian>Модуль настройки миномета MK6</Russian>
         </Key>
     </Package>
 </Project>

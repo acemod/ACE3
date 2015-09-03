@@ -4,38 +4,47 @@
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
             <Polish>Załaduj</Polish>
+            <Russian>Загрузить</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
             <Polish>Wyładuj</Polish>
+            <Russian>Выгрузить</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <Polish>Ładunek</Polish>
+            <Russian>Грузовой отсек</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
             <Polish>Menu ładunku</Polish>
+            <Russian>Грузовой отсек</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
             <Polish>Pozostałe miejsce: %1</Polish>
+            <Russian>Осталось мест: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
             <Polish>Aktywuj cargo</Polish>
+            <Russian>Включить модуль перевозки грузов</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
             <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów.</Polish>
+            <Russian>Включает модуль погрузки и перевозки грузов</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
             <Polish>Ustawienia cargo</Polish>
+            <Russian>Перевозка грузов</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
             <Polish>Skonfiguruj ustawienia modułu cargo.</Polish>
+            <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
         </Key>
     </Package>
 </Project>

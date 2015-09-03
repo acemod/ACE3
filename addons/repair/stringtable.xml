@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
@@ -42,11 +42,13 @@
             <English>Replacing Wheel ...</English>
             <German>Ersetze Reifen ...</German>
             <Polish>Wymienianie koła ...</Polish>
+            <Russian>Замена колеса...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
             <German>Reifen ersetzt</German>
             <Polish>Koło zostało wymienione</Polish>
+            <Russian>Колесо заменено</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveWheel">
             <English>Remove Wheel</English>
@@ -64,59 +66,73 @@
             <English>Removing Wheel ...</English>
             <German>Entferne Reifen ...</German>
             <Polish>Zdejmowanie koła ...</Polish>
+            <Russian>Снятие колеса...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
             <German>Reifen entfernt</German>
             <Polish>Koło zostało zdjęte</Polish>
+            <Russian>Колесо снято</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceTrack">
             <English>Change Track</English>
             <Polish>Wymień gąsienicę</Polish>
+            <Russian>Заменить гусеницу</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track ...</English>
             <Polish>Wymienianie gąsienicy ...</Polish>
+            <Russian>Замена гусеницы...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
             <Polish>Gąsienica została wymieniona</Polish>
+            <Russian>Гусеница заменена</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
             <Polish>Zdejmij gąsienicę</Polish>
+            <Russian>Снять гусеницу</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track ...</English>
             <Polish>Zdejmowanie gąsienicy ...</Polish>
+            <Russian>Снятие гусеницы...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
             <Polish>Gąsienica została zdjęta</Polish>
+            <Russian>Гусеница снята</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepair">
             <English>Full Repair</English>
             <Polish>Pełna naprawa</Polish>
+            <Russian>Полный ремонт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle ...</English>
             <Polish>Naprawianie pojazdu ...</Polish>
+            <Russian>Ремонт транспорта...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
             <Polish>Lokaliz. pełnej naprawy</Polish>
+            <Russian>Места полного ремонта</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
             <Polish>W jakich miejscach pojazd może zostać w pełni naprawiony?</Polish>
+            <Russian>В каких местах транспорт может быть полностью отремеонтирован?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
             <English>Allow Full Repair</English>
             <Polish>Zezwól na pełną naprawę</Polish>
+            <Russian>Полный ремонт выполняют</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
             <Polish>Kto może przeprowadzić pełną naprawę pojazdu?</Polish>
+            <Russian>Кто может выполнять полный ремонт?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
@@ -133,10 +149,12 @@
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
             <Polish>Wyświetl tekst przy naprawie</Polish>
+            <Russian>Отображать текст при ремонте</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
             <Polish>Pokaż informację, kiedy wykonujesz czynności związane z naprawą pojazdu.</Polish>
+            <Russian>Отображать оповещение каждый раз, когда вы ремонтируете транспорт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing ...</English>
@@ -178,21 +196,25 @@
             <English>Fully repaired part</English>
             <German>Bauteil vollständig repariert</German>
             <Polish>W pełni naprawiono część</Polish>
+            <Russian>Полностью отремонтированная часть</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedPartially">
             <English>Partially repaired %1</English>
             <German>Bauteil teilweise repariert</German>
             <Polish>Częściowo naprawiono: %1</Polish>
+            <Russian>Частично отремонтировано: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointFully">
             <English>Fully repaired %1</English>
             <German>%1 vollständig repariert</German>
             <Polish>W pełni naprawiono: %1</Polish>
+            <Russian>Полностью отремонтировано: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointPartially">
             <English>Partially repaired %1</English>
             <German>%1 teilweise repariert</German>
             <Polish>Częściowo naprawiono: %1</Polish>
+            <Russian>Частично отремонтировано: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitBody">
             <English>Body</English>
@@ -232,12 +254,15 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
+            <Russian>Левый горизонтальный стабилизатор</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
+            <Russian>Правый горизонтальный стабилизатор</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
+            <Russian>Вертикальный стабилизатор</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -253,24 +278,31 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
+            <Russian>Трансмиссия</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
+            <Russian>Коробка передач</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
+            <Russian>Стартер</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
+            <Russian>Хвост</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitPilotTube">
             <English>Pilot Tube</English>
+            <Russian>Кокпит</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
+            <Russian>Статический иллюминатор</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
+            <Russian>Боеприпасы</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -298,6 +330,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
+            <Russian>Ракеты</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -459,6 +492,7 @@
             <English>Winch</English>
             <German>Seilwinde</German>
             <Polish>Wyciągarka</Polish>
+            <Russian>Лебедка</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitRGlass">
             <English>Glass (right)</English>
@@ -499,162 +533,202 @@
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
             <Polish>Ustawienia naprawy</Polish>
+            <Russian>Ремонт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
             <Polish>Dostarcza rozbudowany system naprawy dla wszystkich typów pojazdów.</Polish>
+            <Russian>Предоставляет систему ремонта для всех типов транспортных средств.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
             <Polish>Ktokolwiek</Polish>
+            <Russian>Кто угодно</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
             <Polish>Tylko mechanicy</Polish>
+            <Russian>Только инженеры</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
             <English>Repair Specialist only</English>
             <Polish>Tylko inżynierowie</Polish>
+            <Russian>Только ремонтные специалисты</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
             <Polish>Wymiana kół</Polish>
+            <Russian>Разрешить замену колес</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
             <Polish>Kto może zdejmować i zmieniać koła?</Polish>
+            <Russian>Кто может снимать и заменять колеса?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Repair_name">
             <English>Allow Repair</English>
             <Polish>Możliwość naprawy</Polish>
+            <Russian>Разрешить ремонт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
             <English>Who can perform repair actions?</English>
             <Polish>Kto może wykonywać czynności związane z naprawą pojazdów?</Polish>
+            <Russian>Кто может выполнять ремонт?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
             <Polish>Próg naprawy</Polish>
+            <Russian>Лимит ремкомплекта</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>What is the maximum damage that can be repaired with a toolkit?</English>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przy pomocy narzędzi?</Polish>
+            <Russian>Какой максимальный урон можно починить с помощью ремкомплекта?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
             <Polish>Próg naprawy (mechanik)</Polish>
+            <Russian>Лимит инженера</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>What is the maximum damage that can be repaired by an engineer?</English>
             <Polish>Jaki jest maksymalny poziom uszkodzeń jaki może zostać naprawiony przez mechanika?</Polish>
+            <Russian>Какой максимальный урон может починить инженер?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
             <English>Remove toolkit on use</English>
             <Polish>Usuń narzędzia po użyciu</Polish>
+            <Russian>Удалять ремкомплект после использования</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
             <English>Should the toolkit be removed on usage?</English>
             <Polish>Czy zestaw naprawczy powinien zostać usunięty po jego użyciu?</Polish>
+            <Russian>Следует ли удалять ремкомплект после использования?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
             <Polish>Wszędzie</Polish>
+            <Russian>Где угодно</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairVehicleOnly">
             <English>Repair Vehicle only</English>
             <Polish>Przy pojazdach naprawczych</Polish>
+            <Russian>Только у ремонтного транспорта</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_repairFacilityOnly">
             <English>Repair Facility only</English>
             <Polish>Przy budynkach naprawczych</Polish>
+            <Russian>Только у ремонтных сооружений</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_vehicleAndFacility">
             <English>Repair Facility or Vehicle</English>
             <Polish>Przy budynkach i pojazdach naprawczych</Polish>
+            <Russian>Только у ремонтного транспорта или ремонтных сооружений</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_DisplayName">
             <English>Assign Engineer</English>
             <Polish>Przydziel inżyniera</Polish>
+            <Russian>Назначить инженером</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
+            <Russian>Список</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
             <Polish>Lista nazw jednostek, które są sklasyfikowane jako inżynierowie, oddzielone przecinkami.</Polish>
+            <Russian>Список имен юнитов, которые будут классифицированы как инженеры, разделенный запятыми.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_DisplayName">
             <English>Is Engineer</English>
             <Polish>Poziom wyszkolenia</Polish>
+            <Russian>Это инженер</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_Description">
             <English>Select the engineering skill level of the unit</English>
             <Polish>Wybierz biegłość w dziedzinie naprawy danej jednostki</Polish>
+            <Russian>Укажите уровень инженерного мастерства для юнита</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_none">
             <English>None</English>
             <Polish>Żadny</Polish>
+            <Russian>Нет</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
             <English>Engineer</English>
             <Polish>Mechanik</Polish>
+            <Russian>Инженер</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
             <English>Specialist</English>
             <Polish>Inżynier</Polish>
+            <Russian>Специалист</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
             <Polish>Przydziel klasę inżyniera do jednej lub kilku jednostek </Polish>
+            <Russian>Назначить одного или нескольких юнитов инженерами</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
             <English>Assign Repair Vehicle</English>
             <Polish>Przydziel pojazd naprawczy</Polish>
+            <Russian>Назначить ремонтный транспорт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
+            <Russian>Список</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy naprawcze, oddzielone przecinkami.</Polish>
+            <Russian>Список транспортных средств, которые будут классифицированы как ремонтные, разделенный запятыми.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
             <Polish>Jest poj. naprawczym</Polish>
+            <Russian>Это ремонтный транспорт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
             <English>Is the vehicle classified as a repair vehicle?</English>
             <Polish>Czy pojazd jest zklasyfikowany jako pojazd naprawczy?</Polish>
+            <Russian>Классифицируется ли этот транспорт как ремонтный?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
             <English>Assign one or multiple vehicles as a repair vehicle</English>
             <Polish>Przydziel klasę pojazdu naprawczego do jednego lub kilku pojazdów.</Polish>
+            <Russian>Назначить одно или несколько транспортных средств ремонтными</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
             <Polish>Przydziel budynek naprawczy</Polish>
+            <Russian>Назначить ремонтное сооружение</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
+            <Russian>Список</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
             <Polish>Lista nazw budynków, które są sklasyfikowane jako budynki naprawcze, oddzielone przecinkami.</Polish>
+            <Russian>Список объектов, которые будут классифицированы как ремонтные, разделенный запятыми.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
             <Polish>Jest bud. naprawczym</Polish>
+            <Russian>Это ремонтное сооружение</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
             <English>Is the object classified as a repair Facility?</English>
             <Polish>Czy budynek jest zklasyfikowany jako budynek naprawczy?</Polish>
+            <Russian>Классифицируется ли этот объект как ремонтное сооружение?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
             <Polish>Przydziel klasę budynku naprawczego do jednego lub kilku budynków.</Polish>
+            <Russian>Назначить один или несколько объектов ремонтными сооружениями</Russian>
         </Key>
     </Package>
 </Project>

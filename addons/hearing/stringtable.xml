@@ -101,7 +101,7 @@
             <English>Disable ear ringing</English>
             <French>Désactiver le bourdonnement</French>
             <Spanish>Desactivar zumbido de oídos</Spanish>
-            <Russian>Отключить эффект баротравмы</Russian>
+            <Russian>Отключить звон в ушах</Russian>
             <German>Knalltrauma deaktivieren</German>
             <Czech>Vypnout pískání v uších</Czech>
             <Polish>Wyłącz dzwonienie w uszach</Polish>
@@ -117,6 +117,7 @@
             <Czech>Sluch</Czech>
             <Portuguese>Audição</Portuguese>
             <Hungarian>Hallás</Hungarian>
+            <Russian>Слух</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
             <English>Combat Deafness</English>
@@ -126,6 +127,7 @@
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
+            <Russian>Оглушение</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -135,6 +137,7 @@
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
+            <Russian>Уменьшает способность игроков слышать при повреждении слуха</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
@@ -142,12 +145,15 @@
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
+            <Russian>Контролирует оглушение в бою и звон в ушах. При активации играки могут быть оглушены близкими выстрелами и взрывами при отсутствии защиты для ушей.</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
+            <Russian>Влияет на юнита Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
+            <Russian>Позволить юнитам, контролируемым Зевсом, получать повреждение слуха.</Russian>
         </Key>
     </Package>
 </Project>

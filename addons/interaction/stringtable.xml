@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -776,6 +776,7 @@
             <Spanish>Abrir</Spanish>
             <Hungarian>Nyitás</Hungarian>
             <Portuguese>Abrir</Portuguese>
+            <Russian>Открыть</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -783,7 +784,7 @@
             <Spanish>Sistema de interacción</Spanish>
             <German>Interaktionssystem</German>
             <Czech>Systém interakce</Czech>
-            <Russian>Sistema de interação</Russian>
+            <Russian>Взаимодействие</Russian>
             <Hungarian>Interakciós rendszer</Hungarian>
             <Portuguese>Sistema de interação</Portuguese>
         </Key>
@@ -793,7 +794,7 @@
             <Spanish>Habilitar gestión de equipos</Spanish>
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
-            <Russian>Habilitar gestão de equipes</Russian>
+            <Russian>Управление группами</Russian>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
         </Key>
@@ -803,7 +804,7 @@
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
-            <Russian>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Russian>
+            <Russian>Разрешить ли игрокам использовать меню управления группами? По-умолчани: Да</Russian>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
         </Key>
@@ -815,6 +816,7 @@
             <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
+            <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
         </Key>
     </Package>
 </Project>

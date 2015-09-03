@@ -9,6 +9,7 @@
             <German>Zeus-Einstellungen</German>
             <Portuguese>Ajustes do Zeus</Portuguese>
             <Hungarian>Zeus beállítások</Hungarian>
+            <Russian>Настройки Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
@@ -18,6 +19,7 @@
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
+            <Russian>Обеспечивает контроль над различными аспектами работы Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -27,6 +29,7 @@
             <German>Aufstiegsnachrichten</German>
             <Portuguese>Mensagens de ascensão</Portuguese>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
+            <Russian>Сообщения о вознесении</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
@@ -36,6 +39,7 @@
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
+            <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -45,6 +49,7 @@
             <German>Zeus-Adler</German>
             <Portuguese>Águia do Zeus</Portuguese>
             <Hungarian>Zeus sas</Hungarian>
+            <Russian>Орел Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_Description">
             <English>Spawn an eagle that follows the Zeus camera.</English>
@@ -54,6 +59,7 @@
             <German>Erstelle einen Adler, der der Zeus-Kamera folgt.</German>
             <Portuguese>Cria uma águia que segue a câmera do Zeus</Portuguese>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
+            <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
@@ -63,6 +69,7 @@
             <German>Windgeräusche</German>
             <Portuguese>Sons de vento</Portuguese>
             <Hungarian>Szélhangok</Hungarian>
+            <Russian>Звук ветра</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_Description">
             <English>Play wind sounds when Zeus remote controls a unit.</English>
@@ -72,6 +79,7 @@
             <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
             <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
+            <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
             <English>Ordnance Warning</English>
@@ -81,6 +89,7 @@
             <German>Artilleriewarnung</German>
             <Portuguese>Aviso de explosivos</Portuguese>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
+            <Russian>Предупреждение об арте</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
             <English>Play a radio warning when Zeus uses ordnance.</English>
@@ -90,6 +99,7 @@
             <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
             <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
+            <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
             <English>Reveal Mines</English>
@@ -99,6 +109,7 @@
             <German>Enthülle Minen</German>
             <Portuguese>Revelar minas</Portuguese>
             <Hungarian>Aknák feltárása</Hungarian>
+            <Russian>Показывать мины</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
@@ -108,6 +119,7 @@
             <German>Enthülle Minen gegenüber Verbündeten und platziere Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
+            <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
@@ -117,6 +129,7 @@
             <German>An Verbündete weitergeben</German>
             <Portuguese>Revelar para aliados</Portuguese>
             <Hungarian>Feltárás a szövetségeseknek</Hungarian>
+            <Russian>Показывать союзникам</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
             <English>Allies + Map Markers</English>
@@ -126,6 +139,7 @@
             <German>Verbündete + Kartenmarkierungen</German>
             <Portuguese>Aliados + Marcadores no mapa</Portuguese>
             <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
+            <Russian>Союзники + Маркеры на карте</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
@@ -135,6 +149,7 @@
             <German>Gefangennahme umschalten</German>
             <Portuguese>Alternar prisioneiro</Portuguese>
             <Hungarian>Elfogott állapot váltása</Hungarian>
+            <Russian>Пленный (вкл./выкл.)</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -144,6 +159,7 @@
             <German>Aufgabe umschalten</German>
             <Portuguese>Alternar rendição</Portuguese>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
+            <Russian>Сдавшийся (вкл./выкл.)</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -153,18 +169,22 @@
             <German>Bewusstlosigkeit umschalten</German>
             <Portuguese>Alternar inconsciência</Portuguese>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
+            <Russian>Без сознания (вкл./выкл.)</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
             <Polish>Przydziel medyka</Polish>
+            <Russian>Назначить медиком</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
             <Polish>Przydziel pojazd medyczny</Polish>
+            <Russian>Назначить медицинским транспортом</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
             <Polish>Przydziel budynek medyczny</Polish>
+            <Russian>Назанчить медицинским сооружением</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -193,10 +213,12 @@
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
             <Polish>Jednostka musi być budynkiem</Polish>
+            <Russian>Юнит должен быть строением</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
             <Polish>Jednostka musi być pojazdem</Polish>
+            <Russian>Юнит должен быть транспортом</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -206,6 +228,7 @@
             <German>Einheit darf nicht gefangen sein</German>
             <Portuguese>Unidade não pode ser prisioneira</Portuguese>
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
+            <Russian>Юнит не должен быть пленным</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -227,14 +250,17 @@
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
+            <Russian>Требуется аддон, который отсутствует</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
             <Polish>Dodaj obiekt do kuratora</Polish>
+            <Russian>Добавить объекты куратору</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
             <Polish>Dodaje każdy zespawnowany obiekt do wszystkich kuratorów podczas misji</Polish>
+            <Russian>Добавляет любой отспавненный объект всем кураторам в миссии</Russian>
         </Key>
     </Package>
 </Project>
