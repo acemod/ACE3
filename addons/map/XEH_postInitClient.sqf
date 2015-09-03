@@ -107,6 +107,5 @@ GVAR(hasWatch) = true;
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };
-
     GVAR(hasWatch) = "ItemWatch" in (_this select 1 select 17);
-}] call ace_common_fnc_addEventhandler
+}] call EFUNC(common,addEventHandler)
