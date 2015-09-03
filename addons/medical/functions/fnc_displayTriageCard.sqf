@@ -4,18 +4,18 @@
  *
  * Arguments:
  * 0: The unit <OBJECT>
- * 1: Show <BOOL> (default: true)
  *
  * Return Value:
- * None
+ * nil
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_amount", "_item", "_log", "_message", "_triageCardTexts", "_triageStatus"];
-params ["_target", ["_show", true]];
+private ["_target", "_show", "_amount", "_item", "_log", "_message", "_triageCardTexts", "_triageStatus"];
+_target = _this select 0;
+_show = if (count _this > 1) then {_this select 1} else {true};
 
 GVAR(TriageCardTarget) = if (_show) then {_target} else {ObjNull};
 
@@ -25,16 +25,15 @@ if (_show) then {
 
     [{
         private ["_target", "_display", "_alphaLevel", "_alphaLevel", "_lbCtrl"];
-        params ["_args", "_idPFH"];
-        _args params ["_target"];
+        _target = (_this select 0) select 0;
         if (GVAR(TriageCardTarget) != _target) exitwith {
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(triageCard);
         if (isnil "_display") exitwith {
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
         _triageCardTexts = [];
@@ -45,7 +44,8 @@ if (_show) then {
 
         _log = _target getvariable [QGVAR(triageCard), []];
         {
-            _x params ["_item", "_amount"];
+            _item = _x select 0;
+            _amount = _x select 1;
             _message = _item;
             if (isClass(configFile >> "CfgWeapons" >> _item)) then {
                 _message = getText(configFile >> "CfgWeapons" >> _item >> "DisplayName");
@@ -55,21 +55,18 @@ if (_show) then {
                 };
             };
             _triageCardTexts pushback format["%1x - %2", _amount, _message];
-        } foreach _log;
+        }foreach _log;
 
         if (count _triageCardTexts == 0) then {
             _lbCtrl lbAdd (localize LSTRING(TriageCard_NoEntry));
         };
         {
             _lbCtrl lbAdd _x;
-        } foreach _triageCardTexts;
+        }foreach _triageCardTexts;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
-
-        _triageStatus params ["_text", "_color"];
-
-        (_display displayCtrl 2000) ctrlSetText _text;
-        (_display displayCtrl 2000) ctrlSetBackgroundColor _color;
+        (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);
+        (_display displayCtrl 2000) ctrlSetBackgroundColor (_triageStatus select 2);
 
     }, 0, [_target]] call CBA_fnc_addPerFrameHandler;
 

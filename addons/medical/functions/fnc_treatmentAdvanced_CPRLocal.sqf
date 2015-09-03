@@ -14,8 +14,9 @@
 
 #include "script_component.hpp"
 
-private "_reviveStartTime";
-param ["_caller","_target"];
+private ["_caller","_target", "_reviveStartTime"];
+_caller = _this select 0;
+_target = _this select 1;
 
 if (_target getvariable [QGVAR(inReviveState), false]) then {
     _reviveStartTime = _target getvariable [QGVAR(reviveStartTime),0];

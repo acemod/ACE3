@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 
 private ["_unit","_return"];
-params ["_unit"];
+_unit = _this select 0;
 
 if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
@@ -25,6 +25,6 @@ _return = false;
     if (typeName _x == typeName {} && {([_unit] call _x)}) exitwith {
        _return = true;
     };
-} foreach GVAR(unconsciousConditions);
+}foreach GVAR(unconsciousConditions);
 
-_return
+_return;

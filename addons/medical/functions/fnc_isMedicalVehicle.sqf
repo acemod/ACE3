@@ -12,6 +12,7 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle"];
+private ["_vehicle"];
+_vehicle = _this select 0;
 
 (_vehicle getVariable [QGVAR(medicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "attendant")]) > 0

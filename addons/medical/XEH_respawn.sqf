@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-params ["_unit"];
+private ["_unit"];
+
+_unit = _this select 0;
 
 // reset all variables. @todo GROUP respawn?
 [_unit] call FUNC(init);

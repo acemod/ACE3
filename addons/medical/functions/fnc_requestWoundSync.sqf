@@ -7,14 +7,16 @@
  * 1: object belonging to the caller <OBJECT>
  *
  * ReturnValue:
- * None
+ * <NIL>
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-params [ "_target", "_caller"];
+private [ "_target", "_caller"];
+_target = _this select 0;
+_caller = _this select 1;
 
 if (local _target || GVAR(level) < 2) exitwith {}; // if the target is local, we already got the most update to date information
 if (_target getvariable [QGVAR(isWoundSynced), false]) exitwith {};

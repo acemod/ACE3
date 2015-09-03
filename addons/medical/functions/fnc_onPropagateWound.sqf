@@ -7,7 +7,7 @@
  * 1: injury <ARRAY>
  *
  * Return Value:
- * None
+ * None <NIL>
  *
  * Public: No
  */
@@ -15,7 +15,8 @@
 #include "script_component.hpp"
 
 private ["_unit", "_injury", "_openWounds", "_injuryID", "_exists"];
-params ["_unit", "_injury"];
+_unit = _this select 0;
+_injury = _this select 1;
 
 if (!local _unit) then {
     _openWounds = _unit getvariable[QGVAR(openWounds), []];
@@ -27,7 +28,7 @@ if (!local _unit) then {
             _exists = true;
             _openWounds set [_foreachIndex, _injury];
         };
-    } foreach _openWounds;
+    }foreach _openWounds;
 
     if (!_exists) then {
         _openWounds pushback _injury;

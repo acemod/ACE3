@@ -8,15 +8,15 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None
+ * None <NIL>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_setting", "_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
-params [["_logic", objNull, [objNull]]];
+private ["_logic","_setting","_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
+_logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 
 if (!isNull _logic) then {
     _list = _logic getvariable ["EnableList",""];
@@ -32,7 +32,7 @@ if (!isNull _logic) then {
                 _nilCheckPassedList = _nilCheckPassedList + ","+ _x;
             };
         };
-    } foreach _splittedList;
+    }foreach _splittedList;
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
@@ -47,7 +47,7 @@ if (!isNull _logic) then {
                     };
                 };
             };
-        } foreach _objects;
+        }foreach _objects;
     };
     {
         if (!isnil "_x") then {
@@ -57,5 +57,7 @@ if (!isNull _logic) then {
                 };
             };
         };
-    } foreach _parsedList;
+    }foreach _parsedList;
  };
+
+true
