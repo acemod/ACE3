@@ -44,7 +44,7 @@ if (_bloodVolume < 100) then {
         };
     }
 } else {
-    TRACE_4("ACE_DEBUG",_bloodVolume,QGVAR(hasLostBlood),_syncValues,_unit);
+    TRACE_4("ACE_DEBUG",_bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
     if (_unit getvariable [QGVAR(hasLostBlood), 0] != 0) then {
         _unit setvariable [QGVAR(hasLostBlood), 0, true];
     };
