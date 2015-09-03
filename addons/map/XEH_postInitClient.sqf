@@ -108,4 +108,4 @@ GVAR(hasWatch) = true;
         GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = "ItemWatch" in (_this select 1 select 17);
-}] call EFUNC(common,addEventHandler)
+}] call EFUNC(common,addEventHandler);
