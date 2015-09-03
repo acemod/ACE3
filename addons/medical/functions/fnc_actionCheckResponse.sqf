@@ -7,17 +7,23 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * None
+ * NONE
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_output"];
-params ["_caller", "_target"];
+private ["_caller","_target", "_output"];
+_caller = _this select 0;
+_target = _this select 1;
 
-_output = [LSTRING(Check_Response_Unresponsive), LSTRING(Check_Response_Responsive)] select ([_target] call EFUNC(common,isAwake));
+_output = "";
+if ([_target] call EFUNC(common,isAwake)) then {
+    _output = LSTRING(Check_Response_Responsive);
+} else {
+    _output = LSTRING(Check_Response_Unresponsive);
+};
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);
 

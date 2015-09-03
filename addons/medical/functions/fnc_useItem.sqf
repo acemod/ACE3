@@ -8,16 +8,17 @@
  * 2: Item <STRING>
  *
  * ReturnValue:
- * 0: success <BOOL>
- * 1: Unit <OBJECT>
+ * <NIL>
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_return","_crew"];
-params ["_medic", "_patient", "_item"];
+private ["_medic", "_patient", "_item", "_return","_crew"];
+_medic = _this select 0;
+_patient = _this select 1;
+_item = _this select 2;
 
 if (isnil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
@@ -41,7 +42,7 @@ if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) 
             _return = [true, _x];
             [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
         };
-    } foreach _crew;
+    }foreach _crew;
 };
 
-_return
+_return;

@@ -7,15 +7,16 @@
 * 1: The patient <OBJECT>
 *
 * Return Value:
-* None
+* NONE
 *
 * Public: No
 */
 
 #include "script_component.hpp"
 
-private "_genericMessages";
-params ["_caller", "_target"];
+private ["_caller", "_target", "_genericMessages"];
+_caller = _this select 0;
+_target = _this select 1;
 
 _genericMessages = [LSTRING(diagnoseMessage)];
 

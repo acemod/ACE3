@@ -15,7 +15,9 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_local"];
+private["_unit", "_local"];
+_unit = _this select 0;
+_local = _this  select 1;
 if (_local) then {
     if (_unit getvariable[QGVAR(addedToUnitLoop),false]) then {
         [_unit, true] call FUNC(addToInjuredCollection);

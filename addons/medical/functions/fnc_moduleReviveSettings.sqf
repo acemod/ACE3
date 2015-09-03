@@ -8,14 +8,17 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None
+ * None <NIL>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+private ["_logic", "_units", "_activated"];
+_logic = _this select 0;
+_units = _this select 1;
+_activated = _this select 2;
 
 if !(_activated) exitWith {};
 

@@ -15,9 +15,8 @@
 
 #define HEART_RATE_MODIFIER 0.02
 
-private ["_heartRate", "_hrIncrease", "_bloodLoss", "_time", "_values", "_adjustment", "_change", "_callBack", "_bloodVolume"];
-params ["_unit"];
-
+private ["_unit", "_heartRate", "_hrIncrease", "_bloodLoss", "_time", "_values", "_adjustment", "_change", "_callBack", "_bloodVolume"];
+_unit = _this select 0;
 _hrIncrease = 0;
 if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
     _heartRate = _unit getvariable [QGVAR(heartRate), 80];
@@ -25,8 +24,10 @@ if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
 
     _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
     {
-        _x params ["_values", "_time", "_callBack"];
+        _values = (_x select 0);
         if (abs _values > 0) then {
+            _time = (_x select 1);
+            _callBack = _x select 2;
             if (_time <= 0) then {
                 _time = 1;
             };
@@ -46,7 +47,7 @@ if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
             [_unit] call _callBack;
         };
 
-    } foreach _adjustment;
+    }foreach _adjustment;
     _adjustment = _adjustment - [ObjNull];
     _unit setvariable [QGVAR(heartRateAdjustments), _adjustment];
 

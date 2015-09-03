@@ -1,22 +1,9 @@
-/*
- * Author: Glowbal
- * handle Litter Create
- *
- * Arguments:
- * 0: Litter Class <STRING>
- * 1: Position <ARRAY>
- * 2: Unit <OBJECT>
- *
- * Return Value:
- * None
- *
- * Public: No
- */
+//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 if(!hasInterface) exitWith { false };
 
-params ["_litterClass", "_position", "_unit"];
+PARAMS_3(_litterClass,_position,_direction);
 private["_litterObject", "_maxLitterCount"];
 //IGNORE_PRIVATE_WARNING(_values);
 
@@ -29,9 +16,9 @@ _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
 _litterObject setPosATL _position;
 // Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
-[{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
-
-_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
+[{ (_this select 0) setPosATL (_this select 1); }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
+    
+_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail); 
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     // gank the first litter object, and spawn ours.
     private["_oldLitter"];
@@ -47,11 +34,10 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
     GVAR(litterPFHRunning) = true;
     [{
         {
-            _x params ["_time", "_objects"];
-            if (ACE_time - _time >= GVAR(litterCleanUpDelay)) then {
+            if (ACE_time - (_x select 0) >= GVAR(litterCleanUpDelay)) then {
                 {
                     deleteVehicle _x;
-                } forEach _objects;
+                } forEach (_x select 1);
                 GVAR(allCreatedLitter) set[_foreachIndex, objNull];
             };
         } forEach GVAR(allCreatedLitter);
@@ -60,6 +46,8 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
         if ( (count GVAR(allCreatedLitter)) == 0) exitwith {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             GVAR(litterPFHRunning) = false;
-        };
+        }; 
     }, 30, []] call CBA_fnc_addPerFrameHandler;
 };
+
+true

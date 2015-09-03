@@ -8,15 +8,16 @@
  *
  *
  * Return Value:
- * None
+ * nil
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
-params ["_target", "_treatmentClassname"];
+private ["_target", "_treatmentClassname", "_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
+_target = _this select 0;
+_treatmentClassname = _this select 1;
 
 _bloodVolume = _target getvariable [QGVAR(bloodVolume), 100];
 if (_bloodVolume >= 100) exitwith {};

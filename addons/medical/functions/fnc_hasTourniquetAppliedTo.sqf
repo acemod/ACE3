@@ -14,6 +14,8 @@
 
 #include "script_component.hpp"
 
-params ["_target", "_selectionName"];
+private ["_target", "_selectionName"];
+_target = _this select 0;
+_selectionName = _this select 1;
 
 (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select ([_selectionName] call FUNC(selectionNameToNumber))) > 0);

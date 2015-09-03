@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
-params ["_unit"];
+private ["_unit"];
+_unit = _this select 0;
 
 _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}];
 

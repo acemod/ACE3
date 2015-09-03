@@ -9,15 +9,18 @@
  * 3: callback <CODE>
  *
  * Return Value:
- * None
+ * nil
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-
-params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_time", 1, [0]], ["_callBack", {}, [{}]]];
+private ["_unit", "_value", "_time", "_adjustment", "_callBack"];
+_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_Param;
+_value = [_this, 1, 0, [0]] call BIS_fnc_Param;
+_time = [_this, 2, 1, [0]] call BIS_fnc_Param;
+_callBack = [_this, 3, {}, [{}]] call BIS_fnc_Param;
 
 _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushback [_value, _time, _callBack];

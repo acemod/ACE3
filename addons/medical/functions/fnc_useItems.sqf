@@ -8,7 +8,7 @@
  * 2: Items <ARRAY<STRING>>
  *
  * ReturnValue:
- * None
+ * <NIL>
  *
  * Public: Yes
  */
@@ -16,7 +16,9 @@
 #include "script_component.hpp"
 
 private ["_medic", "_patient", "_items", "_itemUsedInfo", "_itemsUsedBy"];
-params ["_medic", "_patient", "_items"];
+_medic = _this select 0;
+_patient = _this select 1;
+_items = _this select 2;
 
 _itemsUsedBy = [];
 {
@@ -25,7 +27,7 @@ _itemsUsedBy = [];
         {
             _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
             if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
-        } foreach _x;
+        }foreach _x;
     };
 
     // handle required item
@@ -33,6 +35,6 @@ _itemsUsedBy = [];
         _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
         if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
     };
-} foreach _items;
+}foreach _items;
 
 [count _items == count _itemsUsedBy, _itemsUsedBy];

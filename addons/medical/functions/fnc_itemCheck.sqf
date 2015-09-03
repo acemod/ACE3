@@ -6,14 +6,15 @@
  * 0: The unit <OBJECT>
  *
  * ReturnValue:
- * None
+ * nil
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-params ["_unit"];
+private ["_unit"];
+_unit = _this select 0;
 
 while {({_x == "FirstAidKit"} count items _unit) > 0} do {
     _unit removeItem "FirstAidKit";

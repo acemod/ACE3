@@ -22,6 +22,7 @@
 // to limit the amount of complex calculations necessary, we take a set modifier to calculate Stroke Volume.
 #define MODIFIER_CARDIAC_OUTPUT     19.04761
 
-params ["_unit"];
+private "_unit";
+_unit = _this select 0;
 
 ((_unit getvariable [QGVAR(bloodVolume), 100])/MODIFIER_CARDIAC_OUTPUT) + ((_unit getvariable [QGVAR(heartRate), 80])/80-1);

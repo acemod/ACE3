@@ -3,18 +3,18 @@
  * Display triage card for a unit
  *
  * Arguments:
- * 0: Show <BOOL>
+ * 0: The unit <OBJECT>
  *
  * Return Value:
- * None
+ * nil
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_ctrl", "_display", "_idc", "_pos"];
-params ["_show"];
+private ["_show", "_ctrl", "_display", "_idc", "_pos"];
+_show = _this select 0;
 disableSerialization;
 
 _display = uiNamespace getvariable QGVAR(triageCard);

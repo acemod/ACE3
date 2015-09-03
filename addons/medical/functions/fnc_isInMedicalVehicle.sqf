@@ -13,8 +13,9 @@
 
 #include "script_component.hpp"
 
-private ["_vehicle"];
-params ["_unit"];
+private ["_unit", "_vehicle"];
+
+_unit = _this select 0;
 _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {false};
