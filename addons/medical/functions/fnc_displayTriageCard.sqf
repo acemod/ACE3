@@ -66,7 +66,7 @@ if (_show) then {
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
 
-        _triageStatus params ["_text", "_color"];
+        _triageStatus params ["_text", "", "_color"];
 
         (_display displayCtrl 2000) ctrlSetText _text;
         (_display displayCtrl 2000) ctrlSetBackgroundColor _color;
