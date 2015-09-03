@@ -30,7 +30,7 @@ if (isNull _projectile) then {
     _projectile = nearestObject [_unit, _ammo];
 };
 
-// handle speial grenades
+// handle special grenades
 if (local _unit) then {
     if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flashbang)) == 1) then {
         private "_fuzeTime";
