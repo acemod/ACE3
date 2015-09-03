@@ -78,7 +78,8 @@ _viscosityAdjustment = _viscosityChange / _timeInSystem;
 
 [{
     params ["_args", "_idPFH"];
-    _args params ["_target", "_timeInSystem", "_variable", "_amountDecreased","_decreaseAmount", "_usedMeds", "_viscosityAdjustment", "_painReduce"];
+    _args params ["_target", "_timeInSystem", "_variable", "_amountDecreased","_decreaseAmount", "_viscosityAdjustment", "_painReduce"];
+    private "_usedMeds";
     _usedMeds = _target getvariable [_variable, 0];
     _usedMeds = _usedMeds - _decreaseAmount;
     _target setvariable [_variable, _usedMeds];

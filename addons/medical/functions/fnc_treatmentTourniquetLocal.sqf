@@ -13,8 +13,8 @@
  */
 #include "script_component.hpp"
 
-private ["_tourniquetItem", "_part", "_applyingTo"];
-params ["_target", "_tourniquets", "_selectionName"];
+private ["_tourniquets", "_part", "_applyingTo"];
+params ["_target", "_tourniquetItem", "_selectionName"];
 
 [_target] call FUNC(addToInjuredCollection);
 
