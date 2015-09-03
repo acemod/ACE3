@@ -157,6 +157,7 @@ call FUNC(checkFiles);
         _x params ["_func", "_params"];
         _params call _func;
     } forEach GVAR(runAtSettingsInitialized);
+    GVAR(runAtSettingsInitialized) = nil; //cleanup
     
 }, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
