@@ -152,10 +152,10 @@ call FUNC(checkFiles);
 
     //Set init finished and run all delayed functions:
     GVAR(settingsInitFinished) = true;
-    diag_log text format ["%1 delayed functions", (count GVAR(runAtSettingsInitialized))];
+    diag_log text format ["[ACE] %1 delayed functions running", (count GVAR(runAtSettingsInitialized))];
     {
-        _x params ["_args", "_code"];
-        _args call _code;
+        _x params ["_func", "_params"];
+        _params call _func;
     } forEach GVAR(runAtSettingsInitialized);
     
 }, 0, [false]] call CBA_fnc_addPerFrameHandler;

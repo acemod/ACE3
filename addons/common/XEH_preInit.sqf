@@ -157,6 +157,7 @@ PREP(requestCallback);
 PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(revertKeyCodeLocalized);
+PREP(runAfterSettingsInit);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);
