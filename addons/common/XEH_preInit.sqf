@@ -303,6 +303,9 @@ GVAR(nextFrameNo) = diag_frameno;
 GVAR(nextFrameBufferA) = [];
 GVAR(nextFrameBufferB) = [];
 
+GVAR(settingsInitFinished) = false;
+GVAR(runAtSettingsInitialized) = [];
+
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
