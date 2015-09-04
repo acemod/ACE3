@@ -74,7 +74,7 @@ if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
 };
 
 if (GVAR(level) == 1) then {
-    TRACE_5("ACE_DEBUG_BASIC",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+    TRACE_5("ACE_DEBUG_BASIC_VITALS",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
     // reduce pain
     if (_painStatus > 0) then {
         _unit setVariable [QGVAR(pain), (_painStatus - 0.001 * _interval) max 0, _syncValues];
