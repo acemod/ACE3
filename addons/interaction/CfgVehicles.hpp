@@ -191,7 +191,7 @@ class CfgVehicles {
             class ACE_TeamManagement {
                 displayName = CSTRING(TeamManagement);
                 condition = QUOTE(GVAR(EnableTeamManagement));
-                exceptions[] = {"isNotInside", "isNotSitting"};
+                exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                 statement = "";
                 showDisabled = 1;
                 priority = 3.2;
@@ -201,7 +201,7 @@ class CfgVehicles {
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.4;
@@ -211,7 +211,7 @@ class CfgVehicles {
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.3;
@@ -221,7 +221,7 @@ class CfgVehicles {
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.2;
@@ -231,7 +231,7 @@ class CfgVehicles {
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.1;
@@ -242,7 +242,7 @@ class CfgVehicles {
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.5;
@@ -252,7 +252,7 @@ class CfgVehicles {
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
                     condition = QUOTE(_this call DFUNC(canBecomeLeader));
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE(_this call DFUNC(doBecomeLeader));
                     showDisabled = 1;
                     priority = 1.0;
@@ -262,7 +262,7 @@ class CfgVehicles {
                 class ACE_LeaveGroup {
                     displayName = CSTRING(LeaveGroup);
                     condition = QUOTE(count (units group _player) > 1);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
                     statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
                     priority = 1.2;
@@ -379,7 +379,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
-                exceptions[] = {"isNotInside","notOnMap", "isNotSitting"};
+                exceptions[] = {"isNotInside", "notOnMap", "isNotSitting"};
                 statement = "";
                 showDisabled = 1;
                 priority = 4.5;
@@ -501,8 +501,8 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target < 1000 && {alive _target});
-                    statement = QUOTE([ARR_2(_target, [ARR_3(2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5)])] call DFUNC(push););
+                    condition = QUOTE(((getMass _target) <= 2600) && {alive _target} && {(vectorMagnitude (velocity _target)) < 3});
+                    statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
                 };

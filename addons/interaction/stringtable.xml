@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -414,7 +414,7 @@
             <Spanish>Te tocaron el hombro DERECHO</Spanish>
             <German>Dir wurde auf die rechte Schulter geklopft</German>
             <French>On te tape sur l'épaule droite</French>
-            <Polish>Zostałeś klepnięty w prawe ramię.</Polish>
+            <Polish>Zostałeś klepnięty w prawe ramię</Polish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
@@ -426,7 +426,7 @@
             <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
             <German>Dir wurde auf die linke Schulter geklopft</German>
             <French>On te tape sur l'épaule gauche</French>
-            <Polish>Zostałeś klepnięty w lewe ramię.</Polish>
+            <Polish>Zostałeś klepnięty w lewe ramię</Polish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
@@ -486,7 +486,7 @@
             <German>Gruppenverwaltung</German>
             <Spanish>Gestión de equipo</Spanish>
             <French>Gestion d'équipe</French>
-            <Polish>Drużyna</Polish>
+            <Polish>Zarządzanie oddziałem</Polish>
             <Czech>Správa týmu</Czech>
             <Russian>Управление группой</Russian>
             <Portuguese>Gerenciamento de Equipe</Portuguese>
@@ -774,6 +774,8 @@
             <Polish>Otwórz</Polish>
             <Czech>Otevřít</Czech>
             <Spanish>Abrir</Spanish>
+            <Hungarian>Nyitás</Hungarian>
+            <Portuguese>Abrir</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -782,6 +784,8 @@
             <German>Interaktionssystem</German>
             <Czech>Systém interakce</Czech>
             <Russian>Sistema de interação</Russian>
+            <Hungarian>Interakciós rendszer</Hungarian>
+            <Portuguese>Sistema de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -790,6 +794,8 @@
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
             <Russian>Habilitar gestão de equipes</Russian>
+            <Hungarian>Csapatkezelés engedélyezése</Hungarian>
+            <Portuguese>Habilitar gestão de equipes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -798,14 +804,17 @@
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
             <Russian>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Russian>
+            <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
+            <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
-            <Russian>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Russian>
             <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
+            <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
+            <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
         </Key>
     </Package>
 </Project>

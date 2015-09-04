@@ -17,8 +17,19 @@
 
 params ["_player"];
 
+// remove scroll wheel action
+_player removeAction (_player getVariable [QGVAR(StandUpActionID), -1]);
+
 // Restore animation
-[_player, "", 2] call EFUNC(common,doAnimation);
+private "_animation";
+_animation = switch (currentWeapon _player) do {
+    case "": {"amovpercmstpsnonwnondnon"};
+    case (primaryWeapon _player): {"amovpercmstpslowwrfldnon"};
+    case (handgunWeapon _player): {"amovpercmstpslowwpstdnon"};
+    default {"amovpercmstpsnonwnondnon"};
+};
+
+[_player, _animation, 2] call EFUNC(common,doAnimation);
 
 // Set variables to nil
 _player setVariable [QGVAR(isSitting), nil];

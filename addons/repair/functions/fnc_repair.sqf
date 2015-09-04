@@ -164,14 +164,10 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_text", "_processText"];
+private ["_processText"];
+// Find localized string
 _processText = getText (_config >> "displayNameProgress");
-_text = format ["STR_ACE_Repair_%1", _hitPoint];
-if (isLocalized _text) then {
-    _text = format [_processText, localize _text];
-} else {
-    _text = _processText;
-};
+([_hitPoint, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
 
 // Start repair
 [
@@ -181,7 +177,7 @@ if (isLocalized _text) then {
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    []
+    ["isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon
