@@ -1,33 +1,26 @@
 /*
-  Name: ACE_Respawn_fnc_removeBody
-
-  Author(s):
-    bux578
-
-  Description:
-    removes a given body
-
-  Parameters:
-    0: OBJECT - body
-    1: BOOLEAN - forceRemove // not used atm
-
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Removes a given body.
+ *
+ * Arguments:
+ * 0: Body <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [corpse] call ace_respawn_fnc_removeBody
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_body", "_forceRemove", "_bodyRemoveTimer"];
+private "_bodyRemoveTimer";
 
-_body = _this select 0;
-_forceRemove = _this select 1;
-
-_bodyRemoveTimer = GVAR(BodyRemoveTimer) max 0;
+params ["_body", "_forceRemove"];
 
 // could be used for SpecOps missions.
-if (_forceRemove) then {
-  _bodyRemoveTimer = 2;
-};
+_bodyRemoveTimer = if (_forceRemove) then {2} else {GVAR(BodyRemoveTimer) max 0};
 
 [{
     // hideBody takes ~20s till body is fully underground

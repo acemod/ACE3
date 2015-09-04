@@ -1,25 +1,25 @@
 /*
  * Author: commy2
- * teleports a unit to a rallypoint
+ * Teleports a unit to a rallypoint
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: side? <OBJECT>
- * 2: teleport to base <BOOLEAN>
+ * 0: Unit <OBJECT>
+ * 1: Side <SIDE>
+ * 2: Rallypoint name <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * [,,] call ACE_Respawn_fnc_teleportToRallypoint;
+ * [ACE_player, side ACE_Player, rallypoint_name] call ace_respawn_fnc_teleportToRallypoint;
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_side,_rallypoint);
+params ["_unit", "_side", "_rallypoint"];
 
-private ["_toBase"];
+private "_toBase";
 
 // rallypoint names are defined in CfgVehicles.hpp
 

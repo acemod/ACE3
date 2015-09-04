@@ -1,33 +1,34 @@
 /*
-  Name: ACE_Respawn_fnc_canMoveRallypoint
-  
-  Author(s):
-    commy2
-  
-  Description:
-    checks if a unit can move a rally point
-  
-  Parameters:
-    0: OBJECT - unit
-    1: OBJECT - side
-  
-  Returns:
-    BOOLEAN
-*/
-
+ * Author: commy2
+ * Checks if a unit can move a rally point.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Side <SIDE>
+ *
+ * Return Value:
+ * Can move <BOOL>
+ *
+ * Example:
+ * [ACE_Player, side ACE_Player] call ace_respawn_fnc_canMoveRallypoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_side"];
+#define SIDES [west, east, independent]
+#define RALLYPOINTS ["ACE_Rallypoint_West", "ACE_Rallypoint_East", "ACE_Rallypoint_Independent"]
 
-_unit = _this select 0;
-_side = _this select 1;
+private "_index";
+
+params ["_unit", "_side"];
 
 // rallypoint names are defined in CfgVehicles.hpp
 
-_unit getVariable ["ACE_canMoveRallypoint", false]
-&& {!isNull ([
-    objNull,
-    missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-    missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
-    missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
-] select ([west, east, independent] find _side) + 1)}
+if (!(_unit getVariable ["ACE_canMoveRallypoint", false])) exitWith {false};
+
+_index = SIDES find _side;
+if (_index < 0) exitWith {false};
+if(isNull (missionNamespace getVariable [RALLYPOINT select _index, objNull])) exitWith {false};
+
+true

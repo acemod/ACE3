@@ -1,25 +1,22 @@
 /*
-  Name: ACE_Respawn_fnc_handleRespawn
-  
-  Author(s):
-    bux578
-  
-  Description:
-    Handles the XEH Respawn event
-  
-  Parameters:
-    0: OBJECT - Respawned Unit
-    1: ?
-  
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Handles the XEH Respawn event.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Corpse <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_Player, old_body_lying_on_floor] call ace_respawn_fnc_handleRespawn
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_respawnedUnit"];
-
-_respawnedUnit = _this select 0;
+params ["_respawnedUnit"];
 
 // Restores the gear when the player respawns
 if (GVAR(SavePreDeathGear)) then {

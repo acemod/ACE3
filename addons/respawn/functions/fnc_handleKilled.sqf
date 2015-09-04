@@ -1,23 +1,22 @@
 /*
-  Name: ACE_Respawn_fnc_handleKilled
-
-  Author(s):
-    bux578
-
-  Description:
-    Handles the XEH Killed event
-
-  Parameters:
-    0: OBJECT - Killed unit
-    1: OBJECT - Attacker
-
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Handles the XEH killed event.
+ *
+ * Arguments:
+ * 0: Killed Unit <OBJECT>
+ * 1: Attacker <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_player, bad_dude] call ace_respawn_fnc_handleKilled
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-PARAMS_1(_killedUnit);
+params ["_killedUnit"];
 
 // Saves the gear when the player! (and only him) is killed
 if (ACE_player == _killedUnit) then {
