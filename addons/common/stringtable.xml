@@ -691,32 +691,32 @@
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
             <Polish>ACE3 Wyposażenie</Polish>
-            <Russian>ACE3: Снаряжение</Russian>
+            <Russian>ACE3 Снаряжение</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
             <Polish>ACE3 Ogólne</Polish>
-            <Russian>ACE3: Общие</Russian>
+            <Russian>ACE3 Общие</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
             <Polish>ACE3 Broń</Polish>
-            <Russian>ACE3: Оружие</Russian>
+            <Russian>ACE3 Оружие</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
             <Polish>ACE3 Ruch</Polish>
-            <Russian>ACE3: Перемещение</Russian>
+            <Russian>ACE3 Перемещение</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
             <Polish>ACE3 Regulacja optyki</Polish>
-            <Russian>ACE3: Прицелы</Russian>
+            <Russian>ACE3 Прицелы</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
             <Polish>ACE3 Pojazdy</Polish>
-            <Russian>ACE3: Транспорт</Russian>
+            <Russian>ACE3 Транспорт</Russian>
         </Key>
     </Package>
 </Project>
