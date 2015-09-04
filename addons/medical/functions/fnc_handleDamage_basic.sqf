@@ -14,10 +14,13 @@
 
 private ["_damageBodyParts", "_cache_params", "_cache_damages"];
 params ["_target"];
+TRACE_1("ACE_DEBUG: HandleDamage_BASIC Called",_target);
 
 _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 _cache_params = _target getVariable [QGVAR(cachedHandleDamageParams), []];
 _cache_damages = _target getVariable QGVAR(cachedDamages);
+
+TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_cache_damages);
 
 {
     _x params ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage"];
@@ -44,6 +47,7 @@ _cache_damages = _target getVariable QGVAR(cachedDamages);
 
 // We broadcast the value across the net here, in order to avoid broadcasting it multiple times earlier in the above code block
 _target setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
+TRACE_2("ACE_DEBUG: HandleDamage BASIC Broadcast value here",_unit, _target getvariable QGVAR(bodyPartStatus));
 
 EXPLODE_6_PVT(_damageBodyParts,_headDamage,_torsoDamage,_handsDamageR,_handsDamageL,_legsDamageR,_legsDamageL);
 _target setHitPointDamage ["hitHead", _headDamage min 0.95];

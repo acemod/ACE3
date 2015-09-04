@@ -17,12 +17,11 @@
 #include "script_component.hpp"
 
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
+TRACE_5("ACE_DEBUG: HandleDamage Called",_unit, _selection, _damage, _shooter, _projectile);
 
 // bug, apparently can fire for remote units in special cases
 if !(local _unit) exitWith {
-    #ifdef DEBUG_ENABLED_MEDICAL
-        ACE_LOGDEBUG_3("HandleDamage on remote unit! - %1 - %2 - %3", diag_frameno, _unit, isServer);
-    #endif
+    TRACE_2("ACE_DEBUG: HandleDamage on remote unit!",_unit, isServer);
     nil
 };
 
@@ -34,9 +33,7 @@ private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_
     _this set [4, _projectile];
 };*/
 
-#ifdef DEBUG_ENABLED_MEDICAL
-    ACE_LOGDEBUG_3("HandleDamage - %1 - %2 - %3", diag_frameno, _selection, _damage);
-#endif
+TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage, _unit);
 
 // If damage is in dummy hitpoints, "hands" and "legs", don't change anything
 if (_selection == "hands") exitWith {_unit getHit "hands"};
@@ -52,9 +49,7 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     } else {
         _unit getHit _selection
     };
-    #ifdef DEBUG_ENABLED_MEDICAL
-        ACE_LOGDEBUG_3("HandleDamage damage disabled. - %1 - %2 - %3", diag_frameno, _unit, _selection);
-    #endif
+    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit, _unit);
 };
 
 //if (true) exitWith {nil};//
