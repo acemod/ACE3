@@ -16,6 +16,12 @@ private ["_damageBodyParts", "_cache_params", "_cache_damages"];
 params ["_target"];
 TRACE_1("ACE_DEBUG: HandleDamage_BASIC Called",_target);
 
+// bug, apparently can fire for remote units in special cases
+if !(local _unit) exitWith {
+    TRACE_2("HandleDamage BASIC on remote unit!",_unit, isServer);
+    nil
+};
+
 _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 _cache_params = _target getVariable [QGVAR(cachedHandleDamageParams), []];
 _cache_damages = _target getVariable QGVAR(cachedDamages);
