@@ -62,7 +62,7 @@ if (([_unit] call FUNC(getBloodLoss)) > 0) then {
 };
 
 _painStatus = _unit getvariable [QGVAR(pain), 0];
-TRACE_4("ACE_DEBUG",_painStatus,[_unit] call FUNC(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
+TRACE_4("ACE_DEBUG",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
 if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
     if !(_unit getvariable [QGVAR(hasPain), false]) then {
         _unit setvariable [QGVAR(hasPain), true, true];
@@ -74,7 +74,7 @@ if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
 };
 
 if (GVAR(level) == 1) then {
-    TRACE_5("ACE_DEBUG_BASIC",_painStatus,[_unit] call FUNC(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+    TRACE_5("ACE_DEBUG_BASIC",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
     // reduce pain
     if (_painStatus > 0) then {
         _unit setVariable [QGVAR(pain), (_painStatus - 0.001 * _interval) max 0, _syncValues];
@@ -97,7 +97,7 @@ if (GVAR(level) == 1) then {
 
 // handle advanced medical, with vitals
 if (GVAR(level) >= 2) then {
-    TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume, [_unit] call FUNC(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+    TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume, _unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
     if (_bloodVolume < 30) exitwith {
         [_unit] call FUNC(setDead);
     };
