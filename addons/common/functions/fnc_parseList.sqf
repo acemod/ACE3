@@ -39,20 +39,15 @@ _list = _whitespaceList;
 
 
 // Check for object existence
-_nilCheckedList = "";
+_nilCheckedList = [];
 if (_checkNil) then {
     {
         if !(isNil _x) then {
-            if (_nilCheckedList == "") then {
-                _nilCheckedList = _x;
-            } else {
-                _nilCheckedList = _nilCheckedList + "," + _x;
-            };
+            _nilCheckedList pushBack _x;
         };
     } count _list;
 
-    // Add Array characters and parse into array
-    _list = [] call compile format ["[%1]", _nilCheckedList];
+    _list = _nilCheckedList;
 };
 
 TRACE_4("Lists",_splittedList,_whitespaceList,_nilCheckedList,_list);
