@@ -3,8 +3,8 @@
 class GVAR(medicalMenu) {
     idd = 314412;
     movingEnable = true;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(medicalMenu)), _this select 0)]; [ARR_2(QUOTE(QGVAR(id)), true)] call EFUNC(common,blurScreen); [_this select 0] call FUNC(onMenuOpen););
-    onUnload = QUOTE([ARR_2(QUOTE(QGVAR(id)), false)] call EFUNC(common,blurScreen); [GVAR(MenuPFHID)] call CBA_fnc_removePerFrameHandler;);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(medicalMenu)), _this select 0)]; [_this select 0] call FUNC(onMenuOpen););
+    onUnload = QUOTE([GVAR(MenuPFHID)] call CBA_fnc_removePerFrameHandler;);
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase{
             idc = -1;
