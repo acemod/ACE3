@@ -40,7 +40,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
             };
         };
         _pain = _unit getVariable [QGVAR(pain), 0];
-        _pain = _pain + _newDamage * (1 - (_unit getVariable [QGVAR(morphine), 0]));
+        _pain = _pain + (_newDamage / 4) * (1 - (_unit getVariable [QGVAR(morphine), 0]));
         _unit setVariable [QGVAR(pain), _pain min 1, true];
     };
 }foreach _cache_params;
