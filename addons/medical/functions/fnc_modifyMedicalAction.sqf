@@ -21,7 +21,7 @@ params ["_target", "_player", "_selectionN", "_actionData"];
 
 if (GVAR(level) < 2) exitwith {
     private ["_pointDamage"];
-    _pointDamage = _target getHitPointDamage (["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"] select _selectionN);
+    _pointDamage = (_target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
 
     if (_pointDamage >= 0.8) exitWith {
         _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];

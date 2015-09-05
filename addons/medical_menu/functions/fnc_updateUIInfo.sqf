@@ -105,11 +105,12 @@ if (EGVAR(medical,level) >= 2) then {
     } forEach _bandagedwounds;
 } else {
     _damaged = [true, true, true, true, true, true];
-    {
-        _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-        if (_target getHitPointDamage _x > 0 && _forEachIndex == _selectionN) then {
-            _pointDamage = _target getHitPointDamage _x;
+    {
+        _selectionBloodLoss set [_forEachIndex, _x];
+
+        if (_x > 0 && _forEachIndex == _selectionN) then {
+            _pointDamage = _x;
             _severity = switch (true) do {
                 case (_pointDamage > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
                 case (_pointDamage > 0.1): {localize ELSTRING(medical,LightlyWounded)};
@@ -125,7 +126,7 @@ if (EGVAR(medical,level) >= 2) then {
             ] select _forEachIndex);
             _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
         };
-    } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+    } forEach (_target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]);
 };
 
 [_selectionBloodLoss, _display] call FUNC(updateBodyImage);
