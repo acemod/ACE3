@@ -42,7 +42,7 @@
             <English>Replacing Wheel ...</English>
             <German>Ersetze Reifen ...</German>
             <Polish>Wymienianie koła ...</Polish>
-            <Russian>Замена колеса...</Russian>
+            <Russian>Замена колеса ...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -66,7 +66,7 @@
             <English>Removing Wheel ...</English>
             <German>Entferne Reifen ...</German>
             <Polish>Zdejmowanie koła ...</Polish>
-            <Russian>Снятие колеса...</Russian>
+            <Russian>Снятие колеса ...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -82,7 +82,7 @@
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track ...</English>
             <Polish>Wymienianie gąsienicy ...</Polish>
-            <Russian>Замена гусеницы...</Russian>
+            <Russian>Замена гусеницы ...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -97,7 +97,7 @@
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track ...</English>
             <Polish>Zdejmowanie gąsienicy ...</Polish>
-            <Russian>Снятие гусеницы...</Russian>
+            <Russian>Снятие гусеницы ...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -112,7 +112,7 @@
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle ...</English>
             <Polish>Naprawianie pojazdu ...</Polish>
-            <Russian>Ремонт транспорта...</Russian>
+            <Russian>Ремонт транспорта ...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
