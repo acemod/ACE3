@@ -121,19 +121,7 @@ _woundsCreated = [];
     };
 } foreach (_injuryTypeInfo select 0); // foreach damage thresholds
 
-_unit setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
-
-// Only update if new wounds have been created
-if (count _woundsCreated > 0) then {
-//    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
-};
-
-if (USE_WOUND_EVENT_SYNC) then {
-    // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
-    {
-  //      ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
-    }foreach _woundsCreated;
-};
+_unit setvariable [QGVAR(openWounds), _openWounds, true];
 
 _painLevel = _unit getvariable [QGVAR(pain), 0];
 _unit setvariable [QGVAR(pain), _painLevel + _painToAdd];
