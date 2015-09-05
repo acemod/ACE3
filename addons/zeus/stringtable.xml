@@ -19,7 +19,7 @@
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
-            <Russian>Обеспечивает контроль над различными аспектами работы Зевса</Russian>
+            <Russian>Обеспечивает контроль над различными аспектами работы Зевса.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -39,7 +39,7 @@
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
-            <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом</Russian>
+            <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
