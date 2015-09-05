@@ -38,7 +38,7 @@ if (_part == 0) exitwith {
 
 // Check if damage to body part is higher as damage torso
 if (_part == 1) exitwith {
-    (_damageBodyPart >= (_damageThreshold select 1) && {(random(1) > 0.2)});
+    (_damageBodyPart >= (_damageThreshold select 1) && {(random(1) > 0.35)});
 };
 // Check if damage to body part is higher as damage limbs
 (_damageBodyPart >= (_damageThreshold select 2) && {(random(1) > 0.95)});
