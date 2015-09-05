@@ -1,5 +1,5 @@
 /*
- * Author: Jonpas
+ * Author: Glowbal, Jonpas
  * Makes a list from a string using comma as a delimiter, optionally trim or remove whitespace and check each for object existence.
  *
  * Arguments:
@@ -17,12 +17,13 @@
  */
 #include "script_component.hpp"
 
-private ["_splittedList", "_whitespaceList", "_nilCheckedList"];
 params ["_list", ["_removeWhitespace", false], ["_checkNil", false]];
 
+private ["_whitespaceList", "_nilCheckedList"];
 
 // Split using comma delimiter
-_splittedList = [_list, ","] call BIS_fnc_splitString;
+_list = _list splitString ",";
+TRACE_1("Splitted List",_list);
 
 
 // Remove or Trim Whitespace
@@ -34,22 +35,25 @@ _whitespaceList = [];
         _whitespaceList pushBack ([_x] call CBA_fnc_trim);
     };
     nil
-} count _splittedList;
+} count _list;
+
 _list = _whitespaceList;
+TRACE_1("Whitespace List",_list);
 
 
 // Check for object existence
-_nilCheckedList = [];
 if (_checkNil) then {
+    _nilCheckedList = [];
     {
         if !(isNil _x) then {
             _nilCheckedList pushBack _x;
         };
+        nil
     } count _list;
 
     _list = _nilCheckedList;
 };
 
-TRACE_4("Lists",_splittedList,_whitespaceList,_nilCheckedList,_list);
+TRACE_1("Final List",_list);
 
 _list
