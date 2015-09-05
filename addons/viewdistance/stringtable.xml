@@ -239,7 +239,7 @@
             <German>Diese Option ist ungültig! Die Grenze ist</German>
             <Portuguese>Essa opção é inválida. O limte é</Portuguese>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
-            <Russian>Настройка не верна! Текущий предел:</Russian>
+            <Russian>Настройка не верна! Текущий предел</Russian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
