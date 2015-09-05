@@ -123,5 +123,10 @@ _woundsCreated = [];
 
 _unit setvariable [QGVAR(openWounds), _openWounds, true];
 
+// Only update if new wounds have been created
+if (count _woundsCreated > 0) then {
+    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
+};
+
 _painLevel = _unit getvariable [QGVAR(pain), 0];
 _unit setvariable [QGVAR(pain), _painLevel + _painToAdd];
