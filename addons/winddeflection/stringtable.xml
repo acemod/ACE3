@@ -109,7 +109,7 @@
             <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
             <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
             <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
-            <Russian>Включает отклонение ветром для стрелков статичных орудий и транспортных средств</Russian>
+            <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
