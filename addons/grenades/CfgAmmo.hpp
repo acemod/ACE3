@@ -85,6 +85,7 @@ class CfgAmmo {
         suppressionRadiusHit = 20;
         typicalSpeed = 22;
         cost = 40;
+        explosive = 1E-7;
         deflecting = 15;
         explosionTime = 2.3;
         timeToLive = 6;
