@@ -54,12 +54,14 @@
             <German>Fallschirm abschneiden</German>
             <Polish>Odetnij spadochron</Polish>
             <Hungarian>Ejtőernyő elvágása</Hungarian>
+            <Portuguese>Cortar para-quedas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
             <German>Reserve Fallschirm</German>
             <Polish>Spadochron awaryjny</Polish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
+            <Portuguese>Para-quedas de reserva</Portuguese>
         </Key>
     </Package>
 </Project>

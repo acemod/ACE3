@@ -232,18 +232,22 @@
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
             <Polish>Wymagaj kapitulacji</Polish>
+            <Portuguese>Requer rendição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
             <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
+            <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
             <Polish>Tylko kapitulacja</Polish>
+            <Portuguese>Somente rendição </Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
             <Polish>Kapitulacja lub brak broni</Polish>
+            <Portuguese>Rendição ou desarmado</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -338,11 +338,13 @@
             <English>Headbug Fix</English>
             <Polish>Fix Headbug</Polish>
             <Hungarian>"Fejhiba" fix</Hungarian>
+            <Portuguese>Corrigir Headbug</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
             <Polish>Resetuje aktualną animację.</Polish>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
+            <Portuguese>Redefine seu estado de animação.</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -365,10 +367,12 @@
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
             <Polish>Wszystkie kategorie</Polish>
+            <Portuguese>Todas categorias</Portuguese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
             <Polish>Logistyka</Polish>
+            <Portuguese>Logística</Portuguese>
         </Key>
     </Package>
 </Project>

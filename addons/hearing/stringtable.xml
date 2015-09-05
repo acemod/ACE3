@@ -145,9 +145,11 @@
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
+            <Portuguese>Afeta Zeus CR</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
+            <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
         </Key>
     </Package>
 </Project>
