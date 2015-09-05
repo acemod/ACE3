@@ -275,7 +275,7 @@
             <Czech>Vpravo nahoře, dolů</Czech>
             <Portuguese>Superior direito, para baixo</Portuguese>
             <Hungarian>Jobb felül, lefele</Hungarian>
-            <Russian>Справа - сверху вниз</Russian>
+            <Russian>Справа — сверху вниз</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -285,7 +285,7 @@
             <Czech>Vpravo nahoře, do leva</Czech>
             <Portuguese>Superior direito, à esquerda</Portuguese>
             <Hungarian>Jobb felül, balra</Hungarian>
-            <Russian>Сверху - справа налево</Russian>
+            <Russian>Сверху — справа налево</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -305,7 +305,7 @@
             <Czech>Vlevo nahoře, do prava</Czech>
             <Portuguese>Superior esquerdo, para a direita</Portuguese>
             <Hungarian>Bal felül, jobbra</Hungarian>
-            <Russian>Сверху - слева направо</Russian>
+            <Russian>Сверху — слева направо</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
