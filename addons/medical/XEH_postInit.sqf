@@ -259,7 +259,6 @@ if (USE_WOUND_EVENT_SYNC) then {
 
 ["SettingsInitialized", {
     if (GVAR(level) == 2) exitwith {
-        TRACE_6("ACE_DEBUG: SettingsInitialized_EH_ADVANCED",(_this select 0), GVAR(level),(_this select 0) getvariable QGVAR(bloodVolume),(_this select 0) getvariable QGVAR(pain), (_this select 0) getvariable QGVAR(painSuppress), [_this select 0] call FUNC(getBloodLoss));
         [
             {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
             {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
