@@ -478,6 +478,7 @@
             <Czech>Zkontrolovat PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
+            <Italian>Verifica i PBO</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
@@ -485,6 +486,7 @@
             <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
+            <Italian>Verifica l'integrità dei singoli file nei mod</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -494,6 +496,7 @@
             <Czech>Akce</Czech>
             <Portuguese>Ação</Portuguese>
             <Hungarian>Cselekvés</Hungarian>
+            <Italian>Azione</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -503,6 +506,7 @@
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
+            <Italian>Cosa fare quando i giocatori non hanno i PBO verificati?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -512,6 +516,7 @@
             <Czech>Upozornit jednou</Czech>
             <Portuguese>Avisar uma vez</Portuguese>
             <Hungarian>Egyszeri figyelmeztetés</Hungarian>
+            <Italian>Avvisa una volta</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -521,6 +526,7 @@
             <Czech>Upozornit (permanentně)</Czech>
             <Portuguese>Avisar (permanente)</Portuguese>
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
+            <Italian>Mostra un avviso permanente</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -530,6 +536,7 @@
             <Czech>Vyhodit</Czech>
             <Portuguese>Chutar</Portuguese>
             <Hungarian>Kirúgás</Hungarian>
+            <Italian>Espelli</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -539,6 +546,7 @@
             <Czech>Zkontrolovat všechny addony</Czech>
             <Portuguese>Verificar todos addons</Portuguese>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
+            <Italian>Controlla tutti i mod</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -548,6 +556,7 @@
             <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
             <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
+            <Italian>Verifica tutti i mod oppure solamente ACE?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -557,6 +566,7 @@
             <Czech>Seznam povolených</Czech>
             <Portuguese>Lista branca</Portuguese>
             <Hungarian>Fehérlista</Hungarian>
+            <Italian>Whitelist</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -566,6 +576,7 @@
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
+            <Italian>Quali mod sono comunque permessi?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -575,6 +586,7 @@
             <Czech>LSD vozidla</Czech>
             <Portuguese>Veículos LSD</Portuguese>
             <Hungarian>LSD járművek</Hungarian>
+            <Italian>Veicoli LSD</Italian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -584,6 +596,7 @@
             <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
             <Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
             <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
+            <Italian>Agguinge effetto LSD ai veicoli sincronizzati</Italian>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -593,6 +606,7 @@
             <Polish>Przełącz urządzenie podręczne</Polish>
             <Czech>Přepnout ruční zařízení</Czech>
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
+            <Italian>Seleziona il palmare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -602,6 +616,7 @@
             <Polish>Zamknij urządzenie podręczne</Polish>
             <Czech>Zavřít ruční zařízení</Czech>
             <Hungarian>Kézi eszköz bezárása</Hungarian>
+            <Italian>Chiudi il palmare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -611,6 +626,7 @@
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>
             <Hungarian>Kézi eszköz váltása</Hungarian>
+            <Italian>Cambia il palmare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
@@ -661,6 +677,7 @@
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
             <Polish>Tylko pojazdy</Polish>
+            <Italian>Solo vehicoli</Italian>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -669,30 +686,37 @@
             <German>Nicht erzwingen</German>
             <Czech>Nevynucovat</Czech>
             <Portuguese>Não forçar</Portuguese>
+            <Italian>Non forzare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
             <Polish>ACE3 Wyposażenie</Polish>
+            <Italian>ACE3 Equipaggiamento</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
             <Polish>ACE3 Ogólne</Polish>
+            <Italian>ACE3 Generico</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
             <Polish>ACE3 Broń</Polish>
+            <Italian>ACE3 Armi</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
             <Polish>ACE3 Ruch</Polish>
+            <Italian>ACE3 Movimento</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
             <Polish>ACE3 Regulacja optyki</Polish>
+            <Italian>ACE3 Aggiustamento Mirino</Italian>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
             <Polish>ACE3 Pojazdy</Polish>
+            <Italian>ACE3 Veicoli</Italian>
         </Key>
     </Package>
 </Project>

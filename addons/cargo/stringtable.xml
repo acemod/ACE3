@@ -4,38 +4,47 @@
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
             <Polish>Załaduj</Polish>
+            <Italian>Carica</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
             <Polish>Wyładuj</Polish>
+            <Italian>Scarica</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <Polish>Ładunek</Polish>
+            <Italian>Carico</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
             <Polish>Menu ładunku</Polish>
+            <Italian>Menu carico</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
             <Polish>Pozostałe miejsce: %1</Polish>
+            <Italian>Carico rimasto:%1</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
             <Polish>Aktywuj cargo</Polish>
+            <Italian>Abilita carico</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
             <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów.</Polish>
+            <Italian>Attiva il modulo per caricare</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
             <Polish>Ustawienia cargo</Polish>
+            <Italian>Impostazioni cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
             <Polish>Skonfiguruj ustawienia modułu cargo.</Polish>
+            <Italian>Configura le impostazioni del module per il carico</Italian>
         </Key>
     </Package>
 </Project>
