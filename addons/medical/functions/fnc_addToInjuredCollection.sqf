@@ -45,9 +45,12 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
             private "_pain";
             _pain = _unit getvariable [QGVAR(pain), 0];
             if (_pain > (_unit getvariable [QGVAR(painSuppress), 0])) then {
-                if (_pain > 0.7 && {random(1) > 0.6}) then {
+                // This introduces wierd unconscious behaviour for basic medical and possibly also advanced.
+                // TODO This is disabled as it's considered non critical code.
+                // We will need to decide if we want unconscious triggered on high pain levels or if we can get rid of this entirely.
+                /*if (_pain > 0.7 && {random(1) > 0.6}) then {
                     [_unit] call FUNC(setUnconscious);
-                };
+                };*/
 
                 [_unit, _pain] call FUNC(playInjuredSound);
             };
