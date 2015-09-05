@@ -14,10 +14,10 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_unit", "_heartRateOutput", "_heartRate", "_logOutPut"];
+private ["_caller", "_unit", "_selectionName", "_heartRateOutput", "_heartRate", "_logOutPut"];
 _caller = _this select 0;
 _unit = _this select 1;
-
+_selectionName = _this select 2;
 
 _heartRate = _unit getvariable [QGVAR(heartRate), 80];
 if (!alive _unit) then {
@@ -44,6 +44,11 @@ if (_heartRate > 1.0) then {
             };
         };
     };
+};
+
+if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(hasTourniquetAppliedTo)}) then {
+    _heartRateOutput = LSTRING(Check_Pulse_Output_5);
+    _logOutPut = LSTRING(Check_Pulse_None);
 };
 
 ["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);

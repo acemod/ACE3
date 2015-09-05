@@ -47,5 +47,16 @@ class CfgWeapons {
         GVAR(lowerVolume) = 0.60;
     };
     class H_Cap_marshal: H_Cap_headphones {};
-};
 
+    class H_HelmetB_light: H_HelmetB {
+        GVAR(protection) = 0.8;
+        GVAR(lowerVolume) = 0.20;
+    };
+
+    class H_HelmetB_plain_mcamo;
+    class H_HelmetSpecB: H_HelmetB_plain_mcamo {
+        GVAR(protection) = 0.8;
+        GVAR(lowerVolume) = 0.20;
+    };
+
+};

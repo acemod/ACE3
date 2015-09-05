@@ -68,6 +68,7 @@ PREP(selectionNameToNumber);
 PREP(setCardiacArrest);
 PREP(setDead);
 PREP(setHitPointDamage);
+PREP(setStructuralDamage);
 PREP(setUnconscious);
 PREP(treatment);
 PREP(treatment_failure);

@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_shouldOpenGps);
+params ["_shouldOpenGps"];
 
 private ["_isOpen"];
 

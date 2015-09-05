@@ -1,6 +1,9 @@
 // Enable visual head movement while free-looking
 #define MACRO_ANIMATION \
-    head = "headDefault";
+    head = "headDefault"; \
+    aimingBody = "aimingNo"; \
+    forceAim = 1; \
+    static = 1;
 
 class CfgMovesBasic;
 class CfgMovesMaleSdr: CfgMovesBasic {

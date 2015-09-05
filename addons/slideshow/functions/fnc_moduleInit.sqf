@@ -18,7 +18,6 @@
 if (!hasInterface && !isDedicated) exitWith {};
 
 private ["_objects", "_controllers", "_images", "_names", "_duration"];
-
 params [["_logic", objNull, [objNull]], "_units", "_activated"];
 
 if !(_activated) exitWith {};
