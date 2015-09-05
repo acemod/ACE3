@@ -22,8 +22,6 @@
 private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_newDamage"];
 
-// Most likely taking exessive fire damage. Lets exit.
-if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {};
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {};
 
