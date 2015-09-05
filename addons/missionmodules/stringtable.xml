@@ -168,7 +168,7 @@
             <Czech>Smyčka okkolního zvuku (synchronizováno v MP)</Czech>
             <Portuguese>Loop de sons ambientes (sincronizados através do MP)</Portuguese>
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
-            <Russian>Циклически воспроизодимые звуки окружения (синхронизируется по сети между игроками в мультиплеере)</Russian>
+            <Russian>Циклически воспроизводимые звуки окружения (синх. между игроками)</Russian>
         </Key>
     </Package>
 </Project>
