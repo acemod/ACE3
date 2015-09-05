@@ -131,7 +131,7 @@
             <Czech>Synchronizace blesků, duhy, mlhy, ...</Czech>
             <Portuguese>Sincroniza relâmpagos, arco-íris, neblina...</Portuguese>
             <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt, ...</Hungarian>
-            <Russian>Синхронизирует молнии, радугу, туман...</Russian>
+            <Russian>Синхронизирует молнии, радугу, туман, ...</Russian>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
