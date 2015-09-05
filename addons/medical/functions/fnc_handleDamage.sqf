@@ -28,10 +28,10 @@ if !(local _unit) exitWith {
 private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
-/*if (typeName _projectile == "OBJECT") then {
+if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
-};*/
+};
 
 TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage, _unit);
 
@@ -44,15 +44,13 @@ if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@to
 
 // Exit if we disable damage temporarily
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
+    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit, _unit);
     if (_selection == "") then {
         damage _unit
     } else {
         _unit getHit _selection
     };
-    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit, _unit);
 };
-
-//if (true) exitWith {nil};//
 
 // Get return damage
 _damageReturn = _damage;
