@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(addRepairActions);
+PREP(addSpareParts);
 PREP(canMiscRepair);
 PREP(canRemove);
 PREP(canRepair);
@@ -24,6 +25,7 @@ PREP(isEngineer);
 PREP(isInRepairFacility);
 PREP(isNearRepairVehicle);
 PREP(isRepairVehicle);
+PREP(moduleAddSpareParts);
 PREP(moduleAssignEngineer);
 PREP(moduleAssignRepairVehicle);
 PREP(moduleAssignRepairFacility);
@@ -37,5 +39,7 @@ PREP(setHitPointDamage);
 PREP(spawnObject);
 PREP(useItem);
 PREP(useItems);
+
+GVAR(addSparePartsCollection) = [];
 
 ADDON = true;
