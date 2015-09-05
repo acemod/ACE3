@@ -7,25 +7,22 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_selectionName","_bloodPressure","_bloodPressureHigh","_bloodPressureLow", "_logOutPut", "_output"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
+private ["_bloodPressure", "_logOutPut", "_output"];
+params ["_caller", "_target", "_selectionName"];
 
-_bloodPressure = [_target] call FUNC(getBloodPressure);
-if (!alive _target) then {
-    _bloodPressure = [0,0];
+_bloodPressure = if (!alive _target) then {
+    [0,0]
+} else {
+    [_target] call FUNC(getBloodPressure)
 };
-
-_bloodPressureHigh = _bloodPressure select 1;
-_bloodPressureLow = _bloodPressure select 0;
+_bloodPressure params ["_bloodPressureHigh", "_bloodPressureLow"];
 _output = "";
 _logOutPut = "";
 if ([_caller] call FUNC(isMedic)) then {

@@ -6,16 +6,14 @@
  * 0: The Unit <OBJECT>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_force"];
-_unit = _this select 0;
-_force = if (count _this > 1) then {_this select 1} else {false};
+params ["_unit", ["_force", false]];
 
 if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
 
@@ -27,13 +25,13 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
     _unit setvariable [QGVAR(addedToUnitLoop), true, true];
 
     [{
-        private ["_unit", "_interval"];
-        _unit = (_this select 0) select 0;
-        _interval = ACE_time - ((_this select 0) select 1);
+        params ["_args", "_idPFH"];
+        _args params ["_unit", "_interval"];
+        _interval = ACE_time - _interval;
         (_this select 0) set [1, ACE_time];
-        
+
         if (!alive _unit || !local _unit) then {
-           [_this select 1] call CBA_fnc_removePerFrameHandler;
+           [_idPFH] call CBA_fnc_removePerFrameHandler;
            if (!local _unit) then {
                 if (GVAR(level) >= 2) then {
                     _unit setvariable [QGVAR(heartRate), _unit getvariable [QGVAR(heartRate), 80], true];

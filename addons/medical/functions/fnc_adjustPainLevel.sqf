@@ -18,7 +18,7 @@
 
 private ["_pain"];
 
-PARAMS_2(_unit,_addedPain);
+params ["_unit", "_addedPain"];
 
 //Only run on local units:
 if (!local _unit) exitWith {ERROR("unit is not local");};

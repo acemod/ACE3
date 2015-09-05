@@ -18,12 +18,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
-_unit          = _this select 0;
-_selectionName = _this select 1;
-_damage        = _this select 2;
-_source        = _this select 3;
-_projectile    = _this select 4;
+private ["_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
+params ["_unit", "_selectionName", "_damage", "_source", "_projectile"];
 
 _hitSelections = GVAR(SELECTIONS);
 _hitPoints = GVAR(HITPOINTS);
@@ -78,21 +74,23 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
     // handle the cached damages 3 frames later
     [{
         private ["_args", "_params"];
-        _args = _this select 0;
+        params ["_args", "_idPFH"];
+        _args params ["_unit", "_frameno"];
+        if (diag_frameno > _frameno + 2) then {
+            _unit setDamage 0;
 
-        if (diag_frameno > (_args select 1) + 2) then {
-            (_args select 0) setDamage 0;
-
-            _cache_params = (_args select 0) getVariable [QGVAR(cachedHandleDamageParams), []];
-            _cache_damages = (_args select 0) getVariable QGVAR(cachedDamages);
-            {
-                _params = _x + [_cache_damages select _foreachIndex];
-                _params call FUNC(handleDamage_advanced);
-            }foreach _cache_params;
-
-            [(_args select 0)] call FUNC(handleDamage_advancedSetDamage);
-
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            if (GVAR(level) < 2 || {!([_unit] call FUNC(hasMedicalEnabled))}) then {
+                [_unit] call FUNC(handleDamage_basic);
+            } else {
+                _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+                _cache_damages = _unit getVariable QGVAR(cachedDamages);
+                {
+                    _params = _x + [_cache_damages select _foreachIndex];
+                    _params call FUNC(handleDamage_advanced);
+                } foreach _cache_params;
+                [_unit] call FUNC(handleDamage_advancedSetDamage);
+            };
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, [_unit, diag_frameno] ] call CBA_fnc_addPerFrameHandler;
 
@@ -152,4 +150,4 @@ if (_selectionName != "") then {
     _unit setVariable [QGVAR(cachedHandleDamageParams), _cache_params];
 };
 
-_newDamage;
+_newDamage

@@ -15,19 +15,16 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_specificClass", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
-_target = _this select 0;
-_bandage = _this select 1;
-_selectionName = _this select 2;
-_specificClass = if (count _this > 3) then {_this select 3} else { -1 };
+private ["_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
+params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {};
+if (_part < 0) exitwith {false};
 
 // Get the open wounds for this unit
 _openWounds = _target getvariable [QGVAR(openWounds), []];
-if (count _openWounds == 0) exitwith {}; // nothing to do here!
+if (count _openWounds == 0) exitwith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
 _config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
@@ -43,10 +40,11 @@ _effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
 _exit = false;
 {
+    _x params ["", "_classID", "_partX"];
+    diag_log format["OPENWOUND: %1", _x];
     // Only parse injuries that are for the selected bodypart.
-    if (_x select 2 == _part) then {
+    if (_partX == _part) then {
         _woundEffectivenss = _effectiveness;
-        _classID = (_x select 1);
 
         // Select the classname from the wound classname storage
         _className = GVAR(woundClassNames) select _classID;
@@ -59,6 +57,7 @@ _exit = false;
             };
         };
 
+        diag_log format["_specificClass: %1 vs classId %2", _specificClass, _classID];
         if (_specificClass == _classID) exitwith {
             _effectivenessFound = _woundEffectivenss;
             _mostEffectiveSpot = _foreachIndex;
@@ -74,7 +73,7 @@ _exit = false;
         };
     };
     if (_exit) exitwith {};
-}foreach _openWounds;
+} foreach _openWounds;
 
 if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
 
@@ -96,12 +95,11 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
 };
 
 // If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
-if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {_x select 3 > 0}}count _openWounds == 0}) then {
+if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {((_x select 4) * (_x select 3)) > 0}}count _openWounds == 0}) then {
     _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
     _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
     _point = _hitPoints select (_hitSelections find _selectionName);
-    [_target, _point, 0] call FUNC(setHitPointDamage);
-    // _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+    _target setHitPointDamage [_point, 0];
 };
 
 true;

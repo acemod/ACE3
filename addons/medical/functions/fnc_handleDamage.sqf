@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, Glowbal
+ * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
  *
  * Arguments:
@@ -14,74 +14,84 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
-_unit       = _this select 0;
-_selection  = _this select 1;
-_damage     = _this select 2;
-_shooter    = _this select 3;
-_projectile = _this select 4;
+params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
 
-if !(local _unit) exitWith {nil};
+// bug, apparently can fire for remote units in special cases
+if !(local _unit) exitWith {
+    #ifdef DEBUG_ENABLED_MEDICAL
+        ACE_LOGDEBUG_3("HandleDamage on remote unit! - %1 - %2 - %3", diag_frameno, _unit, isServer);
+    #endif
+    nil
+};
 
-if (typeName _projectile == "OBJECT") then {
+private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
+
+// bug, assumed fixed, @todo excessive testing, if nothing happens remove
+/*if (typeName _projectile == "OBJECT") then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
-};
+};*/
 
-// If the damage is being weird, we just tell it to fuck off.
-if !(_selection in (GVAR(SELECTIONS) + [""])) exitWith {0};
+#ifdef DEBUG_ENABLED_MEDICAL
+    ACE_LOGDEBUG_3("HandleDamage - %1 - %2 - %3", diag_frameno, _selection, _damage);
+#endif
+
+// If damage is in dummy hitpoints, "hands" and "legs", don't change anything
+if (_selection == "hands") exitWith {_unit getHit "hands"};
+if (_selection == "legs") exitWith {_unit getHit "legs"};
+
+// If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
+if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
 
 // Exit if we disable damage temporarily
-_damageOld = damage _unit;
-if (_selection in GVAR(SELECTIONS)) then {
-    _damageOld = _unit getHit _selection;
+if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
+    if (_selection == "") then {
+        damage _unit
+    } else {
+        _unit getHit _selection
+    };
+    #ifdef DEBUG_ENABLED_MEDICAL
+        ACE_LOGDEBUG_3("HandleDamage damage disabled. - %1 - %2 - %3", diag_frameno, _unit, _selection);
+    #endif
 };
-if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {_damageOld};
+
+//if (true) exitWith {nil};//
 
 // Get return damage
 _damageReturn = _damage;
-if (GVAR(level) < 2) then {
-    _damageReturn = _this call FUNC(handleDamage_basic);
+
+_newDamage = _this call FUNC(handleDamage_caching);
+// handleDamage_caching may have modified the projectile string
+_typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+
+_typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+_minLethalDamage = if (_typeIndex >= 0) then {
+    GVAR(minLethalDamages) select _typeIndex
 } else {
-    if !([_unit] call FUNC(hasMedicalEnabled)) exitwith {
-        // Because of the config changes, we cannot properly disable the medical system for a unit.
-        // lets use basic for the ACE_time being..
-        _damageReturn = _this call FUNC(handleDamage_basic);
-    };
-    _newDamage = _this call FUNC(handleDamage_caching);
-    // handleDamage_caching may have modified the projectile string
-    _projectile = _this select 4;
-    _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+    0.01
+};
 
-    _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
-    _minLethalDamage = 0.01;
-    if (_typeIndex >= 0) then {
-        _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
+if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
+    if (GVAR(enableVehicleCrashes)) then {
+        _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
     };
+};
 
-    if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
-        if (GVAR(enableVehicleCrashes)) then {
-            _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
-        };
+if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+    if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
+        _damageReturn = 0.9;
     };
-
-    if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
-        if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
-            _damageReturn = 0.9;
-        };
-        if ([_unit] call FUNC(setDead)) then {
-            _damageReturn = 1;
-        } else {
-            _damageReturn = _damageReturn min 0.89;
-        };
+    if ([_unit] call FUNC(setDead)) then {
+        _damageReturn = 1;
     } else {
         _damageReturn = _damageReturn min 0.89;
     };
-
+} else {
+    _damageReturn = _damageReturn min 0.89;
 };
+
 [_unit] call FUNC(addToInjuredCollection);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
@@ -123,4 +133,4 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
     0.89;
 };
 
-_damageReturn;
+_damageReturn

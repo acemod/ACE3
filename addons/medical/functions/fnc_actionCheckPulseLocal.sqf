@@ -7,17 +7,15 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_unit", "_selectionName", "_heartRateOutput", "_heartRate", "_logOutPut"];
-_caller = _this select 0;
-_unit = _this select 1;
-_selectionName = _this select 2;
+private ["_heartRateOutput", "_heartRate", "_logOutPut"];
+params ["_caller", "_unit", "_selectionName"];
 
 _heartRate = _unit getvariable [QGVAR(heartRate), 80];
 if (!alive _unit) then {
