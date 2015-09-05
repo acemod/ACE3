@@ -167,6 +167,7 @@
             <French>Faire capituler l'unité</French>
             <Hungarian>Egység kapitulálása</Hungarian>
             <Russian>Сделать юнита пленным</Russian>
+            <Italian>Permette alle unità di arrendersi</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
@@ -178,6 +179,7 @@
             <French>Synchronise une unité pour la rendre captive. &lt;br/&gt;Source: ace_captives</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их пленными.&lt;br /&gt;Источник: ace_captives</Russian>
+            <Italian>Sincronizza una unità per farla arrendere.&lt;br/&gt;Fonte: ace_captives</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -189,6 +191,7 @@
             <French>Options de capitulation</French>
             <Hungarian>Fogoly-beállítások</Hungarian>
             <Russian>Настройки пленения</Russian>
+            <Italian>Impostazioni prigioneri</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -200,6 +203,7 @@
             <French>Contrôle les paramètres de la rédition et des Serflex</French>
             <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
             <Russian>Управляет настройками сдачи в плен и связывания</Russian>
+            <Italian>Regola i parametri per la resa e le fascette</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
@@ -211,6 +215,7 @@
             <French>Peut libérer sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
+            <Italian>Si possono arrestare i compagni</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -222,6 +227,7 @@
             <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам связывать юнитов своей стороны</Russian>
+            <Italian>I giocatori posso arrestare le unità della propria fazione</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -233,6 +239,7 @@
             <French>Permettre la capitulation</French>
             <Hungarian>Kapituláció engedélyezése</Hungarian>
             <Russian>Сдаться в плен</Russian>
+            <Italian>Permetti la resa</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
@@ -244,30 +251,35 @@
             <French>Les joueurs peuvent se rendre après avoir rangé leur arme</French>
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаться в плен после того, как уберут оружие</Russian>
+            <Italian>I giocatori possono arrendersi dopo aver messo l'arma nella fondina</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
             <Polish>Wymagaj kapitulacji</Polish>
             <Portuguese>Requer rendição</Portuguese>
             <Russian>Требовать пленения</Russian>
+            <Italian>Richiede arrendersi</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
             <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
             <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
             <Russian>Требуется, чтобы игрок сдался в плен прежде, чем его можно будет связать</Russian>
+            <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
             <Polish>Tylko kapitulacja</Polish>
             <Portuguese>Somente rendição </Portuguese>
             <Russian>Только сдавшийся в плен</Russian>
+            <Italian>Solo arrendersi</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
             <Polish>Kapitulacja lub brak broni</Polish>
             <Portuguese>Rendição ou desarmado</Portuguese>
             <Russian>Сдавшийся или безоружный</Russian>
+            <Italian>Arrendersi o no armi</Italian>
         </Key>
     </Package>
 </Project>
