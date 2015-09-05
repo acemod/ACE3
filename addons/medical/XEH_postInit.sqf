@@ -271,8 +271,6 @@ if (USE_WOUND_EVENT_SYNC) then {
         ] call FUNC(addUnconsciousCondition);
     };
 
-    TRACE_6("ACE_DEBUG: SettingsInitialized_EH_BASIC",(_this select 0), GVAR(level),(_this select 0) getvariable QGVAR(bloodVolume),(_this select 0) getvariable QGVAR(pain), (_this select 0) getvariable QGVAR(painSuppress), [_this select 0] call FUNC(getBloodLoss));
-
     [
         {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 40)},
         {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.6},
@@ -280,7 +278,7 @@ if (USE_WOUND_EVENT_SYNC) then {
         {((_this select 0) getvariable [QGVAR(inReviveState), false])},
         {((_this select 0) getvariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
-}] call FUNC(addEventHandler);
+}] call EFUNC(common,addEventHandler);
 
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
