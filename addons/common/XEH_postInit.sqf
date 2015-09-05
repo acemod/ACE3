@@ -150,6 +150,15 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
+    //Set init finished and run all delayed functions:
+    GVAR(settingsInitFinished) = true;
+    diag_log text format ["[ACE] %1 delayed functions running", (count GVAR(runAtSettingsInitialized))];
+    {
+        _x params ["_func", "_params"];
+        _params call _func;
+    } forEach GVAR(runAtSettingsInitialized);
+    GVAR(runAtSettingsInitialized) = nil; //cleanup
+    
 }, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
@@ -326,7 +335,7 @@ GVAR(OldIsCamera) = false;
 if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if(!(isNull player)) then {
+        if((!(isNull player)) && GVAR(settingsInitFinished)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
