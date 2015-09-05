@@ -1,7 +1,7 @@
 ace_overpressure
 =============
 
-Adds backblast to AT launchers and overpressure zones to tank cannons.
+Adds backblast area to AT launchers and overpressure zones to tank cannons.
 
 
 ## Maintainers

@@ -1,4 +1,3 @@
-
 class CfgFatigue {
     MinValue1 = 0.2;
     MinValue2 = 0.8;

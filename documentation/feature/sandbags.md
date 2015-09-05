@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: Sandbags
+description: Adds stackable sandbags
 group: feature
+category: equipment
 parent: wiki
 ---
 

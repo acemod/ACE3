@@ -3,6 +3,7 @@ layout: wiki
 title: Vehicles
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

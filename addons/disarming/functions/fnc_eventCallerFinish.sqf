@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Recieves a possible error code from FUNC(eventTargetFinish)
  *
  * Arguments:
@@ -17,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_caller,_target,_errorMsg);
+params ["_caller", "_target", "_errorMsg"];
 
 if (_caller != ACE_player) exitWith {};
 

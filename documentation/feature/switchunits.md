@@ -3,6 +3,7 @@ layout: wiki
 title: Switch Units
 description: 
 group: feature
+category: interaction
 parent: wiki
 ---
 

@@ -138,7 +138,7 @@ class ACE_ZeusActions {
     };
     class ZeusWaypoints {
         displayName = "Waypoints";
-        icon = "\A3\UI_F_Curator\Data\CfgCurator\waypoint_ca.paa";
+        icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
 
         class behaviour {
             displayName = "$STR_Combat_Mode";

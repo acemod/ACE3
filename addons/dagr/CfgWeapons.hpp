@@ -7,11 +7,11 @@ class CfgWeapons {
         author[] = {$STR_ACE_Common_ACETeam, "Ruthberg"};
         scope = 2;
         displayName = "DAGR";
+        model = QUOTE(PATHTOF(data\DAGR.p3d));
         descriptionShort = "";
         picture = PATHTOF(UI\DAGR_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
-
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };

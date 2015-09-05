@@ -30,8 +30,8 @@ private ["_name", "_default", "_lastSelected"];
     [MENU_TAB_COLORS, _name, _default] call FUNC(updateSetting);
 } forEach GVAR(clientSideColors);
 
-_lastSelected = lbCurSel 200;
+_lastSelected = lnbCurSelRow 200;
 [GVAR(optionMenu_openTab)] call FUNC(onListBoxShowSelectionChanged);
 if (_lastSelected != -1) then {
-    lbSetCurSel [200, _lastSelected];
+    lnbSetCurSelRow [200, _lastSelected];
 };

@@ -17,14 +17,17 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_attachToVehicle,_player,_args);
+params ["_attachToVehicle","_player","_args"];
+_args params [["_itemClassname","", [""]]];
+TRACE_3("params",_attachToVehicle,_player,_itemClassname);
 
-private ["_itemName", "_attachLimit", "_attachedObjects","_playerPos"];
+private ["_attachLimit", "_attachedObjects"];
 
-_itemName = [_args, 0, ""] call CBA_fnc_defaultParam;
 _attachLimit = [6, 1] select (_player == _attachToVehicle);
-_attachedObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
+_attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
 
-_playerPos = (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
-
-(canStand _player) && {(_attachToVehicle distance _player) < 7} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {_itemName in ((itemsWithMagazines _player) + [""])};
+((_player == _attachToVehicle) || {canStand _player}) &&
+{(_attachToVehicle distance _player) < 7} && 
+{alive _attachToVehicle} && 
+{(count _attachedObjects) < _attachLimit} && 
+{_itemClassname in ((itemsWithMagazines _player) + [""])};

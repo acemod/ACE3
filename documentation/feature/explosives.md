@@ -3,6 +3,7 @@ layout: wiki
 title: Explosives
 description: Adds numerous improvements to using and handling explosives
 group: feature
+category: interaction
 parent: wiki
 ---
 

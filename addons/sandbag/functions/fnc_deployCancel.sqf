@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_sandbag_fnc_deployCancel;
+ * [] call ace_sandbag_fnc_deployCancel
  *
  * Public: No
  */

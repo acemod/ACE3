@@ -3,6 +3,7 @@ layout: wiki
 title: Options Menu
 description: ACE3 options menu
 group: feature
+category: interaction
 parent: wiki
 ---
 

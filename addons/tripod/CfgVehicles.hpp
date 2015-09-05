@@ -17,16 +17,13 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_Item_Tripod: Item_Base_F {
-		author[] = {"Rocko", "Scubaman3D"};
+        author[] = {"Rocko", "Scubaman3D"};
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(DisplayName);
         vehicleClass = "Items";
         class TransportItems {
-            class ACE_Tripod {
-                name = "ACE_Tripod";
-                count = 1;
-            };
+            MACRO_ADDITEM(ACE_Tripod,1);
         };
     };
 
@@ -36,7 +33,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Tripod,2);
         };
     };
-    
+
     class thingX;
     class ACE_TripodObject: thingX {
         XEH_ENABLED;
@@ -49,7 +46,7 @@ class CfgVehicles {
                 animPeriod = 0.02;
                 initPhase = 0;
                 minValue = 0;
-                maxValue = 1;			
+                maxValue = 1;
             };
             class retract_leg_1: slide_down_tripod {};
             class retract_leg_2: retract_leg_1 {};
@@ -79,7 +76,8 @@ class CfgVehicles {
                     displayName = CSTRING(Adjust);
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE(_target call FUNC(adjust));
+                    //wait a frame to handle "Do When releasing action menu key" option:
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [_target])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

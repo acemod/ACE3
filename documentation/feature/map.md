@@ -3,6 +3,7 @@ layout: wiki
 title: Map
 description: Map improvements
 group: feature
+category: realism
 parent: wiki
 ---
 

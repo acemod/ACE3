@@ -10,6 +10,13 @@ ACE_Modifier = 0;
     _group selectLeader _leader;
 }] call EFUNC(common,addEventHandler);
 
+//Pushing boats from FUNC(push)
+[QGVAR(pushBoat), {
+    params ["_boat", "_newVelocity"];
+    _boat setVelocity _newVelocity;
+}] call EFUNC(common,addEventHandler);
+
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
@@ -28,7 +35,7 @@ private ["_team"];
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (GVAR(isOpeningDoor) || {[2] call FUNC(getDoor) select 1 == ''}) exitWith {false};
+    if (GVAR(isOpeningDoor) || {[MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor) select 1 == ''}) exitWith {false};
 
     // Statement
     call EFUNC(interaction,openDoor);
@@ -75,3 +82,4 @@ private ["_team"];
 [29, [false, false, false]], false] call cba_fnc_addKeybind;
 
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
+["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);

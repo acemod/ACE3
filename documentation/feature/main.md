@@ -3,6 +3,7 @@ layout: wiki
 title: Main
 description: main module
 group: feature
+category: general
 parent: wiki
 ---
 

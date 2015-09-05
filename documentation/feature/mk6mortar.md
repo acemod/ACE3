@@ -3,6 +3,7 @@ layout: wiki
 title: Mk6 Mortar
 description: Improve the existing mk6 mortar.
 group: feature
+category: equipment
 parent: wiki
 ---
 

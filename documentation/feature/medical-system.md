@@ -4,240 +4,289 @@ title: Medical System
 description: ACE provide users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics. 
 group: feature
 order: 4
+category: realism
 parent: wiki
 ---
+**Disclaimer:** The documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 
 ## 1. Overview
-ACE provide users with a more realistic medical system and comes in both a basic and advanced version. This page will detail the differences between both systems and what they do. It is split into two parts; basic and advanced. Both versions have overlap but each have their own unique characteristics. 
+ACE3 provides users with a more realistic medical system and comes in both a basic and an advanced version. This page will detail the differences between both systems and what they do as well as how to use them efficiently.
 
+### 1.1 Basic medical
+ACE3's basic medical system is quite a bit more complex than Arma 3's default system, but not really difficult to grasp. ACE3 basic medical is a mixture between the ACE2 and AGM medical systems.
+All interactions in the medical system are done with the interaction menu. Non-medics can - by default - not perform all actions (Epinephrine and IVs) and their actions take more time as when performed by trained medics.
 
-## 2. Basic Medical
-ACE's basic medical system is quite a bit more complex than Arma's default system, but not really difficult to grasp. ACE basic medical is a mixture between the ACE2 and AGM medical systems.
+### 1.2 Revive system
+The revive system lets you bring downed units back up.
+Upon receiving a deadly amount of damage a unit will fall unconscious for a determined amount of time. In that time a medic will need to treat them and give them epinephrine to bring them back up.
 
-The four main elements that basic medical introduces are:
+### 1.3 Advanced medical
 
-* damage divided into different zones (head, body, left & right arm, left & right leg)
-* bleeding
-* unconsciousness
-* pain
-
-All interactions in the medical system are done with the interaction menu. Non-medics can - by default - not perform all actions, and their actions take more time as when performed by trained medics. These actions are using epinephrine and blood IVs.
-
-
-### 2.1 How it works
-
-When hit, units start to lose blood depending on the severity of their wounds. Once the level of blood falls below a certain threshold, the unit will fall unconscious and eventually die. Units will also fall unconscious when sustaining large amounts of damage at once.
-
-To stop the bleeding, the combat life saver needs to bandage every wounded limb. Unconscious units can be "woken up" with Epipens. Should a unit have lost a lot of blood, it might be necessary to replace the lost blood with a blood bag before being able to wake unconscious units up.
-
-Should a unit be in pain, materializing itself with a chromatic aberration screen effect, he can be given morphine.
-
-### 2.2 Basic medical system - recommended gear
-* Soldier:
-  * 10 x Bandage (basic)
-
-* Medic:
-  * 15-25 x Bandage (basic)
-  * 6 x Blood IV (500ml)
-  * 10 x Morphine Autoinjector
-  * 10 x Epinephrine Autoinjector
-
-## 3. Advanced Medical
-The advanced medical system provides a more complex and detailed medical simulation and is based off the CSE/CMS medical system. It focuses on a more realistic model for injuries and treatment, thus resulting in a more important and prominent role for combat medics, and a bigger incentive to not get shot.
+The advanced medical system provides a more complex and detailed medical simulation and is based off the CSE CMS. It focuses on a more realistic model for injuries and treatments, thus resulting in a more important and prominent role for combat medics, and a bigger incentive to avoid getting shot.
 
 The system behind advanced medical is designed to attempt to mimic important parts of the human body, as well as react to any injuries sustained and treatments applied in a realistic manner. The available treatments and supplies in advanced medical are based off the Tactical Combat Casualty Care (TCCC) guidelines, which are the same guidelines used by real-life combat medics around the world.
 
 Besides the 4 elements introduced by basic medical, advanced introduces the following:
 
-* More detailed wound system
-* Accurate blood loss based upon sustained injuries
-* Vitals, including heart rate and blood pressure
-* Cardiac Arrest
-* Various treatment methods such as CPR, different kinds of IVs and tourniquets
-* A basic medication simulation
+- More detailed wound system.
+- Accurate blood loss based upon sustained injuries.
+- Vitals, including heart rate and blood pressure.
+- Cardiac Arrest.
+- Various treatment methods such as CPR, different kinds of IVs and a working tourniquet.
+- A basic medication simulation.
+ 
+## 2. Usage
 
-### 3.1 How it works
+### 2.1 Basic
 
-Same as with basic, when hit an injury is sustained. Different though is that the type of injury and the severity of it are based upon how the damage was done and what caused it. This affects both blood loss and immediate consequences, such as being knocked out or being killed right away. When a player has sustained an injury, this will be indicated by flashing red of the screen; this means the player is bleeding.
+When hit, units start to lose blood depending on the severity of their wounds. Once the level of blood falls below a certain threshold, the unit will fall unconscious and eventually die. Units will also fall unconscious when sustaining large amounts of damage at once or from high amounts of pain.
 
-#### 3.1.1 Stopping bleeding
-In order to stop the bleeding, all injuries on every bodypart requires treatment. This is done by either applying a tourniquet to legs or arms as a temporarly solution, or by using bandages to stop the bleeding as a more permament fix. 
+#### 2.1.1 Wounds, bandages and medications
 
-#### 3.1.2 Vitals
-While a unit is bleeding however, the blood volume decreases which will result in a change of vitals.  Depending on the factors such as current blood volume, the blood loss rate, medication used, the blood pressure will start to drop. To counter this drop, also based upon the previously mentioned factors and others, the heart rate will adjust accordingly to attempt to keep blood pressure at safe levels. This means that for any patient it is required to keep an eye on the vitals. This is done through the interaction system by selecting check pulse or blood pressure on either the arms or head.
 
-#### 3.1.3 Medication
-To stabilize the vitals and to counter for example pain, a player/medic can use medication. Advanced medical has 3 different medications available:
+##### 2.1.1.1 Wounds
 
-* Atropine
-* Morphine
-* Epinephrine
+It's pretty straightforward compared to advanced, you only have two types of wounds.
 
-Atropine is a vagolytic and anticholinergic drug which in low dosages reduces heart rate but in high dosages increases it, countering effects of organophosphate poisoning (in NBC scenarios; anticholinesterase poisoning) and symptomatic bradycardia (in post-ROSC care and resuscitative medicine).
+- Yellow: you need one bandage to heal it.
+- Red: you need two bandages to heal it.
 
-Morphine is used to alleviate large amounts of pain. Has an effect similar to Heroin due to its opiate properties. Must only ever be given once, and only when bleeding has been reduced to a minimum. Morphine must never be given to a casualty with a low heart rate, as it can stop the heart. It's effect lasts up to 15 minutes.
+##### 2.1.1.2 Bandages
 
-Epinephrine is used to increase heart rate and blood pressure and alleviate unconsciousness. Epinephrine is a synthetic form of Adrenaline, which is naturally produced in the body. It can also be applied to counter-act the effects of Atropine. Be careful though, as it may only be given once.
+- All of them have the same effect.
 
-_Epinephrine must never be given to a casualty with a high heart rate or blood pressure._
+##### 2.1.1.3 Tourniquet
 
-#### 3.1.4 Types of wounds
-Advanced medical system brings more different types of wounds, each with its own effects on patient. We distinguish minor, medium and large wound sizes. Below there is a list of those wounds:
+- Serves no use in basic
 
-* Abrasions (or scrapes)
-  * Also called scrapes, they occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
-  * Sources: falling, ropeburn, vehicle crashes.
-  * Effects: pain - extremely light, bleeding - extremely slowly
+##### 2.1.1.4 IVs
 
-* Avulsions
-  * Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
-  * Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites.
-  * Effects: pain - extremely high, bleeding - extremely fast (depends on wound size).
+IV | Effect
+---------- | ---------- |
+Saline | Serves no use in basic
+Plasma | Serves no use in basic
+Blood | Restores the blood of the patient
 
-* Contusions
-  * Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
-  * Sources: bullets, backblast, punches, vehicle crashes, falling.
-  * Effects: pain - light, no bleeding.
+Use the appropriate amount depending on the situation (low / heavy loss of blood) (250, 500 or 1 000 mL)
 
-* Crush wounds
-  * Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
-  * Sources: falling, vehicle crashes, punches.
-  * Effects: pain - light, bleeding - extremely slowly.
 
-* Cut wounds
-  * Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
-  * Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs
-  * Effects: pain - light, bleeding - speed depends on lenght and size of the woundę.
+##### 2.1.1.5 Autoinjectors
 
-* Lacerations
-  * Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
-  * Sources: vehicle crashes, punches
-  * Effects: pain - light, bleeding - slow to medium speed (depends on wound size).
+Autoinjector | Effect
+---------- | ---------- |
+Morphine | Removes pain
+Epinephrine | Wakes up the patient
+Atropine | Serves no use in basic
 
-* Velocity wounds
-  * They are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
-  * Sources: bullets, grenades, explosions, artillery shells.
-  * Effects: pain - extremely high, bleeding - medium speed (depends on wound size).
+#### 2.1.2 Treating the patient
 
-* Puncture wounds
-  * Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
-  * Sources: stabs, grenades.
-  * Effects: pain - light, bleeding - slowly.
+- **Step 1:** Is the patient responsive?
+ - **Yes:** Ask him if he has wounds / he is in pain.
+ - **No:** Go to step 2.
+
+ 
+- **Step 2:** Is the patient wounded?
+ - **Yes:** Treat the wounds and go to step 3.
+ - **No:** Skip this step.
   
-We also distinguish different types of fractures (WIP/not implemented yet):
-* Broken femur
-  * Description
-  * Sources: bullets, vehicle crashes, backblast, explosions, artillery shells, grenades.
-  * Effects: pain - extremely high, unable to stand until healed by medic.
+
+- **Step 3:** Is the patient in pain?
+ - **Yes:** Give him morphine.
+ - **No:** Skip this step.
+
  
-#### 3.1.5 Bandage types
-Advanced medical system brings 4 different types of bandages and also properly working tourniquet. Below there is a list of all bandage types with effectiveness vs different wound types. Higher effectiveness bandages needs to be applied fewer times than ones with lower effectiveness. That depends on wound size. Applying bad type of bandage on given wound can yield wound opening after a while if not stiched fast enough.
-All bandage types weights about 50 grams each.
+- **Step 4:** Did the patient lose blood?
+ - **Yes:** Give blood via IV.
+ - **No:** Go to step 5.
+ - **No and patient responsive:** You're done.
 
-* Bandage (basic)
-  * Abrasions - highest effectiveness
-  * Avulsions - lowest effectiveness
-  * Contusions - highest effectiveness
-  * Crush wounds - low effectiveness
-  * Cut wounds - very low effectiveness
-  * Lacerations - medium effectiveness
-  * Velocity wounds - lowest effectiveness
-  * Puncture wounds - low effectiveness
 
-* Bandage (packing)
-  * Abrasions - highest effectiveness
-  * Avulsions - highest effectiveness
-  * Contusions - highest effectiveness
-  * Crush wounds - low effectiveness
-  * Cut wounds - lowest effectiveness
-  * Lacerations - lowest effectiveness
-  * Velocity wounds - highest effectiveness
-  * Puncture wounds - lowest effectiveness
+- **Step 5**
+ - If at this point the patient is still not back on its feet it's time to use an epinephrine autoinjector.
 
-* Bandage (elastic)
-  * Abrasions - highest effectiveness
-  * Avulsions - lowest effectiveness
-  * Contusions - highest effectiveness
-  * Crush wounds - highest effectiveness
-  * Cut wounds - highest effectiveness
-  * Lacerations - highest effectiveness
-  * Velocity wounds - low effectiveness
-  * Puncture wounds - high effectiveness
+#### 2.1.3 Additional informations
 
-* QuikClot
-  * Abrasions - medium effectiveness
-  * Avulsions - high effectiveness
-  * Contusions - medium effectiveness
-  * Crush wounds - medium effectiveness
-  * Cut wounds - medium effectiveness
-  * Lacerations - medium effectiveness
-  * Velocity wounds - high effectiveness
-  * Puncture wounds - high effectiveness
+- If the revive system is in place your character will not die until the revive timer is at 0. Even if a tank shoots your ass off an epinephrine shot will bring you back up after your wounds are treated. (The timer is invisible and may vary from mission to mission, it also depends on the amount of lives remaining you have.)
+- You can't do an overdose in basic.
 
-* Tourniquet
-  * Can only be applied on limbs
-  * Stops bleeding from wounds
-  * Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds
-  * If not taken off for a while it will cause pain to patient, can cause death that way
+### 2.2 Advanced
 
-#### 3.1.6 Transfuzions
-In case of blood loss, blood could be replenished by three different types of IV: blood, plasma and saline. We distinguish 3 different sizes of IV bags: 250ml, 500ml and 1000ml.
-Transfuzing 250ml of given IV takes about 1 minute to complete!
+Same as with basic, when hit an injury is sustained. Different though is that the type of injury and the severity of it are based upon how the damage was done and what caused it. This affects both blood loss and immediate consequences, such as being knocked out or being killed right away. When a player has sustained an injury, this will be indicated by flashing red on the screen; this means the player is bleeding.
 
-+#### 3.1.7 PAK and Surgical kit
-Using Personal Aid Kit brings patient to the best possible health state. Depending on module options, PAK can be used only in specified situations, specified place and by specified person.
-Surgical kit is used to stich bandaged wounds so they will never open again. Depending on module options, surgical kit can be used only in specified situations, specified place and by specified person.
+#### 2.2.1 Wounds, bandages and medications
 
-### 3.2 Advanced medical system - recommended gear
+
+##### 2.2.1.1 Abrasions (or scrapes)
+
+- They occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
+- Sources: falling, rope burn, vehicle crashes.
+- Effects: pain - extremely light, bleeding - extremely slowly.
+
+##### 2.2.1.2 Avulsions
+
+- Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
+- Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites.
+- Effects: pain - extremely high, bleeding - extremely fast (depends on wound size).
+
+##### 2.2.1.3 Contusions
+
+- Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
+- Sources: bullets, backblast, punches, vehicle crashes, falling.
+- Effects: pain - light, no bleeding.
+
+##### 2.2.1.4 Crush wounds
+
+- Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
+- Sources: falling, vehicle crashes, punches.
+- Effects: pain - light, bleeding - extremely slowly.
+
+##### 2.2.1.5 Cut wounds**
+
+- Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
+- Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs.
+- Effects: pain - light, bleeding - speed depends on length and size of the wound.
+
+
+##### 2.2.1.6 Lacerations (tears)
+
+- these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source or from an external source like a punch.
+- Sources: vehicle crashes, punches.
+- Effects: pain - light, bleeding - slow to medium speed (depends on wound size).
+
+##### 2.2.1.7 Velocity wound
+
+- They are caused by an object entering the body at a high speed, typically a bullet or small pieces of shrapnel.
+- Sources: bullets, grenades, explosions, artillery shells.
+- Effects: pain - extremely high, bleeding - medium speed (depends on wound size).
+
+
+##### 2.2.1.8 Puncture wounds
+
+- Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
+- Sources: stabs, grenades.
+- Effects: pain - light, bleeding - slowly.
+
+In order to stop the bleeding, all bleeding injuries on every body part requires treatment. This is done by either applying a tourniquet to legs or arms as a temporary solution, or by using bandages to stop the bleeding as a more permanent fix.
+
+
+##### 2.2.1.9 Bandages effectiveness
+
+Bandage | Abrasions | Avulsions | Contusions | Crush wounds | Cut wounds | Lacerations | Velocity wounds | Puncture wounds|
+---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------- |
+Basic | `highest` | lowest | `highest` | low | very low | medium | lowest | low
+Bandage (packing) | `highest` | `highest` | `highest` | low | lowest | lowest | `highest` | lowest
+Bandage (elastic) | `highest` | lowest | `highest` | `highest` | `highest` | `highest` | low | high
+QuikClot | medium | high | medium | medium | medium | medium | high | high
+
+##### 2.2.1.10 Tourniquet
+
+- Can only be applied on limbs.
+- Stops bleeding from wounds.
+- Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds.
+- If not taken off for a while it will cause pain to the patient.
+
+##### 2.2.1.11 IVs
+
+IV | Effect
+---------- | ---------- |
+Saline plasma and blood | All three restore the volume of liquid in the blood stream. as a result blood pressure is raised for all of them.
+
+Use the appropriate amount depending on the situation (heavy loss of blood, blood pressure too low) (250, 500 or 1 000 mL)
+
+##### 2.2.1.12 Autoinjectors
+
+Autoinjector | Effect
+---------- | ---------- |
+Morphine | lower the blood pressure and heart rate of the patient, also suppress pain
+Epinephrine | raise the heart rate of the patient
+Atropine | lower the heart rate of the patient
+
+##### 2.2.1.13 Surgical kit
+
+- Is only useful when advanced wounds (reopening) is enabled.
+- Stitch a wound to stop it from reopening.
+- It's use may be limited to a certain class and / or near a vehicle / facility.
+- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
+
+##### 2.2.1.14 PAK
+
+- Used to fully heal someone. (Removes any injury, restore vitals to a stable state and reset the medical history, clears all medication in the system.)
+- It's use may be limited to a certain class and / or near a vehicle / facility.
+- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
+
+#### 2.2.2 Vitals
+
+##### 2.2.2.1 Blood pressure 
+
+ NOTE:the `systolic` blood pressure is the number on the left, the `diastolic` blood pressure is the number on the right.
+
+- Blood pressure is affected by the amount of blood lost as well as IVs and medication.
+ - **Non existent:** 0 - 20 `systolic`.
+ - **Low:** 20 - 100 `systolic`.
+ - **Normal:** 100 - 160 `systolic`.
+ - **High:** 160 and above `systolic`.
+
+##### 2.2.2.2 Heart rate
+
+- The heart rate (pulse) is affected by the amount of blood lost and medications.
+ - **Low:** 45 and below
+ - **Normal:** between 46 and 119
+ - **High:** 120 and above
  
-* Soldier:
-  * 4 x Bandage (basic)
-  * 3 x Bandage (elastic)
-  * 3 x Bandage (packing)
-  * 3 x QuikClot
-  * 1 x Morphine Autoinjector
-  * 1 x Tourniquet
 
-* Combat First Responder (CFR):
-  * 10-15 x Bandage (basic)
-  * 15-20 x Bandage (elastic)
-  * 5-8 x Bandage (packing)
-  * 10-15 x QuikClot
-  * 3 x Tourniquet
-  * 4 x Saline IV (500ml)
-  * 5 x Morphine Autoinjector
-  * 5 x Epinephrine Autoinjector
-  * 8 x Atropine Autoinjector
+##### 2.2.2.3 Cardiac arrest
 
-* Medic:
-  * 10-15 x Bandage (basic)
-  * 15-20 x Bandage (elastic)
-  * 8 x Bandage (packing)
-  * 10-15 x QuikClot
-  * 5 x Tourniquet
-  * 6 x Saline IV (500ml)
-  * 8 x Morphine Autoinjector
-  * 8 x Epinephrine Autoinjector
-  * 12 x Atropine Autoinjector
-  * 1-3 x *Surgical kit*
-  * 1-3 x *Personal Aid Kit*
+- A patient will enter cardiac arrest when:</br>
+ - The heart rate is below 20.
+ - The heart rate is above 200.
+ - The systolic blood pressure is above 260.
+ - The diastolic blood pressure is below 40 and the heart rate is above 190.
+ - The systolic blood pressure is above 145 and the heart rate is above 150.
 
-* Paramedic:
-  * 10-15 x Bandage (basic)
-  * 15-20 x Bandage (elastic)
-  * 8 x Bandage (packing)
-  * 10-15 x QuikClot
-  * 5 x Tourniquet
-  * 2 x Saline IV (500ml)
-  * 3 x Blood IV (1000ml) - Taken from vehicle inventory only when needed
-  * 3 x Plasma IV (1000ml) - Taken from vehicle inventory only when needed
-  * 8 x Morphine Autoinjector
-  * 8 x Epinephrine Autoinjector
-  * 12 x Atropine Autoinjector
-  * 1-3 x *Surgical kit*
-  * 1-3 x *Personal Aid Kit*
 
-*medical item* - number of items that should be carried depends on module settings
+#### 2.2.3 Treating the patient
+This is a step by step guide, follow the steps from 1 to 6 in order unless stated otherwise.
 
-## Dependencies
+
+- **Step 1:** Is the patient responsive?
+ - **Yes:** Ask him if he has wounds / he is in pain and act accordingly.
+ - **No:** Go to step 2.
+
+
+- **Step 2:** Does the patient have a pulse?
+ - **Yes:** Go to step 3.
+ - **No:** If you are alone provide CPR, if you have someone else get him to do CPR while you treat the patient's wounds. skip to step 3 or 4 depending on the situation.
+ 
+
+- **Step 3:** Is the patient wounded?
+ - **Yes**: Treat the wounds.
+ - **No:** Skip this step.
+  
+
+- **Step 4:** Did the patient lose blood?
+ - **Yes:** Use IVs to restore the volume of liquid in the blood stream of the patient.
+ - **No:** Skip this step.
+
+
+- **Step 5:** Is the patient in pain?
+ - **Yes and stable pulse:** Give him morphine.
+ - **Yes and unstable heart rate:** Stabilize the heart rate before administrating morphine.
+ - **No:** You're done.
+
+
+- **Step 6:** is the patient awake now?
+ - **Yes:** You're done.
+ - **No:** Stabilize his pulse / make sure he isn't in pain or missing blood.
+
+Note that keeping the patient's vitals stable is very important while treating him.
+
+#### 2.2.4 Additional informations
+
+- As an infantryman you can use a tourniquet to stop a limb from bleeding, note that this is supposed to be a temporary solution and leaving the tourniquet more than 5 minutes will induce pain.
+- Epinephrine should **NEVER** be used in case of cardiac arrest, it will only make the patient harder to treat afterwards or might outright kill him (remember epinephrine raises the blood pressure, a blood pressure too high is deadly).
+- Pain is only suppressed and not removed by default.
+- You don't have to take epinephrine after you take morphine, just wait until your pulse stabilizes by itself (Provided that you are in a stable condition).
+- Giving too much morphine to a patient (more than one every 10 minutes) will put him in cardiac arrest because of a blood pressure / heart rate too low.
+
+## 3. Dependencies
 `ace_interaction`, `ace_modules`, `ace_apl`

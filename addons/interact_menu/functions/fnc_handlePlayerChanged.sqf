@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_newUnit,_oldUnit);
+params ["_newUnit", "_oldUnit"];
 
 // add to new unit
 private "_ehid";

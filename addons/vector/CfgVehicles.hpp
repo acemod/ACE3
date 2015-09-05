@@ -1,9 +1,3 @@
-
-#define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
-    weapon = #WEAPON; \
-    count = COUNT; \
-}
-
 class CfgVehicles {
     class Item_Base_F;
     class ACE_Item_Vector: Item_Base_F {

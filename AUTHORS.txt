@@ -1,4 +1,4 @@
-﻿# ACE 3 CONTRIBUTOR LIST
+# ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
@@ -14,6 +14,7 @@ Garth "L-H" de Wet <garthofhearts@gmail.com>
 Giallustio
 Glowbal
 Janus
+jokoho482 <jokoho482@gmail.com>`
 Kieran
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
@@ -37,8 +38,9 @@ Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
 Anthariel <Contact@storm-simulation.com>
 Asgar Serran <piechottaf@web.de>
+Bamse <bamsis@gmail.com>
 Bla1337
-BlackPixxel
+BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
 Brisse <brisse@outlook.com>
@@ -49,8 +51,10 @@ Coren <coren4@gmail.com>
 Crusty
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
+Drill <drill87@gmail.com>
 eRazeri
 evromalarkey <evromalarkey@gmail.com>
+F3 Project <alanr@ferstaberinde.com>
 Falke75
 Ferenczi
 Ferenzi
@@ -66,8 +70,9 @@ Hamburger SV
 Harakhti <shadowdragonphd@gmail.com>
 havena <silveredenis@gmail.com>
 Hawkins
-jokoho482 <jokoho482@gmail.com>`
+Head <brobergsebastian@gmail.com>
 Jonpas <jonpas33@gmail.com>
+Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
 Kllrt <kllrtik@gmail.com>
 legman <juicemelon@msn.com>
@@ -77,11 +82,13 @@ Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
 Michail Nikolaev
+MikeMatrix <m.braun92@gmail.com>
 nic547 <nic547@outlook.com>
 nikolauska <nikolauska1@gmail.com>
 nomisum <nomisum@gmail.com>
 OnkelDisMaster <onkeldismaster@gmail.com>
 oscarmolinadev
+PaxJaromeMalues <seemax1991@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 rakowozz
