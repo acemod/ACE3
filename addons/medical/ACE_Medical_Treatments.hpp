@@ -105,6 +105,28 @@ class ACE_Medical_Actions {
             itemConsumed = 0;
             litter[] = {};
         };
+        class CPR: Bandage {
+            displayName = CSTRING(Actions_CPR);
+            displayNameProgress = CSTRING(Actions_PerformingCPR);
+            category = "advanced";
+            treatmentLocations[] = {"All"};
+            allowedSelections[] = {"body"};
+            requiredMedic = 0;
+            treatmentTime = 15;
+            items[] = {};
+            condition = QUOTE(!([(_this select 1)] call ace_common_fnc_isAwake) && GVAR(enableRevive));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
+            callbackFailure = "";
+            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
+            animationPatient = "";
+            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelf = "";
+            animationCallerSelfProne = "";
+            itemConsumed = 0;
+            litter[] = {};
+        };
     };
 
     class Advanced {
