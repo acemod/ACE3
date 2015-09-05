@@ -35,6 +35,7 @@
             <French>Balistique avancée</French>
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
+            <Italian>Balistica avanzata</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_DisplayName">
             <English>Advanced Ballistics</English>
@@ -46,6 +47,7 @@
             <French>Balistique avancée</French>
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
+            <Italian>Balistica avanzata</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_Description">
             <English>Enables advanced ballistics</English>
@@ -57,6 +59,7 @@
             <French>Activer la balistique avancée</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
+            <Italian>Abilita la balistica avanzata</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
@@ -68,6 +71,7 @@
             <French>Activer pour les snipers</French>
             <Hungarian>Mesterlövészeknek engedélyezve</Hungarian>
             <Russian>Включена для снайперов</Russian>
+            <Italian>Attiva per cecchini</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_Description">
             <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
@@ -79,6 +83,7 @@
             <French>Active la balistique avancée pour les snipers non locaux (en utilisant les optiques avancées)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi mesterlövészeknek (nagy-teljesítményű optika használatakor)</Hungarian>
             <Russian>Включает продвинутую баллистику для нелокальных снайперов (при использовании мощной оптики)</Russian>
+            <Italian>Abilita la balistica avanzata per cecchini non locali (quando si usano ottiche telescopiche)</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_DisplayName">
             <English>Enabled For Group Members</English>
@@ -90,6 +95,7 @@
             <French>Activer pour les membres groupés</French>
             <Hungarian>Csoporttagoknak engedélyezve</Hungarian>
             <Russian>Включена для группы</Russian>
+            <Italian>Attiva per membri del gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_Description">
             <English>Enables advanced ballistics for non local group members</English>
@@ -101,6 +107,7 @@
             <French>Active la balistique avancée pour les membres groupés non locaux</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi csoporttagoknak</Hungarian>
             <Russian>Включает продвинутую баллистику для нелокальных членов группы</Russian>
+            <Italian>Abilita la balistica avanzata per membri di gruppi non locali</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_DisplayName">
             <English>Enabled For Everyone</English>
@@ -112,6 +119,7 @@
             <French>Activer pour tout le monde</French>
             <Hungarian>Mindenkinek engedélyezve</Hungarian>
             <Russian>Включена для всех</Russian>
+            <Italian>Attiva per tutti</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
@@ -123,6 +131,7 @@
             <French>Active la balistique avancé pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát az összes nem-helyi játékosnak (ez a funkció leronthatja a teljesítményt intenzív többjátékos tűzharcok alatt)</Hungarian>
             <Russian>Включает продвинутую баллистику для всех нелокальных игроков (включение этой опции может снизить производительность при массовых перестрелках в мультиплеере)</Russian>
+            <Italian>Abilita la balistica avanzata per tutti i giocatori non locali (attivarlo può degradare le performance in combattimenti intensivi in multiplayer)</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
@@ -134,6 +143,7 @@
             <French>Toujours activer pour les membres groupés</French>
             <Hungarian>Mindig engedélyezve csoporttagoknak</Hungarian>
             <Russian>Всегда включена для членов группы</Russian>
+            <Italian>Sempre attiva per membri del gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_Description">
             <English>Always enables advanced ballistics when a group member fires</English>
@@ -145,6 +155,7 @@
             <French>Active tout le temps la balistique avancée quand un membre du groupe ouvre le feu</French>
             <Hungarian>Mindig engedélyezi a fejlett ballisztikát, ha egy csoporttag tüzel</Hungarian>
             <Russian>Всегда включает продвинутую баллистику когда стреляет член группы</Russian>
+            <Italian>Abilita sempre la balistica avanzata quando spara un membro del gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_DisplayName">
             <English>Disabled In FullAuto Mode</English>
@@ -156,6 +167,7 @@
             <French>Désactiver en mode rafale libre</French>
             <Hungarian>Automata módban letiltva</Hungarian>
             <Russian>Выкл. для автомат. режима</Russian>
+            <Italian>Inattivo in fuoco automatico</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_Description">
             <English>Disables the advanced ballistics during full auto fire</English>
@@ -167,6 +179,7 @@
             <French>Désactive la balistique avancée pour les tirs en rafale libre</French>
             <Hungarian>Letiltja a fejlett ballisztikát automata tüzelés folyamán</Hungarian>
             <Russian>Выключает продвинутую баллистику при стрельбе в полностью автоматическом режиме</Russian>
+            <Italian>Disabilita la balistica avanzata in fuoco automatico</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -178,6 +191,7 @@
             <French>Activer la simulation de la température</French>
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
+            <Italian>Abilita la simulazione della temperature delle munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -189,6 +203,7 @@
             <French>La température de la munition influe sur la vélocité intiale</French>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
+            <Italian>La velocità iniziale del proiettile varia con la temperatura</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
@@ -200,6 +215,7 @@
             <French>Activer la simulation de la longueur de canon</French>
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
+            <Italian>Abilita la simulazione della lunghezza della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
@@ -211,6 +227,7 @@
             <French>La longueur du canon influe sur la vélocité initale</French>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
+            <Italian>La velocità iniziale del proiettile varia con la lunghezza della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -222,6 +239,7 @@
             <French>Activer l'effet traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
+            <Italian>Abilita l'effetto tracciante</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
@@ -233,6 +251,7 @@
             <French>Active une tracante pour les munitions de gros calibre (seulement visible en utilisant des optiques avancées)</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
+            <Italian>Attiva un effetto tracciante per proiettili di alto calibro (visibile solamente quando si guarda attraverso un'ottica telescopica)</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -244,6 +263,7 @@
             <French>Intervalle de simulation</French>
             <Hungarian>Szimuláció intervalluma</Hungarian>
             <Russian>Интервал симуляции</Russian>
+            <Italian>Intervallo di simulazione</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -255,6 +275,7 @@
             <French>Défini un intervalle de calcul entre deux simulations</French>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
+            <Italian>Definisce l'intervallo di tempo tra ogni calcolo</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -266,6 +287,7 @@
             <French>Rayon de simulation</French>
             <Hungarian>Szimuláció hatóköre</Hungarian>
             <Russian>Радиус симуляции</Russian>
+            <Italian>Raggio della simulazione</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
@@ -277,6 +299,7 @@
             <French>Défini le rayon autour du joueur (en mètres) d'application de la balistique avancée</French>
             <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékek fejlett ballisztikát használnak</Hungarian>
             <Russian>Определяет радиус вокруг игрока (в метрах), в котором продвинутая баллистика применяется к снарядам</Russian>
+            <Italian>Definisce il raggio intorno al giocatore (in metri) per il quale la balistica avanzata viene applicata ai proiettili</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_Description">
             <English>This module enables advanced ballistics simulation - meaning the trajectory of projectiles is influenced by variables like air temperature, atmospheric pressure, humidity, gravity, the type of ammunition and the weapon from which it was fired.</English>
@@ -286,6 +309,7 @@
             <French>Ce module active la simulation de balistique avancée - ie les projectiles sont influencé par des varibles comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelles ils sont tirés</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
+            <Italian>Questo modulo abilita la simulazione di balistica avanzata - significa che la traiettoria del proiettile viene infulenzata da variabili come la temperatura dell'aria, pressione atmosferica, umitidà, gravità, il tipo di munizioni e l'arma dalla quale vengono sparate.</Italian>
         </Key>
     </Package>
 </Project>
