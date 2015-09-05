@@ -582,7 +582,7 @@
             <English>Assign Engineer</English>
             <Polish>Przydziel inżyniera</Polish>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_DisplayName">
+        <Key ID="STR_ACE_Repair_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
         </Key>
@@ -618,10 +618,6 @@
             <English>Assign Repair Vehicle</English>
             <Polish>Przydziel pojazd naprawczy</Polish>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
-            <English>List</English>
-            <Polish>Lista</Polish>
-        </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy naprawcze, oddzielone przecinkami.</Polish>
@@ -641,10 +637,6 @@
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
             <Polish>Przydziel budynek naprawczy</Polish>
-        </Key>
-        <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
-            <English>List</English>
-            <Polish>Lista</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
@@ -668,9 +660,6 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
-        </Key>
-        <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
-            <English>List</English>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
