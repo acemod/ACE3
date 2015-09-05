@@ -40,6 +40,4 @@ PREP(spawnObject);
 PREP(useItem);
 PREP(useItems);
 
-GVAR(addSparePartsCollection) = [];
-
 ADDON = true;
