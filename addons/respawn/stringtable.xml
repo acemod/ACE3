@@ -210,7 +210,7 @@
             <Czech>Upozornění na přátelskou střelbu</Czech>
             <Portuguese>Mensagens de fogo amigo</Portuguese>
             <Hungarian>Baráti tűz üzenetek</Hungarian>
-            <Russian>Сообщения о дружественном огне (Friendly Fire)</Russian>
+            <Russian>Сообщения об огне по своим</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
