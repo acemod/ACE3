@@ -33,6 +33,6 @@ _amountOfGeneric = count _genericMessages;
     _lbCtrl lbSetColor [_forEachIndex + _amountOfGeneric, _color];
 } forEach _allInjuryTexts;
 
-if !(_allInjuryTexts isEqualTo []) then {
+if (_allInjuryTexts isEqualTo []) then {
     _lbCtrl lbAdd localize ELSTRING(medical,NoInjuriesBodypart);
 };
