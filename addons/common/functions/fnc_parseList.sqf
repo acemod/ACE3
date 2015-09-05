@@ -46,7 +46,7 @@ if (_checkNil) then {
     _nilCheckedList = [];
     {
         if !(isNil _x) then {
-            _nilCheckedList pushBack _x;
+            _nilCheckedList pushBack (missionNamespace getVariable _x);
         };
         nil
     } count _list;
