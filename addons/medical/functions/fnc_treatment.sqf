@@ -34,6 +34,9 @@ if (GVAR(level) >= 2) then {
 };
 if !(isClass _config) exitwith {false};
 
+// Allow self treatment check
+if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
+
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
 } else {

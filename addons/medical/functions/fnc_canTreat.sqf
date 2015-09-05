@@ -26,6 +26,9 @@ _config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select 
 
 if !(isClass _config) exitwith {false};
 
+// Allow self treatment check
+if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
+
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
 } else {
