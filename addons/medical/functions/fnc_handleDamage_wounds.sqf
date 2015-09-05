@@ -19,6 +19,7 @@
 
 private ["_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
+TRACE_6("ACE_DEBUG: HandleDamage Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
 // Administration for open wounds and ids
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
@@ -60,3 +61,4 @@ if (count _woundsCreated > 0) then {
 
 _painLevel = _unit getvariable [QGVAR(pain), 0];
 _unit setvariable [QGVAR(pain), _painLevel + _painToAdd];
+TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD",_unit, _painLevel, _painToAdd, _unit getvariable QGVAR(pain), _unit getvariable QGVAR(openWounds),_woundsCreated);

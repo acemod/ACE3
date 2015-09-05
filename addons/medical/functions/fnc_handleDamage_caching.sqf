@@ -20,7 +20,7 @@
 
 private ["_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile"];
-
+TRACE_8("ACE_DEBUG: HandleDamage_Caching Called",_unit, _selectionName, _damage, _source, _projectile,GVAR(SELECTIONS),GVAR(HITPOINTS),damage _unit);
 _hitSelections = GVAR(SELECTIONS);
 _hitPoints = GVAR(HITPOINTS);
 
@@ -149,5 +149,7 @@ if (_selectionName != "") then {
     _unit setVariable [QGVAR(cachedDamages), _cache_damages];
     _unit setVariable [QGVAR(cachedHandleDamageParams), _cache_params];
 };
+
+TRACE_8("ACE_DEBUG: HandleDamage_Caching",_unit, _newDamage, _cache_params, _cache_damages, _unit getVariable QGVAR(cachedProjectiles), _unit getVariable QGVAR(cachedHitPoints), _unit getVariable QGVAR(cachedDamages), _unit getVariable QGVAR(cachedHandleDamageParams));
 
 _newDamage
