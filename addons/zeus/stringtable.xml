@@ -157,14 +157,17 @@
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
             <Polish>Przydziel medyka</Polish>
+            <Portuguese>Definir médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
             <Polish>Przydziel pojazd medyczny</Polish>
+            <Portuguese>Definir veículo médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
             <Polish>Przydziel budynek medyczny</Polish>
+            <Portuguese>Definir instalação médica</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -193,10 +196,12 @@
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
             <Polish>Jednostka musi być budynkiem</Polish>
+            <Portuguese>Unidade deve ser uma estrutura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
             <Polish>Jednostka musi być pojazdem</Polish>
+            <Portuguese>Unidade deve ser um veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -231,10 +236,12 @@
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
             <Polish>Dodaj obiekt do kuratora</Polish>
+            <Portuguese>Adicionar objetos para o Curator</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
             <Polish>Dodaje każdy zespawnowany obiekt do wszystkich kuratorów podczas misji</Polish>
+            <Portuguese>Adicionar qualquer objeto criado para todos os curators na missão</Portuguese>
         </Key>
     </Package>
 </Project>

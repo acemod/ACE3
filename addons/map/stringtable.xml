@@ -21,12 +21,15 @@
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
+            <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
+            <Portuguese>Brilho de lanterna no mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
+            <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -162,26 +165,32 @@
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
             <Polish>Latarki</Polish>
+            <Portuguese>Lanternas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
             <Polish>Noktowizja</Polish>
+            <Portuguese>Óculos de Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
             <Polish>Włącz</Polish>
+            <Portuguese>Ligado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
             <Polish>Wyłącz</Polish>
+            <Portuguese>Desligado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
             <Polish>Zwiększ czułość</Polish>
+            <Portuguese>Aumentar brilho</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
             <Polish>Zmniejsz czułość</Polish>
+            <Portuguese>Diminuir brilho</Portuguese>
         </Key>
     </Package>
 </Project>

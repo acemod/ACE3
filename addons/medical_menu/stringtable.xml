@@ -1,45 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="Combat Space Enhancement">
     <Package name="Combat Medical System">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
             <English>Medical Menu</English>
             <Polish>Menu medyczne</Polish>
+            <Portuguese>Menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
             <Polish>Akt. menu medyczne</Polish>
+            <Portuguese>Permitir menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
             <Polish>Zezwalaj graczom korzystać z menu medycznego</Polish>
+            <Portuguese>Permite que clientes utilizem o menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
             <Polish>Użyj menu medycznego</Polish>
+            <Portuguese>Usar o menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
             <Polish>Jeżeli zezwolone przez serwer, aktywuj menu medyczne poprzez skrót klawiszowy i menu interakcji.</Polish>
+            <Portuguese>Se permitido pelo servidor, ativa a opção de usar o menu médico por atalhos de teclas e menu de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
             <Polish>Otwieraj ponownie menu medyczne</Polish>
+            <Portuguese>Reabrir menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
             <Polish>Otwórz ponownie menu medyczne po udanym zakończeniu leczenia</Polish>
+            <Portuguese>Reabre o menu médico depois de um tratamento bem sucedido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
             <Polish>Otwórz menu medyczne</Polish>
+            <Portuguese>Abrir menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
             <Polish>Ustawienia menu medycznego</Polish>
+            <Portuguese>Preferências do menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
             <Polish>Skonfiguruj opcje menu medycznego</Polish>
+            <Portuguese>Configura o uso do menu médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -47,6 +57,7 @@
             <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
             <French>EXAMINER &amp; TRAITEMENTS</French>
             <Polish>BADANIE &amp; LECZENIE</Polish>
+            <Portuguese>EXAMINAR &amp; TRATAMENTO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS">
             <English>STATUS</English>
@@ -54,6 +65,7 @@
             <Spanish>ESTADO</Spanish>
             <French>ÉTATS</French>
             <Polish>STATUS</Polish>
+            <Portuguese>ESTADO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
             <English>OVERVIEW</English>
@@ -61,6 +73,7 @@
             <Spanish>DESCRIPCIÓN</Spanish>
             <French>DESCRIPTION</French>
             <Polish>OPIS</Polish>
+            <Portuguese>VISÃO GERAL</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
@@ -68,6 +81,7 @@
             <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
             <French>REGISTRE DES SOINS</French>
             <Polish>LOGI AKTYWNOŚCI</Polish>
+            <Portuguese>REGISTRO DE ATIVIDADE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -75,6 +89,7 @@
             <Spanish>VISTA RÁPIDA</Spanish>
             <French>VUE RAPIDE</French>
             <Polish>SZYBKI PODGLĄD</Polish>
+            <Portuguese>VISÃO RÁPIDA</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
@@ -82,6 +97,7 @@
             <Spanish>Ver Triage</Spanish>
             <French>Voir Carte de Triage</French>
             <Polish>Pokaż kartę segregacyjną</Polish>
+            <Portuguese>Ver cartão de triagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
             <English>Examine Patient</English>
@@ -89,6 +105,7 @@
             <Spanish>Examinar Paciente</Spanish>
             <French>Examiner Patient</French>
             <Polish>Zbadaj pacjenta</Polish>
+            <Portuguese>Examinar paciente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
             <English>Bandage / Fractures</English>
@@ -96,6 +113,7 @@
             <Spanish>Vendajes/Fracturas </Spanish>
             <French>Bandages / Fractures</French>
             <Polish>Bandaże / Złamania</Polish>
+            <Portuguese>Bandagens / Fraturas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDICATION">
             <English>Medication</English>
@@ -103,6 +121,7 @@
             <Spanish>Medicación</Spanish>
             <French>Médications</French>
             <Polish>Leki</Polish>
+            <Portuguese>Medicação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
             <English>Airway Management</English>
@@ -110,6 +129,7 @@
             <Spanish>Vías Aéreas</Spanish>
             <French>Gestion Des Voie REspiratoire</French>
             <Polish>Drogi oddechowe</Polish>
+            <Portuguese>Vias aéreas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
             <English>Advanced Treatments</English>
@@ -117,6 +137,7 @@
             <Spanish>Tratamientos Avanzados</Spanish>
             <French>Traitement Avancé</French>
             <Polish>Zaawansowane zabiegi</Polish>
+            <Portuguese>Tratamentos avançados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
             <English>Drag/Carry</English>
@@ -124,6 +145,7 @@
             <Spanish>Arrastrar/Cargar</Spanish>
             <French>Glisser/Porter</French>
             <Polish>Ciągnij/Nieś</Polish>
+            <Portuguese>Arrastar/Carregar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
             <English>Toggle (Self)</English>
@@ -131,6 +153,7 @@
             <French>Activer (sois)</French>
             <Polish>Przełącz (na siebie)</Polish>
             <Spanish>Alternar</Spanish>
+            <Portuguese>Alternar (Si mesmo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
@@ -138,7 +161,7 @@
             <Spanish>Seleccionar estado de Triage</Spanish>
             <French>Selectioner l'état de Triage</French>
             <Polish>Wybierz priorytet</Polish>
-
+            <Portuguese>Selecionar estado de triagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>
@@ -146,6 +169,7 @@
             <Spanish>Seleccionar Cabeza</Spanish>
             <French>Selectioner Tête</French>
             <Polish>Wybierz głowę</Polish>
+            <Portuguese>Selecionar Cabeça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
             <English>Select Torso</English>
@@ -153,6 +177,7 @@
             <Spanish>Seleccionar Torso</Spanish>
             <French>Selectioner Torse</French>
             <Polish>Wybierz tors</Polish>
+            <Portuguese>Selecionar Torso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
             <English>Select Left Arm</English>
@@ -160,6 +185,7 @@
             <Spanish>Seleccionar Brazo Izquierdo</Spanish>
             <French>Selectioner Bras Gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
+            <Portuguese>Selecionar Braço Esquerdo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
             <English>Select Right Arm</English>
@@ -167,6 +193,7 @@
             <Spanish>Seleccionar Brazo Derecho</Spanish>
             <French>Selectioner Bras Droit</French>
             <Polish>Wybierz prawą rękę</Polish>
+            <Portuguese>Selecionar Braço Direito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
             <English>Select Left Leg</English>
@@ -174,6 +201,7 @@
             <Spanish>Seleccionar Pierna Izquierda</Spanish>
             <French>Selectioner Jambe Gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
+            <Portuguese>Selecionar Perna Esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
             <English>Select Right Leg</English>
@@ -181,6 +209,7 @@
             <Spanish>Seleccionar Pierna Derecha</Spanish>
             <French>Selectioner Jambe Droite</French>
             <Polish>Wybierz prawą nogę</Polish>
+            <Portuguese>Selecionar Perna Direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
             <English>Head</English>
@@ -188,12 +217,14 @@
             <Spanish>Cabeza</Spanish>
             <French>Tête</French>
             <Polish>Głowa</Polish>
+            <Portuguese>Caebça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TORSO">
             <English>Torso</English>
             <Russian>Торс</Russian>
             <French>Torse</French>
             <Polish>Tors</Polish>
+            <Portuguese>Torso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_L">
             <English>Left Arm</English>
@@ -201,6 +232,7 @@
             <Spanish>Brazo Izquierdo</Spanish>
             <French>Bras Gauche</French>
             <Polish>Lewa ręka</Polish>
+            <Portuguese>Braço Esquerdo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_R">
             <English>Right Arm</English>
@@ -208,6 +240,7 @@
             <Spanish>Brazo Derecho</Spanish>
             <French>Bras Droit</French>
             <Polish>Prawa ręka</Polish>
+            <Portuguese>Braço Direito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_L">
             <English>Left Leg</English>
@@ -215,6 +248,7 @@
             <Spanish>Pierna Izquierda</Spanish>
             <French>Jambe Gauche</French>
             <Polish>Lewa noga</Polish>
+            <Portuguese>Perna Esquerda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_R">
             <English>Right Leg</English>
@@ -222,6 +256,7 @@
             <Spanish>Pierna Derecha</Spanish>
             <French>Jambe Droite</French>
             <Polish>Prawa noga</Polish>
+            <Portuguese>Perna Direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
             <English>Body Part: %1</English>
@@ -229,6 +264,7 @@
             <Spanish>Parte del cuerpo: %1</Spanish>
             <French>Partie du corps: %1</French>
             <Polish>Część ciała: %1</Polish>
+            <Portuguese>Parte do corpo: %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SMALL">
             <English>Small</English>
@@ -236,6 +272,7 @@
             <Spanish>Pequeña</Spanish>
             <French>Petite</French>
             <Polish>małym</Polish>
+            <Portuguese>Pequeno</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDIUM">
             <English>Medium</English>
@@ -243,6 +280,7 @@
             <Spanish>Mediana</Spanish>
             <French>moyenne</French>
             <Polish>średnim</Polish>
+            <Portuguese>Médio</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LARGE">
             <English>Large</English>
@@ -250,6 +288,7 @@
             <Spanish>Grande</Spanish>
             <French>Grande</French>
             <Polish>dużym</Polish>
+            <Portuguese>Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>
@@ -257,6 +296,7 @@
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
             <French>Il y a %2 %1 Blessure Ouverte</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
+            <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
@@ -264,6 +304,7 @@
             <Spanish>Hay 1 Herida Abierta %1</Spanish>
             <French>Il y a 1 blessure ouverte %1</French>
             <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
+            <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
@@ -271,6 +312,7 @@
             <Spanish>Hay una herida parcial abierta %1</Spanish>
             <French>Il y a une Blessure Patiellement Ouverte %1</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
+            <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
@@ -278,6 +320,7 @@
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
             <French>Il y a %2 %1 Blessure Bandée</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
+            <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
@@ -285,6 +328,7 @@
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
             <French>Il y a 1 %1 Blessure Bandée</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
+            <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
@@ -292,6 +336,7 @@
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
             <French>Il y a %1 Blessure Partielment Bandée</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
+            <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
             <English>Normal breathing</English>
@@ -299,6 +344,7 @@
             <Spanish>Respiración normal</Spanish>
             <French>Respiration Normale</French>
             <Polish>Normalny oddech</Polish>
+            <Portuguese>Respiração normal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
@@ -306,6 +352,7 @@
             <Spanish>No respira</Spanish>
             <French>Apnée</French>
             <Polish>Brak oddechu</Polish>
+            <Portuguese>Sem respiração</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -313,6 +360,7 @@
             <Spanish>Dificultad para respirar</Spanish>
             <French>Difficultée Respiratoire</French>
             <Polish>Trudności z oddychaniem</Polish>
+            <Portuguese>Dificuldade para respirar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
@@ -320,6 +368,7 @@
             <Spanish>Casi sin respirar</Spanish>
             <French>Respiration Faible</French>
             <Polish>Prawie brak oddechu</Polish>
+            <Portuguese>Quase sem respiração</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -327,6 +376,7 @@
             <Spanish>Sangrando</Spanish>
             <French>Seignement</French>
             <Polish>Krwawienie zewnętrzne</Polish>
+            <Portuguese>Sangrando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
             <English>in Pain</English>
@@ -334,6 +384,7 @@
             <Spanish>Con Dolor</Spanish>
             <French>A De La Douleur</French>
             <Polish>W bólu</Polish>
+            <Portuguese>Com dor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -341,6 +392,7 @@
             <Spanish>Mucha Sangre perdida</Spanish>
             <French>A Perdu Bcp de Sang</French>
             <Polish>Stracił dużo krwi</Polish>
+            <Portuguese>Perdeu muito sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -348,6 +400,7 @@
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Garot [CAT]</French>
             <Polish>Opaska uciskowa [CAT]</Polish>
+            <Portuguese>Torniquete [CAT]</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -355,6 +408,7 @@
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Canule Naseaupharyngée [NPA]</French>
             <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
+            <Portuguese>Tubo nasofaríngeo [NPA]</Portuguese>
         </Key>
     </Package>
 </Project>
