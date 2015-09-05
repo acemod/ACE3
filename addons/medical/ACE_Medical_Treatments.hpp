@@ -114,7 +114,7 @@ class ACE_Medical_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = QUOTE(!([(_this select 1)] call ace_common_fnc_isAwake) && GVAR(enableRevive));
+            condition = QUOTE(!([(_this select 1)] call ace_common_fnc_isAwake) && GVAR(enableRevive)>0);
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
             callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
@@ -627,6 +627,7 @@ class ACE_Medical_Advanced {
             class vehiclecrash {
                 thresholds[] = {{0.25, 5}};
                 selectionSpecific = 0;
+                lethalDamage = 0.2;
             };
             class backblast {
                 thresholds[] = {{0, 2},{0.55, 5}, {1, 6}};
@@ -644,6 +645,7 @@ class ACE_Medical_Advanced {
             class falling {
                 thresholds[] = {{0.1, 1}};
                 selectionSpecific = 1;
+                lethalDamage = 0.4;
             };
             class ropeburn {
                 thresholds[] = {{0.1, 1}};
