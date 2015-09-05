@@ -29,7 +29,6 @@ if ((_damageBodyParts select _part) > 0) then {
     _target setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
     TRACE_2("ACE_DEBUG: Treatment BASIC Bandage Broadcast value here",_unit, _target getvariable QGVAR(bodyPartStatus));
 };
-systemChat format["BANDAGE LOCAL RAN: %1", _this];
 
 EXPLODE_6_PVT(_damageBodyParts,_headDamage,_torsoDamage,_handsDamageR,_handsDamageL,_legsDamageR,_legsDamageL);
 _target setHitPointDamage ["hitHead", _headDamage min 0.95];
