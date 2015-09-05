@@ -79,7 +79,7 @@
             <Czech>Počet úlomků v daném snímku. Toto pomáhá rozšířit FPS dopad sledovaného úlomku napříč více snímky, omezuje jeho vliv ještě více.</Czech>
             <Portuguese>O número de cálculos por estilhaço rastreado para executar em qualquer quadro. Isso ajuda a distribuir o impacto no FPS do rastreamento de estilhaço em vários quadros, o que limita o seu impacto ainda mais.</Portuguese>
             <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
-            <Russian>Число обсчитываемых осколков за один кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
+            <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
