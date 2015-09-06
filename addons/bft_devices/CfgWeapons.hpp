@@ -15,6 +15,7 @@ class CfgWeapons {
     class ACE_DK10_b: GVAR(ItemCore) {
         descriptionShort = CSTRING(DK10_itemDescription_b);
         displayName = CSTRING(DK10_itemName_b);
+        model = QUOTE(PATHTOF(data\DK10.p3d));
         picture = QUOTE(PATHTOF(UI\inventory\DK10_icon.paa));
         class ItemInfo: InventoryItem_Base_F {
             mass = 40;

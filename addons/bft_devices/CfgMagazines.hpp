@@ -15,6 +15,7 @@ class CfgMagazines {
     class ACE_DK10Magazine_b: GVAR(MagazineCore) {
         descriptionShort = CSTRING(DK10_itemDescription_b);
         displayName = CSTRING(DK10_itemName_b);
+        model = QUOTE(PATHTOF(data\DK10.p3d));
         picture = QUOTE(PATHTOF(UI\inventory\DK10_icon.paa));
         mass = 40;
         EGVAR(bft,type) = "ACE_DK10_b";
