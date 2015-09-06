@@ -31,8 +31,7 @@ params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
-
-private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_muzzles", "_weaponMagazines", "_muzzleMagazines", "_ammoType", "_initSpeed", "_ammoConfig", "_caliber"];
+private ["_silencer", "_audibleFireCoef", "_loudness", "_strength", "_vehAttenuation", "_magazine", "_muzzles", "_weaponMagazines", "_muzzleMagazines", "_ammoType", "_initSpeed", "_ammoConfig", "_caliber", "_loudnessCoef"];
 
 _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
 
@@ -88,7 +87,14 @@ _caliber = call {
     if (_caliber <= 0) then { 6.5 } else { _caliber };
 };
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
+
+_loudnessCoef = getNumber (_ammoConfig >> QGVAR(loudnessCoef);
+if (_loudnessCoef >= 0) then {
+    _loudness = _loudness * _loudnessCoef;
+};
+
 _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
+
 
 //systemChat format["%1 : %2", _strength, _initSpeed];
 //systemChat format["%1 : %2 : %3", _weapon, _magazine, _initSpeed];
