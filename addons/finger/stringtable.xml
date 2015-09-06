@@ -8,6 +8,7 @@
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
             <Portuguese>Mostrar indicador para si mesmo</Portuguese>
+            <Italian>Mostra l'indicatore a se stessi</Italian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
@@ -16,6 +17,7 @@
             <Polish> Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
             <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
             <Portuguese>Renderizar o indicador para o jogador que está apontando. Esta opção não afeta se os outros jogadores verão ou não o indicador</Portuguese>
+            <Italian>Mostra l'indicatore al giocatore che sta puntando. Questa opzione non influenza se gli altri giocatori vedranno o no l'indicatore.</Italian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
@@ -24,6 +26,7 @@
             <Polish>Indykator palca</Polish>
             <Hungarian>Ujj-indikátor</Hungarian>
             <Portuguese>Indicador de apontamento</Portuguese>
+            <Italian>Indicatore di puntamento</Italian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
@@ -32,6 +35,7 @@
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
             <Portuguese>Cor do círculo de indicação</Portuguese>
+            <Italian>Colore del cerchio dell'inidicatore di puntamento</Italian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
@@ -40,6 +44,7 @@
             <Polish>Akcja "wskaż palcem"</Polish>
             <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
             <Portuguese>Ação "Apontar um dedo para"</Portuguese>
+            <Italian>Azione "punta il dito a"</Italian>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
@@ -48,6 +53,7 @@
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
             <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
+            <Italian>Punta e mostra un evidenziatore virtuale di dove stai guardando alle unità vicine. Può essere tenuto a lungo.</Italian>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
@@ -56,6 +62,7 @@
             <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
             <Russian>Настройки указания пальцем</Russian>
+            <Italian>Impostazioni indicatore</Italian>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -64,6 +71,7 @@
             <Hungarian>Mutatás engedélyezése</Hungarian>
             <Portuguese>Apontamento ativado</Portuguese>
             <Russian>Указание пальцем включено</Russian>
+            <Italian>Indicatore abilitato</Italian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -72,6 +80,7 @@
             <Hungarian>Ujj maximum hatótávja</Hungarian>
             <Portuguese>Distância máxima do apontamento</Portuguese>
             <Russian>Макс. дальность</Russian>
+            <Italian>Massima distanza del puntatore</Italian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -80,6 +89,7 @@
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
             <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
             <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по-умолчанию: 4 метра]</Russian>
+            <Italian>Massima distanza delle unità a cui mostrare l'indicatore [default: 4 metri]</Italian>
         </Key>
     </Package>
 </Project>

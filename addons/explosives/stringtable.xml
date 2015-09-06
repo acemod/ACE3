@@ -80,6 +80,7 @@
             <Russian>Заблокировано</Russian>
             <Czech>Blokováno</Czech>
             <Polish>Zablokowany</Polish>
+            <Italian>Bloccato</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -535,6 +536,7 @@
             <French>Module explosifs</French>
             <Hungarian>Robbanóanyag-rendszer</Hungarian>
             <Russian>Взрывные устройства</Russian>
+            <Italian>Sistema esplosivi</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
@@ -546,6 +548,7 @@
             <French>Requiert un spécialiste?</French>
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
+            <Italian>Richiede lo specialista?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -557,6 +560,7 @@
             <French>Le désarmoçage d'explosif requiert un spécialiste? Défaut: non</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
+            <Italian>Si richiede lo specialista esplosivi per disabilitare esplosivi? Default: No</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -568,6 +572,7 @@
             <French>Punir les non-spécialistes?</French>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
+            <Italian>Penalizza i non-specialisti?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
@@ -579,6 +584,7 @@
             <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes? Défaut: oui</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
+            <Italian>Aumenta il tempo necessario per completare le azioni per i non-specialisti? Default:Sì</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
@@ -589,6 +595,7 @@
             <French>Explosion si désamorçage?</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
+            <Italian>Esplode al disinnesco?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
@@ -599,6 +606,7 @@
             <French>Permet à certains explosifs d'exploser au désamorçage? Défaut: oui</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
+            <Italian>Abilita certi esplosivi ad esplodere al disinnesco? Default:Sì</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English>This module adjusts the settings related to explosives.</English>
@@ -609,6 +617,7 @@
             <French>Ce module ajuste les options relative aux explosifs</French>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
+            <Italian>Questo modulo permette di personlalizzare i parametri del modulo esplosivi.</Italian>
         </Key>
     </Package>
 </Project>

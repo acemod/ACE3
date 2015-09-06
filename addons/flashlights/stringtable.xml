@@ -7,6 +7,7 @@
             <Portuguese>Fulton MX-991</Portuguese>
             <Russian>Fulton MX-991</Russian>
             <Czech>Fulton MX-991</Czech>
+            <Italian>Fulton MX-911</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -14,6 +15,7 @@
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
+            <Italian>Torcia con filtro rosso. Da usare sulla mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -21,6 +23,7 @@
             <Portuguese>Maglite XL50</Portuguese>
             <Russian>Maglite XL50</Russian>
             <Czech>Maglite XL50</Czech>
+            <Italian>Maglite XL50</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -28,6 +31,7 @@
             <Portuguese>Mini lanterna branca. Para uso no mapa.</Portuguese>
             <Russian>Небольшой фонарик белого света. Для использования на карте.</Russian>
             <Czech>Bílá mini svítilna. Pro nahlédnutí do mapy.</Czech>
+            <Italian>Torcia bianca. Da usare sulla mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -35,6 +39,7 @@
             <Portuguese>KSF-1</Portuguese>
             <Russian>KSF-1</Russian>
             <Czech>KSF-1</Czech>
+            <Italian>KSF-1</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -42,6 +47,7 @@
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
+            <Italian>Torcia con filtro rosso. Da usare sulla mappa.</Italian>
         </Key>
     </Package>
 </Project>
