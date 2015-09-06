@@ -9,7 +9,7 @@
             <Spanish>Alambre de espino</Spanish>
             <French>Concertina wire</French>
             <Czech>Ostnatý drát</Czech>
-            <Italian>Concertina wire</Italian>
+            <Italian>Filo spinato di concertina</Italian>
             <Hungarian>Concertina wire</Hungarian>
             <Portuguese>Arame farpado</Portuguese>
         </Key>
@@ -21,7 +21,7 @@
             <Spanish>Bobina de alambre de espino</Spanish>
             <French>Concertina wire coil</French>
             <Czech>Smyčka ostnatého drátu</Czech>
-            <Italian>Concertina wire coil</Italian>
+            <Italian>Bobina di concertina</Italian>
             <Hungarian>Concertina wire coil</Hungarian>
             <Portuguese>Bobina de arame farpado</Portuguese>
         </Key>
@@ -33,7 +33,7 @@
             <Spanish>Desmontar alambre de espino</Spanish>
             <French>Dismount Concertina wire</French>
             <Czech>Svinout ostnatý drát</Czech>
-            <Italian>Dismount Concertina wire</Italian>
+            <Italian>Smonta la concertina</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>
             <Portuguese>Desmontar arame farpado</Portuguese>
         </Key>
@@ -45,7 +45,7 @@
             <Spanish>Desplegar alambre de espino</Spanish>
             <French>Deploy Concertina wire</French>
             <Czech>Rozvinout ostnatý drát</Czech>
-            <Italian>Deploy Concertina wire</Italian>
+            <Italian>Posa il filo di concertina</Italian>
             <Hungarian>Deploy Concertina wire</Hungarian>
             <Portuguese>Colocar arame farpado</Portuguese>
         </Key>

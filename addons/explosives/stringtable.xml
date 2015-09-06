@@ -76,6 +76,7 @@
         <Key ID="STR_ACE_Explosives_BlockedAction">
             <English>Blocked</English>
             <Spanish>Obstruido</Spanish>
+            <Italian>Bloccato</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -529,6 +530,7 @@
             <Czech>Systém výbušnin</Czech>
             <Portuguese>Sistema de explosivos</Portuguese>
             <Hungarian>Robbanóanyag-rendszer</Hungarian>
+            <Italian>Sistema esplosivi</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
@@ -538,6 +540,7 @@
             <Czech>Vyžadovat specialistu?</Czech>
             <Portuguese>Requer especialista?</Portuguese>
             <Hungarian>Specialisták igénylése?</Hungarian>
+            <Italian>Richiede lo specialista?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -547,6 +550,7 @@
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
+            <Italian>Si richiede lo specialista esplosivi per disabilitare esplosivi? Default: No</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -556,6 +560,7 @@
             <Czech>Potrestat, pokud není specialista?</Czech>
             <Portuguese>Punir não especialistas?</Portuguese>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
+            <Italian>Penalizza i non-specialisti?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
@@ -565,6 +570,7 @@
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
+            <Italian>Aumenta il tempo necessario per completare le azioni per i non-specialisti? Default:Sì</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
@@ -573,6 +579,7 @@
             <Czech>Explodovat při zneškodňování?</Czech>
             <Spanish>Explotar al desactivar?</Spanish>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
+            <Italian>Esplode al disinnesco?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
@@ -581,6 +588,7 @@
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
+            <Italian>Abilita certi esplosivi ad esplodere al disinnesco? Default:Sì</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English>This module adjusts the settings related to explosives.</English>
@@ -589,6 +597,7 @@
             <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
             <Portuguese>Este módulo permite personalizar as definições relacionadas a explosivos.</Portuguese>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
+            <Italian>Questo modulo permette di personlalizzare i parametri del modulo esplosivi.</Italian>
         </Key>
     </Package>
 </Project>
