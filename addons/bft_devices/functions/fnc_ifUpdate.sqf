@@ -158,7 +158,6 @@ if (isNil "_mode") then {
                     IDC_GROUP_UAV,
                     IDC_GROUP_HCAM,
                     IDC_GROUP_MESSAGE,
-                    IDC_MINIMAPBG,
                     IDC_HCAMMAP,
                     IDC_UAVMAP,
                     IDC_SCREEN,
@@ -254,7 +253,6 @@ if (isNil "_mode") then {
                     if (_mode == "UAV") exitWith {
                         _displayItemsToShow = [
                             IDC_GROUP_UAV,
-                            IDC_MINIMAPBG,
                             IDC_UAVMAP
                         ];
                         _btnActCtrl ctrlSetTooltip "View Gunner Optics";
@@ -268,7 +266,6 @@ if (isNil "_mode") then {
                     if (_mode == "HCAM") exitWith {
                         _displayItemsToShow = [
                             IDC_GROUP_HCAM,
-                            IDC_MINIMAPBG,
                             IDC_HCAMMAP
                         ];
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
@@ -302,7 +299,6 @@ if (isNil "_mode") then {
                             _mode = "HCAM";
                             _displayItemsToShow = [
                                 IDC_GROUP_HCAM,
-                                IDC_MINIMAPBG,
                                 IDC_HCAMMAP
                             ];
                             HASH_SET(_settings,"hCamListUpdate",true);

@@ -17,7 +17,6 @@
 #define IDC_SCREEN_BLACK     1203
 #define IDC_WIN_BACK         1210
 #define IDC_WIN_TASKBAR      1211
-#define IDC_MINIMAPBG        1218
 #define IDC_HCAMMAP          1220
 #define IDC_HCAMLIST         1230
 #define IDC_HCAMDISPLAY      1240

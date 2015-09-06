@@ -30,22 +30,11 @@ class GVAR(DISPLAY_NAME) {
             w = pxToScreen_W(DK10_MAP_W);
             h = pxToScreen_H(DK10_MAP_H);
         };
-        class windowsBar: GVAR(RscPicture) {
-            idc = IDC_WIN_TASKBAR;
-            //text = "\cTab\img\Desktop_bar.jpg";
-            x = pxToScreen_X(DK10_TASKBAR_X);
-            y = pxToScreen_Y(DK10_TASKBAR_Y);
-            w = pxToScreen_W(DK10_TASKBAR_W);
-            h = pxToScreen_H(DK10_TASKBAR_H);
-        };
-        class MiniMapBG: GVAR(DK10_window_back_BL) {
-            idc = IDC_MINIMAPBG;
-        };
         class UavMap: GVAR(DK10_RscMapControl) {
             idc = IDC_UAVMAP;
             x = pxToScreen_X(DK10_WINDOW_CONTENT_L_X);
             y = pxToScreen_Y(DK10_WINDOW_CONTENT_B_Y);
-            w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+            w = pxToScreen_W(DK10_WINDOW_CONTENT_L_W);
             h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
         };
         class HcamMap: UavMap {
@@ -134,39 +123,48 @@ class GVAR(DISPLAY_NAME) {
                     IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
+                    text = "Select UAV";
+                };
+                class MiniMapBG: GVAR(DK10_window_back_BL) {
+                    IDC_COUNTER
+                    x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
+                    y = pxToGroup_Y(DK10_WINDOW_BACK_B_Y);
+                    text = "UAV Location";
                 };
                 class UAVVidBG1: GVAR(DK10_window_back_TR) {
                     IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
+                    text = "Pilot view";
                 };
                 class UAVVidBG2: GVAR(DK10_window_back_BR) {
                     IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_B_Y);
+                    text = "Gunner view";
                 };
                 class UAVlist: GVAR(DK10_RscListbox) {
                     idc = IDC_UAVLIST;
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_CONTENT_T_Y);
-                    w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+                    w = pxToScreen_W(DK10_WINDOW_CONTENT_L_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                     onLBSelChanged = onLBSC(UAVlist);
                 };
                 class UAVdisplay: GVAR(RscPicture) {
                     idc = IDC_UAVDISPLAY;
-                    text = "#(argb,512,512,1)r2t(rendertarget8,1.1896551724)";
+                    text = "#(argb,512,512,1)r2t(rendertarget8,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_CONTENT_T_Y);
-                    w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+                    w = pxToScreen_W(DK10_WINDOW_CONTENT_R_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                 };
                 class UAV2nddisplay: GVAR(RscPicture) {
                     idc = IDC_UAV2NDDISPLAY;
-                    text = "#(argb,512,512,1)r2t(rendertarget9,1.1896551724)";
+                    text = "#(argb,512,512,1)r2t(rendertarget9,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_CONTENT_B_Y);
-                    w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+                    w = pxToScreen_W(DK10_WINDOW_CONTENT_R_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                 };
             };
@@ -186,26 +184,34 @@ class GVAR(DISPLAY_NAME) {
                     IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
+                    text = "Select Helmet Cam";
+                };
+                class MiniMapBG: GVAR(DK10_window_back_BL) {
+                    IDC_COUNTER
+                    x = pxToGroup_X(DK10_WINDOW_BACK_L_X);
+                    y = pxToGroup_Y(DK10_WINDOW_BACK_B_Y);
+                    text = "Unit Location";
                 };
                 class HcamVidBG: GVAR(DK10_window_back_TR) {
                     IDC_COUNTER
                     x = pxToGroup_X(DK10_WINDOW_BACK_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_BACK_T_Y);
+                    text = "Video Stream";
                 };
                 class HcamList: GVAR(DK10_RscListbox) {
                     idc = IDC_HCAMLIST;
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_L_X);
                     y = pxToGroup_Y(DK10_WINDOW_CONTENT_T_Y);
-                    w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+                    w = pxToScreen_W(DK10_WINDOW_CONTENT_L_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                     onLBSelChanged = onLBSC(HCAMlist);
                 };
                 class HcamDisplay: GVAR(RscPicture) {
                     idc = IDC_HCAMDISPLAY;
-                    text = "#(argb,512,512,1)r2t(rendertarget12,1.1896551724)";
+                    text = "#(argb,512,512,1)r2t(rendertarget12,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
                     y = pxToGroup_Y(DK10_WINDOW_CONTENT_T_Y);
-                    w = pxToScreen_W(DK10_WINDOW_CONTENT_W);
+                    w = pxToScreen_W(DK10_WINDOW_CONTENT_R_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                 };
             };
@@ -301,7 +307,7 @@ class GVAR(DISPLAY_NAME) {
         // ---------- FULLSCREEN HCAM -----------
         class HcamFull: GVAR(RscPicture) {
             idc = IDC_HCAM_FULL;
-            text = "#(argb,512,512,1)r2t(rendertarget13,1.3096153846)";
+            text = "#(argb,512,512,1)r2t(rendertarget13,1.0)";
             x = pxToScreen_X(SCREEN_CONTENT_X);
             y = pxToScreen_Y(SCREEN_CONTENT_Y);
             w = pxToScreen_W(SCREEN_CONTENT_W);

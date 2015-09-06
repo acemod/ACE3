@@ -88,11 +88,10 @@ class GVAR(DK10_OSD_dirOctant): GVAR(DK10_OSD_dirDegree) {
     style = ST_RIGHT;
     x = pxToScreen_X(DK10_OSD_X(1));
 };
-class GVAR(DK10_window_back_TL): GVAR(RscPicture) {
-    //text = "\cTab\img\window_2.jpg";
+class GVAR(DK10_window_back_TL): GVAR(RscFrame) {
     x = pxToScreen_X(DK10_WINDOW_BACK_L_X);
     y = pxToScreen_Y(DK10_WINDOW_BACK_T_Y);
-    w = pxToScreen_W(DK10_WINDOW_BACK_W);
+    w = pxToScreen_W(DK10_WINDOW_BACK_L_W);
     h = pxToScreen_H(DK10_WINDOW_BACK_H);
 };
 class GVAR(DK10_window_back_BL): GVAR(DK10_window_back_TL) {
@@ -100,6 +99,7 @@ class GVAR(DK10_window_back_BL): GVAR(DK10_window_back_TL) {
 };
 class GVAR(DK10_window_back_TR): GVAR(DK10_window_back_TL) {
     x = pxToScreen_X(DK10_WINDOW_BACK_R_X);
+    w = pxToScreen_W(DK10_WINDOW_BACK_R_W);
 };
 class GVAR(DK10_window_back_BR): GVAR(DK10_window_back_TR) {
     y = pxToScreen_Y(DK10_WINDOW_BACK_B_Y);
