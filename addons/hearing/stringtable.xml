@@ -148,7 +148,7 @@
             <Russian>Контролирует оглушение в бою и звон в ушах. При активации играки могут быть оглушены близкими выстрелами и взрывами при отсутствии защиты для ушей.</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
-            <English>Effect Zeus RC</English>
+            <English>Affects Zeus RC</English>
             <Russian>Влияет на юнита Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
