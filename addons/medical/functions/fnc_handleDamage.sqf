@@ -1,4 +1,4 @@
-/*
+    /*
  * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
  *
@@ -33,7 +33,7 @@ if (typeName _projectile == "OBJECT") then {
     _this set [4, _projectile];
 };
 
-TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage, _unit);
+TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage,_unit);
 
 // If damage is in dummy hitpoints, "hands" and "legs", don't change anything
 if (_selection == "hands") exitWith {_unit getHit "hands"};
@@ -44,7 +44,7 @@ if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@to
 
 // Exit if we disable damage temporarily
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
-    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit, _unit);
+    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit,_unit);
     if (_selection == "") then {
         damage _unit
     } else {
@@ -58,6 +58,8 @@ _damageReturn = _damage;
 _newDamage = _this call FUNC(handleDamage_caching);
 // handleDamage_caching may have modified the projectile string
 _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+
+TRACE_3("ACE_DEBUG: HandleDamage caching new damage",_selection,_newDamage,_unit);
 
 _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
 _minLethalDamage = if (_typeIndex >= 0) then {
@@ -125,5 +127,7 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
     [_unit] call FUNC(setDead);
     0.89;
 };
+
+TRACE_3("ACE_DEBUG: HandleDamage damage return",_selection,_damageReturn,_unit);
 
 _damageReturn

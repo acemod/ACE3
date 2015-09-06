@@ -426,8 +426,8 @@ class CfgVehicles {
         };
     };
 
-    #define ARM_LEG_ARMOR_DEFAULT 2
-    #define ARM_LEG_ARMOR_BETTER  4
+    #define ARM_LEG_ARMOR_DEFAULT 3
+    #define ARM_LEG_ARMOR_BETTER  5
     #define ARM_LEG_ARMOR_CSAT    4
 
     class Land;
