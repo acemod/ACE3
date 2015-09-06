@@ -20,7 +20,7 @@
 params ["_weapon", "_ammo", "_magazine"];
 TRACE_3("Parameter",_weapon,_magazine,_ammo);
 
-private ["_array", "_type", "_return", "_config"];
+private ["_array", "_type", "_return", "_config" /*, "_priority"*/];
 
 // get Priority Array from Config
 _array = [
@@ -30,8 +30,17 @@ _array = [
 ];
 
 TRACE_1("Proiroity Array",_array);
-// define Fist Values for Types
-_type = 0;
+
+/* for CBA Upadte 2.1
+_priority = _array call CBA_fnc_findMax;
+_type = if (isNil "_priority") then {
+    0
+} else {
+    _priority select 1
+};
+*/
+
+// obsolete as CBA Update 2.1 start
 _array params ["_max"];
 
 // get Highest Entry out the the Priority Array
@@ -41,6 +50,7 @@ _array params ["_max"];
         _type = _forEachIndex;
     };
 } forEach _array;
+// obsolete end
 
 TRACE_2("Highest Value",_max,_type);
 // create the Config entry Point
