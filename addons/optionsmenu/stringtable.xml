@@ -225,6 +225,7 @@
             <Czech>Povolit export natavení [ACE]</Czech>
             <Portuguese>[ACE] Permitir exportação de configurações</Portuguese>
             <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
+            <Russian>Разрешить экспорт настроек [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -234,6 +235,7 @@
             <Czech>Povolit</Czech>
             <Portuguese>Permitir</Portuguese>
             <Hungarian>Engedélyezés</Hungarian>
+            <Russian>Разрешить</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -243,6 +245,7 @@
             <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
             <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
             <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
+            <Russian>Разрешить экспорт всех настроек в формате серверного конфига.</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -252,6 +255,7 @@
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
+            <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -261,6 +265,7 @@
             <Czech>Skrýt</Czech>
             <Portuguese>Ocultar</Portuguese>
             <Hungarian>Elrejtés</Hungarian>
+            <Russian>Скрыть</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -270,6 +275,7 @@
             <Czech>Vpravo nahoře, dolů</Czech>
             <Portuguese>Superior direito, para baixo</Portuguese>
             <Hungarian>Jobb felül, lefele</Hungarian>
+            <Russian>Справа — сверху вниз</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -279,6 +285,7 @@
             <Czech>Vpravo nahoře, do leva</Czech>
             <Portuguese>Superior direito, à esquerda</Portuguese>
             <Hungarian>Jobb felül, balra</Hungarian>
+            <Russian>Сверху — справа налево</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -288,6 +295,7 @@
             <Czech>Vlevo nahoře, dolů</Czech>
             <Portuguese>Superior esquerdo, para baixo</Portuguese>
             <Hungarian>Bal felül, lefele</Hungarian>
+            <Russian>Слева - сверху вниз</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -297,6 +305,7 @@
             <Czech>Vlevo nahoře, do prava</Czech>
             <Portuguese>Superior esquerdo, para a direita</Portuguese>
             <Hungarian>Bal felül, jobbra</Hungarian>
+            <Russian>Сверху — слева направо</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -306,6 +315,7 @@
             <Czech>Nahoře</Czech>
             <Portuguese>Acima</Portuguese>
             <Hungarian>Fent</Hungarian>
+            <Russian>Сверху</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -315,6 +325,7 @@
             <Czech>Dole</Czech>
             <Portuguese>Abaixo</Portuguese>
             <Hungarian>Alul</Hungarian>
+            <Russian>Снизу</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
@@ -324,6 +335,7 @@
             <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
             <Hungarian>Debug a vágólapra</Hungarian>
+            <Russian>Отладка в буфер обмена</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -333,16 +345,19 @@
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
+            <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
             <Polish>Fix Headbug</Polish>
             <Hungarian>"Fejhiba" fix</Hungarian>
+            <Russian>Fix Headbug</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
             <Polish>Resetuje aktualną animację.</Polish>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
+            <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -352,6 +367,7 @@
             <Polish>Wiadomości ACE</Polish>
             <Czech>ACE Novinky</Czech>
             <Hungarian>ACE hírek</Hungarian>
+            <Russian>Новости ACE</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -361,14 +377,17 @@
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
             <Czech>Zobrazit novinky v hlavním menu</Czech>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
+            <Russian>Показывать новости в Главном Меню</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
             <Polish>Wszystkie kategorie</Polish>
+            <Russian>Все категории</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
             <Polish>Logistyka</Polish>
+            <Russian>Логистика</Russian>
         </Key>
     </Package>
 </Project>

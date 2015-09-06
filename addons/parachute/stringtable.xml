@@ -54,12 +54,14 @@
             <German>Fallschirm abschneiden</German>
             <Polish>Odetnij spadochron</Polish>
             <Hungarian>Ejtőernyő elvágása</Hungarian>
+            <Russian>Обрезать стропы</Russian>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
             <German>Reserve Fallschirm</German>
             <Polish>Spadochron awaryjny</Polish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
+            <Russian>Запасной парашют</Russian>
         </Key>
     </Package>
 </Project>

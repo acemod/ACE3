@@ -4,26 +4,32 @@
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
             <English>Fulton MX-991</English>
             <Polish>Fulton MX-991</Polish>
+            <Russian>Fulton MX-991</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
+            <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
             <Polish>Maglite XL50</Polish>
+            <Russian>Maglite XL50</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
             <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy.</Polish>
+            <Russian>Небольшой фонарик белого света. Для использования на карте.</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
             <Polish>KSF-1</Polish>
+            <Russian>KSF-1</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
+            <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
         </Key>
     </Package>
 </Project>
