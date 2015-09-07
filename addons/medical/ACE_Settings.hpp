@@ -220,7 +220,7 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(useSelection)/*, CSTRING(useRadial)*/};
-        // isClientSettable = 1;
+        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
+        isClientSettable = 1;
     };
 };
