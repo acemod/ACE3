@@ -107,7 +107,8 @@ if (_selection == "") then {
 
         // check for misc. damage. Probably collision.
         if (_projectile == "" && _newDamage > 0) then {
-            ["medical_onCollisionDamage", [_unit, _newDamage]] call EFUNC(common,localEvent);
+            ["medical_onCollisionDamage", [_unit, _newDamage max (_unit getVariable [QGVAR(cachedLastCollisionDamage), 0])]] call EFUNC(common,localEvent);
+            _unit setVariable [QGVAR(cachedLastCollisionDamage), 0];
             _damageReturn = damage _unit;
             breakOut "findDamageSource";
         };
@@ -148,9 +149,9 @@ if (_selection == "") then {
         _unit setVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
     };
 
-    // use this to detect collision damage. for some reason damage to this hitpoint (as well as to legs and spine1) will be the next hd call with selection ""
-    if (_projectile == "" && _selection == "hands") then {
-        _unit setVariable [QGVAR(cachedLastCollisionDamage), _newDamage];
+    // use this to detect collision damage.
+    if (_projectile == "") then {
+        _unit setVariable [QGVAR(cachedLastCollisionDamage), _newDamage max (_unit getVariable [QGVAR(cachedLastCollisionDamage), 0])];
     };
 };
 
