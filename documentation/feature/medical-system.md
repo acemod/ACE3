@@ -1,13 +1,13 @@
 ---
 layout: wiki
 title: Medical System
-description: ACE3 provide users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics.
+description: ACE3 provides users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics.
 group: feature
 order: 4
 category: realism
 parent: wiki
 ---
-**Disclaimer:** As the documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
+**Disclaimer:** With the documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 
 ## 1. Overview
 ACE3 provides users with a more realistic medical system and comes in both a basic and an advanced version. This page will detail the differences between both systems and what they do as well as how to use them efficiently.
@@ -102,7 +102,7 @@ Atropine | Serves no use in basic
 
 
 - **Step 5**
- - If at this point the patient is still not back on its feet it's time to use an epinephrine autoinjector.
+ - If at this point the patient is still not back on its feet it's time to use an epinephrine Autoinjector.
 
 #### 2.1.3 Additional informations
 
@@ -112,10 +112,10 @@ Atropine | Serves no use in basic
 #### 2.1.4 Revive (Basic Medical)
 For the following procedure to work revive need to be enabled.
 
-- A unit in the revive state will be unconscious and will stay unconscious until he is either woken up or the revive timer runs out.
+- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
 - A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
 - To wake up a patient treat all of his wounds, make sure he isn't in pain and then use epinephrine.
-- Each successful revive removes a life from the unit, once the lives run out the next time unit will take fatal damage he will not enter the revive state and will die.
+- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 
 ### 2.2 Advanced
 
@@ -297,27 +297,27 @@ Note that keeping the patient's vitals stable is very important while treating h
 - Giving too much morphine to a patient (more than one every 10 minutes) will put him in cardiac arrest because of a blood pressure / heart rate too low.
 
 #### 2.2.5 Revive (Advanced Medical)
-For the following procedure to work revive need to be enabled.
+For the following procedure to work revive needs to be enabled.
 
-- A unit in the revive state will be unconscious and will stay unconscious until he is either woken up or the revive timer runs out.
+- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
 - A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
 - To wake up a patient the use of a PAK is required.
-- Each successful revive removes a life from the unit, once the lives run out the next time unit will take fatal damage he will not enter the revive state and will die.
-- Each successful round of CPR (filled up completion bar) increase the time left in the revive state.
+- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
+- Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
 
 ## 3. Guides
-### 3.1 Loadouts
+### 3.1 Example loadouts
 
 #### 3.1.1 Basic
 - Soldier:
   - 10 × Bandage (Basic)
-  - 3 × Morphine autoinjector
-  - 1 × Epinephrine autoinjector
+  - 3 × Morphine Autoinjector
+  - 1 × Epinephrine Autoinjector
 
 - Medic:
   - 15-25 × Bandage (Basic)
-  - 10 × Morphine autoinjector
-  - 10 × Epinephrine autoinjector
+  - 10 × Morphine Autoinjector
+  - 10 × Epinephrine Autoinjector
   - 6 × Blood IV (500ml)
 
 #### 3.1.2 Advanced
@@ -327,10 +327,10 @@ For the following procedure to work revive need to be enabled.
   - 3-6 × Bandage (Elastic)
   - 3-6 × Packing Bandage
   - 3-6 × Basic Field Dressing (QuikClot)
-  - 1 × Morphine autoinjector
-  - 1 × Epinephrine autoinjector
+  - 1 × Morphine Autoinjector
+  - 1 × Epinephrine Autoinjector
   - 1 × Tourniquet (CAT)
-  - **Optional**: 1 × Saline IV (500ml) - used only by qualified medic
+  - **Optional**: 1 × Saline IV (500ml) - used only by a qualified medic
 
 
 - Combat First Responder (CFR):
@@ -338,9 +338,9 @@ For the following procedure to work revive need to be enabled.
   - 10-15 × Bandage (Elastic)
   - 10-15 × Packing Bandage
   - 10-15 × Basic Field Dressing (QuikClot)
-  - 8 × Atropine autoinjector
-  - 5 × Morphine autoinjector
-  - 5 × Epinephrine autoinjector
+  - 8 × Atropine Autoinjector
+  - 5 × Morphine Autoinjector
+  - 5 × Epinephrine Autoinjector
   - 3 × Tourniquet (CAT)
   - 4 × Saline IV (500ml)
 
