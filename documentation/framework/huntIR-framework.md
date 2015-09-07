@@ -18,7 +18,7 @@ class CfgWeapons {
               "MyFirstMag",
               "MySecondMag",
               "MyLastMag",
-              // HUntIR magazine
+              // HuntIR magazine
               "ACE_HuntIR_M203"
           };
       };  
