@@ -99,3 +99,13 @@ call FUNC(determineZoom);
         };
     };
 }] call EFUNC(common,addEventHandler);
+
+// hide clock on map if player has no watch
+GVAR(hasWatch) = true;
+
+["playerInventoryChanged", {
+    if (isNull (_this select 0)) exitWith {
+        GVAR(hasWatch) = true;
+    };
+    GVAR(hasWatch) = "ItemWatch" in (_this select 1 select 17);
+}] call EFUNC(common,addEventHandler);

@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(onMenuOpen);
+PREP(onMenuClose);
 PREP(openMenu);
 
 PREP(canOpenMenu);
