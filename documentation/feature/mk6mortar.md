@@ -31,11 +31,11 @@ For this you need a `82mm Rangetable`, `Map Tools` and a `Vector 21` are also re
 - Select the charge you want to use (0 = close / 1 = medium  / 2 = far).
 - Open the `82mm Rangetable`
 - Calculate the correct ELEV (elevation):
-  - Open the `Rangetable` and click on the charge you are using.
+  - Open the `82mm Rangetable` and click on the charge you are using.
   - Find your range under the `RANGE` column
-  - Under the `ELEV` column find the number that match your range, that's the base elevation you are going to work with.
-  - Under the `D ELEV for 100m DR` find the number that match your ELEV and compensate:
-     - Example, if you're 200m above your target multiply the number by 2 and add it to your ELEV.
+  - Under the `ELEV` column find the number that matches your range, that's the base elevation you are going to work with.
+  - Under the `D ELEV for 100m DR` find the number that matches your ELEV and compensate:
+     - _Example_, if you're 200m above your target multiply the number by 2 and add it to your ELEV.
      - If you're 200m below the target multiply the number by 2 and substract it to your ELEV.
      - The lower the elevation the closer to you it will land.
   - Once you finished calculating the ELEV align the barrel of the mortar with your target (directly looking at it) and set your ELEV to what you calculated by using <kbd>Page Up</kbd> and <kbd>Page Down</kbd>.
