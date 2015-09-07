@@ -37,6 +37,7 @@ PREP(handleDamage_advancedSetDamage);
 PREP(handleDamage_airway);
 PREP(handleDamage_basic);
 PREP(handleDamage_caching);
+PREP(handleDamage_cachingNew);
 PREP(handleDamage_fractures);
 PREP(handleDamage_internalInjuries);
 PREP(handleDamage_wounds);

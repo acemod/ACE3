@@ -1,4 +1,4 @@
-    /*
+/*
  * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
  *
@@ -17,27 +17,103 @@
 #include "script_component.hpp"
 
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
-TRACE_5("ACE_DEBUG: HandleDamage Called",_unit, _selection, _damage, _shooter, _projectile);
+TRACE_5("ACE_DEBUG: HandleDamage Called",_unit,_selection,_damage,_shooter,_projectile);
 
 // bug, apparently can fire for remote units in special cases
 if !(local _unit) exitWith {
-    TRACE_2("ACE_DEBUG: HandleDamage on remote unit!",_unit, isServer);
+    TRACE_2("ACE_DEBUG: HandleDamage on remote unit!",_unit,isServer);
     nil
 };
 
-private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
-
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
 if (typeName _projectile == "OBJECT") then {
+    TRACE_3("ACE_DEBUG: HandleDamage found projectile instead of classname of ammo!",_unit,_projectile,typeOf _projectile);
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
 };
 
-TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage,_unit);
+private ["_damageReturn", "_newDamage"];
 
-// If damage is in dummy hitpoints, "hands" and "legs", don't change anything
-if (_selection == "hands") exitWith {_unit getHit "hands"};
-if (_selection == "legs") exitWith {_unit getHit "legs"};
+// apply damage scripted
+if (_selection == "") then {
+    _damageReturn = _damage;
+    _newDamage = _damage - damage _unit;
+
+    private "_cachedStructuralDamage";
+    _cachedStructuralDamage = _unit getVariable [QGVAR(cachedStructuralDamageNew), 0];
+
+    // handle damage always tries to start and end with the same structural damage call. Use that to find and set the final damage. discard everything the game discards too.
+    if (_damage == _cachedStructuralDamage) then {
+        private "_cachedNewHitpointDamages";
+        _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+
+        // this is the only point damage actually counts. all additional vitality functions should use these values.
+        {
+            private "_selection";
+            _selection = GVAR(Selections) select _forEachIndex;
+
+            systemChat str [_selection, _x];//
+            _unit setHit [_selection, (_unit getHit _selection) + _x];
+        } forEach _cachedNewHitpointDamages;
+    };
+
+    // reset everything, get ready for the next bullet
+    _unit setVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+    _unit setVariable [QGVAR(cachedStructuralDamageNew), _damage];
+
+} else {
+    // selections are done scripted. return same value to change nothing.
+    _damageReturn = _unit getHit _selection;
+    _newDamage = _damage - _damageReturn; // _damageReturn because it saves one getHit call
+
+    private "_index";
+    _index = GVAR(SELECTIONS) find _selection;
+
+    // a selection we care for was hit. now save the new damage to apply it by a later structural damage call
+    if (_index != -1) then {
+        private "_cachedNewHitpointDamages";
+        _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+
+        // prevents multiple selections from being hit by one bullet due to hitpoint radius system
+        {
+            // ignore this damage if it's a secondary selection (minor damage)
+            if (_x > _newDamage) exitWith {
+                _newDamage = 0;
+            };
+
+            // overwrite minor damage in secondary selections
+            if (_x > 0) then {
+                _cachedNewHitpointDamages set [_forEachIndex, 0];
+            };
+        } forEach _cachedNewHitpointDamages;
+
+        // apply these by the next matching hd call with selection "". If that one is not matching, this gets discarded
+        _cachedNewHitpointDamages set [_index, _newDamage];
+        _unit setVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
+    };
+};
+
+_damageReturn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+"_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"
+
+
+
 
 // If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
 if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
