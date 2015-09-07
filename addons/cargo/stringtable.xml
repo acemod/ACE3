@@ -38,6 +38,7 @@
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
             <Polish>Ustawienia cargo</Polish>
+            <Czech>Nastavení nákladu</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
