@@ -4,26 +4,32 @@
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
             <Polish>Załaduj</Polish>
+            <Czech>Naložit</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
             <Polish>Wyładuj</Polish>
+            <Czech>Vyložit</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <Polish>Ładunek</Polish>
+            <Czech>Náklad</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
             <Polish>Menu ładunku</Polish>
+            <Czech>Menu nákladu</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
             <Polish>Pozostałe miejsce: %1</Polish>
+            <Czech>Volný prostor: %1</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
             <Polish>Aktywuj cargo</Polish>
+            <Czech>Povolit náklad</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>

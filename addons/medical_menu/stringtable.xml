@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="Combat Space Enhancement">
     <Package name="Combat Medical System">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -47,6 +47,7 @@
             <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
             <French>EXAMINER &amp; TRAITEMENTS</French>
             <Polish>BADANIE &amp; LECZENIE</Polish>
+            <Czech>VYŠETŘENÍ &amp; LÉČBA</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS">
             <English>STATUS</English>
@@ -54,6 +55,7 @@
             <Spanish>ESTADO</Spanish>
             <French>ÉTATS</French>
             <Polish>STATUS</Polish>
+            <Czech>STAV</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
             <English>OVERVIEW</English>
@@ -61,6 +63,7 @@
             <Spanish>DESCRIPCIÓN</Spanish>
             <French>DESCRIPTION</French>
             <Polish>OPIS</Polish>
+            <Czech>PŘEHLED</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
@@ -68,6 +71,7 @@
             <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
             <French>REGISTRE DES SOINS</French>
             <Polish>LOGI AKTYWNOŚCI</Polish>
+            <Czech>PROTOKOL</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -75,6 +79,7 @@
             <Spanish>VISTA RÁPIDA</Spanish>
             <French>VUE RAPIDE</French>
             <Polish>SZYBKI PODGLĄD</Polish>
+            <Czech>RYCHLÝ NÁHLED</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
@@ -124,6 +129,7 @@
             <Spanish>Arrastrar/Cargar</Spanish>
             <French>Glisser/Porter</French>
             <Polish>Ciągnij/Nieś</Polish>
+            <Czech>Táhnout/Nést</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
             <English>Toggle (Self)</English>
@@ -138,7 +144,6 @@
             <Spanish>Seleccionar estado de Triage</Spanish>
             <French>Selectioner l'état de Triage</French>
             <Polish>Wybierz priorytet</Polish>
-
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>
@@ -146,6 +151,7 @@
             <Spanish>Seleccionar Cabeza</Spanish>
             <French>Selectioner Tête</French>
             <Polish>Wybierz głowę</Polish>
+            <Czech>Vybrat Hlavu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
             <English>Select Torso</English>
@@ -153,6 +159,7 @@
             <Spanish>Seleccionar Torso</Spanish>
             <French>Selectioner Torse</French>
             <Polish>Wybierz tors</Polish>
+            <Czech>Vybrat Trup</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
             <English>Select Left Arm</English>
@@ -160,6 +167,7 @@
             <Spanish>Seleccionar Brazo Izquierdo</Spanish>
             <French>Selectioner Bras Gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
+            <Czech>Vybrat Levou Ruku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
             <English>Select Right Arm</English>
@@ -167,6 +175,7 @@
             <Spanish>Seleccionar Brazo Derecho</Spanish>
             <French>Selectioner Bras Droit</French>
             <Polish>Wybierz prawą rękę</Polish>
+            <Czech>Vybrat Pravou Ruku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
             <English>Select Left Leg</English>
@@ -174,6 +183,7 @@
             <Spanish>Seleccionar Pierna Izquierda</Spanish>
             <French>Selectioner Jambe Gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
+            <Czech>Vybrat Levou Nohu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
             <English>Select Right Leg</English>
@@ -181,6 +191,7 @@
             <Spanish>Seleccionar Pierna Derecha</Spanish>
             <French>Selectioner Jambe Droite</French>
             <Polish>Wybierz prawą nogę</Polish>
+            <Czech>Vybrat Pravou Nohu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
             <English>Head</English>
@@ -188,12 +199,14 @@
             <Spanish>Cabeza</Spanish>
             <French>Tête</French>
             <Polish>Głowa</Polish>
+            <Czech>Hlava</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TORSO">
             <English>Torso</English>
             <Russian>Торс</Russian>
             <French>Torse</French>
             <Polish>Tors</Polish>
+            <Czech>Trup</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_L">
             <English>Left Arm</English>
@@ -201,6 +214,7 @@
             <Spanish>Brazo Izquierdo</Spanish>
             <French>Bras Gauche</French>
             <Polish>Lewa ręka</Polish>
+            <Czech>Levá Ruka</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_R">
             <English>Right Arm</English>
@@ -208,6 +222,7 @@
             <Spanish>Brazo Derecho</Spanish>
             <French>Bras Droit</French>
             <Polish>Prawa ręka</Polish>
+            <Czech>Pravá Ruka</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_L">
             <English>Left Leg</English>
@@ -215,6 +230,7 @@
             <Spanish>Pierna Izquierda</Spanish>
             <French>Jambe Gauche</French>
             <Polish>Lewa noga</Polish>
+            <Czech>Levá Noha</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_R">
             <English>Right Leg</English>
@@ -222,6 +238,7 @@
             <Spanish>Pierna Derecha</Spanish>
             <French>Jambe Droite</French>
             <Polish>Prawa noga</Polish>
+            <Czech>Pravá Noha</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
             <English>Body Part: %1</English>
@@ -306,6 +323,7 @@
             <Spanish>No respira</Spanish>
             <French>Apnée</French>
             <Polish>Brak oddechu</Polish>
+            <Czech>Nedýchá</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -313,6 +331,7 @@
             <Spanish>Dificultad para respirar</Spanish>
             <French>Difficultée Respiratoire</French>
             <Polish>Trudności z oddychaniem</Polish>
+            <Czech>Potíže s dýcháním</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
@@ -320,6 +339,7 @@
             <Spanish>Casi sin respirar</Spanish>
             <French>Respiration Faible</French>
             <Polish>Prawie brak oddechu</Polish>
+            <Czech>Téměř nedýchá</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -327,6 +347,7 @@
             <Spanish>Sangrando</Spanish>
             <French>Seignement</French>
             <Polish>Krwawienie zewnętrzne</Polish>
+            <Czech>Krvácí</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
             <English>in Pain</English>
@@ -334,6 +355,7 @@
             <Spanish>Con Dolor</Spanish>
             <French>A De La Douleur</French>
             <Polish>W bólu</Polish>
+            <Czech>v Bolestech</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -341,6 +363,7 @@
             <Spanish>Mucha Sangre perdida</Spanish>
             <French>A Perdu Bcp de Sang</French>
             <Polish>Stracił dużo krwi</Polish>
+            <Czech>Ztratil hodně Krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>

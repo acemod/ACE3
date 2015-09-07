@@ -17,7 +17,7 @@
             <English>Altimeter Watch</English>
             <French>Montre altimètre</French>
             <German>Höhenmesser</German>
-            <Czech>Hodinky s výškoměrem</Czech>
+            <Czech>Hodinky s Výškoměrem</Czech>
             <Polish>Zegarek z wysokościomierzem</Polish>
             <Spanish>Reloj altímetro</Spanish>
             <Hungarian>Magasságmérős karóra</Hungarian>
@@ -43,7 +43,7 @@
             <Spanish>Paracaídas no dirigible</Spanish>
             <French>Parachute non manœuvrable</French>
             <Polish>Niesterowalny spadochron</Polish>
-            <Czech>Neříditelný padák</Czech>
+            <Czech>Neříditelný Padák</Czech>
             <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
             <Russian>Неуправляемый парашют</Russian>
             <Italian>Paracadute non manovrabile</Italian>
@@ -54,12 +54,14 @@
             <German>Fallschirm abschneiden</German>
             <Polish>Odetnij spadochron</Polish>
             <Hungarian>Ejtőernyő elvágása</Hungarian>
+            <Czech>Odžíznout Padák</Czech>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
             <German>Reserve Fallschirm</German>
             <Polish>Spadochron awaryjny</Polish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
+            <Czech>Záložní Padák</Czech>
         </Key>
     </Package>
 </Project>

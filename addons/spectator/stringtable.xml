@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
             <Polish>Ustawienia obserwatora</Polish>
+            <Czech>Nastavení Pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Descripton">
             <English>Configure how the spectator system will operate by default.</English>
@@ -12,6 +13,7 @@
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
             <Polish>Filtr jednostek</Polish>
+            <Czech>Filtr jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
             <English>Method of filtering spectatable units.</English>
@@ -20,22 +22,27 @@
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
             <Polish>Brak jednostek</Polish>
+            <Czech>Žádné jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
             <Polish>Tylko gracze</Polish>
+            <Czech>Pouze hráči</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
             <Polish>Grywalne jednostki</Polish>
+            <Czech>Hratelné Jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
             <Polish>Wszystkie jednostki</Polish>
+            <Czech>Všechny jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
             <English>Side filter</English>
             <Polish>Filtr stron</Polish>
+            <Czech>Filtr stran</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
             <English>Method of filtering spectatable sides.</English>
@@ -44,22 +51,27 @@
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
             <Polish>Strona gracza</Polish>
+            <Czech>Strana hráče</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
             <Polish>Strony sojusznicze</Polish>
+            <Czech>Strana spojenců</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_hostile">
             <English>Hostile sides</English>
             <Polish>Strony wrogie</Polish>
+            <Czech>Strana nepřítele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
             <Polish>Wszystkie strony</Polish>
+            <Czech>Všechny strany</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
             <Polish>Tryby kamery</Polish>
+            <Czech>Módy kamery</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used.</English>
@@ -68,22 +80,27 @@
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
             <Polish>Wszystkie</Polish>
+            <Czech>Všechny</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_free">
             <English>Free only</English>
             <Polish>Tylko wolna</Polish>
+            <Czech>Pouze volná</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_internal">
             <English>Internal only</English>
             <Polish>Tylko wewnętrzna</Polish>
+            <Czech>Pouze vnitřní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_external">
             <English>External only</English>
             <Polish>Tylko zewnętrzna</Polish>
+            <Czech>Pouze vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>Internal and external</English>
             <Polish>Wewnętrzna i zewnętrzna</Polish>
+            <Czech>Vnitřní a vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -96,10 +113,12 @@
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
             <Polish>Noktowizja</Polish>
+            <Czech>Noktovize</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
             <Polish>Termowizja</Polish>
+            <Czech>Termovize</Czech>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
@@ -113,55 +132,68 @@
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
             <Polish>Wolna</Polish>
+            <Czech>Volná</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewInternal">
             <English>Internal</English>
             <Polish>Wewnętrzna</Polish>
+            <Czech>Vnitřní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
             <Polish>Zewnętrzna</Polish>
+            <Czech>Vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
             <Polish>Normalna</Polish>
+            <Czech>Normální</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
             <Polish>Noc</Polish>
+            <Czech>Noc</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
             <Polish>Termo</Polish>
+            <Czech>Termál</Czech>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
             <English>Free Camera</English>
             <Polish>Kamera swobodna</Polish>
+            <Czech>Volná Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
             <Polish>Kamera naprzód</Polish>
+            <Czech>Kamera Vpřed</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Camera Backward</English>
             <Polish>Kamera w tył</Polish>
+            <Czech>Kamera Zpět</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Camera Left</English>
             <Polish>Kamera w lewo</Polish>
+            <Czech>Kamera Doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Camera Right</English>
             <Polish>Kamera w prawo</Polish>
+            <Czech>Kamera Doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Camera Up</English>
             <Polish>Kamera w górę</Polish>
+            <Czech>Kamera Nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Camera Down</English>
             <Polish>Kamera w dół</Polish>
+            <Czech>Kamera Dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
@@ -174,6 +206,7 @@
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
             <Polish>Zablokuj kamerę na celu</Polish>
+            <Czech>Zamknout Kameru na Cíl</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
@@ -182,22 +215,27 @@
         <Key ID="STR_ACE_Spectator_freeCamFocus">
             <English>Focus on Unit</English>
             <Polish>Skup na jednostce</Polish>
+            <Czech>Zaměřit se na Jednotku</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
             <Polish>Interfejs</Polish>
+            <Czech>Rozhraní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
             <Polish>Przełącz interfejs</Polish>
+            <Czech>Přepnout Rozhraní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
             <English>Toggle Unit Icons</English>
             <Polish>Przełącz ikony jednostek</Polish>
+            <Czech>Přepnout Ikony Jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
             <English>Toggle Unit List</English>
             <Polish>Przełącz listę jednostek</Polish>
+            <Czech>Přepnout Seznam Jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
             <English>Toggle Toolbar</English>
@@ -206,14 +244,17 @@
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
             <Polish>Przełącz kompas</Polish>
+            <Czech>Přepnout Kompas</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
             <English>Toggle Map</English>
             <Polish>Przełącz mapę</Polish>
+            <Czech>Přepnout Mapu</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
             <English>Toggle Help</English>
             <Polish>Przełącz pomoc</Polish>
+            <Czech>Přepnout Nápovědu</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
@@ -222,18 +263,22 @@
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
             <Polish>Następna kamera</Polish>
+            <Czech>Následující Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
             <English>Previous Camera</English>
             <Polish>Poprzednia kamera</Polish>
+            <Czech>Předchozí Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
             <Polish>Następna jednostka</Polish>
+            <Czech>Následující Jednotka</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
             <Polish>Poprzednia jednostka</Polish>
+            <Czech>Předchozí Jednotka</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Next Vision Mode</English>
@@ -246,10 +291,12 @@
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
             <Polish>Reguluj zoom</Polish>
+            <Czech>Regulovat Přiblížení</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
             <Polish>Reguluj prędkość</Polish>
+            <Czech>Regulovat Rychlost</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
@@ -262,10 +309,12 @@
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
             <Polish>Resetuj zoom</Polish>
+            <Czech>Obnovit Přiblížení</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
             <Polish>Resetuj prędkość</Polish>
+            <Czech>Obnovit Rychlost</Czech>
         </Key>
     </Package>
 </Project>
