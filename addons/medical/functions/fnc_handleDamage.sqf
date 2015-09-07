@@ -32,8 +32,6 @@ if (typeName _projectile == "OBJECT") then {
     _this set [4, _projectile];
 };
 
-
-
 // Exit now we disable damage, replaces "allowDamage false"
 // @todo Needs testing. I think this doesn't work, because handleDamage never returns the numbers if you use exitWith. You simply exit the scope with nothing - commy2
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
@@ -44,8 +42,6 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
         _unit getHit _selection
     };
 };
-
-
 
 private ["_damageReturn", "_newDamage"];
 
@@ -107,10 +103,20 @@ if (_selection == "") then {
 
         // check for misc. damage. Probably collision.
         if (_projectile == "" && _newDamage > 0) then {
-            ["medical_onCollisionDamage", [_unit, _newDamage max (_unit getVariable [QGVAR(cachedLastCollisionDamage), 0])]] call EFUNC(common,localEvent);
-            _unit setVariable [QGVAR(cachedLastCollisionDamage), 0];
+            private "_cachedLastCollisionDamageFrame";
+            _cachedLastCollisionDamageFrame = _unit getVariable [QGVAR(cachedLastFallDamageFrame), -1];
+
+            // collision only happens once. engine ignores all further calls on that frame as well
+            if (_cachedLastCollisionDamageFrame != diag_frameno) then {
+                _unit setVariable [QGVAR(cachedLastFallDamageFrame), diag_frameno];
+                _unit setVariable [QGVAR(cachedLastCollisionDamage), 0];
+
+                ["medical_onCollisionDamage", [_unit, _newDamage max (_unit getVariable [QGVAR(cachedLastCollisionDamage), 0])]] call EFUNC(common,localEvent);
+
+                _damageReturn = damage _unit - _newDamage;
+                breakOut "findDamageSource";
+            };
             _damageReturn = damage _unit;
-            breakOut "findDamageSource";
         };
     };
 
@@ -156,10 +162,12 @@ if (_selection == "") then {
 };
 
 diag_log text _selection;
-diag_log text str _hitIndex;
 diag_log text str _damage;//
-diag_log text str _damageReturn;//
-diag_log text str _projectile;
+diag_log text str diag_frameno;
+//diag_log text str velocity vehicle _unit;//
+//diag_log text str _hitIndex;
+//diag_log text str _damageReturn;//
+//diag_log text str _projectile;
 
 private ["_typeOfDamage", "_typeIndex", "_minLethalDamage", "_preventDeath"];
 
