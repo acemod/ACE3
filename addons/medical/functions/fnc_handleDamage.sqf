@@ -32,6 +32,21 @@ if (typeName _projectile == "OBJECT") then {
     _this set [4, _projectile];
 };
 
+
+
+// Exit now we disable damage, replaces "allowDamage false"
+// @todo Needs testing. I think this doesn't work, because handleDamage never returns the numbers if you use exitWith. You simply exit the scope with nothing - commy2
+if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
+    TRACE_2("ACE_DEBUG: HandleDamage damage disabled.",_selection,_unit);
+    if (_selection == "") then {
+        damage _unit
+    } else {
+        _unit getHit _selection
+    };
+};
+
+
+
 private ["_damageReturn", "_newDamage"];
 
 // apply damage scripted
@@ -93,51 +108,13 @@ if (_selection == "") then {
     };
 };
 
-_damageReturn
 
 
+private ["_typeOfDamage", "_typeIndex", "_minLethalDamage", "_preventDeath"];
 
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-"_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"
-
-
-
-
-// If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
-if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
-
-// Exit if we disable damage temporarily
-if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
-    TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit,_unit);
-    if (_selection == "") then {
-        damage _unit
-    } else {
-        _unit getHit _selection
-    };
-};
-
-// Get return damage
-_damageReturn = _damage;
-
-_newDamage = _this call FUNC(handleDamage_caching);
-// handleDamage_caching may have modified the projectile string
 _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-
-TRACE_3("ACE_DEBUG: HandleDamage caching new damage",_selection,_newDamage,_unit);
-
 _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+
 _minLethalDamage = if (_typeIndex >= 0) then {
     GVAR(minLethalDamages) select _typeIndex
 } else {
@@ -150,7 +127,8 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
     };
 };
 
-if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+// @todo, figure out what this does and then re-implement
+/*if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
     if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
         _damageReturn = 0.9;
     };
@@ -161,11 +139,12 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectio
     };
 } else {
     _damageReturn = _damageReturn min 0.89;
-};
+};*/
 
 [_unit] call FUNC(addToInjuredCollection);
 
-if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
+// @todo, reimplement prevent insta death
+/*if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
     };
@@ -194,15 +173,16 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         0.89;
     };
     _damageReturn min 0.89;
-};
+};*/
 
-if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
+// @todo, reimplement zombie mode
+/*if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) exitWith {
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
     };
     [_unit] call FUNC(setDead);
     0.89;
-};
+};*/
 
 TRACE_3("ACE_DEBUG: HandleDamage damage return",_selection,_damageReturn,_unit);
 

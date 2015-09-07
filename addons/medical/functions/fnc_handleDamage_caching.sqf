@@ -17,7 +17,7 @@
  */
 
 #include "script_component.hpp"
-
+/*
 private ["_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile"];
 TRACE_8("ACE_DEBUG: HandleDamage_Caching Called",_unit, _selectionName, _damage, _source, _projectile,GVAR(SELECTIONS),GVAR(HITPOINTS),damage _unit);
@@ -29,7 +29,7 @@ _newDamage = _damage - (damage _unit);
 if (_selectionName in _hitSelections) then {
     _newDamage = _damage - (_unit getHitPointDamage (_hitPoints select (_hitSelections find _selectionName)));
 };
-
+*/
 //_damage = _damage + _newDamage;
 
 // Check for vehicle crash
@@ -99,7 +99,7 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
     _unit setVariable [QGVAR(cachedDamages), []];
     _unit setVariable [QGVAR(cachedHandleDamageParams), []];
 };
-
+/*
 // Caching of the damage events
 if (_selectionName != "") then {
     _cache_projectiles = _unit getVariable QGVAR(cachedProjectiles);
@@ -151,5 +151,5 @@ if (_selectionName != "") then {
 };
 
 TRACE_8("ACE_DEBUG: HandleDamage_Caching",_unit, _newDamage, _cache_params, _cache_damages, _unit getVariable QGVAR(cachedProjectiles), _unit getVariable QGVAR(cachedHitPoints), _unit getVariable QGVAR(cachedDamages), _unit getVariable QGVAR(cachedHandleDamageParams));
-
+*/
 _newDamage
