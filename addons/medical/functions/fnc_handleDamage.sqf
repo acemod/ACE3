@@ -45,7 +45,7 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     };
 };
 
-
+//player sideChat str _this;//
 
 private ["_damageReturn", "_newDamage"];
 
@@ -81,7 +81,22 @@ if (_selection == "") then {
                 _unit setVariable [QGVAR(cachedLastFallDamageFrame), diag_frameno];
             };
 
-            _damageReturn = 0;
+            _damageReturn = damage _unit;
+        };
+
+        // check for drowning damage. Pretty relyable damage output. triggers only once.
+        if (getOxygenRemaining _unit < 0.5) then {
+            // typical drowning damage
+            if (_newDamage == 0.005) then {
+                ["medical_onDrowningDamage", [_unit, _newDamage]] call EFUNC(common,localEvent);
+                _damageReturn = damage _unit - 0.005; // engine applies damage before hd call. subtract again here.
+            };
+
+            // suffocated under water might use atypical new damage (mostly 1.005)
+            if (getOxygenRemaining _unit == 0) then {
+                ["medical_onDrowningDamage", [_unit, _newDamage min 1]] call EFUNC(common,localEvent);
+                _damageReturn = damage _unit; // you will die regardless of hd return value
+            };
         };
     };
 
