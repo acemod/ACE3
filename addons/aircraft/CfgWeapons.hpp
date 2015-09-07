@@ -139,12 +139,12 @@ class CfgWeapons {
             displayNameShort = "LO";
             reloadTime = 0.012;
             dispersion = 0.0082;
-            //sounds[] = {"StandardSound"};
-            //class StandardSound {
-            //    begin1[] = {PATHTOF(sounds\GAU8_LO),6.581072,1,4500};
-            //    soundBegin[] = {"begin1",1};
-            //    weaponSoundEffect = "DefaultRifle";
-            //};
+            sounds[] = {"StandardSound"};
+            class StandardSound
+            {
+                begin1[] = {"A3\Sounds_F_EPC\Weapons\gau_03_burst",2.5118864,1,4500,{ 25704,32159 }};
+                soundBegin[] = {"begin1",1};
+            };
             soundContinuous = 1;
             autoFire = 1;
             flash = "gunfire";
@@ -169,11 +169,11 @@ class CfgWeapons {
             displayNameShort = "HI";
             reloadTime = 0.008;
             textureType = "fullAuto";
-            //class StandardSound {
-            //    begin1[] = {PATHTOF(sounds\GAU8_HI),6.581072,1,4500};
-            //    soundBegin[] = {"begin1",1};
-            //    weaponSoundEffect = "DefaultRifle";
-            //};
+            class StandardSound
+            {
+                begin1[] = {"A3\Sounds_F_EPC\Weapons\gau_03_burst",2.5118864,1,4500,{ 25704,32159 }};
+                soundBegin[] = {"begin1",1};
+            };
         };
         class close: autoLO {
             showToPlayer = 0;
