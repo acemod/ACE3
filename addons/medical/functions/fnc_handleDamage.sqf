@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
+params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitIndex"];
 TRACE_5("ACE_DEBUG: HandleDamage Called",_unit,_selection,_damage,_shooter,_projectile);
 
 // bug, apparently can fire for remote units in special cases
@@ -45,7 +45,7 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     };
 };
 
-//player sideChat str _this;//
+
 
 private ["_damageReturn", "_newDamage"];
 
@@ -58,6 +58,7 @@ if (_selection == "") then {
     _cachedStructuralDamage = _unit getVariable [QGVAR(cachedStructuralDamageNew), 0];
 
     // handle damage always tries to start and end with the same structural damage call. Use that to find and set the final damage. discard everything the game discards too.
+    // this correctly handles: bullets, explosions, fire
     if (_damage == _cachedStructuralDamage) then {
         private "_cachedNewHitpointDamages";
         _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
@@ -71,6 +72,8 @@ if (_selection == "") then {
             _unit setHit [_selection, (_unit getHit _selection) + _x];
         } forEach _cachedNewHitpointDamages;
     } else {
+        scopeName "findDamageSource";
+
         // check for fall damage. this triggers twice, but seems to happen on the same frame. shouldn't fall twice in a few frames anyway. tested at 7FPS on local host MP
         if (animationState _unit select [0,4] == "afal") then {
             private "_cachedLastFallDamageFrame";
@@ -82,6 +85,7 @@ if (_selection == "") then {
             };
 
             _damageReturn = damage _unit;
+            breakOut "findDamageSource";
         };
 
         // check for drowning damage. Pretty relyable damage output. triggers only once.
@@ -90,13 +94,22 @@ if (_selection == "") then {
             if (_newDamage == 0.005) then {
                 ["medical_onDrowningDamage", [_unit, _newDamage]] call EFUNC(common,localEvent);
                 _damageReturn = damage _unit - 0.005; // engine applies damage before hd call. subtract again here.
+                breakOut "findDamageSource";
             };
 
             // suffocated under water might use atypical new damage (mostly 1.005)
             if (getOxygenRemaining _unit == 0) then {
                 ["medical_onDrowningDamage", [_unit, _newDamage min 1]] call EFUNC(common,localEvent);
                 _damageReturn = damage _unit; // you will die regardless of hd return value
+                breakOut "findDamageSource";
             };
+        };
+
+        // check for misc. damage. Probably collision.
+        if (_projectile == "" && _newDamage > 0) then {
+            ["medical_onCollisionDamage", [_unit, _newDamage]] call EFUNC(common,localEvent);
+            _damageReturn = damage _unit;
+            breakOut "findDamageSource";
         };
     };
 
@@ -134,12 +147,18 @@ if (_selection == "") then {
         _cachedNewHitpointDamages set [_index, _newDamage];
         _unit setVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
     };
+
+    // use this to detect collision damage. for some reason damage to this hitpoint (as well as to legs and spine1) will be the next hd call with selection ""
+    if (_projectile == "" && _selection == "hands") then {
+        _unit setVariable [QGVAR(cachedLastCollisionDamage), _newDamage];
+    };
 };
 
-//systemChat str (velocity _unit select 2);//
 diag_log text _selection;
+diag_log text str _hitIndex;
 diag_log text str _damage;//
-diag_log text animationState _unit;//
+diag_log text str _damageReturn;//
+diag_log text str _projectile;
 
 private ["_typeOfDamage", "_typeIndex", "_minLethalDamage", "_preventDeath"];
 
