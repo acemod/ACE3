@@ -67,9 +67,22 @@ if (_selection == "") then {
             private "_selection";
             _selection = GVAR(Selections) select _forEachIndex;
 
-            systemChat str [_selection, _x];//
+            //systemChat str [_selection, _x];//
             _unit setHit [_selection, (_unit getHit _selection) + _x];
         } forEach _cachedNewHitpointDamages;
+    } else {
+        // check for fall damage. this triggers twice, but seems to happen on the same frame. shouldn't fall twice in a few frames anyway. tested at 7FPS on local host MP
+        if (animationState _unit select [0,4] == "afal") then {
+            private "_cachedLastFallDamageFrame";
+            _cachedLastFallDamageFrame = _unit getVariable [QGVAR(cachedLastFallDamageFrame), -1];
+
+            if (diag_frameno != _cachedLastFallDamageFrame) then {
+                ["medical_onFallDamage", [_unit, _newDamage]] call EFUNC(common,localEvent);
+                _unit setVariable [QGVAR(cachedLastFallDamageFrame), diag_frameno];
+            };
+
+            _damageReturn = 0;
+        };
     };
 
     // reset everything, get ready for the next bullet
@@ -108,7 +121,10 @@ if (_selection == "") then {
     };
 };
 
-
+//systemChat str (velocity _unit select 2);//
+diag_log text _selection;
+diag_log text str _damage;//
+diag_log text animationState _unit;//
 
 private ["_typeOfDamage", "_typeIndex", "_minLethalDamage", "_preventDeath"];
 
