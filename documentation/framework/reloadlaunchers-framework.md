@@ -12,7 +12,7 @@ parent: wiki
 ```c++
 class CfgWeapons {
     class MyLauncher {
-        ace_reloadlaunchers_enabled = 1;  // Allow your "buddies" reloading for you (0-disabled, 1-enabled)
+        ace_reloadlaunchers_enabled = 1;  // Allow your buddies to reload your launcher (0-disabled, 1-enabled)
     };
 };
 ```
