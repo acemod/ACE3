@@ -21,12 +21,15 @@
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
+            <Polish>Symuluj oświetlenie mapy bazujące na oświetleniu otoczenia oraz przedmiotach gracza?</Polish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
+            <Polish>Poświata latarki</Polish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
+            <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>

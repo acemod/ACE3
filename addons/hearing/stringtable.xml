@@ -145,9 +145,11 @@
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
+            <Polish>Wpływ na Zeus RC</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
+            <Polish>Aktywuj efekty utraty słuchu dla jednostek kontrolowanych zdalnie przez Zeusa.</Polish>
         </Key>
     </Package>
 </Project>
