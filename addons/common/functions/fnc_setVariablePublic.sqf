@@ -38,12 +38,13 @@ GVAR(setVariablePublicPFH) = [{
     private "_delete";
     _delete = 0;
     {
-        _x params ["_object", "_varName", "_syncTime", "_idName"]
+        _x params ["_object", "_varName", "_syncTime", "_idName"];
         if (ACE_diagTime > _syncTime) then {
             // set value public
             _object setVariable [_varName, _object getVariable _varName, true];
             GVAR(setVariablePublicArray) deleteAt _forEachIndex - _delete;
             GVAR(setVariableNames) deleteAt _forEachIndex - _delete;
+            _delete = _delete + 1;
         };
     } forEach GVAR(setVariablePublicArray);
 
