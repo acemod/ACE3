@@ -35,11 +35,11 @@ _fnc_logEntries = {
         private ["_e1, _e2"];
         _e1 = _c select _i;
 
-        _e2 = switch (true) do {
-            case (isNumber _e1): {getNumber _e1};
-            case (isText _e1): {getText _e1};
-            case (isArray _e1): {getArray _e1};
-            case (isClass _e1): {[_e1, _d + 1] call _fnc_logEntries; false};
+        _e2 = call {
+            if (isNumber _e1) exitWith {getNumber _e1};
+            if (isText _e1) exitWith {getText _e1};
+            if (isArray _e1) exitWith {getArray _e1};
+            if (isClass _e1) exitWith {[_e1, _d + 1] call _fnc_logEntries; false};
         };
 
         if (typeName _e2 != "BOOL") then {

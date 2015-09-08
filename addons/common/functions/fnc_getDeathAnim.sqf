@@ -32,6 +32,7 @@ TRACE_2("Animation/Action", configName _unitAnimationCfg, configName _unitAction
 
 if ((vehicle _unit) != _unit) then {
     _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");
+
     for "_index" from 0 to (count _interpolateArray - 1) step 2 do {
         _indexAnimation = _interpolateArray select _index;
         //No guarentee that first animation will be right so scan for the first "terminal" animation
@@ -41,6 +42,7 @@ if ((vehicle _unit) != _unit) then {
             _returnAnimation = _indexAnimation;
         };
     };
+
 } else {
     _returnAnimation = getText (_unitActionsCfg >> "die");
 };

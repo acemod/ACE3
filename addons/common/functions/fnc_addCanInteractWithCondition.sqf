@@ -18,7 +18,7 @@ private ["_conditions", "_conditionNames", "_conditionFuncs", "_index"];
 params ["_conditionName", "_conditionFunc"];
 _conditionName = toLower _conditionName;
 
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[]]];
+_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [["",{}]]];
 
 _conditionNames = [_conditions, {_this select 0}] call FUNC(map);
 

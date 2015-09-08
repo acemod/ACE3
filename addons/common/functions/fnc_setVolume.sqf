@@ -17,7 +17,7 @@
 #define NORMAL_LEVEL 1
 #define NO_SOUND    0
 
-params [["_setVolume", false, [false]];
+params [["_setVolume", false, [false]]];
 
 if (_setVolume) then {
     // Vanilla Game

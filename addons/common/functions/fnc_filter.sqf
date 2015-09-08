@@ -19,9 +19,7 @@
 
 private "_result";
 
-params ["_array", "_code"];
-
-if (isNil "_array") exitWith {
+if (params ["_array", "_code"]) exitWith {
   diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
   []
 };
@@ -30,7 +28,8 @@ _result = [];
 {
     if (_x call _code) then {
         _result pushBack _x;
-    }
-} forEach _array;
+    };
+    nil
+} count _array;
 
 _result

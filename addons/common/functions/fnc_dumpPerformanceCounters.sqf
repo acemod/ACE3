@@ -51,6 +51,7 @@ diag_log text format["-------------------------------------------"];
     } else {
         diag_log text format["%1: No results", _entry];
     };
+    nil
 } count ACE_COUNTERS;
 
 /*

@@ -37,7 +37,7 @@ if (typeName _textMessage == "STRING") then {
 
 (ARR_SELECT(_this,4,call BIS_fnc_displayMission)) createDisplay "RscDisplayCommonMessagePause";
 
-private ["_display", "_ctrlRscMessageBox", "_ctrlBcgCommonTop", "_ctrlBcgCommon", "_ctrlText", "_ctrlBackgroundButtonOK", "_ctrlBackgroundButtonMiddle", "_ctrlBackgroundButtonCancel", "_ctrlButtonOK", "_ctrlButtonCancel"];
+private ["_display", "_ctrlRscMessageBox", "_ctrlBcgCommonTop", "_ctrlBcgCommon", "_ctrlText", "_ctrlBackgroundButtonOK", "_ctrlBackgroundButtonMiddle", "_ctrlBackgroundButtonCancel", "_ctrlButtonOK", "_ctrlButtonCancel", "_ctrlButtonOKPos", "_ctrlBcgCommonPos", "_bottomSpaceY", "_ctrlTextPos", "_marginX", "_marginY", "_ctrlTextPosH", "_bottomPosY"];
 
 _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
 _ctrlRscMessageBox =          _display displayCtrl 2351;
@@ -52,8 +52,6 @@ _ctrlButtonCancel =           _display displayCtrl 235107;
 
 _ctrlBcgCommonTop ctrlSetText _textHeader;
 
-private ["_ctrlButtonOKPos", "_ctrlBcgCommonPos", "_bottomSpaceY", "_ctrlTextPos", "_marginX", "_marginY"];
-
 _ctrlButtonOKPos = ctrlPosition _ctrlButtonOK;
 _ctrlBcgCommonPos = ctrlPosition _ctrlBcgCommon;
 _bottomSpaceY = (_ctrlButtonOKPos select 1) - ((_ctrlBcgCommonPos select 1) + (_ctrlBcgCommonPos select 3));
@@ -61,8 +59,6 @@ _bottomSpaceY = (_ctrlButtonOKPos select 1) - ((_ctrlBcgCommonPos select 1) + (_
 _ctrlTextPos = ctrlPosition _ctrlText;
 _marginX = (_ctrlTextPos select 0) - (_ctrlBcgCommonPos select 0);
 _marginY = (_ctrlTextPos select 1) - (_ctrlBcgCommonPos select 1);
-
-private ["_ctrlTextPosH", "_bottomPosY"];
 
 _ctrlText ctrlSetStructuredText _textMessage;
 _ctrlTextPosH = ctrlTextHeight _ctrlText;

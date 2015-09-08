@@ -36,7 +36,7 @@ if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, 
 };
 
 _actionsVar params ["_actionID", "_actionsArray"];
-_actionsArray params ["_id", "_actionIDs", "_actions"]
+_actionsArray params ["_id", "_actionIDs", "_actions"];
 
 _id = _id + 1;
 

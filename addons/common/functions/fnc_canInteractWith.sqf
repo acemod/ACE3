@@ -31,7 +31,7 @@ if (!isNull _owner && {_unit != _owner}) exitWith {false};
 _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), []];
 
 {
-    _x params ["_code", "_exceptionsX"];
+    _x params ["_exceptionsX", "_code"];
     if (!(_exceptionsX in _exceptions) && {!([_unit, _target] call _code)}) exitWith {
         false breakOut "main";
     };
