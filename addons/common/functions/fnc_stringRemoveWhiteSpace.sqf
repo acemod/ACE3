@@ -16,10 +16,10 @@
 
 #define WHITE_SPACE [20]
 
-private ["_string", "_charArray", "_returnString"];
-_string = param [0,"",[""]];
+private ["_charArray", "_returnString"];
+params [["_string", "", [""]]];
 _charArray = toArray _string;
-_charArray = _charArray - [((toArray " ") select 0)];
+_charArray = _charArray - (toArray " ");
 _returnString = toString _charArray;
 
-_returnString;
+_returnString

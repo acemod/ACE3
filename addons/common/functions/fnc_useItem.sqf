@@ -13,11 +13,9 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_item"];
+params ["_unit", "_item", ["_vehicleUsage", false, [false]]];
 
-private ["_return", "_vehicleUsage"];
-
-_vehicleUsage = param[2, false, [false]];
+private "_return";
 
 _return = false;
 if (!_vehicleUsage) then {
