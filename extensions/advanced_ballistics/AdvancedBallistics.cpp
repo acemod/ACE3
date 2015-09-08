@@ -5,7 +5,6 @@
 #include <unordered_map>
 #include <random>
 
-#define M_PI 3.14159265358979323846f
 #define GRAVITY 9.80665f
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
