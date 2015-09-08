@@ -21,5 +21,5 @@
 
 params ["_displayName", "_iconImage", "_conditionCode", "_toggleCode", "_closeCode"];
 
-GVAR(deviceKeyHandlingArray) pushBack [_displayName,_iconImage,_conditionCode,_toggleCode,_closeCode];
+GVAR(deviceKeyHandlingArray) pushBack [_displayName, _iconImage, _conditionCode, _toggleCode, _closeCode];
 [] call FUNC(deviceKeyFindValidIndex);

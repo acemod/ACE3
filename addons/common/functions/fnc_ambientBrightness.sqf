@@ -12,4 +12,4 @@
  */
 #include "script_component.hpp"
 
-(sunOrMoon * sunOrMoon * (1 - overcast * 0.25) + (moonIntensity/5) * (1 - overcast)) min 1
+(sunOrMoon * sunOrMoon * (1 - overcast * 0.25) + (moonIntensity / 5) * (1 - overcast)) min 1

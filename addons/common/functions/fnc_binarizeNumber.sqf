@@ -15,8 +15,8 @@
 
 private ["_array", "_index", "_rest"];
 params ["_number","_minLength"];
-_number = round _number;
 
+_number = round _number;
 
 if (isNil "_minLength") then {_minLength = 8};
 

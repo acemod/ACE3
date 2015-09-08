@@ -35,6 +35,7 @@ _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), []];
     if (!(_exceptionsX in _exceptions) && {!([_unit, _target] call _code)}) exitWith {
         false breakOut "main";
     };
-} forEach _conditions;
+    nil
+} count _conditions;
 
 true

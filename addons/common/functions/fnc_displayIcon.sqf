@@ -48,7 +48,7 @@ private ["_allControls", "_refresh", "_timeAlive", "_list"];
 params ["_iconId", "_show", "_icon", "_color", ["_timeAlive", DEFAULT_TIME]];
 
 disableSerialization;
-_list = missionNamespace getvariable [QGVAR(displayIconList),[]];
+_list = missionNamespace getvariable [QGVAR(displayIconList), []];
 
 _refresh = {
     private ["_allControls"];
@@ -56,7 +56,7 @@ _refresh = {
     _allControls = missionNamespace getvariable [QGVAR(displayIconListControls), []];
     {
         ctrlDelete _x;
-    }foreach _allControls;
+    } foreach _allControls;
 
     _allControls = [];
 
@@ -64,6 +64,7 @@ _refresh = {
     _setting = missionNamespace getvariable[QGVAR(settingFeedbackIcons), 0];
     if (_setting > 0) then {
         {
+            _x params ["_xicon", "_xcolor"];
             // +19000 because we want to make certain we are using free IDCs..
             _ctrl = ((findDisplay 46) ctrlCreate ["RscPicture", _foreachIndex + 19000]);
             _position = switch (_setting) do {
@@ -74,11 +75,11 @@ _refresh = {
                 default {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
             };
             _ctrl ctrlSetPosition _position;
-            _ctrl ctrlsetText (_x select 1);
-            _ctrl ctrlSetTextColor (_x select 2);
+            _ctrl ctrlsetText _xicon;
+            _ctrl ctrlSetTextColor _xcolor;
             _ctrl ctrlCommit 0;
             _allControls pushback _ctrl;
-        }foreach (missionNamespace getvariable [QGVAR(displayIconList),[]]);
+        } foreach (missionNamespace getvariable [QGVAR(displayIconList),[]]);
     };
     missionNamespace setvariable [QGVAR(displayIconListControls), _allControls];
 };

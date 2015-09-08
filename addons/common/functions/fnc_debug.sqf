@@ -39,13 +39,13 @@ _defaultLogDisplayLevel = if (isnil QGVAR(LOGDISPLAY_LEVEL)) then {
 if (_level <= _defaultLoglevel) then {
 
     _prefix = switch (_level) do {
-        case 0: { "ACE Error" };
-        case 1: { "ACE Warn" };
-        case 2: { "ACE Debug" };
-        case 3: { "ACE Info" };
-        default { "ACE Unknown" };
+        case 0: { "Error" };
+        case 1: { "Warn" };
+        case 2: { "Debug" };
+        case 3: { "Info" };
+        default { "Unknown" };
     };
-    _message = format["[%1] %2",_prefix,_msg];
+    _message = format["[ACE %1] %2",_prefix,_msg];
 
     if (_level <= _defaultLogDisplayLevel) then {
         systemChat _message;

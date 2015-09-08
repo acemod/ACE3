@@ -22,13 +22,13 @@
 
 private ["_settingData"];
 
-params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_isForced", "_value"];
+params ["_name", "", "", "", "", "", "", "_value"];
 
 
 _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting already exists
-if (count _settingData > 0) exitWith {};
+if (_settingData isEqualTo []) exitWith {};
 
 // Update the variable
 TRACE_2("Setting added",_name,_value);

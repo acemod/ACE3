@@ -27,7 +27,7 @@ if ((local _unit) && {!([_unit] call EFUNC(common,isPlayer))}) then {
         _unit disableConversation true;
     } else {
         //Sanity check to make sure we don't enable unconsious AI
-        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {ERROR("Enabling AI for unconsious unit");};
+        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith { ERROR("Enabling AI for unconsious unit"); };
         _unit enableAI "MOVE";
         _unit enableAI "TARGET";
         _unit enableAI "AUTOTARGET";

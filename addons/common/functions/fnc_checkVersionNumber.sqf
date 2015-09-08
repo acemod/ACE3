@@ -143,5 +143,6 @@ if (!isServer) then {
         };
 
         ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
     },0,[]] call CBA_fnc_addPerFrameHandler;
 };
