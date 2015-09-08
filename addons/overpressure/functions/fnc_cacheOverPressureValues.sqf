@@ -43,6 +43,8 @@ _type = if (isNil "_priority") then {
 // obsolete as CBA Update 2.1 start
 _array params ["_max"];
 
+// set Default type
+_type = 0;
 // get Highest Entry out the the Priority Array
 {
     if (_max < _x) then {
