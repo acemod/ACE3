@@ -18,18 +18,16 @@ private ["_conditions", "_conditionNames", "_conditionFuncs", "_index"];
 params ["_conditionName", "_conditionFunc"];
 _conditionName = toLower _conditionName;
 
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-_conditions params ["_conditionNames","_conditionFuncs"];
+_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[]]];
+
+_conditionNames = [_conditions, {_this select 0}] call FUNC(map);
 
 _index = _conditionNames find _conditionName;
 
 if (_index == -1) then {
-    _index = count _conditionNames;
-    _conditionNames set [_index, _conditionName];
-    _conditionFuncs set [_index, _conditionFunc];
+    _conditions pushBack [_conditionName, _conditionFunc];
 } else {
-    _conditionNames pushBack _conditionName;
-    _index = _conditionFuncs pushBack _conditionFunc;
+    _conditions set [_index, [_conditionName, _conditionFunc]] ;
 };
 
-GVAR(InteractionConditions) = [_conditionNames, _conditionFuncs];
+GVAR(InteractionConditions) = _conditions;

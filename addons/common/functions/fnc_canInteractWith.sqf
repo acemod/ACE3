@@ -13,7 +13,9 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 scopeName "main";
+
 private ["_exceptions", "_owner", "_conditions", "_conditionNames", "_conditionFuncs", "_canInteract"];
 
 params ["_unit", "_target", ["_exceptions",[]]];
@@ -26,17 +28,13 @@ _owner = _target getVariable [QGVAR(owner), objNull];
 if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
-
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-_conditions params ["_conditionNames","_conditionFuncs"];
-
-_canInteract = true;
+_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), []];
 
 {
-    if (!(_x in _exceptions) && {!([_unit, _target] call (_conditionFuncs select _forEachIndex))}) exitWith {
-        _canInteract = false;
-        breakTo "main";
+    _x params ["_code", "_exceptionsX"];
+    if (!(_exceptionsX in _exceptions) && {!([_unit, _target] call _code)}) exitWith {
+        false breakOut "main";
     };
-} forEach _conditionNames;
+} forEach _conditions;
 
-_canInteract
+true

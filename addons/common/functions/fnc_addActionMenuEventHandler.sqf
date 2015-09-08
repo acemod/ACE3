@@ -45,9 +45,8 @@ _name = format ["ACE_ActionMenu_%1", _action];
 
 _actionsVar = _unit getVariable [_name, [-1, [], []]];
 
-_id = (_actionsVar select 0) + 1;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_id", "_actionIDs", "_actions"];
+_id = _id + 1;
 
 _nameVar = format ["%1_ID%2", _name, _id];
 missionNamespace setVariable [_nameVar, [_condition, _statement, _condition2, _statement2]];

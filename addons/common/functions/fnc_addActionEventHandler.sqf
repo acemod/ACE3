@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_name", "_actionsVar", "_actionID", "_actions", "_id", "_actionIDs"];
+private ["_name", "_actionsVar", "_actions"];
 
 params ["_unit","_action","_condition","_statement"];
 
@@ -35,12 +35,10 @@ if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, 
   _actionsVar = [-1, [-1, [], []], objNull];
 };
 
-_actionID = _actionsVar select 0;
-_actions = _actionsVar select 1;
+_actionsVar params ["_actionID", "_actionsArray"];
+_actionsArray params ["_id", "_actionIDs", "_actions"]
 
-_id = (_actions select 0) + 1;
-_actionIDs = _actions select 1;
-_actions = _actions select 2;
+_id = _id + 1;
 
 _actionIDs pushBack _id;
 _actions pushBack [_condition, _statement];
