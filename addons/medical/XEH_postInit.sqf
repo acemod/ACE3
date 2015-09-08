@@ -2,10 +2,10 @@
 
 #include "script_component.hpp"
 
-// @todo handle fall damage. units otherwise invulnerable to fall damage.
-["medical_onFallDamage", {systemChat format ["falling: %1", _this]}] call EFUNC(common,addEventhandler);
-["medical_onDrowningDamage", {systemChat format ["drowning: %1", _this]}] call EFUNC(common,addEventhandler);
-["medical_onCollisionDamage", {systemChat format ["collision: %1", _this]}] call EFUNC(common,addEventhandler);
+["medical_onSelectionDamage", DFUNC(onSelectionDamage)] call EFUNC(common,addEventhandler);
+["medical_onFallDamage", DFUNC(onFallDamage)] call EFUNC(common,addEventhandler);
+["medical_onDrowningDamage", DFUNC(onDrowningDamage)] call EFUNC(common,addEventhandler);
+["medical_onCollisionDamage", DFUNC(onCollisionDamage)] call EFUNC(common,addEventhandler);
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
