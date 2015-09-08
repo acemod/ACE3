@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitIndex"];
+params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
 TRACE_5("ACE_DEBUG: HandleDamage Called",_unit,_selection,_damage,_shooter,_projectile);
 
 // bug, apparently can fire for remote units in special cases
@@ -63,7 +63,7 @@ if (_selection == "") then {
         // this is the only point damage actually counts. all additional vitality functions should use these values.
         {
             if (_x > 0) then {
-                ["medical_onSelectionDamage", [_unit, GVAR(Selections) select _forEachIndex, _x]] call EFUNC(common,localEvent);
+                ["medical_onSelectionDamage", [_unit, GVAR(Selections) select _forEachIndex, _x, _projectile]] call EFUNC(common,localEvent);
             };
         } forEach _cachedNewHitpointDamages;
     } else {
@@ -176,96 +176,9 @@ if (true) exitWith {_damageReturn};
 
 
 
-
-// skip thi next stuff if not listed hitpoint or structural for performance
-if (_selection != "" && {_index == -1}) exitWith {_damageReturn};
-
-private ["_typeOfDamage", "_typeIndex", "_minLethalDamage", "_damageReturnAdjusted", "_preventDeath"];
-
-_typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
-_typeIndex = GVAR(allAvailableDamageTypes) find _typeOfDamage;
-
-if (_typeIndex != -1) then {
-    _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
-} else {
-    _minLethalDamage = 0.01
-};
-
 // @todo move to collision event
 /*if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
         _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
     };
 };*/
-
-_damageReturnAdjusted = _damageReturn;
-
-if (_minLethalDamage <= _newDamage && {[_unit, _index, _newDamage] call FUNC(determineIfFatal)}) then {//systemChat "leathal 1";//
-    if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitwith {
-        _damageReturnAdjusted = 0.9;
-    };
-    if ([_unit] call FUNC(setDead)) then {
-        _damageReturnAdjusted = 1;
-    } else {
-        _damageReturnAdjusted = _newDamage min 0.89;
-    };
-} else {//systemChat "leathal 2";//
-    _damageReturnAdjusted = _newDamage min 0.89;
-};
-
-[_unit] call FUNC(addToInjuredCollection);
-
-// prevent insta death
-if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) then {//systemChat "prevent insta death";//
-    if (vehicle _unit != _unit && {damage vehicle _unit >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-    };
-
-    private "_delayedUnconsicous";
-    _delayedUnconsicous = false;
-    if (vehicle _unit != _unit && {damage vehicle _unit >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-        _delayedUnconsicous = true;
-    };
-
-    if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
-        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
-            [_unit] call FUNC(setDead);
-        };
-
-        if (_delayedUnconsicous) then {
-            [{
-                [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit], 0.7, 0] call EFUNC(common,waitAndExec);
-        } else {
-            [{
-                [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit]] call EFUNC(common,execNextFrame);
-        };
-    };
-
-    _damageReturnAdjusted = _newDamage min 0.89;
-};
-
-// revive mode
-if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_damageReturn >= 0.9} && {_selection in ["", "head", "body"]}) then {//systemChat "enable revive";//
-    if (vehicle _unit != _unit && {damage vehicle _unit >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-    };
-
-    [_unit] call FUNC(setDead);
-
-    _damageReturnAdjusted = _newDamage min 0.89;
-};
-
-// correct damage
-if (_index != -1) then {
-    private "_cachedNewHitpointDamages";
-    _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
-    _cachedNewHitpointDamages set [_index, _damageReturnAdjusted];
-    _unit setVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
-} else {
-    _damageReturn = _damageReturnAdjusted;
-};
-
-_damageReturn
