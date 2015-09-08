@@ -42,6 +42,11 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     };
 };
 
+
+diag_log text str _selection;
+diag_log text str _damage;
+
+
 private ["_damageReturn", "_newDamage", "_index"];
 
 // apply damage scripted
@@ -159,26 +164,4 @@ if (_selection == "") then {
     };
 };
 
-if (true) exitWith {_damageReturn};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @todo move to collision event
-/*if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
-    if (GVAR(enableVehicleCrashes)) then {
-        _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
-    };
-};*/
+_damageReturn

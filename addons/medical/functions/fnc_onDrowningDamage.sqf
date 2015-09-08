@@ -1,8 +1,14 @@
 // by commy2
 #include "script_component.hpp"
 
-params ["_unit", "_damage"];
+params ["_unit", "_newDamage"];
 
-_unit setHitPointDamage ["HitHead", (_unit getHitPointDamage "HitHead") + _damage];
+private ["_totalDamage"];
+
+_totalDamage = (_unit getHitPointDamage "HitHead") + _newDamage;
+
+[_unit] call FUNC(addToInjuredCollection);
+
+_unit setHitPointDamage ["HitHead", _totalDamage];
 
 systemChat format ["drowning: %1", _this];

@@ -13,20 +13,22 @@ _typeIndex = GVAR(allAvailableDamageTypes) find _typeOfDamage;
 if (_typeIndex != -1) then {
     _minLethalDamage = GVAR(minLethalDamages) select _typeIndex;
 } else {
-    _minLethalDamage = 0.01
+    _minLethalDamage = 0.01;
 };
 
-/*if (_minLethalDamage <= _newDamage && {[_unit, GVAR(SELECTIONS) find _selection, _newDamage] call FUNC(determineIfFatal)}) then {
+if (_minLethalDamage <= _newDamage && {[_unit, GVAR(SELECTIONS) find _selection, _newDamage] call FUNC(determineIfFatal)}) then {
+    // prevent insta death
     if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitwith {
         _totalDamage = 0.9;
     };
+
     if ([_unit] call FUNC(setDead)) then {
         _totalDamage = 1;
     } else {
-        _totalDamage = _totalDamage min 0.89;
+        _totalDamage = _totalDamage min 0.9;
     };
 } else {
-    _totalDamage = _totalDamage min 0.89;
+    _totalDamage = _totalDamage min 0.9;
 };
 
 [_unit] call FUNC(addToInjuredCollection);
@@ -72,7 +74,7 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
     [_unit] call FUNC(setDead);
 
     _totalDamage = _totalDamage min 0.89;
-};*/
+};
 
 _unit setHit [_selection, _totalDamage];
 

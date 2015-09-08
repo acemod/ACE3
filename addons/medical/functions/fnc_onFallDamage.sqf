@@ -1,9 +1,16 @@
 // by commy2
 #include "script_component.hpp"
 
-params ["_unit", "_damage"];
+params ["_unit", "_newDamage"];
 
-_unit setHitPointDamage ["HitLeftLeg", (_unit getHitPointDamage "HitLeftLeg") + _damage];
-_unit setHitPointDamage ["HitRightLeg", (_unit getHitPointDamage "HitRightLeg") + _damage];
+private ["_totalDamageL", "_totalDamageR", "_minLethalDamage"];
+
+_totalDamageL = (_unit getHitPointDamage "HitLeftLeg") + _newDamage;
+_totalDamageR = (_unit getHitPointDamage "HitRightLeg") + _newDamage;
+
+[_unit] call FUNC(addToInjuredCollection);
+
+_unit setHitPointDamage ["HitLeftLeg", _totalDamageL];
+_unit setHitPointDamage ["HitRightLeg", _totalDamageR];
 
 systemChat format ["falling: %1", _this];
