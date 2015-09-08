@@ -1,7 +1,9 @@
 ---
 layout: wiki
 title: Fonts
+description: Custom fonts including fixed-width font.
 group: feature
+category: general
 parent: wiki
 ---
 

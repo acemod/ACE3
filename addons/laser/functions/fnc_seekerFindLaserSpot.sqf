@@ -12,13 +12,13 @@
  * Return value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
  */
- 
+
 #include "script_component.hpp"
 
-private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"]; 
-private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_laserPos", "_laserDir", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"]; 
+private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"];
+private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"];
 private ["_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
-private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"]; 
+private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"];
 
 _pos = _this select 0;
 _dir = vectorNormalized (_this select 1);
@@ -62,17 +62,19 @@ _finalOwner = nil;
                 };
             };
         };
-        _laserPos = _laser select 0;
-        _laserDir = _laser select 1;
-        _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
-        {
-            _testPoint = _x select 0;
-            _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
-            _testDotProduct = _dir vectorDotProduct _testPointVector;
-            if(_testDotProduct > _seekerCos) then {
-                _spots pushBack [_testPoint, _owner];
-            };
-        } forEach (_res select 2);
+        
+        //Handle Weird Data Return
+        if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
+            _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
+            {
+                _testPoint = _x select 0;
+                _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
+                _testDotProduct = _dir vectorDotProduct _testPointVector;
+                if(_testDotProduct > _seekerCos) then {
+                    _spots pushBack [_testPoint, _owner];
+                };
+            } forEach (_res select 2);
+        };
     };
 } forEach (GVAR(laserEmitters) select 1);
 
@@ -119,10 +121,10 @@ if((count _spots) > 0) then {
             _largestIndex = _index;
         };
     } forEach _buckets;
-    
+
     _finalBucket = _finalBuckets select _largestIndex;
     _owners = HASH_CREATE;
-    
+
     if(count _finalBucket > 0) then {
         _avgX = 0;
         _avgY = 0;

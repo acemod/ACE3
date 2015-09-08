@@ -3,6 +3,7 @@ layout: wiki
 title: Attach
 description: Allow players to attach items to vehicles or themselves
 group: feature
+category: interaction
 parent: wiki
 ---
 

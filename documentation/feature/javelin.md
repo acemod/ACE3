@@ -3,6 +3,7 @@ layout: wiki
 title: Javelin
 description: 
 group: feature
+category: equipment
 parent: wiki
 ---
 

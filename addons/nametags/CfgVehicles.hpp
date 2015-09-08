@@ -16,7 +16,7 @@ class CfgVehicles {
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = CSTRING(DoNotForce);
+                        name = ECSTRING(common,DoNotForce);
                         value = -1;
                     };
                     class ForceHide {
@@ -54,7 +54,7 @@ class CfgVehicles {
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = CSTRING(DoNotForce);
+                        name = ECSTRING(common,DoNotForce);
                         value = -1;
                     };
                     class ForceHide {
@@ -74,7 +74,7 @@ class CfgVehicles {
                 class values {
                     class DoNotForce {
                         default = 1;
-                        name = CSTRING(DoNotForce);
+                        name = ECSTRING(common,DoNotForce);
                         value = -1;
                     };
                     class ForceHide {

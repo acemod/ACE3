@@ -16,12 +16,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_newSurrenderState);
-
 private "_returnValue";
 
+params ["_unit", "_newSurrenderState"];
+
 _returnValue = if (_newSurrenderState) then {
-    //no weapon equiped AND not currently surrendering and 
+    //no weapon equiped AND not currently surrendering and
     GVAR(allowSurrender) && {(currentWeapon _unit) == ""} && {!(_unit getVariable [QGVAR(isSurrendering), false])}
 } else {
     //is Surrendering

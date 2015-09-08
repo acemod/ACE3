@@ -3,6 +3,7 @@ layout: wiki
 title: Inventory
 description:
 group: feature
+category: interaction
 parent: wiki
 ---
 

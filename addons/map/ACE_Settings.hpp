@@ -15,6 +15,10 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
+    class GVAR(mapGlow) {
+        value = 1;
+        typeName = "BOOL";
+    };
     class GVAR(mapShake) {
         value = 1;
         typeName = "BOOL";

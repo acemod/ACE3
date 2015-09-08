@@ -15,13 +15,12 @@
  * Public: No
  */
 #include "script_component.hpp"
+params ["_unit", "_strength"];
 
-if (GVAR(DisableEarRinging)) exitWith {};
-
-PARAMS_2(_unit,_strength);
-
-if (isNull _unit) exitWith {};
+if (_unit != ACE_player) exitWith {};
 if (_strength < 0.05) exitWith {};
+if (!isNull curatorCamera) exitWith {};
+if ((!GVAR(enabledForZeusUnits)) && {player != ACE_player}) exitWith {};
 
 if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
     _strength = _strength / 4;
@@ -36,66 +35,4 @@ if(headgear _unit != "") then {
     };
 };
 
-_unit setVariable [QGVAR(dv), (_unit getVariable [QGVAR(dv), 0]) + _strength];
-
-if (GVAR(earRingingPFH) != -1) exitWith {};
-
-GVAR(earRingingPFH) = [{
-    EXPLODE_1_PVT(_this select 0,_unit);
-    private ["_prior"];
-    _prior = (_unit getvariable [QGVAR(dv), 0]) min 20;
-
-    if (!alive _unit || _prior <= 0) exitWith {
-        _unit setVariable [QGVAR(dv), 0];
-        _unit setVariable [QGVAR(prior), 0];
-        GVAR(beep) = false;
-        GVAR(beep2) = false;
-        GVAR(time2) = 0;
-        GVAR(time3) = 0;
-        GVAR(time4) = 0;
-        GVAR(earRingingPFH) = -1;
-        [_this select 1] call cba_fnc_removePerFrameHandler;
-    };
-
-    if (((_unit getvariable [QGVAR(dv), 0]) - (_unit getvariable [QGVAR(prior), 0])) > 2) then {
-        if (ACE_time > GVAR(time3)) then {
-            GVAR(beep2) = false;
-        };
-        if (!GVAR(beep2)) then {
-            playSound "ACE_Combat_Deafness";
-            GVAR(beep2) = true;
-            GVAR(time3) = ACE_time + 5;
-        };
-    };
-
-    _unit setvariable [QGVAR(prior), _prior];
-    GVAR(volume) = (1 -  (_prior / 20)) max 0;
-
-    if (_prior > 19.75) then {
-        _unit setvariable [QGVAR(deaf), true];
-    } else {
-        _unit setvariable [QGVAR(deaf), false];
-    };
-
-    if ((_unit getvariable [QGVAR(deaf), false]) && {ACE_time > GVAR(time4)}) then {
-        playSound "ACE_Combat_Deafness";
-        GVAR(beep2) = true;
-        GVAR(time3) = ACE_time + 10;
-        GVAR(time4) = ACE_time + 30;
-    };
-
-    // Hearing takes longer to return to normal after it hits rock bottom
-    _unit setvariable [QGVAR(dv), _prior - (0.5 * (GVAR(volume) max 0.1))];
-
-    if (_prior > 10) then {
-        //check if the ringing is already being played
-        if (ACE_time > GVAR(time2)) then {
-            GVAR(beep) = false;
-        };
-        if (!GVAR(beep)) then {
-            playSound "ACE_Ring_Backblast";
-            GVAR(time2) = ACE_time + 22;
-            GVAR(beep) = true;
-        };
-    };
-}, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
+GVAR(deafnessDV) = GVAR(deafnessDV) + _strength;

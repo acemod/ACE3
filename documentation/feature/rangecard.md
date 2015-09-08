@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: Rangecard
-description: Add a range card for your weapons
+description: Adds a range card for your weapons
 group: feature
+category: equipment
 parent: wiki
 ---
 

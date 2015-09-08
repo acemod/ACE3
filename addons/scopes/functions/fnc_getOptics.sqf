@@ -10,21 +10,25 @@
  * 1: Optic of secondary <STRING>
  * 2: Optic of handgun <STRING>
  *
+ * Example:
+ * [player] call ace_scopes_fnc_getOptics
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_unit);
+private "_optics";
 
-private ["_array"];
-_array = ["", "", ""];
+params ["_unit"];
 
-if !(_unit isKindOf "CAManBase") exitWith {_array};
+_optics = ["", "", ""];
+
+if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
 
 {
     if (count _x >= 2) then {
-        _array set [_forEachIndex, _x select 2];
+        _optics set [_forEachIndex, _x select 2];
     };
 } forEach [primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit];
 
-_array
+_optics

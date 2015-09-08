@@ -3,6 +3,7 @@ layout: wiki
 title: Frag
 description: 
 group: feature
+category: realism
 parent: wiki
 ---
 

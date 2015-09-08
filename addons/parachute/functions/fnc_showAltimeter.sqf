@@ -49,4 +49,4 @@ GVAR(AltimeterActive) = true;
 
     (_this select 0) set [2, _height];
     (_this select 0) set [3, _curTime];
-}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), ACE_time]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), ACE_time]] call CALLSTACK(CBA_fnc_addPerFrameHandler);

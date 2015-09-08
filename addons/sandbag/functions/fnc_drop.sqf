@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_sandbag_fnc_deployCancel;
+ * [] call ace_sandbag_fnc_deployCancel
  *
  * Public: No
  */
@@ -34,14 +34,14 @@ GVAR(carrier) playActionNow "PutDown";
     private ["_sandBag", "_position", "_direction"];
     _position = getPosASL GVAR(sandBag);
     _direction = getDir GVAR(sandBag);
-    
+
     deleteVehicle GVAR(sandBag);
-    
-    _sandBag = createVehicle ["ACE_SandbagObject", [0,0,0], [], 0, "NONE"];
+
+    _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
     _sandBag enableSimulationGlobal true;
     _sandBag setPosASL _position;
     _sandBag setDir _direction;
-    
+
     GVAR(sandBag) = objNull;
     GVAR(carrier) = objNull;
 }, [], 1.0, 0.5] call EFUNC(common,waitAndExecute);

@@ -9,5 +9,7 @@ PREP(showFireMode);
 PREP(onFired);
 PREP(onOpticLoad);
 PREP(onOpticDraw);
+PREP(onOpticUnload);
 
 GVAR(isLockKeyDown) = false;
+GVAR(pfehID) = -1;

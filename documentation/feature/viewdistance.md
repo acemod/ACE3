@@ -3,6 +3,7 @@ layout: wiki
 title: View Distance
 description: The view distance module adds extra view distance settings
 group: feature
+category: interaction
 parent: wiki
 ---
 

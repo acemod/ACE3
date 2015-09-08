@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Makes a unit drop items
  *
  * Arguments:
@@ -22,13 +23,11 @@
 
 private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
 
-
-PARAMS_3(_caller,_target,_listOfItemsToRemove);
-DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
+params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false, [false]]]; //By default units drop all weapon mags when dropping a weapon
 
 _fncSumArray = {
     _return = 0;
-    {_return = _return + _x;} forEach (_this select 0);
+    {_return = _return + _x;} count (_this select 0);
     _return
 };
 
@@ -48,7 +47,7 @@ if (!_doNotDropAmmo) then {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+    } count ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
 //Create a new weapon holder

@@ -15,16 +15,34 @@
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-private ["_loaded", "_emptyPos"];
+private ["_loaded", "_emptyPos","_validVehiclestate"];
 PARAMS_2(_unit,_vehicle);
+_validVehiclestate = true;
 
-if (driver _vehicle == _unit) exitwith {TRACE_1("Exiting on Failed Driver Check", driver _vehicle == _unit); false;};
-TRACE_1("Vehicle Check", driver _vehicle == _unit);
-if !(speed _vehicle <1 && (((getPos _vehicle) select 2) < 2)) exitwith {TRACE_1("Exiting on Failed speed check", getPosASL _vehicle == _unit); false;};
-TRACE_1("getPosASL Vehicle Check", getPos _vehicle);
+if (_vehicle isKindOf "Ship" ) then {
+    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
+    TRACE_1("SHIP Ground Check", getPosATL _vehicle );
+    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]); // TODO: if spot is underwater pick another spot.
+} else {
+    if (_vehicle isKindOf "Air" ) then {
+        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
+        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
+        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
+        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
+    } else {
+        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
+        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
+        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
+    };
+};
 
-_emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
-if (count _emptyPos == 0) exitwith {false};  //consider displaying text saying there are no safe places to exit the vehicle
+TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
+if (!_validVehiclestate) exitwith { diag_log format["Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4", _vehicle, getPos _vehicle, isTouchingGround _vehicle, speed _vehicle]; false };
+
+diag_log str _emptyPos;
+
+if (count _emptyPos == 0) exitwith {diag_log format["No safe empty spots to unload patient. %1", _emptyPos]; false};  //consider displaying text saying there are no safe places to exit the vehicle
+
 
 unassignVehicle _unit;
 [_unit] orderGetIn false;

@@ -3,7 +3,7 @@ layout: wiki
 title: Aircraft
 description: Aircraft overhaul
 group: feature
-order: 5
+category: realism
 parent: wiki
 ---
 

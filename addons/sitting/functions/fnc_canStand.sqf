@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 // Sitting
-(_player getVariable [QGVAR(isSitting),false])
+(_player getVariable [QGVAR(isSitting), false])
