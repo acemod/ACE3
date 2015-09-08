@@ -2,6 +2,11 @@
 
 #include "script_component.hpp"
 
+["medical_onSelectionDamage", DFUNC(onSelectionDamage)] call EFUNC(common,addEventhandler);
+["medical_onFallDamage", DFUNC(onFallDamage)] call EFUNC(common,addEventhandler);
+["medical_onDrowningDamage", DFUNC(onDrowningDamage)] call EFUNC(common,addEventhandler);
+["medical_onCollisionDamage", DFUNC(onCollisionDamage)] call EFUNC(common,addEventhandler);
+
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
