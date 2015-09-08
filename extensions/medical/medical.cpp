@@ -14,7 +14,7 @@
 
 extern "C" {
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
-};
+}
 
 std::vector<std::string> parseExtensionInput(const std::string& input)
 {
