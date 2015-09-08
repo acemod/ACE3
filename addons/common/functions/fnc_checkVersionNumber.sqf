@@ -12,34 +12,36 @@
  */
 #include "script_component.hpp"
 
+private ["_files", "_versions"];
+_files = [];
+
+{
+    if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
+        _files pushBack _x;
+    };
+    nil
+} count activatedAddons;
+
+_versions = [];
+{
+    _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
+    _versions set [_forEachIndex, _version];
+} forEach _files;
+
+if (isServer && hasInterface) then {
+    ACE_Version_ServerVersions = [_files, _versions];
+    publicVariable "ACE_Version_ServerVersions";
+} else {
+    ACE_Version_ClientVersions = [_files, _versions];
+};
+
 
 // Begin client version check
 if (!isServer) then {
     [{
         // Wait for server to send the servers files and version numbers
-        if (!isNil "ACE_Version_ClientVersions" && {!isNil "ACE_Version_ServerVersions"}) exitWith {};
+        if (isNil "ACE_Version_ClientVersions" && {isNil "ACE_Version_ServerVersions"}) exitWith {};
         private["_client", "_clientVersion", "_count", "_error", "_files", "_index", "_missingAddon", "_missingAddonServer", "_missingAddons", "_missingAddonsServer", "_oldVersionClient", "_oldVersionServer", "_oldVersionsClient", "_oldVersionsServer", "_serverFiles", "_serverVersion", "_serverVersions", "_string", "_version", "_versions"];
-        _files = [];
-
-        {
-            if (_x find "a3_" != 0 && {_x find "ace_" != 0} && {!(toLower _x in (missionNamespace getVariable ["ACE_Version_Whitelist", []]))}) then {
-                _files pushBack _x;
-            };
-            true
-        } count activatedAddons;
-
-        _versions = [];
-        {
-            _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
-            _versions set [_forEachIndex, _version];
-        } forEach _files;
-
-        if (isServer && hasInterface) then {
-            ACE_Version_ServerVersions = [_files, _versions];
-            publicVariable "ACE_Version_ServerVersions";
-        } else {
-            ACE_Version_ClientVersions = [_files, _versions];
-        };
 
         _client = profileName;
         ACE_Version_ClientVersions params ["_files", "_versions"];
