@@ -1,13 +1,13 @@
 /*
  * Author: commy2
  *
- * ?
+ * hint every frame the Variable ACE_isUsedBy from the input Object
  *
  * Arguments:
- * ?
+ * 0: Object
  *
  * Return Value:
- * ?
+ * None
  *
  * Public: No
  */
@@ -15,6 +15,7 @@
 
 GVAR(Debug_Object) = _this select 0;
 
-onEachFrame {
+[{
     hintSilent str (GVAR(Debug_Object) getVariable ["ACE_isUsedBy", objNull]);
-};
+}, 0, []] call CBA_fnc_addPerFrameHandler;
+nil

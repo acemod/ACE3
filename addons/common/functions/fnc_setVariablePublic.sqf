@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2 and joko // Jonas
  *
  * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
@@ -21,30 +21,34 @@ params ["_object", "_varName", "_value", ["_sync", 1]];
 // set value locally
 _object setVariable [_varName, _value];
 
-// "duh"
-if (!isMultiplayer) exitWith {};
+// Exit Dedicated server and headless Clients
+if (!hasInterface) exitWith {};
 
-// generate stacked eventhandler id
+if (_idName in GVAR(setVariableNames)) exitWith {};
 
-_idName = format ["ACE_setVariablePublic_%1", _varName];
-
-// exit now if an eh for that variable already exists
-_allIdNames = [GETMVAR(BIS_stackedEventHandlers_onEachFrame,[]), {_this select 0}] call FUNC(map);
-
-if (_idName in _allIdNames) exitWith {};
-
-// when to push the value
 _syncTime = ACE_diagTime + _sync;
 
-// add eventhandler
-[_idName, "onEachFrame", {
-    params ["_object", "_varName", "_syncTime", "_idName"];
-    // wait to sync the variable
-    if (ACE_diagTime > _syncTime) then {
-        // set value public
-        _object setVariable [_varName, _object getVariable _varName, true];
+GVAR(setVariableNames) pushBack _idName;
 
-        // remove eventhandler
-        [_idName, "onEachFrame"] call BIS_fnc_removeStackedEventHandler
+GVAR(setVariablePublicArray) pushBack [_object, _varName, _syncTime, _idName];
+
+if (isNil QGVAR(setVariablePublicPFH)) exitWith {};
+
+GVAR(setVariablePublicPFH) = [{
+    private "_delete";
+    _delete = 0;
+    {
+        _x params ["_object", "_varName", "_syncTime", "_idName"]
+        if (ACE_diagTime > _syncTime) then {
+            // set value public
+            _object setVariable [_varName, _object getVariable _varName, true];
+            GVAR(setVariablePublicArray) deleteAt _forEachIndex - _delete;
+            GVAR(setVariableNames) deleteAt _forEachIndex - _delete;
+        };
+    } forEach GVAR(setVariablePublicArray);
+
+    if (GVAR(setVariablePublicArray) isEqualTo []) then {
+        [GVAR(setVariablePublicPFH)] call CBA_fnc_removePerFrameHandler;
+        GVAR(setVariablePublicPFH) = nil;
     };
-}, [_object, _varName, _syncTime, _idName]] call BIS_fnc_addStackedEventHandler; // replace with CBA if Posible?
+}, 0, []] call CBA_fnc_addPerFrameHandler;

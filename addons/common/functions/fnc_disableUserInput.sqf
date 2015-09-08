@@ -20,8 +20,8 @@ params ["_state"];
 if (_state) then {
     disableSerialization;
 
+    if (!isNil QGVAR(disableInputPFH)) exitWith {};
     if (!isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull])) exitWith {};
-    if ("ACE_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) exitWith {};
 
     // end TFAR and ACRE2 radio transmissions
     call FUNC(endRadioTransmission);
@@ -96,16 +96,18 @@ if (_state) then {
     _dlg displayAddEventHandler ["KeyUp", {true}];
 
     //replace with CBA PFH
-    ["ACE_DisableUserInput", "onEachFrame", {
+    GVAR(disableInputPFH) = [{
         if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
-            ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+            [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
+            GVAR(disableInputPFH) = nil;
             [true] call FUNC(disableUserInput);
         };
-    }] call BIS_fnc_addStackedEventHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 } else {
-    if ("ACE_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) then {
-        ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    if (!isNil QGVAR(disableInputPFH)) then {
+        [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
+        GVAR(disableInputPFH) = nil;
     };
 
     (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
