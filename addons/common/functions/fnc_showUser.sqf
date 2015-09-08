@@ -15,7 +15,8 @@
 
 GVAR(Debug_Object) = _this select 0;
 
-[{
+if (!isNil QGVAR(showUserPFH)) exitWith {};
+GVAR(showUserPFH) = [{
     hintSilent str (GVAR(Debug_Object) getVariable ["ACE_isUsedBy", objNull]);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 nil
