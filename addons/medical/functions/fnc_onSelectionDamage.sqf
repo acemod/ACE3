@@ -78,4 +78,16 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
 
 _unit setHit [_selection, _totalDamage];
 
-systemChat format ["selection damaged: %1", _this];
+//systemChat format ["selection damaged: %1", _this];
+
+if (GVAR(level) < 2 || {!([_unit] call FUNC(hasMedicalEnabled))}) then {
+    [_unit, _selection, _newDamage] call FUNC(handleDamage_basic);
+} else {
+    /*_cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+    _cache_damages = _unit getVariable QGVAR(cachedDamages);
+    {
+        _params = _x + [_cache_damages select _foreachIndex];
+        _params call FUNC(handleDamage_advanced);
+    } foreach _cache_params;
+    [_unit] call FUNC(handleDamage_advancedSetDamage);*/
+};
