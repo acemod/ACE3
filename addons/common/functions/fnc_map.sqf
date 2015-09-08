@@ -19,15 +19,13 @@
 
 private "_array";
 
-params ["_originalArray", "_code"];
-_array = +_originalArray; // is this needed after params?
-
-if (isNil "_array") exitWith {
+if (params ["_originalArray", "_code"]) exitWith {
     diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
     []
 };
 
-diag_log text format ["[ACE] ERROR: array function map in %1", _fnc_scriptNameParent];
+_array = +_originalArray; // is this needed after params?
+
 {
     _array set [_forEachIndex, _x call _code];
     true

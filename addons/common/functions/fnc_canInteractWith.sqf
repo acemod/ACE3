@@ -16,7 +16,7 @@
 
 scopeName "main";
 
-private ["_exceptions", "_owner", "_conditions", "_conditionNames", "_conditionFuncs", "_canInteract"];
+private ["_owner", "_conditions", "_conditionNames", "_conditionFuncs", "_canInteract"];
 
 params ["_unit", "_target", ["_exceptions",[]]];
 

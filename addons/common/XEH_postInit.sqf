@@ -50,11 +50,11 @@
     diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
 }] call FUNC(addEventHandler);
 
-["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
-["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
-["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
+["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
+["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
+["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
 
-["unloadPersonEvent", DFUNC(unloadPersonLocal)] call FUNC(addEventhandler);
+["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
 ["lockVehicle", {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -112,12 +112,12 @@ if(!isServer) then {
         ["SEH_all", [player]] call FUNC(serverEvent);
     }] call FUNC(addEventHandler);
 } else {
-    ["SEH_all", DFUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
 };
-["SEH", DFUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
-["SEH_s", DFUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
 if (isServer) then {
-    [DFUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 call FUNC(checkFiles);
 
