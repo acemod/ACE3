@@ -33,6 +33,8 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 
 // Initialize all effects
+if (hasInterface) then {
+
 _fnc_createEffect = {
     private "_effect";
     params ["_type", "_layer", "_default"];
@@ -241,7 +243,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
     };
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
-
+};
 
 ["SettingsInitialized", {
     if (GVAR(level) == 2) exitwith {

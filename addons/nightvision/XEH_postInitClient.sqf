@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
+if !(hasInterface) exitWith {};
 
 GVAR(ppEffectBlur) = ppEffectCreate ["dynamicBlur", 1234];
 GVAR(ppEffectBlur) ppEffectForceInNVG true;

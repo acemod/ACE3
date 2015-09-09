@@ -16,6 +16,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+if !(hasInterface) exitWith {};
+
 private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
 
 _glassesClassname = _this select 0;
