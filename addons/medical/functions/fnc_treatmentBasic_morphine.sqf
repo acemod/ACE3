@@ -9,7 +9,7 @@
  * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
@@ -17,8 +17,6 @@
 #include "script_component.hpp"
 #define MORPHINEHEAL 0.4
 
-private ["_caller", "_target"];
-_caller = _this select 0;
-_target = _this select 1;
+params ["_caller", "_target"];
 
 [[_target], QUOTE(DFUNC(treatmentBasic_morphineLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

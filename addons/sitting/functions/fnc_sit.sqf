@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
+private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
 
 params ["_seat", "_player"];
 
@@ -25,6 +25,26 @@ GVAR(seat) = _seat;
 
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
+
+// add scrollwheel action to release object
+_actionID = _player getVariable [QGVAR(StandUpActionID), -1];
+
+if (_actionID != -1) then {
+    _player removeAction _actionID;
+};
+
+_actionID = _player addAction [
+    format ["<t color='#FFFF00'>%1</t>", localize LSTRING(Stand)],
+    QUOTE((_this select 0) call FUNC(stand)),
+    nil,
+    20,
+    false,
+    true,
+    "GetOut",
+    QUOTE(_this call FUNC(canStand))
+];
+
+_player setVariable [QGVAR(StandUpActionID), _actionID];
 
 // Read config
 _configFile = configFile >> "CfgVehicles" >> typeOf _seat;

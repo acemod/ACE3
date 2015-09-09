@@ -18,7 +18,7 @@
 if (!alive ace_player) exitWith {};
 if (true) then {
     // Detect if curator interface is open and disable effects
-    if (!isNull(findDisplay 312)) exitWith {
+    if !(isNull curatorCamera) exitWith {
         if (GVAR(EffectsActive)) then {
             call FUNC(removeGlassesEffect);
         };

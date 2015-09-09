@@ -19,8 +19,7 @@
  */
 #include "script_component.hpp"
 
-private ["_currentSlideshow", "_actionsObject", "_actionsClass", "_mainAction", "_slidesAction", "_varString"];
-
+private ["_currentSlideshow", "_slidesAction", "_varString"];
 params ["_objects", "_controllers", "_images", "_names", "_duration"];
 
 // Verify data

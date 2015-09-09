@@ -1,13 +1,13 @@
 ---
 layout: wiki
 title: Medical System
-description: ACE provide users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics. 
+description: ACE3 provides users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics.
 group: feature
 order: 4
 category: realism
 parent: wiki
 ---
-**Disclaimer:** The documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
+**Disclaimer:** With the documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 
 ## 1. Overview
 ACE3 provides users with a more realistic medical system and comes in both a basic and an advanced version. This page will detail the differences between both systems and what they do as well as how to use them efficiently.
@@ -34,7 +34,7 @@ Besides the 4 elements introduced by basic medical, advanced introduces the foll
 - Cardiac Arrest.
 - Various treatment methods such as CPR, different kinds of IVs and a working tourniquet.
 - A basic medication simulation.
- 
+
 ## 2. Usage
 
 ### 2.1 Basic
@@ -84,17 +84,17 @@ Atropine | Serves no use in basic
  - **Yes:** Ask him if he has wounds / he is in pain.
  - **No:** Go to step 2.
 
- 
+
 - **Step 2:** Is the patient wounded?
  - **Yes:** Treat the wounds and go to step 3.
  - **No:** Skip this step.
-  
+
 
 - **Step 3:** Is the patient in pain?
  - **Yes:** Give him morphine.
  - **No:** Skip this step.
 
- 
+
 - **Step 4:** Did the patient lose blood?
  - **Yes:** Give blood via IV.
  - **No:** Go to step 5.
@@ -102,12 +102,20 @@ Atropine | Serves no use in basic
 
 
 - **Step 5**
- - If at this point the patient is still not back on its feet it's time to use an epinephrine autoinjector.
+ - If at this point the patient is still not back on its feet it's time to use an epinephrine Autoinjector.
 
 #### 2.1.3 Additional informations
 
 - If the revive system is in place your character will not die until the revive timer is at 0. Even if a tank shoots your ass off an epinephrine shot will bring you back up after your wounds are treated. (The timer is invisible and may vary from mission to mission, it also depends on the amount of lives remaining you have.)
 - You can't do an overdose in basic.
+
+#### 2.1.4 Revive (Basic Medical)
+For the following procedure to work revive need to be enabled.
+
+- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
+- A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
+- To wake up a patient treat all of his wounds, make sure he isn't in pain and then use epinephrine.
+- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 
 ### 2.2 Advanced
 
@@ -140,7 +148,7 @@ Same as with basic, when hit an injury is sustained. Different though is that th
 - Sources: falling, vehicle crashes, punches.
 - Effects: pain - light, bleeding - extremely slowly.
 
-##### 2.2.1.5 Cut wounds**
+##### 2.2.1.5 Cut wounds
 
 - Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
 - Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs.
@@ -216,7 +224,7 @@ Atropine | lower the heart rate of the patient
 
 #### 2.2.2 Vitals
 
-##### 2.2.2.1 Blood pressure 
+##### 2.2.2.1 Blood pressure
 
  NOTE:the `systolic` blood pressure is the number on the left, the `diastolic` blood pressure is the number on the right.
 
@@ -232,7 +240,7 @@ Atropine | lower the heart rate of the patient
  - **Low:** 45 and below
  - **Normal:** between 46 and 119
  - **High:** 120 and above
- 
+
 
 ##### 2.2.2.3 Cardiac arrest
 
@@ -256,12 +264,12 @@ This is a step by step guide, follow the steps from 1 to 6 in order unless state
 - **Step 2:** Does the patient have a pulse?
  - **Yes:** Go to step 3.
  - **No:** If you are alone provide CPR, if you have someone else get him to do CPR while you treat the patient's wounds. skip to step 3 or 4 depending on the situation.
- 
+
 
 - **Step 3:** Is the patient wounded?
  - **Yes**: Treat the wounds.
  - **No:** Skip this step.
-  
+
 
 - **Step 4:** Did the patient lose blood?
  - **Yes:** Use IVs to restore the volume of liquid in the blood stream of the patient.
@@ -288,5 +296,76 @@ Note that keeping the patient's vitals stable is very important while treating h
 - You don't have to take epinephrine after you take morphine, just wait until your pulse stabilizes by itself (Provided that you are in a stable condition).
 - Giving too much morphine to a patient (more than one every 10 minutes) will put him in cardiac arrest because of a blood pressure / heart rate too low.
 
-## 3. Dependencies
+#### 2.2.5 Revive (Advanced Medical)
+For the following procedure to work revive needs to be enabled.
+
+- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
+- A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
+- To wake up a patient the use of a PAK is required.
+- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
+- Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
+
+## 3. Guides
+### 3.1 Example loadouts
+
+#### 3.1.1 Basic
+- Soldier:
+  - 10 × Bandage (Basic)
+  - 3 × Morphine Autoinjector
+  - 1 × Epinephrine Autoinjector
+
+- Medic:
+  - 15-25 × Bandage (Basic)
+  - 10 × Morphine Autoinjector
+  - 10 × Epinephrine Autoinjector
+  - 6 × Blood IV (500ml)
+
+#### 3.1.2 Advanced
+
+- Soldier :
+  - 3-6 × Bandage (Basic)
+  - 3-6 × Bandage (Elastic)
+  - 3-6 × Packing Bandage
+  - 3-6 × Basic Field Dressing (QuikClot)
+  - 1 × Morphine Autoinjector
+  - 1 × Epinephrine Autoinjector
+  - 1 × Tourniquet (CAT)
+  - **Optional**: 1 × Saline IV (500ml) - used only by a qualified medic
+
+
+- Combat First Responder (CFR):
+  - 10-15 × Bandage (Basic)
+  - 10-15 × Bandage (Elastic)
+  - 10-15 × Packing Bandage
+  - 10-15 × Basic Field Dressing (QuikClot)
+  - 8 × Atropine Autoinjector
+  - 5 × Morphine Autoinjector
+  - 5 × Epinephrine Autoinjector
+  - 3 × Tourniquet (CAT)
+  - 4 × Saline IV (500ml)
+
+
+- Medic:
+  - 10-15 × Bandage (Basic)
+  - 15-20 × Bandage (Elastic)
+  - 15-20 × Packing Bandage
+  - 10-15 × Basic Field Dressing (QuikClot)
+  - 12 × Atropine Autoinjector
+  - 8 × Morphine Autoinjector
+  - 8 × Epinephrine Autoinjector
+  - 5 × Tourniquet (CAT)
+  - 6 × Saline IV (500ml)
+  - 1-3 × *Surgical Kit*
+  - 1-3 × *Personal Aid Kit*
+
+
+- Paramedic:
+  - 10-15 × Bandage (Basic)
+  - 15-20 × Bandage (Elastic)
+  - 15-20 × Packing Bandage
+  - 10-15 × Basic Field Dressing (QuikClot)
+  - 5 × Tourniquet (CAT)
+  - 2 × Saline IV (500ml)
+
+## 4. Dependencies
 `ace_interaction`, `ace_modules`, `ace_apl`
