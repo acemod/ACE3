@@ -21,7 +21,7 @@ params ["_map"];
 private ["_cachedVehicles","_unit","_color","_icon","_txt"];
 
 if (GVAR(camMode) == 0) then {
-    _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(camera),20,20,GVAR(camPan)];
+    _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(freeCamera),20,20,GVAR(camPan)];
 };
 
 _cachedVehicles = [];
