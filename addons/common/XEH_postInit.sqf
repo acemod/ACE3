@@ -1,4 +1,6 @@
 // ACE - Common
+
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
@@ -111,6 +113,7 @@ if(!isServer) then {
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
+
 call FUNC(checkFiles);
 
 
@@ -147,6 +150,15 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
+    //Set init finished and run all delayed functions:
+    GVAR(settingsInitFinished) = true;
+    diag_log text format ["[ACE] %1 delayed functions running", (count GVAR(runAtSettingsInitialized))];
+    {
+        _x params ["_func", "_params"];
+        _params call _func;
+    } forEach GVAR(runAtSettingsInitialized);
+    GVAR(runAtSettingsInitialized) = nil; //cleanup
+    
 }, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
@@ -203,10 +215,12 @@ GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
+GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
-    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
+    BEGIN_COUNTER(stateChecker);
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -270,18 +284,19 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         GVAR(OldPlayerWeapon) = _newPlayerWeapon;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
-
+    
+    // "visibleMapChanged" event
+    _newVisibleMap = visibleMap;
+    if (!_newVisibleMap isEqualTo GVAR(OldVisibleMap)) then {
+        // Raise ACE event locally
+        GVAR(OldVisibleMap) = _newVisibleMap;
+        ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
+    };
+    
+    END_COUNTER(stateChecker);
+    
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-
-// PFH to raise camera created event. Only works on these cams by BI.
-#define ALL_CAMERAS [ \
-    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
-    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
-    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
-]
 
 GVAR(OldIsCamera) = false;
 
@@ -289,7 +304,7 @@ GVAR(OldIsCamera) = false;
 
     // "activeCameraChanged" event
     private ["_isCamera"];
-    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    _isCamera = call FUNC(isfeatureCameraActive);
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _isCamera;
@@ -317,10 +332,10 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
+if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if(!(isNull player)) then {
+        if((!(isNull player)) && GVAR(settingsInitFinished)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
@@ -370,6 +385,5 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
-
 
 GVAR(commonPostInited) = true;

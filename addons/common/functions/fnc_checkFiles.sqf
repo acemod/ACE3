@@ -20,7 +20,9 @@ _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 diag_log text format ["[ACE]: ACE is version %1.", _version];
 
 private "_addons";
-_addons = activatedAddons;
+//_addons = activatedAddons; // broken with High-Command module, see #2134
+_addons = "true" configClasses (configFile >> "CfgPatches");//
+_addons = [_addons, {toLower configName _this}] call FUNC(map);//
 _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 
 {
@@ -80,7 +82,7 @@ if (isMultiplayer) then {
 
                 diag_log text format ["[ACE] ERROR: %1", _errorMsg];
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
@@ -91,7 +93,7 @@ if (isMultiplayer) then {
 
                 diag_log text format ["[ACE] ERROR: %1", _errorMsg];
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };

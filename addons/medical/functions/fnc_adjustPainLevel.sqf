@@ -18,10 +18,10 @@
 
 private ["_pain"];
 
-PARAMS_2(_unit,_addedPain);
-
+params ["_unit", "_addedPain"];
 //Only run on local units:
 if (!local _unit) exitWith {ERROR("unit is not local");};
+TRACE_3("ACE_DEBUG: adjustPainLevel Called",_unit, _pain, _addedPain);
 
 //Ignore if medical system disabled:
 if (GVAR(level) == 0) exitWith {};

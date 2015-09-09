@@ -12,6 +12,6 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_requester);
+params ["_requester"];
 
 ["drawing_sendbackMarkers", _requester, [GVAR(drawing_lineMarkers)]] call EFUNC(common,targetEvent);

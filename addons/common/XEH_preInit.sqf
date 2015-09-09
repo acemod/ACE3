@@ -157,6 +157,7 @@ PREP(requestCallback);
 PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(revertKeyCodeLocalized);
+PREP(runAfterSettingsInit);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);
@@ -302,6 +303,9 @@ GVAR(waitAndExecArray) = [];
 GVAR(nextFrameNo) = diag_frameno;
 GVAR(nextFrameBufferA) = [];
 GVAR(nextFrameBufferB) = [];
+
+GVAR(settingsInitFinished) = false;
+GVAR(runAtSettingsInitialized) = [];
 
 // @TODO: Generic local-managed global-synced objects (createVehicleLocal)
 

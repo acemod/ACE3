@@ -3,19 +3,18 @@
  *
  * Check if unit can carry the object. Doesn't check weight.
  *
- * Argument:
- * 0: Unit that should do the carrying (Object)
- * 1: Object to carry (Object)
+ * Arguments:
+ * 0: Unit that should do the carrying <OBJECT>
+ * 1: Object to carry <OBJECT>
  *
- * Return value:
- * Can the unit carry the object? (Bool)
+ * Return Value:
+ * Can the unit carry the object? <BOOL>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 

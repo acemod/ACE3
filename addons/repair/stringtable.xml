@@ -118,17 +118,13 @@
             <English>Who can perform a full repair on a vehicle?</English>
             <Polish>Kto może przeprowadzić pełną naprawę pojazdu?</Polish>
         </Key>
-        <Key ID="STR_ACE_Repair_RepairHitpoint">
-            <English>Repair %1</English>
-            <German>Reparieren %1</German>
-            <Spanish>Reparación %1</Spanish>
-            <French>Réparer %1</French>
-            <Polish>Napraw %1</Polish>
-            <Czech>Opravit %1</Czech>
-            <Portuguese>Reparar %1</Portuguese>
-            <Italian>Ripara %1</Italian>
-            <Hungarian>Szerelés %1</Hungarian>
-            <Russian>Ремонт %1</Russian>
+        <Key ID="STR_ACE_Repair_addSpareParts_name">
+            <English>Add Spare Parts</English>
+            <Polish>Dodaj części zam.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_addSpareParts_description">
+            <English>Add spare parts to vehicles (requires Cargo component)?</English>
+            <Polish>Czy dodać do pojazdów części zamienne? Wymaga włączonego cargo.</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
@@ -242,6 +238,18 @@
             <Hungarian>Motor</Hungarian>
             <Russian>Двигатель</Russian>
         </Key>
+        <Key ID="STR_ACE_Repair_HitHStabilizerL1">
+            <English>Left Horizontal Stabilizer</English>
+            <Polish>Lewy statecznik poziomy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitHStabilizerR1">
+            <English>Right Horizontal Stabilizer</English>
+            <Polish>Prawy statecznik poziomy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitVStabilizer1">
+            <English>Vertical Stabilizer</English>
+            <Polish>Statecznik pionowy</Polish>
+        </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
             <German>Tank</German>
@@ -254,15 +262,43 @@
             <Hungarian>Üzemanyagtank</Hungarian>
             <Russian>Топливный бак</Russian>
         </Key>
+        <Key ID="STR_ACE_Repair_HitTransmission">
+            <English>Transmission</English>
+            <Polish>Skrzynia biegów</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitGear">
+            <English>Gear</English>
+            <Polish>Podwozie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitStarter">
+            <English>Starter</English>
+            <Polish>Zapłon</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitTail">
+            <English>Tail</English>
+            <Polish>Ogon</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitPitotTube">
+            <English>Pitot Tube</English>
+            <Polish>Rurka Pitota</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitStaticPort">
+            <English>Static Port</English>
+            <Polish>Port statyczny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitAmmo">
+            <English>Ammo</English>
+            <Polish>Amunicja</Polish>
+        </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
-            <English>Main Turret</English>
+            <English>Turret</English>
             <German>Turm</German>
-            <Spanish>Torreta príncipal</Spanish>
+            <Spanish>Torreta</Spanish>
             <French>Tourelle</French>
             <Polish>Wieżyczka</Polish>
-            <Czech>Hlavní Věž</Czech>
-            <Portuguese>Torre principal</Portuguese>
-            <Italian>Torretta principale</Italian>
+            <Czech>Věž</Czech>
+            <Portuguese>Torre</Portuguese>
+            <Italian>Torretta</Italian>
             <Hungarian>Lövegtorony</Hungarian>
             <Russian>Башню</Russian>
         </Key>
@@ -277,6 +313,10 @@
             <Italian>Cannone</Italian>
             <Hungarian>Ágyú</Hungarian>
             <Russian>Пушку</Russian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitMissiles">
+            <English>Missiles</English>
+            <Polish>Rakiety</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -463,77 +503,17 @@
             <Hungarian>Bal szélvédő</Hungarian>
             <Russian>Стекло (слава)</Russian>
         </Key>
-        <Key ID="STR_ACE_Repair_HitGlass1">
-            <English>Glass 1</English>
-            <German>Scheibe 1</German>
-            <Spanish>Ventana 1</Spanish>
-            <French>Vitre 1</French>
-            <Polish>Szyba 1</Polish>
-            <Czech>Sklo 1</Czech>
-            <Portuguese>Vidro 1</Portuguese>
-            <Italian>Vetro 1</Italian>
-            <Hungarian>Üveg 1</Hungarian>
-            <Russian>Стекло 1</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass2">
-            <English>Glass 2</English>
-            <German>Scheibe 2</German>
-            <Spanish>Ventana 2</Spanish>
-            <French>Vitre 2</French>
-            <Polish>Szyba 2</Polish>
-            <Czech>Sklo 2</Czech>
-            <Portuguese>Vidro 2</Portuguese>
-            <Italian>Vetro 2</Italian>
-            <Hungarian>Üveg 2</Hungarian>
-            <Russian>Стекло 2</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass3">
-            <English>Glass 3</English>
-            <German>Scheibe 3</German>
-            <Spanish>Ventana 3</Spanish>
-            <French>Vitre 3</French>
-            <Polish>Szyba 3</Polish>
-            <Czech>Sklo 3</Czech>
-            <Portuguese>Vidro 3</Portuguese>
-            <Italian>Vetro 3</Italian>
-            <Hungarian>Üveg 3</Hungarian>
-            <Russian>Стекло 3</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass4">
-            <English>Glass 4</English>
-            <German>Scheibe 4</German>
-            <Spanish>Ventana 4</Spanish>
-            <French>Vitre 4</French>
-            <Polish>Szyba 4</Polish>
-            <Czech>Sklo 4</Czech>
-            <Portuguese>Vidro 4</Portuguese>
-            <Italian>Vetro 4</Italian>
-            <Hungarian>Üveg 4</Hungarian>
-            <Russian>Стекло 4</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass5">
-            <English>Glass 5</English>
-            <German>Scheibe 5</German>
-            <Spanish>Ventana 5</Spanish>
-            <French>Vitre 5</French>
-            <Polish>Szyba 5</Polish>
-            <Czech>Sklo 5</Czech>
-            <Portuguese>Vidro 5</Portuguese>
-            <Italian>Vetro 5</Italian>
-            <Hungarian>Üveg 5</Hungarian>
-            <Russian>Стекло 5</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_HitGlass6">
-            <English>Glass 6</English>
-            <German>Scheibe 6</German>
-            <Spanish>Ventana 6</Spanish>
-            <French>Vitre 6</French>
-            <Polish>Szyba 6</Polish>
-            <Czech>Sklo 6</Czech>
-            <Portuguese>Vidro 6</Portuguese>
-            <Italian>Vetro 6</Italian>
-            <Hungarian>Üveg 6</Hungarian>
-            <Russian>Стекло 6</Russian>
+        <Key ID="STR_ACE_Repair_HitGlass">
+            <English>Glass</English>
+            <German>Scheibe</German>
+            <Spanish>Ventana</Spanish>
+            <French>Vitre</French>
+            <Polish>Szyba</Polish>
+            <Czech>Sklo</Czech>
+            <Portuguese>Vidro</Portuguese>
+            <Italian>Vetro</Italian>
+            <Hungarian>Üveg</Hungarian>
+            <Russian>Стекло</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -694,6 +674,38 @@
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
             <Polish>Przydziel klasę budynku naprawczego do jednego lub kilku budynków.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
+            <English>Add Spare Parts</English>
+            <Polish>Dodaj części zam.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
+            <English>Add spare parts to one or multiple objects</English>
+            <Polish>Dodaj części zamienne do jednego lub wielu obiektów.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
+            <English>List</English>
+            <Polish>Lista</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
+            <English>List of objects that will get spare parts added, separated by commas.</English>
+            <Polish>Lista obiektów, które otrzymają części zamienne, oddzielone przecinkiem.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
+            <English>Part</English>
+            <Polish>Część</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
+            <English>Spare part.</English>
+            <Polish>Część zamienna.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
+            <English>Amount</English>
+            <Polish>Ilość</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
+            <English>Number of selected spare parts.</English>
+            <Polish>Ilość wybranych części zamiennych.</Polish>
         </Key>
     </Package>
 </Project>
