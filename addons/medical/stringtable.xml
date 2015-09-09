@@ -3726,5 +3726,13 @@
             <English>Distance to %1 has become to far for treatment</English>
             <Polish>%1 odszedł zbyt daleko, nie można kontynuować leczenia</Polish>
         </Key>
+        <Key ID="STR_ACE_Medical_CanNotLoaded">
+            <English>This person (%1) is awake and cannot be loaded</English>
+            <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
+            <English>There is no tourniquet on this body part!</English>
+            <Polish>Na tej części ciała nie ma stazy!</Polish>
+        </Key>
     </Package>
 </Project>
