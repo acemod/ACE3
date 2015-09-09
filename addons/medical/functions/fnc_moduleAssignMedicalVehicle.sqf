@@ -8,7 +8,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
