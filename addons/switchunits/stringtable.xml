@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -32,7 +32,9 @@
             <German>Einheiten-Switch-System?</German>
             <Czech>Systém výměny stran</Czech>
             <Portuguese>Sistema de troca de unidades</Portuguese>
+            <French>Système de changement d'unité</French>
             <Hungarian>Egységváltó-rendszer</Hungarian>
+            <Russian>Переключение между юнитами</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -41,7 +43,9 @@
             <German>Nach BLUFOR wechseln?</German>
             <Czech>Přesunout k BLUFOR?</Czech>
             <Portuguese>Trocar para Oeste?</Portuguese>
+            <French>Changer en OUEST?</French>
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
+            <Russian>На синих?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -50,7 +54,9 @@
             <German>Erlaube das Wechseln zu BLUFOR-Einheiten?</German>
             <Czech>Povolit přesun k BLUFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Oeste?</Portuguese>
+            <French>Permettre le changement en unité OUEST?</French>
             <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
+            <Russian>Разрешить переключаться на синих юнитов?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -59,7 +65,9 @@
             <German>Nach OPFOR wechseln?</German>
             <Czech>Přesunout k OPFOR?</Czech>
             <Portuguese>Trocar para Leste?</Portuguese>
+            <French>Changer en EST?</French>
             <Hungarian>Átváltás OPFOR-ra?</Hungarian>
+            <Russian>На красных?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -68,7 +76,9 @@
             <German>Erlaube das Wechseln zu OPFOR-Einheiten?</German>
             <Czech>Povolit přesun k OPFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Leste?</Portuguese>
+            <French>Permettre le changement en unité EST?</French>
             <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
+            <Russian>Разрешить переключаться на красных юнитов?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -77,7 +87,9 @@
             <German>Nach INDFOR wechseln?</German>
             <Czech>Přesunout k INDFOR?</Czech>
             <Portuguese>Trocar para Indenpendente</Portuguese>
+            <French>Changer en INDE?</French>
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
+            <Russian>На независимых?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -86,7 +98,9 @@
             <German>Erlaube das Wechseln zu INDFOR-Einheiten?</German>
             <Czech>Povolit přesun k INDFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
+            <French>Permettre le changement en unité INDE?</French>
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
+            <Russian>Разрешить переключаться на независимых юнитов?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -95,7 +109,9 @@
             <German>Nach CIVILIAN wechseln?</German>
             <Czech>Přesunout k CIVILISTŮM?</Czech>
             <Portuguese>Trocar para Civis?</Portuguese>
+            <French>Changer en CIV?</French>
             <Hungarian>Átváltás civilre?</Hungarian>
+            <Russian>На гражданских?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -104,7 +120,9 @@
             <German>Erlaube das Wechseln zu CIVILIAN-Einheiten?</German>
             <Czech>Povolit přesun k CIVILISTŮM?</Czech>
             <Portuguese>Permitir troca de unidades para o Civil?</Portuguese>
+            <French>Permettre le changement en unité CIV?</French>
             <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
+            <Russian>Разрешить переключаться на гражданских юнитов?</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -113,7 +131,9 @@
             <German>Aktiviere Sicherheitszone?</German>
             <Czech>Povolit bezpečné oblasti?</Czech>
             <Portuguese>Habilitar zona segura?</Portuguese>
+            <French>Activer la zone sécurisée?</French>
             <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
+            <Russian>Безопасная зона</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -122,7 +142,9 @@
             <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
             <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
             <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
+            <French>Activer une zone sécurisée autour des enemis?  Les joueurs ne peuvent changer d'unité dand la zone sécurisée</French>
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
+            <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -131,7 +153,9 @@
             <German>Sicherheitszonenradius</German>
             <Czech>Oblast bezpečné zóny</Czech>
             <Portuguese>Raio da zona segura</Portuguese>
+            <French>Rayon de la zone sécurisée</French>
             <Hungarian>Biztonságos zóna hatóköre</Hungarian>
+            <Russian>Радиус безопасной зоны</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
@@ -140,12 +164,16 @@
             <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 200</German>
             <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 200</Czech>
             <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 200</Portuguese>
+            <French>Rayon de la zone sécurisée autour de joueurs d'équipe différentes. Défaut: 200</French>
             <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 200</Hungarian>
+            <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 200</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <Polish>Moduł ten pozwala na zmianę strony w trakcie gry.</Polish>
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
+            <Russian>Этот модуль позволяет игрокам переключаться между доступными юнитами.</Russian>
+            <French>Ce module permet le changement de faction des joueurs</French>
         </Key>
     </Package>
 </Project>
