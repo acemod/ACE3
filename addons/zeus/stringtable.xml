@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -8,6 +8,7 @@
             <Czech>Nastavení Zeuse</Czech>
             <German>Zeus-Einstellungen</German>
             <Portuguese>Ajustes do Zeus</Portuguese>
+            <French>Paramètres du Zeus</French>
             <Hungarian>Zeus beállítások</Hungarian>
             <Russian>Настройки Зевса</Russian>
         </Key>
@@ -18,6 +19,7 @@
             <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
+            <French>Fourni le contrôle des différents aspects de Zeus</French>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Обеспечивает контроль над различными аспектами работы Зевса.</Russian>
         </Key>
@@ -28,6 +30,7 @@
             <Czech>Zpráva o novém Zeusovi</Czech>
             <German>Aufstiegsnachrichten</German>
             <Portuguese>Mensagens de ascensão</Portuguese>
+            <French>Message ascension</French>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
         </Key>
@@ -38,6 +41,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
+            <French>Affiche un message en global quand un joueur est assigner comme Zeus</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
         </Key>
@@ -48,6 +52,7 @@
             <Czech>Orel Zeuse</Czech>
             <German>Zeus-Adler</German>
             <Portuguese>Águia do Zeus</Portuguese>
+            <French>Aigle Zeus</French>
             <Hungarian>Zeus sas</Hungarian>
             <Russian>Орел Зевса</Russian>
         </Key>
@@ -58,6 +63,7 @@
             <Czech>Vytvoří orla, který následuje kameru Zeuse.</Czech>
             <German>Erstelle einen Adler, der der Zeus-Kamera folgt.</German>
             <Portuguese>Cria uma águia que segue a câmera do Zeus</Portuguese>
+            <French>Faire apparaitre un aigle qui suit la caméra Zeus</French>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
         </Key>
@@ -68,6 +74,7 @@
             <Czech>Zvuky větru</Czech>
             <German>Windgeräusche</German>
             <Portuguese>Sons de vento</Portuguese>
+            <French>Bruit de vent</French>
             <Hungarian>Szélhangok</Hungarian>
             <Russian>Звук ветра</Russian>
         </Key>
@@ -78,6 +85,7 @@
             <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
             <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
             <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
+            <French>Joue des bruits de vent quand Zeus controle une unité</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
         </Key>
@@ -88,6 +96,7 @@
             <Czech>Varování před dělostřelectvem</Czech>
             <German>Artilleriewarnung</German>
             <Portuguese>Aviso de explosivos</Portuguese>
+            <French>Alerte d'équipement militaire</French>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
         </Key>
@@ -98,6 +107,7 @@
             <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
             <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
             <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
+            <French>Joue un son radio quand le Zeus utilise du matériel militaire</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
         </Key>
@@ -108,6 +118,7 @@
             <Czech>Odhalit miny</Czech>
             <German>Enthülle Minen</German>
             <Portuguese>Revelar minas</Portuguese>
+            <French>Révéler les mines</French>
             <Hungarian>Aknák feltárása</Hungarian>
             <Russian>Показывать мины</Russian>
         </Key>
@@ -118,6 +129,7 @@
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
             <German>Enthülle Minen gegenüber Verbündeten und platziere Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
+            <French>Révéler les mines et placer un marqueur sur la carte</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
         </Key>
@@ -128,6 +140,7 @@
             <Czech>Odhalit pro spojence</Czech>
             <German>An Verbündete weitergeben</German>
             <Portuguese>Revelar para aliados</Portuguese>
+            <French>Révéler aux alliés</French>
             <Hungarian>Feltárás a szövetségeseknek</Hungarian>
             <Russian>Показывать союзникам</Russian>
         </Key>
@@ -138,6 +151,7 @@
             <Czech>Spojenci + Značky na mapě</Czech>
             <German>Verbündete + Kartenmarkierungen</German>
             <Portuguese>Aliados + Marcadores no mapa</Portuguese>
+            <French>Alliés + marqueurs sur la carte</French>
             <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
             <Russian>Союзники + Маркеры на карте</Russian>
         </Key>
@@ -148,6 +162,7 @@
             <Czech>Přepnout - Vězeň</Czech>
             <German>Gefangennahme umschalten</German>
             <Portuguese>Alternar prisioneiro</Portuguese>
+            <French>Basculer en captif</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
         </Key>
@@ -158,6 +173,7 @@
             <Czech>Přepnout - Vzdávání</Czech>
             <German>Aufgabe umschalten</German>
             <Portuguese>Alternar rendição</Portuguese>
+            <French>Basculer en capitulation</French>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
         </Key>
@@ -168,6 +184,7 @@
             <Czech>Přepnout - Bezvědomí</Czech>
             <German>Bewusstlosigkeit umschalten</German>
             <Portuguese>Alternar inconsciência</Portuguese>
+            <French>Basculer en inconscient</French>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
         </Key>
@@ -175,16 +192,19 @@
             <English>Assign Medic</English>
             <Polish>Przydziel medyka</Polish>
             <Russian>Назначить медиком</Russian>
+            <Czech>Přiřadit Zdravotníka</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
             <Polish>Przydziel pojazd medyczny</Polish>
             <Russian>Назначить медицинским транспортом</Russian>
+            <Czech>Přiřadit Zdravotnické Vozidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
             <Polish>Przydziel budynek medyczny</Polish>
             <Russian>Назанчить медицинским сооружением</Russian>
+            <Czech>Přiřadit Zdravotnické Zařízení</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -227,6 +247,7 @@
             <Czech>Jednotka nemí být vězeň</Czech>
             <German>Einheit darf nicht gefangen sein</German>
             <Portuguese>Unidade não pode ser prisioneira</Portuguese>
+            <French>L'unité ne doit pas être captive</French>
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
             <Russian>Юнит не должен быть пленным</Russian>
         </Key>
@@ -249,6 +270,7 @@
             <Czech>Vyžaduje addon, který není přítomen</Czech>
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
+            <French>Requiert un addon qui n'est pas présent</French>
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
             <Russian>Требуется аддон, который отсутствует</Russian>
         </Key>

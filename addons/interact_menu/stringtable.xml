@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -90,6 +90,7 @@
             <Polish>Akcje Zeusa</Polish>
             <Czech>Akce Zeuse</Czech>
             <Spanish>Acciones Zeus</Spanish>
+            <French>Actions Zeus</French>
             <Hungarian>Zeus cselekvések</Hungarian>
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
@@ -233,6 +234,7 @@
             <Czech>Pozadí menu interakce</Czech>
             <German>Interaktionsmenü-Hintergrund</German>
             <Portuguese>Fundo do menu de interação</Portuguese>
+            <French>Arrière plan du menu d'interaction</French>
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
         </Key>
@@ -240,9 +242,10 @@
             <English>Blur the background while the interaction menu is open.</English>
             <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
             <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
-            <Czech>Rozmazat obraz pokud je interakční menu otevřené.</Czech>
+            <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
             <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
             <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
+            <French>Flouter l'arrière plan durant l'ouverture du menu d'interaction</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
         </Key>
@@ -253,6 +256,7 @@
             <Czech>Rozmazaný obraz</Czech>
             <German>Verschwommenes Bild</German>
             <Portuguese>Desfoque de tela</Portuguese>
+            <French>Flouter l'écran</French>
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
         </Key>
@@ -260,9 +264,10 @@
             <English>Black</English>
             <Polish>Przyciemnienie ekranu</Polish>
             <Spanish>Negro</Spanish>
-            <Czech>Černý obraz</Czech>
+            <Czech>Tmavý</Czech>
             <Portuguese>Preto</Portuguese>
             <German>Schwarz</German>
+            <French>Noir</French>
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
         </Key>
@@ -271,6 +276,7 @@
             <Polish>Pokazuj akcje dla budynków</Polish>
             <Czech>Zobrazit akci pro budovy</Czech>
             <Spanish>Mostrar acciones para edificios</Spanish>
+            <French>Affiche les actions pour les batiments</French>
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
@@ -280,6 +286,7 @@
             <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
+            <French>Ajoute des interactions pour ouvrir les portes et les échelles des batiments. (Note: l'ouverture du menu en ville dégrade les performances)</French>
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
@@ -288,6 +295,7 @@
             <English>Interaction Menu</English>
             <Polish>Menu interakcji</Polish>
             <Russian>Меню взаимодействия</Russian>
+            <Czech>Menu interakce</Czech>
         </Key>
     </Package>
 </Project>

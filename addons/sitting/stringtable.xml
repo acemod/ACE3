@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Sitting">
         <Key ID="STR_ACE_Sitting_Sit">
@@ -7,6 +7,7 @@
             <Portuguese>Sentar</Portuguese>
             <Czech>Sednout si</Czech>
             <Spanish>Sentarse</Spanish>
+            <French>S'assoir</French>
             <Hungarian>Leülés</Hungarian>
             <Russian>Сесть</Russian>
         </Key>
@@ -16,6 +17,7 @@
             <Portuguese>Levantar</Portuguese>
             <Czech>Vstát</Czech>
             <Spanish>Levantarse</Spanish>
+            <French>Se lever</French>
             <Hungarian>Felállás</Hungarian>
             <Russian>Встать</Russian>
         </Key>
@@ -25,6 +27,7 @@
             <Polish>Aktywuj siadanie</Polish>
             <Czech>Povolit sezení</Czech>
             <Spanish>Acivar asiento</Spanish>
+            <French>Permettre de s'assoir</French>
             <Hungarian>Ülés engedélyezése</Hungarian>
             <Russian>Разрешить сидение</Russian>
         </Key>
@@ -32,8 +35,9 @@
             <English>Sitting</English>
             <Portuguese>Sentado</Portuguese>
             <Polish>Siadanie</Polish>
-            <Czech>Sedící</Czech>
+            <Czech>Sezení</Czech>
             <Spanish>Sentarse</Spanish>
+            <French>S'assoir</French>
             <Hungarian>Ülés</Hungarian>
             <Russian>Сидение</Russian>
         </Key>
@@ -43,6 +47,7 @@
             <Polish>Moduł ten pozwala na włączenie lub wyłączenie możliwości siadania na krzesłach i toaletach.</Polish>
             <Czech>Tento modul dovoluje zakázat možnost sedět na židlých a toaletách.</Czech>
             <Spanish>Este módulo te permite desactivar la capacidad de sentarte en sillas y aseos.</Spanish>
+            <French>Ce module controle la capacité de s'assoir sur des chaises ou sur des toilettes</French>
             <Hungarian>Ez a modul lehetővé teszi a székekre és toalettekre való leülés letiltását.</Hungarian>
             <Russian>Этот модуль позволяет вам запретить возможность садиться на стулья и туалеты.</Russian>
         </Key>

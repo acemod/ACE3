@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKey">
@@ -20,6 +20,7 @@
             <German>Wetter</German>
             <Czech>Počasí</Czech>
             <Portuguese>Clima</Portuguese>
+            <French>Météo</French>
             <Hungarian>Időjárás</Hungarian>
             <Russian>Погода</Russian>
         </Key>
@@ -30,6 +31,7 @@
             <German>ACE-Wettermodul (synchron im Multiplayer)</German>
             <Czech>Synchronizovat ACE počasí v multiplayeru</Czech>
             <Portuguese>Módulo climático ACE para sincronismo multiplayer</Portuguese>
+            <French>Module ACE de synchronisation de la météo en multi.</French>
             <Hungarian>Többjátékos szinkronizált ACE időjárás modul</Hungarian>
             <Russian>ACE Модуль для синхронизации погоды в мультиплеере</Russian>
         </Key>
@@ -40,6 +42,7 @@
             <German>Wetterübertragung</German>
             <Czech>Změny počasí</Czech>
             <Portuguese>Propagação do clima</Portuguese>
+            <French>Propagation de la météo</French>
             <Hungarian>Időjárás-változás</Hungarian>
             <Russian>Единая погода для всех</Russian>
         </Key>
@@ -50,6 +53,7 @@
             <German>Aktiviere serverseitige Wetterübertragung</German>
             <Czech>Aktivuje změny počasí na straně serveru</Czech>
             <Portuguese>Ativa propagação de clima via server</Portuguese>
+            <French>Active la propagation météo par le serveur</French>
             <Hungarian>Engedélyezi a szerveroldali időjárás-változást</Hungarian>
             <Russian>Включает управление погодой на серверной стороне</Russian>
         </Key>
@@ -60,6 +64,7 @@
             <German>ACE-Wetter</German>
             <Czech>ACE počasí</Czech>
             <Portuguese>Clima ACE</Portuguese>
+            <French>ACE Météo</French>
             <Hungarian>ACE Időjárás</Hungarian>
             <Russian>Погода ACE</Russian>
         </Key>
@@ -70,6 +75,7 @@
             <German>Überschreibt das Standardwetter (Editor, Missionseinstellungen) mit dem ACE-Wetter (kartenbasiert)</German>
             <Czech>Přepíše výchozí počasí (editor, nastavení mise) s ACE počasím (podle mapy)</Czech>
             <Portuguese>Sobreescreve o clima padrão (editor, ajustes de missão) pelo sistema de clima ACE (baseado por mapa)</Portuguese>
+            <French>Force la métao par défaut (éditeur, paramètres de mission) avec la météo ACE (basé sur la carte)</French>
             <Hungarian>Felülbírálja az alapértelmezett időjárást (editor, küldetésbeállítások) az ACE időjárással (térkép-alapú) </Hungarian>
             <Russian>Заменяет погоду по-умолчанию (из редактора, настроек миссии) погодой ACE (на основе карты)</Russian>
         </Key>
@@ -80,6 +86,7 @@
             <German>Regen synchronisieren</German>
             <Czech>Synchronizuj déšť</Czech>
             <Portuguese>Sincronizar chuva</Portuguese>
+            <French>Synchronisation de la pluie</French>
             <Hungarian>Eső szinkronizálása</Hungarian>
             <Russian>Синхрониз. дождь</Russian>
         </Key>
@@ -90,6 +97,7 @@
             <German>Synchronisiert den Regen</German>
             <Czech>Synchronizace deště</Czech>
             <Portuguese>Sincroniza a chuva</Portuguese>
+            <French>Synchronise la pluie</French>
             <Hungarian>Szinkronizálja az esőt</Hungarian>
             <Russian>Синхронизирует дождь</Russian>
         </Key>
@@ -100,6 +108,7 @@
             <German>Wind synchronisieren</German>
             <Czech>Synchronizuj vítr</Czech>
             <Portuguese>Sincronizar vento</Portuguese>
+            <French>Synchronisation du vent</French>
             <Hungarian>Szél szinkronizálása</Hungarian>
             <Russian>Синхрониз. ветер</Russian>
         </Key>
@@ -110,6 +119,7 @@
             <German>Synchronisiert den Wind</German>
             <Czech>Synchronizace větru</Czech>
             <Portuguese>Sincroniza o vento</Portuguese>
+            <French>Synchronise le vent</French>
             <Hungarian>Szinkronizálja a szelet</Hungarian>
             <Russian>Синхронизирует ветер</Russian>
         </Key>
@@ -120,6 +130,7 @@
             <German>Sonstiges synchronisieren</German>
             <Czech>Synchronizuj různé</Czech>
             <Portuguese>Sincronizar outros</Portuguese>
+            <French>Synchronisation autres</French>
             <Hungarian>Egyéb szinkronizálása</Hungarian>
             <Russian>Синхрониз. прочее</Russian>
         </Key>
@@ -130,6 +141,7 @@
             <German>Synchronisiert Blitze, Regenbögen, Nebel, ...</German>
             <Czech>Synchronizace blesků, duhy, mlhy, ...</Czech>
             <Portuguese>Sincroniza relâmpagos, arco-íris, neblina...</Portuguese>
+            <French>Synchronise les éclairs, les arcs en ciel, le brouillard</French>
             <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt, ...</Hungarian>
             <Russian>Синхронизирует молнии, радугу, туман, ...</Russian>
         </Key>
@@ -140,6 +152,7 @@
             <German>Aktualisierungsintervall</German>
             <Czech>Interval aktualizace</Czech>
             <Portuguese>Intervalo de atualização</Portuguese>
+            <French>Intervalle de synchronisation</French>
             <Hungarian>Frissítési intervallum</Hungarian>
             <Russian>Интервал обновления</Russian>
         </Key>
@@ -150,6 +163,7 @@
             <German>Definiert das Intervall (in Sekunden) zwischen Wetteraktualisierungen</German>
             <Czech>Určit interval (v sekundách) mezi aktualizacemi počasí</Czech>
             <Portuguese>Defina o intervalo (em segundos) entre as atualizações de clima</Portuguese>
+            <French>Défini un intervalle (secondes) entre deux synchronisations</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
         </Key>

@@ -182,15 +182,18 @@ _activeWeapon = _activeWeaponAndMuzzle select 0;
 _activeMuzzle = _activeWeaponAndMuzzle select 1;
 _activeWeaponMode = _activeWeaponAndMuzzle select 2;
 
-if (_activeMuzzle != "" and _activeMuzzle != _activeWeapon) then {
+if (!(_activeMuzzle isEqualTo "") and
+    !(_activeMuzzle isEqualTo _activeWeapon) and
+    (_activeMuzzle in getArray (configfile >> "CfgWeapons" >> _activeWeapon >> "muzzles"))) then {
+
     _unit selectWeapon _activeMuzzle;
 } else {
-    if (_activeWeapon != "") then {
+    if (!(_activeWeapon isEqualTo "")) then {
         _unit selectWeapon _activeWeapon;
     };
 };
 
-if (currentWeapon _unit != "") then {
+if (!(currentWeapon _unit isEqualTo "")) then {
     private ["_index"];
     _index = 0;
     while {
