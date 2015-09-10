@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -152,6 +152,7 @@
             <German>Respawn-System</German>
             <Czech>Systém znovuzrození</Czech>
             <Portuguese>Sistema de Renascimento</Portuguese>
+            <French>Système de Respawn</French>
             <Hungarian>Respawn-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
@@ -161,6 +162,7 @@
             <German>Ausrüstung speichern?</German>
             <Czech>Uložit výbavu?</Czech>
             <Portuguese>Salvar equipamento?</Portuguese>
+            <French>Sauver l'équipement?</French>
             <Hungarian>Felszerelés elmentése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
@@ -170,6 +172,7 @@
             <German>Mit der Ausrüstung, die ein Soldat vor seinem Tod hatte, respawnen?</German>
             <Czech>Znovuubjevit s výbavou kterou měl voják před smrtí?</Czech>
             <Portuguese>Renascer com o equipamento que um soldado tinha antes de sua morte?</Portuguese>
+            <French>Conserve l'équipement au Respawn</French>
             <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
@@ -179,6 +182,7 @@
             <German>Körper entfernen?</German>
             <Czech>Odstranit těla?</Czech>
             <Portuguese>Remover corpos?</Portuguese>
+            <French>Enlever les coprs?</French>
             <Hungarian>Holttestek eltávolítása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
@@ -188,6 +192,7 @@
             <German>Entferne Spielerkörper nach dem Trennen einer Verbindung?</German>
             <Czech>Odstranit hráčova těla po odpojení?</Czech>
             <Portuguese>Remover corpos dos jogadores depois de desconectar?</Portuguese>
+            <French>Enlève les corps de joueurs après déconnection</French>
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
@@ -195,6 +200,7 @@
             <German>Dieses Modul erlaubt es die Respawn-Einstellungen anzupassen.</German>
             <Czech>Tento modul umožňuje nastavení znovuzrození (spawn).</Czech>
             <Portuguese>Este módulo permite que você personalize as configurações do renascimento (Spawn).</Portuguese>
+            <French>Ce module permet de régler les options de Respawn</French>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -203,12 +209,14 @@
             <German>Freundbeschuss-Nachrichten</German>
             <Czech>Upozornění na přátelskou střelbu</Czech>
             <Portuguese>Mensagens de fogo amigo</Portuguese>
+            <French>Message de tirs fraticides</French>
             <Hungarian>Baráti tűz üzenetek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
             <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
             <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
+            <French>Ce module permet l'affiche de message dans le chat lors d'un tir fraticide et indique qui a tué qui.</French>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
@@ -217,6 +225,7 @@
             <German>Rallypoint-System</German>
             <Czech>Systém shromáždění</Czech>
             <Portuguese>Sistema de ponto de encontro</Portuguese>
+            <French>Système de point de ralliement</French>
             <Hungarian>Gyülekezőpont-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
@@ -231,6 +240,7 @@
             <German>Bewege Rallypoint</German>
             <Czech>Přesun na shromaždiště</Czech>
             <Portuguese>Mover para ponto de encontro</Portuguese>
+            <French>Bouger le point de ralliement</French>
             <Hungarian>Gyülekezőpont mozgatása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
@@ -240,6 +250,7 @@
             <German>ACE-Respawn</German>
             <Czech>ACE Znovuzrození</Czech>
             <Portuguese>ACE Respawn</Portuguese>
+            <French>ACE Respawn</French>
             <Hungarian>ACE Respawn</Hungarian>
         </Key>
     </Package>

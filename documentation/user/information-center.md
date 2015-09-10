@@ -20,7 +20,7 @@ Downloaded ACE3 and have no idea where to start? This page serves as a starting 
 
 
 ## 1. FAQ
-### 1.1 Features 
+### 1.1 Features
 **Q:** Where is X feature? </br>
 **A:** When it's done.</br>
 
@@ -38,16 +38,17 @@ Downloaded ACE3 and have no idea where to start? This page serves as a starting 
 **Q:** Laser locking is broken, when are you going to fix it?</br>
 **A:** Fun fact, it isn't, you need to come from the direction of the laser, (laser is pointing to the east, you come from the west) and you drop the GBU, it will then guide itself to the target. The reasoning behind that is that the vehicle or building laser designated would obstruct the laser and the GBU would then be unable to lock on it. </br>
 
-**Q:** I take vanilla damage with ACE 3.1.1</br>
-**A:** This has been fixed on ACE3 master and will be fixed in the next release, in the meantime Basic medical doesn't have that issue. </br>
+**Q:** I am having dll errors.</br>
+**A:** Start the game once with the Arma 3 Launcher, close it, then start the game with your usual launcher (ArmA3Sync, Play withSix, etc &hellip;).</br>
+The simple explanation is that the BattlEye process wasn't ended properly and is unable to start again properly, launching it with the Arma 3 Launcher is the only known solution to fix it.</br>
 
-**Q:** I'm having dll errors.</br>
-**A:** Remove ACE3 from your Arma 3 folder and repeat the installation process (don't forget to re-download).</br>
+**Q:** ACE3 fonts is outdated.</br>
+**A:** This happens because you have file patching enabled, restart your game without the `-FilePatching` param.
 
 ### 1.3 Compatibility
 
-**Q:**(mod) doesn't have some ACE3 features.</br>
-**A:**ACE3 isn't and can't be responsible for compatibility with every (mod), due it's size other (mod) authors are strongly encouraged to provide that from their side. Compatibility PBOs currently in ACE3 are there to kick-start and provide examples for (mod) authors.</br>
+**Q:** (mod) doesn't have some ACE3 features.</br>
+**A:** ACE3 isn't and can't be responsible for compatibility with every (mod), due it's size other (mod) authors are strongly encouraged to provide that from their side. Compatibility PBO's currently in ACE3 are there to kick-start and provide examples for (mod) authors.</br>
 
 **Q:** ACE3 causes issues in (mod).</br>
-**A:**If you've found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only @cba_a3 and @ACE3 on a newly created mission. ACE3 isn't and can't be responsible for all mod conflicts, due it's size other mod authors are strongly encouraged to provide that from their side.</br>
+**A:** If you've found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3` and `@ace` on a newly created mission. ACE3 isn't and can't be responsible for all mod conflicts, due it's size other mod authors are strongly encouraged to provide that from their side.</br>

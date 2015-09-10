@@ -14,9 +14,8 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_caller,_target);
-
 private ["_position", "_headPos", "_spinePos", "_dirVect", "_direction", "_bodyBag"];
+params ["_caller", "_target"];
 
 if (alive _target) then {
     [_target, true] call FUNC(setDead);

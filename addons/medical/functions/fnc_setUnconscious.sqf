@@ -4,9 +4,9 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
- * 1: Set unconsciouns <BOOL> <OPTIONAL>
- * 2: Minimum unconscious ACE_time <NUMBER> <OPTIONAL>
- * 3: Force AI Unconscious (skip random death chance) <BOOL> <OPTIONAL>
+ * 1: Set unconsciouns <BOOL> (default: true)
+ * 2: Minimum unconscious ACE_time <NUMBER> (default: (round(random(10)+5)))
+ * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * ReturnValue:
  * nil
@@ -19,13 +19,10 @@
 
 #include "script_component.hpp"
 
-#define DEFAULT_DELAY   (round(random(10)+5))
+#define DEFAULT_DELAY (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_force", "_isDead"];
-_unit = _this select 0;
-_set = if (count _this > 1) then {_this select 1} else {true};
-_minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
-_force = if (count _this > 3) then {_this select 3} else {false};
+private ["_animState", "_originalPos", "_startingTime", "_isDead"];
+params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
 
 // No change, fuck off. (why is there no xor?)
 if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
@@ -97,8 +94,7 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
-    _unit = _this select 0;
-    _anim = _this select 1;
+    params ["_unit", "_anim"];
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };

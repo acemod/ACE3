@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2014-12-21 -->
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -132,6 +131,14 @@
             <English>Who can perform a full repair on a vehicle?</English>
             <Polish>Kto może przeprowadzić pełną naprawę pojazdu?</Polish>
         </Key>
+        <Key ID="STR_ACE_Repair_addSpareParts_name">
+            <English>Add Spare Parts</English>
+            <Polish>Dodaj części zam.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_addSpareParts_description">
+            <English>Add spare parts to vehicles (requires Cargo component)?</English>
+            <Polish>Czy dodać do pojazdów części zamienne? Wymaga włączonego cargo.</Polish>
+        </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
             <German>Reparieren &gt;&gt;</German>
@@ -249,13 +256,16 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
+            <Polish>Lewy statecznik poziomy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
+            <Polish>Prawy statecznik poziomy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
             <Czech>Vertikální Stabilizátor</Czech>
+            <Polish>Statecznik pionowy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -272,28 +282,35 @@
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
             <Czech>Převodovka</Czech>
+            <Polish>Skrzynia biegów</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
+            <Polish>Podwozie</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
+            <Polish>Zapłon</Polish>
             <Czech>Startér</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
+            <Polish>Ogon</Polish>
             <Czech>Ocas</Czech>
         </Key>
-        <Key ID="STR_ACE_Repair_HitPilotTube">
-            <English>Pilot Tube</English>
+        <Key ID="STR_ACE_Repair_HitPitotTube">
+            <English>Pitot Tube</English>
+            <Polish>Rurka Pitota</Polish>
             <Czech>Pilotova Trubice</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
+            <Polish>Port statyczny</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
             <Czech>Munice</Czech>
+            <Polish>Amunicja</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -322,6 +339,7 @@
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
             <Czech>Rakety</Czech>
+            <Polish>Rakiety</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -694,6 +712,38 @@
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
             <Polish>Przydziel klasę budynku naprawczego do jednego lub kilku budynków.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
+            <English>Add Spare Parts</English>
+            <Polish>Dodaj części zam.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
+            <English>Add spare parts to one or multiple objects</English>
+            <Polish>Dodaj części zamienne do jednego lub wielu obiektów.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
+            <English>List</English>
+            <Polish>Lista</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
+            <English>List of objects that will get spare parts added, separated by commas.</English>
+            <Polish>Lista obiektów, które otrzymają części zamienne, oddzielone przecinkiem.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
+            <English>Part</English>
+            <Polish>Część</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
+            <English>Spare part.</English>
+            <Polish>Część zamienna.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
+            <English>Amount</English>
+            <Polish>Ilość</Polish>
+        </Key>
+        <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
+            <English>Number of selected spare parts.</English>
+            <Polish>Ilość wybranych części zamiennych.</Polish>
         </Key>
     </Package>
 </Project>

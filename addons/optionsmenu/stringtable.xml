@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -224,6 +224,7 @@
             <German>Erlaube Config-Export [ACE]</German>
             <Czech>Povolit export natavení [ACE]</Czech>
             <Portuguese>[ACE] Permitir exportação de configurações</Portuguese>
+            <French>Autoriser l'exportation de la configuration [ACE]</French>
             <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
@@ -233,6 +234,7 @@
             <German>Erlaube</German>
             <Czech>Povolit</Czech>
             <Portuguese>Permitir</Portuguese>
+            <French>Autoriser</French>
             <Hungarian>Engedélyezés</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
@@ -242,6 +244,7 @@
             <German>Erlaube alle Einstellungen in einer Server-Config zu exportieren.</German>
             <Czech>Povolit exportovat všechna nastavení do formátu server configu.</Czech>
             <Portuguese>Permitir exportação de todas as configurações para uma configuração formatada de servidor.</Portuguese>
+            <French>Autorise l'exportation des toutes les options vers un fichier de configuration</French>
             <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
@@ -251,6 +254,7 @@
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
+            <French>Quand autoriser, vous pouvez accéder au modification et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse papier</French>
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
@@ -260,6 +264,7 @@
             <German>Verstecken</German>
             <Czech>Skrýt</Czech>
             <Portuguese>Ocultar</Portuguese>
+            <French>Cacher</French>
             <Hungarian>Elrejtés</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
@@ -269,6 +274,7 @@
             <German>Open rechts, nach unten</German>
             <Czech>Vpravo nahoře, dolů</Czech>
             <Portuguese>Superior direito, para baixo</Portuguese>
+            <French>Haut droit, vers le bas</French>
             <Hungarian>Jobb felül, lefele</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
@@ -278,6 +284,7 @@
             <German>Von rechts nach links</German>
             <Czech>Vpravo nahoře, do leva</Czech>
             <Portuguese>Superior direito, à esquerda</Portuguese>
+            <French>Haut droit, vers la gauche</French>
             <Hungarian>Jobb felül, balra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
@@ -287,6 +294,7 @@
             <German>Von links, nach unten</German>
             <Czech>Vlevo nahoře, dolů</Czech>
             <Portuguese>Superior esquerdo, para baixo</Portuguese>
+            <French>Haut gauche, vers le bas</French>
             <Hungarian>Bal felül, lefele</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
@@ -296,6 +304,7 @@
             <German>Oben links nach rechts</German>
             <Czech>Vlevo nahoře, do prava</Czech>
             <Portuguese>Superior esquerdo, para a direita</Portuguese>
+            <French>Haut gauche, vers la droite</French>
             <Hungarian>Bal felül, jobbra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
@@ -305,6 +314,7 @@
             <German>Oben</German>
             <Czech>Nahoře</Czech>
             <Portuguese>Acima</Portuguese>
+            <French>Haut</French>
             <Hungarian>Fent</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
@@ -314,6 +324,7 @@
             <German>Unten</German>
             <Czech>Dole</Czech>
             <Portuguese>Abaixo</Portuguese>
+            <French>Bas</French>
             <Hungarian>Alul</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
@@ -323,6 +334,7 @@
             <Czech>Debug do schránky</Czech>
             <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
+            <French>Debug vers le presse papier</French>
             <Hungarian>Debug a vágólapra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
@@ -332,17 +344,26 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFix">
+            <English>Headbug Fix</English>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
+            <English>Resets your animation state.</English>
+            <French>Copie le Debug dans le RPT et le presse papier</French>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
             <Polish>Fix Headbug</Polish>
+            <French>HeadBug</French>
             <Hungarian>"Fejhiba" fix</Hungarian>
             <Czech>Fix Headbug</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
             <Polish>Resetuje aktualną animację.</Polish>
+            <French>Réinitialise l'état de l'animation</French>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
             <Czech>Resetovat aktuální animaci.</Czech>
         </Key>
@@ -353,6 +374,7 @@
             <Portuguese>Notícias do ACE</Portuguese>
             <Polish>Wiadomości ACE</Polish>
             <Czech>ACE Zprávy</Czech>
+            <French>Nouveautés ACE</French>
             <Hungarian>ACE hírek</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
@@ -361,7 +383,7 @@
             <German>Zeige Neuigkeiten im Hauptmenü</German>
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
-            <Czech>Zobrazit Zprávy v Hlavním Menu</Czech>
+            <French>Affiche les nouveautés sur l'écran principal</French>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
