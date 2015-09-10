@@ -27,6 +27,8 @@ _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
 
+if (!_checkAll) exitWith {}; //ACE is checked by FUNC(checkFiles)
+
 if (!isServer) then {
     [_mode, _checkAll, _whitelist] spawn {
         private ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];

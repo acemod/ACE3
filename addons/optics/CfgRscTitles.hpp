@@ -1,4 +1,3 @@
-
 class RscOpticsValue;
 class RscMapControl;
 class RscText;
@@ -111,7 +110,7 @@ class RscInGameUI {
             idc = 1713011;
             x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
              colorBackground[] = {0,0,0,1};
-        };     
+        };
     };
 
     class ACE_RscWeapon_Hamr: ACE_RscWeapon_base {

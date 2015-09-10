@@ -16,34 +16,35 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_condition", "_patientStateCondition"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
+private ["_config", "_medicRequired", "_items", "_locations", "_return", "_condition", "_patientStateCondition", "_allowedSelections"];
+params ["_caller", "_target", "_selectionName", "_className"];
 
-if !(_target isKindOf "CAManBase") exitWith {false};
+if !(_target isKindOf "CAManBase") exitWith { false };
 
-_config = (ConfigFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (GVAR(level)>=2) then {
-    _config = (ConfigFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
-};
+
+_config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
+
 if !(isClass _config) exitwith {false};
+
+// Allow self treatment check
+if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
 
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
 } else {
     // Check for required class
     if (isText (_config >> "requiredMedic")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0]
     };
     0;
 };
-if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
+if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith { false };
 
 _items = getArray (_config >> "items");
-if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
+if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith { false };
 
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith { false };
 
 _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -59,7 +60,7 @@ if (getText (_config >> "condition") != "") then {
         _return = [_caller, _target, _selectionName, _className] call _condition;
     };
 };
-if (!_return) exitwith {false};
+if (!_return) exitwith { false };
 
 _patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
     missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
@@ -69,7 +70,7 @@ _patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
 if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
 
 _locations = getArray (_config >> "treatmentLocations");
-if ("All" in _locations) exitwith {true};
+if ("All" in _locations) exitwith { true };
 
 private [ "_medFacility", "_medVeh"];
 _medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
@@ -91,6 +92,6 @@ _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isI
             };
         };
     };
-}foreach _locations;
+} foreach _locations;
 
 _return;

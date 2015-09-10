@@ -109,6 +109,33 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class DisableEarRinging {
+                displayName = CSTRING(DisableEarRinging);
+                typeName = "NUMBER";
+                class values {
+                    class DoNotForce {
+                        default = 1;
+                        name = ECSTRING(common,DoNotForce);
+                        value = -1;
+                    };
+                    /* Probably don't want to allow forcing ear ringing for people who have serious problems with the effect
+                    class NotDisabled {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    */
+                    class IsDisabled {
+                        name = ECSTRING(common,Yes);
+                        value = 1;
+                    };
+                };
+            };
+            class enabledForZeusUnits {
+                displayName = CSTRING(enabledForZeusUnits_DisplayName);
+                description = CSTRING(enabledForZeusUnits_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);

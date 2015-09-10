@@ -69,6 +69,7 @@
             <German>Windablenkung</German>
             <Portuguese>Desvio de vento</Portuguese>
             <French>Déflexion du vent</French>
+            <Hungarian>Szél-hárítás</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
@@ -78,6 +79,7 @@
             <Czech>Účinky větru</Czech>
             <Portuguese>Desvio de vento</Portuguese>
             <French>Déflexion du vent</French>
+            <Hungarian>Szél-hárítás</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
@@ -87,6 +89,7 @@
             <Czech>Umožňit vliv větru</Czech>
             <Portuguese>Ativa o desvio de vento</Portuguese>
             <French>Active la déflexion dûe au vent</French>
+            <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
             <English>Vehicle Enabled</English>
@@ -96,6 +99,7 @@
             <Czech>Vozidla povolena</Czech>
             <Portuguese>Ativado em veículos</Portuguese>
             <French>Activer les véhicules</French>
+            <Hungarian>Jármű engedélyezve</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
             <English>Enables wind deflection for static/vehicle gunners</English>
@@ -105,6 +109,7 @@
             <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
             <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
             <French>Activer la déflection dûe au vent pour les armes statique et les véhicules</French>
+            <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -114,6 +119,7 @@
             <Czech>Interval simulace</Czech>
             <Portuguese>Intervalo de simulação</Portuguese>
             <French>Intervalle de simulation</French>
+            <Hungarian>Szimulációs intervallum</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -123,6 +129,7 @@
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
             <French>Défini l'intervalle entre deux points de calcul</French>
+            <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -132,6 +139,7 @@
             <Czech>Oblast simulace</Czech>
             <Portuguese>Radio da Simulação</Portuguese>
             <French>Rayon de simulation</French>
+            <Hungarian>Szimulációs hatókör</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
@@ -141,6 +149,7 @@
             <Czech>Definuje oblast kolem hráče (v metrech) v které je projektil ovlivněn větrem</Czech>
             <Portuguese>Define o raio ao redor do jogador (em metros) em qual os projéteis são desviados pelo vento</Portuguese>
             <French>Défini un rayon autour du joueur (en mètres) autour duquel les projectiles sont influencés par le vent</French>
+            <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékeket háríthatja a szél</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
@@ -150,6 +159,7 @@
             <Czech>Vítr ovlivňuje trajektorii projektilu</Czech>
             <Portuguese>Influência do vento na trajetória dos projéteis</Portuguese>
             <French>Le vent influe sur la trajectoire des projectiles</French>
+            <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
         </Key>
     </Package>
 </Project>

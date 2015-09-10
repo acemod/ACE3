@@ -16,11 +16,10 @@
 
 #include "script_component.hpp"
 
-private ["_settingsMenu", "_ctrlList", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor", "_expectedType"];
+private ["_settingsMenu", "_collection", "_settingIndex", "_setting", "_entryName", "_localizedName", "_localizedDescription", "_possibleValues", "_settingsValue", "_currentColor", "_expectedType"];
 disableSerialization;
 
 _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
-_ctrlList = _settingsMenu displayCtrl 200;
 
 _collection = switch (GVAR(optionMenu_openTab)) do {
     case MENU_TAB_SERVER_OPTIONS: {GVAR(serverSideOptions)};
@@ -29,15 +28,12 @@ _collection = switch (GVAR(optionMenu_openTab)) do {
     default {[]};
 };
 
-if (count _collection > 0) then {
-    _settingIndex =  (lbCurSel _ctrlList);
-    if (_settingIndex > (count _collection)) then {
-        _settingIndex = count _collection  - 1;
-    };
+_settingIndex = -1;
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
+};
 
-    if (_settingIndex < 0) then {
-        _settingIndex = 0;
-    };
+if ((_settingIndex >= 0) && {_settingIndex <= (count _collection)}) then {
     _setting = _collection select _settingIndex;
 
     _entryName = _setting select 0;
@@ -52,12 +48,12 @@ if (count _collection > 0) then {
     switch (GVAR(optionMenu_openTab)) do {
         case (MENU_TAB_SERVER_OPTIONS): {
             _possibleValues = _setting select 5;
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
             // Created disable/enable options for bools
             if ((_setting select 1) == "BOOL") then {
                 lbClear 400;
-                lbAdd [400, (localize LSTRING(Disabled))];
-                lbAdd [400, (localize LSTRING(Enabled))];
+                lbAdd [400, (localize ELSTRING(common,No))];
+                lbAdd [400, (localize ELSTRING(common,Yes))];
                 _settingsValue = [0, 1] select _settingsValue;
             } else {
                 lbClear 400;
@@ -66,14 +62,14 @@ if (count _collection > 0) then {
             (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
         };
         case (MENU_TAB_SERVER_COLORS): {
-            _currentColor = _setting select 8;
+            _currentColor = _setting select 9;
             {
                 sliderSetPosition [_x, (255 * (_currentColor select _forEachIndex))];
             } forEach [410, 411, 412, 413];
         };
         case (MENU_TAB_SERVER_VALUES): {
             // TODO implement
-            _settingsValue = _setting select 8;
+            _settingsValue = _setting select 9;
 
             // Created disable/enable options for bools
             _expectedType = switch (_setting select 1) do {

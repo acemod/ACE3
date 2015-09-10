@@ -1,4 +1,6 @@
 // ACE - Common
+
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
@@ -37,6 +39,13 @@
     };
 }] call FUNC(addEventhandler);
 
+
+["HeadbugFixUsed", {
+    PARAMS_2(_profileName,_animation);
+    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+}] call FUNC(addEventHandler);
+
+
 //~~~~~Get Map Data~~~~~
 //Find MGRS zone and 100km grid for current map
 [] call FUNC(getMGRSdata);
@@ -67,16 +76,6 @@
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
 };
-
-// hack to get PFH to work in briefing
-[QGVAR(onBriefingPFH), "onEachFrame", {
-    if (ACE_time > 0) exitWith {
-        [QGVAR(onBriefingPFH), "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-    };
-
-    call cba_common_fnc_onFrame;
-}] call BIS_fnc_addStackedEventHandler;
-/////
 
 QGVAR(remoteFnc) addPublicVariableEventHandler {
     (_this select 1) call FUNC(execRemoteFnc);
@@ -111,7 +110,9 @@ if(!isServer) then {
 };
 ["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
 ["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
-[FUNC(syncedEventPFH), 0.5, []] call cba_fnc_addPerFrameHandler;
+if (isServer) then {
+    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+};
 
 call FUNC(checkFiles);
 
@@ -149,7 +150,16 @@ call FUNC(checkFiles);
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
 
-}, 0, [false]] call cba_fnc_addPerFrameHandler;
+    //Set init finished and run all delayed functions:
+    GVAR(settingsInitFinished) = true;
+    diag_log text format ["[ACE] %1 delayed functions running", (count GVAR(runAtSettingsInitialized))];
+    {
+        _x params ["_func", "_params"];
+        _params call _func;
+    } forEach GVAR(runAtSettingsInitialized);
+    GVAR(runAtSettingsInitialized) = nil; //cleanup
+    
+}, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
 
 ["SettingsInitialized", {
@@ -205,10 +215,12 @@ GVAR(OldCameraView) = cameraView;
 GVAR(OldPlayerVehicle) = vehicle ACE_player;
 GVAR(OldPlayerTurret) = [ACE_player] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
+GVAR(OldVisibleMap) = false;
 
 // PFH to raise varios events
 [{
-    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen"];
+    BEGIN_COUNTER(stateChecker);
+    private ["_newCameraView", "_newInventoryDisplayIsOpen", "_newPlayerInventory", "_newPlayerTurret", "_newPlayerVehicle", "_newPlayerVisionMode", "_newPlayerWeapon", "_newZeusDisplayIsOpen", "_newVisibleMap"];
     // "playerInventoryChanged" event
     _newPlayerInventory = [ACE_player] call FUNC(getAllGear);
     if !(_newPlayerInventory isEqualTo GVAR(OldPlayerInventory)) then {
@@ -272,18 +284,19 @@ GVAR(OldPlayerWeapon) = currentWeapon ACE_player;
         GVAR(OldPlayerWeapon) = _newPlayerWeapon;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
+    
+    // "visibleMapChanged" event
+    _newVisibleMap = visibleMap;
+    if (!_newVisibleMap isEqualTo GVAR(OldVisibleMap)) then {
+        // Raise ACE event locally
+        GVAR(OldVisibleMap) = _newVisibleMap;
+        ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
+    };
+    
+    END_COUNTER(stateChecker);
+    
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
-}, 0, []] call cba_fnc_addPerFrameHandler;
-
-
-// PFH to raise camera created event. Only works on these cams by BI.
-#define ALL_CAMERAS [ \
-    missionNamespace getVariable ["BIS_DEBUG_CAM", objNull], \
-    missionNamespace getVariable ["BIS_fnc_camera_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_arsenal_cam", objNull], \
-    uiNamespace getVariable ["BIS_fnc_animViewer_cam", objNull], \
-    missionNamespace getVariable ["BIS_fnc_establishingShot_fakeUAV", objNull] \
-]
 
 GVAR(OldIsCamera) = false;
 
@@ -291,14 +304,14 @@ GVAR(OldIsCamera) = false;
 
     // "activeCameraChanged" event
     private ["_isCamera"];
-    _isCamera = {!isNull _x} count ALL_CAMERAS > 0;
+    _isCamera = call FUNC(isfeatureCameraActive);
     if !(_isCamera isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _isCamera;
         ["activeCameraChanged", [ACE_player, _isCamera]] call FUNC(localEvent);
     };
 
-}, 1, []] call cba_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
+}, 1, []] call CBA_fnc_addPerFrameHandler; // feel free to decrease the sleep ACE_time if you need it.
 
 
 [QGVAR(StateArrested),false,true,QUOTE(ADDON)] call FUNC(defineVariable);
@@ -319,19 +332,27 @@ GVAR(OldIsCamera) = false;
 
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
-if(isMultiplayer && { ACE_time > 0 || isNull player } ) then {
+if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if(!(isNull player)) then {
+        if((!(isNull player)) && GVAR(settingsInitFinished)) then {
             ["PlayerJip", [player] ] call FUNC(localEvent);
             [(_this select 1)] call cba_fnc_removePerFrameHandler;
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 //Device Handler:
 GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
+
+// Register localizations for the Keybinding categories
+["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call cba_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call cba_fnc_registerKeybindModPrettyName;
 
 ["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"),
 {
@@ -364,6 +385,5 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call cba_fnc_addKeybind;  //SHIFT + Home Key
-
 
 GVAR(commonPostInited) = true;

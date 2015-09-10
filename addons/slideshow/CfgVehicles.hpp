@@ -6,7 +6,7 @@ class CfgVehicles {
         displayName = CSTRING(DisplayName);
         function = QFUNC(moduleInit);
         scope = 2;
-        isGlobal = 0; // Server only
+        isGlobal = 1;
         isTriggerActivated = 0;
         isDisposable = 0;
         icon = QUOTE(PATHTOF(UI\Icon_Module_Slideshow_ca.paa));

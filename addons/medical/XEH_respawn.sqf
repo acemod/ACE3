@@ -1,11 +1,8 @@
 #include "script_component.hpp"
 
-private ["_unit"];
+params ["_unit"];
 
-_unit = _this select 0;
-
-if !(local _unit) exitWith {};
-
+// reset all variables. @todo GROUP respawn?
 [_unit] call FUNC(init);
 
 // Reset captive status for respawning unit

@@ -17,8 +17,11 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+params ["_receiver", "_giver", "_item"];
+TRACE_3("params",_receiver,_giver,_item);
+
 private ["_config", "_detonators"];
-PARAMS_3(_receiver,_giver,_item);
 
 if (_receiver != ace_player) exitWith {};
 

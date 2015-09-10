@@ -153,6 +153,7 @@
             <Czech>Systém znovuzrození</Czech>
             <Portuguese>Sistema de Renascimento</Portuguese>
             <French>Système de Respawn</French>
+            <Hungarian>Respawn-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>
@@ -162,6 +163,7 @@
             <Czech>Uložit výbavu?</Czech>
             <Portuguese>Salvar equipamento?</Portuguese>
             <French>Sauver l'équipement?</French>
+            <Hungarian>Felszerelés elmentése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
@@ -171,6 +173,7 @@
             <Czech>Znovuubjevit s výbavou kterou měl voják před smrtí?</Czech>
             <Portuguese>Renascer com o equipamento que um soldado tinha antes de sua morte?</Portuguese>
             <French>Conserve l'équipement au Respawn</French>
+            <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
@@ -180,6 +183,7 @@
             <Czech>Odstranit těla?</Czech>
             <Portuguese>Remover corpos?</Portuguese>
             <French>Enlever les coprs?</French>
+            <Hungarian>Holttestek eltávolítása?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
@@ -189,6 +193,7 @@
             <Czech>Odstranit hráčova těla po odpojení?</Czech>
             <Portuguese>Remover corpos dos jogadores depois de desconectar?</Portuguese>
             <French>Enlève les corps de joueurs après déconnection</French>
+            <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
@@ -205,6 +210,7 @@
             <Czech>Upozornění na přátelskou střelbu</Czech>
             <Portuguese>Mensagens de fogo amigo</Portuguese>
             <French>Message de tirs fraticides</French>
+            <Hungarian>Baráti tűz üzenetek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
@@ -220,6 +226,7 @@
             <Czech>Systém shromáždění</Czech>
             <Portuguese>Sistema de ponto de encontro</Portuguese>
             <French>Système de point de ralliement</French>
+            <Hungarian>Gyülekezőpont-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
             <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
@@ -234,6 +241,7 @@
             <Czech>Přesun na shromaždiště</Czech>
             <Portuguese>Mover para ponto de encontro</Portuguese>
             <French>Bouger le point de ralliement</French>
+            <Hungarian>Gyülekezőpont mozgatása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
             <English>ACE Respawn</English>
@@ -243,6 +251,7 @@
             <Czech>ACE Znovuzrození</Czech>
             <Portuguese>ACE Respawn</Portuguese>
             <French>ACE Respawn</French>
+            <Hungarian>ACE Respawn</Hungarian>
         </Key>
     </Package>
 </Project>

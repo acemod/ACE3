@@ -16,7 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_interactionType);
+params ["_interactionType"];
+TRACE_1("params",_interactionType);
 
 //Ignore self-interaction menu
 if (_interactionType != 0) exitWith {};
@@ -26,8 +27,8 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
 
 [{
-    PARAMS_2(_args,_pfID);
-    EXPLODE_3_PVT(_args,_setPosition,_addedDefuseHelpers,_minesHelped);
+    params ["_args", "_pfID"];
+    _args params ["_setPosition", "_addedDefuseHelpers", "_minesHelped"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
         TRACE_1("Cleaning Defuse Helpers",(count _addedDefuseHelpers));

@@ -17,21 +17,17 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_items = _this select 4;
+params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 [[_target, _className], QUOTE(DFUNC(treatmentAdvanced_medicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
-}foreach _items;
+} foreach _items;
 
-[_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
 
 true;

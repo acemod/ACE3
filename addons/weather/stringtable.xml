@@ -21,6 +21,7 @@
             <Czech>Počasí</Czech>
             <Portuguese>Clima</Portuguese>
             <French>Météo</French>
+            <Hungarian>Időjárás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -30,6 +31,7 @@
             <Czech>Synchronizovat ACE počasí v multiplayeru</Czech>
             <Portuguese>Módulo climático ACE para sincronismo multiplayer</Portuguese>
             <French>Module ACE de synchronisation de la météo en multi.</French>
+            <Hungarian>Többjátékos szinkronizált ACE időjárás modul</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
             <English>Weather propagation</English>
@@ -39,6 +41,7 @@
             <Czech>Změny počasí</Czech>
             <Portuguese>Propagação do clima</Portuguese>
             <French>Propagation de la météo</French>
+            <Hungarian>Időjárás-változás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_Description">
             <English>Enables server side weather propagation</English>
@@ -48,6 +51,7 @@
             <Czech>Aktivuje změny počasí na straně serveru</Czech>
             <Portuguese>Ativa propagação de clima via server</Portuguese>
             <French>Active la propagation météo par le serveur</French>
+            <Hungarian>Engedélyezi a szerveroldali időjárás-változást</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
             <English>ACE Weather</English>
@@ -57,6 +61,7 @@
             <Czech>ACE počasí</Czech>
             <Portuguese>Clima ACE</Portuguese>
             <French>ACE Météo</French>
+            <Hungarian>ACE Időjárás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_Description">
             <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
@@ -66,6 +71,7 @@
             <Czech>Přepíše výchozí počasí (editor, nastavení mise) s ACE počasím (podle mapy)</Czech>
             <Portuguese>Sobreescreve o clima padrão (editor, ajustes de missão) pelo sistema de clima ACE (baseado por mapa)</Portuguese>
             <French>Force la métao par défaut (éditeur, paramètres de mission) avec la météo ACE (basé sur la carte)</French>
+            <Hungarian>Felülbírálja az alapértelmezett időjárást (editor, küldetésbeállítások) az ACE időjárással (térkép-alapú) </Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_DisplayName">
             <English>Sync Rain</English>
@@ -75,6 +81,7 @@
             <Czech>Synchronizuj déšť</Czech>
             <Portuguese>Sincronizar chuva</Portuguese>
             <French>Synchronisation de la pluie</French>
+            <Hungarian>Eső szinkronizálása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_Description">
             <English>Synchronizes rain</English>
@@ -84,6 +91,7 @@
             <Czech>Synchronizace deště</Czech>
             <Portuguese>Sincroniza a chuva</Portuguese>
             <French>Synchronise la pluie</French>
+            <Hungarian>Szinkronizálja az esőt</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_DisplayName">
             <English>Sync Wind</English>
@@ -93,6 +101,7 @@
             <Czech>Synchronizuj vítr</Czech>
             <Portuguese>Sincronizar vento</Portuguese>
             <French>Synchronisation du vent</French>
+            <Hungarian>Szél szinkronizálása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_Description">
             <English>Synchronizes wind</English>
@@ -102,6 +111,7 @@
             <Czech>Synchronizace větru</Czech>
             <Portuguese>Sincroniza o vento</Portuguese>
             <French>Synchronise le vent</French>
+            <Hungarian>Szinkronizálja a szelet</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
             <English>Sync Misc</English>
@@ -111,6 +121,7 @@
             <Czech>Synchronizuj různé</Czech>
             <Portuguese>Sincronizar outros</Portuguese>
             <French>Synchronisation autres</French>
+            <Hungarian>Egyéb szinkronizálása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes lightnings, rainbow, fog, ...</English>
@@ -120,6 +131,7 @@
             <Czech>Synchronizace blesků, duhy, mlhy, ...</Czech>
             <Portuguese>Sincroniza relâmpagos, arco-íris, neblina...</Portuguese>
             <French>Synchronise les éclairs, les arcs en ciel, le brouillard</French>
+            <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt, ...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
@@ -129,6 +141,7 @@
             <Czech>Interval aktualizace</Czech>
             <Portuguese>Intervalo de atualização</Portuguese>
             <French>Intervalle de synchronisation</French>
+            <Hungarian>Frissítési intervallum</Hungarian>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
@@ -138,6 +151,7 @@
             <Czech>Určit interval (v sekundách) mezi aktualizacemi počasí</Czech>
             <Portuguese>Defina o intervalo (em segundos) entre as atualizações de clima</Portuguese>
             <French>Défini un intervalle (secondes) entre deux synchronisations</French>
+            <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
         </Key>
     </Package>
 </Project>

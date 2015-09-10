@@ -11,9 +11,8 @@
  */
 #include "script_component.hpp"
 
-private ["_backpack", "_config"];
-
-_backpack = _this select 0;
+private ["_config"];
+params ["_backpack"];
 
 if (typeName _backpack == "OBJECT") then {
     _backpack = typeOf _backpack;

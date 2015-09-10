@@ -33,6 +33,7 @@
             <Czech>Systém výměny stran</Czech>
             <Portuguese>Sistema de troca de unidades</Portuguese>
             <French>Système de changement d'unité</French>
+            <Hungarian>Egységváltó-rendszer</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -42,6 +43,7 @@
             <Czech>Přesunout k BLUFOR?</Czech>
             <Portuguese>Trocar para Oeste?</Portuguese>
             <French>Changer en OUEST?</French>
+            <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -51,6 +53,7 @@
             <Czech>Povolit přesun k BLUFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Oeste?</Portuguese>
             <French>Permettre le changement en unité OUEST?</French>
+            <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -60,6 +63,7 @@
             <Czech>Přesunout k OPFOR?</Czech>
             <Portuguese>Trocar para Leste?</Portuguese>
             <French>Changer en EST?</French>
+            <Hungarian>Átváltás OPFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -69,6 +73,7 @@
             <Czech>Povolit přesun k OPFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Leste?</Portuguese>
             <French>Permettre le changement en unité EST?</French>
+            <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -78,6 +83,7 @@
             <Czech>Přesunout k INDFOR?</Czech>
             <Portuguese>Trocar para Indenpendente</Portuguese>
             <French>Changer en INDE?</French>
+            <Hungarian>Átváltás INDFOR-ra?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -87,6 +93,7 @@
             <Czech>Povolit přesun k INDFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
             <French>Permettre le changement en unité INDE?</French>
+            <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -96,6 +103,7 @@
             <Czech>Přesunout k CIVILISTŮM?</Czech>
             <Portuguese>Trocar para Civis?</Portuguese>
             <French>Changer en CIV?</French>
+            <Hungarian>Átváltás civilre?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -105,6 +113,7 @@
             <Czech>Povolit přesun k CIVILISTŮM?</Czech>
             <Portuguese>Permitir troca de unidades para o Civil?</Portuguese>
             <French>Permettre le changement en unité CIV?</French>
+            <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -114,6 +123,7 @@
             <Czech>Povolit bezpečné oblasti?</Czech>
             <Portuguese>Habilitar zona segura?</Portuguese>
             <French>Activer la zone sécurisée?</French>
+            <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -123,6 +133,7 @@
             <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
             <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
             <French>Activer une zone sécurisée autour des enemis?  Les joueurs ne peuvent changer d'unité dand la zone sécurisée</French>
+            <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -132,6 +143,7 @@
             <Czech>Oblast bezpečné zóny</Czech>
             <Portuguese>Raio da zona segura</Portuguese>
             <French>Rayon de la zone sécurisée</French>
+            <Hungarian>Biztonságos zóna hatóköre</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
@@ -141,6 +153,7 @@
             <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 200</Czech>
             <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 200</Portuguese>
             <French>Rayon de la zone sécurisée autour de joueurs d'équipe différentes. Défaut: 200</French>
+            <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 200</Hungarian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <Polish>Moduł ten pozwala na zmianę strony w trakcie gry.</Polish>

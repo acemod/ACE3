@@ -16,8 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 //Unit is handcuffed and not currently being escorted
 _target getVariable [QGVAR(isHandcuffed), false] &&
-{isNull (attachedTo _target)}
+{isNull (attachedTo _target)} &&
+{(vehicle _target) == _target}

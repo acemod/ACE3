@@ -165,6 +165,7 @@
             <Czech>Vzdávající se jednotka</Czech>
             <Portuguese>Fazer unidade se render</Portuguese>
             <French>Faire capituler l'unité</French>
+            <Hungarian>Egység kapitulálása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
@@ -174,6 +175,7 @@
             <Czech>Synchronizuj s jednotkou, která se má vzdát.&lt;br /&gt;Zdroj: ace_captives</Czech>
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda. &lt;br/&gt;Fonte: ace_captives</Portuguese>
             <French>Synchronise une unité pour la rendre captive. &lt;br/&gt;Source: ace_captives</French>
+            <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -183,6 +185,7 @@
             <German>Gefangenen-Einstellungen</German>
             <Portuguese>Ajustes de prisioneiros</Portuguese>
             <French>Options de capitulation</French>
+            <Hungarian>Fogoly-beállítások</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -192,6 +195,7 @@
             <German>Einstellungen zur Kapitulation und Kabelbindern</German>
             <Portuguese>Controla as configurações de rendição e abraçadeiras</Portuguese>
             <French>Contrôle les paramètres de la rédition et des Serflex</French>
+            <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
@@ -201,6 +205,7 @@
             <German>Kann Teamkollegen fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
             <French>Peut libérer sa propre faction</French>
+            <Hungarian>Saját oldal megbilincselhető</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -210,6 +215,7 @@
             <German>Können Spieler eigene Einheiten fesseln</German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
             <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
+            <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -219,6 +225,7 @@
             <German>Kapitulation erlauben</German>
             <Portuguese>Permite rendição</Portuguese>
             <French>Permettre la capitulation</French>
+            <Hungarian>Kapituláció engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
@@ -228,6 +235,23 @@
             <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
             <French>Les joueurs peuvent se rendre après avoir rangé leur arme</French>
+            <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
+            <English>Require surrendering</English>
+            <Polish>Wymagaj kapitulacji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
+            <English>Require Players to surrender before they can be arrested</English>
+            <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
+        </Key>
+        <Key ID="STR_ACE_Captives_SurrenderOnly">
+            <English>Surrendering only</English>
+            <Polish>Tylko kapitulacja</Polish>
+        </Key>
+        <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
+            <English>Surrendering or No weapon</English>
+            <Polish>Kapitulacja lub brak broni</Polish>
         </Key>
     </Package>
 </Project>

@@ -16,6 +16,7 @@ PREP(doFriskPerson);
 PREP(doLoadCaptive);
 PREP(doRemoveHandcuffs);
 PREP(doUnloadCaptive);
+PREP(findEmptyNonFFVCargoSeat);
 PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);

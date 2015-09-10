@@ -17,11 +17,11 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_objectType,_typeNum,_fullPath);
+params ["_objectType", "_typeNum", "_fullPath"];
 
 private ["_res","_varName","_actionTrees", "_parentNode", "_found"];
 _res = _fullPath call FUNC(splitPath);
-EXPLODE_2_PVT(_res,_parentPath,_actionName);
+_res params ["_parentPath", "_actionName"];
 
 _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
 _actionTrees = missionNamespace getVariable [_varName, []];
