@@ -106,7 +106,7 @@
             <French>Transfuser du Plasma</French>
             <Russian>Перелить плазму</Russian>
             <Hungarian>Infúzió (vérplazma)</Hungarian>
-            <Italian>Trasfusione di Plasma</Italian>
+            <Italian>Trasfusione di plasma</Italian>
             <Portuguese>Transfundir Plasma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
@@ -502,7 +502,7 @@
             <French>Administrer du sang en IV (1000ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione sangue IV (1˙000ml)</Italian>
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_500">
@@ -538,7 +538,7 @@
             <French>Administrer du plasma en IV (1000ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione plasma IV (1˙000ml)</Italian>
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_500">
@@ -574,7 +574,7 @@
             <French>Administrer de la solution saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione salina IV (1˙000ml)</Italian>
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_500">
@@ -1149,7 +1149,7 @@
             <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
-            <Italian>Soluzione salina IV (1000ml)</Italian>
+            <Italian>Soluzione salina IV (1˙000ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (1000ml)</Czech>
         </Key>
@@ -1595,6 +1595,7 @@
             <Portuguese>Nada</Portuguese>
             <French>Aucun</French>
             <Hungarian>Nincs</Hungarian>
+            <Italian>Niente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
@@ -2104,6 +2105,7 @@
             <English>%1 performed CPR</English>
             <Polish>%1 wykonał cykl RKO</Polish>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
+            <Italian>RCP al %1</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2226,6 +2228,7 @@
             <French>La douleur est seulement supprimée temporairement</French>
             <Hungarian>A fájdalom csak ideiglenesen csökken</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
+            <Italian>Il dolore viene soppresso solo temporaneamente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -2741,6 +2744,7 @@
             <Portuguese>ACE Médico</Portuguese>
             <French>ACE Médical</French>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
+            <Italian>Medico ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
             <English>Medical Settings [ACE]</English>
@@ -2752,6 +2756,7 @@
             <Portuguese>Ajustes médicos [ACE]</Portuguese>
             <French>Option médicale [ACE]</French>
             <Hungarian>Orvosi beállítások [ACE]</Hungarian>
+            <Italian>Impostazioni mediche [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_DisplayName">
             <English>Medical Level</English>
@@ -2763,6 +2768,7 @@
             <Portuguese>Nível médico</Portuguese>
             <French>Niveau de simulation médicale</French>
             <Hungarian>Orvosi szint</Hungarian>
+            <Italian>Livello medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_Description">
             <English>What is the medical simulation level?</English>
@@ -2774,6 +2780,7 @@
             <Portuguese>Qual o nível de simulação médica?</Portuguese>
             <French>Quel niveau de simulation médicale choisissez vous?</French>
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
+            <Italian>Qual'è il livello della simulazione medica?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_basic">
             <English>Basic</English>
@@ -2785,6 +2792,7 @@
             <Portuguese>Básica</Portuguese>
             <French>Basique</French>
             <Hungarian>Alap</Hungarian>
+            <Italian>Di base</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advanced">
             <English>Advanced</English>
@@ -2796,6 +2804,7 @@
             <Portuguese>Avançada</Portuguese>
             <French>Avancée</French>
             <Hungarian>Fejlett</Hungarian>
+            <Italian>Avanzato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
@@ -2807,6 +2816,7 @@
             <Portuguese>Configuração médica</Portuguese>
             <French>Paramètre des infirmiers</French>
             <Hungarian>Orvosok beállítása</Hungarian>
+            <Italian>Impostazioni mediche</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Description">
             <English>What is the level of detail prefered for medics?</English>
@@ -2817,6 +2827,7 @@
             <Portuguese>Qual o nível de detalhe preferido para os médicos?</Portuguese>
             <French>Quel niveau de détail voullez vous pour les infirmier?</French>
             <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
+            <Italian>Qual'è il livello di dettaglio preferito per i medici?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -2828,6 +2839,7 @@
             <Portuguese>Desativar médicos</Portuguese>
             <French>Désactiver les infirmiers</French>
             <Hungarian>Orvosok letiltása</Hungarian>
+            <Italian>Disattiva i medici</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -2839,6 +2851,7 @@
             <Portuguese>Ativar lixo médico</Portuguese>
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
+            <Italian>Abilita i rifiuti</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
@@ -2850,6 +2863,7 @@
             <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
             <French>Activer la création de détrimus au début des traitements</French>
             <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
+            <Italian>Abilita i rifiuti creati durante i trattamenti</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
             <English>Life time of litter objects</English>
@@ -2861,6 +2875,7 @@
             <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
             <French>Durée d'affichage des détritus</French>
             <Hungarian>Szemétobjektumok élettartama</Hungarian>
+            <Italian>Tempo di vita per i rifiuti</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
@@ -2872,6 +2887,7 @@
             <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
             <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
+            <Italian>Quanto tempo rimangono i rifiuti? In secondi. -1 significa per sempre</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>
@@ -2883,6 +2899,7 @@
             <Portuguese>Ativar gritos</Portuguese>
             <French>Activer les hurlements</French>
             <Hungarian>Kiáltások engedélyezése</Hungarian>
+            <Italian>Abilita urla</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_Description">
             <English>Enable screaming by injuried units</English>
@@ -2894,6 +2911,7 @@
             <Portuguese>Ativa gritos para unidades feridas</Portuguese>
             <French>Active les hurlements d'unités blessées</French>
             <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
+            <Italian>Le unità urlano quando ferite</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
@@ -2905,6 +2923,7 @@
             <Portuguese>Dano do jogador</Portuguese>
             <French>Dégats des joueurs</French>
             <Hungarian>Játékos sérülés</Hungarian>
+            <Italian>Danni al giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_Description">
             <English>What is the damage a player can take before being killed?</English>
@@ -2916,6 +2935,7 @@
             <Portuguese>Qal é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
             <French>Quels dégats peut subir un joueur avant d'être tué</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
+            <Italian>Quanto danno i giocatori posso ricevere prima di venir uccisi?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_DisplayName">
             <English>AI Damage</English>
@@ -2927,6 +2947,7 @@
             <Portuguese>Dano da IA</Portuguese>
             <French>Dégats des IA</French>
             <Hungarian>AI sérülés</Hungarian>
+            <Italian>Danni AI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_Description">
             <English>What is the damage an AI can take before being killed?</English>
@@ -2938,6 +2959,7 @@
             <Portuguese>Qual é o dano que uma IA pode sofrer antes de morrer?</Portuguese>
             <French>Quels dégats peut subir une IA avant d'être tuée</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy AI, mielőtt meghal?</Hungarian>
+            <Italian>Quando danno l'AI può ricevere prima di venir uccisa?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
             <English>AI Unconsciousness</English>
@@ -2949,6 +2971,7 @@
             <Portuguese>Inconsciência da IA</Portuguese>
             <French>Inconscience des IA</French>
             <Hungarian>AI eszméletlenség</Hungarian>
+            <Italian>Incoscenza AI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
@@ -2960,6 +2983,7 @@
             <Portuguese>Permite IA ficar inconsciente</Portuguese>
             <French>Autoriser les IA à tomber inconsciente</French>
             <Hungarian>Engedélyezi az AI eszméletének elvesztését</Hungarian>
+            <Italian>L'AI può svenire</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -2970,6 +2994,7 @@
             <French>Contrôle à distance des IA</French>
             <Hungarian>Távvezérelt AI</Hungarian>
             <Russian>Зевса считать ботом</Russian>
+            <Italian>AI telecomandata</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
@@ -2980,6 +3005,7 @@
             <French>Soigner les unitées controlées à distance comme des IA et non comme des joueurs?</French>
             <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
             <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
+            <Italian>Tratta le unità telecomandata come AI non giocatori?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
@@ -2991,6 +3017,7 @@
             <Portuguese>Previnir morte instantânea</Portuguese>
             <French>Empêcher la morte instantanée</French>
             <Hungarian>Azonnali halál kiiktatása</Hungarian>
+            <Italian>Previene la morte istantanea</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
             <English>Have a unit move to unconscious instead of death</English>
@@ -3002,6 +3029,7 @@
             <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
             <French>Forcer l'inconscience au lieu de la mort instantanée</French>
             <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
+            <Italian>Una unità diventa incoscente invece di morire</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
@@ -3013,6 +3041,7 @@
             <Portuguese>Coeficiente de sangramento</Portuguese>
             <French>Coefficient de saignement</French>
             <Hungarian>Vérzési koefficiens</Hungarian>
+            <Italian>Coefficente di emorragia</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_Description">
             <English>Coefficient to modify the bleeding speed</English>
@@ -3024,6 +3053,7 @@
             <Portuguese>Coeficiente para modificar a velocidade do sangramento</Portuguese>
             <French>Coefficient modifiant la vitesse de saignement</French>
             <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
+            <Italian>Coefficente per modificare la velocità delle emorragie</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_DisplayName">
             <English>Pain coefficient</English>
@@ -3035,6 +3065,7 @@
             <Portuguese>Coeficiente de dor</Portuguese>
             <French>Coefficient de douleur</French>
             <Hungarian>Fájdalmi koefficiens</Hungarian>
+            <Italian>Coefficente di dolore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_Description">
             <English>Coefficient to modify the pain intensity</English>
@@ -3046,6 +3077,7 @@
             <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
             <French>Coefficient modifiant l'intensité de la douleur</French>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
+            <Italian>Coefficente per modificare l'intensità del dolore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
             <English>Sync status</English>
@@ -3057,6 +3089,7 @@
             <Portuguese>Sincronizar estado</Portuguese>
             <French>Status de la synchronisation</French>
             <Hungarian>Szinkronizációs állapot</Hungarian>
+            <Italian>Stato di sincronizzazione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_Description">
             <English>Keep unit status synced. Recommended on.</English>
@@ -3068,6 +3101,7 @@
             <Portuguese>Mater o estado da unidade sincronizado. Recomendado ativado.</Portuguese>
             <French>Garder l'unité synchronisée, Recommandé sur oui.</French>
             <Hungarian>Egységállapotok szinkronizálása. Javasolt a bekapcsolása.</Hungarian>
+            <Italian>Tiene le unità sincronizzate. Si raccomanda attivo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -3079,6 +3113,7 @@
             <Portuguese>Proporciona o sistema médico para os jogadores e a IA.</Portuguese>
             <French>Fourni un système médical pour les joueurs tout comme pour les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
+            <Italian>Fornisce un sistema medico per entrambi giocatori ed AI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3090,6 +3125,7 @@
             <Portuguese>Ajustes médicos avançados [ACE]</Portuguese>
             <French>Paramètres des soins avancés</French>
             <Hungarian>Fejlett orvosi beállítások [ACE]</Hungarian>
+            <Italian>Impostazioni mediche avanzate [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -3101,6 +3137,7 @@
             <Portuguese>Habilitado para</Portuguese>
             <French>Activer pour</French>
             <Hungarian>Engedélyezve...</Hungarian>
+            <Italian>Abilitato per</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
