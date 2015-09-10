@@ -26,10 +26,8 @@ TRACE_2("params",_vehicle,_amount);
 if !(["ace_cargo"] call EFUNC(common,isModLoaded)) exitWith {};
 
 // Collect until SettingsInitialized
-if (isNil QGVAR(settingInitted)) exitWith {
-    if !(_vehicle in GVAR(addSparePartsCollection)) then {
-        GVAR(addSparePartsCollection) pushBack _vehicle;
-    };
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSpareParts), _this];
 };
 
 // Exit if not forced and add spare parts is disabled (after settings initted to make sure it really is)

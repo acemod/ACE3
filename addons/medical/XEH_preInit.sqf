@@ -84,6 +84,7 @@ PREP(treatmentAdvanced_medication);
 PREP(treatmentAdvanced_medicationLocal);
 PREP(treatmentAdvanced_surgicalKit_onProgress);
 PREP(treatmentBasic_bandage);
+PREP(treatmentBasic_bandageLocal);
 PREP(treatmentBasic_bloodbag);
 PREP(treatmentBasic_bloodbagLocal);
 PREP(treatmentBasic_epipen);

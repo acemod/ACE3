@@ -5,333 +5,448 @@
             <English>Spectator Settings</English>
             <Polish>Ustawienia obserwatora</Polish>
             <Portuguese>Preferências de Espectador</Portuguese>
+            <Russian>Настройки спектатора</Russian>
+            <Czech>Nastavení Pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Descripton">
             <English>Configure how the spectator system will operate by default.</English>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
+            <Russian>Определяют, как система спектатора будет функционировать по-умолчанию.</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
             <Polish>Filtr jednostek</Polish>
             <Portuguese>Filtro de unidades</Portuguese>
+            <Russian>Фильтр юнитов</Russian>
+            <Czech>Filtr jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
             <English>Method of filtering spectatable units.</English>
             <Polish>Wybierz jednostki, jakie będzie można obserwować po uruchomeniu obserwatora.</Polish>
             <Portuguese>Método para filtrar unidades espectáveis</Portuguese>
+            <Russian>Метод фильтрации наблюдаемых юнитов.</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
             <Polish>Brak jednostek</Polish>
             <Portuguese>Sem unidades</Portuguese>
+            <Russian>Никто</Russian>
+            <Czech>Žádné jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
             <Polish>Tylko gracze</Polish>
             <Portuguese>Somente jogadores</Portuguese>
+            <Russian>Только игроки</Russian>
+            <Czech>Pouze hráči</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
             <Polish>Grywalne jednostki</Polish>
             <Portuguese>Unidades jogáveis</Portuguese>
+            <Russian>Играбельные юниты</Russian>
+            <Czech>Hratelné Jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
             <Polish>Wszystkie jednostki</Polish>
             <Portuguese>Todas unidades</Portuguese>
+            <Russian>Все юниты</Russian>
+            <Czech>Všechny jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
             <English>Side filter</English>
             <Polish>Filtr stron</Polish>
             <Portuguese>Filtro de lados</Portuguese>
+            <Russian>Фильтр стороны</Russian>
+            <Czech>Filtr stran</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
             <English>Method of filtering spectatable sides.</English>
             <Polish>Wybierz strony, jakie będzie można obserwować po uruchomeniu obserwatora.</Polish>
             <Portuguese>Método para filtrar lados espectáveis.</Portuguese>
+            <Russian>Метод фильтрации наблюдаемых сторон.</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
             <Polish>Strona gracza</Polish>
             <Portuguese>Lado do jogador</Portuguese>
+            <Russian>Сторона игрока</Russian>
+            <Czech>Strana hráče</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
             <Polish>Strony sojusznicze</Polish>
             <Portuguese>Lados aliados</Portuguese>
+            <Russian>Дружественные стороны</Russian>
+            <Czech>Strana spojenců</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_hostile">
             <English>Hostile sides</English>
             <Polish>Strony wrogie</Polish>
             <Portuguese>Lados hostis</Portuguese>
+            <Russian>Враждебные стороны</Russian>
+            <Czech>Strana nepřítele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
             <Polish>Wszystkie strony</Polish>
             <Portuguese>Todos os lados</Portuguese>
+            <Russian>Все стороны</Russian>
+            <Czech>Všechny strany</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
             <Polish>Tryby kamery</Polish>
             <Portuguese>Modos de camera</Portuguese>
+            <Russian>Режимы камеры</Russian>
+            <Czech>Módy kamery</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used.</English>
             <Polish>Tryby kamery, jakie mogą być używane.</Polish>
             <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
+            <Russian>Режимы камеры, которые могут быть использованы</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
             <Polish>Wszystkie</Polish>
             <Portuguese>Todos</Portuguese>
+            <Russian>Все</Russian>
+            <Czech>Všechny</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_free">
             <English>Free only</English>
             <Polish>Tylko wolna</Polish>
             <Portuguese>Somente livre</Portuguese>
+            <Russian>Только свободная</Russian>
+            <Czech>Pouze volná</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_internal">
             <English>Internal only</English>
             <Polish>Tylko wewnętrzna</Polish>
             <Portuguese>Somente interna</Portuguese>
+            <Russian>Только внутренняя</Russian>
+            <Czech>Pouze vnitřní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_external">
             <English>External only</English>
             <Polish>Tylko zewnętrzna</Polish>
             <Portuguese>Somente externa</Portuguese>
+            <Russian>Только внешняя</Russian>
+            <Czech>Pouze vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>Internal and external</English>
             <Polish>Wewnętrzna i zewnętrzna</Polish>
             <Portuguese>Interna e externa</Portuguese>
+            <Russian>Внутренняя и внешняя</Russian>
+            <Czech>Vnitřní a vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
             <Polish>Tryby wizji</Polish>
             <Portuguese>Modos de visão</Portuguese>
+            <Russian>Режимы видения</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used.</English>
             <Polish>Tryby wizji, jakie mogą być używane.</Polish>
             <Portuguese>Modos de visão que podem ser utilizados</Portuguese>
+            <Russian>Режимы видения, которые могут быть использованы</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
             <Polish>Noktowizja</Polish>
             <Portuguese>Visão noturna</Portuguese>
+            <Russian>Ночное видение</Russian>
+            <Czech>Noktovize</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
             <Polish>Termowizja</Polish>
             <Portuguese>Visão térmica</Portuguese>
+            <Russian>Тепловизионное</Russian>
+            <Czech>Termovize</Czech>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
             <English>Spectator Units</English>
             <Polish>Jednostki obserwatora</Polish>
             <Portuguese>Unidades espectadoras</Portuguese>
+            <Russian>Юниты</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
             <Polish>Sterowanie obserwatorem</Polish>
             <Portuguese>Controle do espectador</Portuguese>
+            <Russian>Управление спектатором</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
             <Polish>Wolna</Polish>
             <Portuguese>Livre</Portuguese>
+            <Russian>Свободная</Russian>
+            <Czech>Volná</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewInternal">
             <English>Internal</English>
             <Polish>Wewnętrzna</Polish>
             <Portuguese>Interna</Portuguese>
+            <Russian>Внутренняя</Russian>
+            <Czech>Vnitřní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
             <Polish>Zewnętrzna</Polish>
             <Portuguese>Externa</Portuguese>
+            <Russian>Внешняя</Russian>
+            <Czech>Vnější</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
             <Polish>Normalna</Polish>
             <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Czech>Normální</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
             <Polish>Noc</Polish>
             <Portuguese>Visão Norturna</Portuguese>
+            <Russian>Ночное</Russian>
+            <Czech>Noc</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
             <Polish>Termo</Polish>
             <Portuguese>Térmica</Portuguese>
+            <Russian>Тепловизор</Russian>
+            <Czech>Termál</Czech>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
             <English>Free Camera</English>
             <Polish>Kamera swobodna</Polish>
             <Portuguese>Câmera livre</Portuguese>
+            <Russian>Свободная камера</Russian>
+            <Czech>Volná Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
             <Polish>Kamera naprzód</Polish>
             <Portuguese>Câmera para frente</Portuguese>
+            <Russian>Камера вперед</Russian>
+            <Czech>Kamera Vpřed</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Camera Backward</English>
             <Polish>Kamera w tył</Polish>
             <Portuguese>Câmera para trás</Portuguese>
+            <Russian>Камера назад</Russian>
+            <Czech>Kamera Zpět</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Camera Left</English>
             <Polish>Kamera w lewo</Polish>
             <Portuguese>Câmera para esquerda</Portuguese>
+            <Russian>Камера влево</Russian>
+            <Czech>Kamera Doleva</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Camera Right</English>
             <Polish>Kamera w prawo</Polish>
             <Portuguese>Câmera para direita</Portuguese>
+            <Russian>Камера вправо</Russian>
+            <Czech>Kamera Doprava</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Camera Up</English>
             <Polish>Kamera w górę</Polish>
             <Portuguese>Câmera para cima</Portuguese>
+            <Russian>Камера вверх</Russian>
+            <Czech>Kamera Nahoru</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Camera Down</English>
             <Polish>Kamera w dół</Polish>
             <Portuguese>Câmera para baixo</Portuguese>
+            <Russian>Камера вниз</Russian>
+            <Czech>Kamera Dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
             <Polish>Panoramowanie</Polish>
             <Portuguese>Câmera panorâmica</Portuguese>
+            <Russian>Панорамирование</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDolly">
             <English>Dolly Camera</English>
             <Polish>Płynna kamera</Polish>
             <Portuguese>Câmera dolly</Portuguese>
+            <Russian>Рельсовая камера</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
             <Polish>Zablokuj kamerę na celu</Polish>
             <Portuguese>Travar câmera em alvo</Portuguese>
+            <Russian>Зафиксировать камеру на цели</Russian>
+            <Czech>Zamknout Kameru na Cíl</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
             <Polish>Przyśpieszenie kamery</Polish>
             <Portuguese>Aumento de velocidade</Portuguese>
+            <Russian>Ускорение камеры</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamFocus">
             <English>Focus on Unit</English>
             <Polish>Skup na jednostce</Polish>
             <Portuguese>Focar na unidade</Portuguese>
+            <Russian>Фокус на юните</Russian>
+            <Czech>Zaměřit se na Jednotku</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
             <Polish>Interfejs</Polish>
             <Portuguese>Interface</Portuguese>
+            <Russian>Интерфейс</Russian>
+            <Czech>Rozhraní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
             <Polish>Przełącz interfejs</Polish>
             <Portuguese>Alternar interface</Portuguese>
+            <Russian>Переключить интерфейс</Russian>
+            <Czech>Přepnout Rozhraní</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
             <English>Toggle Unit Icons</English>
             <Polish>Przełącz ikony jednostek</Polish>
             <Portuguese>Alternar ícone de unidades</Portuguese>
+            <Russian>Вкл./выкл. иконки юнитов</Russian>
+            <Czech>Přepnout Ikony Jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
             <English>Toggle Unit List</English>
             <Polish>Przełącz listę jednostek</Polish>
             <Portuguese>Alternar lista de unidades</Portuguese>
+            <Russian>Вкл./выкл. список юнитов</Russian>
+            <Czech>Přepnout Seznam Jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
             <English>Toggle Toolbar</English>
             <Polish>Przełącz pasek narzędzi</Polish>
             <Portuguese>Alternar barra de ferramentas</Portuguese>
+            <Russian>Вкл./выкл. тулбар</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
             <Polish>Przełącz kompas</Polish>
             <Portuguese>Alternar bússola</Portuguese>
+            <Russian>Вкл./выкл. компас</Russian>
+            <Czech>Přepnout Kompas</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
             <English>Toggle Map</English>
             <Polish>Przełącz mapę</Polish>
             <Portuguese>Alternar mapa</Portuguese>
+            <Russian>Вкл./выкл. карту</Russian>
+            <Czech>Přepnout Mapu</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
             <English>Toggle Help</English>
             <Polish>Przełącz pomoc</Polish>
             <Portuguese>Alternar ajuda</Portuguese>
+            <Russian>Вкл./выкл. помощь</Russian>
+            <Czech>Přepnout Nápovědu</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
             <Polish>Atrybuty kamery</Polish>
             <Portuguese>Atributos de câmera</Portuguese>
+            <Russian>Атрибуты камеры</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
             <Polish>Następna kamera</Polish>
             <Portuguese>Próxima câmera</Portuguese>
+            <Russian>Следующая камера</Russian>
+            <Czech>Následující Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
             <English>Previous Camera</English>
             <Polish>Poprzednia kamera</Polish>
             <Portuguese>Câmera anterior</Portuguese>
+            <Russian>Предыдущая камера</Russian>
+            <Czech>Předchozí Kamera</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
             <Polish>Następna jednostka</Polish>
             <Portuguese>Próxima unidade</Portuguese>
+            <Russian>Следующий юнит</Russian>
+            <Czech>Následující Jednotka</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
             <Polish>Poprzednia jednostka</Polish>
             <Portuguese>Unidade anterior</Portuguese>
+            <Russian>Предыдущий юнит</Russian>
+            <Czech>Předchozí Jednotka</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Next Vision Mode</English>
             <Polish>Następny tryb wizji</Polish>
             <Portuguese>Próximo modo de visão</Portuguese>
+            <Russian>Следующий режим видения</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_prevVis">
             <English>Previous Vision Mode</English>
             <Polish>Poprzedni tryb wizji</Polish>
             <Portuguese>Modo de visão anterior</Portuguese>
+            <Russian>Предыдущий режим видения</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
             <Polish>Reguluj zoom</Polish>
             <Portuguese>Ajustar zoom</Portuguese>
+            <Russian>Настроить зум</Russian>
+            <Czech>Regulovat Přiblížení</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
             <Polish>Reguluj prędkość</Polish>
             <Portuguese>Ajuster velocidade</Portuguese>
+            <Russian>Настроить скорость</Russian>
+            <Czech>Regulovat Rychlost</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
             <Polish>Reguluj zoom (krok)</Polish>
             <Portuguese>Incrementar zoom</Portuguese>
+            <Russian>Увеличить зум</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
             <Polish>Reguluj prędkość (krok)</Polish>
             <Portuguese>Incrementar velocidade</Portuguese>
+            <Russian>Увеличить скорость</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
             <Polish>Resetuj zoom</Polish>
             <Portuguese>Redefinir zoom</Portuguese>
+            <Russian>Сбросить зум</Russian>
+            <Czech>Obnovit Přiblížení</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
             <Polish>Resetuj prędkość</Polish>
             <Portuguese>Redefinir velocidade</Portuguese>
+            <Russian>Сбросить скорость</Russian>
+            <Czech>Obnovit Rychlost</Czech>
         </Key>
     </Package>
 </Project>

@@ -3,28 +3,32 @@
     <Package name="finger">
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
-            <Russian>Отображать пальце-индикатор для показывающего игрока</Russian>
+            <Russian>Индикатор пальца для показывающего</Russian>
+            <French>Afficher un indicateur de pointage pour soit même</French>
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
             <Portuguese>Mostrar indicador para si mesmo</Portuguese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
-            <Russian>Отображать индикатор для показывающего игрока. Эта настройка не влияет на то, будутт ли другие игроки видеть индикатор</Russian>
+            <Russian>Отображать индикатор указания пальцем для показывающего игрока. Эта настройка не влияет на то, будут ли другие игроки видеть индикатор</Russian>
+            <French>Affiche l'indicateur pour le joueur qui pointe. Cette option n'affecte pas les autres joueurs</French>
             <Polish> Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
             <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
             <Portuguese>Renderizar o indicador para o jogador que está apontando. Esta opção não afeta se os outros jogadores verão ou não o indicador</Portuguese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
-            <Russian>Пальце-индикатор</Russian>
+            <Russian>Индикатор указания пальцем</Russian>
+            <French>Indicateur de pointage</French>
             <Polish>Indykator palca</Polish>
             <Hungarian>Ujj-indikátor</Hungarian>
             <Portuguese>Indicador de apontamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
-            <Russian>Цвет индикатора пальце-указания</Russian>
+            <Russian>Цвет индикатора указания пальцем</Russian>
+            <French>Couleur de l'indicateur</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
             <Portuguese>Cor do círculo de indicação</Portuguese>
@@ -32,39 +36,50 @@
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
             <Russian>Действие "показать пальцем на"</Russian>
+            <French>Action 'Pointer le doigt à"</French>
             <Polish>Akcja "wskaż palcem"</Polish>
             <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
             <Portuguese>Ação "Apontar um dedo para"</Portuguese>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
+            <French>Montre du doigt et affiche un marqueur virtuel de la direction pointée aux uinités proches. Peut être maintenu</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
+            <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
+            <French>Option "Montrer du doigt"</French>
             <Polish>Ustawienia wskazywania palcem</Polish>
             <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
+            <Russian>Настройки указания пальцем</Russian>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
+            <French>Activer "Montrer du doigt"</French>
             <Polish>Aktywuj wskazywanie</Polish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
             <Portuguese>Apontamento ativado</Portuguese>
+            <Russian>Указание пальцем включено</Russian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
+            <French>Distance maximale du pointage</French>
             <Polish>Maks. zasięg wskazywania</Polish>
             <Hungarian>Ujj maximum hatótávja</Hungarian>
             <Portuguese>Distância máxima do apontamento</Portuguese>
+            <Russian>Макс. дальность</Russian>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
+            <French>Distance maximale entre joueurs pour afficher l'indicateur (défaut: 4 mètres)</French>
             <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
             <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
+            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по-умолчанию: 4 метра]</Russian>
         </Key>
     </Package>
 </Project>

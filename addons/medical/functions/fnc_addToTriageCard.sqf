@@ -7,16 +7,15 @@
  * 1: The new item classname <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_newItem", "_log", "_inList", "_amount"];
-_unit = _this select 0;
-_newItem = _this select 1;
+private ["_log", "_inList", "_amount"];
+params ["_unit", "_newItem"];
 
 if (!local _unit) exitwith {
     [_this, QUOTE(DFUNC(addToTriageList)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
@@ -36,7 +35,7 @@ _amount = 1;
         _amount = (_info select 1);
         _inList = true;
     };
-}foreach _log;
+} foreach _log;
 
 if (!_inList) then {
     _log pushback [_newItem, 1, ACE_time];

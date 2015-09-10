@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi, commy2
  * Initializes unit variables.
  *
  * Arguments:
@@ -10,17 +10,17 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_unit", "_allUsedMedication", "_logs"];
+params ["_unit"];
 
-_unit = _this select 0;
-
+// basic
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(morphine), 0, true];
 _unit setVariable [QGVAR(bloodVolume), 100, true];
+_unit setVariable ["ACE_isUnconscious", false, true];
 
+// advanced
 // tourniquets
 _unit setvariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
@@ -59,12 +59,13 @@ _unit setvariable [QGVAR(airwayCollapsed), false];
 // generic medical admin
 _unit setvariable [QGVAR(addedToUnitLoop), false, true];
 _unit setvariable [QGVAR(inCardiacArrest), false, true];
-_unit setVariable ["ACE_isUnconscious", false, true];
 _unit setvariable [QGVAR(hasLostBlood), 0, true];
 _unit setvariable [QGVAR(isBleeding), false, true];
 _unit setvariable [QGVAR(hasPain), false, true];
 _unit setvariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 _unit setvariable [QGVAR(painSuppress), 0, true];
+
+private ["_allUsedMedication", "_logs"];
 
 // medication
 _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
