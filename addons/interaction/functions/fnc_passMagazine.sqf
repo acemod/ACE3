@@ -29,7 +29,7 @@ _filteredMags = [magazinesAmmoFull _player, _filterFunc] call EFUNC(common,filte
 _magToPass = _filteredMags select 0;
 _magToPassIndex = 0;
 {
-    if ((_x select 1) > (_magToPass select 1)) then {
+    if (((_x select 1) > (_magToPass select 1)) && ((_target canAddItemToUniform (_x select 0)) || (_target canAddItemToVest (_x select 0)) || (_target canAddItemToBackpack (_x select 0)))) then {
         _magToPass = _x;
         _magToPassIndex = _forEachIndex;
     };
@@ -46,5 +46,4 @@ _player removeMagazines (_magToPass select 0);
 
 _player playActionNow "PutDown";
 
-_target addMagazine [_magToPass select 0, _magToPass select 1];
-[[parseText format [CSTRING(PassMagazineHint), name _player, _magToPass select 0]], QUOTE(FUNC(common,displayTextStructured)), _target] call EFUNC(common,execRemoteFnc);
+[[_player, _target, _magToPass select 0, _magToPass select 1], QUOTE(FUNC(passMagazineLocal)), _target] call EFUNC(common,execRemoteFnc);

@@ -34,7 +34,7 @@ class CfgVehicles {
 
                 class ACE_PassMagazine {
                     displayName = CSTRING(PassMagazine);
-                    condition = QUOTE([ARR_2(_player,primaryWeapon _target)] call FUNC(canPassMagazine) || [ARR_2(_player,handgunWeapon _target)] call FUNC(canPassMagazine));
+                    condition = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(canPassMagazine) || [ARR_3(_player,_target,handgunWeapon _target)] call FUNC(canPassMagazine));
                     statement = "";
                     showDisabled = 0;
                     priority = 3.3;
@@ -42,7 +42,7 @@ class CfgVehicles {
 
                     class ACE_PassMagazinePrimary {
                         displayName = CSTRING(PassMagazinePrimary);
-                        condition = QUOTE([ARR_2(_player,primaryWeapon _target)] call FUNC(canPassMagazine));
+                        condition = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(canPassMagazine));
                         statement = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(passMagazine));
                         showDisabled = 0;
                         priority = 3;
@@ -50,7 +50,7 @@ class CfgVehicles {
                     };
                     class ACE_PassMagazineHandgun {
                         displayName = CSTRING(PassMagazineHandgun);
-                        condition = QUOTE([ARR_2(_player,handgunWeapon _target)] call FUNC(canPassMagazine));
+                        condition = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(canPassMagazine));
                         statement = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(passMagazine));
                         showDisabled = 0;
                         priority = 1;
