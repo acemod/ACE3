@@ -20,13 +20,13 @@
 // Kill PFH when not in free cam (or display is closed)
 if (isNil QGVAR(camHandler)) exitWith { [_this select 1] call CBA_fnc_removePerFrameHandler; };
 
-private ["_camera","_pan","_tilt","_x","_y","_z"];
+private ["_camera","_pan","_tilt"];
 
 _pan = (GVAR(camPan) + 360) % 360;
 _tilt = GVAR(camTilt);
 
 if (GVAR(camMode) == 0) then {
-    private ["_oldPos","_altMod","_zoomMod","_mX","_mY","_mZ"];
+    private ["_oldPos","_altMod","_zoomMod","_mX","_mY","_mZ","_x","_y","_z"];
     _camera = GVAR(freeCamera);
     _oldPos = GVAR(camPos);
 
@@ -51,22 +51,25 @@ if (GVAR(camMode) == 0) then {
     _camera setDir _pan;
     [_camera, _tilt, 0] call BIS_fnc_setPitchBank;
 } else {
-    private ["_unit","_target","_distance"];
+    private ["_unit","_target","_distance","_vector"];
     _camera = GVAR(unitCamera);
 
     _unit = GVAR(camUnit);
     _target = GVAR(targetCamera);
     _distance = GVAR(camDistance);
 
-    _x = sin(_pan)*_distance*cos(_tilt);
-    _y = cos(_pan)*_distance*cos(_tilt);
-    _z = sin(_tilt) * (2 * (0.3 max _distance));
+    // Generate a position vector relative to the unit
+    _vector = [0,-_distance*cos(_tilt),0];
+    _vector = [_vector,[-_pan] call CBA_fnc_simplifyAngle180] call BIS_fnc_rotateVector2D;
+    _vector = _vector vectorAdd [0,0,_distance*sin(-_tilt)];
 
     // Update the position of the target camera (used for smooth unit tracking)
 	_target camSetPos ((_unit modelToWorldVisual [0,0,0]) vectorAdd [0,0,1.5]);
 	_target camCommit 0;
 
     // Update the relative position of the unit camera
-    _camera camSetRelPos [_x, _y, _z];
+    _camera camSetRelPos _vector;
     _camera camCommit 0;
+
+    GVAR(camPos) = getPosASL _camera;
 };
