@@ -14,7 +14,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_seatPosOrig"];
