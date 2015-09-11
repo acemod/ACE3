@@ -14,9 +14,10 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
+private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_seatPosOrig"];
 
 params ["_seat", "_player"];
 
@@ -26,7 +27,7 @@ GVAR(seat) = _seat;
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
 
-// add scrollwheel action to release object
+// Add scroll-wheel action to release object
 _actionID = _player getVariable [QGVAR(StandUpActionID), -1];
 
 if (_actionID != -1) then {
@@ -65,7 +66,9 @@ _player setPos (_seat modelToWorld _sitPosition);
 _player setVariable [QGVAR(isSitting), true];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
+
 // Add PFH to automatically stand up if the chair has moved
+_seatPosOrig = getPosASL _seat;
 [{
     params ["_args", "_pfhId"];
     _args params ["_player", "_seat", "_seatPosOrig"];
@@ -76,8 +79,8 @@ _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple peop
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };
 
-    //  Stand up if chair moves
-    if ([_seat, _seatPosOrig] call FUNC(hasChairMoved)) exitWith {
+    //  Stand up if chair moves or gets deleted (getPosASL returns [0,0,0] in that case)
+    if !((getPosASL _seat) isEqualTo _seatPosOrig) exitWith {
         _player call FUNC(stand);
         TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
