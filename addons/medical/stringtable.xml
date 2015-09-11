@@ -2214,15 +2214,7 @@
             <Portuguese>Perna Direita</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
-            <English>Bandaging removes bloodstains</English>
-            <German>Bandagieren entfernt Blutflecken</German>
-            <Polish>Bandażowanie usuwa ślady krwi</Polish>
-            <Czech>Obvázání odstraňuje skvrny od krve</Czech>
-            <Spanish>El vendaje elimina las manchas de sangre</Spanish>
-            <Portuguese>Bandagem remove manchas de sangue</Portuguese>
-            <French>Les bandages supprimes les tâches de sang</French>
-            <Hungarian>A kötözés eltávolítja a vérfoltokat</Hungarian>
-            <Russian>Перевязка убирает пятна крови</Russian>
+            <English>Heal fully bandaged hitpoints</English>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -3437,26 +3429,10 @@
             <Russian>Когда может использоваться хирургический набор?</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
-            <English>Bloodstains</English>
-            <German>Blutflecken</German>
-            <Polish>Plamy krwi</Polish>
-            <Czech>Skvrny od krve</Czech>
-            <Spanish>Manchas de sangre</Spanish>
-            <Portuguese>Manchas de sangue</Portuguese>
-            <French>Tâches de sang</French>
-            <Hungarian>Vérfoltok</Hungarian>
-            <Russian>Удалять пятна крови</Russian>
+            <English>Heal hitpoints</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
-            <English>Bandaging removes bloodstains</English>
-            <German>Bandagieren entfernt Blutflecken</German>
-            <Polish>Bandażowanie usuwa ślady krwi</Polish>
-            <Czech>Obvázání odstraňuje skvrny od krve</Czech>
-            <Spanish>El vendaje elimina las manchas de sangre</Spanish>
-            <Portuguese>Bandagem remove manchas de sangue</Portuguese>
-            <French>Appliquer un bandage supprime les tâches de sang</French>
-            <Hungarian>Kötözés eltávolítja a vérfoltokat</Hungarian>
-            <Russian>Перевязка удаляет пятна крови</Russian>
+            <English>Heal fully bandaged hitpoints</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
