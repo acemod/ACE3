@@ -78,8 +78,8 @@ _seatPosOrig = getPosASL _seat;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };
 
-    //  Stand up if chair moves or gets deleted (getPosASL returns [0,0,0] in that case)
-    if !((getPosASL _seat) isEqualTo _seatPosOrig) exitWith {
+    //  Stand up if chair gets deleted or moved
+    if (isNull _seat || !((getPosASL _seat) isEqualTo _seatPosOrig)) exitWith {
         _player call FUNC(stand);
         TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
