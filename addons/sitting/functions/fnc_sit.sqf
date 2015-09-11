@@ -65,16 +65,14 @@ _player setPos (_seat modelToWorld _sitPosition);
 _player setVariable [QGVAR(isSitting), true];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
-// Add rotation control PFH
-_sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
-_seatPosOrig = getPosASL _seat;
+// Add PFH to automatically stand up if the chair has moved
 [{
     params ["_args", "_pfhId"];
-    _args params ["_player", "_sitDirectionVisual", "_sitRotation", "_seat", "_seatPosOrig"];
+    _args params ["_player", "_seat", "_seatPosOrig"];
 
     // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
-        [_pfhId] call cba_fnc_removePerFrameHandler;
+        [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };
 
@@ -83,12 +81,4 @@ _seatPosOrig = getPosASL _seat;
         _player call FUNC(stand);
         TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
-
-    // Set direction to boundary when passing it
-    if (getDir _player > _sitDirectionVisual + _sitRotation) exitWith {
-        _player setDir (_sitDirectionVisual + _sitRotation);
-    };
-    if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
-        _player setDir (_sitDirectionVisual - _sitRotation);
-    };
-}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;
