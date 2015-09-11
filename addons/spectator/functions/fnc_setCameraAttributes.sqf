@@ -58,10 +58,10 @@ GVAR(camVision) = _vision;
 GVAR(camZoom) = (_zoom min 2) max 0.01;
 
 // Apply if camera exists
-if (isNil QGVAR(camera)) then {
+if (GVAR(isSet)) then {
+    GVAR(freeCamera) setPosATL _position;
+    [_mode,_unit,_vision] call FUNC(transitionCamera);
+} else {
     GVAR(camMode) = _mode;
     GVAR(camPos) = (ATLtoASL _position);
-} else {
-    [_mode,_unit,_vision] call FUNC(transitionCamera);
-    GVAR(camera) setPosATL _position;
 };

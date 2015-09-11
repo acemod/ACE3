@@ -149,11 +149,16 @@ switch (toLower _mode) do {
     case "onmousezchanged": {
         _args params ["_ctrl","_zChange"];
 
-        // Scroll to change speed, modifier for zoom
-        if (GVAR(ctrlKey)) then {
-            [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + _zChange * 0.2] call FUNC(setCameraAttributes);
+        // Scroll to modify distance value in third person
+        if (GVAR(camMode) == 0) then {
+            // Scroll to change speed, modifier for zoom
+            if (GVAR(ctrlKey)) then {
+                [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + _zChange * 0.2] call FUNC(setCameraAttributes);
+            } else {
+                [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + _zChange * 0.1] call FUNC(setCameraAttributes);
+            };
         } else {
-            [nil,nil,nil,nil,nil,nil, GVAR(camZoom) + _zChange * 0.1] call FUNC(setCameraAttributes);
+            GVAR(camDistance) = ((GVAR(camDistance) - _zChange * 2) max 5) min 50;
         };
     };
     case "onmousemoving": {
