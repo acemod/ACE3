@@ -14,7 +14,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-if !(hasInterface) exitWith {};
 if (isNull(ace_player)) exitWith {};
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
 if (GVAR(FrameEvent) select 0) exitWith {

@@ -15,7 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 ["ACE3 Common", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses),
 {

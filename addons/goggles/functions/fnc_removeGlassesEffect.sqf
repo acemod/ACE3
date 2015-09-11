@@ -15,7 +15,6 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-if !(hasInterface) exitWith {};
 GVAR(EffectsActive) = false;
 GVAR(PostProcess) ppEffectEnable false;
 

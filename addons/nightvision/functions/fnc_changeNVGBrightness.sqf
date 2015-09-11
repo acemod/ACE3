@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 private ["_brightness"];
 
 PARAMS_2(_player,_changeInBrightness);

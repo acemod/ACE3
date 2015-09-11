@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 params ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;

@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
 if (call FUNC(ExternalCamera)) exitWith {};
 if ([ace_player] call FUNC(isGogglesVisible)) exitWith {
     100 cutRsc["RscACE_GogglesEffects", "PLAIN",2,false];

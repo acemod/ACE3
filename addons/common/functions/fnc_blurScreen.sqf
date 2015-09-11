@@ -10,7 +10,7 @@
 
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 private ["_show"];
 PARAMS_1(_id);

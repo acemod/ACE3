@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 PARAMS_3(_logic,_units,_activated);
 

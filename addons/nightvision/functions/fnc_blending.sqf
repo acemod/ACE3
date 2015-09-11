@@ -21,7 +21,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 private ["_vehicle", "_weapon", "_ammo", "_magazine", "_player"];
 
