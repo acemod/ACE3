@@ -67,7 +67,7 @@ _player setVariable [QGVAR(isSitting), true];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
 
-// Add PFH to automatically stand up if the chair has moved
+// Add automatical stand PFH in case of interruptions
 _seatPosOrig = getPosASL _seat;
 [{
     params ["_args", "_pfhId"];
