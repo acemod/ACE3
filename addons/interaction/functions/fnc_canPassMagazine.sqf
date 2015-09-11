@@ -18,14 +18,16 @@
 
 #include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
-private ["_compatibleMags", "_filterFunc", "_filteredMags"];
+private ["_compatibleMags", "_filteredMags"];
 
 _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-_filterFunc = compile format ["((_this select 0) in %1) && (!(_this select 2))", _compatibleMags];
-_filteredMags = [magazinesAmmoFull _player, _filterFunc] call EFUNC(common,filter);
+_filteredMags = [magazinesAmmoFull _player, {
+    params ["_className", "", "_loaded"];
+    _className in _compatibleMags && !_loaded
+}] call EFUNC(common,filter);
 
-if (count _filteredMags > 0) then {
-    ({(_target canAddItemToUniform (_x select 0)) || (_target canAddItemToVest (_x select 0)) || (_target canAddItemToBackpack (_x select 0))} count _filteredMags) > 0
+if !(_filteredMags isEqualTo []) then {
+    ({_target canAdd (_x select 0)} count _filteredMags) > 0
 } else {
     false
 };

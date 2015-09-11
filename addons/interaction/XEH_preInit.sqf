@@ -29,7 +29,6 @@ PREP(openDoor);
 PREP(openMenuSelectUI);
 PREP(openSelectMenu);
 PREP(passMagazine);
-PREP(passMagazineLocal);
 PREP(prepareSelectMenu);
 PREP(push);
 PREP(removeTag);

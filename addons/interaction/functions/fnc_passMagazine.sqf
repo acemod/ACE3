@@ -18,18 +18,20 @@
 
 #include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
-private ["_compatibleMags", "_filterFunc", "_filteredMags", "_magToPass", "_magToPassIndex"];
+private ["_compatibleMags", "_filteredMags", "_magToPass", "_magToPassIndex", "_playerName", "_magToPassDisplayName"];
 
 _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-_filterFunc = compile format ["((_this select 0) in %1) && !(_this select 2)", _compatibleMags];
-
-_filteredMags = [magazinesAmmoFull _player, _filterFunc] call EFUNC(common,filter);
+_filteredMags = [magazinesAmmoFull _player, {
+    params ["_className", "", "_loaded"];
+    _className in _compatibleMags && !_loaded
+}] call EFUNC(common,filter);
 
 //select magazine with most ammo
 _magToPass = _filteredMags select 0;
 _magToPassIndex = 0;
 {
-    if (((_x select 1) > (_magToPass select 1)) && ((_target canAddItemToUniform (_x select 0)) || (_target canAddItemToVest (_x select 0)) || (_target canAddItemToBackpack (_x select 0)))) then {
+    _x params ["_className", "_ammoCount"];
+    if ((_ammoCount > (_magToPass select 1)) && (_target canAdd _className)) then {
         _magToPass = _x;
         _magToPassIndex = _forEachIndex;
     };
@@ -37,13 +39,19 @@ _magToPassIndex = 0;
 
 //remove all magazines and add them again, except the one to be passed
 //needed because of missing commands, see http://feedback.arma3.com/view.php?id=12782
-_player removeMagazines (_magToPass select 0);
+_magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];
+_player removeMagazines _magToPassClassName;
 {
-    if ((_x select 0) == (_magToPass select 0) && (_forEachIndex != _magToPassIndex)) then {
-        _player addMagazine [_x select 0, _x select 1];
+    _x params ["_className", "_ammoCount"];
+    if ((_className == _magToPassClassName) && (_forEachIndex != _magToPassIndex)) then {
+        _player addMagazine [_className, _ammoCount];
     };
 } foreach _filteredMags;
 
 _player playActionNow "PutDown";
 
-[[_player, _target, _magToPass select 0, _magToPass select 1], QUOTE(FUNC(passMagazineLocal)), _target] call EFUNC(common,execRemoteFnc);
+_target addMagazine [_magToPassClassName, _magToPassAmmoCount];
+
+_playerName = [_player] call EFUNC(common,getName);
+_magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
+["displayTextStructured", [_target], [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target]] call EFUNC(common,targetEvent);
