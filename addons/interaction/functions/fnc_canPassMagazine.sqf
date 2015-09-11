@@ -18,16 +18,11 @@
 
 #include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
-private ["_compatibleMags", "_filteredMags"];
+private ["_compatibleMags"];
 
 _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-_filteredMags = [magazinesAmmoFull _player, {
-    params ["_className", "", "_loaded"];
-    _className in _compatibleMags && !_loaded
-}] call EFUNC(common,filter);
-
-if (!(_filteredMags isEqualTo []) && {{_target canAdd (_x select 0)} count _filteredMags > 0}) then {
-    true
-} else {
+{
+    _x params ["_className", "", "_loaded"];
+    if ((_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}) exitWith {true};
     false
-};
+} foreach (magazinesAmmoFull _player);
