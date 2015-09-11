@@ -44,7 +44,7 @@ _hitPointsAddedAmount = [];
     if (_x in _wheelHitPoints) then {
         // add wheel repair action
 
-        private ["_icon", "_selection" "_name", "_text"];
+        private ["_icon", "_selection", "_name", "_text"];
 
         _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
@@ -53,7 +53,7 @@ _hitPointsAddedAmount = [];
 
 
         // remove wheel action
-        _name = format  ["Remove_%1", _x];
+        _name = format ["Remove_%1", _x];
         _text = localize LSTRING(RemoveWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
@@ -63,7 +63,7 @@ _hitPointsAddedAmount = [];
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // replace wheel action
-        _name = format  ["Replace_%1", _x];
+        _name = format ["Replace_%1", _x];
         _text = localize LSTRING(ReplaceWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
