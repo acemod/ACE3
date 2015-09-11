@@ -26,8 +26,8 @@ _filteredMags = [magazinesAmmoFull _player, {
     _className in _compatibleMags && !_loaded
 }] call EFUNC(common,filter);
 
-if !(_filteredMags isEqualTo []) then {
-    ({_target canAdd (_x select 0)} count _filteredMags) > 0
+if (!(_filteredMags isEqualTo []) && {{_target canAdd (_x select 0)} count _filteredMags > 0}) then {
+    true
 } else {
     false
 };
