@@ -42,7 +42,7 @@
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
+            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
             <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
             <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge der lokal erzeugten medizinischen Abfälle ein. Zuviel erzeugte Abfälle können FPS-Einbrüche erzeugen, deswegen ist diese Einstellung nur clientseitig.</German>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
@@ -1492,7 +1492,7 @@
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
             <German>Niedrig</German>
-            <Italian>Basso</Italian>
+            <Italian>Bassa</Italian>
             <Russian>Низкое</Russian>
             <French>Faible</French>
             <Polish>Niskie</Polish>
@@ -1516,7 +1516,7 @@
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
             <English>High</English>
             <German>Hoch</German>
-            <Italian>Alto</Italian>
+            <Italian>Alta</Italian>
             <Russian>Высокое</Russian>
             <French>Haute</French>
             <Polish>Wysokie</Polish>
@@ -2288,7 +2288,7 @@
             <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
-            <Italian>Seleziona il tipo di menù che preferisci: selezione 3d predefinita o radiale.</Italian>
+            <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
