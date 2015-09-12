@@ -8,7 +8,7 @@
             <French>Réorganiser les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat Zásobníky</Czech>
-            <Italian>Ricarica caricatori</Italian>
+            <Italian>Riempi i caricatori</Italian>
             <Portuguese>Reorganizar Carregadores</Portuguese>
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
@@ -44,7 +44,7 @@
             <French>Réorganisation des chargeurs ...</French>
             <Polish>Przepakowywanie magazynków ...</Polish>
             <Czech>Páskuji zásobníky ...</Czech>
-            <Italian>Sto ricaricando le munizioni ...</Italian>
+            <Italian>Sto riempendo i caricatori ...</Italian>
             <Portuguese>Reorganizando Carregadores ...</Portuguese>
             <Hungarian>Újratárazás ...</Hungarian>
             <Russian>Перепаковка магазинов ...</Russian>
@@ -56,7 +56,7 @@
             <French>Chargeurs réorganisés</French>
             <Polish>Magazynki przepakowane</Polish>
             <Czech>Přepáskované zásobníky</Czech>
-            <Italian>Caricatore ricaricato</Italian>
+            <Italian>Caricatore riempito</Italian>
             <Portuguese>Carregadores Reorganizados</Portuguese>
             <Hungarian>Újratárazott tárak</Hungarian>
             <Russian>Магазины перепакованы</Russian>
@@ -68,7 +68,7 @@
             <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en rab</French>
             <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
-            <Italian>%1 caricatore(i) pieno e %2 munizioni extra</Italian>
+            <Italian>%1 caricatore(i) pieno e %2 munizione(i) extra</Italian>
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
@@ -82,7 +82,7 @@
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
-            <Italian>Riempi caricatore</Italian>
+            <Italian>Caricatori riempiti</Italian>
             <Portuguese>Reorganização Terminada</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
