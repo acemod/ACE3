@@ -32,7 +32,7 @@
             <German>Zeige Spielernamen nur an, wenn die Maus auf sie gerrichtet ist (benötigt Spielernamen)</German>
             <French>Noms uniquement sous le curseur (si noms affichés)</French>
             <Czech>Zobrazit jméno hráče jenom na kurzor (vyžaduje jména hráčů)</Czech>
-            <Italian>Mostra i nomi solo se puntati (richiede mostra nomi abilitato)</Italian>
+            <Italian>Mostra i nomi solo se puntati (insieme ai nomi)</Italian>
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
@@ -46,7 +46,7 @@
             <Polish>Pokaż imiona graczy tylko po przytrzymaniu klawisza (wymagana opcja Pokaż imiona graczy)</Polish>
             <Hungarian>Játékosnevek mutatása csak gombnyomásra (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только по нажатию клавиши (при включенных именах)</Russian>
-            <Italian>Mostra i nomi solo se si preme il tasto (richiede mostra nomi abilitato)</Italian>
+            <Italian>Mostra i nomi solo se si preme il tasto (insieme ai nomi)</Italian>
             <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
@@ -56,7 +56,7 @@
             <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
             <French>Grade des joueurs  (si noms affichés)</French>
             <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
-            <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
+            <Italian>Mostra i gradi (insieme ai nomi)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показывать звания игроков (при вкл. именах)</Russian>
@@ -94,7 +94,7 @@
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
             <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Italian>Mostra movimento audio (richiede mostra nomi abilitato)</Italian>
+            <Italian>Mostra movimento audio (insieme ai nomi)</Italian>
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
@@ -250,6 +250,7 @@
             <French>Seulement sous le curseur</French>
             <Hungarian>Csak kurzorra</Hungarian>
             <Russian>Только под курсором</Russian>
+	    <Italian>Solo con cursore</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyKeypress">
             <English>Only on Keypress</English>
@@ -261,6 +262,7 @@
             <French>Seulement par appui de touche</French>
             <Hungarian>Csak gombnyomásra</Hungarian>
             <Russian>Только по нажатию клавиши</Russian>
+	    <Italian>Solo premendo il tasto</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
             <English>Only on Cursor and Keypress</English>
@@ -272,6 +274,7 @@
             <French>Seulement sous le curseur et par appui de touche</French>
             <Hungarian>Csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Под курсором или по нажатию клавиши</Russian>
+	    <Italian>Solo con cursore e premendo il tasto</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>
