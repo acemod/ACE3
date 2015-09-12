@@ -502,7 +502,7 @@
             <French>Administrer du sang en IV (1000ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (1˙000ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (1˙000ml)</Italian>
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_500">
@@ -514,7 +514,7 @@
             <French>Administrer du sang en IV (500ml)</French>
             <Czech>Podat krev. transfúzi (500ml) </Czech>
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (500ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (500ml)</Italian>
             <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_250">
@@ -526,7 +526,7 @@
             <French>Administrer du sang en IV (250ml)</French>
             <Czech>Podat krev. transfúzi (250ml)</Czech>
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (250ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (250ml)</Italian>
             <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_1000">
@@ -538,7 +538,7 @@
             <French>Administrer du plasma en IV (1000ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (1˙000ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (1˙000ml)</Italian>
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_500">
@@ -550,7 +550,7 @@
             <French>Administrer du plasma en IV (500ml)</French>
             <Czech>Podat plazmu (500ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (500ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (500ml)</Italian>
             <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_250">
@@ -562,7 +562,7 @@
             <French>Administrer du plasma en IV (250ml)</French>
             <Czech>Podat plazmu (250ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (250ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (250ml)</Italian>
             <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_1000">
@@ -574,7 +574,7 @@
             <French>Administrer de la solution saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (1˙000ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_500">
@@ -586,7 +586,7 @@
             <French>Administrer de la solution saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (500ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (500ml)</Italian>
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_250">
@@ -598,7 +598,7 @@
             <French>Administrer de la solution saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (250ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (250ml)</Italian>
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Minor">
@@ -766,7 +766,7 @@
             <French>Transfusion en IV [%1ml]</French>
             <Czech>Přijímání transfúze [%1ml]</Czech>
             <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
-            <Italian>Ricevendo IV [%1ml]</Italian>
+            <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
@@ -1029,7 +1029,7 @@
             <Polish>Osocze IV (1000ml)</Polish>
             <German>Plasma IV (1000ml)</German>
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
-            <Italian>Plasma IV (1000ml)</Italian>
+            <Italian>Plasma EV (1000ml)</Italian>
             <Portuguese>Plasma IV (1000ml)</Portuguese>
             <Czech>Krevní plazma (1000ml)</Czech>
         </Key>
@@ -1065,7 +1065,7 @@
             <Polish>Osocze IV (500ml)</Polish>
             <German>Plasma IV (500ml)</German>
             <Hungarian>Vérplazma-infúzió (500ml)</Hungarian>
-            <Italian>Plasma IV (500ml)</Italian>
+            <Italian>Plasma EV (500ml)</Italian>
             <Portuguese>Plasma IV (500ml)</Portuguese>
             <Czech>Krevní plazma (500ml)</Czech>
         </Key>
@@ -1077,7 +1077,7 @@
             <Polish>Osocze IV (250ml)</Polish>
             <German>Plasma IV (250ml)</German>
             <Hungarian>Vérplazma-infúzió (250ml)</Hungarian>
-            <Italian>Plasma IV (250ml)</Italian>
+            <Italian>Plasma EV (250ml)</Italian>
             <Portuguese>Plasma IV (250ml)</Portuguese>
             <Czech>Krevní plazma (250ml)</Czech>
         </Key>
@@ -1089,7 +1089,7 @@
             <Polish>Krew IV (1000ml)</Polish>
             <German>Blut IV (1000ml)</German>
             <Hungarian>Vér-infúzió (1000ml)</Hungarian>
-            <Italian>Sangue IV (1000ml)</Italian>
+            <Italian>Sangue EV (1000ml)</Italian>
             <Portuguese>Sangue IV (1000ml)</Portuguese>
             <Czech>Krevní transfúze (1000ml)</Czech>
         </Key>
@@ -1125,7 +1125,7 @@
             <Polish>Krew IV (500ml)</Polish>
             <German>Blut IV (500ml)</German>
             <Hungarian>Vér-infúzió (500ml)</Hungarian>
-            <Italian>Sangue IV (500ml)</Italian>
+            <Italian>Sangue EV (500ml)</Italian>
             <Portuguese>Sangue IV (500ml)</Portuguese>
             <Czech>Krevní transfúze (500ml)</Czech>
         </Key>
@@ -1137,7 +1137,7 @@
             <Polish>Krew IV (250ml)</Polish>
             <German>Blut IV (250ml)</German>
             <Hungarian>Vér-infúzió (250ml)</Hungarian>
-            <Italian>Samgue IV (250ml)</Italian>
+            <Italian>Sangue EV (250ml)</Italian>
             <Portuguese>Sangue IV (250ml)</Portuguese>
             <Czech>Krevní transfúze (250ml)</Czech>
         </Key>
@@ -1149,7 +1149,7 @@
             <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
-            <Italian>Soluzione salina IV (1˙000ml)</Italian>
+            <Italian>Soluzione salina EV (1˙000ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (1000ml)</Czech>
         </Key>
@@ -1172,7 +1172,7 @@
             <French>Un remplacant temporaire pour rétablir la tension artérielle lors de perte sanguine, administré par intra-veineuse</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
-            <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione IV.</Italian>
+            <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione EV.</Italian>
             <German>Ein medizinisches Volumenersatzmittel, dass durch einen intravenösen Zugang in den Blutkreislauf verabreicht wird. </German>
             <Portuguese>Uma reposição temporaria para restaurar a pressão arterial perdida por perda de sangue. </Portuguese>
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
@@ -1185,7 +1185,7 @@
             <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
-            <Italian>Soluzione salina IV (500ml)</Italian>
+            <Italian>Soluzione salina EV (500ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (500ml)</Czech>
         </Key>
@@ -1197,7 +1197,7 @@
             <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
-            <Italian>Soluzione salina IV (250ml)</Italian>
+            <Italian>Soluzione salina EV (250ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (250ml)</Czech>
         </Key>
@@ -2085,7 +2085,7 @@
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
-            <Italian>%1 ha somministrato una IV</Italian>
+            <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
         </Key>
