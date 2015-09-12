@@ -37,11 +37,12 @@ if (_state) then {
     _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
     _dlg displayAddEventHandler ["KeyDown", {
-        private ["_key", "_dlg", "_ctrl", "_config", "_acc", "_index"];
+        private ["_key", "_dlgClass", "_dlg", "_abortALiVE", "_ctrl", "_config", "_acc", "_index"];
         _key = _this select 1;
 
         if (_key == 1 && {alive player}) then {
-            createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
+            _dlgClass = ["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer;
+            createDialog _dlgClass;
 
             disableSerialization;
             _dlg = finddisplay 49;
@@ -54,17 +55,26 @@ if (_state) then {
                 (_dlg displayCtrl _index) ctrlEnable false;
             };
 
-            _ctrl = _dlg displayctrl 103;
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
-            _ctrl ctrlEnable true;
-            _ctrl ctrlSetText "ABORT";
-            _ctrl ctrlSetTooltip "Abort.";
+            _abortALiVE = configfile >> _dlgClass >> "controls" >> "ALIVEButtonAbort";
 
-            _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-            _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
-            _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
-            _ctrl ctrlSetText "RESPAWN";
-            _ctrl ctrlSetTooltip "Respawn.";
+            if (isClass _abortALiVE) then {
+                (_dlg displayCtrl getNumber (_abortALiVE >> "idc")) ctrlEnable true;
+            } else {
+                _ctrl = _dlg displayCtrl 104; // "Abort" or "Save & Exit" button
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize ([ARR_2('str_sure','str_msg_confirm_return_lobby_client')] select isMultiplayer),'',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; [false] call DFUNC(disableUserInput); failMission 'LOSER' }})];
+                _ctrl ctrlEnable true;
+
+                if (!isMultiplayer) then {
+                    _ctrl ctrlSetText localize "str_disp_int_abort"; // Change "Save & Exit" to "Abort"
+                    _ctrl ctrlSetTooltip localize "STR_TOOLTIP_MAIN_ABORT";
+                };
+            };
+
+            if (isMultiplayer) then {
+                _ctrl = _dlg displayctrl 1010; // "Respawn" button
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(0 spawn { if ([ARR_4(localize 'str_a3_rscdisplaympinterrupt_respawnprompt','',true,true)] call BIS_fnc_guiMessage) then { closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput) }})];
+                _ctrl ctrlEnable (call {_config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
+            };
         };
 
         if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
