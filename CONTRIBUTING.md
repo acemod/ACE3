@@ -52,17 +52,12 @@ ACE2, AGM and CSE had a lot of features implemented or planned. All of them are 
 
 Please refrain from making requests for any planned or existing features from either ACE2, AGM or CSE. Most of them are already being or have been considered for porting or a rewrite.
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>Due to our current work load, in the period of weeks prior and posterior to the first release, new feature requests are under embargo. Feel free to submit yours now, but don't expect them to be considered just yet. Any treatment or attention by developers towards the feature request thread is highly unlikely during this time.</p>
-</div>
-
 ## Requesting a feature
 In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for <a href="{{ site.githubUrl }}/issues/414/" target="_blank">ACE 3 Feature requests</a>. Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
 
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.
 
 # Regarding Pull Requests (PRs)
-
+- You want to help but don't know where to start ? check the wiki entry for [setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
 - [Make sure to respect the file structure](http://ace3mod.com/wiki/development/modularity-and-pbo-structure.html)
 - [Make sure to respect the coding guidelines](http://ace3mod.com/wiki/development/coding-guidelines.html)
