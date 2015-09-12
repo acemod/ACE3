@@ -71,7 +71,7 @@
             <Russian>Ввести адреналин</Russian>
             <Hungarian>Epinefrin beadása</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
-            <Italian>Inietta epinefrina</Italian>
+            <Italian>Inietta adrenalina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Morphine">
             <English>Inject Morphine</English>
@@ -239,7 +239,7 @@
             <French>Injection d'Adrénaline ...</French>
             <Hungarian>Epinefrin beadása ...</Hungarian>
             <Portuguese>Injetando Epinefrina ...</Portuguese>
-            <Italian>Inietto l'epinefrina ...</Italian>
+            <Italian>Inietto l'adrenalina ...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine ...</English>
@@ -994,7 +994,7 @@
             <German>Epiniphrin-Autoinjektor</German>
             <Czech>Autoinjektor adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
-            <Italian>Autoiniettore di epinefrina</Italian>
+            <Italian>Autoiniettore di adrenalina</Italian>
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Short">
@@ -1755,7 +1755,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
-            <Italian>Paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
+            <Italian>Il paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
             <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
             <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
@@ -1767,7 +1767,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
             <English>alive</English>
-            <Italian>Vivo</Italian>
+            <Italian>vivo</Italian>
             <Russian>жив</Russian>
             <German>lebendig</German>
             <French>vivant</French>
@@ -1779,7 +1779,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseDead">
             <English>dead</English>
-            <Italian>Morto</Italian>
+            <Italian>morto</Italian>
             <Russian>мёртв</Russian>
             <Spanish>muerto</Spanish>
             <German>tot</German>
@@ -1791,7 +1791,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
-            <Italian>Ha perso sangue</Italian>
+            <Italian>Ha perso poco sangue</Italian>
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
