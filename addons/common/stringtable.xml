@@ -561,11 +561,8 @@
             <Portuguese>Verificar todos addons</Portuguese>
             <French>Vérifier tous les addons</French>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
-<<<<<<< a764f1772e1b5576004e3a7e68204a33606aadfb
             <Russian>Проверять все аддоны</Russian>
-=======
             <Italian>Controlla tutti i mod</Italian>
->>>>>>> Add: IT cargo and common
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
