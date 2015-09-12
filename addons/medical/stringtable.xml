@@ -296,7 +296,7 @@
             <Polish>Bandażowanie ...</Polish>
             <Czech>Obvazuji ...</Czech>
             <French>Pansement ...</French>
-            <Italian>Sto applicando la benda ...</Italian>
+            <Italian>Sto bendando ...</Italian>
             <Hungarian>Bekötözés ...</Hungarian>
             <Portuguese>Atando ...</Portuguese>
             <Russian>Перевязывание ...</Russian>
@@ -1827,7 +1827,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_inPain">
             <English>He is in pain</English>
-            <Italian>è affetto da dolore</Italian>
+            <Italian>Sente dolori</Italian>
             <Russian>Испытывает боль</Russian>
             <German>Er hat Schmerzen</German>
             <French>Il souffre</French>
@@ -1839,7 +1839,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
-            <Italian>Non è affetto da dolore</Italian>
+            <Italian>Non sente dolori</Italian>
             <Russian>Не испытывает боли</Russian>
             <German>Er hat keine Schmerzen</German>
             <French>Il ne souffre pas</French>
