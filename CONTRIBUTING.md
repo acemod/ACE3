@@ -58,6 +58,6 @@ In order to avoid duplicates and keep the issue tracker organized, we have creat
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.
 
 # Regarding Pull Requests (PRs)
-- You want to help but don't know where to start ? check the wiki entry for [setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
+- You want to help but don't know where to start ? Check the wiki entry for [setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
 - [Make sure to respect the file structure](http://ace3mod.com/wiki/development/modularity-and-pbo-structure.html)
 - [Make sure to respect the coding guidelines](http://ace3mod.com/wiki/development/coding-guidelines.html)
