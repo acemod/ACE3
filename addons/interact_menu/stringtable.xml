@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -94,6 +94,7 @@
             <Hungarian>Zeus cselekvések</Hungarian>
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
+            <Italian>Azioni Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -237,6 +238,7 @@
             <French>Arrière plan du menu d'interaction</French>
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
+            <Italian>Sfondo del menu interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -248,6 +250,7 @@
             <French>Flouter l'arrière plan durant l'ouverture du menu d'interaction</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
+            <Italian>Sfoca lo sfondo mentre il menu interazioni è aperto.</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -259,6 +262,7 @@
             <French>Flouter l'écran</French>
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
+            <Italian>Sfoca lo schermo</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -270,6 +274,7 @@
             <French>Noir</French>
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
+            <Italian>Nero</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
@@ -280,6 +285,7 @@
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
+            <Italian>Mostra azioni per edifici</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
@@ -290,6 +296,7 @@
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
+            <Italian>Aggiunge azioni di interazioni per aprire porte e montare scale agli edifici. (Nota: c'è un costo in performance quando si apre il menu, specialmente nei paesi)</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -297,6 +304,7 @@
             <Portuguese>Menu de interação</Portuguese>
             <Russian>Меню взаимодействия</Russian>
             <Czech>Menu interakce</Czech>
+            <Italian>Menu interazione</Italian>
         </Key>
     </Package>
 </Project>

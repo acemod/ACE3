@@ -778,6 +778,7 @@
             <Hungarian>Nyitás</Hungarian>
             <Portuguese>Abrir</Portuguese>
             <Russian>Открыть</Russian>
+            <Italian>Apri</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -800,6 +801,7 @@
             <French>Active la gestion d'équipe</French>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
+            <Italian>Abilita la gestione del team</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -811,6 +813,7 @@
             <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut: oui</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
+            <Italian>Possono i giocatori usare il menu di gestione del team? Default: Sì</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -822,6 +825,7 @@
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
+            <Italian>La gestione del team permette di cambiare colori ai membri, prendere il comando e lasciare o unirsi ai team.</Italian>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_EnableFrag">
@@ -11,6 +11,7 @@
             <French>Simulation de la fragmentation</French>
             <Hungarian>Repesz-szimuláció</Hungarian>
             <Russian>Симуляция осколков</Russian>
+            <Italian>Simulazione della frammentazione</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
@@ -22,6 +23,7 @@
             <French>Active la simulation ACE de la fragmentation</French>
             <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию осколков ACE</Russian>
+            <Italian>Attiva la simulazione della frammentazione di ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall">
             <English>Spalling Simulation</English>
@@ -33,6 +35,7 @@
             <French>Simulation d'éclat</French>
             <Hungarian>Pattogzás-szimuláció</Hungarian>
             <Russian>Симуляция обломков</Russian>
+            <Italian>Simulazione delle scheggiature</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall_Desc">
             <English>Enable the ACE Spalling Simulation</English>
@@ -44,6 +47,7 @@
             <French>Active la simulation d'éclat ACE</French>
             <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию обломков ACE</Russian>
+            <Italian>Attiva la simulazione delle scheggiature di ACE</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
@@ -55,6 +59,7 @@
             <French>Nombre maximum de projectile suivis</French>
             <Hungarian>Maximum követett repeszek</Hungarian>
             <Russian>Макс. количество отслеживаемых снарядов</Russian>
+            <Italian>Massimo numero di proiettili tracciati</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack_Desc">
             <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
@@ -66,6 +71,7 @@
             <French>Cette option controle le nombre maximum de projectile et d'éclat résultant de la fragmentation que le système suivra à un moment T. Si plus de projectiles sont générés, ils ne seront pas pris en compte. Baisser cette option si vous ne voulez pas de baisse de FPS en cas d'un nombre important de projectiles (&gt;200 éclats en même temps)</French>
             <Hungarian>Ez a beállítás szabályozza a repeszeződés és pattogzás által kilőtt objektumok követett számát. Ha több ez a szám, ezek az objektumok nem lesznek követve. Csökkentsd ezt a beállítást, ha nem akarsz lassulásokat magas-törmelékmennyiségű helyzetekben (200+ repesz a levegőben egyszerre)</Hungarian>
             <Russian>Эта настройка контролирует максимальное количество снарядов, которок отслеживает система осколков и обломков в каждый момент времени. Снаряды, выстреленные сверх этого числа, отслеживаться не будут. Уменьшите это значение, если вы не хотите падения FPS при большом количестве снарядов в одной перестрелке (&gt; 200 одновременно летящих снарядов)</Russian>
+            <Italian>Questa impostazione controlla l'ammontare massimo di proiettili che verranno tracciati ad ogni istante dai sistemi di frammentazione e scheggiatura. Abbasa questa impostazione se non vuoi cali di FPS in scenari con altri numeri di proiettili (più di 200 colpi in aria per volta)</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
@@ -77,6 +83,7 @@
             <French>Nombre maximal de projectile par image</French>
             <Hungarian>Maximum repesz/képkocka</Hungarian>
             <Russian>Макс. количество снарядов за кадр</Russian>
+            <Italian>Massimo numero di proiettili per frame</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
             <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
@@ -88,6 +95,7 @@
             <French>Le nombre d'éclat à calculer dans chaque images. Ceci permet de diffuser l'impact sur les FPS dans de multiples images, le limitant d'autant plus.</French>
             <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
             <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
+            <Italian>Il numero di calcoli da eseguire per tracciare le scheggiature in ogni frame. Questo aiuta a dispensare l'impatto sugli FPS delle scheggiature su più frame multipli, limitandone maggiormente l'impatto.</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
@@ -99,6 +107,7 @@
             <French>(SP uniquement) Fragmentation/éclat debug</French>
             <Hungarian>(Csak SP) Repesz/Pattogzás debug követés</Hungarian>
             <Russian>(Только для одиночной игры) Отслеживаение/отладка осколков</Russian>
+            <Italian>(Solo SP) debug delle frammentazioni e scheggiature</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
@@ -110,6 +119,7 @@
             <French>(SP seulement) Requiert un redémarrage de mission ou de l'éditeur. Active les traceurs visuels de fragmentation et d'éclats en mode solo seulement</French>
             <Hungarian>(Csak SP) Küldetés/Editor újraindítás szükséges. Engedélyezi a repeszek és pattogzó lövedékek vizuális nyomkövetését, csak egyjátékos módok alatt.</Hungarian>
             <Russian>(Только для одиночной игры) Требует перезапуска миссии/редактора. Включает визуальные следы от осколков и обломков в режиме одиночной игры.</Russian>
+            <Italian>(Solo SP) Richiede un riavvio della missione/editor. Abilia una traccia visiva della frammentazione e scheggiatura solo in modalità SP.</Italian>
         </Key>
     </Package>
 </Project>

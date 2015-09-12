@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -11,6 +11,7 @@
             <French>Carte</French>
             <Hungarian>Térkép</Hungarian>
             <Russian>Карта</Russian>
+            <Italian>Mappa</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
@@ -22,6 +23,7 @@
             <French>Luminosité</French>
             <Hungarian>Térkép megvilágítása?</Hungarian>
             <Russian>Освещение карты?</Russian>
+            <Italian>Illuminazione della mappa</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -29,6 +31,7 @@
             <French>Calcul la luminosité de la carte en fonction des conditions de lumière</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
+            <Italian>Simula la illuminazione sulla mappa in base alla luce ambientale e oggetti del giocatore?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -41,6 +44,7 @@
             <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
+            <Italian>Aggiunge un bagliore al giocatore che usa una lampada tascabile sulla mappa?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -74,6 +78,7 @@
             <French>Limiter le zoom de la carte?</French>
             <Hungarian>Térkép-nagyítás korlátozása?</Hungarian>
             <Russian>Ограничить приближение карты?</Russian>
+            <Italian>Limita zoom della mappa?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -85,6 +90,7 @@
             <French>Limite le zoom maximum pour la carte?</French>
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
+            <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
@@ -96,6 +102,7 @@
             <French>Afficher les coordonnées sur le curseur?</French>
             <Hungarian>Kurzor-koordináták mutatása?</Hungarian>
             <Russian>Показывать координаты курсора?</Russian>
+            <Italian>Mostra le coordinate nel cursore?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -107,6 +114,7 @@
             <French>Affiche les coordonnées à coté du curseur?</French>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
+            <Italian>Mostra le coordinate nel puntatore del mouse?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English>This module allows you to customize the map screen.</English>
@@ -117,6 +125,7 @@
             <French>Ce module permet de personnaliser l'écran de la carte</French>
             <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить отображение карты.</Russian>
+            <Italian>Questo modulo permette di regolare lo schermo della mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -128,6 +137,7 @@
             <French>Blue Force Tracking</French>
             <Hungarian>Blue Force követés</Hungarian>
             <Russian>Система слежения Blue Force Tracking</Russian>
+            <Italian>Segue le forze alleate</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
             <English>BFT Enable</English>
@@ -138,6 +148,7 @@
             <French>Activer le Suivi des Forces Alliées</French>
             <Hungarian>BFT engedélyezése</Hungarian>
             <Russian>Включить BFT</Russian>
+            <Italian>Attiva BFT</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
@@ -148,6 +159,7 @@
             <French>Activer le SFA. Défaut: non</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
+            <Italian>Abilita a seguire le forze alleate (BFT). Predefinito:No</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -159,6 +171,7 @@
             <French>Intervalle</French>
             <Hungarian>Intervallum</Hungarian>
             <Russian>Интервал</Russian>
+            <Italian>Intervallo</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
@@ -170,6 +183,7 @@
             <French>Tout les combien de temps les marqueurs doivent être rafraichit?</French>
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
+            <Italian>Quanto spesso i marker devono essere aggiornati (in secondi)</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
@@ -181,6 +195,7 @@
             <French>Cacher les groupes IA?</French>
             <Hungarian>AI csoportok elrejtése?</Hungarian>
             <Russian>Скрыть группы ботов?</Russian>
+            <Italian>Nascondi le AI?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
@@ -192,6 +207,7 @@
             <French>Cacher les marqueurs pour les groupes d'IA seulement?</French>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
+            <Italian>Nascondi i marker dei gruppi 'Solo AI' ?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English>This module allows the tracking of allied units with BFT map markers.</English>
@@ -202,6 +218,7 @@
             <French>Ce module permet de suivre les unités alliées avec des marqueurs sur la carte.</French>
             <Hungarian>Ez a modul lehetővé teszi a szövetséges egységek követését BFT térképjelzőjkkel.</Hungarian>
             <Russian>Этот модуль позволяет отслеживать перемещение союзных войск по карте при помощи маркеров BFT.</Russian>
+            <Italian>Questo modulo permette di seguire le truppe alleate con i marker di mappa BFT.</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -209,6 +226,7 @@
             <Portuguese>Lanternas</Portuguese>
             <Russian>Фонари</Russian>
             <Czech>Svítilny</Czech>
+            <Italian>Torcia elettrica</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -216,6 +234,7 @@
             <Portuguese>Óculos de Visão Noturna</Portuguese>
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
+            <Italian>Visore notturno</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -223,6 +242,7 @@
             <Portuguese>Ligado</Portuguese>
             <Russian>Вкл.</Russian>
             <Czech>Zapnout</Czech>
+            <Italian>Acceso</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -230,6 +250,7 @@
             <Portuguese>Desligado</Portuguese>
             <Russian>Выкл.</Russian>
             <Czech>Vypnout</Czech>
+            <Italian>Spento</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -237,6 +258,7 @@
             <Portuguese>Aumentar brilho</Portuguese>
             <Russian>Увеличить яркость</Russian>
             <Czech>Zvýšit jas</Czech>
+            <Italian>Aumenta la luminosità</Italian>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -244,6 +266,7 @@
             <Portuguese>Diminuir brilho</Portuguese>
             <Russian>Уменьшить яркость</Russian>
             <Czech>Snížit jas</Czech>
+            <Italian>Diminuisce la luminosità</Italian>
         </Key>
     </Package>
 </Project>
