@@ -26,6 +26,7 @@ ACE3 Version: 3.x.x
 
 **Placed ACE3 Modules:**
 * *Add the list of modules you have placed on the map. Use 'None' if the error occurs without using any modules.*
+* You can also press the `Debug to` button in the ACE3 option menu (escape -> ACE3 options -> Debug to) and add a link (pastebin.com) to the results.
 
 **Description:**
 * Add a detailed description of the error. This makes it easier for us to fix the issue.*
