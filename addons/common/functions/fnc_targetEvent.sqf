@@ -21,8 +21,8 @@
 PARAMS_3(_eventName,_eventTargets,_eventArgs);
 
 #ifdef DEBUG_EVENTS
-    diag_log text format[ARR_3("* Target Event: %1 - %2",_eventName,_eventTargets)];
-    diag_log text format[ARR_2("    args=%1",_eventArgs)];
+    ACE_LOGINFO_2("* Target Event: %1 - %2",_eventName,_eventTargets);
+    ACE_LOGINFO_1("    args=%1",_eventArgs);
 #endif
 
 ACEc = [_eventName, _eventTargets, _eventArgs];

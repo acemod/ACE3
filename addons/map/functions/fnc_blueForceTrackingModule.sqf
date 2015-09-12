@@ -22,5 +22,5 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(BFT_Interval), "Interval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Blue Force Tracking Module initialized.";
+ACE_LOGINFO("Blue Force Tracking Module Initialized.");
 TRACE_2("[ACE]: Blue Force Tracking Module initialized.", GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));
