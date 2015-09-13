@@ -35,6 +35,9 @@ Besides the 4 elements introduced by basic medical, advanced introduces the foll
 - Various treatment methods such as CPR, different kinds of IVs and a working tourniquet.
 - A basic medication simulation.
 
+### 1.4 Tweaked hitpoints
+Base soldiers hitpoints values tweaked.
+
 ## 2. Usage
 
 ### 2.1 Basic
@@ -80,28 +83,33 @@ Atropine | Serves no use in basic
 
 #### 2.1.2 Treating the patient
 
-- **Step 1:** Is the patient responsive?
+**Step 1:** Is the patient responsive?
+
  - **Yes:** Ask him if he has wounds / he is in pain.
  - **No:** Go to step 2.
 
 
-- **Step 2:** Is the patient wounded?
+**Step 2:** Is the patient wounded?
+
  - **Yes:** Treat the wounds and go to step 3.
  - **No:** Skip this step.
 
 
-- **Step 3:** Is the patient in pain?
+**Step 3:** Is the patient in pain?
+
  - **Yes:** Give him morphine.
  - **No:** Skip this step.
 
 
-- **Step 4:** Did the patient lose blood?
+**Step 4:** Did the patient lose a lot of blood?
+
  - **Yes:** Give blood via IV.
  - **No:** Go to step 5.
  - **No and patient responsive:** You're done.
 
 
-- **Step 5**
+**Step 5**
+
  - If at this point the patient is still not back on its feet it's time to use an epinephrine Autoinjector.
 
 #### 2.1.3 Additional informations
@@ -114,6 +122,7 @@ For the following procedure to work revive need to be enabled.
 
 - A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
 - A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
+- Each successful CPR (full bar) will increase the time the unit can stay in the revive state before dying.
 - To wake up a patient treat all of his wounds, make sure he isn't in pain and then use epinephrine.
 - Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 
@@ -255,38 +264,46 @@ Atropine | lower the heart rate of the patient
 #### 2.2.3 Treating the patient
 This is a step by step guide, follow the steps from 1 to 6 in order unless stated otherwise.
 
+- Keeping the patient's vitals stable is your first priority.
+- If advanced wounds are enabled make sure from time to time that they didn't reopen.
 
-- **Step 1:** Is the patient responsive?
+
+**Step 1:** Is the patient responsive?
+
  - **Yes:** Ask him if he has wounds / he is in pain and act accordingly.
  - **No:** Go to step 2.
 
 
-- **Step 2:** Does the patient have a pulse?
- - **Yes:** Go to step 3.
- - **No:** If you are alone provide CPR, if you have someone else get him to do CPR while you treat the patient's wounds. skip to step 3 or 4 depending on the situation.
+ **Step 2:** Is the patient wounded?
+
+  - **Yes**: Treat the wounds.
+  - **No:** Skip this step.
 
 
-- **Step 3:** Is the patient wounded?
- - **Yes**: Treat the wounds.
- - **No:** Skip this step.
+**Step 3:** Does the patient have a pulse?
+
+ - **Yes:** Go to step 4.
+ - **No:** If you are alone provide CPR, if you have someone else get him to do CPR while you treat the patient's wounds. Skip to step 4 or 5 depending on the situation.
 
 
-- **Step 4:** Did the patient lose blood?
+**Step 4:** Did the patient lose a lot of blood?
+
  - **Yes:** Use IVs to restore the volume of liquid in the blood stream of the patient.
  - **No:** Skip this step.
 
 
-- **Step 5:** Is the patient in pain?
+**Step 5:** Is the patient in pain?
+
  - **Yes and stable pulse:** Give him morphine.
  - **Yes and unstable heart rate:** Stabilize the heart rate before administrating morphine.
  - **No:** You're done.
 
 
-- **Step 6:** is the patient awake now?
+**Step 6:** is the patient awake now?
+
  - **Yes:** You're done.
  - **No:** Stabilize his pulse / make sure he isn't in pain or missing blood.
 
-Note that keeping the patient's vitals stable is very important while treating him.
 
 #### 2.2.4 Additional informations
 
@@ -301,6 +318,7 @@ For the following procedure to work revive needs to be enabled.
 
 - A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
 - A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
+- Each successful CPR (full bar) will increase the time the unit can stay in the revive state before dying.
 - To wake up a patient the use of a PAK is required.
 - Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 - Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
@@ -309,63 +327,70 @@ For the following procedure to work revive needs to be enabled.
 ### 3.1 Example loadouts
 
 #### 3.1.1 Basic
-- Soldier:
-  - 10 × Bandage (Basic)
-  - 3 × Morphine Autoinjector
-  - 1 × Epinephrine Autoinjector
 
-- Medic:
-  - 15-25 × Bandage (Basic)
-  - 10 × Morphine Autoinjector
-  - 10 × Epinephrine Autoinjector
-  - 6 × Blood IV (500ml)
+Soldier:
+
+ - 10 × Bandage (Basic)
+ - 3 × Morphine Autoinjector
+ - 1 × Epinephrine Autoinjector
+
+Medic:
+
+ - 15-25 × Bandage (Basic)
+ - 10 × Morphine Autoinjector
+ - 10 × Epinephrine Autoinjector
+ - 6 × Blood IV (500ml)
 
 #### 3.1.2 Advanced
 
-- Soldier :
-  - 3-6 × Bandage (Basic)
-  - 3-6 × Bandage (Elastic)
-  - 3-6 × Packing Bandage
-  - 3-6 × Basic Field Dressing (QuikClot)
-  - 1 × Morphine Autoinjector
-  - 1 × Epinephrine Autoinjector
-  - 1 × Tourniquet (CAT)
-  - **Optional**: 1 × Saline IV (500ml) - used only by a qualified medic
+Soldier :
+
+ - 3-6 × Bandage (Basic)
+ - 3-6 × Bandage (Elastic)
+ - 3-6 × Packing Bandage
+ - 3-6 × Basic Field Dressing (QuikClot)
+ - 1 × Morphine Autoinjector
+ - 1 × Epinephrine Autoinjector
+ - 1 × Tourniquet (CAT)
+ - **Optional**: 1 × Saline IV (500ml) - used only by a qualified medic
 
 
-- Combat First Responder (CFR):
-  - 10-15 × Bandage (Basic)
-  - 10-15 × Bandage (Elastic)
-  - 10-15 × Packing Bandage
-  - 10-15 × Basic Field Dressing (QuikClot)
-  - 8 × Atropine Autoinjector
-  - 5 × Morphine Autoinjector
-  - 5 × Epinephrine Autoinjector
-  - 3 × Tourniquet (CAT)
-  - 4 × Saline IV (500ml)
+Combat First Responder (CFR):
+
+ - 10-15 × Bandage (Basic)
+ - 10-15 × Bandage (Elastic)
+ - 10-15 × Packing Bandage
+ - 10-15 × Basic Field Dressing (QuikClot)
+ - 8 × Atropine Autoinjector
+ - 5 × Morphine Autoinjector
+ - 5 × Epinephrine Autoinjector
+ - 3 × Tourniquet (CAT)
+ - 4 × Saline IV (500ml)
 
 
-- Medic:
-  - 10-15 × Bandage (Basic)
-  - 15-20 × Bandage (Elastic)
-  - 15-20 × Packing Bandage
-  - 10-15 × Basic Field Dressing (QuikClot)
-  - 12 × Atropine Autoinjector
-  - 8 × Morphine Autoinjector
-  - 8 × Epinephrine Autoinjector
-  - 5 × Tourniquet (CAT)
-  - 6 × Saline IV (500ml)
-  - 1-3 × *Surgical Kit*
-  - 1-3 × *Personal Aid Kit*
+Medic:
+
+ - 10-15 × Bandage (Basic)
+ - 15-20 × Bandage (Elastic)
+ - 15-20 × Packing Bandage
+ - 10-15 × Basic Field Dressing (QuikClot)
+ - 12 × Atropine Autoinjector
+ - 8 × Morphine Autoinjector
+ - 8 × Epinephrine Autoinjector
+ - 5 × Tourniquet (CAT)
+ - 6 × Saline IV (500ml)
+ - 1-3 × *Surgical Kit*
+ - 1-3 × *Personal Aid Kit*
 
 
-- Paramedic:
-  - 10-15 × Bandage (Basic)
-  - 15-20 × Bandage (Elastic)
-  - 15-20 × Packing Bandage
-  - 10-15 × Basic Field Dressing (QuikClot)
-  - 5 × Tourniquet (CAT)
-  - 2 × Saline IV (500ml)
+Paramedic:
+
+ - 10-15 × Bandage (Basic)
+ - 15-20 × Bandage (Elastic)
+ - 15-20 × Packing Bandage
+ - 10-15 × Basic Field Dressing (QuikClot)
+ - 5 × Tourniquet (CAT)
+ - 2 × Saline IV (500ml)
 
 ## 4. Dependencies
 `ace_interaction`, `ace_modules`, `ace_apl`
