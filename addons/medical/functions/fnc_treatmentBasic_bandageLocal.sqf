@@ -25,7 +25,14 @@ _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {false};
 
 if ((_damageBodyParts select _part) > 0) then {
-    _damageBodyParts set [_part, ((_damageBodyParts select _part) - BANDAGEHEAL) max 0];
+    _damageOnPart = (_damageBodyParts select _part);
+    // Temp quick fix to change in behaviour of basic medical bandaging
+    if (_damageOnPart - BANDAGEHEAL > 0) then {
+        _damageOnPart = _damageOnPart * BANDAGEHEAL;
+    } else {
+        _damageOnPart = _damageOnPart - BANDAGEHEAL;
+    };
+    _damageBodyParts set [_part, _damageOnPart max 0];
     _target setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
     TRACE_2("ACE_DEBUG: Treatment BASIC Bandage Broadcast value here",_unit, _target getvariable QGVAR(bodyPartStatus));
 };
