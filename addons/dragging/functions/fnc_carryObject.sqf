@@ -3,19 +3,18 @@
  *
  * Carry an object.
  *
- * Argument:
- * 0: Unit that should do the carrying (Object)
- * 1: Object to carry (Object)
+ * Arguments:
+ * 0: Unit that should do the carrying <OBJECT>
+ * 1: Object to carry <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // get attachTo offset and direction.
 private ["_position", "_direction"];

@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp";
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
 private ["_objectType","_actionsVarName","_isMan"];
 _objectType = _target;
@@ -30,7 +30,7 @@ private "_recurseFnc";
 _recurseFnc = {
     private ["_actions", "_displayName", "_icon", "_statement", "_condition", "_showDisabled",
             "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
-    EXPLODE_1_PVT(_this,_actionsCfg);
+    params ["_actionsCfg"];
     _actions = [];
 
     {
@@ -71,7 +71,7 @@ _recurseFnc = {
                             _statement,
                             _condition,
                             _insertChildren,
-                            {},
+                            [],
                             [0,0,0],
                             10, //distace
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover, true],
@@ -122,7 +122,7 @@ _actions = if (_isMan) then {
                     // Dummy statement so it's not collapsed when there's no available actions
                     true
                 },
-                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting"]] call EFUNC(common,canInteractWith)},
+                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)},
                 {},
                 {},
                 "Spine3",

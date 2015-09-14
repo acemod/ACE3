@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Verifies magazines moved with exact ammo counts preserved.
  * Arrays will be in format from magazinesAmmo/magazinesAmmoCargo
  * e.g.: [["30Rnd_65x39_caseless_mag",15], ["30Rnd_65x39_caseless_mag",30]]

@@ -11,10 +11,9 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
-    if (local (_this select 0)) then {
-        private ["_unit"];
-        _unit = _this select 0;
-        if (_this select 1) then {
+    params ["_unit", "_status"];
+    if (local _unit) then {
+        if (_status) then {
             _unit setVariable ["tf_globalVolume", 0.4];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
@@ -35,10 +34,8 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 // Initialize all effects
 _fnc_createEffect = {
-    private ["_type", "_layer", "_default", "_effect"];
-    _type = _this select 0;
-    _layer = _this select 1;
-    _default = _this select 2;
+    private "_effect";
+    params ["_type", "_layer", "_default"];
 
     _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;
@@ -245,30 +242,28 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
-if (USE_WOUND_EVENT_SYNC) then {
-    // broadcast injuries to JIP clients in a MP session
-    if (isMultiplayer && hasInterface) then {
-        ["playerChanged", {
-            EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-            if (alive _newPlayer) then {
-                // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
-                {
-                    [_x, _newPlayer] call FUNC(requestWoundSync);
-                }foreach units group _newPlayer;
-            };
-        }] call EFUNC(common,addEventhandler);
-    };
-};
 
-[
-    {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
-    {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
-    {((_this select 0) getvariable [QGVAR(inReviveState), false])},
-    {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
-    {((_this select 0) getvariable ["ACE_isDead", false])},
-    {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
-] call FUNC(addUnconsciousCondition);
+["SettingsInitialized", {
+    if (GVAR(level) == 2) exitwith {
+        [
+            {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
+            {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
+            {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
+            {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+            {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
+            {((_this select 0) getvariable ["ACE_isDead", false])},
+            {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
+        ] call FUNC(addUnconsciousCondition);
+    };
+
+    [
+        {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 40)},
+        {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.6},
+        {(([_this select 0] call FUNC(getBloodLoss)) > 0.1)},
+        {((_this select 0) getvariable [QGVAR(inReviveState), false])},
+        {((_this select 0) getvariable ["ACE_isDead", false])}
+    ] call FUNC(addUnconsciousCondition);
+}] call EFUNC(common,addEventHandler);
 
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly

@@ -1,19 +1,21 @@
-/**
- * fn_determineIfFatal.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Determine If Fatal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Part <NUMBER>
+ * 2: with Damage <NUMBER> (default: 0)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_part","_damageThreshold", "_withDamage", "_damageBodyPart"];
-_unit = _this select 0;
-_part = _this select 1;
-_withDamage = if (count _this > 2) then { _this select 2} else {0};
+private ["_damageThreshold", "_damageBodyPart"];
+params ["_unit", "_part", ["_withDamage", 0]];
 
 if (!alive _unit) exitwith {true};
 if (_part < 0 || _part > 5) exitwith {false};
@@ -36,7 +38,7 @@ if (_part == 0) exitwith {
 
 // Check if damage to body part is higher as damage torso
 if (_part == 1) exitwith {
-    (_damageBodyPart >= (_damageThreshold select 1) && {(random(1) > 0.2)});
+    (_damageBodyPart >= (_damageThreshold select 1) && {(random(1) > 0.35)});
 };
 // Check if damage to body part is higher as damage limbs
 (_damageBodyPart >= (_damageThreshold select 2) && {(random(1) > 0.95)});

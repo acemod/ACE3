@@ -26,56 +26,31 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_5_PVT(_this,_actionName,_displayName,_icon,_statement,_condition);
+params [
+    "_actionName",
+    "_displayName",
+    "_icon",
+    "_statement",
+    "_condition",
+    ["_insertChildren", {}],
+    ["_customParams", []],
+    ["_position", {[0, 0, 0]}],
+    ["_distance", 2],
+    ["_params", [false, false, false, false, false]],
+    ["_modifierFunction", {}]
+];
 
-// IGNORE_PRIVATE_WARNING(_target);
-private ["_insertChildren","_customParams","_position","_distance","_params", "_modifierFunction"];
-
-_insertChildren = if (count _this > 5) then {
-    _this select 5
-} else {
-    {}
-};
-
-_customParams = if (count _this > 6) then {
-    _this select 6
-} else {
-    []
-};
-
-_position = if (count _this > 7) then {
-    if (typeName (_this select 7) == "STRING") then {
+_position = if (typeName (_position) == "STRING") then {
         // If the action is set to a selection, create the suitable code
-        compile format ["_target selectionPosition '%1'", _this select 7];
+        compile format ["_target selectionPosition '%1'", _position];
     } else {
-        if (typeName (_this select 7) == "ARRAY") then {
+        if (typeName (_position) == "ARRAY") then {
             // If the action is set to a array position, create the suitable code
-            compile format ["%1", _this select 7];
+            compile format ["%1", _position];
         } else {
-            _this select 7
+            _position;
         };
-    }
-} else {
-    {[0,0,0]}
-};
-
-_distance = if (count _this > 8) then {
-    _this select 8
-} else {
-    2
-};
-
-_params = if (count _this > 9) then {
-    _this select 9
-} else {
-    [false,false,false,false,false]
-};
-
-_modifierFunction =  if (count _this > 10) then {
-    _this select 10
-} else {
-    {}
-};
+    };
 
 [
     _actionName,

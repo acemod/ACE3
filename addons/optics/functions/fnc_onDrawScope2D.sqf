@@ -22,8 +22,8 @@ _optic = (primaryWeaponItems ACE_player) select 2;
 _isPIP = (getText (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "modelOptics")) == QUOTE(PATHTOF(models\ace_optics_pip.p3d));
 
 if (_isPIP) then {
-    GVAR(camera) setposATL positioncameratoworld [0,0,0.4];
-    GVAR(camera) camPrepareTarget positioncameratoworld [0,0,50];
+    GVAR(camera) setPosATL positionCameraToWorld [0,0,0.4];
+    GVAR(camera) camPrepareTarget positionCameraToWorld [0,0,50];
     GVAR(camera) camCommitPrepared 0;
 
     // @todo, check if that needs to be done at all

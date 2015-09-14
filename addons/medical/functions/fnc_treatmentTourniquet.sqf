@@ -10,7 +10,7 @@
  *
  *
  * Return Value:
- * <BOOL>
+ * Succesful treatment started <BOOL>
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
 
-if (count _items == 0) exitwith {};
+if (count _items == 0) exitwith {false};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitwith {
@@ -44,6 +44,7 @@ _removeItem = _items select 0;
 
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
 
-true;
+true

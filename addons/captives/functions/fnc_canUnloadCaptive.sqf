@@ -18,6 +18,6 @@
 
 private ["_cargo"];
 
-PARAMS_2(_player,_unit);
+params ["_player", "_unit"];
 
 ((vehicle _unit) != _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}

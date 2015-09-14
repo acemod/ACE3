@@ -52,3 +52,15 @@ if (GVAR(serverConfigGeneration) == 0) then {
     (_menu displayCtrl 1102) ctrlEnable false;
     (_menu displayCtrl 1102) ctrlShow false;
 };
+
+lbClear (_menu displayCtrl 14);
+{
+    if (_x == "") then {
+        _x = localize LSTRING(category_all);
+    };
+    (_menu displayCtrl 14) lbAdd _x;
+} forEach GVAR(categories);
+
+(_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies
+
+

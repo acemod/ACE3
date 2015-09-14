@@ -12,7 +12,7 @@
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-private ["_caller", "_unit","_vehicle", "_loadcar", "_loadhelicopter", "_loadtank"];
+private ["_caller", "_unit","_vehicle", "_loadcar", "_loadhelicopter", "_loadtank","_loadboat"];
 _caller = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
 _unit = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
 _vehicle = ObjNull;
@@ -30,6 +30,11 @@ if (_unit distance _loadcar <= 10) then {
         _loadtank = nearestObject [_unit, "tank"];
         if (_unit distance _loadtank <= 10) then {
             _vehicle = _loadtank;
+        } else {
+            _loadboat = nearestObject [_unit, "ship"];
+            if (_unit distance _loadboat <= 10) then {
+                _vehicle = _loadboat;
+            };
         };
     };
 };

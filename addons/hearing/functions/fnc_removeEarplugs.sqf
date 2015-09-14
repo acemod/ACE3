@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
     [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
@@ -27,3 +27,6 @@ _player addItem "ACE_EarPlugs";
 _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
 [localize LSTRING(EarPlugs_Are_Off)] call EFUNC(common,displayTextStructured);
+
+//Force an immediate fast volume update:
+[[true]] call FUNC(updateVolume);
