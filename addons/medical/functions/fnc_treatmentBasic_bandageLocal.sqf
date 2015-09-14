@@ -28,7 +28,7 @@ if ((_damageBodyParts select _part) > 0) then {
     _damageOnPart = (_damageBodyParts select _part);
     // Temp quick fix to change in behaviour of basic medical bandaging
     if (_damageOnPart - BANDAGEHEAL > 0) then {
-        _damageOnPart = _damageOnPart * BANDAGEHEAL;
+        _damageOnPart = _damageOnPart - (_damageOnPart * BANDAGEHEAL);
     } else {
         _damageOnPart = _damageOnPart - BANDAGEHEAL;
     };
