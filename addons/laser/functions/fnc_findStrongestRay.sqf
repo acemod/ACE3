@@ -1,13 +1,27 @@
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Example:
+ * [?, ?] call ace_laser_fnc_findStringestRay
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-private["_checkPos", "_i", "_largest", "_largestSpot", "_list", "_outliers", "_remainingSpots", "_samplePos", "_spot", "_spots", "_testPos"];
-_list = _this select 0;
-_checkPos = _this select 1;
+private["_largest", "_largestSpot", "_outliers", "_remainingSpots", "_spot", "_spots", "_testPos"];
+params ["_list", "_checkPos"];
 _spots = [];
 _outliers = [];
 _spot = [];
 _testPos = (_list select 0) select 0;
 {
-    _samplePos = _x select 0;
+    _x params ["_samplePos"];
     if(!lineIntersects [_samplePos, _checkPos] && {!terrainIntersectASL [_samplePos, _checkPos]}) then {
         if(_samplePos distance _testPos < 2) then {
             _spot pushBack _samplePos;
@@ -25,7 +39,7 @@ if(count _outliers > 0) then {
         _spot = [];
         _testPos = (_remainingSpots select 0);
         {
-            _samplePos = _x;
+            _x params ["_samplePos"];
             if(!lineIntersects [_samplePos, _checkPos] && {!terrainIntersectASL [_samplePos, _checkPos]}) then {
                 if(_samplePos distance _testPos < 2) then {
                     _spot pushBack _samplePos;

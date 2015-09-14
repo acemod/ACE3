@@ -7,10 +7,12 @@
  *
  * Return value:
  * Has designator? <BOOL>
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
 
 // Get the player turret path
 private ["_turret","_config","_turretConfig"];

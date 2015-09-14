@@ -5,17 +5,15 @@
  * Argument:
  * 0: Emitter
  * 1: Owner
- * 
+ *
  * Return value:
  *    [position, direction]
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private["_emmiter", "_owner", "_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
-
-_emmiter = _this select 0;
-_owner = _this select 1;
+private["_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
+ params ["_emmiter", "_owner"];
 
 // Not in a vehicle....
 // @TODO: handle lasering from turrets

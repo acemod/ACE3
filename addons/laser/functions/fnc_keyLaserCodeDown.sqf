@@ -1,4 +1,18 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: ? <?>
+ *
+ * Return Value:
+ * ? <?>
+ *
+ * Example:
+ * [?] call ace_laser_fnc_keyLaserCodeDown
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 private["_oldLaserCode", "_laserCode"];
 
