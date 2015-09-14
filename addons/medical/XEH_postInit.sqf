@@ -159,7 +159,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
         _heartRate = 60 + 40 * _pain;
     };
     if (_heartRate <= 0) exitwith {};
-    _interval = 60 / (_heartRate min 50);
+    _interval = 60 / (_heartRate min 40);
 
     if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
@@ -173,7 +173,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
-                _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
+                _strength = ((_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0) min 1;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
                     GVAR(effectPainCC) ppEffectEnable false;
