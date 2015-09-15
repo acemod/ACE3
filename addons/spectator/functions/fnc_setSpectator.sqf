@@ -23,7 +23,7 @@
 params [["_set",true,[true]]];
 
 // Only clients can be spectators
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitwith {};
