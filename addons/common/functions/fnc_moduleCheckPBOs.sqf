@@ -22,4 +22,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(checkPBOsCheckAll),   "CheckAll"  ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(checkPBOsWhitelist),  "Whitelist" ] call EFUNC(common,readSettingFromModule);
 
-diag_log text format ["[ACE]: Check-PBOs Module Initialized. Mode: %1.", GVAR(checkPBOsAction)];
+ACE_LOGINFO_1("Check-PBOs Module Initialized. Mode: %1.",GVAR(checkPBOsAction));

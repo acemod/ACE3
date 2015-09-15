@@ -279,7 +279,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
 if (hasInterface) then {
     ["PlayerJip", {
-        diag_log format["[ACE] JIP Medical init for player"];
+        ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call EFUNC(common,addEventHandler);
 };
