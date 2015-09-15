@@ -11,7 +11,7 @@ class CfgAmmo {
         explosive = 1.8;
         tracersEvery = 3;
         tracerEndTime = 3.5;
-        nvgOnly = 1;
+        
         CraterEffects = "ExploAmmoCrater";
         explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
