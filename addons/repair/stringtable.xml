@@ -902,7 +902,7 @@
             <Portuguese>Número de partes sobressalentes.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
-            <English>Req Items for wheel repair</English>
+            <English>Wheel repair requirements</English>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
