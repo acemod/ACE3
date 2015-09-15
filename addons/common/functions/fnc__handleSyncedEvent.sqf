@@ -1,13 +1,13 @@
 /*
  * Author: jaynus
- * 
+ *
  * Handles synced events being received. Server will log them, and server/client will execute them.
  *
  * Arguments [Client] :
  * 0: eventName (String)
  * 1: arguments (Array)
  * 2: ttl (Scalar)
- * 
+ *
  * Return value:
  * Boolean of success
  */
@@ -17,7 +17,7 @@ PARAMS_3(_name,_args,_ttl);
 private["_internalData", "_eventLog", "_eventCode"];
 
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    diag_log text format["[ACE] Error, synced event key not found."];
+    ACE_LOGERROR("Synced event key not found.");
     false
 };
 

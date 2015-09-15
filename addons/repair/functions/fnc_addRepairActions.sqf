@@ -131,7 +131,7 @@ _hitPointsAddedAmount = [];
                     if (typeName _position == "STRING") exitWith {
                         _selection = _vehicle selectionPosition _position; // Selection name
                     };
-                    diag_log text format ["[ACE] ERROR: Invalid custom position %1 of hitpoint %2 in vehicle %3", _position, _hitpoint, _vehicle];
+                    ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_vehicle);
                 };
             } forEach (getArray _customSelectionsConfig);
         };

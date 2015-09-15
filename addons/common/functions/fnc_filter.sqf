@@ -20,7 +20,7 @@ private ["_newArray", "_index"];
 PARAMS_2(_array,_code);
 
 if (isNil "_array") exitWith {
-  diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
+  ACE_LOGERROR_1("No array for function filter in %1.",_fnc_scriptNameParent);
   []
 };
 

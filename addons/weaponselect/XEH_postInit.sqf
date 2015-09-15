@@ -1,7 +1,7 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(SelectPistolNew), localize LSTRING(SelectPistol),

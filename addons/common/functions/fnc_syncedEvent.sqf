@@ -7,7 +7,7 @@
  * 0: Name (String)
  * 1: Arguments (Array)
  * 2: TTL (Number or Code) [Optional] for this specific event call
- * 
+ *
  * Return value:
  * Boolean of success
  */
@@ -25,7 +25,7 @@ if( (count _this) > 2) then {
 };
 
 if(!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    diag_log text format["[ACE] Error, synced event key not found."];
+    ACE_LOGERROR("Synced event key not found.");
     false
 };
 

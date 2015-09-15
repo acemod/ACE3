@@ -42,7 +42,7 @@
 
 ["HeadbugFixUsed", {
     PARAMS_2(_profileName,_animation);
-    diag_log text format ["[ACE] Headbug Used: Name: %1, Animation: %2", _profileName, _animation];
+    ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call FUNC(addEventHandler);
 
 
@@ -102,7 +102,7 @@ if (_currentVersion != _previousVersion) then {
 // Handle JIP scenario
 if(!isServer) then {
     ["PlayerJip", {
-        diag_log text format["[ACE] * JIP event synchronization initialized"];
+        ACE_LOGINFO("JIP event synchronization initialized");
         ["SEH_all", [player]] call FUNC(serverEvent);
     }] call FUNC(addEventHandler);
 } else {
@@ -128,13 +128,13 @@ call FUNC(checkFiles);
     if (isNil QGVAR(settings) || {(!isServer) && (isNil QEGVAR(modules,serverModulesRead))}) exitWith {
         if (!_waitingMsgSent) then {
             _args set [0, true];
-            diag_log text format["[ACE] Waiting on settings from server"];
+            ACE_LOGINFO("Waiting on settings from server...");
         };
     };
 
     [(_this select 1)] call cba_fnc_removePerFrameHandler;
 
-    diag_log text format["[ACE] Settings received from server"];
+    ACE_LOGINFO("Settings received from server.");
 
     // Event so that ACE_Modules have their settings loaded:
     ["InitSettingsFromModules", []] call FUNC(localEvent);
@@ -145,7 +145,7 @@ call FUNC(checkFiles);
         call FUNC(loadSettingsLocalizedText);
     };
 
-    diag_log text format["[ACE] Settings initialized"];
+    ACE_LOGINFO("Settings initialized.");
 
     //Event that settings are safe to use:
     ["SettingsInitialized", []] call FUNC(localEvent);
@@ -284,7 +284,7 @@ GVAR(OldVisibleMap) = false;
         GVAR(OldPlayerWeapon) = _newPlayerWeapon;
         ["playerWeaponChanged", [ACE_player, _newPlayerWeapon]] call FUNC(localEvent);
     };
-    
+
     // "visibleMapChanged" event
     _newVisibleMap = visibleMap;
     if (!_newVisibleMap isEqualTo GVAR(OldVisibleMap)) then {
@@ -292,9 +292,9 @@ GVAR(OldVisibleMap) = false;
         GVAR(OldVisibleMap) = _newVisibleMap;
         ["visibleMapChanged", [ACE_player, _newVisibleMap]] call FUNC(localEvent);
     };
-    
+
     END_COUNTER(stateChecker);
-    
+
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
