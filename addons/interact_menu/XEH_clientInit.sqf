@@ -117,7 +117,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
                 ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
             };
         };
-    } forEach (allUnits + vehicles);
+    } forEach (allUnits + allDeadMen + vehicles);
     if ((count _badClassnames) == 0) then {
         ACE_LOGINFO("All compile checks passed");
     } else {
