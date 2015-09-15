@@ -19,7 +19,6 @@ PREP(doUnloadCaptive);
 PREP(findEmptyNonFFVCargoSeat);
 PREP(handleGetIn);
 PREP(handleGetOut);
-PREP(handleKilled);
 PREP(handleOnUnconscious);
 PREP(handlePlayerChanged);
 PREP(handleRespawn);
