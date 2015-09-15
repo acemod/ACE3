@@ -97,6 +97,15 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class wheelRepairRequiredItems {
+                displayName = CSTRING(wheelRepairRequiredItems_name);
+                description = CSTRING(wheelRepairRequiredItems_description);
+                typeName = "NUMBER";
+                class values {
+                    class None { name = "None"; value = 0;  default = 1;};
+                    class ToolKit { name = "ToolKit"; value = 1; };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(moduleDescription);
