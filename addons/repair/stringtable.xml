@@ -901,5 +901,11 @@
             <Polish>Ilość wybranych części zamiennych.</Polish>
             <Portuguese>Número de partes sobressalentes.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
+            <English>Wheel repair requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
+            <English>Items required to remove/replace wheels</English>
+        </Key>
     </Package>
 </Project>

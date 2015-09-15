@@ -87,7 +87,9 @@ switch ((_type select 0)) do {
             _unit setPosATL _pos;
         };
     };
-    default {diag_log format ["ACE: Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type];};
+    default {
+        ACE_LOGWARNING_2("Incorrect item type passed to %1, passed: %2",QFUNC(AddToInventory),_type);
+    };
 };
 
 [_addedToPlayer,_unit]

@@ -36,7 +36,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
         if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
             // If it reaches this, we can assume that the hit did not kill this unit, as this function is called 3 frames after the damage has been passed.
             if ([_unit, _part, if (_part > 1) then {_newDamage * 1.3} else {_newDamage * 2}] call FUNC(determineIfFatal)) then {
-                [_unit, true, 0.5+random(3)] call FUNC(setUnconscious);
+                [_unit, true, 0.5+random(10)] call FUNC(setUnconscious);
             };
         };
         _pain = _unit getVariable [QGVAR(pain), 0];

@@ -32,3 +32,10 @@ class CfgAddons {
 class ACE_Extensions {
     extensions[] += {"ace_clipboard"};
 };
+
+
+class CfgCommands {
+    allowedHTMLLoadURIs[] += {
+        "http://ace3mod.com/version.html"
+    };
+};

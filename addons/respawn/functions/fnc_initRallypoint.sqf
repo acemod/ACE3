@@ -1,15 +1,15 @@
 /*
   Name: ACE_Respawn_fnc_initRallypoint
-  
+
   Author(s):
     commy2
-  
+
   Description:
     init code for rally points
-  
+
   Parameters:
     0: OBJECT - rally
-  
+
   Returns:
     VOID
 */
@@ -26,9 +26,9 @@ if (hasInterface) then {
     // fix init having wrong position, vars etc.
     [_rallypoint, _respawnMarker, _side, _name] spawn {
         PARAMS_4(_rallypoint,_respawnMarker,_side,_name);
-        
+
         private ["_marker", "_type"];
-       
+
        _marker = format ["ACE_Marker_%1", _name];
 
         // exit if it already exist
@@ -65,5 +65,5 @@ if (isNil _name) then {
 
 } else {
     deleteVehicle _rallypoint;
-    diag_log text "[ACE] Respawn: ERROR Multiple Rallypoints of same type.";
+    ACE_LOGERROR("Multiple Rallypoints of same type.");
 };
