@@ -49,8 +49,6 @@ _items = if (isArray (_config >> "items")) then {
     };
     _settingItemsArray select (missionNamespace getVariable _settingName);
 };
-
-x3 = _items;
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitwith {false};
 
 _return = true;
