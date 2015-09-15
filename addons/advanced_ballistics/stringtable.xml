@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Ballistics">
         <Key ID="STR_ACE_Advanced_Ballistics_WindInfoKey">
@@ -286,6 +286,7 @@
             <French>Ce module active la simulation de balistique avancée - ie les projectiles sont influencé par des varibles comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelles ils sont tirés</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
+            <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>
         </Key>
     </Package>
 </Project>
