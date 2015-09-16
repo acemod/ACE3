@@ -70,6 +70,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class GVAR(autoAddObjects) {
+                displayName = CSTRING(AddObjectsToCurator);
+                description = CSTRING(AddObjectsToCurator_desc);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Settings_Description);
