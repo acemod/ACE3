@@ -122,6 +122,17 @@ class ACE_Torso {
         enableInside = 1;
         icon = PATHTOF(UI\icons\triageCard.paa);
     };
+    class Diagnose {
+        displayName = CSTRING(Actions_Diagnose);
+        distance = 5.0;
+        condition = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'head', 'Diagnose')] call DFUNC(treatment));
+        EXCEPTIONS
+        showDisabled = 0;
+        priority = 2;
+        hotkey = "";
+        icon = "";
+    };
 
     // Advanced medical
     class FieldDressing {
