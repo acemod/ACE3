@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Parachute">
         <Key ID="STR_ACE_Parachute_showAltimeter">
@@ -58,6 +58,7 @@
             <Portuguese>Cortar para-quedas</Portuguese>
             <Russian>Обрезать стропы</Russian>
             <Czech>Odžíznout Padák</Czech>
+            <Spanish>Cortar paracaídas</Spanish>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -68,6 +69,7 @@
             <Portuguese>Para-quedas de reserva</Portuguese>
             <Russian>Запасной парашют</Russian>
             <Czech>Záložní Padák</Czech>
+            <Spanish>Paracaídas de reserva</Spanish>
         </Key>
     </Package>
 </Project>
