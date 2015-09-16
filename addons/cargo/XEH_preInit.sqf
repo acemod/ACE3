@@ -15,6 +15,7 @@ PREP(initVehicle);
 PREP(loadItem);
 PREP(moduleSettings);
 PREP(onMenuOpen);
+PREP(paradropItem);
 PREP(startLoadIn);
 PREP(startUnload);
 PREP(unloadItem);
