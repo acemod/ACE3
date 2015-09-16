@@ -40,11 +40,13 @@ _position = (vectorDir _vehicle vectorMultiply -15) vectorAdd getPosASL _vehicle
 
 _item setPosASL _position;
 
+["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
+
 // open parachute and ir light effect
 [{
     params ["_item"];
 
-    if (isNull _item || {getPos _item select 2 > 1}) exitWith {};
+    if (isNull _item || {getPos _item select 2 < 1}) exitWith {};
 
     private "_parachute";
     _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
@@ -58,7 +60,7 @@ _item setPosASL _position;
     _light = "Chemlight_yellow" createVehicle [0,0,0];
     _light attachTo [_item, [0,0,0]];
 
-}, [_item], 0.7, 0] call EFUNC(common,waitAndExec);
+}, [_item], 0.7, 0] call EFUNC(common,waitAndExecute);
 
 // smoke effect when crate landed
 [{
