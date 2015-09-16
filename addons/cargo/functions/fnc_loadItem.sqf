@@ -31,8 +31,10 @@ _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
 detach _item;
-_item attachTo [_vehicle,[0,0,100]];
+
 ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
+_item allowDamage false;
+_item setPos [-1000, -1000, -1000];
 
 // Invoke listenable event
 ["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
