@@ -169,7 +169,7 @@
             <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 200</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
-            <English></English>
+            <English>Module allows you to switch side during the game.</English>
             <Polish>Moduł ten pozwala na zmianę strony w trakcie gry.</Polish>
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
