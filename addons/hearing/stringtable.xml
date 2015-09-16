@@ -138,6 +138,8 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_Module_Description">
             <French>Activer la surdité au combat?</French>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Уменьшает способность игроков слышать при повреждении слуха</Russian>
