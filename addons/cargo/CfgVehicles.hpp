@@ -49,6 +49,14 @@ class CfgVehicles {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
     };
+    class Truck_01_base_F: Truck_F {
+        GVAR(space) = 20;
+        GVAR(hasCargo) = 1;
+    };
+    class B_Truck_01_box_F: Truck_01_base_F {
+        GVAR(space) = 40;
+        GVAR(hasCargo) = 1;
+    };
 
     class Air;
     class Helicopter: Air {
