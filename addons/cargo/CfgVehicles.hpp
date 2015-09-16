@@ -141,6 +141,18 @@ class CfgVehicles {
         GVAR(space) = 4;
     };
 
+    // misc. vehicles
+    class Quadbike_01_base_F: Car_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    class Kart_01_Base_F: Car_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    // helicopters
     class Air;
     class Helicopter: Air {
         GVAR(space) = 8;
@@ -153,15 +165,39 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
+    // jets
     class Plane: Air {
-        GVAR(space) = 4;
-        GVAR(hasCargo) = 1;
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
     };
 
+    // boats
     class Ship;
     class Ship_F: Ship {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
+    };
+
+    class Boat_Civil_01_base_F: Ship_F {
+        GVAR(space) = 4;
+        GVAR(hasCargo) = 1;
+    };
+
+    class Boat_F: Ship_F {};
+    class Rubber_duck_base_F: Boat_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    class Boat_Armed_01_base_F: Boat_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+
+    // submarines
+    class SDV_01_base_F: Boat_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
     };
 
     // Static weapons
