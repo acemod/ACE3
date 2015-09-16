@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="DAGR">
+		<Key ID="STR_ACE_DAGR_Name">
+			<English>DAGR</English>
+			<Polish>DAGR</Polish>
+		</Key>
+		<Key ID="STR_ACE_DAGR_ConfigureDAGR">
+			<English>Configure DAGR</English>
+			<Polish>Konfiguruj DAGR</Polish>
+		</Key>
+		<Key ID="STR_ACE_DAGR_ToggleDAGR">
+			<English>Toggle DAGR</English>
+			<Polish>Przełącz DAGR</Polish>
+		</Key>
+		<Key ID="STR_ACE_DAGR_Description">
+			<English>Defense Advanced GPS Receiver</English>
+			<Polish>Defense Advanced GPS Receiver</Polish>
+		</Key>
     </Package>
 </Project>

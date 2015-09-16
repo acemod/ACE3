@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated); 
+PARAMS_3(_logic,_units,_activated);
 
 if !(isServer) exitWith {};
 
@@ -45,4 +45,4 @@ if (isServer) then {
     };
 };
 
-diag_log text "[ACE]: Respawn Module Initialized.";
+ACE_LOGINFO("Respawn Module Initialized.");

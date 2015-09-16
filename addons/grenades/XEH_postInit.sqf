@@ -4,7 +4,7 @@
 
 ["flashbangExplosion", DFUNC(flashbangExplosionEH)] call EFUNC(common,addEventHandler);
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;

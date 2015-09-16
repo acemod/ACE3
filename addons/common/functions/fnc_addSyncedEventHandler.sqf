@@ -5,9 +5,9 @@
  *
  * Argument:
  * 0: Name (String)
- * 1: Handler (Code)  
+ * 1: Handler (Code)
  * 2: TTL (Number or Code) [Optional]
- * 
+ *
  * Return value:
  * Boolean of success
  */
@@ -25,7 +25,7 @@ if( (count _this) > 2) then {
 };
 
 if(HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    diag_log text format["[ACE] Error, duplicate synced event creation."];
+    ACE_LOGERROR("Duplicate synced event creation.");
     false
 };
 

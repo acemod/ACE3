@@ -33,4 +33,6 @@ if (!isServer) exitWith {};
 
 [_logic, QGVAR(addSpareParts), "addSpareParts"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Repair Module Initialized.";
+[_logic, QGVAR(wheelRepairRequiredItems), "wheelRepairRequiredItems"] call EFUNC(common,readSettingFromModule);
+
+ACE_LOGINFO("Repair Module Initialized.");

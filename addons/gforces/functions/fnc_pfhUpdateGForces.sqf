@@ -14,7 +14,7 @@
  #include "script_component.hpp"
 
 private ["_interval", "_player", "_newVel", "_accel", "_currentGForce", "_average", "_sum", "_classCoef", "_suitCoef", "_gBlackOut", "_gRedOut", "_g", "_gBO", "_coef", "_strength"];
- 
+
 EXPLODE_2_PVT(_this,_params,_pfhId);
 
 _interval = ACE_time - GVAR(lastUpdateTime);
