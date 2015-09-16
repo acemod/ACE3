@@ -20,10 +20,10 @@ private ["_deployedRopes"];
 
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
-    _x params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_occupied"];
+    _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook"];
 
     deleteVehicle _ropeTop;
-    [{{deleteVehicle _x} count _this}, [_dummy, _anchor, _ropeBottom], 60] call EFUNC(common,waitAndExecute);
+    [{{deleteVehicle _x} count _this}, [_dummy, _anchor, _ropeBottom, _hook], 60] call EFUNC(common,waitAndExecute);
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];

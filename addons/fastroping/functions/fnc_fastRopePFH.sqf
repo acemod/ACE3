@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
 _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex"];
-_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_occupied"];
+_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook", "_occupied"];
 private ["_origin"];
 
 //Wait until the unit is actually outside of the helicopter
@@ -29,14 +29,12 @@ if (isNull attachedTo _unit) exitWith {
     _dummy setVectorUp [0, 0, 1];
     _unit attachTo [_dummy, [0, 0, -1.2]];
     [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
-    systemChat str _ropeTop;
-    systemChat str _ropeBottom;
     ropeUnwind [_ropeTop, 6, 35];
     ropeUnwind [_ropeBottom, 6, 0];
 };
 
 //Check if fast rope is finished
-if (((getPos _unit select 2) < 0.5) || {ropeUnwound _ropeTop} || {vectorMagnitude (velocity _vehicle) > 5}) exitWith {
+if (((getPos _unit select 2) < 0.2) || {ropeUnwound _ropeTop} || {vectorMagnitude (velocity _vehicle) > 5}) exitWith {
     detach _unit;
     [_unit, "", 2] call EFUNC(common,doAnimation);
 
@@ -47,12 +45,12 @@ if (((getPos _unit select 2) < 0.5) || {ropeUnwound _ropeTop} || {vectorMagnitud
     _origin = AGLtoASL (_vehicle modelToWorld _attachmentPoint);
     _dummy setPosASL (_origin vectorAdd [0, 0, -2]);
 
-    _ropeTop = ropeCreate [_vehicle, _attachmentPoint, _dummy, [0, 0, 0], 2];
+    _ropeTop = ropeCreate [_hook, [0, 0, 0], _dummy, [0, 0, 0], 2];
     _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 33];
 
     //Update deployedRopes array
     _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-    _deployedRopes set [_ropeIndex, [_attachmentPoint, _ropeTop, _ropeBottom, _dummy, _anchor, false]];
+    _deployedRopes set [_ropeIndex, [_attachmentPoint, _ropeTop, _ropeBottom, _dummy, _anchor, _hook, false]];
     _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;

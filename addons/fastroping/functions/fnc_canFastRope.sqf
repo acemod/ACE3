@@ -22,5 +22,5 @@ private ["_deployedRopes"];
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 if ((driver _vehicle != _unit) &&
     {!(_deployedRopes isEqualTo [])} &&
-    {{!(_x select 5)} count (_deployedRopes) > 0}) exitWith {true};
+    {{!(_x select 6)} count (_deployedRopes) > 0}) exitWith {true};
 false

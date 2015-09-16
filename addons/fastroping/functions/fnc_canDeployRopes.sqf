@@ -22,5 +22,6 @@ private ["_deployedRopes"];
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 if (isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(enabled)) &&
     {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(enabled)) == 1} &&
-    {_deployedRopes isEqualTo []}) exitWith {true};
+    {_deployedRopes isEqualTo []} &&
+    {getPos _vehicle select 2 > 5}) exitWith {true};
 false

@@ -24,13 +24,13 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _usableRope = _deployedRopes select 0;
 _usableRopeIndex = 0;
 {
-    if !(_x select 5) exitWith {
+    if !(_x select 6) exitWith {
         _usableRope = _x;
         _usableRopeIndex = _forEachIndex;
     };
 } forEach _deployedRopes;
 
-_usableRope set [5, true];
+_usableRope set [6, true];
 _deployedRopes set [_usableRopeIndex, _usableRope];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
