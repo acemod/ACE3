@@ -14,9 +14,9 @@
 
 private "_deleted";
 
-
-
 _deleted = 0;
+
+_aceTimeSecond = floor ACE_time;
 
 {
     private ["_bulletVelocity", "_bulletPosition", "_bulletSpeed"];
@@ -37,7 +37,6 @@ _deleted = 0;
         drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];
     };
 
-    _aceTimeSecond = floor ACE_time;
     call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, _aceTimeSecond, ACE_time - _aceTimeSecond]);
 } forEach GVAR(allBullets);
 
