@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_caller", "_allUsedMedication"];
-_caller = _this select 0;
-_target = _this select 1;
+private "_allUsedMedication";
+params ["_caller", "_target"];
 
 if (alive _target) exitwith {
 
@@ -64,7 +63,7 @@ if (alive _target) exitwith {
     _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
        _target setvariable [_x select 0, nil];
-    }foreach _allUsedMedication;
+    } foreach _allUsedMedication;
 
     // Resetting damage
     _target setDamage 0;

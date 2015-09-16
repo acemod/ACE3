@@ -13,7 +13,7 @@
  *
  */
 #include "script_component.hpp"
- 
+
 PARAMS_3(_unit,_target,_lockTarget);
 
 if (isNil "_lockTarget") then {_lockTarget = false};
@@ -22,7 +22,7 @@ private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-    diag_log text "[ACE] ERROR: Claiming already owned object.";
+    ACE_LOGERROR("Claiming already owned object.");
 };
 
 // transfer this immediately

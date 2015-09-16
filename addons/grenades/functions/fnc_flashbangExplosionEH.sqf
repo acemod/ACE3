@@ -94,7 +94,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             }, [_light], 0.1] call EFUNC(common,waitAndExecute);
 
             // blind player
-            if (_strength > 0.1) then {
+            if (_strength > 0.1 && hasInterface) then {
                 GVAR(flashbangPPEffectCC) ppEffectEnable true;
                 GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                 GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;

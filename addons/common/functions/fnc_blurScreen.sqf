@@ -10,6 +10,8 @@
 
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 private ["_show"];
 PARAMS_1(_id);
 _show = if (count _this > 1) then {_this select 1} else {false};

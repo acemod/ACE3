@@ -6,9 +6,10 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Amount of Pain <NUMBER>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: No
  */
@@ -16,8 +17,7 @@
 #include "script_component.hpp"
 
 private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
-_unit = _this select 0;
-_pain = _this select 1;
+params ["_unit", "_pain"];
 if (!local _unit || !GVAR(enableScreams)) exitwith{};
 
 // Lock if the unit is already playing a sound.

@@ -774,6 +774,7 @@
             <Polish>Otwórz</Polish>
             <Czech>Otevřít</Czech>
             <Spanish>Abrir</Spanish>
+            <French>Ouvrir</French>
             <Hungarian>Nyitás</Hungarian>
             <Portuguese>Abrir</Portuguese>
             <Russian>Открыть</Russian>
@@ -785,6 +786,7 @@
             <German>Interaktionssystem</German>
             <Czech>Systém interakce</Czech>
             <Russian>Взаимодействие</Russian>
+            <French>Système d'interaction</French>
             <Hungarian>Interakciós rendszer</Hungarian>
             <Portuguese>Sistema de interação</Portuguese>
         </Key>
@@ -795,6 +797,7 @@
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
             <Russian>Управление группами</Russian>
+            <French>Active la gestion d'équipe</French>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
         </Key>
@@ -805,6 +808,7 @@
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
             <Russian>Разрешить ли игрокам использовать меню управления группами? По-умолчани: Да</Russian>
+            <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut: oui</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
         </Key>
@@ -814,6 +818,7 @@
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
             <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
+            <French>La gestion d'équipe permet l'allocation de couleur aux membres d'équipe, de prendre le commandement, de rejoindre ou quitter une équipe. </French>
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>

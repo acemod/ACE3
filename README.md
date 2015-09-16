@@ -3,10 +3,10 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.2.1-blue.svg" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.3.1-blue.svg" alt="ACE3 Version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
-        <img src="http://img.shields.io/badge/Download-56.5_MB-green.svg" alt="ACE3 Download">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.3.1/ace3_3.3.1.zip">
+        <img src="http://img.shields.io/badge/Download-62.0_MB-green.svg" alt="ACE3 Download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 Issues">
@@ -16,6 +16,9 @@
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/License-GPLv2-red.svg" alt="ACE3 License">
+    </a>
+    <a href="http://slackin.koffeinflummi.de">
+        <img src="http://slackin.koffeinflummi.de/badge.svg" alt="ACE3 Slack">
     </a>
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>

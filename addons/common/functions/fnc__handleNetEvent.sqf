@@ -11,22 +11,22 @@ PARAMS_2(_eventType,_event);
 if (_eventType == "ACEg") then {
     _eventName = _event select 0;
     _eventArgs = _event select 1;
-    
+
     _eventNames = GVAR(events) select 0;
     _eventIndex = _eventNames find _eventName;
     if (_eventIndex != -1) then {
         _events = (GVAR(events) select 1) select _eventIndex;
-        
+
         #ifdef DEBUG_EVENTS
-            diag_log text format[ARR_2("* Net Event %1",_eventName)];
-            diag_log text format[ARR_2("    args=%1",_eventArgs)];
+            ACE_LOGINFO_1("* Net Event %1",_eventName);
+            ACE_LOGINFO_1("    args=%1",_eventArgs);
         #endif
-        
+
         {
             if (!isNil "_x") then {
-                _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Net Event %1 ID: %2",_eventName,_forEachIndex)]);
+                _eventArgs call CALLSTACK_NAMED(_x, FORMAT_2("Net Event %1 ID: %2",_eventName,_forEachIndex));
                 #ifdef DEBUG_EVENTS_CALLSTACK
-                    diag_log text format[ARR_2("    ID: %1",_forEachIndex)];
+                    ACE_LOGINFO_1("    ID: %1",_forEachIndex);
                 #endif
             };
         } forEach _events;
@@ -38,7 +38,7 @@ if (_eventType == "ACEc") then {
         _eventName = _event select 0;
         _eventTargets = _event select 1;
         _eventArgs = _event select 2;
-        
+
         _sentEvents = [];
         if (!IS_ARRAY(_eventTargets)) then {
             _eventTargets = [_eventTargets];

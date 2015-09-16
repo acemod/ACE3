@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -76,7 +76,10 @@
         <Key ID="STR_ACE_Explosives_BlockedAction">
             <English>Blocked</English>
             <Spanish>Obstruido</Spanish>
+            <Portuguese>Bloqueado</Portuguese>
             <Russian>Заблокировано</Russian>
+            <Czech>Blokováno</Czech>
+            <Polish>Zablokowany</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -529,6 +532,7 @@
             <German>Sprengstoffsystem</German>
             <Czech>Systém výbušnin</Czech>
             <Portuguese>Sistema de explosivos</Portuguese>
+            <French>Module explosifs</French>
             <Hungarian>Robbanóanyag-rendszer</Hungarian>
             <Russian>Взрывные устройства</Russian>
         </Key>
@@ -539,6 +543,7 @@
             <German>Benötigt Sprengstoffexperten?</German>
             <Czech>Vyžadovat specialistu?</Czech>
             <Portuguese>Requer especialista?</Portuguese>
+            <French>Requiert un spécialiste?</French>
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
         </Key>
@@ -549,6 +554,7 @@
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
+            <French>Le désarmoçage d'explosif requiert un spécialiste? Défaut: non</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
         </Key>
@@ -559,6 +565,7 @@
             <German>Bestrafe Nicht-Sprengstoffexperten?</German>
             <Czech>Potrestat, pokud není specialista?</Czech>
             <Portuguese>Punir não especialistas?</Portuguese>
+            <French>Punir les non-spécialistes?</French>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
         </Key>
@@ -569,6 +576,7 @@
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
+            <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes? Défaut: oui</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
         </Key>
@@ -578,6 +586,7 @@
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
             <Spanish>Explotar al desactivar?</Spanish>
+            <French>Explosion si désamorçage?</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
         </Key>
@@ -587,6 +596,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
+            <French>Permet à certains explosifs d'exploser au désamorçage? Défaut: oui</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
         </Key>
@@ -596,6 +606,7 @@
             <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
             <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
             <Portuguese>Este módulo permite personalizar as definições relacionadas a explosivos.</Portuguese>
+            <French>Ce module ajuste les options relative aux explosifs</French>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
         </Key>

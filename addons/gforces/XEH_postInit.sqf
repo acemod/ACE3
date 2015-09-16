@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Setup ppEffect
 GVAR(GForces_CC) = ppEffectCreate ["ColorCorrections", 4215];
