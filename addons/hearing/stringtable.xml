@@ -140,12 +140,9 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
-            <French>Activer la surdité au combat?</French>
+			<English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Уменьшает способность игроков слышать при повреждении слуха</Russian>
-        </Key>
-        <Key ID="STR_ACE_Hearing_Module_Description">
-            <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>

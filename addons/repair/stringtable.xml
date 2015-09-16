@@ -985,5 +985,13 @@
             <Portuguese>Número de partes sobressalentes.</Portuguese>
             <Spanish>Número de piezas de repuesto seleccionados.</Spanish>
         </Key>
+		<Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
+            <English>Wheel repair requirements</English>
+			<Spanish>Requisitos de reparación de ruedas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
+            <English>Items required to remove/replace wheels</English>
+			<Spanish>Elementos necesarios para quitar/cambiar ruedas</Spanish>
+        </Key>
     </Package>
 </Project>
