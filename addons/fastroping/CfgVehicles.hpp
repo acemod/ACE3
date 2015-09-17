@@ -5,6 +5,7 @@ class CfgVehicles {
         scope = 1;
         model = PATHTOF(data\helper.p3d);
         isUAV = 0;
+        displayName = "";
     };
 
     class Air;
@@ -35,8 +36,42 @@ class CfgVehicles {
     };
 
     class Helicopter_Base_H;
+    class Heli_Light_02_base_F: Helicopter_Base_H {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
+    };
+    class Heli_Attack_02_base_F: Helicopter_Base_H {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{1.25, 1.5, -0.6}, {-1.1, 1.5, -0.6}};
+    };
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{1.1, 2.5, 0.25}, {-1.1, 2.5, 0.25}};
+        GVAR(ropeOrigins[]) = {{1.08, 2.43, 0.2}, {-0.95, 2.43, 0.2}};
+    };
+    class Heli_Transport_02_base_F: Helicopter_Base_H {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{0.94, -4.82, -1.16}, {-0.94, -4.82, -1.16}};
+    };
+    class Heli_Transport_03_base_F: Helicopter_Base_H {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{0.75, -5.29, -0.11}, {-0.87, -5.29, -0.11}};
+    };
+    class Helicopter_Base_F;
+    class Heli_light_03_base_F: Helicopter_Base_F{
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{0.84, 2.8, 0.52}, {-0.9, 2.8, 0.52}};
+    };
+    class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{0.84, 2.8, 0.36}, {-0.9, 2.8, 0.36}};
+    };
+    class Heli_Transport_04_base_F;
+    class O_Heli_Transport_04_bench_F: Heli_Transport_04_base_F {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{1.03, 1.6, -0.23}, {1.03, -1.36, -0.23}, {-1.23, 1.6, -0.23}, {-1.23, -1.36, -0.23}};
+    };
+    class O_Heli_Transport_04_covered_F: Heli_Transport_04_base_F {
+        GVAR(enabled) = 1;
+        GVAR(ropeOrigins[]) = {{0.83, -4.7, -0.03}, {-1.02, -4.7, -0.03}};
     };
 };
