@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        ACE_isOptional = 1;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
