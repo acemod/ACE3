@@ -61,6 +61,9 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 // check server version/addons
 ///////////////
 if (isMultiplayer) then {
+    // don't check optional addons
+    _addons = [_addons, {getNumber (configFile >> "CfgPatches" >> _this >> "ACE_isOptional") != 1}] call FUNC(filter);
+
     if (isServer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
