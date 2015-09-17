@@ -44,6 +44,8 @@ if (_animation == "") then {
     _animation = [_unit] call FUNC(getDefaultAnim);
 };
 
+//if (_animation == animationState _unit) exitWith {};
+
 switch (_priority) do {
     case 0 : {
         if (_unit == vehicle _unit) then {
@@ -62,8 +64,19 @@ switch (_priority) do {
         };
     };
     case 2 : {
-        // Execute on all machines. SwitchMove has local effects.
-        [_unit, format ["{_this switchMove '%1'}", _animation]] call FUNC(execRemoteFnc);
+        // try playMoveNow first
+        if (_unit == vehicle _unit) then {
+            [_unit, format ["{_this playMoveNow '%1'}", _animation], _unit] call FUNC(execRemoteFnc);
+        } else {
+          // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
+            [_unit, format ["{_this playMoveNow '%1'}", _animation]] call FUNC(execRemoteFnc);
+        };
+
+        // if animation doesn't respond, do switchMove
+        if (animationState _unit != _animation) then {
+            // Execute on all machines. SwitchMove has local effects.
+            [_unit, format ["{_this switchMove '%1'}", _animation]] call FUNC(execRemoteFnc);
+        };
     };
     default {};
 };
