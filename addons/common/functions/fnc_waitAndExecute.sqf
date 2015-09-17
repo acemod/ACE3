@@ -3,12 +3,12 @@
  *
  * Executes a code once with a given game ACE_time delay, using a PFH
  *
- * Argument:
- * 0: Code to execute (Code)
- * 1: Parameters to run the code with (Array)
- * 2: Delay in seconds before executing the code (Number)
+ * Arguments:
+ * 0: Code to execute <CODE>
+ * 1: Parameters to run the code with <ARRAY>
+ * 2: Delay in seconds before executing the code <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_func,_params,_delay);
+params ["_func", "_params", "_delay"];
 
 GVAR(waitAndExecArray) pushBack [(ACE_time + _delay), _func, _params];
 GVAR(waitAndExecArray) sort true;

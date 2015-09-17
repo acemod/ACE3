@@ -3,23 +3,24 @@
  *
  * Converts a number to a string without losing as much precission as str or format.
  *
- * Argument:
- * 0: A number (Number)
+ * Arguments:
+ * 0: A number <NUMBER>
  *
- * Return value:
+ * Return Value:
  * The number as string (String)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_decimals"];
+params ["_number"];
 
-PARAMS_1(_number);
-
-_decimals = str (abs(_number) mod 1);
+private "_decimals";
+_decimals = str (abs _number mod 1);
 _decimals = toArray _decimals;
 _decimals deleteAt 0;
 
 if (_number < 0) exitWith {
-    format ["-%1%2", floor abs(_number), toString _decimals];
+    format ["-%1%2", floor abs _number, toString _decimals];
 };
 format ["%1%2", floor _number, toString _decimals];

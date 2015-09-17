@@ -1,11 +1,22 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * hint retun value of given function every frame
+ *
+ * Argument:
+ * <CODE>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-terminate (missionNamespace getVariable [QGVAR(MonitorFnc), scriptNull]);
-
-GVAR(MonitorFnc) = _this spawn {
-    waitUntil {
-      hintSilent str (call _this);
-      false
-    };
+if (!isNil QGVAR(MonitorFnc)) then {
+    [GVAR(MonitorFnc)] call CBA_fnc_removePerFrameHandler;
 };
+
+GVAR(MonitorFnc) = [{
+    hintSilent str (call (_this select 0));
+}, 0, _this] call CBA_fnc_addPerFrameHandler;

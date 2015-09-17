@@ -1,8 +1,22 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * hint the Variable ACE_isUsedBy from the input Object every frame
+ *
+ * Argument:
+ * <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-GVAR(Debug_Object) = _this select 0;
-
-onEachFrame {
-    hintSilent str (GVAR(Debug_Object) getVariable ["ACE_isUsedBy", objNull]);
+if (!isNil QGVAR(showUserPFH)) then {
+    [GVAR(showUserPFH)] call CBA_fnc_removePerFrameHandler;
 };
+
+GVAR(showUserPFH) = [{
+    hintSilent str ((_this select 0) getVariable ["ACE_isUsedBy", objNull]);
+}, 0, _this] call CBA_fnc_addPerFrameHandler;
