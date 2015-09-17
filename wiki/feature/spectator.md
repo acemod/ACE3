@@ -7,11 +7,6 @@ category: interaction
 parent: wiki
 ---
 
-<div class="panel callout">
-    <h5>Please note:</h5>
-    <p>This is not part of ACE3 yet. It will be released in a future version.</p>
-</div>
-
 ## 1. Overview
 
 The ACE3 spectator system is designed to act as a flexible and easy to configure framework. Most scenarios can be set up as desired using only the settings provided, however public functions are available for finer control of these configurable aspects.
