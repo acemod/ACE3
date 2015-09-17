@@ -166,11 +166,13 @@
             <English>Add Spare Parts</English>
             <Polish>Dodaj części zam.</Polish>
             <Portuguese>Adicionar partes sobressalentes</Portuguese>
+            <Russian>Добавлять запчасти</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_description">
             <English>Add spare parts to vehicles (requires Cargo component)?</English>
             <Polish>Czy dodać do pojazdów części zamienne? Wymaga włączonego cargo.</Polish>
             <Portuguese>Adicionar partes sobressalentes aos veículos (requer o componente de carga)?</Portuguese>
+            <Russian>Добавлять запасные части в технику (требуется модуль Грузоперевозок)?</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
@@ -865,47 +867,57 @@
             <English>Add Spare Parts</English>
             <Polish>Dodaj części zam.</Polish>
             <Portuguese>Adicionar partes sobressalentes</Portuguese>
+            <Russian>Добавить запчасти</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
             <Polish>Dodaj części zamienne do jednego lub wielu obiektów.</Polish>
             <Portuguese>Adicionar partes sobressalentes para um ou mais objetos</Portuguese>
+            <Russian>Добавить запасные части в одно или несколько транспортных средств</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
             <Portuguese>Lista</Portuguese>
+            <Russian>Список</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
             <Polish>Lista obiektów, które otrzymają części zamienne, oddzielone przecinkiem.</Polish>
             <Portuguese>Lista de objetos que ganharão partes sobressalentes, dividos por vírgulas.</Portuguese>
+            <Russian>Список транспортных средств, в которые будут добавляться запчасти, разделенный запятыми.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>
             <Polish>Część</Polish>
             <Portuguese>Parte</Portuguese>
+            <Russian>Запчасть</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
             <English>Spare part.</English>
             <Polish>Część zamienna.</Polish>
             <Portuguese>Parte sobressalente</Portuguese>
+            <Russian>Запасная часть</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
             <English>Amount</English>
             <Polish>Ilość</Polish>
             <Portuguese>Quantidade</Portuguese>
+            <Russian>Количество</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
             <English>Number of selected spare parts.</English>
             <Polish>Ilość wybranych części zamiennych.</Polish>
             <Portuguese>Número de partes sobressalentes.</Portuguese>
+            <Russian>Число выбранных запасных частей</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
+            <Russian>Для ремонта колес требуется</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
+            <Russian>Предметы, которые требуются для снятия/замены колес</Russian>
         </Key>
     </Package>
 </Project>

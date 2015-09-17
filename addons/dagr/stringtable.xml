@@ -4,18 +4,22 @@
 		<Key ID="STR_ACE_DAGR_Name">
 			<English>DAGR</English>
 			<Polish>DAGR</Polish>
+			<Russian>DAGR</Russian>
 		</Key>
 		<Key ID="STR_ACE_DAGR_ConfigureDAGR">
 			<English>Configure DAGR</English>
 			<Polish>Konfiguruj DAGR</Polish>
+			<Russian>Настроить DAGR</Russian>
 		</Key>
 		<Key ID="STR_ACE_DAGR_ToggleDAGR">
 			<English>Toggle DAGR</English>
 			<Polish>Przełącz DAGR</Polish>
+			<Russian>Вкл./выкл. DAGR</Russian>
 		</Key>
 		<Key ID="STR_ACE_DAGR_Description">
 			<English>Defense Advanced GPS Receiver</English>
 			<Polish>Defense Advanced GPS Receiver</Polish>
+			<Russian>Военный многофункциональный GPS-приёмник</Russian>
 		</Key>
     </Package>
 </Project>
