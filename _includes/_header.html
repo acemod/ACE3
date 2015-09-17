@@ -13,7 +13,7 @@
         <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
 
         <meta property="og:title" content="{% if page.browserTitle != null %}{{ page.browserTitle }}{% else %}{{ page.title }}{% endif %}" />
-        <meta property="og:description" content="{% if page.excerpt != null %}{{ page.excerpt | remove: '<p>' | remove: '</p>' }}{% else if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
+        <meta property="og:description" content="{% if page.excerpt != null %}{{ page.excerpt | remove: '<p>' | remove: '</p>' | remove: '<em>' | remove: '</em>' }}{% else if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
         <meta property="og:site_name" content="ACE3"/>
         <meta property="og:locale" content="en_US" />
         <meta property="og:url" content="{{ site.productionUrl }}{{ page.url }}" />
