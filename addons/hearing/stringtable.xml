@@ -138,7 +138,7 @@
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
-            <Russian>Уменьшает возможность игрока слышать звуки при получении повреждения органов слуха</Russian>
+            <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>

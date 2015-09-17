@@ -909,7 +909,7 @@
             <English>Number of selected spare parts.</English>
             <Polish>Ilość wybranych części zamiennych.</Polish>
             <Portuguese>Número de partes sobressalentes.</Portuguese>
-            <Russian>Число выбранных запасных частей</Russian>
+            <Russian>Число выбранных запасных частей.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
