@@ -3,23 +3,23 @@
  *
  * Transforms a number to an array of the correspondending digits.
  *
- * Argument:
- * 0: Number to 'digitize' (Number)
- * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. (Number, optional)
+ * Arguments:
+ * 0: Number to 'digitize' <NUMBER>
+ * 1: Set the minimal length of the returned array. Useful for getting left hand zeroes. <NUMBER>, optional
  *
- * Return value:
+ * Return Value:
  * Digits. The maximum count is six digits. (Array)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_length", "_digits"];
-
-PARAMS_2(_number,_minLength);
+params ["_number", "_minLength"];
 
 _number = _number min 999999;
-
 _number = str _number;
 
+private "_length";
 _length = count _number;
 
 if (isNil "_minLength") then {_minLength = _length};
@@ -31,7 +31,9 @@ while {_length < _minLength} do {
     _length = _length + 1;
 };
 
+private "_digits";
 _digits = [];
+
 for "_x" from 0 to (_length - 1) do {
     _digits pushBack parseNumber (_number select [_x, 1]);
 };

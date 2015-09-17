@@ -1,15 +1,16 @@
 /*
-Author: commy2, esteldunedain
-
-Description:
-Converts number to hexadecimal number
-
-Arguments:
-A number between 0 and 255 <NUMBER>
-
-Return Value:
-A hexadecimal number, String
-*/
+ * Author: commy2, esteldunedain
+ *
+ * Converts number to hexadecimal number
+ *
+ * Arguments:
+ * A number between 0 and 255 <NUMBER>
+ *
+ * Return Value:
+ * A hexadecimal number, <STRING>
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 private ["_number"];

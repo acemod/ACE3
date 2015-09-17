@@ -3,11 +3,13 @@
  *
  * Convert an array of booleans into a number.
  *
- * Argument:
- * 0: Booleans (Array of Booleans)
+ * Arguments:
+ * N: Booleans <ARRAY of Booleans>
  *
- * Return value:
+ * Return Value:
  * Bitmask (Number)
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
