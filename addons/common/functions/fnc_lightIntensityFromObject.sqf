@@ -42,6 +42,8 @@ if (_lightSource isKindOf "CAManBase") then {
         default {""};
     };
 
+    if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ACE_laserpointer") == 1) exitWith {_lightLevel = 0};
+
     _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
     //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
 
@@ -88,7 +90,7 @@ if (_lightSource isKindOf "CAManBase") then {
 
         _lightLevel = _lightLevel max ((linearConversion [0, 30, _distance, 1, 0, true]) * (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true]));
 
-    //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
+        //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
 
     } forEach _lights;
 
