@@ -88,7 +88,7 @@ _caliber = call {
 };
 _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) * _audibleFireCoef / 5;
 
-_loudnessCoef = getNumber (_ammoConfig >> QGVAR(loudnessCoef);
+_loudnessCoef = getNumber (_ammoConfig >> QGVAR(loudnessCoef));
 if (_loudnessCoef >= 0) then {
     _loudness = _loudness * _loudnessCoef;
 };
