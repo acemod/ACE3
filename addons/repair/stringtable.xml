@@ -903,9 +903,11 @@
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
+            <Polish>Wym. naprawy kół</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
+            <Polish>Przedmioty potrzebne do wymiany kół</Polish>
         </Key>
     </Package>
 </Project>
