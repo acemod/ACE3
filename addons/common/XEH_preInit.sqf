@@ -26,7 +26,6 @@ PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
-PREP(closeDialogIfTargetMoves);
 PREP(codeToLetter);
 PREP(codeToString);
 PREP(convertKeyCode);

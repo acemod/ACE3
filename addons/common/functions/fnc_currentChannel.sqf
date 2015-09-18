@@ -3,11 +3,13 @@
  *
  * Returns the current radio / chat / marker channel.
  *
- * Argument:
- * NONE.
+ * Arguments:
+ * None
  *
- * Return value:
- * The current channel. Can be "group", "side", "global", "command", "vehicle", "direct" or "custom_X" (String)
+ * Return Value:
+ * The current channel ("group", "side", "global", "command", "vehicle", "direct", "custom_X") <STRING>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
