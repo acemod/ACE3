@@ -14,7 +14,7 @@
  *
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
-    *
+ *
  * Public: No
  */
 #include "script_component.hpp"
