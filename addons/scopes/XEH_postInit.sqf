@@ -161,5 +161,3 @@ GVAR(showShortdot) = false;
         };
     };
 }] call EFUNC(common,addEventHandler);
-
-addMissionEventHandler ["Draw3D", {if (GVAR(showShortdot)) then {call FUNC(onDrawShortdot)};}];

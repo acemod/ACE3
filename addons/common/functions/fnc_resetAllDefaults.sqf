@@ -18,7 +18,7 @@ _unit setvariable ["ACE_isUnconscious", nil, true];
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
     [false] call FUNC(disableKeyInput);
-    if (["ace_medical"] call FUNC(isModLoader)) then {
+    if (["ace_medical"] call FUNC(isModLoaded)) then {
         [false] call EFUNC(medical,effectBlackOut);
     };
 
