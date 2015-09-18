@@ -29,7 +29,7 @@ _defaultLogDisplayLevel = [GVAR(LOGDISPLAY_LEVEL), DEFAULT_TEXT_DISPLAY] select 
 if (_level <= _defaultLoglevel) then {
     private ["_prefix", "_message"];
 
-    _prefix = ["Error", "Warn", "Debug", "Info"] select (_level min 3);
+    _prefix = ["Unknown", "Error", "Warn", "Debug", "Info"] select ([0, 1, 2, 3] find _level + 1);
 
     _message = format ["[ACE %1] %2", _prefix, _msg];
 
