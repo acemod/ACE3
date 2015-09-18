@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -2104,6 +2104,7 @@
             <English>%1 performed CPR</English>
             <Polish>%1 wykonał cykl RKO</Polish>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
+            <Spanish>%1 realicó RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2216,6 +2217,7 @@
         <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
+            <Spanish>Curar miembros totalmente vendados</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -3432,10 +3434,12 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Heal hitpoints</English>
             <Polish>Lecz hitpointy</Polish>
+            <Spanish>Curar puntos de vida</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
+            <Spanish>Curar miembros totalmente vendados</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3611,6 +3615,7 @@
             <French>Ce module permet d'assigner la classe médicale à une unité sélectionnée</French>
             <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
             <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
+            <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_none">
             <English>None</English>
@@ -3825,14 +3830,17 @@
             <Polish>%1 odszedł zbyt daleko, nie można kontynuować leczenia</Polish>
             <Russian>Расстояние до %1 стало слишком большим для лечения</Russian>
             <Portuguese>A distância de %1 está muito longe para tratamento</Portuguese>
+            <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
+            <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
+            <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
         </Key>
     </Package>
 </Project>

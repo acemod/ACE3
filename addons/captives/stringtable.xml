@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -250,24 +250,28 @@
             <Polish>Wymagaj kapitulacji</Polish>
             <Portuguese>Requer rendição</Portuguese>
             <Russian>Требовать пленения</Russian>
+            <Spanish>Requiere rendición</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
             <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
             <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
             <Russian>Требуется, чтобы игрок сдался в плен прежде, чем его можно будет связать</Russian>
+            <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
             <Polish>Tylko kapitulacja</Polish>
             <Portuguese>Somente rendição </Portuguese>
             <Russian>Только сдавшийся в плен</Russian>
+            <Spanish>Solo rendición</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
             <Polish>Kapitulacja lub brak broni</Polish>
             <Portuguese>Rendição ou desarmado</Portuguese>
             <Russian>Сдавшийся или безоружный</Russian>
+            <Spanish>Rendición o desarme</Spanish>
         </Key>
     </Package>
 </Project>

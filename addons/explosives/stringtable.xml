@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -609,6 +609,7 @@
             <French>Ce module ajuste les options relative aux explosifs</French>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
+            <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -29,18 +29,21 @@
             <French>Calcul la luminosité de la carte en fonction des conditions de lumière</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
+            <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
             <Polish>Poświata latarki</Polish>
             <Russian>Свет фонаря на карте?</Russian>
             <Portuguese>Brilho de lanterna no mapa?</Portuguese>
+            <Spanish>Resplandor de linterna en el mapa?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
             <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
+            <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -117,6 +120,7 @@
             <French>Ce module permet de personnaliser l'écran de la carte</French>
             <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить отображение карты.</Russian>
+            <Spanish>Este módulo permite personalizar la pantalla del mapa.</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -202,6 +206,7 @@
             <French>Ce module permet de suivre les unités alliées avec des marqueurs sur la carte.</French>
             <Hungarian>Ez a modul lehetővé teszi a szövetséges egységek követését BFT térképjelzőjkkel.</Hungarian>
             <Russian>Этот модуль позволяет отслеживать перемещение союзных войск по карте при помощи маркеров BFT.</Russian>
+            <Spanish>Este módulo permite el seguimiento de las unidades aliadas con marcadores de mapa BFT.</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -209,6 +214,7 @@
             <Portuguese>Lanternas</Portuguese>
             <Russian>Фонари</Russian>
             <Czech>Svítilny</Czech>
+            <Spanish>Linternas</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -216,6 +222,7 @@
             <Portuguese>Óculos de Visão Noturna</Portuguese>
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
+            <Spanish>NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -223,6 +230,7 @@
             <Portuguese>Ligado</Portuguese>
             <Russian>Вкл.</Russian>
             <Czech>Zapnout</Czech>
+            <Spanish>Encendido</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -230,6 +238,7 @@
             <Portuguese>Desligado</Portuguese>
             <Russian>Выкл.</Russian>
             <Czech>Vypnout</Czech>
+            <Spanish>Apagado</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -237,6 +246,7 @@
             <Portuguese>Aumentar brilho</Portuguese>
             <Russian>Увеличить яркость</Russian>
             <Czech>Zvýšit jas</Czech>
+            <Spanish>Aumentar brillo</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -244,6 +254,7 @@
             <Portuguese>Diminuir brilho</Portuguese>
             <Russian>Уменьшить яркость</Russian>
             <Czech>Snížit jas</Czech>
+            <Spanish>Reducir brillo</Spanish>
         </Key>
     </Package>
 </Project>
