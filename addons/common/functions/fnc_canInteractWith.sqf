@@ -16,10 +16,9 @@
 
 params ["_unit", "_target", ["_exceptions", []]];
 
-private ["_exceptions", "_owner"];
-
 _exceptions = [_exceptions, {toLower _this}] call FUNC(map);
 
+private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 // exit if the target is not free to interact
