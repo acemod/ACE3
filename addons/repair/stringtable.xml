@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -735,7 +735,7 @@
             <Russian>Назначить инженером</Russian>
             <Czech>Přiřadit Inženýra</Czech>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_DisplayName">
+        <Key ID="STR_ACE_Repair_EnableList_DisplayName">
             <English>List</English>
             <Polish>Lista</Polish>
             <Portuguese>Lista</Portuguese>
@@ -793,13 +793,6 @@
             <Portuguese>Defina veículo de reparo</Portuguese>
             <Russian>Назначить ремонтный транспорт</Russian>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
-            <English>List</English>
-            <Polish>Lista</Polish>
-            <Portuguese>Lista</Portuguese>
-            <Russian>Список</Russian>
-            <Czech>Seznam</Czech>
-        </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy naprawcze, oddzielone przecinkami.</Polish>
@@ -829,13 +822,6 @@
             <Polish>Przydziel budynek naprawczy</Polish>
             <Portuguese>Definir instalação de reparo</Portuguese>
             <Russian>Назначить ремонтное сооружение</Russian>
-        </Key>
-        <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
-            <English>List</English>
-            <Polish>Lista</Polish>
-            <Portuguese>Lista</Portuguese>
-            <Russian>Список</Russian>
-            <Czech>Seznam</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
@@ -870,11 +856,6 @@
             <English>Add spare parts to one or multiple objects</English>
             <Polish>Dodaj części zamienne do jednego lub wielu obiektów.</Polish>
             <Portuguese>Adicionar partes sobressalentes para um ou mais objetos</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
-            <English>List</English>
-            <Polish>Lista</Polish>
-            <Portuguese>Lista</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
