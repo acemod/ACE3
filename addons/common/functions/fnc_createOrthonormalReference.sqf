@@ -2,8 +2,8 @@
  * Author: esteldunedain
  * Returns a orthonormal system of reference aligned with the supplied vector
  *
- * Argument:
- * Vector to align the coordinate system with (Array)
+ * Arguments: 
+ * Vector to align the coordinate system with <ARRAY>
  *
  * Return Value:
  * 0: Vector Normalized <ARRAY>
