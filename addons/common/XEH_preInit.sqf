@@ -158,7 +158,6 @@ PREP(runAfterSettingsInit);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);
-PREP(setArrestState);
 PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
