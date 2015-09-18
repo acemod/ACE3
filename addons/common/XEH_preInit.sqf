@@ -114,7 +114,6 @@ PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(inWater);
 PREP(isAlive);
-PREP(isArrested);
 PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
@@ -235,10 +234,6 @@ PREP(getTurretsOther);
 PREP(exportConfig);
 PREP(getChildren);
 PREP(getDisplayConfigName);
-PREP(log);
-PREP(logControls);
-PREP(logDisplays);
-PREP(logModEntries);
 PREP(monitor);
 PREP(showUser);
 
