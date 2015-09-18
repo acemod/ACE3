@@ -3,12 +3,14 @@
  *
  * Returns a brightness value depending on the sun and moon state. Ranges from 0 to 1 (dark ... bright).
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
- * Ambient brightness (Number)
+ * Return Value:
+ * Ambient brightness <NUMBER>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-(sunOrMoon * sunOrMoon * (1 - overcast * 0.25) + (moonIntensity/5) * (1 - overcast)) min 1
+(sunOrMoon * sunOrMoon * (1 - overcast * 0.25) + (moonIntensity / 5) * (1 - overcast)) min 1
