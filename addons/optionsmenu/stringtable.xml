@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -356,9 +356,6 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
-            <French>Copie le Debug dans le RPT et le presse papier</French>
-            <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
-            <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -368,6 +365,7 @@
             <Portuguese>Corrigir Headbug</Portuguese>
             <Russian>Fix Headbug</Russian>
             <Czech>Fix Headbug</Czech>
+            <Spanish>Corregir error de cabeza (headbug)</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -377,6 +375,7 @@
             <Portuguese>Redefine seu estado de animação.</Portuguese>
             <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
             <Czech>Resetovat aktuální animaci.</Czech>
+            <Spanish>Restablece tu estado de animación.</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -405,6 +404,7 @@
             <Portuguese>Todas categorias</Portuguese>
             <Russian>Все категории</Russian>
             <Czech>Všechny Kategorie</Czech>
+            <Spanish>Todas las categorías</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -412,6 +412,7 @@
             <Portuguese>Logística</Portuguese>
             <Russian>Логистика</Russian>
             <Czech>Logistika</Czech>
+            <Spanish>Logística</Spanish>
         </Key>
     </Package>
 </Project>

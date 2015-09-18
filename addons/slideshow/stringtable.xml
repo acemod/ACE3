@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
@@ -9,6 +9,7 @@
             <Portuguese>Apresentação de Slides</Portuguese>
             <Russian>Слайд-шоу</Russian>
             <Czech>Prezentace</Czech>
+            <Spanish>Presentación de diapositivas</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -17,6 +18,7 @@
             <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
             <Portuguese>Este módulo permite que você monte apresentações de slides em diferentes objetos. Um módulo por lista de imagem. Somente objetos com hiddenSelection 0 são suportados.</Portuguese>
             <Russian>Этот модуль позволяет вам устроить слайд-шоу на различных объектах. Один модуль на один список изображений. Поддерживаются только объекты с hiddenSelection 0.</Russian>
+            <Spanish>Este módulo permite configurar una presentación de diapositivas en diferentes objetos. Un módulo por lista de imágenes. Sólo son soportados objetos con hiddenSelection 0.</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
@@ -26,6 +28,7 @@
             <Portuguese>Objetos</Portuguese>
             <Russian>Объекты</Russian>
             <Czech>Objekty</Czech>
+            <Spanish>Objetos</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
@@ -34,6 +37,7 @@
             <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
             <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um. Referência INFO para suporte do objeto.</Portuguese>
             <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми. Посмотрите описание, чтобы понять, какие объекты поддерживаются.</Russian>
+            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas. Referencia INFO para el soporte del objeto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -42,6 +46,7 @@
             <Hungarian>Vezérlők</Hungarian>
             <Portuguese>Controles</Portuguese>
             <Russian>Контроллеры</Russian>
+            <Spanish>Controladores</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
@@ -50,6 +55,7 @@
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
             <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
             <Russian>Имена объектов-контроллеров, разделенные запятыми.</Russian>
+            <Spanish>Nombres de objeto de controlador, separados por comas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -59,6 +65,7 @@
             <Portuguese>Imagens</Portuguese>
             <Russian>Изображения</Russian>
             <Czech>Obrázky</Czech>
+            <Spanish>Imagenes</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -67,6 +74,7 @@
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
             <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
             <Russian>Список изображений, которые будут использованы для слайд-шоу, разделенные запятыми, с полными путями в правильном формате (например, images\image.paa).</Russian>
+            <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imagenes\ image.paa).</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
@@ -76,6 +84,7 @@
             <Portuguese>Nomes de Interação</Portuguese>
             <Russian>Интерактивные имена</Russian>
             <Czech>Názvy Interakcí</Czech>
+            <Spanish>Nombres de interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -84,6 +93,7 @@
             <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
             <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>
             <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
+            <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -92,6 +102,7 @@
             <Hungarian>Dia időtartam</Hungarian>
             <Portuguese>Duração do Slide</Portuguese>
             <Russian>Длительность слайда</Russian>
+            <Spanish>Duración de diapositiva</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -100,6 +111,7 @@
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
             <Russian>Длительность каждого слайда. По-умолчанию: 0 (автоматический переход отключен)</Russian>
+            <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
@@ -108,6 +120,7 @@
             <Hungarian>Diák</Hungarian>
             <Portuguese>Slides</Portuguese>
             <Russian>Слайды</Russian>
+            <Spanish>Diapositivas</Spanish>
         </Key>
     </Package>
 </Project>
