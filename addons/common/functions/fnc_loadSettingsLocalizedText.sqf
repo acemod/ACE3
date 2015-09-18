@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-private ["_fnc_parseConfigForDisplayNames", "_name"];
-
+private "_fnc_parseConfigForDisplayNames";
 _fnc_parseConfigForDisplayNames = {
     params ["_optionEntry"];
 
