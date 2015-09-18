@@ -1,14 +1,19 @@
-/**
- * fn_canInteract.sqf
- * @Descr: Check if unit can interact with enviroment. Unit has to be awake and not be in arrested state.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if unit can interact with enviroment. Unit has to be awake and not be in arrested state.
  *
- * @Arguments: [unit OBJECT]
- * @Return: BOOL True if unit can interact with enviroment.
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit that try to Interact <OBJECT>
+ *
+ * Return Value:
+ * Can interact with enviroment <BOOL>
+ *
+ * Public: No
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
-(((_unit getvariable [QGVAR(canInteract),0]) < 1) && ([_unit] call FUNC(isAwake)) && !([_unit] call FUNC(isArrested)))
+(_unit getvariable [QGVAR(canInteract),0]) < 1 && [_unit] call FUNC(isAwake) && !([_unit] call FUNC(isArrested))

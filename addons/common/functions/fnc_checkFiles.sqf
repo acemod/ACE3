@@ -1,13 +1,14 @@
 /*
  * Author: commy2
- *
  * Compares version numbers of PBOs and DLLs.
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -36,13 +37,17 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     };
-} forEach _addons;
+    false
+} count _addons;
 
 ///////////////
 // check dlls
 ///////////////
 {
-    if (_x callExtension "version" == "") then {
+    private "_versionEx";
+    _versionEx = _x callExtension "version";
+
+    if (_versionEx == "") then {
         private "_errorMsg";
         _errorMsg = format ["Extension %1.dll not installed.", _x];
 
@@ -53,9 +58,10 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         };
     } else {
         // Print the current extension version
-        ACE_LOGINFO_2("Extension version: %1: %2",_x,(_x callExtension "version"));
+        ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
     };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
+    false
+} count getArray (configFile >> "ACE_Extensions" >> "extensions");
 
 ///////////////
 // check server version/addons
@@ -75,9 +81,7 @@ if (isMultiplayer) then {
         [{
             if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
 
-            private ["_version","_addons"];
-            _version = (_this select 0) select 0;
-            _addons = (_this select 0) select 1;
+            (_this select 0) params ["_version", "_addons"];
 
             if (_version != GVAR(ServerVersion)) then {
                 private "_errorMsg";
