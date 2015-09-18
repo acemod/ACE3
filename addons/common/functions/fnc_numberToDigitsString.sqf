@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Transforms a number to an string of the correspondending digits.
  *
  * Arguments:
@@ -8,7 +7,7 @@
  * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Number, optional)
  *
  * Return Value:
- * Digits. The maximum length is six digits. (String)
+ * Digits. The maximum length is six digits. <STRING>
  *
  * Public: Yes
  */

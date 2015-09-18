@@ -132,7 +132,6 @@ PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
-PREP(moveToTempGroup);
 PREP(muteUnit);
 PREP(muteUnitHandleInitPost);
 PREP(muteUnitHandleRespawn);

@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * current local side (Side)
+ * current local side <SIDE>
  *
  * Public: Yes
  */
