@@ -25,17 +25,20 @@ if (!hasInterface) exitWith {};
 
 params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine"];
 
+private "_player";
+_player = ACE_player;
+
 //If our vehicle didn't shoot, or we're not in NVG mode, exit
-if ((_vehicle != (vehicle ACE_player)) || {(currentVisionMode ACE_player) != 1}) exitWith {};
+if ((_vehicle != (vehicle _player)) || {(currentVisionMode _player) != 1}) exitWith {};
 //If we are mounted, and it wasn't our weapon system that fired, exit
-if (ACE_player != _vehicle && {!(_weapon in (_vehicle weaponsTurret ([ACE_player] call EFUNC(common,getTurretIndex))))}) exitWith {};
+if (_player != _vehicle && {!(_weapon in (_vehicle weaponsTurret ([_player] call EFUNC(common,getTurretIndex))))}) exitWith {};
 
 private["_darkness", "_nvgBrightnessCoef", "_silencer", "_visibleFire", "_visibleFireCoef", "_visibleFireTime", "_visibleFireTimeCoef"];
 
 _silencer = switch (_weapon) do {
-    case (primaryWeapon ACE_player) : {primaryWeaponItems ACE_player select 0};
-    case (secondaryWeapon ACE_player) : {secondaryWeaponItems ACE_player select 0};
-    case (handgunWeapon ACE_player) : {handgunItems ACE_player select 0};
+    case (primaryWeapon _player): {(primaryWeaponItems _player) select 0};
+    case (secondaryWeapon _player): {(secondaryWeaponItems _player) select 0};
+    case (handgunWeapon _player): {(handgunItems _player) select 0};
     default {""};
 };
 
@@ -49,14 +52,14 @@ if (_silencer != "") then {
 _visibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFire");
 _visibleFireTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFireTime");
 
-_nvgBrightnessCoef = 1 + (ACE_player getVariable [QGVAR(NVGBrightness), 0]) / 4;
+_nvgBrightnessCoef = 1 + (_player getVariable [QGVAR(NVGBrightness), 0]) / 4;
 
 _fnc_isTracer = {
     private ["_indexShot", "_lastRoundsTracer", "_tracersEvery"];
 
     if (getNumber (configFile >> "CfgAmmo" >> _ammo >> "nvgOnly") > 0) exitWith {false};
 
-    _indexShot = (ACE_player ammo _weapon) + 1;
+    _indexShot = (_player ammo _weapon) + 1;
 
     _lastRoundsTracer = getNumber (configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
     if (_indexShot <= _lastRoundsTracer) exitWith {true};
