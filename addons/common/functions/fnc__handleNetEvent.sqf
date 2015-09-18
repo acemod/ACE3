@@ -54,7 +54,7 @@ if (_eventType == "ACEc") then {
         };
 
         //If not multiplayer, and there are targets, then just run localy
-        if ((!isMultiplayer) && {(count _eventTargets) > 0}) exitWith {
+        if (!isMultiplayer && {count _eventTargets > 0}) exitWith {
             ACEg = [_eventName, _eventArgs];
             ["ACEg", ACEg] call FUNC(_handleNetEvent);
         };
@@ -65,9 +65,10 @@ if (_eventType == "ACEc") then {
             if (IS_OBJECT(_x)) then {
                 _owner = owner _x;
             };
-            if (!(_owner in _sentEvents)) then {
-                PUSH(_sentEvents, _owner);
+            if !(_owner in _sentEvents) then {
+                _sentEvents pushBack _owner;
                 ACEg = [_eventName, _eventArgs];
+
                 if (isDedicated || {_x != ACE_player}) then {
                     if (isDedicated && {local _x} && {!_serverFlagged}) then {
                         _serverFlagged = true;
