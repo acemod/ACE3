@@ -20,7 +20,7 @@ private ["_validVehiclestate", "_emptyPos", "_loaded"];
 
 _validVehiclestate = true;
 
-if (_vehicle isKindOf "Ship" ) then {
+if (_vehicle isKindOf "Ship") then {
     if (speed _vehicle > 1 || {getPos _vehicle select 2 > 2}) then {
         _validVehiclestate = false;
     };
@@ -45,7 +45,7 @@ if (_vehicle isKindOf "Ship" ) then {
 
         TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
 
-        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit]);
+        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit];
     };
 };
 
