@@ -10,15 +10,17 @@
  * None
  *
  * Example:
- * [bob, true] call ace_common_fnc_disableAI;
+ * [bob, true] call ace_common_fnc_disableAI
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_disable);
+params ["_unit", "_disable"];
 
-if ((local _unit) && {!([_unit] call EFUNC(common,isPlayer))}) then {
+if (!local _unit) exitWith {};
+
+if !([_unit] call EFUNC(common,isPlayer)) then {
     if (_disable) then {
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";
@@ -27,7 +29,10 @@ if ((local _unit) && {!([_unit] call EFUNC(common,isPlayer))}) then {
         _unit disableConversation true;
     } else {
         //Sanity check to make sure we don't enable unconsious AI
-        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {ERROR("Enabling AI for unconsious unit");};
+        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {
+            ERROR("Enabling AI for unconsious unit");
+        };
+
         _unit enableAI "MOVE";
         _unit enableAI "TARGET";
         _unit enableAI "AUTOTARGET";
