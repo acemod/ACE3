@@ -81,4 +81,4 @@ switch (_priority) do {
     default {};
 };
 
-["Anim", [_priority, _animation]] call FUNC(log);
+TRACE_2("Anim",_priority, _animation);

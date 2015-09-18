@@ -17,9 +17,9 @@ _unit setvariable ["ACE_isUnconscious", nil, true];
 
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
-    [false] call FUNC(disableKeyInput);
+    // [false] call FUNC(disableKeyInput); //func does not exist
     if (["ace_medical"] call FUNC(isModLoaded)) then {
-        [false] call EFUNC(medical,effectBlackOut);
+        // [false] call EFUNC(medical,effectBlackOut); //func does not exist
     };
 
     if !(isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {

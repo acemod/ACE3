@@ -29,8 +29,6 @@ if (isNil "_unit") then {
     _unit = 2;
 };
 
-["Remote", [_arguments, _this select 1, _unit], {format ["%1 call %2 to: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
-
 if (typeName _unit == "SCALAR") exitWith {
     switch (_unit) do {
         case 0 : {
