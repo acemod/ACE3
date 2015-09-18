@@ -140,7 +140,7 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
-			<English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
+            <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Уменьшает способность игроков слышать при повреждении слуха</Russian>
             <Polish>Głuchota bojowa pojawia się w momentach, kiedy stoimy w pobliżu broni wielkokalibrowej bez ochrony słuchu, lub np. podczas ostrzału artyleryjskiego. Moduł ten pozwala na włączenie lub wyłączenie tego efektu.</Polish>

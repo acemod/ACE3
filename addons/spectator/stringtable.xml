@@ -474,7 +474,7 @@
             <Portuguese>Ajustar zoom</Portuguese>
             <Russian>Настроить зум</Russian>
             <Czech>Regulovat Přiblížení</Czech>
-            <Spanish>Ajustar enfoque</Spanish>
+            <Spanish>Ajustar aumento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
@@ -489,7 +489,7 @@
             <Polish>Reguluj zoom (krok)</Polish>
             <Portuguese>Incrementar zoom</Portuguese>
             <Russian>Увеличить зум</Russian>
-            <Spanish>Incrementar enfoque</Spanish>
+            <Spanish>Incrementar aumento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
@@ -504,7 +504,7 @@
             <Portuguese>Redefinir zoom</Portuguese>
             <Russian>Сбросить зум</Russian>
             <Czech>Obnovit Přiblížení</Czech>
-            <Spanish>Reiniciar enfoque</Spanish>
+            <Spanish>Reiniciar aumento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>

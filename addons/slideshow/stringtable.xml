@@ -65,7 +65,7 @@
             <Portuguese>Imagens</Portuguese>
             <Russian>Изображения</Russian>
             <Czech>Obrázky</Czech>
-            <Spanish>Imagenes</Spanish>
+            <Spanish>Imágenes</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -74,7 +74,7 @@
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
             <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
             <Russian>Список изображений, которые будут использованы для слайд-шоу, разделенные запятыми, с полными путями в правильном формате (например, images\image.paa).</Russian>
-            <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imagenes\ image.paa).</Spanish>
+            <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
