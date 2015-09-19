@@ -695,6 +695,7 @@ class CfgVehicles {
     class ACE_bodyBagObject: MapBoard_altis_F {
         XEH_ENABLED;
         scope = 1;
+        scopeCurator = 2;
         side = -1;
         model = QUOTE(PATHTOEF(apl,bodybag.p3d));
         icon = "";
@@ -720,6 +721,7 @@ class CfgVehicles {
     class Thing;
     class ACE_MedicalLitterBase: Thing {
         scope = 1;
+        scopeCurator = 0;
         displayName = " ";
         destrType = "DestructNo";
         model = QUOTE(PATHTOF(data\littergeneric.p3d));
@@ -900,6 +902,7 @@ class CfgVehicles {
     class NATO_Box_Base;
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
+        scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = PATHTOF(data\ace_medcrate.p3d);
