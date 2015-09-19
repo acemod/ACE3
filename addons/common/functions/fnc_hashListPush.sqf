@@ -1,7 +1,19 @@
-//fnc_hashListPush.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-PARAMS_2(_hashList,_value);
+params ["_hashList", "_value"];
 
 ERRORDATA(2);
 try {

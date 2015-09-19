@@ -1,9 +1,22 @@
-//fnc_hashListSet.sqf
+/*
+ * Author: ?
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
 private ["_vals"];
 
-PARAMS_3(_hashList,_index,_value);
+params ["_hashList", "_index", "_value"];
+
 ERRORDATA(3);
 try {
     if(VALIDHASH(_hashList)) then {

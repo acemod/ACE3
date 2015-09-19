@@ -1,5 +1,15 @@
-//fnc_hashCreate.sqf
+/*
+ * Author: ?
+ * Returns an empty hash structure
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Empty Hash Structure <ARRAY>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-// diag_log text format["%1 HASH CREATE"];
 [[],[]]
