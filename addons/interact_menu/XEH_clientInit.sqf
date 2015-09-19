@@ -107,7 +107,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 
 //Debug to help end users identify mods that break CBA's XEH
-["SettingsInitialized", {
+[{
     private ["_badClassnames"];
     _badClassnames = [];
     {
@@ -122,7 +122,11 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
         ACE_LOGINFO("All compile checks passed");
     } else {
         ACE_LOGERROR_1("%1 Classnames failed compile check!!! (bad XEH / missing cba_enable_auto_xeh.pbo)", (count _badClassnames));
-        ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
-    };
-}] call EFUNC(common,addEventHandler);
 
+        //Only show visual error if they are actually missing the pbo:
+        #define SUPMON configFile>>"CfgSettings">>"CBA">>"XEH">>"supportMonitor"
+        if ((!isNumber(SUPMON)) || {getNumber(SUPMON) != 1}) then {
+            ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
+        };
+    };
+}, [], 5] call EFUNC(common,waitAndExecute);  //ensure CBASupMon has time to run first
