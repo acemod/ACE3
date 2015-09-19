@@ -13,6 +13,16 @@
  */
 #include "script_component.hpp"
 
+#define COLORS [ \
+    "#(argb,8,8,3)color(1,0,0,1,co)", \
+    "#(argb,8,8,3)color(1,0.5,0,1,co)", \
+    "#(argb,8,8,3)color(1,1,0,1,co)", \
+    "#(argb,8,8,3)color(0,1,0,1,co)", \
+    "#(argb,8,8,3)color(0,0,1,1,co)", \
+    "#(argb,8,8,3)color(0.2,0,0.5,1,co)", \
+    "#(argb,8,8,3)color(0.5,0,1,1,co)" \
+]
+
 params ["", "_units", "_activated"];
 
 if !(_activated) exitWith {};
@@ -50,9 +60,9 @@ GVAR(LSD_ColorsCount) = count GVAR(LSD_Colors);
 if (isNil QGVAR(LSD_PFH)) then {
     GVAR(LSD_PFH) = [{
         {
-            params ["_vehicle", "_hSCount"];
+            _x params ["_vehicle", "_hSCount"];
             for "_i" from 0 to (_hSCount - 1) do {
-                _vehicle setObjectTexture [_i, _colors select GVAR(LSD_index)];
+                _vehicle setObjectTexture [_i, COLORS select GVAR(LSD_index)];
             };
             nil
         } count GVAR(LSD_Vehicles);
