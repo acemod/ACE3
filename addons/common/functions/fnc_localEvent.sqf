@@ -1,6 +1,5 @@
 /*
  * Author: Nou
- *
  * Execute a local event on this client only.
  *
  * Arguments:
