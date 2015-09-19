@@ -20,6 +20,8 @@
 private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return"];
 params ["_caller", "_target", "_hitPoint"];
 
+if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
 // Get hitpoint groups if available
 _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);
 _hitpointGroup = [];
