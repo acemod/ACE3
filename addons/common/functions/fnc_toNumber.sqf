@@ -1,25 +1,23 @@
 /*
-  Name: FUNC(toNumber)
-
-  Author(s):
-    Garth de Wet (LH)
-
-  Description:
-    Takes a string/number and returns the number.
-
-  Parameters:
-    0: TYPE - Value to attempt to convert to number or if number simply return number.
-
-  Returns:
-    NUMBER
-
-  Example:
-    number = ["102"] call FUNC(toNumber);
-*/
+ * Author: Garth de Wet (LH)
+ *
+ * Takes a string/number and returns the number.
+ *
+ * Arguments:
+ * 0: Value to attempt to convert to number or if number simply return number. <STRING, NUMBER>
+ *
+ * Return Value:
+ * <NUMBER>
+ *
+ * Example:
+ * number = ["102"] call ace_common_fnc_toNumber;
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-if (typeName (_this select 0) == "SCALAR") exitWith {
-    (_this select 0)
-};
+params ["_value"];
 
-(parseNumber (_this select 0))
+if (typeName _value == "SCALAR") exitWith {_value};
+
+parseNumber _value // return

@@ -9,6 +9,8 @@
  * None
  *
  * Public: Yes
+ *
+ * Note: Not functional, because FUNC(localAnim) does no longer exist
  */
 #include "script_component.hpp"
 

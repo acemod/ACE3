@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Converts number to binary number
  *
  * Arguments:
- * A number
+ * A number <NUMBER>
  *
  * Return Value:
- * A binary number, String
+ * A binary number as string <STRING>
  *
  * Public: Yes
  */
@@ -32,4 +31,4 @@ while {count toArray _bin < _minLength} do {
     _bin = "0" + _bin;
 };
 
-_sign + _bin
+_sign + _bin // return
