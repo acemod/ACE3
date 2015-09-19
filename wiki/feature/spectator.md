@@ -106,7 +106,7 @@ Spectatable sides can be considered another filter for the unit list to determin
 - Side list
 - Side filter
 
-The side list is a list of sides *possible* to spectate on the local client, by default this is always `[west,east,resistance,civilian]` and does not change. To update it (on the local client) function `ace_spectator_fnc_updateSpectatableSides` can be used:
+The side list is a list of sides *possible* to spectate. By default this is always `[west, east, resistance, civilian]` and does not change. To update the local client's side list the function `ace_spectator_fnc_updateSpectatableSides` can be used:
 
 ```
  * Arguments:
