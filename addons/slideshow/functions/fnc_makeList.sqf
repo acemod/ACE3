@@ -17,9 +17,8 @@
  */
 #include "script_component.hpp"
 
-params ["_list", "_trimWhitespace", "_checkNil"];
-
 private ["_splittedList", "_listTrimmedWhitespace", "_nilCheckPassedList"];
+params ["_list", "_trimWhitespace", "_checkNil"];
 
 // Split using comma delimiter
 _splittedList = [_list, ","] call BIS_fnc_splitString;

@@ -79,5 +79,5 @@ _newUnit setvariable ["ACE_isUnconscious", true, true];
 _newUnit setvariable [QGVAR(disableInteraction), true, true];
 _oldBody setvariable [QGVAR(disableInteraction), true, true];
 
-_newUnit setDamage 0.89;
+[_newUnit, 0.89] call FUNC(setStructuralDamage);
 _newUnit;

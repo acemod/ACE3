@@ -14,8 +14,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_1(_unit);
+params ["_unit"];
 
 // Exit if hearing is disabled or soldier has earplugs already in (persistence scenarios)
 if (!GVAR(enableCombatDeafness) || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
