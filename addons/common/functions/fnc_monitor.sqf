@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * hint retun value of given function every frame
  *
  * Argument:

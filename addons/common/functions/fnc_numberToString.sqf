@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Converts a number to a string without losing as much precission as str or format.
  *
  * Arguments:
  * 0: A number <NUMBER>
  *
  * Return Value:
- * The number as string (String)
+ * The number as string <STRING>
  *
  * Public: Yes
  */
