@@ -31,24 +31,6 @@ if (isNil QGVAR(LSD_Vehicles)) then {
     GVAR(LSD_Vehicles) = [];
 };
 
-if (isNil QGVAR(LSD_Colors)) then {
-    GVAR(LSD_Colors) = [
-        "#(argb,8,8,3)color(1,0,0,1,co)",
-        "#(argb,8,8,3)color(1,0.5,0,1,co)",
-        "#(argb,8,8,3)color(1,1,0,1,co)",
-        "#(argb,8,8,3)color(0,1,0,1,co)",
-        "#(argb,8,8,3)color(0,0,1,1,co)",
-        "#(argb,8,8,3)color(0.2,0,0.5,1,co)",
-        "#(argb,8,8,3)color(0.5,0,1,1,co)"
-    ];
-};
-
-if (isNil QGVAR(LSD_index)) then {
-    GVAR(LSD_index) = 0;
-};
-
-GVAR(LSD_ColorsCount) = count GVAR(LSD_Colors);
-
 {
     _hSCount = count (getArray (configFile >> "CfgVehicles" >> typeOf _x >> "hiddenSelections"));
     if (_hSCount > 0) then {
@@ -59,14 +41,18 @@ GVAR(LSD_ColorsCount) = count GVAR(LSD_Colors);
 
 if (isNil QGVAR(LSD_PFH)) then {
     GVAR(LSD_PFH) = [{
+        (_this select 0) params ["_index"];
         {
             _x params ["_vehicle", "_hSCount"];
             for "_i" from 0 to (_hSCount - 1) do {
-                _vehicle setObjectTexture [_i, COLORS select GVAR(LSD_index)];
+                _vehicle setObjectTexture [_i, COLORS select _index];
             };
             nil
         } count GVAR(LSD_Vehicles);
-        GVAR(LSD_index) = ((GVAR(LSD_index) + 1) % 7) mod GVAR(LSD_ColorsCount);
-    }, 0.02, []] call CBA_fnc_addPerFrameHandler;
+
+        _index = ((_index + 1) % 7) mod count COLORS;
+        (_this select 0) set [0, _index];
+
+    }, 0.02, [0]] call CBA_fnc_addPerFrameHandler;
 };
 ACE_LOGINFO("WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED.");
