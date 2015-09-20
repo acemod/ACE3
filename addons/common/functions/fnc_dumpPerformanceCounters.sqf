@@ -20,7 +20,7 @@ if (!isNil "ACE_PFH_COUNTER") then {
         _x params ["_pfh", "_parameters"];
 
         private "_isActive";
-        _isActive = ["ACTIVE", "REMOVED"] select isNil {CBA_common_PFHhandles select (_pfh select 0)}
+        _isActive = ["ACTIVE", "REMOVED"] select isNil {CBA_common_PFHhandles select (_pfh select 0)};
 
         diag_log text format ["Registered PFH: id=%1 [%2, delay %3], %4:%5", _pfh select 0, _isActive, _parameters select 1, _pfh select 1, _pfh select 2]; 
         false
