@@ -39,26 +39,47 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         std::vector<std::string> arguments = parseExtensionInput(function);
         if (arguments.size() > 0) 
         {
-            std::string command = arguments.at(0);
-            arguments.erase(arguments.begin());
-  
-            if (command == "addInjuryType") {
-                returnValue = ace::medical::handleDamage::GetInstance().AddInjuryType(arguments);
-            }
-            else if (command == "addDamageType") {
-                returnValue = ace::medical::handleDamage::GetInstance().AddDamageType(arguments);
-            }
-            else if (command == "HandleDamageWounds") {
-                if (arguments.size() >= 4) {
-                    std::string selectionName = arguments.at(0);
-                    double amountOfDamage = std::stod(arguments.at(1));
-                    std::string typeOfDamage = arguments.at(2);
-                    int woundID = std::stoi(arguments.at(3));
-                    returnValue = ace::medical::handleDamage::GetInstance().HandleDamageWounds(selectionName, amountOfDamage, typeOfDamage, woundID);
+            try {
+                std::string command = arguments.at(0);
+                arguments.erase(arguments.begin());
+
+                if (command == "addInjuryType") {
+                    returnValue = ace::medical::handleDamage::GetInstance().AddInjuryType(arguments);
+                }
+                else if (command == "addDamageType") {
+                    returnValue = ace::medical::handleDamage::GetInstance().AddDamageType(arguments);
+                }
+                else if (command == "HandleDamageWounds") {
+                    if (arguments.size() >= 4) {
+                        std::string selectionName = arguments.at(0);
+                        double amountOfDamage = std::stod(arguments.at(1));
+                        std::string typeOfDamage = arguments.at(2);
+                        int woundID = std::stoi(arguments.at(3));
+                        returnValue = ace::medical::handleDamage::GetInstance().HandleDamageWounds(selectionName, amountOfDamage, typeOfDamage, woundID);
+                    }
+                }
+                else if (command == "ConfigComplete") {
+                    ace::medical::handleDamage::GetInstance().FinalizeDefinitions();
                 }
             }
-            else if (command == "ConfigComplete") {
-                ace::medical::handleDamage::GetInstance().FinalizeDefinitions();
+            catch (std::exception e) {
+                std::stringstream debugreturn;
+                debugreturn << "diag_log format['ACE3 ERROR - Medical Extension: Something went wrong. Input: '];";
+                int i = 0;
+                for (auto arg : arguments) {
+                    debugreturn << "diag_log format['   arg " << i++ << ":" << arg << "'];";
+                }
+                debugreturn << "diag_log format['Exception: " << e.what() << "'];";
+                returnValue = debugreturn.str();
+            }
+            catch (...) {
+                std::stringstream debugreturn;
+                debugreturn << "diag_log format['ACE3 ERROR - Medical Extension: Something went wrong. Input: '];";
+                int i = 0;
+                for (auto arg : arguments) {
+                    debugreturn << "diag_log format['   arg " << i++ << ":" << arg << "'];";
+                }
+                returnValue = debugreturn.str();
             }
         }
         strncpy(output, returnValue.c_str(), outputSize);
