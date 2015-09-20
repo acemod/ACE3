@@ -16,4 +16,4 @@
 
 params ["_unit", ["_excludeRemoteControlled", false]];
 
-isPlayer _unit || (!_excludeRemoteControlled && {_unit == call FUNC(player)})
+isPlayer _unit || (!_excludeRemoteControlled && {_unit == call FUNC(player)}) // return

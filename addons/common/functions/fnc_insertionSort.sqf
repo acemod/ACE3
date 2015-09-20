@@ -1,30 +1,34 @@
-/**
- * fn_insertionSort.sqf
- * @Descr: Sorts an array of numbers
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
+ * Sorts an array of numbers
  *
- * @Arguments: [array ARRAY, (optional) ascending BOOL]
- * @Return: sortedArray ARRAY
- * @PublicAPI: true
+ * Arguments:
+ * 0: array <ARRAY>
+ * 1: ascending (optional) <BOOL>
+ *
+ * Return Value:
+ * sortedArray (ARRAY)
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_list", "_ascending", "_tmp", "_i", "_j"];
-_list = +(_this select 0);
-_ascending = true;
-if (count _this > 1) then {
-    _ascending = _this select 1;
-};
+params ["_list", ["_ascending", true]];
 
-for "_i" from 1 to (count _list) - 1 do {
+_list = + _list; // copy array to not alter the original one
+
+private "_tmp";
+
+for "_i" from 1 to (count _list - 1) do {
     _tmp = _list select _i;
     _j = _i;
+
     while {_j >= 1 && {_tmp < _list select (_j - 1)}} do {
         _list set [_j, _list select (_j - 1)];
         _j = _j - 1;
     };
-    _list set[_j, _tmp];
+
+    _list set [_j, _tmp];
 };
 
 if (!_ascending) then {

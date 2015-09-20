@@ -1,13 +1,12 @@
 /*
  * Author: commy2
- *
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * N: Booleans <ARRAY of Booleans>
+ * N: Booleans <ARRAY>
  *
  * Return Value:
- * Bitmask (Number)
+ * Bitmask <NUMBER>
  *
  * Public: Yes
  */
@@ -18,6 +17,7 @@ private ["_array", "_result"];
 _array = _this;
 
 _result = 0;
+
 {
     if (_x) then {_result = _result + 2 ^ _forEachIndex};
 } forEach _array;

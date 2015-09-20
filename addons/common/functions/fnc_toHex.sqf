@@ -1,26 +1,28 @@
 /*
  * Author: commy2, esteldunedain
- *
  * Converts number to hexadecimal number
  *
  * Arguments:
  * A number between 0 and 255 <NUMBER>
  *
  * Return Value:
- * A hexadecimal number, <STRING>
+ * A hexadecimal number as string <STRING>
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_number"];
-_number = ((round abs (_this select 0)) max 0) min 255;
+params ["_number"];
+
+_number = ((round abs _number) max 0) min 255;
 
 if (isNil QGVAR(hexArray)) then {
-    private ["_minLength", "_i", "_num", "_hex", "_rest"];
-
     GVAR(hexArray) = [];
+
+    private ["_minLength", "_num", "_hex", "_rest"];
+
     _minLength = 2;
+
     for [{_i = 0;}, {_i < 256}, {_i = _i + 1}] do {
         _num = _i;
         _hex = ["", "0"] select (_i == 0);
@@ -39,11 +41,13 @@ if (isNil QGVAR(hexArray)) then {
             _num = floor (_num / 16);
             _hex = _rest + _hex;
         };
+
         while {count toArray _hex < _minLength} do {
             _hex = "0" + _hex;
         };
+
         GVAR(hexArray) pushBack _hex;
     };
 };
 
-(GVAR(hexArray) select _number)
+GVAR(hexArray) select _number // return
