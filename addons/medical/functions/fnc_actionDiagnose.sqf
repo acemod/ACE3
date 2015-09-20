@@ -35,10 +35,12 @@ if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
     _genericMessages pushback LSTRING(noBloodloss);
 };
 
-if (_target getvariable[QGVAR(hasPain), false]) then {
-    _genericMessages pushback LSTRING(inPain);
-} else {
-    _genericMessages pushback LSTRING(noPain);
+if (alive _target) then {
+    if (_target getvariable[QGVAR(hasPain), false]) then {
+        _genericMessages pushback LSTRING(inPain);
+    } else {
+        _genericMessages pushback LSTRING(noPain);
+    };
 };
 
 ["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);
