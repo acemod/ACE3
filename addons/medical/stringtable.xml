@@ -2105,6 +2105,9 @@
             <Polish>%1 wykonał cykl RKO</Polish>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_Activity_fullHeal">
+            <English>%1 used Personal Aid Kit</English>
+        </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
