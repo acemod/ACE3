@@ -20,11 +20,11 @@ ccb = ctypes.windll.user32.CloseClipboard
 ga = ctypes.windll.kernel32.GlobalAlloc    # Global Memory allocation
 gl = ctypes.windll.kernel32.GlobalLock     # Global Memory Locking
 gul = ctypes.windll.kernel32.GlobalUnlock
-GMEM_DDESHARE = 0x2000 
+GMEM_DDESHARE = 0x2000
 
 def Get( ):
   ocb(None) # Open Clip, Default task
-  pcontents = gcd(1) # 1 means CF_TEXT.. too lazy to get the token thingy ... 
+  pcontents = gcd(1) # 1 means CF_TEXT.. too lazy to get the token thingy ...
   data = ctypes.c_char_p(pcontents).value
   #gul(pcontents) ?
   ccb()
@@ -41,20 +41,10 @@ def Paste( data ):
   ccb()
 
 
-    
 def getFunctions(filepath):
-
     selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
-
     # print("Checking {0} from {1}".format(filepath,selfmodule))
-    
-    def pushClosing(t):
-        closingStack.append(closing.expr)
-        closing << Literal( closingFor[t[0]] )
-            
-    def popClosing():
-        closing << closingStack.pop()
-        
+
     with open(filepath, 'r') as file:
         content = file.read()
 
@@ -65,16 +55,41 @@ def getFunctions(filepath):
         srch = re.compile('EFUNC\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
         exfuncs = srch.findall(content)
         exfuncs = sorted(set(exfuncs))
-    
-    allFuncs = []
+
+    fileFuncs = []
     for func in modfuncs:
-        allFuncs.append("ace_{0}_fnc_{1}".format(selfmodule,func))
-        
+        fileFuncs.append("ace_{0}_fnc_{1}".format(selfmodule,func))
+
     for exModule,func in exfuncs:
-        allFuncs.append("ace_{0}_fnc_{1}".format(exModule, func))
-        
-    return allFuncs
-            
+        fileFuncs.append("ace_{0}_fnc_{1}".format(exModule, func))
+
+    return fileFuncs
+
+
+def getStrings(filepath):
+    selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
+    # print("Checking {0} from {1}".format(filepath,selfmodule))
+
+    with open(filepath, 'r') as file:
+        content = file.read()
+
+        srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
+        modfuncs = srch.findall(content)
+        modfuncs = sorted(set(modfuncs))
+
+        srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
+        exfuncs = srch.findall(content)
+        exfuncs = sorted(set(exfuncs))
+
+    fileStrings = []
+    for func in modfuncs:
+        fileStrings.append("STR_ACE_{0}_{1}".format(selfmodule,func))
+
+    # for exModule,func in exfuncs:
+        # fileStrings.append("STR_ACE_{0}_{1}".format(exModule, func))
+
+    return fileStrings
+
 def main():
 
     print("#########################")
@@ -82,30 +97,39 @@ def main():
     print("#########################")
 
     sqf_list = []
+
     allFunctions = []
-    
+    allStrings = []
+
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
- 
+
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
       for filename in fnmatch.filter(filenames, '*.sqf'):
         sqf_list.append(os.path.join(root, filename))
-        
+      for filename in fnmatch.filter(filenames, '*.cpp'):
+        sqf_list.append(os.path.join(root, filename))
+      for filename in fnmatch.filter(filenames, '*.hpp'):
+        sqf_list.append(os.path.join(root, filename))
+
     for filename in sqf_list:
         allFunctions = allFunctions + getFunctions(filename)
-    
-    
-    testCode1 = "diag_log text '*********** Scaning for nil functions [count {0}]';".format(len(set(allFunctions)));
-    testCode2 = "{ if (isNil _x) then {systemChat format ['%1 is nil', _x]; diag_log text format ['%1 is nil', _x];}} forEach allFunctions;";
-    
-    outputCode = "{0} allFunctions = {1}; {2}".format(testCode1, list(set(allFunctions)), testCode2)
-    
+    for filename in sqf_list:
+        allStrings = allStrings + getStrings(filename)
+
+
+    codeHeader = "diag_log text '*********** Scaning for nil functions [funcs {0} / strings {1}]';".format(len(set(allFunctions)), len(set(allStrings)))
+    codeFuncCheck = "{ if (isNil _x) then {systemChat format ['%1 is nil', _x]; diag_log text format ['%1 is nil', _x];}} forEach allFunctions;"
+    codeStringCheck = "{ if (!isLocalized _x) then {systemChat format ['%1 is not in stringtable', _x]; diag_log text format ['%1 is not in stringtable', _x];}} forEach allStrings;"
+
+    outputCode = "{0} allFunctions = {1}; allStrings = {2}; {3} {4}".format(codeHeader, list(set(allFunctions)), list(set(allStrings)), codeFuncCheck, codeStringCheck)
+
     print(outputCode)
     Paste(outputCode);
 
     print ("")
-    print ("Copied to clipboard, total func count {0}".format(len(set(allFunctions))))
-    
+    print ("Copied to clipboard, [funcs {0} / strings {1}]'".format(len(set(allFunctions)), len(set(allStrings))))
+
 if __name__ == "__main__":
     main()

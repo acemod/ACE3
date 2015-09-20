@@ -9,7 +9,7 @@
             <Czech>Nastavení Pozorovatele</Czech>
             <Spanish>Ajustes de espectador</Spanish>
         </Key>
-        <Key ID="STR_ACE_Spectator_Settings_Descripton">
+        <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
