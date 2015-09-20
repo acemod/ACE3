@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_caller", "_unit"];
 

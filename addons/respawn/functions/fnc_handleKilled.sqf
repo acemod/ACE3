@@ -25,6 +25,7 @@ if (ACE_player == _killedUnit) then {
 
     if (GVAR(SavePreDeathGear)) then {
         GVAR(unitGear) = [_killedUnit] call EFUNC(common,getAllGear);
+        GVAR(unitGear) pushBack [currentWeapon _killedUnit, currentMuzzle _killedUnit, currentWeaponMode _killedUnit];
     };
 };
 

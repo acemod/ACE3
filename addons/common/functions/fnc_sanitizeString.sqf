@@ -1,22 +1,21 @@
 /*
  * Author: esteldunedain, based on Killzone-Kid code
- *
  * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.
  *
  * Arguments:
- * 0: Source string (String)
- * 1: Remove html tags (Bool, optional)
+ * 0: Source string <STRING>
+ * 1: Remove html tags (optional) <BOOL>
  *
  * Return Value:
  * Sanitized string
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
+params ["_string", ["_removeTags", false]];
+
 private ["_array", "_arrayNew"];
-
-PARAMS_2(_string,_removeTags);
-
-if (isNil "_removeTags") then {_removeTags = false};
 
 _array = toArray _string;
 
@@ -37,6 +36,7 @@ _arrayNew = [];
             _arrayNew = _arrayNew + [_x];
         };
     };
-} forEach _array;
+    false
+} count _array;
 
 toString _arrayNew

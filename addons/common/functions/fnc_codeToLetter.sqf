@@ -3,12 +3,14 @@
  * Converts some keys to an Arma Dik Code.
  *
  * Arguments:
- * 0: Key <CODE, STRING>
+ * 0: Key <STRING>
  *
  * Return Value:
- * Dik Code <STRING>
+ * Dik Code <NUMBER>
  *
  * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 

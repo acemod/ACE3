@@ -1,19 +1,20 @@
 /*
  * Author: jaynus
- *
  * Send a request to synchronize an event name from the client->server. Execute on client only.
  *
- * Argument:
- * 0: eventName (String)
+ * Arguments:
+ * 0: eventName <STRING>
  * 
- * Return value:
+ * Return Value:
  * Boolean of success
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-PARAMS_1(_eventName);
+
+params ["_eventName"];
 
 // Only JIP machines on initialization send this off, requesting sync on events with the serverCommand
-if(isServer) exitWith { false };
+if (isServer) exitWith {false};
 
-["SEH_s", [_eventName, ACE_player] ] call ace_common_fnc_serverEvent;
+["SEH_s", [_eventName, ACE_player] ] call FUNC(serverEvent);
