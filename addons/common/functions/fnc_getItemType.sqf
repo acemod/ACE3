@@ -33,7 +33,7 @@ if (isNumber (_config >> "ItemInfo" >> "type")) then {
 _default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
 
 switch (true) do {
-    case (_type == 0): {[_default,"unknown"]};
+    case (_type == 0): {[_default, "unknown"]};
     case (_type == 2^0): {["weapon", "primary"]};
     case (_type == 2^1): {["weapon", "handgun"]};
     case (_type == 2^2): {["weapon", "secondary"]};
