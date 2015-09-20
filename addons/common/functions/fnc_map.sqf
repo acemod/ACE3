@@ -24,4 +24,5 @@ _array = + _array;
 {
     _array set [_forEachIndex, _x call _code];
 } forEach _array;
+
 _array

@@ -1,6 +1,5 @@
 /*
  * Author: KoffeinFlummi, joko // Jonas
- *
  * Nothing to see here, move along.
  *
  * Arguments:

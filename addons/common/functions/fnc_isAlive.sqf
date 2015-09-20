@@ -14,4 +14,4 @@
  */
 #include "script_component.hpp"
 
-!isNull (_this select 0) && {alive (_this select 0)}
+!isNull (_this select 0) && {alive (_this select 0)} // return
