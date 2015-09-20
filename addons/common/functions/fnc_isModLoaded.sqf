@@ -12,4 +12,6 @@
  */
 #include "script_component.hpp"
 
-isClass (configFile >> "cfgPatches" >> _this select 0) // return
+params ["_modName"];
+
+isClass (configFile >> "cfgPatches" >> _modName) // return

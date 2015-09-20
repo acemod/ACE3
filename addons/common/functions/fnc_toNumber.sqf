@@ -1,6 +1,5 @@
 /*
  * Author: Garth de Wet (LH)
- *
  * Takes a string/number and returns the number.
  *
  * Arguments:

@@ -10,17 +10,9 @@
  * copy of string <STRING>
  *
  * Public: Yes
- *
- * Deprecated
  */
 #include "script_component.hpp"
 
-params ["_string", ""];
+params ["_string"];
 
-private ["_charArray", "_returnString"];
-
-_charArray = toArray _string;
-_charArray = _charArray - [((toArray " ") select 0)];
-_returnString = toString _charArray;
-
-_returnString
+(_string splitString " ") joinString ""

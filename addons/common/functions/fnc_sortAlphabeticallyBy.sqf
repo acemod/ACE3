@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * ? deprecated
+ * ?
  *
  * Arguments:
  * ?

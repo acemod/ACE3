@@ -1,6 +1,5 @@
 /*
  * Author: Glowbal
- *
  * Check if unit is awake. Will be false when death or unit is unconscious.
  *
  * Arguments:
@@ -15,4 +14,4 @@
 
 params ["_unit"];
 
-!(_unit getvariable ["ACE_isUnconscious", false]) && alive _unit && !(_unit getvariable ["ACE_isDead", false]);
+!(_unit getvariable ["ACE_isUnconscious", false]) && alive _unit && !(_unit getvariable ["ACE_isDead", false]) // return

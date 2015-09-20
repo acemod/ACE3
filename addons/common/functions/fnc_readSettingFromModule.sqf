@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Reads a setting value from a module, set it and force it. Logs if the setting is missing from the module.
  * Must be called on the server, effect is global.
  *

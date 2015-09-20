@@ -1,6 +1,5 @@
 /*
  * Author: SilentSpike (based on unmuteUnit)
- *
  * Globally unhides a unit. Only unhides if the last reason was removed.
  *
  * Arguments:
