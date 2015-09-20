@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Executes a code once with a given game ACE_time delay, using a PFH
  *
  * Arguments:
@@ -20,5 +19,5 @@
 
 params ["_func", "_params", "_delay"];
 
-GVAR(waitAndExecArray) pushBack [(ACE_time + _delay), _func, _params];
+GVAR(waitAndExecArray) pushBack [ACE_time + _delay, _func, _params];
 GVAR(waitAndExecArray) sort true;

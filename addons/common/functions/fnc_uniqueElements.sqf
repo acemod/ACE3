@@ -9,9 +9,19 @@
  * Copy of original array <ARRAY>
  *
  * Public: Yes
- *
- * Deprecated
  */
 #include "script_component.hpp"
 
-_this call FUNC(uniqueElements)
+params ["_array"];
+
+private "_result";
+_result = [];
+
+{
+    if !(_x in _result) then {
+        _result pushBack _x;
+    };
+    false
+} count _array;
+
+_result

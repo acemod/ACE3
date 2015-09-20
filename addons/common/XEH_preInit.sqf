@@ -179,6 +179,7 @@ PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
 PREP(unhideUnit);
+PREP(uniqueElements);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
 PREP(unloadPersonLocal);

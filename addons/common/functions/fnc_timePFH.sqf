@@ -21,6 +21,7 @@ ACE_gameTime = time;
 ACE_diagTime = diag_tickTime;
 
 _delta = ACE_diagTime - _lastTickTime;
+
 if (ACE_gameTime <= _lastGameTime) then {
     TRACE_1("paused",_delta);
     ACE_paused = true;

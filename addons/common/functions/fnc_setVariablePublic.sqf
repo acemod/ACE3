@@ -1,6 +1,5 @@
 /*
  * Author: commy2 and joko // Jonas
- *
  * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
  * Arguments:
