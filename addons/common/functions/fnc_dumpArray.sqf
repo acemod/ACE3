@@ -25,7 +25,9 @@ for "_i" from 0 to _depth do {
 _depth = _depth + 1;
 
 if (IS_ARRAY(_var)) then {
-    if (count _var > 0) then {
+    if (_var isEqualTo []) then {
+        diag_log text format["%1[],", _pad];
+    } else {
         diag_log text format["%1[", _pad];
 
         {
@@ -34,8 +36,6 @@ if (IS_ARRAY(_var)) then {
         } count _var;
 
         diag_log text format["%1],", _pad];
-    } else {
-        diag_log text format["%1[],", _pad];
     };
 } else {
     diag_log text format["%1%2", _pad, [_var] call FUNC(formatVar)];
