@@ -14,14 +14,4 @@
 
 params ["_array"];
 
-private "_result";
-_result = [];
-
-{
-    if !(_x in _result) then {
-        _result pushBack _x;
-    };
-    false
-} count _array;
-
-_result
+_array arrayIntersect _array // return
