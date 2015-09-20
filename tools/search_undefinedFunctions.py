@@ -74,19 +74,19 @@ def getStrings(filepath):
         content = file.read()
 
         srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
-        modfuncs = srch.findall(content)
-        modfuncs = sorted(set(modfuncs))
+        modStrings = srch.findall(content)
+        modStrings = sorted(set(modStrings))
 
-        srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
-        exfuncs = srch.findall(content)
-        exfuncs = sorted(set(exfuncs))
+        srch = re.compile('E[CL]STRING\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
+        exStrings = srch.findall(content)
+        exStrings = sorted(set(exStrings))
 
     fileStrings = []
-    for func in modfuncs:
-        fileStrings.append("STR_ACE_{0}_{1}".format(selfmodule,func))
+    for localString in modStrings:
+        fileStrings.append("STR_ACE_{0}_{1}".format(selfmodule, localString))
 
-    # for exModule,func in exfuncs:
-        # fileStrings.append("STR_ACE_{0}_{1}".format(exModule, func))
+    for (exModule, exString) in exStrings:
+        fileStrings.append("STR_ACE_{0}_{1}".format(exModule, exString))
 
     return fileStrings
 
