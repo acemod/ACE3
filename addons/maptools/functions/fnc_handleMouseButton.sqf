@@ -91,6 +91,4 @@ if (_dir != 1) then {
     _handled
 };
 
-diag_log text format ["HJa %1", _handled];
-
 _handled
