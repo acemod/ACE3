@@ -12,14 +12,11 @@
  */
 #include "script_component.hpp"
 
-private ["_array", "_result"];
-
-_array = _this;
-
+private "_result";
 _result = 0;
 
 {
     if (_x) then {_result = _result + 2 ^ _forEachIndex};
-} forEach _array;
+} forEach _this;
 
 _result

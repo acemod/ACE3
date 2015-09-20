@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Sets a public object namespace variable that gets reset with the same value after respawn, so JIP clients keep the value.
  *
  * Arguments:

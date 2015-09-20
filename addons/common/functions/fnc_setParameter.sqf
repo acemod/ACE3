@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Sets the value of an ACE_Parameter and makes it public.
  *
  * Arguments:
@@ -12,7 +11,7 @@
  *
  * Public: Yes
  *
- * Deprecated *@todo commy
+ * Deprecated
  */
 #include "script_component.hpp"
 

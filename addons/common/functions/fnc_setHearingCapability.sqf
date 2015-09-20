@@ -11,6 +11,8 @@
  * None
  *
  * Public: Yes
+ *
+ * Note: uses player
  */
 #include "script_component.hpp"
 

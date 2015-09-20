@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Source string <STRING>
- * 1: Remove html tags (optional) <BOOL>
+ * 1: Remove html tags (default: false) <BOOL>
  *
  * Return Value:
  * Sanitized string
@@ -15,28 +15,37 @@
 
 params ["_string", ["_removeTags", false]];
 
-private ["_array", "_arrayNew"];
+private "_array";
+_array = [];
 
-_array = toArray _string;
-
-_arrayNew = [];
 {
     switch _x do {
         case 60 : {
-            _arrayNew = if (_removeTags) then {_arrayNew + toArray "&lt;";} else {_arrayNew + [_x];};
+            if (_removeTags) then {
+                _array append toArray "&lt;";
+            } else {
+                _array pushBack _x;
+            };
         };
         case 62 : {
-            _arrayNew = if (_removeTags) then {_arrayNew + toArray "&gt;";} else {_arrayNew + [_x];};
+            if (_removeTags) then {
+                _array append toArray "&gt;";
+            } else {
+                _array pushBack _x;
+            };
         };
+
         case 34 : {
         };
+
         case 39 : {
         };
+
         default {
-            _arrayNew = _arrayNew + [_x];
+            _array pushBack _x;
         };
     };
     false
-} count _array;
+} count toArray _string;
 
-toString _arrayNew
+toString _array // return

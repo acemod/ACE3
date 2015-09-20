@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Create a centered, colored text.
  *
  * Arguments:

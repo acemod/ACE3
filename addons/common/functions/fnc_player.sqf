@@ -1,6 +1,5 @@
 /*
  * Author: bux578, commy2
- *
  * Returns the player or curator controlled unit.
  * Use this in INIT and RESPAWN eh scripts, because ACE_player isn't reset yet.
  *

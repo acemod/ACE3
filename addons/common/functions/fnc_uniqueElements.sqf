@@ -9,9 +9,9 @@
  * Copy of original array <ARRAY>
  *
  * Public: Yes
- *
- * Deprecated
  */
 #include "script_component.hpp"
 
-_this call FUNC(uniqueElements)
+params ["_array"];
+
+_array arrayIntersect _array // return
