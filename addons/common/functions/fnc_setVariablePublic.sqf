@@ -21,10 +21,12 @@ params ["_object", "_varName", "_value", ["_sync", 1]];
 // set value locally
 _object setVariable [_varName, _value];
 
-// Exit Dedicated server and headless Clients
-if (!hasInterface) exitWith {};
+// Exit if in SP
+if (!isMultiplayer) exitWith {};
 
 private ["_idName", "_syncTime"];
+
+_idName = format ["ACE_setVariablePublic_%1", _varName];
 
 if (_idName in GVAR(setVariableNames)) exitWith {};
 
@@ -39,6 +41,7 @@ if (isNil QGVAR(setVariablePublicPFH)) exitWith {};
 GVAR(setVariablePublicPFH) = [{
     private "_delete";
     _delete = 0;
+
     {
         _x params ["_object", "_varName", "_syncTime", "_idName"];
         if (ACE_diagTime > _syncTime) then {
