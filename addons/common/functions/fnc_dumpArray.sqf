@@ -26,17 +26,17 @@ _depth = _depth + 1;
 
 if (IS_ARRAY(_var)) then {
     if (_var isEqualTo []) then {
-        diag_log text format["%1[],", _pad];
+        diag_log text format ["%1[],", _pad];
     } else {
-        diag_log text format["%1[", _pad];
+        diag_log text format ["%1[", _pad];
 
         {
             [_x, _depth] call FUNC(dumpArray);
             false
         } count _var;
 
-        diag_log text format["%1],", _pad];
+        diag_log text format ["%1],", _pad];
     };
 } else {
-    diag_log text format["%1%2", _pad, [_var] call FUNC(formatVar)];
+    diag_log text format ["%1%2", _pad, [_var] call FUNC(formatVar)];
 };

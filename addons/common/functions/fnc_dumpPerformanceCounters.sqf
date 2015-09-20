@@ -12,8 +12,8 @@
  */
 #include "script_component.hpp"
 
-diag_log text format["REGISTERED ACE PFH HANDLERS"];
-diag_log text format["-------------------------------------------"];
+diag_log text format ["REGISTERED ACE PFH HANDLERS"];
+diag_log text format ["-------------------------------------------"];
 
 if (!isNil "ACE_PFH_COUNTER") then {
     {

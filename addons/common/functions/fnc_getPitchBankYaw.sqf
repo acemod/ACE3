@@ -1,14 +1,19 @@
 /*
  * Author: KoffeinFlummi
- *
- * Returns [pitch, bank, yaw] for given vehicle in degrees.
+ * Returns pitch, bank, yaw for given vehicle in degrees.
  *
  * Arguments:
- * 0: Unit/Vehicle
+ * 0: Unit/Vehicle <OBJECT>
  *
  * Return Value:
- * [pitch, bank, yaw]
+ * 0: pitch <NUMBER>
+ * 1: bank <NUMBER>
+ * 2: yaw <NUMBER>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-((_this select 0) call BIS_fnc_getPitchBank) + [getDir (_this select 0)]
+private ["_vehicle"];
+
+(_vehicle call BIS_fnc_getPitchBank) + [getDir _vehicle]
