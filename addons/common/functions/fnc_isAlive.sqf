@@ -14,6 +14,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_isAlive","3.5.0","alive");
+
 params ["_unit"];
 
 !isNull _unit && {alive _unit} // return

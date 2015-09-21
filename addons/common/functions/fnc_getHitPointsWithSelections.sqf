@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_getHitPointsWithSelections","3.5.0","getAllHitPointsDamage");
+
 params ["_vehicle"];
 
 private "_hitPointsWithSelections";
