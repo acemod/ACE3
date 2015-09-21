@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3","ace_common_fnc_inheritsFrom","3.5.0","inheritsFrom ARRAY");
+ACE_DEPRECATED("ace_common_fnc_inheritsFrom","3.5.0","inheritsFrom ARRAY");
 
 params ["_configEntry", "_configMatch"];
 
