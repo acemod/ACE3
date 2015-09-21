@@ -215,25 +215,12 @@ if (!hasInterface) exitWith {};
 // Set up mouse wheel eventhandler
 //////////////////////////////////////////////////
 
-call COMPILE_FILE(scripts\assignedItemFix);/////////////
-call COMPILE_FILE(scripts\initScrollWheel);/////////////
-
-DFUNC(mouseZHandler) = {
-    waitUntil {!isNull (findDisplay 46)}; sleep 0.1;
-    findDisplay 46 displayAddEventHandler ["MouseZChanged", QUOTE( _this call GVAR(onScrollWheel) )];
-    [false] call FUNC(disableUserInput);
-};
-
-addMissionEventHandler ["Loaded", {[] spawn FUNC(mouseZHandler)}];
-[] spawn FUNC(mouseZHandler);
-
-/*
 call FUNC(assignedItemFix);
+
 GVAR(ScrollWheelFrame) = diag_frameno;
- 
-addMissionEventHandler ["Loaded", {call FUNC(mouseZHandler)}];
-call FUNC(mouseZHandler);
-*/
+
+addMissionEventHandler ["Loaded", {call FUNC(handleScrollWheelInit)}];
+call FUNC(handleScrollWheelInit);
 
 // @todo remove?
 enableCamShake true;
@@ -417,14 +404,20 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     {_unit != _target && {vehicle _unit == vehicle _target}}
 }] call FUNC(addCanInteractWithCondition);
 
+
+//////////////////////////////////////////////////
+// Set up PlayerJIP eventhandler
+//////////////////////////////////////////////////
+
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
+// Note: usage of player is most likely on purpose
 if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
-        if((!(isNull player)) && GVAR(settingsInitFinished)) then {
-            ["PlayerJip", [player] ] call FUNC(localEvent);
-            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
+        if(!isNull player && GVAR(settingsInitFinished)) then {
+            ["PlayerJip", [player]] call FUNC(localEvent);
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
