@@ -192,7 +192,7 @@ call FUNC(checkFiles);
 
     //Set init finished and run all delayed functions:
     GVAR(settingsInitFinished) = true;
-    ACE_LOGINFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized))
+    ACE_LOGINFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
 
     {
         (_x select 1) call (_x select 0);
