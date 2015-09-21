@@ -62,7 +62,7 @@ if (!surfaceIsWater _pos) then {
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
             if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
-                 [_x, "HitBody", [_x, "body", (_x getHitPointDamage "HitBody") + _damage, _firer, "backblast"] call EFUNC(medical,handleDamage)] call EFUNC(medical,setHitPointDamage);
+                [_x, "body", ((_x getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
             } else {
                 _x setDamage (damage _x + _damage);
             };

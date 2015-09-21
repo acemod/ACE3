@@ -30,9 +30,11 @@ for "_i" from 1 to _amount do {
 
     // Load item or delete it if no space left
     if !([_item, _vehicle] call FUNC(loadItem)) exitWith {
+        TRACE_1("no room to load item - deleting",_item);
         deleteVehicle _item;
     };
-
+    TRACE_1("Item Loaded",_item);
+    
     // Invoke listenable event
     ["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
 };

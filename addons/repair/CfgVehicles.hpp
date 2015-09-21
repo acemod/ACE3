@@ -127,7 +127,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignEngineerRole_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignEngineerRole_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -171,7 +171,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairVehicle_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairVehicle_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -203,7 +203,7 @@ class CfgVehicles {
         function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairFacility_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -243,7 +243,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class List {
-                displayName = CSTRING(AddSpareParts_List_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AddSpareParts_List_Description);
                 defaultValue = "";
                 typeName = "STRING";
