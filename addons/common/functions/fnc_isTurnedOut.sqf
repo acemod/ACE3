@@ -14,6 +14,8 @@
  */
 #include "script_component.hpp"
 
+ACE_WARNINGFORMAT_3("%1 is deprecated. Support will be dropped in version %2. Replaced by %3","ace_common_fnc_isTurnedOut","1.5","isTurnedOut");
+
 params ["_unit"];
 
 isTurnedOut _unit // return

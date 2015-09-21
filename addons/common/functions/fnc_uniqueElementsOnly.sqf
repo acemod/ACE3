@@ -14,4 +14,6 @@
  */
 #include "script_component.hpp"
 
+ACE_WARNINGFORMAT_3("%1 is deprecated. Support will be dropped in version %2. Replaced by %3","ace_common_fnc_uniqueElementsOnly","1.5","ace_common_fnc_uniqueElements");
+
 _this call FUNC(uniqueElements)

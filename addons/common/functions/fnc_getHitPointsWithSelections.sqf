@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+ACE_WARNINGFORMAT_3("%1 is deprecated. Support will be dropped in version %2. Replaced by %3","ace_common_fnc_getHitPointsWithSelections","1.5","getAllHitPointsDamage");
+
 params ["_vehicle"];
 
 private "_hitPointsWithSelections";

@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+ACE_WARNINGFORMAT_3("%1 is deprecated. Support will be dropped in version %2. Replaced by %3","ace_common_fnc_inheritsFrom","1.5","inheritsFrom ARRAY");
+
 params ["_configEntry", "_configMatch"];
 
 if (configName _configEntry == _configMatch) exitWith {true};

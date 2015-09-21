@@ -14,6 +14,8 @@
  */
 #include "script_component.hpp"
 
+ACE_WARNINGFORMAT_3("%1 is deprecated. Support will be dropped in version %2. Replaced by %3","ace_common_fnc_sortAlphabeticallyBy","1.5","sort");
+
 params ["_array", "_elementN"];
 
 private ["_elements", "_indexes", "_theElement", "_tmp", "_tempIndex", "_returnArray"];
