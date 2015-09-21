@@ -273,10 +273,29 @@ GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
 GVAR(OldZeusDisplayIsOpen) = false;
 GVAR(OldIsCamera) = false;
 
+// clean up playerChanged eventhandler from preinit and put it in the same PFH as the other events to reduce overhead and guarantee advantageous execution order
+if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
+    [GVAR(PreInit_playerChanged_PFHID)] call CBA_fnc_removePerFrameHandler;
+    GVAR(PreInit_playerChanged_PFHID) = nil;
+};
+
 // PFH to raise varios events
 [{
     BEGIN_COUNTER(stateChecker);
     private "_data"; // reuse one variable to reduce number of variables that have to be set to private each frame
+
+    // "playerChanged" event
+    _data = call FUNC(player);
+    if !(_data isEqualTo GVAR(OldPlayerVehicle)) then {
+        private "_oldPlayer";
+        _oldPlayer = ACE_player;
+
+        ACE_player = _data;
+        uiNamespace setVariable ["ACE_player", _data];
+
+        // Raise ACE event locally
+        ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
+    };
 
     // "playerVehicleChanged" event
     _data = vehicle ACE_player;
