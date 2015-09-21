@@ -14,6 +14,6 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicle"];
+params ["_vehicle"];
 
 (_vehicle call BIS_fnc_getPitchBank) + [getDir _vehicle]
