@@ -28,6 +28,8 @@ if (GVAR(level) > 1 && {(random 1) >= 0.6}) then {
     _target setvariable [QGVAR(inCardiacArrest), nil,true];
     _target setvariable [QGVAR(heartRate), 40];
     _target setvariable [QGVAR(bloodPressure), [50,70]];
+} else {
+    [ARR_4(_caller, _target, 'body', 'CPR')] call DFUNC(treatment);
 };
 
 [_target, "activity", LSTRING(Activity_CPR), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
