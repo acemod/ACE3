@@ -1,6 +1,5 @@
 /*
  * Author: Nou
- *
  * Execute a global event on all clients, including self.
  *
  * Arguments:

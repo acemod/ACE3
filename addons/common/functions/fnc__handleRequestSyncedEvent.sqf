@@ -41,7 +41,8 @@ if (isServer) then {
     {
         _x params ["", "_eventArgs","_ttl"];
         [_eventName, _eventArgs, _ttl] call FUNC(_handleSyncedEvent);
-    } forEach _eventLog;
+        false
+    } count _eventLog;
 
     ACE_LOGINFO_1("[%1] synchronized",_eventName);
 };

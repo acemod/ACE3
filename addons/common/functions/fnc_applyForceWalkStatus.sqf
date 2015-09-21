@@ -9,10 +9,10 @@
  * None
  *
  * Example:
- * [ACE_Player] call FUNC(applyForceWalkStatus)
+ * [ACE_Player] call ace_common_fnc_applyForceWalkStatus
  *
  * Public: No
-*/
+ */
 #include "script_component.hpp"
 
 params ["_unit"];

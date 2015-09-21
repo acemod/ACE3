@@ -1,10 +1,21 @@
-//fnc_dumpArray.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * 0: Array to be dumped <ARRAY>
+ * 1: Depth <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_pad", "_i", "_x"];
+params ["_var", "_depth"];
 
-PARAMS_2(_var,_depth);
-
+private "_pad";
 _pad = "";
 
 for "_i" from 0 to _depth do {
@@ -14,15 +25,18 @@ for "_i" from 0 to _depth do {
 _depth = _depth + 1;
 
 if (IS_ARRAY(_var)) then {
-    if ((count _var) > 0) then {
-        diag_log text format["%1[", _pad];
+    if (_var isEqualTo []) then {
+        diag_log text format ["%1[],", _pad];
+    } else {
+        diag_log text format ["%1[", _pad];
+
         {
             [_x, _depth] call FUNC(dumpArray);
-        } forEach _var;
-        diag_log text format["%1],", _pad];
-    } else {
-        diag_log text format["%1[],", _pad];
+            false
+        } count _var;
+
+        diag_log text format ["%1],", _pad];
     };
 } else {
-    diag_log text format["%1%2", _pad, [_var] call FUNC(formatVar)];
+    diag_log text format ["%1%2", _pad, [_var] call FUNC(formatVar)];
 };
