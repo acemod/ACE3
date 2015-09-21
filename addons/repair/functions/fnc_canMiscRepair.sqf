@@ -49,8 +49,4 @@ _return = false;
     };
 } forEach _hitpointGroup;
 
-if (typeOf _target == "B_MRAP_01_F") then {
-    diag_log format ["%1 - %2", _hitPoint, _hitpointGroup];
-};
-
 _return
