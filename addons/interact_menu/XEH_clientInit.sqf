@@ -104,3 +104,29 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
         }];
     };
 }] call EFUNC(common,addEventHandler);
+
+
+//Debug to help end users identify mods that break CBA's XEH
+[{
+    private ["_badClassnames"];
+    _badClassnames = [];
+    {
+        if ((isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}) then {
+            if (!((typeOf _x) in _badClassnames)) then {
+                _badClassnames pushBack (typeOf _x);
+                ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
+            };
+        };
+    } forEach (allUnits + allDeadMen + vehicles);
+    if ((count _badClassnames) == 0) then {
+        ACE_LOGINFO("All compile checks passed");
+    } else {
+        ACE_LOGERROR_1("%1 Classnames failed compile check!!! (bad XEH / missing cba_enable_auto_xeh.pbo)", (count _badClassnames));
+
+        //Only show visual error if they are actually missing the pbo:
+        #define SUPMON configFile>>"CfgSettings">>"CBA">>"XEH">>"supportMonitor"
+        if ((!isNumber(SUPMON)) || {getNumber(SUPMON) != 1}) then {
+            ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
+        };
+    };
+}, [], 5] call EFUNC(common,waitAndExecute);  //ensure CBASupMon has time to run first

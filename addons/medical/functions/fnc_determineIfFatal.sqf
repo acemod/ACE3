@@ -14,7 +14,15 @@
  */
 #include "script_component.hpp"
 
-private ["_damageThreshold", "_damageBodyPart"];
+#define INCREASE_CHANCE_HEAD 0.05
+#define INCREASE_CHANCE_TORSO 0.03
+#define INCREASE_CHANGE_LIMB 0.01
+
+#define CHANGE_FATAL_HEAD 0.7
+#define CHANGE_FATAL_TORSO 0.6
+#define CHANGE_FATAL_LIMB 0.1
+
+private ["_damageThreshold", "_damageBodyPart", "_chanceFatal"];
 params ["_unit", "_part", ["_withDamage", 0]];
 
 if (!alive _unit) exitwith {true};
@@ -28,17 +36,22 @@ if ([_unit] call EFUNC(common,IsPlayer)) then {
 } else {
     _damageThreshold =_unit getvariable[QGVAR(unitDamageThreshold), [GVAR(AIDamageThreshold), GVAR(AIDamageThreshold), GVAR(AIDamageThreshold) * 1.7]];
 };
+_damageThreshold params ["_thresholdHead", "_thresholdTorso",  "_thresholdLimbs"];
 
 _damageBodyPart = ((_unit getvariable [QGVAR(bodyPartStatus),[0, 0, 0, 0, 0, 0]]) select _part) + _withDamage;
 
 // Check if damage to body part is higher as damage head
 if (_part == 0) exitwith {
-    (_damageBodyPart >= (_damageThreshold select 0) && {(random(1) > 0.2)});
+    _chanceFatal = CHANGE_FATAL_HEAD + ((INCREASE_CHANCE_HEAD * (_damageBodyPart - _thresholdHead)) * 10);
+    (_damageBodyPart >= _thresholdHead && {(_chanceFatal >= random(1))});
 };
 
 // Check if damage to body part is higher as damage torso
 if (_part == 1) exitwith {
-    (_damageBodyPart >= (_damageThreshold select 1) && {(random(1) > 0.35)});
+    _chanceFatal = CHANGE_FATAL_TORSO + ((INCREASE_CHANCE_TORSO * (_damageBodyPart - _thresholdTorso)) * 10);
+    (_damageBodyPart >= _thresholdTorso && {(_chanceFatal >= random(1))});
 };
 // Check if damage to body part is higher as damage limbs
-(_damageBodyPart >= (_damageThreshold select 2) && {(random(1) > 0.95)});
+// We use a slightly lower decrease for limbs, as we want any injuries done to those to be less likely to be fatal compared to head shots or torso.
+_chanceFatal = CHANGE_FATAL_LIMB + ((INCREASE_CHANGE_LIMB * (_damageBodyPart - _thresholdLimbs)) * 10);
+(_damageBodyPart >= _thresholdLimbs && {(_chanceFatal >= random(1))});

@@ -31,6 +31,7 @@ GVAR(availableSides) = [west,east,resistance,civilian];
 GVAR(availableVisions) = [-2,-1,0,1];
 
 GVAR(camAgent) = objNull;
+GVAR(camDistance) = 10;
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
 GVAR(camPos) = ATLtoASL [worldSize * 0.5, worldSize * 0.5, 20];

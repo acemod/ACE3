@@ -1,4 +1,4 @@
-// Enable visual head movement while free-looking
+// Force free-look, prevent body rotating and leaning
 #define MACRO_ANIMATION \
     head = "headDefault"; \
     aimingBody = "aimingNo"; \

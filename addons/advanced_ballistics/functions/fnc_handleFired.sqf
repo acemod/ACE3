@@ -53,7 +53,9 @@ if (!GVAR(simulateForEveryone) && !(local _unit)) then {
 if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "CfgWeapons" >> _weapon >> _mode >> "autoFire") == 1) then { _abort = true; };
 
 if (_abort || !(GVAR(extensionAvailable))) exitWith {
-    [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")] call EFUNC(winddeflection,updateTrajectoryPFH);
+    if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
+        EGVAR(windDeflection,trackedBullets) pushBack [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")];
+    };
 };
 
 // Get Weapon and Ammo Configurations

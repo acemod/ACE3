@@ -97,6 +97,8 @@
 // Time functions for accuracy per frame
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
 
+#define ACE_isHC (!hasInterface && !isDedicated)
+
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
 

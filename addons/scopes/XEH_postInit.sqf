@@ -7,7 +7,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
 ["playerInventoryChanged", {

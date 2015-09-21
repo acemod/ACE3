@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
+private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_seatPosOrig"];
 
 params ["_seat", "_player"];
 
@@ -26,7 +26,7 @@ GVAR(seat) = _seat;
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
 
-// add scrollwheel action to release object
+// Add scroll-wheel action to release object
 _actionID = _player getVariable [QGVAR(StandUpActionID), -1];
 
 if (_actionID != -1) then {
@@ -65,30 +65,22 @@ _player setPos (_seat modelToWorld _sitPosition);
 _player setVariable [QGVAR(isSitting), true];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
-// Add rotation control PFH
-_sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
+
+// Add automatical stand PFH in case of interruptions
 _seatPosOrig = getPosASL _seat;
 [{
     params ["_args", "_pfhId"];
-    _args params ["_player", "_sitDirectionVisual", "_sitRotation", "_seat", "_seatPosOrig"];
+    _args params ["_player", "_seat", "_seatPosOrig"];
 
     // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
-        [_pfhId] call cba_fnc_removePerFrameHandler;
+        [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };
 
-    //  Stand up if chair moves
-    if ([_seat, _seatPosOrig] call FUNC(hasChairMoved)) exitWith {
+    //  Stand up if chair gets deleted or moved
+    if (isNull _seat || !((getPosASL _seat) isEqualTo _seatPosOrig)) exitWith {
         _player call FUNC(stand);
         TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
-
-    // Set direction to boundary when passing it
-    if (getDir _player > _sitDirectionVisual + _sitRotation) exitWith {
-        _player setDir (_sitDirectionVisual + _sitRotation);
-    };
-    if (getDir _player < _sitDirectionVisual - _sitRotation) exitWith {
-        _player setDir (_sitDirectionVisual - _sitRotation);
-    };
-}, 0, [_player, _sitDirectionVisual, _sitRotation, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _seat, _seatPosOrig]] call CBA_fnc_addPerFrameHandler;

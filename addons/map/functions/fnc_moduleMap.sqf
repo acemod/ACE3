@@ -23,4 +23,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(mapLimitZoom),             "MapLimitZoom"            ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(mapShowCursorCoordinates), "MapShowCursorCoordinates"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Map Module Initialized.";
+ACE_LOGINFO("Map Module Initialized.");

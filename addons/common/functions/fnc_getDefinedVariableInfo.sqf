@@ -1,12 +1,17 @@
-/**
- * fn_getvariableInfo.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the variable Informations
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: Variable Name <STRING>
+ *
+ * Return Value:
+ * Variable Metadata <ARRAY>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
-+(missionNamespace getvariable [QGVAR(OBJECT_VARIABLES_STORAGE_) + (_this select 0),[]])
+
+params ["_varName"];
+
++ (missionNamespace getVariable [format [QGVAR(OBJECT_VARIABLES_STORAGE_%1), _varName], []])
