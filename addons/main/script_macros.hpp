@@ -132,7 +132,7 @@
 #define ACE_LOGWARNING_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGWARNING(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGWARNING_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGWARNING(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_WARNINGFORMAT(message) ACE_LOG(COMPONENT,"WARNING",message)
+#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"WARNING",message)
 #define ACE_WARNINGFORMAT_1(message,arg1) ACE_WARNINGFORMAT(FORMAT_1(message,arg1))
 #define ACE_WARNINGFORMAT_2(message,arg1,arg2) ACE_WARNINGFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_WARNINGFORMAT_3(message,arg1,arg2,arg3) ACE_WARNINGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
