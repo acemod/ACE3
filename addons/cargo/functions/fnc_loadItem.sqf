@@ -19,12 +19,18 @@
 private ["_loaded", "_space", "_itemSize"];
 
 params ["_item", "_vehicle"];
+TRACE_2("params",_item,_vehicle);
 
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
+if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {
+    TRACE_2("canLoadItemIn failed",_item,_vehicle);
+    false
+};
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushback _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
+
+TRACE_1("added to loaded array",_loaded);
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
