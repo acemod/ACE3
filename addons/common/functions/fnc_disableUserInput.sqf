@@ -44,11 +44,7 @@ if (_state) then {
 
             private ["_dlg", "_ctrl"];
 
-            _dlg = finddisplay 49;
-            _dlg displayAddEventHandler ["KeyDown", {
-                params ["", "_key"];
-                !(_key == 1)
-            }];
+            _dlg = findDisplay 49;
 
             for "_index" from 100 to 2000 do {
                 (_dlg displayCtrl _index) ctrlEnable false;
@@ -97,16 +93,17 @@ if (_state) then {
 
     _dlg displayAddEventHandler ["KeyUp", {true}];
 
-    ["ACE_DisableUserInput", "onEachFrame", {
+    GVAR(disableInputPFH) = [{
         if (isNull (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) && {!visibleMap && isNull findDisplay 49 && isNull findDisplay 312 && isNull findDisplay 632}) then {
-            ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+            [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
+            GVAR(disableInputPFH) = nil;
             [true] call FUNC(disableUserInput);
         };
-    }] call BIS_fnc_addStackedEventHandler;
-
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 } else {
-    if ("ACE_DisableUserInput" in ([BIS_stackedEventHandlers_onEachFrame, {_this select 0}] call FUNC(map))) then {
-        ["ACE_DisableUserInput", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    if (!isNil QGVAR(disableInputPFH)) then {
+        [GVAR(disableInputPFH)] call CBA_fnc_removePerFrameHandler;
+        GVAR(disableInputPFH) = nil;
     };
 
     (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
