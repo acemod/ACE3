@@ -101,16 +101,12 @@ In cases where more specific control is required function `ace_spectator_fnc_upd
 
 ### 1.3 Spectatable Sides
 
-Spectatable sides can simply be considered an extra layer of filtering for the spectatable unit list. Again, there are two methods of controlling the spectatable sides:
+Spectatable sides can be considered another filter for the unit list to determine which units are available to spectate base on their side. As such, units can also be whitelisted from this filter as detailed above. There are two stages in the spectatable sides mechanism:
 
-- Side filter
 - Side list
+- Side filter
 
-The side list is exactly what it sounds like, a list of sides spectatable by the local client. However, unlike spectatable units the side list remains static and can only be updated manually. This is because the side filter is applied on top of the side list whenever the unit list is automatically maintained - meaning the unit list will update if the player changes side or if the side relations change.
-
-Note that the unit whitelist/blacklist also serves to override this side filtering mechanism.
-
-The default side list is `[west,east,resistance,civilian]` and to update it (on the local client) function `ace_spectator_fnc_updateSpectatableSides` can be used:
+The side list is a list of sides *possible* to spectate. By default this is always `[west, east, resistance, civilian]` and does not change. To update the local client's side list the function `ace_spectator_fnc_updateSpectatableSides` can be used:
 
 ```
  * Arguments:
@@ -124,7 +120,7 @@ The default side list is `[west,east,resistance,civilian]` and to update it (on 
  * [[west], [east,civilian]] call ace_spectator_fnc_updateSpectatableSides
 ```
 
-The side filter determines which sides from the side list are valid each time the unit list is updated. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
+The side filter is then applied *on top* of this list to determine which sides are *truly* available to spectate. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
 
 - **Player side** *(default)*
 - **Friendly sides**
@@ -142,6 +138,11 @@ There are 3 possible camera modes:
 Mission makers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
 
 ```
+ * Possible camera modes are:
+ *   - 0: Free
+ *   - 1: Internal
+ *   - 2: External
+ *
  * Arguments:
  * 0: Camera modes to add <ARRAY>
  * 1: Camera modes to remove <ARRAY>
