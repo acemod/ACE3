@@ -482,7 +482,8 @@
             <Russian>Проверка аддонов</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
-            <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
+            <English>Check addon integrity with server and do selected action if an addon is missing.</English>
+            <Polish>Sprawdzaj spójność addonów z serwerem i wykonuj stosowną akcję jeżeli zostanie wykryty brak addonu.</Polish>
             <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
             <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
             <Czech>Zjistit addon který je v souladu se serverem</Czech>

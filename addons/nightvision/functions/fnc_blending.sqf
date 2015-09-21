@@ -23,25 +23,22 @@
 
 if (!hasInterface) exitWith {};
 
-private ["_vehicle", "_weapon", "_ammo", "_magazine", "_player"];
+params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine"];
 
-_vehicle = _this select 0;
-_weapon = _this select 1;
-_ammo = _this select 4;
-_magazine = _this select 5;
-
+private "_player";
 _player = ACE_player;
+
 //If our vehicle didn't shoot, or we're not in NVG mode, exit
 if ((_vehicle != (vehicle _player)) || {(currentVisionMode _player) != 1}) exitWith {};
 //If we are mounted, and it wasn't our weapon system that fired, exit
 if (_player != _vehicle && {!(_weapon in (_vehicle weaponsTurret ([_player] call EFUNC(common,getTurretIndex))))}) exitWith {};
 
-private ["_silencer", "_visibleFireCoef", "_visibleFireTimeCoef", "_visibleFire", "_visibleFireTime", "_nvgBrightnessCoef", "_fnc_isTracer", "_darkness"];
+private["_darkness", "_nvgBrightnessCoef", "_silencer", "_visibleFire", "_visibleFireCoef", "_visibleFireTime", "_visibleFireTimeCoef"];
 
 _silencer = switch (_weapon) do {
-case (primaryWeapon _player) : {primaryWeaponItems _player select 0};
-case (secondaryWeapon _player) : {secondaryWeaponItems _player select 0};
-case (handgunWeapon _player) : {handgunItems _player select 0};
+    case (primaryWeapon _player): {(primaryWeaponItems _player) select 0};
+    case (secondaryWeapon _player): {(secondaryWeaponItems _player) select 0};
+    case (handgunWeapon _player): {(handgunItems _player) select 0};
     default {""};
 };
 
@@ -83,7 +80,7 @@ _darkness = 1 - (call EFUNC(common,ambientBrightness));
 _visibleFire = _darkness * _visibleFireCoef * _visibleFire * _nvgBrightnessCoef / 10 min 1;
 _visibleFireTime = _darkness * _visibleFireTimeCoef * _visibleFireTime * _nvgBrightnessCoef / 10 min 0.5;
 
-// ["NightVision", [_visibleFire, _visibleFireTime], {format ["visibleFire: %1 - visibleFireTime: %2", _this select 0, _this select 1]}] call AGM_Debug_fnc_log;  //todo
+TRACE_2("Player Shot, Adjusting NVG Effect", _visibleFire, _visibleFireTime);
 
 GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, _visibleFire, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;

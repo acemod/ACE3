@@ -238,6 +238,7 @@
             <Russian>Система точек сбора</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
+            <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
             <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
             <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
             <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>

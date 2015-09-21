@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Returns the current radio / chat / marker channel.
  *
  * Arguments:

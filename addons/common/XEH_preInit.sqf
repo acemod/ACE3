@@ -1,16 +1,13 @@
 // by commy2
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
-
 ADDON = false;
-
-// ACE Common Function
 
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
+PREP(assignedItemFix);
 PREP(assignObjectsInList);
 PREP(ambientBrightness);
 PREP(applyForceWalkStatus);
@@ -82,14 +79,6 @@ PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
 PREP(getTurnedOnLights);
-PREP(getTurretCommander);
-PREP(getTurretConfigPath);
-PREP(getTurretCopilot);
-PREP(getTurretGunner);
-PREP(getTurretIndex);
-PREP(getTurrets);
-PREP(getTurretsFFV);
-PREP(getTurretsOther);
 PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
@@ -102,6 +91,8 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
+PREP(handleScrollWheel);
+PREP(handleScrollWheelInit);
 PREP(hasItem);
 PREP(hasMagazine);
 PREP(headBugFix);
@@ -208,6 +199,7 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getSelectionsWithoutHitPoints);
 PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
@@ -250,6 +242,17 @@ PREP(localEvent);
 PREP(removeEventHandler);
 PREP(removeAlLEventHandlers);
 
+// Synchronized Events
+PREP(syncedEventPFH);
+PREP(addSyncedEventHandler);
+PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
+PREP(syncedEvent);
+
+PREP(_handleSyncedEvent);
+PREP(_handleRequestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
+
 // other eventhandlers
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
@@ -273,17 +276,6 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
-// Synchronized Events
-PREP(syncedEventPFH);
-PREP(addSyncedEventHandler);
-PREP(removeSyncedEventHandler);
-PREP(requestSyncedEvent);
-PREP(syncedEvent);
-
-PREP(_handleSyncedEvent);
-PREP(_handleRequestSyncedEvent);
-PREP(_handleRequestAllSyncedEvents);
-
 GVAR(syncedEvents) = HASH_CREATE;
 
 //GVARS for execNextFrame and waitAndExec
@@ -295,7 +287,7 @@ GVAR(nextFrameBufferB) = [];
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
 
-// @TODO: Generic local-managed global-synced objects (createVehicleLocal)
+// @todo: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];
@@ -305,11 +297,18 @@ if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };
 
-ACE_player = player;
 
+//////////////////////////////////////////////////
+// Set up PlayerChanged eventhandler for pre init
+//////////////////////////////////////////////////
+
+ACE_player = objNull;
+uiNamespace setVariable ["ACE_player", objNull];
+
+// @todo check if this can be removed
 if (hasInterface) then {
     // PFH to update the ACE_player variable
-    [{
+    GVAR(PreInit_playerChanged_PFHID) = [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
             private ["_oldPlayer"];
             _oldPlayer = ACE_player;
@@ -323,7 +322,11 @@ if (hasInterface) then {
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
+
+//////////////////////////////////////////////////
 // Time handling
+//////////////////////////////////////////////////
+
 ACE_time = diag_tickTime;
 ACE_realTime = diag_tickTime;
 ACE_virtualTime = diag_tickTime;
@@ -338,6 +341,8 @@ PREP(timePFH);
 // Init toHex
 [0] call FUNC(toHex);
 
-ADDON = true;
+isHC = !hasInterface && !isDedicated; // deprecated because no tag
+missionNamespace setVariable ["ACE_isHC", ACE_isHC];
+uiNamespace setVariable ["ACE_isHC", ACE_isHC];
 
-isHC = !(hasInterface || isDedicated);
+ADDON = true;

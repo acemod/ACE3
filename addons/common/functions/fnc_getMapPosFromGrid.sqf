@@ -2,9 +2,9 @@
  * Author: PabstMirror
  * Gets position from grid cords
  *
- * Argument:
+ * Arguments:
  * 0: Grid Cords <STRING>
- * 1: Get Center or bottom right <BOOL><OPTIONAL>
+ * 1: Grid center (true), Grid Bottom Right (false) (default: true) <BOOL>
  *
  * Return values:
  * Position <ARRAY>
@@ -16,24 +16,23 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_inputString);
-DEFAULT_PARAM(1,_getCenterOfGrid,true);
+params ["_inputString", ["_getCenterOfGrid", true]];
 
-private["_countInput", "_countInputHalf", "_xPart", "_xPos", "_yPart", "_yPos"];
-
-if ((count GVAR(mapGridData)) == 0) exitWith {
+if (count GVAR(mapGridData) == 0) exitWith {
     ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
     (_this call BIS_fnc_gridToPos) select 0
 };
 
-EXPLODE_4_PVT(GVAR(mapGridData),_offsetX,_realOffsetY,_stepXat5,_stepYat5);
+GVAR(mapGridData) params ["_offsetX", "_realOffsetY", "_stepXat5", "_stepYat5"];
+
+private ["_countInput", "_countInputHalf", "_xPart", "_yPart", "_xPos", "_yPos"];
 
 _countInput = count _inputString;
 _countInputHalf = floor (_countInput / 2);
 
 //Split string, ignoring middle
 _xPart = _inputString select [0, _countInputHalf];
-_yPart = _inputString select [(ceil (_countInput / 2)), _countInputHalf];
+_yPart = _inputString select [ceil (_countInput / 2), _countInputHalf];
 
 _xPos = ((parseNumber _xPart) * _stepXat5 * 10 ^ (5 - _countInputHalf)) + _offsetX;
 _yPos = ((parseNumber _yPart) * _stepYat5 * 10 ^ (5 - _countInputHalf)) + _realOffsetY;
@@ -43,4 +42,4 @@ if (_getCenterOfGrid) then {
     _yPos = _yPos + 0.5 * _stepYat5 * 10 ^ (5 - _countInputHalf);
 };
 
-[_xPos, _yPos, 0];
+[_xPos, _yPos, 0]
