@@ -1,13 +1,16 @@
 /*
  * Author: commy2
- *
- * Returns all hitpoints of any vehicle. Might contain duplicates if the turrets contain non unique hitpoints with different selection names.
+ * Returns all hitpoints and their selections of any vehicle. Might contain duplicates if the turrets contain non unique hitpoints with different selection names.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * The hitpoints (Array)
+ * Hitpoints <ARRAY>
+ *
+ * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
