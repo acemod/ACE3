@@ -219,7 +219,12 @@ call FUNC(assignedItemFix);
 
 GVAR(ScrollWheelFrame) = diag_frameno;
 
-addMissionEventHandler ["Loaded", {call FUNC(handleScrollWheelInit)}];
+addMissionEventHandler ["Loaded", {
+    call FUNC(handleModifierKeyInit);
+    call FUNC(handleScrollWheelInit);
+}];
+
+call FUNC(handleModifierKeyInit);
 call FUNC(handleScrollWheelInit);
 
 // @todo remove?
