@@ -15,7 +15,7 @@
 
 params ["_item"];
 
-private ["_cfgType", "_config", "_type", "_default"];
+private ["_cfgType", "_config", "_type", "_simulation", "_default"];
 
 _cfgType = [_item] call FUNC(getConfigType);
 
@@ -25,6 +25,7 @@ if (_cfgType == "CfgGlasses") exitWith {["item", "glasses"]};
 
 _config = configFile >> _cfgType >> _item;
 _type = getNumber (_config >> "type");
+_simulation = getText (_config >> "simulation");
 
 if (isNumber (_config >> "ItemInfo" >> "type")) then {
     _type = getNumber (_config >> "ItemInfo" >> "type");
@@ -63,7 +64,7 @@ switch (true) do {
     case (_type == 801): {["item", "uniform"]};
 
     case (_type == 2^12): {
-        switch (toLower getText (_config >> "simulation")) do {
+        switch (toLower _simulation) do {
             case ("weapon"): {["weapon", "binocular"]};
             case ("binocular"): {["weapon", "binocular"]};
             case ("nvgoggles"): {["item", "nvgoggles"]};
@@ -73,6 +74,15 @@ switch (true) do {
     };
 
     case (_type == 2^16): {["weapon", "vehicle"]};
-    case (_type == 2^17): {[_default, "unknown"]}; // ???
+    case (_type == 2^17): {
+        switch (toLower _simulation) do {
+            case ("itemmap"): {["item", "map"]};
+            case ("itemgps"): {["item", "gps"]};
+            case ("itemradio"): {["item", "radio"]};
+            case ("itemcompass"): {["item", "compass"]};
+            case ("itemwatch"): {["item", "watch"]};
+            default {[_default, "unknown"]};
+        };
+    };
     default {[_default, "unknown"]};
 };
