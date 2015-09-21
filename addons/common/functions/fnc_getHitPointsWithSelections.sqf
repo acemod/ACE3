@@ -1,61 +1,25 @@
 /*
  * Author: commy2
- *
- * Returns all hitpoints and their selections of any vehicle. Might contain duplicates if the turrets contain non unique hitpoints with different selection names.
+ * Returns all hitpoints and their respective selections of any vehicle. Might contain duplicates for non unique hitpoints in turrets.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * The hitpoints with selections. Format: [hitpoints, selections]. They correspond by index. (Array)
+ * 0: Hitpoints <ARRAY>
+ * 1: Selections <ARRAY>
+ *
+ * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-private ["_config", "_hitpoints", "_selections", "_i"];
+params ["_vehicle"];
 
-PARAMS_1(_vehicle);
+private "_hitPointsWithSelections";
+_hitPointsWithSelections = getAllHitPointsDamage _vehicle;
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+_hitPointsWithSelections resize 2;
 
-_hitpoints = [];
-_selections = [];
-
-// get all classes that can contain hitpoints
-private "_hitpointClasses";
-_hitpointClasses = [_config >> "HitPoints"];
-{
-    private "_class";
-    _class = ([_config, _x] call FUNC(getTurretConfigPath)) >> "HitPoints";
-
-    if (isClass _class) then {
-        _hitpointClasses pushBack _class;
-    };
-
-} forEach allTurrets _vehicle;
-
-// iterate through all classes with hitpoints and their parents
-{
-    private "_class";
-    _class = _x;
-
-    while {isClass _class} do {
-
-        for "_i" from 0 to (count _class - 1) do {
-            if (isClass (_class select _i)) then {
-                private ["_entry", "_selection"];
-                _entry = configName (_class select _i);
-                _selection = getText (_class select _i >> "name");
-
-                if (!(_selection in _selections) && {!isNil {_vehicle getHit _selection}}) then {
-                    _hitpoints pushBack _entry;
-                    _selections pushBack _selection;
-                };
-            };
-        };
-
-        _class = inheritsFrom _class;
-    };
-
-} forEach _hitpointClasses;
-
-[_hitpoints, _selections]
+_hitPointsWithSelections
