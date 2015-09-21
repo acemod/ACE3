@@ -35,6 +35,8 @@ GVAR(AssignedItemsShownItems) = [
 
     _assignedItems = _assignedItems select 17;
 
+    GVAR(AssignedItemsShownItems) = [true, true, true, true, true];
+
     {
         if !(_x in GVAR(AssignedItems)) then {
             GVAR(AssignedItems) pushBack _x;
