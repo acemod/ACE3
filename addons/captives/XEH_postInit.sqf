@@ -18,7 +18,6 @@ if (isServer) then {
     }];
 };
 
-["playerVehicleChanged", {_this call FUNC(handleVehicleChanged)}] call EFUNC(common,addEventHandler);
 ["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
 ["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
