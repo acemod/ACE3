@@ -3,7 +3,7 @@ layout: wiki
 title: Flashlights
 description: Adds handheld flashlights
 group: feature
-category: realism
+category: equipment
 parent: wiki
 ---
 
