@@ -114,8 +114,8 @@ def main():
     for filename in sqf_list:
         bad_count = bad_count + check_sqf_syntax(filename)
 
-
     print ("Bad Count {0}".format(bad_count))
+    return bad_count
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
