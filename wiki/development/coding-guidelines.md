@@ -18,7 +18,12 @@ Example: `ACE_Component_myVariableName`
 
 _For ACE this is done automatically through the usage of the GVAR macro family._
 
-#### 1.1.2. Function naming
+#### 1.1.2. Private Variable naming
+To make code as readable as possible, try to use self explanatory variable names and avoid using single character variable names.
+
+Example: `_velocity` instead of `_v`
+
+#### 1.1.3. Function naming
 All functions shall use ACE and the component name as a prefix, as well as the fnc_ prefix behind the component name.
 
 Example: `PREFIX_COMPONENT_fnc_functionName`
@@ -28,7 +33,7 @@ _For ACE this is done automatically through the usage of the PREP macro_
 ### 1.2. Files & Config
 
 #### 1.2.1. SQF File extension
-Files containing sqf scripts will always have a file name extension of ".sqf".
+Files containing sqf scripts will always have a file name extension of `.sqf`.
 
 #### 1.2.2. Header files
 All header files will always have the file name extension of `.hpp`.
@@ -631,4 +636,3 @@ The waituntil command shall not be used. Instead, make use of a per frame handle
     };
 }, [_unit], 0] call CBA_fnc_addPerFrameHandler;
 ```
-
