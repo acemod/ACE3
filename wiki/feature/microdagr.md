@@ -19,7 +19,7 @@ life and death. Non-military GPS receivers
 simply aren’t good enough when lives are
 on the line" (Extracted from the real life manual)
 
-that's where the MicroDAGR comes in, here's a list of it's features (in arma 3) :
+that's where the MicroDAGR comes in, here's a list of it's features (in Arma 3) :
 
 - Compass and headings.
 - Date and hour synced to the mission.
@@ -34,7 +34,7 @@ that's where the MicroDAGR comes in, here's a list of it's features (in arma 3) 
 
 Please note that the numbers in 2.1 are going to be referred to as `1` `2` etc when explaining how to use the MicroDAGR
 
-The microDAGR position on the UI is where your GPS is, you can modify it in Options -> Game -> Layout.
+The MicroDAGR position on the UI is where your GPS is, you can modify it in Options -> Game -> Layout.
 
 ### 2.1 Bringing the MicroDAGR
 
@@ -70,7 +70,7 @@ number |                                              function |
 
 ### 2.3 Waypoints
 #### 2.3.1 Adding waypoints
-There's three ways of adding a waypoint.
+There are three ways of adding a waypoint.
 
 
 **First way: Using the waypoint creation menu.**
@@ -96,7 +96,7 @@ There's three ways of adding a waypoint.
     - The first three digits are read west to east. (Top of the map screen).
     - The last three are read south to north. (Left side of the map screen).
 - Go to the options menu (Click in `1` area, above the bar).
-- CLick on `Waypoints` (`19`).
+- Click on `Waypoints` (`19`).
 - Click on `Add`.
 - Enter the grid number.
 - Press OK.
@@ -104,10 +104,10 @@ There's three ways of adding a waypoint.
 - Press OK.
 
 
-**Third way: Using the Map menu.**
+**Third way: Using the map menu.**
 
 - Go to the map menu (click on `9`)
-- double left click on the position where you want your waypoint.
+- Double left click on the position where you want your waypoint.
 - Enter the name of the waypoint.
 - Press OK.
 
@@ -143,10 +143,10 @@ There's three ways of adding a waypoint.
 - For this you obviously need a `vector 21`.
 - Go to the options menu (Click in `1` area, above the bar).
 - Click on `Connect to` (`20`).
-- Pull out your `vector 21`.
+- Pull out your `Vector 21`.
  - Press and hold both <kbd>R</kbd> and <kbd>Tab&nbsp;↹</kbd> until the red pointing circle appears.
  - Sight the circle on the object and release both keys.
-- The data on the main menu now have changed, you can now see the azimuth the range and the elevation of the point you sighted.
+- The data on the main menu now has changed, you can now see the azimuth the range and the elevation of the point you sighted.
 - Note that the compass menu also changed and now features the azimuth, compass bearing, distance and grid position of the point you sighted.
 
 Note that the results of the measure you took won't change until you do an other measure.
