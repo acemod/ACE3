@@ -9,4 +9,3 @@ Removes vignette and changes the chat contrast on the map to allow easier readin
 The people responsible for merging changes to this component or answering potential questions.
 
 - [VKing](https://github.com/VKing6)
-- [Jonpas](https://github.com/jonpas)
