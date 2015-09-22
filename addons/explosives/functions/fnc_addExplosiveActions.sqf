@@ -45,7 +45,7 @@ _children = [];
                 format ["Explosive_%1", _forEachIndex],
                 format [_name + " (%1)", _itemCount select _forEachIndex],
                 getText(_x >> "picture"),
-                {_this call FUNC(setupExplosive);},
+                {[{_this call FUNC(setupExplosive)}, _this] call EFUNC(common,execNextFrame)},
                 {true},
                 {},
                 (configName _x)
