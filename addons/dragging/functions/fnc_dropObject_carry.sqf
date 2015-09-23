@@ -16,8 +16,8 @@
 
 params ["_unit", "_target"];
 
-// remove scroll wheel action
-_unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
+// remove drop action
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);

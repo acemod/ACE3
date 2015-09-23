@@ -37,25 +37,15 @@ if (_target isKindOf "CAManBase") then {
 _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
-// add scrollwheel action to release object
-_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+// add drop action
+_unit setVariable [QGVAR(ReleaseActionID),
+    [_unit, "DefaultAction",
+    {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
+    {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
+] call EFUNC(common,AddActionEventHandler)];
 
-if (_actionID != -1) then {
-    _unit removeAction _actionID;
-};
-
-_actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
-    QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
-    nil,
-    20,
-    false,
-    true,
-    "",
-    QUOTE(!isNull (_this getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)]))
-];
-
-_unit setVariable [QGVAR(ReleaseActionID), _actionID];
+// show mouse hint
+[localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 
 // check everything
 [FUNC(dragObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
