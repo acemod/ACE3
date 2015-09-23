@@ -55,6 +55,9 @@ if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
 };
 
+// hide mouse hint
+[] call EFUNC(interaction,hideMouseHint);
+
 _unit setVariable [QGVAR(isCarrying), false, true];
 _unit setVariable [QGVAR(carriedObject), objNull, true];
 

@@ -42,6 +42,10 @@ if (_target isKindOf "CAManBase") then {
     // attach object
     _target attachTo [_unit, _position];
 
+    // show mouse hint
+    //[localize LSTRING(Deploy), localize LSTRING(Drop), localize LSTRING(Adjust)]
+    ["Deploy", "Adjust"] call EFUNC(interaction,showMouseHint);
+
 };
 ["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
 
