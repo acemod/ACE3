@@ -212,7 +212,7 @@ Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only i
 ### 1.16 Pointing settings
 *Part of ace_finger*
 
-This module allow you to tweak settings for finger pointing such as is if it's enabled or the distance people can see you point things
+This module allows you to tweak settings for finger pointing such as if it's enabled or the distance at which people can see you pointing at something.
 
 **Settings:**
 
@@ -476,13 +476,13 @@ Enabled for | Option | Select what units the advanced medical system will be ena
 Enable Advanced wounds | Boolean | Allow reopening of bandaged wounds? | No
 Vehicle Crashes | Boolean | Do units take damage from a vehicle crash? | Yes
 Allow PAK | Option | Who can use the PAK for full heal? | Medics only
-Remove PAK on use | Boolean | Should PAK be removed on usage? | Yes
-Condition PAK | Option | When can the Personal Aid Kit be used | Stable
-Locations PAK | Option | Where can the personal aid kit be used? | Vehicles & facility
-Allow Surgical kit | Option | Who can use the surgical kit? | Medics only
-Remove Surgical kit | Boolean | Should Surgical kit be removed on usage? | Yes
-Locations Surgical kit | Option | Where can the Surgical kit be used? | Vehicles & facility
-Condition Surgical Kit | Option | When can the Surgical kit be used? | Anytime
+Remove PAK on use | Boolean | Should the PAK be removed on usage? | Yes
+Condition PAK | Option | When can the PAK be used? | Stable
+Locations PAK | Option | Where can the PAK be used? | Vehicles & facility
+Allow Surgical kit | Option | Who can use the Surgical Kit? | Medics only
+Remove Surgical kit | Boolean | Should Surgical Kit be removed on usage? | Yes
+Locations Surgical kit | Option | Where can the Surgical Kit be used? | Vehicles & facility
+Condition Surgical Kit | Option | When can the Surgical Kit be used? | Anytime
 Heal hitpoints | Boolean | Heal fully bandaged hitpoints. | No
 Pain suppression | Boolean | Pain is only temporarily suppressed not removed. | Yes
 
