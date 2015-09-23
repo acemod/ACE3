@@ -12,5 +12,5 @@
  */
 #include "script_component.hpp"
 
-(findDisplay 46) displayAddEventHandler ["KeyDown", QUOTE(_this call FUNC(handleModifierKey))];
-(findDisplay 46) displayAddEventHandler ["KeyUp", QUOTE(_this call FUNC(handleModifierKeyUp))];
+(findDisplay 46) displayAddEventHandler ["KeyDown", {_this call FUNC(handleModifierKey)}];
+(findDisplay 46) displayAddEventHandler ["KeyUp", {_this call FUNC(handleModifierKeyUp)}];

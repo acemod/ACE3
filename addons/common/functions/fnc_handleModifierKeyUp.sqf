@@ -13,3 +13,5 @@
 #include "script_component.hpp"
 
 ACE_modifier = 0;
+
+false

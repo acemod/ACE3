@@ -12,6 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["", "", "", "_ctrl"];
+if (_this select 3) then {ACE_modifier = 1};
 
-if (_ctrl) then {ACE_modifier = 1};
+false
