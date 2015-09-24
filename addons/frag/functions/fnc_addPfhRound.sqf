@@ -1,30 +1,32 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private ["_enabled", "_doSpall", "_spallTrack", "_spallTrackID"];
-PARAMS_3(_gun,_type,_round);
-DEFAULT_PARAM(3,_doFragTrack,false);
-
 if (!GVAR(enabled)) exitWith {};
 
-//_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
-//if(_enabled < 1) exitWith {};
+private ["_enabled", "_doSpall", "_spallTrack", "_spallTrackID"];
+params ["_gun", "_type", "_round", ["_doFragTrack", false]];
+
 
 if(_round in GVAR(blackList)) exitWith {
     GVAR(blackList) = GVAR(blackList) - [_round];
 };
 
 // Exit on max track
-if( (count GVAR(objects)) > GVAR(MaxTrack)) exitWith { };
+if((count GVAR(objects)) > GVAR(MaxTrack)) exitWith {};
 
-if(_gun == ACE_player) then {
-    _doFragTrack = true;
-} else {
-    if((gunner _gun) == ACE_player) then {
-        _doFragTrack = true;
+
+if (_doFragTrack) then {
+    _doFragTrack = if (_gun == ACE_player) then {
+        true;
     } else {
-        if(local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}) then {
-            _doFragTrack = true;
+        if((gunner _gun) == ACE_player) then {
+            true
+        } else {
+            if(local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}) then {
+                true
+            } else {
+                _doFragTrack
+            };
         };
     };
 };
@@ -34,9 +36,7 @@ if(GVAR(SpallEnabled)) then {
     if(GVAR(spallIsTrackingCount) <= 0) then {
         GVAR(spallHPData) = [];
     };
-    if(GVAR(spallIsTrackingCount) > 5) then {
-        // ACE_player sideChat "LIMT!";
-    } else {
+    if !(GVAR(spallIsTrackingCount) > 5) then {
         _doSpall = true;
         GVAR(spallIsTrackingCount) = GVAR(spallIsTrackingCount) + 1;
     };
@@ -61,7 +61,7 @@ if(_doFragTrack && alive _round) then {
     (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
     (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")),
     (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force))),
-    (getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
+    (getNumber (configFile >> "CfgAmmo" >> _type >> "indirecthit") * (sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
     ];
     TRACE_1("Initializing track", _round);
     GVAR(objects) pushBack _round;
@@ -70,5 +70,4 @@ if(_doFragTrack && alive _round) then {
     if(_doSpall) then {
         [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };
-    // ACE_player sideChat "WTF2";
 };

@@ -1,11 +1,8 @@
 //fnc_spallTrack.sqf
 #include "script_component.hpp"
 
-private ["_round", "_multiplier", "_foundObjects", "_foundObjectHPIds", "_delta", "_curPos", "_velocity", "_velocityStep", "_forwardPos", "_intersectsWith", "_index", "_hpId", "_data"];
-_round = _this select 0;
-_multiplier = _this select 1;
-_foundObjects = _this select 2;
-_foundObjectHPIds = _this select 3;
+private ["_delta", "_curPos", "_velocity", "_velocityStep", "_forwardPos", "_intersectsWith", "_index", "_hpId", "_data"];
+params ["_round", "_multiplier", "_foundObjects", "_foundObjectHPIds"];
 
 _delta = (1/diag_fps) * _multiplier;
 _curPos = getPosASL _round;
