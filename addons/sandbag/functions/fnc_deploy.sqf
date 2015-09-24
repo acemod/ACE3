@@ -19,15 +19,14 @@ closeDialog 0;
 
 GVAR(placer) = ACE_player;
 
+ACE_player setVariable [QGVAR(isDeploying), true, true]; systemChat str _this;/////////////////////////////
+
 [GVAR(placer), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
 
 GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 GVAR(sandBag) enableSimulationGlobal false; //@todo server-event
 
 GVAR(deployPFH) = [{
-    if (GVAR(placer) != ACE_player) exitWith {
-        call FUNC(deployCancel);
-    };
     GVAR(sandBag) setPosASL ((eyePos ACE_player) vectorAdd (positionCameraToWorld [0, 0, 1] vectorDiff positionCameraToWorld [0, 0, 0]));
     GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
 }, 0, []] call CBA_fnc_addPerFrameHandler;

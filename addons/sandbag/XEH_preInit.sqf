@@ -8,7 +8,11 @@ PREP(deploy);
 PREP(deployCancel);
 PREP(deployConfirm);
 PREP(drop);
+PREP(handleKilled);
+PREP(handlePlayerChanged);
+PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
+PREP(handleUnconscious);
 PREP(pickup);
 
 ADDON = true;

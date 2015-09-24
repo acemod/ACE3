@@ -15,24 +15,29 @@
  */
 #include "script_component.hpp"
 
-if (isNull GVAR(sandBag) || isNull GVAR(placer)) exitWith {};
+if (isNull GVAR(placer)) exitWith {};
 
-[GVAR(deployPFH)] call cba_fnc_removePerFrameHandler;
+GVAR(placer) setVariable [QGVAR(isDeploying), false, true];
 
-[GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
-[GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(Common,removeActionEventHandler);
-[GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
+[GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
+
+[GVAR(placer), "ACE_Sandbag", false] call EFUNC(common,setForceWalkStatus);
+[GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(common,removeActionEventHandler);
+[GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
 call EFUNC(interaction,hideMouseHint);
 
 GVAR(placer) playActionNow "PutDown";
 
 GVAR(placer) setVariable [QGVAR(usingSandbag), true];
+
 [{
     _this setVariable [QGVAR(usingSandbag), false];
 }, GVAR(placer), 1.5, 0.5] call EFUNC(common,waitAndExecute);
 
 [{
+    if (isNull GVAR(sandBag)) exitWith {};
+
     private ["_sandBag", "_position", "_direction"];
     _position = getPosASL GVAR(sandBag);
     _direction = getDir GVAR(sandBag);

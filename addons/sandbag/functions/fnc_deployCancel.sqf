@@ -15,7 +15,11 @@
  */
 #include "script_component.hpp"
 
+systemChat str _this; ////////////////
+
 if (isNull GVAR(placer)) exitWith {};
+
+GVAR(placer) setVariable [QGVAR(isDeploying), false, true];
 
 [GVAR(deployPFH)] call cba_fnc_removePerFrameHandler;
 
