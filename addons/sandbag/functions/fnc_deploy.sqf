@@ -22,7 +22,7 @@ GVAR(placer) = ACE_player;
 [GVAR(placer), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
 
 GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
-GVAR(sandBag) enableSimulationGlobal false;
+GVAR(sandBag) enableSimulationGlobal false; //@todo server-event
 
 GVAR(deployPFH) = [{
     if (GVAR(placer) != ACE_player) exitWith {
@@ -34,14 +34,14 @@ GVAR(deployPFH) = [{
 
 [localize LSTRING(ConfirmDeployment), localize LSTRING(CancelDeployment), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
-GVAR(placer) setVariable [QGVAR(Deploy),
-    [GVAR(placer), "DefaultAction",
+GVAR(placer) setVariable [QGVAR(Deploy), [
+    GVAR(placer), "DefaultAction",
     {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployConfirm);}
-] call EFUNC(common,AddActionEventHandler)];
+    {call FUNC(deployConfirm)}
+] call EFUNC(common,addActionEventHandler)];
 
-GVAR(placer) setVariable [QGVAR(Cancel),
-    [GVAR(placer), "zoomtemp",
+GVAR(placer) setVariable [QGVAR(Cancel), [
+    GVAR(placer), "zoomtemp",
     {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployCancel);}
-] call EFUNC(common,AddActionEventHandler)];
+    {call FUNC(deployCancel)}
+] call EFUNC(common,addActionEventHandler)];

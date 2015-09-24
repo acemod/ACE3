@@ -12,4 +12,4 @@ GVAR(deployDirection) = 0;
     };
 }] call EFUNC(common,addEventHandler);
 
-[{_this call DFUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
+[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
