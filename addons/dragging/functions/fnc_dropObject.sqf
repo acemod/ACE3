@@ -19,9 +19,6 @@ params ["_unit", "_target"];
 // remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
-// reenable being able to throw grenades
-[_unit, "Throw", _unit getVariable [QGVAR(ThrowActionID), -1]] call EFUNC(common,removeActionEventHandler);
-
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 

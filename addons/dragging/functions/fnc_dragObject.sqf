@@ -38,8 +38,8 @@ _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add drop action
-_unit setVariable [QGVAR(ReleaseActionID),
-    [_unit, "DefaultAction",
+_unit setVariable [QGVAR(ReleaseActionID), [
+	_unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
 ] call EFUNC(common,addActionEventHandler)];
