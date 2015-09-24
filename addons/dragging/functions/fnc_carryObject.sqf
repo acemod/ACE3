@@ -53,7 +53,7 @@ _unit setVariable [QGVAR(ReleaseActionID),
     [_unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
-] call EFUNC(common,AddActionEventHandler)];
+] call EFUNC(common,addActionEventHandler)];
 
 // show mouse hint
 [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);

@@ -50,8 +50,8 @@
             <Russian>Нести</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
-            <English>Ctrl: Raise or Lower</English>
-            <German>Strg: Heben oder Senken</German>
+            <English>Raise/Lower</English>
+            <German>Heben/Senken</German>
         </Key>
     </Package>
 </Project>

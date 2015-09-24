@@ -15,9 +15,6 @@
 
 params ["_scrollAmount"];
 
-// requires modifier key to be hold down
-if (missionNamespace getVariable ["ACE_Modifier", 0] == 0) exitWith {false};
-
 private ["_unit", "_carriedItem", "_position", "_maxHeight"];
 
 _unit = ACE_player;
