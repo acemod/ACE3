@@ -33,7 +33,7 @@ class CfgVehicles {
     };
 
     class House;
-    class ACE_Tactical_Ladder: House {
+    class ACE_TacticalLadder: House {
         XEH_ENABLED;
         displayName = CSTRING(DisplayName);
         class DestructionEffects {};
