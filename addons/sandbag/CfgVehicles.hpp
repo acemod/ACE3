@@ -2,13 +2,13 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_Sandbags {
+            class GVAR(place) {
                 displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(call FUNC(canDeploy));
                 //wait a frame to handle "Do When releasing action menu key" option:
                 statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [])] call EFUNC(common,execNextFrame));
                 exceptions[] = {"isNotSwimming"};
-                showDisabled = 1;
+                showDisabled = 0;
                 priority = 4;
                 icon = PATHTOF(UI\icon_sandbag_ca.paa);
             };
