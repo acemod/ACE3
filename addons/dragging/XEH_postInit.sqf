@@ -1,6 +1,13 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
+if (isServer) then {
+    // release object on hard disconnection. Function is identical to killed
+    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+};
+
+if (!hasInterface) exitWith {};
+
 [{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
 
 if (isNil "ACE_maxWeightDrag") then {
