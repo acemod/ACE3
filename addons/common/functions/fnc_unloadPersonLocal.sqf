@@ -47,7 +47,6 @@ _unit action ["Eject", vehicle _unit];
     _unit setPosASL AGLToASL _emptyPos;
 
     if !([_unit] call FUNC(isAwake)) then {
-
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
 
         if (driver _unit == _unit) then {
