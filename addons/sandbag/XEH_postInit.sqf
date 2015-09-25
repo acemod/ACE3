@@ -14,11 +14,7 @@ GVAR(deployDirection) = 0;
 [{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
 
 // Cancel deploy sandbag if interact menu opened
-["interactMenuOpened", {
-    if (GVAR(deployPFH) != -1) then {
-        call FUNC(deployCancel); // @todo
-    };
-}] call EFUNC(common,addEventHandler);
+["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
 
 // Cancel deploy on player change. This does work when returning to lobby, but not when hard disconnecting.
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
@@ -29,6 +25,3 @@ GVAR(deployDirection) = 0;
 ["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
 
 //@todo Captivity?
-
-// stop interaction while deploying sandbag
-["isNotDeployingSandbag", {!((_this select 0) getVariable [QGVAR(isDeploying), false])}] call EFUNC(common,addCanInteractWithCondition);

@@ -18,9 +18,8 @@
 
 params ["_unit", "_tripod"];
 
-////////////if (stance _unit in ["STAND", "CROUCH"]) then {
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
+if (stance _unit == "STAND") then {
+    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call EFUNC(common,doAnimation);
 };
 
 [{

@@ -1,3 +1,4 @@
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -5,9 +6,8 @@ class CfgVehicles {
             class GVAR(place) {
                 displayName = CSTRING(DeploySandbag);
                 condition = QUOTE(_this call FUNC(canDeploy));
-                //////////////////wait a frame to handle "Do When releasing action menu key" option
-                /////////////statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call EFUNC(common,execNextFrame));
-                statement = QUOTE(_this call FUNC(deploy));
+                //wait a frame to handle "Do When releasing action menu key" option
+                statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call EFUNC(common,execNextFrame));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 priority = 4;
@@ -27,8 +27,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Sandbag_empty,1);
         };
     };
-    /*
-    class ACE_Item_Sandbag: Item_Base_F {
+
+    /*class ACE_Item_Sandbag: Item_Base_F {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
@@ -40,8 +40,8 @@ class CfgVehicles {
                 count = 1;
             };
         };
-    };
-    */
+    };*/
+
     class thingX;
     class ACE_SandbagObject: thingX {
         author = ECSTRING(common,ACETeam);
@@ -56,10 +56,10 @@ class CfgVehicles {
         nameSound = "Bunker";
         icon = PATHTOF(UI\icon_sandbag_ca.paa);
         accuracy = 1000;
-
         destrType = "DestructDefault";
 
         class DestructionEffects {};
+
         class Damage {
             tex[] = {};
             mat[] = {
@@ -68,36 +68,28 @@ class CfgVehicles {
                 "z\ace\addons\sandbag\data\bag_destruct.rvmat"
             };
         };
+
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
                 distance = 5;
                 condition = "true";
+
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(PICKUPSB);
                     distance = 4;
                     condition = QUOTE(!(_player getVariable [ARR_2(QUOTE(QGVAR(isUsingSandbag)),false)]));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));///_this
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\icon_sandbag_ca.paa);
                 };
-                /*class ACE_Carry {
-                    selection = "";
-                    displayName = CSTRING(CARRYSB);
-                    distance = 4;
-                    condition = QUOTE(!(_player getVariable [ARR_2(QUOTE(QGVAR(isUsingSandbag)),false)]));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(carry));
-                    showDisabled = 0;
-                    exceptions[] = {};
-                    priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
-                };*/
             };
         };
     };
+
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
         scope = 1;
         model = PATHTOF(data\ace_sandbag_nogeo.p3d);

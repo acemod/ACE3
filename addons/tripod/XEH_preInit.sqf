@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(adjust);
+PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handleScrollWheel);

@@ -7,11 +7,7 @@ GVAR(adjustPFH) = -1;
 GVAR(height) = 0;
 
 // Cancel adjustment if interact menu opens
-/*["interactMenuOpened", {
-    if (GVAR(adjustPFH) != -1 && GVAR(adjusting)) then {
-        GVAR(adjusting) = false;
-    };
-}] call EFUNC(common,addEventHandler);*/ // @todo
+["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
 
 [{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
 
