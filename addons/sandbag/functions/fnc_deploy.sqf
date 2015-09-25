@@ -1,46 +1,61 @@
 /*
- * Author: Garth 'L-H' de Wet, Ruthberg
+ * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Starts the deploy process for sandbags.
  *
  * Arguments:
- * None
+ * 0: unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_sandbag_fnc_deploy
+ * [ACE_player] call ace_sandbag_fnc_deploy
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-closeDialog 0;
+params ["_unit"];
 
-GVAR(placer) = ACE_player;
+// prevent the placing unit from running
+[_unit, "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
 
-ACE_player setVariable [QGVAR(isDeploying), true, true]; systemChat str _this;/////////////////////////////
+// create the sandbag
+private "_sandBag";
+_sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 
-[GVAR(placer), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
+GVAR(sandBag) = _sandBag;
 
-GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
-GVAR(sandBag) enableSimulationGlobal false; //@todo server-event
+// prevent collisions with sandbag
+["enableSimulationGlobal", [_sandBag, false]] call EFUNC(common,serverEvent);
 
+GVAR(deployDirection) = 0;
+
+// pfh that runs while the deployment is in progress
 GVAR(deployPFH) = [{
-    GVAR(sandBag) setPosASL ((eyePos ACE_player) vectorAdd (positionCameraToWorld [0, 0, 1] vectorDiff positionCameraToWorld [0, 0, 0]));
-    GVAR(sandBag) setDir (GVAR(deployDirection) + getDir ACE_player);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+    (_this select 0) params ["_unit", "_sandBag"];
 
+    if (isNull _sandBag) exitWith {
+        [_unit] call FUNC(deployCancel);
+    };
+
+    _sandBag setPosASL (eyePos _unit vectorAdd (positionCameraToWorld [0, 0, 1] vectorDiff positionCameraToWorld [0, 0, 0]));
+    _sandBag setDir (GVAR(deployDirection) + getDir _unit);
+}, 0, [_unit, _sandBag]] call CBA_fnc_addPerFrameHandler;
+
+// add mouse button action and hint
 [localize LSTRING(ConfirmDeployment), localize LSTRING(CancelDeployment), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
-GVAR(placer) setVariable [QGVAR(Deploy), [
-    GVAR(placer), "DefaultAction",
+_unit setVariable [QGVAR(Deploy), [
+    _unit, "DefaultAction",
     {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployConfirm)}
+    {[_this select 0] call FUNC(deployConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
-GVAR(placer) setVariable [QGVAR(Cancel), [
-    GVAR(placer), "zoomtemp",
+_unit setVariable [QGVAR(Cancel), [
+    _unit, "zoomtemp",
     {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
-    {call FUNC(deployCancel)}
+    {[_this select 0] call FUNC(deployCancel)}
 ] call EFUNC(common,addActionEventHandler)];
+
+_unit setVariable [QGVAR(isDeploying), true, true];

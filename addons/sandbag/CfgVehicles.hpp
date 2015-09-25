@@ -4,9 +4,10 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(place) {
                 displayName = CSTRING(DeploySandbag);
-                condition = QUOTE(call FUNC(canDeploy));
-                //wait a frame to handle "Do When releasing action menu key" option:
-                statement = QUOTE([ARR_2({_this call FUNC(deploy)}, _this)] call EFUNC(common,execNextFrame));
+                condition = QUOTE(_this call FUNC(canDeploy));
+                //////////////////wait a frame to handle "Do When releasing action menu key" option
+                /////////////statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call EFUNC(common,execNextFrame));
+                statement = QUOTE(_this call FUNC(deploy));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 priority = 4;
@@ -76,24 +77,24 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(PICKUPSB);
                     distance = 4;
-                    condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
+                    condition = QUOTE(!(_player getVariable [ARR_2(QUOTE(QGVAR(isUsingSandbag)),false)]));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));///_this
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\icon_sandbag_ca.paa);
                 };
-                class ACE_Carry {
+                /*class ACE_Carry {
                     selection = "";
                     displayName = CSTRING(CARRYSB);
                     distance = 4;
-                    condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
+                    condition = QUOTE(!(_player getVariable [ARR_2(QUOTE(QGVAR(isUsingSandbag)),false)]));
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(carry));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\icon_sandbag_ca.paa);
-                };
+                };*/
             };
         };
     };

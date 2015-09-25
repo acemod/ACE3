@@ -7,7 +7,6 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-GVAR(placer) = objNull;
 GVAR(sandBag) = objNull;
 GVAR(deployPFH) = -1;
 GVAR(deployDirection) = 0;
@@ -30,3 +29,6 @@ GVAR(deployDirection) = 0;
 ["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
 
 //@todo Captivity?
+
+// stop interaction while deploying sandbag
+["isNotDeployingSandbag", {!((_this select 0) getVariable [QGVAR(isDeploying), false])}] call EFUNC(common,addCanInteractWithCondition);
