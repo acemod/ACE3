@@ -63,7 +63,7 @@ class CfgVehicles {
                     displayName = CSTRING(PickUp);
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
@@ -75,7 +75,7 @@ class CfgVehicles {
                     distance = 5;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [_target])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

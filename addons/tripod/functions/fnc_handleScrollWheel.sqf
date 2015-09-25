@@ -17,7 +17,7 @@
 
 params ["_scroll"];
 
-if (GVAR(adjustPFH) == -1) exitWith { false };
+if (GVAR(adjustPFH) == -1) exitWith {false};
 
 GVAR(height) = 0 max (GVAR(height) + (_scroll / 20)) min 1;
 

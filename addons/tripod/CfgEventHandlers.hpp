@@ -17,3 +17,11 @@ class Extended_Init_EventHandlers {
         };
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleKilled));
+        };
+    };
+};

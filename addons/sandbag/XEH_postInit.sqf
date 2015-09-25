@@ -16,7 +16,7 @@ GVAR(deployDirection) = 0;
 // Cancel deploy sandbag if interact menu opened
 ["interactMenuOpened", {
     if (GVAR(deployPFH) != -1) then {
-        call FUNC(deployCancel);
+        call FUNC(deployCancel); // @todo
     };
 }] call EFUNC(common,addEventHandler);
 

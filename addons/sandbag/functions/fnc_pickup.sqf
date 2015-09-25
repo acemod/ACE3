@@ -3,8 +3,8 @@
  * Pick up sandbag
  *
  * Arguments:
- * 0: sandbag <OBJECT>
- * 1: unit <OBJECT>
+ * 0: unit <OBJECT>
+ * 1: sandbag <OBJECT>
  *
  * Return Value:
  * None

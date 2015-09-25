@@ -48,13 +48,13 @@ GVAR(deployPFH) = [{
 
 _unit setVariable [QGVAR(Deploy), [
     _unit, "DefaultAction",
-    {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
+    {GVAR(deployPFH) != -1},
     {[_this select 0] call FUNC(deployConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(Cancel), [
     _unit, "zoomtemp",
-    {GVAR(deployPFH) != -1 && !isNull (GVAR(sandBag))},
+    {GVAR(deployPFH) != -1},
     {[_this select 0] call FUNC(deployCancel)}
 ] call EFUNC(common,addActionEventHandler)];
 

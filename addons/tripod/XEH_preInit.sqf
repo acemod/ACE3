@@ -3,7 +3,10 @@
 ADDON = false;
 
 PREP(adjust);
+PREP(handleKilled);
+PREP(handlePlayerChanged);
 PREP(handleScrollWheel);
+PREP(handleUnconscious);
 PREP(pickup);
 PREP(place);
 

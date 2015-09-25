@@ -3,11 +3,9 @@
 ADDON = false;
 
 PREP(canDeploy);
-PREP(carry);
 PREP(deploy);
 PREP(deployCancel);
 PREP(deployConfirm);
-PREP(drop);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
