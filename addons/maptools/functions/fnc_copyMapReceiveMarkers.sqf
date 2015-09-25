@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_lineMarkers);
+params ["_lineMarkers"];
 
 {
     private "_marker";

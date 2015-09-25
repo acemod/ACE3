@@ -1,4 +1,4 @@
-
+class Mode_SemiAuto;
 class Mode_FullAuto;
 
 class CfgWeapons {
@@ -510,14 +510,14 @@ class CfgWeapons {
         class player: player {};
     };
 
-    class cannon_105mm: cannon_120mm {
+    class cannon_105mm: CannonCore {
         displayName = "M68";
-        class player: player {
+        class player: Mode_SemiAuto {
             displayName = "M68";
         };
     };
 
-    class cannon_125mm: cannon_120mm {
+    class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
 
@@ -567,5 +567,13 @@ class CfgWeapons {
         class HE: HE {
             displayName = "L21A1 RARDEN";
         };
+    };
+
+    //attachments
+
+    class Itemcore;
+
+    class acc_flashlight: ItemCore {
+        displayName = "UTG Defender 126";
     };
 };

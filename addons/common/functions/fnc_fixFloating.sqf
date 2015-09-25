@@ -3,16 +3,16 @@
  * Attempt to fix floating physx with disabled damage after setPosXXX commands.
  *
  * Arguments:
- * Physx object (Object)
+ * PhysX object <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
 private "_object";
-
 _object = _this;
 
 // setHitPointDamage requires local object

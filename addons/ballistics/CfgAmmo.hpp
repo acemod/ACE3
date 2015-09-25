@@ -6,23 +6,11 @@ class CfgAmmo {
         timeToLive=6;
     };
 
-    class B_20mm : BulletBase {
-        timeToLive=30;
-    };
-    class B_25mm : BulletBase {
-        timeToLive=30;
-    };
-    class B_35mm_AA : BulletBase {
-        timeToLive=30;
-    };
-    class B_30mm_AP : BulletBase {
-        timeToLive=30;
-    };
-    
     class B_556x45_Ball : BulletBase {
         airFriction=-0.00126466;
         hit=8;
         typicalSpeed=750;
+        tracerScale = 1;
         tracerStartTime=0.073;  // M856 tracer burns out to 800m
         tracerEndTime=1.57123;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=5.69;
@@ -128,9 +116,13 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
+    class B_56x15_dual: BulletBase {
+        tracerScale = 0.5;
+    };
     class B_65x39_Caseless : BulletBase {
         airFriction=-0.00075308;
         typicalSpeed=800;
+        tracerScale = 1.1; //1.0;
         ACE_caliber=6.706;
         ACE_bulletLength=32.893;
         ACE_bulletMass=7.9704;
@@ -180,10 +172,15 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={750, 820, 840, 852, 860};
         ACE_barrelLengths[]={254.0, 406.4, 508.0, 609.6, 660.4};
     };
+    class SubmunitionBullet;
+    class B_65x39_Minigun_Caseless: SubmunitionBullet {
+        tracerScale = 1.1; //1.0;
+    };
     class B_762x51_Ball : BulletBase {
         airFriction=-0.00100957;
         typicalSpeed=833;
         hit=9;
+        tracerScale = 1.2; //0.6;
         tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m 
         tracerEndTime=2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=7.823;
@@ -479,6 +476,7 @@ class CfgAmmo {
     class B_9x21_Ball : BulletBase {
         airFriction=-0.00226847;
         typicalSpeed=390;
+        tracerScale = 0.5;
         hit=6;
         ACE_caliber=9.042;
         ACE_bulletLength=15.494;
@@ -490,6 +488,9 @@ class CfgAmmo {
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={440, 460, 480};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
+    };
+    class B_9x21_Ball_Tracer_Green: B_9x21_Ball {
+        tracerScale = 0.5;
     };
     class ACE_9x18_Ball_57N181S : B_9x21_Ball {
         hit=5;
@@ -584,6 +585,7 @@ class CfgAmmo {
         timeToLive=10;
         airFriction=-0.00038944;
         typicalSpeed=910;
+        tracerScale = 1.3; //1.2;
         ACE_caliber=10.363;
         ACE_bulletLength=54.0;
         ACE_bulletMass=26.568;
@@ -670,9 +672,13 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={880, 915, 925};
         ACE_barrelLengths[]={508.0, 660.4, 711.2};
     };
+    class B_127x33_Ball: BulletBase {
+        tracerScale = 1.3; //1.2;
+    };
     class B_127x54_Ball : BulletBase {
         airFriction=-0.00019268;
         typicalSpeed=300;
+        tracerScale = 1.3;//
         ACE_caliber=12.954;
         ACE_bulletLength=64.516;
         ACE_bulletMass=48.6;
@@ -688,6 +694,7 @@ class CfgAmmo {
         timeToLive=10;
         airFriction=-0.00057503;
         typicalSpeed=900;
+        tracerScale = 1.3; //1.2;
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=41.9256;
@@ -703,6 +710,7 @@ class CfgAmmo {
         timeToLive=10;
         airFriction=-0.00057503;
         typicalSpeed=900;
+        tracerScale = 1.3;//
         hit=25;
         caliber=4.0;
         ACE_caliber=12.954;
@@ -736,6 +744,7 @@ class CfgAmmo {
         timeToLive=10;
         airFriction=-0.00063800;
         typicalSpeed=820;
+        tracerScale = 1.3; //1.5;
         ACE_caliber=12.979;
         ACE_bulletLength=64.008;
         ACE_bulletMass=48.276;
@@ -750,6 +759,7 @@ class CfgAmmo {
     class B_45ACP_Ball : BulletBase {
         airFriction=-0.00081221;
         typicalSpeed=250;
+        tracerScale = 0.6;
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
         ACE_bulletMass=14.904;
@@ -760,5 +770,37 @@ class CfgAmmo {
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
+    };
+    class B_19mm_HE: BulletBase {
+        tracerScale = 1;
+    };
+    class B_30mm_HE: B_19mm_HE {
+        tracerScale = 2.5;
+    };
+    class B_20mm: BulletBase {
+        timeToLive=30;
+        tracerScale = 1.5; //1;
+    };
+    class B_25mm: BulletBase {
+        timeToLive=30;
+        tracerScale = 2.0; //1;
+    };
+    class B_30mm_AP: BulletBase {
+        timeToLive=30;
+        tracerScale = 2.5;
+    };
+    class B_35mm_AA: BulletBase {
+        timeToLive=30;
+        tracerScale = 2.75; //1.85;
+    };
+    class ShellBase;
+    class Sh_120mm_HE: ShellBase {
+        tracerScale = 3;
+    };
+    class Sh_120mm_APFSDS: ShellBase {
+        tracerScale = 3;
+    };
+    class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
+        tracerScale = 2.5;
     };
 };

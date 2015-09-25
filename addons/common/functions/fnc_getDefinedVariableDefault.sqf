@@ -1,19 +1,24 @@
-/**
- * fn_getvariableDefault.sqf
- * @Descr: Get the variable default value
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the variable default value
  *
- * @Arguments: [variableName STRING]
- * @Return: ANY
- * @PublicAPI: true
+ * Arguments:
+ * 0: Variable Name <STRING>
+ *
+ * Return Value:
+ * Default value of variable <ANY>
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
+params ["_varName"];
+
 private "_variableDefinition";
-_variableDefinition = ([_this select 0] call FUNC(getDefinedVariableInfo));
-if (count _variableDefinition > 0) exitwith {
+_variableDefinition = [_varName] call FUNC(getDefinedVariableInfo);
+
+if !(_variableDefinition isEqualTo []) exitwith {
     _variableDefinition select 1;
 };
 
-nil;
+nil

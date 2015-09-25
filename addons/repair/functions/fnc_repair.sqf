@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn"];
+private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
@@ -37,7 +37,18 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitwith {false};
 if (isEngineOn _target) exitwith {false};
-_items = getArray (_config >> "items");
+
+//Items can be an array of required items or a string to a ACE_Setting array
+_items = if (isArray (_config >> "items")) then {
+    getArray (_config >> "items");
+} else {
+    _settingName = getText (_config >> "items");
+    _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
+    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
+        ERROR("bad setting"); ["BAD"]
+    };
+    _settingItemsArray select (missionNamespace getVariable _settingName);
+};
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitwith {false};
 
 _return = true;
@@ -164,14 +175,10 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_text", "_processText"];
+private ["_processText"];
+// Find localized string
 _processText = getText (_config >> "displayNameProgress");
-_text = format ["STR_ACE_Repair_%1", _hitPoint];
-if (isLocalized _text) then {
-    _text = format [_processText, localize _text];
-} else {
-    _text = _processText;
-};
+([_hitPoint, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
 
 // Start repair
 [
@@ -181,7 +188,7 @@ if (isLocalized _text) then {
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    []
+    ["isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon

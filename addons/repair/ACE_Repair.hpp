@@ -8,7 +8,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_Wheel);
             repairingTime = 10;
             repairingTimeSelfCoef = 1;
-            items[] = {"ToolKit"};
+            items = QGVAR(wheelRepairRequiredItems);
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
 
@@ -31,10 +31,11 @@ class ACE_Repair {
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
-            condition = QUOTE((_target getHitPointDamage _hitPoint) > ([_caller] call FUNC(getPostRepairDamage)));
+            condition = QUOTE(call FUNC(canMiscRepair));
             requiredEngineer = 0;
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
+            items[] = {"ToolKit"};
         };
         class RepairTrack: MiscRepair {
             displayName = CSTRING(Repairing);
@@ -63,7 +64,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = 30;
-            condition = "damage (_this select 1) > 0";
+            condition = "damage _target > 0";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
         };
     };

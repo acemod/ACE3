@@ -39,7 +39,7 @@ while {true} do {
   if (_temperature < 1) exitWith {0};
 
   if (isNil "_temperature") exitWith {
-    diag_log text format ["[ACE] ERROR: _totalTime = %1; _time = %2; _deltaTime = %3;", _totalTime, _time, _deltaTime];
+    ACE_LOGERROR_3("_totalTime = %1; _time = %2; _deltaTime = %3;",_totalTime,_time,_deltaTime);
     0
   };
 

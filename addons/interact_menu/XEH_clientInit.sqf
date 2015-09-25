@@ -75,10 +75,59 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call EFUNC(common,addEventHandler);
 
-// Let key work with zeus open (not perfect, enables all added hotkeys in zeus interface rather than only menu)
+// Let key work with zeus open (not perfect, contains workaround to prevent other CBA keybindings)
 ["zeusDisplayChanged",{
     if (_this select 1) then {
-        (finddisplay 312) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-        (finddisplay 312) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+        (finddisplay 312) displayAddEventHandler ["KeyUp", {
+            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
+            _key = _key select 5;
+            _dik = _key select 0;
+            _mods = _key select 1;
+
+            if ((_this select 1) == _dik) then {
+                if ((_this select [2,3]) isEqualTo _mods) then {
+                    [_this,'keyup'] call CBA_events_fnc_keyHandler
+                };
+            };
+        }];
+        (finddisplay 312) displayAddEventHandler ["KeyDown", {
+            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
+            _key = _key select 5;
+            _dik = _key select 0;
+            _mods = _key select 1;
+
+            if ((_this select 1) == _dik) then {
+                if ((_this select [2,3]) isEqualTo _mods) then {
+                    [_this,'keydown'] call CBA_events_fnc_keyHandler
+                };
+            };
+        }];
     };
 }] call EFUNC(common,addEventHandler);
+
+
+//Debug to help end users identify mods that break CBA's XEH
+[{
+    private ["_badClassnames"];
+    _badClassnames = [];
+    {
+        //Only check Land objects (WeaponHolderSimulated show up in `vehicles` for some reason)
+        if ((_x isKindOf "Land") && {(isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}}) then {
+            if (!((typeOf _x) in _badClassnames)) then {
+                _badClassnames pushBack (typeOf _x);
+                ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
+            };
+        };
+    } forEach (allUnits + allDeadMen + vehicles);
+    if ((count _badClassnames) == 0) then {
+        ACE_LOGINFO("All compile checks passed");
+    } else {
+        ACE_LOGERROR_1("%1 Classnames failed compile check!!! (bad XEH / missing cba_enable_auto_xeh.pbo)", (count _badClassnames));
+
+        //Only show visual error if they are actually missing the pbo:
+        #define SUPMON configFile>>"CfgSettings">>"CBA">>"XEH">>"supportMonitor"
+        if ((!isNumber(SUPMON)) || {getNumber(SUPMON) != 1}) then {
+            ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
+        };
+    };
+}, [], 5] call EFUNC(common,waitAndExecute);  //ensure CBASupMon has time to run first

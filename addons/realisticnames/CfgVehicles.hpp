@@ -633,4 +633,12 @@ class CfgVehicles {
     class Weapon_MMG_02_sand_F: Weapon_Base_F {
         displayName = CSTRING(MMG_02_sand);
     };*/
+    
+    //attachments
+    
+    class Item_Base_F;
+    
+    class Item_acc_flashlight: Item_Base_F {
+		displayName="UTG Defender 126";
+	};
 };

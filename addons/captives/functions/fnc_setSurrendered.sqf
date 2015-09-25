@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit","_state"];
+TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitwith {
     ERROR("running surrender on remote unit");
@@ -43,13 +44,13 @@ if (_state) then {
 
     // fix anim on mission start (should work on dedicated servers)
     [{
-        PARAMS_1(_unit);
+        params ["_unit"];
         if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
             private "_animChangedEHID";
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-                PARAMS_2(_unit,_newAnimation);
+                params ["_unit", "_newAnimation"];
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     TRACE_1("Surrender animation interrupted",_newAnimation);
                     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
@@ -57,7 +58,7 @@ if (_state) then {
             }];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
-    }, [_unit], 0.01, 0] call EFUNC(common,waitAndExecute);
+    }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
     [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
@@ -85,8 +86,8 @@ if (_state) then {
         //spin up a PFEH, to watching animationState for the next 20 seconds to make sure we don't enter "hands up"
         //Handles long animation chains
         [{
-            PARAMS_2(_args,_pfID);
-            EXPLODE_2_PVT(_args,_unit,_maxTime);
+            params ["_args", "_pfID"];
+            _args params ["_unit", "_maxTime"];
             //If waited long enough or they re-surrendered or they are unconscious, exit loop
             if ((ACE_time > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;

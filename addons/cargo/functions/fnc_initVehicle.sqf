@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Initializes vehicle, adds open caro menu action if available.
+ * Initializes vehicle, adds open cargo menu action if available.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -25,20 +25,12 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (isServer) then {
     {
         if (isClass _x) then {
-            private ["_className", "_amount","_position","_object"];
-            _className = getText (_x >> "type");
-            _amount = getNumber (_x >> "amount");
-            _position = getPos _vehicle;
-            _position set [1, (_position select 1) + 1];
-            _position set [2, (_position select 2) + 7.5];
-            for "_i" from 1 to _amount do {
-                _object = createVehicle [_className, _position, [], 0, "CAN_COLLIDE"];
-                if !([_object, _vehicle] call FUNC(loadItem)) exitWith {
-                    deleteVehicle _object;
-                };
-            };
+            private ["_cargoClassname", "_cargoCount"];
+            _cargoClassname = getText (_x >> "type");
+            _cargoCount = getNumber (_x >> "amount");
+            TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
+            ["AddCargoByClass", [_cargoClassname, _vehicle, _cargoCount]] call EFUNC(common,localEvent);
         };
-        nil
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
 
@@ -51,7 +43,10 @@ SETMVAR(GVAR(initializedClasses),_initializedClasses);
 if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
 
 private ["_text", "_condition", "_statement", "_icon", "_action"];
-_condition = {GVAR(enable)};
+_condition = {
+    params ["_target", "_player"];
+    GVAR(enable) && {locked _target < 2} && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+};
 _text = localize LSTRING(openMenu);
 _statement = {GVAR(interactionVehicle) = _target; createDialog QGVAR(menu);};
 _icon = "";
