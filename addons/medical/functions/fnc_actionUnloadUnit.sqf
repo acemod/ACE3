@@ -21,4 +21,4 @@ params ["_caller", "_target", ["_drag", false]];
 if (vehicle _target == _target) exitwith {};
 if (([_target] call EFUNC(common,isAwake))) exitwith {};
 
-["unloadPersonEvent", _target, [_target, vehicle _target, _caller]] call EFUNC(common,targetEvent)
+["unloadPersonEvent", _target, [_target, vehicle _target, _caller]] call EFUNC(common,targetEvent);

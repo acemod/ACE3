@@ -21,15 +21,10 @@ _vehicle = vehicle _unit;
 
 if (_vehicle == _unit) exitWith {false};
 
-if (speed _vehicle > 1 || getPos _vehicle select 2 > 2) exitWith {false};
-
-private "_emptyPos";
-_emptyPos = (getPos _vehicle) findEmptyPosition [0, 10, typeof _unit]; // @todo to small?
-
-if (count _emptyPos == 0) exitWith {false};
+if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 2}) exitWith {false};
 
 if (!isNull _vehicle) then {
-    [[_unit], QUOTE(FUNC(unloadPersonLocal)), _unit, false] call FUNC(execRemoteFnc);
+    ["unloadPersonEvent", [_unit], [_unit, _vehicle]] call EFUNC(common,targetEvent);
 };
 
 true

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: unit to unload <OBJECT>
  * 1: Vehicle <OBJECT>
- * 2: Unloader <OBJECT><OPTIONAL>
+ * 2: Unloader (player) <OBJECT><OPTIONAL>
  *
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
