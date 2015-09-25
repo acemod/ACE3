@@ -32,4 +32,4 @@ _selected = (lbCurSel _ctrl) max 0;
 if (count _loaded <= _selected) exitWith {};
 _item = _loaded select _selected;
 
-[_item, GVAR(interactionVehicle)] call FUNC(unloadItem);
+[_item, GVAR(interactionVehicle), ACE_player] call FUNC(unloadItem);

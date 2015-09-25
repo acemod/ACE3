@@ -1,5 +1,5 @@
 /*
- * Author: PabstMirror
+ * Author: PabstMirror, ViperMaul
  * Find a safe place near a vehicle to unload something
  * Handles Normal Terrain, In Water or On Buildings (Pier, StaticShip)
  *
@@ -8,6 +8,7 @@
  * 1: Cargo Classname <STRING>
  * 2: Unloader (player) <OBJECT><OPTIONAL>
  * 3: Max Distance (meters) <NUMBER><OPTIONAL>
+ * 4: Check Vehicle is Stable <BOOL><OPTIONAL>
  *
  * Return Value:
  * Unload PositionAGL (Can Be [] if no valid pos found) <ARRAY>
@@ -17,7 +18,7 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //Number of tests run (findEmptyPosition and manual) note can run both if first doesn't give good results
@@ -26,9 +27,10 @@
 #define COL_TEST_COUNT 8
 #define COL_TEST_RANGE 0.6
 
+// if (true) exitWith {[]};
 
-params ["_vehicle", "_typeOfCargo", ["_theUnloader", objNull], ["_maxDistance", 10]];
-TRACE_3("params",_vehicle,_typeOfCargo,_theUnloader,_maxDistance);
+params ["_vehicle", "_typeOfCargo", ["_theUnloader", objNull], ["_maxDistance", 10], ["_checkVehicleIsStable", true]];
+TRACE_5("params",_vehicle,_typeOfCargo,_theUnloader,_maxDistance,_checkVehicleIsStable);
 
 private["_aboveBuilding", "_angle", "_belowRoundArray", "_index", "_originAGL", "_rangeToCheck", "_returnAGL", "_roundAGL", "_roundPointIsValid", "_validVehiclestate"];
 
@@ -42,7 +44,7 @@ if (!(_vehicle isKindOf "Ship")) then {
         _validVehiclestate = false;
     };
 };
-if (!_validVehiclestate) exitWith {
+if (_checkVehicleIsStable && (!_validVehiclestate)) exitWith {
     TRACE_1("bad vehicle state",_vehicle);
     []
 };

@@ -754,5 +754,8 @@
             <Czech>ACE3 Vozidla</Czech>
             <Spanish>ACE3 Vehículos</Spanish>
         </Key>
+        <Key ID="STR_ACE_Common_NoRoomToUnload">
+            <English>No Room to unload</English>
+        </Key>
     </Package>
 </Project>

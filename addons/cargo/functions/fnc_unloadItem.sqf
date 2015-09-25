@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Vehicle <OBJECT>
+ * 2: Unloader (player) <OBJECT><OPTIONAL>
  *
  * Return value:
  * Object unloaded <BOOL>
@@ -14,41 +15,32 @@
  *
  * Public: No
  */
+  #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];
 
-params ["_item", "_vehicle"];
+params ["_item", "_vehicle", ["_unloader", objNull]];
+TRACE_3("params",_item,_vehicle,_unloader);
 
-if !([_item, _vehicle] call FUNC(canUnloadItem)) exitWith {
+//This covers testing vehicle stability and finding a safe position
+_emptyPos = [_vehicle, (typeOf _item), _unloader] call EFUNC(common,findUnloadPosition);
+TRACE_1("findUnloadPosition",_emptyPos);
+
+if (count _emptyPos != 3) exitWith {
+    ACE_LOGWARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    if ((!isNull _unloader) && {[_unloader] call EFUNC(common,isPlayer)}) then {
+        //display text saying there are no safe places to exit the vehicle
+        ["displayTextStructured", [_unloader], [localize ELSTRING(common,NoRoomToUnload)]] call EFUNC(common,targetEvent);
+    };
     false
 };
 
-_validVehiclestate = true;
-_emptyPos = [];
-if (_vehicle isKindOf "Ship" ) then {
-    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
-    TRACE_1("SHIP Ground Check", getPosATL _vehicle );
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, typeOf _item]); // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air" ) then {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
-        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
-    } else {
-        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeOf _item]);
-    };
-};
-
-TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitWith {false};
-
-if (count _emptyPos == 0) exitWith {false};  //consider displaying text saying there are no safe places to exit the vehicle
-
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
+if !(_item in _loaded) exitWith {
+    ACE_LOGERROR_2("Tried to unload item not in cargo array %1 - %2", _item, _vehicle);
+    false
+};
 _loaded = _loaded - [_item];
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
