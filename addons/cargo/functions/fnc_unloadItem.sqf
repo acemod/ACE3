@@ -15,7 +15,6 @@
  *
  * Public: No
  */
-  #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];

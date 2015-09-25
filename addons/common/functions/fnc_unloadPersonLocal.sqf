@@ -12,7 +12,6 @@
  *
  * Public: No
  */
- #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
@@ -47,8 +46,7 @@ _unit action ["Eject", vehicle _unit];
 
     _unit setPosASL AGLToASL _emptyPos;
 
-    // @todo never used. Remove?
-    /*if !([_unit] call FUNC(isAwake)) then {
+    if !([_unit] call FUNC(isAwake)) then {
 
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
 
@@ -66,7 +64,7 @@ _unit action ["Eject", vehicle _unit];
                 };
             }, [_unit, _anim], 0.5, 0] call FUNC(waitAndExecute);
         };
-    };*/
+    };
 }, [_unit, _emptyPos], 0.5] call FUNC(waitAndExecute);
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);

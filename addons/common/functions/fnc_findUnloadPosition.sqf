@@ -18,7 +18,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 //Number of tests run (findEmptyPosition and manual) note can run both if first doesn't give good results
@@ -26,8 +25,6 @@
 //Manual collision tests (count and radius):
 #define COL_TEST_COUNT 8
 #define COL_TEST_RANGE 0.6
-
-// if (true) exitWith {[]};
 
 params ["_vehicle", "_typeOfCargo", ["_theUnloader", objNull], ["_maxDistance", 10], ["_checkVehicleIsStable", true]];
 TRACE_5("params",_vehicle,_typeOfCargo,_theUnloader,_maxDistance,_checkVehicleIsStable);
