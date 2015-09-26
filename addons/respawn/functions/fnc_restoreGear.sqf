@@ -156,7 +156,7 @@ if ("Laserdesignator" in assignedItems _unit) then {
 };
 
 // restore the last active weapon, muzzle and weaponMode
-_activeWeaponAndMuzzle params ["_activeWeapon", "_activeMuzzle", "_activeWeaponMode"]
+_activeWeaponAndMuzzle params ["_activeWeapon", "_activeMuzzle", "_activeWeaponMode"];
 
 if (
     (_activeMuzzle != "") &&
