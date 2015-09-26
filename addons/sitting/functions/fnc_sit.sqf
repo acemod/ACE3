@@ -24,12 +24,6 @@ params ["_seat", "_player"];
 _player switchMove "amovpknlmstpsraswrfldnon";
 
 // Add scroll-wheel action to release object
-_actionID = _player getVariable [QGVAR(StandUpActionID), -1];
-
-if (_actionID != -1) then {
-    _player removeAction _actionID;
-};
-
 _actionID = _player addAction [
     format ["<t color='#FFFF00'>%1</t>", localize LSTRING(Stand)],
     QUOTE((_this select 0) call FUNC(stand)),
@@ -40,8 +34,6 @@ _actionID = _player addAction [
     "GetOut",
     QUOTE(_this call FUNC(canStand))
 ];
-
-_player setVariable [QGVAR(StandUpActionID), _actionID];
 
 // Read config
 _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
@@ -58,7 +50,7 @@ _player setDir _sitDirection;
 _player setPos (_seat modelToWorld _sitPosition);
 
 // Set variables, save seat object on player
-_player setVariable [QGVAR(isSitting), _seat];
+_player setVariable [QGVAR(isSitting), [_seat, _actionID]];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
 
