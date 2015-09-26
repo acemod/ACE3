@@ -21,11 +21,11 @@
 
 private ["_currentSlideshow", "_slidesAction", "_varString"];
 params [
-    ["_objects", [], []],
-    ["_controllers", [], []],
-    ["_images", [], []],
-    ["_names", [], []],
-    ["_duration", 0, 0]
+    ["_objects", [], [[]] ],
+    ["_controllers", [], [[]] ],
+    ["_images", [], [[]] ],
+    ["_names", [], [[]] ],
+    ["_duration", 0, [0]]
 ];
 
 // Verify data
