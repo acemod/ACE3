@@ -34,29 +34,10 @@ class CfgVehicles {
         };
     };
 
-    #define MACRO_SEAT_ACTION \
-        class ACE_Actions { \
-            class ACE_MainActions { \
-                displayName = ECSTRING(interaction,MainAction); \
-                selection = ""; \
-                distance = 1.5; \
-                condition = "true"; \
-                class GVAR(Sit) { \
-                    displayName = CSTRING(Sit); \
-                    condition = QUOTE(_this call FUNC(canSit)); \
-                    statement = QUOTE(_this call FUNC(sit)); \
-                    showDisabled = 0; \
-                    priority = 0; \
-                    icon = PATHTOF(UI\sit_ca.paa); \
-                }; \
-            }; \
-        };
-
     class ThingX;
     // Folding Chair
     class Land_CampingChair_V1_F: ThingX {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -0.45};
@@ -64,7 +45,6 @@ class CfgVehicles {
     // Camping Chair
     class Land_CampingChair_V2_F: ThingX {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -0.45};
@@ -74,7 +54,6 @@ class CfgVehicles {
     // Chair (Plastic)
     class Land_ChairPlastic_F: Furniture_base_F {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 90;
         GVAR(sitPosition[]) = {0, 0, -0.5};
@@ -82,7 +61,6 @@ class CfgVehicles {
     // Chair (Wooden)
     class Land_ChairWood_F: Furniture_base_F {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.05, 0};
@@ -90,7 +68,6 @@ class CfgVehicles {
     // Office Chair
     class Land_OfficeChair_01_F: Furniture_base_F {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, 0, -0.6};
@@ -98,7 +75,6 @@ class CfgVehicles {
     // Rattan Chair
     class Land_RattanChair_01_F: Furniture_base_F {
         XEH_ENABLED;
-        MACRO_SEAT_ACTION
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -1}; // Z must be -1 due to chair's geometry (magic floating seat point)

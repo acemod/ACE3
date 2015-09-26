@@ -17,3 +17,11 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
+
+class Extended_InitPost_EventHandlers {
+    class All {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(addSitActions))
+        };
+    };
+};

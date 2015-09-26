@@ -21,7 +21,7 @@ private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_seatPosO
 params ["_seat", "_player"];
 
 // Set global variable for standing up
-GVAR(seat) = _seat;
+GVAR(seat) = _seat; //@todo - put into player isSitting variable
 
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
