@@ -38,7 +38,7 @@ if (isArray _hitpointGroupConfig) then {
     // Retrieve group if current hitpoint is leader of any
     {
         if (_x select 0 == _hitPoint) exitWith {
-            ([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitpoints"];
+            (getAllHitPointsDamage _vehicle) params ["_hitpoints"];
             // Set all sub-group hitpoints' damage to 0, if a hitpoint is invalid print RPT error
             {
                 if (_x in _hitpoints) then {

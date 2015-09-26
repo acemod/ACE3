@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+ #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return"];
@@ -41,10 +42,22 @@ _hitpointGroup pushBack _hitPoint;
 // Get post repair damage
 _postRepairDamage = [_caller] call FUNC(getPostRepairDamage);
 
+(getAllHitPointsDamage _target) params ["_allHitPoints", "", "_allHitPointDamages"];
+
 // Return true if damage can be repaired on any hitpoint in the group, else false
 _return = false;
 {
-    if ((_target getHitPointDamage _x) > _postRepairDamage) exitWith {
+    //Get the max damage for all hitpoints of that name:
+    _xHit = _x;
+    _maxDamage = 0;
+    {
+        if ((_x == _xHit) && {(_allHitPointDamages select _forEachIndex) > _maxDamage}) then {
+            _maxDamage = _allHitPointDamages select _forEachIndex;
+        };
+    } forEach _allHitPoints;
+    TRACE_2("hitpoint",_x,_maxDamage);
+    
+    if (_maxDamage > _postRepairDamage) exitWith {
         _return = true;
     };
 } forEach _hitpointGroup;

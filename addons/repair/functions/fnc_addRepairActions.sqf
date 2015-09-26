@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_vehicle"];
@@ -28,21 +29,28 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints and selections
-([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitPoints", "_hitPointsSelections"];
+(getAllHitPointsDamage _vehicle) params ["_hitPoints", "_hitPointsSelections"];
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
-
 
 private ["_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
 _hitPointsAddedNames = [];
 _hitPointsAddedStrings = [];
 _hitPointsAddedAmount = [];
 
+_processedHitPoints = [];
+
 // add repair events to this vehicle class
 {
+    _duplicateHitpointName = (_x in _processedHitPoints);
+    _processedHitPoints pushBack _x;
+    _selectionName = _hitPointsSelections select _forEachIndex;
+
     if (_x in _wheelHitPoints) then {
         // add wheel repair action
+
+        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);};
 
         private ["_icon", "_selection", "_name", "_text"];
 
@@ -54,6 +62,8 @@ _hitPointsAddedAmount = [];
         // remove wheel action
         _name = format ["Remove_%1", _x];
         _text = localize LSTRING(RemoveWheel);
+
+        TRACE_5("Adding Wheel Actions",_name,_forEachIndex,_selectionName,_text,_selection);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
@@ -73,7 +83,9 @@ _hitPointsAddedAmount = [];
 
     } else {
         // exit if the hitpoint is in the blacklist, e.g. glasses
-        if (_x in IGNORED_HITPOINTS) exitWith {};
+        if (_x in IGNORED_HITPOINTS) exitWith {TRACE_3("Ignored Hitpoint",_x,_forEachIndex,_selectionName);};
+        if (_x == "") exitWith {TRACE_3("Hitpoint Empty",_x,_forEachIndex,_selectionName);};
+        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);};
 
         private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
 
@@ -135,7 +147,7 @@ _hitPointsAddedAmount = [];
 
         // If position still empty (not a position array or selection name) try extracting from model
         if (typeName _selection == "STRING" && {_selection == ""}) then {
-            _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));
+            _selection = _vehicle selectionPosition _selectionName;
         };
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(canRepair)};
@@ -147,9 +159,11 @@ _hitPointsAddedAmount = [];
             } else {
                 _selection = [1.75, 0, -1.75];
             };
+            TRACE_5("Adding RepairTrack",_name,_forEachIndex,_selectionName,_text,_selection);
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "RepairTrack"], _selection, 4] call EFUNC(interact_menu,createAction);
             [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
         } else {
+            TRACE_5("Adding MiscRepair",_name,_forEachIndex,_selectionName,_text,_selection);
             _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
             // Put inside main actions if no other position was found above
             if (_selection isEqualTo [0, 0, 0]) then {
@@ -165,6 +179,7 @@ _condition = {[_this select 1, _this select 0, _this select 2 select 0, _this se
 _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 _action = [QGVAR(fullRepair), localize LSTRING(fullRepair), "A3\ui_f\data\igui\cfg\actions\repair_ca.paa", _statement, _condition, {}, ["", "fullRepair"], "", 4] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
+
 // set class as initialized
 _initializedClasses pushBack _type;
 

@@ -46,13 +46,8 @@ _bones = [];
     _bones pushBack _bone;
 } forEach _wheels;
 
-// get hitpoints with their fire geometry selections
-private ["_hitPointsWithSelections", "_hitPoints", "_hitPointSelections"];
-
-_hitPointsWithSelections = [_vehicle] call EFUNC(common,getHitPointsWithSelections);
-
-_hitPoints = _hitPointsWithSelections select 0;
-_hitPointSelections = _hitPointsWithSelections select 1;
+// get all hitpoints and selections
+(getAllHitPointsDamage _vehicle) params ["_hitPoints", "_hitPointsSelections"];
 
 // assign hitpoints to correct wheel selection by comparing bone name and fire geometry selection
 private ["_wheelHitPoints", "_wheelHitPointSelections"];

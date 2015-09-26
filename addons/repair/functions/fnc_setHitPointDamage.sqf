@@ -15,30 +15,20 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_vehicle", "_hitPoint", "_hitPointDamage"];
 TRACE_3("params",_vehicle,_hitPoint,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
-if !(local _vehicle) exitWith {};
+if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
-// get all valid hitpoints
-private ["_hitPoints", "_hitPointsWithSelections"];
-
-_hitPoints = [_vehicle] call EFUNC(common,getHitpoints);
-_hitPointsWithSelections = [_vehicle] call EFUNC(common,getHitpointsWithSelections) select 0;
+// get all hitpoints and selections and damages
+(getAllHitPointsDamage _vehicle) params ["_allHitPoints", "_alllHitPointsSelections", "_allHitPointDamages"];
 
 // exit if the hitpoint is not valid
-if !(_hitPoint in _hitPoints) exitWith {systemChat format["NOT A VALID HITPOINT: %1",_hitpoint]};
-
-// save array with damage values of all hitpoints
-private "_hitPointDamages";
-_hitPointDamages = [];
-
-{
-    _hitPointDamages set [_forEachIndex, (_vehicle getHitPointDamage _x)];
-} forEach _hitPoints;
+if !(_hitPoint in _allHitPoints) exitWith {ACE_LOGERROR_1("NOT A VALID HITPOINT: %1", _hitpoint);};
 
 // save structural damage and sum of hitpoint damages
 private ["_damageOld", "_hitPointDamageSumOld"];
@@ -46,41 +36,38 @@ private ["_damageOld", "_hitPointDamageSumOld"];
 _damageOld = damage _vehicle;
 
 _hitPointDamageSumOld = 0;
+_damageOnRepairedHitpoint = 0;
+_hitPointsBeingCounted = 0;
 {
-    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
-        _hitPointDamageSumOld = _hitPointDamageSumOld + (_hitPointDamages select (_hitPoints find _x));
+    if ((_x != "") && {!(_x in IGNORED_HITPOINTS)} && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+        _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
+        _hitPointsBeingCounted = _hitPointsBeingCounted + 1;
     };
-} forEach _hitPointsWithSelections;
-
-// set new damage in array
-_hitPointDamages set [_hitPoints find _hitPoint, _hitPointDamage];
-
-// save sum of new hitpoint damages
-private "_hitPointDamageSumNew";
-
-_hitPointDamageSumNew = 0;
-{
-    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
-        _hitPointDamageSumNew = _hitPointDamageSumNew + (_hitPointDamages select (_hitPoints find _x));
+    if (_x == _hitPoint) then {
+        _damageOnRepairedHitpoint = _damageOnRepairedHitpoint + (_allHitPointDamages select _forEachIndex);
+        _allHitPointDamages set [_forEachIndex, _hitPointDamage];
     };
-} forEach _hitPointsWithSelections;
+} forEach _allHitPoints;
 
 // calculate new strctural damage
 private "_damageNew";
-_damageNew = _hitPointDamageSumNew / count _hitPoints;
+if (_hitPointsBeingCounted == 0) exitWith {ACE_LOGERROR("div0");};
+_damageNew = (_hitPointDamageSumOld - _damageOnRepairedHitpoint) / _hitPointsBeingCounted;
 
 if (_hitPointDamageSumOld > 0) then {
-    _damageNew = _damageOld * (_hitPointDamageSumNew / _hitPointDamageSumOld);
+    _damageNew = _damageOld * ((_hitPointDamageSumOld - _damageOnRepairedHitpoint) / _hitPointDamageSumOld);
 };
+
+TRACE_5("damage",_hitPointDamageSumOld,_damageOnRepairedHitpoint,_hitPointsBeingCounted,_damageOld,_damageNew);
 
 // set new structural damage value
 _vehicle setDamage _damageNew;
 
 // set the new damage for that hit point
-
 {
-    _vehicle setHitPointDamage [_x, _hitPointDamages select _forEachIndex];
-} forEach _hitPoints;
+    TRACE_3("setHitIndex",(_allHitPoints select _forEachIndex),_forEachIndex,_x);
+    _vehicle setHitIndex [_forEachIndex, _x];
+} forEach _allHitPointDamages;
 
 // normalize hitpoints
 // [_vehicle] call FUNC(normalizeHitPoints);
