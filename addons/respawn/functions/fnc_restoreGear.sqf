@@ -1,34 +1,22 @@
 /*
-  Name: ACE_Respawn_fnc_restoreGear
-
-  Author(s):
-    bux578
-
-  Description:
-    Restores previously saved gear
-
-  Parameters:
-    0: OBJECT - unit
-    1: ARRAY<String, Array, ...> - Array containing all gear (result of ACE_common_fnc_getAllGear)
-
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Restores previously saved gear.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: All Gear based on return value of ACE_common_fnc_getAllGear <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_Player, stored_allGear] call ace_respawn_fnc_restoreGear
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_allGear);
-
-private ["_unit", "_allGear", "_headgear", "_goggles",
-"_uniform", "_uniformitems",
-"_vest", "_vestitems",
-"_backpack", "_backpackitems", "_backpa",
-"_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine",
-"_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine",
-"_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine",
-"_assigneditems", "_binocular",
-"_activeWeaponAndMuzzle", "_activeWeapon", "_activeMuzzle", "_activeWeaponMode"];
-
+params ["_unit", "_allGear"];
 
 // remove all starting gear of a player
 removeAllWeapons _unit;
@@ -40,77 +28,66 @@ removeAllAssignedItems _unit;
 clearAllItemsFromBackpack _unit;
 removeBackpack _unit;
 
-_headgear = _allGear select 0;
-_goggles = _allGear select 1;
-_uniform = _allGear select 2;
-_uniformitems = _allGear select 3;
-_vest = _allGear select 4;
-_vestitems = _allGear select 5;
-_backpack = _allGear select 6;
-_backpackitems = _allGear select 7;
-_primaryweapon = _allGear select 8;
-_primaryweaponitems = _allGear select 9;
-_primaryweaponmagazine = _allGear select 10;
-_secondaryweapon = _allGear select 11;
-_secondaryweaponitems = _allGear select 12;
-_secondaryweaponmagazine = _allGear select 13;
-_handgunweapon = _allGear select 14;
-_handgunweaponitems = _allGear select 15;
-_handgunweaponmagazine = _allGear select 16;
-_assigneditems = _allGear select 17;
-_binocular = _allGear select 18;
-_activeWeaponAndMuzzle = _allGear select 19;
-
+_allGear params [
+    "_headgear", "_goggles",
+    "_uniform", "_uniformitems",
+    "_vest", "_vestitems",
+    "_backpack", "_backpackitems",
+    "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine",
+    "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine",
+    "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine",
+    "_assigneditems", "_binocular",
+    "_activeWeaponAndMuzzle"
+];
 
 // start restoring the items
-if (_headgear != "") then {
-    _unit addHeadgear _headgear;
-};
-if (_uniform != "") then {
-    _unit forceAddUniform _uniform;
-};
-if (_vest != "") then {
-    _unit addVest _vest;
-};
-if (_goggles != "") then {
-    _unit addGoggles _goggles;
-};
+if (_headgear != "") then {_unit addHeadgear _headgear};
+if (_goggles != "") then {_unit addGoggles _goggles};
+if (_uniform != "") then {_unit forceAddUniform _uniform};
+if (_vest != "") then {_unit addVest _vest};
 
 {
     _unit addItemToUniform _x;
-} forEach _uniformitems;
+    false
+} count _uniformitems;
 
 {
     _unit addItemToVest _x;
-} forEach _vestitems;
+    false
+} count _vestitems;
 
 private "_flagRemoveDummyBag";
-_flagRemoveDummyBag = false;
 
-if (format["%1", _backpack] != "") then {
+if (format ["%1", _backpack] != "") then {
     _unit addBackpack _backpack;
 
-    _backpa = unitBackpack _unit;
-    clearMagazineCargoGlobal _backpa;
-    clearWeaponCargoGlobal _backpa;
-    clearItemCargoGlobal _backpa;
+    // make sure the backpack is empty. Some bags are prefilled by config
+    private "_backpackObject";
+    _backpackObject = unitBackpack _unit;
+
+    clearMagazineCargoGlobal _backpackObject;
+    clearWeaponCargoGlobal _backpackObject;
+    clearItemCargoGlobal _backpackObject;
+
     {
         _unit addItemToBackpack _x;
-    } forEach _backpackitems;
+        false
+    } count _backpackitems;
 
+    _flagRemoveDummyBag = false;
 } else {
     // dummy backpack to ensure mags being loaded
-    _unit addBackpack "B_Kitbag_Base";
+    _unit addBackpack "Bag_Base";
 
     _flagRemoveDummyBag = true;
 };
-
 
 // primaryWeapon
 if ((_primaryweapon != "") && {_primaryweapon != "ACE_FakePrimaryWeapon"}) then {
     {
         _unit addMagazine _x;
-    } forEach _primaryweaponmagazine;
+        false
+    } count _primaryweaponmagazine;
 
     _unit addWeapon _primaryweapon;
 
@@ -118,15 +95,16 @@ if ((_primaryweapon != "") && {_primaryweapon != "ACE_FakePrimaryWeapon"}) then 
         if (_x != "") then {
             _unit addPrimaryWeaponItem _x;
         };
-    } forEach _primaryweaponitems;
+        false
+    } count _primaryweaponitems;
 };
-
 
 // secondaryWeapon
 if (_secondaryweapon != "") then {
     {
         _unit addMagazine _x;
-    } forEach _secondaryweaponmagazine;
+        false
+    } count _secondaryweaponmagazine;
 
     _unit addWeapon _secondaryweapon;
 
@@ -134,15 +112,16 @@ if (_secondaryweapon != "") then {
         if (_x != "") then {
             _unit addSecondaryWeaponItem _x;
         };
-    } forEach _secondaryweaponitems;
+        false
+    } count _secondaryweaponitems;
 };
-
 
 // handgun
 if (_handgunweapon != "") then {
     {
         _unit addMagazine _x;
-    } forEach _handgunweaponmagazine;
+        false
+    } count _handgunweaponmagazine;
 
     _unit addWeapon _handgunweapon;
 
@@ -150,20 +129,19 @@ if (_handgunweapon != "") then {
         if (_x != "") then {
             _unit addHandgunItem _x;
         };
-    } forEach _handgunweaponitems;
+        false
+    } count _handgunweaponitems;
 };
-
 
 // remove dummy bagpack
 if (_flagRemoveDummyBag) then {
     removeBackpack _unit;
 };
 
-
-_assignedItems = _assignedItems - [_binocular];
+_assignedItems deleteAt (_assignedItems find _binocular);
 
 // items
-{_unit linkItem _x} forEach _assignedItems;
+{_unit linkItem _x; false} count _assignedItems;
 
 _unit addWeapon _binocular;
 
@@ -178,24 +156,24 @@ if ("Laserdesignator" in assignedItems _unit) then {
 };
 
 // restore the last active weapon, muzzle and weaponMode
-_activeWeapon = _activeWeaponAndMuzzle select 0;
-_activeMuzzle = _activeWeaponAndMuzzle select 1;
-_activeWeaponMode = _activeWeaponAndMuzzle select 2;
+_activeWeaponAndMuzzle params ["_activeWeapon", "_activeMuzzle", "_activeWeaponMode"]
 
-if (!(_activeMuzzle isEqualTo "") and
-    !(_activeMuzzle isEqualTo _activeWeapon) and
-    (_activeMuzzle in getArray (configfile >> "CfgWeapons" >> _activeWeapon >> "muzzles"))) then {
-
+if (
+    (_activeMuzzle != "") &&
+    {_activeMuzzle != _activeWeapon} &&
+    {_activeMuzzle in getArray (configfile >> "CfgWeapons" >> _activeWeapon >> "muzzles")}
+) then {
     _unit selectWeapon _activeMuzzle;
 } else {
-    if (!(_activeWeapon isEqualTo "")) then {
+    if (_activeWeapon != "") then {
         _unit selectWeapon _activeWeapon;
     };
 };
 
-if (!(currentWeapon _unit isEqualTo "")) then {
-    private ["_index"];
+if (currentWeapon _unit != "") then {
+    private "_index";
     _index = 0;
+
     while {
         _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}
     } do {
