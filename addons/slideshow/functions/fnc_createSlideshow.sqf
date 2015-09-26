@@ -10,7 +10,7 @@
  * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
- * Parsed List <ARRAY>
+ * None
  *
  * Example:
  * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow
@@ -20,18 +20,21 @@
 #include "script_component.hpp"
 
 private ["_currentSlideshow", "_slidesAction", "_varString"];
-params ["_objects", "_controllers", "_images", "_names", "_duration"];
+params [
+    ["_objects", [], []],
+    ["_controllers", [], []],
+    ["_images", [], []],
+    ["_names", [], []],
+    ["_duration", 0, 0]
+];
 
 // Verify data
-if (count _images != count _names || {count _images == 0} || {count _names == 0}) exitWith {
-    ACE_LOGERROR("Slideshow Images or Names fields can NOT be empty and must have equal number of items!");
+if (_objects isEqualTo []) exitWith {
+    ACE_LOGERROR{"Slideshow Objects field may NOT be empty!"};
 };
-
-// Objects synced to the module
-{
-    _objects pushBack _x;
-    nil
-} count (synchronizedObjects _logic);
+if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
+    ACE_LOGERROR("Slideshow Images or Names fields may NOT be empty and must have equal number of items!");
+};
 
 // If no controllers use objects as controllers
 if (count _controllers == 0) then {
@@ -54,7 +57,7 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
-    _duration = 5;
+    _duration = NOINTERACTMENU_DURATION;
     ACE_LOGINFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
 };
 

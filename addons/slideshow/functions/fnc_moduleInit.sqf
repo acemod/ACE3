@@ -30,6 +30,12 @@ _images = [_logic getVariable ["Images", ""], true, false] call FUNC(makeList);
 _names = [_logic getVariable ["Names", ""], true, false] call FUNC(makeList);
 _duration = _logic getVariable ["Duration", 0];
 
+// Objects synced to the module
+{
+    _objects pushBack _x;
+    nil
+} count (synchronizedObjects _logic);
+
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);
 
