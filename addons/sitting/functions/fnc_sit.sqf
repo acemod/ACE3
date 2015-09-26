@@ -20,9 +20,6 @@ private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_seatPosO
 
 params ["_seat", "_player"];
 
-// Set global variable for standing up
-GVAR(seat) = _seat; //@todo - put into player isSitting variable
-
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
 
@@ -60,8 +57,8 @@ _player setDir _sitDirection;
 // No need for ATL/ASL as modelToWorld returns in format position
 _player setPos (_seat modelToWorld _sitPosition);
 
-// Set variables
-_player setVariable [QGVAR(isSitting), true];
+// Set variables, save seat object on player
+_player setVariable [QGVAR(isSitting), _seat];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
 
@@ -72,7 +69,7 @@ _seatPosOrig = getPosASL _seat;
     _args params ["_player", "_seat", "_seatPosOrig"];
 
     // Remove PFH if not sitting any more
-    if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
+    if (isNil {_player getVariable QGVAR(isSitting)}) exitWith {
         [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };

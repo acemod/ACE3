@@ -18,6 +18,7 @@ class Extended_Killed_EventHandlers {
     };
 };
 
+// Need initPost or there are problems with setVariable
 class Extended_InitPost_EventHandlers {
     class All {
         class ADDON {

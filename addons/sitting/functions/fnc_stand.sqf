@@ -17,7 +17,7 @@
 
 params ["_player"];
 
-// remove scroll wheel action
+// Remove scroll wheel action
 _player removeAction (_player getVariable [QGVAR(StandUpActionID), -1]);
 
 // Restore animation
@@ -31,7 +31,10 @@ _animation = switch (currentWeapon _player) do {
 
 [_player, _animation, 2] call EFUNC(common,doAnimation);
 
+// Get seat from variable on player
+_seat = _player getVariable [QGVAR(isSitting), objNull];
+if (isNull _seat) exitWith {};
+
 // Set variables to nil
 _player setVariable [QGVAR(isSitting), nil];
-GVAR(seat) setVariable [QGVAR(seatOccupied), nil, true];
-GVAR(seat) = nil;
+_seat setVariable [QGVAR(seatOccupied), nil, true];
