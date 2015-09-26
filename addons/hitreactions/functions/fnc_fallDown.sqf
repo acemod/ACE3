@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Check if the given backpack is an actual backpack that can store items. Parachute backpacks will return false for example.
+ * Adds reactions to a unit that was hit. EH only runs where to unit is local. Adds screams, falling down, falling from ladders, ejecting from static weapons and camshake for players
  *
  * Arguments:
  * 0: unit <OBJECT>
