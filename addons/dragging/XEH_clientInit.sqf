@@ -22,4 +22,28 @@ if (isNil "ACE_maxWeightCarry") then {
 // handle waking up dragged unit and falling unconscious while dragging
 ["medical_onUnconscious", DFUNC(handleUnconscious)] call EFUNC(common,addEventhandler);
 
+[
+    "ACE3 Common",
+    QGVAR(Drop),
+    (localize LSTRING(Drop)),
+    {
+        private ["_draggedObject", "_carriedObject"];
+        _draggedObject = (ACE_player getVariable [QGVAR(draggedObject),objNull]);
+        // End Dragging
+        if !(isNull _draggedObject) then {
+            [ACE_player, _draggedObject] call FUNC(dropObject);
+            true
+        };
+        _carriedObject = (ACE_player getVariable [QGVAR(carriedObject),objNull]);
+        // End Carry
+        if !(isNull _carriedObject) then {
+            [ACE_player, _carriedObject] call FUNC(dropObject_carry);
+            true
+        };
+        false
+    },
+    { false },
+    [0, [false, false, false]]
+] call CBA_fnc_addKeybind;
+
 //@todo Captivity?
