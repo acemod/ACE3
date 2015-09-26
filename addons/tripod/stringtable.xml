@@ -59,15 +59,15 @@
             <Russian>Готово</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
-            <English>+ Modifier, adjust</English>
-            <Polish>+ Modyfikator, regulacja</Polish>
-            <Spanish>+ Modificador, ajuste</Spanish>
-            <Czech>+ Modifikátor, regulace</Czech>
-            <German>+ Modifikator, anpassen</German>
-            <Portuguese>+ Modificador, ajuste</Portuguese>
-            <French>+ modifier, régler</French>
-            <Hungarian>+ Módosító, szabályzás</Hungarian>
-            <Russian>+ Модификатор, подстройка</Russian>
+            <English>adjust</English>
+            <Polish>regulacja</Polish>
+            <Spanish>ajuste</Spanish>
+            <Czech>regulace</Czech>
+            <German>anpassen</German>
+            <Portuguese>ajuste</Portuguese>
+            <French>régler</French>
+            <Hungarian>szabályzás</Hungarian>
+            <Russian>подстройка</Russian>
         </Key>
     </Package>
 </Project>

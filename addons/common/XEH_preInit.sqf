@@ -91,6 +91,9 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
+PREP(handleModifierKey);
+PREP(handleModifierKeyUp);
+PREP(handleModifierKeyInit);
 PREP(handleScrollWheel);
 PREP(handleScrollWheelInit);
 PREP(hasItem);
@@ -204,6 +207,7 @@ PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
+PREP(getVehicleUAVCrew);
 
 // turrets
 PREP(getTurrets);

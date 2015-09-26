@@ -148,7 +148,7 @@ class RscInteractionHelperIcon: RscInteractionIcon {
 class RscInteractionText: RscText{
     x = 21 * GUI_GRID_W;
     y = 16 * GUI_GRID_H;
-    w = 8 * GUI_GRID_W;
+    w = 24 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
 };
 class RscTitles {
