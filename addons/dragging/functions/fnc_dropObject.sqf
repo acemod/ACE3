@@ -66,3 +66,8 @@ if !(_target isKindOf "CAManBase") then {
 if (_unit getvariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
 };
+
+// recreate UAV crew
+if (_target getVariable [QGVAR(isUAV), false]) then {
+    createVehicleCrew _target;
+};

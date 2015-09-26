@@ -207,6 +207,7 @@ PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
+PREP(getVehicleUAVCrew);
 
 // turrets
 PREP(getTurrets);

@@ -14,8 +14,9 @@
  */
 #include "script_component.hpp"
 
-private ["_position", "_direction", "_offset", "_actionID"];
 params ["_unit", "_target"];
+
+private ["_position", "_direction", "_offset", "_UAVCrew"];
 
 // get attachTo offset and direction.
 _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
@@ -39,7 +40,7 @@ _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add drop action
 _unit setVariable [QGVAR(ReleaseActionID), [
-	_unit, "DefaultAction",
+    _unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
 ] call EFUNC(common,addActionEventHandler)];
@@ -52,3 +53,11 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
+
+// prevent UAVs from firing
+_UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
+if !(_UAVCrew isEqualTo []) then {
+    {_target deleteVehicleCrew _x} count _UAVCrew;
+    _target setVariable [QGVAR(isUAV), true, true];
+};

@@ -68,3 +68,8 @@ if !(_target isKindOf "CAManBase") then {
     ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
     ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
 };
+
+// recreate UAV crew
+if (_target getVariable [QGVAR(isUAV), false]) then {
+    createVehicleCrew _target;
+};

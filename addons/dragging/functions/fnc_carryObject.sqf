@@ -17,7 +17,7 @@
 params ["_unit", "_target"];
 
 // get attachTo offset and direction.
-private ["_position", "_direction"];
+private ["_position", "_direction", "_UAVCrew"];
 
 _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
 _direction = _target getVariable [QGVAR(carryDirection), 0];
@@ -63,3 +63,11 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
+
+// prevent UAVs from firing
+_UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
+if !(_UAVCrew isEqualTo []) then {
+    {_target deleteVehicleCrew _x} count _UAVCrew;
+    _target setVariable [QGVAR(isUAV), true, true];
+};
