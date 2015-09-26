@@ -11,17 +11,17 @@
  * Can Misc Repair <BOOL>
  *
  * Example:
- * [unit, vehicle, "hitpoint", "classname"] call ace_repair_fnc_canMiscRepair
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canMiscRepair
  *
  * Public: No
  */
  #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return"];
+private ["_hitpointGroupConfig", "_hitpointGroup", "_postRepairDamage", "_return", "_maxDamage", "_xHit"];
 params ["_caller", "_target", "_hitPoint"];
 
-if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // Get hitpoint groups if available
 _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);

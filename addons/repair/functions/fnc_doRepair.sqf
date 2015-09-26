@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-private ["_hitPointDamage", "_text", "_hitpointGroup"];
+private ["_hitPointDamage", "_text", "_hitpointGroup", "_hitpointGroupConfig"];
 params ["_unit", "_vehicle", "_hitPoint"];
 TRACE_3("params",_unit,_vehicle,_hitPoint);
 
