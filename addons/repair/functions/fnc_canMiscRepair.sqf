@@ -1,20 +1,20 @@
 /*
-* Author: Jonpas
-* Check if misc repair action can be done, called from callbackSuccess.
-*
-* Arguments:
-* 0: Unit that does the repairing <OBJECT>
-* 1: Vehicle to repair <OBJECT>
-* 2: Selected hitpoint INDEX <NUMBER>
-*
-* Return Value:
-* Can Misc Repair <BOOL>
-*
-* Example:
-* [unit, vehicle, "hitpoint"] call ace_repair_fnc_canMiscRepair
-*
-* Public: No
-*/
+ * Author: Jonpas
+ * Check if misc repair action can be done, called from callbackSuccess.
+ *
+ * Arguments:
+ * 0: Unit that does the repairing <OBJECT>
+ * 1: Vehicle to repair <OBJECT>
+ * 2: Selected hitpoint INDEX <NUMBER>
+ *
+ * Return Value:
+ * Can Misc Repair <BOOL>
+ *
+ * Example:
+ * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canMiscRepair
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
