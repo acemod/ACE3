@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -2221,6 +2221,7 @@
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
+            <Russian>Исцелять полностью перебинтованные части тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -3438,11 +3439,13 @@
             <English>Heal hitpoints</English>
             <Polish>Lecz hitpointy</Polish>
             <Spanish>Curar puntos de vida</Spanish>
+            <Russian>Исцелять части тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
+            <Russian>Исцелять полностью перебинтованные части тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3839,11 +3842,13 @@
             <English>This person (%1) is awake and cannot be loaded</English>
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
+            <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
+            <Russian>Нет жгута на этой части тела!</Russian>
         </Key>
     </Package>
 </Project>
