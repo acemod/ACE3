@@ -35,7 +35,7 @@ if ((typeName _hitPointIndex) == "STRING") then {
 if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_1("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
-private ["_damageOld", "_hitPointIndexDamageSumOld", "_damageRepaired", "_hitPointIndexsBeingCounted", "_selectionName"];
+private ["_damageOld", "_hitPointIndexDamageSumOld", "_damageRepaired", "_hitPointIndexsBeingCounted", "_selectionName", "_damageNew"];
 
 _damageOld = damage _vehicle;
 
@@ -56,10 +56,12 @@ _hitPointIndexsBeingCounted = 0;
 } forEach _allHitPoints;
 
 // calculate new strctural damage
-private "_damageNew";
-if (_hitPointIndexsBeingCounted == 0) exitWith {ACE_LOGERROR("div0");};
-_damageNew = (_hitPointIndexDamageSumOld - _damageRepaired) / _hitPointIndexsBeingCounted;
-
+_damageNew = if (_hitPointIndexsBeingCounted == 0) then {
+    ACE_LOGERROR("Zero hitPointIndexsBeingCounted  (div0)");
+    _damageOld
+} else {
+    (_hitPointIndexDamageSumOld - _damageRepaired) / _hitPointIndexsBeingCounted;
+};
 if (_hitPointIndexDamageSumOld > 0) then {
     _damageNew = _damageOld * ((_hitPointIndexDamageSumOld - _damageRepaired) / _hitPointIndexDamageSumOld);
 };
@@ -69,13 +71,10 @@ TRACE_5("damage",_damageRepaired,_hitPointIndexDamageSumOld,_hitPointIndexsBeing
 // set new structural damage value
 _vehicle setDamage _damageNew;
 
+_allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 // set the new damage for that hit point
 {
-    if (_forEachIndex == _hitPointIndex) then {
-        _vehicle setHitIndex [_forEachIndex, _hitPointDamage];
-    } else {
-        _vehicle setHitIndex [_forEachIndex, _x];
-    };
+    _vehicle setHitIndex [_forEachIndex, _x];
 } forEach _allHitPointDamages;
 
 // normalize hitpoints

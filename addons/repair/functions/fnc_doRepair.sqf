@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doRepair
+ * [unit, vehicle, 6] call ace_repair_fnc_doRepair
  *
  * Public: No
  */
