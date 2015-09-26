@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_vehicle"];
@@ -48,7 +49,8 @@ _processedHitPoints = [];
     if (_x in _wheelHitPoints) then {
         // add wheel repair action
 
-        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);};
+        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);}; //Wheels should always be unique
+        if (isNil {_vehicle getHit _selectionName}) exitWith {TRACE_3("No Selection",_x,_forEachIndex,_selectionName);}; //Not a real hitpoint
 
         private ["_icon", "_selection", "_name", "_text"];
 
@@ -58,7 +60,7 @@ _processedHitPoints = [];
         _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
 
         // remove wheel action
-        _name = format ["Remove_%1", _x];
+        _name = format ["Remove_%1_%2", _forEachIndex, _x];
         _text = localize LSTRING(RemoveWheel);
 
         TRACE_5("Adding Wheel Actions",_name,_forEachIndex,_selectionName,_text,_selection);
@@ -70,7 +72,7 @@ _processedHitPoints = [];
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
         // replace wheel action
-        _name = format ["Replace_%1", _x];
+        _name = format ["Replace_%1_%2", _forEachIndex, _x];
         _text = localize LSTRING(ReplaceWheel);
 
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
@@ -83,7 +85,7 @@ _processedHitPoints = [];
         // exit if the hitpoint is in the blacklist, e.g. glasses
         if (_x in IGNORED_HITPOINTS) exitWith {TRACE_3("Ignored Hitpoint",_x,_forEachIndex,_selectionName);};
         if (_x == "") exitWith {TRACE_3("Hitpoint Empty",_x,_forEachIndex,_selectionName);};
-        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);};
+        if (isNil {_vehicle getHit _selectionName}) exitWith {TRACE_3("No Selection",_x,_forEachIndex,_selectionName);}; //Not a real hitpoint
 
         private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
 
@@ -111,7 +113,7 @@ _processedHitPoints = [];
         // add misc repair action
         private ["_name", "_icon", "_selection", "_customSelectionsConfig"];
 
-        _name = format ["Repair_%1", _x];
+        _name = format ["Repair_%1_%2", _forEachIndex, _x];
 
         // Find localized string and track those added for numerization
         ([_x, "%1", _x, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
@@ -152,6 +154,7 @@ _processedHitPoints = [];
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, _this select 2 select 1] call DFUNC(repair)};
 
         if (_x in TRACK_HITPOINTS) then {
+            if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Hitpoint",_x,_forEachIndex,_selectionName);}; //Tracks should always be unique
             if (_x == "HitLTrack") then {
                 _selection = [-1.75, 0, -1.75];
             } else {
@@ -162,7 +165,7 @@ _processedHitPoints = [];
             [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
         } else {
             TRACE_5("Adding MiscRepair",_name,_forEachIndex,_selectionName,_text,_selection);
-            _action = [_name, _text, _icon, _statement, _condition, {}, [_x, "MiscRepair"], _selection, 4] call EFUNC(interact_menu,createAction);
+            _action = [_name, _text, _icon, _statement, _condition, {}, [_forEachIndex, "MiscRepair"], _selection, 5] call EFUNC(interact_menu,createAction);
             // Put inside main actions if no other position was found above
             if (_selection isEqualTo [0, 0, 0]) then {
                 [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);

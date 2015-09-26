@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
- * 1: Vehicle to repair <OBJECT
- * 2: Selected hitpoint <STRING>
+ * 1: Vehicle to repair <OBJECT>
+ * 2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
  * 3: Repair Action Classname <STRING>
  *
  * Return Value:
@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray"];
+private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
@@ -177,8 +177,15 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
 
 private ["_processText"];
 // Find localized string
+_hitPointClassname = if ((typeName _hitPoint) == "STRING") then {
+    _hitPoint
+} else {
+    ((getAllHitPointsDamage _target) select 0) select _hitPoint
+};
 _processText = getText (_config >> "displayNameProgress");
-([_hitPoint, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
+([_hitPointClassname, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
+
+TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 
 // Start repair
 [
