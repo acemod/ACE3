@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleAddSpareParts"
+ * [logic] call ace_repair_fnc_moduleAddSpareParts
  *
  * Public: No
  */

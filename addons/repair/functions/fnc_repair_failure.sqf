@@ -6,23 +6,24 @@
  * 0: Arguments <ARRAY>
  *   0: Unit that does the repairing <OBJECT>
  *   1: Vehicle to repair <OBJECT
- *   2: Selected hitpoint <STRING>
+ *   2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
  *   3: Repair Action Classname <STRING>
  *   4: None
  *   5: Items available <ARRAY>
+ *   6: Claimed Repair Objects <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[unit, vehicle, "hitpoint", "classname", nil, [items]]] call ace_repair_fnc_repair_failure
+ * [[unit, vehicle, "hitpoint", "classname", nil, [items], [aWheel]]] call ace_repair_fnc_repair_failure
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_args"];
-_args params ["_caller", "_target","_selectionName","_className","","_usersOfItems"];
+_args params ["_caller", "_target","_selectionName","_className","","_usersOfItems", "_claimedObjects"];
 TRACE_5("params",_caller,_target,_selectionName,_className,_usersOfItems);
 
 private ["_config","_callback", "_usersOfItems", "_weaponSelect"];
@@ -46,6 +47,13 @@ if (_weaponSelect != "") then {
     (_x select 0) addItem (_x select 1);
 } forEach _usersOfItems;
 
+//Unclaim repair objects:
+{
+    TRACE_2("Releasing", _x, (typeOf _x));
+    [objNull, _x, false] call EFUNC(common,claim);
+} forEach _claimedObjects;
+
+
 // Record specific callback
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 
@@ -58,4 +66,4 @@ if (isNil _callback) then {
 
 _args call _callback;
 
-// _args call FUNC(createLitter);
+//todo: repair litter?

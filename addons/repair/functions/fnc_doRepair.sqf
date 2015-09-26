@@ -5,61 +5,70 @@
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
- * 2: Selected hitpoint <STRING>
+ * 2: Selected hitpointIndex <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_doRepair
+ * [unit, vehicle, 6, "MiscRepair"] call ace_repair_fnc_doRepair
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_hitPointDamage", "_text", "_hitpointGroup"];
-params ["_unit", "_vehicle", "_hitPoint"];
-TRACE_3("params",_unit,_vehicle,_hitPoint);
+params ["_unit", "_vehicle", "_hitPointIndex"];
+TRACE_3("params",_unit,_vehicle,_hitPointIndex);
+
+local _postRepairDamageMin = [_unit] call FUNC(getPostRepairDamage);
+
+(getAllHitPointsDamage _vehicle) params ["_allHitPoints"];
+local _hitPointClassname = _allHitPoints select _hitPointIndex;
 
 // get current hitpoint damage
-_hitPointDamage = _vehicle getHitPointDamage _hitPoint;
+local _hitPointCurDamage = _vehicle getHitIndex _hitPointIndex;
 
-_hitPointDamage = _hitPointDamage - 0.5;
-// don't use negative values for damage
-_hitPointDamage = _hitPointDamage max ([_unit] call FUNC(getPostRepairDamage));
+// repair a max of 0.5, don't use negative values for damage
+local _hitPointNewDamage = (_hitPointCurDamage - 0.5) max _postRepairDamageMin;
 
-// raise event to set the new hitpoint damage
-["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);
+if (_hitPointNewDamage < _hitPointCurDamage) then {
+    // raise event to set the new hitpoint damage
+    TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
+    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPointIndex, _hitPointNewDamage]] call EFUNC(common,targetEvent);
+    _hitPointCurDamage = _hitPointNewDamage;
+};
 
 // Get hitpoint groups if available
-_hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
-_hitpointGroup = [];
+local _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
 if (isArray _hitpointGroupConfig) then {
-    // Retrieve group if current hitpoint is leader of any
+    // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {
-        if (_x select 0 == _hitPoint) exitWith {
-            ([_vehicle] call EFUNC(common,getHitPointsWithSelections)) params ["_hitpoints"];
-            // Set all sub-group hitpoints' damage to 0, if a hitpoint is invalid print RPT error
+        _x params ["_masterHitpoint", "_subHitArray"];
+        // Exit using found hitpoint group if this hitpoint is leader of any
+        if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                if (_x in _hitpoints) then {
-                    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _x, 0]] call EFUNC(common,targetEvent);
+                local _subHitIndex = _allHitPoints find _x; //convert hitpoint classname to index
+                if (_subHitIndex == -1) then {
+                    ACE_LOGERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
                 } else {
-                    diag_log text format ["[ACE] ERROR: Invalid hitpoint %1 in hitpointGroups of %2", _x, _vehicle];
+                    local _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
+                    local _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
+                    if (_subPointNewDamage < _subPointCurDamage) then {
+                        TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
+                        ["setVehicleHitPointDamage", _vehicle, [_vehicle, _subHitIndex, _subPointNewDamage]] call EFUNC(common,targetEvent);
+                    };
                 };
-
-            } forEach (_x select 1);
+            } forEach _subHitArray;
         };
     } forEach (getArray _hitpointGroupConfig);
 };
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    private ["_textLocalized", "_textDefault"];
-
     // Find localized string
-    _textLocalized = localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointDamage > 0));
-    _textDefault = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointDamage > 0));
-    ([_hitPoint, _textLocalized, _textDefault] call FUNC(getHitPointString)) params ["_text"];
+    local _textLocalized = localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointCurDamage > 0));
+    local _textDefault = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointCurDamage > 0));
+    ([_hitPointClassname, _textLocalized, _textDefault] call FUNC(getHitPointString)) params ["_text"];
 
     // Display text
     [_text] call EFUNC(common,displayTextStructured);
