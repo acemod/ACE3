@@ -47,7 +47,7 @@ _bones = [];
 } forEach _wheels;
 
 // get all hitpoints and selections
-(getAllHitPointsDamage _vehicle) params ["_hitPoints", "_hitPointsSelections"];
+(getAllHitPointsDamage _vehicle) params ["_hitPoints", "_hitPointSelections"];
 
 // assign hitpoints to correct wheel selection by comparing bone name and fire geometry selection
 private ["_wheelHitPoints", "_wheelHitPointSelections"];

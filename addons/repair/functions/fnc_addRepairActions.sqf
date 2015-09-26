@@ -19,7 +19,7 @@
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
 
-private ["_type", "_initializedClasses", "_condition", "_statement", "_action"];
+private ["_type", "_initializedClasses", "_condition", "_statement", "_action", "_duplicateHitpointName", "_processedHitPoints", "_selectionName", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
 
 _type = typeOf _vehicle;
 
@@ -34,7 +34,6 @@ if (_type in _initializedClasses) exitWith {};
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
 
-private ["_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
 _hitPointsAddedNames = [];
 _hitPointsAddedStrings = [];
 _hitPointsAddedAmount = [];

@@ -25,13 +25,13 @@ TRACE_3("params",_vehicle,_hitPoint,_hitPointDamage);
 if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
 // get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params ["_allHitPoints", "_alllHitPointsSelections", "_allHitPointDamages"];
+(getAllHitPointsDamage _vehicle) params ["_allHitPoints", "", "_allHitPointDamages"];
 
 // exit if the hitpoint is not valid
 if !(_hitPoint in _allHitPoints) exitWith {ACE_LOGERROR_1("NOT A VALID HITPOINT: %1", _hitpoint);};
 
 // save structural damage and sum of hitpoint damages
-private ["_damageOld", "_hitPointDamageSumOld"];
+private ["_damageOld", "_hitPointDamageSumOld", "_damageOnRepairedHitpoint", "_hitPointsBeingCounted"];
 
 _damageOld = damage _vehicle;
 
