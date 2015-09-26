@@ -19,14 +19,17 @@ _object = _this;
 if (!local _object) exitWith {};
 
 // save and restore hitpoints, see below why
-private ["_hitPoints", "_hitPointDamages"];
+private "_hitPointDamages";
+_hitPointDamages = getAllHitPointsDamage _object;
 
-_hitPoints = [_object] call FUNC(getHitpoints);
-_hitPointDamages = [_hitPoints, {_object getHitPointDamage _this}] call FUNC(map);
+// get correct format for objects without hitpoints
+if (_hitPointDamages isEqualTo []) then {
+	_hitPointDamages = [[],[],[]];
+};
 
 // this prevents physx objects from floating when near other physx objects with allowDamage false
 _object setDamage damage _object;
 
 {
-    _object setHitPointDamage [_x, _hitPointDamages select _forEachIndex];
-} forEach _hitPoints;
+    _object setHitIndex [_forEachIndex, _x];
+} forEach (_hitPointDamages select 2);
