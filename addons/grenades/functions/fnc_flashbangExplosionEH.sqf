@@ -38,12 +38,12 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 params ["_unit"];
 
                 //Make sure we don't enable AI for unconscious units
-                if (!(_unit getVariable ["ace_isUnconscious", false])) then {
+                if !(_unit getVariable ["ace_isUnconscious", false]) then {
                     [_unit, false] call EFUNC(common,disableAI);
                 };
 
                 _unit setSkill (skill _unit * 50);
-            }, [_x], (7 * _strength)] call EFUNC(common,waitAndExecute);
+            }, [_x], 7 * _strength] call EFUNC(common,waitAndExecute);
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
