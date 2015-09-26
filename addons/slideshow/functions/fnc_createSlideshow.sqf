@@ -37,7 +37,7 @@ if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo
 };
 
 // If no controllers use objects as controllers
-if (count _controllers == 0) then {
+if (_controllers isEqualTo []) then {
     _controllers = _objects;
 };
 
@@ -65,7 +65,7 @@ if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
 if (_duration == 0) then {
     {
         // Add Slides sub-action and populate with images
-        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects,_images,_names,_x,_currentSlideshow], [0,0,0], 2] call EFUNC(interact_menu,createAction);
+        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects, _images, _names, _x, _currentSlideshow], [0, 0, 0], 2] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
         nil
     } count _controllers;
