@@ -12,7 +12,7 @@
  * Can Repair <BOOL>
  *
  * Example:
- * ["something", player] call ace_repair_fnc_canRepair
+ * [player, car, "HitHull", "MiscRepair"] call ace_repair_fnc_canRepair
  *
  * Public: Yes
  */
