@@ -64,22 +64,5 @@ private ["_team"];
 {false},
 [20, [true, false, false]], false] call cba_fnc_addKeybind;
 
-["ACE3 Common", QGVAR(modifierKey), localize LSTRING(ModifierKey),
-{
-    // Conditions: canInteract
-    //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed
-
-    // Statement
-    ACE_Modifier = 1;
-    // Return false so it doesn't block other actions
-    false
-},
-{
-    //Probably don't want any condidtions here, so variable never gets locked down
-    ACE_Modifier = 0;
-    false;
-},
-[29, [false, false, false]], false] call cba_fnc_addKeybind;
-
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
