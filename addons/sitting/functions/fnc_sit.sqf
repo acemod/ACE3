@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_seatPosOrig"];
+private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_seatPosOrig"];
 
 params ["_seat", "_player"];
 
@@ -50,7 +50,6 @@ _player setVariable [QGVAR(StandUpActionID), _actionID];
 _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
 _sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDirection));
 _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
-_sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber (_configFile >> QGVAR(sitRotation))} else {45}; // Apply default if config entry not present
 
 // Get random animation and perform it (before moving player to ensure correct placement)
 [_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations

@@ -60,7 +60,6 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -0.45};
-        GVAR(sitRotation) = 10;
     };
     // Camping Chair
     class Land_CampingChair_V2_F: ThingX {
@@ -69,7 +68,6 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -0.45};
-        GVAR(sitRotation) = 45;
     };
 
     class Furniture_base_F;
@@ -80,7 +78,6 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 90;
         GVAR(sitPosition[]) = {0, 0, -0.5};
-        GVAR(sitRotation) = 5;
     };
     // Chair (Wooden)
     class Land_ChairWood_F: Furniture_base_F {
@@ -89,7 +86,6 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.05, 0};
-        GVAR(sitRotation) = 75;
     };
     // Office Chair
     class Land_OfficeChair_01_F: Furniture_base_F {
@@ -98,7 +94,6 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, 0, -0.6};
-        GVAR(sitRotation) = 15;
     };
     // Rattan Chair
     class Land_RattanChair_01_F: Furniture_base_F {
@@ -107,6 +102,5 @@ class CfgVehicles {
         GVAR(canSit) = 1;
         GVAR(sitDirection) = 180;
         GVAR(sitPosition[]) = {0, -0.1, -1}; // Z must be -1 due to chair's geometry (magic floating seat point)
-        GVAR(sitRotation) = 2;
     };
 };
