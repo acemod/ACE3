@@ -1,39 +1,52 @@
-// by commy2
+/*
+ * Author: commy2
+ * Check if the given backpack is an actual backpack that can store items. Parachute backpacks will return false for example.
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: firer <OBJECT>
+ * 2: damage taken <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_unit", "_firer", "_damage"];
 
+// exit if system is disabled
+if (GVAR(minDamageToTrigger) == -1) exitWith {};
+
+// don't fall after minor damage
+if (_damage < GVAR(minDamageToTrigger)) exitWith {};
+
 // don't fall on collision damage
 if (_unit == _firer) exitWith {};
 
-//Exit if system disabled:
-if (GVAR(minDamageToTrigger) == -1) exitWith {};
-
-// cam shake for player
+// camshake for player
 if (_unit == ACE_player) then {
     addCamShake [3, 5, _damage + random 10];
+};
+
+// play scream sound
+if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
+    [_unit] call EFUNC(medical,playInjuredSound);
 };
 
 private "_vehicle";
 _vehicle = vehicle _unit;
 
 // handle static weapons
-if (_vehicle isKindOf "StaticWeapon") exitwith {
+if (_vehicle isKindOf "StaticWeapon") exitWith {
     if (!alive _unit) then {
         _unit action ["Eject", _vehicle];
         unassignVehicle _unit;
     };
 };
 
-// don't fall after minor damage
-if (_damage < GVAR(minDamageToTrigger)) exitWith {};
-
-// play sound
-if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
-    [_unit] call EFUNC(medical,playInjuredSound);
-};
-
-//Don't do animations if in a vehicle (looks weird and animations never reset):
+// don't do animations if in a vehicle (looks weird and animations never reset):
 if (_vehicle != _unit) exitWith {};
 
 // this checks most things, so it doesn't mess with being inside vehicles or while dragging etc.
@@ -54,40 +67,52 @@ _velocity = vectorMagnitude velocity _unit;
 if (_velocity < 2) exitWith {};
 
 // get correct animation by weapon
-private ["_isPlayer", "_isRunning", "_anim"];
+private "_anim";
 
-_isPlayer = [_unit] call EFUNC(common,isPlayer);
-_isRunning = _velocity > 4;
+call {
+    private "_weapon";
+    _weapon = currentWeapon _unit;
 
-_anim = switch (currentWeapon _unit) do {
-    case (""): {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"};
-    case (primaryWeapon _unit): {
-        if !(_isPlayer) exitWith {"AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"};
-
-        [
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-            ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-            "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
-            "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
-        ] select floor random 4;
+    if (_weapon == "") exitWith {
+        _anim = "AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"
     };
-    case (handgunWeapon _unit): {
-        if !(_isPlayer) exitWith {"AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon"};
 
-        [
-            "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-            "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-            "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDleft",
-            "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDright"
-        ] select floor random 4;
+    if (_weapon == primaryWeapon _unit) exitWith {
+        if ([_unit] call EFUNC(common,isPlayer)) then {
+            private "_isRunning";
+            _isRunning = _velocity > 4;
+
+            _anim = [
+                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
+                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
+                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
+                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
+            ] select floor random 4;
+        } else {
+            _anim = "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon";
+        };
     };
-    default {""};
+
+    if (_weapon == handgunWeapon _unit) exitWith {
+        if ([_unit] call EFUNC(common,isPlayer)) then {
+            _anim = [
+                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
+                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
+                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDleft",
+                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDright"
+            ] select floor random 4;
+        } else {
+            _anim = "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon";
+        };
+    };
+
+    _anim = "";
 };
 
-// exit if no animation for this weapon exists, i.E. binocular or rocket launcher
+// exit if no animation for this weapon exists, i.e. binocular or rocket launcher
 if (_anim == "") exitWith {};
 
 // don't mess with transitions. don't fall then.
-if ([_unit] call EFUNC(common,inTransitionAnim)) exitWith {};
-
-[_unit, _anim, 2] call EFUNC(common,doAnimation);
+if !([_unit] call EFUNC(common,inTransitionAnim)) then {
+    [_unit, _anim, 2] call EFUNC(common,doAnimation);
+};
