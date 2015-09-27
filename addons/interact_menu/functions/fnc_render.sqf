@@ -10,7 +10,6 @@
  *
  * Public: No
  */
- #define ENABLE_PERFORMANCE_COUNTERS 
 #include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_render);
