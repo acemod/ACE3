@@ -58,7 +58,7 @@ _nextGrenade = _grenades select _nextGrenadeIndex;
 // abort if the same grenade would be selected
 if (_currentGrenade == _nextGrenade) exitWith {false};
 
-// current best method to select a grenade: remove all grenades, add the one you want to select first and then add the rest
+// current best method to select a grenade: remove all grenades except the one you want to select, then add them back
 _uniformGrenades =  [uniformItems  _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
 _vestGrenades =     [vestItems     _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
 _backpackGrenades = [backpackItems _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
