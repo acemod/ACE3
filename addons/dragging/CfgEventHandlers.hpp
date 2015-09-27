@@ -18,7 +18,12 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initPerson));
         };
     };
-    class All {
+    class StaticWeapon {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class ThingX {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };
