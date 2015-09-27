@@ -12,4 +12,4 @@
  */
 #include "script_component.hpp"
 
-getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "looped") == 0
+getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "looped") == 0 // return

@@ -1,25 +1,22 @@
 /*
  * Author: commy2
- *
  * Convert an array of booleans into a number.
  *
  * Arguments:
- * N: Booleans <ARRAY of Booleans>
+ * N: Booleans <ARRAY>
  *
  * Return Value:
- * Bitmask (Number)
+ * Bitmask <NUMBER>
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_array", "_result"];
-
-_array = _this;
-
+private "_result";
 _result = 0;
+
 {
     if (_x) then {_result = _result + 2 ^ _forEachIndex};
-} forEach _array;
+} forEach _this;
 
 _result

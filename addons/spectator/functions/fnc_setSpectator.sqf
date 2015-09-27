@@ -72,8 +72,10 @@ if (_set) then {
         closeDialog 0;
     };
 
-    // Create the display
-    (findDisplay 46) createDisplay QGVAR(interface);
+    [{
+        // Create the display
+        (findDisplay 46) createDisplay QGVAR(interface);
+    }, []] call EFUNC(common,execNextFrame);
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {

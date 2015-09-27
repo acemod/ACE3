@@ -21,6 +21,7 @@ params ["_client"];
     _eventLog = _eventEntry select 1;
 
     ["SEH_s", _client, [_x, _eventLog]] call FUNC(targetEvent);
-} forEach (GVAR(syncedEvents) select 0);
+    false
+} count (GVAR(syncedEvents) select 0);
 
 true

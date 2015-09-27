@@ -201,6 +201,7 @@
             <Russian>Удалять трупы игроков после дисконнекта?</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
+            <English>This module enables you to configure ACE functionality specific to respawns.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
             <German>Dieses Modul erlaubt es die Respawn-Einstellungen anzupassen.</German>
             <Czech>Tento modul umožňuje nastavení znovuzrození (spawn).</Czech>
@@ -220,6 +221,7 @@
             <Russian>Сообщения об огне по своим</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
+            <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
             <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
             <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
@@ -238,6 +240,7 @@
             <Russian>Система точек сбора</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
+            <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
             <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
             <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
             <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>

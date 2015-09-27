@@ -14,6 +14,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_isTurnedOut","3.5.0","isTurnedOut");
+
 params ["_unit"];
 
 isTurnedOut _unit // return

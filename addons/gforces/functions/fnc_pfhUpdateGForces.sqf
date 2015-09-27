@@ -87,8 +87,6 @@ if (_suitCoef == 0) then {_suitCoef = 0.001};
 _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 _gRedOut = MINVIRTUALG / _classCoef;
 
-["GForces", [], {format ["_g _gBO _coef: %1, %2, %3", _average, _gBlackOut, 2 * ((1.0 - ((_average - 0.30 * _gBlackOut) / (0.70 * _gBlackOut)) ^ 2) max 0) ]}] call EFUNC(common,log);
-
 // @todo: Sort the interaction with medical
 if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
     [ACE_player, true, (10 + floor(random 5))] call EFUNC(medical,setUnconscious);

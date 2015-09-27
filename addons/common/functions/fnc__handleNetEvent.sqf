@@ -80,6 +80,7 @@ if (_eventType == "ACEc") then {
                     ["ACEg", ACEg] call FUNC(_handleNetEvent);
                 };
             };
-        } forEach _eventTargets;
+            false
+        } count _eventTargets;
     };
 };

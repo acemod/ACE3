@@ -10,7 +10,8 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-isClass (configFile >> "cfgPatches" >> _this select 0)
+params ["_modName"];
+
+isClass (configFile >> "cfgPatches" >> _modName) // return

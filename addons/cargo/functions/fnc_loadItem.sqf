@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Show Hint <BOOL> (default: true)
  *
  * Return value:
  * Object loaded <BOOL>
@@ -25,6 +26,8 @@ if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushback _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
+
+TRACE_1("added to loaded array",_loaded);
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);

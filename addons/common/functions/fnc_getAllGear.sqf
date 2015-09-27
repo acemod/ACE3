@@ -1,29 +1,38 @@
 /*
  * Author: bux578, commy2
- *
  * Returns an array containing all items of a given unit
  *
- * Argument:
- * 0: Unit (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
- * Array with all the gear, format:
- *     0: headgear (String)
- *     1: goggles (String)
- *   2,3: uniform (String, Array)
- *   4,5: vest (String, Array)
- *   6,7: backpack (String, Array)
- *  8-10: rifle (String, Array, Array)
- * 11-13: launcher (String, Array, Array)
- * 14-16: pistol (String, Array, Array)
- *    17: map, compass, watch, etc. (Array)
- *    18: binocluar (String)
- *    19: active weapon, active muzzle, active weaponMode (Array)
+ * Return Value:
+ *  0: Headgear <STRING>
+ *  1: Goggles <STRING>
+ *  2: Uniform <STRING>
+ *  3: Uniform Items <ARRAY>
+ *  4: Vest <String>
+ *  5: Vest Items <ARRAY>
+ *  6: Backback <STRING>
+ *  7: Backpack Items <ARRAY>
+ *  8: Rifle <STRING>
+ *  9: Rifle Items <ARRAY>
+ * 10: Rifle Magazines <ARRAY>
+ * 11: Launcher <STRING>
+ * 12: Launcher Items <ARRAY>
+ * 13: Launcher Magazines <ARRAY>
+ * 14: Handgun <STRING>
+ * 15: Handgun Items <ARRAY>
+ * 16: Handgun Magazines <ARRAY>
+ * 17: Assigned Items (map, compass, watch, etc.) <ARRAY>
+ * 18: Binoculars <STRING>
  *
+ * Public: Yes
+ *
+ * Note: Element 17 includes the Head Mounted Display (HMD)
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 if (isNull _unit) exitWith {[
     "",
@@ -35,8 +44,7 @@ if (isNull _unit) exitWith {[
     "", ["","","",""], [],
     "", ["","","",""], [],
     [],
-    "",
-    ["","",""]
+    ""
 ]};
 
 [
@@ -49,6 +57,5 @@ if (isNull _unit) exitWith {[
     secondaryWeapon _unit, secondaryWeaponItems _unit, secondaryWeaponMagazine _unit,
     handgunWeapon _unit, handgunItems _unit, handgunMagazine _unit,
     assignedItems _unit,
-    binocular _unit,
-    [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit]
+    binocular _unit
 ]

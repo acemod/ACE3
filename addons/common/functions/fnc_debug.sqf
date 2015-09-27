@@ -38,8 +38,7 @@ if (_level <= _defaultLoglevel) then {
     };
     diag_log _message;
 
-    // pass it onwards to the log function:
-    // [0, [], compile format["%1",_msg], true] call FUNC(log);
+
 };
 
 true

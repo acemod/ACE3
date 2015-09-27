@@ -12,7 +12,7 @@
  * Usage:
  * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -24,4 +24,5 @@ _array = + _array;
 {
     _array set [_forEachIndex, _x call _code];
 } forEach _array;
+
 _array

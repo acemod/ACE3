@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Is the unit able to enter the vehicle in the given position?
  *
  * Arguments:

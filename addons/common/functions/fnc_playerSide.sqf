@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Return the current side of the player
  *
  * Arguments:

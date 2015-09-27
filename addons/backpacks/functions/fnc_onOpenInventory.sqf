@@ -1,17 +1,19 @@
 /*
  * Author: commy2
+ * Handle the open inventory event. Camshake and sound on target client.
  *
- * Handle the open inventory event. Display message on target client.
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Backpack <OBJECT>
  *
- * Argument:
- * Input from "InventoryOpened" eventhandler
- *
- * Return value:
+ * Return Value:
  * false. Always open the inventory dialog. (Bool)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit","_backpack"];
+params ["_unit", "_backpack"];
 
 // exit if the target is not a real backpack, i.e. parachute, static weapon bag etc.
 if !([_backpack] call FUNC(isBackpack)) exitWith {false};

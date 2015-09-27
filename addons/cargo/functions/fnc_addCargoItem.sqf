@@ -6,6 +6,7 @@
  * 0: Item Classname <STRING>
  * 1: Vehicle <OBJECT>
  * 2: Amount <NUMBER> (default: 1)
+ * 3: Show Hint <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
 #include "script_component.hpp"
 
 private ["_position", "_item", "_i"];
-params ["_itemClass", "_vehicle", ["_amount", 1]];
+params ["_itemClass", "_vehicle", ["_amount", 1], ["_showHint", false, [false]] ];
 TRACE_3("params",_itemClass,_vehicle,_amount);
 
 for "_i" from 1 to _amount do {

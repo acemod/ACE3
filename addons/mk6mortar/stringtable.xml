@@ -127,6 +127,7 @@
             <Russian>Показывает цифровой компас MK6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
+            <English>This module allows you to setup MK6 mortar settings.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia moździerza MK6.</Polish>
             <German>Dieses Modul erlaubt das Einstellen des MK6-Mörsers.</German>
             <Czech>Tento modul umožňuje nastavení minometu MK6.</Czech>

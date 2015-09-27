@@ -28,7 +28,7 @@ if (count _items == 0) exitwith {false};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitwith {
-   // [_caller,"You cannot apply a CAT on this body part!"] call EFUNC(common,sendHintTo);
+    // ["displayTextStructured", [_caller], ["You cannot apply a CAT on this body part!"]] call EFUNC(common,targetEvent);
     false;
 };
 

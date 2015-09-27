@@ -34,7 +34,7 @@ titleCut ["", "BLACK"];
 _dummy = createVehicle ["ACE_Headbug_Fix", _pos, [], 0, "NONE"];
 _dummy setDir _dir;
 _unit moveInAny _dummy;
-sleep 0.1;
+sleep 0.1; // @todo
 
 unassignVehicle _unit;
 _unit action ["Eject", vehicle _unit];

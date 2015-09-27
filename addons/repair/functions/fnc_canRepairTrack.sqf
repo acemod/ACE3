@@ -21,6 +21,8 @@ params ["_unit", "_target", "_hitPoint", ["_wheel",false]];
 TRACE_4("params",_unit,_target,_hitPoint,_wheel);
 // TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
 
+if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
 if (typeName _wheel == "OBJECT") then {
     // not near interpret as objNull
     if !(_wheel in nearestObjects [_unit, ["ACE_Track"], 5]) then {
