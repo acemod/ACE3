@@ -21,18 +21,9 @@ private ["_position", "_item", "_i"];
 params ["_itemClass", "_vehicle", ["_amount", 1]];
 TRACE_3("params",_itemClass,_vehicle,_amount);
 
-_position = getPos _vehicle;
-_position set [1, (_position select 1) + 1];
-_position set [2, (_position select 2) + 7.5];
-
 for "_i" from 1 to _amount do {
-    _item = createVehicle [_itemClass, _position, [], 0, "CAN_COLLIDE"];
-
-    // Load item or delete it if no space left
-    if !([_item, _vehicle] call FUNC(loadItem)) exitWith {
-        deleteVehicle _item;
-    };
-
-    // Invoke listenable event
-    ["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
+    [_item, _vehicle] call FUNC(loadItem);
 };
+
+// Invoke listenable event
+["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);

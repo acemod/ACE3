@@ -16,16 +16,25 @@
 #include "script_component.hpp"
 
 params ["_player", "_object"];
+private ["_vehicle", "_size", "_displayName"];
 
-private ["_nearestVehicle"];
-_nearestVehicle = [_player] call FUNC(findNearestVehicle);
+_vehicle = [_player] call FUNC(findNearestVehicle);
 
-if (isNull _nearestVehicle || _nearestVehicle isKindOf "Cargo_Base_F") then {
+if (isNull _vehicle || _vehicle isKindOf "Cargo_Base_F") then {
     {
-        if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_nearestVehicle = _x};
+        if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
     } foreach (nearestObjects [_player, ["Cargo_base_F", "Land_PaperBox_closed_F"], MAX_LOAD_DISTANCE]);
 };
 
-if (isNull _nearestVehicle) exitWith {false};
+if (isNull _vehicle) exitWith {false};
 
-[_object, _nearestVehicle] call FUNC(loadItem)
+// Start progress bar
+if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
+    _size = [_object] call FUNC(getSizeItem);
+
+    [5 * _size, [_object,_vehicle], "LoadCargo", {}, localize LSTRING(LoadingItem)] call EFUNC(common,progressBar);
+} else {
+    _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
+
+    ["displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+};
