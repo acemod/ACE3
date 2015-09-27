@@ -3,7 +3,7 @@
 
 if (!hasInterface) exitWith {};
 
-// Add keybinds
+// add keybinds
 ["ACE3 Weapons", QGVAR(SelectPistolNew), localize LSTRING(SelectPistol),
 {
     // Conditions: canInteract
