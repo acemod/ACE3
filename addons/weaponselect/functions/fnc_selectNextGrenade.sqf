@@ -73,4 +73,6 @@ _backpackGrenades = [backpackItems _unit, {_x in GVAR(GrenadesAll) && {_x != _ne
 {_unit addItemToVest     _x; false} count _vestGrenades;
 {_unit addItemToBackpack _x; false} count _backpackGrenades;
 
+[_nextGrenade, {_x == _nextGrenade} count _magazines] call FUNC(displayGrenadeTypeAndNumber);
+
 true

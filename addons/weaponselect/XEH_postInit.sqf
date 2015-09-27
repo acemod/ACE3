@@ -76,7 +76,7 @@ if (!hasInterface) exitWith {};
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
     // Statement
-    [ACE_player] call FUNC(selectGrenadeFrag);
+    [ACE_player, 1] call FUNC(selectNextGrenade);
     true
 },
 {false},
@@ -89,7 +89,7 @@ if (!hasInterface) exitWith {};
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
     // Statement
-    [ACE_player] call FUNC(selectGrenadeOther);
+    [ACE_player, 2] call FUNC(selectNextGrenade);
     true
 },
 {false},
