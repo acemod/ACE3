@@ -19,7 +19,7 @@ def extract(type,filePath,sourceLink):
     lineNumberFound = -1
     for num, line in enumerate(open(filePath)):
         # Find start line
-        if type in line:
+        if re.search(r"###\s+\d+\.?\d*\s+{}".format(type), line):
             lineNumberFound = num + 4
 
         # Use line
