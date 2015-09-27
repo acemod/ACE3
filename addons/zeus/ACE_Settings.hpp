@@ -23,5 +23,7 @@ class ACE_Settings {
     class GVAR(autoAddObjects) {
         typeName = "BOOL";
         value = 0;
+        displayName = CSTRING(AddObjectsToCurator);
+        description = CSTRING(AddObjectsToCurator_desc);
     };
 };
