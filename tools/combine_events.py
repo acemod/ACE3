@@ -101,9 +101,9 @@ def main():
                 sourceLink = "[{}]({})".format(source, webURL)
 
                 # Find "Listenable" or "Callable" events and extract values
-                if "Listenable" in fileContents:
+                if re.search(r"##\s+\d+\.?\d*\s+Listenable", fileContents):
                     extract("Listenable",filePath,sourceLink)
-                elif "Callable" in fileContents:
+                elif re.search(r"##\s+\d+\.?\d*\s+Callable", fileContents):
                     extract("Callable",filePath,sourceLink)
 
                 # Space out printed information
