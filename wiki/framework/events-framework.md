@@ -11,9 +11,33 @@ parent: wiki
 
 Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality. The functions are listed and described below with a brief explanation.
 
-### 1.1 Adding / Removing Events
 
-#### 1.1.1 Add Event
+## 2. Events List
+
+**Note:** This list is combined from other framework pages, where events are documented separately for each module. Each event listed here has information about its source or owner, which is a link to its framework page where it is documented in better detail.
+
+### 2.1 Listenable
+
+Event Name | Source | Passed Parameter(s) | Locality
+---------- | ------ | ------------------- | --------
+`GlassesChanged` | [goggles](http://ace3mod.com/wiki/framework/goggles-framework.html) | `[_glassesClass]` | Local
+`GlassesCracked` | [goggles](http://ace3mod.com/wiki/framework/goggles-framework.html) | `[_unit]` | Local
+`ace_missileguidance_handoff` | [missile-guidance](http://ace3mod.com/wiki/framework/missile-guidance-framework.html) | `[_target, _args]` | Global
+`overpressure` | [overpressure](http://ace3mod.com/wiki/framework/overpressure-framework.html) | `[_firer, _position, _direction, _weapon]` | Target
+`reloadLauncher` | [reloadlaunchers](http://ace3mod.com/wiki/framework/reloadlaunchers-framework.html) | `[_unit, _target, _weapon, _magazine]` | Target
+
+### 2.2 Callable
+
+Event Name | Owner | Passed Parameter(s) | Locality
+---------- | ----- | ------------------- | --------
+
+
+
+## 3. Usage
+
+### 3.1 Adding / Removing Events
+
+#### 3.1.1 Add Event
 
 Adds an event handler with the event name and returns the event handler ID.
 
@@ -25,7 +49,7 @@ Adds an event handler with the event name and returns the event handler ID.
 1  | Code block | Code | Required
 **R** | Event ID | Number | Return value
 
-#### 1.1.2 Remove Event
+#### 3.1.2 Remove Event
 
 Removes a specific event handler of the given event name, using the ID returned from `ace_common_fnc_addEventHandler`.
 
@@ -38,7 +62,7 @@ Removes a specific event handler of the given event name, using the ID returned 
 **R** | None | None | Return value
 
 
-#### 1.1.3 Remove All Events
+#### 3.1.3 Remove All Events
 
 Removes all event handlers of the given event name.
 
@@ -50,9 +74,9 @@ Removes all event handlers of the given event name.
 **R** | None | None | Return value
 
 
-### 1.2 Calling Events
+### 3.2 Calling Events
 
-#### 1.2.1 Local Event
+#### 3.2.1 Local Event
 
 Calls an event only on the local machine, useful for inter-module events.
 
@@ -64,7 +88,7 @@ Calls an event only on the local machine, useful for inter-module events.
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 1.2.2 Server Event
+#### 3.2.2 Server Event
 
 Calls an event only on the server machine (dedicated or self-hosted).
 
@@ -76,7 +100,7 @@ Calls an event only on the server machine (dedicated or self-hosted).
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 1.2.3 Global Event
+#### 3.2.3 Global Event
 
 Calls an event on all machines - the local machine, and the server machine.
 
@@ -89,9 +113,9 @@ Calls an event on all machines - the local machine, and the server machine.
 **R** | None | None | Return value
 
 
-### 1.3 Synchronized Events
+### 3.3 Synchronized Events
 
-#### 1.3.1 Add Synchronized Event
+#### 3.3.1 Add Synchronized Event
 
 Adds a globally synchronized event handler which will expire events after the provided time-to-live, or the code returns true.
 
@@ -104,7 +128,7 @@ Adds a globally synchronized event handler which will expire events after the pr
 2  | Time to live | Number OR Code | Optional (default: `0`)
 **R** | Event ID | Number | Return value
 
-#### 1.3.2 Remove Synchronized Event
+#### 3.3.2 Remove Synchronized Event
 
 Removes a specific event handler of the given event name, using the ID returned from `ace_common_fnc_addSyncedEventHandler`.
 
@@ -115,7 +139,7 @@ Removes a specific event handler of the given event name, using the ID returned 
 0  | Event name | String | Required
 **R** | None | None | Return value
 
-#### 1.3.3 Call Synchronized Event
+#### 3.3.3 Call Synchronized Event
 
 Calls a globally synchronized event, which will also be run on JIP players unless it has expired. Event will expire after the provided time-to-live, or the code returns true.
 
@@ -129,7 +153,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 **R** | Event ID | Number | Return value
 
 
-### 1.4 Example
+### 3.4 Example
 
 ```c++
 // Event handler added on a target machine
@@ -138,20 +162,3 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 // Event called on another machine (tapping above target machine)
 ["tapShoulder", [target], [arguments]] call ace_common_fnc_targetEvent;
 ```
-
-
-## 2. Events List
-
-**Note:** This list is combined from other framework pages, where events are documented separately for each module. Each event listed here has information about its source or owner, which is a link to its framework page where it is documented in better detail.
-
-### 2.1 Listenable
-
-Event Name | Source | Passed Parameter(s) | Locality
----------- | ------ | ------------------- | --------
-`"GlassesChanged"` | `goggles` | `[_glassesClass]` | Local
-`"GlassesCracked"` | `goggles` | `[_unit]` | Local
-
-### 2.2 Callable
-
-Event Name | Owner | Passed Parameter(s) | Locality
----------- | ----- | ------------------- | --------

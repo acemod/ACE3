@@ -9,7 +9,7 @@ order: 3
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>This page will be removed once all below events are documented. New Event System documentation can be found [here](../framework/events-framework.html)</p>
+    <p>This page will be removed once all below events are documented. New Events Framework documentation can be found <a href="http://ace3mod.com/wiki/framework/events-framework.html">here</a>.</p>
 </div>
 
 ### 1 Listenable Event List:
