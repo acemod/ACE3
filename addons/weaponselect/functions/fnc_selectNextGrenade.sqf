@@ -1,0 +1,76 @@
+/*
+ * Author: commy2
+ * Select the next grenade.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Grenade type [0: all, 1: frags, 2: non-frags] (default: 0) <NUMBER>
+ *
+ * Return Value:
+ * Selecting successful? <BOOL>
+ *
+ * Example:
+ * [player] call ace_weaponselect_fnc_selectNextGrenade
+ *
+ * Public: Yes
+ */
+#include "script_component.hpp"
+
+params ["_unit", ["_type", 0]];
+
+private ["_currentGrenade", "_magazines", "_grenades", "_nextGrenadeIndex", "_nextGrenade", "_uniformGrenades", "_vestGrenades", "_backpackGrenades"];
+
+// get currently selected grenade
+_currentGrenade = currentThrowable _unit;
+
+// get correct array format if no grenade is selected
+if (_currentGrenade isEqualTo []) then {
+    _currentGrenade = ["", ""];
+};
+
+_currentGrenade = _currentGrenade select 0;
+
+// get available magazines for that unit
+_magazines = magazines _unit;
+
+_grenades = [];
+
+{
+    if (_x in _magazines) then {
+        _grenades pushBack _x;
+    };
+    false
+} count ([GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type);
+
+// abort if no grenades are available
+if (_grenades isEqualTo []) exitWith {false};
+
+// get next grenade muzzle
+_nextGrenadeIndex = (_grenades find _currentGrenade) + 1;
+
+// roll over if the last grenade was selected
+if (_nextGrenadeIndex >= count _grenades) then {
+    _nextGrenadeIndex = 0;
+};
+
+_nextGrenade = _grenades select _nextGrenadeIndex;
+
+// abort if the same grenade would be selected
+if (_currentGrenade == _nextGrenade) exitWith {false};
+
+// current best method to select a grenade: remove all grenades, add the one you want to select first and then add the rest
+_uniformGrenades =  [uniformItems  _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
+_vestGrenades =     [vestItems     _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
+_backpackGrenades = [backpackItems _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
+
+// remove all grenades except those we are switching to --> this breaks the selector
+{_unit removeItemFromUniform  _x; false} count _uniformGrenades;
+{_unit removeItemFromVest     _x; false} count _vestGrenades;
+{_unit removeItemFromBackpack _x; false} count _backpackGrenades;
+
+// readd grenades
+{_unit addItemToUniform  _x; false} count _uniformGrenades;
+{_unit addItemToVest     _x; false} count _vestGrenades;
+{_unit addItemToBackpack _x; false} count _backpackGrenades;
+
+true

@@ -13,6 +13,7 @@ PREP(putWeaponAway);
 PREP(selectGrenadeAll);
 PREP(selectGrenadeFrag);
 PREP(selectGrenadeOther);
+PREP(selectNextGrenade);
 PREP(selectWeaponMode);
 PREP(selectWeaponMuzzle);
 PREP(selectWeaponVehicle);
@@ -36,6 +37,10 @@ with uiNamespace do {
         GVAR(NonFragMagazines) = [];
         GVAR(AllMagazines)     = [];
 
+        GVAR(GrenadesAll)     = [];
+        GVAR(GrenadesFrag)    = [];//
+        GVAR(GrenadesNonFrag) = [];//
+
         {
             _magazines = getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
             _magazine = _magazines select 0;
@@ -46,13 +51,16 @@ with uiNamespace do {
             if (_explosive == 0) then {
                 GVAR(NonFragMuzzles)   pushBack _x;
                 GVAR(NonFragMagazines) pushBack _magazines;
+                GVAR(GrenadesNonFrag) append _magazines;//
             } else {
                 GVAR(FragMuzzles)   pushBack _x;
                 GVAR(FragMagazines) pushBack _magazines;
+                GVAR(GrenadesFrag) append _magazines;//
             };
 
             GVAR(AllMuzzles)   pushBack _x;
             GVAR(AllMagazines) pushBack _magazines;
+            GVAR(GrenadesAll)  append _magazines;//
 
         } forEach getArray (configfile >> "CfgWeapons" >> "Throw" >> "muzzles");
     };
@@ -64,5 +72,8 @@ GVAR(AllMuzzles)       = uiNamespace getVariable QGVAR(AllMuzzles);
 GVAR(FragMagazines)    = uiNamespace getVariable QGVAR(FragMagazines);
 GVAR(NonFragMagazines) = uiNamespace getVariable QGVAR(NonFragMagazines);
 GVAR(AllMagazines)     = uiNamespace getVariable QGVAR(AllMagazines);
+GVAR(GrenadesAll)      = uiNamespace getVariable QGVAR(GrenadesAll);//
+GVAR(GrenadesFrag)     = uiNamespace getVariable QGVAR(GrenadesFrag);//
+GVAR(GrenadesNonFrag)  = uiNamespace getVariable QGVAR(GrenadesNonFrag);//
 
 ADDON = true;
