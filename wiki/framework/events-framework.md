@@ -142,13 +142,14 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ## 2. Events List
 
-**Note:** This list is combined from other framework pages, where events are documented separately for each module. Each event listed here is a link to its framework page where it is documented in better detail.
+**Note:** This list is combined from other framework pages, where events are documented separately for each module. Each event listed here has information about its source or owner, which is a link to its framework page where it is documented in better detail.
 
 ### 2.1 Listenable
 
 Event Name | Source | Passed Parameter(s) | Locality
 ---------- | ------ | ------------------- | --------
-
+`"GlassesChanged"` | `goggles` | `[_glassesClass]` | Local
+`"GlassesCracked"` | `goggles` | `[_unit]` | Local
 
 ### 2.2 Callable
 
