@@ -36,12 +36,8 @@ def extract(type,filePath,sourceLink):
             print("- Extracted Event Info:\n  - Event Name: {}\n  - Parameters: {}\n  - Locality: {}".format(name,params,locality))
 
             # Write to file
-            if type == "Listenable":
-                with open(TEMP_LISTENABLE, "a") as file:
-                    file.write("{} | {} | {} | {}\n".format(name, sourceLink, params, locality))
-            elif type == "Callable":
-                with open(TEMP_CALLABLE, "a") as file:
-                    file.write("{} | {} | {} | {}\n".format(name, sourceLink, params, locality))
+            with open(eval("TEMP_{}".format(type.upper())), "a") as file:
+                file.write("{} | {} | {} | {}\n".format(name, sourceLink, params, locality))
 
             # Next line as well
             lineNumberFound += 1
