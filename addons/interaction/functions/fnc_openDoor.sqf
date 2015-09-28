@@ -32,7 +32,7 @@ if (_animations isEqualTo []) exitWith {};
 
 if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
     _lockedVariable set [0, _house];
-    _lockedVariable spawn compile preprocessFileLineNumbers "\A3\Structures_F\scripts\LockedDoor_open.sqf"; // note: spawn because thats what the house does too.
+    _lockedVariable call BIS_fnc_LockedDoorOpen;
 };
 
 GVAR(isOpeningDoor) = true;
