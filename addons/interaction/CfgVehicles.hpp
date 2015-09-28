@@ -102,15 +102,15 @@ class CfgVehicles {
                 };
                 class ACE_GetDown {
                     displayName = CSTRING(GetDown);
-                    condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
-                    statement = QUOTE([_target] call DFUNC(getDown));
+                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(getDown));
                     showDisabled = 0;
                     priority = 2.2;
                 };
                 class ACE_SendAway {
                     displayName = CSTRING(SendAway);
-                    condition = QUOTE([_target] call DFUNC(canInteractWithCivilian));
-                    statement = QUOTE([_target] call DFUNC(sendAway));
+                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(sendAway));
                     showDisabled = 0;
                     priority = 2.0;
                 };

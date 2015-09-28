@@ -4,8 +4,9 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -17,7 +18,7 @@
 
 #define SEND_RADIUS 10
 
-params ["_unit"];
+params ["_unit", "_target"];
 
 _unit playActionNow "GestureGo";
 
@@ -29,4 +30,4 @@ _chance = [0.5, 0.8] select (count weapons _unit > 0);
         ["getDown", [_x], [_x]] call EFUNC(common,targetEvent);
     };
     false
-} count (_unit nearEntities ["Civilian", SEND_RADIUS]);
+} count (_target nearEntities ["Civilian", SEND_RADIUS]);

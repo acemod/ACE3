@@ -10,3 +10,11 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_Respawn_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            respawn = QUOTE((_this select 0) setVariable [ARR_3(QUOTE(QGVAR(assignedFireTeam)),(_this select 0) getVariable [ARR_2(QUOTE(QGVAR(assignedFireTeam)),'MAIN')],true)]);
+        };
+    };
+};
