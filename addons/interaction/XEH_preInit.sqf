@@ -3,7 +3,7 @@
 ADDON = false;
 
 // interaction menu
-PREP(addPassengerActions)
+PREP(addPassengerActions);
 PREP(addPassengersActions);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
