@@ -375,8 +375,8 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // @todo still needed?
 [QGVAR(StateArrested), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 
-["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
-["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
+["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);
 
 ["medical_onUnconscious", {
     params ["_unit", "_isUnconscious"];
