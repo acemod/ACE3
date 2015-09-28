@@ -6,7 +6,7 @@
  * 0: House <OBJECT>
  * 1: Door <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

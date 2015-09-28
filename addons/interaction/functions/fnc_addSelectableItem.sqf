@@ -8,7 +8,7 @@
  * 2: Picture <STRING>
  * 3: Data <STRING/CODE>
  *
- * Return value:
+ * Return Value:
  * Container <ARRAY/NUMBER>
  *
  * Example:
@@ -17,8 +17,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_4(_container,_displayName,_picture,_data);
+params ["_container", "_displayName", "_picture", "_data"];
 
 if (_picture == "" || _picture == "PictureThing") then {
     _picture = QUOTE(PATHTOF(UI\dot_ca.paa));

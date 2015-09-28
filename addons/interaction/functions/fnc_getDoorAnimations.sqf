@@ -6,7 +6,7 @@
  * 0: House <OBJECT>
  * 1: Door <STRING>
  *
- * Return value:
+ * Return Value:
  * Animation and Locked variable <ARRAY>
  * 0: Animation <STRING>
  * 1: Locked variable <STRING>
@@ -17,10 +17,8 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_house,_door);
-
 private ["_index", "_animations", "_lockedVariable"];
+params ["_house", "_door"];
 
 _index = [
     "door_1",
@@ -36,7 +34,7 @@ _index = [
     "door_11",
     "door_12",
     "door_13",
-    "Door_14",
+    "door_14",
     "door_15",
     "door_16",
     "door_17",

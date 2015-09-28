@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
- * Return value:
+ * Return Value:
  * Children actions <ARRAY>
  *
  * Example:
@@ -16,8 +16,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
+params ["_vehicle", "_player", "_parameters"];
 
 private ["_actions"];
 _actions = [];
@@ -25,7 +24,7 @@ _actions = [];
 {
     private ["_unit", "_icon"];
     _unit = _x;
-    if ((_unit != _player) && {(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"}) then {
+    if ((_unit != _player) && {(getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) != "UAVPilot"}) then {
         _icon = switch _unit do {
             case (driver _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa) };
             case (gunner _vehicle): { QUOTE(A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_gunner_ca.paa) };
@@ -50,6 +49,7 @@ _actions = [];
                 _unit
             ];
     };
-} forEach crew _vehicle;
+    true
+} count crew _vehicle;
 
 _actions

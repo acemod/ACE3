@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -17,9 +17,8 @@
 
 #define RADIUS 10
 
-PARAMS_1(_unit);
-
 private ["_chance", "_x"];
+params ["_unit"];
 
 ACE_player playActionNow "GestureGo"; // put something else here.
 
@@ -35,4 +34,5 @@ if (count (weapons ACE_player) > 0) then {
       _this setUnitPos "DOWN";
     }, _x] call CBA_fnc_globalExecute;
   };
-} forEach (_unit nearEntities ["Civilian", RADIUS]);
+  true
+} count (_unit nearEntities ["Civilian", RADIUS]);

@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to tap a shoulder <BOOL>
  *
  * Example:
@@ -15,8 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 _target isKindOf "CAManBase" &&
 {alive _target} &&

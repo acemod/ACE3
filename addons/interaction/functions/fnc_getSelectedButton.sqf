@@ -5,7 +5,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Angle <NUMBER>
  *
  * Example:

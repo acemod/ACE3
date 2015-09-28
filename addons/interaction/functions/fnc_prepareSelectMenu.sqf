@@ -6,7 +6,7 @@
  * 0: Header Text <STRING>
  * 1: Approve Button Text <STRING>
  *
- * Return value:
+ * Return Value:
  * Container object <NUMBER>
  *
  * Example:
@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_header,_buttonText);
+params ["_header", "_buttonText"];
 
 closeDialog 0;
 

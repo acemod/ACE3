@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -16,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_vehicle);
-
 private ["_cargo", "_actions"];
+params ["_unit", "_vehicle"];
 
 // Allow interaction with all cargo slots and all FFV slots
 _cargo = [_vehicle, ["cargo", "ffv"], true] call EFUNC(common,getVehicleCrew);

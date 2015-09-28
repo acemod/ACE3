@@ -6,7 +6,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Distance in meters <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Vehicle in range of player <BOOL>
  *
  * Example:
@@ -16,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_distance);
-
 private ["_player", "_position0", "_position1"];
+params ["_vehicle", "_distance"];
 
 _player = ACE_player;
 

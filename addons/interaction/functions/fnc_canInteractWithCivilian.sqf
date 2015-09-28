@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to interact with civilian <BOOL>
  *
  * Example:
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_isCivilian);
+params ["_unit", "_isCivilian"];
 
 if (isNil "_isCivilian") then {_isCivilian = true};
 

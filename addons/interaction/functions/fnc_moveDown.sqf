@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Amount <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

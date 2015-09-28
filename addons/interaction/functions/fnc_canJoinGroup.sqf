@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to join a group <BOOL>
  *
  * Example:
@@ -15,8 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 alive _target
 && {!(_target getVariable ["ACE_isUnconscious", false])}

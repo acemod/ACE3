@@ -5,7 +5,7 @@
  * Arguments:
  * None (uses local variable _target)
  *
- * Return value:
+ * Return Value:
  * Children actions <ARRAY>
  *
  * Example:

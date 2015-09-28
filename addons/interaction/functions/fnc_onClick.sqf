@@ -5,7 +5,7 @@
  * Arguments:
  * Index <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

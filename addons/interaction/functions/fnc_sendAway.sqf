@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -18,9 +18,9 @@
 #define DISTANCE 50
 #define RADIUS 10
 
-PARAMS_1(_unit);
-
 private ["_chance", "_x"];
+
+params ["_unit"];
 
 ACE_player playActionNow "GestureGo";
 
@@ -33,8 +33,10 @@ if (count weapons ACE_player > 0) then {
 {
     if (count (weapons _unit) == 0 and random 1 < _chance) then {
         [-2, {
-            (_this select 0) setUnitPos "AUTO";
-            (_this select 0) doMove [(getPos (_this select 0) select 0) + DISTANCE * (eyeDirection (_this select 1) select 0), (getPos (_this select 0) select 1) + DISTANCE * (eyeDirection (_this select 1) select 1), 0];
+            params ["_unit", "_player"]
+            _unit setUnitPos "AUTO";
+            _unit doMove [(getPos _unit select 0) + DISTANCE * (eyeDirection _player select 0), (getPos _unit select 1) + DISTANCE * (eyeDirection _player select 1), 0];
         }, [_x, ACE_player]] call CBA_fnc_globalExecute;
     };
-} forEach (_unit nearEntities ["Civilian", RADIUS]);
+    true
+} count (_unit nearEntities ["Civilian", RADIUS]);

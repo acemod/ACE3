@@ -7,7 +7,7 @@
  * 1: X Coordinate <NUMBER>
  * 2: Y Coordinate <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_tooltip,_coordinateX,_coordinateY);
+params ["_tooltip", "_coordinateX", "_coordinateY"];
 
 private["_ctrl"];
 
