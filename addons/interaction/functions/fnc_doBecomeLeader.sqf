@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -16,6 +16,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_target,_player);
+params ["_target", "_unit"];
 
-[QGVAR(selectLeader), (units group _player), [(group _player), _player]] call EFUNC(common,targetEvent);
+["selectLeader", units group _unit, [group _unit, _unit]] call EFUNC(common,targetEvent);
