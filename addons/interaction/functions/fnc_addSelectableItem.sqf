@@ -1,6 +1,6 @@
 /*
  * Author: Garth de Wet (LH)
- * Adds an item to the select menu
+ * Adds an item to the select menu.
  *
  * Arguments:
  * 0: List container <ARRAY/NUMBER>
@@ -8,8 +8,8 @@
  * 2: Picture <STRING>
  * 3: Data <STRING/CODE>
  *
- * Return value:
- * Container <ARRAY/NUMBER>
+ * Return Value:
+ * Container <ARRAY, NUMBER>
  *
  * Example:
  * [actions, "Banana", "UI\dot_ca.paa", "bananaContents"] call ace_interaction_fnc_addSelectableItem
@@ -18,14 +18,15 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_container,_displayName,_picture,_data);
+params ["_container", "_displayName", "_picture", "_data"];
 
-if (_picture == "" || _picture == "PictureThing") then {
+if (toLower _picture in ["", "picturething"]) then {
     _picture = QUOTE(PATHTOF(UI\dot_ca.paa));
 };
 
-private ["_index"];
+private "_index";
 _index = lbAdd [_container, _displayName];
+
 lbSetData [_container, _index, str _data];
 lbSetPicture [_container, _index, _picture];
 

@@ -84,6 +84,7 @@
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 ["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
+["assignTeam", {(_this select 0) assignTeam (_this select 1)}] call FUNC(addEventHandler);
 ["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
