@@ -15,32 +15,18 @@ TEMP_LISTENABLE = "temp\\combined_events_listenable.md"
 TEMP_CALLABLE = "temp\\combined_events_callable.md"
 ##########################
 
-def extract(type,filePath,sourceLink):
-    lineNumberFound = -1
-    for num, line in enumerate(open(filePath)):
-        # Find start line
-        if re.search(r"###\s+\d+\.?\d*\s+{}".format(type), line):
-            lineNumberFound = num + 4
+def extract(type, data, sourceLink):
+    # Extract data
+    match = re.match(r"(`"".+""`)\s*\|.*\|\s*(`\[.+\]`)\s*\|\s*(\w+)", data)
+    name = match.group(1) # Event Name
+    params = match.group(2) # Passed Parameters
+    locality = match.group(3) # Locality
+    print("- {} Event Data:\n  - Event Name: {}\n  - Parameters: {}\n  - Locality: {}\n".format(type, name, params, locality))
 
-        # Use line
-        if num == lineNumberFound:
-            # Stop if empty line
-            if line in ["\n", "\r\n"]:
-                break
+    # Write to file
+    with open(eval("TEMP_{}".format(type.upper())), "a") as file:
+        file.write("{} | {} | {} | {}\n".format(name, sourceLink, params, locality))
 
-            # Extract info
-            match = re.match(r"(`"".+""`)\s*\|.*\|\s*(`\[.+\]`)\s*\|\s*(\w+)", line)
-            name = match.group(1) # Event Name
-            params = match.group(2) # Passed Parameters
-            locality = match.group(3) # Locality
-            print("- Extracted Event Info:\n  - Event Name: {}\n  - Parameters: {}\n  - Locality: {}".format(name,params,locality))
-
-            # Write to file
-            with open(eval("TEMP_{}".format(type.upper())), "a") as file:
-                file.write("{} | {} | {} | {}\n".format(name, sourceLink, params, locality))
-
-            # Next line as well
-            lineNumberFound += 1
 
 def main():
     print("""
@@ -75,35 +61,42 @@ def main():
             print("Excluding: {}\n".format(file))
             continue
 
-        # Save file contents to a string
-        filePath = os.path.join(wikiframeworkpath, file)
+        with open(os.path.join(wikiframeworkpath, file)) as fileOpen:
+            for line in fileOpen:
+                # Find Events section, prepare data
+                if re.search(r"##\s+\d+\.?\d*\s+Events", line):
+                    print("Found Events: {}".format(file))
 
-        with open(filePath) as fileOpen:
-            fileContents = fileOpen.read()
+                    # Source module (cut out 13 characters at the end, stands for "-framework.md")
+                    source = file[:-13]
+                    print("- Source Module: {}".format(source))
 
-            # Find "Events" section
-            if re.search(r"##\s+\d+\.?\d*\s+Events", fileContents):
-                print("Found Events: {}".format(file))
+                    # Website URL - remove 3 characters at the end (stands for ".md") and add ".html", format into URL
+                    webURL = "{}/{}.{}".format(ACE3WEB_WIKI_FRAMEWORK, file[:-3], "html")
+                    print("- Website URL: {}".format(webURL))
 
-                # Source module (cut out 13 characters at the end, stands for "-framework.md")
-                source = file[:-13]
-                print("- Source Module: {}".format(source))
+                    # Source with Website URL
+                    sourceLink = "[{}]({})".format(source, webURL)
 
-                # Website URL - remove 3 characters at the end (stands for ".md") and add ".html", format into URL
-                webURL = "{}/{}.{}".format(ACE3WEB_WIKI_FRAMEWORK, file[:-3], "html")
-                print("- Website URL: {}".format(webURL))
+                # Find Listenable/Callable section, prepare data
+                elif re.search(r"###\s+\d+\.?\d*\s+Listenable|Callable", line):
+                    # Skip 4 lines to get to table contents (sub-loop)
+                    for i in range(4):
+                        data = next(fileOpen)
 
-                # Source with Website URL
-                sourceLink = "[{}]({})".format(source, webURL)
+                    # Iterate in sub-loop and extract data until empty line is reached
+                    while data not in ["\n", "\r\n"]:
+                        # @todo - use regex return directly in parameter
+                        if re.search(r"###\s+\d+\.?\d*\s+Listenable", line):
+                            extract("Listenable", data, sourceLink)
+                        elif re.search(r"###\s+\d+\.?\d*\s+Callable", line):
+                            extract("Callable", data, sourceLink)
 
-                # Find "Listenable" or "Callable" events and extract values
-                if re.search(r"###\s+\d+\.?\d*\s+Listenable", fileContents):
-                    extract("Listenable",filePath,sourceLink)
-                elif re.search(r"###\s+\d+\.?\d*\s+Callable", fileContents):
-                    extract("Callable",filePath,sourceLink)
-
-                # Space out printed information
-                print("")
+                        # Move to next line, exit if EOF
+                        try:
+                            data = next(fileOpen)
+                        except StopIteration:
+                            break
 
 
 if __name__ == "__main__":
