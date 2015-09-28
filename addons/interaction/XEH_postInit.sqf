@@ -20,6 +20,10 @@ ACE_Modifier = 0;
 
 if (!hasInterface) exitWith {};
 
+GVAR(isOpeningDoor) = false;
+
+[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
+
 ["tapShoulder", {
     params ["_unit", "_shoulderNum"];
 
@@ -32,8 +36,6 @@ if (!hasInterface) exitWith {};
 
     ["displayTextStructured", _message] call EFUNC(common,targetEvent);
 }] call EFUNC(common,addEventHandler);
-
-GVAR(isOpeningDoor) = false;
 
 // restore global fire teams for JIP
 private "_team";

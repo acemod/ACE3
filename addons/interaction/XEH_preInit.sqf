@@ -30,6 +30,7 @@ PREP(pardon);
 // interaction with doors
 PREP(getDoor);
 PREP(getDoorAnimations);
+PREP(handleScrollWheel);
 PREP(openDoor);
 
 // interaction with boats

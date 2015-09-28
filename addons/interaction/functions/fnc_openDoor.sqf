@@ -35,39 +35,37 @@ if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_l
     _lockedVariable call BIS_fnc_LockedDoorOpen;
 };
 
-GVAR(isOpeningDoor) = true;
-
 playSound "ACE_Sound_Click"; // @todo replace with smth. more fitting
 
-[_house, _animations] spawn { // @todo
-    params ["_house", "_animations"];
+GVAR(doorTargetPhase) = _house animationPhase (_animations select 0);
+GVAR(isOpeningDoor) = true;
+GVAR(usedScrollWheel) = false;
 
-    private ["_phase", "_position", "_time", "_usedMouseWheel"];
+[{
+    (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame"];
 
-    _phase = _house animationPhase (_animations select 0);
-    _position = getPosASL ACE_player;
+    if !(GVAR(isOpeningDoor)) exitWith {
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
 
-    _time = ACE_time + 0.2;
-    _usedMouseWheel = false;
+        // didn't use incremental opening. Just do animation normally.
+        if !(GVAR(usedScrollWheel)) then {
+            private "_phase";
+            _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
 
-    waitUntil {
-        if (inputAction "PrevAction" > 0 || {inputAction "NextAction" > 0}) then {
-            _usedMouseWheel = true;
+            {_house animate [_x, _phase]; false} count _animations;
         };
-
-        _phase = _phase + (inputAction "PrevAction" / 12) min 1;
-        _phase = _phase - (inputAction "NextAction" / 12) max 0;
-
-        {_house animate [_x, _phase]} forEach _animations;
-
-        !GVAR(isOpeningDoor) || {getPosASL ACE_player distance _position > 1}
     };
 
-    if (!_usedMouseWheel && {ACE_time < _time} && {[ACE_player, objNull, []] call EFUNC(common,canInteractWith)}) then {
-        _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
-
-        {_house animate [_x, _phase]} forEach _animations;
+    // check if player moved too far away
+    if (getPosASL ACE_player distance _position > 1) exitWith {
+        GVAR(isOpeningDoor) = false;
     };
 
-    GVAR(isOpeningDoor) = false;
-};
+    // this allows for holding the door in it's current state.
+    if (ACE_time > _time && {diag_frameno > _frame}) then {
+        GVAR(usedScrollWheel) = true;
+    };
+
+    // do incremental door opening
+    {_house animate [_x, GVAR(doorTargetPhase)]; false} count _animations;
+}, 0.1, [_house, _animations, getPosASL ACE_player, ACE_time + 0.2, diag_frameno + 2]] call CBA_fnc_addPerFrameHandler;
