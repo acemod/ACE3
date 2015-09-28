@@ -19,7 +19,7 @@
 params ["_unit", "_team"];
 
 // make sure correct team is set on JIP
-_unit setVariable [QGVAR(assignedFireTeam), _team, true]; // @todo reset variable for Respawn+JIP - bug
+_unit setVariable [QGVAR(assignedFireTeam), _team, true];
 
 // join fire team on every machine in that group
 ["assignTeam", units group _unit, [_unit, _team]] call EFUNC(common,targetEvent);
