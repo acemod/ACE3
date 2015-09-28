@@ -13,7 +13,7 @@
  * ARRAY - [NUMBER - Elevation In Degrees, NUMBER - Shot Durration]
  *
  * Example:
- * [_rangeToHit, _heightToHit, _muzzleVelocity, _airFriction, TIME_STEP] call FUNC(simulateFindSolution);
+ * [_rangeToHit, _heightToHit, _muzzleVelocity, _airFriction, TIME_STEP] call ace_mk6mortar_fnc_dev_simulateFindSolution;
  *
  * Public: No
  */

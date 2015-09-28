@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["flashbangExplosion", DFUNC(flashbangExplosionEH)] call EFUNC(common,addEventHandler);
+["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
 
 if (!hasInterface) exitWith {};
 
@@ -21,4 +21,4 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     [] call FUNC(nextMode);
 },
 {false},
-[9, [false, false, false]], false] call cba_fnc_addKeybind; //8 Key
+[9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key

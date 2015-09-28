@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_inheritsFrom","3.5.0","inheritsFrom ARRAY");
+
 params ["_configEntry", "_configMatch"];
 
 if (configName _configEntry == _configMatch) exitWith {true};

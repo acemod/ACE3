@@ -92,5 +92,5 @@ if (!isServer) then {
 };
 
 if (_checkAll) then {
-    0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber); // @todo
+    0 spawn COMPILE_FILE(scripts\checkVersionNumber); // @todo
 };

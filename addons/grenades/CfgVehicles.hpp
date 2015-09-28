@@ -1,9 +1,6 @@
+
 class CfgVehicles {
     class NATO_Box_Base;
-    class EAST_Box_Base;
-    class IND_Box_Base;
-    class Box_NATO_Support_F;
-
     class Box_NATO_Grenades_F: NATO_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_HandFlare_White,12);
@@ -12,6 +9,7 @@ class CfgVehicles {
         };
     };
 
+    class EAST_Box_Base;
     class Box_East_Grenades_F: EAST_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_HandFlare_Yellow,12);
@@ -20,6 +18,7 @@ class CfgVehicles {
         };
     };
 
+    class IND_Box_Base;
     class Box_IND_Grenades_F: IND_Box_Base {
         class TransportItems {
             MACRO_ADDITEM(ACE_HandFlare_Yellow,12);
@@ -28,6 +27,7 @@ class CfgVehicles {
         };
     };
 
+    class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_HandFlare_White,12);

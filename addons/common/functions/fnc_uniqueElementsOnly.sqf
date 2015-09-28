@@ -14,4 +14,6 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_uniqueElementsOnly","3.5.0","ace_common_fnc_uniqueElements");
+
 _this call FUNC(uniqueElements)

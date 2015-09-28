@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Vehicle <OBJECT>
+ * 2: Show Hint <BOOL> (default: true)
  *
  * Return value:
  * Object loaded <BOOL>
@@ -18,13 +19,19 @@
 
 private ["_loaded", "_space", "_itemSize"];
 
-params ["_item", "_vehicle"];
+params ["_item", "_vehicle", ["_showHint", true, [true]] ];
+TRACE_2("params",_item,_vehicle);
 
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
+if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {
+    TRACE_2("canLoadItemIn failed",_item,_vehicle);
+    false
+};
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushback _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
+
+TRACE_1("added to loaded array",_loaded);
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
@@ -40,7 +47,9 @@ private ["_itemName", "_vehicleName"];
 _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
 _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-["displayTextStructured", [[localize LSTRING(LoadedItem), _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+if (_showHint) then {
+    ["displayTextStructured", [[localize LSTRING(LoadedItem), _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+};
 
 // Invoke listenable event
 ["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);

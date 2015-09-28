@@ -111,7 +111,8 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     private ["_badClassnames"];
     _badClassnames = [];
     {
-        if ((isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}) then {
+        //Only check Land objects (WeaponHolderSimulated show up in `vehicles` for some reason)
+        if ((_x isKindOf "Land") && {(isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}}) then {
             if (!((typeOf _x) in _badClassnames)) then {
                 _badClassnames pushBack (typeOf _x);
                 ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
