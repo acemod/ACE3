@@ -1,3 +1,4 @@
+
 #define HSPACE 0.5-2.0/16/2
 #define VSPACE 0.5-0.3/9/2
 
@@ -44,13 +45,15 @@ class ACE_Interaction_Button_Base {
 class RscListbox;
 class IGUIBack;
 class RscText;
+
 #define X_OFFSET 0.2
 
 class RscACE_SelectAnItem {
     idd = 8854;
     movingEnable = 0;
+
     class controls {
-        class back:IGUIBack {
+        class back: IGUIBack {
             x = X_OFFSET;
             y = 0;
             w = 0.6;
@@ -66,7 +69,7 @@ class RscACE_SelectAnItem {
             style = 0x02;
             text = "";
         };
-        class itemList:RscListBox {
+        class itemList: RscListBox {
             onMouseButtonDblClick = "_this call ACE_Interaction_fnc_onSelectMenuDblClick";
             idc = 8866;
             x = X_OFFSET + 0.005;
@@ -139,18 +142,21 @@ class RscInteractionIcon: RscPicture {
     w = 2*GUI_GRID_H;
     h = 2*GUI_GRID_H;
 };
+
 class RscInteractionHelperIcon: RscInteractionIcon {
     x = 20 * GUI_GRID_W;
     y = 16 * GUI_GRID_H;
     w = GUI_GRID_H;
     h = GUI_GRID_H;
 };
+
 class RscInteractionText: RscText{
     x = 21 * GUI_GRID_W;
     y = 16 * GUI_GRID_H;
     w = 8 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
 };
+
 class RscTitles {
     class GVAR(InteractionHelper) {
         idd = 9930;
