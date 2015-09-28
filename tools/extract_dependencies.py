@@ -49,7 +49,7 @@ def main():
                     print("- Dependencies: {}\n".format(data))
 
 
-    print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies_from_file.py' script in `gh-pages` branch to put the exctracted information to the wiki.")
+    print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies_from_file.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
 
 
 if __name__ == "__main__":
