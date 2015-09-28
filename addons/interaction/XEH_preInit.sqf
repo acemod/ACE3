@@ -24,6 +24,8 @@ PREP(canBecomeLeader);
 PREP(doBecomeLeader);
 PREP(canTapShoulder);
 PREP(tapShoulder);
+PREP(canPardon);
+PREP(pardon);
 
 // interaction with doors
 PREP(getDoor);

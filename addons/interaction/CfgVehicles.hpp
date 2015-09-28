@@ -117,7 +117,8 @@ class CfgVehicles {
                 class ACE_Pardon {
                     displayName = CSTRING(Pardon);
                     condition = QUOTE(rating _target < -2000 && {alive _target} && {side group _player == side group _target});
-                    statement = QUOTE([ARR_3(_target,'{_this addRating -rating _this}',_target)] call DEFUNC(common,execRemoteFnc));
+                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canPardon));
+                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(pardon));
                     showDisabled = 0;
                     priority = 2.5;
                 };

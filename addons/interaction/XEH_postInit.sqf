@@ -3,6 +3,8 @@
 
 ACE_Modifier = 0;
 
+["pardon", {(_this select 0) addRating -rating (_this select 0)}] call EFUNC(common,addEventHandler);
+
 ["getDown", {
     params ["_target"];
 
