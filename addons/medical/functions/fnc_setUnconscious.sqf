@@ -21,6 +21,11 @@
 
 #define DEFAULT_DELAY (round(random(10)+5))
 
+// only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
+};
+
 private ["_animState", "_originalPos", "_startingTime", "_isDead"];
 params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
 

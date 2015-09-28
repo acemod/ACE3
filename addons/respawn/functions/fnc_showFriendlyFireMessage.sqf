@@ -1,28 +1,24 @@
 /*
-  Name: ACE_Respawn_fnc_showFriendlyFireMessages
-
-  Author(s):
-    commy2
-
-  Description:
-    shows a message in system chat of who killed who
-
-  Parameters:
-    0: OBJECT - unit
-    1: OBJECT - killer
-
-  Returns:
-    VOID
-*/
-
+ * Author: commy2
+ * Shows a message in system chat of who killed whom.
+ *
+ * Arguments:
+ * 0: Unitn <OBJECT>
+ * 1: Killer <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_Player, killer] call ace_module_fnc_functionName
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_killer"];
+params ["_unit", "_killer"];
 
-_unit = _this select 0;
-_killer = _this select 1;
-
-if (_unit != _killer && side group _unit in [side group ACE_player, civilian] && {side group _killer == side group ACE_player}) then {
+if (_unit != _killer && {side group _unit in [side group ACE_player, civilian]} && {side group _killer == side group ACE_player}) then {
     systemChat format ["%1 was killed by %2", [_unit] call EFUNC(common,getName), [_killer] call EFUNC(common,getName)];
 
     // Raise ACE globalEvent

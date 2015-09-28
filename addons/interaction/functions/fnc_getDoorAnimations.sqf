@@ -1,12 +1,12 @@
 /*
  * Author: commy2
- * Get door animations
+ * Get door animations. @todo rewrite for better custom building support
  *
  * Arguments:
  * 0: House <OBJECT>
  * 1: Door <STRING>
  *
- * Return value:
+ * Return Value:
  * Animation and Locked variable <ARRAY>
  * 0: Animation <STRING>
  * 1: Locked variable <STRING>
@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_house,_door);
+params ["_house", "_door"];
 
 private ["_index", "_animations", "_lockedVariable"];
 

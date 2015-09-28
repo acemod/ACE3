@@ -83,6 +83,9 @@
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
+["assignTeam", {(_this select 0) assignTeam (_this select 1)}] call FUNC(addEventHandler);
+["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
@@ -397,8 +400,8 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // @todo still needed?
 [QGVAR(StateArrested), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 
-["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
-["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
+["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);
 
 ["medical_onUnconscious", {
     params ["_unit", "_isUnconscious"];

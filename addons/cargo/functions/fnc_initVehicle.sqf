@@ -45,7 +45,7 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 private ["_text", "_condition", "_statement", "_icon", "_action"];
 _condition = {
     params ["_target", "_player"];
-    GVAR(enable) && {locked _target < 2} && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, []] call EFUNC(common,canInteractWith)}
 };
 _text = localize LSTRING(openMenu);
 _statement = {GVAR(interactionVehicle) = _target; createDialog QGVAR(menu);};
