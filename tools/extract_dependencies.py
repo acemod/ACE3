@@ -5,7 +5,6 @@
 import os
 import sys
 import re
-import shutil
 
 ######## GLOBALS #########
 FILE_EXTRACTED = "temp\\dependencies.temp"
