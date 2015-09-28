@@ -8,6 +8,7 @@
  * 1: Variable Name <STRING>
  * 2: Value <ANY>
  * 3: Global <BOOL>
+ * 4: Vehicle <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -19,7 +20,7 @@
  */
 #include "script_component.hpp"
 
-params ["_list", "_variable", "_setting", "_global"];
+params ["_list", "_variable", "_setting", "_global", ["_vehicle", false]];
 
 if (typeName _list == "STRING") then {
     _list = [_list, true, true] call FUNC(parseList);
@@ -30,8 +31,13 @@ if (typeName _list == "STRING") then {
     if (!isNil "_x") then {
         if (typeName _x == typeName objNull) then {
             if (local _x) then {
-                _x setVariable [_variable, _setting, _global];
-                TRACE_4("Set variable",_x,_variable,_setting,_global);
+                if (_vehicle) then {
+                    (vehicle _x) setVariable [_variable, _setting, _global];
+                    TRACE_6("Set variable vehicle",_x,vehicle _x,typeOf (vehicle _x),_variable,_setting,_global);
+                } else {
+                    _x setVariable [_variable, _setting, _global];
+                    TRACE_5("Set variable",_x,typeOf _x,_variable,_setting,_global);
+                };
             };
         };
     };
