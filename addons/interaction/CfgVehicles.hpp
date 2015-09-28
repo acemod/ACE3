@@ -167,7 +167,7 @@ class CfgVehicles {
             };
             class ACE_Weapon {
                 displayName = CSTRING(Weapon);
-                position = QUOTE(call FUNC(getWeaponPos));
+                position = QUOTE(call DFUNC(getWeaponPos));
                 distance = 1.50;
                 condition = "";
                 statement = "";

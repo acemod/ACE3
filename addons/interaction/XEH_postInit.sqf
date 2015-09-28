@@ -3,7 +3,33 @@
 
 ACE_Modifier = 0;
 
+["getDown", {
+    params ["_target"];
+
+    _target setUnitPos "DOWN";
+}] call EFUNC(common,addEventHandler);
+
+["sendAway", {
+    params ["_unit", "_position"];
+
+    _unit setUnitPos "AUTO";
+    _unit doMove _position;
+}] call EFUNC(common,addEventHandler);
+
 if (!hasInterface) exitWith {};
+
+["tapShoulder", {
+    params ["_unit", "_shoulderNum"];
+
+    if (_unit == ACE_player) then {
+        addCamShake [4, 0.5, 5];
+    };
+
+    private "_message";
+    _message = parseText format ([["%1 &gt;", localize LSTRING(YouWereTappedRight)], ["&lt; %1", localize LSTRING(YouWereTappedLeft)]] select (_shoulderNum == 0));
+
+    ["displayTextStructured", _message] call EFUNC(common,targetEvent);
+}] call EFUNC(common,addEventHandler);
 
 GVAR(isOpeningDoor) = false;
 
