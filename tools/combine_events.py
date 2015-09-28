@@ -56,14 +56,16 @@ def main():
 
     # Iterate through files in the framework directory
     for file in os.listdir(wikiframeworkpath):
-        # Don't check files in exclusion list
+        # Skip iteration if file in exclusion list
         if file in EXCLUDE:
             print("Excluding: {}\n".format(file))
             continue
 
         with open(os.path.join(wikiframeworkpath, file)) as fileOpen:
             for line in fileOpen:
-                # Find Events section, prepare data
+                matchSubSection = re.match(r"###\s+\d+\.?\d*\s+(Listenable|Callable)", line)
+
+                # Find main section, prepare data
                 if re.search(r"##\s+\d+\.?\d*\s+Events", line):
                     print("Found Events: {}".format(file))
 
@@ -78,19 +80,15 @@ def main():
                     # Source with Website URL
                     sourceLink = "[{}]({})".format(source, webURL)
 
-                # Find Listenable/Callable section, prepare data
-                elif re.search(r"###\s+\d+\.?\d*\s+Listenable|Callable", line):
+                # Find sub-section, prepare data
+                elif matchSubSection:
                     # Skip 4 lines to get to table contents (sub-loop)
                     for i in range(4):
                         data = next(fileOpen)
 
                     # Iterate in sub-loop and extract data until empty line is reached
                     while data not in ["\n", "\r\n"]:
-                        # @todo - use regex return directly in parameter
-                        if re.search(r"###\s+\d+\.?\d*\s+Listenable", line):
-                            extract("Listenable", data, sourceLink)
-                        elif re.search(r"###\s+\d+\.?\d*\s+Callable", line):
-                            extract("Callable", data, sourceLink)
+                        extract(matchSubSection.group(1), data, sourceLink)
 
                         # Move to next line, exit if EOF
                         try:
