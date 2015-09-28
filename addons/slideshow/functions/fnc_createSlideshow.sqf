@@ -30,10 +30,10 @@ params [
 
 // Verify data
 if (_objects isEqualTo []) exitWith {
-    ACE_LOGERROR("Slideshow Objects field may NOT be empty!");
+    ACE_LOGERROR("Slideshow Objects field must NOT be empty!");
 };
 if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
-    ACE_LOGERROR("Slideshow Images or Names fields may NOT be empty and must have equal number of items!");
+    ACE_LOGERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
 };
 
 // If no controllers use objects as controllers
