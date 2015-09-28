@@ -43,7 +43,7 @@ def main():
                 # Extract dependencies
                 match = re.match(r"\s+requiredAddons\[]\ = {(.+)};", line)
                 if match:
-                    data = match.group(1).replace("\"", "`").strip()
+                    data = match.group(1).replace("\"", "`").replace(" ", "")
                     writeToFile(data)
                     print("- Dependencies: {}\n".format(data))
 
