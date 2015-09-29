@@ -35,7 +35,7 @@ if (true) then {
         };
     };
     if !(GVAR(EffectsActive)) then {
-        [goggles ace_player] call FUNC(applyGlassesEffect);
+        [goggles ace_player] call FUNC(applyGlasses);
     } else {
         if ([goggles ace_player] call FUNC(isDivingGoggles) && {underwater ace_player}) then {
             call FUNC(removeRainEffect);

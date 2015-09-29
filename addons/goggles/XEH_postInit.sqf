@@ -49,7 +49,7 @@ FUNC(CheckGlasses) = {
 player addEventHandler ["Explosion", {
     private "_effects";
     if (alive ace_player) then {
-        call FUNC(ApplyDirtEffect);
+        call FUNC(ApplyDirt);
         if (GETBROKEN) exitWith {};
         if (((_this select 1) call FUNC(GetExplosionIndex)) < getNumber(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Resistance")) exitWith {};
         if !([ace_player] call FUNC(isGogglesVisible)) exitWith {["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);};
@@ -90,7 +90,7 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
     if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
 
     if ([ace_player] call FUNC(isGogglesVisible)) then {
-        [_this select 0] call FUNC(applyGlassesEffect);
+        [_this select 0] call FUNC(applyGlasses);
     } else {
         call FUNC(removeGlassesEffect);
     };

@@ -7,9 +7,9 @@ PREP(handleFired);
 PREP(handleKilled);
 
 
-PREP(applyDirtEffect);
+PREP(applyDirt);
 PREP(applyDust);
-PREP(applyGlassesEffect);
+PREP(applyGlasses);
 
 PREP(checkGoggles);
 PREP(clearGlasses);

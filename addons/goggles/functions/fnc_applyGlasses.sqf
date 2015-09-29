@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [goggles ace_player] call ace_goggles_fnc_ApplyGlassesEffect;
+ * [goggles ace_player] call ace_goggles_fnc_ApplyGlasses
  *
  * Public: No
  */
@@ -46,7 +46,7 @@ if (_glassImagePath != "") then {
 };
 
 if GETDIRT then {
-    call FUNC(applyDirtEffect);
+    call FUNC(applyDirt);
 };
 
 if GETDUSTT(DACTIVE) then {

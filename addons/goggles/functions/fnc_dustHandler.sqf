@@ -28,7 +28,7 @@ private ["_position", "_particleConfig", "_cloudType", "_surface", "_bullets"];
 // check if the unit really is on the ground and not in a building
 _position = getPosATL _unit;
 
-if (_position select 2 > 0.2) exitWith {};
+if (_position select 2 > 0.2) exitWith {true};
 
 // get weapon dust effect
 _particleConfig = configFile >> "CfgWeapons" >> _weapon >> "GunParticles";
@@ -57,7 +57,7 @@ if (_surface != GVAR(surfaceCache)) then {
 };
 
 // quit if surface isn't dusty
-if (!GVAR(surfaceCacheIsDust)) exitWith {};
+if (!GVAR(surfaceCacheIsDust)) exitWith {true};
 
 // increment dust value with type bullet
 _bullets = GETDUSTT(DBULLETS);

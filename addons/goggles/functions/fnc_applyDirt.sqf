@@ -9,7 +9,7 @@
  * Succeeded <BOOL>
  *
  * Example:
- * _applied = call ace_goggles_fnc_ApplyDirtEffect;
+ * _applied = call ace_goggles_fnc_ApplyDirt;
  *
  * Public: Yes
  */
