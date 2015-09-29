@@ -256,5 +256,11 @@
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
         </Key>
+        <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
+            <English>Set Channel At Start</English>
+        </Key>
+        <Key ID="STR_ACE_Map_DefaultChannel_Description">
+            <English>Change the starting marker channel at mission start</English>
+        </Key>
     </Package>
 </Project>
