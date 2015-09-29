@@ -7,7 +7,7 @@ GVAR(camera) = objNull;
 
 0 = 0 spawn {
     waituntil {!isNull ACE_player};
-    waituntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0};
+    waituntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0 && {isNull curatorCamera}};
 
     GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
     camDestroy GVAR(camera);
