@@ -38,15 +38,8 @@
             <Portuguese>Derrubar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
-            <English>Adjust ladder</English>
-            <German>Leiter einstellen</German>
-            <Polish>Reguluj drabinę</Polish>
-            <Czech>Upravit žebřík</Czech>
-            <Spanish>Ajustar escalera</Spanish>
-            <Portuguese>Ajustar escada</Portuguese>
-            <French>Régler l'échelle</French>
-            <Hungarian>Létra állítása</Hungarian>
-            <Russian>Выровнять лестницу</Russian>
+            <English>Extend, +Ctrl tilt</English>
+            <German>Ausfahren, +Strg kippen</German>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
