@@ -123,7 +123,7 @@ if (GVAR(healHitPointAfterAdvBandage)) then
         if (_bodyPart == 5 && {_numOpenWounds > 0}) then { _legsWounds = _legsWounds + 1; }; // Right Leg
     } foreach _currentWounds;
 
-    // Any body part that has no wounds is healed to full health
+    // Any body part that has no unbandaged ACE wounds it is healed to full Arma health
     if (_headWounds == 0) then { _target setHitPointDamage ["hitHead", 0.0];  };
     if (_bodyWounds == 0) then { _target setHitPointDamage ["hitBody", 0.0];  };
     if (_armWounds  == 0) then { _target setHitPointDamage ["hitHands", 0.0]; };
