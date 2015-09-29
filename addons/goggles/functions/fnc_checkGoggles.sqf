@@ -23,7 +23,7 @@ if (true) then {
             call FUNC(removeGlassesEffect);
         };
     };
-    call FUNC(checkGlasses);
+    //call FUNC(checkGlasses);
     if !([ace_player] call FUNC(isGogglesVisible)) exitWith {
         if (GVAR(EffectsActive)) then {
             call FUNC(removeGlassesEffect);

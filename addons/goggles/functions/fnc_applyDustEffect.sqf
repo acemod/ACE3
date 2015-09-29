@@ -25,7 +25,7 @@ _unit = ACE_player;
 if ([_unit] call FUNC(isGogglesVisible)) exitWith {
     (QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false];
 
-    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
+    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
 
     SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT) + 1,0,1));
     SETDUST(DBULLETS,0);

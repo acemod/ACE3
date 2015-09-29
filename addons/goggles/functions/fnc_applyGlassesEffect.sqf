@@ -42,7 +42,7 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
 _imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] select GETBROKEN);
 
 if (_imagePath != "") then {
-    (QGVAR(GogglesLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false]; // @todo init as 150
+    (QGVAR(GogglesLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false];
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
 };
 

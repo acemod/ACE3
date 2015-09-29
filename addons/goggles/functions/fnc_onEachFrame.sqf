@@ -53,7 +53,7 @@ if !(_safe) then {
             };
         };
     };
-    _safe = (getNumber (ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Protection") == 1);
+    _safe = (getNumber (ConfigFile >> "CfgGlasses" >> goggles ace_player >> "ACE_Protection") == 1);
 };
 if (_safe) exitWith {};
 if ((_rotorWash select 1) <= 15) then {
