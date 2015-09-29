@@ -258,9 +258,11 @@
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
+            <Polish>Ust. domyślny kanał</Polish>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
+            <Polish>Ustaw domyślny kanał dla markerów przy starcie misji</Polish>
         </Key>
     </Package>
 </Project>
