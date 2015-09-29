@@ -101,3 +101,6 @@ if (_state) then {
         }, 0, [_unit, (ACE_time + 20)]] call CBA_fnc_addPerFrameHandler;
     };
 };
+
+//Global Event after changes:
+["CaptiveStatusChange", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);
