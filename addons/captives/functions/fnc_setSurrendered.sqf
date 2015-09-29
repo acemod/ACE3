@@ -103,4 +103,4 @@ if (_state) then {
 };
 
 //Global Event after changes:
-["CaptiveStatusChange", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);
+["CaptiveStatusChanged", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);
