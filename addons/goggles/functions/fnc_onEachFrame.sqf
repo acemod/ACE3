@@ -46,10 +46,10 @@ if !(_safe) then {
     if (GETDUSTT(DAMOUNT) < 2) then {
         if (!GETDUSTT(DACTIVE)) then {
             SETDUST(DACTIVE,true);
-            call FUNC(ApplyDust);
+            call FUNC(applyDustEffect);
         } else {
             if ((_rotorWash select 1) > 0.5) then {
-                call FUNC(ApplyDust);
+                call FUNC(applyDustEffect);
             };
         };
     };

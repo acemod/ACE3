@@ -81,7 +81,7 @@ if (GETDUSTT(DAMOUNT) < 2) then {
 
     if (_bullets > _bulletsRequired) then {
         SETDUST(DACTIVE,true);
-        call FUNC(applyDust);
+        call FUNC(applyDustEffect);
     };
 };
 

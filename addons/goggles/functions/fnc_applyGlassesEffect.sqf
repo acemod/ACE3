@@ -11,20 +11,23 @@
  * None
  *
  * Example:
- * [goggles ace_player] call ace_goggles_fnc_ApplyGlasses
+ * [goggles ace_player] call ace_goggles_fnc_applyGlassesEffect
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
+params ["_glasses"];
 
-_glassesClassname = _this select 0;
-_postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
-_postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
-
+// remove old effect
 call FUNC(removeGlassesEffect);
-GVAR(EffectsActive) = true;
+
+private ["_config", "_postProcessColour", "_postProcessTintAmount", "_imagePath"];
+
+_config = configFile >> "CfgGlasses" >> _glasses;
+
+_postProcessColour = getArray (_config >> "ACE_Color");
+_postProcessTintAmount = getNumber (_config >> "ACE_TintAmount");
 
 if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
     _postProcessColour set [3, _postProcessTintAmount/100];
@@ -36,20 +39,20 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
     GVAR(PostProcess) ppEffectCommit 30;
 };
 
-_glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Overlay");
-if GETBROKEN then {
-    _glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_OverlayCracked");
-};
-if (_glassImagePath != "") then {
-    150 cutRsc["RscACE_Goggles", "PLAIN",1, false];
-    (GLASSDISPLAY displayCtrl 10650) ctrlSetText _glassImagePath;
+_imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] select GETBROKEN);
+
+if (_imagePath != "") then {
+    (QGVAR(GogglesLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false]; // @todo init as 150
+    (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
 };
 
-if GETDIRT then {
-    call FUNC(applyDirt);
+if (GETDIRT) then {
+    call FUNC(applyDirtEffect);
 };
 
-if GETDUSTT(DACTIVE) then {
+if (GETDUSTT(DACTIVE)) then {
     SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-    call FUNC(applyDust);
+    call FUNC(applyDustEffect);
 };
+
+GVAR(EffectsActive) = true;

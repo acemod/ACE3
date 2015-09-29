@@ -49,7 +49,7 @@ FUNC(CheckGlasses) = {
 player addEventHandler ["Explosion", {
     private "_effects";
     if (alive ace_player) then {
-        call FUNC(ApplyDirt);
+        call FUNC(applyDirtEffect);
         if (GETBROKEN) exitWith {};
         if (((_this select 1) call FUNC(GetExplosionIndex)) < getNumber(ConfigFile >> "CfgGlasses" >> GVAR(Current) >> "ACE_Resistance")) exitWith {};
         if !([ace_player] call FUNC(isGogglesVisible)) exitWith {["GlassesCracked",[ace_player]] call EFUNC(common,localEvent);};
@@ -90,7 +90,7 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
     if (call FUNC(ExternalCamera)) exitWith {call FUNC(RemoveGlassesEffect)};
 
     if ([ace_player] call FUNC(isGogglesVisible)) then {
-        [_this select 0] call FUNC(applyGlasses);
+        [_this select 0] call FUNC(applyGlassesEffect);
     } else {
         call FUNC(removeGlassesEffect);
     };
@@ -116,5 +116,5 @@ player AddEventHandler ["Put", {call FUNC(checkGlasses);}];
 }] call EFUNC(common,addEventHandler);
 call FUNC(checkGlasses);
 [FUNC(CheckGoggles), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(rainEffect), 0.5, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(applyRainEffect), 0.5, []] call CBA_fnc_addPerFrameHandler;
 [FUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
