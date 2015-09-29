@@ -94,12 +94,40 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
     [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
-// If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
-if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {((_x select 4) * (_x select 3)) > 0}}count _openWounds == 0}) then {
-    _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
-    _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
-    _point = _hitPoints select (_hitSelections find _selectionName);
-    _target setHitPointDamage [_point, 0];
+// If all wounds to a body part have been bandaged, reset damage to that body part to zero
+// so that the body part functions normally and blood is removed from the uniform.
+// Arma combines left and right arms into a single body part (HitHands), same with left and right legs (HitLegs).
+// Arms are actually hands.
+if (GVAR(healHitPointAfterAdvBandage)) then
+{
+    private["_currentWounds", "_headWounds", "_bodyWounds", "_legsWounds", "_armWounds"];
+
+    // Get the list of the wounds the target is currently suffering from.
+    _currentWounds = _target getvariable [QGVAR(openWounds), []];
+
+    // Tally of unbandaged wounds to each body part.
+    _headWounds = 0;
+    _bodyWounds = 0;
+    _legsWounds = 0;
+    _armWounds  = 0;
+
+    // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
+    {
+        _x params ["", "", "_bodyPart", "_numOpenWounds"];
+
+        if (_bodyPart == 0 && {_numOpenWounds > 0}) then { _headWounds = _headWounds + 1; }; // Head
+        if (_bodyPart == 1 && {_numOpenWounds > 0}) then { _bodyWounds = _bodyWounds + 1; }; // Body
+        if (_bodyPart == 2 && {_numOpenWounds > 0}) then { _armWounds  = _armWounds  + 1; }; // Left Arm
+        if (_bodyPart == 3 && {_numOpenWounds > 0}) then { _armWounds  = _armWounds  + 1; }; // Right Arm
+        if (_bodyPart == 4 && {_numOpenWounds > 0}) then { _legsWounds = _legsWounds + 1; }; // Left Leg
+        if (_bodyPart == 5 && {_numOpenWounds > 0}) then { _legsWounds = _legsWounds + 1; }; // Right Leg
+    } foreach _currentWounds;
+
+    // Any body part that has no wounds is healed to full health
+    if (_headWounds == 0) then { _target setHitPointDamage ["hitHead", 0.0];  };
+    if (_bodyWounds == 0) then { _target setHitPointDamage ["hitBody", 0.0];  };
+    if (_armWounds  == 0) then { _target setHitPointDamage ["hitHands", 0.0]; };
+    if (_legsWounds == 0) then { _target setHitPointDamage ["hitLegs", 0.0];  };
 };
 
 true;
