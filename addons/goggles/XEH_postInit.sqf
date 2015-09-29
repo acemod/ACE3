@@ -1,24 +1,8 @@
-/*
- * Author: Garth 'L-H' de Wet
- * Sets up the glasses mod for usage. Initialises variables and event handlers.
- * Shouldn't be called by a user/modder ever. Done by the engine.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
 #include "script_component.hpp"
+
 if (!hasInterface) exitWith {};
 
-["ACE3 Common", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses),
-{
+["ACE3 Common", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses), {
     if (!(GETVAR(ace_player,ACE_isUnconscious,false))) exitWith {
         call FUNC(clearGlasses);
         true
@@ -26,7 +10,12 @@ if (!hasInterface) exitWith {};
     false
 },
 {false},
-[20, [true, true, false]], false] call cba_fnc_addKeybind;
+[20, [true, true, false]], false] call CBA_fnc_addKeybind;
+
+
+
+
+
 
 if isNil(QGVAR(UsePP)) then {
     GVAR(UsePP) = true;
