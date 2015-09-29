@@ -113,14 +113,14 @@ if (GVAR(healHitPointAfterAdvBandage)) then
 
     // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
     {
-        _x params ["", "", "_bodyPart", "_numOpenWounds"];
+        _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
 
-        if (_bodyPart == 0 && {_numOpenWounds > 0}) then { _headWounds = _headWounds + 1; }; // Head
-        if (_bodyPart == 1 && {_numOpenWounds > 0}) then { _bodyWounds = _bodyWounds + 1; }; // Body
-        if (_bodyPart == 2 && {_numOpenWounds > 0}) then { _armWounds  = _armWounds  + 1; }; // Left Arm
-        if (_bodyPart == 3 && {_numOpenWounds > 0}) then { _armWounds  = _armWounds  + 1; }; // Right Arm
-        if (_bodyPart == 4 && {_numOpenWounds > 0}) then { _legsWounds = _legsWounds + 1; }; // Left Leg
-        if (_bodyPart == 5 && {_numOpenWounds > 0}) then { _legsWounds = _legsWounds + 1; }; // Right Leg
+        if (_bodyPart == 0 && {(_numOpenWounds * _bloodLoss) > 0}) then { _headWounds = _headWounds + 1; }; // Head
+        if (_bodyPart == 1 && {(_numOpenWounds * _bloodLoss) > 0}) then { _bodyWounds = _bodyWounds + 1; }; // Body
+        if (_bodyPart == 2 && {(_numOpenWounds * _bloodLoss) > 0}) then { _armWounds  = _armWounds  + 1; }; // Left Arm
+        if (_bodyPart == 3 && {(_numOpenWounds * _bloodLoss) > 0}) then { _armWounds  = _armWounds  + 1; }; // Right Arm
+        if (_bodyPart == 4 && {(_numOpenWounds * _bloodLoss) > 0}) then { _legsWounds = _legsWounds + 1; }; // Left Leg
+        if (_bodyPart == 5 && {(_numOpenWounds * _bloodLoss) > 0}) then { _legsWounds = _legsWounds + 1; }; // Right Leg
     } foreach _currentWounds;
 
     // Any body part that has no wounds is healed to full health
