@@ -1,5 +1,5 @@
 /*
- * Author: Garth 'L-H' de Wet
+ * Author: Garth 'L-H' de Wet, commy2
  * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements.
  *
  * Arguments:
@@ -7,67 +7,82 @@
  * 1: Weapon <STRING>
  *
  * Return Value:
- * None
- *
- * Example:
- *ace_player addEventHandler ["Fired", {[_this select 0, _this select 1] call ace_goggles_fnc_dustHandler;}];
+ * Function is handled? <BOOL>
  *
  * Public: No
  */
 #include "script_component.hpp"
-private ["_bullets", "_position", "_surface", "_weapon", "_cloudType", "_unit"];
-EXPLODE_2_PVT(_this,_unit,_weapon);
-if (_unit != ace_player) exitWith {true};
+
+params ["_unit", "_weapon"];
+
+if (_unit != ACE_player) exitWith {true};
+
+// no dust in rain
+if (rain > 0.1) exitWith {true};
+
+// effect only aplies when lying on the ground
+if (stance _unit != "PRONE") exitWith {true};
+
+private ["_position", "_particleConfig", "_cloudType", "_surface", "_bullets"];
+
+// check if the unit really is on the ground and not in a building
+_position = getPosATL _unit;
+
+if (_position select 2 > 0.2) exitWith {};
+
+// get weapon dust effect
+_particleConfig = configFile >> "CfgWeapons" >> _weapon >> "GunParticles";
+
 _cloudType = "";
 
-if (rain > 0.1) exitWith {true};
-if ((stance _unit) != "PRONE") exitWith {true};
-
-if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect")) then {
-    _cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "FirstEffect" >> "effectName");
+if (isClass (_particleConfig >> "FirstEffect")) then { // @todo read this with custom / non-standard config classnames
+    _cloudType = getText (_particleConfig >> "FirstEffect" >> "effectName");
 } else {
-    if (isClass(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1")) then {
-        _cloudType = getText(configFile >> "CfgWeapons" >> _weapon >> "GunParticles" >> "effect1" >> "effectName");
+    if (isClass (_particleConfig >> "effect1")) then {
+        _cloudType = getText (_particleConfig >> "effect1" >> "effectName");
     };
 };
 
+// quit if the weapon causes no dust effect
 if (_cloudType == "") exitWith {true};
 
-_position = getPosATL _unit;
+// get if the surface is dusty
+if (surfaceIsWater _position) exitWith {true};
 
-if (surfaceIsWater _position) exitWith {};
-if ((_position select 2) > 0.2) exitWith {};
-
-_surface = surfaceType _position;
+_surface = surfaceType _position select [1]; // cuts of the leading #
 
 if (_surface != GVAR(surfaceCache)) then {
     GVAR(surfaceCache) = _surface;
-    _surface = ([_surface, "#"] call CBA_fnc_split) select 1;
-    GVAR(surfaceCacheIsDust) = getNumber (ConfigFile >> "CfgSurfaces" >> _surface >> "dust") >= 0.1;
+    GVAR(surfaceCacheIsDust) = getNumber (configFile >> "CfgSurfaces" >> _surface >> "dust") >= 0.1;
 };
 
+// quit if surface isn't dusty
 if (!GVAR(surfaceCacheIsDust)) exitWith {};
 
+// increment dust value with type bullet
 _bullets = GETDUSTT(DBULLETS);
 
-if ((ACE_diagTime - GETDUSTT(DTIME)) > 1) then {
+if (ACE_diagTime - GETDUSTT(DTIME) > 1) then {
     _bullets = 0;
 };
 
 _bullets = _bullets + 1;
+
 SETDUST(DBULLETS,_bullets);
 SETDUST(DTIME,ACE_diagTime);
 
+// apply dust effect if the amount of fired bullets is over the threshold
 if (GETDUSTT(DAMOUNT) < 2) then {
-    private "_bulletsRequired";
-    _bulletsRequired = 100;
-    if (isNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount")) then {
-        _bulletsRequired = getNumber (ConfigFile >> _cloudType >> "ACE_Goggles_BulletCount");
+    local _bulletsRequired = 100;
+
+    if (isNumber (configFile >> _cloudType >> QGVAR(BulletCount))) then {
+        _bulletsRequired = getNumber (configFile >> _cloudType >> QGVAR(BulletCount));
     };
 
-    if (_bulletsRequired <= _bullets) then {
+    if (_bullets > _bulletsRequired) then {
         SETDUST(DACTIVE,true);
         call FUNC(applyDust);
     };
 };
+
 true
