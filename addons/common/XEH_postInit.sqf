@@ -298,7 +298,7 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 
     // "playerChanged" event
     _data = call FUNC(player);
-    if !(_data isEqualTo GVAR(OldPlayerVehicle)) then {
+    if !(_data isEqualTo ACE_player) then {
         private "_oldPlayer";
         _oldPlayer = ACE_player;
 
