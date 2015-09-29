@@ -31,7 +31,7 @@ if ([_unit] call FUNC(isGogglesVisible)) then {
     local _dirtImage = getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_OverlayDirt");
 
     if (_dirtImage != "") then {
-        (QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];
+        GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];
         (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText _dirtImage;
     };
 };

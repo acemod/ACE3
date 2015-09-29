@@ -13,8 +13,8 @@ if (!hasInterface) exitWith {};
 [20, [true, true, false]], false] call CBA_fnc_addKeybind;
 
 // make sure to stack effect layers in correct order
-QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer;
-QGVAR(GogglesLayer) call BIS_fnc_RSCLayer;
+GVAR(GogglesEffectsLayer) = QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer;
+GVAR(GogglesLayer) = QGVAR(GogglesLayer) call BIS_fnc_RSCLayer;
 
 if (isNil QGVAR(UsePP)) then {
     GVAR(UsePP) = true;

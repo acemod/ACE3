@@ -16,12 +16,11 @@ PREP(removeRainEffect);
 PREP(externalCamera);
 PREP(isDivingGoggles);
 PREP(isGogglesVisible);
+PREP(isInRotorWash);
 
 // general
 PREP(clearGlasses);
-PREP(dustHandler);
 PREP(getExplosionIndex);
-PREP(isInRotorWash);
 
 // eventhandlers
 PREP(handleExplosion);

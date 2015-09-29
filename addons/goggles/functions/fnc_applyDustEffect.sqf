@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(showInThirdPerson)) exitWith {false};
+if (GVAR(showInThirdPerson)) exitWith {};
 if (call FUNC(ExternalCamera)) exitWith {};
 
 private ["_unit", "_amount"];
@@ -23,7 +23,7 @@ private ["_unit", "_amount"];
 _unit = ACE_player;
 
 if ([_unit] call FUNC(isGogglesVisible)) exitWith {
-    (QGVAR(GogglesEffectsLayer) call BIS_fnc_RSCLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false];
+    GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false];
 
     ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
 
