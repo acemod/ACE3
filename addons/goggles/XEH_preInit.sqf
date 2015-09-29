@@ -12,12 +12,16 @@ PREP(removeDustEffect);
 PREP(removeGlassesEffect);
 PREP(removeRainEffect);
 
-// general
+// public
 PREP(externalCamera);
 PREP(isDivingGoggles);
 PREP(isGogglesVisible);
-PREP(isInRotorWash);
+
+// general
+PREP(clearGlasses);
+PREP(dustHandler);
 PREP(getExplosionIndex);
+PREP(isInRotorWash);
 
 // eventhandlers
 PREP(handleExplosion);
@@ -27,10 +31,8 @@ PREP(handleKilled);
 
 
 PREP(checkGoggles);
-PREP(clearGlasses);
-PREP(dustHandler);
-
 PREP(onEachFrame);
+
 
 
 ADDON = true;
