@@ -7,6 +7,7 @@ PREP(applyDirtEffect);
 PREP(applyDustEffect);
 PREP(applyGlassesEffect);
 PREP(applyRainEffect);
+PREP(applyRotorWashEffect);
 PREP(removeDirtEffect);
 PREP(removeDustEffect);
 PREP(removeGlassesEffect);
@@ -26,12 +27,5 @@ PREP(getExplosionIndex);
 PREP(handleExplosion);
 PREP(handleFired);
 PREP(handleKilled);
-
-
-
-PREP(checkGoggles);
-PREP(onEachFrame);
-
-
 
 ADDON = true;

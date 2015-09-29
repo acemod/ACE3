@@ -31,9 +31,8 @@ GVAR(EffectsActive) = false;
 
 SETGLASSES(ace_player,GLASSESDEFAULT);
 
-GVAR(Current) = "None";
 GVAR(EyesDamageScript) = -1;
-GVAR(FrameEvent) = [false, [false,20]];
+GVAR(FrameEvent) = [false, [false, 20]];
 GVAR(PostProcessEyes_Enabled) = false;
 GVAR(DustHandler) = -1;
 GVAR(RainDrops) = objNull;
@@ -41,7 +40,6 @@ GVAR(RainActive) = false;
 GVAR(RainLastLevel) = 0;
 GVAR(surfaceCache) = "";
 GVAR(surfaceCacheIsDust) = false;
-
 
 // init GlassesChanged eventhandler
 GVAR(OldGlasses) = "#NULLSTRING";
@@ -96,12 +94,36 @@ GVAR(OldGlasses) = "#NULLSTRING";
 
 }] call EFUNC(common,addEventHandler);
 
+// check goggles
+local _fnc_checkGoggles = {
+    params ["_unit"];
 
+    if (GVAR(EffectsActive)) then {
+        if (call FUNC(externalCamera) || {!([_unit] call FUNC(isGogglesVisible))}) then {
+            call FUNC(removeGlassesEffect);
+        };
+    } else {
+        if (!(call FUNC(externalCamera)) && {[_unit] call FUNC(isGogglesVisible)}) then {
+            [goggles _unit] call FUNC(applyGlassesEffect);
+        };
+    };
+};
 
+["cameraViewChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
+["activeCameraChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
 
+// goggles effects main PFH
+[{
+    // rain
+    call FUNC(applyRainEffect);
 
+    // auto remove effects under water
+    if (GVAR(EffectsActive) && {[goggles ACE_player] call FUNC(isDivingGoggles) && {underwater ACE_player}}) then {
+        call FUNC(removeRainEffect);
+        call FUNC(removeDirtEffect);
+        call FUNC(removeDustEffect);
+    };
 
-
-[FUNC(CheckGoggles), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(applyRainEffect), 0.5, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(onEachFrame), 0, []] call CBA_fnc_addPerFrameHandler;
+    // rotor wash effect
+    call FUNC(applyRotorWashEffect)
+}, 0.5, _fnc_checkGoggles] call CBA_fnc_addPerFrameHandler;

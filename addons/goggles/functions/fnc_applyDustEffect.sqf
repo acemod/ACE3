@@ -62,13 +62,17 @@ GVAR(DustHandler) = [{
         };
 
         if (GETDUSTT(DAMOUNT) <= 0) then {
+            SETDUST(DACTIVE,false);
+            SETDUST(DBULLETS,0);
+
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 2;
 
-            [{GVAR(PostProcessEyes) ppEffectEnable false}, [], 2] call EFUNC(common,waitAndExecute);
-
-            SETDUST(DACTIVE,false);
-            SETDUST(DBULLETS,0);
+            [{
+                if (GVAR(DustHandler) == -1) then {
+                    GVAR(PostProcessEyes) ppEffectEnable false
+                };
+            }, [], 2] call EFUNC(common,waitAndExecute);
 
             [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
             GVAR(DustHandler) = -1;
