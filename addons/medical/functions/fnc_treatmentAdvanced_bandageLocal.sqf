@@ -103,7 +103,7 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
 
     // Get the list of the wounds the target is currently suffering from.
     _currentWounds = GETVAR(_target, openWounds, []);
-    
+
     // Tally of unbandaged wounds to each body part.
     _headWounds = 0;
     _bodyWounds = 0;
