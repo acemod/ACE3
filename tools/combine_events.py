@@ -65,7 +65,7 @@ def main():
                 matchSubSection = re.match(r"###\s+\d+\.?\d*\s+(Listenable|Callable)", line)
 
                 # Find main section, prepare data
-                if re.search(r"##\s+\d+\.?\d*\s+Events", line):
+                if re.match(r"##\s+\d+\.?\d*\s+Events", line):
                     print("Found Events: {}".format(file))
 
                     # Source module (cut out 13 characters at the end, stands for "-framework.md")
