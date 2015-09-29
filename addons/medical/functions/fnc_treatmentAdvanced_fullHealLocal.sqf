@@ -10,9 +10,8 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_caller", "_allUsedMedication"];
-_caller = _this select 0;
-_target = _this select 1;
+private "_allUsedMedication";
+params ["_caller", "_target"];
 
 if (alive _target) exitwith {
 
@@ -55,16 +54,20 @@ if (alive _target) exitwith {
     _target setvariable [QGVAR(inCardiacArrest), false, true];
     _target setvariable [QGVAR(inReviveState), false, true];
     _target setVariable ["ACE_isUnconscious", false, true];
-    _target setvariable [QGVAR(hasLostBlood), false, true];
+    _target setvariable [QGVAR(hasLostBlood), 0, true];
     _target setvariable [QGVAR(isBleeding), false, true];
     _target setvariable [QGVAR(hasPain), false, true];
+    _target setvariable [QGVAR(painSuppress), 0, true];
 
     // medication
     _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
        _target setvariable [_x select 0, nil];
-    }foreach _allUsedMedication;
+    } foreach _allUsedMedication;
 
     // Resetting damage
     _target setDamage 0;
+
+    [_target, "activity", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
+    [_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 };

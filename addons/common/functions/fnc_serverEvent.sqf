@@ -1,28 +1,28 @@
 /*
  * Author: Nou
- *
  * Execute a event only on the server.
  *
  * Argument:
- * 0: Event name (string)
- * 1: Event args (any)
+ * 0: Event name <STRING>
+ * 1: Event args <ANY>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-private ["_eventName", "_eventArgs"];
 
-_eventName = _this select 0;
-_eventArgs = _this select 1;
+params ["_eventName", "_eventArgs"];
 
-    #ifdef DEBUG_EVENTS
-        diag_log text format[ARR_2("* Server Event: %1",_eventName)];
-        diag_log text format[ARR_2("    args=%1",_eventArgs)];
-    #endif
+#ifdef DEBUG_EVENTS
+    ACE_LOGINFO_1("* Server Event: %1",_eventName);
+    ACE_LOGINFO_1("    args=%1",_eventArgs);
+#endif
 
 ACEg = [_eventName, _eventArgs];
-if(!isServer) then {
+
+if (!isServer) then {
     publicVariableServer "ACEg";
 } else {
     ["ACEg", ACEg] call FUNC(_handleNetEvent);

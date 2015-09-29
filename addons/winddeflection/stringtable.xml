@@ -1,57 +1,175 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WindDeflection">
-        <Container ID="Weather_Meter">
-            <Key ID="STR_ACE_WEATHER_METER_WIND_CATEGORY">
-                <English>Wind Information</English>
-                <Polish>Informacje o wietrze</Polish>
-                <Spanish>Información del viento</Spanish>
-                <Russian>Ветер</Russian>
-                <Czech>Informace o větru</Czech>
-                <French>Vent</French>
-                <German>Windinformationen</German>
-                <Hungarian>Szélinformáció</Hungarian>
-            </Key>
-            <Key ID="STR_ACE_WEATHER_METER_WIND_DIRECTION">
-                <English>Direction: %1</English>
-                <Polish>Kierunek: %1</Polish>
-                <Spanish>Dirección: %1</Spanish>
-                <Russian>Направление: %1</Russian>
-                <Czech>Směr: %1</Czech>
-                <French>Direction %1</French>
-                <German>Windrichtung: %1</German>
-                <Hungarian>Irány: %1</Hungarian>
-            </Key>
-            <Key ID="STR_ACE_WEATHER_METER_WIND_SPEED">
-                <English>Speed: %1 m/s</English>
-                <Polish>Prędkość: %1</Polish>
-                <Spanish>Velocidad: %1 m/s</Spanish>
-                <Russian>Скорость: %1 м/с</Russian>
-                <Czech>Rychlost: %1 m/s</Czech>
-                <French>Vitesse %1 m/s</French>
-                <German>Geschwindigkeit: %1m/s</German>
-                <Hungarian>Sebesség: %1 m/s</Hungarian>
-            </Key>
-            <Key ID="STR_ACE_WEATHER_METER_WEATHER_CATEGORY">
-                <English>Weather Information</English>
-                <Polish>Informacje o pogodzie</Polish>
-                <Spanish>Información Meteorológica</Spanish>
-                <Russian>Погода</Russian>
-                <Czech>Informace o počasí</Czech>
-                <French>Météo</French>
-                <German>Wetterinformationen</German>
-                <Hungarian>Időjárás-Információ</Hungarian>
-            </Key>
-            <Key ID="STR_ACE_WEATHER_METER_WEATHER_HUMIDITY">
-                <English>Humidity: %1%</English>
-                <Polish>Wilgotność: %1</Polish>
-                <Spanish>Humedad: %1%</Spanish>
-                <Russian>Влажность: %1%</Russian>
-                <Czech>Vlhkost: %1%</Czech>
-                <French>Humidité: %1%</French>
-                <German>Luftfeuchtigkeit: %1</German>
-                <Hungarian>Páratartalom: %1%</Hungarian>
-            </Key>
-        </Container>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
+            <English>Wind Information</English>
+            <Polish>Informacje o wietrze</Polish>
+            <Spanish>Información del viento</Spanish>
+            <Russian>Информация о ветре</Russian>
+            <Czech>Informace o větru</Czech>
+            <French>Vent</French>
+            <German>Windinformationen</German>
+            <Hungarian>Szélinformáció</Hungarian>
+            <Italian>Informazioni sul vento</Italian>
+            <Portuguese>Informação do vento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
+            <English>Direction: %1</English>
+            <Polish>Kierunek: %1</Polish>
+            <Spanish>Dirección: %1</Spanish>
+            <Russian>Направление: %1°</Russian>
+            <Czech>Směr: %1</Czech>
+            <French>Direction %1</French>
+            <German>Windrichtung: %1</German>
+            <Hungarian>Irány: %1</Hungarian>
+            <Italian>Direzione: %1°</Italian>
+            <Portuguese>Direção: %1</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
+            <English>Speed: %1 m/s</English>
+            <Polish>Prędkość: %1</Polish>
+            <Spanish>Velocidad: %1 m/s</Spanish>
+            <Russian>Скорость: %1 м/с</Russian>
+            <Czech>Rychlost: %1 m/s</Czech>
+            <French>Vitesse %1 m/s</French>
+            <German>Geschwindigkeit: %1 m/s</German>
+            <Hungarian>Sebesség: %1 m/s</Hungarian>
+            <Italian>Velocità: %1 m/s</Italian>
+            <Portuguese>Velocidade: %1 m/s</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_METER_WEATHER_CATEGORY">
+            <English>Weather Information</English>
+            <Polish>Informacje o pogodzie</Polish>
+            <Spanish>Información Meteorológica</Spanish>
+            <Russian>Информация о погоде</Russian>
+            <Czech>Informace o počasí</Czech>
+            <French>Météo</French>
+            <German>Wetterinformationen</German>
+            <Hungarian>Időjárás-Információ</Hungarian>
+            <Italian>Meteo</Italian>
+            <Portuguese>Informação Meteorológica</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
+            <English>Humidity: %1%</English>
+            <Polish>Wilgotność: %1</Polish>
+            <Spanish>Humedad: %1%</Spanish>
+            <Russian>Влажность: %1%</Russian>
+            <Czech>Vlhkost: %1%</Czech>
+            <French>Humidité: %1%</French>
+            <German>Luftfeuchtigkeit: %1</German>
+            <Hungarian>Páratartalom: %1%</Hungarian>
+            <Italian>Umidità: %1%</Italian>
+            <Portuguese>Humidade: %1%</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
+            <English>Wind Deflection</English>
+            <Polish>Wpływ wiatru</Polish>
+            <Spanish>Desviación por viento</Spanish>
+            <Czech>Účinky větru</Czech>
+            <German>Windablenkung</German>
+            <Portuguese>Desvio de vento</Portuguese>
+            <French>Déflexion du vent</French>
+            <Hungarian>Szél-hárítás</Hungarian>
+            <Russian>Отклонение ветром</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
+            <English>Wind Deflection</English>
+            <Polish>Wpływ wiatru</Polish>
+            <Spanish>Desviación por viento</Spanish>
+            <German>Windablenkung</German>
+            <Czech>Účinky větru</Czech>
+            <Portuguese>Desvio de vento</Portuguese>
+            <French>Déflexion du vent</French>
+            <Hungarian>Szél-hárítás</Hungarian>
+            <Russian>Отклонение ветром</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
+            <English>Enables wind deflection</English>
+            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
+            <Spanish>Activa la desviación por viento</Spanish>
+            <German>Aktiviert Windablenkung</German>
+            <Czech>Umožňit vliv větru</Czech>
+            <Portuguese>Ativa o desvio de vento</Portuguese>
+            <French>Active la déflexion dûe au vent</French>
+            <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
+            <Russian>Включает отклонение ветром</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
+            <English>Vehicle Enabled</English>
+            <Polish>Włączone dla pojazdów</Polish>
+            <Spanish>Habilitada en vehículos</Spanish>
+            <German>Fahrzeuge aktiviert</German>
+            <Czech>Vozidla povolena</Czech>
+            <Portuguese>Ativado em veículos</Portuguese>
+            <French>Activer les véhicules</French>
+            <Hungarian>Jármű engedélyezve</Hungarian>
+            <Russian>Для техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
+            <English>Enables wind deflection for static/vehicle gunners</English>
+            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
+            <Spanish>Habilita la desviación por viento para artilleros estaticos/de vehículos</Spanish>
+            <German>Aktiviere Windablenkung für statische oder Fahrzeugschützen</German>
+            <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
+            <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
+            <French>Activer la déflection dûe au vent pour les armes statique et les véhicules</French>
+            <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
+            <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
+            <English>Simulation Interval</English>
+            <Polish>Interwał symulacji</Polish>
+            <Spanish>Intervalo de simulación</Spanish>
+            <German>Simulationsintervall</German>
+            <Czech>Interval simulace</Czech>
+            <Portuguese>Intervalo de simulação</Portuguese>
+            <French>Intervalle de simulation</French>
+            <Hungarian>Szimulációs intervallum</Hungarian>
+            <Russian>Интервал симуляции</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
+            <English>Defines the interval between every calculation step</English>
+            <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+            <Spanish>Define el intervalo entre cada calculo</Spanish>
+            <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
+            <Czech>Určuje interval mezi každým výpočtem</Czech>
+            <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
+            <French>Défini l'intervalle entre deux points de calcul</French>
+            <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
+            <Russian>Определяет временной интервал между расчетами</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
+            <English>Simulation Radius</English>
+            <Polish>Zasięg symulacji</Polish>
+            <Spanish>Radio de simulación</Spanish>
+            <German>Simulationsradius</German>
+            <Czech>Oblast simulace</Czech>
+            <Portuguese>Radio da Simulação</Portuguese>
+            <French>Rayon de simulation</French>
+            <Hungarian>Szimulációs hatókör</Hungarian>
+            <Russian>Радиус симуляции</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
+            <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
+            <Polish>Określa obszar naokoło gracza (w metrach), na którym pociski są znoszone przez wiatr</Polish>
+            <Spanish>Define el radio alrededor del jugador (en metros) en el cual los proyectiles son desviados por el viento</Spanish>
+            <German>Gibt den Radius (in Metern) um den Spieler an, in dem Projektile vom Wind beeinflusst werden</German>
+            <Czech>Definuje oblast kolem hráče (v metrech) v které je projektil ovlivněn větrem</Czech>
+            <Portuguese>Define o raio ao redor do jogador (em metros) em qual os projéteis são desviados pelo vento</Portuguese>
+            <French>Défini un rayon autour du joueur (en mètres) autour duquel les projectiles sont influencés par le vent</French>
+            <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékeket háríthatja a szél</Hungarian>
+            <Russian>Определяет радиус вокруг игрока (а метрах), в котором снаряды отклоняются ветром</Russian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
+            <English>Wind influence on projectiles trajectory</English>
+            <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
+            <Spanish>Influencia del viento en la trayectoria de proyectiles</Spanish>
+            <German>Windeinfluss auf die Geschossbahnen</German>
+            <Czech>Vítr ovlivňuje trajektorii projektilu</Czech>
+            <Portuguese>Influência do vento na trajetória dos projéteis</Portuguese>
+            <French>Le vent influe sur la trajectoire des projectiles</French>
+            <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
+            <Russian>Влияние втера на траекторию снарядов</Russian>
+        </Key>
     </Package>
 </Project>

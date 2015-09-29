@@ -12,37 +12,29 @@
  * 6: Type of Damage <STRING>
  *
  * Return Value:
- * Damage To Be Inflicted <NUMBER>
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage", "_part", "_damageBodyParts", "_newDamage", "_hitPoints"];
-_unit = _this select 0;
-_selectionName = _this select 1;
-_amountOfDamage = _this select 2;
-_sourceOfDamage = _this select 3;
-_typeOfProjectile = _this select 4;
-_newDamage = _this select 5;
+private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "_newDamage"];
 
-// Most likely taking exessive fire damage. Lets exit.
-if (isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) exitwith {
-    0
-};
-_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 _part = [_selectionName] call FUNC(selectionNameToNumber);
+if (_part < 0) exitwith {};
 
 _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage
 _damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
-[_unit] call FUNC(handleDamage_advancedSetDamage);
+_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 
-[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_wounds);
+[_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 
 // TODO Disabled until implemented fully
 //if (GVAR(enableAirway)) then {
@@ -61,5 +53,3 @@ if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
         [_unit] call FUNC(setUnconscious);
     };
 };
-
-_amountOfDamage;

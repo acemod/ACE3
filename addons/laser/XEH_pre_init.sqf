@@ -8,8 +8,7 @@ PREP(checkLos);
 
 PREP(findStrongestRay);
 
-PREP(translateToModelSpace);
-PREP(translateToWeaponSpace);
+PREP(onLaserDesignatorDraw);
 
 PREP(seekerFindLaserSpot);
 PREP(laserOn);
@@ -24,6 +23,10 @@ PREP(vanillaLaserSeekerHandler);
 PREP(laserTargetPFH);
 
 GVAR(VanillaLasers) = [];
+
+PREP(unitTurretCanLockLaser);
+PREP(keyLaserCodeUp);
+PREP(keyLaserCodeDown);
 
 // Laser default variables
 ACE_DEFAULT_LASER_CODE = 1001;

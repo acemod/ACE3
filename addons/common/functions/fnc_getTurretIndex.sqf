@@ -1,19 +1,21 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a units current turret.
  *
- * Argument:
- * 0: Unit, not the vehicle (as in not a car but the player) (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
- * Turret index array or config path. E.g: [0] for gunner or [0,0] for commander. Returns empty array if unit is not in a turret. (Array)
+ * Return Value:
+ * Turret Index <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_turrets", "_units", "_index"];
+params ["_unit"];
 
-_unit = _this select 0;
+private ["_vehicle", "_turrets", "_units", "_index"];
+
 _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {[]};
@@ -21,9 +23,11 @@ if (_unit == _vehicle) exitWith {[]};
 _turrets = allTurrets [_vehicle, true];
 
 _units = [];
+
 {
-  _units pushBack (_vehicle turretUnit _x);
-} forEach _turrets;
+    _units pushBack (_vehicle turretUnit _x);
+    false
+} count _turrets;
 
 _index = _units find _unit;
 

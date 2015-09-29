@@ -13,18 +13,20 @@
  */
  #include "script_component.hpp"
 
+private ["_interval", "_player", "_newVel", "_accel", "_currentGForce", "_average", "_sum", "_classCoef", "_suitCoef", "_gBlackOut", "_gRedOut", "_g", "_gBO", "_coef", "_strength"];
+
 EXPLODE_2_PVT(_this,_params,_pfhId);
 
-_interval = time - GVAR(lastUpdateTime);
+_interval = ACE_time - GVAR(lastUpdateTime);
 
-// Update the g-forces at constant game time intervals
+// Update the g-forces at constant game ACE_time intervals
 if (_interval < INTERVAL) exitWith {};
 
 if (isNull ACE_player) exitWith {};
 
 if !(alive ACE_player) exitWith {};
 
-GVAR(lastUpdateTime) = time;
+GVAR(lastUpdateTime) = ACE_time;
 
 /*if !(vehicle ACE_player isKindOf "Air") exitWith {
     GVAR(GForces) = [];
@@ -84,8 +86,6 @@ if (_suitCoef == 0) then {_suitCoef = 0.001};
 
 _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIRTUALG;
 _gRedOut = MINVIRTUALG / _classCoef;
-
-["GForces", [], {format ["_g _gBO _coef: %1, %2, %3", _average, _gBlackOut, 2 * ((1.0 - ((_average - 0.30 * _gBlackOut) / (0.70 * _gBlackOut)) ^ 2) max 0) ]}] call EFUNC(common,log);
 
 // @todo: Sort the interaction with medical
 if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {

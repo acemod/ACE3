@@ -10,24 +10,26 @@ class CfgWeapons {
 
     class acc_pointer_IR: ItemCore {
         ACE_nextModeClass = "ACE_acc_pointer_red";
-        ACE_modeDescription = "$STR_ACE_Laserpointer_IRLaser";
+        ACE_modeDescription = CSTRING(IRLaser);
 
-        displayName = "$STR_ACE_Laserpointer_red";
-        descriptionUse = "$STR_ACE_Laserpointer_useLaser";
+        displayName = CSTRING(red);
+        descriptionUse = CSTRING(useLaser);
     };
 
     class ACE_acc_pointer_red: ItemCore {
         ACE_nextModeClass = "acc_pointer_IR";
-        ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
+        ACE_modeDescription = CSTRING(Laser);
 
-        author = "$STR_ACE_Common_ACETeam";
+        ACE_laserpointer = 1;
+
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_red";
         scope = 1;
-        displayName = "$STR_ACE_Laserpointer_red";
-        descriptionUse = "$STR_ACE_Laserpointer_useLaser";
+        displayName = CSTRING(red);
+        descriptionUse = CSTRING(useLaser);
         picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
         model = "\A3\weapons_f\acc\accv_pointer_F";
-        descriptionShort = "$STR_ACE_Laserpointer_Description";
+        descriptionShort = CSTRING(Description);
 
         class ItemInfo: InventoryFlashLightItem_Base_F {
             mass = 6;
@@ -67,21 +69,23 @@ class CfgWeapons {
 
     class ACE_acc_pointer_green_IR: acc_pointer_IR {
         ACE_nextModeClass = "ACE_acc_pointer_green";
-        ACE_modeDescription = "$STR_ACE_Laserpointer_IRLaser";
+        ACE_modeDescription = CSTRING(IRLaser);
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
         scope = 1;
-        displayName = "$STR_ACE_Laserpointer_green";
+        displayName = CSTRING(green);
     };
 
     class ACE_acc_pointer_green: ACE_acc_pointer_red {
         ACE_nextModeClass = "ACE_acc_pointer_green_IR";
-        ACE_modeDescription = "$STR_ACE_Laserpointer_Laser";
+        ACE_modeDescription = CSTRING(Laser);
 
-        author = "$STR_ACE_Common_ACETeam";
+        ACE_laserpointer = 2;
+
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_acc_pointer_green";
         scope = 2;
-        displayName = "$STR_ACE_Laserpointer_green";
+        displayName = CSTRING(green);
     };
 };

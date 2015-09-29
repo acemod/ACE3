@@ -32,7 +32,7 @@ FUNC(laserHudDesignatePFH) = {
     };
    
     if( (count _args) < 4) then {
-        _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+        _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
     };
     _forceUpdateTime = _args select 3;
 
@@ -43,8 +43,8 @@ FUNC(laserHudDesignatePFH) = {
     _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
     _povPos = _turretInfo select 0;
     
-    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
-    _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
     
     
     _laserResult = [_povPos, [_waveLength,_waveLength], _laserCode] call EFUNC(laser,seekerFindLaserSpot);
@@ -57,9 +57,9 @@ FUNC(laserHudDesignatePFH) = {
     };
     */
     
-    if(diag_tickTime > _forceUpdateTime) then {
+    if(ACE_diagTime > _forceUpdateTime) then {
         ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
-         _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
+         _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
     };
     
     _this set[0, _args];
@@ -73,9 +73,9 @@ if(!GVAR(active)) then {
     TRACE_1("Activating laser", "");
     
     // Get the self-designation variables, or use defaults
-    _laserCode = (vehicle ACE_player) getVariable[QGVAR(currentCode), ACE_DEFAULT_LASER_CODE];
-    _waveLength = (vehicle ACE_player) getVariable[QGVAR(currentWaveLength), ACE_DEFAULT_LASER_WAVELENGTH];
-    _beamSpread = (vehicle ACE_player) getVariable[QGVAR(currentBeamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+    _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];
+    _waveLength = (vehicle ACE_player) getVariable["ace_laser_waveLength", ACE_DEFAULT_LASER_WAVELENGTH];
+    _beamSpread = (vehicle ACE_player) getVariable["ace_laser_beamSpread", ACE_DEFAULT_LASER_BEAMSPREAD];
     
     _laserUuid = [(vehicle ACE_player), ACE_player, QFUNC(findLaserSource), _waveLength, _laserCode, _beamSpread] call EFUNC(laser,laserOn);
     
@@ -83,7 +83,7 @@ if(!GVAR(active)) then {
     // @TODO: Nou gets to field all tickets about missing lasers.
     //_localLaserTarget = "LaserTargetW" createVehicleLocal (getpos ACE_player);
          
-    GVAR(selfDesignateHandle) = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call cba_fnc_addPerFrameHandler;
+    GVAR(selfDesignateHandle) = [FUNC(laserHudDesignatePFH), 0.1, [ACE_player, _laserUuid, nil]] call CBA_fnc_addPerFrameHandler;
 } else {
     [] call FUNC(laserHudDesignateOff);
     [] call FUNC(laserHudDesignateOn);

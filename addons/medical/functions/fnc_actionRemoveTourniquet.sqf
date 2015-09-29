@@ -8,17 +8,15 @@
  * 2: SelectionName <STRING>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_part","_selectionName","_removeItem","_tourniquets", "_output"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
+private ["_part", "_tourniquets", "_output"];
+params ["_caller", "_target", "_selectionName"];
 
 // grab the required data
 _part = [_selectionName] call FUNC(selectionNameToNumber);
@@ -26,7 +24,7 @@ _tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
 if ((_tourniquets select _part) == 0) exitwith {
-    _output = "There is no tourniquet on this body part!";
+    _output = LSTRING(noTourniquetOnBodyPart);
     ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 

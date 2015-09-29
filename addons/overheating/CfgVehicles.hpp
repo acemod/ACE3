@@ -5,7 +5,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class ACE_SwapBarrel {
-                    displayName = "$STR_ACE_Overheating_SwapBarrel";
+                    displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( 'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
@@ -14,9 +14,9 @@ class CfgVehicles {
                     hotkey = "B";
                 };
                 class ACE_CheckTemperature {
-                    displayName = "$STR_ACE_Overheating_CheckTemperatureShort";
+                    displayName = CSTRING(CheckTemperatureShort);
                     condition = "switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (secondaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}";
-                    exceptions[] = {"isNotInside"};
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
                     showDisabled = 0;
                     priority = 2.9;

@@ -10,7 +10,7 @@
  * 3: Error Code <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * (args from progressBar) call ace_magazinerepack_fnc_magazineRepackFinish
@@ -21,17 +21,18 @@
 
 private ["_structuredOutputText", "_picture", "_fullMags", "_partialMags", "_fullMagazineCount"];
 
-PARAMS_4(_args,_elapsedTime,_totalTime,_errorCode);
-EXPLODE_2_PVT(_args,_magazineClassname,_lastAmmoCount);
+params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+_args params ["_magazineClassname", "_lastAmmoCount"];
+
 _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 //Don't show anything if player can't interact:
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
 
 _structuredOutputText = if (_errorCode == 0) then {
-    format ["<t align='center'>%1</t><br/>", (localize "STR_ACE_MagazineRepack_RepackComplete")];
+    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackComplete))];
 } else {
-    format ["<t align='center'>%1</t><br/>", (localize "STR_ACE_MagazineRepack_RepackInterrupted")];
+    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackInterrupted))];
 };
 
 _picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
@@ -51,6 +52,6 @@ _structuredOutputText = _structuredOutputText + format ["<img align='center' siz
         // };
     // };
 // } forEach (magazinesAmmoFull ACE_player);
-// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize "STR_ACE_MagazineRepack_RepackedMagazinesCount") + "</t>"), _fullMags, _partialMags];
+// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize LSTRING(RepackedMagazinesCount)) + "</t>"), _fullMags, _partialMags];
 
-[parseText _structuredOutputText] call EFUNC(common,displayTextStructured);
+[parseText _structuredOutputText, 2] call EFUNC(common,displayTextStructured);

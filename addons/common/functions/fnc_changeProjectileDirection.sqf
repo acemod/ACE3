@@ -1,32 +1,23 @@
 /*
  * Author: commy2
- *
  * Adjust a projectiles velocity and dir + up vector.
  *
- * Argument:
- * 0: Projectile (Object, CfgAmmo)
- * 1: Adjust azimuth this much. (Number)
- * 2: Adjust inclination this much. (Number)
- * 3: Adjust projectile speed this much. In m/s. (Number, optional default: 0 m/s)
+ * Arguments:
+ * 0: Projectile <OBJECT>
+ * 1: Adjust azimuth this much. <NUMBER>
+ * 2: Adjust inclination this much. <NUMBER>
+ * 3: Adjust projectile speed this much. In m/s. (optional: 0) <NUMBER>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_projectile", "_adjustDir", "_adjustUp", "_adjustSpeed", "_vdir", "_dir", "_up", "_l", "_r", "_vup", "_vel"];
+params ["_projectile", "_adjustDir", "_adjustUp", ["_adjustSpeed",0]];
 
-_projectile = _this select 0;
-_adjustDir = _this select 1;
-_adjustUp = _this select 2;
-
-_adjustSpeed = if (count _this > 3) then {
-    _this select 3
-} else {
-    0
-};
-
-["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call FUNC(log);
+private ["_vdir", "_dir", "_up", "_vlat", "_vup", "_vel"];
 
 // get old direction vector
 _vdir = vectorNormalized velocity _projectile;

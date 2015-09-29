@@ -1,38 +1,39 @@
 /*
  * Author: commy2
- *
  * Get a binary equivalent of a decimal number.
  *
- * Argument:
- * 0: Decimal Number (Number)
- * 1: Minimum length of the returned Array, note: returned array can be larger (Number, optional default 8)
+ * Arguments:
+ * 0: Decimal Number <NUMBER>
+ * 1: Minimum length of the returned Array, note: returned array can be larger (default: 8) <NUMBER>
  *
- * Return value:
- * Booleans (Array)
+ * Return Value:
+ * Booleans <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_number", "_minLength", "_array", "_index", "_rest"];
+params ["_number", ["_minLength", 8]];
 
-_number = round (_this select 0);
-_minLength = _this select 1;
+_number = round _number;
 
-if (isNil "_minLength") then {_minLength = 8};
+private ["_array", "_index", "_rest"];
 
 _array = [];
 _array resize _minLength;
 
 for "_index" from 0 to (_minLength - 1) do {
-  _array set [_index, false];
+    _array set [_index, false];
 };
 
 _index = 0;
 
 while {_number > 0} do {
-  _rest = _number mod 2;
-  _number = floor (_number / 2);
+    _rest = _number mod 2;
+    _number = floor (_number / 2);
 
-  _array set [_index, _rest == 1];
-  _index = _index + 1;
+    _array set [_index, _rest == 1];
+    _index = _index + 1;
 };
+
 _array

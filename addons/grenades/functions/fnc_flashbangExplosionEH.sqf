@@ -6,7 +6,7 @@
  * 0: The grenade <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [theGrenade] call ace_grenades_fnc_flashbangExplosionEH
@@ -15,14 +15,14 @@
  */
 #include "script_component.hpp"
 
-private ["_affected", "_strength", "_posGrenade", "_posUnit", "_angleGrenade", "_angleView", "_angleDiff", "_light", "_losCount"];
+params ["_grenade"];
 
-PARAMS_1(_grenade);
+private ["_affected", "_strength", "_posGrenade", "_eyePos", "_losCount", "_eyeDir", "_dirToUnitVector", "_angleDiff", "_light"];
 
 _affected = _grenade nearEntities ["CAManBase", 20];
 
 {
-    if ((local _x) && {alive _x}) then {
+    if (local _x && {alive _x}) then {
 
         _strength = 1 - ((_x distance _grenade) min 15) / 15;
 
@@ -31,16 +31,19 @@ _affected = _grenade nearEntities ["CAManBase", 20];
         if (_x != ACE_player) then {
             //must be AI
             [_x, true] call EFUNC(common,disableAI);
-            _x setSkill ((skill _x) / 50);
+
+            _x setSkill (skill _x / 50);
 
             [{
-                PARAMS_1(_unit);
+                params ["_unit"];
+
                 //Make sure we don't enable AI for unconscious units
-                if (!(_unit getVariable ["ace_isunconscious", false])) then {
+                if !(_unit getVariable ["ace_isUnconscious", false]) then {
                     [_unit, false] call EFUNC(common,disableAI);
                 };
+
                 _unit setSkill (skill _unit * 50);
-            }, [_x], (7 * _strength), 0.1] call EFUNC(common,waitAndExecute);  //0.1 precision is fine for AI
+            }, [_x], 7 * _strength] call EFUNC(common,waitAndExecute);
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
@@ -48,21 +51,19 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             _eyePos = eyePos ACE_player; //PositionASL
             _posGrenade set [2, (_posGrenade select 2) + 0.2]; // compensate for grenade glitching into ground
 
-            _losCount = 0;
             //Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
-            {
-                if (!lineIntersects [(_posGrenade vectorAdd _x), _eyePos, _grenade, ACE_player]) then {
-                    _losCount = _losCount + 1;
-                };
-            } forEach [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
+            _losCount = {
+                !lineIntersects [_posGrenade vectorAdd _x, _eyePos, _grenade, ACE_player]
+            } count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
+
             TRACE_1("Line of sight count (out of 4)",_losCount);
-            if (_losCount == 0) then {
+            if (_losCount <= 1) then {
                 _strength = _strength / 10;
             };
 
-            //Add ace_hearing ear ringing sound effect
-            if ((isClass (configFile >> "CfgPatches" >> "ACE_Hearing")) && {_strength > 0}) then {
-                [_x, 0.5 + (_strength / 2)] call EFUNC(hearing,earRinging);
+            // add ace_hearing ear ringing sound effect
+            if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0}) then {
+                [_x, 20 * _strength] call EFUNC(hearing,earRinging);
             };
 
             // account for people looking away by slightly
@@ -71,17 +72,16 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
             _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 
-            //From 0-45deg, full effect
+            // from 0-45deg, full effect
             if (_angleDiff > 45) then {
                 _strength = _strength - _strength * ((_angleDiff - 45) / 120);
             };
 
             TRACE_1("Final strength for player",_strength);
 
-
-            //Add ace_medical pain effect:
-            if ((isClass (configFile >> "CfgPatches" >> "ACE_Medical")) && {_strength > 0}) then {
-                [ACE_player, (_strength / 2)] call EFUNC(medical,adjustPainLevel);
+            // add ace_medical pain effect:
+            if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {_strength > 0.1}) then {
+                [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
             };
 
             // create flash to illuminate environment
@@ -91,30 +91,32 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             _light setLightColor [1,1,1];
             _light setLightDayLight true;
 
-            //Delete the light after 0.1 seconds
+            // delete the light after 0.1 seconds
             [{
-                PARAMS_1(_light);
+                params ["_light"];
                 deleteVehicle _light;
-            }, [_light], 0.1, 0] call EFUNC(common,waitAndExecute);
+            }, [_light], 0.1] call EFUNC(common,waitAndExecute);
 
             // blind player
-            if (_strength > 0.1) then {
+            if (hasInterface && {_strength > 0.1}) then {
                 GVAR(flashbangPPEffectCC) ppEffectEnable true;
                 GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                 GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
-                //PARTIALRECOVERY - start decreasing effect over time
+                //PARTIALRECOVERY - start decreasing effect over ACE_time
                 [{
-                    PARAMS_1(_strength);
+                    params ["_strength"];
+
                     GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                     GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
-                }, [_strength], (7 * _strength), 0] call EFUNC(common,waitAndExecute);
+                }, [_strength], 7 * _strength] call EFUNC(common,waitAndExecute);
 
                 //FULLRECOVERY - end effect
                 [{
                     GVAR(flashbangPPEffectCC) ppEffectEnable false;
-                }, [], (17 * _strength), 0] call EFUNC(common,waitAndExecute);
+                }, [], 17 * _strength] call EFUNC(common,waitAndExecute);
             };
         };
     };
-} forEach _affected;
+    true
+} count _affected;

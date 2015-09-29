@@ -1,58 +1,44 @@
-/**
- * fn_debug.sqf
- * @Descr: Print logging messages through the ACE framework.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Print logging messages through the ACE framework.
  *
- * @Arguments: [message ANY, level NUMBER (Optional)]
- * @Return:  BOOL True if message has been printed
- * @PublicAPI: true
+ * Arguments:
+ * 0: Message <ANY>
+ * 1: Level (default: 2) <NUMBER>
+ *
+ * Return Value:
+ * Message is Printed <BOOL>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 #define DEFAULT_LOGGING_LEVEL -1
 #define DEFAULT_TEXT_DISPLAY -1
 
-private ["_msg", "_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message", "_from"];
-_msg = _this select 0;
-_level = if (count _this > 1) then {_this select 1} else { 2 };
+params ["_msg", ["_level", 2, [0]]];
 
-if (typeName _level != "NUMBER") then {
-    _level = 2;
-};
+private ["_defaultLoglevel", "_defaultLogDisplayLevel"];
 
-_defaultLoglevel = if (isNil QGVAR(LOGLEVEL)) then {
-    DEFAULT_LOGGING_LEVEL;
-} else {
-    GVAR(LOGLEVEL);
-};
+_defaultLoglevel = [GVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL] select isNil QGVAR(LOGLEVEL);
 
-if (_defaultLoglevel < 0) exitwith {
-    false
-};
+if (_defaultLoglevel < 0) exitwith {false};
 
-_defaultLogDisplayLevel = if (isnil QGVAR(LOGDISPLAY_LEVEL)) then {
-    DEFAULT_TEXT_DISPLAY;
-} else {
-    GVAR(LOGDISPLAY_LEVEL);
-};
+_defaultLogDisplayLevel = [GVAR(LOGDISPLAY_LEVEL), DEFAULT_TEXT_DISPLAY] select isNil QGVAR(LOGDISPLAY_LEVEL);
 
 if (_level <= _defaultLoglevel) then {
+    private ["_prefix", "_message"];
 
-    _prefix = switch (_level) do {
-        case 0: { "ACE Error" };
-        case 1: { "ACE Warn" };
-        case 2: { "ACE Debug" };
-        case 3: { "ACE Info" };
-        default { "ACE Unknown" };
-    };
-    _message = format["[%1] %2",_prefix,_msg];
+    _prefix = ["Unknown", "Error", "Warn", "Debug", "Info"] select ([0, 1, 2, 3] find _level + 1);
+
+    _message = format ["[ACE %1] %2", _prefix, _msg];
 
     if (_level <= _defaultLogDisplayLevel) then {
         systemChat _message;
     };
     diag_log _message;
 
-    // pass it onwards to the log function:
-    // [0, [], compile format["%1",_msg], true] call FUNC(log);
+
 };
+
 true

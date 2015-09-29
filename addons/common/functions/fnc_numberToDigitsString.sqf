@@ -1,26 +1,24 @@
 /*
  * Author: commy2
- *
  * Transforms a number to an string of the correspondending digits.
  *
- * Argument:
- * 0: Number to 'digitize' (Number)
+ * Arguments:
+ * 0: Number to 'digitize' <NUMBER>
  * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Number, optional)
  *
- * Return value:
- * Digits. The maximum length is six digits. (String)
+ * Return Value:
+ * Digits. The maximum length is six digits. <STRING>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_number", "_minLength", "_length"];
-
-_number = _this select 0;
-_minLength = _this select 1;
+params ["_number", "_minLength"];
 
 _number = _number min 999999;
-
 _number = str _number;
 
+private "_length";
 _length = count _number;
 
 if (isNil "_minLength") then {_minLength = _length};

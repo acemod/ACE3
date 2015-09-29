@@ -3,24 +3,21 @@
  * Calculate light intensity object 1 recieves from object 2
  *
  * Arguments:
- * 0: Object that recieves light (Object)
- * 1: Object that emits light (Object)
+ * 0: Object that recieves light <OBJECT>
+ * 1: Object that emits light <OBJECT>
  *
  * Return Value:
  * Brightest light level
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_unit", "_lightSource"];
+params ["_unit", "_lightSource"];
 
-_unit = _this select 0;
-_lightSource = _this select 1;
+private ["_unitPos", "_lightLevel"];
 
-private "_unitPos";
 _unitPos = _unit modelToWorld (_unit selectionPosition "spine3");
-
-private "_lightLevel";
 _lightLevel = 0;
 
 if (_lightSource isKindOf "CAManBase") then {
@@ -45,6 +42,8 @@ if (_lightSource isKindOf "CAManBase") then {
         };
         default {""};
     };
+
+    if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ACE_laserpointer") == 1) exitWith {_lightLevel = 0};
 
     _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
     //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
@@ -92,7 +91,7 @@ if (_lightSource isKindOf "CAManBase") then {
 
         _lightLevel = _lightLevel max ((linearConversion [0, 30, _distance, 1, 0, true]) * (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true]));
 
-    //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
+        //systemChat  format ["%1 %2", (linearConversion [0, 30, _distance, 1, 0, true]), (linearConversion [_innerAngle, _outerAngle, _angle, 1, 0, true])];
 
     } forEach _lights;
 

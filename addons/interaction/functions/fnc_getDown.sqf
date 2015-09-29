@@ -1,34 +1,33 @@
 /*
- * Author: KoffeinFlummi
- *
- * Forces a civilian to the ground. (chance of failure).
+ * Author: KoffeinFlummi, commy2
+ * Forces a civilian to the ground with a chance of failure.
  *
  * Arguments:
- * 0: Unit to be sent away (Object)
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
  *
- * Return value:
- * none
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [civillian] call ace_interaction_fnc_getDown
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-#define RADIUS 10
+#define SEND_RADIUS 10
 
-private ["_unit", "_chance", "_x"];
+params ["_unit", "_target"];
 
-_unit = _this select 0;
+_unit playActionNow "GestureGo";
 
-ACE_player playActionNow "GestureGo"; // put something else here.
-
-if (count (weapons ACE_player) > 0) then {
-  _chance = 0.8;
-} else {
-  _chance = 0.5;
-};
+private "_chance";
+_chance = [0.5, 0.8] select (count weapons _unit > 0);
 
 {
-  if (count (weapons _unit) == 0 and random 1 < _chance) then {
-    [-2, {
-      _this setUnitPos "DOWN";
-    }, _x] call CBA_fnc_globalExecute;
-  };
-} foreach (_unit nearEntities ["Civilian", RADIUS]);
+    if (count weapons _x == 0 && {random 1 < _chance}) then {
+        ["getDown", [_x], [_x]] call EFUNC(common,targetEvent);
+    };
+    false
+} count (_target nearEntities ["Civilian", SEND_RADIUS]);

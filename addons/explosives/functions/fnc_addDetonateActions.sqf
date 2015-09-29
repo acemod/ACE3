@@ -15,10 +15,13 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_result", "_item", "_children"];
 
-EXPLODE_2_PVT(_this,_unit,_detonator);
-_range = GetNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
+params ["_unit", "_detonator"];
+TRACE_2("params",_unit,_detonator);
+
+private ["_result", "_item", "_children", "_range", "_required"];
+
+_range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 
 _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];
@@ -44,6 +47,6 @@ _children = [];
                 ];
         };
     };
-} foreach _result;
+} forEach _result;
 
 _children

@@ -36,16 +36,18 @@ PREP(handleScrollWheel);
 PREP(hasExplosives);
 PREP(hasPlacedExplosives);
 
+PREP(interactEH);
+
 PREP(getDetonators);
 PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 
-PREP(onLanded);
+PREP(module);
+
+PREP(onIncapacitated);
+PREP(onInventoryChanged);
 
 PREP(openTimerSetUI);
-
-PREP(place_Approve);
-PREP(place_Cancel);
 
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);

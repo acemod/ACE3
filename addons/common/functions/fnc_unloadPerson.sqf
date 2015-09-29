@@ -1,59 +1,35 @@
-/**
- * fn_unloadPerson_f.sqf
- * @Descr: Unload a person from a vehicle
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Unload a person from a vehicle
  *
- * @Arguments: [caller OBJECT, unit OBJECT]
- * @Return: BOOL Returns true if succesfully unloaded person
- * @PublicAPI: true
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return Value:
+ * Returns true if succesfully unloaded person <BOOL>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-private ["_caller", "_unit","_vehicle", "_loaded"];
-_caller = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_unit = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
+params ["_unit"];
+
+private "_vehicle";
 _vehicle = vehicle _unit;
 
-if (_vehicle == _unit) exitwith {false;};
-if !(speed _vehicle <1 && (((getpos _vehicle) select 2) < 2)) exitwith {false;};
-if (!([_caller] call FUNC(isAwake))) exitwith{false;};
+if (_vehicle == _unit) exitWith {false};
 
-moveOut _unit;
-unassignVehicle _unit;
-if (!alive _unit) then {
-    _unit action ["Eject", vehicle _unit];
+if (speed _vehicle > 1 || getPos _vehicle select 2 > 2) exitWith {false};
+
+private "_emptyPos";
+_emptyPos = (getPos _vehicle) findEmptyPosition [0, 10, typeof _unit]; // @todo to small?
+
+if (count _emptyPos == 0) exitWith {false};
+
+if (!isNull _vehicle) then {
+    [[_unit], QUOTE(FUNC(unloadPersonLocal)), _unit, false] call FUNC(execRemoteFnc);
 };
 
-[_unit, false, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
-
-_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
-_loaded = _loaded - [_unit];
-_vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
-
-if (!([_unit] call FUNC(isAwake))) then {
-    _handle = [_unit,_vehicle] spawn {
-        private ["_unit","_vehicle"];
-        _unit = _this select 0;
-        _vehicle = _this select 1;
-        waituntil {vehicle _unit != _vehicle};
-        [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
-        [format["Unit should move into death anim: %1", _unit]] call FUNC(debug);
-    };
-} else {
-    if ([_unit] call FUNC(isArrested)) then {
-        _handle = [_unit,_vehicle] spawn {
-            _unit = _this select 0;
-            _vehicle = _this select 1;
-            waituntil {vehicle _unit != _vehicle};
-            [_unit,"UnaErcPoslechVelitele2", 1] call FUNC(doAnimation);
-            [format["Unit should move into arrested anim: %1", _unit]] call FUNC(debug);
-        };
-    } else {
-        [format["Unit should move into normal anim: %1", _unit]] call FUNC(debug);
-    };
-};
-
-true;
+true

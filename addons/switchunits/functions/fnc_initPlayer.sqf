@@ -10,27 +10,21 @@
  * None
  *
  * Example:
- * [_player, _sides] call FUNC(initPlayer)
+ * [player, [west]] call ace_switchunits_fnc_initPlayer
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_playerUnit", "_sides"];
-
-_playerUnit = _this select 0;
-_sides = _this select 1;
+params ["_playerUnit", "_sides"];
 
 if (vehicle _playerUnit == _playerUnit) then {
-
     [_sides] call FUNC(markAiOnMap);
 
     _playerUnit setVariable [QGVAR(IsPlayerUnit), true];
     _playerUnit allowDamage false;
 
     GVAR(OriginalUnit) = _playerUnit;
-    //GVAR(OriginalName) = [_playerUnit] call EFUNC(common,getName);
     GVAR(OriginalName) = name _playerUnit;
     GVAR(OriginalGroup) = group _playerUnit;
 

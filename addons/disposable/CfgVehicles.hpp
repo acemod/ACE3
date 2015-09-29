@@ -1,5 +1,5 @@
 class CfgVehicles {
-#define MACRO_NONLAW \
+    #define MACRO_NONLAW \
         class TransportMagazines { \
             class _xx_NLAW_F { \
                 count = 0; \
@@ -73,56 +73,56 @@ class CfgVehicles {
         MACRO_NONLAW
     };
     /*class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-    MACRO_NONLAW
-};
-class B_APC_Tracked_01_rcws_F: B_APC_Tracked_01_base_F {
-    MACRO_NONLAW
-};
-class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
-    MACRO_NONLAW
-};
-class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
-    MACRO_NONLAW
-};*/
+        MACRO_NONLAW
+    };
+    class B_APC_Tracked_01_rcws_F: B_APC_Tracked_01_base_F {
+        MACRO_NONLAW
+    };
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
+        MACRO_NONLAW
+    };
+    class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
+        MACRO_NONLAW
+    };*/
 
     class Car_F;
     class MRAP_01_base_F: Car_F {
         MACRO_NONLAW
     };
     /*class MRAP_01_gmg_base_F: MRAP_01_base_F {
-    MACRO_NONLAW
-};
-class MRAP_01_hmg_base_F: MRAP_01_gmg_base_F {
-    MACRO_NONLAW
-};
-class B_MRAP_01_F: MRAP_01_base_F {
-    MACRO_NONLAW
-};
-class B_MRAP_01_gmg_F: MRAP_01_gmg_base_F {
-    MACRO_NONLAW
-};
-class B_MRAP_01_hmg_F: MRAP_01_hmg_base_F {
-    MACRO_NONLAW
-};*/
+        MACRO_NONLAW
+    };
+    class MRAP_01_hmg_base_F: MRAP_01_gmg_base_F {
+        MACRO_NONLAW
+    };
+    class B_MRAP_01_F: MRAP_01_base_F {
+        MACRO_NONLAW
+    };
+    class B_MRAP_01_gmg_F: MRAP_01_gmg_base_F {
+        MACRO_NONLAW
+    };
+    class B_MRAP_01_hmg_F: MRAP_01_hmg_base_F {
+        MACRO_NONLAW
+    };*/
 
     class MRAP_03_base_F: Car_F {
         MACRO_NONLAW
     };
     /*class MRAP_03_hmg_base_F: MRAP_03_base_F {
-    MACRO_NONLAW
-};
-class MRAP_03_gmg_base_F: MRAP_03_hmg_base_F {
-    MACRO_NONLAW
-};
-class I_MRAP_03_F: MRAP_03_base_F {
-    MACRO_NONLAW
-};
-class I_MRAP_03_hmg_F: MRAP_03_hmg_base_F {
-    MACRO_NONLAW
-};
-class I_MRAP_03_gmg_F: MRAP_03_gmg_base_F {
-    MACRO_NONLAW
-};*/
+        MACRO_NONLAW
+    };
+    class MRAP_03_gmg_base_F: MRAP_03_hmg_base_F {
+        MACRO_NONLAW
+    };
+    class I_MRAP_03_F: MRAP_03_base_F {
+        MACRO_NONLAW
+    };
+    class I_MRAP_03_hmg_F: MRAP_03_hmg_base_F {
+        MACRO_NONLAW
+    };
+    class I_MRAP_03_gmg_F: MRAP_03_gmg_base_F {
+        MACRO_NONLAW
+    };*/
 
     class Wheeled_APC_F: Car_F {};
     class APC_Wheeled_03_base_F: Wheeled_APC_F {
@@ -132,15 +132,15 @@ class I_MRAP_03_gmg_F: MRAP_03_gmg_base_F {
         MACRO_NONLAW
     };
     /*class B_APC_Wheeled_01_base_F: APC_Wheeled_01_base_F {
-    MACRO_NONLAW
-};
-class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
-    MACRO_NONLAW
-};
-class I_APC_Wheeled_03_base_F: APC_Wheeled_03_base_F {
-    MACRO_NONLAW
-};
-class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
-    MACRO_NONLAW
-};*/
+        MACRO_NONLAW
+    };
+    class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
+        MACRO_NONLAW
+    };
+    class I_APC_Wheeled_03_base_F: APC_Wheeled_03_base_F {
+        MACRO_NONLAW
+    };
+    class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
+        MACRO_NONLAW
+    };*/
 };

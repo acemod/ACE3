@@ -7,7 +7,7 @@
  */
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
 ["playerInventoryChanged", {
@@ -33,20 +33,20 @@ if !(hasInterface) exitWith {};
 
 
 // Add keybinds
-["ACE3", QGVAR(AdjustUpMinor), localize "STR_ACE_Scopes_AdjustUpMinor",
+["ACE3 Scope Adjustment", QGVAR(AdjustUpMinor), localize LSTRING(AdjustUpMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
-    
+
     // Statement
     [ACE_player, ELEVATION_UP, MINOR_INCREMENT] call FUNC(adjustScope);
 },
 {false},
 [201, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustDownMinor), localize "STR_ACE_Scopes_AdjustDownMinor",
+["ACE3 Scope Adjustment", QGVAR(AdjustDownMinor), localize LSTRING(AdjustDownMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -59,7 +59,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [false, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustLeftMinor), localize "STR_ACE_Scopes_AdjustLeftMinor",
+["ACE3 Scope Adjustment", QGVAR(AdjustLeftMinor), localize LSTRING(AdjustLeftMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -72,7 +72,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [false, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustRightMinor), localize "STR_ACE_Scopes_AdjustRightMinor",
+["ACE3 Scope Adjustment", QGVAR(AdjustRightMinor), localize LSTRING(AdjustRightMinor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -85,7 +85,7 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [false, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustUpMajor), localize "STR_ACE_Scopes_AdjustUpMajor",
+["ACE3 Scope Adjustment", QGVAR(AdjustUpMajor), localize LSTRING(AdjustUpMajor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -98,7 +98,7 @@ if !(hasInterface) exitWith {};
 {false},
 [201, [true, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustDownMajor), localize "STR_ACE_Scopes_AdjustDownMajor",
+["ACE3 Scope Adjustment", QGVAR(AdjustDownMajor), localize LSTRING(AdjustDownMajor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -111,7 +111,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [true, false, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustLeftMajor), localize "STR_ACE_Scopes_AdjustLeftMajor",
+["ACE3 Scope Adjustment", QGVAR(AdjustLeftMajor), localize LSTRING(AdjustLeftMajor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -124,7 +124,7 @@ if !(hasInterface) exitWith {};
 {false},
 [209, [true, true, false]], true] call cba_fnc_addKeybind;
 
-["ACE3", QGVAR(AdjustRightMajor), localize "STR_ACE_Scopes_AdjustRightMajor",
+["ACE3 Scope Adjustment", QGVAR(AdjustRightMajor), localize LSTRING(AdjustRightMajor),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -136,30 +136,3 @@ if !(hasInterface) exitWith {};
 },
 {false},
 [201, [true, true, false]], true] call cba_fnc_addKeybind;
-
-// init shortdot
-GVAR(showShortdot) = false;
-
-["playerInventoryChanged", {
-    if (_this select 1 isEqualTo []) exitWith {}; //@todo fix eh
-
-    private "_showShortdot";
-    _showShortdot = _this select 1 select 9 select 2 == "ACE_optic_DMS";
-
-    if (GVAR(showShortdot)) then {
-        if (!_showShortdot) then {
-            // hide control and turn onDraw handler off
-            (uiNamespace getVariable ["ACE_ctrlShortdotReticle", controlNull]) ctrlShow false;
-            GVAR(showShortdot) = false;
-        };
-    } else {
-        if (_showShortdot) then {
-            // create control and turn onDraw handler on
-            ([QGVAR(reticle)] call BIS_fnc_rscLayer) cutRsc ["ACE_Shortdot_Reticle", "PLAIN", 0, false];
-            (uiNamespace getVariable "ACE_ctrlShortdotReticle") ctrlSetText QUOTE(PATHTOF(data\reticles\ace_shortdot_reticle_1.paa));
-            GVAR(showShortdot) = true;
-        };
-    };
-}] call EFUNC(common,addEventHandler);
-
-addMissionEventHandler ["Draw3D", {if (GVAR(showShortdot)) then {call FUNC(onDrawShortdot)};}];

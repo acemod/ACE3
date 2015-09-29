@@ -1,19 +1,18 @@
 /*
  * Author: commy2
+ * Determins type of item. Can be CfgMagaines, CfgWeapons or CfgGlasses.
  *
- * What kind of Cfg is the item. Works for CfgMagaines, CfgWeapons and CfgGlasses
+ * Arguments:
+ * 0: Item Classname <STRING>
  *
- * Argument:
- * 0: A item's classname. (String)
+ * Return Value:
+ * Config category ("CfgWeapons", "CfgMagazines", "CfgGlasses", "") <STRING>
  *
- * Return value:
- * CfgWhatever (String)
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private "_item";
-
-_item = _this select 0;
+params ["_item"];
 
 if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
 

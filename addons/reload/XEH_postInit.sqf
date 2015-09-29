@@ -1,16 +1,15 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3", QGVAR(checkAmmo), localize "STR_ACE_Reload_checkAmmo",
+["ACE3 Weapons", QGVAR(checkAmmo), localize LSTRING(checkAmmo),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, (vehicle ACE_player), ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon) ||
-    {(vehicle ACE_player) isKindOf 'StaticWeapon'}) exitWith {false};
+    if !([ACE_player] call EFUNC(common,canUseWeapon) || {(vehicle ACE_player) isKindOf "StaticWeapon"}) exitWith {false};
 
     // Statement
     [ACE_player] call FUNC(checkAmmo);
@@ -19,12 +18,15 @@ if !(hasInterface) exitWith {};
 {false},
 [19, [false, true, false]], false] call cba_fnc_addKeybind;
 
+["setAmmoSync", {
+    //To propagate the setAmmo change, do it on all clients
+    PARAMS_3(_unit,_weapon,_ammo);
+    _unit setAmmo [_weapon, _ammo];
+}] call EFUNC(common,addEventhandler);
 
 // Listen for attempts to link ammo
 ["linkedAmmo", {
     EXPLODE_3_PVT(_this,_receiver,_giver,_magazine);
-    diag_log "linkedAmmo";
-    diag_log _this;
 
     private ["_magazineCfg","_magazineType"];
     _magazineType = currentMagazine _receiver;
@@ -46,7 +48,7 @@ if !(hasInterface) exitWith {};
 
     // Add the ammo
     _ammoAdded = _ammoMissing min (_magazine select 1);
-    _receiver setAmmo [currentWeapon _receiver, _ammoCount + _ammoAdded];
+    ["setAmmoSync", [_receiver, (currentWeapon _receiver), (_ammoCount + _ammoAdded)]] call EFUNC(common,globalEvent);
 
     if ((_magazine select 1) - _ammoAdded > 0) then {
         ["returnedAmmo", [_giver], [_giver,_receiver,[_magazineType,(_magazine select 1) - _ammoAdded]]] call EFUNC(common,targetEvent);
@@ -58,8 +60,6 @@ if !(hasInterface) exitWith {};
 // Listen for returned magazines
 ["returnedAmmo", {
     EXPLODE_3_PVT(_this,_receiver,_giver,_magazine);
-    diag_log "returnedAmmo";
-    diag_log _this;
 
     _receiver addMagazine _magazine;
 }] call EFUNC(common,addEventhandler);

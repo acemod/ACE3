@@ -14,16 +14,15 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_currentGlasses", "_result", "_unit"];
-_unit = _this select 0;
+
+params ["_unit"];
+private ["_currentGlasses", "_result", "_position", "_visible"];
 
 _currentGlasses = goggles _unit;
 _result = false;
 
-if ((vehicle _unit) != _unit) exitWith {(cameraView != "GUNNER")};
-
 if (_currentGlasses != "") then {
-    _position =(getPosASLW _unit);
+    _position = getPosASLW _unit;
     if (surfaceIsWater _position && {((_position select 2) < 0.25)}) exitWith {
         _result = ([_currentGlasses] call FUNC(isDivingGoggles));
     };

@@ -1,31 +1,29 @@
 /*
-  Name: ACE_Respawn_fnc_moduleRallypoint
-  
-  Author(s):
-    commy2
-  
-  Description:
-    initializes the Rallypoint module
-  
-  Parameters:
-    0: OBJECT - logic
-    1: ARRAY<OBJECT> - synced units
-    2: BOOLEAN - activated
-  
-  Returns:
-    VOID
-*/
+ * Author: commy2
+ * Initializes the Rallypoint module.
+ *
+ * Arguments:
+ * 0: Logic <OBJECT>
+ * 1: Synced units <ARRAY>
+ * 2: Activated <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [logic, [ACE_Player], true] call ace_respawn_fnc_moduleRallypoint
+ *
+ * Public: No
+ */
+#include "script_component.hpp"
 
- #include "script_component.hpp"
- 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
 {
     _x setVariable ["ACE_canMoveRallypoint", true];
-} forEach _units;
+    false
+} count _units;
 
-diag_log text "[ACE]: Rallypoint Module Initialized.";
+ACE_LOGINFO("Rallypoint Module Initialized.");

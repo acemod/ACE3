@@ -20,3 +20,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgOptics.hpp"
+
+class ACE_Extensions {
+    extensions[] += {"ace_fcs"};
+};

@@ -9,18 +9,13 @@
  * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-#define BLOODBAGHEAL 70
 
-private ["_caller", "_target","_className","_blood"];
-_caller = _this select 0;
-_target = _this select 1;
-_className = _this select 3;
+params ["_caller", "_target", "_treatmentClassname"];
 
-_blood = ((_target getVariable [QGVAR(bloodVolume), 100]) + BLOODBAGHEAL) min 100;
-_target setVariable [QGVAR(bloodVolume), _blood, true];
+[[_target, _treatmentClassname], QUOTE(DFUNC(treatmentBasic_bloodbagLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

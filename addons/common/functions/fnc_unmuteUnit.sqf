@@ -1,21 +1,19 @@
 /*
  * Author: commy2
- *
  * Unmutes the unit. Only unmutes if the last reason was removed.
  *
- * Argument:
- * 0: Unit (Object)
- * 1: Reason to unmute the unit. (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Reason to unmute the unit. <STRING>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_unit", "_reason"];
-
-_unit = _this select 0;
-_reason = _this select 1;
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 

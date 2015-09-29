@@ -16,11 +16,13 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_explosive,_delay);
+params ["_explosive", "_delay"];
+TRACE_2("params",_explosive,_delay);
 
 [{
-    _explosive = _this;
+    params ["_explosive"];
+    TRACE_1("Explosive Going Boom",_explosive);
     if (!isNull _explosive) then {
         [_explosive, -1, [_explosive, 0]] call FUNC(detonateExplosive);
     };
-}, _explosive, _delay, 0] call EFUNC(common,waitAndExecute);
+}, [_explosive], _delay] call EFUNC(common,waitAndExecute);

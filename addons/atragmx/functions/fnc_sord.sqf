@@ -22,6 +22,6 @@ _slopeDistance = _this select 0;
 _azimuth       = _this select 1;
 _inclination   = _this select 2;
 
-//_inclination = asin((ACE_player weaponDirection currentWeapon ACE_player) select 2);
-GVAR(inclinationAngle) set [GVAR(currentTarget), _inclination];
-GVAR(targetRange) set [GVAR(currentTarget), _slopeDistance];
+GVAR(inclinationAngle) set [GVAR(currentTarget), round(_inclination)];
+GVAR(directionOfFire) set [GVAR(currentTarget), round(_azimuth)];
+GVAR(targetRange) set [GVAR(currentTarget), round(_slopeDistance)];

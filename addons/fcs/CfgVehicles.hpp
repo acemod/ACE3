@@ -25,7 +25,7 @@ class CfgVehicles {
     class Car: LandVehicle {
         class ACE_SelfActions {
             class ResetFCS {
-                displayName = $STR_ACE_FCS_ResetFCS;
+                displayName = CSTRING(ResetFCS);
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
@@ -38,7 +38,7 @@ class CfgVehicles {
     class Tank: LandVehicle {
         class ACE_SelfActions {
             class ResetFCS {
-                displayName = $STR_ACE_FCS_ResetFCS;
+                displayName = CSTRING(ResetFCS);
                 condition = QUOTE(call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
@@ -504,5 +504,27 @@ class CfgVehicles {
 
     class Plane_Fighter_03_base_F: Plane_Base_F {
         class Turrets;
+    };
+
+    // static weapons.
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret; //: NewTurret {};
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class HMG_01_base_F: StaticMGWeapon {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MinDistance) = 100;
+                GVAR(MaxDistance) = 1500;
+                GVAR(DistanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
     };
 };

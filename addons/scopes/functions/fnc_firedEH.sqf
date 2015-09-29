@@ -1,14 +1,15 @@
 /*
- * Author: KoffeinFlummi and esteldunedain
+ * Author: KoffeinFlummi, esteldunedain
  * Adjusts the flight path of the bullet according to the zeroing
  *
  * Argument:
- * 0: Unit <OBJECT>
- * 1: Weapon <STRING>
- * 3: Muzzle <STRING>
- * 4: Magazine <STRING>
- * 5: Ammo <STRING>
- * 6: Projectile <OBJECT>
+ * 0: unit - Object the event handler is assigned to <OBJECT>
+ * 1: weapon - Fired weapon <STRING>
+ * 2: muzzle - Muzzle that was used <STRING>
+ * 3: mode - Current mode of the fired weapon <STRING>
+ * 4: ammo - Ammo used <STRING>
+ * 5: magazine - magazine name which was used <STRING>
+ * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
  * Return value:
  * None
@@ -17,26 +18,24 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_adjustment", "_weapon", "_projectile", "_weaponIndex", "_zeroing", "_adjustment"];
+private ["_adjustment", "_weaponIndex", "_zeroing", "_adjustment"];
 
-_unit = _this select 0;
+params ["_unit", "", "", "", "", "", "_projectile"];
 
-// Exit if the unit doesn't have any adjusment variable
-_adjustment = _unit getVariable QGVAR(Adjustment);
-if (isNil "_adjustment") exitWith {};
+if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 
-// Exit if the unit isn't a player
-if !([_unit] call EFUNC(common,isPlayer)) exitWith {};
-
-_weapon = _this select 1;
-_projectile = _this select 5;
+_adjustment = _unit getVariable [QGVAR(Adjustment), []];
+if (_adjustment isEqualTo []) exitWith {};
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;
 
-// Convert zeroing from mils to degrees
-_zeroing = [_zeroing, {_this * 0.05625}] call EFUNC(common,map);
+if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 
-[_projectile, (_zeroing select 1), (_zeroing select 0) + (_zeroing select 2), 0] call EFUNC(common,changeProjectileDirection);
+// Convert zeroing from mils to degrees
+_zeroing = _zeroing vectorMultiply 0.05625;
+_zeroing params ["_elevation", "_windage", "_zero"];
+
+[_projectile, _windage, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);

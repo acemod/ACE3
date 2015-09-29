@@ -1,19 +1,18 @@
 /*
  * Author: commy2
+ * Determins type of object. Can be CfgVehicles or CfgAmmo.
  *
- * What kind of Cfg is the object. Works for CfgVehicles and CfgAmmo
+ * Arguments:
+ * 0: Object classname <STRING>
  *
- * Argument:
- * 0: An object's classname. (String)
+ * Return Value:
+ * Config category ("CfgWeapons", "Cfgmagazines", "CfgGlasses", "") <STRING>
  *
- * Return value:
- * CfgWhatever (String)
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private "_object";
-
-_object = _this select 0;
+params ["_object"];
 
 if (isClass (configFile >> "CfgVehicles" >> _object)) exitWith {"CfgVehicles"};
 

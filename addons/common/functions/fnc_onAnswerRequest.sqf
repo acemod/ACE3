@@ -1,20 +1,23 @@
-/**
- * fn_onAnswerRequest.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * N/A
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit","_requestID", "_id", "_accepted", "_info", "_callBack", "_caller", "_replyParams", "_requestMessage", "_target"];
-_unit = _this select 0;
-_id = _this select 1;
-_accepted = _this select 2;
+params ["_unit", "_id", "_accepted"];
+
+private ["_requestID", "_info", "_callBack", "_caller", "_replyParams", "_requestMessage", "_target"];
 
 _info = _unit getvariable _id;
+
 if (!isnil "_info") then {
     _caller = _info select 0;
     _target = _info select 1;
@@ -22,7 +25,7 @@ if (!isnil "_info") then {
     _requestMessage = _info select 3;
     _callBack = _info select 4;
     _replyParams = [_info, _accepted];
-    [_replyParams, QUOTE(FUNC(requestCallback)), _caller, false] call FUNC(execRemoteFnc);
+    [_replyParams, QFUNC(requestCallback), _caller, false] call FUNC(execRemoteFnc);
     _unit setvariable [_id, nil];
 };
 

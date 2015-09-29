@@ -15,14 +15,12 @@
 
 #include "script_component.hpp"
 
-private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos"];
+params ["", "_code"];
+TRACE_1("params",_code);
 
-_display  = _this select 0;
-_code     = _this select 1;
-_shiftKey = _this select 2;
-_ctrlKey  = _this select 3;
-_altKey   = _this select 4;
-_handled   = false;
+private ["_handled", "_relPos", "_diffVector", "_magDiffVector", "_lambdaLong", "_lambdaTrasAbs"];
+
+_handled = false;
 
 #define DIK_ESCAPE          0x01
 #define DIK_DELETE          0xD3
@@ -33,6 +31,7 @@ if (_code == DIK_ESCAPE) exitWith {
         call FUNC(cancelDrawing);
         _handled = true;
     };
+    _handled
 };
 
 if (_code == DIK_DELETE) exitWith {
@@ -68,6 +67,7 @@ if (_code == DIK_DELETE) exitWith {
             };
         } forEach GVAR(drawing_lineMarkers);
     };
+    _handled
 };
 
 _handled

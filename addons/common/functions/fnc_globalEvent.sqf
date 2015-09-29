@@ -1,22 +1,21 @@
 /*
  * Author: Nou
- *
  * Execute a global event on all clients, including self.
  *
- * Argument:
- * 0: Event name (string)
- * 1: Event args (any)
+ * Arguments:
+ * 0: Event name <STRING>
+ * 1: Event args <ANY>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-private ["_eventName", "_eventArgs"];
 
-_eventName = _this select 0;
-_eventArgs = _this select 1;
-
+params ["_eventName", "_eventArgs"];
 
 ACEg = [_eventName, _eventArgs];
 publicVariable "ACEg";
+
 ["ACEg", ACEg] call FUNC(_handleNetEvent);

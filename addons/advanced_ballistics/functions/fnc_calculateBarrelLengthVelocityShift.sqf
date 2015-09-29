@@ -1,66 +1,70 @@
 /*
- * Author: Ruthberg
+ * Author: Ruthberg, MikeMatrix, joko // Jonas
  *
  * Calculates the muzzle velocity shift caused by different barrel lengths
  *
  * Arguments:
- * 0: ammo - classname <string>
- * 0: weapon - classname <string>
- * 1: muzzle velocity - m/s <NUMBER>
+ * 0: barrel length - mm
+ * 1: muzzle velocity lookup table - m/s <ARRAY>
+ * 2: barrel length lookup table - mm <ARRAY>
+ * 3: muzzle velocity - m/s <NUMBER>
  *
  * Return Value:
- * 0: muzzle velocity shift - m/s <NUMBER>
+ * muzzle velocity shift - m/s <NUMBER>
  *
- * Return value:
- * None
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_weapon", "_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity", "_lowerIndex", "_upperIndex", "_barrelLengthRatio", "_muzzleVelocityNew"];
-_ammo           = _this select 0;
-_weapon         = _this select 1;
-_muzzleVelocity = _this select 2;
+scopeName "main";
 
-_barrelLength = getNumber(configFile >> "cfgWeapons" >> _weapon >> "ACE_barrelLength");
+private ["_muzzleVelocityTableCount", "_barrelLengthTableCount", "_lowerDataIndex",
+    "_upperDataIndex", "_lowerBarrelLength", "_upperBarrelLength", "_lowerMuzzleVelocity",
+    "_upperMuzzleVelocity", "_interpolationRatio"];
+params ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity"];
 
+// If barrel length is not defined, then there is no point in calculating muzzle velocity
 if (_barrelLength == 0) exitWith { 0 };
 
-_muzzleVelocityTable = [];
-_barrelLengthTable = [];
+_muzzleVelocityTableCount = count _muzzleVelocityTable;
+_barrelLengthTableCount = count _barrelLengthTable;
 
-if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities")) then {
-    _muzzleVelocityTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_muzzleVelocities");
+// Exit if tables are different sizes, have no elements or have only one element
+if (_muzzleVelocityTableCount != _barrelLengthTableCount || _muzzleVelocityTableCount == 0 || _barrelLengthTableCount == 0) exitWith { 0 };
+if (_muzzleVelocityTableCount == 1) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
+
+// If we have the precise barrel length value, return result immediately
+if (_barrelLength in _barrelLengthTable) exitWith {
+    (_muzzleVelocityTable select (_barrelLengthTable find _barrelLength)) - _muzzleVelocity
 };
-if (isArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths")) then {
-    _barrelLengthTable = getArray(configFile >> "cfgAmmo" >> _ammo >> "ACE_barrelLengths");
-};
 
-if (count _muzzleVelocityTable != count _barrelLengthTable) exitWith { 0 };
-if (count _muzzleVelocityTable == 0 || count _barrelLengthTable == 0) exitWith { 0 };
-if (count _muzzleVelocityTable == 1) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
+// Limit values to lower and upper bound of data we have available
+if (_barrelLength <= (_barrelLengthTable select 0)) exitWith { (_muzzleVelocityTable select 0) - _muzzleVelocity };
+if (_barrelLength >= (_barrelLengthTable select _barrelLengthTableCount - 1)) exitWith { (_muzzleVelocityTable select _barrelLengthTableCount - 1) - _muzzleVelocity };
 
-_lowerIndex = 0;
-_upperIndex = (count _barrelLengthTable) - 1;
-
-if (_barrelLength <= (_barrelLengthTable select _lowerIndex)) exitWith { (_muzzleVelocityTable select _lowerIndex) - _muzzleVelocity };
-if (_barrelLength >= (_barrelLengthTable select _upperIndex)) exitWith { (_muzzleVelocityTable select _upperIndex) - _muzzleVelocity };
-
-for "_i" from 0 to (count _barrelLengthTable) - 1 do {
-    if (_barrelLength >= _barrelLengthTable select _i) then {
-        _lowerIndex = _i;
+// Find closest bordering values for barrel length
+{
+    if (_barrelLength <= _x) then {
+        _upperDataIndex = _forEachIndex;
+        _lowerDataIndex = _upperDataIndex - 1;
+        breakTo "main";
     };
-};
-for "_i" from (count _barrelLengthTable) - 1 to 0 step -1 do {
-    if (_barrelLength <= _barrelLengthTable select _i) then {
-        _upperIndex = _i;
-    };
+} forEach _barrelLengthTable;
+
+// Worst case scenario
+if (isNil "_lowerDataIndex" || isNil "_upperDataIndex") exitWith {0};
+
+_lowerBarrelLength = _barrelLengthTable select _lowerDataIndex;
+_upperBarrelLength = _barrelLengthTable select _upperDataIndex;
+_lowerMuzzleVelocity = _muzzleVelocityTable select _lowerDataIndex;
+_upperMuzzleVelocity = _muzzleVelocityTable select _upperDataIndex;
+
+// Calculate interpolation ratio
+_interpolationRatio = if (abs (_lowerBarrelLength - _upperBarrelLength) > 0) then {
+    (_upperBarrelLength - _barrelLength) / (_upperBarrelLength - _lowerBarrelLength)
+} else {
+    0
 };
 
-_barrelLengthRatio = 0;
-if ((_barrelLengthTable select _upperIndex) - (_barrelLengthTable select _lowerIndex) > 0) then {
-    _barrelLengthRatio = ((_barrelLengthTable select _upperIndex) - _barrelLength) / ((_barrelLengthTable select _upperIndex) - (_barrelLengthTable select _lowerIndex));
-};
-
-_muzzleVelocityNew = (_muzzleVelocityTable select _lowerIndex) + ((_muzzleVelocityTable select _upperIndex) - (_muzzleVelocityTable select _lowerIndex)) * (1 - _barrelLengthRatio);
-
-_muzzleVelocityNew - _muzzleVelocity
+// Calculate interpolated muzzle velocity shift
+(_lowerMuzzleVelocity + ((_upperMuzzleVelocity - _lowerMuzzleVelocity) * (1 - _interpolationRatio))) - _muzzleVelocity // Return

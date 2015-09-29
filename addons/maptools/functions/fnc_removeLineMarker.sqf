@@ -11,7 +11,7 @@
 
 #include "script_component.hpp"
 
-_name     = _this select 0;
+params ["_name"];
 
 deleteMarkerLocal _name;
 {

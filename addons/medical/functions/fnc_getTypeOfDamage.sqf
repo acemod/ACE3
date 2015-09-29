@@ -13,22 +13,19 @@
 
 #include "script_component.hpp"
 
-private ["_typeOfProjectile","_typeOfInjury"];
-_typeOfProjectile = _this select 0;
-_typeOfInjury = switch (true) do {
-    case (_typeOfProjectile iskindof "BulletBase"): {"Bullet"};
-    case (_typeOfProjectile iskindof "GrenadeCore"): {"Grenade"};
-    case (_typeOfProjectile iskindof "TimeBombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "MineCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "FuelExplosion"): {"Explosive"};
-    case (_typeOfProjectile iskindof "ShellBase"): {"Shell"};
-    case (_typeOfProjectile iskindof "RocketBase"): {"Explosive"};
-    case (_typeOfProjectile iskindof "MissileBase"): {"Explosive"};
-    case (_typeOfProjectile iskindof "LaserBombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "BombCore"): {"Explosive"};
-    case (_typeOfProjectile iskindof "Grenade"): {"Grenade"};
-    case (_typeOfProjectile == "VehicleCrash"): {"VehicleCrash"};
-    default {_typeOfProjectile};
-};
-// TODO replace the capitalization on the switch results instead..
-toLower _typeOfInjury;
+params ["_typeOfProjectile"];
+
+
+if (_typeOfProjectile isKindOf "BulletBase") exitWith {"bullet"};
+if (_typeOfProjectile isKindOf "ShotgunBase") exitwith {"bullet"};
+if (_typeOfProjectile isKindOf "GrenadeCore") exitWith {"grenade"};
+if (_typeOfProjectile isKindOf "TimeBombCore") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "MineCore") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "FuelExplosion") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "ShellBase") exitWith {"shell"};
+if (_typeOfProjectile isKindOf "RocketBase") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "MissileBase") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "LaserBombCore") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "BombCore") exitWith {"explosive"};
+if (_typeOfProjectile isKindOf "Grenade") exitWith {"grenade"};
+toLower _typeOfProjectile

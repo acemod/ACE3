@@ -1,26 +1,38 @@
-/**
- * fn_inheritsFrom.sqf
- * @Descr: Checks whether a given configuration name appears in the inheritance tree of a specific configuration entry.
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
+ * Checks whether a given configuration name appears in the inheritance tree of a specific configuration entry.
  *
- * @Arguments: [configEntry CONFIG, configname STRING]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: configEntry (CONFIG)
+ * 1: configname (STING)
+ *
+ * Return Value:
+ * BOOLEAN
+ *
+ * Public: Yes
+ *
+ * Note: Not to be confused with the inheritsFrom scripting command.
+ *
+ * Deprecated
  */
-
 #include "script_component.hpp"
 
- private ["_configEntry","_configMatch", "_match"];
-_configEntry = _this select 0;
-_configMatch = _this select 1;
+ACE_DEPRECATED("ace_common_fnc_inheritsFrom","3.5.0","inheritsFrom ARRAY");
 
-if (configName _configEntry == _configMatch) exitWith { true };
-if (configName _configEntry == ",") exitWith { false };
+params ["_configEntry", "_configMatch"];
 
+if (configName _configEntry == _configMatch) exitWith {true};
+if (configName _configEntry == ",") exitWith {false};
+
+private "_match";
 _match = false;
+
 while {configName _configEntry != ""} do {
-    if (configName _configEntry == _configMatch) exitWith { _match = true };
-    _configEntry = inheritsFrom(_configEntry);
+    if (configName _configEntry == _configMatch) exitWith {
+        _match = true;
+    };
+
+    _configEntry = inheritsFrom _configEntry;
 };
 
 _match

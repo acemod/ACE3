@@ -1,7 +1,9 @@
 // by commy2
 #include "script_component.hpp"
 
-_wall = _this select 0;
+private "_paper";
+
+params ["_wall"];
 
 if (local _wall) then {
     _paper = "UserTexture_1x2_F" createVehicle position _wall;

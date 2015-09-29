@@ -14,6 +14,9 @@ PREP(guidancePFH);
 PREP(doAttackProfile); 
 PREP(doSeekerSearch);
 
+PREP(doHandoff);
+PREP(handleHandoff);
+
 // Attack Profiles
 PREP(attackProfile_LIN);
 PREP(attackProfile_DIR);

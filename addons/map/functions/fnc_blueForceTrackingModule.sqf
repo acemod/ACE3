@@ -1,6 +1,5 @@
 /*
 * Author: KoffeinFlummi
-*
 * Initializes the blue force tracking module.
 *
 * Arguments:
@@ -12,21 +11,12 @@
 
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!isServer) exitWith {};
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic"];
 
-if !(_activated) exitWith {};
-
-GVAR(BFT_Enabled) = true;
+[_logic, QGVAR(BFT_Enabled), "Enabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_Interval), "Interval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Blue Force Tracking Module initialized.";
-TRACE_2("[ACE]: Blue Force Tracking Module initialized.",GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));
-
-//start BFT:
-GVAR(BFT_markers) = [];
-[FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
+ACE_LOGINFO_3("Blue Force Tracking Module Initialized:", GVAR(BFT_Enabled), GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));

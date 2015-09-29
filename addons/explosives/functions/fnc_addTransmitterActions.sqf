@@ -14,8 +14,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_items", "_unit", "_children", "_config"];
-_unit = _this select 0;
+
+params ["_unit"];
+TRACE_1("params",_unit);
+
+private ["_children", "_config", "_detonators"];
+
 _detonators = [_unit] call FUNC(getDetonators);
 _children = [];
 {
@@ -34,6 +38,6 @@ _children = [];
             [],
             ACE_Player
         ];
-} foreach _detonators;
+} forEach _detonators;
 
 _children

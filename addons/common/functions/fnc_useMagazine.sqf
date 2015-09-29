@@ -1,30 +1,32 @@
-/**
- * fn_useMagazine.sqf
- * @Descr: Use magazine
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Use magazine
  *
- * @Arguments: [unit OBJECt, magazine STRING]
- * @Return: BOOL True if magazine has been used.
- * @PublicAPI: true
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: magazine <STRING>
+ *
+ * Return Value:
+ * if magazine has been used. <BOOL>
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_magazine","_return"];
-_unit = _this select 0;
-_magazine = _this select 1;
-_vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
+params ["_unit", "_magazine", ["_vehicleUsage", false]];
 
-if (!_vehicleUsage) then {
+private "_return";
+_return = false;
+
+if !(_vehicleUsage) then {
     if (_magazine != "") then {
         _unit removeMagazine _magazine;
         _return = true;
-    } else {
-        _return = false;
     };
-    [format["fnc_useMagazine: %1 | %2",_this,_return]] call FUNC(debug);
-_return
-} else
-{
-    // TODO implement shared magazine functionality
+
+    [format ["fnc_useMagazine: %1 | %2", _this, _return]] call FUNC(debug);
+//} else {
+    // @todo implement shared magazine functionality
 };
+
+_return

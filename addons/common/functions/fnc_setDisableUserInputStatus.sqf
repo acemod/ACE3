@@ -1,24 +1,26 @@
-/**
- * fn_setDisableUserInputStatus.sqf
- * @Descr: Disables the user input. Works stacked.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Disables the user input. Works stacked.
  *
- * @Arguments: [id STRING, disable BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: id <STRING>
+ * 1: disable <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-private ["_id","_disable"];
-_id = _this select 0;
-_disable = _this select 1;
 
+params ["_id", "_disable"];
 
-if (isnil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
+if (isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = [];
 };
 
 if (_disable) then {
-    GVAR(DISABLE_USER_INPUT_COLLECTION) pushback _id;
+    GVAR(DISABLE_USER_INPUT_COLLECTION) pushBack _id;
     [true] call FUNC(disableUserInput);
 } else {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = GVAR(DISABLE_USER_INPUT_COLLECTION) - [_id];

@@ -4,32 +4,42 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
- * 1: Set unconsciouns <BOOL> <OPTIONAL>
- * 2: Minimum unconscious time <NUMBER> <OPTIONAL>
+ * 1: Set unconsciouns <BOOL> (default: true)
+ * 2: Minimum unconscious ACE_time <NUMBER> (default: (round(random(10)+5)))
+ * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * ReturnValue:
  * nil
+ *
+ * Example:
+ * [bob, true] call ace_medical_fnc_setUnconscious;
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-#define DEFAULT_DELAY   (round(random(10)+5))
+#define DEFAULT_DELAY (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_captiveSwitch", "_startingTime","_minWaitingTime"];
-_unit = _this select 0;
-_set = if (count _this > 1) then {_this select 1} else {true};
-_minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
-
-if !(_set) exitwith {
-    _unit setvariable ["ACE_isUnconscious", false,true];
+// only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-if !(!(isNull _unit) && {(_unit isKindOf "CaManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
+private ["_animState", "_originalPos", "_startingTime", "_isDead"];
+params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
+
+// No change, fuck off. (why is there no xor?)
+if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
+
+if !(_set) exitwith {
+    _unit setvariable ["ACE_isUnconscious", false, true];
+};
+
+if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
 
 if (!local _unit) exitwith {
-    [[_unit], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
 _unit setvariable ["ACE_isUnconscious", true, true];
@@ -37,15 +47,26 @@ _unit setUnconscious true;
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
-    closeDialog 0;
+    while {dialog} do {
+        closeDialog 0;
+    };
 };
+
+// if we have unconsciousness for AI disabled, we will kill the unit instead
+_isDead = false;
+if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
+    _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
+    if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
+        [_unit, true] call FUNC(setDead);
+        _isDead = true;
+    };
+};
+if (_isDead) exitWith {};
 
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
 if ((vehicle _unit) isKindOf "StaticWeapon") then {
-    moveOut _unit;
-    unassignVehicle _unit;
-    //_unit action ["eject", vehicle _unit];
+    [_unit] call EFUNC(common,unloadPerson);
 };
 if (animationState _unit in ["ladderriflestatic","laddercivilstatic"]) then {
     _unit action ["ladderOff", (nearestBuilding _unit)];
@@ -55,12 +76,14 @@ if (vehicle _unit == _unit) then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
     };
     _unit selectWeapon (primaryWeapon _unit);
-    _unit switchMove "";
-    _unit playmoveNow "";
 };
 
 // We are storing the current animation, so we can use it later on when waking the unit up inside a vehicle
-_animState = animationState _unit;
+if (vehicle _unit != _unit) then {
+    _unit setVariable [QGVAR(vehicleAwakeAnim), [(vehicle _unit), (animationState _unit)]];
+};
+
+//Save current stance:
 _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
@@ -68,73 +91,25 @@ _unit setUnitPos "DOWN";
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 //Unconscious units shouldn't be put in another group #527:
-// [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
+    [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+};
 
 [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
-[_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
-
-_startingTime = time;
-
+_anim = [_unit] call EFUNC(common,getDeathAnim);
+[_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
-    private ["_unit", "_vehicleOfUnit","_minWaitingTime", "_oldAnimation", "_captiveSwitch", "_hasMovedOut"];
-    _args = _this select 0;
-    _unit = _args select 0;
-    _oldAnimation = _args select 1;
-    _originalPos = _args select 2;
-    _startingTime = _args select 3;
-    _minWaitingTime = _args select 4;
-    _hasMovedOut = _args select 5;
-
-    if (!alive _unit) exitwith {
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    params ["_unit", "_anim"];
+    if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
+        [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };
+}, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
 
-    // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
-    if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
+_startingTime = ACE_time;
 
-        // TODO, handle this with carry instead, so we can remove the PFH here.
-        // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
-        if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
-            if (vehicle _unit == _unit) then {
-                if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
-                    [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
-                    [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
-                } else {
-                    [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
-                };
-            } else {
-                // Switch to the units original animation, assuming
-                // TODO: what if the unit switched vehicle?
-                [_unit, _oldAnimation, 2] call EFUNC(common,doAnimation);
-            };
-            // EXIT PFH
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        };
-        if (!_hasMovedOut) then {
-            // Reset the unit back to the previous captive state.
-            [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
+[DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
-            // Swhich the unit back to its original group
-            //Unconscious units shouldn't be put in another group #527:
-            // [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
-
-            [_unit, false] call EFUNC(common,disableAI);
-            _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
-
-            _unit setUnconscious false;
-            ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
-            // ensure this statement runs only once
-            _args set [5, true];
-        };
-    };
-
-    // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-    if ((time - _startingTime) >= _minWaitingTime) exitwith {
-
-        if (!([_unit] call FUNC(getUnconsciousCondition))) then {
-            _unit setvariable ["ACE_isUnconscious", false, true];
-        };
-    };
-}, 0.1, [_unit,_animState, _originalPos, _startingTime, _minWaitingTime, false] ] call CBA_fnc_addPerFrameHandler;
+// unconscious can't talk
+[_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
 ["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);

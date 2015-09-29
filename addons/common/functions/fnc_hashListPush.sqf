@@ -1,10 +1,19 @@
-//fnc_hashListPush.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-private ["_hashList", "_value"];
+params ["_hashList", "_value"];
 
-_hashList = _this select 0;
-_value = _this select 1;
 ERRORDATA(2);
 try {
     if(VALIDHASH(_hashList)) then {

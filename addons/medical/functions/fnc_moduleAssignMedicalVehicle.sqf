@@ -8,16 +8,14 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
-
-
 #include "script_component.hpp"
 
-private ["_logic","_setting","_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
-_logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+private ["_setting", "_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList", "_xVehicle"];
+params [["_logic", objNull, [objNull]]];
 
 if (!isNull _logic) then {
     _list = _logic getvariable ["EnableList",""];
@@ -33,32 +31,33 @@ if (!isNull _logic) then {
                 _nilCheckPassedList = _nilCheckPassedList + ","+ _x;
             };
         };
-    }foreach _splittedList;
+    } foreach _splittedList;
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["enabled", false];
+    _setting = _logic getvariable ["enabled", 0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
         {
             if (!isnil "_x") then {
-                   if (typeName _x == typeName objNull) then {
+                if (typeName _x == typeName objNull) then {
                     if (local _x) then {
-                        _x setvariable [QGVAR(medicClass), _setting, true];
+                        _xVehicle = vehicle _x;
+                        TRACE_3("setting medical vehicle", _x, _xVehicle, (typeOf _xVehicle));
+                        _xVehicle setvariable [QGVAR(medicClass), _setting, true];
                     };
                 };
             };
-        }foreach _objects;
+        } foreach _objects;
     };
     {
         if (!isnil "_x") then {
-               if (typeName _x == typeName objNull) then {
+            if (typeName _x == typeName objNull) then {
                 if (local _x) then {
+                    TRACE_2("setting medical vehicle", _x, (typeOf _x));
                     _x setvariable [QGVAR(medicClass), _setting, true];
                 };
             };
         };
-    }foreach _parsedList;
- };
-
-true;
+    } foreach _parsedList;
+};

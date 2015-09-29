@@ -15,23 +15,24 @@
 
 // Iterate through settings
 {
-    _name = _x select 0;
-    _isClientSetable = _x select 2;
-    _isForced = _x select 6;
+    _x params ["_name", "", "_isClientSetable", "", "", "", "_isForced"];
 
     // If setting is user setable
     if (_isClientSetable) then {
         // If setting is not forced
         if !(_isForced) then {
-            _profileValue = profileNamespace getvariable _name;
+            private "_profileValue";
+            _profileValue = profileNamespace getVariable _name;
+
             // If the setting is stored on the profile
             if !(isNil "_profileValue") then {
                 // If the profile variable has the correct type
-                if (typeName _profileValue == typeName (missionNamespace getvariable _name)) then {
+                if (typeName _profileValue == typeName (missionNamespace getVariable _name)) then {
                     // Load the setting from the profile
-                    missionNamespace setvariable [_name, _profileValue];
+                    missionNamespace setVariable [_name, _profileValue];
                 };
             };
         };
     };
-} forEach GVAR(settings);
+    false
+} count GVAR(settings);

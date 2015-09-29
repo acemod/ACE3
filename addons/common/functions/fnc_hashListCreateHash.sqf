@@ -1,9 +1,21 @@
-//fnc_hashListCreateHash.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-private ["_hashList", "_hashKeys"];
+private ["_hashKeys"];
 
-_hashList = _this select 0;
+params ["_hashList"];
+
 ERRORDATA(1);
 _hashKeys = [];
 try {

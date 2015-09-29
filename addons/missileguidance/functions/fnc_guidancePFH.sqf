@@ -7,6 +7,7 @@ private["_launchParams", "_targetLaunchParams", "_flightParams", "_seekerParams"
 private["_lastRunTime", "_runtimeDelta", "_adjustTime", "_args", "_seekerTargetPos", "_projectilePos"];
 private["_profileAdjustedTargetPos", "_incDeflection", "_minDeflection", "_maxDeflection"];
 private["_targetVector", "_adjustVector", "_finalAdjustVector", "_changeVector", "_pitch", "_yaw", "_roll"];
+private["_PS", "_distanceToTarget", "_targetRelativeVector", "_vectorTo"];
 
 _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -23,7 +24,7 @@ _seekerParams = _args select 3;
 _stateParams = _args select 4;
 
 _lastRunTime = _stateParams select 0;
-_runtimeDelta = diag_tickTime - _lastRunTime;
+_runtimeDelta = ACE_diagTime - _lastRunTime;
 _adjustTime = 1;
 
 if(accTime > 0) then {
@@ -92,10 +93,14 @@ if(accTime > 0) then {
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
 drawLine3D [ASLtoATL _projectilePos, ASLtoATL _profileAdjustedTargetPos, [1,0,0,1]];
 
+_ps = "#particlesource" createVehicleLocal (ASLtoATL _projectilePos);
+_PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+_PS setDropInterval 3.0;
+
 hintSilent format["d: %1", _distanceToTarget];
 #endif
 
-_stateParams set[0, diag_tickTime];
+_stateParams set[0, ACE_diagTime];
 
 _args set[4, _stateParams];
 _this set[0, _args];

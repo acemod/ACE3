@@ -1,11 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ * Select weapon for unit in vehicle.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Weapon index <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, vehicle player, 1] call ace_weaponselect_fnc_selectWeaponVehicle
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_vehicle", "_index"];
-
-_unit = _this select 0;
-_vehicle = _this select 1;
-_index = _this select 2;
+params ["_unit", "_vehicle", "_index"];
 
 private "_turret";
 _turret = [_unit] call EFUNC(common,getTurretIndex);

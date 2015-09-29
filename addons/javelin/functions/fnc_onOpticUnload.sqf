@@ -1,13 +1,13 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 TRACE_1("enter", _this);
+private["_args", "_disableFireEH"];
 
-uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];
+// uiNameSpace setVariable ['ACE_RscOptics_javelin',nil];
 
-_pfh = uiNamespace getVariable["ACE_RscOptics_javelin_PFH", nil ];
-if(!isNil "_pfh") then {
-    [_pfh] call CBA_fnc_removePerFrameHandler;
-    uiNameSpace setVariable ['ACE_RscOptics_javelin_PFH',nil];
+if(GVAR(pfehID) != -1) then {
+    [GVAR(pfehID)] call CBA_fnc_removePerFrameHandler;
+    GVAR(pfehID) = -1;
 };
 
 _args = uiNamespace getVariable[QGVAR(arguments), nil ];

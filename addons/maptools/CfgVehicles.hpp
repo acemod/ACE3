@@ -4,66 +4,66 @@ class CfgVehicles {
         class ACE_SelfActions {
 
             class ACE_MapTools {
-                displayName = "$STR_ACE_MapTools_MapTools_Menu";
+                displayName = CSTRING(MapTools_Menu);
                 condition = QUOTE((call FUNC(canUseMapTools) || {call FUNC(canUseMapGPS)}));
                 statement = "";
-                exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 showDisabled = 0;
                 priority = 100;
 
                 class ACE_MapToolsHide {
-                    displayName = "$STR_ACE_MapTools_MapToolsHide";
+                    displayName = CSTRING(MapToolsHide);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 0; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    statement = QUOTE(GVAR(mapTool_Shown) = 0;);
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 5;
                 };
                 class ACE_MapToolsShowNormal {
-                    displayName = "$STR_ACE_MapTools_MapToolsShowNormal";
+                    displayName = CSTRING(MapToolsShowNormal);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 1}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 1; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    statement = QUOTE(GVAR(mapTool_Shown) = 1;);
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 4;
                 };
                 class ACE_MapToolsShowSmall {
-                    displayName = "$STR_ACE_MapTools_MapToolsShowSmall";
+                    displayName = CSTRING(MapToolsShowSmall);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 2}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 2; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    statement = QUOTE(GVAR(mapTool_Shown) = 2;);
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 3;
                 };
                 class ACE_MapToolsAlignNorth {
-                    displayName = "$STR_ACE_MapTools_MapToolsAlignNorth";
+                    displayName = CSTRING(MapToolsAlignNorth);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
-                    statement = QUOTE(GVAR(mapTool_angle) = 0; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    statement = QUOTE(GVAR(mapTool_angle) = 0;);
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 2;
                 };
                 class ACE_MapToolsAlignCompass {
-                    displayName = "$STR_ACE_MapTools_MapToolsAlignCompass";
+                    displayName = CSTRING(MapToolsAlignCompass);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0} && {('ItemCompass' in assigneditems ACE_player) || {'ItemCompass' in assigneditems ACE_player}}));
-                    statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player; [] call FUNC(updateMapToolMarkers));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player;);
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 1;
                 };
                 class ACE_MapGpsShow {
-                    displayName = "$STR_ACE_MapTools_MapGpsShow";
+                    displayName = CSTRING(MapGpsShow);
                     condition = QUOTE((call FUNC(canUseMapGPS) && {!GVAR(mapGpsShow)}));
                     statement = QUOTE(GVAR(mapGpsShow) = true; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     priority = 0;
                 };
                 class ACE_MapGpsHide {
-                    displayName = "$STR_ACE_MapTools_MapGpsHide";
+                    displayName = CSTRING(MapGpsHide);
                     condition = QUOTE((call FUNC(canUseMapGPS) && {GVAR(mapGpsShow)}));
                     statement = QUOTE(GVAR(mapGpsShow) = false; [GVAR(mapGpsShow)] call FUNC(openMapGps));
-                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
                     priority = 0;
                 };
@@ -73,7 +73,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 class ACE_CopyMap {
-                    displayName = "$STR_ACE_MapTools_CopyMap";
+                    displayName = CSTRING(CopyMap);
                     condition = QUOTE(([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart));
                     showDisabled = 0;

@@ -18,7 +18,7 @@
 private ["_index"];
 _index = 0 max (lbCurSel 6000);
 
-GVAR(gunList) set [_index, +(GVAR(workingMemory) select GVAR(currentTarget))];
+GVAR(gunList) set [_index, +GVAR(workingMemory)];
 
 lbClear 6000;
 {

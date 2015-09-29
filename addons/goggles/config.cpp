@@ -2,15 +2,15 @@
 
 #define COLOUR 8.0
 class CfgPatches {
-  class ADDON {
-    units[] = {};
-    weapons[] = {};
-    requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common"};
-    author[] = {"Garth 'L-H' de Wet"};
-    authorUrl = "http://garth.snakebiteink.co.za/";
-    VERSION_CONFIG;
-  };
+    class ADDON {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common"};
+        author[] = {"Garth 'L-H' de Wet"};
+        authorUrl = "http://garth.snakebiteink.co.za/";
+        VERSION_CONFIG;
+    };
 };
 
 #include "CfgEventHandlers.hpp"
@@ -165,10 +165,6 @@ class CfgGlasses {
         ACE_Resistance = 1;
     };
 
-    class AV_ESS_blk:None{
-        COMBAT_GOGGLES
-    };
-
     class G_Balaclava_blk;
 
     class G_Balaclava_combat:G_Balaclava_blk {
@@ -243,14 +239,7 @@ class SniperCloud {
     ACE_Goggles_BulletCount = 1;
 };
 
-class ACE_Settings {
-    class GVAR(showInThirdPerson) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = "$STR_ACE_Goggles_ShowInThirdPerson";
-    };
-};
+#include "ACE_Settings.hpp"
 
 class CfgCloudlets {
     class Default;

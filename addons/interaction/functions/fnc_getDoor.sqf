@@ -1,19 +1,34 @@
-// by commy2
+/*
+ * Author: commy2
+ * Find door.
+ *
+ * Arguments:
+ * 0: Distance <NUMBER>
+ *
+ * Return Value:
+ * House objects and door <ARRAY>
+ * 0: House <OBJECT>
+ * 1: Door Name <STRING>
+ *
+ * Example:
+ * [player, target] call ace_interaction_fnc_getDoor
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_distance", "_position0", "_position1", "_intersections", "_count", "_house", "_door", "_index", "_id"];
+params ["_distance"];
 
-_distance = _this select 0;
+private ["_position0", "_position1", "_intersections", "_house", "_door"];
 
 _position0 = positionCameraToWorld [0, 0, 0];
 _position1 = positionCameraToWorld [0, 0, _distance];
 
-_intersections = lineIntersectsWith [ATLToASL _position0, ATLToASL _position1, objNull, objNull, true];
+_intersections = lineIntersectsSurfaces [AGLToASL _position0, AGLToASL _position1, cameraOn, objNull, true, 1, "GEOM"];
 
-_count = count _intersections;
-if (_count == 0) exitWith {[objNull, ""]};
+if (_intersections isEqualTo []) exitWith {[objNull, ""]};
 
-_house = _intersections select (_count - 1);
+_house = _intersections select 0 select 2;
 
 // shithouse is bugged
 if (typeOf _house == "") exitWith {[objNull, ""]};
@@ -21,5 +36,7 @@ if (typeOf _house == "") exitWith {[objNull, ""]};
 _intersections = [_house, "GEOM"] intersect [_position0, _position1];
 
 _door = _intersections select 0 select 0;
+
 if (isNil "_door") exitWith {[_house, ""]};
+
 [_house, _door]

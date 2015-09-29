@@ -1,37 +1,27 @@
 /*
-  Name: ACE_Respawn_fnc_removeBody
-  
-  Author(s):
-    bux578
-  
-  Description:
-    removes a given body
-  
-  Parameters:
-    0: OBJECT - body
-    1: BOOLEAN - forceRemove // not used atm
-  
-  Returns:
-    VOID
-*/
-
+ * Author: bux578, commy2
+ * Removes a given body.
+ *
+ * Arguments:
+ * 0: Body <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [corpse] call ace_respawn_fnc_removeBody
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
- 
-private ["_body", "_forceRemove", "_bodyRemoveTimer"];
 
-_body = _this select 0;
-_forceRemove = _this select 1;
+params ["_body", "_forceRemove"];
 
-_bodyRemoveTimer = GVAR(BodyRemoveTimer) max 0;
+private "_bodyRemoveTimer";
+_bodyRemoveTimer = [GVAR(BodyRemoveTimer) max 0, 2] select _forceRemove; // could be used for SpecOps missions.
 
-// could be used for SpecOps missions.
-if (_forceRemove) then {
-  _bodyRemoveTimer = 2;
-};
-
-[_body, _bodyRemoveTimer] spawn {
-    sleep (_this select 1);
+[{
     // hideBody takes ~20s till body is fully underground
     // a better hideBody would make this more aesthetic
-    deleteVehicle (_this select 0);
-};
+    deleteVehicle _this;
+}, _body, _bodyRemoveTimer] call EFUNC(common,waitAndExecute);

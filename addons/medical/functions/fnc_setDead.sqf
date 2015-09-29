@@ -6,19 +6,15 @@
  * 0: The unit that will be killed <OBJECT>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_force"];
-_unit = _this select 0;
-_force = false;
-if (count _this >= 2) then {
-    _force = _this select 1;
-};
+private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
+params ["_unit", ["_force", false]];
 
 if (!alive _unit) exitwith{true};
 if (!local _unit) exitwith {
@@ -26,7 +22,8 @@ if (!local _unit) exitwith {
     false;
 };
 
-if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && !_force) exitwith {
+_reviveVal = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
+if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
     if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
             _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
@@ -39,17 +36,17 @@ if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && !
     };
 
     _unit setvariable [QGVAR(inReviveState), true, true];
-    _unit setvariable [QGVAR(reviveStartTime), time];
+    _unit setvariable [QGVAR(reviveStartTime), ACE_time];
     [_unit, true] call FUNC(setUnconscious);
 
     [{
-        private ["_args","_unit","_startTime"];
-        _args = _this select 0;
-        _unit = _args select 0;
+        private "_startTime";
+        params ["_args", "_idPFH"];
+        _args params ["_unit"];
         _startTime = _unit getvariable [QGVAR(reviveStartTime), 0];
 
-        if (time - _startTime > GVAR(maxReviveTime)) exitwith {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
             _unit setvariable [QGVAR(inReviveState), nil, true];
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [_unit, true] call FUNC(setDead);
@@ -63,7 +60,12 @@ if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) && !
             };
 
             _unit setvariable [QGVAR(reviveStartTime), nil];
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
+        };
+        if (GVAR(level) >= 2) then {
+            if (_unit getvariable [QGVAR(heartRate), 60] > 0) then {
+                _unit setvariable [QGVAR(heartRate), 0];
+            };
         };
     }, 1, [_unit] ] call CBA_fnc_addPerFrameHandler;
     false;
@@ -73,5 +75,8 @@ _unit setvariable ["ACE_isDead", true, true];
 if (isPLayer _unit) then {
     _unit setvariable ["isDeadPlayer", true, true];
 };
-_unit setdamage 1;
+
+["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+
+[_unit, 1] call FUNC(setStructuralDamage);
 true;

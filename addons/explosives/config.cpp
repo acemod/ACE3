@@ -12,6 +12,8 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
+
 #include "CfgEventHandlers.hpp"
 
 #include "CfgAmmo.hpp"
@@ -21,6 +23,7 @@ class CfgPatches {
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
+#include "GUI_VirtualAmmo.hpp"
 
 class CfgActions {
     class None;
@@ -37,16 +40,5 @@ class CfgMineTriggers {
     class MagneticTrigger: RangeTrigger {
         mineMagnetic = 1;
         mineTriggerRange = 1;
-    };
-};
-
-class ACE_Settings {
-    class GVAR(RequireSpecialist) {
-        value = 0;
-        typeName = "BOOL";
-    };
-    class GVAR(PunishNonSpecialists) {
-        value = 1;
-        typeName = "BOOL";
     };
 };

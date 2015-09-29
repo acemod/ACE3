@@ -13,6 +13,6 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_namespace,_uid);
+params ["_namespace", "_uid"];
 
 _namespace setVariable [_uid, nil];

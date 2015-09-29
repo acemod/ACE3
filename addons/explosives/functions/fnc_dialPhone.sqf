@@ -15,8 +15,12 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_arr", "_ran", "_i","_speedDial"];
-EXPLODE_2_PVT(_this,_unit,_code);
+
+params ["_unit", "_code"];
+TRACE_2("params",_unit,_code);
+
+private ["_arr", "_ran", "_i"];
+
 if (_unit getVariable [QGVAR(Dialing),false]) exitWith {};
 if !(alive _unit) exitWith {};
 _unit setVariable [QGVAR(Dialing), true, true];
@@ -36,7 +40,7 @@ if (_unit == ace_player) then {
         [{
             playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_this select 1),3.16228,1,75];
             (_this select 0) setVariable [QGVAR(Dialing), false, true];
-        }, [_unit,_explosive select 0], 0.25 * (count _arr - 4), 0] call EFUNC(common,waitAndExecute);
+        }, [_unit,_explosive select 0], 0.25 * (count _arr - 4)] call EFUNC(common,waitAndExecute);
         [_explosive select 0,(0.25 * (count _arr - 1)) + (_explosive select 2)] call FUNC(startTimer);
     };
 };

@@ -1,21 +1,26 @@
 /*
  * Author: bux578
- *
  * Initializes the Interaction module.
  *
  * Arguments:
- * Whatever the module provides. (I dunno.)
+ * 0: Logic <NUMBER>
+ * 1: Units <ARRAY>
+ * 2: Activation State <BOOL>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [logic, ???, activationState] call ace_interaction_fnc_moduleInteraction
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_activated = _this select 2;
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Interaction Module Initialized.";
+ACE_LOGINFO("Interaction Module Initialized.");

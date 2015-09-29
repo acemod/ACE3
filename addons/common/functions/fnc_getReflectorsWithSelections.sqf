@@ -6,16 +6,19 @@
  * They behave like having an armor value of 0.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * The light names and selections (Array)
+ * 0: Light Hitpoints <ARRAY>
+ * 1: Selections <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_hitpoints", "_selections"];
+params ["_vehicle"];
 
-_vehicle = _this select 0;
+private ["_config", "_hitpoints", "_selections"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -24,8 +27,8 @@ _selections = [];
 
 // iterate through all parents
 while {isClass _config} do {
-	private "_class";
-	_class = _config >> "Reflectors";
+    private "_class";
+    _class = _config >> "Reflectors";
 
     for "_i" from 0 to (count _class - 1) do {
         private ["_entry", "_selection"];

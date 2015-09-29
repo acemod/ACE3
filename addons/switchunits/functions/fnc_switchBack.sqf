@@ -10,32 +10,28 @@
  * None
  *
  * Example:
- * [_origPlayer, _respPlayer] call FUNC(switchBack)
+ * [_originalPlayerUnit, _currentUnit] call ace_switchunits_fnc_switchBack
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_origPlayerUnit"];
+params ["_originalPlayerUnit"];
 
-_origPlayerUnit = _this select 0;
-[_origPlayerUnit] joinSilent GVAR(OriginalGroup);
+[_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
-DFUNC(pfhSwitchBack) = {
-    
-    private ["_args", "_originalPlayerUnit", "_currentUnit"];
-    
-    _args = _this select 0;
-    
-    _originalPlayerUnit = _args select 0;
-    _currentUnit = _args select 1;
+[{
+    params ["_args", "_pfhId"];
+    _args params ["_originalPlayerUnit", "_currentUnit"];
 
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;
         deleteVehicle _currentUnit;
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
-    };
-};
 
-[FUNC(pfhSwitchBack), 0.2, _this] call CBA_fnc_addPerFrameHandler;
+        private "_layer";
+        _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
+        _layer cuttext ["","plain"];
+
+        [_pfhId] call cba_fnc_removePerFrameHandler;
+    };
+}, 0.2, _this] call CBA_fnc_addPerFrameHandler;

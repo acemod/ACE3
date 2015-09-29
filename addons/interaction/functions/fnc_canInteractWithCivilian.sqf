@@ -1,11 +1,22 @@
-// by commy2
-
+/*
+ * Author: commy2
+ * Checks if the unit can interact with civilian
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Target has to be on the civilian side (default: true) <BOOL>
+ *
+ * Return Value:
+ * Able to interact with civilian <BOOL>
+ *
+ * Example:
+ * [target] call ace_interaction_fnc_canInteractWithCivilian
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_isCivilian);
+params ["_unit", "_target", ["_isCivilian", true]];
 
-if (isNil "_isCivilian") then {_isCivilian = true};
-
-alive _unit
-&& [side _unit != side ACE_player, side group _unit == civilian] select _isCivilian
-//&& {count (weapons _unit) == 0}
+alive _target && [side _target != side _unit, side group _target == civilian] select _isCivilian // return

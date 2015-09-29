@@ -13,10 +13,12 @@
  */
 #include "script_component.hpp"
 
-_name     = _this select 0;
-_startPos = _this select 1;
-_difPos   = (_this select 2) vectorDiff _startPos ;
-_color    = _this select 3;
+params ["_name", "_startPos", "_endPos", "_color"];
+TRACE_4("params",_name,_startPos,_endPos,_color);
+
+private ["_difPos", "_mag"];
+
+_difPos = _endPos vectorDiff _startPos;
 
 _name setMarkerShapeLocal "RECTANGLE";
 _name setMarkerAlphaLocal 1;

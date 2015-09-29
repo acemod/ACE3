@@ -12,6 +12,8 @@ PREP(sendMarkersJIP);
 PREP(setMarkerJIP);
 PREP(setMarkerNetwork);
 
+private ["_config", "_marker", "_a", "_scope", "_icon", "_rgba", "_name"];
+
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
     _config = configfile >> "CfgMarkers";
@@ -44,7 +46,8 @@ if (isNil QGVAR(MarkerColorsCache)) then {
                     _rgba set [_forEachIndex, call compile _x];
                 };
             } forEach _rgba;
-            _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _rgba select 0, _rgba select 1, _rgba select 2, _rgba select 3];
+            _rgba params ["_red", "_green", "_blue", "_alpha"];
+            _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
             GVAR(MarkerColorsCache) pushBack [_name, _a, _icon];
         };

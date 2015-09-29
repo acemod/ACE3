@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet and CAA-Picard
- *
+ * Adds sub actions for all explosive magazines (from insertChildren)
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,9 +11,11 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_mags", "_item", "_index", "_children"];
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
+TRACE_1("params",_unit);
+
+private ["_mags", "_item", "_index", "_children", "_itemCount", "_list"];
 
 _mags = magazines _unit;
 _list = [];
@@ -41,16 +43,16 @@ _children = [];
         [
             [
                 format ["Explosive_%1", _forEachIndex],
-                format [_name + " (%1)", _itemCount select _foreachIndex],
+                format [_name + " (%1)", _itemCount select _forEachIndex],
                 getText(_x >> "picture"),
-                {(_this select 2) call FUNC(setupExplosive);},
+                {[{_this call FUNC(setupExplosive)}, _this] call EFUNC(common,execNextFrame)},
                 {true},
                 {},
-                [_unit, configName _x]
+                (configName _x)
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit
         ];
-} foreach _list;
+} forEach _list;
 
 _children

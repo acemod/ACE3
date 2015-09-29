@@ -1,32 +1,26 @@
 /*
  * Author: commy2
- *
  * Unit claims the ownership over an object. This is used to prevent multiple players from draging the same ammo box or using up the same wheel when repairing etc.
  *
  * Arguments:
- * 0: Unit that claims another object. ObjNull to remove claim. (Object)
- * 1: The object that gets claimed. (Object)
- * 2: Lock the claimed object aswell? (Bool)
+ * 0: Unit that claims another object. ObjNull to remove claim. <OBJECT>
+ * 1: The object that gets claimed. <OBJECT>
+ * 2: Lock the claimed object aswell? (optional: false) <BOOL>
  *
  * Return Value:
- * NONE
+ * None
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_lockTarget"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_lockTarget = _this select 2;
-
-if (isNil "_lockTarget") then {_lockTarget = false};
+params ["_unit", "_target", ["_lockTarget", false]];
 
 private "_owner";
 _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-  diag_log text "[ACE] ERROR: Claiming already owned object.";
+    ACE_LOGERROR("Claiming already owned object.");
 };
 
 // transfer this immediately

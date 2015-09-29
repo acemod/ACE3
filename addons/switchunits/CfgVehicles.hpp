@@ -1,65 +1,53 @@
 class CfgVehicles {
-  class Module_F;
-  class ACE_ModuleSwitchUnits: Module_F {
-    author = "$STR_ACE_Common_ACETeam";
+  class ACE_Module;
+  class ACE_ModuleSwitchUnits: ACE_Module {
+    author = ECSTRING(common,ACETeam);
     category = "ACE";
-    displayName = "SwitchUnits System";
+    displayName = CSTRING(Module_DisplayName);
     function = FUNC(module);
     scope = 2;
     isGlobal = 1;
     icon = QUOTE(PATHTOF(UI\Icon_Module_SwitchUnits_ca.paa));
     class Arguments {
       class SwitchToWest {
-        displayName = "Switch to West?";
-        description = "Allow switching to west units?";
+        displayName = CSTRING(SwitchToWest_DisplayName);
+        description = CSTRING(SwitchToWest_Description);
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToEast {
-        displayName = "Switch to East?";
-        description = "Allow switching to east units?";
+        displayName = CSTRING(SwitchToEast_DisplayName);
+        description = CSTRING(SwitchToEast_Description);
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToIndependent {
-        displayName = "Switch to Independent?";
-        description = "Allow switching to independent units?";
+        displayName = CSTRING(SwitchToIndependent_DisplayName);
+        description = CSTRING(SwitchToIndependent_Description);
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class SwitchToCivilian {
-        displayName = "Switch to Civilian?";
-        description = "Allow switching to civilian units?";
+        displayName = CSTRING(SwitchToCivilian_DisplayName);
+        description = CSTRING(SwitchToCivilian_Description);
         typeName = "BOOL";
-        class values {
-          class Yes {name = "Yes"; value = 1;};
-          class No {default = 1; name = "No"; value = 0;};
-        };
+        defaultValue = 0;
       };
       class EnableSafeZone {
-        displayName = "Enable Safe Zone?";
-        description = "Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.";
+        displayName = CSTRING(EnableSafeZone_DisplayName);
+        description = CSTRING(EnableSafeZone_Description);
         typeName = "BOOL";
-        class values {
-          class Yes {default = 1; name = "Yes"; value = 1;};
-          class No {name = "No"; value = 0;};
-        };
+        defaultValue = 1;
       };
       class SafeZoneRadius {
-        displayName = "Safe Zone Radius";
-        description = "The safe zone around players from a different team. Default: 200";
+        displayName = CSTRING(SafeZoneRadius_DisplayName);
+        description = CSTRING(SafeZoneRadius_Description);
         typeName = "NUMBER";
         defaultValue = 100;
       };
+    };
+    class ModuleDescription {
+      description = CSTRING(Module_Description);
     };
   };
 };

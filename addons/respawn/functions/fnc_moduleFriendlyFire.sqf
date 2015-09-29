@@ -1,36 +1,33 @@
 /*
-  Name: ACE_Respawn_fnc_moduleFriendlyFire
-  
-  Author(s):
-    commy2
-  
-  Description:
-    initializes the Friendly Fire Messages module
-  
-  Parameters:
-    0: OBJECT - logic
-    1: ARRAY<OBJECT> - synced units
-    2: BOOLEAN - activated
-  
-  Returns:
-    VOID
-*/
-
+ * Author: commy2
+ * Initializes the friendly fire module.
+ *
+ * Arguments:
+ * 0: Logic <OBJECT>
+ * 1: Synced units <ARRAY>
+ * 2: Activated <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [logic, [ACE_Player], true] call ace_respawn_fnc_moduleFriendlyFire
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-_this spawn {
-    _logic = _this select 0;
-    _units = _this select 1;
-    _activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
-    if !(_activated) exitWith {};
+if !(_activated) exitWith {};
 
-    if (isServer) then {
-        _varName = QGVAR(showFriendlyFireMessage);
-
-        missionNamespace setVariable [_varName, true];
-        publicVariable _varName;
-    };
-
-    diag_log text "[ACE]: Friendly Fire Messages Module Initialized.";
+// this is done for JIP compatibility
+if (isServer) then {
+    [{
+        missionNamespace setVariable [QGVAR(showFriendlyFireMessage), true];
+        publicVariable QGVAR(showFriendlyFireMessage);
+    },
+    [], 0.1] call EFUNC(common,waitAndExecute);
 };
+
+ACE_LOGINFO("Friendly Fire Messages Module Initialized.");

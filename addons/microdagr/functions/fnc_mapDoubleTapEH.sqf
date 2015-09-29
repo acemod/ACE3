@@ -9,7 +9,7 @@
  * 3: MousePosY <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [minimap,0,0.5,0.5] call ace_microdagr_fnc_mapDoubleTapEH
@@ -18,13 +18,15 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_theMap,_mouseButton,_xPos,_yPos);
+params ["_theMap", "_mouseButton", "_xPos", "_yPos"];
+
+private ["_worldPos"];
 
 //Only handle LMB
 if (_mouseButton != 0) exitWith {};
 
 _worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];
-_worldPos set [2, (getTerrainHeightASL _worldPos)];
+_worldPos pushBack (getTerrainHeightASL _worldPos);
 
 GVAR(newWaypointPosition) = _worldPos;
 [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);

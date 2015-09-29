@@ -1,6 +1,5 @@
 /*
  * Author: KoffeinFlummi, commy2
- *
  * Filters array and removes every element not fitting the condition
  *
  * Arguments:
@@ -12,23 +11,21 @@
  *
  * Usage:
  * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_array", "_code", "_newArray", "_index"];
+params ["_array", "_code"];
 
-_array = _this select 0;
-_code = _this select 1;
+private "_result";
+_result = [];
 
-if (isNil "_array") exitWith {
-  diag_log text format ["[ACE] ERROR: No array for function filter in %1", _fnc_scriptNameParent];
-  []
-};
+{
+    if (_x call _code) then {
+        _result pushBack _x;
+    };
+    false
+} count _array;
 
-_newArray = [];
-for "_index" from 0 to (count _array - 1) do {
-  if ((_array select _index) call _code) then {
-    _newArray pushBack (_array select _index);
-  };
-};
-_newArray
+_result

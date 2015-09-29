@@ -3,6 +3,7 @@
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 private["_targets", "_foundTargetPos", "_launchParams", "_seekerParams", "_targetLaunchParams"];
+private["_angleFov", "_angleOkay", "_losOkay", "_seekerTargetPos", "_sensorPos", "_target"];
 
 _seekerTargetPos = _this select 0;
 
@@ -17,6 +18,7 @@ TRACE_1("", _launchParams);
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
     _foundTargetPos = getPosASL _target;
+    //_foundTargetPos = (_target modelToWorldVisual (getCenterOfMass _target));
 };
 
 // @TODO: This is seeker LOS and angle checks for LOAL only; LOBL does not need visual

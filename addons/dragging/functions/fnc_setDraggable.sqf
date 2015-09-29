@@ -10,18 +10,15 @@
  * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
  *
  * Return value:
- * NONE.
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_object", "_enableDrag", "_position", "_direction"];
-
-_this resize 4;
-
-_object = _this select 0;
-_enableDrag = _this select 1;
-_position = _this select 2;
-_direction = _this select 3;
+private ["_dragAction", "_dropAction", "_type", "_initializedClasses"];
+//IGNORE_PRIVATE_WARNING("_player", "_target");
+params ["_object", "_enableDrag", "_position", "_direction"];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(dragPosition), [0,0,0]];
@@ -37,8 +34,6 @@ _object setVariable [QGVAR(dragPosition), _position];
 _object setVariable [QGVAR(dragDirection), _direction];
 
 // add action to class if it is not already present
-private ["_type", "_initializedClasses"];
-
 _type = typeOf _object;
 _initializedClasses = GETGVAR(initializedClasses,[]);
 
@@ -48,8 +43,8 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses) = _initializedClasses;
 
-_dragAction = [QGVAR(drag), localize "STR_ACE_Dragging_Drag", "", {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
-_dropAction = [QGVAR(drop), localize "STR_ACE_Dragging_Drop", "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);
+_dragAction = [QGVAR(drag), localize LSTRING(Drag), "", {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
+_dropAction = [QGVAR(drop), localize LSTRING(Drop), "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _dragAction] call EFUNC(interact_menu,addActionToClass);
 [_type, 0, [], _dropAction] call EFUNC(interact_menu,addActionToClass);

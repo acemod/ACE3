@@ -9,7 +9,7 @@
  * The return value <NUMBER>
  *
  * Example:
- * _bool = [player] call ace_movement_fnc_getWeight
+ * [player] call ace_movement_fnc_getWeight
  *
  * Public: No
  */

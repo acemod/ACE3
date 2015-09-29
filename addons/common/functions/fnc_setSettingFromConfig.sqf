@@ -3,7 +3,7 @@
  * Load a setting from config if it was not previosuly forced. Force if neccesary.
  *
  * Arguments:
- * 0: Config entry (config entry)
+ * 0: Config entry <CONFIG>
  *
  * Return Value:
  * None
@@ -12,10 +12,12 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_optionEntry);
+params ["_optionEntry"];
+
+private ["_fnc_getValueWithType", "_value", "_name", "_typeName", "_settingData", "_valueConfig", "_text"];
 
 _fnc_getValueWithType = {
-    EXPLODE_2_PVT(_this,_optionEntry,_typeName);
+    params ["_optionEntry", "_typeName"];
 
     _valueConfig = (_optionEntry >> "value");
     _value = if (isNumber (_optionEntry >> "value")) then {getNumber (_optionEntry >> "value")} else {0};
@@ -56,25 +58,39 @@ if (isNil _name) then {
     // Add the setting to a list on the server
     // Set the variable to not forced
     /*_settingData = [
-        _name,
-        _typeName,
-        _isClientSettable,
-        _localizedName,
-        _localizedDescription,
-        _possibleValues,
-        _isForced,
-        _defaultValue
+        name,
+        typeName,
+        isClientSettable,
+        localizedName,
+        localizedDescription,
+        possibleValues,
+        isForced,
+        defaultValue,
+        category
     ];*/
     _settingData = [
         _name,
         _typeName,
         (getNumber (_optionEntry >> "isClientSettable")) > 0,
-        getText (_optionEntry >> "displayName"),
-        getText (_optionEntry >> "description"),
-        getArray (_optionEntry >> "values"),
+        "", //getText (_optionEntry >> "displayName"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
+        "", //getText (_optionEntry >> "description"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
+        [], //getArray (_optionEntry >> "values"), //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
         getNumber (_optionEntry >> "force") > 0,
-        _value
+        _value,
+        "" //getText (_optionEntry >> "category")   //No need to broadcast, handeled by fnc_loadSettingsLocalizedText
     ];
+
+    //Strings in the values array won't be localized from the config, so just do that now:
+    /*private "_values";
+    _values = _settingData select 5;
+    {
+        _text = _x;
+        if (((typeName _text) == "STRING") && {(count _text) > 1} && {(_text select [0,1]) == "$"}) then {
+            _text = localize (_text select [1, ((count _text) - 1)]); //chop off the leading $
+            _values set [_forEachIndex, _text];
+        };
+    } forEach _values;*/
+
 
     GVAR(settings) pushBack _settingData;
 
@@ -87,11 +103,8 @@ if (isNil _name) then {
 
     // The setting is not forced, so update the value
 
-    // Get the type from the existing variable
-    _typeName = _settingData select 1;
-
-    // Read entry and cast it to the correct type
-    _value = [_optionEntry, _typeName] call _fnc_getValueWithType;
+    // Read entry and cast it to the correct type from the existing variable
+    _value = [_optionEntry, _settingData select 1] call _fnc_getValueWithType;
 
     // Update the variable
     missionNamespace setVariable [_name, _value];

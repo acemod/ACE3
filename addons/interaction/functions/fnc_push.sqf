@@ -1,22 +1,26 @@
 /*
  * Author: KoffeinFlummi
- *
- * Pushes a boat away from the player.
+ * Pushes a boat away from the player
  *
  * Arguments:
- * 0: Boat (object)
- * 1: Velocity (vectorlike array)
+ * 0: Boat <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [Boats, Jose] call ace_interaction_fnc_push
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-_boat = _this select 0;
-_velocity = _this select 1;
+params ["_boat", "_unit"];
 
-if !(local _boat) exitWith {
-  [_this, QUOTE(FUNC(push)), _boat] call EFUNC(common,execRemoteFnc);
-};
+private "_newVelocity";
+_newVelocity = vectorDir _unit;
+_newVelocity set [2, 0.25];
+_newVelocity = _newVelocity vectorMultiply 2;
 
-_boat setVelocity _velocity;
+["setVelocity", [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);

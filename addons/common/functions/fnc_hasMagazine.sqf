@@ -1,22 +1,18 @@
-/**
- * fn_hasMagazine.sqf
- * @Descr: Check if given unit has a magazine of given classname
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if given unit has a magazine of given classname
  *
- * @Arguments: [unit OBJECT, magazine STRING]
- * @Return: BOOL  True if unith as given magazine
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Magazine Classname <STRING>
+ *
+ * Return Value:
+ * has Magazine <BOOL>
+ *
+ * Public: yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_magazine","_return"];
-_unit = _this select 0;
-_magazine = _this select 1;
+params ["_unit", "_magazine"];
 
-if (_magazine != "") then {
-    _return =  (_magazine in magazines _unit);
-} else {
-    _return = false;
-};
-_return
+_magazine in magazines _unit // return

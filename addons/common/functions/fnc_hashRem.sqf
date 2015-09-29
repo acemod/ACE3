@@ -1,10 +1,21 @@
-//fnc_hashRem.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
+private ["_val", "_index"];
 
-_hash = _this select 0;
-_key = _this select 1;
+params ["_hash", "_key"];
+
 ERRORDATA(2);
 _val = nil;
 try {

@@ -8,7 +8,7 @@
  * 1: Waypoint Position ASL <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["Hill 55", [41,324, 12]] call ace_microdagr_fnc_deviceAddWaypoint
@@ -17,8 +17,11 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_waypointName,_waypointPosASL);
+private "_waypoints";
+params ["_waypointName","_waypointPosASL"];
 
-_waypoints = ace_player getVariable [QGVAR(waypoints), []];
+
+
+_waypoints = ACE_player getVariable [QGVAR(waypoints), []];
 _waypoints pushBack [_waypointName, _waypointPosASL];
-ace_player setVariable [QGVAR(waypoints), _waypoints];
+ACE_player setVariable [QGVAR(waypoints), _waypoints];

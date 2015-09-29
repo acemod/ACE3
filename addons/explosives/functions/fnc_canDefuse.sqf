@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 0: Target <OBJECT>
  *
  * Return Value:
  * Able to defuse <BOOL>
@@ -14,8 +15,12 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_specialist"];
-EXPLODE_2_PVT(_this,_unit,_target);
+
+params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
+
+private ["_isSpecialist"];
+
 if (isNull(_target getVariable [QGVAR(Explosive),objNull])) exitWith {
     deleteVehicle _target;
     false

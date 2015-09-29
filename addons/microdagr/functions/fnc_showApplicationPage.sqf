@@ -3,10 +3,10 @@
  * Changes the "application page" shown on the microDAGR
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_microdagr_fnc_showApplicationPage
@@ -15,21 +15,13 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_daylight", "_theMap", "_mapSize"];
+private ["_display", "_theMap", "_mapSize"];
 
 disableSerialization;
 
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
-if (isNull _display) exitWith {ERROR("No Display");};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
 
-//Fade "shell" at night
-_daylight = 0.05 max (((1 - overcast)/2 + ((1 - cos (daytime * 360/24)) / 4)) * (linearConversion [0, 1, sunOrMoon, (0.25 * moonIntensity), 1]));
-(_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
+if (isNull _display) exitWith {ERROR("No Display");};
 
 //TopBar
 (_display displayCtrl IDC_RANGEFINDERCONNECTEDICON) ctrlShow (GVAR(currentWaypoint) == -2);
@@ -88,10 +80,10 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
 
 
     if ((count GVAR(newWaypointPosition)) == 0) then {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize "STR_ACE_microdagr_wpEnterCords");
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize LSTRING(wpEnterCords));
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {
-        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize "STR_ACE_microdagr_wpEnterName"), mapGridPosition GVAR(newWaypointPosition)];
+        (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText format [(localize LSTRING(wpEnterName)), mapGridPosition GVAR(newWaypointPosition)];
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText format ["[%1]", mapGridPosition GVAR(newWaypointPosition)];
     };
     ctrlSetFocus (_display displayCtrl IDC_MODEMARK_CORDSEDIT);

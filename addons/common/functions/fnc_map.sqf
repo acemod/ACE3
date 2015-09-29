@@ -1,6 +1,5 @@
 /*
  * Author: KoffeinFlummi, commy2
- *
  * Applies given code to every element in an array, LIKE SOMETHING SQF SHOULD HAVE BY DEFAULT.
  *
  * Arguments:
@@ -12,20 +11,18 @@
  *
  * Usage:
  * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_array", "_code"];
+params ["_array", "_code"];
 
-_array = + _this select 0;
-_code = _this select 1;
-
-if (isNil "_array") exitWith {
-  diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
-  []
-};
+// copy array to not alter the original one
+_array = + _array;
 
 {
-  _array set [_forEachIndex, _x call _code];
+    _array set [_forEachIndex, _x call _code];
 } forEach _array;
+
 _array

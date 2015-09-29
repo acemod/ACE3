@@ -14,61 +14,38 @@
  * Public: No
  */
 #include "script_component.hpp"
-if !(hasInterface) exitWith {};
+
+//Event for setting explosive placement angle/pitch:
+[QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
+
+//When getting knocked out in medical, trigger deadman explosives:
+//Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
+if (isServer) then {
+    ["medical_onUnconscious", {
+        params ["_unit", "_isUnconscious"];
+        if (!_isUnconscious) exitWith {};
+        TRACE_1("Knocked Out, Doing Deadman", _unit);
+        [_unit] call FUNC(onIncapacitated);
+    }] call EFUNC(common,addEventHandler);
+};
+
+if (!hasInterface) exitWith {};
+
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
-//Cancel placement if interact menu opened
+
 ["interactMenuOpened", {
-    if (GVAR(pfeh_running) && {!isNull (GVAR(Setup))}) then {
-        call FUNC(place_Cancel)
+    //Cancel placement if interact menu opened
+    if (GVAR(pfeh_running)) then {
+        GVAR(placeAction) = PLACE_CANCEL;
     };
+
+    //Show defuse actions on cfgAmmos (allMines):
+    _this call FUNC(interactEH);
+
 }] call EFUNC(common,addEventHandler);
 
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
-player addEventHandler ["Killed", {
-    private "_deadman";
-    call FUNC(place_Cancel);
-    _deadman = [(_this select 0), "DeadManSwitch"] call FUNC(getPlacedExplosives);
-    {
-        [(_this select 0), -1, _x, true] call FUNC(detonateExplosive);
-    } count _deadman;
-}];
-player addEventHandler ["Take", {
-    private ["_item", "_getter", "_giver", "_config"];
-    _item = _this select 2;
-    _getter = _this select 0;
-    _giver = _this select 1;
-
-    _config = ConfigFile >> "CfgWeapons" >> _item;
-    if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
-        private ["_clackerItems"];
-        _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-        _getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
-
-        _detonators = [_giver] call FUNC(getDetonators);
-        if (count _detonators == 0) then {
-            _giver setVariable [QGVAR(Clackers), nil, true];
-        };
-    };
-}];
-player addEventHandler ["Put", {
-    private ["_item", "_getter", "_giver", "_config"];
-    _item = _this select 2;
-    _getter = _this select 1;
-    _giver = _this select 0;
-
-    _config = ConfigFile >> "CfgWeapons" >> _item;
-    if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
-        private ["_clackerItems"];
-        _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-        _getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
-
-        _detonators = [_giver] call FUNC(getDetonators);
-        if (count _detonators == 0) then {
-            _giver setVariable [QGVAR(Clackers), nil, true];
-        };
-    };
-}];
+[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(common,addScrollWheelEventHandler);

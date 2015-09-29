@@ -1,12 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ * Interpolates between two set points in a curve.
+ *
+ * Arguments:
+ * 0: List of numbers to interpolate from <ARRAY>
+ * 1: Value / index <NUMBER>
+ *
+ * Return Value:
+ * Interpolation result <NUMBER>
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-private ["_array", "_value", "_min", "_max"];
+params ["_array", "_value"];
 
-_array = _this select 0;
-_value = _this select 1;
+private ["_min", "_max"];
 
 _min = _array select floor _value;
 _max = _array select ceil _value;
 
-_min + (_max - _min) * (_value % 1)
+_min + (_max - _min) * (_value % 1) // return

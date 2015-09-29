@@ -1,4 +1,4 @@
-
+class Mode_SemiAuto;
 class Mode_FullAuto;
 
 class CfgWeapons {
@@ -7,304 +7,300 @@ class CfgWeapons {
     // MX
     class arifle_MX_Base_F;
     class arifle_MX_F: arifle_MX_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_Name";
+        displayName = CSTRING(arifle_MX_Name);
     };
     class arifle_MX_Black_F: arifle_MX_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_Black_Name";
+        displayName = CSTRING(arifle_MX_Black_Name);
     };
 
     class arifle_MXC_F: arifle_MX_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MXC_Name";
+        displayName = CSTRING(arifle_MXC_Name);
     };
     class arifle_MXC_Black_F: arifle_MXC_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MXC_Black_Name";
+        displayName = CSTRING(arifle_MXC_Black_Name);
     };
 
     class arifle_MX_GL_F: arifle_MX_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Name";
+        displayName = CSTRING(arifle_MX_GL_Name);
     };
     class arifle_MX_GL_Black_F: arifle_MX_GL_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_GL_Black_Name";
+        displayName = CSTRING(arifle_MX_GL_Black_Name);
     };
 
     class arifle_MX_SW_F: arifle_MX_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Name";
+        displayName = CSTRING(arifle_MX_SW_Name);
     };
     class arifle_MX_SW_Black_F: arifle_MX_SW_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MX_SW_Black_Name";
+        displayName = CSTRING(arifle_MX_SW_Black_Name);
     };
 
     class arifle_MXM_F: arifle_MX_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MXM_Name";
+        displayName = CSTRING(arifle_MXM_Name);
     };
     class arifle_MXM_Black_F: arifle_MXM_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_MXM_Black_Name";
+        displayName = CSTRING(arifle_MXM_Black_Name);
     };
 
     // Katiba
     class arifle_katiba_Base_F;
     class arifle_Katiba_F: arifle_katiba_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_Name";
+        displayName = CSTRING(arifle_Katiba_Name);
     };
     class arifle_Katiba_GL_F: arifle_katiba_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_GL_Name";
+        displayName = CSTRING(arifle_Katiba_GL_Name);
     };
     class arifle_Katiba_C_F: arifle_katiba_Base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Katiba_C_Name";
+        displayName = CSTRING(arifle_Katiba_C_Name);
     };
 
     // SDAR
     class SDAR_base_F;
     class arifle_SDAR_F: SDAR_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_SDAR_Name";
+        displayName = CSTRING(arifle_SDAR_Name);
     };
 
     // TAR-21
     class Tavor_base_F;
     class arifle_TRG21_F: Tavor_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_TRG21_Name";
+        displayName = CSTRING(arifle_TRG21_Name);
     };
     class arifle_TRG21_GL_F: arifle_TRG21_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_TRG21_GL_Name";
+        displayName = CSTRING(arifle_TRG21_GL_Name);
     };
     class arifle_TRG20_F: Tavor_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_TRG20_Name";
+        displayName = CSTRING(arifle_TRG20_Name);
     };
 
     // F2000
     class mk20_base_F;
     class arifle_Mk20_F: mk20_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_Name";
+        displayName = CSTRING(arifle_Mk20_Name);
     };
     class arifle_Mk20_plain_F: arifle_Mk20_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_plain_Name";
+        displayName = CSTRING(arifle_Mk20_plain_Name);
     };
 
     class arifle_Mk20C_F: mk20_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_Name";
+        displayName = CSTRING(arifle_Mk20C_Name);
     };
     class arifle_Mk20C_plain_F: arifle_Mk20C_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20C_plain_Name";
+        displayName = CSTRING(arifle_Mk20C_plain_Name);
     };
 
     class arifle_Mk20_GL_F: mk20_base_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_Name";
+        displayName = CSTRING(arifle_Mk20_GL_Name);
     };
     class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
-        displayName = "$STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name";
+        displayName = CSTRING(arifle_Mk20_GL_plain_Name);
     };
 
     // Vector
     class SMG_01_Base;
     class SMG_01_F: SMG_01_Base {
-        displayName = "$STR_ACE_RealisticNames_SMG_01_Name";
+        displayName = CSTRING(SMG_01_Name);
     };
 
     // Scorpion
     class SMG_02_base_F;
     class SMG_02_F: SMG_02_base_F {
-        displayName = "$STR_ACE_RealisticNames_SMG_02_Name";
+        displayName = CSTRING(SMG_02_Name);
     };
 
     // PDW 2000
     class pdw2000_base_F;
     class hgun_pdw2000_F: pdw2000_base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_PDW2000_Name";
+        displayName = CSTRING(hgun_PDW2000_Name);
     };
 
     // pistols
     class Pistol_Base_F;
     class hgun_P07_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_P07_Name";
+        displayName = CSTRING(hgun_P07_Name);
     };
 
     class hgun_Rook40_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_Rook40_Name";
+        displayName = CSTRING(hgun_Rook40_Name);
     };
 
     class hgun_ACPC2_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_ACPC2_Name";
+        displayName = CSTRING(hgun_ACPC2_Name);
     };
 
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name";
+        displayName = CSTRING(hgun_Pistol_heavy_01_Name);
     };
 
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name";
+        displayName = CSTRING(hgun_Pistol_heavy_02_Name);
     };
 
     class hgun_Pistol_Signal_F: Pistol_Base_F {
-        displayName = "$STR_ACE_RealisticNames_hgun_Pistol_Signal_Name";
+        displayName = CSTRING(hgun_Pistol_Signal_Name);
     };
 
     // machine guns
     class Rifle_Long_Base_F;
     class LMG_Mk200_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_LMG_Mk200_Name";
+        displayName = CSTRING(LMG_Mk200_Name);
     };
 
     class LMG_Zafir_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_LMG_Zafir_Name";
+        displayName = CSTRING(LMG_Zafir_Name);
     };
 
     // sniper rifles
     class EBR_base_F;
     class srifle_EBR_F: EBR_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_EBR_Name";
+        displayName = CSTRING(srifle_EBR_Name);
     };
 
     class LRR_base_F;
     class srifle_LRR_F: LRR_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_LRR_Name";
+        displayName = CSTRING(srifle_LRR_Name);
     };
     class srifle_LRR_camo_F: srifle_LRR_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_LRR_camo_Name";
+        displayName = CSTRING(srifle_LRR_camo_Name);
     };
 
     class GM6_base_F;
     class srifle_GM6_F: GM6_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_GM6_Name";
+        displayName = CSTRING(srifle_GM6_Name);
     };
     class srifle_GM6_camo_F: srifle_GM6_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_GM6_camo_Name";
+        displayName = CSTRING(srifle_GM6_camo_Name);
     };
 
     class DMR_01_base_F;
     class srifle_DMR_01_F: DMR_01_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_01_Name";
+        displayName = CSTRING(srifle_DMR_01_Name);
     };
 
     // launchers
     class Launcher_Base_F;
     class launch_RPG32_F: Launcher_Base_F {
-        displayName = "$STR_ACE_RealisticNames_launch_RPG32_Name";
+        displayName = CSTRING(launch_RPG32_Name);
     };
 
-    class launch_Titan_base: Launcher_Base_F {
-        displayName = "$STR_ACE_RealisticNames_launch_Titan_Name";
+    /*class launch_Titan_base: Launcher_Base_F {
+        displayName = CSTRING(launch_Titan_Name);
     };
     class launch_Titan_short_base: launch_Titan_base {
-        displayName = "$STR_ACE_RealisticNames_launch_Titan_short_Name";
-    };
+        displayName = CSTRING(launch_Titan_short_Name);
+    };*/
 
     class launch_NLAW_F: Launcher_Base_F {
-        displayName = "$STR_ACE_RealisticNames_launch_NLAW_Name";
+        displayName = CSTRING(launch_NLAW_Name);
     };
 
     // marksmen marksman
-    /*class DMR_02_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_DMR_02"; //MAR-10 .338";
+    class DMR_02_base_F: Rifle_Long_Base_F {
+        displayName = CSTRING(DMR_02); //MAR-10 .338;
     };
 
     class srifle_DMR_02_F: DMR_02_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02"; //MAR-10 .338 (Black)";
+        displayName = CSTRING(srifle_DMR_02); //MAR-10 .338 (Black);
     };
 
     class srifle_DMR_02_camo_F: srifle_DMR_02_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_camo"; //MAR-10 .338 (Camo)";
+        displayName = CSTRING(srifle_DMR_02_camo); //MAR-10 .338 (Camo);
     };
 
     class srifle_DMR_02_sniper_F: srifle_DMR_02_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_02_sniper"; //MAR-10 .338 (Sand)";
+        displayName = CSTRING(srifle_DMR_02_sniper); //MAR-10 .338 (Sand);
     };
-
     class DMR_03_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_DMR_03"; //Mk-I EMR 7.62 mm";
+        displayName = CSTRING(DMR_03); //Mk-I EMR 7.62 mm;
     };
 
     class srifle_DMR_03_F: DMR_03_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03"; //Mk-I EMR 7.62 mm (Black)";
+        displayName = CSTRING(srifle_DMR_03); //Mk-I EMR 7.62 mm (Black);
     };
 
     class srifle_DMR_03_khaki_F: srifle_DMR_03_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_khaki"; //Mk-I EMR 7.62 mm (Khaki)";
+        displayName = CSTRING(srifle_DMR_03_khaki); //Mk-I EMR 7.62 mm (Khaki);
     };
 
     class srifle_DMR_03_tan_F: srifle_DMR_03_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_tan"; //Mk-I EMR 7.62 mm (Sand)";
+        displayName = CSTRING(srifle_DMR_03_tan); //Mk-I EMR 7.62 mm (Sand);
     };
 
     class srifle_DMR_03_multicam_F: srifle_DMR_03_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_multicam"; //Mk-I EMR 7.62 mm (Camo)";
+        displayName = CSTRING(srifle_DMR_03_multicam); //Mk-I EMR 7.62 mm (Camo);
     };
 
     class srifle_DMR_03_woodland_F: srifle_DMR_03_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_woodland"; //Mk-I EMR 7.62 mm (Woodland)";
+        displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
     };
 
     class srifle_DMR_03_spotter_F: srifle_DMR_03_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_03_spotter"; //NATO DMR (provisional) spotter";
+        displayName = CSTRING(srifle_DMR_03_spotter); //NATO DMR (provisional) spotter;
     };
-
     class DMR_04_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_DMR_04"; //ASP-1 Kir 12.7 mm";
+        displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
     };
 
     class srifle_DMR_04_F: DMR_04_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04"; //ASP-1 Kir 12.7 mm (Black)";
+        displayName = CSTRING(srifle_DMR_04); //ASP-1 Kir 12.7 mm (Black);
     };
 
     class srifle_DMR_04_Tan_F: srifle_DMR_04_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_04_Tan"; //ASP-1 Kir 12.7 mm (Tan)";
+        displayName = CSTRING(srifle_DMR_04_Tan); //ASP-1 Kir 12.7 mm (Tan);
     };
 
     class DMR_05_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_DMR_05"; //Cyrus 9.3 mm";
+        displayName = CSTRING(DMR_05); //Cyrus 9.3 mm;
     };
 
     class srifle_DMR_05_blk_F: DMR_05_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_blk"; //Cyrus 9.3 mm (Black)
+        displayName = CSTRING(srifle_DMR_05_blk); //Cyrus 9.3 mm (Black)
     };
 
     class srifle_DMR_05_hex_F: srifle_DMR_05_blk_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_hex"; //Cyrus 9.3 mm (Hex)";
+        displayName = CSTRING(srifle_DMR_05_hex); //Cyrus 9.3 mm (Hex);
     };
 
     class srifle_DMR_05_tan_f: srifle_DMR_05_blk_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_05_tan"; //Cyrus 9.3 mm (Tan)";
+        displayName = CSTRING(srifle_DMR_05_tan); //Cyrus 9.3 mm (Tan);
     };
-
     class DMR_06_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_DMR_06"; //Mk14 7.62 mm";
+        displayName = CSTRING(DMR_06); //Mk14 7.62 mm;
     };
 
     class srifle_DMR_06_camo_F: DMR_06_base_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_camo"; //Mk14 7.62 mm (Camo)
+        displayName = CSTRING(srifle_DMR_06_camo); //Mk14 7.62 mm (Camo)
     };
 
     class srifle_DMR_06_olive_F: srifle_DMR_06_camo_F {
-        displayName = "$STR_ACE_RealisticNames_srifle_DMR_06_olive"; //Mk14 7.62 mm (Olive)";
+        displayName = CSTRING(srifle_DMR_06_olive); //Mk14 7.62 mm (Olive);
     };
 
     // marksmen mgs
     class MMG_01_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_01"; //Navid 9.3 mm";
+        displayName = CSTRING(MMG_01); //Navid 9.3 mm;
     };
 
     class MMG_01_hex_F: MMG_01_base_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_01_hex"; //Navid 9.3 mm (Hex)";
+        displayName = CSTRING(MMG_01_hex); //Navid 9.3 mm (Hex);
     };
 
     class MMG_01_tan_F: MMG_01_hex_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_01_tan"; //Navid 9.3 mm (Tan)";
+        displayName = CSTRING(MMG_01_tan); //Navid 9.3 mm (Tan);
     };
-
     class MMG_02_base_F: Rifle_Long_Base_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_02"; //SPMG .338";
+        displayName = CSTRING(MMG_02); //SPMG .338;
     };
 
     class MMG_02_camo_F: MMG_02_base_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_02_camo"; //SPMG .338 (MTP)";
+        displayName = CSTRING(MMG_02_camo); //SPMG .338 (MTP);
     };
 
     class MMG_02_black_F: MMG_02_camo_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_02_black"; //SPMG .338 (Black)";
+        displayName = CSTRING(MMG_02_black); //SPMG .338 (Black);
     };
 
     class MMG_02_sand_F: MMG_02_camo_F {
-        displayName = "$STR_ACE_RealisticNames_MMG_02_sand"; //SPMG .338 (Sand)";
-    };*/
+        displayName = CSTRING(MMG_02_sand); //SPMG .338 (Sand);
+    };
 
     // vehicle weapons
 
@@ -514,14 +510,14 @@ class CfgWeapons {
         class player: player {};
     };
 
-    class cannon_105mm: cannon_120mm {
+    class cannon_105mm: CannonCore {
         displayName = "M68";
-        class player: player {
+        class player: Mode_SemiAuto {
             displayName = "M68";
         };
     };
 
-    class cannon_125mm: cannon_120mm {
+    class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
 
@@ -571,5 +567,13 @@ class CfgWeapons {
         class HE: HE {
             displayName = "L21A1 RARDEN";
         };
+    };
+
+    //attachments
+
+    class Itemcore;
+
+    class acc_flashlight: ItemCore {
+        displayName = "UTG Defender 126";
     };
 };

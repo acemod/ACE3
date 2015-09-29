@@ -24,12 +24,13 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
 // The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
 [] spawn {
     _fnc_installMapEvents = {
+        private "_d";
         _d = _this;
-        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
-        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
-        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
-        ((finddisplay _d) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapToolMarkers);}];
-        (finddisplay _d) displayAddEventHandler ["KeyDown", {_this call FUNC(handleKeyDown);}];
+        ((findDisplay _d) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
+        ((findDisplay _d) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
+        ((findDisplay _d) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
+        ((findDisplay _d) displayCtrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapToolMarkers);}];
+        (findDisplay _d) displayAddEventHandler ["KeyDown", {_this call FUNC(handleKeyDown);}];
     };
 
     // Wait until the briefing map is detected
@@ -63,9 +64,17 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
     // Install event handlers on the map control and display (control = 51)
     GVAR(drawing_syncMarkers) = false;
     12 call _fnc_installMapEvents;
-
-    // Update the size and rotation of map tools
-    [] call FUNC(updateMapToolMarkers);
-
-    [FUNC(mapStateUpdater), 0, []] call CBA_fnc_addPerFrameHandler;
 };
+
+["visibleMapChanged", {
+    params ["", "_mapOn"];
+    if (_mapOn) then {
+        // Show GPS if required
+        [GVAR(mapGpsShow)] call FUNC(openMapGps);
+    } else {
+        // Hide GPS
+        [false] call FUNC(openMapGps);
+        // Cancel drawing
+        call FUNC(cancelDrawing);
+    };
+}] call EFUNC(common,addEventHandler);

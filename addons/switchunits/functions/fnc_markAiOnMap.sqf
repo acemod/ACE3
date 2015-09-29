@@ -1,7 +1,7 @@
 /*
  * Author: bux578
  * Creates markers for AI units for given sides.
- *  Marks players in a different colour.
+ * Marks players in a different colour.
  *
  * Arguments:
  * 0: side <OBJECT>
@@ -10,42 +10,41 @@
  * None
  *
  * Example:
- * [[west, east]] call FUNC(markAiOnMap)
+ * [[west, east]] call ace_switchunits_fnc_markAiOnMap
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private "_sidesToShow";
-_sidesToShow = _this select 0;
+params ["_sidesToShow"];
 
 GVAR(AllMarkerNames) = [];
 
-DFUNC(pfhMarkAiOnMap) = {
-    private ["_args", "_sides"];
-    _args = _this select 0;
-    _sides = _args select 0;
+[{
+    params ["_args"];
+    _args params ["_sides"];
 
-    
     // delete markers
     {
-      deleteMarkerLocal _x;
-    } forEach GVAR(AllMarkerNames);
+        deleteMarkerLocal _x;
+    } count GVAR(AllMarkerNames);
 
-     if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
-                
+    // reset the array
+    GVAR(AllMarkerNames) = [];
+
+    if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
+
         // create markers
         {
             if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
                 private ["_markerName", "_marker", "_markerColor"];
-                
+
                 _markerName = str _x;
 
                 _marker = createMarkerLocal [_markerName, position _x];
                 _markerName setMarkerTypeLocal "mil_triangle";
                 _markerName setMarkerShapeLocal "ICON";
-                _markerName setMarkerSizeLocal [0.5,0.7];
+                _markerName setMarkerSizeLocal [0.5, 0.7];
                 _markerName setMarkerDirLocal getDir _x;
 
                 // commy's one liner magic
@@ -60,9 +59,8 @@ DFUNC(pfhMarkAiOnMap) = {
                 };
 
                 GVAR(AllMarkerNames) pushBack _markerName;
+                nil
             };
-        } forEach allUnits;
+        } count allUnits;
     };
-};
-
-[FUNC(pfhMarkAiOnMap), 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;
+}, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

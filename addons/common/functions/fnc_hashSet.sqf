@@ -1,12 +1,22 @@
-//fnc_hashSet.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
-// diag_log text format["%1 HASH SET: %2", diag_tickTime, _this];
+private ["_index"];
+// diag_log text format["%1 HASH SET: %2", ACE_diagTime, _this];
 
-_hash = _this select 0;
-_key = _this select 1;
-_val = _this select 2;
+params ["_hash", "_key", "_val"];
+
 ERRORDATA(3);
 try {
     if(VALIDHASH(_hash)) then {

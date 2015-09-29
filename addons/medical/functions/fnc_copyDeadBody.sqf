@@ -7,16 +7,15 @@
  * 1: The caller <OBJECT>
  *
  * Return Value:
- * OBJECT Returns the copy of the unit. If no copy could be made, returns the oldBody
+ * Returns the copy of the unit. If no copy could be made, returns the oldBody <OBJECT>
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_oldBody","_newUnit","_class","_group","_position","_side","_allVariables"];
-_oldBody = _this select 0;
-_caller = _this select 1;
+private ["_newUnit", "_class", "_group", "_position", "_side", "_name"];
+params ["_oldBody", "_caller"];
 
 if (alive _oldBody) exitwith {_oldBody}; // we only want to do this for dead bodies
 
@@ -79,5 +78,5 @@ _newUnit setvariable ["ACE_isUnconscious", true, true];
 _newUnit setvariable [QGVAR(disableInteraction), true, true];
 _oldBody setvariable [QGVAR(disableInteraction), true, true];
 
-_newUnit setDamage 0.89;
+[_newUnit, 0.89] call FUNC(setStructuralDamage);
 _newUnit;

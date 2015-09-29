@@ -12,7 +12,10 @@
  */
 #include "script_component.hpp"
 
-_shouldOpenGps = _this select 0;
+params ["_shouldOpenGps"];
+
+private ["_isOpen"];
+
 _isOpen = !(isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull]));
 
 if (_shouldOpenGps && {"ItemGPS" in assignedItems ACE_player} && {!_isOpen}) then {

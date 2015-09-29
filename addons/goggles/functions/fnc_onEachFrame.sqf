@@ -17,7 +17,7 @@
 if (isNull(ace_player)) exitWith {};
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
 if (GVAR(FrameEvent) select 0) exitWith {
-    if (vehicle ace_player != ace_player && {!([ace_player] call EFUNC(common,isTurnedOut))}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };
+    if (vehicle ace_player != ace_player && {!isTurnedOut ACE_player}) exitWith {(GVAR(FrameEvent) select 1) set [0, false]; };
     GVAR(FrameEvent) set [1, ([ace_player] call FUNC(isInRotorWash))];
 };
 private ["_rotorWash","_safe"];

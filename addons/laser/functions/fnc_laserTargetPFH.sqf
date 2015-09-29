@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
-private["_args", "_laserTarget"];
+private["_args", "_laserTarget", "_pos", "_shooter", "_uuid"];
 //TRACE_1("enter", _this);
 _args = _this select 0;
 _laserTarget = _args select 0;

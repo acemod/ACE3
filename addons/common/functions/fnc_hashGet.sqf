@@ -1,11 +1,22 @@
-//fnc_hashGet.sqf
+/*
+ * Author: ?
+ * Returns value attached to key in given hash.
+ *
+ * Arguments:
+ * 0: Hash <ARRAY>
+ * 1: Key <STRING>
+ *
+ * Return Value:
+ * Value <ANY>
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_hash", "_key", "_val", "_index"];
-// diag_log text format["%1 HASH GET: %2", diag_tickTime, _this];
+private ["_val", "_index"];
 
-_hash = _this select 0;
-_key = _this select 1;
+params ["_hash", "_key"];
+
 ERRORDATA(2);
 _val = nil;
 try {
@@ -23,4 +34,7 @@ try {
 } catch {
     HANDLECATCH;
 };
+
+if (isNil "_val") exitWith { nil };
+
 _val

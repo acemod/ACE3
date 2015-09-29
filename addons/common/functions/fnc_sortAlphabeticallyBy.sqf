@@ -1,18 +1,24 @@
-/**
- * fn_sortAlphabeticallyBy.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * ?
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: Yes
+ *
+ * Deprecated
  */
-
 #include "script_component.hpp"
 
-private ["_array", "_elements", "_elementN", "_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
-_array = _this select 0;
-_elementN = _this select 1;
+ACE_DEPRECATED("ace_common_fnc_sortAlphabeticallyBy","3.5.0","sort");
+
+params ["_array", "_elementN"];
+
+private ["_elements", "_indexes", "_theElement", "_tmp", "_tempIndex", "_returnArray"];
 
 _indexes = [];
 _elements = [];
@@ -21,7 +27,7 @@ _elements = [];
     _theElement = toArray (_x select _elementN);
     _indexes pushback _foreachIndex;
     _elements pushback _theElement;
-}foreach _array;
+} forEach _array;
 
 for "_i" from 1 to (count _elements) - 1 do {
     _tmp = _elements select _i;
@@ -37,8 +43,9 @@ for "_i" from 1 to (count _elements) - 1 do {
 };
 
 _returnArray = [];
+
 {
     _returnArray pushback (_array select _x);
-}foreach _indexes;
+} forEach _indexes;
 
-_returnArray;
+_returnArray

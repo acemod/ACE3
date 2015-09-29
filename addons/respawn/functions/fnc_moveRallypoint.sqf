@@ -1,46 +1,48 @@
 /*
-  Name: ACE_Respawn_fnc_moveRallypoint
-  
-  Author(s):
-    commy2
-  
-  Description:
-    Moves a rallypoint to the player's location
-  
-  Parameters:
-    0: OBJECT - unit
-    1: OBJECT - side
-  
-  Returns:
-    VOID
-*/
-
+ * Author: commy2
+ * Moves a rallypoint to the players location.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Side <SIDE>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_Player, side ACE_Player] call ace_respawn_fnc_moveRallypoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-_this spawn {
-    _unit = _this select 0;
-    _side = _this select 1;
+params ["_unit", "_side"];
 
-    // rallypoint names are defined in CfgVehicles.hpp
+private ["_rallypoint", "_position"];
 
-    _rallypoint = [
-        objNull,
-        missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
-        missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
-        missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
-    ] select ([west, east, independent] find _side) + 1;
+_rallypoint = [
+    objNull,
+    missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
+    missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
+    missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
+] select ([west, east, independent] find _side) + 1;
 
-    if (isNull _rallypoint) exitWith {};
+TRACE_3("moving rally",_unit,_rallypoint,typeOf _rallypoint);
 
-    _position = getPosATL _unit;
-    _position = _position findEmptyPosition [0, 2, typeOf _rallypoint];
-    if (count _position == 0) then {_position = getPosATL _unit};
+if (isNull _rallypoint) exitWith {};
 
-    _position set [2, 0];
+_position = getPosATL _unit;
+_position = _position findEmptyPosition [0, 2, typeOf _rallypoint];
 
-    [localize "STR_ACE_Respawn_Deploy"] call EFUNC(common,displayTextStructured);
+if (_position isEqualTo []) then {_position = getPosATL _unit};
 
-    sleep 5;
+_position set [2, 0];
+
+[localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
+
+[{
+    params ["_rallypoint", "_unit", "_position"];
+
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
@@ -48,5 +50,5 @@ _this spawn {
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
-    [localize "STR_ACE_Respawn_Deployed"] call EFUNC(common,displayTextStructured);
-};
+    [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
+}, [_rallypoint, _unit, _position], 5] call EFUNC(common,waitAndExecute);

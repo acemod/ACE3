@@ -1,27 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="VehicleLock">
-        <Key ID="STR_ACE_Vehicle_Action_UnLock">
+        <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
             <German>Fahrzeug aufschließen</German>
-            <Spanish>Vehículo abierto</Spanish>
+            <Spanish>Abrir vehículo</Spanish>
             <French>Déverrouiller le véhicule</French>
             <Polish>Odblokuj pojazd</Polish>
             <Czech>Odemknout vozidlo</Czech>
             <Hungarian>Jármű nyitása</Hungarian>
             <Russian>Открыть машину</Russian>
+            <Italian>Sblocca il veicolo</Italian>
+            <Portuguese>Destravar veículo</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Action_Lock">
+        <Key ID="STR_ACE_VehicleLock_Action_Lock">
             <English>Lock Vehicle</English>
             <German>Fahrzeug abschließen</German>
-            <Spanish>Vehículo cerrado</Spanish>
+            <Spanish>Cerrar vehículo</Spanish>
             <French>Verrouiller le véhicule</French>
             <Polish>Zablokuj pojazd</Polish>
             <Czech>Zamknout vozidlo</Czech>
             <Hungarian>Jármű zárása</Hungarian>
             <Russian>Закрыть машину</Russian>
+            <Italian>Chiudi il veicolo a chiave</Italian>
+            <Portuguese>Travar Veículo</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Action_Lockpick">
+        <Key ID="STR_ACE_VehicleLock_Action_Lockpick">
             <English>Lockpick Vehicle</English>
             <German>Fahrzeug knacken</German>
             <Spanish>Forzar vehículo</Spanish>
@@ -30,18 +34,22 @@
             <Czech>Vypáčit vozidlo</Czech>
             <Hungarian>Jármű feltörése</Hungarian>
             <Russian>Взломать замок</Russian>
+            <Italian>Scassina veicolo</Italian>
+            <Portuguese>Usar mixa no Veículo</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Action_LockpickInUse">
+        <Key ID="STR_ACE_VehicleLock_Action_LockpickInUse">
             <English>Picking Lock....</English>
             <German>Schloss knacken...</German>
-            <Spanish>Forzando cierre...</Spanish>
+            <Spanish>Forzando cerradura...</Spanish>
             <French>Crochetage...</French>
             <Polish>Otwieranie zamka...</Polish>
             <Czech>Páčim vozidlo...</Czech>
             <Hungarian>Zár feltörése...</Hungarian>
             <Russian>Взламываем замок...</Russian>
+            <Italian>Scassino il veicolo....</Italian>
+            <Portuguese>Usando Mixa...</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_Custom_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_Custom_Description">
             <English>A custom key that will open a specific vehicle.</English>
             <German>Ein Schlüssel der ein bestimmtes Fahrzeug aufschließt.</German>
             <Spanish>Una llave concreta abrirá un vehículo concreto.</Spanish>
@@ -50,8 +58,10 @@
             <Czech>Vlastní klíč, který otevře konkrétní vozidlo.</Czech>
             <Hungarian>Egy egyedi kulcs, ami egy meghatározott járművet nyit ki.</Hungarian>
             <Russian>Ключ от конкретной машины.</Russian>
+            <Italian>Una chiave personalizzata che apre determinati veicoli.</Italian>
+            <Portuguese>Uma chave específica que abre um veículo específico.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_Master_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_Master_Description">
             <English>A Master Key will open any lock, no matter what!</English>
             <German>Ein Generalschlüssel der jedes Schloss öffnet...</German>
             <Spanish>Una llave maestra abrirá cualquier cierre, no importa cual!</Spanish>
@@ -60,56 +70,211 @@
             <Czech>Hlavní klíč otevře libovolný zámek, bez vyjímek!</Czech>
             <Hungarian>Egy főkulcs, ami minden zárat kinyit, helyzettől függetlenül!</Hungarian>
             <Russian>Универсальный ключ, открывающий любой замок.</Russian>
+            <Italian>Un passe-partout che apre qualsiasi serratura!</Italian>
+            <Portuguese>Uma chave mestre irá abrir qualquer fechadura, não importa qual!</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_Lockpick_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_Lockpick_Description">
             <English>A lockpick set that can pick the locks of most vehicles.</English>
             <German>Ein Dietrich der die meisten Fahrzeugschlösser knacken kann...</German>
-            <Spanish>Un set de ganzúas puede abrir la mayoría de cerraduras de vehículos.</Spanish>
+            <Spanish>Un set de ganzúas que puede abrir las cerraduras de la mayoría vehículos.</Spanish>
             <French>Un crochet qui ouvrira la plupart des véhicules.</French>
             <Polish>Zestaw wytrychów, dzięki któremu można otworzyć zamki w większości pojazdów.</Polish>
             <Czech>Sada paklíčů, která dokáže odemknout zámky u většiny vozidel.</Czech>
             <Hungarian>Egy tolvajkulcs-készlet, mely a legtöbb jármű zárjait fel tudja törni.</Hungarian>
             <Russian>Набор отмычек, которым можно взломать почти любую машину.</Russian>
+            <Italian>Un grimardello per forzare la maggior parte dei veicoli</Italian>
+            <Portuguese>Um set de chave mixas que pode abrir a maioria dos veículos.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_West_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_West_Description">
             <English>A key that should open most WEST vehicles.</English>
             <German>Ein Schlüssel der die meisten westlichen Fahrzeuge öffnen sollte...</German>
-            <Spanish>Una llave que puede abrir la mayoría de vehículos occidentales.</Spanish>
+            <Spanish>Una llave que abrirá la mayoría de vehículos occidentales.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules OUEST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów ZACHODU.</Polish>
             <Czech>Klíč který by měl otevřít většinou Západních vozidel.</Czech>
             <Hungarian>Egy kulcs, ami a NYUGAT egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
-            <Russian>Ключ для открытия большинства машин Запада.</Russian>
+            <Russian>Ключ для открытия большинства машин Красных.</Russian>
+            <Italian>Una chiave che apre la maggior parte dei veicoli occidentali</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_East_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_East_Description">
             <English>A key that should open most EAST vehicle.</English>
             <German>Ein Schlüssel der die meisten östlichen Fahrzeuge öffnen sollte...</German>
-            <Spanish>Una llave que puede abrir la mayoría de vehículos orientales.</Spanish>
+            <Spanish>Una llave que abrirá la mayoría de vehículos orientales.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules EST.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów WSCHODU.</Polish>
             <Hungarian>Egy kulcs, ami a KELET egységeinek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít vetšinu Východních vozidel.</Czech>
-            <Russian>Ключ для открытия большинства машин Востока.</Russian>
+            <Russian>Ключ для открытия большинства машин Синих.</Russian>
+            <Italian>Una chaive che apre la maggior parte dei veicoli orientali</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos orientais</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_Indp_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_Indp_Description">
             <English>A key that should open most INDEP vehicle.</English>
             <German>Ein Schlüssel der die meisten Fahrzeuge der Aufständischen öffnen sollte...</German>
-            <Spanish>Una llave que puede abrir la mayoría de vehículos independientes.</Spanish>
+            <Spanish>Una llave que abrirá la mayoría de vehículos independientes.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules INDEP.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów INDFOR.</Polish>
             <Hungarian>Egy kulcs, ami a FÜGGETLEN egységek legtöbb járművét ki tudja nyitni.</Hungarian>
             <Czech>Klíč který by měl otevřít většinu Nezávislých vozidel.</Czech>
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
+            <Italian>Una chaive che apre la maggior parte dei veicoli degli indipendenti</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Item_Civ_Description">
+        <Key ID="STR_ACE_VehicleLock_Item_Civ_Description">
             <English>A key that should open most CIV vehicle.</English>
             <German>Ein Schlüssel der die meisten zivilen Fahrzeuge öffnen sollte...</German>
-            <Spanish>Una llave que puede abrir la mayoría de vehículos civiles.</Spanish>
+            <Spanish>Una llave que abrirá la mayoría de vehículos civiles.</Spanish>
             <French>Une clé qui ouvrira la plupart des véhicules CIV.</French>
             <Polish>Klucz, który powinien otworzyć większość pojazdów CYWILNYCH.</Polish>
             <Czech>Klíč který by měl otevřít většinu Civilních vozidel.</Czech>
             <Hungarian>Egy kulcs, ami a CIVIL járművek többségét ki tudja nyitni.</Hungarian>
             <Russian>Ключ для открытия большинства машин Гражданских.</Russian>
+            <Italian>Una chaive che apr ela maggior parte dei veicoli civili</Italian>
+            <Portuguese>Uma chave que abre a maioria dos veículos civis.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_Module_DisplayName">
+            <English>Vehicle Lock Setup</English>
+            <Polish>Ustawienie blokady pojazdów</Polish>
+            <Spanish>Configuración del cierre del vehiculo</Spanish>
+            <German>Fahrzeugsperreinstellungen</German>
+            <Czech>Nastavení zámku vozidla</Czech>
+            <Portuguese>Configuração de fechadura do veículo</Portuguese>
+            <French>Paramétrage du sytème de verrouillage</French>
+            <Hungarian>Jármű-zár beállítás</Hungarian>
+            <Russian>Запирание транспорта</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
+            <English>Lock Vehicle Inventory</English>
+            <Polish>Zablokuj ekwipunek pojazdu</Polish>
+            <Spanish>Bloquear inventario del vehículo</Spanish>
+            <German>Sperre Fahrzeuginventar</German>
+            <Czech>Inventář zamčeného vozidla</Czech>
+            <Portuguese>Bloquear inventário do veículo</Portuguese>
+            <French>Verrouiller l'inventaire du véhicule</French>
+            <Hungarian>Jármű rakodótér zárás</Hungarian>
+            <Russian>Закрывать инвентарь транспорта</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
+            <English>Locks the inventory of locked vehicles</English>
+            <Polish>Blokuje dostęp do ekwipunku pojazdu</Polish>
+            <Spanish>Bloquea el inventario de los vehículos cerrados</Spanish>
+            <German>Sperrt das Inventar von gesperrten Fahrzeugen</German>
+            <Czech>Zamknout inventář u zamčených vozidel</Czech>
+            <Portuguese>Bloqueia o inventário de veículos fechados</Portuguese>
+            <French>Verrouille l'inventaire de véhicule fermés à clé</French>
+            <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
+            <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
+            <English>Vehicle Starting Lock State</English>
+            <Polish>Początkowy stan blok. poj.</Polish>
+            <Spanish>Estado inicial del cierre en vehículos</Spanish>
+            <German>Fahrzeuge spawnen gesperrt</German>
+            <Czech>Počáteční stav zámku vozidla</Czech>
+            <Portuguese>Estado inicial da fechadura dos veículos</Portuguese>
+            <French>Etat du verrouillage du véhicule au démarrage</French>
+            <Hungarian>Jármű kezdő zár-állapot</Hungarian>
+            <Russian>Начальное состояние замков</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
+            <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
+            <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa dwuznaczne stany blokady)</Polish>
+            <Spanish>Establece el estado de cierre para todos los vehículos (elimina estados de cierre ambiguos)</Spanish>
+            <German>Setze Sperrstatus für alle Fahrzeuge (entfernt unklare Sperrzustände)</German>
+            <Czech>Nastavit stav zámku u všech vozidel (odstraňuje nejednoznačné stavy zámků)</Czech>
+            <Portuguese>Definir estados de fechadura para todos os veículos (remove estados de fechadura ambíguos)</Portuguese>
+            <French>Défini l'état de vérrouillage pour tous les véhicules (supprime les vérrouillage ambigue)</French>
+            <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
+            <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
+            <English>As Is</English>
+            <Polish>Jak jest</Polish>
+            <Spanish>Está</Spanish>
+            <German>Unverändert</German>
+            <Czech>Jak je</Czech>
+            <Portuguese>Como está</Portuguese>
+            <French>Pas de changement</French>
+            <Hungarian>Úgy-ahogy</Hungarian>
+            <Russian>Как есть</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
+            <English>Locked</English>
+            <Polish>Zablokowany</Polish>
+            <Spanish>Cerrado</Spanish>
+            <German>Gesperrt</German>
+            <Czech>Zamčeno</Czech>
+            <Portuguese>Fechado</Portuguese>
+            <French>Verrouillé</French>
+            <Hungarian>Zárva</Hungarian>
+            <Russian>Закрыт</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
+            <English>Unlocked</English>
+            <Polish>Odblokowany</Polish>
+            <Spanish>Abierto</Spanish>
+            <German>Offen</German>
+            <Czech>Odemčeno</Czech>
+            <Portuguese>Aberto</Portuguese>
+            <French>Déverrouillé</French>
+            <Hungarian>Nyitva</Hungarian>
+            <Russian>Открыт</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
+            <English>Default Lockpick Strength</English>
+            <Polish>Czas włamywania</Polish>
+            <Spanish>Durabilidad de la ganzua por defecto</Spanish>
+            <German>Standard-Pick-Stärke</German>
+            <Czech>Výchozí síla páčidla</Czech>
+            <Portuguese>Durabilidade padrão da chave micha</Portuguese>
+            <French>Force de crochetage par défaut</French>
+            <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
+            <Russian>Сила отмычки по-умолчанию</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
+            <English>Default Time to lockpick (in seconds). Default: 10</English>
+            <Polish>Domyślny czas potrzebny na otwarcie pojazdu (w sekundach). Domyślnie: 10</Polish>
+            <Spanish>Tiempo por defecto para forzar cerradura (en segundos). Por defecto: 10</Spanish>
+            <German>Standardzeit um ein Schloss zu knacken (in Sekunden). Standard: 10</German>
+            <Czech>Čas k vypáčení zámku (v sekundách). Výchozí: 10</Czech>
+            <Portuguese>Tempo padrão para forçar a fechadura (em segundos). Padrão: 10</Portuguese>
+            <French>Temps par défaut pour le crochetage</French>
+            <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
+            <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_Module_Description">
+            <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.&lt;br /&gt;Source: vehiclelock.pbo</English>
+            <Polish>Ustawienia czasu włamywania oraz domyślnego stanu blokady pojazdów. Wyłącza dwuznaczne ustawienia blokady. Moduł ten umożliwia więc np. zamknięcie pojazdów przeciwnika na klucz tak, że gracze bez odpowiedniego sprzętu (wytrycha) nie będą mogli ich używać.&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Spanish>Ajustes de la durabilidad de la ganzua y el estado inicial del cierre de los vehículos. Elimina estados de cierre ambiguos.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
+            <German>Einstellungen für Pick-Stärke und anfänglichen Fahrzeugsperrzustand. Entfernt unklare Sperrzustände.&lt;br /&gt;Quelle: vehiclelock.pbo</German>
+            <Czech>Nastavení síly vypáčení a počáteční stav zámku vozidla. Odstraňuje nejednoznačné stavy zámků.&lt;br /&gt;Zdroj: vehiclelock.pbo</Czech>
+            <Portuguese>Definições para a durabilidade da chave micha e estado inicial da fechadura do veículo. Remove estados de fechadura ambíguas &lt;br /&gt; Fonte: Vehiclelock.pbo</Portuguese>
+            <French>Paramètres pour le crochetage et état inital des véhicules. Supprime les états de verrouillage ambigue. &lt;br/&gt;Source: véhicle.pbo</French>
+            <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat. &lt;br /&gt;Forrás: vehiclelock.pbo</Hungarian>
+            <Russian>Настройки силы отмычек и начальное состояние замков транспорта. Устраняет неоднозначные состояния замков.&lt;br /&gt;Источник: vehiclelock.pbo</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
+            <English>Vehicle Key Assign</English>
+            <Polish>Przydział kluczyka do pojazdu</Polish>
+            <Spanish>Asignacion de la llave del vehículo</Spanish>
+            <German>Fahrzeugschlüsselzuweisung</German>
+            <Czech>Přidělení klíče k vozidlu</Czech>
+            <Portuguese>Atribuição de chave de veículo</Portuguese>
+            <French>Assignation des clés de véhicule</French>
+            <Hungarian>Járműkulcs-osztás</Hungarian>
+            <Russian>Назначение ключей от транспорта</Russian>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
+            <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
+            <Polish>Zsynchronizuj z pojazdami i graczami. Rozda klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku (postawione w edytorze).&lt;br /&gt;Źródło: vehiclelock.pbo</Polish>
+            <Spanish>Sincronizar con vehiculos y jugadores. Distribuirá llaves personalizadas a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.&lt;br /&gt;Fuente: vehiclelock.pbo</Spanish>
+            <German>Synchronisiere mit Fahrzeugen und Spielern. Wird eigene Schlüssel an Spieler für jedes synchronisierte Fahrzeuge aushändigen. Nur gültig für am Missionsstart existierende Fahrzeuge.&lt;br /&gt;Quelle: vehiclelock.pbo</German>
+            <Czech>Synchronizuj s vozidly a hráči. Hráč dostane klíč ke každému synchonizovanému vozidlu. Platné pouze pro objekty přítomné na začátku mise.&lt;br /&gt;Zdroj: vehiclelock.pbo</Czech>
+            <Portuguese>Sincronizar com veículos e jogadores. Irá distribuir chaves personalizadas para os jogadores para cada veículo sincronizado. Só é válido para objetos presentes no início da missão &lt;br /&gt; Fonte: vehiclelock.pbo</Portuguese>
+            <French>Synchronise avec les véhicules et les joueurs. Distribue les clés aux joueurs pour chaque véhicule synchronisé. Uniquement valide pour les objects présent au démarrage. &lt;br/&gt;Source: vehiclelock.pbo</French>
+            <Hungarian>Szinkronizál a járművekkel és játékosokkal. Egyedi kulcsokat oszt ki a játékosoknak minden szinkronizált járműhöz. Csak a küldetés indításakor jelenlévő járművekhez érvényes. &lt;br /&gt;Forrás: vehiclelock.pbo</Hungarian>
+            <Russian>Синхронизируйте с транспортом и игроком. Это выдаст игроку ключи от всех синхронизированных транспортных средств. Работает только для объектов, присутствующих на старте миссии.&lt;br /&gt;Источник: vehiclelock.pbo</Russian>
         </Key>
     </Package>
 </Project>

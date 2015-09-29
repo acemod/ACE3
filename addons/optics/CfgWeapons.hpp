@@ -1,24 +1,23 @@
-
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
     class Default;
-    
+
     class Binocular: Default {
-		forceOptics = 0; 			// Allow using compass with Binocular
-		opticsZoomMin = 0.056889; 	// 5.25x power
-		opticsZoomMax = 0.056889; 	// 9 px/mil
-		modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7° horizontal field of view
-		visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
-		// Fix AI using Binocs on short range - #18737
+        forceOptics = 0;             // Allow using compass with Binocular
+        opticsZoomMin = 0.056889;     // 5.25x power
+        opticsZoomMax = 0.056889;     // 9 px/mil
+        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view
+        visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
+        // Fix AI using Binocs on short range - #18737
         // minRange = 300; // 300 = uses Rangefinder often (runs a few meters, stops, uses RF, repeats)
-        minRange = 500; //500 = seem almost never use it..? 
-		minRangeProbab = 0.001;
+        minRange = 500; //500 = seem almost never use it..?
+        minRangeProbab = 0.001;
         midRange = 1000;
         midRangeProbab = 0.01;
         maxRange = 5000;
         maxRangeProbab = 0.01;
-	};
+    };
 
     // zooming reticle scopes
     class optic_DMS: ItemCore {
@@ -31,7 +30,7 @@ class CfgWeapons {
     };
 
     /*class ACE_optic_DMS: optic_DMS {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_DMS";
         scope = 1;
         displayName = "LOCALIZE ACE DMS";
@@ -71,9 +70,9 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Hamr_2D";
-        displayName = "$STR_ACE_optic_hamr";
+        displayName = CSTRING(hamr);
         weaponInfoType = "ACE_RscWeapon_Hamr";
 
         class ItemInfo: ItemInfo {
@@ -96,10 +95,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Hamr_PIP";
-        scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_hamr_pip";
+        //scopeArsenal = 1;
+        displayName = CSTRING(hamr_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -121,9 +120,9 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\arco-reticle65_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\arco-reticle65Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Arco_2D";
-        displayName = "$STR_ACE_optic_arco";
+        displayName = CSTRING(arco);
         weaponInfoType = "ACE_RscWeapon_Arco";
 
         class ItemInfo: ItemInfo {
@@ -145,10 +144,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Arco_PIP";
-        scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_arco_pip";
+        //scopeArsenal = 1;
+        displayName = CSTRING(arco_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -170,9 +169,9 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\mrco-reticle556_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\mrco-reticle556Illum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_MRCO_2D";
-        displayName = "$STR_ACE_optic_valdada";
+        displayName = CSTRING(valdada);
         weaponInfoType = "ACE_RscWeapon_MRCO";
 
         class ItemInfo: ItemInfo {
@@ -194,11 +193,11 @@ class CfgWeapons {
     };
 
     class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_MRCO_PIP";
         scope = 1;
-        scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_valdada_pip";
+        //scopeArsenal = 1;
+        displayName = CSTRING(valdada_pip);
 
         class ItemInfo: ItemInfo {
             modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
@@ -220,9 +219,9 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_SOS_2D";
-        displayName = "$STR_ACE_optic_sos";
+        displayName = CSTRING(sos);
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -237,10 +236,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_SOS_PIP";
-        scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_sos_pip";
+        //scopeArsenal = 1;
+        displayName = CSTRING(sos_pip);
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
@@ -266,9 +265,9 @@ class CfgWeapons {
         GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
         GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
 
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_LRPS_2D";
-        displayName = "$STR_ACE_optic_lrps";
+        displayName = CSTRING(lrps);
         weaponInfoType = "ACE_RscWeapon_SOS";
 
         class ItemInfo: ItemInfo {
@@ -288,10 +287,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
-        author = "$STR_ACE_Common_ACETeam";
+        author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_LRPS_PIP";
-        scopeArsenal = 1;
-        displayName = "$STR_ACE_optic_lrps_pip";
+        //scopeArsenal = 1;
+        displayName = CSTRING(lrps_pip);
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {

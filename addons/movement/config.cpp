@@ -16,12 +16,5 @@ class CfgPatches {
 #include "CfgFatigue.hpp"
 //#include "CfgInventoryGlobalVariable.hpp"
 #include "CfgMoves.hpp"
-
-class ACE_Settings {
-    class GVAR(useImperial) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = "$STR_ACE_Movement_UseImperial";
-    };
-};
+#include "CfgVehicles.hpp"
+#include "ACE_Settings.hpp"

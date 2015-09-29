@@ -19,13 +19,19 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_object,_typeNum,_parentPath,_action);
+if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
+    ERROR("Bad Params");
+};
 
 private ["_varName","_actionList"];
 _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
 _actionList = _object getVariable [_varName, []];
 if((count _actionList) == 0) then {
     _object setVariable [_varName, _actionList];
+};
+
+if (_parentPath isEqualTo ["ACE_MainActions"]) then {
+    [(typeOf _object), _typeNum] call FUNC(addMainAction);
 };
 
 // Add action and parent path to the list of object actions

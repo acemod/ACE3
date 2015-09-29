@@ -16,10 +16,16 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
+//Check sides, Player has cableTie, target is alive and not already handcuffed
 
-//Player has cableTie, target is alive and not already handcuffed
-
+(GVAR(allowHandcuffOwnSide) || {(side _unit) != (side _target)}) &&
 ("ACE_CableTie" in (items _unit)) &&
 {alive _target} &&
-{!(_target getVariable [QGVAR(isHandcuffed), false])}
+{!(_target getVariable [QGVAR(isHandcuffed), false])} &&
+{
+    (_target getVariable ["ACE_isUnconscious", false]) || //isUnconscious
+    {GVAR(requireSurrender) == 0} || //or don't require surrendering
+    {_target getVariable [QGVAR(isSurrendering), false]} ||  //or is surrendering
+    {(GVAR(requireSurrender) == 2) && {(currentWeapon _target) == ""}} //or "SurrenderOrNoWeapon" and no weapon
+}

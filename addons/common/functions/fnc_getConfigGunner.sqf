@@ -1,21 +1,22 @@
 /*
  * Author: commy2
- *
  * Get the gunner config of a vehicles turret.
  *
- * Argument:
- * 0: vehicle (Object)
+ * Arguments:
+ * 0: vehicle <OBJECT>
  *
- * Return value:
- * Gunner config (Config)
+ * Return Value:
+ * Gunner config <CONFIG>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_config", "_turret"];
+params ["_vehicle"];
 
-_vehicle = _this select 0;
+private ["_config", "_turret"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 _turret = [_vehicle] call FUNC(getTurretGunner);
 
-[_config, _turret] call FUNC(getTurretConfigPath)
+[_config, _turret] call FUNC(getTurretConfigPath) // return

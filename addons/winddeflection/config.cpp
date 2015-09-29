@@ -6,10 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_weather"};
-        versionDesc = "ACE Wind Deflection";
-        version = VERSION;
-        author[] = {$STR_ACE_Common_ACETeam, "Glowbal", "Ruthberg"};
-        authorUrl = "http://csemod.com";
+        author[] = {ECSTRING(common,ACETeam), "Glowbal", "Ruthberg"};
+        authorUrl = "http://ace3mod.com/";
+        VERSION_CONFIG;
     };
 };
 
