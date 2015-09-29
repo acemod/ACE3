@@ -74,7 +74,7 @@ GVAR(MenuPFHID) = [{
     [GVAR(INTERACTION_TARGET)] call FUNC(updateIcons);
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
-    _status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus);
+    _status = [GVAR(INTERACTION_TARGET)] call EFUNC(medical,getTriageStatus);
     (_display displayCtrl 2000) ctrlSetText (_status select 0);
     (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
 

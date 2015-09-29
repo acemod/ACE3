@@ -14,6 +14,16 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_getHitPoints","3.5.0","getAllHitPointsDamage");
+
 params ["_vehicle"];
 
-(getAllHitPointsDamage _vehicle select 0) - [""]
+private "_hitPointsWithSelections";
+_hitPointsWithSelections = getAllHitPointsDamage _vehicle;
+
+// get correct format on vehicles without any hitpoints
+if (_hitPointsWithSelections isEqualTo []) then {
+    _hitPointsWithSelections = [[],[],[]];
+};
+
+(_hitPointsWithSelections select 0) - [""]

@@ -17,7 +17,7 @@
 params ["_unit", "_vehicle", "_caller"];
 
 if (!alive _unit) then {
-    _unit = [_unit, _caller] call FUNC(makeCopyOfBody);
+    // _unit = [_unit, _caller] call FUNC(makeCopyOfBody); //func does not exist
 };
 
 private "_slotsOpen";
@@ -41,8 +41,7 @@ if (_slotsOpen) then {
 
     _vehicle setVariable [QGVAR(loaded_persons), _loaded, true];
 
-    // @todo never used. Remove?
-    /*if !([_unit] call FUNC(isAwake)) then {
+    if !([_unit] call FUNC(isAwake)) then {
         [{
             (_this select 0) params ["_unit", "_vehicle"];
 
@@ -60,5 +59,5 @@ if (_slotsOpen) then {
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         }, 0.5, [_unit, _vehicle]] call CBA_fnc_addPerFrameHandler;
-    };*/
+    };
 };

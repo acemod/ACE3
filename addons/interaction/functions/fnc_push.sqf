@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Boat <OBJECT>
- * 1: Player <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -14,13 +14,13 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-params ["_boat", "_player"];
+params ["_boat", "_unit"];
 
-private ["_newVelocity"];
+private "_newVelocity";
+_newVelocity = vectorDir _unit;
+_newVelocity set [2, 0.25];
+_newVelocity = _newVelocity vectorMultiply 2;
 
-_newVelocity = [2 * (vectorDir _player select 0), 2 * (vectorDir _player select 1), 0.5];
-
-[QGVAR(pushBoat), [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);
+["setVelocity", [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);

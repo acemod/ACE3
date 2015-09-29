@@ -3,38 +3,26 @@
  * Taps a shoulder
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
- * 2: Shoulder which was tapped <NUMBER>
+ * 2: Shoulder which was tapped [0: left, 1: right] <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
- * [player, target] call ace_interaction_fnc_tapShoulder
+ * [player, target, 0] call ace_interaction_fnc_tapShoulder
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_3(_tapper,_target,_shoulderNum);
+params ["_unit", "_target", "_shoulderNum"];
 
-if (_target != ACE_player) exitWith {
+if (_unit == ACE_player) then {
     addCamShake [4, 0.5, 5];
-    ACE_player playActionNow "PutDown";
-    if !(local _target) then {
-        [[_tapper, _target, _shoulderNum], QUOTE(DFUNC(tapShoulder)), _target] call EFUNC(common,execRemoteFnc);
-    };
 };
 
-addCamShake [4, 0.5, 5];
+_unit playActionNow "PutDown";
 
-private ["_message"];
-//localize is converting the escaped <> symbols, so just add them here instead of in the stringtable
-if (_shoulderNum == 0) then {
-    _message = format ["%1 &gt;", (localize LSTRING(YouWereTappedRight))];
-} else {
-    _message = format ["&lt; %1", (localize LSTRING(YouWereTappedLeft))];
-};
-
-[parseText _message] call EFUNC(common,displayTextStructured);
+["tapShoulder", [_target], [_target, _shoulderNum]] call EFUNC(common,targetEvent);

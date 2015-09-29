@@ -3,12 +3,15 @@
 ADDON = false;
 
 PREP(canDeploy);
-PREP(carry);
 PREP(deploy);
 PREP(deployCancel);
 PREP(deployConfirm);
-PREP(drop);
+PREP(handleInteractMenuOpened);
+PREP(handleKilled);
+PREP(handlePlayerChanged);
+PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
+PREP(handleUnconscious);
 PREP(pickup);
 
 ADDON = true;

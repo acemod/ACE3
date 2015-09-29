@@ -17,8 +17,6 @@
 
 params ["_projectile", "_adjustDir", "_adjustUp", ["_adjustSpeed",0]];
 
-//["CPD", [_fnc_scriptNameParent, _adjustDir, _adjustUp, _adjustSpeed], nil, false] call FUNC(log);
-
 private ["_vdir", "_dir", "_up", "_vlat", "_vup", "_vel"];
 
 // get old direction vector
