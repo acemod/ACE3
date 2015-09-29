@@ -36,6 +36,11 @@ parent: wiki
             <td>Open/close door</td>
             <td><code>ACE_Interaction</code></td>
         </tr>
+        <tr>
+            <td>Holding <kbd>Ctrl</kbd>+<kbd>Space</kbd> + Mousewheel</td>
+            <td>Open/close door incrementally</td>
+            <td><code>ACE_Interaction</code></td>
+        </tr>
          <tr>
             <td><kbd>Ctrl</kbd>+<kbd>T</kbd></td>
             <td>Tap on the shoulder</td>
