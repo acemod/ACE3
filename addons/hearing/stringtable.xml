@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
-            <German>Ohrenstöpsel drinnen</German>
+            <German>Ohrenstöpsel drin</German>
             <Spanish>Tapones puestos</Spanish>
             <Polish>Stopery włożone</Polish>
             <Czech>Špunty v uších</Czech>
@@ -153,6 +153,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
+            <German>Beeinflusst Zeus-Einheiten</German>
             <Polish>Wpływ na Zeus RC</Polish>
             <Russian>Влияет на юнита Зевса</Russian>
             <Portuguese>Afeta Zeus CR</Portuguese>
@@ -160,6 +161,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
+            <German>Erlaubt von Zeus gesteuerte Einheiten einen Hörschaden davonzutragen. </German>
             <Polish>Aktywuj efekty utraty słuchu dla jednostek kontrolowanych zdalnie przez Zeusa.</Polish>
             <Russian>Контролирует оглушение в бою и звон в ушах. При активации играки могут быть оглушены близкими выстрелами и взрывами при отсутствии защиты для ушей.</Russian>
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>

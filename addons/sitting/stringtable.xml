@@ -3,6 +3,7 @@
     <Package name="Sitting">
         <Key ID="STR_ACE_Sitting_Sit">
             <English>Sit Down</English>
+            <German>Hinsetzen</German>
             <Polish>Usiądź</Polish>
             <Portuguese>Sentar</Portuguese>
             <Czech>Sednout si</Czech>
@@ -13,6 +14,7 @@
         </Key>
         <Key ID="STR_ACE_Sitting_Stand">
             <English>Stand Up</English>
+            <German>Aufstehen</German>
             <Polish>Wstań</Polish>
             <Portuguese>Levantar</Portuguese>
             <Czech>Vstát</Czech>
@@ -23,6 +25,7 @@
         </Key>
         <Key ID="STR_ACE_Sitting_Enable">
             <English>Enable Sitting</English>
+            <German>Sitzen ermöglichen</German>
             <Portuguese>Habilitar opção para sentar</Portuguese>
             <Polish>Aktywuj siadanie</Polish>
             <Czech>Povolit sezení</Czech>
@@ -33,6 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDisplayName">
             <English>Sitting</English>
+            <German>Hinsetzen</German>
             <Portuguese>Sentado</Portuguese>
             <Polish>Siadanie</Polish>
             <Czech>Sezení</Czech>
@@ -43,6 +47,7 @@
         </Key>
         <Key ID="STR_ACE_Sitting_ModuleDescription">
             <English>This module allows you to disable the ability to sit on chairs and toilets.</English>
+            <German>Dieses Modul eröffnet die Möglichkeit sich auf Stühlen oder Toiletten hinzusetzen.</German>
             <Portuguese>Este módulo permite que você desabilite a capacidade de sentar-se em cadeiras e banheiros.</Portuguese>
             <Polish>Moduł ten pozwala na włączenie lub wyłączenie możliwości siadania na krzesłach i toaletach.</Polish>
             <Czech>Tento modul dovoluje zakázat možnost sedět na židlých a toaletách.</Czech>
