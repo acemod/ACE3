@@ -102,7 +102,7 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
     private["_currentWounds", "_headWounds", "_bodyWounds", "_legsWounds", "_armWounds"];
 
     // Get the list of the wounds the target is currently suffering from.
-    _currentWounds = _target getvariable [QGVAR(openWounds), []];
+    _currentWounds = _target getVariable [QGVAR(openWounds), []];
 
     // Tally of unbandaged wounds to each body part.
     _headWounds = 0;
@@ -143,7 +143,7 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
         if (_bodyPart == 5 && {(_numOpenWounds * _bloodLoss) > 0}) then {
             _legsWounds = _legsWounds + 1;
         };
-    } foreach _currentWounds;
+    } forEach _currentWounds;
 
     // Any body part that has no wounds is healed to full health
     if (_headWounds == 0) then {
