@@ -38,7 +38,7 @@
             <Russian>Свет фонаря на карте?</Russian>
             <Portuguese>Brilho de lanterna no mapa?</Portuguese>
             <Spanish>Resplandor de linterna en el mapa?</Spanish>
-            <German>Taschenlampenbeleuchtung auf Karte?</German>
+            <German>Taschenlampenschein sichtbar?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -46,7 +46,7 @@
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
-            <German>Füge externe Beleuchtung für Spieler mit Taschenlampe auf der Karte hinzu?</German>
+            <German>Die Taschenlampenbenutzung auf der Karte, durch einen Schein um den Spieler, für andere sichtbar machen?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -270,7 +270,7 @@
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
             <Polish>Ust. domyślny kanał</Polish>
-            <German>Setze Standard Kanal beim Start</German>
+            <German>Setze Standardkanal beim Start</German>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
