@@ -30,6 +30,7 @@
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
+            <German>Simuliere Karten Beleuchtung auf Basis von Umgebungslicht und Spieler Gegenständen?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -37,6 +38,7 @@
             <Russian>Свет фонаря на карте?</Russian>
             <Portuguese>Brilho de lanterna no mapa?</Portuguese>
             <Spanish>Resplandor de linterna en el mapa?</Spanish>
+            <German>Taschenlampenbeleuchtung auf Karte?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -44,6 +46,7 @@
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
+            <German>Füge externe Beleuchtung für Spieler mit Taschenlampe auf der Karte hinzu?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -142,6 +145,7 @@
             <French>Activer le Suivi des Forces Alliées</French>
             <Hungarian>BFT engedélyezése</Hungarian>
             <Russian>Включить BFT</Russian>
+            <German>BFT aktivieren</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
@@ -152,6 +156,7 @@
             <French>Activer le SFA. Défaut: non</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
+            <German>Aktiviere Blue Force Tracking. Standard: Nein</German>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -215,6 +220,7 @@
             <Russian>Фонари</Russian>
             <Czech>Svítilny</Czech>
             <Spanish>Linternas</Spanish>
+            <German>Taschenlampen</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -223,6 +229,7 @@
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
+            <German>NVG</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -231,6 +238,7 @@
             <Russian>Вкл.</Russian>
             <Czech>Zapnout</Czech>
             <Spanish>Encendido</Spanish>
+            <German>An</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -239,6 +247,7 @@
             <Russian>Выкл.</Russian>
             <Czech>Vypnout</Czech>
             <Spanish>Apagado</Spanish>
+            <German>Aus</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -247,6 +256,7 @@
             <Russian>Увеличить яркость</Russian>
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
+            <German>erhöhe Helligkeit</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -255,14 +265,17 @@
             <Russian>Уменьшить яркость</Russian>
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
+            <German>verringere Helligkeit</German>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
             <Polish>Ust. domyślny kanał</Polish>
+            <German>Setze Standard Kanal beim Start</German>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
             <Polish>Ustaw domyślny kanał dla markerów przy starcie misji</Polish>
+            <German>Ändere den Anfangskanal for Karten Markierungen beim Missionsstart</German>
         </Key>
     </Package>
 </Project>
