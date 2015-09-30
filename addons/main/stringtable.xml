@@ -3,6 +3,7 @@
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
             <English>ACE Logistics</English>
+            <German>ACE Logistik.</German>
             <Polish>ACE Logistyka</Polish>
             <Portuguese>Logísticas ACE</Portuguese>
             <Russian>ACE: логистика</Russian>
