@@ -190,7 +190,7 @@
             <English>Show crew info?</English>
             <Polish>Pokaż załogę</Polish>
             <Spanish>¿Mostrar información de la tripulación?</Spanish>
-            <German>Zeige Besatzungsbericht?</German>
+            <German>Zeige Besatzungsstatus?</German>
             <Czech>Zobrazit informace o posádce?</Czech>
             <Portuguese>Mostrar informação de tripulação?</Portuguese>
             <French>Afficher les informations de l'équipage?</French>
@@ -201,7 +201,7 @@
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
             <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
             <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
-            <German>Zeige Bericht der Fahrzeugbesatzung oder erlaube Spielern ihn auszuwählen. Standard: nicht erzwingen.</German>
+            <German>Zeige Status der Fahrzeugbesatzung oder erlaube Spielern ihn auszuwählen. Standard: nicht erzwingen.</German>
             <Czech>Zobrazit informace o posádce, nebo nechat aby si hráč vybral sám. Výchozí: Nevynucovat </Czech>
             <Portuguese>Mostrar informações de tripulação ou por padrão permitir a escolha dos jogadores. Padrão: Não forçar.</Portuguese>
             <French>Afficher les informations sur l'équipage d'un véhicule. Défaut: ne pas forcer</French>
