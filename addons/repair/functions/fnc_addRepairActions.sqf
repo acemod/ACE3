@@ -29,7 +29,9 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints and selections
-(getAllHitPointsDamage _vehicle) params ["_hitPoints", "_hitPointsSelections"];
+(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitPointsSelections", []]];
+
+if (_hitPoints isEqualTo []) exitWith {ACE_LOGERROR_1("No Hitpoints on %1", _type);};
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
@@ -56,7 +58,6 @@ _processedHitPoints = [];
 
         // _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-        // textDefault = "<img image='\A3\ui_f\data\igui\cfg\actions\repair_ca.paa' size='1.8' shadow=2 />";
         _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
 
         // remove wheel action

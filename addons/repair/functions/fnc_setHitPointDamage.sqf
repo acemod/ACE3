@@ -1,6 +1,7 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
+ * Handles the "setVehicleHitPointDamage" event
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
@@ -24,7 +25,7 @@ TRACE_3("params",_vehicle,_hitPointIndex,_hitPointDamage);
 if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
 // get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params ["_allHitPoints", "_allHitPointsSelections", "_allHitPointDamages"];
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 if ((typeName _hitPointIndex) == "STRING") then {
     ACE_LOGWARNING_1("setHitpointDamage - _hitPointIndex was string %1", _this);
@@ -32,7 +33,7 @@ if ((typeName _hitPointIndex) == "STRING") then {
 };
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_1("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
 private ["_damageOld", "_hitPointIndexDamageSumOld", "_damageRepaired", "_hitPointIndexsBeingCounted", "_selectionName", "_damageNew"];
