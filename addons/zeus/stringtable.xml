@@ -127,7 +127,7 @@
             <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
             <Spanish>Revelar minas a aliados y establecer marcadores de mapa.</Spanish>
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
-            <German>Enthülle Minen gegenüber Verbündeten und platziere Kartenmarkierungen.</German>
+            <German>Melde Minen gegenüber Verbündeten und platziere entsprechende Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
             <French>Révéler les mines et placer un marqueur sur la carte</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
@@ -190,6 +190,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
+            <German>Sanitäter zuweisen.</German>
             <Polish>Przydziel medyka</Polish>
             <Portuguese>Definir médico</Portuguese>
             <Russian>Назначить медиком</Russian>
@@ -198,6 +199,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
+            <German>Sanitätesfahrzeug zuweisen.</German>
             <Polish>Przydziel pojazd medyczny</Polish>
             <Portuguese>Definir veículo médico</Portuguese>
             <Russian>Назначить медицинским транспортом</Russian>
@@ -206,6 +208,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
+            <German>Medizinische Einrichtung zuweisen.</German>
             <Polish>Przydziel budynek medyczny</Polish>
             <Portuguese>Definir instalação médica</Portuguese>
             <Russian>Назанчить медицинским сооружением</Russian>
@@ -215,7 +218,7 @@
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>
-            <German>Nur bei lebenden Einheiten verwendbar</German>
+            <German>Einheit muss lebendig sein.</German>
             <Spanish>Utilizar solo en unidades vivas</Spanish>
             <Czech>Použitelné jen na živé jednotky</Czech>
             <Polish>Używaj tylko na żywych jednostkach</Polish>
@@ -238,6 +241,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
+            <German>Das Ziel muss ein Bauwerk sein.</German>
             <Polish>Jednostka musi być budynkiem</Polish>
             <Portuguese>Unidade deve ser uma estrutura</Portuguese>
             <Russian>Юнит должен быть строением</Russian>
@@ -245,6 +249,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
+            <German>Das Ziel muss ein Fahrzeug sein.</German>
             <Polish>Jednostka musi być pojazdem</Polish>
             <Portuguese>Unidade deve ser um veículo</Portuguese>
             <Russian>Юнит должен быть транспортом</Russian>
@@ -286,6 +291,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
+            <German></German>
             <Polish>Dodaj obiekt do kuratora</Polish>
             <Portuguese>Adicionar objetos para o Curator</Portuguese>
             <Russian>Добавить объекты куратору</Russian>
@@ -293,6 +299,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
+            <German></German>
             <Polish>Dodaje każdy zespawnowany obiekt do wszystkich kuratorów podczas misji</Polish>
             <Portuguese>Adicionar qualquer objeto criado para todos os curators na missão</Portuguese>
             <Russian>Добавляет любой отспавненный объект всем кураторам в миссии</Russian>
