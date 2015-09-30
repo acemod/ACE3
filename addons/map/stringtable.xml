@@ -30,7 +30,7 @@
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
-            <German>Simuliere Karten Beleuchtung auf Basis von Umgebungslicht und Spieler Gegenständen?</German>
+            <German>Simuliere Kartenbeleuchtung auf Basis von Umgebungslicht und Spielergegenständen?</German>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -275,7 +275,7 @@
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
             <Polish>Ustaw domyślny kanał dla markerów przy starcie misji</Polish>
-            <German>Ändere den Anfangskanal for Karten Markierungen beim Missionsstart</German>
+            <German>Ändere den Anfangskanal für Kartenmarkierungen beim Missionsstart</German>
         </Key>
     </Package>
 </Project>
