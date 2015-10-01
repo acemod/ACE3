@@ -3,6 +3,7 @@
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
             <English>Slideshow</English>
+            <German>Diavorführung</German>
             <French>Diaporama</French>
             <Polish>Pokaz slajdów</Polish>
             <Hungarian>Vetítés</Hungarian>
@@ -13,6 +14,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
+            <German>Dieses Modul erlaubt eine Diavorführung auf unterschiedlichen Objekten. Ein Modul, eine Bilderliste. Nur Objekte mit "hiddenSelection 0" werden unterstützt.</German>
             <French>Ce module permet d'afficher des diaporamas sur différents objets. Un module par liste d'image. Seul les objets avec le paramètre "HiddenSelection 0" sont supportés</French>
             <Polish>Ten moduł pozwala skonfigurować pokaz slajdów na różnych obiektach. Jeden moduł na jedną liste slajdów. Tylko obiekty z hiddenSelection 0 są wspierane.</Polish>
             <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
@@ -22,6 +24,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
+            <German>Objekte</German>
             <French>Objets</French>
             <Polish>Obiekty</Polish>
             <Hungarian>Objektumok</Hungarian>
@@ -32,6 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
+            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt werden. Werden ggf.durch Kommata getrennt. Weiteres in der INFO für unterstützte Objekte. </German>
             <French>Nom d'objets (peuvent aussi être des objets synchronisés) sur lesquels les diaporamas vont être affichées, séparation par virgule si plusieurs.</French>
             <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1. Sprawdź opis modułu aby dowiedzieć się jakie obiekty są wspierane przez moduł.</Polish>
             <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
@@ -41,6 +45,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
+            <German></German>
             <French>Controleurs</French>
             <Polish>Kontroler</Polish>
             <Hungarian>Vezérlők</Hungarian>
@@ -50,6 +55,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
+            <German> _________ Objektnamen, werden ggf. durch Kommata getrennt.</German>
             <French>Noms de controleur d'objets, séparation par virgule si plusieurs</French>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
