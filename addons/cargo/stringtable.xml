@@ -57,7 +57,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
-            <German>Aktiviere das Verladungs-Modul</German>
+            <German>Aktiviere das Fracht-Modul</German>
             <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów.</Polish>
             <Portuguese>Ativar o módulo de carregamento de carga</Portuguese>
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
