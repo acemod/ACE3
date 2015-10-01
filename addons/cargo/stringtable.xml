@@ -3,6 +3,7 @@
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
+            <German>Beladen</German>
             <Polish>Załaduj</Polish>
             <Portuguese>Carregar</Portuguese>
             <Russian>Загрузить</Russian>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
+            <German>Entladen</German>
             <Polish>Wyładuj</Polish>
             <Portuguese>Descarregar</Portuguese>
             <Russian>Выгрузить</Russian>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
+            <German>Fracht</German>
             <Polish>Ładunek</Polish>
             <Portuguese>Carga</Portuguese>
             <Russian>Грузовой отсек</Russian>
@@ -27,6 +30,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
+            <German>Frachtmenü</German>
             <Polish>Menu ładunku</Polish>
             <Portuguese>Menu de carga</Portuguese>
             <Russian>Грузовой отсек</Russian>
@@ -35,6 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
+            <German>Frachtplätze frei: %1</German>
             <Polish>Pozostałe miejsce: %1</Polish>
             <Portuguese>Espaço de carga restante: %1</Portuguese>
             <Russian>Осталось мест: %1</Russian>
@@ -43,6 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
+            <German>Aktiviere Fracht</German>
             <Polish>Aktywuj cargo</Polish>
             <Portuguese>Ativar carga</Portuguese>
             <Russian>Включить модуль перевозки грузов</Russian>
@@ -51,6 +57,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
+            <German>Aktiviere das Verladungs-Modul</German>
             <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów.</Polish>
             <Portuguese>Ativar o módulo de carregamento de carga</Portuguese>
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
@@ -58,6 +65,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
+            <German>Frachteinstellugen</German>
             <Polish>Ustawienia cargo</Polish>
             <Portuguese>Preferências de carregamento</Portuguese>
             <Russian>Перевозка грузов</Russian>
@@ -66,6 +74,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
+            <German>Konfiguriere das Frachtmodul</German>
             <Polish>Skonfiguruj ustawienia modułu cargo.</Polish>
             <Portuguese>Configura as preferências do módulo de carga</Portuguese>
             <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
