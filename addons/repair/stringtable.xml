@@ -848,7 +848,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
-            <German>Eine Aufzählung von Einheitennamen, die als Pionier gelten, getrennt durch Kommata.</German>
+            <German>Eine Aufzählung von Einheiten, die als Pionier gelten, getrennt durch Kommata.</German>
             <Polish>Lista nazw jednostek, które są sklasyfikowane jako inżynierowie, oddzielone przecinkami.</Polish>
             <Portuguese>Lista de nomes de unidades que serão classificadas como engenheiros, separadas por vírgulas.</Portuguese>
             <Russian>Список имен юнитов, которые будут классифицированы как инженеры, разделенный запятыми.</Russian>
@@ -890,6 +890,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
             <English>Specialist</English>
+            <German>Mechatroniker</German>
             <Polish>Inżynier</Polish>
             <Portuguese>Especialista</Portuguese>
             <Russian>Специалист</Russian>
@@ -898,6 +899,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
+            <German>Weist einen oder mehrere Einheiten der Pionierklasse zu.</German>
             <Polish>Przydziel klasę inżyniera do jednej lub kilku jednostek </Polish>
             <Portuguese>Defina um ou mais unidades como engenheiro</Portuguese>
             <Russian>Назначить одного или нескольких юнитов инженерами</Russian>
@@ -905,6 +907,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
             <English>Assign Repair Vehicle</English>
+            <German>Weise Reperaturfahrzeug zu</German>
             <Polish>Przydziel pojazd naprawczy</Polish>
             <Portuguese>Defina veículo de reparo</Portuguese>
             <Russian>Назначить ремонтный транспорт</Russian>
@@ -912,6 +915,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
             <English>List</English>
+            <German>Liste</German>
             <Polish>Lista</Polish>
             <Portuguese>Lista</Portuguese>
             <Russian>Список</Russian>
@@ -920,6 +924,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
+            <German>Eine Aufzählung von Fahrzeugen, die als Reperaturfahrzeug gelten, getrennt durch Kommata</German>
             <Polish>Lista nazw pojazdów, które są sklasyfikowane jako pojazdy naprawcze, oddzielone przecinkami.</Polish>
             <Portuguese>Lista de veículos que serão classificadas como veículo de reparo. Separado por vígulas.</Portuguese>
             <Russian>Список транспортных средств, которые будут классифицированы как ремонтные, разделенный запятыми.</Russian>
@@ -927,6 +932,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
+            <German>Ist Reparaturfahrzeug</German>
             <Polish>Jest poj. naprawczym</Polish>
             <Portuguese>É veículo de reparo</Portuguese>
             <Russian>Это ремонтный транспорт</Russian>
@@ -934,6 +940,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
             <English>Is the vehicle classified as a repair vehicle?</English>
+            <German>Gilt dieses Fahrzeug als Reperaturfahrzeug?</German>
             <Polish>Czy pojazd jest zklasyfikowany jako pojazd naprawczy?</Polish>
             <Portuguese>O veículo é classificado como reparo?</Portuguese>
             <Russian>Классифицируется ли этот транспорт как ремонтный?</Russian>
@@ -941,6 +948,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
             <English>Assign one or multiple vehicles as a repair vehicle</English>
+            <German>Weist ein oder mehr Fahrzeuge als Reperaturfahrzeug zu</German>
             <Polish>Przydziel klasę pojazdu naprawczego do jednego lub kilku pojazdów.</Polish>
             <Portuguese>Definir um ou mais veículos como reparo</Portuguese>
             <Russian>Назначить одно или несколько транспортных средств ремонтными</Russian>
@@ -948,6 +956,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
+            <German>Weise Reperatureinrichtung zu</German>
             <Polish>Przydziel budynek naprawczy</Polish>
             <Portuguese>Definir instalação de reparo</Portuguese>
             <Russian>Назначить ремонтное сооружение</Russian>
@@ -955,6 +964,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
             <English>List</English>
+            <German>Liste</German>
             <Polish>Lista</Polish>
             <Portuguese>Lista</Portuguese>
             <Russian>Список</Russian>
@@ -963,6 +973,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
+            <German>Eine Aufzählung von Objekten, die als Reperatureinrichtung gelten, getrennt durch Kommata</German>
             <Polish>Lista nazw budynków, które są sklasyfikowane jako budynki naprawcze, oddzielone przecinkami.</Polish>
             <Portuguese>Lista de objetos que serão classificados como instalações de reparo. separado por vírgulas.</Portuguese>
             <Russian>Список объектов, которые будут классифицированы как ремонтные, разделенный запятыми.</Russian>
@@ -970,6 +981,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
+            <German>Ist Reperatureinrichtung</German>
             <Polish>Jest bud. naprawczym</Polish>
             <Portuguese>É uma instalação de reparo</Portuguese>
             <Russian>Это ремонтное сооружение</Russian>
@@ -977,6 +989,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
             <English>Is the object classified as a repair Facility?</English>
+            <German>Ist das Objekt als Reperatureinrichtung zugewiesen?</German>
             <Polish>Czy budynek jest zklasyfikowany jako budynek naprawczy?</Polish>
             <Portuguese>O objeto é classificado como instalação de reparo?</Portuguese>
             <Russian>Классифицируется ли этот объект как ремонтное сооружение?</Russian>
@@ -984,6 +997,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
+            <German>Weist eines oder mehrere Objekte als Reperatureinrichtung zu</German>
             <Polish>Przydziel klasę budynku naprawczego do jednego lub kilku budynków.</Polish>
             <Russian>Назначить один или несколько объектов ремонтными сооружениями</Russian>
             <Portuguese>Definir um ou mais objetos como instalação de reparos</Portuguese>
@@ -991,6 +1005,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
             <English>Add Spare Parts</English>
+            <German>Füge Ersatzteile hinzu</German>
             <Polish>Dodaj części zam.</Polish>
             <Portuguese>Adicionar partes sobressalentes</Portuguese>
             <Spanish>Añadir repuestos</Spanish>
@@ -998,6 +1013,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
+            <German>Füge Ersatzteile zu einem odere mehreren Objekten hinzu</German>
             <Polish>Dodaj części zamienne do jednego lub wielu obiektów.</Polish>
             <Portuguese>Adicionar partes sobressalentes para um ou mais objetos</Portuguese>
             <Spanish>Añadir repuestos a uno o varios objetos</Spanish>
@@ -1005,6 +1021,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
             <English>List</English>
+            <German>Liste</German>
             <Polish>Lista</Polish>
             <Portuguese>Lista</Portuguese>
             <Spanish>Lista</Spanish>
@@ -1012,6 +1029,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
+            <German>Eine Aufzählung von Objekten, welche Ersatzteile beherbergen, getrennt durch Kommata</German>
             <Polish>Lista obiektów, które otrzymają części zamienne, oddzielone przecinkiem.</Polish>
             <Portuguese>Lista de objetos que ganharão partes sobressalentes, dividos por vírgulas.</Portuguese>
             <Spanish>Lista de los objetos que tendrán repuestos añadidos, separados por comas.</Spanish>
@@ -1019,6 +1037,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>
+            <German>Teil</German>
             <Polish>Część</Polish>
             <Portuguese>Parte</Portuguese>
             <Spanish>Pieza</Spanish>
@@ -1026,6 +1045,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
             <English>Spare part.</English>
+            <German>Ersatzteile</German>
             <Polish>Część zamienna.</Polish>
             <Portuguese>Parte sobressalente</Portuguese>
             <Spanish>Pieza de recambio.</Spanish>
@@ -1033,6 +1053,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
             <English>Amount</English>
+            <German>Menge</German>
             <Polish>Ilość</Polish>
             <Portuguese>Quantidade</Portuguese>
             <Spanish>Cantidad</Spanish>
@@ -1040,6 +1061,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
             <English>Number of selected spare parts.</English>
+            <German>Anzahl der ausgewählten Ersatzteile</German>
             <Polish>Ilość wybranych części zamiennych.</Polish>
             <Portuguese>Número de partes sobressalentes.</Portuguese>
             <Spanish>Número de piezas de repuesto seleccionados.</Spanish>
@@ -1047,12 +1069,14 @@
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
+            <German>Erfordernisse zur Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
             <Russian>Для ремонта колес требуется</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
+            <German>Gegenstänge, die zum Entfernen/Austauschen eines Reifens benötigt werden</German>
             <Polish>Przedmioty potrzebne do wymiany kół</Polish>
             <Spanish>Elementos necesarios para quitar/cambiar ruedas</Spanish>
             <Russian>Предметы, которые требуются для снятия/замены колес</Russian>
