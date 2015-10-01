@@ -114,34 +114,40 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
     {
         _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
 
-        // Head
-        if (_bodyPart == 0 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _headWounds = _headWounds + 1;
-        };
+        // Use switch/case for early termination if wounded limb is found before all six are checked.
+        // Multiplying wounds by blood loss will either increment the wound count by
+        // some number (only care if greater than zero) or it will return zero indicating
+        // the body part is still undamaged.
+        switch (_bodyPart) do {
+            // Head
+            case 0: {
+                _headWounds = _headWounds + (_numOpenWounds * _bloodLoss);
+            };
 
-        // Body
-        if (_bodyPart == 1 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _bodyWounds = _bodyWounds + 1;
-        };
+            // Body
+            case 1: {
+                _bodyWounds = _bodyWounds + (_numOpenWounds * _bloodLoss);
+            };
 
-        // Left Arm
-        if (_bodyPart == 2 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _armWounds = _armWounds  + 1;
-        };
+            // Left Arm
+            case 2: {
+                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+            };
 
-        // Right Arm
-        if (_bodyPart == 3 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _armWounds = _armWounds  + 1;
-        };
+            // Right Arm
+            case 3: {
+                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+            };
 
-         // Left Leg
-        if (_bodyPart == 4 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _legsWounds = _legsWounds + 1;
-        };
+            // Left Leg
+            case 4: {
+                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+            };
 
-         // Right Leg
-        if (_bodyPart == 5 && {(_numOpenWounds * _bloodLoss) > 0}) then {
-            _legsWounds = _legsWounds + 1;
+            // Right Leg
+            case 5: {
+                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+            };
         };
     } forEach _currentWounds;
 
