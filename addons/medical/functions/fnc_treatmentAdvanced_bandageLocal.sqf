@@ -115,9 +115,9 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
         _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
 
         // Use switch/case for early termination if wounded limb is found before all six are checked.
-        // Multiplying wounds by blood loss will either increment the wound count by
-        // some number (only care if greater than zero) or it will return zero indicating
-        // the body part is still undamaged.
+        // Number of wounds multiplied by blood loss will return zero for a fully
+        // bandaged body part, not incrementing the wound counter; or it will return
+        // some other number which will increment the wound counter. 
         switch (_bodyPart) do {
             // Head
             case 0: {
