@@ -399,7 +399,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Actions_TriageCard">
             <English>Triage Card</English>
-            <German>Triagekarte</German>
+            <German>Verletztenanhängekarte (VAK)</German>
             <Spanish>Tarjeta de clasificación</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
@@ -411,7 +411,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
-            <German>Keine Einträge auf der Triagekarte</German>
+            <German>Keine Einträge auf der Verletztenanhängekarte (VAK)</German>
             <Italian>Nessuna voce sulla Triage Card</Italian>
             <Russian>Нет записей.</Russian>
             <French>Aucune entrée sur cette carte de triage</French>
