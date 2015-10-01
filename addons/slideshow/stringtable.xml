@@ -55,7 +55,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
-            <German> _________ Objektnamen, werden ggf. durch Kommata getrennt.</German>
+            <German></German>
             <French>Noms de controleur d'objets, séparation par virgule si plusieurs</French>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
@@ -65,6 +65,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
+            <German>Bilder</German>
             <French>Images</French>
             <Polish>Obrazy</Polish>
             <Hungarian>Képek</Hungarian>
@@ -75,6 +76,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
+            <German>Eine Liste von Bildern die bei der Vorführung verwendet werden, durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa).</German>
             <French>Liste d'images qui seront utilisées dans des diaporama, séparation par virgule, avec le chemin d'accès complet et formaté correctement (ie. images\image.paa)</French>
             <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
