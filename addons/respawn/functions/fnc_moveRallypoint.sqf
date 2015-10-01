@@ -41,12 +41,18 @@ _position set [2, 0];
 [localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
 
 [{
-    params ["_rallypoint", "_unit", "_position"];
+    params ["_rallypoint", "_unit", "_position", "_minutes"];
 
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
-    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, date select 4], true];
+    // fix leading zero
+    _minutes = date select 4;
+    if (_minutes < 10) then {
+        _minutes = format ["0%1", _minutes];
+    };
+
+    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, _minutes], true];
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
