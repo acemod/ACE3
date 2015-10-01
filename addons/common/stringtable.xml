@@ -485,7 +485,7 @@
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
             <Polish>Sprawdzaj spójność addonów z serwerem i wykonuj stosowną akcję jeżeli zostanie wykryty brak addonu.</Polish>
             <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
-            <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
+            <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien mitgeladen hat.</German>
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
@@ -506,7 +506,7 @@
             <English>What to do with people who do not have the right PBOs?</English>
             <Polish>Co zrobić z graczami, którzy nie mają właściwych PBO?</Polish>
             <Spanish>¿Qué hacer con la gente que no tiene correctamente los PBOs?</Spanish>
-            <German>Was soll mit Leuten passieren, die nicht die richtigen PBOs haben?</German>
+            <German>Was soll mit Leuten geschehen, die nicht die richtigen PBOs geladen haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
             <French>Que faire avec les personnes n'ayant pas les bon PBOs</French>
@@ -528,7 +528,7 @@
             <English>Warn (permanent)</English>
             <Polish>Ostrzeżenie (permanentne)</Polish>
             <Spanish>Avisar (permanente)</Spanish>
-            <German>Immer verwarnen</German>
+            <German>Verwarnen (permanent)/German>
             <Czech>Upozornit (permanentně)</Czech>
             <Portuguese>Avisar (permanente)</Portuguese>
             <French>Avertir (permanent)</French>
@@ -604,7 +604,7 @@
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
             <Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
-            <Spanish>Añade el efecto LSD al vehículo sincronizado</Spanish>
+            <Spanish>Añade el efecot LSD al vehículo sincronizado</Spanish>
             <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
             <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
             <Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
@@ -693,6 +693,7 @@
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
+            <German>Nur Fahrzeuge</German>
             <Polish>Tylko pojazdy</Polish>
             <Portuguese>Somente veículos</Portuguese>
             <Russian>Только в транспорте</Russian>
@@ -701,6 +702,7 @@
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
+            <German>Nicht erzwingen</German>
             <Polish>Nie wymuszaj</Polish>
             <Spanish>No forzar</Spanish>
             <German>Nicht erzwingen</German>
@@ -718,6 +720,7 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
+            <German>ACE3 Allgemein</German>
             <Polish>ACE3 Ogólne</Polish>
             <Portuguese>Comum ACE3</Portuguese>
             <Russian>ACE3 Общие</Russian>
@@ -725,6 +728,7 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
+            <German>ACE3 Waffen</German>
             <Polish>ACE3 Broń</Polish>
             <Portuguese>Armamento ACE3</Portuguese>
             <Russian>ACE3 Оружие</Russian>
@@ -733,6 +737,7 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
+            <German>ACE3 Bewegung</German>
             <Polish>ACE3 Ruch</Polish>
             <Portuguese>Movimento ACE3</Portuguese>
             <Russian>ACE3 Перемещение</Russian>
@@ -740,6 +745,7 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
+            <German>ACE3 Visiereinstellunge</German>
             <Polish>ACE3 Regulacja optyki</Polish>
             <Portuguese>Ajuste de luneta ACE3</Portuguese>
             <Russian>ACE3 Прицелы</Russian>
@@ -748,6 +754,7 @@
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
+            <German>ACE3 Fahrzeuge</German>
             <Polish>ACE3 Pojazdy</Polish>
             <Portuguese>Veículos ACE3</Portuguese>
             <Russian>ACE3 Транспорт</Russian>
