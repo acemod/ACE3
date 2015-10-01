@@ -41,13 +41,13 @@ _position set [2, 0];
 [localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
 
 [{
-    params ["_rallypoint", "_unit", "_position", "_minutes"];
+    params ["_rallypoint", "_unit", "_position"];
 
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
     // fix leading zero
-    _minutes = date select 4;
+    local _minutes = date select 4;
     if (_minutes < 10) then {
         _minutes = format ["0%1", _minutes];
     };
