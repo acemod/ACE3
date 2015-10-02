@@ -83,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
-            <German>Untersuchung &amp Behandlung</German>
+            <German>Untersuchung &amp; Behandlung</German>
             <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
             <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
             <French>EXAMINER &amp; TRAITEMENTS</French>
@@ -103,7 +103,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
             <English>OVERVIEW</English>
-            <German>Übersicht</German>
+            <German>ÜBERSICHT</German>
             <Russian>ОБЩАЯ ИНФОРМАЦИЯ</Russian>
             <Spanish>DESCRIPCIÓN</Spanish>
             <French>DESCRIPTION</French>
@@ -113,7 +113,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
-            <German>Aktivitätslog</German>
+            <German>AKTIVITÄTSVERLAUF</German>
             <Russian>ПРОВЕДЕННЫЕ МАНИПУЛЯЦИИ</Russian>
             <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
             <French>REGISTRE DES SOINS</French>
@@ -123,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
             <English>QUICK VIEW</English>
-            <German>Schnellansicht</German>
+            <German>SCHNELLANSICHT</German>
             <Russian>БЫСТРЫЙ ОСМОТР</Russian>
             <Spanish>VISTA RÁPIDA</Spanish>
             <French>VUE RAPIDE</French>
