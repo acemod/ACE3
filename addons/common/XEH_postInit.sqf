@@ -224,8 +224,8 @@ call FUNC(assignedItemFix);
 GVAR(ScrollWheelFrame) = diag_frameno;
 
 ["mainDisplayLoaded", {
-    call FUNC(handleScrollWheelInit);
     [{
+        call FUNC(handleScrollWheelInit);
         call FUNC(handleModifierKeyInit);
     }, [], 0.1] call FUNC(waitAndExecute); // needs delay, otherwise doesn't work without pressing "RESTART" in editor once. Tested in 1.52RC
 }] call FUNC(addEventHandler);
