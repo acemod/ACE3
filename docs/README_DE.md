@@ -27,7 +27,7 @@
 
 Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem frei Änderungen vorzuschlagen, oder seine eigene, modifizierte Version zu erstellen, solange diese ebenfalls der Öffentlichkeit zugänglich ist und mit GNU General Public License übereinstimmt. (Weitere Informationen ist der Lizenzdatei in diesem Projekt entnehmbar)
 
-Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten ausschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc. .Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am medizinischem System), sodass eine individuelle Erfahrung gewährleistet wird.
+Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten ausschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc..Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am Sanitätssystem), sodass eine individuelle Erfahrung gewährleistet werden kann.
 
 ### Hauptmerkmale
 - Vollkommen neues 3D Interaktionssystem
@@ -69,11 +69,11 @@ Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert 
 - [Erste Schritte](http://ace3mod.com/wiki/user/getting-started.html).
 
 #### Mitwirken
-Wenn du bei der Entwicklung der MOD mithelfen möchtest, so kannst du dies tun, indem du nach Fehlern Ausschau hältst, oder neue Funktionen vorschlägst. Um etwas beizutragen, "Forke" einfach dieses Archiv (bzw. repository) und erstelle deine "Pull-Request", welche von anderen Entwicklern und Beiträgern überprüft wird. Bitte trage dich dabei in [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) mit deinem Nutzernamen und einer gütligen Email-Adresse ein.  
+Wenn du bei der Entwicklung der MOD mithelfen möchtest kannst du dies tun, indem du nach Fehlern Ausschau hältst oder neue Funktionen vorschlägst. Um etwas beizutragen, "Forke" einfach dieses Archiv (bzw. "repository") und erstelle deine "Pull-Request", welche von anderen Entwicklern und Beiträgern überprüft wird. Bitte trage dich dabei in [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) mit deinem Nutzernamen und einer gütligen Email-Adresse ein.  
 
-Um einen Fehler oder ein Feature zu melden bzw. ein bereits Bestehendes zu ändern - nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues). Besuche auch:
+Um einen Fehler, Anregungen oder neue Funktionalitäten uns mitzuteilen: Nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues). Besuche auch:
 - [Wie kann ich ein Problem melden](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [Wie kann ich ein Feature Request erstellen](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [Wie kann ich ein Wunsch zu einer neuen Funktion mitteilen? ](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testen & MOD erstellen
 Wenn du die neusten Entwicklungen erleben und uns dabei helfen möchtest bestehende Fehler zu entdecken, lade dir einfach die "Master Branch" herunter. Entweder nutzt du [Git](https://help.github.com/articles/fetching-a-remote/) - wenn die Schritte bekannt sind - oder du lädst es dir direkt über [diesen Link](https://github.com/acemod/ACE3/archive/master.zip) herunter.  
