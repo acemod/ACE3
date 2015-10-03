@@ -59,8 +59,8 @@ Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sod
 - Verbesserte Interaktionen für AARs und Munitionsschlepper
 - Einstellbare Zielfernrohre
 - Keine Ruheanimationen bei gesenkter Waffe
-- No talking player avatar
 - Über Hindernisse springen, über Mauern klettern, Zäune durchtrennen
+- Keine "sprechender Charkater"
 - Vector IV, MicroDAGR und Kestrel <br>
 ***und noch viel viel mehr...***
 
