@@ -35,7 +35,7 @@ if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber
     _unit removeMagazines _magazine;
 
     if (backpack _unit == "") then {
-        _unit addBackpack "Bag_Base";
+        _unit addBackpack "ACE_FakeBackpack";
         _unit removeWeapon _launcher;
         _unit addMagazine _magazine;
         _didAdd = _magazine in (magazines _unit);
