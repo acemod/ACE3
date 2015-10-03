@@ -38,7 +38,7 @@ Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sod
 - Echte und stetige Wettersynchronisation
 - Ballistik basierend auf vielen Faktoren u.a. Wetter und Wind
 - Gefangenensystem
-- Sprengtoffmechaniken mit den unterschiedlichsten Auslösern
+- Sprengtoffmechaniken mit den unterschiedlichsten Zündern
 - Kartenverbesserungen – Setzen von Markierungen ; Kartenwerkzeuge
 - Erweitertes Raketenlenksystem 
 
