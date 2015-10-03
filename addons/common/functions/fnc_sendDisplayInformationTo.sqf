@@ -29,7 +29,7 @@ if (isPlayer _reciever) then {
         _localizationArray = [_title];
 
         {
-            _localizationArray pushback _x;
+            _localizationArray pushBack _x;
             false
         } count _parameters;
 

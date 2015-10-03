@@ -52,12 +52,12 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
                 {
                     deleteVehicle _x;
                 } forEach _objects;
-                GVAR(allCreatedLitter) set[_foreachIndex, objNull];
+                GVAR(allCreatedLitter) set[_forEachIndex, objNull];
             };
         } forEach GVAR(allCreatedLitter);
         GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
 
-        if ( (count GVAR(allCreatedLitter)) == 0) exitwith {
+        if ( (count GVAR(allCreatedLitter)) == 0) exitWith {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             GVAR(litterPFHRunning) = false;
         };

@@ -16,4 +16,4 @@
 
 params ["_target", "_selectionName"];
 
-(((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select ([_selectionName] call FUNC(selectionNameToNumber))) > 0);
+(((_target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select ([_selectionName] call FUNC(selectionNameToNumber))) > 0);

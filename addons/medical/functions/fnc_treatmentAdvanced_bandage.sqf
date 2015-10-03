@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
+if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 
@@ -28,7 +28,7 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
     };
-}foreach _items;*/
+}forEach _items;*/
 
 [_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
 [_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message

@@ -18,4 +18,4 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[211, [false, false, false]], false] call cba_fnc_addKeybind; //DELETE Key
+[211, [false, false, false]], false] call CBA_fnc_addKeybind; //DELETE Key

@@ -26,7 +26,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 // No change, no service (but allow spectators to be reset)
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
-if !(local _unit) exitwith {
+if !(local _unit) exitWith {
     [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
 };
 

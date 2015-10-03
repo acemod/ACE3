@@ -19,9 +19,9 @@ class Rsc_ACE_CallScreen_Edit:RscEdit {
     colorText[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
     colorSelection[] = {
-        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",
         1
     };
     text = "";

@@ -18,7 +18,7 @@ PARAMS_1(_wire);
 
 {
     _wire animate [_x, 1];
-} foreach WIRE_FAST;
+} forEach WIRE_FAST;
 
 [{
     EXPLODE_1_PVT(_this select 0,_wire);

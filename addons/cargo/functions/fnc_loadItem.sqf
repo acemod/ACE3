@@ -28,7 +28,7 @@ if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {
 };
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
-_loaded pushback _item;
+_loaded pushBack _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
 TRACE_1("added to loaded array",_loaded);

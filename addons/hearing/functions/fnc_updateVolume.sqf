@@ -42,7 +42,7 @@ if (!_justUpdateVolume) then {
     GVAR(deafnessPrior) = GVAR(deafnessDV);
 
     if (GVAR(deafnessDV) > 19.75) then {
-        ACE_player setvariable [QGVAR(deaf), true];
+        ACE_player setVariable [QGVAR(deaf), true];
         if ((!GVAR(DisableEarRinging)) && {ACE_time > GVAR(time4)}) then {
             playSound "ACE_Combat_Deafness";
             GVAR(beep2) = true;
@@ -50,7 +50,7 @@ if (!_justUpdateVolume) then {
             GVAR(time4) = ACE_time + 30;
         };
     } else {
-        ACE_player setvariable [QGVAR(deaf), false];
+        ACE_player setVariable [QGVAR(deaf), false];
     };
 
     if (GVAR(deafnessDV) > 10) then {

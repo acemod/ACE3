@@ -161,7 +161,7 @@ if (stance _unit == "PRONE") then {
   };
 };
 
-if ("Jam" in (missionNamespace getvariable ["ACE_Debug", []])) then {
+if ("Jam" in (missionNamespace getVariable ["ACE_Debug", []])) then {
   _jamChance = 0.5;
 };
 

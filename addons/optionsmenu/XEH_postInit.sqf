@@ -2,10 +2,10 @@
 #include "script_component.hpp"
 
 ["SettingsInitialized", {
-    GVAR(categories) pushback "";  //Ensure All Catagories is at top
+    GVAR(categories) pushBack "";  //Ensure All Catagories is at top
     {
         if !(_x select 8 in GVAR(categories)) then {
-            GVAR(categories) pushback (_x select 8);
+            GVAR(categories) pushBack (_x select 8);
         };
-    }foreach EGVAR(common,settings);
+    }forEach EGVAR(common,settings);
 }] call EFUNC(common,addEventHandler);

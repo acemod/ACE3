@@ -43,7 +43,7 @@ if (typeName _list == "STRING") then {
     if (!isNil "_x") then {
         if (typeName _x == typeName objNull) then {
             if (local _x) then {
-                _x setvariable [_variable, _setting, _global];
+                _x setVariable [_variable, _setting, _global];
             };
         };
     };

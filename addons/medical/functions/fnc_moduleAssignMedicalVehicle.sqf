@@ -18,46 +18,46 @@ private ["_setting", "_objects", "_list", "_splittedList", "_nilCheckPassedList"
 params [["_logic", objNull, [objNull]]];
 
 if (!isNull _logic) then {
-    _list = _logic getvariable ["EnableList",""];
+    _list = _logic getVariable ["EnableList",""];
 
     _splittedList = [_list, ","] call BIS_fnc_splitString;
     _nilCheckPassedList = "";
     {
         _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
-        if !(isnil _x) then {
+        if !(isNil _x) then {
             if (_nilCheckPassedList == "") then {
                 _nilCheckPassedList = _x;
             } else {
                 _nilCheckPassedList = _nilCheckPassedList + ","+ _x;
             };
         };
-    } foreach _splittedList;
+    } forEach _splittedList;
 
     _list = "[" + _nilCheckPassedList + "]";
     _parsedList = [] call compile _list;
-    _setting = _logic getvariable ["enabled", 0];
+    _setting = _logic getVariable ["enabled", 0];
     _objects = synchronizedObjects _logic;
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
         {
-            if (!isnil "_x") then {
+            if (!isNil "_x") then {
                 if (typeName _x == typeName objNull) then {
                     if (local _x) then {
                         _xVehicle = vehicle _x;
                         TRACE_3("setting medical vehicle", _x, _xVehicle, (typeOf _xVehicle));
-                        _xVehicle setvariable [QGVAR(medicClass), _setting, true];
+                        _xVehicle setVariable [QGVAR(medicClass), _setting, true];
                     };
                 };
             };
-        } foreach _objects;
+        } forEach _objects;
     };
     {
-        if (!isnil "_x") then {
+        if (!isNil "_x") then {
             if (typeName _x == typeName objNull) then {
                 if (local _x) then {
                     TRACE_2("setting medical vehicle", _x, (typeOf _x));
-                    _x setvariable [QGVAR(medicClass), _setting, true];
+                    _x setVariable [QGVAR(medicClass), _setting, true];
                 };
             };
         };
-    } foreach _parsedList;
+    } forEach _parsedList;
 };

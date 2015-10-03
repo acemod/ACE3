@@ -19,7 +19,7 @@
 private "_removeItem";
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (count _items == 0) exitwith {false};
+if (count _items == 0) exitWith {false};
 
 _removeItem = _items select 0;
 [[_target, _className], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */

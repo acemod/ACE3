@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
-if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
+if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitWith {
     [{
         _this call FUNC(dismount);
     }, _this] call EFUNC(common,execNextFrame);

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitwith {};
+if (!hasInterface) exitWith {};
 
 ["medical_treatmentSuccess", {
 
@@ -19,7 +19,7 @@ if (!hasInterface) exitwith {};
     if (!(_target isKindOf "CAManBase") || ACE_player distance _target > 10) then {_target = ACE_player};
     // Conditions: canInteract
     if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([ACE_player, _target] call FUNC(canOpenMenu)) exitwith {false};
+    if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement
     [_target] call FUNC(openMenu);

@@ -23,7 +23,7 @@ if (isNil "_global") then {
     _definedVariable params ["", "",  ["_global", false]];
 };
 
-if (!isNil "_value") exitwith {
+if (!isNil "_value") exitWith {
     _unit setVariable [_variable, _value, _global];
 };
 

@@ -19,9 +19,9 @@
 
 params ["_target", "_player", "_selectionN", "_actionData"];
 
-if (GVAR(level) < 2) exitwith {
+if (GVAR(level) < 2) exitWith {
     private ["_pointDamage"];
-    _pointDamage = (_target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
+    _pointDamage = (_target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
 
     if (_pointDamage >= 0.8) exitWith {
         _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
@@ -32,10 +32,10 @@ if (GVAR(level) < 2) exitwith {
 };
 
 private ["_openWounds", "_amountOf"];
-_openWounds = _target getvariable [QGVAR(openWounds), []];
+_openWounds = _target getVariable [QGVAR(openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_x4"];
-    if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitwith {
+    if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitWith {
         _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
     };
-} foreach _openWounds;
+} forEach _openWounds;

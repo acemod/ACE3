@@ -27,14 +27,14 @@ _itemsUsedBy = [];
     if (typeName _x == "ARRAY") then {
         {
             _itemUsedInfo = [_unit, _x] call FUNC(useItem);
-            if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
         } forEach _x;
     };
 
     // handle required item
     if (typeName _x == "STRING") then {
         _itemUsedInfo = [_unit, _x] call FUNC(useItem);
-        if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
     };
 } forEach _items;
 

@@ -24,14 +24,14 @@ _data params ["_markerClassname", "_colorClassname", "_markerPos", "_markerDir"]
 TRACE_2("params",_marker,_data);
 
 
-_config = (configfile >> "CfgMarkers") >> _markerClassname;
+_config = (configFile >> "CfgMarkers") >> _markerClassname;
 if (!isClass _config) then {
     WARNING("CfgMarker not found, changed to milDot");
     _config == (configFile >> "CfgMarkers" >> "MilDot");
 };
 _marker setMarkerTypeLocal (configName _config);
 
-_config = (configfile >> "CfgMarkerColors") >> _colorClassname;
+_config = (configFile >> "CfgMarkerColors") >> _colorClassname;
 if (!isClass _config) then {
     WARNING("CfgMarkerColors not found, changed to Default");
     _config == (configFile >> "CfgMarkerColors" >> "Default");

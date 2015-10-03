@@ -36,18 +36,18 @@ if (_show) then {
         params ["_args", "_idPFH"];
         _args params ["_target", "_selectionN"];
 
-        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
+        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
-        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        if (ACE_player distance _target > MAX_DISTANCE) exitWith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             ["displayTextStructured", [ACE_player], [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
         };
 
         disableSerialization;
-        _display = uiNamespace getvariable QGVAR(DisplayInformation);
-        if (isnil "_display") exitwith {
+        _display = uiNamespace getVariable QGVAR(DisplayInformation);
+        if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
@@ -56,39 +56,39 @@ if (_show) then {
 
         if (GVAR(level) >= 2) then {
             _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
-            _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+            _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
         };
 
-        if (_target getvariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
+        if (_target getVariable[QGVAR(isBleeding), false]) then {
+            _genericMessages pushBack [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
-        if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-            _genericMessages pushback [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
+        if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
+            _genericMessages pushBack [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
-        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
-            _genericMessages pushback [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+        if (((_target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
+            _genericMessages pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
-        if (_target getvariable[QGVAR(hasPain), false]) then {
-            _genericMessages pushback [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
+        if (_target getVariable[QGVAR(hasPain), false]) then {
+            _genericMessages pushBack [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
         {
             private "_value";
-            _value = _target getvariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
+            _value = _target getVariable _x;
+            if !(isNil "_value") then {
+                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
             };
-        } foreach GVAR(IVBags);
+        } forEach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
-            _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+            _genericMessages pushBack [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _damaged = [false, false, false, false, false, false];
         _selectionBloodLoss = [0,0,0,0,0,0];
         if (GVAR(level) >= 2) then {
-            _openWounds = _target getvariable [QGVAR(openWounds), []];
+            _openWounds = _target getVariable [QGVAR(openWounds), []];
             private "_amountOf";
             {
                 _x params ["", "_x1", "_selectionX", "_amountOf", "_x4"];
@@ -101,16 +101,16 @@ if (_show) then {
                     // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, _amountOf], [1,1,1,1]];
+                            _allInjuryTexts pushBack [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, _amountOf], [1,1,1,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
+                            _allInjuryTexts pushBack [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
                         };
                     };
                 };
-            } foreach _openWounds;
+            } forEach _openWounds;
 
-            _bandagedwounds = _target getvariable [QGVAR(bandagedWounds), []];
+            _bandagedwounds = _target getVariable [QGVAR(bandagedWounds), []];
             {
                 _x params ["", "", "_selectionX", "_amountOf", "_x4"];
                 // Find how much this bodypart is bleeding
@@ -122,14 +122,14 @@ if (_show) then {
                     if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
+                            _allInjuryTexts pushBack [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                            _allInjuryTexts pushBack [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                         };
                     };
                 };
-            } foreach _bandagedwounds;
+            } forEach _bandagedwounds;
         } else {
             _damaged = [true, true, true, true, true, true];
             {
@@ -175,23 +175,23 @@ if (_show) then {
                     //_blue = _green;
                 };
             };
-            (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
-        } foreach _selectionBloodLoss;
+            (_display displayCtrl (_availableSelections select _forEachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
+        } forEach _selectionBloodLoss;
 
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
         {
             _x params ["_add", "_color"];
             _lbCtrl lbAdd _add;
-            _lbCtrl lbSetColor [_foreachIndex, _color];
-        } foreach _genericMessages;
+            _lbCtrl lbSetColor [_forEachIndex, _color];
+        } forEach _genericMessages;
 
         _amountOfGeneric = count _genericMessages;
         {
             _x params ["_add", "_color"];
             _lbCtrl lbAdd _add;
-            _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _color];
-        } foreach _allInjuryTexts;
+            _lbCtrl lbSetColor [_forEachIndex + _amountOfGeneric, _color];
+        } forEach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd (localize LSTRING(NoInjuriesBodypart));
         };
@@ -200,7 +200,7 @@ if (_show) then {
         lbClear _logCtrl;
 
         private ["_logs", "_message", "_moment", "_arguments", "_lbCtrl"];
-        _logs = _target getvariable [QGVAR(logFile_Activity), []];
+        _logs = _target getVariable [QGVAR(logFile_Activity), []];
         {
             // [_message,_moment,_type, _arguments]
             _x params ["_message", "_moment", "_type", "_arguments"];
@@ -210,12 +210,12 @@ if (_show) then {
 
             {
                 if (typeName _x == "STRING" && {isLocalized _x}) then {
-                    _arguments set [_foreachIndex, localize _x];
+                    _arguments set [_forEachIndex, localize _x];
                 };
-            } foreach _arguments;
+            } forEach _arguments;
             _message = format([_message] + _arguments);
             _logCtrl lbAdd format["%1 %2", _moment, _message];
-        } foreach _logs;
+        } forEach _logs;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
         (_display displayCtrl 303) ctrlSetText (_triageStatus select 0);

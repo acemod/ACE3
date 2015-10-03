@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks if object is a fence.  Should work on any fence type, even (typeof == "").
+ * Checks if object is a fence.  Should work on any fence type, even (typeOf == "").
  * Call is fairly expensive because of all of the string checking.
  *
  * Arguments:
