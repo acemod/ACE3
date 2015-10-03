@@ -29,16 +29,40 @@ Da die MOD vollkommen als **open-source** Projekt gestaltet ist, steht es jedem 
 
 Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sodass jede Gemeinschaft ihre eigene Version der Mod unterhalten kann. Dies kann zum Beispiel einige Funktionalitäten ausschließen, da das Feature nicht gewünscht ist, oder es mit einer anderen MOD in Konflikt gerät etc. .Ebenfalls können viele Einstellungen vom Missionsersteller vorgenommen werden (u.a. am medizinischem System), sodass eine individuelle Erfahrung gewährleistet wird.
 
-### Features
-- Verbessertes medizinisches System
-- Logistik System: U.a. Transport und Fahrzeugreparatur
-- Sprengstoffsystem mit unterschiedlichen Zündern
+### Hauptmerkmale
+- Vollkommen neues 3D Interaktionssystem
+- Leistungs- und stabilitätsoptimiert
+- Hauptmerkmal auf Modularität und individuelle Anpassungsmöglichkeiten
+- Neue, flexible Spieler- und Servereinstellungen
+- Verbessertes Sanitätssystem mit unterschiedlichen Stufen (Basis/Erweitert) Spielbarkeit/Realismus
+- Echte und stetige Wettersynchronisation
+- Ballistik basierend auf vielen Faktoren u.a. Wetter und Wind
 - Gefangenensystem
-- Reale Namen für Arma 3 Fahrzeuge und Waffen
-- Realistisches, ballistisches Verhalten (Wind und Luftfeuchtigkeit)
-- Simulation der Rückstrahlzone
-- Ein Feuerleitsystem für gepanzerte Fahrzeuge und Hubschrauber  
-***und noch viel mehr...***
+- Sprengtoffmechaniken mit den unterschiedlichsten Auslösern
+- Kartenverbesserungen – Setzen von Markierungen ; Kartenwerkzeuge
+- Erweitertes Raketenlenksystem 
+
+#### Weitere Mechaniken
+- Tragen und Ziehen
+- Waffen und Fahrzeuge tragen die Namen ihrer Vorbilder in der echten Welt
+- Ein Feuerleitsystem (FLS) für Hubschrauber und Panzer
+- Realistische Ballistik/Feuerleitsystem werdeb in  C/C++ Erweiterungen berechnet
+- Rückstrahlzonen- und Überdrucksimulation
+- Einwegwaffen
+- Realistische G-Kräfte
+- Fahrzeuge abschließen
+- Realistische Nacht- und Thermalsicht
+- Magazin umpacken
+- Realistische Waffen Er- bzw. Überhitzung
+- Temporäre Taubheit bei zu lauten Geräuschen 
+- Verbesserte Ragdollphysik
+- Verbesserte Interaktionen für AARs und Munitionsschlepper
+- Einstellbare Zielfernrohre
+- Keine Ruheanimationen bei gesenkter Waffe
+- No talking player avatar
+- Über Hindernisse springen, über Mauern klettern, Zäune durchtrennen
+- Vector IV, MicroDAGR und Kestrel <br>
+***und noch viel viel mehr...***
 
 #### Anleitungen
 Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert und wo sich was befindet?
