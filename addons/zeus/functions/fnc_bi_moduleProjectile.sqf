@@ -136,7 +136,7 @@ if (_activated) then {
             if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
 
             //--- Create sound source
-            _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
+            _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objNull};
 
             // Added by ace_zeus to toggle ordnance radio message
             if (GVAR(radioOrdnance)) then {

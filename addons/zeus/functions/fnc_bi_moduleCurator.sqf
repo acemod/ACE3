@@ -130,13 +130,13 @@ if (_activated) then {
                         };
                     };
                     default {
-                        waitUntil {isplayer (missionnamespace getVariable [_ownerVar,objnull]) || isNill _logic};
+                        waitUntil {isplayer (missionnamespace getVariable [_ownerVar,objNull]) || isNill _logic};
                     };
                 };
                 if (isNill _logic) exitWith {};
 
                 //--- Assign
-                _player = objnull;
+                _player = objNull;
                 switch true do {
                     case (_ownerUID > 0): {
                         {
@@ -144,7 +144,7 @@ if (_activated) then {
                         } forEach playableunits;
                     };
                     default {
-                        _player = missionnamespace getVariable [_ownerVar,objnull];
+                        _player = missionnamespace getVariable [_ownerVar,objNull];
                     };
                 };
 
@@ -191,7 +191,7 @@ if (_activated) then {
                         };
                     };
                     default {
-                        waitUntil {_player != missionnamespace getVariable [_ownerVar,objnull] || isNill _logic};
+                        waitUntil {_player != missionnamespace getVariable [_ownerVar,objNull] || isNill _logic};
                     };
                 };
                 if (isNill _logic) exitWith {};
@@ -239,7 +239,7 @@ if (_activated) then {
                     "local",
                     {
                         _logic = _this select 0;
-                        _bird = _logic getVariable ["bird",objnull];
+                        _bird = _logic getVariable ["bird",objNull];
                         _bird setowner owner _logic;
                     }
                 ];
@@ -263,7 +263,7 @@ if (_activated) then {
                     isserver || servercommandavailable _serverCommand
                 };
                 default {
-                    player == missionnamespace getVariable [_ownerVar,objnull]
+                    player == missionnamespace getVariable [_ownerVar,objNull]
                 };
             };
             if (_isCurator) then {
@@ -294,7 +294,7 @@ if (_activated) then {
                         _respawn = player addEventHandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
 
                         waitUntil {sleep 0.1; !servercommandavailable _serverCommand};
-                        missionnamespace setVariable [_adminVar,objnull];
+                        missionnamespace setVariable [_adminVar,objNull];
                         publicvariable _adminVar;
                         player removeeventhandler ["respawn",_respawn];
                     };

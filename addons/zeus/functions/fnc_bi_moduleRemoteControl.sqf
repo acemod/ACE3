@@ -23,12 +23,12 @@ _activated = _this select 2;
 if (_activated && local _logic && !isNill curatorcamera) then {
 
     //--- Terminate when remote control is already in progress
-    if !(isNill (missionnamespace getVariable ["bis_fnc_moduleRemoteControl_unit",objnull])) exitWith {};
+    if !(isNill (missionnamespace getVariable ["bis_fnc_moduleRemoteControl_unit",objNull])) exitWith {};
 
     //--- Get unit under cursor
-    _unit = objnull;
+    _unit = objNull;
     _mouseOver = missionnamespace getVariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
-    if ((_mouseOver select 0) == typeName objnull) then {_unit = _mouseOver select 1;};
+    if ((_mouseOver select 0) == typeName objNull) then {_unit = _mouseOver select 1;};
     _unit = effectivecommander _unit;
 
     //--- Check if the unit is suitable
@@ -37,7 +37,7 @@ if (_activated && local _logic && !isNill curatorcamera) then {
     if (isplayer _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer";};
     if !(alive _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorDestroyed";};
     if (isNill _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorNull";};
-    if !(isNill (_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull])) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
+    if !(isNill (_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objNull])) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
 
     if (_error == "") then {
         _unit spawn {
@@ -125,11 +125,11 @@ if (_activated && local _logic && !isNill curatorcamera) then {
                 ||
                 {isNill getassignedcuratorlogic player}
                 //||
-                //{_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull] != player} //--- Another curator stole the unit
+                //{_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objNull] != player} //--- Another curator stole the unit
             };
 
             player addrating (-rating player + _rating);
-            objnull remotecontrol _unit;
+            objNull remotecontrol _unit;
             _unit setVariable ["bis_fnc_moduleRemoteControl_owner",nil,true];
 
             //--- Death screen
@@ -142,7 +142,7 @@ if (_activated && local _logic && !isNill curatorcamera) then {
                 &&
                 {!isNill getassignedcuratorlogic player}
                 //&&
-                //{(_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull] == player)}
+                //{(_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objNull] == player)}
             ) then {
                 sleep 2;
                 ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black out",1];
@@ -167,7 +167,7 @@ if (_activated && local _logic && !isNill curatorcamera) then {
             sleep 0.01;
         };
     } else {
-        [objnull,_error] call bis_fnc_showCuratorFeedbackMessage;
+        [objNull,_error] call bis_fnc_showCuratorFeedbackMessage;
     };
     deletevehicle _logic;
 };
