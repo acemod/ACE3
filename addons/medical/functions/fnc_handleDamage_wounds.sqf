@@ -22,8 +22,8 @@ params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamag
 TRACE_6("ACE_DEBUG: HandleDamage Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
 // Administration for open wounds and ids
-_openWounds = _unit getvariable[QGVAR(openWounds), []];
-_woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
+_openWounds = _unit getVariable[QGVAR(openWounds), []];
+_woundID = _unit getVariable[QGVAR(lastUniqueWoundID), 1];
 
 _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
 
@@ -38,9 +38,9 @@ _foundIndex = -1;
     {
         // Check if we have an id of the given class on the given bodypart already
         if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitWith {
-            _foundIndex = _foreachIndex;
+            _foundIndex = _forEachIndex;
         };
-    } foreach _openWounds;
+    } forEach _openWounds;
 
     if (_foundIndex < 0) then {
         // Since it is a new injury, we will have to add it to the open wounds array to store it
@@ -50,15 +50,15 @@ _foundIndex = -1;
         _injury = _openWounds select _foundIndex;
         _injury set [3, (_injury select 3) + 1];
     };
-} foreach _woundsCreated;
+} forEach _woundsCreated;
 
-_unit setvariable [QGVAR(openWounds), _openWounds, true];
+_unit setVariable [QGVAR(openWounds), _openWounds, true];
 
 // Only update if new wounds have been created
 if (count _woundsCreated > 0) then {
-    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
+    _unit setVariable [QGVAR(lastUniqueWoundID), _woundID, true];
 };
 
-_painLevel = _unit getvariable [QGVAR(pain), 0];
-_unit setvariable [QGVAR(pain), _painLevel + _painToAdd];
-TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD",_unit, _painLevel, _painToAdd, _unit getvariable QGVAR(pain), _unit getvariable QGVAR(openWounds),_woundsCreated);
+_painLevel = _unit getVariable [QGVAR(pain), 0];
+_unit setVariable [QGVAR(pain), _painLevel + _painToAdd];
+TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD",_unit, _painLevel, _painToAdd, _unit getVariable QGVAR(pain), _unit getVariable QGVAR(openWounds),_woundsCreated);

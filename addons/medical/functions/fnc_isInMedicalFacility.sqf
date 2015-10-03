@@ -42,13 +42,13 @@ _objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos select 
     if (((typeOf _x) in _medicalFacility) || (_x getVariable [QGVAR(isMedicalFacility),false])) exitWith {
         _isInBuilding = true;
     };
-} foreach _objects;
+} forEach _objects;
 if (!_isInBuilding) then {
     _objects = position _unit nearObjects 7.5;
     {
         if (((typeOf _x) in _medicalFacility) || (_x getVariable [QGVAR(isMedicalFacility),false])) exitWith {
             _isInBuilding = true;
         };
-    } foreach _objects;
+    } forEach _objects;
 };
 _isInBuilding;

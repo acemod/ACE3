@@ -73,11 +73,11 @@ _refresh = {
             _ctrl = (findDisplay 46) ctrlCreate ["RscPicture", _forEachIndex + 19000];
 
             _position = switch (_setting) do {
-                case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_foreachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
-                default {[X_POS_ICONS, Y_POS_ICONS + (_foreachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
+                default {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
             };
 
             _ctrl ctrlSetPosition _position;

@@ -58,7 +58,7 @@ if ((_settingIndex >= 0) && {_settingIndex <= (count _collection)}) then {
                 _settingsValue = [0, 1] select _settingsValue;
             } else {
                 lbClear 400;
-                { lbAdd [400, _x]; } foreach _possibleValues;
+                { lbAdd [400, _x]; } forEach _possibleValues;
             };
             (_settingsMenu displayCtrl 400) lbSetCurSel _settingsValue;
         };

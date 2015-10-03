@@ -31,7 +31,7 @@ if (!isNull _logic) then {
     _nilCheckPassedList = "";
     {
         _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
-        if !(isnil _x) then {
+        if !(isNil _x) then {
             if (_nilCheckPassedList == "") then {
                 _nilCheckPassedList = _x;
             } else {

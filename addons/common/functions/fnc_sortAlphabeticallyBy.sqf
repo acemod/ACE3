@@ -25,7 +25,7 @@ _elements = [];
 
 {
     _theElement = toArray (_x select _elementN);
-    _indexes pushback _foreachIndex;
+    _indexes pushback _forEachIndex;
     _elements pushback _theElement;
 } forEach _array;
 

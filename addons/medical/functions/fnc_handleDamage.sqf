@@ -102,7 +102,7 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
     };
 
     if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
-        if (_unit getvariable ["ACE_isUnconscious", false]) exitWith {
+        if (_unit getVariable ["ACE_isUnconscious", false]) exitWith {
             [_unit] call FUNC(setDead);
             0.89;
         };

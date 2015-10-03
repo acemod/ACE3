@@ -31,7 +31,7 @@ detach _target;
 
 // fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (vehicle _unit == _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
+    if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         [_unit, "", 2, true] call EFUNC(common,doAnimation);
     };
 

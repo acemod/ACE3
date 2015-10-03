@@ -22,7 +22,7 @@ private ["_wireNoGeo", "_dir", "_pos", "_wireNoGeoPos"];
 _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {
     _wireNoGeo animate [_x, 1];
-} foreach WIRE_FAST;
+} forEach WIRE_FAST;
 
 GVAR(placer) = _unit;
 _dir = getDir _unit;
@@ -51,7 +51,7 @@ GVAR(deployPFH) = [{
         _wire = "ACE_ConcertinaWire" createvehicle [0, 0, 0];
         {
             _wire animate [_x, _anim];
-        } foreach WIRE_FAST;        
+        } forEach WIRE_FAST;        
         
         [{
             EXPLODE_5_PVT(_this select 0,_wireNoGeo,_wire,_anim,_dir,_wireNoGeoPos);
@@ -72,7 +72,7 @@ GVAR(deployPFH) = [{
     _wireNoGeo setDir _dir;
     {
         _wireNoGeo animate [_x, _anim];
-    } foreach WIRE_FAST;
+    } forEach WIRE_FAST;
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
 [localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);

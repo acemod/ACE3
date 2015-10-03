@@ -59,12 +59,12 @@ if (_amountOfDamage > 0.05) then {
     };
 
     private ["_fractures", "_fractureID", "_amountOf"];
-    _fractures = _unit getvariable[QGVAR(fractures), []];
+    _fractures = _unit getVariable[QGVAR(fractures), []];
     _fractureID = 1;
     _amountOf = count _fractures;
     if (_amountOf > 0) then {
         _fractureID = (_fractures select (_amountOf - 1) select 0) + 1;
     };
     _fractures pushback [_fractureID, _fractureType, _bodyPartn, 1 /* percentage treated */];
-    _unit setvariable [QGVAR(fractures), _fractures, true];
+    _unit setVariable [QGVAR(fractures), _fractures, true];
 };

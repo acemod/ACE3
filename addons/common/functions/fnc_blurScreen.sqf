@@ -28,7 +28,7 @@ if (_show) then {
     GVAR(SHOW_BLUR_SCREEN_COLLECTION) pushBack _id;
 
     // show blur
-    if (isnil QGVAR(MENU_ppHandle_GUI_BLUR_SCREEN)) then {
+    if (isNil QGVAR(MENU_ppHandle_GUI_BLUR_SCREEN)) then {
         GVAR(MENU_ppHandle_GUI_BLUR_SCREEN) = ppEffectCreate ["DynamicBlur", 102];
         GVAR(MENU_ppHandle_GUI_BLUR_SCREEN) ppEffectAdjust [0.9];
         GVAR(MENU_ppHandle_GUI_BLUR_SCREEN) ppEffectEnable true;

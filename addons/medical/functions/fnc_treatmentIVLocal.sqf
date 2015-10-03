@@ -18,7 +18,7 @@
 private ["_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
 params ["_target", "_treatmentClassname"];
 
-_bloodVolume = _target getvariable [QGVAR(bloodVolume), 100];
+_bloodVolume = _target getVariable [QGVAR(bloodVolume), 100];
 if (_bloodVolume >= 100) exitWith {};
 
 // Find the proper attributes for the used IV
@@ -35,7 +35,7 @@ if (isClass (_config >> _treatmentClassname)) then {
 };
 
 _varName = format["ACE_Medical_IVVolume_%1",_typeOf];
-_target setvariable [_varName, (_target getvariable [_varName, 0]) + _volumeAdded, true];
+_target setVariable [_varName, (_target getVariable [_varName, 0]) + _volumeAdded, true];
 
 if !(_varName in GVAR(IVBags)) then {
     GVAR(IVBags) pushback _varName;

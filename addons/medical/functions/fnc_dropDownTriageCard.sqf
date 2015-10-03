@@ -17,8 +17,8 @@ private ["_ctrl", "_display", "_idc", "_pos"];
 params ["_show"];
 disableSerialization;
 
-_display = uiNamespace getvariable QGVAR(triageCard);
-if (isnil "_display") exitWith {};
+_display = uiNamespace getVariable QGVAR(triageCard);
+if (isNil "_display") exitWith {};
 
 _pos = [0,0,0,0];
 if (_show) then {

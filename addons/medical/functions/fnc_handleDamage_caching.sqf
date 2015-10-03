@@ -85,9 +85,9 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
                 _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
                 _cache_damages = _unit getVariable QGVAR(cachedDamages);
                 {
-                    _params = _x + [_cache_damages select _foreachIndex];
+                    _params = _x + [_cache_damages select _forEachIndex];
                     _params call FUNC(handleDamage_advanced);
-                } foreach _cache_params;
+                } forEach _cache_params;
                 [_unit] call FUNC(handleDamage_advancedSetDamage);
             };
             [_idPFH] call CBA_fnc_removePerFrameHandler;

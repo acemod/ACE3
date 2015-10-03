@@ -7,5 +7,5 @@
         if !(_x select 8 in GVAR(categories)) then {
             GVAR(categories) pushback (_x select 8);
         };
-    }foreach EGVAR(common,settings);
+    }forEach EGVAR(common,settings);
 }] call EFUNC(common,addEventHandler);

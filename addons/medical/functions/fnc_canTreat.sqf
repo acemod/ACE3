@@ -34,7 +34,7 @@ _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
 } else {
     // Check for required class
     if (isText (_config >> "requiredMedic")) exitWith {
-        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0]
+        missionNamespace getVariable [(getText (_config >> "requiredMedic")), 0]
     };
     0;
 };
@@ -49,10 +49,10 @@ if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) ex
 _return = true;
 if (getText (_config >> "condition") != "") then {
     _condition = getText (_config >> "condition");
-    if (isnil _condition) then {
+    if (isNil _condition) then {
         _condition = compile _condition;
     } else {
-        _condition = missionNamespace getvariable _condition;
+        _condition = missionNamespace getVariable _condition;
     };
     if (typeName _condition == "BOOL") then {
         _return = _condition;
@@ -63,7 +63,7 @@ if (getText (_config >> "condition") != "") then {
 if (!_return) exitWith { false };
 
 _patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
-    missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
+    missionNamespace getVariable [getText(_config >> "patientStateCondition"), 0]
 } else {
     getNumber(_config >> "patientStateCondition")
 };
@@ -80,9 +80,9 @@ _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isI
     if (_x == "field") exitWith {_return = true;};
     if (_x == "MedicalFacility" && _medFacility) exitWith {_return = true;};
     if (_x == "MedicalVehicle" && _medVeh) exitWith {_return = true;};
-    if !(isnil _x) exitWith {
+    if !(isNil _x) exitWith {
         private "_val";
-        _val = missionNamespace getvariable _x;
+        _val = missionNamespace getVariable _x;
         if (typeName _val == "SCALAR") then {
             _return = switch (_val) do {
                 case 0: {true};
@@ -92,6 +92,6 @@ _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isI
             };
         };
     };
-} foreach _locations;
+} forEach _locations;
 
 _return;

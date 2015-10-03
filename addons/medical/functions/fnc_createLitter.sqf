@@ -69,10 +69,10 @@ _createdLitter = [];
 
         if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
 
-            if (isnil _litterCondition) then {
+            if (isNil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
-                _litterCondition = missionNamespace getvariable _litterCondition;
+                _litterCondition = missionNamespace getVariable _litterCondition;
                 if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
             };
             if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitWith {};
@@ -86,8 +86,8 @@ _createdLitter = [];
                     if (typeName _x == "STRING") then {
                         [_target, _x] call _createLitter;
                     };
-                } foreach _litterOptions;
+                } forEach _litterOptions;
             };
         };
     };
-} foreach _litter;
+} forEach _litter;

@@ -92,7 +92,7 @@ _bottomPosY = (_ctrlBcgCommonPos select 1) + _ctrlTextPosH + (_marginY * 2) + _b
     _xPos set [1, _bottomPosY];
     _x ctrlSetPosition _xPos;
     _x ctrlCommit 0;
-} foreach [
+} forEach [
     _ctrlBackgroundButtonOK,
     _ctrlBackgroundButtonMiddle,
     _ctrlBackgroundButtonCancel,

@@ -18,7 +18,7 @@
 params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", side _unit]];
 
 private "_previousGroupsList";
-_previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo), []];
+_previousGroupsList = _unit getVariable [QGVAR(previousGroupSwitchTo), []];
 
 if (_switch) then {
     // go forward

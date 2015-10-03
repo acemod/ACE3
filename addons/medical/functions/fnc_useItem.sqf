@@ -19,7 +19,7 @@
 private ["_return","_crew"];
 params ["_medic", "_patient", "_item"];
 
-if (isnil QGVAR(setting_allowSharedEquipment)) then {
+if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
 
@@ -41,7 +41,7 @@ if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) 
             _return = [true, _x];
             [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
         };
-    } foreach _crew;
+    } forEach _crew;
 };
 
 _return

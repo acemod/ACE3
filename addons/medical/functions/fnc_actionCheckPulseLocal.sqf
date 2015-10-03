@@ -17,7 +17,7 @@
 private ["_heartRateOutput", "_heartRate", "_logOutPut"];
 params ["_caller", "_unit", "_selectionName"];
 
-_heartRate = _unit getvariable [QGVAR(heartRate), 80];
+_heartRate = _unit getVariable [QGVAR(heartRate), 80];
 if (!alive _unit) then {
     _heartRate = 0;
 };

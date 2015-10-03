@@ -42,7 +42,7 @@ _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
 } else {
     // Check for required class
     if (isText (_config >> "requiredMedic")) exitWith {
-        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+        missionNamespace getVariable [(getText (_config >> "requiredMedic")), 0];
     };
     0;
 };
@@ -60,10 +60,10 @@ _return = true;
 if (isText (_config >> "Condition")) then {
     _condition = getText(_config >> "condition");
     if (_condition != "") then {
-        if (isnil _condition) then {
+        if (isNil _condition) then {
             _condition = compile _condition;
         } else {
-            _condition = missionNamespace getvariable _condition;
+            _condition = missionNamespace getVariable _condition;
         };
         if (typeName _condition == "BOOL") then {
             _return = _condition;
@@ -75,7 +75,7 @@ if (isText (_config >> "Condition")) then {
 if (!_return) exitWith {false};
 
 _patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
-    missionNamespace getvariable [getText(_config >> "patientStateCondition"), 0]
+    missionNamespace getVariable [getText(_config >> "patientStateCondition"), 0]
 } else {
     getNumber(_config >> "patientStateCondition")
 };
@@ -95,9 +95,9 @@ if ("All" in _locations) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "MedicalFacility" && _medFacility) exitWith {_return = true;};
         if (_x == "MedicalVehicle" && _medVeh) exitWith {_return = true;};
-        if !(isnil _x) exitWith {
+        if !(isNil _x) exitWith {
             private "_val";
-            _val = missionNamespace getvariable _x;
+            _val = missionNamespace getVariable _x;
             if (typeName _val == "SCALAR") then {
                 _return = switch (_val) do {
                     case 0: {true};
@@ -107,7 +107,7 @@ if ("All" in _locations) then {
                 };
             };
         };
-    } foreach _locations;
+    } forEach _locations;
 };
 
 if !(_return) exitWith {false};
@@ -118,7 +118,7 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
 } else {
     // Check for required class
     if (isText (_config >> "itemConsumed")) exitWith {
-        missionNamespace getvariable [(getText (_config >> "itemConsumed")), 0];
+        missionNamespace getVariable [(getText (_config >> "itemConsumed")), 0];
     };
     0;
 };
@@ -134,19 +134,19 @@ if (_callbackProgress == "") then {
 if (isNil _callbackProgress) then {
     _callbackProgress = compile _callbackProgress;
 } else {
-    _callbackProgress = missionNamespace getvariable _callbackProgress;
+    _callbackProgress = missionNamespace getVariable _callbackProgress;
 };
 
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
-if (_target getvariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
+if (_target getVariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
 };
 
 if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    if (_target getvariable ["ACE_isUnconscious", false]) then {
+    if (_target getVariable ["ACE_isUnconscious", false]) then {
         [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
     } else {
         [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
@@ -159,7 +159,7 @@ if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
 
-_caller setvariable [QGVAR(selectedWeaponOnTreatment), (weaponState _caller)];
+_caller setVariable [QGVAR(selectedWeaponOnTreatment), (weaponState _caller)];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {
@@ -183,12 +183,12 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 
     if ((stance _caller) == "STAND") then {
         switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
-            case ("rfl"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
-            case ("pst"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
-            case ("non"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+            case ("rfl"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
+            case ("pst"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
+            case ("non"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
         };
     } else {
-        _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+        _caller setVariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     };
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
@@ -199,10 +199,10 @@ _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
 } else {
     if (isText (_config >> "treatmentTime")) exitWith {
         _treatmentTimeConfig = getText(_config >> "treatmentTime");
-        if (isnil _treatmentTimeConfig) then {
+        if (isNil _treatmentTimeConfig) then {
             _treatmentTimeConfig = compile _treatmentTimeConfig;
         } else {
-            _treatmentTimeConfig = missionNamespace getvariable _treatmentTimeConfig;
+            _treatmentTimeConfig = missionNamespace getVariable _treatmentTimeConfig;
         };
         if (typeName _treatmentTimeConfig == "SCALAR") exitWith {
             _treatmentTimeConfig;

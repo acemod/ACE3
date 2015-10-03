@@ -20,7 +20,7 @@ private ["_display", "_loaded", "_ctrl", "_selected", "_item"];
 disableSerialization;
 
 _display = uiNamespace getVariable QGVAR(menuDisplay);
-if (isnil "_display") exitWith {};
+if (isNil "_display") exitWith {};
 
 _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
 if (count _loaded == 0) exitWith {};

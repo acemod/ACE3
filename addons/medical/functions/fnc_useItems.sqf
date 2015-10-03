@@ -25,7 +25,7 @@ _itemsUsedBy = [];
         {
             _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
             if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
-        } foreach _x;
+        } forEach _x;
     };
 
     // handle required item
@@ -33,6 +33,6 @@ _itemsUsedBy = [];
         _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
         if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
     };
-} foreach _items;
+} forEach _items;
 
 [count _items == count _itemsUsedBy, _itemsUsedBy];

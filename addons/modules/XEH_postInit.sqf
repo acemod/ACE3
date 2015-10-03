@@ -11,7 +11,7 @@
             _logicType = typeOf _logic;
             _logic hideobject true;
 
-            if (_logic getvariable [QGVAR(initalized), false]) exitWith {};
+            if (_logic getVariable [QGVAR(initalized), false]) exitWith {};
             _config = (configFile >> "CfgVehicles" >> _logicType);
             if !(isClass _config) exitWith {};
 
@@ -20,10 +20,10 @@
             _isDisposable = getNumber (_config >> "isDisposable") > 0;
             _isPersistent = getNumber (_config >> "isPersistent") > 0 || getnumber (_config >> "isGlobal") > 1;
             _function = getText (_config >> "function");
-            if (isnil _function) then {
+            if (isNil _function) then {
                 _function = compile _function;
             } else {
-                _function = missionNamespace getvariable _function;
+                _function = missionNamespace getVariable _function;
             };
 
             if (_isGlobal || isServer) then {
@@ -31,14 +31,14 @@
             };
 
             if !(_isPersistent) then {
-                _logic setvariable [QGVAR(initalized), true];
+                _logic setVariable [QGVAR(initalized), true];
             };
 
             if (_isDisposable) then {
                 deleteVehicle _logic;
             };
         };
-    }foreach GVAR(moduleInitCollection);
+    }forEach GVAR(moduleInitCollection);
     
     if (isServer) then {
         GVAR(serverModulesRead) = true;

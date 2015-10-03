@@ -26,7 +26,7 @@ GVAR(time4) = 0;
 ["playerChanged", {
     GVAR(deafnessDV) = 0;
     GVAR(deafnessPrior) = 0;
-    ACE_player setvariable [QGVAR(deaf), false];
+    ACE_player setVariable [QGVAR(deaf), false];
 
     GVAR(beep) = false;
     GVAR(beep2) = false;

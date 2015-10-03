@@ -23,7 +23,7 @@ _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitWith {false};
 
 // Get the open wounds for this unit
-_openWounds = _target getvariable [QGVAR(openWounds), []];
+_openWounds = _target getVariable [QGVAR(openWounds), []];
 if (count _openWounds == 0) exitWith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
@@ -60,7 +60,7 @@ _exit = false;
         TRACE_2("Wound classes: ", _specificClass, _classID);
         if (_specificClass == _classID) exitWith {
             _effectivenessFound = _woundEffectivenss;
-            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
             _exit = true;
         };
@@ -68,12 +68,12 @@ _exit = false;
         // Check if this is the currently most effective found.
         if (_woundEffectivenss * ((_x select 4) * (_x select 3)) > _effectivenessFound * ((_mostEffectiveInjury select 4) * (_mostEffectiveInjury select 3))) then {
             _effectivenessFound = _woundEffectivenss;
-            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
         };
     };
     if (_exit) exitWith {};
-} foreach _openWounds;
+} forEach _openWounds;
 
 if (_effectivenessFound == -1) exitWith {}; // Seems everything is patched up on this body part already..
 
@@ -84,7 +84,7 @@ _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_eff
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-_target setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
+_target setVariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
 if (USE_WOUND_EVENT_SYNC) then {
     ["medical_propagateWound", [_target, _mostEffectiveInjury]] call EFUNC(common,globalEvent);

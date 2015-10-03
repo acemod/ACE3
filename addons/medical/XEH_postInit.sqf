@@ -175,11 +175,11 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
-                _strength = ((_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0) min 1;
+                _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
                     GVAR(effectPainCC) ppEffectEnable false;
-                    if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                    if (_pain > (ACE_player getVariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
                         _strength = _strength * 0.15;
                         GVAR(effectPainCA) ppEffectEnable true;
                         GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
@@ -201,7 +201,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
                     };
                 } else {
                     GVAR(effectPainCA) ppEffectEnable false;
-                    if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                    if (_pain > (ACE_player getVariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
                         _strength = _strength * 0.9;
                         GVAR(effectPainCC) ppEffectEnable true;
                         GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
@@ -248,22 +248,22 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["SettingsInitialized", {
     if (GVAR(level) == 2) exitWith {
         [
-            {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-            {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
+            {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
+            {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
             {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
-            {((_this select 0) getvariable [QGVAR(inReviveState), false])},
-            {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
-            {((_this select 0) getvariable ["ACE_isDead", false])},
-            {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
+            {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+            {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
+            {((_this select 0) getVariable ["ACE_isDead", false])},
+            {(((_this select 0) getVariable [QGVAR(airwayStatus), 100]) < 80)}
         ] call FUNC(addUnconsciousCondition);
     };
 
     [
-        {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 40)},
-        {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.6},
+        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 40)},
+        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.6},
         {(([_this select 0] call FUNC(getBloodLoss)) > 0.1)},
-        {((_this select 0) getvariable [QGVAR(inReviveState), false])},
-        {((_this select 0) getvariable ["ACE_isDead", false])}
+        {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+        {((_this select 0) getVariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
 }] call EFUNC(common,addEventHandler);
 

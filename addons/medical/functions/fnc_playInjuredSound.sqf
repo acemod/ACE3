@@ -21,8 +21,8 @@ params ["_unit", "_pain"];
 if (!local _unit || !GVAR(enableScreams)) exitWith{};
 
 // Lock if the unit is already playing a sound.
-if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitWith {};
-_unit setvariable [QGVAR(playingInjuredSound),true];
+if ((_unit getVariable [QGVAR(playingInjuredSound),false])) exitWith {};
+_unit setVariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
 if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
@@ -75,9 +75,9 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
 
     // Clean up the lock
     [{
-        (_this select 0) setvariable [QGVAR(playingInjuredSound),nil];
+        (_this select 0) setVariable [QGVAR(playingInjuredSound),nil];
     }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
 };
 
 // Clean up in case there has not been played any sounds.
-_unit setvariable [QGVAR(playingInjuredSound),nil];
+_unit setVariable [QGVAR(playingInjuredSound),nil];

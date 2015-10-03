@@ -17,8 +17,8 @@ if (!isServer) exitWith {};
 
 params ["_object"];
 
-if (!(_object getvariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {};
+if (!(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {};
 
 {
     _x addCuratorEditableObjects [[_object], true];
-}foreach allCurators;
+}forEach allCurators;

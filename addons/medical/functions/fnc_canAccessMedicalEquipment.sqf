@@ -17,7 +17,7 @@
 private ["_accessLevel", "_return"];
 params ["_caller", "_target"];
 
-_accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
+_accessLevel = _target getVariable [QGVAR(allowSharedEquipmentAccess), -1];
 
 _return = false;
 
