@@ -69,7 +69,7 @@ if (_activated && local _logic) then {
         _lastTimePlayed = _args select 8;
 
         if (!alive _logic) exitWith {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
         };
 
         if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {

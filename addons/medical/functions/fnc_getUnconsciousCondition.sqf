@@ -22,7 +22,7 @@ if (isnil QGVAR(unconsciousConditions)) then {
 
 _return = false;
 {
-    if (typeName _x == typeName {} && {([_unit] call _x)}) exitwith {
+    if (typeName _x == typeName {} && {([_unit] call _x)}) exitWith {
        _return = true;
     };
 } foreach GVAR(unconsciousConditions);

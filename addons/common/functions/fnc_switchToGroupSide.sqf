@@ -27,7 +27,7 @@ if (_switch) then {
     _previousGroup = group _unit;
     _originalSide = side group _unit;
 
-    if (count units _previousGroup == 1 && _originalSide == _side) exitwith {
+    if (count units _previousGroup == 1 && _originalSide == _side) exitWith {
         [format ["Current group has only 1 member and is of same side as switch. Not switching unit %1", _id]] call FUNC(debug);
     };
 
@@ -41,7 +41,7 @@ if (_switch) then {
     private ["_currentGroup", "_newGroup"];
 
     {
-        if (_id == (_x select 2)) exitwith {
+        if (_id == (_x select 2)) exitWith {
             _x set [ 3, false];
             _previousGroupsList set [_forEachIndex, _x];
             [format["found group with ID: %1", _id]] call FUNC(debug);
@@ -51,7 +51,7 @@ if (_switch) then {
     reverse _previousGroupsList;
 
     {
-        if (_x select 3) exitwith {}; // stop at first id set to true
+        if (_x select 3) exitWith {}; // stop at first id set to true
         if !(_x select 3) then {
             _currentGroup = group _unit;
             if (!isNull (_x select 0)) then {

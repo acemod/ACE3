@@ -40,7 +40,7 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
     lbClear _ctrl;
     {
-        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> typeOf _x >> "displayName"));
+        _ctrl lbAdd (getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName"));
         true
     } count _loaded;
 

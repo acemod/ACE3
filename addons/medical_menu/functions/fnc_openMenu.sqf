@@ -17,7 +17,7 @@
 
 params ["_interactionTarget"];
 
-if (dialog || isNull _interactionTarget) exitwith {
+if (dialog || isNull _interactionTarget) exitWith {
     disableSerialization;
 
     private ["_display", "_handled"];

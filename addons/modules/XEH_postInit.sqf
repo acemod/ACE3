@@ -8,12 +8,12 @@
         [_x] call {
             private ["_logic", "_logicType", "_config", "_isGlobal", "_isDisposable", "_isPersistent","_function"];
             _logic = _this select 0;
-            _logicType = typeof _logic;
+            _logicType = typeOf _logic;
             _logic hideobject true;
 
-            if (_logic getvariable [QGVAR(initalized), false]) exitwith {};
+            if (_logic getvariable [QGVAR(initalized), false]) exitWith {};
             _config = (configFile >> "CfgVehicles" >> _logicType);
-            if !(isClass _config) exitwith {};
+            if !(isClass _config) exitWith {};
 
             // isGlobal = 1;
             _isGlobal = getNumber (_config >> "isGlobal") > 0;

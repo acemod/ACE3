@@ -19,7 +19,7 @@
 private ["_moment", "_logVarName", "_log","_newLog", "_logs"];
 params ["_unit", "_type", "_message", "_arguments"];
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     [_this, QFUNC(addToLog), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 

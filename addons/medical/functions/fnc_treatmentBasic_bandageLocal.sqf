@@ -22,7 +22,7 @@ _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {false};
+if (_part < 0) exitWith {false};
 
 if ((_damageBodyParts select _part) > 0) then {
     _damageOnPart = (_damageBodyParts select _part);

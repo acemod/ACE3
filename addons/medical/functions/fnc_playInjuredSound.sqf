@@ -18,14 +18,14 @@
 
 private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
 params ["_unit", "_pain"];
-if (!local _unit || !GVAR(enableScreams)) exitwith{};
+if (!local _unit || !GVAR(enableScreams)) exitWith{};
 
 // Lock if the unit is already playing a sound.
-if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitwith {};
+if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitWith {};
 _unit setvariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
-if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
+if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Classnames of the available sounds.
     _availableSounds_A = [
         "WoundedGuyA_01",

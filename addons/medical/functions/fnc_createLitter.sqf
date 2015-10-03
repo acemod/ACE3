@@ -24,17 +24,17 @@
 private ["_config", "_litter", "_createLitter", "_position", "_createdLitter"];
 params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_previousDamage"];
 
-if !(GVAR(allowLitterCreation)) exitwith {};
-if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
+if !(GVAR(allowLitterCreation)) exitWith {};
+if (vehicle _caller != _caller || vehicle _target != _target) exitWith {};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
-if !(isClass _config) exitwith {false};
+if !(isClass _config) exitWith {false};
 
 
-if !(isArray (_config >> "litter")) exitwith {};
+if !(isArray (_config >> "litter")) exitWith {};
 _litter = getArray (_config >> "litter");
 
 _createLitter = {
@@ -63,7 +63,7 @@ _createLitter = {
 _createdLitter = [];
 {
     if (typeName _x == "ARRAY") then {
-        if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
+        if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitWith {};
 
         _x params ["_selection", "_litterCondition", "_litterOptions"];
 
@@ -75,7 +75,7 @@ _createdLitter = [];
                 _litterCondition = missionNamespace getvariable _litterCondition;
                 if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
             };
-            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitwith {};
+            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitWith {};
 
             if (typeName _litterOptions == "ARRAY") then {
                 // Loop through through the litter options and place the litter

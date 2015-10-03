@@ -75,7 +75,7 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
 };
 
 if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
-    if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
+    if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitWith {
         _damageReturn = 0.9;
     };
     if ([_unit] call FUNC(setDead)) then {
@@ -102,7 +102,7 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
     };
 
     if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
-        if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
+        if (_unit getvariable ["ACE_isUnconscious", false]) exitWith {
             [_unit] call FUNC(setDead);
             0.89;
         };

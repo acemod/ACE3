@@ -98,7 +98,7 @@ if (GVAR(level) == 1) then {
 // handle advanced medical, with vitals
 if (GVAR(level) >= 2) then {
     TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume, _unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
-    if (_bloodVolume < 30) exitwith {
+    if (_bloodVolume < 30) exitWith {
         [_unit] call FUNC(setDead);
     };
 

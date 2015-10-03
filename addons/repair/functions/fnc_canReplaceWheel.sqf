@@ -21,7 +21,7 @@
 params ["_unit", "_target", "_hitPoint", ["_wheel", false]];
 TRACE_4("params",_unit,_target,_hitPoint,_wheel);
 // TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
-//if !([_unit, _target, _hitpoint, "ReplaceWheel"] call FUNC(canRepair)) exitwith {false};
+//if !([_unit, _target, _hitpoint, "ReplaceWheel"] call FUNC(canRepair)) exitWith {false};
 
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 

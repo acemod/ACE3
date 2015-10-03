@@ -27,13 +27,13 @@ if (_show) then {
         private ["_target", "_display", "_alphaLevel", "_alphaLevel", "_lbCtrl"];
         params ["_args", "_idPFH"];
         _args params ["_target"];
-        if (GVAR(TriageCardTarget) != _target) exitwith {
+        if (GVAR(TriageCardTarget) != _target) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(triageCard);
-        if (isnil "_display") exitwith {
+        if (isnil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 

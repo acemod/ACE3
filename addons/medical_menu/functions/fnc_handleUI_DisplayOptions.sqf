@@ -19,7 +19,7 @@
 #define END_IDC 27
 #define AMOUNT_OF_ENTRIES (count _entries)
 
-if (!hasInterface) exitwith{};
+if (!hasInterface) exitWith{};
 
 private ["_entries", "_display", "_newTarget", "_card", "_ctrl", "_code"];
 
@@ -28,9 +28,9 @@ params ["_name"];
 disableSerialization;
 
 _display = uiNamespace getVariable QGVAR(medicalMenu);
-if (isNil "_display") exitwith {}; // no valid dialog present
+if (isNil "_display") exitWith {}; // no valid dialog present
 
-if (_name isEqualTo "toggle") exitwith {
+if (_name isEqualTo "toggle") exitWith {
     if (GVAR(INTERACTION_TARGET) != ACE_player) then {
         _newTarget = ACE_player;
     } else {
@@ -59,7 +59,7 @@ GVAR(LatestDisplayOptionMenu) = _name;
 
 // The triage card has no options available
 lbClear 212;
-if (_name isEqualTo "triage") exitwith {
+if (_name isEqualTo "triage") exitWith {
 
     ctrlEnable [212, true];
     private ["_log", "_triageCardTexts", "_message"];
@@ -79,7 +79,7 @@ if (_name isEqualTo "triage") exitwith {
         nil;
     } count _log;
 
-    if (count _triageCardTexts == 0) exitwith {
+    if (count _triageCardTexts == 0) exitWith {
         lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
     };
     {
@@ -94,7 +94,7 @@ _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentO
 
 {
     //player sidechat format["TRIGGERED: %1",_x];
-    if (_forEachIndex > END_IDC) exitwith {};
+    if (_forEachIndex > END_IDC) exitWith {};
     _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);

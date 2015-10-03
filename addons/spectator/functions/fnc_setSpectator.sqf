@@ -26,7 +26,7 @@ params [["_set",true,[true]]];
 if (!hasInterface) exitWith {};
 
 // Exit if no change
-if (_set isEqualTo GVAR(isSet)) exitwith {};
+if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Handle common addon audio
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};

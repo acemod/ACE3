@@ -16,7 +16,7 @@
 private ["_openWounds", "_openWounds"];
 params ["_unit"];
 
-if (GVAR(level) <= 1) exitwith {
+if (GVAR(level) <= 1) exitWith {
     ([_unit] call FUNC(getBloodloss)) == 0;
 };
 

@@ -160,7 +160,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
     if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * _pain;
     };
-    if (_heartRate <= 0) exitwith {};
+    if (_heartRate <= 0) exitWith {};
     _interval = 60 / (_heartRate min 40);
 
     if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
@@ -246,7 +246,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 };
 
 ["SettingsInitialized", {
-    if (GVAR(level) == 2) exitwith {
+    if (GVAR(level) == 2) exitWith {
         [
             {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
             {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},

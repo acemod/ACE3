@@ -23,7 +23,7 @@ TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD Called",_unit, _selectionName, _damag
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
-if (_bodyPartn < 0) exitwith {};
+if (_bodyPartn < 0) exitWith {};
 
 // Get the injury type information. Format: [typeDamage thresholds, selectionSpecific, woundTypes]
 _injuryTypeInfo = missionNamespace getvariable [format[QGVAR(woundInjuryType_%1), _typeOfDamage],[[], false, []]];
@@ -70,7 +70,7 @@ _allPossibleInjuries = [];
 } foreach _allInjuriesForDamageType;
 
 // No possible wounds available for this damage type or damage amount.
-if (_highestPossibleSpot < 0) exitwith {};
+if (_highestPossibleSpot < 0) exitWith {};
 
 // Administration for open wounds and ids
 _openWounds = _unit getvariable[QGVAR(openWounds), []];
@@ -79,7 +79,7 @@ _woundID = _unit getvariable[QGVAR(lastUniqueWoundID), 1];
 _painToAdd = 0;
 _woundsCreated = [];
 {
-    if (_x select 0 <= _damage) exitwith {
+    if (_x select 0 <= _damage) exitWith {
         for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
 
             // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
@@ -92,7 +92,7 @@ _woundsCreated = [];
             if ((_injuryTypeInfo select 1)) then {
                 {
                     // Check if we have an id of the given class on the given bodypart already
-                    if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitwith {
+                    if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitWith {
                         _foundIndex = _foreachIndex;
                     };
                 } foreach _openWounds;

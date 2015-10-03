@@ -24,7 +24,7 @@ _activated = _this select 2;
 if (_activated) then {
 
     //--- Terminate when not created on the server
-    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitwith {
+    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitWith {
         [format ["%1 is trying to create curator logic ModuleCurator_F",profilename],"bis_fnc_error",false] call bis_fnc_mp;
         deletevehicle _logic;
     };
@@ -68,7 +68,7 @@ if (_activated) then {
 
             //--- All (including unofficial ones)
             case 3: {
-                _cfgPatches = configfile >> "cfgpatches";
+                _cfgPatches = configFile >> "cfgpatches";
                 for "_i" from 0 to (count _cfgPatches - 1) do {
                     _class = _cfgPatches select _i;
                     if (isclass _class) then {_addons set [count _addons,configname _class];};
@@ -85,7 +85,7 @@ if (_activated) then {
             case 1: {
                 _addonsList = [];
                 {
-                    _addonsList = _addonsList + (unitaddons typeof _x);
+                    _addonsList = _addonsList + (unitaddons typeOf _x);
                 } foreach (entities "all");
                 removeallcuratoraddons _logic;
                 _logic addcuratoraddons _addonsList;
@@ -133,14 +133,14 @@ if (_activated) then {
                         waituntil {isplayer (missionnamespace getvariable [_ownerVar,objnull]) || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Assign
                 _player = objnull;
                 switch true do {
                     case (_ownerUID > 0): {
                         {
-                            if (getplayeruid _x == _ownerVar) exitwith {_player = _x;};
+                            if (getplayeruid _x == _ownerVar) exitWith {_player = _x;};
                         } foreach playableunits;
                     };
                     default {
@@ -150,7 +150,7 @@ if (_activated) then {
 
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
                 waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isnull _logic};
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Add radio channels
                 {
@@ -194,7 +194,7 @@ if (_activated) then {
                         waituntil {_player != missionnamespace getvariable [_ownerVar,objnull] || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Add radio channels
                 {
@@ -203,14 +203,14 @@ if (_activated) then {
 
                 //--- Unassign
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
             };
         };
 
         //--- Activated all future addons
         _addons = [];
         {
-            if (typeof _x == "ModuleCuratorAddAddons_F") then {
+            if (typeOf _x == "ModuleCuratorAddAddons_F") then {
                 _paramAddons = call compile ("[" + (_x getvariable ["addons",""]) + "]");
                 {
                     if !(_x in _addons) then {_addons set [count _addons,_x];};
@@ -235,7 +235,7 @@ if (_activated) then {
                 };
 
                 //--- Locality changed
-                _logic addeventhandler [
+                _logic addEventHandler [
                     "local",
                     {
                         _logic = _this select 0;
@@ -291,7 +291,7 @@ if (_activated) then {
                         waituntil {sleep 0.1; servercommandavailable _serverCommand};
                         missionnamespace setvariable [_adminVar,player];
                         publicvariable _adminVar;
-                        _respawn = player addeventhandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
+                        _respawn = player addEventHandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
 
                         waituntil {sleep 0.1; !servercommandavailable _serverCommand};
                         missionnamespace setvariable [_adminVar,objnull];
@@ -333,16 +333,16 @@ if (_activated) then {
         };
 
         //--- Add local event handlers
-        _logic addeventhandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
-        _logic addeventhandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
-        _logic addeventhandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
-        _logic addeventhandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
-        _logic addeventhandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
+        _logic addEventHandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
+        _logic addEventHandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
+        _logic addEventHandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
+        _logic addEventHandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
+        _logic addEventHandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
 
-        _logic addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
 
         player call bis_fnc_curatorRespawn;
     };

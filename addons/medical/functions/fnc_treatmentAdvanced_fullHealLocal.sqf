@@ -13,7 +13,7 @@
 private "_allUsedMedication";
 params ["_caller", "_target"];
 
-if (alive _target) exitwith {
+if (alive _target) exitWith {
 
     _target setVariable [QGVAR(pain), 0, true];
     _target setVariable [QGVAR(morphine), 0, true];

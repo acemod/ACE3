@@ -24,6 +24,6 @@ if !("ACE_Sandbag_empty" in items _unit) exitWith {false};
 private ["_surfaceClass", "_surfaceType"];
 
 _surfaceClass = (surfaceType getPosASL _unit) select [1];
-_surfaceType = getText (configfile >> "CfgSurfaces" >> _surfaceClass >> "soundEnviron");
+_surfaceType = getText (configFile >> "CfgSurfaces" >> _surfaceClass >> "soundEnviron");
 
 !(_surfaceType in SURFACE_BLACKLIST)

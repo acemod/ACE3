@@ -39,14 +39,14 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
-[219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
+[219, [false, false, false]], false] call CBA_fnc_addKeybind;  //Left Windows Key
 
 ["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
-[219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+[219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed

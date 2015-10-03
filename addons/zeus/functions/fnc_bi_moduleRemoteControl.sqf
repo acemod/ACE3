@@ -23,7 +23,7 @@ _activated = _this select 2;
 if (_activated && local _logic && !isnull curatorcamera) then {
 
     //--- Terminate when remote control is already in progress
-    if !(isnull (missionnamespace getvariable ["bis_fnc_moduleRemoteControl_unit",objnull])) exitwith {};
+    if !(isnull (missionnamespace getvariable ["bis_fnc_moduleRemoteControl_unit",objnull])) exitWith {};
 
     //--- Get unit under cursor
     _unit = objnull;

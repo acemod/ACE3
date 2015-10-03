@@ -16,7 +16,7 @@ private ["_config", "_marker", "_a", "_scope", "_icon", "_rgba", "_name"];
 
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
-    _config = configfile >> "CfgMarkers";
+    _config = configFile >> "CfgMarkers";
     GVAR(MarkersCache) = [];
 
     for "_a" from 0 to (count _config - 1) do {
@@ -32,7 +32,7 @@ if (isNil QGVAR(MarkersCache)) then {
 
 // init marker colors
 if (isNil QGVAR(MarkerColorsCache)) then {
-    _config = configfile >> "CfgMarkerColors";
+    _config = configFile >> "CfgMarkerColors";
     GVAR(MarkerColorsCache) = [];
 
     for "_a" from 0 to (count _config - 1) do {

@@ -23,7 +23,7 @@ if (!local _unit) then {
 
     _exists = false;
     {
-        if (_x select 0 == _injuryID) exitwith {
+        if (_x select 0 == _injuryID) exitWith {
             _exists = true;
             _openWounds set [_foreachIndex, _injury];
         };

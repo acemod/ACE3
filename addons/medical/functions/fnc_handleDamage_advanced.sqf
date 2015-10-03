@@ -23,7 +23,7 @@ private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "_newDamage"];
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {};
+if (_part < 0) exitWith {};
 
 _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage

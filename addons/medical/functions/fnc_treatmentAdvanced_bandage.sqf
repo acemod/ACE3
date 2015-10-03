@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
+if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 

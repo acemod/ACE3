@@ -36,10 +36,10 @@ if (_show) then {
         params ["_args", "_idPFH"];
         _args params ["_target", "_selectionN"];
 
-        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitwith {
+        if (GVAR(displayPatientInformationTarget) != _target || GVAR(currentSelectedSelectionN) != _selectionN) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
-        if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        if (ACE_player distance _target > MAX_DISTANCE) exitWith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             ["displayTextStructured", [ACE_player], [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
@@ -47,7 +47,7 @@ if (_show) then {
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(DisplayInformation);
-        if (isnil "_display") exitwith {
+        if (isnil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 

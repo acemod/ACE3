@@ -52,7 +52,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
         //don't do anything until projectile is null (exploded/max range)
         if (isNull _projectile) then {
             //Remove PFEH:
-            [_idPFH] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
 
             //If (tube is dropped) OR (is dead) OR (is player) just exit
             if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};

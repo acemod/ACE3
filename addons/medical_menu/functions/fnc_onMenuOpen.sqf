@@ -20,7 +20,7 @@ private "_target";
 
 params ["_display"];
 
-if (isNil "_display") exitwith {};
+if (isNil "_display") exitWith {};
 
 if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
 if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
@@ -78,7 +78,7 @@ GVAR(MenuPFHID) = [{
     (_display displayCtrl 2000) ctrlSetText (_status select 0);
     (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
 
-    if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+    if (ACE_player distance _target > MAX_DISTANCE) exitWith {
         closeDialog 314412;
         ["displayTextStructured", [ACE_player], [[ELSTRING(medical,DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
     };

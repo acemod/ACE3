@@ -29,7 +29,7 @@ if(_zIndex < 5) then {
     };
     for "_i" from 0 to _radi do {
         _test = true;
-        _vec = [1, ((_i*_split)+_rand) mod 360, _zAng] call cba_fnc_polar2vect;
+        _vec = [1, ((_i*_split)+_rand) mod 360, _zAng] call CBA_fnc_polar2vect;
         for "_x" from 1 to _distanceCount do {
             _testPos = _pos vectorAdd (_vec vectorMultiply _x);
             // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
@@ -122,5 +122,5 @@ if(_zIndex < 5) then {
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
     [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };

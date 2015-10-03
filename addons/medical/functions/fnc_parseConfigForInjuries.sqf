@@ -43,7 +43,7 @@ GVAR(fractureClassNames) = [];
 // function for parsing a sublcass of an injury
 _parseForSubClassWounds = {
     _subClass = _this select 0;
-    if (isClass (_entry >> _subClass)) exitwith {
+    if (isClass (_entry >> _subClass)) exitWith {
         _subClassConfig = (_entry >> _subClass);
         _subClasstype = _classType + (configName _subClassConfig);
         _subClassselections = if (isArray(_subClassConfig >> "selections")) then { getArray(_subClassConfig >> "selections");} else { _selections };
@@ -82,7 +82,7 @@ if (isClass _woundsConfig) then {
             _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classType};
 
             // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
-            if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitwith {}; // continue to the next one
+            if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitWith {}; // continue to the next one
 
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {

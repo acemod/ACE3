@@ -29,7 +29,7 @@ private ["_pos", "_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dag
 
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
 
-if (GVAR(noVectorData)) exitwith {};
+if (GVAR(noVectorData)) exitWith {};
 
 _pos = [GVAR(LAZPOS) select 0, GVAR(LAZPOS) select 1];
 
@@ -94,5 +94,5 @@ GVAR(vectorGrid) = _dagrGrid;
 __gridControl ctrlSetText format ["%1", _dagrGrid];
 __speedControl ctrlSetText format ["%1", _dagrDist];
 __elevationControl ctrlSetText format ["%1", _dagrElevation];
-__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
+__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1ï¿½", _bearing] });
 __timeControl ctrlSetText format ["%1", _dagrTime];

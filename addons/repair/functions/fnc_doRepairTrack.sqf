@@ -31,7 +31,7 @@ _wheel = objNull;
         _wheel = _x;
     };
 } forEach nearestObjects [_unit, ["ACE_Track"], 5];
-if (isNull _wheel) exitwith {};
+if (isNull _wheel) exitWith {};
 
 // get current hitpoint damage
 
