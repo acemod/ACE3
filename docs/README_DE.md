@@ -46,7 +46,7 @@ Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sod
 - Tragen und Ziehen
 - Waffen und Fahrzeuge tragen die Namen ihrer Vorbilder in der echten Welt
 - Ein Feuerleitsystem (FLS) für Hubschrauber und Panzer
-- Realistische Ballistik/Feuerleitsystem werdeb in  C/C++ Erweiterungen berechnet
+- Viele Funktionen werden in C/C++ Erweiterungen berechnet
 - Rückstrahlzonen- und Überdrucksimulation
 - Einwegwaffen
 - Realistische G-Kräfte
