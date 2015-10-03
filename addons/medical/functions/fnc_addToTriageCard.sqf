@@ -38,7 +38,7 @@ _amount = 1;
 } forEach _log;
 
 if (!_inList) then {
-    _log pushback [_newItem, 1, ACE_time];
+    _log pushBack [_newItem, 1, ACE_time];
 };
 _unit setVariable [QGVAR(triageCard), _log, true];
 ["Medical_onItemAddedToTriageCard", [_unit, _newItem, _amount]] call EFUNC(common,localEvent);

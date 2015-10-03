@@ -56,21 +56,21 @@ if (_show) then {
 
         if (GVAR(level) >= 2) then {
             _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
-            _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
+            _genericMessages pushBack [localize _partText, [1, 1, 1, 1]];
         };
 
         if (_target getVariable[QGVAR(isBleeding), false]) then {
-            _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
+            _genericMessages pushBack [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
         if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
-            _genericMessages pushback [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
+            _genericMessages pushBack [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
         if (((_target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
-            _genericMessages pushback [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
+            _genericMessages pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
         if (_target getVariable[QGVAR(hasPain), false]) then {
-            _genericMessages pushback [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
+            _genericMessages pushBack [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
@@ -82,7 +82,7 @@ if (_show) then {
             };
         } forEach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
-            _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+            _genericMessages pushBack [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         _damaged = [false, false, false, false, false, false];
@@ -101,10 +101,10 @@ if (_show) then {
                     // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, _amountOf], [1,1,1,1]];
+                            _allInjuryTexts pushBack [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, _amountOf], [1,1,1,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
+                            _allInjuryTexts pushBack [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
                         };
                     };
                 };
@@ -122,10 +122,10 @@ if (_show) then {
                     if (_amountOf > 0) then {
                         if (_amountOf >= 1) then {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
+                            _allInjuryTexts pushBack [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, _amountOf], [0.88,0.7,0.65,1]];
                         } else {
                             // TODO localization
-                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                            _allInjuryTexts pushBack [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                         };
                     };
                 };

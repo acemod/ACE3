@@ -44,7 +44,7 @@ _foundIndex = -1;
 
     if (_foundIndex < 0) then {
         // Since it is a new injury, we will have to add it to the open wounds array to store it
-        _openWounds pushback _x;
+        _openWounds pushBack _x;
     } else {
         // We already have one of these, so we are just going to increase the number that we have of it with a new one.
         _injury = _openWounds select _foundIndex;

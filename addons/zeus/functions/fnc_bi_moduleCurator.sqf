@@ -113,7 +113,7 @@ if (_activated) then {
             if (_name == "") then {_name = localize "STR_A3_curator";};
 
             //--- Wait until mission starts
-            waituntil {time > 0}; // NOTE: DO NOT CHANGE TO ACE_TIME, IT BREAKS THE MODULE
+            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO ACE_TIME, IT BREAKS THE MODULE
 
             //--- Refresh addon list, so it's broadcasted to clients
             _addons = curatoraddons _logic;
@@ -124,13 +124,13 @@ if (_activated) then {
                 //--- Wait for player to become Zeus
                 switch true do {
                     case (_ownerUID > 0): {
-                        waituntil {
+                        waitUntil {
                             sleep 0.01;
                             {getplayeruid _x == _ownerVar} count playableunits > 0 || isNill _logic
                         };
                     };
                     default {
-                        waituntil {isplayer (missionnamespace getVariable [_ownerVar,objnull]) || isNill _logic};
+                        waitUntil {isplayer (missionnamespace getVariable [_ownerVar,objnull]) || isNill _logic};
                     };
                 };
                 if (isNill _logic) exitWith {};
@@ -148,8 +148,8 @@ if (_activated) then {
                     };
                 };
 
-                waituntil {unassigncurator _logic; isNill (getassignedcuratorunit _logic) || isNill _logic};
-                waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isNill _logic};
+                waitUntil {unassigncurator _logic; isNill (getassignedcuratorunit _logic) || isNill _logic};
+                waitUntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isNill _logic};
                 if (isNill _logic) exitWith {};
 
                 //--- Add radio channels
@@ -185,13 +185,13 @@ if (_activated) then {
                 //--- Wait for player to stop being Zeus
                 switch true do {
                     case (_ownerUID > 0): {
-                        waituntil {
+                        waitUntil {
                             sleep 0.01;
                             {getplayeruid _x == _ownerVar} count playableunits == 0 || isNill _logic
                         };
                     };
                     default {
-                        waituntil {_player != missionnamespace getVariable [_ownerVar,objnull] || isNill _logic};
+                        waitUntil {_player != missionnamespace getVariable [_ownerVar,objnull] || isNill _logic};
                     };
                 };
                 if (isNill _logic) exitWith {};
@@ -202,7 +202,7 @@ if (_activated) then {
                 } forEach (_logic getVariable ["channels",[]]);
 
                 //--- Unassign
-                waituntil {unassigncurator _logic; isNill (getassignedcuratorunit _logic) || isNill _logic};
+                waitUntil {unassigncurator _logic; isNill (getassignedcuratorunit _logic) || isNill _logic};
                 if (isNill _logic) exitWith {};
             };
         };
@@ -248,8 +248,8 @@ if (_activated) then {
     };
 
     //--- Player
-    if (hasinterface) then {
-        waituntil {local player};
+    if (hasInterface) then {
+        waitUntil {local player};
         _serverCommand = if (_ownerVar == "#adminLogged") then {"#shutdown"} else {"#kick"};
 
         //--- Black effect until the interface is open
@@ -288,12 +288,12 @@ if (_activated) then {
                     _adminVar = _this select 1;
                     _serverCommand = _this select 2;
                     while {true} do {
-                        waituntil {sleep 0.1; servercommandavailable _serverCommand};
+                        waitUntil {sleep 0.1; servercommandavailable _serverCommand};
                         missionnamespace setVariable [_adminVar,player];
                         publicvariable _adminVar;
                         _respawn = player addEventHandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
 
-                        waituntil {sleep 0.1; !servercommandavailable _serverCommand};
+                        waitUntil {sleep 0.1; !servercommandavailable _serverCommand};
                         missionnamespace setVariable [_adminVar,objnull];
                         publicvariable _adminVar;
                         player removeeventhandler ["respawn",_respawn];
@@ -305,7 +305,7 @@ if (_activated) then {
         [_logic] spawn {
             _logic = _this select 0;
             sleep 1;
-            waituntil {alive player};
+            waitUntil {alive player};
 
             //--- Show warning when Zeus key is not assigned
             if (count (actionkeys "curatorInterface") == 0) then {

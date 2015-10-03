@@ -54,7 +54,7 @@ if (_show) then {
                     _message = localize _message;
                 };
             };
-            _triageCardTexts pushback format["%1x - %2", _amount, _message];
+            _triageCardTexts pushBack format["%1x - %2", _amount, _message];
         } forEach _log;
 
         if (count _triageCardTexts == 0) then {

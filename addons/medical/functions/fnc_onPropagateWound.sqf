@@ -30,7 +30,7 @@ if (!local _unit) then {
     } forEach _openWounds;
 
     if (!_exists) then {
-        _openWounds pushback _injury;
+        _openWounds pushBack _injury;
     };
     _unit setVariable [QGVAR(openWounds), _openWounds];
 };

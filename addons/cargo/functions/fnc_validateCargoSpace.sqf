@@ -25,7 +25,7 @@ _newLoaded = [];
 _totalSpaceOccupied = 0;
 {
     if !(isNull _x) then {
-        _newLoaded pushback _x;
+        _newLoaded pushBack _x;
         _totalSpaceOccupied = _totalSpaceOccupied + ([_x] call FUNC(getSizeItem));
     };
     true

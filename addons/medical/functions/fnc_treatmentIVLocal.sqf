@@ -38,6 +38,6 @@ _varName = format["ACE_Medical_IVVolume_%1",_typeOf];
 _target setVariable [_varName, (_target getVariable [_varName, 0]) + _volumeAdded, true];
 
 if !(_varName in GVAR(IVBags)) then {
-    GVAR(IVBags) pushback _varName;
+    GVAR(IVBags) pushBack _varName;
     publicVariable QGVAR(IVBags);
 };

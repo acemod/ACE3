@@ -35,18 +35,18 @@ if (count _log >= 8) then {
     {
         // ensure the first element will not be added
         if (_forEachIndex > 0) then {
-            _newLog pushback _x;
+            _newLog pushBack _x;
         };
     } forEach _log;
     _log = _newLog;
 };
-_log pushback [_message, _moment, _type, _arguments];
+_log pushBack [_message, _moment, _type, _arguments];
 
 _unit setVariable [_logVarName, _log, true];
 ["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
 
 _logs = _unit getVariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {
-    _logs pushback _logVarName;
+    _logs pushBack _logVarName;
     _unit setVariable [QGVAR(allLogs), _logs, true];
 };
