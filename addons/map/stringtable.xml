@@ -74,7 +74,7 @@
             <English>Limit map zoom?</English>
             <Polish>Ograniczony zoom</Polish>
             <Spanish>¿Limitar el zoom de mapa?</Spanish>
-            <German>Kartenzoom einschränken</German>
+            <German>Kartenvergrößerung einschränken</German>
             <Czech>Omezit přiblížení mapy?</Czech>
             <Portuguese>Limitar zoom do mapa?</Portuguese>
             <French>Limiter le zoom de la carte?</French>
@@ -229,7 +229,7 @@
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
-            <German>NVG</German>
+            <German>NSG</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -256,7 +256,7 @@
             <Russian>Увеличить яркость</Russian>
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
-            <German>erhöhe Helligkeit</German>
+            <German>Erhöhe Helligkeit</German>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -265,7 +265,7 @@
             <Russian>Уменьшить яркость</Russian>
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
-            <German>verringere Helligkeit</German>
+            <German>Verringere Helligkeit</German>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
