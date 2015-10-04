@@ -7,9 +7,9 @@
 // PFHs
 //////////////////////////////////////////////////
 
-//Singe PFEH to handle execNextFrame and waitAndExec:
+//Singe PFEH to handle execNextFrame, waitAndExec and waitUntilAndExec:
 [{
-    private "_entry";
+    private ["_entry", "_deleted"];
 
     //Handle the waitAndExec array:
     while {!(GVAR(waitAndExecArray) isEqualTo []) && {GVAR(waitAndExecArray) select 0 select 0 <= ACE_Time}} do {
@@ -27,6 +27,18 @@
     GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
     GVAR(nextFrameBufferB) = [];
     GVAR(nextFrameNo) = diag_frameno + 1;
+
+    //Handle the waitUntilAndExec array:
+    _deleted = 0;
+    {
+        // if condition is satisifed call statement
+        if ((_x select 2) call (_x select 0)) then {
+            // make sure to delete the correct handle when multiple conditions are met in one frame
+            GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex - _deleted);
+            _deleted = _deleted + 1;
+            (_x select 2) call (_x select 1);
+        };
+    } forEach GVAR(waitUntilAndExecArray);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
