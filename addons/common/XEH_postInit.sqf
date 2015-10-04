@@ -31,11 +31,12 @@
     //Handle the waitUntilAndExec array:
     _deleted = 0;
     {
-        _x params ["_condition", "_code", "_args"];
-        if ((_args call _condition)) then {
+        // if condition is satisifed call statement
+        if ((_x select 2) call (_x select 0)) then {
+            // make sure to delete the correct handle when multiple conditions are met in one frame
             GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex - _deleted);
             _deleted = _deleted + 1;
-            _args call _code;
+            (_x select 2) call (_x select 1);
         };
     } forEach GVAR(waitUntilAndExecArray);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
