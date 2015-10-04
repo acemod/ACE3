@@ -181,6 +181,7 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waitUntilAndExecute);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
@@ -282,11 +283,12 @@ PREP(hashListPush);
 
 GVAR(syncedEvents) = HASH_CREATE;
 
-//GVARS for execNextFrame and waitAndExec
+//GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
 GVAR(waitAndExecArray) = [];
 GVAR(nextFrameNo) = diag_frameno;
 GVAR(nextFrameBufferA) = [];
 GVAR(nextFrameBufferB) = [];
+GVAR(waitUntilAndExecArray) = [];
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
