@@ -92,6 +92,9 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
+PREP(handleModifierKey);
+PREP(handleModifierKeyUp);
+PREP(handleModifierKeyInit);
 PREP(handleScrollWheel);
 PREP(handleScrollWheelInit);
 PREP(hasItem);
@@ -144,8 +147,10 @@ PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(runAfterSettingsInit);
 PREP(sanitizeString);
+PREP(selectWeaponMode);
 PREP(sendRequest);
 PREP(serverLog);
+PREP(setAllGear);
 PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
@@ -179,6 +184,7 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waitUntilAndExecute);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
@@ -205,6 +211,7 @@ PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
+PREP(getVehicleUAVCrew);
 
 // turrets
 PREP(getTurrets);
@@ -216,6 +223,10 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+
+// missing inventory commands
+PREP(binocularMagazine);
+PREP(removeBinocularMagazine);
 
 // ACE_Debug
 PREP(exportConfig);
@@ -279,11 +290,12 @@ PREP(hashListPush);
 
 GVAR(syncedEvents) = HASH_CREATE;
 
-//GVARS for execNextFrame and waitAndExec
+//GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
 GVAR(waitAndExecArray) = [];
 GVAR(nextFrameNo) = diag_frameno;
 GVAR(nextFrameBufferA) = [];
 GVAR(nextFrameBufferB) = [];
+GVAR(waitUntilAndExecArray) = [];
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];

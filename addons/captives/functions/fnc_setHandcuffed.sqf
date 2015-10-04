@@ -109,3 +109,6 @@ if (_state) then {
         showHUD true;
     };
 };
+
+//Global Event after changes:
+["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call EFUNC(common,globalEvent);
