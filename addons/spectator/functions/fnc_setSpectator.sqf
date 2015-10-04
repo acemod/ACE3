@@ -7,7 +7,8 @@
  * The spectator interface will be opened/closed
  *
  * Arguments:
- * 0: Spectator state of local client <BOOL> <OPTIONAL>
+ * 0: Spectator state of local client <BOOL> (default: true)
+ * 1: Force interface <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>
@@ -20,7 +21,7 @@
 
 #include "script_component.hpp"
 
-params [["_set",true,[true]]];
+params [["_set",true,[true]], ["_force",true,[true]]];
 
 // Only clients can be spectators
 if (!hasInterface) exitWith {};
@@ -75,7 +76,17 @@ if (_set) then {
     [{
         // Create the display
         (findDisplay 46) createDisplay QGVAR(interface);
-    }, []] call EFUNC(common,execNextFrame);
+
+        // If not forced, make esc end spectator
+        if (_this) then {
+            (findDisplay 12249) displayAddEventHandler ["KeyDown", {
+                if (_this select 1 == 1) then {
+                    [false] call ace_spectator_fnc_setSpectator;
+                    true
+                };
+            }];
+        };
+    }, !_force] call EFUNC(common,execNextFrame);
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
