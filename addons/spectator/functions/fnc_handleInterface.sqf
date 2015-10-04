@@ -238,7 +238,7 @@ switch (toLower _mode) do {
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
             case 49: { // N
-                if (GVAR(camMode) == 0) then {
+                if (GVAR(camMode) != 1) then {
                     if (_ctrl) then {
                         [nil,nil,-1] call FUNC(cycleCamera);
                     } else {
