@@ -54,24 +54,21 @@ def check_sqf_syntax(filepath):
                             brackets_list.append('(')
                         elif (c == ')'):
                             if (brackets_list[-1] in ['{', '[']):
-                                print "Possible missing bracket detected at )"
-                                print filepath + "Line number: " + str(lineNumber)
+                                print("Possible missing round bracket ')' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
                             brackets_list.append(')')
                         elif (c == '['):
                             brackets_list.append('[')
                         elif (c == ']'):
                             if (brackets_list[-1] in ['{', '(']):
-                                print "Possible missing bracket detected at ]"
-                                print filepath + "Line number: " + str(lineNumber)
+                                print("Possible missing square bracket ']' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
                             brackets_list.append(']')
                         elif (c == '{'):
                             brackets_list.append('{')
                         elif (c == '}'):
                             if (brackets_list[-1] in ['(', '[']):
-                                print "Possible missing bracket detected at }"
-                                print filepath + "Line number: " + str(lineNumber)
+                                print("Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
                             brackets_list.append('}')
             else:
@@ -84,13 +81,13 @@ def check_sqf_syntax(filepath):
                         checkIfNextIsClosingBlock = False
 
         if brackets_list.count('[') != brackets_list.count(']'):
-            print "A possible missing [ or ] in file " + filepath + "[ = " + str(brackets_list.count('[')) + " ] =" + str(brackets_list.count(']'))
+            print("A possible missing square bracket [ or ] in file {0} [ = {1} ] = {2}".format(filepath,brackets_list.count('['),brackets_list.count(']')))
             bad_count_file += 1
         if brackets_list.count('(') != brackets_list.count(')'):
-            print "A possible missing ( or ) in file " + filepath + "( = " + str(brackets_list.count('(')) + " ) =" + str(brackets_list.count(')'))
+            print("A possible missing round bracket ( or ) in file {0} ( = {1} ) = {2}".format(filepath,brackets_list.count('('),brackets_list.count(')')))
             bad_count_file += 1
         if brackets_list.count('{') != brackets_list.count('}'):
-            print "A possible missing { or } in file " + filepath + "{ = " + str(brackets_list.count('{')) + " } =" + str(brackets_list.count('}'))
+            print("A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
             bad_count_file += 1
     return bad_count_file
 
@@ -114,7 +111,7 @@ def main():
     for filename in sqf_list:
         bad_count = bad_count + check_sqf_syntax(filename)
 
-    print ("Bad Count {0}".format(bad_count))
+    print("Bad Count {0}".format(bad_count))
     return bad_count
 
 if __name__ == "__main__":
