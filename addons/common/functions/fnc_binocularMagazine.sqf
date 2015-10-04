@@ -12,6 +12,8 @@
  * [player] call ace_common_fnc_binocularMagazine
  *
  * Public: Yes
+ *
+ * Note: Doesn't work on dead units
  */
 #include "script_component.hpp"
 
@@ -27,6 +29,9 @@ _muzzle = currentMuzzle _unit;
 _mode = currentWeaponMode _unit;
 
 _unit selectWeapon _binocular;
+
+// didn't select the binocular (unit probably dead or not local). function won't work. quit with empty string
+if (currentWeapon _unit != _binocular) exitWith {""};
 
 _magazine = currentMagazine _unit;
 
