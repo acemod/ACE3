@@ -26,7 +26,7 @@ if (isServer) then {
 ["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
 ["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
 
-//Medical Integration Events???
+//Medical Integration Events
 ["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
 
 if (!hasInterface) exitWith {};

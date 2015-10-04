@@ -8,17 +8,19 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-//Setup text/shadow/size/color settings matrix
-[] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_1(_name);
-    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+    params ["_name"];
+    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);
 
-// Install the render EH on the main display
-addMissionEventHandler ["Draw3D", DFUNC(render)];
+["SettingsInitialized", {
+    //Setup text/shadow/size/color settings matrix
+    [] call FUNC(setupTextColors);
+    // Install the render EH on the main display
+    addMissionEventHandler ["Draw3D", DFUNC(render)];
+}] call EFUNC(common,addEventHandler);
 
 //Add Actions to Houses:
 ["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
@@ -54,7 +56,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
-    EXPLODE_2_PVT(_this,_unit,_isUnconscious);
+    params ["_unit", "_isUnconscious"];
 
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 

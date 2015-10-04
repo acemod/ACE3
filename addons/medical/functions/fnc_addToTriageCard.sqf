@@ -29,7 +29,7 @@ _amount = 1;
         private "_info";
         _info = _log select _foreachIndex;
         _info set [1,(_info select 1) + 1];
-        _info set [2, ACE_time];
+        _info set [2, ACE_gameTime];
         _log set [_foreachIndex, _info];
 
         _amount = (_info select 1);
@@ -38,7 +38,7 @@ _amount = 1;
 } foreach _log;
 
 if (!_inList) then {
-    _log pushback [_newItem, 1, ACE_time];
+    _log pushback [_newItem, 1, ACE_gameTime];
 };
 _unit setvariable [QGVAR(triageCard), _log, true];
 ["Medical_onItemAddedToTriageCard", [_unit, _newItem, _amount]] call EFUNC(common,localEvent);
