@@ -50,6 +50,7 @@ if (_newMode == 0) then { // Free
     // Preserve camUnit value for consistency when manually changing view
     _camera cameraEffect ["internal", "back"];
     showCinemaBorder false;
+    cameraEffectEnableHUD true;
 
     // Apply the camera zoom
     _camera camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
@@ -104,6 +105,7 @@ if (_newMode == 0) then { // Free
         // Switch to the camera
         _camera cameraEffect ["internal", "back"];
         showCinemaBorder false;
+        cameraEffectEnableHUD true;
 
         // Handle camera orbit movement
         if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
