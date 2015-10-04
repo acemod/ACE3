@@ -83,9 +83,13 @@
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
+["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
+["assignTeam", {(_this select 0) assignTeam (_this select 1)}] call FUNC(addEventHandler);
+["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
+    ["enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call FUNC(addEventHandler);
 };
 
 
@@ -94,8 +98,8 @@ if (isServer) then {
 //////////////////////////////////////////////////
 
 // ACE events
-"ACEg" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
-"ACEc" addPublicVariableEventHandler { _this call FUNC(_handleNetEvent); };
+"ACEg" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
+"ACEc" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
 
 // Synced ACE events
 // Handle JIP scenario
@@ -219,8 +223,29 @@ call FUNC(assignedItemFix);
 
 GVAR(ScrollWheelFrame) = diag_frameno;
 
-addMissionEventHandler ["Loaded", {call FUNC(handleScrollWheelInit)}];
-call FUNC(handleScrollWheelInit);
+["mainDisplayLoaded", {
+    [{
+        call FUNC(handleScrollWheelInit);
+        call FUNC(handleModifierKeyInit);
+    }, [], 0.1] call FUNC(waitAndExecute); // needs delay, otherwise doesn't work without pressing "RESTART" in editor once. Tested in 1.52RC
+}] call FUNC(addEventHandler);
+
+// add PFH to execute event that fires when the main display (46) is created
+private "_fnc_initMainDisplayCheck";
+_fnc_initMainDisplayCheck = {
+    [{
+        if !(isNull findDisplay 46) then {
+            // Raise ACE event locally
+            ["mainDisplayLoaded", [findDisplay 46]] call FUNC(localEvent);
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+        };
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
+};
+
+call _fnc_initMainDisplayCheck;
+
+// repeat this every time a savegame is loaded
+addMissionEventHandler ["Loaded", _fnc_initMainDisplayCheck];
 
 // @todo remove?
 enableCamShake true;
@@ -273,7 +298,7 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 
     // "playerChanged" event
     _data = call FUNC(player);
-    if !(_data isEqualTo GVAR(OldPlayerVehicle)) then {
+    if !(_data isEqualTo ACE_player) then {
         private "_oldPlayer";
         _oldPlayer = ACE_player;
 
@@ -375,8 +400,8 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // @todo still needed?
 [QGVAR(StateArrested), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 
-["displayTextStructured", FUNC(displayTextStructured)] call FUNC(addEventhandler);
-["displayTextPicture", FUNC(displayTextPicture)] call FUNC(addEventhandler);
+["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
+["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);
 
 ["medical_onUnconscious", {
     params ["_unit", "_isUnconscious"];

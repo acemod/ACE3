@@ -1,21 +1,20 @@
 /*
  * Author: PabstMirror
- * Test if can Become Leader of group
+ * Test if can Become Leader of group.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Able to become leader of group <BOOL>
  *
  * Example:
- * [player, player] call ace_interaction_fnc_canBecomeLeader
+ * [player] call ace_interaction_fnc_canBecomeLeader
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_target,_player);
+params ["_unit"];
 
-(count (units group _player) > 1) && {leader group _player != _player}
+count units group _unit > 1 && {leader group _unit != _unit}

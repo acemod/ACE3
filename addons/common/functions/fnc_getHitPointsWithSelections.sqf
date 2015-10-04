@@ -22,6 +22,11 @@ params ["_vehicle"];
 private "_hitPointsWithSelections";
 _hitPointsWithSelections = getAllHitPointsDamage _vehicle;
 
+// get correct format on vehicles without any hitpoints
+if (_hitPointsWithSelections isEqualTo []) then {
+	_hitPointsWithSelections = [[],[],[]];
+};
+
 _hitPointsWithSelections resize 2;
 
 _hitPointsWithSelections

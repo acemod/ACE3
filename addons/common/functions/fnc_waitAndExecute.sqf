@@ -13,7 +13,7 @@
  * Example:
  * [{(_this select 0) setVelocity [0,0,200];}, [player], 10] call ace_common_fnc_waitAndExecute
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
