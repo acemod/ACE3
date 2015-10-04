@@ -11,10 +11,10 @@ Everything is ordered alphabetically.
 
 You know an in-game name but want the class name? <kbd>CTRL</kbd> + <kbd>F</kbd>
 
-## AtragMX 
+## AtragMX
 `added in 3.0.0.3`
 
-class name | in game name  | type  | 
+class name | in game name  | type  |
 ---------- | --------- | --------- |
 ACE_ATragMX | ATragMX  |  ACE_ItemCore |
 
@@ -90,7 +90,7 @@ ACE_ConcertinaWire | Concertina Wire | deployed concertina wire |
 
 class name | in game name | type   |
 ---------- | --------- | ---------
-ACE_DAGR | DAGR | ACE_ItemCore | 
+ACE_DAGR | DAGR | ACE_ItemCore |
 
 ## Disposable
 `added in 3.0.0.3`
@@ -109,6 +109,15 @@ ACE_M26_Clacker| M26 Firing Device |  ACE_ItemCore |
 ACE_DefusalKit | Defusal Kit |  ACE_ItemCore |
 ACE_DeadManSwitch | Dead Man's Switch |  ACE_ItemCore |
 ACE_Cellphone | Cellphone |  ACE_ItemCore |
+
+## Flashlights
+`added in 3.3.0`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_Flashlight_MX991 | Fulton MX-991 | ACE_ItemCore |
+ACE_Flashlight_KSF1 | Maglite XL50 | ACE_ItemCore |
+ACE_Flashlight_XL50 | KSF-1 | ACE_ItemCore |
 
 ## Grenades
 `added in 3.0.0.3`
@@ -270,6 +279,14 @@ class name | in game name | type   |
 ---------- | --------- | ---------
 ACE_RangeCard | rangecard | ACE_ItemCore |
 
+## Repair
+`added in 3.3.0`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_Track | Spare Track | thingX |
+ACE_Wheel | Spare Wheel | thingX |
+
 ## Respawn
 `last modified in 3.2.0`
 
@@ -281,13 +298,6 @@ ACE_Rallypoint_Independent | Rallypoint Independent | FlagCarrier |
 ACE_Rallypoint_West_Base | Rallypoint West (Base) | FlagCarrier |
 ACE_Rallypoint_East_Base | Rallypoint East (Base) | FlagCarrier |
 ACE_Rallypoint_Independent_Base | Rallypoint Independent (Base) | FlagCarrier |
-
-## Vector
-`added in 3.0.0.3`
-
-class name | in game name | type   |
---------- | --------- | ---------
-ACE_Vector | Vector 21 | Binoculars |
 
 ## Vehicle Lock
 `added in 3.0.0.3`
@@ -304,38 +314,47 @@ ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
 ## Sandbag
 `added in 3.1.1`
 
-class name | in game name | type | 
+class name | in game name | type |
 ---------- | --------- | ---------
-ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore | 
-ACE_SandbagObject | Sandbag | ThingX | 
+ACE_Sandbag_empty | Sandbag (empty) | ACE_ItemCore |
+ACE_SandbagObject | Sandbag | ThingX |
 
 ## Spotting Scope
 `added in 3.1.1`
 
-class name | in game name | type | 
+class name | in game name | type |
 ---------- | --------- | ---------
-ACE_SpottingScope | Spotting Scope | ACE_ItemCore | 
-ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon | 
+ACE_SpottingScope | Spotting Scope | ACE_ItemCore |
+ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon |
 
 ## Tactical Ladder
 `added in 3.1.1`
 
-class name | in game name | type | 
+class name | in game name | type |
 ---------- | --------- | ---------
-ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack | 
-ACE_Tactical_Ladder | Telescopic Ladder (placed) | house | 
+ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack |
+ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
 ## Tripod
 `added in 3.1.1`
 
-class name | in game name | type | 
+class name | in game name | type |
 ---------- | --------- | ---------
-ACE_Tripod | SSWT Kit | ACE_ItemCore | 
-ACE_TripodObject | SSWT Kit (placed) | ThingX | 
+ACE_Tripod | SSWT Kit | ACE_ItemCore |
+ACE_TripodObject | SSWT Kit (placed) | ThingX |
+
+
+## Vector
+`added in 3.0.0.3`
+
+class name | in game name | type   |
+--------- | --------- | ---------
+ACE_Vector | Vector 21 | Binoculars |
+
 
 ## Yardage 450
 `added in 3.1.1`
 
-class name | in game name | type | 
+class name | in game name | type |
 ---------- | --------- | ---------
-ACE_Yardage450 | Yardage 450 | Binocular | 
+ACE_Yardage450 | Yardage 450 | Binocular |
