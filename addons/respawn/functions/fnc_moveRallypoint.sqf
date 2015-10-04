@@ -46,13 +46,7 @@ _position set [2, 0];
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
-    // fix leading zero
-    local _minutes = date select 4;
-    if (_minutes < 10) then {
-        _minutes = format ["0%1", _minutes];
-    };
-
-    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, _minutes], true];
+    _rallypoint setVariable [QGVAR(markerDate), [dayTime, "HH:MM"] call BIS_fnc_timeToString, true];
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
