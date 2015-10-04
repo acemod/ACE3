@@ -146,8 +146,10 @@ PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(runAfterSettingsInit);
 PREP(sanitizeString);
+PREP(selectWeaponMode);
 PREP(sendRequest);
 PREP(serverLog);
+PREP(setAllGear);
 PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
@@ -220,6 +222,10 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+
+// missing inventory commands
+PREP(binocularMagazine);
+PREP(removeBinocularMagazine);
 
 // ACE_Debug
 PREP(exportConfig);
