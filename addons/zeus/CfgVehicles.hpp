@@ -117,7 +117,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedic_displayName);
+        displayName = CSTRING(ModuleSetMedic_DisplayName);
         function = QFUNC(moduleSetMedic);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
@@ -127,7 +127,7 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedicalVehicle_displayName);
+        displayName = CSTRING(ModuleSetMedicalVehicle_DisplayName);
         function = QFUNC(moduleSetMedicalVehicle);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
@@ -137,11 +137,32 @@ class CfgVehicles {
     };
     class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedicalFacility_displayName);
+        displayName = CSTRING(ModuleSetMedicalFacility_DisplayName);
         function = QFUNC(moduleSetMedicalFacility);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
         class ModuleDescription {
             description = "";
+            sync[] = {};
+        };
+    };
+
+    class GVAR(moduleAddSpareTrack): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
+        function = QFUNC(moduleAddSpareTrack);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        class ModuleDescription {
+            description = CSTRING(ModuleAddSpareTrack_Description);
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
+        function = QFUNC(moduleAddSpareWheel);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        class ModuleDescription {
+            description = CSTRING(ModuleAddSpareWheel_Description);
             sync[] = {};
         };
     };
