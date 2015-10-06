@@ -52,6 +52,7 @@
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
             <German>Heben/Senken</German>
+            <Polish>Wyżej/Niżej</Polish>
         </Key>
     </Package>
 </Project>

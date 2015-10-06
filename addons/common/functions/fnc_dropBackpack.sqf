@@ -18,7 +18,7 @@ private ["_backpackObject", "_holder"];
 
 _backpackObject = backpackContainer _unit;
 
-_unit addBackpack "Bag_Base";
+_unit addBackpack "ACE_FakeBackpack";
 removeBackpack _unit;
 
 objectParent _backpackObject // return

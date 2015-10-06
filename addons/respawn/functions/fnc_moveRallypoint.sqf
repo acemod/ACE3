@@ -46,7 +46,7 @@ _position set [2, 0];
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
 
-    _rallypoint setVariable [QGVAR(markerDate), format ["%1:%2", date select 3, date select 4], true];
+    _rallypoint setVariable [QGVAR(markerDate), [dayTime, "HH:MM"] call BIS_fnc_timeToString, true];
 
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
