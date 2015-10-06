@@ -5,7 +5,7 @@ before_script:
   - pip install pygithub
   - pip install pygithub3
 script:
-  - if [ $TRAVIS_BRANCH = 'master' ]; then python3 tools/deploy.py
+  - if [ $TRAVIS_BRANCH = 'master' ]; then python3 tools/deploy.py fi
   - python3 tools/sqf_validator.py
 env:
   global:
