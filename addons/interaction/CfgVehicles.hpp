@@ -37,7 +37,7 @@ class CfgVehicles {
 
                 class ACE_PassMagazine {
                     displayName = CSTRING(PassMagazine);
-                    condition = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(canPassMagazine) || [ARR_3(_player,_target,handgunWeapon _target)] call FUNC(canPassMagazine));
+                    condition = "";
                     statement = "";
                     showDisabled = 0;
                     priority = 3.3;
