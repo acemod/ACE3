@@ -1,0 +1,176 @@
+﻿pick 986f96b Initial Commit - M1A1 Collimator
+pick b3b6307 Cleanup
+pick dd574d8 Updates and Changes
+pick ebfd139 Added Aiming Posts + Cleanup
+pick 2e09a7a "cherrypick" PR #2496 (lockpick)
+pick 79d985a Fix XEH Warning Debug
+pick 85fd9d9 more common code cleanup
+pick f8ecf1b fnc_debug was broken
+pick c7d636a more common code cleanup
+pick f2070de Change spawn while to CBA PFH
+pick 1357d72 fix broken LSD module
+pick e08c6c3 fix LSD module, cutback on global variable usage
+pick fb71e05 lsd module, use global variable for color
+pick 35d94e8 Fix medical litter scopeCurator values
+pick 56f4cbb fix playerInventoryChanged eventhandler triggers when current weapon is changed fix #2513
+pick 30ba4f5 this append should've been pushBack
+pick 20a5c79 more common code cleanup
+pick cbc7f96 more common code cleanup
+pick 1636e39 more common code cleanup
+pick 3ddaa5e more common code cleanup
+pick 09f133b more common code cleanup
+pick bfd5d13 more common code cleanup
+pick 6b96c7f more common code cleanup
+pick 73a9c1b more common code cleanup
+pick dfa6d71 more common code cleanup
+pick d33a98c set variable public didn't work / didn't work on server and headless client
+pick e8ebe87 more common code cleanup
+pick e62683a more common code cleanup
+pick 0a01bbd more common code cleanup
+pick 2348c25 more common code cleanup
+pick 89a1495 Add missing english string
+pick 29db26e Add missing english string
+pick fe75aa5 Add missing english string
+pick 493ce1b more common code cleanup
+pick 5fd1938 more common code cleanup
+pick 62ec00a more common code cleanup
+pick a98a45e more common code cleanup
+pick ffc5a16 more common code cleanup
+pick 1d4eb20 fix missing ; in dumpPerformanceCounters
+pick 1679235 more common code cleanup
+pick 5f7d8c0 more common code cleanup
+pick d449e4b more common code cleanup
+pick d802cdf more common code cleanup
+pick 9fa6eb0 more common code cleanup
+pick c3beee8 make use of getHitpointsDamage command to drastically speed up some functions about hitpoints
+pick b0f9eab more common code cleanup
+pick df3211c more common code cleanup
+pick 6773119 Script to search for undefined functions
+pick 5555eb1 Also search for missing stringtable entries
+pick 80483f6 fix ESTRING search
+pick 06a9f60 Cleanup Nightvision
+pick 65b8585 Use _player instead of ACE_player
+pick 3037181 more common code cleanup
+pick b5b5c76 fix missing '' in info log macro
+pick 13b487e fix missing ;
+pick 1a4ebda more common code cleanup
+pick 8503d15 more common code cleanup
+pick 5a5242f more common code cleanup
+pick 2e48a92 fix ai seemingly reloading disposable launcher at mission start, fix #2508
+pick 05f4dad maptools - Remove debug
+pick 97921aa #2503 - run BFT module on server
+pick 3c93c2c #2525 - Add CanInteractWith checks for repair
+pick 0c25f9d Added error handling and debug printing to the medical extension
+pick 3d18880 New build of the medical extension
+pick 1d7cbf4 Fixed incorrect handleDamage call
+pick 0c8a694 Medical_menu settings under medical category
+pick 86fae2c #2528 - addToLog date / missing string fullHeal
+pick 1d5217d Medical - delayedUnconsicous fix waitAndExecute
+pick 79d4eb6 Allow fixing jam when in FFV slot
+pick 3de783d Cleanup for branch release, picked from #2366
+pick 49e0bef added diagnose to torso
+pick 4265b11 wrong target fixed
+pick 789f384 #2488 - Fix cargo setVariable on server with InitPost
+pick 9c61f25 Rem debug
+pick 62ad9d4 Version 3.3.2
+pick 6702a1f Fix warnings for WeaponHolderSimulated
+pick af309b9 add depracted warnings
+pick b1f79f0 fix broken log warning macro
+pick 441efcd change version number in deprecated log
+pick 020915a Revert "fix broken log warning macro"
+pick f8676af use correct macro for rpt writing
+pick f134a77 add and use deprecated macro
+pick 9996aa2 Replace googles - isTurnedOut
+pick f1abd46 remove superfluous ;
+pick 23e3db9 use CBA pfh in disableUserInput and fix key input weirdness
+pick 412685e fix some code was commented out in loadPersonLocal and unloadPersonLocal
+pick db41537 #2524 - Take Unconscious captive
+pick c62ea5e Fix some nil functions
+pick 5f0d73b Cleanup more stuff
+pick 610fb0b Fix Merge
+pick 5add8d6 #2537 - Delay one frame when selecting explosives
+pick b05f0c6 missing english respawn strings
+pick 55eae90 tabz
+pick 1848ea6 fixez
+pick 341e122 Russian Translations - Update
+pick 4d2707e Russian Translations - Update
+pick 49d1355 Fix due to review
+pick dcbf977 fix spectator view if called instantly
+pick 2fe1420 rework modifier key, cleanup sandbags, tripod, ladder, fix #2590
+pick 8bb5f71 Macro for non spawned CBA Debug Logging
+pick dc7d24a fix fixFloating resetting reflector hitpoints, close #2279
+pick 5425836 cleanup respawn module, close #2184
+pick b1fb7be remove wrong isServer check
+pick 6d9943f fix wrong macro, missing ;
+pick 8affae9 dont access cargo of destroyed vehicles, fix #2523
+pick 0777464 delay setUnconscious until the settings are inited, fix #148
+pick 30544dc Make cargo loaded hint optional, disable it when not loading manually
+pick 151903a Expanded optional hint to addCargoItem and AddCargoByClass event
+pick 6cc920d Code Cleanup Grenades, fix dedicated server AI thrown flasbangs do nothing
+pick cd839a0 remove superfluous brackets
+pick c12584e Code Cleanup HitReactions
+pick 028aa40 change description in function header
+pick 0509e26 Code Cleanup NoRadio
+pick 2ab58ab Replaced common,isAlive function with alive command
+pick 50046de Code Cleanup SafetyMode
+pick 9ae2157 Code cleanup Backpacks
+pick f93538e #2423 - assign vehicle module fix for prefilled veh
+pick ce1c735 Removed Vignette, Cleaned up UI
+pick f45c033 Added spaces
+pick a42685a Removed copy/pasted maintainer intruder
+pick 64d6a17 Improved public function parameter handling, Fixed issue with synchronized objects
+pick 4a5d6ca Bracket to Brace
+pick b787286 Fixed allowed data types
+pick 498dddc Used isEqualTo
+pick e4d8f13 Change may to must in slideshow error log
+pick a078d73 Code Cleanup WeaponSelect
+pick f8819d3 WeaponSelect cleanup
+pick b6532a0 new function to select a grenade
+pick 1613ce3 correct comment
+pick e9770fc remove obsolete functions
+pick 4b53642 Code Cleanup Interaction
+pick 9189148 more interaction cleanup
+pick f48636e more interaction cleanup, remove dead code
+pick 5c5a654 more interaction cleanup
+pick 9bf7b68 fix errors on game start
+pick 5a3a32f more interaction cleanup
+pick 6f64fcd search for door in geometry lod (lineintersectssurface)
+pick 443cbf8 fix compile error when trying to open a locked door by shortcut
+pick 6c968d8 per frame handler for incremental door opening
+pick 19131f0 fix error in handleplayerchanged for tacticl ladder
+pick 6e24d28 Fix playerChanged event
+pick 9f3615e change function header of removeEventhandler and waitAndExecute to public: yes
+pick 1ec4556 fix zeus forced interface broken, fix #2642
+pick 1fdedb5 delay scroll wheel init
+pick d25d79c Goggles Code refactoring initial commit
+pick 2731ac3 more goggles code cleanup
+pick 477e9f0 more goggles code cleanup
+pick d051d4c more goggles code cleanup
+pick 53bfcdb more goggles code cleanup
+pick d1aacf3 more goggles code cleanup
+pick b7ce315 more goggles code cleanup
+pick 62349f6 more goggles code cleanup
+pick 8d5ce1d more goggles code cleanup
+pick 8bbd6b6 change function header of removeEventhandler and waitAndExecute to public: yes
+pick dc882a3 more goggles code cleanup
+pick 945ec7a more goggles code cleanup
+pick 02c26c0 Initial Commit of Loading Tray for M198
+
+# Rebase f3a175e..02c26c0 onto f3a175e
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+

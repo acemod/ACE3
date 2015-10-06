@@ -1,0 +1,82 @@
+class StageTI
+{
+	texture="a3\data_f\default_ti_ca.paa";
+};
+ambient[]={0.5,0.75,0.5,1};
+diffuse[]={0.5,0.75,0.5,1};
+forcedDiffuse[]={0.98000002,1,0.98000002,1};
+emmisive[]={65,110,65,1};
+specular[]={1,1,0.99999988,1};
+specularPower=500;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,1,1,NOHQ)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage2
+{
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage3
+{
+	texture="#(argb,8,8,3)color(1,1,1,0.0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage4
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,AS)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage5
+{
+	texture="#(rgb,8,8,3)color(1,1,1,1,SMDI)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnelGlass()";
+	uvSource="none";
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_optic_co.paa";
+	uvSource="none";
+};
