@@ -6,9 +6,9 @@
  * 0: Unit that passes the magazine <OBJECT>
  * 1: Unit to pass the magazine to <OBJECT>
  * 2: Weapon classname <STRING>
- * 
+ *
  * Return Value:
- * None
+ * Unit can pass magazine <BOOL>
  *
  * Example:
  * [_player, _target, "arifle_MX_F"] call ace_interaction_fnc_canPassMagazine
