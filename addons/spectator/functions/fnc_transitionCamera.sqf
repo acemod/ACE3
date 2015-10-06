@@ -43,15 +43,17 @@ if (_newMode != 1) then {
     GVAR(camGun) = false;
 };
 
+private ["_camera"];
 if (_newMode == 0) then { // Free
+    _camera = GVAR(freeCamera);
+
     // Preserve camUnit value for consistency when manually changing view
-    GVAR(camera) cameraEffect ["internal", "back"];
+    _camera cameraEffect ["internal", "back"];
     showCinemaBorder false;
-    cameraEffectEnableHUD true;
 
     // Apply the camera zoom
-    GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
-    GVAR(camera) camCommit 0;
+    _camera camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
+    _camera camCommit 0;
 
     // Agent is switched to in free cam to hide death table and prevent AI chat while allowing icons to draw (also prevents systemChat and unit HUD)
     // (Why is so much stuff tied into the current camera unit BI?!)
@@ -79,20 +81,32 @@ if (_newMode == 0) then { // Free
     // Handle camera movement
     if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
 } else {
+    _camera = GVAR(unitCamera);
+
     // When null unit is given choose random
     if (isNull _newUnit) then {
         _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
     };
 
-    if (_newMode == 1) then { // Internal
-        // Handle gun cam
-        if (GVAR(camGun)) then {
-            _newUnit switchCamera "gunner";
-        } else {
-            _newUnit switchCamera "internal";
-        };
-    } else { // External
-        _newUnit switchCamera "external";
+    // Switch camera view to internal unit view (external uses the camera)
+    if (GVAR(camGun)) then {
+        _newUnit switchCamera "gunner";
+    } else {
+        _newUnit switchCamera "internal";
+    };
+
+    // Handle camera differently for internal/external view
+    if (_newMode == 1) then {
+        // Terminate camera view
+        _camera cameraEffect ["terminate", "back"];
+        GVAR(camHandler) = nil;
+    } else {
+        // Switch to the camera
+        _camera cameraEffect ["internal", "back"];
+        showCinemaBorder false;
+
+        // Handle camera orbit movement
+        if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
     };
 
     // Clear radio if group changed
@@ -101,11 +115,6 @@ if (_newMode == 0) then { // Free
     };
 
     GVAR(camUnit) = _newUnit;
-
-    // Terminate camera view
-    GVAR(camera) cameraEffect ["terminate", "back"];
-    GVAR(camHandler) = nil;
-    cameraEffectEnableHUD true;
 };
 
 GVAR(camMode) = _newMode;

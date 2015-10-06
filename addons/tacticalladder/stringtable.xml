@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tacticalladder">
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
@@ -7,7 +7,7 @@
             <Russian>Телескопическая лестница</Russian>
             <Polish>Drabina teleskopowa</Polish>
             <Spanish>Escalera telescópica</Spanish>
-            <French>Telescopic Ladder</French>
+            <French>Echelle téléscopique</French>
             <Czech>Teleskopický žebřík</Czech>
             <Italian>Telescopic Ladder</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
@@ -19,7 +19,7 @@
             <Russian>Установить лестницу</Russian>
             <Polish>Rozłóż drabinę</Polish>
             <Spanish>Despelgar escalera</Spanish>
-            <French>Deploy ladder</French>
+            <French>Déployer l'échelle</French>
             <Czech>Rozložit žebřík</Czech>
             <Italian>Deploy ladder</Italian>
             <Hungarian>Létra lerakása</Hungarian>
@@ -31,20 +31,16 @@
             <Russian>Положить лестницу</Russian>
             <Polish>Zostaw drabinę</Polish>
             <Spanish>Soltar escalera</Spanish>
-            <French>Drop ladder</French>
+            <French>Lacher l'échelle</French>
             <Czech>Položit žebřík</Czech>
             <Italian>Drop ladder</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
-            <English>Adjust ladder</English>
-            <German>Leiter einstellen</German>
-            <Polish>Reguluj drabinę</Polish>
-            <Czech>Upravit žebřík</Czech>
-            <Spanish>Ajustar escalera</Spanish>
-            <Portuguese>Ajustar escada</Portuguese>
-            <Hungarian>Létra állítása</Hungarian>
+            <English>Extend, +Ctrl tilt</English>
+            <German>Ausfahren, +Strg kippen</German>
+            <Polish>Rozłóż, +Ctrl nachyl</Polish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -52,7 +48,7 @@
             <Russian>Перенести лестницу</Russian>
             <Polish>Postaw drabinę</Polish>
             <Spanish>Colocar escalera</Spanish>
-            <French>Position ladder</French>
+            <French>Positionner l'échelle</French>
             <Czech>Umístit žebřík</Czech>
             <Italian>Position ladder</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
@@ -64,7 +60,7 @@
             <Russian>Взять лестницу</Russian>
             <Polish>Zabierz drabinę</Polish>
             <Spanish>Recoger escalera</Spanish>
-            <French>Pickup ladder</French>
+            <French>Prendre l'échelle</French>
             <Czech>Vzít žebřík</Czech>
             <Italian>Pickup ladder</Italian>
             <Hungarian>Létra felvétele</Hungarian>

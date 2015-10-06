@@ -33,6 +33,8 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 
 // Initialize all effects
+if (hasInterface) then {
+
 _fnc_createEffect = {
     private "_effect";
     params ["_type", "_layer", "_default"];
@@ -159,7 +161,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
         _heartRate = 60 + 40 * _pain;
     };
     if (_heartRate <= 0) exitwith {};
-    _interval = 60 / (_heartRate min 50);
+    _interval = 60 / (_heartRate min 40);
 
     if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
@@ -173,7 +175,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
-                _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
+                _strength = ((_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0) min 1;
                 _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
                 if (GVAR(painEffectType) == 1) then {
                     GVAR(effectPainCC) ppEffectEnable false;
@@ -241,7 +243,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
     };
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
-
+};
 
 ["SettingsInitialized", {
     if (GVAR(level) == 2) exitwith {
@@ -279,7 +281,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
 if (hasInterface) then {
     ["PlayerJip", {
-        diag_log format["[ACE] JIP Medical init for player"];
+        ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call EFUNC(common,addEventHandler);
 };

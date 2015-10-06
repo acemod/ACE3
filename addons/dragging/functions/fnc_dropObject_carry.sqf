@@ -16,8 +16,8 @@
 
 params ["_unit", "_target"];
 
-// remove scroll wheel action
-_unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
+// remove drop action
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
@@ -55,6 +55,9 @@ if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
 };
 
+// hide mouse hint
+[] call EFUNC(interaction,hideMouseHint);
+
 _unit setVariable [QGVAR(isCarrying), false, true];
 _unit setVariable [QGVAR(carriedObject), objNull, true];
 
@@ -64,4 +67,9 @@ _unit setVariable [QGVAR(carriedObject), objNull, true];
 if !(_target isKindOf "CAManBase") then {
     ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
     ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+};
+
+// recreate UAV crew
+if (_target getVariable [QGVAR(isUAV), false]) then {
+    createVehicleCrew _target;
 };

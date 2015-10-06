@@ -1,23 +1,31 @@
-/**
- * fn_getFirstIntersection.sqf
- * @Descr: Returns the the first intersection with an object between two positions
- * @Author: Ruthberg
+/*
+ * Author: Ruthberg
+ * Returns the the first intersection with terrain between two positions. @todo rewrite using lineIntersectsSurfaces?
  *
- * @Arguments: [position PositionASL, position PositionASL, accuracy FLOAT]
- * @Return: [intersects BOOL, intersection PositionASL]
- * @PublicAPI: true
+ * Arguments:
+ * 0: PositionASL <ARRAY>
+ * 1: PositionATL <ARRAY>
+ * 2: Accuracy <NUMBER>
+ *
+ * Return Value:
+ * 0: Intersects <BOOL>
+ * 1: Intersection Position ASL <ARRAY>
+ *
+ * Public: Yes
  */
- #include "script_component.hpp"
+#include "script_component.hpp"
 
-private ["_distance", "_lower", "_upper", "_mid", "_intersections", "_result", "_dir"];
+params ["_source", "_destination", "_accuracy"];
 
-PARAMS_3(_source,_destination,_accuracy);
+private ["_result", "_distance"];
 
 _result = [false, [0, 0, 0]];
 
 _distance = _source vectorDistance _destination;
 
-if (count (lineIntersectsWith [_source, _destination]) > 0) then {
+if !(lineIntersectsWith [_source, _destination] isEqualTo []) then {
+    private ["_lower", "_upper", "_mid", "_dir"];
+
     _lower = 0;
     _upper = 1;
     _mid = 0.5;
@@ -27,9 +35,7 @@ if (count (lineIntersectsWith [_source, _destination]) > 0) then {
     while {(_upper - _lower) * _distance > _accuracy} do {
         _mid = _lower + (_upper - _lower) / 2;
 
-        _intersections = count (lineIntersectsWith [_source, _source vectorAdd (_dir vectorMultiply (_mid * _distance))]);
-
-        if (_intersections > 0) then {
+        if !(lineIntersectsWith [_source, _source vectorAdd (_dir vectorMultiply (_mid * _distance))] isEqualTo []) then {
             _upper = _mid;
         } else {
             _lower = _mid;
