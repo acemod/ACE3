@@ -2,8 +2,8 @@ language: python
 python:
   - "3.4"
 before_script:
-  - pip install pygithub
-  - pip install pygithub3
+  - if [ ${TRAVIS_BRANCH} = "master" ]; then pip install pygithub fi
+  - if [ ${TRAVIS_BRANCH} = "master" ]; then pip install pygithub3 fi
 script:
   - if [ ${TRAVIS_BRANCH} = "master" ]; then python3 tools/deploy.py; fi
   - python3 tools/sqf_validator.py
