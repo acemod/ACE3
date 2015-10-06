@@ -7,10 +7,22 @@ language: python
 python:
   - "3.4"
 before_script:
-  - if [ ${TRAVIS_BRANCH} = "master" ]; then pip install pygithub; fi
-  - if [ ${TRAVIS_BRANCH} = "master" ]; then pip install pygithub3; fi
+  - if [ ${TRAVIS_BRANCH} = "master" ]; then 
+      [ -z "${GH_TOKEN}" ] && exit 0; 
+      [ "${TRAVIS_PULL_REQUEST}" = "false" ] && exit 0; 
+      pip install pygithub; 
+    fi
+  - if [ ${TRAVIS_BRANCH} = "master" ]; then 
+      [ -z "${GH_TOKEN}" ] && exit 0; 
+      [ "${TRAVIS_PULL_REQUEST}" = "false" ] && exit 0;
+      pip install pygithub3; 
+    fi
 script:
-  - if [ ${TRAVIS_BRANCH} = "master" ]; then python3 tools/deploy.py; fi
+  - if [ ${TRAVIS_BRANCH} = "master" ]; then 
+      [ -z "${GH_TOKEN}" ] && exit 0; 
+      [ "${TRAVIS_PULL_REQUEST}" = "false" ] && exit 0;
+      python3 tools/deploy.py;
+    fi
   - python3 tools/sqf_validator.py
 env:
   global:
