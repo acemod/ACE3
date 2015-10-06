@@ -34,7 +34,11 @@ _deployedRopes = [];
 
     _hook = QGVAR(helper) createVehicle [0, 0, 0];
     _hook allowDamage false;
-    _hook attachTo [_vehicle, _x];
+    if (typeName _x == "ARRAY") then {
+        _hook attachTo [_vehicle, _x];
+    } else {
+        _hook attachTo [_vehicle, [0,0,0], _x];
+    };
 
     _ropeTop = ropeCreate [_hook, [0, 0, 0], _dummy, [0, 0, 0], 2];
     _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 33];
