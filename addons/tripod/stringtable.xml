@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
         <Key ID="STR_ACE_Tripod_DisplayName">
@@ -7,7 +7,7 @@
             <Russian>Снайперский штатив</Russian>
             <Polish>Trójnóg snajperski</Polish>
             <Spanish>SSWT Kit</Spanish>
-            <French>SSWT Kit</French>
+            <French>Kit SSWT</French>
             <Czech>SSWT souprava</Czech>
             <Italian>SSWT Kit</Italian>
             <Hungarian>SSWT Készlet</Hungarian>
@@ -19,7 +19,7 @@
             <Russian>Установить снайперский штатив</Russian>
             <Polish>Postaw trójnóg snajperski</Polish>
             <Spanish>Place SSWT Kit</Spanish>
-            <French>Place SSWT Kit</French>
+            <French>Placer le kit SSWT</French>
             <Czech>Rozlož souprava SSWT</Czech>
             <Italian>Place SSWT Kit</Italian>
             <Hungarian>SSWT készlet elhelyezése</Hungarian>
@@ -32,7 +32,9 @@
             <Czech>Zvednout SSWT soupravu</Czech>
             <German>SSWT-Werkzeug aufheben</German>
             <Portuguese>Pegar kit SSWT</Portuguese>
+            <French>Prendre le kit SSWT</French>
             <Hungarian>SSWT készlet felvétele</Hungarian>
+            <Russian>Подобрать снайперский штатив</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
@@ -41,7 +43,9 @@
             <Czech>Regulovat SSWT soupravu</Czech>
             <German>SSWT-Werkzeug anpassen</German>
             <Portuguese>Ajustar kit SSWT</Portuguese>
+            <French>Régler le kit SSWT</French>
             <Hungarian>SSWT készlet állítása</Hungarian>
+            <Russian>Выровнять снайперский штатив</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -50,16 +54,20 @@
             <Czech>Hotovo</Czech>
             <German>Fertig</German>
             <Portuguese>Feito</Portuguese>
+            <French>Terminé</French>
             <Hungarian>Kész</Hungarian>
+            <Russian>Готово</Russian>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
-            <English>+ Modifier, adjust</English>
-            <Polish>+ Modyfikator, regulacja</Polish>
-            <Spanish>+ Modificador, ajuste</Spanish>
-            <Czech>+ Modifikátor, regulace</Czech>
-            <German>+ Modifikator, anpassen</German>
-            <Portuguese>+ Modificador, ajuste</Portuguese>
-            <Hungarian>+ Módosító, szabályzás</Hungarian>
+            <English>adjust</English>
+            <Polish>regulacja</Polish>
+            <Spanish>ajuste</Spanish>
+            <Czech>regulace</Czech>
+            <German>anpassen</German>
+            <Portuguese>ajuste</Portuguese>
+            <French>régler</French>
+            <Hungarian>szabályzás</Hungarian>
+            <Russian>подстройка</Russian>
         </Key>
     </Package>
 </Project>

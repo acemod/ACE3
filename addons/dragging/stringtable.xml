@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dragging">
         <Key ID="STR_ACE_Dragging_Drag">
@@ -48,6 +48,11 @@
             <Hungarian>Felvevés</Hungarian>
             <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_LowerRaise">
+            <English>Raise/Lower</English>
+            <German>Heben/Senken</German>
+            <Polish>Wyżej/Niżej</Polish>
         </Key>
     </Package>
 </Project>

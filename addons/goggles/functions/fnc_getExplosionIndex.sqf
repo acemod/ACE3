@@ -1,5 +1,5 @@
 /*
- * Author: Garth 'L-H' de Wet
+ * Author: Garth 'L-H' de Wet, commy2
  * Turns 0-1 damage of explosion Event into a rating system of 0-3
  *
  * Arguments:
@@ -13,13 +13,12 @@
  *
  * Public: No
  */
-private ["_effectIndex"];
+#include "script_component.hpp"
 
-_effectIndex = switch true do {
-       case (_this <= 0.04): {0};
-       case (_this <= 0.06): {1};
-       case (_this <= 0.09): {2};
-       default {3};
-};
+params ["_damage"];
 
-_effectIndex
+if (_damage <= 0.04) exitWith {0};
+if (_damage <= 0.06) exitWith {1};
+if (_damage <= 0.09) exitWith {2};
+
+3

@@ -1,28 +1,22 @@
-/**
- * fn_setProne.sqf
- * @Descr: Force a unit to go prone
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Force a unit to go prone
  *
- * @Arguments: [unit OBJECT]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+ *
+ * Note: Not functional, because FUNC(localAnim) does no longer exist
  */
-
 #include "script_component.hpp"
 
-private ["_unit"];
-_unit = [_this,0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-switch (currentWeapon _unit) do {
-    case (primaryWeapon _unit): {
-        [_unit,"amovppnemstpsraswrfldnon"] call FUNC(localAnim);
-    };
-    case (secondaryWeapon _unit): {
-        [_unit,"amovppnemstpsraswlnrdnon"] call FUNC(localAnim);
-    };
-    case (handgunWeapon _unit): {
-         [_unit,"AmovPpneMstpSrasWpstDnon"] call FUNC(localAnim);
-    };
-    default {
-        [_unit,"amovppnemstpsnonwnondnon"] call FUNC(localAnim);
-    };
-};
+params ["_unit"];
+
+[
+    _unit,
+    ["amovppnemstpsnonwnondnon", "amovppnemstpsraswrfldnon", "amovppnemstpsraswlnrdnon", "amovppnemstpsraswpstdnon"] select (([primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find currentWeapon _unit) + 1)
+] call FUNC(localAnim);

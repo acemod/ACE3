@@ -4,7 +4,7 @@
 // fixes laser when being captured. Needed, because the selectionPosition of the right hand is used
 ["SetHandcuffed", {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call EFUNC(common,addEventHandler);
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 GVAR(nearUnits) = [];
 

@@ -1,3 +1,4 @@
+
 class ACE_Settings {
     class GVAR(SavePreDeathGear) {
         value = 0;

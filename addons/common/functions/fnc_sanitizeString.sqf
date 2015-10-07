@@ -1,42 +1,51 @@
 /*
  * Author: esteldunedain, based on Killzone-Kid code
- *
  * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.
  *
  * Arguments:
- * 0: Source string (String)
- * 1: Remove html tags (Bool, optional)
+ * 0: Source string <STRING>
+ * 1: Remove html tags (default: false) <BOOL>
  *
  * Return Value:
  * Sanitized string
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_array", "_arrayNew"];
+params ["_string", ["_removeTags", false]];
 
-PARAMS_2(_string,_removeTags);
+private "_array";
+_array = [];
 
-if (isNil "_removeTags") then {_removeTags = false};
-
-_array = toArray _string;
-
-_arrayNew = [];
 {
     switch _x do {
         case 60 : {
-            _arrayNew = if (_removeTags) then {_arrayNew + toArray "&lt;";} else {_arrayNew + [_x];};
+            if (_removeTags) then {
+                _array append toArray "&lt;";
+            } else {
+                _array pushBack _x;
+            };
         };
         case 62 : {
-            _arrayNew = if (_removeTags) then {_arrayNew + toArray "&gt;";} else {_arrayNew + [_x];};
+            if (_removeTags) then {
+                _array append toArray "&gt;";
+            } else {
+                _array pushBack _x;
+            };
         };
+
         case 34 : {
         };
+
         case 39 : {
         };
+
         default {
-            _arrayNew = _arrayNew + [_x];
+            _array pushBack _x;
         };
     };
-} forEach _array;
+    false
+} count toArray _string;
 
-toString _arrayNew
+toString _array // return

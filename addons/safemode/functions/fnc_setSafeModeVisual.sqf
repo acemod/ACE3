@@ -15,17 +15,17 @@
  */
 #include "script_component.hpp"
 
-private ["_control", "_config"];
-
 params ["_show"];
 
 disableSerialization;
 
+private "_control";
 _control = (uiNamespace getVariable ["ACE_dlgSoldier", displayNull]) displayCtrl 187;
 
 if (isNull _control) exitWith {};
 
 if (_show) then {
+	private "_config";
     _config = configFile >> "RscInGameUI" >> "RscUnitInfoSoldier" >> "WeaponInfoControlsGroupLeft" >> "controls" >> "CA_ModeTexture";
 
     _control ctrlSetPosition [getNumber (_config >> "x"), getNumber (_config >> "y"), getNumber (_config >> "w"), getNumber (_config >> "h")];

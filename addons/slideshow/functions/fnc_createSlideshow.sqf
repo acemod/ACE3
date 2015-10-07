@@ -10,7 +10,7 @@
  * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
- * Parsed List <ARRAY>
+ * None
  *
  * Example:
  * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow
@@ -20,21 +20,24 @@
 #include "script_component.hpp"
 
 private ["_currentSlideshow", "_slidesAction", "_varString"];
-params ["_objects", "_controllers", "_images", "_names", "_duration"];
+params [
+    ["_objects", [], [[]] ],
+    ["_controllers", [], [[]] ],
+    ["_images", [], [[]] ],
+    ["_names", [], [[]] ],
+    ["_duration", 0, [0]]
+];
 
 // Verify data
-if (count _images != count _names || {count _images == 0} || {count _names == 0}) exitWith {
-    diag_log "[ACE] ERROR: Slideshow Images or Names fields can NOT be empty and must have equal number of items!"
+if (_objects isEqualTo []) exitWith {
+    ACE_LOGERROR("Slideshow Objects field must NOT be empty!");
+};
+if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
+    ACE_LOGERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
 };
 
-// Objects synced to the module
-{
-    _objects pushBack _x;
-    nil
-} count (synchronizedObjects _logic);
-
 // If no controllers use objects as controllers
-if (count _controllers == 0) then {
+if (_controllers isEqualTo []) then {
     _controllers = _objects;
 };
 
@@ -54,15 +57,15 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
-    _duration = 5;
-    diag_log text format ["[ACE]: Slideshow: Interaction Menu module not present, defaulting duration value to %1", _duration];
+    _duration = NOINTERACTMENU_DURATION;
+    ACE_LOGINFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
 };
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
     {
         // Add Slides sub-action and populate with images
-        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects,_images,_names,_x,_currentSlideshow], [0,0,0], 2] call EFUNC(interact_menu,createAction);
+        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects, _images, _names, _x, _currentSlideshow], [0, 0, 0], 2] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
         nil
     } count _controllers;

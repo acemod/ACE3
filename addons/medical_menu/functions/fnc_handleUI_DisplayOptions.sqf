@@ -75,7 +75,7 @@ if (_name isEqualTo "triage") exitwith {
                 _message = localize _message;
             };
         };
-        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_time - _time) / 60)];
+        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_gameTime - _time) / 60)];
         nil;
     } count _log;
 

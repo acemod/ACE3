@@ -12,11 +12,9 @@
  *
  * Public: No
  */
-
-
 #include "script_component.hpp"
 
-private ["_setting", "_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList"];
+private ["_setting", "_objects", "_list", "_splittedList", "_nilCheckPassedList", "_parsedList", "_xVehicle"];
 params [["_logic", objNull, [objNull]]];
 
 if (!isNull _logic) then {
@@ -42,9 +40,11 @@ if (!isNull _logic) then {
     if (!(_objects isEqualTo []) && _parsedList isEqualTo []) then {
         {
             if (!isnil "_x") then {
-                   if (typeName _x == typeName objNull) then {
+                if (typeName _x == typeName objNull) then {
                     if (local _x) then {
-                        _x setvariable [QGVAR(medicClass), _setting, true];
+                        _xVehicle = vehicle _x;
+                        TRACE_3("setting medical vehicle", _x, _xVehicle, (typeOf _xVehicle));
+                        _xVehicle setvariable [QGVAR(medicClass), _setting, true];
                     };
                 };
             };
@@ -52,11 +52,12 @@ if (!isNull _logic) then {
     };
     {
         if (!isnil "_x") then {
-               if (typeName _x == typeName objNull) then {
+            if (typeName _x == typeName objNull) then {
                 if (local _x) then {
+                    TRACE_2("setting medical vehicle", _x, (typeOf _x));
                     _x setvariable [QGVAR(medicClass), _setting, true];
                 };
             };
         };
     } foreach _parsedList;
- };
+};

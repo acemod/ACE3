@@ -4,38 +4,96 @@
         <Key ID="STR_ACE_Cargo_loadObject">
             <English>Load</English>
             <Polish>Załaduj</Polish>
+            <Portuguese>Carregar</Portuguese>
+            <Russian>Загрузить</Russian>
+            <Czech>Naložit</Czech>
+            <Spanish>Cargar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
             <Polish>Wyładuj</Polish>
+            <Portuguese>Descarregar</Portuguese>
+            <Russian>Выгрузить</Russian>
+            <Czech>Vyložit</Czech>
+            <Spanish>Descargar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <Polish>Ładunek</Polish>
+            <Portuguese>Carga</Portuguese>
+            <Russian>Грузовой отсек</Russian>
+            <Czech>Náklad</Czech>
+            <Spanish>Carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
             <Polish>Menu ładunku</Polish>
+            <Portuguese>Menu de carga</Portuguese>
+            <Russian>Грузовой отсек</Russian>
+            <Czech>Menu nákladu</Czech>
+            <Spanish>Menu de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
             <Polish>Pozostałe miejsce: %1</Polish>
+            <Portuguese>Espaço de carga restante: %1</Portuguese>
+            <Russian>Осталось мест: %1</Russian>
+            <Czech>Volný prostor: %1</Czech>
+            <Spanish>Espacio de carga restante: %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
             <Polish>Aktywuj cargo</Polish>
+            <Portuguese>Ativar carga</Portuguese>
+            <Russian>Включить модуль перевозки грузов</Russian>
+            <Czech>Povolit náklad</Czech>
+            <Spanish>Habilitar carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
             <Polish>Aktywuj możliwość załadunku skrzyń i przedmiotów do pojazdów.</Polish>
+            <Portuguese>Ativar o módulo de carregamento de carga</Portuguese>
+            <Russian>Включает модуль погрузки и перевозки грузов</Russian>
+            <Spanish>Habilitar la carga en el módulo de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
             <Polish>Ustawienia cargo</Polish>
+            <Portuguese>Preferências de carregamento</Portuguese>
+            <Russian>Перевозка грузов</Russian>
+            <Czech>Nastavení nákladu</Czech>
+            <Spanish>Ajustes de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
             <Polish>Skonfiguruj ustawienia modułu cargo.</Polish>
+            <Portuguese>Configura as preferências do módulo de carga</Portuguese>
+            <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
+            <Spanish>Configure los ajustes del módulo de carga</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_LoadedItem">
+            <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
+            <Spanish>%1&lt;br/&gt;cargado en&lt;br/&gt;%2</Spanish>
+            <French>%1&lt;br/&gt;chargé dans&lt;br/&gt;%2</French>
+            <German>%1&lt;br/&gt;in&lt;br/&gt;%2 verladen</German>
+            <Polish>%1&lt;br/&gt;załadowano do&lt;br/&gt;%2</Polish>
+            <Czech>%1&lt;br/&gt;naloženo do&lt;br/&gt;%2</Czech>
+            <Portuguese>%1&lt;br/&gt;carregado em&lt;br/&gt;%2</Portuguese>
+            <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
+            <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
+            <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadedItem">
+            <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
+            <German>%1&lt;br/&gt;von&lt;br/&gt;%2 abgeladen</German>
+            <Spanish>Descargado/a&lt;br/&gt;%1 de&lt;br/&gt;%2</Spanish>
+            <French>Déchargé&lt;br/&gt;%1 de&lt;br/&gt;%2</French>
+            <Polish>%1&lt;br/&gt;rozładowano z&lt;br/&gt;%2</Polish>
+            <Czech>Nezatížený&lt;br/&gt;%1 do&lt;br/&gt;%2</Czech>
+            <Portuguese>%1&lt;br/&gt;descarregado de&lt;br/&gt;%2</Portuguese>
+            <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
+            <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
+            <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
         </Key>
     </Package>
 </Project>
