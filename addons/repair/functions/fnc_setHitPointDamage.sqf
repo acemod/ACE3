@@ -21,59 +21,60 @@
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
 TRACE_3("params",_vehicle,_hitPointIndex,_hitPointDamage);
 
+private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
+
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
-// get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
-
+//Check for bad typeName (changed from orignal v3.3 that took string)
 if ((typeName _hitPointIndex) == "STRING") then {
-    ACE_LOGWARNING_1("setHitpointDamage - _hitPointIndex was string %1", _this);
+    ACE_DEPRECATED("repair-setHitPointDamage (hit point name <string>","3.5.0","hit index <number>");
     _hitPointIndex = _allHitPoints find _hitPointIndex;
 };
+
+// get all hitpoints and selections and damages
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
 if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
-private ["_damageOld", "_hitPointIndexDamageSumOld", "_damageRepaired", "_hitPointIndexsBeingCounted", "_selectionName", "_damageNew"];
 
 _damageOld = damage _vehicle;
 
-_damageRepaired = 0;
-_hitPointIndexDamageSumOld = 0;
-_hitPointIndexsBeingCounted = 0;
+_realHitpointCount = 0;
+_hitPointDamageSumOld = 0;
+_hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
     _selectionName = _allHitPointsSelections select _forEachIndex;
+    //Filter out all the bad hitpoints (HitPoint="" or no selection)
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
+        _realHitpointCount = _realHitpointCount + 1;
+        
         if ((!(_x in IGNORED_HITPOINTS)) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
-            _hitPointIndexDamageSumOld = _hitPointIndexDamageSumOld + (_allHitPointDamages select _forEachIndex);
-            _hitPointIndexsBeingCounted = _hitPointIndexsBeingCounted + 1;
+            _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
-                _damageRepaired = ((_allHitPointDamages select _forEachIndex) - _hitPointDamage);
+                _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;
             };
         };
     };
 } forEach _allHitPoints;
 
-// calculate new strctural damage
-_damageNew = if (_hitPointIndexsBeingCounted == 0) then {
-    ACE_LOGERROR("Zero hitPointIndexsBeingCounted  (div0)");
-    _damageOld
-} else {
-    (_hitPointIndexDamageSumOld - _damageRepaired) / _hitPointIndexsBeingCounted;
-};
-if (_hitPointIndexDamageSumOld > 0) then {
-    _damageNew = _damageOld * ((_hitPointIndexDamageSumOld - _damageRepaired) / _hitPointIndexDamageSumOld);
-};
+// calculate new structural damage
+_damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitpointCount;
 
-TRACE_5("damage",_damageRepaired,_hitPointIndexDamageSumOld,_hitPointIndexsBeingCounted,_damageOld,_damageNew);
+if (_hitPointDamageSumOld > 0) then {
+    _damageNew = _damageOld * ((_hitPointDamageSumOld - _hitPointDamageRepaired) / _hitPointDamageSumOld);
+};
+TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitpointCount);
 
 // set new structural damage value
 _vehicle setDamage _damageNew;
 
+//Repair the hitpoint in the damages array:
 _allHitPointDamages set [_hitPointIndex, _hitPointDamage];
-// set the new damage for that hit point
+
+//Set the new damage for all hitpoints
 {
     _vehicle setHitIndex [_forEachIndex, _x];
 } forEach _allHitPointDamages;

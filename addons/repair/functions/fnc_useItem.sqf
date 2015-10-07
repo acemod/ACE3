@@ -7,7 +7,7 @@
  * 2: Item classname <STRING>
  *
  * ReturnValue:
- * None
+ * [Had Item to Use <BOOL>, Unit <OBJECT>] <ARRAY>
  *
  * Example:
  * [unit, "classname"] call ace_repair_fnc_useItem
