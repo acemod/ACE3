@@ -1,3 +1,4 @@
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleRespawn: ACE_Module {
@@ -6,7 +7,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
         scope = 2;
-        isGlobal = 1;
+        isGlobal = 0;
         icon = QUOTE(PATHTOF(UI\Icon_Module_Respawn_ca.paa));
 
         class Arguments {
@@ -24,6 +25,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(Module_Description);
         };

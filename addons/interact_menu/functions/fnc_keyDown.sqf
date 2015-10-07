@@ -12,13 +12,13 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_menuType);
+params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
 // Conditions: canInteract (these don't apply to zeus)
 if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting"]] call EFUNC(common,canInteractWith))
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith))
 }) exitWith {false};
 
 while {dialog} do {

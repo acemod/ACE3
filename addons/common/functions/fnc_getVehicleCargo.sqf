@@ -1,19 +1,20 @@
 /*
  * Author: commy2
- *
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
  *
- * Argument:
- * 0: Vehicle type (String)
+ * Arguments:
+ * 0: Vehicle type <STRING>
  *
- * Return value:
- * Vehicle cargo positions. (Array)
+ * Return Value:
+ * Vehicle cargo positions <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_config", "_cargo", "_codrivers", "_index"];
+params ["_vehicle"];
 
-PARAMS_1(_vehicle);
+private ["_config", "_cargo", "_codrivers"];
 
 _config = configFile >> "CfgVehicles" >> _vehicle;
 
@@ -25,4 +26,5 @@ for "_index" from 0 to (getNumber (_config >> "transportSoldier") - 1) do {
         _cargo pushBack _index;
     };
 };
+
 _cargo

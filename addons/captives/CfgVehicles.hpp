@@ -12,17 +12,17 @@ class CfgVehicles {
                 exceptions[] = {};
                 icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
             };
-            class ACE_RemoveHandcuffs {
-                displayName = CSTRING(ReleaseCaptive);
-                selection = "righthand";
-                distance = 2;
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
-                exceptions[] = {};
-                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
-            };
 
             class ACE_MainActions {
+                class ACE_RemoveHandcuffs {
+                    displayName = CSTRING(ReleaseCaptive);
+                    selection = "righthand";
+                    distance = 2;
+                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
+                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
+                    exceptions[] = {};
+                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
+                };
                 class ACE_EscortCaptive {
                     displayName = CSTRING(EscortCaptive);
                     distance = 4;
@@ -97,7 +97,7 @@ class CfgVehicles {
         };
     };
 
-#define MACRO_LOADUNLOADCAPTIVE \
+#define MACRO_LOADCAPTIVE \
         class ACE_Actions { \
             class ACE_MainActions { \
                 class GVAR(LoadCaptive) { \
@@ -113,27 +113,27 @@ class CfgVehicles {
 
     class LandVehicle;
     class Car: LandVehicle {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
     class Tank: LandVehicle {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
 
     class Air;
     class Helicopter: Air {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
     class Plane: Air {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
 
     class Ship;
     class Ship_F: Ship {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
 
     class StaticWeapon: LandVehicle {
-        MACRO_LOADUNLOADCAPTIVE
+        MACRO_LOADCAPTIVE
     };
 
     class Box_NATO_Support_F;
@@ -188,6 +188,26 @@ class CfgVehicles {
                 description = CSTRING(ModuleSettings_allowSurrender_description);
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class requireSurrender {
+                displayName = CSTRING(ModuleSettings_requireSurrender_name);
+                description = CSTRING(ModuleSettings_requireSurrender_description);
+                typeName = "NUMBER";
+                class values {
+                    class disable {
+                        name = ECSTRING(common,No);
+                        value = 0;
+                    };
+                    class Surrender  {
+                        name = CSTRING(SurrenderOnly);
+                        value = 1;
+                        default = 1;
+                    };
+                    class SurrenderOrNoWeapon  {
+                        name = CSTRING(SurrenderOrNoWeapon);
+                        value = 2;
+                    };
+                };
             };
         };
         class ModuleDescription: ModuleDescription {

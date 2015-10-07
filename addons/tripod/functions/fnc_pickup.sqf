@@ -1,30 +1,33 @@
 /*
  * Author: Rocko, Ruthberg
- *
  * Pick up tripod
  *
  * Arguments:
- * 0: tripod <OBJECT>
- * 1: unit <OBJECT>
- *
- * Return Value:
- * Nothing
+ * 0: unit <OBJECT>
+ * 1: tripod <OBJECT>
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [ACE_player, tripod] call ace_tripod_fnc_pickup
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_tripod,_unit);
+params ["_unit", "_tripod"];
 
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
+if (stance _unit == "STAND") then {
+    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call EFUNC(common,doAnimation);
 };
 
 [{
-    PARAMS_2(_tripod,_unit);
+    params ["_unit", "_tripod"];
 
-    [_unit, "ACE_Tripod"] call EFUNC(common,addToInventory);
+    if (isNull _tripod) exitWith {};
+
     deleteVehicle _tripod;
 
-}, [_tripod, _unit], 1, 0]call EFUNC(common,waitAndExecute);
+    [_unit, "ACE_Tripod"] call EFUNC(common,addToInventory);
+}, [_unit, _tripod], 1] call EFUNC(common,waitAndExecute);

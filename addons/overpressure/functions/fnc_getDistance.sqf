@@ -3,13 +3,13 @@
  *
  * Calculate the distance to the first intersection of a line
  *
- * Argument:
- * 0: Pos ASL of origin (Array)
- * 1: Direction (Array)
- * 2: Max distance to search (Number)
+ * Arguments:
+ * 0: Pos ASL of origin (ARRAY>
+ * 1: Direction <ARRAY>
+ * 2: Max distance to search <Number>
  *
  * Return value:
- * Distance to intersection (+- 0.1 m)
+ * Distance to intersection (+- 0.1 m) <NUMBER>
  */
 #include "script_component.hpp"
 

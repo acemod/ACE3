@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+//Functions that are called for each draw of the map:
+GVAR(miniMapDrawHandlers) = [];
+
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];
 _conditonCode = {
@@ -39,25 +42,4 @@ GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
 
-
-GVAR(mapAltitude) = getNumber (configFile >> "CfgWorlds" >> worldName >> "elevationOffset");
-
-private ["_worldMapLong", "_worldMapLat", "_zone", "_band", "_squareID"];
-
-//Calculate the map's MGRS:
-_worldMapLong = getNumber (configFile >> "CfgWorlds" >> worldName >> "longitude");
-_worldMapLat = getNumber (configFile >> "CfgWorlds" >> worldName >> "latitude");
-//Pull UTM grid from world's long/lat
-_zone = 1 + (floor ((_worldMapLong + 180) / 6));
-_band = "Z";
-if (_worldMapLat <= -80) then {
-    _band = "A";
-} else {
-    if (_worldMapLat < 84) then {
-        _band = "CDEFGHJKLMNPQRSTUVWXX" select [(floor ((_worldMapLat / 8) + 10)), 1];
-    };
-};
-//calculating square ID from long/lat is a pain in the ass, just fake it unless someone wants to actualy do this
-_squareID = if ((count worldName) > 2) then {toUpper(worldName select [0,2])} else {"XG"};
-GVAR(mgrsGridZoneDesignator) = format ["%1%2 %3", _zone, _band, _squareID];
-
+GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];

@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
             <English>Concertina Wire</English>
             <German>NATO-Draht</German>
-            <Russian>Проволочная спираль</Russian>
-            <Polish>Drut kolczasty</Polish>
+            <Russian>Колючая проволока</Russian>
+            <Polish>Koncentrina</Polish>
             <Spanish>Alambre de espino</Spanish>
-            <French>Concertina wire</French>
+            <French>Fill barbelé</French>
             <Czech>Ostnatý drát</Czech>
             <Italian>Concertina wire</Italian>
             <Hungarian>Concertina wire</Hungarian>
@@ -16,10 +16,10 @@
         <Key ID="STR_ACE_CONCERTINA_WIRECOIL">
             <English>Concertina Wire Coil</English>
             <German>NATO-Draht Rolle</German>
-            <Russian>Проволочная спираль (моток)</Russian>
-            <Polish>Zwój drutu kolczastego</Polish>
+            <Russian>Колючая проволока (моток)</Russian>
+            <Polish>Zwój koncentriny</Polish>
             <Spanish>Bobina de alambre de espino</Spanish>
-            <French>Concertina wire coil</French>
+            <French>Bobine de fil barbelé</French>
             <Czech>Smyčka ostnatého drátu</Czech>
             <Italian>Concertina wire coil</Italian>
             <Hungarian>Concertina wire coil</Hungarian>
@@ -28,10 +28,10 @@
         <Key ID="STR_ACE_UNROLLWIRE">
             <English>Dismount Concertina Wire</English>
             <German>NATO-Draht abbauen</German>
-            <Russian>Демонтировать проволочную спираль</Russian>
-            <Polish>Zwiń drut kolczasty</Polish>
+            <Russian>Демонтировать колючую проволоку</Russian>
+            <Polish>Zwiń koncentrinę</Polish>
             <Spanish>Desmontar alambre de espino</Spanish>
-            <French>Dismount Concertina wire</French>
+            <French>Descendre le fil barbelé</French>
             <Czech>Svinout ostnatý drát</Czech>
             <Italian>Dismount Concertina wire</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>
@@ -40,10 +40,10 @@
         <Key ID="STR_ACE_ROLLWIRE">
             <English>Deploy Concertina Wire</English>
             <German>NATO-Draht verlegen</German>
-            <Russian>Монтировать проволочную спираль</Russian>
-            <Polish>Rozwiń drut kolczasty</Polish>
+            <Russian>Монтировать колючую проволоку</Russian>
+            <Polish>Rozwiń koncentrinę</Polish>
             <Spanish>Desplegar alambre de espino</Spanish>
-            <French>Deploy Concertina wire</French>
+            <French>Mettre en place le fil barbelé</French>
             <Czech>Rozvinout ostnatý drát</Czech>
             <Italian>Deploy Concertina wire</Italian>
             <Hungarian>Deploy Concertina wire</Hungarian>

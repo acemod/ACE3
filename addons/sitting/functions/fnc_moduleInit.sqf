@@ -3,19 +3,23 @@
  * Initializes the Sitting module.
  *
  * Arguments:
- * Whatever the module provides.
+ * 0: The module logic <LOGIC>
+ * 1: Units <ARRAY>
+ * 2: Activated <BOOL>
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 if !(isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Sitting Module Initialized.";
+ACE_LOGINFO("Sitting Module Initialized.");

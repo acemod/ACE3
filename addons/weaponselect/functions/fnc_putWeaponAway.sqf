@@ -1,17 +1,21 @@
 /*
  * Author: commy2
- *
  * The unit will put its current weapon away.
  *
- * Argument:
- * 0: What unit should put the current weapon on back? (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ace_weaponselect_fnc_putWeaponAway
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 [_unit] call EFUNC(common,fixLoweredRifleAnimation);
 

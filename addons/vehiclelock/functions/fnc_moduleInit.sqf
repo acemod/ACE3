@@ -17,10 +17,12 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_syncedUnits,_activated);
+if (!isServer) exitWith {};
+
+params ["_logic", "_syncedUnits", "_activated"];
+TRACE_3("params",_logic,_syncedObjects,_activated);
 
 if (!_activated) exitWith {WARNING("Vehicle Lock Init Module - placed but not active");};
-if (!isServer) exitWith {};
 
 //Set the GVAR for default lockpick strength
 [_logic, QGVAR(DefaultLockpickStrength), "DefaultLockpickStrength"] call EFUNC(common,readSettingFromModule);

@@ -15,9 +15,8 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
-_target = _this select 0;
-_className = _this select 1;
+private ["_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
+params ["_target", "_className"];
 
 // We have added a new dose of this medication to our system, so let's increase it
 _varName = format[QGVAR(%1_inSystem), _className];

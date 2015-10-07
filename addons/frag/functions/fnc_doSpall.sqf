@@ -1,13 +1,12 @@
 //fnc_doSpall.sqf
 #include "script_component.hpp"
-// ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";    
+// ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";
 
-private ["_params", "_hitData", "_initialData", "_hpData", "_object", "_foundObjects", "_index", "_foundObjecsts", "_roundType", "_round", "_caliber", "_explosive", "_idh", "_alive", "_exit", "_vm", "_velocity", "_oldVelocity", "_curVelocity", "_diff", "_polar", "_unitDir", "_spallPos", "_pos1", "_i", "_pos2", "_blah", "_data", "_spallPolar", "_warn", "_c", "_m", "_k", "_gC", "_fragPower", "_fragTypes", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect", "_fragType", "_fragment", "_pos"];
+private ["_hitData", "_initialData", "_hpData", "_object", "_foundObjects", "_index", "_foundObjecsts", "_roundType", "_round", "_caliber", "_explosive", "_idh", "_alive", "_exit", "_vm", "_velocity", "_oldVelocity", "_curVelocity", "_diff", "_polar", "_unitDir", "_spallPos", "_pos1", "_i", "_pos2", "_blah", "_data", "_spallPolar", "_warn", "_c", "_m", "_k", "_gC", "_fragPower", "_fragTypes", "_spread", "_spallCount", "_elev", "_dir", "_vel", "_spallFragVect", "_fragType", "_fragment", "_pos"];
 
-_params = _this select 0;
-_hitData = _params select 0;
+_hitData = _this select 0;
 _initialData = GVAR(spallHPData) select (_hitData select 0);
-_hpData = (_hitData select 1) select (_params select 1);
+_hpData = (_hitData select 1) select (_this select 1);
 
 
 _object = _hpData select 0;
@@ -87,7 +86,7 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
                 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
                 if(_warn) then {
-                    diag_log text format["Ammo class %1 lacks proper explosive properties definitions for frag!", _roundType]; //TODO: turn this off when we get closer to release
+                    ACE_LOGWARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_roundType); //TODO: turn this off when we get closer to release
                 };
 
                 _fragPower = (((_m/_c)+_k)^-(1/2))*_gC;
