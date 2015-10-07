@@ -11,7 +11,7 @@
  * Can Misc Repair <BOOL>
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_canMiscRepair
+ * [unit, vehicle, 5] call ace_repair_fnc_canMiscRepair
  *
  * Public: No
  */

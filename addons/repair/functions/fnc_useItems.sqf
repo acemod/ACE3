@@ -7,7 +7,7 @@
  * 1: Item classnames <ARRAY>
  *
  * ReturnValue:
- * None
+ * [Had Item to Use <BOOL>, Array of units that used the items <ARRAY>] <ARRAY>
  *
  * Example:
  * [unit, ["classname1", "classname2"]] call ace_repair_fnc_useItems
