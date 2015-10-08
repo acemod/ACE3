@@ -425,13 +425,12 @@ class CfgVehicles {
                 selection = "";
             };
         };
-   };
-   //Objects
-	class FloatingStructure_F; // External class reference
+    };
+    class FloatingStructure_F; // External class reference
     class RoadCone_F: thingX {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
-		XEH_ENABLED;
+        XEH_ENABLED;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
