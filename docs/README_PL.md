@@ -66,7 +66,7 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 
 ### Poradniki i instrukcje
 Jeżeli zainstalowałeś ACE3 lecz masz problem ze zrozumieniem jak to wszystko działa, lub gdzie zacząć, zacznij od przeczytania tego:
-- [Wprowadzenie](http://ace3mod.com/wiki/user/getting-started.html)
+- [Information center](http://ace3mod.com/wiki/user/information-center.html)
 
 #### Współpraca
 Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
