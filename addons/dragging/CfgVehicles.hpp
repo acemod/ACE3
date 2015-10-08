@@ -98,11 +98,11 @@ class CfgVehicles {
         GVAR(carryDirection) = 0;
     };
 
-
 	class FloatingStructure_F; // External class reference
 	
 /*    class RoadBarrier_F: RoadCone_F {
     };
+
     class RoadBarrier_small_F: RoadCone_L_F {
     };*/
     

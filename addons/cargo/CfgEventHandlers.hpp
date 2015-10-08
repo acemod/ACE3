@@ -88,6 +88,11 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class RoadCone_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
     class RoadCone_L_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
