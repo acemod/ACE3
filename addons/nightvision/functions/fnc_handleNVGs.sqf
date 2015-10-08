@@ -18,14 +18,17 @@
 
 params ["_unit"];
 
-if (GVAR(disableNVGsWithSights) && {(vehicle _unit == _unit) || {isTurnedOut _unit}}) then {
-    if ((cameraView == "GUNNER") && {currentVisionMode _unit > 0}) then {
-        _unit action ["NVGogglesOff", _unit];
-        GVAR(reenableNVGs) = true;
-    } else {
-        if (GVAR(reenableNVGs) && {cameraView != "GUNNER"}) then {
-            _unit action ["NVGoggles", _unit];
-            GVAR(reenableNVGs) = false;
+if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
+    (assignedVehicleRole _unit) params ["_role", "_turretPath"];
+    if ((vehicle _unit == _unit) || {isTurnedOut _unit} || {_role == "cargo" && {!(isNil "_turretPath")}}) then {
+        if ((cameraView == "GUNNER") && {currentVisionMode _unit > 0}) then {
+            _unit action ["NVGogglesOff", _unit];
+            GVAR(reenableNVGs) = true;
+        } else {
+            if (GVAR(reenableNVGs) && {cameraView != "GUNNER"}) then {
+                _unit action ["NVGoggles", _unit];
+                GVAR(reenableNVGs) = false;
+            };
         };
     };
 };
