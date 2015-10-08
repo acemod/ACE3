@@ -530,6 +530,10 @@ class CfgWeapons {
         displayName = "MAG 58";
     };
 
+    class ACE_LMG_coax_APC_Wheeled_01: LMG_coax {
+        displayName = "MAG 58";
+    };
+    
     class ACE_LMG_coax_APC_Tracked_03: LMG_coax {
         displayName = "L94A1";
     };

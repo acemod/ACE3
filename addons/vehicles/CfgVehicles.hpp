@@ -281,7 +281,7 @@ class CfgVehicles {
     class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                weapons[] = {"autocannon_40mm_CTWS","ACE_LMG_coax_MBT_01"};
+                weapons[] = {"autocannon_40mm_CTWS", "ACE_LMG_coax_APC_Wheeled_01"};
                 magazines[] = {"60Rnd_40mm_GPR_Tracer_Red_shells","40Rnd_40mm_APFSDS_Tracer_Red_shells","2000Rnd_762x51_Belt_Green"};
             };
         };
