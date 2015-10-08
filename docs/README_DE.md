@@ -5,7 +5,7 @@
     <a href="https://github.com/acemod/ACE3/releases">
         <img src="https://img.shields.io/badge/Version-3.3.2-blue.svg" alt="ACE3 Version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.3.2/ace3_3.3.2.zip">
         <img src="https://img.shields.io/badge/Download-65.7_MB-green.svg" alt="ACE3 Download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
