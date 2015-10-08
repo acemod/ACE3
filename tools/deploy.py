@@ -26,9 +26,6 @@ REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
 
-USERNAME = "ACE3 Travis"
-USEREMAIL = "travis@ace3mod.com"
-
 
 def update_translations(token):
     diag = sp.check_output(["python3", "tools/stringtablediag.py", "--markdown"])
