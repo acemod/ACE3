@@ -97,12 +97,15 @@ class CfgVehicles {
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;
     };
-	// OBJECTS
+
+
 	class FloatingStructure_F; // External class reference
+	
 /*    class RoadBarrier_F: RoadCone_F {
     };
     class RoadBarrier_small_F: RoadCone_L_F {
     };*/
+    
     class RoadCone_F: thingX {
         XEH_ENABLED;
         GVAR(canCarry) = 1;
@@ -113,6 +116,7 @@ class CfgVehicles {
         GVAR(dragPosition[]) = {0,1.2,0};
         GVAR(dragDirection) = 0;
     };
+
     class RoadCone_L_F: FloatingStructure_F {
         XEH_ENABLED;
         GVAR(canCarry) = 1;
