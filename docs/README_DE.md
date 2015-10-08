@@ -42,7 +42,7 @@ Die Mod ist **modular gestaltet** — beinahe jede PBO kann entfernt werden, sod
 
 #### Anleitungen
 Du hast ACE3 installiert, hast aber keine Ahnung was und wie alles funktioniert und wo sich was befindet?
-- [Erste Schritte](http://ace3mod.com/wiki/user/getting-started.html).
+- [Information center](http://ace3mod.com/wiki/user/information-center.html)
 
 #### Mitwirken
 Wenn du bei der Entwicklung der MOD mithelfen möchtest, so kannst du dies tun, indem du nach Fehlern Ausschau hältst, oder neue Funktionen vorschlägst. Um etwas beizutragen, "Forke" einfach dieses Archiv (bzw. repository) und erstelle deine "Pull-Request", welche von anderen Entwicklern und Beiträgern überprüft wird. Bitte trage dich dabei in [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) mit deinem Nutzernamen und einer gütligen Email-Adresse ein.  
