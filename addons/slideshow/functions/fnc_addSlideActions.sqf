@@ -20,7 +20,6 @@
 #include "script_component.hpp"
 
 private "_actions";
-
 params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
 
 _actions = [];

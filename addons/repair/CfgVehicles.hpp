@@ -10,6 +10,7 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
+                exceptions[] = {"isNotOnLadder"}; \
             }; \
         }; \
     };
@@ -90,6 +91,21 @@ class CfgVehicles {
                     class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
                 };
             };
+            class addSpareParts {
+                displayName = CSTRING(addSpareParts_name);
+                description = CSTRING(addSpareParts_description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class wheelRepairRequiredItems {
+                displayName = CSTRING(wheelRepairRequiredItems_name);
+                description = CSTRING(wheelRepairRequiredItems_description);
+                typeName = "NUMBER";
+                class values {
+                    class None { name = "None"; value = 0;  default = 1;};
+                    class ToolKit { name = "ToolKit"; value = 1; };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(moduleDescription);
@@ -111,7 +127,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignEngineerRole_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignEngineerRole_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -155,7 +171,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairVehicle_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairVehicle_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -187,7 +203,7 @@ class CfgVehicles {
         function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairFacility_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -214,19 +230,57 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class ACE_moduleAddSpareParts: Module_F {
+        scope = 2;
+        displayName = CSTRING(AddSpareParts_Module_DisplayName);
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleAddSpareParts);
+        functionPriority = 10;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class List {
+                displayName = CSTRING(EnableList_DisplayName);
+                description = CSTRING(AddSpareParts_List_Description);
+                defaultValue = "";
+                typeName = "STRING";
+            };
+            class Part {
+                displayName = CSTRING(AddSpareParts_Part_DisplayName);
+                description = CSTRING(AddSpareParts_Part_Description);
+                typeName = "STRING";
+                class values {
+                    class Wheel {
+                        name = CSTRING(SpareWheel);
+                        value = "ACE_Wheel";
+                        default = 1;
+                    };
+                    class Track {
+                        name = CSTRING(SpareTrack);
+                        value = "ACE_Track";
+                    };
+                };
+            };
+            class Amount {
+                displayName = CSTRING(AddSpareParts_Amount_DisplayName);
+                description = CSTRING(AddSpareParts_Amount_Description);
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(AddSpareParts_Module_Description);
+            sync[] = {};
+        };
+    };
 
 
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
-        class ACE_Cargo {
-            class Cargo {
-                class ACE_Wheel {
-                    type = "ACE_Wheel";
-                    amount = 1;
-                };
-            };
-        };
     };
 
     class Tank: LandVehicle {

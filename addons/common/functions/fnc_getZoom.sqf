@@ -1,14 +1,17 @@
 /*
  * Author: commy2
- *
  * Returns a value depending on current zoom level.
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
- * Zoom. (Number)
+ * Return Value:
+ * Zoom <NUMBER>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-(0.5 - ((worldToScreen positionCameraToWorld [0,1,1]) select 1)) * (getResolution select 5) 
+if (!hasInterface) exitWith {0};
+
+(0.5 - ((worldToScreen positionCameraToWorld [0, 1, 1]) select 1)) * (getResolution select 5) 

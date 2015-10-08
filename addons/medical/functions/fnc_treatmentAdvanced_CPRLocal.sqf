@@ -14,9 +14,8 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target", "_reviveStartTime"];
-_caller = _this select 0;
-_target = _this select 1;
+private "_reviveStartTime";
+params ["_caller","_target"];
 
 if (_target getvariable [QGVAR(inReviveState), false]) then {
     _reviveStartTime = _target getvariable [QGVAR(reviveStartTime),0];
@@ -25,7 +24,7 @@ if (_target getvariable [QGVAR(inReviveState), false]) then {
     };
 };
 
-if ((random 1) >= 0.6) then {
+if (GVAR(level) > 1 && {(random 1) >= 0.6}) then {
     _target setvariable [QGVAR(inCardiacArrest), nil,true];
     _target setvariable [QGVAR(heartRate), 40];
     _target setvariable [QGVAR(bloodPressure), [50,70]];

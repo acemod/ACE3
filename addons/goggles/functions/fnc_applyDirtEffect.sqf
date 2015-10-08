@@ -9,23 +9,29 @@
  * Succeeded <BOOL>
  *
  * Example:
- * _applied = call ace_goggles_fnc_ApplyDirtEffect;
+ * _applied = call ace_goggles_fnc_applyDirtEffect
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-if (cameraOn != ace_player || {call FUNC(externalCamera)}) exitWith{false};
-private ["_dirtImage", "_applied", "_effects"];
-_effects = GETGLASSES(ace_player);
+if (GVAR(showInThirdPerson)) exitWith {false};
+if (call FUNC(externalCamera)) exitWith {false};
+
+private ["_unit", "_effects"];
+
+_unit = ACE_player;
+
+_effects = GETGLASSES(_unit);
 _effects set [DIRT, true];
-SETGLASSES(ace_player,_effects);
 
-if ([ace_player] call FUNC(isGogglesVisible)) then{
-    _dirtImage = getText(ConfigFile >> "CfgGlasses" >> (goggles ace_player) >> "ACE_OverlayDirt");
+SETGLASSES(_unit,_effects);
+
+if ([_unit] call FUNC(isGogglesVisible)) then {
+    local _dirtImage = getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_OverlayDirt");
+
     if (_dirtImage != "") then {
-        100 cutRsc["RscACE_GogglesEffects", "PLAIN",0.1, false];
-
+        GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];
         (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText _dirtImage;
     };
 };

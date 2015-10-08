@@ -1,47 +1,53 @@
-/**
- * fn_sendDisplayInformationTo.sqf
- * @Descr: Sends a display information hint to a receiver
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Sends a display information hint to a receiver
  *
- * @Arguments: [receiver OBJECT, title STRING, content ARRAY (An array with strings), type NUMBER (Optional)]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: receiver <OBJECT>
+ * 1: title <STRING>
+ * 2: content <ARRAY>
+ * 3: type (optional) <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_reciever","_title","_content","_type", "_parameters", "_localizationArray"];
-_reciever = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_title = [_this, 1, "",[""]] call BIS_fnc_Param;
-_content =  [_this, 2, [""],[[""]]] call BIS_fnc_Param;
-_type =  [_this, 3, 0,[0]] call BIS_fnc_Param;
-_parameters = [_this, 4, [], [[]]] call BIS_fnc_Param;
+params [["_reciever", objNull], ["_title", ""], ["_content", ""], ["_type", 0], ["_parameters", []]];
 
 if (isPlayer _reciever) then {
     if (!local _reciever) then {
-        [_this, QUOTE(FUNC(sendDisplayInformationTo)), _reciever, false] call EFUNC(common,execRemoteFnc);
+        [_this, QFUNC(sendDisplayInformationTo), _reciever, false] call FUNC(execRemoteFnc);
     } else {
         if (isLocalized _title) then {
             _title = localize _title;
         };
+
+        private "_localizationArray";
         _localizationArray = [_title];
+
         {
             _localizationArray pushback _x;
-        } forEach _parameters;
+            false
+        } count _parameters;
+
         _title = format _localizationArray;
 
         {
             if (isLocalized _x) then {
                 _localizationArray = [localize _x];
+
                 {
-                    _localizationArray pushback _x;
-                } forEach _parameters;
+                    _localizationArray pushBack _x;
+                    false
+                } count _parameters;
 
-                _content set [_foreachIndex, format _localizationArray];
+                _content set [_forEachIndex, format _localizationArray];
             };
+        } forEach _content;
 
-        }foreach _content;
-
-        [_title,_content,_type] call EFUNC(common,displayInformation);
+        [_title, _content, _type] call FUNC(displayInformation);
     };
 };

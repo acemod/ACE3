@@ -14,7 +14,7 @@ class CfgVehicles {
                 class ACE_MapToolsHide {
                     displayName = CSTRING(MapToolsHide);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 0; [] call FUNC(updateMapToolMarkers));
+                    statement = QUOTE(GVAR(mapTool_Shown) = 0;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 5;
@@ -22,7 +22,7 @@ class CfgVehicles {
                 class ACE_MapToolsShowNormal {
                     displayName = CSTRING(MapToolsShowNormal);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 1}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 1; [] call FUNC(updateMapToolMarkers));
+                    statement = QUOTE(GVAR(mapTool_Shown) = 1;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 4;
@@ -30,7 +30,7 @@ class CfgVehicles {
                 class ACE_MapToolsShowSmall {
                     displayName = CSTRING(MapToolsShowSmall);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 2}));
-                    statement = QUOTE(GVAR(mapTool_Shown) = 2; [] call FUNC(updateMapToolMarkers));
+                    statement = QUOTE(GVAR(mapTool_Shown) = 2;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 3;
@@ -38,7 +38,7 @@ class CfgVehicles {
                 class ACE_MapToolsAlignNorth {
                     displayName = CSTRING(MapToolsAlignNorth);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0}));
-                    statement = QUOTE(GVAR(mapTool_angle) = 0; [] call FUNC(updateMapToolMarkers));
+                    statement = QUOTE(GVAR(mapTool_angle) = 0;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 2;
@@ -46,7 +46,7 @@ class CfgVehicles {
                 class ACE_MapToolsAlignCompass {
                     displayName = CSTRING(MapToolsAlignCompass);
                     condition = QUOTE((call FUNC(canUseMapTools) && {GVAR(mapTool_Shown) != 0} && {('ItemCompass' in assigneditems ACE_player) || {'ItemCompass' in assigneditems ACE_player}}));
-                    statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player; [] call FUNC(updateMapToolMarkers));
+                    statement = QUOTE(GVAR(mapTool_angle) = getDir ACE_player;);
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                     priority = 1;
