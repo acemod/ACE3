@@ -426,7 +426,9 @@ class CfgVehicles {
             };
         };
     };
+    
     class FloatingStructure_F; // External class reference
+    
     class RoadCone_F: thingX {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
@@ -442,6 +444,7 @@ class CfgVehicles {
             };
         };
     };
+    
     class RoadCone_L_F: FloatingStructure_F {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
@@ -457,10 +460,12 @@ class CfgVehicles {
             };
         };
     };
+    
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+    
 /*    class RoadBarrier_small_F: RoadCone_L_F {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
