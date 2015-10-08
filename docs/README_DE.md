@@ -73,7 +73,7 @@ Wenn du bei der Entwicklung der MOD mithelfen möchtest kannst du dies tun, inde
 
 Um einen Fehler, Anregungen oder neue Funktionalitäten uns mitzuteilen: Nutze unseren [Issue Tracker](https://github.com/acemod/ACE3/issues). Besuche auch:
 - [Wie kann ich ein Problem melden](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [Wie kann ich ein Wunsch zu einer neuen Funktion mitteilen? ](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [Wie kann ich ein Wunsch zu einer neuen Funktion mitteilen?](http://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 #### Testen & MOD erstellen
 Wenn du die neusten Entwicklungen erleben und uns dabei helfen möchtest bestehende Fehler zu entdecken, lade dir einfach die "Master Branch" herunter. Entweder nutzt du [Git](https://help.github.com/articles/fetching-a-remote/) - wenn die Schritte bekannt sind - oder du lädst es dir direkt über [diesen Link](https://github.com/acemod/ACE3/archive/master.zip) herunter.  
