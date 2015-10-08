@@ -39,7 +39,7 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 - Balistyka oparta na warunkach pogodowych i wietrze
 - Możliwość brania jeńców
 - Rozszerzony system ładunków wybuchowych, włączając w to użycie różnego rodzaju zapalników
-- Ulepszenia mapy - stawianie markerów i przybory mapy
+- Ulepszenia mapy – stawianie markerów i przybory mapy
 - Zaawansowane naprowadzanie rakiet i wskazywanie laserem
 
 #### Dodatkowe cechy
@@ -69,7 +69,7 @@ Jeżeli zainstalowałeś ACE3 lecz masz problem ze zrozumieniem jak to wszystko 
 - [Information center](http://ace3mod.com/wiki/user/information-center.html)
 
 #### Współpraca
-Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku ['AUTHORS.txt'](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres e-mail.
+Możesz pomóc w rozwoju addonu szukając potencjalnych bugów w naszym kodzie, lub zgłaszając nowe funkcje. Aby wnieść swój wkład do ACE3, po prostu zforkuj to repozytorium na swoje konto GitHub i zgłoś swoje pull requesty do przeglądu przez innych współpracowników. Pamiętaj, aby dodać siebie do listy autorów każdego PBO jakie edytujesz oraz do pliku [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) dodając także swój adres email.
 
 Używaj naszego [Issue Tracker-a](https://github.com/acemod/ACE3/issues) aby zgłaszać bugi, proponować nowe funkcje lub sugerować zmiany do aktualnie istniejących. Zobacz także:
 - [Jak zgłosić bug-a](http://ace3mod.com/wiki/user/how-to-report-an-issue.html)
