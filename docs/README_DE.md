@@ -3,10 +3,10 @@
 </p>
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.2.1-blue.svg" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.3.2-blue.svg" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
-        <img src="http://img.shields.io/badge/Download-56.5_MB-green.svg" alt="ACE3 Download">
+        <img src="http://img.shields.io/badge/Download-65.7_MB-green.svg" alt="ACE3 Download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 Issues">
@@ -17,9 +17,12 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/License-GPLv2-red.svg" alt="ACE3 License">
     </a>
-    <a href="http://slackin.koffeinflummi.de">
-        <img src="http://slackin.koffeinflummi.de/badge.svg" alt="ACE3 Slack">
-    </a>
+    <a href="http://slackin.ace3mod.com/">
+        <img src="http://slackin.ace3mod.com/badge.svg" alt="ACE3 Slack">
+     </a>
+    <a href="https://travis-ci.org/acemod/ACE3">
+        <img src="https://travis-ci.org/acemod/ACE3.svg?branch=master" alt="ACE3 Build Status">
+     </a>
 </p>
 <p align="center"><sup><strong>Benötigt die aktuellste Version von <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Besucht uns auf <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
