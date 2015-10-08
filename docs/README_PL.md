@@ -17,8 +17,11 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg" alt="ACE3 Licencja">
     </a>
-    <a href="http://slackin.koffeinflummi.de">
-        <img src="http://slackin.koffeinflummi.de/badge.svg" alt="ACE3 Slack">
+    <a href="http://slackin.ace3mod.com/">
+        <img src="http://slackin.ace3mod.com/badge.svg" alt="ACE3 Slack">
+    </a>
+    <a href="https://travis-ci.org/acemod/ACE3">
+        <img src="https://travis-ci.org/acemod/ACE3.svg?branch=master" alt="ACE3 CI Status (master branch)">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
