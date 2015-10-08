@@ -5,23 +5,23 @@
     <a href="https://github.com/acemod/ACE3/releases">
         <img src="https://img.shields.io/badge/Wersja-3.3.2-blue.svg" alt="ACE3 Wersja">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.2.1/ace3_3.2.1.zip">
-        <img src="http://img.shields.io/badge/Pobierz-65.7_MB-green.svg" alt="ACE3 Pobierz">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.3.2/ace3_3.3.2.zip">
+        <img src="https://img.shields.io/badge/Pobierz-65.7_MB-green.svg" alt="ACE3 Pobierz">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="http://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia" alt="ACE3 Zagadnienia">
+        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Zagadnienia" alt="ACE3 Zagadnienia">
     </a>
     <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
         <img src="https://img.shields.io/badge/Temat-BIF-lightgrey.svg" alt="Temat BIF">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="http://img.shields.io/badge/Licencja-GPLv2-red.svg" alt="ACE3 Licencja">
+        <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg" alt="ACE3 Licencja">
     </a>
     <a href="http://slackin.ace3mod.com/">
         <img src="http://slackin.ace3mod.com/badge.svg" alt="ACE3 Slack">
     </a>
     <a href="https://travis-ci.org/acemod/ACE3">
-        <img src="https://travis-ci.org/acemod/ACE3.svg?branch=master" alt="ACE3 Build Status">
+        <img src="https://img.shields.io/travis/acemod/ACE3.svg?label=Build" alt="ACE3 Build Status">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
