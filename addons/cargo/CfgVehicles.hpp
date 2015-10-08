@@ -445,7 +445,7 @@ class CfgVehicles {
     class RoadCone_L_F: FloatingStructure_F {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
-		XEH_ENABLED;
+        XEH_ENABLED;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
