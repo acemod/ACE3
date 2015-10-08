@@ -218,6 +218,7 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
         GVAR(space) = 10;
@@ -425,7 +426,6 @@ class CfgVehicles {
             };
         };
    };
-
    //Objects
 	class FloatingStructure_F; // External class reference
     class RoadCone_F: thingX {
