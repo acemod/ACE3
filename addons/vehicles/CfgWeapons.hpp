@@ -5,8 +5,18 @@ class CfgWeapons {
     class LMG_RCWS: MGun {};
 
     class LMG_coax;
-    class ACE_LMG_coax_MBT_01: LMG_coax {};
-    class ACE_LMG_coax_APC_Wheeled_01: LMG_coax {
+    class ACE_LMG_coax_L94A1_mem3: LMG_coax {};
+    class ACE_LMG_coax_PKT_mem2: LMG_coax {
+        class GunParticles {
+            class effect1 {
+                positionName = "usti hlavne2";
+                directionName = "konec hlavne2";
+                effectName = "MachineGunCloud";
+            };
+        };
+    };
+    class ACE_LMG_coax_MAG58_mem3: LMG_coax {};
+    class ACE_LMG_coax_MAG58_mem2: LMG_coax {
         class GunParticles {
             class effect1 {
                 positionName = "usti hlavne2";
