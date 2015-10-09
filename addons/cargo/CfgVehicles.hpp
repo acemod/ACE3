@@ -425,5 +425,49 @@ class CfgVehicles {
                 selection = "";
             };
         };
-   };
+    };
+    
+    class FloatingStructure_F; // External class reference
+    
+    class RoadCone_F: thingX {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+        XEH_ENABLED;
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+            };
+        };
+    };
+    
+    class RoadCone_L_F: FloatingStructure_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+        XEH_ENABLED;
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+            };
+        };
+    };
+    
+    class RoadBarrier_F: RoadCone_F {
+        GVAR(size) = 2; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    };
+    
+/*    class RoadBarrier_small_F: RoadCone_L_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    }; */
 };
