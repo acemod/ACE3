@@ -5,14 +5,15 @@ language: python
 python:
 - '3.4'
 before_script:
-- if [ ${TRAVIS_BRANCH} = "master" ]; then [ -z "${GH_TOKEN}" ] && exit 0; [ ${TRAVIS_PULL_REQUEST}
-  = "false" ] && pip install pygithub; exit 0; fi
-- if [ ${TRAVIS_BRANCH} = "master" ]; then [ -z "${GH_TOKEN}" ] && exit 0; [ ${TRAVIS_PULL_REQUEST}
-  = "false" ] && pip install pygithub3; exit 0; fi
+- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+    pip install pygithub;
+    pip install pygithub3;
+  fi
 script:
-- if [ ${TRAVIS_BRANCH} = "master" ]; then [ -z "${GH_TOKEN}" ] && exit 0; [ ${TRAVIS_PULL_REQUEST}
-  = "false" ] && python3 tools/deploy.py; exit 0; fi
 - python3 tools/sqf_validator.py
+- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+    python3 tools/deploy.py;
+  fi
 env:
   global:
   - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
