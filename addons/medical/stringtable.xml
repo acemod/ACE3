@@ -399,7 +399,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Actions_TriageCard">
             <English>Triage Card</English>
-            <German>Verletztenanhängekarte (VAK)</German>
+            <German>Triagekarte</German>
             <Spanish>Tarjeta de clasificación</Spanish>
             <Russian>Медкарта</Russian>
             <Polish>Karta segregacyjna</Polish>
@@ -411,7 +411,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
-            <German>Keine Einträge auf der Verletztenanhängekarte (VAK)</German>
+            <German>Keine Einträge auf der Triagekarte</German>
             <Italian>Nessuna voce sulla Triage Card</Italian>
             <Russian>Нет записей.</Russian>
             <French>Aucune entrée sur cette carte de triage</French>
@@ -907,7 +907,7 @@
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
             <French>Un dispositif permettant de compresser les artères et veines afin de réduire la perte de sang.</French>
             <Polish>Opaska uciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
-            <German>Ein Hilfsmittel, das Druck auf Venen und Arterien ausübt,den Blutfluss verringert und folglich einen geringern Blutverlust bedeutet .</German>
+            <German>Ein Hilfsmittel, das Druck auf Venen und Arterien ausübt  und so den Blutfluss verringert.</German>
             <Hungarian>Egy szűkítőeszköz, mely a vénás és artériás nyomás keringés helyi összenyomására szolgál, ezzel lelassítva vagy megállítva az adott területen a vérkeringést. Ez csökkenti a vérvesztés mértékét.</Hungarian>
             <Italian>Un laccio emostatico usato per comprimere le vene e arterie per bloccare o rallentare la circolazione del sangue e quindi rallentare dissanguamenti.</Italian>
             <Portuguese>A aparelho que comprime as artérias e veias para diminuir a perda de sangue.</Portuguese>
@@ -1483,7 +1483,7 @@
             <Russian>Артериальное давление не определяется</Russian>
             <Spanish>No puedes encontrar presión arterial</Spanish>
             <Polish>Nie udało Ci się sprawdzić ciśnienia krwi</Polish>
-            <German>Du konntest kein Blutdruck feststellen</German>
+            <German>Du konntest keinen Blutdruck feststellen</German>
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
@@ -3119,7 +3119,7 @@
             <Russian>Выберите, на кого будет распространяться усложненная система медицины</Russian>
             <Polish>Wybierz dla kogo zaawansowany system medyczny będzie aktywny</Polish>
             <Spanish>Seleccione para qué unidades será habilitado el sistema médico avanzado</Spanish>
-            <German>Wähle aus welche Einheiten unter das erweiterte medizinische System fallen</German>
+            <German>Wähle aus, welche Einheiten unter das erweiterte medizinische System fallen</German>
             <Czech>Vyberte, pro jaké jednotky bude pokročilý zdravotní systém povolen</Czech>
             <Portuguese>Selecione quais unidades o sistema médico avançado será habilitado</Portuguese>
             <French>Sélectionne pour quelle unité le système de soin avancé est activé</French>
@@ -3185,7 +3185,7 @@
             <Russian>Должны ли юниты получать повреждения от аварий на транспорте?</Russian>
             <Polish>Czy jednostki otrzymują obrażenia w wyniku kolizji pojazdów?</Polish>
             <Spanish>¿Las unidades reciben daño de un accidente de tráfico?</Spanish>
-            <German>Führt ein Fahrzeugunfall zu Einheitenschaden?</German>
+            <German>Verursacht ein Fahrzeugunfall Schaden (an den Insassen)</German>
             <Czech>Dostane jednotka poškození při autonehodě?</Czech>
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
             <French>Les unités subissent des dégats lors d'accident</French>
@@ -3424,7 +3424,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical kit (Adv)</English>
-            <German>Voraussetzungen für den Operationskasten(erweitert)</German>
+            <German>Voraussetzungen für den Operationskasten (erweitert)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
@@ -3471,7 +3471,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
-            <German>Schmerzen werden nur vorübergehend unterdrückt, nicht kuriert</German>
+            <German>Schmerzen werden nur vorübergehend unterdrückt, nicht deren Ursache geheilt.</German>
             <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
             <Czech>Bolest je potlačena, ale jen dočastně</Czech>
             <Spanish>El dolor se suprime solo temporalmente, no se elimina.</Spanish>
@@ -3573,7 +3573,7 @@
             <Russian>Включает медицинскую систему как для игроков, так и для ботов.</Russian>
             <Polish>Moduł ten aktywuje podstawowy system wskrzeszania. Jednostka po otrzymaniu śmiertelnych obrażeń przechodzi do stanu agonii, która trwa określoną długość czasu. W tym czasie aby wskrzesić i jednocześnie odratować jednostkę należy opatrzeć jej rany i wykonać RKO.</Polish>
             <Spanish>Proporciona un sistema médico para jugadores e IA.</Spanish>
-            <German>Aktiviert das Medizinsystem für Spieler und KI.</German>
+            <German>Aktiviert das medizinische System für Spieler und KI.</German>
             <Czech>Poskytuje zdravotní systém pro hráče a AI.</Czech>
             <Portuguese>Proporciona um sistema médico para jogadores e IA.</Portuguese>
             <French>Fourni un sytème médical pour les joueurs et les IAs</French>
@@ -3626,7 +3626,7 @@
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
-            <German>Dieses Modul legt fest welche Einheiten  Sanitäter sind.</German>
+            <German>Dieses Modul legt fest, welche Einheiten  Sanitäter sind.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
             <French>Ce module permet d'assigner la classe médicale à une unité sélectionnée</French>
