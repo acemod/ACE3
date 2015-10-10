@@ -15,7 +15,8 @@
  */
 #include "script_component.hpp"
 
-if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith{};
+if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {};
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+
 showHUD true;

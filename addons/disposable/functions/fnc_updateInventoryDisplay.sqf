@@ -17,6 +17,7 @@
 
 disableSerialization;
 params ["_player", ["_display",(findDisplay 602),[displayNull]]];
+TRACE_2("params",_player,_display);
 
 _player removeMagazines "ACE_PreloadedMissileDummy";
 _player removeMagazines "ACE_FiredMissileDummy";

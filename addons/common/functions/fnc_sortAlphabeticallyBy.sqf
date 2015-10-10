@@ -1,18 +1,24 @@
-/**
- * fn_sortAlphabeticallyBy.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * ?
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: Yes
+ *
+ * Deprecated
  */
-
 #include "script_component.hpp"
 
-private ["_elements","_indexes", "_theElement", "_tmp", "_tempIndex", "_j", "_i", "_returnArray"];
+ACE_DEPRECATED("ace_common_fnc_sortAlphabeticallyBy","3.5.0","sort");
 
-PARAMS_2(_array,_elementN);
+params ["_array", "_elementN"];
+
+private ["_elements", "_indexes", "_theElement", "_tmp", "_tempIndex", "_returnArray"];
 
 _indexes = [];
 _elements = [];
@@ -37,8 +43,9 @@ for "_i" from 1 to (count _elements) - 1 do {
 };
 
 _returnArray = [];
+
 {
     _returnArray pushback (_array select _x);
 } forEach _indexes;
 
-_returnArray;
+_returnArray

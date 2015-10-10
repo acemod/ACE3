@@ -1,10 +1,10 @@
 ace_captives
 ============
 
-Allows taking people captive/handcuffed
+Adds ability to handcuff and surrender.
 
-####Items:
-`ACE_CableTie` - adds ability to take someone captive
+#### Items Added:
+`ACE_CableTie`
 
 
 ## Maintainers

@@ -7,8 +7,7 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
-        serverInit = QUOTE(call COMPILE_FILE(XEH_serverInit));
+        init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
@@ -24,6 +23,11 @@ class Extended_Init_EventHandlers {
         };
     };
     class ReammoBox_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class ACE_RepairItem_Base {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };

@@ -21,14 +21,14 @@
  */
 #include "script_component.hpp"
 
-private ["_replacementTube", "_items"];
 params ["_unit", "_weapon", "", "", "", "", "_projectile"];
+TRACE_3("params",_unit,_weapon,_projectile);
 
-if (!local _unit) exitWith {};
+if ((!local _unit) || {_weapon != (secondaryWeapon _unit)})  exitWith {};
 
+private ["_replacementTube", "_items"];
 _replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
 if (_replacementTube == "") exitWith {}; //If no replacement defined just exit
-if (_weapon != (secondaryWeapon _unit)) exitWith {}; //just to be sure
 
 
 //Save array of items attached to launcher

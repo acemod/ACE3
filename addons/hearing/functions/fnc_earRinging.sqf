@@ -15,12 +15,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_unit,_strength);
+params ["_unit", "_strength"];
 
 if (_unit != ACE_player) exitWith {};
 if (_strength < 0.05) exitWith {};
 if (!isNull curatorCamera) exitWith {};
+if ((!GVAR(enabledForZeusUnits)) && {player != ACE_player}) exitWith {};
 
 if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
     _strength = _strength / 4;

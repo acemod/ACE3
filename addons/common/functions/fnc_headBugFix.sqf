@@ -1,42 +1,49 @@
-/**
- * fnc_headbugfix.sqf
- * @Descr: Fixes animation issues that may get you stuck
- * @Author: rocko
+/*
+ * Author: rocko
+ * Fixes animation issues that may get you stuck
  *
- * @Arguments:
- * @Return: nil
- * @PublicAPI: true
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+ *
+ * Note: Has to be spawned not called
  */
-
 #include "script_component.hpp"
-private ["_pos","_dir","_anim"];
 
-_anim = animationState ACE_player;
+private ["_unit", "_anim", "_pos", "_dir", "_dummy"];
+
+_unit = ACE_player;
+_anim = animationState _unit;
+
 ["HeadbugFixUsed", [profileName, _anim]] call FUNC(serverEvent);
 ["HeadbugFixUsed", [profileName, _anim]] call FUNC(localEvent);
 
-if (ACE_player != vehicle ACE_player  || { !([ACE_player, objNull, ["isNotSitting"]] call FUNC(canInteractWith)) } ) exitWith {false};
+if (_unit != vehicle _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
 
-_pos = getposATL ACE_player;
-_dir = getDir ACE_player;
+_pos = getPosATL _unit;
+_dir = getDir _unit;
 
 titleCut ["", "BLACK"];
-[ACE_Player, "headBugFix"] call FUNC(hideUnit);
+[_unit, "headBugFix"] call FUNC(hideUnit);
 
 // create invisible headbug fix vehicle
-_ACE_HeadbugFix = "ACE_Headbug_Fix" createVehicleLocal _pos;
-_ACE_HeadbugFix setDir _dir;
-ACE_player moveInAny _ACE_HeadbugFix;
-sleep 0.1;
+_dummy = createVehicle ["ACE_Headbug_Fix", _pos, [], 0, "NONE"];
+_dummy setDir _dir;
+_unit moveInAny _dummy;
+sleep 0.1; // @todo
 
-unassignVehicle ACE_player;
-ACE_player action ["Eject", vehicle ACE_player];
-ACE_player setDir _dir;
-ACE_player setposATL _pos;
+unassignVehicle _unit;
+_unit action ["Eject", vehicle _unit];
+_unit setDir _dir;
+_unit setPosATL _pos;
 sleep 1.0;
 
-deleteVehicle _ACE_HeadbugFix;
+deleteVehicle _dummy;
 
-[ACE_Player, "headBugFix"] call FUNC(unhideUnit);
+[_unit, "headBugFix"] call FUNC(unhideUnit);
 titleCut ["", "PLAIN"];
 true

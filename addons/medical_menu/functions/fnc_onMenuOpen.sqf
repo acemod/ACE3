@@ -14,12 +14,16 @@
  * Public: No
  */
 #include "script_component.hpp"
+#define MAX_DISTANCE 10
 
 private "_target";
 
 params ["_display"];
 
 if (isNil "_display") exitwith {};
+
+if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
+if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
 
 if (isNil QGVAR(LatestDisplayOptionMenu)) then {
     GVAR(LatestDisplayOptionMenu) = "triage";
@@ -60,8 +64,9 @@ disableSerialization;
 (_display displayCtrl 1) ctrlSetText format ["%1", [_target] call EFUNC(common,getName)];
 setMousePosition [0.4, 0.4];
 
-[QGVAR(onMenuOpen), "onEachFrame", {
-    params ["_display"];
+GVAR(MenuPFHID) = [{
+
+    (_this select 0) params ["_display"];
     if (isNull GVAR(INTERACTION_TARGET)) then {
         GVAR(INTERACTION_TARGET) = ACE_player;
     };
@@ -69,9 +74,15 @@ setMousePosition [0.4, 0.4];
     [GVAR(INTERACTION_TARGET)] call FUNC(updateIcons);
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
-    _status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus);
+    _status = [GVAR(INTERACTION_TARGET)] call EFUNC(medical,getTriageStatus);
     (_display displayCtrl 2000) ctrlSetText (_status select 0);
     (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
- }, [_display]] call BIS_fnc_addStackedEventHandler;
+
+    if (ACE_player distance _target > MAX_DISTANCE) exitwith {
+        closeDialog 314412;
+        ["displayTextStructured", [ACE_player], [[ELSTRING(medical,DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
+    };
+
+}, 0, [_display]] call CBA_fnc_addPerFrameHandler;
 
  ["Medical_onMenuOpen", [ACE_player, _interactionTarget]] call EFUNC(common,localEvent);

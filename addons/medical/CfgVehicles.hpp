@@ -2,12 +2,12 @@
 #define MEDICAL_ACTION_DISTANCE 1.75
 
 class CfgVehicles {
-
     class Logic;
     class Module_F: Logic {
         class ArgumentsBaseUnits {
         };
     };
+
     class ACE_Module;
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
@@ -19,6 +19,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class level {
                 displayName = CSTRING(MedicalSettings_level_DisplayName);
@@ -137,6 +138,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(MedicalSettings_Module_Description);
             sync[] = {};
@@ -154,6 +156,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enableFor {
                 displayName = CSTRING(AdvancedMedicalSettings_enableFor_DisplayName);
@@ -256,12 +259,12 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AdvancedMedicalSettings_Module_Description);
             sync[] = {};
         };
     };
-
 
     class ACE_moduleReviveSettings: ACE_Module {
         scope = 2;
@@ -273,6 +276,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enableRevive {
                 displayName = CSTRING(ReviveSettings_enableRevive_DisplayName);
@@ -298,11 +302,13 @@ class CfgVehicles {
                 defaultValue = -1;
             };
         };
+
         class ModuleDescription {
             description = CSTRING(ReviveSettings_Module_Description);
             sync[] = {};
         };
     };
+
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
@@ -314,6 +320,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicRoles_EnableList_DisplayName);
@@ -342,6 +349,7 @@ class CfgVehicles {
                 };
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicRoles_Module_Description);
             sync[] = {};
@@ -359,6 +367,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class EnableList {
                 displayName = CSTRING(AssignMedicVehicle_EnableList_DisplayName);
@@ -384,11 +393,13 @@ class CfgVehicles {
                 };
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicVehicle_Module_Description);
             sync[] = {};
         };
     };
+
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
@@ -400,6 +411,7 @@ class CfgVehicles {
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
+
         class Arguments {
             class enabled {
                 displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
@@ -407,70 +419,52 @@ class CfgVehicles {
                 typeName = "BOOL";
             };
         };
+
         class ModuleDescription {
             description = CSTRING(AssignMedicalFacility_Module_Description);
             sync[] = {};
         };
     };
 
-    #define ARM_LEG_ARMOR_DEFAULT 2
-    #define ARM_LEG_ARMOR_BETTER  3
+    #define ARM_LEG_ARMOR_DEFAULT 3
+    #define ARM_LEG_ARMOR_BETTER  5
     #define ARM_LEG_ARMOR_CSAT    4
 
-    class Man;
-    class CAManBase: Man {
-        class HitPoints {
-            class HitHead;
-            class HitBody;
-            // "DEACTIVE" DEFAULT HITPOINTS
-            class HitHands {
-                armor = 999; //armor = 2;
-                explosionShielding = 0; //explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "";
-                passThrough = 1;
-                radius = 0; //radius = 0.06;
-                visual = "injury_hands";
-            };
-            class HitLegs {
-                armor = 999; //armor = 2;
-                explosionShielding = 0; //explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "";
-                passThrough = 1;
-                radius = 0; //radius = 0.08;
-                visual = "injury_legs";
-            };
+    class Land;
+    class Man: Land {
+        class HitPoints;
+    };
 
+    class CAManBase: Man {
+        class HitPoints: HitPoints { // custom hitpoints. addons might want to adjust these accordingly
             class HitLeftArm {
-                armor = ARM_LEG_ARMOR_DEFAULT; //2;
-                explosionShielding = 1;
+                armor = ARM_LEG_ARMOR_DEFAULT;
                 material = -1;
-                minimalHit = 0;
-                name = "hand_l";
-                passThrough = 1;
-                radius = 0.06;
-                visual = "injury_hands";
-            };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r";
-            };
-            class HitLeftLeg {
-                armor = ARM_LEG_ARMOR_DEFAULT; //2;
-                explosionShielding = 1;
-                material = -1;
-                minimalHit = 0;
-                name = "leg_l";
+                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
                 passThrough = 1;
                 radius = 0.08;
+                explosionShielding = 1;
+                visual = "injury_hands";
+                minimalHit = 0.01;
+            };
+            class HitRightArm: HitLeftArm {
+                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
+            };
+            class HitLeftLeg {
+                armor = ARM_LEG_ARMOR_DEFAULT;
+                material = -1;
+                name = "leg_l";
+                passThrough = 1;
+                radius = 0.1;
+                explosionShielding = 1;
                 visual = "injury_legs";
+                minimalHit = 0.01;
             };
             class HitRightLeg: HitLeftLeg {
                 name = "leg_r";
             };
         };
+
         class ACE_SelfActions {
             #include "ACE_Medical_SelfActions.hpp"
         };
@@ -529,23 +523,19 @@ class CfgVehicles {
 
     class B_Soldier_04_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
@@ -554,23 +544,19 @@ class CfgVehicles {
 
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
@@ -581,23 +567,19 @@ class CfgVehicles {
 
     class I_Soldier_03_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
@@ -606,23 +588,19 @@ class CfgVehicles {
 
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_BETTER;
             };
@@ -631,65 +609,93 @@ class CfgVehicles {
 
     class O_Soldier_base_F: SoldierEB {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
         };
     };
 
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints: HitPoints {
-            class HitHead: HitHead {};
-            class HitBody: HitBody {};
-            class HitHands: HitHands {};
-            class HitLegs: HitLegs {};
-
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
             class HitLeftArm: HitLeftArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitRightArm: HitRightArm {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitLeftLeg: HitLeftLeg {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
-
             class HitRightLeg: HitRightLeg {
                 armor = ARM_LEG_ARMOR_CSAT;
-                passThrough = 0.85;
             };
         };
     };
+
+    class O_officer_F: O_Soldier_base_F {
+        class HitPoints: HitPoints {
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitLeftArm {
+                armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
+            };
+            class HitRightArm: HitRightArm {
+                armor = ARM_LEG_ARMOR_CSAT;
+            };
+            class HitLeftLeg: HitLeftLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = ARM_LEG_ARMOR_CSAT;
+            };
+        };
+    };
+
+    class O_Protagonist_VR_F: O_Soldier_base_F {
+        class HitPoints: HitPoints {
+            class HitHead;
+            class HitBody;
+            class HitHands;
+            class HitLegs;
+            class HitLeftArm: HitLeftArm {
+                armor = 2;
+            };
+            class HitRightArm: HitRightArm {
+                armor = 2;
+            };
+            class HitLeftLeg: HitLeftLeg {
+                armor = 2;
+            };
+            class HitRightLeg: HitRightLeg {
+                armor = 2;
+            };
+        };
+    };
+
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {
         XEH_ENABLED;
         scope = 1;
+        scopeCurator = 2;
         side = -1;
         model = QUOTE(PATHTOEF(apl,bodybag.p3d));
         icon = "";
@@ -697,6 +703,8 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -713,6 +721,7 @@ class CfgVehicles {
     class Thing;
     class ACE_MedicalLitterBase: Thing {
         scope = 1;
+        scopeCurator = 0;
         displayName = " ";
         destrType = "DestructNo";
         model = QUOTE(PATHTOF(data\littergeneric.p3d));
@@ -893,6 +902,7 @@ class CfgVehicles {
     class NATO_Box_Base;
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
+        scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = PATHTOF(data\ace_medcrate.p3d);

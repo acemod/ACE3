@@ -3,22 +3,21 @@
  *
  * Drop a dragged object.
  *
- * Argument:
- * 0: Unit that drags the other object (Object)
- * 1: Dragged object to drop (Object)
+ * Arguments:
+ * 0: Unit that drags the other object <OBJECT>
+ * 1: Dragged object to drop <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
+params ["_unit", "_target"];
 
-_unit = _this select 0;
-_target = _this select 1;
-
-// remove scroll wheel action
-_unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
+// remove drop action
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
@@ -50,6 +49,9 @@ if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
 };
 
+// hide mouse hint
+[] call EFUNC(interaction,hideMouseHint);
+
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
@@ -63,4 +65,9 @@ if !(_target isKindOf "CAManBase") then {
 
 if (_unit getvariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
+};
+
+// recreate UAV crew
+if (_target getVariable [QGVAR(isUAV), false]) then {
+    createVehicleCrew _target;
 };

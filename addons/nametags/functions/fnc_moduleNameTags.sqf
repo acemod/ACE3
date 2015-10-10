@@ -1,6 +1,5 @@
 /*
  * Author: esteldunedain
- *
  * Initializes the name tags module.
  *
  * Arguments:
@@ -14,7 +13,7 @@
 
 if !(isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -34,4 +33,4 @@ if ((_logic getVariable "showVehicleCrewInfo") != -1) then {
     [_logic, QGVAR(showVehicleCrewInfo),  "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
 };
 
-diag_log text "[ACE]: NameTags Module Initialized.";
+ACE_LOGINFO("Nametags Module Initialized.");

@@ -30,7 +30,7 @@ _iconSize = BASE_SIZE * _fovCorrection;
 
 {
     _data = HASH_GET(GVAR(fingersHash), _x);
-    EXPLODE_3_PVT(_data,_lastTime,_pos,_name);
+    _data params ["_lastTime", "_pos", "_name"];
     _timeLeftToShow = _lastTime + FP_TIMEOUT - ACE_diagTime;
     if (_timeLeftToShow <= 0) then {
         HASH_REM(GVAR(fingersHash), _x);
@@ -41,9 +41,9 @@ _iconSize = BASE_SIZE * _fovCorrection;
             _drawColor set [3, ((_drawColor select 3) * (_timeLeftToShow / 0.5))];
         };
 
-        drawIcon3D [QUOTE(PATHTOF(UI\fp_icon.paa)), _drawColor, _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "PuristaMedium"];
+        drawIcon3D [QUOTE(PATHTOF(UI\fp_icon2.paa)), _drawColor, _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "PuristaMedium"];
     };
-} forEach (GVAR(fingersHash) select 0);
+} count (GVAR(fingersHash) select 0);
 
 if ((count (GVAR(fingersHash) select 0)) == 0) then {
     [GVAR(pfeh_id)] call CBA_fnc_removePerFrameHandler;

@@ -14,10 +14,9 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
@@ -29,6 +28,6 @@ if !(_reason in _setHiddenReasons) then {
     _unit setVariable [QGVAR(setHiddenReasons), _setHiddenReasons, true];
 };
 
-//if !(isObjectHidden _unit) then { (Uncomment when isObjectHidden hits stable branch)
-    ["hideObjectGlobal",[_unit,true]] call FUNC(serverEvent);
-//};
+if !(isObjectHidden _unit) then {
+    ["hideObjectGlobal", [_unit, true]] call FUNC(serverEvent);
+};
