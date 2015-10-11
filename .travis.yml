@@ -1,6 +1,6 @@
 branches:
   only:
-    - master
+  - master
 language: python
 python:
 - '3.4'
@@ -23,6 +23,8 @@ notifications:
     on_success: change
     on_failure: always
     on_start: never
+    rooms:
+      secure: MvxmqL1NGwiGTVv6uIVTM7jeNLQH95KYtTgSWlXaSw4jdjnf4cmrb/ofHQ3FHhhNVdhRN6W8n0cJfTC3DBZ90bionVh+528qw2mDnDbKljVdIwmoFSexBcH7H1uTLF3gsEz0tbrHtLcnAyTMxdjsdIXDLZ5hwxABNmW5/03jOgs=
   email:
     on_success: never
     on_failure: change
