@@ -3,13 +3,26 @@ branches:
     - master
 language: python
 python:
-  - "3.4"
+- '3.4'
 before_script:
-  - pip install pygithub
-  - pip install pygithub3
+- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+    pip install pygithub;
+    pip install pygithub3;
+  fi
 script:
-  - python3 tools/deploy.py
-  - python3 tools/sqf_validator.py
+- python3 tools/sqf_validator.py
+- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+    python3 tools/deploy.py;
+  fi
 env:
   global:
-    - secure: "KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg="
+  - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
+notifications:
+  slack:
+    secure: aWYF/YX7vxEdXJ5w1jhYJQ2TtTP2NRdnXzJDMYXTv2dlXYhO9qp2qjxDGW3dezuPY7B1mPBgebfSKRx3Robkt1rAfEwPWivOiEztL30rwzOy+5Q1wpORv1JkvTC/q2wqQzxQCU/FPVjD2GkF1wtq1Rnx3ESWD8gbvzYoMNdIw1g=
+    on_success: change
+    on_failure: always
+    on_start: never
+  email:
+    on_success: never
+    on_failure: change
