@@ -25,7 +25,7 @@ def check_sqf_syntax(filepath):
     def popClosing():
         closing << closingStack.pop()
 
-    with open(filepath, 'r') as file:
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
         content = file.read()
 
         # Store all brackets we find in this file, so we can validate everything on the end
