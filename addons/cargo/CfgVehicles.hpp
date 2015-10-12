@@ -222,12 +222,6 @@ class CfgVehicles {
     class B_supplyCrate_F: ReammoBox_F {
         GVAR(size) = 6;
     };
-    class O_supplyCrate_F: ReammoBox_F {
-        GVAR(size) = 6;
-    };
-    class I_supplyCrate_F: ReammoBox_F {
-        GVAR(size) = 6;
-    };
     class IG_supplyCrate_F: ReammoBox_F {
         GVAR(size) = 6;
     };
