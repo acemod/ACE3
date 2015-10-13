@@ -11,7 +11,9 @@ if (!hasInterface) exitWith {};
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
     // Statement
-    [ACE_player, handgunWeapon ACE_player] call FUNC(selectWeaponMode);
+    //[ACE_player, handgunWeapon ACE_player] call FUNC(selectWeaponMode);
+    [ACE_player, currentWeapon ACE_player] call FUNC(SelectPistolFast);
+
     false
 },
 {false},
@@ -24,7 +26,8 @@ if (!hasInterface) exitWith {};
     if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
 
     // Statement
-    [ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMode);
+    //[ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMode);
+    [ACE_player, currentWeapon ACE_player] call FUNC(SelectRifleFast);
     false
 },
 {false},

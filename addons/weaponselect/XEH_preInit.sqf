@@ -12,6 +12,9 @@ PREP(selectWeaponMuzzle);
 PREP(selectWeaponVehicle);
 PREP(throwGrenade);
 
+PREP(selectRifleFast);
+PREP(selectPistolFast);
+
 // collect frag and other grenades separately
 GVAR(GrenadesAll)     = [];
 GVAR(GrenadesFrag)    = [];
