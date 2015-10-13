@@ -9,7 +9,7 @@
  * If action was taken <BOOL>
  *
  * Example:
- * [some_player] call ace_medical_menu_openMenu
+ * [some_player] call ace_medical_menu_fnc_openMenu
  *
  * Public: No
  */
@@ -17,7 +17,7 @@
 
 params ["_interactionTarget"];
 
-if (dialog || isNull _interactionTarget) exitwith {
+if (dialog || {isNull _interactionTarget}) exitwith {
     disableSerialization;
 
     private ["_display", "_handled"];

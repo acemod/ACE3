@@ -24,4 +24,8 @@ class ACE_Settings {
         isClientSettable = 1;
         category = ECSTRING(medical,Category_Medical);
     };
+    class GVAR(maxRange) {
+        value = 4;
+        typeName = "SCALAR";
+    };
 };

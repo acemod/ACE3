@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_menu_handleUI_dropDownTriageCard
+ * [] call ace_medical_menu_fnc_handleUI_dropDownTriageCard
  *
  * Public: No
  */
