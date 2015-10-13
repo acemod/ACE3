@@ -117,7 +117,7 @@ class CfgVehicles {
         GVAR(dragDirection) = 0;
     };
 
-    class RoadCone_L_F: FloatingStructure_F {
+/*    class RoadCone_L_F: FloatingStructure_F {  //Removed due to arma bug caused by "FloatingStructure_F" classname.
         XEH_ENABLED;
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
@@ -126,5 +126,5 @@ class CfgVehicles {
         GVAR(canDrag) = 1;
         GVAR(dragPosition[]) = {0,1.2,0};
         GVAR(dragDirection) = 0;
-    };
+    };*/
 };
