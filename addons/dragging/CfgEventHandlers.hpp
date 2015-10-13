@@ -37,11 +37,11 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
-    class RoadCone_L_F {
+/*    class RoadCone_L_F {   //Removed due to arma bug caused by "FloatingStructure_F" classname.
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };
-    };
+    };*/
 };
 
 class Extended_Killed_EventHandlers {
