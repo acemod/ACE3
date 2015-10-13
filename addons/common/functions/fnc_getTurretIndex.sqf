@@ -8,29 +8,23 @@
  * Return Value:
  * Turret Index <ARRAY>
  *
+ * Example:
+ * [ace_player] call ace_common_fnc_getTurretIndex
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_unit"];
 
-private ["_vehicle", "_turrets", "_units", "_index"];
-
-_vehicle = vehicle _unit;
-
+local _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {[]};
 
-_turrets = allTurrets [_vehicle, true];
-
-_units = [];
+scopeName "main"; 
 
 {
-    _units pushBack (_vehicle turretUnit _x);
-    false
-} count _turrets;
+    if (_unit == (_vehicle turretUnit _x)) then {_x breakOut "main"};
+    nil
+} count allTurrets [_vehicle, true];
 
-_index = _units find _unit;
-
-if (_index == -1) exitWith {[]};
-
-_turrets select _index;
+[]
