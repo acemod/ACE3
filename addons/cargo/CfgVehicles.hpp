@@ -445,7 +445,7 @@ class CfgVehicles {
         };
     };
     
-    class RoadCone_L_F: FloatingStructure_F {
+/*    class RoadCone_L_F: FloatingStructure_F {  //Removed due to arma bug caused by "FloatingStructure_F" classname.
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
         XEH_ENABLED;
@@ -459,7 +459,7 @@ class CfgVehicles {
                 selection = "";
             };
         };
-    };
+    }; */
     
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2; // 1 = small, 2 = large
