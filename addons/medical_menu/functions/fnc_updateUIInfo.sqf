@@ -20,7 +20,7 @@ params ["_target", "_display"];
 
 private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
 
-if (isNull _display) exitWith {ERROR("bad display");};
+if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
 _selectionN = GVAR(selectedBodyPart);
 if (_selectionN < 0 || {_selectionN > 5}) exitwith {};
