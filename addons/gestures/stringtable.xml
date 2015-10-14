@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Gestures">
+        <Key ID="STR_ACE_Gestures_NAME">
+            <English>ACE Gestures</English>
+            <German>ACE Gesten</German>
+            <Polish>ACE Gesty</Polish>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_Gestures">
+            <English>Gestures</English>
+            <German>Gesten</German>
+            <Spanish>Gestos</Spanish>
+            <Polish>Gesty</Polish>
+            <Czech>Posunky</Czech>
+            <French>Signaux</French>
+            <Russian>Жесты</Russian>
+            <Hungarian>Kézjelek</Hungarian>
+            <Portuguese>Gestos</Portuguese>
+            <Italian>Gesti</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureAdvance">
+            <English>Advance</English>
+            <German>Vordringen</German>
+            <Spanish>Avanzar</Spanish>
+            <Polish>Naprzód</Polish>
+            <Czech>Postoupit</Czech>
+            <French>Avancer</French>
+            <Russian>Продвигаться</Russian>
+            <Hungarian>Előre</Hungarian>
+            <Portuguese>Avançar</Portuguese>
+            <Italian>Avanzare</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureGo">
+            <English>Go</English>
+            <German>Los</German>
+            <Spanish>Adelante</Spanish>
+            <Polish>Szybko</Polish>
+            <Czech>Jít</Czech>
+            <French>Aller</French>
+            <Russian>Идти</Russian>
+            <Hungarian>Mozgás</Hungarian>
+            <Portuguese>Mover-se</Portuguese>
+            <Italian>Muoversi</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureFollow">
+            <English>Follow</English>
+            <German>Folgen</German>
+            <Spanish>Seguirme</Spanish>
+            <Polish>Za mną</Polish>
+            <Czech>Následovat</Czech>
+            <French>Suivre</French>
+            <Russian>Следовать</Russian>
+            <Hungarian>Utánam</Hungarian>
+            <Portuguese>Seguir</Portuguese>
+            <Italian>Seguire</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureUp">
+            <English>Up</English>
+            <German>Aufstehen</German>
+            <Spanish>Arriba</Spanish>
+            <Polish>Do góry</Polish>
+            <Czech>Vztyk</Czech>
+            <French>Debout</French>
+            <Russian>Вверх</Russian>
+            <Hungarian>Fel</Hungarian>
+            <Portuguese>Acima</Portuguese>
+            <Italian>Alzarsi</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureCeaseFire">
+            <English>Cease Fire</English>
+            <German>Feuer einstellen</German>
+            <Spanish>Alto el fuego</Spanish>
+            <Polish>Wstrzymać ogień</Polish>
+            <Czech>Zastavit palbu</Czech>
+            <French>Halte au feu</French>
+            <Russian>Прекратить огонь</Russian>
+            <Hungarian>Tüzet szüntess</Hungarian>
+            <Portuguese>Cessar Fogo</Portuguese>
+            <Italian>Cessare il Fuoco</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIGesturesPoint">
+            <English>Point</English>
+            <German>Zeigen</German>
+            <Spanish>Señalar</Spanish>
+            <Polish>Wskazać</Polish>
+            <Czech>Ukázat</Czech>
+            <French>Pointer</French>
+            <Russian>Точка</Russian>
+            <Hungarian>Mutat</Hungarian>
+            <Portuguese>Apontar</Portuguese>
+            <Italian>Puntare a</Italian>
+        </Key>
+
+        <Key ID="STR_ACE_Gestures_BIgestureFreeze">
+            <English>Freeze</English>
+            <German>Keine Bewegung</German>
+            <Spanish>Alto</Spanish>
+            <Polish>Stać</Polish>
+            <Czech>Stát</Czech>
+            <French>Halte</French>
+            <Russian>Замереть</Russian>
+            <Hungarian>Állj</Hungarian>
+            <Portuguese>Alto</Portuguese>
+            <Italian>Fermi</Italian>
+        </Key>
+
+        <!-- STOP -->
+        <Key ID="STR_ACE_Gestures_stop">
+            <English>Stop</English>
+            <French>Stop</French>
+            <German>Stop</German>
+            <Polish>Stop</Polish>
+        </Key>
+
+        <!-- COVER -->
+        <Key ID="STR_ACE_Gestures_cover">
+            <English>Cover</English>
+            <German>Deckung</German>
+            <Spanish>Cubrirse</Spanish>
+            <Polish>Do osłony</Polish>
+            <Czech>Krýt se</Czech>
+            <French>A couvert</French>
+            <Russian>Укрыться</Russian>
+            <Hungarian>Fedezékbe</Hungarian>
+            <Portuguese>Proteger-se</Portuguese>
+            <Italian>Copertura</Italian>
+        </Key>
+
+        <!-- REGROUP -->
+        <Key ID="STR_ACE_Gestures_regroup">
+            <English>Rally up</English>
+            <French>Regroupement</French>
+            <German>Sammeln</German>
+            <Polish>Zbiórka</Polish>
+        </Key>
+
+        <!-- FORWARD -->
+        <Key ID="STR_ACE_Gestures_forward">
+            <English>Move forward</English>
+            <French>En avant</French>
+            <German>Vorwärts Bewegen</German>
+            <Polish>Naprzód</Polish>
+        </Key>
+
+        <!-- ENGAGE -->
+        <Key ID="STR_ACE_Gestures_engage">
+            <English>Engage</English>
+            <French>Engager</French>
+            <Polish>Atak</Polish>
+        </Key>
+
+        <!-- POINT -->
+        <Key ID="STR_ACE_Gestures_point">
+            <English>Point</English>
+            <French>Pointer</French>
+            <German>Zeigen</German>
+            <Polish>Wskaż</Polish>
+        </Key>
+
+        <!-- HOLD -->
+        <Key ID="STR_ACE_Gestures_hold">
+            <English>Hold</English>
+            <French>Tenir</French>
+            <German>Anhalten</German>
+            <Polish>Wstrzymać</Polish>
+        </Key>
+
+        <!-- WARNING -->
+        <Key ID="STR_ACE_Gestures_warning">
+            <English>Warning</English>
+            <French>Attention</French>
+            <German>Achtung</German>
+            <Polish>Uwaga</Polish>
+        </Key>
+
+        <!-- FREE LOOK -->
+        <Key ID="STR_ACE_Gestures_FREELOOK">
+            <English> &#43; freelook</English>
+            <French> &#43; vue libre</French>
+            <German> &#43; Frei Blick</German>
+            <Polish> &#43; rozglądanie się</Polish>
+        </Key>
+    </Package>
+</Project>
