@@ -1,0 +1,1 @@
+#include "\z\ace\addons\staminabar\script_component.hpp"
