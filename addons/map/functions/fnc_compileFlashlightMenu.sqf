@@ -25,12 +25,14 @@ _flashlights = [_player] call FUNC(getUnitFlashlights);
 
 //add all carried flashlight menus and on/off submenu actions
 {
-    _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
-    _icon = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+    private ["_cfg", "_displayName"," _icon", "_children", "_parentAction"];
+    _cfg = (configFile >> "CfgWeapons" >> _x);
+    _displayName = getText (_cfg >> "displayName");
+    _icon = getText (_cfg >> "picture");
 
     _children = {
+        private ["_onAction", "_offAction"];
         params ["_vehicle", "_player", "_flashlight"];
-        _actions = [];
 
         _onAction = [
             (_flashlight + "_On"),
@@ -52,10 +54,7 @@ _flashlights = [_player] call FUNC(getUnitFlashlights);
             _flashlight
         ] call EFUNC(interact_menu,createAction);
 
-        _actions pushBack [_onAction, [], _player];
-        _actions pushBack [_offAction, [], _player];
-
-        _actions
+        [[_onAction, [], _player], [_offAction, [], _player]]
     };
 
     _parentAction = [_x, _displayName, _icon, {true}, {true}, _children, _x] call EFUNC(interact_menu,createAction);

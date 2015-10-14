@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 // BEGIN_COUNTER(blueForceTrackingUpdate);
 
-private ["_groupsToDrawMarkers", "_playerSide", "_anyPlayers", "_markerType", "_colour", "_marker"];
+private ["_groupsToDrawMarkers", "_playerSide", "_anyPlayers", "_colour", "_marker"];
 
 // Delete last set of markers (always)
 {
@@ -28,12 +28,12 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     };
 
     {
-        _markerType = [_x] call EFUNC(common,getMarkerType);
+        local _markerType = [_x] call EFUNC(common,getMarkerType);
 
 
-        _colour = format ["Color%1", side _x];
+        local _colour = format ["Color%1", side _x];
 
-        _marker = createMarkerLocal [format ["ACE_BFT_%1", _forEachIndex], [(getPos leader _x) select 0, (getPos leader _x) select 1]];
+        local _marker = createMarkerLocal [format ["ACE_BFT_%1", _forEachIndex], [(getPos leader _x) select 0, (getPos leader _x) select 1]];
         _marker setMarkerTypeLocal _markerType;
         _marker setMarkerColorLocal _colour;
         _marker setMarkerTextLocal (groupID _x);

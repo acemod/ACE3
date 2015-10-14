@@ -18,7 +18,7 @@
 
 params ["_unit"];
 
-_flashlights = [];
+local _flashlights = [];
 
 {
     if ((isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) && !(_x in _flashlights)) then {

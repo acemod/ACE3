@@ -12,7 +12,7 @@
 */
 
 #include "script_component.hpp"
-
+private ["_mapCtrl", "_mapScale", "_mapCentre", "_light"];
 _mapCtrl = findDisplay 12 displayCtrl 51;
 _mapScale = ctrlMapScale _mapCtrl;
 _mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
