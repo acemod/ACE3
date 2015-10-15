@@ -14,9 +14,8 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_caller", "_accessLevel", "_return"];
-_caller = _this select 0;
-_target = _this select 1;
+private ["_accessLevel", "_return"];
+params ["_caller", "_target"];
 
 _accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
 

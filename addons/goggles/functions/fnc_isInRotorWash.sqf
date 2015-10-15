@@ -1,10 +1,10 @@
 /*
- * Author: Garth 'L-H' de Wet
+ * Author: Garth 'L-H' de Wet, commy2
  * Checks for nearby running helicopters (within 15m)
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Radius to check for helicopter Default: 15 (optional) <NUMBER>
+ * 1: Radius to check for helicopter (default: 15) <NUMBER>
  *
  * Return Value:
  * <ARRAY>:
@@ -12,35 +12,31 @@
  *     1: Amount of rotor wash. <NUMBER>
  *
  * Example:
- * if (([ace_player, 10] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
- * if (([ace_player] call ace_goggles_fnc_isInRotorWash) select 0) then { hint "Rotor wash"; };
+ * if ([ace_player, 10] call ace_goggles_fnc_isInRotorWash select 0) then { hint "Rotor wash"; };
+ * if ([ace_player] call ace_goggles_fnc_isInRotorWash select 0) then { hint "Rotor wash"; };
  *
  * Public: Yes
  */
 #include "script_component.hpp"
-private ["_heli", "_unit", "_result", "_radius"];
-_unit = _this select 0;
-_radius = 15;
-if (count _this > 1) then {
-    _radius = _this select 1;
-};
-_result = [false, _radius + 2];
 
-_heli = (getPosATL _unit) nearEntities [["Helicopter"], _radius];
+params ["_unit", ["_radius", 15]];
+
+local _rotorWash = [false, 0];
+
 {
-    if !(_x isKindOf "ParachuteBase") then {
-        if (isEngineOn _x) then {
-            private "_distance";
-            _distance = (_radius - (_unit distance _x));
-            if (_distance != 0) then {
-                _distance = _distance / _radius;
-            };
-            if (_distance < (_result select 1)) then {
-                _result = [true, _distance];
-            };
+    if (isEngineOn _x) then {
+        local _distance = _unit distance _x;
+
+        // convert distance to 0...1 range, where 0 is the maximum radius
+        _distance = 1 - _distance / _radius;
+
+        // use highest amount of rotor wash as return value in case of multiple helicopters
+        if (_distance > _rotorWash select 1) then {
+            _rotorWash set [0, true];
+            _rotorWash set [1, _distance];
         };
     };
     false
-} count _heli;
+} count (position _unit nearEntities [["Helicopter"], _radius]);
 
-_result
+_rotorWash

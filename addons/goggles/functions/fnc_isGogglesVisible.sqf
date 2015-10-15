@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet
- * Determines if goggles are visible on passed unit (Also checks if unit is in vehicle and cameraView is set to GUNNER)
+ * Determines if goggles are visible on passed unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -15,24 +15,18 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
-private ["_currentGlasses", "_result", "_position", "_visible"];
+private ["_currentGlasses", "_position"];
 
 _currentGlasses = goggles _unit;
-_result = false;
 
-if ((vehicle _unit) != _unit) exitWith {(cameraView != "GUNNER")};
+if (_currentGlasses == "") exitWith {false};
 
-if (_currentGlasses != "") then {
-    _position =(getPosASLW _unit);
-    if (surfaceIsWater _position && {((_position select 2) < 0.25)}) exitWith {
-        _result = ([_currentGlasses] call FUNC(isDivingGoggles));
-    };
-    if (getNumber (ConfigFile >> "CfgGlasses" >> _currentGlasses >> "ACE_Resistance") == 0) exitWith {
-        _result = false;
-    };
-    _result = !([_currentGlasses] call FUNC(isDivingGoggles));
-};
+// requires ACE_Resistance config entry. Returns false for balaclavas and bandanas.
+if (getNumber (configFile >> "CfgGlasses" >> _currentGlasses >> "ACE_Resistance") == 0) exitWith {false};
 
-_result
+// check if in water and has diving goggles or on land and not diving goggles
+_position = getPosASLW _unit;
+
+(surfaceIsWater _position && {_position select 2 < 0.25}) isEqualTo (_currentGlasses call FUNC(isDivingGoggles)) // return

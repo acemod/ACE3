@@ -77,7 +77,7 @@ class CfgVehicles {
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
-                gunnerAction = "gunner_static_low01";
+                gunnerAction = "ACE_SpottingScope";
                 gunnerGetInAction = "GetInLow";
                 gunnerGetOutAction = "GetOutLow";
                 gunnerForceOptics = 0;

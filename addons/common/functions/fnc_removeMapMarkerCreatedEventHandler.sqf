@@ -1,25 +1,23 @@
 /*
  * Author: commy2
- *
  * Remove a map marker creation event handler.
  *
- * Argument:
- * 0: ID of the event handler (Number)
+ * Arguments:
+ * 0: ID of the event handler <NUMBER>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_actionsVar", "_currentId", "_actionIDs", "_actions"];
+params ["_id"];
 
-PARAMS_1(_id);
-
+private "_actionsVar";
 _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
-_currentId = _actionsVar select 0;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_currentId", "_actionIDs", "_actions"];
 
 _id = _actionIDs find _id;
 

@@ -9,14 +9,14 @@
  * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * 0: density of air - kg * m^(-3) <NUMBER>
+ * density of air - kg * m^(-3) <NUMBER>
  *
  * Return value:
  * None
  */
 #include "script_component.hpp"
 
-PARAMS_3(_temperature,_pressure,_relativeHumidity);
+params ["_temperature", "_pressure", "_relativeHumidity"];
 
 _pressure = _pressure * 100; // hPa to Pa
 

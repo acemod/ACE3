@@ -58,8 +58,19 @@ _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 detach _item;
 _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
-["cargo_hideItem", [_item, false]] call EFUNC(common,serverEvent);
+["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
+
+// show hint
+private ["_itemName", "_vehicleName"];
+
+_itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
+_vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+
+["displayTextStructured", [[localize LSTRING(UnloadedItem), _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
 
 // TOOO maybe drag/carry the unloaded item?
+
+// Invoke listenable event
+["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
 
 true

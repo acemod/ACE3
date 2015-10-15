@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config", "_hmd", "_cameraView", "_turret"];
 
 _currentVehicle = vehicle ACE_player;

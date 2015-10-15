@@ -1,29 +1,28 @@
 /*
  * Author: commy2
- *
  * Execute a function on every machine. Function will also be called upon JIP (postInit). The arguments are stored in (_this select 0), while the assigned namespace is stored in (_this select 1).
  *
- * Argument:
- * 0: Function arguments (Array)
- * 1: Function to execute, has to be defined on the remote machine first (String)
- * 2: Namespace to save that variable in (Object or Namespace)
- * 3: Name. Will overwrite previously defined functions with that name (String)
+ * Arguments:
+ * 0: Function arguments <ARRAY>
+ * 1: Function to execute, has to be defined on the remote machine first <STRING>
+ * 2: Namespace to save that variable in <OBJECT, NAMESPACE>
+ * 3: Name. Will overwrite previously defined functions with that name <STRING>
  *
- * Return value:
- * Nothing.
+ * Return Value:
+ * None
+ *
+ * Public: No
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-private ["_arguments", "_function", "_unit", "_name"];
-
 GVAR(remoteFnc) = _this;
 
-_arguments = _this select 0;
-_function = call compile (_this select 1);
-_unit = _this select 2;
-_name = _this select 3;
+params ["_arguments", "_function", "_unit", "_name"];
+TRACE_4("params", _arguments, _function, _unit, _name);
 
-["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
+_function = call compile _function;
 
 // execute function on every currently connected machine
 [[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);

@@ -38,11 +38,11 @@ if (_name isEqualTo "toggle") exitwith {
     };
 
     GVAR(INTERACTION_TARGET_PREVIOUS) = GVAR(INTERACTION_TARGET);
-    [_newTarget] spawn {
-        closeDialog 0;
-        sleep 0.1;
+
+    closeDialog 0;
+    [{
         [_this select 0] call FUNC(openMenu);
-    };
+    }, [_newTarget], 0.1] call EFUNC(common,waitAndExecute);
 };
 
 // Clean the dropdown options list from all actions
@@ -75,9 +75,9 @@ if (_name isEqualTo "triage") exitwith {
                 _message = localize _message;
             };
         };
-        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_time - _time) / 60)];
+        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_gameTime - _time) / 60)];
         nil;
-    }count _log;
+    } count _log;
 
     if (count _triageCardTexts == 0) exitwith {
         lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];

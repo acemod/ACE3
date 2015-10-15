@@ -17,3 +17,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
+
+#include "Effects.hpp"

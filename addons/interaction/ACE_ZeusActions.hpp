@@ -1,6 +1,5 @@
+
 class ACE_ZeusActions {
-    // _target = curatorLogic
-    // curatorSelected = [objects,groups,waypoints,markers]
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
@@ -29,12 +28,14 @@ class ACE_ZeusActions {
                 statement = "{_x setUnitPos 'AUTO';} forEach (curatorSelected select 0);";
             };
         };
+
         class remoteControl {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
             statement = "_unit = objNull; { if ((side _x in [east,west,resistance,civilian]) && !(isPlayer _x)) exitWith { _unit = _x; }; } forEach (curatorSelected select 0); bis_fnc_curatorObjectPlaced_mouseOver = ['OBJECT',_unit]; (group _target) createUnit ['ModuleRemoteControl_F',[0,0,0],[],0,''];";
         };
     };
+
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
@@ -67,6 +68,7 @@ class ACE_ZeusActions {
                 statement = "{ _x setBehaviour 'STEALTH'; } forEach (curatorSelected select 1);";
             };
         };
+
         class speed {
             displayName = "$STR_HC_Menu_Speed";
 
@@ -86,6 +88,7 @@ class ACE_ZeusActions {
                 statement = "{_x setSpeedMode 'FULL';} forEach (curatorSelected select 1);";
             };
         };
+
         class formation {
             displayName = "$STR_Formation";
 
@@ -136,6 +139,7 @@ class ACE_ZeusActions {
             };
         };
     };
+
     class ZeusWaypoints {
         displayName = "Waypoints";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
@@ -168,6 +172,7 @@ class ACE_ZeusActions {
                 statement = "{ _x setWaypointBehaviour 'STEALTH'; } forEach (curatorSelected select 2);";
             };
         };
+
         class speed {
             displayName = "$STR_HC_Menu_Speed";
 
@@ -187,6 +192,7 @@ class ACE_ZeusActions {
                 statement = "{ _x setWaypointSpeed 'FULL'; } forEach (curatorSelected select 2);";
             };
         };
+
         class formation {
             displayName = "$STR_Formation";
 
@@ -237,6 +243,7 @@ class ACE_ZeusActions {
             };
         };
     };
+
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
