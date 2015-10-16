@@ -3854,7 +3854,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
-            <German>Diese Person ist Wach und kann nicht verladen werden</German>
+            <German>Diese Person ist wach und kann nicht verladen werden</German>
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
