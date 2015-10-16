@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
-            <German>Wenn vom Server gesattet aktiviert diese Einstellung das Sanitätsmenü, welches durch Tastenkombination oder Interaktionsmenü aufgerufen werden kann.</German>
+            <German>Wenn vom Server erlaubt, aktiviert diese Einstellung das Sanitätsmenü, welches durch Tastenkombination oder Interaktionsmenü aufgerufen werden kann.</German>
             <Polish>Jeżeli zezwolone przez serwer, aktywuj menu medyczne poprzez skrót klawiszowy i menu interakcji.</Polish>
             <Portuguese>Se permitido pelo servidor, ativa a opção de usar o menu médico por atalhos de teclas e menu de interação</Portuguese>
             <Russian>Если разрешено сервером, включает опцию использования медицинского меню с помощью горячих главиш или меню взаимодействия</Russian>
@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
-            <German>Öffnet das Sanitätsmenü nach einer erfolgreichen Behandlung erneut.</German>
+            <German>Öffnet das Sanitätsmenü nach einer erfolgreichen Behandlung erneut</German>
             <Polish>Otwórz ponownie menu medyczne po udanym zakończeniu leczenia</Polish>
             <Portuguese>Reabre o menu médico depois de um tratamento bem sucedido</Portuguese>
             <Russian>Переоткрывать медицинское меню после удачного лечения</Russian>
@@ -133,7 +133,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
-            <German>Zeige Verletztenanhängekarte (VAK)</German>
+            <German>Zeige Triagekarte</German>
             <Russian>Смотреть первичную карточку</Russian>
             <Spanish>Ver Triage</Spanish>
             <French>Voir Carte de Triage</French>
@@ -151,7 +151,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
             <English>Bandage / Fractures</English>
-            <German>Verbinde / Brüche</German>
+            <German>Bandagen / Brüche</German>
             <Russian>Раны / переломы</Russian>
             <Spanish>Vendajes/Fracturas </Spanish>
             <French>Bandages / Fractures</French>
@@ -205,7 +205,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
-            <German>Wähle Verletztenstatus (VAK)</German>
+            <German>Setze Status auf der Triagekarte</German>
             <Russian>Сортировка</Russian>
             <Spanish>Seleccionar estado de Triage</Spanish>
             <French>Selectioner l'état de Triage</French>
@@ -388,7 +388,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
-            <German>Er hat ein %1, zum Teil offene Wunde</German>
+            <German>Er hat eine zum Teil offene Wunde (%1)</German>
             <Russian>Частично открытая рана %1</Russian>
             <Spanish>Hay una herida parcial abierta %1</Spanish>
             <French>Il y a une Blessure Patiellement Ouverte %1</French>
@@ -397,7 +397,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
-            <German>Er hat %2 %2, zum Teil offene Wunden</German>
+            <German>Er hat %2 %1, verbundene Wunden</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
             <French>Il y a %2 %1 Blessure Bandée</French>
@@ -423,7 +423,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
             <English>Normal breathing</English>
-            <German>Normales Atmen</German>
+            <German>Normale Atmung</German>
             <Russian>Дыхание в норме</Russian>
             <Spanish>Respiración normal</Spanish>
             <French>Respiration Normale</French>
@@ -432,7 +432,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
-            <German>Kein Atmen</German>
+            <German>Keine Atmung</German>
             <Russian>Дыхания нет</Russian>
             <Spanish>No respira</Spanish>
             <French>Apnée</French>
@@ -442,7 +442,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
-            <German>Schweres Atmen</German>
+            <German>Schwere Atmung</German>
             <Russian>Дыхание затруднено</Russian>
             <Spanish>Dificultad para respirar</Spanish>
             <French>Difficultée Respiratoire</French>
