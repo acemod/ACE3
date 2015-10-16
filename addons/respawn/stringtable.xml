@@ -182,7 +182,7 @@
             <English>Remove bodies?</English>
             <Polish>Usuwać ciała?</Polish>
             <Spanish>¿Eliminar cuerpos?</Spanish>
-            <German>Tote Körper entfernen?</German>
+            <German>Sollen Leichen automatisch verschwinden?</German>
             <Czech>Odstranit těla?</Czech>
             <Portuguese>Remover corpos?</Portuguese>
             <French>Enlever les coprs?</French>
@@ -203,7 +203,7 @@
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
             <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
-            <German>Dieses Modul erlaubt es die Wiedereinstiegs-Einstellungen anzupassen.</German>
+            <German>Dieses Modul erlaubt es, die Wiedereinstiegs-Einstellungen anzupassen.</German>
             <Czech>Tento modul umožňuje nastavení znovuzrození (spawn).</Czech>
             <Portuguese>Este módulo permite que você personalize as configurações do renascimento (Spawn).</Portuguese>
             <Russian>Этот модуль позволяет настроить систему возрождения.</Russian>
@@ -222,7 +222,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
-            <German>Dieses Modul zeigt jeden Gefallenen durch Verbündetenbeschuss in Form einer Textnachricht im Chat an.</German>
+            <German>Dieses Modul zeigt jeden Gefallenen durch Eigenbeschuss, in Form einer Textnachricht, im Chat an.</German>
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
             <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
             <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
@@ -233,7 +233,7 @@
             <English>Rallypoint System</English>
             <Polish>System punktu zbiórki</Polish>
             <Spanish>Sistema de punto de reunión</Spanish>
-            <German>Sammelpunktsmechanik</German>
+            <German>Sammelpunktssystem</German>
             <Czech>Systém shromáždění</Czech>
             <Portuguese>Sistema de ponto de encontro</Portuguese>
             <French>Système de point de ralliement</French>
