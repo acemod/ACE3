@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
-            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt werden. Werden ggf.durch Kommata getrennt. Weiteres in der INFO für unterstützte Objekte. </German>
+            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt. Weiteres in der INFO für unterstützte Objekte.</German>
             <French>Nom d'objets (peuvent aussi être des objets synchronisés) sur lesquels les diaporamas vont être affichées, séparation par virgule si plusieurs.</French>
             <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1. Sprawdź opis modułu aby dowiedzieć się jakie obiekty są wspierane przez moduł.</Polish>
             <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
@@ -55,7 +55,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
-            <German></German>
+            <German>Objekte die als Steuereinheit fungieren. Werden ggf. durch Kommata getrennt.</German>
             <French>Noms de controleur d'objets, séparation par virgule si plusieurs</French>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
@@ -76,7 +76,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
-            <German>Eine Liste von Bildern die bei der Vorführung verwendet werden, durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa).</German>
+            <German>Eine Liste von Bildern, die bei der Vorführung verwendet werden. (Durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa)).</German>
             <French>Liste d'images qui seront utilisées dans des diaporama, séparation par virgule, avec le chemin d'accès complet et formaté correctement (ie. images\image.paa)</French>
             <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
