@@ -124,7 +124,7 @@
             <English>Player Names View Dist.</English>
             <Polish>Zasięg imion graczy</Polish>
             <Spanish>Distancia de vision para nombres de jugadores</Spanish>
-            <German>Sichtweite Spielernamen</German>
+            <German>Sichtweite der Spielernamen</German>
             <Czech>Vzdálenost zobrazení jména hráčů</Czech>
             <Portuguese>Distância de visão dos nomes dos jogadores</Portuguese>
             <French>Distance de vue des noms de joueurs</French>
@@ -135,7 +135,7 @@
             <English>Distance in meters at which player names are shown. Default: 5</English>
             <Polish>Dystans w metrach, na którym wyświetlane są imiona graczy. Domyślnie: 5</Polish>
             <Spanish>Distancia en metros a la que se muestran los nombres de los jugadores. Por defecto: 5</Spanish>
-            <German>Entfernung in Metern bei der Spielernamen angezeigt werden. Standard: 5</German>
+            <German>Entfernung in Metern, bei der Spielernamen angezeigt werden. Standard: 5</German>
             <Czech>Vzdálenost v metrech pro zobrazení jména. Výchozí: 5</Czech>
             <Portuguese>Distância em metros que os nomes dos jogadores são mostrados. Padrão: 5</Portuguese>
             <French>Distance en mètres au delà de laquelle les noms de joueurs ne sont plus affichés. Défaut: 5</French>
