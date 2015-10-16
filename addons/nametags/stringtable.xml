@@ -87,7 +87,7 @@
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
-            <German>Sprechsymbol anzeigen  (benötigt Spielernamen)</German>
+            <German>Sprechsymbol anzeigen (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora (requiere Mostrar nombres de jugadores)</Spanish>
             <Russian>Индикатор разговора (при вкл. именах)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
