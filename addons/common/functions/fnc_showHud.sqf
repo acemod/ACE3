@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Source ID <STRING><OPTIONAL>
  * 1: Show Hud Bool Array (8 to set, empty to remove) <ARRAY><OPTIONAL>
+ * - [hud, info, radar, compass, direction, menu, group, cursors]
  *
  * Return Value:
  * Resulting ShowHud Array <ARRAY>
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {[-1]};
