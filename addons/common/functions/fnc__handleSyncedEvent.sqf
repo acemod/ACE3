@@ -5,7 +5,7 @@
  * Arguments [Client] :
  * 0: eventName <STRING>
  * 1: arguments <ARRAY>
- * 2: ttl <SCALAR>
+ * 2: ttl <SCALAR><CODE>
  *
  * Return Value:
  * Boolean of success <BOOL>
@@ -21,20 +21,20 @@ if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     false
 };
 
-private ["_internalData", "_eventCode"];
-
-_internalData = HASH_GET(GVAR(syncedEvents),_name);
+local _internalData = HASH_GET(GVAR(syncedEvents),_name);
+_internalData params ["_eventCode", "_eventLog"];
 
 if (isServer) then {
     // Server needs to internally log it for synchronization
-    if (_ttl > -1) then {
-        _internalData = HASH_GET(GVAR(syncedEvents),_name);
-
-        private "_eventLog";
-        _eventLog = _internalData select 1;
-        _eventLog pushback [ACE_diagTime, _args, _ttl];
+    local _entry = [ACE_diagTime, _args, _ttl];
+    local _addToSync = if (typeName _ttl == "CODE") then {
+        [_eventCode, _entry] call _ttl;
+    } else {
+        _ttl > -1
+    };
+    if (_addToSync) then {
+        _eventLog pushback _entry;
     };
 };
 
-_eventCode = _internalData select 0;
 _args call _eventCode;

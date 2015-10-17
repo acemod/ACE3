@@ -133,6 +133,10 @@ if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
+//Add allowDamage (and collision) synced event handler
+[QGVAR(allowDamage), FUNC(handleAllowDamage), 0] call FUNC(addSyncedEventHandler);
+
+
 // @todo deprecated
 QGVAR(remoteFnc) addPublicVariableEventHandler {
     (_this select 1) call FUNC(execRemoteFnc);

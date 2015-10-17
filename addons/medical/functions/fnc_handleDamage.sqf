@@ -43,7 +43,9 @@ if (_selection == "legs") exitWith {_unit getHit "legs"};
 if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
 
 // Exit if we disable damage temporarily
-if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
+(_unit getVariable [QEGVAR(common,allowDamage), [0,0]]) params ["_blockCollisionNum", "_blockDamageNum"];
+TRACE_2("commonDamageBlock",_blockCollisionNum,_blockDamageNum);
+if ((!(_unit getVariable [QGVAR(allowDamage), true])) || {(_blockCollisionNum > 0) && {_projectile == ""}} || {_blockDamageNum > 0}) exitWith {
     TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit,_unit);
     if (_selection == "") then {
         damage _unit
