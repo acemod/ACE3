@@ -18,47 +18,29 @@
 
 #include "script_component.hpp"
 
-params ["_vehicle", "_player", "_parameters"];
+params ["", "_player"];
+
+private["_action", "_actions", "_cfg", "_displayName", "_flashlights", "_icon", "_statement"];
 
 _actions = [];
 _flashlights = [_player] call FUNC(getUnitFlashlights);
 
 //add all carried flashlight menus and on/off submenu actions
 {
-    private ["_cfg", "_displayName"," _icon", "_children", "_parentAction"];
     _cfg = (configFile >> "CfgWeapons" >> _x);
     _displayName = getText (_cfg >> "displayName");
     _icon = getText (_cfg >> "picture");
-
-    _children = {
-        private ["_onAction", "_offAction"];
-        params ["_vehicle", "_player", "_flashlight"];
-
-        _onAction = [
-            (_flashlight + "_On"),
-            "On",
-            "",
-            {[_this select 2] call FUNC(switchFlashlight)},
-            {GVAR(flashlightInUse) != (_this select 2)},
-            {},
-            _flashlight
-        ] call EFUNC(interact_menu,createAction);
-
-        _offAction = [
-            (_flashlight + "_Off"),
-            "Off",
-            "",
-            {[""] call FUNC(switchFlashlight)},
-            {GVAR(flashlightInUse) == (_this select 2)},
-            {},
-            _flashlight
-        ] call EFUNC(interact_menu,createAction);
-
-        [[_onAction, [], _player], [_offAction, [], _player]]
+    
+    _statement = if (GVAR(flashlightInUse) == _x) then {
+        _displayName = format [localize LSTRING(turnLightOff), _displayName];
+        {[""] call FUNC(switchFlashlight)}
+    } else {
+        _displayName = format [localize LSTRING(turnLightOn), _displayName];
+        {[_this select 2] call FUNC(switchFlashlight)}
     };
 
-    _parentAction = [_x, _displayName, _icon, {true}, {true}, _children, _x] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_parentAction, [], _player];
+    _action = [_x, _displayName, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+    _actions pushBack [_action, [], _player];
 } forEach _flashlights;
 
 _actions
