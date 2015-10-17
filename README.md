@@ -8,14 +8,11 @@
     <a href="https://github.com/acemod/ACE3/releases/download/v3.3.2/ace3_3.3.2.zip">
         <img src="https://img.shields.io/badge/Download-65.7_MB-green.svg" alt="ACE3 Download">
     </a>
-    <a href="https://github.com/acemod/ACE3/issues">
-        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 Issues">
-    </a>
-    <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
-        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg" alt="BIF Thread">
-    </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg" alt="ACE3 License">
+    </a>
+    <a href="https://github.com/acemod/ACE3/issues">
+        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 Issues">
     </a>
     <a href="http://slackin.ace3mod.com/">
         <img src="http://slackin.ace3mod.com/badge.svg" alt="ACE3 Slack">
@@ -23,8 +20,12 @@
     <a href="https://travis-ci.org/acemod/ACE3">
         <img src="https://img.shields.io/travis/acemod/ACE3.svg" alt="ACE3 Build Status">
     </a>
+    <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
+        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg" alt="BIF Thread">
+    </a>
 </p>
-<p align="center"><sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Visit us on <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
+<p align="center"><sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.<br/>
+Visit us on <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
 
 **ACE3** is a joint effort by the teams behind **ACE2**, **AGM** and **CSE** to improve the realism and authenticity of Arma 3.
 
@@ -43,6 +44,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 - Captivity system
 - Explosives system, including different trigger types
 - Map screen improvements – marker placement and map tools
+- Logistics
 - Advanced missile guidance and laser designation
 
 #### Additional features
