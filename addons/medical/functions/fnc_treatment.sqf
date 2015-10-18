@@ -16,11 +16,8 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition", "_allowedSelections"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
+private ["_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition", "_allowedSelections"];
+params ["_caller", "_target", "_selectionName", "_className"];
 
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
@@ -36,6 +33,9 @@ if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 if !(isClass _config) exitwith {false};
+
+// Allow self treatment check
+if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
 
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
@@ -107,7 +107,7 @@ if ("All" in _locations) then {
                 };
             };
         };
-    }foreach _locations;
+    } foreach _locations;
 };
 
 if !(_return) exitwith {false};
@@ -176,8 +176,17 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setvariable [QGVAR(treatmentPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+    if (isWeaponDeployed _caller) then {
+        TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
+        [_caller, "", 0] call EFUNC(common,doAnimation);
+    };
+
+    if ((stance _caller) == "STAND") then {
+        switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
+            case ("rfl"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
+            case ("pst"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
+            case ("non"): {_caller setvariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+        };
     } else {
         _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     };

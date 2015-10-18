@@ -1,21 +1,22 @@
 /*
  * Author: commy2
- *
  * Set the captivity status of an unit. This allows the handling of more than one reason to set a unit captive.
  *
- * Argument:
- * 0: Unit (Object)
- * 1: The reason of the captivity (String)
- * 2: Is the reason still valid? True for setting this reason, false for removing it (Bool)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: The reason of the captivity <STRING>
+ * 2: Is the reason still valid? True for setting this reason, false for removing it <BOOL>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
+params ["_unit", "_reason", "_status"];
 
-PARAMS_3(_unit,_reason,_status);
+private ["_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
 
 _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 

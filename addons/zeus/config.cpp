@@ -19,7 +19,16 @@ class CfgPatches {
     };
     class GVAR(medical): ADDON {
         units[] = {
-            QGVAR(moduleUnconscious)
+            QGVAR(moduleUnconscious),
+            QGVAR(moduleSetMedic),
+            QGVAR(moduleSetMedicalVehicle),
+            QGVAR(moduleSetMedicalFacility)
+        };
+    };
+    class GVAR(cargoAndRepair): ADDON {
+        units[] = {
+            QGVAR(moduleAddSpareTrack),
+            QGVAR(moduleAddSpareWheel)
         };
     };
 };
@@ -27,6 +36,7 @@ class CfgPatches {
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
+    GVAR(cargoAndRepair[]) = {"ace_cargo", "ace_repair"};
 };
 
 #include "CfgEventHandlers.hpp"

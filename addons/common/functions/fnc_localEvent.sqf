@@ -1,35 +1,40 @@
 /*
  * Author: Nou
- *
  * Execute a local event on this client only.
  *
- * Argument:
+ * Arguments:
  * 0: Event name (string)
  * 1: Event args (any)
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName", "_eventArgs"];
 
-private["_eventIndex", "_eventNames", "_events"];
+GVAR(events) params ["_eventNames", "_eventArray"];
 
-_eventNames = GVAR(events) select 0;
+private "_eventIndex";
 _eventIndex = _eventNames find _eventName;
-if(_eventIndex != -1) then {
-    _events = (GVAR(events) select 1) select _eventIndex;
+
+if (_eventIndex != -1) then {
+    private "_events";
+    _events = _eventArray select _eventIndex;
+
     #ifdef DEBUG_EVENTS
-        diag_log text format[ARR_2("* Local Event: %1",_eventName)];
-        diag_log text format[ARR_2("    args=%1",_eventArgs)];
+        ACE_LOGINFO_1("* Local Event: %1",_eventName);
+        ACE_LOGINFO_1("    args=%1",_eventArgs);
     #endif
-    
+
     {
-        if(!isNil "_x") then {
-            _eventArgs call CALLSTACK_NAMED(_x, format[ARR_3("Local Event %1 ID: %2",_eventName,_forEachIndex)]);
+        if (!isNil "_x") then {
+            _eventArgs call CALLSTACK_NAMED(_x,FORMAT_2("Local Event %1 ID: %2",_eventName,_forEachIndex));
+
             #ifdef DEBUG_EVENTS_CALLSTACK
-                diag_log text format[ARR_2("    ID: %1",_forEachIndex)];
+                ACE_LOGINFO_1("    ID: %1",_forEachIndex);
             #endif
         };
     } forEach _events;

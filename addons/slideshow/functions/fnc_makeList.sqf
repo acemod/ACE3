@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Text <STRING>
- * 1: Remove Whitespace <BOOL>
+ * 1: Trim Whitespace <BOOL>
  * 2: Check Nil <BOOL>
  *
  * Return Value:
@@ -15,24 +15,22 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_list", "_removeWhitespace", "_checkNil"];
-
-private ["_splittedList", "_listNoWhitespace", "_nilCheckPassedList"];
+private ["_splittedList", "_listTrimmedWhitespace", "_nilCheckPassedList"];
+params ["_list", "_trimWhitespace", "_checkNil"];
 
 // Split using comma delimiter
 _splittedList = [_list, ","] call BIS_fnc_splitString;
 
 // Remove whitespace
-_listNoWhitespace = [];
-if (_removeWhitespace) then {
+_listTrimmedWhitespace = [];
+if (_trimWhitespace) then {
     {
-        _listNoWhitespace pushBack ([_x] call EFUNC(common,stringRemoveWhiteSpace));
+        _listTrimmedWhitespace pushBack ([_x] call CBA_fnc_trim);
         nil
     } count _splittedList;
-    _list = _listNoWhitespace;
+    _list = _listTrimmedWhitespace;
 };
 
 // Check for object existence
@@ -53,6 +51,6 @@ if (_checkNil) then {
     _list = [] call compile _list;
 };
 
-TRACE_4("Lists",_splittedList,_listNoWhitespace,_nilCheckPassedList,_list);
+TRACE_4("Lists",_splittedList,_listTrimmedWhitespace,_nilCheckPassedList,_list);
 
 _list // return

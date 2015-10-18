@@ -140,4 +140,10 @@ class CfgVehicles {
         isBicycle = 1;
         XEH_DISABLED;
     };
+
+    class Bag_Base;
+    class ACE_FakeBackpack: Bag_Base {
+        scope = 1;
+        maximumLoad = 1E6;
+    };
 };

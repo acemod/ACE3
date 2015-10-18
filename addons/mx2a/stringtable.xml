@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MX2A">
         <Key ID="STR_ACE_MX2A_DisplayName">
@@ -8,6 +8,9 @@
             <Czech>MX-2A</Czech>
             <German>MX-2A</German>
             <Portuguese>MX-2A</Portuguese>
+            <French>MX-2A</French>
+            <Hungarian>MX-2A</Hungarian>
+            <Russian>MX-2A</Russian>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
@@ -16,6 +19,9 @@
             <Spanish>Dispositivo de imagen térmica</Spanish>
             <Czech>Termální dalekohled</Czech>
             <Portuguese>Dispositivo de imagem térmica</Portuguese>
+            <French>Appareil d'imagerie thermique</French>
+            <Hungarian>Hőleképező készülék</Hungarian>
+            <Russian>Тепловизионный прибор</Russian>
         </Key>
     </Package>
 </Project>

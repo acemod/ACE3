@@ -19,9 +19,9 @@
 //Only run if deafness or ear ringing is enabled:
 if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-EXPLODE_1_PVT((_this select 0),_justUpdateVolume);
-
 private["_volume", "_soundTransitionTime"];
+(_this select 0) params ["_justUpdateVolume"];
+
 
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0;

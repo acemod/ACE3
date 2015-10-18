@@ -3,7 +3,7 @@
  * Select the next throwing mode and display message.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * Handeled <BOOL>

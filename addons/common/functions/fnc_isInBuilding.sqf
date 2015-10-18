@@ -1,45 +1,44 @@
 /*
  * Author: commy2
- *
  * Check if the unit is in a building. Will return true if the unit is sitting in a bush.
  *
- * Argument:
- * 0: Unit (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
  * Return value:
- * Is the unit in a building? (Bool)
+ * Is the unit in a building? <BOOL>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-#define DISTANCE 10
+#define CHECK_DISTANCE 10
 
-private ["_position", "_positionX", "_positionY", "_positionZ", "_intersections"];
+params ["_unit"];
 
-PARAMS_1(_unit);
+private ["_position", "_intersections"];
 
 _position = eyePos _unit;
-_positionX = _position select 0;
-_positionY = _position select 1;
-_positionZ = _position select 2;
+
 _intersections = 0;
 
-if (lineIntersects [_position, [_positionX, _positionY, _positionZ + DISTANCE]]) then {
+if (lineIntersects [_position, _position vectorAdd [0, 0, +CHECK_DISTANCE]]) then {
   _intersections = _intersections + 1;
 };
 
-if (lineIntersects [_position, [_positionX + DISTANCE, _positionY, _positionZ]]) then {
+if (lineIntersects [_position, _position vectorAdd [+CHECK_DISTANCE, 0, 0]]) then {
   _intersections = _intersections + 1;
 };
 
-if (lineIntersects [_position, [_positionX - DISTANCE, _positionY, _positionZ]]) then {
+if (lineIntersects [_position, _position vectorAdd [-CHECK_DISTANCE, 0, 0]]) then {
   _intersections = _intersections + 1;
 };
 
-if (lineIntersects [_position, [_positionX, _positionY + DISTANCE, _positionZ]]) then {
+if (lineIntersects [_position, _position vectorAdd [0, +CHECK_DISTANCE, 0]]) then {
   _intersections = _intersections + 1;
 };
 
-if (lineIntersects [_position, [_positionX, _positionY - DISTANCE, _positionZ]]) then {
+if (lineIntersects [_position, _position vectorAdd [0, -CHECK_DISTANCE, 0]]) then {
   _intersections = _intersections + 1;
 };
 

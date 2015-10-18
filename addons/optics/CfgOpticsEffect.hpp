@@ -1,4 +1,3 @@
-
 class CfgOpticsEffect {
     class ACE_OpticsRadBlur1 {
         type = "radialblur";

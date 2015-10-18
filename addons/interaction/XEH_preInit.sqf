@@ -2,37 +2,38 @@
 
 ADDON = false;
 
+// interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
-PREP(addSelectableItem);
-PREP(applyButtons);
-PREP(canBecomeLeader);
+PREP(getWeaponPos);
+PREP(moduleInteraction);
+PREP(removeTag);
+
+// scroll wheel hint
+PREP(showMouseHint);
+PREP(hideMouseHint);
+
+// interaction with units
 PREP(canInteractWithCivilian);
+PREP(getDown);
+PREP(sendAway);
 PREP(canJoinGroup);
 PREP(canJoinTeam);
-PREP(canTapShoulder);
+PREP(joinTeam);
+PREP(canBecomeLeader);
 PREP(doBecomeLeader);
+PREP(canTapShoulder);
+PREP(tapShoulder);
+PREP(canPardon);
+PREP(pardon);
+
+// interaction with doors
 PREP(getDoor);
 PREP(getDoorAnimations);
-PREP(getDown);
-PREP(getSelectedButton);
-PREP(getWeaponPos);
-PREP(hideMenu);
-PREP(hideMouseHint);
-PREP(isInRange);
-PREP(joinTeam);
-PREP(moduleInteraction);
-PREP(moveDown);
-PREP(onSelectMenuDblClick);
+PREP(handleScrollWheel);
 PREP(openDoor);
-PREP(openMenuSelectUI);
-PREP(openSelectMenu);
-PREP(prepareSelectMenu);
+
+// interaction with boats
 PREP(push);
-PREP(removeTag);
-PREP(sendAway);
-PREP(showMouseHint);
-PREP(sortOptionsByPriority);
-PREP(tapShoulder);
 
 ADDON = true;
