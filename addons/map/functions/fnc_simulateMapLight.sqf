@@ -22,7 +22,7 @@ _hmd = hmd ACE_player;
 _flashlight = GVAR(flashlightInUse);
 
 //map width (on screen) in pixels
-_screenSize = 640 * safeZoneW;
+_screenSize = 640 * safeZoneWAbs;
 
 //resolution params (every frame in case resolution change)
 getResolution params ["_resX", "_resY", "_viewPortX", "_viewPortY", "", "_uiScale"];
@@ -58,7 +58,7 @@ if (_flashlight == "") then {
     if !(_colour in ["white", "red", "green", "blue", "yellow"]) then {_colour = "white"};
     _size = getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Size");
     _flashTex = format[QUOTE(PATHTOF_SYS(ace,flashlights,UI\Flashlight_Beam_%1_ca.paa)), _colour];
-    _beamSize = _screenSize / _size;
+    _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)
     if (_mapScale < 0.2) then {_beamSize = _beamSize / (_mapScale * (1 / 0.2))};

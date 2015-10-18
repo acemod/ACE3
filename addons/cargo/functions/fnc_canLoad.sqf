@@ -31,4 +31,6 @@ if (_nearestVehicle isKindOf "Cargo_Base_F" || isNull _nearestVehicle) then {
 
 if (isNull _nearestVehicle) exitWith {false};
 
+if ((locked _nearestVehicle) >= 2) exitWith {false};
+
 [_object, _nearestVehicle] call FUNC(canLoadItemIn)

@@ -10,9 +10,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated);
-
-if !(_activated) exitWith {};
+params ["_logic"];
 
 [_logic, QGVAR(enableCombatDeafness), "EnableCombatDeafness"] call EFUNC(common,readSettingFromModule);
 
@@ -22,5 +20,4 @@ if ((_logic getVariable "DisableEarRinging") != -1) then {
 };
 
 [_logic, QGVAR(enabledForZeusUnits), "enabledForZeusUnits"] call EFUNC(common,readSettingFromModule);
-
-diag_log text "[ACE]: Hearing Module Initialized.";
+ACE_LOGINFO("Hearing Module Initialized.");

@@ -22,6 +22,9 @@ params ["_display"];
 
 if (isNil "_display") exitwith {};
 
+if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
+if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
+
 if (isNil QGVAR(LatestDisplayOptionMenu)) then {
     GVAR(LatestDisplayOptionMenu) = "triage";
 } else {
@@ -71,7 +74,7 @@ GVAR(MenuPFHID) = [{
     [GVAR(INTERACTION_TARGET)] call FUNC(updateIcons);
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
-    _status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus);
+    _status = [GVAR(INTERACTION_TARGET)] call EFUNC(medical,getTriageStatus);
     (_display displayCtrl 2000) ctrlSetText (_status select 0);
     (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
 

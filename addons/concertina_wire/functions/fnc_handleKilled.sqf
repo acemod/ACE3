@@ -8,14 +8,12 @@
  * 1: killer (vehicle) <OBJECT>
  *
  * Return Value:
- * Nothing
- *
- * Return value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_wire,_killer);
+params ["_wire", "_killer"];
 
 private ["_distance", "_vehicle"];
 

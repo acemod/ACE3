@@ -16,9 +16,12 @@
  */
 #include "script_component.hpp"
 
+params ["_player", "_changeInBrightness"];
+TRACE_2("params",_player,_changeInBrightness);
+
 private ["_brightness"];
 
-PARAMS_2(_player,_changeInBrightness);
+if (!hasInterface) exitWith {};
 
 _brightness = _player getVariable [QGVAR(NVGBrightness), 0];
 

@@ -25,14 +25,6 @@ class Extended_GetOut_EventHandlers {
         };
     };
 };
-//reset captivity and escorting status when getting killed
-class Extended_Killed_EventHandlers {
-    class CAManBase {
-        class GVAR(AutoDetachCaptive) {
-            killed = QUOTE(_this call FUNC(handleKilled));
-        };
-    };
-};
 //mission start
 class Extended_InitPost_EventHandlers {
     class CAManBase {

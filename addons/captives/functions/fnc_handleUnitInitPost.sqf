@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // prevent players from throwing grenades (added to all units)
-[_unit, "Throw", {((_this select 1) getVariable [QGVAR(isHandcuffed), false]) || {(_this select 1) getVariable [QGVAR(isSurrendering), false]}}, {}] call EFUNC(common,addActionEventhandler);
+// [_unit, "Throw", {systemChat "a"; ((_this select 1) getVariable [QGVAR(isHandcuffed), false]) || {(_this select 1) getVariable [QGVAR(isSurrendering), false]}; true}, {systemChat "b";}] call EFUNC(common,addActionEventhandler);
 
 if (local _unit) then {
     // reset status on mission start

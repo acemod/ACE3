@@ -3,11 +3,16 @@
  * Spawns litter for the treatment action on the ground around the target
  *
  * Arguments:
- * 0: The target <OBJECT>
- * 1: The treatment classname <STRING>
+ * 0: The Caller <OBJECT>
+ * 1: The target <OBJECT>
+ * 2: The treatment Selection Name <STRING>
+ * 3: The treatment classname <STRING>
+ * 4: ?
+ * 5: Users of Items <?>
+ * 6: Previous Damage <NUMBER>
  *
  * Return Value:
- *
+ * None
  *
  * Public: No
  */
@@ -16,13 +21,8 @@
 
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
-private ["_target", "_className", "_config", "_litter", "_createLitter", "_position", "_createdLitter", "_caller", "_selectionName", "_usersOfItems", "_previousDamage"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_usersOfItems = _this select 5;
-_previousDamage = _this select 6;
+private ["_config", "_litter", "_createLitter", "_position", "_createdLitter"];
+params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_previousDamage"];
 
 if !(GVAR(allowLitterCreation)) exitwith {};
 if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
@@ -38,25 +38,24 @@ if !(isArray (_config >> "litter")) exitwith {};
 _litter = getArray (_config >> "litter");
 
 _createLitter = {
-    private["_position", "_litterClass", "_direction"];
-    
+    private["_position", "_direction"];
+    params ["_unit", "_litterClass"];
     // @TODO: handle carriers over water
     // For now, don't spawn litter if we are over water to avoid floating litter
-    if(surfaceIsWater (getPos (_this select 0))) exitWith { false };
-    
-    _position = getPosATL (_this select 0);
-    _position = [_position select 0, _position select 1, 0];
-    _litterClass = _this select 1;
-    if (random(1) >= 0.5) then {
-        _position = [(_position select 0) + random 1, (_position select 1) + random 1, _position select 2];
+    if(surfaceIsWater (getPos _unit)) exitWith { false };
+
+    _position = getPosATL _unit;
+    _position params ["_posX", "_posY"];
+    _position = if (random(1) >= 0.5) then {
+        [_posX + random 1, _posY + random 1, 0]
     } else {
-       _position =  [(_position select 0) - random 1, (_position select 1) - random 1, _position select 2];
+       [_posX - random 1, _posY - random 1, 0];
     };
     _direction = (random 360);
 
     // Create the litter, and timeout the event based on the cleanup delay
     // The cleanup delay for events in MP is handled by the server side
-    [QGVAR(createLitter), [_litterClass,_position,_direction], 0] call EFUNC(common,syncedEvent);
+    [QGVAR(createLitter), [_litterClass, _position, _direction], 0] call EFUNC(common,syncedEvent);
 
     true
 };
@@ -65,11 +64,10 @@ _createdLitter = [];
 {
     if (typeName _x == "ARRAY") then {
         if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
-        private ["_selection", "_litterCondition", "_litterOptions"];
-        _selection = _x select 0;
+
+        _x params ["_selection", "_litterCondition", "_litterOptions"];
+
         if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
-            _litterCondition = _x select 1;
-            _litterOptions = _x select 2;
 
             if (isnil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
@@ -88,8 +86,8 @@ _createdLitter = [];
                     if (typeName _x == "STRING") then {
                         [_target, _x] call _createLitter;
                     };
-                }foreach _litterOptions;
+                } foreach _litterOptions;
             };
         };
     };
-}foreach _litter;
+} foreach _litter;

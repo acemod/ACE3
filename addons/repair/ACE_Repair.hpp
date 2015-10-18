@@ -8,7 +8,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_Wheel);
             repairingTime = 10;
             repairingTimeSelfCoef = 1;
-            items[] = {"ToolKit"};
+            items = QGVAR(wheelRepairRequiredItems);
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
 
@@ -35,6 +35,7 @@ class ACE_Repair {
             requiredEngineer = 0;
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
+            items[] = {"ToolKit"};
         };
         class RepairTrack: MiscRepair {
             displayName = CSTRING(Repairing);

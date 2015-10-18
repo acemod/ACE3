@@ -1,16 +1,28 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus
+ * PFEH to set all Ace Time Variables
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private["_lastTickTime", "_lastGameTime", "_delta"];
+BEGIN_COUNTER(timePFH);
 
-_lastTickTime = ACE_diagTime;
-_lastGameTime = ACE_gameTime;
+local _lastTickTime = ACE_diagTime;
+local _lastGameTime = ACE_gameTime;
 
 ACE_gameTime = time;
 ACE_diagTime = diag_tickTime;
 
-_delta = ACE_diagTime - _lastTickTime;
-if(ACE_gameTime <= _lastGameTime) then {
+local _delta = ACE_diagTime - _lastTickTime;
+
+if (ACE_gameTime <= _lastGameTime) then {
     TRACE_1("paused",_delta);
     ACE_paused = true;
     // Game is paused or not running
@@ -24,3 +36,5 @@ if(ACE_gameTime <= _lastGameTime) then {
     ACE_virtualTime = ACE_virtualTime + (_delta * accTime);
     ACE_time = ACE_virtualTime;
 };
+
+END_COUNTER(timePFH);
