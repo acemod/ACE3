@@ -55,6 +55,20 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class DefaultChannel {
+                displayName = CSTRING(DefaultChannel_DisplayName);
+                description = CSTRING(DefaultChannel_Description);
+                typeName = "NUMBER";
+                class values {
+                    class disable {name = ECSTRING(common,Disabled); value = -1; default = 1;};
+                    class global {name = "$STR_channel_global"; value = 0;};
+                    class side {name = "$STR_channel_side"; value = 1;};
+                    class command {name = "$STR_channel_command"; value = 2;};
+                    class group {name = "$STR_channel_group"; value = 3;};
+                    class vehicle {name = "$STR_channel_vehicle"; value = 4;};
+                    class direct {name = "$STR_channel_direct"; value = 5;};
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);
