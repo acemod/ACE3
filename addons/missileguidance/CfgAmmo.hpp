@@ -75,6 +75,8 @@ class CfgAmmo {
         description = CSTRING(Hydra70_DAGR_Desc);
         descriptionShort = CSTRING(Hydra70_DAGR_Desc);
         
+        EGVAR(rearm,caliber) = 70;
+        
         //Explicity add guidance config
         class ADDON: ADDON {};
     };
