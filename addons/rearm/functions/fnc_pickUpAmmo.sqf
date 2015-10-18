@@ -22,7 +22,8 @@ params ["_target", "_unit"];
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _dummy) exitWith {};
 
-_target attachTo [_unit, [0,0.7,0], "pelvis"];
+//_target attachTo [_unit, [0,0.7,0], "pelvis"];
+_target attachTo [_unit, [0,1,0], "pelvis"];
 {
     [[_target, [[-1,0,0],[0,0,1]]], QFUNC(makeDummy), _x] call EFUNC(common,execRemoteFnc);
 } count (position _unit nearObjects ["CAManBase", 100]);
