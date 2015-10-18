@@ -22,7 +22,7 @@ class Extended_Killed_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class ThingX {
         class ADDON {
-            init = QUOTE(_this call DFUNC(addSitActions))
+            init = QUOTE(_this call DFUNC(addSitActions));
         };
     };
 };
