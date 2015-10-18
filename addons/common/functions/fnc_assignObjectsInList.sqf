@@ -4,50 +4,41 @@
  * Used by moduleAssign* within various parts of the ACE3 project.
  *
  * Arguments:
- * 0: list <STRING>
- * 1: variableName <STRING>
- * 2: value <ANY>
+ * 0: List <STRING>
+ * 1: Variable Name <STRING>
+ * 2: Value <ANY>
  * 3: Global <BOOL>
+ * 4: Vehicle <BOOL> (default: false)
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * ["text", "variable", value, true] call ace_common_fnc_assignObjectsInList
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_list", "_variable", "_setting", "_global"];
+params ["_list", "_variable", "_setting", "_global", ["_vehicle", false]];
 
 if (typeName _list == "STRING") then {
-    private ["_splittedList", "_nilCheckPassedList"];
-
-    _splittedList = [_list, ","] call BIS_fnc_splitString;
-    _nilCheckPassedList = "";
-
-    {
-        _x = [_x] call FUNC(stringRemoveWhiteSpace);
-        if !(isNil _x) then {
-            if (_nilCheckPassedList == "") then {
-                _nilCheckPassedList = _x;
-            } else {
-                _nilCheckPassedList = _nilCheckPassedList + ","+ _x;
-            };
-        };
-        false
-    } count _splittedList;
-
-    _list = [] call compile format["[%1]",_nilCheckPassedList];
+    _list = [_list, true, true] call FUNC(parseList);
+    TRACE_1("Parsed",_list)
 };
 
 {
     if (!isNil "_x") then {
         if (typeName _x == typeName objNull) then {
             if (local _x) then {
-                _x setvariable [_variable, _setting, _global];
+                if (_vehicle) then {
+                    (vehicle _x) setVariable [_variable, _setting, _global];
+                    TRACE_6("Set variable vehicle",_x,vehicle _x,typeOf (vehicle _x),_variable,_setting,_global);
+                } else {
+                    _x setVariable [_variable, _setting, _global];
+                    TRACE_5("Set variable",_x,typeOf _x,_variable,_setting,_global);
+                };
             };
         };
     };
-    false
 } count _list;
-
-true

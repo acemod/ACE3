@@ -16,23 +16,14 @@
  */
 #include "script_component.hpp"
 
-private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_seatPosOrig"];
+private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_seatPosOrig"];
 
 params ["_seat", "_player"];
-
-// Set global variable for standing up
-GVAR(seat) = _seat;
 
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
 
 // Add scroll-wheel action to release object
-_actionID = _player getVariable [QGVAR(StandUpActionID), -1];
-
-if (_actionID != -1) then {
-    _player removeAction _actionID;
-};
-
 _actionID = _player addAction [
     format ["<t color='#FFFF00'>%1</t>", localize LSTRING(Stand)],
     QUOTE((_this select 0) call FUNC(stand)),
@@ -44,13 +35,10 @@ _actionID = _player addAction [
     QUOTE(_this call FUNC(canStand))
 ];
 
-_player setVariable [QGVAR(StandUpActionID), _actionID];
-
 // Read config
 _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
 _sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDirection));
 _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
-_sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber (_configFile >> QGVAR(sitRotation))} else {45}; // Apply default if config entry not present
 
 // Get random animation and perform it (before moving player to ensure correct placement)
 [_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
@@ -58,11 +46,11 @@ _sitRotation = if (isNumber (_configFile >> QGVAR(sitRotation))) then {getNumber
 
 // Set direction and position
 _player setDir _sitDirection;
-// No need for ATL/ASL as modelToWorld returns in format position
-_player setPos (_seat modelToWorld _sitPosition);
+//modelToWorld returns AGL
+_player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
 
-// Set variables
-_player setVariable [QGVAR(isSitting), true];
+// Set variables, save seat object on player
+_player setVariable [QGVAR(isSitting), [_seat, _actionID]];
 _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
 
 
@@ -73,7 +61,7 @@ _seatPosOrig = getPosASL _seat;
     _args params ["_player", "_seat", "_seatPosOrig"];
 
     // Remove PFH if not sitting any more
-    if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
+    if (isNil {_player getVariable QGVAR(isSitting)}) exitWith {
         [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(isSitting), false)]);
     };

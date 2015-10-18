@@ -3,10 +3,10 @@
  * Updates the Kestrel 4500 Impeller state
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  *
