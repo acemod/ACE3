@@ -3,13 +3,13 @@
  * Tests if the Kestrel 4500 can be shown
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * canShow (bool)
+ * canShow <BOOL>
  *
  * Example:
- * [mode] call ace_kestrel4500_fnc_canShow
+ * call ace_kestrel4500_fnc_canShow
  *
  * Public: No
  */

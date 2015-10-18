@@ -13,7 +13,7 @@
 
 if !(isServer) exitWith {};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -22,5 +22,6 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(mapShake),                 "MapShake"                ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(mapLimitZoom),             "MapLimitZoom"            ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(mapShowCursorCoordinates), "MapShowCursorCoordinates"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(DefaultChannel),           "DefaultChannel"          ] call EFUNC(common,readSettingFromModule);
 
 ACE_LOGINFO("Map Module Initialized.");
