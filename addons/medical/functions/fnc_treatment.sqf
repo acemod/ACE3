@@ -100,10 +100,11 @@ if ("All" in _locations) then {
             _val = missionNamespace getvariable _x;
             if (typeName _val == "SCALAR") then {
                 _return = switch (_val) do {
-                    case 0: {true};
-                    case 1: _medVeh;
-                    case 2: _medFacility;
-                    case 3: {call _medFacility || call _medVeh};
+                    case 0: {true}; //AdvancedMedicalSettings_anywhere
+                    case 1: {call _medVeh}; //AdvancedMedicalSettings_vehicle
+                    case 2: {call _medFacility}; //AdvancedMedicalSettings_facility
+                    case 3: {(call _medFacility) || {call _medVeh}}; //AdvancedMedicalSettings_vehicleAndFacility
+                    default {false}; //Disabled
                 };
             };
         };
