@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -482,7 +482,8 @@
             <Russian>Проверка аддонов</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
-            <Polish>Sprawdzaj spójność addonów z serwerem</Polish>
+            <English>Check addon integrity with server and do selected action if an addon is missing.</English>
+            <Polish>Sprawdzaj spójność addonów z serwerem i wykonuj stosowną akcję jeżeli zostanie wykryty brak addonu.</Polish>
             <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
             <German>Dieses Modul überprüft ob jeder Spieler die richtigen PBO-Dateien hat.</German>
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
@@ -696,6 +697,7 @@
             <Portuguese>Somente veículos</Portuguese>
             <Russian>Только в транспорте</Russian>
             <Czech>Pouze vozidla</Czech>
+            <Spanish>Solo vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -712,12 +714,14 @@
             <Portuguese>Equipamentos ACE3</Portuguese>
             <Russian>ACE3 Снаряжение</Russian>
             <Czech>ACE3 Vybavení</Czech>
+            <Spanish>ACE3 Equipo</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
             <Polish>ACE3 Ogólne</Polish>
             <Portuguese>Comum ACE3</Portuguese>
             <Russian>ACE3 Общие</Russian>
+            <Spanish>ACE3 Común</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -725,12 +729,14 @@
             <Portuguese>Armamento ACE3</Portuguese>
             <Russian>ACE3 Оружие</Russian>
             <Czech>ACE3 Zbraně</Czech>
+            <Spanish>ACE3 Armas</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
             <Polish>ACE3 Ruch</Polish>
             <Portuguese>Movimento ACE3</Portuguese>
             <Russian>ACE3 Перемещение</Russian>
+            <Spanish>ACE3 Movimiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
@@ -738,6 +744,7 @@
             <Portuguese>Ajuste de luneta ACE3</Portuguese>
             <Russian>ACE3 Прицелы</Russian>
             <Czech>ACE3 Nastavení optiky</Czech>
+            <Spanish>ACE3 Ajuste de miras</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
@@ -745,6 +752,7 @@
             <Portuguese>Veículos ACE3</Portuguese>
             <Russian>ACE3 Транспорт</Russian>
             <Czech>ACE3 Vozidla</Czech>
+            <Spanish>ACE3 Vehículos</Spanish>
         </Key>
     </Package>
 </Project>

@@ -97,6 +97,13 @@
 // Time functions for accuracy per frame
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
 
+#define ACE_isHC (!hasInterface && !isDedicated)
+
+//By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
+#ifdef CBA_DEBUG_SYNCHRONOUS
+    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
+#endif
+
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
 
@@ -179,5 +186,7 @@
 #define ACE_DEBUGFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_DEBUGFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
 #define ACE_DEBUGFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_DEBUGFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_DEBUGFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_DEBUGFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
+
+#define ACE_DEPRECATED(arg1,arg2,arg3) ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #include "script_debug.hpp"

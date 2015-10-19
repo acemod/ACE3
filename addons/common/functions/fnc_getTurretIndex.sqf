@@ -1,32 +1,30 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a units current turret.
  *
- * Argument:
- * 0: Unit, not the vehicle (as in not a car but the player) (Object)
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Return value:
- * Turret index array or config path. E.g: [0] for gunner or [0,0] for commander. Returns empty array if unit is not in a turret. (Array)
+ * Return Value:
+ * Turret Index <ARRAY>
+ *
+ * Example:
+ * [ace_player] call ace_common_fnc_getTurretIndex
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_vehicle", "_turrets", "_units", "_index"];
+params ["_unit"];
 
-PARAMS_1(_unit);
-_vehicle = vehicle _unit;
-
+local _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {[]};
 
-_turrets = allTurrets [_vehicle, true];
+scopeName "main"; 
 
-_units = [];
 {
-  _units pushBack (_vehicle turretUnit _x);
-} forEach _turrets;
+    if (_unit == (_vehicle turretUnit _x)) then {_x breakOut "main"};
+    nil
+} count allTurrets [_vehicle, true];
 
-_index = _units find _unit;
-
-if (_index == -1) exitWith {[]};
-
-_turrets select _index;
+[]

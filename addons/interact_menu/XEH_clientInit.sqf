@@ -8,17 +8,19 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-//Setup text/shadow/size/color settings matrix
-[] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_1(_name);
-    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+    params ["_name"];
+    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);
 
-// Install the render EH on the main display
-addMissionEventHandler ["Draw3D", DFUNC(render)];
+["SettingsInitialized", {
+    //Setup text/shadow/size/color settings matrix
+    [] call FUNC(setupTextColors);
+    // Install the render EH on the main display
+    addMissionEventHandler ["Draw3D", DFUNC(render)];
+}] call EFUNC(common,addEventHandler);
 
 //Add Actions to Houses:
 ["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
@@ -54,7 +56,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
-    EXPLODE_2_PVT(_this,_unit,_isUnconscious);
+    params ["_unit", "_isUnconscious"];
 
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 
@@ -107,11 +109,12 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
 
 
 //Debug to help end users identify mods that break CBA's XEH
-["SettingsInitialized", {
+[{
     private ["_badClassnames"];
     _badClassnames = [];
     {
-        if ((isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}) then {
+        //Only check Land objects (WeaponHolderSimulated show up in `vehicles` for some reason)
+        if ((_x isKindOf "Land") && {(isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}}) then {
             if (!((typeOf _x) in _badClassnames)) then {
                 _badClassnames pushBack (typeOf _x);
                 ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
@@ -122,7 +125,11 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
         ACE_LOGINFO("All compile checks passed");
     } else {
         ACE_LOGERROR_1("%1 Classnames failed compile check!!! (bad XEH / missing cba_enable_auto_xeh.pbo)", (count _badClassnames));
-        ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
-    };
-}] call EFUNC(common,addEventHandler);
 
+        //Only show visual error if they are actually missing the pbo:
+        #define SUPMON configFile>>"CfgSettings">>"CBA">>"XEH">>"supportMonitor"
+        if ((!isNumber(SUPMON)) || {getNumber(SUPMON) != 1}) then {
+            ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
+        };
+    };
+}, [], 5] call EFUNC(common,waitAndExecute);  //ensure CBASupMon has time to run first

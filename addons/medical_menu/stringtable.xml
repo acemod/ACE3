@@ -6,60 +6,70 @@
             <Polish>Menu medyczne</Polish>
             <Portuguese>Menu médico</Portuguese>
             <Russian>Медицинское меню</Russian>
+            <Spanish>Menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
             <Polish>Akt. menu medyczne</Polish>
             <Portuguese>Permitir menu médico</Portuguese>
             <Russian>Разрешить мед. меню</Russian>
+            <Spanish>Permitir menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
             <Polish>Zezwalaj graczom korzystać z menu medycznego</Polish>
             <Portuguese>Permite que clientes utilizem o menu médico</Portuguese>
             <Russian>Разрешает клиентам использовать медицинское меню</Russian>
+            <Spanish>Permitir a los clientes utilizar el menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
             <Polish>Użyj menu medycznego</Polish>
             <Portuguese>Usar o menu médico</Portuguese>
             <Russian>Использовать медицинское меню</Russian>
+            <Spanish>Utiliza el menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
             <Polish>Jeżeli zezwolone przez serwer, aktywuj menu medyczne poprzez skrót klawiszowy i menu interakcji.</Polish>
             <Portuguese>Se permitido pelo servidor, ativa a opção de usar o menu médico por atalhos de teclas e menu de interação</Portuguese>
             <Russian>Если разрешено сервером, включает опцию использования медицинского меню с помощью горячих главиш или меню взаимодействия</Russian>
+            <Spanish>Si está permitido por el servidor, active la opción de utilizar el menú médico a través del menú de las teclas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
             <Polish>Otwieraj ponownie menu medyczne</Polish>
             <Portuguese>Reabrir menu médico</Portuguese>
             <Russian>Переоткрывать мед. меню</Russian>
+            <Spanish>Reabrir menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
             <Polish>Otwórz ponownie menu medyczne po udanym zakończeniu leczenia</Polish>
             <Portuguese>Reabre o menu médico depois de um tratamento bem sucedido</Portuguese>
             <Russian>Переоткрывать медицинское меню после удачного лечения</Russian>
+            <Spanish>Reabre el menú médico despues de un tratamiento con éxito</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
             <Polish>Otwórz menu medyczne</Polish>
             <Portuguese>Abrir menu médico</Portuguese>
             <Russian>Открыть медицинское меню</Russian>
+            <Spanish>Abrir menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
             <Polish>Ustawienia menu medycznego</Polish>
             <Portuguese>Preferências do menu médico</Portuguese>
             <Russian>Настройки медицинского меню</Russian>
+            <Spanish>Ajustes del mení médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
             <Polish>Skonfiguruj opcje menu medycznego</Polish>
             <Portuguese>Configura o uso do menu médico</Portuguese>
             <Russian>Настройки использования медицинского меню</Russian>
+            <Spanish>Configurar el uso del menú médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -249,6 +259,7 @@
             <Polish>Tors</Polish>
             <Portuguese>Torso</Portuguese>
             <Czech>Trup</Czech>
+            <Spanish>Torso</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_L">
             <English>Left Arm</English>

@@ -62,7 +62,7 @@ if (_distance < _backblastRange) then {
     [_damage * 100] call BIS_fnc_bloodEffect;
 
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_firer] call EFUNC(medical,hasMedicalEnabled))}) then {
-         [_firer, "HitBody", [_firer, "body", ((_firer getHitPointDamage "HitBody") + _damage), _firer, "backblast"] call EFUNC(medical,handleDamage)] call EFUNC(medical,setHitPointDamage);
+         [_firer, "body", ((_firer getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
     } else {
         _firer setDamage (damage _firer + _damage);
     };

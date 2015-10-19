@@ -23,7 +23,7 @@ if (!local _unit) exitwith {
     [_this, QFUNC(addToLog), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-date params ["", "", "", "_minute", "_hour"];
+date params ["", "", "", "_hour", "_minute"];
 
 _moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute];
 

@@ -25,7 +25,7 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
 };
 
 // drop if the crate is destroyed OR (target moved away from carrier (weapon disasembled))
-if ((!([_target] call EFUNC(common,isAlive))) || {(_unit distance _target) > 10}) then {
+if (!alive _target || {_unit distance _target > 10}) then {
     [_unit, _target] call FUNC(dropObject_carry);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
