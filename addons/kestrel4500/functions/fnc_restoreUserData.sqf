@@ -6,7 +6,7 @@
  * Nothing
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_kestrel4500_fnc_restore_user_data
