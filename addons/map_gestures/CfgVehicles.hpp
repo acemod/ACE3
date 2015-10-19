@@ -6,6 +6,7 @@ class CfgVehicles {
         displayName = CSTRING(moduleSettings_displayName);
         function = QFUNC(moduleSettings);
         isGlobal = 0;
+        isSingular = 1;
         author = ECSTRING(common,ACETeam);
         icon = PATHTOF(ui\icon_module_map_gestures_ca.paa);
         class Arguments {

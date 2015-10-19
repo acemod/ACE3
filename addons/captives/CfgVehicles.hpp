@@ -176,6 +176,7 @@ class CfgVehicles {
         scope = 2;
         icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
         isGlobal = 1;
+        isSingular = 1;
         class Arguments {
             class allowHandcuffOwnSide {
                 displayName = CSTRING(ModuleSettings_handcuffSide_name);

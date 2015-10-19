@@ -74,6 +74,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
+        isSingular = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_VehicleLock_ca.paa));
         functionPriority = 0;
         class Arguments {

@@ -25,7 +25,9 @@ params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 local _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting does not exist
-if (_settingData isEqualTo []) exitWith {};
+if (_settingData isEqualTo []) exitWith {
+    ACE_LOGERROR_1("SetSetting [%1] setting does not exist", _name);
+};
 
 _settingData params ["", "_typeName", "_isClientSetable", "", "", "", "_isForced"];
 

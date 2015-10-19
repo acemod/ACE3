@@ -8,6 +8,7 @@ class CfgVehicles {
         function = "ACE_Interaction_fnc_moduleInteraction";
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
 
         class Arguments {
