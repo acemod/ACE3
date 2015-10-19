@@ -13,41 +13,17 @@
         <Key ID="STR_ACE_map_gestures_maxRange_description">
             <English>Max range between players to show the map gesture indicator [default: 7 meters]</English>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_displayName">
-            <English>Lead Default Alpha</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_description">
-            <English>Fallback Alpha value for group leaders.</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_displayName">
-            <English>Default Alpha</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_descriptions">
-            <English>Fallback Alpha value.</English>
-        </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
-            <English>Fallback Color value for group leaders.</English>
+            <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
             <English>Default Color</English>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_description">
-            <English>Fallback Color value.</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_displayName">
-            <English>Lead Alpha</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_description">
-            <English>Alpha value for group leaders of groups synced with this module.</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_displayName">
-            <English>Alpha</English>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_description">
-            <English>Alpha value for group members of groups synced with this module.</English>
+            <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
             <English>Lead Color</English>
