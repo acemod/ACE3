@@ -10,10 +10,10 @@
         <img src="https://img.shields.io/badge/Download-65.7_MB-green.svg?style=flat-square" alt="ACE3 Download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?label=Issues" alt="ACE3 Issues">
+        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
     </a>
     <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
-        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg" alt="BIF Thread">
+        <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat-square" alt="BIF Thread">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 License">
