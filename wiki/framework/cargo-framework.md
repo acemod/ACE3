@@ -35,7 +35,7 @@ class staticBananaLauncher {
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you want to disable loading for that vehicle / object</p>
+    <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object</p>
 </div>
 
 
