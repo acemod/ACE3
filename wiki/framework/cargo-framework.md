@@ -14,9 +14,8 @@ parent: wiki
 ```c++
 class CfgVehicles {
     class yourVehicleBaseClass {
-        ace_cargo_space = 4;  // The cargo space your vehicle has
-        ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1 = yes, 0 = no, default = 1)
-
+        ace_cargo_space = 4;  // Cargo space your vehicle has
+        ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1 = yes, 0 = no)
     };
 };
 ```
@@ -27,15 +26,14 @@ class CfgVehicles {
 class staticBananaLauncher {
     class yourVehicleBaseClass {
         ace_cargo_size = 4;  // The cargo space the object takes
-        ace_cargo_canLoad = 1;  // Enables the object to be loaded (1 = yes, 0 = no, default = 1)
-
+        ace_cargo_canLoad = 1;  // Enables the object to be loaded (1 = yes, 0 = no)
     };
 };
 ```
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object</p>
+    <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object.</p>
 </div>
 
 
@@ -45,9 +43,9 @@ class staticBananaLauncher {
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
-`cargoLoaded` | Loaded cargo. | ` [_item, _vehicle]` | Global
-`cargoUnloaded` | Unloaded cargo. | `[_item, _vehicle]` | Global
-`cargoAddedByClass` | Cargo items added. | `[_itemClass, _vehicle, _amount]` | Global
+`cargoLoaded` | Cargo has been loaded | ` [_item, _vehicle]` | Global
+`cargoUnloaded` | Cargo has been unloaded | `[_item, _vehicle]` | Global
+`cargoAddedByClass` | Cargo items has been added | `[_itemClass, _vehicle, _amount]` | Global
 
 ### 2.2 Callable
 
