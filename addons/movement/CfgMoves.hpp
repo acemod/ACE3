@@ -114,6 +114,16 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             leftHandIKCurve[] = {};
         };
 
+        // enable optics in prone down stance
+        class AadjPpneMstpSrasWrflDup;
+        class AadjPpneMstpSrasWrflDdown: AadjPpneMstpSrasWrflDup {
+            enableOptics = 1;
+        };
+        class AadjPpneMstpSrasWpstDup;
+        class AadjPpneMstpSrasWpstDdown: AadjPpneMstpSrasWpstDup {
+            enableOptics = 2;
+        };
+
         // climb animation
         class AmovPercMstpSnonWnonDnon: StandBase {
             ConnectTo[] += {"ACE_Climb",0.02};
