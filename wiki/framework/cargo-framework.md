@@ -23,7 +23,7 @@ class CfgVehicles {
 ### 1.2 Making an object loadable
 
 ```c++
-class staticBananaLauncher {    
+class staticBananaLauncher {
     class yourVehicleBaseClass {
         ace_cargo_size = 4;  // Cargo space the object takes
         ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
