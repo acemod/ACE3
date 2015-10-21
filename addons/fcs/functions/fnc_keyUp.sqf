@@ -75,7 +75,7 @@ if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) 
 
     private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
-    // estimate ACE_time to target
+    // estimate time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
@@ -90,7 +90,7 @@ if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) 
     if (_initSpeedCoef > 0) then {
         _initSpeed = _initSpeedCoef;
     };
-    
+
     if (_simulationStep != 0) then {
         private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
 
@@ -157,7 +157,7 @@ _FCSElevation = [];
         _maxElev     = getNumber (_turretConfig >> "maxElev");
         _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-        
+
         {
             private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
             _weapon = _x;
@@ -179,7 +179,7 @@ _FCSElevation = [];
                 };
             };
         } forEach _weapons;
-        
+
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 

@@ -4,7 +4,7 @@
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:
- * 0: NUMBER - Total Time (in game "ACE_time" seconds)
+ * 0: NUMBER - Total Time (in game "time" seconds)
  * 1: ARRAY - Arguments, passed to condition, fail and finish
  * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
  * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
