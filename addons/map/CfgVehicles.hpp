@@ -61,12 +61,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class disable {name = ECSTRING(common,Disabled); value = -1; default = 1;};
-                    class global {name = "$STR_channel_global"; value = 0;};
-                    class side {name = "$STR_channel_side"; value = 1;};
-                    class command {name = "$STR_channel_command"; value = 2;};
-                    class group {name = "$STR_channel_group"; value = 3;};
-                    class vehicle {name = "$STR_channel_vehicle"; value = 4;};
-                    class direct {name = "$STR_channel_direct"; value = 5;};
+                    class global {name = "$STR_channel_global"; value = 0; default = 0;};
+                    class side {name = "$STR_channel_side"; value = 1; default = 0;};
+                    class command {name = "$STR_channel_command"; value = 2; default = 0;};
+                    class group {name = "$STR_channel_group"; value = 3; default = 0;};
+                    class vehicle {name = "$STR_channel_vehicle"; value = 4; default = 0;};
+                    class direct {name = "$STR_channel_direct"; value = 5; default = 0;};
                 };
             };
         };

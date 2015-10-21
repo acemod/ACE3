@@ -50,10 +50,12 @@ class CfgVehicles {
                     class Warn {
                         name = CSTRING(CheckPBO_Action_WarnPerm);
                         value = 1;
+						default = 0;
                     };
                     class Kick {
                         name = CSTRING(CheckPBO_Action_Kick);
                         value = 2;
+						default = 0;
                     };
                 };
             };

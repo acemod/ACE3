@@ -47,8 +47,8 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class Full {name = CSTRING(MapFill_Full); value = MAP_DETAIL_SAT; default = 1;};
-                    class Roads {name = CSTRING(MapFill_OnlyRoads); value = MAP_DETAIL_TOPOROADS;};
-                    class Disabled {name = CSTRING(MapFill_None); value = MAP_DETAIL_NONE;};
+                    class Roads {name = CSTRING(MapFill_OnlyRoads); value = MAP_DETAIL_TOPOROADS; default = 0;};
+                    class Disabled {name = CSTRING(MapFill_None); value = MAP_DETAIL_NONE; default = 0;};
                 };
             };
         };

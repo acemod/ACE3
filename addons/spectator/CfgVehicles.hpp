@@ -17,10 +17,12 @@ class CfgVehicles {
                     class none {
                         name = CSTRING(units_none);
                         value = 0;
+						default = 0;
                     };
                     class players {
                         name = CSTRING(units_players);
                         value = 1;
+						default = 0;
                     };
                     class playable {
                         name = CSTRING(units_playable);
@@ -30,6 +32,7 @@ class CfgVehicles {
                     class all  {
                         name = CSTRING(units_all);
                         value = 3;
+						default = 0;
                     };
                 };
             };
@@ -46,14 +49,17 @@ class CfgVehicles {
                     class friendly {
                         name = CSTRING(sides_friendly);
                         value = 1;
+						default = 0;
                     };
                     class hostile {
                         name = CSTRING(sides_hostile);
                         value = 2;
+						default = 0;
                     };
                     class all  {
                         name = CSTRING(sides_all);
                         value = 3;
+						default = 0;
                     };
                 };
             };
@@ -70,18 +76,22 @@ class CfgVehicles {
                     class unit {
                         name = CSTRING(modes_unit);
                         value = 1;
+						default = 0;
                     };
                     class free {
                         name = CSTRING(modes_free);
                         value = 2;
+						default = 0;
                     };
                     class internal  {
                         name = CSTRING(modes_internal);
                         value = 3;
+						default = 0;
                     };
                     class external  {
                         name = CSTRING(modes_external);
                         value = 4;
+						default = 0;
                     };
                 };
             };
@@ -98,14 +108,17 @@ class CfgVehicles {
                     class nv {
                         name = CSTRING(visions_nv);
                         value = 1;
+						default = 0;
                     };
                     class ti {
                         name = CSTRING(visions_ti);
                         value = 2;
+						default = 0;
                     };
                     class none  {
                         name = "$STR_Special_None";
                         value = 3;
+						default = 0;
                     };
                 };
             };

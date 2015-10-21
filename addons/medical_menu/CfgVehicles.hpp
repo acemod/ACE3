@@ -21,6 +21,7 @@ class CfgVehicles {
                     class disable {
                         name = ECSTRING(common,Disabled);
                         value = 0;
+						default = 0;
                     };
                     class enable  {
                         name = ECSTRING(common,Enabled);
@@ -30,6 +31,7 @@ class CfgVehicles {
                     class VehiclesOnly  {
                         name = ECSTRING(common,VehiclesOnly);
                         value = 2;
+						default = 0;
                     };
                 };
             };

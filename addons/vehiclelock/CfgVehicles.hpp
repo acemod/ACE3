@@ -89,8 +89,8 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class None {name = CSTRING(VehicleStartingLockState_AsIs); value = 0; default = 1;};
-                    class Side {name = CSTRING(VehicleStartingLockState_Locked); value = 1;};
-                    class Unique {name = CSTRING(VehicleStartingLockState_Unlocked); value = 2;};
+                    class Side {name = CSTRING(VehicleStartingLockState_Locked); value = 1;default = 0;};
+                    class Unique {name = CSTRING(VehicleStartingLockState_Unlocked); value = 2;default = 0;};
                 };
             };
             class DefaultLockpickStrength {

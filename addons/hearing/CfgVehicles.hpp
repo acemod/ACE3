@@ -122,11 +122,13 @@ class CfgVehicles {
                     class NotDisabled {
                         name = ECSTRING(common,No);
                         value = 0;
+						default = 0;
                     };
                     */
                     class IsDisabled {
                         name = ECSTRING(common,Yes);
                         value = 1;
+						default = 0;
                     };
                 };
             };

@@ -63,10 +63,12 @@ class CfgVehicles {
                     class partial {
                         name = CSTRING(revealMines_partial);
                         value = 1;
+						default = 0;
                     };
                     class full  {
                         name = CSTRING(revealMines_full);
                         value = 2;
+						default = 0;
                     };
                 };
             };

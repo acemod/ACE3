@@ -34,6 +34,7 @@ class CfgVehicles {
                     class full  {
                         name = CSTRING(MedicalSettings_advanced);
                         value = 2;
+                        default = 0;
                     };
                 };
             };
@@ -45,6 +46,7 @@ class CfgVehicles {
                     class disable {
                         name = CSTRING(MedicalSettings_medicSetting_disable);
                         value = 0;
+                        default = 0;
                     };
                     class normal {
                         name = CSTRING(MedicalSettings_basic);
@@ -54,6 +56,7 @@ class CfgVehicles {
                     class full  {
                         name = CSTRING(MedicalSettings_advanced);
                         value = 2;
+                        default = 0;
                     };
                 };
             };
@@ -95,6 +98,7 @@ class CfgVehicles {
                     class disable {
                         name = ECSTRING(common,Disabled);
                         value = 0;
+                        default = 0;
                     };
                     class normal {
                         name = "50/50";
@@ -104,6 +108,7 @@ class CfgVehicles {
                     class full {
                         name = ECSTRING(common,Enabled);
                         value = 2;
+                        default = 0;
                     };
                 };
             };
@@ -171,6 +176,7 @@ class CfgVehicles {
                     class playableUnitsAndAI {
                         name = CSTRING(playersandai);
                         value = 1;
+                        default = 0;
                     };
                 };
             };
@@ -191,9 +197,9 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_medicSetting_PAK_Description);
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = CSTRING(AdvancedMedicalSettings_anyone); value = 0; };
+                    class anyone { name = CSTRING(AdvancedMedicalSettings_anyone); value = 0;default = 0; };
                     class Medic { name = CSTRING(AdvancedMedicalSettings_Medic); value = 1; default = 1; };
-                    class Special { name = CSTRING(AdvancedMedicalSettings_Special); value = 2; };
+                    class Special { name = CSTRING(AdvancedMedicalSettings_Special); value = 2;default = 0; };
                 };
             };
             class consumeItem_PAK {
@@ -201,7 +207,7 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_Description);
                 typeName = "NUMBER";
                 class values {
-                    class keep { name = ECSTRING(common,No); value = 0; };
+                    class keep { name = ECSTRING(common,No); value = 0; default = 0;};
                     class remove { name = ECSTRING(common,Yes); value = 1; default = 1; };
                 };
             };
@@ -210,7 +216,7 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
                 typeName = "NUMBER";
                 class values {
-                    class AnyTime { name = CSTRING(AnyTime); value = 0; };
+                    class AnyTime { name = CSTRING(AnyTime); value = 0;default = 0; };
                     class Stable { name = CSTRING(Stable); value = 1; default = 1; };
                 };
             };
@@ -219,11 +225,11 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_useLocation_PAK_Description);
                 typeName = "NUMBER";
                 class values {
-                    class anywhere { name = CSTRING(AdvancedMedicalSettings_anywhere); value = 0; };
-                    class vehicle { name = CSTRING(AdvancedMedicalSettings_vehicle); value = 1; };
-                    class facility { name = CSTRING(AdvancedMedicalSettings_facility); value = 2; };
+                    class anywhere { name = CSTRING(AdvancedMedicalSettings_anywhere); value = 0; default = 0;};
+                    class vehicle { name = CSTRING(AdvancedMedicalSettings_vehicle); value = 1; default = 0;};
+                    class facility { name = CSTRING(AdvancedMedicalSettings_facility); value = 2; default = 0;};
                     class vehicleAndFacility { name = CSTRING(AdvancedMedicalSettings_vehicleAndFacility); value = 3; default = 1; };
-                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;default = 0;};
                 };
             };
             class medicSetting_SurgicalKit: medicSetting_PAK {
@@ -243,7 +249,7 @@ class CfgVehicles {
                 description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
                 class values {
                     class AnyTime { name = CSTRING(AnyTime); value = 0; default = 1; };
-                    class Stable { name = CSTRING(Stable); value = 1; };
+                    class Stable { name = CSTRING(Stable); value = 1; default = 0;};
                 };
             };
             class healHitPointAfterAdvBandage {
@@ -285,8 +291,8 @@ class CfgVehicles {
                 defaultValue = 0;
                 class values {
                     class disable { name = ECSTRING(common,Disabled); value = 0; default = 1;};
-                    class playerOnly { name = CSTRING(playeronly); value = 1; };
-                    class playerAndAI { name = CSTRING(playersandai); value = 2; };
+                    class playerOnly { name = CSTRING(playeronly); value = 1; default = 0;};
+                    class playerAndAI { name = CSTRING(playersandai); value = 2; default = 0;};
                 };
             };
             class maxReviveTime {
@@ -336,6 +342,7 @@ class CfgVehicles {
                     class none {
                         name = CSTRING(AssignMedicRoles_role_none);
                         value = 0;
+						default = 0;
                     };
                     class medic {
                         name = CSTRING(AssignMedicRoles_role_medic);
@@ -345,6 +352,7 @@ class CfgVehicles {
                     class doctor {
                         name = CSTRING(AssignMedicRoles_role_doctor);
                         value = 2;
+						default = 0;
                     };
                 };
             };
@@ -384,6 +392,7 @@ class CfgVehicles {
                     class none {
                         name = ECSTRING(common,No);
                         value = 0;
+						default = 0;
                     };
                     class medic {
                         name = ECSTRING(common,Yes);
