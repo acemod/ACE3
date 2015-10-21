@@ -1,22 +1,24 @@
 /*
  * Author: ?
- * ?
+ * Dumps an array to the RPT, showing the depth of each element.
  *
  * Arguments:
  * 0: Array to be dumped <ARRAY>
- * 1: Depth <NUMBER>
+ * 1: Depth <NUMBER><OPTIONAL>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [[0, [1,2], [[3]]]] call ace_common_fnc_dumpArray
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_var", "_depth"];
+params ["_var", ["_depth", 0, [0]]];
 
-private "_pad";
-_pad = "";
+local _pad = "";
 
 for "_i" from 0 to _depth do {
     _pad = _pad + toString [9];
@@ -38,5 +40,5 @@ if (IS_ARRAY(_var)) then {
         diag_log text format ["%1],", _pad];
     };
 } else {
-    diag_log text format ["%1%2", _pad, [_var] call FUNC(formatVar)];
+    diag_log text format ["%1%2", _pad, _var];
 };

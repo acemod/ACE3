@@ -45,12 +45,9 @@ _createLitter = {
     if(surfaceIsWater (getPos _unit)) exitWith { false };
 
     _position = getPosATL _unit;
-    _position params ["_posX", "_posY"];
-    _position = if (random(1) >= 0.5) then {
-        [_posX + random 1, _posY + random 1, 0]
-    } else {
-       [_posX - random 1, _posY - random 1, 0];
-    };
+    _position params ["_posX", "_posY", "_posZ"];
+    _position = [_posX + (random 2) - 1, _posY + (random 2) - 1, _posZ];
+
     _direction = (random 360);
 
     // Create the litter, and timeout the event based on the cleanup delay

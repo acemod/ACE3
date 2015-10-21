@@ -40,6 +40,7 @@
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend, +Ctrl tilt</English>
             <German>Ausfahren, +Strg kippen</German>
+            <Polish>Rozłóż, +Ctrl nachyl</Polish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>

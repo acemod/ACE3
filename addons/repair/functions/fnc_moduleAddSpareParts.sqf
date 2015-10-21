@@ -11,51 +11,35 @@
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleAssignRepairVehicle"
+ * function = "ace_repair_fnc_moduleAddSpareParts"
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_logic"];
 
 if (!isNull _logic) then {
-    private ["_list", "_part", "_amount", "_nilCheckPassedList"];
-    // Module settings
+    private ["_list", "_part", "_amount"];
     _list = _logic getVariable ["List", ""];
     _part = _logic getVariable ["Part", 0];
     _amount = _logic getVariable ["Amount", 1];
 
     // Parse list
-    _nilCheckPassedList = "";
-    {
-        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
-        if !(isnil _x) then {
-            if (_nilCheckPassedList == "") then {
-                _nilCheckPassedList = _x;
-            } else {
-                _nilCheckPassedList = _nilCheckPassedList + "," + _x;
-            };
-        };
-    } forEach ([_list, ","] call BIS_fnc_splitString);
-    _list = "[" + _nilCheckPassedList + "]";
-    _list = [] call compile _list;
+    _list = [_list, true, true] call EFUNC(common,parseList);
 
     // Add synchronized objects to list
     {
         _list pushBack _x;
-    } forEach (synchronizedObjects _logic);
+        nil
+    } count (synchronizedObjects _logic);
 
     if (_list isEqualTo []) exitWith {};
 
-    TRACE_3("module info parsed",_list,_part,_amount);
+    TRACE_3("Module info parsed",_list,_part,_amount);
+
     // Add spare parts
     {
-        if (!isNil "_x" && {typeName _x == typeName objNull}) then {
-            [_x, _amount, _part, true] call FUNC(addSpareParts);
-        };
-    } forEach _list;
+        [_x, _amount, _part, true] call FUNC(addSpareParts);
+    } count _list;
 };
-
-true

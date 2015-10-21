@@ -2108,6 +2108,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
+            <Polish>%1 użył apteczki</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -3275,7 +3276,7 @@
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
-            <English>Where can the Personal Aid Kit be used?</English>
+            <English>Where can the PAK be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
@@ -3296,7 +3297,7 @@
             <Russian>Условие использования аптечки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
-            <English>When can the Personal Aid Kit be used?</English>
+            <English>When can the PAK be used?</English>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
             <French>Quand peut être utilisé le Kit de Premier Secours</French>
@@ -3350,7 +3351,7 @@
             <Hungarian>Járművek &amp; létesítmény</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
-            <English>Allow Surgical kit (Adv)</English>
+            <English>Allow Surgical Kit (Adv)</English>
             <Russian>Хирургический набор может использоваться (усл.)</Russian>
             <Polish>Ust. zestawu chirurg.</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
@@ -3361,7 +3362,7 @@
             <Hungarian>Sebészkészlet (Fejlett) engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
-            <English>Who can use the surgical kit?</English>
+            <English>Who can use the Surgical Kit?</English>
             <Russian>Кто может использовать хирургический набор?</Russian>
             <Polish>Kto może skorzystać z zestawu chirurgicznego w celu zszycia ran?</Polish>
             <Spanish>¿Quién puede utilizar el equipo quirúrgico?</Spanish>
@@ -3372,7 +3373,7 @@
             <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
-            <English>Remove Surgical kit (Adv)</English>
+            <English>Remove Surgical Kit (Adv)</English>
             <Russian>Удалять хирургический набор (усл.)</Russian>
             <Polish>Usuń zest. chir. po użyciu</Polish>
             <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
@@ -3394,7 +3395,7 @@
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
-            <English>Locations Surgical kit (Adv)</English>
+            <English>Locations Surgical Kit (Adv)</English>
             <Russian>Место использования хирургического набора (усл.)</Russian>
             <Polish>Ogr. zestawu chirurg.</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
@@ -3405,7 +3406,7 @@
             <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
-            <English>Where can the Surgical kit be used?</English>
+            <English>Where can the Surgical Kit be used?</English>
             <Russian>Где может использоваться хирургический набор?</Russian>
             <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
             <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
@@ -3416,7 +3417,7 @@
             <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
-            <English>Condition Surgical kit (Adv)</English>
+            <English>Condition Surgical Kit (Adv)</English>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
@@ -3426,7 +3427,7 @@
             <Russian>Условие использования хирургического набора (усл.)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
-            <English>When can the Surgical kit be used?</English>
+            <English>When can the Surgical Kit be used?</English>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
             <French>Quand peut être utilisé les kit de chirurgie</French>
