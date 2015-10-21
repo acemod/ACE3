@@ -9,9 +9,10 @@ if (!hasInterface) exitWith {};
 #include "initKeybinds.sqf"
 
 ["infoDisplayChanged", {
-    if (!isNull ((_this select 0) displayCtrl 1713151)) then {
-        uiNamespace setVariable ["ACE_dlgRangefinder", _this select 0];
-        ((_this select 0) displayCtrl 151) ctrlSetTextColor [0,0,0,0];
+    params ["_display"];
+    if (!isNull (_display displayCtrl 1713151)) then {
+        uiNamespace setVariable ["ACE_dlgRangefinder", _display];
+        (_display displayCtrl 151) ctrlSetTextColor [0,0,0,0];
     };
 }] call EFUNC(common,addEventHandler);
 

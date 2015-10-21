@@ -5,21 +5,22 @@
  *
  * Arguments:
  * 0: Vehicle
+ * 1: Turret
  *
  * Return Value:
- * none
+ * None
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_vehicle", "_turret", "_distance", "_weaponDirection"];
+if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
-_vehicle = _this select 0;
-_turret = _this select 1;
+private ["_distance", "_weaponDirection"];
+params ["_vehicle", "_turret"];
 
 _distance = call FUNC(getRange);
-
-if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
 GVAR(Time) = ACE_time;
@@ -37,9 +38,10 @@ if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
 if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turrets
     _weaponDirection = [1,0,0];
 };
-
+_weaponDirection params ["_dirX", "_dirY", "_dirZ"];
+(getPos _vehicle) params ["_posX", "_posY", "_posZ"];
 GVAR(Position) = [
-    (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
-    (getPos _vehicle select 1) + _distance * (_weaponDirection select 1),
-    (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
+    _posX + _distance * _dirX,
+    _posY + _distance * _dirY,
+    _posZ + _distance * _dirZ
 ];

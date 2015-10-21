@@ -12,9 +12,7 @@
 
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+params ["_vehicle"];
 
 {
     private "_turretConfig";
@@ -42,4 +40,4 @@ _vehicle = _this select 0;
             _vehicle setVariable [format ["%1_%2", QGVAR(ViewDiff), _x],         0, true];
         };
     };
-} forEach allTurrets _vehicle;
+} count allTurrets _vehicle;

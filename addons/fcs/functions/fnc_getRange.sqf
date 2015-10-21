@@ -4,12 +4,13 @@
  * Read laser distance measurement from engine and update compatible info elements.
  *
  * Argument:
- * Nothing
+ * None
  *
  * Return value:
- * Measured distance (Number)
+ * Measured distance <NUMBER>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_dlgRangefinder", "_range"];
