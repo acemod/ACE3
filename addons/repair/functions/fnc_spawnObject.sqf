@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Item classname <STRING>
- * 1: Position <ARRAY>
+ * 1: Position ASL <ARRAY>
  * 2: Damage <NUMBER>
  *
  * Return Value:
