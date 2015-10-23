@@ -24,6 +24,6 @@ _class = _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehic
 
 // This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
-if (typeName _class == "BOOL") then {_class = 1};
+if (typeName _class == "BOOL") then {_class = [0, 1] select _class};
 
 _class >= (_engineerN min GVAR(engineerSetting_Repair));
