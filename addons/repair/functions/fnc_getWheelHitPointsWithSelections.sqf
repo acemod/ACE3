@@ -48,7 +48,7 @@ _wheelHitPointSelections = [];
     _wheelHitPoint = "";
     _wheelHitPointSelection = "";
 
-    //Commy's ori
+    //Commy's orginal method
     {
         if ((_wheelBoneNameResized != "") && {_x find _wheelBoneNameResized == 0}) exitWith {  // same as above. Requirement for physx.
             _wheelHitPoint = _hitPoints select _forEachIndex;
@@ -57,34 +57,35 @@ _wheelHitPointSelections = [];
         };
     } forEach _hitPointSelections;
 
-    
-    //Backup method, search for the closest hitpoint to the wheel's center selection pos.
-    //Ref #2742 - RHS's HMMWV
-    if (_wheelHitPoint == "") then {
-        _wheelCenterPos = _vehicle selectionPosition _wheelCenter;
-        if (_wheelCenterPos isEqualTo [0,0,0]) exitWith {TRACE_1("no center?",_wheelCenter);};
+
+    if (_vehicle isKindOf "Car") then {
+        //Backup method, search for the closest hitpoint to the wheel's center selection pos.
+        //Ref #2742 - RHS's HMMWV
+        if (_wheelHitPoint == "") then {
+            _wheelCenterPos = _vehicle selectionPosition _wheelCenter;
+            if (_wheelCenterPos isEqualTo [0,0,0]) exitWith {TRACE_1("no center?",_wheelCenter);};
 
 
-        _bestDist = 99;
-        _bestIndex = -1;
-        {
-            if (_x != "") then {
-                _xPos = _vehicle selectionPosition _x;
-                if (_xPos isEqualTo [0,0,0]) exitWith {};
-                _xDist = _wheelCenterPos distance _xPos;
-                if (_xDist < _bestDist) then {
-                    _bestIndex = _forEachIndex;
-                    _bestDist = _xDist;
+            _bestDist = 99;
+            _bestIndex = -1;
+            {
+                if (_x != "") then {
+                    _xPos = _vehicle selectionPosition _x;
+                    if (_xPos isEqualTo [0,0,0]) exitWith {};
+                    _xDist = _wheelCenterPos distance _xPos;
+                    if (_xDist < _bestDist) then {
+                        _bestIndex = _forEachIndex;
+                        _bestDist = _xDist;
+                    };
                 };
+            } forEach _hitPointSelections;
+
+            TRACE_2("closestPoint",_bestDist,_bestIndex);
+            if (_bestIndex != -1) then {
+                _wheelHitPoint = _hitPoints select _bestIndex;
+                _wheelHitPointSelection = _hitPointSelections select _bestIndex;
+                TRACE_2("wheel found [Backup]", _wheelName, _wheelHitPoint);
             };
-        } forEach _hitPointSelections;
-
-        TRACE_2("closestPoint",_bestDist,_bestIndex);
-
-        if (_bestIndex != -1) then {
-            _wheelHitPoint = _hitPoints select _bestIndex;
-            _wheelHitPointSelection = _hitPointSelections select _bestIndex;
-            TRACE_2("wheel found [Backup]", _wheelName, _wheelHitPoint);
         };
     };
 
