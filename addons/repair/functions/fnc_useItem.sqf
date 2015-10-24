@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 2: Item classname <STRING>
+ * 1: Item classname <STRING>
  *
  * ReturnValue:
  * [Had Item to Use <BOOL>, Unit <OBJECT>] <ARRAY>
@@ -23,4 +23,5 @@ if ([_unit, _item] call EFUNC(common,hasItem)) exitwith {
     [[_unit, _item], QUOTE(EFUNC(common,useItem)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     [true, _unit];
 };
+
 [false, objNull];

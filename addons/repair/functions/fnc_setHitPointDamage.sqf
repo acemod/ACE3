@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
- * 1: Selected hitpointIndex <NUMBER>
+ * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
  *
  * Return Value:

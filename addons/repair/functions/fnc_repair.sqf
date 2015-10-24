@@ -67,40 +67,54 @@ if (getText (_config >> "condition") != "") then {
 };
 if (!_return) exitwith {false};
 
-_vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
-    missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
-} else {
-    getNumber(_config >> "vehicleStateCondition")
-};
+// _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
+    // missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
+// } else {
+    // getNumber(_config >> "vehicleStateCondition")
+// };
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
 
-_locations = getArray (_config >> "repairLocations");
-if ("All" in _locations) exitwith {true};
-
-private ["_repairFacility", "_repairVeh"];
-_repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
-_repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
-
-{
-    if (_x == "field") exitwith {_return = true;};
-    if (_x == "RepairFacility" && _repairFacility) exitwith {_return = true;};
-    if (_x == "RepairVehicle" && _repairVeh) exitwith {_return = true;};
-    if !(isnil _x) exitwith {
-        private "_val";
-        _val = missionNamespace getVariable _x;
-        if (typeName _val == "SCALAR") then {
-            _return = switch (_val) do {
-                case 0: {true}; //useAnywhere
-                case 1: {call _repairVeh}; //repairVehicleOnly
-                case 2: {call _repairFacility}; //repairFacilityOnly
-                case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
-                default {false}; //Disabled
+local _repairLocations = getArray (_config >> "repairLocations");
+if (!("All" in _repairLocations)) then {
+    local _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
+    local _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
+    {
+        if (_x == "field") exitwith {_return = true;};
+        if (_x == "RepairFacility" && _repairFacility) exitwith {_return = true;};
+        if (_x == "RepairVehicle" && _repairVeh) exitwith {_return = true;};
+        if !(isnil _x) exitwith {
+            local _val = missionNamespace getVariable _x;
+            if (typeName _val == "SCALAR") then {
+                _return = switch (_val) do {
+                    case 0: {true}; //useAnywhere
+                    case 1: {call _repairVeh}; //repairVehicleOnly
+                    case 2: {call _repairFacility}; //repairFacilityOnly
+                    case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
+                    default {false}; //Disabled
+                };
             };
         };
+    } forEach _repairLocations;
+};
+
+local _requiredObjects = getArray (_config >> "claimObjects");
+local _claimObjectsAvailable = [];
+if (!(_requiredObjects isEqualTo [])) then {
+    _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    if (_claimObjectsAvailable isEqualTo []) then {
+        TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
+        _return = false
     };
-} forEach _locations;
+};
 
 if !(_return && alive _target) exitwith {false};
+//Last exitWith: repair_success or repair_failure will be run
+
+//Claim required objects
+{
+    TRACE_2("Claiming", _x, (typeOf _x));
+    [_caller, _x, false] call EFUNC(common,claim);
+} forEach _claimObjectsAvailable;
 
 _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     getNumber (_config >> "itemConsumed");
@@ -190,7 +204,7 @@ TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 // Start repair
 [
     _repairTime,
-    [_caller, _target, _hitPoint, _className, _items, _usersOfItems],
+    [_caller, _target, _hitPoint, _className, _items, _usersOfItems, _claimObjectsAvailable],
     DFUNC(repair_success),
     DFUNC(repair_failure),
     _text,
