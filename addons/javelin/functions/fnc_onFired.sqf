@@ -1,7 +1,22 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: Jaynus
+ * Fired EventHandler for Javelin
+ *
+ * Arguments:
+ * 0: Shooter <OBJECT>
+ * 1: Weapon <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_javelin_fnc_onFire
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-PARAMS_2(_shooter,_weapon);
+params ["_shooter", "_weapon"];
 
 // Bail on not missile or javelin PFEH not running
 if ((_shooter != ACE_player) || {(GVAR(pfehID) == -1)}) exitWith { false };

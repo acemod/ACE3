@@ -1,4 +1,18 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: Jaynus
+ * ?
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_javelin_fnc_showFireMode
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 

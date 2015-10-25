@@ -1,15 +1,30 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: Jaynus
+ * ?
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_javelin_fnc_onOpticDraw
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3    // Lock on won't occur sooner
 
-private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
-private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
-private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"];
-private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
-private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
+private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom",
+        "_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH",
+        "_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget",
+        "_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range",
+        "_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter", "_ammo",
+        "_magazineConfig", "_weaponConfig"];
 
 _currentShooter = (vehicle ACE_player);
 
@@ -17,9 +32,8 @@ _currentShooter = (vehicle ACE_player);
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
 
 // Reset arguments if we havnt rendered in over a second
-_args = uiNamespace getVariable[QGVAR(arguments), [] ];
-if( (count _args) > 0) then {
-    _lastTick = _args select 0;
+_args = GVAR(arguments);
+if (_args params ["_lastTick", "_currentTarget", "_runTime", "_lockTime", "_soundTime", "_randomLockInterval", "_fireDisabledEH"]) then {
     if(ACE_diagTime - _lastTick > 1) then {
         [] call FUNC(onOpticLoad);
     };
@@ -27,15 +41,6 @@ if( (count _args) > 0) then {
 
 TRACE_1("Running", "Running");
 
-// Pull the arguments
-_currentTarget = _args select 1;
-_runTime = _args select 2;
-_lockTime = _args select 3;
-_soundTime = _args select 4;
-_randomLockInterval = _args select 5;
-_fireDisabledEH = _args select 6;
-
-private["_ammo", "_magazineConfig", "_weaponConfig"];
 _weaponConfig = configProperties [configFile >> "CfgWeapons" >> (currentWeapon _currentShooter), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
 _magazineConfig = if ((currentMagazine _currentShooter) != "") then {
     _ammo = getText (configFile >> "CfgMagazines" >> (currentMagazine _currentShooter) >> "ammo");
@@ -89,13 +94,9 @@ if (_range > 50 && {_range < 2500}) then {
     _pos = positionCameraToWorld [0,0,_range];
     _targetArray = _pos nearEntities ["AllVehicles", _range/100];
     TRACE_1("Searching at range", _targetArray);
-    if (count (_targetArray) > 0) then {
-        _newTarget = _targetArray select 0;
+    if !(_targetArray params ["_newTarget"]) then {
+        _newTarget = cursorTarget;
     };
-};
-
-if (isNull _newTarget) then {
-    _newTarget = cursorTarget;
 };
 
 // Create constants
@@ -111,18 +112,18 @@ __JavelinIGUITargeting ctrlShow true;
 __JavelinIGUITargetingConstrains ctrlShow true;
 
 _zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
-_randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
+_zamerny params ["_zamernyX", "_zamernyY", "_zamernyZ"];
+_randomPosWithinBounds = [_zamernyX + 1 - (random 2.0),_zamernyY + 1 - (random 2.0),_zamernyZ + 0.5 - (random 1.0)];
 
 _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
 
-_aposX = 0;
-_aposY = 0;
-if (count _apos < 2) then {
+
+if !(params ["_aposX", "_aposY"]) then {
     _aposX = 1;
     _aposY = 0;
 } else {
-    _aposX = (_apos select 0) + _offsetX;
-    _aposY = (_apos select 1) + _offsetY;
+    _aposX = _aposX+ _offsetX;
+    _aposY = _aposY + _offsetY;
 };
 
 if((call CBA_fnc_getFoV) select 1 > 9) then {
@@ -131,27 +132,6 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
 } else {
     __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
     __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
-};
-
-FUNC(disableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH < 0 && difficulty > 0) then {
-        _firedEH = [ACE_player, "DefaultAction", {true}, {
-            _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
-            if(!isNil "_canFire") exitWith { false };
-            true
-        }] call EFUNC(common,addActionEventHandler);
-    };
-    _firedEH
-};
-FUNC(enableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH > 0 && difficulty > 0) then {
-        [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
-    };
-    -1
 };
 
 if (isNull _newTarget) then {
@@ -207,11 +187,11 @@ if (isNull _newTarget) then {
                 };
 
                 _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-
-                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
-                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                _bpos params ["_bposXmin", "_bposYmin", "_bposXmax", "_bposYmax"];
+                _minX = (_bposXmin + _offsetX) max _constraintLeft;
+                _minY = (_bposYmin + _offsetY) max _constraintTop;
+                _maxX = (_bposXmax + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
+                _maxY = (_bposYmax + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
 
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
 
@@ -220,7 +200,7 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
                 __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
 
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
+                {_x ctrlCommit __TRACKINTERVAL} count [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
                 _currentShooter setVariable["ace_missileguidance_target", _currentTarget, false];
 
@@ -246,11 +226,11 @@ if (isNull _newTarget) then {
                 };
 
                 _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
-
-                _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
-                _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                _bpos params ["_bposXmin", "_bposYmin", "_bposXmax", "_bposYmax"];
+                _minX = (_bposXmin + _offsetX) max _constraintLeft;
+                _minY = (_bposYmin + _offsetY) max _constraintTop;
+                _maxX = (_bposXmax + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
+                _maxY = (_bposYmax + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
 
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
 
@@ -259,7 +239,7 @@ if (isNull _newTarget) then {
                 __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
                 __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
 
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
+                {_x ctrlCommit __TRACKINTERVAL} count [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
                 if(ACE_diagTime > _soundTime) then {
                     playSound "ACE_Javelin_Locking";
@@ -290,11 +270,12 @@ if (isNull _newTarget) then {
 //TRACE_2("", _newTarget, _currentTarget);
 
 // Save arguments for next run
-_args set[0, ACE_diagTime];
-_args set[1, _currentTarget];
-_args set[2, _runTime];
-_args set[3, _lockTime];
-_args set[4, _soundTime];
-_args set[6, _fireDisabledEH];
+//_args set[0, ACE_diagTime];
+//_args set[1, _currentTarget];
+//_args set[2, _runTime];
+//_args set[3, _lockTime];
+//_args set[4, _soundTime];
+//_args set[6, _fireDisabledEH];
 
-uiNamespace setVariable[QGVAR(arguments), _args ];
+//GVAR(arguments) = [_args];
+GVAR(arguments) = [ACE_diagTime, _currentTarget, _runTime, _lockTime, _soundTime, _fireDisabledEH];
