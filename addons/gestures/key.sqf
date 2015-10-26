@@ -7,14 +7,14 @@
         _currentName = _currentName select [2];
     };
 
-    _code = (compile format [QUOTE(QUOTE(QGVAR(_%1)) call FUNC(playSignal); hint 'KeyDown'), _currentName]);
+    local _code = (compile format [QUOTE(QUOTE(QGVAR(%1)) call FUNC(playSignal);), _currentName]);
 
     [
         "ACE3 Gestures",
         _currentName,
         localize format[LSTRING(%1), _currentName],
         _code,
-        {hint "key Up"},
+        {false},
         [_key,  [false, (_key != -1), false]],
         false
     ] call CBA_fnc_addKeybind;

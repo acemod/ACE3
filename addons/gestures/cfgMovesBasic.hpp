@@ -11,12 +11,12 @@ class CfgMovesBasic {
 
         GVAR(forwardStandLowered) = QGVAR(forwardStandLowered);
         GVAR(stopStandLowered) = QGVAR(stopStandLowered);
-        GVAR(covertandLowered) = QGVAR(covertandLowered);
+        GVAR(coverStandLowered) = QGVAR(coverStandLowered);
         GVAR(regroupStandLowered) = QGVAR(regroupStandLowered);
         GVAR(engageStandLowered) = QGVAR(engageStandLowered);
         GVAR(pointStandLowered) = QGVAR(pointStandLowered);
         GVAR(holdStandLowered) = QGVAR(holdStandLowered);
-        GVAR(warningtandLowered) = QGVAR(warningtandLowered);
+        GVAR(warningStandLowered) = QGVAR(warningStandLowered);
     };
 
     class Actions {
@@ -32,7 +32,7 @@ class CfgMovesBasic {
 
             GVAR(forwardStandLowered)[] = {QGVAR(forwardStandLowered), "Gesture"};
             GVAR(stopStandLowered)[] = {QGVAR(stopStandLowered), "Gesture"};
-            GVAR(covertandLowered)[] = {QGVAR(covertandLowered), "Gesture"};
+            GVAR(coverStandLowered)[] = {QGVAR(coverStandLowered), "Gesture"};
             GVAR(regroupStandLowered)[] = {QGVAR(regroupStandLowered), "Gesture"};
             GVAR(engageStandLowered)[] = {QGVAR(engageStandLowered), "Gesture"};
             GVAR(pointStandLowered)[] = {QGVAR(pointStandLowered), "Gesture"};
@@ -148,7 +148,7 @@ class CfgGesturesMale {
             speed = 0.8;
         };
 
-        class GVAR(covertandLowered): GVAR(cover) {
+        class GVAR(coverStandLowered): GVAR(cover) {
             file = QUOTE(PATHTOF(anim\ace_cover_stand_lowered.rtm));
         };
 
@@ -193,7 +193,7 @@ class CfgGesturesMale {
             speed = 0.8;
         };
 
-        class GVAR(warningtandLowered): GVAR(warning) {
+        class GVAR(warningStandLowered): GVAR(warning) {
             file = QUOTE(PATHTOF(anim\ace_warning_stand_lowered.rtm));
         };
     };
