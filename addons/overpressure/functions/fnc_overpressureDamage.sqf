@@ -4,23 +4,29 @@
  * Calculate and apply backblast damage to potentially affected local units
  *
  * Argument:
- * 0: Unit that fired (Object)
- * 1: Pos ASL of the projectile (Array)
- * 2: Direction of the projectile (Array)
- * 3: Weapon fired (String)
+ * 0: Unit that fired <OBJECT>
+ * 1: Pos ASL of the projectile <ARRAY>
+ * 2: Direction of the projectile <ARRAY>
+ * 3: Weapon fired <STRING>
+ * 4: Magazine <STRING>
+ * 5: Ammo <STRING>
  *
  * Return value:
  * None
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon);
+private ["_var","_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
+params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
-private ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
-
-_overpressureAngle = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(angle)) / 2;
-_overpressureRange = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(range));
-_overpressureDamage = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(damage));
+// Bake variable name and check if the variable exists, call the caching function otherwise
+_varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
+_var = if (isNil _varName) then {
+    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
+} else {
+    missionNameSpace getVariable _varName;
+};
+_var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 
 TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 
@@ -56,7 +62,7 @@ if (!surfaceIsWater _pos) then {
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
             if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
-                 [_x, "HitBody", [_x, "body", (_x getHitPointDamage "HitBody") + _damage, _firer, "backblast"] call EFUNC(medical,handleDamage)] call EFUNC(medical,setHitPointDamage);
+                [_x, "body", ((_x getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
             } else {
                 _x setDamage (damage _x + _damage);
             };

@@ -23,7 +23,7 @@
 params [["_set",true,[true]]];
 
 // Only clients can be spectators
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitwith {};
@@ -50,8 +50,14 @@ if (_set) then {
     // Update units before opening to support pre-set camera unit
     [] call FUNC(updateUnits);
 
-    // Initalize the camera view
-    GVAR(camera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
+    // Initalize the camera objects
+    GVAR(freeCamera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
+    GVAR(unitCamera) = "Camera" camCreate [0,0,0];
+    GVAR(targetCamera) = "Camera" camCreate [0,0,0];
+
+    // Initalize view
+    GVAR(unitCamera) camSetTarget GVAR(targetCamera);
+    GVAR(unitCamera) camCommit 0;
     [] call FUNC(transitionCamera);
 
     // Close map and clear radio
@@ -66,8 +72,10 @@ if (_set) then {
         closeDialog 0;
     };
 
-    // Create the display
-    (findDisplay 46) createDisplay QGVAR(interface);
+    [{
+        // Create the display
+        (findDisplay 46) createDisplay QGVAR(interface);
+    }, []] call EFUNC(common,execNextFrame);
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -85,8 +93,10 @@ if (_set) then {
     (findDisplay 12249) closeDisplay 0;
 
     // Terminate camera
-    GVAR(camera) cameraEffect ["terminate", "back"];
-    camDestroy GVAR(camera);
+    GVAR(freeCamera) cameraEffect ["terminate", "back"];
+    camDestroy GVAR(freeCamera);
+    camDestroy GVAR(unitCamera);
+    camDestroy GVAR(targetCamera);
 
     clearRadio;
 
@@ -97,10 +107,12 @@ if (_set) then {
     BIS_fnc_feedback_allowPP = true;
 
     // Cleanup camera variables
-    GVAR(camera) = nil;
     GVAR(camBoom) = nil;
     GVAR(camDolly) = nil;
     GVAR(camGun) = nil;
+    GVAR(freeCamera) = nil;
+    GVAR(unitCamera) = nil;
+    GVAR(targetCamera) = nil;
 
     // Cleanup display variables
     GVAR(ctrlKey) = nil;

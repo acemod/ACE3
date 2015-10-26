@@ -5,16 +5,16 @@
  *
  * Arguments:
  * 0: temperature - degrees celcius <NUMBER>
- * 2: wind speed - m/s <NUMBER>
+ * 1: wind speed - m/s <NUMBER>
  *
  * Return Value:
- * 0: wind chill <NUMBER>
+ * wind chill <NUMBER>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_t,_v);
+params ["_t", "_v"];
 
 // Source: https://en.wikipedia.org/wiki/Wind_chill
 

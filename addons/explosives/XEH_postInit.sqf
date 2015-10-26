@@ -29,7 +29,7 @@ if (isServer) then {
     }] call EFUNC(common,addEventHandler);
 };
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;

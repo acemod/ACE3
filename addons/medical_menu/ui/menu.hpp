@@ -3,10 +3,10 @@
 class GVAR(medicalMenu) {
     idd = 314412;
     movingEnable = true;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(medicalMenu)), _this select 0)]; [ARR_2(QUOTE(QGVAR(id)), true)] call EFUNC(common,blurScreen); [_this select 0] call FUNC(onMenuOpen););
-    onUnload = QUOTE([ARR_2(QUOTE(QGVAR(id)), false)] call EFUNC(common,blurScreen); [GVAR(MenuPFHID)] call CBA_fnc_removePerFrameHandler;);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(medicalMenu)), _this select 0)]; [_this select 0] call FUNC(onMenuOpen););
+    onUnload = QUOTE([] call FUNC(onMenuClose));
     class controlsBackground {
-        class HeaderBackground: ACE_gui_backgroundBase{
+        class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -325,7 +325,7 @@ class GVAR(medicalMenu) {
             animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.0)";
             animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.0)";
             animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.0)";
-            action = QUOTE(GVAR(selectedBodyPart) = 0; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 0;);
         };
         class selectTorso : selectHead {
             idc = 302;
@@ -333,7 +333,7 @@ class GVAR(medicalMenu) {
             y = "5.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "2.2 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "4.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 1; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 1;);
         };
         class selectLeftArm: selectHead{
             idc = 303;
@@ -341,12 +341,12 @@ class GVAR(medicalMenu) {
             y = "5.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "4.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 3; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 3;);
         };
         class selectRightArm: selectLeftArm{
             idc = 304;
             x = "20.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE(GVAR(selectedBodyPart) = 2; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 2;);
         };
         class selectLeftLeg :selectHead {
             idc = 305;
@@ -354,12 +354,12 @@ class GVAR(medicalMenu) {
             y = "9.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "1.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            action = QUOTE(GVAR(selectedBodyPart) = 5; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 5;);
         };
         class selectRightLeg :selectLeftLeg {
             idc = 306;
             x = "19.6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            action = QUOTE(GVAR(selectedBodyPart) = 4; [GVAR(INTERACTION_TARGET)] call FUNC(updateUIInfo););
+            action = QUOTE(GVAR(selectedBodyPart) = 4;);
         };
 
 

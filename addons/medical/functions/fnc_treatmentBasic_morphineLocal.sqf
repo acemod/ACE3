@@ -7,7 +7,7 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
@@ -15,8 +15,8 @@
 #include "script_component.hpp"
 #define MORPHINEHEAL 0.4
 
-private ["_target", "_morphine", "_pain"];
-_target = _this select 0;
+private ["_morphine", "_pain"];
+params ["_target"];
 
 // reduce pain, pain sensitivity
 _morphine = ((_target getVariable [QGVAR(morphine), 0]) + MORPHINEHEAL) min 1;

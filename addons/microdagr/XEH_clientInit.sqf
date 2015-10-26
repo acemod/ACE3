@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+//Functions that are called for each draw of the map:
+GVAR(miniMapDrawHandlers) = [];
+
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];
 _conditonCode = {

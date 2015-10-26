@@ -9,12 +9,14 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 if !(isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -22,4 +24,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(checkPBOsCheckAll),   "CheckAll"  ] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(checkPBOsWhitelist),  "Whitelist" ] call EFUNC(common,readSettingFromModule);
 
-diag_log text format ["[ACE]: Check-PBOs Module Initialized. Mode: %1.", GVAR(checkPBOsAction)];
+ACE_LOGINFO_1("Check-PBOs Module Initialized. Mode: %1.",GVAR(checkPBOsAction));

@@ -97,6 +97,15 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class wheelRepairRequiredItems {
+                displayName = CSTRING(wheelRepairRequiredItems_name);
+                description = CSTRING(wheelRepairRequiredItems_description);
+                typeName = "NUMBER";
+                class values {
+                    class None { name = "None"; value = 0;  default = 1;};
+                    class ToolKit { name = "ToolKit"; value = 1; };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(moduleDescription);
@@ -118,7 +127,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignEngineerRole_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignEngineerRole_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -162,7 +171,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairVehicle_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairVehicle_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -194,7 +203,7 @@ class CfgVehicles {
         function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairFacility_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -234,7 +243,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class List {
-                displayName = CSTRING(AddSpareParts_List_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AddSpareParts_List_Description);
                 defaultValue = "";
                 typeName = "STRING";

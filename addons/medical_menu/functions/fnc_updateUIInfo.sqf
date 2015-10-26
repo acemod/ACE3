@@ -10,18 +10,20 @@
  * None
  *
  * Example:
- * [some_player, some_display] call ace_medical_menu_updateUIInfo
+ * [some_player, some_display] call ace_medical_menu_fnc_updateUIInfo
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_genericMessages", "_totalIvVolume", "_damaged", "_selectionBloodLoss", "_allInjuryTexts"];
-
 params ["_target", "_display"];
 
+private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
+
+if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
+
 _selectionN = GVAR(selectedBodyPart);
-if (_selectionN < 0 || _selectionN > 5) exitwith {};
+if (_selectionN < 0 || {_selectionN > 5}) exitwith {};
 
 _genericMessages = [];
 _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
@@ -105,11 +107,12 @@ if (EGVAR(medical,level) >= 2) then {
     } forEach _bandagedwounds;
 } else {
     _damaged = [true, true, true, true, true, true];
-    {
-        _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
 
-        if (_target getHitPointDamage _x > 0 && _forEachIndex == _selectionN) then {
-            _pointDamage = _target getHitPointDamage _x;
+    {
+        _selectionBloodLoss set [_forEachIndex, _x];
+
+        if ((_x > 0) && {_forEachIndex == _selectionN}) then {
+            _pointDamage = _x;
             _severity = switch (true) do {
                 case (_pointDamage > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
                 case (_pointDamage > 0.1): {localize ELSTRING(medical,LightlyWounded)};
@@ -125,10 +128,10 @@ if (EGVAR(medical,level) >= 2) then {
             ] select _forEachIndex);
             _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
         };
-    } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+    } forEach (_target getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
 };
 
-[_selectionBloodLoss, _display] call FUNC(updateBodyImage);
+[_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
 
 _logs = _target getVariable [QEGVAR(medical,logFile_activity_view), []];

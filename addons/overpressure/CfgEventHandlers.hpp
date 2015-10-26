@@ -14,38 +14,38 @@ class Extended_PostInit_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireLauncherBackblast)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHBB);};);
         };
     };
 
     class Tank {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
     class Car {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
     class Helicopter {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
     class Plane {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
     class Ship_F {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
     class StaticWeapon {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0) && {getNumber (configfile >> 'CfgWeapons' >> _this select 1 >> QUOTE(QGVAR(Damage))) > 0}) then {_this call DFUNC(fireOverpressureZone)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHOP);};);
         };
     };
 };

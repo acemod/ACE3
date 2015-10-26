@@ -68,4 +68,13 @@ class ACE_Settings {
         value = 1;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
+    class GVAR(wheelRepairRequiredItems) {
+        displayName = CSTRING(wheelRepairRequiredItems_name);
+        description = CSTRING(wheelRepairRequiredItems_description);
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"None", "ToolKit"};
+        _values[] = {{}, {"ToolKit"}};
+    };
 };

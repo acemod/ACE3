@@ -1,10 +1,10 @@
 /*
- * Author: esteldunedain
+ * Author: esteldunedain, commy2
  * Display a grenade type and quantity.
  *
  * Arguments:
- * 0: magazine class <STRING>
- * 1: number of magazines <NUMBER>
+ * 0: grenade magazine class <STRING>
+ * 1: number of grenades <NUMBER>
  *
  * Return Value:
  * None
@@ -18,14 +18,14 @@
 
 if !(GVAR(DisplayText)) exitwith {};
 
+params ["_magazine", "_numberofGrenades"];
+
 private ["_color", "_name", "_text", "_picture"];
 
-params ["_magazine", "_numberofMagazines"];
-
-_color = [[1, 0, 0], [1, 1, 1]] select (_numberofMagazines > 0);
+_color = [[1, 0, 0], [1, 1, 1]] select (_numberofGrenades > 0);
 _name = getText (configFile >> "CfgMagazines" >> _magazine >> "displayNameShort");
 
-_text = [format["%1  x%2", _name, _numberofMagazines], _color] call EFUNC(common,stringToColoredText);
+_text = [format ["%1  x%2", _name, _numberofGrenades], _color] call EFUNC(common,stringToColoredText);
 _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
 
-[_text, _picture] call EFUNC(common,displayTextPicture);
+["displayTextPicture", [_text, _picture]] call EFUNC(common,localEvent);
