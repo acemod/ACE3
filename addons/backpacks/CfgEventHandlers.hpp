@@ -18,3 +18,11 @@ class Extended_InventoryOpened_EventHandlers {
         };
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleKilled));
+        };
+    };
+};
