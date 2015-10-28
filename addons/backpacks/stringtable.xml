@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Edited with tabler - 2015-04-07 -->
 <Project name="ACE">
-    <Package name="Backpack">
-        <Key ID="STR_ACE_Backpack_BackpackToBack">
-            <English>Backpack to Back</English>
-            <German>Rucksack auf den Rücken</German>
+    <Package name="Backpacks">
+        <Key ID="STR_ACE_Backpacks_BackpackToBack">
+            <English>Move backpack to your back</English>
         </Key>
-        <Key ID="STR_ACE_Backpack_BackpackToFront">
-            <English>Backpack to Front</English>
-            <German>Rucksack nach vorne</German>
+        <Key ID="STR_ACE_Backpacks_BackpackToFront">
+            <English>Move backpack to front</English>
         </Key>
     </Package>
 </Project>

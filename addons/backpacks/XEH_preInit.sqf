@@ -5,9 +5,11 @@ ADDON = false;
 PREP(backpackOpened);
 PREP(isBackpack);
 PREP(onOpenInventory);
-PREP(backpackToBack);
-PREP(backpackToFront);
 PREP(playerVehicleChanged);
-PREP(handleRespawn);
+PREP(canAttachBackpack);
+PREP(canDetachBackpack);
+PREP(attachBackpack);
+PREP(detachBackpack);
+PREP(handleKilled);
 
 ADDON = true;

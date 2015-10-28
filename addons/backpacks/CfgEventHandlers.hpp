@@ -19,10 +19,10 @@ class Extended_InventoryOpened_EventHandlers {
     };
 };
 
-class Extended_Respawn_EventHandlers {
+class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            respawn = QUOTE(_this call FUNC(handleRespawn));
+            killed = QUOTE(_this call FUNC(handleKilled));
         };
     };
 };

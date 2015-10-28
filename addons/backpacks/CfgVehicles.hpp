@@ -3,22 +3,20 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class ACE_BackpackToFront {
-                    displayName = "$STR_ACE_Backpack_BackpackToFront";
-                    condition = "(backpack _player != '') and (isNull (_player getVariable ['ACE_Backpack', objNull]))";
+                class ACE_attachBackpack {
+                    displayName = CSTRING(BackpackToFront);
+                    condition = QUOTE(player call FUNC(canAttachBackpack));
                     exceptions[] = {"isNotInside"};
-                    statement = QUOTE([_player] call FUNC(backpackToFront));
-                    showDisabled = 0;
+                    statement = QUOTE(player call FUNC(attachBackpack));
                     priority = 2.5;
                     icon = "\A3\ui_f\data\map\VehicleIcons\iconbackpack_ca.paa";
                     hotkey = "B";
                 };
-                class ACE_BackpackToBack {
-                    displayName = "$STR_ACE_Backpack_BackpackToBack";
-                    condition = "(backpack _player == '') and (!isNull (_player getVariable ['ACE_Backpack', objNull]))";
+                class ACE_detachBackpack {
+                    displayName = CSTRING(BackpackToBack);
+                    condition = QUOTE(player call FUNC(canDetachBackpack));
                     exceptions[] = {"isNotInside"};
-                    statement = QUOTE([_player] call FUNC(backpackToBack));
-                    showDisabled = 0;
+                    statement = QUOTE(player call FUNC(detachBackpack));
                     priority = 2.5;
                     icon = "\A3\ui_f\data\map\VehicleIcons\iconbackpack_ca.paa";
                     hotkey = "B";
