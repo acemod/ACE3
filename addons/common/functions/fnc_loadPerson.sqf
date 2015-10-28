@@ -21,7 +21,7 @@ private ["_vehicle", "_loadcar", "_loadair", "_loadtank", "_loadboat"];
 
 _vehicle = objNull;
 
-if (!([_caller] call FUNC(canInteract)) || {_caller == _unit}) exitwith {_vehicle};
+if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitwith {_vehicle};
 
 _loadcar = nearestObject [_unit, "Car"];
 

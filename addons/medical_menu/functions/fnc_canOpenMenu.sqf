@@ -10,7 +10,7 @@
  * Can open <BOOL>
  *
  * Example:
- * [] call ace_medical_menu_canOpenMenu
+ * [player, cursorTarget] call ace_medical_menu_fnc_canOpenMenu
  *
  * Public: No
  */
@@ -18,7 +18,8 @@
 
 params ["_caller", "_target"];
 
-if !(GVAR(allow) == 1 || (GVAR(allow) == 2 && {vehicle _caller != _caller || vehicle _target != _target} && {alive ACE_player})) exitwith {false};
-if !(GVAR(useMenu) == 1 || (GVAR(useMenu) == 2 && {vehicle _caller != _caller || vehicle _target != _target} && {alive ACE_player})) exitwith {false};
-
-true
+(alive _caller)
+&& {!isNull _target}
+&& {((_caller distance _target) < GVAR(maxRange)) || {(vehicle _caller) == (vehicle _target)}} //for now, ignore range when in same vehicle
+&& {(GVAR(allow) == 1) || {(GVAR(allow) == 2) && {(vehicle _caller != _caller) || {vehicle _target != _target}}}}
+&& {(GVAR(useMenu) == 1) || {(GVAR(useMenu) == 2) && {(vehicle _caller != _caller) || {vehicle _target != _target}}}}

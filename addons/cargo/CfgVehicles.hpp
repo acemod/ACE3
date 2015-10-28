@@ -218,6 +218,18 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+    //"Supply Box" - Small Pallets
+    class B_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+    class IG_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+    class C_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
@@ -425,5 +437,5 @@ class CfgVehicles {
                 selection = "";
             };
         };
-   };
+    };
 };
