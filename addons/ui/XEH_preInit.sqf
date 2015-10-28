@@ -3,5 +3,8 @@
 ADDON = false;
 
 PREP(moduleInit);
+PREP(moduleInitAdvanced);
+PREP(setAdvancedElement);
+PREP(setElements);
 
 ADDON = true;

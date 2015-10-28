@@ -12,18 +12,21 @@
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated) exitWith {};
 
-[_logic, QGVAR(weaponInfo), "weaponInfo"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(weaponName), "weaponName"] call EFUNC(common,readSettingFromModule);
-//[_logic, QGVAR(ammoCount), "ammoCount"] call EFUNC(common,readSettingFromModule); // Disabled in config by ace_reload
-[_logic, QGVAR(magCount), "magCount"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(grenadeName), "grenadeName"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(grenadeCount), "grenadeCount"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(zeroing), "zeroing"] call EFUNC(common,readSettingFromModule);
+// Exit if HUD visibility is hardcoded in mission config and showHUD command is overriden
+if (isArray (missionConfigFile >> "showHUD")) exitWith {
+    ACE_LOGINFO("User Interface (Basic) Module Failed to Initialize - showHUD overriden in mission config!");
+};
 
-diag_log text "[ACE]: UI Module Initialized.";
+[_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(commandMenu), "commandMenu"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(groupBar), "groupBar"] call EFUNC(common,readSettingFromModule);
+
+ACE_LOGINFO("User Interface (Basic) Module Initialized.");
