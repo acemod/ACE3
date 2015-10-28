@@ -223,7 +223,7 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
-PREP(canTurnOut);
+PREP(hasHatch);
 
 // missing inventory commands
 PREP(binocularMagazine);
