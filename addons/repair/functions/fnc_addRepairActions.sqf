@@ -1,5 +1,5 @@
 /*
- * Author: commy2
+ * Author: commy2, SilentSpike
  * Checks if the vehicles class already has the actions initialized, otherwise add all available repair options. Calleed from init EH.
  *
  * Arguments:
@@ -19,7 +19,7 @@
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
 
-private ["_type", "_initializedClasses", "_condition", "_statement", "_action", "_duplicateHitpointName", "_processedHitPoints", "_selectionName", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
+private ["_type", "_initializedClasses", "_condition", "_statement", "_action", "_processedHitPoints", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
 
 _type = typeOf _vehicle;
 
@@ -29,154 +29,123 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
 // get all hitpoints and selections
-(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitPointsSelections", []]];
+(getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
 
-if (_hitPoints isEqualTo []) exitWith {ACE_LOGERROR_1("No Hitpoints on %1", _type);};
+if (_hitSelections isEqualTo []) exitWith { ACE_LOGERROR_1("No hit selections (%1)", _type); };
 
 // get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitPointSelections"];
+([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 _hitPointsAddedNames = [];
 _hitPointsAddedStrings = [];
 _hitPointsAddedAmount = [];
+_processedHitpoints = [];
 
-_processedHitPoints = [];
-
-// add repair events to this vehicle class
 {
-    _duplicateHitpointName = (_x in _processedHitPoints);
-    _processedHitPoints pushBack _x;
-    _selectionName = _hitPointsSelections select _forEachIndex;
+    _selection = _x;
+    _hitpoint = _hitPoints select _forEachIndex;
 
-    if (_x in _wheelHitPoints) then {
-        // add wheel repair action
+    if (_selection in _wheelHitSelections) then {
+         // Wheels should always be unique
+        if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
-        if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Wheel",_x,_forEachIndex,_selectionName);}; //Wheels should always be unique
-        if (isNil {_vehicle getHit _selectionName}) exitWith {TRACE_3("No Selection",_x,_forEachIndex,_selectionName);}; //Not a real hitpoint
-
-        private ["_icon", "_selection", "_name", "_text"];
-
-        // _icon = QUOTE(PATHTOF(ui\tire_ca.paa));
         _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-        _selection = _wheelHitPointSelections select (_wheelHitPoints find _x);
 
-        // remove wheel action
-        _name = format ["Remove_%1_%2", _forEachIndex, _x];
+        // An action to remove the wheel is required
+        _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
         _text = localize LSTRING(RemoveWheel);
-
-        TRACE_5("Adding Wheel Actions",_name,_forEachIndex,_selectionName,_text,_selection);
-
+        TRACE_4("Adding Wheel Actions",_name,_forEachIndex,_selection,_text);
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
-
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 2] call EFUNC(interact_menu,createAction);
+        _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _selection, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
 
-        // replace wheel action
-        _name = format ["Replace_%1_%2", _forEachIndex, _x];
+        // An action to replace the wheel is required
+        _name = format ["Replace_%1_%2", _forEachIndex, _selection];
         _text = localize LSTRING(ReplaceWheel);
-
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "ReplaceWheel"] call DFUNC(repair)};
-
-        _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 2] call EFUNC(interact_menu,createAction);
+        _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _selection, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
-
     } else {
-        // exit if the hitpoint is in the blacklist, e.g. glasses
-        if (_x in IGNORED_HITPOINTS) exitWith {TRACE_3("Ignored Hitpoint",_x,_forEachIndex,_selectionName);};
-        if (_x == "") exitWith {TRACE_3("Hitpoint Empty",_x,_forEachIndex,_selectionName);};
-        if (isNil {_vehicle getHit _selectionName}) exitWith {TRACE_3("No Selection",_x,_forEachIndex,_selectionName);}; //Not a real hitpoint
+        // Empty selections don't exist
+        // Empty hitpoints don't contain enough information
+        if (_selection isEqualTo "") exitWith {};
+        if (_hitpoint isEqualTo "") exitWith {};
 
-        private ["_hitpointGroupConfig", "_inHitpointSubGroup", "_currentHitpoint"];
-
-        // Get hitpoint groups if available
-        _hitpointGroupConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
-        _inHitpointSubGroup = false;
-        if (isArray _hitpointGroupConfig) then {
-            // Set variable if current hitpoint is in a sub-group (to be excluded from adding action)
-            _currentHitpoint = _x;
+        // Associated hitpoints can be grouped via config to produce a single repair action
+        _groupsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
+        if (isArray _groupsConfig) then {
+            _childHitPoint = false;
             {
                 {
-                    if (_x == _currentHitpoint) exitWith {
-                        _inHitpointSubGroup = true;
+                    if (_hitpoint == _x) exitWith {
+                        _childHitPoint = true;
                     };
                 } forEach (_x select 1);
-            } forEach (getArray _hitpointGroupConfig);
+            } forEach (getArray _groupsConfig);
+        };
+        // If the current selection is associated with a child hitpoint, then skip
+        if (_childHitPoint) exitWith { TRACE_3("childHitpoint",_hitpoint,_forEachIndex,_selection); };
+
+        // Find the action position
+        _position = _vehicle selectionPosition [_selection,"HitPoints"];
+        // Custom position can be defined via config for associated hitpoint
+        _positionsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
+        if (isArray _positionsConfig) then {
+            {
+                _x params ["_hit", "_pos"];
+                if (_hitpoint == _hit) exitWith {
+                    if (typeName _pos == "ARRAY") exitWith {
+                        _position = _pos; // Position in model space
+                    };
+                    if (typeName _pos == "STRING") exitWith {
+                        _position = _vehicle selectionPosition [_pos,"HitPoints"]; // Selection name
+                    };
+                    ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
+                };
+            } forEach (getArray _positionsConfig);
         };
 
-        // Exit if current hitpoint is in sub-group (only main hitpoints get actions)
-        if (_inHitpointSubGroup) exitWith {TRACE_3("inHitpointSubGroup",_x,_forEachIndex,_selectionName);};
-
-        // exit if the hitpoint is virtual
-        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith {TRACE_3("Depends",_x,_forEachIndex,_selectionName);};
-
-        // add misc repair action
-        private ["_name", "_icon", "_selection", "_customSelectionsConfig"];
-
-        _name = format ["Repair_%1_%2", _forEachIndex, _x];
+        // Prepair the repair action
+        _name = format ["Repair_%1_%2", _forEachIndex, _selection];
+        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
         // Find localized string and track those added for numerization
-        ([_x, "%1", _x, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
+        ([_hitpoint, "%1", _hitpoint, [_hitPointsAddedNames, _hitPointsAddedStrings, _hitPointsAddedAmount]] call FUNC(getHitPointString)) params ["_text", "_trackArray"];
         _hitPointsAddedNames = _trackArray select 0;
         _hitPointsAddedStrings = _trackArray select 1;
         _hitPointsAddedAmount = _trackArray select 2;
 
-        _icon = "A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-
-        _selection = "";
-
-        // Get custom position if available
-        _customSelectionsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions);
-        if (isArray _customSelectionsConfig) then {
-            // Loop through custom hitpoint positions array
-            _currentHitpoint = _x;
-            {
-                _x params ["_hitpoint", "_position"];
-                // Exit with supplied custom position when same hitpoint name found or print RPT error if it's invalid
-                if (_hitpoint == _currentHitpoint) exitWith {
-                    if (typeName _position == "ARRAY") exitWith {
-                        _selection = _position; // Position in model space
-                    };
-                    if (typeName _position == "STRING") exitWith {
-                        _selection = _vehicle selectionPosition _position; // Selection name
-                    };
-                    ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_vehicle);
-                };
-            } forEach (getArray _customSelectionsConfig);
-        };
-
-        // If position still empty (not a position array or selection name) try extracting from model
-        if (typeName _selection == "STRING" && {_selection == ""}) then {
-            _selection = _vehicle selectionPosition _selectionName;
-        };
-
-        if (_x in TRACK_HITPOINTS) then {
-            if (_duplicateHitpointName) exitWith {TRACE_3("Duplicate Track",_x,_forEachIndex,_selectionName);}; //Tracks should always be unique
-            if (_x == "HitLTrack") then {
-                _selection = [-1.75, 0, -1.75];
+        if (_hitpoint in TRACK_HITPOINTS) then {
+            // Tracks should always be unique
+            if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
+            if (_hitpoint == "HitLTrack") then {
+                _position = [-1.75, 0, -1.75];
             } else {
-                _selection = [1.75, 0, -1.75];
+                _position = [1.75, 0, -1.75];
             };
-            TRACE_5("Adding RepairTrack",_name,_forEachIndex,_selectionName,_text,_selection);
+            TRACE_5("Adding RepairTrack",_name,_forEachIndex,_selection,_text,_position);
             _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};
             _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(repair)};
-            _action = [_name, _text, _icon, _statement, _condition, {}, [_x], _selection, 4] call EFUNC(interact_menu,createAction);
+            _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 4] call EFUNC(interact_menu,createAction);
             [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
         } else {
-            TRACE_5("Adding MiscRepair",_name,_forEachIndex,_selectionName,_text,_selection);
+            TRACE_5("Adding MiscRepair",_name,_forEachIndex,_selection,_text,_position);
             _condition = {[_this select 1, _this select 0, _this select 2 select 0, "MiscRepair"] call DFUNC(canRepair)};
             _statement = {[_this select 1, _this select 0, _this select 2 select 0, "MiscRepair"] call DFUNC(repair)};
-            _action = [_name, _text, _icon, _statement, _condition, {}, [_forEachIndex], _selection, 5] call EFUNC(interact_menu,createAction);
+            _action = [_name, _text, _icon, _statement, _condition, {}, [_forEachIndex], _position, 5] call EFUNC(interact_menu,createAction);
             // Put inside main actions if no other position was found above
-            if (_selection isEqualTo [0, 0, 0]) then {
+            if (_position isEqualTo [0,0,0]) then {
                 [_type, 0, ["ACE_MainActions", QGVAR(Repair)], _action] call EFUNC(interact_menu,addActionToClass);
             } else {
                 [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
             };
         };
+
+        _processedHitPoints pushBack _hitPoint;
     };
-} forEach _hitPoints;
+} forEach _hitSelections;
 
 _condition = {[_this select 1, _this select 0, "", "fullRepair"] call DFUNC(canRepair)};
 _statement = {[_this select 1, _this select 0, "", "fullRepair"] call DFUNC(repair)};
