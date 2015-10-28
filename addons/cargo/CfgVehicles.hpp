@@ -236,7 +236,15 @@ class CfgVehicles {
         GVAR(size) = 6;
     };
 
-
+    // objects
+    class RoadCone_F: ThingX {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+    class RoadBarrier_F: RoadCone_F {
+        GVAR(size) = 2;
+    };
+    
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
