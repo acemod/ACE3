@@ -70,5 +70,3 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 },
 {false},
 [209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT
-
-GVAR(reenableNVGs) = false;
