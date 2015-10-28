@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Check if unit has a hatch and can turn out.
+ * Check if unit is in a vehicle position where it can turn in or out.
  *
  * Arguments:
  * 0: Unit <OBJECT>
