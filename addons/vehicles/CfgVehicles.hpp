@@ -128,7 +128,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"cannon_120mm","ACE_LMG_coax_MAG58_mem2"};
-                magazines[] = {"32Rnd_120mm_APFSDS_shells_Tracer_Red","16Rnd_120mm_HE_shells_Tracer_Red","2000Rnd_762x51_Belt_Green","2000Rnd_762x51_Belt_Green"};
+                magazines[] = {"32Rnd_120mm_APFSDS_shells_Tracer_Red","16Rnd_120mm_HE_shells_Tracer_Red","2000Rnd_762x51_Belt_Red","2000Rnd_762x51_Belt_Red"};
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {};
                 };
@@ -282,7 +282,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"autocannon_40mm_CTWS","ACE_LMG_coax_MAG58_mem2"};
-                magazines[] = {"60Rnd_40mm_GPR_Tracer_Red_shells","40Rnd_40mm_APFSDS_Tracer_Red_shells","2000Rnd_762x51_Belt_Green"};
+                magazines[] = {"60Rnd_40mm_GPR_Tracer_Red_shells","40Rnd_40mm_APFSDS_Tracer_Red_shells","2000Rnd_762x51_Belt_Red"};
             };
         };
     };
@@ -302,7 +302,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"cannon_105mm","ACE_LMG_coax_MAG58_mem2"};
-                magazines[] = {"40Rnd_105mm_APFSDS_T_Red","20Rnd_105mm_HEAT_MP_T_Red","2000Rnd_762x51_Belt_Green","2000Rnd_762x51_Belt_Green"};
+                magazines[] = {"40Rnd_105mm_APFSDS_T_Red","20Rnd_105mm_HEAT_MP_T_Red","2000Rnd_762x51_Belt_Red","2000Rnd_762x51_Belt_Red"};
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {};
                 };
