@@ -179,6 +179,12 @@
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их пленными.&lt;br /&gt;Источник: ace_captives</Russian>
         </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
+            <English>Make Unit Handcuffed</English>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
+            <English>Sync a unit to make them handcuffed.&lt;br /&gt;Source: ace_captives</English>
+        </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
             <Polish>Ustawienia więźniów</Polish>
