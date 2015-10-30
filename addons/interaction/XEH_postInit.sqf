@@ -37,14 +37,6 @@ GVAR(isOpeningDoor) = false;
     ["displayTextStructured", _message] call EFUNC(common,targetEvent);
 }] call EFUNC(common,addEventHandler);
 
-// restore global fire teams for JIP
-private "_team";
-{
-    _team = _x getVariable [QGVAR(assignedFireTeam), ""];
-    if (_team != "") then {_x assignTeam _team};
-    false
-} count allUnits;
-
 // add keybinds
 ["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor), {
     // Conditions: canInteract
