@@ -14,7 +14,7 @@ Indicate if the issue appears on stable or development version. In case it is th
 
 ## Reporting the issue
 
-Head over to the <a href="{{ site.githubUrl }}/issues" target="_blank">ACE3 GitHub issue tracker</a> and press the <a href="{{ site.githubUrl }}/issues/new" target="_blank">"New issue"</a> button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
+Head over to the [ACE3 GitHub issue tracker](issues) and press the [New issue](issues/new) button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
 
 ```
 ACE3 Version: 3.x.x
@@ -43,8 +43,8 @@ ACE3 Version: 3.x.x
 
 A video of the issue might be helpful in resolving it faster.
 
+GitHub uses [Markdown](http://daringfireball.net/projects/markdown/syntax) to style the output. If you want to know more about it (e.g. how to [turn text bold](https://help.github.com/articles/markdown-basics/#styling-text), how to denote [code blocks](https://help.github.com/articles/markdown-basics/#inline-formats) or [inline code](https://help.github.com/articles/markdown-basics/#multiple-lines)) have a look at the [GitHub Markdown Documentation](https://help.github.com/articles/github-flavored-markdown).
 
-Github uses <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">"Markdown"</a> to style the output. If you want to know more about it (e.g. how to <a href="https://help.github.com/articles/markdown-basics/#styling-text" target="_blank">turn text bold</a>, how to denote <a href="https://help.github.com/articles/markdown-basics/#inline-formats" target="_blank">code blocks</a> or <a href="https://help.github.com/articles/markdown-basics/#multiple-lines" target="_blank">inline code</a>) have a look at the <a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub markdown documentation</a>.
 
 # Feature Requests
 
@@ -54,11 +54,11 @@ ACE2, AGM and CSE had a lot of features implemented or planned. All of them are 
 Please refrain from making requests for any planned or existing features from either ACE2, AGM or CSE. Most of them are already being or have been considered for porting or a rewrite.
 
 ## Requesting a feature
-In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for <a href="{{ site.githubUrl }}/issues/414/" target="_blank">ACE 3 Feature requests</a>. Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
+In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for [ACE3 Feature requests](issues/414). Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
 
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.
 
 # Regarding Pull Requests (PRs)
-- You want to help but don't know where to start ? Check the wiki entry for [setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
+- You want to help but don't know where to start? Check the wiki entry for [setting up the development environment](http://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
 - [Make sure to respect the file structure](http://ace3mod.com/wiki/development/modularity-and-pbo-structure.html)
 - [Make sure to respect the coding guidelines](http://ace3mod.com/wiki/development/coding-guidelines.html)
