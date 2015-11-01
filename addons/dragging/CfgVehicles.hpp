@@ -85,9 +85,15 @@ class CfgVehicles {
     };
 
     // Barrier
-    class RoadCone_F: thingX{
+    class RoadCone_F: thingX {
+        XEH_ENABLED;
         GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 0;
+
         GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
     };
     
     class ACE_RepairItem_Base: ThingX {};
