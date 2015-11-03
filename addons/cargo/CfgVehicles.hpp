@@ -172,6 +172,13 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
+    // autonomus
+    class Helicopter_Base_F;
+    class UAV_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    
     // boats
     class Ship;
     class Ship_F: Ship {

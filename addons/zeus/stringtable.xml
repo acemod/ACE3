@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -214,15 +214,19 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
+            <Portuguese>Adicionar roda sobressalente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
+            <Portuguese>Adiciona uma roda sobressalente ao veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
+            <Portuguese>Adicionar esteira sobressalente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
+            <Portuguese>Adiciona uma esteira sobressalente ao veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -264,9 +268,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
+            <Portuguese>Unidade deve ser um veículo com espaço em carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
+            <Portuguese>Unidade deve conter espaço sobressalente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
