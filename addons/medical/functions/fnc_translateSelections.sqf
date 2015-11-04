@@ -24,13 +24,13 @@
 #define TORSO_SELECTIONS ["pelvis", "spine1", "spine2", "spine3", "body"]
 #define TORSO_HITPOINTS ["hitpelvis", "hitabdomen", "hitdiaphragm", "hitchest", "hitbody"]
 #define L_ARM_SELECTIONS ["hand_l"]
-#define L_ARM_HITPOINTS ["HitLeftArm", "hand_l"]
+#define L_ARM_HITPOINTS ["hitleftarm", "hand_l"]
 #define R_ARM_SELECTIONS ["hand_r"]
-#define R_ARM_HITPOINTS ["HitRightArm", "hand_r"]
+#define R_ARM_HITPOINTS ["hitrightarm", "hand_r"]
 #define L_LEG_SELECTIONS ["leg_l"]
-#define L_LEG_HITPOINTS ["HitLeftLeg", "leg_l"]
+#define L_LEG_HITPOINTS ["hitleftleg", "leg_l"]
 #define R_LEG_SELECTIONS ["leg_r"]
-#define R_LEG_HITPOINTS ["HitRightLeg", "leg_r"]
+#define R_LEG_HITPOINTS ["hitrightleg", "leg_r"]
 
 params ["_unit", "_selection", "_hitPointIndex"];
 
