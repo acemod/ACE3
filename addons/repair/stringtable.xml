@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -388,6 +388,7 @@
             <Czech>Ocas</Czech>
             <Russian>Хвост</Russian>
             <Spanish>Tail</Spanish>
+            <Portuguese>Cauda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -1000,12 +1001,14 @@
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
             <Russian>Для ремонта колес требуется</Russian>
+            <Portuguese>Requerimentos para reparo de rodas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
             <Polish>Przedmioty potrzebne do wymiany kół</Polish>
             <Spanish>Elementos necesarios para quitar/cambiar ruedas</Spanish>
             <Russian>Предметы, которые требуются для снятия/замены колес</Russian>
+            <Portuguese>Itens requeridos para remover/trocar rodas</Portuguese>
         </Key>
     </Package>
 </Project>
