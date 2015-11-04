@@ -1,0 +1,1 @@
+#include "\z\ace\addons\artillery_aimingpoints\script_component.hpp"

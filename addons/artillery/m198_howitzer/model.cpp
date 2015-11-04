@@ -40,8 +40,14 @@ class CfgSkeletons
 			"breach","barrel",
 			"hatch","breach",
 			
+			"jack_left","carriage_extra",
+			"jack_right","carriage_extra",
+			
 			"support","main_gun",			
 
+			"jack_handle_left","main_gun",
+			"jack_handle_right","main_gun",
+			
 			"handwheel01","main_turret",
 			"handwheel02","main_turret",
 			"handwheel03","main_turret",
@@ -93,6 +99,30 @@ class CfgModels
 				angle0=elevationMin;
 				angle1=elevationMax;
 			};
+			class handwheel01_rotate
+			{
+				type="rotation";
+				source="main_gun";
+				sourceAddress="clamp";
+				selection="handwheel01";
+				axis="handwheel01_axis";
+				minValue=elevationMin;
+				maxValue=elevationMax;
+				angle0="rad -720";
+				angle1="rad +720";
+			};
+			class handwheel03_rotate
+			{
+				type="rotation";
+				source="main_gun";
+				sourceAddress="clamp";
+				selection="handwheel03";
+				axis="handwheel03_axis";
+				minValue=elevationMin;
+				maxValue=elevationMax;
+				angle0="rad -720";
+				angle1="rad +720";
+			};
 			class main_turret                                  
 			{
 				type="rotation";
@@ -104,7 +134,18 @@ class CfgModels
 				angle0="rad -45";
 				angle1="rad +45";
 			};	
-
+			class handwheel02_rotate
+			{
+				type="rotation";
+				source="main_turret";
+				sourceAddress="clamp";
+				selection="handwheel02";
+				axis="handwheel02_axis";
+				minValue="rad -45";
+				maxValue="rad +45";
+				angle0="rad -900";
+				angle1="rad +900";
+			};
 			
 			class open_breach
 			{
@@ -195,42 +236,6 @@ class CfgModels
 				angle0="rad 0";
 				angle1="rad +136.5";
 			};		
-			class handwheel01_rotate
-			{
-				type="rotation";
-				source="handwheel01_rotate";
-				sourceAddress="loop";
-				selection="handwheel01";
-				axis="handwheel01_axis";
-				minValue="rad -360";
-				maxValue="rad +360";
-				angle0="rad -360";
-				angle1="rad +360";
-			};
-			class handwheel02_rotate
-			{
-				type="rotation";
-				source="handwheel02_rotate";
-				sourceAddress="loop";
-				selection="handwheel02";
-				axis="handwheel02_axis";
-				minValue="rad -360";
-				maxValue="rad +360";
-				angle0="rad -360";
-				angle1="rad +360";
-			};
-			class handwheel03_rotate
-			{
-				type="rotation";
-				source="handwheel03_rotate";
-				sourceAddress="loop";
-				selection="handwheel03";
-				axis="handwheel03_axis";
-				minValue="rad -360";
-				maxValue="rad +360";
-				angle0="rad -360";
-				angle1="rad +360";
-			};
 			class front_shackles_rotate
 			{
 				type="rotation";
@@ -285,7 +290,6 @@ class CfgModels
 				maxValue=1;
 				hideValue=1;
 			};
-			
 			class hide_left_foot
 			{
 				type="hide";
@@ -304,11 +308,10 @@ class CfgModels
 				maxValue=1;
 				hideValue=1;
 			};
-			
 			class rotate_left_foot
 			{
 				type="rotation";
-				source="rotate_left_foot";
+				source="move_left_foot";
 				selection="left_foot";
 				axis="left_foot_axis";
 				minValue="0";
@@ -319,7 +322,7 @@ class CfgModels
 			class rotate_left_foot_2
 			{
 				type="rotation";
-				source="rotate_left_foot_2";
+				source="move_left_foot";
 				selection="left_foot";
 				axis="left_foot_axis_2";
 				minValue="0";
@@ -342,7 +345,7 @@ class CfgModels
 			class rotate_right_foot
 			{
 				type="rotation";
-				source="rotate_right_foot";
+				source="move_right_foot";
 				selection="right_foot";
 				axis="right_foot_axis";
 				minValue="0";
@@ -353,7 +356,7 @@ class CfgModels
 			class rotate_right_foot_2
 			{
 				type="rotation";
-				source="rotate_right_foot_2";
+				source="move_right_foot";
 				selection="right_foot";
 				axis="right_foot_axis_2";
 				minValue="0";
@@ -372,8 +375,46 @@ class CfgModels
 				offset0=0;
 				offset1=-0.686;
 			};
-			
-			
+			class hide_jack_handle_left
+			{
+				type="hide";
+				source="hide_jack_handle_left";
+				selection="jack_handle_left";
+				minValue=0;
+				maxValue=1;
+				hideValue=1;
+			};
+			class hide_jack_handle_right
+			{
+				type="hide";
+				source="hide_jack_handle_right";
+				selection="jack_handle_right";
+				minValue=0;
+				maxValue=1;
+				hideValue=1;
+			};
+			class jack_left
+			{
+				type="rotation";
+				source="jack_left";
+				selection="jack_left";
+				axis="hyd_jack_axis";
+				minValue="0";
+				maxValue="1";
+				angle0="rad -30";
+				angle1="rad +15";
+			};
+			class jack_right
+			{
+				type="rotation";
+				source="jack_right";
+				selection="jack_right";
+				axis="hyd_jack_axis";
+				minValue="0";
+				maxValue="1";
+				angle0="rad -30";
+				angle1="rad +15";
+			};
 			class recoil_begin 
 			{
 				type="translation";
