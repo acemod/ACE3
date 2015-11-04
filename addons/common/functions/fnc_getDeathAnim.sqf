@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal, PabstMirror
- * Get the death animation for the unit at current ACE_time
+ * Get the death animation for the unit at current time
  *
  * Arguments:
  * 0: unit <OBJECT>
