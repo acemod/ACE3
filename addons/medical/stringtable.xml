@@ -2111,6 +2111,7 @@
             <English>%1 used Personal Aid Kit</English>
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
+            <Russian>%1 использовал аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2963,7 +2964,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
-            <Russian>Позволить ботам терять сознание</Russian>
+            <Russian>Позволить ботам терять сознание (вместо мгновенной смерти)</Russian>
             <Polish>Czy AI może być nieprzytomne od odniesionych obrażeń?</Polish>
             <Spanish>Permita a la IA caer inconsciente</Spanish>
             <German>KI kann bewusstlos werden</German>
