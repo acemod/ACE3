@@ -29,7 +29,7 @@
         <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_description">
             <English>Fallback Alpha value for group leaders.</English>
             <Portuguese>Valor de transparência alternativo para líderes de grupo</Portuguese>
-            <Russian>Значение прозрачности для лидеров групп</Russian>
+            <Russian>Значение прозрачности для лидеров групп.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultAlpha_displayName">
             <English>Default Alpha</English>
@@ -39,7 +39,7 @@
         <Key ID="STR_ACE_map_gestures_defaultAlpha_descriptions">
             <English>Fallback Alpha value.</English>
             <Portuguese>Valor alternativo de transparência</Portuguese>
-            <Russian>Значение прозрачности по-умолчанию</Russian>
+            <Russian>Значение прозрачности по-умолчанию.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
@@ -49,7 +49,7 @@
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
             <English>Fallback Color value for group leaders.</English>
             <Portuguese>Valor de cor alternativa para líderes de grupo</Portuguese>
-            <Russian>Значение цвета для лидеров групп</Russian>
+            <Russian>Значение цвета для лидеров групп.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
             <English>Default Color</English>
@@ -59,7 +59,7 @@
         <Key ID="STR_ACE_map_gestures_defaultColor_description">
             <English>Fallback Color value.</English>
             <Portuguese>Valor alternativo de cor</Portuguese>
-            <Russian>Значение цвета</Russian>
+            <Russian>Значение цвета.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadAlpha_displayName">
             <English>Lead Alpha</English>
@@ -124,12 +124,12 @@
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_description">
             <English>Group color configuration containing arrays of color pairs ([leadColor, color]).</English>
             <Portuguese>Configuração de cores de grupo contendo arrays com pares de cores ([leadColor, color]).</Portuguese>
-            <Russian>Конфигурация цвета групп содержит массив цветовых пар ([лид. цвет, цвет])</Russian>
+            <Russian>Конфигурация цвета групп содержит массив цветовых пар ([лид. цвет, цвет]).</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_description">
             <English>Hash of Group ID mapped to the Group color configuration index.</English>
             <Portuguese>Hashes de ID de grupos mapeados para o índice de configuração de cor de grupos.</Portuguese>
-            <Russian>Хеш ID групп, соответствующих индексам конфигурации цвета групп</Russian>
+            <Russian>Хеш ID групп, соответствующих индексам конфигурации цвета групп.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_displayName">
             <English>GroupID Color configuration mapping</English>
@@ -139,7 +139,7 @@
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
             <Portuguese>Ativa os gestos no mapa</Portuguese>
-            <Russian>Включает указания на карте</Russian>
+            <Russian>Включает указания на карте.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
             <English>Name Text Color</English>
