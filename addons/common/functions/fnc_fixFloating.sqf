@@ -38,4 +38,4 @@ _object setDamage damage _object;
 } forEach (_hitPointDamages select 2);
 
 //reset allowDamage to what it should be
-[_object] call FUNC(handleAllowDamage);
+[_object, "", -1] call FUNC(setAllowDamage);

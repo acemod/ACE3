@@ -91,7 +91,7 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
-PREP(handleAllowDamage);
+PREP(handleLocal);
 PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
 PREP(handleModifierKeyInit);
