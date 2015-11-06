@@ -356,5 +356,11 @@ SLX_XEH_STR spawn {
 */
 { (_x/SLX_XEH_STR_PreInit) call FUNC(init_once) } forEach SLX_XEH_CONFIG_FILES;
 
-
-XEH_LOG("XEH: PreInit Finished. " + PFORMAT_3("CACHE DISABLED? (Disable caching with cba_cache_disable.pbo)",SLX_XEH_RECOMPILE,CBA_COMPILE_RECOMPILE,CBA_FUNC_RECOMPILE));
+private "_s";
+// Normally, full caching is enabled. If not, log an informative message.
+_s = if (SLX_XEH_RECOMPILE || CBA_COMPILE_RECOMPILE || CBA_FUNC_RECOMPILE) then {
+    PFORMAT_3(" CACHE DISABLED? (Disable caching with cba_cache_disable.pbo)",SLX_XEH_RECOMPILE,CBA_COMPILE_RECOMPILE,CBA_FUNC_RECOMPILE)
+} else {
+    ""
+};
+XEH_LOG("XEH: PreInit Finished." + _s);

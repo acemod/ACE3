@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [some_display, log] call ace_medical_menu_updateQuickViewLog
+ * [some_display, log] call ace_medical_menu_fnc_updateQuickViewLog
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ _logCtrl = _display displayCtrl 215;
 lbClear _logCtrl;
 
 {
-    _x params ["_message", "_moment", "_dummy", "_arguments"];
+    _x params ["_message", "_moment", "", "_arguments"];
 
     if (isLocalized _message) then {
         _message = localize _message;

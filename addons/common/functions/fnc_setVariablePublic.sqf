@@ -1,12 +1,12 @@
 /*
  * Author: commy2 and joko // Jonas
- * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
+ * Sets a public variable, but wait a certain amount of time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
  * Arguments:
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
- * 3: Windup ACE_time <NUMBER> (default: 1)
+ * 3: Windup time <NUMBER> (default: 1)
  *
  * Return Value:
  * None

@@ -3,10 +3,10 @@
  * Handles the Kestrel 4500 dialog button actions
  *
  * Arguments:
- * buttonID <integer>
+ * button ID <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 2 call ace_kestrel4500_fnc_buttonPressed

@@ -44,7 +44,7 @@ _horizontal = _display displayCtrl 13;
 _vertical ctrlSetText (str _elevation);
 _horizontal ctrlSetText (str _windage);
 
-// Set the ACE_time when to hide the knobs
+// Set the time when to hide the knobs
 GVAR(timeToHide) = ACE_diagTime + 3.0;
 
 if !(isNil QGVAR(fadePFH)) exitWith {};

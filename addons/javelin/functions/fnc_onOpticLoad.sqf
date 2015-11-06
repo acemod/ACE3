@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
-#define __LOCKONTIMERANDOM 2    // Deviation in lock on ACE_time
+#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
 
 if((count _this) > 0) then {
     uiNameSpace setVariable ['ACE_RscOptics_javelin',_this select 0];
@@ -29,7 +29,7 @@ uiNameSpace setVariable [QGVAR(arguments),
         0,         // Run Time
         0,          // Lock Time
         0,           // Sound timer
-        (random __LOCKONTIMERANDOM), // random lock ACE_time addition
+        (random __LOCKONTIMERANDOM), // random lock time addition
         -1
     ]
 ];

@@ -134,6 +134,7 @@ PREP(numberToDigitsString);
 PREP(numberToString);
 PREP(onAnswerRequest);
 PREP(owned);
+PREP(parseList);
 PREP(player);
 PREP(playerSide);
 PREP(positionToASL);
@@ -224,6 +225,7 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+PREP(hasHatch);
 
 // missing inventory commands
 PREP(binocularMagazine);

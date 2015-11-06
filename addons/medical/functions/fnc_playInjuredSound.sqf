@@ -1,7 +1,7 @@
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
- * Will not play if the unit has already played a sound within to close a ACE_time frame.
+ * Will not play if the unit has already played a sound within to close a time frame.
  * Delay: With minimal damage (below 1), the delay is (10 + random(50)) seconds. Otherwise it is 60 seconds / damage.
  *
  * Arguments:
