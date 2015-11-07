@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal, ViperMaul
- * Check if item can be unloaded.
+ * Check if item can be unloaded. (Unused, left as helper)
  *
  * Arguments:
  * 0: loaded Object <OBJECT>
@@ -23,22 +23,6 @@ params ["_item", "_vehicle"];
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 if !(_item in _loaded) exitWith {false};
 
-_validVehiclestate = true;
-_emptyPos = [];
-if (_vehicle isKindOf "Ship" ) then {
-    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, typeOf _item]); // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air" ) then {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
-        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
-    } else {
-        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
-        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, typeOf _item]);
-    };
-};
+_emptyPos = [_vehicle, (typeOf _item)] call EFUNC(common,findUnloadPosition);
 
-if (!_validVehiclestate) exitWith {false};
-
-(count _emptyPos != 0)
+(count _emptyPos == 3)

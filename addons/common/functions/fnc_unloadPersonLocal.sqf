@@ -3,7 +3,9 @@
  * Unload a person from a vehicle, local
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: unit to unload <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Unloader (player) <OBJECT><OPTIONAL>
  *
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
@@ -14,52 +16,23 @@
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-params ["_unit", "_vehicle"];
+params ["_unit", "_vehicle", ["_unloader", objNull]];
+TRACE_3("params",_unit,_vehicle,_unloader);
 
 private ["_validVehiclestate", "_emptyPos", "_loaded"];
 
-_validVehiclestate = true;
+//This covers testing vehicle stability and finding a safe position
+_emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+TRACE_1("findUnloadPosition",_emptyPos);
 
-if (_vehicle isKindOf "Ship") then {
-    if (speed _vehicle > 1 || {getPos _vehicle select 2 > 2}) then {
-        _validVehiclestate = false;
+if (count _emptyPos != 3) exitwith {
+    ACE_LOGWARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
+        //display text saying there are no safe places to exit the vehicle
+        ["displayTextStructured", [_unloader], [localize LSTRING(NoRoomToUnload)]] call FUNC(targetEvent);
     };
-
-    TRACE_1("SHIP Ground Check",getPos _vehicle);
-
-    _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit]; // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air") then {
-        if (speed _vehicle > 1 || {isTouchingGround _vehicle}) then {
-            _validVehiclestate = false;
-        };
-
-        TRACE_1("Vehicle Ground Check",isTouchingGround _vehicle);
-
-        _emptyPos = ASLToAGL getPosASL _vehicle;
-        _emptyPos = _emptyPos vectorAdd [random 10 - 5, random 10 - 5, 0];
-    } else {
-        if (speed _vehicle > 1 || {getPos _vehicle select 2 > 2})  then {
-            _validVehiclestate = false;
-        };
-
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-
-        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit];
-    };
-};
-
-TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-
-if !(_validVehiclestate) exitwith {
-    ACE_LOGWARNING_4("Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4",_vehicle,getPos _vehicle,isTouchingGround _vehicle,speed _vehicle);
     false
 };
-
-if (count _emptyPos == 0) exitwith {
-    ACE_LOGWARNING_1("No safe empty spots to unload patient. %1",_emptyPos);
-    false
-};  //consider displaying text saying there are no safe places to exit the vehicle
 
 unassignVehicle _unit;
 [_unit] orderGetIn false;
@@ -91,7 +64,7 @@ _unit action ["Eject", vehicle _unit];
             }, [_unit, _anim], 0.5, 0] call FUNC(waitAndExecute);
         };
     };
-}, [_unit, _emptyPos], 0.5, 0] call FUNC(waitAndExecute);
+}, [_unit, _emptyPos], 0.5] call FUNC(waitAndExecute);
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
