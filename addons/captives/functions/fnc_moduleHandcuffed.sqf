@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Module Function to make a unit surrender (can be called from editor)
+ * Module Function to make a unit handcuffed (can be called from editor)
  *
  * Arguments:
  * 0: The Module Logic <OBJECT>
@@ -28,7 +28,7 @@ if (!isServer) exitWith {};
 [{
     params ["_units"];
     {
-        ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
+        ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
     } forEach _units;
 }, [_units], 0.05] call EFUNC(common,waitAndExecute);
 

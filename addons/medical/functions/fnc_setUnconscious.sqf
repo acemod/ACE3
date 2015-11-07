@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
  * 1: Set unconsciouns <BOOL> (default: true)
- * 2: Minimum unconscious ACE_time <NUMBER> (default: (round(random(10)+5)))
+ * 2: Minimum unconscious time <NUMBER> (default: (round(random(10)+5)))
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * ReturnValue:

@@ -31,7 +31,7 @@ if (!alive _target || {_unit distance _target > 10}) then {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
-// timeout. Do nothing. Quit. ACE_time, because anim length is linked to ingame ACE_time.
+// timeout. Do nothing. Quit. ACE_time, because anim length is linked to ingame time.
 if (ACE_time > _timeOut) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 

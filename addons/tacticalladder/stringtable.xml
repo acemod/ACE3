@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tacticalladder">
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
@@ -41,6 +41,7 @@
             <English>Extend, +Ctrl tilt</English>
             <German>Ausfahren, +Strg kippen</German>
             <Polish>Rozłóż, +Ctrl nachyl</Polish>
+            <Portuguese>Extender, +Ctrl tilt</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
