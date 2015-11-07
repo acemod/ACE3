@@ -24,9 +24,9 @@ private ["_array", "_type", "_return", "_config" /*, "_priority"*/];
 
 // get Priority Array from Config
 _array = [
-    getNumber (configFile >> "CfgWeapons" >> QGVAR(priority)),
-    getNumber (configFile >> "CfgMagazines" >> QGVAR(priority)),
-    getNumber (configFile >> "CfgAmmo" >> QGVAR(priority))
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(priority)),
+    getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(priority)),
+    getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(priority))
 ];
 
 TRACE_1("Proiroity Array",_array);

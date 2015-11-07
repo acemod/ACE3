@@ -63,7 +63,7 @@ if (isNull _holder) then {
 if (isNull _holder) exitWith {
     [_caller, _target, "Debug: Null Holder"] call FUNC(eventTargetFinish);
 };
-//Make sure only one drop operation at a ACE_time (using PFEH system as a queue)
+//Make sure only one drop operation at a time (using PFEH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     [{
         _this call FUNC(disarmDropItems);

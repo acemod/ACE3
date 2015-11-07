@@ -7,7 +7,7 @@
  * 1: Medication Treatment classname <STRING>
  * 2: The medication treatment variablename <STRING>
  * 3: Max dosage <NUMBER>
- * 4: The ACE_time in the system <NUMBER>
+ * 4: The time in the system <NUMBER>
  * 5: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
