@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_map_gestures_moduleSettings_displayName">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
-            <Russian>Указания на карте</Russian>
+            <Russian>Жесты на карте</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_displayName">
             <English>Enabled</English>
@@ -14,12 +14,12 @@
         <Key ID="STR_ACE_map_gestures_maxRange_displayName">
             <English>Map Gesture Max Range</English>
             <Portuguese>Distância para gestos no mapa</Portuguese>
-            <Russian>Дистанция указаний на карте</Russian>
+            <Russian>Макс. дистанция жестов на карте</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_maxRange_description">
             <English>Max range between players to show the map gesture indicator [default: 7 meters]</English>
             <Portuguese>Distância max. entre os jogadores para mostrar o indicador de gesto no mapa [padrão: 7 metros]</Portuguese>
-            <Russian>Макс. дистанция между игроками для отображения указаний на карте [по-умолчанию: 7 метров]</Russian>
+            <Russian>Макс. дистанция между игроками для отображения жестов на карте [по-умолчанию: 7 метров]</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_displayName">
             <English>Lead Default Alpha</English>
@@ -104,7 +104,7 @@
         <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
             <Portuguese>Gestos no mapa - Definições de Grupo</Portuguese>
-            <Russian>Указания на карте - настройки групп</Russian>
+            <Russian>Жесты на карте - настройки групп</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_interval_displayName">
             <English>Update Interval</English>
@@ -144,17 +144,17 @@
         <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
             <English>Name Text Color</English>
             <Portuguese>Cor do texto do nome</Portuguese>
-            <Russian>Цвет текста позывного</Russian>
+            <Russian>Цвет текста имени</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_nameTextColor_description">
             <English>Color of the name tag text besides the map gestures mark.</English>
             <Portuguese>Cor do texto da etiqueta de nome que fica embaixo da marcação de gestos no mapa.</Portuguese>
-            <Russian>Цвет позывного за маркером указаний.</Russian>
+            <Russian>Цвет инмени игрока рядом с маркером жестов.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_mapGestures_category">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
-            <Russian>Указания на карте</Russian>
+            <Russian>Жесты на карте</Russian>
         </Key>
     </Package>
 </Project>
