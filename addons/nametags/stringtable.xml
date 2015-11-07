@@ -9,7 +9,7 @@
             <Czech>Zobrazit jména</Czech>
             <Polish>Pokaż imiona</Polish>
             <Hungarian>Nevek mutatása</Hungarian>
-            <Russian>Показывать позывные</Russian>
+            <Russian>Показать имена</Russian>
             <Italian>Mostra i nomi</Italian>
             <Portuguese>Mostrar nomes</Portuguese>
         </Key>
@@ -23,7 +23,7 @@
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
             <Italian>Mostra i nomi dei giocatori</Italian>
-            <Russian>Показывать позывные игроков (включить позывные)</Russian>
+            <Russian>Показывать имена игроков (включить имена)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
             <English>Show player name only on cursor (requires player names)</English>
@@ -35,7 +35,7 @@
             <Italian>Mostra i nomi solo se puntati (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать позывные игроков только под курсором (при включенных позывных)</Russian>
+            <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
             <English>Show player name only on keypress (requires player names)</English>
@@ -45,7 +45,7 @@
             <Czech>Zobrazit jména hráčů jen na klávesu (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż imiona graczy tylko po przytrzymaniu klawisza (wymagana opcja Pokaż imiona graczy)</Polish>
             <Hungarian>Játékosnevek mutatása csak gombnyomásra (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показать позывные игроков только по нажатию клавиши (при включенных позывных)</Russian>
+            <Russian>Показать имена игроков только по нажатию клавиши (при включенных именах)</Russian>
             <Italian>Mostra i nomi solo se si preme il tasto (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
         </Key>
@@ -59,7 +59,7 @@
             <Italian>Mostra i gradi (richiede mostra nomi abilitato)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
-            <Russian>Показывать звания игроков (при вкл. позывных)</Russian>
+            <Russian>Показывать звания игроков (при вкл. именах)</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -89,7 +89,7 @@
             <English>Show SoundWaves (requires player names)</English>
             <German>Schallwellen anzeigen  (benötigt Spielernamen)</German>
             <Spanish>Mostrar onda sonora (requiere Mostrar nombres de jugadores)</Spanish>
-            <Russian>Индикатор разговора (при вкл. позывных)</Russian>
+            <Russian>Индикатор разговора (при вкл. именах)</Russian>
             <Czech>Zobrazit SoundWaves (vyžaduje jména hráčů)</Czech>
             <Polish>Pokaż fale dźwiękowe (wymagana opcja Pokaż imiona graczy)</Polish>
             <French>Afficher "qui parle" (si noms affichés)</French>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
             <German>Voreingestellte Namenfarbe (Spieler außerhalb der Gruppe)</German>
-            <Russian>Цвет позывных по-умолчанию (не членов групп)</Russian>
+            <Russian>Цвет меток игроков (не членов групп)</Russian>
             <Spanish>Color de etiquetas de nombre por defecto (No miembros de grupo)</Spanish>
             <Polish>Domyślny kolor imion (członkowie spoza grupy)</Polish>
             <French>Couleur d'affichage par défaut (si dans aucun groupe)</French>
@@ -118,7 +118,7 @@
             <Portuguese>Etiquetas de nome</Portuguese>
             <French>NameTags</French>
             <Hungarian>Névcímkék</Hungarian>
-            <Russian>Позывные</Russian>
+            <Russian>Имена игроков</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
@@ -129,7 +129,7 @@
             <Portuguese>Distância de visão dos nomes dos jogadores</Portuguese>
             <French>Distance de vue des noms de joueurs</French>
             <Hungarian>Játékosok nevének látótávja</Hungarian>
-            <Russian>Дистанция отображения позывных</Russian>
+            <Russian>Дистанция отображения имен</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
@@ -140,7 +140,7 @@
             <Portuguese>Distância em metros que os nomes dos jogadores são mostrados. Padrão: 5</Portuguese>
             <French>Distance en mètres au delà de laquelle les noms de joueurs ne sont plus affichés. Défaut: 5</French>
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
-            <Russian>Дистанция в метрах, на которой отображаются позывные игроков. По-умолчанию: 5</Russian>
+            <Russian>Дистанция в метрах, на которой отображаются имена игроков. По-умолчанию: 5</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
@@ -226,7 +226,7 @@
             <German>Zeige Maus-Namensanzeigen für Fahrzeugkommandanten (nur wenn der Client Namensanzeigen aktiviert hat). Standard: Nein</German>
             <Czech>Zobrazit jmenovky pro velitele vozidla (pouze pokud má klient jmenovky povolené). Výchozí: Ne</Czech>
             <Portuguese>Mostrar o nome no cursor para o comandante do veículo (somente se o cliente tiver etiquetas de nomes ativada). Padrão: Não</Portuguese>
-            <Russian>Показывать позывной командира техники (только, если клиент включил отображение позывных). По-умолчанию: Нет</Russian>
+            <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
             <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut: non</French>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
@@ -238,7 +238,7 @@
             <Portuguese>Este módulo permite que você personalize as configurações e distâncias de etiquetas de nome.</Portuguese>
             <French>Ce module permet le paramétrage de l'affichage des étiquettes des noms</French>
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
-            <Russian>Этот модуль позволяет настроить опции и дистанцию отображения позывных.</Russian>
+            <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -315,7 +315,7 @@
             <Portuguese>Usar ajustes de etiquetas de nome</Portuguese>
             <French>Utiliser les paramètre des NamesTags</French>
             <Hungarian>Névcímkék beállításának használata</Hungarian>
-            <Russian>Так же, как позывные</Russian>
+            <Russian>Так же, как имена</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
@@ -337,7 +337,7 @@
             <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
             <French>Afficher les noms des joueurs et paramètre son activation. Défaut: activé</French>
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
-            <Russian>Показывать позывные игроков и установить их активацию. По-умолчанию: Включено</Russian>
+            <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
@@ -359,7 +359,7 @@
             <Portuguese>Tamanho das etiquetas de nome</Portuguese>
             <French>Taille des noms</French>
             <Hungarian>Névcímkék mérete</Hungarian>
-            <Russian>Размер позывных</Russian>
+            <Russian>Размер имен игроков</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
