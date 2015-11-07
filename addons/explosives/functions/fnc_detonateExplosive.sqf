@@ -7,7 +7,7 @@
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
  *     0: Explosive <OBJECT>
- *     1: Fuse ACE_time <NUMBER>
+ *     1: Fuse time <NUMBER>
  *
  * Return Value:
  * None

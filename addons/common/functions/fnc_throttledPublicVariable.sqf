@@ -19,7 +19,7 @@
 
 params ["_unit", "_varName", "_maxDelay"];
 
-// Create the publish scheduler PFH the first ACE_time
+// Create the publish scheduler PFH the first time
 if (isNil QGVAR(publishSchedId)) then {
     GVAR(publishVarNames) = [];
     GVAR(publishNextTime) = 1e7;
