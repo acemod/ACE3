@@ -44,8 +44,8 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
-        _validValue = false;
-        _value = switch (true) do {
+        local _validValue = false;
+        switch (true) do {
             case (_typeName == "SCALAR"): {_validValue = true;};
             case (_typeName == "BOOL"): {
                 _settingValue = _settingValue > 0;
