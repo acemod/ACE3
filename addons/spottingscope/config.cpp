@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_SpottingScope"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_apl", "ace_interaction"};
-        author[] = {"Rocko", "Scubaman3D", "Ruthberg", "commy2"};
+        author[] = {"Rocko", "Scubaman3D", "Ruthberg", "commy2", "p1nga"};
         VERSION_CONFIG;
     };
 };
