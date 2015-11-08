@@ -6,7 +6,7 @@ class CfgAmmo {
     class F_20mm_White: FlareBase {};
     
     class ACE_FlashlightProxy_White: F_20mm_White {
-        model = "";
+        model = "\A3\Weapons_f\empty";
         effectFlare = "FlareShell";
         
         triggerTime = 0;
