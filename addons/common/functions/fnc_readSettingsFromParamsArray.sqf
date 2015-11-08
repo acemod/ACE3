@@ -26,10 +26,9 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
     if ((getNumber (_config >> "ACE_setting")) > 0) then {
         local _settingName = configName _config;
         local _settingValue = _x;
-        local _force = (getNumber (_config >> "force")) > 0;
         local _title = getText (_config >> "title");
 
-        TRACE_4("ace_setting",_title,_settingName,_settingValue,_force);
+        TRACE_3("ace_setting",_title,_settingName,_settingValue);
 
         // Check if the variable is already defined
         if (isNil _settingName) exitWith {
@@ -58,7 +57,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             ACE_LOGWARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
         };
 
-        // Update the variable globaly and Force the setting if requested
-        [_settingName, _settingValue, _force, true] call FUNC(setSetting);
+        // Update the variable globaly and Force
+        [_settingName, _settingValue, true, true] call FUNC(setSetting);
     };
 } foreach _paramsArray;
