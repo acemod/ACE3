@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_vehicle"];
@@ -71,12 +70,18 @@ _processedHitpoints = [];
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
         [_type, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
     } else {
+        //Skip glass hitpoints
+        if (((toLower _hitPoint) find "glass") != -1) exitWith {
+            TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection);
+        };
         // Empty selections don't exist
         // Empty hitpoints don't contain enough information
         if (_selection isEqualTo "") exitWith { TRACE_3("Selection Empty",_hitpoint,_forEachIndex,_selection); };
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Hitpoint Empty",_hitpoint,_forEachIndex,_selection); };
-        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _x >> "depends")) exitWith { TRACE_3("Skip Depends"_hitpoint,_forEachIndex,_selection); };
-
+        //Depends hitpoints shouldn't be modified directly (will be normalized)
+        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) exitWith {
+            TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
+        };
 
         // Associated hitpoints can be grouped via config to produce a single repair action
         _groupsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
