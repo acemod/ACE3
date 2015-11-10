@@ -41,7 +41,7 @@ if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
     ACE_LOGINFO("ACRE Detected.");
     DFUNC(isSpeaking) = {
         params ["_unit"];
-        (([_unit] call acre_api_fnc_isSpeaking) || {[ACE_player] call acre_api_fnc_isBroadcasting}) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+        ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
     };
 } else {
     if (isClass (configFile >> "cfgPatches" >> "task_force_radio")) then {

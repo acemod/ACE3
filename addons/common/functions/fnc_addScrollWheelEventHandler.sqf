@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Add an event handler that executes every ACE_time the scroll wheel is used. This is needed, because adding a MouseZ display event handler to display 46 will break in save games.
+ * Add an event handler that executes every time the scroll wheel is used. This is needed, because adding a MouseZ display event handler to display 46 will break in save games.
  * _this will be [Interval] where 'Interval' is a number.
  *
  * Arguments:
