@@ -2106,11 +2106,13 @@
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
             <Portuguese>%1 realizou RCP</Portuguese>
+            <Czech>%1 provádí CPR</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
+            <Czech>%1 používá PAK</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -3843,6 +3845,7 @@
             <Russian>Расстояние до %1 стало слишком большим для лечения</Russian>
             <Portuguese>A distância de %1 está muito longe para tratamento</Portuguese>
             <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
+            <Czech>%1 je příliš daleko, léčba není možná</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
@@ -3850,6 +3853,7 @@
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
             <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
+            <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
@@ -3857,6 +3861,7 @@
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
+            <Czech>Žádné škrtidlo na této části těla!</Czech>
         </Key>
     </Package>
 </Project>

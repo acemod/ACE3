@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -397,6 +397,7 @@
             <French>Affiche les nouveautés sur l'écran principal</French>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в Главном Меню</Russian>
+            <Czech>Zobrazit zprávy v hlavním menu</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>

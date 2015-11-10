@@ -215,18 +215,22 @@
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
             <Portuguese>Adicionar roda sobressalente</Portuguese>
+            <Czech>Přidat rezervní kolo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
             <Portuguese>Adiciona uma roda sobressalente ao veículo</Portuguese>
+            <Czech>Přidá rezervní kolo do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
             <Portuguese>Adicionar esteira sobressalente</Portuguese>
+            <Czech>Přidat náhradní pás</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
             <Portuguese>Adiciona uma esteira sobressalente ao veículo</Portuguese>
+            <Czech>Přidá náhradní pás do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -258,6 +262,7 @@
             <Portuguese>Unidade deve ser uma estrutura</Portuguese>
             <Russian>Юнит должен быть строением</Russian>
             <Spanish>La unidad debe ser una estructura</Spanish>
+            <Czech>Jednotka musí být budova</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -265,14 +270,17 @@
             <Portuguese>Unidade deve ser um veículo</Portuguese>
             <Russian>Юнит должен быть транспортом</Russian>
             <Spanish>La unidad debe ser un vehículo</Spanish>
+            <Czech>Jednotka musí být vozidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
             <Portuguese>Unidade deve ser um veículo com espaço em carga</Portuguese>
+            <Czech>Jednotka musí být vozidlo s úložným prostorem</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
             <Portuguese>Unidade deve conter espaço sobressalente</Portuguese>
+            <Czech>Jednotka musí mít místo v úložném prostoru</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -314,6 +322,7 @@
             <Portuguese>Adicionar objetos para o Curator</Portuguese>
             <Russian>Добавить объекты куратору</Russian>
             <Spanish>Agregar objetos al director</Spanish>
+            <Czech>Přidat objekty kurátorovi</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
@@ -321,6 +330,7 @@
             <Portuguese>Adicionar qualquer objeto criado para todos os curators na missão</Portuguese>
             <Russian>Добавляет любой отспавненный объект всем кураторам в миссии</Russian>
             <Spanish>Añadir cualquier objeto creado a todos los directores en la misión</Spanish>
+            <Czech>Přidá jakékoliv spawnuté objekty všem kurátorům v misi</Czech>
         </Key>
     </Package>
 </Project>

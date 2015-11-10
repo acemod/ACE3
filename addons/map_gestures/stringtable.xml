@@ -8,6 +8,7 @@
         <Key ID="STR_ACE_map_gestures_enabled_displayName">
             <English>Enabled</English>
             <Portuguese>Ativado</Portuguese>
+            <Czech>Povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_map_gestures_maxRange_displayName">
             <English>Map Gesture Max Range</English>
@@ -76,6 +77,7 @@
         <Key ID="STR_ACE_map_gestures_color_displayName">
             <English>Color</English>
             <Portuguese>Cor</Portuguese>
+            <Czech>Barva</Czech>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_description">
             <English>Color value for group members of groups synced with this module.</English>
@@ -88,10 +90,12 @@
         <Key ID="STR_ACE_map_gestures_interval_displayName">
             <English>Update Interval</English>
             <Portuguese>Intervalo de atualizações</Portuguese>
+            <Czech>Interval aktualizace</Czech>
         </Key>
         <Key ID="STR_ACE_map_gestures_interval_description">
             <English>Time between data updates.</English>
             <Portuguese>Tempo entre atualização de dados</Portuguese>
+            <Czech>Čas mezi aktualizacemi dat.</Czech>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_displayName">
             <English>Group color configurations</English>

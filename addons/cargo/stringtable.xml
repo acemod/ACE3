@@ -70,6 +70,7 @@
             <Portuguese>Configura as preferências do módulo de carga</Portuguese>
             <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
+            <Czech>Konfigurace nákladního modulu</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -89,7 +90,7 @@
             <Spanish>Descargado/a&lt;br/&gt;%1 de&lt;br/&gt;%2</Spanish>
             <French>Déchargé&lt;br/&gt;%1 de&lt;br/&gt;%2</French>
             <Polish>%1&lt;br/&gt;rozładowano z&lt;br/&gt;%2</Polish>
-            <Czech>Nezatížený&lt;br/&gt;%1 do&lt;br/&gt;%2</Czech>
+            <Czech>%1&lt;br/&gt;vyloženo z&lt;br/&gt;%2</Czech>
             <Portuguese>%1&lt;br/&gt;descarregado de&lt;br/&gt;%2</Portuguese>
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
@@ -97,15 +98,19 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
+            <Czech>Nakládám</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
+            <Czech>Vykládám</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
+            <Czech>%1&lt;br/&gt;nemůže být naloženo</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
+            <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
         </Key>
     </Package>
 </Project>

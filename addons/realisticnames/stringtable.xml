@@ -138,7 +138,7 @@
             <German>M-ATV (SMG)</German>
             <Spanish>M-ATV (HMG)</Spanish>
             <Polish>M-ATV (CKM)</Polish>
-            <Czech>M-ATV (TK)</Czech>
+            <Czech>M-ATV (HMG)</Czech>
             <French>M-ATV (HMG)</French>
             <Russian>M-ATV (Пулемёт)</Russian>
             <Portuguese>M-ATV (HMG)</Portuguese>
@@ -150,7 +150,7 @@
             <German>M-ATV (GMW)</German>
             <Spanish>M-ATV (GMG)</Spanish>
             <Polish>M-ATV (GMG)</Polish>
-            <Czech>M-ATV (Granátomet)</Czech>
+            <Czech>M-ATV (GMG)</Czech>
             <French>M-ATV (GMG)</French>
             <Russian>M-ATV (Гранатомёт)</Russian>
             <Portuguese>M-ATV (GMG)</Portuguese>
@@ -258,7 +258,7 @@
             <German>HEMTT Transport</German>
             <Spanish>HEMTT de transporte</Spanish>
             <Polish>HEMTT Transportowy</Polish>
-            <Czech>HEMTT Valník</Czech>
+            <Czech>HEMTT (valník)</Czech>
             <French>HEMTT Transport</French>
             <Russian>HEMTT Транспортный</Russian>
             <Portuguese>HEMTT Transporte</Portuguese>
@@ -270,7 +270,7 @@
             <German>HEMTT Transport (bedeckt)</German>
             <Spanish>HEMTT de transporte (cubierto)</Spanish>
             <Polish>HEMTT Transportowy (zakryty)</Polish>
-            <Czech>HEMTT Valník (krytý)</Czech>
+            <Czech>HEMTT (valník-krytý)</Czech>
             <French>HEMTT Transport (bâché)</French>
             <Russian>HEMTT Транспортный (крытый)</Russian>
             <Portuguese>HEMTT Transporte (coberto)</Portuguese>
@@ -294,7 +294,7 @@
             <German>HEMTT Container</German>
             <Spanish>HEMTT con contenedor</Spanish>
             <Polish>HEMTT Kontener</Polish>
-            <Czech>HEMTT Skříňový</Czech>
+            <Czech>HEMTT (skříňový)</Czech>
             <French>HEMTT Conteneur</French>
             <Russian>HEMTT Контейнер</Russian>
             <Portuguese>HEMTT Contêiner</Portuguese>
@@ -306,7 +306,7 @@
             <German>HEMTT Sanitäter</German>
             <Spanish>HEMTT médico</Spanish>
             <Polish>HEMTT Medyczny</Polish>
-            <Czech>HEMTT Zdravotnický</Czech>
+            <Czech>HEMTT (zdravotnický)</Czech>
             <French>HEMTT Médical</French>
             <Russian>HEMTT Медицинский</Russian>
             <Portuguese>HEMTT Médico</Portuguese>
@@ -318,7 +318,7 @@
             <German>HEMTT Munition</German>
             <Spanish>HEMTT de munición</Spanish>
             <Polish>HEMTT Amunicyjny</Polish>
-            <Czech>HEMTT Muniční</Czech>
+            <Czech>HEMTT (muniční)</Czech>
             <French>HEMTT Munitions</French>
             <Russian>HEMTT Боеприпасы</Russian>
             <Portuguese>HEMTT Munições</Portuguese>
@@ -330,7 +330,7 @@
             <German>HEMTT Treibstoff</German>
             <Spanish>HEMTT de combustible</Spanish>
             <Polish>HEMTT Cysterna</Polish>
-            <Czech>HEMTT Cisterna</Czech>
+            <Czech>HEMTT (cisterna)</Czech>
             <French>HEMTT Citerne</French>
             <Russian>HEMTT Заправщик</Russian>
             <Portuguese>HEMTT Combustível</Portuguese>
@@ -342,7 +342,7 @@
             <German>HEMTT Instandsetzung</German>
             <Spanish>HEMTT de reparación</Spanish>
             <Polish>HEMTT Naprawczy</Polish>
-            <Czech>HEMTT Opravárenský</Czech>
+            <Czech>HEMTT (opravárenský)</Czech>
             <French>HEMTT Réparation</French>
             <Russian>HEMTT Ремонтный</Russian>
             <Portuguese>HEMTT Reparador</Portuguese>
@@ -366,7 +366,7 @@
             <German>Fennek (SMG)</German>
             <Spanish>Fennek (HMG)</Spanish>
             <Polish>Fennek (CKM)</Polish>
-            <Czech>Fennek (TK)</Czech>
+            <Czech>Fennek (HMG)</Czech>
             <French>Fennek (HMG)</French>
             <Russian>Феннек (Пулемёт)</Russian>
             <Portuguese>Fennek (HMG)</Portuguese>
@@ -378,7 +378,7 @@
             <German>Fennek (GMW)</German>
             <Spanish>Fennek (GMG)</Spanish>
             <Polish>Fennek (GMG)</Polish>
-            <Czech>Fennek (granátomet)</Czech>
+            <Czech>Fennek (GMG)</Czech>
             <French>Fennek (GMG)</French>
             <Russian>Феннек (Гранатомёт)</Russian>
             <Portuguese>Fennek (GMG)</Portuguese>
@@ -426,7 +426,7 @@
             <German>KamAZ Transport</German>
             <Spanish>KamAZ de transporte</Spanish>
             <Polish>KamAZ transportowy</Polish>
-            <Czech>KamAZ Valník</Czech>
+            <Czech>KamAZ-5350 (valník)</Czech>
             <French>KamAZ Transport</French>
             <Russian>КамАЗ Транспортный</Russian>
             <Portuguese>KamAZ Transporte</Portuguese>
@@ -438,7 +438,7 @@
             <German>KamAZ Transport (bedeckt)</German>
             <Spanish>KamAZ de transporte (cubierto)</Spanish>
             <Polish>KamAZ Transportowy (zakryty)</Polish>
-            <Czech>KamAZ Valník (krytý)</Czech>
+            <Czech>KamAZ-5350 (valník-krytý)</Czech>
             <French>KamAZ Transport (bâché)</French>
             <Russian>КамАЗ Транспортный (крытый)</Russian>
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
@@ -450,7 +450,7 @@
             <German>KamAZ Munition</German>
             <Spanish>KamAZ de munición</Spanish>
             <Polish>KamAZ Amunicyjny</Polish>
-            <Czech>KamAZ Muniční</Czech>
+            <Czech>KamAZ-5350 (muniční)</Czech>
             <French>KamAZ Munitions</French>
             <Russian>КамАЗ Боеприпасы</Russian>
             <Portuguese>KamAZ Munições</Portuguese>
@@ -462,7 +462,7 @@
             <German>KamAZ Treibstoff</German>
             <Spanish>KamAZ de combustible</Spanish>
             <Polish>KamAZ cysterna</Polish>
-            <Czech>KamAZ Cisterna</Czech>
+            <Czech>KamAZ-5350 (cisterna)</Czech>
             <French>KamAZ Citerne</French>
             <Russian>КамАЗ Заправщик</Russian>
             <Portuguese>KamAZ Combustível</Portuguese>
@@ -474,7 +474,7 @@
             <German>KamAZ Instandsetzung</German>
             <Spanish>KamAZ de reparación</Spanish>
             <Polish>KamAZ Naprawczy</Polish>
-            <Czech>KamAZ Opravárenský</Czech>
+            <Czech>KamAZ-5350 (opravárenský)</Czech>
             <French>KamAZ Réparation</French>
             <Russian>КамАЗ Ремонтный</Russian>
             <Portuguese>KamAZ Reparador</Portuguese>
@@ -486,7 +486,7 @@
             <German>KamAZ Sanitäter</German>
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
-            <Czech>KAMAZ Zdravotnický</Czech>
+            <Czech>KamAZ-5350 (zdravotnický)</Czech>
             <French>KamAZ Médical</French>
             <Russian>КамАЗ Медицинский</Russian>
             <Portuguese>KamAZ Médico</Portuguese>
@@ -510,7 +510,7 @@
             <German>Punisher (SMG)</German>
             <Spanish>Punisher (HMG)</Spanish>
             <Polish>Punisher (CKM)</Polish>
-            <Czech>Punisher (TK)</Czech>
+            <Czech>Punisher (HMG)</Czech>
             <French>Punisher (HMG)</French>
             <Russian>Kаратель (Пулемёт)</Russian>
             <Portuguese>Punisher (HMG)</Portuguese>
@@ -522,7 +522,7 @@
             <German>Punisher (GMW)</German>
             <Spanish>Punisher (GMG)</Spanish>
             <Polish>Punisher (GMG)</Polish>
-            <Czech>Punisher (granátomet)</Czech>
+            <Czech>Punisher (GMG)</Czech>
             <French>Punisher (GMG)</French>
             <Russian>Kаратель (Гранатомёт)</Russian>
             <Portuguese>Punisher (GMG)</Portuguese>
@@ -594,7 +594,7 @@
             <German>Typhoon Transport</German>
             <Spanish>Typhoon de transporte</Spanish>
             <Polish>Typhoon Transportowy</Polish>
-            <Czech>Typhoon valník</Czech>
+            <Czech>KamAZ-63968 Typhoon (valník)</Czech>
             <French>Typhoon Transport</French>
             <Russian>Тайфун Транспортный</Russian>
             <Portuguese>Typhoon Transporte</Portuguese>
@@ -606,7 +606,7 @@
             <German>Typhoon Transport (bedeckt)</German>
             <Spanish>Typhoon de transporte (cubierto)</Spanish>
             <Polish>Typhoon Transportowy (przykryty)</Polish>
-            <Czech>Typhoon valník (krytý)</Czech>
+            <Czech>KamAZ-63968 Typhoon (valník-krytý)</Czech>
             <French>Typhoon Transport (bâché)</French>
             <Russian>Тайфун Транспортный (крытый)</Russian>
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
@@ -618,7 +618,7 @@
             <German>Typhoon Gerät</German>
             <Spanish>Typhoon con dispositivo</Spanish>
             <Polish>Typhoon Urządzenie</Polish>
-            <Czech>Typhoon zařízení</Czech>
+            <Czech>KamAZ-63968 Typhoon (zařízení)</Czech>
             <French>Typhoon Dispositif</French>
             <Russian>Тайфун Устройство</Russian>
             <Portuguese>Typhoon Dispositivo</Portuguese>
@@ -630,7 +630,7 @@
             <German>Typhoon Munition</German>
             <Spanish>Typhoon de munición</Spanish>
             <Polish>Typhoon Amunicyjny</Polish>
-            <Czech>Typhoon muniční</Czech>
+            <Czech>KamAZ-63968 Typhoon (muniční)</Czech>
             <French>Typhoon Munitions</French>
             <Russian>Тайфун Боеприпасы</Russian>
             <Portuguese>Typhoon Munições</Portuguese>
@@ -642,7 +642,7 @@
             <German>Typhoon Treibstoff</German>
             <Spanish>Typhoon de combustible</Spanish>
             <Polish>Typhoon Cysterna</Polish>
-            <Czech>Typhoon cisterna</Czech>
+            <Czech>KamAZ-63968 Typhoon (cisterna)</Czech>
             <French>Typhoon Citerne</French>
             <Russian>Тайфун Заправщик</Russian>
             <Portuguese>Typhoon Combustível</Portuguese>
@@ -654,7 +654,7 @@
             <German>Typhoon Instandsetzung</German>
             <Spanish>Typhoon de reparación</Spanish>
             <Polish>Typhoon Naprawczy</Polish>
-            <Czech>Typhoon opravárenský</Czech>
+            <Czech>KamAZ-63968 Typhoon (opravárenský)</Czech>
             <French>Typhoon Réparation</French>
             <Russian>Тайфун Ремонтный</Russian>
             <Portuguese>Typhoon Reparador</Portuguese>
@@ -666,7 +666,7 @@
             <German>Typhoon Sanitäter</German>
             <Spanish>Typhoon médico</Spanish>
             <Polish>Typhoon Medyczny</Polish>
-            <Czech>Typhoon zdravotnický</Czech>
+            <Czech>KamAZ-63968 Typhoon (zdravotnický)</Czech>
             <French>Typhoon Médical</French>
             <Russian>Тайфун Медицинский</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
@@ -881,7 +881,7 @@
             <German>M18A1 Claymore</German>
             <Spanish>M18A1 Claymore</Spanish>
             <Polish>Mina kierunkowa M18A1 Claymore</Polish>
-            <Czech>Mina Claymore M18A1</Czech>
+            <Czech>M18A1 Claymore</Czech>
             <French>M18A1 Claymore</French>
             <Russian>M18A1 Клеймор</Russian>
             <Portuguese>M18A1 Claymore</Portuguese>
@@ -1013,7 +1013,7 @@
             <German>M15 Panzerabwehrmine</German>
             <Spanish>Mina antitanque M15</Spanish>
             <Polish>Mina przeciwpancerna M15</Polish>
-            <Czech>Protitanková mina M15 </Czech>
+            <Czech>M15 Protitanková mina </Czech>
             <French>M15 Mine antichar</French>
             <Russian>M15 противотанковая мина</Russian>
             <Portuguese>M15 Mina anticarro</Portuguese>
@@ -1025,7 +1025,7 @@
             <German>VS-50 Antipersonenmine</German>
             <Spanish>Mina antipersona VS-50</Spanish>
             <Polish>Mina przeciwpiechotna VS-50</Polish>
-            <Czech>Protipěchotní mina VS-50 </Czech>
+            <Czech>VS-50 Protipěchotní mina</Czech>
             <French>VS-50 Mine AP</French>
             <Russian>VS-50 Противопехотная мина</Russian>
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
@@ -1037,7 +1037,7 @@
             <German>M26 Antipersonensprungmine</German>
             <Spanish>Mina antipersona M26</Spanish>
             <Polish>Mina przeciwpiechotna M26</Polish>
-            <Czech>Šrapnelová mina M26</Czech>
+            <Czech>M26 Protipěchotní mina</Czech>
             <French>M26  Mine AP bondissante</French>
             <Russian>M26 Противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
@@ -1049,7 +1049,7 @@
             <German>PMR-3 Antipersonenstolperdrahtmine</German>
             <Spanish>Mina antipersona de alambre PMR-3</Spanish>
             <Polish>Mina przeciwpiechotna PMR-3</Polish>
-            <Czech>Nástražná mina PMR-3</Czech>
+            <Czech>PMR-3 Protipěchotní mina (drát)</Czech>
             <French>PMR-3 Mine AP à traction</French>
             <Russian>PMR-3 Противопехотная мина</Russian>
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
@@ -1192,7 +1192,7 @@
             <English>MX (Black)</English>
             <German>MX (Schwarz)</German>
             <Polish>MX (Czarny)</Polish>
-            <Czech>MX (Černý)</Czech>
+            <Czech>MX (Černá)</Czech>
             <French>MX (Noir)</French>
             <Hungarian>MX (Fekete)</Hungarian>
             <Spanish>MX (Negro)</Spanish>
@@ -1216,7 +1216,7 @@
             <English>MXC (Black)</English>
             <German>MXC (Schwarz)</German>
             <Polish>MXC (Czarny)</Polish>
-            <Czech>MXC (Černý)</Czech>
+            <Czech>MXC (Černá)</Czech>
             <French>MXC (Noir)</French>
             <Hungarian>MXC (Fekete)</Hungarian>
             <Spanish>MXC (Negro)</Spanish>
@@ -1240,7 +1240,7 @@
             <English>MX 3GL (Black)</English>
             <German>MX 3GL (Schwarz)</German>
             <Polish>MX 3GL (Czarny)</Polish>
-            <Czech>MX 3GL (Černý)</Czech>
+            <Czech>MX 3GL (Černá)</Czech>
             <French>MX 3GL (Noir)</French>
             <Hungarian>MX 3GL (Fekete)</Hungarian>
             <Spanish>MX 3GL (Negro)</Spanish>
@@ -1264,7 +1264,7 @@
             <English>MX LSW (Black)</English>
             <German>MX LSW (Schwarz)</German>
             <Polish>MX LSW (Czarny)</Polish>
-            <Czech>MX LSW (Černý)</Czech>
+            <Czech>MX LSW (Černá)</Czech>
             <French>MX LSW (Noir)</French>
             <Hungarian>MX LSW (Fekete)</Hungarian>
             <Spanish>MX LSW (Negro)</Spanish>
@@ -1288,7 +1288,7 @@
             <English>MXM (Black)</English>
             <German>MXM (Schwarz)</German>
             <Polish>MXM (Czarny)</Polish>
-            <Czech>MXM (Černý)</Czech>
+            <Czech>MXM (Černá)</Czech>
             <French>MXM (Noir)</French>
             <Hungarian>MXM (Fekete)</Hungarian>
             <Spanish>MXM (Negro)</Spanish>
@@ -1360,7 +1360,7 @@
             <English>F2000 Tactical (Camo)</English>
             <German>F2000 Tactical (Tarnmuster)</German>
             <Polish>F2000 Tactical (kamuflaż)</Polish>
-            <Czech>F2000 Tactical (Černý)</Czech>
+            <Czech>F2000 Tactical (Kamufláž)</Czech>
             <French>F2000 Tactical (Camo)</French>
             <Hungarian>F2000 Tactical (Terepmintás)</Hungarian>
             <Spanish>F2000 Tactical (Camuflaje)</Spanish>
@@ -1598,7 +1598,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
-            <Czech>Noreen "Bad News" ULR (Černý)</Czech>
+            <Czech>Noreen "Bad News" ULR (Černá)</Czech>
             <French>Noreen "Bad News" ULR (Noir)</French>
             <Spanish>Noreen "Bad News" ULR (Negro)</Spanish>
             <Russian>Noreen "Bad News" ULR (Чёрный)</Russian>
@@ -1622,7 +1622,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
-            <Czech>Noreen "Bad News" ULR (Pouštní)</Czech>
+            <Czech>Noreen "Bad News" ULR (Písková)</Czech>
             <French>Noreen "Bad News" ULR (Beige)</French>
             <Spanish>Noreen "Bad News" ULR (Arena)</Spanish>
             <Russian>Noreen "Bad News" ULR (Песочный)</Russian>
@@ -1646,7 +1646,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
-            <Czech>SIG 556 (Černý)</Czech>
+            <Czech>SIG 556 (Černá)</Czech>
             <French>SIG 556 (Noir)</French>
             <Spanish>SIG 556 (Negro)</Spanish>
             <Russian>SIG 556 (Чёрный)</Russian>
@@ -1670,7 +1670,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
-            <Czech>SIG 556 (Pouštní)</Czech>
+            <Czech>SIG 556 (Písková)</Czech>
             <French>SIG 556 (Beige)</French>
             <Spanish>SIG 556 (Arena)</Spanish>
             <Russian>SIG 556 (Песочный)</Russian>
@@ -1694,7 +1694,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
-            <Czech>SIG 556 (Woodland)</Czech>
+            <Czech>SIG 556 (Lesní)</Czech>
             <French>SIG 556 (Woodland)</French>
             <Spanish>SIG 556 (Bosque)</Spanish>
             <Russian>SIG 556 (Лесной)</Russian>
@@ -1706,7 +1706,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SIG 556 (provisional) spotter</English>
-            <Czech>SIG 556 (Provizorní) spotter</Czech>
+            <Czech>SIG 556 (provizorní) spotter</Czech>
             <French>SIG 556 (provisoire) Observateur</French>
             <Spanish>SIG 556 (provisional) observador</Spanish>
             <Russian>SIG 556 (provisional) корректировщик</Russian>
@@ -1730,7 +1730,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
-            <Czech>ASP-1 Kir (Čený)</Czech>
+            <Czech>ASP-1 Kir (Čená)</Czech>
             <French>ASP-1 Kir (Noir)</French>
             <Spanish>ASP-1 Kir (Negro)</Spanish>
             <Russian>ASP-1 Kir (Чёрный)</Russian>
@@ -1742,7 +1742,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
-            <Czech>ASP-1 Kir (Pouštní)</Czech>
+            <Czech>ASP-1 Kir (Tan)</Czech>
             <French>ASP-1 Kir (Tan)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
             <Russian>ASP-1 Kir (Бронзовый)</Russian>
@@ -1766,7 +1766,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
-            <Czech>Cyrus (Černý)</Czech>
+            <Czech>Cyrus (Černá)</Czech>
             <French>Cyrus (Noir)</French>
             <Spanish>Cyrus (Negro)</Spanish>
             <Russian>Cyrus (Чёрный)</Russian>
@@ -1790,7 +1790,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
-            <Czech>Cyrus (Pouštní)</Czech>
+            <Czech>Cyrus (Tan)</Czech>
             <French>Cyrus (Tan)</French>
             <Spanish>Cyrus (Tan)</Spanish>
             <Russian>Cyrus (Бронза)</Russian>
@@ -1826,7 +1826,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
-            <Czech>M14 (Olivový)</Czech>
+            <Czech>M14 (Olivová)</Czech>
             <French>M14 (Olive)</French>
             <Spanish>M14 (Oliva)</Spanish>
             <Russian>M14 (Олива)</Russian>
@@ -1862,7 +1862,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
-            <Czech>HK121 (Pouštní)</Czech>
+            <Czech>HK121 (Tan)</Czech>
             <French>HK121 (Tan)</French>
             <Spanish>HK121 (Tan)</Spanish>
             <Russian>HK121 (Бронза)</Russian>
@@ -1898,7 +1898,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
-            <Czech>LWMMG (Černý)</Czech>
+            <Czech>LWMMG (Černá)</Czech>
             <French>LWMMG (Noir)</French>
             <Spanish>LWMMG (Negro)</Spanish>
             <Russian>LWMMG (Чёрный)</Russian>
@@ -1910,7 +1910,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
-            <Czech>LWMMG (Pouštní)</Czech>
+            <Czech>LWMMG (Písková)</Czech>
             <French>SPMG (Beige)</French>
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>

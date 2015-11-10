@@ -6,7 +6,7 @@
             <Polish>Ustawienia obserwatora</Polish>
             <Portuguese>Preferências de Espectador</Portuguese>
             <Russian>Настройки спектатора</Russian>
-            <Czech>Nastavení Pozorovatele</Czech>
+            <Czech>Nastavení pozorovatele</Czech>
             <Spanish>Ajustes de espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
@@ -15,6 +15,7 @@
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
             <Russian>Определяют, как система спектатора будет функционировать по-умолчанию.</Russian>
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
+            <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
@@ -30,6 +31,7 @@
             <Portuguese>Método para filtrar unidades espectáveis</Portuguese>
             <Russian>Метод фильтрации наблюдаемых юнитов.</Russian>
             <Spanish>Método de filtrado de unidades de espectador</Spanish>
+            <Czech>Metoda filtrování pozorovaných jednotek.</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
@@ -52,7 +54,7 @@
             <Polish>Grywalne jednostki</Polish>
             <Portuguese>Unidades jogáveis</Portuguese>
             <Russian>Играбельные юниты</Russian>
-            <Czech>Hratelné Jednotky</Czech>
+            <Czech>Hratelné jednotky</Czech>
             <Spanish>Unidades jugables</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
@@ -77,6 +79,7 @@
             <Portuguese>Método para filtrar lados espectáveis.</Portuguese>
             <Russian>Метод фильтрации наблюдаемых сторон.</Russian>
             <Spanish>Método de filtrado de bandos de espectador</Spanish>
+            <Czech>Metoda filtrování pozorovaných stran.</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
@@ -124,6 +127,7 @@
             <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
+            <Czech>Módy kamery které mohou být použity.</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -202,6 +206,7 @@
             <Portuguese>Unidades espectadoras</Portuguese>
             <Russian>Юниты</Russian>
             <Spanish>Unidades espectador</Spanish>
+            <Czech>Jednotky pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
@@ -209,6 +214,7 @@
             <Portuguese>Controle do espectador</Portuguese>
             <Russian>Управление спектатором</Russian>
             <Spanish>Controles de espectador</Spanish>
+            <Czech>Ovládací prvky pozorovatele</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -334,7 +340,7 @@
             <Polish>Zablokuj kamerę na celu</Polish>
             <Portuguese>Travar câmera em alvo</Portuguese>
             <Russian>Зафиксировать камеру на цели</Russian>
-            <Czech>Zamknout Kameru na Cíl</Czech>
+            <Czech>Zamknout kameru na Cíl</Czech>
             <Spanish>Fijar cámara al objetivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
@@ -343,13 +349,14 @@
             <Portuguese>Aumento de velocidade</Portuguese>
             <Russian>Ускорение камеры</Russian>
             <Spanish>Aumento de velocidad</Spanish>
+            <Czech>Zrychlení kamery</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamFocus">
             <English>Focus on Unit</English>
             <Polish>Skup na jednostce</Polish>
             <Portuguese>Focar na unidade</Portuguese>
             <Russian>Фокус на юните</Russian>
-            <Czech>Zaměřit se na Jednotku</Czech>
+            <Czech>Zaměřit se na jednotku</Czech>
             <Spanish>Centrarse en la unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
@@ -365,7 +372,7 @@
             <Polish>Przełącz interfejs</Polish>
             <Portuguese>Alternar interface</Portuguese>
             <Russian>Переключить интерфейс</Russian>
-            <Czech>Přepnout Rozhraní</Czech>
+            <Czech>Přepnout rozhraní</Czech>
             <Spanish>Conmutar</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
@@ -373,7 +380,7 @@
             <Polish>Przełącz ikony jednostek</Polish>
             <Portuguese>Alternar ícone de unidades</Portuguese>
             <Russian>Вкл./выкл. иконки юнитов</Russian>
-            <Czech>Přepnout Ikony Jednotek</Czech>
+            <Czech>Přepnout ikony jednotek</Czech>
             <Spanish>Conmutar iconos de unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
@@ -381,7 +388,7 @@
             <Polish>Przełącz listę jednostek</Polish>
             <Portuguese>Alternar lista de unidades</Portuguese>
             <Russian>Вкл./выкл. список юнитов</Russian>
-            <Czech>Přepnout Seznam Jednotek</Czech>
+            <Czech>Přepnout seznam jednotek</Czech>
             <Spanish>Conmutar lista de unidades</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
@@ -390,13 +397,14 @@
             <Portuguese>Alternar barra de ferramentas</Portuguese>
             <Russian>Вкл./выкл. тулбар</Russian>
             <Spanish>Conmutar barra de herramientas</Spanish>
+            <Czech>Přepnout panel nátrojů</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
             <Polish>Przełącz kompas</Polish>
             <Portuguese>Alternar bússola</Portuguese>
             <Russian>Вкл./выкл. компас</Russian>
-            <Czech>Přepnout Kompas</Czech>
+            <Czech>Přepnout kompas</Czech>
             <Spanish>Conmutar brújula</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
@@ -404,7 +412,7 @@
             <Polish>Przełącz mapę</Polish>
             <Portuguese>Alternar mapa</Portuguese>
             <Russian>Вкл./выкл. карту</Russian>
-            <Czech>Přepnout Mapu</Czech>
+            <Czech>Přepnout mapu</Czech>
             <Spanish>Conmutar map</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
@@ -412,7 +420,7 @@
             <Polish>Przełącz pomoc</Polish>
             <Portuguese>Alternar ajuda</Portuguese>
             <Russian>Вкл./выкл. помощь</Russian>
-            <Czech>Přepnout Nápovědu</Czech>
+            <Czech>Přepnout nápovědu</Czech>
             <Spanish>Conmutar ayuda</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
@@ -427,7 +435,7 @@
             <Polish>Następna kamera</Polish>
             <Portuguese>Próxima câmera</Portuguese>
             <Russian>Следующая камера</Russian>
-            <Czech>Následující Kamera</Czech>
+            <Czech>Následující kamera</Czech>
             <Spanish>Siguiente cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
@@ -435,7 +443,7 @@
             <Polish>Poprzednia kamera</Polish>
             <Portuguese>Câmera anterior</Portuguese>
             <Russian>Предыдущая камера</Russian>
-            <Czech>Předchozí Kamera</Czech>
+            <Czech>Předchozí kamera</Czech>
             <Spanish>Anterior cámara</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
@@ -443,7 +451,7 @@
             <Polish>Następna jednostka</Polish>
             <Portuguese>Próxima unidade</Portuguese>
             <Russian>Следующий юнит</Russian>
-            <Czech>Následující Jednotka</Czech>
+            <Czech>Následující jednotka</Czech>
             <Spanish>Siguiente unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
@@ -451,7 +459,7 @@
             <Polish>Poprzednia jednostka</Polish>
             <Portuguese>Unidade anterior</Portuguese>
             <Russian>Предыдущий юнит</Russian>
-            <Czech>Předchozí Jednotka</Czech>
+            <Czech>Předchozí jednotka</Czech>
             <Spanish>Anterior unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
@@ -473,7 +481,7 @@
             <Polish>Reguluj zoom</Polish>
             <Portuguese>Ajustar zoom</Portuguese>
             <Russian>Настроить зум</Russian>
-            <Czech>Regulovat Přiblížení</Czech>
+            <Czech>Regulovat přiblížení</Czech>
             <Spanish>Ajustar aumento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
@@ -481,7 +489,7 @@
             <Polish>Reguluj prędkość</Polish>
             <Portuguese>Ajuster velocidade</Portuguese>
             <Russian>Настроить скорость</Russian>
-            <Czech>Regulovat Rychlost</Czech>
+            <Czech>Regulovat rychlost</Czech>
             <Spanish>Ajustar velocidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
@@ -503,7 +511,7 @@
             <Polish>Resetuj zoom</Polish>
             <Portuguese>Redefinir zoom</Portuguese>
             <Russian>Сбросить зум</Russian>
-            <Czech>Obnovit Přiblížení</Czech>
+            <Czech>Obnovit přiblížení</Czech>
             <Spanish>Reiniciar aumento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
@@ -511,7 +519,7 @@
             <Polish>Resetuj prędkość</Polish>
             <Portuguese>Redefinir velocidade</Portuguese>
             <Russian>Сбросить скорость</Russian>
-            <Czech>Obnovit Rychlost</Czech>
+            <Czech>Obnovit rychlost</Czech>
             <Spanish>Reiniciar velocidad</Spanish>
         </Key>
     </Package>
