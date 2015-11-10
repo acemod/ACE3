@@ -114,4 +114,4 @@ class ace_missileguidance_seekerTypes {
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
-`"ace_missileguidance_handoff"` | Missile handed off | `[_target, _args]` | Global
+`ace_missileguidance_handoff` | Missile handed off | `[_target, _args]` | Global

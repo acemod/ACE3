@@ -31,5 +31,5 @@ class CfgGlasses {
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
-`"GlassesChanged"` | Glasses Changed | `[_glassesClass]` | Local
-`"GlassesCracked"` | Glasses Cracked | `[_unit]` | Local
+`GlassesChanged` | Glasses Changed | `[_glassesClass]` | Local
+`GlassesCracked` | Glasses Cracked | `[_unit]` | Local
