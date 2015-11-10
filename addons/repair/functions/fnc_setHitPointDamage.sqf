@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
-TRACE_3("params",_vehicle,_hitPointIndex,_hitPointDamage);
+TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
 
@@ -50,8 +50,8 @@ _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaire
     //Filter out all the bad hitpoints (HitPoint="" or no selection)
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
-        
-        if ((!(_x in IGNORED_HITPOINTS)) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+
+        if ((((toLower _x) find "glass") == -1) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
             _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
                 _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;
@@ -80,4 +80,4 @@ _allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 } forEach _allHitPointDamages;
 
 // normalize hitpoints
-// [_vehicle] call FUNC(normalizeHitPoints);
+[_vehicle] call FUNC(normalizeHitPoints);

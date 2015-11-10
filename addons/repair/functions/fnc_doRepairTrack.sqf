@@ -33,8 +33,8 @@ if ((isNull _track) || {!([_unit, _track, ["isNotDragging", "isNotCarrying", "is
 if ((damage _track) >= 1) exitWith {};
 
 // get current hitpoint damage
-local _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
-local _damageRepaired = (1 - (damage _track)) / 4; // require 4 tracks to fully replace one side
+private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
+private _damageRepaired = (1 - (damage _track)) / 4; // require 4 tracks to fully replace one side
 
 // don't die by spawning / moving the wheel
 _hitPointDamage = (_hitPointDamage - _damageRepaired) min 0;

@@ -8,7 +8,7 @@
  * 2: Damage <NUMBER>
  *
  * Return Value:
- * None
+ * The new object <OBJECT>
  *
  * Example:
  * ["classname", [0, 0, 0], 1] call ace_repair_fnc_spawnObject
@@ -23,10 +23,12 @@ TRACE_3("params",_item,_position,_damage);
 // randomized end position
 _position = _position vectorAdd [1 - random 2, 1 - random 2, 0];
 
-_item = createVehicle [_item, _position, [], 0, "NONE"];
-_item setPosASL _position;
+private _newObject = createVehicle [_item, _position, [], 0, "NONE"];
+_newObject setPosASL _position;
 
-["fixCollision", _item] call EFUNC(common,localEvent);
-["fixPosition", _item] call EFUNC(common,localEvent);
+_newObject setDamage _damage;
 
-_item setDamage _damage;
+["fixCollision", _newObject] call EFUNC(common,localEvent);
+["fixPosition", _newObject] call EFUNC(common,localEvent);
+
+_newObject
