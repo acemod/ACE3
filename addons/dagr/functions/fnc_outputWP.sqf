@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Rosuto
  * DAGR waypoint output loop
  *
@@ -85,7 +85,7 @@ GVAR(outputPFH) = [{
     __gridControl ctrlSetText format ["%1", _dagrGrid];
     __speedControl ctrlSetText format ["%1", _bearing];
     __elevationControl ctrlSetText format ["%1", _dagrGrid2];
-    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1�", _dagrHeading] });
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1°", _dagrHeading] });
     __timeControl ctrlSetText format ["%1", _dagrDistance];
 
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

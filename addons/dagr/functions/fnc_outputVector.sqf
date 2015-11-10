@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Rosuto
  * DAGR vector output loop
  *
@@ -93,5 +93,5 @@ GVAR(vectorGrid) = _dagrGrid;
 __gridControl ctrlSetText format ["%1", _dagrGrid];
 __speedControl ctrlSetText format ["%1", _dagrDist];
 __elevationControl ctrlSetText format ["%1", _dagrElevation];
-__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1�", _bearing] });
+__headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _bearing] } else { format ["%1°", _bearing] });
 __timeControl ctrlSetText format ["%1", _dagrTime];
