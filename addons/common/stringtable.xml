@@ -42,7 +42,7 @@
             <German>ACE-Optionen</German>
             <Spanish>Opciones ACE</Spanish>
             <Polish>Ustawienia ACE</Polish>
-            <Czech>Nastavení ACE</Czech>
+            <Czech>ACE Nastavení</Czech>
             <French>Options ACE</French>
             <Russian>ACE Настройки</Russian>
             <Portuguese>Opções do ACE</Portuguese>
@@ -722,6 +722,7 @@
             <Portuguese>Comum ACE3</Portuguese>
             <Russian>ACE3 Общие</Russian>
             <Spanish>ACE3 Común</Spanish>
+            <Czech>ACE3 Obecné</Czech>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -737,6 +738,7 @@
             <Portuguese>Movimento ACE3</Portuguese>
             <Russian>ACE3 Перемещение</Russian>
             <Spanish>ACE3 Movimiento</Spanish>
+            <Czech>ACE3 Pohyb</Czech>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>

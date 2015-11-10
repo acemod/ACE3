@@ -103,6 +103,7 @@
             <Portuguese>Duração do Slide</Portuguese>
             <Russian>Длительность слайда</Russian>
             <Spanish>Duración de diapositiva</Spanish>
+            <Czech>Doba trvání snímku</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -121,6 +122,7 @@
             <Portuguese>Slides</Portuguese>
             <Russian>Слайды</Russian>
             <Spanish>Diapositivas</Spanish>
+            <Czech>Snímky</Czech>
         </Key>
     </Package>
 </Project>
