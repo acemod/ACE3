@@ -13,7 +13,8 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_posASL,_direction,_maxDistance);
+params ["_posASL", "_direction", "_maxDistance"];
+TRACE_3("params",_posASL,_direction,_maxDistance);
 
 private ["_distance", "_interval", "_line", "_intersections", "_terrainIntersect", "_lastTerrainIntersect"];
 
@@ -42,20 +43,21 @@ while {
     };
 
     _distance = _distance + ([1, -1] select (_intersections > 0 || _terrainIntersect)) * _interval;
-
     if (_distance > _maxDistance) exitWith {_distance = 999};
 };
+
+TRACE_4("while done",_distance,_maxDistance,_terrainIntersect,_lastTerrainIntersect);
 
 if (_distance > _maxDistance) exitWith {_distance};
 
 // If the intersection was with the terrain, check slope
-if (_terrainIntersect || _lastTerrainIntersect) exitWith {
+if (_terrainIntersect || _lastTerrainIntersect) then {
     private ["_slope","_angle"];
     _slope = surfaceNormal (_posASL vectorAdd (_direction vectorMultiply _distance));
     // Calculate the angle between the terrain and the back blast direction
     _angle = 90 - acos (- (_slope vectorDotProduct _direction));
 
-    //systemChat format ["Angle: %1", _angle];
+    TRACE_3("Terrain Intersect",_slope,_direction,_angle);
     // Angles is below 25º, no backblast at all
     if (_angle < 25) exitWith {_distance = 999};
     // Angles is below 45º the distance is increased according to the difference

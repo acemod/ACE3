@@ -41,10 +41,10 @@ _var params["_backblastAngle","_backblastRange","_backblastDamage"];
 
 // Damage to others
 private "_affected";
-_affected = getPos _projectile nearEntities ["CAManBase", _backblastRange];
+_affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
 
 // Damage to the firer
 private "_distance";
