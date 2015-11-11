@@ -63,6 +63,7 @@
             <Portuguese>Preferências de apontamento</Portuguese>
             <Russian>Настройки указания пальцем</Russian>
             <Spanish>Ajustes de señalado</Spanish>
+            <Czech>Nastavení ukázování směru</Czech>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -72,6 +73,7 @@
             <Portuguese>Apontamento ativado</Portuguese>
             <Russian>Указание пальцем включено</Russian>
             <Spanish>Señalado habilitado</Spanish>
+            <Czech>Ukazování povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -81,6 +83,7 @@
             <Portuguese>Distância máxima do apontamento</Portuguese>
             <Russian>Макс. дальность</Russian>
             <Spanish>Distancia máxima de señalado</Spanish>
+            <Czech>Maximální dosah pro ukazování směru</Czech>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -90,6 +93,7 @@
             <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
             <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по-умолчанию: 4 метра]</Russian>
             <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
+            <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
         </Key>
     </Package>
 </Project>

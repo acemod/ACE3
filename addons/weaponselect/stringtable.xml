@@ -30,7 +30,7 @@
             <German>Pistole auswählen</German>
             <Spanish>Seleccionar pistola</Spanish>
             <Polish>Wybierz pistolet</Polish>
-            <Czech>Zvolit příruční zbraň</Czech>
+            <Czech>Zvolit Pistoly</Czech>
             <Russian>Выбрать пистолет</Russian>
             <French>Sélectionner Pistolet</French>
             <Hungarian>Pisztoly Kiválasztása</Hungarian>
@@ -42,7 +42,7 @@
             <German>Gewehr auswählen</German>
             <Spanish>Seleccionar fusil</Spanish>
             <Polish>Wybierz karabin</Polish>
-            <Czech>Zvolit hlavní zbraň</Czech>
+            <Czech>Zvolit Pušku</Czech>
             <Russian>Выбрать винтовку</Russian>
             <French>Sélectionner Fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
@@ -188,7 +188,7 @@
             <Polish>Wybierz granat odłamkowy</Polish>
             <French>Sélectionner grenade à fragmentation</French>
             <Hungarian>Repeszgránát Kiválasztása</Hungarian>
-            <Czech>Zvolit Výbušný Granát</Czech>
+            <Czech>Zvolit výbušný granát</Czech>
             <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
             <Italian>Seleziona Granata a Frammentazione</Italian>
             <Russian>Выбрать осколочную гранату</Russian>
@@ -200,7 +200,7 @@
             <Polish>Wybierz granat nieodłamkowy</Polish>
             <French>Sélectionner grenade non-léthale</French>
             <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
-            <Czech>Zvolit Ne-Výbušný Granát</Czech>
+            <Czech>Zvolit ne-výbušný granát</Czech>
             <Portuguese>Selecionar Granada</Portuguese>
             <Italian>Seleziona granate non a frammentazione</Italian>
             <Russian>Выбрать гранату</Russian>
@@ -212,7 +212,7 @@
             <Polish>Rzuć wybrany granat</Polish>
             <French>Lancer la grenade sélectionnée</French>
             <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
-            <Czech>Hodit Zvolený Granát</Czech>
+            <Czech>Hodit zvolený granát</Czech>
             <Portuguese>Lançar Granada Selecionada</Portuguese>
             <Italian>Lancia la Granata Selezionata</Italian>
             <Russian>Бросить выбранную гранату</Russian>
@@ -236,7 +236,7 @@
             <Polish>Brak granatów odłamkowych</Polish>
             <French>Plus de grenades à fragmentation</French>
             <Hungarian>Nincs több repeszgránát</Hungarian>
-            <Czech>Už nejsou granáty</Czech>
+            <Czech>Žádné výbušné granáty</Czech>
             <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
             <Italian>Nessuna granata a frammentazione rimanente</Italian>
             <Russian>Осколочных гранат нет</Russian>

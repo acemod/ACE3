@@ -157,6 +157,7 @@
             <Russian>Влияет на юнита Зевса</Russian>
             <Portuguese>Afeta Zeus CR</Portuguese>
             <Spanish>Efecto Zeus RC</Spanish>
+            <Czech>Ovlivnit Zeus RC</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
@@ -164,6 +165,7 @@
             <Russian>Контролирует оглушение в бою и звон в ушах. При активации играки могут быть оглушены близкими выстрелами и взрывами при отсутствии защиты для ушей.</Russian>
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
+            <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
         </Key>
     </Package>
 </Project>

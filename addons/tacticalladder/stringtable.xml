@@ -42,6 +42,7 @@
             <German>Ausfahren, +Strg kippen</German>
             <Polish>Rozłóż, +Ctrl nachyl</Polish>
             <Portuguese>Extender, +Ctrl tilt</Portuguese>
+            <Czech>Prodloužit, +Ctrl naklonit</Czech>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>

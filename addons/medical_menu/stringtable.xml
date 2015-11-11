@@ -7,6 +7,7 @@
             <Portuguese>Menu médico</Portuguese>
             <Russian>Медицинское меню</Russian>
             <Spanish>Menú médico</Spanish>
+            <Czech>Zdravotnikcá nabídka</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
@@ -14,6 +15,7 @@
             <Portuguese>Permitir menu médico</Portuguese>
             <Russian>Разрешить мед. меню</Russian>
             <Spanish>Permitir menú médico</Spanish>
+            <Czech>Povolit zdravotnickou nabídku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
@@ -21,6 +23,7 @@
             <Portuguese>Permite que clientes utilizem o menu médico</Portuguese>
             <Russian>Разрешает клиентам использовать медицинское меню</Russian>
             <Spanish>Permitir a los clientes utilizar el menú médico</Spanish>
+            <Czech>Povolit klientům používat zdravotnickou nabídku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
@@ -28,6 +31,7 @@
             <Portuguese>Usar o menu médico</Portuguese>
             <Russian>Использовать медицинское меню</Russian>
             <Spanish>Utiliza el menú médico</Spanish>
+            <Czech>Použít zdravotnickou nabídku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
@@ -42,6 +46,7 @@
             <Portuguese>Reabrir menu médico</Portuguese>
             <Russian>Переоткрывать мед. меню</Russian>
             <Spanish>Reabrir menú médico</Spanish>
+            <Czech>Znovu otevřít zdravotnickou nabídku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
@@ -49,6 +54,7 @@
             <Portuguese>Reabre o menu médico depois de um tratamento bem sucedido</Portuguese>
             <Russian>Переоткрывать медицинское меню после удачного лечения</Russian>
             <Spanish>Reabre el menú médico despues de un tratamiento con éxito</Spanish>
+            <Czech>Znovu otevřít zdravotnickou nabídku po úspěšné léčbě </Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
@@ -56,6 +62,7 @@
             <Portuguese>Abrir menu médico</Portuguese>
             <Russian>Открыть медицинское меню</Russian>
             <Spanish>Abrir menú médico</Spanish>
+            <Czech>Otevřít zdravotnickou nabídku</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
@@ -63,6 +70,7 @@
             <Portuguese>Preferências do menu médico</Portuguese>
             <Russian>Настройки медицинского меню</Russian>
             <Spanish>Ajustes del mení médico</Spanish>
+            <Czech>Nastavení zdravotnické nabídky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
@@ -70,6 +78,7 @@
             <Portuguese>Configura o uso do menu médico</Portuguese>
             <Russian>Настройки использования медицинского меню</Russian>
             <Spanish>Configurar el uso del menú médico</Spanish>
+            <Czech>Konfigurace využití zdravotnické nabídky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -123,6 +132,7 @@
             <French>Voir Carte de Triage</French>
             <Polish>Pokaż kartę segregacyjną</Polish>
             <Portuguese>Ver cartão de triagem</Portuguese>
+            <Czech>Zkontrolovat štítek</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
             <English>Examine Patient</English>
@@ -131,6 +141,7 @@
             <French>Examiner Patient</French>
             <Polish>Zbadaj pacjenta</Polish>
             <Portuguese>Examinar paciente</Portuguese>
+            <Czech>Zkontrolovat pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
             <English>Bandage / Fractures</English>
@@ -139,6 +150,7 @@
             <French>Bandages / Fractures</French>
             <Polish>Bandaże / Złamania</Polish>
             <Portuguese>Bandagens / Fraturas</Portuguese>
+            <Czech>Bandáž / Zlomeniny</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDICATION">
             <English>Medication</English>
@@ -147,6 +159,7 @@
             <French>Médications</French>
             <Polish>Leki</Polish>
             <Portuguese>Medicação</Portuguese>
+            <Czech>Léky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
             <English>Airway Management</English>
@@ -155,6 +168,7 @@
             <French>Gestion Des Voie REspiratoire</French>
             <Polish>Drogi oddechowe</Polish>
             <Portuguese>Vias aéreas</Portuguese>
+            <Czech>Dýchací systém</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
             <English>Advanced Treatments</English>
@@ -163,6 +177,7 @@
             <French>Traitement Avancé</French>
             <Polish>Zaawansowane zabiegi</Polish>
             <Portuguese>Tratamentos avançados</Portuguese>
+            <Czech>Pokročilé ošetření</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
             <English>Drag/Carry</English>
@@ -180,6 +195,7 @@
             <Polish>Przełącz (na siebie)</Polish>
             <Spanish>Alternar</Spanish>
             <Portuguese>Alternar (Si mesmo)</Portuguese>
+            <Czech>Přepnout (na sebe)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
@@ -188,6 +204,7 @@
             <French>Selectioner l'état de Triage</French>
             <Polish>Wybierz priorytet</Polish>
             <Portuguese>Selecionar estado de triagem</Portuguese>
+            <Czech>Vybrat prioritu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>
@@ -304,6 +321,7 @@
             <French>Partie du corps: %1</French>
             <Polish>Część ciała: %1</Polish>
             <Portuguese>Parte do corpo: %1</Portuguese>
+            <Czech>Část těla: %1</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SMALL">
             <English>Small</English>
@@ -312,6 +330,7 @@
             <French>Petite</French>
             <Polish>małym</Polish>
             <Portuguese>Pequeno</Portuguese>
+            <Czech>Malý</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDIUM">
             <English>Medium</English>
@@ -320,6 +339,7 @@
             <French>moyenne</French>
             <Polish>średnim</Polish>
             <Portuguese>Médio</Portuguese>
+            <Czech>Střední</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LARGE">
             <English>Large</English>
@@ -328,6 +348,7 @@
             <French>Grande</French>
             <Polish>dużym</Polish>
             <Portuguese>Grande</Portuguese>
+            <Czech>Velký</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>
@@ -336,6 +357,7 @@
             <French>Il y a %2 %1 Blessure Ouverte</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
+            <Czech>Jsou zde %2 %1 otevřené rány</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
@@ -344,6 +366,7 @@
             <French>Il y a 1 blessure ouverte %1</French>
             <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
+            <Czech>Je zde 1 %1 otevřená rána</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
@@ -352,6 +375,7 @@
             <French>Il y a une Blessure Patiellement Ouverte %1</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
+            <Czech>Je zde částečně %1 otevřená rána</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
@@ -360,6 +384,7 @@
             <French>Il y a %2 %1 Blessure Bandée</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
+            <Czech>Jsou zde %2 %1 ovázané rány</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
@@ -368,6 +393,7 @@
             <French>Il y a 1 %1 Blessure Bandée</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
+            <Czech>Je zde 1 %1 ovázaná rána</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
@@ -376,6 +402,7 @@
             <French>Il y a %1 Blessure Partielment Bandée</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
+            <Czech>Je zde částěčně %1 ovázaná rána</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
             <English>Normal breathing</English>
@@ -384,6 +411,7 @@
             <French>Respiration Normale</French>
             <Polish>Normalny oddech</Polish>
             <Portuguese>Respiração normal</Portuguese>
+            <Czech>Normální dýchání</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
@@ -428,7 +456,7 @@
             <French>A De La Douleur</French>
             <Polish>W bólu</Polish>
             <Portuguese>Com dor</Portuguese>
-            <Czech>v Bolestech</Czech>
+            <Czech>v bolestech</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -446,6 +474,7 @@
             <French>Garot [CAT]</French>
             <Polish>Opaska uciskowa [CAT]</Polish>
             <Portuguese>Torniquete [CAT]</Portuguese>
+            <Czech>Škrtidlo [CAT]</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -454,6 +483,7 @@
             <French>Canule Naseaupharyngée [NPA]</French>
             <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
             <Portuguese>Tubo nasofaríngeo [NPA]</Portuguese>
+            <Czech>Nasofaryngeální trubice [NPA]</Czech>
         </Key>
     </Package>
 </Project>

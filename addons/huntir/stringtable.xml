@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
             <English>HuntIR Transport Box</English>
             <German>HuntIR Transportkiste</German>
             <Spanish>Caja de transporte de HuntIR</Spanish>
-            <Czech>Trasnportní bedna HuntIR</Czech>
+            <Czech>Transportní bedna HuntIR</Czech>
             <Russian>Ящик с HuntIR</Russian>
             <Italian>HuntIR Transport Box</Italian>
             <Polish>Skrzynia HuntIR</Polish>
