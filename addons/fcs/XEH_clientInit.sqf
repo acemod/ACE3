@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 GVAR(enabled) = false;
-GVAR(ACE_time) = 0;
+GVAR(time) = 0;
 GVAR(position) = [0,0,0];
 
 if (!hasInterface) exitWith {};

@@ -54,7 +54,7 @@ if (_show) then {
         _allInjuryTexts = [];
         _genericMessages = [];
 
-        if (GVAR(level) >= 2) then {
+        if (GVAR(level) >= 2 && {([_unit] call FUNC(hasMedicalEnabled))}) then {
             _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
             _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
         };
@@ -87,7 +87,7 @@ if (_show) then {
 
         _damaged = [false, false, false, false, false, false];
         _selectionBloodLoss = [0,0,0,0,0,0];
-        if (GVAR(level) >= 2) then {
+        if (GVAR(level) >= 2 && {([_target] call FUNC(hasMedicalEnabled))}) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
             private "_amountOf";
             {

@@ -74,13 +74,13 @@ GVAR(menuRun) = true;
         GVAR(menuRun) = false;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     if (GVAR(MENU_B)) then {
         GVAR(menu) = "main";
         GVAR(selection) = 0;
         GVAR(numSelections) = 5;
     };
-    
+
     if (!GVAR(add) && !GVAR(edit)) then {
         if (GVAR(DOWN)) then {
             GVAR(selection) = (GVAR(numSelections) + GVAR(selection) + 1);
@@ -90,7 +90,7 @@ GVAR(menuRun) = true;
         };
         GVAR(selection) = if (GVAR(numSelections) > 0) then { GVAR(selection) % GVAR(numSelections) } else { 0 };
     };
-    
+
     if (GVAR(LEFT)) then {
         GVAR(pointer) = (8 + GVAR(pointer) - 1);
     };
@@ -98,7 +98,7 @@ GVAR(menuRun) = true;
         GVAR(pointer) = (8 + GVAR(pointer) + 1);
     };
     GVAR(pointer) = GVAR(pointer) % 8;
-    
+
     (__dsp displayCtrl __PSelection1) ctrlSetText "";
     (__dsp displayCtrl __PSelection2) ctrlSetText "";
     (__dsp displayCtrl __PSelection3) ctrlSetText "";
@@ -113,7 +113,7 @@ GVAR(menuRun) = true;
     (__dsp displayCtrl __Selection2) ctrlSetText "";
     (__dsp displayCtrl __Selection3) ctrlSetText "";
     (__dsp displayCtrl __Selection4) ctrlSetText "";
-    
+
     (__dsp displayCtrl __F1) ctrlSetText "";
     (__dsp displayCtrl __F2) ctrlSetText "";
     (__dsp displayCtrl __F3) ctrlSetText "";
@@ -124,7 +124,7 @@ GVAR(menuRun) = true;
     (__dsp displayCtrl __Option2) ctrlSetText "";
     (__dsp displayCtrl __Option3) ctrlSetText "";
     (__dsp displayCtrl __Option4) ctrlSetText "";
-    
+
     switch (GVAR(menu)) do {
         case "main": {
             if (GVAR(SEL)) then {
@@ -500,7 +500,7 @@ GVAR(menuRun) = true;
                         case 6: { GVAR(digit6) = (10 + GVAR(digit6) - 1) % 10 };
                         case 7: { GVAR(digit7) = (10 + GVAR(digit7) - 1) % 10 };
                         case 8: { GVAR(digit8) = (10 + GVAR(digit8) - 1) % 10 };
-                    };                        
+                    };
                 };
             };
         };
@@ -590,7 +590,7 @@ GVAR(menuRun) = true;
             };
         };
     };
-    
+
     if (!GVAR(busy)) then {
         GVAR(F3) = false;
         GVAR(F2) = false;

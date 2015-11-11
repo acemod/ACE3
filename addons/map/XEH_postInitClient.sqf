@@ -1,5 +1,22 @@
 #include "script_component.hpp"
 
+//Delete map glow lights from disconnecting players #2810
+if (isServer) then {
+    addMissionEventHandler ["HandleDisconnect",{
+        params ["_disconnectedPlayer"];
+
+        if ((!GVAR(mapGlow)) || {isNull _disconnectedPlayer}) exitWith {};
+        {
+            if (_x isKindOf "ACE_FlashlightProxy_White") then {
+                // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
+                deleteVehicle _x;
+            };
+        } forEach attachedObjects _disconnectedPlayer;
+        
+        nil
+    }];
+};
+
 // Exit on Headless as well
 if (!hasInterface) exitWith {};
 

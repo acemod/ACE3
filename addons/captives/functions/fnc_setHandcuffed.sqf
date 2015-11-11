@@ -56,8 +56,11 @@ if (_state) then {
 
         //Adds an animation changed eh
         //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
-        private "_animChangedEHID";
-
+        local _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+        if (_animChangedEHID != -1) then {
+            TRACE_1("removing animChanged EH",_animChangedEHID);
+            _unit removeEventHandler ["AnimChanged", _animChangedEHID];
+        };
         _animChangedEHID = _unit addEventHandler ["AnimChanged", {
             params ["_unit", "_newAnimation"];
             TRACE_2("AnimChanged",_unit,_newAnimation);
@@ -67,7 +70,6 @@ if (_state) then {
                     [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
                 };
             } else {
-
                 _turretPath = [];
                 {
                     _x params ["_xUnit", "", "", "_xTurretPath"];
@@ -90,8 +92,7 @@ if (_state) then {
     [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
 
     //remove AnimChanged EH
-    private "_animChangedEHID";
-    _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+    local _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
     TRACE_1("removing animChanged EH",_animChangedEHID);
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];

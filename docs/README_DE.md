@@ -63,7 +63,7 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 - Einstellbare Zielfernrohre
 - Keine Ruheanimationen bei gesenkter Waffe
 - Über Hindernisse springen, über Mauern klettern, Zäune durchtrennen
-- Keine "sprechender Charkater"
+- Kein "sprechender Charkater"
 - Vector IV, MicroDAGR und Kestrel <br>
 ***und noch viel viel mehr...***
 

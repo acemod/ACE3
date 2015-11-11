@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * ["some category"] call ace_medical_menu_handleUI_DisplayOptions
+ * ["some category"] call ace_medical_menu_fnc_handleUI_DisplayOptions
  *
  * Public: No
  */
@@ -21,7 +21,7 @@
 
 if (!hasInterface) exitwith{};
 
-private ["_entries", "_display", "_newTarget", "_card", "_ctrl", "_code"];
+private ["_entries", "_display", "_newTarget", "_ctrl", "_code"];
 
 params ["_name"];
 
@@ -31,9 +31,11 @@ _display = uiNamespace getVariable QGVAR(medicalMenu);
 if (isNil "_display") exitwith {}; // no valid dialog present
 
 if (_name isEqualTo "toggle") exitwith {
-    if (GVAR(INTERACTION_TARGET) != ACE_player) then {
-        _newTarget = ACE_player;
-    } else {
+    _newTarget = ACE_player;
+    //If we are on the player, and only if our old target is still valid, switch to it:
+    if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside"]] call EFUNC(common,canInteractWith)} &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS)] call FUNC(canOpenMenu)}) then {
         _newTarget = GVAR(INTERACTION_TARGET_PREVIOUS);
     };
 

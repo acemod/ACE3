@@ -23,4 +23,7 @@ PREP(saveCurrentAndSetNewMode);
 PREP(showApplicationPage);
 PREP(updateDisplay);
 
+//Functions that are called for each draw of the map:
+GVAR(miniMapDrawHandlers) = [];
+
 ADDON = true;

@@ -18,7 +18,8 @@ private ["_muzzleVelocityShiftTableUpperLimit", "_temperatureIndexFunction",
     "_temperatureIndexA", "_temperatureIndexB", "_interpolationRatio"];
 params["_muzzleVelocityShiftTable", "_temperature"];
 
-// Check if muzzleVelocityShiftTable is Larger Than 11 Entrys
+// Check if muzzleVelocityShiftTable is Less Than 11 Entrys
+if ((count _muzzleVelocityShiftTable) < 11) exitWith {0};
 _muzzleVelocityShiftTableUpperLimit = _muzzleVelocityShiftTable select 10;
 if (isNil "_muzzleVelocityShiftTableUpperLimit") exitWith { 0 };
 
