@@ -7,62 +7,45 @@
  * 0: Pos ASL of origin (ARRAY>
  * 1: Direction <ARRAY>
  * 2: Max distance to search <Number>
+ * 3: Shooter <OBJECT>
  *
  * Return value:
- * Distance to intersection (+- 0.1 m) <NUMBER>
+ * Distance to intersection (999 if distance is greater than max) <NUMBER>
+ *
+ * Example:
+ * [[1823.41,5729.05,6.66627], [-0.953255,0.109689,-0.281554], 15, ace_player] call ace_overpressure_fnc_getDistance
+ *
  */
 #include "script_component.hpp"
 
-params ["_posASL", "_direction", "_maxDistance"];
+params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_3("params",_posASL,_direction,_maxDistance);
 
-private ["_distance", "_interval", "_line", "_intersections", "_terrainIntersect", "_lastTerrainIntersect"];
+local _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
 
-_distance = _maxDistance;
-_interval = _distance;
-_line = [_posASL, []];
-_terrainIntersect = false;
-_lastTerrainIntersect = false;
+TRACE_1("lineIntersectsSurfaces",_intersections);
 
-while {
-    _interval > 0.1
-} do {
-    _lastTerrainIntersect = _terrainIntersect;
-    _interval = _interval / 2;
+local _distance = 999;
 
-    _line set [1, _posASL vectorAdd (_direction vectorMultiply _distance)];
+{
+    _x params ["_intersectPosASL", "_surfaceNormal", "_intersectObject"];
 
-    _intersections = {
-        _x isKindOf "Static" || {_x isKindOf "AllVehicles"}
-    } count (lineIntersectsWith _line);
+    //Hit something solid that can reflect - (Static covers Building)
+    if ((isNull _intersectObject) || {(_intersectObject isKindOf "Static") || {_intersectObject isKindOf "AllVehicles"}}) exitWith {
+        _distance = _posASL vectorDistance _intersectPosASL;
+        TRACE_3("hit solid object",_distance,_intersectObject,typeOf _intersectObject);
 
-    _terrainIntersect = if (_intersections > 0) then {
-        false
-    } else {
-        terrainIntersectASL _line
+        if (isNull _intersectObject) then {  //Terrain:
+            // Calculate the angle between the terrain and the back blast direction
+            _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
+            TRACE_3("Terrain Intersect",_surfaceNormal,_direction,_angle);
+            // Angles is below 25deg, no backblast at all
+            if (_angle < 25) exitWith {_distance = 999};
+            // Angles is below 45deg the distance is increased according to the difference
+            if (_angle < 45) exitWith {_distance = _distance * (5 - 4 * sqrt ((_angle - 25)/20))};
+            // Angles above 45degcreate full backblast
+        };
     };
-
-    _distance = _distance + ([1, -1] select (_intersections > 0 || _terrainIntersect)) * _interval;
-    if (_distance > _maxDistance) exitWith {_distance = 999};
-};
-
-TRACE_4("while done",_distance,_maxDistance,_terrainIntersect,_lastTerrainIntersect);
-
-if (_distance > _maxDistance) exitWith {_distance};
-
-// If the intersection was with the terrain, check slope
-if (_terrainIntersect || _lastTerrainIntersect) then {
-    private ["_slope","_angle"];
-    _slope = surfaceNormal (_posASL vectorAdd (_direction vectorMultiply _distance));
-    // Calculate the angle between the terrain and the back blast direction
-    _angle = 90 - acos (- (_slope vectorDotProduct _direction));
-
-    TRACE_3("Terrain Intersect",_slope,_direction,_angle);
-    // Angles is below 25º, no backblast at all
-    if (_angle < 25) exitWith {_distance = 999};
-    // Angles is below 45º the distance is increased according to the difference
-    if (_angle < 45) exitWith {_distance = _distance * (5 - 4 * sqrt ((_angle - 25)/20))};
-    // Angles above 45º create full backblast
-};
+} forEach _intersections;
 
 _distance

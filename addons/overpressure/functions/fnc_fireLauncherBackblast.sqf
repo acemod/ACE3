@@ -48,7 +48,7 @@ _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Damage to the firer
 private "_distance";
-_distance = [_position, _direction, _backblastRange] call FUNC(getDistance);
+_distance = [_position, _direction, _backblastRange, _firer] call FUNC(getDistance);
 
 TRACE_1("Distance",_distance);
 
