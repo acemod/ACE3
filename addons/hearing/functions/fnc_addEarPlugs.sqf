@@ -16,12 +16,19 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_2("params",_unit,typeOf _unit);
 
-// Exit if hearing is disabled or soldier has earplugs already in (persistence scenarios)
-if (!GVAR(enableCombatDeafness) || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
+// only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
+};
+
+// Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
+if (!GVAR(enableCombatDeafness) || {!GVAR(autoAddEarplugsToUnits)} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
 
 // add earplugs if the soldier has a rocket launcher
 if ((secondaryWeapon _unit) != "") exitWith {
+    TRACE_1("has launcher - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
 
@@ -48,6 +55,9 @@ local _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
 //If unit has a machine gun boost effective loudness 50%
 if (_count >= 50) then {_loudness = _loudness * 1.5};
 
+TRACE_2("primaryWeapon",_unit,_loudness);
+
 if (_loudness > 0.2) then {
+    TRACE_1("loud gun - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
