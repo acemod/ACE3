@@ -30,7 +30,10 @@ if (!hasInterface) exitWith {};
 if (_set isEqualTo GVAR(isSet)) exitwith {};
 
 // Handle common addon audio
-if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};
+if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
+    EGVAR(hearing,disableVolumeUpdate) = _set;
+    EGVAR(hearing,deafnessDV) = 0;
+};
 if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
