@@ -18,7 +18,7 @@
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
 
-private ["_type", "_initializedClasses", "_condition", "_statement", "_action", "_processedHitPoints", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_hitPointsAddedAmount"];
+private["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint", "_hitPointsAddedAmount", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_icon", "_initializedClasses", "_name", "_position", "_positionsConfig", "_processedHitPoints", "_selection", "_statement", "_target", "_type"];
 
 _type = typeOf _vehicle;
 
@@ -85,8 +85,8 @@ _processedHitpoints = [];
 
         // Associated hitpoints can be grouped via config to produce a single repair action
         _groupsConfig = configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups);
+        _childHitPoint = false;
         if (isArray _groupsConfig) then {
-            _childHitPoint = false;
             {
                 {
                     if (_hitpoint == _x) exitWith {

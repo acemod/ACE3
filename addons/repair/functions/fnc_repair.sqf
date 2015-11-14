@@ -197,7 +197,8 @@ _hitPointClassname = if ((typeName _hitPoint) == "STRING") then {
     ((getAllHitPointsDamage _target) select 0) select _hitPoint
 };
 _processText = getText (_config >> "displayNameProgress");
-([_hitPointClassname, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
+local _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
+([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
 
 TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 

@@ -39,6 +39,7 @@ local _return = [];
     } forEach _x;
     TRACE_2("Check required equals available",_requiredList,_ableToAquire);
     if ((count _ableToAquire) == (count _requiredList)) exitWith {_return = _ableToAquire};
+    false
 } count _objectsToClaim;
 
 _return
