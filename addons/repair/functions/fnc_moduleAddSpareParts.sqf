@@ -41,5 +41,6 @@ if (!isNull _logic) then {
     // Add spare parts
     {
         [_x, _amount, _part, true] call FUNC(addSpareParts);
+        false
     } count _list;
 };

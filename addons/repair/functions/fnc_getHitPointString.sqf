@@ -13,14 +13,15 @@
  * 1: Added Hitpoint (default: [])
  *
  * Example:
- * [unit, vehicle, "hitpoint"] call ace_repair_fnc_getHitPointString
+ * ["HitFuel", "Repairing %1 ...", "Repairing HitFuel"] call ace_repair_fnc_getHitPointString
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_track", "_trackNames", "_trackStrings", "_trackAmount", "_text", "_toFind", "_trackIndex", "_combinedString"];
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
+
+private ["_track", "_trackNames", "_trackStrings", "_trackAmount", "_text", "_toFind", "_trackIndex", "_combinedString"];
 
 _track = if (count _trackArray > 0) then {true} else {false};
 _trackNames = [];
@@ -37,7 +38,7 @@ if (_track) then {
 _text = LSTRING(Hit);
 
 // Remove "Hit" from hitpoint name if one exists
-_toFind = if (_hitPoint find "Hit" == 0) then {
+_toFind = if ((toLower _hitPoint) find "hit" == 0) then {
     [_hitPoint, 3] call CBA_fnc_substr
 } else {
     _hitPoint
@@ -83,6 +84,7 @@ for "_i" from 0 to (count _hitPoint) do {
 
 // Don't display part name if no string is found in stringtable
 if (_text == LSTRING(Hit)) then {
+    ACE_LOGWARNING_1("Hitpoint [%1] - could not be localized", _hitPoint);
     _text = _textDefault;
 };
 
