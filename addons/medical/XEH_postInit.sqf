@@ -285,3 +285,5 @@ if (hasInterface) then {
         [player] call FUNC(init);
     }] call EFUNC(common,addEventHandler);
 };
+
+["medical_defibrillatorLocal", FUNC(treatmentAdvanced_defibrillatorLocal)] call EFUNC(common,addEventHandler);

@@ -22,3 +22,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(maxReviveTime), "maxReviveTime"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(amountOfReviveLives), "amountOfReviveLives"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(enableRevive), "enableRevive"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(exitReviveBy), "exitReviveBy"] call EFUNC(common,readSettingFromModule);

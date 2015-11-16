@@ -7,7 +7,16 @@ class Medical {
     condition = "true";
     icon = PATHTOF(UI\icons\medical_cross.paa);
 
-   class ACE_Head {
+    class DeployDefibrillator {
+        displayName = CSTRING(Defibrillator_Deploy);
+        condition = QUOTE('ACE_defibrillator' in (items _player));
+        exceptions[] = {"isNotInside"};
+        statement = QUOTE([_player] call FUNC(deployDefibrillator));
+        showDisabled = 0;
+        priority = 2;
+    };
+
+    class ACE_Head {
         displayName = CSTRING(Head);
         icon = PATHTOF(UI\icons\medical_cross.paa);
         exceptions[] = {"isNotInside", "isNotSitting"};

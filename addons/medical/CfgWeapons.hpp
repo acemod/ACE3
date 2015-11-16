@@ -229,4 +229,15 @@ class CfgWeapons {
             mass = 20;
         };
     };
+    class ACE_defibrillator: ACE_ItemCore {
+        scope = 2;
+        displayName= CSTRING(Defibrillator_DisplayName);
+        model = QUOTE(\A3\Structures_F_EPA\Items\Medical\Defibrillator_F.p3d);
+        picture = QUOTE(PATHTOF(ui\items\bodybag_x_ca.paa));
+        descriptionShort = CSTRING(Defibrillator_DescriptionShort);
+        descriptionUse = CSTRING(Defibrillator_DescriptionUse);
+        class ItemInfo: InventoryItem_Base_F {
+            mass = 202;
+        };
+    };
 };

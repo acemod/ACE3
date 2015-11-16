@@ -380,6 +380,24 @@ class ACE_Medical_Actions {
             itemConsumed = 1;
             litter[] = {};
         };
+        class Defibrillator: fieldDressing {
+            displayName = CSTRING(Defibrillator_Use);
+            displayNameProgress = CSTRING(Defibrillator_Using);
+            category = "advanced";
+            treatmentLocations[] = {"All"};
+            allowSelfTreatment = 0;
+            requiredMedic = 0;
+            treatmentTime = 3;
+            items[] = {};
+            condition = QUOTE(FUNC(canDefibrillate));
+            callbackSuccess = QUOTE(FUNC(treatmentAdvanced_defibrillator));
+            callbackFailure = "";
+            callbackProgress = "";
+            animationPatient = "";
+            animationPatientUnconscious = "";
+            itemConsumed = 0;
+            litter[] = {};
+        };
     };
 };
 

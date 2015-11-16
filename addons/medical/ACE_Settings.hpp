@@ -99,6 +99,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = -1;
     };
+    class GVAR(exitReviveBy) {
+        category = CSTRING(Category_Medical);
+        typeName = "SCALAR";
+        value = 2;
+    };
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
         typeName = "BOOL";

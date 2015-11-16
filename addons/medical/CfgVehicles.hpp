@@ -301,6 +301,17 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = -1;
             };
+            class exitReviveBy {
+                displayName = CSTRING(ReviveSettings_exitReviveBy_DisplayName);
+                description = CSTRING(ReviveSettings_exitReviveBy_Description);
+                typeName = "NUMBER";
+                defaultValue = 2;
+                class values {
+                    class onlyPAK { name = CSTRING(ReviveSettings_onlyPAK); value = 0; };
+                    class defibrillatorPAK {name = CSTRING(ReviveSettings_defibrillatorPAK); value = 1; };
+                    class defibrillatorPAKCPR { name = CSTRING(ReviveSettings_defibrillatorPAKCPR); value = 2; default = 1; };
+                };
+            };
         };
 
         class ModuleDescription {
@@ -713,6 +724,46 @@ class CfgVehicles {
                 statement = "";
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "";
+            };
+        };
+    };
+
+    class ACE_defibrillator_static: MapBoard_altis_F {
+        XEH_ENABLED;
+        scope = 1;
+        scopeCurator = 2;
+        side = -1;
+        model = QUOTE(PATHTOF(data\defibrillator.p3d));
+        icon = "";
+        displayName = CSTRING(Defibrillator_DisplayName);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"#(rgb,8,8,3)color(0.4,0.4,0.4,1)"};
+
+        EGVAR(dragging,canCarry) = 1;
+        EGVAR(dragging,carryPosition[]) = {0,1.2,0};
+        EGVAR(dragging,carryDirection) = 0;
+
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                distance = 5;
+                condition = QUOTE(true);
+                statement = "";
+                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
+                selection = "";
+
+                class Ready {
+                    displayName = CSTRING(Defibrillator_Ready);
+                    distance = 5;
+                    condition = QUOTE(true);
+                    statement = QUOTE([ARR_2(_caller,_target)] call FUNC(readyDefibrillator));
+                };
+                class PickUp {
+                    displayName = CSTRING(Defibrillator_PickUp);
+                    distance = 5;
+                    condition = QUOTE(_player canAdd 'ACE_defibrillator');
+                    statement = QUOTE(deleteVehicle _target; _player addItem 'ACE_defibrillator');
+                };
             };
         };
     };
