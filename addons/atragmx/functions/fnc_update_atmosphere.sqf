@@ -3,10 +3,10 @@
  * Updates all atmosphere column input fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_atmosphere

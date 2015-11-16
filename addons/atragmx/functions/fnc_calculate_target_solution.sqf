@@ -3,10 +3,10 @@
  * Calculates the fireing solution and updates the result input/output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_calculate_target_solution
@@ -17,19 +17,33 @@
 
 [] call FUNC(parse_input);
 
-private ["_scopeBaseAngle"];
-_scopeBaseAngle = (GVAR(workingMemory) select 3);
+private [
+    "_atmosphereModel", "_altitude", "_temperature", "_barometricPressure",
+    "_relativeHumidity","_bulletLength", "_stabilityFactor","_result","_latitude",
+	"_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection",
+	"_inclinationAngle", "_targetSpeed", "_targetRange"
+];
 
-private ["_bulletMass", "_bulletDiameter", "_boreHeight", "_airFriction", "_barrelTwist", "_muzzleVelocity", "_bc", "_dragModel", "_atmosphereModel", "_twistDirection"];
-_bulletMass = GVAR(workingMemory) select 12;
-_bulletDiameter = GVAR(workingMemory) select 13;
-_boreHeight = GVAR(workingMemory) select 5;
-_airFriction = GVAR(workingMemory) select 4;
-_barrelTwist = GVAR(workingMemory) select 14;
-_muzzleVelocity = GVAR(workingMemory) select 1;
-_bc = GVAR(workingMemory) select 15;
-_dragModel = GVAR(workingMemory) select 16;
-_atmosphereModel = GVAR(workingMemory) select 17;
+GVAR(workingMemory) params [
+    "_profile", // 0
+    "_muzzleVelocity", // 1
+    "_range", // 2
+    "_scopeBaseAngle", // 3
+    "_airFriction", // 4
+    "_boreHeight", // 5
+    "", // 6
+    "", // 7
+    "", // 8
+    "", // 9
+    "", // 10
+    "", // 11
+    "_bulletMass", // 12
+    "_bulletDiameter", // 13
+    "_barrelTwist", // 14
+    "_bc", // 15
+    "_dragModel", // 16
+    "_atmosphereModel" // 17
+];
 
 _twistDirection = 0;
 if (_barrelTwist > 0) then {
@@ -41,7 +55,6 @@ if (_barrelTwist > 0) then {
 };
 _barrelTwist = abs(_barrelTwist);
 
-private ["_altitude", "_temperature", "_barometricPressure", "_relativeHumidity"];
 _altitude = GVAR(altitude);
 _temperature = GVAR(temperature);
 _barometricPressure = GVAR(barometricPressure);
@@ -51,7 +64,6 @@ if (!GVAR(atmosphereModeTBH)) then {
     _relativeHumidity = 50;
 };
 
-private ["_bulletLength", "_stabilityFactor"];
 _bulletLength = 45.72;
 _stabilityFactor = 1.5;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
@@ -60,7 +72,6 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     };
 };
 
-private ["_latitude", "_directionOfFire", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange"];
 _latitude = GVAR(latitude) select GVAR(currentTarget);
 _directionOfFire = GVAR(directionOfFire) select GVAR(currentTarget);
 _windSpeed1 = GVAR(windSpeed1) select GVAR(currentTarget);
@@ -70,15 +81,16 @@ _inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
 _targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
 _targetRange = GVAR(targetRange) select GVAR(currentTarget);
 
-private ["_result"];
 _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
-            [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, false, _stabilityFactor, _twistDirection, _latitude, _directionOfFire] call FUNC(calculate_solution);
+          [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, false,
+          _stabilityFactor, _twistDirection, _latitude, _directionOfFire] call FUNC(calculate_solution);
 
-GVAR(elevationOutput) set [GVAR(currentTarget), _result select 0];
-GVAR(windage1Output) set [GVAR(currentTarget), (_result select 1) select 0];
-GVAR(windage2Output) set [GVAR(currentTarget), (_result select 1) select 1];
-GVAR(leadOutput) set [GVAR(currentTarget), _result select 2];
-GVAR(tofOutput) set [GVAR(currentTarget), _result select 3];
-GVAR(velocityOutput) set [GVAR(currentTarget), _result select 4];
+_result params ["_elevationResult","_windageResult","_leadResult","_tofResult","_velocityResult"];
+GVAR(elevationOutput) set [GVAR(currentTarget), _elevationResult];
+GVAR(windage1Output) set [GVAR(currentTarget), _windageResult select 0];
+GVAR(windage2Output) set [GVAR(currentTarget), _windageResult select 1];
+GVAR(leadOutput) set [GVAR(currentTarget), _leadResult];
+GVAR(tofOutput) set [GVAR(currentTarget), _tofResult];
+GVAR(velocityOutput) set [GVAR(currentTarget), _velocityResult];
 
 [] call FUNC(update_result);

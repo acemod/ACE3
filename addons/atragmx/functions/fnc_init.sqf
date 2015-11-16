@@ -3,10 +3,10 @@
  * Inits all global variables with the default values
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_init

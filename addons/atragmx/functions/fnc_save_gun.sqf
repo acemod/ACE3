@@ -3,10 +3,10 @@
  * Saves the currently select gun profile into the profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_save_gun

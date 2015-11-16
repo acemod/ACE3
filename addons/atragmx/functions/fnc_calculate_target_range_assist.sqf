@@ -3,10 +3,10 @@
  * Calculates the target range and updates the output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_calculate_target_range_assist

@@ -3,10 +3,10 @@
  * Creates the ATragMX dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_create_dialog
@@ -57,6 +57,6 @@ GVAR(DialogPFH) = [{
         [_this select 1] call cba_fnc_removePerFrameHandler;
     };
     __ctrlBackground ctrlSetText format [QUOTE(PATHTOF(UI\ATRAG_%1.paa)), ["N", "D"] select (call EFUNC(common,ambientBrightness))];
-}, 60, []] call CBA_fnc_addPerFrameHandler;
+}, 60, []] call cba_fnc_addPerFrameHandler;
 
 true
