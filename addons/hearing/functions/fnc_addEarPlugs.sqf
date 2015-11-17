@@ -38,11 +38,11 @@ if ((primaryWeapon _unit) == "") exitWith {};
 (primaryWeaponMagazine _unit) params [["_magazine", ""]];
 if (_magazine == "") exitWith {};
 
-local _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-local _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-local _count = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
+private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+private _count = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 
-local _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
+private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
 _caliber = call {
     if (_ammo isKindOf ["ShellBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
     if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
@@ -50,7 +50,7 @@ _caliber = call {
     if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
     if (_caliber <= 0) then { 6.5 } else { _caliber };
 };
-local _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
+private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
 
 //If unit has a machine gun boost effective loudness 50%
 if (_count >= 50) then {_loudness = _loudness * 1.5};

@@ -20,7 +20,7 @@ TRACE_2("params",_unit,typeOf _unit);
 
 if (!local _unit) exitWith {}; //XEH should only be called on local units
 
-local _respawn = [0] call BIS_fnc_missionRespawnType;
+private _respawn = [0] call BIS_fnc_missionRespawnType;
 
 //if respawn is not Group or side:
 if (_respawn <= 3) then {
