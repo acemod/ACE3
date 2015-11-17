@@ -32,12 +32,13 @@
     {
         // if condition is satisifed call statement
         if ((_x select 2) call (_x select 0)) then {
-            // make sure to delete the correct handle when multiple conditions are met in one frame
-            GVAR(waitUntilAndExecArray) deleteAt (GVAR(waitUntilAndExecArray) find _x);
+            GVAR(waitUntilAndExecArray) deleteAt _forEachIndex;
             (_x select 2) call (_x select 1);
+
+            // An index was removed, remember to account for it
+            _forEachIndex = _forEachIndex - 1;
         };
-        nil
-    } count +GVAR(waitUntilAndExecArray);
+    } forEach GVAR(waitUntilAndExecArray);
 
     END_COUNTER(waitAndExec);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
