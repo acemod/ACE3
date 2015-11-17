@@ -23,11 +23,11 @@ if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
-local _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints";
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints";
 
-local _realHitPoints = [];
-local _dependentHitPoints = [];
-local _dependentHitPointScripts = [];
+private _realHitPoints = [];
+private _dependentHitPoints = [];
+private _dependentHitPointScripts = [];
 
 // Find dependent hitpoints
 {
@@ -54,7 +54,7 @@ Total = damage _vehicle;
 
 // apply normalized damage to all dependand hitpoints
 {
-    local _damage = call (_dependentHitPointScripts select _forEachIndex);
+    private _damage = call (_dependentHitPointScripts select _forEachIndex);
     TRACE_2("setting depend hitpoint", _x, _damage);
     _vehicle setHitPointDamage [_x, _damage];
 } forEach _dependentHitPoints;

@@ -75,16 +75,16 @@ if (!_return) exitWith {false};
 // };
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
-local _repairLocations = getArray (_config >> "repairLocations");
+private _repairLocations = getArray (_config >> "repairLocations");
 if (!("All" in _repairLocations)) then {
-    local _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
-    local _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
+    private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
+    private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
         if !(isNil _x) exitWith {
-            local _val = missionNamespace getVariable _x;
+            private _val = missionNamespace getVariable _x;
             if (typeName _val == "SCALAR") then {
                 _return = switch (_val) do {
                     case 0: {true}; //useAnywhere
@@ -100,9 +100,9 @@ if (!("All" in _repairLocations)) then {
 if (!_return) exitWith {false};
 
 //Check that there are required objects nearby
-local _requiredObjects = getArray (_config >> "claimObjects");
+private _requiredObjects = getArray (_config >> "claimObjects");
 if (!(_requiredObjects isEqualTo [])) then {
-    local _objectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    private _objectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_objectsAvailable isEqualTo []) then {
             TRACE_2("Missing Required Objects",_requiredObjects,_objectsAvailable);
         _return = false

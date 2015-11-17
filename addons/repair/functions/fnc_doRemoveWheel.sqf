@@ -21,7 +21,7 @@ params ["_unit", "_vehicle", "_hitPoint"];
 TRACE_3("params",_unit,_vehicle,_hitPoint);
 
 // get current hitpoint damage
-local _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
+private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
 // can't remove destroyed or already removed wheel
 if (_hitPointDamage >= 1) exitWith {};
@@ -30,7 +30,7 @@ if (_hitPointDamage >= 1) exitWith {};
 ["fixCollision", _unit] call EFUNC(common,localEvent);
 
 // spawn wheel
-local _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
+private _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
 TRACE_2("new wheel created",_newWheel,damage _newWheel);
 
 // raise event to set the new hitpoint damage
