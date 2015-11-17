@@ -14,12 +14,12 @@
 
 BEGIN_COUNTER(fnc_render);
 
-local _foundTarget = false;
+private _foundTarget = false;
 
 if (GVAR(openedMenuType) >= 0) then {
     BEGIN_COUNTER(fnc_renderMenuOpen);
 
-    local _cursorPos2 = positionCameraToWorld [0, 0, 2];
+    private _cursorPos2 = positionCameraToWorld [0, 0, 2];
 
     // Render all available nearby interactions
     call FUNC(renderActionPoints);
@@ -29,13 +29,13 @@ if (GVAR(openedMenuType) >= 0) then {
         [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };
 
-    local _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _cursorScreenPos = [worldToScreen _cursorPos2, GVAR(cursorPos)] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
 
-    local _closestDistance = 1000000;
-    local _closestSelection = -1;
+    private _closestDistance = 1000000;
+    private _closestSelection = -1;
     {
         _x params ["", "_sPos"];
-        local _distanceFromCursor = _cursorScreenPos distance2d _sPos;
+        private _distanceFromCursor = _cursorScreenPos distance2d _sPos;
         if ((_distanceFromCursor < 0.1118) && {_distanceFromCursor < _closestDistance}) then {
             _closestDistance = _distanceFromCursor;
             _closestSelection = _forEachIndex;
@@ -44,11 +44,11 @@ if (GVAR(openedMenuType) >= 0) then {
 
     if(_closestSelection == -1) exitWith {};
 
-    local _closest = GVAR(currentOptions) select _closestSelection;
+    private _closest = GVAR(currentOptions) select _closestSelection;
     _closest params ["_action", "_sPos", "_hoverPath"];
 
-    local _cTime = ACE_diagTime;
-    local _delta = _cTime - GVAR(lastTime);
+    private _cTime = ACE_diagTime;
+    private _delta = _cTime - GVAR(lastTime);
     GVAR(lastTime) = _cTime;
 
     GVAR(rotationAngle) = (GVAR(rotationAngle) + (270*_delta)) mod 360;
@@ -59,7 +59,7 @@ if (GVAR(openedMenuType) >= 0) then {
     GVAR(selectedAction) = _action select 1;
     GVAR(selectedTarget) = (GVAR(selectedAction)) select 2;
 
-    local _misMatch = !(GVAR(lastPath) isEqualTo _hoverPath);
+    private _misMatch = !(GVAR(lastPath) isEqualTo _hoverPath);
 
     if(_misMatch && {ACE_diagTime-GVAR(expandedTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
         GVAR(startHoverTime) = ACE_diagTime;
@@ -76,8 +76,8 @@ if (GVAR(openedMenuType) >= 0) then {
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
             // Execute the current action if it's run on hover
-            local _tmp = ((GVAR(selectedAction) select 0) select 9) select 3;
-            local _runOnHover = true;
+            private _tmp = ((GVAR(selectedAction) select 0) select 9) select 3;
+            private _runOnHover = true;
             if ((typeName _tmp) == "CODE" ) then {
                 _runOnHover = call _tmp;
             } else {
@@ -89,14 +89,14 @@ if (GVAR(openedMenuType) >= 0) then {
             };
             if (_runOnHover) then {
                 this = GVAR(selectedTarget);
-                local _player = ACE_Player;
-                local _target = GVAR(selectedTarget);
+                private _player = ACE_Player;
+                private _target = GVAR(selectedTarget);
 
                 // Clear the conditions caches
                 ["clearConditionCaches", []] call EFUNC(common,localEvent);
 
                 // Check the action conditions
-                local _actionData = GVAR(selectedAction) select 0;
+                private _actionData = GVAR(selectedAction) select 0;
                 if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
                     // Call the statement
                     [_target, _player, _actionData select 6] call (_actionData select 3);
