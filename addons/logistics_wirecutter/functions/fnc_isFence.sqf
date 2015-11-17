@@ -19,9 +19,9 @@
 params ["_object"];
 TRACE_1("params",_object);
 
-local _typeOf = typeOf _object;
+private _typeOf = typeOf _object;
 
-local _returnValue = if (_typeOf != "") then {
+private _returnValue = if (_typeOf != "") then {
     //If the fence has configEntry we can check it directly
     (1 == (getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence))));
 } else {

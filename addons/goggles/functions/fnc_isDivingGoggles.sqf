@@ -17,7 +17,7 @@
 
 params ["_glasses"];
 
-local _config = configFile >> "CfgGlasses" >> _glasses;
+private _config = configFile >> "CfgGlasses" >> _glasses;
 
 if (!isClass _config) exitWith {false};
 
