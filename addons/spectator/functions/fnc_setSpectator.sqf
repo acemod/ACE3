@@ -49,7 +49,6 @@ if (_set) then {
     GVAR(heldKeys) resize 255;
     GVAR(mouse) = [false,false];
     GVAR(mousePos) = [0.5,0.5];
-    GVAR(treeSel) = objNull;
 
     // Update units before opening to support pre-set camera unit
     [] call FUNC(updateUnits);
@@ -133,7 +132,6 @@ if (_set) then {
     GVAR(heldKeys) = nil;
     GVAR(mouse) = nil;
     GVAR(mousePos) = nil;
-    GVAR(treeSel) = nil;
 
     // Reset nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {

@@ -191,7 +191,6 @@ class GVAR(interface) {
                     };
                     multiselectEnabled = 0;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
-                    onTreeSelChanged = QUOTE([ARR_2('onTreeSelChanged',_this)] call FUNC(handleInterface));
                 };
                 class unitFrame: RscFrame {
                     x = 0;

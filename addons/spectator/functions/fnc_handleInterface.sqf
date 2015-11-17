@@ -62,7 +62,6 @@ switch (toLower _mode) do {
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
-            [localize LSTRING(freeCamFocus),"F"],
             [localize LSTRING(attributeControls),""],
             [localize LSTRING(nextCam),"Up Arrow"],
             [localize LSTRING(prevCam),"Down Arrow"],
@@ -126,7 +125,6 @@ switch (toLower _mode) do {
         GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
     };
     // Mouse events
     case "onmousebuttondown": {
@@ -225,14 +223,6 @@ switch (toLower _mode) do {
             };
             case 32: { // D
                 GVAR(camDolly) set [0, GVAR(camSpeed) * ([1, 2] select _shift)];
-            };
-            case 33: { // F
-                private ["_sel","_vector"];
-                _sel = GVAR(treeSel);
-                if ((GVAR(camMode) == 0) && {!isNull _sel} && {_sel in GVAR(unitList)}) then {
-                    _vector = (positionCameraToWorld [0,0,0]) vectorDiff (positionCameraToWorld [0,0,25]);
-                    [nil,nil,nil,(getPosATL _sel) vectorAdd _vector] call FUNC(setCameraAttributes);
-                };
             };
             case 44: { // Z
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
@@ -333,15 +323,6 @@ switch (toLower _mode) do {
             };
 
             [_newMode,_newUnit] call FUNC(transitionCamera);
-        };
-    };
-    case "ontreeselchanged": {
-        _args params ["_tree","_sel"];
-
-        if (count _sel == 3) then {
-            GVAR(treeSel) = objectFromNetId (_tree tvData _sel);
-        } else {
-            GVAR(treeSel) = objNull;
         };
     };
     case "onunitsupdate": {
