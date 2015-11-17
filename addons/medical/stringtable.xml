@@ -2105,10 +2105,12 @@
             <Polish>%1 wykonał cykl RKO</Polish>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
+            <Portuguese>%1 realizou RCP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <Polish>%1 użył apteczki</Polish>
+            <Portuguese>%1 utilizou KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2223,6 +2225,7 @@
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -3441,12 +3444,14 @@
             <Polish>Lecz hitpointy</Polish>
             <Spanish>Curar puntos de vida</Spanish>
             <Russian>Исцелять части тела</Russian>
+            <Portuguese>Curar hitpoints</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3844,12 +3849,14 @@
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
+            <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
+            <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -308,6 +308,9 @@ class CfgVehicles {
     class O_Heli_Light_02_F: Heli_Light_02_base_F {
         displayName = CSTRING(Heli_Light_02_Name);
     };
+    class O_Heli_Light_02_v2_F: Heli_Light_02_base_F {
+        displayName = CSTRING(Heli_Light_02_v2_Name);
+    };
     class Heli_Light_02_unarmed_base_F;
     class O_Heli_Light_02_unarmed_F: Heli_Light_02_unarmed_base_F {
         displayName = CSTRING(Heli_Light_02_unarmed_Name);

@@ -31,18 +31,19 @@ if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
     private["_dagrElevation", "_dagrGrid", "_dagrHeading", "_dagrSpeed", "_dagrTime", "_elevation", "_gridArray", "_speed"];
-    
+
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     // GRID
     _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
-    _dagrGrid = format ["%1 %2", ((_gridArray select 0) select [0,4]), ((_gridArray select 1) select [0,4])];
-    
+    _gridArray params ["_gridArrayX","_gridArrayY"];
+    _dagrGrid = format ["%1 %2", ((_gridArrayX) select [0,4]), ((_gridArrayY) select [0,4])];
+
     // SPEED
     _speed = speed (vehicle ACE_player);
     _speed = floor (_speed * 10) / 10;
@@ -68,7 +69,7 @@ GVAR(outputPFH) = [{
     __gridControl ctrlSetText format ["%1", _dagrGrid];
     __speedControl ctrlSetText format ["%1", _dagrSpeed];
     __elevationControl ctrlSetText format ["%1", _dagrElevation];
-    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1 °", _dagrHeading] });
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1 ï¿½", _dagrHeading] });
     __timeControl ctrlSetText format ["%1", _dagrTime];
-    
+
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

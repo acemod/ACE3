@@ -21,11 +21,11 @@
 
 params ["_unit", ["_radius", 15]];
 
-local _rotorWash = [false, 0];
+private _rotorWash = [false, 0];
 
 {
     if (isEngineOn _x) then {
-        local _distance = _unit distance _x;
+        private _distance = _unit distance _x;
 
         // convert distance to 0...1 range, where 0 is the maximum radius
         _distance = 1 - _distance / _radius;

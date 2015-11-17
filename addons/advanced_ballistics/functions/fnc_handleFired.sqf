@@ -24,11 +24,11 @@ if (!hasInterface) exitWith {};
 if (!GVAR(enabled)) exitWith {};
 
 // Parameterization
-private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletSpeed", "_bulletLength", "_barrelTwist", "_stabilityFactor"];
+private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opticType", "_bulletTraceVisible", "_temperature", "_barometricPressure", "_bulletMass", "_bulletLength", "_muzzleVelocity", "_muzzleVelocityShift", "_bulletVelocity", "_bulletLength", "_barrelTwist", "_stabilityFactor", "_aceTimeSecond", "_barrelVelocityShift", "_ammoTemperatureVelocityShift"];
+
 params ["_unit", "_weapon", "", "_mode", "_ammo", "_magazine", "_bullet"];
 
 _abort = false;
-
 
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (!alive _bullet) exitWith {};
@@ -75,22 +75,22 @@ _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 _bulletVelocity = velocity _bullet;
 _muzzleVelocity = vectorMagnitude _bulletVelocity;
 
+_barrelVelocityShift = 0;
 if (GVAR(barrelLengthInfluenceEnabled)) then {
-    _barrelVelocityShift = uiNamespace getVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],nil];
-    if (isNil "_barrelVelocityShift") then {
-        _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
-        uiNamespace setVariable [format [QGVAR(%1_muzzleVelocityShift),_weapon],_muzzleVelocityShift];
-    };
+    _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _muzzleVelocity] call FUNC(calculateBarrelLengthVelocityShift);
 };
 
+_ammoTemperatureVelocityShift = 0;
 if (GVAR(ammoTemperatureEnabled)) then {
     _temperature = ((getPosASL _unit) select 2) call EFUNC(weather,calculateTemperatureAtHeight);
-    _temperatureVelocityShift = ([_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift));
+    _ammoTemperatureVelocityShift = ([_ammoTempMuzzleVelocityShifts, _temperature] call FUNC(calculateAmmoTemperatureVelocityShift));
 };
 
 if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
+    _muzzleVelocityShift = _barrelVelocityShift + _ammoTemperatureVelocityShift;
+    TRACE_4("shift",_muzzleVelocity,_muzzleVelocityShift, _barrelVelocityShift, _ammoTemperatureVelocityShift);
     if (_muzzleVelocityShift != 0) then {
-        _muzzleVelocity = _muzzleVelocity + (_barrelVelocityShift + _ammoTemperatureVelocityShift);
+        _muzzleVelocity = _muzzleVelocity + _muzzleVelocityShift;
         _bulletVelocity = _bulletVelocity vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply (_muzzleVelocityShift));
         _bullet setVelocity _bulletVelocity;
     };

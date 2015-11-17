@@ -817,6 +817,17 @@
             <Hungarian>Ka-60 Kasatka</Hungarian>
             <Italian>Ka-60 Kasatka</Italian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Heli_Light_02_v2_Name">
+            <English>Ka-60 Kasatka (Black &amp; White)</English>
+            <Czech>Ka-60 Kasatka (černobílá)</Czech>
+            <French>Ka-60 Kasatka (noir et blanc)</French>
+            <German>Ka-60 Kasatka (Schwarz-weiß)</German>
+            <Italian>Ka-60 Kasatka (bianco e nero)</Italian>
+            <Polish>Ka-60 Kasatka (czarno-biały)</Polish>
+            <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
+            <Russian>Ka-60 Касатка (белый и черный)</Russian>
+            <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name">
             <English>Ka-60 Kasatka (unarmed)</English>
             <German>Ka-60 Kasatka (unbewaffnet)</German>
