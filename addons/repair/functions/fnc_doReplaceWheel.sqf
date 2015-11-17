@@ -30,13 +30,13 @@ if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "is
 };
 
 // get current hitpoint damage
-local _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
+private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 
 // can't replace not destroyed wheel
 if (_hitPointDamage < 1) exitWith {};
 
 // get replacement wheel's damage
-local _newHitPointDamage = damage _wheel;
+private _newHitPointDamage = damage _wheel;
 
 // can't replace a destroyed wheel
 if (_newHitPointDamage >= 1) exitWith {};

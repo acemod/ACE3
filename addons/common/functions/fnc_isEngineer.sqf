@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-local _isEngineer = _unit getVariable ["ACE_isEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1];
+private _isEngineer = _unit getVariable ["ACE_isEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1];
 //Handle ace_repair modules setting this to a number
 if ((typeName _isEngineer) == "SCALAR") then {_isEngineer = _isEngineer > 0};
 

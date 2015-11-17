@@ -20,14 +20,14 @@
 params ["_unit", "_maxRange", "_objectsToClaim"];
 TRACE_3("params",_unit,_maxRange,_objectsToClaim);
 
-local _return = [];
+private _return = [];
 
 {
-    local _requiredList = _x; //eg ["ace_track", "ace_track"]
-    local _ableToAquire = []; //will be array of ojbects
+    private _requiredList = _x; //eg ["ace_track", "ace_track"]
+    private _ableToAquire = []; //will be array of ojbects
     {
-        local _nearObjects = nearestObjects [_unit, [_x], _maxRange];
-        local _canClaimObject = objNull;
+        private _nearObjects = nearestObjects [_unit, [_x], _maxRange];
+        private _canClaimObject = objNull;
         {
             if ((!(_x in _ableToAquire))
                     && {[_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)}
