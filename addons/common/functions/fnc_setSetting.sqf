@@ -22,7 +22,7 @@
 
 params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 
-local _settingData = [_name] call FUNC(getSettingData);
+private _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting does not exist
 if (_settingData isEqualTo []) exitWith {
@@ -42,7 +42,7 @@ if ((missionNamespace getVariable [QEGVAR(modules,serverModulesRead), false]) &&
 };
 
 // If the type is not equal, try to cast it
-local _failed = false;
+private _failed = false;
 if (typeName _value != _settingData select 1) then {
     _failed = true;
     if ((_typeName == "BOOL") && {typeName _value == "SCALAR"}) then {

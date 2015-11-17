@@ -17,16 +17,16 @@
 #include "script_component.hpp"
 
 //paramsArray is a normal variable not a command
-local _paramsArray = missionnamespace getvariable ["paramsArray", []];
+private _paramsArray = missionnamespace getvariable ["paramsArray", []];
 
 TRACE_1("Reading missionConfigFile params",_paramsArray);
 
 {
-    local _config = (missionConfigFile >> "params") select _forEachIndex;
+    private _config = (missionConfigFile >> "params") select _forEachIndex;
     if ((getNumber (_config >> "ACE_setting")) > 0) then {
-        local _settingName = configName _config;
-        local _settingValue = _x;
-        local _title = getText (_config >> "title");
+        private _settingName = configName _config;
+        private _settingValue = _x;
+        private _title = getText (_config >> "title");
 
         TRACE_3("ace_setting",_title,_settingName,_settingValue);
 
@@ -35,7 +35,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             ACE_LOGERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
         };
 
-        local _settingData = [_settingName] call FUNC(getSettingData);
+        private _settingData = [_settingName] call FUNC(getSettingData);
         _settingData params ["", "_typeName", "", "", "", "", "_isForced"];
 
         // Check if it's already forced and quit
@@ -43,7 +43,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
-        local _validValue = false;
+        private _validValue = false;
         switch (true) do {
             case (_typeName == "SCALAR"): {_validValue = true;};
             case (_typeName == "BOOL"): {

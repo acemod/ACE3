@@ -5,22 +5,22 @@
     // TODO This is a basic and limited implementation that mimics some of the functionality from the A3 module framework, but not all of it.
     // We have to execute this in the postInit XEH because on object init, the parameters of the modules are not yet available. They are if we execute it at the start of postInit execution.
     
-    local _uniqueModulesHandled = [];
+    private _uniqueModulesHandled = [];
     {
         [_x] call {
             params ["_logic"];
-            local _logicType = typeof _logic;
+            private _logicType = typeof _logic;
             _logic hideobject true;
 
             if (_logic getvariable [QGVAR(initalized), false]) exitwith {};
-            local _config = (configFile >> "CfgVehicles" >> _logicType);
+            private _config = (configFile >> "CfgVehicles" >> _logicType);
             if !(isClass _config) exitwith {};
 
-            local _isGlobal = getNumber (_config >> "isGlobal") > 0;
-            local _isDisposable = getNumber (_config >> "isDisposable") > 0;
-            local _isPersistent = getNumber (_config >> "isPersistent") > 0 || getnumber (_config >> "isGlobal") > 1;
-            local _isSingular  = getNumber (_config >> "isSingular") > 0;
-            local _function = getText (_config >> "function");
+            private _isGlobal = getNumber (_config >> "isGlobal") > 0;
+            private _isDisposable = getNumber (_config >> "isDisposable") > 0;
+            private _isPersistent = getNumber (_config >> "isPersistent") > 0 || getnumber (_config >> "isGlobal") > 1;
+            private _isSingular  = getNumber (_config >> "isSingular") > 0;
+            private _function = getText (_config >> "function");
             if (isnil _function) then {
                 _function = compile _function;
             } else {
