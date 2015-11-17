@@ -47,7 +47,7 @@ if (_selection in R_LEG_SELECTIONS) exitwith {"leg_r"};*/
 //Backup method to detect weird selections/hitpoints
 if ((_selection == "?") || {!(_selection in GVAR(SELECTIONS))}) exitWith {
     if (_hitPointIndex < 0) exitWith {_selection};
-    local _hitPoint = toLower configName ((configProperties [(configFile >> "CfgVehicles" >> (typeOf _unit) >> "HitPoints")]) select _hitPointIndex);
+    private _hitPoint = toLower configName ((configProperties [(configFile >> "CfgVehicles" >> (typeOf _unit) >> "HitPoints")]) select _hitPointIndex);
     TRACE_4("Weird sel/hit", _unit, _selection, _hitPointIndex, _hitPoint);
 
     if (_hitPoint in HEAD_HITPOINTS) exitWith {"head"};

@@ -37,7 +37,7 @@ if (
 };
 
 if (currentWeapon _unit != "") then {
-    local _index = 0;
+    private _index = 0;
 
     while {
         _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}

@@ -20,12 +20,13 @@ params ["_vehicle"];
 private["_loaded"];
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
-if (count _loaded == 0) exitWith {};
+if (_loaded isEqualTo []) exitWith {};
 
 {
-    // TODO deleteVehicle or just delete vehicle? Do we want to be able to recover destroyed equipment?
-    deleteVehicle _x;
-    //_x setDamage 1;
+    // TODO Do we want to be able to recover destroyed equipment?
+    if (typeName _x == "OBJECT") then {
+        deleteVehicle _x;
+    };
 } count _loaded;
 
 [_vehicle] call FUNC(validateCargoSpace);

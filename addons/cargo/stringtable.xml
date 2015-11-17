@@ -95,5 +95,21 @@
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
         </Key>
+        <Key ID="STR_ACE_Cargo_LoadingItem">
+            <English>Loading Cargo</English>
+            <Portuguese>Carregando carga</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadingItem">
+            <English>Unloading Cargo</English>
+            <Portuguese>Descarregando carga</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_LoadingFailed">
+            <English>%1&lt;br/&gt;could not be loaded</English>
+            <Portuguese>%1&lt;br/&gt;não pode ser carregado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Cargo_UnloadingFailed">
+            <English>%1&lt;br/&gt;could not be unloaded</English>
+            <Portuguese>%1&lt;br/&gt;não pode ser descarregado</Portuguese>
+        </Key>
     </Package>
 </Project>
