@@ -8,7 +8,7 @@
 //////////////////////////////////////////////////
 
 //Singe PFEH to handle execNextFrame, waitAndExec and waitUntilAndExec:
-{
+[{
     BEGIN_COUNTER(waitAndExec);
 
     //Handle the waitAndExec array:
