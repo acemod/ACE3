@@ -40,10 +40,10 @@ if (_reason != "") then {
 };
 
 GVAR(showHudHash) params ["_reasons", "_masks"];
-local _resultMask = [];
+private _resultMask = [];
 
 for "_index" from 0 to 7 do {
-    local _set = true; //Default to true
+    private _set = true; //Default to true
     {
         if (!(_x select _index)) exitWith {
             _set = false; //Any false will make it false
