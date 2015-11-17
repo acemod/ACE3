@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_selection", "_damage", "_shooter", "_projectile"];
+params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitPointIndex"];
 TRACE_5("ACE_DEBUG: HandleDamage Called",_unit, _selection, _damage, _shooter, _projectile);
 
 // bug, apparently can fire for remote units in special cases
@@ -43,7 +43,7 @@ if (_selection == "legs") exitWith {_unit getHit "legs"};
 // This will convert new selection names into selection names that the medical system understands
 // TODO This should be cleaned up when we revisit the medical system at a later stage
 // and instead we should deal with the new hitpoints directly
-_selection = [_selection] call FUNC(translateSelections);
+_selection = [_unit, _selection, _hitPointIndex] call FUNC(translateSelections);
 _this set [1, _selection]; // ensure that the parameters are set correctly
 
 // If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"

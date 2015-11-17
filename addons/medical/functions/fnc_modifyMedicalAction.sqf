@@ -19,7 +19,7 @@
 
 params ["_target", "_player", "_selectionN", "_actionData"];
 
-if (GVAR(level) < 2) exitwith {
+if (GVAR(level) < 2 || {!([_target] call FUNC(hasMedicalEnabled))}) exitwith {
     private ["_pointDamage"];
     _pointDamage = (_target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
 
