@@ -194,6 +194,9 @@ call FUNC(checkFiles);
 
     ACE_LOGINFO("Settings received from server.");
 
+    if (isServer) then { //read settings from paramsArray
+        [] call FUNC(readSettingsFromParamsArray);
+    };
     // Event so that ACE_Modules have their settings loaded:
     ["InitSettingsFromModules", []] call FUNC(localEvent);
 
