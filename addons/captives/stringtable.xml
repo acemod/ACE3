@@ -166,7 +166,7 @@
             <Portuguese>Fazer unidade se render</Portuguese>
             <French>Faire capituler l'unité</French>
             <Hungarian>Egység kapitulálása</Hungarian>
-            <Russian>Сделать юнита пленным</Russian>
+            <Russian>Заставить юнита сдаться</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
@@ -177,15 +177,17 @@
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda. &lt;br/&gt;Fonte: ace_captives</Portuguese>
             <French>Synchronise une unité pour la rendre captive. &lt;br/&gt;Source: ace_captives</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
-            <Russian>Синхронизируйте с юнитами, чтобы сделать их пленными.&lt;br /&gt;Источник: ace_captives</Russian>
+            <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться в плен.&lt;br /&gt;Источник: ace_captives</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
             <Portuguese>Fazer unidade algemada</Portuguese>
+            <Russian>Связать юнита</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.&lt;br /&gt;Source: ace_captives</English>
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.&lt;br/&gt;Source: ace_captives</Portuguese>
+            <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.&lt;br /&gt;Источник: ace_captives</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
