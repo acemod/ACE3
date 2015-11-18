@@ -45,36 +45,36 @@ switch (toLower _mode) do {
             };
         } forEach [
             [localize LSTRING(uiControls),""],
-            [localize LSTRING(uiToggleUnits),"1"],
-            [localize LSTRING(uiToggleHelp),"2"],
-            [localize LSTRING(uiToggleTools),"3"],
-            [localize LSTRING(uiToggleCompass),"4"],
-            [localize LSTRING(uiToggleIcons),"5"],
-            [localize LSTRING(uiToggleMap),"M"],
-            [localize LSTRING(uiToggleInterface),"Backspace"],
+            [localize LSTRING(uiToggleUnits),keyName 2],
+            [localize LSTRING(uiToggleHelp),keyName 3],
+            [localize LSTRING(uiToggleTools),keyName 4],
+            [localize LSTRING(uiToggleCompass),keyName 5],
+            [localize LSTRING(uiToggleIcons),keyName 6],
+            [localize LSTRING(uiToggleMap),keyName 50],
+            [localize LSTRING(uiToggleInterface),keyName 14],
             [localize LSTRING(freeCamControls),""],
-            [localize LSTRING(freeCamForward),"W"],
-            [localize LSTRING(freeCamBackward),"S"],
-            [localize LSTRING(freeCamLeft),"A"],
-            [localize LSTRING(freeCamRight),"D"],
-            [localize LSTRING(freeCamUp),"Q"],
-            [localize LSTRING(freeCamDown),"Z"],
+            [localize LSTRING(freeCamForward),keyName 17],
+            [localize LSTRING(freeCamBackward),keyName 31],
+            [localize LSTRING(freeCamLeft),keyName 30],
+            [localize LSTRING(freeCamRight),keyName 32],
+            [localize LSTRING(freeCamUp),keyName 16],
+            [localize LSTRING(freeCamDown),keyName 44],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
             [localize LSTRING(attributeControls),""],
-            [localize LSTRING(nextCam),"Up Arrow"],
-            [localize LSTRING(prevCam),"Down Arrow"],
-            [localize LSTRING(nextUnit),"Right Arrow"],
-            [localize LSTRING(prevUnit),"Left Arrow"],
-            [localize LSTRING(nextVis),"N"],
-            [localize LSTRING(prevVis),"Ctrl + N"],
+            [localize LSTRING(nextCam),keyName 200],
+            [localize LSTRING(prevCam),keyName 208],
+            [localize LSTRING(nextUnit),keyName 205],
+            [localize LSTRING(prevUnit),keyName 203],
+            [localize LSTRING(nextVis),keyName 49],
+            [localize LSTRING(prevVis),format["%1 + %2",keyName 29,keyname 49]],
             [localize LSTRING(adjZoom),"Scrollwheel"],
-            [localize LSTRING(adjSpeed),"Ctrl + Scrollwheel"],
-            [localize LSTRING(incZoom),"Num-/Num+"],
-            [localize LSTRING(incSpeed),"Ctrl + Num-/Num+"],
-            [localize LSTRING(reZoom),"Alt + Num-"],
-            [localize LSTRING(reSpeed),"Alt + Num+"]
+            [localize LSTRING(adjSpeed),format["%1 + Scrollwheel",keyName 29]],
+            [localize LSTRING(incZoom),format["%1/%2",keyName 74,keyName 78]],
+            [localize LSTRING(incSpeed),format["%1 + %2/%3",keyName 29,keyName 74,keyName 78]],
+            [localize LSTRING(reZoom),format["%1 + %2",keyName 56,keyName 74]],
+            [localize LSTRING(reSpeed),format["%1 + %2",keyName 56,keyName 78]]
         ];
 
         // Handle support for BI's respawn counter
@@ -240,7 +240,7 @@ switch (toLower _mode) do {
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 57: { // Spacebar
-                // Freecam attachment here, if in external then set cam pos and attach
+                // Switch between unit and freecam here
             };
             case 74: { // Num -
                 if (_alt) exitWith { [nil,nil,nil,nil,nil,nil, 1.25] call FUNC(setCameraAttributes); };
@@ -251,7 +251,7 @@ switch (toLower _mode) do {
                 };
             };
             case 78: { // Num +
-                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 2.5] call FUNC(setCameraAttributes); };
+                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 1.5] call FUNC(setCameraAttributes); };
                 if (_ctrl) then {
                     [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + 0.05] call FUNC(setCameraAttributes);
                 } else {
