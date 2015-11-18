@@ -27,10 +27,7 @@ _aceTimeSecond = floor ACE_time;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
 
     if (!alive _bullet || _bulletSpeed < 100) then {
-        GVAR(allBullets) deleteAt _forEachIndex;
-
-        // An index was removed, remember to account for it
-        _forEachIndex = _forEachIndex - 1;
+        GVAR(allBullets) deleteAt (GVAR(allBullets) find _x);
     } else {
         _bulletPosition = getPosASL _bullet;
 
@@ -40,7 +37,8 @@ _aceTimeSecond = floor ACE_time;
 
         call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, _aceTimeSecond, ACE_time - _aceTimeSecond]);
     };
-} forEach GVAR(allBullets);
+    nil
+} count +GVAR(allBullets);
 
 if (GVAR(allBullets) isEqualTo []) then {
     [_this select 1] call CBA_fnc_removePerFrameHandler;

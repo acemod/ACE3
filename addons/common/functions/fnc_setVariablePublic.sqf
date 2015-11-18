@@ -43,13 +43,11 @@ GVAR(setVariablePublicPFH) = [{
         if (ACE_diagTime > _syncTime) then {
             // set value public
             _object setVariable [_varName, _object getVariable _varName, true];
-            GVAR(setVariablePublicArray) deleteAt _forEachIndex;
-            GVAR(setVariableNames) deleteAt _forEachIndex;
-
-            // An index was removed, remember to account for it
-            _forEachIndex = _forEachIndex - 1;
+            GVAR(setVariablePublicArray) deleteAt (GVAR(setVariablePublicArray) find _x);
+            GVAR(setVariableNames) deleteAt (GVAR(setVariableNames) find _x);
         };
-    } forEach GVAR(setVariablePublicArray);
+        nil
+    } count +GVAR(setVariablePublicArray);
 
     if (GVAR(setVariablePublicArray) isEqualTo []) then {
         [GVAR(setVariablePublicPFH)] call CBA_fnc_removePerFrameHandler;

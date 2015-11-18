@@ -34,10 +34,7 @@
         _bulletSpeed = vectorMagnitude _bulletVelocity;
 
         if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeed < 100}}) then {
-            GVAR(trackedBullets) deleteAt _forEachIndex;
-
-            // An index was removed, remember to account for it
-            _forEachIndex = _forEachIndex - 1;
+            GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
         } else {
             if (_isWind) then {
                 _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
@@ -53,6 +50,7 @@
             };
             _bullet setVelocity _bulletVelocity;
         };
-    } forEach GVAR(trackedBullets);
+        nil
+    } count +GVAR(trackedBullets);
     // END_COUNTER(pfeh);
 }, GVAR(simulationInterval), [ACE_time]] call CBA_fnc_addPerFrameHandler;
