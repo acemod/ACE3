@@ -30,4 +30,4 @@ GVAR(vectorConnected) = false;
 GVAR(noVectorData) = true;
 GVAR(vectorGrid) = "00000000";
 
-["RangerfinderData", {_this call FUNC(handleRangeFinderData)}] call EFUNC(common,addEventHandler);
+["RangerfinderData", FUNC(handleRangeFinderData)] call EFUNC(common,addEventHandler);

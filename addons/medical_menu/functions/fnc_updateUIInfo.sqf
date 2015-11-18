@@ -62,7 +62,7 @@ _damaged = [false, false, false, false, false, false];
 _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
 
 _allInjuryTexts = [];
-if (EGVAR(medical,level) >= 2) then {
+if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnabled))}) then {
     _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
     private "_amountOf";
     {
