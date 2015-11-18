@@ -48,7 +48,7 @@ if (_state) then {
         if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
-            local _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
+            private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
             if (_animChangedEHID != -1) then {
                 TRACE_1("removing animChanged EH",_animChangedEHID);
                 _unit removeEventHandler ["AnimChanged", _animChangedEHID];
@@ -68,7 +68,7 @@ if (_state) then {
     [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
 
     //remove AnimChanged EH
-    local _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
+    private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(surrenderAnimEHID), -1];
 
