@@ -20,9 +20,11 @@ _weaponConfig = (configFile >> "CfgWeapons" >> _this);
 
 _barrelTwist = getNumber(_weaponConfig >> "ACE_barrelTwist");
 _twistDirection = 1;
-_twistDirection = getNumber(_weaponConfig >> "ACE_twistDirection");
-if !(_twistDirection in [-1, 0, 1]) then {
-    _twistDirection = 1;
+if (isNumber (_weaponConfig >> "ACE_twistDirection")) then {
+    _twistDirection = getNumber (_weaponConfig >> "ACE_twistDirection");
+    if !(_twistDirection in [-1, 0, 1]) then {
+        _twistDirection = 1;
+    };
 };
 
 _barrelLength = getNumber(_weaponConfig >> "ACE_barrelLength");
