@@ -21,11 +21,11 @@
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_3("params",_posASL,_direction,_maxDistance);
 
-local _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
+private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
 
 TRACE_1("lineIntersectsSurfaces",_intersections);
 
-local _distance = 999;
+private _distance = 999;
 
 {
     _x params ["_intersectPosASL", "_surfaceNormal", "_intersectObject"];
