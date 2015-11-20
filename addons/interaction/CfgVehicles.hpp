@@ -18,6 +18,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class EnableGestures {
+                displayName = CSTRING(EnableGestures_DisplayName);
+                description = CSTRING(EnableGestures_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
 
         class ModuleDescription {
@@ -274,7 +280,7 @@ class CfgVehicles {
 
             class ACE_Gestures {
                 displayName = CSTRING(Gestures);
-                condition = "canStand _target";
+                condition = QUOTE(GVAR(EnableGestures) && {canStand _target});
                 statement = "";
                 showDisabled = 1;
                 priority = 3.5;

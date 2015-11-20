@@ -812,6 +812,12 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interaction_EnableGestures_DisplayName">
+            <English>Enable Gestures</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_EnableGestures_Description">
+            <English>Allow gestures from the self interaction menu? Default: Yes</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
             <Polish>Na zarządzanie drużyną składa się: przydział kolorów dla członków drużyny, przejmowanie dowodzenia, dołączanie/opuszczanie drużyn.</Polish>
