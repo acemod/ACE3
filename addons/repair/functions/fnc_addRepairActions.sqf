@@ -122,10 +122,10 @@ _hitPointsAddedAmount = [];
                 _x params ["_hitpoint", "_position"];
                 // Exit with supplied custom position when same hitpoint name found or print RPT error if it's invalid
                 if (_hitpoint == _currentHitpoint) exitWith {
-                    if (typeName _position == "ARRAY") exitWith {
+                    if (_position isEqualType []) exitWith {
                         _selection = _position; // Position in model space
                     };
-                    if (typeName _position == "STRING") exitWith {
+                    if (_position isEqualType "") exitWith {
                         _selection = _vehicle selectionPosition _position; // Selection name
                     };
                     ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_vehicle);
@@ -134,7 +134,7 @@ _hitPointsAddedAmount = [];
         };
 
         // If position still empty (not a position array or selection name) try extracting from model
-        if (typeName _selection == "STRING" && {_selection == ""}) then {
+        if (_selection isEqualType "" && {_selection == ""}) then {
             _selection = _vehicle selectionPosition (_hitPointsSelections select (_hitPoints find _x));
         };
 

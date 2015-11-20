@@ -24,7 +24,7 @@ private ["_itemUsedInfo", "_itemsUsedBy"];
 _itemsUsedBy = [];
 {
     // handle a one of type use item
-    if (typeName _x == "ARRAY") then {
+    if (_x isEqualType []) then {
         {
             _itemUsedInfo = [_unit, _x] call FUNC(useItem);
             if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
@@ -32,7 +32,7 @@ _itemsUsedBy = [];
     };
 
     // handle required item
-    if (typeName _x == "STRING") then {
+    if (_x isEqualType "") then {
         _itemUsedInfo = [_unit, _x] call FUNC(useItem);
         if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
     };

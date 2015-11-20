@@ -209,7 +209,7 @@ if (_show) then {
             };
 
             {
-                if (typeName _x == "STRING" && {isLocalized _x}) then {
+                if (_x isEqualType "" && {isLocalized _x}) then {
                     _arguments set [_foreachIndex, localize _x];
                 };
             } foreach _arguments;

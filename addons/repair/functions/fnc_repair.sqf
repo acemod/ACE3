@@ -59,7 +59,7 @@ if (getText (_config >> "condition") != "") then {
     } else {
         _condition = missionNamespace getVariable _condition;
     };
-    if (typeName _condition == "BOOL") then {
+    if (_condition isEqualType false) then {
         _return = _condition;
     } else {
         _return = [_caller, _target, _hitPoint, _className] call _condition;
@@ -88,7 +88,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     if !(isnil _x) exitwith {
         private "_val";
         _val = missionNamespace getVariable _x;
-        if (typeName _val == "SCALAR") then {
+        if (_val isEqualType 0) then {
             _return = switch (_val) do {
                 case 0: {true}; //useAnywhere
                 case 1: {call _repairVeh}; //repairVehicleOnly
@@ -167,7 +167,7 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
         } else {
             _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
         };
-        if (typeName _repairTimeConfig == "SCALAR") exitwith {
+        if (_repairTimeConfig isEqualType 0) exitwith {
             _repairTimeConfig;
         };
         [_caller, _target, _hitPoint, _className] call _repairTimeConfig;

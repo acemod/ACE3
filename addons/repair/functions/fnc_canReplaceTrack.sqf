@@ -24,7 +24,7 @@ TRACE_4("params",_unit,_target,_hitPoint,_track);
 
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-if (typeName _track == "OBJECT") then {
+if (_track isEqualType objNull) then {
     // not near interpret as objNull
     if !(_track in nearestObjects [_unit, ["ACE_Track"], 5]) then {
         _track = objNull;

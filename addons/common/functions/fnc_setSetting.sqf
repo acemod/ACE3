@@ -33,7 +33,7 @@ if (_settingData select 6) exitWith {};
 _failed = false;
 if (typeName _value != _settingData select 1) then {
     _failed = true;
-    if (_settingData select 1 == "BOOL" && typeName _value == "SCALAR") then {
+    if (_settingData select 1 == "BOOL" && _value isEqualType 0) then {
         // If value is not 0 or 1 consider it invalid and don't set anything
         if (_value isEqualTo 0) then {
             _value = false;
@@ -44,7 +44,7 @@ if (typeName _value != _settingData select 1) then {
             _failed = false;
         };
     };
-    if (_settingData select 1 == "COLOR" && typeName _value == "ARRAY") then {
+    if (_settingData select 1 == "COLOR" && _value isEqualType []) then {
         _failed = false;
     };
 };

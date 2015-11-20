@@ -22,7 +22,7 @@ private ["_loaded", "_itemClass", "_validVehiclestate", "_emptyPos"];
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 if !(_item in _loaded) exitWith {false};
 
-_itemClass = if (typeName _item == "STRING") then {_item} else {typeOf _item};
+_itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
 _validVehiclestate = true;
 _emptyPos = [];

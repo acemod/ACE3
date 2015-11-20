@@ -237,7 +237,7 @@ switch (_coordinate) do {
 };
 
 // trap errors
-if ({typeName _x == "STRING"} count [_digit0, _digit1, _digit2, _digit3, _digit4] < 5) exitWith {
+if ({_x isEqualType ""} count [_digit0, _digit1, _digit2, _digit3, _digit4] < 5) exitWith {
     [QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa))]    // return
 };
 

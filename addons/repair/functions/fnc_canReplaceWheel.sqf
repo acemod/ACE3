@@ -28,7 +28,7 @@ if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call 
 //if !([_unit, GVAR(engineerSetting_Wheel)] call FUNC(isEngineer)) exitWith {false};
 
 // check for a near wheel
-if (typeName _wheel == "OBJECT") then {
+if (_wheel isEqualType objNull) then {
     // not near interpret as objNull
     if !(_wheel in nearestObjects [_unit, ["ACE_Wheel"], 5]) then {
         _wheel = objNull;

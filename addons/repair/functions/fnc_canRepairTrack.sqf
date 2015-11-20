@@ -23,7 +23,7 @@ TRACE_4("params",_unit,_target,_hitPoint,_wheel);
 
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-if (typeName _wheel == "OBJECT") then {
+if (_wheel isEqualType objNull) then {
     // not near interpret as objNull
     if !(_wheel in nearestObjects [_unit, ["ACE_Track"], 5]) then {
         _wheel = objNull;
