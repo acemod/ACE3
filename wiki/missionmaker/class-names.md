@@ -116,8 +116,8 @@ ACE_Cellphone | Cellphone |  ACE_ItemCore |
 class name | in game name | type   |
 ---------- | --------- | ---------
 ACE_Flashlight_MX991 | Fulton MX-991 | ACE_ItemCore |
-ACE_Flashlight_KSF1 | Maglite XL50 | ACE_ItemCore |
-ACE_Flashlight_XL50 | KSF-1 | ACE_ItemCore |
+ACE_Flashlight_KSF1 | KSF-1 | ACE_ItemCore |
+ACE_Flashlight_XL50 | Maglite XL50 | ACE_ItemCore |
 
 ## Grenades
 `added in 3.0.0.3`
