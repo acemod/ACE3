@@ -78,6 +78,21 @@ if (GVAR(useCursorMenu)) then {
 GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
                        ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
 
+if (GVAR(menuAnimationSpeed) > 0) then {
+    //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
+    if (GVAR(openedMenuType) == 0) then {
+        if (isNull curatorCamera) then {
+            if (vehicle ACE_player != ACE_player) then {
+                GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
+            };
+        } else {
+            GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
+        };
+    } else {
+        GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
+    };
+};                   
+                       
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 
 true
