@@ -103,6 +103,6 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(menuAnimationSpeed);
         description = CSTRING(menuAnimationSpeed_Description);
-        values[] = {"$str_speed_normal", "2x", "3x (gotta go fast)"};
+        values[] = {"$str_speed_normal", "2x", "3x"};
     };
 };
