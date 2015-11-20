@@ -139,6 +139,7 @@ PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
 PREP(readSettingFromModule);
+PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
