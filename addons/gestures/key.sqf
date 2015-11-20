@@ -7,7 +7,7 @@
         _currentName = _currentName select [2];
     };
 
-    local _code = (compile format [QUOTE(QUOTE(QGVAR(%1)) call FUNC(playSignal);), _currentName]);
+    private _code = (compile format [QUOTE(QUOTE(QGVAR(%1)) call FUNC(playSignal);), _currentName]);
 
     [
         "ACE3 Gestures",

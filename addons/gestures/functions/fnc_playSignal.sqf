@@ -19,7 +19,7 @@ TRACE_1("params",_this);
 
 if (!GVAR(ReloadMutex)) exitWith {false};
 
-local _gesture = if (_this select [0,2] == "BI") then {
+private _gesture = if (_this select [0,2] == "BI") then {
     _this select [2]
 } else {
     if (((animationState ACE_player) select [0, 12]) in ["amovpercmstp", "amovpercmwlk", "amovpercmtac"] && weaponLowered ACE_player) then {

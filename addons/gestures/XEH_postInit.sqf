@@ -13,15 +13,15 @@ GVAR(ReloadMutex) = true;
     (findDisplay 46) displayAddEventHandler ["KeyDown", {
         if ((_this select 1) in actionKeys "ReloadMagazine") then {
             if ((isNull ACE_player) || {!alive ACE_player}) exitWith {false};
-            local _weapon = currentWeapon ACE_player;
+            private _weapon = currentWeapon ACE_player;
 
             if (_weapon != "") then {
                 GVAR(ReloadMutex) = false;
 
-                local _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
-                local _isLauncher = _weapon isKindOf ["Launcher", (configFile >> "CfgWeapons")];
-                local _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-                local _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+                private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+                private _isLauncher = _weapon isKindOf ["Launcher", (configFile >> "CfgWeapons")];
+                private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
+                private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
 
                 if (_duration != 0) then {
                     _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
