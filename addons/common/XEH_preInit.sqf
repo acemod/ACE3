@@ -115,6 +115,7 @@ PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
+PREP(isUnderwater);
 PREP(letterToCode);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);

@@ -30,12 +30,6 @@ _var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 
 TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 
-private "_pos";
-_pos = _posASL;
-if (!surfaceIsWater _pos) then {
-    _pos = ASLtoATL _pos;
-};
-
 {
     if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
         private ["_targetPositionASL", "_relativePosition", "_axisDistance", "_distance", "_angle", "_line", "_line2"];
@@ -68,4 +62,4 @@ if (!surfaceIsWater _pos) then {
             };
         };
     };
-} forEach (_pos nearEntities ["CAManBase", _overpressureRange]);
+} forEach ((ASLtoAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);
