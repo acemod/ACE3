@@ -429,9 +429,9 @@ class CfgVehicles {
         };
     };
 
-    #define ARM_LEG_ARMOR_DEFAULT 3
-    #define ARM_LEG_ARMOR_BETTER  5
-    #define ARM_LEG_ARMOR_CSAT    4
+    #define ARM_LEG_ARMOR_DEFAULT 1
+    #define ARM_LEG_ARMOR_BETTER  1
+    #define ARM_LEG_ARMOR_CSAT    1
 
     #define ADD_ACE_HITPOINTS(ARM_ARMOR,LEG_ARMOR) \
         class HitLeftArm { \

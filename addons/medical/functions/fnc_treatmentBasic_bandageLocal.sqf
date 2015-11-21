@@ -44,7 +44,8 @@ _target setHitPointDamage ["hitHands", (_handsDamageR + _handsDamageL) min 0.95]
 _target setHitPointDamage ["hitLegs", (_legsDamageR + _legsDamageL) min 0.95];
 
 {
-    _target setHitPointDamage [_x, (_damageBodyParts select _foreachIndex) min 0.95];
-}foreach GVAR(HITPOINTS);
+    private _hitPointName = [_target, _x, true] call FUNC(translateSelections);
+    _target setHitPointDamage [_hitPointName, (_damageBodyParts select _foreachIndex) min 0.95];
+}foreach GVAR(SELECTIONS);
 
 true;
