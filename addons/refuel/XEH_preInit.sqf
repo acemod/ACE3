@@ -21,6 +21,7 @@ PREP(makeJerryCan);
 PREP(moduleRefuelSettings);
 PREP(readFuelCounter);
 PREP(refuel);
+PREP(reset);
 PREP(returnNozzle);
 PREP(setFuel);
 PREP(takeNozzle);

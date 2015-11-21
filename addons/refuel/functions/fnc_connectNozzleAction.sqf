@@ -95,7 +95,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
-        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel)];
+        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel), true];
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
     },

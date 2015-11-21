@@ -61,6 +61,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
             _newNozzle setVariable [QGVAR(rope), _rope, true];
+            _target setVariable [QGVAR(nozzle), _newNozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
             _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
