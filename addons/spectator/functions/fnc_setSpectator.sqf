@@ -63,9 +63,17 @@ if (_set) then {
     GVAR(unitCamera) camCommit 0;
     [] call FUNC(transitionCamera);
 
-    // Close map and clear radio
+    // Cache current channel to switch back to on exit
+    GVAR(channelCache) = currentChannel;
+
+    // Channel index starts count after the 5 default channels
+    GVAR(channel) radioChannelAdd [player];
+    setCurrentChannel (5 + GVAR(channel));
+
+    // Close map and clear the chat
     openMap [false,false];
     clearRadio;
+    enableRadio false;
 
     // Disable BI damage effects
     BIS_fnc_feedback_allowPP = false;
@@ -111,7 +119,16 @@ if (_set) then {
     camDestroy GVAR(unitCamera);
     camDestroy GVAR(targetCamera);
 
+    // Remove from spectator chat
+    GVAR(channel) radioChannelRemove [player];
+
+    // Restore cached channel and delete cache
+    setCurrentChannel GVAR(channelCache);
+    GVAR(channelCache) = nil;
+
+    // Clear any residual spectator chat
     clearRadio;
+    enableRadio true;
 
     // Return to player view
     player switchCamera "internal";

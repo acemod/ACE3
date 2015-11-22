@@ -172,8 +172,11 @@ switch (toLower _mode) do {
             [QGVAR(zeus)] call FUNC(interrupt);
             ["zeus"] call FUNC(handleInterface);
         };
-        if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
+        if (_dik in (actionKeys "Chat")) exitWith {
             false
+        };
+        if (_dik in (actionKeys "PrevChannel" + actionKeys "NextChannel")) exitWith {
+            !(isServer || serverCommandAvailable "#kick")
         };
 
         // Handle held keys (prevent repeat calling)
