@@ -3,12 +3,13 @@
  * Shows the Kestrel 4500 as rsc title
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_kestrel4500_fnc_displayKestrel
  *
  * Public: No
  */
@@ -50,49 +51,66 @@ if (GVAR(Kestrel4500) && dialog) then {
 
 GVAR(Overlay) = true;
 
-[{    
+[{
     // abort condition
     if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
         GVAR(Overlay) = false;
         3 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     if (ACE_diagTime > GVAR(updateTimer)) then {
         GVAR(updateTimer) = ACE_diagTime + 1;
-        
+
         private ["_outputData"];
         _outputData = [] call FUNC(generateOutputData);
-        
+
         3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
-        
-        __ctrlTop ctrlSetText (_outputData select 0);
-        __ctrlCenterBig ctrlSetText (_outputData select 1);
-        
-        __ctrlTop ctrlSetText (_outputData select 0);
-        __ctrlCenterBig ctrlSetText (_outputData select 1);
-        __ctrlCenter ctrlSetText (_outputData select 2);
-        
-        __ctrlCenterLine1Left ctrlSetText (_outputData select 3);
-        __ctrlCenterLine2Left ctrlSetText (_outputData select 4);
-        __ctrlCenterLine3Left ctrlSetText (_outputData select 5);
+        _outputData params [
+            "_ctrlTop",
+            "_ctrlCenterBig",
+            "_ctrlCenter",
+            "_ctrlCenterLine1Left",
+            "_ctrlCenterLine2Left",
+            "_ctrlCenterLine3Left",
+            "_ctrlCenterLine1Right",
+            "_ctrlCenterLine2Right",
+            "_ctrlCenterLine3Right",
+            "_ctrlInfoLine1",
+            "_ctrlInfoLine2",
+            "_ctrlBottomBig",
+            "_ctrlCenterLine1",
+            "_ctrlCenterLine2",
+            "_ctrlCenterLine3",
+            "_ctrlCenterLine4",
+            "_ctrlCenterLine5",
+            "_ctrlCenterLine6"
+        ];
 
-        __ctrlCenterLine1Right ctrlSetText (_outputData select 6);
-        __ctrlCenterLine2Right ctrlSetText (_outputData select 7);
-        __ctrlCenterLine3Right ctrlSetText (_outputData select 8);
+        __ctrlTop ctrlSetText _ctrlTop;
+        __ctrlCenterBig ctrlSetText _ctrlCenterBig;
+        __ctrlCenter ctrlSetText _ctrlCenter;
 
-        __ctrlInfoLine1 ctrlSetText (_outputData select 9);
-        __ctrlInfoLine2 ctrlSetText (_outputData select 10);
-        
-        __ctrlBottomBig ctrlSetText (_outputData select 11);
-        
-        __ctrlCenterLine1 ctrlSetText (_outputData select 12);
-        __ctrlCenterLine2 ctrlSetText (_outputData select 13);
-        __ctrlCenterLine3 ctrlSetText (_outputData select 14);
-        __ctrlCenterLine4 ctrlSetText (_outputData select 15);
-        __ctrlCenterLine5 ctrlSetText (_outputData select 16);
-        __ctrlCenterLine6 ctrlSetText (_outputData select 17);
-        
+        __ctrlCenterLine1Left ctrlSetText _ctrlCenterLine1Left;
+        __ctrlCenterLine2Left ctrlSetText _ctrlCenterLine2Left;
+        __ctrlCenterLine3Left ctrlSetText _ctrlCenterLine3Left;
+
+        __ctrlCenterLine1Right ctrlSetText _ctrlCenterLine1Right;
+        __ctrlCenterLine2Right ctrlSetText _ctrlCenterLine2Right;
+        __ctrlCenterLine3Right ctrlSetText _ctrlCenterLine3Right;
+
+        __ctrlInfoLine1 ctrlSetText _ctrlInfoLine1;
+        __ctrlInfoLine2 ctrlSetText _ctrlInfoLine2;
+
+        __ctrlBottomBig ctrlSetText _ctrlBottomBig;
+
+        __ctrlCenterLine1 ctrlSetText _ctrlCenterLine1;
+        __ctrlCenterLine2 ctrlSetText _ctrlCenterLine2;
+        __ctrlCenterLine3 ctrlSetText _ctrlCenterLine3;
+        __ctrlCenterLine4 ctrlSetText _ctrlCenterLine4;
+        __ctrlCenterLine5 ctrlSetText _ctrlCenterLine5;
+        __ctrlCenterLine6 ctrlSetText _ctrlCenterLine6;
+
         if (GVAR(referenceHeadingMenu) == 1) then {
             if (GVAR(referenceHeadingAutoSet)) then {
                 __ctrlCenterLine3 ctrlSetTextColor [0, 0, 0, 0.6];
@@ -106,10 +124,10 @@ GVAR(Overlay) = true;
             __ctrlCenterLine4 ctrlSetTextColor [0, 0, 0, 1.0];
         };
     };
-    
+
     call FUNC(updateImpellerState);
     __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(ImpellerState) % 7)];
-    
+
 }, 0.01, []] call CBA_fnc_addPerFrameHandler;
 
 true

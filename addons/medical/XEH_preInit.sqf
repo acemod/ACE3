@@ -70,6 +70,7 @@ PREP(setDead);
 PREP(setHitPointDamage);
 PREP(setStructuralDamage);
 PREP(setUnconscious);
+PREP(translateSelections);
 PREP(treatment);
 PREP(treatment_failure);
 PREP(treatment_success);

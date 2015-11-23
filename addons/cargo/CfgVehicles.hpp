@@ -8,6 +8,7 @@ class CfgVehicles {
         function = QFUNC(moduleSettings);
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
 
@@ -171,6 +172,13 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
+    // autonomus
+    class Helicopter_Base_F;
+    class UAV_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    
     // boats
     class Ship;
     class Ship_F: Ship {
@@ -218,6 +226,18 @@ class CfgVehicles {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
     };
+    //"Supply Box" - Small Pallets
+    class B_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+    class IG_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+    class C_supplyCrate_F: ReammoBox_F {
+        GVAR(size) = 6;
+    };
+
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
@@ -425,5 +445,5 @@ class CfgVehicles {
                 selection = "";
             };
         };
-   };
+    };
 };

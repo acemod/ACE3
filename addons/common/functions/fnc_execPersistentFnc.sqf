@@ -20,10 +20,9 @@
 GVAR(remoteFnc) = _this;
 
 params ["_arguments", "_function", "_unit", "_name"];
+TRACE_4("params", _arguments, _function, _unit, _name);
 
 _function = call compile _function;
-
-//["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 
 // execute function on every currently connected machine
 [[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);

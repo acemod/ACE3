@@ -96,4 +96,13 @@ class ACE_Settings {
         displayName = CSTRING(addBuildingActions);
         description = CSTRING(addBuildingActionsDescription);
     };
+    class GVAR(menuAnimationSpeed) {
+        value = 0;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        category = CSTRING(Category_InteractionMenu);
+        displayName = CSTRING(menuAnimationSpeed);
+        description = CSTRING(menuAnimationSpeed_Description);
+        values[] = {"$str_speed_normal", "2x", "3x"};
+    };
 };

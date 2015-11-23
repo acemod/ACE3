@@ -299,5 +299,11 @@
             <Czech>Menu interakce</Czech>
             <Spanish>Menú de interacción</Spanish>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
+            <English>Interaction Animation Speed</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
+            <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
+        </Key>
     </Package>
 </Project>

@@ -199,47 +199,47 @@ class ACE_ZeusActions {
             class wedge {
                 displayName = "$STR_Wedge";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\wedge_ca.paa";
-                statement = "{_x setWaypointFormation 'WEDGE';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'WEDGE';} forEach (curatorSelected select 2);";
             };
             class vee {
                 displayName = "$STR_Vee";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\vee_ca.paa";
-                statement = "{_x setWaypointFormation 'VEE';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'VEE';} forEach (curatorSelected select 2);";
             };
             class line {
                 displayName = "$STR_Line";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\line_ca.paa";
-                statement = "{_x setWaypointFormation 'LINE';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'LINE';} forEach (curatorSelected select 2);";
             };
             class column {
                 displayName = "$STR_Column";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\column_ca.paa";
-                statement = "{_x setWaypointFormation 'COLUMN';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'COLUMN';} forEach (curatorSelected select 2);";
             };
             class file {
                 displayName = "$STR_File";
                 icon = "\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\file_ca.paa";
-                statement = "{_x setWaypointFormation 'FILE';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'FILE';} forEach (curatorSelected select 2);";
             };
             class stag_column {
                 displayName = "$STR_Staggered";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\stag_column_ca.paa";
-                statement = "{_x setWaypointFormation 'STAG COLUMN';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'STAG COLUMN';} forEach (curatorSelected select 2);";
             };
             class ech_left {
                 displayName = "$STR_EchL";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_left_ca.paa";
-                statement = "{_x setWaypointFormation 'ECH LEFT';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'ECH LEFT';} forEach (curatorSelected select 2);";
             };
             class ech_right {
                 displayName = "$STR_EchR";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\ech_right_ca.paa";
-                statement = "{_x setWaypointFormation 'ECH RIGHT';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'ECH RIGHT';} forEach (curatorSelected select 2);";
             };
             class diamond {
                 displayName = "$STR_Diamond";
                 icon="\A3\UI_F_Curator\Data\RscCommon\RscAttributeFormation\diamond_ca.paa";
-                statement = "{_x setWaypointFormation 'DIAMOND';} forEach (curatorSelected select 1);";
+                statement = "{_x setWaypointFormation 'DIAMOND';} forEach (curatorSelected select 2);";
             };
         };
     };

@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain, Jaynus
- * Returns the result of the function and caches it up to a given ACE_time or event
+ * Returns the result of the function and caches it up to a given time or event
  *
  * Arguments:
  * 0: Parameters <ARRAY>

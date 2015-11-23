@@ -2105,10 +2105,13 @@
             <Polish>%1 wykonał cykl RKO</Polish>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
+            <Portuguese>%1 realizou RCP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <Polish>%1 użył apteczki</Polish>
+            <Portuguese>%1 utilizou KPS</Portuguese>
+            <Russian>%1 использовал аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2223,6 +2226,7 @@
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -2960,7 +2964,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
-            <Russian>Позволить ботам терять сознание</Russian>
+            <Russian>Позволить ботам терять сознание (вместо мгновенной смерти)</Russian>
             <Polish>Czy AI może być nieprzytomne od odniesionych obrażeń?</Polish>
             <Spanish>Permita a la IA caer inconsciente</Spanish>
             <German>KI kann bewusstlos werden</German>
@@ -3276,7 +3280,7 @@
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
-            <English>Where can the Personal Aid Kit be used?</English>
+            <English>Where can the PAK be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
@@ -3297,7 +3301,7 @@
             <Russian>Условие использования аптечки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
-            <English>When can the Personal Aid Kit be used?</English>
+            <English>When can the PAK be used?</English>
             <Czech>Kde může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
             <French>Quand peut être utilisé le Kit de Premier Secours</French>
@@ -3351,7 +3355,7 @@
             <Hungarian>Járművek &amp; létesítmény</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
-            <English>Allow Surgical kit (Adv)</English>
+            <English>Allow Surgical Kit (Adv)</English>
             <Russian>Хирургический набор может использоваться (усл.)</Russian>
             <Polish>Ust. zestawu chirurg.</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
@@ -3362,7 +3366,7 @@
             <Hungarian>Sebészkészlet (Fejlett) engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
-            <English>Who can use the surgical kit?</English>
+            <English>Who can use the Surgical Kit?</English>
             <Russian>Кто может использовать хирургический набор?</Russian>
             <Polish>Kto może skorzystać z zestawu chirurgicznego w celu zszycia ran?</Polish>
             <Spanish>¿Quién puede utilizar el equipo quirúrgico?</Spanish>
@@ -3373,7 +3377,7 @@
             <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
-            <English>Remove Surgical kit (Adv)</English>
+            <English>Remove Surgical Kit (Adv)</English>
             <Russian>Удалять хирургический набор (усл.)</Russian>
             <Polish>Usuń zest. chir. po użyciu</Polish>
             <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
@@ -3395,7 +3399,7 @@
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
-            <English>Locations Surgical kit (Adv)</English>
+            <English>Locations Surgical Kit (Adv)</English>
             <Russian>Место использования хирургического набора (усл.)</Russian>
             <Polish>Ogr. zestawu chirurg.</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
@@ -3406,7 +3410,7 @@
             <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
-            <English>Where can the Surgical kit be used?</English>
+            <English>Where can the Surgical Kit be used?</English>
             <Russian>Где может использоваться хирургический набор?</Russian>
             <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
             <Spanish>Dónde se puede utilizar el equipo quirúrgico</Spanish>
@@ -3417,7 +3421,7 @@
             <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
-            <English>Condition Surgical kit (Adv)</English>
+            <English>Condition Surgical Kit (Adv)</English>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
@@ -3427,7 +3431,7 @@
             <Russian>Условие использования хирургического набора (усл.)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
-            <English>When can the Surgical kit be used?</English>
+            <English>When can the Surgical Kit be used?</English>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
             <French>Quand peut être utilisé les kit de chirurgie</French>
@@ -3441,12 +3445,14 @@
             <Polish>Lecz hitpointy</Polish>
             <Spanish>Curar puntos de vida</Spanish>
             <Russian>Исцелять части тела</Russian>
+            <Portuguese>Curar hitpoints</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3844,12 +3850,14 @@
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
+            <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
+            <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
         </Key>
     </Package>
 </Project>

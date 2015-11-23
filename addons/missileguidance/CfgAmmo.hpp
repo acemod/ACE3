@@ -6,7 +6,7 @@ enum {
 class CfgAmmo {
     class MissileBase;
     
-    class M_PG_AT : MissileBase {
+    class M_PG_AT: MissileBase {
         model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
         proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
 
@@ -68,15 +68,18 @@ class CfgAmmo {
         };
     };
     
-    class ACE_Hydra70_DAGR : M_PG_AT {
+    class ACE_Hydra70_DAGR: M_PG_AT {
         displayName = CSTRING(Hydra70_DAGR);
         displayNameShort = CSTRING(Hydra70_DAGR_Short);
         
         description = CSTRING(Hydra70_DAGR_Desc);
         descriptionShort = CSTRING(Hydra70_DAGR_Desc);
+        
+        //Explicity add guidance config
+        class ADDON: ADDON {};
     };
     
-    class ACE_Hellfire_AGM114K : ACE_Hydra70_DAGR {
+    class ACE_Hellfire_AGM114K: ACE_Hydra70_DAGR {
         displayName = CSTRING(Hellfire_AGM114K);
         displayNameShort = CSTRING(Hellfire_AGM114K_Short);
         
@@ -91,10 +94,13 @@ class CfgAmmo {
         indirectHit = 71;
         indirectHitRange = 4.5;
         effectsMissile = "missile2";
+        
+        //Explicity add guidance config
+        class ADDON: ADDON {};
     };
     
     // Titan
-    class M_Titan_AT : MissileBase {};
+    class M_Titan_AT: MissileBase {};
 
     class ACE_Javelin_FGM148: M_Titan_AT {
         irLock = 0;
@@ -145,8 +151,8 @@ class CfgAmmo {
         //Take config changes from (M_Titan_AT_static: M_Titan_AT)
         initTime = 0.25;  //"How long (in seconds) the projectile waits before starting it's engine.", - but doesn't seem to do anything
         effectsMissileInit = "RocketBackEffectsStaticRPG";
-        class ADDON: ADDON {
-            enabled = 1;
-        };
+
+        //Explicity add guidance config
+        class ADDON: ADDON {};
     };
 };
