@@ -122,4 +122,8 @@ class CfgAmmo
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
+    class SubmunitionBase;
+    class rhs_ammo_127x108mm_x5: SubmunitionBase {
+        ACE_rearm_caliber=13;
+    }
 };

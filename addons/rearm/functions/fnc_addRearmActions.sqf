@@ -68,7 +68,7 @@ _vehicleActions = [];
             } forEach _magazines;
         } forEach REARM_TURRET_PATHS;
     };
-    if (_needToAdd) then {
+    if (_needToAdd && !(_vehicle getVariable [QGVAR(disabled), false])) then {
         _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
