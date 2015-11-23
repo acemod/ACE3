@@ -28,7 +28,7 @@ _effects set [DIRT, true];
 SETGLASSES(_unit,_effects);
 
 if ([_unit] call FUNC(isGogglesVisible)) then {
-    local _dirtImage = getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_OverlayDirt");
+    private _dirtImage = getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_OverlayDirt");
 
     if (_dirtImage != "") then {
         GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];

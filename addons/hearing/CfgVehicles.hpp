@@ -101,6 +101,7 @@ class CfgVehicles {
         function = QFUNC(moduleHearing);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {

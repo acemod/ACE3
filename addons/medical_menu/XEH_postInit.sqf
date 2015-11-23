@@ -19,7 +19,7 @@ GVAR(pendingReopen) = false;
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
 {
-    local _target = cursorTarget;
+    private _target = cursorTarget;
     if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
 
     // Conditions: canInteract

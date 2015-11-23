@@ -23,6 +23,7 @@ class CfgVehicles {
         function = QFUNC(moduleMap);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Map_ca.paa);
         class Arguments {
             class MapIllumination {
@@ -82,6 +83,7 @@ class CfgVehicles {
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
         isGlobal = 0;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
             class Enabled {

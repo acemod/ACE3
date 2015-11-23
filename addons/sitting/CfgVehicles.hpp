@@ -7,6 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_Sitting_ca.paa));
         class Arguments {
             class enable {
