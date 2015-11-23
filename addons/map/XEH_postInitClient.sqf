@@ -100,7 +100,7 @@ call FUNC(determineZoom);
         GVAR(glow) = objNull;
 
         ["playerInventoryChanged", {
-            local _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
+            private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
             };
