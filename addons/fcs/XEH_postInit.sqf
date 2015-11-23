@@ -16,4 +16,4 @@ if (!hasInterface) exitWith {};
 }] call EFUNC(common,addEventHandler);
 
 // Register event for global updates
-[QGVAR(forceUpdate), FUNC(onForceUpdate)] call EFUNC(common,addEventHandler);
+[QGVAR(forceUpdate), {ACE_player call FUNC(onForceUpdate)}] call EFUNC(common,addEventHandler);
