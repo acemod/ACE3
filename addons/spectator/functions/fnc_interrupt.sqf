@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Reason <STRING>
- * 1: Interrupting <BOOL>
+ * 1: Interrupting <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>

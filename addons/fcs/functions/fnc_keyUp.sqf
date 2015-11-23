@@ -60,7 +60,7 @@ private ["_movingAzimuth", "_posTarget", "_velocityTarget"];
 
 // MOVING TARGETS
 _movingAzimuth = 0;
-if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) then {
+if (ACE_time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
     // calculate speed of target
     _posTarget = [
         (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
@@ -68,14 +68,14 @@ if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) 
         (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
     ];
     _velocityTarget = [
-        ((_posTarget select 0) - (GVAR(position) select 0)) / (ACE_time - GVAR(ACE_time)),
-        ((_posTarget select 1) - (GVAR(position) select 1)) / (ACE_time - GVAR(ACE_time)),
-        ((_posTarget select 2) - (GVAR(position) select 2)) / (ACE_time - GVAR(ACE_time))
+        ((_posTarget select 0) - (GVAR(position) select 0)) / (ACE_time - GVAR(time)),
+        ((_posTarget select 1) - (GVAR(position) select 1)) / (ACE_time - GVAR(time)),
+        ((_posTarget select 2) - (GVAR(position) select 2)) / (ACE_time - GVAR(time))
     ];
 
     private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
-    // estimate ACE_time to target
+    // estimate time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
@@ -90,7 +90,7 @@ if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) 
     if (_initSpeedCoef > 0) then {
         _initSpeed = _initSpeedCoef;
     };
-    
+
     if (_simulationStep != 0) then {
         private ["_posX", "_velocityX", "_velocityY", "_timeToTarget"];
 
@@ -130,7 +130,7 @@ if (ACE_time - GVAR(ACE_time) > 1 and GVAR(ACE_time) != -1 and count _this < 3) 
     };
 };
 GVAR(enabled) = false;
-GVAR(ACE_time) = -1;
+GVAR(time) = -1;
 
 private ["_viewDiff", "_FCSAzimuth", "_FCSMagazines", "_FCSElevation"];
 
@@ -157,7 +157,7 @@ _FCSElevation = [];
         _maxElev     = getNumber (_turretConfig >> "maxElev");
         _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammoType >> "airFriction");
-        
+
         {
             private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
             _weapon = _x;
@@ -179,7 +179,7 @@ _FCSElevation = [];
                 };
             };
         } forEach _weapons;
-        
+
         _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
 
@@ -209,4 +209,12 @@ if(_playSound) then {
 
 if(_showHint) then {
     [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
+};
+
+//Update the hud's distance display to the new value or "----" if out of range
+//(10m fudge because of EFUNC(common,getTargetDistance))
+if ((_distance + 10) >= (getNumber (_turretConfig >> QGVAR(MaxDistance)))) then {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText "----";
+} else {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };

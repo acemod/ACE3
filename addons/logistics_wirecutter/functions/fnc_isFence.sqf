@@ -19,23 +19,14 @@
 params ["_object"];
 TRACE_1("params",_object);
 
-private ["_typeOf", "_returnValue"];
+private _typeOf = typeOf _object;
 
-_typeOf = typeOf _object;
-_returnValue = false;
-
-if (_typeOf != "") then {
+private _returnValue = if (_typeOf != "") then {
     //If the fence has configEntry we can check it directly
-    _returnValue = (1 == (getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence))));
+    (1 == (getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence))));
 } else {
-    //TODO: 1.50 use getModelInfo
-    _typeOf = toLower (str _object);  //something like "123201: wall_indfnc_9.p3d"
-    {
-        if ((_typeOf find _x) != -1) exitWith {
-            _returnValue = true;
-        };
-        nil
-    } count FENCE_P3DS;
+    //Check the p3d name against list (in script_component.hpp)
+    ((getModelInfo _object) select 0) in FENCE_P3DS;
 };
 
 _returnValue

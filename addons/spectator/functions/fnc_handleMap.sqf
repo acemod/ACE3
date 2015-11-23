@@ -18,12 +18,32 @@
 #include "script_component.hpp"
 
 params ["_map"];
-private ["_cachedVehicles","_unit","_color","_icon","_txt"];
+private ["_center","_radius","_scaled","_drawVehicles","_leader","_color","_cachedVehicles","_unit","_icon","_txt"];
 
 if (GVAR(camMode) == 0) then {
     _map drawIcon ["\A3\UI_F\Data\GUI\Rsc\RscDisplayMissionEditor\iconcamera_ca.paa",[0,0,0,1],GVAR(freeCamera),20,20,GVAR(camPan)];
 };
 
+_center = _map ctrlMapScreenToWorld [0.5,0.5];
+_radius = (_map ctrlMapScreenToWorld [safeZoneX,safeZoneY]) distance2D _center;
+_scaled = (ctrlMapScale _map) > 0.2;
+
+// Draw only group icons when scaled out
+_drawVehicles = [];
+{
+    _leader = leader _x;
+    if (_scaled) then {
+        _color = GETVAR(_x,GVAR(gColor),[ARR_4(0,0,0,0)]);
+        _map drawIcon ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color, _leader, 20, 20, 0, "", 0, 0];
+    } else {
+        if ((_leader distance2D _center) < _radius) then {
+            _drawVehicles append (units _x);
+        };
+    };
+    nil
+} count GVAR(groupList);
+
+// Draw units when group leader is within screen bounds
 _cachedVehicles = [];
 {
     _unit = vehicle _x;
@@ -41,7 +61,7 @@ _cachedVehicles = [];
         _icon = GETVAR(_unit,GVAR(uIcon),"");
         _txt = ["", GETVAR(_x,GVAR(uName),"")] select (isPlayer _x);
 
-        _map drawIcon [_icon, _color, _unit, 19, 19, getDir _unit, _txt, 1, 0.03];
+        _map drawIcon [_icon, _color, _unit, 19, 19, getDir _unit, _txt, 1, 0.04];
     };
-    false
-} count GVAR(unitList);
+    nil
+} count (_drawVehicles arrayIntersect GVAR(unitList));

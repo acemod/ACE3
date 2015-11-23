@@ -99,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
-            <German>Kabelbinder ermöglichen es, Gefangene zu fesseln.</German>
+            <German>Mit Kabelbindern können Gefangene gefesselt werden.</German>
             <Polish>Opaska zaciskowa pozwala na skrępowanie dłoni u więźnia.</Polish>
             <Spanish>Los precintos permiten maniatar prisioneros</Spanish>
             <French>Les Serflex permettent de menotter les prisonniers.</French>
@@ -166,7 +166,7 @@
             <Portuguese>Fazer unidade se render</Portuguese>
             <French>Faire capituler l'unité</French>
             <Hungarian>Egység kapitulálása</Hungarian>
-            <Russian>Сделать юнита пленным</Russian>
+            <Russian>Заставить юнита сдаться</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
@@ -177,7 +177,17 @@
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda. &lt;br/&gt;Fonte: ace_captives</Portuguese>
             <French>Synchronise une unité pour la rendre captive. &lt;br/&gt;Source: ace_captives</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
-            <Russian>Синхронизируйте с юнитами, чтобы сделать их пленными.&lt;br /&gt;Источник: ace_captives</Russian>
+            <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться в плен.&lt;br /&gt;Источник: ace_captives</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
+            <English>Make Unit Handcuffed</English>
+            <Portuguese>Fazer unidade algemada</Portuguese>
+            <Russian>Связать юнита</Russian>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
+            <English>Sync a unit to make them handcuffed.&lt;br /&gt;Source: ace_captives</English>
+            <Portuguese>Sincronizar uma unidade para deixá-la algemada.&lt;br/&gt;Source: ace_captives</Portuguese>
+            <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.&lt;br /&gt;Источник: ace_captives</Russian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -206,7 +216,7 @@
             <Polish>Skuwanie sojuszników</Polish>
             <Spanish>Se puede  esposar el bando propio</Spanish>
             <Czech>Může spoutat spolubojovníky</Czech>
-            <German>Kann Teamkollegen fesseln</German>
+            <German>Kann Kameraden fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
             <French>Peut libérer sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
@@ -217,7 +227,7 @@
             <Polish>Czy gracze mogą skuwać sojuszników?</Polish>
             <Spanish>Pueden los jugadores esposar unidades en su propio bando</Spanish>
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
-            <German>Können Spieler eigene Einheiten fesseln</German>
+            <German>Spieler können eigene Einheiten fesseln. </German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
             <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
@@ -239,7 +249,7 @@
             <Polish>Gracze mogą skapitulować po schowaniu swojej broni do kabury</Polish>
             <Spanish>Los jugadores pueden rendirse después de enfundar su arma</Spanish>
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
-            <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
+            <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben.</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
             <French>Les joueurs peuvent se rendre après avoir rangé leur arme</French>
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
@@ -247,6 +257,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
+            <German>Benötigt Kapitulation</German>
             <Polish>Wymagaj kapitulacji</Polish>
             <Portuguese>Requer rendição</Portuguese>
             <Russian>Требовать пленения</Russian>
@@ -254,6 +265,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
+            <German>Spieler müssen sich erst ergeben, bevor sie gefangen genommen werden können</German>
             <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
             <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
             <Russian>Требуется, чтобы игрок сдался в плен прежде, чем его можно будет связать</Russian>
@@ -261,6 +273,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
+            <German>Nur Ergeben</German>
             <Polish>Tylko kapitulacja</Polish>
             <Portuguese>Somente rendição </Portuguese>
             <Russian>Только сдавшийся в плен</Russian>
@@ -268,6 +281,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
+            <German>Ergeben oder keine Waffe</German>
             <Polish>Kapitulacja lub brak broni</Polish>
             <Portuguese>Rendição ou desarmado</Portuguese>
             <Russian>Сдавшийся или безоружный</Russian>

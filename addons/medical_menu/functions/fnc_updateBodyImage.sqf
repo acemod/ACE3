@@ -4,22 +4,23 @@
  *
  * Arguments:
  * 0: selection bloodloss <ARRAY>
- * 1: display <DISPLAY>
+ * 1: damaged (array of bools) <ARRAY>
+ * 2: display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [0.3, some_display] call ace_medical_menu_updateBodyImage
+ * [0.3, some_display] call ace_medical_menu_fnc_updateBodyImage
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_selectionBloodLoss", "_display"];
+params ["_selectionBloodLoss", "_damaged", "_display"];
 
 // Handle the body image coloring
-_availableSelections = [50, 51, 52, 53, 54, 55];
+private _availableSelections = [50, 51, 52, 53, 54, 55];
 {
     private ["_red", "_green", "_blue"];
 

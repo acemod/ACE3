@@ -2,6 +2,10 @@
 
 if (!hasInterface) exitwith {};
 
+GVAR(MenuPFHID) = -1;
+GVAR(lastOpenedOn) = -1;
+GVAR(pendingReopen) = false;
+
 ["medical_treatmentSuccess", {
 
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
@@ -15,8 +19,9 @@ if (!hasInterface) exitwith {};
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
 {
-    _target = cursorTarget;
-    if (!(_target isKindOf "CAManBase") || ACE_player distance _target > 10) then {_target = ACE_player};
+    private _target = cursorTarget;
+    if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
+
     // Conditions: canInteract
     if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitwith {false};
@@ -27,7 +32,7 @@ if (!hasInterface) exitwith {};
 },
 {
     if (ACE_time - GVAR(lastOpenedOn) > 0.5) exitWith {
-        [ObjNull] call FUNC(openMenu);
+        [objNull] call FUNC(openMenu);
     };
     false
 },

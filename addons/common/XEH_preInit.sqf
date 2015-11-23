@@ -115,6 +115,7 @@ PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
+PREP(isUnderwater);
 PREP(letterToCode);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
@@ -139,6 +140,7 @@ PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
 PREP(readSettingFromModule);
+PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
@@ -223,6 +225,7 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+PREP(hasHatch);
 
 // missing inventory commands
 PREP(binocularMagazine);

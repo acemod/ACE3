@@ -54,7 +54,7 @@ GVAR(DustHandler) = [{
     if (ACE_diagTime >= GETDUSTT(DTIME) + 3) then {
         SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
 
-        local _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
+        private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 
         if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
