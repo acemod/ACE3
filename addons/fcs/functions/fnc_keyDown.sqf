@@ -36,10 +36,6 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
     _weaponDirection = [1,0,0];
 };
 
-GVAR(Position) = [
-    (getPos _vehicle select 0) + _distance * (_weaponDirection select 0),
-    (getPos _vehicle select 1) + _distance * (_weaponDirection select 1),
-    (getPos _vehicle select 2) + _distance * (_weaponDirection select 2)
-];
+GVAR(Position) = (getPosASL _vehicle) vectorAdd (_weaponDirection vectorMultiply _distance);
 
 call FUNC(updateRangeHUD);
