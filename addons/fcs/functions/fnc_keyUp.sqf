@@ -93,11 +93,11 @@ if (ACE_time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
 
         // calculate offsets
         private _posArrival = _posTarget vectorAdd (_velocityTarget vectorMultiply _timeToTarget);
-        private _dirArrival = _posArrival vectorAdd (getPos _vehicle vectorMultiply (-1 / (_posArrival distance (getPos _vehicle))));
+        private _dirArrival = _posArrival vectorAdd (getPosASL _vehicle vectorMultiply (-1 / (_posArrival distance (getPosASL _vehicle))));
 
         _movingAzimuth = ((_dirArrival select 0) atan2 (_dirArrival select 1)) - ((_weaponDirection select 0) atan2 (_weaponDirection select 1));
         _angleTarget = asin (_dirArrival select 2);
-        _distance = floor (_posArrival distance (getPos _vehicle));
+        _distance = floor (_posArrival distance (getPosASL _vehicle));
     };
 };
 
