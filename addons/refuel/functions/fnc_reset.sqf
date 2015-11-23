@@ -15,17 +15,18 @@
  */
 #include "script_component.hpp"
 
+private ["_nozzle", "_nozzleTarget", "_rope"];
 params ["_target"];
 
-if !(local _target) then {
-    [[_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]], "{(_this select 0) setHitPointDamage (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
-} else {
+if (local _target) then {
     _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
+} else {
+    [[_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]], "{(_this select 0) setHitPointDamage (_this select 1)}", _target] call EFUNC(common,execRemoteFnc);
 };
 _target setVariable [QGVAR(engineHit), nil, true];
 _target setVariable [QGVAR(isConnected), false, true];
 
-_nozzle = _target getVariable [QGVAR(nozzle), nil];
+_nozzle = _target getVariable [QGVAR(ownedNozzle), nil];
 if !(isNil "_nozzle") then {
     _nozzleTarget = _nozzle getVariable [QGVAR(sink), nil];
     if !(isNil "_nozzleTarget") then {
@@ -38,14 +39,12 @@ if !(isNil "_nozzle") then {
     };
 
     {
-        // FIXME needs to be done locally
-        _actionID = _x getVariable [QGVAR(ReleaseActionID), -1];
-        if (_actionID != -1) then {
-            _x removeAction _actionID;
-            _x setVariable [QGVAR(isRefueling), false, true];
-            _x setVariable [QGVAR(ReleaseActionID), nil];
+        if (local _x) then {
+            [_x, _nozzle] call FUNC(resetLocal);
+        } else {
+            [[_x, _nozzle], "{_this call FUNC(resetLocal)}", _x] call EFUNC(common,execRemoteFnc);
         };
     } count allPlayers;
     deleteVehicle _nozzle;
 };
-_target getVariable [QGVAR(nozzle), nil, true];
+_target setVariable [QGVAR(ownedNozzle), nil, true];

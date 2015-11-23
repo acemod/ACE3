@@ -74,7 +74,7 @@
     class ACE_Actions { \
         class ACE_MainActions { \
             displayName = CSTRING(Refuel); \
-            distance = 3; \
+            distance = REFUEL_ACTION_DISTANCE; \
             condition = "true"; \
             statement = ""; \
             showDisabled = 0; \

@@ -57,11 +57,11 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _newNozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
             _unit setVariable [QGVAR(nozzle), _newNozzle];
 
-            _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], 12];
+            _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], REFUEL_HOSE_LENGTH];
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
             _newNozzle setVariable [QGVAR(rope), _rope, true];
-            _target setVariable [QGVAR(nozzle), _newNozzle, true];
+            _target setVariable [QGVAR(ownedNozzle), _newNozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
             _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
@@ -127,7 +127,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
     params ["_args", "_pfID"];
     _args params ["_unit", "_source", "_endPosOffset"];
 
-    if (_unit distance (_source modelToWorld _endPosOffset) > 10) exitWith {
+    if (_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)) exitWith {
         _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
         if !(isNull _nozzle) then {
             [_unit, _nozzle] call FUNC(dropNozzle);
