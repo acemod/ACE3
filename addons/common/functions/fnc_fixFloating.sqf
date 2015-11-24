@@ -24,8 +24,11 @@ _hitPointDamages = getAllHitPointsDamage _object;
 
 // get correct format for objects without hitpoints
 if (_hitPointDamages isEqualTo []) then {
-	_hitPointDamages = [[],[],[]];
+    _hitPointDamages = [[],[],[]];
 };
+
+//manualy set allowDamage true or setHitIndex does not work
+_object allowDamage true;
 
 // this prevents physx objects from floating when near other physx objects with allowDamage false
 _object setDamage damage _object;
@@ -33,3 +36,6 @@ _object setDamage damage _object;
 {
     _object setHitIndex [_forEachIndex, _x];
 } forEach (_hitPointDamages select 2);
+
+//reset allowDamage to what it should be
+[_object, "", -1] call FUNC(setAllowDamage);

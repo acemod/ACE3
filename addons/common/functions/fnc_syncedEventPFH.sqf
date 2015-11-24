@@ -24,7 +24,7 @@ if (!isServer) exitWith {false};
     _name = _x;
 
     _data = HASH_GET(GVAR(syncedEvents),_name);
-    _data params ["_eventTime", "_eventLog", "_globalEventTTL"];
+    _data params ["_eventCode", "_eventLog", "_globalEventTTL"];
 
     _newEventLog = [];
 
@@ -36,7 +36,7 @@ if (!isServer) exitWith {false};
         _ttlReturn = true;
 
         if (typeName _globalEventTTL == "CODE") then {
-            _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
+            _ttlReturn = [_eventCode, _eventEntry] call _globalEventTTL;
         } else {
             _ttlReturn = call {_globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL}};
         };
@@ -46,7 +46,7 @@ if (!isServer) exitWith {false};
             _eventEntry params ["_time", "", "_eventTTL"];
 
             if (typeName _eventTTL == "CODE") then {
-                _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
+                _ttlReturn = [_eventCode, _eventEntry] call _eventTTL;
             } else {
                 _ttlReturn = call {_eventTTL < 1 || {ACE_diagTime < _time + _eventTTL}};
             };

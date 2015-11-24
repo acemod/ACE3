@@ -50,7 +50,7 @@ _this set [1, _selection]; // ensure that the parameters are set correctly
 if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
 
 // Exit if we disable damage temporarily
-if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
+if ((!(_unit getVariable [QGVAR(allowDamage), true])) || {(!(_unit getVariable [QGVAR(allowCollisionDamage), true])) && {_projectile == ""}}) exitWith {
     TRACE_3("ACE_DEBUG: HandleDamage damage disabled.",_selection,damage _unit,_unit);
     if (_selection == "") then {
         damage _unit

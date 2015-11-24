@@ -82,6 +82,7 @@
 ["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
+["allowDamage", FUNC(setAllowDamage)] call FUNC(addEventhandler);
 
 ["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
