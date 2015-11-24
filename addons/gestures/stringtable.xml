@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
-        <Key ID="STR_ACE_Gestures_NAME">
+        <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
             <German>ACE Gesten</German>
             <Polish>ACE Gesty</Polish>
@@ -178,14 +178,6 @@
             <French>Attention</French>
             <German>Achtung</German>
             <Polish>Uwaga</Polish>
-        </Key>
-
-        <!-- FREE LOOK -->
-        <Key ID="STR_ACE_Gestures_FREELOOK">
-            <English> &#43; freelook</English>
-            <French> &#43; vue libre</French>
-            <German> &#43; Frei Blick</German>
-            <Polish> &#43; rozglądanie się</Polish>
         </Key>
     </Package>
 </Project>

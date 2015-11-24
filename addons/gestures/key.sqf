@@ -7,7 +7,7 @@
         _currentName = _currentName select [2];
     };
 
-    private _code = (compile format [QUOTE(QUOTE(QGVAR(%1)) call FUNC(playSignal);), _currentName]);
+    private _code = (compile format ["'%1%2' call %3", QGVAR(),_currentName,QFUNC(playSignal)]);
 
     [
         "ACE3 Gestures",
@@ -18,20 +18,6 @@
         [_key,  [false, (_key != -1), false]],
         false
     ] call CBA_fnc_addKeybind;
-
-    /*
-    if (56 in (actionKeys "LookAround")) then {
-        [
-            "ACE3 Gestures",
-            _currentName + "ALT",
-            localize format[LSTRING(%1), _currentName],
-            _code,
-            {},
-            [_key, if (_key == 0) then {[false, false, false]} else { [false, true, true] }],
-            false
-        ] call CBA_fnc_addKeybind;
-    };
-    */
 
     false
 } count [
