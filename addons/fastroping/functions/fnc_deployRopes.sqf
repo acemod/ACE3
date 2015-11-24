@@ -40,7 +40,7 @@ _deployedRopes = [];
         _hook attachTo [_vehicle, [0,0,0], _x];
     };
 
-    _ropeTop = ropeCreate [_hook, [0, 0, 0], _dummy, [0, 0, 0], 2];
+    _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 2];
     _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 33];
 
     //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, anchor helper object, occupied

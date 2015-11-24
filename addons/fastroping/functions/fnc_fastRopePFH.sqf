@@ -24,9 +24,10 @@ private ["_origin"];
 //Wait until the unit is actually outside of the helicopter
 if (vehicle _unit != _unit) exitWith {};
 
+_unit setVectorUp [0, 0, 1];
+
 //Start fast roping
 if (isNull attachedTo _unit) exitWith {
-    _dummy setVectorUp [0, 0, 1];
     _unit attachTo [_dummy, [0, 0, -1.2]];
     [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
     ropeUnwind [_ropeTop, 6, 35];
@@ -45,7 +46,7 @@ if (((getPos _unit select 2) < 0.2) || {ropeUnwound _ropeTop} || {vectorMagnitud
     _origin = AGLtoASL (_vehicle modelToWorld _attachmentPoint);
     _dummy setPosASL (_origin vectorAdd [0, 0, -2]);
 
-    _ropeTop = ropeCreate [_hook, [0, 0, 0], _dummy, [0, 0, 0], 2];
+    _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 2];
     _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 33];
 
     //Update deployedRopes array
