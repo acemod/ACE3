@@ -427,7 +427,7 @@ class CfgVehicles {
     class Plane_CAS_01_base_F : Plane_Base_F {
         // Assuming similar to A10
         GVAR(fuelCapacity) = 6223;
-    }
+    };
 
     class Plane_CAS_02_base_F : Plane_Base_F {
         // Yak-130
