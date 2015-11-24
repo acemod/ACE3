@@ -17,6 +17,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(moduleMedicalSettings));
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
 
@@ -153,6 +154,7 @@ class CfgVehicles {
         function = QUOTE(FUNC(moduleAdvancedMedicalSettings));
         functionPriority = 10;
         isGlobal = 2;
+        isSingular = 1;
         isTriggerActivated = 0;
         isDisposable = 0;
         author = ECSTRING(common,ACETeam);
@@ -274,6 +276,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(moduleReviveSettings));
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
 

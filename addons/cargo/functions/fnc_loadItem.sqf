@@ -1,9 +1,10 @@
 /*
  * Author: Glowbal
  * Load object into vehicle.
+ * Objects loaded via classname remain virtual until unloaded.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
  * 2: Show Hint <BOOL> (default: true)
  *
@@ -17,15 +18,10 @@
  */
 #include "script_component.hpp"
 
+params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]]];
 private ["_loaded", "_space", "_itemSize"];
 
-params ["_item", "_vehicle", ["_showHint", true, [true]] ];
-TRACE_2("params",_item,_vehicle);
-
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {
-    TRACE_2("canLoadItemIn failed",_item,_vehicle);
-    false
-};
+if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushback _item;
@@ -37,21 +33,10 @@ _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
-detach _item;
-_item attachTo [_vehicle,[0,0,100]];
-["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
-
-// show hint
-private ["_itemName", "_vehicleName"];
-
-_itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
-_vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
-
-if (_showHint) then {
-    ["displayTextStructured", [[localize LSTRING(LoadedItem), _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+if (typeName _item == "OBJECT") then {
+    detach _item;
+    _item attachTo [_vehicle,[0,0,-100]];
+    ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
 };
-
-// Invoke listenable event
-["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
 
 true

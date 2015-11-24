@@ -1,5 +1,22 @@
 #include "script_component.hpp"
 
+//Delete map glow lights from disconnecting players #2810
+if (isServer) then {
+    addMissionEventHandler ["HandleDisconnect",{
+        params ["_disconnectedPlayer"];
+
+        if ((!GVAR(mapGlow)) || {isNull _disconnectedPlayer}) exitWith {};
+        {
+            if (_x isKindOf "ACE_FlashlightProxy_White") then {
+                // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
+                deleteVehicle _x;
+            };
+        } forEach attachedObjects _disconnectedPlayer;
+        
+        nil
+    }];
+};
+
 // Exit on Headless as well
 if (!hasInterface) exitWith {};
 
@@ -56,6 +73,21 @@ call FUNC(determineZoom);
 }, 0] call CBA_fnc_addPerFrameHandler;
 
 ["SettingsInitialized", {
+    if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
+        //Set the chat channel once the map has finished loading
+        [{
+            if ((isNull findDisplay 37) && {isNull findDisplay 52} && {isNull findDisplay 53} && {isNull findDisplay 12}) exitWith {};
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            setCurrentChannel GVAR(DefaultChannel);
+            if (currentChannel == GVAR(DefaultChannel)) then {
+                // ACE_LOGINFO_1("Channel Set - %1", currentChannel);
+            } else {
+                ACE_LOGERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+            };
+        }, 0, []] call CBA_fnc_addPerFrameHandler;
+    };
+
     // Start Blue Force Tracking if Enabled
     if (GVAR(BFT_Enabled)) then {
         GVAR(BFT_markers) = [];

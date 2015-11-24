@@ -22,7 +22,7 @@ _distance = call FUNC(getRange);
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
-GVAR(Time) = ACE_time;
+GVAR(time) = ACE_time;
 
 if (_distance == 0) then {
     _distance = [5, 5000, 0] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision

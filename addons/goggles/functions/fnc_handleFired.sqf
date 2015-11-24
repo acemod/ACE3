@@ -73,7 +73,7 @@ SETDUST(DTIME,ACE_diagTime);
 
 // apply dust effect if the amount of fired bullets is over the threshold
 if (GETDUSTT(DAMOUNT) < 2) then {
-    local _bulletsRequired = 100;
+    private _bulletsRequired = 100;
 
     if (isNumber (configFile >> _cloudType >> QGVAR(BulletCount))) then {
         _bulletsRequired = getNumber (configFile >> _cloudType >> QGVAR(BulletCount));

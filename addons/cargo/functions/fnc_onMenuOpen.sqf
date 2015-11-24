@@ -22,7 +22,7 @@ params ["_display"];
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
 [{
-    private ["_display","_loaded", "_ctrl", "_label"];
+    private ["_display","_loaded", "_ctrl", "_class", "_label"];
     disableSerialization;
     _display = uiNamespace getVariable QGVAR(menuDisplay);
     if (isnil "_display") exitWith {
@@ -40,7 +40,8 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
     lbClear _ctrl;
     {
-        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> typeOf _x >> "displayName"));
+        _class = if (typeName _x == "STRING") then {_x} else {typeOf _x};
+        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> _class >> "displayName"));
         true
     } count _loaded;
 

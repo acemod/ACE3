@@ -26,7 +26,9 @@ GVAR(EffectsActive) = false;
 
 _unit setVariable ["ACE_EyesDamaged", false];
 
-[GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
+if (GVAR(DustHandler) != -1) then {
+    [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
+};
 GVAR(DustHandler) = -1;
 
 true
