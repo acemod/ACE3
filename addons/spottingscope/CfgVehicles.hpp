@@ -91,7 +91,7 @@ class CfgVehicles {
                     maxAngleY = 100;
                     initFov = 0.75;
                     minFov = 0.25;
-                    maxFov = 1.25;					
+                    maxFov = 1.25;
                 };
                 class ViewOptics {
                     initAngleX = 0;
@@ -100,10 +100,9 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-					
                     minFov = 0.0025;
-	                maxFov = 0.05;				
-					initFov= 0.05;
+                    maxFov = 0.05;
+                    initFov= 0.05;
                 };
             };
         };
