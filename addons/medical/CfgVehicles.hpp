@@ -459,8 +459,8 @@ class CfgVehicles {
         }; \
         class HitRightLeg: HitLeftLeg { \
             name = "leg_r"; \
-        }; \
-            
+        };
+
     class Man;
     class CAManBase: Man {
         class HitPoints {
