@@ -20,6 +20,8 @@
 params ["_player", "_target", "_weapon"];
 private ["_compatibleMags"];
 
+if (!GVAR(enableMagazinePassing)) exitWith {false};
+
 _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
 {
     _x params ["_className", "", "_loaded"];
