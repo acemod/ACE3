@@ -15,30 +15,23 @@
 #define MACRO_REARM_TRUCK_ACTIONS \
         class ACE_Actions : ACE_Actions { \
             class ACE_MainActions : ACE_MainActions { \
-                class GVAR(Rearm) { \
-                    displayName = CSTRING(Rearm); \
+                class GVAR(TakeAmmo) { \
+                    displayName = CSTRING(TakeAmmo); \
                     distance = REARM_ACTION_DISTANCE; \
-                    condition = "true"; \
-                    statement = ""; \
+                    condition = QUOTE(_this call FUNC(canTakeAmmo)); \
+                    insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
+                    exceptions[] = {"isNotInside"}; \
                     showDisabled = 0; \
                     priority = 2; \
                     icon = PATHTOF(ui\icon_rearm_interact.paa); \
-                    class GVAR(TakeAmmo) { \
-                        displayName = CSTRING(TakeAmmo); \
-                        distance = REARM_ACTION_DISTANCE; \
-                        condition = QUOTE(_this call FUNC(canTakeAmmo)); \
-                        insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
-                        exceptions[] = {"isNotInside"}; \
-                        icon = PATHTOF(ui\icon_rearm_interact.paa); \
-                    }; \
-                    class GVAR(StoreAmmo) { \
-                        displayName = CSTRING(StoreAmmo); \
-                        distance = REARM_ACTION_DISTANCE; \
-                        condition = QUOTE(_this call FUNC(canStoreAmmo)); \
-                        statement = QUOTE(_this call FUNC(storeAmmo)); \
-                        exceptions[] = {"isNotInside"}; \
-                        icon = PATHTOF(ui\icon_rearm_interact.paa); \
-                    }; \
+                }; \
+                class GVAR(StoreAmmo) { \
+                    displayName = CSTRING(StoreAmmo); \
+                    distance = REARM_ACTION_DISTANCE; \
+                    condition = QUOTE(_this call FUNC(canStoreAmmo)); \
+                    statement = QUOTE(_this call FUNC(storeAmmo)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -49,7 +42,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_rearm.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleRearmSettings);
         functionPriority = 1;
         isGlobal = 0;
@@ -184,21 +177,14 @@ class CfgVehicles {
         EGVAR(cargo,size) = 1;
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = CSTRING(Rearm);
+                displayName = CSTRING(PickUpAmmo);
                 distance = REARM_ACTION_DISTANCE;
-                condition = "true";
-                statement = "";
+                condition = QUOTE(_this call FUNC(canTakeAmmo));
+                statement = QUOTE(_this call FUNC(grabAmmo));
+                exceptions[] = {"isNotInside"};
                 showDisabled = 0;
                 priority = 2;
                 icon = PATHTOF(ui\icon_rearm_interact.paa);
-                class GVAR(PickUpAmmo) {
-                    displayName = CSTRING(PickUpAmmo);
-                    distance = REARM_ACTION_DISTANCE;
-                    condition = QUOTE(_this call FUNC(canTakeAmmo));
-                    statement = QUOTE(_this call FUNC(grabAmmo));
-                    exceptions[] = {"isNotInside"};
-                    icon = PATHTOF(ui\icon_rearm_interact.paa);
-                };
             };
         };
     };
