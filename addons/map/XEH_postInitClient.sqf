@@ -139,5 +139,9 @@ GVAR(hasWatch) = true;
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };
-    GVAR(hasWatch) = "ItemWatch" in (_this select 1 select 17);
+    GVAR(hasWatch) = false;
+    {
+        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
+        false
+    } count (assignedItems ACE_player);
 }] call EFUNC(common,addEventHandler);
