@@ -137,6 +137,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class autoAddEarplugsToUnits {
+                displayName = CSTRING(autoAddEarplugsToUnits_DisplayName);
+                description = CSTRING(autoAddEarplugsToUnits_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);
