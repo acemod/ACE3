@@ -117,7 +117,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_refuel.paa));
-        category = "ACE";
+        category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
         isGlobal = 0;
