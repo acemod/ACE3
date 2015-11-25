@@ -823,5 +823,25 @@
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
         </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazine">
+            <English>Pass magazine</English>
+            <German>Magazin geben</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
+            <English>Primary magazine</English>
+            <German>Gewehrmagazin</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
+            <English>Pistol magazine</English>
+            <German>Pistolenmagazin</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineHint">
+            <English>%1 passed you a %2 magazine.</English>
+            <German>%1 hat dir ein %2 Magazin gegeben.</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineSetting">
+            <English>Show "pass magazine" interaction</English>
+            <German>Zeige "Magazine geben" Interaktion</German>
+        </Key>
     </Package>
 </Project>

@@ -36,6 +36,32 @@ class CfgVehicles {
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "pelvis";
 
+                class ACE_PassMagazine {
+                    displayName = CSTRING(PassMagazine);
+                    condition = "";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3.3;
+                    icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargomag_ca.paa";
+
+                    class ACE_PassMagazinePrimary {
+                        displayName = CSTRING(PassMagazinePrimary);
+                        condition = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(canPassMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(passMagazine));
+                        showDisabled = 0;
+                        priority = 3;
+                        icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryweapon_ca.paa";
+                    };
+                    class ACE_PassMagazineHandgun {
+                        displayName = CSTRING(PassMagazineHandgun);
+                        condition = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(canPassMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(passMagazine));
+                        showDisabled = 0;
+                        priority = 1;
+                        icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
+                    };
+                };
+
                 class ACE_TeamManagement {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
