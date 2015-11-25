@@ -10,6 +10,7 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 3.5;
                 icon = PATHTOF(UI\gestures_ca.paa);
+                
                 class GVAR(Advance) {
                     displayName = CSTRING(BIgestureAdvance);
                     condition = QUOTE(canStand _target);
@@ -17,7 +18,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.9;
                 };
-
                 class GVAR(Go) {
                     displayName = CSTRING(BIgestureGo);
                     condition = QUOTE(canStand _target);
@@ -25,7 +25,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.8;
                 };
-
                 class GVAR(Follow) {
                     displayName = CSTRING(BIgestureFollow);
                     condition = QUOTE(canStand _target);
@@ -33,7 +32,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.7;
                 };
-
                 class GVAR(Up) {
                     displayName = CSTRING(BIgestureUp);
                     condition = QUOTE(canStand _target);
@@ -41,7 +39,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.5;
                 };
-
                 class GVAR(CeaseFire) {
                     displayName = CSTRING(BIgestureCeaseFire);
                     condition = QUOTE(canStand _target);
@@ -49,7 +46,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.3;
                 };
-
                 class GVAR(Freeze) {
                     displayName = CSTRING(BIgestureFreeze);
                     condition = QUOTE(canStand _target);
@@ -57,7 +53,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.2;
                 };
-
                 class GVAR(Forward) {
                     displayName = CSTRING(forward);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -65,7 +60,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.9;
                 };
-
                 class GVAR(Regroup) {
                     displayName = CSTRING(regroup);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -73,7 +67,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.8;
                 };
-
                 class GVAR(Stop) {
                     displayName = CSTRING(stop);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -81,7 +74,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.7;
                 };
-
                 class GVAR(Cover) {
                     displayName = CSTRING(cover);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -89,7 +81,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.6;
                 };
-
                 class GVAR(Point) {
                     displayName = CSTRING(point);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -97,7 +88,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.5;
                 };
-
                 class GVAR(Engage) {
                     displayName = CSTRING(engage);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -105,7 +95,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.4;
                 };
-
                 class GVAR(Hold) {
                     displayName = CSTRING(hold);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -113,7 +102,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.3;
                 };
-
                 class GVAR(Warning) {
                     displayName = CSTRING(warning);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
@@ -121,7 +109,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.2;
                 };
-
                 /*
                 class class GVAR(Yes) {
                     displayName = ECSTRING(common,Yes);
