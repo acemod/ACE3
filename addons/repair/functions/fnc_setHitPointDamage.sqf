@@ -1,86 +1,83 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
+ * Handles the "setVehicleHitPointDamage" event
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
- * 1: Selected hitpoint <STRING>
+ * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle, "hitpoint", 0.5] call ace_repair_fnc_setHitPointDamage
+ * [vehicle, 1, 0.5] call ace_repair_fnc_setHitPointDamage
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_hitPoint", "_hitPointDamage"];
-TRACE_3("params",_vehicle,_hitPoint,_hitPointDamage);
+params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
+TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
+
+private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
 
 // can't execute all commands if the vehicle isn't local. exit here.
-if !(local _vehicle) exitWith {};
+if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
-// get all valid hitpoints
-private ["_hitPoints", "_hitPointsWithSelections"];
+//Check for bad typeName (changed from orignal v3.3 that took string)
+if ((typeName _hitPointIndex) == "STRING") then {
+    ACE_DEPRECATED("repair-setHitPointDamage (hit point name <string>","3.5.0","hit index <number>");
+    _hitPointIndex = _allHitPoints find _hitPointIndex;
+};
 
-_hitPoints = [_vehicle] call EFUNC(common,getHitpoints);
-_hitPointsWithSelections = [_vehicle] call EFUNC(common,getHitpointsWithSelections) select 0;
+// get all hitpoints and selections and damages
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
-if !(_hitPoint in _hitPoints) exitWith {systemChat format["NOT A VALID HITPOINT: %1",_hitpoint]};
-
-// save array with damage values of all hitpoints
-private "_hitPointDamages";
-_hitPointDamages = [];
-
-{
-    _hitPointDamages set [_forEachIndex, (_vehicle getHitPointDamage _x)];
-} forEach _hitPoints;
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
-private ["_damageOld", "_hitPointDamageSumOld"];
 
 _damageOld = damage _vehicle;
 
+_realHitpointCount = 0;
 _hitPointDamageSumOld = 0;
+_hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
-    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
-        _hitPointDamageSumOld = _hitPointDamageSumOld + (_hitPointDamages select (_hitPoints find _x));
+    _selectionName = _allHitPointsSelections select _forEachIndex;
+    //Filter out all the bad hitpoints (HitPoint="" or no selection)
+    if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
+        _realHitpointCount = _realHitpointCount + 1;
+
+        if ((((toLower _x) find "glass") == -1) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+            _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
+            if (_forEachIndex == _hitPointIndex) then {
+                _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;
+            };
+        };
     };
-} forEach _hitPointsWithSelections;
+} forEach _allHitPoints;
 
-// set new damage in array
-_hitPointDamages set [_hitPoints find _hitPoint, _hitPointDamage];
-
-// save sum of new hitpoint damages
-private "_hitPointDamageSumNew";
-
-_hitPointDamageSumNew = 0;
-{
-    if (!(_x in IGNORED_HITPOINTS) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
-        _hitPointDamageSumNew = _hitPointDamageSumNew + (_hitPointDamages select (_hitPoints find _x));
-    };
-} forEach _hitPointsWithSelections;
-
-// calculate new strctural damage
-private "_damageNew";
-_damageNew = _hitPointDamageSumNew / count _hitPoints;
+// calculate new structural damage
+_damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitpointCount;
 
 if (_hitPointDamageSumOld > 0) then {
-    _damageNew = _damageOld * (_hitPointDamageSumNew / _hitPointDamageSumOld);
+    _damageNew = _damageOld * ((_hitPointDamageSumOld - _hitPointDamageRepaired) / _hitPointDamageSumOld);
 };
+TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitpointCount);
 
 // set new structural damage value
 _vehicle setDamage _damageNew;
 
-// set the new damage for that hit point
+//Repair the hitpoint in the damages array:
+_allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 
+//Set the new damage for all hitpoints
 {
-    _vehicle setHitPointDamage [_x, _hitPointDamages select _forEachIndex];
-} forEach _hitPoints;
+    _vehicle setHitIndex [_forEachIndex, _x];
+} forEach _allHitPointDamages;
 
 // normalize hitpoints
-// [_vehicle] call FUNC(normalizeHitPoints);
+[_vehicle] call FUNC(normalizeHitPoints);
