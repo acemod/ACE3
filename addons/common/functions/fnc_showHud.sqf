@@ -7,13 +7,21 @@
  * 0: Source ID <STRING><OPTIONAL>
  * 1: Show Hud Bool Array (8 to set, empty to remove) <ARRAY><OPTIONAL>
  * - [hud, info, radar, compass, direction, menu, group, cursors]
+ * - hud: Boolean - show scripted HUD (same as normal showHUD true/false)
+ * - info: Boolean - show vehicle + soldier info (hides weapon info from the HUD as well)
+ * - radar: Boolean - show vehicle radar
+ * - compass: Boolean - show vehicle compass
+ * - direction: Boolean - show tank direction indicator (not present in vanilla Arma 3)
+ * - menu: Boolean - show commanding menu (hides HC related menus)
+ * - group: Boolean - show group info bar (hides squad leader info bar)
+ * - cursors: Boolean - show HUD weapon cursors (connected with scripted HUD)
  *
  * Return Value:
  * Resulting ShowHud Array <ARRAY>
  *
  * Example:
  * ["hideHud", [false, true, true, true, true, true, true, false]] call ace_common_fnc_showHud; //This is equivalent to the old showHud false
- * [] call ace_common_fnc_showHud
+ * [] call ace_common_fnc_showHud; //sets `showHud` and returns the result array used
  *
  * Public: Yes
  */
