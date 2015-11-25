@@ -87,7 +87,7 @@ class CfgGesturesMale {
             enableMissile = 1;
             enableOptics = 0;
             equivalentTo = "";
-            file = "\A3\anims_f\Dataanim\Sdr\gst\GestureHi.rtm";
+            file = "\A3\anims_f\Data\anim\Sdr\gst\GestureHi.rtm";
             forceAim = 0;
             headBobMode = 0;
             headBobStrength = 0;
