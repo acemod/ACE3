@@ -125,5 +125,5 @@ class CfgAmmo
     class SubmunitionBase;
     class rhs_ammo_127x108mm_x5: SubmunitionBase {
         ACE_rearm_caliber=13;
-    }
+    };
 };
