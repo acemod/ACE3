@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="fatigue">
+        <Key ID="STR_ACE_FATIGUE_module_displayName">
+            <English>Fatigue</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_enabled_displayName">
+            <English>Enabled</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_enabled_description">
+            <English>Scripted part needs to be enabled to apply all settings and effects. [default true]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_staminaDrainMultiplier_displayName">
+            <English>Drain Multiplier</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_staminaDrainMultiplier_description">
+            <English>Stamina loss will be multiplied by this [default 1]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_staminaRecoveryMultiplier_displayName">
+            <English>Recovery Multiplier</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_staminaRecoveryMultiplier_description">
+            <English>Stamina recovery will be multiplied by this [default 1]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_loadEffectOnMaxStamina_displayName">
+            <English>Load effect on max</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_loadEffectOnMaxStamina_description">
+            <English>Effect that carry weight has on max stamina [default 0.1]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_canNoLongerSprint_displayName">
+            <English>Fatigue needed to sprint</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_canNoLongerSprint_description">
+            <English>Cannot sprint when fatigued at or below this ratio [default 0.5]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_canNoLongerRun_displayName">
+            <English>Fatigue needed to run</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_canNoLongerRun_description">
+            <English>Cannot run when fatigued at or below this ratio [default 0]</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_runCooldownAfterExhaustion_displayName">
+            <English>Run cooldown after exhaustion</English>
+        </Key>
+        <Key ID="STR_ACE_FATIGUE_runCooldownAfterExhaustion_description">
+            <English>After fatigue is below that needed to run, how long will be spend force walking [default 10 sec]</English>
+        </Key>
+    </Package>
+</Project>

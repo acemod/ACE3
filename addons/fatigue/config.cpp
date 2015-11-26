@@ -6,14 +6,19 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"commy2","KoffeinFlummi","Tachii"};
-        authorUrl = "https://github.com/commy2/";
+        author[] = {"PabstMirror"};
         VERSION_CONFIG;
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
-//#include "CfgInventoryGlobalVariable.hpp"
+#include "CfgFatigue.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
-#include "ACE_Settings.hpp"
+
+class RscInGameUI {
+    class RscStaminaBar {
+        onLoad = "[""onLoad"",_this,""RscStaminaBar"",'IGUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay');  uiNamespace setVariable ['test5', _this select 0];";
+    };
+};
