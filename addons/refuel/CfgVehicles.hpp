@@ -151,9 +151,9 @@ class CfgVehicles {
 
     class NonStrategic : Building {};
 
-    class House_Base : NonStrategic {};
+    class HouseBase: NonStrategic {};
 
-    class House : House_Base {};
+    class House: HouseBase {};
 
     class House_F : House {};
 
@@ -478,8 +478,8 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class ReammoBox_F;
-    class Slingload_01_Base_F : ReammoBox_F {
+    class Slingload_base_F;
+    class Slingload_01_Base_F: Slingload_base_F {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -499,16 +499,14 @@ class CfgVehicles {
     };
 
     class O_Heli_Transport_04_fuel_F : Heli_Transport_04_base_F  {
-        XEH_ENABLED;
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks[]) = {{-1.52,1.14,-1.18}};
         GVAR(fuelCargo) = 10000;
     };
 
-    class Pod_Heli_Transport_04_base_F : StaticWeapon {};
-    class Land_Pod_Heli_Transport_04_fuel_F : Pod_Heli_Transport_04_base_F {
-        XEH_ENABLED;
+    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
+    class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks[]) = {{-1.49,1.41,-.3}};

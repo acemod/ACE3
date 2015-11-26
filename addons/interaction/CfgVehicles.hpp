@@ -478,6 +478,14 @@ class CfgVehicles {
         };
     };
 
+    class Pod_Heli_Transport_04_base_F: StaticWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                distance = 5;
+            };
+        };
+    };
+    
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
 
