@@ -67,20 +67,15 @@ _position = _target modelToWorldVisual ((_target selectionPosition "pilot") vect
 
 _scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);
 
-JK_debugVar = [
-_icon,
-_color,
-_position,
-(_size * _scale),
-(_size * _scale),
-0,
-_name,
-2,
-(0.05 * _scale),
-"PuristaMedium"
+drawIcon3D [
+    _icon,
+    _color,
+    _position,
+    (_size * _scale),
+    (_size * _scale),
+    0,
+    _name,
+    2,
+    (0.05 * _scale),
+    "PuristaMedium"
 ];
-
-hint str JK_debugVar;
-diag_log JK_debugVar;
-
-drawIcon3D JK_debugVar;
