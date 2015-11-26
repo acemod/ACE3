@@ -8,6 +8,64 @@ class CfgVehicles {
         displayName = "";
     };
 
+    class Building;
+    class NonStrategic: Building {
+        class AnimationSources;
+    };
+    class ACE_friesBar: NonStrategic {
+		author = "BaerMitUmlaut";
+		scope = 1;
+		model = PATHTOF(data\friesBar.p3d);
+		destrType = "DestructNo";
+		displayName = "";
+        animated = 1;
+		class AnimationSources: AnimationSources {
+			class extendHookRight {
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1.5;
+			};
+			class extendHookLeft {
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1.5;
+			};
+		};
+    };
+
+    class Logic;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {};
+        class ModuleDescription {
+            class AnyVehicle {};
+        };
+    };
+
+    class ACE_Module;
+    class ACE_moduleEquipFRIES: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(Module_FRIES_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
+        category = "ACE";
+        function = QUOTE(FUNC(moduleEquipFRIES));
+        functionPriority = 10;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "BaerMitUmlaut";
+
+        class ModuleDescription {
+            description = CSTRING(Module_FRIES_Description);
+            sync[] = {"AnyVehicle"};
+            class AnyVehicle {
+                position = 0;
+                direction = 0;
+                optional = 0;
+                duplicate = 1;
+            };
+        };
+    };
+
     class Air;
     class Helicopter: Air {
         class ACE_SelfActions {
@@ -45,8 +103,13 @@ class CfgVehicles {
         GVAR(ropeOrigins[]) = {{1.25, 1.5, -0.6}, {-1.1, 1.5, -0.6}};
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {
-        GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{1.08, 2.43, 0.2}, {-0.95, 2.43, 0.2}};
+        GVAR(enabled) = 2;
+        GVAR(ropeOrigins[]) = {"hookRight", "hookLeft"};
+        GVAR(friesType) = "ace_friesBar";
+        GVAR(friesAttachmentPoint[]) = {0, 2.2, -0.15};
+
+        GVAR(onDeploy) = QFUNC(onDeployRopesCommon);
+        GVAR(onCut) = QFUNC(onCutRopesCommon);
     };
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;

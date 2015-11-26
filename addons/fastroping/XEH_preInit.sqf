@@ -9,5 +9,8 @@ PREP(cutRopes);
 PREP(deployRopes);
 PREP(fastRope);
 PREP(fastRopePFH);
+PREP(moduleEquipFRIES);
+PREP(onCutRopesCommon);
+PREP(onDeployRopesCommon);
 
 ADDON = true;

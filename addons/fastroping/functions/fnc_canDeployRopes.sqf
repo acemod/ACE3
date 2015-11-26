@@ -17,11 +17,12 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes"];
+private ["_deployedRopes", "_config"];
 
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-if (isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(enabled)) &&
-    {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(enabled)) == 1} &&
+_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+if (isNumber (_config >> QGVAR(enabled)) &&
+    {(getNumber (_config >> QGVAR(enabled)) == 1) || {!(isNull (_vehicle getVariable [QGVAR(FRIES), objNull]))}} &&
     {_deployedRopes isEqualTo []} &&
     {getPos _vehicle select 2 > 2}) exitWith {true};
 false

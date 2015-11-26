@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Fastroping">
+        <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
+            <English>Equip FRIES</English>
+            <German>Rüste FRIES aus</German>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
+            <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
+            <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
+        </Key>
+    </Package>
+</Project>
