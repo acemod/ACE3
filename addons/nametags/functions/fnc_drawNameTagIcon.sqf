@@ -50,17 +50,16 @@ _name = if (_iconType in [ICON_NAME, ICON_NAME_RANK, ICON_NAME_SPEAK]) then {
 };
 
 //Set Color:
-_color = if ((group _target) != (group _player)) then {
-    +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
+if ((group _target) != (group _player)) then {
+    _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
+    _color set [3, (_color select 3) * _alpha];
 } else {
-    [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
+    _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
 };
 
 if (isNil "_color") then {
     _color = [1, 1, 1, _alpha];
 };
-
-_color set [3, (_color select 3) * _alpha];
 
 // Convert position to ASLW (expected by drawIcon3D) and add height offsets
 _position = _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .3)]);
