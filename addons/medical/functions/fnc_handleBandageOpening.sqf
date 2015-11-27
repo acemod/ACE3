@@ -36,20 +36,40 @@ if (isClass (_config >> _bandage)) then {
     _reopeningChance = getNumber (_config >> "reopeningChance");
     _reopeningMinDelay = getNumber (_config >> "reopeningMinDelay");
     _reopeningMaxDelay = getNumber (_config >> "reopeningMaxDelay") max _reopeningMinDelay;
+} else {
+    ACE_LOGWARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
 };
 
+if (!isClass (_config >> _className)) then {
+    TRACE_1("Could Not Find Wound Type, trying base class - not minor/major/large", _className);
+    switch (true) do {
+        case ((_className select [((count _className) - (count "Minor")) max 0]) == "Minor"): {
+            _className = _className select [0, ((count _className) - (count "Minor"))];
+        };
+        case ((_className select [((count _className) - (count "Medium")) max 0]) == "Medium"): {
+            _className = _className select [0, ((count _className) - (count "Medium"))];
+        };
+        case ((_className select [((count _className) - (count "Large")) max 0]) == "Large"): {
+            _className = _className select [0, ((count _className) - (count "Large"))];
+        };
+    };
+    TRACE_1("Changed to",_className);
+};
 if (isClass (_config >> _className)) then {
     _woundTreatmentConfig = (_config >> _className);
     if (isNumber (_woundTreatmentConfig >> "reopeningChance")) then {
         _reopeningChance = getNumber (_woundTreatmentConfig >> "reopeningChance");
-     };
+    };
     if (isNumber (_woundTreatmentConfig >> "reopeningMinDelay")) then {
         _reopeningMinDelay = getNumber (_woundTreatmentConfig >> "reopeningMinDelay");
-     };
+    };
     if (isNumber (_woundTreatmentConfig >> "reopeningMaxDelay")) then {
         _reopeningMaxDelay = getNumber (_woundTreatmentConfig >> "reopeningMaxDelay") max _reopeningMinDelay;
     };
+} else {
+    ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
 };
+TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
 _injuryType = _injury select 1;
@@ -74,9 +94,11 @@ if !(_exist) then {
 
 _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 
+TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
 if (random(1) <= _reopeningChance) then {
     _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
+    TRACE_1("Will open",_delay);
     [{
         private ["_bandage", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
@@ -102,11 +124,12 @@ if (random(1) <= _reopeningChance) then {
                 } foreach _bandagedWounds;
 
                 if (_exist) then {
+                    TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
                     _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
                     _target setvariable [QGVAR(openWounds), _openWounds, true];
                 };
             };
             // Otherwise something went wrong, we we don't reopen them..
        //};
-    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay, 0] call EFUNC(common,waitAndExecute);
+    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay] call EFUNC(common,waitAndExecute);
 };
