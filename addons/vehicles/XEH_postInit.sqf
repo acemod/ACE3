@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
-
+GVAR(isSpeedLimiter) = false;
 // Add keybinds
 ["ACE3 Vehicles", QGVAR(speedLimiter), localize LSTRING(SpeedLimiter),
 {

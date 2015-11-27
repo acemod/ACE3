@@ -20,7 +20,7 @@ private "_maxSpeed";
 
 params ["_driver", "_vehicle"];
 
-if (GETGVAR(isSpeedLimiter,false)) exitWith {
+if (GVAR(isSpeedLimiter)) exitWith {
     [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
     playSound "ACE_Sound_Click";
     GVAR(isSpeedLimiter) = false;
@@ -38,7 +38,7 @@ _maxSpeed = speed _vehicle max 10;
 
     if (GVAR(isUAV)) then {
         private _uavControll = UAVControl _vehicle;
-        if ((_uavControll select 0) != _driver) then {
+        if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
             GVAR(isSpeedLimiter) = false;
         };
     } else {
