@@ -464,7 +464,7 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_DEFAULT,ARM_LEG_ARMOR_DEFAULT);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_DEFAULT,ARM_LEG_ARMOR_DEFAULT)
         };
 
         class ACE_SelfActions {
@@ -525,13 +525,13 @@ class CfgVehicles {
 
     class B_Soldier_04_f: B_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
@@ -539,37 +539,37 @@ class CfgVehicles {
 
     class I_Soldier_03_F: I_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_Soldier_base_F: SoldierEB {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_Soldier_diver_base_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
-    
+
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_officer_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
@@ -577,27 +577,27 @@ class CfgVehicles {
     //Note: the selections are a little weird, eg:  class leg_l {name = "leg_l";};
     // class B_Soldier_VR_F: B_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class O_Soldier_VR_F: O_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class I_Soldier_VR_F: I_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class C_Soldier_VR_F: C_man_1 {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class O_Protagonist_VR_F: O_Soldier_base_F {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
 
