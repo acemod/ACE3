@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Rearm">
+        <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
+            <English>Rearm Settings</English>
+            <German>Aufmunitioniereinstellungen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
+            <English>This module allows you to tweak repair system settings.</English>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
+            <English>Rearm Amount</English>
+            <German>Aufmunitioniermenge</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
+            <English>How fast should a vehicle be rearmed?</English>
+            <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
+            <English>Entire Vehicle</English>
+            <German>Gesamtes Fahrzeug</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_magazine">
+            <English>Entire Magazine</English>
+            <German>Gesamtes Magazin</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_caliber">
+            <English>Amount based on caliber</English>
+            <German>Kaliberbasierte Anzahl</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Rearm">
+            <English>Rearm</English>
+            <German>Aufmunitionieren</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmAction">
+            <English>Rearming %1 with %2 ...</English>
+            <German>Munitioniere %1 auf mit %2 ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_BasicRearmAction">
+            <English>Rearming %1 ...</English>
+            <German>Munitioniere %1 auf ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_TakeAction">
+            <English>Taking %1 for %2 ...</English>
+            <German>Nehme %1 für %2 ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_TakeAmmo">
+            <English>Take ammo</English>
+            <German>Munition nehmen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_PickUpAmmo">
+            <English>Pick up ammo</English>
+            <German>Munition aufnehmen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmo">
+            <English>Store ammo</English>
+            <German>Munition verstauen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmoAction">
+            <English>Storing %1 in %2 ...</English>
+            <German>Verstaue %1 in %2 ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_GrabAction">
+            <English>Picking up ammo ...</English>
+            <German>Nehme Munition ...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
+            <English>Rearmed %1 rounds of %2 on %3</English>
+            <German>%1 Schuss %2 an %3 aufmunitioniert</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
+            <Original>Smoke Screen</Original>
+            <English>Smoke Screen</English>
+            <Czech>Kouřová clona</Czech>
+            <French>Écran de fumée</French>
+            <German>Rauchwand</German>
+            <Italian>Cortina fumogena</Italian>
+            <Polish>Zasłona dymna</Polish>
+            <Portuguese>Cortina de fumaça</Portuguese>
+            <Russian>Дым. завеса</Russian>
+            <Spanish>Pantalla de humo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_60Rnd_CMFlareMagazine">
+            <Original>Flares</Original>
+            <English>Flares</English>
+            <Czech>Světlice</Czech>
+            <French>Fusées</French>
+            <German>Leuchtkörper</German>
+            <Italian>Razzi luminosi</Italian>
+            <Polish>Flary</Polish>
+            <Portuguese>Sinalizadores</Portuguese>
+            <Russian>ЛТЦ</Russian>
+            <Spanish>Bengalas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
+            <English>30mm HEI</English>
+            <German>30mm HEI</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_500Rnd_Cannon_30mm_Plane_CAS_02_F">
+            <English>30mm HEI-T</English>
+            <German>30mm HEI-T</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_04_F">
+            <English>AIM-9 Sidewinder</English>
+            <German>AIM-9 Sidewinder</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_03_F">
+            <English>Wympel R-73</English>
+            <German>Wympel R-73</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_6Rnd_Missile_AGM_02_F">
+            <English>AGM-65 Maverick</English>
+            <German>AGM-65 Maverick</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_4Rnd_Missile_AGM_01_F">
+            <English>Kh-25MTP</English>
+            <German>Kh-25MTP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_HE_F">
+            <English>Hydra 70 HE</English>
+            <German>Hydra 70 HE</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_HE_F">
+            <English>S-8 HE</English>
+            <German>S-8 HE</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_AP_F">
+            <English>Hydra 70 AP</English>
+            <German>Hydra 70 AP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_AP_F">
+            <English>S-8 AP</English>
+            <German>S-8 AP</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
+            <English>GBU-12</English>
+            <German>GBU-12</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
+            <English>FAB-250M-54</English>
+            <German>FAB-250M-54</German>
+        </Key>
+    </Package>
+</Project>

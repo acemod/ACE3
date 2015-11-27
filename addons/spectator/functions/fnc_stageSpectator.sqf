@@ -7,8 +7,8 @@
  * Upon unstage, units will be moved to the position they were in upon staging
  *
  * Arguments:
- * 0: Unit to put into spectator stage <OBJECT> <OPTIONAL>
- * 1: Spectator stage <BOOL> <OPTIONAL>
+ * 0: Unit to put into spectator stage <OBJECT> (default: player)
+ * 1: Unit should be staged <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>

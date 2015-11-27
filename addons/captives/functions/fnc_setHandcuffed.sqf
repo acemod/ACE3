@@ -38,7 +38,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -56,7 +56,7 @@ if (_state) then {
 
         //Adds an animation changed eh
         //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
-        local _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+        private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
         if (_animChangedEHID != -1) then {
             TRACE_1("removing animChanged EH",_animChangedEHID);
             _unit removeEventHandler ["AnimChanged", _animChangedEHID];
@@ -92,7 +92,7 @@ if (_state) then {
     [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
 
     //remove AnimChanged EH
-    local _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+    private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
     TRACE_1("removing animChanged EH",_animChangedEHID);
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
@@ -107,7 +107,7 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        showHUD true;
+        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
     };
 };
 

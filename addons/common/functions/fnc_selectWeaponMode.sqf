@@ -19,7 +19,7 @@
 
 params ["_unit", "_muzzle", "_mode"];
 
-local _index = 0;
+private _index = 0;
 
 while {
     _index < 100 && {currentMuzzle _unit != _muzzle || {currentWeaponMode _unit != _mode}}

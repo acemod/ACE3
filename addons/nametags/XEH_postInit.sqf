@@ -22,42 +22,6 @@ GVAR(showNamesTime) = -10;
 {false},
 [29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
 
-// Monitor the assigned teams, and propegate them appropriately for the player
-// This allows for assigned team colors to match across the entire group
-[{
-    private["_leader", "_playerIsLeader", "_unitTeam"];
-    if (!(isNull ACE_player) && { alive ACE_player } ) then {
-        _leader = leader (group ACE_player);
-        _playerIsLeader = false;
-        
-        if(alive _leader) then {
-            if(_leader == ACE_player) then {
-                _playerIsLeader = true;
-            };
-        };
-        
-        if (_playerIsLeader) then {
-            {
-                if(alive _x) then {
-                    _unitTeam = _x getVariable [QGVAR(teamAssignment),"MAIN"];
-                    if (_unitTeam != assignedTeam _x) then {
-                        _x setVariable [QGVAR(teamAssignment), assignedTeam _x,true];
-                    };
-                };
-            } forEach units (group ACE_player);
-        } else {
-            {
-                if(alive _x) then {
-                    _unitTeam = _x getVariable [QGVAR(teamAssignment),"MAIN"];
-                    if (_unitTeam != assignedTeam _x) then {
-                        _x assignTeam _unitTeam;
-                    };
-                };
-            } forEach units (group ACE_player);
-        };
-    };
-}, 5, []] call CBA_fnc_addPerFrameHandler;
-
 // Wait until the colors are defined before starting to draw the nametags
 ["SettingsInitialized", {
     // Draw handle

@@ -344,14 +344,6 @@
             <Russian>Ускорение камеры</Russian>
             <Spanish>Aumento de velocidad</Spanish>
         </Key>
-        <Key ID="STR_ACE_Spectator_freeCamFocus">
-            <English>Focus on Unit</English>
-            <Polish>Skup na jednostce</Polish>
-            <Portuguese>Focar na unidade</Portuguese>
-            <Russian>Фокус на юните</Russian>
-            <Czech>Zaměřit se na Jednotku</Czech>
-            <Spanish>Centrarse en la unidad</Spanish>
-        </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
             <Polish>Interfejs</Polish>
