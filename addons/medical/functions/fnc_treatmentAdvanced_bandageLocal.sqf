@@ -50,21 +50,6 @@ _exit = false;
         _className = GVAR(woundClassNames) select _classID;
 
         // Check if this wound type has attributes specified for the used bandage
-        if (!isClass (_config >> _className)) then {
-            TRACE_1("Could Not Find Wound Type, trying base class - not minor/major/large", _className);
-            switch (true) do {
-                case ((_className select [((count _className) - (count "Minor")) max 0]) == "Minor"): {
-                    _className = _className select [0, ((count _className) - (count "Minor"))];
-                    };
-                case ((_className select [((count _className) - (count "Medium")) max 0]) == "Medium"): {
-                    _className = _className select [0, ((count _className) - (count "Medium"))];
-                    };
-                case ((_className select [((count _className) - (count "Large")) max 0]) == "Large"): {
-                    _className = _className select [0, ((count _className) - (count "Large"))];
-                };
-            };
-            TRACE_1("Changed to",_className);
-        };
         if (isClass (_config >> _className)) then {
             // Collect the effectiveness from the used bandage for this wound type
             _woundTreatmentConfig = (_config >> _className);

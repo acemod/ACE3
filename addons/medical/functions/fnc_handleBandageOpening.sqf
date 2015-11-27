@@ -40,21 +40,6 @@ if (isClass (_config >> _bandage)) then {
     ACE_LOGWARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
 };
 
-if (!isClass (_config >> _className)) then {
-    TRACE_1("Could Not Find Wound Type, trying base class - not minor/major/large", _className);
-    switch (true) do {
-        case ((_className select [((count _className) - (count "Minor")) max 0]) == "Minor"): {
-            _className = _className select [0, ((count _className) - (count "Minor"))];
-        };
-        case ((_className select [((count _className) - (count "Medium")) max 0]) == "Medium"): {
-            _className = _className select [0, ((count _className) - (count "Medium"))];
-        };
-        case ((_className select [((count _className) - (count "Large")) max 0]) == "Large"): {
-            _className = _className select [0, ((count _className) - (count "Large"))];
-        };
-    };
-    TRACE_1("Changed to",_className);
-};
 if (isClass (_config >> _className)) then {
     _woundTreatmentConfig = (_config >> _className);
     if (isNumber (_woundTreatmentConfig >> "reopeningChance")) then {
