@@ -27,7 +27,7 @@ private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageS
 if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
 
 //Check for bad typeName (changed from orignal v3.3 that took string)
-if ((typeName _hitPointIndex) == "STRING") then {
+if (_hitPointIndex isEqualType "") then {
     ACE_DEPRECATED("repair-setHitPointDamage (hit point name <string>","3.5.0","hit index <number>");
     _hitPointIndex = _allHitPoints find _hitPointIndex;
 };
