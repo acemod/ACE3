@@ -4,19 +4,21 @@
  *
  * Arguments:
  * 0: The unit that will be killed <OBJECT>
+ * 1: Force Dead (ignore revive setting) <BOOL>
+ * 1: Delay setDamage for a frame  <BOOL>
  *
  * ReturnValue:
- * None
+ * Did he died? <BOOL>
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
-params ["_unit", ["_force", false]];
+private ["_reviveVal", "_lifesLeft"];
+params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
-if (!alive _unit) exitwith{true};
+if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
     [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     false;
@@ -78,5 +80,13 @@ if (isPLayer _unit) then {
 
 ["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
 
-[_unit, 1] call FUNC(setStructuralDamage);
+//Delay a frame before killing the unit via scripted damage 
+//to avoid triggering the "Killed" Event twice (and having the wrong killer)
+
+if (!_delaySetDamage) then {
+    [_unit, 1] call FUNC(setStructuralDamage);
+} else {
+    [FUNC(setStructuralDamage), [_unit, 1]] call EFUNC(common,execNextFrame);
+};
+
 true;

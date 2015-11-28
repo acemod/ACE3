@@ -66,14 +66,10 @@ if (isNil _callback) then {
 };
 
 //Get current damage before treatment (for litter)
-_previousDamage = switch (toLower _selectionName) do {
-    case ("head"): {_target getHitPointDamage "HitHead"};
-    case ("body"): {_target getHitPointDamage "HitBody"};
-    case ("hand_l"): {_target getHitPointDamage "HitLeftArm"};
-    case ("hand_r"): {_target getHitPointDamage "HitRightArm"};
-    case ("leg_l"): {_target getHitPointDamage "HitLeftLeg"};
-    case ("leg_r"): {_target getHitPointDamage "HitRightLeg"};
-    default {damage _target};
+_previousDamage = if (_selectionName in GVAR(SELECTIONS)) then {
+    _target getHitPointDamage ([_target, _selectionName, true] call FUNC(translateSelections));
+} else {
+    damage _target;
 };
 
 _args call _callback;
