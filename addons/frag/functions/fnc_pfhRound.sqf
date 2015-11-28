@@ -1,18 +1,21 @@
 #include "script_component.hpp"
-private ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
-_round = _this select 0;
-_lastPos = _this select 1;
-_lastVel = _this select 2;
-_type = _this select 3;
-_firedFrame = _this select 4;
-_doSpall = _this select 6;
-_spallTrack = _this select 7;
-_foundObjectHPIds = _this select 8;
-_skip = _this select 9;
-_explosive = _this select 10;
-_indirectRange = _this select 11;
-_force = _this select 12;
-_fragPower = _this select 13;
+
+params [
+    "_round",
+    "",
+    "",
+    "",
+    "_firedFrame",
+    "",
+    "_doSpall",
+    "_spallTrack",
+    "_foundObjectHPIds",
+    "_skip",
+    "_explosive",
+    "_indirectRange",
+    "_force",
+    "_fragPower"
+];
 
 if(_round in GVAR(blackList)) exitWith {
     false

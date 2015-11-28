@@ -1,4 +1,4 @@
 #include "script_component.hpp"
-private ["_round"];
-_round = _this select 0;
-GVAR(blackList) set [(count GVAR(blackList)), _round];
+if (params ["_round"]) then {
+    GVAR(blackList) set [(count GVAR(blackList)), _round];
+};

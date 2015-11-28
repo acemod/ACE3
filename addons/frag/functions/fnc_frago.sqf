@@ -10,16 +10,8 @@ if(!isServer) exitWith { };
 
 // _startTime = ACE_diagTime;
 
-private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
-
-_round = _this select 0;
-_lastPos = _this select 1;
-_lastVel = _this select 2;
-_shellType = _this select 3;
-_gun = nil;
-if((count _this) > 5) then {
-    _gun = _this select 5;
-};
+private ["_startTime", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
+params ["_round", "_lastPos", "_lastVel", "_shellType", "_gun"];
 
 _fragTypes = [
             "ACE_frag_tiny", "ACE_frag_tiny", "ACE_frag_tiny",
