@@ -25,26 +25,6 @@
             <Polish>Maksymalny zasięg, w obrębie którego gesty będą widoczne dla graczy [domyślnie: 7 metrów]</Polish>
             <Russian>Макс. дистанция между игроками для отображения жестов на карте [по-умолчанию: 7 метров]</Russian>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_displayName">
-            <English>Lead Default Alpha</English>
-            <Portuguese>Transparência padrão do líder</Portuguese>
-            <Polish>Przezroczystość lidera</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_description">
-            <English>Fallback Alpha value for group leaders.</English>
-            <Portuguese>Valor de transparência alternativo para líderes de grupo</Portuguese>
-            <Polish>Domyślna przezroczystość dla liderów grup.</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_displayName">
-            <English>Default Alpha</English>
-            <Portuguese>Transparência padrão</Portuguese>
-            <Polish>Przezroczystość domyślna</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_descriptions">
-            <English>Fallback Alpha value.</English>
-            <Portuguese>Valor alternativo de transparência</Portuguese>
-            <Polish>Przezroczystość domyślna</Polish>
-        </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
             <Portuguese>Cor padrão para o líder</Portuguese>
@@ -68,26 +48,6 @@
             <Portuguese>Valor alternativo de cor</Portuguese>
             <Polish>Kolor domyślny</Polish>
             <Russian>Значение цвета.</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_displayName">
-            <English>Lead Alpha</English>
-            <Portuguese>Transparência do líder</Portuguese>
-            <Polish>Przezroczystość lidera</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_description">
-            <English>Alpha value for group leaders of groups synced with this module.</English>
-            <Portuguese>Valor de transparência para líderes de grupo sincronizados com este módulo.</Portuguese>
-            <Polish>Przezroczystość liderów grup zsynchronizowanych z tym modułem.</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_displayName">
-            <English>Alpha</English>
-            <Portuguese>Transparência</Portuguese>
-            <Polish>Przezroczystość</Polish>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_description">
-            <English>Alpha value for group members of groups synced with this module.</English>
-            <Portuguese>Valor de transparência para membros de grupo sincronizados com este módulo.</Portuguese>
-            <Polish>Przezroczystość członków grup zsynchronizowanych z tym modułem.</Polish>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
             <English>Lead Color</English>
