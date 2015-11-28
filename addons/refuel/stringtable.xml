@@ -24,27 +24,27 @@
         <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
             <German>Zapfpistole nehmen</German>
-            <Polish>Weź dyszę paliwa</Polish>
+            <Polish>Weź nalewak</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzleAction">
             <English>Taking fuel nozzle ...</English>
             <German>Nehme Zapfpistole ...</German>
-            <Polish>Pobieranie dyszy paliwa ...</Polish>
+            <Polish>Pobieranie nalewaka ...</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
             <German>Zapfpistole anschließen</German>
-            <Polish>Podepnij dyszę paliwa</Polish>
+            <Polish>Podłącz nalewak</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectAction">
             <English>Connecting fuel nozzle ...</English>
             <German>Zapfpistole anschließen ...</German>
-            <Polish>Podpinanie dyszy paliwa ...</Polish>
+            <Polish>Podłączanie nalewaka ...</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
             <German>Zapfpistole entfernen</German>
-            <Polish>Odepnij dyszę paliwa</Polish>
+            <Polish>Odepnij nalewak</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect_Action">
             <English>Connect</English>
@@ -69,7 +69,7 @@
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
             <German>Es ist kein Kraftstoff übrig.</German>
-            <Polish>Nie ma paliwa.</Polish>
+            <Polish>W zbiorniku nie ma paliwa.</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
@@ -134,22 +134,22 @@
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
             <German>Zapfpistole zurückstecken</German>
-            <Polish>Zwróć dyszę paliwa</Polish>
+            <Polish>Zwróć nalewak</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
             <English>Returning fuel nozzle ...</English>
             <German>Stecke Zapfpistole zurück ...</German>
-            <Polish>Zwracanie dyszy paliwa</Polish>
+            <Polish>Zwracanie nalewaka ...</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
             <German>Tankuhr ansehen</German>
-            <Polish>Sprawdź miernik paliwa</Polish>
+            <Polish>Sprawdź wskaźnik paliwa</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
             <English>Checking fuel counter ...</English>
             <German>Betrachte Tankuhr ...</German>
-            <Polish>Sprawdzanie miernika paliwa</Polish>
+            <Polish>Sprawdzanie wskaźnika paliwa ...</Polish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
             <English>%1 liters have been fueled.</English>
