@@ -25,6 +25,7 @@ class CfgVehicles {
         function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(Common,ACETeam);
         class Arguments {
@@ -402,5 +403,8 @@ class CfgVehicles {
     class Quadbike_01_base_F;
     class B_Quadbike_01_F: Quadbike_01_base_F {
         GVAR(hitpointPositions[]) = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
+    };
+    class Hatchback_01_base_F: Car_F {
+        GVAR(hitpointPositions[]) = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
     };
 };

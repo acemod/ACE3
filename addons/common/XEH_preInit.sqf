@@ -115,6 +115,7 @@ PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
+PREP(isUnderwater);
 PREP(letterToCode);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
@@ -139,6 +140,7 @@ PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
 PREP(readSettingFromModule);
+PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
@@ -166,6 +168,7 @@ PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
 PREP(sortAlphabeticallyBy);
+PREP(showHud);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
@@ -290,6 +293,7 @@ PREP(hashListSet);
 PREP(hashListPush);
 
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(showHudHash) = [] call FUNC(hashCreate);
 
 //GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
 GVAR(waitAndExecArray) = [];

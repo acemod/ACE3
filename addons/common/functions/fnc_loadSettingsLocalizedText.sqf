@@ -35,12 +35,23 @@ _fnc_parseConfigForDisplayNames = {
             _values set [_forEachIndex, _text];
         };
     } forEach _values;
+
+    if (!(_values isEqualTo [])) then {
+        if (_typeOf != "SCALAR") then {
+            ACE_LOGWARNING_2("Setting [%1] has values[] but is not SCALAR (%2)", _name, _typeOf);
+        } else {
+            private _value = missionNamespace getVariable [_name, -1];
+            if ((_value < 0) || {_value >= (count _values)}) then {
+                ACE_LOGWARNING_3("Setting [%1] out of bounds %2 (values[] count is %3)(", _name, _value, count _values);
+            };
+        };
+    };
     true
 };
 
 // Iterate through settings
 {
-    _x params ["_name"];
+    _x params ["_name", "_typeOf"];
 
     if !([configFile >> "ACE_Settings" >> _name] call _fnc_parseConfigForDisplayNames) then {
         if !([configFile >> "ACE_ServerSettings" >> _name] call _fnc_parseConfigForDisplayNames) then {

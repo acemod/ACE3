@@ -13,27 +13,39 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["ace_map_gestures_enabled", true, false, true] call ace_common_fnc_setSetting
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
 
-private ["_settingData", "_failed"];
-
-_settingData = [_name] call FUNC(getSettingData);
+private _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting does not exist
-if (count _settingData == 0) exitWith {};
+if (_settingData isEqualTo []) exitWith {
+    ACE_LOGERROR_1("SetSetting [%1] setting does not exist", _name);
+};
+
+_settingData params ["", "_typeName", "_isClientSetable", "", "", "", "_isForced"];
 
 // Exit if the setting is already forced
-if (_settingData select 6) exitWith {};
+if (_isForced) exitWith {
+    ACE_LOGINFO_1("SetSetting [%1] Trying to set forced setting", _name);
+};
+
+//This does NOT broadcast changes to GVAR(settings), so clients would not get updated force status
+if ((missionNamespace getVariable [QEGVAR(modules,serverModulesRead), false]) && {!(_isForced isEqualTo _force)}) then {
+    ACE_LOGWARNING_3("SetSetting [%1] attempting to broadcast a change to force (%2 to %3)", _name, _isForced, _force);
+};
 
 // If the type is not equal, try to cast it
-_failed = false;
+private _failed = false;
 if (typeName _value != _settingData select 1) then {
     _failed = true;
-    if (_settingData select 1 == "BOOL" && _value isEqualType 0) then {
+    if ((_typeName == "BOOL") && {_value isEqualType 0}) then {
         // If value is not 0 or 1 consider it invalid and don't set anything
         if (_value isEqualTo 0) then {
             _value = false;
@@ -44,12 +56,12 @@ if (typeName _value != _settingData select 1) then {
             _failed = false;
         };
     };
-    if (_settingData select 1 == "COLOR" && _value isEqualType []) then {
+    if ((_typeName == "COLOR") && {_value isEqualType []}) then {
         _failed = false;
     };
 };
 
-if (_failed) exitWith {};
+if (_failed) exitWith {ACE_LOGERROR_3("SetSetting [%1] bad data type expected %2 got %3", _name, _typeName, typeName _value);};
 
 // Force it if it was required
 _settingData set [6, _force];

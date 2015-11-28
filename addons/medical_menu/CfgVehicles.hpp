@@ -10,6 +10,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
         isGlobal = 0;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

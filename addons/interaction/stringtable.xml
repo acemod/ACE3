@@ -253,138 +253,6 @@
             <Portuguese>&lt;&lt; Voltar</Portuguese>
             <Italian>&lt;&lt; Indietro</Italian>
         </Key>
-        <Key ID="STR_ACE_Interaction_Gestures">
-            <English>Gestures</English>
-            <German>Gesten</German>
-            <Spanish>Gestos</Spanish>
-            <Polish>Gesty</Polish>
-            <Czech>Posunky</Czech>
-            <French>Signaux</French>
-            <Russian>Жесты</Russian>
-            <Hungarian>Kézjelek</Hungarian>
-            <Portuguese>Gestos</Portuguese>
-            <Italian>Gesti</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Attack">
-            <English>Attack</English>
-            <German>Angreifen</German>
-            <Spanish>Atacar</Spanish>
-            <Polish>Do ataku</Polish>
-            <Czech>Zaútočit</Czech>
-            <French>Attaquer</French>
-            <Russian>Атаковать</Russian>
-            <Hungarian>Támadás</Hungarian>
-            <Portuguese>Atacar</Portuguese>
-            <Italian>Attaccare</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Advance">
-            <English>Advance</English>
-            <German>Vordringen</German>
-            <Spanish>Avanzar</Spanish>
-            <Polish>Naprzód</Polish>
-            <Czech>Postoupit</Czech>
-            <French>Avancer</French>
-            <Russian>Продвигаться</Russian>
-            <Hungarian>Előre</Hungarian>
-            <Portuguese>Avançar</Portuguese>
-            <Italian>Avanzare</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Go">
-            <English>Go</English>
-            <German>Los</German>
-            <Spanish>Adelante</Spanish>
-            <Polish>Szybko</Polish>
-            <Czech>Jít</Czech>
-            <French>Aller</French>
-            <Russian>Идти</Russian>
-            <Hungarian>Mozgás</Hungarian>
-            <Portuguese>Mover-se</Portuguese>
-            <Italian>Muoversi</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Follow">
-            <English>Follow</English>
-            <German>Folgen</German>
-            <Spanish>Seguirme</Spanish>
-            <Polish>Za mną</Polish>
-            <Czech>Následovat</Czech>
-            <French>Suivre</French>
-            <Russian>Следовать</Russian>
-            <Hungarian>Utánam</Hungarian>
-            <Portuguese>Seguir</Portuguese>
-            <Italian>Seguire</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Point">
-            <English>Point</English>
-            <German>Zeigen</German>
-            <Spanish>Señalar</Spanish>
-            <Polish>Wskazać</Polish>
-            <Czech>Ukázat</Czech>
-            <French>Pointer</French>
-            <Russian>Точка</Russian>
-            <Hungarian>Mutat</Hungarian>
-            <Portuguese>Apontar</Portuguese>
-            <Italian>Puntare a</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Up">
-            <English>Up</English>
-            <German>Aufstehen</German>
-            <Spanish>Arriba</Spanish>
-            <Polish>Do góry</Polish>
-            <Czech>Vztyk</Czech>
-            <French>Debout</French>
-            <Russian>Вверх</Russian>
-            <Hungarian>Fel</Hungarian>
-            <Portuguese>Acima</Portuguese>
-            <Italian>Alzarsi</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Cover">
-            <English>Cover</English>
-            <German>Deckung</German>
-            <Spanish>Cubrirse</Spanish>
-            <Polish>Do osłony</Polish>
-            <Czech>Krýt se</Czech>
-            <French>A couvert</French>
-            <Russian>Укрыться</Russian>
-            <Hungarian>Fedezékbe</Hungarian>
-            <Portuguese>Proteger-se</Portuguese>
-            <Italian>Copertura</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Cease_Fire">
-            <English>Cease Fire</English>
-            <German>Feuer einstellen</German>
-            <Spanish>Alto el fuego</Spanish>
-            <Polish>Wstrzymać ogień</Polish>
-            <Czech>Zastavit palbu</Czech>
-            <French>Halte au feu</French>
-            <Russian>Прекратить огонь</Russian>
-            <Hungarian>Tüzet szüntess</Hungarian>
-            <Portuguese>Cessar Fogo</Portuguese>
-            <Italian>Cessare il Fuoco</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Freeze">
-            <English>Freeze</English>
-            <German>Keine Bewegung</German>
-            <Spanish>Alto</Spanish>
-            <Polish>Stać</Polish>
-            <Czech>Stát</Czech>
-            <French>Halte</French>
-            <Russian>Замереть</Russian>
-            <Hungarian>Állj</Hungarian>
-            <Portuguese>Alto</Portuguese>
-            <Italian>Fermi</Italian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_Gestures_Hi">
-            <English>Hi</English>
-            <German>Hallo</German>
-            <Spanish>Hola</Spanish>
-            <Polish>Witaj</Polish>
-            <Czech>Ahoj</Czech>
-            <French>Salut</French>
-            <Russian>Привет</Russian>
-            <Hungarian>Helló</Hungarian>
-            <Portuguese>Olá</Portuguese>
-            <Italian>Ciao</Italian>
-        </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
             <German>Waffe wegstecken</German>
@@ -822,6 +690,26 @@
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazine">
+            <English>Pass magazine</English>
+            <German>Magazin geben</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
+            <English>Primary magazine</English>
+            <German>Gewehrmagazin</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
+            <English>Pistol magazine</English>
+            <German>Pistolenmagazin</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineHint">
+            <English>%1 passed you a %2 magazine.</English>
+            <German>%1 hat dir ein %2 Magazin gegeben.</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassMagazineSetting">
+            <English>Show "pass magazine" interaction</English>
+            <German>Zeige "Magazine geben" Interaktion</German>
         </Key>
     </Package>
 </Project>
