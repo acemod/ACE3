@@ -237,7 +237,7 @@ switch (_coordinate) do {
 };
 
 // trap errors
-if ([_digit0, _digit1, _digit2, _digit3, _digit4] isEqualTypeAll "") exitWith {
+if !([_digit0, _digit1, _digit2, _digit3, _digit4] isEqualTypeAll "") exitWith {
     [QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa)), QUOTE(PATHTOF(rsc\vector_minus.paa))]    // return
 };
 
