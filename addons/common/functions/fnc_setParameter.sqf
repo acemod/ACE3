@@ -19,7 +19,7 @@ params ["_name", "_value"];
 
 // Hack to keep backward compatibility for the moment
 if (typeName (missionNamespace getVariable _name) == "BOOL") then {
-    if (typeName _value == "SCALAR") then {
+    if (_value isEqualType 0) then {
         _value = _value > 0;
     };
 };

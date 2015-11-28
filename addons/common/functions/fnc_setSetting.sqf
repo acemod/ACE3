@@ -45,7 +45,7 @@ if ((missionNamespace getVariable [QEGVAR(modules,serverModulesRead), false]) &&
 private _failed = false;
 if (typeName _value != _settingData select 1) then {
     _failed = true;
-    if ((_typeName == "BOOL") && {typeName _value == "SCALAR"}) then {
+    if ((_typeName == "BOOL") && {_value isEqualType 0}) then {
         // If value is not 0 or 1 consider it invalid and don't set anything
         if (_value isEqualTo 0) then {
             _value = false;
@@ -56,7 +56,7 @@ if (typeName _value != _settingData select 1) then {
             _failed = false;
         };
     };
-    if ((_typeName == "COLOR") && {typeName _value == "ARRAY"}) then {
+    if ((_typeName == "COLOR") && {_value isEqualType []}) then {
         _failed = false;
     };
 };

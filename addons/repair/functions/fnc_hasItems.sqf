@@ -23,10 +23,10 @@ private ["_return"];
 
 _return = true;
 {
-    if (typeName _x == "ARRAY" && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
+    if ((_x isEqualType []) && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
         _return = false;
     };
-    if (typeName _x == "STRING" && {!([_unit, _x] call EFUNC(common,hasItem))}) exitWith {
+    if ((_x isEqualType "") && {!([_unit, _x] call EFUNC(common,hasItem))}) exitWith {
         _return = false;
     };
 } forEach _items;

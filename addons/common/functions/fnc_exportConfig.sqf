@@ -41,8 +41,8 @@ _fnc_logEntries = {
             case (isClass _e1): {[_e1, _d + 1] call _fnc_logEntries; false};
         };
 
-        if (typeName _e2 != "BOOL") then {
-            if (typeName _e2 == "ARRAY") then {
+        if (!(_e2 isEqualType false)) then {
+            if (_e2 isEqualType []) then {
                 _e2 = toArray str _e2;
                 {
                     if (_x == toArray "[" select 0) then {

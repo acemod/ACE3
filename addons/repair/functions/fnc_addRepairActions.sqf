@@ -109,10 +109,10 @@ _processedHitpoints = [];
             {
                 _x params ["_hit", "_pos"];
                 if (_hitpoint == _hit) exitWith {
-                    if (typeName _pos == "ARRAY") exitWith {
+                    if (_pos isEqualType []) exitWith {
                         _position = _pos; // Position in model space
                     };
-                    if (typeName _pos == "STRING") exitWith {
+                    if (_pos isEqualType "") exitWith {
                         _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _pos];
                     };
                     ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);

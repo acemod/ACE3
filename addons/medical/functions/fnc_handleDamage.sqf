@@ -28,7 +28,7 @@ if !(local _unit) exitWith {
 private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
-if (typeName _projectile == "OBJECT") then {
+if (_projectile isEqualType objNull) then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
 };

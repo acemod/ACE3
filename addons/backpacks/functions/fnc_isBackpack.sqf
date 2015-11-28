@@ -14,7 +14,7 @@
 
 params ["_backpack"];
 
-if (typeName _backpack == "OBJECT") then {
+if (_backpack isEqualType objNull) then {
     _backpack = typeOf _backpack;
 };
 
