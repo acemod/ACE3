@@ -299,7 +299,7 @@ class CfgVehicles {
                 class ACE_Gesture_Go {
                     displayName = CSTRING(Gestures_Go);
                     condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_2('gestureGo','gestureGoB')] select floor random 2););
+                    statement = QUOTE(_target playActionNow selectRandom [ARR_2('gestureGo','gestureGoB')];);
                     showDisabled = 1;
                     priority = 1.8;
                     hotkey = "2";
@@ -354,7 +354,7 @@ class CfgVehicles {
                 class ACE_Gesture_Yes {
                     displayName = ECSTRING(common,Yes);
                     condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
+                    statement = QUOTE(_target playActionNow selectRandom [ARR_2('gestureYes','gestureNod')];);
                     showDisabled = 1;
                     priority = 1.1;
                     hotkey = "8";
@@ -370,7 +370,7 @@ class CfgVehicles {
                 class ACE_Gesture_Hi {
                     displayName = CSTRING(Gestures_Hi);
                     condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_3('gestureHi','gestureHiB','gestureHiC')] select floor random 3););
+                    statement = QUOTE(_target playActionNow selectRandom [ARR_3('gestureHi','gestureHiB','gestureHiC')];);
                     showDisabled = 1;
                     priority = 0.9;
                     hotkey = "0";

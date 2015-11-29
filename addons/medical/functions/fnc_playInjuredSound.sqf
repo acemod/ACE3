@@ -59,9 +59,9 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
     // Select the to be played sound based upon damage amount.
     if (_pain > 0.5) then {
         if (random(1) > 0.5) then {
-            _sound = _availableSounds_A select (round(random((count _availableSounds_A) - 1)));
+            _sound = selectRandom _availableSounds_A;
         } else {
-            _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+            _sound = selectRandom _availableSounds_B;
         };
     } else {
         _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));

@@ -78,7 +78,7 @@ _createdLitter = [];
                 // Loop through through the litter options and place the litter
                 {
                     if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
-                        [_target, _x select (floor(random(count _x)))] call _createLitter;
+                        [_target, selectRandom _x] call _createLitter;
                     };
                     if (typeName _x == "STRING") then {
                         [_target, _x] call _createLitter;

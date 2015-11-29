@@ -77,7 +77,7 @@ _minLethalDamage = if (_typeIndex >= 0) then {
 
 if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+        _selection = selectRandom GVAR(SELECTIONS);
     };
 };
 

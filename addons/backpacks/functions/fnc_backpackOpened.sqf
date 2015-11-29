@@ -37,7 +37,7 @@ _sounds = [
 _position = AGLToASL (_target modelToWorldVisual (_target selectionPosition "Spine3"));
 
 playSound3D [
-    _sounds select floor random count _sounds,
+    selectRandom _sounds,
     objNull,
     false,
     _position,
