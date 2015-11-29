@@ -85,8 +85,9 @@ _recurseFnc = {
     _actions
 };
 
-private ["_actionsCfg","_actions"];
+private ["_actionsCfg", "_actions", "_missionActionsCfg"];
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfActions";
+_missionActionsCfg = missionConfigFile >> "ACE_MissionActions" >> _objectType >> "ACE_SelfActions";
 
 private ["_baseDisplayName", "_baseIcon"];
 _baseDisplayName = "";
@@ -111,6 +112,12 @@ if (_objectType isKindOf "CAManBase") then {
 _actions = if (_isMan) then {
     + (missionNamespace getVariable QGVAR(SelfAct_CAManBase))
 } else {
+    private "_var";
+    _var = [_actionsCfg] call _recurseFnc;
+    if (isClass _missionActionsCfg) then {
+        _var append ([_missionActionsCfg] call _recurseFnc);
+    };
+
     // Create a master action to base on self action
     [
         [
@@ -129,7 +136,7 @@ _actions = if (_isMan) then {
                 10,
                 [false,true,false]
             ],
-            [_actionsCfg] call _recurseFnc
+            _var
         ]
     ]
 };

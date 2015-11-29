@@ -103,12 +103,17 @@ _recurseFnc = {
 
 private ["_actionsCfg","_actions"];
 _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
-
+_missionActionsCfg = missionConfigFile >> "ACE_MissionActions" >> _objectType >> "ACE_Actions";
 // If the classname inherits from CAManBase, just copy it's menu without recompiling a new one
 _actions = if (_isMan) then {
     + (missionNamespace getVariable QGVAR(Act_CAManBase))
 } else {
-    [_actionsCfg] call _recurseFnc
+    private "_var";
+    _var = [_actionsCfg] call _recurseFnc;
+    if (isClass _missionActionsCfg) then {
+        _var append ([_missionActionsCfg] call _recurseFnc);
+    };
+    _var
 };
 missionNamespace setVariable [_actionsVarName, _actions];
 
