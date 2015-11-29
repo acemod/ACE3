@@ -694,22 +694,27 @@
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
             <German>Magazin geben</German>
+            <Polish>Podaj magazynek</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
             <German>Gewehrmagazin</German>
+            <Polish>Magazynek karabinowy</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
             <German>Pistolenmagazin</German>
+            <Polish>Magazynek pistoletowy</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
             <German>%1 hat dir ein %2 Magazin gegeben.</German>
+            <Polish>%1 podał Ci magazynek %2.</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
             <German>Zeige "Magazine geben" Interaktion</German>
+            <Polish>Pokaż interakcję "podaj magazynek"</Polish>
         </Key>
     </Package>
 </Project>
