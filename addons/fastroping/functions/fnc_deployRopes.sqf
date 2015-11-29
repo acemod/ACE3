@@ -51,8 +51,11 @@ if (isText (_config >> QGVAR(onDeploy))) then {
         _anchor allowDamage false;
         _anchor setPosASL (_origin vectorAdd [0, 0, -2.5]);
 
-        _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 2];
-        _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 33];
+        _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 1];
+        _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 34];
+
+        _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
+        _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
 
         //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, anchor helper object, occupied
         _deployedRopes pushBack [_x, _ropeTop, _ropeBottom, _dummy, _anchor, _hook, false];

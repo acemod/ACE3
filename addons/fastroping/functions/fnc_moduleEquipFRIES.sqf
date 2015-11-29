@@ -33,6 +33,15 @@ _synchedUnits = synchronizedObjects _module;
             _fries = (getText (_config >> QGVAR(friesType))) createVehicle [0, 0, 0];
             _fries attachTo [_x, (getArray (_config >> QGVAR(friesAttachmentPoint)))];
             _x setVariable [QGVAR(FRIES), _fries, true];
+            _x addEventHandler ["Killed", {
+                params ["_vehicle"];
+                deleteVehicle (_vehicle getVariable [QGVAR(FRIES), objNull]);
+                _vehicle setVariable [QGVAR(FRIES), nil, true];
+
+                if !((_vehicle getVariable [QGVAR(deployedRopes), []] isEqualTo [])) then {
+                    [_vehicle] call FUNC(cutRopes);
+                };
+            }];
         };
     };
     false

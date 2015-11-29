@@ -12,12 +12,13 @@ class CfgVehicles {
     class NonStrategic: Building {
         class AnimationSources;
     };
-    class ACE_friesBar: NonStrategic {
+    class ACE_friesBase: NonStrategic {
+        destrType = "DestructNo";
+    };
+    class ACE_friesAnchorBar: ACE_friesBase {
 		author = "BaerMitUmlaut";
-		scope = 1;
-		model = PATHTOF(data\friesBar.p3d);
-		destrType = "DestructNo";
-		displayName = "";
+		scope = 2;
+		model = PATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
 		class AnimationSources: AnimationSources {
 			class extendHookRight {
@@ -105,7 +106,7 @@ class CfgVehicles {
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins[]) = {"hookRight", "hookLeft"};
-        GVAR(friesType) = "ace_friesBar";
+        GVAR(friesType) = "ACE_friesAnchorBar";
         GVAR(friesAttachmentPoint[]) = {0, 2.2, -0.15};
 
         GVAR(onDeploy) = QFUNC(onDeployRopesCommon);
