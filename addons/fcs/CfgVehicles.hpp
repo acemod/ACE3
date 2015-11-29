@@ -321,9 +321,13 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -346,9 +350,13 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -362,6 +370,8 @@ class CfgVehicles {
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
                         GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
                     };
                 };
             };
