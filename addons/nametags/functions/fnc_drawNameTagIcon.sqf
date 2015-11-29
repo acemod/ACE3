@@ -22,7 +22,7 @@
 
 params ["_player", "_target", "_alpha", "_heightOffset", "_iconType"];
 
-if (_iconType == ICON_NONE) exitWith {}; //Don't waste time if not visable
+if ((_iconType == ICON_NONE) || {isObjectHidden  _target}) exitWith {}; //Don't waste time if not visable
 
 private ["_position", "_color", "_name", "_size", "_icon", "_scale"];
 
