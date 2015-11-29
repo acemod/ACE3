@@ -15,8 +15,6 @@
  */
 #include "script_component.hpp"
 
-private "_animations";
-
 // Select random animation from Animations Pool
 selectRandom [
     QGVAR(HubSittingChairA_idle1),
