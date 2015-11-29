@@ -64,7 +64,7 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
             _sound = selectRandom _availableSounds_B;
         };
     } else {
-        _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+        _sound = selectRandom _availableSounds_B;
     };
     // Play the sound
     playSound3D [(getArray(configFile >> "CfgSounds" >> _sound >> "sound") select 0) + ".wss", objNull, false, getPos _unit, 15, 1, 25]; // +2db, 15 meters.

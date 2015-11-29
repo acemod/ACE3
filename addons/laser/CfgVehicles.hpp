@@ -5,7 +5,7 @@ class CfgVehicles {
         // @TODO: Changing the model and simulation hides it, but THEN IT DOESNT SPAWN WTF!?
         model = "\A3\Weapons_F\empty.p3d";
         destrType = "DestructNo";
-        simulation = "house";
+        simulation = "LaserTarget";
         
         class EventHandlers {
             init = QUOTE(_this call FUNC(laser_init));

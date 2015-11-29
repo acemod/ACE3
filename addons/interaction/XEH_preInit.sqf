@@ -20,6 +20,8 @@ PREP(sendAway);
 PREP(canJoinGroup);
 PREP(canJoinTeam);
 PREP(joinTeam);
+PREP(canPassMagazine);
+PREP(passMagazine);
 PREP(canBecomeLeader);
 PREP(doBecomeLeader);
 PREP(canTapShoulder);

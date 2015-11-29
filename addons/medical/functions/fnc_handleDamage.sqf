@@ -8,6 +8,7 @@
  * 2: Amount Of Damage <NUMBER>
  * 3: Shooter <OBJECT>
  * 4: Projectile <OBJECT/STRING>
+ * 5: HitPointIndex (-1 for structural) <NUMBER>
  *
  * Return Value:
  * Damage To Be Inflicted <NUMBER>
@@ -28,7 +29,7 @@ if !(local _unit) exitWith {
 private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
-if (typeName _projectile == "OBJECT") then {
+if (_projectile isEqualType objNull) then {
     _projectile = typeOf _projectile;
     _this set [4, _projectile];
 };
@@ -38,6 +39,7 @@ TRACE_3("ACE_DEBUG: HandleDamage",_selection,_damage,_unit);
 // If damage is in dummy hitpoints, "hands" and "legs", don't change anything
 if (_selection == "hands") exitWith {_unit getHit "hands"};
 if (_selection == "legs") exitWith {_unit getHit "legs"};
+if (_selection == "arms") exitWith {_unit getHit "arms"};
 
 // Deal with the new hitpoint and selection names introduced with Arma v1.50 and later.
 // This will convert new selection names into selection names that the medical system understands
@@ -46,8 +48,8 @@ if (_selection == "legs") exitWith {_unit getHit "legs"};
 _selection = [_unit, _selection, _hitPointIndex] call FUNC(translateSelections);
 _this set [1, _selection]; // ensure that the parameters are set correctly
 
-// If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "?"
-if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0}; //@todo "neck", "pelvis", "spine1", "spine2", "spine3"
+// If the damage is being weird, we just tell it to fuck off. Ignore: "hands", "legs", "arms"
+if (_selection != "" && {!(_selection in GVAR(SELECTIONS))}) exitWith {0};
 
 // Exit if we disable damage temporarily
 if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
@@ -85,7 +87,7 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectio
     if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
         _damageReturn = 0.9;
     };
-    if ([_unit] call FUNC(setDead)) then {
+    if ([_unit, false, true] call FUNC(setDead)) then {
         _damageReturn = 1;
     } else {
         _damageReturn = _damageReturn min 0.89;
@@ -110,7 +112,7 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
 
     if (_damageReturn >= 0.9 && {_selection in ["", "head", "body"]}) exitWith {
         if (_unit getvariable ["ACE_isUnconscious", false]) exitwith {
-            [_unit] call FUNC(setDead);
+            [_unit, false, true] call FUNC(setDead);
             0.89;
         };
         if (_delayedUnconsicous) then {
@@ -131,7 +133,7 @@ if (((_unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)]) > 0) && {_dam
     if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
     };
-    [_unit] call FUNC(setDead);
+    [_unit, false, true] call FUNC(setDead);
     0.89;
 };
 

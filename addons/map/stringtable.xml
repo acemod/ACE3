@@ -256,6 +256,30 @@
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
         </Key>
+        <Key ID="STR_ACE_Map_turnLightOn">
+            <English>Turn On %1</English>
+            <German>%1 Aktivieren</German>
+            <Spanish>Encender %1</Spanish>
+            <Polish>Włącz %1</Polish>
+            <French>Allumer %1</French>
+            <Czech>Zapnout %1</Czech>
+            <Italian>Accendi %1</Italian>
+            <Hungarian>%1 Bekapcsolása</Hungarian>
+            <Portuguese>Ativar %1</Portuguese>
+            <Russian>Активировать %1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Map_turnLightOff">
+            <English>Turn Off %1</English>
+            <German>%1 Deaktivieren</German>
+            <Spanish>Apagar %1</Spanish>
+            <Polish>Wyłącz %1</Polish>
+            <French>Éteindre %1</French>
+            <Czech>Vypnout %1</Czech>
+            <Italian>Spegni %1</Italian>
+            <Hungarian>%1 Kikapcsolása</Hungarian>
+            <Portuguese>Desativar %1</Portuguese>
+            <Russian>Деактивировать %1</Russian>
+        </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
             <Polish>Ust. domyślny kanał</Polish>

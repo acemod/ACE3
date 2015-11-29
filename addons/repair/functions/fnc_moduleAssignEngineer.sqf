@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleAssignEngineer"
+ * [logic] call ace_repair_fnc_moduleAssignEngineer
  *
  * Public: No
  */

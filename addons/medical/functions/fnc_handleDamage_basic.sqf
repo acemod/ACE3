@@ -24,6 +24,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
 
 {
     _x params ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage"];
+    TRACE_6("_x",_unit,_selectionName,_amountOfDamage,_sourceOfDamage,_typeOfProjectile,_typeOfDamage);
     if !(isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) then {
         _part = [_selectionName] call FUNC(selectionNameToNumber);
         if (_part < 0) exitwith {};
@@ -56,5 +57,6 @@ _target setHitPointDamage ["hitHands", (_handsDamageR + _handsDamageL) min 0.95]
 _target setHitPointDamage ["hitLegs", (_legsDamageR + _legsDamageL) min 0.95];
 
 {
-    _target setHitPointDamage [_x, (_damageBodyParts select _foreachIndex) min 0.95];
-}foreach GVAR(HITPOINTS);
+    private _hitPointName = [_target, _x, true] call FUNC(translateSelections);
+    _target setHitPointDamage [_hitPointName, (_damageBodyParts select _foreachIndex) min 0.95];
+}foreach GVAR(SELECTIONS);

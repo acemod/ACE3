@@ -2,10 +2,11 @@
 
 ADDON = false;
 
-PREP(initModule);
-PREP(returnValue);
-PREP(returnObjectCoeff);
-PREP(changeViewDistance);
 PREP(adaptViewDistance);
+PREP(changeViewDistance);
+PREP(initModule);
+PREP(returnObjectCoeff);
+PREP(returnValue);
+PREP(setFovBasedOvdPFH);
 
 ADDON = true;

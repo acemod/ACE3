@@ -57,7 +57,7 @@ if (_activated) then {
         if (_isAdmin) then {
             _letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
             _adminVar = "admin_";
-            for "_i" from 0 to 9 do {_adminVar = _adminVar + (_letters call bis_fnc_selectrandom);};
+            for "_i" from 0 to 9 do {_adminVar = _adminVar + selectRandom _letters};
             _logic setvariable ["adminVar",_adminVar,true];
         };
 

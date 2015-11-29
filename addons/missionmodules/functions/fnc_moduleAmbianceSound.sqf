@@ -108,7 +108,7 @@ if (_activated && local _logic) then {
 
                 // If no unit is to close to this position, we will play the sound.
                 if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
-                    playSound3D [_ambianceSounds call BIS_fnc_selectRandom, objNull,  false, _newPos, _volume, 1, 1000];
+                    playSound3D [selectRandom _ambianceSounds, objNull,  false, _newPos, _volume, 1, 1000];
                     _args set [8, ACE_time];
                 };
             };

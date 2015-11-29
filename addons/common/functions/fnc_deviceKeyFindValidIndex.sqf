@@ -22,7 +22,7 @@ private ["_validIndex", "_realIndex"];
 
 _validIndex = -1;
 
-if (typeName _searchOffsetOrName == "STRING") then {
+if (_searchOffsetOrName isEqualType "") then {
     {
         if (_x select 0 == _searchOffsetOrName) exitWith {
             _validIndex = _forEachIndex;

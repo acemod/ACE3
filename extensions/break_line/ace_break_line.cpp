@@ -21,7 +21,7 @@
 
 extern "C" {
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
-};
+}
 
 std::vector<std::string> splitString(const std::string & input) {
     std::istringstream ss(input);
