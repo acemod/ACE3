@@ -34,7 +34,7 @@ class CfgWeapons {
         _generalMacro = "ACE_optic_DMS";
         scope = 1;
         displayName = "LOCALIZE ACE DMS";
-        //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
+        //descriptionShort = "$STR_A3_CfgWEAPONS_ACC_DMS1";
         weaponInfoType = "ACE_RscWeaponZeroing";
 
         class ItemInfo: ItemInfo {

@@ -132,7 +132,7 @@ class GVAR(remoteInventory) {
         };
         class GroundName: RscText {
             idc = -1;
-            text = "$STR_cfgVehicles_WeaponHolder0"; //"ground"
+            text = "$STR_CfgVehicles_WeaponHolder0"; //"ground"
             x = X_PART(1);
             y = Y_PART(1);
             w = W_PART(12);

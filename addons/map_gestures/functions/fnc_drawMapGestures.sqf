@@ -53,7 +53,7 @@ params ["_mapHandle"];
             };
 
             // Render icon and player name
-            _mapHandle drawIcon ["\a3\ui_f\data\gui\cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, ICON_RENDER_SIZE, ICON_RENDER_SIZE, ICON_ANGLE, "", ICON_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
+            _mapHandle drawIcon ["\a3\ui_f\data\gui\Cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, ICON_RENDER_SIZE, ICON_RENDER_SIZE, ICON_ANGLE, "", ICON_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
             _mapHandle drawIcon ["#(argb,8,8,3)color(0,0,0,0)", GVAR(nameTextColor), _pos, TEXT_ICON_RENDER_SIZE, TEXT_ICON_RENDER_SIZE, ICON_ANGLE, name _x, TEXT_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
         };
     };

@@ -111,7 +111,7 @@ _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders"
     _actionMaxDistance = 3; //interact_menu will check head -> target's offset; leave this high and do a precice distance check in condition
 
     _actionDisplayName = localize "str_action_ladderup";
-    _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderup_ca.paa";
+    _iconImage = "\A3\ui_f\data\igui\Cfg\actions\ladderup_ca.paa";
     //Ladder Up Action:
     _actionOffset = [_ladderBottomMemPoint] call _fnc_getMemPointOffset;
     _actionOffset = _actionOffset vectorAdd [0,0,1];
@@ -120,7 +120,7 @@ _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "ladders"
     (_memPointsActions select _memPointIndex) pushBack _action;
 
     _actionDisplayName = localize "str_action_ladderdown";
-    _iconImage = "\A3\ui_f\data\igui\cfg\actions\ladderdown_ca.paa";
+    _iconImage = "\A3\ui_f\data\igui\Cfg\actions\ladderdown_ca.paa";
     //Ladder Down Action:
     _actionOffset = [_ladderTopMemPoint] call _fnc_getMemPointOffset;
     _actionOffset = _actionOffset vectorAdd [0,0,0.25];

@@ -68,9 +68,9 @@ if (_activated) then {
 
             //--- All (including unofficial ones)
             case 3: {
-                _cfgPatches = configfile >> "cfgpatches";
-                for "_i" from 0 to (count _cfgPatches - 1) do {
-                    _class = _cfgPatches select _i;
+                _CfgPatches = configfile >> "Cfgpatches";
+                for "_i" from 0 to (count _CfgPatches - 1) do {
+                    _class = _CfgPatches select _i;
                     if (isclass _class) then {_addons set [count _addons,configname _class];};
                 };
                 _addons call bis_fnc_activateaddons;
@@ -311,7 +311,7 @@ if (_activated) then {
             if (count (actionkeys "curatorInterface") == 0) then {
                 [
                     format [
-                        localize "str_a3_cfgvehicles_modulecurator_f_keyNotAssigned",
+                        localize "str_a3_Cfgvehicles_modulecurator_f_keyNotAssigned",
                         (["IGUI","WARNING_RGB"] call bis_fnc_displaycolorget) call bis_fnc_colorRGBAtoHTML
                     ]
                 ] call bis_fnc_guiMessage;
