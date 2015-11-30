@@ -76,7 +76,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
 
             //--- Wait for interface to close
             (finddisplay 312) closedisplay 2;
-            waituntil {isnull curatorcamera};
+            waitUntil {isnull curatorcamera};
 
             //--- Switch
             player remotecontrol _unit;
@@ -106,7 +106,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             _vehicle = vehicle _unit;
             _vehicleRole = str assignedvehiclerole _unit;
             _rating = rating player;
-            waituntil {
+            waitUntil {
                 //--- Refresh when vehicle or vehicle role changes
                 if ((vehicle _unit != _vehicle || str assignedvehiclerole _unit != _vehicleRole) && {alive _unit}) then {
                     player remotecontrol _unit;
@@ -159,7 +159,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             opencuratorinterface;
             ppeffectdestroy _color;
 
-            waituntil {!isnull curatorcamera};
+            waitUntil {!isnull curatorcamera};
             player switchcamera cameraview;
             bis_fnc_moduleRemoteControl_unit = nil;
             ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black in",1];

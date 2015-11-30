@@ -146,13 +146,13 @@ if (_activated) then {
 
             //--- Update
             if (_attach) then {
-                waituntil {
+                waitUntil {
                     _soundSource setposatl getposatl _projectile;
                     sleep 1;
                     isnull _projectile || isnull _logic
                 };
             } else {
-                waituntil {
+                waitUntil {
                     _soundSource setposatl getposatl _projectile;
 
                     if (getposatl _logic distance _pos > 0 || direction _logic != _dir) then {
