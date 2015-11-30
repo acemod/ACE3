@@ -16,7 +16,7 @@
 private ["_unit","_return"];
 params ["_unit"];
 
-if (isnil QGVAR(unconsciousConditions)) then {
+if (isNil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };
 

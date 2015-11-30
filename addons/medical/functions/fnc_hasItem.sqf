@@ -18,7 +18,7 @@
 private ["_medic", "_patient", "_item", "_return", "_crew"];
 params ["_medic", "_patient", "_item"];
 
-if (isnil QGVAR(setting_allowSharedEquipment)) then {
+if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
 if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {

@@ -54,7 +54,7 @@ if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {fa
 _return = true;
 if (getText (_config >> "condition") != "") then {
     _condition = getText (_config >> "condition");
-    if (isnil _condition) then {
+    if (isNil _condition) then {
         _condition = compile _condition;
     } else {
         _condition = missionNamespace getVariable _condition;
@@ -85,7 +85,7 @@ _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC
     if (_x == "field") exitWith {_return = true;};
     if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
     if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-    if !(isnil _x) exitWith {
+    if !(isNil _x) exitWith {
         private "_val";
         _val = missionNamespace getVariable _x;
         if (typeName _val == "SCALAR") then {
@@ -162,7 +162,7 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
 } else {
     if (isText (_config >> "repairingTime")) exitWith {
         _repairTimeConfig = getText(_config >> "repairingTime");
-        if (isnil _repairTimeConfig) then {
+        if (isNil _repairTimeConfig) then {
             _repairTimeConfig = compile _repairTimeConfig;
         } else {
             _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;

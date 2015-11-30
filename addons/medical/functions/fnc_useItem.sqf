@@ -19,7 +19,7 @@
 private ["_return","_crew"];
 params ["_medic", "_patient", "_item"];
 
-if (isnil QGVAR(setting_allowSharedEquipment)) then {
+if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
 

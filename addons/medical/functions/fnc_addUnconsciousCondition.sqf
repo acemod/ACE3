@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-if (isnil QGVAR(unconsciousConditions)) then {
+if (isNil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };
 if (typeName _this == typeName []) then {

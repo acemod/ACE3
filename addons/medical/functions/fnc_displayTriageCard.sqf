@@ -33,7 +33,7 @@ if (_show) then {
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(triageCard);
-        if (isnil "_display") exitWith {
+        if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 

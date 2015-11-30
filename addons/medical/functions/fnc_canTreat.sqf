@@ -52,7 +52,7 @@ if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) ex
 _return = true;
 if (getText (_config >> "condition") != "") then {
     _condition = getText (_config >> "condition");
-    if (isnil _condition) then {
+    if (isNil _condition) then {
         _condition = compile _condition;
     } else {
         _condition = missionNamespace getvariable _condition;
@@ -83,7 +83,7 @@ _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isI
     if (_x == "field") exitWith {_return = true;};
     if (_x == "MedicalFacility" && _medFacility) exitWith {_return = true;};
     if (_x == "MedicalVehicle" && _medVeh) exitWith {_return = true;};
-    if !(isnil _x) exitWith {
+    if !(isNil _x) exitWith {
         private "_val";
         _val = missionNamespace getvariable _x;
         if (typeName _val == "SCALAR") then {

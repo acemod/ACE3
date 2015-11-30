@@ -66,7 +66,7 @@ _createdLitter = [];
 
         if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
 
-            if (isnil _litterCondition) then {
+            if (isNil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
                 _litterCondition = missionNamespace getvariable _litterCondition;

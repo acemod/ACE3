@@ -47,7 +47,7 @@ if (_show) then {
 
         disableSerialization;
         _display = uiNamespace getvariable QGVAR(DisplayInformation);
-        if (isnil "_display") exitWith {
+        if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
@@ -77,7 +77,7 @@ if (_show) then {
         {
             private "_value";
             _value = _target getvariable _x;
-            if !(isnil "_value") then {
+            if !(isNil "_value") then {
                 _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
             };
         } foreach GVAR(IVBags);

@@ -319,7 +319,7 @@ if (_activated) then {
 
             //--- Show hint about pinging for players
             if (
-                isnil {profilenamespace getvariable "bis_fnc_curatorPinged_done"}
+                isNil {profilenamespace getvariable "bis_fnc_curatorPinged_done"}
                 &&
                 {isTutHintsEnabled}
                 &&

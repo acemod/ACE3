@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-_fnc_scriptNameParentTemp = if !(isnil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
+_fnc_scriptNameParentTemp = if !(isNil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
 private ['_fnc_scriptNameParent'];
 _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
@@ -128,7 +128,7 @@ if (_activated) then {
             if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
 
            // Added by ace_zeus for ace_frag compatibility
-            if (!isnil QEFUNC(frag,addPfhRound)) then {
+            if (!isNil QEFUNC(frag,addPfhRound)) then {
                 [objNull, _ammo, _projectile, true] call EFUNC(frag,addPfhRound);
             };
 

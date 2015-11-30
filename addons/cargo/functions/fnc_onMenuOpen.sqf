@@ -25,7 +25,7 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
     private ["_display","_loaded", "_ctrl", "_class", "_label"];
     disableSerialization;
     _display = uiNamespace getVariable QGVAR(menuDisplay);
-    if (isnil "_display") exitWith {
+    if (isNil "_display") exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 

@@ -18,7 +18,7 @@ private ["_requestID", "_info", "_callBack", "_caller", "_replyParams", "_reques
 
 _info = _unit getvariable _id;
 
-if (!isnil "_info") then {
+if (!isNil "_info") then {
     _caller = _info select 0;
     _target = _info select 1;
     _requestID = _info select 2;
@@ -31,11 +31,11 @@ if (!isnil "_info") then {
 
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = nil;
 
-if (!isnil QGVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT)) then {
+if (!isNil QGVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT)) then {
     _unit removeAction GVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT);
     GVAR(RECIEVE_REQUEST_ADD_ACTION_ACCEPT) = nil;
 };
-if (!isnil QGVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE)) then {
+if (!isNil QGVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE)) then {
     _unit removeAction GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE);
     GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = nil;
 };
