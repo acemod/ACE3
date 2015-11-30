@@ -177,7 +177,7 @@ switch (toLower _mode) do {
         };
 
         // Handle held keys (prevent repeat calling)
-        if (GVAR(heldKeys) param [_dik,false]) exitwith {};
+        if (GVAR(heldKeys) param [_dik,false]) exitWith {};
         // Exclude movement/adjustment keys so that speed can be adjusted on fly
         if !(_dik in [16,17,30,31,32,44,74,78]) then {
             GVAR(heldKeys) set [_dik,true];

@@ -23,7 +23,7 @@ private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
 _selectionN = GVAR(selectedBodyPart);
-if (_selectionN < 0 || {_selectionN > 5}) exitwith {};
+if (_selectionN < 0 || {_selectionN > 5}) exitWith {};
 
 _genericMessages = [];
 _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;
@@ -128,7 +128,7 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
             ] select _forEachIndex);
             _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
         };
-    } forEach (_target getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
+    } forEach (_target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
 };
 
 [_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);

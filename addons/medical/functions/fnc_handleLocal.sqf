@@ -17,17 +17,17 @@
 
 params ["_unit", "_local"];
 if (_local) then {
-    if (_unit getvariable[QGVAR(addedToUnitLoop),false]) then {
+    if (_unit getVariable[QGVAR(addedToUnitLoop),false]) then {
         [_unit, true] call FUNC(addToInjuredCollection);
     };
 
-    if ((_unit getvariable ["ACE_isUnconscious",false]) && {count (_unit getvariable [QGVAR(unconsciousArguments), []]) >= 6}) then {
+    if ((_unit getVariable ["ACE_isUnconscious",false]) && {count (_unit getVariable [QGVAR(unconsciousArguments), []]) >= 6}) then {
         private "_arguments";
-        _arguments = (_unit getvariable [QGVAR(unconsciousArguments), []]);
+        _arguments = (_unit getVariable [QGVAR(unconsciousArguments), []]);
         _arguments set [2, ACE_time];
 
         [DFUNC(unconsciousPFH), 0.1, _arguments ] call CBA_fnc_addPerFrameHandler;
 
-        _unit setvariable [QGVAR(unconsciousArguments), nil, true];
+        _unit setVariable [QGVAR(unconsciousArguments), nil, true];
     };
 };

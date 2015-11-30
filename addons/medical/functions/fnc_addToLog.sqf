@@ -19,7 +19,7 @@
 private ["_moment", "_logVarName", "_log","_newLog", "_logs"];
 params ["_unit", "_type", "_message", "_arguments"];
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     [_this, QFUNC(addToLog), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
@@ -29,24 +29,24 @@ _moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute];
 
 _logVarName = format[QGVAR(logFile_%1), _type];
 
-_log = _unit getvariable [_logVarName, []];
+_log = _unit getVariable [_logVarName, []];
 if (count _log >= 8) then {
     _newLog = [];
     {
         // ensure the first element will not be added
-        if (_foreachIndex > 0) then {
-            _newLog pushback _x;
+        if (_forEachIndex > 0) then {
+            _newLog pushBack _x;
         };
-    } foreach _log;
+    } forEach _log;
     _log = _newLog;
 };
-_log pushback [_message, _moment, _type, _arguments];
+_log pushBack [_message, _moment, _type, _arguments];
 
-_unit setvariable [_logVarName, _log, true];
+_unit setVariable [_logVarName, _log, true];
 ["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
 
-_logs = _unit getvariable [QGVAR(allLogs), []];
+_logs = _unit getVariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {
-    _logs pushback _logVarName;
-    _unit setvariable [QGVAR(allLogs), _logs, true];
+    _logs pushBack _logVarName;
+    _unit setVariable [QGVAR(allLogs), _logs, true];
 };

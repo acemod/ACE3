@@ -17,9 +17,9 @@
 private "_timeInCardiacArrest";
 params ["_unit"];
 
-if (_unit getvariable [QGVAR(inCardiacArrest),false]) exitwith {};
-_unit setvariable [QGVAR(inCardiacArrest), true,true];
-_unit setvariable [QGVAR(heartRate), 0];
+if (_unit getVariable [QGVAR(inCardiacArrest),false]) exitWith {};
+_unit setVariable [QGVAR(inCardiacArrest), true,true];
+_unit setVariable [QGVAR(heartRate), 0];
 
 ["Medical_onEnteredCardiacArrest", [_unit]] call EFUNC(common,localEvent);
 
@@ -31,14 +31,14 @@ _timeInCardiacArrest = 120 + round(random(600));
     params ["_args", "_idPFH"];
     _args params ["_unit", "_startTime", "_timeInCardiacArrest"];
 
-    _heartRate = _unit getvariable [QGVAR(heartRate), 80];
-    if (_heartRate > 0 || !alive _unit) exitwith {
+    _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+    if (_heartRate > 0 || !alive _unit) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
-        _unit setvariable [QGVAR(inCardiacArrest), nil,true];
+        _unit setVariable [QGVAR(inCardiacArrest), nil,true];
     };
-    if (ACE_time - _startTime >= _timeInCardiacArrest) exitwith {
+    if (ACE_time - _startTime >= _timeInCardiacArrest) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
-        _unit setvariable [QGVAR(inCardiacArrest), nil,true];
+        _unit setVariable [QGVAR(inCardiacArrest), nil,true];
         [_unit] call FUNC(setDead);
     };
 }, 1, [_unit, ACE_time, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;

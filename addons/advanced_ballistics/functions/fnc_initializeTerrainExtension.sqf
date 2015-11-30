@@ -40,7 +40,7 @@ GVAR(currentGrid) = 0;
         #ifdef DEBUG_MODE_FULL
             systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", ceil(ACE_time - _initStartTime)];
         #endif
-        [_idPFH] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     for "_i" from 1 to 50 do {

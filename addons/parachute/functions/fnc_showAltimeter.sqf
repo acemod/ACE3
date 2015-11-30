@@ -23,10 +23,10 @@ if (isNull (uiNamespace getVariable ["ACE_Altimeter", displayNull])) exitWith {}
 GVAR(AltimeterActive) = true;
 
 [{
-    if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler)};
+    if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(CBA_fnc_removePerFrameEventHandler)};
     disableSerialization;
     (_this select 0) params ["_display", "_unit", "_oldHeight", "_prevTime"];
-    if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler); call FUNC(hideAltimeter)};
+    if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(CBA_fnc_removePerFrameEventHandler); call FUNC(hideAltimeter)};
 
     private ["_height", "_hour", "_minute", "_descentRate","_HeightText", "_DecendRate", "_TimeText", "_curTime", "_timeDiff"];
 

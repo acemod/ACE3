@@ -24,4 +24,4 @@
 
 params ["_unit"];
 
-((_unit getvariable [QGVAR(bloodVolume), 100])/MODIFIER_CARDIAC_OUTPUT) + ((_unit getvariable [QGVAR(heartRate), 80])/80-1);
+((_unit getVariable [QGVAR(bloodVolume), 100])/MODIFIER_CARDIAC_OUTPUT) + ((_unit getVariable [QGVAR(heartRate), 80])/80-1);

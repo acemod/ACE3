@@ -23,7 +23,7 @@ private["_bestDist", "_bestIndex", "_wheelBone", "_wheelBoneNameResized", "_whee
 
 // get the vehicles wheel config
 private "_wheels";
-_wheels = configfile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
+_wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
 
 // exit with nothing if the vehicle has no wheels class
 if !(isClass _wheels) exitWith {TRACE_1("No Wheels",_wheels); [[],[]]};

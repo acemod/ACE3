@@ -29,14 +29,14 @@ TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
         _data = _allMapMarkersProperties select _index;
         _data params ["_name", "_color", "_pos", "_dir"];
 
-        _config = (configfile >> "CfgMarkers") >> _name;
+        _config = (configFile >> "CfgMarkers") >> _name;
         if (!isClass _config) then {
             WARNING("CfgMarker not found, changed to milDot");
             _config == (configFile >> "CfgMarkers" >> "MilDot");
         };
         _x setMarkerTypeLocal (configName _config);
 
-        _config = (configfile >> "CfgMarkerColors") >> _color;
+        _config = (configFile >> "CfgMarkerColors") >> _color;
         if (!isClass _config) then {
             WARNING("CfgMarkerColors not found, changed to Default");
             _config == (configFile >> "CfgMarkerColors" >> "Default");

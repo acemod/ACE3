@@ -39,7 +39,7 @@ private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localize
     _defaultValue = _x select 6;
 
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
-        _value = missionNamespace getvariable [_name, _defaultValue];
+        _value = missionNamespace getVariable [_name, _defaultValue];
         _formatedValue = switch (toLower _typeName) do {
             case ("scalar"): {
                 format['value = %1;', _value];

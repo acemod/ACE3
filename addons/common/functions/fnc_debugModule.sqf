@@ -14,5 +14,5 @@
 
 params ["_entity"];
 
-GVAR(LOGDISPLAY_LEVEL) = call compile (_entity getvariable ["logDisplayLevel","4"]);
-GVAR(LOGLEVEL) = call compile (_entity getvariable ["logLevel","4"]);
+GVAR(LOGDISPLAY_LEVEL) = call compile (_entity getVariable ["logDisplayLevel","4"]);
+GVAR(LOGLEVEL) = call compile (_entity getVariable ["logLevel","4"]);

@@ -13,12 +13,12 @@
 
 #include "script_component.hpp"
 
-if (!isServer) exitwith {};
+if (!isServer) exitWith {};
 
 params ["_object"];
 
-if (!(_object getvariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitwith {};
+if (!(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {};
 
 {
     _x addCuratorEditableObjects [[_object], true];
-}foreach allCurators;
+}forEach allCurators;
