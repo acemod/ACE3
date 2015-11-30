@@ -194,9 +194,17 @@ call FUNC(checkFiles);
 
     ACE_LOGINFO("Settings received from server.");
 
+    if (isServer) then { //read settings from paramsArray
+        [] call FUNC(readSettingsFromParamsArray);
+    };
     // Event so that ACE_Modules have their settings loaded:
     ["InitSettingsFromModules", []] call FUNC(localEvent);
 
+    if (isServer) then {
+        // Publish all settings data after all configs and modules are read
+        publicVariable QGVAR(settings);
+    };
+    
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);

@@ -21,33 +21,13 @@
             <Portuguese>Distância max. entre os jogadores para mostrar o indicador de gesto no mapa [padrão: 7 metros]</Portuguese>
             <Russian>Макс. дистанция между игроками для отображения жестов на карте [по-умолчанию: 7 метров]</Russian>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_displayName">
-            <English>Lead Default Alpha</English>
-            <Portuguese>Transparência padrão do líder</Portuguese>
-            <Russian>Лид. прозрачность по-умолчанию</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadAlpha_description">
-            <English>Fallback Alpha value for group leaders.</English>
-            <Portuguese>Valor de transparência alternativo para líderes de grupo</Portuguese>
-            <Russian>Значение прозрачности для лидеров групп.</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_displayName">
-            <English>Default Alpha</English>
-            <Portuguese>Transparência padrão</Portuguese>
-            <Russian>Прозрачность по-умолчанию</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultAlpha_descriptions">
-            <English>Fallback Alpha value.</English>
-            <Portuguese>Valor alternativo de transparência</Portuguese>
-            <Russian>Значение прозрачности по-умолчанию.</Russian>
-        </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
             <Portuguese>Cor padrão para o líder</Portuguese>
             <Russian>Лид. цвет по-умолчанию</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
-            <English>Fallback Color value for group leaders.</English>
+            <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
             <Portuguese>Valor de cor alternativa para líderes de grupo</Portuguese>
             <Russian>Значение цвета для лидеров групп.</Russian>
         </Key>
@@ -57,29 +37,9 @@
             <Russian>Цвет по-умолчанию</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_description">
-            <English>Fallback Color value.</English>
+            <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
             <Portuguese>Valor alternativo de cor</Portuguese>
             <Russian>Значение цвета.</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_displayName">
-            <English>Lead Alpha</English>
-            <Portuguese>Transparência do líder</Portuguese>
-            <Russian>Лид. прозрачность</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadAlpha_description">
-            <English>Alpha value for group leaders of groups synced with this module.</English>
-            <Portuguese>Valor de transparência para líderes de grupo sincronizados com este módulo.</Portuguese>
-            <Russian>Значение прозрачности для лидеров групп, которые [группы] синхронизированы с этим модулем.</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_displayName">
-            <English>Alpha</English>
-            <Portuguese>Transparência</Portuguese>
-            <Russian>Прозрачность</Russian>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_alpha_description">
-            <English>Alpha value for group members of groups synced with this module.</English>
-            <Portuguese>Valor de transparência para membros de grupo sincronizados com este módulo.</Portuguese>
-            <Russian>Значение прозрачности для членов групп, которые [группы] синхронизированы с этим модулем.</Russian>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
             <English>Lead Color</English>

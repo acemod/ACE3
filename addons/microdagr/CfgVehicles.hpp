@@ -38,6 +38,7 @@ class CfgVehicles {
         function = QFUNC(moduleMapFill);
         scope = 2;
         isGlobal = 0;
+        isSingular = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_microDAGR_ca.paa));
         functionPriority = 0;
         class Arguments {

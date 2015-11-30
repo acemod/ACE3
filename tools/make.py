@@ -489,7 +489,7 @@ def check_for_obsolete_pbos(addonspath, file):
 
 
 def backup_config(module):
-    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+    #backup original $PBOPREFIX$
     global work_drive
     global prefix
 
@@ -503,52 +503,11 @@ def backup_config(module):
     except:
         print_error("Error creating backup of $PBOPREFIX$ for module {}.".format(module))
 
-    try:
-        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-        os.chdir(work_drive)
-    except:
-        print_error("Error creating backup of config.cpp for module {}.".format(module))
-
     return True
-
-def convert_config(module):
-    try:
-        global work_drive
-        global prefix
-        global arma3tools_path
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-    except Exception as e:
-        print_error("Exception from convert_config=>CfgConvert: {}".format(e))
-        return False
-
-    return True
-
 
 def addon_restore(modulePath):
-    #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-    #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
+    #restore original $PBOPREFIX$
     try:
-        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
-            os.remove(os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.backup")):
-            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.bin")):
-            os.remove(os.path.join(modulePath, "config.bin"))
-        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
-            os.remove(os.path.join(modulePath, "texHeaders.bin"))
         if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
             if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
                 os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
@@ -1215,9 +1174,6 @@ See the make.cfg file for additional build options.
                 try:
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
-
-                    if (not os.path.isfile(nobinFilePath)):
-                        convert_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 

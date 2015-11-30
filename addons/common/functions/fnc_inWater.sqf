@@ -1,29 +1,19 @@
 /*
  * Author: Glowbal
- * Check if unit is underwater
+ * Check if unit's head is underwater
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * if unit is in the water (BOOLEAN)
+ * If unit's head is underwater <BOOL>
  *
  * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+ACE_DEPRECATED("ace_common_fnc_inWater","3.5.0","ace_common_fnc_isUnderwater");
 
-private "_return";
-_return = false;
-
-if (surfaceIsWater getPosASL _unit) then {
-    private "_pos";
-    _pos = _unit modelToWorldVisual (_unit selectionPosition "head");
-
-    if (_pos select 2 < 0) then {
-        _return = true;
-    };
-};
-
-_return
+_this call FUNC(isUnderwater)
