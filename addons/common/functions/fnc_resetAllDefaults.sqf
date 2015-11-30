@@ -39,6 +39,6 @@ if (isPlayer _unit) then {
         _unit setVariable [_x select 0, nil, _x select 3];
     };
     false
-} count ([_unit] call FUNC(getAllDefinedsetVariables));
+} count ([_unit] call FUNC(getAllDefinedSetVariables));
 
 _unit setVariable ["ACE_forceWalkStatusNumber", 0, true];
