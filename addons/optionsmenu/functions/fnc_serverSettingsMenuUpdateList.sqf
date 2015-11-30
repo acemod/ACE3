@@ -81,7 +81,7 @@ switch (GVAR(optionMenu_openTab)) do {
                     (_x select 0);
                 };
                 _settingsValue = _x select 9;
-                if (typeName _settingsValue != "STRING") then {
+                if (!(_settingsValue isEqualType "")) then {
                     _settingsValue = format["%1", _settingsValue];
                 };
                 _added = _ctrlList lnbAddRow [_settingName, _settingsValue];

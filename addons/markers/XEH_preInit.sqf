@@ -42,7 +42,7 @@ if (isNil QGVAR(MarkerColorsCache)) then {
             _name = getText (_marker >> "name");
             _rgba = getArray (_marker >> "color");
             {
-                if (typeName _x != "SCALAR") then {
+                if (!( _x isEqualType 0)) then {
                     _rgba set [_forEachIndex, call compile _x];
                 };
             } forEach _rgba;

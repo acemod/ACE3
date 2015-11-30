@@ -33,7 +33,7 @@ _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
-if (typeName _item == "OBJECT") then {
+if (_item isEqualType objNull) then {
     detach _item;
     _item attachTo [_vehicle,[0,0,-100]];
     ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);

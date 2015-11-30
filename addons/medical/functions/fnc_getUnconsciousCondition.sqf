@@ -16,15 +16,15 @@
 private ["_unit","_return"];
 params ["_unit"];
 
-if (isNil QGVAR(unconsciousConditions)) then {
+if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };
 
 _return = false;
 {
-    if (typeName _x == typeName {} && {([_unit] call _x)}) exitWith {
+    if ((_x isEqualType {}) && {([_unit] call _x)}) exitwith {
        _return = true;
     };
-} forEach GVAR(unconsciousConditions);
+} foreach GVAR(unconsciousConditions);
 
 _return

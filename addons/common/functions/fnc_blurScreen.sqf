@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
 
 params ["_id", ["_show", false]];
 
-if (typeName _show == "SCALAR") then {
+if (_show isEqualType 0) then {
     _show = _show == 1;
 };
 

@@ -6,43 +6,39 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpoint <STRING>
- * 3: Repair Action Classname <STRING>
+ * 3: Repair Action Classname (Not used) <STRING>
+ * 4: (Not used) <ARRAY>
+ * 5: (Not used) <ARRAY>
+ * 6: Required Repair Objects <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [unit, vehicle, "hitpoint", "classname"] call ace_repair_fnc_doRepairTrack
+ * [unit, vehicle, "hitpoint", "RepairTrack", [], [], [aTrack]] call ace_repair_fnc_doRepairTrack
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_vehicle", "_hitPoint", "_classname"];
-TRACE_4("params",_unit,_vehicle,_hitPoint,_classname);
-// TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
+params ["_unit", "_vehicle", "_hitPoint", "", "", "", "_claimedObjects"];
+TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
-private ["_hitPointDamage", "_newDamage", "_wheel"];
+_claimedObjects params [["_track", objNull]];
+if ((isNull _track) || {!([_unit, _track, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
+    ACE_LOGERROR_1("Bad Track", _claimedObjects);
+};
 
-_wheel = objNull;
-
-{
-    if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
-        _wheel = _x;
-    };
-} forEach nearestObjects [_unit, ["ACE_Track"], 5];
-if (isNull _wheel) exitWith {};
+// can't use a destroyed track
+if ((damage _track) >= 1) exitWith {};
 
 // get current hitpoint damage
+private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
+private _damageRepaired = (1 - (damage _track)) / 4; // require 4 tracks to fully replace one side
 
-_hitPointDamage = _vehicle getHitPointDamage _hitPoint;
-_newDamage = (1 - (damage _wheel)) / 4; // require 4 tracks to fully replace one side
-
-// can't replace a destroyed wheel
-if ((damage _wheel) >= 1) exitWith {};
 // don't die by spawning / moving the wheel
-_hitPointDamage = (_hitPointDamage - _newDamage) min 0;
-deleteVehicle _wheel;
+_hitPointDamage = (_hitPointDamage - _damageRepaired) min 0;
+deleteVehicle _track;
 
 // raise event to set the new hitpoint damage
 ["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _hitPointDamage]] call EFUNC(common,targetEvent);

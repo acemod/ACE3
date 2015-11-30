@@ -6,7 +6,6 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpoint <STRING>
- * 3: Wheel <OBJECT>/<BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,31 +17,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target", "_hitPoint", ["_wheel", false]];
-TRACE_4("params",_unit,_target,_hitPoint,_wheel);
-// TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
-//if !([_unit, _target, _hitpoint, "ReplaceWheel"] call FUNC(canRepair)) exitWith {false};
+params ["_unit", "_target", "_hitPoint"];
+TRACE_3("params",_unit,_target,_hitPoint);
 
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-//if !([_unit, GVAR(engineerSetting_Wheel)] call FUNC(isEngineer)) exitWith {false};
+//check for GVAR(engineerSetting_Wheel) is handeled by requiredEngineer config
+//check for a near wheel object is handled by claimObjects[] config
 
-// check for a near wheel
-if (typeName _wheel == "OBJECT") then {
-    // not near interpret as objNull
-    if !(_wheel in nearestObjects [_unit, ["ACE_Wheel"], 5]) then {
-        _wheel = objNull;
-    };
-} else {
-    _wheel = objNull;
-
-    {
-        if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
-            _wheel = _x;
-        };
-    } forEach nearestObjects [_unit, ["ACE_Wheel"], 5];
-};
-
-if (isNull _wheel) exitWith {false};
-
-alive _target && {_target getHitPointDamage _hitPoint >= 1}
+(_target getHitPointDamage _hitPoint >= 1)

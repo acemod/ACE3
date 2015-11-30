@@ -17,7 +17,7 @@ params ["_target"];
 private ["_objectType","_actionsVarName","_isMan"];
 _objectType = _target;
 _isMan = false;
-if (typeName _target == "OBJECT") then {
+if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
     _isMan = _target isKindOf "CAManBase";
 };

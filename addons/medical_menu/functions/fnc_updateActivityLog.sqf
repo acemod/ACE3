@@ -31,8 +31,8 @@ lbClear _logCtrl;
     };
 
     {
-        if (typeName _x == "STRING" && {isLocalized _x}) then {
-            _arguments set [_forEachIndex, localize _x];
+        if (_x isEqualType "" && {isLocalized _x}) then {
+            _arguments set [_foreachIndex, localize _x];
         };
     } forEach _arguments;
 

@@ -38,7 +38,12 @@ switch (GVAR(optionMenu_openTab)) do {
                 _settingsText = if ((_x select 1) == "BOOL") then {
                     [(localize  ELSTRING(common,No)), (localize ELSTRING(common,Yes))] select _settingsValue;
                 } else {
-                    (_x select 5) select _settingsValue;
+                    private _values = _x select 5;
+                    if !((!isNil "_values") && {_values isEqualType []} && {_settingsValue >= 0} && {_settingsValue < (count _values)}) exitWith {
+                        ACE_LOGERROR_3("Setting (%1) has bad values (%2) for index (%3)", _settingName, _values, _settingsValue);
+                        "ERROR"
+                    };
+                    _values select _settingsValue;
                 };
                 _added = _ctrlList lnbAddRow [_settingName, _settingsText];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];

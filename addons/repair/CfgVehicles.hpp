@@ -355,10 +355,24 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
+    class Heli_Transport_02_base_F;
+    class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
+        GVAR(hitpointPositions[]) = {{"HitVRotor", {-1,-9.4,1.8}}, {"HitHRotor", {0,1.8,1.3}}};
+    };
+
+    class Helicopter_Base_F;
+    class Heli_light_03_base_F: Helicopter_Base_F {
+        GVAR(hitpointPositions[]) = {{"HitVRotor", {-0.5,-5.55,1.2}}, {"HitHRotor", {0,1.8,1.5}}};
+    };
+
     class B_APC_Tracked_01_base_F;
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
+    };
+
+    class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
+        GVAR(hitpointPositions[]) = {{"HitTurret", {0,-2,0}}};
     };
 
     class Car_F;
@@ -403,5 +417,8 @@ class CfgVehicles {
     class Quadbike_01_base_F;
     class B_Quadbike_01_F: Quadbike_01_base_F {
         GVAR(hitpointPositions[]) = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
+    };
+    class Hatchback_01_base_F: Car_F {
+        GVAR(hitpointPositions[]) = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
     };
 };

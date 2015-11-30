@@ -24,17 +24,17 @@
 private ["_config", "_litter", "_createLitter", "_position", "_createdLitter"];
 params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_previousDamage"];
 
-if !(GVAR(allowLitterCreation)) exitWith {};
-if (vehicle _caller != _caller || vehicle _target != _target) exitWith {};
+if !(GVAR(allowLitterCreation)) exitwith {};
+if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
 
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
-if !(isClass _config) exitWith {false};
+if !(isClass _config) exitwith {false};
 
 
-if !(isArray (_config >> "litter")) exitWith {};
+if !(isArray (_config >> "litter")) exitwith {};
 _litter = getArray (_config >> "litter");
 
 _createLitter = {
@@ -59,32 +59,32 @@ _createLitter = {
 
 _createdLitter = [];
 {
-    if (typeName _x == "ARRAY") then {
-        if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitWith {};
+    if (_x isEqualType []) then {
+        if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
 
         _x params ["_selection", "_litterCondition", "_litterOptions"];
 
         if (toLower _selection in [toLower _selectionName, "all"]) then { // in is case sensitve. We can be forgiving here, so lets use toLower.
 
-            if (isNil _litterCondition) then {
+            if (isnil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
-                _litterCondition = missionNamespace getVariable _litterCondition;
-                if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
+                _litterCondition = missionNamespace getvariable _litterCondition;
+                if (!(_litterCondition isEqualType {})) then {_litterCondition = {false}};
             };
-            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitWith {};
+            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitwith {};
 
-            if (typeName _litterOptions == "ARRAY") then {
+            if (_litterOptions isEqualType []) then {
                 // Loop through through the litter options and place the litter
                 {
-                    if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
+                    if (_x isEqualType [] && {(count _x > 0)}) then {
                         [_target, _x select (floor(random(count _x)))] call _createLitter;
                     };
-                    if (typeName _x == "STRING") then {
+                    if (_x isEqualType "") then {
                         [_target, _x] call _createLitter;
                     };
-                } forEach _litterOptions;
+                } foreach _litterOptions;
             };
         };
     };
-} forEach _litter;
+} foreach _litter;

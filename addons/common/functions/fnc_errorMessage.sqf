@@ -31,7 +31,7 @@ if (isNull (call BIS_fnc_displayMission)) exitWith {
 
 params ["_textHeader", "_textMessage", ["_onOK", {}], ["_onCancel", {}]];
 
-if (typeName _textMessage == "STRING") then {
+if (_textMessage isEqualType "") then {
     _textMessage = parseText _textMessage;
 };
 

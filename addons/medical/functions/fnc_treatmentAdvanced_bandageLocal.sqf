@@ -48,6 +48,7 @@ _exit = false;
 
         // Select the classname from the wound classname storage
         _className = GVAR(woundClassNames) select _classID;
+
         // Check if this wound type has attributes specified for the used bandage
         if (isClass (_config >> _className)) then {
             // Collect the effectiveness from the used bandage for this wound type
@@ -55,6 +56,8 @@ _exit = false;
             if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
                 _woundEffectivenss = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
+        } else {
+            ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
         };
 
         TRACE_2("Wound classes: ", _specificClass, _classID);

@@ -24,8 +24,8 @@ _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _newLoaded = [];
 _totalSpaceOccupied = 0;
 {
-    if ((typeName _x == "STRING") || {!isNull _x}) then {
-        _newLoaded pushBack _x;
+    if ((_x isEqualType "") || {!isNull _x}) then {
+        _newLoaded pushback _x;
         _totalSpaceOccupied = _totalSpaceOccupied + ([_x] call FUNC(getSizeItem));
     };
     true
