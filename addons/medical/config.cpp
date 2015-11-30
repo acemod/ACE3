@@ -17,7 +17,7 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgSounds.hpp"
+#include "CFgSounds.hpp"
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"

@@ -54,7 +54,7 @@ if (GVAR(disabledInFullAutoMode) && getNumber(configFile >> "CfgWeapons" >> _wea
 
 if (_abort || !(GVAR(extensionAvailable))) exitWith {
     if (missionNamespace getVariable [QEGVAR(windDeflection,enabled), false]) then {
-        EGVAR(windDeflection,trackedBullets) pushBack [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
+        EGVAR(windDeflection,trackedBullets) pushBack [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")];
     };
 };
 

@@ -12,9 +12,9 @@
  */
 #include "script_component.hpp"
 
-params ["_name", "_CfgClass"];
+params ["_name", "_cfgClass"];
 
 private "_classes";
-_classes = format ["configName inheritsFrom _x == '%1'", _name] configClasses (configFile >> _CfgClass);
+_classes = format ["configName inheritsFrom _x == '%1'", _name] configClasses (configFile >> _cfgClass);
 
 [_classes, {configName _this}] call FUNC(map) // return

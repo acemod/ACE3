@@ -19,12 +19,12 @@
 
 GVAR(mapGridData) = [];
 
-private ["_CfgGrid", "_offsetX", "_offsetY", "_zoomMax", "_formatX", "_formatY", "_stepX", "_stepY", "_zoom", "_letterGrid", "_heightOffset", "_startGrid", "_originGrid", "_realOffsetY"];
+private ["_cfgGrid", "_offsetX", "_offsetY", "_zoomMax", "_formatX", "_formatY", "_stepX", "_stepY", "_zoom", "_letterGrid", "_heightOffset", "_startGrid", "_originGrid", "_realOffsetY"];
 
 //--- Extract grid values from world config (Borrowed from BIS_fnc_gridToPos)
-_CfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
-_offsetX = getNumber (_CfgGrid >> "offsetX");
-_offsetY = getNumber (_CfgGrid >> "offsetY");
+_cfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
+_offsetX = getNumber (_cfgGrid >> "offsetX");
+_offsetY = getNumber (_cfgGrid >> "offsetY");
 _zoomMax = 1e99;
 _formatX = "";
 _formatY = "";
@@ -41,7 +41,7 @@ _stepY = 1e10;
         _stepY = getNumber (_x >> "stepY");
     };
     false
-} count configProperties [_CfgGrid, "isClass _x", false];
+} count configProperties [_cfgGrid, "isClass _x", false];
 
 _letterGrid = false;
 

@@ -128,7 +128,7 @@
     if (isMultiplayer) then {
         _pos set [1,_posY + 5 * _posH + 7 * BORDER];
         _pos set [3,_posH];
-        _descriptionChannel ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_a3_Cfgvehicles_modulerespawnposition_f_arguments_marker_0") + ":"];
+        _descriptionChannel ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0") + ":"];
         _descriptionChannel ctrlsetposition _pos;
         _descriptionChannel ctrlcommit 0;
 

@@ -10,7 +10,7 @@ class CfgPatches {
         authorUrl = "https://github.com/SilentSpike";
         VERSION_CONFIG;
     };
-    // Use additional CfgPatches to contextually remove modules from zeus
+    // Use additional cfgPatches to contextually remove modules from zeus
     class GVAR(captives): ADDON {
         units[] = {
             QGVAR(moduleCaptive),

@@ -19,7 +19,7 @@
 
 #include "script_component.hpp"
 
-private ["_removeAddons", "_numCfgs", "_Cfg", "_requiredAddon"];
+private ["_removeAddons", "_numCfgs", "_cfg", "_requiredAddon"];
 
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 
@@ -28,21 +28,21 @@ _removeAddons = [];
 
 _numCfgs = count (configFile >> "ACE_Curator");
 for "_n" from 0 to (_numCfgs - 1) do {
-    _Cfg = (configFile >> "ACE_Curator") select _n;
+    _cfg = (configFile >> "ACE_Curator") select _n;
 
-    if (isArray _Cfg) then {
-        _requiredAddon = getArray _Cfg;
+    if (isArray _cfg) then {
+        _requiredAddon = getArray _cfg;
         {
             if !(isClass (configFile >> "CfgPatches" >> _x)) exitWith {
-                _removeAddons pushBack (configName _Cfg);
+                _removeAddons pushBack (configName _cfg);
             };
         } forEach _requiredAddon;
     };
 
-    if (isText _Cfg) then {
-        _requiredAddon = getText _Cfg;
+    if (isText _cfg) then {
+        _requiredAddon = getText _cfg;
         if !(isClass (configFile >> "CfgPatches" >> _requiredAddon)) then {
-            _removeAddons pushBack (configName _Cfg);
+            _removeAddons pushBack (configName _cfg);
         };
     };
 };

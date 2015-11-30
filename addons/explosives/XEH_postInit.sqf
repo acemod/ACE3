@@ -43,7 +43,7 @@ GVAR(CurrentSpeedDial) = 0;
         GVAR(placeAction) = PLACE_CANCEL;
     };
 
-    //Show defuse actions on CfgAmmos (allMines):
+    //Show defuse actions on cfgAmmos (allMines):
     _this call FUNC(interactEH);
 
 }] call EFUNC(common,addEventHandler);
