@@ -12,9 +12,9 @@
             private _logicType = typeof _logic;
             _logic hideobject true;
 
-            if (_logic getvariable [QGVAR(initalized), false]) exitwith {};
+            if (_logic getvariable [QGVAR(initalized), false]) exitWith {};
             private _config = (configFile >> "CfgVehicles" >> _logicType);
-            if !(isClass _config) exitwith {};
+            if !(isClass _config) exitWith {};
 
             private _isGlobal = getNumber (_config >> "isGlobal") > 0;
             private _isDisposable = getNumber (_config >> "isDisposable") > 0;

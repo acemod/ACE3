@@ -22,9 +22,9 @@ _accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
 _return = false;
 
 if (_accessLevel >= 0) then {
-    if (_accessLevel == 0) exitwith { _return = true; };
-    if (_accessLevel == 1) exitwith { _return = (side _target == side _caller); };
-    if (_accessLevel == 2) exitwith { _return = (group _target == group _caller); };
+    if (_accessLevel == 0) exitWith { _return = true; };
+    if (_accessLevel == 1) exitWith { _return = (side _target == side _caller); };
+    if (_accessLevel == 2) exitWith { _return = (group _target == group _caller); };
 };
 
 _return;

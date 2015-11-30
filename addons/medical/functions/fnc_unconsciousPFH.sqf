@@ -25,7 +25,7 @@ _args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_has
 
 TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _originalPos, _startingTime, _minWaitingTime, _hasMovedOut, _parachuteCheck);
 
-if (!alive _unit) exitwith {
+if (!alive _unit) exitWith {
     if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
         TRACE_1("Removing fake weapon [on death]",_unit);
         _unit removeWeapon "ACE_FakePrimaryWeapon";
@@ -47,7 +47,7 @@ if (!alive _unit) exitwith {
 };
 
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
-if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
+if !(_unit getvariable ["ACE_isUnconscious",false]) exitWith {
     TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call FUNC(isBeingCarried), [_unit] call FUNC(isBeingDragged), _idPFH, _unit getvariable QGVAR(unconsciousArguments),animationState _unit);
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
@@ -128,7 +128,7 @@ if (_parachuteCheck) then {
     };
 };
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _args, _startingTime, _minWaitingTime, _idPFH, _unit getvariable QGVAR(unconsciousArguments));
     _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
@@ -136,7 +136,7 @@ if (!local _unit) exitwith {
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-if ((ACE_time - _startingTime) >= _minWaitingTime) exitwith {
+if ((ACE_time - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setvariable ["ACE_isUnconscious", false, true];

@@ -15,7 +15,7 @@
 
 private "_openWounds";
 params ["_unit"];
-if (!local _unit) exitwith {};
+if (!local _unit) exitWith {};
 
 _unit setvariable [QGVAR(pain), 0];
 if (GVAR(level) >= 2) then {

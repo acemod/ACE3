@@ -21,7 +21,7 @@ params ["_player", "_target", "_name"];
 
 private ["_actions", "_collectedActions", "_bodyPart"];
 
-if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitwith {[]};
+if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {[]};
 
 _actions = if (EGVAR(medical,level) == 2) then {
     GVAR(actionsAdvanced);

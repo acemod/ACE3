@@ -23,7 +23,7 @@ _part = [_selectionName] call FUNC(selectionNameToNumber);
 _tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
-if ((_tourniquets select _part) == 0) exitwith {
+if ((_tourniquets select _part) == 0) exitWith {
     _output = LSTRING(noTourniquetOnBodyPart);
     ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
 };

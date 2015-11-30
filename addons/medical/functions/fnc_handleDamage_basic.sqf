@@ -26,7 +26,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
     _x params ["_unit","_selectionName","_amountOfDamage","_sourceOfDamage","_typeOfProjectile","_typeOfDamage"];
     if !(isNull _sourceOfDamage && {_typeOfProjectile == ""} && {vehicle _unit == _unit} && {(_selectionName == "head" || isBurning _unit)}) then {
         _part = [_selectionName] call FUNC(selectionNameToNumber);
-        if (_part < 0) exitwith {};
+        if (_part < 0) exitWith {};
 
         private ["_newDamage", "_pain"];
         _newDamage = (_cache_damages select _foreachIndex);

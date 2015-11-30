@@ -21,7 +21,7 @@ params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persi
 
 if (isNil "_defaultGlobal") exitWith {};
 
-if (typeName _name != "STRING") exitwith {
+if (typeName _name != "STRING") exitWith {
     [format ["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
 };
 

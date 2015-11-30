@@ -16,15 +16,15 @@
 private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
 params ["_unit", ["_force", false]];
 
-if (!alive _unit) exitwith{true};
-if (!local _unit) exitwith {
+if (!alive _unit) exitWith{true};
+if (!local _unit) exitWith {
     [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
     false;
 };
 
 _reviveVal = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
-if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
-    if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
+if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitWith {
+    if (_unit getvariable [QGVAR(inReviveState), false]) exitWith {
         if (GVAR(amountOfReviveLives) > 0) then {
             _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
             if (_lifesLeft == 0) then {
@@ -45,14 +45,14 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         _args params ["_unit"];
         _startTime = _unit getvariable [QGVAR(reviveStartTime), 0];
 
-        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
+        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             _unit setvariable [QGVAR(inReviveState), nil, true];
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [_unit, true] call FUNC(setDead);
         };
 
-        if !(_unit getvariable [QGVAR(inReviveState), false]) exitwith {
+        if !(_unit getvariable [QGVAR(inReviveState), false]) exitWith {
             // revived without dieing, so in case we have lifes, remove one.
             if (GVAR(amountOfReviveLives) > 0) then {
                 _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];

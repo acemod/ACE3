@@ -23,7 +23,7 @@ private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
 _selectionN = GVAR(selectedBodyPart);
-if (_selectionN < 0 || {_selectionN > 5}) exitwith {};
+if (_selectionN < 0 || {_selectionN > 5}) exitWith {};
 
 _genericMessages = [];
 _partText = [ELSTRING(medical,Head), ELSTRING(medical,Torso), ELSTRING(medical,LeftArm) ,ELSTRING(medical,RightArm) ,ELSTRING(medical,LeftLeg), ELSTRING(medical,RightLeg)] select _selectionN;

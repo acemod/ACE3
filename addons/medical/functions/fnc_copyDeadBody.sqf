@@ -17,7 +17,7 @@
 private ["_newUnit", "_class", "_group", "_position", "_side", "_name"];
 params ["_oldBody", "_caller"];
 
-if (alive _oldBody) exitwith {_oldBody}; // we only want to do this for dead bodies
+if (alive _oldBody) exitWith {_oldBody}; // we only want to do this for dead bodies
 
 _name = _oldBody getvariable ["ACE_name", "unknown"];
 _class = typeof _oldBody;

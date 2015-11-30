@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-if !(GVAR(DisplayText)) exitwith {};
+if !(GVAR(DisplayText)) exitWith {};
 
 params ["_magazine", "_numberofGrenades"];
 

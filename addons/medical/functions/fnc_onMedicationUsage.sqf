@@ -25,7 +25,7 @@ _foundEntry = false;
 _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
 {
     _x params ["_variableX", "_allMedsFromClassname"];
-    if (_variableX== _variable) exitwith {
+    if (_variableX== _variable) exitWith {
         if !(_className in _allMedsFromClassname) then {
             _allMedsFromClassname pushback _className;
             _x set [1, _allMedsFromClassname];

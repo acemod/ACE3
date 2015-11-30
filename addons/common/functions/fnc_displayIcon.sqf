@@ -97,7 +97,7 @@ if (_show) then {
         _list pushBack [_iconId, _icon, _color, ACE_time];
     } else {
         {
-            if (_x select 0 == _iconId) exitwith {
+            if (_x select 0 == _iconId) exitWith {
                 _list set [_forEachIndex, [_iconId, _icon, _color, ACE_time]];
             };
         } forEach _list;

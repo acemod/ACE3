@@ -19,7 +19,7 @@ private ["_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
 params ["_target", "_treatmentClassname"];
 
 _bloodVolume = _target getvariable [QGVAR(bloodVolume), 100];
-if (_bloodVolume >= 100) exitwith {};
+if (_bloodVolume >= 100) exitWith {};
 
 // Find the proper attributes for the used IV
 _config = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "IV");

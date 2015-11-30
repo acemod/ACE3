@@ -57,7 +57,7 @@ _startingAmmoCounts = [];
     };
 } forEach (magazinesAmmoFull _player);
 
-if ((count _startingAmmoCounts) < 2) exitwith {ERROR("Not Enough Mags to Repack");};
+if ((count _startingAmmoCounts) < 2) exitWith {ERROR("Not Enough Mags to Repack");};
 
 _simEvents = [_fullMagazineCount, _startingAmmoCounts, _isBelt] call FUNC(simulateRepackEvents);
 _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);

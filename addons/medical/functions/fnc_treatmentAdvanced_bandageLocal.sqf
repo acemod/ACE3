@@ -20,11 +20,11 @@ params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {false};
+if (_part < 0) exitWith {false};
 
 // Get the open wounds for this unit
 _openWounds = _target getvariable [QGVAR(openWounds), []];
-if (count _openWounds == 0) exitwith {false}; // nothing to do here!
+if (count _openWounds == 0) exitWith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
 _config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
@@ -58,7 +58,7 @@ _exit = false;
         };
 
         TRACE_2("Wound classes: ", _specificClass, _classID);
-        if (_specificClass == _classID) exitwith {
+        if (_specificClass == _classID) exitWith {
             _effectivenessFound = _woundEffectivenss;
             _mostEffectiveSpot = _foreachIndex;
             _mostEffectiveInjury = _x;
@@ -72,10 +72,10 @@ _exit = false;
             _mostEffectiveInjury = _x;
         };
     };
-    if (_exit) exitwith {};
+    if (_exit) exitWith {};
 } foreach _openWounds;
 
-if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
+if (_effectivenessFound == -1) exitWith {}; // Seems everything is patched up on this body part already..
 
 
 // TODO refactor this part

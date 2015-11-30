@@ -29,7 +29,7 @@ private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevati
 
 __background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
 
-if (GVAR(noVectorData)) exitwith {};
+if (GVAR(noVectorData)) exitWith {};
 GVAR(LAZPOS) params ["_lazPosX", "_lazPosY", "_lazPosZ"];
 
 // Incase grids go neg due to 99-00 boundry

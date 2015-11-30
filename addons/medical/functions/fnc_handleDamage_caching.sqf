@@ -106,7 +106,7 @@ if (_selectionName != "") then {
     private ["_index","_otherDamage"];
     _index = _cache_projectiles find _projectile;
     // Check if the current projectile has already been handled once
-    if (_index >= 0 && {_projectile != "falling"}) exitwith {
+    if (_index >= 0 && {_projectile != "falling"}) exitWith {
         _cache_damages = _unit getVariable QGVAR(cachedDamages);
         // Find the previous damage this projectile has done
         _otherDamage = (_cache_damages select _index);

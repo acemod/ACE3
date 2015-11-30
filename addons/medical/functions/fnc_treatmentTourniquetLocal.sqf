@@ -30,12 +30,12 @@ _target setvariable [QGVAR(tourniquets), _tourniquets, true];
     params ["_args", "_idPFH"];
     _args params ["_target", "_applyingTo", "_part", "_time"];
 
-    if (!alive _target) exitwith {
+    if (!alive _target) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     _tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
-    if !((_tourniquets select _part) == _applyingTo) exitwith {
+    if !((_tourniquets select _part) == _applyingTo) exitWith {
         // Tourniquet has been removed
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };

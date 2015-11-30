@@ -25,9 +25,9 @@
 private ["_damageThreshold", "_damageBodyPart", "_chanceFatal"];
 params ["_unit", "_part", ["_withDamage", 0]];
 
-if (!alive _unit) exitwith {true};
-if (_part < 0 || _part > 5) exitwith {false};
-if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitwith { true };
+if (!alive _unit) exitWith {true};
+if (_part < 0 || _part > 5) exitWith {false};
+if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitWith { true };
 
 // Find the correct Damage threshold for unit.
 _damageThreshold = [1,1,1];
@@ -41,13 +41,13 @@ _damageThreshold params ["_thresholdHead", "_thresholdTorso",  "_thresholdLimbs"
 _damageBodyPart = ((_unit getvariable [QGVAR(bodyPartStatus),[0, 0, 0, 0, 0, 0]]) select _part) + _withDamage;
 
 // Check if damage to body part is higher as damage head
-if (_part == 0) exitwith {
+if (_part == 0) exitWith {
     _chanceFatal = CHANGE_FATAL_HEAD + ((INCREASE_CHANCE_HEAD * (_damageBodyPart - _thresholdHead)) * 10);
     (_damageBodyPart >= _thresholdHead && {(_chanceFatal >= random(1))});
 };
 
 // Check if damage to body part is higher as damage torso
-if (_part == 1) exitwith {
+if (_part == 1) exitWith {
     _chanceFatal = CHANGE_FATAL_TORSO + ((INCREASE_CHANCE_TORSO * (_damageBodyPart - _thresholdTorso)) * 10);
     (_damageBodyPart >= _thresholdTorso && {(_chanceFatal >= random(1))});
 };

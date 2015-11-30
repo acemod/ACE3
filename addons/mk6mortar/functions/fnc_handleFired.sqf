@@ -59,7 +59,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     PARAMS_2(_args,_pfID);
     EXPLODE_4_PVT(_args,_shell,_airFriction,_time,_relativeDensity);
 
-    if (isNull _shell || {!alive _shell}) exitwith {
+    if (isNull _shell || {!alive _shell}) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 

@@ -36,13 +36,13 @@ if ({local _x} count (objectcurators _logic) > 0) then {
     _logic hideobject false;
     _logic setpos position _logic;
 };
-if !(isserver) exitwith {};
+if !(isserver) exitWith {};
 
 if (_activated) then {
     _ammo = _logic getvariable ["type",gettext (configfile >> "CfgVehicles" >> typeof _logic >> "ammo")];
     if (_ammo != "") then {
         _CfgAmmo = configfile >> "CfgAmmo" >> _ammo;
-        //if !(isclass _CfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
+        //if !(isclass _CfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         _dirVar = _fnc_scriptname + typeof _logic;
         _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;

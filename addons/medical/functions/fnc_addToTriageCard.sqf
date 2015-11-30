@@ -17,7 +17,7 @@
 private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     [_this, QUOTE(DFUNC(addToTriageCard)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
@@ -25,7 +25,7 @@ _log = _unit getvariable [QGVAR(triageCard), []];
 _inList = false;
 _amount = 1;
 {
-    if ((_x select 0) == _newItem) exitwith {
+    if ((_x select 0) == _newItem) exitWith {
         private "_info";
         _info = _log select _foreachIndex;
         _info set [1,(_info select 1) + 1];

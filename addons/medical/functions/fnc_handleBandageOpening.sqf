@@ -56,7 +56,7 @@ _injuryType = _injury select 1;
 _exist = false;
 _bandagedInjury = [];
 {
-    if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitwith {
+    if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitWith {
         _exist = true;
         _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
@@ -83,7 +83,7 @@ if (random(1) <= _reopeningChance) then {
 
         //if (alive _target) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
-            if ((count _openWounds)-1 < _injuryIndex) exitwith {};
+            if ((count _openWounds)-1 < _injuryIndex) exitWith {};
             _selectedInjury = _openWounds select _injuryIndex;
             if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
                 _selectedInjury set [3, (_selectedInjury select 3) + _impact];
@@ -93,7 +93,7 @@ if (random(1) <= _reopeningChance) then {
                 _exist = false;
                 _injuryId = _injury select 1;
                 {
-                    if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitwith {
+                    if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitWith {
                         _exist = true;
                         _existingInjury = _x;
                         _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];

@@ -16,7 +16,7 @@ private "_fnc_parseConfigForDisplayNames";
 _fnc_parseConfigForDisplayNames = {
     params ["_optionEntry"];
 
-    if !(isClass _optionEntry) exitwith {false};
+    if !(isClass _optionEntry) exitWith {false};
 
     private "_values";
     _values = getArray (_optionEntry >> "values");

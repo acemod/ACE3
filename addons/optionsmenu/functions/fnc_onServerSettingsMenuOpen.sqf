@@ -18,7 +18,7 @@
 
 private ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_setting", "_menu", "_settingsMenu"];
 
-if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitwith {closeDialog 145246;};
+if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitWith {closeDialog 145246;};
 
 // Filter only user setable setting
 GVAR(serverSideOptions) = [];

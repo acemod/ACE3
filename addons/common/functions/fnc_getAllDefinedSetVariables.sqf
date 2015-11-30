@@ -20,7 +20,7 @@
 
 params ["_object", ["_category", ""]];
 
-if (isNil QGVAR(OBJECT_VARIABLES_STORAGE)) exitwith {[]};
+if (isNil QGVAR(OBJECT_VARIABLES_STORAGE)) exitWith {[]};
 
 private ["_return", "_val"];
 

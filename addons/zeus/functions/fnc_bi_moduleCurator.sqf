@@ -24,7 +24,7 @@ _activated = _this select 2;
 if (_activated) then {
 
     //--- Terminate when not created on the server
-    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitwith {
+    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitWith {
         [format ["%1 is trying to create curator logic ModuleCurator_F",profilename],"bis_fnc_error",false] call bis_fnc_mp;
         deletevehicle _logic;
     };
@@ -133,14 +133,14 @@ if (_activated) then {
                         waituntil {isplayer (missionnamespace getvariable [_ownerVar,objnull]) || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Assign
                 _player = objnull;
                 switch true do {
                     case (_ownerUID > 0): {
                         {
-                            if (getplayeruid _x == _ownerVar) exitwith {_player = _x;};
+                            if (getplayeruid _x == _ownerVar) exitWith {_player = _x;};
                         } foreach playableunits;
                     };
                     default {
@@ -150,7 +150,7 @@ if (_activated) then {
 
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
                 waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isnull _logic};
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Add radio channels
                 {
@@ -194,7 +194,7 @@ if (_activated) then {
                         waituntil {_player != missionnamespace getvariable [_ownerVar,objnull] || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
 
                 //--- Add radio channels
                 {
@@ -203,7 +203,7 @@ if (_activated) then {
 
                 //--- Unassign
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
-                if (isnull _logic) exitwith {};
+                if (isnull _logic) exitWith {};
             };
         };
 
