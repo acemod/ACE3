@@ -30,11 +30,11 @@ if (_vehicle isKindOf "ACE_friesBase") then {
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _brokenRope = [];
 {
-    if (_x select 1 == _rope) exitWith {
+    if ((_x select 1 == _rope) || {(_x select 2 == _rope)}) exitWith {
         _brokenRope = _x;
     };
 } forEach _deployedRopes;
-_brokenRope set [6, false];
+_brokenRope set [6, true];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
 _unit = {

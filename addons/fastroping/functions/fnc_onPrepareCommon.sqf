@@ -16,24 +16,20 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_fries"];
+private ["_fries", "_waitTime"];
+
+_waitTime = 2;
 
 _vehicle animateDoor ["door_R", 1];
 _vehicle animateDoor ["door_L", 1];
 
-/*_fries = _vehicle getVariable [QGVAR(FRIES), objNull];
+_fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {
     [{
         _this animate ["extendHookRight", 1];
         _this animate ["extendHookLeft", 1];
     }, _fries, 2] call EFUNC(common,waitAndExecute);
-};*/
+    _waitTime = 4;
+};
 
-[{
-    private ["_fries"];
-    _fries = _this getVariable [QGVAR(FRIES), objNull];
-    _fries animate ["extendHookRight", 1];
-    _fries animate ["extendHookLeft", 1];
-}, _vehicle, 2] call EFUNC(common,waitAndExecute);
-
-4
+_waitTime

@@ -18,13 +18,19 @@
 params ["_vehicle"];
 private ["_fries"];
 
-_vehicle animateDoor ["door_R", 0];
-_vehicle animateDoor ["door_L", 0];
-
 _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {
     _fries animate ["extendHookRight", 0];
     _fries animate ["extendHookLeft", 0];
-};
+    [{
+        _this animateDoor ["door_R", 0];
+        _this animateDoor ["door_L", 0];
+    }, _vehicle, 2] call EFUNC(common,waitAndExecute);
 
-0
+    4
+} else {
+    _vehicle animateDoor ["door_R", 0];
+    _vehicle animateDoor ["door_L", 0];
+
+    2
+};

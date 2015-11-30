@@ -17,28 +17,22 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_config", "_waitTime"];
+private ["_config", "_ropeOrigins", "_ropeOrigin", "_deployedRopes", "_hookAttachment", "_origin", "_dummy", "_anchor", "_hook", "_ropeTop", "_ropeBottom"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_waitTime = 0;
-if (isText (_config >> QGVAR(onDeploy))) then {
-    _waitTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onDeploy))));
-};
 
-[{
-    params ["_vehicle", "_config"];
-    private ["_ropeOrigins", "_deployedRopes", "_hookAttachment", "_origin", "_dummy", "_anchor", "_hook", "_ropeTop", "_ropeBottom"];
-
-    _ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
-    _deployedRopes = [];
-    _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
-    {
+_ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
+_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+_hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
+{
+    _ropeOrigin = _x;
+    if ({_x select 0 == _ropeOrigin} count _deployedRopes == 0) then {
         _hook = QGVAR(helper) createVehicle [0, 0, 0];
         _hook allowDamage false;
-        if (typeName _x == "ARRAY") then {
-            _hook attachTo [_hookAttachment, _x];
+        if (typeName _ropeOrigin == "ARRAY") then {
+            _hook attachTo [_hookAttachment, _ropeOrigin];
         } else {
-            _hook attachTo [_hookAttachment, [0, 0, 0], _x];
+            _hook attachTo [_hookAttachment, [0, 0, 0], _ropeOrigin];
         };
 
         _origin = getPosASL _hook;
@@ -58,9 +52,11 @@ if (isText (_config >> QGVAR(onDeploy))) then {
         _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
 
         //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, anchor helper object, occupied
-        _deployedRopes pushBack [_x, _ropeTop, _ropeBottom, _dummy, _anchor, _hook, false];
-        true
-    } count _ropeOrigins;
+        _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _anchor, _hook, false];
+    };
 
-    _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
-}, [_vehicle, _config], _waitTime] call EFUNC(common,waitAndExecute);
+    false
+} count _ropeOrigins;
+
+_vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
+_vehicle setVariable [QGVAR(deploymentStage), 3, true];

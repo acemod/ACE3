@@ -9,5 +9,21 @@
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
             <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
+            <English>Prepare fast roping system</English>
+            <German>Bereite Fast Roping System vor</German>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
+            <English>Deploy ropes</English>
+            <German>Seile auswerfen</German>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
+            <English>Fast rope</English>
+            <German>Abseilen</German>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
+            <English>Cut ropes</English>
+            <German>Seile abwerfen</German>
+        </Key>
     </Package>
 </Project>
