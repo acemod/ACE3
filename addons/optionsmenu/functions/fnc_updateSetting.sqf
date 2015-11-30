@@ -85,7 +85,7 @@ switch (_type) do {
 if (_changed) then {
   if (GVAR(serverConfigGeneration) > 0) then {
     if !(isMultiplayer) then {
-      missionNamespace setvariable [_name, _newValue];
+      missionNamespace setVariable [_name, _newValue];
     };
   } else {
     profileNamespace setVariable [_name, _newValue];

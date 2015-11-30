@@ -33,7 +33,7 @@ params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", 
 if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
 
 if !(_set) exitWith {
-    _unit setvariable ["ACE_isUnconscious", false, true];
+    _unit setVariable ["ACE_isUnconscious", false, true];
 };
 
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
@@ -42,7 +42,7 @@ if (!local _unit) exitWith {
     [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-_unit setvariable ["ACE_isUnconscious", true, true];
+_unit setVariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
 if (_unit == ACE_player) then {

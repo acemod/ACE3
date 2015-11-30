@@ -32,7 +32,7 @@ if (_part == 0 || _part == 1) exitWith {
     false;
 };
 
-_tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+_tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 if ((_tourniquets select _part) > 0) exitWith {
    _output = "There is already a tourniquet on this body part!"; // TODO localization
    ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);

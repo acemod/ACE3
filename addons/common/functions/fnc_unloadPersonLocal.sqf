@@ -95,9 +95,9 @@ _unit action ["Eject", vehicle _unit];
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
+_loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
 _loaded deleteAt (_loaded find _unit);
 
-_vehicle setvariable [QGVAR(loaded_persons), _loaded, true];
+_vehicle setVariable [QGVAR(loaded_persons), _loaded, true];
 
 true

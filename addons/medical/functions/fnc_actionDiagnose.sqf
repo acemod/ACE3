@@ -25,8 +25,8 @@ if (alive _target) then {
 } else {
     _genericMessages pushBack LSTRING(diagnoseDead);
 };
-if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
-	if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
+if (_target getVariable[QGVAR(hasLostBlood), 0] > 0) then {
+	if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
 		_genericMessages pushBack LSTRING(lostBloodALot);
 	} else {
 		_genericMessages pushBack LSTRING(lostBlood);
@@ -36,7 +36,7 @@ if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
 };
 
 if (alive _target) then {
-    if (_target getvariable[QGVAR(hasPain), false]) then {
+    if (_target getVariable[QGVAR(hasPain), false]) then {
         _genericMessages pushBack LSTRING(inPain);
     } else {
         _genericMessages pushBack LSTRING(noPain);

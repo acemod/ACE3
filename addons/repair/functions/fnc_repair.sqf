@@ -131,7 +131,7 @@ if (isNil _callbackProgress) then {
 
 // Player Animation
 _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
-_caller setvariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
+_caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {
@@ -149,9 +149,9 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     };
 
     if (stance _caller == "STAND") then {
-        _caller setvariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+        _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
     } else {
-        _caller setvariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+        _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
     };
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };

@@ -22,7 +22,7 @@ private ["_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds
 params ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_viscosityChange", "_painReduce"];
 
 _foundEntry = false;
-_allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
+_allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
 {
     _x params ["_variableX", "_allMedsFromClassname"];
     if (_variableX== _variable) exitWith {
@@ -30,7 +30,7 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
             _allMedsFromClassname pushBack _className;
             _x set [1, _allMedsFromClassname];
             _allUsedMedication set [_forEachIndex, _x];
-            _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
+            _target setVariable [QGVAR(allUsedMedication), _allUsedMedication];
         };
         _foundEntry = true;
     };
@@ -38,11 +38,11 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
 
 if (!_foundEntry) then {
     _allUsedMedication pushBack [_variable, [_className]];
-    _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
+    _target setVariable [QGVAR(allUsedMedication), _allUsedMedication];
 };
 
 
-_usedMeds = _target getvariable [_variable, 0];
+_usedMeds = _target getVariable [_variable, 0];
 if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1 && GVAR(enableOverdosing)) then {
     [_target] call FUNC(setDead);
 };
@@ -68,7 +68,7 @@ if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
     if (isNil _onOverDose) then {
         _onOverDose = compile _onOverDose;
     } else {
-        _onOverDose = missionNamespace getvariable _onOverDose;
+        _onOverDose = missionNamespace getVariable _onOverDose;
     };
     [_target, _className] call _onOverDose;
 };
@@ -80,15 +80,15 @@ _viscosityAdjustment = _viscosityChange / _timeInSystem;
     params ["_args", "_idPFH"];
     _args params ["_target", "_timeInSystem", "_variable", "_amountDecreased","_decreaseAmount", "_viscosityAdjustment", "_painReduce"];
     private "_usedMeds";
-    _usedMeds = _target getvariable [_variable, 0];
+    _usedMeds = _target getVariable [_variable, 0];
     _usedMeds = _usedMeds - _decreaseAmount;
-    _target setvariable [_variable, _usedMeds];
+    _target setVariable [_variable, _usedMeds];
 
     _amountDecreased = _amountDecreased + _decreaseAmount;
 
     // Restoring the viscosity while the medication is leaving the system
-    _target setvariable [QGVAR(peripheralResistance), ((_target getvariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment) max 0];
-    _target setvariable [QGVAR(painSuppress), ((_target getvariable [QGVAR(painSuppress), 0]) - _painReduce) max 0];
+    _target setVariable [QGVAR(peripheralResistance), ((_target getVariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment) max 0];
+    _target setVariable [QGVAR(painSuppress), ((_target getVariable [QGVAR(painSuppress), 0]) - _painReduce) max 0];
 
     if (_amountDecreased >= 1 || (_usedMeds <= 0) || !alive _target) then {
         [_idPFH] call CBA_fnc_removePerFrameHandler;

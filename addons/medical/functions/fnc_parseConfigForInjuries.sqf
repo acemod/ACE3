@@ -116,7 +116,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (isArray(_damageTypesConfig >> _x >> "thresholds")) then { _typeThresholds = getArray(_damageTypesConfig >> _x >> "thresholds");};
         if (isNumber(_damageTypesConfig >> _x >> "selectionSpecific")) then { _selectionSpecificType = getNumber(_damageTypesConfig >> _x >> "selectionSpecific");};
     };
-    missionNamespace setvariable [_varName, [_typeThresholds, _selectionSpecificType > 0, _woundTypes]];
+    missionNamespace setVariable [_varName, [_typeThresholds, _selectionSpecificType > 0, _woundTypes]];
 
     private ["_minDamageThresholds", "_amountThresholds"];
     // extension loading

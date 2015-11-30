@@ -65,7 +65,7 @@ if (_name isEqualTo "triage") exitWith {
 
     ctrlEnable [212, true];
     private ["_log", "_triageCardTexts", "_message"];
-    _log = GVAR(INTERACTION_TARGET) getvariable [QEGVAR(medical,triageCard), []];
+    _log = GVAR(INTERACTION_TARGET) getVariable [QEGVAR(medical,triageCard), []];
     _triageCardTexts = [];
     {
         _x params ["_item", "_amount", "_time"];

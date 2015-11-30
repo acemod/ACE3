@@ -12,7 +12,7 @@
             private _logicType = typeOf _logic;
             _logic hideobject true;
 
-            if (_logic getvariable [QGVAR(initalized), false]) exitWith {};
+            if (_logic getVariable [QGVAR(initalized), false]) exitWith {};
             private _config = (configFile >> "CfgVehicles" >> _logicType);
             if !(isClass _config) exitWith {};
 
@@ -24,7 +24,7 @@
             if (isNil _function) then {
                 _function = compile _function;
             } else {
-                _function = missionNamespace getvariable _function;
+                _function = missionNamespace getVariable _function;
             };
             if (_isSingular && {_logicType in _uniqueModulesHandled}) then { //ToDo: should this be an exit?
                 ACE_LOGWARNING_1("Module [%1] - More than 1 singular module placed", _logicType);
@@ -36,7 +36,7 @@
             };
 
             if !(_isPersistent) then {
-                _logic setvariable [QGVAR(initalized), true];
+                _logic setVariable [QGVAR(initalized), true];
             };
 
             if (_isDisposable) then {

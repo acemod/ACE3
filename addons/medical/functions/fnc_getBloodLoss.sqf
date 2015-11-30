@@ -22,8 +22,8 @@ _totalBloodLoss = 0;
 
 // Advanced medical bloodloss handling
 if (GVAR(level) >= 2) then {
-    _tourniquets = _unit getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
-    _openWounds = _unit getvariable [QGVAR(openWounds), []];
+    _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+    _openWounds = _unit getVariable [QGVAR(openWounds), []];
     //_cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 
     {
@@ -35,7 +35,7 @@ if (GVAR(level) >= 2) then {
         };
     } forEach _openWounds;
 
-    _internalWounds = _unit getvariable [QGVAR(internalWounds), []];
+    _internalWounds = _unit getVariable [QGVAR(internalWounds), []];
     {
         _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));
     } forEach _internalWounds;
@@ -43,7 +43,7 @@ if (GVAR(level) >= 2) then {
     // cap the blood loss to be no greater as the current cardiac output
     //(_totalBloodLoss min _cardiacOutput);
 } else {
-    { _totalBloodLoss = _totalBloodLoss + _x } forEach (_unit getvariable [QGVAR(bodyPartStatus), []]);
+    { _totalBloodLoss = _totalBloodLoss + _x } forEach (_unit getVariable [QGVAR(bodyPartStatus), []]);
     _totalBloodLoss = (_totalBloodLoss / 6) * BLOODLOSSRATE_BASIC;
 };
 _totalBloodLoss * ((_unit getVariable [QGVAR(bleedingCoefficient), GVAR(bleedingCoefficient)]) max 0);

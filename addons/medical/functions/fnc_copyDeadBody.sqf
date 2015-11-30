@@ -19,7 +19,7 @@ params ["_oldBody", "_caller"];
 
 if (alive _oldBody) exitWith {_oldBody}; // we only want to do this for dead bodies
 
-_name = _oldBody getvariable ["ACE_name", "unknown"];
+_name = _oldBody getVariable ["ACE_name", "unknown"];
 _class = typeOf _oldBody;
 _side = side _caller;
 _group = createGroup _side;
@@ -71,12 +71,12 @@ if (isMultiplayer) then {
     hideObject _oldBody;
 };
 
-_newUnit setvariable [QGVAR(copyOfUnit), _oldBody, true];
-_oldBody setvariable [QGVAR(hasCopy), _newUnit, true];
-_newUnit setvariable ["ACE_isDead", true, true];
-_newUnit setvariable ["ACE_isUnconscious", true, true];
-_newUnit setvariable [QGVAR(disableInteraction), true, true];
-_oldBody setvariable [QGVAR(disableInteraction), true, true];
+_newUnit setVariable [QGVAR(copyOfUnit), _oldBody, true];
+_oldBody setVariable [QGVAR(hasCopy), _newUnit, true];
+_newUnit setVariable ["ACE_isDead", true, true];
+_newUnit setVariable ["ACE_isUnconscious", true, true];
+_newUnit setVariable [QGVAR(disableInteraction), true, true];
+_oldBody setVariable [QGVAR(disableInteraction), true, true];
 
 [_newUnit, 0.89] call FUNC(setStructuralDamage);
 _newUnit;

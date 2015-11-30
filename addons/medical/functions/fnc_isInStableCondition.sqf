@@ -21,7 +21,7 @@ if (GVAR(level) <= 1) exitWith {
 };
 
 _totalBloodLoss = 0;
-_openWounds = _unit getvariable [QGVAR(openWounds), []];
+_openWounds = _unit getVariable [QGVAR(openWounds), []];
 {
     // total bleeding ratio * percentage of injury left
     _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));

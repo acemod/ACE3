@@ -23,7 +23,7 @@ _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitWith {false};
 
 // Get the open wounds for this unit
-_openWounds = _target getvariable [QGVAR(openWounds), []];
+_openWounds = _target getVariable [QGVAR(openWounds), []];
 if (count _openWounds == 0) exitWith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
@@ -84,7 +84,7 @@ _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_eff
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-_target setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
+_target setVariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
 if (USE_WOUND_EVENT_SYNC) then {
     ["medical_propagateWound", [_target, _mostEffectiveInjury]] call EFUNC(common,globalEvent);

@@ -18,7 +18,7 @@ private ["_unit", "_injury", "_openWounds", "_injuryID", "_exists"];
 params ["_unit", "_injury"];
 
 if (!local _unit) then {
-    _openWounds = _unit getvariable[QGVAR(openWounds), []];
+    _openWounds = _unit getVariable[QGVAR(openWounds), []];
     _injuryID = _injury select 0;
 
     _exists = false;
@@ -32,5 +32,5 @@ if (!local _unit) then {
     if (!_exists) then {
         _openWounds pushBack _injury;
     };
-    _unit setvariable [QGVAR(openWounds), _openWounds];
+    _unit setVariable [QGVAR(openWounds), _openWounds];
 };

@@ -19,11 +19,11 @@ private ["_heartRate", "_hrIncrease", "_bloodLoss", "_time", "_values", "_adjust
 params ["_unit"];
 
 _hrIncrease = 0;
-if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
-    _heartRate = _unit getvariable [QGVAR(heartRate), 80];
+if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
+    _heartRate = _unit getVariable [QGVAR(heartRate), 80];
     _bloodLoss = [_unit] call FUNC(getBloodLoss);
 
-    _adjustment = _unit getvariable [QGVAR(heartRateAdjustments), []];
+    _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
     {
         _x params ["_values", "_time", "_callBack"];
         if (abs _values > 0) then {
@@ -48,9 +48,9 @@ if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
 
     } forEach _adjustment;
     _adjustment = _adjustment - [ObjNull];
-    _unit setvariable [QGVAR(heartRateAdjustments), _adjustment];
+    _unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
 
-    _bloodVolume = _unit getvariable [QGVAR(bloodVolume), 100];
+    _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
     if (_bloodVolume > 75) then {
         if (_bloodLoss >0.0) then {
             if (_bloodLoss <0.5) then {

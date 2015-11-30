@@ -18,58 +18,58 @@ params ["_unit", "_interval"];
 TRACE_3("ACE_DEBUG",_unit,_interval,_unit);
 if (_interval == 0) exitWith {};
 
-_lastTimeValuesSynced = _unit getvariable [QGVAR(lastMomentValuesSynced), 0];
+_lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
 _syncValues = (ACE_time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
-    _unit setvariable [QGVAR(lastMomentValuesSynced), ACE_time];
+    _unit setVariable [QGVAR(lastMomentValuesSynced), ACE_time];
 };
 
-_bloodVolume = (_unit getvariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
+_bloodVolume = (_unit getVariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
 _bloodVolume = _bloodVolume max 0;
 
-_unit setvariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
+_unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
 // Set variables for synchronizing information across the net
 if (_bloodVolume < 100) then {
     if ((_bloodVolume < 90 && (GVAR(level) == 2)) || _bloodVolume <= 45) then {
         TRACE_4("ACE_DEBUG_ADVANCED",_bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
-        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 2) then {
-            _unit setvariable [QGVAR(hasLostBlood), 2, true];
+        if (_unit getVariable [QGVAR(hasLostBlood), 0] != 2) then {
+            _unit setVariable [QGVAR(hasLostBlood), 2, true];
         };
     } else {
         TRACE_4("ACE_DEBUG", _bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
-        if (_unit getvariable [QGVAR(hasLostBlood), 0] != 1) then {
-            _unit setvariable [QGVAR(hasLostBlood), 1, true];
+        if (_unit getVariable [QGVAR(hasLostBlood), 0] != 1) then {
+            _unit setVariable [QGVAR(hasLostBlood), 1, true];
         };
     }
 } else {
     TRACE_4("ACE_DEBUG",_bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
-    if (_unit getvariable [QGVAR(hasLostBlood), 0] != 0) then {
-        _unit setvariable [QGVAR(hasLostBlood), 0, true];
+    if (_unit getVariable [QGVAR(hasLostBlood), 0] != 0) then {
+        _unit setVariable [QGVAR(hasLostBlood), 0, true];
     };
 };
 
 TRACE_3("ACE_DEBUG",[_unit] call FUNC(getBloodLoss),_unit getVariable QGVAR(isBleeding),_unit);
 if (([_unit] call FUNC(getBloodLoss)) > 0) then {
-    if !(_unit getvariable [QGVAR(isBleeding), false]) then {
-        _unit setvariable [QGVAR(isBleeding), true, true];
+    if !(_unit getVariable [QGVAR(isBleeding), false]) then {
+        _unit setVariable [QGVAR(isBleeding), true, true];
     };
 } else {
-    if (_unit getvariable [QGVAR(isBleeding), false]) then {
-        _unit setvariable [QGVAR(isBleeding), false, true];
+    if (_unit getVariable [QGVAR(isBleeding), false]) then {
+        _unit setVariable [QGVAR(isBleeding), false, true];
     };
 };
 
-_painStatus = _unit getvariable [QGVAR(pain), 0];
+_painStatus = _unit getVariable [QGVAR(pain), 0];
 TRACE_4("ACE_DEBUG",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
-if (_painStatus > (_unit getvariable [QGVAR(painSuppress), 0])) then {
-    if !(_unit getvariable [QGVAR(hasPain), false]) then {
-        _unit setvariable [QGVAR(hasPain), true, true];
+if (_painStatus > (_unit getVariable [QGVAR(painSuppress), 0])) then {
+    if !(_unit getVariable [QGVAR(hasPain), false]) then {
+        _unit setVariable [QGVAR(hasPain), true, true];
     };
 } else {
-    if (_unit getvariable [QGVAR(hasPain), false]) then {
-        _unit setvariable [QGVAR(hasPain), false, true];
+    if (_unit getVariable [QGVAR(hasPain), false]) then {
+        _unit setVariable [QGVAR(hasPain), false, true];
     };
 };
 
@@ -111,11 +111,11 @@ if (GVAR(level) >= 2) then {
     };
 
     // Set the vitals
-    _heartRate = (_unit getvariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
-    _unit setvariable  [QGVAR(heartRate), _heartRate max 0, _syncValues];
+    _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
+    _unit setVariable  [QGVAR(heartRate), _heartRate max 0, _syncValues];
 
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
-    _unit setvariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
+    _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
     if (_painStatus > 0 && {_painStatus < 10}) then {
         _painReduce = if (_painStatus > 5) then {0.002} else {0.001};
@@ -125,15 +125,15 @@ if (GVAR(level) >= 2) then {
     // TODO Disabled until implemented fully
     // Handle airway
     /*if (GVAR(setting_allowAirwayInjuries)) then {
-        _airwayStatus = _unit getvariable [QGVAR(airwayStatus), 100];
-        if (((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) && !((_unit getvariable [QGVAR(airwaySecured), false]))) then {
+        _airwayStatus = _unit getVariable [QGVAR(airwayStatus), 100];
+        if (((_unit getVariable [QGVAR(airwayOccluded), false]) || (_unit getVariable [QGVAR(airwayCollapsed), false])) && !((_unit getVariable [QGVAR(airwaySecured), false]))) then {
             if (_airwayStatus >= 0.5) then {
-                _unit setvariable [QGVAR(airwayStatus), _airwayStatus - 0.5 * _interval, _syncValues];
+                _unit setVariable [QGVAR(airwayStatus), _airwayStatus - 0.5 * _interval, _syncValues];
             };
         } else {
-            if !((_unit getvariable [QGVAR(airwayOccluded), false]) || (_unit getvariable [QGVAR(airwayCollapsed), false])) then {
+            if !((_unit getVariable [QGVAR(airwayOccluded), false]) || (_unit getVariable [QGVAR(airwayCollapsed), false])) then {
                 if (_airwayStatus < 100) then {
-                    _unit setvariable [QGVAR(airwayStatus), (_airwayStatus + 1.5 * _interval) min 100, _syncValues];
+                    _unit setVariable [QGVAR(airwayStatus), (_airwayStatus + 1.5 * _interval) min 100, _syncValues];
                 };
             };
         };
@@ -149,7 +149,7 @@ if (GVAR(level) >= 2) then {
     // TODO check for in revive state instead of variable
     _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
-    if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
+    if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
         if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
             [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
         };
@@ -183,9 +183,9 @@ if (GVAR(level) >= 2) then {
         TRACE_3("ACE_DEBUG_IVBAGS_SYNC",GVAR(IVBags),_syncValues,_unit);
         {
             private "_value";
-            _value = _unit getvariable _x;
+            _value = _unit getVariable _x;
             if !(isNil "_value") then {
-                _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
+                _unit setVariable [_x,(_unit getVariable [_x, 0]), true];
             };
         } forEach GVAR(IVBags);
     };

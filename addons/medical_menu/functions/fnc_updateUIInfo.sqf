@@ -128,7 +128,7 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
             ] select _forEachIndex);
             _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
         };
-    } forEach (_target getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
+    } forEach (_target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
 };
 
 [_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);

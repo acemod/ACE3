@@ -25,7 +25,7 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-    _lastAnim = _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""];
+    _lastAnim = _caller getVariable [QGVAR(treatmentPrevAnimCaller), ""];
     //Don't play another medic animation (when player is rapidily treating)
     TRACE_2("Reseting to old animation", animationState player, _lastAnim);
     switch (toLower _lastAnim) do {
@@ -38,9 +38,9 @@ if (vehicle _caller == _caller) then {
 
     [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
 };
-_caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
+_caller setVariable [QGVAR(treatmentPrevAnimCaller), nil];
 
-_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), []]);
+_weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnTreatment), []]);
 if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "") && {_previousWeapon in (weapons _caller)}}) then {
     for "_index" from 0 to 99 do {
         _caller action ["SwitchWeapon", _caller, _caller, _index];
@@ -67,7 +67,7 @@ _callback = getText (_config >> "callbackFailure");
 _callback = if (isNil _callback) then {
      compile _callback
 } else {
-    missionNamespace getvariable _callback
+    missionNamespace getVariable _callback
 };
 
 _args call _callback;

@@ -27,10 +27,10 @@ if (_part < 0) exitWith {};
 
 _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage
-_damageBodyParts = _unit getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+_damageBodyParts = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
-_unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
+_unit setVariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
 _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 
@@ -47,7 +47,7 @@ _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 //    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
 //};
 
-if (alive _unit && {!(_unit getvariable ["ACE_isUnconscious", false])}) then {
+if (alive _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
     // If it reaches this, we can assume that the hit did not kill this unit, as this function is called 3 frames after the damage has been passed.
     if ([_unit, _part, if (_part > 1) then {_newDamage * 1.3} else {_newDamage * 2}] call FUNC(determineIfFatal)) then {
         [_unit] call FUNC(setUnconscious);

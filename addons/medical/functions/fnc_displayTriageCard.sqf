@@ -32,7 +32,7 @@ if (_show) then {
         };
 
         disableSerialization;
-        _display = uiNamespace getvariable QGVAR(triageCard);
+        _display = uiNamespace getVariable QGVAR(triageCard);
         if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
@@ -43,7 +43,7 @@ if (_show) then {
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
 
-        _log = _target getvariable [QGVAR(triageCard), []];
+        _log = _target getVariable [QGVAR(triageCard), []];
         {
             _x params ["_item", "_amount"];
             _message = _item;

@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 //paramsArray is a normal variable not a command
-private _paramsArray = missionnamespace getvariable ["paramsArray", []];
+private _paramsArray = missionnamespace getVariable ["paramsArray", []];
 
 TRACE_1("Reading missionConfigFile params",_paramsArray);
 

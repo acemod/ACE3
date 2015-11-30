@@ -21,7 +21,7 @@ if (!local _unit) exitWith {
     [_this, QUOTE(DFUNC(addToTriageCard)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 };
 
-_log = _unit getvariable [QGVAR(triageCard), []];
+_log = _unit getVariable [QGVAR(triageCard), []];
 _inList = false;
 _amount = 1;
 {
@@ -40,5 +40,5 @@ _amount = 1;
 if (!_inList) then {
     _log pushBack [_newItem, 1, ACE_gameTime];
 };
-_unit setvariable [QGVAR(triageCard), _log, true];
+_unit setVariable [QGVAR(triageCard), _log, true];
 ["Medical_onItemAddedToTriageCard", [_unit, _newItem, _amount]] call EFUNC(common,localEvent);

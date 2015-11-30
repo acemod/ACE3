@@ -57,7 +57,7 @@ GVAR(serverSideValues) = [];
 [{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
 
 disableSerialization;
-_menu = uiNamespace getvariable "ACE_serverSettingsMenu";
+_menu = uiNamespace getVariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {

@@ -17,9 +17,9 @@ private "_openWounds";
 params ["_unit"];
 if (!local _unit) exitWith {};
 
-_unit setvariable [QGVAR(pain), 0];
+_unit setVariable [QGVAR(pain), 0];
 if (GVAR(level) >= 2) then {
-    _unit setvariable [QGVAR(heartRate), 0];
-    _unit setvariable [QGVAR(bloodPressure), [0, 0]];
-    _unit setvariable [QGVAR(airwayStatus), 0];
+    _unit setVariable [QGVAR(heartRate), 0];
+    _unit setVariable [QGVAR(bloodPressure), [0, 0]];
+    _unit setVariable [QGVAR(airwayStatus), 0];
 };
