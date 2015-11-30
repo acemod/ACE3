@@ -14,7 +14,7 @@
     true
 },
 {false},
-[0, [false, true, false]], false] call cba_fnc_addKeybind;  // (empty default key)
+[0, [false, true, false]], false] call CBA_fnc_addKeybind;  // (empty default key)
 
 ["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
 {
@@ -27,7 +27,7 @@
     true
 },
 {false},
-[0, [false, false, false]], false] call cba_fnc_addKeybind;  // (empty default key)
+[0, [false, false, false]], false] call CBA_fnc_addKeybind;  // (empty default key)
 
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];

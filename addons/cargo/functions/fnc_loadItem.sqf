@@ -24,7 +24,7 @@ private ["_loaded", "_space", "_itemSize"];
 if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
-_loaded pushback _item;
+_loaded pushBack _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
 TRACE_1("added to loaded array",_loaded);
@@ -33,7 +33,7 @@ _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
-if (typeName _item == "OBJECT") then {
+if (_item isEqualType objNull) then {
     detach _item;
     _item attachTo [_vehicle,[0,0,-100]];
     ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);

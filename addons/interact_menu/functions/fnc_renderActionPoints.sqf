@@ -34,7 +34,7 @@ _fnc_renderNearbyActions = {
 
         // Quick oclussion test. Skip objects more than 1 m behind the camera plane
         _lambda = ((getPosASL _x) vectorDiff _cameraPos) vectorDotProduct _cameraDir;
-        if (_lambda > -1) then {
+        if ((_lambda > -1) && {!isObjectHidden _target}) then {
             _numInteractions = 0;
             // Prevent interacting with yourself or your own vehicle
             if (_target != ACE_player && {_target != vehicle ACE_player}) then {

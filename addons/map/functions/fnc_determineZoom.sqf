@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 
 private ["_grids", "_fourSize", "_sixSize", "_continue", "_size", "_i"];
-_grids = configFile >> "CfgWorlds" >> worldName >> "Grid";
+_grids = (configFile >> "CfgWorlds" >> worldName >> "Grid");
 _fourSize = -1;
 _sixSize = -1;
 for "_i" from 1 to 10 do {

@@ -12,6 +12,7 @@ PREP(actionPlaceInBodyBag);
 PREP(actionRemoveTourniquet);
 PREP(actionLoadUnit);
 PREP(actionUnloadUnit);
+PREP(addDamageToUnit);
 PREP(addHeartRateAdjustment);
 PREP(addToInjuredCollection);
 PREP(addToLog);

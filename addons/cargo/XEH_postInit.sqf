@@ -27,7 +27,7 @@
 
     _unloaded = [_item, _vehicle] call FUNC(unloadItem);
 
-    _itemClass = if (typeName _item == "STRING") then {_item} else {typeOf _item};
+    _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
     // Show hint as feedback
     _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;

@@ -25,6 +25,6 @@ _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerShape) = _index;
 
-_config = (configfile >> "CfgMarkers") select _data;
+_config = (configFile >> "CfgMarkers") select _data;
 
 GVAR(currentMarkerConfigName) = (configName _config);

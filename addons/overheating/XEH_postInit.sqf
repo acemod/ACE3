@@ -18,4 +18,4 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[19, [true, false, false]], false] call cba_fnc_addKeybind; //R Key
+[19, [true, false, false]], false] call CBA_fnc_addKeybind; //R Key

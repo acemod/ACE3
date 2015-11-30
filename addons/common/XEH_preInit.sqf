@@ -168,6 +168,7 @@ PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
 PREP(sortAlphabeticallyBy);
+PREP(showHud);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
@@ -292,6 +293,7 @@ PREP(hashListSet);
 PREP(hashListPush);
 
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(showHudHash) = [] call FUNC(hashCreate);
 
 //GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
 GVAR(waitAndExecArray) = [];

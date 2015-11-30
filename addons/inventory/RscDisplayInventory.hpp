@@ -87,31 +87,37 @@ class RscDisplayInventory {
         class BackgroundSlotPrimaryMuzzle: BackgroundSlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryUnderBarrel: BackgroundSlotPrimary {
-            x = X_PART(29);
+            x = X_PART(28.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryFlashlight: BackgroundSlotPrimary {
-            x = X_PART(31.4);
+            x = X_PART(30.6);
             y = Y_PART(9.2); //not sure why different (double check release)
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryOptics: BackgroundSlotPrimary {
-            x = X_PART(33.8);
+            x = X_PART(32.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
+            h = H_PART(2);
+        };
+        class BackgroundSlotPrimaryMagazineGL: BackgroundSlotPrimary {
+            x = X_PART(34.6);
+            y = Y_PART(9.1);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class BackgroundSlotPrimaryMagazine: BackgroundSlotPrimary {
             x = X_PART(36.2);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class BackgroundSlotSecondary: BackgroundSlotPrimary {
@@ -292,31 +298,37 @@ class RscDisplayInventory {
         class SlotPrimaryMuzzle: SlotPrimary {
             x = X_PART(26.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class SlotPrimaryUnderBarrel: SlotPrimary {
-            x = X_PART(29);
+            x = X_PART(28.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class SlotPrimaryFlashlight: SlotPrimary {
-            x = X_PART(31.4);
+            x = X_PART(30.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class SlotPrimaryOptics: SlotPrimary {
-            x = X_PART(33.8);
+            x = X_PART(32.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
+            h = H_PART(2);
+        };
+        class SlotPrimaryMagazineGL: SlotPrimary {
+            x = X_PART(34.6);
+            y = Y_PART(9.1);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class SlotPrimaryMagazine: SlotPrimary {
-            x = X_PART(36.2);
+            x = X_PART(36.6);
             y = Y_PART(9.1);
-            w = W_PART(2.3);
+            w = W_PART(1.9);
             h = H_PART(2);
         };
         class SlotSecondary: SlotPrimary {

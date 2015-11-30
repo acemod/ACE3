@@ -46,7 +46,7 @@ if (_show) then {
         };
 
         disableSerialization;
-        _display = uiNamespace getvariable QGVAR(DisplayInformation);
+        _display = uiNamespace getVariable QGVAR(DisplayInformation);
         if (isnil "_display") exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
@@ -59,26 +59,26 @@ if (_show) then {
             _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
         };
 
-        if (_target getvariable[QGVAR(isBleeding), false]) then {
+        if (_target getVariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
         };
-        if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
+        if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
             _genericMessages pushback [localize LSTRING(Status_Lost_Blood), [1, 0.1, 0.1, 1]];
         };
 
-        if (((_target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
+        if (((_target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]]) select _selectionN) > 0) then {
             _genericMessages pushback [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
         };
-        if (_target getvariable[QGVAR(hasPain), false]) then {
+        if (_target getVariable[QGVAR(hasPain), false]) then {
             _genericMessages pushback [localize LSTRING(Status_Pain), [1, 1, 1, 1]];
         };
 
         _totalIvVolume = 0;
         {
             private "_value";
-            _value = _target getvariable _x;
+            _value = _target getVariable _x;
             if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
+                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
             };
         } foreach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
@@ -88,7 +88,7 @@ if (_show) then {
         _damaged = [false, false, false, false, false, false];
         _selectionBloodLoss = [0,0,0,0,0,0];
         if (GVAR(level) >= 2 && {([_target] call FUNC(hasMedicalEnabled))}) then {
-            _openWounds = _target getvariable [QGVAR(openWounds), []];
+            _openWounds = _target getVariable [QGVAR(openWounds), []];
             private "_amountOf";
             {
                 _x params ["", "_x1", "_selectionX", "_amountOf", "_x4"];
@@ -110,7 +110,7 @@ if (_show) then {
                 };
             } foreach _openWounds;
 
-            _bandagedwounds = _target getvariable [QGVAR(bandagedWounds), []];
+            _bandagedwounds = _target getVariable [QGVAR(bandagedWounds), []];
             {
                 _x params ["", "", "_selectionX", "_amountOf", "_x4"];
                 // Find how much this bodypart is bleeding
@@ -133,10 +133,10 @@ if (_show) then {
         } else {
             _damaged = [true, true, true, true, true, true];
             {
-                _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _x];
-
-                if (_target getHitPointDamage _x > 0 && {_forEachIndex == _selectionN}) then {
-                    _pointDamage = _target getHitPointDamage _x;
+                private _hitPoint = [_target, _x, true] call FUNC(translateSelections);
+                _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _hitPoint];
+                if (_target getHitPointDamage _hitPoint > 0 && {_forEachIndex == _selectionN}) then {
+                    _pointDamage = _target getHitPointDamage _hitPoint;
                     _severity = switch (true) do {
                         case (_pointDamage > 0.5): {localize LSTRING(HeavilyWounded)};
                         case (_pointDamage > 0.1): {localize LSTRING(LightlyWounded)};
@@ -152,7 +152,7 @@ if (_show) then {
                     ] select _forEachIndex);
                     _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
                 };
-            } forEach ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+            } forEach GVAR(SELECTIONS);
         };
 
         // Handle the body image coloring
@@ -200,7 +200,7 @@ if (_show) then {
         lbClear _logCtrl;
 
         private ["_logs", "_message", "_moment", "_arguments", "_lbCtrl"];
-        _logs = _target getvariable [QGVAR(logFile_Activity), []];
+        _logs = _target getVariable [QGVAR(logFile_Activity), []];
         {
             // [_message,_moment,_type, _arguments]
             _x params ["_message", "_moment", "_type", "_arguments"];
@@ -209,7 +209,7 @@ if (_show) then {
             };
 
             {
-                if (typeName _x == "STRING" && {isLocalized _x}) then {
+                if (_x isEqualType "" && {isLocalized _x}) then {
                     _arguments set [_foreachIndex, localize _x];
                 };
             } foreach _arguments;

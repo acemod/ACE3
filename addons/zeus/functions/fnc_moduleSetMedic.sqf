@@ -41,7 +41,7 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
                 } else {
                     _medicN = GETVAR(_unit,EGVAR(medical,medicClass),0);
                     if (_medicN < 1) then {
-                        _unit setvariable [QEGVAR(medical,medicClass), 1, true];
+                        _unit setVariable [QEGVAR(medical,medicClass), 1, true];
                     };
                 };
             };

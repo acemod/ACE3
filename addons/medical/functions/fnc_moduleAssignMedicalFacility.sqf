@@ -18,13 +18,13 @@
 private ["_setting", "_objects"];
 params [["_logic", objNull, [objNull]]];
 if (!isNull _logic) then {
-    _setting = _logic getvariable ["class",0];
+    _setting = _logic getVariable ["class",0];
     _objects = synchronizedObjects _logic;
     {
         if (local _x) then {
-            _x setvariable[QGVAR(isMedicalFacility), true, true];
+            _x setVariable[QGVAR(isMedicalFacility), true, true];
         };
-    } foreach _objects;
+    } forEach _objects;
 };
 
 true;
