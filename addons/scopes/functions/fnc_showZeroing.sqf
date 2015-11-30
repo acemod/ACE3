@@ -58,6 +58,6 @@ GVAR(fadePFH) = [{
         _layer cutFadeOut 2;
 
         GVAR(fadePFH) = nil;
-        [_pfhId] call cba_fnc_removePerFrameHandler;
+        [_pfhId] call CBA_fnc_removePerFrameHandler;
     };
 }, 0.1, []] call CBA_fnc_addPerFrameHandler

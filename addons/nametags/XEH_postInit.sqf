@@ -20,7 +20,7 @@ GVAR(showNamesTime) = -10;
     false
 },
 {false},
-[29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
+[29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
 // Monitor the assigned teams, and propegate them appropriately for the player
 // This allows for assigned team colors to match across the entire group

@@ -71,7 +71,7 @@ if (_activated && local _logic) then {
         _args params ["_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers", "_lastTimePlayed"];
 
         if (!alive _logic) exitWith {
-            [_pfhHandle] call cba_fnc_removePerFrameHandler;
+            [_pfhHandle] call CBA_fnc_removePerFrameHandler;
         };
 
         if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {

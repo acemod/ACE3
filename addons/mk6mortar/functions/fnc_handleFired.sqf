@@ -60,7 +60,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     EXPLODE_4_PVT(_args,_shell,_airFriction,_time,_relativeDensity);
 
     if (isNull _shell || {!alive _shell}) exitwith {
-        [_pfID] call cba_fnc_removePerFrameHandler;
+        [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
     _deltaT = ACE_time - _time;
