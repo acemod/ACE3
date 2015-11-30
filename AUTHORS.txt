@@ -1,4 +1,4 @@
-# ACE3 CONTRIBUTOR LIST
+﻿# ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
@@ -109,6 +109,7 @@ Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
+voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
 zGuba
