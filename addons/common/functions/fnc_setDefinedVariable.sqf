@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Setvariable value
+ * setVariable value
  *
  * Arguments:
  * 0: Unit <OBJECT>

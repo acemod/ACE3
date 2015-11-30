@@ -48,10 +48,10 @@ _ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
 _ctrlHint ctrlSetTextColor GVAR(displayTextFontColor);
 /*
 // This does not function at the moment. Has been disabled until it fixed.
-_xPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
-_yPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
-_wPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_W", (10 *(((safezoneW / safezoneH) min 1.2) / 40))];
-_hPos = profilenamespace getvariable ["IGUI_GRID_ACE_displayText_H", (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))];
+_xPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
+_yPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
+_wPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_W", (10 *(((safezoneW / safezoneH) min 1.2) / 40))];
+_hPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_H", (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))];
 */
 
 _xPos = ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40));
