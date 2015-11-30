@@ -41,7 +41,7 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
     lbClear _ctrl;
     {
         _class = if (typeName _x == "STRING") then {_x} else {typeOf _x};
-        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> _class >> "displayName"));
+        _ctrl lbAdd (getText(configFile >> "CfgVehicles" >> _class >> "displayName"));
         true
     } count _loaded;
 

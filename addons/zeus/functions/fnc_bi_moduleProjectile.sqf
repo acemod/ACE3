@@ -39,9 +39,9 @@ if ({local _x} count (objectcurators _logic) > 0) then {
 if !(isserver) exitWith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
+    _ammo = _logic getvariable ["type",gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
-        _CfgAmmo = configfile >> "CfgAmmo" >> _ammo;
+        _CfgAmmo = configFile >> "CfgAmmo" >> _ammo;
         //if !(isclass _CfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         _dirVar = _fnc_scriptname + typeOf _logic;
         _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
@@ -49,7 +49,7 @@ if (_activated) then {
         _posAmmo = +_pos;
         _posAmmo set [2,0];
         _dir = direction _logic;
-        _simulation = tolower gettext (configfile >> "CfgAmmo" >> _ammo >> "simulation");
+        _simulation = tolower gettext (configFile >> "CfgAmmo" >> _ammo >> "simulation");
         _altitude = 0;
         _velocity = [];
         _attach = false;

@@ -68,7 +68,7 @@ if (_activated) then {
 
             //--- All (including unofficial ones)
             case 3: {
-                _cfgPatches = configfile >> "Cfgpatches";
+                _cfgPatches = configFile >> "Cfgpatches";
                 for "_i" from 0 to (count _cfgPatches - 1) do {
                     _class = _cfgPatches select _i;
                     if (isclass _class) then {_addons set [count _addons,configname _class];};

@@ -21,7 +21,7 @@ _units = _this select 1;
 _activated = _this select 2;
 
 if (_activated) then {
-    _explosive = gettext (configfile >> "CfgVehicles" >> typeOf _logic >> "explosive");
+    _explosive = gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "explosive");
     if (_explosive != "") then {
         _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
         _explosive attachto [_logic];

@@ -27,7 +27,7 @@ _unitMagCounts = [];
     private "_xFullMagazineCount";
     _x params ["_xClassname", "_xCount", "_xLoaded", "_xType"];
 
-    _xFullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _xClassname >> "count");
+    _xFullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _xClassname >> "count");
 
     //for every partial magazine, that is either in inventory or can be moved there
     if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {_player canAdd _xClassname}}) then {

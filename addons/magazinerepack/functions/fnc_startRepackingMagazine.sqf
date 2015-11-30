@@ -24,7 +24,7 @@ private ["_magazineCfg", "_fullMagazineCount", "_isBelt", "_startingAmmoCounts",
 params ["_target", "_player", "_magazineClassname"];
 
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
-_magazineCfg = configfile >> "CfgMagazines" >> _magazineClassname;
+_magazineCfg = configFile >> "CfgMagazines" >> _magazineClassname;
 // Calculate actual ammo to transfer during repack
 _fullMagazineCount = getNumber (_magazineCfg >> "count");
 //Is linked belt magazine:
