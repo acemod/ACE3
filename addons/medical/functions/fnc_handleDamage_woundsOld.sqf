@@ -59,7 +59,7 @@ _allPossibleInjuries = [];
 
             // Find the wound which has the highest minimal damage, so we can use this later on for adding the correct injuries
             if (_minDamage > _highestPossibleDamage) then {
-                _highestPossibleSpot = _foreachIndex;
+                _highestPossibleSpot = _forEachIndex;
                 _highestPossibleDamage = _minDamage;
             };
 
@@ -67,7 +67,7 @@ _allPossibleInjuries = [];
             _allPossibleInjuries pushBack _x;
         };
     };
-} foreach _allInjuriesForDamageType;
+} forEach _allInjuriesForDamageType;
 
 // No possible wounds available for this damage type or damage amount.
 if (_highestPossibleSpot < 0) exitWith {};
@@ -93,9 +93,9 @@ _woundsCreated = [];
                 {
                     // Check if we have an id of the given class on the given bodypart already
                     if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitWith {
-                        _foundIndex = _foreachIndex;
+                        _foundIndex = _forEachIndex;
                     };
-                } foreach _openWounds;
+                } forEach _openWounds;
             };
 
             _injury = [];
@@ -120,7 +120,7 @@ _woundsCreated = [];
             _painToAdd = _painToAdd + (_toAddInjury select 3);
         };
     };
-} foreach (_injuryTypeInfo select 0); // foreach damage thresholds
+} forEach (_injuryTypeInfo select 0); // forEach damage thresholds
 
 _unit setvariable [QGVAR(openWounds), _openWounds, true];
 

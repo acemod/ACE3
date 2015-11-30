@@ -80,7 +80,7 @@ if (_show) then {
             if !(isNil "_value") then {
                 _totalIvVolume = _totalIvVolume + (_target getvariable [_x, 0]);
             };
-        } foreach GVAR(IVBags);
+        } forEach GVAR(IVBags);
         if (_totalIvVolume >= 1) then {
             _genericMessages pushBack [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
@@ -108,7 +108,7 @@ if (_show) then {
                         };
                     };
                 };
-            } foreach _openWounds;
+            } forEach _openWounds;
 
             _bandagedwounds = _target getvariable [QGVAR(bandagedWounds), []];
             {
@@ -129,7 +129,7 @@ if (_show) then {
                         };
                     };
                 };
-            } foreach _bandagedwounds;
+            } forEach _bandagedwounds;
         } else {
             _damaged = [true, true, true, true, true, true];
             {
@@ -175,23 +175,23 @@ if (_show) then {
                     //_blue = _green;
                 };
             };
-            (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
-        } foreach _selectionBloodLoss;
+            (_display displayCtrl (_availableSelections select _forEachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
+        } forEach _selectionBloodLoss;
 
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
         {
             _x params ["_add", "_color"];
             _lbCtrl lbAdd _add;
-            _lbCtrl lbSetColor [_foreachIndex, _color];
-        } foreach _genericMessages;
+            _lbCtrl lbSetColor [_forEachIndex, _color];
+        } forEach _genericMessages;
 
         _amountOfGeneric = count _genericMessages;
         {
             _x params ["_add", "_color"];
             _lbCtrl lbAdd _add;
-            _lbCtrl lbSetColor [_foreachIndex + _amountOfGeneric, _color];
-        } foreach _allInjuryTexts;
+            _lbCtrl lbSetColor [_forEachIndex + _amountOfGeneric, _color];
+        } forEach _allInjuryTexts;
         if (count _allInjuryTexts == 0) then {
             _lbCtrl lbAdd (localize LSTRING(NoInjuriesBodypart));
         };
@@ -210,12 +210,12 @@ if (_show) then {
 
             {
                 if (typeName _x == "STRING" && {isLocalized _x}) then {
-                    _arguments set [_foreachIndex, localize _x];
+                    _arguments set [_forEachIndex, localize _x];
                 };
-            } foreach _arguments;
+            } forEach _arguments;
             _message = format([_message] + _arguments);
             _logCtrl lbAdd format["%1 %2", _moment, _message];
-        } foreach _logs;
+        } forEach _logs;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
         (_display displayCtrl 303) ctrlSetText (_triageStatus select 0);

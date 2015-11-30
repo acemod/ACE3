@@ -20,5 +20,5 @@ if (typeName _this == typeName []) then {
         if (typeName _x == typeName {}) then {
             GVAR(unconsciousConditions) pushBack _x;
         };
-    } foreach _this;
+    } forEach _this;
 };

@@ -23,9 +23,9 @@ if (typeName _text != "TEXT") then {
         if (count _text > 0) then {
             {
                 if (typeName _x == "STRING" && {isLocalized _x}) then {
-                    _text set [_foreachIndex, localize _x];
+                    _text set [_forEachIndex, localize _x];
                 };
-            }foreach _text;
+            }forEach _text;
             _text = format _text;
         };
     };

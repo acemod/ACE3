@@ -21,4 +21,4 @@ if (!(_object getvariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {}
 
 {
     _x addCuratorEditableObjects [[_object], true];
-}foreach allCurators;
+}forEach allCurators;

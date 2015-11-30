@@ -29,12 +29,12 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
         if !(_className in _allMedsFromClassname) then {
             _allMedsFromClassname pushBack _className;
             _x set [1, _allMedsFromClassname];
-            _allUsedMedication set [_foreachIndex, _x];
+            _allUsedMedication set [_forEachIndex, _x];
             _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
         };
         _foundEntry = true;
     };
-} foreach _allUsedMedication;
+} forEach _allUsedMedication;
 
 if (!_foundEntry) then {
     _allUsedMedication pushBack [_variable, [_className]];
@@ -55,8 +55,8 @@ _hasOverDosed = 0;
         if ({_x == _med} count _classNamesUsed > _limit) then {
             _hasOverDosed = _hasOverDosed + 1;
         };
-    } foreach _allUsedMedication;
-} foreach _incompatabileMeds;
+    } forEach _allUsedMedication;
+} forEach _incompatabileMeds;
 
 if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
     _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");

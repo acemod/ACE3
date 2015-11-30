@@ -60,11 +60,11 @@ _bandagedInjury = [];
         _exist = true;
         _existingInjury = _x;
         _existingInjury set [3, (_existingInjury select 3) + _impact];
-        _bandagedWounds set [_foreachIndex, _existingInjury];
+        _bandagedWounds set [_forEachIndex, _existingInjury];
 
         _bandagedInjury = _existingInjury;
     };
-} foreach _bandagedWounds;
+} forEach _bandagedWounds;
 
 if !(_exist) then {
     // [ID, classID, bodypart, percentage treated, bloodloss rate]
@@ -97,9 +97,9 @@ if (random(1) <= _reopeningChance) then {
                         _exist = true;
                         _existingInjury = _x;
                         _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];
-                        _bandagedWounds set [_foreachIndex, _existingInjury];
+                        _bandagedWounds set [_forEachIndex, _existingInjury];
                     };
-                } foreach _bandagedWounds;
+                } forEach _bandagedWounds;
 
                 if (_exist) then {
                     _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];

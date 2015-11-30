@@ -55,14 +55,14 @@ if (_show) then {
                 };
             };
             _triageCardTexts pushBack format["%1x - %2", _amount, _message];
-        } foreach _log;
+        } forEach _log;
 
         if (count _triageCardTexts == 0) then {
             _lbCtrl lbAdd (localize LSTRING(TriageCard_NoEntry));
         };
         {
             _lbCtrl lbAdd _x;
-        } foreach _triageCardTexts;
+        } forEach _triageCardTexts;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
 

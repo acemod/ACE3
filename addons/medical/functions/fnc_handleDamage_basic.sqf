@@ -29,7 +29,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
         if (_part < 0) exitWith {};
 
         private ["_newDamage", "_pain"];
-        _newDamage = (_cache_damages select _foreachIndex);
+        _newDamage = (_cache_damages select _forEachIndex);
         _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
         _unit setvariable [QGVAR(bodyPartStatus), _damageBodyParts];
 
@@ -43,7 +43,7 @@ TRACE_4("ACE_DEBUG: HandleDamage BASIC",_unit, _damageBodyParts,_cache_params,_c
         _pain = _pain + (_newDamage / 4) * (1 - (_unit getVariable [QGVAR(morphine), 0]));
         _unit setVariable [QGVAR(pain), _pain min 1, true];
     };
-}foreach _cache_params;
+}forEach _cache_params;
 
 // We broadcast the value across the net here, in order to avoid broadcasting it multiple times earlier in the above code block
 _target setvariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
@@ -56,5 +56,5 @@ _target setHitPointDamage ["hitHands", (_handsDamageR + _handsDamageL) min 0.95]
 _target setHitPointDamage ["hitLegs", (_legsDamageR + _legsDamageL) min 0.95];
 
 {
-    _target setHitPointDamage [_x, (_damageBodyParts select _foreachIndex) min 0.95];
-}foreach GVAR(HITPOINTS);
+    _target setHitPointDamage [_x, (_damageBodyParts select _forEachIndex) min 0.95];
+}forEach GVAR(HITPOINTS);

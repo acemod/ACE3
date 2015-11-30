@@ -60,4 +60,4 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
         // Update the variable globaly and Force
         [_settingName, _settingValue, true, true] call FUNC(setSetting);
     };
-} foreach _paramsArray;
+} forEach _paramsArray;

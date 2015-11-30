@@ -35,18 +35,18 @@ if (!(_unit getvariable [QGVAR(inCardiacArrest),false])) then {
 
             if ( (_time - 1) <= 0) then {
                  _time = 0;
-                 _adjustment set [_foreachIndex, ObjNull];
+                 _adjustment set [_forEachIndex, ObjNull];
                  [_unit] call _callBack;
             } else {
                 _time = _time - 1;
-                _adjustment set [_foreachIndex, [_values - _change, _time]];
+                _adjustment set [_forEachIndex, [_values - _change, _time]];
             };
         } else {
-            _adjustment set [_foreachIndex, ObjNull];
+            _adjustment set [_forEachIndex, ObjNull];
             [_unit] call _callBack;
         };
 
-    } foreach _adjustment;
+    } forEach _adjustment;
     _adjustment = _adjustment - [ObjNull];
     _unit setvariable [QGVAR(heartRateAdjustments), _adjustment];
 

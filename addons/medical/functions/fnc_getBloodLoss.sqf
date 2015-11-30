@@ -33,12 +33,12 @@ if (GVAR(level) >= 2) then {
 
             // (((BLOODLOSS_SMALL_WOUNDS * (_x select 0))) + ((BLOODLOSS_MEDIUM_WOUNDS * (_x select 1))) + ((BLOODLOSS_LARGE_WOUNDS * (_x select 2))) * (_cardiacOutput / DEFAULT_CARDIAC_OUTPUT));
         };
-    } foreach _openWounds;
+    } forEach _openWounds;
 
     _internalWounds = _unit getvariable [QGVAR(internalWounds), []];
     {
         _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));
-    } foreach _internalWounds;
+    } forEach _internalWounds;
 
     // cap the blood loss to be no greater as the current cardiac output
     //(_totalBloodLoss min _cardiacOutput);

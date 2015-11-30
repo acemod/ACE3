@@ -110,7 +110,7 @@ if (_activated) then {
                             };
                         };
                     };
-                } foreach _entities;
+                } forEach _entities;
             };
         };
         if (count _hint > 0) then {

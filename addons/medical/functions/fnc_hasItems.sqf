@@ -27,6 +27,6 @@ _return = true;
     if (typeName _x == "STRING" && {!([_medic, _patient, _x] call FUNC(hasItem))}) exitWith {
         _return = false;
     };
-}foreach _items;
+}forEach _items;
 
 _return

@@ -71,13 +71,13 @@ private ["_allUsedMedication", "_logs"];
 _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 {
    _unit setvariable [_x select 0, nil];
-} foreach _allUsedMedication;
+} forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
 _logs = _unit getvariable [QGVAR(allLogs), []];
 {
     _unit setvariable [_x, nil];
-} foreach _logs;
+} forEach _logs;
 _unit setvariable [QGVAR(allLogs), [], true];
 
 // items

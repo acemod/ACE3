@@ -63,7 +63,7 @@ if (alive _target) exitWith {
     _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
        _target setvariable [_x select 0, nil];
-    } foreach _allUsedMedication;
+    } forEach _allUsedMedication;
 
     // Resetting damage
     _target setDamage 0;

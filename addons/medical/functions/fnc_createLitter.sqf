@@ -83,8 +83,8 @@ _createdLitter = [];
                     if (typeName _x == "STRING") then {
                         [_target, _x] call _createLitter;
                     };
-                } foreach _litterOptions;
+                } forEach _litterOptions;
             };
         };
     };
-} foreach _litter;
+} forEach _litter;

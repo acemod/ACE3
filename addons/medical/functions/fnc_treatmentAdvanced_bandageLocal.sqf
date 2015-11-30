@@ -60,7 +60,7 @@ _exit = false;
         TRACE_2("Wound classes: ", _specificClass, _classID);
         if (_specificClass == _classID) exitWith {
             _effectivenessFound = _woundEffectivenss;
-            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
             _exit = true;
         };
@@ -68,12 +68,12 @@ _exit = false;
         // Check if this is the currently most effective found.
         if (_woundEffectivenss * ((_x select 4) * (_x select 3)) > _effectivenessFound * ((_mostEffectiveInjury select 4) * (_mostEffectiveInjury select 3))) then {
             _effectivenessFound = _woundEffectivenss;
-            _mostEffectiveSpot = _foreachIndex;
+            _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
         };
     };
     if (_exit) exitWith {};
-} foreach _openWounds;
+} forEach _openWounds;
 
 if (_effectivenessFound == -1) exitWith {}; // Seems everything is patched up on this body part already..
 

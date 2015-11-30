@@ -38,4 +38,4 @@ _openWounds = _target getvariable [QGVAR(openWounds), []];
     if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitWith {
         _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
     };
-} foreach _openWounds;
+} forEach _openWounds;

@@ -38,9 +38,9 @@ _foundIndex = -1;
     {
         // Check if we have an id of the given class on the given bodypart already
         if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitWith {
-            _foundIndex = _foreachIndex;
+            _foundIndex = _forEachIndex;
         };
-    } foreach _openWounds;
+    } forEach _openWounds;
 
     if (_foundIndex < 0) then {
         // Since it is a new injury, we will have to add it to the open wounds array to store it
@@ -50,7 +50,7 @@ _foundIndex = -1;
         _injury = _openWounds select _foundIndex;
         _injury set [3, (_injury select 3) + 1];
     };
-} foreach _woundsCreated;
+} forEach _woundsCreated;
 
 _unit setvariable [QGVAR(openWounds), _openWounds, true];
 

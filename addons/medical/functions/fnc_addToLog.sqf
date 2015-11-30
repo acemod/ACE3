@@ -34,10 +34,10 @@ if (count _log >= 8) then {
     _newLog = [];
     {
         // ensure the first element will not be added
-        if (_foreachIndex > 0) then {
+        if (_forEachIndex > 0) then {
             _newLog pushBack _x;
         };
-    } foreach _log;
+    } forEach _log;
     _log = _newLog;
 };
 _log pushBack [_message, _moment, _type, _arguments];

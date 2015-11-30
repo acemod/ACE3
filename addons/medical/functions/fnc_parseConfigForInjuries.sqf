@@ -109,7 +109,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_type in (_x select 5)) then {
             _woundTypes pushBack _x;
         };
-    } foreach _allWoundClasses;
+    } forEach _allWoundClasses;
     _typeThresholds = _thresholds;
     _selectionSpecificType = _selectionSpecific;
     if (isClass(_damageTypesConfig >> _x)) then {
@@ -129,11 +129,11 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
             _minDamageThresholds = _minDamageThresholds + ":";
             _amountThresholds = _amountThresholds + ":";
         };
-    } foreach _typeThresholds;
+    } forEach _typeThresholds;
 
-    "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _foreachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
+    "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _forEachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
 
-} foreach _allFoundDamageTypes;
+} forEach _allFoundDamageTypes;
 
 
 // Extension loading
@@ -151,7 +151,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_forEachIndex < (count _selections) - 1) then {
             _allowedSelections = _allowedSelections + ":";
         };
-    } foreach _selections;
+    } forEach _selections;
 
     _causes = "";
 
@@ -160,11 +160,11 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_forEachIndex < (count _causesArray) - 1) then {
             _causes = _causes + ":";
         };
-    } foreach _causesArray;
+    } forEach _causesArray;
     _classDisplayName = _x select 6;
 
     "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
-} foreach _allWoundClasses;
+} forEach _allWoundClasses;
 
 "ace_medical" callExtension "ConfigComplete";

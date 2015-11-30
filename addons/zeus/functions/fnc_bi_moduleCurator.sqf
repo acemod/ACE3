@@ -86,7 +86,7 @@ if (_activated) then {
                 _addonsList = [];
                 {
                     _addonsList = _addonsList + (unitaddons typeOf _x);
-                } foreach (entities "all");
+                } forEach (entities "all");
                 removeallcuratoraddons _logic;
                 _logic addcuratoraddons _addonsList;
             };
@@ -141,7 +141,7 @@ if (_activated) then {
                     case (_ownerUID > 0): {
                         {
                             if (getplayeruid _x == _ownerVar) exitWith {_player = _x;};
-                        } foreach playableunits;
+                        } forEach playableunits;
                     };
                     default {
                         _player = missionnamespace getvariable [_ownerVar,objnull];
@@ -155,7 +155,7 @@ if (_activated) then {
                 //--- Add radio channels
                 {
                     _x radiochanneladd [_player];
-                } foreach (_logic getvariable ["channels",[]]);
+                } forEach (_logic getvariable ["channels",[]]);
 
                 // Added by ace_zeus to delay ascension message at mission start
                 [{
@@ -168,7 +168,7 @@ if (_activated) then {
                             if (isplayer _x) then {
                                 [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
                             };
-                        } foreach (curatoreditableobjects _logic);
+                        } forEach (curatoreditableobjects _logic);
                     };
                 },[_logic,_player]] call EFUNC(common,execNextFrame);
 
@@ -199,7 +199,7 @@ if (_activated) then {
                 //--- Add radio channels
                 {
                     _x radiochannelremove [_player];
-                } foreach (_logic getvariable ["channels",[]]);
+                } forEach (_logic getvariable ["channels",[]]);
 
                 //--- Unassign
                 waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
@@ -216,10 +216,10 @@ if (_activated) then {
                     if !(_x in _addons) then {_addons set [count _addons,_x];};
                     {
                         if !(_x in _addons) then {_addons set [count _addons,_x];};
-                    } foreach (unitaddons _x);
-                } foreach _paramAddons;
+                    } forEach (unitaddons _x);
+                } forEach _paramAddons;
             };
-        } foreach (synchronizedobjects _logic);
+        } forEach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
 
         // Added by ace_zeus to delay bird code

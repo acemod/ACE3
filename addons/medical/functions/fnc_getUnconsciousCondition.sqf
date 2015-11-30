@@ -25,6 +25,6 @@ _return = false;
     if (typeName _x == typeName {} && {([_unit] call _x)}) exitWith {
        _return = true;
     };
-} foreach GVAR(unconsciousConditions);
+} forEach GVAR(unconsciousConditions);
 
 _return

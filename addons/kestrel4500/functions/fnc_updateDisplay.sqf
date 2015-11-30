@@ -23,7 +23,7 @@ private ["_outputData"];
 _outputData = [] call FUNC(generateOutputData);
 
 {
-    ctrlSetText [_x , _outputData select _foreachindex];
+    ctrlSetText [_x , _outputData select _forEachindex];
 } forEach [74100, 74200, 74201, 74300, 74301, 74302, 74303, 74304, 74305, 74400, 74401, 74500, 74600, 74601, 74602, 74603, 74604, 74605];
 
 if (GVAR(referenceHeadingMenu) == 1) then {

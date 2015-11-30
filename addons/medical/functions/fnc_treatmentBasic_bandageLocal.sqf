@@ -44,7 +44,7 @@ _target setHitPointDamage ["hitHands", (_handsDamageR + _handsDamageL) min 0.95]
 _target setHitPointDamage ["hitLegs", (_legsDamageR + _legsDamageL) min 0.95];
 
 {
-    _target setHitPointDamage [_x, (_damageBodyParts select _foreachIndex) min 0.95];
-}foreach GVAR(HITPOINTS);
+    _target setHitPointDamage [_x, (_damageBodyParts select _forEachIndex) min 0.95];
+}forEach GVAR(HITPOINTS);
 
 true;

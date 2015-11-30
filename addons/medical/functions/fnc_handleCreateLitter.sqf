@@ -52,7 +52,7 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
                 {
                     deleteVehicle _x;
                 } forEach _objects;
-                GVAR(allCreatedLitter) set[_foreachIndex, objNull];
+                GVAR(allCreatedLitter) set[_forEachIndex, objNull];
             };
         } forEach GVAR(allCreatedLitter);
         GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];

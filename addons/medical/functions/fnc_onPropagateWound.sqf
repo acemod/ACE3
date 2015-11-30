@@ -25,9 +25,9 @@ if (!local _unit) then {
     {
         if (_x select 0 == _injuryID) exitWith {
             _exists = true;
-            _openWounds set [_foreachIndex, _injury];
+            _openWounds set [_forEachIndex, _injury];
         };
-    } foreach _openWounds;
+    } forEach _openWounds;
 
     if (!_exists) then {
         _openWounds pushBack _injury;

@@ -32,7 +32,7 @@ if (_activated) then {
             {
                 _side = (getassignedcuratorunit _x) call bis_fnc_objectSide;
                 _side revealmine _explosive;
-            } foreach (objectcurators _logic);
+            } forEach (objectcurators _logic);
 
             if (GVAR(revealMines) > 1) then {
                 //--- Mark minefields in the map

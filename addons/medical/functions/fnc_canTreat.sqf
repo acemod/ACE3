@@ -96,6 +96,6 @@ _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isI
             };
         };
     };
-} foreach _locations;
+} forEach _locations;
 
 _return;

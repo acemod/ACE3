@@ -108,7 +108,7 @@ if ("All" in _locations) then {
                 };
             };
         };
-    } foreach _locations;
+    } forEach _locations;
 };
 
 if !(_return) exitWith {false};

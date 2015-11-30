@@ -41,13 +41,13 @@ if (_bloodVolume < 100.0) then {
             _ivVolume = (_unit getvariable [_x, 0]) + IV_CHANGE_PER_SECOND;
             _unit setvariable [_x,_ivVolume];
         };
-    } foreach GVAR(IVBags);
+    } forEach GVAR(IVBags);
 } else {
     {
         if ((_unit getvariable [_x, 0]) > 0) then {
             _unit setvariable [_x, 0]; // lets get rid of exessive IV volume
         };
-    } foreach GVAR(IVBags);
+    } forEach GVAR(IVBags);
 };
 
 _bloodVolumeChange;

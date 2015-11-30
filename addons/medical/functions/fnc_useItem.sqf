@@ -41,7 +41,7 @@ if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) 
             _return = [true, _x];
             [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
         };
-    } foreach _crew;
+    } forEach _crew;
 };
 
 _return

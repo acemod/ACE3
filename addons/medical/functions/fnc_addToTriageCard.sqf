@@ -27,15 +27,15 @@ _amount = 1;
 {
     if ((_x select 0) == _newItem) exitWith {
         private "_info";
-        _info = _log select _foreachIndex;
+        _info = _log select _forEachIndex;
         _info set [1,(_info select 1) + 1];
         _info set [2, ACE_gameTime];
-        _log set [_foreachIndex, _info];
+        _log set [_forEachIndex, _info];
 
         _amount = (_info select 1);
         _inList = true;
     };
-} foreach _log;
+} forEach _log;
 
 if (!_inList) then {
     _log pushBack [_newItem, 1, ACE_gameTime];

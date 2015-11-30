@@ -55,7 +55,7 @@ if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "")
 {
     _x params ["_unit", "_item"];
     _unit addItem _item;
-} foreach _usersOfItems;
+} forEach _usersOfItems;
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);

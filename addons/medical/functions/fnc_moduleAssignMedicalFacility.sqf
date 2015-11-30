@@ -24,7 +24,7 @@ if (!isNull _logic) then {
         if (local _x) then {
             _x setvariable[QGVAR(isMedicalFacility), true, true];
         };
-    } foreach _objects;
+    } forEach _objects;
 };
 
 true;

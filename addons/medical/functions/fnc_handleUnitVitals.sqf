@@ -187,6 +187,6 @@ if (GVAR(level) >= 2) then {
             if !(isNil "_value") then {
                 _unit setvariable [_x,(_unit getvariable [_x, 0]), true];
             };
-        } foreach GVAR(IVBags);
+        } forEach GVAR(IVBags);
     };
 };

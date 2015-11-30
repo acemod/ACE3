@@ -38,7 +38,7 @@ switch (_type) do {
           } ;
 
         };
-      } foreach GVAR(clientSideOptions);
+      } forEach GVAR(clientSideOptions);
   };
   case (MENU_TAB_COLORS): {
       {
@@ -46,7 +46,7 @@ switch (_type) do {
           _changed = true;
           _x set [9, _newValue];
         };
-      } foreach GVAR(clientSideColors);
+      } forEach GVAR(clientSideColors);
   };
   case (MENU_TAB_SERVER_OPTIONS): {
       {
@@ -62,7 +62,7 @@ switch (_type) do {
           } ;
 
         };
-      } foreach GVAR(serverSideOptions);
+      } forEach GVAR(serverSideOptions);
   };
   case (MENU_TAB_SERVER_COLORS): {
       {
@@ -70,7 +70,7 @@ switch (_type) do {
           _changed = true;
           _x set [9, _newValue];
         };
-      } foreach GVAR(serverSideColors);
+      } forEach GVAR(serverSideColors);
   };
   case (MENU_TAB_SERVER_VALUES): {
       {
@@ -78,7 +78,7 @@ switch (_type) do {
           _changed = true;
           _x set [9, _newValue];
         };
-      } foreach GVAR(serverSideValues);
+      } forEach GVAR(serverSideValues);
   };
 };
 

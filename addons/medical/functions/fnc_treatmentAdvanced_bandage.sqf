@@ -31,6 +31,6 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
     };
-}foreach _items;*/
+}forEach _items;*/
 
 true;
