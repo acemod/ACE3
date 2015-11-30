@@ -24,14 +24,14 @@ _itemsUsedBy = [];
     if (typeName _x == "ARRAY") then {
         {
             _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
         } foreach _x;
     };
 
     // handle required item
     if (typeName _x == "STRING") then {
         _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
     };
 } foreach _items;
 

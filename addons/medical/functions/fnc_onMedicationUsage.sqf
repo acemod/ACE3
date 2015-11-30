@@ -27,7 +27,7 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
     _x params ["_variableX", "_allMedsFromClassname"];
     if (_variableX== _variable) exitWith {
         if !(_className in _allMedsFromClassname) then {
-            _allMedsFromClassname pushback _className;
+            _allMedsFromClassname pushBack _className;
             _x set [1, _allMedsFromClassname];
             _allUsedMedication set [_foreachIndex, _x];
             _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
@@ -37,7 +37,7 @@ _allUsedMedication = _target getvariable [QGVAR(allUsedMedication), []];
 } foreach _allUsedMedication;
 
 if (!_foundEntry) then {
-    _allUsedMedication pushback [_variable, [_className]];
+    _allUsedMedication pushBack [_variable, [_className]];
     _target setvariable [QGVAR(allUsedMedication), _allUsedMedication];
 };
 

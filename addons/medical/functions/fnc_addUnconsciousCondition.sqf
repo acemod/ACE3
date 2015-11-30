@@ -18,7 +18,7 @@ if (isnil QGVAR(unconsciousConditions)) then {
 if (typeName _this == typeName []) then {
     {
         if (typeName _x == typeName {}) then {
-            GVAR(unconsciousConditions) pushback _x;
+            GVAR(unconsciousConditions) pushBack _x;
         };
     } foreach _this;
 };

@@ -64,7 +64,7 @@ _allPossibleInjuries = [];
             };
 
             // Store the valid possible injury for the damage type, damage amount and selection
-            _allPossibleInjuries pushback _x;
+            _allPossibleInjuries pushBack _x;
         };
     };
 } foreach _allInjuriesForDamageType;
@@ -104,7 +104,7 @@ _woundsCreated = [];
                 _injury = [_woundID, _toAddInjury select 0, _bodyPartNToAdd, 1, _toAddInjury select 2];
 
                 // Since it is a new injury, we will have to add it to the open wounds array to store it
-                _openWounds pushback _injury;
+                _openWounds pushBack _injury;
 
                 // New injuries will also increase the wound ID
                 _woundID = _woundID + 1;
@@ -114,7 +114,7 @@ _woundsCreated = [];
                 _injury set [3, (_injury select 3) + 1];
             };
             // Store the injury so we can process it later correctly.
-            _woundsCreated pushback _injury;
+            _woundsCreated pushBack _injury;
 
             // Collect the pain that is caused by this injury
             _painToAdd = _painToAdd + (_toAddInjury select 3);

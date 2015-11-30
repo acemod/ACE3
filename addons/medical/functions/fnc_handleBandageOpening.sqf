@@ -69,7 +69,7 @@ _bandagedInjury = [];
 if !(_exist) then {
     // [ID, classID, bodypart, percentage treated, bloodloss rate]
     _bandagedInjury = [_injury select 0, _injury select 1, _injury select 2, _impact, _injury select 4];
-    _bandagedWounds pushback _bandagedInjury;
+    _bandagedWounds pushBack _bandagedInjury;
 };
 
 _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];

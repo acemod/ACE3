@@ -25,14 +25,14 @@ GVAR(minLethalDamages) = [];
 for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
     // Only get the subclasses in damageType class
     if (isClass(_configDamageTypes select _i)) then {
-        _allFoundDamageTypes pushback (configName (_configDamageTypes select _i));
+        _allFoundDamageTypes pushBack (configName (_configDamageTypes select _i));
         _minLethalDamage = if (isNumber((_configDamageTypes select _i) >> "lethalDamage")) then {
             getNumber((_configDamageTypes select _i) >> "lethalDamage");
         } else {
             _defaultMinLethalDamage
         };
 
-        GVAR(minLethalDamages) pushback _minLethalDamage;
+        GVAR(minLethalDamages) pushBack _minLethalDamage;
     };
 };
 GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
@@ -54,8 +54,8 @@ _parseForSubClassWounds = {
         _subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
         _subClassDisplayName = if (isText(_subClassConfig >> "name")) then { getText(_subClassConfig >> "name");} else {_classDisplayName + " " + _subClass};
         if (count _selections > 0 && {count _causes > 0}) then {
-            GVAR(woundClassNames) pushback _subClasstype;
-            _allWoundClasses pushback [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, [_subClassminDamage, _subClassmaxDamage], _subClasscauses, _subClassDisplayName];
+            GVAR(woundClassNames) pushBack _subClasstype;
+            _allWoundClasses pushBack [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, [_subClassminDamage, _subClassmaxDamage], _subClasscauses, _subClassDisplayName];
             _classID = _classID + 1;
         };
         true;
@@ -86,8 +86,8 @@ if (isClass _woundsConfig) then {
 
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {
-                GVAR(woundClassNames) pushback _classType;
-                _allWoundClasses pushback [_classID, _selections, _bloodLoss, _pain, [_minDamage, _maxDamage], _causes, _classDisplayName];
+                GVAR(woundClassNames) pushBack _classType;
+                _allWoundClasses pushBack [_classID, _selections, _bloodLoss, _pain, [_minDamage, _maxDamage], _causes, _classDisplayName];
                 _classID = _classID + 1;
             };
             true;
@@ -107,7 +107,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
     {
         // Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
         if (_type in (_x select 5)) then {
-            _woundTypes pushback _x;
+            _woundTypes pushBack _x;
         };
     } foreach _allWoundClasses;
     _typeThresholds = _thresholds;
