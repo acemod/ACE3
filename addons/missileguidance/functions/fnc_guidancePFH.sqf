@@ -13,7 +13,7 @@ _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
 
 _launchParams = _args select 1;

@@ -45,37 +45,36 @@ switch (toLower _mode) do {
             };
         } forEach [
             [localize LSTRING(uiControls),""],
-            [localize LSTRING(uiToggleUnits),"1"],
-            [localize LSTRING(uiToggleHelp),"2"],
-            [localize LSTRING(uiToggleTools),"3"],
-            [localize LSTRING(uiToggleCompass),"4"],
-            [localize LSTRING(uiToggleIcons),"5"],
-            [localize LSTRING(uiToggleMap),"M"],
-            [localize LSTRING(uiToggleInterface),"Backspace"],
+            [localize LSTRING(uiToggleUnits),keyName 2],
+            [localize LSTRING(uiToggleHelp),keyName 3],
+            [localize LSTRING(uiToggleTools),keyName 4],
+            [localize LSTRING(uiToggleCompass),keyName 5],
+            [localize LSTRING(uiToggleIcons),keyName 6],
+            [localize LSTRING(uiToggleMap),keyName 50],
+            [localize LSTRING(uiToggleInterface),keyName 14],
             [localize LSTRING(freeCamControls),""],
-            [localize LSTRING(freeCamForward),"W"],
-            [localize LSTRING(freeCamBackward),"S"],
-            [localize LSTRING(freeCamLeft),"A"],
-            [localize LSTRING(freeCamRight),"D"],
-            [localize LSTRING(freeCamUp),"Q"],
-            [localize LSTRING(freeCamDown),"Z"],
+            [localize LSTRING(freeCamForward),keyName 17],
+            [localize LSTRING(freeCamBackward),keyName 31],
+            [localize LSTRING(freeCamLeft),keyName 30],
+            [localize LSTRING(freeCamRight),keyName 32],
+            [localize LSTRING(freeCamUp),keyName 16],
+            [localize LSTRING(freeCamDown),keyName 44],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
-            [localize LSTRING(freeCamFocus),"F"],
             [localize LSTRING(attributeControls),""],
-            [localize LSTRING(nextCam),"Up Arrow"],
-            [localize LSTRING(prevCam),"Down Arrow"],
-            [localize LSTRING(nextUnit),"Right Arrow"],
-            [localize LSTRING(prevUnit),"Left Arrow"],
-            [localize LSTRING(nextVis),"N"],
-            [localize LSTRING(prevVis),"Ctrl + N"],
+            [localize LSTRING(nextCam),keyName 200],
+            [localize LSTRING(prevCam),keyName 208],
+            [localize LSTRING(nextUnit),keyName 205],
+            [localize LSTRING(prevUnit),keyName 203],
+            [localize LSTRING(nextVis),keyName 49],
+            [localize LSTRING(prevVis),format["%1 + %2",keyName 29,keyname 49]],
             [localize LSTRING(adjZoom),"Scrollwheel"],
-            [localize LSTRING(adjSpeed),"Ctrl + Scrollwheel"],
-            [localize LSTRING(incZoom),"Num-/Num+"],
-            [localize LSTRING(incSpeed),"Ctrl + Num-/Num+"],
-            [localize LSTRING(reZoom),"Alt + Num-"],
-            [localize LSTRING(reSpeed),"Alt + Num+"]
+            [localize LSTRING(adjSpeed),format["%1 + Scrollwheel",keyName 29]],
+            [localize LSTRING(incZoom),format["%1/%2",keyName 74,keyName 78]],
+            [localize LSTRING(incSpeed),format["%1 + %2/%3",keyName 29,keyName 74,keyName 78]],
+            [localize LSTRING(reZoom),format["%1 + %2",keyName 56,keyName 74]],
+            [localize LSTRING(reSpeed),format["%1 + %2",keyName 56,keyName 78]]
         ];
 
         // Handle support for BI's respawn counter
@@ -126,7 +125,6 @@ switch (toLower _mode) do {
         GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
     };
     // Mouse events
     case "onmousebuttondown": {
@@ -179,7 +177,7 @@ switch (toLower _mode) do {
         };
 
         // Handle held keys (prevent repeat calling)
-        if (GVAR(heldKeys) param [_dik,false]) exitwith {};
+        if (GVAR(heldKeys) param [_dik,false]) exitWith {};
         // Exclude movement/adjustment keys so that speed can be adjusted on fly
         if !(_dik in [16,17,30,31,32,44,74,78]) then {
             GVAR(heldKeys) set [_dik,true];
@@ -226,19 +224,11 @@ switch (toLower _mode) do {
             case 32: { // D
                 GVAR(camDolly) set [0, GVAR(camSpeed) * ([1, 2] select _shift)];
             };
-            case 33: { // F
-                private ["_sel","_vector"];
-                _sel = GVAR(treeSel);
-                if ((GVAR(camMode) == 0) && {!isNull _sel} && {_sel in GVAR(unitList)}) then {
-                    _vector = (positionCameraToWorld [0,0,0]) vectorDiff (positionCameraToWorld [0,0,25]);
-                    [nil,nil,nil,(getPosATL _sel) vectorAdd _vector] call FUNC(setCameraAttributes);
-                };
-            };
             case 44: { // Z
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
             case 49: { // N
-                if (GVAR(camMode) == 0) then {
+                if (GVAR(camMode) != 1) then {
                     if (_ctrl) then {
                         [nil,nil,-1] call FUNC(cycleCamera);
                     } else {
@@ -250,7 +240,7 @@ switch (toLower _mode) do {
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 57: { // Spacebar
-                // Freecam attachment here, if in external then set cam pos and attach
+                // Switch between unit and freecam here
             };
             case 74: { // Num -
                 if (_alt) exitWith { [nil,nil,nil,nil,nil,nil, 1.25] call FUNC(setCameraAttributes); };
@@ -261,7 +251,7 @@ switch (toLower _mode) do {
                 };
             };
             case 78: { // Num +
-                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 2.5] call FUNC(setCameraAttributes); };
+                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 1.5] call FUNC(setCameraAttributes); };
                 if (_ctrl) then {
                     [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + 0.05] call FUNC(setCameraAttributes);
                 } else {
@@ -333,15 +323,6 @@ switch (toLower _mode) do {
             };
 
             [_newMode,_newUnit] call FUNC(transitionCamera);
-        };
-    };
-    case "ontreeselchanged": {
-        _args params ["_tree","_sel"];
-
-        if (count _sel == 3) then {
-            GVAR(treeSel) = objectFromNetId (_tree tvData _sel);
-        } else {
-            GVAR(treeSel) = objNull;
         };
     };
     case "onunitsupdate": {

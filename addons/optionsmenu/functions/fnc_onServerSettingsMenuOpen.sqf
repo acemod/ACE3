@@ -18,7 +18,7 @@
 
 private ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_setting", "_menu", "_settingsMenu"];
 
-if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitwith {closeDialog 145246;};
+if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitWith {closeDialog 145246;};
 
 // Filter only user setable setting
 GVAR(serverSideOptions) = [];
@@ -57,7 +57,7 @@ GVAR(serverSideValues) = [];
 [{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
 
 disableSerialization;
-_menu = uiNamespace getvariable "ACE_serverSettingsMenu";
+_menu = uiNamespace getVariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {

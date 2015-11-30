@@ -25,6 +25,6 @@ _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerColor) = _index;
 
-_config = (configfile >> "CfgMarkerColors") select _data;
+_config = (configFile >> "CfgMarkerColors") select _data;
 
 GVAR(currentMarkerColorConfigName) = (configName _config);

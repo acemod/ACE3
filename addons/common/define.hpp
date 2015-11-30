@@ -116,9 +116,9 @@ class ACE_gui_editBase
     };
     colorSelection[] =
     {
-            "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-            "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-            "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
+            "(profilenamespace getVariable ['GUI_BCG_RGB_R',0.3843])",
+            "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.7019])",
+            "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.8862])",
             1
     };
     autocomplete = "";
@@ -249,7 +249,7 @@ class ACE_gui_listBoxBase : RscListBox{
   colorSelect2[] = {0.95, 0.95, 0.95, 1};
   colorSelectBackground[] = {0, 0, 0, 1};
   colorSelectBackground2[] = {0.543, 0.5742, 0.4102, 1.0};
-  colorDisabled[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 0.25};
+  colorDisabled[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", 0.25};
   period = 1.2;
   rowHeight = 0.03;
   colorBackground[] = {0, 0, 0, 1};
@@ -505,7 +505,7 @@ onMouseButtonDblClick = "";
   iconCanceled = "\A3\ui_f\data\map\mapcontrol\taskIconCanceled_CA.paa";
   iconDone = "\A3\ui_f\data\map\mapcontrol\taskIconDone_CA.paa";
   iconFailed = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_CA.paa";
-  color[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"};
+  color[] = {"(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])","(profilenamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
   colorCreated[] = {1,1,1,1};
   colorCanceled[] = {0.7,0.7,0.7,1};
   colorDone[] = {0.7,1,0.3,1};

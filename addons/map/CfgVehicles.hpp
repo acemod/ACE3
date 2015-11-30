@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_MapFlashlight {
                 displayName = CSTRING(Action_Flashlights);
                 icon = QUOTE(\a3\ui_f\data\IGUI\Cfg\VehicleToggles\lightsiconon_ca.paa);
-                condition = QUOTE(GVAR(mapIllumination) && visibleMap && (count ([ACE_player] call FUNC(getUnitFlashlights)) > 0));
+                condition = QUOTE(GVAR(mapIllumination) && visibleMap && {count ([ACE_player] call FUNC(getUnitFlashlights)) > 0});
                 statement = "true";
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 insertChildren = QUOTE(_this call DFUNC(compileFlashlightMenu));
@@ -23,6 +23,7 @@ class CfgVehicles {
         function = QFUNC(moduleMap);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Map_ca.paa);
         class Arguments {
             class MapIllumination {
@@ -82,6 +83,7 @@ class CfgVehicles {
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
         isGlobal = 0;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {
             class Enabled {

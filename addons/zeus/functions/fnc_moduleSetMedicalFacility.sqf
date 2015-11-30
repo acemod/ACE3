@@ -40,7 +40,7 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
                     [LSTRING(OnlyNonCaptive)] call EFUNC(common,displayTextStructured);
                 } else {
                     if (!(GETVAR(_unit,EGVAR(medical,isMedicalFacility),false))) then {
-                        _unit setvariable [QEGVAR(medical,isMedicalFacility), true, true];
+                        _unit setVariable [QEGVAR(medical,isMedicalFacility), true, true];
                     };
                 };
             };

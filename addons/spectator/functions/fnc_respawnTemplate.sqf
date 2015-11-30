@@ -34,7 +34,7 @@ _pos = (getPosATL _unit) vectorAdd [0,0,5];
 // Enter/exit spectator based on the respawn type and whether killed/respawned
 if (alive _unit) then {
     if (_respawn == 1) then {
-        [_unit,QGVAR(isSeagull)] call EFUNC(common,hideUnit);
+        [_unit] call FUNC(stageSpectator);
         [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
         [true] call FUNC(setSpectator);
     } else {

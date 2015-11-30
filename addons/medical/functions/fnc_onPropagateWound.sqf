@@ -18,19 +18,19 @@ private ["_unit", "_injury", "_openWounds", "_injuryID", "_exists"];
 params ["_unit", "_injury"];
 
 if (!local _unit) then {
-    _openWounds = _unit getvariable[QGVAR(openWounds), []];
+    _openWounds = _unit getVariable[QGVAR(openWounds), []];
     _injuryID = _injury select 0;
 
     _exists = false;
     {
-        if (_x select 0 == _injuryID) exitwith {
+        if (_x select 0 == _injuryID) exitWith {
             _exists = true;
-            _openWounds set [_foreachIndex, _injury];
+            _openWounds set [_forEachIndex, _injury];
         };
-    } foreach _openWounds;
+    } forEach _openWounds;
 
     if (!_exists) then {
-        _openWounds pushback _injury;
+        _openWounds pushBack _injury;
     };
-    _unit setvariable [QGVAR(openWounds), _openWounds];
+    _unit setVariable [QGVAR(openWounds), _openWounds];
 };

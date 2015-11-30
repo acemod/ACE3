@@ -57,7 +57,7 @@ if (_mode == 0) then {
         if (count _no > 0) exitWith {
             _found = true;								//diag_log "found";
         };
-    } foreach _wireCheckPosAr;
+    } forEach _wireCheckPosAr;
     // Double coil found!
     if (_found) then {
         _mode = 1;

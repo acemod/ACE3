@@ -32,7 +32,7 @@ if (isServer) then {
 
         private "_eventLog";
         _eventLog = _internalData select 1;
-        _eventLog pushback [ACE_diagTime, _args, _ttl];
+        _eventLog pushBack [ACE_diagTime, _args, _ttl];
     };
 };
 

@@ -30,12 +30,6 @@ _var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 
 TRACE_4("Parameters:",_overpressureAngle,_overpressureRange,_overpressureDamage,_weapon);
 
-private "_pos";
-_pos = _posASL;
-if (!surfaceIsWater _pos) then {
-    _pos = ASLtoATL _pos;
-};
-
 {
     if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
         private ["_targetPositionASL", "_relativePosition", "_axisDistance", "_distance", "_angle", "_line", "_line2"];
@@ -62,10 +56,10 @@ if (!surfaceIsWater _pos) then {
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
             if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_x] call EFUNC(medical,hasMedicalEnabled))}) then {
-                [_x, "body", ((_x getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
+                [_x, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
             } else {
                 _x setDamage (damage _x + _damage);
             };
         };
     };
-} forEach (_pos nearEntities ["CAManBase", _overpressureRange]);
+} forEach ((ASLtoAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);

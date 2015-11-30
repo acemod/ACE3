@@ -35,7 +35,7 @@ if (!isServer) exitWith {false};
         _eventEntry = _x;
         _ttlReturn = true;
 
-        if (typeName _globalEventTTL == "CODE") then {
+        if (_globalEventTTL isEqualType {}) then {
             _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
         } else {
             _ttlReturn = call {_globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL}};
@@ -45,7 +45,7 @@ if (!isServer) exitWith {false};
             // Do event based TTL check
             _eventEntry params ["_time", "", "_eventTTL"];
 
-            if (typeName _eventTTL == "CODE") then {
+            if (_eventTTL isEqualType {}) then {
                 _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
             } else {
                 _ttlReturn = call {_eventTTL < 1 || {ACE_diagTime < _time + _eventTTL}};

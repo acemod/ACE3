@@ -41,14 +41,14 @@ _var params["_backblastAngle","_backblastRange","_backblastDamage"];
 
 // Damage to others
 private "_affected";
-_affected = getPos _projectile nearEntities ["CAManBase", _backblastRange];
+_affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_firer, _position, _direction, _weapon]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_firer, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
 
 // Damage to the firer
 private "_distance";
-_distance = [_position, _direction, _backblastRange] call FUNC(getDistance);
+_distance = [_position, _direction, _backblastRange, _firer] call FUNC(getDistance);
 
 TRACE_1("Distance",_distance);
 
@@ -62,7 +62,7 @@ if (_distance < _backblastRange) then {
     [_damage * 100] call BIS_fnc_bloodEffect;
 
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_firer] call EFUNC(medical,hasMedicalEnabled))}) then {
-         [_firer, "body", ((_firer getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
+        [_firer, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
         _firer setDamage (damage _firer + _damage);
     };

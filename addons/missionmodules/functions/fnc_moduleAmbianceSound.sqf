@@ -18,10 +18,8 @@
 
 #include "script_component.hpp"
 
-private ["_logic", "_units", "_activated","_ambianceSounds", "_soundFiles", "_minimalDistance","_maximalDistance", "_minimalDistance", "_maxDelayBetweenSounds", "_allUnits", "_newPos", "_targetUnit", "_soundToPlay", "_soundPath", "_unparsedSounds", "_list", "_splittedList", "_nilCheckPassedList"];
-_logic = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_units = [_this,1,[],[[]]] call BIS_fnc_param;
-_activated = [_this,2,true,[true]] call BIS_fnc_param;
+private ["_ambianceSounds", "_minimalDistance","_maximalDistance", "_minimalDistance", "_maxDelayBetweenSounds", "_missionRoot", "_unparsedSounds", "_splittedList", "_soundPath"];
+params ["_logic", "_units", "_activated"];
 
 // We only play this on the locality of the logic, since the sounds are broadcasted across the network
 if (_activated && local _logic) then {
@@ -34,51 +32,49 @@ if (_activated && local _logic) then {
     _volume = (_logic getVariable ["soundVolume", 30]) max 1;
     _followPlayers = _logic getVariable ["followPlayers", false];
 
-    _splittedList = [_unparsedSounds, ","] call BIS_fnc_splitString;
+    _splittedList = _unparsedSounds splitString ",";
+    _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
 
-    _nilCheckPassedList = "";
     {
         _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
-        _splittedList set [_forEachIndex, _x];
-    }forEach _splittedList;
 
-    _soundPath = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
-    {
         if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
-            _ambianceSounds pushBack (_soundPath + (getArray(missionConfigFile >> "CfgSounds" >> _x >> "sound") select 0));
+            // CfgSounds accepts a leading backslash, but a double backslash
+            // is not accepted in the path, so we have to filter that.
+            _soundPath = getArray (missionConfigFile >> "CfgSounds" >> _x >> "sound") select 0;
+            if (_soundPath select [0,1] == "\") then {
+                _ambianceSounds pushBack (_missionRoot + (_soundPath select [1]));
+            } else {
+                _ambianceSounds pushBack (_missionRoot + _soundPath);
+            };
         } else {
             if (isClass (configFile >> "CfgSounds" >> _x)) then {
                 _ambianceSounds pushBack ((getArray(configFile >> "CfgSounds" >> _x >> "sound") select 0));
+            } else {
+                ACE_LOGERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
             };
         };
-    }forEach _splittedList;
+
+        false
+    } count _splittedList;
 
     if (count _ambianceSounds == 0) exitWith {};
     {
-        if !([".", _x, true] call BIS_fnc_inString) then {
+        if ((_x find ".") == -1) then {
             _ambianceSounds set [_forEachIndex, _x + ".wss"];
         };
-    }forEach _ambianceSounds;
+    } forEach _ambianceSounds;
 
     [{
-        private ["_args", "_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers","_lastTimePlayed", "_newPos"];
-        _args = _this select 0;
-        _logic = _args select 0;
-        _minDelayBetweensounds = _args select 4;
-        _maxDelayBetweenSounds = _args select 5;
-        _lastTimePlayed = _args select 8;
+        private ["_newPos", "_allUnits", "_targetUnit"];
+        params ["_args", "_pfhHandle"];
+        _args params ["_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers", "_lastTimePlayed"];
 
         if (!alive _logic) exitWith {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [_pfhHandle] call CBA_fnc_removePerFrameHandler;
         };
 
         if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
-            _ambianceSounds = _args select 1;
-            _minimalDistance = _args select 2;
-            _maximalDistance = _args select 3;
-
-            _volume = _args select 6;
-            _followPlayers = _args select 7;
 
             // Find all players in session.
             _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
@@ -87,7 +83,7 @@ if (_activated && local _logic) then {
             if (count _allUnits > 0) then {
 
                 // Select a target unit at random.
-                _targetUnit = _allUnits select (round(random((count _allUnits)-1)));
+                _targetUnit = _allUnits call BIS_fnc_selectRandom;
 
                 // find the position from which we are going to play this sound from.
                 _newPos = (getPos _targetUnit);
@@ -112,7 +108,7 @@ if (_activated && local _logic) then {
 
                 // If no unit is to close to this position, we will play the sound.
                 if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
-                    playSound3D [_ambianceSounds select (round(random((count _ambianceSounds)-1))), ObjNull,  false, _newPos, _volume, 1, 1000];
+                    playSound3D [_ambianceSounds call BIS_fnc_selectRandom, objNull,  false, _newPos, _volume, 1, 1000];
                     _args set [8, ACE_time];
                 };
             };

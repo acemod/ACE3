@@ -32,5 +32,5 @@ namespace ace {
             std::vector<bone_p> all_bones;
         };
         typedef std::shared_ptr<skeleton> skeleton_p;
-    };
-};
+    }
+}
