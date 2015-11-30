@@ -10,7 +10,7 @@
  * Arguments:
  * 0: Unit (player) <OBJECT>
  * 1: attachToVehicle <OBJECT>
- * 2: Item Classname (cfgWeapon/cfgMagazine) <STRING>
+ * 2: Item Classname (CfgWeapon/CfgMagazine) <STRING>
  * 3: Light Vehicle Classname <STRING>
  * 4: On Attach Text <STRING>
  * 5: Starting Pos of dummy item <ARRAY>

@@ -39,17 +39,17 @@ if ({local _x} count (objectcurators _logic) > 0) then {
 if !(isserver) exitwith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "cfgvehicles" >> typeof _logic >> "ammo")];
+    _ammo = _logic getvariable ["type",gettext (configfile >> "CfgVehicles" >> typeof _logic >> "ammo")];
     if (_ammo != "") then {
-        _cfgAmmo = configfile >> "cfgammo" >> _ammo;
-        //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
+        _CfgAmmo = configfile >> "CfgAmmo" >> _ammo;
+        //if !(isclass _CfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         _dirVar = _fnc_scriptname + typeof _logic;
         _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;
         _posAmmo = +_pos;
         _posAmmo set [2,0];
         _dir = direction _logic;
-        _simulation = tolower gettext (configfile >> "cfgammo" >> _ammo >> "simulation");
+        _simulation = tolower gettext (configfile >> "CfgAmmo" >> _ammo >> "simulation");
         _altitude = 0;
         _velocity = [];
         _attach = false;
@@ -65,7 +65,7 @@ if (_activated) then {
                 _altitude = 1000;
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
-                _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
+                _sounds = if (getnumber (_CfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
                 _sound = _sounds call bis_fnc_selectrandom;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
