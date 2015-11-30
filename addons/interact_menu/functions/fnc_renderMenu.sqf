@@ -116,7 +116,7 @@ _angle = _centerAngle - _angleSpan / 2;
     private ["_offset","_newPos"];
     _newPos =  if (GVAR(UseListMenu)) then {
         [(_sPos select 0) + _scaleX,
-         (_sPos select 1) + _scaleY * (_forEachindex - _numChildren/2 + 0.5)];
+         (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
     } else {
         [(_sPos select 0) - _scaleX * (cos _angle),
          (_sPos select 1) + _scaleY * (sin _angle)];
