@@ -85,7 +85,7 @@ if (_activated) then {
             case 1: {
                 _addonsList = [];
                 {
-                    _addonsList = _addonsList + (unitaddons typeof _x);
+                    _addonsList = _addonsList + (unitaddons typeOf _x);
                 } foreach (entities "all");
                 removeallcuratoraddons _logic;
                 _logic addcuratoraddons _addonsList;
@@ -210,7 +210,7 @@ if (_activated) then {
         //--- Activated all future addons
         _addons = [];
         {
-            if (typeof _x == "ModuleCuratorAddAddons_F") then {
+            if (typeOf _x == "ModuleCuratorAddAddons_F") then {
                 _paramAddons = call compile ("[" + (_x getvariable ["addons",""]) + "]");
                 {
                     if !(_x in _addons) then {_addons set [count _addons,_x];};

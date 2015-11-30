@@ -9,7 +9,7 @@
     {
         [_x] call {
             params ["_logic"];
-            private _logicType = typeof _logic;
+            private _logicType = typeOf _logic;
             _logic hideobject true;
 
             if (_logic getvariable [QGVAR(initalized), false]) exitWith {};

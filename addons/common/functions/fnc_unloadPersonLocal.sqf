@@ -27,7 +27,7 @@ if (_vehicle isKindOf "Ship") then {
 
     TRACE_1("SHIP Ground Check",getPos _vehicle);
 
-    _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit]; // TODO: if spot is underwater pick another spot.
+    _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeOf _unit]; // TODO: if spot is underwater pick another spot.
 } else {
     if (_vehicle isKindOf "Air") then {
         if (speed _vehicle > 1 || {isTouchingGround _vehicle}) then {
@@ -45,7 +45,7 @@ if (_vehicle isKindOf "Ship") then {
 
         TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
 
-        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit];
+        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeOf _unit];
     };
 };
 

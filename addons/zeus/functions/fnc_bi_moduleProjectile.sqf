@@ -39,11 +39,11 @@ if ({local _x} count (objectcurators _logic) > 0) then {
 if !(isserver) exitWith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "CfgVehicles" >> typeof _logic >> "ammo")];
+    _ammo = _logic getvariable ["type",gettext (configfile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
         _CfgAmmo = configfile >> "CfgAmmo" >> _ammo;
         //if !(isclass _CfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
-        _dirVar = _fnc_scriptname + typeof _logic;
+        _dirVar = _fnc_scriptname + typeOf _logic;
         _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;
         _posAmmo = +_pos;
@@ -194,6 +194,6 @@ if (_activated) then {
             deletevehicle _logic;
         };
     } else {
-        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeof _logic] call bis_fnc_error;
+        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeOf _logic] call bis_fnc_error;
     };
 };
