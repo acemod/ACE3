@@ -3859,5 +3859,61 @@
             <Russian>Нет жгута на этой части тела!</Russian>
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_exitReviveBy_DisplayName">
+            <English>Exit by [Adv.]</English>
+            <German>Ende durch [Adv.]</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_exitReviveBy_Description">
+            <English>Sets which medical actions will get the player out of the revive state.</English>
+            <German>Setzt wodurch ein Spieler wiederbelebt werden kann.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_onlyPAK">
+            <English>Personal aid kit only</English>
+            <German>Nur Erste-Hilfe-Set</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_defibrillatorPAK">
+            <English>Defibrillator and PAK</English>
+            <German>Defibrillator und EHS</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_ReviveSettings_defibrillatorPAKCPR">
+            <English>Defibrillator, CPR and PAK</English>
+            <German>Defibrillator, HLW und EHS</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_DisplayName">
+            <English>Defibrillator</English>
+            <German>Defibrillator</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_DescriptionShort">
+            <English>Device used for resuscitation after cardia arrest.</English>
+            <German>Gerät zur Reanimation nach einem Herzstillstand.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_DescriptionUse">
+            <English>A medical device that can be used for resuscitation after cardiac arrest.</English>
+            <German>Ein medizinisches Gerät das zur Reanimation nach einem Herzstillstand verwendet werden kann.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_Deploy">
+            <English>Deploy defibrillator</English>
+            <German>Defibrillator aufstellen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_Ready">
+            <English>Ready defibrillator</English>
+            <German>Defibrillator vorbereiten</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_Readying">
+            <English>Preparing defibrillator...</English>
+            <German>Bereite Defibrillator vor...</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_PickUp">
+            <English>Pick Up</English>
+            <German>Aufnehmen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_Use">
+            <English>Defibrillate patient</English>
+            <German>Patient defibrillieren</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Defibrillator_Using">
+            <English>Defibrillating patient...</English>
+            <German>Defibrilliere patient...</German>
+        </Key>
     </Package>
 </Project>
