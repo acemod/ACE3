@@ -1,11 +1,9 @@
 class CfgVehicles {
-    class UAV_01_base_F;
-    class GVAR(helper): UAV_01_base_F {
+    class Helicopter_Base_H;
+    class GVAR(helper): Helicopter_Base_H {
         author = "KoffeinFlummi";
-        scope = 1;
+        scope = 2;
         model = PATHTOF(data\helper.p3d);
-        isUAV = 0;
-        displayName = "";
     };
 
     class Building;
@@ -36,13 +34,9 @@ class CfgVehicles {
 
     class Logic;
     class Module_F: Logic {
-        class ArgumentsBaseUnits {};
-        class ModuleDescription {
-            class AnyVehicle {};
-        };
+        class ModuleDescription;
     };
-
-    class ACE_Module;
+    class ACE_Module: Module_F {};
     class ACE_moduleEquipFRIES: ACE_Module {
         scope = 2;
         displayName = CSTRING(Module_FRIES_DisplayName);
@@ -55,15 +49,9 @@ class CfgVehicles {
         isDisposable = 0;
         author = "BaerMitUmlaut";
 
-        class ModuleDescription {
+        class ModuleDescription: ModuleDescription {
             description = CSTRING(Module_FRIES_Description);
             sync[] = {"AnyVehicle"};
-            class AnyVehicle {
-                position = 0;
-                direction = 0;
-                optional = 0;
-                duplicate = 1;
-            };
         };
     };
 
@@ -101,7 +89,6 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter_Base_H;
     class Heli_Light_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
