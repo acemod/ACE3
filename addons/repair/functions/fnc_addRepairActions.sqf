@@ -32,8 +32,6 @@ if (_type in _initializedClasses) exitWith {};
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
 
-if (_hitSelections isEqualTo []) exitWith { ACE_LOGERROR_1("No hit selections (%1)", _type); };
-
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
