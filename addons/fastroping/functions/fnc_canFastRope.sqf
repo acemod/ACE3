@@ -17,9 +17,8 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
 ((driver _vehicle != _unit) &&
 {!(_deployedRopes isEqualTo [])} &&

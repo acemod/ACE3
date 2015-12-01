@@ -60,7 +60,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
-                condition = [_player, vehicle _player] call FUNC(canPrepareFRIES);
+                condition = [vehicle _player] call FUNC(canPrepareFRIES);
                 statement = [_player, vehicle _player] call FUNC(prepareFRIES);
                 showDisabled = 0;
                 priority = 1;
@@ -68,13 +68,13 @@ class CfgVehicles {
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
                 condition = [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [_player, vehicle _player] call FUNC(deployRopes);
+                statement = [vehicle _player] call FUNC(deployRopes);
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [_player, vehicle _player] call FUNC(canCutRopes);
+                condition = [vehicle _player] call FUNC(canCutRopes);
                 statement = [vehicle _player] call FUNC(cutRopes);
                 showDisabled = 0;
                 priority = 1;

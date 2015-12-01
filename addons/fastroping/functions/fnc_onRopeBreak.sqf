@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 params ["_ehArgs", "_part"];
 _ehArgs params ["_rope", "_helper1", "_helper2"];
-private ["_vehicle", "_deployedRopes", "_unit"];
+private ["_vehicle", "_deployedRopes", "_brokenRope", "_unit"];
 
 if (_part == "bottom") then {
     _helper2 = (ropeAttachedObjects _helper1) select 0;

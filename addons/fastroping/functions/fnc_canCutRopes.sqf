@@ -3,22 +3,20 @@
  * Checks if the unit can cut deployed ropes.
  *
  * Arguments:
- * 0: Unit occupying the helicopter <OBJECT>
- * 1: The helicopter itself <OBJECT>
+ * 0: The helicopter itself <OBJECT>
  *
  * Return Value:
  * Able to cut ropes <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_canCutRopes
+ * [_vehicle] call ace_fastroping_canCutRopes
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-params ["_unit", "_vehicle"];
-private ["_deployedRopes"];
+params ["_vehicle"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
 !(_deployedRopes isEqualTo [])

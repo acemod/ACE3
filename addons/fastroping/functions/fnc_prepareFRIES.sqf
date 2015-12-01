@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes"];
+private ["_config", "_waitTime"];
 
 //Stage indicator: 0 - travel mode; 1 - preparing FRIES; 2 - FRIES ready; 3 - ropes deployed
 _vehicle setVariable [QGVAR(deploymentStage), 1, true];

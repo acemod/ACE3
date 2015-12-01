@@ -16,9 +16,8 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_fries"];
 
-_fries = _vehicle getVariable [QGVAR(FRIES), objNull];
+private _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {
     _fries animate ["extendHookRight", 0];
     _fries animate ["extendHookLeft", 0];

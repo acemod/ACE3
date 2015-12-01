@@ -17,10 +17,8 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes", "_config"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
 ((driver _vehicle != _unit) &&
 {(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 2} &&
