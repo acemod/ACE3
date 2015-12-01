@@ -114,7 +114,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins[]) = {"hookRight", "hookLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
-        GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.15};
+        GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.17};
 
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
