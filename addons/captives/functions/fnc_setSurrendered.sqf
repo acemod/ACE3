@@ -19,7 +19,7 @@
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     ERROR("running surrender on remote unit");
 };
 
@@ -36,7 +36,7 @@ if (_state) then {
     [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
 
     if (_unit == ACE_player) then {
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     };
 
     [_unit] call EFUNC(common,fixLoweredRifleAnimation);
@@ -75,7 +75,7 @@ if (_state) then {
     if (_unit == ACE_player) then {
         //only re-enable HUD if not handcuffed
         if (!(_unit getVariable [QGVAR(isHandcuffed), false])) then {
-            showHUD true;
+            ["captive", []] call EFUNC(common,showHud); //same as showHud true;
         };
     };
 

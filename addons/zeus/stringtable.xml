@@ -215,21 +215,25 @@
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
             <Portuguese>Adicionar roda sobressalente</Portuguese>
+            <Polish>Dodaj koło zapasowe</Polish>
             <Russian>Добавить запасное колесо</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
             <Portuguese>Adiciona uma roda sobressalente ao veículo</Portuguese>
+            <Polish>Dodaje koło zapasowe do pojazdu</Polish>
             <Russian>Добавляет запасное колесо в транспорт</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
             <Portuguese>Adicionar esteira sobressalente</Portuguese>
+            <Polish>Dodaj zapasową gąsienicę</Polish>
             <Russian>Дабавить запасную гусеницу</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
             <Portuguese>Adiciona uma esteira sobressalente ao veículo</Portuguese>
+            <Polish>Dodaje zapasową gąsienicę do pojazdu</Polish>
             <Russian>Добавляет запасную гусеницу в транспорт</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
@@ -273,11 +277,13 @@
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
             <Portuguese>Unidade deve ser um veículo com espaço em carga</Portuguese>
+            <Polish>Jednostka musi być pojazdem z wolną przestrzenią cargo</Polish>
             <Russian>Юнит должен быть транспортом с грузовым отсеком</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
             <Portuguese>Unidade deve conter espaço sobressalente</Portuguese>
+            <Polish>Jednostka musi mieć wolną przestrzeń cargo</Polish>
             <Russian>Юнит должен иметь свободное место в грузовом отсеке</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">

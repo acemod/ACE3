@@ -1,19 +1,36 @@
-// by commy2 and esteldunedain
+/*
+ * Author: commy2 and esteldunedain
+ * Draw a Laser Point
+ *
+ * Arguments:
+ * 0: Target unit <OBJECT>
+ * 1: Range <NUMBER>
+ * 2: is Green <BOOL>
+ * 3: Brightness <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, 10, false, 2] call ace_laserpointer_fnc_drawLaserpoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-params ["_unit", "_range", "_isGreen", "_brightness"];
+params ["_target", "_range", "_isGreen", "_brightness"];
 
-private ["_p0", "_v1", "_v2", "_v3", "_p1", "_pL", "_distance", "_pL2", "_camPos", "_size"];
+private _unit = ACE_player;
 
-_p0 = AGLToASL (_unit modelToWorldVisual (_unit selectionPosition "righthand"));
+private _p0 = AGLToASL (_target modelToWorldVisual (_target selectionPosition "righthand"));
 
 // Find a system of orthogonal reference vectors
 // _v1 points in the direction of the weapon
 // _v2 points to the right of the weapon
 // _v3 points to the top side of the weapon
-_v1 = _unit weaponDirection currentWeapon _unit;
-_v2 = vectorNormalized (_v1 vectorCrossProduct [0,0,1]);
-_v3 = _v2 vectorCrossProduct _v1;
+private _v1 = _target weaponDirection currentWeapon _target;
+private _v2 = vectorNormalized (_v1 vectorCrossProduct [0,0,1]);
+private _v3 = _v2 vectorCrossProduct _v1;
 
 // Offset over the 3 reference axis
 // This offset could eventually be configured by weapon in the config
@@ -22,23 +39,24 @@ _v3 = _v2 vectorCrossProduct _v1;
 #define OFFV3 0.08
 
 // Offset _p0, the start of the laser
-_p0    = _p0    vectorAdd (_v1 vectorMultiply OFFV1) vectorAdd (_v3 vectorMultiply OFFV3) vectorAdd (_v2 vectorMultiply OFFV2);
+_p0 = _p0 vectorAdd (_v1 vectorMultiply OFFV1) vectorAdd (_v3 vectorMultiply OFFV3) vectorAdd (_v2 vectorMultiply OFFV2);
 
 // Calculate _p1, the potential end of the laser
-_p1    = _p0    vectorAdd (_v1 vectorMultiply _range);
+private _p1 = _p0 vectorAdd (_v1 vectorMultiply _range);
 
-_pL = lineIntersectsSurfaces [_p0, _p1, ACE_player, vehicle ACE_player, true, 1, "GEOM", "FIRE"] select 0 select 0;
+private _pL = lineIntersectsSurfaces [_p0, _p1, _unit, vehicle _unit] select 0 select 0;
 
 // no intersection found, quit
 if (isNil "_pL") exitWith {};
 
-_distance = _p0 vectorDistance _pL;
+private _distance = _p0 vectorDistance _pL;
 
 //systemChat str _distance;
 if (_distance < 0.5) exitWith {};
 
 _pL = _p0 vectorAdd (_v1 vectorMultiply _distance);
-_pL2 = _p0 vectorAdd (_v1 vectorMultiply (_distance - 0.5));
+
+private _pL2 = _p0 vectorAdd (_v1 vectorMultiply (_distance - 0.5));
 
 _pL = ASLtoAGL _pL;
 
@@ -50,19 +68,20 @@ drawLine3D [
 ];
 */
 
-//systemChat str [_unit, "FIRE"] intersect [_camPos, _pL];
+//systemChat str [_target, "FIRE"] intersect [_camPos, _pL];
 
-_camPos = positionCameraToWorld [0,0,0.2];
-if (count ([_unit,      "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
-if (count ([ACE_player, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
+private _camPos = positionCameraToWorld [0,0,0.2];
+
+if (count ([_target, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
+if (count ([_unit, "FIRE"] intersect [_camPos, _pL]) > 0) exitWith {};
 
 // Convert _camPos to ASL
 _camPos = AGLToASL _camPos;
 
-if (                  terrainIntersectASL [_camPos, _pL2])     exitWith {};
-if (                       lineIntersects [_camPos, _pL2])     exitWith {};
+if (terrainIntersectASL [_camPos, _pL2]) exitWith {};
+if (lineIntersects [_camPos, _pL2]) exitWith {};
 
-_size = 2 * (_range - (positionCameraToWorld [0,0,0] vectorDistance _pL)) / _range;
+private _size = 2 * (_range - (positionCameraToWorld [0,0,0] vectorDistance _pL)) / _range;
 
 drawIcon3D [
     format ["\a3\weapons_f\acc\data\collimdot_%1_ca.paa", ["red", "green"] select _isGreen],

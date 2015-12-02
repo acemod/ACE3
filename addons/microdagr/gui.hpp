@@ -59,10 +59,10 @@ class GVAR(TheDialog) {
 
 
 //Redfine Scaling for the RscTitle
-#define PROFILE_X (profilenamespace getvariable ['IGUI_GRID_GPS_X', 0])
-#define PROFILE_Y (profilenamespace getvariable ['IGUI_GRID_GPS_Y', 0])
-#define PROFILE_W (profilenamespace getvariable ['IGUI_GRID_GPS_W', 1])
-#define PROFILE_H ((16/9) * (profilenamespace getvariable ['IGUI_GRID_GPS_W', 1]))
+#define PROFILE_X (profilenamespace getVariable ['IGUI_GRID_GPS_X', 0])
+#define PROFILE_Y (profilenamespace getVariable ['IGUI_GRID_GPS_Y', 0])
+#define PROFILE_W (profilenamespace getVariable ['IGUI_GRID_GPS_W', 1])
+#define PROFILE_H ((16/9) * (profilenamespace getVariable ['IGUI_GRID_GPS_W', 1]))
 
 #define X_PART(num) QUOTE((num) / 25 * PROFILE_W + PROFILE_X)
 #define Y_PART(num) QUOTE((num) / 25 * PROFILE_H + PROFILE_Y)

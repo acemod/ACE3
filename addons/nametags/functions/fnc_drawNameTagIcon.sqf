@@ -22,7 +22,7 @@
 
 params ["_player", "_target", "_alpha", "_heightOffset", "_iconType"];
 
-if (_iconType == ICON_NONE) exitWith {}; //Don't waste time if not visable
+if ((_iconType == ICON_NONE) || {isObjectHidden  _target}) exitWith {}; //Don't waste time if not visable
 
 private ["_position", "_color", "_name", "_size", "_icon", "_scale"];
 
@@ -30,7 +30,7 @@ private ["_position", "_color", "_name", "_size", "_icon", "_scale"];
 _icon = "";
 _size = 0;
 if (_iconType in [ICON_NAME_SPEAK, ICON_SPEAK]) then {
-    _icon = QUOTE(PATHTOF(UI\soundwave)) + str (floor (random 10)) + ".paa";
+    _icon = format ["%1%2%3",QUOTE(PATHTOF(UI\soundwave)), floor (random 10), ".paa"];
     _size = 1;
     _alpha = (_alpha max 0.2) + 0.2;//Boost alpha when speaking
 } else {
@@ -57,20 +57,24 @@ if ((group _target) != (group _player)) then {
     _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
 };
 
+if (isNil "_color") then {
+    _color = [1, 1, 1, _alpha];
+};
+
 // Convert position to ASLW (expected by drawIcon3D) and add height offsets
 _position = _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .3)]);
 
 _scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);
 
 drawIcon3D [
-_icon,
-_color,
-_position,
-(_size * _scale),
-(_size * _scale),
-0,
-_name,
-2,
-(0.05 * _scale),
-"PuristaMedium"
+    _icon,
+    _color,
+    _position,
+    (_size * _scale),
+    (_size * _scale),
+    0,
+    _name,
+    2,
+    (0.05 * _scale),
+    "PuristaMedium"
 ];

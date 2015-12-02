@@ -36,22 +36,27 @@ if (isClass (_config >> _bandage)) then {
     _reopeningChance = getNumber (_config >> "reopeningChance");
     _reopeningMinDelay = getNumber (_config >> "reopeningMinDelay");
     _reopeningMaxDelay = getNumber (_config >> "reopeningMaxDelay") max _reopeningMinDelay;
+} else {
+    ACE_LOGWARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
 };
 
 if (isClass (_config >> _className)) then {
     _woundTreatmentConfig = (_config >> _className);
     if (isNumber (_woundTreatmentConfig >> "reopeningChance")) then {
         _reopeningChance = getNumber (_woundTreatmentConfig >> "reopeningChance");
-     };
+    };
     if (isNumber (_woundTreatmentConfig >> "reopeningMinDelay")) then {
         _reopeningMinDelay = getNumber (_woundTreatmentConfig >> "reopeningMinDelay");
-     };
+    };
     if (isNumber (_woundTreatmentConfig >> "reopeningMaxDelay")) then {
         _reopeningMaxDelay = getNumber (_woundTreatmentConfig >> "reopeningMaxDelay") max _reopeningMinDelay;
     };
+} else {
+    ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
 };
+TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
-_bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
+_bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
 _injuryType = _injury select 1;
 _exist = false;
 _bandagedInjury = [];
@@ -72,24 +77,26 @@ if !(_exist) then {
     _bandagedWounds pushback _bandagedInjury;
 };
 
-_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+_target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 
+TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
 if (random(1) <= _reopeningChance) then {
     _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
+    TRACE_1("Will open",_delay);
     [{
         private ["_bandage", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
 
         //if (alive _target) then {
-            _openWounds = _target getvariable [QGVAR(openWounds), []];
+            _openWounds = _target getVariable [QGVAR(openWounds), []];
             if ((count _openWounds)-1 < _injuryIndex) exitwith {};
             _selectedInjury = _openWounds select _injuryIndex;
             if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
                 _selectedInjury set [3, (_selectedInjury select 3) + _impact];
                 _openWounds set [_injuryIndex, _selectedInjury];
 
-                _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
+                _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
                 _exist = false;
                 _injuryId = _injury select 1;
                 {
@@ -102,11 +109,12 @@ if (random(1) <= _reopeningChance) then {
                 } foreach _bandagedWounds;
 
                 if (_exist) then {
-                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
-                    _target setvariable [QGVAR(openWounds), _openWounds, true];
+                    TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
+                    _target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+                    _target setVariable [QGVAR(openWounds), _openWounds, true];
                 };
             };
             // Otherwise something went wrong, we we don't reopen them..
        //};
-    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay, 0] call EFUNC(common,waitAndExecute);
+    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay] call EFUNC(common,waitAndExecute);
 };

@@ -29,17 +29,16 @@
     GVAR(nextFrameNo) = diag_frameno + 1;
 
     //Handle the waitUntilAndExec array:
-    private _deleted = 0;
     {
         // if condition is satisifed call statement
         if ((_x select 2) call (_x select 0)) then {
             // make sure to delete the correct handle when multiple conditions are met in one frame
-            GVAR(waitUntilAndExecArray) deleteAt (_forEachIndex - _deleted);
-            _deleted = _deleted + 1;
+            GVAR(waitUntilAndExecArray) deleteAt (GVAR(waitUntilAndExecArray) find _x);
             (_x select 2) call (_x select 1);
         };
-    } forEach GVAR(waitUntilAndExecArray);
-    
+        nil
+    } count +GVAR(waitUntilAndExecArray);
+
     END_COUNTER(waitAndExec);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
@@ -98,7 +97,6 @@
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 ["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
-["assignTeam", {(_this select 0) assignTeam (_this select 1)}] call FUNC(addEventHandler);
 ["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {

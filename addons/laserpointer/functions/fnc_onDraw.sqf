@@ -1,34 +1,33 @@
-// by commy2
+/*
+ * Author: commy2
+ * Draw the visible laser beams of all cached units.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_brightness", "_cacheName", "_isIR", "_laser", "_laserID", "_weapon"];
+private _isIR = currentVisionMode ACE_player;
 
-_isIR = currentVisionMode ACE_player;
 if (_isIR == 2) exitWith {};
 
 _isIR = _isIR == 1;
 
-_brightness = 2 - call EFUNC(common,ambientBrightness);
+private _brightness = 2 - call EFUNC(common,ambientBrightness);
 
 {
-    _weapon = currentWeapon _x;
-
-    _laser = switch (_weapon) do {
-        case (primaryWeapon _x): {
-            primaryWeaponItems _x select 1;
-        };
-        case (secondaryWeapon _x): {
-            secondaryWeaponItems _x select 1;
-        };
-        case (handgunWeapon _x): {
-            handgunItems _x select 1;
-        };
-        default {""};
-    };
+    private _weapon = currentWeapon _x;
+    private _laser = (_x weaponAccessories _weapon) select 1;
 
     if (_laser != "") then {
-        _cacheName = format [QGVAR(laser_%1), _laser];
-        _laserID = missionNamespace getVariable [_cacheName, -1];
+        private _cacheName = format [QGVAR(laser_%1), _laser];
+        private _laserID = missionNamespace getVariable [_cacheName, -1];
+
         if (missionNamespace getVariable [_cacheName, -1] == -1) then {
             _laserID = getNumber (configFile >> "CfgWeapons" >> _laser >> "ACE_laserpointer");
             missionNamespace setVariable [_cacheName, _laserID];
@@ -38,5 +37,5 @@ _brightness = 2 - call EFUNC(common,ambientBrightness);
             [_x, 100, (_laserID == 2 || _isIR), _brightness] call FUNC(drawLaserpoint);
         };
     };
-
-} forEach GVAR(nearUnits);
+    false
+} count GVAR(nearUnits);
