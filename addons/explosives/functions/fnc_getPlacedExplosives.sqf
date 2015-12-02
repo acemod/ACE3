@@ -44,9 +44,9 @@ _list = [];
 if (_adjustedList) then {
     _clackerList = _clackerList - ["X"];
     if (count _clackerList == 0) then {
-        _unit SetVariable [QGVAR(Clackers), nil, true];
+        _unit setVariable [QGVAR(Clackers), nil, true];
     } else {
-        _unit SetVariable [QGVAR(Clackers), _clackerList, true];
+        _unit setVariable [QGVAR(Clackers), _clackerList, true];
     };
 };
 

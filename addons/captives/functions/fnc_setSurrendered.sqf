@@ -19,7 +19,7 @@
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     ERROR("running surrender on remote unit");
 };
 

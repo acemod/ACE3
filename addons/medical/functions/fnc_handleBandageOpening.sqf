@@ -56,7 +56,7 @@ if (isClass (_config >> _className)) then {
 };
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
-_bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
+_bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
 _injuryType = _injury select 1;
 _exist = false;
 _bandagedInjury = [];
@@ -77,7 +77,7 @@ if !(_exist) then {
     _bandagedWounds pushback _bandagedInjury;
 };
 
-_target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+_target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
 
 TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
@@ -89,14 +89,14 @@ if (random(1) <= _reopeningChance) then {
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
 
         //if (alive _target) then {
-            _openWounds = _target getvariable [QGVAR(openWounds), []];
+            _openWounds = _target getVariable [QGVAR(openWounds), []];
             if ((count _openWounds)-1 < _injuryIndex) exitwith {};
             _selectedInjury = _openWounds select _injuryIndex;
             if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
                 _selectedInjury set [3, (_selectedInjury select 3) + _impact];
                 _openWounds set [_injuryIndex, _selectedInjury];
 
-                _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
+                _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
                 _exist = false;
                 _injuryId = _injury select 1;
                 {
@@ -110,8 +110,8 @@ if (random(1) <= _reopeningChance) then {
 
                 if (_exist) then {
                     TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
-                    _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
-                    _target setvariable [QGVAR(openWounds), _openWounds, true];
+                    _target setVariable [QGVAR(bandagedWounds), _bandagedWounds, true];
+                    _target setVariable [QGVAR(openWounds), _openWounds, true];
                 };
             };
             // Otherwise something went wrong, we we don't reopen them..
