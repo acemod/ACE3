@@ -13,8 +13,8 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#define ENABLE_PERFORMANCE_COUNTERS
+// #define DEBUG_MODE_FULL
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 #define TIME_FULL_CALC 0.5
@@ -30,7 +30,7 @@ _unit enableAimPrecision false;
     params ["_args", "_pfID"];
     _args params ["_unit", "_lastFastRun", "_lastFullRun", "_scriptedChangePerSecond", "_scriptedChangeDone", "_lastPos", "_lastStamina", "_exhaustionEnd"];
 
-    if ((isNull _unit) || {!alive _unit} || {_unit != ACE_player}) exitWith {
+    if ((!alive _unit) || {_unit != ACE_player}) exitWith {
         TRACE_1("null/dead/notplayer",_unit);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
@@ -44,18 +44,18 @@ _unit enableAimPrecision false;
     if (_scriptedChangePerSecond != 0) then {
         private _changeInStamina = _timeDiff * _scriptedChangePerSecond;
         _unit setStamina (((getStamina _unit) + _changeInStamina) max 0);
-        _scriptedChangeDone = _scriptedChangeDone + _changeInStamina;
-        _args set [4, _scriptedChangeDone];
+        _args set [4, (_scriptedChangeDone + _changeInStamina)]; //Add this round's change to total change
         // TRACE_3("tick",getStamina _unit,_changeInStamina,_scriptedChangeDone);
     };
 
-    //Don't run the full calculation every time:
+    //Full calc that sets effects and calculates a new _scriptedChangePerSecond:
     if (ACE_time > (_lastFullRun + TIME_FULL_CALC)) then {
         BEGIN_COUNTER(full);
         _timeDiff = ACE_time - _lastFullRun; //time since last full calc
         _args set [2, ACE_time]; //update _lastFullRun
 
         //Get diff in position (checking that both this and last positions were spent on the ground)
+        //This is used in calculating extra terrain effects (gradient of movement)
         private _posDiff = [0,0,0];
         if ((_unit == (vehicle _unit)) && {isTouchingGround _unit}) then {
             if (!(_lastPos isEqualTo [])) then {
@@ -69,7 +69,7 @@ _unit enableAimPrecision false;
         private _curStamina = getStamina _unit;
         //The real (unscripted) change in stamina (cap incase of mission scripted modification):
         private _staminaChangePerSecond = (((_curStamina - _lastStamina - _scriptedChangeDone) / _timeDiff) max -2) min 2;
-        _args set [4, 0]; //update _scriptedChangeDone
+        _args set [4, 0]; //reset _scriptedChangeDone
         _args set [6, _curStamina]; //update _lastStamina
 
         private _defaultStamina = getNumber (configFile >> "CfgMovesFatigue" >> "staminaDuration");
@@ -77,6 +77,7 @@ _unit enableAimPrecision false;
   
         TRACE_5("stamina",_maxStamina,_curStamina,_lastStamina,_scriptedChangeDone,_staminaChangePerSecond);
 
+        //Apply forceWalk/allowSprint effects:
         if (_curStamina <= (_maxStamina * GVAR(canNoLongerRun))) then {
             if !(isForcedWalk _unit) then {
                 TRACE_4("forceWalk true",_unit,_curStamina,_maxStamina,GVAR(canNoLongerRun));
@@ -106,7 +107,7 @@ _unit enableAimPrecision false;
             };
         };
 
-        //Add scripted modifiers:
+        //Add scripted modifiers to change in stamina:
         
         //Get the coefficent for the "real" stamina change include lessening the effects of load:
         private _staminaCoefficent = if (_staminaChangePerSecond < 0) then {
@@ -150,7 +151,7 @@ _unit enableAimPrecision false;
         if ((_maxSlowdown > 0) && {_maxSlowdown > _animSpeedCoef}) then {_animSpeedCoef = _maxSlowdown}; // --- respect maximum slowdown of a given animation defined in config
         _unit setAnimSpeedCoef _animSpeedCoef;
 
-        // --- weapon sway
+        // --- weapon sway (getAnimAimPrecision will get default aim for the stance)
         private _aimPrecision = (getAnimAimPrecision _unit) + linearConversion [0, _maxStamina, _curStamina, 5, 0, true];
         _unit setCustomAimCoef _aimPrecision;
 

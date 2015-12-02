@@ -3,12 +3,28 @@
     <Package name="fatigue">
         <Key ID="STR_ACE_FATIGUE_module_displayName">
             <English>Fatigue</English>
+            <Czech>Únava</Czech>
+            <French>Fatigue</French>
+            <German>Erschöpfung</German>
+            <Italian>Fatica</Italian>
+            <Polish>Zmęczenie</Polish>
+            <Portuguese>Fadiga</Portuguese>
+            <Russian>Форма</Russian>
+            <Spanish>Agotamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_FATIGUE_enabled_displayName">
-            <English>Enabled</English>
+            <English>Fatigue Enabled</English>
+            <Czech>Únava Zapnuto</Czech>
+            <French>Fatigue Oui</French>
+            <German>Erschöpfung Aktiviert</German>
+            <Italian>Fatica Attivato</Italian>
+            <Polish>Zmęczenie Włączone</Polish>
+            <Portuguese>Fadiga Ativado</Portuguese>
+            <Russian>Форма Вкл.</Russian>
+            <Spanish>Agotamiento Activado</Spanish>
         </Key>
         <Key ID="STR_ACE_FATIGUE_enabled_description">
-            <English>Scripted part needs to be enabled to apply all settings and effects. [default true]</English>
+            <English>Scripted part needs to be enabled to apply all settings and effects! Due to config changes it is not possible to completly disable. [default true]</English>
         </Key>
         <Key ID="STR_ACE_FATIGUE_staminaDrainMultiplier_displayName">
             <English>Drain Multiplier</English>
@@ -32,7 +48,7 @@
             <English>Fatigue needed to sprint</English>
         </Key>
         <Key ID="STR_ACE_FATIGUE_canNoLongerSprint_description">
-            <English>Cannot sprint when fatigued at or below this ratio [default 0.5]</English>
+            <English>Cannot sprint when fatigued below this ratio [default 0.5]</English>
         </Key>
         <Key ID="STR_ACE_FATIGUE_canNoLongerRun_displayName">
             <English>Fatigue needed to run</English>
@@ -44,7 +60,7 @@
             <English>Run cooldown after exhaustion</English>
         </Key>
         <Key ID="STR_ACE_FATIGUE_runCooldownAfterExhaustion_description">
-            <English>After fatigue is below that needed to run, how long will be spend force walking [default 10 sec]</English>
+            <English>How long will player be unable to run after becoming exhausted. [default 10 sec]</English>
         </Key>
     </Package>
 </Project>
