@@ -87,14 +87,13 @@ if (random(1) <= _reopeningChance) then {
     [{
         private ["_bandage", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
+        TRACE_5("params",_target,_impact,_part,_injuryIndex,_injury);
 
         //if (alive _target) then {
             _openWounds = _target getvariable [QGVAR(openWounds), []];
             if ((count _openWounds)-1 < _injuryIndex) exitwith {};
             _selectedInjury = _openWounds select _injuryIndex;
             if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
-                _selectedInjury set [3, (_selectedInjury select 3) + _impact];
-                _openWounds set [_injuryIndex, _selectedInjury];
 
                 _bandagedWounds = _target getvariable [QGVAR(bandagedWounds), []];
                 _exist = false;
@@ -110,6 +109,8 @@ if (random(1) <= _reopeningChance) then {
 
                 if (_exist) then {
                     TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
+                    _selectedInjury set [3, (_selectedInjury select 3) + _impact];
+                    _openWounds set [_injuryIndex, _selectedInjury];
                     _target setvariable [QGVAR(bandagedWounds), _bandagedWounds, true];
                     _target setvariable [QGVAR(openWounds), _openWounds, true];
                 };
