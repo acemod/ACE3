@@ -14,6 +14,10 @@ body > main {
     }
 
     background-color: $white;
+
+    img {
+        margin-bottom: rem-calc(20);
+    }
 }
 
 aside {
@@ -28,6 +32,6 @@ aside {
     }
 }
 
-.post > .row {
+/*.post > .row {
     margin-bottom: 1.25rem;
-}
+}*/
