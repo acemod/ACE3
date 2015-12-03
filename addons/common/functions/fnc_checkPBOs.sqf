@@ -9,7 +9,7 @@
  *   1 = Warn permanently
  *   2 = Kick
  * 1: Check all PBOs? (default: false) <BOOL>
- * 2: Whitelist (default: "[]") <STRING>
+ * 2: Whitelist (default: "") <STRING>
  *
  * Return Value:
  * None
@@ -18,9 +18,13 @@
  */
 #include "script_component.hpp"
 
-params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
+params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
+TRACE_3("params",_mode,_checkAll,_whitelist);
 
-_whitelist = [_whitelist, {toLower _this}] call FUNC(map);
+//lowercase and convert whiteList String into array of strings:
+_whitelist = toLower _whitelist;
+_whitelist = _whitelist splitString "[,""']";
+TRACE_1("Array",_whitelist);
 
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
