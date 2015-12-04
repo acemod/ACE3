@@ -167,7 +167,7 @@ call FUNC(checkFiles);
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),
-        call compile GVAR(checkPBOsWhitelist)
+        GVAR(checkPBOsWhitelist)
     ] call FUNC(checkPBOs)
 }] call FUNC(addEventHandler);
 
