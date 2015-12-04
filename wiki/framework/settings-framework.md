@@ -53,7 +53,7 @@ The load order for the settings are:
 4. Mission Paramaters
 5. Placed Mission Modules
 
-What this means is that at any the 4 points after the Mod Config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins, whom can ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
+What this means is that at any the 4 points after the Mod Config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins; it will ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
 
 
 ## 3. How do I use them?
@@ -109,16 +109,19 @@ Load the `ace_server.pbo` like any other addon on your server. It is advised to 
 
 ### 3.3 Changing ACE_settings dynamically with Mission Parameters
 
-It is possible to change ace settings via a mission's params.
+It is possible to change `ACE3 settings` via [Mission Parameters](https://community.bistudio.com/wiki/Arma_3_Mission_Parameters).
 This can allow a single mission to be played with different realism settings.
-They are read after all other configs but before modules. Params are forced so they will override any module setting.
+They are read after all other configs but before modules. Mission Parameters are forced so they will override any module setting.
 
 #### Basic Setup:
-1. Add a param with the same name as an ace_setting
+1. Add a Mission Parameter with the same name as an ace_setting
 2. Add the `ACE_setting = 1;` flag
 3. Add `values[]` and optionally `texts[]` to match the setting
 
-Note: For now only BOOL or SCALAR settings are supported.
+<div class="panel callout">
+    <h5>Please note:</h5>
+    <p>For now only <code>BOOL</code> or <code>SCALAR</code> settings are supported..</p>
+</div>
 
 #### Example **description.ext**:
 ```c++
@@ -140,5 +143,4 @@ class Params {
 };
 ```
 
-Review the [biki](https://community.bistudio.com/wiki/Arma_3_Mission_Parameters) for more information on setting up parameters.
-
+Review the [biki](https://community.bistudio.com/wiki/Arma_3_Mission_Parameters) for more information on setting up Mission Parameters.
