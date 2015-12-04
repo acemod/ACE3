@@ -1,22 +1,17 @@
 class CfgVehicles {
 	class Man;
-    class CAManBase: Man
-    {
-        class ACE_SelfActions
-        {
+    class CAManBase: Man {
+        class ACE_SelfActions {
             #include "ACE_Medical_SelfActions.hpp"
         };
-        class ACE_Actions
-        {
+        class ACE_Actions {
             #include "ACE_Medical_Actions.hpp"
         };
     };
     class B_Soldier_F;
-    class OPTRE_UNSC_ODST_Soldier: B_Soldier_F
-    {
-    	class Hitpoints{
-    		class HitFace
-        	{
+    class OPTRE_UNSC_ODST_Soldier: B_Soldier_F {
+    	class Hitpoints {
+    		class HitFace {
                 armor=1;
                 material=-1;
                 name="neck";
@@ -25,8 +20,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-    		class HitArms
-        	{
+    		class HitArms{
                 armor=1;
                 material=-1;
                 name="arms";
@@ -35,8 +29,7 @@ class CfgVehicles {
                 explosionShielding=1;
                 minimalHit=0.0099999998;
         	};
-        	class HitPelvis
-        	{
+        	class HitPelvis {
                 armor=1;
                 material=-1;
                 name="pelvis";
@@ -45,8 +38,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-	        class HitNeck
-	        {
+	        class HitNeck {
 	            armor=1;
 	            material=-1;
 	            name="head";
@@ -55,8 +47,7 @@ class CfgVehicles {
 	            explosionShielding=0.5;
 	            minimalHit=0.0099999998;
 	        };
-	        class HitAbdomen
-	        {
+	        class HitAbdomen {
                 armor=1;
                 material=-1;
                 name="spine1";
@@ -66,8 +57,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitDiaphragm
-	        {
+	        class HitDiaphragm {
                 armor=1;
                 material=-1;
                 name="spine2";
@@ -77,8 +67,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitChest
-	        {
+	        class HitChest {
                 armor=1;
                 material=-1;
                 name="spine3";
@@ -88,8 +77,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftArm
-	        {
+	        class HitLeftArm {
                 armor=1;
                 material=-1;
                 name="left arm";
@@ -99,8 +87,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightArm
-	        {
+	        class HitRightArm {
                 armor=1;
                 material=-1;
                 name="right arm";
@@ -110,8 +97,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftLeg
-	        {
+	        class HitLeftLeg {
                 armor=2;
                 material=-1;
                 name="left leg";
@@ -121,8 +107,7 @@ class CfgVehicles {
                 visual="injury_legs";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightLeg
-	        {
+	        class HitRightLeg {
                 armor=2;
                 material=-1;
                 name="right leg";
@@ -134,11 +119,9 @@ class CfgVehicles {
         	};
     	};
     };
-    class OPTRE_UNSC_Marine_Soldier: B_Soldier_F
-    {
-    	class Hitpoints{
-    		class HitFace
-        	{
+    class OPTRE_UNSC_Marine_Soldier: B_Soldier_F {
+    	class Hitpoints {
+    		class HitFace {
                 armor=1;
                 material=-1;
                 name="neck";
@@ -147,8 +130,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-    		class HitArms
-        	{
+    		class HitArms{
                 armor=1;
                 material=-1;
                 name="arms";
@@ -157,8 +139,7 @@ class CfgVehicles {
                 explosionShielding=1;
                 minimalHit=0.0099999998;
         	};
-        	class HitPelvis
-        	{
+        	class HitPelvis {
                 armor=1;
                 material=-1;
                 name="pelvis";
@@ -167,8 +148,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-	        class HitNeck
-	        {
+	        class HitNeck {
 	            armor=1;
 	            material=-1;
 	            name="head";
@@ -177,8 +157,7 @@ class CfgVehicles {
 	            explosionShielding=0.5;
 	            minimalHit=0.0099999998;
 	        };
-	        class HitAbdomen
-	        {
+	        class HitAbdomen {
                 armor=1;
                 material=-1;
                 name="spine1";
@@ -188,8 +167,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitDiaphragm
-	        {
+	        class HitDiaphragm {
                 armor=1;
                 material=-1;
                 name="spine2";
@@ -199,8 +177,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitChest
-	        {
+	        class HitChest {
                 armor=1;
                 material=-1;
                 name="spine3";
@@ -210,8 +187,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftArm
-	        {
+	        class HitLeftArm {
                 armor=1;
                 material=-1;
                 name="left arm";
@@ -221,8 +197,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightArm
-	        {
+	        class HitRightArm {
                 armor=1;
                 material=-1;
                 name="right arm";
@@ -232,8 +207,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftLeg
-	        {
+	        class HitLeftLeg {
                 armor=2;
                 material=-1;
                 name="left leg";
@@ -243,8 +217,7 @@ class CfgVehicles {
                 visual="injury_legs";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightLeg
-	        {
+	        class HitRightLeg {
                 armor=2;
                 material=-1;
                 name="right leg";
@@ -256,11 +229,9 @@ class CfgVehicles {
         	};
     	};
     };
-    class OPTRE_UNSC_Army_Soldier_WDL: B_Soldier_F
-    {
-    	class Hitpoints{
-    		class HitFace
-        	{
+    class OPTRE_UNSC_Army_Soldier_WDL: B_Soldier_F {
+    	class Hitpoints {
+    		class HitFace {
                 armor=1;
                 material=-1;
                 name="neck";
@@ -269,8 +240,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-    		class HitArms
-        	{
+    		class HitArms{
                 armor=1;
                 material=-1;
                 name="arms";
@@ -279,8 +249,7 @@ class CfgVehicles {
                 explosionShielding=1;
                 minimalHit=0.0099999998;
         	};
-        	class HitPelvis
-        	{
+        	class HitPelvis {
                 armor=1;
                 material=-1;
                 name="pelvis";
@@ -289,8 +258,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-	        class HitNeck
-	        {
+	        class HitNeck {
 	            armor=1;
 	            material=-1;
 	            name="head";
@@ -299,8 +267,7 @@ class CfgVehicles {
 	            explosionShielding=0.5;
 	            minimalHit=0.0099999998;
 	        };
-	        class HitAbdomen
-	        {
+	        class HitAbdomen {
                 armor=1;
                 material=-1;
                 name="spine1";
@@ -310,8 +277,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitDiaphragm
-	        {
+	        class HitDiaphragm {
                 armor=1;
                 material=-1;
                 name="spine2";
@@ -321,8 +287,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitChest
-	        {
+	        class HitChest {
                 armor=1;
                 material=-1;
                 name="spine3";
@@ -332,8 +297,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftArm
-	        {
+	        class HitLeftArm {
                 armor=1;
                 material=-1;
                 name="left arm";
@@ -343,8 +307,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightArm
-	        {
+	        class HitRightArm {
                 armor=1;
                 material=-1;
                 name="right arm";
@@ -354,8 +317,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftLeg
-	        {
+	        class HitLeftLeg {
                 armor=2;
                 material=-1;
                 name="left leg";
@@ -365,8 +327,7 @@ class CfgVehicles {
                 visual="injury_legs";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightLeg
-	        {
+	        class HitRightLeg {
                 armor=2;
                 material=-1;
                 name="right leg";
@@ -378,11 +339,9 @@ class CfgVehicles {
         	};
     	};
     };
-    class OPTRE_UNSC_Airforce_Soldier: B_Soldier_F
-    {
-    	class Hitpoints{
-    		class HitFace
-        	{
+    class OPTRE_UNSC_Airforce_Soldier: B_Soldier_F {
+    	class Hitpoints {
+    		class HitFace {
                 armor=1;
                 material=-1;
                 name="neck";
@@ -391,8 +350,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-    		class HitArms
-        	{
+    		class HitArms{
                 armor=1;
                 material=-1;
                 name="arms";
@@ -401,8 +359,7 @@ class CfgVehicles {
                 explosionShielding=1;
                 minimalHit=0.0099999998;
         	};
-        	class HitPelvis
-        	{
+        	class HitPelvis {
                 armor=1;
                 material=-1;
                 name="pelvis";
@@ -411,8 +368,7 @@ class CfgVehicles {
                 explosionShielding=0.5;
                 minimalHit=0.0099999998;
         	};
-	        class HitNeck
-	        {
+	        class HitNeck {
 	            armor=1;
 	            material=-1;
 	            name="head";
@@ -421,8 +377,7 @@ class CfgVehicles {
 	            explosionShielding=0.5;
 	            minimalHit=0.0099999998;
 	        };
-	        class HitAbdomen
-	        {
+	        class HitAbdomen {
                 armor=1;
                 material=-1;
                 name="spine1";
@@ -432,8 +387,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitDiaphragm
-	        {
+	        class HitDiaphragm {
                 armor=1;
                 material=-1;
                 name="spine2";
@@ -443,8 +397,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
 	        };
-	        class HitChest
-	        {
+	        class HitChest {
                 armor=1;
                 material=-1;
                 name="spine3";
@@ -454,8 +407,7 @@ class CfgVehicles {
                 visual="injury_body";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftArm
-	        {
+	        class HitLeftArm {
                 armor=1;
                 material=-1;
                 name="left arm";
@@ -465,8 +417,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightArm
-	        {
+	        class HitRightArm {
                 armor=1;
                 material=-1;
                 name="right arm";
@@ -476,8 +427,7 @@ class CfgVehicles {
                 visual="injury_hands";
                 minimalHit=0.0099999998;
         	};
-	        class HitLeftLeg
-	        {
+	        class HitLeftLeg {
                 armor=2;
                 material=-1;
                 name="left leg";
@@ -487,8 +437,7 @@ class CfgVehicles {
                 visual="injury_legs";
                 minimalHit=0.0099999998;
 	        };
-	        class HitRightLeg
-	        {
+	        class HitRightLeg {
                 armor=2;
                 material=-1;
                 name="right leg";
