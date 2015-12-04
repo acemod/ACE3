@@ -39,6 +39,7 @@ class ACE_Settings {
 Settings are defined from the mod's config but can be adjusted through the following methods:
 
 - Optional config entries
+- Mission Parameters
 - Mission modules
 
 
@@ -49,9 +50,10 @@ The load order for the settings are:
 1. Mod Config
 2. Server Config
 3. Mission Config
-4. Placed Mission Modules
+4. Mission Paramaters
+5. Placed Mission Modules
 
-What this means is that at any the 3 points after the Mod Config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins, whom can ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
+What this means is that at any the 4 points after the Mod Config it is possible to insert your adjusted settings and force those (optionally). This is a powerful tool for server admins, whom can ensure that everyone is using uniform settings across the board on their server. And it provides mission makers the ability to easily set settings for their mission, without creating a large dependency on ACE3; you do not have to place down mission modules.
 
 
 ## 3. How do I use them?
@@ -103,3 +105,40 @@ class ACE_Settings {
 As stated before, the server config gets loaded through the optional `ace_server.pbo`. This PBO is only required (and should only be used) on the server - clients do not need to have this! It is for this reason we have not signed this PBO.
 
 Load the `ace_server.pbo` like any other addon on your server. It is advised to create an `@aceServer` mod folder with an `addons` sub folder where you would paste the `ace_server.pbo` and load that through `-serverMod=@aceServer`.
+
+
+### 3.3 Changing ACE_settings dynamically with Mission Parameters
+
+It is possible to change ace settings via a mission's params.
+This can allow a single mission to be played with different realism settings.
+They are read after all other configs but before modules. Params are forced so they will override any module setting.
+
+#### Basic Setup:
+1. Add a param with the same name as an ace_setting
+2. Add the `ACE_setting = 1;` flag
+3. Add `values[]` and optionally `texts[]` to match the setting
+
+Note: For now only BOOL or SCALAR settings are supported.
+
+#### Example **description.ext**:
+```c++
+class Params {
+    class ace_medical_level { //This needs to match an ace_setting, this one is a "SCALAR"(number)
+        title = "Medical Level"; // Name that is shown
+        ACE_setting = 1; //Marks param to be read as an ace setting, without this nothing will happen!
+        values[] = {1, 2}; //Values that ace_medical_level can be set to
+        texts[] =  {"Basic", "Advanced"}; //Text names to show for values (Basic will set level to 1, Advanced will set level to 2)
+        default = 2; //Default value used - Value should be in the values[] list
+    };
+    class ace_repair_addSpareParts { //This ia a "BOOL"
+        title = "$STR_ACE_Repair_addSpareParts_name"; //You can use ACE's stringtables
+        ACE_setting = 1;
+        values[] = {0, 1}; //setting is a BOOL, but values still need to be numbers, so 0 is false, 1 is true
+        texts[] =  {"False", "True"};
+        default = 1;
+    };
+};
+```
+
+Review the [biki](https://community.bistudio.com/wiki/Arma_3_Mission_Parameters) for more information on setting up parameters.
+
