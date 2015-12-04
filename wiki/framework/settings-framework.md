@@ -120,7 +120,7 @@ They are read after all other configs but before modules. Mission Parameters are
 
 <div class="panel callout">
     <h5>Please note:</h5>
-    <p>For now only <code>BOOL</code> or <code>SCALAR</code> settings are supported..</p>
+    <p>For now only <code>BOOL</code> or <code>SCALAR</code> settings are supported.</p>
 </div>
 
 #### Example **description.ext**:
