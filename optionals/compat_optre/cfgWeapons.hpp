@@ -1,5 +1,4 @@
-class CfgWeapons
-{
+class CfgWeapons {
     class ACE_ItemCore;  // External class reference
     class ItemCore;  // External class reference
     class InventoryItem_Base_F;  // External class reference
@@ -19,20 +18,17 @@ class CfgWeapons
     class launch_RPG32_F; // External class reference
     class WeaponSlotsInfo;  // External class reference
 
-    class OPTRE_MA5B: EBR_Base_F
-    {
+    class OPTRE_MA5B: EBR_Base_F {
     	ACE_barrelTwist=177.8;
         ACE_barrelLength=368.3;
     };
-    class OPTRE_MA5BGL: EBR_Base_F
-    {
+    class OPTRE_MA5BGL: EBR_Base_F {
     	ACE_barrelTwist=177.8;
         ACE_barrelLength=368.3;
         magazines[] = {
             "OPTRE_60Rnd_762x51_Mag"
         };
-        class M309GL: UGL_F
-        {
+        class M309GL: UGL_F {
         	magazines[] = {
                 //bis compatibility
                 "1Rnd_HE_Grenade_shell",
@@ -67,72 +63,58 @@ class CfgWeapons
             };
         };
     };
-    class OPTRE_M41_SSR : launch_RPG32_F
-    {
-        class WeaponSlotsInfo: WeaponSlotsInfo
-        {
+    class OPTRE_M41_SSR : launch_RPG32_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 100;
         };
     };
     class OPTRE_M41_SSR_G: OPTRE_M41_SSR
     {
-        class WeaponSlotsInfo: WeaponSlotsInfo
-        {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 110;
         };
     };
-    class OPTRE_BR55HB: EBR_Base_F
-    {
+    class OPTRE_BR55HB: EBR_Base_F {
     	ACE_barrelTwist=177.8;
         ACE_barrelLength=368.3;
     };
-    class OPTRE_M392_DMR: LMG_Mk200_F
-    {
+    class OPTRE_M392_DMR: LMG_Mk200_F {
     	ACE_barrelTwist=177.8;
         ACE_barrelLength=465.3;
     };
-    class OPTRE_M73_base: LMG_Mk200_F
-    {
+    class OPTRE_M73_base: LMG_Mk200_F {
     	ACE_barrelTwist=177.8;
         ACE_barrelLength=672.5;
     };
-    class OPTRE_M6G : Pistol_Base_F
-    {
+    class OPTRE_M6G : Pistol_Base_F {
     	ACE_barrelTwist=215.7;
         ACE_barrelLength=124.6;
     };
-    class OPTRE_M6C : Pistol_Base_F
-    {
+    class OPTRE_M6C : Pistol_Base_F {
     	ACE_barrelTwist=215.7;
         ACE_barrelLength=124.6;
     };
-    class OPTRE_M45 : Rifle_Base_F
-    {
+    class OPTRE_M45 : Rifle_Base_F {
     	ACE_barrelTwist=215.7;
         ACE_barrelLength=124.6;
     };
-    class OPTRE_M45E: Rifle_Base_F
-    {
+    class OPTRE_M45E: Rifle_Base_F {
     	ACE_barrelTwist=215.7;
         ACE_barrelLength=124.6;
     };
-    class OPTRE_M45A: Rifle_Base_F
-    {
+    class OPTRE_M45A: Rifle_Base_F {
     	ACE_barrelTwist=215.7;
         ACE_barrelLength=124.6;
     };
-    class OPTRE_M7: SMG_01_F
-    {
+    class OPTRE_M7: SMG_01_F {
     	ACE_barrelTwist=168.7;
         ACE_barrelLength=218.6;
     };
-    class OPTRE_SRS99D: LMG_Mk200_F
-    {
+    class OPTRE_SRS99D: LMG_Mk200_F {
     	ACE_barrelTwist=482.7;
         ACE_barrelLength=1062.6;
     };
-    class OPTRE_SRS99_Scope: ItemCore
-    {
+    class OPTRE_SRS99_Scope: ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
