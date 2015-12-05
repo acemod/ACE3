@@ -1,13 +1,14 @@
 /*
  * Author: commy2
- *
  * Compares version numbers of PBOs and DLLs.
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -17,10 +18,12 @@
 private "_version";
 _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-diag_log text format ["[ACE]: ACE is version %1.", _version];
+ACE_LOGINFO_1("ACE is version %1.",_version);
 
 private "_addons";
-_addons = activatedAddons;
+//_addons = activatedAddons; // broken with High-Command module, see #2134
+_addons = "true" configClasses (configFile >> "CfgPatches");//
+_addons = [_addons, {toLower configName _this}] call FUNC(map);//
 _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 
 {
@@ -28,37 +31,45 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         private "_errorMsg";
         _errorMsg = format ["File %1.pbo is outdated.", _x];
 
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ACE_LOGERROR(_errorMsg);
 
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     };
-} forEach _addons;
+    false
+} count _addons;
 
 ///////////////
 // check dlls
 ///////////////
 {
-    if (_x callExtension "version" == "") then {
+    private "_versionEx";
+    _versionEx = _x callExtension "version";
+
+    if (_versionEx == "") then {
         private "_errorMsg";
         _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-        diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+        ACE_LOGERROR(_errorMsg);
 
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     } else {
         // Print the current extension version
-        diag_log text format ["[ACE] Extension version: %1: %2", _x, (_x callExtension "version")];
+        ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
     };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
+    false
+} count getArray (configFile >> "ACE_Extensions" >> "extensions");
 
 ///////////////
 // check server version/addons
 ///////////////
 if (isMultiplayer) then {
+    // don't check optional addons
+    _addons = [_addons, {getNumber (configFile >> "CfgPatches" >> _this >> "ACE_isOptional") != 1}] call FUNC(filter);
+
     if (isServer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
@@ -70,17 +81,15 @@ if (isMultiplayer) then {
         [{
             if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
 
-            private ["_version","_addons"];
-            _version = (_this select 0) select 0;
-            _addons = (_this select 0) select 1;
+            (_this select 0) params ["_version", "_addons"];
 
             if (_version != GVAR(ServerVersion)) then {
                 private "_errorMsg";
                 _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
-                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+                ACE_LOGERROR(_errorMsg);
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };
@@ -89,9 +98,9 @@ if (isMultiplayer) then {
             if !(_addons isEqualTo []) then {
                 _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
-                diag_log text format ["[ACE] ERROR: %1", _errorMsg];
+                ACE_LOGERROR(_errorMsg);
 
-                if (hasInterface) then {diag_log str "1";
+                if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
                 };
             };

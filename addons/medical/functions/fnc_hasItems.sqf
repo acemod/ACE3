@@ -16,9 +16,7 @@
 #include "script_component.hpp"
 
 private ["_medic", "_patient", "_items", "_return"];
-_medic = _this select 0;
-_patient = _this select 1;
-_items = _this select 2;
+params ["_medic", "_patient", "_items"];
 
 _return = true;
 {
@@ -31,4 +29,4 @@ _return = true;
     };
 }foreach _items;
 
-_return;
+_return

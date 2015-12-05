@@ -10,20 +10,19 @@
  * None
  *
  * Example:
- * [_originalPlayerUnit, _currentUnit] call FUNC(switchBack)
+ * [_originalPlayerUnit, _currentUnit] call ace_switchunits_fnc_switchBack
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-PARAMS_1(_originalPlayerUnit);
+params ["_originalPlayerUnit"];
 
 [_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
-DFUNC(pfhSwitchBack) = {
-    PARAMS_2(_args,_pfID);
-    EXPLODE_2_PVT(_args,_originalPlayerUnit,_currentUnit);
+[{
+    params ["_args", "_pfhId"];
+    _args params ["_originalPlayerUnit", "_currentUnit"];
 
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;
@@ -33,8 +32,6 @@ DFUNC(pfhSwitchBack) = {
         _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
         _layer cuttext ["","plain"];
 
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        [_pfhId] call cba_fnc_removePerFrameHandler;
     };
-};
-
-[FUNC(pfhSwitchBack), 0.2, _this] call CBA_fnc_addPerFrameHandler;
+}, 0.2, _this] call CBA_fnc_addPerFrameHandler;

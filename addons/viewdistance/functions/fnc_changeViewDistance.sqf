@@ -26,6 +26,7 @@ _new_view_distance = [_index_requested] call FUNC(returnValue); // changes the s
 _object_view_distance_coeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
 _view_distance_limit = GVAR(limitViewDistance); // Grab the limit
 
+TRACE_2("Limit",_new_view_distance,_view_distance_limit);
 setViewDistance (_new_view_distance min _view_distance_limit);
 
 if (_object_view_distance_coeff > 0) then {

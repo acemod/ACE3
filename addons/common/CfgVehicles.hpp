@@ -35,6 +35,7 @@ class CfgVehicles {
         function = QFUNC(moduleCheckPBOs);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
         class Arguments {
             class Action {
@@ -139,5 +140,11 @@ class CfgVehicles {
         soundEnviron[] = {"", 25, 0.925};
         isBicycle = 1;
         XEH_DISABLED;
+    };
+
+    class Bag_Base;
+    class ACE_FakeBackpack: Bag_Base {
+        scope = 1;
+        maximumLoad = 1E6;
     };
 };

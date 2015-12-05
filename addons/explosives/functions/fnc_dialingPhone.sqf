@@ -17,7 +17,10 @@
  * Public: No
  */
 #include "script_component.hpp"
-EXPLODE_4_PVT(_this select 0,_unit,_i,_arr,_code);
+
+params ["_args", "_pfID"];
+_args params ["_unit", "_i", "_arr", "_code"];
+
 if ((_i mod 4) == 0) then {
     playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, (_unit modelToWorldVisual [0,0.2,2]), 15,1,2.5];
 };
@@ -27,7 +30,7 @@ private "_explosive";
 _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
 if (_i >= (count _arr + 2)) then {
-    [_this select 1] call CALLSTACK(cba_fnc_removePerFrameHandler);
+    [_pfID] call CALLSTACK(cba_fnc_removePerFrameHandler);
     if ((count _explosive) > 0) then {
         [_unit, -1, [_explosive select 0, _explosive select 2]] call FUNC(detonateExplosive);
     };
@@ -41,4 +44,4 @@ if (_i == (count _arr)) then {
         playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_explosive select 0),3.16228,1,75];
     };
 };
-(_this select 0) set [1, _i + 1];
+_args set [1, _i + 1];

@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  *
  * Return value:
- * ChildActiosn<ARRAY>
+ * ChildActions <ARRAY>
  *
  * Example:
  * [player, player] call ace_magazinerepack_fnc_getMagazineChildren
@@ -16,15 +16,17 @@
  */
 #include "script_component.hpp"
 
-private ["_unitMagazines", "_unitMagCounts", "_xFullMagazineCount", "_index", "_actions", "_displayName", "_picture", "_action"];
+private ["_unitMagazines", "_unitMagCounts", "_index", "_actions", "_displayName", "_picture", "_action"];
 
-PARAMS_2(_target,_player);
+params ["_target", "_player"];
 
 // get all mags and ammo count
 _unitMagazines = [];
 _unitMagCounts = [];
 {
-    EXPLODE_4_PVT(_x,_xClassname,_xCount,_xLoaded,_xType);
+    private "_xFullMagazineCount";
+    _x params ["_xClassname", "_xCount", "_xLoaded", "_xType"];
+
     _xFullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _xClassname >> "count");
 
     //for every partial magazine, that is either in inventory or can be moved there

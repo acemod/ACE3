@@ -16,12 +16,17 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+params ["_explosive", "_magazine", "_trigger"];
+TRACE_3("params",_explosive,_magazine,_trigger);
+
 private ["_config"];
 
-EXPLODE_3_PVT(_this,_explosive,_magazine,_trigger);
 _config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
 // If the onSetup function returns true, it is handled elsewhere
-if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {};
+if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {
+    TRACE_2("onSetup returned true",_explosive,_trigger);
+};
 
-[ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(Direction), 0],_magazine, _trigger, [], _explosive] call ACE_Explosives_fnc_placeExplosive;
+[ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(Direction), 0],_magazine, _trigger, [], _explosive] call FUNC(placeExplosive);

@@ -1,9 +1,10 @@
 ace_aircraft
 ============
 
-Changes to air weaponry, flightmodels and HUDs.
+Changes to air weaponry, flight models and HUDs.
 
-* Contributations by Kimi (geraldbolso1899) for HUD updates
+- Contributions by Kimi (geraldbolso1899) for HUD updates
+
 
 ## Maintainers
 

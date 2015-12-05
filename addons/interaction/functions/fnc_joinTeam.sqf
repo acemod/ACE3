@@ -1,35 +1,39 @@
 /*
  * Author: commy2
- * Assigns a unit to the team
+ * Unit joins a fire team.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Team <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
- * [target, "YELLOW"] call ace_interaction_fnc_joinTeam
+ * [player, "YELLOW"] call ace_interaction_fnc_joinTeam
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_team);
+params ["_unit", "_team"];
 
-private ["_message"];
-
+// make sure correct team is set on JIP
 _unit setVariable [QGVAR(assignedFireTeam), _team, true];
-[_unit, format ["{_this assignTeam '%1'}", _team]] call EFUNC(common,execRemoteFnc);
 
+// join fire team on every machine in that group
+["assignTeam", units group _unit, [_unit, _team]] call EFUNC(common,targetEvent);
+
+// display message
 if (_unit == ACE_player) then {
-    _message = if (_team == "MAIN") then {
-        localize LSTRING(LeftTeam);
+	private "_message";
+
+    if (_team == "MAIN") then {
+        _message = localize LSTRING(LeftTeam);
     } else {
         _team = localize format [LSTRING(Team%1), _team];
-        format [localize LSTRING(JoinedTeam), _team];
+        _message = format [localize LSTRING(JoinedTeam), _team];
     };
 
-    [_message] call EFUNC(common,displayTextStructured);
+    ["displayTextStructured", _message] call EFUNC(common,localEvent);
 };

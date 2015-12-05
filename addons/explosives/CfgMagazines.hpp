@@ -8,7 +8,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.1;
+                digDistance = 0.06;
             };
         };
     };
@@ -17,7 +17,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.075;
+                digDistance = 0.08;
             };
         };
     };
@@ -26,7 +26,7 @@ class CfgMagazines {
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.05;
+                digDistance = 0.02;
             };
         };
     };
@@ -96,7 +96,7 @@ class CfgMagazines {
             };
         };
     };
-	
+
     class IEDUrbanBig_Remote_Mag: DemoCharge_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDUrbanBig";
         class ACE_Triggers {
@@ -113,9 +113,9 @@ class CfgMagazines {
                 ammo = "IEDUrbanBig_Range_Ammo";
                 pitch = 0;
             };
-        };		
+        };
     };
-	
+
     class IEDLandBig_Remote_Mag: IEDUrbanBig_Remote_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_IEDLandBig";
         class ACE_Triggers: ACE_Triggers {

@@ -6,7 +6,7 @@
  * 0: TheMap <Control>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [theMapControl] call ace_markers_fnc_mapDrawEH;
@@ -15,9 +15,10 @@
  */
 #include "script_component.hpp"
 
-private ["_theMap", "_sizeX", "_sizeY", "_textureConfig", "_texture", "_markerSize", "_markerShadow", "_colorConfig", "_drawColor"];
+private ["_sizeX", "_sizeY", "_textureConfig", "_texture", "_markerSize", "_markerShadow", "_colorConfig", "_drawColor"];
 
-PARAMS_1(_theMap);
+params ["_theMap"];
+// TRACE_1("params",_theMap);
 
 //Only show if marker place is open:
 if (isNull (findDisplay 54)) exitWith {};

@@ -1,37 +1,45 @@
 /*
  * Author: commy2
+ * Get all turret indicies of a vehicle type.
  *
- * Get all turret indicies of a vehicle.
+ * Arguments:
+ * 0: Vehicle type <STRING>
  *
- * Argument:
- * 0: Vehicle type (String)
+ * Return Value:
+ * Turret Indecies <ARRAY>
  *
- * Return value:
- * All turret index arrays of the vehicle. E.g: [[0], [0,0]] (Array)
+ * Public: Yes
+ *
+ * Note: It's advised to use allTurrets [_vehicle, true] instead whenever possible
  */
 #include "script_component.hpp"
 
-private ["_config", "_turrets", "_fnc_addTurret", "_varName"];
+params ["_type"];
 
-PARAMS_1(_type);
+private ["_varName", "_turrets"];
 
-_varName = format ["ACE_CachedTurrets_%1", _type];
+_varName = format [QGVAR(CachedTurrets_%1), _type];
 _turrets = + (uiNamespace getVariable _varName);
 
 if (!isNil "_turrets") exitWith {_turrets};
 
+private ["_config", "_fnc_addTurret"];
+
 _config = configFile >> "CfgVehicles" >> _type;
 
 _turrets = [];
-_fnc_addTurret = {
-    private ["_count", "_offset", "_index", "_path2", "_config2"];
 
-    PARAMS_2(_config,_path);
+_fnc_addTurret = {
+    params ["_config", "_path"];
 
     _config = _config >> "Turrets";
+
+    private ["_count", "_offset", "_path2", "_config2"];
+
     _count = count _config;
 
     _offset = 0;
+
     for "_index" from 0 to (_count - 1) do {
         _path2 = _path + [_index - _offset];
         _config2 = _config select _index;

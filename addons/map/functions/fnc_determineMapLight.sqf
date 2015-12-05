@@ -26,7 +26,7 @@ _fnc_blendColor = {
      (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
 };
 
-// Ambient light tint depending on ACE_time of day
+// Ambient light tint depending on time of day
 _lightTint = switch (true) do {
     case (sunOrMoon == 1.0) : { [0.5,0.5,0.5,1] };
     case (sunOrMoon > 0.80) : {[[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8)/0.2] call _fnc_blendColor};
@@ -55,11 +55,13 @@ _fnc_calcColor = {
 
 _lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
 
+/*
 // check if player has NVG enabled
 if (currentVisionMode _unit == 1) exitWith {
     // stick to nvg color
     [true, [154/255,253/255,177/255,0.5]]
 };
+*/
 
 // Do not obscure the map if the ambient light level is above 0.95
 if (_lightLevel > 0.95) exitWith {

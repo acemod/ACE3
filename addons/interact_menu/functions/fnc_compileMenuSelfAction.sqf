@@ -71,7 +71,7 @@ _recurseFnc = {
                             _statement,
                             _condition,
                             _insertChildren,
-                            {},
+                            [],
                             [0,0,0],
                             10, //distace
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover, true],
@@ -122,7 +122,7 @@ _actions = if (_isMan) then {
                     // Dummy statement so it's not collapsed when there's no available actions
                     true
                 },
-                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting"]] call EFUNC(common,canInteractWith)},
+                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)},
                 {},
                 {},
                 "Spine3",

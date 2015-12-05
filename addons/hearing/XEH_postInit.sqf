@@ -15,7 +15,7 @@ GVAR(time4) = 0;
 
 ["SettingsInitialized", {
     // Spawn volume updating process
-    [FUNC(updateVolume), 1, [false] ] call CBA_fnc_addPerFrameHandler;
+    [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 }] call EFUNC(common,addEventHandler);
 
 //Update veh attunation when player veh changes

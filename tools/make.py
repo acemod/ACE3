@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # vim: set fileencoding=utf-8 :
 
 # make.py
@@ -30,7 +30,7 @@
 
 ###############################################################################
 
-__version__ = "0.4"
+__version__ = "0.7"
 
 import sys
 
@@ -49,6 +49,7 @@ import configparser
 import json
 import traceback
 import time
+import timeit
 import re
 
 from tempfile import mkstemp
@@ -58,7 +59,7 @@ if sys.platform == "win32":
 
 ######## GLOBALS #########
 project = "@ace"
-ACE_VERSION = "3.0.0"
+project_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""
@@ -115,6 +116,19 @@ def  get_directory_hash(directory):
     retVal = directory_hash.hexdigest()
     #print_yellow("Hash Value for {} is {}".format(directory,retVal))
     return directory_hash.hexdigest()
+
+def Fract_Sec(s):
+    temp = float()
+    temp = float(s) / (60*60*24)
+    d = int(temp)
+    temp = (temp - d) * 24
+    h = int(temp)
+    temp = (temp - h) * 60
+    m = int(temp)
+    temp = (temp - m) * 60
+    sec = temp
+    return d,h,m,sec
+    #endef Fract_Sec
 
 # Copyright (c) André Burgaud
 # http://www.burgaud.com/bring-colors-to-the-windows-console-with-python/
@@ -372,6 +386,7 @@ def copy_optionals_for_building(mod,pbos):
             if (os.path.isfile(sig_path)):
                 #print("Moving {} for processing.".format(sig_path))
                 shutil.move(sig_path, os.path.join(release_dir, project, "addons", sigFile_name))
+
     except:
         print_error("Error in moving")
         raise
@@ -435,6 +450,9 @@ def cleanup_optionals(mod):
                 continue
             shutil.rmtree(destination)
 
+    except FileNotFoundError:
+        print_yellow("{} file not found".format(file_name))
+
     except:
         print_error("Cleaning Optionals Failed")
         raise
@@ -471,7 +489,7 @@ def check_for_obsolete_pbos(addonspath, file):
 
 
 def backup_config(module):
-    #PABST: Convert config (run the macro'd config.cpp through CfgConvert twice to produce a de-macro'd cpp that pboProject can read without fucking up:
+    #backup original $PBOPREFIX$
     global work_drive
     global prefix
 
@@ -485,52 +503,11 @@ def backup_config(module):
     except:
         print_error("Error creating backup of $PBOPREFIX$ for module {}.".format(module))
 
-    try:
-        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
-        os.chdir(work_drive)
-    except:
-        print_error("Error creating backup of config.cpp for module {}.".format(module))
-
     return True
-
-def convert_config(module):
-    try:
-        global work_drive
-        global prefix
-        global arma3tools_path
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -bin return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-
-        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
-        ret = subprocess.call(cmd)
-        if ret != 0:
-            print_error("CfgConvert -txt return code == {}. Usually means there is a syntax error within the config.cpp file.".format(str(ret)))
-            os.remove(os.path.join(work_drive, prefix, module, "config.cpp"))
-            shutil.copyfile(os.path.join(work_drive, prefix, module, "config.backup"), os.path.join(work_drive, prefix, module, "config.cpp"))
-    except Exception as e:
-        print_error("Exception from convert_config=>CfgConvert: {}".format(e))
-        return False
-
-    return True
-
 
 def addon_restore(modulePath):
-    #PABST: cleanup config BS (you could comment this out to see the "de-macroed" cpp
-    #print_green("\Pabst! (restoring): {}".format(os.path.join(modulePath, "config.cpp")))
+    #restore original $PBOPREFIX$
     try:
-        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
-            os.remove(os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.backup")):
-            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
-        if os.path.isfile(os.path.join(modulePath, "config.bin")):
-            os.remove(os.path.join(modulePath, "config.bin"))
-        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
-            os.remove(os.path.join(modulePath, "texHeaders.bin"))
         if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
             if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
                 os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
@@ -541,9 +518,9 @@ def addon_restore(modulePath):
     return True
 
 
-def get_ace_version():
-    global ACE_VERSION
-    versionStamp = ACE_VERSION
+def get_project_version():
+    global project_version
+    versionStamp = project_version
     #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
 
     try:
@@ -568,16 +545,16 @@ def get_ace_version():
             raise FileNotFoundError("File Not Found: {}".format(scriptModPath))
 
     except Exception as e:
-        print_error("Get_Ace_Version error: {}".format(e))
+        print_error("Get_project_version error: {}".format(e))
         print_error("Check the integrity of the file: {}".format(scriptModPath))
-        versionStamp = ACE_VERSION
+        versionStamp = project_version
         print_error("Resetting to the default version stamp: {}".format(versionStamp))
         input("Press Enter to continue...")
         print("Resuming build...")
 
     print_yellow("{} VERSION set to {}".format(project.lstrip("@").upper(),versionStamp))
-    ACE_VERSION = versionStamp
-    return ACE_VERSION
+    project_version = versionStamp
+    return project_version
 
 
 def replace_file(filePath, oldSubstring, newSubstring):
@@ -595,7 +572,7 @@ def replace_file(filePath, oldSubstring, newSubstring):
 
 
 def set_version_in_files():
-    newVersion = ACE_VERSION # MAJOR.MINOR.PATCH.BUILD
+    newVersion = project_version # MAJOR.MINOR.PATCH.BUILD
     newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
 
     # Regex patterns
@@ -677,7 +654,7 @@ def restore_version_files():
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
-    aceVersion = get_ace_version()
+    aceVersion = get_project_version()
     keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
     return keyName
 
@@ -754,7 +731,7 @@ def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
-    global ACE_VERSION
+    global project_version
     global arma3tools_path
     global work_drive
     global module_root
@@ -840,7 +817,7 @@ See the make.cfg file for additional build options.
         argv.remove("release")
     else:
         make_release_zip = False
-        release_version = ACE_VERSION
+        release_version = project_version
 
     if "target" in argv:
         make_target = argv[argv.index("target") + 1]
@@ -863,7 +840,7 @@ See the make.cfg file for additional build options.
         check_external = True
     else:
         check_external = False
-    
+
     if "version" in argv:
         argv.remove("version")
         version_update = True
@@ -897,7 +874,7 @@ See the make.cfg file for additional build options.
 
         # Project prefix (folder path)
         prefix = cfg.get(make_target, "prefix", fallback="")
-        
+
         # Release archive prefix
         zipPrefix = cfg.get(make_target, "zipPrefix", fallback=project.lstrip("@").lower())
 
@@ -1198,9 +1175,6 @@ See the make.cfg file for additional build options.
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
-                    if (not os.path.isfile(nobinFilePath)):
-                        convert_config(module)
-
                     version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(nobinFilePath):
@@ -1418,5 +1392,8 @@ See the make.cfg file for additional build options.
 
 
 if __name__ == "__main__":
+    start_time = timeit.default_timer()
     main(sys.argv)
-input("Press Enter to continue...")
+    d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
+    print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
+    input("Press Enter to continue...")

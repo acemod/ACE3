@@ -1,33 +1,38 @@
-/**
- * fn_getVariable.sqf
- * @Descr: Grabs a variable. If variable has not been set, attempts to use default defined value
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Grabs a variable. If variable has not been set, attempts to use default defined value
  *
- * @Arguments: [unit OBJECT, variableName STRING]
- * @Return: ANY
- * @PublicAPI: true
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: Variable Name <STRING>
+ *
+ * Return Value:
+ * Value of variable or default value, if the variable is undefined <ANY>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-#define UNIT (_this select 0)
-#define VARIABLE (_this select 1)
+params ["_unit", "_variable", "_defaultValue"];
 
 private "_value";
+_value = _unit getvariable _variable;
 
-_value = UNIT getvariable VARIABLE;
-if (isnil "_value") then {
-    if (count _this >2) then {
-        _value = _this select 2;
+if (isNil "_value") then {
+    if (!isNil "_defaultValue") then {
+        _value = _defaultValue;
     } else {
         private "_definedVariable";
-        _definedVariable = ([VARIABLE] call FUNC(getDefinedVariableInfo));
+        _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
+
         if (count _definedVariable > 1) then {
             _value = _definedVariable select 1;
         };
     };
-    if (isnil "_value") then {
+
+    if (isNil "_value") then {
         _value = 0;
     };
 };
+
 _value

@@ -5,10 +5,10 @@
  *
  * Arguments:
  * 0: temperature - degrees celcius <NUMBER>
- * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
+ * 1: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * 0: heat index <NUMBER>
+ * heat index <NUMBER>
  *
  * Return value:
  * None
@@ -24,7 +24,7 @@
 #define __C7 0.000687678
 #define __C8  0.000274954
 
-PARAMS_2(_t,_rh);
+params ["_t", "_rh"];
 
 // Source: https://en.wikipedia.org/wiki/Heat_index
 

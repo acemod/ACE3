@@ -22,6 +22,8 @@ params ["_unit", "_target", "_hitPoint", ["_track", false]];
 TRACE_4("params",_unit,_target,_hitPoint,_track);
 // TODO [_unit, _track] call EFUNC(common,claim); on start of action
 
+if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
 if (typeName _track == "OBJECT") then {
     // not near interpret as objNull
     if !(_track in nearestObjects [_unit, ["ACE_Track"], 5]) then {
@@ -31,7 +33,7 @@ if (typeName _track == "OBJECT") then {
     _track = objNull;
 
     {
-        if ([_unit, _x, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {
+        if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
             _track = _x;
         };
     } forEach nearestObjects [_unit, ["ACE_Track"], 5];

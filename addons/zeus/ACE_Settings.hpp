@@ -20,4 +20,10 @@ class ACE_Settings {
         value = 0;
         values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(revealMines_partial), CSTRING(revealMines_full)};
     };
+    class GVAR(autoAddObjects) {
+        displayName = CSTRING(AddObjectsToCurator);
+        description = CSTRING(AddObjectsToCurator_desc);
+        value = 0;
+        typeName = "BOOL";
+    };
 };

@@ -1,17 +1,25 @@
-// by commy2
 /*
-    usage:
-
-    (configFile >> "CfgAmmo") call FUNC(exportConfig);
-*/
+ * Author: commy2
+ * Export Config Entrys to RPT logs
+ *
+ * Arguments:
+ * Config Path <CONFIG>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [configFile >> "CfgAmmo"] call ace_common_fnc_exportConfig;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private "_fnc_logEntries";
-
 _fnc_logEntries = {
-    private ["_p", "_t", "_e", "_a", "_i"];
+    params ["_c", "_d"];
 
-    PARAMS_2(_c,_d);
+    private ["_p", "_t", "_e", "_a", "_i"];
 
     _p = inheritsFrom _c;
 

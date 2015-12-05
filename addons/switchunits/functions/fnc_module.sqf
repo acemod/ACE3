@@ -15,12 +15,11 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 if !(isServer) exitWith {};
 
-EXPLODE_3_PVT(_this,_logic,_units,_activated);
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
@@ -36,4 +35,4 @@ GVAR(Module) = true;
 
 [QGVAR(EnableSwitchUnits), true, false, true] call EFUNC(common,setSetting);
 
-diag_log text "[ACE]: SwitchUnits Module Initialized.";
+ACE_LOGINFO("Switch Unit Module Initialized.");

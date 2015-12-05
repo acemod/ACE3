@@ -3,10 +3,10 @@
  * Initializes the advanced ballistics dll extension with terrain data
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
@@ -22,9 +22,9 @@ _initStartTime = ACE_time;
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
-    if (GVAR(initMessageEnabled)) then {
+    #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
-    };
+    #endIf
 };
 
 _mapGrids = ceil(_mapSize / 50) + 1;
@@ -33,19 +33,16 @@ _gridCells = _mapGrids * _mapGrids;
 GVAR(currentGrid) = 0;
 
 [{
-    private ["_args", "_mapGrids", "_gridCells", "_initStartTime"];
-    _args = _this select 0;
-    _mapGrids = _args select 0;
-    _gridCells = _args select 1;
-    _initStartTime = _args select 2;
-    
+    params ["_args","_idPFH"];
+    _args params ["_mapGrids", "_gridCells", "_initStartTime"];
+
     if (GVAR(currentGrid) >= _gridCells) exitWith {
-        if (GVAR(initMessageEnabled)) then {
+        #ifdef DEBUG_MODE_FULL
             systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", ceil(ACE_time - _initStartTime)];
-        };
-        [_this select 1] call cba_fnc_removePerFrameHandler;
+        #endif
+        [_idPFH] call cba_fnc_removePerFrameHandler;
     };
-    
+
     for "_i" from 1 to 50 do {
         _x = floor(GVAR(currentGrid) / _mapGrids) * 50;
         _y = (GVAR(currentGrid) - floor(GVAR(currentGrid) / _mapGrids) * _mapGrids) * 50;
@@ -57,5 +54,5 @@ GVAR(currentGrid) = 0;
         GVAR(currentGrid) = GVAR(currentGrid) + 1;
         if (GVAR(currentGrid) >= _gridCells) exitWith {};
     };
-        
+
 }, 0, [_mapGrids, _gridCells, _initStartTime]] call CBA_fnc_addPerFrameHandler

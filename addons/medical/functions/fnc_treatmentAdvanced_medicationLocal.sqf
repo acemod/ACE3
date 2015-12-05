@@ -15,9 +15,8 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_className", "_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
-_target = _this select 0;
-_className = _this select 1;
+private ["_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
+params ["_target", "_className"];
 
 // We have added a new dose of this medication to our system, so let's increase it
 _varName = format[QGVAR(%1_inSystem), _className];
@@ -85,7 +84,7 @@ _resistance = _target getvariable [QGVAR(peripheralResistance), 100];
 _resistance = _resistance + _viscosityChange;
 _target setvariable [QGVAR(peripheralResistance), _resistance max 0];
 
-// Call back to ensure that the medication is decreased over ACE_time
+// Call back to ensure that the medication is decreased over time
 [_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

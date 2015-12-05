@@ -1,45 +1,53 @@
-/**
- * fn_switchToGroupSide_f.sqf
- * @Descr: Stack group switches. Will always trace back to original group.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Stack group switches. Will always trace back to original group.
  *
- * @Arguments: [unit OBJECT, switch BOOL, id STRING, side SIDE]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: switch <BOOLEAN>
+ * 2: id <STRING>
+ * 3: side <SIDE>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_side","_previousGroup","_newGroup", "_currentGroup", "_switch", "_originalSide", "_previousGroupsList", "_id"];
-_unit = [_this, 0,ObjNull,[ObjNull]] call BIS_fnc_Param;
-_switch = [_this, 1, false,[false]] call BIS_fnc_Param;
-_id = [_this, 2, "", [""]] call BIS_fnc_Param;
-_side = [_this, 3, side _unit,[west]] call BIS_fnc_Param;
+params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", side _unit]];
 
-_previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo),[]];
+private "_previousGroupsList";
+_previousGroupsList = _unit getvariable [QGVAR(previousGroupSwitchTo), []];
+
 if (_switch) then {
     // go forward
+    private ["_previousGroup", "_originalSide", "_newGroup"];
+
     _previousGroup = group _unit;
     _originalSide = side group _unit;
 
     if (count units _previousGroup == 1 && _originalSide == _side) exitwith {
-        [format["Current group has only 1 member and is of same side as switch. Not switching unit %1", _id]] call FUNC(debug);
+        [format ["Current group has only 1 member and is of same side as switch. Not switching unit %1", _id]] call FUNC(debug);
     };
 
     _newGroup = createGroup _side;
     [_unit] joinSilent _newGroup;
 
-    _previousGroupsList pushback [_previousGroup, _originalSide, _id, true];
-    _unit setvariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
+    _previousGroupsList pushBack [_previousGroup, _originalSide, _id, true];
+    _unit setVariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
 } else {
     // go one back
+    private ["_currentGroup", "_newGroup"];
+
     {
         if (_id == (_x select 2)) exitwith {
             _x set [ 3, false];
-            _previousGroupsList set [_foreachIndex, _x];
+            _previousGroupsList set [_forEachIndex, _x];
             [format["found group with ID: %1", _id]] call FUNC(debug);
         };
-    }foreach _previousGroupsList;
+    } forEach _previousGroupsList;
+
     reverse _previousGroupsList;
 
     {
@@ -55,10 +63,12 @@ if (_switch) then {
             if (count units _currentGroup == 0) then {
                 deleteGroup _currentGroup;
             };
-            _previousGroupsList set [_foreachIndex, ObjNull];
+            _previousGroupsList set [_forEachIndex, objNull];
         };
-    }foreach _previousGroupsList;
+    } forEach _previousGroupsList;
+
     _previousGroupsList = _previousGroupsList - [objNull];
     reverse _previousGroupsList;    // we have to reverse again, to ensure the list is in the right order.
-    _unit setvariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
+
+    _unit setVariable [QGVAR(previousGroupSwitchTo), _previousGroupsList, true];
 };

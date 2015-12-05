@@ -1,7 +1,8 @@
 ace_mk6mortar
 ==========
 
-Tweaks the mk6 mortar from Arma3
+Tweaks the Nk6 Mortar system.
+
 
 ## Maintainers
 

@@ -10,7 +10,7 @@
  * 3: Error Code <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * (args from progressBar) call ace_magazinerepack_fnc_magazineRepackFinish
@@ -21,8 +21,9 @@
 
 private ["_structuredOutputText", "_picture", "_fullMags", "_partialMags", "_fullMagazineCount"];
 
-PARAMS_4(_args,_elapsedTime,_totalTime,_errorCode);
-EXPLODE_2_PVT(_args,_magazineClassname,_lastAmmoCount);
+params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+_args params ["_magazineClassname", "_lastAmmoCount"];
+
 _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 //Don't show anything if player can't interact:

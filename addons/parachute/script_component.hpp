@@ -1,4 +1,3 @@
-#define DEBUG_ENABLED_PARACHUTE
 #define COMPONENT parachute
 #include "\z\ace\addons\main\script_mod.hpp"
 

@@ -14,6 +14,7 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 params ["_projectile"];
 
 if (alive _projectile) then {
@@ -21,5 +22,6 @@ if (alive _projectile) then {
 
     private "_affected";
     _affected = _projectile nearEntities ["CAManBase", 50];
+
     ["flashbangExplosion", _affected, [_projectile]] call EFUNC(common,targetEvent);
 };

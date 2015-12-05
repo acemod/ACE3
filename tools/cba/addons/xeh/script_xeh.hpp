@@ -1,8 +1,14 @@
+/*
+    Header: script_xeh.hpp
+
+    Description:
+        Used internally.
+*/
 /////////////////////////////////////////////////////////////////////////////////
 // MACRO: EXTENDED_EVENTHANDLERS
-// XEH uses all existing event handlers
+// Add all XEH event handlers
 /////////////////////////////////////////////////////////////////////////////////
-#define EXTENDED_EVENTHANDLERS init = QUOTE(if(isNil'SLX_XEH_MACHINE')then{call compile preProcessFileLineNumbers '\x\cba\addons\xeh\init_pre.sqf'};_this call SLX_XEH_EH_Init); \
+#define EXTENDED_EVENTHANDLERS init = "_this call SLX_XEH_EH_Init"; \
 fired              = "_this call SLX_XEH_EH_Fired"; \
 animChanged        = "_this call SLX_XEH_EH_AnimChanged"; \
 animDone           = "_this call SLX_XEH_EH_AnimDone"; \
@@ -34,6 +40,7 @@ local              = "_this call SLX_XEH_EH_Local"; \
 respawn            = "_this call SLX_XEH_EH_Respawn"; \
 put                = "_this call SLX_XEH_EH_Put"; \
 take               = "_this call SLX_XEH_EH_Take"; \
+seatSwitched       = "_this call SLX_XEH_EH_SeatSwitched"; \
 soundPlayed        = "_this call SLX_XEH_EH_SoundPlayed"; \
 weaponAssembled    = "_this call SLX_XEH_EH_WeaponAssembled"; \
 weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
@@ -45,22 +52,25 @@ weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
 
 
 
-/////////////////////////////////////////////////////////////////////////////////
-// MACRO: DELETE_EVENTHANDLERS
-//
-// Example:
-//
-//      class DefaultEventhandlers;
-//      class Car_F;
-//      class MRAP_01_base_F: Car_F {
-//           class EventHandlers;
-//      };
-//      class B_MRAP_01_F: MRAP_01_base_F {
-//	         class Eventhandlers: EventHandlers {
-//	   		      DELETE_EVENTHANDLERS
-//	         };
-//	    };
-/////////////////////////////////////////////////////////////////////////////////
+/* 
+   MACRO: DELETE_EVENTHANDLERS
+
+   Removes all event handlers.
+ 
+  Example:
+ (begin example)
+    class DefaultEventhandlers;
+    class Car_F;
+    class MRAP_01_base_F: Car_F {
+        class EventHandlers;
+    };
+    class B_MRAP_01_F: MRAP_01_base_F {
+        class Eventhandlers: EventHandlers {
+            DELETE_EVENTHANDLERS
+        };
+    };
+ (end example)
+*/
 
 #define DELETE_EVENTHANDLERS delete init; \
 delete fired; \
@@ -94,6 +104,7 @@ delete local;  \
 delete respawn;  \
 delete put;  \
 delete take; \
+delete seatSwitched; \
 delete soundPlayed; \
 delete weaponAssembled; \
 delete weaponDisAssembled;

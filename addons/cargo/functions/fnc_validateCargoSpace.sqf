@@ -24,7 +24,7 @@ _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _newLoaded = [];
 _totalSpaceOccupied = 0;
 {
-    if !(isNull _x) then {
+    if ((typeName _x == "STRING") || {!isNull _x}) then {
         _newLoaded pushback _x;
         _totalSpaceOccupied = _totalSpaceOccupied + ([_x] call FUNC(getSizeItem));
     };
@@ -35,4 +35,4 @@ if (count _loaded != count _newLoaded) then {
     _vehicle setVariable [QGVAR(loaded), _newLoaded, true];
 };
 
-_vehicle setVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeof _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];
+_vehicle setVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(space)) - _totalSpaceOccupied, true];

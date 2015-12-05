@@ -9,17 +9,13 @@
  * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_caller", "_target","_className"];
-_caller = _this select 0;
-_target = _this select 1;
-_className = _this select 3;
+params ["_caller", "_target","_className"];
 
 [_target, false] call FUNC(setUnconscious);
 

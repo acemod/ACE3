@@ -6,7 +6,7 @@
  * 0: The unit that will be killed <OBJECT>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: yes
  */
@@ -14,11 +14,7 @@
 #include "script_component.hpp"
 
 private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
-_unit = _this select 0;
-_force = false;
-if (count _this >= 2) then {
-    _force = _this select 1;
-};
+params ["_unit", ["_force", false]];
 
 if (!alive _unit) exitwith{true};
 if (!local _unit) exitwith {
@@ -44,13 +40,13 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     [_unit, true] call FUNC(setUnconscious);
 
     [{
-        private ["_args","_unit","_startTime"];
-        _args = _this select 0;
-        _unit = _args select 0;
+        private "_startTime";
+        params ["_args", "_idPFH"];
+        _args params ["_unit"];
         _startTime = _unit getvariable [QGVAR(reviveStartTime), 0];
 
         if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
             _unit setvariable [QGVAR(inReviveState), nil, true];
             _unit setvariable [QGVAR(reviveStartTime), nil];
             [_unit, true] call FUNC(setDead);
@@ -64,7 +60,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
             };
 
             _unit setvariable [QGVAR(reviveStartTime), nil];
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
         if (GVAR(level) >= 2) then {
             if (_unit getvariable [QGVAR(heartRate), 60] > 0) then {
@@ -82,5 +78,5 @@ if (isPLayer _unit) then {
 
 ["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
 
-_unit setdamage 1;
+[_unit, 1] call FUNC(setStructuralDamage);
 true;

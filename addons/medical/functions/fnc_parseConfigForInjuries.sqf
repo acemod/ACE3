@@ -3,13 +3,12 @@
  * Parse the ACE_Medical_Advanced config for all injury types.
  *
  * Arguments:
- *
+ * None
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 private ["_injuriesRootConfig", "_woundsConfig", "_allWoundClasses", "_amountOf", "_entry","_classType", "_selections", "_bloodLoss", "_pain","_minDamage","_causes", "_damageTypesConfig", "_thresholds", "_typeThresholds", "_selectionSpecific", "_selectionSpecificType", "_classDisplayName", "_subClassDisplayName", "_maxDamage", "_subClassmaxDamage", "_defaultMinLethalDamage", "_minLethalDamage", "_allFoundDamageTypes", "_classID", "_configDamageTypes", "_i", "_parseForSubClassWounds", "_subClass", "_subClassConfig", "_subClassbloodLoss", "_subClasscauses", "_subClassminDamage", "_subClasspain", "_subClassselections", "_subClasstype", "_type", "_varName", "_woundTypes"];
@@ -110,7 +109,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_type in (_x select 5)) then {
             _woundTypes pushback _x;
         };
-    }foreach _allWoundClasses;
+    } foreach _allWoundClasses;
     _typeThresholds = _thresholds;
     _selectionSpecificType = _selectionSpecific;
     if (isClass(_damageTypesConfig >> _x)) then {
@@ -130,11 +129,11 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
             _minDamageThresholds = _minDamageThresholds + ":";
             _amountThresholds = _amountThresholds + ":";
         };
-    }foreach _typeThresholds;
+    } foreach _typeThresholds;
 
     "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _foreachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
 
-}foreach _allFoundDamageTypes;
+} foreach _allFoundDamageTypes;
 
 
 // Extension loading
@@ -142,34 +141,30 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
 {
     private ["_classID", "_className", "_allowedSelections", "_bloodLoss", "_pain", "_minDamage", "_maxDamage", "_causes", "_classDisplayName", "_extensionInput", "_selections", "_causesArray"];
     // add shit to addInjuryType
-    _classID = _x select 0;
+    _x params ["_classID", "_selections", "_bloodLoss", "_pain", "_damage", "_causesArray", "_classDisplayName"];
+    _damage params ["_minDamage", "_maxDamage"];
     _className = GVAR(woundClassNames) select _forEachIndex;
     _allowedSelections = "";
 
-    _selections = _x select 1;
     {
         _allowedSelections = _allowedSelections + _x;
         if (_forEachIndex < (count _selections) - 1) then {
             _allowedSelections = _allowedSelections + ":";
         };
-    }foreach _selections;
+    } foreach _selections;
 
-    _bloodLoss = _x select 2;
-    _pain = _x select 3;
-    _minDamage = (_x select 4) select 0;
-    _maxDamage = (_x select 4) select 1;
     _causes = "";
-    _causesArray = (_x select 5);
+
     {
         _causes = _causes + _x;
         if (_forEachIndex < (count _causesArray) - 1) then {
             _causes = _causes + ":";
         };
-    }foreach _causesArray;
+    } foreach _causesArray;
     _classDisplayName = _x select 6;
 
     "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
-}foreach _allWoundClasses;
+} foreach _allWoundClasses;
 
 "ace_medical" callExtension "ConfigComplete";

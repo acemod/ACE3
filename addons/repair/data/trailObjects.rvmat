@@ -10,6 +10,7 @@ forcedDiffuse[] = {0,0,0,0};
 emmisive[] = {0,0,0,0};
 specular[] = {0.0099999998,0.0099999998,0.0099999998,0.0099999998};
 specularPower = 500;
+surfaceInfo="a3\data_f\penetration\metal.bisurf";
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1

@@ -1,14 +1,15 @@
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
- * Will not play if the unit has already played a sound within to close a ACE_time frame.
+ * Will not play if the unit has already played a sound within to close a time frame.
  * Delay: With minimal damage (below 1), the delay is (10 + random(50)) seconds. Otherwise it is 60 seconds / damage.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Amount of Pain <NUMBER>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: No
  */
@@ -16,8 +17,7 @@
 #include "script_component.hpp"
 
 private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
-_unit = _this select 0;
-_pain = _this select 1;
+params ["_unit", "_pain"];
 if (!local _unit || !GVAR(enableScreams)) exitwith{};
 
 // Lock if the unit is already playing a sound.

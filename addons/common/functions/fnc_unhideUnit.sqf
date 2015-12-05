@@ -7,17 +7,16 @@
  * 1: Reason to unhide the unit <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_unhideUnit
  *
- * Public: No
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 

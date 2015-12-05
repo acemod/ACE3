@@ -49,5 +49,12 @@
             <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
         </Key>
+        <Key ID="STR_ACE_Dragging_LowerRaise">
+            <English>Raise/Lower</English>
+            <German>Heben/Senken</German>
+            <Polish>Wyżej/Niżej</Polish>
+            <Portuguese>Levantar/Abaixar</Portuguese>
+            <Russian>Поднять/Опустить</Russian>
+        </Key>
     </Package>
 </Project>

@@ -1,34 +1,30 @@
 /*
  * Author: commy2
- *
  * Remove an addAction event from a unit.
  *
- * Argument:
- * 0: Unit the action is assigned to (Object)
- * 1: Name of the action, e.g. "DefaultAction" (String)
- * 2: ID of the action (Number)
+ * Arguments:
+ * 0: Unit the action is assigned to <OBJECT>
+ * 1: Name of the action, e.g. "DefaultAction" <STRING>
+ * 2: ID of the action <NUMBER>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_name", "_actionsVar", "_actionID", "_actions", "_currentID", "_actionIDs"];
-
-PARAMS_3(_unit,_action,_id);
+params ["_unit", "_action", "_id"];
 
 if (_id == -1) exitWith {};
 
-_name = format ["ACE_Action_%1", _action];
+private ["_name", "_actionsVar"];
 
+_name = format ["ACE_Action_%1", _action];
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
 
-_actionID = _actionsVar select 0;
-_actions = _actionsVar select 1;
-
-_currentID = _actions select 0;
-_actionIDs = _actions select 1;
-_actions = _actions select 2;
+_actionsVar params ["_actionID", "_actionsArray"];
+_actionsArray params ["_currentID", "_actionIDs", "_actions"];
 
 if (_unit != _actionsVar select 2) exitWith {};
 

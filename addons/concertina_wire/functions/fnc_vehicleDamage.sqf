@@ -7,14 +7,12 @@
  * 1: vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
- *
- * Return value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_wire,_vehicle);
+params ["_wire", "_vehicle"];
 
 private ["_type", "_mode", "_anim", "_parts", "_selectionPart", "_selection", "_pos_w", "_dir_w"];
 
@@ -43,8 +41,8 @@ _dir_w = getDir _wire;
 
 if (_mode == 0) then {
     private ["_x", "_y", "_found", "_wireCheckPosAr", "_no"];
-    _x = _pos_w select 0;
-    _y = _pos_w select 1;
+    _pos_w params ["_x","_y"];
+
     // Check if two Single coils are placed next to each other (i.e playes have built a big wire obstacle)
     _wireCheckPosAr = [
     [_x + (sin (_dir_w+90) * 1.5),_y + (cos (_dir_w+90) * 1.5)],

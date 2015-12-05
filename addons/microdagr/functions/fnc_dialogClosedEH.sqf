@@ -3,13 +3,13 @@
  * Handles the dialog closeing, switches back to display mode
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * [] call ace_microdagr_fnc_dialogClosedEH
+ * call ace_microdagr_fnc_dialogClosedEH
  *
  * Public: No
  */

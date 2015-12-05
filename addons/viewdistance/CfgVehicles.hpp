@@ -7,6 +7,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         //icon = ""; // needs an icon
         class Arguments {
             class moduleViewDistanceEnabled {

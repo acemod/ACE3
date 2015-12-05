@@ -1,4 +1,3 @@
-
 #define MACRO_PRELOAD \
     GVAR(BodyDay) = "*"; \
     GVAR(BodyNight) = "*"; \

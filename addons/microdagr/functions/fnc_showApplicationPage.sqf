@@ -3,10 +3,10 @@
  * Changes the "application page" shown on the microDAGR
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_microdagr_fnc_showApplicationPage
@@ -19,12 +19,8 @@ private ["_display", "_theMap", "_mapSize"];
 
 disableSerialization;
 
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
 //TopBar

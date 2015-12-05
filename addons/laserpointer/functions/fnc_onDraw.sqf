@@ -35,7 +35,7 @@ _brightness = 2 - call EFUNC(common,ambientBrightness);
         };
 
         if (_laserID > 0 && {_x isFlashlightOn _weapon}) then {
-            [_x, 50, (_laserID == 2 || _isIR), _brightness] call FUNC(drawLaserpoint);
+            [_x, 100, (_laserID == 2 || _isIR), _brightness] call FUNC(drawLaserpoint);
         };
     };
 

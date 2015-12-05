@@ -19,4 +19,16 @@ class ACE_Settings {
         isClientSettable = 1;
         displayName = CSTRING(DisableEarRinging);
     };
+    class GVAR(enabledForZeusUnits) {
+        value = 1;
+        typeName = "BOOL";
+        displayName = CSTRING(enabledForZeusUnits_DisplayName);
+        description = CSTRING(enabledForZeusUnits_Description);
+    };
+    class GVAR(autoAddEarplugsToUnits) {
+        value = 1;
+        typeName = "BOOL";
+        displayName = CSTRING(autoAddEarplugsToUnits_DisplayName);
+        description = CSTRING(autoAddEarplugsToUnits_Description);
+    };
 };

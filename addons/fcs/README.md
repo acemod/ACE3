@@ -1,7 +1,7 @@
 ace_fcs
 =======
 
-Adds a fire control system to armoured vehicles and helicoters, allowing the precise engagement of stationary and moving targets.
+Adds a fire control system to armoured vehicles and helicopters, allowing precise engagement of stationary and moving targets.
 
 
 ## Maintainers

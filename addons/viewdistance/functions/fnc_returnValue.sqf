@@ -22,7 +22,7 @@ private ["_return"];
 params ["_index"];
 
 _return = switch (_index) do {
-    case 0:   {-1};
+    case 0:   {viewDistance}; // Video Settings option
     case 1:   {500};
     case 2:   {1000};
     case 3:   {1500};
@@ -40,4 +40,5 @@ _return = switch (_index) do {
     default   {1000};
 };
 
-_return;
+TRACE_1("VD Index Return",_return);
+_return

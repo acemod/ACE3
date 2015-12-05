@@ -17,12 +17,9 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage", "_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
-_unit = _this select 0;
-_selectionName = _this select 1;
-_damage = _this select 2;
-_typeOfProjectile = _this select 3;
-_typeOfDamage = _this select 4;
+private ["_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
+params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
+TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
@@ -70,7 +67,7 @@ _allPossibleInjuries = [];
             _allPossibleInjuries pushback _x;
         };
     };
-}foreach _allInjuriesForDamageType;
+} foreach _allInjuriesForDamageType;
 
 // No possible wounds available for this damage type or damage amount.
 if (_highestPossibleSpot < 0) exitwith {};
@@ -98,7 +95,7 @@ _woundsCreated = [];
                     if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitwith {
                         _foundIndex = _foreachIndex;
                     };
-                }foreach _openWounds;
+                } foreach _openWounds;
             };
 
             _injury = [];
@@ -123,21 +120,15 @@ _woundsCreated = [];
             _painToAdd = _painToAdd + (_toAddInjury select 3);
         };
     };
-}foreach (_injuryTypeInfo select 0); // foreach damage thresholds
+} foreach (_injuryTypeInfo select 0); // foreach damage thresholds
 
-_unit setvariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
+_unit setvariable [QGVAR(openWounds), _openWounds, true];
 
 // Only update if new wounds have been created
 if (count _woundsCreated > 0) then {
-//    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
-};
-
-if (USE_WOUND_EVENT_SYNC) then {
-    // Broadcast the new injuries across the net in parts. One broadcast per injury. Prevents having to broadcast one massive array of injuries.
-    {
-  //      ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
-    }foreach _woundsCreated;
+    _unit setvariable [QGVAR(lastUniqueWoundID), _woundID, true];
 };
 
 _painLevel = _unit getvariable [QGVAR(pain), 0];
 _unit setvariable [QGVAR(pain), _painLevel + _painToAdd];
+TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD",_unit, _painLevel, _painToAdd, _unit getvariable QGVAR(pain), _unit getvariable QGVAR(openWounds),_woundsCreated);

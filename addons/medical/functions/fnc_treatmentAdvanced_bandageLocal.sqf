@@ -15,19 +15,16 @@
 
 #include "script_component.hpp"
 
-private ["_target", "_bandage", "_part", "_selectionName", "_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_specificClass", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
-_target = _this select 0;
-_bandage = _this select 1;
-_selectionName = _this select 2;
-_specificClass = if (count _this > 3) then {_this select 3} else { -1 };
+private ["_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
+params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part < 0) exitwith {};
+if (_part < 0) exitwith {false};
 
 // Get the open wounds for this unit
 _openWounds = _target getvariable [QGVAR(openWounds), []];
-if (count _openWounds == 0) exitwith {}; // nothing to do here!
+if (count _openWounds == 0) exitwith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
 _config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
@@ -43,10 +40,11 @@ _effectivenessFound = -1;
 _mostEffectiveInjury = _openWounds select 0;
 _exit = false;
 {
+    _x params ["", "_classID", "_partX"];
+    TRACE_2("OPENWOUND: ", _target, _x);
     // Only parse injuries that are for the selected bodypart.
-    if (_x select 2 == _part) then {
+    if (_partX == _part) then {
         _woundEffectivenss = _effectiveness;
-        _classID = (_x select 1);
 
         // Select the classname from the wound classname storage
         _className = GVAR(woundClassNames) select _classID;
@@ -59,6 +57,7 @@ _exit = false;
             };
         };
 
+        TRACE_2("Wound classes: ", _specificClass, _classID);
         if (_specificClass == _classID) exitwith {
             _effectivenessFound = _woundEffectivenss;
             _mostEffectiveSpot = _foreachIndex;
@@ -74,7 +73,7 @@ _exit = false;
         };
     };
     if (_exit) exitwith {};
-}foreach _openWounds;
+} foreach _openWounds;
 
 if (_effectivenessFound == -1) exitwith {}; // Seems everything is patched up on this body part already..
 
@@ -95,13 +94,79 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
     [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
-// If all wounds have been bandaged, we will reset all damage to 0, so the unit is not showing any blood on the model anymore.
-if (GVAR(healHitPointAfterAdvBandage) && {{(_x select 2) == _part && {_x select 3 > 0}}count _openWounds == 0}) then {
-    _hitSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
-    _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
-    _point = _hitPoints select (_hitSelections find _selectionName);
-    [_target, _point, 0] call FUNC(setHitPointDamage);
-    // _target setvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+// If all wounds to a body part have been bandaged, reset damage to that body part to zero
+// so that the body part functions normally and blood is removed from the uniform.
+// Arma combines left and right arms into a single body part (HitHands), same with left and right legs (HitLegs).
+// Arms are actually hands.
+if (GVAR(healHitPointAfterAdvBandage)) then {
+    private["_currentWounds", "_headWounds", "_bodyWounds", "_legsWounds", "_armWounds"];
+
+    // Get the list of the wounds the target is currently suffering from.
+    _currentWounds = _target getVariable [QGVAR(openWounds), []];
+
+    // Tally of unbandaged wounds to each body part.
+    _headWounds = 0;
+    _bodyWounds = 0;
+    _legsWounds = 0;
+    _armWounds  = 0;
+
+    // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
+    {
+        _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+
+        // Use switch/case for early termination if wounded limb is found before all six are checked.
+        // Number of wounds multiplied by blood loss will return zero for a fully
+        // bandaged body part, not incrementing the wound counter; or it will return
+        // some other number which will increment the wound counter. 
+        switch (_bodyPart) do {
+            // Head
+            case 0: {
+                _headWounds = _headWounds + (_numOpenWounds * _bloodLoss);
+            };
+
+            // Body
+            case 1: {
+                _bodyWounds = _bodyWounds + (_numOpenWounds * _bloodLoss);
+            };
+
+            // Left Arm
+            case 2: {
+                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+            };
+
+            // Right Arm
+            case 3: {
+                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+            };
+
+            // Left Leg
+            case 4: {
+                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+            };
+
+            // Right Leg
+            case 5: {
+                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+            };
+        };
+    } forEach _currentWounds;
+
+    // Any body part that has no wounds is healed to full health
+    if (_headWounds == 0) then {
+        _target setHitPointDamage ["hitHead",  0.0];
+    };
+
+    if (_bodyWounds == 0) then {
+        _target setHitPointDamage ["hitBody",  0.0];
+    };
+
+    if (_armWounds == 0) then {
+        _target setHitPointDamage ["hitHands", 0.0];
+    };
+
+    if (_legsWounds == 0) then {
+        _target setHitPointDamage ["hitLegs",  0.0];
+    };
 };
 
 true;

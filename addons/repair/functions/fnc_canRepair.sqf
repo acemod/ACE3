@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private ["_config", "_engineerRequired", "_items", "_locations", "_return", "_condition", "_vehicleStateCondition"];
+private ["_config", "_engineerRequired", "_items", "_locations", "_return", "_condition", "_vehicleStateCondition", "_settingName", "_settingItemsArray"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitwith {false}; // or go for a default?
@@ -38,7 +38,17 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitwith {false};
 
-_items = getArray (_config >> "items");
+//Items can be an array of required items or a string to a ACE_Setting array
+_items = if (isArray (_config >> "items")) then {
+    getArray (_config >> "items");
+} else {
+    _settingName = getText (_config >> "items");
+    _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
+    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
+        ERROR("bad setting"); ["BAD"]
+    };
+    _settingItemsArray select (missionNamespace getVariable _settingName);
+};
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitwith {false};
 
 _return = true;

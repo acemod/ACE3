@@ -77,14 +77,8 @@ class controlsBackground {
         sizeExLevel = 0;
         sizeEx = H_PART(1);
 
-        ptsPerSquareSea = 5;
-        ptsPerSquareTxt = 20;
-        ptsPerSquareRoad = 0.01;
+        ptsPerSquareRoad = 0.75;
         ptsPerSquareObj = 2000; //don't show buildings
-        ptsPerSquareCLn = 100;
-        ptsPerSquareCost = 200;
-        ptsPerSquareFor = 9;
-        ptsPerSquareForEdge = 9;
 
         showCountourInterval = 0;
 
@@ -116,14 +110,7 @@ class controlsBackground {
         onMouseButtonDblClick = QUOTE(_this call FUNC(mapDoubleTapEH));
         onMouseButtonDown = QUOTE(_this call FUNC(mapButtonDownEH));
 
-        // ptsPerSquareSea = 5;
-        // ptsPerSquareTxt = 20;
-        // ptsPerSquareRoad = 0.01;
         ptsPerSquareObj = 9;
-        // ptsPerSquareCLn = 100;
-        // ptsPerSquareCost = 200;
-        // ptsPerSquareFor = 9;
-        // ptsPerSquareForEdge = 9;
 
         maxSatelliteAlpha = 0.5;
 
@@ -711,14 +698,18 @@ class controls {
         y = Y_PART(2);
         w = W_PART(24.6);
         h = H_PART(19);
-        onLBDblClick = QUOTE(_this call FUNC(appSettingsLBClick));
+        // onLBDblClick = QUOTE(_this call FUNC(appSettingsLBClick));
+        onLBSelChanged = QUOTE(_this call FUNC(appSettingsLBClick));
         sizeEx = H_PART(1.5);
         sizeEx2 = H_PART(1.5);
         rowHeight = H_PART(1.75);
         itemSpacing = 0.001;
         colorText[] = {0.75,0.75,0.75,1};
+        colorTextRight[] = {0.75,0.75,0.75,1};
         colorSelect[] = {0.75,0.75,0.75,1};
         colorSelect2[] = {0.75,0.75,0.75,1};
+        colorSelectRight[] = {0.75,0.75,0.75,1};
+        colorSelect2Right[] = {0.75,0.75,0.75,1};
         colorBackground[] = {0.05,0.05,0.05,1};
         colorSelectBackground[] = {0.05,0.05,0.05,1};
         colorSelectBackground2[] = {0.05,0.05,0.05,1};

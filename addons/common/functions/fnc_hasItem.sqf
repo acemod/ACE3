@@ -1,13 +1,18 @@
-/**
- * fn_hasItem.sqf
- * @Descr: Check if unit has item
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Check if unit has item
  *
- * @Arguments: [unit OBJECT, item STRING (Classname of item)]
- * @Return: BOOL
- * @PublicAPI: true
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Item Classname <STRING>
+ *
+ * Return Value:
+ * has Item <BOOL>
+ *
+ * Public: yes
  */
- #include "script_component.hpp"
+#include "script_component.hpp"
 
-// item classname in items unit
-((_this select 1) in items (_this select 0));
+params ["_unit", "_item"];
+
+_item in items _unit // return

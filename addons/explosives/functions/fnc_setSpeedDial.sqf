@@ -15,7 +15,9 @@
  * Public: No
  */
  #include "script_component.hpp"
+ 
 private ["_speedDial", "_amount"];
+
 _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 if (count _speedDial == 0) exitWith {};
 _amount = if((_this select 0))then{1}else{-1};

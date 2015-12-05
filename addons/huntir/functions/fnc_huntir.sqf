@@ -4,10 +4,10 @@
  * HuntIR monitor system
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
@@ -35,21 +35,21 @@ createDialog "ace_huntir_cam_dialog_off";
         GVAR(connectionDelay) = 5;
         GVAR(state) = "searching";
         GVAR(message) = [];
-        GVAR(messageSearching) = toArray "Searching.....";            
+        GVAR(messageSearching) = toArray "Searching.....";
         GVAR(messageConnecting) = toArray "Connecting.....";
         [{
             //Close monitor if we no longer have item:
             if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
                 closeDialog 0;
             };
-        
+
             private ["_elapsedTime", "_nearestHuntIRs"];
             _elapsedTime = ACE_time - GVAR(startTime);
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
-            
+
             if ((!dialog) || GVAR(done)) exitWith {
                 [_this select 1] call cba_fnc_removePerFrameHandler;
-                
+
                 if (dialog && GVAR(state) == "connected") then {
                     [_nearestHuntIRs select 0] call FUNC(cam);
                 } else {

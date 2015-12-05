@@ -7,7 +7,7 @@
  * 0: RscDisplayInsertMarker <DISPLAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [onLoad] call ace_markers_fnc_initInsertMarker;
@@ -19,11 +19,12 @@
 #define BORDER  0.005
 
 [{
-    private ["_display", "_text", "_picture", "_channel", "_buttonOK", "_buttonCancel", "_description", "_title", "_descriptionChannel", "_sizeX", "_sizeY", "_aceShapeLB", "_aceColorLB", "_aceAngleSlider", "_aceAngleSliderText", "_mapIDD", "_pos", "_posX", "_posY", "_posW", "_posH", "_offsetButtons", "_buttonOk", "_curSelShape", "_curSelColor", "_curSelAngle"];
+    private ["_text", "_picture", "_channel", "_buttonOK", "_buttonCancel", "_description", "_title", "_descriptionChannel", "_sizeX", "_sizeY", "_aceShapeLB", "_aceColorLB", "_aceAngleSlider", "_aceAngleSliderText", "_mapIDD", "_pos", "_offsetButtons", "_buttonOk", "_curSelShape", "_curSelColor", "_curSelAngle"];
 
     disableserialization;
-    PARAMS_1(_display);
-
+    params ["_display"];
+    TRACE_1("params",_display);
+    
     //Can't place markers when can't interact
     if (!([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
@@ -76,10 +77,8 @@
 
     //--- Background
     _pos = ctrlposition _text;
-    _posX = (_pos select 0) + 0.01;
-    _posY = _pos select 1;
-    _posW = _pos select 2;
-    _posH = _pos select 3;
+    _pos params  ["_posX", "_posY", "_posW", "_posH"];
+    _posX = _posX + 0.01;
     _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
     _pos set [0,_posX];
     _pos set [1,_posY];
@@ -173,9 +172,10 @@
     // init marker shape lb
     lbClear _aceShapeLB;
     {
-        _aceShapeLB lbAdd (_x select 0);
-        _aceShapeLB lbSetValue [_forEachIndex, _x select 1];
-        _aceShapeLB lbSetPicture [_forEachIndex, _x select 2];
+        _x params ["_add", "_set", "_pic"];
+        _aceShapeLB lbAdd _add;
+        _aceShapeLB lbSetValue [_forEachIndex, _set];
+        _aceShapeLB lbSetPicture [_forEachIndex, _pic];
     } forEach GVAR(MarkersCache);
     _curSelShape = GETGVAR(curSelMarkerShape,0);
     _aceShapeLB lbSetCurSel _curSelShape;
@@ -188,9 +188,10 @@
     // init marker color lb
     lbClear _aceColorLB;
     {
-        _aceColorLB lbAdd (_x select 0);
-        _aceColorLB lbSetValue [_forEachIndex, _x select 1];
-        _aceColorLB lbSetPicture [_forEachIndex, _x select 2];
+        _x params ["_add", "_set", "_pic"];
+        _aceColorLB lbAdd _add;
+        _aceColorLB lbSetValue [_forEachIndex, _set];
+        _aceColorLB lbSetPicture [_forEachIndex, _pic];
     } forEach GVAR(MarkerColorsCache);
     _curSelColor = GETGVAR(curSelMarkerColor,0);
     _aceColorLB lbSetCurSel _curSelColor;

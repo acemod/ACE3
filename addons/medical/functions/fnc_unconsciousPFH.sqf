@@ -13,21 +13,17 @@
  * 1: PFEH ID <NUMBER>
  *
  * ReturnValue:
- * nil
+ * None
  *
  * Public: yes
  */
-
 #include "script_component.hpp"
 
 private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
-_args = _this select 0;
-_unit = _args select 0;
-_originalPos = _args select 1;
-_startingTime = _args select 2;
-_minWaitingTime = _args select 3;
-_hasMovedOut = _args select 4;
-_parachuteCheck = _args select 5;
+params ["_args", "_idPFH"];
+_args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
+
+TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _originalPos, _startingTime, _minWaitingTime, _hasMovedOut, _parachuteCheck);
 
 if (!alive _unit) exitwith {
     if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
@@ -45,11 +41,14 @@ if (!alive _unit) exitwith {
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
 
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , QGVAR(unconscious));
+
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
 // In case the unit is no longer in an unconscious state, we are going to check if we can already reset the animation
 if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
+    TRACE_7("ACE_DEBUG_Unconscious_PFH",_unit, _args, [_unit] call FUNC(isBeingCarried), [_unit] call FUNC(isBeingDragged), _idPFH, _unit getvariable QGVAR(unconsciousArguments),animationState _unit);
     // TODO, handle this with carry instead, so we can remove the PFH here.
     // Wait until the unit isn't being carried anymore, so we won't end up with wierd animations
     if !(([_unit] call FUNC(isBeingCarried)) || ([_unit] call FUNC(isBeingDragged))) then {
@@ -57,7 +56,7 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
             TRACE_1("Removing fake weapon [on wakeup]",_unit);
             _unit removeWeapon "ACE_FakePrimaryWeapon";
         };
-    
+
         if (vehicle _unit == _unit) then {
             if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
                 [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
@@ -99,7 +98,7 @@ if !(_unit getvariable ["ACE_isUnconscious",false]) exitwith {
 
         ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
         // EXIT PFH
-        [(_this select 1)] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
@@ -130,13 +129,15 @@ if (_parachuteCheck) then {
 };
 
 if (!local _unit) exitwith {
+    TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _args, _startingTime, _minWaitingTime, _idPFH, _unit getvariable QGVAR(unconsciousArguments));
     _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
     _unit setvariable [QGVAR(unconsciousArguments), _args, true];
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
 if ((ACE_time - _startingTime) >= _minWaitingTime) exitwith {
+    TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setvariable ["ACE_isUnconscious", false, true];
     };

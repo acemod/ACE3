@@ -10,21 +10,16 @@
  * 4: Items available <ARRAY<STRING>>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_args", "_caller", "_target","_selectionName","_className","_config","_callback", "_usersOfItems", "_weaponSelect", "_lastAnim"];
-
-_args = _this select 0;
-_caller = _args select 0;
-_target = _args select 1;
-_selectionName = _args select 2;
-_className = _args select 3;
-_usersOfItems = _args select 5;
+private ["_config", "_callback", "_weaponSelect", "_lastAnim"];
+params ["_args"];
+_args params ["_caller", "_target", "_selectionName", "_className", "_items", "_usersOfItems"];
 
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
@@ -33,14 +28,15 @@ if (vehicle _caller == _caller) then {
     _lastAnim = _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""];
     //Don't play another medic animation (when player is rapidily treating)
     TRACE_2("Reseting to old animation", animationState player, _lastAnim);
-    switch (true) do {
-        case (_lastAnim == "AinvPknlMstpSlayWrflDnon_medic"): {_lastAnim = "AmovPknlMstpSrasWrflDnon"};
-        case (_lastAnim == "AinvPpneMstpSlayWrflDnon_medic"): {_lastAnim = "AmovPpneMstpSrasWrflDnon"};
-        case (_lastAnim == "AinvPknlMstpSlayWnonDnon_medic"): {_lastAnim = "AmovPknlMstpSnonWnonDnon"};
-        case (_lastAnim == "AinvPpneMstpSlayWpstDnon_medic"): {_lastAnim = "AinvPpneMstpSlayWpstDnon"};
-        case (_lastAnim == "AinvPknlMstpSlayWpstDnon_medic"): {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
+    switch (toLower _lastAnim) do {
+        case "ainvpknlmstpslaywrfldnon_medic": {_lastAnim = "AmovPknlMstpSrasWrflDnon"};
+        case "ainvppnemstpslaywrfldnon_medic": {_lastAnim = "AmovPpneMstpSrasWrflDnon"};
+        case "ainvpknlmstpslaywnondnon_medic": {_lastAnim = "AmovPknlMstpSnonWnonDnon"};
+        case "ainvppnemstpslaywpstdnon_medic": {_lastAnim = "AinvPpneMstpSlayWpstDnon"};
+        case "ainvpknlmstpslaywpstdnon_medic": {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
     };
-    [_caller, _lastAnim, 1] call EFUNC(common,doAnimation);
+
+    [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
 };
 _caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
 
@@ -57,8 +53,9 @@ if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "")
 };
 
 {
-    (_x select 0) addItem (_x select 1);
-}foreach _usersOfItems;
+    _x params ["_unit", "_item"];
+    _unit addItem _item;
+} foreach _usersOfItems;
 
 // Record specific callback
 _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
@@ -67,10 +64,10 @@ if (GVAR(level) >= 2) then {
 };
 
 _callback = getText (_config >> "callbackFailure");
-if (isNil _callback) then {
-    _callback = compile _callback;
+_callback = if (isNil _callback) then {
+     compile _callback
 } else {
-    _callback = missionNamespace getvariable _callback;
+    missionNamespace getvariable _callback
 };
 
 _args call _callback;

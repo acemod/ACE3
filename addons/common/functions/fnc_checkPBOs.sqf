@@ -5,22 +5,20 @@
  *
  * Arguments:
  * 0: Mode <NUMBER>
- *   0:  Warn once
- *   1:  Warn permanently
- *   2:  Kick
- * 1: Check all PBOs? <BOOL> (Optional - default: false)
- * 2: Whitelist <STRING> (Optinal - default: "[]")
+ *   0 = Warn once
+ *   1 = Warn permanently
+ *   2 = Kick
+ * 1: Check all PBOs? (default: false) <BOOL>
+ * 2: Whitelist (default: "[]") <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_mode", "_checkAll", "_whitelist"];
-
-_mode = _this select 0;
-_checkAll = if (count _this > 1) then {_this select 1} else {false};
-_whitelist = if (count _this > 2) then {_this select 2} else {"[]"};
+params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
 
 _whitelist = [_whitelist, {toLower _this}] call FUNC(map);
 
@@ -30,22 +28,17 @@ ACE_Version_Whitelist = _whitelist;
 if (!_checkAll) exitWith {}; //ACE is checked by FUNC(checkFiles)
 
 if (!isServer) then {
-    [_mode, _checkAll, _whitelist] spawn {
-        private ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer", "_text", "_error", "_rscLayer", "_ctrlHint"];
-        PARAMS_3(_mode,_checkAll,_whitelist);
+    [{
+        if (isNil "ACE_Version_ClientErrors") exitWith {};
 
-        waitUntil {
-            sleep 1;
-            !isNil "ACE_Version_ClientErrors"
-        };
+        ACE_Version_ClientErrors params ["_missingAddon", "_missingAddonServer", "_oldVersionClient", "_oldVersionServer"];
 
-        _missingAddon = ACE_Version_ClientErrors select 0;
-        _missingAddonServer = ACE_Version_ClientErrors select 1;
-        _oldVersionClient = ACE_Version_ClientErrors select 2;
-        _oldVersionServer = ACE_Version_ClientErrors select 3;
+        (_this select 0) params ["_mode", "_checkAll", "_whitelist"];
 
         // Display error message.
         if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
+            private ["_text", "_error"];
+
             _text = "[ACE] Version mismatch:<br/><br/>";
             _error = format ["ACE version mismatch: %1: ", profileName];
 
@@ -67,10 +60,12 @@ if (!isServer) then {
             };
 
             //[_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
-            diag_log text _error;
+            ACE_LOGERROR(_error);
 
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
+
+                private ["_rscLayer", "_ctrlHint"];
 
                 _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
                 _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
@@ -91,9 +86,11 @@ if (!isServer) then {
                 ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
             };
         };
-    };
+
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
+    }, 1, [_mode, _checkAll, _whitelist]] call CBA_fnc_addPerFrameHandler;
 };
 
 if (_checkAll) then {
-    0 spawn COMPILE_FILE(scripts\Version\checkVersionNumber);
+    0 spawn COMPILE_FILE(scripts\checkVersionNumber); // @todo
 };

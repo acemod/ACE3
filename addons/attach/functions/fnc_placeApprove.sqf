@@ -25,7 +25,7 @@
  */
 #include "script_component.hpp"
 
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_currentObjects", "_currentItemNames"];
+private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_attachList"];
 
 params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAtachText", "_startingPosition"];
 TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAtachText,_startingPosition);
@@ -87,12 +87,9 @@ _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 //Remove Item from inventory
 _unit removeItem _itemClassname;
 
-//Add Object to ACE_AttachedObjects and ACE_AttachedItemNames
-_currentObjects = _attachToVehicle getVariable [QGVAR(Objects), []];
-_currentObjects pushBack _attachedObject;
-_attachToVehicle setVariable [QGVAR(Objects), _currentObjects, true];
-_currentItemNames = _attachToVehicle getVariable [QGVAR(ItemNames), []];
-_currentItemNames pushBack _itemClassname;
-_attachToVehicle setVariable [QGVAR(ItemNames), _currentItemNames, true];
+//Add Object to attached array
+_attachList = _attachToVehicle getVariable [QGVAR(attached), []];
+_attachList pushBack [_attachedObject, _itemClassname];
+_attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
 [_onAtachText] call EFUNC(common,displayTextStructured);

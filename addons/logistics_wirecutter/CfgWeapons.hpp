@@ -10,7 +10,7 @@ class CfgWeapons {
         picture = QUOTE(PATHTOF(ui\item_wirecutter_ca.paa));
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
-            mass = 100;
+            mass = 65;
         };
     };
 };

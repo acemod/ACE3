@@ -12,6 +12,8 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
+
 #include "CfgEventHandlers.hpp"
 
 #include "CfgAmmo.hpp"
@@ -21,6 +23,7 @@ class CfgPatches {
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
+#include "GUI_VirtualAmmo.hpp"
 
 class CfgActions {
     class None;
@@ -39,5 +42,3 @@ class CfgMineTriggers {
         mineTriggerRange = 1;
     };
 };
-
-#include "ACE_Settings.hpp"

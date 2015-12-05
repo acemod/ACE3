@@ -9,17 +9,21 @@
  * None
  *
  * Example:
- * [medical_menu] call ace_medical_menu_onMenuOpen
+ * [medical_menu] call ace_medical_menu_fnc_onMenuOpen
  *
  * Public: No
  */
 #include "script_component.hpp"
+#define MAX_DISTANCE 10
 
 private "_target";
 
 params ["_display"];
 
 if (isNil "_display") exitwith {};
+
+if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
+if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
 
 if (isNil QGVAR(LatestDisplayOptionMenu)) then {
     GVAR(LatestDisplayOptionMenu) = "triage";
@@ -60,8 +64,11 @@ disableSerialization;
 (_display displayCtrl 1) ctrlSetText format ["%1", [_target] call EFUNC(common,getName)];
 setMousePosition [0.4, 0.4];
 
-[QGVAR(onMenuOpen), "onEachFrame", {
-    params ["_display"];
+if (GVAR(MenuPFHID) != -1) exitWith {ERROR("PFID already running");};
+
+GVAR(MenuPFHID) = [{
+
+    (_this select 0) params ["_display"];
     if (isNull GVAR(INTERACTION_TARGET)) then {
         GVAR(INTERACTION_TARGET) = ACE_player;
     };
@@ -69,9 +76,15 @@ setMousePosition [0.4, 0.4];
     [GVAR(INTERACTION_TARGET)] call FUNC(updateIcons);
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
-    _status = [GVAR(INTERACTION_TARGET)] call FUNC(getTriageStatus);
-    (_display displayCtrl 2000) ctrlSetText (_status select 0);
-    (_display displayCtrl 2000) ctrlSetBackgroundColor (_status select 2);
- }, [_display]] call BIS_fnc_addStackedEventHandler;
+    //Check that it's valid to stay open:
+    if !(([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
+        closeDialog 314412;
+        //If we failed because of distance check, show UI message:
+        if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
+            ["displayTextStructured", [ACE_player], [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
+        };
+    };
 
- ["Medical_onMenuOpen", [ACE_player, _interactionTarget]] call EFUNC(common,localEvent);
+}, 0, [_display]] call CBA_fnc_addPerFrameHandler;
+
+["Medical_onMenuOpen", [ACE_player, _target]] call EFUNC(common,localEvent);

@@ -101,6 +101,7 @@ class CfgVehicles {
         function = QFUNC(moduleHearing);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
@@ -129,6 +130,18 @@ class CfgVehicles {
                         value = 1;
                     };
                 };
+            };
+            class enabledForZeusUnits {
+                displayName = CSTRING(enabledForZeusUnits_DisplayName);
+                description = CSTRING(enabledForZeusUnits_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class autoAddEarplugsToUnits {
+                displayName = CSTRING(autoAddEarplugsToUnits_DisplayName);
+                description = CSTRING(autoAddEarplugsToUnits_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
             };
         };
         class ModuleDescription {
