@@ -433,39 +433,38 @@ class CfgVehicles {
     #define ARM_LEG_ARMOR_BETTER  5
     #define ARM_LEG_ARMOR_CSAT    4
 
-    class Land;
-    class Man: Land {
-        class HitPoints;
-    };
-
+    #define ADD_ACE_HITPOINTS(ARM_ARMOR,LEG_ARMOR) \
+        class HitLeftArm { \
+            armor = ARM_ARMOR; \
+            material = -1; \
+            name = "hand_l"; \
+            passThrough = 1; \
+            radius = 0.08; \
+            explosionShielding = 1; \
+            visual = "injury_hands"; \
+            minimalHit = 0.01; \
+        }; \
+        class HitRightArm: HitLeftArm { \
+            name = "hand_r"; \
+        }; \
+        class HitLeftLeg { \
+            armor = LEG_ARMOR; \
+            material = -1; \
+            name = "leg_l"; \
+            passThrough = 1; \
+            radius = 0.1; \
+            explosionShielding = 1; \
+            visual = "injury_legs"; \
+            minimalHit = 0.01; \
+        }; \
+        class HitRightLeg: HitLeftLeg { \
+            name = "leg_r"; \
+        }; \
+            
+    class Man;
     class CAManBase: Man {
-        class HitPoints: HitPoints { // custom hitpoints. addons might want to adjust these accordingly
-            class HitLeftArm {
-                armor = ARM_LEG_ARMOR_DEFAULT;
-                material = -1;
-                name = "hand_l"; // @todo hopefully these still include the whole arm + hands
-                passThrough = 1;
-                radius = 0.08;
-                explosionShielding = 1;
-                visual = "injury_hands";
-                minimalHit = 0.01;
-            };
-            class HitRightArm: HitLeftArm {
-                name = "hand_r"; // @todo hopefully these still include the whole arm + hands
-            };
-            class HitLeftLeg {
-                armor = ARM_LEG_ARMOR_DEFAULT;
-                material = -1;
-                name = "leg_l";
-                passThrough = 1;
-                radius = 0.1;
-                explosionShielding = 1;
-                visual = "injury_legs";
-                minimalHit = 0.01;
-            };
-            class HitRightLeg: HitLeftLeg {
-                name = "leg_r";
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_DEFAULT,ARM_LEG_ARMOR_DEFAULT);
         };
 
         class ACE_SelfActions {
@@ -525,174 +524,82 @@ class CfgVehicles {
     class B_Soldier_base_F: SoldierWB {};
 
     class B_Soldier_04_f: B_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
         };
     };
 
     class B_Soldier_05_f: B_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
         };
     };
 
     class I_Soldier_base_F: SoldierGB {};
 
     class I_Soldier_03_F: I_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
         };
     };
 
     class I_Soldier_04_F: I_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_BETTER;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
         };
     };
 
     class O_Soldier_base_F: SoldierEB {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
         };
     };
 
+    class O_Soldier_diver_base_F: O_Soldier_base_F {
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+        };
+    };
+    
     class O_Soldier_02_F: O_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
         };
     };
 
     class O_officer_F: O_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = ARM_LEG_ARMOR_CSAT; // @todo is that suppossed to be the case?
-            };
-            class HitRightArm: HitRightArm {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = ARM_LEG_ARMOR_CSAT;
-            };
+        class HitPoints {
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
         };
     };
 
-    class O_Protagonist_VR_F: O_Soldier_base_F {
-        class HitPoints: HitPoints {
-            class HitHead;
-            class HitBody;
-            class HitHands;
-            class HitLegs;
-            class HitLeftArm: HitLeftArm {
-                armor = 2;
-            };
-            class HitRightArm: HitRightArm {
-                armor = 2;
-            };
-            class HitLeftLeg: HitLeftLeg {
-                armor = 2;
-            };
-            class HitRightLeg: HitRightLeg {
-                armor = 2;
-            };
-        };
-    };
+    //These VR guys already have limb hitpoints that we should be able to use
+    //Note: the selections are a little weird, eg:  class leg_l {name = "leg_l";};
+    // class B_Soldier_VR_F: B_Soldier_base_F { {
+        // class HitPoints {
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+        // };
+    // };
+    // class O_Soldier_VR_F: O_Soldier_base_F { {
+        // class HitPoints {
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+        // };
+    // };
+    // class I_Soldier_VR_F: I_Soldier_base_F { {
+        // class HitPoints {
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+        // };
+    // };
+    // class C_Soldier_VR_F: C_man_1 {
+        // class HitPoints {
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+        // };
+    // };
+    // class O_Protagonist_VR_F: O_Soldier_base_F {
+        // class HitPoints {
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+        // };
+    // };
 
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {

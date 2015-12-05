@@ -165,5 +165,11 @@
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
+            <English>Add earplugs to units</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
+            <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
+        </Key>
     </Package>
 </Project>
