@@ -64,6 +64,11 @@ class GVAR(TheDialog) {
 #define PROFILE_W (profilenamespace getvariable ['IGUI_GRID_GPS_W', 1])
 #define PROFILE_H ((16/9) * (profilenamespace getvariable ['IGUI_GRID_GPS_W', 1]))
 
+//Need undef's for pboProject
+#undef X_PART
+#undef Y_PART
+#undef W_PART
+#undef H_PART
 #define X_PART(num) QUOTE((num) / 25 * PROFILE_W + PROFILE_X)
 #define Y_PART(num) QUOTE((num) / 25 * PROFILE_H + PROFILE_Y)
 #define W_PART(num) QUOTE((num) / 25 * PROFILE_W)
