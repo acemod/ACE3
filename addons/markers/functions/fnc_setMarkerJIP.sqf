@@ -21,31 +21,34 @@ params ["_allMapMarkers", "_allMapMarkersProperties", "_logic"];
 TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
 
 {
-    private ["_index", "_data", "_config"];
-
-    _index = _allMapMarkers find _x;
+    private _index = _allMapMarkers find _x;
 
     if (_index != -1) then {
-        _data = _allMapMarkersProperties select _index;
-        _data params ["_name", "_color", "_pos", "_dir"];
+        private _data = _allMapMarkersProperties select _index;
+        _data params ["_markerClassname", "_colorClassname", "_pos", "_dir"];
 
-        _config = (configfile >> "CfgMarkers") >> _name;
+        private _config = (configfile >> "CfgMarkers") >> _markerClassname;
+
         if (!isClass _config) then {
             WARNING("CfgMarker not found, changed to milDot");
-            _config == (configFile >> "CfgMarkers" >> "MilDot");
+            _config = configFile >> "CfgMarkers" >> "MilDot";
         };
-        _x setMarkerTypeLocal (configName _config);
 
-        _config = (configfile >> "CfgMarkerColors") >> _color;
+        _x setMarkerTypeLocal configName _config;
+
+        _config = configfile >> "CfgMarkerColors" >> _colorClassname;
+
         if (!isClass _config) then {
             WARNING("CfgMarkerColors not found, changed to Default");
-            _config == (configFile >> "CfgMarkerColors" >> "Default");
+            _config = configFile >> "CfgMarkerColors" >> "Default";
         };
-        _x setMarkerColorLocal (configName _config);
+
+        _x setMarkerColorLocal configName _config;
 
         _x setMarkerPosLocal _pos;
         _x setMarkerDirLocal _dir;
     };
-} forEach allMapMarkers;
+    false
+} count allMapMarkers;
 
 deleteVehicle _logic;
