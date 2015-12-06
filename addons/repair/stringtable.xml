@@ -95,7 +95,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track ...</English>
-            <German>Tausche Kette aus...</German>
+            <German>Tausche Kette aus ...</German>
             <Polish>Wymienianie gąsienicy ...</Polish>
             <Portuguese>Trocando esteira...</Portuguese>
             <Russian>Замена гусеницы ...</Russian>
@@ -122,7 +122,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track ...</English>
-            <German>Entferne Kette....</German>
+            <German>Entferne Kette ...</German>
             <Polish>Zdejmowanie gąsienicy ...</Polish>
             <Portuguese>Removendo esteira...</Portuguese>
             <Russian>Снятие гусеницы ...</Russian>
@@ -229,7 +229,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
-            <German>Zeige eine Nachricht, wannimmer du ein Fahrzeug reparierst.</German>
+            <German>Zeige eine Nachricht, wannimmer du ein Fahrzeug reparierst</German>
             <Polish>Pokaż informację, kiedy wykonujesz czynności związane z naprawą pojazdu.</Polish>
             <Portuguese>Mostra uma notificação quando você repara um veículo</Portuguese>
             <Russian>Отображать оповещение каждый раз, когда вы ремонтируете транспорт</Russian>
@@ -403,7 +403,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
-            <German></German>
+            <German>Leitwerk</German>
             <Polish>Ogon</Polish>
             <Czech>Ocas</Czech>
             <Russian>Хвост</Russian>
@@ -421,7 +421,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
-            <German></German>
+            <German>Statik Port</German>
             <Polish>Port statyczny</Polish>
             <Russian>Статический иллюминатор</Russian>
             <Portuguese>Porta Estática</Portuguese>
@@ -696,7 +696,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
-            <German>Pionier </German>
+            <German>Pionier</German>
             <Polish>Tylko mechanicy</Polish>
             <Portuguese>Somente engenheiro</Portuguese>
             <Russian>Только инженеры</Russian>
@@ -705,7 +705,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
             <English>Repair Specialist only</English>
-            <German>Nur Mechatroniker</German>
+            <German>Nur Reparaturspezialist</German>
             <Polish>Tylko inżynierowie</Polish>
             <Portuguese>Somente especialista em reparos</Portuguese>
             <Russian>Только ремонтные специалисты</Russian>
@@ -798,7 +798,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
-            <German>Irgentwo</German>
+            <German>Irgendwo</German>
             <Polish>Wszędzie</Polish>
             <Portuguese>Qualquer lugar</Portuguese>
             <Russian>Где угодно</Russian>
@@ -807,7 +807,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairVehicleOnly">
             <English>Repair Vehicle only</English>
-            <German>Repariere nur Fahrzeug</German>
+            <German>Nur Reperaturfahrzeug</German>
             <Polish>Przy pojazdach naprawczych</Polish>
             <Portuguese>Somente veículos de reparo</Portuguese>
             <Russian>Только у ремонтного транспорта</Russian>
@@ -815,7 +815,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_repairFacilityOnly">
             <English>Repair Facility only</English>
-            <German>Repariere nur Einrichtung</German>
+            <German>Nur Reperatureinrichtung</German>
             <Polish>Przy budynkach naprawczych</Polish>
             <Portuguese>Somente instalação de reparo</Portuguese>
             <Russian>Только у ремонтных сооружений</Russian>
@@ -823,7 +823,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_vehicleAndFacility">
             <English>Repair Facility or Vehicle</English>
-            <German>Repariere Einrichtung oder Fahrzeug</German>
+            <German>Reperatureinrichtung oder Reperaturfahrzeug</German>
             <Polish>Przy budynkach i pojazdach naprawczych</Polish>
             <Portuguese>Instalação e veículo de reparo</Portuguese>
             <Russian>Только у ремонтного транспорта или ремонтных сооружений</Russian>
@@ -849,7 +849,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
-            <German>Eine Aufzählung von Einheiten, die als Pionier gelten, getrennt durch Kommata.</German>
+            <German>Eine Aufzählung von Einheiten, die als Pionier gelten, und durch Kommata getrennt sind.</German>
             <Polish>Lista nazw jednostek, które są sklasyfikowane jako inżynierowie, oddzielone przecinkami.</Polish>
             <Portuguese>Lista de nomes de unidades que serão classificadas como engenheiros, separadas por vírgulas.</Portuguese>
             <Russian>Список имен юнитов, которые будут классифицированы как инженеры, разделенный запятыми.</Russian>
@@ -891,7 +891,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
             <English>Specialist</English>
-            <German>Mechatroniker</German>
+            <German>Reparaturspezialist</German>
             <Polish>Inżynier</Polish>
             <Portuguese>Especialista</Portuguese>
             <Russian>Специалист</Russian>
@@ -974,7 +974,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
-            <German>Eine Aufzählung von Objekten, die als Reperatureinrichtung gelten, getrennt durch Kommata</German>
+            <German>Eine Aufzählung von Objekten, die als Reperatureinrichtung gelten, und durch Kommata getrennt sind.</German>
             <Polish>Lista nazw budynków, które są sklasyfikowane jako budynki naprawcze, oddzielone przecinkami.</Polish>
             <Portuguese>Lista de objetos que serão classificados como instalações de reparo. separado por vírgulas.</Portuguese>
             <Russian>Список объектов, которые будут классифицированы как ремонтные, разделенный запятыми.</Russian>
@@ -1030,7 +1030,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
-            <German>Eine Aufzählung von Objekten, welche Ersatzteile beherbergen, getrennt durch Kommata</German>
+            <German>Eine Aufzählung von Objekten, welche Ersatzteile beherbergen, und durch Kommata getrennt sind.</German>
             <Polish>Lista obiektów, które otrzymają części zamienne, oddzielone przecinkiem.</Polish>
             <Portuguese>Lista de objetos que ganharão partes sobressalentes, dividos por vírgulas.</Portuguese>
             <Spanish>Lista de los objetos que tendrán repuestos añadidos, separados por comas.</Spanish>

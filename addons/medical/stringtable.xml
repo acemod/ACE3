@@ -44,7 +44,7 @@
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
             <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
             <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviele Abfälle können FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
+            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
@@ -2044,7 +2044,7 @@
             <English>Placing body in bodybag</English>
             <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
             <Russian>Упаковка тела ...</Russian>
-            <German>Körper wird in Leichensack gesteckt</German>
+            <German>Körper wird in Leichensack gepackt</German>
             <Polish>Pakowanie ciała do worka na zwłoki ...</Polish>
             <French>Placement du corps dans la housse</French>
             <Hungarian>Test hullazsákba helyezése ...</Hungarian>
@@ -2110,7 +2110,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
-            <German>%1 hat das eigene Erste-Hilfe-Set verwendet.</German>
+            <German>%1 hat das eigene Erste-Hilfe-Set verwendet</German>
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
             <Russian>%1 использовал аптечку</Russian>
@@ -2293,7 +2293,7 @@
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
             <Polish>Wybierz rodzaj menu, który preferujesz: domyślne pozycje 3D lub radialne</Polish>
             <French>Selctionne le type de menu préféré; par défaut la sélection 3D ou radiale</French>
-            <German>Wähle den Menü-Stil: Standard 3D-Auswahl oder kreisförmig.</German>
+            <German>Wähle den Menüstil: Standard 3D-Auswahl oder kreisförmig.</German>
             <Russian>Выберите тип меню: стандартный вариант (3D) или радиальный</Russian>
             <Spanish>Selecciona el tipo de menú que prefieres: selecciones 3d por defecto o radial.</Spanish>
             <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
@@ -3190,7 +3190,7 @@
             <Russian>Должны ли юниты получать повреждения от аварий на транспорте?</Russian>
             <Polish>Czy jednostki otrzymują obrażenia w wyniku kolizji pojazdów?</Polish>
             <Spanish>¿Las unidades reciben daño de un accidente de tráfico?</Spanish>
-            <German>Verursacht ein Fahrzeugunfall Schaden (an den Insassen)</German>
+            <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
             <Czech>Dostane jednotka poškození při autonehodě?</Czech>
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
             <French>Les unités subissent des dégats lors d'accident</French>
@@ -3633,7 +3633,7 @@
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
             <Polish>Moduł ten pozwala przypisać klasę medyczną wybranym jednostkom.</Polish>
-            <German>Dieses Modul legt fest, welche Einheiten  Sanitäter sind.</German>
+            <German>Dieses Modul legt fest, welche Einheiten Sanitäter sind.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
             <French>Ce module permet d'assigner la classe médicale à une unité sélectionnée</French>
@@ -3861,7 +3861,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
-            <German>Diese Person ist wach und kann nicht verladen werden</German>
+            <German>Diese Person (%1) ist wach und kann nicht verladen werden</German>
             <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
             <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>

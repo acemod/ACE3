@@ -222,7 +222,7 @@
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
-            <German>Dieses Modul zeigt jeden Gefallenen durch Eigenbeschuss, in Form einer Textnachricht, im Chat an.</German>
+            <German>Dieses Modul zeigt jeden Gefallenen durch Freundbeschuss, in Form einer Textnachricht, im Chat an.</German>
             <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
             <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
             <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
