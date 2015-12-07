@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="Combat Space Enhancement">
     <Package name="Combat Medical System">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -370,7 +370,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>
-            <German>Er hat %2 %1 offene Wunden</German>
+            <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
             <French>Il y a %2 %1 Blessure Ouverte</French>
@@ -379,7 +379,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
-            <German>Er hat 1 %1 offene Wunde</German>
+            <German>Er hat 1 offene Wunde (%1)</German>
             <Russian>Открытая рана %1</Russian>
             <Spanish>Hay 1 Herida Abierta %1</Spanish>
             <French>Il y a 1 blessure ouverte %1</French>
@@ -397,7 +397,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
-            <German>Er hat %2 %1, verbundene Wunden</German>
+            <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
             <French>Il y a %2 %1 Blessure Bandée</French>
@@ -406,7 +406,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
-            <German>Er hat 1 %1, verbundene Wunde</German>
+            <German>Er hat 1 verbundene Wunde (%1)</German>
             <Russian>1 перевязанная рана %1</Russian>
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
             <French>Il y a 1 %1 Blessure Bandée</French>
@@ -415,6 +415,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
+            <German>Er hat eine zum Teil verbundene Wunde (%1)</German>
             <Russian>Частично перевязанная рана %1</Russian>
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
             <French>Il y a %1 Blessure Partielment Bandée</French>

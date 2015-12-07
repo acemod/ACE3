@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -167,7 +167,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
-            <German>Welche Fahrzeugteile können vollständig in Stand gesetzt werden? </German>
+            <German>Welche Fahrzeugteile können vollständig in Stand gesetzt werden?</German>
             <Polish>W jakich miejscach pojazd może zostać w pełni naprawiony?</Polish>
             <Portuguese>Em quais locais um veículo pode ser reparado por completo?</Portuguese>
             <Russian>В каких местах транспорт может быть полностью отремеонтирован?</Russian>
@@ -229,7 +229,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
-            <German>Zeige eine Nachricht, wannimmer du ein Fahrzeug reparierst</German>
+            <German>Zeige eine Nachricht, wann immer du ein Fahrzeug reparierst</German>
             <Polish>Pokaż informację, kiedy wykonujesz czynności związane z naprawą pojazdu.</Polish>
             <Portuguese>Mostra uma notificação quando você repara um veículo</Portuguese>
             <Russian>Отображать оповещение каждый раз, когда вы ремонтируете транспорт</Russian>
