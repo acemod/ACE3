@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="Combat Space Enhancement">
-    <Package name="Combat Medical System">
+<Project name="ACE">
+    <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
             <English>Medical Menu</English>
             <German>Sanitätsmenü</German>
