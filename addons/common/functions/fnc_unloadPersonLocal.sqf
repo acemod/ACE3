@@ -15,6 +15,7 @@
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 params ["_unit", "_vehicle"];
+TRACE_2("params",_unit,_vehicle);
 
 private ["_validVehiclestate", "_emptyPos", "_loaded"];
 
@@ -30,7 +31,7 @@ if (_vehicle isKindOf "Ship") then {
     _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit]; // TODO: if spot is underwater pick another spot.
 } else {
     if (_vehicle isKindOf "Air") then {
-        if (speed _vehicle > 1 || {isTouchingGround _vehicle}) then {
+        if (speed _vehicle > 1 || {!isTouchingGround _vehicle}) then {
             _validVehiclestate = false;
         };
 
