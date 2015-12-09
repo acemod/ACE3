@@ -128,7 +128,7 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
 
 _usersOfItems = [];
 if (_consumeItems > 0) then {
-    _usersOfItems = ([_caller, _target, _items] call FUNC(useItems)) select 1;
+    _usersOfItems = ([_caller, _items] call FUNC(useItems)) select 1;
 };
 
 // Parse the config for the progress callback
