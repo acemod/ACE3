@@ -194,5 +194,17 @@
             <Portuguese>Atacar</Portuguese>
             <Italian>Attaccare</Italian>
         </Key>
+        <Key ID="STR_ACE_Gestures_showOnInteractionMenu_displayName">
+            <English>Show Gestures On Interaction Menu</English>
+        </Key>
+        <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
+            <English>Show the gestures on the self interaction menu, or just keybinds, or disable completely</English>
+        </Key>
+        <Key ID="STR_ACE_Gestures_justKeybinds">
+            <English>Just Keybinds</English>
+        </Key>
+        <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
+            <English>KeyBinds + Interaction Menu</English>
+        </Key>
     </Package>
 </Project>
