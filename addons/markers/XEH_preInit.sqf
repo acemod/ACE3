@@ -5,6 +5,7 @@ ADDON = false;
 PREP(getEnabledChannels);
 PREP(initInsertMarker);
 PREP(mapDrawEH);
+PREP(onLBSelChangedChannel);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
 PREP(onSliderPosChangedAngle);

@@ -145,6 +145,30 @@
         _pos set [3,_posH];
         _channel ctrlSetPosition _pos;
         _channel ctrlCommit 0;
+
+        // channels are added by engine and not script. we have to manually delete them. requires channel names to be unique?
+        private _enabledChannels = true call FUNC(getEnabledChannels);
+        private _i = 0;
+
+        while {_i < lbSize _channel} do {
+            if ((_channel lbText _i) in _enabledChannels) then {
+                _i = _i + 1;
+            } else {
+                _channel lbDelete _i;
+            };
+        };
+
+        private _currentChannelName = CHANNEL_NAMES param [currentChannel, -1];
+
+        // select current channel in list box, must be done after lbDelete
+        for "_j" from 0 to (lbSize _channel - 1) do {
+            if (_channel lbText _j == _currentChannelName) then {
+                _channel lbSetCurSel _j;
+            };
+        };
+
+        _channel ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedChannel)}];
+
         _offsetButtons = 7 * _posH + 8 * BORDER;
     } else {
         _descriptionChannel ctrlShow false;
