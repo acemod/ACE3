@@ -18,6 +18,6 @@ _dlg = ctrlParent _this;
 
 _dlg displayAddEventHandler ["unload", {
     if (_this select 1 == 1) then {
-        [missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call FUNC(fixCrateContent);
+        [missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call FUNC(fixCrateContent);
     };
 }];

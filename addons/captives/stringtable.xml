@@ -184,12 +184,14 @@
             <Polish>Skuj jednostkę</Polish>
             <Portuguese>Fazer unidade algemada</Portuguese>
             <Russian>Связать юнита</Russian>
+            <Czech>Spoutat jednotku</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.&lt;br /&gt;Source: ace_captives</English>
             <Polish>Zsynchronizuj z jednostką, aby została skuta.&lt;br /&gt;Źródło: ace_captives</Polish>
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.&lt;br/&gt;Source: ace_captives</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.&lt;br /&gt;Источник: ace_captives</Russian>
+            <Czech>Synchronizovat s jednotkou, která má být v poutech.&lt;br /&gt;Zdroj: ace_captives</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -264,6 +266,7 @@
             <Portuguese>Requer rendição</Portuguese>
             <Russian>Требовать пленения</Russian>
             <Spanish>Requiere rendición</Spanish>
+            <Czech>Vzdávání vyžadováno</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
@@ -272,6 +275,7 @@
             <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
             <Russian>Требуется, чтобы игрок сдался в плен прежде, чем его можно будет связать</Russian>
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
+            <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -280,6 +284,7 @@
             <Portuguese>Somente rendição </Portuguese>
             <Russian>Только сдавшийся в плен</Russian>
             <Spanish>Solo rendición</Spanish>
+            <Czech>Pouze vzdávání</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
@@ -288,6 +293,7 @@
             <Portuguese>Rendição ou desarmado</Portuguese>
             <Russian>Сдавшийся или безоружный</Russian>
             <Spanish>Rendición o desarme</Spanish>
+            <Czech>Vzdávání nebo beze zbraně</Czech>
         </Key>
     </Package>
 </Project>
