@@ -151,7 +151,10 @@
         private _i = 0;
 
         while {_i < lbSize _channel} do {
-            if ((_channel lbText _i) in _enabledChannels) then {
+            private _channelName = _channel lbText _i;
+
+            // _enabledChannels can not include custom channels names. Therefore also check if it's a custom one. Blame BI if the unit should not access the channel.
+            if (_channelName in _enabledChannels || {!(_channelName in CHANNEL_NAMES)}) then {
                 _i = _i + 1;
             } else {
                 _channel lbDelete _i;
