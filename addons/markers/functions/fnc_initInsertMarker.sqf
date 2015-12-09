@@ -158,7 +158,7 @@
             };
         };
 
-        private _currentChannelName = CHANNEL_NAMES param [currentChannel, -1];
+        private _currentChannelName = CHANNEL_NAMES param [currentChannel, localize "str_channel_group"];
 
         // select current channel in list box, must be done after lbDelete
         for "_j" from 0 to (lbSize _channel - 1) do {
