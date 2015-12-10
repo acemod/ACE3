@@ -9,32 +9,24 @@
  * Magazine of the units binocular <STRING>
  *
  * Example:
- * [player] call ace_common_fnc_binocularMagazine
+ * player call ace_common_fnc_binocularMagazine
  *
  * Public: Yes
- *
- * Note: Doesn't work on dead units
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_binocular", "_muzzle", "_mode", "_magazine"];
+private _binocular = binocular _unit;
 
-_binocular = binocular _unit;
+scopeName "main";
 
-if (_binocular == "") exitWith {""};
+{
+    if ((_x select 0) isEqualTo _binocular) then {
+        // note: if there is no magazine, _x(4,0) will be nil, which skips the breakOut.
+        (_x select 4 select 0) breakOut "main";
+    };
+    false
+} count weaponsitems _unit;
 
-_muzzle = currentMuzzle _unit;
-_mode = currentWeaponMode _unit;
-
-_unit selectWeapon _binocular;
-
-// didn't select the binocular (unit probably dead or not local). function won't work. quit with empty string
-if (currentWeapon _unit != _binocular) exitWith {""};
-
-_magazine = currentMagazine _unit;
-
-[_unit, _muzzle, _mode] call FUNC(selectWeaponMode);
-
-_magazine
+""
