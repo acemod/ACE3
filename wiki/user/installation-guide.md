@@ -11,7 +11,7 @@ parent: wiki
 This guide will explain how to get ACE3 up and running faster than you can say banana.
 
 ## 2. Prerequisites
-- Download [CBA](http://www.armaholic.com/page.php?id=18767).
+- Download [CBA](https://github.com/CBATeam/CBA_A3/releases/latest).
 - Download [ACE3](https://github.com/acemod/ACE3/releases/latest).
 - Know how to extract .zip files. Use [Google](https://www.google.com) if not sure.
 
@@ -49,10 +49,10 @@ Only use the optional components that correspond with your mod-pack.
 
 ## 6. Alternative launch methods
 
-### 6.1 Steam Launch Parameters
-- Not supported with the new Arma 3 Launcher
+### 6.1 Swifty
+- 
 
-### 6.2 Arma 3Sync
+### 6.2 Arma 3 Sync
 - Inspect `Addon Options` and verify the `Addon Search Directories` are leading to your Arma 3 folder.
 - Return to the `Addons` tab and click `Refresh`.
 - Right-click inside `Addon Groups`, click `Create Group` and give it a name.
@@ -60,4 +60,5 @@ Only use the optional components that correspond with your mod-pack.
 <img src="{{ site.baseurl }}/img/wiki/user/installation2-a3s.jpg" width="529" height="222" alt="Arma 3Sync Launcher" />
 - Click `Start Game`
 
-### 5.3 Play withSIX
+### 6.3 Play withSIX
+- 
