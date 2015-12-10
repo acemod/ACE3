@@ -16,53 +16,61 @@
  */
 #include "script_component.hpp"
 
-#define BORDER  0.005
+#define BORDER 0.005
 
 [{
-    private ["_text", "_picture", "_channel", "_buttonOK", "_buttonCancel", "_description", "_title", "_descriptionChannel", "_sizeX", "_sizeY", "_aceShapeLB", "_aceColorLB", "_aceAngleSlider", "_aceAngleSliderText", "_mapIDD", "_pos", "_offsetButtons", "_buttonOk", "_curSelShape", "_curSelColor", "_curSelAngle"];
-
     disableserialization;
     params ["_display"];
     TRACE_1("params",_display);
     
     //Can't place markers when can't interact
-    if (!([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
     };
 
     //BIS Controls:
-    _text = _display displayctrl 101;
-    _picture = _display displayctrl 102;
-    _channel = _display displayctrl 103;
-    _buttonOK = _display displayctrl 1;
-    _buttonCancel = _display displayctrl 2;
-    _description = _display displayctrl 1100;
-    _title = _display displayctrl 1001;
-    _descriptionChannel = _display displayctrl 1101;
+    private _text = _display displayctrl 101;
+    private _picture = _display displayctrl 102;
+    private _channel = _display displayctrl 103;
+    private _buttonOK = _display displayctrl 1;
+    private _buttonCancel = _display displayctrl 2;
+    private _description = _display displayctrl 1100;
+    private _title = _display displayctrl 1001;
+    private _descriptionChannel = _display displayctrl 1101;
 
     //ACE Controls:
     // _sizeX = _display displayctrl 1200;
     // _sizeY = _display displayctrl 1201;
-    _aceShapeLB = _display displayctrl 1210;
-    _aceColorLB = _display displayctrl 1211;
-    _aceAngleSlider = _display displayctrl 1220;
-    _aceAngleSliderText = _display displayctrl 1221;
+    private _aceShapeLB = _display displayctrl 1210;
+    private _aceColorLB = _display displayctrl 1211;
+    private _aceAngleSlider = _display displayctrl 1220;
+    private _aceAngleSliderText = _display displayctrl 1221;
 
+    ////////////////////
+    // Install MapDrawEH on current map
+    private _mapIDD = -1;
 
-    //Install MapDrawEH on current map
-    _mapIDD = -1;
     {
-        if (!isNull (findDisplay _x)) exitWith {_mapIDD = _x};
-    } forEach [12, 37, 52, 53, 160];
-    if (_mapIDD == -1) exitWith {ERROR("No Map?");};
-    if (!(_mapIDD in GVAR(mapDisplaysWithDrawEHs))) then {
-        GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
-        ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}];
+        if (!isNull (findDisplay _x)) exitWith {
+            _mapIDD = _x;
+        };
+        false
+    } count [12, 37, 52, 53, 160];
+
+    if (_mapIDD == -1) exitWith {
+        ERROR("No Map?");
     };
 
-    //Calculate center position of the marker placement ctrl
-    _pos = ctrlPosition _picture;
+    if !(_mapIDD in GVAR(mapDisplaysWithDrawEHs)) then {
+        GVAR(mapDisplaysWithDrawEHs) pushBack _mapIDD;
+        ((finddisplay _mapIDD) displayctrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+    };
+
+    ////////////////////
+    // Calculate center position of the marker placement ctrl
+    private _pos = ctrlPosition _picture;
     _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+
     GVAR(currentMarkerPosition) = ((findDisplay _mapIDD) displayCtrl 51) ctrlMapScreenToWorld _pos;
 
     //Hide the bis picture:
@@ -77,98 +85,116 @@
 
     //--- Background
     _pos = ctrlposition _text;
-    _pos params  ["_posX", "_posY", "_posW", "_posH"];
+    _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
     _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
-    _pos set [0,_posX];
-    _pos set [1,_posY];
-    _text ctrlsetposition _pos;
-    _text ctrlcommit 0;
+    _pos set [0, _posX];
+    _pos set [1, _posY];
+    _text ctrlSetPosition _pos;
+    _text ctrlCommit 0;
 
     //--- Title
-    _pos set [1,_posY - 2*_posH - BORDER];
-    _pos set [3,_posH];
-    _title ctrlsetposition _pos;
-    _title ctrlcommit 0;
+    _pos set [1, _posY - 2 * _posH - BORDER];
+    _pos set [3, _posH];
+    _title ctrlSetPosition _pos;
+    _title ctrlCommit 0;
 
     //--- Description
-    _pos set [1,_posY - 1*_posH];
-    _pos set [3,6*_posH + 6 * BORDER];
-    _description ctrlenable false;
-    _description ctrlsetposition _pos;
-    _description ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_lib_label_description")];
-    _description ctrlcommit 0;
+    _pos set [1, _posY - 1 * _posH];
+    _pos set [3,6 * _posH + 6 * BORDER];
+    _description ctrlEnable false;
+    _description ctrlSetPosition _pos;
+    _description ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", localize "str_lib_label_description"];
+    _description ctrlCommit 0;
 
     //--- Shape
-    _pos set [1,_posY + 1 * _posH + 2 * BORDER];
-    _pos set [2,_posW];
-    _pos set [3,_posH];
-    _aceShapeLB ctrlsetposition _pos;
-    _aceShapeLB ctrlcommit 0;
+    _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+    _pos set [2, _posW];
+    _pos set [3, _posH];
+    _aceShapeLB ctrlSetPosition _pos;
+    _aceShapeLB ctrlCommit 0;
 
     //--- Color
-    _pos set [1,_posY + 2 * _posH + 3 * BORDER];
-    _pos set [2,_posW];
-    _aceColorLB ctrlsetposition _pos;
-    _aceColorLB ctrlcommit 0;
+    _pos set [1, _posY + 2 * _posH + 3 * BORDER];
+    _pos set [2, _posW];
+    _aceColorLB ctrlSetPosition _pos;
+    _aceColorLB ctrlCommit 0;
 
     //--- Angle
-    _pos set [1,_posY + 3 * _posH + 4 * BORDER];
-    _pos set [2,_posW];
-    _aceAngleSlider ctrlsetposition _pos;
-    _aceAngleSlider ctrlcommit 0;
+    _pos set [1, _posY + 3 * _posH + 4 * BORDER];
+    _pos set [2, _posW];
+    _aceAngleSlider ctrlSetPosition _pos;
+    _aceAngleSlider ctrlCommit 0;
 
     //--- Angle Text
-    _pos set [1,_posY + 4 * _posH + 5 * BORDER];
-    _pos set [2,_posW];
-    _aceAngleSliderText ctrlsetposition _pos;
-    _aceAngleSliderText ctrlcommit 0;
+    _pos set [1, _posY + 4 * _posH + 5 * BORDER];
+    _pos set [2, _posW];
+    _aceAngleSliderText ctrlSetPosition _pos;
+    _aceAngleSliderText ctrlCommit 0;
 
-    _offsetButtons = 0;
+    private _offsetButtons = 0;
+
     if (isMultiplayer) then {
         _pos set [1,_posY + 5 * _posH + 7 * BORDER];
         _pos set [3,_posH];
-        _descriptionChannel ctrlsetstructuredtext parsetext format ["<t size='0.8'>%1</t>", (localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0") + ":"];
-        _descriptionChannel ctrlsetposition _pos;
-        _descriptionChannel ctrlcommit 0;
+        _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];
+        _descriptionChannel ctrlSetPosition _pos;
+        _descriptionChannel ctrlCommit 0;
 
         _pos set [1,_posY + 6 * _posH + 7 * BORDER];
         _pos set [3,_posH];
-        _channel ctrlsetposition _pos;
-        _channel ctrlcommit 0;
+        _channel ctrlSetPosition _pos;
+        _channel ctrlCommit 0;
+
+        // channels are added by engine and not script. we have to manually delete them. requires channel names to be unique?
+        private _enabledChannels = true call FUNC(getEnabledChannels);
+        private _i = 0;
+
+        while {_i < lbSize _channel} do {
+            private _channelName = _channel lbText _i;
+
+            // _enabledChannels can not include custom channels names. Therefore also check if it's a custom one. Blame BI if the unit should not access the channel.
+            if (_channelName in _enabledChannels || {!(_channelName in CHANNEL_NAMES)}) then {
+                _i = _i + 1;
+            } else {
+                _channel lbDelete _i;
+            };
+        };
+
+        private _currentChannelName = CHANNEL_NAMES param [currentChannel, localize "str_channel_group"];
+
+        // select current channel in list box, must be done after lbDelete
+        for "_j" from 0 to (lbSize _channel - 1) do {
+            if (_channel lbText _j == _currentChannelName) then {
+                _channel lbSetCurSel _j;
+            };
+        };
+
+        _channel ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedChannel)}];
+
         _offsetButtons = 7 * _posH + 8 * BORDER;
     } else {
-        _descriptionChannel ctrlshow false;
-        _channel ctrlshow false;
+        _descriptionChannel ctrlShow false;
+        _channel ctrlShow false;
         _offsetButtons = 5 * _posH + 7 * BORDER;
     };
 
     //--- ButtonOK
-    _pos set [1,_posY + _offsetButtons];
-    _pos set [2,_posW / 2 - BORDER];
-    _pos set [3,_posH];
-    _buttonOk ctrlsetposition _pos;
-    _buttonOk ctrlcommit 0;
+    _pos set [1, _posY + _offsetButtons];
+    _pos set [2, _posW / 2 - BORDER];
+    _pos set [3, _posH];
+    _buttonOk ctrlSetPosition _pos;
+    _buttonOk ctrlCommit 0;
 
     //--- ButtonCancel
-    _pos set [0,_posX + _posW / 2];
-    _pos set [1,_posY + _offsetButtons];
-    _pos set [2,_posW / 2];
-    _pos set [3,_posH];
-    _buttonCancel ctrlsetposition _pos;
-    _buttonCancel ctrlcommit 0;
+    _pos set [0, _posX + _posW / 2];
+    _pos set [1, _posY + _offsetButtons];
+    _pos set [2, _posW / 2];
+    _pos set [3, _posH];
+    _buttonCancel ctrlSetPosition _pos;
+    _buttonCancel ctrlCommit 0;
 
-    //--- PositionX
-    /*_pos set [1,_posY + 2 * _posH + 3 * BORDER];
-    _sizeX ctrlsetposition _pos;
-    _sizeX ctrlcommit 0;*/
-
-    //--- PositionY
-    /*_pos set [1,_posY + 2 * _posH + 3 * BORDER];
-    _sizeY ctrlsetposition _pos;
-    _sizeY ctrlcommit 0;*/
-
-
+    ////////////////////
     // init marker shape lb
     lbClear _aceShapeLB;
     {
@@ -177,14 +203,15 @@
         _aceShapeLB lbSetValue [_forEachIndex, _set];
         _aceShapeLB lbSetPicture [_forEachIndex, _pic];
     } forEach GVAR(MarkersCache);
-    _curSelShape = GETGVAR(curSelMarkerShape,0);
+
+    private _curSelShape = GETGVAR(curSelMarkerShape,0);
     _aceShapeLB lbSetCurSel _curSelShape;
 
     //Update now and add eventHandler:
     [_aceShapeLB, _curSelShape] call FUNC(onLBSelChangedShape);
     _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
 
-
+    ////////////////////
     // init marker color lb
     lbClear _aceColorLB;
     {
@@ -193,20 +220,22 @@
         _aceColorLB lbSetValue [_forEachIndex, _set];
         _aceColorLB lbSetPicture [_forEachIndex, _pic];
     } forEach GVAR(MarkerColorsCache);
-    _curSelColor = GETGVAR(curSelMarkerColor,0);
+
+    private _curSelColor = GETGVAR(curSelMarkerColor,0);
     _aceColorLB lbSetCurSel _curSelColor;
 
     //Update now and add eventHandler:
     [_aceColorLB, _curSelColor] call FUNC(onLBSelChangedColor);
     _aceColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 
-
+    ////////////////////
     // init marker angle slider
     _aceAngleSlider sliderSetRange [-180, 180];
-    _curSelAngle = GETGVAR(currentMarkerAngle,0);
+
+    private _curSelAngle = GETGVAR(currentMarkerAngle,0);
     _aceAngleSlider sliderSetPosition _curSelAngle;
+
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
     _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-
 }, _this] call EFUNC(common,execNextFrame);
