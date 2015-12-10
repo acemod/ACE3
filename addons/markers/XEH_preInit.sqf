@@ -2,8 +2,10 @@
 
 ADDON = false;
 
+PREP(getEnabledChannels);
 PREP(initInsertMarker);
 PREP(mapDrawEH);
+PREP(onLBSelChangedChannel);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
 PREP(onSliderPosChangedAngle);
@@ -12,19 +14,19 @@ PREP(sendMarkersJIP);
 PREP(setMarkerJIP);
 PREP(setMarkerNetwork);
 
-private ["_config", "_marker", "_a", "_scope", "_icon", "_rgba", "_name"];
-
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
-    _config = configfile >> "CfgMarkers";
     GVAR(MarkersCache) = [];
 
+    private _config = configfile >> "CfgMarkers";
+
     for "_a" from 0 to (count _config - 1) do {
-        _marker = _config select _a;
-        _scope = getNumber (_marker >> "scope");
-        if (_scope == 2) then {
-            _name = getText (_marker >> "name");
-            _icon = getText (_marker >> "icon");
+        private _marker = _config select _a;
+
+        if (getNumber (_marker >> "scope") == 2) then {
+            private _name = getText (_marker >> "name");
+            private _icon = getText (_marker >> "icon");
+
             GVAR(MarkersCache) pushBack [_name, _a, _icon];
         };
     };
@@ -32,22 +34,25 @@ if (isNil QGVAR(MarkersCache)) then {
 
 // init marker colors
 if (isNil QGVAR(MarkerColorsCache)) then {
-    _config = configfile >> "CfgMarkerColors";
     GVAR(MarkerColorsCache) = [];
 
+    private _config = configfile >> "CfgMarkerColors";
+
     for "_a" from 0 to (count _config - 1) do {
-        _marker = _config select _a;
-        _scope = getNumber (_marker >> "scope");
-        if (_scope == 2) then {
-            _name = getText (_marker >> "name");
-            _rgba = getArray (_marker >> "color");
+        private _marker = _config select _a;
+
+        if (getNumber (_marker >> "scope") == 2) then {
+            private _name = getText (_marker >> "name");
+            private _rgba = getArray (_marker >> "color");
+
             {
-                if (!( _x isEqualType 0)) then {
+                if !( _x isEqualType 0) then {
                     _rgba set [_forEachIndex, call compile _x];
                 };
             } forEach _rgba;
+
             _rgba params ["_red", "_green", "_blue", "_alpha"];
-            _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
+            private _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
             GVAR(MarkerColorsCache) pushBack [_name, _a, _icon];
         };
