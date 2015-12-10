@@ -1,6 +1,5 @@
 /*
  * Author: KoffeinFlummi
- *
  * Adjusts the direction of a shell.
  *
  * Arguments:
@@ -16,7 +15,7 @@
 params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine", "_projectile"];
 
 private _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
-private _turret = [_gunner] call EFUNC(common,getTurretIndex);
+private _turret = _gunner call EFUNC(common,getTurretIndex);
 
 // Exit if the unit isn't a player
 if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};

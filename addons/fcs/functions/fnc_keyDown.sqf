@@ -16,6 +16,7 @@
 params ["_vehicle", "_turret"];
 
 private _distance = call FUNC(getRange);
+call (updateRangeHUD);
 
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
@@ -37,5 +38,3 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
 };
 
 GVAR(Position) = (getPosASL _vehicle) vectorAdd (_weaponDirection vectorMultiply _distance);
-
-call FUNC(updateRangeHUD);

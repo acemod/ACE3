@@ -68,7 +68,7 @@ private _f1 = _data call _fnc_traceBullet;
 
 if (abs _f1 <= PRECISION) exitWith {0};
 
-while {(abs _f1) > PRECISION} do {
+while {abs _f1 > PRECISION} do {
     _data set [7, _angle2];
     private _f2 = _data call _fnc_traceBullet;
 
@@ -79,7 +79,4 @@ while {(abs _f1) > PRECISION} do {
     _it2 = _it2 + 1;
 };
 
-//player globalChat format ["it1: %1 | _angle1: %2 | it2: %3 | _angle2: %4",_it1, _angle-_angleTarget, _it2, _angle2-_angleTarget];
-
-private _angle = _angle2;
-_angle - _angleTarget
+_angle2 - _angleTarget
