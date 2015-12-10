@@ -1083,6 +1083,9 @@ See the make.cfg file for additional build options.
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
 
+        amountOfBuildsFailed = 0
+        namesOfBuildsFailed = []
+
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
         for module in modules:
@@ -1222,6 +1225,8 @@ See the make.cfg file for additional build options.
                         print_error("pboProject return code == {}".format(str(ret)))
                         print_error("Module not successfully built/signed. Check your {}temp\{}_packing.log for more info.".format(work_drive,module))
                         print ("Resuming build...")
+                        amountOfBuildsFailed += 1
+                        namesOfBuildsFailed.append("{}".format(module))
                         continue
 
                     # Back to the root
@@ -1388,8 +1393,14 @@ See the make.cfg file for additional build options.
             except:
                 print_error("Could not copy files. Is Arma 3 running?")
 
-    print_green("\nDone.")
+    if amountOfBuildsFailed > 0:
+        print_error("Build failed. {} pbos failed.".format(amountOfBuildsFailed))
 
+        for failedModuleName in namesOfBuildsFailed:
+            print("- {} failed.".format(failedModuleName))
+
+    else:
+        print_green("\Completed with 0 errors.")
 
 if __name__ == "__main__":
     start_time = timeit.default_timer()

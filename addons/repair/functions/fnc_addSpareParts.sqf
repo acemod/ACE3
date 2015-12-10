@@ -18,7 +18,6 @@
  */
 #include "script_component.hpp"
 
-private ["_part"];
 params ["_vehicle", ["_amount", 1], ["_part", ""], ["_force", false]];
 TRACE_2("params",_vehicle,_amount);
 

@@ -25,8 +25,8 @@ _elements = [];
 
 {
     _theElement = toArray (_x select _elementN);
-    _indexes pushback _foreachIndex;
-    _elements pushback _theElement;
+    _indexes pushBack _forEachIndex;
+    _elements pushBack _theElement;
 } forEach _array;
 
 for "_i" from 1 to (count _elements) - 1 do {
@@ -45,7 +45,7 @@ for "_i" from 1 to (count _elements) - 1 do {
 _returnArray = [];
 
 {
-    _returnArray pushback (_array select _x);
+    _returnArray pushBack (_array select _x);
 } forEach _indexes;
 
 _returnArray

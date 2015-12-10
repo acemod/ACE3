@@ -21,19 +21,19 @@
 
 params ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", ["_priority", 0]];
 
-if (typeName _condition == "STRING") then {
+if (_condition isEqualType "") then {
     _condition = compile _condition;
 };
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-if (typeName _condition2 == "STRING") then {
+if (_condition2 isEqualType "") then {
     _condition2 = compile _condition2;
 };
 
-if (typeName _statement2 == "STRING") then {
+if (_statement2 isEqualType "") then {
     _statement2 = compile _statement2;
 };
 

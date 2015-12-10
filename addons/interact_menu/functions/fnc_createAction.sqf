@@ -40,11 +40,11 @@ params [
     ["_modifierFunction", {}]
 ];
 
-_position = if (typeName (_position) == "STRING") then {
+_position = if (_position isEqualType "") then {
         // If the action is set to a selection, create the suitable code
         compile format ["_target selectionPosition '%1'", _position];
     } else {
-        if (typeName (_position) == "ARRAY") then {
+        if (_position isEqualType []) then {
             // If the action is set to a array position, create the suitable code
             compile format ["%1", _position];
         } else {

@@ -15,4 +15,4 @@
 
 params ["_target", "_status"];
 
-_target setvariable [QEGVAR(medical,triageLevel), _status, true];
+_target setVariable [QEGVAR(medical,triageLevel), _status, true];

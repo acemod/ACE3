@@ -50,7 +50,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _added = _ctrlList lnbAddRow [_settingName, _settingsText];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-        }foreach GVAR(serverSideOptions);
+        }forEach GVAR(serverSideOptions);
     };
     case (MENU_TAB_SERVER_COLORS): {
         {
@@ -70,7 +70,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _ctrlList lnbSetColor [[_added, 1], (_x select 9)];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-        }foreach GVAR(serverSideColors);
+        }forEach GVAR(serverSideColors);
     };
     case (MENU_TAB_SERVER_VALUES): {
         {
@@ -81,13 +81,13 @@ switch (GVAR(optionMenu_openTab)) do {
                     (_x select 0);
                 };
                 _settingsValue = _x select 9;
-                if (typeName _settingsValue != "STRING") then {
+                if (!(_settingsValue isEqualType "")) then {
                     _settingsValue = format["%1", _settingsValue];
                 };
                 _added = _ctrlList lnbAddRow [_settingName, _settingsValue];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-        }foreach GVAR(serverSideValues);
+        }forEach GVAR(serverSideValues);
     };
 };
 if (_updateKeyView) then {
