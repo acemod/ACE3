@@ -21,7 +21,7 @@ private _turret = [_gunner] call EFUNC(common,getTurretIndex);
 // Exit if the unit isn't a player
 if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
 
-private _FCSMagazines = _vehicle getVariable [(format ["%1_%2", QGVAR(Magazines), _turret]), []];
+private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
 private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 if !(_magazine in _FCSMagazines) exitWith {};
