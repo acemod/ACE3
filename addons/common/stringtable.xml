@@ -528,7 +528,7 @@
             <English>Warn (permanent)</English>
             <Polish>Ostrzeżenie (permanentne)</Polish>
             <Spanish>Avisar (permanente)</Spanish>
-            <German>Verwarnen (permanent)/German>
+            <German>Verwarnen (permanent)</German>
             <Czech>Upozornit (permanentně)</Czech>
             <Portuguese>Avisar (permanente)</Portuguese>
             <French>Avertir (permanent)</French>
@@ -705,7 +705,6 @@
             <German>Nicht erzwingen</German>
             <Polish>Nie wymuszaj</Polish>
             <Spanish>No forzar</Spanish>
-            <German>Nicht erzwingen</German>
             <Czech>Nevynucovat</Czech>
             <Portuguese>Não forçar</Portuguese>
             <Russian>Не обязывать</Russian>
