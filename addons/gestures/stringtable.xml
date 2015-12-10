@@ -92,7 +92,7 @@
             <Polish>Wskazać</Polish>
             <Czech>Ukázat</Czech>
             <French>Pointer</French>
-            <Russian>Точка</Russian>
+            <Russian>Показать направление</Russian>
             <Hungarian>Mutat</Hungarian>
             <Portuguese>Apontar</Portuguese>
             <Italian>Puntare a</Italian>
@@ -115,6 +115,7 @@
             <French>Stop</French>
             <German>Stop</German>
             <Polish>Stop</Polish>
+            <Russian>Стоп</Russian>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">
@@ -135,6 +136,7 @@
             <French>Regroupement</French>
             <German>Sammeln</German>
             <Polish>Zbiórka</Polish>
+            <Russian>Собраться</Russian>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -142,12 +144,14 @@
             <French>En avant</French>
             <German>Vorwärts Bewegen</German>
             <Polish>Naprzód</Polish>
+            <Russian>Вперед</Russian>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
             <English>Engage</English>
             <French>Engager</French>
             <Polish>Atak</Polish>
+            <Russian>Открыть огонь</Russian>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -155,6 +159,7 @@
             <French>Pointer</French>
             <German>Zeigen</German>
             <Polish>Wskaż</Polish>
+            <Russian>Показать направление</Russian>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -162,6 +167,7 @@
             <French>Tenir</French>
             <German>Anhalten</German>
             <Polish>Wstrzymać</Polish>
+            <Russian>Ждать</Russian>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -169,6 +175,7 @@
             <French>Attention</French>
             <German>Achtung</German>
             <Polish>Uwaga</Polish>
+            <Russian>Внимание</Russian>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
