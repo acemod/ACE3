@@ -1,0 +1,1 @@
+#include "\z\ace\addons\filters\script_component.hpp"
