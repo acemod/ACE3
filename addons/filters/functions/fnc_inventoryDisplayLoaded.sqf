@@ -35,6 +35,11 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
     private _nameAll = _filter lbText _index;
     _filter lbDelete _index;
 
+    // add additional filter functions to the default filters. These remove backpacks etc.
+    _filter lbSetData [0, QFUNC(filterWeapons)];
+    _filter lbSetData [1, QFUNC(filterMagazines)];
+    _filter lbSetData [2, QFUNC(filterItems)];
+
     // add our custom filters
     {
         _x params ["_name", "_fncName"];
