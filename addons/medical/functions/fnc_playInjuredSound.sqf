@@ -1,7 +1,7 @@
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
- * Will not play if the unit has already played a sound within to close a ACE_time frame.
+ * Will not play if the unit has already played a sound within to close a time frame.
  * Delay: With minimal damage (below 1), the delay is (10 + random(50)) seconds. Otherwise it is 60 seconds / damage.
  *
  * Arguments:
@@ -18,14 +18,14 @@
 
 private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
 params ["_unit", "_pain"];
-if (!local _unit || !GVAR(enableScreams)) exitwith{};
+if (!local _unit || !GVAR(enableScreams)) exitWith{};
 
 // Lock if the unit is already playing a sound.
-if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitwith {};
-_unit setvariable [QGVAR(playingInjuredSound),true];
+if ((_unit getVariable [QGVAR(playingInjuredSound),false])) exitWith {};
+_unit setVariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
-if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
+if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Classnames of the available sounds.
     _availableSounds_A = [
         "WoundedGuyA_01",
@@ -75,9 +75,9 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
 
     // Clean up the lock
     [{
-        (_this select 0) setvariable [QGVAR(playingInjuredSound),nil];
+        (_this select 0) setVariable [QGVAR(playingInjuredSound),nil];
     }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
 };
 
 // Clean up in case there has not been played any sounds.
-_unit setvariable [QGVAR(playingInjuredSound),nil];
+_unit setVariable [QGVAR(playingInjuredSound),nil];

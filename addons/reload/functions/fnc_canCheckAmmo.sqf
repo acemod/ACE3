@@ -25,7 +25,7 @@ if (_target isKindOf "StaticWeapon") exitWith {
     // no check ammo action on destroyed static weapons
     if (!alive _target) exitWith {false};
 
-    local _found = false;
+    private _found = false;
 
     {
         if (_x select 2) exitWith {

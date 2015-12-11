@@ -51,8 +51,6 @@ _fnc_parseConfigForSettings = {
 // mission side settings
 [missionConfigFile >> "ACE_Settings"] call _fnc_parseConfigForSettings;
 
-// Publish all settings data
-publicVariable QGVAR(settings);
 // Publish all setting values
 {
     publicVariable (_x select 0);

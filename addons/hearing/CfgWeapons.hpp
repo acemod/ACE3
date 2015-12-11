@@ -42,7 +42,8 @@ class CfgWeapons {
     class H_PilotHelmetFighter_O: H_PilotHelmetFighter_B {};
     class H_PilotHelmetFighter_I: H_PilotHelmetFighter_B {};
 
-    class H_Cap_headphones: H_HelmetB {
+    class HelmetBase;
+    class H_Cap_headphones: HelmetBase {
         GVAR(protection) = 0.5;
         GVAR(lowerVolume) = 0.60;
     };

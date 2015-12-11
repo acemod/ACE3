@@ -35,7 +35,7 @@ if ((locked _veh) == 0) exitWith {false};
 if (!("ACE_key_lockpick" in (items _unit))) exitWith {false};
 
 _vehLockpickStrenth = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
-if (typeName _vehLockpickStrenth != "SCALAR") exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
+if (!(_vehLockpickStrenth isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
 
 //-1 indicates unpickable lock
 if (_vehLockpickStrenth < 0) exitWith {false};

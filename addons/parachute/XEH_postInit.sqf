@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[24, [false, false, false]], false] call cba_fnc_addKeybind;
+[24, [false, false, false]], false] call CBA_fnc_addKeybind;
 
 GVAR(PFH) = false;
 ["playerVehicleChanged",{

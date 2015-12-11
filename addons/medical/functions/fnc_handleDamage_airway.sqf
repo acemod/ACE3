@@ -21,12 +21,12 @@ private "_bodyPartn";
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
-if (_bodyPartn > 1) exitwith {};
+if (_bodyPartn > 1) exitWith {};
 
 if (_amountOfDamage > 0.5) then {
     if (random(1) >= 0.8) then {
-        if !(_unit getvariable[QGVAR(airwayCollapsed), false]) then {
-            _unit setvariable [QGVAR(airwayCollapsed), true, true];
+        if !(_unit getVariable[QGVAR(airwayCollapsed), false]) then {
+            _unit setVariable [QGVAR(airwayCollapsed), true, true];
         };
     };
 };

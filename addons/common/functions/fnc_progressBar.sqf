@@ -4,7 +4,7 @@
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:
- * 0: NUMBER - Total Time (in game "ACE_time" seconds)
+ * 0: NUMBER - Total Time (in game "time" seconds)
  * 1: ARRAY - Arguments, passed to condition, fail and finish
  * 2: CODE or STRING - On Finish: Code called or STRING raised as event.
  * 3: CODE or STRING - On Failure: Code called or STRING raised as event.
@@ -85,13 +85,13 @@ _fnc_perFrameFunction = {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         if (_errorCode == 0) then {
-            if (typeName _onFinish == "STRING") then {
+            if (_onFinish isEqualType "") then {
                 [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFinish;
             };
         } else {
-            if (typeName _onFail == "STRING") then {
+            if (_onFail isEqualType "") then {
                 [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFail;

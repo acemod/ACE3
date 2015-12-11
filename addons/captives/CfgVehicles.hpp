@@ -153,16 +153,32 @@ class CfgVehicles {
     class GVAR(ModuleSurrender): Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = CSTRING(ModuleSurrender_DisplayName); //Make Unit Surrender
+        displayName = CSTRING(ModuleSurrender_DisplayName);
         function = QFUNC(moduleSurrender);
         scope = 2;  //show in editor
-        isGlobal = 1; //run global
+        isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
         icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
-            description = CSTRING(ModuleSurrender_Description); //Sync a unit to make them surrender.<br/>Source: ace_captives
+            description = CSTRING(ModuleSurrender_Description);
+            sync[] = {"AnyAI"};
+        };
+    };    
+    class GVAR(ModuleHandcuffed): Module_F {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = CSTRING(ModuleHandcuffed_DisplayName);
+        function = QFUNC(moduleHandcuffed);
+        scope = 2;  //show in editor
+        isGlobal = 0; //run on server
+        isTriggerActivated  = 1; //Wait for triggers
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Handcuffed_ca.paa));
+        functionPriority = 0;
+        class Arguments {};
+        class ModuleDescription: ModuleDescription {
+            description = CSTRING(ModuleHandcuffed_Description);
             sync[] = {"AnyAI"};
         };
     };
@@ -176,6 +192,7 @@ class CfgVehicles {
         scope = 2;
         icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
         isGlobal = 1;
+        isSingular = 1;
         class Arguments {
             class allowHandcuffOwnSide {
                 displayName = CSTRING(ModuleSettings_handcuffSide_name);

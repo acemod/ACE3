@@ -8,6 +8,7 @@ class CfgVehicles {
         function = QFUNC(moduleSettings);
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
 
@@ -171,6 +172,13 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
+    // autonomus
+    class Helicopter_Base_F;
+    class UAV_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+    
     // boats
     class Ship;
     class Ship_F: Ship {
@@ -229,7 +237,15 @@ class CfgVehicles {
         GVAR(size) = 6;
     };
 
-
+    // objects
+    class RoadCone_F: ThingX {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
+    };
+    class RoadBarrier_F: RoadCone_F {
+        GVAR(size) = 2;
+    };
+    
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {

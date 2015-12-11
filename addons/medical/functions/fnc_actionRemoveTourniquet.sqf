@@ -20,17 +20,17 @@ params ["_caller", "_target", "_selectionName"];
 
 // grab the required data
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-_tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+_tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
-if ((_tourniquets select _part) == 0) exitwith {
+if ((_tourniquets select _part) == 0) exitWith {
     _output = LSTRING(noTourniquetOnBodyPart);
     ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
 };
 
 // Removing the tourniquet
 _tourniquets set[_part, 0];
-_target setvariable [QGVAR(tourniquets), _tourniquets, true];
+_target setVariable [QGVAR(tourniquets), _tourniquets, true];
 
 // Adding the tourniquet item to the caller
 _caller addItem "ACE_tourniquet";

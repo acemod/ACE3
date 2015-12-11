@@ -148,7 +148,7 @@ if (_backpack != "") then {
     _unit addBackpack _backpack;
 
     if (_clearBackpack) then {
-        local _backpackObject = unitBackpack _unit;
+        private _backpackObject = unitBackpack _unit;
 
         clearMagazineCargoGlobal _backpackObject;
         clearWeaponCargoGlobal _backpackObject;

@@ -27,7 +27,7 @@ TRACE_3("params", _arguments, _function, _unit);
 
 _function = call compile _function;
 
-if (typeName _unit == "SCALAR") exitWith {
+if (_unit isEqualType 0) exitWith {
     switch (_unit) do {
         case 0 : {
             _arguments call _function;

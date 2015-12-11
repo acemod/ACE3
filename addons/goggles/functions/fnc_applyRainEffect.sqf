@@ -27,7 +27,7 @@ _fnc_underCover = {
     if (vehicle _unit != _unit && {!isTurnedOut _unit}) exitWith {true};
 
     // looking up and no roof over head
-    local _position = eyePos _unit;
+    private _position = eyePos _unit;
     positionCameraToWorld [0, 0, 1] select 2 < (positionCameraToWorld [0, 0, 0] select 2) - 0.4 || {(lineIntersects [_position, _position vectorAdd [0, 0, 15], _unit])} // return
 };
 

@@ -86,7 +86,7 @@ if (_safe) exitWith {};
 
 // apply rotor wash effect
 if (_rotorWash select 1 > 0) then {
-    local _scale = 0.7;
+    private _scale = 0.7;
 
     if (_rotorWash select 1 > 0) then {
         _scale = CLAMP(0.3 * (_rotorWash select 1),0.1,0.3);

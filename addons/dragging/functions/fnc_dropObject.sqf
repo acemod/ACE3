@@ -22,7 +22,7 @@ params ["_unit", "_target"];
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
-if !(_unit getvariable ["ACE_isUnconscious", false]) then {
+if !(_unit getVariable ["ACE_isUnconscious", false]) then {
 	// play release animation
 	_unit playAction "released";
 };
@@ -63,7 +63,7 @@ if !(_target isKindOf "CAManBase") then {
     ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
 };
 
-if (_unit getvariable ["ACE_isUnconscious", false]) then {
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
 };
 

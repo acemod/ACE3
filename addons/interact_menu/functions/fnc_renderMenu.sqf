@@ -101,9 +101,9 @@ if (GVAR(UseListMenu)) then {
 };
 
 // Animate menu scale
-if (_menuInSelectedPath && (_menuDepth == count _path)) then {
-    _scaleX = _scaleX * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * 8) min 1));
-    _scaleY = _scaleY * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * 8) min 1));
+if (_menuInSelectedPath && {_menuDepth == count _path}) then {
+    _scaleX = _scaleX * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * linearConversion [0, 2, GVAR(menuAnimationSpeed), 8, 16]) min 1));
+    _scaleY = _scaleY * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * linearConversion [0, 2, GVAR(menuAnimationSpeed), 8, 16]) min 1));
 };
 
 _target = _actionObject;
@@ -116,7 +116,7 @@ _angle = _centerAngle - _angleSpan / 2;
     private ["_offset","_newPos"];
     _newPos =  if (GVAR(UseListMenu)) then {
         [(_sPos select 0) + _scaleX,
-         (_sPos select 1) + _scaleY * (_foreachindex - _numChildren/2 + 0.5)];
+         (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
     } else {
         [(_sPos select 0) - _scaleX * (cos _angle),
          (_sPos select 1) + _scaleY * (sin _angle)];

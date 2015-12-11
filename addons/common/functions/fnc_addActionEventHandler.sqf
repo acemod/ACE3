@@ -17,11 +17,11 @@
 
 params ["_unit", "_action", "_condition", "_statement"];
 
-if (typeName _condition == "STRING") then {
+if (_condition isEqualType "") then {
     _condition = compile _condition;
 };
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 

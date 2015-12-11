@@ -37,7 +37,7 @@ if !(ctrlVisible 9000) then {
             false call FUNC(show_target_speed_assist_timer);
             true call FUNC(show_target_speed_assist);
             
-            [_this select 1] call cba_fnc_removePerFrameHandler;
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
         
         ctrlSetText [9001, Str(Round((ACE_time - _startTime) * 10) / 10)];
