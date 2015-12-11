@@ -27,7 +27,7 @@ if (_filterFunction isEqualType {}) then {
             format [QGVAR(ItemKey:%1:%2), _itemList lbText _i, _itemList lbPicture _i],
             configNull
         ];
-diag_log text format [QGVAR(ItemKey:%1:%2), _itemList lbText _i, _itemList lbPicture _i]; 
+
         if (!isNull _config && {!(_config call _filterFunction)}) then {
             _itemList lbDelete _i;
 
