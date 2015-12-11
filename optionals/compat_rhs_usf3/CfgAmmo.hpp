@@ -130,22 +130,22 @@ class CfgAmmo
         ace_frag_skip = 1;
         ace_frag_force = 0;
 	};
-	class rhs_ammo_m84: GrenadeHand {
+    class rhs_ammo_m84: GrenadeHand {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
 	};
-	class rhs_ammo_m7a3_cs: GrenadeHand {
+    class rhs_ammo_m7a3_cs: GrenadeHand {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
 	};
-	class rhs_ammo_m69: GrenadeHand {
+    class rhs_ammo_m69: GrenadeHand {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
 	};
-	class rhs_ammo_m67: GrenadeHand {
+    class rhs_ammo_m67: GrenadeHand {
         ace_frag_enabled = 1;
         ace_frag_metal = 213;
         ace_frag_charge = 185;
@@ -155,9 +155,9 @@ class CfgAmmo
         ace_frag_skip = 0;
         ace_frag_force = 1;
 	};
-	class RocketBase;
-	class rhs_ammo_M136_rocket: RocketBase {};
-	class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
+    class RocketBase;
+    class rhs_ammo_M136_rocket: RocketBase {};
+    class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
         ace_frag_enabled = 1;
         ace_frag_metal = 330;
         ace_frag_charge = 280;
