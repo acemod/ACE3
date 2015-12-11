@@ -14,4 +14,4 @@
 
 params ["_config"];
 
-!(_this call FUNC(filterUniforms)) && {!(_this call FUNC(filterVests))} && {!(_this call FUNC(filterBackpacks))}
+!(getNumber (_config >> "ItemInfo" >> "type") in [TYPE_UNIFORM, TYPE_VESTS, TYPE_HEADGEAR]) && {!(_this call FUNC(filterBackpacks))}
