@@ -27,7 +27,10 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class Morphine: Bandage {
             displayName = CSTRING(Inject_Morphine);
@@ -163,12 +166,18 @@ class ACE_Medical_Actions {
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
-            litter[] = { {"All", "_previousDamage > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}}, {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}} };
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class PackingBandage: fieldDressing {
             displayName = CSTRING(Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
-            litter[] = { {"All", "", {"ACE_MedicalLitter_packingBandage"}}};
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {"ACE_MedicalLitter_packingBandageBloody"}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_packingBandage"}}
+            };
         };
         class ElasticBandage: fieldDressing {
             displayName = CSTRING(Actions_ElasticBandage);
@@ -177,7 +186,10 @@ class ACE_Medical_Actions {
         class QuikClot: fieldDressing {
             displayName = CSTRING(Actions_QuikClot);
             items[] = {"ACE_quikclot"};
-            litter[] = { {"All", "", {"ACE_MedicalLitter_QuickClot"}}};
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {"ACE_MedicalLitter_QuickClotBloody"}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_QuickClot"}}
+            };
         };
         class Tourniquet: fieldDressing {
             displayName = CSTRING(Apply_Tourniquet);
@@ -296,9 +308,9 @@ class ACE_Medical_Actions {
             animationCallerSelf = "";
             animationCallerSelfProne = "";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
-                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}} },
-                {"All", "_previousDamage > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
-                {"All", "_previousDamage <= 0", {"ACE_MedicalLitter_clean"}}
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
             };
         };
         class CheckPulse: fieldDressing {

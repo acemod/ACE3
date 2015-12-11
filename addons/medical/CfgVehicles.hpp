@@ -651,6 +651,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_packingBandage: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_packingBandage.p3d));
     };
+    class ACE_MedicalLitter_packingBandageBloody: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_packingbandageBloody.p3d));
+    };
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
     };
@@ -665,6 +668,9 @@ class CfgVehicles {
     };
     class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_Quikclot.p3d));
+    };
+    class ACE_MedicalLitter_QuickClotBloody: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_QuikclotBloody.p3d));
     };
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
