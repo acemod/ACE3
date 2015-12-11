@@ -7,7 +7,7 @@
         </Key>
         <Key ID="STR_ACE_Filters_Headgear">
             <English>Headgear</English>
-            <German>Helme</German>
+            <German>Kopfbedeckungen</German>
         </Key>
         <Key ID="STR_ACE_Filters_Glasses">
             <English>Glasses</English>
@@ -24,6 +24,10 @@
         <Key ID="STR_ACE_Filters_Grenades">
             <English>Grenades</English>
             <German>Granaten</German>
+        </Key>
+        <Key ID="STR_ACE_Filters_Medical">
+            <English>Medical</English>
+            <German>Sanimaterial</German>
         </Key>
     </Package>
 </Project>

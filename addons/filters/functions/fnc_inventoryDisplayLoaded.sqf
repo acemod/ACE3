@@ -1,10 +1,21 @@
-// by commy2
+/*
+ * Author: commy2
+ * Executed every time an inventory display is opened.
+ *
+ * Arguments:
+ * 0: Inventory display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
-private _filter = _display displayCtrl 6554;
+private _filter = _display displayCtrl IDC_FILTERLISTS;
 
 // engine defined behaviour is the following:
 // lb value, data and text don't matter, only the index.
@@ -39,7 +50,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
     _filter lbSetCurSel _index;
 }, [_filter]] call EFUNC(common,execNextFrame);
 
-// monitor changes that can happen and force our upate
+// monitor changes that can happen and force our update
 private _dummyControl = _display ctrlCreate ["RscMapControl", -1];
 
 _dummyControl ctrlSetPosition [0,0,0,0];
@@ -53,9 +64,9 @@ _dummyControl ctrlAddEventHandler ["Draw", {
 
     private _itemList = _display call FUNC(currentItemListBox);
 
-    // monitoring is done by setting a lb value. These are unused here and are reset every time the list box updates. 127 is just a random constant number.
-    if (_itemList lbValue 0 != 127) then {
+    // monitoring is done by setting a lb value. These are unused here and are reset every time the list box updates.
+    if (_itemList lbValue 0 != DUMMY_VALUE) then {
         _display call FUNC(forceItemListUpdate);
-        _itemList lbSetValue [0, 127];
+        _itemList lbSetValue [0, DUMMY_VALUE];
     };
 }];

@@ -1,4 +1,17 @@
-// by commy2
+/*
+ * Author: commy2
+ * Executed when the filter list box is changed.
+ * Sets new filter list index.
+ *
+ * Arguments:
+ * 0: Filter list box <CONTROL>
+ * 1: Filter list index <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 disableSerialization;
