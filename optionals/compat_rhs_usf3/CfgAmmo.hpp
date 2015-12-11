@@ -93,6 +93,7 @@ class CfgAmmo
         irLock = 0;
         laserLock = 0;
         airLock = 0;
+  
 
         // Begin ACE guidance Configs
         class ace_missileguidance {
@@ -124,7 +125,7 @@ class CfgAmmo
     };
     
     class GrenadeHand;
-	class rhs_ammo_mk3a2: GrenadeHand {
+    class rhs_ammo_mk3a2: GrenadeHand {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
