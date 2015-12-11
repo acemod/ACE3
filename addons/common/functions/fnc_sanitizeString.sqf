@@ -25,14 +25,14 @@ _array = [];
     switch _x do {
         case 60 : { // less than symbol: `<`
             if (_removeTags) then {
-                _array append toArray "[";
+                _array append toArray "&lt;";
             } else {
                 _array pushBack _x;
             };
         };
         case 62 : { // greater than symbol: `>`
             if (_removeTags) then {
-                _array append toArray "]";
+                _array append toArray "&gt;";
             } else {
                 _array pushBack _x;
             };
