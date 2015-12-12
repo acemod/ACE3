@@ -24,10 +24,8 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < ACE_diagTime) then {
 
     // Does the cache needs to be cleared on an event?
     if (!isNil "_event") then {
-        private ["_varName", "_cacheList"];
-
-        _varName = format [QGVAR(clearCache_%1), _event];
-        _cacheList = missionNamespace getVariable _varName;
+        private _varName = format [QGVAR(clearCache_%1), _event];
+        private _cacheList = missionNamespace getVariable _varName;
 
         // If there was no EH to clear these caches, add one
         if (isNil "_cacheList") then {
@@ -35,14 +33,13 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < ACE_diagTime) then {
             missionNamespace setVariable [_varName, _cacheList];
 
             [_event, {
-                private ["_varName", "_cacheList"];
                 // _eventName is defined on the function that calls the event
                 #ifdef DEBUG_MODE_FULL
                     ACE_LOGINFO_1("Clear cached variables on event: %1",_eventName);
                 #endif
                 // Get the list of caches to clear
-                _varName = format [QGVAR(clearCache_%1), _eventName];
-                _cacheList = missionNamespace getVariable [_varName, []];
+                private _varName = format [QGVAR(clearCache_%1), _eventName];
+                private _cacheList = missionNamespace getVariable [_varName, []];
                 // Erase all the cached results
                 {
                     _x call FUNC(eraseCache);

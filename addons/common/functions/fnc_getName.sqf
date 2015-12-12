@@ -15,8 +15,7 @@
 
 params ["_unit", ["_showEffective", false]];
 
-private "_name";
-_name = "";
+private _name = "";
 
 if (_unit isKindOf "CAManBase") then {
     _name = _unit getVariable ["ACE_Name", localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];

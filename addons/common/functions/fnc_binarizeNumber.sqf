@@ -17,16 +17,14 @@ params ["_number", ["_minLength", 8]];
 
 _number = round _number;
 
-private ["_array", "_index", "_rest"];
-
-_array = [];
-_array resize _minLength;
+private _array = [];
+private _array resize _minLength;
 
 for "_index" from 0 to (_minLength - 1) do {
     _array set [_index, false];
 };
 
-_index = 0;
+private _index = 0;
 
 while {_number > 0} do {
     _rest = _number mod 2;

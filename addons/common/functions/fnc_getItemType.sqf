@@ -15,23 +15,21 @@
 
 params ["_item"];
 
-private ["_cfgType", "_config", "_type", "_simulation", "_default"];
-
-_cfgType = [_item] call FUNC(getConfigType);
+private _cfgType = [_item] call FUNC(getConfigType);
 
 if (_cfgType == "") exitWith {["", ""]};
 
 if (_cfgType == "CfgGlasses") exitWith {["item", "glasses"]};
 
-_config = configFile >> _cfgType >> _item;
-_type = getNumber (_config >> "type");
-_simulation = getText (_config >> "simulation");
+private _config = configFile >> _cfgType >> _item;
+private _type = getNumber (_config >> "type");
+private _simulation = getText (_config >> "simulation");
 
 if (isNumber (_config >> "ItemInfo" >> "type")) then {
     _type = getNumber (_config >> "ItemInfo" >> "type");
 };
 
-_default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
+private _default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
 
 switch (true) do {
     case (_type == 0): {[_default, "unknown"]};

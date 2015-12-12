@@ -15,15 +15,12 @@
 
 GVAR(settings) = [];
 
-private "_fnc_parseConfigForSettings";
-_fnc_parseConfigForSettings = {
-    private ["_config", "_countOptions", "_optionEntry"];
-
-    _config = _this select 0;
-    _countOptions = count _config;
+private _fnc_parseConfigForSettings = {
+    private _config = _this select 0;
+    private _countOptions = count _config;
 
     for "_index" from 0 to (_countOptions - 1) do {
-        _optionEntry = _config select _index;
+        private _optionEntry = _config select _index;
         [_optionEntry] call FUNC(setSettingFromConfig);
     };
 
