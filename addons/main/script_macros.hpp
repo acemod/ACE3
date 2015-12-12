@@ -83,6 +83,8 @@
 
 #define ACE_isHC (!hasInterface && !isDedicated)
 
+#define IDC_STAMINA_BAR 193
+
 //By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
 #ifdef CBA_DEBUG_SYNCHRONOUS
     #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
