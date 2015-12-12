@@ -18,8 +18,8 @@ ERRORDATA(2);
 private _hash = nil;
 try {
     if(VALIDHASH(_hashList)) then {
-        private _keys = _hashList select 0;
-        private _hashes = _hashList select 1;
+        _hashList params ["_keys", "_hashes"];
+
         if(_index < (count _hashes)) then {
             private _values = _hashes select _index;
 

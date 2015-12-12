@@ -48,14 +48,14 @@ if (_lightSource isKindOf "CAManBase") then {
 } else {
     // handle any object, strcutures, cars, tanks, etc. @todo campfires, burning vehicles
 
-    private _lights = [_lightSource] call FUNC(getTurnedOnLights);
+    private _lights = _lightSource call FUNC(getTurnedOnLights);
 
     {
         private _properties = [[_lightSource, _x], FUNC(getLightProperties), uiNamespace, format [QEGVAR(cache,%1_%2_%3), QUOTE(DFUNC(getLightProperties)), typeOf _lightSource, _x], 1E11] call FUNC(cachedCall);
         //_properties = [_lightSource, _x] call FUNC(getLightProperties);
 
         // @todo intensity affects range?
-        //private _intensity = _properties select 0;
+        //_properties params ["_intensity"];
 
         private _innerAngle = (_properties select 3) / 2;
         private _outerAngle = (_properties select 4) / 2;

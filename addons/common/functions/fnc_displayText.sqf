@@ -23,8 +23,7 @@ if (isNil QGVAR(lastHint)) then {
 
 if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
 
-private _lastHintTime = GVAR(lastHint) select 0;
-private _lastHintPriority = GVAR(lastHint) select 1;
+GVAR(lastHint) params ["_lastHintTime", "_lastHintPriority"];
 
 private _time = ACE_time;
 

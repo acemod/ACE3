@@ -18,7 +18,7 @@ params ["_number", ["_minLength", 8]];
 _number = round _number;
 
 private _array = [];
-private _array resize _minLength;
+_array resize _minLength;
 
 for "_index" from 0 to (_minLength - 1) do {
     _array set [_index, false];
@@ -27,7 +27,7 @@ for "_index" from 0 to (_minLength - 1) do {
 private _index = 0;
 
 while {_number > 0} do {
-    _rest = _number mod 2;
+    private _rest = _number mod 2;
     _number = floor (_number / 2);
 
     _array set [_index, _rest == 1];

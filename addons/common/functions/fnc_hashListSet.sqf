@@ -18,7 +18,7 @@ ERRORDATA(3);
 try {
     if(VALIDHASH(_hashList)) then {
         if(VALIDHASH(_value)) then {
-            private _vals = _value select 1;
+            _value params ["", "_vals"];
 
             (_hashList select 1) set[_index, _vals];
         } else {

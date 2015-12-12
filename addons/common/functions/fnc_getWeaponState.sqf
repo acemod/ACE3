@@ -18,7 +18,7 @@
 
 params ["_unit", "_weapon"];
 
-private _muzzles = [_weapon] call FUNC(getWeaponMuzzles);
+private _muzzles = _weapon call FUNC(getWeaponMuzzles);
 
 private _weaponInfo = [["","","",""], primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find _weapon) max 0);
 

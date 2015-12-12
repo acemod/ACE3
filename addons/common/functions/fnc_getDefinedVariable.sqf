@@ -21,7 +21,7 @@ if (isNil "_value") then {
     if (!isNil "_defaultValue") then {
         _value = _defaultValue;
     } else {
-        private _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
+        private _definedVariable = _variable call FUNC(getDefinedVariableInfo);
 
         if (count _definedVariable > 1) then {
             _value = _definedVariable select 1;

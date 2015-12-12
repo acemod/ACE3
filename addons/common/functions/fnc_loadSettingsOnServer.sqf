@@ -16,7 +16,8 @@
 GVAR(settings) = [];
 
 private _fnc_parseConfigForSettings = {
-    private _config = _this select 0;
+    params ["_config"];
+
     private _countOptions = count _config;
 
     for "_index" from 0 to (_countOptions - 1) do {
