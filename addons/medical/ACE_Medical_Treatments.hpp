@@ -175,8 +175,9 @@ class ACE_Medical_Actions {
             displayName = CSTRING(Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
             litter[] = {
-                {"All", "_bloodLossOnSelection > 0", {"ACE_MedicalLitter_packingBandageBloody"}},
-                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_packingBandage"}}
+                {"All", "", {"ACE_MedicalLitter_packingBandage"}},
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
             };
         };
         class ElasticBandage: fieldDressing {
@@ -187,8 +188,9 @@ class ACE_Medical_Actions {
             displayName = CSTRING(Actions_QuikClot);
             items[] = {"ACE_quikclot"};
             litter[] = {
-                {"All", "_bloodLossOnSelection > 0", {"ACE_MedicalLitter_QuickClotBloody"}},
-                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_QuickClot"}}
+                {"All", "", {"ACE_MedicalLitter_QuickClot"}},
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
             };
         };
         class Tourniquet: fieldDressing {
