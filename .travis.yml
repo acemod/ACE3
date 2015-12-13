@@ -19,12 +19,10 @@ env:
   - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
 notifications:
   slack:
-    secure: aWYF/YX7vxEdXJ5w1jhYJQ2TtTP2NRdnXzJDMYXTv2dlXYhO9qp2qjxDGW3dezuPY7B1mPBgebfSKRx3Robkt1rAfEwPWivOiEztL30rwzOy+5Q1wpORv1JkvTC/q2wqQzxQCU/FPVjD2GkF1wtq1Rnx3ESWD8gbvzYoMNdIw1g=
+    secure: BYITyeesywy33KFWwLmSjs8spIdCWHGpfZBo/StSp7VZC21i1rSM696DKNo7a2gpZ0MzgAppoMDzCZPrvbUgcQwcEIpM3OPFOa6CCTgSGXx88ZAn2U8kFl1ku5jtkR/In9nRKLcfhabnc8nG4u+VnN+q8ULjKFE1kHIb+pfZpXg=
     on_success: change
     on_failure: always
     on_start: never
-    rooms:
-      secure: MvxmqL1NGwiGTVv6uIVTM7jeNLQH95KYtTgSWlXaSw4jdjnf4cmrb/ofHQ3FHhhNVdhRN6W8n0cJfTC3DBZ90bionVh+528qw2mDnDbKljVdIwmoFSexBcH7H1uTLF3gsEz0tbrHtLcnAyTMxdjsdIXDLZ5hwxABNmW5/03jOgs=
   email:
     on_success: never
     on_failure: change
