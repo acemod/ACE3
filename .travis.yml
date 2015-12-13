@@ -19,10 +19,7 @@ env:
   - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
 notifications:
   slack:
-    secure: BYITyeesywy33KFWwLmSjs8spIdCWHGpfZBo/StSp7VZC21i1rSM696DKNo7a2gpZ0MzgAppoMDzCZPrvbUgcQwcEIpM3OPFOa6CCTgSGXx88ZAn2U8kFl1ku5jtkR/In9nRKLcfhabnc8nG4u+VnN+q8ULjKFE1kHIb+pfZpXg=
-    on_success: change
-    on_failure: always
-    on_start: never
+    secure: byZMNBl8PMlgjT9NA1WmhgCdGfX4b3g1kA0vEiwfm+IFNlx7BiM4J/5rp6zV/jV470xl/epAejx2tsa5SdTyFbO87NH63ILJSt5QnjUZjRuGKSutFs9WE671DtZkPRSJXHS4N6x802PRkyBz/84/lsc34FWvHvjwOuYAtOcJRFk=
   email:
     on_success: never
     on_failure: change
