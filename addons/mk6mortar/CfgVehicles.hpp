@@ -34,6 +34,37 @@ class CfgVehicles {
                 discreteDistanceInitIndex = 0;
             };
         };
+        class ACE_Actions {
+            class ACE_MainACtions {
+                class GVAR(loadMagazine_HE) {
+                    displayName = CSTRING(loadMagazine_HE);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'HE')] call FUNC(loadMagazine));
+                    icon = "";
+                    class GVAR(loadMagazine_Smoke) {
+                        displayName = CSTRING(loadMagazine_Smoke);
+                        distance = 4;
+                        condition = QUOTE([ARR_3(_player,_target,'Smoke')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,'Smoke')] call FUNC(loadMagazine));
+                        icon = "";
+                    };
+                    class GVAR(loadMagazine_Illum) {
+                        displayName = CSTRING(loadMagazine_Illum);
+                        distance = 4;
+                        condition = QUOTE([ARR_3(_player,_target,'Illum')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,'Illum')] call FUNC(loadMagazine));
+                        icon = "";
+                    };
+                };
+                class GVAR(unloadMagazine) {
+                    displayName = CSTRING(unloadMagazine);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnloadMagazine));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(unloadMagazine));
+                    icon = "";
+                };
+        };
         class ACE_SelfActions {
             class GVAR(toggleMils) {
                 displayName = "Toggle MILS";

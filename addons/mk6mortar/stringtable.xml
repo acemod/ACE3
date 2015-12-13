@@ -135,5 +135,38 @@
             <Russian>Модуль настройки миномета MK6.</Russian>
             <French>Ce module permet de régler les options du mortier MK6</French>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
+            <English>Load HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
+            <English>Load Smoke Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
+            <English>Load Illumination Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
+            <English>Load Guided HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
+            <English>Load Laser Guided HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_unloadMagazine">
+            <English>Unload Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
+            <English>82mm HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
+            <English>82mm Smoke Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
+            <English>82mm Illumination Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
+            <English>82mm Guided HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
+            <English>82mm Laser Guided HE Round</English>
+        </Key>
     </Package>
 </Project>
