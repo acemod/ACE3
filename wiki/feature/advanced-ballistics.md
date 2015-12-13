@@ -32,7 +32,7 @@ Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd> while using a compa
 `ace_ballistics`, `ace_weather`, `ace_modules`
 
 ## 4. Addon Configs:
-Reference https://github.com/acemod/ACE3/blob/master/extras/CfgAmmoReference.hpp which should have many examples of bullets.
+Reference https://github.com/acemod/ACE3/blob/master/extras/CfgAmmoReference.hpp for examples of bullets with correct configs.
 It is probably best to modify an example that's close to the bullet you are trying to add.
 
 <div class="panel callout">
