@@ -22,4 +22,6 @@ if (isServer) then {
     ["zeusUnitAssigned", FUNC(handleZeusUnitAssigned)] call EFUNC(common,addEventHandler);
 };
 
+[}];
+
 ADDON = true;
