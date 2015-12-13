@@ -1,6 +1,7 @@
 branches:
   only:
   - master
+  - release
 language: python
 python:
 - '3.4'
