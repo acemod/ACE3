@@ -43,7 +43,7 @@
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
-            <German>Kartenbeleuchtung mittels Taschenlampe durch andere erkennbar?</German>
+            <German>Kartenbeleuchtung mittels Taschenlampe durch Dritte erkennbar?</German>
             <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
