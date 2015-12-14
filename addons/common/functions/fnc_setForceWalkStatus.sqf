@@ -14,15 +14,13 @@
  * Example:
  * [ACE_Player, "BrokenLeg", true] call FUNC(setForceWalkStatus)
  *
- * Public: No
+ * Public: Yes
 */
 #include "script_component.hpp"
 
 params ["_unit", "_reason", "_status"];
 
-private ["_forceWalkReasons", "_unitForceWalkReasons", "_forceWalkReasonsBooleans", "_bitmaskNumber"];
-
-_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
+private _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
 
 // register new reason (these reasons are shared publicly, since units can change ownership, but keep their forceWalk status)
 if !(_reason in _forceWalkReasons) then {
@@ -32,16 +30,17 @@ if !(_reason in _forceWalkReasons) then {
 };
 
 // get reasons why the unit is forceWalking already and update to the new status
-_unitForceWalkReasons = [_unit] call FUNC(getForceWalkStatus);
+private _unitForceWalkReasons = [_unit] call FUNC(getForceWalkStatus);
 
-_forceWalkReasonsBooleans = [];
+private _forceWalkReasonsBooleans = [];
+
 {
     _forceWalkReasonsBooleans set [_forEachIndex, (_forceWalkReasons select _forEachIndex) in _unitForceWalkReasons];
 } forEach _forceWalkReasons;
 
 _forceWalkReasonsBooleans set [_forceWalkReasons find _reason, _status];
 
-_bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
+private _bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
 
 _unit setVariable ["ACE_forceWalkStatusNumber", _bitmaskNumber, true];
 

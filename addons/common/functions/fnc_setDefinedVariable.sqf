@@ -17,8 +17,7 @@
 params ["_unit", "_variable", "_value", "_global"];
 
 if (isNil "_global") then {
-    private "_definedVariable";
-    _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
+    private _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
 
     _definedVariable params ["", "",  ["_global", false]];
 };

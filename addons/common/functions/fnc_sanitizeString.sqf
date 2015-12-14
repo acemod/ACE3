@@ -15,8 +15,7 @@
 
 params ["_string", ["_removeTags", false]];
 
-private "_array";
-_array = [];
+private _array = [];
 
 {
     switch _x do {

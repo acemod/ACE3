@@ -12,7 +12,7 @@
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_hideUnit
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

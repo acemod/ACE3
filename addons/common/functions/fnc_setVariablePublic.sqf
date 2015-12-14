@@ -23,13 +23,11 @@ _object setVariable [_varName, _value];
 // Exit if in SP
 if (!isMultiplayer) exitWith {};
 
-private ["_idName", "_syncTime"];
-
-_idName = format ["ACE_setVariablePublic_%1", _varName];
+private _idName = format ["ACE_setVariablePublic_%1", _varName];
 
 if (_idName in GVAR(setVariableNames)) exitWith {};
 
-_syncTime = ACE_diagTime + _sync;
+private _syncTime = ACE_diagTime + _sync;
 
 GVAR(setVariableNames) pushBack _idName;
 

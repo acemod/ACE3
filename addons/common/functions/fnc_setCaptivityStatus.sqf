@@ -10,15 +10,13 @@
  * Return Value:
  * None
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_unit", "_reason", "_status"];
 
-private ["_captivityReasons", "_unitCaptivityReasons", "_captivityReasonsBooleans", "_bitmask"];
-
-_captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
+private _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
 
 // register new reason (these reasons are shared publicly, since units can change ownership, but keep their captivity status)
 if !(_reason in _captivityReasons) then {
@@ -29,16 +27,17 @@ if !(_reason in _captivityReasons) then {
 };
 
 // get reasons why the unit is captive already and update to the new status
-_unitCaptivityReasons = [_unit] call FUNC(getCaptivityStatus);
+private _unitCaptivityReasons = _unit call FUNC(getCaptivityStatus);
 
-_captivityReasonsBooleans = [];
+private _captivityReasonsBooleans = [];
+
 {
     _captivityReasonsBooleans set [_forEachIndex, (_captivityReasons select _forEachIndex) in _unitCaptivityReasons];
 } forEach _captivityReasons;
 
 _captivityReasonsBooleans set [_captivityReasons find _reason, _status];
 
-_bitmask = _captivityReasonsBooleans call FUNC(toBitmask);
+private _bitmask = _captivityReasonsBooleans call FUNC(toBitmask);
 
 // actually apply the setCaptive command globaly
 [[_unit, _bitmask], "{(_this select 0) setCaptive (_this select 1)}", _unit] call FUNC(execRemoteFnc);
