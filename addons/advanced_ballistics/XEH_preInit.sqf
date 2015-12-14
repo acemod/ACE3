@@ -15,5 +15,3 @@ PREP(readAmmoDataFromConfig);
 PREP(readWeaponDataFromConfig);
 PREP(handleFirePFH);
 ADDON = true;
-
-}
