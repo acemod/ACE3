@@ -8,6 +8,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
+            <German>Mittels diesem Modul kann das Aufmunitioniersystem angepasst werden.</German>
             <Polish>Ten moduł pozwala dostosować ustawienia przezbrajania.</Polish>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
@@ -82,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
-            <German>%1 Schuss %2 an %3 aufmunitioniert</German>
+            <German>%3 wurde mit %1 Schuss %2 aufmunitioniert</German>
             <Polish>Przezbrojono %1 pocisków %2 na %3</Polish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
