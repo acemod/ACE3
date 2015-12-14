@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+params ["_unit"];
 
 if !([_unit] call FUNC(canClimb)) exitWith {
     [localize LSTRING(CanNotClimb)] call EFUNC(common,displayTextStructured);
