@@ -4,14 +4,12 @@
  *
  * Arguments:
  * 0: Module <LOGIC>
- * 1: Units <ARRAY>
- * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_vehicle] call ace_fastroping_cutRopes
+ * [_vehicle] call ace_fastroping_fnc_cutRopes
  *
  * Public: No
  */

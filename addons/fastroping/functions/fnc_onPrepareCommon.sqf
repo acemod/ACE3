@@ -6,10 +6,10 @@
  * 0: Helicopter <OBJECT>
  *
  * Return Value:
- * Amount of time to wait before deploying ropes.
+ * Amount of time to wait before deploying ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_fastroping_onDeployRopesCommon
+ * [_vehicle] call ace_fastroping_fnc_onDeployRopesCommon
  *
  * Public: No
  */

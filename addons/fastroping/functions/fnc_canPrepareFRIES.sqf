@@ -9,7 +9,7 @@
  * Able to prepare FRIES <BOOL>
  *
  * Example:
- * [_vehicle] call ace_fastroping_canPrepareFRIES
+ * [_vehicle] call ace_fastroping_fnc_canPrepareFRIES
  *
  * Public: No
  */

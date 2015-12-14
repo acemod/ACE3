@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [_vehicle] call ace_fastroping_cutRopes
+ * [_vehicle] call ace_fastroping_fnc_cutRopes
  *
  * Public: No
  */

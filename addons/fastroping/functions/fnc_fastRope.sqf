@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_fastRope
+ * [_player, _vehicle] call ace_fastroping_fnc_fastRope
  *
  * Public: No
  */

@@ -61,7 +61,7 @@ class CfgVehicles {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
                 condition = [vehicle _player] call FUNC(canPrepareFRIES);
-                statement = [_player, vehicle _player] call FUNC(prepareFRIES);
+                statement = [vehicle _player] call FUNC(prepareFRIES);
                 showDisabled = 0;
                 priority = 1;
             };

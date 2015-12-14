@@ -9,13 +9,13 @@
  * None
  *
  * Example:
- * [_unit, _vehicle] call ace_fastroping_prepareFRIES
+ * [_vehicle] call ace_fastroping_fnc_prepareFRIES
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-params ["_unit", "_vehicle"];
+params ["_vehicle"];
 private ["_config", "_waitTime"];
 
 //Stage indicator: 0 - travel mode; 1 - preparing FRIES; 2 - FRIES ready; 3 - ropes deployed

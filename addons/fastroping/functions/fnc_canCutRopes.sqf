@@ -9,7 +9,7 @@
  * Able to cut ropes <BOOL>
  *
  * Example:
- * [_vehicle] call ace_fastroping_canCutRopes
+ * [_vehicle] call ace_fastroping_fnc_canCutRopes
  *
  * Public: No
  */

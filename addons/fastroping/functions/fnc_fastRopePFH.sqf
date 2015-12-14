@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [[_unit, _vehicle, _rope, _ropeIndex], 0] call ace_fastroping_fastRopePFH
+ * [[_unit, _vehicle, _rope, _ropeIndex], 0] call ace_fastroping_fnc_fastRopePFH
  *
  * Public: No
  */

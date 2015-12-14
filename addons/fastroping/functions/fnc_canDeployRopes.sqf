@@ -10,7 +10,7 @@
  * Able to deploy ropes <BOOL>
  *
  * Example:
- * [_player, _vehicle] call ace_fastroping_canDeployRopes
+ * [_player, _vehicle] call ace_fastroping_fnc_canDeployRopes
  *
  * Public: No
  */
