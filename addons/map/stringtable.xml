@@ -26,7 +26,7 @@
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
-            <German>Simuliere Kartenbeleuchtung auf Basis des Umgebungslichts sowie der mitgeführten Gegenstände? </German>
+            <German>Simuliere Kartenbeleuchtung auf Basis des Umgebungslichts sowie der mitgeführten Gegenstände?</German>
             <Polish>Symuluj oświetlenie mapy bazujące na oświetleniu otoczenia oraz przedmiotach gracza?</Polish>
             <French>Calcul la luminosité de la carte en fonction des conditions de lumière</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
