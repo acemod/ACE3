@@ -9,6 +9,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
+            <German>Mittels diesem Modul kann das Aufmunitioniersystem angepasst werden.</German>
             <Polish>Ten moduł pozwala dostosować ustawienia przezbrajania.</Polish>
             <Russian>Этот модуль позволяет изменить настройки системы перевооружения.</Russian>
         </Key>
@@ -98,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
-            <German>%1 Schuss %2 an %3 aufmunitioniert</German>
+            <German>%3 wurde mit %1 Patronen %2 aufmunitioniert</German>
             <Polish>Przezbrojono %1 pocisków %2 na %3</Polish>
             <Russian>Перевооружено %1 снарядов %2 на %3</Russian>
         </Key>
