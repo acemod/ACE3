@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
-            <German>Kartenbeleuchtung durch Taschenlampe?</German>
+            <German>Kartenbeleuchtung durch Dritte erkennbar</German>
             <Polish>Poświata latarki</Polish>
             <Russian>Свет фонаря на карте?</Russian>
             <Portuguese>Brilho de lanterna no mapa?</Portuguese>
@@ -150,7 +150,7 @@
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
-            <German>Aktiviert Blue Force Tracking. Standart: Nein</German>
+            <German>Aktiviert Blue Force Tracking. Standard: Nein</German>
             <Portuguese>Ativa Rastreio de Forças Azuis. Padrão: Não</Portuguese>
             <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
             <Czech>Povolit Blue Force Tracking. Výchozí: Ne</Czech>
