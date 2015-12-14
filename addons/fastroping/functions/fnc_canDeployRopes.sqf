@@ -17,9 +17,14 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
+private ["_deployedRopes", "_config"];
 
-private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
+_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
 ((driver _vehicle != _unit) &&
-{(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 2} &&
+{
+    ((_vehicle getVariable [QGVAR(deploymentStage), 0]) == 2) ||
+    {!(isText (_config >> QGVAR(onPrepare))) && {(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 0}}
+} &&
 {getPos _vehicle select 2 > 2})
