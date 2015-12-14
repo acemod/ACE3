@@ -25,7 +25,7 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
 {
     _ropeOrigin = _x;
-    if ({_x select 0 == _ropeOrigin} count _deployedRopes == 0) then {
+    if ({(_x select 0) isEqualTo _ropeOrigin} count _deployedRopes == 0) then {
         _hook = QGVAR(helper) createVehicle [0, 0, 0];
         _hook allowDamage false;
         if (typeName _ropeOrigin == "ARRAY") then {
