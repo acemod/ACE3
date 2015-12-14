@@ -83,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
-            <German>%3 wurde mit %1 Schuss %2 aufmunitioniert</German>
+            <German>%3 wurde mit %1 Patronen %2 aufmunitioniert</German>
             <Polish>Przezbrojono %1 pocisków %2 na %3</Polish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
