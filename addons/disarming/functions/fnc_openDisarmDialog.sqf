@@ -72,7 +72,7 @@ GVAR(disarmTarget) = _target;
         _icon = format [DEFUALTPATH, toLower (rank _target)];
         if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
-        _playerName ctrlSetText ([GVAR(disarmTarget)] call EFUNC(common,getName));
+        _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));
 
         //Clear both inventory lists:
         lbClear _groundContainer;
