@@ -1,6 +1,9 @@
 #define COMPONENT overheating
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define ENABLE_PERFORMANCE_COUNTERS
+// #define DEBUG_MODE_FULL
+
 #ifdef DEBUG_ENABLED_OVERHEATING
     #define DEBUG_MODE_FULL
 #endif
