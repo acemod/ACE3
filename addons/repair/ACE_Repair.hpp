@@ -74,7 +74,7 @@ class ACE_Repair {
             repairingTime = 30;
             condition = "damage _target > 0";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
-            itemConsumed = 0;
+            itemConsumed = QGVAR(consumeItem_ToolKit);
         };
     };
 };
