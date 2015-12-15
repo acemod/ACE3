@@ -1,5 +1,5 @@
 /*
- * Author: commy2 and CAA-Picard
+ * Author: commy2 and CAA-Picard and joko and PabstMirror
  * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
  *
  * Argument:
@@ -11,49 +11,43 @@
  * Return value:
  * Nothing.
  *
+ * Example:
+ * [player, "balls", 2, 1] call ace_common_fnc_setVariablePublic;
+ *
  * Public: No
  */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_object,_varName,_value,_delay);
-
-if (isNil "_delay") then {
-    _delay = 1;
-};
+params ["_object", "_varName", "_value", ["_delay", 1]];
+TRACE_4("params",_object,_varName,_value,_delay);
 
 // set value locally
 _object setVariable [_varName, _value];
 
-// "duh"
+// Exit if in SP - "duh"
 if (!isMultiplayer) exitWith {};
 
-// Generate object variable to store embargo status
-private "_embargoTimeVarName";
-_embargoTimeVarName = format ["ACE_PE_%1", _varName];
-
 // If we are on embargo, exit
-if !(isNil {_object getVariable _embargoTimeVarName}) exitWith {};
+if (_object isEqualTo (_object getVariable [format ["ACE_onEmbargo_%1", _varName], objNull])) exitWith {};
 
-// Publish
+// Publish Now and set last update time:
 _object setVariable [_varName, _value, true];
+_object setVariable [format ["ACE_onEmbargo_%1", _varName], _object];
 
-// Generate embargo PFH
-_object setVariable [_embargoTimeVarName, diag_tickTime + _delay];
+TRACE_2("Starting Embargo", _varName, _delay);
 
 [{
-    EXPLODE_5_PVT(_this select 0,_object,_varName,_value,_delay,_embargoTimeVarName);
+    params ["_object", "_varName", "_value"];
+    if (isNull _object) exitWith {TRACE_1("objNull",_this);};
 
-    if (diag_tickTime < (_object getVariable _embargoTimeVarName)) exitWith {};
+    _object setVariable [format ["ACE_onEmbargo_%1", _varName], nil]; //Remove Embargo
+    private _curValue = _object getVariable _varName;
 
-    // If the value has changed since last update
-    if !(_value isEqualTo (_object getVariable _varName)) then {
-        // Republish new value and reset embargo
-        _object setVariable [_varName, (_object getVariable _varName), true];
-        _object setVariable [_embargoTimeVarName, diag_tickTime + _delay];
-    } else {
-        // Remove embargo
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-        _object setVariable [_embargoTimeVarName, nil];
+    TRACE_4("End of embargo", _object, _varName, _value, _curValue);
+
+    //If value at start of embargo doesn't equal current, then broadcast and start new embargo
+    if (!(_value isEqualTo _curValue)) then {
+        _this call FUNC(setVariablePublic);
     };
-
-}, 0.1, [_object, _varName, _value, _delay, _embargoTimeVarName]] call CBA_fnc_addPerFrameHandler;
+}, _this, _delay] call FUNC(waitAndExecute);
