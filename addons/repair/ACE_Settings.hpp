@@ -41,7 +41,7 @@ class ACE_Settings {
         displayName = CSTRING(consumeItem_ToolKit_name);
         description = CSTRING(consumeItem_ToolKit_description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
