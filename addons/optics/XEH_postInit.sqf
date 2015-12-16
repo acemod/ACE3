@@ -7,8 +7,7 @@ GVAR(camera) = objNull;
 
 0 = 0 spawn {
     // Workarround for the ThreeDen Editor Camera
-    //ToDo: verify if command will exist in 1.56 release
-    if (((productVersion select 2) >= 155) && {is3DEN}) exitWith {
+    if ((!isNil {is3DEN}) && {is3DEN}) exitWith {
         ACE_LOGINFO("Eden detected: disabling Optics PIP Camera");
     };
     
