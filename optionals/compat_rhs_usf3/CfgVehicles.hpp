@@ -12,7 +12,6 @@ class cfgVehicles {
             };
         };
     };
-
     class MBT_01_base_F: Tank_F {};
     class rhsusf_m1a1tank_base: MBT_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1909;
@@ -77,8 +76,12 @@ class cfgVehicles {
     class APC_Tracked_02_base_F;
     class rhsusf_m113_tank_base : APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                ace_fcs_Enabled = 0;
+            };
+        };
     };
-
     class APC_Tracked_03_base_F;
     class RHS_M2A2_Base : APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
