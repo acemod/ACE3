@@ -135,20 +135,23 @@
             <Russian>Модуль настройки миномета MK6.</Russian>
             <French>Ce module permet de régler les options du mortier MK6</French>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_loadMortar">
+            <English>Load Mortar</English>
+        </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
-            <English>Load HE Round</English>
+            <English>Load HE</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
-            <English>Load Smoke Round</English>
+            <English>Load Smoke</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
-            <English>Load Illumination Round</English>
+            <English>Load Illumination</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
-            <English>Load Guided HE Round</English>
+            <English>Load Guided HE</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
-            <English>Load Laser Guided HE Round</English>
+            <English>Load Laser Guided HE</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMagazine">
             <English>Unload Round</English>
@@ -167,6 +170,21 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_descriptionShort">
+            <English>Used in Mk6 mortar</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_descriptionShort">
+            <English>Used in Mk6 mortar</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_descriptionShort">
+            <English>Used in Mk6 mortar</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_descriptionShort">
+            <English>Used in Mk6 mortar</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_descriptionShort">
+            <English>Used in Mk6 mortar</English>
         </Key>
     </Package>
 </Project>

@@ -18,6 +18,7 @@ class CfgWeapons {
         class Single1;
     };
     class ACE_mortar_82mm: mortar_82mm {
+        author = ECSTRING(common,ACETeam);
         magazines[] = {"ACE_1Rnd_82mm_Mo_HE","ACE_1Rnd_82mm_Mo_Smoke","ACE_1Rnd_82mm_Mo_Illum",
             "ACE_1Rnd_82mm_Mo_HE_Guided","ACE_1Rnd_82mm_Mo_HE_LaserGuided"};
         modes[] = {"Single1","Single2","Single3"};

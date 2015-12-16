@@ -8,8 +8,11 @@ PREP(dev_simulateCalcRangeTableLine);
 PREP(dev_simulateFindSolution);
 PREP(dev_simulateShot);
 
+PREP(canLoadMagazine);
+PREP(canUnloadMagazine);
 PREP(handleFired);
 PREP(handlePlayerVehicleChanged);
+PREP(loadMagazine);
 PREP(moduleInit);
 PREP(rangeTableCanUse);
 PREP(rangeTableOpen);
@@ -17,5 +20,6 @@ PREP(rangeTablePageChange);
 PREP(rangeTablePreCalculatedValues);
 PREP(toggleMils);
 PREP(turretDisplayLoaded);
+PREP(unloadMagazine);
 
 ADDON = true;

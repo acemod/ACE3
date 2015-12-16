@@ -20,10 +20,14 @@ class CfgVehicles {
         class Turrets {
             class MainTurret;
         };
+        class ACE_Actions;
     };
     class StaticMortar: StaticWeapon {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
+        };
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
         };
     };
     class Mortar_01_base_F: StaticMortar {
@@ -34,36 +38,58 @@ class CfgVehicles {
                 discreteDistanceInitIndex = 0;
             };
         };
-        class ACE_Actions {
-            class ACE_MainACtions {
+        class ACE_Actions: ACE_Actions {
+            class GVAR(unloadMagazine) {
+                displayName = CSTRING(unloadMagazine);
+                distance = 4;
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnloadMagazine));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(unloadMagazine));
+                icon = "";
+                selection = "usti hlavne";
+            };
+            class GVAR(LoadActions) {
+                displayName = CSTRING(loadMortar);
+                distance = 4;
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canLoadMagazine));
+                statement = "";
+                icon = "";
+                selection = "usti hlavne";
+                class GVAR(loadMagazine_HE_Guided) {
+                    displayName = CSTRING(loadMagazine_HE_Guided);
+                    distance = 4;
+                    condition = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazine));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_HE_LaserGuided) {
+                    displayName = CSTRING(loadMagazine_HE_LaserGuided);
+                    distance = 4;
+                    condition = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazine));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_Illum) {
+                    displayName = CSTRING(loadMagazine_Illum);
+                    distance = 4;
+                    condition = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(loadMagazine));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_Smoke) {
+                    displayName = CSTRING(loadMagazine_Smoke);
+                    distance = 4;
+                    condition = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(loadMagazine));
+                    icon = "";
+                };
                 class GVAR(loadMagazine_HE) {
                     displayName = CSTRING(loadMagazine_HE);
                     distance = 4;
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_3(_player,_target,'HE')] call FUNC(loadMagazine));
-                    icon = "";
-                    class GVAR(loadMagazine_Smoke) {
-                        displayName = CSTRING(loadMagazine_Smoke);
-                        distance = 4;
-                        condition = QUOTE([ARR_3(_player,_target,'Smoke')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_player,_target,'Smoke')] call FUNC(loadMagazine));
-                        icon = "";
-                    };
-                    class GVAR(loadMagazine_Illum) {
-                        displayName = CSTRING(loadMagazine_Illum);
-                        distance = 4;
-                        condition = QUOTE([ARR_3(_player,_target,'Illum')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_player,_target,'Illum')] call FUNC(loadMagazine));
-                        icon = "";
-                    };
-                };
-                class GVAR(unloadMagazine) {
-                    displayName = CSTRING(unloadMagazine);
-                    distance = 4;
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnloadMagazine));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(unloadMagazine));
+                    condition = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_3(_player,_target,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(loadMagazine));
                     icon = "";
                 };
+            };
         };
         class ACE_SelfActions {
             class GVAR(toggleMils) {

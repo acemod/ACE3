@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {};
-        weapons[] = {"ACE_RangeTable_82mm"};
+        weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"PabstMirror"};
@@ -16,6 +16,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
 
 
 //UI Stuff:
