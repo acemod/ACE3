@@ -104,7 +104,29 @@ class cfgVehicles {
                     };
                 };
             };
+        };
+    };
+    class rhs_bmd4_vdv: rhs_a3spruttank_base {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {};
+                };
+            };
             class GPMGTurret1: NewTurret {
+                ace_fcs_Enabled = 0;
+            };
+        };
+    };
+    class rhs_bmd4m_vdv: rhs_bmd4_vdv {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {};
+                };
+            };
+            class GPMGTurret1: GPMGTurret1 {};
+            class GPMGTurret2: GPMGTurret1 {
                 ace_fcs_Enabled = 0;
             };
         };
