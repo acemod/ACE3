@@ -11,13 +11,13 @@
  * None
  *
  * Example:
- * [_target, _player] call lsr_staticweapons_unloadMagazine
+ * [_target, _player] call ace_mk6mortar_fnc_unloadMagazine
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit","_static"];
+params ["_static","_unit"];
 private ["_weapon","_currentMagazine","_currentMagazineClass","_ammoCount"];
 
 //Get weapon & magazine information about static weapon

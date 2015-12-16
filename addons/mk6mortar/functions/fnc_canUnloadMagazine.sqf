@@ -10,13 +10,13 @@
  * canUnloadMagazine <BOOL>
  *
  * Example:
- * [_target,_player] call lsr_staticweapons_canUnloadMagazine
+ * [_target,_player] call ace_mk6mortar_fnc_canUnloadMagazine
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit","_static"];
+params ["_static","_unit"];
 private ["_canUnloadMagazine","_ammoCount"];
 
 if !(alive _static) exitWith {false};

@@ -13,6 +13,7 @@ PREP(canUnloadMagazine);
 PREP(handleFired);
 PREP(handlePlayerVehicleChanged);
 PREP(loadMagazine);
+PREP(loadMagazineTimer);
 PREP(moduleInit);
 PREP(rangeTableCanUse);
 PREP(rangeTableOpen);
@@ -21,5 +22,6 @@ PREP(rangeTablePreCalculatedValues);
 PREP(toggleMils);
 PREP(turretDisplayLoaded);
 PREP(unloadMagazine);
+PREP(unloadMagazineTimer);
 
 ADDON = true;

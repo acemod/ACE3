@@ -11,13 +11,13 @@
  * None
  *
  * Example:
- * [_target,_player,'16aa_static_magazine_l16_illum'] call lsr_staticweapons_loadMagazine
+ * [_target,_player,"ACE_1Rnd_82mm_Mo_HE"] call ace_mk6mortar_fnc_loadMagazine
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit","_static",["_magazineClassOptional","",[""]]];
+params ["_static","_unit",["_magazineClassOptional","",[""]]];
 private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames",
     "_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
 

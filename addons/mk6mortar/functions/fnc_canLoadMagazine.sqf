@@ -11,14 +11,14 @@
  * canLoadMagazine <BOOL>
  *
  * Example:
- * [_target,_player,'16aa_static_magazine_1Rnd_105mm_HE'] call lsr_staticweapons_canLoadMagazine
+ * [_target,_player,"ACE_1Rnd_82mm_Mo_HE"] call ace_mk6mortar_fnc_canLoadMagazine
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-params ["_unit","_static",["_magazineClassOptional","",[""]]];
+params ["_static","_unit",["_magazineClassOptional","",[""]]];
 private ["_canLoadMagazine","_currentMagazine","_weapon","_magazines","_listOfMagNames",
     "_hasCompatibleMagazine","_count"];
 
