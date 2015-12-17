@@ -88,7 +88,7 @@ class cfgVehicles {
     };
 
     class APC_Tracked_02_base_F;
-    class rhsusf_m113_tank_base : APC_Tracked_02_base_F {
+    class rhsusf_m113tank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
     };
 
