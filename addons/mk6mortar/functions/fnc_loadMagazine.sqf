@@ -19,7 +19,7 @@
 
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
 private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames",
-    "_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
+    "_magazineClass","_magazineClassDetails","_parsed","_roundsLeft"];
 
 //Get weapon & magazine information of static weapon
 _weapon = (_static weaponsTurret [0]) select 0;
@@ -54,7 +54,6 @@ if (_magazineClassDetails != "") then{
     _magType = _type;
 };
 
-//_configMortar = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> QGVAR(isMortarRound));
 //If function has been called with an optional classname hten add that magazine to the static weapon. Otherwise add the compatible magazine
 if(_magazineClassOptional !="") then{
         _unit removeMagazine _magazineClassOptional;

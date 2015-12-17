@@ -22,7 +22,7 @@ params ["_static","_unit",["_magazineClassOptional","",[""]]];
 private ["_canLoadMagazine","_currentMagazine","_weapon","_listOfMagNames",
     "_hasCompatibleMagazine","_count"];
 
-if !(alive _static) exitWith {false};
+if !(alive _static && {GVAR(useAmmoHandling)}) exitWith {false};
 
 _canLoadMagazine = false;
 

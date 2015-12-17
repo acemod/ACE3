@@ -192,5 +192,11 @@
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_descriptionShort">
             <English>Used in Mk6 mortar</English>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
+            <English>Ammunition handling</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
+            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader</English>
+        </Key>
     </Package>
 </Project>

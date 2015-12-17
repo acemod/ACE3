@@ -20,15 +20,12 @@ class CfgVehicles {
         class Turrets {
             class MainTurret;
         };
-        class ACE_Actions;
     };
     class StaticMortar: StaticWeapon {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions;
-        };
+        class ACE_Actions;
     };
     class Mortar_01_base_F: StaticMortar {
         class Turrets: Turrets {
@@ -41,7 +38,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class GVAR(unloadMagazine) {
                 displayName = CSTRING(unloadMortar);
-                distance = 4;
+                distance = 2;
                 condition = QUOTE(_this call FUNC(canUnloadMagazine));
                 statement = QUOTE([ARR_3(_target,_player,5)] call FUNC(unloadMagazineTimer));
                 icon = "";
@@ -49,42 +46,42 @@ class CfgVehicles {
             };
             class GVAR(LoadActions) {
                 displayName = CSTRING(loadMortar);
-                distance = 4;
+                distance = 2;
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
                 statement = "";
                 icon = "";
                 selection = "usti hlavne";
                 class GVAR(loadMagazine_HE_Guided) {
                     displayName = CSTRING(loadMagazine_HE_Guided);
-                    distance = 4;
+                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_HE_LaserGuided) {
                     displayName = CSTRING(loadMagazine_HE_LaserGuided);
-                    distance = 4;
+                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_Illum) {
                     displayName = CSTRING(loadMagazine_Illum);
-                    distance = 4;
+                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_Smoke) {
                     displayName = CSTRING(loadMagazine_Smoke);
-                    distance = 4;
+                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,3,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_HE) {
                     displayName = CSTRING(loadMagazine_HE);
-                    distance = 4;
+                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,3,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(loadMagazineTimer));
                     icon = "";
@@ -130,6 +127,12 @@ class CfgVehicles {
                 description = CSTRING(allowCompass_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
+            };
+            class useAmmoHandling {
+                displayName = CSTRING(useAmmoHandling_DisplayName);
+                description = CSTRING(useAmmoHandling_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
         };
         class ModuleDescription {
