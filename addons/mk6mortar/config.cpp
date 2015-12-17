@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"PabstMirror"};
+        author[] = {"PabstMirror","Grey","VKing"};
         authorUrl = "https://github.com/acemod";
         VERSION_CONFIG;
     };

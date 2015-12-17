@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 
 params ["_static","_unit",["_magazineClassOptional","",[""]]];
-private ["_canLoadMagazine","_currentMagazine","_weapon","_magazines","_listOfMagNames",
+private ["_canLoadMagazine","_currentMagazine","_weapon","_listOfMagNames",
     "_hasCompatibleMagazine","_count"];
 
 if !(alive _static) exitWith {false};
@@ -29,7 +29,6 @@ _canLoadMagazine = false;
 _currentMagazine = (magazinesAllTurrets _static) select 1;
 _weapon = (_static weaponsTurret [0]) select 0;
 
-_magazines = magazines _unit;
 _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
 _hasCompatibleMagazine = false;
 _count = 0;
@@ -41,7 +40,7 @@ if (_magazineClassOptional != "") then {
     };
 }else{
     {
-        if ([_unit,_x] call EFUNC(common,hasMagazine))  exitWith {_hasCompatibleMagazine = true;};
+        if ([_unit,_x] call EFUNC(common,hasMagazine)) exitWith {_hasCompatibleMagazine = true};
     } forEach _listOfMagNames;
 };
 //If static weapon has a magazine then find the ammo count

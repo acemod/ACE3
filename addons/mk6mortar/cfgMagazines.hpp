@@ -8,7 +8,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_displayName);
         descriptionShort = CSTRING(magazine_HE_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
-		picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
+        picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 10;
     };
     class 8Rnd_82mm_Mo_Smoke_white;
@@ -20,7 +20,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_Smoke_displayName);
         descriptionShort = CSTRING(magazine_Smoke_descriptionShort);
         model = PATHTOF(data\l16_ammo_smk_white.p3d)
-		picture = PATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
+        picture = PATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
         mass = 10;
     };
     class 8Rnd_82mm_Mo_Flare_white;
@@ -32,7 +32,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_Illum_displayName);
         descriptionShort = CSTRING(magazine_Illum_descriptionShort);
         model = PATHTOF(data\l16_ammo_illum.p3d)
-		picture = PATHTOF(UI\w_l16_ammo_illum_ca.paa);
+        picture = PATHTOF(UI\w_l16_ammo_illum_ca.paa);
         mass = 10;
     };
     class 8Rnd_82mm_Mo_guided;
@@ -44,7 +44,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_Guided_displayName);
         descriptionShort = CSTRING(magazine_HE_Guided_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
-		picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
+        picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 10;
     };
     class 8Rnd_82mm_Mo_LG;
@@ -56,7 +56,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_LaserGuided_displayName);
         descriptionShort = CSTRING(magazine_HE_LaserGuided_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
-		picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
+        picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 10;
     };
 };

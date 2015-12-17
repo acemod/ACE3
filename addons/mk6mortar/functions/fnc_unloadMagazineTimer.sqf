@@ -20,11 +20,9 @@
 
 params ["_static","_unit","_timeToUnload"];
 
-private _progressText = localize LSTRING(unloadingMortar);
-
 //Move player into animation if player is standing
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call EFUNC(common,doAnimation);
 };
 
-[_timeToUnload, [_static,_unit], {(_this select 0) call FUNC(unloadMagazine);}, {}, _progressText] call EFUNC(common,progressBar);
+[_timeToUnload, [_static,_unit], {(_this select 0) call FUNC(unloadMagazine)}, {}, localize LSTRING(unloadingMortar)] call EFUNC(common,progressBar);

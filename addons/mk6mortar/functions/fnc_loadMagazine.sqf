@@ -28,6 +28,7 @@ _currentMagazineClass = _currentMagazine select 0;
 _count = _currentMagazine select 2;
 
 //Check all of the players magazines to see if they are compatible with the static weapon. First magazine that is compatible is chosen
+//VKing: This section ought to be double checked.
 _magazines = magazines _unit;
 _magazineDetails = magazinesDetail _unit;
 _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
@@ -50,7 +51,6 @@ if (_magazineClassDetails != "") then{
     _parsed = _magazineClassDetails splitString "([]/: )";
     _parsed params ["_type", "", "", "_roundsLeftText", "_maxRoundsText"];
     _roundsLeft = parseNumber _roundsLeftText;
-    _roundsMax = parseNumber _maxRoundsText;
     _magType = _type;
 };
 
