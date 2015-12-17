@@ -25,15 +25,15 @@ _currentMagazine = (magazinesAllTurrets _static) select 1;
 _currentMagazineClass = _currentMagazine select 0;
 _ammoCount = _currentMagazine select 2;
 
-//If current magazine is empty then remove it otherwise remove it and add it to the players inventory
-if (_ammoCount == 0) then {
-    [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call EFUNC(common,globalEvent);
-}else {
-    _pos = _unit modelToWorldVisual [0,1,0];
-    // TODO: Check unit inventory space and add to inventory first, then drop
-    
-    _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
-    _unit addMagazineAmmoCargo [_currentMagazineClass, 1, _ammoCount];
-    _unit setPosATL _pos;
+// Try to add the round to player inventory, otherwise place it on the ground near the player
+if (_ammoCount > 0) then {
+    if (_unit canAdd _currentMagazineClass) then {
+        _unit addMagazineGlobal _currentMagazineClass;
+    } else {
+        _pos = _unit modelToWorldVisual [0.5,0.5,0]; // Front right of player
+        _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
+        _unit addMagazineAmmoCargo [_currentMagazineClass, 1, _ammoCount];
+        _unit setPosATL _pos;
+    };
     [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call EFUNC(common,globalEvent);
 };

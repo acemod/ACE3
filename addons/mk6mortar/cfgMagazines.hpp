@@ -9,7 +9,7 @@ class cfgMagazines {
         descriptionShort = CSTRING(magazine_HE_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
-        mass = 10;
+        mass = 10; // Temporary value; should be increased
     };
     class 8Rnd_82mm_Mo_Smoke_white;
     class ACE_1Rnd_82mm_Mo_Smoke: 8Rnd_82mm_Mo_Smoke_white {

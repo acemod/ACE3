@@ -136,7 +136,7 @@
             <French>Ce module permet de régler les options du mortier MK6</French>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
-            <English>Unload Round</English>
+            <English>Remove Round</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
