@@ -74,6 +74,7 @@ PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
 PREP(getSettingData);
+PREP(getStaminaBarControl);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);

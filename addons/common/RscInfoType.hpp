@@ -107,6 +107,10 @@ class RscInGameUI {
     class RscOptics_LaserDesignator_02 {
         onLoad = QUOTE([ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call FUNC(localEvent););
     };
+
+    class RscStaminaBar {
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStaminaBar"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgStaminaBar)),_this select 0)]);
+    };
 };
 
 class RscDisplayInventory {
