@@ -57,6 +57,23 @@
 // Eventhandlers
 //////////////////////////////////////////////////
 
+//Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
+//This variable is used for isPlayer checks
+if (isServer) then {
+    addMissionEventHandler ["HandleDisconnect", {
+        params ["_dcPlayer"];
+        private _zeusLogic = getAssignedCuratorLogic _dcPlayer;
+        if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
+            {
+                if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
+                    ACE_LOGINFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
+                };
+            } count (curatorEditableObjects  _zeusLogic);
+        };
+    }];
+};
+
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
     params ["_name", "_value", "_force"];
