@@ -27,7 +27,7 @@ _activeWeaponAndMuzzle params ["_activeWeapon", "_activeMuzzle", "_activeWeaponM
 if (
     (_activeMuzzle != "") &&
     {_activeMuzzle != _activeWeapon} &&
-    {_activeMuzzle in getArray (configfile >> "CfgWeapons" >> _activeWeapon >> "muzzles")}
+    {_activeMuzzle in getArray (configFile >> "CfgWeapons" >> _activeWeapon >> "muzzles")}
 ) then {
     _unit selectWeapon _activeMuzzle;
 } else {
@@ -37,7 +37,7 @@ if (
 };
 
 if (currentWeapon _unit != "") then {
-    local _index = 0;
+    private _index = 0;
 
     while {
         _index < 100 && {currentWeaponMode _unit != _activeWeaponMode}

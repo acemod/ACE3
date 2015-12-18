@@ -95,7 +95,7 @@ GVAR(OldGlasses) = "#NULLSTRING";
 }] call EFUNC(common,addEventHandler);
 
 // check goggles
-local _fnc_checkGoggles = {
+private _fnc_checkGoggles = {
     params ["_unit"];
 
     if (GVAR(EffectsActive)) then {

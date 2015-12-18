@@ -24,7 +24,7 @@ if (_loaded isEqualTo []) exitWith {};
 
 {
     // TODO Do we want to be able to recover destroyed equipment?
-    if (typeName _x == "OBJECT") then {
+    if (_x isEqualType objNull) then {
         deleteVehicle _x;
     };
 } count _loaded;

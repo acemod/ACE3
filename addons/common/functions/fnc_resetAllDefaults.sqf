@@ -14,8 +14,8 @@
 
 params ["_unit"];
 
-_unit setvariable ["ACE_isDead", nil, true];
-_unit setvariable ["ACE_isUnconscious", nil, true];
+_unit setVariable ["ACE_isDead", nil, true];
+_unit setVariable ["ACE_isUnconscious", nil, true];
 
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
@@ -36,7 +36,7 @@ if (isPlayer _unit) then {
 
 {
     if !(_x select 4) then {
-        _unit setvariable [_x select 0, nil, _x select 3];
+        _unit setVariable [_x select 0, nil, _x select 3];
     };
     false
 } count ([_unit] call FUNC(getAllDefinedSetVariables));

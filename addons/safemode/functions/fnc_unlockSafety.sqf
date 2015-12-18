@@ -48,7 +48,7 @@ if (inputAction "nextWeapon" > 0) then {
             _modes pushBack _weapon;
         };
         nil
-    } count getArray (configfile >> "CfgWeapons" >> _weapon >> "modes");
+    } count getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
 
     // select last mode
     _mode = _modes select (count _modes - 1);

@@ -8,6 +8,7 @@ class CfgVehicles {
         function = QUOTE(DFUNC(moduleAllowConfigExport));
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

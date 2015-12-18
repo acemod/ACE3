@@ -8,3 +8,6 @@
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
 }] call EFUNC(common,addEventHandler);
+
+// Should prevent unending spectator on mission end
+addMissionEventHandler ["Ended",{ [false] call FUNC(setSpectator) }];

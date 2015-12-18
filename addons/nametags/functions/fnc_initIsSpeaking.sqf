@@ -37,14 +37,14 @@ if (!hasInterface) exitWith {};
 }] call EFUNC(common,addEventHandler);
 
 
-if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
+if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
     ACE_LOGINFO("ACRE Detected.");
     DFUNC(isSpeaking) = {
         params ["_unit"];
         ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
     };
 } else {
-    if (isClass (configFile >> "cfgPatches" >> "task_force_radio")) then {
+    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
         ACE_LOGINFO("TFR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];

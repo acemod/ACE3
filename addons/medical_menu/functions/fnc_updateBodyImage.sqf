@@ -20,7 +20,7 @@
 params ["_selectionBloodLoss", "_damaged", "_display"];
 
 // Handle the body image coloring
-local _availableSelections = [50, 51, 52, 53, 54, 55];
+private _availableSelections = [50, 51, 52, 53, 54, 55];
 {
     private ["_red", "_green", "_blue"];
 

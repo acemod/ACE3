@@ -17,7 +17,7 @@ params ["_typeOfProjectile"];
 
 
 if (_typeOfProjectile isKindOf "BulletBase") exitWith {"bullet"};
-if (_typeOfProjectile isKindOf "ShotgunBase") exitwith {"bullet"};
+if (_typeOfProjectile isKindOf "ShotgunBase") exitWith {"bullet"};
 if (_typeOfProjectile isKindOf "GrenadeCore") exitWith {"grenade"};
 if (_typeOfProjectile isKindOf "TimeBombCore") exitWith {"explosive"};
 if (_typeOfProjectile isKindOf "MineCore") exitWith {"explosive"};

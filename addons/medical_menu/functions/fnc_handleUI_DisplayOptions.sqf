@@ -19,7 +19,7 @@
 #define END_IDC 27
 #define AMOUNT_OF_ENTRIES (count _entries)
 
-if (!hasInterface) exitwith{};
+if (!hasInterface) exitWith{};
 
 private ["_entries", "_display", "_newTarget", "_ctrl", "_code"];
 
@@ -28,9 +28,9 @@ params ["_name"];
 disableSerialization;
 
 _display = uiNamespace getVariable QGVAR(medicalMenu);
-if (isNil "_display") exitwith {}; // no valid dialog present
+if (isNil "_display") exitWith {}; // no valid dialog present
 
-if (_name isEqualTo "toggle") exitwith {
+if (_name isEqualTo "toggle") exitWith {
     _newTarget = ACE_player;
     //If we are on the player, and only if our old target is still valid, switch to it:
     if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
@@ -61,11 +61,11 @@ GVAR(LatestDisplayOptionMenu) = _name;
 
 // The triage card has no options available
 lbClear 212;
-if (_name isEqualTo "triage") exitwith {
+if (_name isEqualTo "triage") exitWith {
 
     ctrlEnable [212, true];
     private ["_log", "_triageCardTexts", "_message"];
-    _log = GVAR(INTERACTION_TARGET) getvariable [QEGVAR(medical,triageCard), []];
+    _log = GVAR(INTERACTION_TARGET) getVariable [QEGVAR(medical,triageCard), []];
     _triageCardTexts = [];
     {
         _x params ["_item", "_amount", "_time"];
@@ -77,11 +77,11 @@ if (_name isEqualTo "triage") exitwith {
                 _message = localize _message;
             };
         };
-        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_gameTime - _time) / 60)];
+        _triageCardTexts pushBack format["%1x - %2 (%3m)", _amount, _message, round((ACE_gameTime - _time) / 60)];
         nil;
     } count _log;
 
-    if (count _triageCardTexts == 0) exitwith {
+    if (count _triageCardTexts == 0) exitWith {
         lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
     };
     {
@@ -96,7 +96,7 @@ _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentO
 
 {
     //player sidechat format["TRIGGERED: %1",_x];
-    if (_forEachIndex > END_IDC) exitwith {};
+    if (_forEachIndex > END_IDC) exitWith {};
     _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);

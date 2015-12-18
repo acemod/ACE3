@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Checks if object is a fence.  Should work on any fence type, even (typeof == "").
+ * Checks if object is a fence.  Should work on any fence type, even (typeOf == "").
  * Call is fairly expensive because of all of the string checking.
  *
  * Arguments:
@@ -19,9 +19,9 @@
 params ["_object"];
 TRACE_1("params",_object);
 
-local _typeOf = typeOf _object;
+private _typeOf = typeOf _object;
 
-local _returnValue = if (_typeOf != "") then {
+private _returnValue = if (_typeOf != "") then {
     //If the fence has configEntry we can check it directly
     (1 == (getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(isFence))));
 } else {

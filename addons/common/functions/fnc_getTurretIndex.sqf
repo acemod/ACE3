@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-local _vehicle = vehicle _unit;
+private _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {[]};
 
 scopeName "main"; 

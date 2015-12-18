@@ -54,6 +54,8 @@
             <German>Heben/Senken</German>
             <Polish>Wyżej/Niżej</Polish>
             <Portuguese>Levantar/Abaixar</Portuguese>
+            <Russian>Поднять/Опустить</Russian>
+            <Czech>Zvýšit/Snížit</Czech>
         </Key>
     </Package>
 </Project>

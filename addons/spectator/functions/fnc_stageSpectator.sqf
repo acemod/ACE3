@@ -7,8 +7,8 @@
  * Upon unstage, units will be moved to the position they were in upon staging
  *
  * Arguments:
- * 0: Unit to put into spectator stage <OBJECT> <OPTIONAL>
- * 1: Spectator stage <BOOL> <OPTIONAL>
+ * 0: Unit to put into spectator stage <OBJECT> (default: player)
+ * 1: Unit should be staged <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>
@@ -26,7 +26,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 // No change, no service (but allow spectators to be reset)
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
-if !(local _unit) exitwith {
+if !(local _unit) exitWith {
     [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
 };
 

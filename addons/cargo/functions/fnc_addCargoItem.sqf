@@ -18,12 +18,11 @@
  */
 #include "script_component.hpp"
 
-private ["_position", "_item", "_i"];
 params ["_itemClass", "_vehicle", ["_amount", 1], ["_showHint", false, [false]] ];
 TRACE_3("params",_itemClass,_vehicle,_amount);
 
 for "_i" from 1 to _amount do {
-    [_item, _vehicle] call FUNC(loadItem);
+    [_itemClass, _vehicle] call FUNC(loadItem);
 };
 
 // Invoke listenable event
