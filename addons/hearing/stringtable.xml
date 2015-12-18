@@ -172,10 +172,12 @@
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
             <Polish>Dodaj stopery dla jednostek</Polish>
+            <Portuguese>Adiciona protetores de ouvido as unidades</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
             <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
+            <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -136,18 +136,22 @@
         <Key ID="STR_ACE_NightVision_Module_DisplayName">
             <English>Nightvision</English>
             <German>Nachtsicht</German>
+            <Portuguese>Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
             <German>Einstellungen für Nachtsichtgeräte.</German>
+            <Portuguese>Ajustes para visão noturna.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
             <German>Deakt. NVGs mit Visier</German>
+            <Portuguese>Desabilitar visão noturna nas lunetas</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
             <German>Blockiert das Benutzen von Nachtsichtbrillen beim Benutzen des Visiers.</German>
+            <Portuguese>Bloqueia o uso de visão noturna ao utilizar a mira.</Portuguese>
         </Key>
     </Package>
 </Project>
