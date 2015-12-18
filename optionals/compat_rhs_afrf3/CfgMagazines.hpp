@@ -14,12 +14,4 @@ class cfgMagazines {
     class rhs_mag_127x108mm_1470 : rhs_mag_127x108mm_50 {
         ace_isbelt = 0;
     };
-
-    class CA_LauncherMagazine;
-    class rhs_mag_smaw_SR: CA_LauncherMagazine {
-        EGVAR(overpressure,priority) = 99;
-        EGVAR(overpressure,angle) = 0;
-        EGVAR(overpressure,range) = 0;
-        EGVAR(overpressure,damage) = 0;
-    };
 };
