@@ -15,6 +15,7 @@ PREP(handlePlayerVehicleChanged);
 PREP(loadMagazine);
 PREP(loadMagazineTimer);
 PREP(moduleInit);
+PREP(mortarInit);
 PREP(rangeTableCanUse);
 PREP(rangeTableOpen);
 PREP(rangeTablePageChange);

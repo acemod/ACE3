@@ -16,6 +16,7 @@ class CfgWeapons {
     class CannonCore;
     class mortar_82mm: CannonCore {
         class Single1;
+        GVAR(replaceWith) = "ACE_mortar_82mm";
     };
     class ACE_mortar_82mm: mortar_82mm {
         author = ECSTRING(common,ACETeam);
