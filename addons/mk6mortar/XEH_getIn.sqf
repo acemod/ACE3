@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 
-params ["_mortar"];
-TRACE_1("",_mortar);
+params ["_mortar","_crewPosition","_unit","_turretPath"];
+TRACE_4("",_mortar,_crewPosition,_unit,_turretPath);
 
-if (gunner _mortar != player) exitWith {LOG("Exit")};
+if (_unit != player || {_crewPosition != "GUNNER"}) exitWith {LOG("Exit")};
 
 if (!EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [{
         if (GVAR(useAmmoHandling)) then {
             _this call FUNC(mortarInit);
         };
-    }, _this];
+    }, _mortar];
 };
-_this call FUNC(mortarInit);
+_mortar call FUNC(mortarInit);

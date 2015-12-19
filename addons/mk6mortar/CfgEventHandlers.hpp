@@ -22,3 +22,10 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
+class Extended_GetIn_EventHandlers {
+    class Mortar_01_base_F {
+        class ADDON {
+            getIn = QUOTE(_this call COMPILE_FILE(XEH_getIn));
+        };
+    };
+};

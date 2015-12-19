@@ -18,7 +18,7 @@
 params ["_mortar"];
 private ["_newWeapon","_currentWeapon"];
 
-if (_mortar getVariable [QGVAR(initialized),false] || _mortar getVariable [QGVAR(exclude),false]) exitWith {};
+if (_mortar getVariable [QGVAR(initialized),false] || _mortar getVariable [QGVAR(exclude),false]) exitWith {TRACE_1("Exit",_mortar)};
 
 // Remove all magazines
 if (count magazines _mortar > 0) then {
