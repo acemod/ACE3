@@ -177,19 +177,7 @@
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
         </Key>
-        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_descriptionShort">
-            <English>Used in Mk6 mortar</English>
-        </Key>
-        <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_descriptionShort">
+        <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
