@@ -27,7 +27,8 @@ if (count magazines _mortar > 0) then {
 
 // Replace current weapon with ammo handling weapon
 private _currentWeapon = _mortar weaponsTurret [0] select 0;
-if (getText (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(replaceWith)) != "") then {
+private _newWeapon = getText (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(replaceWith));
+if (_newWeapon != "") then {
     _mortar removeWeaponGlobal _currentWeapon;
     _mortar addWeaponGlobal _newWeapon;
 };
