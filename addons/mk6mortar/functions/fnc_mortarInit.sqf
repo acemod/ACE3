@@ -13,12 +13,11 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_1(_mortar);
+params ["_mortar"];
 
-if (_mortar getVariable [QGVAR(initialized),false]) exitWith {};
+if (_mortar getVariable [QGVAR(initialized),false] || _mortar getVariable [QGVAR(exclude),false]) exitWith {};
 
 // Remove all magazines
 if (count magazines _mortar > 0) then {

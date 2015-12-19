@@ -6,6 +6,7 @@ class cfgMagazines {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_displayName);
+        displayNameShort = "";
         descriptionShort = CSTRING(magazine_HE_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
@@ -18,6 +19,7 @@ class cfgMagazines {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_Smoke_displayName);
+        displayNameShort = "";
         descriptionShort = CSTRING(magazine_Smoke_descriptionShort);
         model = PATHTOF(data\l16_ammo_smk_white.p3d)
         picture = PATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
@@ -30,6 +32,7 @@ class cfgMagazines {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_Illum_displayName);
+        displayNameShort = "";
         descriptionShort = CSTRING(magazine_Illum_descriptionShort);
         model = PATHTOF(data\l16_ammo_illum.p3d)
         picture = PATHTOF(UI\w_l16_ammo_illum_ca.paa);
@@ -42,6 +45,7 @@ class cfgMagazines {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_Guided_displayName);
+        displayNameShort = "";
         descriptionShort = CSTRING(magazine_HE_Guided_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
@@ -54,6 +58,7 @@ class cfgMagazines {
         scopeCurator = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(magazine_HE_LaserGuided_displayName);
+        displayNameShort = "";
         descriptionShort = CSTRING(magazine_HE_LaserGuided_descriptionShort);
         model = PATHTOF(data\l16_ammo_he.p3d)
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
