@@ -21,7 +21,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_Smoke_displayName);
         displayNameShort = "";
         descriptionShort = CSTRING(magazine_descriptionShort);
-        model = PATHTOF(data\l16_ammo_smk_white.p3d)
+        model = PATHTOF(data\l16_ammo_smk_white.p3d);
         picture = PATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
         mass = 50;
     };
@@ -34,7 +34,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_Illum_displayName);
         displayNameShort = "";
         descriptionShort = CSTRING(magazine_descriptionShort);
-        model = PATHTOF(data\l16_ammo_illum.p3d)
+        model = PATHTOF(data\l16_ammo_illum.p3d);
         picture = PATHTOF(UI\w_l16_ammo_illum_ca.paa);
         mass = 50;
     };
