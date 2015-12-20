@@ -5,10 +5,6 @@
 #include <unordered_map>
 #include <random>
 
-//Guard for M_PI ???? ref https://github.com/acemod/ACE3/pull/2382
-#ifndef M_PI
-    #define M_PI 3.14159265358979323846f
-#endif
 
 #define GRAVITY 9.80665f
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
