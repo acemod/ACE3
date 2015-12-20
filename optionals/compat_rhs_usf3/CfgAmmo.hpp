@@ -93,7 +93,6 @@ class CfgAmmo
         irLock = 0;
         laserLock = 0;
         airLock = 0;
-  
 
         // Begin ACE guidance Configs
         class ace_missileguidance {

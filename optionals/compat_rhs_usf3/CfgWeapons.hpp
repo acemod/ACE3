@@ -8,13 +8,13 @@ class CfgWeapons
     class UGL_F;
 
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
-        ACE_barrelTwist=254.0;
-        ACE_barrelLength=609.6;
+        ACE_barrelTwist = 254.0;
+        ACE_barrelLength = 609.6;
     };
     class arifle_MX_Base_F;
     class rhs_weap_m4_Base: arifle_MX_Base_F {
-        ACE_barrelTwist=177.8;
-        ACE_barrelLength=368.3;
+        ACE_barrelTwist = 177.8;
+        ACE_barrelLength = 368.3;
         ACE_Overheating_Dispersion[] = {0, 0.001, 0.002, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
@@ -113,8 +113,8 @@ class CfgWeapons
     };
     class rhs_weap_m4a1;
     class rhs_weap_mk18: rhs_weap_m4a1 {
-        ACE_barrelTwist=177.8;
-        ACE_barrelLength=261.62;
+        ACE_barrelTwist = 177.8;
+        ACE_barrelLength = 261.62;
         ACE_Overheating_Dispersion[] = {0, 0.001, 0.002, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
@@ -127,7 +127,7 @@ class CfgWeapons
     class rhs_weap_lmg_minimi_railed : rhs_weap_lmg_minimipara {
         ACE_barrelLength = 465.0;
         ACE_barrelTwist = 177.8;
-		ACE_Overheating_allowSwapBarrel = 1;
+        ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.003};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
@@ -137,37 +137,37 @@ class CfgWeapons
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
-        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.003};
+        ACE_Overheating_Dispersion[] = {0, -0.001, 0.001, 0.004};
         ACE_Overheating_SlowdownFactor[] = {1, 1, 1, 0.9};
         ACE_Overheating_JamChance[] = {0, 0.0003, 0.0015, 0.0075};
     };
     class rhs_weap_m14ebrri: srifle_EBR_F {
-        ACE_barrelTwist=304.8;
-        ACE_barrelLength=558.8;
+        ACE_barrelTwist = 304.8;
+        ACE_barrelLength = 558.8;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
-        ACE_barrelTwist=285.75;
-        ACE_barrelLength=609.6;
+        ACE_barrelTwist = 285.75;
+        ACE_barrelLength = 609.6;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
-        ACE_barrelTwist=285.75;
-        ACE_barrelLength=508.0;
+        ACE_barrelTwist = 285.75;
+        ACE_barrelLength = 508.0;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
-        ACE_barrelTwist=0.0;
-        ACE_twistDirection=0;
-        ACE_barrelLength=469.9;
+        ACE_barrelTwist = 0.0;
+        ACE_twistDirection = 0;
+        ACE_barrelLength = 469.9;
     };
     class rhs_weap_M590_8RD: rhs_weap_M590_5RD {
-        ACE_barrelTwist=0.0;
-        ACE_twistDirection=0;
-        ACE_barrelLength=508.0;
+        ACE_barrelTwist = 0.0;
+        ACE_twistDirection = 0;
+        ACE_barrelLength = 508.0;
     };
 
     class hgun_ACPC2_F;
     class rhsusf_weap_m1911a1: hgun_ACPC2_F {
-        ACE_barrelTwist=406.4;
-        ACE_barrelLength=127.0;
+        ACE_barrelTwist = 406.4;
+        ACE_barrelLength = 127.0;
     };
 
     class rhsusf_acc_sniper_base;
