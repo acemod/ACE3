@@ -10,7 +10,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Mk6 Mortar overhaul
-ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer.
+ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If enabled, rounds must be loaded individually by a loader.
 
 
 ## 2. Usage
@@ -41,6 +41,14 @@ For this you need a `82mm Rangetable`, `Map Tools` and a `Vector 21` are also re
   - Once you finished calculating the ELEV align the barrel of the mortar with your target (directly looking at it) and set your ELEV to what you calculated by using <kbd>Page Up</kbd> and <kbd>Page Down</kbd>.
   - Once the ELEV is correctly set and the barrel is facing the right direction, shoot and enjoy your bananas while watching hell rain on your enemies.
 
+
+### 2.3 Loading the mortar
+You need the proper mortar magazines in your inventory.
+
+
+- Interact with the mortar by pressing the interaction key <kbd>⊞&nbsp;Win</kbd> and looking near the muzzle.
+- Select the `Load Mortar` action and then select the round type you want to load.
+- If you want to unload the mortar without firing, interact near the muzzle again and select `Remove Round`.
 
 ## 3. Dependencies
 

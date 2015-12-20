@@ -219,6 +219,11 @@ ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
 class name | in game name | type   |
 ---------- | --------- | ---------
 ACE_RangeTable_82mm | 82mm Rangetable | ACE_ItemCore |
+ACE_1Rnd_82mm_Mo_HE | 82mm HE Round | Magazine |
+ACE_1Rnd_82mm_Mo_Smoke | 82mm Smoke Round | Magazine |
+ACE_1Rnd_82mm_Mo_Illum | 82mm Illumination Round | Magazine |
+ACE_1Rnd_82mm_Mo_HE_Guided | 82mm Guided HE Round | Magazine |
+ACE_1Rnd_82mm_Mo_HE_LaserGuided | 82mm Laser Guided HE Round | Magazine |
 
 ## M2XA
 `added in 3.1.1`
