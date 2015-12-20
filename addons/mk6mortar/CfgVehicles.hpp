@@ -139,4 +139,29 @@ class CfgVehicles {
             description = CSTRING(Module_Description);
         };
     };
+
+    class Box_NATO_AmmoOrd_F;
+    class ACE_Box_82mm_Mo_HE: Box_NATO_AmmoOrd_F {
+        displayName = CSTRING(HEBox_DisplayName);
+        author = ECSTRING(common,ACETeam);
+        transportMaxWeapons = 4;
+        transportMaxmagazines = 8;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,8);
+        };
+        class TransportItems {};
+        class TransportWeapons {};
+    };
+    class ACE_Box_82mm_Mo_Smoke: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(SmokeBox_DisplayName);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
+        };
+    };
+    class ACE_Box_82mm_Mo_Illum: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(IllumBox_DisplayName);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,8);
+        };
+    };
 };

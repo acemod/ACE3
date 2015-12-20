@@ -13,6 +13,4 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
     }, _this];
 };
 
-if (!GVAR(useAmmoHandling)) exitWith {};
-
 _this call FUNC(mortarInit);

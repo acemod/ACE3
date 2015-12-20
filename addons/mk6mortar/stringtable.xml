@@ -135,6 +135,12 @@
             <Russian>Модуль настройки миномета MK6.</Russian>
             <French>Ce module permet de régler les options du mortier MK6</French>
         </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
+            <English>Use Ammunition handling</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
+            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
+        </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
         </Key>
@@ -180,11 +186,14 @@
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
         </Key>
-        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
-            <English>Ammunition handling</English>
+        <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
+            <English>[ACE] 82mm HE Rounds</English>
         </Key>
-        <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
-            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader</English>
+        <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
+            <English>[ACE] 82mm Smoke Rounds</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
+            <English>[ACE] 82mm Illumination Rounds</English>
         </Key>
     </Package>
 </Project>

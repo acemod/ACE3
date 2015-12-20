@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if !(GVAR(useAmmoHandling)) exitWith {};
+
 params ["_mortar"];
 private ["_newWeapon","_currentWeapon"];
 

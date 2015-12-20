@@ -3,7 +3,7 @@
 params ["_mortar","_crewPosition","_unit","_turretPath"];
 TRACE_4("",_mortar,_crewPosition,_unit,_turretPath);
 
-if (_unit != player || {_crewPosition != "GUNNER"}) exitWith {LOG("Exit")};
+if (_unit != player) exitWith {LOG("Exit")};
 
 if (!EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [{
@@ -12,7 +12,5 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
         };
     }, _mortar];
 };
-
-if (!GVAR(useAmmoHandling)) exitWith {};
 
 _mortar call FUNC(mortarInit);
