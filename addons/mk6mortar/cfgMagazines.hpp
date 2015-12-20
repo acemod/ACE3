@@ -8,7 +8,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_displayName);
         displayNameShort = "";
         descriptionShort = CSTRING(magazine_descriptionShort);
-        model = PATHTOF(data\l16_ammo_he.p3d)
+        model = PATHTOF(data\l16_ammo_he.p3d);
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 50;
     };
@@ -47,7 +47,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_Guided_displayName);
         displayNameShort = "";
         descriptionShort = CSTRING(magazine_descriptionShort);
-        model = PATHTOF(data\l16_ammo_he.p3d)
+        model = PATHTOF(data\l16_ammo_he.p3d);
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 50;
     };
@@ -60,7 +60,7 @@ class cfgMagazines {
         displayName = CSTRING(magazine_HE_LaserGuided_displayName);
         displayNameShort = "";
         descriptionShort = CSTRING(magazine_descriptionShort);
-        model = PATHTOF(data\l16_ammo_he.p3d)
+        model = PATHTOF(data\l16_ammo_he.p3d);
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 50;
     };
