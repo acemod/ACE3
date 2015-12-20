@@ -16,7 +16,7 @@
 
 if(!hasInterface) exitWith { false };
 
-params ["_litterClass", "_position", "_unit"];
+params ["_litterClass", "_position", "_direction"];
 private["_litterObject", "_maxLitterCount"];
 //IGNORE_PRIVATE_WARNING(_values);
 
