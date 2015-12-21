@@ -85,5 +85,7 @@ _action = [QGVAR(Refuel),
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
 
-[_target, 0] call EFUNC(interact_menu,addMainAction);
-[_target, 0, ["ACE_MainActions"], [_action, _actions, _target]] call EFUNC(interact_menu,addActionToObject);
+[_target, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
+{
+    [_target, 0, [QGVAR(Refuel)], _x select 0] call EFUNC(interact_menu,addActionToObject);
+} forEach _actions;
