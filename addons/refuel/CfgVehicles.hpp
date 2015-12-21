@@ -615,7 +615,7 @@ class CfgVehicles {
     // Src: http://helicopters.axlegeeks.com/l/61/Boeing-AH-64-Apache 375 gal = 1420L
     // Src: https://en.wikipedia.org/wiki/Mil_Mi-8 3700l
     // Src: Google Ka-52 1870L
-    // Src: http://www.airforce-technology.com/projects/hind/ 1500kg / 0.81 L/kg = 1851L
+    // Src: http://www.airforce-technology.com/projects/hind/ 1500kg / 0.81 kg/L = 1851L
     // Src: https://en.wikipedia.org/wiki/MD_Helicopters_MH-6_Little_Bird 242L
     // Src: http://www.globalsecurity.org/military/world/europe/aw159-specs.htm 1004L
     // Src: https://en.wikipedia.org/wiki/AgustaWestland_AW101 3 * 1074L = 3222L

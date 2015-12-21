@@ -93,7 +93,11 @@ if (isNull _nozzle) then { // func is called on fuel truck
             private ["_actionID"];
             params ["_args"];
             _args params ["_unit", "_nozzle"];
-            _nozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
+            if (_nozzle getVariable [QGVAR(jerryCan), false]) then {
+                _nozzle attachTo [_unit, [0,1,0], "pelvis"];
+            } else {
+                _nozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
+            };
             _unit setVariable [QGVAR(nozzle), _nozzle];
 
             _unit setVariable [QGVAR(isRefueling), true];
@@ -122,20 +126,22 @@ if (isNull _nozzle) then { // func is called on fuel truck
     _target = _nozzle getVariable QGVAR(source);
     _endPosOffset = _nozzle getVariable QGVAR(attachPos);
 };
-[{
-    private ["_nozzle"];
-    params ["_args", "_pfID"];
-    _args params ["_unit", "_source", "_endPosOffset"];
+if !(_nozzle getVariable [QGVAR(jerryCan), false]) then {
+    [{
+        private ["_nozzle"];
+        params ["_args", "_pfID"];
+        _args params ["_unit", "_source", "_endPosOffset"];
 
-    if (_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)) exitWith {
-        _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
-        if !(isNull _nozzle) then {
-            [_unit, _nozzle] call FUNC(dropNozzle);
-            REFUEL_UNHOLSTER_WEAPON
+        if (_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)) exitWith {
+            _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
+            if !(isNull _nozzle) then {
+                [_unit, _nozzle] call FUNC(dropNozzle);
+                REFUEL_UNHOLSTER_WEAPON
 
-            [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-            [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+                [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+                [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+            };
+            [_pfID] call cba_fnc_removePerFrameHandler;
         };
-        [_pfID] call cba_fnc_removePerFrameHandler;
-    };
-}, 0, [_unit, _target, _endPosOffset]] call cba_fnc_addPerFrameHandler;
+    }, 0, [_unit, _target, _endPosOffset]] call cba_fnc_addPerFrameHandler;
+};
