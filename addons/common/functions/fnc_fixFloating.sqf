@@ -24,7 +24,7 @@ _hitPointDamages = getAllHitPointsDamage _object;
 
 // get correct format for objects without hitpoints
 if (_hitPointDamages isEqualTo []) then {
-	_hitPointDamages = [[],[],[]];
+    _hitPointDamages = [[],[],[]];
 };
 
 // this prevents physx objects from floating when near other physx objects with allowDamage false

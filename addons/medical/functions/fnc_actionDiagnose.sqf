@@ -26,11 +26,11 @@ if (alive _target) then {
     _genericMessages pushBack LSTRING(diagnoseDead);
 };
 if (_target getVariable[QGVAR(hasLostBlood), 0] > 0) then {
-	if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
-		_genericMessages pushBack LSTRING(lostBloodALot);
-	} else {
-		_genericMessages pushBack LSTRING(lostBlood);
-	};
+    if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
+        _genericMessages pushBack LSTRING(lostBloodALot);
+    } else {
+        _genericMessages pushBack LSTRING(lostBlood);
+    };
 } else {
     _genericMessages pushBack LSTRING(noBloodloss);
 };
