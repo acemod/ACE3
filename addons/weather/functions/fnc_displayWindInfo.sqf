@@ -33,7 +33,7 @@ GVAR(WindInfo) = true;
     if !(GVAR(WindInfo) && !(underwater ACE_player) && vehicle ACE_player == ACE_player) exitWith {
         GVAR(WindInfo) = false;
         0 cutText ["", "PLAIN"];
-        [_this select 1] call cba_fnc_removePerFrameHandler;
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
     _windIndex = 12;

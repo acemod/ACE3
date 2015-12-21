@@ -27,7 +27,7 @@
             // If the setting is stored on the profile
             if !(isNil "_profileValue") then {
                 // If the profile variable has the correct type
-                if (typeName _profileValue == typeName (missionNamespace getVariable _name)) then {
+                if (_profileValue isEqualType (missionNamespace getVariable _name)) then {
                     // Load the setting from the profile
                     missionNamespace setVariable [_name, _profileValue];
                 };

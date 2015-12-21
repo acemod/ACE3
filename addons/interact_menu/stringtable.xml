@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -301,9 +301,11 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
+            <Polish>Szybkość animacji interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
+            <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
         </Key>
     </Package>
 </Project>

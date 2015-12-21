@@ -36,6 +36,32 @@ class CfgVehicles {
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "pelvis";
 
+                class ACE_PassMagazine {
+                    displayName = CSTRING(PassMagazine);
+                    condition = "";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3.3;
+                    icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargomag_ca.paa";
+
+                    class ACE_PassMagazinePrimary {
+                        displayName = CSTRING(PassMagazinePrimary);
+                        condition = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(canPassMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,primaryWeapon _target)] call FUNC(passMagazine));
+                        showDisabled = 0;
+                        priority = 3;
+                        icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryweapon_ca.paa";
+                    };
+                    class ACE_PassMagazineHandgun {
+                        displayName = CSTRING(PassMagazineHandgun);
+                        condition = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(canPassMagazine));
+                        statement = QUOTE([ARR_3(_player,_target,handgunWeapon _target)] call FUNC(passMagazine));
+                        showDisabled = 0;
+                        priority = 1;
+                        icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\handgun_ca.paa";
+                    };
+                };
+
                 class ACE_TeamManagement {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
@@ -271,112 +297,6 @@ class CfgVehicles {
                     hotkey = "M";
                 };
             };
-
-            class ACE_Gestures {
-                displayName = CSTRING(Gestures);
-                condition = "canStand _target";
-                statement = "";
-                showDisabled = 1;
-                priority = 3.5;
-                icon = PATHTOF(UI\gestures_ca.paa);
-                hotkey = "G";
-
-                /*class ACE_Gesture_Advance {
-                    displayName = CSTRING(Gestures_Attack);
-                    condition = "canStand _target";
-                    statement = "_target playActionNow 'gestureAttack';";
-                    showDisabled = 1;
-                    priority = 2.0;
-                };*/
-                class ACE_Gesture_Advance {
-                    displayName = CSTRING(Gestures_Advance);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureAdvance';);
-                    showDisabled = 1;
-                    priority = 1.9;
-                    hotkey = "1";
-                };
-                class ACE_Gesture_Go {
-                    displayName = CSTRING(Gestures_Go);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_2('gestureGo','gestureGoB')] select floor random 2););
-                    showDisabled = 1;
-                    priority = 1.8;
-                    hotkey = "2";
-                };
-                class ACE_Gesture_Follow {
-                    displayName = CSTRING(Gestures_Follow);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureFollow';);
-                    showDisabled = 1;
-                    priority = 1.7;
-                    hotkey = "3";
-                };
-                /*class ACE_Gesture_Point {
-                    displayName = CSTRING(Gestures_Point);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gesturePoint';);
-                    showDisabled = 1;
-                    priority = 1.6;
-                };*/
-                class ACE_Gesture_Up {
-                    displayName = CSTRING(Gestures_Up);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureUp';);
-                    showDisabled = 1;
-                    priority = 1.5;
-                    hotkey = "4";
-                };
-                class ACE_Gesture_Cover {
-                    displayName = CSTRING(Gestures_Cover);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureCover';);
-                    showDisabled = 1;
-                    priority = 1.4;
-                    hotkey = "5";
-                };
-                class ACE_Gesture_CeaseFire {
-                    displayName = CSTRING(Gestures_Cease_Fire);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureCeaseFire';);
-                    showDisabled = 1;
-                    priority = 1.3;
-                    hotkey = "6";
-                };
-                class ACE_Gesture_Freeze {
-                    displayName = CSTRING(Gestures_Freeze);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureFreeze';);
-                    showDisabled = 1;
-                    priority = 1.2;
-                    hotkey = "7";
-                };
-                class ACE_Gesture_Yes {
-                    displayName = ECSTRING(common,Yes);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
-                    showDisabled = 1;
-                    priority = 1.1;
-                    hotkey = "8";
-                };
-                class ACE_Gesture_No {
-                    displayName = ECSTRING(common,No);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureNo';);
-                    showDisabled = 1;
-                    priority = 1.0;
-                    hotkey = "9";
-                };
-                class ACE_Gesture_Hi {
-                    displayName = CSTRING(Gestures_Hi);
-                    condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow ([ARR_3('gestureHi','gestureHiB','gestureHiC')] select floor random 3););
-                    showDisabled = 1;
-                    priority = 0.9;
-                    hotkey = "0";
-                };
-            };
-
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
@@ -558,6 +478,14 @@ class CfgVehicles {
         };
     };
 
+    class Pod_Heli_Transport_04_base_F: StaticWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                distance = 5;
+            };
+        };
+    };
+    
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
 
@@ -618,5 +546,24 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions {};
+    };
+
+    class RoadCone_F: thingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+            };
+        };
+    };
+
+    class RoadBarrier_F: RoadCone_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0.500671]";
+            };
+        };
     };
 };

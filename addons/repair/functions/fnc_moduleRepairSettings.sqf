@@ -4,14 +4,12 @@
  *
  * Arguments:
  * 0: The module logic <OBJECT>
- * 1: Synchronized units <ARRAY>
- * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleRepairSettings"
+ * [logic] call ace_repair_fnc_moduleRepairSettings
  *
  * Public: No
  */

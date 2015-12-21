@@ -398,6 +398,7 @@
             <French>Affiche les nouveautés sur l'écran principal</French>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в Главном Меню</Russian>
+            <Czech>Zobrazit zprávy v hlavním menu</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>

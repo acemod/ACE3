@@ -62,8 +62,8 @@ if (isNumber (_magazineTrigger >> "digDistance")) then {
     _canDigDown = true;
     _surfaceType = surfaceType _pos;
     if ((_surfaceType select [0,1]) == "#") then {_surfaceType = _surfaceType select [1, 99];};
-    if ((_surfaceType != "") || {isClass (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
-        _soundEnviron = getText (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
+    if ((_surfaceType != "") || {isClass (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
+        _soundEnviron = getText (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
         TRACE_2("Dig Down Surface",_surfaceType,_soundEnviron);
         _canDigDown = !(_soundEnviron in ["road", "tarmac", "concrete", "concrete_int", "int_concrete", "concrete_ext"]);
     };

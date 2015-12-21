@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitwith {};
+if (!hasInterface) exitWith {};
 
 GVAR(MenuPFHID) = -1;
 GVAR(lastOpenedOn) = -1;
@@ -24,7 +24,7 @@ GVAR(pendingReopen) = false;
 
     // Conditions: canInteract
     if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([ACE_player, _target] call FUNC(canOpenMenu)) exitwith {false};
+    if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement
     [_target] call FUNC(openMenu);

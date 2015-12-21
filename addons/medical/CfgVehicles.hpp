@@ -429,9 +429,9 @@ class CfgVehicles {
         };
     };
 
-    #define ARM_LEG_ARMOR_DEFAULT 3
-    #define ARM_LEG_ARMOR_BETTER  5
-    #define ARM_LEG_ARMOR_CSAT    4
+    #define ARM_LEG_ARMOR_DEFAULT 1
+    #define ARM_LEG_ARMOR_BETTER  1
+    #define ARM_LEG_ARMOR_CSAT    1
 
     #define ADD_ACE_HITPOINTS(ARM_ARMOR,LEG_ARMOR) \
         class HitLeftArm { \
@@ -459,12 +459,12 @@ class CfgVehicles {
         }; \
         class HitRightLeg: HitLeftLeg { \
             name = "leg_r"; \
-        }; \
-            
+        };
+
     class Man;
     class CAManBase: Man {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_DEFAULT,ARM_LEG_ARMOR_DEFAULT);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_DEFAULT,ARM_LEG_ARMOR_DEFAULT)
         };
 
         class ACE_SelfActions {
@@ -496,7 +496,7 @@ class CfgVehicles {
                 class GVAR(loadPatient) {
                     displayName = CSTRING(LoadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target == _target);
+                    condition = QUOTE(_target getVariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target == _target);
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
                     showDisabled = 0;
                     priority = 2;
@@ -506,7 +506,7 @@ class CfgVehicles {
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
                     distance = 5;
-                    condition = QUOTE(_target getvariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target != _target);
+                    condition = QUOTE(_target getVariable[ARR_2(QUOTE(QUOTE(ACE_isUnconscious)),false)] && vehicle _target != _target);
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
                     priority = 2;
@@ -525,13 +525,13 @@ class CfgVehicles {
 
     class B_Soldier_04_f: B_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
@@ -539,37 +539,37 @@ class CfgVehicles {
 
     class I_Soldier_03_F: I_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_BETTER,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_Soldier_base_F: SoldierEB {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_Soldier_diver_base_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
-    
+
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
     class O_officer_F: O_Soldier_base_F {
         class HitPoints {
-            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER);
+            ADD_ACE_HITPOINTS(ARM_LEG_ARMOR_CSAT,ARM_LEG_ARMOR_BETTER)
         };
     };
 
@@ -577,27 +577,27 @@ class CfgVehicles {
     //Note: the selections are a little weird, eg:  class leg_l {name = "leg_l";};
     // class B_Soldier_VR_F: B_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class O_Soldier_VR_F: O_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class I_Soldier_VR_F: I_Soldier_base_F { {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class C_Soldier_VR_F: C_man_1 {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
     // class O_Protagonist_VR_F: O_Soldier_base_F {
         // class HitPoints {
-           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already 
+           //Has class hand_l, hand_r, leg_l, leg_r Hitpoints already
         // };
     // };
 

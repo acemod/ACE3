@@ -78,10 +78,10 @@ if (GVAR(openedMenuType) >= 0) then {
             // Execute the current action if it's run on hover
             private _tmp = ((GVAR(selectedAction) select 0) select 9) select 3;
             private _runOnHover = true;
-            if ((typeName _tmp) == "CODE" ) then {
+            if (_tmp isEqualType {}) then {
                 _runOnHover = call _tmp;
             } else {
-                if ((typeName _tmp) == "BOOL" ) then {
+                if (_tmp isEqualType false) then {
                     _runOnHover = _tmp;
                 } else {
                     _runOnHover = _tmp > 0;

@@ -48,7 +48,7 @@ createDialog "ace_huntir_cam_dialog_off";
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
 
             if ((!dialog) || GVAR(done)) exitWith {
-                [_this select 1] call cba_fnc_removePerFrameHandler;
+                [_this select 1] call CBA_fnc_removePerFrameHandler;
 
                 if (dialog && GVAR(state) == "connected") then {
                     [_nearestHuntIRs select 0] call FUNC(cam);

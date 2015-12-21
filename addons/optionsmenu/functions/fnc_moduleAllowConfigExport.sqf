@@ -16,9 +16,9 @@
 private ["_logic"];
 _logic = _this select 0;
 
-if (isMultiplayer) exitwith {};
+if (isMultiplayer) exitWith {};
 
-if (_logic getvariable ["allowconfigurationExport", false]) then {
+if (_logic getVariable ["allowconfigurationExport", false]) then {
     GVAR(serverConfigGeneration) = 1;
 } else {
     GVAR(serverConfigGeneration) = 0;

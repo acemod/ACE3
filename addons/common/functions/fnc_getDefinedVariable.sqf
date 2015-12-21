@@ -16,7 +16,7 @@
 params ["_unit", "_variable", "_defaultValue"];
 
 private "_value";
-_value = _unit getvariable _variable;
+_value = _unit getVariable _variable;
 
 if (isNil "_value") then {
     if (!isNil "_defaultValue") then {
