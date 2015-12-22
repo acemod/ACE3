@@ -85,13 +85,13 @@ _fnc_perFrameFunction = {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         if (_errorCode == 0) then {
-            if (typeName _onFinish == "STRING") then {
+            if (_onFinish isEqualType "") then {
                 [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFinish;
             };
         } else {
-            if (typeName _onFail == "STRING") then {
+            if (_onFail isEqualType "") then {
                 [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFail;

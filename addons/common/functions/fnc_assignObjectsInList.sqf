@@ -22,14 +22,14 @@
 
 params ["_list", "_variable", "_setting", "_global", ["_vehicle", false]];
 
-if (typeName _list == "STRING") then {
+if (_list isEqualType "") then {
     _list = [_list, true, true] call FUNC(parseList);
     TRACE_1("Parsed",_list)
 };
 
 {
     if (!isNil "_x") then {
-        if (typeName _x == typeName objNull) then {
+        if (_x isEqualType objNull) then {
             if (local _x) then {
                 if (_vehicle) then {
                     (vehicle _x) setVariable [_variable, _setting, _global];

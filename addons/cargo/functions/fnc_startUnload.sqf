@@ -41,7 +41,7 @@ if ([_item, GVAR(interactionVehicle)] call FUNC(canUnloadItem)) then {
 
     [5 * _size, [_item, GVAR(interactionVehicle)], "UnloadCargo", {}, localize LSTRING(UnloadingItem)] call EFUNC(common,progressBar);
 } else {
-    _itemClass = if (typeName _item == "STRING") then {_item} else {typeOf _item};
+    _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
     ["displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);

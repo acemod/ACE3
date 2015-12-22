@@ -140,15 +140,14 @@ class CfgVehicles {
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Land_Pod_Heli_Transport_04_base_F : StaticWeapon {};
-    class Land_Pod_Heli_Transport_04_ammo_F : Land_Pod_Heli_Transport_04_base_F {
-        XEH_ENABLED;
+    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
+    class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class ReammoBox_F;
-    class Slingload_01_Base_F : ReammoBox_F {
+    class Slingload_base_F;
+    class Slingload_01_Base_F: Slingload_base_F {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);

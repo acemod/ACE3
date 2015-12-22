@@ -9,7 +9,7 @@
  *   1 = Warn permanently
  *   2 = Kick
  * 1: Check all PBOs? (default: false) <BOOL>
- * 2: Whitelist (default: "[]") <STRING>
+ * 2: Whitelist (default: "") <STRING>
  *
  * Return Value:
  * None
@@ -18,9 +18,13 @@
  */
 #include "script_component.hpp"
 
-params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
+params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
+TRACE_3("params",_mode,_checkAll,_whitelist);
 
-_whitelist = [_whitelist, {toLower _this}] call FUNC(map);
+//lowercase and convert whiteList String into array of strings:
+_whitelist = toLower _whitelist;
+_whitelist = _whitelist splitString "[,""']";
+TRACE_1("Array",_whitelist);
 
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
@@ -75,15 +79,21 @@ if (!isServer) then {
                 _ctrlHint ctrlSetStructuredText _text;
 
                 if (_mode == 0) then {
-                    sleep 10;
-                    _rscLayer cutFadeOut 0.2;
+                    [{
+                        params ["_rscLayer"];
+                        TRACE_2("Hiding Error message after 10 seconds",time,_rscLayer);
+                        _rscLayer cutFadeOut 0.2;
+                    }, [_rscLayer], 10] call FUNC(waitAndExecute);
                 };
             };
 
             if (_mode == 2) then {
-                waitUntil {alive player}; // To be able to show list if using checkAll
-                _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
-                ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                [{alive player}, { // To be able to show list if using checkAll
+                    params ["_text"];
+                    TRACE_2("Player is alive, showing msg and exiting",time,_text);
+                    _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
+                    ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                }, [_text]] call FUNC(waitUntilAndExecute);
             };
         };
 

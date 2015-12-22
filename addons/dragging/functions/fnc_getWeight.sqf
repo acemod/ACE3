@@ -39,7 +39,7 @@ _totalWeight = 0;
 ];
 
 // add Weight of create to totalWeight
-_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> typeof _object >> "mass"));
+_totalWeight = _totalWeight + (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> "mass"));
 
 // Mass in Arma isn't an exact amount but rather a volume/weight value. This attempts to work around that by making it a usable value. (sort of).
 _totalWeight * 0.5

@@ -20,11 +20,11 @@ scopeName "main";
 params ["_colorArray"];
 
 if (isNil "_colorArray") exitWith {false};
-if ((typeName _colorArray) != "ARRAY") exitWith {false};
+if (!(_colorArray isEqualType [])) exitWith {false};
 if (count _colorArray != 4) exitWith {false};
 
 {
-    if ((typeName _x) != "SCALAR" || _x < 0 || _x > 1) exitWith {false breakOut "main"};
+    if ((!(_x isEqualType 0)) || {_x < 0 || _x > 1}) exitWith {false breakOut "main"};
 } count _colorArray;
 
 true

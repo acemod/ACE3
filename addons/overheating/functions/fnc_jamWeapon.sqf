@@ -34,7 +34,7 @@ _fnc_stopCurrentBurst = {
   if (diag_frameno == _startFrame) exitWith {};
 
   // Remove the PFH on the second execution
-  [_pfhId] call cba_fnc_removePerFrameHandler;
+  [_pfhId] call CBA_fnc_removePerFrameHandler;
 
   _unit setAmmo [_weapon, _ammo];
 };
