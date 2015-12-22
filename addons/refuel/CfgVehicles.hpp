@@ -138,8 +138,8 @@ class CfgVehicles {
         XEH_ENABLED;
         MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
-        scope = 2;
-        scopeCurator = 2;
+        scope = 1;
+        scopeCurator = 1;
         model = "\A3\Structures_F_Heli\VR\Helpers\Sign_sphere10cm_F.p3d";
     };
 
