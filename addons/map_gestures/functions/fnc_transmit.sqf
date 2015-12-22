@@ -28,18 +28,18 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
     [_pfhId] call CBA_fnc_removePerFrameHandler;
 };
 
-{
-    _ownerID = _x getVariable QGVAR(owner_id);
-    if (isNil "_ownerID") then {
-        [EVENT_PLAYER_HAS_NO_OWNER_ID, [name _x]] call EFUNC(common,serverEvent);
-    } else {
-        _playerOwnerID = ACE_player getVariable QGVAR(owner_id);
-        if (!isNil "_playerOwnerID" && _ownerID != _playerOwnerID) then {
-            _unitUID = getPlayerUID ACE_Player;
-            _drawPosVariableName = if (!isNil "_unitUID" && _unitUID != "") then {format [QGVAR(%1_DrawPos), _unitUID]} else {nil};
-            if (!isNil "_drawPosVariableName") then {
+_unitUID = getPlayerUID ACE_Player;
+_playerOwnerID = ACE_player getVariable QGVAR(owner_id);
+if (!isNil "_unitUID" && _unitUID != "" && !isNil "_playerOwnerID") then {
+    _drawPosVariableName = format [QGVAR(%1_DrawPos), _unitUID];
+    {
+        _ownerID = _x getVariable QGVAR(owner_id);
+        if (isNil "_ownerID") then {
+            [EVENT_PLAYER_HAS_NO_OWNER_ID, [name _x]] call EFUNC(common,serverEvent);
+        } else {
+            if (_ownerID != _playerOwnerID) then {
                 _ownerID publicVariableClient _drawPosVariableName;
             };
         };
-    };
-} count ([ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers));
+    } count ([ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers));
+};
