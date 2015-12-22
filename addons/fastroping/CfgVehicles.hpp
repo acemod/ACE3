@@ -68,7 +68,7 @@ class CfgVehicles {
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
                 condition = [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [vehicle _player] call FUNC(deployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player]] call EFUNC(common,serverEvent);
                 showDisabled = 0;
                 priority = 1;
             };

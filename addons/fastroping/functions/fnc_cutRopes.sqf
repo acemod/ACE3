@@ -20,10 +20,20 @@ private ["_deployedRopes", "_config", "_waitTime"];
 
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
-    _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook"];
+    _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook", "_occupied"];
 
-    deleteVehicle _ropeTop;
-    [{{deleteVehicle _x} count _this}, [_dummy, _anchor, _ropeBottom, _hook], 60] call EFUNC(common,waitAndExecute);
+    //Make player fall if rope is occupied
+    if (_occupied) then {
+        private _attachedObjects = attachedObjects _dummy;
+        //Rope is considered occupied when it's broken as well, so check if array is empty
+        //Note: ropes are not considered attached objects by Arma
+        if !(_attachedObjects isEqualTo []) then {
+            detach ((attachedObjects _dummy) select 0);
+        };
+    };
+
+    [QGVAR(ropeDetach), [_hook, _ropeTop]] call EFUNC(common,serverEvent);
+    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy, _anchor, _hook], 60] call EFUNC(common,waitAndExecute);
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
