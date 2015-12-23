@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Checks if the unit can interact with civilian on foot
+ * Checks if the unit can interact with civilian
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -18,4 +18,4 @@
 #include "script_component.hpp"
 
 params ["_unit", "_target", ["_isCivilian", true]];
-alive _target && isNull objectParent _target && [side _target != side _unit, side group _target == civilian] select _isCivilian // return
+alive _target && [side _target != side _unit, side group _target == civilian] select _isCivilian // return
