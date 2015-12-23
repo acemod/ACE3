@@ -349,6 +349,9 @@
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
         </Key>
+        <key ID="STR_ACE_Interaction_ExtractFromVehicle">
+            <English>Extract from vehicle</English>
+        </key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
             <German>Gruppenverwaltung</German>

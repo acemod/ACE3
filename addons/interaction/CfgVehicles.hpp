@@ -148,6 +148,13 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.5;
                 };
+                class ACE_Unload {
+                    displayName = CSTRING(ExtractFromVehicle);
+                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canInteractWithCivilianVehicle));
+                    statement = QUOTE([ARR_2(_target,vehicle _target)] call EFUNC(common,unloadPersonLocal));
+                    showDisabled = 0;
+                    priority = 2.6;
+                }
             };
 
             class ACE_Torso {
@@ -485,7 +492,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
 
