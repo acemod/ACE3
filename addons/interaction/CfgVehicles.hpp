@@ -150,11 +150,11 @@ class CfgVehicles {
                 };
                 class ACE_Unload {
                     displayName = CSTRING(ExtractFromVehicle);
-                    condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canInteractWithCivilianVehicle));
-                    statement = QUOTE([ARR_2(_target,vehicle _target)] call EFUNC(common,unloadPersonLocal));
+                    condition = QUOTE(isNull objectParent _targe && [ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    statement = QUOTE([_target] call EFUNC(common,unloadPerson));
                     showDisabled = 0;
                     priority = 2.6;
-                }
+                };
             };
 
             class ACE_Torso {
