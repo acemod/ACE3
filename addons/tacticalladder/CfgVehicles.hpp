@@ -68,7 +68,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 selection = "roadway";
                 distance = 5;
-                condition = "true";
+                condition = QUOTE(_target call FUNC(isLadderEmpty));
 
                 class ACE_PickUp {
                     selection = "";
