@@ -42,17 +42,40 @@ private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true
 
 TRACE_3("",_variableName,_temperature,_scaledTemperature);
 
+//Get weapon data from cache:
+_weaponData = GVAR(weaponInfoCache) getVariable _weapon;
+if (isNil "_weaponData") then {
+    private _dispersion = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion")) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion");
+    } else {
+        1;
+    };
+    private _slowdownFactor = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_SlowdownFactor")) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_SlowdownFactor");
+    } else {
+        1;
+    };
+    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS")) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS");
+    } else {
+        3000;
+    };
+    _jamChance = if (_jamChance == 0) then {0} else {1/_jamChance};
+
+    _weaponData = [_dispersion, _slowdownFactor, _jamChance];
+    TRACE_2("building cache",_weapon,_weaponData);
+    GVAR(weaponInfoCache) setVariable [_weapon, _weaponData];
+};
+_weaponData params ["_dispersion", "_slowdownFactor", "_jamChance"];
+TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance);
+
 // Dispersion and bullet slow down
 if (GVAR(overheatingDispersion)) then {
-    private _dispersion = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion");
-    _dispersion = (_dispersion * ([[0,1,2,4], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray))) max 0;
-
-    private _slowdownFactor = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_SlowdownFactor");
-    if (_slowdownFactor == 0) then {_slowdownFactor = 1};
-    _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
-
     // Exit if GVAR(pseudoRandomList) isn't synced yet
     if (isNil QGVAR(pseudoRandomList)) exitWith {ACE_LOGERROR("No pseudoRandomList sync");};
+
+    _dispersion = (_dispersion * ([[0,1,2,4], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray))) max 0;
+    _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
 
     // Get the pseudo random values for dispersion from the remaining ammo count
     (GVAR(pseudoRandomList) select ((_unit ammo _weapon) mod (count GVAR(pseudoRandomList)))) params ["_dispersionX", "_dispersionY"];
@@ -66,11 +89,6 @@ if (GVAR(overheatingDispersion)) then {
 // Only compute jamming and show Visual Effects for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS")) then {
-    1 / getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS");
-} else {
-    1 / 3000;
-};
 _jamChance = _jamChance * ([[0.5, 1.5, 7.5, 37.5], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
 
 // increase jam chance on dusty grounds if prone (and at ground level)
