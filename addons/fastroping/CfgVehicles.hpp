@@ -14,7 +14,7 @@ class CfgVehicles {
         destrType = "";
     };
     class ACE_friesAnchorBar: ACE_friesBase {
-		author = "BaerMitUmlaut";
+		author = "jokoho48";
 		scope = 2;
 		model = PATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
@@ -99,9 +99,9 @@ class CfgVehicles {
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         GVAR(enabled) = 2;
-        GVAR(ropeOrigins[]) = {"hookRight", "hookLeft"};
+        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
-        GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.17};
+        GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.15};
 
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);

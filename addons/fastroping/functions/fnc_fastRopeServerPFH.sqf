@@ -25,10 +25,10 @@ private ["_vectorUp", "_vectorDir", "_origin"];
 if (vehicle _unit != _unit) exitWith {};
 
 //Start fast roping
-if (animationState _unit != "ACE_FastRoping") exitWith {
+if (animationState _unit != "ACE_slidingLoop") exitWith {
     //Fix for twitchyness
     _dummy setMass 80;
-    _dummy setCenterOfMass [0, 0, -1];
+    _dummy setCenterOfMass [0, 0, -2];
     _origin = getPosASL _hook;
     _dummy setPosASL (_origin vectorAdd [0, 0, -2]);
     _dummy setVectorUp [0, 0, 1];
