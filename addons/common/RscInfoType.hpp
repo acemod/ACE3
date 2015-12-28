@@ -107,6 +107,10 @@ class RscInGameUI {
     class RscOptics_LaserDesignator_02 {
         onLoad = QUOTE([ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call FUNC(localEvent););
     };
+
+    class RscStaminaBar {
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStaminaBar"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgStaminaBar)),_this select 0)]);
+    };
 };
 
 class RscDisplayInventory {
@@ -115,18 +119,18 @@ class RscDisplayInventory {
 
 // map
 class RscDisplayMainMap {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'Ingame')])] call FUNC(localEvent););
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getVariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'Ingame')])] call FUNC(localEvent););
 };
 
 class RscDisplayGetReady: RscDisplayMainMap {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'Briefing')])] call FUNC(localEvent););
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getVariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'Briefing')])] call FUNC(localEvent););
 };
 
 class RscDisplayServerGetReady: RscDisplayGetReady {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'ServerBriefing')])] call FUNC(localEvent););
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getVariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'ServerBriefing')])] call FUNC(localEvent););
 };
 
 
 class RscDisplayClientGetReady: RscDisplayGetReady {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'ClientBriefing')])] call FUNC(localEvent););
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDiary"",'GUI')] call    (uinamespace getVariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2('ACE_dlgMap', _this select 0)]; [ARR_2('mapDisplayLoaded', [ARR_2(_this select 0, 'ClientBriefing')])] call FUNC(localEvent););
 };

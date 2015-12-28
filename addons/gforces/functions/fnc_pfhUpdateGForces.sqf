@@ -19,7 +19,7 @@ EXPLODE_2_PVT(_this,_params,_pfhId);
 
 _interval = ACE_time - GVAR(lastUpdateTime);
 
-// Update the g-forces at constant game ACE_time intervals
+// Update the g-forces at constant game time intervals
 if (_interval < INTERVAL) exitWith {};
 
 if (isNull ACE_player) exitWith {};

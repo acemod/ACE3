@@ -1,12 +1,12 @@
 /*
  * Author: commy2 and joko // Jonas
- * Sets a public variable, but wait a certain amount of ACE_time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
+ * Sets a public variable, but wait a certain amount of time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
  *
  * Arguments:
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
- * 3: Windup ACE_time <NUMBER> (default: 1)
+ * 3: Windup time <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -38,19 +38,16 @@ GVAR(setVariablePublicArray) pushBack [_object, _varName, _syncTime, _idName];
 if (isNil QGVAR(setVariablePublicPFH)) exitWith {};
 
 GVAR(setVariablePublicPFH) = [{
-    private "_delete";
-    _delete = 0;
-
     {
         _x params ["_object", "_varName", "_syncTime", "_idName"];
         if (ACE_diagTime > _syncTime) then {
             // set value public
             _object setVariable [_varName, _object getVariable _varName, true];
-            GVAR(setVariablePublicArray) deleteAt _forEachIndex - _delete;
-            GVAR(setVariableNames) deleteAt _forEachIndex - _delete;
-            _delete = _delete + 1;
+            GVAR(setVariablePublicArray) deleteAt (GVAR(setVariablePublicArray) find _x);
+            GVAR(setVariableNames) deleteAt (GVAR(setVariableNames) find _x);
         };
-    } forEach GVAR(setVariablePublicArray);
+        nil
+    } count +GVAR(setVariablePublicArray);
 
     if (GVAR(setVariablePublicArray) isEqualTo []) then {
         [GVAR(setVariablePublicPFH)] call CBA_fnc_removePerFrameHandler;

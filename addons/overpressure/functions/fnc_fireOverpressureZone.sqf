@@ -40,7 +40,7 @@ _var params["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
 
 // Damage to others
 private "_affected";
-_affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
+_affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
 ["overpressure", _affected, [_firer, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);

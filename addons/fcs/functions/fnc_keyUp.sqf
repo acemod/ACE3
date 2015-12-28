@@ -75,7 +75,7 @@ if (ACE_time - GVAR(time) > 1 and GVAR(time) != -1 and count _this < 3) then {
 
     private ["_magazineType", "_ammoType", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep", "_initSpeedCoef", "_velocityMagnitude"];
 
-    // estimate ACE_time to target
+    // estimate time to target
     _magazineType = _vehicle currentMagazineTurret _turret;
     _ammoType       = getText   (configFile >> "CfgMagazines" >> _magazineType >> "ammo");
     _initSpeed      = getNumber (configFile >> "CfgMagazines" >> _magazineType >> "initSpeed");
@@ -209,4 +209,12 @@ if(_playSound) then {
 
 if(_showHint) then {
     [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
+};
+
+//Update the hud's distance display to the new value or "----" if out of range
+//(10m fudge because of EFUNC(common,getTargetDistance))
+if ((_distance + 10) >= (getNumber (_turretConfig >> QGVAR(MaxDistance)))) then {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText "----";
+} else {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };

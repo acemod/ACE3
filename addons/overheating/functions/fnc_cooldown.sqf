@@ -16,7 +16,7 @@
 
 EXPLODE_3_PVT(_this,_temperature,_barrelMass,_totalTime);
 
-// If a long ACE_time passed since the last shot, there's no need to calculate anything; the weapon should be cool
+// If a long time passed since the last shot, there's no need to calculate anything; the weapon should be cool
 if (_totalTime > 1800) exitWith {0};
 
 private ["_barrelSurface", "_time", "_deltaTime"];

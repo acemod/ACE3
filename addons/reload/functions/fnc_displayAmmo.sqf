@@ -43,7 +43,7 @@ if (_target isKindOf "StaticWeapon") then {
 
 if (_magazine == "") exitWith {};
 if (_weapon == "") exitWith {};
-if (typeName _muzzle != "STRING") then {_muzzle = _weapon};
+if (!( _muzzle isEqualType "")) then {_muzzle = _weapon};
 
 _showNumber = false;
 _ammo = 0;

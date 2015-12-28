@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain
- * Executes a code once with a given game ACE_time delay, using a PFH
+ * Executes a code once with a given game time delay, using a PFH
  *
  * Arguments:
  * 0: Code to execute <CODE>

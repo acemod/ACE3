@@ -7,7 +7,8 @@
  * The spectator interface will be opened/closed
  *
  * Arguments:
- * 0: Spectator state of local client <BOOL> <OPTIONAL>
+ * 0: Spectator state of local client <BOOL> (default: true)
+ * 1: Force interface <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>
@@ -20,16 +21,19 @@
 
 #include "script_component.hpp"
 
-params [["_set",true,[true]]];
+params [["_set",true,[true]], ["_force",true,[true]]];
 
 // Only clients can be spectators
 if (!hasInterface) exitWith {};
 
 // Exit if no change
-if (_set isEqualTo GVAR(isSet)) exitwith {};
+if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Handle common addon audio
-if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};
+if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
+    EGVAR(hearing,disableVolumeUpdate) = _set;
+    EGVAR(hearing,deafnessDV) = 0;
+};
 if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
@@ -45,7 +49,6 @@ if (_set) then {
     GVAR(heldKeys) resize 255;
     GVAR(mouse) = [false,false];
     GVAR(mousePos) = [0.5,0.5];
-    GVAR(treeSel) = objNull;
 
     // Update units before opening to support pre-set camera unit
     [] call FUNC(updateUnits);
@@ -75,7 +78,17 @@ if (_set) then {
     [{
         // Create the display
         (findDisplay 46) createDisplay QGVAR(interface);
-    }, []] call EFUNC(common,execNextFrame);
+
+        // If not forced, make esc end spectator
+        if (_this) then {
+            (findDisplay 12249) displayAddEventHandler ["KeyDown", {
+                if (_this select 1 == 1) then {
+                    [false] call ace_spectator_fnc_setSpectator;
+                    true
+                };
+            }];
+        };
+    }, !_force] call EFUNC(common,execNextFrame);
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -119,7 +132,6 @@ if (_set) then {
     GVAR(heldKeys) = nil;
     GVAR(mouse) = nil;
     GVAR(mousePos) = nil;
-    GVAR(treeSel) = nil;
 
     // Reset nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {

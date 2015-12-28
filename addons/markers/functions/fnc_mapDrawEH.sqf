@@ -37,7 +37,7 @@ _drawColor = getArray (_colorConfig >> "color");
 
 //Convert possible code into numbers
 {
-    if (typeName _x == "STRING") then {
+    if (_x isEqualType "") then {
         _drawColor set [_forEachIndex, (call compile _x)];
     };
 } forEach _drawColor;

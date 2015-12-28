@@ -51,5 +51,5 @@ while {(_numberOfAttempts < MAX_ATTEMPTS) && {(abs _error) > 0.2}} do {
 };
 if (_numberOfAttempts >= MAX_ATTEMPTS) exitWith {[]};
 
-//return the elevation and ACE_time required
+//return the elevation and time required
 [_solutionElevation, (_lastTestResult select 1)]

@@ -133,5 +133,21 @@
             <Portuguese>Diminuir Luminosidade do EVN</Portuguese>
             <Italian>Riduci la luminosità dell'NVG</Italian>
         </Key>
+        <Key ID="STR_ACE_NightVision_Module_DisplayName">
+            <English>Nightvision</English>
+            <German>Nachtsicht</German>
+        </Key>
+        <Key ID="STR_ACE_NightVision_Module_Description">
+            <English>Settings for night vision.</English>
+            <German>Einstellungen für Nachtsichtgeräte.</German>
+        </Key>
+        <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
+            <English>Disable NVGs in scope</English>
+            <German>Deakt. NVGs mit Visier</German>
+        </Key>
+        <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
+            <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
+            <German>Blockiert das Benutzen von Nachtsichtbrillen beim Benutzen des Visiers.</German>
+        </Key>
     </Package>
 </Project>
