@@ -43,7 +43,7 @@ private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true
 TRACE_3("",_variableName,_temperature,_scaledTemperature);
 
 //Get weapon data from cache:
-_weaponData = GVAR(weaponInfoCache) getVariable _weapon;
+private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
 if (isNil "_weaponData") then {
     private _dispersion = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion")) then {
         getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion");
@@ -74,7 +74,9 @@ if (GVAR(overheatingDispersion)) then {
     // Exit if GVAR(pseudoRandomList) isn't synced yet
     if (isNil QGVAR(pseudoRandomList)) exitWith {ACE_LOGERROR("No pseudoRandomList sync");};
 
-    _dispersion = (_dispersion * ([[0,1,2,4], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray))) max 0;
+    //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
+    _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
+    
     _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
 
     // Get the pseudo random values for dispersion from the remaining ammo count
@@ -82,7 +84,9 @@ if (GVAR(overheatingDispersion)) then {
 
     TRACE_4("change",_dispersion,_slowdownFactor,_dispersionX,_dispersionY);
 
+    TRACE_PROJECTILE_INFO(_projectile);
     [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
+    TRACE_PROJECTILE_INFO(_projectile);
 };
 
 // ------  LOCAL PLAYER ONLY ------------
@@ -112,7 +116,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
 
-    // Refract SFX, beginning at temp 100º and maxs out at 500º
+    // Refract SFX, beginning at temp 100°C and maxs out at 500°C
     private _intensity = linearConversion [0.1, 0.5, _scaledTemperature, 0, 1, true];
     TRACE_3("refract",_direction,_position,_intensity);
     if (_intensity > 0) then {
@@ -120,7 +124,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
         "\A3\data_f\ParticleEffects\Universal\Refract", "", "Billboard", 10, 2, _position, _direction, 0, 1.2, 1.0,
         0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3*_intensity],[0.2,0.2,0.2,0.05*_intensity]], [0,1], 0.1, 0.05, "", "", ""];
     };
-    // Smoke SFX, beginning at temp 150º
+    // Smoke SFX, beginning at temp 150°C
     private _intensity = linearConversion [0.15, 1, _scaledTemperature, 0, 1, true];
     TRACE_3("smoke",_direction,_position,_intensity);
     if (_intensity > 0) then {

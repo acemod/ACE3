@@ -1,7 +1,7 @@
 class Extended_PreInit_EventHandlers {
-  class ADDON {
-    init = QUOTE( call COMPILE_FILE(XEH_preInit) );
-  };
+    class ADDON {
+        init = QUOTE( call COMPILE_FILE(XEH_preInit) );
+    };
 };
 
 class Extended_PostInit_EventHandlers {
@@ -13,7 +13,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class GVAR(Overheat) {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
+            clientFiredBIS = QUOTE(_this call FUNC(firedEH));
         };
     };
 };
