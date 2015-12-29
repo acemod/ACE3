@@ -89,7 +89,6 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 1;
         vehicleClass = "Cargo";
-        ACE_offset[] = {0,0,0};
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -137,7 +136,6 @@ class CfgVehicles {
     class ACE_Explosives_Place_APERSTripwireMine:ACE_Explosives_Place {
         displayName = "APERS Tripwire Mine";
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
-        ACE_offset[] = {1,0,0};
     };
 
     class ACE_Explosives_Place_ATMine:ACE_Explosives_Place {
