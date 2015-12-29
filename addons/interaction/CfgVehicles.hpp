@@ -150,7 +150,7 @@ class CfgVehicles {
                 };
                 class ACE_Unload {
                     displayName = CSTRING(ExtractFromVehicle);
-                    condition = QUOTE(isNull objectParent _targe && [ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    condition = QUOTE(isNull objectParent _target && [ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
                     statement = QUOTE([_target] call EFUNC(common,unloadPerson));
                     showDisabled = 0;
                     priority = 2.6;
