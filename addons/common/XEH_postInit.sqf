@@ -1,7 +1,7 @@
 // ACE - Common
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
-// #define ENABLE_PERFORMANCE_COUNTERS
 
 //////////////////////////////////////////////////
 // PFHs
@@ -293,6 +293,17 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
+//CBA has events for zeus's display onLoad and onUnload (Need to delay a frame for display to be ready)
+private _zeusDisplayChangedFNC = {
+    [{
+        private _data = !(isNull findDisplay 312);
+        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
+    }, []] call FUNC(execNextFrame);
+};
+["CBA_curatorOpened", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
+["CBA_curatorClosed", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
+
+
 // default variables
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
@@ -302,7 +313,6 @@ GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
 GVAR(OldCameraView) = "";
 GVAR(OldVisibleMap) = false;
 GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
-GVAR(OldZeusDisplayIsOpen) = false;
 GVAR(OldIsCamera) = false;
 
 // clean up playerChanged eventhandler from preinit and put it in the same PFH as the other events to reduce overhead and guarantee advantageous execution order
@@ -314,13 +324,11 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // PFH to raise varios events
 [{
     BEGIN_COUNTER(stateChecker);
-    private "_data"; // reuse one variable to reduce number of variables that have to be set to private each frame
 
     // "playerChanged" event
-    _data = call FUNC(player);
+    private _data = call FUNC(player); // reuse one variable to reduce number of variables that have to be set to private each frame
     if !(_data isEqualTo ACE_player) then {
-        private "_oldPlayer";
-        _oldPlayer = ACE_player;
+        private _oldPlayer = ACE_player;
 
         ACE_player = _data;
         uiNamespace setVariable ["ACE_player", _data];
@@ -391,14 +399,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         // Raise ACE event locally
         GVAR(OldInventoryDisplayIsOpen) = _data;
         ["inventoryDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "zeusDisplayChanged" event
-    _data = !(isNull findDisplay 312);
-    if !(_data isEqualTo GVAR(OldZeusDisplayIsOpen)) then {
-        // Raise ACE event locally
-        GVAR(OldZeusDisplayIsOpen) = _data;
-        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
     };
 
     // "activeCameraChanged" event
