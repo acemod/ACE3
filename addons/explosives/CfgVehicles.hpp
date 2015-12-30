@@ -10,7 +10,6 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 4;
                 icon = PATHTOF(UI\Explosives_Menu_ca.paa);
-                hotkey = "X";
                 //Sub-menu items
                 class ACE_Detonate {
                     displayName = CSTRING(Detonate);
@@ -21,7 +20,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = PATHTOF(UI\Explosives_Menu_ca.paa);
                     priority = 2;
-                    hotkey = "T";
                 };
                 class ACE_Place {
                     displayName = CSTRING(Place);
@@ -32,7 +30,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = PATHTOF(UI\Place_Explosive_ca.paa);
                     priority = 1;
-                    hotkey = "P";
                 };
                 class ACE_Cellphone {
                     displayName = CSTRING(cellphone_displayName);
@@ -72,7 +69,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = PATHTOF(UI\Defuse_ca.paa);
                     priority = 0.8;
-                    hotkey = "F";
                     distance = 5;
                 };
             };
