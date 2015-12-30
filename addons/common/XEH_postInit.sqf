@@ -449,6 +449,7 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     {_unit != _target && {vehicle _unit == vehicle _target}}
 }] call FUNC(addCanInteractWithCondition);
 
+["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
