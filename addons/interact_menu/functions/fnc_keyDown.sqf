@@ -97,38 +97,77 @@ if (GVAR(menuAnimationSpeed) > 0) then {
 
 GVAR(firstCursorTarget) = objNull;
 GVAR(firstCursorTargetPos) = [0,0,0];
-_cursorTargets = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), (AGLtoASL positionCameraToWorld [0,0,10]), ACE_player];
-if ((count _cursorTargets) > 0) then {
-    (_cursorTargets select 0) params ["_intsectPosASL", "", "_intersectObject"];
+//If user has option selected, move Main Actions to cursor position on the vehicle they are looking at (only unmounted, non-self, non-zeus)
+if (GVAR(moveMainInteractionToCursor) && {vehicle ACE_player == ACE_player} && {GVAR(openedMenuType) == 0} && {isNull curatorCamera}) then {
+    private _cursorTargets = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), (AGLtoASL positionCameraToWorld [0,0,10]), ACE_player];
+    TRACE_1("Checking for cursor target",_cursorTargets);
+    if (_cursorTargets isEqualTo []) exitWith {};
+    (_cursorTargets select 0) params ["_intsectPosASL", "", "_target"]; //We need variable `_target` set for the actionPosition call
+    if (isNull _target) exitWith {TRACE_1("Ignoring Terrain (null)",_target);};
 
-    _target = _intersectObject;
-    _targetInterestPos = _intersectObject worldToModelVisual (ASLtoAGL _intsectPosASL);
+    //Ignore Man (confusing, and would have trouble finding a free spot)
+    if (_target isKindOf "CAManBase") exitWith {TRACE_1("Ignoring Man",_target);};
 
-    _actionsVarName = format [QGVAR(Act_%1), typeOf _intersectObject];
-    _classActions = missionNamespace getVariable [_actionsVarName, []];
-    _fnc_posOverlaps = {
-        _return = false;
-        {
+    private _interestModelPos = _target worldToModelVisual (ASLtoAGL _intsectPosASL);
+    private _classActions = missionNamespace getVariable [(format [QGVAR(Act_%1), typeOf _target]), []];
+
+    //Check for existance of ACE_MainActions and get it's distance from center
+    private _originalMainDistance = -1;
+    {
+        if ((count _x) > 0) then {
+            _x params ["_baseAction"];
+            _baseAction params ["_actionName", "", "", "", "", "", "", "_positionFnc"];
+            if (_actionName == "ACE_MainActions") then {
+                private _actionPosition = call _positionFnc;
+                private _screenPos = worldToScreen (_target modelToWorldVisual _actionPosition);
+                _originalMainDistance = if (_screenPos isEqualTo []) then {999} else {_screenPos distance2d [0.5,0.5]};
+            };
+        };
+    } forEach _classActions;
+    if (_originalMainDistance == -1) exitWith {
+        TRACE_1("Object Does Not Have Main Action, ignoring",_originalMainDistance);
+    };
+
+    while {
+        private _interestScreenPos = worldToScreen (_target modelToWorldVisual _interestModelPos);
+        TRACE_3("testing",_interestModelPos,_interestScreenPos,_originalMainDistance);
+        //If interest pos moved off screen, or the original was better then don't change anything
+        if ((_interestScreenPos isEqualTo []) || {(_interestScreenPos distance2d [0.5, 0.5]) > _originalMainDistance}) exitWith {
+            TRACE_1("interest point bad or original better",_interestScreenPos);
+            _target = objNull;
+            false
+        };
+
+        private _interestOverlapsOtherAction = false;
+        { //Check for overlap with all other class interaction points (anything not in MainActions)
+            scopeName "checkForOverlap";
             if ((count _x) > 0) then {
-                _baseAction = _x select 0;
-                if ((_baseAction select 0) != "ACE_MainActions") then {
-                    _actionPosition = call (_baseAction select 7);
-                    diag_log text format ["%1 from %2", (_actionPosition vectorDistance _targetInterestPos), _x];
-                    if ((_actionPosition vectorDistance _targetInterestPos) < 0.4) then {
-                        _return = true;
+                _x params ["_baseAction"];
+                _baseAction params ["_actionName", "", "", "", "", "", "", "_positionFnc"];
+                if (_actionName != "ACE_MainActions") then {
+                    private _actionPosition = call _positionFnc;
+                    private _screenPos = worldToScreen (_target modelToWorldVisual _actionPosition);
+                    private _distanceFromCenter = if (_screenPos isEqualTo []) then {999} else {_screenPos distance2d _interestScreenPos};
+                    if (_distanceFromCenter < 0.1) then {
+                        TRACE_3("Pos Overlap",_actionName,_screenPos,_distanceFromCenter);
+                        _interestOverlapsOtherAction = true;
+                        breakOut "checkForOverlap";
                     };
                 };
             };
         } forEach _classActions;
-        _return
+
+        _interestOverlapsOtherAction
+    } do {
+        _interestModelPos = _interestModelPos vectorAdd [0,0,0.02];
+        TRACE_1("Moving Pos Up",_interestModelPos);
     };
 
-    while _fnc_posOverlaps do {
-        _targetInterestPos = _targetInterestPos vectorAdd [0,0,0.05];
+    if (!isNull _target) then {
+        TRACE_2("Setting New Main Interaction Pos",_target,_originalMainDistance);
+        GVAR(firstCursorTarget) = _target;
+        GVAR(firstCursorTargetPos) = _interestModelPos;
     };
-
-    GVAR(firstCursorTarget) = _intersectObject;
-    GVAR(firstCursorTargetPos) = _targetInterestPos;
 };
 
 true

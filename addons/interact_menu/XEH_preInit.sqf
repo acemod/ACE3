@@ -74,6 +74,8 @@ GVAR(collectedActionPoints) = [];
 GVAR(foundActions) = [];
 GVAR(lastTimeSearchedActions) = -1000;
 
+GVAR(firstCursorTarget) = objNull;
+GVAR(firstCursorTargetPos) = [0,0,0];
 
 // Init CAManBase menus
 ["CAManBase"] call FUNC(compileMenu);

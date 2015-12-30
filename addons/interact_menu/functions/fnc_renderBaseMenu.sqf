@@ -27,7 +27,7 @@ _distance = _actionData select 8;
 _pos = if((count _this) > 2) then {
     _this select 2
 } else {
-    if ((_object isEqualTo GVAR(firstCursorTarget)) && {(_actionData select 0) == "ACE_MainActions"} && {!(_object isKindOf "CAManBase")}) then {
+    if ((_object isEqualTo GVAR(firstCursorTarget)) && {(_actionData select 0) == "ACE_MainActions"}) then {
         _object modelToWorldVisual GVAR(firstCursorTargetPos);
     } else {
         // Setup scope variables for position code

@@ -307,5 +307,11 @@
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
             <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_moveMainInteractionToCursor">
+            <English>Move Main Interaction To Cursor</English>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_moveMainInteractionToCursor_Description">
+            <English>When interating with a vehicle, put the main interaction point at the center of the screen.</English>
+        </Key>
     </Package>
 </Project>
