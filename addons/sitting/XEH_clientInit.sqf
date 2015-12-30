@@ -6,7 +6,7 @@ if (!hasInterface) exitWith {};
 ["SettingsInitialized", {
     TRACE_1("SettingInit", GVAR(enable));
     
-    //If not enabled, dont't add CanInteractWith Condition or event handlers:
+    //If not enabled, then do not add CanInteractWith Condition or event handlers:
     if (!GVAR(enable)) exitWith {};
 
     // Add interaction menu exception
