@@ -62,7 +62,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 5;
+                distance = 1;
                 condition = "true";
                 class ACE_Defuse {
                     displayName = CSTRING(Defuse);
@@ -73,7 +73,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\Defuse_ca.paa);
                     priority = 0.8;
                     hotkey = "F";
-                    distance = 5;
+                    distance = 1;
                 };
             };
         };
@@ -92,12 +92,12 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 5;
+                distance = 1;
                 condition = "true";
                 class ACE_SetTrigger {
                     selection = "";
                     displayName = CSTRING(TriggerMenu);
-                    distance = 4;
+                    distance = 1;
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
@@ -109,7 +109,7 @@ class CfgVehicles {
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(Pickup);
-                    distance = 4;
+                    distance = 1;
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
@@ -124,6 +124,11 @@ class CfgVehicles {
     class ACE_Explosives_Place_DemoCharge:ACE_Explosives_Place {
         displayName = "Demo Charge";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.07,0,0.055]";
+            };
+        };
     };
     class ACE_Explosives_Place_APERSBoundingMine:ACE_Explosives_Place {
         displayName = "APERS Bounding Mine";
@@ -136,6 +141,14 @@ class CfgVehicles {
     class ACE_Explosives_Place_APERSTripwireMine:ACE_Explosives_Place {
         displayName = "APERS Tripwire Mine";
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
+
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[1.415,0,0.12]";
+            };
+        };
+
+
     };
 
     class ACE_Explosives_Place_ATMine:ACE_Explosives_Place {
@@ -146,11 +159,21 @@ class CfgVehicles {
     class ACE_Explosives_Place_Claymore:ACE_Explosives_Place {
         displayName = "Claymore";
         model = "\A3\Weapons_F\explosives\mine_AP_miniclaymore";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0.038]";
+            };
+        };
     };
 
     class ACE_Explosives_Place_SatchelCharge:ACE_Explosives_Place {
         displayName = "Satchel Charge";
         model = "\A3\Weapons_F\Explosives\satchel";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.1,-0.1,0.05]";
+            };
+        };
     };
 
     class ACE_Explosives_Place_SLAM:ACE_Explosives_Place {
