@@ -59,7 +59,7 @@ class CfgAmmo {
     class PipeBombBase;
     class DemoCharge_Remote_Ammo: PipeBombBase {
         ACE_Explosive = "DemoCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.07,0,0.055};
+        GVAR(defuseObjectPosition[]) = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
         hit = 500;
@@ -68,7 +68,7 @@ class CfgAmmo {
     };
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         ACE_Explosive = "SatchelCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.1,0.1,0.05};
+        GVAR(defuseObjectPosition[]) = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
