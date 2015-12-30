@@ -190,11 +190,11 @@ In order to stop the bleeding, all bleeding injuries on every body part requires
 
 Bandage | Abrasions | Avulsions | Contusions | Crush wounds | Cut wounds | Lacerations | Velocity wounds | Puncture wounds|
 ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------- |
-Basic | `highest` | lowest | `highest` | low | very low | medium | lowest | low
-Bandage (packing) | `highest` | `highest` | `highest` | low | lowest | lowest | `highest` | lowest
-Bandage (elastic) | `highest` | lowest | `highest` | `highest` | `highest` | `highest` | low | high
-QuikClot | medium | high | medium | medium | medium | medium | high | high
-
+Basic (FieldDressing) | highest | low | highest | medium | low | high | low | medium
+Bandage (packing) | highest | highest | highest | medium | lowest | low | highest | low
+Bandage (elastic) | highest | low | highest | highest | highest | highest | medium | highest
+QuikClot | high | lowest | high | high | high | high | high | medium
+ 
 ##### 2.2.1.10 Tourniquet
 
 - Can only be applied on limbs.
