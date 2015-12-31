@@ -73,8 +73,8 @@ class cfgVehicles {
         EGVAR(refuel,fuelCapacity) = 219;
     };
 
-    class APC_Tracked_02_base_F;
-    class rhsusf_m113_tank_base : APC_Tracked_02_base_F {
+    class APC_Tracked_02_base_F: Tank_F {};
+    class rhsusf_m113_tank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
