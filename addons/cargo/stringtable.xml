@@ -110,24 +110,28 @@
             <Portuguese>Carregando carga</Portuguese>
             <Polish>Ładowanie cargo</Polish>
             <Czech>Nakládám</Czech>
+            <Russian>Погрузка</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
             <Portuguese>Descarregando carga</Portuguese>
             <Polish>Rozładowywanie cargo</Polish>
             <Czech>Vykládám</Czech>
+            <Russian>Выгрузка</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
             <Portuguese>%1&lt;br/&gt;não pode ser carregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać załadowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být naloženo</Czech>
+            <Russian>%1&lt;br/&gt;не может быть погружен</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
             <Portuguese>%1&lt;br/&gt;não pode ser descarregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać rozładowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
+            <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
         </Key>
     </Package>
 </Project>

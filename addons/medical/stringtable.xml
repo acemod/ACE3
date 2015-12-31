@@ -2115,6 +2115,7 @@
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
             <Czech>%1 používá PAK</Czech>
+            <Russian>%1 использовал аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
