@@ -53,35 +53,30 @@ class CfgVehicles {
                 selection = "usti hlavne";
                 class GVAR(loadMagazine_HE_Guided) {
                     displayName = CSTRING(loadMagazine_HE_Guided);
-                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,6,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazineTimer));
+                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_HE_LaserGuided) {
                     displayName = CSTRING(loadMagazine_HE_LaserGuided);
-                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,6,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazineTimer));
+                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_Illum) {
                     displayName = CSTRING(loadMagazine_Illum);
-                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_Smoke) {
                     displayName = CSTRING(loadMagazine_Smoke);
-                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(loadMagazineTimer));
                     icon = "";
                 };
                 class GVAR(loadMagazine_HE) {
                     displayName = CSTRING(loadMagazine_HE);
-                    distance = 2;
                     condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(canLoadMagazine));
                     statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(loadMagazineTimer));
                     icon = "";
