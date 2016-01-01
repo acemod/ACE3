@@ -116,6 +116,7 @@
             <German>Stop</German>
             <Polish>Stop</Polish>
             <Russian>Стоп</Russian>
+            <Portuguese>Parar</Portuguese>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">
@@ -137,6 +138,7 @@
             <German>Sammeln</German>
             <Polish>Zbiórka</Polish>
             <Russian>Собраться</Russian>
+            <Portuguese>Reagrupar</Portuguese>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -145,6 +147,7 @@
             <German>Vorwärts Bewegen</German>
             <Polish>Naprzód</Polish>
             <Russian>Вперед</Russian>
+            <Portuguese>Mover em frente</Portuguese>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
@@ -152,6 +155,7 @@
             <French>Engager</French>
             <Polish>Atak</Polish>
             <Russian>Открыть огонь</Russian>
+            <Portuguese>Engajar</Portuguese>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -160,6 +164,7 @@
             <German>Zeigen</German>
             <Polish>Wskaż</Polish>
             <Russian>Показать направление</Russian>
+            <Portuguese>Ponta</Portuguese>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -168,6 +173,7 @@
             <German>Anhalten</German>
             <Polish>Wstrzymać</Polish>
             <Russian>Ждать</Russian>
+            <Portuguese>Esperar</Portuguese>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -176,6 +182,7 @@
             <German>Achtung</German>
             <Polish>Uwaga</Polish>
             <Russian>Внимание</Russian>
+            <Portuguese>Aviso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
