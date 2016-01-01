@@ -24,7 +24,7 @@ private ["_structuredOutputText", "_picture", "_fullMags", "_partialMags", "_ful
 params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
 _args params ["_magazineClassname", "_lastAmmoCount"];
 
-_fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
+_fullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 //Don't show anything if player can't interact:
 if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};

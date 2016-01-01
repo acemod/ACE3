@@ -7,7 +7,10 @@
  * 1: Remove html tags (default: false) <BOOL>
  *
  * Return Value:
- * Sanitized string
+ * Sanitized string <STRING>
+ *
+ * Example:
+ * ["<CoolGroup>CoolGuy", true] call ace_common_fnc_sanitizeString;
  *
  * Public: Yes
  */
@@ -20,14 +23,14 @@ _array = [];
 
 {
     switch _x do {
-        case 60 : {
+        case 60 : { // less than symbol: `<`
             if (_removeTags) then {
                 _array append toArray "&lt;";
             } else {
                 _array pushBack _x;
             };
         };
-        case 62 : {
+        case 62 : { // greater than symbol: `>`
             if (_removeTags) then {
                 _array append toArray "&gt;";
             } else {

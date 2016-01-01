@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-if (GVAR(showInThirdPerson)) exitWith {};
 if (call FUNC(ExternalCamera)) exitWith {};
 
 private ["_unit", "_amount"];

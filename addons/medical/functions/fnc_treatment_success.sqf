@@ -25,7 +25,7 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-    _lastAnim = _caller getvariable [QGVAR(treatmentPrevAnimCaller), ""];
+    _lastAnim = _caller getVariable [QGVAR(treatmentPrevAnimCaller), ""];
     //Don't play another medic animation (when player is rapidily treating)
     TRACE_2("Reseting to old animation", animationState player, _lastAnim);
     switch (toLower _lastAnim) do {
@@ -38,9 +38,9 @@ if (vehicle _caller == _caller) then {
 
     [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
 };
-_caller setvariable [QGVAR(treatmentPrevAnimCaller), nil];
+_caller setVariable [QGVAR(treatmentPrevAnimCaller), nil];
 
-_weaponSelect = (_caller getvariable [QGVAR(selectedWeaponOnTreatment), []]);
+_weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnTreatment), []]);
 if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "") && {_previousWeapon in (weapons _caller)}}) then {
     for "_index" from 0 to 99 do {
         _caller action ["SwitchWeapon", _caller, _caller, _index];
@@ -62,22 +62,35 @@ _callback = getText (_config >> "callbackSuccess");
 if (isNil _callback) then {
     _callback = compile _callback;
 } else {
-    _callback = missionNamespace getvariable _callback;
+    _callback = missionNamespace getVariable _callback;
 };
 
-//Get current damage before treatment (for litter)
-_previousDamage = if (_selectionName in GVAR(SELECTIONS)) then {
-    _target getHitPointDamage ([_target, _selectionName, true] call FUNC(translateSelections));
+//Get current blood loose on limb (for "bloody" litter)
+private _bloodLossOnSelection = 0;
+private _partNumber = ([_selectionName] call FUNC(selectionNameToNumber)) max 0;
+if ((GVAR(level) >= 2) && {([_target] call FUNC(hasMedicalEnabled))}) then {
+    //Advanced Medical - Add all bleeding from wounds on selection
+    private _openWounds = _target getvariable [QGVAR(openWounds), []];
+    {
+        _x params ["", "", "_selectionX", "_amountOf", "_bleedingRatio"];
+        if (_selectionX == _partNumber) then {
+            _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _bleedingRatio);
+        };
+    } forEach _openWounds;
+    TRACE_1("advanced",_bloodLossOnSelection);
 } else {
-    damage _target;
+    //Basic Medical (just use blodyPartStatus):
+    private _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+    _bloodLossOnSelection = _damageBodyParts select _partNumber
+    TRACE_1("basic",_bloodLossOnSelection);
 };
 
 _args call _callback;
-_args pushBack _previousDamage;
+_args pushBack _bloodLossOnSelection;
 _args call FUNC(createLitter);
 
 //If we're not already tracking vitals, start:
-if (!(_target getvariable [QGVAR(addedToUnitLoop),false])) then {
+if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
     [_target] call FUNC(addToInjuredCollection);
 };
 

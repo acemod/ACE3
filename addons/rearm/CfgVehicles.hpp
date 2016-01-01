@@ -170,8 +170,8 @@ class CfgVehicles {
     class GVAR(defaultCarriedObject) : ThingX {
         XEH_ENABLED;
         displayName = QGVAR(dummy_obj);
-        scope = 2;
-        scopeCurator = 2;
+        scope = 1;
+        scopeCurator = 1;
         model = "\A3\Weapons_F\AmmoBoxes\AmmoBox_F.p3d";
         EGVAR(cargo,size) = 1;
         class ACE_Actions {

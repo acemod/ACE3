@@ -23,13 +23,13 @@ GVAR(GrenadesNonFrag) = [];
     GVAR(GrenadesAll) append _magazines;
 
     {
-        private _ammo = getText (configfile >> "CfgMagazines" >> _x >> "ammo");
+        private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
         private _explosive = getNumber (configfile >> "CfgAmmo" >> _ammo >> "explosive");
 
         ([GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select (_explosive == 0)) pushBack _x;
         false
     } count _magazines;
     false
-} count getArray (configfile >> "CfgWeapons" >> "Throw" >> "muzzles");
+} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 ADDON = true;

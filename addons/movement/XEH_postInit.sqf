@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
-        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player] call EFUNC(common,getName), localize LSTRING(Weight), [ACE_player] call FUNC(getWeight)];
+        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player, false, true] call EFUNC(common,getName), localize LSTRING(Weight), [ACE_player] call FUNC(getWeight)];
 
     }, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
 
@@ -31,4 +31,4 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[47, [false, true, false]], false] call cba_fnc_addKeybind; //DIK_V + CTRL//STRG
+[47, [false, true, false]], false] call CBA_fnc_addKeybind; //DIK_V + CTRL//STRG

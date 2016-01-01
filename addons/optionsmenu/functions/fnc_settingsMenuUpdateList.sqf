@@ -48,7 +48,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _added = _ctrlList lnbAddRow [_settingName, _settingsText];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-        } foreach GVAR(clientSideOptions);
+        } forEach GVAR(clientSideOptions);
     };
     case (MENU_TAB_COLORS): {
         {
@@ -64,7 +64,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 _ctrlList lnbSetColor [[_added, 1], (_x select 9)];
                 _ctrlList lnbSetValue [[_added, 0], _forEachIndex];
             };
-        }foreach GVAR(clientSideColors);
+        }forEach GVAR(clientSideColors);
     };
 };
 if (_updateKeyView) then {

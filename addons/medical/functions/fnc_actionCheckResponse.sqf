@@ -21,5 +21,5 @@ _output = [LSTRING(Check_Response_Unresponsive), LSTRING(Check_Response_Responsi
 
 ["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName)], 2, _caller]] call EFUNC(common,targetEvent);
 
-[_target,"activity",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target,"quick_view",_output, [[_target] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target,"activity",_output, [[_target, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target,"quick_view",_output, [[_target, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
