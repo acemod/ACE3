@@ -21,7 +21,6 @@ class CfgAmmo {
 
     class DirectionalBombCore: TimeBombCore;
     class DirectionalBombBase: DirectionalBombCore;
-    class APERSTripMine_Wire_Ammo: DirectionalBombBase;
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase;
 
@@ -31,10 +30,15 @@ class CfgAmmo {
     class DirectionalBombBase;
     class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
         ACE_Explosive = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
+        GVAR(defuseObjectPosition[]) = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
     //class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo;
+
+    class APERSTripMine_Wire_Ammo: DirectionalBombBase {
+        GVAR(defuseObjectPosition[]) = {-1.415, 0, 0.12};
+    };
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
@@ -55,6 +59,7 @@ class CfgAmmo {
     class PipeBombBase;
     class DemoCharge_Remote_Ammo: PipeBombBase {
         ACE_Explosive = "DemoCharge_Remote_Ammo_Scripted";
+        GVAR(defuseObjectPosition[]) = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
         hit = 500;
@@ -63,17 +68,18 @@ class CfgAmmo {
     };
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         ACE_Explosive = "SatchelCharge_Remote_Ammo_Scripted";
+        GVAR(defuseObjectPosition[]) = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
-    
+
     /*class DemoCharge_Remote_Ammo_Scripted: DemoCharge_Remote_Ammo;
     class SatchelCharge_Remote_Ammo_Scripted: SatchelCharge_Remote_Ammo;*/
-    
+
     class IEDUrbanBig_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
         ACE_explodeOnDefuse = 0.02;
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};        
+        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
     class IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -81,19 +87,19 @@ class CfgAmmo {
     class IEDUrbanBig_Range_Ammo: IEDUrbanBig_Remote_Ammo {
         mineTrigger = "RangeTrigger";
     };
-    
+
     class IEDUrbanSmall_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
         ACE_explodeOnDefuse = 0.02;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
-    };    
-    class IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {   
+    };
+    class IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
     class IEDUrbanSmall_Range_Ammo: IEDUrbanSmall_Remote_Ammo {
         mineTrigger = "RangeTrigger";
     };
-    
+
     class IEDLandBig_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
         ACE_explodeOnDefuse = 0.02;
@@ -105,7 +111,7 @@ class CfgAmmo {
     class IEDLandBig_Range_Ammo: IEDLandBig_Remote_Ammo {
         mineTrigger = "RangeTrigger";
     };
-    
+
     class IEDLandSmall_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
         ACE_explodeOnDefuse = 0.02;

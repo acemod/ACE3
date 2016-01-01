@@ -22,7 +22,7 @@ private ["_defaultLoglevel", "_defaultLogDisplayLevel"];
 
 _defaultLoglevel = [GVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL] select isNil QGVAR(LOGLEVEL);
 
-if (_defaultLoglevel < 0) exitwith {false};
+if (_defaultLoglevel < 0) exitWith {false};
 
 _defaultLogDisplayLevel = [GVAR(LOGDISPLAY_LEVEL), DEFAULT_TEXT_DISPLAY] select isNil QGVAR(LOGDISPLAY_LEVEL);
 

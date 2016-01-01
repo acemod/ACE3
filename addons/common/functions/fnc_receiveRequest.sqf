@@ -53,7 +53,7 @@ GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [ACE_time, _target, _requestID] spawn { 
     private "_id";
     _id = _target getVariable _requestID;
 
-    waituntil {
+    waitUntil {
         _id = _target getVariable _requestID;
 
         (ACE_time > _time || isNil "_id")

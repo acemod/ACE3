@@ -32,4 +32,4 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[47, [false, true, false]], false] call cba_fnc_addKeybind; //DIK_V + CTRL//STRG
+[47, [false, true, false]], false] call CBA_fnc_addKeybind; //DIK_V + CTRL//STRG

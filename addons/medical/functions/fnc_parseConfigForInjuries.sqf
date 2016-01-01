@@ -25,14 +25,14 @@ GVAR(minLethalDamages) = [];
 for "_i" from 0 to (count _configDamageTypes -1) /* step +1 */ do {
     // Only get the subclasses in damageType class
     if (isClass(_configDamageTypes select _i)) then {
-        _allFoundDamageTypes pushback (configName (_configDamageTypes select _i));
+        _allFoundDamageTypes pushBack (configName (_configDamageTypes select _i));
         _minLethalDamage = if (isNumber((_configDamageTypes select _i) >> "lethalDamage")) then {
             getNumber((_configDamageTypes select _i) >> "lethalDamage");
         } else {
             _defaultMinLethalDamage
         };
 
-        GVAR(minLethalDamages) pushback _minLethalDamage;
+        GVAR(minLethalDamages) pushBack _minLethalDamage;
     };
 };
 GVAR(allAvailableDamageTypes) = _allFoundDamageTypes;
@@ -43,7 +43,7 @@ GVAR(fractureClassNames) = [];
 // function for parsing a sublcass of an injury
 _parseForSubClassWounds = {
     _subClass = _this select 0;
-    if (isClass (_entry >> _subClass)) exitwith {
+    if (isClass (_entry >> _subClass)) exitWith {
         _subClassConfig = (_entry >> _subClass);
         _subClasstype = _classType + (configName _subClassConfig);
         _subClassselections = if (isArray(_subClassConfig >> "selections")) then { getArray(_subClassConfig >> "selections");} else { _selections };
@@ -54,8 +54,8 @@ _parseForSubClassWounds = {
         _subClasscauses = if (isArray(_subClassConfig >> "causes")) then { getArray(_subClassConfig >> "causes");} else { _causes };
         _subClassDisplayName = if (isText(_subClassConfig >> "name")) then { getText(_subClassConfig >> "name");} else {_classDisplayName + " " + _subClass};
         if (count _selections > 0 && {count _causes > 0}) then {
-            GVAR(woundClassNames) pushback _subClasstype;
-            _allWoundClasses pushback [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, [_subClassminDamage, _subClassmaxDamage], _subClasscauses, _subClassDisplayName];
+            GVAR(woundClassNames) pushBack _subClasstype;
+            _allWoundClasses pushBack [_classID, _subClassselections, _subClassbloodLoss, _subClasspain, [_subClassminDamage, _subClassmaxDamage], _subClasscauses, _subClassDisplayName];
             _classID = _classID + 1;
         };
         true;
@@ -82,12 +82,12 @@ if (isClass _woundsConfig) then {
             _classDisplayName = if (isText(_entry >> "name")) then { getText(_entry >> "name");} else {_classType};
 
             // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
-            if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitwith {}; // continue to the next one
+            if (["Minor"] call _parseForSubClassWounds || ["Medium"] call _parseForSubClassWounds || ["Large"] call _parseForSubClassWounds) exitWith {}; // continue to the next one
 
             // There were no subclasses, so we will add this one instead.
             if (count _selections > 0 && count _causes > 0) then {
-                GVAR(woundClassNames) pushback _classType;
-                _allWoundClasses pushback [_classID, _selections, _bloodLoss, _pain, [_minDamage, _maxDamage], _causes, _classDisplayName];
+                GVAR(woundClassNames) pushBack _classType;
+                _allWoundClasses pushBack [_classID, _selections, _bloodLoss, _pain, [_minDamage, _maxDamage], _causes, _classDisplayName];
                 _classID = _classID + 1;
             };
             true;
@@ -107,16 +107,16 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
     {
         // Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
         if (_type in (_x select 5)) then {
-            _woundTypes pushback _x;
+            _woundTypes pushBack _x;
         };
-    } foreach _allWoundClasses;
+    } forEach _allWoundClasses;
     _typeThresholds = _thresholds;
     _selectionSpecificType = _selectionSpecific;
     if (isClass(_damageTypesConfig >> _x)) then {
         if (isArray(_damageTypesConfig >> _x >> "thresholds")) then { _typeThresholds = getArray(_damageTypesConfig >> _x >> "thresholds");};
         if (isNumber(_damageTypesConfig >> _x >> "selectionSpecific")) then { _selectionSpecificType = getNumber(_damageTypesConfig >> _x >> "selectionSpecific");};
     };
-    missionNamespace setvariable [_varName, [_typeThresholds, _selectionSpecificType > 0, _woundTypes]];
+    missionNamespace setVariable [_varName, [_typeThresholds, _selectionSpecificType > 0, _woundTypes]];
 
     private ["_minDamageThresholds", "_amountThresholds"];
     // extension loading
@@ -129,11 +129,11 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
             _minDamageThresholds = _minDamageThresholds + ":";
             _amountThresholds = _amountThresholds + ":";
         };
-    } foreach _typeThresholds;
+    } forEach _typeThresholds;
 
-    "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _foreachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
+    "ace_medical" callExtension format ["addDamageType,%1,%2,%3,%4,%5", _type, GVAR(minLethalDamages) select _forEachIndex, _minDamageThresholds, _amountThresholds, _selectionSpecificType];
 
-} foreach _allFoundDamageTypes;
+} forEach _allFoundDamageTypes;
 
 
 // Extension loading
@@ -151,7 +151,7 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_forEachIndex < (count _selections) - 1) then {
             _allowedSelections = _allowedSelections + ":";
         };
-    } foreach _selections;
+    } forEach _selections;
 
     _causes = "";
 
@@ -160,11 +160,11 @@ _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific");
         if (_forEachIndex < (count _causesArray) - 1) then {
             _causes = _causes + ":";
         };
-    } foreach _causesArray;
+    } forEach _causesArray;
     _classDisplayName = _x select 6;
 
     "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
 
-} foreach _allWoundClasses;
+} forEach _allWoundClasses;
 
 "ace_medical" callExtension "ConfigComplete";
