@@ -181,7 +181,7 @@ class CfgAmmo {
         typicalSpeed=833;
         hit=9;
         tracerScale = 1.2; //0.6;
-        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m 
+        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m
         tracerEndTime=2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
@@ -802,5 +802,25 @@ class CfgAmmo {
     };
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
         tracerScale = 2.5;
+    };
+
+    // http://simunition.com/upload/documents/doc_95.pdf
+    class ACE_B_556x45_Practice: B_556x45_Ball {
+        airFriction = -0.0015;
+        hit = 0;
+        typicalSpeed=750;
+        tracerScale = 1;
+        tracerStartTime=0.073;  // M856 tracer burns out to 800m
+        tracerEndTime=1.57123;  // Time in seconds calculated with ballistics calculator
+        ACE_caliber=5.69;
+        ACE_bulletLength=23.012;
+        ACE_bulletMass=0.115;
+        ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
+        ACE_ballisticCoefficients[]={0.151};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ASM";
+        ACE_dragModel=7;
+        ACE_muzzleVelocities[]={558, 586, 613, 638, 654, 673, 684, 696, 708, 715, 722, 703}; // mv of 558-722 fps
+        ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
 };

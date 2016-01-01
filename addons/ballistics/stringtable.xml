@@ -1603,5 +1603,14 @@
             <Hungarian>[ACE] Lőszeres láda</Hungarian>
             <Russian>[ACE] Ящик с боеприпасами</Russian>
         </Key>
+        <Key ID="STR_ACE_Ballistics_ACE_30Rnd_556x45_Stanag_PracticeName">
+            <English>5.56mm 30rnd Practice Mag</English>
+        </Key>
+        <Key ID="ACE_30Rnd_556x45_Stanag_PracticeNameDescription">
+            <English>Caliber: 5.56mm&lt;br /&gt;Rounds: 30&lt;br /&gt;Used for Trainings</English>
+        </Key>
+        <Key ID="ACE_30Rnd_556x45_Stanag_PracticeNameShort">
+            <English>5.56mm Practice</English>
+        </Key>
     </Package>
 </Project>
