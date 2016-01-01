@@ -46,10 +46,11 @@ class CfgVehicles {
     class ACE_SandbagObject: thingX {
         author = ECSTRING(common,ACETeam);
         XEH_ENABLED;
-        scope = 1;
+        scope = 2;
         side = -1;
         model = PATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
+        vehicleClass = "Objects";
         typicalCargo[] = {};
         armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
         mapSize = 0.4;
