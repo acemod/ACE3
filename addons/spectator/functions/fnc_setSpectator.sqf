@@ -127,6 +127,12 @@ if (_set) then {
     GVAR(unitCamera) = nil;
     GVAR(targetCamera) = nil;
 
+    //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
+    GVAR(camHandler) = nil;
+    GVAR(compHandler) = nil;
+    GVAR(iconHandler) = nil;
+    GVAR(toolHandler) = nil;
+
     // Cleanup display variables
     GVAR(ctrlKey) = nil;
     GVAR(heldKeys) = nil;
