@@ -1,12 +1,12 @@
 /*
  * Author: commy2
- * Read laser distance measurement from engine.
+ * Update compatible info elements.
  *
  * Argument:
  * None
  *
  * Return value:
- * Measured distance <NUMBER>
+ * None
  *
  * Public: No
  */
@@ -15,4 +15,4 @@
 disableSerialization;
 private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", displayNull];
 
-parseNumber ctrlText (_dlgRangefinder displayCtrl 151);
+(_dlgRangefinder displayCtrl 1713151) ctrlSetText ctrlText (_dlgRangefinder displayCtrl 151);
