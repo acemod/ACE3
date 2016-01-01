@@ -55,7 +55,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
+[201, [false, false, true]], false] call CBA_fnc_addKeybind; //PageUp + ALT
 
 ["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
@@ -69,4 +69,4 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT
+[209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT

@@ -12,11 +12,7 @@
  */
 #include "script_component.hpp"
 
-private "_deleted";
-
-_deleted = 0;
-
-_aceTimeSecond = floor ACE_time;
+private _aceTimeSecond = floor ACE_time;
 
 {
     private ["_bulletVelocity", "_bulletPosition", "_bulletSpeed"];

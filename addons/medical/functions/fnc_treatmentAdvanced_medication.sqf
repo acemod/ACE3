@@ -24,10 +24,10 @@ params ["_caller", "_target", "_selectionName", "_className", "_items"];
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
-        [_target, "activity", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
-        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
-} foreach _items;
+} forEach _items;
 
 
 true;

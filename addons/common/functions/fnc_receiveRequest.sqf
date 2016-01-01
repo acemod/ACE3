@@ -19,9 +19,9 @@ _requestID = ("ace_recieveRequest_f_id_"+_requestID);
 _target setVariable [_requestID, _this];
 
 if (isLocalized _requestMessage) then {
-    _requestMessage = format [localize _requestMessage, [_caller] call FUNC(getName)];
+    _requestMessage = format [localize _requestMessage, [_caller, false, true] call FUNC(getName)];
 } else {
-    _requestMessage = format [_requestMessage, [_caller] call FUNC(getName)];
+    _requestMessage = format [_requestMessage, [_caller, false, true] call FUNC(getName)];
 };
 
 hint format ["%1", _requestMessage]; // @todo ?
@@ -53,7 +53,7 @@ GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [ACE_time, _target, _requestID] spawn { 
     private "_id";
     _id = _target getVariable _requestID;
 
-    waituntil {
+    waitUntil {
         _id = _target getVariable _requestID;
 
         (ACE_time > _time || isNil "_id")

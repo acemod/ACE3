@@ -682,6 +682,9 @@
             <Hungarian>Üveg</Hungarian>
             <Russian>Стекло</Russian>
         </Key>
+        <Key ID="STR_ACE_Repair_Hitera_1_hitpoint">
+            <English>ERA</English>
+        </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
             <German>Reperatureinstellungen</German>

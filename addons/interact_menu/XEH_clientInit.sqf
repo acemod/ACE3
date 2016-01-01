@@ -41,14 +41,14 @@ GVAR(ParsedTextCached) = [];
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
-[219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
+[219, [false, false, false]], false] call CBA_fnc_addKeybind;  //Left Windows Key
 
 ["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
-[219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+[219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
@@ -76,37 +76,6 @@ GVAR(ParsedTextCached) = [];
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call EFUNC(common,addEventHandler);
-
-// Let key work with zeus open (not perfect, contains workaround to prevent other CBA keybindings)
-["zeusDisplayChanged",{
-    if (_this select 1) then {
-        (finddisplay 312) displayAddEventHandler ["KeyUp", {
-            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = _key select 5;
-            _dik = _key select 0;
-            _mods = _key select 1;
-
-            if ((_this select 1) == _dik) then {
-                if ((_this select [2,3]) isEqualTo _mods) then {
-                    [_this,'keyup'] call CBA_events_fnc_keyHandler
-                };
-            };
-        }];
-        (finddisplay 312) displayAddEventHandler ["KeyDown", {
-            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = _key select 5;
-            _dik = _key select 0;
-            _mods = _key select 1;
-
-            if ((_this select 1) == _dik) then {
-                if ((_this select [2,3]) isEqualTo _mods) then {
-                    [_this,'keydown'] call CBA_events_fnc_keyHandler
-                };
-            };
-        }];
-    };
-}] call EFUNC(common,addEventHandler);
-
 
 //Debug to help end users identify mods that break CBA's XEH
 [{

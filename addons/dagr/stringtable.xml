@@ -3,6 +3,7 @@
     <Package name="DAGR">
         <Key ID="STR_ACE_DAGR_Name">
             <English>DAGR</English>
+            <German>DAGR</German>
             <Polish>DAGR</Polish>
             <Spanish>DAGR</Spanish>
             <Russian>DAGR</Russian>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_DAGR_ConfigureDAGR">
             <English>Configure DAGR</English>
+            <German>DAGR konfigurien</German>
             <Polish>Konfiguruj DAGR</Polish>
             <Spanish>Configurar DAGR</Spanish>
             <Russian>Настроить DAGR</Russian>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
+            <German>DAGR umschalten</German>
             <Polish>Przełącz DAGR</Polish>
             <Spanish>Mostrar DAGR</Spanish>
             <Russian>Вкл./выкл. DAGR</Russian>
@@ -27,6 +30,7 @@
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
+            <German>Defense Advanced GPS Receiver</German>
             <Polish>Defense Advanced GPS Receiver</Polish>
             <Spanish>Defense Advanced GPS Receiver</Spanish>
             <Russian>Военный многофункциональный GPS-приёмник</Russian>

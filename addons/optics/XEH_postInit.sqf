@@ -6,8 +6,13 @@ if (!hasInterface) exitWith {};
 GVAR(camera) = objNull;
 
 0 = 0 spawn {
-    waituntil {!isNull ACE_player};
-    waituntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0 && {isNull curatorCamera}};
+    // Workarround for the ThreeDen Editor Camera
+    if ((!isNil {is3DEN}) && {is3DEN}) exitWith {
+        ACE_LOGINFO("Eden detected: disabling Optics PIP Camera");
+    };
+    
+    waitUntil {!isNull ACE_player};
+    waitUntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0 && {isNull curatorCamera}};
 
     GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
     camDestroy GVAR(camera);
