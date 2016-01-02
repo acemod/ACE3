@@ -17,8 +17,13 @@
 
 params ["_headlessClient"];
 
-// Exit if already registered
-if (_headlessClient in GVAR(headlessClients)) exitWith {};
+// Delay until settings are initialized (for checking if HC trasnferring is enabled)
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(handleConnectHC), _this];
+};
+
+// Exit if HC transferring disabled or HC already registered
+if (!GVAR(Enabled) || {_headlessClient in GVAR(headlessClients)}) exitWith {};
 
 // Register for use
 GVAR(headlessClients) pushBack _headlessClient;
