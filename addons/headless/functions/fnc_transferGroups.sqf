@@ -68,12 +68,8 @@ private _numTransferredHC3 = 0;
 
 // Transfer AI groups
 {
-    private _transfer = true;
-
     // No transfer if empty group
-    if (_x isEqualTo []) then {
-        _transfer = false;
-    };
+    private _transfer = !(_x isEqualTo []);
 
     if (_transfer) then {
         {
