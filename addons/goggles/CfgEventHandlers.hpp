@@ -19,10 +19,10 @@ class Extended_Killed_EventHandlers {
     };
 };
 
-class Extended_Fired_EventHandlers {
+class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class ADDON {
-            fired = QUOTE(if (local (_this select 0)) then {_this call FUNC(handleFired)});
+            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(handleFired)});
         };
     };
 };
