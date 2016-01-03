@@ -4,10 +4,12 @@
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
  *
  * Argument:
- * Object (Object)
+ * Object <OBJECT>
  *
- * Return value:
- * NONE
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

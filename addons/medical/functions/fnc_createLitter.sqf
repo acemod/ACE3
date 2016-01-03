@@ -45,12 +45,9 @@ _createLitter = {
     if(surfaceIsWater (getPos _unit)) exitWith { false };
 
     _position = getPosATL _unit;
-    _position params ["_posX", "_posY"];
-    _position = if (random(1) >= 0.5) then {
-        [_posX + random 1, _posY + random 1, 0]
-    } else {
-       [_posX - random 1, _posY - random 1, 0];
-    };
+    _position params ["_posX", "_posY", "_posZ"];
+    _position = [_posX + (random 2) - 1, _posY + (random 2) - 1, _posZ];
+
     _direction = (random 360);
 
     // Create the litter, and timeout the event based on the cleanup delay
@@ -62,7 +59,7 @@ _createLitter = {
 
 _createdLitter = [];
 {
-    if (typeName _x == "ARRAY") then {
+    if (_x isEqualType []) then {
         if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
 
         _x params ["_selection", "_litterCondition", "_litterOptions"];
@@ -72,18 +69,18 @@ _createdLitter = [];
             if (isnil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
-                _litterCondition = missionNamespace getvariable _litterCondition;
-                if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
+                _litterCondition = missionNamespace getVariable _litterCondition;
+                if (!(_litterCondition isEqualType {})) then {_litterCondition = {false}};
             };
             if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitwith {};
 
-            if (typeName _litterOptions == "ARRAY") then {
+            if (_litterOptions isEqualType []) then {
                 // Loop through through the litter options and place the litter
                 {
-                    if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
+                    if (_x isEqualType [] && {(count _x > 0)}) then {
                         [_target, _x select (floor(random(count _x)))] call _createLitter;
                     };
-                    if (typeName _x == "STRING") then {
+                    if (_x isEqualType "") then {
                         [_target, _x] call _createLitter;
                     };
                 } foreach _litterOptions;

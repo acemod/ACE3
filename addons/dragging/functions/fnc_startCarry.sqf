@@ -61,7 +61,7 @@ if (_target isKindOf "CAManBase") then {
 [_unit, _target, true] call EFUNC(common,claim);
 
 
-// prevents draging and carrying at the same ACE_time
+// prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // required for aborting animation

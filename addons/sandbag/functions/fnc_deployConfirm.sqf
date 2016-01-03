@@ -1,51 +1,59 @@
 /*
- * Author: Garth 'L-H' de Wet, Ruthberg
+ * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Confirms sandbag deployment
  *
  * Arguments:
- * None
+ * 0: unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_sandbag_fnc_deployConfirm
+ * [ACE_player] call ace_sandbag_fnc_deployConfirm
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-if (isNull GVAR(sandBag) || isNull GVAR(placer)) exitWith {};
+params ["_unit"];
 
-[GVAR(deployPFH)] call cba_fnc_removePerFrameHandler;
+// enable running again
+[_unit, "ACE_Sandbag", false] call EFUNC(common,setForceWalkStatus);
 
-[GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
-[GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(Common,removeActionEventHandler);
-[GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
+// remove sandbag from inventory
+_unit removeItem "ACE_Sandbag_empty";
 
-call EFUNC(interaction,hideMouseHint);
-
-GVAR(placer) playActionNow "PutDown";
-
-GVAR(placer) setVariable [QGVAR(usingSandbag), true];
+// delete placement dummy and create real sandbag
 [{
-    _this setVariable [QGVAR(usingSandbag), false];
-}, GVAR(placer), 1.5, 0.5] call EFUNC(common,waitAndExecute);
+    if (isNull GVAR(sandBag)) exitWith {};
 
-[{
-    private ["_sandBag", "_position", "_direction"];
+    params ["_unit"];
+
+    private ["_position", "_direction", "_sandBag"];
+
     _position = getPosASL GVAR(sandBag);
     _direction = getDir GVAR(sandBag);
 
     deleteVehicle GVAR(sandBag);
 
     _sandBag = createVehicle ["ACE_SandbagObject", [0, 0, 0], [], 0, "NONE"];
-    _sandBag enableSimulationGlobal true;
     _sandBag setPosASL _position;
     _sandBag setDir _direction;
 
-    GVAR(placer) removeItem "ACE_Sandbag_empty";
-
     GVAR(sandBag) = objNull;
-    GVAR(placer) = objNull;
-}, [], 1.0, 0.5] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call EFUNC(common,waitAndExecute);
+
+// remove deployment pfh
+[GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
+GVAR(deployPFH) = -1;
+
+// remove mouse button actions
+call EFUNC(interaction,hideMouseHint);
+
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
+
+// play animation
+_unit playActionNow "PutDown";
+
+_unit setVariable [QGVAR(isDeploying), false, true];

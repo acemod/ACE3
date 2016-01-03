@@ -35,7 +35,7 @@ _newOptics = [_player] call FUNC(getOptics);
 {
     if (_newOptics select _forEachIndex != _x) then {
         // The optic for this weapon changed, set adjustment to zero
-        if (!((_adjustment select _foreachindex) isEqualTo [0, 0, 0])) then {
+        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
             _adjustment set [_forEachIndex, [0, 0, 0]];
             [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
         };

@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_turret", "_weapons"];
-
 params ["_vehicle"];
+
+private ["_turret", "_weapons"];
 
 _turret = [_vehicle] call EFUNC(common,getTurretCommander);
 
@@ -29,11 +29,10 @@ if (
 ) then {
     //This doesn't work reliably for vehilces with additional weapons for the commander. Select smoke launcher instead.
 
-    private "_index";
-
     // avoid infinite loop
     if !("SmokeLauncher" in _weapons) exitWith {};
 
+    private "_index";
     _index = 0;
     while {
         _vehicle currentWeaponTurret _turret != "SmokeLauncher"
@@ -46,8 +45,9 @@ if (
     // fire away!
 
     private "_logic";
-
     _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+
     _logic action ["useWeapon", _vehicle, commander _vehicle, 0];
+
     deleteVehicle _logic;
 };

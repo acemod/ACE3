@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Author: Rosuto
  * DAGR waypoint output loop
  *
@@ -31,22 +31,23 @@ if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
     private["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
-    
+
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
         GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     // GRID
     _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
-    _dagrGrid = format ["%1 %2", ((_gridArray select 0) select [0,4]), ((_gridArray select 1) select [0,4])];
+    _gridArray params ["_gridArrayX","_gridArrayY"];
+    _dagrGrid = format ["%1 %2", (_gridArrayX select [0,4]), (_gridArrayY select [0,4])];
 
     // WP Grid
     _xGrid2 = floor (DAGR_WP_INFO / 10000);
     _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
-    
+
     _xCoord2 = switch true do {
         case (_xGrid2 >= 1000): { "" + Str(_xGrid2) };
         case (_xGrid2 >= 100): { "0" + Str(_xGrid2) };
@@ -60,7 +61,7 @@ GVAR(outputPFH) = [{
         case (_yGrid2 >= 10): { "00" + Str(_yGrid2) };
         default             { "000" + Str(_yGrid2) };
     };
-    
+
     _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
@@ -69,7 +70,7 @@ GVAR(outputPFH) = [{
     _distance = _MYpos distance _WPpos;
     _distance = floor (_distance * 10) / 10;
     _dagrDistance = str _distance + "m";
-    
+
     // Heading
     _dagrHeading = floor (if (GVAR(useDegrees)) then {
         direction (vehicle ACE_player)
@@ -79,12 +80,12 @@ GVAR(outputPFH) = [{
 
     // WP Heading
     _bearing = floor ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir);
-    
+
     // Output
     __gridControl ctrlSetText format ["%1", _dagrGrid];
     __speedControl ctrlSetText format ["%1", _bearing];
     __elevationControl ctrlSetText format ["%1", _dagrGrid2];
-    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1�", _dagrHeading] });
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1°", _dagrHeading] });
     __timeControl ctrlSetText format ["%1", _dagrDistance];
-    
+
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

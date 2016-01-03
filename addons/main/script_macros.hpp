@@ -1,16 +1,8 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
-//Faster Array Unwraping (skips the IS_ARRAY check normaly found in EXPLODE_1_SYS)
-#undef EXPLODE_2_SYS
-#define EXPLODE_1_SYS_FAST(ARRAY,A) A =(ARRAY) select 0
-#define EXPLODE_2_SYS(ARRAY,A,B) EXPLODE_1_SYS_FAST(ARRAY,A); B = (ARRAY) select 1
-
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
-
-#define EGVAR(module,var) TRIPLES(PREFIX,module,var)
-#define QEGVAR(module,var) QUOTE(EGVAR(module,var))
 
 #define DGVAR(varName)    if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
 #define DVAR(varName)     if(isNil "ACE_DEBUG_NAMESPACE") then { ACE_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in ACE_DEBUG_NAMESPACE)) then { PUSH(ACE_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
@@ -21,14 +13,6 @@
 #define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
 
 #define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
-
-#ifndef STRING_MACROS_GUARD
-#define STRING_MACROS_GUARD
-    #define LSTRING(var1) QUOTE(TRIPLES(STR,ADDON,var1))
-    #define ELSTRING(var1,var2) QUOTE(TRIPLES(STR,DOUBLES(PREFIX,var1),var2))
-    #define CSTRING(var1) QUOTE(TRIPLES($STR,ADDON,var1))
-    #define ECSTRING(var1,var2) QUOTE(TRIPLES($STR,DOUBLES(PREFIX,var1),var2))
-#endif
 
 #define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
 #define SETVAR_SYS(var1,var2) setVariable [ARR_2(QUOTE(var1),var2)]
@@ -96,6 +80,15 @@
 
 // Time functions for accuracy per frame
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
+
+#define ACE_isHC (!hasInterface && !isDedicated)
+
+#define IDC_STAMINA_BAR 193
+
+//By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
+#ifdef CBA_DEBUG_SYNCHRONOUS
+    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
+#endif
 
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
@@ -179,5 +172,7 @@
 #define ACE_DEBUGFORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6) ACE_DEBUGFORMAT(FORMAT_6(message,arg1,arg2,arg3,arg4,arg5,arg6))
 #define ACE_DEBUGFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_DEBUGFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_DEBUGFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_DEBUGFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
+
+#define ACE_DEPRECATED(arg1,arg2,arg3) ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #include "script_debug.hpp"

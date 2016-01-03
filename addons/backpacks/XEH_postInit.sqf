@@ -1,3 +1,3 @@
 #include "script_component.hpp"
 
-["backpackOpened", DFUNC(backpackOpened)] call EFUNC(common,addEventHandler);
+["backpackOpened", {_this call FUNC(backpackOpened)}] call EFUNC(common,addEventHandler);

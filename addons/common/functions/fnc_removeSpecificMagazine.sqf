@@ -2,68 +2,77 @@
  * Author: esteldunedain
  * Removes a magazine from the unit that has an specific ammo count
  *
- * Argument:
- * 0: Player <OBJECT>
+ * Arguments:
+ * 0: Unit <OBJECT>
  * 1: Magazine <STRING>
  * 2: Ammo count <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_player,_magazineType,_ammoCount);
+params ["_unit", "_magazineType", "_ammoCount"];
 
-private ["_magazines","_index","_isRemoved"];
+private ["_isRemoved", "_magazines", "_index"];
+
 _isRemoved = false;
 
 // Check uniform
-_magazines = [magazinesAmmoCargo uniformContainer _player, {_this select 0 == _magazineType}] call FUNC(filter);
-_index = _magazines find [_magazineType,_ammoCount];
+_magazines = [magazinesAmmoCargo uniformContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
+_index = _magazines find [_magazineType, _ammoCount];
 if (_index > -1) exitWith {
     {
-        _player removeItemFromUniform (_x select 0);
-    } forEach _magazines;
+        _unit removeItemFromUniform (_x select 0);
+        false
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (uniformContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            (uniformContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
         };
-    } forEach _magazines;
+        false
+    } count _magazines;
 };
 
 // Check vest
-_magazines = [magazinesAmmoCargo vestContainer _player, {_this select 0 == _magazineType}] call FUNC(filter);
+_magazines = [magazinesAmmoCargo vestContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
 _index = _magazines find [_magazineType,_ammoCount];
 if (_index > -1) exitWith {
     {
-        _player removeItemFromVest (_x select 0);
-    } forEach _magazines;
+        _unit removeItemFromVest (_x select 0);
+        false
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (vestContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            (vestContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
         };
-    } forEach _magazines;
+        false
+    } count _magazines;
 };
 
 // Check backpack
-_magazines = [magazinesAmmoCargo backpackContainer _player, {_this select 0 == _magazineType}] call FUNC(filter);
+_magazines = [magazinesAmmoCargo backpackContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
 _index = _magazines find [_magazineType,_ammoCount];
 if (_index > -1) exitWith {
     {
-        _player removeItemFromBackpack (_x select 0);
-    } forEach _magazines;
+        _unit removeItemFromBackpack (_x select 0);
+        false
+    } count _magazines;
 
     {
         if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
             _isRemoved = true;
         } else {
-            (backpackContainer _player) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+            (backpackContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
         };
-    } forEach _magazines;
+        false
+    } count _magazines;
 };

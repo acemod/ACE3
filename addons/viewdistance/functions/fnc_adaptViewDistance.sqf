@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_viewdistance_fnc_adaptViewDistance;
+ * [] call ace_viewdistance_fnc_adaptViewDistance
  *
  * Public: No
  */

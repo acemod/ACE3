@@ -1,23 +1,25 @@
 /*
  * Author: commy2
- *
  * Get the turret indices of other turrets (not gunner, commander, copilot or ffv).
  *
- * Argument:
- * 0: Vehicle (Object)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
  *
- * Return value:
- * Turret index of the vehicles gunner. Empty array means no other turrets. (Array)
+ * Return Value:
+ * Vehicle Other Turret indecies <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_turrets", "_turret", "_config"];
+params ["_vehicle"];
 
-PARAMS_1(_vehicle);
+private ["_turrets", "_turret", "_config"];
 
 _turrets = allTurrets [_vehicle, true];
 
 _turret = [];
+
 {
     _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -30,5 +32,7 @@ _turret = [];
     ) then {
         _turret pushBack _x;
     };
-} forEach _turrets;
+    false
+} count _turrets;
+
 _turret

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -95,16 +95,16 @@
             <Russian>Отмена</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_ScrollAction">
-            <English>+ Modifier, rotates</English>
-            <German>+ Modifikator, drehen</German>
-            <Spanish>+ Modificador, girar</Spanish>
-            <French>+ Modificateur, tourner</French>
-            <Italian>+ Modificatore, rotazione</Italian>
-            <Czech>+ Modifikátor, otočit</Czech>
-            <Hungarian>+ Változtatás, forgatás</Hungarian>
-            <Polish>+ Modyfikator, obrót</Polish>
-            <Portuguese>+ Modificador, rotaciona</Portuguese>
-            <Russian>+ Bращать</Russian>
+            <English>+Ctrl rotate</English>
+            <German>+Strg drehen</German>
+            <Spanish>+Ctrl girar</Spanish>
+            <French>+Ctrl tourner</French>
+            <Italian>+Ctrl rotazione</Italian>
+            <Czech>+Ctrl otočit</Czech>
+            <Hungarian>+Ctrl forgatás</Hungarian>
+            <Polish>+Ctrl obrót</Polish>
+            <Portuguese>+Ctrl rotaciona</Portuguese>
+            <Russian>+Ctrl Bращать</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOn">
             <English>Turn On Thor III</English>
@@ -588,6 +588,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
+            <German>Explodieren beim Entschärfen?</German>
             <Portuguese>Explosão no desarmamento?</Portuguese>
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
@@ -599,6 +600,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
+            <German>Sollen bestimmte Sprengladungen beim Entschärfen explodieren? Standard: Ja</German>
             <Portuguese>Ativa certos explosivos para detonar no desarmamento? Padrão: Sim</Portuguese>
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
@@ -617,6 +619,7 @@
             <French>Ce module ajuste les options relative aux explosifs</French>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
+            <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
             <Italian>Questo modulo permette di personlalizzare i parametri del modulo esplosivi.</Italian>
         </Key>
     </Package>

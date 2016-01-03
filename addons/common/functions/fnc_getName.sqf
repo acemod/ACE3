@@ -1,25 +1,21 @@
 /*
  * Author: commy2
- *
  * Returns the name of the object. Used to prevent issues with the name command.
  *
- * Argument:
- * 0: Object (Object)
- * 1: Show effective commander name? (Bool, optinal default: false)
+ * Arguments:
+ * 0: Object <OBJECT>
+ * 1: Use effective commander name when used on vehicles (default: false) <BOOL>
  *
- * Return value:
- * The name.
+ * Return Value:
+ * Object Name <STRING>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_name"];
+params ["_unit", ["_showEffective", false]];
 
-PARAMS_2(_unit,_showEffective);
-
-if (isNil "_showEffective") then {
-    _showEffective = false;
-};
-
+private "_name";
 _name = "";
 
 if (_unit isKindOf "CAManBase") then {

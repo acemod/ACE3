@@ -39,7 +39,7 @@ private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localize
     _defaultValue = _x select 6;
 
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
-        _value = missionNamespace getvariable [_name, _defaultValue];
+        _value = missionNamespace getVariable [_name, _defaultValue];
         _formatedValue = switch (toLower _typeName) do {
             case ("scalar"): {
                 format['value = %1;', _value];
@@ -48,8 +48,8 @@ private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localize
                 format['value = "%1";', _value];
             };
             case ("bool"): {
-                if (typeName _value != "BOOL") then {ERROR("weird bool typename??");};
-                _value = if (((typeName _value) == "BOOL") && {_value}) then {1} else {0};
+                if (!(_value isEqualType false)) then {ERROR("weird bool typename??");};
+                _value = if ((_value isEqualType false) && {_value}) then {1} else {0};
                 format ['value = %1;', _value];
             };
             case ("color"): {

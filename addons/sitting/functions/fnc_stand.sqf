@@ -16,12 +16,14 @@
 #include "script_component.hpp"
 
 params ["_player"];
+private ["_animation"];
 
-// remove scroll wheel action
-_player removeAction (_player getVariable [QGVAR(StandUpActionID), -1]);
+(_player getVariable QGVAR(isSitting)) params ["_seat", "_actionID"];
+
+// Remove scroll-wheel action
+_player removeAction _actionID;
 
 // Restore animation
-private "_animation";
 _animation = switch (currentWeapon _player) do {
     case "": {"amovpercmstpsnonwnondnon"};
     case (primaryWeapon _player): {"amovpercmstpslowwrfldnon"};
@@ -33,5 +35,5 @@ _animation = switch (currentWeapon _player) do {
 
 // Set variables to nil
 _player setVariable [QGVAR(isSitting), nil];
-GVAR(seat) setVariable [QGVAR(seatOccupied), nil, true];
-GVAR(seat) = nil;
+if (isNull _seat) exitWith {};
+_seat setVariable [QGVAR(seatOccupied), nil, true];

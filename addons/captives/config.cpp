@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {QGVAR(ModuleSettings), QGVAR(ModuleSurrender)};
+        units[] = {QGVAR(ModuleSettings), QGVAR(ModuleSurrender), QGVAR(ModuleHandcuffed)};
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};

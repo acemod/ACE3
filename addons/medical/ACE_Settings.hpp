@@ -154,13 +154,13 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
         value = 3;
-        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useLocation_SurgicalKit) {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
         value = 2;
-        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useCondition_PAK) {
         category = CSTRING(Category_Medical);

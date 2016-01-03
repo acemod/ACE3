@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -368,6 +368,7 @@
             <Portuguese>Corrigir Headbug</Portuguese>
             <Russian>Fix Headbug</Russian>
             <Czech>Fix Headbug</Czech>
+            <Spanish>Corregir error de cabeza (headbug)</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -377,6 +378,7 @@
             <Portuguese>Redefine seu estado de animação.</Portuguese>
             <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
             <Czech>Resetovat aktuální animaci.</Czech>
+            <Spanish>Restablece tu estado de animación.</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -398,6 +400,7 @@
             <French>Affiche les nouveautés sur l'écran principal</French>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в Главном Меню</Russian>
+            <Czech>Zobrazit zprávy v hlavním menu</Czech>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
@@ -405,6 +408,7 @@
             <Portuguese>Todas categorias</Portuguese>
             <Russian>Все категории</Russian>
             <Czech>Všechny Kategorie</Czech>
+            <Spanish>Todas las categorías</Spanish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -412,6 +416,7 @@
             <Portuguese>Logística</Portuguese>
             <Russian>Логистика</Russian>
             <Czech>Logistika</Czech>
+            <Spanish>Logística</Spanish>
         </Key>
     </Package>
 </Project>

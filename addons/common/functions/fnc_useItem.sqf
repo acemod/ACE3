@@ -1,36 +1,37 @@
-/**
- * fn_useItem.sqf
- * @Descr:
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Use item
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: true
+ * Arguments:
+ * 0: unit <OBJECT>
+ * 1: item <STRING>
+ *
+ * Return Value:
+ * if item has been used. <BOOL>
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_item);
+params ["_unit", "_item", ["_vehicleUsage", false]];
 
-private ["_return", "_vehicleUsage"];
-
-_vehicleUsage = [_this, 2, false, [false]] call BIS_fnc_Param;
-
+private "_return";
 _return = false;
-if (!_vehicleUsage) then {
+
+if !(_vehicleUsage) then {
     if (_item != "") then {
-        if (_item in (items _unit)) then {
+        if (_item in items _unit) then {
             _unit removeItem _item;
             _return = true;
         } else {
-            if (_item in (assignedItems _unit)) then {
-                _unit unassignItem _item;
-                _unit removeItem _item;
+            if (_item in assignedItems _unit) then {
+                _unit unlinkItem _item;
                 _return = true;
             };
         };
     };
+//} else {
+    // @todo implement shared item functionality for with vehicles.
 };
-// TODO implement shared item functionality for with vehicles.
 
-_return;
+_return

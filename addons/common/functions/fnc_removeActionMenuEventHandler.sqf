@@ -1,39 +1,37 @@
 /*
  * Author: commy2
+ * Remove an addAction menu event from a unit.
  *
- * Remove an addAction event from a unit.
+ * Arguments:
+ * 0: Unit the action is assigned to <OBJECT>
+ * 1: Name of the action, e.g. "DefaultAction" <STRING>
+ * 2: ID of the action <NUMBER>
  *
- * Argument:
- * 0: Unit the action is assigned to (Object)
- * 1: Name of the action, e.g. "DefaultAction" (String)
- * 2: ID of the action (Number)
+ * Return Value:
+ * None
  *
- * Return value:
- * None.
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_name", "_actionsVar", "_currentID", "_actionIDs", "_actions", "_actionID", "_nameVar"];
-
-PARAMS_3(_unit,_action,_id);
+params ["_unit", "_action", "_id"];
 
 if (_id == -1) exitWith {};
 
-_name = format ["ACE_ActionMenu_%1", _action];
+private ["_name", "_actionsVar"];
 
+_name = format ["ACE_ActionMenu_%1", _action];
 _actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
 
-_currentID = _actionsVar select 0;
-_actionIDs = _actionsVar select 1;
-_actions = _actionsVar select 2;
+_actionsVar params ["_currentID", "_actionIDs", "_actions"];
 
 _id = _actionIDs find _id;
 
 if (_id == -1) exitWith {};
 
 _action = _actions select _id;
-_actionID = _action select 0;
-_nameVar = _action select 1;
+
+_action params ["_actionID", "_nameVar"];
 
 missionNamespace setVariable [_nameVar, nil];
 

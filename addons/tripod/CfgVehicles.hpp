@@ -2,15 +2,13 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_Equipment {
-                class GVAR(place) {
-                    displayName = CSTRING(Placedown);
-                    condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
-                    statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
-                    showDisabled = 0;
-                    priority = 2;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
-                };
+            class GVAR(place) {
+                displayName = CSTRING(Placedown);
+                condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
+                statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
+                showDisabled = 0;
+                priority = 2;
+                icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
             };
         };
     };
@@ -37,9 +35,13 @@ class CfgVehicles {
     class thingX;
     class ACE_TripodObject: thingX {
         XEH_ENABLED;
+        EGVAR(dragging,canDrag) = 1;
+        EGVAR(dragging,dragPosition[]) = {0,1,0};
+        EGVAR(dragging,dragDirection) = 0;
         scope = 2;
         displayName = CSTRING(DisplayName);
         model = PATHTOF(data\sniper_tripod.p3d);
+
         class AnimationSources {
             class slide_down_tripod {
                 source = "user";
@@ -52,32 +54,32 @@ class CfgVehicles {
             class retract_leg_2: retract_leg_1 {};
             class retract_leg_3: retract_leg_2 {};
         };
-        EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,1,0};
-        EGVAR(dragging,dragDirection) = 0;
+
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
                 distance = 5;
                 condition = "true";
+
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
+
                 class ACE_Adjust {
                     selection = "";
                     displayName = CSTRING(Adjust);
                     distance = 5;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [_target])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

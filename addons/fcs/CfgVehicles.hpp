@@ -505,4 +505,26 @@ class CfgVehicles {
     class Plane_Fighter_03_base_F: Plane_Base_F {
         class Turrets;
     };
+
+    // static weapons.
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret; //: NewTurret {};
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class HMG_01_base_F: StaticMGWeapon {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MinDistance) = 100;
+                GVAR(MaxDistance) = 1500;
+                GVAR(DistanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
+    };
 };

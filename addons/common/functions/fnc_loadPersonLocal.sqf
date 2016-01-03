@@ -1,25 +1,28 @@
-/**
- * fn_loadPersonLocal_f.sqf
- * @Descr: Load a person, local
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Load a person, local
  *
- * @Arguments: [unit OBJECT, vehicle OBJECT, caller OBJECT]
- * @Return: void
- * @PublicAPI: false
+ * Arguments:
+ * 0: unit to be loaded <OBJECT>
+ * 1: vehicle that will beloaded <OBJECT>
+ * 2: caller that will load <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_unit","_vehicle","_caller","_handle","_loaded","_slotsOpen"];
-_unit = [_this, 0, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_vehicle = [_this, 1, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_caller = [_this, 2, ObjNull,[ObjNull]] call BIS_fnc_Param;
-_slotsOpen = false;
+params ["_unit", "_vehicle", "_caller"];
 
 if (!alive _unit) then {
-    _unit = [_unit,_caller] call FUNC(makeCopyOfBody);
+    // _unit = [_unit, _caller] call FUNC(makeCopyOfBody); //func does not exist
 };
 
+private "_slotsOpen";
+
+_slotsOpen = false;
 
 if (_vehicle emptyPositions "cargo" > 0) then {
     _unit moveInCargo _vehicle;
@@ -32,26 +35,29 @@ if (_vehicle emptyPositions "cargo" > 0) then {
 };
 
 if (_slotsOpen) then {
-    _loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
-    _loaded pushback _unit;
-    _vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
-    if (!([_unit] call FUNC(isAwake))) then {
-        _handle = [_unit,_vehicle] spawn {
-            private ["_unit","_vehicle"];
-            _unit = _this select 0;
-            _vehicle = _this select 1;
-            waituntil {vehicle _unit == _vehicle};
-            sleep 0.5;
+    private "_loaded";
+    _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
+    _loaded pushBack _unit;
 
-            //Save the "awake" animation before applying the death animation
-            if (vehicle _unit == _vehicle) then {
-                _unit setVariable [QEGVAR(medical,vehicleAwakeAnim), [_vehicle, (animationState _unit)]];
+    _vehicle setVariable [QGVAR(loaded_persons), _loaded, true];
+
+    if !([_unit] call FUNC(isAwake)) then {
+        [{
+            (_this select 0) params ["_unit", "_vehicle"];
+
+            // wait until the unit is in the vehicle
+            if (vehicle _unit != _vehicle) exitWith {
+                // kill this pfh if either one is deleted
+                if (isNull _unit || isNull _vehicle) then {
+                    [_this select 1] call CBA_fnc_removePerFrameHandler;
+                };
             };
-            [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
-        };
-    } else {
-        if ([_unit] call FUNC(isArrested)) then {
 
-        };
+            _unit setVariable [QEGVAR(medical,vehicleAwakeAnim), [_vehicle, animationState _unit]];
+
+            [_unit, [_unit] call FUNC(getDeathAnim), 1, true] call FUNC(doAnimation);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+        }, 0.5, [_unit, _vehicle]] call CBA_fnc_addPerFrameHandler;
     };
 };
