@@ -15,7 +15,6 @@
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
-            <German>Kartenbeleuchtung</German>
             <Polish>Oświetlenie mapy</Polish>
             <Spanish>¿Iluminación de mapa?</Spanish>
             <German>Kartenausleuchtung</German>
@@ -63,6 +62,7 @@
             <French>Tremblement de la carte?</French>
             <Hungarian>Térkép-rázkódás?</Hungarian>
             <Russian>Тряска карты?</Russian>
+            <Italian>Tremore della mappa?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -74,6 +74,7 @@
             <French>La carte tremble lors d'un déplacement?</French>
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
+            <Italian>Fa ballare la mappa camminando?</Italian>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
