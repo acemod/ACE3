@@ -250,7 +250,7 @@
             <French>Seulement sous le curseur</French>
             <Hungarian>Csak kurzorra</Hungarian>
             <Russian>Только под курсором</Russian>
-	    <Italian>Solo con cursore</Italian>
+            <Italian>Solo con cursore</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyKeypress">
             <English>Only on Keypress</English>
@@ -262,7 +262,7 @@
             <French>Seulement par appui de touche</French>
             <Hungarian>Csak gombnyomásra</Hungarian>
             <Russian>Только по нажатию клавиши</Russian>
-	    <Italian>Solo premendo il tasto</Italian>
+            <Italian>Solo premendo il tasto</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
             <English>Only on Cursor and Keypress</English>
@@ -274,7 +274,7 @@
             <French>Seulement sous le curseur et par appui de touche</French>
             <Hungarian>Csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Под курсором или по нажатию клавиши</Russian>
-	    <Italian>Solo con cursore e premendo il tasto</Italian>
+            <Italian>Solo con cursore e premendo il tasto</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>
