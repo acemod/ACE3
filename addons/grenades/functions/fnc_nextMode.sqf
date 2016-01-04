@@ -28,13 +28,13 @@ if (_mode == 3) then {
     _mode = 4;
 };
 
-private _hint = [
-    localize LSTRING(NormalThrow),
-    localize LSTRING(HighThrow),
-    localize LSTRING(PreciseThrow),
-    localize LSTRING(RollGrenade),
-    localize LSTRING(DropGrenade)
-] select _mode;
+private _hint = localize ([
+    LSTRING(NormalThrow),
+    LSTRING(HighThrow),
+    LSTRING(PreciseThrow),
+    LSTRING(RollGrenade),
+    LSTRING(DropGrenade)  
+] select _mode);
 
 [_hint] call EFUNC(common,displayTextStructured);
 
