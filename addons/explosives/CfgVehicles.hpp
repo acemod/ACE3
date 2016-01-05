@@ -10,17 +10,8 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 4;
                 icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
                 //Sub-menu items
-                class ACE_Detonate {
-                    displayName = CSTRING(Detonate);
-                    condition = QUOTE([_player] call FUNC(canDetonate));
-                    statement = "";
-                    insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-                    showDisabled = 1;
-                    icon = PATHTOF(UI\Explosives_Menu_ca.paa);
-                    priority = 2;
-                };
                 class ACE_Place {
                     displayName = CSTRING(Place);
                     condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
