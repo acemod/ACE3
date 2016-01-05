@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, -1, "Command"] call ACE_Explosives_fnc_detonateExplosive;
+ * [player, -1, [[c4,0.5]]] call ACE_Explosives_fnc_detonateExplosiveAll;
  *
  * Public: No
  */
