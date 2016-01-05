@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg
- *
  * Displays a wind info (colored arrow) in the top left corner of the screen
  *
  * Argument:
@@ -8,6 +7,11 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [] call ace_weather_fnc_displayWindInfo
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -28,17 +32,15 @@ EGVAR(advanced_ballistics,Protractor) = false;
 GVAR(WindInfo) = true;
 
 [{
-    private ["_windSpeed", "_windDir", "_playerDir", "_windIndex", "_windColor"];
-
-    if !(GVAR(WindInfo) && !(underwater ACE_player) && vehicle ACE_player == ACE_player) exitWith {
+    if ((!GVAR(WindInfo)) || {underwater ACE_player} || {vehicle ACE_player != ACE_player}) exitWith {
         GVAR(WindInfo) = false;
         0 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    _windIndex = 12;
-    _windColor = [1, 1, 1, 1];
-    _windSpeed = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    private _windIndex = 12;
+    private _windColor = [1, 1, 1, 1];
+    private _windSpeed = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         // With wind gradient
         [eyePos ACE_player, true, true, true] call FUNC(calculateWindSpeed);
     } else {
@@ -47,8 +49,8 @@ GVAR(WindInfo) = true;
     };
     
     if (_windSpeed > 0.2) then {
-        _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
-        _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
+        private _playerDir = (ACE_player call CBA_fnc_headDir) select 0;
+        private _windDir = (ACE_wind select 0) atan2 (ACE_wind select 1);
         _windIndex = round(((_playerDir - _windDir + 360) % 360) / 30);
         _windIndex = _windIndex % 12;
     };

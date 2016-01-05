@@ -1,6 +1,5 @@
 /*
  * Author: ACE2 Team, Ruthberg
- *
  * Calculate current wind locally from the data broadcasted by the server
  *
  * Argument:
@@ -8,17 +7,20 @@
  *
  * Return value:
  * Wind <ARRAY>
+ *
+ * Example:
+ * [] call ace_weather_fnc_getWind
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-private ["_periodPercent", "_periodPosition"];
 
 if (isNil "ACE_WIND_PARAMS") exitWith { [0, 0, 0] };
 
 ACE_WIND_PARAMS params ["_dir", "_dirChange", "_spd", "_spdChange", "_period"];
 
-_periodPosition = (ACE_time - GVAR(wind_period_start_time)) min _period;
-_periodPercent = _periodPosition / _period;
+private _periodPosition = (ACE_time - GVAR(wind_period_start_time)) min _period;
+private _periodPercent = _periodPosition / _period;
 
 _spd = _spd + _spdChange * _periodPercent;
 _dir = _dir + _dirChange * _periodPercent;

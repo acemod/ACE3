@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg
- *
  * Gather weather parameters and broadcast them to the clients
  *
  * Argument:
@@ -8,10 +7,13 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [] call ace_weather_fnc_serverController
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-if (!GVAR(enableServerController)) exitWith {};
 
 if (GVAR(useACEWeather)) then {
     // Use location based real world weather data

@@ -40,12 +40,40 @@ GVAR(ACE_rain) = rain;
 
 simulWeatherSync;
 
-[FUNC(updateTemperature), 20, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(updateHumidity), 20, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(updateWind), 1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(updateRain), 2, []] call CBA_fnc_addPerFrameHandler;
-[{
+
+
+
+["SettingsInitialized",{
+    TRACE_1("SettingsInitialized",GVAR(syncRain));
+    
+    //Create a 1 sec delay PFEH to update rain every frame:
     if (GVAR(syncRain)) then {
-        0 setRain GVAR(ACE_rain);
+        [{
+            0 setRain GVAR(ACE_rain);
+        }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+    
+    //Create a 1 sec delay PFEH to update wind/rain/temp/humidity
+    
+    //If we don't sync rain, set next time to infinity
+    GVAR(nextUpdateRain) = if (GVAR(syncRain)) then {0} else {1e99};
+    GVAR(nextUpdateTempAndHumidity) = 0;
+    [{
+        BEGIN_COUNTER(weatherPFEH);
+
+        [] call FUNC(updateWind); //Every 1 second
+        
+        if (ACE_time > GVAR(nextUpdateRain)) then {
+            [] call FUNC(updateRain); //Every 2 seconds
+            GVAR(nextUpdateRain) = 2 + ACE_time;
+        };
+        if (ACE_time > GVAR(nextUpdateTempAndHumidity)) then {
+            [] call FUNC(updateTemperature); //Every 20 seconds
+            [] call FUNC(updateHumidity); //Every 20 seconds
+            GVAR(nextUpdateTempAndHumidity) = 20 + ACE_time;
+        };
+        
+        END_COUNTER(weatherPFEH);
+    }, 1, []] call CBA_fnc_addPerFrameHandler;
+
+}] call EFUNC(common,addEventHandler);

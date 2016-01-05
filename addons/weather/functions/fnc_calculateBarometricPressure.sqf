@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg
- *
  * Calculates the barometric pressure based on altitude and weather
  *
  * Arguments:
@@ -9,8 +8,10 @@
  * Return Value:
  * barometric pressure - hPA <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * 0 call ace_weather_fnc_calculateBarometricPressure
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
