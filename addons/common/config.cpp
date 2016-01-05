@@ -14,6 +14,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgLocationTypes.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
