@@ -497,8 +497,8 @@ class CfgVehicles {
         };
     };
 
-    class thingX;
-    class ReammoBox_F: thingX {
+    class ThingX;
+    class ReammoBox_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
@@ -519,7 +519,7 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
-    class ACE_RepairItem_Base: thingX {
+    class ACE_RepairItem_Base: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
@@ -532,7 +532,7 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
-    class RoadCone_F: thingX {
+    class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
