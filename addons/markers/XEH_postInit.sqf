@@ -9,11 +9,10 @@
 
 // request marker data for JIP
 if (isMultiplayer && {!isServer} && {hasInterface}) then {
-    private "_logic";
-    _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    private _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+
     [QGVAR(sendMarkersJIP), [_logic]] call EFUNC(common,serverEvent);
 };
-
 
 GVAR(mapDisplaysWithDrawEHs) = [];
 GVAR(currentMarkerPosition) = [];

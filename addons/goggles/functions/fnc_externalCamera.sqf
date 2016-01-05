@@ -15,4 +15,8 @@
  */
 #include "script_component.hpp"
 
-cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive) // return
+if (GVAR(showInThirdPerson)) then {
+    cameraView in ["GROUP"] || EFUNC(common,isFeatureCameraActive) 
+} else {
+    cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive) 
+};

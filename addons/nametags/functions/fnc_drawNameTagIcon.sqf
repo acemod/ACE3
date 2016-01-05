@@ -44,7 +44,7 @@ if (_alpha < 0) exitWith {}; //Don't waste time if not visable
 
 //Set Text:
 _name = if (_iconType in [ICON_NAME, ICON_NAME_RANK, ICON_NAME_SPEAK]) then {
-    [_target, true] call EFUNC(common,getName)
+    [_target, true, true] call EFUNC(common,getName)
 } else {
     ""
 };

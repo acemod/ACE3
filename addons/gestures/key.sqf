@@ -3,11 +3,15 @@
 {
     _x params ["_currentName","_key"];
 
-     if (_currentName select [0,1] == "BI") then {
-        _currentName = _currentName select [2];
+    private _signalName = format [QGVAR(%1), _currentName];
+    if (_currentName select [0,2] == "BI") then {
+        //Don't add "ace_gestures_" prefix to BI gestures
+        _signalName = _currentName;
     };
 
-    private _code = (compile format [QUOTE(QUOTE(QGVAR(%1)) call FUNC(playSignal);), _currentName]);
+    private _code = (compile format [QUOTE('%1' call FUNC(playSignal);), _signalName]);
+
+    TRACE_4("Adding KeyBind",_currentName,_signalName,_code,_key);
 
     [
         "ACE3 Gestures",
