@@ -19,17 +19,20 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private ["_result", "_item", "_children", "_range", "_required"];
+private ["_result", "_item", "_children", "_range", "_required","_explosivesList"];
 
 _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
 
 _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];
+_explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
         _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
             _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+
+            _explosivesList pushBack _x;
 
             _children pushBack
                 [
@@ -48,5 +51,22 @@ _children = [];
         };
     };
 } forEach _result;
+
+// Add action to detonate all explosives tied to the detonator
+if (count _explosivesList > 0) then {
+    _children pushBack [
+        [
+            "Explosive_All",
+            "Detonate All", 
+            getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
+            {(_this select 2) call FUNC(detonateExplosiveAll);},
+            {true},
+            {},
+            [ACE_player,_range,_explosivesList]
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        ACE_Player
+    ];
+};
 
 _children
