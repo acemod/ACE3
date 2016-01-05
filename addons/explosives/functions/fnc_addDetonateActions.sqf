@@ -57,7 +57,7 @@ if (count _explosivesList > 0) then {
     _children pushBack [
         [
             "Explosive_All",
-            "Detonate All", 
+            localize LSTRING(DetonateAll), 
             getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
             {(_this select 2) call FUNC(detonateExplosiveAll);},
             {true},
