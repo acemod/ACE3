@@ -228,6 +228,5 @@ class ACE_Settings {
         displayName = CSTRING(delayUnconCaptive);
         typeName = "SCALAR";
         value = 10;
-        values[] = {CSTRING(painEffect_Flash), CSTRING(painEffect_Chroma)};
     };
 };

@@ -99,7 +99,10 @@ if (GVAR(delayUnconCaptive) == 0) then {
     [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 } else {
     [{
-        [_this select 0, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+        params ["_unit"];
+        if (_unit getVariable ["ACE_isUnconscious", false]) then {
+            [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+        };
     },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
 };
 
