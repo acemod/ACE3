@@ -52,7 +52,7 @@ if (_vehicle != _unit) exitWith {};
 if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
 
 // handle ladders
-if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "AGM_isLadder") == 1) exitWith {
+if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "ACE_isLadder") == 1) exitWith {
     _unit action ["LadderOff", nearestObject [position _unit, "House"]];
 };
 
@@ -65,49 +65,7 @@ private _velocity = vectorMagnitude velocity _unit;
 if (_velocity < 2) exitWith {};
 
 // get correct animation by weapon
-private _anim = call {
-    scopeName "main";
-
-    private _weapon = currentWeapon _unit;
-
-    if (_weapon == "") exitWith {
-        _anim = "AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"
-    };
-
-    if (_weapon == primaryWeapon _unit) exitWith {
-        if (_unit call EFUNC(common,isPlayer)) then {
-            private _isRunning = _velocity > 4;
-
-            private _anim = [
-                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
-                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
-            ] select floor random 4;
-
-            _anim breakOut "main";
-        } else {
-            ("AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon") breakOut "main";
-        };
-    };
-
-    if (_weapon == handgunWeapon _unit) exitWith {
-        if (_unit call EFUNC(common,isPlayer)) then {
-            private _anim = [
-                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDleft",
-                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDright"
-            ] select floor random 4;
-
-            _anim breakOut "main";
-        } else {
-            ("AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon") breakOut "main";
-        };
-    };
-
-    "";
-};
+private _anim = _unit call FUNC(getRandomAnimation);
 
 // exit if no animation for this weapon exists, i.e. binocular or rocket launcher
 if (_anim == "") exitWith {};
