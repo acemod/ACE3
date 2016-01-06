@@ -11,7 +11,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.5;
                     icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
-                    hotkey = "E";
                 };
                 class ACE_RemoveEarplugs {
                     displayName = CSTRING(EarPlugs_Off);
@@ -21,7 +20,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.5;
                     icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
-                    hotkey = "E";
                 };
             };
         };

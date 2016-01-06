@@ -14,13 +14,10 @@
 
 params ["_unit"];
 
-private ["_captivityReasons", "_unitCaptivityStatus", "_unitCaptivityReasons"];
+private _captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
+private _unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call FUNC(binarizeNumber);
 
-_captivityReasons = missionNamespace getVariable ["ACE_captivityReasons", []];
-
-_unitCaptivityStatus = [captiveNum _unit, count _captivityReasons] call FUNC(binarizeNumber);
-
-_unitCaptivityReasons = [];
+private _unitCaptivityReasons = [];
 
 {
     if (_unitCaptivityStatus select _forEachIndex) then {

@@ -15,10 +15,8 @@
 params ["_client"];
 
 {
-    private ["_eventEntry", "_eventLog"];
-
-    _eventEntry = HASH_GET(GVAR(syncedEvents),_x);
-    _eventLog = _eventEntry select 1;
+    private _eventEntry = HASH_GET(GVAR(syncedEvents),_x);
+    _eventEntry params ["", "_eventLog"];
 
     ["SEH_s", _client, [_x, _eventLog]] call FUNC(targetEvent);
     false

@@ -27,7 +27,7 @@ params [["_set",true,[true]], ["_force",true,[true]]];
 if (!hasInterface) exitWith {};
 
 // Exit if no change
-if (_set isEqualTo GVAR(isSet)) exitwith {};
+if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Handle common addon audio
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
@@ -126,6 +126,12 @@ if (_set) then {
     GVAR(freeCamera) = nil;
     GVAR(unitCamera) = nil;
     GVAR(targetCamera) = nil;
+
+    //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
+    GVAR(camHandler) = nil;
+    GVAR(compHandler) = nil;
+    GVAR(iconHandler) = nil;
+    GVAR(toolHandler) = nil;
 
     // Cleanup display variables
     GVAR(ctrlKey) = nil;

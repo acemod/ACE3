@@ -19,14 +19,12 @@ params ["_object", "_aroundX", "_aroundY", "_aroundZ"];
 
 _aroundZ = - _aroundZ;
 
-private ["_dirX", "_dirY", "_dirZ", "_upX", "_upY", "_upZ", "_dir", "_up"];
-
-_dirX = 0;
-_dirY = 1;
-_dirZ = 0;
-_upX = 0;
-_upY = 0;
-_upZ = 1;
+private _dirX = 0;
+private _dirY = 1;
+private _dirZ = 0;
+private _upX = 0;
+private _upY = 0;
+private _upZ = 1;
 
 if (_aroundX != 0) then {
     _dirY = cos _aroundX;
@@ -43,18 +41,16 @@ if (_aroundY != 0) then {
 };
 
 if (_aroundZ != 0) then {
-    private ["_dirXTemp", "_upXTemp"];
-
-    _dirXTemp = _dirX;
+    private _dirXTemp = _dirX;
     _dirX = (_dirXTemp* cos _aroundZ) - (_dirY * sin _aroundZ);
     _dirY = (_dirY * cos _aroundZ) + (_dirXTemp * sin _aroundZ);
 
-    _upXTemp = _upX;
+    private _upXTemp = _upX;
     _upX = (_upXTemp * cos _aroundZ) - (_upY * sin _aroundZ);
     _upY = (_upY * cos _aroundZ) + (_upXTemp * sin _aroundZ);
 };
 
-_dir = [_dirX, _dirY, _dirZ];
-_up = [_upX, _upY, _upZ];
+private _dir = [_dirX, _dirY, _dirZ];
+private _up = [_upX, _upY, _upZ];
 
 _object setVectorDirAndUp [_dir,_up];

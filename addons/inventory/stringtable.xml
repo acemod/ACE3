@@ -25,5 +25,33 @@
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Inventory_Backpacks">
+            <English>Backpacks</English>
+            <German>Rucksäcke</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Headgear">
+            <English>Headgear</English>
+            <German>Kopfbedeckungen</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Glasses">
+            <English>Glasses</English>
+            <German>Brillen</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Uniforms">
+            <English>Uniforms</English>
+            <German>Uniformen</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Vests">
+            <English>Vests</English>
+            <German>Westen</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Grenades">
+            <English>Grenades</English>
+            <German>Granaten</German>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Medical">
+            <English>Medical</English>
+            <German>Sanimaterial</German>
+        </Key>
     </Package>
 </Project>

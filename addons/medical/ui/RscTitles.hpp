@@ -59,7 +59,7 @@ class Rsctitles {
             style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
             font = "PuristaMedium";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(Injuries);
         };
         class InjuryList: ACE_gui_listBoxBase {

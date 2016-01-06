@@ -28,9 +28,11 @@ _spinePos = _target modelToWorldVisual (_target selectionPosition "Spine3");
 _dirVect = _headPos vectorFromTo _spinePos;
 _direction = _dirVect call CBA_fnc_vectDir;
 
-deleteVehicle _target;
-
 _bodyBag = createVehicle ["ACE_bodyBagObject", _position, [], 0, "CAN_COLLIDE"];
+
+["placedInBodyBag", [_target, _bodyBag]] call EFUNC(common,globalEvent);
+
+deleteVehicle _target;
 
 // prevent body bag from flipping
 _bodyBag setPosASL _position;

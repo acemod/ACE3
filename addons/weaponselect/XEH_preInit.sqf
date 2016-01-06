@@ -30,6 +30,6 @@ GVAR(GrenadesNonFrag) = [];
         false
     } count _magazines;
     false
-} count getArray (configfile >> "CfgWeapons" >> "Throw" >> "muzzles");
+} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 ADDON = true;

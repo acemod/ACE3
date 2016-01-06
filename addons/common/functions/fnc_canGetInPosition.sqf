@@ -27,19 +27,19 @@ _position = toLower _position;
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
 
-private ["_config", "_turret", "_radius", "_selectionPosition", "_selectionPosition2", "_enemiesInVehicle", "_return"];
+private ["_selectionPosition", "_selectionPosition2"];
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_turret = [];
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _turret = [];
 
-_radius = 0;
+private _radius = 0;
 
-_enemiesInVehicle = false;   //Possible Side Restriction
+private _enemiesInVehicle = false;   //Possible Side Restriction
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
 } forEach crew _vehicle;
 
-_return = false;
+private _return = false;
 switch (_position) do {
     case "driver" : {
         _radius = getNumber (_config >> "getInRadius");
@@ -60,11 +60,10 @@ switch (_position) do {
     };
 
     case "gunner" : {
-        private "_turretConfig";
         _turret = [_vehicle] call FUNC(getTurretGunner);
         if (_turret isEqualTo []) exitWith {false};
 
-        _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+        private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
         _radius = getNumber (_config >> "getInRadius");
         _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -73,11 +72,10 @@ switch (_position) do {
     };
 
     case "commander" : {
-        private "_turretConfig";
         _turret = [_vehicle] call FUNC(getTurretCommander);
         if (_turret isEqualTo []) exitWith {false};
 
-        _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+        private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
         _radius = getNumber (_config >> "getInRadius");
         _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -86,11 +84,10 @@ switch (_position) do {
     };
 
     case "copilot" : {
-        private "_turretConfig";
         _turret = [_vehicle] call FUNC(getTurretCopilot);
         if (_turret isEqualTo []) exitWith {false};
 
-        _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+        private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
         _radius = getNumber (_config >> "getInRadius");
         _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -99,13 +96,12 @@ switch (_position) do {
     };
 
     case "turret" : {
-        private ["_turrets", "_turretConfig"];
-        _turrets = [_vehicle] call FUNC(getTurretsOther);
+        private _turrets = [_vehicle] call FUNC(getTurretsOther);
 
         if (_index != -1 && {_turret = _turrets select _index;
           CANGETINTURRETINDEX
         }) then {
-            _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+            private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
             _radius = getNumber (_config >> "getInRadius");
             _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -115,7 +111,7 @@ switch (_position) do {
             for "_index" from 0 to (count _turrets - 1) do {
                 _turret = _turrets select _index;
                 if (CANGETINTURRETINDEX) exitWith {
-                    _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+                    private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
                     _radius = getNumber (_config >> "getInRadius");
                     _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -127,13 +123,12 @@ switch (_position) do {
     };
 
     case "ffv" : {
-        private ["_turrets", "_turretConfig"];
-        _turrets = [_vehicle] call FUNC(getTurretsFFV);
+        private _turrets = [_vehicle] call FUNC(getTurretsFFV);
 
         if (_index != -1 && {_turret = _turrets select _index;
           CANGETINTURRETINDEX
         }) then {
-            _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+            private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
             _radius = getNumber (_config >> "getInRadius");
             _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -143,7 +138,7 @@ switch (_position) do {
             for "_index" from 0 to (count _turrets - 1) do {
                 _turret = _turrets select _index;
                 if (CANGETINTURRETINDEX) exitWith {
-                    _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
+                    private _turretConfig = [_config, _turret] call FUNC(getTurretConfigPath);
 
                     _radius = getNumber (_config >> "getInRadius");
                     _selectionPosition = _vehicle selectionPosition (getText (_turretConfig >> "memoryPointsGetInGunner"));
@@ -155,8 +150,7 @@ switch (_position) do {
     };
 
     case "codriver" : {
-        private "_positions";
-        _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
+        private _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -189,8 +183,7 @@ switch (_position) do {
     };
 
     case "cargo" : {
-        private "_positions";
-        _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
+        private _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -226,14 +219,11 @@ switch (_position) do {
     default {};
 };
 
-private "_fnc_isInRange";
-_fnc_isInRange = {
+private _fnc_isInRange = {
     if (_radius == 0) exitWith {true};
 
-    private ["_unitPosition", "_distance"];
-    _unitPosition = getPos _unit;
-
-    _distance = _unitPosition distance (_vehicle modelToWorldVisual _selectionPosition);
+    private _unitPosition = getPos _unit;
+    private _distance = _unitPosition distance (_vehicle modelToWorldVisual _selectionPosition);
 
     if (!isNil "_selectionPosition2") then {
         _distance = _distance min (_unitPosition distance (_vehicle modelToWorldVisual _selectionPosition2));

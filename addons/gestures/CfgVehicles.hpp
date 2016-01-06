@@ -10,7 +10,7 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 3.5;
                 icon = PATHTOF(UI\gestures_ca.paa);
-                
+
                 class GVAR(Advance) {
                     displayName = CSTRING(BIgestureAdvance);
                     condition = QUOTE(canStand _target);
@@ -116,7 +116,6 @@ class CfgVehicles {
                     statement = QUOTE(_target playActionNow ([ARR_2('gestureYes','gestureNod')] select floor random 2););
                     showDisabled = 1;
                     priority = 1.1;
-                    hotkey = "8";
                 };
 
                 class class GVAR(No) {
@@ -125,7 +124,6 @@ class CfgVehicles {
                     statement = QUOTE(_target playActionNow 'gestureNo';);
                     showDisabled = 1;
                     priority = 1.0;
-                    hotkey = "9";
                 };
 
                 class class GVAR(Hi) {
@@ -134,7 +132,6 @@ class CfgVehicles {
                     statement = QUOTE(_target playActionNow ([ARR_3('gestureHi','gestureHiB','gestureHiC')] select floor random 3););
                     showDisabled = 1;
                     priority = 0.9;
-                    hotkey = "0";
                 };
                 */
 

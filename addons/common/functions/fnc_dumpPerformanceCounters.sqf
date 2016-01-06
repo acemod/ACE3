@@ -19,8 +19,7 @@ if (!isNil "ACE_PFH_COUNTER") then {
     {
         _x params ["_pfh", "_parameters"];
 
-        private "_isActive";
-        _isActive = ["ACTIVE", "REMOVED"] select isNil {CBA_common_PFHhandles select (_pfh select 0)};
+        private _isActive = ["ACTIVE", "REMOVED"] select isNil {CBA_common_PFHhandles select (_pfh select 0)};
 
         diag_log text format ["Registered PFH: id=%1 [%2, delay %3], %4:%5", _pfh select 0, _isActive, _parameters select 1, _pfh select 1, _pfh select 2]; 
         false
@@ -31,20 +30,18 @@ diag_log text format ["ACE COUNTER RESULTS"];
 diag_log text format ["-------------------------------------------"];
 
 {
-    private ["_counterEntry", "_iter", "_total", "_count", "_averageResult", "_delta"];
-
-    _counterEntry = _x;
-    _iter = 0;
-    _total = 0;
-    _count = 0;
-    _averageResult = 0;
+    private _counterEntry = _x;
+    private _iter = 0;
+    private _total = 0;
+    private _count = 0;
+    private _averageResult = 0;
 
     if (count _counterEntry > 3) then {
         // calc
         {
             if (_iter > 2) then {
                 _count = _count + 1;
-                _delta = (_x select 1) - (_x select 0);
+                private _delta = (_x select 1) - (_x select 0);
                 
                 _total = _total + _delta;
             };
@@ -69,8 +66,7 @@ diag_log text format ["-------------------------------------------"];
 diag_log text format["ACE_PERFORMANCE_EXCESSIVE_STEP_TRACKER"];
 diag_log text format["-------------------------------------------"];
 {
-    private["_delay"];
-    _delay = _x select 2;
+    private _delay = _x select 2;
     //if(_delay > 0) then { _delay = _delay / 1000; };
     
     diag_log text format["%1: %2s, delay=%3, handle=%4",(_x select 0), _delay, (_x select 3), (_x select 4)];
@@ -80,8 +76,7 @@ diag_log text format["-------------------------------------------"];
 diag_log text format["ACE_PERFORMANCE_EXCESSIVE_FRAME_TRACKER"];
 diag_log text format["-------------------------------------------"];
 {
-    private["_delta"];
-    _delta = _x select 1;
+    private _delta = _x select 1;
     //if(_delta > 0) then { _delta = _delta / 1000; };
     diag_log text format["  DELTA: %1s", _delta];
 } forEach ACE_PERFORMANCE_EXCESSIVE_FRAME_TRACKER;

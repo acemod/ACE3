@@ -72,10 +72,10 @@ if (_selection in HEAD_SELECTIONS) exitWith {"head"};
 if (_selection in TORSO_SELECTIONS) exitWith {"body"};
 
 // Not necessary unless we get more hitpoints variants in an next arma update
-/*if (_selection in L_ARM_SELECTIONS) exitwith {"hand_l"};
-if (_selection in R_ARM_SELECTIONS) exitwith {"hand_r"};
-if (_selection in L_LEG_SELECTIONS) exitwith {"leg_l"};
-if (_selection in R_LEG_SELECTIONS) exitwith {"leg_r"};*/
+/*if (_selection in L_ARM_SELECTIONS) exitWith {"hand_l"};
+if (_selection in R_ARM_SELECTIONS) exitWith {"hand_r"};
+if (_selection in L_LEG_SELECTIONS) exitWith {"leg_l"};
+if (_selection in R_LEG_SELECTIONS) exitWith {"leg_r"};*/
 
 //Backup method to detect weird selections/hitpoints
 if ((_selection == "?") || {!(_selection in GVAR(SELECTIONS))}) exitWith {
