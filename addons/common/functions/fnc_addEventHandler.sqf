@@ -15,17 +15,15 @@
 
 params ["_eventName", "_eventCode"];
 
-private ["_eventNames", "_eventFunctions", "_eventIndex"];
+GVAR(events) params ["_eventNames"];
 
-_eventNames = GVAR(events) select 0;
-_eventFunctions = [];
-_eventIndex = _eventNames find _eventName;
+private _eventFunctions = [];
+private _eventIndex = _eventNames find _eventName;
 
 if (_eventIndex != -1) then {
     _eventFunctions = (GVAR(events) select 1) select _eventIndex;
 } else {
-    private "_eventNameCount";
-    _eventNameCount = count _eventNames;
+    private _eventNameCount = count _eventNames;
 
     _eventNames set [_eventNameCount, _eventName];
     (GVAR(events) select 1) set [_eventNameCount, _eventFunctions];

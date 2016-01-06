@@ -21,9 +21,7 @@ if (HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     false
 };
 
-private ["_eventId", "_data"];
-
-_eventId = [_name, FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
-_data = [_handler, [], _ttl, _eventId];
+private _eventId = [_name, FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+private _data = [_handler, [], _ttl, _eventId];
 
 HASH_SET(GVAR(syncedEvents),_name,_data);

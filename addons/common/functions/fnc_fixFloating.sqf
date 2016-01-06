@@ -12,15 +12,13 @@
  */
 #include "script_component.hpp"
 
-private "_object";
-_object = _this;
+params ["_object"];
 
 // setHitPointDamage requires local object
 if (!local _object) exitWith {};
 
 // save and restore hitpoints, see below why
-private "_hitPointDamages";
-_hitPointDamages = getAllHitPointsDamage _object;
+private _hitPointDamages = getAllHitPointsDamage _object;
 
 // get correct format for objects without hitpoints
 if (_hitPointDamages isEqualTo []) then {

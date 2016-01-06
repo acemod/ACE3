@@ -16,16 +16,14 @@
 
 params ["_interval", "_maxDistance", "_minDistance"];
 
-private ["_position", "_laser", "_line", "_distance", "_iteration"];
-
-_position = ATLToASL positionCameraToWorld [0, 0, 0];
+private _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];
 
-_laser = + _position;
-_line = [_position, _laser];
+private _laser = + _position;
+private _line = [_position, _laser];
 
-_distance = _maxDistance;
-_iteration = _distance;
+private _distance = _maxDistance;
+private _iteration = _distance;
 
 while {
     _iteration > _interval / 2
