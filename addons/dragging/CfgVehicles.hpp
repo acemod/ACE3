@@ -85,7 +85,7 @@ class CfgVehicles {
     };
 
     // Barrier
-    class RoadCone_F: thingX {
+    class RoadCone_F: ThingX {
         XEH_ENABLED;
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};

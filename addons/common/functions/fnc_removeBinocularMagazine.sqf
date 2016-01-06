@@ -23,5 +23,5 @@ private _selectBinocular = currentWeapon _unit == _binocular;
 _unit addWeapon _binocular;
 
 if (_selectBinocular) then {
-	_unit selectWeapon _binocular;
+    _unit selectWeapon _binocular;
 };

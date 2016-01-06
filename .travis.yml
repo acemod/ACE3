@@ -1,6 +1,7 @@
 branches:
   only:
-  - master
+   - master
+   - release
 language: python
 python:
 - '3.4'
@@ -19,12 +20,10 @@ env:
   - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
 notifications:
   slack:
-    secure: aWYF/YX7vxEdXJ5w1jhYJQ2TtTP2NRdnXzJDMYXTv2dlXYhO9qp2qjxDGW3dezuPY7B1mPBgebfSKRx3Robkt1rAfEwPWivOiEztL30rwzOy+5Q1wpORv1JkvTC/q2wqQzxQCU/FPVjD2GkF1wtq1Rnx3ESWD8gbvzYoMNdIw1g=
-    on_success: change
-    on_failure: always
-    on_start: never
     rooms:
-      secure: MvxmqL1NGwiGTVv6uIVTM7jeNLQH95KYtTgSWlXaSw4jdjnf4cmrb/ofHQ3FHhhNVdhRN6W8n0cJfTC3DBZ90bionVh+528qw2mDnDbKljVdIwmoFSexBcH7H1uTLF3gsEz0tbrHtLcnAyTMxdjsdIXDLZ5hwxABNmW5/03jOgs=
+     - secure: byZMNBl8PMlgjT9NA1WmhgCdGfX4b3g1kA0vEiwfm+IFNlx7BiM4J/5rp6zV/jV470xl/epAejx2tsa5SdTyFbO87NH63ILJSt5QnjUZjRuGKSutFs9WE671DtZkPRSJXHS4N6x802PRkyBz/84/lsc34FWvHvjwOuYAtOcJRFk=
+     - secure: V22TNaLWV+yUNWqR7c6HVvIxkRDz7Dyz9xqa43FY8iFgvNL4Q/X69h5DYHU/ILNFM00tx8OBjtPRbcjWQ+F6eY8Sje/A2axJAU+qNurAvoyiTahXUprdUUpPdkgXWuSRTZ9kALxOq5e11RC8XUietghoMcl8zPcqdrZCOOKgoEM=
+    on_success: change
   email:
     on_success: never
     on_failure: change

@@ -37,7 +37,6 @@ _effects set [BROKEN, true];
 SETGLASSES(_unit,_effects);
 
 if (getText (_config >> "ACE_OverlayCracked") != "") then {
-    if (GVAR(showInThirdPerson)) exitWith {};
     if (call FUNC(ExternalCamera)) exitWith {};
 
     if (isNull (GLASSDISPLAY)) then {

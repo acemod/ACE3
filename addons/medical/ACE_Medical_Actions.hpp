@@ -16,7 +16,6 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     // Advanced medical
@@ -28,7 +27,6 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -95,7 +93,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         enableInside = 1;
         icon = PATHTOF(UI\icons\bandage.paa);
     };
@@ -107,7 +104,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
     };
     class TriageCard {
@@ -118,7 +114,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
         icon = PATHTOF(UI\icons\triageCard.paa);
     };
@@ -130,7 +125,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = "";
     };
 
@@ -143,7 +137,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
         icon = PATHTOF(UI\icons\bandage.paa);
     };
@@ -208,7 +201,6 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -221,7 +213,6 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -366,7 +357,6 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -379,7 +369,6 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -521,7 +510,6 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -535,7 +523,6 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -664,7 +651,6 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -678,7 +664,6 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
