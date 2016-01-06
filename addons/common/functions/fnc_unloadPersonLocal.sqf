@@ -17,9 +17,8 @@
 params ["_unit", "_vehicle"];
 TRACE_2("params",_unit,_vehicle);
 
-private ["_validVehiclestate", "_emptyPos", "_loaded"];
-
-_validVehiclestate = true;
+private _validVehiclestate = true;
+private _emptyPos = [];
 
 if (_vehicle isKindOf "Ship") then {
     if (speed _vehicle > 1 || {getPos _vehicle select 2 > 2}) then {
@@ -78,8 +77,7 @@ _unit action ["Eject", vehicle _unit];
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
 
         if (driver _unit == _unit) then {
-            private "_anim";
-            _anim = [_unit] call FUNC(getDeathAnim);
+            private _anim = [_unit] call FUNC(getDeathAnim);
 
             [_unit, _anim, 1, true] call FUNC(doAnimation);
 
@@ -96,7 +94,7 @@ _unit action ["Eject", vehicle _unit];
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
+private _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
 _loaded deleteAt (_loaded find _unit);
 
 _vehicle setVariable [QGVAR(loaded_persons), _loaded, true];

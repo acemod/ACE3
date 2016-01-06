@@ -6,9 +6,8 @@ if (!hasInterface) exitWith {};
 ["inventoryDisplayLoaded", {
 
     [{
-        private "_dialog";
-
-        _dialog = _this select 0;
+        disableSerialization;
+        params ["_dialog"];
 
         if (isNull _dialog) exitWith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;

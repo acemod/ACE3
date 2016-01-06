@@ -10,9 +10,11 @@
  * has Magazine <BOOL>
  *
  * Public: yes
+ *
+ * Note: Case sensitive
  */
 #include "script_component.hpp"
 
-params ["_unit", "_magazine"];
+params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
 _magazine in magazines _unit // return

@@ -16,8 +16,7 @@
 // setVectorUp requires local object
 if (!local _this) exitWith {};
 
-private "_position";
-_position = getPos _this;
+private _position = getPos _this;
 
 // don't place the object below the ground
 if (_position select 2 < -0.1) then {

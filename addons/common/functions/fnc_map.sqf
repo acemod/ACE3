@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_array", "_code"];
+params [["_array", [], [[]]], ["_code", {}, [{}]]];
 
 // copy array to not alter the original one
 _array = + _array;

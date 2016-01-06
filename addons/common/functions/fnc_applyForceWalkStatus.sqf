@@ -17,7 +17,6 @@
 
 params ["_unit"];
 
-private "_forceWalkNumber";
-_forceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
+private _forceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
 
 _unit forceWalk (_forceWalkNumber > 0);

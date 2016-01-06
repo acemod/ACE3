@@ -12,23 +12,22 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
-private ["_turrets", "_turret", "_config"];
+private _turrets = allTurrets [_vehicle, true];
 
-_turrets = allTurrets [_vehicle, true];
-
-_turret = [];
+private _turret = [];
 
 {
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-    if (  getNumber (_config >> "isCopilot") != 1
-      && {getNumber (_config >> "primaryGunner") != 1}
-      && {getNumber (_config >> "primaryObserver") != 1}
-      && {getNumber (_config >> "isPersonTurret") != 1}
+    if (
+        getNumber (_config >> "isCopilot") != 1
+        && {getNumber (_config >> "primaryGunner") != 1}
+        && {getNumber (_config >> "primaryObserver") != 1}
+        && {getNumber (_config >> "isPersonTurret") != 1}
     ) then {
         _turret pushBack _x;
     };

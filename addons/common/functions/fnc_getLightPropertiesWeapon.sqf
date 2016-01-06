@@ -18,16 +18,12 @@
 
 params ["_weapon"];
 
-// @todo: Can weapons themselves still have flashlights (no attachment)?
+private _config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";
 
-private ["_config", "_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
-
-_config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";
-
-_intensity = getNumber (_config >> "intensity");
-_position = getText (_config >> "position");
-_direction = getText (_config >> "direction");
-_innerAngle = getNumber (_config >> "innerAngle");
-_outerAngle = getNumber (_config >> "outerAngle");
+private _intensity = getNumber (_config >> "intensity");
+private _position = getText (_config >> "position");
+private _direction = getText (_config >> "direction");
+private _innerAngle = getNumber (_config >> "innerAngle");
+private _outerAngle = getNumber (_config >> "outerAngle");
 
 [_intensity, _position, _direction, _innerAngle, _outerAngle]

@@ -13,10 +13,9 @@
 
 #define COUNT_BARS 12
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
 
-private ["_target"];
-_target = vehicle _unit;
+private _target = vehicle _unit;
 
 if (count _this > 1) then {
     _target = _this select 1;

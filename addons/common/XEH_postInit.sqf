@@ -80,8 +80,7 @@ if (isServer) then {
     params ["_name", "_value", "_force"];
 
     if (_force) then {
-        private "_settingData";
-        _settingData = [_name] call FUNC(getSettingData);
+        private _settingData = [_name] call FUNC(getSettingData);
 
         if (_settingData isEqualTo []) exitWith {};
 
@@ -162,10 +161,8 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 // Check files, previous installed version etc.
 //////////////////////////////////////////////////
 
-private ["_currentVersion", "_previousVersion"];
-
-_currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
-_previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
+private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
@@ -269,8 +266,7 @@ GVAR(ScrollWheelFrame) = diag_frameno;
 }] call FUNC(addEventHandler);
 
 // add PFH to execute event that fires when the main display (46) is created
-private "_fnc_initMainDisplayCheck";
-_fnc_initMainDisplayCheck = {
+private _fnc_initMainDisplayCheck = {
     [{
         if !(isNull findDisplay 46) then {
             // Raise ACE event locally
@@ -344,7 +340,7 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     BEGIN_COUNTER(stateChecker);
 
     // "playerChanged" event
-    private _data = call FUNC(player); // reuse one variable to reduce number of variables that have to be set to private each frame
+    private _data = call FUNC(player);
     if !(_data isEqualTo ACE_player) then {
         private _oldPlayer = ACE_player;
 

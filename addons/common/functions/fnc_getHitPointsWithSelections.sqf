@@ -19,8 +19,7 @@ ACE_DEPRECATED("ace_common_fnc_getHitPointsWithSelections","3.5.0","getAllHitPoi
 
 params ["_vehicle"];
 
-private "_hitPointsWithSelections";
-_hitPointsWithSelections = getAllHitPointsDamage _vehicle;
+private _hitPointsWithSelections = getAllHitPointsDamage _vehicle;
 
 // get correct format on vehicles without any hitpoints
 if (_hitPointsWithSelections isEqualTo []) then {

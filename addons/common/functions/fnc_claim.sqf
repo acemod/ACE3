@@ -16,8 +16,7 @@
 
 params ["_unit", "_target", ["_lockTarget", false]];
 
-private "_owner";
-_owner = _target getVariable [QGVAR(owner), objNull];
+private _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
     ACE_LOGERROR("Claiming already owned object.");
