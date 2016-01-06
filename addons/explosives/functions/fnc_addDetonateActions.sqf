@@ -43,10 +43,10 @@ _explosivesList = [];
                         {(_this select 2) call FUNC(detonateExplosive);},
                         {true},
                         {},
-                        [ACE_player,_range,_x]
+                        [_unit,_range,_x]
                     ] call EFUNC(interact_menu,createAction),
                     [],
-                    ACE_Player
+                    _unit
                 ];
         };
     };
@@ -62,10 +62,10 @@ if (count _explosivesList > 0) then {
             {(_this select 2) call FUNC(detonateExplosiveAll);},
             {true},
             {},
-            [ACE_player,_range,_explosivesList]
+            [_unit,_range,_explosivesList]
         ] call EFUNC(interact_menu,createAction),
         [],
-        ACE_Player
+        _unit
     ];
 };
 
