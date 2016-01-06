@@ -94,8 +94,16 @@ _unit setUnitPos "DOWN";
 if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
     [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 };
+// Delay Unconscious so the AI dont instant stop shooting on the unit #3121
+if (GVAR(delayUnconCaptive) == 0) then {
+    [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+} else {
+    [{
+        [_this select 0, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+    },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
+};
 
-[_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{

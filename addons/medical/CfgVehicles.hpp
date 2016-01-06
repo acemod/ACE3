@@ -138,6 +138,13 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+
+            class delayUnconCaptive {
+                displayName = CSTRING(MedicalSettings_delayUnconCaptive_DisplayName);
+                description = CSTRING(MedicalSettings_delayUnconCaptive_Description);
+                typeName = "NUMBER";
+                defaultValue = 10;
+            }
         };
 
         class ModuleDescription {

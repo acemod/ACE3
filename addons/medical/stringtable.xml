@@ -3880,5 +3880,14 @@
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
             <Czech>Žádné škrtidlo na této části těla!</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_delayUnconCaptive">
+            <English>Todo</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
+            <English>Todo</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
+            <English>Todo</English>
+        </Key>
     </Package>
 </Project>
