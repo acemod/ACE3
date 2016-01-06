@@ -38,12 +38,12 @@ if (_maxAmmo == 0) exitWith {};
 
 // Condition to call each frame
 private _condition = {
-    EXPLODE_2_PVT((_this select 0),_player,_target);
+    (_this select 0) params ["_player", "_target"];
     ([_player, _target, []] call EFUNC(common,canInteractWith)) && ((_player distance _target) < 3) && ((speed _target) < 1)
 };
 
 private _onFinish = {
-    EXPLODE_3_PVT((_this select 0),_player,_target,_magazine);
+    (_this select 0) params ["_player", "_target", "_magazine"];
 
     // Raise event on remote unit
     ["linkedAmmo", [_target], [_target, _player, _magazine]] call EFUNC(common,targetEvent);

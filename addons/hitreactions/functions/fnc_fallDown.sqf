@@ -113,6 +113,6 @@ private _anim = call {
 if (_anim == "") exitWith {};
 
 // don't mess with transitions. don't fall then.
-if !(_unit call EFUNC(common,inTransitionAnim)) then {
+if !([_unit] call EFUNC(common,inTransitionAnim)) then {
     [_unit, _anim, 2] call EFUNC(common,doAnimation);
 };

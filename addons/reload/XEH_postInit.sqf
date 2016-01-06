@@ -20,7 +20,9 @@ if (!hasInterface) exitWith {};
 
 ["setAmmoSync", {
     //To propagate the setAmmo change, do it on all clients
-    PARAMS_3(_unit,_weapon,_ammo);
+    params ["_unit", "_weapon", "_ammo"];
+    TRACE_3("setAmmoSync EH",_unit,_weapon,_ammo);
+
     _unit setAmmo [_weapon, _ammo];
 }] call EFUNC(common,addEventhandler);
 
@@ -55,7 +57,8 @@ if (!hasInterface) exitWith {};
 
 // Listen for returned magazines
 ["returnedAmmo", {
-    EXPLODE_3_PVT(_this,_receiver,_giver,_magazine);
+    params ["_receiver", "", "_magazine"];
+    TRACE_2("returnedAmmo EH",_receiver,_magazine);
 
     _receiver addMagazine _magazine;
 }] call EFUNC(common,addEventhandler);
