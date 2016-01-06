@@ -28,7 +28,7 @@ if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
 EGVAR(weather,WindInfo) = false;
-0 cutText ["", "PLAIN"];
+(["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 GVAR(Protractor) = true;
 
 [{
