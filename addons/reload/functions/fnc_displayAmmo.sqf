@@ -12,7 +12,7 @@
 
 #define COUNT_BARS 12
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
 private _weapon = currentWeapon _target;
 private _muzzle = currentMuzzle _target;
