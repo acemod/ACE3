@@ -30,13 +30,15 @@ if (toLower _weapon in ["throw", "put"]) exitWith {};
 private _powerMod = ([0, -0.1, -0.1, 0, -0.2] select (["STAND", "CROUCH", "PRONE", "UNDEFINED", ""] find stance _unit)) + ([0, -1, 0, -1] select (["INTERNAL", "EXTERNAL", "GUNNER", "GROUP"] find cameraView));
 
 // to get camshake read kickback
-private _recoil = missionNamespace getVariable [format [QGVAR(%1-%2), _weapon, _muzzle], []];
-if (_recoil isEqualTo []) then {
+private _recoil = missionNamespace getVariable format [QGVAR(%1-%2), _weapon, _muzzle];
+
+if (isNil "_recoil") then {
     private _config = configFile >> "CfgWeapons" >> _weapon;
-    _recoil = if (_muzzle == _weapon) then {
-        getText (_config >> "recoil")
+
+    if (_muzzle == _weapon) then {
+        _recoil = getText (_config >> "recoil")
     } else {
-        getText (_config >> _muzzle >> "recoil")
+        _recoil = getText (_config >> _muzzle >> "recoil")
     };
 
     if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
@@ -53,7 +55,6 @@ if (_recoil isEqualTo []) then {
     // parse numbers
     _recoil set [0, call compile format ["%1", _recoil select 0]];
     _recoil set [1, call compile format ["%1", _recoil select 1]];
-
 
     missionNamespace setVariable [format [QGVAR(%1-%2), _weapon, _muzzle], _recoil];
 };
