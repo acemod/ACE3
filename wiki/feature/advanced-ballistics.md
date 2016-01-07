@@ -68,7 +68,7 @@ It is probably best to modify an example that's close to the bullet you are tryi
 
  - `ACE_bulletMass=4.0176;`
 
-    Mass in grams (example is roughly 62 gains)
+    Mass in grams (example is roughly 62 grains)
 
  - `ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};`
 
