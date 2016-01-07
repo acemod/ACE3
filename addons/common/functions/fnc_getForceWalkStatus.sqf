@@ -17,15 +17,11 @@
 
 params ["_unit"];
 
-private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
+private _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
+private _unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
+private _unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
 
-_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
-
-_unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
-
-_unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
-
-_unitForceWalkReasons = [];
+private _unitForceWalkReasons = [];
 
 {
     if (_unitForceWalkStatus select _forEachIndex) then {

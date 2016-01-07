@@ -17,14 +17,12 @@
 
 params ["_grenade"];
 
-private ["_affected", "_strength", "_posGrenade", "_eyePos", "_losCount", "_eyeDir", "_dirToUnitVector", "_angleDiff", "_light"];
-
-_affected = _grenade nearEntities ["CAManBase", 20];
+private _affected = _grenade nearEntities ["CAManBase", 20];
 
 {
     if (local _x && {alive _x}) then {
 
-        _strength = 1 - ((_x distance _grenade) min 15) / 15;
+        private _strength = 1 - ((_x distance _grenade) min 15) / 15;
 
         TRACE_3("FlashBangEffect Start",_x,(_x distance _grenade),_strength);
 
@@ -47,12 +45,12 @@ _affected = _grenade nearEntities ["CAManBase", 20];
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
-            _posGrenade = getPosASL _grenade;
-            _eyePos = eyePos ACE_player; //PositionASL
+            private _posGrenade = getPosASL _grenade;
+            private _eyePos = eyePos ACE_player; //PositionASL
             _posGrenade set [2, (_posGrenade select 2) + 0.2]; // compensate for grenade glitching into ground
 
             //Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
-            _losCount = {
+            private _losCount = {
                 !lineIntersects [_posGrenade vectorAdd _x, _eyePos, _grenade, ACE_player]
             } count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
 
@@ -68,9 +66,9 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             // account for people looking away by slightly
             // reducing the effect for visual effects.
-            _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
-            _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
-            _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
+            private _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
+            private _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+            private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 
             // from 0-45deg, full effect
             if (_angleDiff > 45) then {
@@ -85,7 +83,8 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             };
 
             // create flash to illuminate environment
-            _light = "#lightpoint" createVehicleLocal (getPos _grenade);
+            private _light = "#lightpoint" createVehicleLocal getPos _grenade;
+
             _light setLightBrightness 200;
             _light setLightAmbient [1,1,1];
             _light setLightColor [1,1,1];

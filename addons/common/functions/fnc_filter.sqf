@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-params ["_array", "_code"];
+params [["_array", [], [[]]], ["_code", {}, [{}]]];
 
-private "_result";
-_result = [];
+private _result = [];
 
 {
     if (_x call _code) then {

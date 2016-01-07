@@ -15,10 +15,8 @@
  */
 #include "script_component.hpp"
 
-private "_animations";
-
 // Animations Pool
-_animations = [
+private _animations = [
     QGVAR(HubSittingChairA_idle1),
     QGVAR(HubSittingChairA_idle2),
     QGVAR(HubSittingChairA_idle3),

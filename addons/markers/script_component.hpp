@@ -10,3 +10,12 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define CHANNEL_NAMES [ \
+    localize "str_channel_global", \
+    localize "str_channel_side", \
+    localize "str_channel_command", \
+    localize "str_channel_group", \
+    localize "str_channel_vehicle", \
+    localize "str_channel_direct" \
+]

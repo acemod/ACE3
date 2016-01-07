@@ -20,9 +20,7 @@ if (!alive _unit) then {
     // _unit = [_unit, _caller] call FUNC(makeCopyOfBody); //func does not exist
 };
 
-private "_slotsOpen";
-
-_slotsOpen = false;
+private _slotsOpen = false;
 
 if (_vehicle emptyPositions "cargo" > 0) then {
     _unit moveInCargo _vehicle;
@@ -35,8 +33,7 @@ if (_vehicle emptyPositions "cargo" > 0) then {
 };
 
 if (_slotsOpen) then {
-    private "_loaded";
-    _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
+    private _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
     _loaded pushBack _unit;
 
     _vehicle setVariable [QGVAR(loaded_persons), _loaded, true];

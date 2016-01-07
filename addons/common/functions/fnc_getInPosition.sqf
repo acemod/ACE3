@@ -25,15 +25,13 @@ _position = toLower _position;
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
 
-private ["_config", "_turret", "_isInside", "_script", "_enemiesInVehicle"];
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _turret = [];
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_turret = [];
+private _isInside = vehicle _unit == _vehicle;
 
-_isInside = vehicle _unit == _vehicle;
-
-_script = {};
-_enemiesInVehicle = false;   //Possible Side Restriction
+private _script = {};
+private _enemiesInVehicle = false;   //Possible Side Restriction
 
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
@@ -96,8 +94,7 @@ switch (_position) do {
     };
 
     case "turret" : {
-        private "_turrets";
-        _turrets = [_vehicle] call FUNC(getTurretsOther);
+        private _turrets = [_vehicle] call FUNC(getTurretsOther);
 
         if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
             _script = [
@@ -122,8 +119,7 @@ switch (_position) do {
     };
 
     case "ffv" : {
-        private "_turrets";
-        _turrets = [_vehicle] call FUNC(getTurretsFFV);
+        private _turrets = [_vehicle] call FUNC(getTurretsFFV);
 
         if (_index != -1 && {_turret = _turrets select _index; CANGETINTURRETINDEX}) then {
             _script = [
@@ -148,8 +144,7 @@ switch (_position) do {
     };
 
     case "codriver" : {
-        private "_positions";
-        _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
+        private _positions = [typeOf _vehicle] call FUNC(getVehicleCodriver);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};
@@ -207,11 +202,9 @@ switch (_position) do {
 };
 
 // this will execute all config based event handlers. Not script based ones unfortunately, but atleast we don't use any.
-private "_fnc_getInEH";
-_fnc_getInEH = {
-    private "_config";
+private _fnc_getInEH = {
     // config based getIn EHs are assigned to the soldier, not the vehicle. Why Bis? Why?
-    _config = configFile >> "CfgVehicles" >> typeOf _unit >> "EventHandlers";
+    private _config = configFile >> "CfgVehicles" >> typeOf _unit >> "EventHandlers";
 
     if (isClass _config) then {
         //getIn is local effects with global arguments. It doesn't trigger if the unit was already inside and only switched seats

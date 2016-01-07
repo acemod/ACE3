@@ -26,4 +26,4 @@ _class = _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehic
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
 if (_class isEqualType false) then {_class = [0, 1] select _class};
 
-_class >= (_engineerN min GVAR(engineerSetting_Repair));
+_class >= _engineerN;

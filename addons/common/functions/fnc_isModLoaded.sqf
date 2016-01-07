@@ -12,6 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["_modName"];
+params [["_modName", "", [""]]];
 
 isClass (configFile >> "CfgPatches" >> _modName) // return
