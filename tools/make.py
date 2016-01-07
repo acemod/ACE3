@@ -975,6 +975,18 @@ See the make.cfg file for additional build options.
         print ("No cache found.")
         cache = {}
 
+    # Check the ace build version (from main) with cached version - Forces a full rebuild when version changes
+    aceVersion = get_project_version()
+    cacheVersion = "None";
+    if 'cacheVersion' in cache:
+        cacheVersion = cache['cacheVersion']
+
+    if (aceVersion != cacheVersion):
+        cache = {}
+        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, aceVersion))
+        cache['cacheVersion'] = aceVersion
+
+
     if not os.path.isdir(os.path.join(release_dir, project, "addons")):
         try:
             os.makedirs(os.path.join(release_dir, project, "addons"))
