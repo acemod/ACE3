@@ -10,3 +10,7 @@ if(isServer) then {
 };
 
 [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+
+//Cache for ammo type configs
+GVAR(cacheRoundsTypesToTrack) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(cacheRoundsTypesToTrack) setText QGVAR(cacheRoundsTypesToTrack);
