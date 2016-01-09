@@ -90,9 +90,8 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
                     [_helperObject, 0, [], _x] call EFUNC(interact_menu,addActionToObject);
                     nil
                 } count (_memPointsActions select _forEachIndex);
-                
-                nil
-            } count _memPoints;
+
+            } forEach _memPoints;
         };
     };
 }, 0, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], [], []]] call CBA_fnc_addPerFrameHandler;
