@@ -97,7 +97,7 @@ Calls an event only on the target machine or list of target machines.
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
 0  | Event name | String | Required
-1  | Target | Object OR Array | Required
+1  | Target(s) | Object OR Array | Required
 2  | Arguments | Any | Required
 **R** | None | None | Return value
 
