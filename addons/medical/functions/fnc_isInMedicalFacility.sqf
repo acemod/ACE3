@@ -8,18 +8,23 @@
  * ReturnValue:
  * Is in medical facility <BOOL>
  *
+ * Example:
+ * [player] call ace_medical_fnc_isInMedicalFacility
+ *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_eyePos", "_objects", "_isInBuilding", "_medicalFacility"];
 params ["_unit"];
 
-_eyePos = eyePos _unit;
-_isInBuilding = false;
+//Cache the results as this function could be called rapidly
+(_unit getVariable [QGVAR(cacheInFacility), [-9, false]]) params ["_expireTime", "_lastResult"];
+if (ACE_time < _expireTime) exitWith {_lastResult};
 
-_medicalFacility =
+private _eyePos = eyePos _unit;
+private _isInBuilding = false;
+
+private _medicalFacility =
     [
         "TK_GUE_WarfareBFieldhHospital_Base_EP1",
         "TK_GUE_WarfareBFieldhHospital_EP1",
@@ -37,18 +42,22 @@ _medicalFacility =
         "USMC_WarfareBFieldhHospital"
     ];
 
-_objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos select 2)], _unit modelToWorldVisual [0, 0, (_eyePos select 2) +10], _unit]);
+private _objects = (lineIntersectsWith [_unit modelToWorldVisual [0, 0, (_eyePos select 2)], _unit modelToWorldVisual [0, 0, (_eyePos select 2) +10], _unit]);
 {
     if (((typeOf _x) in _medicalFacility) || (_x getVariable [QGVAR(isMedicalFacility),false])) exitWith {
         _isInBuilding = true;
     };
 } forEach _objects;
 if (!_isInBuilding) then {
-    _objects = position _unit nearObjects 7.5;
+    _objects = _unit nearObjects 7.5;
     {
         if (((typeOf _x) in _medicalFacility) || (_x getVariable [QGVAR(isMedicalFacility),false])) exitWith {
             _isInBuilding = true;
         };
     } forEach _objects;
 };
+
+//Save the results (with a 1 second expiry)
+_unit setVariable [QGVAR(cacheInFacility), [ACE_time + 1, _isInBuilding]];
+
 _isInBuilding;
