@@ -40,19 +40,28 @@ if (_leave) exitWith {
 // should switch locality
 // This doesn't work anymore, because one's now able to switch to units from a different side
 //[_unit] joinSilent group player;
-[[_unit, player], QUOTE({(_this select 0) setVariable [ARR_3(QUOTE(QGVAR(OriginalOwner)), owner (_this select 0), true)]; (_this select 0) setOwner owner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
+[
+    [_unit, player],
+    QUOTE({
+        (_this select 0) setVariable [ARR_3(QUOTE(QGVAR(OriginalOwner)), owner (_this select 0), true)];
+        (_this select 0) setOwner owner (_this select 1)
+    }),
+    1
+] call EFUNC(common,execRemoteFnc);
 
 [{
     params ["_args", "_pfhId"];
     _args params ["_unit", "_oldUnit"];
 
+    [localize LSTRING(TryingToSwitch)] call EFUNC(common,displayTextStructured);
+
     if (local _unit) exitWith {
         _oldUnit setVariable [QGVAR(IsPlayerControlled), false, true];
         _oldUnit setVariable [QGVAR(PlayerControlledName), "", true];
 
-        private _respawnEhId = _unit getVariable [QGVAR(RespawnEhId), -1];
-        if (_respawnEhId != -1) then {
-            _oldUnit removeEventHandler ["Respawn", _respawnEhId];
+        private _killedEhId = _unit getVariable [QGVAR(KilledEhId), -1];
+        if (_killedEhId != -1) then {
+            _oldUnit removeEventHandler ["Killed", _killedEhId];
         };
 
         selectPlayer _unit;
@@ -60,15 +69,22 @@ if (_leave) exitWith {
         _unit setVariable [QGVAR(IsPlayerControlled), true, true];
         _unit setVariable [QGVAR(PlayerControlledName), GVAR(OriginalName), true];
 
-        _respawnEhId = _unit addEventHandler ["Respawn", {
+
+        _killedEhId = _unit addEventHandler ["Killed", {
             [GVAR(OriginalUnit), _this select 0] call FUNC(switchBack);
         }];
-        _unit setVariable [QGVAR(RespawnEhId), _respawnEhId, true];
+        _unit setVariable [QGVAR(KilledEhId), _killedEhId, true];
+
 
         // set owner back to original owner
         private _oldOwner = _oldUnit getVariable[QGVAR(OriginalOwner), -1];
         if (_oldOwner > -1) then {
-            [[_oldUnit, _oldOwner], QUOTE({(_this select 0) setOwner (_this select 1)}), 1] call EFUNC(common,execRemoteFnc);
+            [
+                [_oldUnit, _oldOwner],
+                QUOTE({
+                    (_this select 0) setOwner (_this select 1)
+                }), 1
+            ] call EFUNC(common,execRemoteFnc);
         };
 
         [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);
