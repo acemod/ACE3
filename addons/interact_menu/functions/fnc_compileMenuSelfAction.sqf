@@ -15,7 +15,6 @@
 params ["_target"];
 
 private _objectType = _target;
-private _isMan = _target isKindOf "CAManBase";
 if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
@@ -103,14 +102,9 @@ if (_objectType isKindOf "CAManBase") then {
     };
 };
 
-// If the classname inherits from CAManBase, just copy it's menu without recompiling a new one
-private _actions = if (_isMan && {_objectType != "CaManBase"}) then {
-    TRACE_1("badbeef Copying ACE_SelfActions from CAManBase",_objectType);
-    + (missionNamespace getVariable QGVAR(SelfAct_CAManBase))
-} else {
-    TRACE_1("Building ACE_SelfActions",_objectType);
-    // Create a master action to base on self action
-    [
+TRACE_1("Building ACE_SelfActions",_objectType);
+// Create a master action to base on self action
+private _actions = [
         [
             [
                 "ACE_SelfActions",
@@ -129,7 +123,6 @@ private _actions = if (_isMan && {_objectType != "CaManBase"}) then {
             ],
             [_actionsCfg] call _recurseFnc
         ]
-    ]
-};
+    ];
 
 missionNamespace setVariable [_actionsVarName, _actions];
