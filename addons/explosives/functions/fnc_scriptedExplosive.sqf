@@ -11,8 +11,8 @@
  * None
  *
  * Example:
- * [[charge1, charge2, charge3], -1] call ACE_Explosives_fnc_detonateExplosiveTrigger;
- * [[claymore1, claymore2]] call ACE_Explosives_fnc_detonateExplosiveTrigger;
+ * [[charge1, charge2, charge3], -1] call ACE_Explosives_fnc_scriptedExplosive;
+ * [[claymore1, claymore2]] call ACE_Explosives_fnc_scriptedExplosive;
  *
  * Public: Yes
  */
