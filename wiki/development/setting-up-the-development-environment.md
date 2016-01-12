@@ -84,9 +84,9 @@ To create a complete build of ACE that you can use without the source files, run
 
 File Patching allows you to change the files in an addon while the game is running, requiring only a restart of the mission. This makes it great for debugging, as it cuts down the time required between tests. Note that this only works with PBOs created using MakePBO, as outlined in [Creating a Test Build](#creating-a-test-build).
 
-### 7.1 Enabling File Patching
+### 7.1 Disabling CBA funcion caching
 
-There are two ways to enable file patching:
+By default CBA caches a compiled version of functions to reduce mission load times. This interferes with file patching. There are two ways to disable function caching:
 
 - Load cba_cache_disable.pbo (included in CBA's optional folder)
 - Add the following to your test missions description.ext:
@@ -103,7 +103,11 @@ class CfgSettings {
 };
 ```
 
-### 7.2 Restrictions of File Patching
+### 7.2 Running Arma 3 with File Patching enabled
+
+Starting from version 1.50, Arma 3 was changed to disable file patching by default, making the feature opt-in. To execute the game with file patching enabled add the `-filePatching` flag to the command line.
+
+### 7.3 Restrictions of File Patching
 
 Files must exist in the built PBOs for filepatching to work. If you create a new file you must rebuild the PBO or Arma will not find it in your file paths.
 
