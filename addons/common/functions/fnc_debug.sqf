@@ -18,7 +18,7 @@
 
 params ["_msg", ["_level", 2, [0]]];
 
-private _defaultLoglevel = [GVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL] select isNil QGVAR(LOGLEVEL);
+private _defaultLoglevel = missionNamespace getVariable [QGVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL];
 
 if (_defaultLoglevel < 0) exitWith {false};
 
