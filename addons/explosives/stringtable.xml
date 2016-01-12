@@ -613,5 +613,71 @@
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
+          <English>M6 SLAM Mine (Bottom Attack)</English>
+          <!-- <Czech>Mina M6 SLAM</Czech>
+          <French>Mine M6 SLAM</French>
+          <German>M6-SLAM-Mine</German>
+          <Italian>Mina M6 SLAM</Italian>
+          <Polish>Mina M6 SLAM</Polish>
+          <Portuguese>Mina SLAM M6</Portuguese>
+          <Russian>ПТ-мина M6 SLAM</Russian>
+          <Spanish>Mina M6 SLAM</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
+          <English>M6 SLAM Mine (Side Attack)</English>
+          <Czech>Mina M6 SLAM</Czech>
+          <French>Mine M6 SLAM</French>
+          <German>M6-SLAM-Mine</German>
+          <Italian>Mina M6 SLAM</Italian>
+          <Polish>Mina M6 SLAM</Polish>
+          <Portuguese>Mina SLAM M6</Portuguese>
+          <Russian>ПТ-мина M6 SLAM</Russian>
+          <Spanish>Mina M6 SLAM</Spanish>
+        </Key>
+          <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
+            <English>Small IED (Urban, Pressure Plate)</English>
+            <!-- <Czech>Malá nálož (městská)</Czech>
+            <French>Petit engin explosif improvisé (urbain)</French>
+            <German>Kleine USBV (Stadt)</German>
+            <Italian>IED piccolo (urbano)</Italian>
+            <Polish>Mały IED (miasto)</Polish>
+            <Portuguese>AEI pequeno (urbano)</Portuguese>
+            <Russian>Малое СВУ (городское)</Russian>
+            <Spanish>IED pequeño (Urbano)</Spanish> -->
+          </Key>
+          <Key ID="STR_ACE_Explosives_Module_IEDUrbanLarge_Range_DisplayName">
+            <English>Large IED (Urban, Pressure Plate)</English>
+            <!-- <Czech>Velká nálož (městská)</Czech>
+            <French>Grand engin explosif improvisé (urbain)</French>
+            <German>Große USBV (Stadt)</German>
+            <Italian>IED grande (urbano)</Italian>
+            <Polish>Duży IED (miasto)</Polish>
+            <Portuguese>AEI grande (urbano)</Portuguese>
+            <Russian>Большое СВУ (городское)</Russian>
+            <Spanish>IED grande (Urbano)</Spanish> -->
+          </Key>
+          <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
+            <English>Small IED (Dug-in, Pressure Plate)</English>
+            <!-- <Czech>Malá nálož (zakopaná)</Czech>
+            <French>Petit engin explosif improvisé (enterré)</French>
+            <German>Kleine USBV (Eingegraben)</German>
+            <Italian>IED piccolo (interrato)</Italian>
+            <Polish>Mały IED (zakopany)</Polish>
+            <Portuguese>AEI pequeno (entrincheirado)</Portuguese>
+            <Russian>Малое СВУ (зарытое)</Russian>
+            <Spanish>IED pequeño (Enterrado)</Spanish> -->
+          </Key>
+          <Key ID="STR_ACE_Explosives_Module_IEDLandLarge_Range_DisplayName">
+            <English>Large IED (Dug-in, Pressure Plate)</English>
+            <!-- <Czech>Velká nálož (zakopaná)</Czech>
+            <French>Grand engin explosif improvisé (enterré)</French>
+            <German>Große USBV (Eingegraben)</German>
+            <Italian>IED grande (interrato)</Italian>
+            <Polish>Duży IED (zakopany)</Polish>
+            <Portuguese>AEI grande (entrincheirado)</Portuguese>
+            <Russian>Большое СВУ (зарытое)</Russian>
+            <Spanish>IED grande (Enterrado)</Spanish> -->
+          </Key>
     </Package>
 </Project>
