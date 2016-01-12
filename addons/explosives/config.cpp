@@ -37,7 +37,7 @@ class CfgActions {
 
 class CfgMineTriggers {
     class RangeTrigger;
-    class MagneticTrigger: RangeTrigger {
+    class ACE_MagneticTrigger: RangeTrigger {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };

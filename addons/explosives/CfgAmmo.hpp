@@ -44,16 +44,16 @@ class CfgAmmo {
         indirectHitRange = 20;
         ACE_explodeOnDefuse = 1;
     };
-    class SLAMDirectionalMine_Command_Ammo: SLAMDirectionalMine_Wire_Ammo {
+    class ACE_SLAMDirectionalMine_Command_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "RemoteTrigger";
         ACE_explodeOnDefuse = 0;
     };
-    class SLAMDirectionalMine_Timer_Ammo: SLAMDirectionalMine_Wire_Ammo {
+    class ACE_SLAMDirectionalMine_Timer_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "TimeTrigger";
         ACE_explodeOnDefuse = 0;
     };
-    class SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
-        mineTrigger = "MagneticTrigger";
+    class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
+        mineTrigger = "ACE_MagneticTrigger";
     };
 
     class PipeBombBase;
@@ -81,10 +81,10 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
-    class IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
+    class ACE_IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
-    class IEDUrbanBig_Range_Ammo: IEDUrbanBig_Remote_Ammo {
+    class ACE_IEDUrbanBig_Range_Ammo: IEDUrbanBig_Remote_Ammo {
         mineTrigger = "RangeTrigger";
     };
 
@@ -93,11 +93,10 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
-    class IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
+    class ACE_IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
-    class IEDUrbanSmall_Range_Ammo: IEDUrbanSmall_Remote_Ammo {
-        mineTrigger = "RangeTrigger";
+    class ACE_IEDUrbanSmall_Range_Ammo: IEDUrbanSmall_Remote_Ammo {
     };
 
     class IEDLandBig_Remote_Ammo: PipeBombBase {
@@ -105,10 +104,10 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
-    class IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
+    class ACE_IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
-    class IEDLandBig_Range_Ammo: IEDLandBig_Remote_Ammo {
+    class ACE_IEDLandBig_Range_Ammo: IEDLandBig_Remote_Ammo {
         mineTrigger = "RangeTrigger";
     };
 
@@ -117,10 +116,9 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
     };
-    class IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {
+    class ACE_IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
-    class IEDLandSmall_Range_Ammo: IEDLandSmall_Remote_Ammo {
-        mineTrigger = "RangeTrigger";
+    class ACE_IEDLandSmall_Range_Ammo: IEDLandSmall_Remote_Ammo {
     };
 };
