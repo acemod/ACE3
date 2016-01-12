@@ -58,7 +58,7 @@ class CfgMagazines {
         ACE_SetupObject = "ACE_Explosives_Place_SatchelCharge";
         ACE_DelayTime = 1;
         class ACE_Triggers {
-            SupportedTriggers[] = {"Timer","Command", "MK16_Transmitter", "DeadmanSwitch"};
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
             class Timer {
                 FuseTime = 0.5;
             };
@@ -77,7 +77,7 @@ class CfgMagazines {
     class SLAMDirectionalMine_Wire_Mag: ATMine_Range_Mag {
         ACE_SetupObject = "ACE_Explosives_Place_SLAM";
         class ACE_Triggers {
-            SupportedTriggers[] = {"IRSensor","PressurePlate","Timer","Command"};
+            SupportedTriggers[] = {"IRSensor", "PressurePlate", "Timer", "Command", "MK16_Transmitter"};
             class PressurePlate{
                 displayName = CSTRING(SLAME_Magnetic);
                 digDistance = 0;
@@ -94,6 +94,7 @@ class CfgMagazines {
                 ammo = "ACE_SLAMDirectionalMine_Command_Ammo";
                 fuseTime = 0.5;
             };
+            class MK16_Transmitter: Command {};
         };
     };
 
