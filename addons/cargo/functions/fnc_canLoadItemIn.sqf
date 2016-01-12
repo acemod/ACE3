@@ -23,7 +23,7 @@ if (speed _vehicle > 1 || (((getPos _vehicle) select 2) > 3)) exitWith {false};
 private ["_itemSize", "_validItem"];
 _itemSize = [_item] call FUNC(getSizeItem);
 
-if (typeName _item == "STRING") then {
+if (_item  isEqualType "") then {
     _validItem =
         isClass (configFile >> "CfgVehicles" >> _item) &&
         {getNumber (configFile >> "CfgVehicles" >> _item >> QGVAR(canLoad)) == 1};

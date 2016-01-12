@@ -16,7 +16,7 @@ private "_fnc_parseConfigForDisplayNames";
 _fnc_parseConfigForDisplayNames = {
     params ["_optionEntry"];
 
-    if !(isClass _optionEntry) exitwith {false};
+    if !(isClass _optionEntry) exitWith {false};
 
     private "_values";
     _values = getArray (_optionEntry >> "values");
@@ -30,7 +30,7 @@ _fnc_parseConfigForDisplayNames = {
         private "_text";
         _text = _x;
 
-        if (typeName _text == "STRING" && {count _text > 1} && {_text select [0, 1] == "$"}) then {
+        if (_text isEqualType "" && {count _text > 1} && {_text select [0, 1] == "$"}) then {
             _text = localize (_text select [1]); //chop off the leading $
             _values set [_forEachIndex, _text];
         };

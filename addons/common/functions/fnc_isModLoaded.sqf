@@ -14,4 +14,4 @@
 
 params ["_modName"];
 
-isClass (configFile >> "cfgPatches" >> _modName) // return
+isClass (configFile >> "CfgPatches" >> _modName) // return

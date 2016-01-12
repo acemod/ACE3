@@ -64,8 +64,8 @@ if (GVAR(camMode) == 0) then {
     _vector = _vector vectorAdd [0,0,_distance*sin(-_tilt)];
 
     // Update the position of the target camera (used for smooth unit tracking)
-	_target camSetPos ((_unit modelToWorldVisual [0,0,0]) vectorAdd [0,0,1.5]);
-	_target camCommit 0;
+    _target camSetPos ((_unit modelToWorldVisual [0,0,0]) vectorAdd [0,0,1.5]);
+    _target camCommit 0;
 
     // Update the relative position of the unit camera
     _camera camSetRelPos _vector;

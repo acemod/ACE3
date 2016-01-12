@@ -15,7 +15,7 @@
 
 params ["_statement"];
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 

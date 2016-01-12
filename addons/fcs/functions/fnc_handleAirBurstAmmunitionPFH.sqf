@@ -1,21 +1,32 @@
-// by commy2
+/*
+ * Author: commy2
+ * Handle Air burst ammunition. Called from per frame handler.
+ *
+ * Arguments:
+ * -
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_vehicle", "_projectile", "_zeroing", "_position", "_subMunition"];
+(_this select 0) params ["_vehicle", "_projectile", "_zeroing"];
 
-_vehicle = _this select 0 select 0;
-_projectile = _this select 0 select 1;
-_zeroing = _this select 0 select 2;
-
+// remove pfh if the projectile died before arriving
 if (isNull _projectile || {!alive _projectile}) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 };
 
+// wait if not there
 if (_projectile distance _vehicle < _zeroing) exitWith {};
 
-_position = getPosATL _projectile;
+// explode
+private _position = getPosATL _projectile;
 
-_subMunition = createVehicle ["ACE_B_35mm_ABM_Helper", _position, [], 0, "FLY"];
+private _subMunition = createVehicle ["ACE_B_35mm_ABM_Helper", _position, [], 0, "FLY"];
+
 _subMunition setPosATL _position;
 _subMunition setVelocity [0, 0, -10];
 

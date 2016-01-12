@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[19, [false, true, false]], false] call cba_fnc_addKeybind;
+[19, [false, true, false]], false] call CBA_fnc_addKeybind;
 
 ["setAmmoSync", {
     //To propagate the setAmmo change, do it on all clients

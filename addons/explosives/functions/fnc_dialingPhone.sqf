@@ -30,7 +30,7 @@ private "_explosive";
 _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
 if (_i >= (count _arr + 2)) then {
-    [_pfID] call CALLSTACK(cba_fnc_removePerFrameHandler);
+    [_pfID] call CALLSTACK(CBA_fnc_removePerFrameHandler);
     if ((count _explosive) > 0) then {
         [_unit, -1, [_explosive select 0, _explosive select 2]] call FUNC(detonateExplosive);
     };
