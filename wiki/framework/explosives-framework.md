@@ -61,7 +61,7 @@ class CfgVehicles {
     class banana_satchel_place: ACE_Explosives_Place {
         displayName = "Banana satchel";  // Name of the item
         model = "";  // Path to your model
-        ACE_offset[] = {0, 0, 0};  // Offset of the interaction point from the model in meters on the X,Y,Z axis.
+        ACE_offset[] = {0, 0, 0};  // Offset of the interaction point from the model in meters on the X,Y,Z axis. Try setting this to the place where it makes most sense (e.g. to buttons/switches/pins)
     };
 };
 ```
