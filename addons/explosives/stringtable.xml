@@ -646,7 +646,7 @@
             <Russian>Малое СВУ (городское)</Russian>
             <Spanish>IED pequeño (Urbano)</Spanish> -->
           </Key>
-          <Key ID="STR_ACE_Explosives_Module_IEDUrbanLarge_Range_DisplayName">
+          <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (městská)</Czech>
             <French>Grand engin explosif improvisé (urbain)</French>
@@ -668,7 +668,7 @@
             <Russian>Малое СВУ (зарытое)</Russian>
             <Spanish>IED pequeño (Enterrado)</Spanish> -->
           </Key>
-          <Key ID="STR_ACE_Explosives_Module_IEDLandLarge_Range_DisplayName">
+          <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (zakopaná)</Czech>
             <French>Grand engin explosif improvisé (enterré)</French>

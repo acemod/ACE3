@@ -339,6 +339,43 @@ class CfgVehicles {
     class O_sniper_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
     class O_spotter_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
 
+    // Editor placed mines
+    class MineBase;
+    class SLAMDirectionalMine: MineBase {
+        displayName = CSTRING(Module_SLAMSideAttack_DisplayName);
+    };
+    class ACE_SLAMBottomMine: SLAMDirectionalMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
+        displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
+        // TODO: Find a way to place the mine laying down instead of standing up
+    };
+    class IEDUrbanBig_F;
+    class ACE_IEDUrbanBig_Range: IEDUrbanBig_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDUrbanBig_Range_Ammo";
+        displayName = CSTRING(Module_IEDUrbanBig_Range_DisplayName);
+    };
+    class IEDLandBig_F;
+    class ACE_IEDLandBig_Range: IEDLandBig_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDLandBig_Range_Ammo";
+        displayName = CSTRING(Module_IEDLandBig_Range_DisplayName);
+    };
+    class IEDUrbanSmall_F;
+    class ACE_IEDUrbanSmall_Range: IEDUrbanSmall_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDUrbanSmall_Range_Ammo";
+        displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
+    };
+    class IEDLandSmall_F;
+    class ACE_IEDLandSmall_Range: IEDLandSmall_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDLandSmall_Range_Ammo";
+        displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
+    };
+
+    // Zeus placed mines
     class ModuleMine_F;
     class ModuleMine_SLAMDirectionalMine_F: ModuleMine_F {
         displayName = CSTRING(Module_SLAMSideAttack_DisplayName);
@@ -347,27 +384,34 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
         explosive = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
+        scopeCurator = 2;
     };
-
     class ModuleExplosive_IEDUrbanBig_F;
     class ACE_ModuleExplosive_IEDUrbanBig_Range: ModuleExplosive_IEDUrbanBig_F {
+        author = ECSTRING(common,aceteam);
         displayName = QUOTE(Module_IEDUrbanBig_Range_DisplayName);
         explosive = "ACE_IEDUrbanBig_Range_Ammo";
+        scopeCurator = 2;
     };
     class ModuleExplosive_IEDLandBig_F;
     class ACE_ModuleExplosive_IEDLandBig_Range: ModuleExplosive_IEDLandBig_F {
+        author = ECSTRING(common,aceteam);
         displayName = QUOTE(Module_IEDLandBig_Range_DisplayName);
         explosive = "ACE_IEDLandBig_Range_Ammo";
+        scopeCurator = 2;
     };
     class ModuleExplosive_IEDUrbanSmall_F;
     class ACE_ModuleExplosive_IEDUrbanSmall_Range: ModuleExplosive_IEDUrbanSmall_F {
+        author = ECSTRING(common,aceteam);
         displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
         explosive = "ACE_IEDUrbanSmall_Range_Ammo";
+        scopeCurator = 2;
     };
     class ModuleExplosive_IEDLandSmall_F;
     class ACE_ModuleExplosive_IEDLandSmall_Range: ModuleExplosive_IEDLandSmall_F {
+        author = ECSTRING(common,aceteam);
         displayName = QUOTE(Module_IEDLandSmall_Range_DisplayName);
         explosive = "ACE_IEDLandSmall_Range_Ammo";
+        scopeCurator = 2;
     };
-
 };
