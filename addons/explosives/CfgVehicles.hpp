@@ -384,34 +384,30 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
         explosive = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
-        scopeCurator = 2;
+        icon = "iconExplosiveGP";
     };
     class ModuleExplosive_IEDUrbanBig_F;
     class ACE_ModuleExplosive_IEDUrbanBig_Range: ModuleExplosive_IEDUrbanBig_F {
         author = ECSTRING(common,aceteam);
-        displayName = QUOTE(Module_IEDUrbanBig_Range_DisplayName);
+        displayName = CSTRING(Module_IEDUrbanBig_Range_DisplayName);
         explosive = "ACE_IEDUrbanBig_Range_Ammo";
-        scopeCurator = 2;
     };
     class ModuleExplosive_IEDLandBig_F;
     class ACE_ModuleExplosive_IEDLandBig_Range: ModuleExplosive_IEDLandBig_F {
         author = ECSTRING(common,aceteam);
-        displayName = QUOTE(Module_IEDLandBig_Range_DisplayName);
+        displayName = CSTRING(Module_IEDLandBig_Range_DisplayName);
         explosive = "ACE_IEDLandBig_Range_Ammo";
-        scopeCurator = 2;
     };
     class ModuleExplosive_IEDUrbanSmall_F;
     class ACE_ModuleExplosive_IEDUrbanSmall_Range: ModuleExplosive_IEDUrbanSmall_F {
         author = ECSTRING(common,aceteam);
         displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
         explosive = "ACE_IEDUrbanSmall_Range_Ammo";
-        scopeCurator = 2;
     };
     class ModuleExplosive_IEDLandSmall_F;
     class ACE_ModuleExplosive_IEDLandSmall_Range: ModuleExplosive_IEDLandSmall_F {
         author = ECSTRING(common,aceteam);
-        displayName = QUOTE(Module_IEDLandSmall_Range_DisplayName);
+        displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
         explosive = "ACE_IEDLandSmall_Range_Ammo";
-        scopeCurator = 2;
     };
 };
