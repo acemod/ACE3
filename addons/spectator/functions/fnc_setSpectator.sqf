@@ -102,7 +102,7 @@ if (_set) then {
     while {dialog} do {
         closeDialog 0;
     };
-    
+
     // Kill the display
     (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
 
@@ -131,7 +131,6 @@ if (_set) then {
     //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
     GVAR(camHandler) = nil;
     GVAR(compHandler) = nil;
-    GVAR(iconHandler) = nil;
     GVAR(toolHandler) = nil;
 
     // Cleanup display variables
