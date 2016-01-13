@@ -10,4 +10,4 @@
 }] call EFUNC(common,addEventHandler);
 
 // Should prevent unending spectator on mission end
-addMissionEventHandler ["Ended",{ [false] call FUNC(setSpectator) }];
+addMissionEventHandler ["Ended",{ [QGVAR(EndMission)] call FUNC(interrupt) }];
