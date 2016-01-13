@@ -54,6 +54,10 @@ class CfgAmmo {
     };
     class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "ACE_MagneticTrigger";
+        explosionAngle = 360;
+        indirectHitRange = 1;
+        mineInconspicuousness = 25;
+        icon = "iconExplosiveGP";
     };
 
     class PipeBombBase;
