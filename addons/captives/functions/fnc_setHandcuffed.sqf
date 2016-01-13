@@ -19,7 +19,7 @@
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     ERROR("running setHandcuffed on remote unit");
 };
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
@@ -38,7 +38,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -107,7 +107,7 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        showHUD true;
+        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
     };
 };
 

@@ -61,7 +61,7 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
     ] call EFUNC(common,addActionEventHandler)];
 };
 
-if (typeName _muzzle == "STRING") then {
+if (_muzzle isEqualType "") then {
     _unit selectWeapon _muzzle;
 };
 

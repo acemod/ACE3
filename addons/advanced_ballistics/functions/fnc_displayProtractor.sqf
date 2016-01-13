@@ -36,7 +36,7 @@ GVAR(Protractor) = true;
     if !(GVAR(Protractor) && !(weaponLowered ACE_player) && currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {
         GVAR(Protractor) = false;
         1 cutText ["", "PLAIN"];
-        [_idPFH] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     1 cutRsc ["RscProtractor", "PLAIN", 1, false];

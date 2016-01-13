@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Setvariable value
+ * setVariable value
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -17,13 +17,12 @@
 params ["_unit", "_variable", "_value", "_global"];
 
 if (isNil "_global") then {
-    private "_definedVariable";
-    _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
+    private _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
 
     _definedVariable params ["", "",  ["_global", false]];
 };
 
-if (!isNil "_value") exitwith {
+if (!isNil "_value") exitWith {
     _unit setVariable [_variable, _value, _global];
 };
 

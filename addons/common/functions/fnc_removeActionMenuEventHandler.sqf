@@ -18,10 +18,8 @@ params ["_unit", "_action", "_id"];
 
 if (_id == -1) exitWith {};
 
-private ["_name", "_actionsVar"];
-
-_name = format ["ACE_ActionMenu_%1", _action];
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
+private _name = format ["ACE_ActionMenu_%1", _action];
+private _actionsVar = _unit getVariable [_name, [-1, [-1, [], []]]];
 
 _actionsVar params ["_currentID", "_actionIDs", "_actions"];
 

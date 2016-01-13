@@ -76,6 +76,6 @@ if (_leave) exitWith {
 
         [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);
 
-        [_pfhId] call cba_fnc_removePerFrameHandler;
+        [_pfhId] call CBA_fnc_removePerFrameHandler;
     };
 }, 0.2, [_unit, player]] call CBA_fnc_addPerFrameHandler;

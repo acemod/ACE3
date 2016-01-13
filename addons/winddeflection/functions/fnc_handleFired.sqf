@@ -32,6 +32,6 @@ if (!((_bullet isKindOf "BulletBase") || (_bullet isKindOf "GrenadeBase"))) exit
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {false};
 if (!([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 
-GVAR(trackedBullets) pushBack [_bullet, getNumber(configFile >> "cfgAmmo" >> _ammo >> "airFriction")];
+GVAR(trackedBullets) pushBack [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
 
 true;

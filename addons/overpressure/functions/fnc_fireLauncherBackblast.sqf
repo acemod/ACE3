@@ -48,7 +48,7 @@ _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Damage to the firer
 private "_distance";
-_distance = [_position, _direction, _backblastRange, _firer] call FUNC(getDistance);
+_distance = 2 * ([_position, _direction, _backblastRange, _firer] call FUNC(getDistance));
 
 TRACE_1("Distance",_distance);
 
@@ -62,7 +62,7 @@ if (_distance < _backblastRange) then {
     [_damage * 100] call BIS_fnc_bloodEffect;
 
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_firer] call EFUNC(medical,hasMedicalEnabled))}) then {
-         [_firer, "body", ((_firer getvariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]) select 1) + _damage, _firer, "backblast", 0] call EFUNC(medical,handleDamage);
+        [_firer, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
         _firer setDamage (damage _firer + _damage);
     };
@@ -95,7 +95,7 @@ if (_distance < _backblastRange) then {
     ] call EFUNC(common,addLineToDebugDraw);
 
     [   _position,
-        _position vectorAdd (_direction vectorMultiply (_distance min _backblastRange)),
+        _position vectorAdd (_direction vectorMultiply ((_distance/2) min _backblastRange)),
         [1,0,0,1]
     ] call EFUNC(common,addLineToDebugDraw);
 #endif

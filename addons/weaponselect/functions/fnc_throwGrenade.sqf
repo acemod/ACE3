@@ -25,8 +25,7 @@ params ["_unit", "_weapon", "", "", "", "_magazine"];
 
 if (_weapon != "Throw") exitWith {};
 
-private "_count";
-_count = {_x == _magazine} count magazines _unit;
+private _count = {_x == _magazine} count magazines _unit;
 
 [_magazine, _count] call FUNC(displayGrenadeTypeAndNumber);
 

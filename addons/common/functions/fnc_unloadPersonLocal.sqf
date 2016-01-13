@@ -15,10 +15,10 @@
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 params ["_unit", "_vehicle"];
+TRACE_2("params",_unit,_vehicle);
 
-private ["_validVehiclestate", "_emptyPos", "_loaded"];
-
-_validVehiclestate = true;
+private _validVehiclestate = true;
+private _emptyPos = [];
 
 if (_vehicle isKindOf "Ship") then {
     if (speed _vehicle > 1 || {getPos _vehicle select 2 > 2}) then {
@@ -27,10 +27,10 @@ if (_vehicle isKindOf "Ship") then {
 
     TRACE_1("SHIP Ground Check",getPos _vehicle);
 
-    _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit]; // TODO: if spot is underwater pick another spot.
+    _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeOf _unit]; // TODO: if spot is underwater pick another spot.
 } else {
     if (_vehicle isKindOf "Air") then {
-        if (speed _vehicle > 1 || {isTouchingGround _vehicle}) then {
+        if (speed _vehicle > 1 || {!isTouchingGround _vehicle}) then {
             _validVehiclestate = false;
         };
 
@@ -45,18 +45,18 @@ if (_vehicle isKindOf "Ship") then {
 
         TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
 
-        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeof _unit];
+        _emptyPos = (ASLToAGL getPosASL _vehicle) findEmptyPosition [0, 13, typeOf _unit];
     };
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
 
-if !(_validVehiclestate) exitwith {
+if !(_validVehiclestate) exitWith {
     ACE_LOGWARNING_4("Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4",_vehicle,getPos _vehicle,isTouchingGround _vehicle,speed _vehicle);
     false
 };
 
-if (count _emptyPos == 0) exitwith {
+if (count _emptyPos == 0) exitWith {
     ACE_LOGWARNING_1("No safe empty spots to unload patient. %1",_emptyPos);
     false
 };  //consider displaying text saying there are no safe places to exit the vehicle
@@ -77,8 +77,7 @@ _unit action ["Eject", vehicle _unit];
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
 
         if (driver _unit == _unit) then {
-            private "_anim";
-            _anim = [_unit] call FUNC(getDeathAnim);
+            private _anim = [_unit] call FUNC(getDeathAnim);
 
             [_unit, _anim, 1, true] call FUNC(doAnimation);
 
@@ -95,9 +94,9 @@ _unit action ["Eject", vehicle _unit];
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
+private _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
 _loaded deleteAt (_loaded find _unit);
 
-_vehicle setvariable [QGVAR(loaded_persons), _loaded, true];
+_vehicle setVariable [QGVAR(loaded_persons), _loaded, true];
 
 true

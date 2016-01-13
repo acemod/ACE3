@@ -3,7 +3,7 @@
     <Package name="tripod">
         <Key ID="STR_ACE_Tripod_DisplayName">
             <English>SSWT Kit</English>
-            <German>Scharfschützenzweibein</German>
+            <German>Scharfschützendreibein</German>
             <Russian>Снайперский штатив</Russian>
             <Polish>Trójnóg snajperski</Polish>
             <Spanish>SSWT Kit</Spanish>
@@ -15,7 +15,7 @@
         </Key>
         <Key ID="STR_ACE_Tripod_PlaceDown">
             <English>Place SSWT Kit</English>
-            <German>Scharfschützenzweibein aufstellen</German>
+            <German>Scharfschützendreibein aufstellen</German>
             <Russian>Установить снайперский штатив</Russian>
             <Polish>Postaw trójnóg snajperski</Polish>
             <Spanish>Place SSWT Kit</Spanish>
@@ -30,7 +30,7 @@
             <Polish>Podnieś trójnóg snajperski</Polish>
             <Spanish>Coger equipo SSWT</Spanish>
             <Czech>Zvednout SSWT soupravu</Czech>
-            <German>SSWT-Werkzeug aufheben</German>
+            <German>Scharfschützendreibein einpacken</German>
             <Portuguese>Pegar kit SSWT</Portuguese>
             <French>Prendre le kit SSWT</French>
             <Hungarian>SSWT készlet felvétele</Hungarian>
@@ -41,7 +41,7 @@
             <Polish>Reguluj trójnóg snajperski</Polish>
             <Spanish>Ajustar equipo SSWT</Spanish>
             <Czech>Regulovat SSWT soupravu</Czech>
-            <German>SSWT-Werkzeug anpassen</German>
+            <German>Scharfschützendreibein anpassen</German>
             <Portuguese>Ajustar kit SSWT</Portuguese>
             <French>Régler le kit SSWT</French>
             <Hungarian>SSWT készlet állítása</Hungarian>

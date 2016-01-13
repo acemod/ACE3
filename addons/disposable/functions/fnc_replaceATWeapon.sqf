@@ -24,15 +24,13 @@
 params ["_unit", "_weapon", "", "", "", "", "_projectile"];
 TRACE_3("params",_unit,_weapon,_projectile);
 
-if ((!local _unit) || {_weapon != (secondaryWeapon _unit)})  exitWith {};
+if (!local _unit || {_weapon != secondaryWeapon _unit})  exitWith {};
 
-private ["_replacementTube", "_items"];
-_replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
+private _replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
 if (_replacementTube == "") exitWith {}; //If no replacement defined just exit
 
-
 //Save array of items attached to launcher
-_items = secondaryWeaponItems _unit;
+private _items = secondaryWeaponItems _unit;
 //Replace the orginal weapon with the 'usedTube' weapon
 _unit addWeapon _replacementTube;
 //Makes sure the used tube is still equiped
@@ -52,15 +50,13 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
         //don't do anything until projectile is null (exploded/max range)
         if (isNull _projectile) then {
             //Remove PFEH:
-            [_idPFH] call cba_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
 
             //If (tube is dropped) OR (is dead) OR (is player) just exit
-            if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};
+            if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call EFUNC(common,isPlayer)}) exitWith {};
 
-            private ["_items", "_container"];
-
-            // _items = secondaryWeaponItems _unit;
-            _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
+            //private  _items = secondaryWeaponItems _unit;
+            private _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
 

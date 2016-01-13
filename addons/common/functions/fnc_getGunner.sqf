@@ -13,14 +13,13 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_weapon"];
+params [["_vehicle", objNull, [objNull]], ["_weapon", "", [""]]];
 
 // on foot
 if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
 // inside vehicle
-private "_gunner";
-_gunner = objNull;
+private _gunner = objNull;
 
 {
     if (_weapon in (_vehicle weaponsTurret _x)) exitWith {

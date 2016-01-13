@@ -9,7 +9,7 @@
  * 3: The treatment classname <STRING>
  * 4: ?
  * 5: Users of Items <?>
- * 6: Previous Damage <NUMBER>
+ * 6: Blood Loss on selection (previously called _previousDamage) <NUMBER>
  *
  * Return Value:
  * None
@@ -22,7 +22,10 @@
 #define MIN_ENTRIES_LITTER_CONFIG 3
 
 private ["_config", "_litter", "_createLitter", "_position", "_createdLitter"];
-params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_previousDamage"];
+params ["_caller", "_target", "_selectionName", "_className", "", "_usersOfItems", "_bloodLossOnSelection"];
+
+//Ensures comptibilty with other possible medical treatment configs
+private _previousDamage = _bloodLossOnSelection;
 
 if !(GVAR(allowLitterCreation)) exitwith {};
 if (vehicle _caller != _caller || vehicle _target != _target) exitwith {};
@@ -59,7 +62,7 @@ _createLitter = {
 
 _createdLitter = [];
 {
-    if (typeName _x == "ARRAY") then {
+    if (_x isEqualType []) then {
         if (count _x < MIN_ENTRIES_LITTER_CONFIG) exitwith {};
 
         _x params ["_selection", "_litterCondition", "_litterOptions"];
@@ -69,18 +72,18 @@ _createdLitter = [];
             if (isnil _litterCondition) then {
                 _litterCondition = if (_litterCondition != "") then {compile _litterCondition} else {{true}};
             } else {
-                _litterCondition = missionNamespace getvariable _litterCondition;
-                if (typeName _litterCondition != "CODE") then {_litterCondition = {false}};
+                _litterCondition = missionNamespace getVariable _litterCondition;
+                if (!(_litterCondition isEqualType {})) then {_litterCondition = {false}};
             };
-            if !([_caller, _target, _selectionName, _className, _usersOfItems, _previousDamage] call _litterCondition) exitwith {};
+            if !([_caller, _target, _selectionName, _className, _usersOfItems, _bloodLossOnSelection] call _litterCondition) exitwith {};
 
-            if (typeName _litterOptions == "ARRAY") then {
+            if (_litterOptions isEqualType []) then {
                 // Loop through through the litter options and place the litter
                 {
-                    if (typeName _x == "ARRAY" && {(count _x > 0)}) then {
+                    if (_x isEqualType [] && {(count _x > 0)}) then {
                         [_target, _x select (floor(random(count _x)))] call _createLitter;
                     };
-                    if (typeName _x == "STRING") then {
+                    if (_x isEqualType "") then {
                         [_target, _x] call _createLitter;
                     };
                 } foreach _litterOptions;

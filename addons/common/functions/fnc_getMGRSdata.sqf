@@ -18,11 +18,9 @@
 
 params [["_map", worldName]];
 
-private ["_long", "_lat", "_altitude", "_UTM", "_easting", "_northing", "_zone", "_band", "_GZD"];
-
-_long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
-_lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
-_altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
+private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
+private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
+private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
 if (_map in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; _altitude = 0; };
 if (_map in ["Altis", "Stratis"]) then { _lat = 40; _altitude = 0; };
@@ -46,14 +44,14 @@ if (_map in ["lingor"]) then { _lat = -4; _altitude = 0; };
 if (_map in ["Panthera3"]) then { _lat = 46; _altitude = 0; };
 if (_map in ["Kunduz"]) then { _lat = 37; _altitude = 400; };
 
-_UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
-_easting = _UTM select 0;
-_northing = _UTM select 1;
-//_zone = _UTM select 2;
+private _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
+private _easting = _UTM select 0;
+private _northing = _UTM select 1;
+//private _zone = _UTM select 2;
 TRACE_4("",_UTM,_easting,_northing,_zone);
 
 /*
-_band = switch (true) do {
+private _band = switch (true) do {
     case (_lat<-72): {"C"};
     case (_lat<-64): {"D"};
     case (_lat<-56): {"E"};
@@ -77,8 +75,8 @@ _band = switch (true) do {
 };
 */
 
-_zone = 1 + (floor ((_long + 180) / 6));
-_band = "Z";
+private _zone = 1 + (floor ((_long + 180) / 6));
+private _band = "Z";
 
 if (_lat <= -80) then {
     _band = "A";
@@ -90,17 +88,17 @@ if (_lat <= -80) then {
 
 if (_map == "VR") then {_zone = 0; _band = "RV";};
 
-_GZD = format ["%1%2",_zone,_band];
+private _GZD = format ["%1%2",_zone,_band];
 TRACE_3("",_zone,_band,_GZD);
 
-private ["_set1", "_set2", "_set3", "_set4", "_set5", "_set6", "_metaE", "_metaN", "_letterE", "_letterN", "_grid100km"];
+private ["_metaE", "_metaN", "_letterE", "_letterN"];
 
-_set1 = [1,7,13,19,25,31,37,43,49,55];
-_set2 = [2,8,14,20,26,32,38,44,50,56];
-_set3 = [3,9,15,21,27,33,39,45,51,57];
-_set4 = [4,10,16,22,28,34,40,46,52,58];
-_set5 = [5,11,17,23,29,35,41,47,53,59];
-_set6 = [6,12,18,24,30,36,42,48,54,60];
+private _set1 = [1,7,13,19,25,31,37,43,49,55];
+private _set2 = [2,8,14,20,26,32,38,44,50,56];
+private _set3 = [3,9,15,21,27,33,39,45,51,57];
+private _set4 = [4,10,16,22,28,34,40,46,52,58];
+private _set5 = [5,11,17,23,29,35,41,47,53,59];
+private _set6 = [6,12,18,24,30,36,42,48,54,60];
 
 switch (true) do {
     case (_zone in _set1): {_metaE = 1; _metaN = 1;};
@@ -154,7 +152,7 @@ switch (true) do {
 };
 TRACE_1("",_letterN);
 
-_grid100km = _letterE + _letterN;
+private _grid100km = _letterE + _letterN;
 TRACE_1("",_grid100km);
 
 if (_map == worldName) then {

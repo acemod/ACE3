@@ -32,8 +32,8 @@ class CfgVehicles {
         };
     };
 
-    class thingX;
-    class ACE_TripodObject: thingX {
+    class ThingX;
+    class ACE_TripodObject: ThingX {
         XEH_ENABLED;
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1,0};

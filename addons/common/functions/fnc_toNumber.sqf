@@ -17,6 +17,6 @@
 
 params ["_value"];
 
-if (typeName _value == "SCALAR") exitWith {_value};
+if (_value isEqualType 0) exitWith {_value};
 
 parseNumber _value // return

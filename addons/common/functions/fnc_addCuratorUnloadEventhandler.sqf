@@ -13,11 +13,10 @@
 
 disableSerialization;
 
-private "_dlg";
-_dlg = ctrlParent _this;
+private _dlg = ctrlParent _this;
 
 _dlg displayAddEventHandler ["unload", {
     if (_this select 1 == 1) then {
-        [missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call FUNC(fixCrateContent);
+        [missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull]] call FUNC(fixCrateContent);
     };
 }];

@@ -13,11 +13,9 @@
 
 params ["_vehicle"];
 
-private ["_hitPointsFull", "_allSelectionsWithoutHitpoints"];
+private _hitPointsFull = getAllHitPointsDamage _vehicle;
 
-_hitPointsFull = getAllHitPointsDamage _vehicle;
-
-_allSelectionsWithoutHitpoints = [];
+private _allSelectionsWithoutHitpoints = [];
 
 {
     if (_x == "") then {

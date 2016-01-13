@@ -14,8 +14,7 @@
 
 params ["_id"];
 
-private "_actionsVar";
-_actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
+private _actionsVar = missionNamespace getVariable ["ACE_EventHandler_ScrollWheel", [-1, [], []]];
 
 _actionsVar params ["_currentId", "_actionIDs", "_actions"];
 

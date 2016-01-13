@@ -6,14 +6,17 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: selection name <STRING>
- * 2: HitPoint Index <SCALAR>
+ * 2: HitPoint Index/True to get hitpoint <SCALAR><BOOL>
  *
  * Return Value:
- * translated selection name <STRING>
+ * translated selection/hitpoint name <STRING>
  *
  * Example:
  * [bob, "pelvis", 4] call ace_medical_fnc_translateSelections
  * Returns "body"
+ *
+ * [bob, "body", true] call ace_medical_fnc_translateSelections
+ * Returns "HitBody"
  *
  * Public: No
  */
@@ -35,14 +38,44 @@
 params ["_unit", "_selection", "_hitPointIndex"];
 
 if (_selection == "") exitWith {""};
+
+//Get Selection from standard selection ["head","body","hand_l","hand_r","leg_l","leg_r"]
+if (_hitPointIndex isEqualTo true) exitWith {
+    private _returnHitPoint = GVAR(HITPOINTS) select (GVAR(SELECTIONS) find _selection);
+    //If the selection is a valid hitpoint just return it:
+    if (!isNil {_unit getHitPointDamage _returnHitPoint}) exitWith {
+        _returnHitPoint;
+    };
+    
+    //Those VR fuckers have weird limb hitpoints
+    private _hitPoints = switch (_selection) do {
+        case ("hand_l"): {L_ARM_HITPOINTS};
+        case ("hand_r"): {R_ARM_HITPOINTS};
+        case ("leg_l"): {L_LEG_HITPOINTS};
+        case ("leg_r"): {R_LEG_HITPOINTS};
+        case ("head"): {HEAD_HITPOINTS};
+        case ("body"): {TORSO_HITPOINTS};
+        default {[]};
+    };
+    {
+        if (!isNil {_unit getHitPointDamage _x}) exitWith {
+            _returnHitPoint = _x;
+        };
+    } forEach _hitPoints;
+    _returnHitPoint
+};
+
+
+//Get Selection from Selection/HitIndex:
+
 if (_selection in HEAD_SELECTIONS) exitWith {"head"};
 if (_selection in TORSO_SELECTIONS) exitWith {"body"};
 
 // Not necessary unless we get more hitpoints variants in an next arma update
-/*if (_selection in L_ARM_SELECTIONS) exitwith {"hand_l"};
-if (_selection in R_ARM_SELECTIONS) exitwith {"hand_r"};
-if (_selection in L_LEG_SELECTIONS) exitwith {"leg_l"};
-if (_selection in R_LEG_SELECTIONS) exitwith {"leg_r"};*/
+/*if (_selection in L_ARM_SELECTIONS) exitWith {"hand_l"};
+if (_selection in R_ARM_SELECTIONS) exitWith {"hand_r"};
+if (_selection in L_LEG_SELECTIONS) exitWith {"leg_l"};
+if (_selection in R_LEG_SELECTIONS) exitWith {"leg_r"};*/
 
 //Backup method to detect weird selections/hitpoints
 if ((_selection == "?") || {!(_selection in GVAR(SELECTIONS))}) exitWith {

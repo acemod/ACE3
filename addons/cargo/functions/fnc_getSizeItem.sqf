@@ -19,7 +19,7 @@ params ["_item"];
 private ["_isVirtual","_itemClass","_config"];
 scopeName "return";
 
-_isVirtual = (typeName _item == "STRING");
+_isVirtual = (_item isEqualType "");
 _itemClass = if (_isVirtual) then {_item} else {typeOf _item};
 _config = (configFile >> "CfgVehicles" >> _itemClass >> QGVAR(size));
 

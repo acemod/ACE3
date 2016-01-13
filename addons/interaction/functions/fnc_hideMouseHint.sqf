@@ -19,4 +19,4 @@ if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
-showHUD true;
+["mouseHint", []] call EFUNC(common,showHud); //This is equivalent to the old showHud true

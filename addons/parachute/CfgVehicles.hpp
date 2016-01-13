@@ -20,7 +20,6 @@ class CfgVehicles {
                  showDisabled = 0;
                  priority = 2.9;
                  icon = QUOTE(PATHTOF(UI\cut_ca.paa));
-                 hotkey = "C"; // Did this realy Work?
              };
          };
      };

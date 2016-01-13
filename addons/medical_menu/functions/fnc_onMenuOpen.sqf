@@ -20,7 +20,7 @@ private "_target";
 
 params ["_display"];
 
-if (isNil "_display") exitwith {};
+if (isNil "_display") exitWith {};
 
 if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
 if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
@@ -77,11 +77,11 @@ GVAR(MenuPFHID) = [{
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
     //Check that it's valid to stay open:
-    if !(([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
+    if !(([ACE_player, GVAR(INTERACTION_TARGET), ["isNotInside"]] call EFUNC(common,canInteractWith)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call FUNC(canOpenMenu)}) then {
         closeDialog 314412;
         //If we failed because of distance check, show UI message:
         if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
-            ["displayTextStructured", [ACE_player], [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 1.75, ACE_player]] call EFUNC(common,targetEvent);
+            ["displayTextStructured", [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2, ACE_player]] call EFUNC(common,localEvent);
         };
     };
 

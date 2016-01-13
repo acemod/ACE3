@@ -16,10 +16,8 @@ params ["_eventName"];
 
 GVAR(events) params ["_eventNames", "_events"];
 
-private ["_eventFunctions", "_eventIndex"];
-
-_eventFunctions = [];
-_eventIndex = _eventNames find _eventName;
+private _eventFunctions = [];
+private _eventIndex = _eventNames find _eventName;
 
 if (_eventIndex != -1) then {
     _events set [_eventIndex, []];
