@@ -341,8 +341,18 @@ class CfgVehicles {
 
     // Editor placed mines
     class MineBase;
+    class SatchelCharge_F: MineBase {
+        GVAR(magazine) = "SatchelCharge_Remote_Mag";
+    };
+    class DemoCharge_F: MineBase {
+        GVAR(magazine) = "DemoCharge_Remote_Mag";
+    };
+    class Claymore_F: MineBase {
+        GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
+    };
     class SLAMDirectionalMine: MineBase {
         displayName = CSTRING(Module_SLAMSideAttack_DisplayName);
+        GVAR(magazine) = "SLAMDirectionalMine_Wire_Mag";
     };
     class ACE_SLAMBottomMine: SLAMDirectionalMine {
         author = ECSTRING(common,aceteam);
@@ -350,28 +360,41 @@ class CfgVehicles {
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
         // TODO: Find a way to place the mine laying down instead of standing up
     };
-    class IEDUrbanBig_F;
+
+    class IEDUrbanBig_F: MineBase {
+        GVAR(magazine) = "IEDUrbanBig_Remote_Mag";
+    };
     class ACE_IEDUrbanBig_Range: IEDUrbanBig_F {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_IEDUrbanBig_Range_Ammo";
+        GVAR(magazine) = "IEDUrbanBig_Remote_Mag";
         displayName = CSTRING(Module_IEDUrbanBig_Range_DisplayName);
     };
-    class IEDLandBig_F;
+    class IEDLandBig_F: MineBase {
+        GVAR(magazine) = "IEDLandBig_Remote_Mag";
+    };
     class ACE_IEDLandBig_Range: IEDLandBig_F {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_IEDLandBig_Range_Ammo";
+        GVAR(magazine) = "IEDLandBig_Remote_Mag";
         displayName = CSTRING(Module_IEDLandBig_Range_DisplayName);
     };
-    class IEDUrbanSmall_F;
+    class IEDUrbanSmall_F: MineBase {
+        GVAR(magazine) = "IEDUrbanSmall_Remote_Mag";
+    };
     class ACE_IEDUrbanSmall_Range: IEDUrbanSmall_F {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_IEDUrbanSmall_Range_Ammo";
+        GVAR(magazine) = "IEDUrbanSmall_Remote_Mag";
         displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
     };
-    class IEDLandSmall_F;
+    class IEDLandSmall_F: MineBase {
+        GVAR(magazine) = "IEDLandSmall_Remote_Mag";
+    };
     class ACE_IEDLandSmall_Range: IEDLandSmall_F {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_IEDLandSmall_Range_Ammo";
+        GVAR(magazine) = "IEDLandSmall_Remote_Mag";
         displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
     };
 

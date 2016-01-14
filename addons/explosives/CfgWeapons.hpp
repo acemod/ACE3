@@ -15,6 +15,7 @@ class CfgWeapons {
         model = QUOTE(PATHTOF(data\ace_m57.p3d));
         ACE_Range = 250;
         ACE_Detonator = 1;
+        GVAR(triggerType) = "Command";
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 3;
@@ -25,6 +26,7 @@ class CfgWeapons {
         displayName = CSTRING(M26_displayName);
         picture = PATHTOF(Data\UI\MK26_Transmitter_ca.paa);
         ACE_Range = 5000;
+        GVAR(triggerType) = "MK16_Transmitter";
     };
     class ACE_DefusalKit: ACE_ItemCore {
         scope = 2;
@@ -46,6 +48,7 @@ class CfgWeapons {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         ACE_Range = 100;
         ACE_Detonator = 1;
+        GVAR(triggerType) = "DeadManSwitch";
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 2;
@@ -60,6 +63,7 @@ class CfgWeapons {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         ACE_Range = 15000;
         ACE_Detonator = 1;
+        GVAR(triggerType) = "Cellphone";
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 2;
