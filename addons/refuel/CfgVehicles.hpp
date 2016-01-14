@@ -513,6 +513,19 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
+    class ThingX;
+    class FlexibleTank_base_F: ThingX {
+        MACRO_REFUEL_ACTIONS
+    };
+
+    class StorageBladder_base_F;
+    class Land_StorageBladder_01_F: StorageBladder_base_F {
+        MACRO_REFUEL_ACTIONS
+    };
+    class Land_StorageBladder_02_F: StorageBladder_base_F {
+        MACRO_REFUEL_ACTIONS
+    };
+
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
         XEH_ENABLED;
