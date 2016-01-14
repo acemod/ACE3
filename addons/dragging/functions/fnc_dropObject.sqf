@@ -23,8 +23,8 @@ private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 if !(_unit getVariable ["ACE_isUnconscious", false]) then {
-	// play release animation
-	_unit playAction "released";
+    // play release animation
+    _unit playAction "released";
 };
 
 // prevent collision damage

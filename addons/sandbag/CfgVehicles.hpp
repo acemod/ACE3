@@ -42,8 +42,8 @@ class CfgVehicles {
         };
     };*/
 
-    class thingX;
-    class ACE_SandbagObject: thingX {
+    class ThingX;
+    class ACE_SandbagObject: ThingX {
         author = ECSTRING(common,ACETeam);
         XEH_ENABLED;
         scope = 1;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ViewDistance">
         <Key ID="STR_ACE_ViewDistance_Module_DisplayName">
@@ -234,6 +234,8 @@
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
+            <Russian>Зависит от зума</Russian>
+            <Portuguese>Baseado em FoV</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>

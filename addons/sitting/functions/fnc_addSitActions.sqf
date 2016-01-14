@@ -16,19 +16,28 @@
 #include "script_component.hpp"
 
 params ["_seat"];
-private ["_type", "_sitAction"];
 
-_type = typeOf _seat;
+private _type = typeOf _seat;
 
 // Exit if the object is not specified as a seat
 if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canSit)) != 1) exitWith {};
+
+// only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSitActions), _this];
+};
+
+//If not enabled, don't add actions:
+if (!GVAR(enable)) exitWith {};
 
 // Exit if class already initialized
 if (_type in GVAR(initializedClasses)) exitWith {};
 
 GVAR(initializedClasses) pushBack _type;
 
-_sitAction = [
+TRACE_1("Adding Sit Action",_type);
+
+private _sitAction = [
     QGVAR(Sit),
     localize LSTRING(Sit),
     QUOTE(PATHTOF(UI\sit_ca.paa)),

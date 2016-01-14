@@ -74,6 +74,7 @@ PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
 PREP(getSettingData);
+PREP(getStaminaBarControl);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
@@ -328,8 +329,7 @@ if (hasInterface) then {
     // PFH to update the ACE_player variable
     GVAR(PreInit_playerChanged_PFHID) = [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
-            private ["_oldPlayer"];
-            _oldPlayer = ACE_player;
+            private _oldPlayer = ACE_player;
 
             ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];

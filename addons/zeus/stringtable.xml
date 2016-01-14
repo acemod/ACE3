@@ -127,7 +127,7 @@
             <Polish>Pokazuj znaczniki min dla sojuszników i twórz markery na mapie w miejscu min.</Polish>
             <Spanish>Revelar minas a aliados y establecer marcadores de mapa.</Spanish>
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
-            <German>Enthülle Minen gegenüber Verbündeten und platziere Kartenmarkierungen.</German>
+            <German>Melde Minen gegenüber Verbündeten und platziere entsprechende Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
             <French>Révéler les mines et placer un marqueur sur la carte</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
@@ -190,6 +190,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
+            <German>Sanitäter zuweisen.</German>
             <Polish>Przydziel medyka</Polish>
             <Portuguese>Definir médico</Portuguese>
             <Russian>Назначить медиком</Russian>
@@ -198,6 +199,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
+            <German>Sanitätesfahrzeug zuweisen.</German>
             <Polish>Przydziel pojazd medyczny</Polish>
             <Portuguese>Definir veículo médico</Portuguese>
             <Russian>Назначить медицинским транспортом</Russian>
@@ -206,6 +208,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
+            <German>Medizinische Einrichtung zuweisen.</German>
             <Polish>Przydziel budynek medyczny</Polish>
             <Portuguese>Definir instalação médica</Portuguese>
             <Russian>Назанчить медицинским сооружением</Russian>
@@ -217,29 +220,33 @@
             <Portuguese>Adicionar roda sobressalente</Portuguese>
             <Polish>Dodaj koło zapasowe</Polish>
             <Russian>Добавить запасное колесо</Russian>
+            <Czech>Přidat rezervní kolo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
             <Portuguese>Adiciona uma roda sobressalente ao veículo</Portuguese>
             <Polish>Dodaje koło zapasowe do pojazdu</Polish>
             <Russian>Добавляет запасное колесо в транспорт</Russian>
+            <Czech>Přidá rezervní kolo do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
             <Portuguese>Adicionar esteira sobressalente</Portuguese>
             <Polish>Dodaj zapasową gąsienicę</Polish>
             <Russian>Дабавить запасную гусеницу</Russian>
+            <Czech>Přidat náhradní pás</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
             <Portuguese>Adiciona uma esteira sobressalente ao veículo</Portuguese>
             <Polish>Dodaje zapasową gąsienicę do pojazdu</Polish>
             <Russian>Добавляет запасную гусеницу в транспорт</Russian>
+            <Czech>Přidá náhradní pás do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
             <French>Utiliser uniquement sur une unité vivante</French>
-            <German>Nur bei lebenden Einheiten verwendbar</German>
+            <German>Einheit muss lebendig sein.</German>
             <Spanish>Utilizar solo en unidades vivas</Spanish>
             <Czech>Použitelné jen na živé jednotky</Czech>
             <Polish>Używaj tylko na żywych jednostkach</Polish>
@@ -262,29 +269,35 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
+            <German>Das Ziel muss ein Bauwerk sein.</German>
             <Polish>Jednostka musi być budynkiem</Polish>
             <Portuguese>Unidade deve ser uma estrutura</Portuguese>
             <Russian>Юнит должен быть строением</Russian>
             <Spanish>La unidad debe ser una estructura</Spanish>
+            <Czech>Jednotka musí být budova</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
+            <German>Das Ziel muss ein Fahrzeug sein.</German>
             <Polish>Jednostka musi być pojazdem</Polish>
             <Portuguese>Unidade deve ser um veículo</Portuguese>
             <Russian>Юнит должен быть транспортом</Russian>
             <Spanish>La unidad debe ser un vehículo</Spanish>
+            <Czech>Jednotka musí být vozidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
             <Portuguese>Unidade deve ser um veículo com espaço em carga</Portuguese>
             <Polish>Jednostka musi być pojazdem z wolną przestrzenią cargo</Polish>
             <Russian>Юнит должен быть транспортом с грузовым отсеком</Russian>
+            <Czech>Jednotka musí být vozidlo s úložným prostorem</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
             <Portuguese>Unidade deve conter espaço sobressalente</Portuguese>
             <Polish>Jednostka musi mieć wolną przestrzeń cargo</Polish>
             <Russian>Юнит должен иметь свободное место в грузовом отсеке</Russian>
+            <Czech>Jednotka musí mít místo v úložném prostoru</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -326,6 +339,7 @@
             <Portuguese>Adicionar objetos para o Curator</Portuguese>
             <Russian>Добавить объекты куратору</Russian>
             <Spanish>Agregar objetos al director</Spanish>
+            <Czech>Přidat objekty kurátorovi</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
@@ -333,6 +347,7 @@
             <Portuguese>Adicionar qualquer objeto criado para todos os curators na missão</Portuguese>
             <Russian>Добавляет любой отспавненный объект всем кураторам в миссии</Russian>
             <Spanish>Añadir cualquier objeto creado a todos los directores en la misión</Spanish>
+            <Czech>Přidá jakékoliv spawnuté objekty všem kurátorům v misi</Czech>
         </Key>
     </Package>
 </Project>

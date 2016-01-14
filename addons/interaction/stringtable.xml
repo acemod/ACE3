@@ -695,26 +695,36 @@
             <English>Pass magazine</English>
             <German>Magazin geben</German>
             <Polish>Podaj magazynek</Polish>
+            <Russian>Передать магазин</Russian>
+            <Portuguese>Passar carregador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
             <German>Gewehrmagazin</German>
             <Polish>Magazynek karabinowy</Polish>
+            <Russian>Основной магазин</Russian>
+            <Portuguese>Carregador primário</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
             <German>Pistolenmagazin</German>
             <Polish>Magazynek pistoletowy</Polish>
+            <Russian>Магазин к пистолету</Russian>
+            <Portuguese>Carregador da pistola</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
             <German>%1 hat dir ein %2 Magazin gegeben.</German>
             <Polish>%1 podał Ci magazynek %2.</Polish>
+            <Russian>%1 передал вам магазин %2.</Russian>
+            <Portuguese>%1 passou a você um carregador %2.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
             <German>Zeige "Magazine geben" Interaktion</German>
             <Polish>Pokaż interakcję "podaj magazynek"</Polish>
+            <Russian>Показывать действие "передать магазин"</Russian>
+            <Portuguese>Mostrar a interação "Passar carregador"</Portuguese>
         </Key>
     </Package>
 </Project>

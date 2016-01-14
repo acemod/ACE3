@@ -12,12 +12,10 @@
  */
 #include "script_component.hpp"
 
-private ["_hashKeys"];
-
 params ["_hashList"];
 
 ERRORDATA(1);
-_hashKeys = [];
+private _hashKeys = [];
 try {
     if(VALIDHASH(_hashList)) then {
         _hashKeys = (_hashList select 0);

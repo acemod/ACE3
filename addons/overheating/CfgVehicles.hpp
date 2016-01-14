@@ -11,7 +11,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
-                    hotkey = "B";
                 };
                 class ACE_CheckTemperature {
                     displayName = CSTRING(CheckTemperatureShort);
@@ -21,7 +20,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.9;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
-                    hotkey = "P";
                 };
             };
         };

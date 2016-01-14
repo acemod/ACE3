@@ -52,10 +52,10 @@ if (_mode == 0) then {
     ];
     {
         _found = false;
-        _no = nearestObjects [_x, [typeOf _wire], 3]; 	//diag_log _no; diag_log ".....";
-        _no = _no - [_wire];							//diag_log _no;
+        _no = nearestObjects [_x, [typeOf _wire], 3];     //diag_log _no; diag_log ".....";
+        _no = _no - [_wire];                            //diag_log _no;
         if (count _no > 0) exitWith {
-            _found = true;								//diag_log "found";
+            _found = true;                                //diag_log "found";
         };
     } forEach _wireCheckPosAr;
     // Double coil found!

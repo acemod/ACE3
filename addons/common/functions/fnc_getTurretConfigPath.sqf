@@ -15,14 +15,12 @@
 
 params ["_config", "_turretIndex"];
 
-private ["_offset", "_config2", "_foundClasses"];
-
 for "_index" from 0 to (count _turretIndex - 1) do {
     _config = _config >> "Turrets";
 
-    _offset = 0;
-    _config2 = _config select 0;
-    _foundClasses = 0;
+    private _offset = 0;
+    private _config2 = _config select 0;
+    private _foundClasses = 0;
 
     for "_a" from 0 to (count _config - 1) do {
         if (isClass _config2) then {

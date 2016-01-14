@@ -3,6 +3,6 @@ class ACE_Settings {
         displayName = CSTRING(DisableNVGsWithSights_DisplayName);
         description = CSTRING(DisableNVGsWithSights_description);
         typeName = "BOOL";
-        value = 1;
+        value = 0;
     };
 };

@@ -48,7 +48,7 @@ _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Damage to the firer
 private "_distance";
-_distance = [_position, _direction, _backblastRange, _firer] call FUNC(getDistance);
+_distance = 2 * ([_position, _direction, _backblastRange, _firer] call FUNC(getDistance));
 
 TRACE_1("Distance",_distance);
 
@@ -95,7 +95,7 @@ if (_distance < _backblastRange) then {
     ] call EFUNC(common,addLineToDebugDraw);
 
     [   _position,
-        _position vectorAdd (_direction vectorMultiply (_distance min _backblastRange)),
+        _position vectorAdd (_direction vectorMultiply ((_distance/2) min _backblastRange)),
         [1,0,0,1]
     ] call EFUNC(common,addLineToDebugDraw);
 #endif
