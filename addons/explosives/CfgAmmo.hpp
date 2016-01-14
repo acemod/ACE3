@@ -101,7 +101,7 @@ class CfgAmmo {
         mineTrigger = "RemoteTrigger";
     };
     class ACE_IEDUrbanSmall_Range_Ammo: IEDUrbanSmall_Remote_Ammo {
-        mineTrigger = "RangeTriggerSmall";
+        mineTrigger = "RangeTriggerShort";
     };
 
     class IEDLandBig_Remote_Ammo: PipeBombBase {
