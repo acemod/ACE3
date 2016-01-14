@@ -319,7 +319,7 @@ class CfgVehicles {
     class Van_01_fuel_base_F: Van_01_base_F {
         transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
+        GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
 
@@ -338,7 +338,7 @@ class CfgVehicles {
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.08,-4.81,-.8}};
+        GVAR(hooks)[] = {{-1.08,-4.81,-.8}};
         GVAR(fuelCargo) = 1000;
     };
 
@@ -460,21 +460,21 @@ class CfgVehicles {
     class Truck_02_fuel_base_F: Truck_02_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
+        GVAR(hooks)[] = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
     };
 
     class B_Truck_01_fuel_F: B_Truck_01_mover_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
+        GVAR(hooks)[] = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Truck_03_fuel_F: Truck_03_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
+        GVAR(hooks)[] = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -494,14 +494,14 @@ class CfgVehicles {
         XEH_ENABLED;
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
+        GVAR(hooks)[] = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
         GVAR(fuelCargo) = 10000;
     };
 
     class O_Heli_Transport_04_fuel_F: Heli_Transport_04_base_F  {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.52,1.14,-1.18}};
+        GVAR(hooks)[] = {{-1.52,1.14,-1.18}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -509,7 +509,7 @@ class CfgVehicles {
     class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.49,1.41,-.3}};
+        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -536,7 +536,7 @@ class CfgVehicles {
         XEH_ENABLED;
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,-0.5}};
+        GVAR(hooks)[] = {{0,0,-0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
@@ -544,7 +544,7 @@ class CfgVehicles {
         XEH_ENABLED;
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-0.4,0.022,-.23}};
+        GVAR(hooks)[] = {{-0.4,0.022,-.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 

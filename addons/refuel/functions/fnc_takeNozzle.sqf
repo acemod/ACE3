@@ -35,7 +35,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
     };
 
     _target setVariable [QGVAR(isConnected), true, true];
-    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_hooks");
+    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hooks));
     if (count _endPosOffset == 2) then {
         if (_unit distance (_target modelToWorld (_endPosOffset select 0)) <  _unit distance (_target modelToWorld (_endPosOffset select 1))) then {
             _endPosOffset = _endPosOffset select 0;
