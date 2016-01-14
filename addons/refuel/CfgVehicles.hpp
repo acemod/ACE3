@@ -513,17 +513,22 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class ThingX;
-    class FlexibleTank_base_F: ThingX {
-        MACRO_REFUEL_ACTIONS
+    class StorageBladder_base_F: NonStrategic {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                position = "[-3.35,2.45,0.17]";
+                distance = 4;
+                condition = "true";
+            };
+        };
     };
-
-    class StorageBladder_base_F;
     class Land_StorageBladder_01_F: StorageBladder_base_F {
+        XEH_ENABLED;
         MACRO_REFUEL_ACTIONS
-    };
-    class Land_StorageBladder_02_F: StorageBladder_base_F {
-        MACRO_REFUEL_ACTIONS
+        transportFuel = 0; //60k
+        GVAR(hooks)[] = {{-3.35,2.45,0.17}};
+        GVAR(fuelCargo) = 60000;
     };
 
     // Vanilla buildings
