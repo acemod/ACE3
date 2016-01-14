@@ -22,6 +22,6 @@ TRACE_3("Params",_unit,_object,_detonator);
 
 private _detonatorConfig = getText (configFile >> "CfgWeapons" >> _detonator >> QGVAR(triggerType));
 
-private _magazineClass = getText (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(magazine));
+private _magazineClass = getText (configFile >> "CfgAmmo" >> typeOf _object >> QGVAR(magazine));
 
 [_unit, _object, _magazineClass, [configFile >> "ACE_Triggers" >> _detonatorConfig]] call FUNC(addClacker);
