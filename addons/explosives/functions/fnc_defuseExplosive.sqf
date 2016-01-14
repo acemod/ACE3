@@ -19,7 +19,7 @@
 params ["_unit", "_explosive"];
 TRACE_2("params",_unit,_explosive);
 
-if (GVAR(ExplodeOnDefuse) && {(random 1.0) < (getNumber (ConfigFile >> "CfgAmmo" >> typeOf _explosive >> "ACE_explodeOnDefuse"))}) exitWith {
+if (GVAR(ExplodeOnDefuse) && {(random 1.0) < (getNumber (ConfigFile >> "CfgAmmo" >> typeOf _explosive >> QGVAR(explodeOnDefuseChance)))}) exitWith {
     TRACE_1("exploding on defuse",_explosive);
     [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);
 };

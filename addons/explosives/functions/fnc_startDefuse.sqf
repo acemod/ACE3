@@ -28,8 +28,8 @@ _fnc_DefuseTime = {
     TRACE_2("defuseTime",_specialist,_target);
     private ["_defuseTime"];
     _defuseTime = 5;
-    if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime")) then {
-        _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime");
+    if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime))) then {
+        _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime));
     };
     if (!_specialist && {GVAR(PunishNonSpecialists)}) then {
         _defuseTime = _defuseTime * 1.5;
