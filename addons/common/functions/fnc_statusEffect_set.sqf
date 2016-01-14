@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Adds or removes an id to a status effect and then updates the value
+ * Adds or removes an id to a status effect and will send an event to apply.
  *
  * Arguments:
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
@@ -51,12 +51,18 @@ if ((_effectNumber == -1) && {!_set}) exitWith {
     TRACE_2("Set False on nil array, exiting",_set,_effectNumber);
 };
 
-if (_effectNumber == -1) then {_effectNumber = 0};
+if (_effectNumber == -1) then {_effectNumber = 0}; //reset (-1/nil) to 0
 
+//if no change: skip sending publicVar and events
 private _effectBoolArray = [_effectNumber, count _statusReasons] call FUNC(binarizeNumber);
-TRACE_3("Setting New Value", _set, _statusIndex, _effectBoolArray);
+TRACE_2("bitArray",_statusIndex,_effectBoolArray);
+if (_set isEqualTo (_effectBoolArray select _statusIndex)) exitWith {
+    TRACE_2("No Change, exiting",_set,_effectBoolArray select _statusIndex);
+};
+
+TRACE_2("Setting to new value",_set,_effectBoolArray select _statusIndex);
 _effectBoolArray set [_statusIndex, _set];
-_effectNumber = _effectBoolArray call FUNC(toBitmask);
+_effectNumber = _effectBoolArray call FUNC(toBitmask); //Convert array back to number
 
 TRACE_2("Saving globaly",_effectVarName,_effectNumber);
 _object setVariable [_effectVarName, _effectNumber, true];

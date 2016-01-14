@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- *
+ * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).
  *
  * Arguments:
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>

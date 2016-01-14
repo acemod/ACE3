@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * 
+ * Handles locality switch, runs a respawn check and then reapplies all effect events.
  *
  * Arguments:
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
@@ -29,7 +29,7 @@ if !(GVAR(settingsInitFinished)) exitWith {
 if (!_isLocal) exitWith {TRACE_1("object no longer local", _this)};
 if (isNull _object) exitWith {TRACE_1("object null", _this)};
 
- //Reset any variables  because of respawn
+ //Reset any variables because of respawn
 [_object, false] call FUNC(statusEffect_resetVariables);
 
 //Send all Variables to client
