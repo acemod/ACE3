@@ -17,7 +17,7 @@ onSetup parameters:
     };
     class MK16_Transmitter: Command {
         isAttachable = 1;
-        displayName = CSTRING(MK16_displayName);
+        displayName = CSTRING(M152_displayName);
         picture = PATHTOF(Data\UI\MK16_Reciever_ca.paa);
         requires[] = {"ACE_M26_Clacker"};
     };

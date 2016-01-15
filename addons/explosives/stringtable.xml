@@ -177,19 +177,19 @@
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации зарядов</Russian>
         </Key>
-        <Key ID="STR_ACE_Explosives_M26_displayName">
-            <English>M26 Firing Device</English>
-            <German>M26 Zündvorrichtung</German>
-            <Spanish>Dispositivo de detonación MK26</Spanish>
-            <Polish>Zapalnik M26</Polish>
-            <French>Dispositif de mise à feu M26</French>
-            <Czech>Odpalovací zařízení M26</Czech>
-            <Italian>Detonatore M26</Italian>
-            <Hungarian>M26 Gyújtóeszköz</Hungarian>
-            <Portuguese>M26 Dispositivo de Detonação</Portuguese>
-            <Russian>Взрыватель M26</Russian>
+        <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
+            <English>M152 Firing Device</English>
+            <German>M152 Zündvorrichtung</German>
+            <Spanish>Dispositivo de detonación M152</Spanish>
+            <Polish>Zapalnik M152</Polish>
+            <French>Dispositif de mise à feu M152</French>
+            <Czech>Odpalovací zařízení M152</Czech>
+            <Italian>Detonatore M152</Italian>
+            <Hungarian>M152 Gyújtóeszköz</Hungarian>
+            <Portuguese>M152 Dispositivo de Detonação</Portuguese>
+            <Russian>Взрыватель M152</Russian>
         </Key>
-        <Key ID="STR_ACE_Explosives_MK16_displayName">
+        <Key ID="STR_ACE_Explosives_M152_displayName">
             <English>M152 RAMS</English>
             <German>M152 RAMS</German>
             <Czech>M152 RAMS</Czech>

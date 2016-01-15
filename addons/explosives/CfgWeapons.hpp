@@ -23,7 +23,7 @@ class CfgWeapons {
         };
     };
     class ACE_M26_Clacker: ACE_Clacker {
-        displayName = CSTRING(M26_displayName);
+        displayName = CSTRING(M152_Clacker_displayName);
         picture = PATHTOF(Data\UI\MK26_Transmitter_ca.paa);
         GVAR(Range) = 5000;
         GVAR(triggerType) = "MK16_Transmitter";
