@@ -28,6 +28,7 @@ PREP(canDefuse);
 PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
+PREP(detonateExplosiveAll);
 PREP(dialPhone);
 PREP(dialingPhone);
 

@@ -37,6 +37,12 @@
             <Portuguese>Detonar &gt;&gt;</Portuguese>
             <Russian>Подрыв &gt;&gt;</Russian>
         </Key>
+        <Key ID="STR_ACE_Explosives_DetonateAll">
+            <English>Detonate All</English>
+            <German>Zünden Alles</German>
+            <Spanish>Detonar Todo</Spanish>
+            <Russian>Подрыв всех</Russian>
+        </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
             <German>Sprengstoffcode: %1</German>
