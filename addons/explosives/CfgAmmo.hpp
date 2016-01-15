@@ -35,9 +35,7 @@ class CfgAmmo {
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
-    class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {
-        GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
-    };
+    // class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {};
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
         GVAR(defuseObjectPosition[]) = {-1.415, 0, 0.12};
@@ -82,13 +80,8 @@ class CfgAmmo {
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
-
-    class DemoCharge_Remote_Ammo_Scripted: DemoCharge_Remote_Ammo {
-        GVAR(magazine) = "DemoCharge_Remote_Mag";
-    };
-    class SatchelCharge_Remote_Ammo_Scripted: SatchelCharge_Remote_Ammo {
-        GVAR(magazine) = "SatchelCharge_Remote_Mag";
-    };
+    // class DemoCharge_Remote_Ammo_Scripted: DemoCharge_Remote_Ammo {};
+    // class SatchelCharge_Remote_Ammo_Scripted: SatchelCharge_Remote_Ammo {};
 
     class IEDUrbanBig_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
