@@ -116,9 +116,9 @@ class CfgMagazines {
             };
         };
     };
-
     class IEDLandBig_Remote_Mag: IEDUrbanBig_Remote_Mag {
         GVAR(SetupObject) = "ACE_Explosives_Place_IEDLandBig";
+        picture = "\A3\Weapons_F\Data\UI\gear_mine_AT_CA.paa";  // Fix inconsistent picture
         class ACE_Triggers: ACE_Triggers {
             class Command: Command {
                 ammo = "ACE_IEDLandBig_Command_Ammo";
@@ -130,6 +130,7 @@ class CfgMagazines {
     };
     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {
         GVAR(SetupObject) = "ACE_Explosives_Place_IEDUrbanSmall";
+        picture = "\A3\Weapons_F\Data\UI\gear_mine_AP_bouncing_CA.paa";  // Fix inconsistent picture
         class ACE_Triggers {
             SupportedTriggers[] = {"Command", "DeadmanSwitch", "Cellphone", "PressurePlate"};
             class Command {
