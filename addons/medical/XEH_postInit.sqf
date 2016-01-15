@@ -246,6 +246,9 @@ GVAR(lastHeartBeatSound) = ACE_time;
 };
 
 ["SettingsInitialized", {
+    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
+    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+
     if (GVAR(level) == 2) exitWith {
         [
             {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
@@ -275,9 +278,6 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
-
-// Networked litter
-[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {
