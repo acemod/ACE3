@@ -57,6 +57,7 @@ PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);
 PREP(setSpeedDial);
+PREP(spawnFlare);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);

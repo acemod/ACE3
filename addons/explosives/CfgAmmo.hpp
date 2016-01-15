@@ -41,6 +41,22 @@ class CfgAmmo {
         GVAR(defuseObjectPosition[]) = {-1.415, 0, 0.12};
     };
 
+    class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        hit = 0;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        soundHit[] = {""}; // TODO: Add flare ignition sound or something
+        explosionEffects = "ACE_TripflareEffect";
+        CraterEffects = "";
+        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_2",3.1622777,1,50};
+        class CamShakeExplode {
+            power = 0;
+            duration = 0;
+            frequency = 0;
+            distance = 0;
+        };
+    };
+
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
         GVAR(explodeOnDefuseChance) = 1;
