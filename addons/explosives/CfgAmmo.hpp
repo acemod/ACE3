@@ -52,14 +52,14 @@ class CfgAmmo {
     };
     class ACE_SLAMDirectionalMine_Timer_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "TimeTrigger";
+    };
+    class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
+        mineTrigger = "ACE_MagneticTrigger";
         GVAR(explodeOnDefuseChance) = 0;
         explosionAngle = 360;
         indirectHitRange = 1;
         mineInconspicuousness = 25;
         icon = "iconExplosiveGP";
-    };
-    class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
-        mineTrigger = "ACE_MagneticTrigger";
     };
 
     class PipeBombBase;

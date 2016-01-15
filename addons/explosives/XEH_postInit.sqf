@@ -36,6 +36,14 @@ GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
+// Properly angle preplaced bottom-attack SLAMs
+{
+    switch (typeOf _x) do {
+        case ("ACE_SLAMDirectionalMine_Magnetic_Ammo"): {
+            [_x, getDir _x, 90] call FUNC(setPosition);
+        };
+    };
+} forEach allMines;
 
 ["interactMenuOpened", {
     //Cancel placement if interact menu opened
