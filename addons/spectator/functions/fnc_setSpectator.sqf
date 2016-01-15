@@ -24,7 +24,7 @@
 params [["_set",true,[true]], ["_force",true,[true]]];
 
 // Only clients can be spectators
-if (!hasInterface) exitWith {};
+if !(hasInterface) exitWith {};
 
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitWith {};
@@ -84,12 +84,13 @@ if (_set) then {
     };
 
     [{
+        disableSerialization;
         // Create the display
-        (findDisplay 46) createDisplay QGVAR(interface);
+        _display = (findDisplay 46) createDisplay QGVAR(interface);
 
         // If not forced, make esc end spectator
         if (_this) then {
-            (findDisplay 12249) displayAddEventHandler ["KeyDown", {
+            _display displayAddEventHandler ["KeyDown", {
                 if (_this select 1 == 1) then {
                     [false] call ace_spectator_fnc_setSpectator;
                     true
@@ -111,7 +112,7 @@ if (_set) then {
     };
 
     // Kill the display
-    (findDisplay 12249) closeDisplay 0;
+    (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
 
     // Terminate camera
     GVAR(freeCamera) cameraEffect ["terminate", "back"];
@@ -147,7 +148,6 @@ if (_set) then {
     //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
     GVAR(camHandler) = nil;
     GVAR(compHandler) = nil;
-    GVAR(iconHandler) = nil;
     GVAR(toolHandler) = nil;
 
     // Cleanup display variables
