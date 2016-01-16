@@ -51,7 +51,7 @@ private _return = [
 ];
 
 private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-missionNameSpace setVariable [format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine], _return];
+missionNameSpace setVariable [_varName, _return];
 TRACE_2("Return",_varName,_return);
 
 _return
