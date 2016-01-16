@@ -49,9 +49,9 @@ private _return = [
     (getNumber (_config >> QGVAR(range))),
     (getNumber (_config >> QGVAR(damage)))
 ];
-TRACE_2("Return",_varName,_return);
 
 private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
 missionNameSpace setVariable [format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine], _return];
+TRACE_2("Return",_varName,_return);
 
 _return
