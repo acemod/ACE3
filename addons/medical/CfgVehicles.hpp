@@ -58,6 +58,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class increaseTrainingInLocations {
+                displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
+                description = CSTRING(MedicalSettings_increaseTrainingInLocations_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class allowLitterCreation {
                 displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);
                 description = CSTRING(MedicalSettings_allowLitterCreation_Description);
