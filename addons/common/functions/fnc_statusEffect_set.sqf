@@ -28,7 +28,7 @@ if !(GVAR(settingsInitFinished)) exitWith {
     GVAR(runAtSettingsInitialized) pushBack [FUNC(statusEffect_set), _this];
 };
 
-if (isNull _object) exitWith {ACE_LOGERROR_1("setStatusEffect - Bad Input %1", _this)};
+if (isNull _object) exitWith {TRACE_1("null",_object);};
 
 [_object, true] call FUNC(statusEffect_resetVariables); //Check for mismatch, and set object ref
 
