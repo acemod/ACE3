@@ -18,9 +18,6 @@
 
 params ["_unit", "_selection", "_newDamage", "_projectile"];
 
-// private _totalDamage = (_unit getHit _selection) + _newDamage;
-systemChat format["handleSelectionDamage: %1", _this];
-
 private _part = [_selection] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {systemchat format["Selection name part is below 0"]};
 
@@ -38,7 +35,6 @@ if (alive _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
 };
 
 if (GVAR(level) > 1) then { // advanced medical is enabled
-    systemChat format["LEVEL OF MEDICAL SYSTEM IS ADVANCED"];
     _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage); // Get the exact type of damage
     [_unit, _selection, _newDamage, _projectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 
@@ -53,7 +49,6 @@ if (GVAR(level) > 1) then { // advanced medical is enabled
     //    [_unit,_selectionName,_newDamage,_sourceOfDamage, _typeOfDamage] call FUNC(handleDamage_internalInjuries);
     //};
 } else {
-    systemChat format["LEVEL OF MEDICAL SYSTEM IS BASIC"];
     // New pain values
     _pain = _unit getVariable [QGVAR(pain), 0];
     _pain = _pain + (_newDamage / 4) * (1 - (_unit getVariable [QGVAR(morphine), 0]));
