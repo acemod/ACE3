@@ -3,8 +3,8 @@
 #include "script_component.hpp"
 
 ["medical_selectionDamage", {_this call FUNC(handleSelectionDamage)}] call EFUNC(common,addEventhandler);
-["medical_fallDamage",      {_this call FUNC(handleFallDamage)}]      call EFUNC(common,addEventhandler);
-["medical_drowningDamage",  {_this call FUNC(handleDrowningDamage)}]  call EFUNC(common,addEventhandler);
+["medical_fallDamage", {_this call FUNC(handleFallDamage)}] call EFUNC(common,addEventhandler);
+["medical_drowningDamage", {_this call FUNC(handleDrowningDamage)}] call EFUNC(common,addEventhandler);
 ["medical_collisionDamage", {_this call FUNC(handleCollisionDamage)}] call EFUNC(common,addEventhandler);
 
 GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"];

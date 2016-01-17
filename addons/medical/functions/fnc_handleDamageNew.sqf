@@ -42,10 +42,21 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
     };
 };
 
+// If damage is in dummy hitpoints, "hands" and "legs", don't change anything
+if (_selection == "hands") exitWith {_unit getHit "hands"};
+if (_selection == "legs") exitWith {_unit getHit "legs"};
+if (_selection == "arms") exitWith {_unit getHit "arms"};
+
+// Deal with the new hitpoint and selection names introduced with Arma v1.50 and later.
+// This will convert new selection names into selection names that the medical system understands
+// TODO This should be cleaned up when we revisit the medical system at a later stage
+// and instead we should deal with the new hitpoints directly
+_selection = [_unit, _selection, _hitPointIndex] call FUNC(translateSelections);
 
 diag_log text str _selection;
 diag_log text str _damage;
 
+// systemChat format["_selection %1 _damage %2", _selection, _damage];
 
 private ["_damageReturn", "_newDamage", "_index"];
 
@@ -62,13 +73,13 @@ if (_selection == "") then {
     // handle damage always tries to start and end with the same structural damage call. Use that to find and set the final damage. discard everything the game discards too.
     // this correctly handles: bullets, explosions, fire
     if (_damage == _cachedStructuralDamage) then {
-        private "_cachedNewHitpointDamages";
-        _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+        private _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+        private _cachedNewHitpointProjectiles = _unit getVariable [QGVAR(cachedNewHitpointProjectiles), ["", "", "", "", "", ""]];
 
         // this is the only point damage actually counts. all additional vitality functions should use these values.
         {
             if (_x > 0) then {
-                ["medical_selectionDamage", [_unit, GVAR(Selections) select _forEachIndex, _x, _projectile]] call EFUNC(common,localEvent);
+                ["medical_selectionDamage", [_unit, GVAR(Selections) select _forEachIndex, _x, _cachedNewHitpointProjectiles select _forEachIndex]] call EFUNC(common,localEvent);
             };
         } forEach _cachedNewHitpointDamages;
     } else {
@@ -126,6 +137,7 @@ if (_selection == "") then {
 
     // reset everything, get ready for the next bullet
     _unit setVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+    _unit setVariable [QGVAR(cachedNewHitpointProjectiles), ["", "", "", "", "", ""]];
     _unit setVariable [QGVAR(cachedStructuralDamageNew), _damage];
 
 } else {
@@ -137,8 +149,8 @@ if (_selection == "") then {
 
     // a selection we care for was hit. now save the new damage to apply it by a later structural damage call
     if (_index != -1) then {
-        private "_cachedNewHitpointDamages";
-        _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+        private _cachedNewHitpointDamages = _unit getVariable [QGVAR(cachedNewHitpointDamages), [0,0,0,0,0,0]];
+        private _cachedNewHitpointProjectiles = _unit getVariable [QGVAR(cachedNewHitpointProjectiles), ["", "", "", "", "", ""]];
 
         // prevents multiple selections from being hit by one bullet due to hitpoint radius system
         {
@@ -150,12 +162,19 @@ if (_selection == "") then {
             // overwrite minor damage in secondary selections
             if (_x > 0) then {
                 _cachedNewHitpointDamages set [_forEachIndex, 0];
+                _cachedNewHitpointProjectiles set [_forEachIndex, ""];
             };
         } forEach _cachedNewHitpointDamages;
 
-        // apply these by the next matching hd call with selection "". If that one is not matching, this gets discarded
-        _cachedNewHitpointDamages set [_index, _newDamage];
+        if (_cachedNewHitpointDamages select _index < _newDamage) then {
+            // apply these by the next matching hd call with selection "". If that one is not matching, this gets discarded
+            _cachedNewHitpointDamages set [_index, _newDamage];
+            _cachedNewHitpointProjectiles set [_index, _projectile];
+        } else {
+            diag_log format["PREVENTED OVERWRITE: %1", [_newDamage, _projectile, _selection]];
+        };
         _unit setVariable [QGVAR(cachedNewHitpointDamages), _cachedNewHitpointDamages];
+        _unit setVariable [QGVAR(cachedNewHitpointProjectiles), _cachedNewHitpointProjectiles];
     };
 
     // use this to detect collision damage.
