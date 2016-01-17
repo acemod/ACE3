@@ -37,6 +37,12 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
     _handeled = true;
     //Just opens a dummy groundContainer (so the player can still see their own inventory)
     ACE_player action ["Gear", objNull];
+
+    //As of right now arma doesn't seem to be respecting this anymore, delaying a frame seems to work.
+    [{
+        TRACE_1("delaying a frame", ace_player);
+        ACE_player action ["Gear", objNull];
+    }, []] call EFUNC(common,execNextFrame);
 };
 
 _handeled
