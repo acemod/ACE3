@@ -2064,6 +2064,9 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Activity_cpr">
+            <English>%1 started CPR</English>
+        </key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
