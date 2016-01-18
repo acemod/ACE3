@@ -20,6 +20,9 @@ TRACE_2("params",_unit,typeOf _unit);
 
 if (!local _unit) exitWith {}; //XEH should only be called on local units
 
+//Do not add or remove earplugs if gear should be preserved
+if (missionNamespace getVariable [QEGVAR(respawn,SavePreDeathGear), false]) exitWith {};
+
 private _respawn = [0] call BIS_fnc_missionRespawnType;
 
 //if respawn is not Group or side:
