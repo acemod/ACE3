@@ -67,7 +67,7 @@ if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && 
     ACE_player switchCamera "INTERNAL";
     if (player != ACE_player) then {
         TRACE_2("Zeus, manually reseting RC after switchCamera",player,ACE_player);
-        player remotecontrol ACE_player;
+        player remoteControl ACE_player;
     };
 };
 
