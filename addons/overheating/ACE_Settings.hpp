@@ -9,7 +9,7 @@ class ACE_Settings {
     class GVAR(showParticleEffects) {
         typeName = "BOOL";
         isClientSettable = 1;
-        value = 0;
+        value = 1;
         displayName = CSTRING(showParticleEffects_displayName);
         description = CSTRING(showParticleEffects_description);
     };
