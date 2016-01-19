@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-ACE_DEPRECATED("ace_common_fnc_execPersistentFnc","3.6.0","ace_common_fnc_globalEvent");
+ACE_DEPRECATED("ace_common_fnc_execPersistentFnc","3.7.0","ace_common_fnc_globalEvent");
 
 GVAR(remoteFnc) = _this;
 
