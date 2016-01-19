@@ -10,6 +10,8 @@ parent: wiki
 ## 1. Explosives
 ### 1.1 Scripted Explosions
 #### ace_explosives_fnc_scriptedExplosion
+`added in 3.5.0`
+
 Function to detonate a list of editor-placed explosives objects, for use with mission triggers or scripts.
 
 **Parameters**
@@ -30,6 +32,8 @@ Function to detonate a list of editor-placed explosives objects, for use with mi
 ```
 
 #### ace_explosives_fnc_connectExplosive
+`added in 3.5.0`
+
 Function to connect an editor-placed explosive to a unit's detonator. Can be used on players or AI, but AI can only detonate explosives tied to a dead man's switch by getting killed.
 
 **Parameters**
