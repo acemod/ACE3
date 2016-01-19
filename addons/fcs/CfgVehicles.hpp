@@ -537,4 +537,20 @@ class CfgVehicles {
             };
         };
     };
+
+    class StaticGrenadeLauncher: StaticWeapon {};
+    class GMG_TriPod: StaticGrenadeLauncher {};
+
+    class GMG_01_base_F: GMG_TriPod {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MinDistance) = 100;
+                GVAR(MaxDistance) = 1500;
+                GVAR(DistanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
+    };
 };
