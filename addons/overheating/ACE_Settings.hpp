@@ -13,6 +13,13 @@ class ACE_Settings {
         displayName = CSTRING(showParticleEffects_displayName);
         description = CSTRING(showParticleEffects_description);
     };
+    class GVAR(showParticleEffectsForEveryone) {
+        typeName = "BOOL";
+        isClientSettable = 1;
+        value = 0;
+        displayName = CSTRING(showParticleEffectsForEveryone_displayName);
+        description = CSTRING(showParticleEffectsForEveryone_description);
+    };
     class GVAR(overheatingDispersion) {
         typeName = "BOOL";
         value = 1;

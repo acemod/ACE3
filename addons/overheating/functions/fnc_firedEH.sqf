@@ -88,24 +88,11 @@ if (GVAR(overheatingDispersion)) then {
     TRACE_PROJECTILE_INFO(_projectile);
 };
 
-// ------  LOCAL PLAYER ONLY ------------
-// Only compute jamming and show Visual Effects for the local player
-if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1.5, 7.5, 37.5], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
-
-// increase jam chance on dusty grounds if prone (and at ground level)
-if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {
-    private _surface = configFile >> "CfgSurfaces" >> ((surfaceType getPosASL _unit) select [1]);
-    if (isClass _surface) then {
-        TRACE_1("dust",getNumber (_surface >> "dust"));
-        _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
-    };
-};
-
-TRACE_3("check for random jam",_unit,_weapon,_jamChance);
-if ((random 1) < _jamChance) then {
-    [_unit, _weapon] call FUNC(jamWeapon);
+// ------  LOCAL AND NEARBY PLAYERS DEPENDING ON SETTINGS ------------
+// Particle effects only apply to the local player and, depending on settings, to other nearby players
+if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit distance ACE_player > 20})) exitWith {
+    END_COUNTER(firedEH);
 };
 
 //Particle Effects:
@@ -132,6 +119,26 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
         [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5*_intensity],[0.2,0.2,0.2,0.15*_intensity]],
         [0,1], 1, 0.04, "", "", ""];
     };
+};
+
+// ------  LOCAL PLAYER ONLY ------------
+// Only compute jamming for the local player
+if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
+
+_jamChance = _jamChance * ([[0.5, 1.5, 7.5, 37.5], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+
+// increase jam chance on dusty grounds if prone (and at ground level)
+if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {
+    private _surface = configFile >> "CfgSurfaces" >> ((surfaceType getPosASL _unit) select [1]);
+    if (isClass _surface) then {
+        TRACE_1("dust",getNumber (_surface >> "dust"));
+        _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
+    };
+};
+
+TRACE_3("check for random jam",_unit,_weapon,_jamChance);
+if ((random 1) < _jamChance) then {
+    [_unit, _weapon] call FUNC(jamWeapon);
 };
 
 END_COUNTER(firedEH);
