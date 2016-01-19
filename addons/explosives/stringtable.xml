@@ -14,28 +14,28 @@
             <Russian>Взрывчатка</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Place">
-            <English>Place &gt;&gt;</English>
-            <German>Platzieren &gt;&gt;</German>
-            <Spanish>Colocar &gt;&gt;</Spanish>
-            <Polish>Umieść &gt;&gt;</Polish>
-            <French>Placer &gt;&gt;</French>
-            <Czech>Položit &gt;&gt;</Czech>
-            <Italian>Piazza &gt;&gt;</Italian>
-            <Hungarian>Elhelyezés &gt;&gt;</Hungarian>
-            <Portuguese>Colocar &gt;&gt;</Portuguese>
-            <Russian>Установить &gt;&gt;</Russian>
+            <English>Place</English>
+            <German>Platzieren</German>
+            <Spanish>Colocar</Spanish>
+            <Polish>Umieść</Polish>
+            <French>Placer</French>
+            <Czech>Položit</Czech>
+            <Italian>Piazza</Italian>
+            <Hungarian>Elhelyezés</Hungarian>
+            <Portuguese>Colocar</Portuguese>
+            <Russian>Установить</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Detonate">
-            <English>Detonate &gt;&gt;</English>
-            <German>Zünden &gt;&gt;</German>
-            <Spanish>Detonar &gt;&gt;</Spanish>
-            <Polish>Detonuj &gt;&gt;</Polish>
-            <French>Mise à feu &gt;&gt;</French>
-            <Czech>Odpálit &gt;&gt;</Czech>
-            <Italian>Detona &gt;&gt;</Italian>
-            <Hungarian>Robbantás &gt;&gt;</Hungarian>
-            <Portuguese>Detonar &gt;&gt;</Portuguese>
-            <Russian>Подрыв &gt;&gt;</Russian>
+            <English>Detonate</English>
+            <German>Zünden</German>
+            <Spanish>Detonar</Spanish>
+            <Polish>Detonuj</Polish>
+            <French>Mise à feu</French>
+            <Czech>Odpálit</Czech>
+            <Italian>Detona</Italian>
+            <Hungarian>Robbantás</Hungarian>
+            <Portuguese>Detonar</Portuguese>
+            <Russian>Подрыв</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAll">
             <English>Detonate All</English>
