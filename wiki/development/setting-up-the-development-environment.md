@@ -86,9 +86,10 @@ File Patching allows you to change the files in an addon while the game is runni
 
 ### 7.1 Disabling CBA Function Caching
 
-By default CBA caches a compiled version of functions to reduce mission load times. This interferes with file patching. There are two ways to disable function caching:
+By default CBA caches a compiled version of functions to reduce mission load times. This interferes with file patching. There are three ways to disable function caching:
 
-- Load cba_cache_disable.pbo (included in CBA's optional folder)
+- Load `cba_cache_disable.pbo` (included in CBA's optional folder)
+
 - Add the following to your test missions description.ext:
 
 ```c++
@@ -101,6 +102,12 @@ class CfgSettings {
         };
     };
 };
+```
+
+- To only disable caching for a single module, hence greatly improving mission restart time, add the following line to the `script_component.hpp` file of said module:
+
+```c++
+#define DISABLE_COMPILE_CACHE
 ```
 
 ### 7.2 Running Arma 3 with File Patching Enabled
