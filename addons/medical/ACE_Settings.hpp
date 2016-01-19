@@ -11,6 +11,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "Normal", "Advanced"};
     };
+    class GVAR(increaseTrainingInLocations) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
+        description = CSTRING(MedicalSettings_increaseTrainingInLocations_Description);
+        value = 0;
+        typeName = "BOOL";
+    };
     class GVAR(enableFor) {
         category = CSTRING(Category_Medical);
         value = 0;

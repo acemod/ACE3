@@ -17,7 +17,7 @@ params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound",
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
-call (updateRangeHUD);
+call FUNC(updateRangeHUD);
 
 if (isNil "_distance") then {
     _distance = call FUNC(getRange);

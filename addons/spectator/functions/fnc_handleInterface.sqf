@@ -22,6 +22,7 @@ params ["_mode",["_args",[]]];
 switch (toLower _mode) do {
     case "onload": {
         _args params ["_display"];
+        SETUVAR(GVAR(interface),_display);
 
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
@@ -172,8 +173,11 @@ switch (toLower _mode) do {
             [QGVAR(zeus)] call FUNC(interrupt);
             ["zeus"] call FUNC(handleInterface);
         };
-        if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
+        if (_dik in (actionKeys "Chat")) exitWith {
             false
+        };
+        if (_dik in (actionKeys "PrevChannel" + actionKeys "NextChannel")) exitWith {
+            !(isServer || serverCommandAvailable "#kick")
         };
 
         // Handle held keys (prevent repeat calling)
@@ -451,13 +455,13 @@ switch (toLower _mode) do {
 
         // PFH to re-open display when menu closes
         [{
-            if !(isNull (findDisplay 49)) exitWith {};
+            if !(isNull (_this select 0)) exitWith {};
 
             // If still a spectator then re-enter the interface
             [QGVAR(escape),false] call FUNC(interrupt);
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
-        },0] call CBA_fnc_addPerFrameHandler;
+        },0,_dlg] call CBA_fnc_addPerFrameHandler;
     };
     case "zeus": {
         openCuratorInterface;
