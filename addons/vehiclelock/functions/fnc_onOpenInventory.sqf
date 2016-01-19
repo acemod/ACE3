@@ -35,12 +35,11 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
     playSound "ACE_Sound_Click";
     //don't open the vehicles inventory
     _handeled = true;
-    //Just opens a dummy groundContainer (so the player can still see their own inventory)
-    ACE_player action ["Gear", objNull];
 
-    //As of right now arma doesn't seem to be respecting this anymore, delaying a frame seems to work.
+    // As of 1.54 the action needs to be delayed a frame to work, which used not to be the case
     [{
         TRACE_1("delaying a frame", ace_player);
+        //Just opens a dummy groundContainer (so the player can still see their own inventory)
         ACE_player action ["Gear", objNull];
     }, []] call EFUNC(common,execNextFrame);
 };
