@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-//Now just a wrapper for FUNC(statusEffect_get)
-ACE_DEPRECATED("ace_common_fnc_getForceWalkStatus","3.6.0","ace_common_fnc_statusEffect_get");
+//Now just a wrapper for FUNC(statusEffect_get) [No longer used in ace as of 3.5]
+ACE_DEPRECATED("ace_common_fnc_getForceWalkStatus","3.7.0","ace_common_fnc_statusEffect_get");
 
-([player, "forceWalk"] call FUNC(statusEffect_get)) select 1
+([_unit, "forceWalk"] call FUNC(statusEffect_get)) select 1

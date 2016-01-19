@@ -20,7 +20,7 @@
 
 params ["_unit", "_reason", "_status"];
 
-//Now just a wrapper for FUNC(statusEffect_set)
-ACE_DEPRECATED("ace_common_fnc_setForceWalkStatus","3.6.0","ace_common_fnc_statusEffect_set");
+//Now just a wrapper for FUNC(statusEffect_set) [No longer used in ace as of 3.5]
+ACE_DEPRECATED("ace_common_fnc_setForceWalkStatus","3.7.0","ace_common_fnc_statusEffect_set");
 
 [_unit, "forceWalk", _reason, _status] call FUNC(statusEffect_set);
