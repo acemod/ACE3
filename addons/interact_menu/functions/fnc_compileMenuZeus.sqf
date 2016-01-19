@@ -71,9 +71,15 @@ _recurseFnc = {
     _actions
 };
 
-private ["_actionsCfg"];
+private ["_actionsCfg", "_missionActionsCfg"];
 _actionsCfg = configFile >> "ACE_ZeusActions";
+_missionActionsCfg = missionConfigFile >> "ACE_MissionActions" >> "ACE_ZeusActions";
 
+
+_var = [_actionsCfg] call _recurseFnc;
+if (isClass _missionActionsCfg) then {
+    _var append ([_missionActionsCfg] call _recurseFnc);
+};
 // Create a master action to base zeus actions on
 GVAR(ZeusActions) = [
     [
@@ -89,6 +95,6 @@ GVAR(ZeusActions) = [
             10,
             [false,true,false]
         ],
-        [_actionsCfg] call _recurseFnc
+        _var
     ]
 ];
