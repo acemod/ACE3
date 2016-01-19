@@ -23,10 +23,9 @@ Function to detonate a list of editor-placed explosives objects, for use with mi
 
 **Examples**
 
-```js
+```c++
 [[charge1, charge2, charge3], -3] call ACE_Explosives_fnc_scriptedExplosive;
-```
-```js
+
 [[claymore1]] call ACE_Explosives_fnc_scriptedExplosive;
 ```
 
@@ -45,11 +44,9 @@ Function to connect an editor-placed explosive to a unit's detonator. Can be use
 
 **Examples**
 
-```js
-[player, claymore1, "ACE_Clacker"] call ace_explosives_fnc_connectExplosive
-```
-
 ```c++
+[player, claymore1, "ACE_Clacker"] call ace_explosives_fnc_connectExplosive
+
 [triggerman, IED_4, "ACE_DeadManSwitch"] call ace_explosives_fnc_connectExplosive
 ```
 
