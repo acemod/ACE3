@@ -25,6 +25,9 @@ PREP(updateSpectatableSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
 
+// Reset the stored display
+SETUVAR(GVAR(interface),displayNull);
+
 // Permanent variables
 GVAR(availableModes) = [0,1,2];
 GVAR(availableSides) = [west,east,resistance,civilian];

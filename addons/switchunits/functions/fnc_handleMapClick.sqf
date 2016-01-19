@@ -18,12 +18,10 @@
  */
 #include "script_component.hpp"
 
-private ["_sideNearest"];
-
 params ["_faction", "_pos"];
 _faction params ["", "_sides"];
 
-_sideNearest = [];
+private _sideNearest = [];
 
 {
     if ([_x] call FUNC(isValidAi) && (side group _x in _sides)) then {
