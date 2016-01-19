@@ -53,6 +53,7 @@ PREP(openTimerSetUI);
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);
 
+PREP(scriptedExplosive);
 PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);
