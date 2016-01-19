@@ -20,11 +20,12 @@
 params ["_unit", "_weapon", "_heatIncrement"];
 TRACE_3("params",_unit,_weapon,_heatIncrement);
 
-// each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
-private _variableName = format [QGVAR(%1), _weapon];
-
 // get old values
-(_unit getVariable [_variableName, [0, 0]]) params ["_temperature", "_time"];
+// each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
+private _tempVarName = format [QGVAR(%1_temp), _weapon];
+private _timeVarName = format [QGVAR(%1_time), _weapon];
+private _temperature = _unit getVariable [_tempVarName, 0];
+private _lastTime = _unit getVariable [_timeVarName, 0];
 
 private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
@@ -71,13 +72,15 @@ _fnc_cooling = {
 };
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, ACE_time - _time] call _fnc_cooling;
+_temperature = [_temperature, _barrelMass, ACE_time - _lastTime] call _fnc_cooling;
 TRACE_1("cooledTo",_temperature);
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
 _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 
-// Publish the variable
-[_unit, _variableName, [_temperature, ACE_time], 2.0] call EFUNC(common,setVariablePublic);
+// Publish the temperature variable
+[_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
+// Store the update time locally
+_unit setVariable [_timeVarName, ACE_time];
 
 _temperature

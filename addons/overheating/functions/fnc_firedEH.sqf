@@ -36,11 +36,10 @@ if (_unit == ACE_player) then {
 };
 
 // Get current temperature from the unit variable
-private _variableName = format [QGVAR(%1), _weapon];
-(_unit getVariable [_variableName, [0, 0]]) params ["_temperature"];
+private _temperature = _unit getVariable [format [QGVAR(%1_temp), _weapon], 0]
 private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true];
 
-TRACE_3("",_variableName,_temperature,_scaledTemperature);
+TRACE_2("",_temperature,_scaledTemperature);
 
 //Get weapon data from cache:
 private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
@@ -76,7 +75,7 @@ if (GVAR(overheatingDispersion)) then {
 
     //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
     _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
-    
+
     _slowdownFactor = _slowdownFactor * linearConversion [0.666, 1, _scaledTemperature, 0, -0.1, true];
 
     // Get the pseudo random values for dispersion from the remaining ammo count

@@ -22,4 +22,7 @@ TRACE_2("params",_player,_weapon);
 // don't consume the barrel, but rotate through them.
 [localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
 
-_player setVariable [format [QGVAR(%1), _weapon], [0, 0], false];
+// Publish the temperature variable
+_unit setVariable [format [QGVAR(%1_temp), 0, true];
+// Store the update time
+_unit setVariable [format [QGVAR(%1_time), ACE_time];
