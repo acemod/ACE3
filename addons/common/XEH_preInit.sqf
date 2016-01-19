@@ -154,6 +154,7 @@ PREP(selectWeaponMode);
 PREP(sendRequest);
 PREP(serverLog);
 PREP(setAllGear);
+PREP(setApproximateVariablePublic);
 PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
