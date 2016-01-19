@@ -13,6 +13,10 @@
             <Italian>Cambia unità</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
         </Key>
+        <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
+            <English>Trying to switch</English>
+            <German>Versuche zu Wechseln</German>
+        </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
             <German>Diese Einheit ist zu nah am Feind.</German>
