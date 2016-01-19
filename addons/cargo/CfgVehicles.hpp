@@ -178,7 +178,7 @@ class CfgVehicles {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
-    
+
     // boats
     class Ship;
     class Ship_F: Ship {
@@ -245,7 +245,7 @@ class CfgVehicles {
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
     };
-    
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {
