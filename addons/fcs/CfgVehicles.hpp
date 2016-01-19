@@ -546,7 +546,7 @@ class CfgVehicles {
             class MainTurret: MainTurret {
                 GVAR(Enabled) = 1;
                 GVAR(MinDistance) = 100;
-                GVAR(MaxDistance) = 1500;
+                GVAR(MaxDistance) = 2000;
                 GVAR(DistanceInterval) = 5;
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
