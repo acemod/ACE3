@@ -16,7 +16,7 @@
 params ["_vehicle", "_turret"];
 
 private _distance = call FUNC(getRange);
-call (updateRangeHUD);
+call FUNC(updateRangeHUD);
 
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
