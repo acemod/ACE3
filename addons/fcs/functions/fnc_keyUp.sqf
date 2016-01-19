@@ -20,15 +20,11 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
 call FUNC(updateRangeHUD);
 
 if (isNil "_distance") then {
-    _distance = call FUNC(getRange);
-
-    if (_distance == 0) then {
-        _distance = [
-            getNumber (_turretConfig >> QGVAR(DistanceInterval)),
-            getNumber (_turretConfig >> QGVAR(MaxDistance)),
-            getNumber (_turretConfig >> QGVAR(MinDistance))
-        ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
-    };
+    _distance = [
+        getNumber (_turretConfig >> QGVAR(DistanceInterval)),
+        getNumber (_turretConfig >> QGVAR(MaxDistance)),
+        getNumber (_turretConfig >> QGVAR(MinDistance))
+    ] call FUNC(getRange);
 };
 
 private _weapon = _vehicle currentWeaponTurret _turret;
@@ -172,10 +168,9 @@ if (_showHint) then {
     [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
 };
 
-//Update the hud's distance display to the new value or "----" if out of range
-//(10m fudge because of EFUNC(common,getTargetDistance))
-if (_distance + 10 >= getNumber (_turretConfig >> QGVAR(MaxDistance))) then {
-    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText "----";
+// Display the minimum or maximum distance with an * if out of bounds
+if (_distance >= getNumber (_turretConfig >> QGVAR(MaxDistance)) || _distance <= getNumber (_turretConfig >> QGVAR(MinDistance))) then {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber) + "*";
 } else {
     ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };

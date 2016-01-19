@@ -15,7 +15,7 @@
 
 params ["_vehicle", "_turret"];
 
-private _distance = call FUNC(getRange);
+private _distance = [] call FUNC(getRange);
 call FUNC(updateRangeHUD);
 
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
@@ -23,9 +23,6 @@ if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 GVAR(Enabled) = true;
 GVAR(time) = ACE_time;
 
-if (_distance == 0) then {
-    _distance = [5, 5000, 0] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
-};
 
 private _weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);  // @todo doesn't work for sub turrets
 
