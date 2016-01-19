@@ -136,6 +136,12 @@ private _FCSElevation = [];
                 false
             } count _muzzles;
 
+            // Fix the `in` operator being case sensitive and BI fucking up the spelling of their own classnames
+            _magazine = toLower _magazine;
+            {
+                _weaponMagazines set [_forEachIndex, toLower _x];
+            } forEach _weaponMagazines;
+
             if (_magazine in _weaponMagazines) exitWith {
                 _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
