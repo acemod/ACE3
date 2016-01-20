@@ -21,7 +21,7 @@ private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", display
 
 private _distance = parseNumber ctrlText (_dlgRangefinder displayCtrl 151);
 
-if (isNil "_distance" || _distance == 0) then {
+if (isNil "_distance" || {_distance == 0}) then {
     _distance = _this call EFUNC(common,getTargetDistance);
 } else {
     if (_distance > _maxDistance) then {
