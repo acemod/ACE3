@@ -116,8 +116,9 @@ private _FCSElevation = [];
 {
     private _magazine = _x;
     private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+    private _bulletSimulation = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
 
-    if !(getText (configFile >> "CfgAmmo" >> _ammo >> "simulation") == "shotMissile") then {
+    if !(_bulletSimulation == "shotMissile") then {
         private _maxElev     = getNumber (_turretConfig >> "maxElev");
         private _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
@@ -142,7 +143,8 @@ private _FCSElevation = [];
                 _weaponMagazinesCheck pushBack (toLower _x);
             } forEach _weaponMagazines;
 
-            if (toLower _magazine in _weaponMagazinesCheck) exitWith {
+            // Another BIS fix: ShotBullet simulation uses weapon initSpeed, others ignore it
+            if (toLower _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
                 _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
                 if (_initSpeedCoef < 0) then {
