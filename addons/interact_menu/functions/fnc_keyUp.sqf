@@ -24,9 +24,8 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
-    private ["_player","_target","_actionData"];
-    _player = ACE_Player;
-    _target = GVAR(selectedTarget);
+    private _player = ACE_Player;
+    private _target = GVAR(selectedTarget);
 
     // Clear the conditions caches
     ["clearConditionCaches", []] call EFUNC(common,localEvent);
@@ -35,7 +34,7 @@ if(GVAR(actionSelected)) then {
     if (!(GVAR(actionOnKeyRelease)) && !_calledByClicking) exitWith {};
 
     // Check the action conditions
-    _actionData = GVAR(selectedAction) select 0;
+    private _actionData = GVAR(selectedAction) select 0;
     if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
         // Call the statement
         [_target, _player, _actionData select 6] call (_actionData select 3);
