@@ -97,4 +97,4 @@ TRACE_1("result",_strength);
 
 if (_strength < 0.01) exitWith {};
 
-// [{_this call FUNC(earRinging)}, [ACE_player, _strength], 0.2] call EFUNC(common,waitAndExecute);
+[{_this call FUNC(earRinging)}, [ACE_player, _strength], 0.2] call EFUNC(common,waitAndExecute);
