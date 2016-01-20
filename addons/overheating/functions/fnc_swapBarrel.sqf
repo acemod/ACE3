@@ -22,8 +22,7 @@ TRACE_2("params",_player,_weapon);
 if (stance _player != "PRONE") then {
     [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 };
-_player playActionNow "GestureDismountMuzzle";
+_player playActionNow QGVAR(GestureDismountMuzzle);
 playSound "ACE_BarrelSwap";
-_player playAction "GestureMountMuzzle";
 
 [5, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);

@@ -19,7 +19,7 @@
 params ["_player", "_weapon"];
 TRACE_2("params",_player,_weapon);
 
-_player playAction "GestureMountMuzzle";
+_player playAction QGVAR(GestureMountMuzzle);
 playSound "ACE_BarrelSwap";
 
 // don't consume the barrel, but rotate through them.
