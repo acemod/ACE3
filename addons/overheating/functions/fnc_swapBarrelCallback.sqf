@@ -19,6 +19,9 @@
 params ["_player", "_weapon"];
 TRACE_2("params",_player,_weapon);
 
+_player playAction "GestureMountMuzzle";
+playSound "ACE_BarrelSwap";
+
 // don't consume the barrel, but rotate through them.
 [localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
 

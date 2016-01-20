@@ -22,3 +22,14 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 
+class CfgGesturesMale {
+    class States {
+        class GestureReloadBase;
+        class GestureMountMuzzle: GestureReloadBase {
+            speed = 0.3;
+        };
+        class GestureDismountMuzzle: GestureReloadBase {
+            speed = 0.3;
+        };
+    };
+};
