@@ -23,6 +23,6 @@ TRACE_2("params",_player,_weapon);
 [localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
 
 // Publish the temperature variable
-_unit setVariable [format [QGVAR(%1_temp), _weapon], 0, true];
+_player setVariable [format [QGVAR(%1_temp), _weapon], 0, true];
 // Store the update time
-_unit setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
+_player setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
