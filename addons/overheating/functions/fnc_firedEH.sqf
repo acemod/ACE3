@@ -54,8 +54,8 @@ if (isNil "_weaponData") then {
     } else {
         1;
     };
-    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_MRBS))) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_MRBS));
+    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_mrbs))) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_mrbs));
     } else {
         3000;
     };

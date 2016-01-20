@@ -117,7 +117,7 @@ class CfgWeapons
         ACE_barrelLength = 261.62;
         ACE_Overheating_dispersion = 1;
         ACE_Overheating_slowdownFactor = 1;
-        ACE_Overheating_MRBS = 3000;
+        ACE_Overheating_mrbs = 3000;
     };
     class rhs_weap_m16a4: rhs_weap_m4_Base {
         ACE_barrelTwist = 177.8;
@@ -130,7 +130,7 @@ class CfgWeapons
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_dispersion = 0.75;
         ACE_Overheating_slowdownFactor = 1;
-        ACE_Overheating_MRBS = 3000;
+        ACE_Overheating_mrbs = 3000;
 	};
     class rhs_weap_m240_base;
     class rhs_weap_m240B: rhs_weap_m240_base {
@@ -139,7 +139,7 @@ class CfgWeapons
         ACE_Overheating_allowSwapBarrel = 1;
         ACE_Overheating_dispersion = 1;
         ACE_Overheating_slowdownFactor = 1;
-        ACE_Overheating_MRBS = 3000;
+        ACE_Overheating_mrbs = 3000;
     };
     class rhs_weap_m14ebrri: srifle_EBR_F {
         ACE_barrelTwist = 304.8;

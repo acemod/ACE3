@@ -16,7 +16,7 @@ class CfgWeapons {
     class RifleCore;
     class Rifle: RifleCore {
         //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
-        GVAR(MRBS) = 3000;
+        GVAR(mrbs) = 3000;
 
         //Dispersion Factor (this will be scaled based on the barrel temp)
         GVAR(dispersion) = 1;
