@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain
- * Update temperature of a weapon at regular intervals.
+ * Update cooldown calculation of all player weapons at regular intervals.
  *
  * Argument:
  * None
@@ -13,6 +13,7 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 if (primaryWeapon ACE_player != "") then {
