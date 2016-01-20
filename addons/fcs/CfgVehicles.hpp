@@ -379,7 +379,7 @@ class CfgVehicles {
     };
 
     // SHIPS
-    /*class Ship: AllVehicles {
+    class Ship: AllVehicles {
         class Turrets {
             class MainTurret;
         };
@@ -391,17 +391,20 @@ class CfgVehicles {
 
     class Boat_Armed_01_base_F: Boat_F {
         class Turrets: Turrets {
-            class FrontTurret;
-            class RearTurret: FrontTurret {};
+            class FrontTurret: NewTurret {
+                GVAR(enabled) = 1;
+                GVAR(minDistance) = 100;
+                GVAR(maxDistance) = 2000;
+                GVAR(distanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+            class RearTurret: FrontTurret {
+                discreteDistance[] = {100,200,300,400,600,800,1000,1200};  // Originally inherited from FrontTurret
+                discreteDistanceInitIndex = 4;
+            };
         };
-    };*/
-
-    /*class Boat_Armed_01_minigun_base_F: Boat_Armed_01_base_F {
-        class Turrets: Turrets {
-            class FrontTurret: FrontTurret {};
-            class RearTurret: RearTurret {};
-        };
-    };*/
+    };
 
     // AIR VEHICLES
     class Air: AllVehicles {};
