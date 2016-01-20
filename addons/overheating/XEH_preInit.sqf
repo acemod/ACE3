@@ -12,5 +12,6 @@ PREP(overheat);
 PREP(swapBarrel);
 PREP(swapBarrelCallback);
 PREP(updateTemperature);
+PREP(updateTemperatureThread);
 
 ADDON = true;

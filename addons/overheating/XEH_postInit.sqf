@@ -34,15 +34,5 @@ GVAR(weaponInfoCache) setText QGVAR(weaponInfoCache);
 [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
 
 
-// Create a PFH to cool down all player weapons at (infrequent) regular intervals
-[{
-    if (primaryWeapon ACE_player != "") then {
-        [ACE_player, primaryWeapon ACE_player, 0] call FUNC(updateTemperature);
-    };
-    if (handgunWeapon ACE_player != "") then {
-        [ACE_player, handgunWeapon ACE_player, 0] call FUNC(updateTemperature);
-    };
-    if (secondaryWeapon ACE_player != "") then {
-        [ACE_player, secondaryWeapon ACE_player, 0] call FUNC(updateTemperature);
-    };
-}, 5, []] call CBA_fnc_addPerFrameHandler;
+// Schedule cool down calculation of player weapons at (infrequent) regular intervals
+[] call FUNC(updateTemperatureThread);
