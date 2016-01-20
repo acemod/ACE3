@@ -1,5 +1,5 @@
 /*
- * Author: Commy2 and CAA-Picard
+ * Author: Commy2 and esteldunedain
  * Handle weapon fire
  *
  * Argument:
@@ -42,30 +42,7 @@ private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true
 TRACE_2("Unit fired with temp:",_unit,_temperature);
 
 //Get weapon data from cache:
-private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
-if (isNil "_weaponData") then {
-    private _dispersion = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(dispersion))) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(dispersion));
-    } else {
-        1;
-    };
-    private _slowdownFactor = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(slowdownFactor))) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(slowdownFactor));
-    } else {
-        1;
-    };
-    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_mrbs))) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_mrbs));
-    } else {
-        3000;
-    };
-    _jamChance = if (_jamChance == 0) then {0} else {1/_jamChance};
-
-    _weaponData = [_dispersion, _slowdownFactor, _jamChance];
-    TRACE_2("building cache",_weapon,_weaponData);
-    GVAR(weaponInfoCache) setVariable [_weapon, _weaponData];
-};
-_weaponData params ["_dispersion", "_slowdownFactor", "_jamChance"];
+([_weapon] call FUNC(getWeaponData)) params ["_dispersion", "_slowdownFactor", "_jamChance"];
 TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance);
 
 // Dispersion and bullet slow down

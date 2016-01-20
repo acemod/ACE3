@@ -19,6 +19,7 @@
 params ["_player", "_weapon"];
 TRACE_2("params",_player,_weapon);
 
+// Barrel mount gesture
 _player playAction QGVAR(GestureMountMuzzle);
 playSound "ACE_BarrelSwap";
 

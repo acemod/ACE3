@@ -19,9 +19,12 @@
 params ["_player", "_weapon"];
 TRACE_2("params",_player,_weapon);
 
+// Make the standing player kneel down
 if (stance _player != "PRONE") then {
     [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 };
+
+// Barrel dismount gesture
 _player playActionNow QGVAR(GestureDismountMuzzle);
 playSound "ACE_BarrelSwap";
 

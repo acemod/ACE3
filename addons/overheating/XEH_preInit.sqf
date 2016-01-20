@@ -6,6 +6,7 @@ PREP(checkTemperature);
 PREP(clearJam);
 PREP(displayTemperature);
 PREP(firedEH);
+PREP(getWeaponData);
 PREP(handleTakeEH);
 PREP(jamWeapon);
 PREP(overheat);

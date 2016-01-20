@@ -1,5 +1,5 @@
 /*
- * Author: ??? probably CAA-Picard / Commy2
+ * Author: Commy2
  * Handle "take" event
  * I think it fixs jams when manually dragging a new magazine in from player's inventory
  *
