@@ -9,7 +9,7 @@
  * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * 0: wet bulb <NUMBER>
+ * wet bulb <NUMBER>
  *
  * Return value:
  * None
@@ -18,7 +18,7 @@
 
 private ["_es", "_e", "_eDiff", "_eGuessPrev", "_cTempDelta", "_twGuess", "_eguess"];
 
-PARAMS_3(_temperature,_pressure,_relativeHumidity);
+params ["_temperature", "_pressure", "_relativeHumidity"];
 
 // Source: http://cosmoquest.org/forum/showthread.php?155366-Calculating-Wet-Bulb-Temperature-from-RH-amp-Dry-Bulb
 _es = 6.112 * exp((17.67 * _temperature) / (_temperature + 243.5));

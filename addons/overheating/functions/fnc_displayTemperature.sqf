@@ -28,8 +28,6 @@ _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "Weapo
 // Calculate cooling
 _temperature = [_temperature, _barrelMass, ACE_time - _time] call FUNC(cooldown);
 
-//["Overheating", _temperature, {format ["Temperature: %1 °C", _this]}] call EFUNC(common,log);
-
 // Store new temperature
 _time = ACE_time;
 _player setVariable [_string, [_temperature, _time], false];

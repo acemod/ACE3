@@ -16,19 +16,17 @@
 #include "script_component.hpp"
 
 private ["_medic", "_patient", "_items", "_return"];
-_medic = _this select 0;
-_patient = _this select 1;
-_items = _this select 2;
+params ["_medic", "_patient", "_items"];
 
 _return = true;
 {
     //
-    if (typeName _x == "ARRAY" && {({[_medic, _patient, _x] call FUNC(hasItem)}count _x == 0)}) exitwith {
+    if (_x isEqualType [] && {({[_medic, _patient, _x] call FUNC(hasItem)}count _x == 0)}) exitwith {
         _return = false;
     };
-    if (typeName _x == "STRING" && {!([_medic, _patient, _x] call FUNC(hasItem))}) exitwith {
+    if (_x isEqualType "" && {!([_medic, _patient, _x] call FUNC(hasItem))}) exitwith {
         _return = false;
     };
 }foreach _items;
 
-_return;
+_return

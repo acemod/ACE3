@@ -14,9 +14,8 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_caller,_target);
-
 private ["_position", "_headPos", "_spinePos", "_dirVect", "_direction", "_bodyBag"];
+params ["_caller", "_target"];
 
 if (alive _target) then {
     [_target, true] call FUNC(setDead);
@@ -29,9 +28,11 @@ _spinePos = _target modelToWorldVisual (_target selectionPosition "Spine3");
 _dirVect = _headPos vectorFromTo _spinePos;
 _direction = _dirVect call CBA_fnc_vectDir;
 
-deleteVehicle _target;
-
 _bodyBag = createVehicle ["ACE_bodyBagObject", _position, [], 0, "CAN_COLLIDE"];
+
+["placedInBodyBag", [_target, _bodyBag]] call EFUNC(common,globalEvent);
+
+deleteVehicle _target;
 
 // prevent body bag from flipping
 _bodyBag setPosASL _position;

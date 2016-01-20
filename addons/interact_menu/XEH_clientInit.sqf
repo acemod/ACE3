@@ -8,17 +8,19 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-//Setup text/shadow/size/color settings matrix
-[] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_1(_name);
-    if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+    params ["_name"];
+    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
     };
 }] call EFUNC(common,addEventhandler);
 
-// Install the render EH on the main display
-addMissionEventHandler ["Draw3D", DFUNC(render)];
+["SettingsInitialized", {
+    //Setup text/shadow/size/color settings matrix
+    [] call FUNC(setupTextColors);
+    // Install the render EH on the main display
+    addMissionEventHandler ["Draw3D", DFUNC(render)];
+}] call EFUNC(common,addEventHandler);
 
 //Add Actions to Houses:
 ["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
@@ -39,14 +41,14 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // Statement
     [0] call FUNC(keyDown)
 },{[0,false] call FUNC(keyUp)},
-[219, [false, false, false]], false] call cba_fnc_addKeybind;  //Left Windows Key
+[219, [false, false, false]], false] call CBA_fnc_addKeybind;  //Left Windows Key
 
 ["ACE3 Common", QGVAR(SelfInteractKey), (localize LSTRING(SelfInteractKey)),
 {
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
-[219, [false, true, false]], false] call cba_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+[219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
@@ -54,7 +56,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
-    EXPLODE_2_PVT(_this,_unit,_isUnconscious);
+    params ["_unit", "_isUnconscious"];
 
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 
@@ -75,32 +77,28 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call EFUNC(common,addEventHandler);
 
-// Let key work with zeus open (not perfect, contains workaround to prevent other CBA keybindings)
-["zeusDisplayChanged",{
-    if (_this select 1) then {
-        (finddisplay 312) displayAddEventHandler ["KeyUp", {
-            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = _key select 5;
-            _dik = _key select 0;
-            _mods = _key select 1;
-
-            if ((_this select 1) == _dik) then {
-                if ((_this select [2,3]) isEqualTo _mods) then {
-                    [_this,'keyup'] call CBA_events_fnc_keyHandler
-                };
+//Debug to help end users identify mods that break CBA's XEH
+[{
+    private ["_badClassnames"];
+    _badClassnames = [];
+    {
+        //Only check Land objects (WeaponHolderSimulated show up in `vehicles` for some reason)
+        if ((_x isKindOf "Land") && {(isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}}) then {
+            if (!((typeOf _x) in _badClassnames)) then {
+                _badClassnames pushBack (typeOf _x);
+                ACE_LOGERROR_3("Compile checks bad for (classname: %1)(addon: %2) %3", (typeOf _x), (unitAddons (typeOf _x)), _x);
             };
-        }];
-        (finddisplay 312) displayAddEventHandler ["KeyDown", {
-            _key = ["ACE3 Common","ace_interact_menu_InteractKey"] call CBA_fnc_getKeybind;
-            _key = _key select 5;
-            _dik = _key select 0;
-            _mods = _key select 1;
+        };
+    } forEach (allUnits + allDeadMen + vehicles);
+    if ((count _badClassnames) == 0) then {
+        ACE_LOGINFO("All compile checks passed");
+    } else {
+        ACE_LOGERROR_1("%1 Classnames failed compile check!!! (bad XEH / missing cba_enable_auto_xeh.pbo)", (count _badClassnames));
 
-            if ((_this select 1) == _dik) then {
-                if ((_this select [2,3]) isEqualTo _mods) then {
-                    [_this,'keydown'] call CBA_events_fnc_keyHandler
-                };
-            };
-        }];
+        //Only show visual error if they are actually missing the pbo:
+        #define SUPMON configFile>>"CfgSettings">>"CBA">>"XEH">>"supportMonitor"
+        if ((!isNumber(SUPMON)) || {getNumber(SUPMON) != 1}) then {
+            ["ACE Interaction failed to compile for some units (try adding cba_enable_auto_xeh.pbo)"] call BIS_fnc_error;
+        };
     };
-}] call EFUNC(common,addEventHandler);
+}, [], 5] call EFUNC(common,waitAndExecute);  //ensure CBASupMon has time to run first

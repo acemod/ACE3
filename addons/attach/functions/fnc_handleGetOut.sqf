@@ -17,10 +17,10 @@
  */
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["", "", "_unit"];
 TRACE_1("params",_unit);
+
+if (!local _unit) exitWith {};
 
 private ["_attachedList"];
 

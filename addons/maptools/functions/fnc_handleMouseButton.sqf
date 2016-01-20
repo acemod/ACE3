@@ -44,7 +44,7 @@ if (_dir != 1) then {
             deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
             ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
             // Log who drew on the briefing screen
-            (text format ["[ACE] Server: Player %1 drew on the briefing screen", profileName]) call EFUNC(common,serverLog);
+            [ACE_INFOFORMAT_1("Player %1 drew on the briefing screen", profileName)] call EFUNC(common,serverLog);
         } else {
             GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
             GVAR(drawing_lineMarkers) pushBack (+GVAR(drawing_tempLineMarker));
@@ -90,7 +90,5 @@ if (_dir != 1) then {
     };
     _handled
 };
-
-diag_log text format ["HJa %1", _handled];
 
 _handled

@@ -40,6 +40,7 @@ local              = "_this call SLX_XEH_EH_Local"; \
 respawn            = "_this call SLX_XEH_EH_Respawn"; \
 put                = "_this call SLX_XEH_EH_Put"; \
 take               = "_this call SLX_XEH_EH_Take"; \
+seatSwitched       = "_this call SLX_XEH_EH_SeatSwitched"; \
 soundPlayed        = "_this call SLX_XEH_EH_SoundPlayed"; \
 weaponAssembled    = "_this call SLX_XEH_EH_WeaponAssembled"; \
 weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
@@ -51,11 +52,11 @@ weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
 
 
 
-/*
+/* 
    MACRO: DELETE_EVENTHANDLERS
 
    Removes all event handlers.
-
+ 
   Example:
  (begin example)
     class DefaultEventhandlers;
@@ -103,6 +104,7 @@ delete local;  \
 delete respawn;  \
 delete put;  \
 delete take; \
+delete seatSwitched; \
 delete soundPlayed; \
 delete weaponAssembled; \
 delete weaponDisAssembled;

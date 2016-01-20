@@ -19,9 +19,8 @@
  * Example:
  * [] call ace_common_fnc_isFeatureCameraActive
  *
- * Public: No
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
 !(
@@ -32,4 +31,4 @@
     {isNull (GETMVAR(BIS_fnc_camera_cam, objNull))} && // Splendid camera
     {isNull (GETUVAR(BIS_fnc_animViewer_cam, objNull))} && // Animation viewer camera
     {isNull (GETMVAR(BIS_DEBUG_CAM, objNull))} // Classic camera
-)
+) // return

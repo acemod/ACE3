@@ -6,9 +6,9 @@ class CfgWeapons {
     class ACE_DAGR: ACE_ItemCore {
         author[] = {$STR_ACE_Common_ACETeam, "Ruthberg"};
         scope = 2;
-        displayName = "DAGR";
+        displayName = CSTRING(Name);
         model = QUOTE(PATHTOF(data\DAGR.p3d));
-        descriptionShort = "";
+        descriptionShort = CSTRING(Description);
         picture = PATHTOF(UI\DAGR_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;

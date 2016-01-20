@@ -1,33 +1,28 @@
 /*
-Name: FUNC(getForceWalkStatus)
-
-Author: Pabst Mirror (from captivity by commy2)
-
-Description:
-  Returns reasons why the unit is forceWalk-ing, empty if not forced.
-
-Parameters:
-  0: OBJECT - Unit
-
-Returns:
-  ARRAY(of strings) - Reason why the unit is force walking
-
-Example:
-  [ACE_Player] call FUNC(getForceWalkStatus)
-*/
+ * Author: PabstMirror, commy2
+ * Returns reasons why the unit is forceWalk-ing.
+ *
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return Value:
+ * Force Walk reasons <ARRAY>
+ *
+ * Example:
+ * [ACE_Player] call ace_common_fnc_getForceWalkStatus
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
+params ["_unit"];
 
-PARAMS_1(_unit);
+private _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
+private _unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
+private _unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
 
-_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
+private _unitForceWalkReasons = [];
 
-_unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
-
-_unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
-
-_unitForceWalkReasons = [];
 {
     if (_unitForceWalkStatus select _forEachIndex) then {
         _unitForceWalkReasons pushBack _x;

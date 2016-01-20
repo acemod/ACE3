@@ -13,8 +13,8 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_FiredBIS_EventHandlers {
     class CAManBase {
-        class GVAR(ThrowGrenade) {
-            clientFiredBIS = QUOTE(if (_this select 0 == ACE_player) then {_this call FUNC(throwGrenade)};);
+        class GVAR(throwGrenade) {
+            clientFiredBIS = QUOTE(if (_this select 0 == ACE_player) then {_this call FUNC(throwGrenade)});
         };
     };
 };

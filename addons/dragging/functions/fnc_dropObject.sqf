@@ -16,15 +16,15 @@
 
 params ["_unit", "_target"];
 
-// remove scroll wheel action
-_unit removeAction (_unit getVariable [QGVAR(ReleaseActionID), -1]);
+// remove drop action
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
 private "_inBuilding";
 _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
-if !(_unit getvariable ["ACE_isUnconscious", false]) then {
-	// play release animation
-	_unit playAction "released";
+if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+    // play release animation
+    _unit playAction "released";
 };
 
 // prevent collision damage
@@ -49,6 +49,9 @@ if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
 };
 
+// hide mouse hint
+[] call EFUNC(interaction,hideMouseHint);
+
 _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
@@ -60,6 +63,11 @@ if !(_target isKindOf "CAManBase") then {
     ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
 };
 
-if (_unit getvariable ["ACE_isUnconscious", false]) then {
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
+};
+
+// recreate UAV crew
+if (_target getVariable [QGVAR(isUAV), false]) then {
+    createVehicleCrew _target;
 };

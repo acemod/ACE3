@@ -25,7 +25,11 @@ _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (isServer) then {
     {
         if (isClass _x) then {
-            ["AddCargoByClass", [getText (_x >> "type"), _vehicle, getNumber (_x >> "amount")]] call EFUNC(common,localEvent);
+            private ["_cargoClassname", "_cargoCount"];
+            _cargoClassname = getText (_x >> "type");
+            _cargoCount = getNumber (_x >> "amount");
+            TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
+            ["AddCargoByClass", [_cargoClassname, _vehicle, _cargoCount]] call EFUNC(common,localEvent);
         };
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
@@ -41,7 +45,7 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 private ["_text", "_condition", "_statement", "_icon", "_action"];
 _condition = {
     params ["_target", "_player"];
-    GVAR(enable) && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, []] call EFUNC(common,canInteractWith)}
 };
 _text = localize LSTRING(openMenu);
 _statement = {GVAR(interactionVehicle) = _target; createDialog QGVAR(menu);};

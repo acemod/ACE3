@@ -20,7 +20,13 @@ params ["_unit", "_target"];
 //Check sides, Player has cableTie, target is alive and not already handcuffed
 
 (GVAR(allowHandcuffOwnSide) || {(side _unit) != (side _target)}) &&
-("ACE_CableTie" in (items _unit)) &&
+{"ACE_CableTie" in (items _unit)} &&
 {alive _target} &&
 {!(_target getVariable [QGVAR(isHandcuffed), false])} &&
-(GVAR(requireSurrender) == 0 || ((_target getVariable [QGVAR(isSurrendering), false]) || (currentWeapon _target == "" && GVAR(requireSurrender) == 2)))
+{
+    (_target getVariable ["ACE_isUnconscious", false]) || //isUnconscious
+    {!([_target] call EFUNC(common,isPlayer))} || //is an AI (not a player)
+    {GVAR(requireSurrender) == 0} || //or don't require surrendering
+    {_target getVariable [QGVAR(isSurrendering), false]} ||  //or is surrendering
+    {(GVAR(requireSurrender) == 2) && {(currentWeapon _target) == ""}} //or "SurrenderOrNoWeapon" and no weapon
+}

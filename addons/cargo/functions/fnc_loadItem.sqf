@@ -1,10 +1,12 @@
 /*
  * Author: Glowbal
  * Load object into vehicle.
+ * Objects loaded via classname remain virtual until unloaded.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Show Hint <BOOL> (default: true)
  *
  * Return value:
  * Object loaded <BOOL>
@@ -16,25 +18,25 @@
  */
 #include "script_component.hpp"
 
+params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]]];
 private ["_loaded", "_space", "_itemSize"];
-
-params ["_item", "_vehicle"];
 
 if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
 
 _loaded = _vehicle getVariable [QGVAR(loaded), []];
-_loaded pushback _item;
+_loaded pushBack _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
+
+TRACE_1("added to loaded array",_loaded);
 
 _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
-detach _item;
-_item attachTo [_vehicle,[0,0,100]];
-["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
-
-// Invoke listenable event
-["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+if (_item isEqualType objNull) then {
+    detach _item;
+    _item attachTo [_vehicle,[0,0,-100]];
+    ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
+};
 
 true

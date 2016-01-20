@@ -26,7 +26,7 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
 };
 
 // same as dragObjectPFH, checks if object is deleted or dead OR (target moved away from carrier (weapon disasembled))
-if ((!([_target] call EFUNC(common,isAlive))) || {(_unit distance _target) > 10}) then {
+if (!alive _target || {_unit distance _target > 10}) then {
     [_unit, _target] call FUNC(dropObject);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };

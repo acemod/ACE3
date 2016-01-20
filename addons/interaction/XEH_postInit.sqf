@@ -1,37 +1,41 @@
 // by commy2 and esteldunedain
-
 #include "script_component.hpp"
 
 ACE_Modifier = 0;
 
-//SelectLeader Event Handler for BecomeLeader action:
-[QGVAR(selectLeader), {
-    PARAMS_2(_group,_leader);
-    _group selectLeader _leader;
+["pardon", {(_this select 0) addRating -rating (_this select 0)}] call EFUNC(common,addEventHandler);
+
+["getDown", {
+    params ["_target"];
+
+    _target setUnitPos "DOWN";
 }] call EFUNC(common,addEventHandler);
 
-//Pushing boats from FUNC(push)
-[QGVAR(pushBoat), {
-    params ["_boat", "_newVelocity"];
-    _boat setVelocity _newVelocity;
-}] call EFUNC(common,addEventHandler);
+["sendAway", {
+    params ["_unit", "_position"];
 
+    _unit setUnitPos "AUTO";
+    _unit doMove _position;
+}] call EFUNC(common,addEventHandler);
 
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
 
-// restore global fire teams for JIP
-private ["_team"];
-{
-    _team = _x getVariable [QGVAR(assignedFireTeam), ""];
-    if (_team != "") then {_x assignTeam _team};
-} forEach allUnits;
+[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
 
+["tapShoulder", {
+    params ["_unit", "_shoulderNum"];
 
-// Add keybinds
-["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor),
-{
+    if (_unit == ACE_player) then {
+        addCamShake [4, 0.5, 5];
+        private _message = parseText format ([["%1 &gt;", localize LSTRING(YouWereTappedRight)], ["&lt; %1", localize LSTRING(YouWereTappedLeft)]] select (_shoulderNum == 1));
+        [_message] call EFUNC(common,displayTextStructured);
+    };
+}] call EFUNC(common,addEventHandler);
+
+// add keybinds
+["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor), {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -40,46 +44,30 @@ private ["_team"];
     // Statement
     call EFUNC(interaction,openDoor);
     true
-},
-{
+}, {
     //Probably don't want any condidtions here, so variable never gets locked down
     // Statement
     GVAR(isOpeningDoor) = false;
     true
 },
-[57, [false, true, false]], false] call cba_fnc_addKeybind; //Key CTRL+Space
+[57, [false, true, false]], false] call CBA_fnc_addKeybind; //Key CTRL+Space
 
 
-["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder),
-{
+["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
+    //Tap whichever shoulder is closest
+    private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
+    
     // Statement
-    [ACE_player, cursorTarget, 0] call FUNC(tapShoulder);
+    [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);
     true
 },
 {false},
-[20, [true, false, false]], false] call cba_fnc_addKeybind;
-
-["ACE3 Common", QGVAR(modifierKey), localize LSTRING(ModifierKey),
-{
-    // Conditions: canInteract
-    //if !([ACE_player, objNull, ["isNotDragging"]] call EFUNC(common,canInteractWith)) exitWith {false};   // not needed
-
-    // Statement
-    ACE_Modifier = 1;
-    // Return false so it doesn't block other actions
-    false
-},
-{
-    //Probably don't want any condidtions here, so variable never gets locked down
-    ACE_Modifier = 0;
-    false;
-},
-[29, [false, false, false]], false] call cba_fnc_addKeybind;
+[20, [true, false, false]], false] call CBA_fnc_addKeybind;
 
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);

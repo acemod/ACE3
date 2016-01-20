@@ -29,7 +29,7 @@ if (isServer) then {
     }] call EFUNC(common,addEventHandler);
 };
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
@@ -43,7 +43,7 @@ GVAR(CurrentSpeedDial) = 0;
         GVAR(placeAction) = PLACE_CANCEL;
     };
 
-    //Show defuse actions on cfgAmmos (allMines):
+    //Show defuse actions on CfgAmmos (allMines):
     _this call FUNC(interactEH);
 
 }] call EFUNC(common,addEventHandler);

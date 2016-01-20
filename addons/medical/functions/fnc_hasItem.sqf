@@ -16,29 +16,27 @@
 #include "script_component.hpp"
 
 private ["_medic", "_patient", "_item", "_return", "_crew"];
-_medic = _this select 0;
-_patient = _this select 1;
-_item = _this select 2;
+params ["_medic", "_patient", "_item"];
 
-if (isnil QGVAR(setting_allowSharedEquipment)) then {
+if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
-if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitwith {
-    true;
+if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
+    true
 };
 
-if ([_medic, _item] call EFUNC(common,hasItem)) exitwith {
-    true;
+if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
+    true
 };
 
 _return = false;
 if ((vehicle _medic != _medic) && {[vehicle _medic] call FUNC(isMedicalVehicle)}) then {
     _crew = crew vehicle _medic;
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitwith {
+        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
             _return = true;
         };
-    }foreach _crew;
+    } forEach _crew;
 };
 
-_return;
+_return

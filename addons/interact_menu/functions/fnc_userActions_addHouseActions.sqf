@@ -80,11 +80,10 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
                 _helperPos = (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x)) call EFUNC(common,positionToASL);
-                _helperObject = "Sign_Sphere25cm_F" createVehicleLocal _helperPos;
+                _helperObject = "ACE_LogicDummy" createVehicleLocal _helperPos;
                 _addedHelpers pushBack _helperObject;
                 _helperObject setVariable [QGVAR(building), _houseBeingScaned];
                 _helperObject setPosASL _helperPos;
-                _helperObject hideObject true;
                 TRACE_3("Making New Helper",_helperObject,_x,_houseBeingScaned);
 
                 {

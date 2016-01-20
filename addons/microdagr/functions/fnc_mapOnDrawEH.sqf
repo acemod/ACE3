@@ -48,6 +48,9 @@ if (GVAR(currentApplicationPage) == 1) then {
     };
 
 } else { //Map Mode:
+    //Call all added minimap draw event handlers:
+    {_this call _x;} forEach GVAR(miniMapDrawHandlers);
+
     if (GVAR(mapAutoTrackPosition)) then {
         _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom)/_mapSize), (getPosASL ACE_player)];
         ctrlMapAnimCommit _theMap;

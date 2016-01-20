@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissionModules">
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
@@ -8,7 +8,9 @@
             <German>ACE-Missionsmodule</German>
             <Czech>ACE Moduly mise</Czech>
             <Portuguese>Módulo de missões ACE</Portuguese>
+            <French>ACE module de mission</French>
             <Hungarian>ACE küldetési modulok</Hungarian>
+            <Russian>Модули миссий ACE</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds [ACE]</English>
@@ -17,7 +19,9 @@
             <German>Umgebungsgeräusche [ACE]</German>
             <Czech>Zvuky prostředí [ACE]</Czech>
             <Portuguese>[ACE] Sons ambientes</Portuguese>
+            <French>Sons d'ambiance [ACE]</French>
             <Hungarian>Ambiens hangok [ACE]</Hungarian>
+            <Russian>Звук окружения [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -26,7 +30,9 @@
             <German>Sounds</German>
             <Czech>Zvuky</Czech>
             <Portuguese>Sons</Portuguese>
+            <French>Sons</French>
             <Hungarian>Hangok</Hungarian>
+            <Russian>Звуки</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -35,6 +41,8 @@
             <German>Klassennamen der Umgebungsgeräusche, die abgespielt werden sollen. Getrennt durch ","</German>
             <Czech>Class names zvuků prostředí, které budou přehrány. Oddělené ',' </Czech>
             <Portuguese>Nomes de classe dos sons de ambiente para serem reproduzidos. Separados por ","</Portuguese>
+            <Russian>Имена классов звуков окружения, которые должны проигрываться. Разделенные ','</Russian>
+            <French>ClassNames des sons d'ambiances. Séparation par ","</French>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
@@ -43,7 +51,9 @@
             <German>Mindestabstand</German>
             <Czech>Minimální vzdálenost</Czech>
             <Portuguese>Distância mínima</Portuguese>
+            <French>Distance minimale</French>
             <Hungarian>Minimális távolság</Hungarian>
+            <Russian>Минимальная дистанция</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -52,7 +62,9 @@
             <German>Wird verwendet, um eine zufällige Position zu bestimmen und setzt den Mindestabstand zwischen Spielern und der/den abzuspielenden Sounddatei(en) fest</German>
             <Czech>Používá se pro výpočet náhodné pozice a určuje minimální vzdálenost mezi hráči a přehrávaným zvukem.</Czech>
             <Portuguese>Usada para calcular uma posição aleatória e definir a distância mínima entre os jogadores e os arquivos de sons que estão sendo reproduzidos.</Portuguese>
+            <French>Utilisé pour calculer une position aléatoire et pour définir la distance minimale entre le joueur les sons lus.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a minimum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
+            <Russian>Используется для расчета случайной позиции и указывает минимальное расстояние между игроками и источниками звука</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -61,7 +73,9 @@
             <German>Maximalabstand</German>
             <Czech>Maximální vzdálenost</Czech>
             <Portuguese>Distância máxima</Portuguese>
+            <French>Distance maximale</French>
             <Hungarian>Maximális távolság</Hungarian>
+            <Russian>Максимальная дистанция</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -70,7 +84,9 @@
             <German>Wird verwendet, um eine zufällige Position zu bestimmen und setzt den Maximalabstand zwischen Spielern und der/den abzuspielenden Sounddatei(en) fest</German>
             <Czech>Používá se pro výpočet náhodné pozice a určuje maximální vzdálenost mezi hráči a přehrávaným zvukem.</Czech>
             <Portuguese>Usado para calcular uma posição aleatória e definir uma distância máxima entre os jogadores e os arquivos de sons que estão sendo reproduzidos.</Portuguese>
+            <French>Utilisé pour calculer une position aléatoire et pour définir la distance maximale entre le joueur les sons lus.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a maximum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
+            <Russian>Используется для расчета случайной позиции и указывает максимальное расстояние между игроками и источниками звука</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
@@ -79,7 +95,9 @@
             <German>Minimale Verzögerung</German>
             <Czech>Minimální prodleva</Czech>
             <Portuguese>Atraso mínimo</Portuguese>
+            <French>Délais minimal</French>
             <Hungarian>Minimum késleltetés</Hungarian>
+            <Russian>Минимальная задержка</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -88,7 +106,9 @@
             <German>Minimale Verzögerung zwischen abzuspielenden Sounds</German>
             <Czech>Minimální prodleva mezi přehrávanými zvuky</Czech>
             <Portuguese>Atraso mínimo entre os sons reproduzidos</Portuguese>
+            <French>Délais minimal entre les sons lus.</French>
             <Hungarian>Minimum késleltetés a lejátszott hangok között</Hungarian>
+            <Russian>Минимальная задержка между воспроизведением звуков</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
@@ -97,7 +117,9 @@
             <German>Maximale Verzögerung</German>
             <Czech>Maximální prodleva</Czech>
             <Portuguese>Atraso máximo</Portuguese>
+            <French>Délais maximal</French>
             <Hungarian>Maximum késleltetés</Hungarian>
+            <Russian>Максимальная задержка</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -106,7 +128,9 @@
             <German>Maximale Verzögerung zwischen abzuspielenden Sounds</German>
             <Czech>Maximální prodleva mezi přehrávanými zvuky</Czech>
             <Portuguese>Atraso máximo entre os sons reproduzidos</Portuguese>
+            <French>Délais maximal entre les sons lus.</French>
             <Hungarian>Maximum késleltetés a lejátszott hangok között</Hungarian>
+            <Russian>Максимальная задержка между воспроизведением звуков</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
@@ -115,7 +139,9 @@
             <German>Spielern folgen</German>
             <Czech>Následovat hráče</Czech>
             <Portuguese>Seguir jogadores</Portuguese>
+            <French>Suivre les joueurs</French>
             <Hungarian>Játékosok követése</Hungarian>
+            <Russian>Следовать за игроками</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
@@ -124,7 +150,9 @@
             <German>Spielern folgen. Wenn auf falsch gesetzt, werden Sounds nur in der Nähe des Logikmoduls abgespielt.</German>
             <Czech>Následuj hráče. Pokud je FALSE, smyčka zvuku bude přehrávána na nejbližší pozici logiki.</Czech>
             <Portuguese>Segue os jogadores. Se esta desabilitado (falso), o loop reproduzirá os sons somente perto de sua posição lógica.</Portuguese>
+            <French>Suivre le joueur. Si défini sur false, les sons seront joués en boucle autour la position logique</French>
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
+            <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -133,7 +161,9 @@
             <German>Lautstärke</German>
             <Czech>Hlasitost</Czech>
             <Portuguese>Volume</Portuguese>
+            <French>Volume</French>
             <Hungarian>Hangerő</Hungarian>
+            <Russian>Громкость</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>
@@ -142,7 +172,9 @@
             <German>Lautstärke der abzuspielenden Sounds</German>
             <Czech>Hlasitost přehrávaného zvuku</Czech>
             <Portuguese>O volume em que os sons serão reproduzidos</Portuguese>
+            <French>Volume des sons lus</French>
             <Hungarian>A lejátszott hangok hangereje</Hungarian>
+            <Russian>Громкость воспроизводимых звуков</Russian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
@@ -151,7 +183,9 @@
             <German>Umgebungsgeräusch-Schleife (im MP synchronisiert)</German>
             <Czech>Smyčka okkolního zvuku (synchronizováno v MP)</Czech>
             <Portuguese>Loop de sons ambientes (sincronizados através do MP)</Portuguese>
+            <French>Sons d'ambiance lus en boucle (Synchronisation MP)</French>
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
+            <Russian>Циклически воспроизводимые звуки окружения (синх. между игроками)</Russian>
         </Key>
     </Package>
 </Project>

@@ -1,13 +1,13 @@
 /*
  * Author: bux578
- * Initializes the Interaction module
+ * Initializes the Interaction module.
  *
  * Arguments:
  * 0: Logic <NUMBER>
- * 1: ???
+ * 1: Units <ARRAY>
  * 2: Activation State <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -17,13 +17,10 @@
  */
 #include "script_component.hpp"
 
-private ["_logic", "_activated"];
-
-_logic = _this select 0;
-_activated = _this select 2;
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(EnableTeamManagement), "EnableTeamManagement"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Interaction Module Initialized.";
+ACE_LOGINFO("Interaction Module Initialized.");
