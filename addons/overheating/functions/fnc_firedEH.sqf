@@ -44,18 +44,18 @@ TRACE_2("Unit fired with temp:",_unit,_temperature);
 //Get weapon data from cache:
 private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
 if (isNil "_weaponData") then {
-    private _dispersion = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion")) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_Dispersion");
+    private _dispersion = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(dispersion))) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(dispersion));
     } else {
         1;
     };
-    private _slowdownFactor = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_SlowdownFactor")) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_SlowdownFactor");
+    private _slowdownFactor = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(slowdownFactor))) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(slowdownFactor));
     } else {
         1;
     };
-    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS")) then {
-        getNumber (configFile >> "CfgWeapons" >> _weapon >> "ACE_MRBS");
+    private _jamChance = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_MRBS))) then {
+        getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(ACE_MRBS));
     } else {
         3000;
     };
