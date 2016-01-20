@@ -18,7 +18,7 @@ class CfgWeapons {
         GVAR(protection) = 1;
         GVAR(lowerVolume) = 0.80;
     };
-    class H_HelmetCrew_0: H_HelmetCrew_B {};
+    class H_HelmetCrew_O: H_HelmetCrew_B {};
     class H_HelmetCrew_I: H_HelmetCrew_B {};
 
     class H_CrewHelmetHeli_B: H_HelmetB {
