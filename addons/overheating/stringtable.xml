@@ -31,10 +31,10 @@
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
         </Key>
-        <Key ID="showParticleEffectsForEveryone_displayName">
+        <Key ID="STR_ACE_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
         </Key>
-        <Key ID="showParticleEffectsForEveryone_description">
+        <Key ID="STR_ACE_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">

@@ -36,10 +36,10 @@ if (_unit == ACE_player) then {
 };
 
 // Get current temperature from the unit variable
-private _temperature = _unit getVariable [format [QGVAR(%1_temp), _weapon], 0]
+private _temperature = _unit getVariable [format [QGVAR(%1_temp), _weapon], 0];
 private _scaledTemperature = linearConversion [0, 1000, _temperature, 0, 1, true];
 
-TRACE_2("",_temperature,_scaledTemperature);
+TRACE_2("Unit fired with temp:",_unit,_temperature);
 
 //Get weapon data from cache:
 private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
