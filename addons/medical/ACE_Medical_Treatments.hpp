@@ -1212,9 +1212,9 @@ class ACE_Medical_Advanced {
             };
             class Epinephrine {
                 painReduce = 0;
-                hrIncreaseLow[] = {10, 20, 30};
-                hrIncreaseNormal[] = {10, 50, 20};
-                hrIncreaseHigh[] = {10, 40, 10};
+                hrIncreaseLow[] = {10, 20, 15};
+                hrIncreaseNormal[] = {10, 50, 10};
+                hrIncreaseHigh[] = {10, 40, 5};
                 timeInSystem = 120;
                 maxDose = 10;
                 inCompatableMedication[] = {};
