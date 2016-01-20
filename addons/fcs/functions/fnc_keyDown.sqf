@@ -15,8 +15,14 @@
 
 params ["_vehicle", "_turret"];
 
-private _distance = [] call FUNC(getRange);
-call FUNC(updateRangeHUD);
+private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+
+private _distance = [
+    getNumber (_turretConfig >> QGVAR(DistanceInterval)),
+    getNumber (_turretConfig >> QGVAR(MaxDistance)),
+    getNumber (_turretConfig >> QGVAR(MinDistance))
+] call FUNC(getRange);
+// call FUNC(updateRangeHUD);
 
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 

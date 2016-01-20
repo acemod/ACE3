@@ -17,7 +17,7 @@ params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound",
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
-call FUNC(updateRangeHUD);
+// call FUNC(updateRangeHUD);
 
 if (isNil "_distance") then {
     _distance = [
@@ -166,11 +166,4 @@ if (_playSound) then {
 
 if (_showHint) then {
     [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
-};
-
-// Display the minimum or maximum distance with an * if out of bounds
-if (_distance >= getNumber (_turretConfig >> QGVAR(MaxDistance)) || _distance <= getNumber (_turretConfig >> QGVAR(MinDistance))) then {
-    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber) + "*";
-} else {
-    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };
