@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 
 // Look in the cache first
-private _weaponData = GVAR(weaponInfoCache) getVariable _weapon;
+private _weaponData = GVAR(cacheWeaponData) getVariable _weapon;
 if (!isNil "_weaponData") exitWith {_weaponData};
 
 // Search the config
@@ -63,6 +63,6 @@ if (isArray _property) then {
 // Cache the values
 _weaponData = [_dispersion, _slowdownFactor, _jamChance];
 TRACE_2("building cache",_weapon,_weaponData);
-GVAR(weaponInfoCache) setVariable [_weapon, _weaponData];
+GVAR(cacheWeaponData) setVariable [_weapon, _weaponData];
 
 _weaponData

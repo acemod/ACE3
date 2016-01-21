@@ -13,8 +13,8 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-GVAR(weaponInfoCache) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(weaponInfoCache) setText QGVAR(weaponInfoCache);
+GVAR(cacheWeaponData) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
