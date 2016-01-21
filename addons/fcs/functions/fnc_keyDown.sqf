@@ -17,12 +17,14 @@ params ["_vehicle", "_turret"];
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
+// Update display for infantry rangefinders
+if (_vehicle == ACE_player) exitWith {[5,5500,25,true] call FUNC(getRange)};
+
 private _distance = [
     getNumber (_turretConfig >> QGVAR(DistanceInterval)),
     getNumber (_turretConfig >> QGVAR(MaxDistance)),
     getNumber (_turretConfig >> QGVAR(MinDistance))
 ] call FUNC(getRange);
-// call FUNC(updateRangeHUD);
 
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 

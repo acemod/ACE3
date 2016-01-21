@@ -6,7 +6,7 @@
  * 0: Measurement Accuracy (default: 1) <NUMBER>
  * 1: Maximum measure distance (default: 5000) <NUMBER>
  * 2: Minimum measure distance (default: 0) <NUMBER>
- * 3: Update display (default: true) <BOOL>
+ * 3: Blank display on range error (default: false) <BOOL>
  *
  * Return value:
  * Measured distance <NUMBER>
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params [["_accuracy",1], ["_maxDistance",5000], ["_minDistance",0],["_update",true]];
+params [["_accuracy",1], ["_maxDistance",5000], ["_minDistance",0], ["_blank",false]];
 
 disableSerialization;
 private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", displayNull];
@@ -37,13 +37,15 @@ if (_distance == 0) then {
     _distance = (round (_distance/_accuracy)) * _accuracy;
 };
 
-if (_update) then {
-    // Display the minimum or maximum distance with an * if out of bounds
-    if (_distance >= _maxDistance || _distance <= _minDistance) then {
-        (_dlgRangefinder displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber) + "*";
+// Change the display if the range is out of bounds
+if (_distance >= _maxDistance || _distance <= _minDistance) then {
+    if (_blank) then {
+        (_dlgRangefinder displayCtrl 1713151) ctrlSetText "----";
     } else {
-        (_dlgRangefinder displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
+        (_dlgRangefinder displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber) + "*";
     };
+} else {
+    (_dlgRangefinder displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };
 
 _distance

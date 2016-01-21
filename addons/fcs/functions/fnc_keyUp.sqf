@@ -17,8 +17,6 @@ params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound",
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
-// call FUNC(updateRangeHUD);
-
 if (isNil "_distance") then {
     _distance = [
         getNumber (_turretConfig >> QGVAR(DistanceInterval)),
@@ -56,7 +54,7 @@ if (ACE_time - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) the
     private _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
     private _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammo >> "simulationStep");
     private _initSpeedCoef  = getNumber (configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
-    private _simulationType = getNumber (configFile >> "CfgAmmo" >> _ammo >> "simulation");
+    private _simulationType = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
 
     // More BIS fix
     if (_simulationType == "shotBullet") then {
