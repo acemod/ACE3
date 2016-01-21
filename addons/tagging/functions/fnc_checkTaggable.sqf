@@ -1,10 +1,10 @@
 /*
- * Author: BaerMitUmlaut
- * Checks if there is a wall within 2m in front of the player.
+ * Author: BaerMitUmlaut and esteldunedain
+ * Checks if there is a taggable surface within 2.5m in front of the player.
  *
  * Arguments:
  * None
- * 
+ *
  * Return Value:
  * Is wall taggable <BOOL>
  *
@@ -14,31 +14,24 @@
  * Public: No
  */
 
-
 #include "script_component.hpp"
-private ["_posCheck", "_objectsLeft", "_intersectsLeft", "_objectsRight", "_intersectsRight"];
 
-_posCheck = ACE_player modelToWorldVisual [-0.5, 2, 0];
-_posCheck set [2, (eyePos ACE_player) select 2];
+[[], {
+    private _startPosASL = eyePos ACE_player;
+    private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
+    private _cameraDir = (AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff _cameraPosASL;
+    private _endPosASL = _startPosASL vectorAdd (_cameraDir vectorMultiply 2.5);
 
-_objectsLeft = lineIntersectsWith [eyePos ACE_player, _posCheck, ACE_player, objNull, false];
-_intersectsLeft = false;
-{
-    if (_x isKindOf "Static") exitWith {_intersectsLeft = true};
-} count _objectsLeft;
+    private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, ACE_player, objNull, true, 1, "FIRE", "GEOM"];
 
-if (!_intersectsLeft) exitWith {false};
+    // If there's no intersections
+    if (_intersections isEqualTo []) exitWith {false};
 
+    (_intersections select 0) params ["", "", "", "_object"];
 
-_posCheck = ACE_player modelToWorldVisual [0.5, 2, 0];
-_posCheck set [2, (eyePos ACE_player) select 2];
+    // Exit if trying to tag a non static object
+    TRACE_1("Obj:",_intersections);
+    if (!isNull _object && {!(_object isKindOf "Static")}) exitWith {false};
 
-_objectsRight = lineIntersectsWith [eyePos ACE_player, _posCheck, ACE_player, objNull, false];
-_intersectsRight = false;
-{
-    if (_x isKindOf "Static") exitWith {_intersectsRight = true};
-} count _objectsRight;
-
-
-//for readability...
-(_intersectsLeft && _intersectsRight)
+    true
+}, missionNamespace, QGVAR(checkTaggableCache), 0.5] call EFUNC(common,cachedCall);

@@ -6,7 +6,7 @@ class CfgVehicles {
                 class ACE_tagWallBlack {
                     displayName = CSTRING(tagWallBlack);
                     condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && ([] call FUNC(checkTaggable)));
-                    statement = QUOTE(['black'] call FUNC(tagWall));
+                    statement = QUOTE([ARR_2(ACE_player,'black')] call FUNC(tagWall));
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlack.paa));
@@ -14,25 +14,25 @@ class CfgVehicles {
                 class ACE_tagWallRed: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallRed);
                     condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && ([] call FUNC(checkTaggable)));
-                    statement = QUOTE(['red'] call FUNC(tagWall));
+                    statement = QUOTE([ARR_2(ACE_player,'red')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingRed.paa));
                 };
                 class ACE_tagWallGreen: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallGreen);
                     condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && ([] call FUNC(checkTaggable)));
-                    statement = QUOTE(['green'] call FUNC(tagWall));
+                    statement = QUOTE([ARR_2(ACE_player,'green')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingGreen.paa));
                 };
                 class ACE_tagWallBlue: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallBlue);
                     condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && ([] call FUNC(checkTaggable)));
-                    statement = QUOTE(['blue'] call FUNC(tagWall));
+                    statement = QUOTE([ARR_2(ACE_player,'blue')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlue.paa));
                 };
-                class ACE_tagGroundBlack {
+                /*class ACE_tagGroundBlack {
                     displayName = CSTRING(tagGroundBlack);
                     condition = QUOTE('ACE_SpraypaintBlack' in items ACE_player);
-                    statement = QUOTE(['black'] call FUNC(tagGround));
+                    statement = QUOTE([ARR_2(ACE_player, 'black')] call FUNC(tagGround));
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlack.paa));
@@ -40,21 +40,21 @@ class CfgVehicles {
                 class ACE_tagGroundRed: ACE_tagGroundBlack {
                     displayName = CSTRING(tagGroundRed);
                     condition = QUOTE('ACE_SpraypaintRed' in items ACE_player);
-                    statement = QUOTE(['red'] call FUNC(tagGround));
+                    statement = QUOTE([ARR_2(ACE_player, 'red')] call FUNC(tagGround));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingRed.paa));
                 };
                 class ACE_tagGroundGreen: ACE_tagGroundBlack {
                     displayName = CSTRING(tagGroundGreen);
                     condition = QUOTE('ACE_SpraypaintGreen' in items ACE_player);
-                    statement = QUOTE(['green'] call FUNC(tagGround));
+                    statement = QUOTE([ARR_2(ACE_player, 'green')] call FUNC(tagGround));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingGreen.paa));
                 };
                 class ACE_tagGroundBlue: ACE_tagGroundBlack {
                     displayName = CSTRING(tagGroundBlue);
                     condition = QUOTE('ACE_SpraypaintBlue' in items ACE_player);
-                    statement = QUOTE(['blue'] call FUNC(tagGround));
+                    statement = QUOTE([ARR_2(ACE_player, 'blue')] call FUNC(tagGround));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlue.paa));
-                };
+                };*/
             };
         };
     };

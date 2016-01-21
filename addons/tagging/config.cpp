@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {"ACE_SpraypaintBlack", "ACE_SpraypaintRed", "ACE_SpraypaintGreen", "ACE_SpraypaintBlue"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"BaerMitUmlaut"};
+        author[] = {"BaerMitUmlaut","esteldunedain"};
         authorUrl = "https://github.com/BaerMitUmlaut";
         VERSION_CONFIG;
     };

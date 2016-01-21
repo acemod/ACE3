@@ -1,6 +1,9 @@
 #define COMPONENT tagging
 #include "\z\ace\addons\main\script_mod.hpp"
 
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+
 #ifdef DEBUG_ENABLED_BLANK
     #define DEBUG_MODE_FULL
 #endif

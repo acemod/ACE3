@@ -2,20 +2,20 @@
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_tagging_tagWallBlack">
-            <English>Tag wall black</English>
-            <German>Wand schwarz markieren</German>
+            <English>Tag black</English>
+            <German>Schwarz markieren</German>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallRed">
-            <English>Tag wall red</English>
-            <German>Wand rot markieren</German>
+            <English>Tag red</English>
+            <German>Rot markieren</German>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallGreen">
-            <English>Tag wall green</English>
-            <German>Wand grün markieren</German>
+            <English>Tag green</English>
+            <German>Grün markieren</German>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallBLue">
-            <English>Tag wall blue</English>
-            <German>Wand blau markieren</German>
+            <English>Tag blue</English>
+            <German>Blau markieren</German>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlack">
             <English>Tag ground black</English>
