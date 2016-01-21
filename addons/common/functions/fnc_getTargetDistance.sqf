@@ -28,11 +28,9 @@ if (count _LIS > 0) then {
     _distance = _maxDistance;
 };
 
-if (_distance < _minDistance) then {
-    _distance = _minDistance;
-};
+_distance = _distance max _minDistance;
 
-_accuracy = if(_accuracy < 1) then {1} else {_accuracy};
+_accuracy = _accuracy max 1;
 _distance = (round (_distance/_accuracy)) * _accuracy;
 
 _distance
