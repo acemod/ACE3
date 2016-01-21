@@ -13,7 +13,7 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-GVAR(weaponInfoCache) = createLocation ["NameVillage", [-10000,-10000,-10000], 0, 0];
+GVAR(weaponInfoCache) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
 GVAR(weaponInfoCache) setText QGVAR(weaponInfoCache);
 
 // Add keybinds
