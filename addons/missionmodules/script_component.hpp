@@ -1,3 +1,4 @@
+#define DEBUG_MODE_FULL
 #define COMPONENT missionModules
 #include "\z\ace\addons\main\script_mod.hpp"
 

@@ -9,14 +9,14 @@ class CfgVehicles {
     class ACE_moduleAmbianceSound: Module_F {
         scope = 2;
         displayName = CSTRING(AmbianceSounds_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Breathing_ca.paa));
         category = "ACE_missionModules";
         function = QUOTE(FUNC(moduleAmbianceSound));
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
-        class Arguments    {
+        class Arguments {
             class soundFiles {
                 displayName = CSTRING(AmbianceSounds_soundFiles_DisplayName);
                 description = CSTRING(AmbianceSounds_soundFiles_Description);
@@ -63,6 +63,62 @@ class CfgVehicles {
         class ModuleDescription {
             description = CSTRING(AmbianceSounds_Description);
             sync[] = {};
+        };
+    };
+
+    class ACE_playerBreathing: Module_F {
+        scope = 2;
+        displayName = "";
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Ambient_Sounds_ca.paa));
+        category = "ACE_missionModules";
+        function = QUOTE(FUNC(moduleBreath));
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class breathEnabled {
+                displayName = "Player Breathing is Enabled";
+                description = "Enabled Player Breathing Simulation.";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class MaxBreathingDistance {
+                displayName = "Maximal Distance";
+                description = "Maximal Distance where the Breathing Smoke is Simulated.";
+                typeName = "NUMBER";
+                defaultValue = 100;
+            };
+            class breathIsForced {
+                displayName = "Is Forced";
+                description = "This settings Force the Breathing at for Every Tempature and Time.";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
+            class breathTemperature {
+                displayName = "Tempature";
+                description = "The Tempature on that the Breathing Start.";
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
+            class breathTimeStart {
+                displayName = "Start Time";
+                description = "The Time when the Breathing Start.";
+                typeName = "NUMBER";
+                defaultValue = 0200;
+            };
+            class breathTimeEnd {
+                displayName = "End Time";
+                description = "The Time when the Breathing End.";
+                typeName = "NUMBER";
+                defaultValue = 0600;
+            };
+            class bySpeaking {
+                displayName = "Simulate by Speaking";
+                description = "Simulate the fog if a player speaks with ACRE/TFAR/or inGame Audio";
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
     };
 };

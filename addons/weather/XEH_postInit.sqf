@@ -10,6 +10,8 @@ GVAR(rain_period_start_time) = ACE_time;
 
 GVAR(ACE_rain) = rain;
 
+
+
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = ACE_time; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = ACE_time; };
 "ACE_MISC_PARAMS" addPublicVariableEventHandler {

@@ -187,5 +187,13 @@
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
             <Russian>Циклически воспроизводимые звуки окружения (синх. между игроками)</Russian>
         </Key>
+        <Key ID="STR_ACE_MissionModules_PlayerBreath_DisplayName">
+            <English>[ACE] Player Breathing</English>
+            <German>[ACE] Spieler Atmung</German>
+        </Key>
+        <Key ID="STR_ACE_MissionModules_PlayerBreath_Description">
+            <English>Simulate a Breathing fog a Player Mouth</English>
+            <German>Simuliert die Atmung von Spielern</German>
+        </Key>
     </Package>
 </Project>
