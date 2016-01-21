@@ -43,7 +43,14 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
                 false
             } count _muzzles;
 
-            if (_magazine in _weaponMagazines) exitWith {
+            // Fix the `in` operator being case sensitive and BI fucking up the spelling of their own classnames
+            private _weaponMagazinesCheck = [];
+            {
+                _weaponMagazinesCheck pushBack (toLower _x);
+            } forEach _weaponMagazines;
+
+            // Another BIS fix: ShotBullet simulation uses weapon initSpeed, others ignore it
+            if (toLower _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
                 private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
                 if (_initSpeedCoef < 0) then {
