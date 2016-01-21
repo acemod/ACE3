@@ -24,7 +24,8 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
     private _magazine = _x;
     private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 
-    if !(getText (configFile >> "CfgAmmo" >> _ammo >> "simulation") == "shotMissile") then {
+    private _bulletSimulation = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
+    if !(_bulletSimulation == "shotMissile") then {
         private _maxElev     = getNumber (_turretConfig >> "maxElev");
         private _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
