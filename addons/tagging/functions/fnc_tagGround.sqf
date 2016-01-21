@@ -23,7 +23,7 @@ if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
     ["%1 is not a valid tag colour.", _color] call BIS_fnc_error;
 };
 
-_tagPos = player modelToWorld [0, 1.2, 0];
+_tagPos = ACE_player modelToWorld [0, 1.2, 0];
 _vectorDirAndUp = [];
 
 _groundPos = getPosATL ACE_player;
