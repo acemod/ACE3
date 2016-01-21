@@ -30,15 +30,13 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
 
         {
-            private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
-            _weapon = _x;
-            _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
-            _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
+            private _weapon = _x;
+            private _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+            private _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
 
             {
                 if (_x != "this") then {
-                    _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
-                    _weaponMagazines append _muzzleMagazines;
+                    _weaponMagazines append getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
                 };
                 false
             } count _muzzles;

@@ -25,15 +25,12 @@ private _distance = parseNumber ctrlText (_dlgRangefinder displayCtrl 151);
 if (_distance == 0) then {
     _distance = _this call EFUNC(common,getTargetDistance);
 } else {
-    if (_distance > _maxDistance) then {
-        _distance = _maxDistance;
-    };
+    // Is distance out of bound?
+    _distance = _distance min _maxDistance;
+    _distance = _distance max _minDistance;
 
-    if (_distance < _minDistance) then {
-        _distance = _minDistance;
-    };
-
-    _accuracy = if(_accuracy < 1) then {1} else {_accuracy};
+    // If don't let accuracy be less than 1
+    _accuracy = _accuracy max 1;
     _distance = (round (_distance/_accuracy)) * _accuracy;
 };
 
