@@ -41,3 +41,5 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
 };
 
 GVAR(Position) = (getPosASL _vehicle) vectorAdd (_weaponDirection vectorMultiply _distance);
+
+[_vehicle,_turret,_distance,0] call FUNC(calculateSolution);
