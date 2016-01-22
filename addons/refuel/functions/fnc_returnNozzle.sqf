@@ -33,7 +33,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         _args params ["_unit", "_nozzle", "_target"];
         _unit setVariable [QGVAR(nozzle), nil];
         detach _nozzle;
-        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         _unit setVariable [QGVAR(isRefueling), false];
         _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
