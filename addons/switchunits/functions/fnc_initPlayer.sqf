@@ -21,7 +21,7 @@ params ["_playerUnit", "_sides"];
 if (vehicle _playerUnit == _playerUnit) then {
     [_sides] call FUNC(markAiOnMap);
 
-    _playerUnit setVariable [QGVAR(IsPlayerUnit), true];
+    _playerUnit setVariable [QGVAR(IsPlayerUnit), true, true];
     _playerUnit allowDamage false;
 
     GVAR(OriginalUnit) = _playerUnit;

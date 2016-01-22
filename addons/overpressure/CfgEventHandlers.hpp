@@ -14,7 +14,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class CAManBase {
         class ADDON {
-            firedBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHBB);};);
+            clientFiredBIS = QUOTE(if (local (_this select 0)) then {_this call FUNC(firedEHBB);};);
         };
     };
 

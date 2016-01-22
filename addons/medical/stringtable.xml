@@ -2835,6 +2835,12 @@
             <French>Quel niveau de détail voullez vous pour les infirmier?</French>
             <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_DisplayName">
+            <English>Locations boost training</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
+            <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
             <Russian>Отключить медиков</Russian>
