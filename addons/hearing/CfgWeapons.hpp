@@ -18,36 +18,27 @@ class CfgWeapons {
         GVAR(protection) = 1;
         GVAR(lowerVolume) = 0.80;
     };
-    class H_HelmetCrew_0: H_HelmetCrew_B {};
-    class H_HelmetCrew_I: H_HelmetCrew_B {};
 
     class H_CrewHelmetHeli_B: H_HelmetB {
         GVAR(protection) = 0.85;
         GVAR(lowerVolume) = 0.75;
     };
-    class H_CrewHelmetHeli_O: H_CrewHelmetHeli_B {};
-    class H_CrewHelmetHeli_I: H_CrewHelmetHeli_B {};
 
     class H_PilotHelmetHeli_B: H_HelmetB {
         GVAR(protection) = 0.85;
         GVAR(lowerVolume) = 0.75;
     };
-    class H_PilotHelmetHeli_O: H_PilotHelmetHeli_B {};
-    class H_PilotHelmetHeli_I: H_PilotHelmetHeli_B {};
 
     class H_PilotHelmetFighter_B: H_HelmetB {
         GVAR(protection) = 1;
         GVAR(lowerVolume) = 0.80;
     };
-    class H_PilotHelmetFighter_O: H_PilotHelmetFighter_B {};
-    class H_PilotHelmetFighter_I: H_PilotHelmetFighter_B {};
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
         GVAR(protection) = 0.5;
         GVAR(lowerVolume) = 0.60;
     };
-    class H_Cap_marshal: H_Cap_headphones {};
 
     class H_HelmetB_light: H_HelmetB {
         GVAR(protection) = 0.8;
