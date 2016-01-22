@@ -14,6 +14,7 @@ PREP(initObject);
 PREP(initVehicle);
 PREP(loadItem);
 PREP(makeLoadable);
+PREP(moduleMakeLoadable);
 PREP(moduleSettings);
 PREP(onMenuOpen);
 PREP(startLoadIn);

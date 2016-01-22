@@ -133,5 +133,14 @@
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
         </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
+            <English>Make Object Loadable</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_description">
+            <English>Sets the synced object as loadable by the cargo system.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
+            <English>Object's Size</English>
+        </Key>
     </Package>
 </Project>
