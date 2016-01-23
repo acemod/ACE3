@@ -13,8 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_logic);
-
+params ["_logic"];
 if !(isServer) exitWith {};
 
 [_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);

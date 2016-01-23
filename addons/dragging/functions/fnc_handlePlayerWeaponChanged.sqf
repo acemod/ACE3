@@ -1,10 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ * Handle the Weapon Changed Event
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_unit, _currentWeapon] call ace_dragging_fnc_handlePlayerWeaponChanged;
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+params ["_unit", "_weapon"];
 
 if (_unit getVariable [QGVAR(isDragging), false]) then {
 

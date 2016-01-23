@@ -8,7 +8,7 @@
  * 2: Logic <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
@@ -17,33 +17,38 @@
  */
 #include "script_component.hpp"
 
-private ["_index", "_data", "_config"];
-
-PARAMS_3(_allMapMarkers,_allMapMarkersProperties,_logic);
+params ["_allMapMarkers", "_allMapMarkersProperties", "_logic"];
+TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
 
 {
-    _index = _allMapMarkers find _x;
+    private _index = _allMapMarkers find _x;
 
     if (_index != -1) then {
-        _data = _allMapMarkersProperties select _index;
+        private _data = _allMapMarkersProperties select _index;
+        _data params ["_markerClassname", "_colorClassname", "_pos", "_dir"];
 
-        _config = (configfile >> "CfgMarkers") >> (_data select 0);
+        private _config = (configfile >> "CfgMarkers") >> _markerClassname;
+
         if (!isClass _config) then {
             WARNING("CfgMarker not found, changed to milDot");
-            _config == (configFile >> "CfgMarkers" >> "MilDot");
+            _config = configFile >> "CfgMarkers" >> "MilDot";
         };
-        _x setMarkerTypeLocal (configName _config);
 
-        _config = (configfile >> "CfgMarkerColors") >> (_data select 1);
+        _x setMarkerTypeLocal configName _config;
+
+        _config = configfile >> "CfgMarkerColors" >> _colorClassname;
+
         if (!isClass _config) then {
             WARNING("CfgMarkerColors not found, changed to Default");
-            _config == (configFile >> "CfgMarkerColors" >> "Default");
+            _config = configFile >> "CfgMarkerColors" >> "Default";
         };
-        _x setMarkerColorLocal (configName _config);
 
-        _x setMarkerPosLocal (_data select 2);
-        _x setMarkerDirLocal (_data select 3);
+        _x setMarkerColorLocal configName _config;
+
+        _x setMarkerPosLocal _pos;
+        _x setMarkerDirLocal _dir;
     };
-} forEach allMapMarkers;
+    false
+} count allMapMarkers;
 
 deleteVehicle _logic;

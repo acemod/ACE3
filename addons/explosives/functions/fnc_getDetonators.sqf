@@ -16,8 +16,11 @@
 #include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_detonators);
 
-private ["_unit", "_items", "_result", "_config"];
-_unit = _this select 0;
+params ["_unit"];
+TRACE_1("params",_unit);
+
+private ["_items", "_result", "_config"];
+
 _items = (items _unit);
 _result = [];
 

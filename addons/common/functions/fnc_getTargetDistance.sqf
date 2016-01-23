@@ -1,30 +1,29 @@
 /*
  * Author: commy2
- *
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.
  *
- * Argument:
- * 0: How accurate will the measurement be? In meters. (Number)
- * 1: Maximal distance to measure. (Number)
- * 2: Minimal distance to measure. (optional, Number)
+ * Arguments:
+ * 0: Messurement Accuracy <NUMBER>
+ * 1: Maximal messure distance <NUMBER>
+ * 2: Minimal messure distance (default: nil) <NUMBER>
  *
- * Return value:
- * Measured distance in meters. Can return maximal or minimal distance (Number)
+ * Return Value:
+ * Distance in meters <NUMBER>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_position", "_laser", "_line", "_distance", "_iteration"];
+params ["_interval", "_maxDistance", "_minDistance"];
 
-PARAMS_3(_interval,_maxDistance,_minDistance);
-
-_position = ATLToASL positionCameraToWorld [0, 0, 0];
+private _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];
 
-_laser = + _position;
-_line = [_position, _laser];
+private _laser = + _position;
+private _line = [_position, _laser];
 
-_distance = _maxDistance;
-_iteration = _distance;
+private _distance = _maxDistance;
+private _iteration = _distance;
 
 while {
     _iteration > _interval / 2
@@ -42,6 +41,6 @@ _distance = _interval * round (_distance / _interval);
 
 _distance = _distance min _maxDistance;
 
-if !(isNil "_minDistance") then {_distance = _distance max _minDistance};
+if (!isNil "_minDistance") then {_distance = _distance max _minDistance};
 
 _distance

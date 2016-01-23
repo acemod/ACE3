@@ -14,6 +14,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "Menu_Config.hpp"
+#include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_ZeusActions.hpp"

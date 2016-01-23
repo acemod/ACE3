@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Shows a list of inventory items in a listBox control.
  *
  * Arguments:
@@ -17,11 +18,12 @@
 #include "script_component.hpp"
 
 disableSerialization;
-PARAMS_2(_listBoxCtrl,_itemsCountArray);
-
 private ["_classname", "_count", "_displayName", "_picture"];
 
+params ["_listBoxCtrl", "_itemsCountArray"];
+
 {
+    private "_configPath";
     _displayName = "";
     _picture = "";
 
@@ -31,21 +33,25 @@ private ["_classname", "_count", "_displayName", "_picture"];
     if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
 
         switch (true) do {
-        case (isClass (configFile >> "CfgWeapons" >> _classname)): {
-                _displayName = getText (configFile >> "CfgWeapons" >> _classname >> "displayName");
-                _picture = getText (configFile >> "CfgWeapons" >> _classname >> "picture");
+            case (isClass (configFile >> "CfgWeapons" >> _classname)): {
+                _configPath = (configFile >> "CfgWeapons");
+                _displayName = getText (_configPath >> _classname >> "displayName");
+                _picture = getText (_configPath >> _classname >> "picture");
             };
-        case (isClass (configFile >> "CfgMagazines" >> _classname)): {
-                _displayName = getText (configFile >> "CfgMagazines" >> _classname >> "displayName");
-                _picture = getText (configFile >> "CfgMagazines" >> _classname >> "picture");
+            case (isClass (configFile >> "CfgMagazines" >> _classname)): {
+                _configPath = (configFile >> "CfgMagazines");
+                _displayName = getText (_configPath >> _classname >> "displayName");
+                _picture = getText (_configPath >> _classname >> "picture");
             };
-        case (isClass (configFile >> "CfgVehicles" >> _classname)): {
-                _displayName = getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
-                _picture = getText (configFile >> "CfgVehicles" >> _classname >> "picture");
+            case (isClass (configFile >> "CfgVehicles" >> _classname)): {
+                _configPath = (configFile >> "CfgVehicles");
+                _displayName = getText (_configPath >> _classname >> "displayName");
+                _picture = getText (_configPath >> _classname >> "picture");
             };
-        case (isClass (configFile >> "CfgGlasses" >> _classname)): {
-                _displayName = getText (configFile >> "CfgGlasses" >> _classname >> "displayName");
-                _picture = getText (configFile >> "CfgGlasses" >> _classname >> "picture");
+            case (isClass (configFile >> "CfgGlasses" >> _classname)): {
+                _configPath = (configFile >> "CfgGlasses");
+                _displayName = getText (_configPath >> _classname >> "displayName");
+                _picture = getText (_configPath >> _classname >> "picture");
             };
             default {
                 ERROR(format ["[%1] - bad classname", _classname]);

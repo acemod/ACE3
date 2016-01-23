@@ -56,7 +56,7 @@ class CfgVehicles {
         side = 1;
         typicalCargo[] = {"Soldier"};
         displayName = CSTRING(DisplayName);
-        model = PATHTOF(data\spottingscope.p3d);
+        model = PATHTOF(data\ace_spottingscope.p3d);
         mapSize = 0.5;
         transportSoldier = 0;
         getInAction = "GetInLow";
@@ -77,7 +77,7 @@ class CfgVehicles {
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
-                gunnerAction = "gunner_static_low01";
+                gunnerAction = "ACE_SpottingScope";
                 gunnerGetInAction = "GetInLow";
                 gunnerGetOutAction = "GetOutLow";
                 gunnerForceOptics = 0;
@@ -89,9 +89,9 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.7;
-                    minFov = 0.7;
-                    maxFov = 0.7;
+                    initFov = 0.75;
+                    minFov = 0.25;
+                    maxFov = 1.25;
                 };
                 class ViewOptics {
                     initAngleX = 0;
@@ -100,9 +100,9 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.014812;
-                    minFov = 0.014812;
-                    maxFov = 0.014812;
+                    minFov = 0.0025;
+                    maxFov = 0.05;
+                    initFov= 0.05;
                 };
             };
         };

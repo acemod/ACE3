@@ -14,9 +14,9 @@
  * Public: No
  */
 #include "script_component.hpp"
-if (isNull(GVAR(Setup)) || {ACE_Modifier == 0} || !GVAR(pfeh_running)) exitWith {false};
-_this = _this * 5;
-GVAR(Setup) setDir ((getDir GVAR(Setup)) + _this);
-GVAR(TweakedAngle) = GVAR(TweakedAngle) + _this;
+
+if ((!GVAR(pfeh_running)) || {ACE_Modifier == 0}) exitWith {false};
+
+GVAR(TweakedAngle) = ((GVAR(TweakedAngle) + 7.2 * _this) + 360) % 360;
 
 true

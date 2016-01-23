@@ -1,7 +1,7 @@
 ace_ragdolls
 ============
 
-Tweaks the ragdoll behaviour to be more resposive to bullet impacts and explosions.
+Tweaks the ragdoll behaviour to be more responsive to bullet impacts and explosions.
 
 
 ## Maintainers

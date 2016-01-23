@@ -26,7 +26,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = CSTRING(ResetFCS);
-                condition = QUOTE(call FUNC(canResetFCS));
+                condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
@@ -39,7 +39,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = CSTRING(ResetFCS);
-                condition = QUOTE(call FUNC(canResetFCS));
+                condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
@@ -321,9 +321,13 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -346,9 +350,13 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -362,6 +370,8 @@ class CfgVehicles {
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
                         GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
                     };
                 };
             };
@@ -504,5 +514,27 @@ class CfgVehicles {
 
     class Plane_Fighter_03_base_F: Plane_Base_F {
         class Turrets;
+    };
+
+    // static weapons.
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret; //: NewTurret {};
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class HMG_01_base_F: StaticMGWeapon {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MinDistance) = 100;
+                GVAR(MaxDistance) = 1500;
+                GVAR(DistanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
     };
 };

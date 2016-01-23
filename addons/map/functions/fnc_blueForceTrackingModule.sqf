@@ -1,6 +1,5 @@
 /*
 * Author: KoffeinFlummi
-*
 * Initializes the blue force tracking module.
 *
 * Arguments:
@@ -14,10 +13,10 @@
 
 if (!isServer) exitWith {};
 
-PARAMS_1(_logic);
+params ["_logic"];
 
 [_logic, QGVAR(BFT_Enabled), "Enabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_Interval), "Interval"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Blue Force Tracking Module initialized. (server)";
+ACE_LOGINFO_3("Blue Force Tracking Module Initialized:", GVAR(BFT_Enabled), GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));

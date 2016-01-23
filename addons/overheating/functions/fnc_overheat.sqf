@@ -161,11 +161,9 @@ if (stance _unit == "PRONE") then {
   };
 };
 
-if ("Jam" in (missionNamespace getvariable ["ACE_Debug", []])) then {
+if ("Jam" in (missionNamespace getVariable ["ACE_Debug", []])) then {
   _jamChance = 0.5;
 };
-
-["Overheating", [_temperature, _jamChance], {format ["Temperature: %1 - JamChance: %2", _this select 0, _this select 1]}] call EFUNC(common,log);
 
 if (random 1 < _jamChance) then {
   [_unit, _weapon] call FUNC(jamWeapon);

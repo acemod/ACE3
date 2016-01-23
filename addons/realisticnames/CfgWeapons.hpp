@@ -1,4 +1,4 @@
-
+class Mode_SemiAuto;
 class Mode_FullAuto;
 
 class CfgWeapons {
@@ -510,14 +510,14 @@ class CfgWeapons {
         class player: player {};
     };
 
-    class cannon_105mm: cannon_120mm {
+    class cannon_105mm: CannonCore {
         displayName = "M68";
-        class player: player {
+        class player: Mode_SemiAuto {
             displayName = "M68";
         };
     };
 
-    class cannon_125mm: cannon_120mm {
+    class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
 
@@ -525,12 +525,14 @@ class CfgWeapons {
     class LMG_coax: LMG_RCWS {
         displayName = "PKT";
     };
-
-    class ACE_LMG_coax_MBT_01: LMG_coax {
+    // class ACE_LMG_coax_PKT_mem2: LMG_coax {};
+    class ACE_LMG_coax_MAG58_mem2: LMG_coax {
         displayName = "MAG 58";
     };
-
-    class ACE_LMG_coax_APC_Tracked_03: LMG_coax {
+    class ACE_LMG_coax_MAG58_mem3: LMG_coax {
+        displayName = "MAG 58";
+    };
+    class ACE_LMG_coax_L94A1_mem3: LMG_coax {
         displayName = "L94A1";
     };
 
@@ -567,5 +569,13 @@ class CfgWeapons {
         class HE: HE {
             displayName = "L21A1 RARDEN";
         };
+    };
+
+    //attachments
+
+    class Itemcore;
+
+    class acc_flashlight: ItemCore {
+        displayName = "UTG Defender 126";
     };
 };

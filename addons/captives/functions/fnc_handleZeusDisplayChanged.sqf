@@ -23,9 +23,9 @@ params ["_unit","_zeusIsOpen"];
 if (!_zeusIsOpen) then {
     if ((_unit getVariable [QGVAR(isHandcuffed), false]) || {_unit getVariable [QGVAR(isSurrendering), false]}) then {
         TRACE_1("Player Change (showHUD false)",_unit);
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     } else {
         TRACE_1("Player Change (showHUD true)",_unit);
-        showHUD true;
+        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
     };
 };

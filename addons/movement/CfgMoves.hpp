@@ -114,25 +114,10 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             leftHandIKCurve[] = {};
         };
 
-        // enable optics in prone left and right stance
-        class AidlPpneMstpSrasWrflDnon_G0S;
-        class AadjPpneMstpSrasWrflDleft: AidlPpneMstpSrasWrflDnon_G0S {
-            enableOptics = 1;
-        };
-        class AadjPpneMstpSrasWrflDright: AidlPpneMstpSrasWrflDnon_G0S {
-            enableOptics = 1;
-        };
+        // enable optics in prone down stance
         class AadjPpneMstpSrasWrflDup;
         class AadjPpneMstpSrasWrflDdown: AadjPpneMstpSrasWrflDup {
             enableOptics = 1;
-        };
-
-        class AidlPpneMstpSrasWpstDnon_G0S;
-        class AadjPpneMstpSrasWpstDleft: AidlPpneMstpSrasWpstDnon_G0S {
-            enableOptics = 2;
-        };
-        class AadjPpneMstpSrasWpstDright: AidlPpneMstpSrasWpstDnon_G0S {
-            enableOptics = 2;
         };
         class AadjPpneMstpSrasWpstDup;
         class AadjPpneMstpSrasWpstDdown: AadjPpneMstpSrasWpstDup {

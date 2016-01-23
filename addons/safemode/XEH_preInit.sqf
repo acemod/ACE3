@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(firstMode);
 PREP(lockSafety);
 PREP(playChangeFiremodeSound);
 PREP(setSafeModeVisual);

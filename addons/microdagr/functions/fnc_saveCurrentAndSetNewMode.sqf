@@ -7,7 +7,7 @@
  * 0: New Mode <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [2] call ace_microdagr_fnc_saveCurrentAndSetNewMode
@@ -16,24 +16,21 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_theMap", "_mapSize", "_centerPos", "_mapCtrlPos"];
+private ["_display", "_theMap", "_centerPos", "_mapCtrlPos"];
 
-PARAMS_1(_newMode);
+params ["_newMode"];
 
 disableSerialization;
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) == 2) then {
-    _theMap = if (!GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPPLAIN} else {_display displayCtrl IDC_MAPDETAILS};
+    _theMap = [_display displayCtrl IDC_MAPDETAILS, _display displayCtrl IDC_MAPPLAIN] select (!GVAR(mapShowTexture));
     _mapCtrlPos = ctrlPosition _theMap;
-    _mapSize = _mapCtrlPos select 3;
-    _centerPos = [((_mapCtrlPos select 0) + (_mapCtrlPos select 2) / 2), ((_mapCtrlPos select 1) + (_mapCtrlPos select 3) / 2)];
+
+    _mapCtrlPos params ["_mapCtrlPosX", "_mapCtrlPosY", "_mapCtrlPosZ", "_mapSize"];
+    _centerPos = [(_mapCtrlPosX + _mapCtrlPosZ / 2), (_mapCtrlPosY + _mapSize / 2)];
     GVAR(mapPosition) = _theMap ctrlMapScreenToWorld _centerPos;
     GVAR(mapZoom) = (ctrlMapScale _theMap) * _mapSize;
 

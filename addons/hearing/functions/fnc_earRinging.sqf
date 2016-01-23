@@ -15,12 +15,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_unit,_strength);
+params ["_unit", "_strength"];
 
 if (_unit != ACE_player) exitWith {};
 if (_strength < 0.05) exitWith {};
 if (!isNull curatorCamera) exitWith {};
+if ((!GVAR(enabledForZeusUnits)) && {player != ACE_player}) exitWith {};
 
 if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
     _strength = _strength / 4;
@@ -28,11 +28,12 @@ if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
 
 //headgear hearing protection
 if(headgear _unit != "") then {
-    private ["_protection"];
-    _protection = (getNumber (configFile >> "CfgWeapons" >> (headgear _unit) >> QGVAR(protection))) min 1;
+    private _protection = (getNumber (configFile >> "CfgWeapons" >> (headgear _unit) >> QGVAR(protection))) min 1;
     if(_protection > 0) then {
         _strength = _strength * (1 - _protection);
     };
 };
+
+TRACE_2("adding",_strength,GVAR(deafnessDV));
 
 GVAR(deafnessDV) = GVAR(deafnessDV) + _strength;

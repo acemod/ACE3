@@ -10,7 +10,7 @@ _shooter = _args select 1;
 _uuid = _args select 2;
 
 if(isNull _laserTarget || !alive _shooter) exitWith {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
     REM(GVAR(VanillaLasers), _laserTarget);
     
     // Remove laseron

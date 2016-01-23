@@ -23,4 +23,4 @@ _settingsMenu = uiNamespace getVariable 'ACE_serverSettingsMenu';
 _ctrlComboBox = (_settingsMenu displayCtrl 14);
 GVAR(currentCategorySelection) = lbCurSel _ctrlComboBox;
 
-[false] call FUNC(serverSettingsMenuUpdateList);
+[true] call FUNC(serverSettingsMenuUpdateList);

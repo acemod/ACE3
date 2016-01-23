@@ -6,7 +6,7 @@
  * 0: String version of Keypad entry ["ok","del","1",...] <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["ok"] call ace_microdagr_fnc_appMarkKeypadEntry
@@ -16,15 +16,12 @@
 #include "script_component.hpp"
 
 private ["_display", "_editText", "_actualPos"];
-PARAMS_1(_keypadButton);
+
+params ["_keypadButton"];
 
 disableSerialization;
-_display = displayNull;
-if (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG) then {
-    _display = (uiNamespace getVariable [QGVAR(DialogDisplay), displayNull]);
-} else {
-    _display = (uiNamespace getVariable [QGVAR(RscTitleDisplay), displayNull]);
-};
+_display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
+
 if (isNull _display) exitWith {ERROR("No Display");};
 
 if (GVAR(currentApplicationPage) != APP_MODE_MARK) exitWith {};

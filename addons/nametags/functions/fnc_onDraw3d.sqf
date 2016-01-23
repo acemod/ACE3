@@ -17,8 +17,8 @@
 
 private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL", "_ambientBrightness", "_maxDistance"];
 
-//don't show nametags in spectator
-if ((isNull ACE_player) || {!alive ACE_player}) exitWith {};
+//don't show nametags in spectator or if RscDisplayMPInterrupt is open
+if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
 _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
 _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
@@ -63,6 +63,7 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
             {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
             {!(_target getVariable ["ACE_hideName", false])}) then {
         _distance = ACE_player distance _target;
+        if (_distance > (_maxDistance + 5)) exitWith {};
         _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
         _icon = ICON_NONE;
         if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
@@ -116,5 +117,6 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
 
             [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
         };
-    } forEach _targets;
+        nil
+    } count _targets;
 };

@@ -2,6 +2,9 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(cacheAmmoLoudness) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(cacheAmmoLoudness) setText QGVAR(cacheAmmoLoudness);
+
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
 GVAR(volume) = 1;
@@ -15,7 +18,7 @@ GVAR(time4) = 0;
 
 ["SettingsInitialized", {
     // Spawn volume updating process
-    [FUNC(updateVolume), 1, [false] ] call CBA_fnc_addPerFrameHandler;
+    [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 }] call EFUNC(common,addEventHandler);
 
 //Update veh attunation when player veh changes
@@ -26,7 +29,7 @@ GVAR(time4) = 0;
 ["playerChanged", {
     GVAR(deafnessDV) = 0;
     GVAR(deafnessPrior) = 0;
-    ACE_player setvariable [QGVAR(deaf), false];
+    ACE_player setVariable [QGVAR(deaf), false];
 
     GVAR(beep) = false;
     GVAR(beep2) = false;

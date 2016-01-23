@@ -15,14 +15,17 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_unit,_target);
+
+params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 private["_actionToPlay", "_defuseTime", "_isEOD"];
 
 _target = attachedTo (_target);
 
 _fnc_DefuseTime = {
-    EXPLODE_2_PVT(_this,_specialist,_target);
+    params ["_specialist", "_target"];
+    TRACE_2("defuseTime",_specialist,_target);
     private ["_defuseTime"];
     _defuseTime = 5;
     if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime")) then {
@@ -48,11 +51,12 @@ if (ACE_player != _unit) then {
         _unit disableAI "TARGET";
         _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
         [{
-            PARAMS_2(_unit,_target);
+            params ["_unit", "_target"];
+            TRACE_2("defuse finished",_unit,_target);
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";
-        }, [_unit, _target], _defuseTime, 0] call EFUNC(common,waitAndExecute);
+        }, [_unit, _target], _defuseTime] call EFUNC(common,waitAndExecute);
     };
 } else {
     _unit playActionNow _actionToPlay;

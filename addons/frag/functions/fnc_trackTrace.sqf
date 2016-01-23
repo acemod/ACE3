@@ -10,5 +10,5 @@ if (alive _tracerObj && (count GVAR(traces)) > 0) then {
     _positions = _data select 4;
     _positions set [(count _positions), [(getPos _tracerObj), vectorMagnitude (velocity _tracerObj)]];
 } else {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };

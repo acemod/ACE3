@@ -17,12 +17,8 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage", "_bodyPartn", "_fractures", "_fractureType"];
-_unit = _this select 0;
-_selectionName = _this select 1;
-_amountOfDamage = _this select 2;
-_sourceOfDamage = _this select 3;
-_typeOfDamage = _this select 4;
+private ["_bodyPartn", "_fractures", "_fractureType"];
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
 _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
 _fractureType = 1;
@@ -63,12 +59,12 @@ if (_amountOfDamage > 0.05) then {
     };
 
     private ["_fractures", "_fractureID", "_amountOf"];
-    _fractures = _unit getvariable[QGVAR(fractures), []];
+    _fractures = _unit getVariable[QGVAR(fractures), []];
     _fractureID = 1;
     _amountOf = count _fractures;
     if (_amountOf > 0) then {
         _fractureID = (_fractures select (_amountOf - 1) select 0) + 1;
     };
-    _fractures pushback [_fractureID, _fractureType, _bodyPartn, 1 /* percentage treated */];
-    _unit setvariable [QGVAR(fractures), _fractures, true];
+    _fractures pushBack [_fractureID, _fractureType, _bodyPartn, 1 /* percentage treated */];
+    _unit setVariable [QGVAR(fractures), _fractures, true];
 };

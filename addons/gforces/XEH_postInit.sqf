@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // Setup ppEffect
 GVAR(GForces_CC) = ppEffectCreate ["ColorCorrections", 4215];
@@ -12,4 +12,4 @@ GVAR(GForces_CC) ppEffectCommit 0.4;
 GVAR(lastUpdateTime) = 0;
 GVAR(oldVel) = [0,0,0];
 
-[FUNC(pfhUpdateGForces), 0, []] call CBA_fnc_addPerFrameHandler;
+[DFUNC(pfhUpdateGForces), 0, []] call CBA_fnc_addPerFrameHandler;

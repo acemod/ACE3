@@ -3,29 +3,28 @@
  *
  * Start the carrying process.
  *
- * Argument:
- * 0: Unit that should do the carrying (Object)
- * 1: Object to carry (Object)
+ * Arguments:
+ * 0: Unit that should do the carrying <OBJECT>
+ * 1: Object to carry <OBJECT>
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
+private ["_weight", "_timer"];
 
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 // check weight
-private "_weight";
 _weight = [_target] call FUNC(getWeight);
 
-if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-private "_timer";
 _timer = ACE_time + 5;
 
 // handle objects vs persons
@@ -54,7 +53,7 @@ if (_target isKindOf "CAManBase") then {
     _unit action ["SwitchWeapon", _unit, _unit, 99];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    [_unit, "isDragging", true] call EFUNC(common,setforceWalkStatus);
+    [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
 };
 
@@ -62,7 +61,7 @@ if (_target isKindOf "CAManBase") then {
 [_unit, _target, true] call EFUNC(common,claim);
 
 
-// prevents draging and carrying at the same ACE_time
+// prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
 // required for aborting animation

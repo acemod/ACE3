@@ -28,6 +28,7 @@ PREP(canDefuse);
 PREP(canDetonate);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
+PREP(detonateExplosiveAll);
 PREP(dialPhone);
 PREP(dialingPhone);
 
@@ -44,18 +45,15 @@ PREP(getSpeedDialExplosive);
 
 PREP(module);
 
+PREP(onIncapacitated);
 PREP(onInventoryChanged);
-PREP(onKilled);
-PREP(onLanded);
 
 PREP(openTimerSetUI);
-
-PREP(place_Approve);
-PREP(place_Cancel);
 
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);
 
+PREP(scriptedExplosive);
 PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);

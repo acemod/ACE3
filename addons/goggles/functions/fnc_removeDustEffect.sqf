@@ -9,11 +9,12 @@
  * None
  *
  * Example:
- * call ace_goggles_fnc_removeDustEffect;
+ * call ace_goggles_fnc_removeDustEffect
  *
  * Public: Yes
  */
 #include "script_component.hpp"
-if (!isNull(GETUVAR(GVAR(DisplayEffects),displayNull))) then {
+
+if (!isNull (GETUVAR(GVAR(DisplayEffects),displayNull))) then {
     (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10662) ctrlSetText "";
 };

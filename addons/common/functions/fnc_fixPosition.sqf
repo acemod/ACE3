@@ -4,18 +4,19 @@
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
  *
  * Argument:
- * Object (Object)
+ * Object <OBJECT>
  *
- * Return value:
- * NONE
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 // setVectorUp requires local object
 if (!local _this) exitWith {};
 
-private "_position";
-_position = getPos _this;
+private _position = getPos _this;
 
 // don't place the object below the ground
 if (_position select 2 < -0.1) then {

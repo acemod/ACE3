@@ -20,7 +20,7 @@ option(USE_STATIC_LINKING "USE_STATIC_LINKING" ON)
 
 
 if(CMAKE_COMPILER_IS_GNUCXX)
-	SET(CMAKE_CXX_FLAGS "-std=c++11 -march=i686 -m32 -O2 -s -fPIC -fpermissive")
+	SET(CMAKE_CXX_FLAGS "-std=c++11 -pedantic -pedantic-errors -march=i686 -m32 -O2 -s -fPIC -fpermissive")
 	set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 	set(CMAKE_SHARED_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -89,8 +89,8 @@ endif()
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
 set(ACE_VERSION_MAJOR 3)
-set(ACE_VERSION_MINOR 2)
-set(ACE_VERSION_REVISION 0)
+set(ACE_VERSION_MINOR 4)
+set(ACE_VERSION_REVISION 1)
 EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
     OUTPUT_VARIABLE T_ACE_VERSION_BUILD
     OUTPUT_STRIP_TRAILING_WHITESPACE

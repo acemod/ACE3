@@ -4,25 +4,21 @@
  * Enable the object to be carried.
  *
  * Argument:
- * 0: Any object (Object)
- * 1: true to enable carrying, false to disable (Bool)
- * 2: Position offset for attachTo command (Array, optinal; default: [0,1,1])
- * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
+ * 0: Any object <OBJECT>
+ * 1: true to enable carrying, false to disable <BOOL>
+ * 2: Position offset for attachTo command <ARRAY> (default: [0,1,1])
+ * 3: Direction in degree to rotate the object after attachTo <NUMBER> (default: 0)
  *
- * Return value:
- * NONE.
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_carryAction", "_dropAction", "_object", "_enableCarry", "_position", "_direction"];
-//IGNORE_PRIVATE_WARNING("_player", "_target");
+private ["_carryAction", "_dropAction", "_type", "_initializedClasses"];
 
-_this resize 4;
-
-_object = _this select 0;
-_enableCarry = _this select 1;
-_position = _this select 2;
-_direction = _this select 3;
+params ["_object", "_enableCarry", "_position", "_direction"];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(carryPosition), [0,1,1]];
@@ -38,8 +34,6 @@ _object setVariable [QGVAR(carryPosition), _position];
 _object setVariable [QGVAR(carryDirection), _direction];
 
 // add action to class if it is not already present
-private ["_type", "_initializedClasses"];
-
 _type = typeOf _object;
 _initializedClasses = GETGVAR(initializedClasses_carry,[]);
 

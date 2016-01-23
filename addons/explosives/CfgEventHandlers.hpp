@@ -11,7 +11,7 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_Killed_EventHandlers {
     class CAManBase {
-        GVAR(killedHandler) = QUOTE(_this call FUNC(onKilled));
+        GVAR(killedHandler) = QUOTE(_this call FUNC(onIncapacitated));
     };
 };
 

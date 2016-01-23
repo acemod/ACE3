@@ -17,6 +17,6 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_player,_target);
+params ["_player", "_target"];
 
 ["drawing_requestMarkers", _target, [_player]] call EFUNC(common,targetEvent);
