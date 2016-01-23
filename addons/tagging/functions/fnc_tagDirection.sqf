@@ -34,10 +34,25 @@ if (_intersections isEqualTo []) exitWith {
 TRACE_3("",_touchingPoint, _surfaceNormal, _object);
 
 // Exit if trying to tag a non static object
-if (!isNull _object && {!(_object isKindOf "Static")}) exitWith {
+if ((!isNull _object) && {
+    // If the class is alright, do not exit
+    if (_object isKindOf "Static") exitWith {false};
+
+    // If the class is not categorized correctly search the cache
+    private _array = str(_object) splitString " ";
+    private _str = toLower (_array select 1);
+    TRACE_1("Object:",_str);
+    private _objClass = GVAR(cacheStaticModels) getVariable _str;
+    // If the class in not on the cache, exit
+    if (isNil "_objClass") exitWith {
+        false
+    };
+    true
+}) exitWith {
     TRACE_1("Pointed object is non static",_object);
     false
 };
+
 
 // If the surface normal points away, flip it. This happens in weird places like the Stratis Pier
 if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) then {
@@ -81,7 +96,7 @@ _unit playActionNow "PutDown";
 
 [{
     params ["", "", "", "", "_unit"];
-    TRACE_1("Unit:", _unit);
+    TRACE_2("Unit:",_unit,_this);
 
     playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
 

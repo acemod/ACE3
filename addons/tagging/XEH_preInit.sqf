@@ -5,7 +5,7 @@ ADDON = false;
 PREP(checkTaggable);
 PREP(createTag);
 PREP(tagDirection);
-PREP(tagWall);
 PREP(tagGround);
+PREP(tagWall);
 
 ADDON = true;

@@ -31,7 +31,26 @@
 
     // Exit if trying to tag a non static object
     TRACE_1("Obj:",_intersections);
-    if (!isNull _object && {!(_object isKindOf "Static")}) exitWith {false};
+
+    // Exit if trying to tag a non static object
+    if ((!isNull _object) && {
+        // If the class is alright, do not exit
+        if (_object isKindOf "Static") exitWith {false};
+
+        // If the class is not categorized correctly search the cache
+        private _array = str(_object) splitString " ";
+        private _str = toLower (_array select 1);
+        TRACE_1("Object:",_str);
+        private _objClass = GVAR(cacheStaticModels) getVariable _str;
+        // If the class in not on the cache, exit
+        if (isNil "_objClass") exitWith {
+            false
+        };
+        true
+    }) exitWith {
+        TRACE_1("Pointed object is non static",_object);
+        false
+    };
 
     true
 }, missionNamespace, QGVAR(checkTaggableCache), 0.5] call EFUNC(common,cachedCall);
