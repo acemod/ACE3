@@ -2,7 +2,7 @@ class CfgWeapons {
     class InventoryItem_Base_F;
     class ACE_ItemCore;
 
-    class ACE_entrenchingtool: ACE_ItemCore {
+    class ACE_EntrenchingTool: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EntrenchingToolName);
         descriptionShort = CSTRING(EntrenchingToolDescription);
