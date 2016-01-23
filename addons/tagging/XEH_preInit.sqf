@@ -7,5 +7,6 @@ PREP(createTag);
 PREP(tagDirection);
 PREP(tagGround);
 PREP(tagWall);
+PREP(tagTestingThread);
 
 ADDON = true;

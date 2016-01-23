@@ -34,23 +34,39 @@ _tag setVectorDirAndUp _vectorDirAndUp;
 if (isNull _object) exitWith {};
 
 // If the tag is applied to an object, handle its destruction
+_object setVariable [QGVAR(testVar), true];
+if (_object getVariable [QGVAR(testVar), false]) then {
+	// The object supports variables and hence HandleDamage too
+	// Use the cheaper alternative for handling destruction: HandleDamage
 
-// If the object already has tags attached, just add the new one to the list
-private _attachedTags = _object getVariable QGVAR(attachedTags);
-if !(isNil  "_attachedTags ") exitWith {
-    _attachedTags pushBack _tag;
+	// If the object already has tags attached, just add the new one to the list
+	private _attachedTags = _object getVariable QGVAR(attachedTags);
+	if !(isNil  "_attachedTags ") exitWith {
+	    _attachedTags pushBack _tag;
+	};
+
+	_attachedTags = [_tag];
+	_object setVariable [QGVAR(attachedTags), _attachedTags];
+
+	// If it's the first tag attached to that object, add a handledamage event handler
+	_object addEventHandler ["HandleDamage", {
+	    params ["_object", "_selection", "_damage"];
+	    if (_selection == "" && _damage >= 1) then {
+	        {
+	            deleteVehicle _x;
+	        } foreach (_object getVariable [QGVAR(attachedTags), []]);
+	        _object setVariable [QGVAR(attachedTags), []];
+	    };
+	}];
+
+} else {
+	// The object doesn't supports variables
+	// Use the more costly alternative: periodic testing
+	GVAR(tagsToTest) pushBack [_tag, _tagPosASL, _vectorDirAndUp];
+
+	// Run the tes
+	if (!GVAR(testingThread)) then {
+		call FUNC(tagTestingThread);
+	};
+
 };
-
-_attachedTags = [tags];
-_object setVariable [QGVAR(attachedTags), _attachedTags];
-
-// If it's the first tag attached to that object, add a handledamage event handler
-_object addEventHandler ["HandleDamage", {
-    params ["_object", "_selection", "_damage"];
-    if (_selection == "" && _damage >= 1) then {
-        {
-            deleteVehicle _x;
-        } foreach (_object getVariable [QGVAR(attachedTags), []]);
-        _object setVariable [QGVAR(attachedTags), []];
-    };
-}];
