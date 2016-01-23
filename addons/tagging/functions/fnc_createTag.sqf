@@ -58,15 +58,14 @@ if (_object getVariable [QGVAR(testVar), false]) then {
             _object setVariable [QGVAR(attachedTags), []];
         };
     }];
+};
 
-} else {
-    // The object doesn't supports variables
-    // Use the more costly alternative: periodic testing
-    GVAR(tagsToTest) pushBack [_tag, _tagPosASL, _vectorDirAndUp];
+// Periodic test the tag:
+// - For object that don't support handledamage
+// - For object that do, to support doors opening/closing, etc
+GVAR(tagsToTest) pushBack [_tag, _tagPosASL, _vectorDirAndUp];
 
-    // Run the tes
-    if (!GVAR(testingThread)) then {
-        call FUNC(tagTestingThread);
-    };
-
+// Run the test
+if (!GVAR(testingThread)) then {
+    call FUNC(tagTestingThread);
 };
