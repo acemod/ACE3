@@ -16,14 +16,9 @@
 
 #include "script_component.hpp"
 
-if (primaryWeapon ACE_player != "") then {
-    [ACE_player, primaryWeapon ACE_player, 0] call FUNC(updateTemperature);
-};
-if (handgunWeapon ACE_player != "") then {
-    [ACE_player, handgunWeapon ACE_player, 0] call FUNC(updateTemperature);
-};
-if (secondaryWeapon ACE_player != "") then {
-    [ACE_player, secondaryWeapon ACE_player, 0] call FUNC(updateTemperature);
+private _currentWeapon = currentWeapon ACE_player;
+if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {
+    [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
 };
 
 // Schedule for execution again after 5 seconds
