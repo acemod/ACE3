@@ -36,7 +36,7 @@ if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(ReleaseActionID), nil];
 };
-[_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", QGVAR(vehRearm), false] call EFUNC(common,statusEffect_set);
 
 if (_unholster) then {
     REARM_UNHOLSTER_WEAPON

@@ -2,6 +2,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
+// #define CBA_DEBUG_SYNCHRONOUS
 
 #ifdef DEBUG_ENABLED_COMMON
     #define DEBUG_MODE_FULL

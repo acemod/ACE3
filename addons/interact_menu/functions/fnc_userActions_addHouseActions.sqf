@@ -1,7 +1,7 @@
 /*
  * Author: PabstMirror
  * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
- * Called when interact_menu starts rendering (from "interact_keyDown" event)
+ * Called when interact_menu starts rendering (from "interactMenuOpened" event)
  *
  * Arguments:
  * 0: Interact Menu Type (0 - world, 1 - self) <NUMBER>
@@ -10,9 +10,9 @@
  * Nothing
  *
  * Example:
- * [0] call ace_interact_menu_fnc_addHouseActions
+ * [0] call ace_interact_menu_fnc_userActions_addHouseActions
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -26,7 +26,6 @@ if (_interactionType != 0) exitWith {};
 if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
-    private ["_nearBuidlings", "_typeOfHouse", "_houseBeingScaned", "_actionSet", "_memPoints", "_memPointsActions", "_helperPos", "_helperObject"];
     params ["_args", "_pfID"];
     _args params ["_setPosition", "_addedHelpers", "_housesScaned", "_housesToScanForActions"];
 
@@ -54,33 +53,34 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
             //If player moved >2 meters from last pos, then rescan
             if (((getPosASL ace_player) distance _setPosition) < 2) exitWith {};
 
-            _nearBuidlings = nearestObjects [ace_player, ["Static"], 30];
+            private _nearBuidlings = nearestObjects [ace_player, ["Static"], 30];
             {
-                _typeOfHouse = typeOf _x;
+                private _typeOfHouse = typeOf _x;
                 if (((count (configFile >> "CfgVehicles" >> _typeOfHouse >> "UserActions")) == 0) && {(count (getArray (configFile >> "CfgVehicles" >> _typeOfHouse >> "ladders"))) == 0}) then {
                     _housesScaned pushBack _x;
                 } else {
                     _housesToScanForActions pushBack _x;
                 };
-            } forEach (_nearBuidlings - _housesScaned);
+                nil
+            } count (_nearBuidlings - _housesScaned);
 
             _args set [0, (getPosASL ace_player)];
         } else {
             _houseBeingScaned = _housesToScanForActions deleteAt 0;
-            _typeOfHouse = typeOf _houseBeingScaned;
+            private _typeOfHouse = typeOf _houseBeingScaned;
             //Skip this house for now if we are outside of it's radius
             //(we have to scan far out for the big houses, but we don't want to waste time adding actions on every little shack)
             if ((_houseBeingScaned != cursorTarget) && {((ACE_player distance _houseBeingScaned) - ((sizeOf _typeOfHouse) / 2)) > 4}) exitWith {};
 
             _housesScaned pushBack _houseBeingScaned;
 
-            _actionSet = [_typeOfHouse] call FUNC(userActions_getHouseActions);
+            private _actionSet = [_typeOfHouse] call FUNC(userActions_getHouseActions);
             _actionSet params ["_memPoints", "_memPointsActions"];
 
             // systemChat format ["Add Actions for [%1] (count %2) @ %3", _typeOfHouse, (count _memPoints), diag_tickTime];
             {
-                _helperPos = (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x)) call EFUNC(common,positionToASL);
-                _helperObject = "ACE_LogicDummy" createVehicleLocal _helperPos;
+                private _helperPos = AGLtoASL (_houseBeingScaned modelToWorld (_houseBeingScaned selectionPosition _x));
+                private _helperObject = "ACE_LogicDummy" createVehicleLocal _helperPos;
                 _addedHelpers pushBack _helperObject;
                 _helperObject setVariable [QGVAR(building), _houseBeingScaned];
                 _helperObject setPosASL _helperPos;
@@ -88,7 +88,8 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
                 {
                     [_helperObject, 0, [], _x] call EFUNC(interact_menu,addActionToObject);
-                } forEach (_memPointsActions select _forEachIndex);
+                    nil
+                } count (_memPointsActions select _forEachIndex);
 
             } forEach _memPoints;
         };

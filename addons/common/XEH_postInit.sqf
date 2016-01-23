@@ -1,5 +1,6 @@
 // ACE - Common
 // #define ENABLE_PERFORMANCE_COUNTERS
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 
@@ -56,6 +57,39 @@
 //////////////////////////////////////////////////
 // Eventhandlers
 //////////////////////////////////////////////////
+
+//Status Effect EHs:
+["setStatusEffect", {_this call FUNC(statusEffect_set)}] call FUNC(addEventHandler);
+["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
+["blockSprint", false, []] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+
+["forceWalk", {
+    params ["_object", "_set"];
+    TRACE_2("forceWalk EH",_object,_set);
+    _object forceWalk (_set > 0);
+}] call FUNC(addEventHandler);
+["blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
+    params ["_object", "_set"];
+    TRACE_2("blockSprint EH",_object,_set);
+    _object allowSprint (_set == 0);
+}] call FUNC(addEventHandler);
+["setCaptive", {
+    params ["_object", "_set"];
+    TRACE_2("setCaptive EH",_object,_set);
+    _object setCaptive (_set > 0);
+}] call FUNC(addEventHandler);
+["blockDamage", { //Name reversed from `allowDamage` because we want NOR logic
+    params ["_object", "_set"];
+    if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
+        TRACE_2("blockDamage EH (using medical)",_object,_set);
+       _object setvariable [QEGVAR(medical,allowDamage), (_set == 0), true];
+    } else {
+        TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
+       _object allowDamage (_set == 0);
+    };
+}] call FUNC(addEventHandler);
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
@@ -430,9 +464,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 //////////////////////////////////////////////////
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
-
-// @todo still needed?
-[QGVAR(StateArrested), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
 
 ["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
 ["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);

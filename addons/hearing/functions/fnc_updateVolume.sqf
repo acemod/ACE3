@@ -1,6 +1,6 @@
 /*
  * Author: commy2 and esteldunedain and Ruthberg
- * Updates and applys the current deafness.  Called every 0.1 sec from a PFEH.
+ * Updates and applys the current deafness.  Called every 1 sec from a PFEH.
  *
  * Arguments:
  * 0: Args <ARRAY>
@@ -19,7 +19,6 @@
 //Only run if deafness or ear ringing is enabled:
 if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-private["_volume", "_soundTransitionTime"];
 (_this select 0) params ["_justUpdateVolume"];
 
 
@@ -71,7 +70,7 @@ if (!_justUpdateVolume) then {
 
 if ((missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) || {!GVAR(enableCombatDeafness)}) exitWith {};
 
-_volume = GVAR(volume);
+private _volume = GVAR(volume);
 
 // Earplugs reduce hearing 50%
 if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
@@ -92,7 +91,7 @@ if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
     _volume = _volume min GVAR(UnconsciousnessVolume);
 };
 
-_soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
+private _soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
 
 _soundTransitionTime fadeSound _volume;
 _soundTransitionTime fadeSpeech _volume;

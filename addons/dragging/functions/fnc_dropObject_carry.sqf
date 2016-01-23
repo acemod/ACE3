@@ -48,7 +48,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 // reselect weapon and re-enable sprint
 _unit selectWeapon primaryWeapon _unit;
 
-[_unit, "isDragging", false] call EFUNC(common,setforceWalkStatus);
+[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {

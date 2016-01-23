@@ -21,7 +21,7 @@
 private ["_endPosOffset"],
 params ["_unit", "_target", ["_nozzle", objNull]];
 
-[_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
 
 REFUEL_HOLSTER_WEAPON
 
@@ -70,7 +70,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             };
             _actionID = _unit addAction [
                 format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
-                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus); REFUEL_UNHOLSTER_WEAPON',
+                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); REFUEL_UNHOLSTER_WEAPON',
                 nil,
                 20,
                 false,
@@ -107,7 +107,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             };
             _actionID = _unit addAction [
                 format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
-                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus); REFUEL_UNHOLSTER_WEAPON',
+                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); REFUEL_UNHOLSTER_WEAPON',
                 nil,
                 20,
                 false,
@@ -138,7 +138,7 @@ if !(_nozzle getVariable [QGVAR(jerryCan), false]) then {
                 [_unit, _nozzle] call FUNC(dropNozzle);
                 REFUEL_UNHOLSTER_WEAPON
 
-                [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+                [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
                 [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
             };
             [_pfID] call cba_fnc_removePerFrameHandler;

@@ -23,10 +23,10 @@ if (!params [["_object", objNull, [objNull]], ["_typeNum", 0, [0]], ["_parentPat
     ERROR("Bad Params");
 };
 
-private ["_varName","_actionList"];
-_varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
-_actionList = _object getVariable [_varName, []];
-if((count _actionList) == 0) then {
+private _varName = [QGVAR(actions),QGVAR(selfActions)] select _typeNum;
+private _actionList = _object getVariable [_varName, []];
+
+if (_actionList isEqualTo []) then {
     _object setVariable [_varName, _actionList];
 };
 
