@@ -32,7 +32,6 @@ class CfgVehicles {
     // ammo boxes
     class ThingX;
     class ReammoBox_F: ThingX {
-        XEH_ENABLED;
         GVAR(canCarry) = 0;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;
