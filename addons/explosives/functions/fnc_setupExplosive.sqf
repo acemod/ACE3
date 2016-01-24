@@ -32,7 +32,7 @@ if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
