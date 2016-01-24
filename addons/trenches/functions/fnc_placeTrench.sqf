@@ -39,10 +39,17 @@ GVAR(digDirection) = 0;
 GVAR(digPFH) = [{
     (_this select 0) params ["_unit", "_trench"];
 
+    // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
         [_unit] call FUNC(digCancel);
     };
 
+    // Cancel if the place is no longer suitable
+    if !([_unit, GVAR(trenchType)] call FUNC(canDigTrench)) exitWith {
+        [_unit] call FUNC(digCancel);
+    };
+
+    // Update trench position
     private _basePos = eyePos _unit vectorAdd (positionCameraToWorld [0, 0, 2] vectorDiff positionCameraToWorld [0, 0, 0]);
     private _angle = (GVAR(digDirection) + getDir _unit);
 
