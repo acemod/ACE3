@@ -15,13 +15,15 @@
  */
 #include "script_component.hpp"
 
-private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL", "_ambientBrightness", "_maxDistance"];
+private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_relPos", "_projDist", "_target"];
+
+BEGIN_COUNTER(GVAR(onDraw3d));
 
 //don't show nametags in spectator or if RscDisplayMPInterrupt is open
 if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
-_ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-_maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
+private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 _onKeyPressAlphaMax = if ((GVAR(showPlayerNames) in [3,4])) then {
     2 + (GVAR(showNamesTime) - ACE_time); //after release 1 second of full opacity, 1 second of fading to 0
@@ -77,17 +79,16 @@ if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
 };
 
 if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(showSoundWaves) == 2}) then {
-    _pos = positionCameraToWorld [0, 0, 0];
-    _targets = _pos nearObjects ["CAManBase", _maxDistance + 5];
+    private _pos = positionCameraToWorld [0, 0, 0];
+    private _targets = [_pos, {
+        private _nearMen = _this nearObjects ["CAManBase", _maxDistance + 7];
+        [_nearMen, {
+            !(lineIntersects [AGLtoASL _pos, eyePos _x, ACE_player, _x])
+        }] call EFUNC(common,filter);
+    }, missionNamespace, QGVAR(nearMen), 0.5] call EFUNC(common,cachedCall);
 
-    if (!surfaceIsWater _pos) then {
-        _pos = ATLtoASL _pos;
-    };
-    _pos2 = positionCameraToWorld [0, 0, 1];
-    if (!surfaceIsWater _pos2) then {
-        _pos2 = ATLtoASL _pos2;
-    };
-    _vecy = _pos2 vectorDiff _pos;
+    _pos = AGLtoASL _pos;
+    private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _pos;
 
     {
         _target = _x;
@@ -106,9 +107,6 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
                 {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
                 {!(_target getVariable ["ACE_hideName", false])}) then {
 
-            _targetEyePosASL = eyePos _target;
-            if (lineIntersects [_pos, _targetEyePosASL, ACE_player, _target]) exitWith {}; // Check if there is line of sight
-
             _relPos = (visiblePositionASL _target) vectorDiff _pos;
             _distance = vectorMagnitude _relPos;
             _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
@@ -120,3 +118,5 @@ if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(sho
         nil
     } count _targets;
 };
+
+END_COUNTER(GVAR(onDraw3d));
