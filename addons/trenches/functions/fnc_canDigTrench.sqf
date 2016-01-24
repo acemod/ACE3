@@ -22,6 +22,9 @@ params ["_unit","_trenchTypeName"];
 
 if !("ACE_EntrenchingTool" in items _unit) exitWith {false};
 
+// Can't dig trench if above ground level
+if ((getPosATL _unit) select 2 > 0.05) exitWith {false};
+
 private ["_surfaceClass", "_surfaceType"];
 
 _surfaceClass = (surfaceType getPosASL _unit) select [1];
