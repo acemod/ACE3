@@ -2,8 +2,10 @@
 
 #include "client\sqf\sqf.hpp"
 
-namespace intercept {
-    namespace example {
+using namespace intercept;
+
+namespace ace {
+    namespace wind_deflection {
         types::vector3 shot::_wind_dir;
         float shot::_delta;
         float shot::_last_time;

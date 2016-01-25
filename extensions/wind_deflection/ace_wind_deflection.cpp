@@ -30,10 +30,11 @@
 #define RAD(x) (x / 180.0f * PI)
 
 using namespace intercept;
+using namespace ace::wind_deflection;
 
 INITIALIZE_EASYLOGGINGPP
 
-example::shot_tracker tracker;
+shot_tracker tracker;
 
 int __cdecl intercept::api_version() {
     return 1;

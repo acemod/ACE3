@@ -3,8 +3,10 @@
 #include "shared\client_types.hpp"
 #include "shared\types.hpp"
 
-namespace intercept {
-    namespace example {
+using namespace intercept;
+
+namespace ace {
+    namespace wind_deflection {
         class shot {
         public:
             shot();
@@ -15,7 +17,7 @@ namespace intercept {
 
             static void on_frame_setup();
 
-            
+
             types::object ammo_object;
             std::string type;
             float air_friction;
