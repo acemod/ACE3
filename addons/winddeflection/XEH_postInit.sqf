@@ -9,7 +9,7 @@ GVAR(trackedBullets) = [];
     if (!GVAR(enabled)) exitWith {};
 
     // Decide if it should be done on sqf or on the intercept extension
-    if (missionNamespace getVariable ["intercept_core_enabled", false]) then {
+    if (missionNamespace getVariable ["intercept_invoker_ok", false]) then {
         // Use the extension
         // @todo: figure out how to solve the extension being on @ace vs z\ace, etc
         "intercept" callExtension "load_extension:z\ace\ace_wind_deflection.dll";
