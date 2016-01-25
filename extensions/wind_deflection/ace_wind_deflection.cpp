@@ -62,12 +62,44 @@ void __cdecl intercept::fired(
     std::string &magazine_,
     object &projectile_)
 {
-    /*
-    intercept::sqf::config_entry test;
-    test = test >> "CfgAmmo" >> ammo_ >> "hit";
-    float test_val = sqf::get_number(test);
-    LOG(DEBUG) << "HIT: " << test_val;
-    */
+    // Check if the projectile should be calculated
+
+    // if (missionNamespace getVariable[QEGVAR(advanced_ballistics, enabled), false] && (_bullet isKindOf "BulletBase") && (_unit isKindOf "Man")) exitWith{ false };
+    // @todo: Enable this check when is_nil is implemented
+    /*if (!sqf::is_nil(sqf::get_variable(sqf::mission_namespace(), "ace_advanced_ballistics_enabled"))) {
+        if (sqf::get_variable(sqf::mission_namespace(), "ace_advanced_ballistics_enabled")) {
+            if (sqf::is_kind_of(projectile_, "BulletBase") && sqf::is_kind_of(unit_, "Man")) {
+                return;
+            }
+        }
+    }*/
+    // if (!hasInterface) exitWith {false};
+    if (!(sqf::has_interface())) {
+        return;
+    }
+    // if (!(GVAR(vehicleEnabled)) && !(_unit isKindOf "Man")) exitWith {false};
+
+    bool vehicleEnabled(game_value(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_vehicleEnabled")));
+    if ( !(sqf::is_kind_of(unit_, "Man")) && !vehicleEnabled) {
+        return;
+    }
+    // if (!((_bullet isKindOf "BulletBase") || (_bullet isKindOf "GrenadeBase"))) exitWith{ false };
+    if (!(sqf::is_kind_of(projectile_, "BulletBase")) && (sqf::is_kind_of(projectile_, "GrenadeBase"))) {
+        return;
+    }
+    // if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith{ false };
+    object player = sqf::get_variable(sqf::mission_namespace(), "ACE_player");
+    float distance = sqf::get_pos_asl(unit_).distance(sqf::get_pos_asl(player));
+    float radius = game_value(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_simulationRadius"));
+    if (distance > radius) {
+        return;
+    }
+    // if (!([_unit] call EFUNC(common, isPlayer))) exitWith{ false };
+    // @todo: Support curator controlled units when is_nil is implemented
+    if (!sqf::is_player(unit_)) {
+        return;
+    }
+
     tracker.add_shot(projectile_, ammo_);
 }
 
