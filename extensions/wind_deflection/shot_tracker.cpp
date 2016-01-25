@@ -64,10 +64,10 @@ namespace ace {
 
         void shot::on_frame_setup()
         {
-            float current_time = game_value(sqf::get_variable(sqf::mission_namespace(), "ACE_time"));
+            float current_time = sqf::get_variable(sqf::mission_namespace(), "ACE_time");
             _delta = current_time - _last_time;
             _last_time = current_time;
-            _wind_dir = game_value(sqf::get_variable(sqf::mission_namespace(), "ACE_wind"));
+            _wind_dir = sqf::get_variable(sqf::mission_namespace(), "ACE_wind");
         }
 
         shot_tracker::shot_tracker()

@@ -78,8 +78,7 @@ void __cdecl intercept::fired(
         return;
     }
     // if (!(GVAR(vehicleEnabled)) && !(_unit isKindOf "Man")) exitWith {false};
-
-    bool vehicleEnabled(game_value(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_vehicleEnabled")));
+    bool vehicleEnabled(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_vehicleEnabled"));
     if ( !(sqf::is_kind_of(unit_, "Man")) && !vehicleEnabled) {
         return;
     }
@@ -90,7 +89,7 @@ void __cdecl intercept::fired(
     // if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith{ false };
     object player = sqf::get_variable(sqf::mission_namespace(), "ACE_player");
     float distance = sqf::get_pos_asl(unit_).distance(sqf::get_pos_asl(player));
-    float radius = game_value(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_simulationRadius"));
+    float radius = sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_simulationRadius");
     if (distance > radius) {
         return;
     }
