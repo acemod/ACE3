@@ -17,3 +17,5 @@ PREP(updateTrajectoryPFH);
 PREP(initModuleSettings);
 
 ADDON = true;
+
+GVAR(disableEventHandlers) = false;

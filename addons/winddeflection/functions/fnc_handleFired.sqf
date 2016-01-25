@@ -23,6 +23,7 @@
 
 params ["_unit", "", "", "", "_ammo", "", "_bullet"];
 
+if (GVAR(disableEventHandlers)) exitWith {};
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && (_bullet isKindOf "BulletBase") && (_unit isKindOf "Man")) exitWith {false};
 
 if (!hasInterface) exitWith {false};
