@@ -20,29 +20,7 @@
 
 params ["_unit", "_reason", "_status"];
 
-private _forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
+//Now just a wrapper for FUNC(statusEffect_set) [No longer used in ace as of 3.5]
+ACE_DEPRECATED("ace_common_fnc_setForceWalkStatus","3.7.0","ace_common_fnc_statusEffect_set");
 
-// register new reason (these reasons are shared publicly, since units can change ownership, but keep their forceWalk status)
-if !(_reason in _forceWalkReasons) then {
-    _forceWalkReasons pushBack _reason;
-    ACE_forceWalkReasons = _forceWalkReasons;
-    publicVariable "ACE_forceWalkReasons";
-};
-
-// get reasons why the unit is forceWalking already and update to the new status
-private _unitForceWalkReasons = [_unit] call FUNC(getForceWalkStatus);
-
-private _forceWalkReasonsBooleans = [];
-
-{
-    _forceWalkReasonsBooleans set [_forEachIndex, (_forceWalkReasons select _forEachIndex) in _unitForceWalkReasons];
-} forEach _forceWalkReasons;
-
-_forceWalkReasonsBooleans set [_forceWalkReasons find _reason, _status];
-
-private _bitmaskNumber = _forceWalkReasonsBooleans call FUNC(toBitmask);
-
-_unit setVariable ["ACE_forceWalkStatusNumber", _bitmaskNumber, true];
-
-// actually apply the forceWalk command globaly
-[[_unit], QFUNC(applyForceWalkStatus), 2] call FUNC(execRemoteFnc);
+[_unit, "forceWalk", _reason, _status] call FUNC(statusEffect_set);

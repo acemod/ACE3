@@ -10,7 +10,6 @@ PREP(addToInventory);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);
 PREP(ambientBrightness);
-PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
 PREP(binarizeNumber);
 PREP(blurScreen);
@@ -53,8 +52,8 @@ PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
-PREP(getCaptivityStatus);
 PREP(getDeathAnim);
+PREP(getCaptivityStatus);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
@@ -170,6 +169,13 @@ PREP(setVariablePublic);
 PREP(setVolume);
 PREP(sortAlphabeticallyBy);
 PREP(showHud);
+PREP(statusEffect_addType);
+PREP(statusEffect_get);
+PREP(statusEffect_localEH);
+PREP(statusEffect_resetVariables);
+PREP(statusEffect_respawnEH);
+PREP(statusEffect_sendEffects);
+PREP(statusEffect_set);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
@@ -316,6 +322,8 @@ if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };
 
+GVAR(statusEffect_Names) = [];
+GVAR(statusEffect_isGlobal) = [];
 
 //////////////////////////////////////////////////
 // Set up PlayerChanged eventhandler for pre init

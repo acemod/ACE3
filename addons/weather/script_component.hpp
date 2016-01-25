@@ -1,6 +1,9 @@
 #define COMPONENT weather
 #include "\z\ace\addons\main\script_mod.hpp"
-//#define DEBUG_ENABLED_WEATHER
+
+// #define DEBUG_MODE_FULL
+// #define ENABLE_PERFORMANCE_COUNTERS
+
 #ifdef DEBUG_ENABLED_WEATHER
     #define DEBUG_MODE_FULL
 #endif

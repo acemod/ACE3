@@ -80,7 +80,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
         _args params ["_unit", "_nozzle", "_target", "_endPosTestOffset"];
         _unit setVariable [QGVAR(nozzle), nil];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
