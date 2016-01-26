@@ -26,16 +26,19 @@ params ["_unit"];
 
     params ["_unit"];
 
-    private ["_position", "_direction", "_trench"];
-
-    _position = getPosASL GVAR(trench);
-    _direction = getDir GVAR(trench);
+    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
+    private _position = getPosASL GVAR(trench);
+    private _angle = (GVAR(digDirection) + getDir _unit);
+    private _minz = (getTerrainHeightASL _position);
+    _position set [2, _minz + _offset];
+    private _v3 = [sin _angle, +cos _angle, 0] vectorCrossProduct surfaceNormal _position;
+    private _v1 = (surfaceNormal _position) vectorCrossProduct _v3;
 
     deleteVehicle GVAR(trench);
 
-    _trench = createVehicle [GVAR(trenchType) select 0, [0, 0, 0], [], 0, "NONE"];
+    private _trench = createVehicle [GVAR(trenchType) select 0, [0, 0, 0], [], 0, "NONE"];
     _trench setPosASL _position;
-    _trench setDir _direction;
+    _trench setVectorDirAndUp [_v1, surfaceNormal _position];
 
     GVAR(trench) = objNull;
 }, [_unit], 1] call EFUNC(common,waitAndExecute);

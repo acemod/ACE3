@@ -57,7 +57,7 @@ GVAR(digPFH) = [{
     GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
     private _minz = (getTerrainHeightASL _basePos);
     private ["_ix","_iy"];
-    for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
+    /*for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
         for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
             private _pos = _basePos vectorAdd ([cos _angle, -sin _angle, 0] vectorMultiply _ix)
                                     vectorAdd ([sin _angle, +cos _angle, 0] vectorMultiply _iy);
@@ -66,15 +66,18 @@ GVAR(digPFH) = [{
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
                 _pos2 = +_pos;
-                _pos2 set [2, getTerrainHeightASL _pos+2];
+                _pos2 set [2, getTerrainHeightASL _pos + 1];
                 drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
             #endif
         };
-    };
+    };*/
     _basePos set [2, _minz + _offset];
-
     _trench setPosASL _basePos;
-    _trench setDir _angle;
+
+    private _v3 = [sin _angle, +cos _angle, 0] vectorCrossProduct surfaceNormal _basePos;
+    private _v1 = (surfaceNormal _basePos) vectorCrossProduct _v3;
+
+    _trench setVectorDirAndUp [_v1, surfaceNormal _basePos];
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
