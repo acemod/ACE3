@@ -21,9 +21,9 @@
 }] call EFUNC(common,addEventHandler);
 
 ["UnloadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
+    (_this select 0) params ["_item","_vehicle", ["_unloader", objNull]];
 
-    private _unloaded = [_item, _vehicle] call FUNC(unloadItem);
+    private _unloaded = [_item, _vehicle, _player] call FUNC(unloadItem);
 
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 

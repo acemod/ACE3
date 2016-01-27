@@ -47,6 +47,7 @@ PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
+PREP(findUnloadPosition);
 PREP(fixCollision);
 PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);

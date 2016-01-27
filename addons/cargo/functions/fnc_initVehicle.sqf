@@ -43,7 +43,7 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 TRACE_1("Adding unload cargo action to class", _type);
 
 private _condition = {
-    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
 private _statement = {
     GVAR(interactionVehicle) = _target;
