@@ -38,6 +38,7 @@ GVAR(digDirection) = 0;
 // pfh that runs while the dig is in progress
 GVAR(digPFH) = [{
     (_this select 0) params ["_unit", "_trench"];
+    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
 
     // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
@@ -50,19 +51,25 @@ GVAR(digPFH) = [{
     };
 
     // Update trench position
-    private _basePos = eyePos _unit vectorAdd (positionCameraToWorld [0, 0, 2] vectorDiff positionCameraToWorld [0, 0, 0]);
+    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
+    private _basePos = eyePos _unit vectorAdd ([sin getDir _unit, +cos getDir _unit, 0] vectorMultiply 2);
+
     private _angle = (GVAR(digDirection) + getDir _unit);
 
-    // Stick the trench to the ground
-    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
-    private _minz = (getTerrainHeightASL _basePos);
-    private ["_ix","_iy"];
-    /*for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
-        for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
-            private _pos = _basePos vectorAdd ([cos _angle, -sin _angle, 0] vectorMultiply _ix)
-                                    vectorAdd ([sin _angle, +cos _angle, 0] vectorMultiply _iy);
-            _minz = _minz min (getTerrainHeightASL _pos);
+    // _v1 forward from the player, _v2 to the right, _v3 points away from the ground
+    private _v3 = surfaceNormal _basePos;
+    private _v2 = [sin _angle, +cos _angle, 0] vectorCrossProduct _v3;
+    private _v1 = _v3 vectorCrossProduct _v2;
 
+    // Stick the trench to the ground
+    _basePos set [2, getTerrainHeightASL _basePos];
+    private _minzoffset = 0;
+    private ["_ix","_iy"];
+    for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
+        for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
+            private _pos = _basePos vectorAdd (_v2 vectorMultiply _ix)
+                                    vectorAdd (_v1 vectorMultiply _iy);
+            _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
                 _pos2 = +_pos;
@@ -70,14 +77,13 @@ GVAR(digPFH) = [{
                 drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
             #endif
         };
-    };*/
-    _basePos set [2, _minz + _offset];
+    };
+    _basePos set [2, (_basePos select 2) + _minzoffset + _offset];
+    TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
+    _trench setVectorDirAndUp [_v1, _v3];
+    GVAR(trenchPos) = _basePos;
 
-    private _v3 = [sin _angle, +cos _angle, 0] vectorCrossProduct surfaceNormal _basePos;
-    private _v1 = (surfaceNormal _basePos) vectorCrossProduct _v3;
-
-    _trench setVectorDirAndUp [_v1, surfaceNormal _basePos];
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;
 
 // add mouse button action and hint
