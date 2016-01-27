@@ -41,6 +41,7 @@ int __cdecl intercept::api_version() {
 }
 
 void __cdecl intercept::on_frame() {
+    LOG(INFO) << "ace_wind_deflection on_frame";
     tracker.on_frame();
 }
 
@@ -62,6 +63,8 @@ void __cdecl intercept::fired(
     rv_string &magazine_,
     object &projectile_)
 {
+    LOG(INFO) << "ace_wind_deflection fired: " << ammo_.string();
+
     // Check if the projectile should be calculated
 
     // if (missionNamespace getVariable[QEGVAR(advanced_ballistics, enabled), false] && (_bullet isKindOf "BulletBase") && (_unit isKindOf "Man")) exitWith{ false };
@@ -73,15 +76,21 @@ void __cdecl intercept::fired(
             }
         }
     }*/
+
     // if (!hasInterface) exitWith {false};
     if (!(sqf::has_interface())) {
         return;
     }
+
     // if (!(GVAR(vehicleEnabled)) && !(_unit isKindOf "Man")) exitWith {false};
-    bool vehicleEnabled(sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_vehicleEnabled"));
-    if ( !(sqf::is_kind_of(unit_, "Man")) && !vehicleEnabled) {
-        return;
+    bool vehicleEnabled(sqf::get_variable(sqf::mission_namespace(), "ace_winddeflection_vehicleEnabled"));
+    LOG(INFO) << "ace_winddeflection_vehicleEnabled: " << vehicleEnabled;
+    if (!vehicleEnabled) {
+        if (!sqf::is_kind_of(unit_, "Man")) {
+            return;
+        }
     }
+
     // if (!((_bullet isKindOf "BulletBase") || (_bullet isKindOf "GrenadeBase"))) exitWith{ false };
     if (!(sqf::is_kind_of(projectile_, "BulletBase")) && (sqf::is_kind_of(projectile_, "GrenadeBase"))) {
         return;
@@ -89,10 +98,12 @@ void __cdecl intercept::fired(
     // if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith{ false };
     object player = sqf::get_variable(sqf::mission_namespace(), "ACE_player");
     float distance = sqf::get_pos_asl(unit_).distance(sqf::get_pos_asl(player));
-    float radius = sqf::get_variable(sqf::mission_namespace(), "ace_wind_deflection_simulationRadius");
+    float radius = sqf::get_variable(sqf::mission_namespace(), "ace_winddeflection_simulationRadius");
+    LOG(INFO) << "ace_winddeflection_simulationRadius: " << radius;
     if (distance > radius) {
         return;
     }
+
     // if (!([_unit] call EFUNC(common, isPlayer))) exitWith{ false };
     // @todo: Support curator controlled units when is_nil is implemented
     if (!sqf::is_player(unit_)) {
@@ -100,8 +111,18 @@ void __cdecl intercept::fired(
     }
 
     tracker.add_shot(projectile_, ammo_.string());
+
 }
 
+void __cdecl intercept::on_signal(
+    std::string &signal_name_,
+    game_value &value1_)
+{
+    std::string vehicleEnabled(sqf::get_variable(sqf::mission_namespace(), "intercept_"));
+    LOG(INFO) << "ace_wind_deflection on_signal: " << signal_name_ << " : " << std::string(value1_);
+
+    //sqf::side_chat(sqf::player(), "Signal received by ace_wind_deflection");
+}
 
 void Init(void) {
     el::Configurations conf;
