@@ -32,7 +32,7 @@ if (isNull _vehicle) exitWith {
     false
 };
 
-_return = false;
+private _return = false;
 // Start progress bar
 if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     private _size = [_object] call FUNC(getSizeItem);
