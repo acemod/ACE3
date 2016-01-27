@@ -32,14 +32,14 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeSmallName);
         descriptionShort = CSTRING(EnevlopeSmallDescription);
-        model = QUOTE(PATHTOEF(apl,ace_envelope_small3.p3d));
+        model = QUOTE(PATHTOEF(apl,ace_envelope_small4.p3d));
         scope = 2;
     };
     class ACE_envelope_big: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeBigName);
         descriptionShort = CSTRING(EnevlopeBigDescription);
-        model = QUOTE(PATHTOEF(apl,ace_envelope_big3.p3d));
+        model = QUOTE(PATHTOEF(apl,ace_envelope_big4.p3d));
         scope = 2;
     };
 
@@ -47,12 +47,12 @@ class CfgVehicles {
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
         scope = 1;
         //@todo: replace by a no geo model
-        model = QUOTE(PATHTOEF(apl,ace_envelope_small3.p3d));
+        model = QUOTE(PATHTOEF(apl,ace_envelope_small4_nogeo.p3d));
     };
     class ACE_envelope_big_NoGeo: ACE_envelope_big {
         scope = 1;
         //@todo: replace by a no geo model
-        model = QUOTE(PATHTOEF(apl,ace_envelope_big3.p3d));
+        model = QUOTE(PATHTOEF(apl,ace_envelope_big4_nogeo.p3d));
     };
 
     class Box_NATO_Support_F;
