@@ -3,6 +3,7 @@ class CfgWeapons {
     class ACE_ItemCore;
 
     class ACE_key_master: ACE_ItemCore {
+        scopeArsenal = 0;
         author = ECSTRING(common,ACETeam);
         displayName = "Vehicle Key: Master";
         descriptionShort = CSTRING(Item_Master_Description);
