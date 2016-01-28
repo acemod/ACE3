@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Check if unit can carry the object. Doesn't check weight.
  *
  * Arguments:
@@ -9,6 +8,9 @@
  *
  * Return Value:
  * Can the unit carry the object? <BOOL>
+ *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_canCarry;
  *
  * Public: No
  */

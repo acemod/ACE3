@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drag an object. Called from ace_dragging_fnc_startDrag
  *
  * Arguments:
@@ -10,20 +9,22 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_dragObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
-
-private ["_position", "_direction", "_offset", "_UAVCrew"];
+TRACE_2("params",_unit,_target);
 
 // get attachTo offset and direction.
-_position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
-_direction = _target getVariable [QGVAR(dragDirection), 0];
+private _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
+private _direction = _target getVariable [QGVAR(dragDirection), 0];
 
 // add height offset of model
-_offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
+private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
 _position = _position vectorAdd [0, 0, _offset];
 
@@ -55,7 +56,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
-_UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

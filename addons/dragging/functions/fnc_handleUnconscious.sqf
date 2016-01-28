@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Handle the Unconscious of a Unit while Dragging
  *
  * Arguments:
@@ -16,15 +15,13 @@
 */
 #include "script_component.hpp"
 
-private ["_player", "_draggedObject", "_carriedObject"];
-
 params ["_unit"];
 
-_player = ACE_player;
+private _player = ACE_player;
 
 if (_player getVariable [QGVAR(isDragging), false]) then {
 
-    _draggedObject = _player getVariable [QGVAR(draggedObject), objNull];
+    private _draggedObject = _player getVariable [QGVAR(draggedObject), objNull];
 
     // handle falling unconscious
     if (_unit == _player) then {
@@ -40,7 +37,7 @@ if (_player getVariable [QGVAR(isDragging), false]) then {
 
 if (_player getVariable [QGVAR(isCarrying), false]) then {
 
-    _carriedObject = _player getVariable [QGVAR(carriedObject), objNull];
+    private _carriedObject = _player getVariable [QGVAR(carriedObject), objNull];
 
     // handle falling unconscious
     if (_unit == _player) then {
