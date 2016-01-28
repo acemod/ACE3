@@ -57,10 +57,14 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 ] call EFUNC(common,addActionEventHandler)];
 
 // show mouse hint
-[localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+if (_target isKindOf "CAManBase") then {
+    [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
+} else {
+    [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+};
 
 // check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(carryObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
