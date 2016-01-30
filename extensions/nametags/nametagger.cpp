@@ -20,7 +20,7 @@ namespace ace {
 
         void nametagger::on_frame()
         {
-            int scale_index = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f));
+            int scale_index = float(sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f)));
             if (scale_index == 2) {
                 _scale = 0.666;
             } else if (scale_index == 0) {
@@ -33,6 +33,9 @@ namespace ace {
                 _scale = 1.0;
             }
 
+            if (sqf::is_null(sqf::player())) {
+                return;
+            }
             float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_PlayerNamesViewDistance", game_value(20.0f));
             vector3 cam_pos = sqf::get_pos(sqf::player());            //sqf::position_camera_to_world(vector3(0,0,0));
             std::vector<object> objects(sqf::near_objects(cam_pos, max_distance + 5));
