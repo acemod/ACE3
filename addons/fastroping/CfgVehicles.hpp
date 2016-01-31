@@ -1,11 +1,4 @@
 class CfgVehicles {
-    class Helicopter_Base_H;
-    class GVAR(helper): Helicopter_Base_H {
-        author = "KoffeinFlummi";
-        scope = 2;
-        model = PATHTOF(data\helper.p3d);
-    };
-
     class Building;
     class NonStrategic: Building {
         class AnimationSources;
@@ -14,22 +7,64 @@ class CfgVehicles {
         destrType = "";
     };
     class ACE_friesAnchorBar: ACE_friesBase {
-		author = "jokoho48";
-		scope = 2;
-		model = PATHTOF(data\friesAnchorBar.p3d);
+        author = "jokoho48";
+        scope = 2;
+        model = PATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
-		class AnimationSources: AnimationSources {
-			class extendHookRight {
-				source = "user";
-				initPhase = 0;
-				animPeriod = 1.5;
-			};
-			class extendHookLeft {
-				source = "user";
-				initPhase = 0;
-				animPeriod = 1.5;
-			};
-		};
+        class AnimationSources: AnimationSources {
+            class extendHookRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 1.5;
+            };
+            class extendHookLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 1.5;
+            };
+        };
+    };
+    class ACE_friesGantry: ACE_friesBase {
+        author = "jokoho48";
+        scope = 2;
+        model = PATHTOF(data\friesGantry.p3d);
+        animated = 1;
+        class AnimationSources: AnimationSources {
+            class adjustWidth {
+                source = "user";
+                initPhase = 0.211;
+                animPeriod = 0;
+            };
+            class rotateGantryLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+            class rotateGantryRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+        };
+    };
+    class ACE_friesGantryReverse: ACE_friesGantry {
+        class AnimationSources: AnimationSources {
+            class adjustWidth {
+                source = "user";
+                initPhase = 0.213;
+                animPeriod = 0;
+            };
+            class rotateGantryLeft {
+                source = "user";
+                initPhase = 0.5;
+                animPeriod = 0;
+            };
+            class rotateGantryRight {
+                source = "user";
+                initPhase = 0.5;
+                animPeriod = 0;
+            };
+        };
     };
 
     class Logic;
@@ -87,22 +122,50 @@ class CfgVehicles {
                 priority = 1;
             };
         };
+        class Turrets;
+    };
+
+    class Helicopter_Base_H;
+    class Helicopter_Base_F: Helicopter {
+        class Turrets: Turrets {
+            class MainTurret;
+        };
+    };
+
+    class GVAR(helper): Helicopter_Base_F {
+        author = "KoffeinFlummi";
+        scope = 2;
+        model = PATHTOF(data\helper.p3d);
+        class ACE_Actions {
+            class ACE_MainActions {
+                condition = "false";
+            };
+        };
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                animationSourceBody = "";
+                animationSourceGun = "";
+            };
+        };
     };
 
     class Heli_Light_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
+        GVAR(onPrepare) = QFUNC(onPrepareCommon);
+        GVAR(onCut) = QFUNC(onCutCommon);
     };
-    class Heli_Attack_02_base_F: Helicopter_Base_H {
+    class Heli_Attack_02_base_F: Helicopter_Base_F {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{1.25, 1.5, -0.6}, {-1.1, 1.5, -0.6}};
+        GVAR(onPrepare) = QFUNC(onPrepareCommon);
+        GVAR(onCut) = QFUNC(onCutCommon);
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
         GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.15};
-
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
     };
@@ -114,14 +177,17 @@ class CfgVehicles {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{0.75, -5.29, -0.11}, {-0.87, -5.29, -0.11}};
     };
-    class Helicopter_Base_F;
-    class Heli_light_03_base_F: Helicopter_Base_F{
-        GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{0.84, 2.8, 0.52}, {-0.9, 2.8, 0.52}};
+    class Heli_light_03_base_F: Helicopter_Base_F {
+        GVAR(enabled) = 2;
+        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
+        GVAR(friesType) = "ACE_friesGantryReverse";
+        GVAR(friesAttachmentPoint[]) = {1.04, 2.5, -0.34};
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
-        GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{0.84, 2.8, 0.36}, {-0.9, 2.8, 0.36}};
+        GVAR(enabled) = 2;
+        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
+        GVAR(friesType) = "ACE_friesGantry";
+        GVAR(friesAttachmentPoint[]) = {-1.07, 3.26, -0.5};
     };
     class Heli_Transport_04_base_F;
     class O_Heli_Transport_04_bench_F: Heli_Transport_04_base_F {

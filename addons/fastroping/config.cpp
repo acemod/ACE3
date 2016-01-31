@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_interaction"};
         author[] = {"KoffeinFlummi", "BaerMitUmlaut"};
         authorUrl = "";
         VERSION_CONFIG;
