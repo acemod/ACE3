@@ -20,7 +20,8 @@ namespace ace {
 
         void nametagger::on_frame()
         {
-            int scale_index = float(sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f)));
+            //int scale_index = float(sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f)));
+            int scale_index = 2;
             if (scale_index == 2) {
                 _scale = 0.666;
             } else if (scale_index == 0) {
@@ -36,7 +37,8 @@ namespace ace {
             if (sqf::is_null(sqf::player())) {
                 return;
             }
-            float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_PlayerNamesViewDistance", game_value(20.0f));
+            //float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_PlayerNamesViewDistance", game_value(20.0f));
+            float max_distance = 20.0f;
             vector3 cam_pos = sqf::get_pos(sqf::player());            //sqf::position_camera_to_world(vector3(0,0,0));
             std::vector<object> objects(sqf::near_objects(cam_pos, max_distance + 5));
 
@@ -59,7 +61,8 @@ namespace ace {
             };
             */
             if (sqf::is_kind_of(unit_, "CAManBase")) {
-                return sqf::get_variable(unit_, "ACE_NameRaw", game_value(""));
+                //return sqf::get_variable(unit_, "ACE_NameRaw", game_value(""));
+                return std::string("John Doe");
             } else {
                 if (_show_effective_on_vehicle) {
                     return get_name(sqf::effective_commander(unit_), false);
