@@ -17,11 +17,10 @@
 #include "script_component.hpp"
 
 private "_dummy";
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _dummy) exitwith {};
-
 
 [
     5,

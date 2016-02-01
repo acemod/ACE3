@@ -19,7 +19,7 @@
 #include "script_component.hpp"
 
 private ["_ammo", "_dummyName", "_dummy", "_actionID"];
-params ["_args"];
+params [["_args", [objNull, "", objNull]], [[]]];
 _args params ["_unit", "_magazineClass", "_target"]; // _target is for future possible finite ammo
 
 [_unit, QGVAR(vehRearm), true] call EFUNC(common,setForceWalkStatus);
