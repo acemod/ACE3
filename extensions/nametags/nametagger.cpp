@@ -85,13 +85,13 @@ namespace ace {
                 ss << "\\z\\ace\\addons\\nametags\\ui\\soundwave";
                 ss << (int)(rand() % 10);
                 ss << ".paa";
-                size = 1.0;
+                size = 1.0f;
                 alpha = std::max(alpha, 0.2f) + 0.2f;
             } else if (icon_type_ == name_rank) {
                 ss << "\\A3\\Ui_f\\data\\GUI\\Cfg\\Ranks\\";
                 ss << sqf::rank(unit_);
                 ss << "_gs.paa";
-                size = 1.0;
+                size = 1.0f;
             }
             std::string icon(ss.str());
 
@@ -122,11 +122,10 @@ namespace ace {
             }
             color.alpha *= alpha;
 
-            vector3 rel_pos(sqf::selection_positon(unit_, "pilot"));
-            rel_pos.z += heightOffset_ + 0.3;
-            vector3 pos(sqf::model_to_world_visual(unit_, rel_pos));
+            vector3 pos(sqf::asl_to_agl(sqf::eye_pos(unit_)));
+            pos.z += heightOffset_ + 0.3f;
 
-            sqf::draw_icon_3d(icon, color, pos, size * _scale, size * _scale, 0, unit_name, 2, 0.05 * _scale, "PuristaMedium");
+            sqf::draw_icon_3d(icon, color, pos, size * _scale, size * _scale, 0, unit_name, 2, 0.05f * _scale, "PuristaMedium");
         }
     }
 }
