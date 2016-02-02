@@ -95,7 +95,7 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
     [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 };
 
-[_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+[_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{

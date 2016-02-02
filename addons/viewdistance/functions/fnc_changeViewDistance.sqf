@@ -3,7 +3,7 @@
  * Sets the player's current view distance according to allowed values.
  *
  * Arguments:
- * 0: View Distance setting INDEX <SCALAR>
+ * 0: View Distance setting INDEX <NUMBER>
  * 1: Show Prompt <BOOL>
  *
  * Return Value:

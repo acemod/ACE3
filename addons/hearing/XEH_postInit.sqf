@@ -2,6 +2,9 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(cacheAmmoLoudness) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(cacheAmmoLoudness) setText QGVAR(cacheAmmoLoudness);
+
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
 GVAR(volume) = 1;

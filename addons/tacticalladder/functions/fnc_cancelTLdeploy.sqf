@@ -21,7 +21,7 @@
 params ["_unit", "_ladder"];
 
 // enable running again
-[_unit, "ACE_Ladder", false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
 
 detach _ladder;
 

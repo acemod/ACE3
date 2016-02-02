@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg
- *
  * Calculates density altitude for a given air density
  *
  * Arguments:
@@ -9,8 +8,10 @@
  * Return Value:
  * density altitude - m <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * 1.225 call ace_weather_fnc_calculateDensityAltitude
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
