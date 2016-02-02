@@ -92,9 +92,9 @@ _vehicle setVariable [QGVAR(towState), 1];
             _posVeh = _posTow vectorAdd (_dirV vectorMultiply _distance);
             _vehicle setDir _dir;
             _posVeh set [2, worldSize];
-        	_vehicle setPosASL _posVeh;
-        	_posVeh set [2, vectorMagnitude (_posVeh vectorDiff getPosVisual _vehicle)];
-        	_vehicle setPosASL _posVeh;
+            _vehicle setPosASL _posVeh;
+            _posVeh set [2, vectorMagnitude (_posVeh vectorDiff getPosVisual _vehicle)];
+            _vehicle setPosASL _posVeh;
         };
     };
 
@@ -117,9 +117,9 @@ _vehicle setVariable [QGVAR(towState), 1];
         _vehicle setDir _dir;
 
         _posVeh set [2, worldSize];
-    	_vehicle setPosASL _posVeh;
-    	_posVeh set [2, vectorMagnitude (_posVeh vectorDiff getPosVisual _vehicle)];
-    	_vehicle setPosASL _posVeh;
+        _vehicle setPosASL _posVeh;
+        _posVeh set [2, vectorMagnitude (_posVeh vectorDiff getPosVisual _vehicle)];
+        _vehicle setPosASL _posVeh;
 
         // Only calculate direction if vehicle moved more then 0.1m
         if ((_posVeh distance _lastPosVeh) > 0.1) then {
