@@ -39,7 +39,7 @@ _vehicle setVariable [QGVAR(towState), 1];
     private _posTowTruck = getPosASL _towTruck;
     (boundingBoxReal _towTruck) params ["_minTow"];
     _minTow params ["_minXTow", "_minYTow"];
-    (boundingBox _vehicle) params ["_min", "_max"];
+    (boundingBoxReal _vehicle) params ["_min", "_max"];
     _min params ["_minX", "_minY", "_minZ"];
     _max params ["_maxX", "_maxY"];
     private _posTow = _posTowTruck vectorAdd ((vectorDir _towTruck) vectorMultiply _minYTow);
@@ -120,6 +120,27 @@ _vehicle setVariable [QGVAR(towState), 1];
         _vehicle setPosASL _posVeh;
         _posVeh set [2, vectorMagnitude (_posVeh vectorDiff getPosVisual _vehicle)];
         _vehicle setPosASL _posVeh;
+        // Setting vehicle normal vector
+        private _positions = [_vehicle modelToWorldVisual [_minX, _maxY, _minZ],
+            _vehicle modelToWorldVisual [_maxX, _maxY, _minZ],
+            _posVeh,
+            _vehicle modelToWorldVisual [_minX, _minY, _minZ],
+            _vehicle modelToWorldVisual [_maxX, _minY, _minZ]];
+        private _collision = false;
+        {
+            if (lineIntersects [_x vectorAdd [0, 0, 3], _x vectorDiff [0, 0, 3], _vehicle, _towTruck]) exitWith {_collision = true;};
+        } forEach _positions;
+        // Calculate new normal vector
+        private _normal = [0, 0, 0];
+        if (!_collision) then {
+            {
+                _normal = _normal vectorAdd (surfaceNormal _x);
+            } count _positions;
+        } else {
+            _normal = [0, 0, 1];
+        };
+        _vehicle setVectorUp _normal;
+        _vehicle setPosASL _posVeh;
 
         // Only calculate direction if vehicle moved more then 0.1m
         if ((_posVeh distance _lastPosVeh) > 0.1) then {
@@ -127,27 +148,4 @@ _vehicle setVariable [QGVAR(towState), 1];
         };
     };
 
-    // Setting vehicle normal vector
-    private _positions = [_vehicle modelToWorldVisual [_minX, _maxY, _minZ],
-        _vehicle modelToWorldVisual [_maxX, _maxY, _minZ],
-        getPosASL _vehicle,
-        _vehicle modelToWorldVisual [_minX, _minY, _minZ],
-        _vehicle modelToWorldVisual [_maxX, _minY, _minZ]];
-    if (!isNil "_posVeh") then {
-        _positions set [2, _posVeh];
-    };
-    private _collision = false;
-    {
-        _collision = _collision || lineIntersects [_x vectorAdd [0, 0, 3], _x vectorDiff [0, 0, 3], _vehicle, _towTruck];
-        if (_collision) exitWith {};
-    } forEach _positions;
-    //hint str _collision;
-    // Calculate new normal vector
-    private _normal = [0, 0, 1];
-    if !(_collision) then {
-        {
-            _normal = _normal vectorAdd (surfaceNormal _x);
-        } count _positions;
-    };
-    _vehicle setVectorUp _normal;
 }, 0, [_towTruck, _vehicle]] call CBA_fnc_addPerFrameHandler;
