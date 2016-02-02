@@ -25,27 +25,38 @@ namespace ace {
         {
             int scale_index = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f));
             if (scale_index == 2) {
-                _scale = 0.666;
+                _scale = 0.666f;
             } else if (scale_index == 0) {
-                _scale = 0.333;
+                _scale = 0.333f;
             } else if (scale_index == 1) {
-                _scale = 0.5;
+                _scale = 0.5f;
             } else if (scale_index == 3) {
-                _scale = 0.833;
+                _scale = 0.833f;
             } else {
-                _scale = 1.0;
+                _scale = 1.0f;
             }
 
             if (sqf::is_null(sqf::player())) {
                 return;
             }
 
-            float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_PlayerNamesViewDistance", game_value(20.0f));
-            vector3 cam_pos = sqf::get_pos(sqf::player());            //sqf::position_camera_to_world(vector3(0,0,0));
-            std::vector<object> objects(sqf::near_objects(cam_pos, "CAManBase", max_distance + 5));
+            float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_playerNamesViewDistance", game_value(20.0f));
+            float player_names_max_alpha(sqf::get_variable(sqf::mission_namespace(), "ace_nametags_playerNamesMaxAlpha", game_value(1.0f)));
 
-            for (auto obj: objects) {
-                draw_nametag(obj, 1.0, 0.026 * 20, name_rank, true);
+            vector3 cam_pos_agl = sqf::position_camera_to_world(vector3(0,0,0));
+            vector3 cam_pos_asl = sqf::agl_to_asl(cam_pos_agl);
+            vector3 vecy = sqf::agl_to_asl(sqf::position_camera_to_world(vector3(0,0,1))) - cam_pos_asl;
+
+            std::vector<object> units(sqf::near_objects(cam_pos_agl, "CAManBase", max_distance + 5));
+            for (auto unit: units) {
+
+                vector3 rel_pos = sqf::eye_pos(unit) - cam_pos_asl;
+                float distance = rel_pos.magnitude();
+                float proj_dist = rel_pos.distance(vecy * (rel_pos.dot(vecy)));
+                float coefficient = std::max(std::min(1.0f - 0.15f * (proj_dist * 5.0f - distance - 3.0f), 1.0f), 0.0f);
+                float alpha = std::max(std::min(1.0f - 0.2f * (distance - max_distance), 1.0f), 0.0f) * coefficient * player_names_max_alpha;
+
+                draw_nametag(unit, alpha, distance * 0.026f, name_rank, true);
             }
         }
 
