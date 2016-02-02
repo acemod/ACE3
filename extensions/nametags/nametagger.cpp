@@ -18,6 +18,9 @@ namespace ace {
 
         }
 
+        /*!
+        @brief Based on ace_nametags_fnc_onDraw3d
+        */
         void nametagger::on_frame()
         {
             int scale_index = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_tagSize", game_value(2.0f));
@@ -36,6 +39,7 @@ namespace ace {
             if (sqf::is_null(sqf::player())) {
                 return;
             }
+
             float max_distance = sqf::get_variable(sqf::mission_namespace(), "ace_nametags_PlayerNamesViewDistance", game_value(20.0f));
             vector3 cam_pos = sqf::get_pos(sqf::player());            //sqf::position_camera_to_world(vector3(0,0,0));
             std::vector<object> objects(sqf::near_objects(cam_pos, "CAManBase", max_distance + 5));
@@ -45,19 +49,11 @@ namespace ace {
             }
         }
 
+        /*!
+        @brief Returns the name of a unit. Based on ace_common_fnc_getName
+        */
         std::string nametagger::get_name(types::object & unit_, bool _show_effective_on_vehicle)
         {
-            /*
-            if (_unit isKindOf "CAManBase") then {
-                _name = _unit getVariable [(["ACE_Name", "ACE_NameRaw"] select _useRaw), localize QUOTE(DOUBLES(STR,GVAR(Unknown)))];
-            } else {
-                if (_showEffective) then {
-                    _name = [effectiveCommander _unit, false, _useRaw] call FUNC(getName);
-                } else {
-                    _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-                };
-            };
-            */
             if (sqf::is_kind_of(unit_, "CAManBase")) {
                 return sqf::get_variable(unit_, "ACE_NameRaw", game_value(""));
             } else {
@@ -70,6 +66,9 @@ namespace ace {
             };
         }
 
+        /*!
+        @brief Draw a nametag for a unit. Based on ace_nametags_fnc_drawNameTagIcon
+        */
         void nametagger::draw_nametag(types::object & unit_, float alpha_, float heightOffset_, icon_type icon_type_, bool is_player_group_)
         {
             if (icon_type_ == none) {
@@ -104,7 +103,6 @@ namespace ace {
             if (icon_type_ == name || icon_type_ == name_rank || icon_type_ == name_speak) {
                 unit_name = get_name(unit_, true);
             };
-
 
             //sqf::rv_color color(sqf::__helpers::__convert_to_numbers_vector(sqf::get_variable(sqf::mission_namespace(), "ace_nametags_defaultNametagColor")));
             sqf::rv_color color{ 0.77f, 0.51f, 0.08f, 1.0f };
