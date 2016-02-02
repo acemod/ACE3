@@ -28,4 +28,4 @@
 #define REARM_UNHOLSTER_WEAPON \
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
     _unit selectWeapon _weaponSelect; \
-    _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
