@@ -15,10 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_fuel"];
-params ["_target"];
+params [["_target", objNull, [objNull]]];
 
-_fuel = _target getVariable QGVAR(currentFuelCargo);
+private _fuel = _target getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
     _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(fuelCargo));

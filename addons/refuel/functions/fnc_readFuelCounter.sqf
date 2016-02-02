@@ -16,18 +16,17 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
 [
     2,
     [_unit, _target],
     {
-        private ["_currentFuel", "_fuelCounter"];
         params ["_args"];
-        _args params ["_unit", "_target"];
+        _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-        _currentFuel = [_target] call FUNC(getFuel);
-        _fuelCounter = 0.01 * round (100 * ((_target getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel));
+        private _currentFuel = [_target] call FUNC(getFuel);
+        private _fuelCounter = 0.01 * round (100 * ((_target getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel));
         [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
     },
     "",

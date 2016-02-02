@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
 if (isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||

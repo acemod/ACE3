@@ -140,7 +140,7 @@ class CfgVehicles {
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
-        model = "\A3\Structures_F_Heli\VR\Helpers\Sign_sphere10cm_F.p3d";
+        model = PATHTOF(models\nozzle.p3d);
     };
 
     class All;
