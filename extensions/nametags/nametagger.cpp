@@ -94,7 +94,7 @@ namespace ace {
             } else if (icon_type_ == name_rank) {
                 ss << "\\A3\\Ui_f\\data\\GUI\\Cfg\\Ranks\\";
                 ss << sqf::rank(unit_);
-                ss << ".paa";
+                ss << "_gs.paa";
                 size = 1.0;
             }
             std::string icon(ss.str());
