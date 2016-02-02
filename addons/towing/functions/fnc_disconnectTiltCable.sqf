@@ -15,10 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_rope"];
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-_rope = _unit getVariable [QGVAR(tiltRope), nil];
+private _rope = _unit getVariable [QGVAR(tiltRope), nil];
 if !(isNil "_rope") then {
     ropeDestroy _rope;
 };

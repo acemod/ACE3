@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 !(_target distance _unit > TOWING_ACTION_DISTANCE) &&
     {isNil {_target getVariable QGVAR(isTowing)}} &&

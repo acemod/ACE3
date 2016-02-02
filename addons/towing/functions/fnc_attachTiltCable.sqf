@@ -17,32 +17,32 @@
  */
 #include "script_component.hpp"
 
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_stage", "_helper", "_rope", "_weaponSelect"];
-params ["_unit", "_attachToVehicle", "_startingPosition"];
+private ["_closeInDistance", "_endPosTestOffset"];
+params [["_unit", objNull, [objNull]], ["_attachToVehicle", objNull, [objNull]], ["_startingPosition", [0,0,0], [[]], 3]];
 
-_startingOffset = _attachToVehicle worldToModel _startingPosition;
+private _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
-_startDistanceFromCenter = vectorMagnitude _startingOffset;
-_closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
+private _startDistanceFromCenter = vectorMagnitude _startingOffset;
+private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
-_closeInMax = _startDistanceFromCenter;
-_closeInMin = 0;
+private _closeInMax = _startDistanceFromCenter;
+private _closeInMin = 0;
 
 while {(_closeInMax - _closeInMin) > 0.01} do {
     _closeInDistance = (_closeInMax + _closeInMin) / 2;
     // systemChat format ["Trying %1 from %2 start %3", _closeInDistance, [_closeInMax, _closeInMin], _startDistanceFromCenter];
     _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
     _endPosTestOffset set [2, (_startingOffset select 2)];
-    _endPosTest = _attachToVehicle modelToWorldVisual _endPosTestOffset;
+    private _endPosTest = _attachToVehicle modelToWorldVisual _endPosTestOffset;
 
-    _doesIntersect = false;
+    private _doesIntersect = false;
     {
         if (_doesIntersect) exitWith {};
-        _startingPosShifted = _startingPosition vectorAdd _x;
-        _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
+        private _startingPosShifted = _startingPosition vectorAdd _x;
+        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
         {
-            _endPosShifted = _endPosTest vectorAdd _x;
-            _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+            private _endPosShifted = _endPosTest vectorAdd _x;
+            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
             //Uncomment to see the lazor show, and see how the scanning works:
             // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
@@ -71,7 +71,7 @@ _closeInDistance = _closeInDistance - 0.0085;
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, _startingOffset select 2];
 
-_stage = (ACE_player getVariable [QGVAR(isTilting), 0]) + 1;
+private _stage = (ACE_player getVariable [QGVAR(isTilting), 0]) + 1;
 
 _attachToVehicle setVariable [QGVAR(tiltUp), _unit, true];
 
@@ -79,13 +79,13 @@ if (_stage == 1) then {
     _unit setVariable [QGVAR(selectedWeaponOnTilt), currentWeapon _unit];
     _unit action ["SwitchWeapon", _unit, _unit, 99];
 
-    _helper = "Sign_Sphere10cm_F" createVehicle position _unit;
+    private _helper = "Sign_Sphere10cm_F" createVehicle position _unit;
     _helper attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"];
 
     [_helper, "{_this hideObject true}", 2] call EFUNC(common,execRemoteFnc);
     [{
         params ["_unit", "_attachToVehicle", "_endPosTestOffset", "_helper"];
-        _rope = ropeCreate [_attachToVehicle, _endPosTestOffset, _helper, [0, 0, 0], 20];
+        private _rope = ropeCreate [_attachToVehicle, _endPosTestOffset, _helper, [0, 0, 0], 20];
         _unit setVariable [QGVAR(tiltRope), _rope];
     }, [_unit, _attachToVehicle, _endPosTestOffset, _helper], 1, 0] call EFUNC(common,waitAndExecute);
 
@@ -109,7 +109,7 @@ if (_stage == 1) then {
         _unit setVariable [QGVAR(tiltRope), _rope];
         _unit setVariable [QGVAR(isTilting), 2];
 
-        _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnTilt);
+        private _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnTilt);
         _unit selectWeapon _weaponSelect;
         _unit setVariable [QGVAR(selectedWeaponOnTilt), nil];
     };

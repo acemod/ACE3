@@ -20,8 +20,7 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-private ["_actionID"];
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 GVAR(placeAction) = PLACE_WAITING;
 
@@ -30,19 +29,18 @@ GVAR(placeAction) = PLACE_WAITING;
 [{[localize LSTRING(TiltConnectCable), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,addActionEventHandler)];
 
-_actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL; [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);}];
+private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL; [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);}];
 
 [{
-    private ["_virtualPos", "_virtualPosASL", "_lineInterection"];
     params ["_args","_pfID"];
-    _args params ["_unit", "_attachToVehicle", "_actionID"];
+    _args params [["_unit", objNull, [objNull]], ["_attachToVehicle", objNull, [objNull]], ["_actionID", -1, [0]]];
 
-    _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
+    private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {
         _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
     };
-    _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-    _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
+    private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+    private _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
 
     //Don't allow placing in a bad position:
     if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
@@ -59,5 +57,5 @@ _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRI
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             [_unit, _attachToVehicle, _virtualPos] call FUNC(attachTiltCable);
         };
-    }; // TODO add model like in attach/functions/fnc_attach
+    };
 }, 0, [_unit, _target, _actionID] ] call CBA_fnc_addPerFrameHandler;

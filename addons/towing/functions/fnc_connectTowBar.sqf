@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_connectingVehicle"];
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-_connectingVehicle = _unit getVariable QGVAR(towConnecting);
+private _connectingVehicle = _unit getVariable QGVAR(towConnecting);
 
 if (isNil "_connectingVehicle") then {
     // Set connecting and temporary towing variable

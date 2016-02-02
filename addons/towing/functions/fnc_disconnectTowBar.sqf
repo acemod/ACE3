@@ -16,12 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_connectingVehicle", "_towingVehicle", "_towedVehicle"];
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-_connectingVehicle = _unit getVariable QGVAR(towConnecting);
-_towingVehicle = _target getVariable QGVAR(isTowed);
-_towedVehicle = _target getVariable QGVAR(isTowing);
+private _connectingVehicle = _unit getVariable QGVAR(towConnecting);
+private _towingVehicle = _target getVariable QGVAR(isTowed);
+private _towedVehicle = _target getVariable QGVAR(isTowing);
 
 if (!isNil "_connectingVehicle") exitWith {
     _unit setVariable [QGVAR(towConnecting), nil];
