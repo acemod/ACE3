@@ -24,11 +24,6 @@
 
 #include "nametagger.hpp"
 
-#define PI 3.14159265f
-
-#define DEG(x) (x * 180.0f / PI)
-#define RAD(x) (x / 180.0f * PI)
-
 using namespace intercept;
 using namespace ace::nametags;
 

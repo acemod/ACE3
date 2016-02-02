@@ -1,5 +1,4 @@
 #pragma once
-#include <list>
 #include "shared\client_types.hpp"
 #include "shared\types.hpp"
 
