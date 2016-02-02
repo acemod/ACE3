@@ -89,13 +89,13 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
 
         detach _nozzle;
         _nozzle attachTo [_target, _endPosTestOffset];
-        _endPosTestOffset params ["_x", "_y", ""];
+        _endPosTestOffset params ["_x", "_y"];
         private _bb = boundingBoxReal _target;
         _bb params ["_ll", "_rr"];
         _ll set [2, 0];
         _rr set [2, 0];
-        _ll params ["_x1", "_y1", ""];
-        _rr params ["_x2", "_y2", ""];
+        _ll params ["_x1", "_y1"];
+        _rr params ["_x2", "_y2"];
         private _c1 = _ll vectorCos _endPosTestOffset;
         private _c2 = _ll vectorCos [_x1, _y2, 0];
         private _cn = (_ll vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
