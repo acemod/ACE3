@@ -140,7 +140,7 @@ class CfgVehicles {
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
-        model = PATHTOF(models\nozzle.p3d);
+        model = PATHTOF(data\nozzle.p3d);
     };
 
     class All;

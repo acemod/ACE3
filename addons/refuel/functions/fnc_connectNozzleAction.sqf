@@ -98,18 +98,21 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
         _rr params ["_x2", "_y2", ""];
         private _c1 = _ll vectorCos _endPosTestOffset;
         private _c2 = _ll vectorCos [_x1, _y2, 0];
+        private _cn = (_ll vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
         private _dirAndUp = [[1, 0, 0],[0, 0, 1]];
-        if (_c1 > _c2 && (_x < 0)) then {
+        if (_c1 > _c2 && (_cn > 0)) then {
             _dirAndUp = [[1, 0, 0.8],[0, 0, 1]];
         } else {
             _c1 = [_x1, _y2, 0] vectorCos _endPosTestOffset;
             _c2 = [_x1, _y2, 0] vectorCos _rr;
-            if (_c1 > _c2 && (_y > 0)) then {
+            _cn = ([_x1, _y2, 0] vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
+            if (_c1 > _c2 && (_cn > 0)) then {
                 _dirAndUp = [[0, -1, 0.8],[0, 0, 1]];
             } else {
                 _c1 = _rr vectorCos _endPosTestOffset;
                 _c2 = _rr vectorCos [_x2, _y1, 0];
-                if (_c1 > _c2 && (_x > 0)) then {
+                _cn = (_rr vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
+                if (_c1 > _c2 && (_cn > 0)) then {
                     _dirAndUp = [[-1, 0, 0.8],[0, 0, 1]];
                 } else {
                     _dirAndUp = [[0, 1, 0.8],[0, 0, 1]];
