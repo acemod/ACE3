@@ -7,15 +7,18 @@ keywords: Advanced Combat Enhancement 3, ACE, ACE3, Arma, Arma 3, Mod, Modificat
 productionUrl : http://ace3mod.com
 githubUrl: https://github.com/acemod/ACE3
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "html_toc"]
+markdown: kramdown
+kramdown:
+  input: GFM
+
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "html_toc"]
 
 timezone: UTC
 
 excerpt_separator: <!--more-->
 
-highlighter: pygments
+highlighter: rouge
 
 safe: true
 lsi: false
