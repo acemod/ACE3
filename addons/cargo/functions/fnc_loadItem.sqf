@@ -35,7 +35,8 @@ _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
 if (_item isEqualType objNull) then {
     detach _item;
-    _item attachTo [_vehicle,[0,0,-100]];
+    _item setPos [-100000,-100000,-100000];
+    _item allowDamage false;
     ["hideObjectGlobal", [_item, true]] call EFUNC(common,serverEvent);
 };
 
