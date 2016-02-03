@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Change in brightness (1 or -1) <SCALAR>
+ * 1: Change in brightness (1 or -1) <NUMBER>
  *
  * Return Value:
  * Nothing
