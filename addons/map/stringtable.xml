@@ -31,6 +31,7 @@
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
+            <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -39,6 +40,7 @@
             <Russian>Свет фонаря на карте?</Russian>
             <Portuguese>Brilho de lanterna no mapa?</Portuguese>
             <Spanish>Resplandor de linterna en el mapa?</Spanish>
+            <Czech>Nasvícení mapy pomocí baterky?</Czech>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -47,6 +49,7 @@
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
+            <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -297,6 +300,7 @@
             <Polish>Ust. domyślny kanał</Polish>
             <Portuguese>Definir canal no início</Portuguese>
             <Russian>Установить канал на старте</Russian>
+            <Czech>Zvolit kanál po startu</Czech>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -304,6 +308,7 @@
             <Polish>Ustaw domyślny kanał dla markerów przy starcie misji</Polish>
             <Portuguese>Muda o canal do marcador no início da missão</Portuguese>
             <Russian>Изменить начальный канал для установки маркеров при запуске миссии</Russian>
+            <Czech>Nastavit kanál po startu mise</Czech>
         </Key>
     </Package>
 </Project>

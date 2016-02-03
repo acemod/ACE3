@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
@@ -20,7 +20,7 @@
             <Polish>Zwój koncentriny</Polish>
             <Spanish>Bobina de alambre de espino</Spanish>
             <French>Bobine de fil barbelé</French>
-            <Czech>Smyčka ostnatého drátu</Czech>
+            <Czech>Svitek ostnatého drátu</Czech>
             <Italian>Concertina wire coil</Italian>
             <Hungarian>Concertina wire coil</Hungarian>
             <Portuguese>Bobina de arame farpado</Portuguese>

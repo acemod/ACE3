@@ -42,6 +42,7 @@
             <German>Zünden Alles</German>
             <Spanish>Detonar Todo</Spanish>
             <Russian>Подрыв всех</Russian>
+            <Czech>Odpálit VŠE</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -309,7 +310,7 @@
             <Spanish>Menú de detonación</Spanish>
             <Polish>Menu detonacji</Polish>
             <French>Menu de mise à feux</French>
-            <Czech>Menu Detonace</Czech>
+            <Czech>Menu detonace</Czech>
             <Italian>Menù di detonazione</Italian>
             <Hungarian>Robbantási menü</Hungarian>
             <Portuguese>Menu de detonação</Portuguese>
@@ -321,7 +322,7 @@
             <Spanish>Menú de colocación</Spanish>
             <Polish>Menu umieszczania</Polish>
             <French>Menu de placement</French>
-            <Czech>Menu Umístění</Czech>
+            <Czech>Menu umístění</Czech>
             <Italian>Menù di collocamento</Italian>
             <Hungarian>Elhelyezési menü</Hungarian>
             <Portuguese>Menu de posicionamento</Portuguese>
@@ -381,7 +382,7 @@
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
             <French>Régler minuteur</French>
-            <Czech>Nastavit Čas</Czech>
+            <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
@@ -393,7 +394,7 @@
             <Spanish>Seleccionar un detonador</Spanish>
             <Polish>Wybierz zapalnik</Polish>
             <French>Sélectionner une mise à feu</French>
-            <Czech>Zvolit Detonátor</Czech>
+            <Czech>Zvolit detonátor</Czech>
             <Italian>Seleziona un attivatore</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
