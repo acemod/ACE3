@@ -222,7 +222,7 @@
             <German>TANZEN!</German>
             <Spanish>BAILAR!</Spanish>
             <Polish>TAŃCZ!</Polish>
-            <Czech>TANČIT!</Czech>
+            <Czech>TANCUJ!</Czech>
             <French>Danse!</French>
             <Russian>ТАНЦЕВАТЬ!</Russian>
             <Hungarian>TÁNC!</Hungarian>
@@ -511,7 +511,7 @@
             <Spanish>Te has unido al equipo %1</Spanish>
             <French>Tu as rejoint l'équipe %1</French>
             <Polish>Dołączyłeś do %1</Polish>
-            <Czech>Připojil ses do %1 týmu</Czech>
+            <Czech>Připojili jste se do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
@@ -535,7 +535,7 @@
             <Spanish>Has dejado el equipo</Spanish>
             <French>Tu as quitté l'équipe</French>
             <Polish>Opuściłeś drużynę</Polish>
-            <Czech>Opustil jsi tým</Czech>
+            <Czech>Opustili jste tým</Czech>
             <Russian>Вы покинули группу</Russian>
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
@@ -563,7 +563,7 @@
             <Portuguese>Rolar</Portuguese>
             <Italian>Scorri</Italian>
             <Hungarian>Görgetés</Hungarian>
-            <Czech>Otáčení</Czech>
+            <Czech>Posunout</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -607,7 +607,7 @@
             <Spanish>Empujar</Spanish>
             <French>Pousser</French>
             <Polish>Pchnij</Polish>
-            <Czech>Odstrčit</Czech>
+            <Czech>Tlačit</Czech>
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
             <Portuguese>Empurrar</Portuguese>
@@ -697,6 +697,7 @@
             <Polish>Podaj magazynek</Polish>
             <Russian>Передать магазин</Russian>
             <Portuguese>Passar carregador</Portuguese>
+            <Czech>Podat zásobník</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -704,6 +705,7 @@
             <Polish>Magazynek karabinowy</Polish>
             <Russian>Основной магазин</Russian>
             <Portuguese>Carregador primário</Portuguese>
+            <Czech>Zásobník do primární zbraně</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -711,6 +713,7 @@
             <Polish>Magazynek pistoletowy</Polish>
             <Russian>Магазин к пистолету</Russian>
             <Portuguese>Carregador da pistola</Portuguese>
+            <Czech>Zásobník do pistole</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -718,6 +721,7 @@
             <Polish>%1 podał Ci magazynek %2.</Polish>
             <Russian>%1 передал вам магазин %2.</Russian>
             <Portuguese>%1 passou a você um carregador %2.</Portuguese>
+            <Czech>%1 ti podal %2 zásobník.</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -725,6 +729,7 @@
             <Polish>Pokaż interakcję "podaj magazynek"</Polish>
             <Russian>Показывать действие "передать магазин"</Russian>
             <Portuguese>Mostrar a interação "Passar carregador"</Portuguese>
+            <Czech>Zobrazit "interakci "podat zásobník"</Czech>
         </Key>
     </Package>
 </Project>

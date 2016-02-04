@@ -7,7 +7,7 @@
             <Spanish>Tomar prisionero</Spanish>
             <French>Capturer le prisonnier</French>
             <Polish>Aresztuj</Polish>
-            <Czech>Zajmout Osobu</Czech>
+            <Czech>Zajmout osobu</Czech>
             <Italian>Arresta il prigioniero</Italian>
             <Portuguese>Tomar Prisioneiro</Portuguese>
             <Hungarian>Foglyul ejtés</Hungarian>
@@ -19,7 +19,7 @@
             <Spanish>Liberar prisionero</Spanish>
             <Polish>Wypuść więźnia</Polish>
             <French>Libérer le prisonnier</French>
-            <Czech>Osvobodit Zajatce</Czech>
+            <Czech>Osvobodit zajatce</Czech>
             <Italian>Libera il prigioniero</Italian>
             <Portuguese>Libertar Prisioneiro</Portuguese>
             <Hungarian>Fogoly szabadon engedése</Hungarian>
@@ -31,7 +31,7 @@
             <Spanish>Escoltar prisionero</Spanish>
             <Polish>Eskortuj więźnia</Polish>
             <French>Escorter le prisonnier</French>
-            <Czech>Eskortovat Zajatce</Czech>
+            <Czech>Eskortovat zajatce</Czech>
             <Italian>Scorta il Prigioniero</Italian>
             <Portuguese>Escoltar Prisioneiro</Portuguese>
             <Hungarian>Fogoly kísérése</Hungarian>
@@ -43,7 +43,7 @@
             <Spanish>Soltar prisionero</Spanish>
             <Polish>Anuluj eskortowanie</Polish>
             <French>Relâcher le prisonnier</French>
-            <Czech>Uvolnit Zajatce</Czech>
+            <Czech>Uvolnit zajatce</Czech>
             <Italian>Rilascia il Prigioniero</Italian>
             <Portuguese>Largar Prisioneiro</Portuguese>
             <Hungarian>Fogoly elengedése</Hungarian>
@@ -91,7 +91,7 @@
             <Polish>Opaska zaciskowa</Polish>
             <Spanish>Precinto</Spanish>
             <French>Serflex</French>
-            <Czech>Stahovací Pásek</Czech>
+            <Czech>Stahovací pásek</Czech>
             <Portuguese>Algema Plástica</Portuguese>
             <Italian>Fascietta</Italian>
             <Hungarian>Gyorskötöző</Hungarian>

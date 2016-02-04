@@ -117,6 +117,7 @@
             <Polish>Stop</Polish>
             <Russian>Стоп</Russian>
             <Portuguese>Parar</Portuguese>
+            <Czech>Stop</Czech>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">
@@ -139,6 +140,7 @@
             <Polish>Zbiórka</Polish>
             <Russian>Собраться</Russian>
             <Portuguese>Reagrupar</Portuguese>
+            <Czech>Přeskupit</Czech>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -148,6 +150,7 @@
             <Polish>Naprzód</Polish>
             <Russian>Вперед</Russian>
             <Portuguese>Mover em frente</Portuguese>
+            <Czech>Kupředu</Czech>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
@@ -156,6 +159,7 @@
             <Polish>Atak</Polish>
             <Russian>Открыть огонь</Russian>
             <Portuguese>Engajar</Portuguese>
+            <Czech>Útok</Czech>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -165,6 +169,7 @@
             <Polish>Wskaż</Polish>
             <Russian>Показать направление</Russian>
             <Portuguese>Ponta</Portuguese>
+            <Czech>Ukázat</Czech>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -174,6 +179,7 @@
             <Polish>Wstrzymać</Polish>
             <Russian>Ждать</Russian>
             <Portuguese>Esperar</Portuguese>
+            <Czech>Čekej</Czech>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -183,6 +189,7 @@
             <Polish>Uwaga</Polish>
             <Russian>Внимание</Russian>
             <Portuguese>Aviso</Portuguese>
+            <Czech>Pozor</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
@@ -210,15 +217,19 @@
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
+            <Czech>Zobrazit posunky v interakčním menu</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
+            <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
+            <Czech>Pouze klávesové zkratky</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
+            <Czech>Klávesové zkratky + interakční menu</Czech>
         </Key>
     </Package>
 </Project>
