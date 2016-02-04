@@ -6,7 +6,6 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
- * 2: Show Hint <BOOL> (default: true)
  *
  * Return value:
  * Object loaded <BOOL>
@@ -19,8 +18,9 @@
 #include "script_component.hpp"
 
 params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]]];
+TRACE_2("params",_item,_vehicle);
 
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
+if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {TRACE_2("cannot load",_item,_vehicle); false};
 
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushBack _item;

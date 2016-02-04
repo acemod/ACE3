@@ -4,6 +4,7 @@
 
 ["LoadCargo", {
     (_this select 0) params ["_item","_vehicle"];
+    TRACE_2("LoadCargo EH",_item,_vehicle);
 
     private _loaded = [_item, _vehicle] call FUNC(loadItem);
 
@@ -21,9 +22,10 @@
 }] call EFUNC(common,addEventHandler);
 
 ["UnloadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
-
-    private _unloaded = [_item, _vehicle] call FUNC(unloadItem);
+    (_this select 0) params ["_item","_vehicle", ["_unloader", objNull]];
+    TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
+    
+    private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
 
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
