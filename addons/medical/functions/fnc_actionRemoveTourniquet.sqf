@@ -38,17 +38,18 @@ _caller addItem "ACE_tourniquet";
 
 //Handle all injected medications now that blood is flowing:
 private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
-private _removed = [];
+private _updatedArray = false;
 TRACE_2("meds",_part,_delayedMedications);
 {
     _x params ["", "", "_medPartNum"];
     if (_part == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
         ["medical_advMedication", [_target], _x] call EFUNC(common,targetEvent);
-        _removed pushBack _x;
+        _delayedMedications set [_forEachIndex, -1];
+        _updatedArray = true;
     };
 } forEach _delayedMedications;
-if ((count _removed) > 0) then {
-    _delayedMedications = _delayedMedications - _removed;
+if (_updatedArray) then {
+    _delayedMedications = _delayedMedications - [-1];
     _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
 };
