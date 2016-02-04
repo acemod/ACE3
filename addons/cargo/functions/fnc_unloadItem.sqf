@@ -56,7 +56,7 @@ private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
-    detach _item;
+    //detach _item;
     _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
     ["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
 } else {
