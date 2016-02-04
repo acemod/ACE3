@@ -15,8 +15,8 @@
 
 params ["_unit"];
 
-if (_unit getVariable [QGVAR(isDigging), false]) then {
+if (_unit getVariable [QGVAR(isPlacing), false]) then {
     if !("ACE_EntrenchingTool" in items _unit) then {
-        [_unit] call FUNC(digCancel);
+        [_unit] call FUNC(placeCancel);
     };
 };

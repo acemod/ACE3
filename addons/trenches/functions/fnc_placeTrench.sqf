@@ -42,12 +42,12 @@ GVAR(digPFH) = [{
 
     // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
-        [_unit] call FUNC(digCancel);
+        [_unit] call FUNC(placeCancel);
     };
 
     // Cancel if the place is no longer suitable
     if !([_unit, GVAR(trenchType)] call FUNC(canDigTrench)) exitWith {
-        [_unit] call FUNC(digCancel);
+        [_unit] call FUNC(placeCancel);
     };
 
     // Update trench position
@@ -92,13 +92,13 @@ GVAR(digPFH) = [{
 _unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
     {GVAR(digPFH) != -1},
-    {[_this select 0] call FUNC(digConfirm)}
+    {[_this select 0] call FUNC(placeConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(Cancel), [
     _unit, "zoomtemp",
     {GVAR(digPFH) != -1},
-    {[_this select 0] call FUNC(digCancel)}
+    {[_this select 0] call FUNC(placeCancel)}
 ] call EFUNC(common,addActionEventHandler)];
 
-_unit setVariable [QGVAR(isDigging), true, true];
+_unit setVariable [QGVAR(isPlacing), true, true];

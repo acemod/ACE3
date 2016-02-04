@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_digCancel
+ * [ACE_player] call ace_sandbag_fnc_placeCancel
  *
  * Public: No
  */
@@ -33,4 +33,4 @@ call EFUNC(interaction,hideMouseHint);
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
 [_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
-_unit setVariable [QGVAR(isDigging), false, true];
+_unit setVariable [QGVAR(isPlacing), false, true];

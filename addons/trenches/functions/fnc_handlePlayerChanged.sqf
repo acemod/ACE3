@@ -15,10 +15,10 @@
 
 params ["_newPlayer", "_oldPlayer"];
 
-if (_newPlayer getVariable [QGVAR(isDigging), false]) then {
-    [_newPlayer] call FUNC(digCancel);
+if (_newPlayer getVariable [QGVAR(isPlacing), false]) then {
+    [_newPlayer] call FUNC(placeCancel);
 };
 
-if (_oldPlayer getVariable [QGVAR(isDigging), false]) then {
-    [_oldPlayer] call FUNC(digCancel);
+if (_oldPlayer getVariable [QGVAR(isPlacing), false]) then {
+    [_oldPlayer] call FUNC(placeCancel);
 };

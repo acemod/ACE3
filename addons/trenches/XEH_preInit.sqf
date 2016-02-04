@@ -3,14 +3,14 @@
 ADDON = false;
 
 PREP(canDigTrench);
-PREP(digCancel);
-PREP(digConfirm);
 PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
 PREP(handlePlayerInventoryChanged);
 PREP(handleScrollWheel);
 PREP(handleUnconscious);
+PREP(placeCancel);
+PREP(placeConfirm);
 PREP(placeTrench);
 
 // Trench types

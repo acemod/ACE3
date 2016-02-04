@@ -14,6 +14,6 @@
 
 params ["_unit"];
 
-if (_unit getVariable [QGVAR(isDigging), false]) then {
-    [_unit] call FUNC(digCancel);
+if (_unit getVariable [QGVAR(isPlacing), false]) then {
+    [_unit] call FUNC(placeCancel);
 };
