@@ -35,8 +35,8 @@ _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(
 _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL;}];
 
 [{
-    private["_virtualPos", "_virtualPosASL", "_lineInterection"];
-    params ["_args","_pfID"];
+    private ["_virtualPos", "_virtualPosASL", "_lineInterection"];
+    params ["_args", "_pfID"];
     _args params ["_unit", "_target", "_nozzle", "_actionID"];
 
     _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
