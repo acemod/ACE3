@@ -60,6 +60,7 @@ Event Name | Description | Passed Parameter(s) | Locality
 ### 2.1 Disabling cargo for a mission object
 
 To disable cargo for a mission object use:
+
 ```cpp
 this setVariable ["ace_cargo_size", -1];
 ```

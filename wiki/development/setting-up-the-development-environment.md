@@ -47,14 +47,14 @@ First, to set up the links, create `z` folders both in your Arma 3 directory and
 
 Windows 8:
 
-```
+```sh
 mklink /D /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /D /J "P:\z\ace" "[location of the ACE3 project]"
 ```
 
 Windows 7 and Vista:
 
-```
+```sh
 mklink /D "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
 mklink /D "P:\z\ace" "[location of the ACE3 project]"
 ```
@@ -70,7 +70,7 @@ This also means that you cannot distribute this build to others.
 
 To start the game using this build, you can use the following modline:
 
-```
+```sh
 -mod=@cba_a3;z\ace
 ```
 

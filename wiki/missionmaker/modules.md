@@ -8,6 +8,7 @@ parent: wiki
 ---
 
 ## 1. ACE3
+
 ### 1.1 Advanced Ballistics
 *Part of: ace_advanced_ballistics*
 
@@ -17,16 +18,16 @@ This module allows enabling and configuring advanced ballistic simulations.
 
 Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
-Advanced Ballistics | Boolean | Enables advanced ballistics. | No
-Enabled For Snipers | Boolean | Enables advanced ballistics for non local snipers (when using high power optics). | Yes
-Enabled For Group Members | Boolean | Enables advanced ballistics for non local group members.| No
-Enabled For Everyone | Boolean | Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer). | No
-Disabled In FullAuto Mode | Boolean | Disables the advanced ballistics during full auto fire. | No
+Advanced Ballistics | Boolean | Enables Advanced Ballistics. | No
+Enabled For Snipers | Boolean | Enables Advanced Ballistics for non local snipers (when using high power optics). | Yes
+Enabled For Group Members | Boolean | Enables Advanced Ballistics for non local group members.| No
+Enabled For Everyone | Boolean | Enables Advanced Ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer). | No
+Disabled In FullAuto Mode | Boolean | Disables the Advanced Ballistics during full auto fire. | No
 Enable Ammo Temperature Simulation | Boolean | Muzzle velocity varies with ammo temperature. | Yes
 Enable Barrel Length Simulation | Boolean | Muzzle velocity varies with barrel length. | Yes
 Enable Bullet Trace Effect | Boolean | Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics). | Yes
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.00
-Simulation Radius | Number | Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles. | 3000
+Simulation Radius | Number | Defines the radius around the player (in meters) at which Advanced Ballistics are applied to projectiles. | 3000
 
 ### 1.2 Allow Config Export
 *Part of: ace_Optionmenu*
@@ -271,7 +272,7 @@ Vision modes | Option | Vision modes that can be used. | All
 ### 1.21 SwitchUnits System
 *Part of: ace_switchunits*
 
-The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map.
+The [SwitchUnits System](./mission-tools.html#ace-switchunits) enables players to control certain AI units on the map.
 
 **Settings:**
 
@@ -287,7 +288,7 @@ Safe Zone Radius | Number | The safe zone around players from a different team (
 ### 1.22 Vehicle Lock
 *Part of: ace_vehiclelock*
 
-These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
+These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Class names Wiki](http://ace3mod.com/wiki/missionmaker/class-names.html#vehicle-lock).
 
 #### 1.22.1 Vehicle Key Assign
 Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
@@ -344,24 +345,24 @@ Update Interval | Number | Defines the interval (seconds) between weather update
 ### 1.25 Wind Deflection
 *Part of: ace_winddeflection*
 
-This module allows you to define when wind deflection is active.
+This module allows you to define when Wind Deflection is active.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:
+    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:</p>
     <ul>
-  <li>Only wind deflection</li>
-  <li>Only advanced ballistics</li>
-  <li>Combined wind deflection + advanced ballistics</li>
-</ul></p>
+        <li>Only Wind Deflection</li>
+        <li>Only Advanced Ballistics</li>
+        <li>Combined Wind Deflection + Advanced Ballistics</li>
+    </ul>
 </div>
 
 **Settings:**
 
 Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
-Wind Deflection | Boolean | Enables wind deflection. | Yes
-Vehicle Enabled | Boolean | Enables wind deflection for static/vehicle gunners. | Yes
+Wind Deflection | Boolean | Enables Wind Deflection. | Yes
+Vehicle Enabled | Boolean | Enables Wind Deflection for static/vehicle gunners. | Yes
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.05
 Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
@@ -382,7 +383,8 @@ Reveal Mines | Option | Reveal mines to allies and place map markers. | "Disable
 
 
 ## 2. ACE Logistics
-### 2.1 Adds Spare Parts
+
+### 2.1 Add Spare Parts
 *part of ace_repair*
 
 Add spare parts to one or multiple objects.
@@ -466,7 +468,7 @@ Wheel repair requirements | Option | Items required to remove / replace wheels. 
 
 ### 3.1 Advanced Medical Settings
 
-This module allows you to change the default Advanced Medical Settings, when [2.1 Medical Settings](#2.1-medical-settings) is set to "Advanced".
+This module allows you to change the default Advanced Medical Settings, when [3.3 Medical Settings](#medical-settings) is set to "Advanced".
 
 **Settings:**
 

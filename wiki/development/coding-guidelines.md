@@ -11,6 +11,7 @@ order: 1
 ## 1. Naming Conventions
 
 ### 1.1. Variable Names
+
 #### 1.1.1. Global Variable naming
 All global variables must start with the ACE prefix followed by the component, separated by underscores. Global variables may not contain the fnc_ prefix if the value is not callable code.
 
@@ -46,7 +47,8 @@ Config files will be split up into different header files, each with the name of
 Example:
     #include "ACE_Settings.hpp"
 And in `ACE_Settings.hpp`:
-```
+
+```cpp
 class ACE_Settings {
     // Content
 };
@@ -67,11 +69,11 @@ The family of `GVAR` macro's define global variable strings or constants for use
 
 | Macros |  Expands to |
 | -------|---------|
-| `GVAR(face)` | ace_balls_face |
+|`GVAR(face)` | ace_balls_face |
 |`QGVAR(face)` | "ace_balls_face" |
-| `EGVAR(balls,face)` | ace_balls_face |
-| `EGVAR(leg,face)` | ace_leg_face |
-| `QEGVAR(leg,face)` | "ace_leg_face" |
+|`EGVAR(balls,face)` | ace_balls_face |
+|`EGVAR(leg,face)` | ace_leg_face |
+|`QEGVAR(leg,face)` | "ace_leg_face" |
 
 There also exists the FUNC family of Macros:
 
@@ -104,7 +106,7 @@ These macros will call these functions with the appropriate wrappers and enable 
 
 [CBA script_macros_common.hpp](https://gist.github.com/commy2/9ed6cc73fbe6a2b3f4e1)
 
-* `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the QUOTE() macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
+`QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the QUOTE() macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
 
 #### 2.2.1. setVariable, getVariable family macros
 
@@ -120,24 +122,25 @@ These macros will call these functions with the appropriate wrappers and enable 
 #### 2.2.2. STRING family macros
 
 Note that you need the strings in module stringtable.xml in the correct format
-`STR_ACE_<module>_<string>`</br>
-Example:</br>
-`STR_Balls_Banana`</br>
+`STR_ACE_<module>_<string>`
+
+Example:
+`STR_Balls_Banana`
 
 Script strings:
 
 | Macro  |  Expands to |
 | -------|---------|
-| `LSTRING(banana)` |  "STR_ACE_balls_banana"|
-| `ELSTRING(balls,banana)` | "STR_ACE_balls_banana"|
+|`LSTRING(banana)` |  "STR_ACE_balls_banana"|
+|`ELSTRING(balls,banana)` | "STR_ACE_balls_banana"|
 
 
 Config Strings (require `$` as first character):
 
 | Macro  |  Expands to |
 | -------|---------|
-| `CSTRING(banana)` |  "$STR_ACE_balls_banana" |
-| `ECSTRING(balls,banana)` | "$STR_ACE_balls_banana" |
+|`CSTRING(banana)` |  "$STR_ACE_balls_banana" |
+|`ECSTRING(balls,banana)` | "$STR_ACE_balls_banana" |
 
 
 ## 3. Functions
@@ -182,6 +185,7 @@ This ensures every function starts of in an uniform way and enforces function do
 All Global Variables are defined in the XEH_preInit.sqf file of the component they will be used in with an initial default value.
 
 Exceptions:
+
 * Dynamically generated global variables
 * Variables that do not origin from he ACE project, such as BI global variables or third party such as CBA.
 
@@ -280,9 +284,9 @@ Inline comments should use `//`. Usage of `/* */` is allowed for larger comment 
 Example:
 
 ```cpp
-//// Comment   < incorrect
-// Comment     < correct
-/* Comment */  < correct
+//// Comment   // < incorrect
+// Comment     // < correct
+/* Comment */  // < correct
 ```
 
 ### 5.4. Comments in code
@@ -360,6 +364,7 @@ if (_value) then {};
 There should be no magic numbers. Any magic number should be put in a define either on top of the .sqf file (below the header), or in the script_component.hpp file in the root directory of the component (recommended) in case it is used in multiple locations.
 
 Magic numbers are any of the following:
+
 * A constant numerical or text value used to identify a file format or protocol
 * Distinctive unique values that are unlikely to be mistaken for other meanings
 * Unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants
@@ -375,9 +380,9 @@ If a function returns error information, then that error information will be tes
 There shall be no unreachable code.
 
 ### 6.3. Function Parameters
-Parameters of functions must be retreived through the usage of the param or params commands. If the function is part of the public API, parameters must be checked on allowed data types and values through the usage of the param and params commands.
+Parameters of functions must be retrieved through the usage of the param or params commands. If the function is part of the public API, parameters must be checked on allowed data types and values through the usage of the param and params commands.
 
-* Usage of the CBA Macro `PARAM_x` or `BIS_fnc_Param` is deprecated and not allowed within the ACE project unless very specific reasons allow no other alternative.
+Usage of the CBA Macro `PARAM_x` or `BIS_fnc_Param` is deprecated and not allowed within the ACE project unless very specific reasons allow no other alternative.
 
 ### 6.4. Return Values
 Functions and code blocks that specific a return a value must have a meaningfull return value.
@@ -488,7 +493,8 @@ Any piece of code that could/is used more than once, should be put in a function
 
 ### 7.1. Readability vs Performance
 This is a large open source project that will get many different maintainers in it's lifespan. When writing code, keep in mind that other developers also need to be able to understand your code. Balancing readability and performance of code is a non black and white subject. The rule of tumb is:
-* When improving performance of code that sacrifies readability (or visa-versa), first see if the design of the implementation is done in the best possible way.
+
+* When improving performance of code that sacrifices readability (or visa-versa), first see if the design of the implementation is done in the best possible way.
 * Document that change with the reasoning in the code.
 
 ### 7.2. Scheduled vs Unscheduled

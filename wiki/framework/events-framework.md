@@ -168,7 +168,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ### 3.4 Example
 
-```cpp
+```js
 // Event handler added on a target machine
 ["tapShoulder", ace_example_onTapShoulder] call ace_common_fnc_addEventHandler;
 

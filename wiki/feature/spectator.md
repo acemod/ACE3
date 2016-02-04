@@ -22,7 +22,7 @@ With respawn template `"ace_spectator"` in effect players will enter spectator m
 
 An example description.ext file using the respawn template:
 
-```
+```js
 respawn = 3;
 respawnDelay = 180;
 respawnTemplates[] = {"ace_spectator"};
@@ -33,7 +33,8 @@ For groups using custom respawn frameworks - or for missions where you want fine
 
 `ace_spectator_fnc_setSpectator`
 
-```
+```js
+/*
 * Sets local client to the given spectator state (virtually)
 * To physically handle a spectator see ace_spectator_fnc_stageSpectator
 *
@@ -48,11 +49,13 @@ For groups using custom respawn frameworks - or for missions where you want fine
 *
 * Example:
 * [true] call ace_spectator_fnc_setSpectator
+*/
 ```
 
 `ace_spectator_fnc_stageSpectator`
 
-```
+```js
+/*
 * Sets target unit to the given spectator state (physically)
 * To virtually handle a spectator see ace_spectator_fnc_setSpectator
 *
@@ -68,6 +71,7 @@ For groups using custom respawn frameworks - or for missions where you want fine
 *
 * Example:
 * [player, false] call ace_spectator_fnc_stageSpectator
+*/
 ```
 
 ### 1.2 Spectatable Units
@@ -86,7 +90,8 @@ The unit filter determines which units will automatically be used to populate th
 
 In cases where more specific control is required function `ace_spectator_fnc_updateUnits` can be used to whitelist units from the filter or blacklist them from the list (on the local client):
 
-```
+```js
+/*
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>
  * 1: Use blacklist <BOOL> <OPTIONAL>
@@ -97,6 +102,7 @@ In cases where more specific control is required function `ace_spectator_fnc_upd
  * Example:
  * [allUnits,true] call ace_spectator_fnc_updateUnits
  *
+ */
 ```
 
 ### 1.3 Spectatable Sides
@@ -108,7 +114,8 @@ Spectatable sides can be considered another filter for the unit list to determin
 
 The side list is a list of sides *possible* to spectate. By default this is always `[west, east, resistance, civilian]` and does not change. To update the local client's side list the function `ace_spectator_fnc_updateSpectatableSides` can be used:
 
-```
+```js
+/*
  * Arguments:
  * 0: Sides to add <ARRAY>
  * 1: Sides to remove <ARRAY>
@@ -118,6 +125,7 @@ The side list is a list of sides *possible* to spectate. By default this is alwa
  *
  * Example:
  * [[west], [east,civilian]] call ace_spectator_fnc_updateSpectatableSides
+ */
 ```
 
 The side filter is then applied *on top* of this list to determine which sides are *truly* available to spectate. It's controlled by setting `ace_spectator_filterSides` and there are four possible options:
@@ -137,7 +145,8 @@ There are 3 possible camera modes:
 
 Mission makers can control the camera modes available to spectators via the setting `ace_spectator_restrictModes`. Function `ace_spectator_fnc_updateCameraModes` is also provided to alter the available modes (to the local player) as desired at any point in the mission:
 
-```
+```js
+/*
  * Possible camera modes are:
  *   - 0: Free
  *   - 1: Internal
@@ -152,6 +161,7 @@ Mission makers can control the camera modes available to spectators via the sett
  *
  * Example:
  * [[0], [1,2]] call ace_spectator_fnc_updateCameraModes
+ */
 ```
 
 ### 1.5 Vision Modes
@@ -165,7 +175,8 @@ Vision modes are only available in free camera mode. By default there are 4 avai
 
 Mission makers can control which of these vision modes are available to spectators via the setting `ace_spectator_restrictVisions`. However, there are actually a total of 10 possible vision modes and function `ace_spectator_fnc_updateVisionModes` can be used to alter which of them are available (to the local player) at any point in the mission:
 
-```
+```js
+/*
  * Possible vision modes are:
  *   - -2: Normal
  *   - -1: Night vision
@@ -187,6 +198,7 @@ Mission makers can control which of these vision modes are available to spectato
  *
  * Example:
  * [[0], [1,2]] call ace_spectator_fnc_updateVisionModes
+ */
 ```
 
 ### 1.6 Camera Attributes
@@ -204,7 +216,8 @@ The spectator camera has 8 manipulatable attributes:
 
 Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of these attributes at any point (including before spectator has ever opened):
 
-```
+```js
+/*
  * Arguments:
  * 0: Camera mode <NUMBER> <OPTIONAL>
  *   - 0: Free
@@ -227,6 +240,7 @@ Function `ace_spectator_fnc_setCameraAttributes` can be used to change any of th
  *
  * Example:
  * [1, objNull] call ace_spectator_fnc_setCameraAttributes
+ */
 ```
 
 ## 2. Usage
