@@ -27,7 +27,7 @@
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
             <German>Simuliere Kartenbeleuchtung auf Basis des Umgebungslichts sowie der mitgeführten Gegenstände?</German>
             <Polish>Symuluj oświetlenie mapy bazujące na oświetleniu otoczenia oraz przedmiotach gracza?</Polish>
-            <French>Calcul la luminosité de la carte en fonction des conditions de lumière</French>
+            <French>Calcul la luminosité de la carte en fonction des conditions de lumière ?</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
@@ -46,6 +46,7 @@
             <English>Add external glow to players who use flashlight on map?</English>
             <German>Kartenbeleuchtung mittels Taschenlampe durch Dritte erkennbar?</German>
             <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
+            <French>Ajouter un effet de lumière sur un joueur utilisant une lampe torche sur la carte ?</French>
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
@@ -69,7 +70,7 @@
             <German>Kamerawackeln beim Gehen?</German>
             <Czech>Umožnit třesení mapy za pochodu?</Czech>
             <Portuguese>Tremer o mapa enquanto caminha?</Portuguese>
-            <French>La carte tremble lors d'un déplacement?</French>
+            <French>La carte tremble lors d'un déplacement ?</French>
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
         </Key>
@@ -102,7 +103,7 @@
             <German>Zeige Mauszeiger-Koordinaten?</German>
             <Czech>Zobrazit souřadnice u kurzoru?</Czech>
             <Portuguese>Mostrar coordenadas no cursor?</Portuguese>
-            <French>Afficher les coordonnées sur le curseur?</French>
+            <French>Afficher les coordonnées sur le curseur ?</French>
             <Hungarian>Kurzor-koordináták mutatása?</Hungarian>
             <Russian>Показывать координаты курсора?</Russian>
         </Key>
@@ -113,7 +114,7 @@
             <German>Gitter-Koordinaten auf dem Mauszeiger anzeigen?</German>
             <Czech>Zobrazit souřadnice u kurzoru v mapě?</Czech>
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
-            <French>Affiche les coordonnées à coté du curseur?</French>
+            <French>Affiche les coordonnées à coté du curseur ?</French>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
         </Key>
@@ -179,7 +180,7 @@
             <German>Wie oft sollen die Markierungen aktualisiert werden (in Sekunden)</German>
             <Czech>Jak často budou značky aktualizovány (v sekundách)</Czech>
             <Portuguese>Frequência em que os marcadores devem ser atualizados (em segundos)</Portuguese>
-            <French>Tout les combien de temps les marqueurs doivent être rafraichit?</French>
+            <French>Tous les combien de temps les marqueurs doivent être rafraichis ?</French>
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
         </Key>
@@ -190,7 +191,7 @@
             <German>KI-Gruppen verstecken?</German>
             <Czech>Skrýt AI skupiny?</Czech>
             <Portuguese>Esconder grupos de IA?</Portuguese>
-            <French>Cacher les groupes IA?</French>
+            <French>Cacher les groupes IA ?</French>
             <Hungarian>AI csoportok elrejtése?</Hungarian>
             <Russian>Скрыть группы ботов?</Russian>
         </Key>
@@ -201,7 +202,7 @@
             <German>Verstecke Marker für "nur KI"-Gruppen?</German>
             <Czech>Skrýt značky pouze pro AI skupiny?</Czech>
             <Portuguese>Esconder marcadores que pertencem ao grupo de IA?</Portuguese>
-            <French>Cacher les marqueurs pour les groupes d'IA seulement?</French>
+            <French>Cacher les marqueurs pour les groupes d'IA seulement ?</French>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
         </Key>
@@ -220,6 +221,7 @@
             <English>Flashlights</English>
             <German>Taschenlampen</German>
             <Polish>Latarki</Polish>
+            <French>Lampes de poche</French>
             <Portuguese>Lanternas</Portuguese>
             <Russian>Фонари</Russian>
             <Czech>Svítilny</Czech>
@@ -230,6 +232,7 @@
             <German>NSG</German>
             <Polish>Noktowizja</Polish>
             <Portuguese>Óculos de Visão Noturna</Portuguese>
+            <French>Lunettes de vision nocturne</French>
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
@@ -239,6 +242,7 @@
             <German>Ein</German>
             <Polish>Włącz</Polish>
             <Portuguese>Ligado</Portuguese>
+            <French>Allumer</French>
             <Russian>Вкл.</Russian>
             <Czech>Zapnout</Czech>
             <Spanish>Encendido</Spanish>
@@ -248,6 +252,7 @@
             <German>Aus</German>
             <Polish>Wyłącz</Polish>
             <Portuguese>Desligado</Portuguese>
+            <French>Éteindre</French>
             <Russian>Выкл.</Russian>
             <Czech>Vypnout</Czech>
             <Spanish>Apagado</Spanish>
@@ -257,6 +262,7 @@
             <German>Erhöhe Helligkeit</German>
             <Polish>Zwiększ czułość</Polish>
             <Portuguese>Aumentar brilho</Portuguese>
+            <French>Augmenter la luminosité</French>
             <Russian>Увеличить яркость</Russian>
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
@@ -266,6 +272,7 @@
             <German>Veringere Helligkeit</German>
             <Polish>Zmniejsz czułość</Polish>
             <Portuguese>Diminuir brilho</Portuguese>
+            <French>Diminuer la luminosité</French>
             <Russian>Уменьшить яркость</Russian>
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
