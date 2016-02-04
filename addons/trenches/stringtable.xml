@@ -36,5 +36,8 @@
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>+Ctrl rotate</English>
         </Key>
+        <Key ID="STR_ACE_Trenches_DiggingTrench">
+            <English>Digging Trench</English>
+        </Key>
     </Package>
 </Project>

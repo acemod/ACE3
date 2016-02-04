@@ -84,7 +84,7 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit"];
     _unit setVariable [QGVAR(isDiggingId), -1, true];
 };
-[12.5, [_unit], _fnc_onFinish, _fnc_onFailure, "Digging trench..."] call EFUNC(common,progressBar);
+[12.5, [_unit], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call EFUNC(common,progressBar);
 
 // Schedule progressive raising of the trench
 private _fnc_setPlacing = {
