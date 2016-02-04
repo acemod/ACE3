@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgVehicles {
     class MyVehicle {
         // Dragging

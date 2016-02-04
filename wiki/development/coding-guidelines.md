@@ -195,7 +195,7 @@ Braces "{ }" which enclose a code block will have the first bracket placed behin
 
 **Yes:**
 
-```c++
+```cpp
 class Something: Or {
     class Other {
         foo = "bar";
@@ -205,7 +205,7 @@ class Something: Or {
 
 **No:**
 
-```c++
+```cpp
 class Something : Or
 {
     class Other
@@ -217,7 +217,7 @@ class Something : Or
 
 **Also no:**
 
-```c++
+```cpp
 class Something : Or {
     class Other {
         foo = "bar";
@@ -227,7 +227,7 @@ class Something : Or {
 
 When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
 
-```c++
+```cpp
 if (alive player) then {
     player setDamage 1;
 } else {
@@ -237,7 +237,7 @@ if (alive player) then {
 
 In cases where you , e.g, have a lot of one-liner classes, it is allowed to use something like this to save space:
 
-```c++
+```cpp
 class One {foo = 1;};
 class Two {foo = 2;};
 class Three {foo = 3;};
@@ -251,7 +251,8 @@ Putting the opening brace in it's own line wastes a lot of space, and keeping th
 Ever new scope should be on a new ident. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
 
 Good example:
-```
+
+```cpp
 call {
     call {
         if (/* condition */) then {
@@ -260,8 +261,10 @@ call {
     };
 };
 ```
+
 Bad Example:
-```
+
+```cpp
 call {
         call {
         if (/* condition */) then {
@@ -275,7 +278,8 @@ call {
 Inline comments should use `//`. Usage of `/* */` is allowed for larger comment blocks.
 
 Example:
-```
+
+```cpp
 //// Comment   < incorrect
 // Comment     < correct
 /* Comment */  < correct
@@ -287,7 +291,8 @@ All code should be documented by comments that describe what is being done. This
 Comments within the code should be used when they are describing a complex and critical section of code or if the subject code does something a certain way because of a specific reason. Uncessary comments in the code are not allowed.
 
 Good:
-```
+
+```js
 // find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
@@ -298,26 +303,31 @@ _highestLoss = -1;
     };
 } foreach _units;
 ```
+
 Good:
-```
+
+```js
 // Check if the unit is an engineer
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
-```
+
+```js
 // Get the engineer skill and check if it is above 1
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
-```
+
+```js
 // Get the variable myValue from the object
 _myValue = _obj getvariable [QGVAR(myValue), 0];
 ```
 
 Bad:
-```
+
+```js
 // Loop through all units to increase the myvalue variable
 {
     _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
@@ -326,17 +336,21 @@ Bad:
 
 ### 5.5. Brackets around code
 When making use of brackets “( )”, use as view as possible, unless doing so decreases readability of the code. Avoid statements such as:
-```
+
+```js
 if (!(_value)) then { };
 ```
+
 However the following is allowed:
-```
+
+```js
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements should always be wrapped around brackets.
 Example:
-```
+
+```js
 if (!_value) then {};
 if (_value) then {};
 ```
@@ -370,8 +384,9 @@ Functions and code blocks that specific a return a value must have a meaningfull
 
 ### 6.5. Private Variables
 All private variables shall be declared in a private array.
-```
-private [“_myVariable”];
+
+```js
+private ["_myVariable"];
 ```
 
 ### 6.6. Lines of Code
@@ -384,7 +399,8 @@ Declarations should be at the smallest feasible scope.
 Private variables will not be introduced until they can be initialized with meaningful values.
 
 Good:
-```
+
+```js
 _myVariable = 0;
 {
     _x params ["_value", "_amount"];
@@ -393,8 +409,10 @@ _myVariable = 0;
     };
 } forEach _array;
 ```
+
 Bad:
-```
+
+```js
 _myvariable = 0;
 if (_condition) then {
     _myVariable = 1;
@@ -402,8 +420,10 @@ if (_condition) then {
     _myvariable = 2;
 };
 ```
+
 Good:
-```
+
+```js
 _myvariable = [1, 2] select _condition;
 ```
 
@@ -417,16 +437,21 @@ The increment expression in a for loop will perform no action other than to chan
 When using getvariable, there should either be a default value  given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
 
 Bad:
-```
+
+```js
 _return = obj getvariable "varName";
 if (!isnil "_return") then {_return = 0 };
 ```
+
 Good:
-```
+
+```js
 _return = obj getvariable ["varName", 0];
 ```
+
 Good:
-```
+
+```js
 _return = obj getvariable "varName";
 if (!isnil "_return") exitwith {};
 ```
@@ -444,7 +469,8 @@ Code that is not used (commented out) shall be deleted.
 All global variables that are intended to be used as a constant shall be written in all caps with underscores between the words, with the exception of the prefix. This should be done through the usage of the `GVAR` macro family.
 
 Good:
-```
+
+```js
 ACE_Common_CATEGORY_NAME = 1;
 GVAR(CATEGORY_NAME) = 1
 ```
@@ -500,7 +526,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```c++
+```js
 _hash = HASHCREATE;
 HASH_SET(_hash, "key", "value");
 if(HASH_HASKEY(_hash, "key")) then {
@@ -526,7 +552,7 @@ A description of the above macros is below.
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
-```c++
+```js
 _defaultKeys = ["key1","key2","key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
@@ -574,18 +600,24 @@ Hashes and hashlists are implemented with SQF arrays, and as such they are passe
 When adding new elements to an array, pushback shall be used instead of the binary addition or set. When adding multiple elements to an array `append` may be used instead of pushback.
 
 Good:
-```
+
+```js
 _a pushback _value;
 ```
+
 Also good:
-```
+
+```js
 _a append [1,2,3];
 ```
+
 Bad:
-```
+
+```js
 _a set [ count _a, _value];
 _a = a + _[value];
 ```
+
 When adding an new element to a dynamic location in an array or when the index is precaluclated, set may be used.
 
 When adding multiple elements to an array, the binary addition may be used for the entire addition.
@@ -609,22 +641,26 @@ When checking if an array is empty, you can use both count or isEqualTo.
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinited while loops are not allowed.
 
 Good:
-```
+
+```js
 _original = _obj getvariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
     _original = [_original, _weaponClass] call FUNC(getNewValue);
 }
 ```
+
 Bad:
-```
+
+```js
 while {true} do {
     // anything
 };
 ```
 
-### 8.8. waituntil
-The waituntil command shall not be used. Instead, make use of a per frame handler:
-```
+### 8.8. waitUntil
+The waitUntil command shall not be used. Instead, make use of a per frame handler:
+
+```js
 [{
     params ["_args", "_id"];
     _args params ["_unit"];

@@ -16,7 +16,7 @@ parent: wiki
 
 ### 1.1 Setting the magazine
 
-```c++
+```cpp
 class CfgMagazines {
     class CA_Magazine;
     class banana_satchel_remote_mag: CA_Magazine {
@@ -40,7 +40,7 @@ class CfgMagazines {
 
 ### 1.2 Setting the ammo
 
-```c++
+```cpp
 class CfgAmmo {
     class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
@@ -55,7 +55,7 @@ class CfgAmmo {
 
 ### 1.3 Adding the place item
 
-```c++
+```cpp
 class CfgVehicles {
     class ACE_Explosives_Place;
     class banana_satchel_place: ACE_Explosives_Place {
@@ -73,7 +73,7 @@ class CfgVehicles {
 
 _Pretty much the same as Explosives except that we inherit from_ `ATMine_Range_Mag` _instead of_ `CA_Magazine`.
 
-```c++
+```cpp
 class CfgMagazines {
     class ATMine_Range_Mag;
     class BananaMine_Range_Mag: ATMine_Range_Mag {
@@ -97,7 +97,7 @@ Directional mines inherit from `DirectionalBombBase`.
 
 ## 3. Adding your own detonators
 
-```c++
+```cpp
 class CfgWeapons {
     class ACE_ItemCore;  // ACE3 base item class
     class ACE_Clacker;  // Clacker base class

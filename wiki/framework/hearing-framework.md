@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgWeapons {
     class MyHelmet {
          ace_hearing_protection = 0.80;  // Protection against deafening (0 to 1, higher means more protection)

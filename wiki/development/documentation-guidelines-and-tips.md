@@ -53,7 +53,7 @@ Short description of sub-feature 2.
 - A line between each entry like above.
 - Use `ACE3` instead of `ACE 3`.
 - Remove each entry that is not used.
-- Don't forget to say what you're going to work on in #documentation in slack or [this topic] (https://github.com/acemod/ACE3/issues/1166)
+- Don't forget to say what you're going to work on in #documentation in slack or [this topic](https://github.com/acemod/ACE3/issues/1166)
 - Keybinds in ``` <kbd>thoses thingies</kbd>  ```
 - Keywords in ``` `thoses thingies`  ```
 - Capitals at the start of a sentence and `.`at the end.
@@ -61,5 +61,5 @@ Short description of sub-feature 2.
 
 # Tips
 
-- Use http://dillinger.io/ to keep your sanity
-- [Markdown cheat sheet] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- Use [http://dillinger.io/](http://dillinger.io/) to keep your sanity
+- [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

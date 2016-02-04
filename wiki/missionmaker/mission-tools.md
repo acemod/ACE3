@@ -23,7 +23,7 @@ Using the Interaction Menu on a rallypoint offers the ability to teleport from o
 
 If you want to change the texture of the flag use this line:
 
-```c++
+```cpp
 this setFlagTexture 'path\to\my\texture\my_awesome_clan_logo.paa';
 ```
 
@@ -38,7 +38,7 @@ All units synced to the ["Rallypoint System" module](./modules.html#1.14-rallypo
 
 To enable other units to move them add this to the unit's initialization code:
 
-```c++
+```cpp
 _unit setVariable ["ACE_canMoveRallypoint", true, true];
 ```
 
@@ -53,7 +53,7 @@ In its current form you're able to switch to infantry (vehicles, etc. are planne
 
 To enable a player to control AI add the following to its init line:
 
-```c++
+```cpp
 this setVariable ["ACE_CanSwitchUnits", true];
 ```
 Once this player spawns, all controllable AI will be marked on his map and he'll be able to click on the map to switch to this unit. The initial unit will be prone to damage, but has no equipment and can't run. So it would be wise to hide or move this unit far from other players.

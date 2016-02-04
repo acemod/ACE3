@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgWeapons {
   class MyRifle {
       class MyGL: UGL_F {

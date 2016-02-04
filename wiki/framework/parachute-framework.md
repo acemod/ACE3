@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Adding reserve parachute to existing parachute
 
-```c++
+```cpp
 class CfgVehicles {
     class BananaParachute {
         ace_hasReserveParachute = 1;  // Add reserve parachute (1-enabled, 0-disabled)

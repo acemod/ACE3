@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgWeapons {
     class MyNightVision {
         displayName = "Banana NVGs";  // Name displayed in the inventory
