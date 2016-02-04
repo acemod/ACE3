@@ -187,13 +187,16 @@
             <English>Used in Mk6 mortar</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
-            <English>[ACE] 82mm HE Rounds</English>
+            <English>[ACE] 82mm HE Rounds Box</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
-            <English>[ACE] 82mm Smoke Rounds</English>
+            <English>[ACE] 82mm Smoke Rounds Box</English>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
-            <English>[ACE] 82mm Illumination Rounds</English>
+            <English>[ACE] 82mm Illumination Rounds Box</English>
+        </Key>
+        <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
+            <English>[ACE] 82mm Default Loadout Box</English>
         </Key>
     </Package>
 </Project>

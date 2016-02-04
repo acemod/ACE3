@@ -140,7 +140,7 @@ class CfgVehicles {
         displayName = CSTRING(HEBox_DisplayName);
         author = ECSTRING(common,ACETeam);
         transportMaxWeapons = 4;
-        transportMaxmagazines = 8;
+        transportMaxMagazines = 8;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,8);
         };
@@ -156,6 +156,15 @@ class CfgVehicles {
     class ACE_Box_82mm_Mo_Illum: ACE_Box_82mm_Mo_HE {
         displayName = CSTRING(IllumBox_DisplayName);
         class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,8);
+        };
+    };
+    class ACE_Box_82mm_Mo_Combo: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(ComboBox_DisplayName);
+        transportMaxMagazines = 48;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,32);
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,8);
         };
     };
