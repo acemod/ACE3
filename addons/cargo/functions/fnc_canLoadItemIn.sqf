@@ -18,7 +18,7 @@
 
 params [["_item", "", [objNull,""]], "_vehicle"];
 
-if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}) exitWith {false};
+if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}) exitWith {TRACE_1("vehicle not stable",_vehicle); false};
 
 private _itemSize = [_item] call FUNC(getSizeItem);
 private _validItem = false;
