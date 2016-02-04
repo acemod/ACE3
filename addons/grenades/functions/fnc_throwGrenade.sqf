@@ -37,7 +37,7 @@ if (local _unit) then {
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call EFUNC(common,waitAndExecute);
     };
 };
 
