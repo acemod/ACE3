@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Check if unit can drag the object. Doesn't check weight.
  *
  * Arguments:
@@ -10,14 +9,14 @@
  * Return Value:
  * Can the unit drag the object? <BOOL>
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_canDrag;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target"];
-
-_unit = _this select 0;
-_target = _this select 1;
+params ["_unit", "_target"];
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
