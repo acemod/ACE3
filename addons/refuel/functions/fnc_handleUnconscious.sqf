@@ -16,14 +16,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_isUnconscious"];
+params [["_unit", objNull, [objNull]], ["_isUnconscious", false, [false]]];
 
 if (!local _unit || {!_isUnconscious}) exitWith {};
 
-private "_nozzle";
-
 [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if !(isNull _nozzle) then {
     [_unit, _nozzle] call FUNC(dropNozzle);
 };

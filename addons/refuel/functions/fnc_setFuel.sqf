@@ -15,8 +15,8 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_maxFuel"];
-params ["_target", "_fuel"];
+
+params [["_target", objNull, [objNull]], ["_fuel", nil, [0]]];
 
 if (isNull _target ||
     {isNil "_fuel"}) exitWith {};

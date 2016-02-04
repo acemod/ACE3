@@ -17,11 +17,11 @@
 #include "script_component.hpp"
 
 params ["_player", "_object"];
+TRACE_2("params",_player,_object);
 
 if (!([_player, _object, []] call EFUNC(common,canInteractWith))) exitWith {false};
 
-private ["_nearestVehicle"];
-_nearestVehicle = [_player] call FUNC(findNearestVehicle);
+private _nearestVehicle = [_player] call FUNC(findNearestVehicle);
 
 if (_nearestVehicle isKindOf "Cargo_Base_F" || isNull _nearestVehicle) then {
     {

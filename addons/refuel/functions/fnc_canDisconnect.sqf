@@ -16,8 +16,7 @@
  */
 #include "script_component.hpp"
 
-private ["_sink"];
-params ["_unit", "_nozzle"];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 if (isNull _unit ||
     {isNull _nozzle} ||
@@ -25,5 +24,5 @@ if (isNull _unit ||
     {!local _unit} ||
     {(_nozzle distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
-_sink = _nozzle getVariable [QGVAR(sink), objNull];
+private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 !((isNull _sink) || {_nozzle getVariable [QGVAR(isRefueling), false]})

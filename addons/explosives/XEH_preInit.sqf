@@ -26,6 +26,7 @@ PREP(addTransmitterActions);
 PREP(addTriggerActions);
 PREP(canDefuse);
 PREP(canDetonate);
+PREP(connectExplosive);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
 PREP(detonateExplosiveAll);

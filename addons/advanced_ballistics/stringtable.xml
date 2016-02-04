@@ -10,7 +10,7 @@
             <Spanish>Mostrar información del viento</Spanish>
             <German>Windinformationen anzeigen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
-            <Czech>Zobrazit informace o větru</Czech>
+            <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar Informação do Vento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ProtractorKey">
@@ -74,7 +74,7 @@
             <Spanish>Activa la balística avanzada para francotiradores no locales (cuando se usa una mira telescópica)</Spanish>
             <Polish>Aktywuje zaawansowaną balistykę dla nielokalnych snajperów (kiedy używają optyki)</Polish>
             <German>Aktiviert die erweiterte Ballistik für nicht lokale Scharfschützen (bei Benutzung von Optiken mit starker Vergrößerung)</German>
-            <Czech>Aktivuje pokročilou balistiku pro nelokální odstřelovače (když používá výkonnou optiku)</Czech>
+            <Czech>Aktivuje pokročilou balistiku pro nelokální odstřelovače (při použití optiky)</Czech>
             <Portuguese>Ativa balística avançada para caçadores não locais (quando usando miras telescópicas)</Portuguese>
             <French>Active la balistique avancée pour les snipers non locaux (en utilisant les optiques avancées)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi mesterlövészeknek (nagy-teljesítményű optika használatakor)</Hungarian>
@@ -118,7 +118,7 @@
             <Spanish>Activada la balística avanzada para todos los jugadores no locales (activarlo puede degradar el rendimiento durante grandes tiroteos en multijugador).</Spanish>
             <Polish>Aktywuje zaawansowaną balistykę dla wszystkich nielokalnych graczy (aktywacja tej opcji może spodowować spory spadek wydajności podczas ciężkiej wymiany ognia)</Polish>
             <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
-            <Czech>Aktivovat pokročilou balistiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles snímu za sekundu během těžké přestřelky v multiplayeru)</Czech>
+            <Czech>Aktivuje pokročilou balistiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles FPS během velké přestřelky v multiplayeru)</Czech>
             <Portuguese>Ativa balística avançada para todos os jogadores não locais (ativando isso pode degradar a performance durante troca de tiros intensas no multiplayer)</Portuguese>
             <French>Active la balistique avancé pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát az összes nem-helyi játékosnak (ez a funkció leronthatja a teljesítményt intenzív többjátékos tűzharcok alatt)</Hungarian>

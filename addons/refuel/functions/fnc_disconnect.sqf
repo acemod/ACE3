@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_sink"];
-params ["_unit", "_nozzle"];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
-_sink = _nozzle getVariable [QGVAR(sink), objNull];
+private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 if (isNull _sink) exitWith {};
 
 _sink setVariable [QGVAR(nozzle), objNull, true];

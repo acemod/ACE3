@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Start the carrying process.
  *
  * Arguments:
@@ -10,22 +9,24 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_startCarry;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_weight", "_timer"];
-
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // check weight
-_weight = [_target] call FUNC(getWeight);
+private _weight = [_target] call FUNC(getWeight);
 
 if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-_timer = ACE_time + 5;
+private _timer = ACE_time + 5;
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
