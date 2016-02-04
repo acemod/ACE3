@@ -17,15 +17,15 @@
 #include "script_component.hpp"
 
 params ["_item", "_vehicle"];
-private ["_loaded", "_itemClass", "_validVehiclestate", "_emptyPos"];
+TRACE_2("params",_item,_vehicle);
 
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 if !(_item in _loaded) exitWith {false};
 
-_itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
-_validVehiclestate = true;
-_emptyPos = [];
+private _validVehiclestate = true;
+private _emptyPos = [];
 if (_vehicle isKindOf "Ship" ) then {
     if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
     _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, _itemClass]); // TODO: if spot is underwater pick another spot.

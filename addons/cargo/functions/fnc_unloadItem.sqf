@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 params ["_item", "_vehicle"];
-private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];
+TRACE_2("params",_item,_vehicle);
 
 if !([_item, _vehicle] call FUNC(canUnloadItem)) exitWith {
     false
@@ -25,8 +25,8 @@ if !([_item, _vehicle] call FUNC(canUnloadItem)) exitWith {
 
 _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
-_validVehiclestate = true;
-_emptyPos = [];
+private _validVehiclestate = true;
+private _emptyPos = [];
 if (_vehicle isKindOf "Ship" ) then {
     if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
     TRACE_1("SHIP Ground Check", getPosATL _vehicle );
@@ -45,16 +45,14 @@ if (_vehicle isKindOf "Ship" ) then {
 };
 
 TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitWith {false};
+if ((!_validVehiclestate) || {_emptyPos isEqualTo []}) exitWith {false};
 
-if (count _emptyPos == 0) exitWith {false};
-
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded deleteAt (_loaded find _item);
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
-_space = [_vehicle] call FUNC(getCargoSpaceLeft);
-_itemSize = [_item] call FUNC(getSizeItem);
+private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
+private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
