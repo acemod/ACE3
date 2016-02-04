@@ -7,6 +7,7 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+GVAR(trenchId) = 0;
 GVAR(trench) = objNull;
 GVAR(digPFH) = -1;
 GVAR(digDirection) = 0;
