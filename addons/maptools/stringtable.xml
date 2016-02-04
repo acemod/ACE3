@@ -46,7 +46,7 @@
             <Portuguese>Ocultar Ferramenta de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök elrejtése</Hungarian>
             <Polish>Ukryj narzędzia nawigacyjne</Polish>
-            <Czech>Schovat pomůcku k mapě</Czech>
+            <Czech>Schovat pomůcky k mapě</Czech>
             <Russian>Скрыть инструменты</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
@@ -58,7 +58,7 @@
             <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
             <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
-            <Czech>Zobrazit normální pomůcku k mapě</Czech>
+            <Czech>Zobrazit pomůcku k mapě (Velkou)</Czech>
             <Russian>Показать инструменты (средн. размер)</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
@@ -70,7 +70,7 @@
             <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
             <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
-            <Czech>Zobrazit malou pomůcku k mapě</Czech>
+            <Czech>Zobrazit pomůcku k mapě (Malou)</Czech>
             <Russian>Показать инструменты (малый размер)</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">

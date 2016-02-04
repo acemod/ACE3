@@ -14,28 +14,35 @@
             <Russian>Взрывчатка</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Place">
-            <English>Place &gt;&gt;</English>
-            <German>Platzieren &gt;&gt;</German>
-            <Spanish>Colocar &gt;&gt;</Spanish>
-            <Polish>Umieść &gt;&gt;</Polish>
-            <French>Placer &gt;&gt;</French>
-            <Czech>Položit &gt;&gt;</Czech>
-            <Italian>Piazza &gt;&gt;</Italian>
-            <Hungarian>Elhelyezés &gt;&gt;</Hungarian>
-            <Portuguese>Colocar &gt;&gt;</Portuguese>
-            <Russian>Установить &gt;&gt;</Russian>
+            <English>Place</English>
+            <German>Platzieren</German>
+            <Spanish>Colocar</Spanish>
+            <Polish>Umieść</Polish>
+            <French>Placer</French>
+            <Czech>Položit</Czech>
+            <Italian>Piazza</Italian>
+            <Hungarian>Elhelyezés</Hungarian>
+            <Portuguese>Colocar</Portuguese>
+            <Russian>Установить</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Detonate">
-            <English>Detonate &gt;&gt;</English>
-            <German>Zünden &gt;&gt;</German>
-            <Spanish>Detonar &gt;&gt;</Spanish>
-            <Polish>Detonuj &gt;&gt;</Polish>
-            <French>Mise à feu &gt;&gt;</French>
-            <Czech>Odpálit &gt;&gt;</Czech>
-            <Italian>Detona &gt;&gt;</Italian>
-            <Hungarian>Robbantás &gt;&gt;</Hungarian>
-            <Portuguese>Detonar &gt;&gt;</Portuguese>
-            <Russian>Подрыв &gt;&gt;</Russian>
+            <English>Detonate</English>
+            <German>Zünden</German>
+            <Spanish>Detonar</Spanish>
+            <Polish>Detonuj</Polish>
+            <French>Mise à feu</French>
+            <Czech>Odpálit</Czech>
+            <Italian>Detona</Italian>
+            <Hungarian>Robbantás</Hungarian>
+            <Portuguese>Detonar</Portuguese>
+            <Russian>Подрыв</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DetonateAll">
+            <English>Detonate All</English>
+            <German>Zünden Alles</German>
+            <Spanish>Detonar Todo</Spanish>
+            <Russian>Подрыв всех</Russian>
+            <Czech>Odpálit VŠE</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -177,19 +184,19 @@
             <Portuguese>Usado para acionar explosivos remotamente</Portuguese>
             <Russian>Используется для удаленной детонации зарядов</Russian>
         </Key>
-        <Key ID="STR_ACE_Explosives_M26_displayName">
-            <English>M26 Firing Device</English>
-            <German>M26 Zündvorrichtung</German>
-            <Spanish>Dispositivo de detonación MK26</Spanish>
-            <Polish>Zapalnik M26</Polish>
-            <French>Dispositif de mise à feu M26</French>
-            <Czech>Odpalovací zařízení M26</Czech>
-            <Italian>Detonatore M26</Italian>
-            <Hungarian>M26 Gyújtóeszköz</Hungarian>
-            <Portuguese>M26 Dispositivo de Detonação</Portuguese>
-            <Russian>Взрыватель M26</Russian>
+        <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
+            <English>M152 Firing Device</English>
+            <German>M152 Zündvorrichtung</German>
+            <Spanish>Dispositivo de detonación M152</Spanish>
+            <Polish>Zapalnik M152</Polish>
+            <French>Dispositif de mise à feu M152</French>
+            <Czech>Odpalovací zařízení M152</Czech>
+            <Italian>Detonatore M152</Italian>
+            <Hungarian>M152 Gyújtóeszköz</Hungarian>
+            <Portuguese>M152 Dispositivo de Detonação</Portuguese>
+            <Russian>Взрыватель M152</Russian>
         </Key>
-        <Key ID="STR_ACE_Explosives_MK16_displayName">
+        <Key ID="STR_ACE_Explosives_M152_displayName">
             <English>M152 RAMS</English>
             <German>M152 RAMS</German>
             <Czech>M152 RAMS</Czech>
@@ -303,7 +310,7 @@
             <Spanish>Menú de detonación</Spanish>
             <Polish>Menu detonacji</Polish>
             <French>Menu de mise à feux</French>
-            <Czech>Menu Detonace</Czech>
+            <Czech>Menu detonace</Czech>
             <Italian>Menù di detonazione</Italian>
             <Hungarian>Robbantási menü</Hungarian>
             <Portuguese>Menu de detonação</Portuguese>
@@ -315,7 +322,7 @@
             <Spanish>Menú de colocación</Spanish>
             <Polish>Menu umieszczania</Polish>
             <French>Menu de placement</French>
-            <Czech>Menu Umístění</Czech>
+            <Czech>Menu umístění</Czech>
             <Italian>Menù di collocamento</Italian>
             <Hungarian>Elhelyezési menü</Hungarian>
             <Portuguese>Menu de posicionamento</Portuguese>
@@ -375,7 +382,7 @@
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
             <French>Régler minuteur</French>
-            <Czech>Nastavit Čas</Czech>
+            <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
             <Portuguese>Configurar Tempo</Portuguese>
@@ -387,7 +394,7 @@
             <Spanish>Seleccionar un detonador</Spanish>
             <Polish>Wybierz zapalnik</Polish>
             <French>Sélectionner une mise à feu</French>
-            <Czech>Zvolit Detonátor</Czech>
+            <Czech>Zvolit detonátor</Czech>
             <Italian>Seleziona un attivatore</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
             <Portuguese>Selecionar um Gatilho</Portuguese>
@@ -582,6 +589,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
+            <German>Explodieren beim Entschärfen?</German>
             <Portuguese>Explosão no desarmamento?</Portuguese>
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
@@ -592,6 +600,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
+            <German>Sollen bestimmte Sprengladungen beim Entschärfen explodieren? Standard: Ja</German>
             <Portuguese>Ativa certos explosivos para detonar no desarmamento? Padrão: Sim</Portuguese>
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
@@ -610,6 +619,72 @@
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
+          <English>M6 SLAM Mine (Bottom Attack)</English>
+          <!-- <Czech>Mina M6 SLAM</Czech> -->
+          <!-- <French>Mine M6 SLAM</French> -->
+          <!-- <German>M6-SLAM-Mine</German> -->
+          <!-- <Italian>Mina M6 SLAM</Italian> -->
+          <!-- <Polish>Mina M6 SLAM</Polish> -->
+          <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
+          <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+          <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
+          <English>M6 SLAM Mine (Side Attack)</English>
+          <!-- <Czech>Mina M6 SLAM</Czech> -->
+          <!-- <French>Mine M6 SLAM</French> -->
+          <!-- <German>M6-SLAM-Mine</German> -->
+          <!-- <Italian>Mina M6 SLAM</Italian> -->
+          <!-- <Polish>Mina M6 SLAM</Polish> -->
+          <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
+          <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+          <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
+            <English>Large IED (Urban, Pressure Plate)</English>
+            <!-- <Czech>Velká nálož (městská)</Czech> -->
+            <!-- <French>Grand engin explosif improvisé (urbain)</French> -->
+            <!-- <German>Große USBV (Stadt)</German> -->
+            <!-- <Italian>IED grande (urbano)</Italian> -->
+            <!-- <Polish>Duży IED (miasto)</Polish> -->
+            <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
+            <!-- <Russian>Большое СВУ (городское)</Russian> -->
+            <!-- <Spanish>IED grande (Urbano)</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
+            <English>Large IED (Dug-in, Pressure Plate)</English>
+            <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
+            <!-- <French>Grand engin explosif improvisé (enterré)</French> -->
+            <!-- <German>Große USBV (Eingegraben)</German> -->
+            <!-- <Italian>IED grande (interrato)</Italian> -->
+            <!-- <Polish>Duży IED (zakopany)</Polish> -->
+            <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
+            <!-- <Russian>Большое СВУ (зарытое)</Russian> -->
+            <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
+            <English>Small IED (Urban, Pressure Plate)</English>
+            <!-- <Czech>Malá nálož (městská)</Czech> -->
+            <!-- <French>Petit engin explosif improvisé (urbain)</French> -->
+            <!-- <German>Kleine USBV (Stadt)</German> -->
+            <!-- <Italian>IED piccolo (urbano)</Italian> -->
+            <!-- <Polish>Mały IED (miasto)</Polish> -->
+            <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
+            <!-- <Russian>Малое СВУ (городское)</Russian> -->
+            <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
+        </Key>
+        <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
+            <English>Small IED (Dug-in, Pressure Plate)</English>
+            <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
+            <!-- <French>Petit engin explosif improvisé (enterré)</French> -->
+            <!-- <German>Kleine USBV (Eingegraben)</German> -->
+            <!-- <Italian>IED piccolo (interrato)</Italian> -->
+            <!-- <Polish>Mały IED (zakopany)</Polish> -->
+            <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->
+            <!-- <Russian>Малое СВУ (зарытое)</Russian> -->
+            <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
         </Key>
     </Package>
 </Project>

@@ -6,15 +6,14 @@ if (!hasInterface) exitWith {};
 ["inventoryDisplayLoaded", {
 
     [{
-        private "_dialog";
-
-        _dialog = _this select 0;
+        disableSerialization;
+        params ["_dialog"];
 
         if (isNull _dialog) exitWith {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
-        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player] call EFUNC(common,getName), localize LSTRING(Weight), [ACE_player] call FUNC(getWeight)];
+        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player, false, true] call EFUNC(common,getName), localize LSTRING(Weight), [ACE_player] call FUNC(getWeight)];
 
     }, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
 

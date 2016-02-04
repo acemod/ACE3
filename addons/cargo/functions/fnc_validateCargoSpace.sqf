@@ -15,14 +15,13 @@
  */
 #include "script_component.hpp"
 
-private ["_loaded", "_newLoaded", "_totalSpaceOccupied"];
-
 params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
-_newLoaded = [];
-_totalSpaceOccupied = 0;
+private _newLoaded = [];
+private _totalSpaceOccupied = 0;
 {
     if ((_x isEqualType "") || {!isNull _x}) then {
         _newLoaded pushback _x;

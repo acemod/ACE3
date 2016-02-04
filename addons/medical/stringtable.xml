@@ -113,7 +113,7 @@
             <English>Transfuse Saline</English>
             <German>Salzlösungstransfusion</German>
             <Spanish>Transfundir salino</Spanish>
-            <Czech>Transfúze fyziologický roztoku</Czech>
+            <Czech>Transfúze fyziologického roztoku</Czech>
             <Polish>Przetocz sól fizjologiczną</Polish>
             <French>Transfuser de la solution saline</French>
             <Russian>Перелить физраствор</Russian>
@@ -269,7 +269,7 @@
             <English>Transfusing Saline ...</English>
             <German>Salzlösungtransfusion ...</German>
             <Spanish>Transfusión de salino ...</Spanish>
-            <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
+            <Czech>Probíha transfúze fyziologického roztoku ...</Czech>
             <Polish>Przetaczanie soli fizjologicznej ...</Polish>
             <French>Transfusion de saline ...</French>
             <Russian>Переливание физраствора ...</Russian>
@@ -305,7 +305,7 @@
             <English>Applying Tourniquet ...</English>
             <German>Setze Tourniquet an ...</German>
             <Spanish>Aplicando torniquete ...</Spanish>
-            <Czech>Aplikuji škrtidlo</Czech>
+            <Czech>Aplikuji škrtidlo ...</Czech>
             <Polish>Zakładanie stazy ...</Polish>
             <French>Mise en place du Garrot ...</French>
             <Russian>Наложение жгута ...</Russian>
@@ -315,7 +315,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Medical">
             <English>Medical</English>
-            <Czech>Zdravotní</Czech>
+            <Czech>Lékařské</Czech>
             <French>Médical</French>
             <German>Sanitäter</German>
             <Italian>Medico</Italian>
@@ -378,7 +378,7 @@
             <German>Puls überprüfen</German>
             <Spanish>Comprobar pulso</Spanish>
             <Russian>Проверить пульс</Russian>
-            <Czech>Zkontrolovat pulz</Czech>
+            <Czech>Zkontrolovat puls</Czech>
             <Polish>Sprawdź tętno</Polish>
             <French>Vérifier le pouls</French>
             <Hungarian>Pulzus ellenőrzése</Hungarian>
@@ -478,7 +478,7 @@
             <Polish>RKO</Polish>
             <Spanish>RCP</Spanish>
             <Hungarian>Újraélesztés</Hungarian>
-            <Czech>KPR</Czech>
+            <Czech>CPR</Czech>
             <Portuguese>SBV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
@@ -490,7 +490,7 @@
             <Polish>Przeprowadzanie RKO ...</Polish>
             <Spanish>Realizando RCP ...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
-            <Czech>Provádím KPR ...</Czech>
+            <Czech>Provádím CPR ...</Czech>
             <Portuguese>Realizando o SBV...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
@@ -776,7 +776,7 @@
             <Spanish>Vendaje (Básico)</Spanish>
             <French>Bandage (Standard)</French>
             <Polish>Bandaż (jałowy)</Polish>
-            <Czech>Obvaz (standartní)</Czech>
+            <Czech>Obvaz (Standartní)</Czech>
             <Hungarian>Kötszer (Általános)</Hungarian>
             <Italian>Bendaggio (base)</Italian>
             <Portuguese>Bandagem(Básico)</Portuguese>
@@ -2115,6 +2115,7 @@
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
             <Czech>%1 používá PAK</Czech>
+            <Russian>%1 использовал аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2230,6 +2231,7 @@
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
+            <Czech>Heal fully bandaged hitpoints</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -2834,6 +2836,14 @@
             <French>Quel niveau de détail voullez vous pour les infirmier?</French>
             <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_DisplayName">
+            <English>Locations boost training</English>
+            <Czech>Místa pro vylepšení zkušeností</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
+            <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
+            <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem] </Czech>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
             <Russian>Отключить медиков</Russian>
@@ -3324,7 +3334,7 @@
             <Polish>Wszędzie</Polish>
             <Spanish>Donde sea</Spanish>
             <German>Überall</German>
-            <Czech>Kdekoliv</Czech>
+            <Czech>Kdekoli</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
             <French>PArtout</French>
             <Hungarian>Akárhol</Hungarian>
@@ -3457,6 +3467,7 @@
             <Spanish>Curar puntos de vida</Spanish>
             <Russian>Исцелять части тела</Russian>
             <Portuguese>Curar hitpoints</Portuguese>
+            <Czech>Léčit hitponty</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
@@ -3465,6 +3476,7 @@
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
             <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
+            <Czech>Heal fully bandaged hitpoints</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3725,7 +3737,7 @@
             <Polish>Jest pojazdem med.</Polish>
             <Spanish>Es vehículo médico</Spanish>
             <German>Ist medizinisches Fahrzeug</German>
-            <Czech>Je zdravotnické vozidlo</Czech>
+            <Czech>Zdravotnické vozidlo</Czech>
             <Portuguese>É um veículo médico</Portuguese>
             <French>Véhicule médical</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
@@ -3769,7 +3781,7 @@
             <Polish>Jest budynkiem med.</Polish>
             <Spanish>Es centro médico</Spanish>
             <German>Ist eine medizinische Einrichtung</German>
-            <Czech>Je zdravotnické zařízení</Czech>
+            <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
             <French>Est un équipement médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
@@ -3821,7 +3833,7 @@
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
             <German>Jederzeit</German>
-            <Czech>Kdykoli</Czech>
+            <Czech>Kdykoliv</Czech>
             <Spanish>Siempre</Spanish>
             <French>Tout le temps</French>
             <Polish>Zawsze</Polish>

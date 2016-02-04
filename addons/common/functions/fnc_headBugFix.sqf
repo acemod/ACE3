@@ -14,24 +14,22 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_anim", "_pos", "_dir", "_dummy"];
-
-_unit = ACE_player;
-_anim = animationState _unit;
+private _unit = ACE_player;
+private _anim = animationState _unit;
 
 ["HeadbugFixUsed", [profileName, _anim]] call FUNC(serverEvent);
 ["HeadbugFixUsed", [profileName, _anim]] call FUNC(localEvent);
 
 if (_unit != vehicle _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
 
-_pos = getPosATL _unit;
-_dir = getDir _unit;
+private _pos = getPosATL _unit;
+private _dir = getDir _unit;
 
 titleCut ["", "BLACK"];
 [_unit, "headBugFix"] call FUNC(hideUnit);
 
 // create invisible headbug fix vehicle
-_dummy = createVehicle ["ACE_Headbug_Fix", _pos, [], 0, "NONE"];
+private _dummy = createVehicle ["ACE_Headbug_Fix", _pos, [], 0, "NONE"];
 _dummy setDir _dir;
 _unit moveInAny _dummy;
 sleep 0.1; // @todo

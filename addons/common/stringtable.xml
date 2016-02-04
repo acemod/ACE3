@@ -418,7 +418,7 @@
             <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
             <French>Notification ACE: couleur de l'arrière plan</French>
-            <Czech>Barva pozadí ACE nápověd.</Czech>
+            <Czech>Barva pozadí ACE nápovědy.</Czech>
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
         </Key>
@@ -430,7 +430,7 @@
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
             <Polish>Kolor tekstu powiadomień</Polish>
             <French>Notification: couleur du texte</French>
-            <Czech>Barva fontu nápověd.</Czech>
+            <Czech>Barva fontu nápovědy.</Czech>
             <Hungarian>Súgószöveg betűinek színe</Hungarian>
             <Portuguese>Cor do do texto da hint</Portuguese>
         </Key>
@@ -475,7 +475,7 @@
             <Polish>Sprawdzaj PBO</Polish>
             <Spanish>Comprobar PBOs</Spanish>
             <German>Überprüfe PBOs</German>
-            <Czech>Zkontrolovat PBO</Czech>
+            <Czech>Zkontrolovat soubory PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
             <French>Vérifier les PBOs</French>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
@@ -658,7 +658,7 @@
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
-            <Czech>Zapnuto</Czech>
+            <Czech>Povoleno</Czech>
             <French>Oui</French>
             <German>Aktiviert</German>
             <Italian>Attivato</Italian>
@@ -705,7 +705,6 @@
             <German>Nicht erzwingen</German>
             <Polish>Nie wymuszaj</Polish>
             <Spanish>No forzar</Spanish>
-            <German>Nicht erzwingen</German>
             <Czech>Nevynucovat</Czech>
             <Portuguese>Não forçar</Portuguese>
             <Russian>Не обязывать</Russian>
@@ -762,6 +761,9 @@
             <Russian>ACE3 Транспорт</Russian>
             <Czech>ACE3 Vozidla</Czech>
             <Spanish>ACE3 Vehículos</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_NoRoomToUnload">
+            <English>No Room to unload</English>
         </Key>
     </Package>
 </Project>

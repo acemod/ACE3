@@ -16,12 +16,10 @@
 
 params ["_idd"];
 
-private ["_configNames", "_config"];
-
-_configNames = [];
+private _configNames = [];
 
 for "_index" from 0 to (count configFile - 1) do {
-    _config = configFile select _index;
+    private _config = configFile select _index;
 
     if (isClass _config && {isNumber (_config >> "idd")} && {getNumber (_config >> "idd") == _idd}) then {
         _configNames pushBack configName _config;

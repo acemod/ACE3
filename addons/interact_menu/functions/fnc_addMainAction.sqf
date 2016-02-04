@@ -18,14 +18,12 @@
 
 params ["_objectType", "_typeNum"];
 
-private["_actionTrees", "_mainAction", "_parentNode", "_varName"];
-
-_varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
-_actionTrees = missionNamespace getVariable [_varName, []];
-_parentNode = [_actionTrees, ["ACE_MainActions"]] call FUNC(findActionNode);
+private _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
+private _actionTrees = missionNamespace getVariable [_varName, []];
+private _parentNode = [_actionTrees, ["ACE_MainActions"]] call FUNC(findActionNode);
 
 if (isNil {_parentNode}) then {
     TRACE_2("No Main Action on object", _objectType, _typeNum);
-    _mainAction = ["ACE_MainActions", localize ELSTRING(interaction,MainAction), "", {}, {true}] call FUNC(createAction);
+    private _mainAction = ["ACE_MainActions", localize ELSTRING(interaction,MainAction), "", {}, {true}] call FUNC(createAction);
     [_objectType, _typeNum, [], _mainAction] call EFUNC(interact_menu,addActionToClass);
 };

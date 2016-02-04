@@ -1,7 +1,7 @@
 
 class CfgVehicles {
     class Fence;
-    class thingX;
+    class ThingX;
     class NonStrategic;
 
     class ACE_ConcertinaWireNoGeo: Fence {
@@ -94,7 +94,7 @@ class CfgVehicles {
             };
         };
     };
-    class ACE_ConcertinaWireCoil: thingX {
+    class ACE_ConcertinaWireCoil: ThingX {
         XEH_ENABLED;
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRECOIL;

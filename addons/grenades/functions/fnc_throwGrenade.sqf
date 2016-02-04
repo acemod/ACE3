@@ -30,24 +30,22 @@ if (isNull _projectile) then {
     _projectile = nearestObject [_unit, _ammo];
 };
 
+private _config = configFile >> "CfgAmmo" >> _ammo;
+
 // handle special grenades
 if (local _unit) then {
-    if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flashbang)) == 1) then {
-        private "_fuzeTime";
-        _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+    if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
+        private _fuzeTime = getNumber (_config >> "explosionTime");
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call EFUNC(common,waitAndExecute);
     };
 };
 
-if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
-    private ["_fuzeTime", "_timeToLive", "_color", "_intensity"];
-
-    _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
-    _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
-    _color = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(color));
-    _intensity = _color select 3;
-    _color resize 3;
+if (getNumber (_config >> QGVAR(flare)) == 1) then {
+    private _fuzeTime = getNumber (_config >> "explosionTime");
+    private _timeToLive = getNumber (_config >> "timeToLive");
+    private _color = getArray (_config >> QGVAR(color));
+    private _intensity = _color deleteAt 3;
 
     [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
 };
@@ -55,12 +53,10 @@ if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
 
-private "_mode";
-_mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode != 0) then {
-    private "_velocity";
-    _velocity = velocity _projectile;
+    private _velocity = velocity _projectile;
 
     switch (_mode) do {
         //high throw

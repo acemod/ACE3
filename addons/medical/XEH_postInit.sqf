@@ -10,6 +10,10 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
+//Treatment EventHandlers:
+["medical_advMedication", FUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
+
+
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {
@@ -246,6 +250,9 @@ GVAR(lastHeartBeatSound) = ACE_time;
 };
 
 ["SettingsInitialized", {
+    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
+    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+
     if (GVAR(level) == 2) exitWith {
         [
             {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
@@ -275,9 +282,6 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
-
-// Networked litter
-[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {

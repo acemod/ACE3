@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_EnableFrag">
@@ -6,7 +6,7 @@
             <Polish>Symulacja fragmentacji</Polish>
             <Spanish>Simulación de fragmentación</Spanish>
             <German>Splittersimulation</German>
-            <Czech>Simulace fragmentace</Czech>
+            <Czech>Simulace fragmentů</Czech>
             <Portuguese>Simulação de fragmentação</Portuguese>
             <French>Simulation de la fragmentation</French>
             <Hungarian>Repesz-szimuláció</Hungarian>
@@ -17,7 +17,7 @@
             <Spanish>Activa la simulación de fragmentación ACE</Spanish>
             <Polish>Aktywuje symulację fragmentacji ACE</Polish>
             <German>Aktiviere die ACE-Splittersimulation</German>
-            <Czech>Povolit ACE simulaci fragmentace</Czech>
+            <Czech>Povolit ACE simulaci fragmentů</Czech>
             <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
             <French>Active la simulation ACE de la fragmentation</French>
             <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
@@ -72,7 +72,7 @@
             <Spanish>Máximos proyectiles por cuadro</Spanish>
             <German>Maximale Anzahl an Projektilen pro Frame</German>
             <Polish>Maks. liczba pocisków na klatkę</Polish>
-            <Czech>Maximální počet projektilů ze jeden snímek</Czech>
+            <Czech>Maximální počet projektilů za jeden snímek</Czech>
             <Portuguese>Projéteis máximos por quadro</Portuguese>
             <French>Nombre maximal de projectile par image</French>
             <Hungarian>Maximum repesz/képkocka</Hungarian>

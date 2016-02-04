@@ -28,7 +28,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -89,7 +89,7 @@ if (_state) then {
     }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
-    [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
