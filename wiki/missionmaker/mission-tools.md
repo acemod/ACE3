@@ -68,6 +68,7 @@ The [module settings](./modules.html#1.16-switchunits-system) define which side 
 You will now learn how to set up everything for it to work properly.
 
 ### 3.1 The module explained
+
 Name | Explanation
 ---- | -----
 Objects | Name of the objects used as screens
@@ -83,7 +84,7 @@ Slide duration | 0 (0 = disabled, number is in seconds)
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an [issue](http://feedback.arma3.com/view.php?id=22310) to prevent errors.</p>
+    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an <a href="http://feedback.arma3.com/view.php?id=22310">issue</a> to prevent errors.</p>
 </div>
 
 ### 3.2 Basic slideshow
