@@ -27,6 +27,10 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     params ["_args", "_pfID"];
     _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_startFuel", 0, [0]], ["_maxFuel", 0, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
 
+    if !(_nozzle getVariable [QGVAR(isConnected), false]) exitWith {
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
+
     if (!alive _source || {!alive _sink}) exitWith {
         [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
