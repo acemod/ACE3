@@ -1,23 +1,3 @@
-#define MACRO_PORTABLE_LIGHTS_ACTION(var1) \
-    class ACE_Actions { \
-        class ACE_MainActions { \
-            displayName = CSTRING(MainAction); \
-            selection = ""; \
-            distance = 2; \
-            condition = "true"; \
-            class ACE_SwitchLamp { \
-                displayName = CSTRING(var1); \
-                condition = QUOTE(alive _target); \
-                statement = QUOTE([ARR_1(_target)] call DFUNC(switchLamp)); \
-                selection = ""; \
-                distance = 2; \
-                showDisabled = 0; \
-                priority = -1; \
-            }; \
-        }; \
-    }; \
-    class ACE_SelfActions {}
-
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleInteraction: ACE_Module {
@@ -552,28 +532,38 @@ class CfgVehicles {
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         scope = 2;
-        GVAR(switchLampClass) = "Land_PortableLight_single_off_F";
         XEH_ENABLED;
-        MACRO_PORTABLE_LIGHTS_ACTION(TurnOff);
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+                class ACE_LampTurnOn {
+                    displayName = CSTRING(TurnOn);
+                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2('ACE_lampOn',true)]));
+                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    selection = "";
+                    distance = 2;
+                };
+                class ACE_LampTurnOff {
+                    displayName = CSTRING(TurnOff);
+                    condition = QUOTE(alive _target && _target getVariable [ARR_2('ACE_lampOn',true)]);
+                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    selection = "";
+                    distance = 2;
+                };
+            };
+        };
     };
     class Land_PortableLight_single_off_F: Land_PortableLight_single_F {
         scope = 1;
-        GVAR(switchLampClass) = "Land_PortableLight_single_F";
-        GVAR(switchLampOff) = 1;
-        MACRO_PORTABLE_LIGHTS_ACTION(TurnOn);
     };
-    class Land_PortableLight_double_F: Land_PortableLight_single_F {
-        scope = 2;
-        GVAR(switchLampClass) = "Land_PortableLight_double_off_F";
-        XEH_ENABLED;
-        MACRO_PORTABLE_LIGHTS_ACTION(TurnOff);
-    };
+    class Land_PortableLight_double_F: Land_PortableLight_single_F {};
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
-        GVAR(switchLampClass) = "Land_PortableLight_double_F";
-        GVAR(switchLampOff) = 1;
-        MACRO_PORTABLE_LIGHTS_ACTION(TurnOn);
     };
+    
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
