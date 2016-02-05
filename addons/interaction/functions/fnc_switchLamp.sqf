@@ -17,42 +17,35 @@
 
 #define DISABLED_LAMP_DMG 0.95
 
-params ["_object"];
+params ["_lamp"];
 
-private ["_objectClass", "_class"];
-
-_objectClass = typeof _object;
-_class = getText (configFile >> "CfgVehicles" >> _objectClass >> QGVAR(switchLampClass));
+private _objectClass = typeof _lamp;
+private _class = getText (configFile >> "CfgVehicles" >> _objectClass >> QGVAR(switchLampClass));
 
 if (_class == "") exitWith {};
 
-private ["_vectors", "_pos", "_reflectors", "_hitpointsdmg"];
+private _vectors = [vectorDir _lamp, vectorUp _lamp];
+private _posATL = getPosATL _lamp;
 
-_vectors = [vectorDir _object, vectorUp _object];
-_pos = getPosATL _object;
-
-_reflectors = "true" configClasses (configfile >> "CfgVehicles" >> _objectClass >> "Reflectors");
-_hitpointsdmg = [];
+private _reflectors = "true" configClasses (configfile >> "CfgVehicles" >> _objectClass >> "Reflectors");
+private _hitPointsDamage = [];
 {
-	private "_hitpoint";
-	_hitpoint = getText (_x >> "hitpoint");
-	_hitpointsdmg pushback [_hitpoint, _object getHit _hitpoint];
-	nil
+    private _hitPoint = getText (_x >> "hitpoint");
+    _hitPointsDamage pushback [_hitPoint, _lamp getHit _hitPoint];
+    nil
 } count _reflectors;
 
-deleteVehicle _object;
+deleteVehicle _lamp;
 
-private ["_newobject", "_isOff"];
-
-_newobject = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
-_newobject setVectorDirAndUp _vectors;
-_newobject setPosATL _pos;
-_isOff = getNumber (configFile >> "CfgVehicles" >> _class >> QGVAR(switchLampOff)) == 1;
+private _newLamp = createVehicle [_class, _posATL, [], 0, "CAN_COLLIDE"];
+_newLamp setVectorDirAndUp _vectors;
+_newLamp setPosATL _posATL;
+private _isOff = getNumber (configFile >> "CfgVehicles" >> _class >> QGVAR(switchLampOff)) == 1;
 
 if(_isOff) then {
-	//this lamp is off
-	{_newobject sethit [_x select 0, (_x select 1) max DISABLED_LAMP_DMG];nil} count _hitpointsdmg;
+    //this version of lamp is off
+    {_newLamp sethit [_x select 0, (_x select 1) max DISABLED_LAMP_DMG];nil} count _hitPointsDamage;
 } else {
-	//this lamp is on
-	{if((_x select 1) > DISABLED_LAMP_DMG) then {_newobject sethit _x;};nil} count _hitpointsdmg;
+    //this version of lamp is on
+    {if((_x select 1) > DISABLED_LAMP_DMG) then {_newLamp sethit _x;};nil} count _hitPointsDamage;
 };
