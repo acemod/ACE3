@@ -229,17 +229,17 @@
             <Hungarian>Bardelas</Hungarian>
             <Italian>Bardelas</Italian>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_APC_Wheeled_cannon_Name">
-            <English>Patria AMV</English>
-            <German>Patria AMV</German>
-            <Spanish>Patria AMV</Spanish>
-            <Polish>Patria AMV</Polish>
-            <Czech>Patria AMV</Czech>
-            <French>Patria AMV</French>
-            <Russian>Patria AMV</Russian>
-            <Portuguese>Patria AMV</Portuguese>
-            <Hungarian>Patria AMV</Hungarian>
-            <Italian>Patria AMV</Italian>
+        <Key ID="STR_ACE_RealisticNames_APC_Wheeled_01_cannon_Name">
+            <English>Badger IFV</English>
+            <German>SpZ Badger</German>
+            <Spanish>Badger IFV</Spanish>
+            <Polish>Badger IFV</Polish>
+            <Czech>Badger IFV</Czech>
+            <French>Badger IFV</French>
+            <Russian>БМП Badger</Russian>
+            <Portuguese>Badger IFV</Portuguese>
+            <Hungarian>Badger IFV</Hungarian>
+            <Italian>Badger IFV</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name">
             <English>Nemmera</English>
