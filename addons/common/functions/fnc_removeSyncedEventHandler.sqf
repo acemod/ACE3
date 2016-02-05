@@ -19,10 +19,8 @@ if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     false
 };
 
-private ["_data", "_eventId"];
-
-_data = HASH_GET(GVAR(syncedEvents),_name);
-_eventId = _data select 3;
+private _data = HASH_GET(GVAR(syncedEvents),_name);
+_data params ["", "", "", "_eventId"];
 
 [_eventId] call FUNC(removeEventHandler);
 HASH_REM(GVAR(syncedEvents),_name);

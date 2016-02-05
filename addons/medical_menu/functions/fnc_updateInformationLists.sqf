@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-private "_lbCtrl";
+private ["_lbCtrl", "_amountOfGeneric"];
 
 params ["_display", "_genericMessages", "_allInjuryTexts"];
 
@@ -28,7 +28,7 @@ lbClear _lbCtrl;
 
 _amountOfGeneric = count _genericMessages;
 {
-    _x params ["_add", "_Color"];
+    _x params ["_add", "_color"];
     _lbCtrl lbAdd _add;
     _lbCtrl lbSetColor [_forEachIndex + _amountOfGeneric, _color];
 } forEach _allInjuryTexts;

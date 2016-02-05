@@ -14,13 +14,11 @@
  */
 #include "script_component.hpp"
 
-private ["_path", "_mission", "_class", "_index", "_array", "_entry"];
-
-_path = _this;
+[_this] params ["_path", [], [[]]];
 
 if (missionName == "") exitWith {""};
 
-_mission = toArray toLower loadFile "mission.sqm";
+private _mission = toArray toLower loadFile "mission.sqm";
 _mission resize 65536;
 
 {
@@ -34,11 +32,9 @@ _mission = toString (_mission - [-1]);
 {_path set [_forEachIndex, toLower _x]} forEach _path;
 
 for "_a" from 0 to (count _path - 2) do {
-    _class = format ["class%1{", _path select _a];
-
-    _index = _mission find _class;
-
-    _array = toArray _mission;
+    private _class = format ["class%1{", _path select _a];
+    private _index = _mission find _class;
+    private _array = toArray _mission;
 
     for "_b" from 0 to (_index + count toArray _class - 1) do {
         _array set [_b, -1];
@@ -49,7 +45,7 @@ for "_a" from 0 to (count _path - 2) do {
     _mission = toString _array;
 };
 
-_entry = format ["%1=", _path select (count _path - 1)];
+private _entry = format ["%1=", _path select (count _path - 1)];
 _index = _mission find _entry;
 
 if (_index == -1) exitWith {""};

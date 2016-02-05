@@ -9,17 +9,23 @@
  * Return value:
  * None
  *
+ * Example:
+ * [player, currentWeapon player] call ace_overheating_fnc_swapBarrel
+ *
  * Public: No
  */
-#include "\z\ace\addons\overheating\script_component.hpp"
+#include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_weapon);
+params ["_player", "_weapon"];
+TRACE_2("params",_player,_weapon);
 
+// Make the standing player kneel down
 if (stance _player != "PRONE") then {
-  [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
+    [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
 };
-_player playActionNow "GestureDismountMuzzle";
-_player playAction "GestureMountMuzzle";
+
+// Barrel dismount gesture
+_player playActionNow QGVAR(GestureDismountMuzzle);
 playSound "ACE_BarrelSwap";
 
-[10, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
+[5, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);

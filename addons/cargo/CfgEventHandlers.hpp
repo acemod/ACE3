@@ -12,7 +12,9 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_Killed_EventHandlers {
     class All {
-        init = QUOTE(call FUNC(handleDestroyed));
+        class ADDON {
+            serverKilled = QUOTE(call FUNC(handleDestroyed));
+        };
     };
 };
 
@@ -44,6 +46,11 @@ class Extended_InitPost_EventHandlers {
         };
     };
     class Land_PaperBox_closed_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
+        };
+    };
+    class RoadCone_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };

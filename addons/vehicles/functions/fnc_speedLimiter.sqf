@@ -16,11 +16,9 @@
  */
 #include "script_component.hpp"
 
-private "_maxSpeed";
-
 params ["_driver", "_vehicle"];
 
-if (GETGVAR(isSpeedLimiter,false)) exitWith {
+if (GVAR(isSpeedLimiter)) exitWith {
     [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
     playSound "ACE_Sound_Click";
     GVAR(isSpeedLimiter) = false;
@@ -30,19 +28,28 @@ if (GETGVAR(isSpeedLimiter,false)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-_maxSpeed = speed _vehicle max 10;
+private _maxSpeed = speed _vehicle max 10;
 
 [{
     params ["_args", "_idPFH"];
     _args params ["_driver", "_vehicle", "_maxSpeed"];
 
-    if (!GVAR(isSpeedLimiter) || {_driver != driver _vehicle}) exitWith {
-        GVAR(isSpeedLimiter) = false;
+    if (GVAR(isUAV)) then {
+        private _uavControll = UAVControl _vehicle;
+        if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
+            GVAR(isSpeedLimiter) = false;
+        };
+    } else {
+        if (_driver != driver _vehicle) then {
+            GVAR(isSpeedLimiter) = false;
+        };
+    };
+
+    if (!GVAR(isSpeedLimiter)) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    private "_speed";
-    _speed = speed _vehicle;
+    private _speed = speed _vehicle;
 
     if (_speed > _maxSpeed) then {
         _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((_maxSpeed / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning

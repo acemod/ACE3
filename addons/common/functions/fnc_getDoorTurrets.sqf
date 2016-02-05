@@ -14,14 +14,12 @@
 
 params ["_vehicle"];
 
-private ["_turrets", "_doorTurrets", "_config"];
+private _turrets = allTurrets [_vehicle, true];
 
-_turrets = allTurrets [_vehicle, true];
-
-_doorTurrets = [];
+private _doorTurrets = [];
 
 {
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 

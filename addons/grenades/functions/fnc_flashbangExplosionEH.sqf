@@ -3,30 +3,29 @@
  * Creates the flashbang effect and knock out AI units.
  *
  * Arguments:
- * 0: The grenade <OBJECT>
+ * 0: The flashBang position ASL <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [theGrenade] call ace_grenades_fnc_flashbangExplosionEH
+ * [[0,0,0]] call ace_grenades_fnc_flashbangExplosionEH
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_grenade"];
+params ["_grenadePosASL"];
+TRACE_1("params",_grenadePosASL);
 
-private ["_affected", "_strength", "_posGrenade", "_eyePos", "_losCount", "_eyeDir", "_dirToUnitVector", "_angleDiff", "_light"];
-
-_affected = _grenade nearEntities ["CAManBase", 20];
+private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 
 {
     if (local _x && {alive _x}) then {
 
-        _strength = 1 - ((_x distance _grenade) min 15) / 15;
+        private _strength = 1 - (((getPosASL _x) vectorDistance _grenadePosASL) min 15) / 15;
 
-        TRACE_3("FlashBangEffect Start",_x,(_x distance _grenade),_strength);
+        TRACE_3("FlashBangEffect Start",_x,((getPosASL _x) vectorDistance _grenadePosASL),_strength);
 
         if (_x != ACE_player) then {
             //must be AI
@@ -47,13 +46,12 @@ _affected = _grenade nearEntities ["CAManBase", 20];
         } else {
             //Do effects for player
             // is there line of sight to the grenade?
-            _posGrenade = getPosASL _grenade;
-            _eyePos = eyePos ACE_player; //PositionASL
+            private _eyePos = eyePos ACE_player; //PositionASL
             _posGrenade set [2, (_posGrenade select 2) + 0.2]; // compensate for grenade glitching into ground
 
             //Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
-            _losCount = {
-                !lineIntersects [_posGrenade vectorAdd _x, _eyePos, _grenade, ACE_player]
+            private _losCount = {
+                !lineIntersects [_grenadePosASL vectorAdd _x, _eyePos, ACE_player]
             } count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
 
             TRACE_1("Line of sight count (out of 4)",_losCount);
@@ -68,9 +66,9 @@ _affected = _grenade nearEntities ["CAManBase", 20];
 
             // account for people looking away by slightly
             // reducing the effect for visual effects.
-            _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
-            _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
-            _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
+            private _eyeDir = (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]);
+            private _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+            private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
 
             // from 0-45deg, full effect
             if (_angleDiff > 45) then {
@@ -85,7 +83,9 @@ _affected = _grenade nearEntities ["CAManBase", 20];
             };
 
             // create flash to illuminate environment
-            _light = "#lightpoint" createVehicleLocal (getPos _grenade);
+            private _light = "#lightpoint" createVehicleLocal _grenadePosASL;
+            _light setPosASL _grenadePosASL;
+
             _light setLightBrightness 200;
             _light setLightAmbient [1,1,1];
             _light setLightColor [1,1,1];
@@ -103,7 +103,7 @@ _affected = _grenade nearEntities ["CAManBase", 20];
                 GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
                 GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
-                //PARTIALRECOVERY - start decreasing effect over ACE_time
+                //PARTIALRECOVERY - start decreasing effect over time
                 [{
                     params ["_strength"];
 

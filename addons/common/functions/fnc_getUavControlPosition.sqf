@@ -18,16 +18,14 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_uav", "_positionArray", "_playerIndex"];
-
-_uav = getConnectedUAV _unit;
+private _uav = getConnectedUAV _unit;
 
 if (isNull _uav) exitWith {""};
 
-_positionArray = UAVControl _uav;
-_playerIndex = _positionArray find _unit;
+private _positionArray = UAVControl _uav;
+private _playerIndex = _positionArray find _unit;
 
 if (_playerIndex == -1) exitWith {""};
 

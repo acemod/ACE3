@@ -12,6 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["_array"];
+params [["_array", [], [[]]]];
 
 _array arrayIntersect _array // return

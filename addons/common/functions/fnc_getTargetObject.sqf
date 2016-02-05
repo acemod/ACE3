@@ -14,15 +14,13 @@
 
 params ["_maxDistance"];
 
-private ["_position", "_laser", "_intersects"];
-
-_position = ATLToASL positionCameraToWorld [0, 0, 0];
+private _position = ATLToASL positionCameraToWorld [0, 0, 0];
 _position set [2, (_position select 2) - (getTerrainHeightASL _position min 0)];
 
-_laser = ATLToASL positionCameraToWorld [0, 0, _maxDistance];
+private _laser = ATLToASL positionCameraToWorld [0, 0, _maxDistance];
 _laser set [2, (_laser select 2) - (getTerrainHeightASL _laser min 0)];
 
-_intersects = lineIntersectsObjs [_position, _laser, objNull, objNull, true, 2];
+private _intersects = lineIntersectsObjs [_position, _laser, objNull, objNull, true, 2];
 
 if (_intersects isEqualTo []) exitWith {objNull};
 

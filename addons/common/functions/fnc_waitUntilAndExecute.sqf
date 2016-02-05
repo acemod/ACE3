@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [{(_this select 0) == vehicle (_this select 0)}, {(_this select 0) setDamage 1;}, [ACE_player]] call ace_common_fnc_waitAndExecute
+ * [{(_this select 0) == vehicle (_this select 0)}, {(_this select 0) setDamage 1;}, [ACE_player]] call ace_common_fnc_waitUntilAndExecute
  *
  * Public: No
  */

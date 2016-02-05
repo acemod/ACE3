@@ -14,7 +14,7 @@
 
 params ["_function"];
 
-if (typeName _function == "STRING") exitWith {_function};
+if (_function isEqualType "") exitWith {_function};
 
 _function = toArray str _function;
 _function deleteAt 0;

@@ -9,7 +9,7 @@
  *   1 = Warn permanently
  *   2 = Kick
  * 1: Check all PBOs? (default: false) <BOOL>
- * 2: Whitelist (default: "[]") <STRING>
+ * 2: Whitelist (default: "") <STRING>
  *
  * Return Value:
  * None
@@ -18,9 +18,13 @@
  */
 #include "script_component.hpp"
 
-params ["_mode", ["_checkAll", false], ["_whitelist", "[]"]];
+params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
+TRACE_3("params",_mode,_checkAll,_whitelist);
 
-_whitelist = [_whitelist, {toLower _this}] call FUNC(map);
+//lowercase and convert whiteList String into array of strings:
+_whitelist = toLower _whitelist;
+_whitelist = _whitelist splitString "[,""']";
+TRACE_1("Array",_whitelist);
 
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
@@ -37,10 +41,8 @@ if (!isServer) then {
 
         // Display error message.
         if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
-            private ["_text", "_error"];
-
-            _text = "[ACE] Version mismatch:<br/><br/>";
-            _error = format ["ACE version mismatch: %1: ", profileName];
+            private _text = "[ACE] Version mismatch:<br/><br/>";
+            private _error = format ["ACE version mismatch: %1: ", profileName];
 
             if (_missingAddon) then {
                 _text = _text + "Detected missing addon on client<br/>";
@@ -65,25 +67,29 @@ if (!isServer) then {
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 
-                private ["_rscLayer", "_ctrlHint"];
-
-                _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
+                private _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
                 _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
                 disableSerialization;
-                _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
+                private _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
                 _ctrlHint ctrlSetStructuredText _text;
 
                 if (_mode == 0) then {
-                    sleep 10;
-                    _rscLayer cutFadeOut 0.2;
+                    [{
+                        params ["_rscLayer"];
+                        TRACE_2("Hiding Error message after 10 seconds",time,_rscLayer);
+                        _rscLayer cutFadeOut 0.2;
+                    }, [_rscLayer], 10] call FUNC(waitAndExecute);
                 };
             };
 
             if (_mode == 2) then {
-                waitUntil {alive player}; // To be able to show list if using checkAll
-                _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
-                ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                [{alive player}, { // To be able to show list if using checkAll
+                    params ["_text"];
+                    TRACE_2("Player is alive, showing msg and exiting",time,_text);
+                    _text = composeText [parseText format ["<t align='center'>%1</t>", _text]];
+                    ["[ACE] ERROR", _text, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                }, [_text]] call FUNC(waitUntilAndExecute);
             };
         };
 

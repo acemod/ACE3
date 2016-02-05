@@ -7,7 +7,8 @@
  * The spectator interface will be opened/closed
  *
  * Arguments:
- * 0: Spectator state of local client <BOOL> <OPTIONAL>
+ * 0: Spectator state of local client <BOOL> (default: true)
+ * 1: Force interface <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>
@@ -20,16 +21,19 @@
 
 #include "script_component.hpp"
 
-params [["_set",true,[true]]];
+params [["_set",true,[true]], ["_force",true,[true]]];
 
 // Only clients can be spectators
-if (!hasInterface) exitWith {};
+if !(hasInterface) exitWith {};
 
 // Exit if no change
-if (_set isEqualTo GVAR(isSet)) exitwith {};
+if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Handle common addon audio
-if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {EGVAR(hearing,disableVolumeUpdate) = _set};
+if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
+    EGVAR(hearing,disableVolumeUpdate) = _set;
+    EGVAR(hearing,deafnessDV) = 0;
+};
 if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
@@ -45,7 +49,6 @@ if (_set) then {
     GVAR(heldKeys) resize 255;
     GVAR(mouse) = [false,false];
     GVAR(mousePos) = [0.5,0.5];
-    GVAR(treeSel) = objNull;
 
     // Update units before opening to support pre-set camera unit
     [] call FUNC(updateUnits);
@@ -60,9 +63,17 @@ if (_set) then {
     GVAR(unitCamera) camCommit 0;
     [] call FUNC(transitionCamera);
 
-    // Close map and clear radio
+    // Cache current channel to switch back to on exit
+    GVAR(channelCache) = currentChannel;
+
+    // Channel index starts count after the 5 default channels
+    GVAR(channel) radioChannelAdd [player];
+    setCurrentChannel (5 + GVAR(channel));
+
+    // Close map and clear the chat
     openMap [false,false];
     clearRadio;
+    enableRadio false;
 
     // Disable BI damage effects
     BIS_fnc_feedback_allowPP = false;
@@ -73,9 +84,20 @@ if (_set) then {
     };
 
     [{
+        disableSerialization;
         // Create the display
-        (findDisplay 46) createDisplay QGVAR(interface);
-    }, []] call EFUNC(common,execNextFrame);
+        _display = (findDisplay 46) createDisplay QGVAR(interface);
+
+        // If not forced, make esc end spectator
+        if (_this) then {
+            _display displayAddEventHandler ["KeyDown", {
+                if (_this select 1 == 1) then {
+                    [false] call ace_spectator_fnc_setSpectator;
+                    true
+                };
+            }];
+        };
+    }, !_force] call EFUNC(common,execNextFrame);
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -90,7 +112,7 @@ if (_set) then {
     };
 
     // Kill the display
-    (findDisplay 12249) closeDisplay 0;
+    (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
 
     // Terminate camera
     GVAR(freeCamera) cameraEffect ["terminate", "back"];
@@ -98,7 +120,16 @@ if (_set) then {
     camDestroy GVAR(unitCamera);
     camDestroy GVAR(targetCamera);
 
+    // Remove from spectator chat
+    GVAR(channel) radioChannelRemove [player];
+
+    // Restore cached channel and delete cache
+    setCurrentChannel GVAR(channelCache);
+    GVAR(channelCache) = nil;
+
+    // Clear any residual spectator chat
     clearRadio;
+    enableRadio true;
 
     // Return to player view
     player switchCamera "internal";
@@ -114,12 +145,16 @@ if (_set) then {
     GVAR(unitCamera) = nil;
     GVAR(targetCamera) = nil;
 
+    //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
+    GVAR(camHandler) = nil;
+    GVAR(compHandler) = nil;
+    GVAR(toolHandler) = nil;
+
     // Cleanup display variables
     GVAR(ctrlKey) = nil;
     GVAR(heldKeys) = nil;
     GVAR(mouse) = nil;
     GVAR(mousePos) = nil;
-    GVAR(treeSel) = nil;
 
     // Reset nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {

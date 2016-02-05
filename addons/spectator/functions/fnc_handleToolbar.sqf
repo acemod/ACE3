@@ -26,8 +26,13 @@ private ["_name","_vision","_fov","_speed","_mode","_time","_toolbar"];
 _toolbar = _display displayCtrl IDC_TOOL;
 
 // Find all tool values
+if (GVAR(camVision) >= 0) then {
+    _vision = localize LSTRING(VisionThermal);
+} else {
+    _vision = [localize LSTRING(VisionNight), localize LSTRING(VisionNormal)] select (GVAR(camVision) < -1);
+};
+
 if (GVAR(camMode) == 0) then {
-    _vision = if (GVAR(camVision) >= 0) then {localize LSTRING(VisionThermal)} else { [localize LSTRING(VisionNight), localize LSTRING(VisionNormal)] select (GVAR(camVision) < -1) };
     _fov = format ["%1x", floor(GVAR(camZoom) * 100) * 0.01];
     _speed = format ["%1 m/s", floor(GVAR(camSpeed) * 100) * 0.01];
 } else {

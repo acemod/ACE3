@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Check if the unit can replace given wheel of the vehicle.
+ * Check if the unit can replace given track of the vehicle.
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
@@ -17,27 +17,11 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target", "_hitPoint", ["_wheel",false]];
-TRACE_4("params",_unit,_target,_hitPoint,_wheel);
-// TODO [_unit, _wheel] call EFUNC(common,claim); on start of action
+params ["_unit", "_target", "_hitPoint"];
+TRACE_3("params",_unit,_target,_hitPoint);
 
 if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-if (typeName _wheel == "OBJECT") then {
-    // not near interpret as objNull
-    if !(_wheel in nearestObjects [_unit, ["ACE_Track"], 5]) then {
-        _wheel = objNull;
-    };
-} else {
-    _wheel = objNull;
+//check for a near track is handled by claimObjects[] config
 
-    {
-        if ([_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {
-            _wheel = _x;
-        };
-    } forEach nearestObjects [_unit, ["ACE_Track"], 5];
-};
-
-if (isNull _wheel || damage _wheel >= 1) exitWith {false};
-
-alive _target && {_target getHitPointDamage _hitPoint > 0}
+(_target getHitPointDamage _hitPoint > 0)

@@ -26,7 +26,7 @@ _repairFacility = [];
 
 _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position select 2)], _object modelToWorldVisual [0, 0, (_position select 2) +10], _object]);
 {
-    if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitwith {
+    if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
         _isInBuilding = true;
     };
 } forEach _objects;
@@ -34,7 +34,7 @@ _objects = (lineIntersectsWith [_object modelToWorldVisual [0, 0, (_position sel
 if (!_isInBuilding) then {
     _objects = position _object nearObjects 7.5;
     {
-        if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitwith {
+        if (((typeOf _x) in _repairFacility) || (_x getVariable ["ACE_isRepairFacility",0]) > 0) exitWith {
             _isInBuilding = true;
         };
     } forEach _objects;

@@ -17,20 +17,7 @@
 
 params ["_unit"];
 
-private ["_forceWalkReasons", "_unitForceWalkNumber", "_unitForceWalkStatus", "_unitForceWalkReasons"];
+//Now just a wrapper for FUNC(statusEffect_get) [No longer used in ace as of 3.5]
+ACE_DEPRECATED("ace_common_fnc_getForceWalkStatus","3.7.0","ace_common_fnc_statusEffect_get");
 
-_forceWalkReasons = missionNamespace getVariable ["ACE_forceWalkReasons", []];
-
-_unitForceWalkNumber = _unit getVariable ["ACE_forceWalkStatusNumber", 0];
-
-_unitForceWalkStatus = [_unitForceWalkNumber, count _forceWalkReasons] call FUNC(binarizeNumber);
-
-_unitForceWalkReasons = [];
-
-{
-    if (_unitForceWalkStatus select _forEachIndex) then {
-        _unitForceWalkReasons pushBack _x;
-    };
-} forEach _forceWalkReasons;
-
-_unitForceWalkReasons
+([_unit, "forceWalk"] call FUNC(statusEffect_get)) select 1

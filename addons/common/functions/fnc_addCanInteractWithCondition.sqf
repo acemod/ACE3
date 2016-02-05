@@ -17,12 +17,10 @@ params ["_conditionName", "_conditionFunc"];
 
 _conditionName = toLower _conditionName;
 
-private ["_conditions", "_index"];
-
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
+private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 _conditions params ["_conditionNames", "_conditionFuncs"];
 
-_index = _conditionNames find _conditionName;
+private _index = _conditionNames find _conditionName;
 
 if (_index == -1) then {
     _index = count _conditionNames;

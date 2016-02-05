@@ -3,5 +3,6 @@
 ADDON = false;
 
 PREP(fallDown);
+PREP(getRandomAnimation);
 
 ADDON = true;

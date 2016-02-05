@@ -21,13 +21,12 @@
     if (_isClientSetable) then {
         // If setting is not forced
         if !(_isForced) then {
-            private "_profileValue";
-            _profileValue = profileNamespace getVariable _name;
+            private _profileValue = profileNamespace getVariable _name;
 
             // If the setting is stored on the profile
             if !(isNil "_profileValue") then {
                 // If the profile variable has the correct type
-                if (typeName _profileValue == typeName (missionNamespace getVariable _name)) then {
+                if (_profileValue isEqualType (missionNamespace getVariable _name)) then {
                     // Load the setting from the profile
                     missionNamespace setVariable [_name, _profileValue];
                 };

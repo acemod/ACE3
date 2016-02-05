@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
             <English>HuntIR Transport Box</English>
             <German>HuntIR Transportkiste</German>
             <Spanish>Caja de transporte de HuntIR</Spanish>
-            <Czech>Trasnportní bedna HuntIR</Czech>
+            <Czech>Transportní bedna HuntIR</Czech>
             <Russian>Ящик с HuntIR</Russian>
             <Italian>HuntIR Transport Box</Italian>
             <Polish>Skrzynia HuntIR</Polish>
@@ -17,7 +17,7 @@
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
             <Spanish>Proyectil HuntIR</Spanish>
-            <Czech>HuntIR Round</Czech>
+            <Czech>HuntIR náboj</Czech>
             <Russian>HuntIR снаряд</Russian>
             <Italian>HuntIR Round</Italian>
             <Polish>Nabój HuntIR</Polish>
@@ -101,7 +101,7 @@
             <English>Help</English>
             <German>Hilfe</German>
             <Spanish>Ayuda</Spanish>
-            <Czech>Pomoc</Czech>
+            <Czech>Nápověda</Czech>
             <Russian>Помощь</Russian>
             <Italian>Help</Italian>
             <Polish>Pomoc</Polish>

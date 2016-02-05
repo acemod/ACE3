@@ -15,34 +15,30 @@
  */
 #include "script_component.hpp"
 
-private "_fnc_logEntries";
-_fnc_logEntries = {
+private _fnc_logEntries = {
     params ["_c", "_d"];
 
-    private ["_p", "_t", "_e", "_a", "_i"];
+    private _p = inheritsFrom _c;
 
-    _p = inheritsFrom _c;
-
-    _t = format [["class %1: %2 {", "class %1 {"] select (configName _p == ""), configName _c, configName _p];
+    private _t = format [["class %1: %2 {", "class %1 {"] select (configName _p == ""), configName _c, configName _p];
     for "_a" from 1 to _d do {
         _t = "  " + _t;
     };
     diag_log text _t;
 
-    _e = [];
+    private _e = [];
     for "_i" from 0 to (count _c - 1) do {
-        private ["_e1, _e2"];
-        _e1 = _c select _i;
+        private _e1 = _c select _i;
 
-        _e2 = switch (true) do {
+        private _e2 = switch (true) do {
             case (isNumber _e1): {getNumber _e1};
             case (isText _e1): {getText _e1};
             case (isArray _e1): {getArray _e1};
             case (isClass _e1): {[_e1, _d + 1] call _fnc_logEntries; false};
         };
 
-        if (typeName _e2 != "BOOL") then {
-            if (typeName _e2 == "ARRAY") then {
+        if (!(_e2 isEqualType false)) then {
+            if (_e2 isEqualType []) then {
                 _e2 = toArray str _e2;
                 {
                     if (_x == toArray "[" select 0) then {

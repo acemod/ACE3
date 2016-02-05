@@ -15,19 +15,19 @@ onSetup parameters:
         onPlace = QUOTE(_this call FUNC(AddClacker);false);
         requires[] = {"ACE_Clacker"};
     };
-    class MK16_Transmitter:Command {
+    class MK16_Transmitter: Command {
         isAttachable = 1;
-        displayName = CSTRING(MK16_displayName);
+        displayName = CSTRING(M152_displayName);
         picture = PATHTOF(Data\UI\MK16_Reciever_ca.paa);
         requires[] = {"ACE_M26_Clacker"};
     };
-    class DeadManSwitch:Command {
+    class DeadManSwitch: Command {
         isAttachable = 1;
         displayName = CSTRING(DeadManSwitch_displayName);
         picture = PATHTOF(Data\UI\DeadmanSwitch.paa);
         requires[] = {"ACE_DeadManSwitch"};
     };
-    class Cellphone:Command {
+    class Cellphone: Command {
         isAttachable = 1;
         displayName = CSTRING(cellphone_displayName);
         picture = PATHTOF(Data\UI\Cellphone_UI.paa);

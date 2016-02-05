@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
-            <German>Ohrenstöpsel drinnen</German>
+            <German>Ohrenstöpsel drin</German>
             <Spanish>Tapones puestos</Spanish>
             <Polish>Stopery włożone</Polish>
             <Czech>Špunty v uších</Czech>
@@ -136,7 +136,7 @@
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
-            <Czech>Povolit ztrátu sluchu?</Czech>
+            <Czech>Snižuje schopnost sluchu pokud dojde k jeho poškození hlasitou a blízkou střelbou</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
         </Key>
@@ -153,17 +153,35 @@
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
+            <German>Beeinflusst Zeus-Einheiten</German>
             <Polish>Wpływ na Zeus RC</Polish>
             <Russian>Влияет на юнита Зевса</Russian>
             <Portuguese>Afeta Zeus CR</Portuguese>
             <Spanish>Efecto Zeus RC</Spanish>
+            <Czech>Vliv na Zeus RC</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
+            <German>Erlaubt, durch von Zeus gesteuerten Einheiten, einen Hörschaden davonzutragen.</German>
             <Polish>Aktywuj efekty utraty słuchu dla jednostek kontrolowanych zdalnie przez Zeusa.</Polish>
             <Russian>Контролирует оглушение в бою и звон в ушах. При активации играки могут быть оглушены близкими выстрелами и взрывами при отсутствии защиты для ушей.</Russian>
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
+            <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
+            <English>Add earplugs to units</English>
+            <Polish>Dodaj stopery dla jednostek</Polish>
+            <Russian>Добавлять юнитам беруши</Russian>
+            <Portuguese>Adiciona protetores de ouvido as unidades</Portuguese>
+            <Czech>Přidat špunty jednotce</Czech>
+        </Key>
+        <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
+            <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
+            <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
+            <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
+            <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
+            <Czech>Přidat `ACE_EarPlugs` všem jednotkám které mají zbraň. Můžete vypnout, pokud používáte vlastní výbavu.</Czech>
         </Key>
     </Package>
 </Project>

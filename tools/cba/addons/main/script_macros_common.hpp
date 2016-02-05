@@ -199,7 +199,7 @@ Parameters:
 
 Example:
     (begin example)
-        ERROR("Value not found","value of frog not found in config ...yada...yada...");
+        ERROR("value of frog not found in config ...yada...yada...");
     (end)
 
 Author:
@@ -674,8 +674,9 @@ Author:
     Sickboy
 ------------------------------------------- */
 #define GVAR(var1) DOUBLES(ADDON,var1)
-#define EGVAR(var1,var2) DOUBLES(DOUBLES(PREFIX,var1),var2)
+#define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
 #define QGVAR(var1) QUOTE(GVAR(var1))
+#define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
 
 /* -------------------------------------------
 Macro: GVARMAIN()
@@ -694,6 +695,7 @@ Author:
     Sickboy
 ------------------------------------------- */
 #define GVARMAIN(var1) GVARMAINS(PREFIX,var1)
+#define QGVARMAIN(var1) QUOTE(GVARMAIN(var1))
 // TODO: What's this?
 #define SETTINGS DOUBLES(PREFIX,settings)
 #define CREATELOGIC CREATELOGICS(PREFIX,COMPONENT)

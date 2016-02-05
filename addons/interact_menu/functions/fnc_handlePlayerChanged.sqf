@@ -14,8 +14,7 @@
 params ["_newUnit", "_oldUnit"];
 
 // add to new unit
-private "_ehid";
-_ehid = [_newUnit, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
+private _ehid = [_newUnit, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
     if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
         [GVAR(openedMenuType),true] call FUNC(keyUp);
     };

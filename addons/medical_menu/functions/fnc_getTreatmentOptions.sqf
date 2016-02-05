@@ -17,10 +17,11 @@
  */
 #include "script_component.hpp"
 
-private "_actions";
 params ["_player", "_target", "_name"];
 
-if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitwith {[]};
+private ["_actions", "_collectedActions", "_bodyPart"];
+
+if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {[]};
 
 _actions = if (EGVAR(medical,level) == 2) then {
     GVAR(actionsAdvanced);

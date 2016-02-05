@@ -12,13 +12,14 @@
  */
 #include "script_component.hpp"
 
-params ["_weapon"];
+params [["_weapon", "", [""]]];
 
-private "_muzzles";
-_muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+private _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
 
-if ("this" in _muzzles) then {
-    _muzzles set [_muzzles find "this", _weapon];
-};
+{
+    if (_x == "this") then {
+        _muzzles set [_forEachIndex, _weapon];
+    };
+} forEach _muzzles;
 
 _muzzles

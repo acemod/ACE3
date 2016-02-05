@@ -15,21 +15,18 @@
 ///////////////
 // check addons
 ///////////////
-private "_version";
-_version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
+private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
 ACE_LOGINFO_1("ACE is version %1.",_version);
 
-private "_addons";
-//_addons = activatedAddons; // broken with High-Command module, see #2134
-_addons = "true" configClasses (configFile >> "CfgPatches");//
+//private _addons = activatedAddons; // broken with High-Command module, see #2134
+private _addons = "true" configClasses (configFile >> "CfgPatches");//
 _addons = [_addons, {toLower configName _this}] call FUNC(map);//
 _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
-        private "_errorMsg";
-        _errorMsg = format ["File %1.pbo is outdated.", _x];
+        private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
         ACE_LOGERROR(_errorMsg);
 
@@ -44,12 +41,10 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 // check dlls
 ///////////////
 {
-    private "_versionEx";
-    _versionEx = _x callExtension "version";
+    private _versionEx = _x callExtension "version";
 
     if (_versionEx == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
+        private _errorMsg = format ["Extension %1.dll not installed.", _x];
 
         ACE_LOGERROR(_errorMsg);
 
@@ -84,8 +79,7 @@ if (isMultiplayer) then {
             (_this select 0) params ["_version", "_addons"];
 
             if (_version != GVAR(ServerVersion)) then {
-                private "_errorMsg";
-                _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
                 ACE_LOGERROR(_errorMsg);
 

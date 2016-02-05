@@ -25,6 +25,9 @@ PREP(updateSpectatableSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
 
+// Reset the stored display
+SETUVAR(GVAR(interface),displayNull);
+
 // Permanent variables
 GVAR(availableModes) = [0,1,2];
 GVAR(availableSides) = [west,east,resistance,civilian];
@@ -35,7 +38,7 @@ GVAR(camDistance) = 10;
 GVAR(camMode) = 0;
 GVAR(camPan) = 0;
 GVAR(camPos) = ATLtoASL [worldSize * 0.5, worldSize * 0.5, 20];
-GVAR(camSpeed) = 2.5;
+GVAR(camSpeed) = 1.5;
 GVAR(camTilt) = -10;
 GVAR(camUnit) = objNull;
 GVAR(camVision) = -2;

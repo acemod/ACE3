@@ -1,10 +1,10 @@
 /*
  * Author: commy2 and esteldunedain
- *
  * Handle fire of local vehicle weapons creating overpressure zones
+ * Called from firedEHOP, only for local vehicles
  *
  * Arguments:
- * 0: Unit that fired <OBJECT>
+ * 0: Vehicle that fired <OBJECT>
  * 1: Weapon fired <STRING>
  * 2: Muzzle <STRING>
  * 3: Mode <STRING>
@@ -14,33 +14,35 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [tank, "cannon_125mm", "cannon_125mm", "player", "Sh_125mm_APFSDS_T_Green", "24Rnd_125mm_APFSDS_T_Green", projectile] call ace_overpressure_fnc_fireOverpressureZone
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_firer", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-// Prevent AI from causing overpressure damage
-if !([gunner _firer] call EFUNC(common,isPlayer)) exitWith {};  //@todo non-maingun turrets?
+params ["_firer", "_weapon", "_muzzle", "", "_ammo", "_magazine", "_projectile"];
+TRACE_6("params",_firer,_weapon,_muzzle,_ammo,_magazine,_projectile);
 
-private ["_position", "_direction"];
+// Prevent AI from causing overpressure damage (NOTE: Vehicle is local, but turret gunner may not be)
+if !([gunner _firer] call EFUNC(common,isPlayer)) exitWith {};
 
-_position = getPosASL _projectile;
-_direction = vectorDir _projectile;
-
-private ["_var", "_varName", "_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+private _position = getPosASL _projectile;
+private _direction = vectorDir _projectile;
 
 // Bake variable name and check if the variable exists, call the caching function otherwise
-_varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-_var = if (isNil _varName) then {
+private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
+private _var = if (isNil _varName) then {
     [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
 } else {
     missionNameSpace getVariable _varName;
 };
 _var params["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
+TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
 // Damage to others
-private "_affected";
-_affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
+private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
 ["overpressure", _affected, [_firer, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
@@ -52,8 +54,7 @@ _affected = getPos _projectile nearEntities ["CAManBase", _dangerZoneRange];
         [1,0,0,1]
     ] call EFUNC(common,addLineToDebugDraw);
 
-    private "_ref";
-    _ref = _direction call EFUNC(common,createOrthonormalReference);
+    private _ref = _direction call EFUNC(common,createOrthonormalReference);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
         [1,1,0,1]

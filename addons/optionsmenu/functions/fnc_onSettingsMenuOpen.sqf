@@ -44,7 +44,7 @@ GVAR(clientSideColors) = [];
 [{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
 
 disableSerialization;
-_menu = uiNamespace getvariable "ACE_settingsMenu";
+_menu = uiNamespace getVariable "ACE_settingsMenu";
 (_menu displayCtrl 1002) ctrlEnable false;
 (_menu displayCtrl 1003) ctrlEnable false;
 

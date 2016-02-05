@@ -4,14 +4,15 @@ class ACE_Repair {
             displayName = CSTRING(ReplaceWheel);
             displayNameProgress = CSTRING(ReplacingWheel);
 
-            locations[] = {"All"};
+            repairLocations[] = {"All"};
             requiredEngineer = QGVAR(engineerSetting_Wheel);
             repairingTime = 10;
             repairingTimeSelfCoef = 1;
             items = QGVAR(wheelRepairRequiredItems);
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
-
+            claimObjects[] = {{"ACE_Wheel"}};
+            
             callbackSuccess = QUOTE(call FUNC(doReplaceWheel));
             callbackFailure = "";
             callbackProgress = "";
@@ -27,15 +28,18 @@ class ACE_Repair {
             displayNameProgress = CSTRING(RemovingWheel);
             condition = QUOTE(call FUNC(canRemove));
             callbackSuccess = QUOTE(call FUNC(doRemoveWheel));
+            claimObjects[] = {};
         };
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
             condition = QUOTE(call FUNC(canMiscRepair));
-            requiredEngineer = 0;
+            requiredEngineer = QGVAR(engineerSetting_Repair);
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
             items[] = {"ToolKit"};
+            itemConsumed = QGVAR(consumeItem_ToolKit);
+            claimObjects[] = {};
         };
         class RepairTrack: MiscRepair {
             displayName = CSTRING(Repairing);
@@ -43,6 +47,8 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canRepairTrack));
             callbackSuccess = QUOTE(call FUNC(doRepairTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
+            claimObjects[] = {{"ACE_Track"}};
+            itemConsumed = 0;
         };
         class RemoveTrack: MiscRepair {
             displayName = CSTRING(RemoveTrack);
@@ -50,6 +56,7 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canRemove));
             callbackSuccess = QUOTE(call FUNC(doRemoveTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
+            itemConsumed = 0;
         };
         class ReplaceTrack: RemoveTrack {
             displayName = CSTRING(ReplaceTrack);
@@ -57,6 +64,7 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canReplaceTrack));
             callbackSuccess = QUOTE(call FUNC(doReplaceTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
+            claimObjects[] = {{"ACE_Track"}};
         };
         class FullRepair: MiscRepair {
             displayName = CSTRING(fullRepair);
@@ -66,6 +74,7 @@ class ACE_Repair {
             repairingTime = 30;
             condition = "damage _target > 0";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
+            itemConsumed = QGVAR(consumeItem_ToolKit);
         };
     };
 };
