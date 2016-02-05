@@ -1,6 +1,6 @@
 /*
  * Author: bux578, commy2
- * Applies gear to unit.
+ * Applies gear to unit. It must be called in the machine in which the unit is local.
  *
  * Arguments:
  * 0: Unit <OBJECT>
