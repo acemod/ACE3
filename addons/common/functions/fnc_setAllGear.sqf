@@ -20,6 +20,10 @@
 
 params ["_unit", "_allGear", ["_clearAttachments", false], ["_clearBackpack", false]];
 
+if (!local _unit) exitWith {
+    ACE_LOGWARNING_1("setAllGear - %1 has to be local.",_unit);
+};
+
 // remove all starting gear of a player
 removeAllWeapons _unit;
 removeGoggles _unit;
