@@ -349,9 +349,9 @@
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
         </Key>
-        <key ID="STR_ACE_Interaction_GetOut">
+        <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
-        </key>
+        </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
             <German>Gruppenverwaltung</German>
