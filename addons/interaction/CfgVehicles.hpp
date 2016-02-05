@@ -1,4 +1,4 @@
-#define MACRO_PORTABLELIGHTSACTIONS(var1) \
+#define MACRO_PORTABLE_LIGHTS_ACTION(var1) \
     class ACE_Actions { \
         class ACE_MainActions { \
             displayName = CSTRING(MainAction); \
@@ -554,25 +554,25 @@ class CfgVehicles {
         scope = 2;
         GVAR(switchLampClass) = "Land_PortableLight_single_off_F";
         XEH_ENABLED;
-        MACRO_PORTABLELIGHTSACTIONS(TurnOff);
+        MACRO_PORTABLE_LIGHTS_ACTION(TurnOff);
     };
     class Land_PortableLight_single_off_F: Land_PortableLight_single_F {
         scope = 1;
         GVAR(switchLampClass) = "Land_PortableLight_single_F";
         GVAR(switchLampOff) = 1;
-        MACRO_PORTABLELIGHTSACTIONS(TurnOn);
+        MACRO_PORTABLE_LIGHTS_ACTION(TurnOn);
     };
     class Land_PortableLight_double_F: Land_PortableLight_single_F {
         scope = 2;
         GVAR(switchLampClass) = "Land_PortableLight_double_off_F";
         XEH_ENABLED;
-        MACRO_PORTABLELIGHTSACTIONS(TurnOff);
+        MACRO_PORTABLE_LIGHTS_ACTION(TurnOff);
     };
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
         GVAR(switchLampClass) = "Land_PortableLight_double_F";
         GVAR(switchLampOff) = 1;
-        MACRO_PORTABLELIGHTSACTIONS(TurnOn);
+        MACRO_PORTABLE_LIGHTS_ACTION(TurnOn);
     };
     class RoadCone_F: ThingX {
         class ACE_Actions {
