@@ -141,6 +141,13 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.5;
                 };
+                class ACE_GetOut {
+                    displayName = CSTRING(GetOut);
+                    condition = QUOTE(!(isNull objectParent _target) && [ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    statement = QUOTE([_target] call EFUNC(common,unloadPerson));
+                    showDisabled = 0;
+                    priority = 2.6;
+                };
             };
 
             class ACE_Torso {
