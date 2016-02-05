@@ -124,7 +124,4 @@ class CfgVehicles {
         GVAR(dragPosition[]) = {0,1.2,0};
         GVAR(dragDirection) = 180;
     };
-    class Land_PortableLight_single_off_F: Land_PortableLight_single_F {};
-    class Land_PortableLight_double_F: Land_PortableLight_single_F {};
-    class Land_PortableLight_double_off_F: Land_PortableLight_double_F {};
 };

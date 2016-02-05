@@ -28,11 +28,11 @@ private _hitPointsDamage = [];
     nil
 } count _reflectors;
 
-if(_isOn) then {
-    //turn off this lamp
-    {_lamp sethit [_x select 0, (_x select 1) max DISABLED_LAMP_DMG];nil} count _hitPointsDamage;
+//if lamp is on turn it off
+private _eventName = if(_isOn) then {"lampTurnOff"} else {"lampTurnOn"};
+if(local _lamp) then {
+    [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call EFUNC(common,localEvent);
 } else {
-    //turn on this lamp
-    {if((_x select 1) == DISABLED_LAMP_DMG) then {_lamp sethit [_x select 0, 0];};nil} count _hitPointsDamage;
+    [_eventName, [_lamp], [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call EFUNC(common,targetEvent);
 };
 _lamp setVariable ["ACE_lampOn", !_isOn, true];

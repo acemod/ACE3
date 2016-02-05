@@ -693,9 +693,11 @@
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
+			<Polish>Włącz</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
+			<Polish>Wyłącz</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
