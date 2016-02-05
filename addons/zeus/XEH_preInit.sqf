@@ -17,8 +17,6 @@ PREP(moduleSetMedicalFacility);
 PREP(moduleSurrender);
 PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
-PREP(moduleDisableSuppression);
-PREP(moduleSetSuppression);
 
 if (isServer) then {
     ["zeusUnitAssigned", FUNC(handleZeusUnitAssigned)] call EFUNC(common,addEventHandler);
