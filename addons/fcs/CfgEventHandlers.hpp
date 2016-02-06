@@ -76,36 +76,3 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
-
-class Extended_FiredBIS_EventHandlers {
-    class Tank {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Car {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Helicopter {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Plane {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Ship_F {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class StaticWeapon {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-};

@@ -1,9 +1,9 @@
 /*
  * Author: KoffeinFlummi
- * Adjusts the direction of a shell.
+ * Adjusts the direction of a shell. Only gets called if the gunner is a player
  *
  * Arguments:
- * -> arguments of the FiredBIS EH
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
@@ -12,9 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine", "_projectile"];
-
-private _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
 private _turret = _gunner call EFUNC(common,getTurretIndex);
 
 // Exit if the unit isn't a player
@@ -36,7 +33,7 @@ private _offset = 0;
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
-// Remove the platform velocity 
+// Remove the platform velocity
 if (vectorMagnitude velocity _vehicle > 2) then {
     private _sumVelocity = (velocity _projectile) vectorDiff (velocity _vehicle);
 
