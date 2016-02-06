@@ -41,10 +41,11 @@ GVAR(Medical_ItemList) = [];
     ("true" configClasses (configFile >> QEGVAR(Medical,Actions) >> "Advanced"))
 );
 
+// remove all numbers from list
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) select {_x isEqualType ""};
+
 // make list case insensitive
-GVAR(Medical_ItemList) = GVAR(Medical_ItemList) apply {
-    if (_x isEqualType "") then {toLower _x};
-};
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) apply {toLower _x};
 
 // filter duplicates
 GVAR(Medical_ItemList) = GVAR(Medical_ItemList) arrayIntersect GVAR(Medical_ItemList);
