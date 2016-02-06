@@ -3,13 +3,7 @@
  * Replace the disposable launcher with the used dummy.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * Nothing
@@ -20,9 +14,6 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-params ["_unit", "_weapon", "", "", "", "", "_projectile"];
-TRACE_3("params",_unit,_weapon,_projectile);
 
 if (!local _unit || {_weapon != secondaryWeapon _unit})  exitWith {};
 
