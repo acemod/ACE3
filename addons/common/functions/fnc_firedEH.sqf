@@ -21,7 +21,7 @@
 BEGIN_COUNTER(firedEH);
 
 params ["_firedEHUnit", "_firedEHWeapon", "_firedEHMuzzle", "_firedEHMode", "_firedEHAmmo", "_firedEHMagazine", "_firedEHProjectile"];
-TRACE_5("firedEH:",_firedEHUnit, _firedEHWeapon, _firedEHMuzzle, _firedEHMode, _firedEHAmmo, _firedEHMagazine, _firedEHProjectile);
+TRACE_7("firedEH:",_firedEHUnit, _firedEHWeapon, _firedEHMuzzle, _firedEHMode, _firedEHAmmo, _firedEHMagazine, _firedEHProjectile);
 
 if (_firedEHUnit isKindOf "CAManBase") then {
     // The unit it on foot
