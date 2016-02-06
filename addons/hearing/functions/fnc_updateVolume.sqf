@@ -24,7 +24,7 @@ if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0.05;
-player sideChat format ["Vol: %1, Def: %2, DeltaDef: %3", GVAR(volume), GVAR(deafnessDV), GVAR(deafnessDV) - GVAR(deafnessPrior)];
+TRACE_3("",GVAR(volume),GVAR(deafnessDV),GVAR(deafnessDV) - GVAR(deafnessPrior));
 
 if (!_justUpdateVolume) then {
     // Ring if we got a big increase in the last second or enough accumulated damage
