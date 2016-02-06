@@ -198,4 +198,13 @@
 
 #define ACE_DEPRECATED(arg1,arg2,arg3) ACE_LOGWARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
+#define PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
+    format ['%1: A=%2, B=%3, C=%4, D=%5, E=%6, F=%7, G=%8, H=%9, I=%10 J=%11', MESSAGE, RETNIL(A), RETNIL(B), RETNIL(C), RETNIL(D), RETNIL(E), RETNIL(F), RETNIL(G), RETNIL(H), RETNIL(I), RETNIL(J)]
+#ifdef DEBUG_MODE_FULL
+#define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) \
+    [THIS_FILE_, __LINE__, PFORMAT_10(MESSAGE,A,B,C,D,E,F,G,H,I,J)] call CBA_fnc_log
+#else
+   #define TRACE_10(MESSAGE,A,B,C,D,E,F,G,H,I,J) /* disabled */
+#endif
+
 #include "script_debug.hpp"
