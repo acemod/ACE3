@@ -36,6 +36,7 @@ if (_unit isKindOf "CAManBase") then {
     };
 } else {
     // The unit is a vehicle
+    private _vehicle = _unit;
 
     // Get the gunner and turret path.
     // Code based on FUNC(getGunner), extracted for efficency.
