@@ -17,14 +17,14 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     _playerSide = call EFUNC(common,playerSide);
 
     if !(GVAR(BFT_HideAiGroups)) then {
-        _groupsToDrawMarkers = [allGroups, {side _this == _playerSide}] call EFUNC(common,filter);
+        _groupsToDrawMarkers = allGroups select {side _x == _playerSide};
     } else {
-        _groupsToDrawMarkers = [allGroups, {
+        _groupsToDrawMarkers = allGroups select {
             _anyPlayers = {
                 [_x] call EFUNC(common,isPlayer);
-            } count units _this;
-            (side _this == _playerSide) && _anyPlayers > 0
-        }] call EFUNC(common,filter);
+            } count units _x;
+            (side _x == _playerSide) && _anyPlayers > 0
+        }; // @todo, simplify this
     };
 
     {

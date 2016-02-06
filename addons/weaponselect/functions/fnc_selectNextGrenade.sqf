@@ -57,9 +57,9 @@ private _nextGrenade = _grenades select _nextGrenadeIndex;
 if (_currentGrenade == _nextGrenade) exitWith {false};
 
 // current best method to select a grenade: remove all grenades except the one you want to select, then add them back
-private _uniformGrenades =  [uniformItems  _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
-private _vestGrenades =     [vestItems     _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
-private _backpackGrenades = [backpackItems _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
+private _uniformGrenades =  uniformItems  _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // remove all grenades except those we are switching to --> this breaks the selector
 {_unit removeItemFromUniform  _x; false} count _uniformGrenades;

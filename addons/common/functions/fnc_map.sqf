@@ -17,7 +17,7 @@
 
 params [["_array", [], [[]]], ["_code", {}, [{}]]];
 
-ACE_DEPRECATED("ace_common_fnc_filter","3.7.0","apply");
+ACE_DEPRECATED("ace_common_fnc_map","3.7.0","apply");
 
 // copy array to not alter the original one
 _array = + _array;

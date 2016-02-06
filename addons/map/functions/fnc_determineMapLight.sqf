@@ -95,11 +95,12 @@ TRACE_1("Player is on foot or in an open vehicle","");
 
 
 // Using chemlights
-_nearObjects = [_unit nearObjects ["SmokeShell", 4], {
-    alive _this && {(typeOf _this == "Chemlight_red") || {
-                    (typeOf _this == "Chemlight_green") || {
-                    (typeOf _this == "Chemlight_blue") || {
-                    (typeOf _this == "Chemlight_yellow")}}}}}] call EFUNC(common,filter);
+_nearObjects = (_unit nearObjects ["SmokeShell", 4]) select {
+    alive _x && {(typeOf _x == "Chemlight_red") || {
+                    (typeOf _x == "Chemlight_green") || {
+                    (typeOf _x == "Chemlight_blue") || {
+                    (typeOf _x == "Chemlight_yellow")}}}}}; // @todo, simplify this
+
 if (count (_nearObjects) > 0) then {
     _light = _nearObjects select 0;
 
