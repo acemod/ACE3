@@ -1,6 +1,6 @@
 /*
  * Author: Garth 'L-H' de Wet, commy2
- * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements.
+ * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements. Called from the unified fired EH only for the local player.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -13,9 +13,8 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon"];
-
-if (_unit != ACE_player) exitWith {true};
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 // no dust in rain
 if (rain > 0.1) exitWith {true};
