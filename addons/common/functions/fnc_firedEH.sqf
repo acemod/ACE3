@@ -36,7 +36,23 @@ if (_unit isKindOf "CAManBase") then {
     };
 } else {
     // The unit is a vehicle
-    private _gunner = [_unit, _weapon] call EFUNC(common,getGunner);
+
+    // Get the gunner and turret path.
+    // Code based on FUNC(getGunner), extracted for efficency.
+    private _gunner = objNull;
+    private _turret = [];
+    {
+        if (_weapon in (_unit weaponsTurret _x)) exitWith {
+            _gunner = _unit turretUnit _x;
+            _turret = _x;
+        };
+        false
+    } count allTurrets [_unit, true];
+    // Ensure that at least the pilot is returned if there is no gunner
+    if (isManualFire _unit && {isNull _gunner}) then {
+        _gunner = driver _unit;
+    };
+
     if (_gunner == ACE_player) then {
         ["firedPlayerVehicle", this] call FUNC(localEvent);
     } else {

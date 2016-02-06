@@ -12,8 +12,6 @@
  */
 #include "script_component.hpp"
 
-private _turret = _gunner call EFUNC(common,getTurretIndex);
-
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
 private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
