@@ -108,6 +108,7 @@
             <Hungarian>Fülcsengés letiltása</Hungarian>
             <Italian>Disabilita i fischi nelle orecchie</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
+        </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
             <English>Remove tinnitus effect when the player takes hearing damage</English>
         </Key>
