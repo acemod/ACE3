@@ -1,6 +1,6 @@
 /*
  * Author: bux, commy2
- * Replace the disposable launcher with the used dummy.
+ * Replace the disposable launcher with the used dummy. Called from the unified fired EH.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
@@ -14,6 +14,9 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 if (!local _unit || {_weapon != secondaryWeapon _unit})  exitWith {};
 

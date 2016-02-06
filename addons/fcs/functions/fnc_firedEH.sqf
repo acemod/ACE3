@@ -1,6 +1,6 @@
 /*
  * Author: KoffeinFlummi
- * Adjusts the direction of a shell. Only gets called if the gunner is a player
+ * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
@@ -11,6 +11,9 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
 private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
