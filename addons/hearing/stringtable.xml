@@ -97,7 +97,7 @@
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>Нет места в инвентаре</Russian>
         </Key>
-        <Key ID="STR_ACE_Hearing_DisableEarRinging">
+        <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
             <French>Désactiver le bourdonnement</French>
             <Spanish>Desactivar zumbido de oídos</Spanish>
@@ -108,6 +108,8 @@
             <Hungarian>Fülcsengés letiltása</Hungarian>
             <Italian>Disabilita i fischi nelle orecchie</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
+        <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
+            <English>Remove tinnitus effect when the player takes hearing damage</English>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -120,10 +122,10 @@
             <Hungarian>Hallás</Hungarian>
             <Russian>Слух</Russian>
         </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
-            <English>Combat Deafness</English>
+        <Key ID="STR_ACE_Hearing_EnableCombatDeafness_DisplayName">
+            <English>Enable Combat Deafness</English>
             <Polish>Wł. głuchotę bojową</Polish>
-            <Spanish>¿Habilitar sordera de combate?</Spanish>
+            <Spanish>Habilitar sordera de combate</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
@@ -131,7 +133,7 @@
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Оглушение</Russian>
         </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
+        <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>

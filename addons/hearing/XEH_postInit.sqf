@@ -9,12 +9,7 @@ GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
 GVAR(volume) = 1;
 GVAR(playerVehAttenuation) = 1;
-
-GVAR(beep) = false;
-GVAR(beep2) = false;
-GVAR(time2) = 0;
 GVAR(time3) = 0;
-GVAR(time4) = 0;
 
 ["SettingsInitialized", {
     // Spawn volume updating process
@@ -30,10 +25,5 @@ GVAR(time4) = 0;
     GVAR(deafnessDV) = 0;
     GVAR(deafnessPrior) = 0;
     ACE_player setVariable [QGVAR(deaf), false];
-
-    GVAR(beep) = false;
-    GVAR(beep2) = false;
-    GVAR(time2) = 0;
     GVAR(time3) = 0;
-    GVAR(time4) = 0;
 }] call EFUNC(common,addEventhandler);

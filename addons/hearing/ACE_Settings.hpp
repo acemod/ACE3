@@ -2,8 +2,8 @@ class ACE_Settings {
     class GVAR(EnableCombatDeafness) {
         value = 1;
         typeName = "BOOL";
-        displayName = CSTRING(CombatDeafness_DisplayName);
-        description = CSTRING(CombatDeafness_Description);
+        displayName = CSTRING(EnableCombatDeafness_DisplayName);
+        description = CSTRING(EnableCombatDeafness_Description);
     };
     class GVAR(EarplugsVolume) {
         value = 0.5;
@@ -17,7 +17,8 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
-        displayName = CSTRING(DisableEarRinging);
+        displayName = CSTRING(DisableEarRinging_DisplayName);
+        description = CSTRING(DisableEarRinging_Description);
     };
     class GVAR(enabledForZeusUnits) {
         value = 1;
