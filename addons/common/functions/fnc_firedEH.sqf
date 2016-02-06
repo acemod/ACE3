@@ -20,15 +20,15 @@
 
 BEGIN_COUNTER(firedEH);
 
-params ["_firedEHUnit", "_firedEHWeapon", "_firedEHMuzzle", "_firedEHMode", "_firedEHAmmo", "_firedEHMagazine", "_firedEHProjectile"];
-TRACE_7("firedEH:",_firedEHUnit, _firedEHWeapon, _firedEHMuzzle, _firedEHMode, _firedEHAmmo, _firedEHMagazine, _firedEHProjectile);
+params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
 
-if (_firedEHUnit isKindOf "CAManBase") then {
+if (_unit isKindOf "CAManBase") then {
     // The unit it on foot
-    if (_firedEHUnit == ACE_player) then {
+    if (_unit == ACE_player) then {
         ["firedPlayer", this] call FUNC(localEvent);
     } else {
-        if ([_firedEHUnit] call EFUNC(common,isPlayer)) then {
+        if ([_unit] call EFUNC(common,isPlayer)) then {
             ["firedPlayerNonLocal", this] call FUNC(localEvent);
         } else {
             ["firedNonPlayer", this] call FUNC(localEvent);
@@ -36,11 +36,11 @@ if (_firedEHUnit isKindOf "CAManBase") then {
     };
 } else {
     // The unit is a vehicle
-    private _firedEHGunner = [_firedEHUnit, _firedEHWeapon] call EFUNC(common,getGunner);
-    if (_firedEHGunner == ACE_player) then {
+    private _Gunner = [_unit, _weapon] call EFUNC(common,getGunner);
+    if (_Gunner == ACE_player) then {
         ["firedPlayerVehicle", this] call FUNC(localEvent);
     } else {
-        if ([_firedEHGunner] call EFUNC(common,isPlayer)) then {
+        if ([_Gunner] call EFUNC(common,isPlayer)) then {
             ["firedPlayerVehicleNonLocal", this] call FUNC(localEvent);
         } else {
             ["firedNonPlayerVehicle", this] call FUNC(localEvent);
