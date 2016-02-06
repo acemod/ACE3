@@ -36,11 +36,11 @@ if (_unit isKindOf "CAManBase") then {
     };
 } else {
     // The unit is a vehicle
-    private _Gunner = [_unit, _weapon] call EFUNC(common,getGunner);
-    if (_Gunner == ACE_player) then {
+    private _gunner = [_unit, _weapon] call EFUNC(common,getGunner);
+    if (_gunner == ACE_player) then {
         ["firedPlayerVehicle", this] call FUNC(localEvent);
     } else {
-        if ([_Gunner] call EFUNC(common,isPlayer)) then {
+        if ([_gunner] call EFUNC(common,isPlayer)) then {
             ["firedPlayerVehicleNonLocal", this] call FUNC(localEvent);
         } else {
             ["firedNonPlayerVehicle", this] call FUNC(localEvent);
