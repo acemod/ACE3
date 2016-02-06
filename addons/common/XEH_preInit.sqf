@@ -256,7 +256,8 @@ PREP(addCuratorUnloadEventhandler);
 PREP(fixCrateContent);
 
 //ACE events global variables
-GVAR(events) = [[],[]];
+GVAR(eventsLocation) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(eventsLocation) setText QGVAR(eventsLocation);
 
 PREP(globalEvent);
 PREP(_handleNetEvent);
