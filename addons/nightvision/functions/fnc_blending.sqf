@@ -22,7 +22,7 @@ private "_player";
 _player = ACE_player;
 
 //If our vehicle didn't shoot, or we're not in NVG mode, exit
-if (currentVisionMode _player) != 1} exitWith {};
+if ((currentVisionMode _player) != 1) exitWith {};
 
 private["_darkness", "_nvgBrightnessCoef", "_silencer", "_visibleFire", "_visibleFireCoef", "_visibleFireTime", "_visibleFireTimeCoef"];
 
