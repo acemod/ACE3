@@ -14,6 +14,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
 //@todo: DFUNC(actionDragUnit) doesn't exist
 ["actionDragUnit", DFUNC(actionDragUnit)] call EFUNC(common,addEventHandler);
+["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
     if (local (_this select 0)) then {

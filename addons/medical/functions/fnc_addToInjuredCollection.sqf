@@ -20,7 +20,7 @@ _force = if (count _this > 1) then {_this select 1} else {false};
 if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
 
     if !(local _unit) exitwith {
-        [[_unit, _force], QUOTE(DFUNC(addToInjuredCollection)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+        ["addToInjuredCollection", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
     };
 
     if ((_unit getvariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitwith{};
@@ -31,7 +31,7 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
         _unit = (_this select 0) select 0;
         _interval = time - ((_this select 0) select 1);
         (_this select 0) set [1, time];
-        
+
         if (!alive _unit || !local _unit) then {
            [_this select 1] call CBA_fnc_removePerFrameHandler;
            if (!local _unit) then {
