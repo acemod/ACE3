@@ -23,7 +23,6 @@ if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
 
-<<<<<<< HEAD
 if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitwith {
     if (local _patient) then {
         ["useItem", [_patient, _item]] call EFUNC(common,localEvent);
