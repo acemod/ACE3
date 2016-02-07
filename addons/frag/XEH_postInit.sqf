@@ -14,12 +14,12 @@ if(isServer) then {
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-    ["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-    ["firedNonPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-    ["firedPlayerVehicle", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-    ["firedPlayerVehicleNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-    ["firedNonPlayerVehicle", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+    ["firedPlayer", DFUNC(fired)] call EFUNC(common,addEventHandler);
+    ["firedPlayerNonLocal", DFUNC(fired)] call EFUNC(common,addEventHandler);
+    ["firedNonPlayer", DFUNC(fired)] call EFUNC(common,addEventHandler);
+    ["firedPlayerVehicle", DFUNC(fired)] call EFUNC(common,addEventHandler);
+    ["firedPlayerVehicleNonLocal", DFUNC(fired)] call EFUNC(common,addEventHandler);
+    ["firedNonPlayerVehicle", DFUNC(fired)] call EFUNC(common,addEventHandler);
 
     [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
