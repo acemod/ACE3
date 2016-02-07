@@ -29,7 +29,7 @@ _damage = _this select 2;
 
 // Unit isn't local, give function to machine where it is.
 if !(local _unit) exitWith {
-    [_this, QUOTE(DFUNC(setHitPointDamage)), _unit] call EFUNC(common,execRemoteFnc);
+    ["setHitPointDamage", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 // Check if overall damage adjustment is disabled
