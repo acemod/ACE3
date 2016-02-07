@@ -22,7 +22,7 @@ if (count _this >= 2) then {
 
 if (!alive _unit) exitwith{true};
 if (!local _unit) exitwith {
-    [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
     false;
 };
 
