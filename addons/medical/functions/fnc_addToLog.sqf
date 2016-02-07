@@ -16,14 +16,11 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
-_unit = _this select 0;
-_type = _this select 1;
-_message = _this select 2;
-_arguments = _this select 3;
+params ["_unit", "_type", "_message", "_arguments"];
+private ["_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
 
 if (!local _unit) exitwith {
-    [_this, QUOTE(DFUNC(addToLog)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["addToLog", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 _lastNumber = date select 4;
