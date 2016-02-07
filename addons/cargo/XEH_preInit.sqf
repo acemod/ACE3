@@ -13,6 +13,8 @@ PREP(handleDestroyed);
 PREP(initObject);
 PREP(initVehicle);
 PREP(loadItem);
+PREP(makeLoadable);
+PREP(moduleMakeLoadable);
 PREP(moduleSettings);
 PREP(onMenuOpen);
 PREP(startLoadIn);
@@ -21,5 +23,6 @@ PREP(unloadItem);
 PREP(validateCargoSpace);
 
 GVAR(initializedItemClasses) = [];
+GVAR(initializedVehicleClasses) = [];
 
 ADDON = true;

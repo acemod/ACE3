@@ -49,6 +49,20 @@ class CfgWeapons {
         GVAR(damage) = 0.85;
     };
 
+    class cannon_125mm: CannonCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 90;
+        GVAR(range) = 50;
+        GVAR(damage) = 0.85;
+    };
+
+    class cannon_105mm: CannonCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 90;
+        GVAR(range) = 50;
+        GVAR(damage) = 0.85;
+    };
+
     class mortar_155mm_AMOS: CannonCore {
         GVAR(priority) = 1;
         GVAR(angle) = 90;

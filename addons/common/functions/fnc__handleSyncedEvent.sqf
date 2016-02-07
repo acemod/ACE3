@@ -5,7 +5,7 @@
  * Arguments [Client] :
  * 0: eventName <STRING>
  * 1: arguments <ARRAY>
- * 2: ttl <SCALAR>
+ * 2: ttl <NUMBER>
  *
  * Return Value:
  * Boolean of success <BOOL>

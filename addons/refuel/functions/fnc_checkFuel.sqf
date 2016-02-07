@@ -15,17 +15,17 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_fuel"];
-params ["_unit", "_target"];
 
-_fuel = [_target] call FUNC(getFuel);
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+
+private _fuel = [_target] call FUNC(getFuel);
 
 [
     5,
     [_unit, _target, _fuel],
     {
         params ["_args"];
-        _args params ["_unit", "_target", "_fuel"];
+        _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_fuel", 0, [0]]];
         if (_fuel > 0 ) then {
             ["displayTextStructured", [_unit], [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit]] call EFUNC(common,targetEvent);
         } else {

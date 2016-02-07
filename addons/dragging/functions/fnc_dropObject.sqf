@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drop a dragged object.
  *
  * Arguments:
@@ -10,17 +9,20 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_dropObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
-private "_inBuilding";
-_inBuilding = [_unit] call FUNC(isObjectOnObject);
+private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 if !(_unit getVariable ["ACE_isUnconscious", false]) then {
     // play release animation
@@ -47,6 +49,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
+    TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };
 
 // hide mouse hint

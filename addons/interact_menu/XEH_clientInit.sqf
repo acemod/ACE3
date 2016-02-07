@@ -79,8 +79,7 @@ GVAR(ParsedTextCached) = [];
 
 //Debug to help end users identify mods that break CBA's XEH
 [{
-    private ["_badClassnames"];
-    _badClassnames = [];
+    private _badClassnames = [];
     {
         //Only check Land objects (WeaponHolderSimulated show up in `vehicles` for some reason)
         if ((_x isKindOf "Land") && {(isNil (format [QGVAR(Act_%1), typeOf _x])) || {isNil (format [QGVAR(SelfAct_%1), typeOf _x])}}) then {

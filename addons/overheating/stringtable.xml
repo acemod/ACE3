@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
-        <Key ID="STR_ACE_Overheating_SettingDisplayTextName">
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
             <Spanish>Mostrar texto al encasquillarse</Spanish>
@@ -13,7 +13,7 @@
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
         </Key>
-        <Key ID="STR_ACE_Overheating_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
@@ -24,6 +24,24 @@
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
+            <English>Overheating Particle Effects</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_description">
+            <English>Show particle effects when weapon overheats</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
+            <English>Overheating Particle Effects for everyone</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
+            <English>Show particle effects when other players weapon overheats</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
+            <English>Overheating Dispersion</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
+            <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>

@@ -43,7 +43,7 @@
             <Polish>Pozostałe miejsce: %1</Polish>
             <Portuguese>Espaço de carga restante: %1</Portuguese>
             <Russian>Осталось мест: %1</Russian>
-            <Czech>Volný prostor: %1</Czech>
+            <Czech>Zbývající prostor: %1</Czech>
             <Spanish>Espacio de carga restante: %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
@@ -62,6 +62,7 @@
             <Portuguese>Ativar o módulo de carregamento de carga</Portuguese>
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
+            <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -132,6 +133,15 @@
             <Polish>%1&lt;br/&gt;nie mógł zostać rozładowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
+            <English>Make Object Loadable</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_description">
+            <English>Sets the synced object as loadable by the cargo system.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
+            <English>Object's Size</English>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKey">
@@ -10,7 +10,7 @@
             <Italian>Mostra informazioni sul vento</Italian>
             <German>Zeige Windinformationen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
-            <Czech>Zobrazit informace o větru</Czech>
+            <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar informação do vento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
