@@ -49,6 +49,9 @@
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Inject_Adenosine">
+            <English>Inject Adenosine</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
             <German>Atropin injizieren</German>
@@ -240,6 +243,9 @@
             <Hungarian>Epinefrin beadása ...</Hungarian>
             <Portuguese>Injetando Epinefrina ...</Portuguese>
             <Italian>Inietto l'epinefrina ...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Adenosine">
+            <English>Injecting Adenosine ...</English>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine ...</English>
@@ -948,6 +954,15 @@
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Atropine_Display">
+            <English>Adenosine autoinjector</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
+            <English>Used to counter effects of Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
+            <English>A drug used to counter the effects of Epinephrine</English>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>

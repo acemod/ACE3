@@ -214,6 +214,12 @@ class ACE_Medical_Actions {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         };
+        class Adenosine: Morphine {
+            displayName = CSTRING(Inject_Adenosine);
+            displayNameProgress = CSTRING(Injecting_Adenosine);
+            items[] = {"ACE_adenosine"};
+            litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
+        };
         class Atropine: Morphine {
             displayName = CSTRING(Inject_Atropine);
             displayNameProgress = CSTRING(Injecting_Atropine);
@@ -1370,11 +1376,20 @@ class ACE_Medical_Advanced {
                 maxDose = 10;
                 inCompatableMedication[] = {};
             };
+            class Adenosine {
+                painReduce = 0;
+                hrIncreaseLow[] = {-7, -10, 15};
+                hrIncreaseNormal[] = {-15, -30, 20};
+                hrIncreaseHigh[] = {-15, -35, 10};
+                timeInSystem = 120;
+                maxDose = 6;
+                inCompatableMedication[] = {};
+            };
             class Atropine {
                 painReduce = 0;
-                hrIncreaseLow[] = {-5, -7, 15};
-                hrIncreaseNormal[] = {-10, -30, 20};
-                hrIncreaseHigh[] = {-10, -20, 10};
+                hrIncreaseLow[] = {-2, -5, 15};
+                hrIncreaseNormal[] = {-10, -15, 20};
+                hrIncreaseHigh[] = {-5, -20, 10};
                 timeInSystem = 120;
                 maxDose = 6;
                 inCompatableMedication[] = {};

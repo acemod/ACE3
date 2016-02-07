@@ -660,6 +660,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
     };
+    class ACE_MedicalLitter_adenosine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_adenosine.p3d));
+    };
     class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_atropine.p3d));
     };
@@ -721,6 +724,16 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems {
             MACRO_ADDITEM(ACE_morphine,1);
+        };
+    };
+    class ACE_adenosineItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(Adenosine_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_adenosine,1);
         };
     };
     class ACE_atropineItem: Item_Base_F {
@@ -841,6 +854,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
             MACRO_ADDITEM(ACE_morphine,15);
+            MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
