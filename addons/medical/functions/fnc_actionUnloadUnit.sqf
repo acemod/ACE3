@@ -24,7 +24,7 @@ if (([_target] call cse_fnc_isAwake)) exitwith {};
 if ([_target] call EFUNC(common,unloadPerson)) then {
     if (_drag) then {
         if ((vehicle _caller) == _caller) then {
-            if (local _target) then {
+            if (local _caller) then {
                 ["actionDragUnit", [_caller, _target, true]] call EFUNC(common,localEvent);
             } else {
                 ["actionDragUnit", _caller, [_caller, _target, true]] call EFUNC(common,targetEvent);
