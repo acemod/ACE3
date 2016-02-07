@@ -20,7 +20,7 @@ params ["_unit", "_type", "_message", "_arguments"];
 private ["_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
 
 if (!local _unit) exitwith {
-    ["addToLog", _unit, _this] call EFUNC(common,targetEvent);
+    ["addToMedicalLog", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 _lastNumber = date select 4;
