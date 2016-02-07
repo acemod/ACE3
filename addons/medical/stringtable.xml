@@ -3896,7 +3896,7 @@
 			<Polish>Wyszkolenie medyczne</Polish>
 		</Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
-            <English>Whatever or not the objects will be a medical vehicle.</English>
+            <English>Whether or not the object will be a medical vehicle.</English>
             <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
         </Key>
     </Package>
