@@ -24,6 +24,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call EFUNC(common,addEventHandler);
 ["treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call EFUNC(common,addEventHandler);
 ["treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call EFUNC(common,addEventHandler);
 
 
 ["medical_onUnconscious", {
