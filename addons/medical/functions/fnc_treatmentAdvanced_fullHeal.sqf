@@ -17,7 +17,10 @@ _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
 
-// TODO replace by event system
-[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_fullHealLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_fullHealLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+};
 
 true;
