@@ -27,6 +27,12 @@ _items = _this select 4;
 if (count _items == 0) exitwith {};
 
 _removeItem = _items select 0;
-[[_target, _removeItem], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+
+if (local _target) then {
+    ["treatmentIVLocal", [_target, _removeItem]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentIVLocal", _target, [_target, _removeItem]] call EFUNC(common,targetEvent);
+};
+
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", "STR_ACE_Medical_Activity_gaveIV", [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
