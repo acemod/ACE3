@@ -24,7 +24,11 @@ _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
 
-[[_target, _className], QUOTE(DFUNC(treatmentAdvanced_medicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_medicationLocal", [_target, _className]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_medicationLocal", _target, [_target, _className]] call EFUNC(common,targetEvent);
+};
 
 {
     if (_x != "") then {
