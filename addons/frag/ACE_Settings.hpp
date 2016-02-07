@@ -11,6 +11,12 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
+    class GVAR(ReflectionsEnabled) {
+        displayName = CSTRING(EnableReflections);
+        description = CSTRING(EnableReflections_Desc);
+        typeName = "BOOL";
+        value = 0;
+    };
     class GVAR(maxTrack) {
         displayName = CSTRING(MaxTrack);
         description = CSTRING(MaxTrack_Desc);
@@ -23,7 +29,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 50;
     };
-    
+
     class GVAR(EnableDebugTrace) {
         displayName = CSTRING(EnableDebugTrace);
         description = CSTRING(EnableDebugTrace_Desc);

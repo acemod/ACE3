@@ -45,6 +45,12 @@
             <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию обломков ACE</Russian>
         </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections">
+            <English>Explosion Reflections Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections_Desc">
+            <English>Enable the ACE Explosion Reflection Simulation</English>
+        </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
             <Spanish>Máximos proyectiles rastreados</Spanish>
