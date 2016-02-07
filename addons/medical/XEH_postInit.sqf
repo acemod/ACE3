@@ -20,6 +20,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["setDead", DFUNC(setDead)] call EFUNC(common,addEventHandler);
 ["setHitPointDamage", DFUNC(setHitPointDamage)] call EFUNC(common,addEventHandler);
 ["setUnconscious", DFUNC(setUnconscious)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
     if (local (_this select 0)) then {
