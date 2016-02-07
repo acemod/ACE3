@@ -151,7 +151,48 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class ACE_moduleBasicMedicalSettings: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(BasicMedicalSettings_Module_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleBasicMedicalSettings));
+        functionPriority = 10;
+        isGlobal = 2;
+        isSingular = 1;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
 
+        class Arguments {
+            class medicSetting_basicEpi {
+                displayName = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_DisplayName);
+                description = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_Description);
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = CSTRING(AdvancedMedicalSettings_anyone); value = 0; };
+                    class Medic { name = CSTRING(AdvancedMedicalSettings_Medic); value = 1; default = 1; };
+                    class Special { name = CSTRING(AdvancedMedicalSettings_Special); value = 2; };
+                };
+            };
+            class useLocation_basicEpi {
+                displayName = CSTRING(BasicMedicalSettings_useLocation_basicEpi_DisplayName);
+                description = CSTRING(BasicMedicalSettings_useLocation_basicEpi_Description);
+                typeName = "NUMBER";
+                class values {
+                    class anywhere { name = CSTRING(AdvancedMedicalSettings_anywhere); value = 0; default = 1; };
+                    class vehicle { name = CSTRING(AdvancedMedicalSettings_vehicle); value = 1; };
+                    class facility { name = CSTRING(AdvancedMedicalSettings_facility); value = 2; };
+                    class vehicleAndFacility { name = CSTRING(AdvancedMedicalSettings_vehicleAndFacility); value = 3; };
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(BasicMedicalSettings_Module_Description);
+            sync[] = {};
+        };
+    };
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);

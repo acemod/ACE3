@@ -50,12 +50,13 @@ class ACE_Medical_Actions {
             allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             allowSelfTreatment = 1;
             category = "medication";
-            requiredMedic = 1;
+            requiredMedic = QGVAR(medicSetting_basicEpi);
             treatmentTime = 3;
             items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
+            treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
         };
         class BloodIV: Bandage {
             displayName = CSTRING(Transfuse_Blood);

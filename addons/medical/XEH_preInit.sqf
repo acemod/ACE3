@@ -107,6 +107,7 @@ PREP(displayPatientInformation);
 PREP(displayTriageCard);
 PREP(dropDownTriageCard);
 PREP(moduleMedicalSettings);
+PREP(moduleBasicMedicalSettings);
 PREP(moduleAdvancedMedicalSettings);
 PREP(moduleReviveSettings);
 PREP(moduleAssignMedicRoles);

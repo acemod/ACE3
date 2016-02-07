@@ -3126,6 +3126,9 @@
             <French>Fourni un système médical pour les joueurs tout comme pour les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
+            <English>Basic Medical Settings [ACE]</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
             <Russian>Настройки усложненной медицины [ACE]</Russian>
@@ -3225,6 +3228,12 @@
             <French>Les unités subissent des dégats lors d'accident</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
+            <English>Allow Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
+            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование аптечки</Russian>
@@ -3301,6 +3310,12 @@
             <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
             <French>Le Kit de Premier Secours doit il être enlevé à l'utilisation?</French>
             <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
+            <English>Locations Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
+            <English>Where can the Epinephrine be used? (Basic Medical)</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3518,8 +3533,11 @@
             <Hungarian>A fájdalom csak ideiglenesen csökken, nem távolítódik el</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
+            <English>Configure the treatment settings from ACE Basic Medical</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
-            <English>Configure the treatment settings from ACE Medical</English>
+            <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>
