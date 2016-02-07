@@ -1,16 +1,13 @@
 #include "script_component.hpp"
 
-private ["_unit"];
+params ["_unit"];
 
-_unit = _this select 0;
-
-if !(local _unit) exitWith {};
-
+// reset all variables. @todo GROUP respawn?
 [_unit] call FUNC(init);
 
 // Reset captive status for respawning unit
 if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
-    [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
 };
 
 // Remove maximum unconsciousness time handler

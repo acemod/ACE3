@@ -26,7 +26,7 @@ if(!isDedicated) then {
 
     _uuid = [(vehicle ACE_player), ACE_player, QFUNC(vanillaLaserSeekerHandler), ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_CODE, ACE_DEFAULT_LASER_BEAMSPREAD] call FUNC(laserOn);
     _laserTarget setVariable [QGVAR(uuid), _uuid, false];   
-   [FUNC(laserTargetPFH), 0, [_laserTarget, ACE_player, _uuid]] call cba_fnc_addPerFrameHandler;
+   [FUNC(laserTargetPFH), 0, [_laserTarget, ACE_player, _uuid]] call CBA_fnc_addPerFrameHandler;
 } else {
     // server side ownership of laser 
     _laserTarget setVariable [QGVAR(owner), nil, true];

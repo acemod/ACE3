@@ -18,6 +18,12 @@ class ACE_Settings {
     class GVAR(revealMines) {
         typeName = "SCALAR";
         value = 0;
-        values[] = {"Disabled", "Partially", "Fully"};
+        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(revealMines_partial), CSTRING(revealMines_full)};
+    };
+    class GVAR(autoAddObjects) {
+        displayName = CSTRING(AddObjectsToCurator);
+        description = CSTRING(AddObjectsToCurator_desc);
+        value = 0;
+        typeName = "BOOL";
     };
 };

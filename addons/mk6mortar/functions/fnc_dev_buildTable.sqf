@@ -36,13 +36,13 @@ while {_stillInRange} do {
         _stillInRange = false;
     } else {
         if (_airFriction == 0) then {
-            _result set [4, 0];
             _result set [5, 0];
             _result set [6, 0];
             _result set [7, 0];
             _result set [8, 0];
             _result set [9, 0];
             _result set [10, 0];
+            _result set [11, 0];
         };
         if ((_result select 1) < 88) then {
             _outputArray pushBack [

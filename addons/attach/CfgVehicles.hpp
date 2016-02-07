@@ -3,7 +3,7 @@
     class ACE_Actions { \
         class ACE_MainActions { \
             class GVAR(AttachVehicle) { \
-                displayName = "$STR_ACE_Attach_AttachDetach"; \
+                displayName = CSTRING(AttachDetach); \
                 condition = QUOTE(_this call FUNC(canAttach)); \
                 insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions)); \
                 exceptions[] = {}; \
@@ -13,7 +13,7 @@
                 distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
-                displayName = "$STR_ACE_Attach_Detach"; \
+                displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
                 statement = QUOTE(_this call FUNC(detach) ); \
                 exceptions[] = {}; \
@@ -54,24 +54,22 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(Attach) {
-                    displayName = "$STR_ACE_Attach_AttachDetach";
+                    displayName = CSTRING(AttachDetach);
                     condition = QUOTE(_this call FUNC(canAttach));
                     insertChildren = QUOTE(_this call FUNC(getChildrenAttachActions));
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\attach_ca.paa);
-                    // hotkey = "T";
                 };
                 class GVAR(Detach) {
-                    displayName = "$STR_ACE_Attach_Detach";
+                    displayName = CSTRING(Detach);
                     condition = QUOTE(_this call FUNC(canDetach));
                     statement = QUOTE(_this call FUNC(detach));
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\detach_ca.paa);
-                    hotkey = "T";
                 };
             };
         };
@@ -87,9 +85,9 @@ class CfgVehicles {
         class NVGMarker {
             diffuse[] = {0.006, 0.006, 0.006, 1};
             ambient[] = {0.005, 0.005, 0.005, 1};
-            brightness = 0.2;
+            brightness = 0.1;
             name = "pozicni blik";
-            drawLightSize = 0.2;
+            drawLightSize = 0.1;
             drawLightCenterSize = 0.003;
             activeLight = 0;
             blinking=1;
@@ -112,7 +110,7 @@ class CfgVehicles {
         magazines[] = {};
         nvTarget = 1;
         destrType = "DestructNo";
-        brightness = 20;
+        brightness = 10;
     };
 
     class NATO_Box_Base;

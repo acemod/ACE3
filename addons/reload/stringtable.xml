@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Reload">
-        <Key ID="STR_ACE_reload_SettingDisplayTextName">
+        <Key ID="STR_ACE_Reload_SettingDisplayTextName">
             <English>Check ammo on weapon reload</English>
             <German>Prüfe Munition beim Nachladen</German>
             <Spanish>Comprobar munición al recargar el arma</Spanish>
@@ -13,7 +13,7 @@
             <Italian>Controlla le munizioni ricaricando</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
         </Key>
-        <Key ID="STR_ACE_reload_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_Reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
             <German>Prüfe nachgeladenes Magazin</German>
             <Spanish>Comprueba la munición del nuevo cargador al recargar.</Spanish>

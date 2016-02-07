@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {"ACE_Comanche_Test"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_laser"};

@@ -30,10 +30,10 @@ class CfgWeapons {
 
     class InventoryItem_Base_F;
     class ACE_Banana: ACE_ItemCore {
-        author = "$STR_ACE_Common_ACETeam";
+        author = CSTRING(ACETeam);
         scope = 2;
-        displayName = "$STR_ACE_Common_bananaDisplayName";
-        descriptionShort = "$STR_ACE_Common_bananaDescr";
+        displayName = CSTRING(bananaDisplayName);
+        descriptionShort = CSTRING(bananaDescr);
         model = PATHTOF(data\banana.p3d);
         picture = PATHTOF(data\icon_banana_ca.paa);
         icon = "iconObject_circle";

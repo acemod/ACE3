@@ -15,21 +15,19 @@
  */
 #include "script_component.hpp"
 
-private "_unit";
-
-_unit = _this select 0;
+params ["_unit"];
 
 if !([_unit] call FUNC(canClimb)) exitWith {
-    [localize "STR_ACE_Movement_CanNotClimb"] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(CanNotClimb)] call EFUNC(common,displayTextStructured);
 };
 
 if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
     _unit addEventHandler ["AnimChanged", {
         if (local (_this select 0) && {_this select 1 == "ACE_Climb"}) then {
-        	// abort climb animation
-        	if !(_this call FUNC(canClimb)) then {
-        		[_this select 0, "AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
-        	};
+            // abort climb animation
+            if !(_this call FUNC(canClimb)) then {
+                [_this select 0, "AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+            };
         };
     }];
 

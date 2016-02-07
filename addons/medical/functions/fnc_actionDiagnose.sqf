@@ -7,39 +7,40 @@
 * 1: The patient <OBJECT>
 *
 * Return Value:
-* NONE
+* None
 *
 * Public: No
 */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_genericMessages"];
-_caller = _this select 0;
-_target = _this select 1;
+private "_genericMessages";
+params ["_caller", "_target"];
 
-_genericMessages = ["STR_ACE_Medical_diagnoseMessage"];
+_genericMessages = [LSTRING(diagnoseMessage)];
 
 _genericMessages pushBack ([_target] call EFUNC(common,getName));
 if (alive _target) then {
-    _genericMessages pushback "STR_ACE_Medical_diagnoseAlive";
+    _genericMessages pushBack LSTRING(diagnoseAlive);
 } else {
-    _genericMessages pushback "STR_ACE_Medical_diagnoseDead";
+    _genericMessages pushBack LSTRING(diagnoseDead);
 };
-if (_target getvariable[QGVAR(hasLostBlood), 0] > 0) then {
-	if (_target getvariable[QGVAR(hasLostBlood), 0] > 1) then {
-		_genericMessages pushback "STR_ACE_Medical_lostBloodALot";
-	} else {
-		_genericMessages pushback "STR_ACE_Medical_lostBlood";
-	};
+if (_target getVariable[QGVAR(hasLostBlood), 0] > 0) then {
+    if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
+        _genericMessages pushBack LSTRING(lostBloodALot);
+    } else {
+        _genericMessages pushBack LSTRING(lostBlood);
+    };
 } else {
-    _genericMessages pushback "STR_ACE_Medical_noBloodloss";
+    _genericMessages pushBack LSTRING(noBloodloss);
 };
 
-if (_target getvariable[QGVAR(hasPain), false]) then {
-    _genericMessages pushback "STR_ACE_Medical_inPain";
-} else {
-    _genericMessages pushback "STR_ACE_Medical_noPain";
+if (alive _target) then {
+    if (_target getVariable[QGVAR(hasPain), false]) then {
+        _genericMessages pushBack LSTRING(inPain);
+    } else {
+        _genericMessages pushBack LSTRING(noPain);
+    };
 };
 
 ["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);

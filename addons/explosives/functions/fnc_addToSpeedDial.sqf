@@ -15,21 +15,24 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+
+params ["_name", "_code"];
+TRACE_2("params",_name,_code);
+
 private ["_speedDial", "_found"];
+
 _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 _found = false;
 
-EXPLODE_2_PVT(_this,_name,_code);
-
-if ((_code) == "") ExitWith {
+if ((_code) == "") exitWith {
     [_name] call FUNC(removeFromSpeedDial);
 };
 {
     if ((_x select 0) == _name) exitWith {
-        _speedDial set [_foreachindex, _this];
+        _speedDial set [_forEachIndex, _this];
         _found = true;
     };
-} foreach _speedDial;
+} forEach _speedDial;
 if (!_found) then {
     _speedDial pushBack _this;
 };

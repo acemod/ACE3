@@ -7,4 +7,10 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
+    class GVAR(ExplodeOnDefuse) {
+        displayName = CSTRING(ExplodeOnDefuse_DisplayName);
+        description = CSTRING(ExplodeOnDefuse_Description);
+        value = 1;
+        typeName = "BOOL";
+    };
 };

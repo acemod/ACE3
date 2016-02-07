@@ -5,18 +5,23 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
+<<<<<<< HEAD
+=======
+ * 2: Drag after unload <BOOL> (default: false)
+>>>>>>> medical-focus-feature
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_caller", "_target"];
+params ["_caller", "_target", ["_drag", false]];
 
 // cannot unload a unit not in a vehicle.
-if (vehicle _target == _target) exitwith {};
+if (vehicle _target == _target) exitWith {};
+if (([_target] call EFUNC(common,isAwake))) exitWith {};
 
-[_target] call EFUNC(common,unloadPerson)
+["unloadPersonEvent", _target, [_target, vehicle _target, _caller]] call EFUNC(common,targetEvent);

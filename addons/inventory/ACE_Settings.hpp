@@ -3,8 +3,8 @@ class ACE_Settings {
         value = 0;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = "$STR_ACE_Inventory_SettingName";
-        description = "$STR_ACE_Inventory_SettingDescription";
+        displayName = CSTRING(SettingName);
+        description = CSTRING(SettingDescription);
         values[] = {"$str_medium", "$str_large", "$str_very_large"};
     };
 };

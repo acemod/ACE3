@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 _target getVariable [QGVAR(isHandcuffed), false]
 || {_target getVariable [QGVAR(isSurrendering), false]}

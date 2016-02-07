@@ -10,16 +10,16 @@
  * None
  *
  * Example:
- * [] call ace_viewdistance_fnc_adaptViewDistance;
+ * [] call ace_viewdistance_fnc_adaptViewDistance
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-PARAMS_1(_show_prompt);
-
 private["_land_vehicle","_air_vehicle"];
+
+params ["_show_prompt"];
 
 if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 

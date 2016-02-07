@@ -20,7 +20,7 @@ class CfgWeapons {
         reloadTime = 0.01;
         magazineReloadTime = 0.1;
     };
-    
+
     // Manual Switching Of Flare Mode
     class SmokeLauncher;
     class CMFlareLauncher: SmokeLauncher {
@@ -29,7 +29,7 @@ class CfgWeapons {
             reloadTime = 0.1;
         };
         class Burst: Mode_Burst {
-            displayName = "$STR_ACE_Aircraft_CMFlareLauncher_Burst_Name";
+            displayName = CSTRING(CMFlareLauncher_Burst_Name);
         };
     };
 
@@ -50,12 +50,12 @@ class CfgWeapons {
     };
 
     class ACE_gatling_20mm_Comanche: gatling_20mm {
-        displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
+        displayName = CSTRING(gatling_20mm_Name);
 
         class manual: manual {
             reloadTime = 0.04;
             dispersion = 0.006;
-            displayName = "$STR_ACE_Aircraft_gatling_20mm_Name";
+            displayName = CSTRING(gatling_20mm_Name);
         };
         class close: close {
             reloadTime = 0.04;
@@ -106,12 +106,14 @@ class CfgWeapons {
 
     class M134_minigun: MGunCore {
         class LowROF: Mode_FullAuto {
-            reloadTime = 0.015; //0.03;     same as above   @todo
-            dispersion = 0.006; //0.0023;
+            reloadTime = 0.03; //0.03;     same as above   @todo
+            dispersion = 0.0064; //0.0023;
+            multiplier = 1;
         };
         class HighROF: LowROF {
-            reloadTime = 0.015; //0.03;
-            dispersion = 0.006; //0.0023;
+            reloadTime = 0.02; //0.03;
+            dispersion = 0.0064; //0.0023;
+            multiplier = 1;
         };
         class close: HighROF {};
         class short: close {};

@@ -1,9 +1,9 @@
 ambient[]={1,1,1,1};
 diffuse[]={0.5,0.5,0.5,1};
 forcedDiffuse[]={0.5,0.5,0.5,0};
-emmisive[]={0,0,0,1};
-specular[]={0.30000001,0.30000001,0.30000001,0};
-specularPower=57.799999;
+emmisive[]={0,0,0,0};
+specular[]={0,0,0,0};
+specularPower=0;
 PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
 class Stage1
@@ -20,13 +20,13 @@ class Stage1
 };
 class Stage2
 {
-	texture="z\ace\addons\medical\data\packingbandage_smdi.paa";
+	texture= "#(argb,8,8,3)color(0,0,0,1,SMDI)";
 	uvSource="tex";
 	class uvTransform
 	{
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,1};
+		aside[]={0,0,0};
+		up[]={0,0,0};
+		dir[]={0,0,0};
 		pos[]={0,0,0};
 	};
 };

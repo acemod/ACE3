@@ -6,9 +6,10 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Amount of Pain <NUMBER>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: No
  */
@@ -16,16 +17,15 @@
 #include "script_component.hpp"
 
 private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
-_unit = _this select 0;
-_pain = _this select 1;
-if (!local _unit || !GVAR(enableScreams)) exitwith{};
+params ["_unit", "_pain"];
+if (!local _unit || !GVAR(enableScreams)) exitWith{};
 
 // Lock if the unit is already playing a sound.
-if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitwith {};
-_unit setvariable [QGVAR(playingInjuredSound),true];
+if ((_unit getVariable [QGVAR(playingInjuredSound),false])) exitWith {};
+_unit setVariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
-if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
+if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Classnames of the available sounds.
     _availableSounds_A = [
         "WoundedGuyA_01",
@@ -75,9 +75,9 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
 
     // Clean up the lock
     [{
-        (_this select 0) setvariable [QGVAR(playingInjuredSound),nil];
+        (_this select 0) setVariable [QGVAR(playingInjuredSound),nil];
     }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
 };
 
 // Clean up in case there has not been played any sounds.
-_unit setvariable [QGVAR(playingInjuredSound),nil];
+_unit setVariable [QGVAR(playingInjuredSound),nil];

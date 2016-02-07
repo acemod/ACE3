@@ -5,10 +5,9 @@
 GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
-GVAR(ProtractorStart) = time;
-
+GVAR(ProtractorStart) = ACE_time;
+GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
-GVAR(initMessageEnabled) = false;
 
 GVAR(extensionAvailable) = true;
 /* @TODO: Remove this until versioning is in sync with cmake/build versioning

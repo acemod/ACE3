@@ -16,10 +16,8 @@
 
 #include "script_component.hpp"
 
-private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_value", "_compiledConfigEntry"];
+private ["_compiledConfig", "_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_value", "_compiledConfigEntry", "_formatedValue"];
 
-_compiledConfig = "
-";
 {
      /*_settingData = [
         _name,
@@ -41,40 +39,40 @@ _compiledConfig = "
     _defaultValue = _x select 6;
 
     if (GVAR(ClientSettingsExportIncluded) || !_isClientSetable) then {
-        _value = missionNamespace getvariable [_name, _defaultValue];
-        if (_typeName == "STRING") then { // I dont think we have string values, but just in case
-            _value = format['"%1"', _value];
-        };
-        if (_typeName == "BOOL") then {
-            _value = if (typeName _value == "BOOL" && {_value}) then {1} else {0};
+        _value = missionNamespace getVariable [_name, _defaultValue];
+        _formatedValue = switch (toLower _typeName) do {
+            case ("scalar"): {
+                format['value = %1;', _value];
+            };
+            case ("string"): {
+                format['value = "%1";', _value];
+            };
+            case ("bool"): {
+                if (!(_value isEqualType false)) then {ERROR("weird bool typename??");};
+                _value = if ((_value isEqualType false) && {_value}) then {1} else {0};
+                format ['value = %1;', _value];
+            };
+            case ("color"): {
+                _value params [["_r",1], ["_b",0], ["_g",1], ["_a",1]];
+                format ["value[] = {%1, %2, %3, %4};", _r, _b, _g, _a];
+            };
+            default {
+                ERROR("unknown typeName");
+                ""
+            };
+
         };
         _compiledConfigEntry = format ["
 class %1 {
-    value = %2;
+    %2
     typeName = %3;
     force = 1;
-};", _name, _value, format['"%1"', _typeName]];
+};", _name, _formatedValue, format['"%1"', _typeName]];
 
-        _compiledConfig = _compiledConfig + _compiledConfigEntry;
+        "ace_clipboard" callExtension _compiledConfigEntry;
     };
 } forEach EGVAR(common,settings);
 
-FUNC(clipboardExport) = {
-    private["_chunks"];
-    _chunks = [];
-    
-    _chunks = [_this select 0, ";"] call CBA_fnc_split;
-    
-    {
-        private["_chunk"];
-        _chunk = _x + ";";
-        "ace_clipboard" callExtension format["%1", _chunk];
-    } forEach _chunks;
-    
-    "ace_clipboard" callExtension "--COMPLETE--";
-};
-[_compiledConfig] call FUNC(clipboardExport);
+"ace_clipboard" callExtension "--COMPLETE--";
 
-["STR_ACE_OptionsMenu_settingsExported"] call EFUNC(common,displayTextStructured);
-
-
+[LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);

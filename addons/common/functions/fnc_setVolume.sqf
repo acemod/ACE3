@@ -1,21 +1,24 @@
-/**
- * fn_setVolume_f.sqf
- * @Descr: Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
  *
- * @Arguments: [setVolume BOOL]
- * @Return: void
- * @PublicAPI: true
+ * Arguments:
+ * 0: setVolume (default: false) <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+ *
+ * Note: Uses player
  */
-
 #include "script_component.hpp"
 
 #define MUTED_LEVEL 0.2
 #define NORMAL_LEVEL 1
 #define NO_SOUND    0
 
-private ["_setVolume"];
-_setVolume = [_this, 0, false, [false]] call BIS_fnc_Param;
+params [["_setVolume", false]];
 
 if (_setVolume) then {
     // Vanilla Game

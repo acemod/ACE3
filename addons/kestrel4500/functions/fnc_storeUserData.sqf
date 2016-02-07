@@ -3,10 +3,10 @@
  * Saves user data into profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_kestrel4500_fnc_store_user_data
@@ -16,3 +16,4 @@
 #include "script_component.hpp"
 
 profileNamespace setVariable ["ACE_Kestrel4500_menu", GVAR(menu)];
+profileNamespace setVariable ["ACE_Kestrel4500_RefHeading", GVAR(RefHeading)];

@@ -1,16 +1,18 @@
 /*
-    Author: aeroson
-    
-    Description:
-        Shows the actual text and sets text the crew info       
-
-    Parameters: 
-        None
-
-    Returns:
-        Nothing
-*/
-
+ * Author: aeroson
+ * Shows the actual text and sets text the crew info.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_nametags_fnc_doShow
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 #include "common.hpp";
 

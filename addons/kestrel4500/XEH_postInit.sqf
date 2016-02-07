@@ -2,16 +2,16 @@
 
 #include "initKeybinds.sqf"
 
-GVAR(Menus) = ["Date", "Direction", "Wind SPD  m/s", "CROSSWIND m/s", "HEADWIND  m/s", "TEMP       °C", "CHILL      °C", "HUMIDITY    %", "HEAT INDEX °C", "DEW POINT  °C", "WET BULB   °C", "BARO      hPA", "ALTITUDE    m", "User Screen   1", "User Screen   2"];
+GVAR(Menus) = ["Date", "Direction", "Wind SPD  m/s", "CROSSWIND m/s", "HEADWIND  m/s", "TEMP       °C", "CHILL      °C", "HUMIDITY    %", "HEAT INDEX °C", "DEW POINT  °C", "WET BULB   °C", "BARO      hPA", "ALTITUDE    m", "DENS ALT    m", "User Screen   1", "User Screen   2"];
 
-GVAR(TOTAL) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-GVAR(ENTRIES) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(TOTAL) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+GVAR(ENTRIES) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 GVAR(MinAvgMax) = false;
 GVAR(MinAvgMaxMode) = 0;
 GVAR(referenceHeadingMenu) = 0;
 GVAR(referenceHeadingAutoSet) = true;
-GVAR(manualSetCooldown) = diag_tickTime;
+GVAR(manualSetCooldown) = ACE_diagTime;
 GVAR(headingSetDisplayTimer) = 0;
 
 GVAR(Menu) = 1;

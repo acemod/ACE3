@@ -1,38 +1,55 @@
-// by commy2
+/*
+ * Author: commy2
+ * Toggle speed limiter for Driver in Vehicle.
+ *
+ * Arguments:
+ * 0: Driver <OBJECT>
+ * 1: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, car] call ace_vehicles_fnc_speedLimiter
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_driver", "_vehicle"];
+params ["_driver", "_vehicle"];
 
-_driver = _this select 0;
-_vehicle = _this select 1;
-
-if (GETGVAR(isSpeedLimiter,false)) exitWith {
-    [localize "STR_ACE_SpeedLimiter_Off"] call EFUNC(common,displayTextStructured);
+if (GVAR(isSpeedLimiter)) exitWith {
+    [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
     playSound "ACE_Sound_Click";
     GVAR(isSpeedLimiter) = false;
 };
 
-[localize "STR_ACE_SpeedLimiter_On"] call EFUNC(common,displayTextStructured);
+[localize LSTRING(On)] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-private "_maxSpeed";
-_maxSpeed = speed _vehicle max 10;
+private _maxSpeed = speed _vehicle max 10;
 
 [{
-    private ["_driver", "_vehicle", "_maxSpeed"];
+    params ["_args", "_idPFH"];
+    _args params ["_driver", "_vehicle", "_maxSpeed"];
 
-    _driver = _this select 0 select 0;
-    _vehicle = _this select 0 select 1;
-    _maxSpeed = _this select 0 select 2;
-
-    if (!GVAR(isSpeedLimiter) || {_driver != driver _vehicle}) exitWith {
-        GVAR(isSpeedLimiter) = false;
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+    if (GVAR(isUAV)) then {
+        private _uavControll = UAVControl _vehicle;
+        if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
+            GVAR(isSpeedLimiter) = false;
+        };
+    } else {
+        if (_driver != driver _vehicle) then {
+            GVAR(isSpeedLimiter) = false;
+        };
     };
 
-    private "_speed";
-    _speed = speed _vehicle;
+    if (!GVAR(isSpeedLimiter)) exitWith {
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
+    };
+
+    private _speed = speed _vehicle;
 
     if (_speed > _maxSpeed) then {
         _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((_maxSpeed / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning

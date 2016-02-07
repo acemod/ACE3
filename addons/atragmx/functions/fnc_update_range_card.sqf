@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_range", "_elevation", "_windage1", "_windage2", "_clickSize", "_clickNumber", "_clickInterval", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput"];
+private ["_range", "_elevation", "_windage1", "_windage2", "_clickSize", "_clickNumber", "_clickInterval", "_lead", "_TOF", "_velocity", "_kineticEnergy", "_rangeOutput", "_elevationOutput", "_windageOutput", "_lastColumnOutput", "_speedOfSound"];
 _lastColumnOutput = "";
 
 if (GVAR(showWind2) && GVAR(rangeCardCurrentColumn) == 0) then {
@@ -31,6 +31,8 @@ if (GVAR(currentUnit) == 1) then {
 };
 
 lnbClear 5007;
+
+_speedOfSound = GVAR(temperature) call EFUNC(weather,calculateSpeedOfSound);
 
 {
     _range = _x select 0;
@@ -72,7 +74,7 @@ lnbClear 5007;
     _windageOutput = Str(Round(_windage1 * 100) / 100);
     
     _rangeOutput = Str(_range);
-    if (_velocity < 340.29) then {
+    if (_velocity < _speedOfSound) then {
         _rangeOutput = _rangeOutput + "*";
     };
     

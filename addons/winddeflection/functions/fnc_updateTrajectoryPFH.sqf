@@ -13,38 +13,44 @@
  *
  * Public: No
  */
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 [{
-    private ["_args", "_bullet", "_airFriction", "_time", "_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_drag", "_accelRef", "_accel"];
+    // BEGIN_COUNTER(pfeh);
+    private["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_trueSpeed", "_trueVelocity"];
 
-    _args = _this select 0;
-    _bullet = _args select 0;
-    _airFriction = _args select 1;
-    _time = _args select 2;
-    
-    _bulletVelocity = velocity _bullet;
-    _bulletSpeed = vectorMagnitude _bulletVelocity;
-    
-    if (!alive _bullet || ((_bullet isKindOf "BulletBase") && _bulletSpeed < 100)) exitwith {
-        [_this select 1] call cba_fnc_removePerFrameHandler;
-    };
-    
-    _deltaT = time - _time;
-    _args set[2, time];
-    
-    if (vectorMagnitude ACE_wind > 0) then {
-        _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
-        _trueSpeed = vectorMagnitude _trueVelocity;
+    params ["_args"];
+    _args params ["_lastTime"];
+    _deltaT = ACE_time - _lastTime;
+    _args set [0, ACE_time];
+    _deleted = 0;
+    _isWind = (vectorMagnitude ACE_wind > 0);
 
-        _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
-        _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
-        _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
+    {
+        _x params ["_bullet", "_airFriction"];
 
-        _drag = _deltaT * _airFriction * _trueSpeed;
-        _accel = _trueVelocity vectorMultiply (_drag);
-        _bulletVelocity = _bulletVelocity vectorAdd _accel;
-    };
-    _bullet setVelocity _bulletVelocity;
-    
-}, GVAR(simulationInterval), [_this select 0, _this select 1, time]] call CBA_fnc_addPerFrameHandler;
+        _bulletVelocity = velocity _bullet;
+        _bulletSpeed = vectorMagnitude _bulletVelocity;
+
+        if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeed < 100}}) then {
+            GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
+        } else {
+            if (_isWind) then {
+                _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
+                _trueSpeed = vectorMagnitude _trueVelocity;
+
+                _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
+                _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
+                _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
+
+                _drag = _deltaT * _airFriction * _trueSpeed;
+                _accel = _trueVelocity vectorMultiply (_drag);
+                _bulletVelocity = _bulletVelocity vectorAdd _accel;
+            };
+            _bullet setVelocity _bulletVelocity;
+        };
+        nil
+    } count +GVAR(trackedBullets);
+    // END_COUNTER(pfeh);
+}, GVAR(simulationInterval), [ACE_time]] call CBA_fnc_addPerFrameHandler;

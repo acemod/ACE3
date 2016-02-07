@@ -209,7 +209,7 @@ class ACE_RadioProtocolNoRadio: RadioProtocolBase {
 
 class CfgVoice {
     class ACE_NoVoice {
-        author = "$STR_ACE_Common_ACETeam";
+        author = CSTRING(ACETeam);
         protocol = "ACE_RadioProtocolNoRadio";
         variants[] = {1};
         directories[] = {"",""};
@@ -217,13 +217,13 @@ class CfgVoice {
         scope = 2;
         voiceType = "";
         icon = "\a3\Ui_f\data\Map\Markers\Flags\nato_ca.paa";
-        displayName = "$STR_ACE_Common_NoVoice";
+        displayName = CSTRING(NoVoice);
     };
 };
 
 class CfgVoiceTypes {
     class ACE_NoVoice {
-        name = "$STR_ACE_Common_NoVoice";
+        name = CSTRING(NoVoice);
         voices[] = {"ACE_NoVoice","ACE_NoVoice","ACE_NoVoice"};
         preview = "ACE_NoVoice";
         alternative = "";

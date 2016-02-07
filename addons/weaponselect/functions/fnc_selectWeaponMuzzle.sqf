@@ -1,22 +1,26 @@
 /*
  * Author: commy2
- *
  * The player will select the specified weapon and change to the first additional muzzle. E.g. the grenade launcher of a assault rifle.
  *
- * Argument:
- * 0: A weapon (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING>
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, currentWeapon player] call ace_weaponselect_fnc_selectWeaponMuzzle
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {};
 
-private "_muzzles";
-_muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);
+private _muzzles = _weapon call EFUNC(common,getWeaponMuzzles);
 
 if (currentWeapon _unit != _weapon) exitWith {
     if (count _muzzles > 1) then {
@@ -30,12 +34,11 @@ if (currentWeapon _unit != _weapon) exitWith {
     };
 };
 
-private ["_index", "_muzzle"];
+private _index = (_muzzles find currentMuzzle _unit) + 1;
 
-_index = (_muzzles find currentMuzzle _unit) + 1;
 if (_index > count _muzzles - 1) then {_index = 1};
 
-_muzzle = _muzzles select _index;
+private _muzzle = _muzzles select _index;
 
 _index = 0;
 while {

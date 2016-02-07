@@ -30,17 +30,23 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
 ["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerVisionModeChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerVisionModeChanged", {
+    _this call FUNC(updatePPEffects);
+    _this call FUNC(onVisionModeChanged);
+}] call EFUNC(common,addEventHandler);
 ["zeusDisplayChanged",      {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["cameraViewChanged",       {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["cameraViewChanged",       {
+    _this call FUNC(updatePPEffects);
+    _this call FUNC(onCameraViewChanged);
+}] call EFUNC(common,addEventHandler);
 ["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 ["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 
 // Add keybinds
-["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize "STR_ACE_NightVision_IncreaseNVGBrightness",
+["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
@@ -49,12 +55,12 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
+[201, [false, false, true]], false] call CBA_fnc_addKeybind; //PageUp + ALT
 
-["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize "STR_ACE_NightVision_DecreaseNVGBrightness",
+["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
@@ -63,4 +69,4 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT
+[209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT

@@ -12,34 +12,33 @@
  */
 #include "script_component.hpp";
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
-private ["_objectType","_actionsVarName"];
-_objectType = _target;
-if (typeName _target == "OBJECT") then {
+private _objectType = _target;
+if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
-_actionsVarName = format [QGVAR(Act_%1), _objectType];
+private _actionsVarName = format [QGVAR(Act_%1), _objectType];
 
 // Exit if the action menu is already compiled for this class
 if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
 
-private "_recurseFnc";
-_recurseFnc = {
-    private ["_actions", "_displayName", "_distance", "_icon", "_statement", "_position", "_condition", "_showDisabled", "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction", "_i"];
-    EXPLODE_1_PVT(_this,_actionsCfg);
-    _actions = [];
+private _recurseFnc = {
+    params ["_actionsCfg", "_parentDistance"];
+    private _actions = [];
 
-    for "_i" from 0 to (count _actionsCfg) - 1 do {
-        _entryCfg = _actionsCfg select _i;
+    {
+        private _entryCfg = _x;
         if(isClass _entryCfg) then {
-            _displayName = getText (_entryCfg >> "displayName");
-            _distance = getNumber (_entryCfg >> "distance");
-            _icon = getText (_entryCfg >> "icon");
-            _statement = compile (getText (_entryCfg >> "statement"));
+            private _displayName = getText (_entryCfg >> "displayName");
+            private _distance = _parentDistance;
+            if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
+            // if (_distance < _parentDistance) then {ACE_LOGWARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
+            private _icon = getText (_entryCfg >> "icon");
+            private _statement = compile (getText (_entryCfg >> "statement"));
 
             // If the position entry is present, compile it
-            _position = getText (_entryCfg >> "position");
+            private _position = getText (_entryCfg >> "position");
             if (_position != "") then {
                 _position = compile _position;
             } else {
@@ -53,7 +52,7 @@ _recurseFnc = {
                 };
             };
 
-            _condition = getText (_entryCfg >> "condition");
+            private _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
@@ -61,18 +60,23 @@ _recurseFnc = {
                 _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
             };
 
-            _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
-            _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
+            private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
-            _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
-            _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
-            _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            private _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
+            private _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
+            private _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
+            private _runOnHover = false;
+            if (isText (_entryCfg >> "runOnHover")) then {
+                _runOnHover = compile getText (_entryCfg >> "runOnHover");
+            } else {
+                _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
+            };
 
             _condition = compile _condition;
-            _children = [_entryCfg] call _recurseFnc;
+            private _children = [_entryCfg, _distance] call _recurseFnc;
 
-            _entry = [
+            private _entry = [
                         [
                             configName _entryCfg,
                             _displayName,
@@ -83,21 +87,24 @@ _recurseFnc = {
                             [],
                             _position,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover, false],
                             _modifierFunction
                         ],
                         _children
                     ];
             _actions pushBack _entry;
         };
-    };
+        nil
+    } count (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 
-private "_actionsCfg";
-_actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
+private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
 
-missionNamespace setVariable [_actionsVarName, [_actionsCfg] call _recurseFnc];
+TRACE_1("Building ACE_Actions",_objectType);
+private _actions = [_actionsCfg, 0] call _recurseFnc;
+
+missionNamespace setVariable [_actionsVarName, _actions];
 
 /*
 [
@@ -112,7 +119,7 @@ missionNamespace setVariable [_actionsVarName, [_actionsCfg] call _recurseFnc];
             [],
             {[0,0,0]},
             1,
-            [false,false,false]
+            [false,false,false,false,false]
         ],
         [children actions]
     ]

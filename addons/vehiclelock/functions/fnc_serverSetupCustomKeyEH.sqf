@@ -18,7 +18,8 @@
 
 private ["_currentKeys"];
 
-PARAMS_2(_veh,_key);
+params ["_veh", "_key"];
+TRACE_2("params",_veh,_key);
 
 if (!isServer) exitWith {ERROR("only run on server");};
 if (isNull _veh) exitWith {ERROR("null vehicle");};

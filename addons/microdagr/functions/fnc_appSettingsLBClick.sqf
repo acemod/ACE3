@@ -7,7 +7,7 @@
  * 1: Index <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [settingList, 1] call ace_microdagr_fnc_appSettingsLBClick
@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 disableSerialization;
-PARAMS_2(_control,_itemClicked);
+params ["", "_itemClicked"];
 
 switch (_itemClicked) do {
     case (0): { GVAR(settingUseMils) = ! GVAR(settingUseMils)};

@@ -3,7 +3,7 @@
  * Select the next throwing mode and display message.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * Handeled <BOOL>
@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_mode", "_hint"];
-
-_mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode == 4) then {
     _mode = 0;
@@ -30,13 +28,13 @@ if (_mode == 3) then {
     _mode = 4;
 };
 
-_hint = [
-localize "STR_ACE_Grenades_NormalThrow",
-localize "STR_ACE_Grenades_HighThrow",
-localize "STR_ACE_Grenades_PreciseThrow",
-localize "STR_ACE_Grenades_RollGrenade",
-localize "STR_ACE_Grenades_DropGrenade"
-] select _mode;
+private _hint = localize ([
+    LSTRING(NormalThrow),
+    LSTRING(HighThrow),
+    LSTRING(PreciseThrow),
+    LSTRING(RollGrenade),
+    LSTRING(DropGrenade)  
+] select _mode);
 
 [_hint] call EFUNC(common,displayTextStructured);
 

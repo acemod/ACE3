@@ -7,7 +7,7 @@
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  * 3: Treatment classname <STRING>
- *
+ * 4: Items Used <ARRAY>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -17,25 +17,24 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_items = _this select 4;
+params ["_caller", "_target", "_selectionName", "_className", "_items"];
+TRACE_5("params",_caller,_target,_selectionName,_className,_items);
+
+private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
 if (local _target) then {
-    ["treatmentAdvanced_medicationLocal", [_target, _className]] call EFUNC(common,localEvent);
+    ["treatmentAdvanced_medicationLocal", [_target, _className, _part]] call EFUNC(common,localEvent);
 } else {
-    ["treatmentAdvanced_medicationLocal", _target, [_target, _className]] call EFUNC(common,targetEvent);
+    ["treatmentAdvanced_medicationLocal", _target, [_target, _className, _part]] call EFUNC(common,targetEvent);
 };
 
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
-}foreach _items;
+} forEach _items;
 
-[_target, "activity", "STR_ACE_Medical_Activity_usedItem", [[_caller] call EFUNC(common,getName), _className]] call FUNC(addToLog);
 
 true;

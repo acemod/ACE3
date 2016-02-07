@@ -16,7 +16,8 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_container);
+params ["_unit", "_container"];
+TRACE_2("params",_unit,_container);
 
 //Only check for player:
 if (_unit != ace_player) exitWith {false};
@@ -34,8 +35,13 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
     playSound "ACE_Sound_Click";
     //don't open the vehicles inventory
     _handeled = true;
-    //Just opens a dummy groundContainer (so the player can still see their own inventory)
-    ACE_player action ["Gear", objNull];
+
+    // As of 1.54 the action needs to be delayed a frame to work, which used not to be the case
+    [{
+        TRACE_1("delaying a frame", ace_player);
+        //Just opens a dummy groundContainer (so the player can still see their own inventory)
+        ACE_player action ["Gear", objNull];
+    }, []] call EFUNC(common,execNextFrame);
 };
 
 _handeled

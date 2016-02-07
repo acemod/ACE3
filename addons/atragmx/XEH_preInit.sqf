@@ -4,7 +4,6 @@ ADDON = false;
 
 PREP(add_new_gun);
 PREP(calculate_range_card);
-PREP(calculate_scope_base_angle);
 PREP(calculate_solution);
 PREP(calculate_target_range_assist);
 PREP(calculate_target_solution);

@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_unit"];
-
-_unit = _this select 0;
+params ["_unit"];
 
 (["ACE_Altimeter"] call BIS_fnc_rscLayer) cutRsc ["ACE_Altimeter", "PLAIN", 0, true];
 if (isNull (uiNamespace getVariable ["ACE_Altimeter", displayNull])) exitWith {};
@@ -25,10 +23,10 @@ if (isNull (uiNamespace getVariable ["ACE_Altimeter", displayNull])) exitWith {}
 GVAR(AltimeterActive) = true;
 
 [{
-    if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler)};
+    if (!GVAR(AltimeterActive)) exitWith {[_this select 1] call CALLSTACK(CBA_fnc_removePerFrameEventHandler)};
     disableSerialization;
-    EXPLODE_4_PVT(_this select 0,_display,_unit,_oldHeight,_prevTime);
-    if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(cba_fnc_removePerFrameEventHandler); call FUNC(hideAltimeter)};
+    (_this select 0) params ["_display", "_unit", "_oldHeight", "_prevTime"];
+    if !("ACE_Altimeter" in assignedItems _unit) exitWith {[_this select 1] call CALLSTACK(CBA_fnc_removePerFrameEventHandler); call FUNC(hideAltimeter)};
 
     private ["_height", "_hour", "_minute", "_descentRate","_HeightText", "_DecendRate", "_TimeText", "_curTime", "_timeDiff"];
 
@@ -38,8 +36,8 @@ GVAR(AltimeterActive) = true;
     _hour = floor daytime;
     _minute = floor ((daytime - _hour) * 60);
 
-    _height = (getPosASL _unit) select 2;
-    _curTime = time;
+    _height = ((getPosASL _unit) select 2) + EGVAR(common,mapAltitude);
+    _curTime = ACE_time;
     _timeDiff = _curTime - _prevTime;
     _descentRate = if(_timeDiff > 0) then {floor((_oldHeight - _height) / _timeDiff)} else {0};
 
@@ -49,4 +47,4 @@ GVAR(AltimeterActive) = true;
 
     (_this select 0) set [2, _height];
     (_this select 0) set [3, _curTime];
-}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), time]] call CALLSTACK(cba_fnc_addPerFrameHandler);
+}, 0.2, [uiNamespace getVariable ["ACE_Altimeter", displayNull], _unit,floor ((getPosASL _unit) select 2), ACE_time]] call CALLSTACK(CBA_fnc_addPerFrameHandler);

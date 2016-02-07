@@ -3,20 +3,37 @@
  * Generates the Kestrel 4500 output text.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * [top <STRING>, centerBig <STRING>, CenterLine1Left <STRING>, CenterLine2Left <STRING>, CenterLine3Left <STRING>, CenterLine1Right <STRING>, CenterLine2Right <STRING>, CenterLine3Right <STRING>, InfoLine1 <STRING>, InfoLine2 <STRING>]
+ * 0: top <STRING>
+ * 1: centerBig <STRING>
+ * 2: CenterLine1Left <STRING>
+ * 3: CenterLine2Left <STRING>
+ * 4: CenterLine3Left <STRING>
+ * 5: CenterLine1Right <STRING>
+ * 6: CenterLine2Right <STRING>
+ * 7: CenterLine3Right <STRING>
+ * 8: InfoLine1 <STRING>
+ * 9: InfoLine2 <STRING>
+ * 10: Bottom Big <STRING>
+ * 11: Center Line 1 <STRING>
+ * 11: Center Line 2 <STRING>
+ * 12: Center Line 3 <STRING>
+ * 13: Center Line 4 <STRING>
+ * 14: Center Line 5 <STRING>
+ * 15: Center Line 6 <STRING>
  *
  * Example:
+ * _var = call ace_kestrel4500_fnc_generateOutputData
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
+if (ACE_diagTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
-private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_dayOfWeek", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
 
 [] call FUNC(collectData);
 
@@ -52,23 +69,12 @@ _playerAltitude = (getPosASL ACE_player) select 2;
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
 _humidity = EGVAR(weather,currentHumidity);
 _barometricPressure = _playerAltitude call EFUNC(weather,calculateBarometricPressure);
+_airDensity = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateAirDensity);
+_densityAltitude = _airDensity call EFUNC(weather,calculateDensityAltitude);
 _chill = [_temperature, _humidity] call EFUNC(weather,calculateWindChill);
 _heatIndex = [_temperature, _humidity] call EFUNC(weather,calculateHeatIndex);
 _dewPoint = [_temperature, _humidity] call EFUNC(weather,calculateDewPoint);
 _wetBulb = [_temperature, _barometricPressure, _humidity] call EFUNC(weather,calculateWetBulb);
-
-_fnc_dayOfWeek = {
-    private ["_year", "_month", "_day", "_table"];
-    _year = _this select 0;
-    _month = _this select 1;
-    _day = _this select 2;
-    
-    _table = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
-    if (_month < 3) then {
-        _year = _year - 1;
-    };
-    (_year + floor(_year/4) - floor(_year/100) + floor(_year/400) + (_table select (_month - 1)) + _day) % 7
-};
 
 GVAR(Direction) = 4 * floor(_playerDir / 90);
 if (_playerDir % 90 > 10) then { GVAR(Direction) = GVAR(Direction) + 1};
@@ -80,8 +86,8 @@ GVAR(Direction) = GVAR(Direction) % 16;
 if (GVAR(referenceHeadingMenu) == 0) then {
     switch (GVAR(Menu)) do {
         case 0: { // Date
-            EXPLODE_3_PVT(date,_year,_month,_day);
-            _dayString = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] select (date call _fnc_dayOfWeek);
+            date params ["_year", "_month", "_day"];
+            _dayString = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] select (date call FUNC(dayOfWeek));
             _monthString = localize (["str_january","str_february","str_march","str_april","str_may","str_june","str_july","str_august","str_september","str_october","str_november","str_december"] select (_month - 1));
             _textTop = _dayString;
             _textCenter = format["%1 %2 %3", _day, _monthString, _year];
@@ -159,10 +165,10 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         case 4: { // HEADWIND
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                    _textCenterBig = Str(round(abs(cos(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
+                    _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(abs(cos(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
+                    _textCenterBig = Str(round(cos(GVAR(RefHeading)) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
                 };
                 _textInfoLine2 = "- set heading";
@@ -274,7 +280,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 12: { // ALTITUDE
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
+                _textCenterBig = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
@@ -284,15 +290,27 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                 _textCenterLine3Right = Str(round(GVAR(Max) select 12));
             };
         };
-        case 13: { // User Screen 1
+        case 13: { // DENSITY ALTITUDE
+            if (!GVAR(MinAvgMax)) then {
+                _textCenterBig = Str(round(_densityAltitude));
+            } else {
+                _textCenterLine1Left = "Min";
+                _textCenterLine2Left = "Avg";
+                _textCenterLine3Left = "Max";
+                _textCenterLine1Right = Str(round(GVAR(Min) select 13));
+                _textCenterLine2Right = Str(round((GVAR(Total) select 13) / (GVAR(Entries) select 13)));
+                _textCenterLine3Right = Str(round(GVAR(Max) select 13));
+            };
+        };
+        case 14: { // User Screen 1
             _textCenterLine1Left = Str(round(_playerDir));
-            _textCenterLine2Left = Str(round(EGVAR(weather,Altitude) + _playerAltitude));
+            _textCenterLine2Left = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
             _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
             _textCenterLine1Right = GVAR(Directions) select GVAR(Direction);
             _textCenterLine2Right = "m";
             _textCenterLine3Right = "m/s";
         };
-        case 14: { // User Screen 2
+        case 15: { // User Screen 2
             _textCenterLine1Left = Str(round(_temperature * 10) / 10);
             _textCenterLine2Left = Str(round(_humidity * 100 * 10) / 10);
             _textCenterLine3Left = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);

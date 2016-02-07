@@ -1,40 +1,35 @@
 // by commy2
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleNetEvent", "_handleRequestAllSyncedEvents", "_handleRequestSyncedEvent", "_handleSyncedEvent");
-
 ADDON = false;
-
-// ACE Common Function
 
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
 PREP(addToInventory);
-PREP(adminKick);
+PREP(assignedItemFix);
+PREP(assignObjectsInList);
 PREP(ambientBrightness);
-PREP(applyForceWalkStatus);
 PREP(ASLToPosition);
 PREP(binarizeNumber);
 PREP(blurScreen);
 PREP(cachedCall);
 PREP(canGetInPosition);
-PREP(canInteract);
 PREP(canInteractWith);
 PREP(canUseWeapon);
 PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
-PREP(closeDialogIfTargetMoves);
 PREP(codeToLetter);
 PREP(codeToString);
-PREP(convertKeyCode);
 PREP(createOrthonormalReference);
 PREP(currentChannel);
 PREP(debug);
 PREP(debugModule);
 PREP(defineVariable);
+PREP(deviceKeyFindValidIndex);
+PREP(deviceKeyRegisterNew);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);
@@ -51,14 +46,15 @@ PREP(execPersistentFnc);
 PREP(execRemoteFnc);
 PREP(executePersistent);
 PREP(filter);
+PREP(findUnloadPosition);
 PREP(fixCollision);
 PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
 PREP(getAllGear);
-PREP(getCaptivityStatus);
 PREP(getDeathAnim);
+PREP(getCaptivityStatus);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
@@ -68,25 +64,22 @@ PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapGridData);
+PREP(getMapGridFromPos);
+PREP(getMapPosFromGrid);
 PREP(getMarkerType);
+PREP(getMGRSdata);
 PREP(getName);
 PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
 PREP(getSettingData);
+PREP(getStaminaBarControl);
 PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
 PREP(getTurnedOnLights);
-PREP(getTurretCommander);
-PREP(getTurretConfigPath);
-PREP(getTurretCopilot);
-PREP(getTurretGunner);
-PREP(getTurretIndex);
-PREP(getTurrets);
-PREP(getTurretsFFV);
-PREP(getTurretsOther);
 PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
@@ -99,15 +92,21 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
+PREP(handleModifierKey);
+PREP(handleModifierKeyUp);
+PREP(handleModifierKeyInit);
+PREP(handleScrollWheel);
+PREP(handleScrollWheelInit);
 PREP(hasItem);
 PREP(hasMagazine);
+PREP(headBugFix);
+PREP(hideUnit);
 PREP(inheritsFrom);
 PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(inWater);
 PREP(isAlive);
-PREP(isArrested);
 PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
@@ -117,6 +116,7 @@ PREP(isInBuilding);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isTurnedOut);
+PREP(isUnderwater);
 PREP(letterToCode);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
@@ -127,7 +127,6 @@ PREP(loadSettingsLocalizedText);
 PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
-PREP(moveToTempGroup);
 PREP(muteUnit);
 PREP(muteUnitHandleInitPost);
 PREP(muteUnitHandleRespawn);
@@ -136,24 +135,26 @@ PREP(numberToDigitsString);
 PREP(numberToString);
 PREP(onAnswerRequest);
 PREP(owned);
+PREP(parseList);
 PREP(player);
 PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
-PREP(queueAnimation);
 PREP(readSettingFromModule);
+PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
 PREP(requestCallback);
 PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
-PREP(revertKeyCodeLocalized);
+PREP(runAfterSettingsInit);
 PREP(sanitizeString);
+PREP(selectWeaponMode);
 PREP(sendRequest);
 PREP(serverLog);
-PREP(setArrestState);
-PREP(setCanInteract);
+PREP(setAllGear);
+PREP(setApproximateVariablePublic);
 PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
@@ -169,6 +170,14 @@ PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
 PREP(sortAlphabeticallyBy);
+PREP(showHud);
+PREP(statusEffect_addType);
+PREP(statusEffect_get);
+PREP(statusEffect_localEH);
+PREP(statusEffect_resetVariables);
+PREP(statusEffect_respawnEH);
+PREP(statusEffect_sendEffects);
+PREP(statusEffect_set);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(stringRemoveWhiteSpace);
@@ -178,12 +187,16 @@ PREP(toBin);
 PREP(toBitmask);
 PREP(toHex);
 PREP(toNumber);
+PREP(unhideUnit);
+PREP(uniqueElements);
 PREP(uniqueElementsOnly);
 PREP(unloadPerson);
+PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(waitAndExecute);
+PREP(waitUntilAndExecute);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
@@ -205,10 +218,12 @@ PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getHitPoints);
 PREP(getHitPointsWithSelections);
+PREP(getSelectionsWithoutHitPoints);
 PREP(getReflectorsWithSelections);
 PREP(getLightProperties);
 PREP(getLightPropertiesWeapon);
 PREP(getVehicleCrew);
+PREP(getVehicleUAVCrew);
 
 // turrets
 PREP(getTurrets);
@@ -220,15 +235,16 @@ PREP(getTurretCopilot);
 PREP(getDoorTurrets);
 PREP(getTurretsFFV);
 PREP(getTurretsOther);
+PREP(hasHatch);
+
+// missing inventory commands
+PREP(binocularMagazine);
+PREP(removeBinocularMagazine);
 
 // ACE_Debug
 PREP(exportConfig);
 PREP(getChildren);
 PREP(getDisplayConfigName);
-PREP(log);
-PREP(logControls);
-PREP(logDisplays);
-PREP(logModEntries);
 PREP(monitor);
 PREP(showUser);
 
@@ -250,6 +266,17 @@ PREP(serverEvent);
 PREP(localEvent);
 PREP(removeEventHandler);
 PREP(removeAlLEventHandlers);
+
+// Synchronized Events
+PREP(syncedEventPFH);
+PREP(addSyncedEventHandler);
+PREP(removeSyncedEventHandler);
+PREP(requestSyncedEvent);
+PREP(syncedEvent);
+
+PREP(_handleSyncedEvent);
+PREP(_handleRequestSyncedEvent);
+PREP(_handleRequestAllSyncedEvents);
 
 // other eventhandlers
 PREP(addActionEventHandler);
@@ -274,37 +301,45 @@ PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
 
-// Synchronized Events
-PREP(syncedEventPFH);
-PREP(addSyncedEventHandler);
-PREP(removeSyncedEventHandler);
-PREP(requestSyncedEvent);
-PREP(syncedEvent);
-
-PREP(_handleSyncedEvent);
-PREP(_handleRequestSyncedEvent);
-PREP(_handleRequestAllSyncedEvents);
-
 GVAR(syncedEvents) = HASH_CREATE;
+GVAR(showHudHash) = [] call FUNC(hashCreate);
 
-// @TODO: Generic local-managed global-synced objects (createVehicleLocal)
+//GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
+GVAR(waitAndExecArray) = [];
+GVAR(nextFrameNo) = diag_frameno;
+GVAR(nextFrameBufferA) = [];
+GVAR(nextFrameBufferB) = [];
+GVAR(waitUntilAndExecArray) = [];
+
+GVAR(settingsInitFinished) = false;
+GVAR(runAtSettingsInitialized) = [];
+
+// @todo: Generic local-managed global-synced objects (createVehicleLocal)
 
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Load settings on the server and broadcast them
 if (isServer) then {
     call FUNC(loadSettingsOnServer);
 };
 
-ACE_player = player;
+GVAR(statusEffect_Names) = [];
+GVAR(statusEffect_isGlobal) = [];
 
+//////////////////////////////////////////////////
+// Set up PlayerChanged eventhandler for pre init
+//////////////////////////////////////////////////
+
+ACE_player = objNull;
+uiNamespace setVariable ["ACE_player", objNull];
+
+// @todo check if this can be removed
 if (hasInterface) then {
     // PFH to update the ACE_player variable
-    [{
+    GVAR(PreInit_playerChanged_PFHID) = [{
         if !(ACE_player isEqualTo (call FUNC(player))) then {
-            private ["_oldPlayer"];
-            _oldPlayer = ACE_player;
+            private _oldPlayer = ACE_player;
 
             ACE_player = call FUNC(player);
             uiNamespace setVariable ["ACE_player", ACE_player];
@@ -312,22 +347,30 @@ if (hasInterface) then {
             // Raise ACE event
             ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
         };
-    }, 0, []] call cba_fnc_addPerFrameHandler;
+    }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
+
+//////////////////////////////////////////////////
 // Time handling
+//////////////////////////////////////////////////
+
 ACE_time = diag_tickTime;
 ACE_realTime = diag_tickTime;
 ACE_virtualTime = diag_tickTime;
 ACE_diagTime = diag_tickTime;
 ACE_gameTime = time;
+ACE_pausedTime = 0;
+ACE_virtualPausedTime = 0;
 
 PREP(timePFH);
-[FUNC(timePFH), 0, []] call cba_fnc_addPerFrameHandler;
+[FUNC(timePFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 // Init toHex
 [0] call FUNC(toHex);
 
-ADDON = true;
+isHC = !hasInterface && !isDedicated; // deprecated because no tag
+missionNamespace setVariable ["ACE_isHC", ACE_isHC];
+uiNamespace setVariable ["ACE_isHC", ACE_isHC];
 
-isHC = !(hasInterface || isDedicated);
+ADDON = true;

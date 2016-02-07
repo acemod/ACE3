@@ -13,6 +13,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_namespace,_uid);
+params ["_namespace", "_uid"];
 
 _namespace setVariable [_uid, nil];

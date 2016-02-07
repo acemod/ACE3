@@ -13,7 +13,7 @@ _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if(!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
 
 _launchParams = _args select 1;
@@ -24,7 +24,7 @@ _seekerParams = _args select 3;
 _stateParams = _args select 4;
 
 _lastRunTime = _stateParams select 0;
-_runtimeDelta = diag_tickTime - _lastRunTime;
+_runtimeDelta = ACE_diagTime - _lastRunTime;
 _adjustTime = 1;
 
 if(accTime > 0) then {
@@ -100,7 +100,7 @@ _PS setDropInterval 3.0;
 hintSilent format["d: %1", _distanceToTarget];
 #endif
 
-_stateParams set[0, diag_tickTime];
+_stateParams set[0, ACE_diagTime];
 
 _args set[4, _stateParams];
 _this set[0, _args];

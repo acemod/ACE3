@@ -1,31 +1,31 @@
 /*
-  Name: ACE_Respawn_fnc_handleKilled
-
-  Author(s):
-    bux578
-
-  Description:
-    Handles the XEH Killed event
-
-  Parameters:
-    0: OBJECT - Killed unit
-    1: OBJECT - Attacker
-
-  Returns:
-    VOID
-*/
-
+ * Author: bux578
+ * Handles the XEH killed event.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Killer <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [ACE_player, bad_dude] call ace_respawn_fnc_handleKilled
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_killedUnit"];
+params ["_unit"];
 
-_killedUnit = _this select 0;
+// Saves the gear when the player! (and only him) is killed
+if (ACE_player == _unit) then {
+    GVAR(unitGear) = [];
 
-// Saves the gear when the player is killed
-GVAR(unitGear) = [];
-
-if (GVAR(SavePreDeathGear)) then {
-    GVAR(unitGear) = [_killedUnit] call EFUNC(common,getAllGear);
+    if (GVAR(SavePreDeathGear)) then {
+        GVAR(unitGear) = [_unit] call EFUNC(common,getAllGear);
+        GVAR(unitGear) append [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit];
+    };
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {

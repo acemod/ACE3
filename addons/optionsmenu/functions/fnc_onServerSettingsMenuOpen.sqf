@@ -18,7 +18,7 @@
 
 private ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_setting", "_menu", "_settingsMenu"];
 
-if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitwith {closeDialog 145246;};
+if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitWith {closeDialog 145246;};
 
 // Filter only user setable setting
 GVAR(serverSideOptions) = [];
@@ -57,11 +57,22 @@ GVAR(serverSideValues) = [];
 [{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
 
 disableSerialization;
-_menu = uiNamespace getvariable "ACE_serverSettingsMenu";
+_menu = uiNamespace getVariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_exClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (LSTRING(exClientSettings));
 } else {
-    (_settingsMenu displayCtrl 1102) ctrlSetText localize ("STR_ACE_OptionsMenu_inClientSettings");
+    (_settingsMenu displayCtrl 1102) ctrlSetText localize (LSTRING(inClientSettings));
 };
+
+
+lbClear (_menu displayCtrl 14);
+{
+    if (_x == "") then {
+        _x = localize (LSTRING(category_all));
+    };
+    (_menu displayCtrl 14) lbAdd _x;
+} forEach GVAR(categories);
+
+(_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies

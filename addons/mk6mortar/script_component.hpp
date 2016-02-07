@@ -1,5 +1,10 @@
 #define COMPONENT mk6mortar
-#include "\z\ace\Addons\main\script_mod.hpp"
+#include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define CBA_DEBUG_SYNCHRONOUS
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MK6MORTAR
     #define DEBUG_MODE_FULL
@@ -9,6 +14,6 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MK6MORTAR
 #endif
 
-#include "\z\ace\Addons\main\script_macros.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 #define MK6_82mm_AIR_FRICTION -0.0001

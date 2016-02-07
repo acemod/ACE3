@@ -1,5 +1,6 @@
 /*
  * Author: PabstMirror
+ *
  * Makes a unit drop items
  *
  * Arguments:
@@ -22,13 +23,11 @@
 
 private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
 
-
-PARAMS_3(_caller,_target,_listOfItemsToRemove);
-DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
+params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false, [false]]]; //By default units drop all weapon mags when dropping a weapon
 
 _fncSumArray = {
     _return = 0;
-    {_return = _return + _x;} forEach (_this select 0);
+    {_return = _return + _x;} count (_this select 0);
     _return
 };
 
@@ -48,7 +47,7 @@ if (!_doNotDropAmmo) then {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+    } count ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
 //Create a new weapon holder
@@ -68,7 +67,7 @@ if (isNull _holder) exitWith {
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     [{
         _this call FUNC(disarmDropItems);
-    }, _this, 0, 0] call EFUNC(common,waitAndExecute);
+    }, _this] call EFUNC(common,execNextFrame);
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
@@ -178,7 +177,7 @@ if (_holderIsEmpty) then {
     _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
-    if ((time < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
+    if ((ACE_time < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
         //action drop weapons (keeps loaded magazine and attachements)
         {
             if (_x in _listOfItemsToRemove) then {
@@ -234,7 +233,7 @@ if (_holderIsEmpty) then {
             clearItemCargoGlobal _holder;
         };
         //Verify we didn't timeout waiting on drop action
-        if (time >= _maxWaitTime)  exitWith {
+        if (ACE_time >= _maxWaitTime)  exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
@@ -264,4 +263,4 @@ if (_holderIsEmpty) then {
         [_caller, _target, ""] call FUNC(eventTargetFinish);
     };
 
-}, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;
+}, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (ACE_time + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;

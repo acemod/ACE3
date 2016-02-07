@@ -16,17 +16,14 @@
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
+private ["_config", "_medicRequired", "_items", "_locations", "_return", "_callbackProgress", "_treatmentTime", "_callerAnim", "_patientAnim", "_iconDisplayed", "_return", "_usersOfItems", "_consumeItems", "_condition", "_displayText", "_wpn", "_treatmentTimeConfig", "_patientStateCondition", "_allowedSelections"];
+params ["_caller", "_target", "_selectionName", "_className"];
 
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
     [{
         _this call FUNC(treatment);
-    }, _this, 0, 0] call EFUNC(common,waitAndExecute);
+    }, _this] call EFUNC(common,execNextFrame);
 };
 
 if !(_target isKindOf "CAManBase") exitWith {false};
@@ -37,24 +34,27 @@ if (GVAR(level) >= 2) then {
 };
 if !(isClass _config) exitwith {false};
 
+// Allow self treatment check
+if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
+
 _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
 } else {
     // Check for required class
     if (isText (_config >> "requiredMedic")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "requiredMedic")), 0];
+        missionNamespace getVariable [(getText (_config >> "requiredMedic")), 0];
     };
     0;
 };
 
 if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
+_allowedSelections = getArray (_config >> "allowedSelections");
+if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
+
 // Check item
 _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith {false};
-
-// Check allowed locations
-_locations = getArray (_config >> "treatmentLocations");
 
 _return = true;
 if (isText (_config >> "Condition")) then {
@@ -63,9 +63,9 @@ if (isText (_config >> "Condition")) then {
         if (isnil _condition) then {
             _condition = compile _condition;
         } else {
-            _condition = missionNamespace getvariable _condition;
+            _condition = missionNamespace getVariable _condition;
         };
-        if (typeName _condition == "BOOL") then {
+        if (_condition isEqualType false) then {
             _return = _condition;
         } else {
             _return = [_caller, _target, _selectionName, _className] call _condition;
@@ -73,6 +73,16 @@ if (isText (_config >> "Condition")) then {
     };
 };
 if (!_return) exitwith {false};
+
+_patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
+    missionNamespace getVariable [getText(_config >> "patientStateCondition"), 0]
+} else {
+    getNumber(_config >> "patientStateCondition")
+};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+
+// Check allowed locations
+_locations = getArray (_config >> "treatmentLocations");
 
 if ("All" in _locations) then {
     _return = true;
@@ -87,17 +97,18 @@ if ("All" in _locations) then {
         if (_x == "MedicalVehicle" && _medVeh) exitwith {_return = true;};
         if !(isnil _x) exitwith {
             private "_val";
-            _val = missionNamespace getvariable _x;
-            if (typeName _val == "SCALAR") then {
+            _val = missionNamespace getVariable _x;
+            if (_val isEqualType 0) then {
                 _return = switch (_val) do {
-                    case 0: {true};
-                    case 1: _medVeh;
-                    case 2: _medFacility;
-                    case 3: {call _medFacility || call _medVeh};
+                    case 0: {true}; //AdvancedMedicalSettings_anywhere
+                    case 1: {call _medVeh}; //AdvancedMedicalSettings_vehicle
+                    case 2: {call _medFacility}; //AdvancedMedicalSettings_facility
+                    case 3: {(call _medFacility) || {call _medVeh}}; //AdvancedMedicalSettings_vehicleAndFacility
+                    default {false}; //Disabled
                 };
             };
         };
-    }foreach _locations;
+    } foreach _locations;
 };
 
 if !(_return) exitwith {false};
@@ -108,7 +119,7 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
 } else {
     // Check for required class
     if (isText (_config >> "itemConsumed")) exitwith {
-        missionNamespace getvariable [(getText (_config >> "itemConsumed")), 0];
+        missionNamespace getVariable [(getText (_config >> "itemConsumed")), 0];
     };
     0;
 };
@@ -124,19 +135,19 @@ if (_callbackProgress == "") then {
 if (isNil _callbackProgress) then {
     _callbackProgress = compile _callbackProgress;
 } else {
-    _callbackProgress = missionNamespace getvariable _callbackProgress;
+    _callbackProgress = missionNamespace getVariable _callbackProgress;
 };
 
 // Patient Animation
 _patientAnim = getText (_config >> "animationPatient");
-if (_target getvariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
+if (_target getVariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
 };
 
 if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    if (_target getvariable ["ACE_isUnconscious", false]) then {
+    if (_target getVariable ["ACE_isUnconscious", false]) then {
         [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
     } else {
         [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
@@ -149,14 +160,14 @@ if (_caller == _target) then {
     _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
 };
 
-_caller setvariable [QGVAR(selectedWeaponOnTreatment), currentWeapon _caller];
+_caller setVariable [QGVAR(selectedWeaponOnTreatment), (weaponState _caller)];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {
     _caller selectWeapon (primaryWeapon _caller);
 };
 
-_wpn = ["non", "rfl", "pst"] select (["", primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller));
+_wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
@@ -166,16 +177,43 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setvariable [QGVAR(treatmentPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+    if (isWeaponDeployed _caller) then {
+        TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
+        [_caller, "", 0] call EFUNC(common,doAnimation);
+    };
+
+    if ((stance _caller) == "STAND") then {
+        switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
+            case ("rfl"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWrflDnon"];};
+            case ("pst"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSrasWpstDnon"];};
+            case ("non"): {_caller setVariable [QGVAR(treatmentPrevAnimCaller), "AmovPknlMstpSnonWnonDnon"];};
+        };
     } else {
-        _caller setvariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
+        _caller setVariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     };
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
+//Get treatment time
+_treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
+    getNumber (_config >> "treatmentTime");
+} else {
+    if (isText (_config >> "treatmentTime")) exitwith {
+        _treatmentTimeConfig = getText(_config >> "treatmentTime");
+        if (isnil _treatmentTimeConfig) then {
+            _treatmentTimeConfig = compile _treatmentTimeConfig;
+        } else {
+            _treatmentTimeConfig = missionNamespace getVariable _treatmentTimeConfig;
+        };
+        if (_treatmentTimeConfig isEqualType 0) exitwith {
+            _treatmentTimeConfig;
+        };
+        [_caller, _target, _selectionName, _className] call _treatmentTimeConfig;
+    };
+    0;
+};
+
 // Start treatment
-_treatmentTime = getNumber (_config >> "treatmentTime");
 [
     _treatmentTime,
     [_caller, _target, _selectionName, _className, _items, _usersOfItems],

@@ -4,7 +4,6 @@
 #  ACE3 Setup Script  #
 #######################
 
-
 import os
 import sys
 import shutil
@@ -12,8 +11,14 @@ import platform
 import subprocess
 import winreg
 
+######## GLOBALS #########
+MAINDIR = "z"
+PROJECTDIR = "ace"
+CBA = "P:\\x\\cba"
+##########################
 
 def main():
+    FULLDIR = "{}\\{}".format(MAINDIR,PROJECTDIR)
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -28,10 +33,10 @@ def main():
   If you have not done those things yet, please abort this script in the next step and do so first.
   
   This script will create two hard links on your system, both pointing to your ACE3 project folder:
-    [Arma 3 installation directory]\\z\\ace => ACE3 project folder
-    P:\\z\\ace                              => ACE3 project folder
+    [Arma 3 installation directory]\\{} => ACE3 project folder
+    P:\\{}                              => ACE3 project folder
   
-  It will also copy the required CBA includes to P:\\x\\cba, if you do not have the CBA source code already.""")
+  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(FULLDIR,FULLDIR,CBA))
     print("\n") 
 
     try:
@@ -60,26 +65,26 @@ def main():
 
     print("\n# Creating links ...")
 
-    if os.path.exists("P:\\z\\ace"):
+    if os.path.exists("P:\\{}\\{}".format(MAINDIR,PROJECTDIR)):
         print("Link on P: already exists. Please finish the setup manually.")
         return 4
 
-    if os.path.exists(os.path.join(armapath, "z", "ace")):
+    if os.path.exists(os.path.join(armapath, MAINDIR, PROJECTDIR)):
         print("Link in Arma directory already exists. Please finish the setup manually.")
         return 5
 
     try:
-        if not os.path.exists("P:\\z"):
-            os.mkdir("P:\\z")
-        if not os.path.exists(os.path.join(armapath, "z")):
-            os.mkdir(os.path.join(armapath, "z"))
+        if not os.path.exists("P:\\{}".format(MAINDIR)):
+            os.mkdir("P:\\{}".format(MAINDIR))
+        if not os.path.exists(os.path.join(armapath, MAINDIR)):
+            os.mkdir(os.path.join(armapath, MAINDIR))
 
         if platform.win32_ver()[0] == "7":
-            subprocess.call(["cmd", "/c", "mklink", "/D", "P:\\z\\ace", projectpath])
-            subprocess.call(["cmd", "/c", "mklink", "/D", os.path.join(armapath, "z", "ace"), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "P:\\{}\\{}".format(MAINDIR,PROJECTDIR), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", os.path.join(armapath, MAINDIR, PROJECTDIR), projectpath])
         else:
-            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", "P:\\z\\ace", projectpath])
-            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", os.path.join(armapath, "z", "ace"), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", "P:\\{}\\{}".format(MAINDIR,PROJECTDIR), projectpath])
+            subprocess.call(["cmd", "/c", "mklink", "/D", "/J", os.path.join(armapath, MAINDIR, PROJECTDIR), projectpath])
     except:
         raise
         print("Something went wrong during the link creation. Please finish the setup manually.")
@@ -90,18 +95,18 @@ def main():
 
     print("\n# Copying required CBA includes ...")
 
-    if os.path.exists("P:\\x\\cba"):
-        print("P:\\x\\cba already exists, skipping.")
+    if os.path.exists(CBA):
+        print("{} already exists, skipping.".format(CBA))
         return -1
 
     try:
-        shutil.copytree(os.path.join(projectpath, "tools", "cba"), "P:\\x\\cba")
+        shutil.copytree(os.path.join(projectpath, "tools", "cba"), CBA)
     except:
         raise
-        print("Something went wrong while copying CBA includes. Please copy tools\\cba to P:\\x\\cba manually.")
+        print("Something went wrong while copying CBA includes. Please copy tools\\cba to {} manually.".format(CBA))
         return 7
 
-    print("# CBA includes copied successfully to P:\\x\\cba.")
+    print("# CBA includes copied successfully to {}.".format(CBA))
 
     return 0
 

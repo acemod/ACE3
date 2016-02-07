@@ -22,7 +22,7 @@ class Extended_FiredBIS_EventHandlers {
 class Extended_InitPost_EventHandlers {
     class CAManBase {
         class ADDON {
-            init = QUOTE([ARR_2(_this select 0, secondaryWeapon (_this select 0))] call FUNC(takeLoadedATWeapon));
+            init = QUOTE([_this select 0] call FUNC(takeLoadedATWeapon));
         };
     };
 };
