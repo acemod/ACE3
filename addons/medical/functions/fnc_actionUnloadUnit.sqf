@@ -27,7 +27,7 @@ if ([_target] call EFUNC(common,unloadPerson)) then {
             if (local _target) then {
                 ["actionDragUnit", [_caller, _target, true]] call EFUNC(common,localEvent);
             } else {
-                ["actionDragUnit", _callet, [_caller, _target, true]] call EFUNC(common,targetEvent);
+                ["actionDragUnit", _caller, [_caller, _target, true]] call EFUNC(common,targetEvent);
             };
         };
     };
