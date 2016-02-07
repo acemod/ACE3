@@ -14,7 +14,10 @@
 
 #include "script_component.hpp"
 
-private ["_caller","_target"];
-_caller = _this select 0;
-_target = _this select 1;
-[[_caller, _target], QUOTE(DFUNC(actionCheckBloodPressureLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+params ["_caller","_target"];
+
+if (local _target) then {
+    ["actionCheckBloodPressureLocal", [_caller, _target]] call EFUNC(common,localEvent);
+} else {
+    ["actionCheckBloodPressureLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+};
