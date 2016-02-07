@@ -25,6 +25,7 @@ if (hasInterface) then {
 ["fixCollision", DFUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", DFUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", DFUNC(fixPosition)] call FUNC(addEventhandler);
+["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
 
 ["lockVehicle", {
     _this setVariable [QGVAR(lockStatus), locked _this];
