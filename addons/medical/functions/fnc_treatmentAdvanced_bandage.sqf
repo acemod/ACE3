@@ -26,7 +26,12 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 
-[[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentAdvanced_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,targetEvent);
+};
+
 /*    {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);

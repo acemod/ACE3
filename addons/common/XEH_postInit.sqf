@@ -122,7 +122,6 @@ if (isServer) then {
     };
 }] call FUNC(addEventhandler);
 
-
 // Event to log Fix Headbug output
 ["HeadbugFixUsed", {
     params ["_profileName", "_animation"];
@@ -132,6 +131,7 @@ if (isServer) then {
 ["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
 ["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
+["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
 
 ["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
@@ -251,7 +251,7 @@ call FUNC(checkFiles);
         // Publish all settings data after all configs and modules are read
         publicVariable QGVAR(settings);
     };
-    
+
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);

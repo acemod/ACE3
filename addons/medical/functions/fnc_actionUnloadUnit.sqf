@@ -5,7 +5,10 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
+<<<<<<< HEAD
+=======
  * 2: Drag after unload <BOOL> (default: false)
+>>>>>>> medical-focus-feature
  *
  * Return Value:
  * None

@@ -22,7 +22,11 @@ TRACE_5("params",_caller,_target,_selectionName,_className,_items);
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
-["medical_advMedication", [_target], [_target, _className, _part]] call EFUNC(common,targetEvent);
+if (local _target) then {
+    ["treatmentAdvanced_medicationLocal", [_target, _className, _part]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_medicationLocal", _target, [_target, _className, _part]] call EFUNC(common,targetEvent);
+};
 
 {
     if (_x != "") then {

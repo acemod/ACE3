@@ -20,7 +20,7 @@ params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
 if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
     false;
 };
 

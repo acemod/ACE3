@@ -44,7 +44,7 @@ TRACE_2("meds",_part,_delayedMedications);
     _x params ["", "", "_medPartNum"];
     if (_part == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        ["medical_advMedication", [_target], _x] call EFUNC(common,targetEvent);
+        ["treatmentAdvanced_medicationLocal", [_target], _x] call EFUNC(common,targetEvent);
         _delayedMedications set [_forEachIndex, -1];
         _updatedArray = true;
     };
