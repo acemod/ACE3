@@ -159,7 +159,7 @@ Name | Type | Description | Default value
 Enable Team Management | Boolean | Should players be allowed to use the Team Management Menu?. | Yes
 
 ### 1.11 LSD Vehicles
-*part of ace_common*
+*Part of: ace_common*
 
 Any vehicle linked to this module will become a seizure inducing machine of doom, no, really.
 
@@ -224,7 +224,7 @@ Show crew info? | Option | Show vehicle crew info, or by default allows players 
 Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only if client has name tags enabled). | No
 
 ### 1.17 Pointing settings
-*Part of ace_finger*
+*Part of: ace_finger*
 
 This module allows you to tweak settings for finger pointing such as if it's enabled or the distance at which people can see you pointing at something.
 
@@ -260,7 +260,7 @@ Save Gear? | Boolean | Respawn with the gear a player had just before his death.
 Remove bodies? | Boolean | Remove player bodies after disconnect? | Yes
 
 ### 1.20 Sitting
-*part of ace_sitting*
+*Part of: ace_sitting*
 
 This module is used to turn sitting on.
 
@@ -271,7 +271,7 @@ Name | Type | Description | Default value
 Enable sitting | Boolean | | Yes
 
 ### 1.21 Spectator
-*part of ace_spectator*
+*Part of: ace_spectator*
 
 **Settings:**
 
@@ -380,7 +380,7 @@ Simulation Interval | Number | Defines the interval between every calculation st
 Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
 ### 1.27 Zeus Settings
-*part of: ace_zeus*
+*Part of: ace_zeus*
 
 This module provides control over vanilla aspects of Zeus.
 
