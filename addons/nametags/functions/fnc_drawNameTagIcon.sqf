@@ -7,44 +7,43 @@
  * 1: Target <OBJECT>
  * 2: Alpha <NUMBER>
  * 4: Height offset <NUMBER>
- * 5: Draw Type <NUMBER>
+ * 5: Draw name <BOOL>
+ * 5: Draw rank <BOOL>
+ * 6: Draw soundwave <BOOL>
  *
  * Return value:
  * None
  *
  * Example:
- * [ACE_player, bob, 0.5, height, ICON_NAME_SPEAK] call ace_nametags_fnc_drawNameTagIcon
+ * [ACE_player, bob, 0.5, height, true, true, true] call ace_nametags_fnc_drawNameTagIcon
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["", "_target", "", "_heightOffset", ""];
+TRACE_1("drawName:", _this);
+
+params ["", "_target", "", "_heightOffset"];
 
 _fnc_parameters = {
-    params ["_player", "_target", "_alpha", "_heightOffset", "_iconType"];
-
-    if ((_iconType == ICON_NONE) || {isObjectHidden  _target}) exitWith {}; //Don't waste time if not visable
+    params ["_player", "_target", "_alpha", "_heightOffset", "_drawName", "_drawRank", "_drawSoundwave"];
 
     //Set Icon:
     private _icon = "";
     private _size = 0;
-    if (_iconType == ICON_NAME_SPEAK || _iconType == ICON_SPEAK) then {
-        _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor (random 10)];
+    if (_drawSoundwave) then {
+        _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor random 10];
         _size = 1;
-        _alpha = (_alpha max 0.2) + 0.2;//Boost alpha when speaking
     } else {
-        if (_iconType == ICON_NAME_RANK) then {
-            _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower(rank _target)];
+        if (_drawRank) then {
+            _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower rank _target];
             _size = 1;
         };
     };
 
-    if (_alpha < 0) exitWith {}; //Don't waste time if not visable
-
     //Set Text:
-    private _name = if (_iconType in [ICON_NAME, ICON_NAME_RANK, ICON_NAME_SPEAK]) then {
+    private _name = if (_drawName) then {
         [_target, true, true] call EFUNC(common,getName)
     } else {
         ""
@@ -75,10 +74,8 @@ _fnc_parameters = {
     ]
 };
 
-private _parameters = [_this, _fnc_parameters, _target, QGVAR(drawParameters), 0.3] call EFUNC(common,cachedCall);
+private _parameters = [_this, _fnc_parameters, _target, QGVAR(drawParameters), 0.1] call EFUNC(common,cachedCall);
 
-// Convert position to ASLW (expected by drawIcon3D) and add height offsets
-_parameters set [2, _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,_heightOffset + .3])];
+_parameters set [2, (ASLtoAGL eyePos _target) vectorAdd [0,0,_heightOffset + .3]];
 
-TRACE_1("Params:",_parameters);
 drawIcon3D _parameters;
