@@ -200,14 +200,14 @@ order: 3
         </tr>
     </thead>
     <tbody>
-        </tr>
+        <tr>
             <td>"SetHandcuffed"</td>
             <td>Set the captive (handcuffed) state of a unit</td>
             <td>[_unit, _state]</td>
             <td>captives</td>
             <td>local</td>
         </tr>
-        </tr>
+        <tr>
             <td>"SetSurrendered"</td>
             <td>Set the surrender state of a unit</td>
             <td>[_unit, _state]</td>

@@ -30,7 +30,7 @@ Simulation Interval | Number | Defines the interval between every calculation st
 Simulation Radius | Number | Defines the radius around the player (in meters) at which Advanced Ballistics are applied to projectiles. | 3000
 
 ### 1.2 Allow Config Export
-*Part of: ace_Optionmenu*
+*Part of: ace_optionmenu*
 
 This modules allows to export all current ACE3 settings from the ACE3 Option menu to the clipboard and RPT file.
 
@@ -158,8 +158,13 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable Team Management | Boolean | Should players be allowed to use the Team Management Menu?. | Yes
 
+<<<<<<< HEAD
 ### 1.11 LSD Vehicles
 *part of ace_common*
+=======
+### 1.10 LSD Vehicles
+*Part of: ace_common*
+>>>>>>> gh-pages
 
 Any vehicle linked to this module will become a seizure inducing machine of doom, no, really.
 
@@ -223,8 +228,13 @@ Show name tags for AI? | Option | Show the name and rank tags for friendly AI un
 Show crew info? | Option | Show vehicle crew info, or by default allows players to choose it on their own. | Do Not Force
 Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only if client has name tags enabled). | No
 
+<<<<<<< HEAD
 ### 1.17 Pointing settings
 *Part of ace_finger*
+=======
+### 1.16 Pointing settings
+*Part of: ace_finger*
+>>>>>>> gh-pages
 
 This module allows you to tweak settings for finger pointing such as if it's enabled or the distance at which people can see you pointing at something.
 
@@ -259,8 +269,13 @@ Name | Type | Description | Default value
 Save Gear? | Boolean | Respawn with the gear a player had just before his death. | No
 Remove bodies? | Boolean | Remove player bodies after disconnect? | Yes
 
+<<<<<<< HEAD
 ### 1.20 Sitting
 *part of ace_sitting*
+=======
+### 1.19 Sitting
+*Part of: ace_sitting*
+>>>>>>> gh-pages
 
 This module is used to turn sitting on.
 
@@ -270,8 +285,13 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable sitting | Boolean | | Yes
 
+<<<<<<< HEAD
 ### 1.21 Spectator
 *part of ace_spectator*
+=======
+### 1.20 Spectator
+*Part of: ace_spectator*
+>>>>>>> gh-pages
 
 **Settings:**
 
@@ -379,8 +399,13 @@ Vehicle Enabled | Boolean | Enables Wind Deflection for static/vehicle gunners. 
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.05
 Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
+<<<<<<< HEAD
 ### 1.27 Zeus Settings
 *part of: ace_zeus*
+=======
+### 1.26 Zeus Settings
+*Part of: ace_zeus*
+>>>>>>> gh-pages
 
 This module provides control over vanilla aspects of Zeus.
 
@@ -398,7 +423,7 @@ Reveal Mines | Option | Reveal mines to allies and place map markers. | "Disable
 ## 2. ACE Logistics
 
 ### 2.1 Add Spare Parts
-*part of ace_repair*
+*Part of: ace_repair*
 
 Add spare parts to one or multiple objects.
 
@@ -411,7 +436,7 @@ Part | Option | Spare part. | Spare wheel
 Amount | Number | Number of selected spare parts. | 1
 
 ### 2.2 Assign Engineer
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple units as engineer.
 
@@ -423,7 +448,7 @@ List | List | List of unit names that will be classified as engineer, separated 
 Is Engineer | Option | Select the engineering skill of the unit. | Engineer |
 
 ### 2.3 Assign Repair Facility
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple objects as repair facility.
 
@@ -435,7 +460,7 @@ List | List | List of objects that will be classified as repair facility, separa
 Is repair facility | Boolean | Is the object classified as a repair facility? | Yes
 
 ### 2.4 Assign Repair Vehicle
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple vehicles as repair vehicle.
 
@@ -447,7 +472,7 @@ List | List | List of vehicles that will be classified as repair vehicles, separ
 Is repair vehicle | Boolean | Is the vehicle classified as a repair vehicle? | Yes
 
 ### 2.5 Cargo Settings
-*part of ace_cargo*
+*Part of: ace_cargo*
 
 Configure the cargo module settings
 
@@ -458,7 +483,7 @@ Name | Type | Description | Default value
 Enable Cargo | Boolean | Enable the load in cargo module. | Yes
 
 ### 2.6 Repair Settings
-*part of ace_repair*
+*Part of: ace_repair*
 
 This module allows to tweak all the repair settings used in ACE3.
 
@@ -604,7 +629,7 @@ Follow Players | Boolean | Follow players. If set to false, loop will play sound
 Volume | Number | The volume of the sounds played. | 1
 
 ### 4.2 Slideshow
-*part of ace_slideshow*
+*Part of: ace_slideshow*
 
 This module is the core of `ace_slideshow` for more informations about slideshow check [the mission-tools section](./mission-tools.html)
 

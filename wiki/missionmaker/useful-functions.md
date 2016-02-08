@@ -8,7 +8,9 @@ parent: wiki
 ---
 
 ## 1. Explosives
+
 ### 1.1 Scripted Explosions
+
 #### ace_explosives_fnc_scriptedExplosion
 `added in 3.5.0`
 

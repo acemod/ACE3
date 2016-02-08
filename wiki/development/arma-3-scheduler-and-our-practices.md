@@ -29,7 +29,7 @@ This refers to execution which is linear; what this means is that the code will 
 
 ## 2. What is the scheduler and why do I care?
 
-BIKI Article: https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations
+BIKI Article: [https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations](https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations)
 
 The Arma 3 script scheduler basically gives a fair-share execution to all running scripts, FSMs, and SQS files running on any given client or server at any given time. See the BIKI article for a in-depth explanation of this. What this basically means though, is that all scripts get a fair share; this also means scheduled execution is drastically affected by other poorly written mods. For example, if 2 different spawn's are running in a tight loop of `do { foo } while (true);`, they will both get exactly 50% of the scheduling time. 
 
@@ -68,7 +68,7 @@ Line Notes:
 ### 3.3 Code Examples
 
 #### 3.3.1 Generic PFH functions
-See: https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html for more details. 
+See: [https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html](https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html) for more details. 
 
 ```cpp
 [{ code } , delayTime, [ARGS] ] call CBA_fnc_addPerFrameHandler;

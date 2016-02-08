@@ -12,13 +12,13 @@ This page describes how you can setup your development environment for ACE3, all
 
 ## 1. Requirements
 
-- Arma 3 (duh)
+- Arma 3
 - A proper installation of the Arma 3 Tools (available on Steam)
 - A properly setup P-drive
 - Run ArmA 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - Python 3.x, available [here](http://www.python.org)
 - The following Mikero Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, DeOgg, Rapify, MakePBO, PBOProject
-- A properly setup PATH variable (containing Python ,the Mikero tools and git)
+- A properly setup PATH variable (containing Python, the Mikero tools and git)
 
 
 ## 2. Why so complicated?
@@ -89,7 +89,6 @@ File Patching allows you to change the files in an addon while the game is runni
 By default CBA caches a compiled version of functions to reduce mission load times. This interferes with file patching. There are three ways to disable function caching:
 
 - Load `cba_cache_disable.pbo` (included in CBA's optional folder)
-
 - Add the following to your test missions description.ext:
 
 ```cpp
