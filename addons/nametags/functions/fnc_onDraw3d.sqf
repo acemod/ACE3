@@ -103,7 +103,7 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     private _camPosAGL = positionCameraToWorld [0, 0, 0];
     private _camPosASL = AGLtoASL _camPosAGL;
-    private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosAGL;
+    private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
 
     // Find valid targets and cache them
     private _targets = [[], {
