@@ -155,3 +155,7 @@ this setVariable ["ace_headless_blacklist", true];
 ```
 
 To execute custom code on Headless Client connect and disconnects, mission makers or other modders can use the `ACE_HeadlessClientJoined` event (triggered only on the server).
+
+Some Arma 3 features are incompatible, this is up to BI to add support:
+- Support Modules
+- Triggers synchronized with waypoints
