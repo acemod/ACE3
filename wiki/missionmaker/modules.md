@@ -158,13 +158,8 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable Team Management | Boolean | Should players be allowed to use the Team Management Menu?. | Yes
 
-<<<<<<< HEAD
 ### 1.11 LSD Vehicles
 *part of ace_common*
-=======
-### 1.10 LSD Vehicles
-*Part of: ace_common*
->>>>>>> gh-pages
 
 Any vehicle linked to this module will become a seizure inducing machine of doom, no, really.
 
@@ -228,13 +223,8 @@ Show name tags for AI? | Option | Show the name and rank tags for friendly AI un
 Show crew info? | Option | Show vehicle crew info, or by default allows players to choose it on their own. | Do Not Force
 Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only if client has name tags enabled). | No
 
-<<<<<<< HEAD
 ### 1.17 Pointing settings
 *Part of ace_finger*
-=======
-### 1.16 Pointing settings
-*Part of: ace_finger*
->>>>>>> gh-pages
 
 This module allows you to tweak settings for finger pointing such as if it's enabled or the distance at which people can see you pointing at something.
 
@@ -269,13 +259,8 @@ Name | Type | Description | Default value
 Save Gear? | Boolean | Respawn with the gear a player had just before his death. | No
 Remove bodies? | Boolean | Remove player bodies after disconnect? | Yes
 
-<<<<<<< HEAD
 ### 1.20 Sitting
 *part of ace_sitting*
-=======
-### 1.19 Sitting
-*Part of: ace_sitting*
->>>>>>> gh-pages
 
 This module is used to turn sitting on.
 
@@ -285,13 +270,8 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable sitting | Boolean | | Yes
 
-<<<<<<< HEAD
 ### 1.21 Spectator
 *part of ace_spectator*
-=======
-### 1.20 Spectator
-*Part of: ace_spectator*
->>>>>>> gh-pages
 
 **Settings:**
 
@@ -399,13 +379,8 @@ Vehicle Enabled | Boolean | Enables Wind Deflection for static/vehicle gunners. 
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.05
 Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
-<<<<<<< HEAD
 ### 1.27 Zeus Settings
 *part of: ace_zeus*
-=======
-### 1.26 Zeus Settings
-*Part of: ace_zeus*
->>>>>>> gh-pages
 
 This module provides control over vanilla aspects of Zeus.
 
