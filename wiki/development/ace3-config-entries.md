@@ -8,6 +8,7 @@ order: 2
 ---
 
 ## 1. CfgVehicles
+
 Entries found in the `CfgVehicles.hpp` files
 
 
@@ -29,6 +30,7 @@ ace_reserveParachute
 
 
 ## 2. CfgWeapons
+
 Entries found in the `CfgWeapons.hpp` files
 
 
@@ -71,6 +73,7 @@ ace_hearing_lowerVolume
 
 
 ## 3. CfgAmmo
+
 Entries found in the `CfgAmmo.hpp` files
 
 ```cpp
@@ -100,6 +103,7 @@ ace_barrellengths
 
 
 ## 4. CfgGlasses
+
 Entries found in the `CfgGlasses.hpp` file
 
 ```cpp
@@ -115,6 +119,7 @@ ace_dustpath
 
 
 ## 5. CfgMagazines
+
 Entries found in the `CfgMagazines.hpp` files
 
 ```cpp
