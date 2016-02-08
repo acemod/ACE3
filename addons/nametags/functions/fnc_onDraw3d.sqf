@@ -62,6 +62,10 @@ switch (GVAR(showPlayerNames)) do {
 private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
 private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
+private _camPosAGL = positionCameraToWorld [0, 0, 0];
+private _camPosASL = AGLtoASL _camPosAGL;
+private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
+
 // Show nametag for the unit behind the cursor or its commander
 if (_enabledTagsCursor) then {
     _target = cursorTarget;
@@ -78,8 +82,8 @@ if (_enabledTagsCursor) then {
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
         {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-        {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
-        {!isObjectHidden _x}) then {
+        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
+        {!isObjectHidden _target}) then {
 
         _distance = ACE_player distance _target;
 
@@ -99,10 +103,6 @@ if (_enabledTagsCursor) then {
 
 // Show nametags for nearby units
 if (_enabledTagsNearby) then {
-    private _camPosAGL = positionCameraToWorld [0, 0, 0];
-    private _camPosASL = AGLtoASL _camPosAGL;
-    private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
-
     // Find valid targets and cache them
     private _targets = [[], {
         private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
