@@ -28,36 +28,34 @@ private _drawRank = GVAR(showPlayerRanks);
 private _enabledTagsNearby = false;
 private _enabledTagsCursor = false;
 private _onKeyPressAlphaMax = 1;
-if (GVAR(showPlayerNames) == 0) then {
-    // Player names Disabled
-    _drawName = false;
-    _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-    _enabledTagsCursor = false;
-} else {
-    if (GVAR(showPlayerNames) == 1) then {
+switch (GVAR(showPlayerNames)) do {
+    case 0: {
+        // Player names Disabled
+        _drawName = false;
+        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
+        _enabledTagsCursor = false;
+    };
+    case 1: {
         // Player names Enabled
         _enabledTagsNearby = true;
         _enabledTagsCursor = false;
-    } else {
+    };
+    case 2: {
         // Player names Only cursor
-        if (GVAR(showPlayerNames) == 2) then {
-            _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-            _enabledTagsCursor = true;
-        } else {
-            if (GVAR(showPlayerNames) == 3) then {
-                // Player names Only Keypress
-                _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
-                _enabledTagsNearby = (_onKeyPressAlphaMax) > 0 || (GVAR(showSoundWaves) == 2);
-                _enabledTagsCursor = false;
-            } else {
-                if (GVAR(showPlayerNames) == 4) then {
-                    // Player names Only Cursor and Keypress
-                    _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
-                    _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-                    _enabledTagsCursor = _onKeyPressAlphaMax > 0;
-                };
-            };
-        };
+        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
+        _enabledTagsCursor = true;
+    };
+    case 3: {
+        // Player names Only Keypress
+        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
+        _enabledTagsNearby = (_onKeyPressAlphaMax) > 0 || (GVAR(showSoundWaves) == 2);
+        _enabledTagsCursor = false;
+    };
+    case 4: {
+        // Player names Only Cursor and Keypress
+        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
+        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
+        _enabledTagsCursor = _onKeyPressAlphaMax > 0;
     };
 };
 
