@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-if ((_namespace getVariable [_uid, [-99999]]) select 0 < ACE_diagTime) then {
-    params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
+params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
 
+if ((_namespace getVariable [_uid, [-99999]]) select 0 < ACE_diagTime) then {
     _namespace setVariable [_uid, [ACE_diagTime + _duration, _params call _function]];
 
     // Does the cache needs to be cleared on an event?
