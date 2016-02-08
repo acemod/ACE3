@@ -43,7 +43,7 @@
             <Spanish>Paracaídas no dirigible</Spanish>
             <French>Parachute non manœuvrable</French>
             <Polish>Niesterowalny spadochron</Polish>
-            <Czech>Neříditelný Padák</Czech>
+            <Czech>Neříditelný padák</Czech>
             <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
             <Russian>Неуправляемый парашют</Russian>
             <Italian>Paracadute non manovrabile</Italian>
@@ -57,7 +57,7 @@
             <Hungarian>Ejtőernyő elvágása</Hungarian>
             <Portuguese>Cortar para-quedas</Portuguese>
             <Russian>Обрезать стропы</Russian>
-            <Czech>Odžíznout Padák</Czech>
+            <Czech>Odžíznout padák</Czech>
             <Spanish>Cortar paracaídas</Spanish>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
@@ -68,7 +68,7 @@
             <Hungarian>Tartalék ejtőernyő</Hungarian>
             <Portuguese>Para-quedas de reserva</Portuguese>
             <Russian>Запасной парашют</Russian>
-            <Czech>Záložní Padák</Czech>
+            <Czech>Záložní padák</Czech>
             <Spanish>Paracaídas de reserva</Spanish>
         </Key>
     </Package>

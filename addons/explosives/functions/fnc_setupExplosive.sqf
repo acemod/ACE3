@@ -27,12 +27,12 @@ TRACE_3("params",_vehicle,_unit,_magClassname);
 private["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
 
 //Get setup object vehicle and model:
-_setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> "ACE_SetupObject");
+_setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);

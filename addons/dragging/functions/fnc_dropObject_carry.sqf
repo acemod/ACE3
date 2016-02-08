@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drop a carried object.
  *
  * Arguments:
@@ -10,17 +9,20 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_dropObject_carry;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
 
-private "_inBuilding";
-_inBuilding = [_unit] call FUNC(isObjectOnObject);
+private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 // prevent collision damage
 ["fixCollision", _unit] call EFUNC(common,localEvent);

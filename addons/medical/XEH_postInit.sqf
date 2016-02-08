@@ -10,6 +10,10 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
+//Treatment EventHandlers:
+["medical_advMedication", FUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
+
+
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {

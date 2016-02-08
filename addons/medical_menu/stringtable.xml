@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -44,6 +44,7 @@
             <Portuguese>Se permitido pelo servidor, ativa a opção de usar o menu médico por atalhos de teclas e menu de interação</Portuguese>
             <Russian>Если разрешено сервером, включает опцию использования медицинского меню с помощью горячих главиш или меню взаимодействия</Russian>
             <Spanish>Si está permitido por el servidor, active la opción de utilizar el menú médico a través del menú de las teclas</Spanish>
+            <Czech>Pokud je povoleno serverem, umožní použít zdravotnickou nabídku skrze kláv. zkratku a interakční menu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>

@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(adjustRange);
+PREP(calculateSolution);
 PREP(canResetFCS);
 PREP(canUseFCS);
 PREP(canUseRangefinder);

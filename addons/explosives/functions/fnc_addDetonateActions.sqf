@@ -21,7 +21,7 @@ TRACE_2("params",_unit,_detonator);
 
 private ["_result", "_item", "_children", "_range", "_required","_explosivesList"];
 
-_range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> "ACE_Range");
+_range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
 _result = [_unit] call FUNC(getPlacedExplosives);
 _children = [];

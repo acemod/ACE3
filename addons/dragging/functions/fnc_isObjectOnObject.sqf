@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Check if Object is Overlapping
  *
  * Argument:
@@ -8,6 +7,9 @@
  *
  * Return value:
  * <BOOL>
+ *
+ * Example;
+ * [player] call ace_dragging_fnc_isObjectOnObject
  *
  * Public: No
  */
