@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+
 class CfgPatches {
     class ADDON {
         units[] = {};
@@ -11,5 +12,6 @@ class CfgPatches {
 };
 
 #include "CfgEventhandlers.hpp"
+#include "Cfg3DEN.hpp"
+
 #include "CfgAmmo.hpp"
-#include "ACE_Settings.hpp"

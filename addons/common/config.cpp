@@ -59,6 +59,7 @@ class ACE_Rsc_Control_Base {
 };
 
 #include "ACE_Settings.hpp"
+#include "Cfg3DEN.hpp"
 #include "define.hpp"
 #include <ProgressScreen.hpp>
 #include <HintConfig.hpp>
