@@ -106,16 +106,24 @@ if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
         private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
-        if (vehicle ACE_player != ACE_player) then {
-            _nearMen = _nearMen + crew vehicle ACE_player;
-        };
-        _nearMen select {
+        _nearMen = _nearMen select {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
             {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
-            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
+            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
             {!isObjectHidden _x}
-        }
+        };
+        private _crewMen = [];
+        if (vehicle ACE_player != ACE_player) then {
+            _crewMen = (crew vehicle ACE_player) select {
+                _x != ACE_player &&
+                {(side group _x) == (side group ACE_player)} &&
+                {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+                {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
+                {!isObjectHidden _x}
+            };
+        };
+        (_nearMen + _crewMen)
     }, missionNamespace, QGVAR(nearMen), 0.5] call EFUNC(common,cachedCall);
 
     {
