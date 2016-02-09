@@ -1,14 +1,14 @@
 
 class Cfg3DEN {
     class Mission {
-        class PREFIX {
+        class ACE_Settings {
             class AttributeCategories {
                 class ADDON {
-                    displayName = QGVAR(ADDON);
+                    displayName = QUOTE(ADDON);
+                    collapsed = 0;
 
                     class Attributes {
                         class GVAR(Enabled) {
-                            data = QGVAR(Enabled);
                             property = QGVAR(Enabled);
                             displayName = CSTRING(EnableFrag);
                             tooltip = CSTRING(EnableFrag_Desc);
@@ -16,9 +16,9 @@ class Cfg3DEN {
                             control = "Checkbox";
                             defaultValue = "true";
                             expression = "%s = _value";
+                            condition = "true";
                         };
                         class GVAR(SpallEnabled) {
-                            data = QGVAR(SpallEnabled);
                             property = QGVAR(SpallEnabled);
                             displayName = CSTRING(EnableSpall);
                             tooltip = CSTRING(EnableSpall_Desc);
@@ -26,9 +26,9 @@ class Cfg3DEN {
                             control = "Checkbox";
                             defaultValue = "false";
                             expression = "%s = _value";
+                            condition = "true";
                         };
                         class GVAR(maxTrack) {
-                            data = QGVAR(maxTrack);
                             property = QGVAR(maxTrack);
                             displayName = CSTRING(MaxTrack);
                             tooltip = CSTRING(MaxTrack_Desc);
@@ -36,12 +36,11 @@ class Cfg3DEN {
                             control = "Edit";
                             defaultValue = "500";
                             expression = "%s = _value";
+                            condition = "true";
                             validate = "number";
-                            wikiType = "[[Number]]";
                             value = 0;
                         };
                         class GVAR(MaxTrackPerFrame) {
-                            data = QGVAR(MaxTrackPerFrame);
                             property = QGVAR(MaxTrackPerFrame);
                             displayName = CSTRING(MaxTrackPerFrame);
                             tooltip = CSTRING(MaxTrackPerFrame_Desc);
@@ -49,12 +48,11 @@ class Cfg3DEN {
                             control = "Edit";
                             defaultValue = "50";
                             expression = "%s = _value";
+                            condition = "true";
                             validate = "number";
-                            wikiType = "[[Number]]";
                             value = 0;
                         };
                         class GVAR(EnableDebugTrace) {
-                            data = QGVAR(EnableDebugTrace);
                             property = QGVAR(EnableDebugTrace);
                             displayName = CSTRING(EnableDebugTrace);
                             tooltip = CSTRING(EnableDebugTrace_Desc);
@@ -62,6 +60,7 @@ class Cfg3DEN {
                             control = "Checkbox";
                             defaultValue = "false";
                             expression = "%s = _value";
+                            condition = "true";
                         };
                     };
                 };
