@@ -685,6 +685,7 @@
         <Key ID="STR_ACE_Repair_Hitera_1_hitpoint">
             <English>ERA</English>
             <Czech>ERA</Czech>
+            <Polish>ERA</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>

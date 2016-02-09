@@ -7,37 +7,47 @@
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
-            <Polish>Saperka, używana do budowy okopów</Polish>
+            <Polish>Saperka, używana do budowy wnęk</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
+            <Polish>Wnęka - mała</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
+            <Polish>Mała jednoosobowa wnęka</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
+            <Polish>Kop małą wnękę</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
+            <Polish>Wnęka - duża</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
+            <Polish>Duża jednoosobowa wnęka</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
+            <Polish>Kop dużą wnękę</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
+            <Polish>Potwierdź kopanie</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
+            <Polish>Anuluj kopanie</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>+Ctrl rotate</English>
+            <Polish>+Ctrl obrót</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
+            <Polish>Kopanie okopu</Polish>
         </Key>
     </Package>
 </Project>

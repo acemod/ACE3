@@ -351,6 +351,7 @@
         </Key>
         <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
+            <Polish>Wyjdź</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
