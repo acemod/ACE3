@@ -1,10 +1,10 @@
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
-            class StateSpecial {
+            class ace_attributes {
                 class Attributes {
-                    class ACE_IsEngineer {
-                        property = QUOTE(ACE_IsEngineer);
+                    class ace_isEngineer {
+                        property = QUOTE(ace_isEngineer);
                         value = 0;
                         control = "Combo";
                         displayName = CSTRING(AssignEngineerRole_role_DisplayName);
@@ -19,8 +19,8 @@ class Cfg3DEN {
                             class specialist {name = CSTRING(AssignEngineerRole_role_specialist); value = 2; default = 0;};
                         };
                     };
-                    class ACE_isRepairVehicle {
-                        property = QUOTE(ACE_isRepairVehicle);
+                    class ace_isRepairVehicle {
+                        property = QUOTE(ace_isRepairVehicle);
                         value = 0;
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairVehicle_role_DisplayName)
@@ -30,8 +30,8 @@ class Cfg3DEN {
                         condition = "objectVehicle";
                         defaultValue = 0;
                     };
-                    class ACE_isRepairFacility {
-                        property = QUOTE(ACE_isRepairFacility);
+                    class ace_isRepairFacility {
+                        property = QUOTE(ace_isRepairFacility);
                         value = 0;
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairFacility_role_DisplayName)

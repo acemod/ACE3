@@ -1,10 +1,10 @@
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
-            class StateSpecial {
+            class ace_attributes {
                 class Attributes {
-                    class ACE_IsMedic {
-                        property = QUOTE(ACE_IsMedic);
+                    class ace_isMedic {
+                        property = QUOTE(ace_isMedic);
                         value = 0;
                         control = "Combo";
                         displayName = CSTRING(AssignMedicRoles_role_DisplayName);
@@ -19,8 +19,8 @@ class Cfg3DEN {
                             class doctor {name = CSTRING(AssignMedicRoles_role_doctor); value = 2; default = 0;};
                         };
                     };
-                    class ACE_isMedicalVehicle {
-                        property = QUOTE(ACE_isMedicalVehicle);
+                    class ace_isMedicalVehicle {
+                        property = QUOTE(ace_isMedicalVehicle);
                         value = 0;
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignMedicVehicle_enabled_DisplayName)
@@ -30,8 +30,8 @@ class Cfg3DEN {
                         condition = "objectVehicle";
                         defaultValue = 0;
                     };
-                    class ACE_isMedicalFacility {
-                        property = QUOTE(ACE_isMedicalFacility);
+                    class ace_isMedicalFacility {
+                        property = QUOTE(ace_isMedicalFacility);
                         value = 0;
                         control = "Checkbox";
                         displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName)
