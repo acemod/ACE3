@@ -113,7 +113,7 @@
         <Key ID="STR_ACE_Gestures_stop">
             <English>Stop</English>
             <French>Stop</French>
-            <German>Stop</German>
+            <German>Halt</German>
             <Polish>Stop</Polish>
             <Russian>Стоп</Russian>
             <Portuguese>Parar</Portuguese>
@@ -155,6 +155,7 @@
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
             <English>Engage</English>
+            <German>Angriff</German>
             <French>Engager</French>
             <Polish>Atak</Polish>
             <Russian>Открыть огонь</Russian>
@@ -217,18 +218,22 @@
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
+            <German>Zeige Gesten im Interaktionsmenü</German>
             <Czech>Zobrazit posunky v interakčním menu</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
+            <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
             <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
+            <German>Nur Schnelltasten</German>
             <Czech>Pouze klávesové zkratky</Czech>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
+            <German>Schnelltasten+ Interaktionsmenü</German>
             <Czech>Klávesové zkratky + interakční menu</Czech>
         </Key>
     </Package>
