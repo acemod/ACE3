@@ -135,7 +135,7 @@
             <English>Reduces the hearing ability as the player takes hearing damage</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>
-            <German>Aktiviere Taubheit im Gefecht?</German>
+            <German>Verringert das Hörvermögen wenn der Spieler einen Hörschaden davonträg?</German>
             <Czech>Snižuje schopnost sluchu pokud dojde k jeho poškození hlasitou a blízkou střelbou</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
@@ -171,6 +171,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
+            <German>Füge Ohrenstöpsel zu Einheiten hinzu</German>
             <Polish>Dodaj stopery dla jednostek</Polish>
             <Russian>Добавлять юнитам беруши</Russian>
             <Portuguese>Adiciona protetores de ouvido as unidades</Portuguese>
@@ -178,6 +179,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
+            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eine eigene Inventarkonfiguration vorgenommen wurde.</German>
             <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
             <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
