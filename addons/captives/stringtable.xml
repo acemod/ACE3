@@ -181,6 +181,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
+            <German>Einheit in Handschellen legen</German>
             <Polish>Skuj jednostkę</Polish>
             <Portuguese>Fazer unidade algemada</Portuguese>
             <Russian>Связать юнита</Russian>
@@ -188,6 +189,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.&lt;br /&gt;Source: ace_captives</English>
+            <German>Synchronisiere eine Einheit um sie in Handschellen zu legen.&lt;br /&gt;Quelle: ace_captives</German>
             <Polish>Zsynchronizuj z jednostką, aby została skuta.&lt;br /&gt;Źródło: ace_captives</Polish>
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.&lt;br/&gt;Source: ace_captives</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.&lt;br /&gt;Источник: ace_captives</Russian>
