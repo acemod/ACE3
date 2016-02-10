@@ -45,7 +45,7 @@ class CfgVehicles {
                 description = CSTRING(MakeLoadable_description);
                 typeName = "BOOL";
                 defaultValue = 1;
-            };            
+            };
             class setSize {
                 displayName = CSTRING(makeLoadable_setSize_displayName);
                 typeName = "NUMBER";
@@ -488,10 +488,6 @@ class CfgVehicles {
 
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
-        GVAR(size) = 1;
-        GVAR(canLoad) = 1;
-    };
-    class Land_PortableLight_double_F: Land_PortableLight_single_F {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
     };

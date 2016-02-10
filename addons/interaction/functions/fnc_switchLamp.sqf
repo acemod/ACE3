@@ -29,7 +29,7 @@ private _hitPointsDamage = [];
 } count _reflectors;
 
 //if lamp is on turn it off
-private _eventName = if(_isOn) then {"lampTurnOff"} else {"lampTurnOn"};
+private _eventName = ["lampTurnOn", "lampTurnOff"] select _isOn;
 if(local _lamp) then {
     [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call EFUNC(common,localEvent);
 } else {
