@@ -3,29 +3,37 @@
     <Package name="trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
+            <German>Schanzzeug</German>
             <Polish>Saperka</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
+            <German>Mit  Schanzzeug können Erdwälle ausgehoben werden. </German>
             <Polish>Saperka, używana do budowy okopów</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
+            <German>Rund- Klein</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
+            <German>Kleiner Schützengraben</German>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
+            <German>Grabe kleinen Schützengraben</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
+            <German>Rund - Groß</German>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
+            <German>Großer Schützengraben</German>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
+            <German>Großer Graben</German>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
