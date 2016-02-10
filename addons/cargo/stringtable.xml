@@ -108,6 +108,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
+            <German>Belade Fracht</German>
             <Portuguese>Carregando carga</Portuguese>
             <Polish>Ładowanie cargo</Polish>
             <Czech>Nakládám</Czech>
@@ -115,6 +116,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
+            <German>Entlade Fracht</German>
             <Portuguese>Descarregando carga</Portuguese>
             <Polish>Rozładowywanie cargo</Polish>
             <Czech>Vykládám</Czech>
@@ -122,6 +124,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
+            <German>%1&lt;br/&gt;konnte nicht eingeladen werden</German>
             <Portuguese>%1&lt;br/&gt;não pode ser carregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać załadowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být naloženo</Czech>
@@ -129,6 +132,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
+            <German>%1&lt;br/&gt;konnte nicht entladen werden</German>
             <Portuguese>%1&lt;br/&gt;não pode ser descarregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać rozładowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
@@ -136,9 +140,11 @@
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
+            <German>Füge Objekt zum Frachtsystem hinzu</German>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
+            <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist be- und entladbar.</German>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
