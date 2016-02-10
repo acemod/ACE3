@@ -30,15 +30,17 @@
     GVAR(nextFrameNo) = diag_frameno + 1;
 
     //Handle the waitUntilAndExec array:
-    {
+    GVAR(waitUntilAndExecArray) = GVAR(waitUntilAndExecArray) select {
         // if condition is satisifed call statement
         if ((_x select 2) call (_x select 0)) then {
             // make sure to delete the correct handle when multiple conditions are met in one frame
-            GVAR(waitUntilAndExecArray) deleteAt (GVAR(waitUntilAndExecArray) find _x);
             (_x select 2) call (_x select 1);
+            false
+        } else {
+            true
         };
         nil
-    } count +GVAR(waitUntilAndExecArray);
+    };
 
     END_COUNTER(waitAndExec);
 }, 0, []] call CBA_fnc_addPerFrameHandler;
@@ -251,7 +253,7 @@ call FUNC(checkFiles);
         // Publish all settings data after all configs and modules are read
         publicVariable QGVAR(settings);
     };
-    
+
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);
