@@ -3,6 +3,7 @@
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
+            <German>Zuschauer Einstellungen</German>
             <Polish>Ustawienia obserwatora</Polish>
             <Portuguese>Preferências de Espectador</Portuguese>
             <Russian>Настройки спектатора</Russian>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
+            <German>Konfiguriert den Zuschauermodus</German>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
             <Russian>Определяют, как система спектатора будет функционировать по-умолчанию.</Russian>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
+            <German>Einheitenfilter</German>
             <Polish>Filtr jednostek</Polish>
             <Portuguese>Filtro de unidades</Portuguese>
             <Russian>Фильтр юнитов</Russian>
@@ -27,6 +30,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
             <English>Method of filtering spectatable units.</English>
+            <German>Einheiten denen zugeschaut werden kann.</German>
             <Polish>Wybierz jednostki, jakie będzie można obserwować po uruchomeniu obserwatora.</Polish>
             <Portuguese>Método para filtrar unidades espectáveis</Portuguese>
             <Russian>Метод фильтрации наблюдаемых юнитов.</Russian>
@@ -35,6 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
+            <German>Keine Einheiten</German>
             <Polish>Brak jednostek</Polish>
             <Portuguese>Sem unidades</Portuguese>
             <Russian>Никто</Russian>
@@ -43,6 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
+            <German>Nur Spieler</German>
             <Polish>Tylko gracze</Polish>
             <Portuguese>Somente jogadores</Portuguese>
             <Russian>Только игроки</Russian>
@@ -51,6 +57,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
+            <German>Nur spielbare Einheiten</German>
             <Polish>Grywalne jednostki</Polish>
             <Portuguese>Unidades jogáveis</Portuguese>
             <Russian>Играбельные юниты</Russian>
@@ -59,6 +66,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
+            <German>Alle Einheiten</German>
             <Polish>Wszystkie jednostki</Polish>
             <Portuguese>Todas unidades</Portuguese>
             <Russian>Все юниты</Russian>
@@ -67,6 +75,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
             <English>Side filter</English>
+            <German>Fraktionenfilter</German>
             <Polish>Filtr stron</Polish>
             <Portuguese>Filtro de lados</Portuguese>
             <Russian>Фильтр стороны</Russian>
@@ -75,6 +84,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
             <English>Method of filtering spectatable sides.</English>
+            <German>Fraktionen denen zugeschaut werden kann.</German>
             <Polish>Wybierz strony, jakie będzie można obserwować po uruchomeniu obserwatora.</Polish>
             <Portuguese>Método para filtrar lados espectáveis.</Portuguese>
             <Russian>Метод фильтрации наблюдаемых сторон.</Russian>
@@ -83,6 +93,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
+            <German>Spielerseite</German>
             <Polish>Strona gracza</Polish>
             <Portuguese>Lado do jogador</Portuguese>
             <Russian>Сторона игрока</Russian>
@@ -91,6 +102,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
+            <German>Verbündete</German>
             <Polish>Strony sojusznicze</Polish>
             <Portuguese>Lados aliados</Portuguese>
             <Russian>Дружественные стороны</Russian>
@@ -99,6 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_hostile">
             <English>Hostile sides</English>
+            <German>Feinde</German>
             <Polish>Strony wrogie</Polish>
             <Portuguese>Lados hostis</Portuguese>
             <Russian>Враждебные стороны</Russian>
@@ -107,6 +120,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
+            <German>Alle Fraktionen</German>
             <Polish>Wszystkie strony</Polish>
             <Portuguese>Todos os lados</Portuguese>
             <Russian>Все стороны</Russian>
@@ -115,6 +129,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
+            <German>Kameramodus</German>
             <Polish>Tryby kamery</Polish>
             <Portuguese>Modos de camera</Portuguese>
             <Russian>Режимы камеры</Russian>
@@ -123,6 +138,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used.</English>
+            <German>Verwendbare Kameramodi</German>
             <Polish>Tryby kamery, jakie mogą być używane.</Polish>
             <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
@@ -131,6 +147,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
+            <German>Alle</German>
             <Polish>Wszystkie</Polish>
             <Portuguese>Todos</Portuguese>
             <Russian>Все</Russian>
@@ -139,6 +156,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_free">
             <English>Free only</English>
+            <German>Nur freie Kamera</German>
             <Polish>Tylko wolna</Polish>
             <Portuguese>Somente livre</Portuguese>
             <Russian>Только свободная</Russian>
@@ -147,6 +165,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_internal">
             <English>Internal only</English>
+            <German>Erste Person</German> //Bitte überprüfen!
             <Polish>Tylko wewnętrzna</Polish>
             <Portuguese>Somente interna</Portuguese>
             <Russian>Только внутренняя</Russian>
@@ -155,6 +174,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_external">
             <English>External only</English>
+            <German>Dritte Person</German> //Bitte überpfüfen!
             <Polish>Tylko zewnętrzna</Polish>
             <Portuguese>Somente externa</Portuguese>
             <Russian>Только внешняя</Russian>
@@ -163,6 +183,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>Internal and external</English>
+            <German>Erste und dritte Person</German>
             <Polish>Wewnętrzna i zewnętrzna</Polish>
             <Portuguese>Interna e externa</Portuguese>
             <Russian>Внутренняя и внешняя</Russian>
@@ -171,6 +192,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
+            <German>Sichtmodi</German>
             <Polish>Tryby wizji</Polish>
             <Portuguese>Modos de visão</Portuguese>
             <Russian>Режимы видения</Russian>
@@ -179,6 +201,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used.</English>
+            <German>Sichtmodi die verwendet werden können.</German>
             <Polish>Tryby wizji, jakie mogą być używane.</Polish>
             <Portuguese>Modos de visão que podem ser utilizados</Portuguese>
             <Russian>Режимы видения, которые могут быть использованы</Russian>
@@ -187,6 +210,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
+            <German>Nachtsicht</German>
             <Polish>Noktowizja</Polish>
             <Portuguese>Visão noturna</Portuguese>
             <Russian>Ночное видение</Russian>
@@ -195,6 +219,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
+            <German>Wärmebild</German>
             <Polish>Termowizja</Polish>
             <Portuguese>Visão térmica</Portuguese>
             <Russian>Тепловизионное</Russian>
@@ -204,6 +229,7 @@
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
             <English>Spectator Units</English>
+            <German>Zuschauereinheiten</German>
             <Polish>Jednostki obserwatora</Polish>
             <Portuguese>Unidades espectadoras</Portuguese>
             <Russian>Юниты</Russian>
@@ -212,6 +238,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
+            <German>Zuschauersteuerung</German>
             <Polish>Sterowanie obserwatorem</Polish>
             <Portuguese>Controle do espectador</Portuguese>
             <Russian>Управление спектатором</Russian>
@@ -220,6 +247,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
+            <German>Frei</German>
             <Polish>Wolna</Polish>
             <Portuguese>Livre</Portuguese>
             <Russian>Свободная</Russian>
@@ -228,6 +256,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ViewInternal">
             <English>Internal</English>
+            <German>Erste Person</German> //Bitte überprüfen!
             <Polish>Wewnętrzna</Polish>
             <Portuguese>Interna</Portuguese>
             <Russian>Внутренняя</Russian>
@@ -236,6 +265,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
+            <German>Dritte Person</German> //Bitte überprüfen!
             <Polish>Zewnętrzna</Polish>
             <Portuguese>Externa</Portuguese>
             <Russian>Внешняя</Russian>
@@ -244,6 +274,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
+            <German>Normal</German>
             <Polish>Normalna</Polish>
             <Portuguese>Normal</Portuguese>
             <Russian>Нормальное</Russian>
@@ -252,6 +283,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
+            <German>Nacht</German>
             <Polish>Noc</Polish>
             <Portuguese>Visão Norturna</Portuguese>
             <Russian>Ночное</Russian>
@@ -260,6 +292,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
+            <German>Wärme</German>
             <Polish>Termo</Polish>
             <Portuguese>Térmica</Portuguese>
             <Russian>Тепловизор</Russian>
@@ -269,6 +302,7 @@
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
             <English>Free Camera</English>
+            <German>Freie Kamera</German>
             <Polish>Kamera swobodna</Polish>
             <Portuguese>Câmera livre</Portuguese>
             <Russian>Свободная камера</Russian>
@@ -277,6 +311,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
+            <German>Kamera vor</German>
             <Polish>Kamera naprzód</Polish>
             <Portuguese>Câmera para frente</Portuguese>
             <Russian>Камера вперед</Russian>
@@ -285,6 +320,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Camera Backward</English>
+            <German>Kamera zurück</German>
             <Polish>Kamera w tył</Polish>
             <Portuguese>Câmera para trás</Portuguese>
             <Russian>Камера назад</Russian>
@@ -293,6 +329,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Camera Left</English>
+            <German>Kamera links</German>
             <Polish>Kamera w lewo</Polish>
             <Portuguese>Câmera para esquerda</Portuguese>
             <Russian>Камера влево</Russian>
@@ -301,6 +338,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Camera Right</English>
+            <German>Kamera rechts</German>
             <Polish>Kamera w prawo</Polish>
             <Portuguese>Câmera para direita</Portuguese>
             <Russian>Камера вправо</Russian>
@@ -309,6 +347,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Camera Up</English>
+            <German>Kamera hoch</German>
             <Polish>Kamera w górę</Polish>
             <Portuguese>Câmera para cima</Portuguese>
             <Russian>Камера вверх</Russian>
@@ -317,6 +356,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Camera Down</English>
+            <German>Kamera runter</German>
             <Polish>Kamera w dół</Polish>
             <Portuguese>Câmera para baixo</Portuguese>
             <Russian>Камера вниз</Russian>
@@ -325,6 +365,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
+            <German>Kamera mitschwenken</German>
             <Polish>Panoramowanie</Polish>
             <Portuguese>Câmera panorâmica</Portuguese>
             <Russian>Панорамирование</Russian>
@@ -333,6 +374,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDolly">
             <English>Dolly Camera</English>
+            <German>Kamerafahrt</German>
             <Polish>Płynna kamera</Polish>
             <Portuguese>Câmera dolly</Portuguese>
             <Russian>Рельсовая камера</Russian>
@@ -341,6 +383,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
+            <German>Kamera Ziel verfolgen</German>
             <Polish>Zablokuj kamerę na celu</Polish>
             <Portuguese>Travar câmera em alvo</Portuguese>
             <Russian>Зафиксировать камеру на цели</Russian>
@@ -349,6 +392,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
+            <German>Geschwindigkeitserhöhung</German>
             <Polish>Przyśpieszenie kamery</Polish>
             <Portuguese>Aumento de velocidade</Portuguese>
             <Russian>Ускорение камеры</Russian>
@@ -357,6 +401,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
+            <German>Nuteroberfläche</German>
             <Polish>Interfejs</Polish>
             <Portuguese>Interface</Portuguese>
             <Russian>Интерфейс</Russian>
@@ -365,6 +410,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
+            <German>Nutzeroberfläche umschalten</German>
             <Polish>Przełącz interfejs</Polish>
             <Portuguese>Alternar interface</Portuguese>
             <Russian>Переключить интерфейс</Russian>
@@ -373,6 +419,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
             <English>Toggle Unit Icons</English>
+            <German>Einheitensymbole umschalten</German>
             <Polish>Przełącz ikony jednostek</Polish>
             <Portuguese>Alternar ícone de unidades</Portuguese>
             <Russian>Вкл./выкл. иконки юнитов</Russian>
@@ -381,6 +428,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
             <English>Toggle Unit List</English>
+            <German>Einheitenliste umschalten</German>
             <Polish>Przełącz listę jednostek</Polish>
             <Portuguese>Alternar lista de unidades</Portuguese>
             <Russian>Вкл./выкл. список юнитов</Russian>
@@ -389,6 +437,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
             <English>Toggle Toolbar</English>
+            <German>Werkzeuge umschalten</German>
             <Polish>Przełącz pasek narzędzi</Polish>
             <Portuguese>Alternar barra de ferramentas</Portuguese>
             <Russian>Вкл./выкл. тулбар</Russian>
@@ -397,6 +446,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
+            <German>Kompass umschalten</German>
             <Polish>Przełącz kompas</Polish>
             <Portuguese>Alternar bússola</Portuguese>
             <Russian>Вкл./выкл. компас</Russian>
@@ -405,6 +455,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
             <English>Toggle Map</English>
+            <German>Karte umschalten</German>
             <Polish>Przełącz mapę</Polish>
             <Portuguese>Alternar mapa</Portuguese>
             <Russian>Вкл./выкл. карту</Russian>
@@ -413,6 +464,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
             <English>Toggle Help</English>
+            <German>Hilfe umschalten</German>
             <Polish>Przełącz pomoc</Polish>
             <Portuguese>Alternar ajuda</Portuguese>
             <Russian>Вкл./выкл. помощь</Russian>
@@ -421,6 +473,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
+            <German>Kameraeigenschaften</German>
             <Polish>Atrybuty kamery</Polish>
             <Portuguese>Atributos de câmera</Portuguese>
             <Russian>Атрибуты камеры</Russian>
@@ -429,6 +482,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
+            <German>Nächste Kamera</German>
             <Polish>Następna kamera</Polish>
             <Portuguese>Próxima câmera</Portuguese>
             <Russian>Следующая камера</Russian>
@@ -437,6 +491,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
             <English>Previous Camera</English>
+            <German>Vorherige Kamera</German>
             <Polish>Poprzednia kamera</Polish>
             <Portuguese>Câmera anterior</Portuguese>
             <Russian>Предыдущая камера</Russian>
@@ -445,6 +500,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
+            <German>Nächste Einheit</German>
             <Polish>Następna jednostka</Polish>
             <Portuguese>Próxima unidade</Portuguese>
             <Russian>Следующий юнит</Russian>
@@ -453,6 +509,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
+            <German>Vorherige Einheit</German>
             <Polish>Poprzednia jednostka</Polish>
             <Portuguese>Unidade anterior</Portuguese>
             <Russian>Предыдущий юнит</Russian>
@@ -461,6 +518,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Next Vision Mode</English>
+            <German>Nächster Sichtmodus</German>
             <Polish>Następny tryb wizji</Polish>
             <Portuguese>Próximo modo de visão</Portuguese>
             <Russian>Следующий режим видения</Russian>
@@ -469,6 +527,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_prevVis">
             <English>Previous Vision Mode</English>
+            <German>Vorheriger Sichtmodus</German>
             <Polish>Poprzedni tryb wizji</Polish>
             <Portuguese>Modo de visão anterior</Portuguese>
             <Russian>Предыдущий режим видения</Russian>
@@ -477,6 +536,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
+            <German>Vergrößerung einstellen</German>
             <Polish>Reguluj zoom</Polish>
             <Portuguese>Ajustar zoom</Portuguese>
             <Russian>Настроить зум</Russian>
@@ -485,6 +545,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
+            <German>Geschwindigkeit einstellen</German>
             <Polish>Reguluj prędkość</Polish>
             <Portuguese>Ajuster velocidade</Portuguese>
             <Russian>Настроить скорость</Russian>
@@ -493,6 +554,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
+            <German>Vergrößern</German>
             <Polish>Reguluj zoom (krok)</Polish>
             <Portuguese>Incrementar zoom</Portuguese>
             <Russian>Увеличить зум</Russian>
@@ -501,6 +563,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
+            <German>Geschwindkeit erhöhen</German>
             <Polish>Reguluj prędkość (krok)</Polish>
             <Portuguese>Incrementar velocidade</Portuguese>
             <Russian>Увеличить скорость</Russian>
@@ -509,6 +572,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
+            <German>Vergrößerung zurücksetzen</German>
             <Polish>Resetuj zoom</Polish>
             <Portuguese>Redefinir zoom</Portuguese>
             <Russian>Сбросить зум</Russian>
@@ -517,6 +581,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
+            <German>Geschwindigkeit zurücksetzen</German>
             <Polish>Resetuj prędkość</Polish>
             <Portuguese>Redefinir velocidade</Portuguese>
             <Russian>Сбросить скорость</Russian>
