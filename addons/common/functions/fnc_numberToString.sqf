@@ -14,8 +14,7 @@
 
 params ["_number"];
 
-private "_decimals";
-_decimals = str (abs _number mod 1);
+private _decimals = str (abs _number mod 1);
 _decimals = toArray _decimals;
 _decimals deleteAt 0;
 

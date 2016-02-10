@@ -32,6 +32,7 @@ if (isNil "_adjustment") then {
 };
 
 _adjustmentDifference = (_adjustment select _weaponIndex) vectorDiff [_elevation, _windage, _zero];
+if (_adjustmentDifference isEqualTo [0,0,0]) exitWith {false};  // Don't coninue if no adjustment is made
 
 _adjustment set [_weaponIndex, [_elevation, _windage, _zero]];
 [_unit, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);

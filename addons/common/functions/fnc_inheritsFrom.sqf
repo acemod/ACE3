@@ -24,8 +24,7 @@ params ["_configEntry", "_configMatch"];
 if (configName _configEntry == _configMatch) exitWith {true};
 if (configName _configEntry == ",") exitWith {false};
 
-private "_match";
-_match = false;
+private _match = false;
 
 while {configName _configEntry != ""} do {
     if (configName _configEntry == _configMatch) exitWith {

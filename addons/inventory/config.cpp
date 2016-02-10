@@ -6,11 +6,13 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Pabst Mirror"};
+        author[] = {"Pabst Mirror, commy2"};
         authorUrl = "https://github.com/PabstMirror/";
         VERSION_CONFIG;
     };
 };
+
+#include "CfgEventHandlers.hpp"
 
 #include "RscDisplayInventory.hpp"
 #include "ACE_Settings.hpp"

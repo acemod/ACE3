@@ -17,7 +17,7 @@
 
 private ["_unit","_return","_status"];
 params ["_unit"];
-_status = _unit getvariable [QGVAR(triageLevel), -1];
+_status = _unit getVariable [QGVAR(triageLevel), -1];
 _return = switch (_status) do {
     case 1: {[localize LSTRING(Triage_Status_Minor), 1, [0, 0.5, 0, 0.9]]};
     case 2: {[localize LSTRING(Triage_Status_Delayed), 2, [0.7, 0.5, 0, 0.9]]};

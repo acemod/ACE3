@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -12,6 +12,11 @@
             <Hungarian>Egység átváltva</Hungarian>
             <Italian>Cambia unità</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
+            <English>Trying to switch</English>
+            <German>Versuche zu Wechseln</German>
+            <Czech>Snažím se přehodit</Czech>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>

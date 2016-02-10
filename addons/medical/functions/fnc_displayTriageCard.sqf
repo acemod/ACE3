@@ -27,13 +27,13 @@ if (_show) then {
         private ["_target", "_display", "_alphaLevel", "_alphaLevel", "_lbCtrl"];
         params ["_args", "_idPFH"];
         _args params ["_target"];
-        if (GVAR(TriageCardTarget) != _target) exitwith {
+        if (GVAR(TriageCardTarget) != _target) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
         disableSerialization;
-        _display = uiNamespace getvariable QGVAR(triageCard);
-        if (isnil "_display") exitwith {
+        _display = uiNamespace getVariable QGVAR(triageCard);
+        if (isNil "_display") exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
@@ -43,7 +43,7 @@ if (_show) then {
         _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;
 
-        _log = _target getvariable [QGVAR(triageCard), []];
+        _log = _target getVariable [QGVAR(triageCard), []];
         {
             _x params ["_item", "_amount"];
             _message = _item;
@@ -54,15 +54,15 @@ if (_show) then {
                     _message = localize _message;
                 };
             };
-            _triageCardTexts pushback format["%1x - %2", _amount, _message];
-        } foreach _log;
+            _triageCardTexts pushBack format["%1x - %2", _amount, _message];
+        } forEach _log;
 
         if (count _triageCardTexts == 0) then {
             _lbCtrl lbAdd (localize LSTRING(TriageCard_NoEntry));
         };
         {
             _lbCtrl lbAdd _x;
-        } foreach _triageCardTexts;
+        } forEach _triageCardTexts;
 
         _triageStatus = [_target] call FUNC(getTriageStatus);
 

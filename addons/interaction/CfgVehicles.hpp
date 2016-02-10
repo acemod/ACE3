@@ -69,7 +69,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 3.2;
                     icon = PATHTOF(UI\team\team_management_ca.paa);
-                    hotkey = "M";
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
@@ -78,7 +77,6 @@ class CfgVehicles {
                         showDisabled = 1;
                         icon = PATHTOF(UI\team\team_red_ca.paa);
                         priority = 2.4;
-                        hotkey = "R";
                     };
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
@@ -87,7 +85,6 @@ class CfgVehicles {
                         showDisabled = 1;
                         icon = PATHTOF(UI\team\team_green_ca.paa);
                         priority = 2.3;
-                        hotkey = "G";
                     };
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
@@ -96,7 +93,6 @@ class CfgVehicles {
                         showDisabled = 1;
                         icon = PATHTOF(UI\team\team_blue_ca.paa);
                         priority = 2.2;
-                        hotkey = "B";
                     };
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
@@ -105,7 +101,6 @@ class CfgVehicles {
                         showDisabled = 1;
                         icon = PATHTOF(UI\team\team_yellow_ca.paa);
                         priority = 2.1;
-                        hotkey = "Y";
                     };
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
@@ -114,7 +109,6 @@ class CfgVehicles {
                         showDisabled = 1;
                         icon = PATHTOF(UI\team\team_white_ca.paa);
                         priority = 2.5;
-                        hotkey = "N";
                     };
                 };
 
@@ -125,7 +119,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.6;
                     icon = PATHTOF(UI\team\team_management_ca.paa);
-                    hotkey = "J";
                 };
                 class ACE_GetDown {
                     displayName = CSTRING(GetDown);
@@ -147,6 +140,13 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(pardon));
                     showDisabled = 0;
                     priority = 2.5;
+                };
+                class ACE_GetOut {
+                    displayName = CSTRING(GetOut);
+                    condition = QUOTE(!(isNull objectParent _target) && [ARR_2(_player,_target)] call DFUNC(canInteractWithCivilian));
+                    statement = QUOTE([_target] call EFUNC(common,unloadPerson));
+                    showDisabled = 0;
+                    priority = 2.6;
                 };
             };
 
@@ -224,7 +224,6 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 3.2;
                 icon = PATHTOF(UI\team\team_management_ca.paa);
-                hotkey = "M";
 
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
@@ -234,7 +233,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2.4;
                     icon = PATHTOF(UI\team\team_red_ca.paa);
-                    hotkey = "R";
                 };
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
@@ -244,7 +242,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2.3;
                     icon = PATHTOF(UI\team\team_green_ca.paa);
-                    hotkey = "G";
                 };
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
@@ -254,7 +251,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2.2;
                     icon = PATHTOF(UI\team\team_blue_ca.paa);
-                    hotkey = "B";
                 };
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
@@ -264,7 +260,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2.1;
                     icon = PATHTOF(UI\team\team_yellow_ca.paa);
-                    hotkey = "Y";
                 };
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
@@ -274,7 +269,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 2.5;
                     icon = PATHTOF(UI\team\team_white_ca.paa);
-                    hotkey = "N";
                 };
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
@@ -284,7 +278,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.0;
                     icon = PATHTOF(UI\team\team_white_ca.paa);
-                    hotkey = "L";
                 };
                 class ACE_LeaveGroup {
                     displayName = CSTRING(LeaveGroup);
@@ -294,7 +287,6 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.2;
                     icon = PATHTOF(UI\team\team_management_ca.paa);
-                    hotkey = "M";
                 };
             };
 
@@ -306,7 +298,6 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 4.5;
                 icon = "";  // @todo
-                hotkey = "E";
             };
         };
     };
@@ -486,7 +477,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
 
@@ -514,8 +505,8 @@ class CfgVehicles {
         };
     };
 
-    class thingX;
-    class ReammoBox_F: thingX {
+    class ThingX;
+    class ReammoBox_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
@@ -536,7 +527,7 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
-    class ACE_RepairItem_Base: thingX {
+    class ACE_RepairItem_Base: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
@@ -549,7 +540,7 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
-    class RoadCone_F: thingX {
+    class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);

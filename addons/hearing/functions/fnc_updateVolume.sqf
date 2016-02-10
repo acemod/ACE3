@@ -1,6 +1,6 @@
 /*
  * Author: commy2 and esteldunedain and Ruthberg
- * Updates and applys the current deafness.  Called every 0.1 sec from a PFEH.
+ * Updates and applys the current deafness.  Called every 1 sec from a PFEH.
  *
  * Arguments:
  * 0: Args <ARRAY>
@@ -19,7 +19,6 @@
 //Only run if deafness or ear ringing is enabled:
 if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
 
-private["_volume", "_soundTransitionTime"];
 (_this select 0) params ["_justUpdateVolume"];
 
 
@@ -42,7 +41,7 @@ if (!_justUpdateVolume) then {
     GVAR(deafnessPrior) = GVAR(deafnessDV);
 
     if (GVAR(deafnessDV) > 19.75) then {
-        ACE_player setvariable [QGVAR(deaf), true];
+        ACE_player setVariable [QGVAR(deaf), true];
         if ((!GVAR(DisableEarRinging)) && {ACE_time > GVAR(time4)}) then {
             playSound "ACE_Combat_Deafness";
             GVAR(beep2) = true;
@@ -50,7 +49,7 @@ if (!_justUpdateVolume) then {
             GVAR(time4) = ACE_time + 30;
         };
     } else {
-        ACE_player setvariable [QGVAR(deaf), false];
+        ACE_player setVariable [QGVAR(deaf), false];
     };
 
     if (GVAR(deafnessDV) > 10) then {
@@ -71,7 +70,7 @@ if (!_justUpdateVolume) then {
 
 if ((missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) || {!GVAR(enableCombatDeafness)}) exitWith {};
 
-_volume = GVAR(volume);
+private _volume = GVAR(volume);
 
 // Earplugs reduce hearing 50%
 if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
@@ -92,7 +91,7 @@ if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
     _volume = _volume min GVAR(UnconsciousnessVolume);
 };
 
-_soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
+private _soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
 
 _soundTransitionTime fadeSound _volume;
 _soundTransitionTime fadeSpeech _volume;

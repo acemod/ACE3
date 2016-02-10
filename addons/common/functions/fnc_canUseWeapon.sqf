@@ -13,12 +13,11 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 if (_unit == vehicle _unit) exitWith {true};
 
-private "_config";
-_config = configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit;
+private _config = configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit;
 
 isClass _config
 && {getNumber (_config >> "canPullTrigger") == 1}

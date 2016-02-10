@@ -18,8 +18,8 @@
  *
  * Public: Yes
  */
-#define DEBUG_MODE_FULL
-#define DEBUG_TESTRESULTS
+// #define DEBUG_MODE_FULL
+// #define DEBUG_TESTRESULTS
 #include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_selection", "", [""]], ["_typeOfDamage", "", [""]]];

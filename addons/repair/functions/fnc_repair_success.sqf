@@ -34,7 +34,7 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
 if (vehicle _caller == _caller) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
-_caller setvariable [QGVAR(repairPrevAnimCaller), nil];
+_caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
 _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {

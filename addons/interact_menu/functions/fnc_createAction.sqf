@@ -13,7 +13,7 @@
  * 6: Action parameters <ANY> (Optional)
  * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
  * 8: Distance <NUMBER> (Optional)
- * 9: Other parameters <ARRAY> (Optional)
+ * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
  * 10: Modifier function <CODE> (Optional)
  *
  * Return value:
@@ -25,6 +25,8 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+// IGNORE_PRIVATE_WARNING(_actionName,_displayName,_icon,_statement,_condition,_insertChildren,_customParams,_position,_distance,_params,_modifierFunction);
 
 params [
     "_actionName",
@@ -41,16 +43,16 @@ params [
 ];
 
 _position = if (_position isEqualType "") then {
-        // If the action is set to a selection, create the suitable code
-        compile format ["_target selectionPosition '%1'", _position];
+    // If the action is set to a selection, create the suitable code - IGNORE_PRIVATE_WARNING(_target);
+    compile format ["_target selectionPosition '%1'", _position];
+} else {
+    if (_position isEqualType []) then {
+        // If the action is set to a array position, create the suitable code
+        compile format ["%1", _position];
     } else {
-        if (_position isEqualType []) then {
-            // If the action is set to a array position, create the suitable code
-            compile format ["%1", _position];
-        } else {
-            _position;
-        };
+        _position;
     };
+};
 
 [
     _actionName,
@@ -58,7 +60,6 @@ _position = if (_position isEqualType "") then {
     _icon,
     _statement,
     _condition,
-
     _insertChildren,
     _customParams,
     _position,

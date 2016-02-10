@@ -18,8 +18,7 @@ params ["_number", "_minLength"];
 _number = _number min 999999;
 _number = str _number;
 
-private "_length";
-_length = count _number;
+private _length = count _number;
 
 if (isNil "_minLength") then {_minLength = _length};
 

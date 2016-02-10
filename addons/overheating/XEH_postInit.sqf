@@ -1,7 +1,20 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
+if (isServer) then {
+    GVAR(pseudoRandomList) = [];
+    // Construct a list of pseudo random 2D vectors
+    for "_i" from 0 to 30 do {
+        GVAR(pseudoRandomList) pushBack [-1 + random 2, -1 + random 2];
+    };
+    publicVariable QGVAR(pseudoRandomList);
+};
+
+
+if !(hasInterface) exitWith {};
+
+GVAR(cacheWeaponData) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
+GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
@@ -18,4 +31,8 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[19, [true, false, false]], false] call cba_fnc_addKeybind; //R Key
+[19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
+
+
+// Schedule cool down calculation of player weapons at (infrequent) regular intervals
+[] call FUNC(updateTemperatureThread);

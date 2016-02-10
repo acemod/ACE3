@@ -26,8 +26,10 @@ PREP(addTransmitterActions);
 PREP(addTriggerActions);
 PREP(canDefuse);
 PREP(canDetonate);
+PREP(connectExplosive);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
+PREP(detonateExplosiveAll);
 PREP(dialPhone);
 PREP(dialingPhone);
 
@@ -52,6 +54,7 @@ PREP(openTimerSetUI);
 PREP(placeExplosive);
 PREP(removeFromSpeedDial);
 
+PREP(scriptedExplosive);
 PREP(selectTrigger);
 PREP(setupExplosive);
 PREP(setPosition);

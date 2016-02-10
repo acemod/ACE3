@@ -12,7 +12,9 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_Killed_EventHandlers {
     class All {
-        init = QUOTE(call FUNC(handleDestroyed));
+        class ADDON {
+            serverKilled = QUOTE(call FUNC(handleDestroyed));
+        };
     };
 };
 

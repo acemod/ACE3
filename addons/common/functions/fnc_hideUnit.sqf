@@ -12,7 +12,7 @@
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_hideUnit
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
@@ -20,8 +20,7 @@ params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
-private "_setHiddenReasons";
-_setHiddenReasons = _unit getVariable [QGVAR(setHiddenReasons), []];
+private _setHiddenReasons = _unit getVariable [QGVAR(setHiddenReasons), []];
 
 if !(_reason in _setHiddenReasons) then {
     _setHiddenReasons pushBack _reason;

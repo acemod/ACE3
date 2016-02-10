@@ -1,5 +1,9 @@
 class CfgVehicles {
-    class ACE_Module;
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
     class ACE_moduleCargoSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(SettingsModule_DisplayName);
@@ -24,6 +28,33 @@ class CfgVehicles {
         class ModuleDescription {
             description = CSTRING(SettingsModule_Description);
             sync[] = {};
+        };
+    };
+    class GVAR(makeLoadable): ACE_Module {
+        scope = 2;
+        displayName = CSTRING(makeLoadable_displayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_makeLoadable_ca.paa));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleMakeLoadable);
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class canLoad {
+                displayName = CSTRING(makeLoadable_displayName);
+                description = CSTRING(MakeLoadable_description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };            
+            class setSize {
+                displayName = CSTRING(makeLoadable_setSize_displayName);
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription: ModuleDescription {
+            description = CSTRING(module_MakeLoadable_description);
+            sync[] = {"AnyStaticObject"};
         };
     };
 
@@ -178,7 +209,7 @@ class CfgVehicles {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
-    
+
     // boats
     class Ship;
     class Ship_F: Ship {
@@ -245,7 +276,7 @@ class CfgVehicles {
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
     };
-    
+
 
     class Scrapyard_base_F;
     class Land_PaperBox_closed_F: Scrapyard_base_F {

@@ -17,12 +17,10 @@ params ["_eventName", "_eventArgs"];
 
 GVAR(events) params ["_eventNames", "_eventArray"];
 
-private "_eventIndex";
-_eventIndex = _eventNames find _eventName;
+private _eventIndex = _eventNames find _eventName;
 
 if (_eventIndex != -1) then {
-    private "_events";
-    _events = _eventArray select _eventIndex;
+    private _events = _eventArray select _eventIndex;
 
     #ifdef DEBUG_EVENTS
         ACE_LOGINFO_1("* Local Event: %1",_eventName);

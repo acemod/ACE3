@@ -61,7 +61,6 @@ if (_newMode == 0) then { // Free
     };
 
     GVAR(camAgent) switchCamera "internal";
-    clearRadio;
 } else {
     _camera = GVAR(unitCamera);
 
@@ -85,11 +84,6 @@ if (_newMode == 0) then { // Free
     } else {
         // Switch to the camera
         _camera cameraEffect ["internal", "back"];
-    };
-
-    // Clear radio if group changed
-    if (group _newUnit != group GVAR(camUnit)) then {
-        clearRadio;
     };
 
     GVAR(camUnit) = _newUnit;

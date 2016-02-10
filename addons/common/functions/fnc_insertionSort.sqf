@@ -17,10 +17,8 @@ params ["_list", ["_ascending", true]];
 
 _list = + _list; // copy array to not alter the original one
 
-private "_tmp";
-
 for "_i" from 1 to (count _list - 1) do {
-    _tmp = _list select _i;
+    private _tmp = _list select _i;
     _j = _i;
 
     while {_j >= 1 && {_tmp < _list select (_j - 1)}} do {

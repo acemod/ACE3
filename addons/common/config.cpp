@@ -14,6 +14,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgLocationTypes.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
@@ -88,7 +89,7 @@ class CfgUIGrids {
 // check dll
 class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
+    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getVariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
 };
 */
 

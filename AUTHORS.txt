@@ -1,4 +1,4 @@
-# ACE3 CONTRIBUTOR LIST
+﻿# ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
@@ -53,8 +53,9 @@ Coren <coren4@gmail.com>
 Crusty
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
+dixon13 <dixonbegay@gmail.com>
 Drill <drill87@gmail.com>
-Dudakov <dudakov.s@gmail.com>
+Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 eRazeri
 evromalarkey <evromalarkey@gmail.com>
@@ -63,11 +64,13 @@ Falke75
 Ferenczi
 Ferenzi
 Filip Basara <filip.basara93@googlemail.com>
+fr89k <kaschitoku@web.de>
 FreeZbe <freeseb@gmail.com>
 geraldbolso1899
 Ghost
 Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 GieNkoV <gienkov.grzegorz@gmail.com>
+GitHawk <githawk@gmx.net>
 gpgpgpgp
 Grzegorz
 Hamburger SV
@@ -103,12 +106,15 @@ Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
 simon84 <badguy360th@gmail.com>
 Sniperwolf572 <tenga6@gmail.com>
+System98
 SzwedzikPL <szwedzikpl@gmail.com>
 Tachi <zaveruha007@gmail.com>
 Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
+voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
 zGuba
+Grey-Soldierman <gungamer101@hotmail.com>

@@ -28,7 +28,7 @@ if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
 EGVAR(weather,WindInfo) = false;
-0 cutText ["", "PLAIN"];
+(["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 GVAR(Protractor) = true;
 
 [{
@@ -36,7 +36,7 @@ GVAR(Protractor) = true;
     if !(GVAR(Protractor) && !(weaponLowered ACE_player) && currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {
         GVAR(Protractor) = false;
         1 cutText ["", "PLAIN"];
-        [_idPFH] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     1 cutRsc ["RscProtractor", "PLAIN", 1, false];

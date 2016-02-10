@@ -17,10 +17,15 @@
 
 params ["_unit"];
 TRACE_1("params",_unit);
-// TODO when near repair station, full repair?
 
+//If in facility or near vehicle then complete repair of hitpoint:
 if (([_unit] call FUNC(isInRepairFacility) || {[_unit] call FUNC(isNearRepairVehicle)})) exitWith {0};
 
-if ([_unit, GVAR(engineerSetting_Repair) + 1] call FUNC(isEngineer)) exitWith {GVAR(repairDamageThreshold_Engineer)};
-if ([_unit, GVAR(engineerSetting_Repair)] call FUNC(isEngineer)) exitWith {GVAR(repairDamageThreshold)};
-0.3;
+private _class = _unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer")];
+//If specialist or more qualified than min, then use engineer threshold:
+if ((_class isEqualTo 2) || {[_unit, GVAR(engineerSetting_Repair) + 1] call FUNC(isEngineer)}) exitWith {
+    (GVAR(repairDamageThreshold_Engineer) min GVAR(repairDamageThreshold))
+};
+
+//Return default threshold:
+GVAR(repairDamageThreshold)

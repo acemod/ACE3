@@ -16,11 +16,10 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle", "_dummy", "_actionID"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
-_source = _nozzle getVariable QGVAR(source);
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _source = _nozzle getVariable QGVAR(source);
 
 if (isNull _nozzle || {_source != _target}) exitWith {false};
 
@@ -28,15 +27,14 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
     2,
     [_unit, _nozzle, _target],
     {
-        private "_actionID";
         params ["_args"];
-        _args params ["_unit", "_nozzle", "_target"];
+        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]]];
         _unit setVariable [QGVAR(nozzle), nil];
         detach _nozzle;
-        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         _unit setVariable [QGVAR(isRefueling), false];
-        _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(ReleaseActionID), nil];

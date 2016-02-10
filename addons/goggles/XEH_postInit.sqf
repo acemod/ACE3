@@ -114,16 +114,20 @@ private _fnc_checkGoggles = {
 
 // goggles effects main PFH
 [{
+    BEGIN_COUNTER(goggles);
+
     // rain
     call FUNC(applyRainEffect);
 
     // auto remove effects under water
-    if (GVAR(EffectsActive) && {[goggles ACE_player] call FUNC(isDivingGoggles) && {underwater ACE_player}}) then {
+    if (GVAR(EffectsActive) && {underwater ACE_player} && {[goggles ACE_player] call FUNC(isDivingGoggles)}) then {
         call FUNC(removeRainEffect);
         call FUNC(removeDirtEffect);
         call FUNC(removeDustEffect);
     };
 
     // rotor wash effect
-    call FUNC(applyRotorWashEffect)
-}, 0.5, _fnc_checkGoggles] call CBA_fnc_addPerFrameHandler;
+    call FUNC(applyRotorWashEffect);
+
+    END_COUNTER(goggles);
+}, 0.5, []] call CBA_fnc_addPerFrameHandler;

@@ -19,24 +19,22 @@
 
 params ["_pos", ["_returnSingleString", false]];
 
-private ["_nativeGrid", "_count", "_easting", "_northing"];
-
 //Fallback, when map data is weird (letters)
 if (GVAR(mapGridData) isEqualTo []) exitWith {
-    _nativeGrid = mapGridPosition _pos;
+    private _nativeGrid = mapGridPosition _pos;
 
     if (_returnSingleString) then {
         _nativeGrid
     } else {
-        _count = floor ((count _nativeGrid) / 2);
+        private _count = floor ((count _nativeGrid) / 2);
         [_nativeGrid select [0, _count], _nativeGrid select [_count, _count]]
     };
 };
 
 GVAR(mapGridData) params ["_offsetX", "_realOffsetY", "_stepXat5", "_stepYat5"];
 
-_easting = floor (((_pos select 0) - _offsetX) / _stepXat5);
-_northing = floor (((_pos select 1) - _realOffsetY) / _stepYat5);
+private _easting = floor (((_pos select 0) - _offsetX) / _stepXat5);
+private _northing = floor (((_pos select 1) - _realOffsetY) / _stepYat5);
 
 //Attempt to handle negative east/north (e.g.: moving west of map bounds)
 if (_easting > 0) then {

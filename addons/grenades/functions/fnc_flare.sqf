@@ -20,8 +20,7 @@
 
 params ["_projectile", "_color", "_intensity", "_timeToLive"];
 
-private "_light";
-_light = "#lightpoint" createVehicleLocal position _projectile;
+private _light = "#lightpoint" createVehicleLocal position _projectile;
 
 _light setLightColor _color;
 _light setLightAmbient _color;

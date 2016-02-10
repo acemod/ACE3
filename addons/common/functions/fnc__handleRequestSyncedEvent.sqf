@@ -27,10 +27,8 @@ if (isServer) then {
         false
     };
 
-    private ["_eventEntry", "_eventLog"];
-
-    _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
-    _eventLog = _eventEntry select 1;
+    private _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
+    _eventEntry params ["", "_eventLog"];
 
     ["SEH_s", _client, [_eventName, _eventLog]] call FUNC(targetEvent);
 } else {

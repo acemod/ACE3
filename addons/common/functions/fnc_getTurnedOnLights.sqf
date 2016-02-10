@@ -16,15 +16,12 @@ params ["_vehicle"];
 
 if (!isLightOn _vehicle) exitWith {[]};
 
-private ["_reflectorsWithSelections", "_lights", "_hitpoints", "_turnedOnLights"];
-
-_reflectorsWithSelections = [[_vehicle], FUNC(getReflectorsWithSelections), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getReflectorsWithSelections)), typeOf _vehicle], 1E11] call FUNC(cachedCall);
+private _reflectorsWithSelections = [[_vehicle], FUNC(getReflectorsWithSelections), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getReflectorsWithSelections)), typeOf _vehicle], 1E11] call FUNC(cachedCall);
 //_reflectorsWithSelections = [_vehicle] call FUNC(getReflectorsWithSelections);
 
-_lights = _reflectorsWithSelections select 0;
-_hitpoints = _reflectorsWithSelections select 1;
+_reflectorsWithSelections params ["_lights", "_hitpoints"];
 
-_turnedOnLights = [];
+private _turnedOnLights = [];
 
 {
     if (_vehicle getHit _x <= 0.9) then {

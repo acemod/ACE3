@@ -12,13 +12,11 @@
  */
 #include "script_component.hpp"
 
-private "_config";
-
-ACE_isMapEnabled     = call {_config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
-ACE_isCompassEnabled = call {_config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
-ACE_isWatchEnabled   = call {_config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
-ACE_isRadioEnabled   = call {_config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
-ACE_isGPSEnabled     = call {_config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
+ACE_isMapEnabled     = call {private _config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
+ACE_isCompassEnabled = call {private _config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
+ACE_isWatchEnabled   = call {private _config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
+ACE_isRadioEnabled   = call {private _config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
+ACE_isGPSEnabled     = call {private _config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
 
 GVAR(AssignedItems) = [];
 GVAR(AssignedItemsInfo) = [];

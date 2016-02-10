@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <random>
 
+
 #define GRAVITY 9.80665f
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
@@ -572,8 +573,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             positionOffset[1] += cos(bulletDir + M_PI / 2) * horizontalDeflectionPartial;
         }
 
-        double centripetalAccel = 2 * 0.0000729 * (bulletDatabase[index].muzzleVelocity / -32.2) * cos(bulletDatabase[index].latitude) * sin(bulletDir);
-        velocityOffset[2] -= centripetalAccel * deltaT;
+        double centripetalAccel = 2 * 0.0000729 * (bulletDatabase[index].muzzleVelocity) * cos(bulletDatabase[index].latitude) * sin(bulletDir);
+        velocityOffset[2] += centripetalAccel * deltaT;
 
         double spinDrift = bulletDatabase[index].twistDirection * 0.0254 * 1.25 * (bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 1.83);
         double spinDriftPartial = spinDrift - bulletDatabase[index].spinDrift;

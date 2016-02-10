@@ -3,10 +3,10 @@
  * Returns the object view distance coefficient according to the given index
  *
  * Arguments:
- * 0: Object View Distance setting Index <SCALAR>
+ * 0: Object View Distance setting Index <NUMBER>
  *
  * Return Value:
- * Object View Distance <SCALAR>
+ * Object View Distance <NUMBER>
  *
  * Example:
  * [2] call ace_viewdistance_fnc_returnObjectCoeff;

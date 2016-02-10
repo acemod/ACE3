@@ -14,11 +14,9 @@
 
 params ["_crate"];
 
-private ["_weapons", "_items"];
-
 // get all weapons inside the crate
-_weapons = weaponCargo _crate;
-_items = [];
+private _weapons = weaponCargo _crate;
+private _items = [];
 
 // if the "weapon" is supposed to be an item, move those from the weapon array to the item array
 {
