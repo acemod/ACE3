@@ -144,6 +144,16 @@ private _fixStatic = {
 };
 ["StaticWeapon", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
 ["Car", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
+addMissionEventHandler ["Loaded",{
+    {
+        TRACE_1("starting preload (save load)",_x);
+        [{
+            1 preloadObject (_this select 0);
+        }, {
+            TRACE_1("preload done",_this);
+        }, [_x]] call EFUNC(common,waitUntilAndExecute);
+    } forEach GVAR(fixedStatics);
+}];
 
 
 ADDON = true;
