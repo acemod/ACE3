@@ -108,7 +108,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
-            <German>Belade Fracht</German>
+            <German>Belade</German>
             <Portuguese>Carregando carga</Portuguese>
             <Polish>Ładowanie cargo</Polish>
             <Czech>Nakládám</Czech>
@@ -116,7 +116,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
-            <German>Entlade Fracht</German>
+            <German>Entlade</German>
             <Portuguese>Descarregando carga</Portuguese>
             <Polish>Rozładowywanie cargo</Polish>
             <Czech>Vykládám</Czech>
