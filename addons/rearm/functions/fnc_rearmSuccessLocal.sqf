@@ -33,7 +33,8 @@ _currentRounds = 0;
 _maxMagazines = [_target, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
 if (_maxMagazines == 1) then {
     _currentMagazines = { _x == _magazineClass } count (_target magazinesTurret _turretPath);
-    if (_currentMagazines == 0) then {
+    if (_currentMagazines == 0 && {!(_turretPath isEqualTo [-1])}) then {
+        // Driver gun will always retain it's magazines
         _target addMagazineTurret [_magazineClass, _turretPath];
     };
     if (GVAR(level) == 1) then {
@@ -53,7 +54,7 @@ if (_maxMagazines == 1) then {
     for "_idx" from 1 to (_maxMagazines+1) do {
         _currentRounds = _target magazineTurretAmmo [_magazineClass, _turretPath];
         if (_currentRounds > 0 || {_idx == (_maxMagazines+1)}) exitWith {
-            if (_idx == (_maxMagazines+1)) then {
+            if (_idx == (_maxMagazines+1) && {!(_turretPath isEqualTo [-1])}) then {
                 _target addMagazineTurret [_magazineClass, _turretPath];
             };
             if (GVAR(level) == 2) then {
