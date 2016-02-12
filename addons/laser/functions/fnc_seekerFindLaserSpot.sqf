@@ -36,6 +36,7 @@ _bucketIndex = 0;
 _finalPos = nil;
 _finalOwner = nil;
 
+TRACE_1("",(GVAR(laserEmitters) select 1));
 {
     _obj = _x select 0;
     _owner = _x select 1;
@@ -64,6 +65,7 @@ _finalOwner = nil;
         };
 
         //Handle Weird Data Return
+        TRACE_1("_laser", _laser);
         if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
             if (GVAR(enableDispersion)) then {
                 _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);

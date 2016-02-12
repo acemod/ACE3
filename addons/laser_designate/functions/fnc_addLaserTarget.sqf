@@ -19,12 +19,12 @@ private _waveLength = _owner getVariable [QEGVAR(laser,waveLength), ACE_DEFAULT_
 private _beamSpread = _owner getVariable [QEGVAR(laser,beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
 
 // Laser method is the method ACE_Laser will use to determine from where to where it should project the designator cone
+_owner setVariable [QGVAR(targetObject), _targetObject];
 private _laserMethod = objNull;
 if (_owner isKindOf "CAManBase") then {
     // For men,
     _laserMethod = QFUNC(findLaserSourceMan);
 } else {
-    _owner setVariable [QGVAR(targetObject), _targetObject];
     _laserMethod = QFUNC(findLaserSourceGeneric);
 };
 _laserUuid = [_owner, _owner, _laserMethod, _waveLength, _laserCode, _beamSpread] call EFUNC(laser,laserOn);

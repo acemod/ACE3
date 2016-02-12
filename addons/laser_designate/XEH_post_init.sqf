@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 GVAR(trackedLaserTargets) = [];
+GVAR(pfhuid) = [];
 
-["LaserTargetW", "init", DFUNC(handleLaserTargetCreation)] call CBA_fnc_addClassEventHandler;
+["LaserTargetBase", "init", DFUNC(handleLaserTargetCreation)] call CBA_fnc_addClassEventHandler;
 

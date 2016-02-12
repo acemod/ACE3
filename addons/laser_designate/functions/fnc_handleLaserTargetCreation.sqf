@@ -12,6 +12,9 @@
 
 params ["_targetObject"];
 
+// Only handle locally created lasers
+if(!(local _targetObject)) exitWith { };
+
 private _owners = allUnits select {(lasertarget _x) == _targetObject};
 if (count _owners == 1) exitWith {
     TRACE_2("Laser target owner", _targetObject, _owners select 0);
