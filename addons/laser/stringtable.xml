@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
+        <Key ID="STR_ACE_Laser_enableDispersion">
+            <English>Enable laser dispersion</English>
+        </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
             <German>Lasercode</German>

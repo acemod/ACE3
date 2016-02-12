@@ -62,18 +62,31 @@ _finalOwner = nil;
                 };
             };
         };
-        
+
         //Handle Weird Data Return
         if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
-            _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
-            {
-                _testPoint = _x select 0;
-                _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
-                _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if(_testDotProduct > _seekerCos) then {
-                    _spots pushBack [_testPoint, _owner];
+            if (GVAR(enableDispersion)) then {
+                _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
+                {
+                    _testPoint = _x select 0;
+                    _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
+                    _testDotProduct = _dir vectorDotProduct _testPointVector;
+                    if(_testDotProduct > _seekerCos) then {
+                        _spots pushBack [_testPoint, _owner];
+                    };
+                } forEach (_res select 2);
+            } else {
+                _res = [_laserPos, _laserDir] call FUNC(shootRay);
+                _testPoint = _res select 0;
+                if !(isNil "_testPoint") then {
+                    _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
+                    _testDotProduct = _dir vectorDotProduct _testPointVector;
+                    hint format ["_testDotProduct %1", _testDotProduct];
+                    if(_testDotProduct > _seekerCos) then {
+                        _spots pushBack [_testPoint, _owner];
+                    };
                 };
-            } forEach (_res select 2);
+            };
         };
     };
 } forEach (GVAR(laserEmitters) select 1);
