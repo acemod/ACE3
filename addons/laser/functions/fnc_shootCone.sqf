@@ -35,7 +35,7 @@ if(!isNil "_resultPos") then {
     _resultPositions pushBack _result;
 #ifdef DEBUG_MODE_FULL
     // DRAW_LINES set[(count DRAW_LINES), [_pos, _resultPos, [0, 1, 0, 1]]];
-    drawLine3D [ASLtoATL _pos, ASLtoATL _resultPos, [1,0,0,1]];
+    drawLine3D [ASLtoAGL _pos, ASLtoAGL _resultPos, [1,0,0,1]];
 #endif
 };
 
@@ -60,7 +60,7 @@ _pos2 = _pos vectorAdd (_vec vectorMultiply 1000);
             _resultPositions pushBack _result;
 #ifdef DEBUG_MODE_FULL
             // DRAW_LINES set[(count DRAW_LINES), [_pos, _resultPos, [0, 1, 0, 1]]];
-            drawLine3D [ASLtoATL _pos, ASLtoATL _resultPos, [1,0,0,1]];
+            drawLine3D [ASLtoAGL _pos, ASLtoAGL _resultPos, [1,0,0,1]];
 #endif
         };
     };
