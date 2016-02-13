@@ -29,7 +29,10 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call EFUNC(common,addEventHandler);
 ["treatmentIVLocal", DFUNC(treatmentIVLocal)] call EFUNC(common,addEventHandler);
 ["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call EFUNC(common,addEventHandler);
+["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
 
+//Handle Deleting Bodies on Server:
+if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {
