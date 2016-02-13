@@ -9,11 +9,3 @@ class Extended_PostInit_EventHandlers {
         clientInit = QUOTE(call COMPILE_FILE(XEH_postInitClient) );
     };
 };
-
-class Extended_FiredBIS_EventHandlers {
-    class AllVehicles {
-        class ADDON {
-            clientFiredBIS = QUOTE( _this call FUNC(blending) );
-        };
-    };
-};

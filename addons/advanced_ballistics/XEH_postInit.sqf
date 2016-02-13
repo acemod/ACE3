@@ -22,3 +22,17 @@ if (!GVAR(extensionAvailable)) exitWith {
 };
 */
 [] call FUNC(initializeTerrainExtension);
+
+if (!hasInterface) exitWith {};
+
+["SettingsInitialized", {
+    //If not enabled, dont't add PFEH
+    if (!GVAR(enabled)) exitWith {};
+
+    // Register fire event handler
+    ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+    ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+
+    [] call FUNC(updateTrajectoryPFH);
+
+}] call EFUNC(common,addEventHandler);
