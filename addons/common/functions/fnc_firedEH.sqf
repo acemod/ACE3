@@ -51,7 +51,7 @@ if (_unit isKindOf "CAManBase") then {
     } count allTurrets [_unit, true];
     // Ensure that at least the pilot is returned if there is no gunner
     if (isManualFire _unit && {isNull _gunner}) then {
-        _gunner = driver _unit;
+        _gunner = effectiveCommander _unit;
     };
 
     if (_gunner == ACE_player) then {
