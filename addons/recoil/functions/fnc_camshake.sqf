@@ -1,12 +1,10 @@
 /*
  * Author: Orginal by Ryan Schultz, edited by KoffeinFlummi, commy2
- * Adds camera shake when firing 
+ * Adds camera shake when firing. Called from the unified fired EH only for the local player.
  * From TMR: Small Arms
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Weapon <STRING>
- * 3: Muzzle <STRING>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * Nothing
@@ -18,12 +16,13 @@
  */
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+
 #define BASE_POWER 0.40
 #define BASE_TIME 0.19
 #define BASE_FREQ 13
 #define RECOIL_COEF 40
-
-params ["_unit", "_weapon", "_muzzle"];
 
 if (toLower _weapon in ["throw", "put"]) exitWith {};
 

@@ -195,3 +195,7 @@ if (!hasInterface) exitWith {};
 },
 {false},
 [10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
+
+
+// Register fire event handler
+["firedPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);

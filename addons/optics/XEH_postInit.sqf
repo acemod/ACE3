@@ -10,7 +10,7 @@ GVAR(camera) = objNull;
     if ((!isNil {is3DEN}) && {is3DEN}) exitWith {
         ACE_LOGINFO("Eden detected: disabling Optics PIP Camera");
     };
-    
+
     waitUntil {!isNull ACE_player};
     waitUntil {sleep 1; {_x != GVAR(camera)} count allMissionObjects "camera" == 0 && {isNull curatorCamera}};
 
@@ -50,3 +50,6 @@ GVAR(camera) = objNull;
         GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
     };
 }] call EFUNC(common,addEventHandler);
+
+// Register fire event handler
+["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
