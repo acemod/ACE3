@@ -19,7 +19,7 @@
 params ["_static","_unit"];
 private ["_canUnloadMagazine","_ammoCount"];
 
-if !(alive _static && GVAR(useAmmoHandling)) exitWith {false};
+if !(alive _static && GVAR(useAmmoHandling) && _static getVariable [QGVAR(initialized),false]) exitWith {false};
 _canUnloadMagazine = false;
 
 _ammoCount = ((magazinesAllTurrets _static) select 1) select 2;
