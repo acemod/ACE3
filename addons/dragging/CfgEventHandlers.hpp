@@ -27,6 +27,11 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class ACE_bodyBagObject {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };
 
 class Extended_Killed_EventHandlers {

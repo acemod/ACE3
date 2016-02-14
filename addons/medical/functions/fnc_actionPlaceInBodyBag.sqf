@@ -7,7 +7,7 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * body bag (will return objNull when run where target is not local) <OBJECT>
+ * body bag (will return objNull when run where target is not local, but will still do the action) <OBJECT>
  *
  * Example:
  * [player, cursorTarget] call ace_medical_fnc_actionPlaceInBodyBag
@@ -39,13 +39,18 @@ private _dirVect = _headPos vectorFromTo _spinePos;
 private _direction = _dirVect call CBA_fnc_vectDir;
 
 //move the body away now, so it won't physX the bodyBag object (this setPos seems to need to be called where object is local)
-_target setPosASL [-5000, -5000, 0];
+_target setPosASL (_position vectorAdd [0,0,1000]);
 
 private _bodyBag = createVehicle ["ACE_bodyBagObject", _position, [], 0, ""];
 
 // prevent body bag from flipping
 _bodyBag setPosASL _position;
 _bodyBag setDir _direction;
+
+[{
+    params ["_target", "_bodyBag"];
+    _target moveInAny _bodyBag;
+}, [_target, _bodyBag]] call EFUNC(common,execNextFrame);
 
 ["placedInBodyBag", [_target, _bodyBag]] call EFUNC(common,globalEvent); //hide and delete body on server
 

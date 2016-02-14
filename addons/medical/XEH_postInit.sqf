@@ -14,9 +14,6 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_advMedication", FUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
 ["medical_actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
 
-//Handle Deleting Bodies on Server:
-if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
-
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {
