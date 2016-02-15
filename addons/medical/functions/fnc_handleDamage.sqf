@@ -77,9 +77,11 @@ _minLethalDamage = if (_typeIndex >= 0) then {
     0.01
 };
 
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
+private _vehicle = vehicle _unit;
+if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_shooter in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selection == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+        _selection = _this select 1; //pull random selection from HDC
+        TRACE_1("Veh Crash",_selection);
     };
 };
 
