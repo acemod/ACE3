@@ -98,4 +98,4 @@ TRACE_1("result",_strength);
 if (_strength < 0.01) exitWith {};
 
 // Call inmediately, as it will get pick up later anyway by the update thread
-[ACE_player, _strength] call FUNC(earRinging);
+[_strength] call FUNC(earRinging);

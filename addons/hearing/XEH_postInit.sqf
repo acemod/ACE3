@@ -12,6 +12,10 @@ GVAR(playerVehAttenuation) = 1;
 GVAR(time3) = 0;
 
 ["SettingsInitialized", {
+    TRACE_1("settingInit",GVAR(EnableCombatDeafness));
+    // Only run if combat deafness is enabled
+    if (!GVAR(EnableCombatDeafness)) exitWith {};
+
     // Spawn volume updating process
     [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 }] call EFUNC(common,addEventHandler);

@@ -16,11 +16,7 @@
  */
 #include "script_component.hpp"
 
-// Only run if combat deafness is enabled
-if (!GVAR(EnableCombatDeafness)) exitWith {};
-
 (_this select 0) params ["_justUpdateVolume"];
-
 
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
 GVAR(volume) = (1 -  (GVAR(deafnessDV) / 20)) max 0.05;
@@ -46,7 +42,7 @@ if (!_justUpdateVolume) then {
     GVAR(deafnessDV) =  (GVAR(deafnessDV) - (0.5 * (GVAR(volume) max 0.1))) max 0;
 };
 
-if ((missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) || {!GVAR(enableCombatDeafness)}) exitWith {};
+if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
 
 private _volume = GVAR(volume);
 
@@ -56,10 +52,9 @@ if ([ACE_player] call FUNC(hasEarPlugsIn)) then {
 };
 
 // Headgear can reduce hearing
-if(headgear ACE_player != "") then {
-    private ["_lowerVolume"];
-    _lowerVolume = (getNumber (configFile >> "CfgWeapons" >> (headgear ACE_player) >> QGVAR(lowerVolume))) min 1;
-    if(_lowerVolume > 0) then {
+if (headgear ACE_player != "") then {
+    private _lowerVolume = (getNumber (configFile >> "CfgWeapons" >> (headgear ACE_player) >> QGVAR(lowerVolume))) min 1;
+    if (_lowerVolume > 0) then {
         _volume = _volume min (1 - _lowerVolume);
     };
 };

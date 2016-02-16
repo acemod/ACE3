@@ -30,4 +30,4 @@ _strength = (0 max _damage) * 30;
 if (_strength < 0.01) exitWith {};
 
 // Call inmediately, as it will get pick up later anyway by the update thread
-[ACE_player, _strength] call FUNC(earRinging);
+[_strength] call FUNC(earRinging);
