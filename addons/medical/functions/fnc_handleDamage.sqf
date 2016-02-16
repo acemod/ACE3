@@ -26,6 +26,8 @@ if !(local _unit) exitWith {
     nil
 };
 
+// if (alive _unit) then {diag_log text format ["HD: %1", _this];};
+
 private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
@@ -78,14 +80,14 @@ _minLethalDamage = if (_typeIndex >= 0) then {
 };
 
 private _vehicle = vehicle _unit;
+private _effectiveSelectionName = _selection;
 if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_shooter in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selection == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selection = _this select 1; //pull random selection from HDC
-        TRACE_1("Veh Crash",_selection);
+        _effectiveSelectionName = _this select 1; //pull random selection from HDC
     };
 };
 
-if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
     if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
         _damageReturn = 0.9;
     };
@@ -101,13 +103,8 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectio
 [_unit] call FUNC(addToInjuredCollection);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
-    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-    };
-
-    private "_delayedUnconsicous";
-    _delayedUnconsicous = false;
-    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
+    private _delayedUnconsicous = false;
+    if (_vehicle != _unit and {damage _vehicle >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
         _delayedUnconsicous = true;
     };
@@ -120,7 +117,7 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         if (_delayedUnconsicous) then {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit], 0.7, 0] call EFUNC(common,waitAndExecute);
+            }, [_unit], 0.7] call EFUNC(common,waitAndExecute);
         } else {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
