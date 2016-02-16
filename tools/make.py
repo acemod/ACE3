@@ -1424,6 +1424,7 @@ See the make.cfg file for additional build options.
         for failedModuleName in namesOfBuildsFailed:
             print("- {} failed.".format(failedModuleName))
 
+        sys.exit(1)
     else:
         print_green("\Completed with 0 errors.")
 
