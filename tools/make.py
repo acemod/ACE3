@@ -949,7 +949,7 @@ See the make.cfg file for additional build options.
     # See if we have been given specific modules to build from command line.
     if len(argv) > 1 and not make_release_zip:
         arg_modules = True
-        modules = argv[1:]
+        modules = [a for a in argv[1:] if a[0] != "-"]
 
     # Find the tools we need.
     try:
