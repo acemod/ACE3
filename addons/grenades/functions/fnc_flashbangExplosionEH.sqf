@@ -61,7 +61,7 @@ private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 
             // add ace_hearing ear ringing sound effect
             if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0}) then {
-                [_x, 20 * _strength] call EFUNC(hearing,earRinging);
+                [20 * _strength] call EFUNC(hearing,earRinging);
             };
 
             // account for people looking away by slightly
