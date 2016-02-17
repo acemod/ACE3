@@ -41,8 +41,8 @@ if ((GVAR(openedMenuType) == 0) && {vehicle ACE_player == ACE_player} && {isNull
 
         if (_distanceToBasePoint > _distance) exitWith {true};
 
-        if ((_distanceToBasePoint > 1.5) && {!(_params select 4)}) exitWith {
-            // If distance to action is greater than 1.5 m and check isn't disabled in params, check LOS
+        if ((_distanceToBasePoint > 1.2) && {!(_params select 4)}) exitWith {
+            // If distance to action is greater than 1.2 m and check isn't disabled in params, check LOS
             lineIntersects [AGLtoASL _headPos, AGLtoASL _pos, _object, ACE_player]
         };
         false
