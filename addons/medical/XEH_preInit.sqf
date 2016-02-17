@@ -118,7 +118,14 @@ PREP(handleCreateLitter);
 GVAR(injuredUnitCollection) = [];
 GVAR(IVBags) = [];
 
-DFUNC(handleDamage_assignWounds) = if ("ace_medical" callExtension "version" == "") then { DFUNC(handleDamage_woundsOld) } else { DFUNC(handleDamage_wounds)};
+private _versionEx = "ace_medical" callExtension "version";
+DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {
+    ACE_LOGINFO_1("Extension %1.dll not installed.","ace_medical");
+    DFUNC(handleDamage_woundsOld)
+} else {
+    ACE_LOGINFO_2("Extension version: %1: %2","ace_medical",_versionEx);
+    DFUNC(handleDamage_wounds)
+};
 
 call FUNC(parseConfigForInjuries);
 
