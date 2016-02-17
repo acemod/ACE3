@@ -20,12 +20,10 @@
 params ["", "", "_parameters"];
 _parameters params ["_unit"];
 
-private ["_varName", "_actionTrees", "_actions"];
+private _varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
+private _actionTrees = missionNamespace getVariable [_varName, []];
 
-_varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
-_actionTrees = missionNamespace getVariable [_varName, []];
-
-_actions = [];
+private _actions = [];
 
 // Mount unit MainActions menu
 {
