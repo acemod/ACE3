@@ -36,4 +36,6 @@ GVAR(damageCoefficent) = 1;
     //Update protection on possible helmet change
     ["playerInventoryChanged", {[] call FUNC(updateHearingProtection);}] call EFUNC(common,addEventhandler);
 
+    //Update hearing protection now:
+    [] call FUNC(updateHearingProtection);
 }] call EFUNC(common,addEventHandler);
