@@ -1,4 +1,4 @@
-**ArmA Version:** `x.xx`
+**Arma Version:** `x.xx`
 *(indicate if stable or dev*)
 
 **ACE3 Version:** `3.x.x`
