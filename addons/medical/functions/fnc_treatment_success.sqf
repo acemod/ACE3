@@ -81,7 +81,7 @@ if ((GVAR(level) >= 2) && {([_target] call FUNC(hasMedicalEnabled))}) then {
 } else {
     //Basic Medical (just use blodyPartStatus):
     private _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
-    _bloodLossOnSelection = _damageBodyParts select _partNumber
+    _bloodLossOnSelection = _damageBodyParts select _partNumber;
     TRACE_1("basic",_bloodLossOnSelection);
 };
 

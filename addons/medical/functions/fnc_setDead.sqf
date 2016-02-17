@@ -47,6 +47,12 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         _args params ["_unit"];
         _startTime = _unit getVariable [QGVAR(reviveStartTime), 0];
 
+        //If we are in reivie state in a blown up vehicle, try to unload so that people can access the body
+        if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) then {
+            TRACE_2("Unloading", _unit, vehicle _unit);
+            [_unit] call EFUNC(common,unloadPerson);
+        };
+
         if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             _unit setVariable [QGVAR(inReviveState), nil, true];

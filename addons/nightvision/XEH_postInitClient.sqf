@@ -70,3 +70,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 },
 {false},
 [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
+
+// Register fire event handler
+["firedPlayer", DFUNC(blending)] call EFUNC(common,addEventHandler);
+["firedPlayerVehicle", DFUNC(blending)] call EFUNC(common,addEventHandler);

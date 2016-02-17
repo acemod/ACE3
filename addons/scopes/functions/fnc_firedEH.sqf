@@ -1,15 +1,9 @@
 /*
  * Author: KoffeinFlummi, esteldunedain
- * Adjusts the flight path of the bullet according to the zeroing
+ * Adjusts the flight path of the bullet according to the zeroing. Called from the unified fired EH only for local and non-local players on foot.
  *
  * Argument:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return value:
  * None
@@ -18,11 +12,10 @@
  */
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+
 private ["_adjustment", "_weaponIndex", "_zeroing", "_adjustment"];
-
-params ["_unit", "", "", "", "", "", "_projectile"];
-
-if (!([_unit] call EFUNC(common,isPlayer))) exitWith {};
 
 _adjustment = _unit getVariable [QGVAR(Adjustment), []];
 if (_adjustment isEqualTo []) exitWith {};

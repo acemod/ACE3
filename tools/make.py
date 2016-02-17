@@ -76,6 +76,8 @@ signature_blacklist = ["ace_server.pbo"]
 importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
 versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
 
+ciBuild = False # Used for CI builds
+
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
 # Copyright (c) 2009 Stephen Akiki
@@ -757,6 +759,7 @@ def main(argv):
     global dssignfile
     global prefix
     global pbo_name_prefix
+    global ciBuild
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -860,6 +863,10 @@ See the make.cfg file for additional build options.
     else:
         version_update = False
 
+    if "--ci" in argv:
+        argv.remove("--ci")
+        ciBuild = True
+
     print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
     # Get the directory the make script is in.
@@ -949,7 +956,7 @@ See the make.cfg file for additional build options.
     # See if we have been given specific modules to build from command line.
     if len(argv) > 1 and not make_release_zip:
         arg_modules = True
-        modules = argv[1:]
+        modules = [a for a in argv[1:] if a[0] != "-"]
 
     # Find the tools we need.
     try:
@@ -1424,6 +1431,7 @@ See the make.cfg file for additional build options.
         for failedModuleName in namesOfBuildsFailed:
             print("- {} failed.".format(failedModuleName))
 
+        sys.exit(1)
     else:
         print_green("\Completed with 0 errors.")
 
@@ -1432,4 +1440,8 @@ if __name__ == "__main__":
     main(sys.argv)
     d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
+
+    if ciBuild:
+        sys.exit(0)
+
     input("Press Enter to continue...")

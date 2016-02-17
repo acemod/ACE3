@@ -22,3 +22,9 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 },
 {false},
 [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
+
+
+// Register fire event handler
+["firedPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
+["firedPlayerNonLocal", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
+["firedNonPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
