@@ -1,15 +1,15 @@
 /*
  * Author: KoffeinFlummi, commy2, Rocko, Rommel, Ruthberg
- * Handle new sound souce near player and apply hearing damage
+ * Handle new sound souce near ace_player and apply hearing damage
  *
  * Arguments:
- * 0: strength of ear ringing (Number between 0 and 1) <NUMBER>
+ * 0: strength of ear ringing <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _strength] call ace_hearing_fnc_earRinging
+ * [_strength] call ace_hearing_fnc_earRinging
  *
  * Public: No
  */
@@ -20,18 +20,6 @@ if (_strength < 0.05) exitWith {};
 if (!isNull curatorCamera) exitWith {};
 if ((!GVAR(enabledForZeusUnits)) && {player != ACE_player}) exitWith {};
 
-if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
-    _strength = _strength / 4;
-};
+TRACE_2("adding",_strength * GVAR(damageCoefficent),GVAR(deafnessDV));
 
-//headgear hearing protection
-if (headgear _unit != "") then {
-    private _protection = (getNumber (configFile >> "CfgWeapons" >> (headgear _unit) >> QGVAR(protection))) min 1;
-    if (_protection > 0) then {
-        _strength = _strength * (1 - _protection);
-    };
-};
-
-TRACE_2("adding",_strength,GVAR(deafnessDV));
-
-GVAR(deafnessDV) = GVAR(deafnessDV) + _strength;
+GVAR(deafnessDV) = GVAR(deafnessDV) + (_strength * GVAR(damageCoefficent));
