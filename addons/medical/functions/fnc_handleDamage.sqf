@@ -26,8 +26,6 @@ if !(local _unit) exitWith {
     nil
 };
 
-// if (alive _unit) then {diag_log text format ["HD: %1", _this];};
-
 private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
