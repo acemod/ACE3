@@ -5,6 +5,7 @@ ADDON = false;
 // interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
+PREP(getVehiclePos);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
 PREP(removeTag);
