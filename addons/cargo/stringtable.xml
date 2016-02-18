@@ -68,6 +68,7 @@
             <Portuguese>Ativar o módulo de carregamento de carga</Portuguese>
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
+            <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Attiva il modulo per caricare</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
