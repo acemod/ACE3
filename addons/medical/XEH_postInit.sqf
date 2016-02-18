@@ -12,7 +12,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
 //Treatment EventHandlers:
 ["medical_advMedication", FUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
-
+["medical_actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
 
 ["medical_onUnconscious", {
     params ["_unit", "_status"];

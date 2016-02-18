@@ -607,9 +607,8 @@ class CfgVehicles {
         // };
     // };
 
-    class MapBoard_altis_F;
-    class ACE_bodyBagObject: MapBoard_altis_F {
-        XEH_ENABLED;
+    class Bicycle;
+    class ACE_bodyBagObject: Bicycle {
         scope = 1;
         scopeCurator = 2;
         side = -1;
@@ -621,14 +620,20 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,hasCargo) = 0; //expliclty disable loading into this vehicle
+        ejectDeadDriver = 0; //keep dead guy inside
+        disableInventory = 1; //don't want inventory on the bag
+        //NOTE: no-inheritance on this as this is NOT a normal vehicle, but we will still get cargo/drag
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
-                distance = 5;
-                condition = QUOTE(true);
-                statement = "";
-                icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
-                selection = "";
+                distance = 3;
+                condition = "true";               
+                class GVAR(accessGearOnBody) {
+                    displayName = "$STR_A3_OpenInventory1_sub"; //"Open inventory"
+                    condition = QUOTE(!isNull (driver _target));
+                    statement = QUOTE(_player action [ARR_2('gear', (driver _target))]);
+                };
             };
         };
     };
