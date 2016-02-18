@@ -37,7 +37,7 @@ if (_adjustmentDifference isEqualTo [0,0,0]) exitWith {false};  // Don't coninue
 _adjustment set [_weaponIndex, [_elevation, _windage, _zero]];
 [_unit, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
 
-playSound (["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"] select floor random 3);
+playSound selectRandom ["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"];
 
 // slightly rotate the player if looking through optic
 if (cameraView == "GUNNER") then {

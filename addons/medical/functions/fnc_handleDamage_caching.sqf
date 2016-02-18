@@ -32,7 +32,7 @@ TRACE_7("ACE_DEBUG: HandleDamage_Caching Called",_unit, _selectionName, _damage,
 private _vehicle = vehicle _unit;
 if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_source in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selectionName == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selectionName = _hitSelections select (floor(random(count _hitSelections)));
+        _selectionName = selectRandom _hitSelections;
         _projectile = "vehiclecrash";
         _this set [1, _selectionName];
         _this set [4, _projectile];
@@ -60,7 +60,7 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
         };
     } else {
         if (_selectionName == "") then {
-            _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+            _selectionName = selectRandom ["leg_l", "leg_r"];
             _this set [1, _selectionName];
         };
         _newDamage = _newDamage * 0.7;
