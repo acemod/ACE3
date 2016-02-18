@@ -13,9 +13,9 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-GVAR(cacheWeaponData) = call CBA_fnc_createNamespace();
-GVAR(cacheAmmoData) = call CBA_fnc_createNamespace();
-GVAR(cacheSilencerData) = call CBA_fnc_createNamespace();
+GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
+GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
+GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
