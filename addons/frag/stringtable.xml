@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
+        <Key ID="STR_ACE_Frag_Module_DisplayName">
+            <English>Fragmentation Simulation</English>
+            <Polish>Symulacja fragmentacji</Polish>
+            <Spanish>Simulación de fragmentación</Spanish>
+            <German>Splittersimulation</German>
+            <Czech>Simulace fragmentů</Czech>
+            <Portuguese>Simulação de fragmentação</Portuguese>
+            <French>Simulation de la fragmentation</French>
+            <Hungarian>Repesz-szimuláció</Hungarian>
+            <Russian>Симуляция осколков</Russian>
+        </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Polish>Symulacja fragmentacji</Polish>
@@ -44,6 +55,12 @@
             <French>Active la simulation d'éclat ACE</French>
             <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию обломков ACE</Russian>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections">
+            <English>Explosion Reflections Simulation</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections_Desc">
+            <English>Enable the ACE Explosion Reflection Simulation</English>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
