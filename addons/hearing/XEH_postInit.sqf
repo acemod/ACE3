@@ -2,8 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-GVAR(cacheAmmoLoudness) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(cacheAmmoLoudness) setText QGVAR(cacheAmmoLoudness);
+GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
 
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
