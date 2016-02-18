@@ -42,7 +42,7 @@ playSound selectRandom ["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_
 // slightly rotate the player if looking through optic
 if (cameraView == "GUNNER") then {
     // Convert adjustmentDifference from mils to degrees
-    _adjustmentDifference = [_adjustmentDifference, {_this * 0.05625}] call EFUNC(common,map);
+    _adjustmentDifference = _adjustmentDifference apply {_x * 0.05625};
     _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
     _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
     _pitchBankYaw params ["_pitch", "_bank", "_yaw"];

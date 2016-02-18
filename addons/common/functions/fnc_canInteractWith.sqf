@@ -16,7 +16,7 @@
 
 params ["_unit", "_target", ["_exceptions", []]];
 
-_exceptions = [_exceptions, {toLower _this}] call FUNC(map);
+_exceptions = _exceptions apply {toLower _x};
 
 private _owner = _target getVariable [QGVAR(owner), objNull];
 
