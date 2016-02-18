@@ -20,4 +20,8 @@
 private ["_hitSelections", "_hitPoints", "_point", "_damage"];
 params ["_caller", "_target", "_selection", "_className"];
 
-[[_target, _selection], QUOTE(DFUNC(treatmentBasic_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentBasic_bandageLocal", [_target, _selection]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentBasic_bandageLocal", _target, [_target, _selection]] call EFUNC(common,targetEvent);
+};

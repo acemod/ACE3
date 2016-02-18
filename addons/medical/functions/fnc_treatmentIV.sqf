@@ -22,7 +22,12 @@ params ["_caller", "_target", "_selectionName", "_className", "_items"];
 if (count _items == 0) exitWith {false};
 
 _removeItem = _items select 0;
-[[_target, _className], QUOTE(DFUNC(treatmentIVLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentIVLocal", [_target, _className]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentIVLocal", _target, [_target, _className]] call EFUNC(common,targetEvent);
+};
+
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", LSTRING(Activity_gaveIV), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 [_target, "activity_view", LSTRING(Activity_gaveIV), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
