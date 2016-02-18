@@ -3,6 +3,7 @@
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
             <English>Fulton MX-991</English>
+            <German>Fulton MX-991</German>
             <Polish>Fulton MX-991</Polish>
             <Portuguese>Fulton MX-991</Portuguese>
             <Russian>Fulton MX-991</Russian>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
+            <German>Taschenlampe mit rotem Filter zum Kartenlesen.</German>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
+            <German>Maglite XL50</German>
             <Polish>Maglite XL50</Polish>
             <Portuguese>Maglite XL50</Portuguese>
             <Russian>Maglite XL50</Russian>
@@ -27,6 +30,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
+            <German>Mini-Taschenlampe mit weißem Licht zum Kartenlesen.</German>
             <Polish>Mini latarka. Światło białe. Używana do podświetlania mapy.</Polish>
             <Portuguese>Mini lanterna branca. Para uso no mapa.</Portuguese>
             <Russian>Небольшой фонарик белого света. Для использования на карте.</Russian>
@@ -35,6 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
+            <German>KSF-1</German>
             <Polish>KSF-1</Polish>
             <Portuguese>KSF-1</Portuguese>
             <Russian>KSF-1</Russian>
@@ -43,6 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
+            <German>Tachenlampe mit rotem Filter zum Kartenlesen.</German>
             <Polish>Latarka z czerwonym filtrem. Używana do podświetlania mapy.</Polish>
             <Portuguese>Lanterna com filtro vermelho. Para uso no mapa.</Portuguese>
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>

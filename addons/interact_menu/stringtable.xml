@@ -3,7 +3,7 @@
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
             <English>Always display cursor for self interaction</English>
-            <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
+            <German>Immer den Mauszeiger für Selbst-Interaktionen anzeigen.</German>
             <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
             <Russian>Показывать курсор (взаимодействия с собой)</Russian>
             <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
@@ -21,7 +21,7 @@
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <Czech>Zobrazit kurzor v menu pro interakci</Czech>
-            <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
+            <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
         </Key>
@@ -87,6 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
+            <German>Zeus-Aktionen</German>
             <Polish>Akcje Zeusa</Polish>
             <Czech>Akce Zeuse</Czech>
             <Spanish>Acciones Zeus</Spanish>
@@ -147,7 +148,7 @@
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
-            <German>Cursor zentriert halten</German>
+            <German>Mauszeiger zentriert halten</German>
             <Hungarian>Kurzor középen tartása</Hungarian>
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
             <Spanish>Mantener el cursor centrado</Spanish>
@@ -160,7 +161,7 @@
             <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
-            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
+            <German>Hält den Mauszeiger zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
@@ -273,6 +274,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
+            <German>Zeige Aktionen für Gebäude</German>
             <Polish>Pokazuj akcje dla budynków</Polish>
             <Czech>Zobrazit akci pro budovy</Czech>
             <Spanish>Mostrar acciones para edificios</Spanish>
@@ -283,6 +285,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <German>Fügt Aktionen zum Türöffnen oder für eine Leiter zum Besteigen von Gebäuden hinzu. (Hinweis: Verschlechtert die Leistung wenn das Interaktionsmenü geöffnet wird. Insbesondere in Städten) </German>
             <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
@@ -293,6 +296,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
+            <German>Interaktionsmenü</German>
             <Polish>Menu interakcji</Polish>
             <Portuguese>Menu de interação</Portuguese>
             <Russian>Меню взаимодействия</Russian>
@@ -301,6 +305,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
+            <German>Interaktionsmenü Animationsgeschwindigkeit</German>
             <Polish>Szybkość animacji interakcji</Polish>
             <Russian>Скорость анимации меню взаимодействия</Russian>
             <Portuguese>Velocidade da animação de interação</Portuguese>
@@ -308,6 +313,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
+            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs. </German>
             <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
