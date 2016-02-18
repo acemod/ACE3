@@ -43,45 +43,38 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
 
     if (!strcmp(function, "--COMPLETE--"))
     {
-        HGLOBAL hClipboardData = GlobalAlloc(GMEM_FIXED, gClipboardData.length() + 1);
-        if (!hClipboardData)
-        {
-            result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
-            gClipboardData = "";
-            EXTENSION_RETURN();
-        }
-
-        char *pClipboardData = (char *)GlobalLock(hClipboardData);
-        if (!pClipboardData)
-        {
-            result = "GlobalLock() failed, GetLastError=" + GetLastError();
-            gClipboardData = "";
-            EXTENSION_RETURN();
-        }
-
-        strncpy_s(pClipboardData, gClipboardData.length(), gClipboardData.c_str(), _TRUNCATE);
-
-        GlobalUnlock(hClipboardData);
-
-        if (!OpenClipboard(NULL))
+        if (OpenClipboard(NULL) == 0)
         {
             result = "OpenClipboard() failed, GetLastError=" + GetLastError();
         }
         else
         {
-            if (!EmptyClipboard())
+            if (EmptyClipboard() == 0)
             {
-                result = "OpenClipboard() failed, GetLastError=" + GetLastError();
+                result = "EmptyClipboard() failed, GetLastError=" + GetLastError();
             }
             else
             {
-                if (!SetClipboardData(CF_TEXT, hClipboardData))
+                // GPTR = GMEM_FIXED + GMEM_ZEROINIT, returns a ptr, no need for GlobalLock/GlobalUnlock
+                char *pClipboardData = (char *)GlobalAlloc(GPTR, gClipboardData.length());
+                if (pClipboardData == NULL)
+                {
+                    result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
+                    EXTENSION_RETURN();
+                }
+
+                strncpy_s(pClipboardData, gClipboardData.length(), gClipboardData.c_str(), _TRUNCATE);
+
+                // if success, system owns the memory, if fail, free it from the heap
+                if (SetClipboardData(CF_TEXT, pClipboardData) == NULL)
                 {
                     result = "SetClipboardData() failed, GetLastError=" + GetLastError();
+
+                    GlobalFree(pClipboardData);
                 }
                 else
                 {
-                    if (!CloseClipboard())
+                    if (CloseClipboard() == 0)
                     {
                         result = "CloseClipboard() failed, GetLastError=" + GetLastError();
                     }
