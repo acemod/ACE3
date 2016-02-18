@@ -29,36 +29,43 @@
             <English>Backpacks</English>
             <German>Rucksäcke</German>
             <Czech>Batohy</Czech>
+            <Polish>Plecaki</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
             <German>Kopfbedeckungen</German>
             <Czech>Pokrývka hlavy</Czech>
+            <Polish>Hełmy</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
             <German>Brillen</German>
             <Czech>Brýle</Czech>
+            <Polish>Gogle</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
             <German>Uniformen</German>
             <Czech>Uniformy</Czech>
+            <Polish>Uniformy</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
             <German>Westen</German>
             <Czech>Vesty</Czech>
+            <Polish>Kamizelki</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
             <German>Granaten</German>
             <Czech>Granáty</Czech>
+            <Polish>Granaty</Polish>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
             <German>Sanimaterial</German>
             <Czech>Lékařské vybavení</Czech>
+            <Polish>Medyczne</Polish>
         </Key>
     </Package>
 </Project>
