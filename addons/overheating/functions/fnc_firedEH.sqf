@@ -1,15 +1,9 @@
 /*
  * Author: Commy2 and esteldunedain
- * Handle weapon fire
+ * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
  * Argument:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return value:
  * None
@@ -18,15 +12,13 @@
  */
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+
 BEGIN_COUNTER(firedEH);
 
-params ["_unit", "_weapon", "_muzzle", "", "_ammo", "", "_projectile"];
-TRACE_5("params",_unit,_weapon,_muzzle,_ammo,_projectile);
-
-if (((!GVAR(overheatingDispersion)) && {_unit != ACE_player}) //If no dispersion, only run when local
-        || {!([_unit] call EFUNC(common,isPlayer))} //Ignore AI
-        || {(_unit distance ACE_player) > 3000} //Ignore far away shots
-        || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
+if ((_unit distance ACE_player) > 3000 //Ignore far away shots
+    || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
     END_COUNTER(firedEH);
 };
 

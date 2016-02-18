@@ -289,6 +289,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\team\team_management_ca.paa);
                 };
             };
+
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);

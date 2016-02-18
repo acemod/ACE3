@@ -26,8 +26,8 @@ private ["_damageThreshold", "_damageBodyPart", "_chanceFatal"];
 params ["_unit", "_part", ["_withDamage", 0]];
 
 if (!alive _unit) exitWith {true};
-if (_part < 0 || _part > 5) exitWith {false};
 if ((vehicle _unit != _unit) && {!alive (vehicle _unit)}) exitWith { true };
+if (_part < 0 || _part > 5) exitWith {false};
 
 // Find the correct Damage threshold for unit.
 _damageThreshold = [1,1,1];

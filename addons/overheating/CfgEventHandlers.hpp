@@ -10,14 +10,6 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_FiredBIS_EventHandlers {
-    class CAManBase {
-        class GVAR(Overheat) {
-            clientFiredBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-};
-
 class Extended_Take_EventHandlers {
     class CAManBase {
         class GVAR(UnjamReload) {

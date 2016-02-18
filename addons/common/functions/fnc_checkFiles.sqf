@@ -21,8 +21,8 @@ ACE_LOGINFO_1("ACE is version %1.",_version);
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
 private _addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = [_addons, {toLower configName _this}] call FUNC(map);//
-_addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
+_addons = _addons apply {toLower configName _x};//
+_addons = _addons select {_x find "ace_" == 0};
 
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
@@ -63,7 +63,7 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
 ///////////////
 if (isMultiplayer) then {
     // don't check optional addons
-    _addons = [_addons, {getNumber (configFile >> "CfgPatches" >> _this >> "ACE_isOptional") != 1}] call FUNC(filter);
+    _addons = _addons select {getNumber (configFile >> "CfgPatches" >> _x >> "ACE_isOptional") != 1};
 
     if (isServer) then {
         // send servers version of ACE to all clients

@@ -131,3 +131,6 @@ private _fnc_checkGoggles = {
 
     END_COUNTER(goggles);
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
+
+// Register fire event handler
+["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);

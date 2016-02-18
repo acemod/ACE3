@@ -36,3 +36,12 @@ GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
 
 // Schedule cool down calculation of player weapons at (infrequent) regular intervals
 [] call FUNC(updateTemperatureThread);
+
+["SettingsInitialized", {
+    // Register fire event handler
+    ["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+    // Only add eh to non local players if dispersion is enabled
+    if (GVAR(overheatingDispersion)) then {
+        ["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+    };
+}] call EFUNC(common,addEventHandler);
