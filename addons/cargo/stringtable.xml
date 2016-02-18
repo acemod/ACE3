@@ -136,12 +136,15 @@
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
+            <Polish>Ustaw jako ładowalny</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
+            <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
+            <Polish>Rozmiar obiektu</Polish>
         </Key>
     </Package>
 </Project>

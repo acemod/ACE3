@@ -764,6 +764,7 @@
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
+            <Polish>Brak miejsca na rozładunek</Polish>
         </Key>
     </Package>
 </Project>

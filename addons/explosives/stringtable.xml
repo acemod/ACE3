@@ -43,6 +43,7 @@
             <Spanish>Detonar Todo</Spanish>
             <Russian>Подрыв всех</Russian>
             <Czech>Odpálit VŠE</Czech>
+            <Polish>Detonuj wszystkie</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -621,26 +622,28 @@
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
-          <English>M6 SLAM Mine (Bottom Attack)</English>
-          <!-- <Czech>Mina M6 SLAM</Czech> -->
-          <!-- <French>Mine M6 SLAM</French> -->
-          <!-- <German>M6-SLAM-Mine</German> -->
-          <!-- <Italian>Mina M6 SLAM</Italian> -->
-          <!-- <Polish>Mina M6 SLAM</Polish> -->
-          <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-          <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
-          <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+            <English>M6 SLAM Mine (Bottom Attack)</English>
+            <!-- <Czech>Mina M6 SLAM</Czech> -->
+            <!-- <French>Mine M6 SLAM</French> -->
+            <!-- <German>M6-SLAM-Mine</German> -->
+            <!-- <Italian>Mina M6 SLAM</Italian> -->
+            <!-- <Polish>Mina M6 SLAM</Polish> -->
+            <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
+            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+            <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+            <Polish>Mina M6 SLAM (atak od dołu)</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
-          <English>M6 SLAM Mine (Side Attack)</English>
-          <!-- <Czech>Mina M6 SLAM</Czech> -->
-          <!-- <French>Mine M6 SLAM</French> -->
-          <!-- <German>M6-SLAM-Mine</German> -->
-          <!-- <Italian>Mina M6 SLAM</Italian> -->
-          <!-- <Polish>Mina M6 SLAM</Polish> -->
-          <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-          <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
-          <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+            <English>M6 SLAM Mine (Side Attack)</English>
+            <!-- <Czech>Mina M6 SLAM</Czech> -->
+            <!-- <French>Mine M6 SLAM</French> -->
+            <!-- <German>M6-SLAM-Mine</German> -->
+            <!-- <Italian>Mina M6 SLAM</Italian> -->
+            <!-- <Polish>Mina M6 SLAM</Polish> -->
+            <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
+            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+            <!-- <Spanish>Mina M6 SLAM</Spanish> -->
+            <Polish>Mina M6 SLAM (atak od boku)</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -652,6 +655,7 @@
             <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
             <!-- <Russian>Большое СВУ (городское)</Russian> -->
             <!-- <Spanish>IED grande (Urbano)</Spanish> -->
+            <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -663,6 +667,7 @@
             <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
             <!-- <Russian>Большое СВУ (зарытое)</Russian> -->
             <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
+            <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -674,6 +679,7 @@
             <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
             <!-- <Russian>Малое СВУ (городское)</Russian> -->
             <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
+            <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -685,6 +691,7 @@
             <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->
             <!-- <Russian>Малое СВУ (зарытое)</Russian> -->
             <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
+            <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
         </Key>
     </Package>
 </Project>
