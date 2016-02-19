@@ -112,11 +112,30 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
+    class rhs_B_545x39_7U1_Ball: rhs_B_545x39_Ball {
+        // @todo: Provide _barrelLengths coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
+    };
+    class rhs_B_9x39_SP5: rhs_B_762x39_Ball {
+        // @todo: Provide _barrelLengths coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
+    };
+    class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball {
+        // @todo: Provide _barrelLengths coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
+    };
+
     class SubmunitionBase;
     class rhs_ammo_127x108mm_x5: SubmunitionBase {
         ACE_rearm_caliber=13;
     };
-    
+
     class GrenadeHand;
     class rhs_ammo_rgd5: GrenadeHand {
         ace_frag_enabled = 1;
@@ -153,7 +172,7 @@ class CfgAmmo {
     class rhs_ammo_fakels: rhs_ammo_fakel {};
     class rhs_ammo_zarya2: rhs_ammo_fakels {};
     class rhs_ammo_plamyam: rhs_ammo_fakels {};
-	
+
     class RocketBase;
     class R_PG32V_F: RocketBase {};
     class rhs_rpg26_rocket: R_PG32V_F {};
