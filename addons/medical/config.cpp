@@ -18,8 +18,8 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgSounds.hpp"
+#include "CfgEden.hpp"
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"
 #include "UI\triagecard.hpp"
-

@@ -24,6 +24,7 @@ class CfgPatches {
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
 #include "CfgUnitInsignia.hpp"
+#include "CfgEden.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -79,7 +80,7 @@ class CfgUIGrids {
                 displayName = "ACE Hint";
                 description = "Textual in game feedback to the player.";
                 preview = "\a3\Ui_f\data\GUI\Cfg\UIGrids\grid_hint_ca.paa";
-                saveToProfile[] = {0,1};                
+                saveToProfile[] = {0,1};
             };
         };
     };

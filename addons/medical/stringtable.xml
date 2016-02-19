@@ -3891,5 +3891,13 @@
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
             <Czech>Žádné škrtidlo na této části těla!</Czech>
         </Key>
+		<Key ID="STR_ACE_Medical_Attributes_isMedic_Description">
+			<English>Medical training</English>
+			<Polish>Wyszkolenie medyczne</Polish>
+		</Key>
+        <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
+            <English>Whether or not the object will be a medical vehicle.</English>
+            <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
+        </Key>
     </Package>
 </Project>
