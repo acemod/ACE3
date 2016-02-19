@@ -1,16 +1,15 @@
 /*
  * Author: Winter
- * Returns the view distance value according to the given index
- *
+ * Returns the view distance value according to the given index.
  *
  * Arguments:
- * 0: View Distance Index <SCALAR>
+ * 0: View Distance Index <NUMBER>
  *
  * Return Value:
- * View Distance <SCALAR>
+ * View Distance <NUMBER>
  *
  * Example:
- * [2] call ace_viewdistance_fnc_returnViewDistanceValue;
+ * [2] call ace_viewdistance_fnc_returnViewDistanceValue
  *
  * Public: No
  */

@@ -19,7 +19,7 @@
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     ERROR("running setHandcuffed on remote unit");
 };
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
@@ -28,7 +28,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    [_unit, QGVAR(Handcuffed), true] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -38,7 +38,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -56,8 +56,11 @@ if (_state) then {
 
         //Adds an animation changed eh
         //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
-        private "_animChangedEHID";
-
+        private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+        if (_animChangedEHID != -1) then {
+            TRACE_1("removing animChanged EH",_animChangedEHID);
+            _unit removeEventHandler ["AnimChanged", _animChangedEHID];
+        };
         _animChangedEHID = _unit addEventHandler ["AnimChanged", {
             params ["_unit", "_newAnimation"];
             TRACE_2("AnimChanged",_unit,_newAnimation);
@@ -67,7 +70,6 @@ if (_state) then {
                     [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
                 };
             } else {
-
                 _turretPath = [];
                 {
                     _x params ["_xUnit", "", "", "_xTurretPath"];
@@ -87,11 +89,10 @@ if (_state) then {
     }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
-    [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
-    private "_animChangedEHID";
-    _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
+    private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
     TRACE_1("removing animChanged EH",_animChangedEHID);
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
@@ -106,6 +107,9 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        showHUD true;
+        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
     };
 };
+
+//Global Event after changes:
+["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call EFUNC(common,globalEvent);

@@ -7,7 +7,7 @@
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
  *     0: Explosive <OBJECT>
- *     1: Fuse ACE_time <NUMBER>
+ *     1: Fuse time <NUMBER>
  *
  * Return Value:
  * None
@@ -30,10 +30,10 @@ _result = true;
 
 if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {TRACE_1("out of range",_range); false};
 
-if (getNumber (ConfigFile >> "CfgAmmo" >> typeof (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
+if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];
     _previousExp = _item select 0;
-    _exp = getText (ConfigFile >> "CfgAmmo" >> typeof (_previousExp) >> "ACE_Explosive");
+    _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
     if (_exp != "") then {
         _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
         _exp setDir (getDir _previousExp);

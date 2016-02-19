@@ -1,56 +1,29 @@
 /*
  * Author: commy2
- * Read properties of given flashlight. @todo, Can weapons themselves still have flashlights (no attachment)?
+ * Read properties of given flashlight.
  *
  * Arguments:
- * 0: A flashlight (String)
+ * 0: Flashlight <STRING>
  *
  * Return Value:
- * Stuff from config (Array)
+ * 0: Light intensity <NUMBER>
+ * 1: Light position <STRING>
+ * 2: Light direction <STRING>
+ * 3: Light inner angle <NUMBER>
+ * 4: Light outer angle <NUMBER>
  *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_weapon);
+params ["_weapon"];
 
-private "_config";
-_config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";
+private _config = configFile >> "CfgWeapons" >> _weapon >> "ItemInfo" >> "FlashLight";
 
-private ["_intensity", "_position", "_direction", "_innerAngle", "_outerAngle"];
-
-_intensity = getNumber (_config >> "intensity");
-_position = getText (_config >> "position");
-_direction = getText (_config >> "direction");
-_innerAngle = getNumber (_config >> "innerAngle");
-_outerAngle = getNumber (_config >> "outerAngle");
+private _intensity = getNumber (_config >> "intensity");
+private _position = getText (_config >> "position");
+private _direction = getText (_config >> "direction");
+private _innerAngle = getNumber (_config >> "innerAngle");
+private _outerAngle = getNumber (_config >> "outerAngle");
 
 [_intensity, _position, _direction, _innerAngle, _outerAngle]
-
-/*
-class FlashLight
-{
-    color[] = {180,156,120};
-    ambient[] = {0.9,0.78,0.6};
-    intensity = 20;
-    size = 1;
-    innerAngle = 20;
-    outerAngle = 80;
-    coneFadeCoef = 5;
-    position = "flash dir";
-    direction = "flash";
-    useFlare = 1;
-    flareSize = 1.4;
-    flareMaxDistance = "100.0f";
-    dayLight = 0;
-    class Attenuation
-    {
-        start = 0.5;
-        constant = 0;
-        linear = 0;
-        quadratic = 1.1;
-        hardLimitStart = 20;
-        hardLimitEnd = 30;
-    };
-    scale[] = {0};
-};
-*/

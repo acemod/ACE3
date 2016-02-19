@@ -17,7 +17,7 @@ TRACE_1("", _launchParams);
 // TODO:: Make sure the missile maintains LOS
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
-    _foundTargetPos = getPosASL _target;
+    _foundTargetPos = aimPos _target ;
     //_foundTargetPos = (_target modelToWorldVisual (getCenterOfMass _target));
 };
 

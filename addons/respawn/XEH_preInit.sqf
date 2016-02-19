@@ -13,7 +13,6 @@ PREP(moduleFriendlyFire);
 PREP(moduleRallypoint);
 PREP(moveRallypoint);
 PREP(removeBody);
-PREP(removeDisconnectedPlayer);
 PREP(restoreGear);
 PREP(showFriendlyFireMessage);
 PREP(teleportToRallypoint);

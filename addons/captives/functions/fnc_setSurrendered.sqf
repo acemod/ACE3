@@ -19,7 +19,7 @@
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
-if (!local _unit) exitwith {
+if (!local _unit) exitWith {
     ERROR("running surrender on remote unit");
 };
 
@@ -33,10 +33,10 @@ if (_state) then {
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
-    [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
 
     if (_unit == ACE_player) then {
-        showHUD false;
+        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
     };
 
     [_unit] call EFUNC(common,fixLoweredRifleAnimation);
@@ -48,7 +48,11 @@ if (_state) then {
         if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
-            private "_animChangedEHID";
+            private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
+            if (_animChangedEHID != -1) then {
+                TRACE_1("removing animChanged EH",_animChangedEHID);
+                _unit removeEventHandler ["AnimChanged", _animChangedEHID];
+            };
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
                 params ["_unit", "_newAnimation"];
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
@@ -61,18 +65,17 @@ if (_state) then {
     }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
-    [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
-    private "_animChangedEHID";
-    _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
+    private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(surrenderAnimEHID), -1];
 
     if (_unit == ACE_player) then {
         //only re-enable HUD if not handcuffed
         if (!(_unit getVariable [QGVAR(isHandcuffed), false])) then {
-            showHUD true;
+            ["captive", []] call EFUNC(common,showHud); //same as showHud true;
         };
     };
 
@@ -101,3 +104,6 @@ if (_state) then {
         }, 0, [_unit, (ACE_time + 20)]] call CBA_fnc_addPerFrameHandler;
     };
 };
+
+//Global Event after changes:
+["CaptiveStatusChanged", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);

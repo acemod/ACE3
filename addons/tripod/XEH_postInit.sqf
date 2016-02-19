@@ -1,16 +1,21 @@
 #include "script_component.hpp"
 
-GVAR(adjuster) = objNull;
-GVAR(adjusting) = false;
+if (!hasInterface) exitWith {};
+
 GVAR(adjustPFH) = -1;
 
 GVAR(height) = 0;
 
 // Cancel adjustment if interact menu opens
-["interactMenuOpened", {
-    if (GVAR(adjustPFH) != -1 && GVAR(adjusting)) then {
-        GVAR(adjusting) = false;
-    };
-}] call EFUNC(common,addEventHandler);
+["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
 
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
+[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
+
+// Cancel adjusting on player change.
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
+["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
+
+// handle falling unconscious
+["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
+
+// @todo captivity?

@@ -5,8 +5,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_TacticalLadders {
                 displayName = CSTRING(Deploy);
-                condition = QUOTE((backpack ACE_player) == QUOTE(QUOTE(ACE_TacticalLadder_Pack)));
-                statement = QUOTE(call FUNC(deployTL));
+                condition = QUOTE(backpack _player == 'ACE_TacticalLadder_Pack');
+                statement = QUOTE([_player] call FUNC(deployTL));
                 exceptions[] = {};
                 showDisabled = 1;
                 priority = 4;
@@ -33,7 +33,7 @@ class CfgVehicles {
     };
 
     class House;
-    class ACE_Tactical_Ladder: House {
+    class ACE_TacticalLadder: House {
         XEH_ENABLED;
         displayName = CSTRING(DisplayName);
         class DestructionEffects {};
@@ -42,6 +42,7 @@ class CfgVehicles {
         autocenter = 0;
         featureSize = 12;
         ladders[] = {{"start","end"}};
+
         class AnimationSources {
             class rotate {
                 source = "user";
@@ -62,28 +63,31 @@ class CfgVehicles {
             class extract_10: extract_1 {};
             class extract_11: extract_1 {};
         };
+
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "roadway";
                 distance = 5;
                 condition = "true";
+
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(Pickup);
                     distance = 4;
                     condition = QUOTE((backpack ACE_player) == '');
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickupTL));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickupTL));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                 };
+
                 class ACE_Position {
                     selection = "";
                     displayName = CSTRING(Position);
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)}, [ARR_2(_target,_player)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

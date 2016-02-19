@@ -16,88 +16,83 @@
 
 BEGIN_COUNTER(fnc_renderBaseMenu)
 
-private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
-
 params ["_object", "_baseActionNode"];
 _baseActionNode params ["_actionData"];
+_actionData params ["_actionName", "", "", "", "", "", "", "_positionCode", "_distance", "_params"];
 
-_distance = _actionData select 8;
 
 // Obtain a 3D position for the action
-_pos = if((count _this) > 2) then {
+private _pos = if((count _this) > 2) then {
     _this select 2
 } else {
     // Setup scope variables for position code
-    private ["_target"];
-    _target = _object;
+    private _target = _object;
 
     // Get action position
-    _object modelToWorldVisual (call (_actionData select 7))
+    _object modelToWorldVisual (call _positionCode)
 };
 
 // For non-self actions, exit if the action is too far away or ocluded
-if (GVAR(openedMenuType) == 0 && (vehicle ACE_player == ACE_player) && (isNull curatorCamera) &&
+private _distanceToBasePoint = 0; //This will be 0 for self/zeus/in-vehicle (used later to check sub action distance)
+if ((GVAR(openedMenuType) == 0) && {vehicle ACE_player == ACE_player} && {isNull curatorCamera} &&
     {
-        private ["_headPos","_actualDistance"];
-        _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
-        _actualDistance = _headPos distance _pos;
+        private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
+        _distanceToBasePoint = _headPos distance _pos;
 
-        if (_actualDistance > _distance) exitWith {true};
+        if (_distanceToBasePoint > _distance) exitWith {true};
 
-        if ((_actualDistance > 1.5) && {!((_actionData select 9) select 4)}) exitWith {
-            // If distance to action is greater than 1.5 m, check LOS
-            _line = [_headPos call EFUNC(common,positionToASL), _pos call EFUNC(common,positionToASL), _object, ACE_player];
-            lineIntersects _line
+        if ((_distanceToBasePoint > 1.2) && {!(_params select 4)}) exitWith {
+            // If distance to action is greater than 1.2 m and check isn't disabled in params, check LOS
+            lineIntersects [AGLtoASL _headPos, AGLtoASL _pos, _object, ACE_player]
         };
         false
     }) exitWith {false};
 
 // Exit if the action is behind you
-_sPos = if (count _pos != 2) then {
+private _sPos = if (count _pos != 2) then {
     worldToScreen _pos
 } else {
     _pos
 };
-if(count _sPos == 0) exitWith {false};
+if (_sPos isEqualTo []) exitWith {false};
 
 // Exit if the action is off screen
-if ((_sPos select 0) < safeZoneXAbs || (_sPos select 0) > safeZoneXAbs + safeZoneWAbs) exitWith {false};
-if ((_sPos select 1) < safeZoneY    || (_sPos select 1) > safeZoneY    + safeZoneH) exitWith {false};
+if ((_sPos select 0) < safeZoneXAbs || {(_sPos select 0) > safeZoneXAbs + safeZoneWAbs}) exitWith {false};
+if ((_sPos select 1) < safeZoneY    || {(_sPos select 1) > safeZoneY    + safeZoneH}) exitWith {false};
 
 
 BEGIN_COUNTER(fnc_collectActiveActionTree)
 
 // Collect active tree
-private "_uid";
-_uid = format [QGVAR(ATCache_%1), _actionData select 0];
-_activeActionTree = [
-                        [_object, _baseActionNode, []],
+private _uid = format [QGVAR(ATCache_%1), _actionName];
+private _activeActionTree = [
+                        [_object, _baseActionNode, [], _distanceToBasePoint],
                         DFUNC(collectActiveActionTree),
                         _object, _uid, 1.0, "interactMenuClosed"
                     ] call EFUNC(common,cachedCall);
 
 END_COUNTER(fnc_collectActiveActionTree)
 
-/*
+#ifdef DEBUG_MODE_EXTRA
 diag_log "Printing: _activeActionTree";
-_fnc_print = {
-    EXPLODE_2_PVT(_this,_level,_node);
-    EXPLODE_3_PVT(_node,_actionData,_children,_object);
+[0, _activeActionTree] call {
+    params ["_level", "_node"];
+    _node params ["_actionData", "_children", "_object"];
     diag_log text format ["Level %1 -> %2 on %3", _level, _actionData select 0, _object];
     {
         [_level + 1, _x] call _fnc_print;
     } forEach _children;
 };
-[0, _activeActionTree] call _fnc_print;
-*/
+#endif
+
 // Check if there's something left for rendering
-if (count _activeActionTree == 0) exitWith {false};
+if (_activeActionTree isEqualTo []) exitWith {false};
 
 BEGIN_COUNTER(fnc_renderMenus);
 
-// IGNORE_PRIVATE_WARNING(_cameraPos,_cameraDir);
+// IGNORE_PRIVATE_WARNING(_cameraPosASL,_cameraDir);
 if (count _pos > 2) then {
-    _sPos pushBack (((_pos call EFUNC(common,positionToASL)) vectorDiff _cameraPos) vectorDotProduct _cameraDir);
+    _sPos pushBack (((AGLtoASL _pos) vectorDiff _cameraPosASL) vectorDotProduct _cameraDir);
 } else {
     _sPos pushBack 0;
 };

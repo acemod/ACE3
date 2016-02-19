@@ -19,10 +19,10 @@
 
 if (!isServer) exitWith {};
 
-params ["_logic", "_units", "_activated"];
+params ["_logic", "", "_activated"];
 
 if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Cargo Module Initialized.";
+ACE_LOGINFO("Cargo Module Initialized.");

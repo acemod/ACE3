@@ -1,13 +1,22 @@
-// by commy2
+/*
+ * Author: commy2
+ * Fixes zeus placed crates containing buged mine detectors and ace items.
+ *
+ * Arguments:
+ * 0: Crate <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_weapons", "_items"];
-
-PARAMS_1(_crate);
+params ["_crate"];
 
 // get all weapons inside the crate
-_weapons = weaponCargo _crate;
-_items = [];
+private _weapons = weaponCargo _crate;
+private _items = [];
 
 // if the "weapon" is supposed to be an item, move those from the weapon array to the item array
 {

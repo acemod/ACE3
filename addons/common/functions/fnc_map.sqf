@@ -1,7 +1,6 @@
 /*
  * Author: KoffeinFlummi, commy2
- *
- * Applies given code to every element in an array, LIKE SOMETHING SQF SHOULD HAVE BY DEFAULT.
+ * Applies given code to every element in an array, LIKE SOMETHING SQF SHOULD HAVE BY DEFAULT. <- :kappa:
  *
  * Arguments:
  * 0: Array to be thingied.
@@ -10,22 +9,21 @@
  * Return Value:
  * Final array
  *
- * Usage:
- * [["2", "gobblecock", "25"], {parseNumber _this}] call FUNC(map) ==> [2, 0, 25]
+ * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-private ["_array", "_code"];
+params [["_array", [], [[]]], ["_code", {}, [{}]]];
 
-_array = + _this select 0;
-_code = _this select 1;
+ACE_DEPRECATED("ace_common_fnc_map","3.7.0","apply");
 
-if (isNil "_array") exitWith {
-    diag_log text format ["[ACE] ERROR: No array for function map in %1", _fnc_scriptNameParent];
-    []
-};
+// copy array to not alter the original one
+_array = + _array;
 
 {
     _array set [_forEachIndex, _x call _code];
 } forEach _array;
+
 _array

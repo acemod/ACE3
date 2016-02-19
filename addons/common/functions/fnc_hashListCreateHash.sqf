@@ -1,12 +1,21 @@
-//fnc_hashListCreateHash.sqf
+/*
+ * Author: ?
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * ?
+ *
+ * Public: ?
+ */
 #include "script_component.hpp"
 
-private ["_hashKeys"];
-
-PARAMS_1(_hashList);
+params ["_hashList"];
 
 ERRORDATA(1);
-_hashKeys = [];
+private _hashKeys = [];
 try {
     if(VALIDHASH(_hashList)) then {
         _hashKeys = (_hashList select 0);

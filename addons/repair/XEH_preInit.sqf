@@ -3,6 +3,7 @@
 ADDON = false;
 
 PREP(addRepairActions);
+PREP(addSpareParts);
 PREP(canMiscRepair);
 PREP(canRemove);
 PREP(canRepair);
@@ -16,6 +17,7 @@ PREP(doRepair);
 PREP(doRepairTrack);
 PREP(doReplaceTrack);
 PREP(doReplaceWheel);
+PREP(getClaimObjects);
 PREP(getHitPointString);
 PREP(getPostRepairDamage);
 PREP(getWheelHitPointsWithSelections);
@@ -24,6 +26,7 @@ PREP(isEngineer);
 PREP(isInRepairFacility);
 PREP(isNearRepairVehicle);
 PREP(isRepairVehicle);
+PREP(moduleAddSpareParts);
 PREP(moduleAssignEngineer);
 PREP(moduleAssignRepairVehicle);
 PREP(moduleAssignRepairFacility);

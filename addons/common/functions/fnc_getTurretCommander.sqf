@@ -1,30 +1,32 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a vehicles commander.
  *
- * Argument:
- * 0: Vehicle (Object)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
  *
- * Return value:
- * Turret index of the vehicles commander. Empty array means no observer position. (Array)
+ * Return Value:
+ * Vehicle commander turrent indecies <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_turrets", "_turret", "_config"];
+params [["_vehicle", objNull, [objNull]]];
 
-PARAMS_1(_vehicle);
+private _turrets = allTurrets [_vehicle, true];
 
-_turrets = allTurrets [_vehicle, true];
+private _turret = [];
 
-_turret = [];
 {
-  _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
-  _config = [_config, _x] call FUNC(getTurretConfigPath);
+    _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-  if (getNumber (_config >> "primaryObserver") == 1) exitWith {
-    _turret = _x;
-  };
-} forEach _turrets;
+    if (getNumber (_config >> "primaryObserver") == 1) exitWith {
+        _turret = _x;
+    };
+    false
+} count _turrets;
+
 _turret

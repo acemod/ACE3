@@ -17,6 +17,6 @@
 
 params ["_player"];
 
-if (_player getVariable [QGVAR(isSitting), false]) then {
+if (!isNil {_player getVariable QGVAR(isSitting)}) then {
     _player call FUNC(stand);
 };

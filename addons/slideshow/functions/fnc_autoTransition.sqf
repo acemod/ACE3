@@ -19,7 +19,6 @@
 #include "script_component.hpp"
 
 private "_currentSlide";
-
 params ["_objects", "_images", "_varString", "_duration"];
 
 // Get current slide number of this slideshow

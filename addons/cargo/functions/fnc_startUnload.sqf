@@ -15,21 +15,29 @@
  */
 #include "script_component.hpp"
 
-private ["_display", "_loaded", "_ctrl", "_selected", "_item"];
-
 disableSerialization;
 
-_display = uiNamespace getVariable QGVAR(menuDisplay);
-if (isnil "_display") exitWith {};
+private _display = uiNamespace getVariable QGVAR(menuDisplay);
+if (isNil "_display") exitWith {};
 
-_loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-if (count _loaded == 0) exitWith {};
+private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+if (_loaded isEqualTo []) exitWith {};
 
-_ctrl = _display displayCtrl 100;
+private _ctrl = _display displayCtrl 100;
 
-_selected = (lbCurSel _ctrl) max 0;
+private _selected = (lbCurSel _ctrl) max 0;
 
 if (count _loaded <= _selected) exitWith {};
-_item = _loaded select _selected;
+private _item = _loaded select _selected; //This can be an object or a classname string
 
-[_item, GVAR(interactionVehicle)] call FUNC(unloadItem);
+// Start progress bar
+if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then {
+    private _size = [_item] call FUNC(getSizeItem);
+
+    [5 * _size, [_item, GVAR(interactionVehicle), ACE_player], "UnloadCargo", {}, localize LSTRING(UnloadingItem), {true}, ["isNotSwimming"]] call EFUNC(common,progressBar);
+} else {
+    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+    private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+
+    ["displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+};
