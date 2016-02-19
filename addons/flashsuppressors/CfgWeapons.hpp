@@ -1,3 +1,10 @@
+class asdg_MuzzleSlot;
+class asdg_MuzzleSlot_338: asdg_MuzzleSlot { // for .338 universal mount suppressors
+    class compatibleItems {
+        ACE_muzzle_mzls_338 = 1;
+    };
+};
+
 
 class MuzzleSlot;
 
@@ -58,14 +65,6 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             class MuzzleSlot: MuzzleSlot {
                 compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
-    };
-
-    class DMR_02_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_338"};
             };
         };
     };
