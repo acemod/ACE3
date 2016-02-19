@@ -54,6 +54,10 @@ _affected = _affected - [ACE_player];
 
         _x setSkill (skill _x / 50);
 
+        if (_strength > 0.2) then {
+            _x setVectorDir ((getPosASL _x) vectorDiff _grenadePosASL);
+        };
+
         [{
             params ["_unit"];
 
@@ -87,7 +91,6 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     };
     _strength = _strength * _losCoefficient;
 
-    };
 
     // Add ace_hearing ear ringing sound effect
     if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0}) then {
@@ -129,6 +132,10 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
         [{
             GVAR(flashbangPPEffectCC) ppEffectEnable false;
         }, [], 17 * _strength] call EFUNC(common,waitAndExecute);
+    };
+
+    if (_strength > 0.2) then {
+        ACE_player setVectorDir (_eyePos vectorDiff _grenadePosASL);
     };
 };
 true
