@@ -29,7 +29,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]]];
-        _unit setVariable [QGVAR(nozzle), nil];
+        _unit setVariable [QGVAR(nozzle), nil, true];
         detach _nozzle;
         [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
