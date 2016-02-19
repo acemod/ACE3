@@ -46,7 +46,7 @@ private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
     if (local _x && {alive _x}) then {
-        private _strength = 1 - (((getPosASL _x) vectorDistance _grenadePosASL) min 15) / 15;
+        private _strength = 1 - (((getPosASL _x) vectorDistance _grenadePosASL) min 20) / 20;
 
         TRACE_3("FlashBangEffect Start",_x,((getPosASL _x) vectorDistance _grenadePosASL),_strength);
 
@@ -71,14 +71,14 @@ _affected = _affected - [ACE_player];
     };
 } count _affected;
 
-// Affect local player, independently of distance (all effects except light finish at 15m)
+// Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     // Do effects for player
     // is there line of sight to the grenade?
     private _eyePos = eyePos ACE_player; //PositionASL
     _grenadePosASL set [2, (_grenadePosASL select 2) + 0.2]; // compensate for grenade glitching into ground
 
-    private _strength = 1 - ((_eyePos vectorDistance _grenadePosASL) min 15) / 15;
+    private _strength = 1 - ((_eyePos vectorDistance _grenadePosASL) min 20) / 20;
 
     // Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
     private _losCoefficient = 1;
