@@ -58,9 +58,11 @@
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections">
             <English>Explosion Reflections Simulation</English>
+            <Polish>Symulacja odbicia eksplozji</Polish>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
+            <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
