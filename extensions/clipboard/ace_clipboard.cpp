@@ -37,9 +37,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         EXTENSION_RETURN();
     }
 
-    #ifndef _WIN32
-        EXTENSION_RETURN();
-    #endif
+    #ifdef _WIN32
 
     if (!strcmp(function, "--COMPLETE--"))
     {
@@ -93,6 +91,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     {
         strncpy_s(output, outputSize, result.c_str(), _TRUNCATE);
     }
+
+    #endif
 
     EXTENSION_RETURN();
 }
