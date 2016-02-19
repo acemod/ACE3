@@ -10,7 +10,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Mk6 Mortar overhaul
-ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If enabled, rounds must be loaded individually by a loader.
+ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If ammunition handling is enabled, rounds must be loaded manually.
 
 
 ## 2. Usage
@@ -48,7 +48,7 @@ You need the proper mortar magazines in your inventory.
 
 - Interact with the mortar by pressing the interaction key <kbd>⊞&nbsp;Win</kbd> and looking near the muzzle.
 - Select the `Load Mortar` action and then select the round type you want to load.
-- If you want to unload the mortar without firing, interact near the muzzle again and select `Remove Round`.
+- If you want to unload the mortar without firing, interact near the muzzle again and select `Remove Round`. If there isn't space in your inventory for the round, it will be placed on the ground.
 
 ## 3. Dependencies
 

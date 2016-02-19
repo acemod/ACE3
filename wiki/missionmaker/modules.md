@@ -193,7 +193,7 @@ Name | Type | Description | Default value
 Air Resistance | Boolean | For Player Shots, Model Air Resistance and Wind Effects. | No
 Allow MK6 Computer | Boolean | Show the Computer and Rangefinder (these **NEED** to be removed if you enable air resistance). | No
 Allow MK6 Compass | Boolean | Show the MK6 Digital Compass. | Yes
-Use Ammunition Handling | Boolean | Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars. | No
+Use Ammunition Handling | Boolean | Removes magazines from mortars, requiring individual rounds to be loaded manually. Does not affect AI mortars. | No
 
 ### 1.15 Name Tags
 *Part of: ace_nametags*
