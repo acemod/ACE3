@@ -76,40 +76,42 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
     private _strength = 1 - ((_eyePos vectorDistance _grenadePosASL) min 15) / 15;
 
-    //Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
+    // Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
+    private _losCoefficient = 1;
     private _losCount = {
         !lineIntersects [_grenadePosASL vectorAdd _x, _eyePos, ACE_player]
     } count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
-
     TRACE_1("Line of sight count (out of 4)",_losCount);
     if (_losCount <= 1) then {
-        _strength = _strength / 10;
+        _losCoefficient = 0.1;
+    };
+    _strength = _strength * _losCoefficient;
+
     };
 
-    // add ace_hearing ear ringing sound effect
+    // Add ace_hearing ear ringing sound effect
     if (isClass (configFile >> "CfgPatches" >> "ACE_Hearing") && {_strength > 0}) then {
-        [_x, 40 * _strength] call EFUNC(hearing,earRinging);
+        [ACE_player, 40 * _strength] call EFUNC(hearing,earRinging);
     };
-
-    // account for people looking away by slightly
-    // reducing the effect for visual effects.
-    private _eyeDir = ((AGLtoASL positionCameraToWorld [0,0,1]) vectorDiff (AGLtoASL positionCameraToWorld [0,0,0]));
-    private _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
-    private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
-
-    // from 0-45deg, full effect
-    if (_angleDiff > 45) then {
-        _strength = _strength - _strength * ((_angleDiff - 45) / 120);
-    };
-
-    TRACE_1("Final strength for player",_strength);
 
     // add ace_medical pain effect:
     if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {_strength > 0.1}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
-    // blind player
+    // Effect on vision has a wider range, with a higher falloff
+    _strength = 1 - (((_eyePos vectorDistance _grenadePosASL) min 25) / 25) ^ 0.4;
+    _strength = _strength * _losCoefficient;
+    // Account for people looking away by slightly reducing the effect for visual effects.
+    private _eyeDir = ((AGLtoASL positionCameraToWorld [0,0,1]) vectorDiff (AGLtoASL positionCameraToWorld [0,0,0]));
+    private _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+    private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
+    // from 0-60deg, full effect
+    if (_angleDiff > 60) then {
+        _strength = _strength - _strength * ((_angleDiff - 60) / 120);
+    };
+
+    // Blind player
     if (_strength > 0.1) then {
         GVAR(flashbangPPEffectCC) ppEffectEnable true;
         GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
