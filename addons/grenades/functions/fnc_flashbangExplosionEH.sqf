@@ -107,11 +107,12 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     _strength = _strength * _losCoefficient;
     // Account for people looking away by slightly reducing the effect for visual effects.
     private _eyeDir = ((AGLtoASL positionCameraToWorld [0,0,1]) vectorDiff (AGLtoASL positionCameraToWorld [0,0,0]));
-    private _dirToUnitVector = _eyePos vectorFromTo _posGrenade;
+    private _dirToUnitVector = _eyePos vectorFromTo _grenadePosASL;
     private _angleDiff = acos (_eyeDir vectorDotProduct _dirToUnitVector);
-    // from 0-60deg, full effect
-    if (_angleDiff > 60) then {
-        _strength = _strength - _strength * ((_angleDiff - 60) / 120);
+    TRACE_2("",_angleDiff,((1 - (_angleDiff - 45) / (120 - 45)) max 0));
+    // from 0-45deg, full effect
+    if (_angleDiff > 45) then {
+        _strength = _strength * ((1 - (_angleDiff - 45) / (120 - 45)) max 0);
     };
 
     // Blind player
