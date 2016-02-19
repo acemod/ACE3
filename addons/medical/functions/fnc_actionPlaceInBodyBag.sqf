@@ -22,7 +22,7 @@ TRACE_2("params",_caller,_target);
 
 if (!local _target) exitWith {
     TRACE_1("running where local",local _target);
-    ["medical_actionPlaceInBodyBag", [_target], [_caller, _target]] call EFUNC(common,targetEvent);
+    ["actionPlaceInBodyBag", [_target], [_caller, _target]] call EFUNC(common,targetEvent);
     objNull
 };
 
