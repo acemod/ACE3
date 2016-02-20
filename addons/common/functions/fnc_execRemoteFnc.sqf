@@ -20,6 +20,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_execRemoteFnc","3.7.0","ace_common_fnc_globalEvent");
+
 GVAR(remoteFnc) = _this;
 
 params ["_arguments", "_function", ["_unit", 2]];

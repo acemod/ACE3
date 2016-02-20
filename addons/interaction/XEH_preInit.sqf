@@ -38,4 +38,7 @@ PREP(openDoor);
 // interaction with boats
 PREP(push);
 
+
+PREP(switchLamp);
+
 ADDON = true;

@@ -27,21 +27,33 @@
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
             <English>Overheating Particle Effects</English>
+            <German>Partikeleffekt bei Überhitzung</German>
+            <Polish>Efekty cząsteczkowe przegrzania</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
+            <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
+            <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
+            <German>Zeige Partikeleffekt bei allen</German>
+            <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
+            <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
+            <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
+            <German>Ungenauigkeit bei Überhitzung</German>
+            <Polish>Wpływ na rozrzut</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
+            <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
+            <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>

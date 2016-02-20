@@ -34,3 +34,10 @@ if (!hasInterface) exitWith {};
 ["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
+
+["SettingsInitialized", {
+    // Hold on a little bit longer to ensure anims will work
+    [{
+        GVAR(captivityEnabled) = true;
+    }, [], 0.05] call EFUNC(common,waitAndExecute);
+}] call EFUNC(common,addEventHandler);

@@ -19,6 +19,10 @@
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 if (alive _target && {(_target getVariable [QGVAR(inCardiacArrest), false] || _target getVariable [QGVAR(inReviveState), false])}) then {
-    [[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_CPRLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    if (local _target) then {
+        ["treatmentAdvanced_CPRLocal", [_caller, _target]] call EFUNC(common,localEvent);
+    } else {
+        ["treatmentAdvanced_CPRLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+    };
 };
 true;

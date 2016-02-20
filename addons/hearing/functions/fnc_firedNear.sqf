@@ -22,8 +22,8 @@
  */
 #include "script_component.hpp"
 
-//Only run if deafness or ear ringing is enabled:
-if ((!GVAR(enableCombatDeafness)) && GVAR(DisableEarRinging)) exitWith {};
+// Only run if combat deafness is enabled
+if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 
@@ -97,4 +97,5 @@ TRACE_1("result",_strength);
 
 if (_strength < 0.01) exitWith {};
 
-[{_this call FUNC(earRinging)}, [ACE_player, _strength], 0.2] call EFUNC(common,waitAndExecute);
+// Call inmediately, as it will get pick up later anyway by the update thread
+[_strength] call FUNC(earRinging);

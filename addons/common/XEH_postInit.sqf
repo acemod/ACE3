@@ -251,7 +251,7 @@ call FUNC(checkFiles);
         // Publish all settings data after all configs and modules are read
         publicVariable QGVAR(settings);
     };
-    
+
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);
@@ -475,6 +475,8 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         [_unit, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);
     };
 }] call FUNC(addEventhandler);
+
+["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
 
 
 //////////////////////////////////////////////////

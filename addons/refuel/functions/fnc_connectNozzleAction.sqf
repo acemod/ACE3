@@ -77,7 +77,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
-        _unit setVariable [QGVAR(nozzle), nil];
+        _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
         [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON

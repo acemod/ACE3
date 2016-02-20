@@ -32,5 +32,5 @@ if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(isRefueling), false, true];
     _unit setVariable [QGVAR(ReleaseActionID), nil];
-    _unit setVariable [QGVAR(nozzle), nil];
+    _unit setVariable [QGVAR(nozzle), nil, true];
 };

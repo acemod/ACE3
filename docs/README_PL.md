@@ -58,7 +58,6 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 - Przepakowywanie magazynków
 - Realistyczna mechanika przegrzewania broni
 - Symulacja głuchoty bitewnej (tymczasowej utraty słuchu)
-- Ulepszona fizyka ragdoll
 - Ulepszona interakcja dla asystentów i amunicyjnych
 - Regulowane celowniki snajperskie
 - Usunięte animacje bezczynności z opuszczoną bronią
