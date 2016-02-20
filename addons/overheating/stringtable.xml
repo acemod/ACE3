@@ -55,6 +55,12 @@
             <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
         </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
+            <English>Unjam weapon on reload</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnreload_description">
+            <English>Reloading clears a weapon jam.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
             <German>Ersatzlauf</German>

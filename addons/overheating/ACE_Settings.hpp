@@ -26,4 +26,10 @@ class ACE_Settings {
         displayName = CSTRING(overheatingDispersion_displayName);
         description = CSTRING(overheatingDispersion_description);
     };
+    class GVAR(unJamOnreload) {
+        typeName = "BOOL";
+        value = 0;
+        displayName = CSTRING(unJamOnreload_displayName);
+        description = CSTRING(unJamOnreload_description);
+    };
 };

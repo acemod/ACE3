@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if !(GVAR(unJamOnreload)) exitWith {};
+
 params ["_unit", "_container", "_item"];
 TRACE_3("params",_unit,_container,_item);
 
