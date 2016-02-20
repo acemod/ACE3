@@ -11,7 +11,6 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
 //Treatment EventHandlers:
-["medical_advMedication", FUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
 ["actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call EFUNC(common,addEventHandler);
 ["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
 ["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
@@ -29,6 +28,10 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call EFUNC(common,addEventHandler);
 ["treatmentIVLocal", DFUNC(treatmentIVLocal)] call EFUNC(common,addEventHandler);
 ["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call EFUNC(common,addEventHandler);
+["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
+
+//Handle Deleting Bodies on Server:
+if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
 
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
