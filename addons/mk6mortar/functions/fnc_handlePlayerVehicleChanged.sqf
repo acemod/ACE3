@@ -3,7 +3,7 @@
  * Handles player getting into new vehicle.  Loads PFEG for mortar display if it is a mortar.
  *
  * Arguments:
- * 0:Player <OBJECT>
+ * 0: Player <OBJECT>
  * 1: New Vehicle <OBJECT>
  *
  * Return Value:
@@ -22,6 +22,19 @@ private["_tubeWeaponName" ,"_fireModes", "_lastFireMode"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
+
+// Run magazine handling initialization if enabled
+if (!EGVAR(common,settingsInitFinished)) then {
+    EGVAR(common,runAtSettingsInitialized) pushBack [{
+        if (GVAR(useAmmoHandling) && {!(_this getVariable [QGVAR(initialized),false]) && !(_this getVariable [QGVAR(exclude),false])}) then {
+            _this call FUNC(mortarInit);
+        };
+    }, _newVehicle];
+} else {
+    if (GVAR(useAmmoHandling) && {!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])}) then {
+        _newVehicle call FUNC(mortarInit);
+    };
+};
 
 _tubeWeaponName = (weapons _newVehicle) select 0;
 _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
@@ -49,7 +62,7 @@ if (_lastFireMode != -1) then {
 
         //Save firemode on vehicle:
         _mortarVeh setVariable [QGVAR(lastFireMode), _currentChargeMode];
-        
+
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
             closeDialog 0;
