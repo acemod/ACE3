@@ -1,4 +1,4 @@
-// by esteldunedain
+s// by esteldunedain
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
@@ -9,7 +9,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(ACE_player call EFUNC(common,canUseWeapon) || {(vehicle ACE_player) isKindOf "StaticWeapon"}) exitWith {false};
+    if !(ACE_player call CBA_fnc_canUseWeapon || {(vehicle ACE_player) isKindOf "StaticWeapon"}) exitWith {false};
 
     // Statement
     [ACE_player] call FUNC(checkAmmo);

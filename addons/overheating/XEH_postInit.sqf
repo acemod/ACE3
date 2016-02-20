@@ -22,7 +22,7 @@ GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon) &&
+    if !([ACE_player] call CBA_fnc_canUseWeapon &&
     {currentWeapon ACE_player in (ACE_player getVariable [QGVAR(jammedWeapons), []])}
     ) exitWith {false};
 

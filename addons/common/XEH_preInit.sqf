@@ -16,7 +16,6 @@ PREP(blurScreen);
 PREP(cachedCall);
 PREP(canGetInPosition);
 PREP(canInteractWith);
-PREP(canUseWeapon);
 PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
@@ -292,6 +291,9 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
+
+// backwards comp
+DFUNC(canUseWeapon) = CBA_fnc_canUseWeapon;
 
 GVAR(syncedEvents) = HASH_CREATE;
 GVAR(showHudHash) = [] call FUNC(hashCreate);
