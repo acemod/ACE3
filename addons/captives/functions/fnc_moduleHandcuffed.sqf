@@ -24,12 +24,8 @@ TRACE_3("params",_logic,_units,_activated);
 if (!_activated) exitWith {};
 if (!isServer) exitWith {};
 
-//Modules run before postInit can instal the event handler, so we need to wait a little bit
-[{
-    params ["_units"];
-    {
-        ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
-    } forEach _units;
-}, [_units], 0.05] call EFUNC(common,waitAndExecute);
+{
+    ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
+} forEach _units;
 
 deleteVehicle _logic;
