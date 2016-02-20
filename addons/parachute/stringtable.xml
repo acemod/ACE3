@@ -59,6 +59,7 @@
             <Russian>Обрезать стропы</Russian>
             <Czech>Odžíznout padák</Czech>
             <Spanish>Cortar paracaídas</Spanish>
+            <Italian>Taglia Paracadute</Italian>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -70,6 +71,7 @@
             <Russian>Запасной парашют</Russian>
             <Czech>Záložní padák</Czech>
             <Spanish>Paracaídas de reserva</Spanish>
+            <Italian>Paracadute di Riserva</Italian>
         </Key>
     </Package>
 </Project>

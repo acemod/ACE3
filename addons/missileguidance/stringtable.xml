@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Title">
@@ -107,6 +107,7 @@
             <French>Eteint</French>
             <Hungarian>Ki</Hungarian>
             <Russian>Выкл.</Russian>
+            <Italian>Spento</Italian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -118,6 +119,7 @@
             <French>Seulement les joueurs</French>
             <Hungarian>Csak játékosok</Hungarian>
             <Russian>Только игрок</Russian>
+            <Italian>Solo Giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -129,6 +131,7 @@
             <French>Joueurs et IA</French>
             <Hungarian>Játékosok és AI</Hungarian>
             <Russian>Игрок и боты</Russian>
+            <Italian>Giocatore ed IA</Italian>
         </Key>
     </Package>
 </Project>

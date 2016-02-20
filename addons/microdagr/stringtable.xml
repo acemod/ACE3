@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MicroDAGR">
         <Key ID="STR_ACE_MicroDAGR_itemName">
@@ -311,6 +311,7 @@
             <French>MicroDAGR - Remplissage de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
+            <Italian>Riempimento Mappa MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -322,6 +323,7 @@
             <French>MicroDAGR - Remplissage de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
+            <Italian>Riempimento Mappa MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">
             <English>How much map data is filled on MicroDAGR's</English>
@@ -333,6 +335,7 @@
             <French>Combien d'information apparaisse sur la carte du MicroDAGR</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
+            <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
             <English>Full Satellite + Buildings</English>
@@ -344,6 +347,7 @@
             <French>Satellite + Batiments</French>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
+            <Italian>Satellite Completo + Edifici</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_OnlyRoads">
             <English>Topographical + Roads</English>
@@ -355,6 +359,7 @@
             <French>Topographie + Routes</French>
             <Hungarian>Topográfia + utak</Hungarian>
             <Russian>Топография + Дороги</Russian>
+            <Italian>Topografico + Strade</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
@@ -366,6 +371,7 @@
             <French>Rien (La vue carte n'est pas possible)</French>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
+            <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.&lt;br /&gt;Source: microDAGR.pbo</English>
@@ -377,6 +383,7 @@
             <French>Contrôle le nombre d'information disponible sur la carte du MicroDAGR. &lt;br/&gt;Source: microDAGR.pbo</French>
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön. &lt;br /&gt;Forrás: microDAGR.pbo</Hungarian>
             <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.&lt;br /&gt;Источник: microDAGR.pbo</Russian>
+            <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa. &lt;br/&gt;Fonte: microDAGR.pbo</Italian>
         </Key>
     </Package>
 </Project>

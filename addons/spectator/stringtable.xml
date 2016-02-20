@@ -9,6 +9,7 @@
             <Russian>Настройки спектатора</Russian>
             <Czech>Nastavení pozorovatele</Czech>
             <Spanish>Ajustes de espectador</Spanish>
+            <Italian>Impostazioni Spettatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -18,6 +19,7 @@
             <Russian>Определяют, как система спектатора будет функционировать по-умолчанию.</Russian>
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
             <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
+            <Italian>Configura come il sistema spettatore si comporterà di default.</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
@@ -27,6 +29,7 @@
             <Russian>Фильтр юнитов</Russian>
             <Czech>Filtr jednotek</Czech>
             <Spanish>Filtro de unidad</Spanish>
+            <Italian>Filtro Unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
             <English>Method of filtering spectatable units.</English>
@@ -36,6 +39,7 @@
             <Russian>Метод фильтрации наблюдаемых юнитов.</Russian>
             <Spanish>Método de filtrado de unidades de espectador</Spanish>
             <Czech>Metoda filtrování pozorovaných jednotek.</Czech>
+            <Italian>Metodo di filtraggio delle unità osservabili.</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
@@ -45,6 +49,7 @@
             <Russian>Никто</Russian>
             <Czech>Žádné jednotky</Czech>
             <Spanish>Ninguna</Spanish>
+            <Italian>Nessuna unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
@@ -54,6 +59,7 @@
             <Russian>Только игроки</Russian>
             <Czech>Pouze hráči</Czech>
             <Spanish>Solo jugadores</Spanish>
+            <Italian>Solo giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
@@ -63,6 +69,7 @@
             <Russian>Играбельные юниты</Russian>
             <Czech>Hratelné jednotky</Czech>
             <Spanish>Unidades jugables</Spanish>
+            <Italian>Unità giocabili</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
@@ -72,6 +79,7 @@
             <Russian>Все юниты</Russian>
             <Czech>Všechny jednotky</Czech>
             <Spanish>Todas las unidades</Spanish>
+            <Italian>Tutte le unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
             <English>Side filter</English>
@@ -81,6 +89,7 @@
             <Russian>Фильтр стороны</Russian>
             <Czech>Filtr stran</Czech>
             <Spanish>Filtro de bando</Spanish>
+            <Italian>Filtro Lato</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
             <English>Method of filtering spectatable sides.</English>
@@ -90,6 +99,7 @@
             <Russian>Метод фильтрации наблюдаемых сторон.</Russian>
             <Spanish>Método de filtrado de bandos de espectador</Spanish>
             <Czech>Metoda filtrování pozorovaných stran.</Czech>
+            <Italian>Metodo per filtrare i lati osservabili.</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
@@ -99,6 +109,7 @@
             <Russian>Сторона игрока</Russian>
             <Czech>Strana hráče</Czech>
             <Spanish>Bando del jugador</Spanish>
+            <Italian>Lato giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
@@ -108,6 +119,7 @@
             <Russian>Дружественные стороны</Russian>
             <Czech>Strana spojenců</Czech>
             <Spanish>Bandos amigos</Spanish>
+            <Italian>Lati alleati</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_hostile">
             <English>Hostile sides</English>
@@ -117,6 +129,7 @@
             <Russian>Враждебные стороны</Russian>
             <Czech>Strana nepřítele</Czech>
             <Spanish>Bandos enemigos</Spanish>
+            <Italian>Lati nemici</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
@@ -126,6 +139,7 @@
             <Russian>Все стороны</Russian>
             <Czech>Všechny strany</Czech>
             <Spanish>Todos los bandos</Spanish>
+            <Italian>Tutti i lati</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -135,6 +149,7 @@
             <Russian>Режимы камеры</Russian>
             <Czech>Módy kamery</Czech>
             <Spanish>Modos de cámara</Spanish>
+            <Italian>Modalità camera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used.</English>
@@ -144,6 +159,7 @@
             <Russian>Режимы камеры, которые могут быть использованы</Russian>
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
+            <Italian>Modalità che la camera può utilizzare.</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -153,6 +169,7 @@
             <Russian>Все</Russian>
             <Czech>Všechny</Czech>
             <Spanish>Todos</Spanish>
+            <Italian>Tutte</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_free">
             <English>Free only</English>
@@ -162,25 +179,16 @@
             <Russian>Только свободная</Russian>
             <Czech>Pouze volná</Czech>
             <Spanish>Solo libre</Spanish>
+            <Italian>Solo libera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_internal">
             <English>Internal only</English>
             <German>Erste Person</German> //Bitte überprüfen!
-            <Polish>Tylko wewnętrzna</Polish>
-            <Portuguese>Somente interna</Portuguese>
-            <Russian>Только внутренняя</Russian>
-            <Czech>Pouze pohled z první osoby</Czech>
-            <Spanish>Solo interna</Spanish>
-        </Key>
+            <Polish>Tylko wewnętrzna</Polish><Portuguese>Somente interna</Portuguese><Russian>Только внутренняя</Russian><Czech>Pouze pohled z první osoby</Czech><Spanish>Solo interna</Spanish><Italian>Solo interna</Italian></Key>
         <Key ID="STR_ACE_Spectator_modes_external">
             <English>External only</English>
             <German>Dritte Person</German> //Bitte überpfüfen!
-            <Polish>Tylko zewnętrzna</Polish>
-            <Portuguese>Somente externa</Portuguese>
-            <Russian>Только внешняя</Russian>
-            <Czech>Pouze pohled z třetí osoby</Czech>
-            <Spanish>Solo externa</Spanish>
-        </Key>
+            <Polish>Tylko zewnętrzna</Polish><Portuguese>Somente externa</Portuguese><Russian>Только внешняя</Russian><Czech>Pouze pohled z třetí osoby</Czech><Spanish>Solo externa</Spanish><Italian>Solo esterna</Italian></Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>Internal and external</English>
             <German>Erste und dritte Person</German>
@@ -189,6 +197,7 @@
             <Russian>Внутренняя и внешняя</Russian>
             <Czech>Pohled z první a třetí osoby</Czech>
             <Spanish>Interna y externa</Spanish>
+            <Italian>Interna ed Esterna</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -198,6 +207,7 @@
             <Russian>Режимы видения</Russian>
             <Spanish>Modos de visión</Spanish>
             <Czech>Módy zobrazení</Czech>
+            <Italian>Modalità visuali</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used.</English>
@@ -207,6 +217,7 @@
             <Russian>Режимы видения, которые могут быть использованы</Russian>
             <Spanish>Modos de visión que pueden ser utilizados.</Spanish>
             <Czech>Módy zobrazení které mohou být použity.</Czech>
+            <Italian>Modalità visuali che possono essere usate.</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
@@ -216,6 +227,7 @@
             <Russian>Ночное видение</Russian>
             <Czech>Noktovize</Czech>
             <Spanish>Visión nocturna</Spanish>
+            <Italian>Visione Notturna</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
@@ -225,6 +237,7 @@
             <Russian>Тепловизионное</Russian>
             <Czech>Termovize</Czech>
             <Spanish>Imagen térmica</Spanish>
+            <Italian>Visione Termica</Italian>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
@@ -235,6 +248,7 @@
             <Russian>Юниты</Russian>
             <Spanish>Unidades espectador</Spanish>
             <Czech>Jednotky pozorovatele</Czech>
+            <Italian>Unità Osservabili</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
@@ -244,6 +258,7 @@
             <Russian>Управление спектатором</Russian>
             <Spanish>Controles de espectador</Spanish>
             <Czech>Ovládání pozorovatele</Czech>
+            <Italian>Controlli Osservatore</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -253,25 +268,16 @@
             <Russian>Свободная</Russian>
             <Czech>Volná</Czech>
             <Spanish>Libre</Spanish>
+            <Italian>Libera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewInternal">
             <English>Internal</English>
             <German>Erste Person</German> //Bitte überprüfen!
-            <Polish>Wewnętrzna</Polish>
-            <Portuguese>Interna</Portuguese>
-            <Russian>Внутренняя</Russian>
-            <Czech>Pohled z první osoby</Czech>
-            <Spanish>Interna</Spanish>
-        </Key>
+            <Polish>Wewnętrzna</Polish><Portuguese>Interna</Portuguese><Russian>Внутренняя</Russian><Czech>Pohled z první osoby</Czech><Spanish>Interna</Spanish><Italian>Interna</Italian></Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
             <German>Dritte Person</German> //Bitte überprüfen!
-            <Polish>Zewnętrzna</Polish>
-            <Portuguese>Externa</Portuguese>
-            <Russian>Внешняя</Russian>
-            <Czech>Pohled z třetí osoby</Czech>
-            <Spanish>Externa</Spanish>
-        </Key>
+            <Polish>Zewnętrzna</Polish><Portuguese>Externa</Portuguese><Russian>Внешняя</Russian><Czech>Pohled z třetí osoby</Czech><Spanish>Externa</Spanish><Italian>Esterna</Italian></Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
             <German>Normal</German>
@@ -280,6 +286,7 @@
             <Russian>Нормальное</Russian>
             <Czech>Normální</Czech>
             <Spanish>Normal</Spanish>
+            <Italian>Normale</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
@@ -289,6 +296,7 @@
             <Russian>Ночное</Russian>
             <Czech>Noc</Czech>
             <Spanish>Nocturna</Spanish>
+            <Italian>Notturno</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
@@ -298,6 +306,7 @@
             <Russian>Тепловизор</Russian>
             <Czech>Termál</Czech>
             <Spanish>Térmica</Spanish>
+            <Italian>Termico</Italian>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
@@ -308,6 +317,7 @@
             <Russian>Свободная камера</Russian>
             <Czech>Volná Kamera</Czech>
             <Spanish>Cámara libre</Spanish>
+            <Italian>Camera Libera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
@@ -317,6 +327,7 @@
             <Russian>Камера вперед</Russian>
             <Czech>Vpřed (Kamera)</Czech>
             <Spanish>Cámara delantera</Spanish>
+            <Italian>Camera Avanti</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Camera Backward</English>
@@ -326,6 +337,7 @@
             <Russian>Камера назад</Russian>
             <Czech>Zpět (Kamera)</Czech>
             <Spanish>Cámara trasera</Spanish>
+            <Italian>Camera Indietro</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Camera Left</English>
@@ -335,6 +347,7 @@
             <Russian>Камера влево</Russian>
             <Czech>Doleva (Kamera)</Czech>
             <Spanish>Cámara izquierda</Spanish>
+            <Italian>Camera Sinistra</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Camera Right</English>
@@ -344,6 +357,7 @@
             <Russian>Камера вправо</Russian>
             <Czech>Doprava (Kamera)</Czech>
             <Spanish>Cámara derecha</Spanish>
+            <Italian>Camera Destra</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Camera Up</English>
@@ -353,6 +367,7 @@
             <Russian>Камера вверх</Russian>
             <Czech>Nahoru (Kamera)</Czech>
             <Spanish>Cámara arriba</Spanish>
+            <Italian>Camera Su</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Camera Down</English>
@@ -362,6 +377,7 @@
             <Russian>Камера вниз</Russian>
             <Czech>Dolů (Kamera)</Czech>
             <Spanish>Cámara abajo</Spanish>
+            <Italian>Camera Giù</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
@@ -371,6 +387,7 @@
             <Russian>Панорамирование</Russian>
             <Spanish>Cámara panorámica</Spanish>
             <Czech>Otáčet kameru</Czech>
+            <Italian>Camera Panoramica</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDolly">
             <English>Dolly Camera</English>
@@ -380,6 +397,7 @@
             <Russian>Рельсовая камера</Russian>
             <Spanish>Cámara dolly</Spanish>
             <Czech>Posouvat kameru</Czech>
+            <Italian>Camera dolly</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
@@ -389,6 +407,7 @@
             <Russian>Зафиксировать камеру на цели</Russian>
             <Czech>Zamknout kameru na Cíl</Czech>
             <Spanish>Fijar cámara al objetivo</Spanish>
+            <Italian>Blocca la camera su obbiettivo</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
@@ -398,6 +417,7 @@
             <Russian>Ускорение камеры</Russian>
             <Spanish>Aumento de velocidad</Spanish>
             <Czech>Zrychlení kamery</Czech>
+            <Italian>Aumento Velocità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
@@ -407,6 +427,7 @@
             <Russian>Интерфейс</Russian>
             <Czech>Rozhraní</Czech>
             <Spanish>Interfaz</Spanish>
+            <Italian>Interfaccia</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
@@ -416,6 +437,7 @@
             <Russian>Переключить интерфейс</Russian>
             <Czech>Zobrazit/skrýt rozhraní</Czech>
             <Spanish>Conmutar</Spanish>
+            <Italian>Apri Interfaccia</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
             <English>Toggle Unit Icons</English>
@@ -425,6 +447,7 @@
             <Russian>Вкл./выкл. иконки юнитов</Russian>
             <Czech>Zobrazit/skrýt ikony jednotek</Czech>
             <Spanish>Conmutar iconos de unidad</Spanish>
+            <Italian>Apri Icone Unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
             <English>Toggle Unit List</English>
@@ -434,6 +457,7 @@
             <Russian>Вкл./выкл. список юнитов</Russian>
             <Czech>Zobrazit/skrýt seznam jednotek</Czech>
             <Spanish>Conmutar lista de unidades</Spanish>
+            <Italian>Apri Lista Unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
             <English>Toggle Toolbar</English>
@@ -443,6 +467,7 @@
             <Russian>Вкл./выкл. тулбар</Russian>
             <Spanish>Conmutar barra de herramientas</Spanish>
             <Czech>Zobrazit/skrýt spodní panel</Czech>
+            <Italian>Apri Barra degli Strumenti</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
@@ -452,6 +477,7 @@
             <Russian>Вкл./выкл. компас</Russian>
             <Czech>Zobrazit/skrýt kompas</Czech>
             <Spanish>Conmutar brújula</Spanish>
+            <Italian>Apri Bussola</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
             <English>Toggle Map</English>
@@ -461,6 +487,7 @@
             <Russian>Вкл./выкл. карту</Russian>
             <Czech>Zobrazit/skrýt mapu</Czech>
             <Spanish>Conmutar map</Spanish>
+            <Italian>Apri Mappa</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
             <English>Toggle Help</English>
@@ -470,6 +497,7 @@
             <Russian>Вкл./выкл. помощь</Russian>
             <Czech>Zobrazit/skrýt ovládání</Czech>
             <Spanish>Conmutar ayuda</Spanish>
+            <Italian>Apri Aiuti</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
@@ -479,6 +507,7 @@
             <Russian>Атрибуты камеры</Russian>
             <Spanish>Atributos de cámara</Spanish>
             <Czech>Atributy kamery</Czech>
+            <Italian>Attributi Camera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
@@ -488,6 +517,7 @@
             <Russian>Следующая камера</Russian>
             <Czech>Následující kamera</Czech>
             <Spanish>Siguiente cámara</Spanish>
+            <Italian>Prossima Camera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
             <English>Previous Camera</English>
@@ -497,6 +527,7 @@
             <Russian>Предыдущая камера</Russian>
             <Czech>Předchozí kamera</Czech>
             <Spanish>Anterior cámara</Spanish>
+            <Italian>Precedente Camera</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -506,6 +537,7 @@
             <Russian>Следующий юнит</Russian>
             <Czech>Následující jednotka</Czech>
             <Spanish>Siguiente unidad</Spanish>
+            <Italian>Prossima Unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
@@ -515,6 +547,7 @@
             <Russian>Предыдущий юнит</Russian>
             <Czech>Předchozí jednotka</Czech>
             <Spanish>Anterior unidad</Spanish>
+            <Italian>Precedente Unità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Next Vision Mode</English>
@@ -524,6 +557,7 @@
             <Russian>Следующий режим видения</Russian>
             <Spanish>Siguiente modo de visión</Spanish>
             <Czech>Následující mód zobrazení</Czech>
+            <Italian>Prossima Modalità Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_prevVis">
             <English>Previous Vision Mode</English>
@@ -533,6 +567,7 @@
             <Russian>Предыдущий режим видения</Russian>
             <Spanish>Anterior modo de visión</Spanish>
             <Czech>Předchozí mód zobrazení</Czech>
+            <Italian>Precedente Modalità Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
@@ -542,6 +577,7 @@
             <Russian>Настроить зум</Russian>
             <Czech>Regulovat přiblížení</Czech>
             <Spanish>Ajustar aumento</Spanish>
+            <Italian>Aggiusta Zoom</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
@@ -551,6 +587,7 @@
             <Russian>Настроить скорость</Russian>
             <Czech>Regulovat rychlost</Czech>
             <Spanish>Ajustar velocidad</Spanish>
+            <Italian>Aggiusta Velocità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
@@ -560,6 +597,7 @@
             <Russian>Увеличить зум</Russian>
             <Spanish>Incrementar aumento</Spanish>
             <Czech>Regulovat přiblížení (pomalu)</Czech>
+            <Italian>Aumenta Zoom</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
@@ -569,6 +607,7 @@
             <Russian>Увеличить скорость</Russian>
             <Spanish>Incrementar velocidad</Spanish>
             <Czech>Regulovat rychlost (pomalu)</Czech>
+            <Italian>Aumenta Velocità</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
@@ -578,6 +617,7 @@
             <Russian>Сбросить зум</Russian>
             <Czech>Obnovit přiblížení</Czech>
             <Spanish>Reiniciar aumento</Spanish>
+            <Italian>Resetta Zoom</Italian>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
@@ -587,6 +627,7 @@
             <Russian>Сбросить скорость</Russian>
             <Czech>Obnovit rychlost</Czech>
             <Spanish>Reiniciar velocidad</Spanish>
+            <Italian>Resetta Velocità</Italian>
         </Key>
     </Package>
 </Project>
