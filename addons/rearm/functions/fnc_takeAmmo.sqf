@@ -21,7 +21,7 @@
 
 private ["_ammo", "_tmpCal", "_cal", "_idx"];
 
-params ["_target", "_unit", "_args"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", ["", objNull], [[]]]];
 _args params ["_magazineClass", "_vehicle"];
 
 _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");

@@ -63,7 +63,6 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 - Magazine umpacken
 - Realistische Waffen Er- bzw. Überhitzung
 - Temporäre Taubheit bei zu lauten Geräuschen
-- Verbesserte Ragdoll-Physik
 - Verbesserte Interaktionen für MG2s und Munitionsschlepper
 - Einstellbare Zielfernrohre
 - Keine Ruheanimationen bei gesenkter Waffe

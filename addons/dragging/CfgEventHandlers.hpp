@@ -27,6 +27,11 @@ class Extended_Init_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class Land_PortableLight_single_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };
 
 class Extended_Killed_EventHandlers {

@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 private ["_dummy", "_actionID"];
-params ["_unit", ["_delete", false], ["_unholster", true]];
+params [["_unit", objNull, [objNull]], ["_delete", false, [false]], ["_unholster", true, [true]]];
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _dummy) then {

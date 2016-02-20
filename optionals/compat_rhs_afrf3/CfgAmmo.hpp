@@ -14,6 +14,12 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={780, 880, 920};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
+    class rhs_B_545x39_7U1_Ball: rhs_B_545x39_Ball {
+        //Subsonic - ToDo need full config for this bullet
+        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73}; //Just Scaled Down Normal?
+        ACE_muzzleVelocities[] = {303};
+        ACE_barrelLengths[] = {200};
+    };
     class rhs_B_545x39_Ball_Tracer_Green: rhs_B_545x39_Ball {
         ACE_caliber=5.588;
         ACE_bulletLength=21.59;
@@ -74,6 +80,12 @@ class CfgAmmo {
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={650, 716, 750};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
+    };
+    class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball {
+        //Subsonic - ToDo need full config for this bullet
+        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73}; //Just Scaled Down Normal?
+        ACE_muzzleVelocities[] = {295};
+        ACE_barrelLengths[] = {414};
     };
     class rhs_B_762x39_Tracer: rhs_B_762x39_Ball {
         ACE_caliber=7.823;
