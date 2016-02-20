@@ -144,7 +144,6 @@ PREP(resetAllDefaults);
 PREP(restoreVariablesJIP);
 PREP(runAfterSettingsInit);
 PREP(sanitizeString);
-PREP(selectWeaponMode);
 PREP(sendRequest);
 PREP(serverLog);
 PREP(setAllGear);
@@ -296,6 +295,11 @@ PREP(hashListPush);
 DFUNC(canUseWeapon) = {
     ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");
     _this call CBA_fnc_canUseWeapon;
+};
+
+DFUNC(selectWeaponMode) = {
+    ACE_DEPRECATED("ace_common_fnc_selectWeaponMode","3.7.0","CBA_fnc_selectWeapon");
+    _this call CBA_fnc_selectWeapon;
 };
 
 GVAR(syncedEvents) = HASH_CREATE;
