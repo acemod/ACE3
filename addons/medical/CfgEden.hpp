@@ -23,8 +23,8 @@ class Cfg3DEN {
                         property = QUOTE(ace_isMedicalVehicle);
                         value = 0;
                         control = "CheckboxNumber";
-                        displayName = CSTRING(AssignMedicVehicle_enabled_DisplayName)
-                        tooltip = CSTRING(Attributes_isMedicalVehicle_Description)
+                        displayName = CSTRING(AssignMedicVehicle_enabled_DisplayName);
+                        tooltip = CSTRING(Attributes_isMedicalVehicle_Description);
                         expression = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(medicClass)),_value)];);
                         typeName = "NUMBER";
                         condition = "objectVehicle";
@@ -34,8 +34,8 @@ class Cfg3DEN {
                         property = QUOTE(ace_isMedicalFacility);
                         value = 0;
                         control = "Checkbox";
-                        displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName)
-                        tooltip = CSTRING(AssignMedicalFacility_enabled_Description)
+                        displayName = CSTRING(AssignMedicalFacility_enabled_DisplayName);
+                        tooltip = CSTRING(AssignMedicalFacility_enabled_Description);
                         expression = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(isMedicalFacility)),_value)];);
                         typeName = "BOOL";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";

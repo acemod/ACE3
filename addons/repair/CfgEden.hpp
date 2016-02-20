@@ -23,8 +23,8 @@ class Cfg3DEN {
                         property = QUOTE(ace_isRepairVehicle);
                         value = 0;
                         control = "CheckboxNumber";
-                        displayName = CSTRING(AssignRepairVehicle_role_DisplayName)
-                        tooltip = CSTRING(AssignRepairVehicle_role_Description)
+                        displayName = CSTRING(AssignRepairVehicle_role_DisplayName);
+                        tooltip = CSTRING(AssignRepairVehicle_role_Description);
                         expression = "_this setVariable ['%s',_value];";
                         typeName = "NUMBER";
                         condition = "objectVehicle";
@@ -34,8 +34,8 @@ class Cfg3DEN {
                         property = QUOTE(ace_isRepairFacility);
                         value = 0;
                         control = "CheckboxNumber";
-                        displayName = CSTRING(AssignRepairFacility_role_DisplayName)
-                        tooltip = CSTRING(AssignRepairFacility_role_Description)
+                        displayName = CSTRING(AssignRepairFacility_role_DisplayName);
+                        tooltip = CSTRING(AssignRepairFacility_role_Description);
                         expression = "_this setVariable ['%s',_value];";
                         typeName = "NUMBER";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
