@@ -700,6 +700,14 @@
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
             <Italian>La gestione del team permette di cambiare colori ai membri, prendere il comando e lasciare o unirsi ai team.</Italian>
         </Key>
+        <Key ID="STR_ACE_Interaction_TurnOn">
+            <English>Turn on</English>
+			<Polish>Włącz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_TurnOff">
+            <English>Turn off</English>
+			<Polish>Wyłącz</Polish>
+        </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
             <German>Magazin geben</German>

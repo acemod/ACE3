@@ -18,6 +18,16 @@ ACE_Modifier = 0;
     _unit doMove _position;
 }] call EFUNC(common,addEventHandler);
 
+["lampTurnOn", {
+    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
+    {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
+}] call EFUNC(common,addEventHandler);
+
+["lampTurnOff", {
+    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
+    {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
+}] call EFUNC(common,addEventHandler);
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
@@ -61,7 +71,7 @@ GVAR(isOpeningDoor) = false;
 
     //Tap whichever shoulder is closest
     private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
-    
+
     // Statement
     [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);
     true
