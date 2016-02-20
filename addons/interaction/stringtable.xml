@@ -703,10 +703,12 @@
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
+            <German>Aktivieren</German>
             <Polish>Włącz</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
+            <German>Deaktivieren</German>
             <Polish>Wyłącz</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
