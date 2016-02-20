@@ -170,7 +170,7 @@ class CfgVehicles {
     // wheeled apcs
     class B_APC_Wheeled_01_base_F;
     class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
-        displayName = CSTRING(APC_Wheeled_cannon_Name);
+        displayName = CSTRING(APC_Wheeled_01_cannon_Name);
     };
 
     class O_APC_Wheeled_02_base_F;

@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_vehicleActions", "_actions", "_action", "_vehicles", "_vehicle", "_needToAdd", "_magazineHelper", "_turretPath", "_magazines", "_magazine", "_icon", "_cnt"];
-params ["_target"];
+params [["_target", objNull, [objNull]]];
 
 _vehicles = nearestObjects [_target, ["AllVehicles"], 20];
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
@@ -31,16 +31,11 @@ _vehicleActions = [];
         _magazineHelper = [];
         {
             _turretPath = _x;
-            _magazines = [];
-            if (_turretPath isEqualTo [-1]) then {
-                _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
-            } else {
-                _magazines = _vehicle magazinesTurret _turretPath;
-            };
+            _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
             {
                 _magazine = _x;
-                _cnt = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
-                if ((_cnt < ([_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines))) && !(_magazine in _magazineHelper)) then {
+                _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
+                if ((_currentMagazines < ([_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines))) && !(_magazine in _magazineHelper)) then {
                     _action = [_magazine,
                         getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),
                         getText(configFile >> "CfgMagazines" >> _magazine >> "picture"),

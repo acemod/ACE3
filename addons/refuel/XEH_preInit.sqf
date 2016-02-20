@@ -15,6 +15,7 @@ PREP(connectNozzleAction);
 PREP(disconnect);
 PREP(dropNozzle);
 PREP(getFuel);
+PREP(handleDisconnect);
 PREP(handleKilled);
 PREP(handleUnconscious);
 PREP(makeJerryCan);

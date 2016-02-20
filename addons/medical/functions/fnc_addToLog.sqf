@@ -20,7 +20,7 @@ private ["_moment", "_logVarName", "_log","_newLog", "_logs"];
 params ["_unit", "_type", "_message", "_arguments"];
 
 if (!local _unit) exitWith {
-    [_this, QFUNC(addToLog), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["addToMedicalLog", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 date params ["", "", "", "_hour", "_minute"];

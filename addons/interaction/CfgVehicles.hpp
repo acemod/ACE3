@@ -1,4 +1,3 @@
-
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleInteraction: ACE_Module {
@@ -10,7 +9,6 @@ class CfgVehicles {
         isGlobal = 1;
         isSingular = 1;
         icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
-
         class Arguments {
             class EnableTeamManagement {
                 displayName = CSTRING(EnableTeamManagement_DisplayName);
@@ -19,7 +17,6 @@ class CfgVehicles {
                 defaultValue = 1;
             };
         };
-
         class ModuleDescription {
             description = CSTRING(Module_Description);
         };
@@ -289,6 +286,7 @@ class CfgVehicles {
                     icon = PATHTOF(UI\team\team_management_ca.paa);
                 };
             };
+
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
@@ -539,6 +537,41 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
+    class Lamps_base_F;
+    class Land_PortableLight_single_F: Lamps_base_F {
+        scope = 2;
+        XEH_ENABLED;
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+                class ACE_LampTurnOn {
+                    displayName = CSTRING(TurnOn);
+                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2('ACE_lampOn',true)]));
+                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    selection = "";
+                    distance = 2;
+                };
+                class ACE_LampTurnOff {
+                    displayName = CSTRING(TurnOff);
+                    condition = QUOTE(alive _target && _target getVariable [ARR_2('ACE_lampOn',true)]);
+                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    selection = "";
+                    distance = 2;
+                };
+            };
+        };
+    };
+    class Land_PortableLight_single_off_F: Land_PortableLight_single_F {
+        scope = 1;
+    };
+    class Land_PortableLight_double_F: Land_PortableLight_single_F {};
+    class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
+        scope = 1;
+    };
+    
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {

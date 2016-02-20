@@ -53,7 +53,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
 
             private _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
             _newNozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
-            _unit setVariable [QGVAR(nozzle), _newNozzle];
+            _unit setVariable [QGVAR(nozzle), _newNozzle, true];
 
             private _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
@@ -95,7 +95,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             } else {
                 _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             };
-            _unit setVariable [QGVAR(nozzle), _nozzle];
+            _unit setVariable [QGVAR(nozzle), _nozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
             private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
@@ -125,18 +125,24 @@ if (isNull _nozzle) then { // func is called on fuel truck
 };
 if !(_nozzle getVariable [QGVAR(jerryCan), false]) then {
     [{
-        private ["_nozzle"];
         params ["_args", "_pfID"];
-        _args params ["_unit", "_source", "_endPosOffset"];
-
-        if (_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)) exitWith {
-            _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
+        _args params [["_unit", player, [objNull]], ["_source", objNull, [objNull]], ["_endPosOffset", [0, 0, 0], [[]], 3]];
+        _args params ["", "", "", ["_nozzle", _unit getVariable [QGVAR(nozzle), objNull], [objNull]]];
+        if (isNull _source || {_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)} || {!alive _source}) exitWith {
             if !(isNull _nozzle) then {
                 [_unit, _nozzle] call FUNC(dropNozzle);
                 REFUEL_UNHOLSTER_WEAPON
 
                 [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
-                [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+                if (isNull _source || {!alive _source}) then {
+                    private _rope = _nozzle getVariable [QGVAR(rope), objNull];
+                    if !(isNull _rope) then {
+                        ropeDestroy _rope;
+                    };
+                    deleteVehicle _nozzle;
+                } else {
+                    [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+                };
             };
             [_pfID] call cba_fnc_removePerFrameHandler;
         };

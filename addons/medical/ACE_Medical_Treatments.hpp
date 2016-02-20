@@ -658,12 +658,12 @@ class ACE_Medical_Advanced {
                 selectionSpecific = 0;
             };
             class vehiclecrash {
-                thresholds[] = {{0.25, 5}};
+                thresholds[] = {{0.25, 5}, {0.05, 1}};
                 selectionSpecific = 0;
                 lethalDamage = 0.2;
             };
             class backblast {
-                thresholds[] = {{0, 2},{0.55, 5}, {1, 6}};
+                thresholds[] = {{1, 6}, {0.55, 5}, {0, 2}};
                 selectionSpecific = 0;
                 lethalDamage = 1;
             };

@@ -32,7 +32,6 @@ class CfgVehicles {
     // ammo boxes
     class ThingX;
     class ReammoBox_F: ThingX {
-        XEH_ENABLED;
         GVAR(canCarry) = 0;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;
@@ -112,5 +111,16 @@ class CfgVehicles {
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;
+    };
+
+    class Lamps_base_F;
+    class Land_PortableLight_single_F: Lamps_base_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryDirection) = 180;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 180;
     };
 };

@@ -45,7 +45,7 @@ class CfgVehicles {
                 description = CSTRING(MakeLoadable_description);
                 typeName = "BOOL";
                 defaultValue = 1;
-            };            
+            };
             class setSize {
                 displayName = CSTRING(makeLoadable_setSize_displayName);
                 typeName = "NUMBER";
@@ -268,6 +268,13 @@ class CfgVehicles {
         GVAR(size) = 6;
     };
 
+    class Slingload_base_F: ReammoBox_F {};
+    class CargoNet_01_base_F: Slingload_base_F { //Slingload pallets
+        GVAR(size) = 6;
+    };
+    class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
+        GVAR(canLoad) = 0;
+    };
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
@@ -484,5 +491,11 @@ class CfgVehicles {
                 selection = "";
             };
         };
+    };
+
+    class Lamps_base_F;
+    class Land_PortableLight_single_F: Lamps_base_F {
+        GVAR(size) = 1;
+        GVAR(canLoad) = 1;
     };
 };

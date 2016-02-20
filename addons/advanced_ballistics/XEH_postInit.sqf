@@ -36,3 +36,7 @@ if (!hasInterface) exitWith {};
     [] call FUNC(updateTrajectoryPFH);
 
 }] call EFUNC(common,addEventHandler);
+
+#ifdef DEBUG_MODE_FULL
+    call FUNC(diagnoseWeapons);
+#endif

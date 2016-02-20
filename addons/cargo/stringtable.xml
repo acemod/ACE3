@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -9,6 +9,7 @@
             <Russian>Загрузить</Russian>
             <Czech>Naložit</Czech>
             <Spanish>Cargar</Spanish>
+            <Italian>Carica</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -18,6 +19,7 @@
             <Russian>Выгрузить</Russian>
             <Czech>Vyložit</Czech>
             <Spanish>Descargar</Spanish>
+            <Italian>Scarica</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -27,6 +29,7 @@
             <Russian>Грузовой отсек</Russian>
             <Czech>Náklad</Czech>
             <Spanish>Carga</Spanish>
+            <Italian>Cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -36,6 +39,7 @@
             <Russian>Грузовой отсек</Russian>
             <Czech>Menu nákladu</Czech>
             <Spanish>Menu de carga</Spanish>
+            <Italian>Menù Cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -45,6 +49,7 @@
             <Russian>Осталось мест: %1</Russian>
             <Czech>Zbývající prostor: %1</Czech>
             <Spanish>Espacio de carga restante: %1</Spanish>
+            <Italian>Spazio cargo rimanente: %1</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -54,6 +59,7 @@
             <Russian>Включить модуль перевозки грузов</Russian>
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
+            <Italian>Abilita Cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -63,6 +69,7 @@
             <Russian>Включает модуль погрузки и перевозки грузов</Russian>
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
+            <Italian>Abilita il modulo di caricamento in cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -72,6 +79,7 @@
             <Russian>Перевозка грузов</Russian>
             <Czech>Nastavení nákladu</Czech>
             <Spanish>Ajustes de carga</Spanish>
+            <Italian>Impostazioni Cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -81,6 +89,7 @@
             <Russian>Конфигурирует настройки модуля перевозки грузов</Russian>
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
             <Czech>Konfigurace nákladního modulu</Czech>
+            <Italian>Configura le impostazioni del modulo cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -108,40 +117,56 @@
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
+            <German>Belade</German>
             <Portuguese>Carregando carga</Portuguese>
             <Polish>Ładowanie cargo</Polish>
             <Czech>Nakládám</Czech>
             <Russian>Погрузка</Russian>
+            <Italian>Caricando</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
+            <German>Entlade</German>
             <Portuguese>Descarregando carga</Portuguese>
             <Polish>Rozładowywanie cargo</Polish>
             <Czech>Vykládám</Czech>
             <Russian>Выгрузка</Russian>
+            <Italian>Scaricando</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
+            <German>%1&lt;br/&gt;konnte nicht eingeladen werden</German>
             <Portuguese>%1&lt;br/&gt;não pode ser carregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać załadowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být naloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть погружен</Russian>
+            <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
+            <German>%1&lt;br/&gt;konnte nicht entladen werden</German>
             <Portuguese>%1&lt;br/&gt;não pode ser descarregado</Portuguese>
             <Polish>%1&lt;br/&gt;nie mógł zostać rozładowany</Polish>
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
+            <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
+            <German>Füge Objekt zum Frachtsystem hinzu</German>
+            <Polish>Ustaw jako ładowalny</Polish>
+            <Italian>Rendi oggetto caricabile</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
+            <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist be- und entladbar.</German>
+            <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
+            <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
+            <Polish>Rozmiar obiektu</Polish>
+            <Italian>Dimensioni dell'oggetto</Italian>
         </Key>
     </Package>
 </Project>

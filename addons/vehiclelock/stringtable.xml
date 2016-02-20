@@ -143,6 +143,7 @@
             <French>Paramétrage du sytème de verrouillage</French>
             <Hungarian>Jármű-zár beállítás</Hungarian>
             <Russian>Запирание транспорта</Russian>
+            <Italian>Impostazioni Blocco Veicolo</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_DisplayName">
             <English>Lock Vehicle Inventory</English>
@@ -154,6 +155,7 @@
             <French>Verrouiller l'inventaire du véhicule</French>
             <Hungarian>Jármű rakodótér zárás</Hungarian>
             <Russian>Закрывать инвентарь транспорта</Russian>
+            <Italian>Blocca Inventario Veicolo</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_LockVehicleInventory_Description">
             <English>Locks the inventory of locked vehicles</English>
@@ -165,6 +167,7 @@
             <French>Verrouille l'inventaire de véhicule fermés à clé</French>
             <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
             <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
+            <Italian>Blocca l'inventario di un veicolo bloccato</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_DisplayName">
             <English>Vehicle Starting Lock State</English>
@@ -176,6 +179,7 @@
             <French>Etat du verrouillage du véhicule au démarrage</French>
             <Hungarian>Jármű kezdő zár-állapot</Hungarian>
             <Russian>Начальное состояние замков</Russian>
+            <Italian>Stato Iniziale del Blocco per Veicoli</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
@@ -187,6 +191,7 @@
             <French>Défini l'état de vérrouillage pour tous les véhicules (supprime les vérrouillage ambigue)</French>
             <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
             <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
+            <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
@@ -198,6 +203,7 @@
             <French>Pas de changement</French>
             <Hungarian>Úgy-ahogy</Hungarian>
             <Russian>Как есть</Russian>
+            <Italian>Com'è</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Locked">
             <English>Locked</English>
@@ -209,6 +215,7 @@
             <French>Verrouillé</French>
             <Hungarian>Zárva</Hungarian>
             <Russian>Закрыт</Russian>
+            <Italian>Bloccato</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Unlocked">
             <English>Unlocked</English>
@@ -220,6 +227,7 @@
             <French>Déverrouillé</French>
             <Hungarian>Nyitva</Hungarian>
             <Russian>Открыт</Russian>
+            <Italian>Sbloccato</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_DisplayName">
             <English>Default Lockpick Strength</English>
@@ -231,6 +239,7 @@
             <French>Force de crochetage par défaut</French>
             <Hungarian>Alapértelmezett zártörő-erősség</Hungarian>
             <Russian>Сила отмычки по-умолчанию</Russian>
+            <Italian>Durabilità Default del Grimaldello</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>
@@ -242,6 +251,7 @@
             <French>Temps par défaut pour le crochetage</French>
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
+            <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Module_Description">
             <English>Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.&lt;br /&gt;Source: vehiclelock.pbo</English>
@@ -253,6 +263,7 @@
             <French>Paramètres pour le crochetage et état inital des véhicules. Supprime les états de verrouillage ambigue. &lt;br/&gt;Source: véhicle.pbo</French>
             <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat. &lt;br /&gt;Forrás: vehiclelock.pbo</Hungarian>
             <Russian>Настройки силы отмычек и начальное состояние замков транспорта. Устраняет неоднозначные состояния замков.&lt;br /&gt;Источник: vehiclelock.pbo</Russian>
+            <Italian>Impostazioni per resistenza iniziale delle serrature e stato di blocco dei veicoli. Rimuove stati di blocco ambigui. &lt;br/&gt;Fonte: vehiclelock.pbo</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_DisplayName">
             <English>Vehicle Key Assign</English>
@@ -264,6 +275,7 @@
             <French>Assignation des clés de véhicule</French>
             <Hungarian>Járműkulcs-osztás</Hungarian>
             <Russian>Назначение ключей от транспорта</Russian>
+            <Italian>Assegna Chiavi Veicoli</Italian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
             <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.&lt;br /&gt;Source: vehiclelock.pbo</English>
@@ -275,6 +287,7 @@
             <French>Synchronise avec les véhicules et les joueurs. Distribue les clés aux joueurs pour chaque véhicule synchronisé. Uniquement valide pour les objects présent au démarrage. &lt;br/&gt;Source: vehiclelock.pbo</French>
             <Hungarian>Szinkronizál a járművekkel és játékosokkal. Egyedi kulcsokat oszt ki a játékosoknak minden szinkronizált járműhöz. Csak a küldetés indításakor jelenlévő járművekhez érvényes. &lt;br /&gt;Forrás: vehiclelock.pbo</Hungarian>
             <Russian>Синхронизируйте с транспортом и игроком. Это выдаст игроку ключи от всех синхронизированных транспортных средств. Работает только для объектов, присутствующих на старте миссии.&lt;br /&gt;Источник: vehiclelock.pbo</Russian>
+            <Italian>Sincronizza con veicoli e giocatori. Distribuirà chiavi ai giocatori per ogni veicolo sincronizzato. Valido solo per oggetti presenti ad inizio missione. &lt;br/&gt;Fonte vehiclelock.pbo</Italian>
         </Key>
     </Package>
 </Project>

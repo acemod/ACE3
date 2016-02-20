@@ -22,6 +22,18 @@ TRACE_2("params",_unit,_state);
 if (!local _unit) exitWith {
     ERROR("running setHandcuffed on remote unit");
 };
+
+if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
+    // It's to soon to call this function, delay it
+    if (EGVAR(common,settingsInitFinished)) then {
+        // Settings are already initialized, but the small wait isn't over
+        [DFUNC(setHandCuffed), _this, 0.05] call EFUNC(common,waitAndExecute);
+    } else {
+        // Settings are not initialized yet
+        [DFUNC(setHandCuffed), _this] call EFUNC(common,runAfterSettingsInit);
+    };
+};
+
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
     ERROR("setHandcuffed: current state same as new");
 };
