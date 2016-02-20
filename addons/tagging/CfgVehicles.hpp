@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_tagWallBlack {
                     displayName = CSTRING(tagWallBlack);
-                    condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && ([] call FUNC(checkTaggable)));
+                    condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'black')] call FUNC(tagWall));
                     showDisabled = 0;
                     priority = 3;
@@ -13,19 +13,19 @@ class CfgVehicles {
                 };
                 class ACE_tagWallRed: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallRed);
-                    condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && ([] call FUNC(checkTaggable)));
+                    condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'red')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingRed.paa));
                 };
                 class ACE_tagWallGreen: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallGreen);
-                    condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && ([] call FUNC(checkTaggable)));
+                    condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'green')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingGreen.paa));
                 };
                 class ACE_tagWallBlue: ACE_tagWallBlack {
                     displayName = CSTRING(tagWallBlue);
-                    condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && ([] call FUNC(checkTaggable)));
+                    condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'blue')] call FUNC(tagWall));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlue.paa));
                 };
