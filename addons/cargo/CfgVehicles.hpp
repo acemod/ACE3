@@ -53,7 +53,7 @@ class CfgVehicles {
             };
         };
         class ModuleDescription: ModuleDescription {
-            description = CSTRING(module_MakeLoadable_description);
+            description = CSTRING(makeLoadable_description);
             sync[] = {"AnyStaticObject"};
         };
     };
