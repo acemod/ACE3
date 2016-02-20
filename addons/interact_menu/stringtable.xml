@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -239,7 +239,7 @@
             <French>Arrière plan du menu d'interaction</French>
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
-            <Italian>Sfondo del menu interazioni</Italian>
+            <Italian>Sfondo Menù Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -251,7 +251,7 @@
             <French>Flouter l'arrière plan durant l'ouverture du menu d'interaction</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
-            <Italian>Sfoca lo sfondo mentre il menu interazioni è aperto.</Italian>
+            <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -263,7 +263,7 @@
             <French>Flouter l'écran</French>
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
-            <Italian>Sfoca lo schermo</Italian>
+            <Italian>Sfoca schermo</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -299,7 +299,7 @@
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
-            <Italian>Aggiunge azioni di interazioni per aprire porte e montare scale agli edifici. (Nota: c'è un costo in performance quando si apre il menu, specialmente nei paesi)</Italian>
+            <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -309,7 +309,7 @@
             <Russian>Меню взаимодействия</Russian>
             <Czech>Menu interakce</Czech>
             <Spanish>Menú de interacción</Spanish>
-            <Italian>Menu interazione</Italian>
+            <Italian>Menù Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
@@ -318,6 +318,7 @@
             <Russian>Скорость анимации меню взаимодействия</Russian>
             <Portuguese>Velocidade da animação de interação</Portuguese>
             <Czech>Rychlost animace interakce</Czech>
+            <Italian>Velocità Animazioni Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -326,6 +327,7 @@
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
+            <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="DAGR">
         <Key ID="STR_ACE_DAGR_Name">
@@ -19,7 +19,7 @@
             <Russian>Настроить DAGR</Russian>
             <Portuguese>Configurar DAGR</Portuguese>
             <Czech>Konfigurovat DAGR</Czech>
-            <Italian>Configura il DAGR</Italian>
+            <Italian>Configura DAGR</Italian>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
@@ -29,7 +29,7 @@
             <Russian>Вкл./выкл. DAGR</Russian>
             <Portuguese>Mostrar DAGR</Portuguese>
             <Czech>Přepnout DAGR</Czech>
-            <Italian>Mostra il DAGR</Italian>
+            <Italian>Apri DAGR</Italian>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>

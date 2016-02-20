@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -29,31 +29,37 @@
             <English>Overheating Particle Effects</English>
             <German>Partikeleffekt bei Überhitzung</German>
             <Polish>Efekty cząsteczkowe przegrzania</Polish>
+            <Italian>Effetti Particelle Surriscaldamento</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
             <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
             <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
+            <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
             <German>Zeige Partikeleffekt bei allen</German>
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
+            <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
             <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
             <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
+            <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
             <German>Ungenauigkeit bei Überhitzung</German>
             <Polish>Wpływ na rozrzut</Polish>
+            <Italian>Dispersione Surriscaldamento</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
             <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
+            <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>

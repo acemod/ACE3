@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_Name">
@@ -142,6 +142,7 @@
             <Russian>Собраться</Russian>
             <Portuguese>Reagrupar</Portuguese>
             <Czech>Přeskupit</Czech>
+            <Italian>Raggruppare</Italian>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -152,6 +153,7 @@
             <Russian>Вперед</Russian>
             <Portuguese>Mover em frente</Portuguese>
             <Czech>Kupředu</Czech>
+            <Italian>Muovere avanti</Italian>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
@@ -162,6 +164,7 @@
             <Russian>Открыть огонь</Russian>
             <Portuguese>Engajar</Portuguese>
             <Czech>Útok</Czech>
+            <Italian>Ingaggiare</Italian>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -172,6 +175,7 @@
             <Russian>Показать направление</Russian>
             <Portuguese>Ponta</Portuguese>
             <Czech>Ukázat</Czech>
+            <Italian>Puntare</Italian>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -182,6 +186,7 @@
             <Russian>Ждать</Russian>
             <Portuguese>Esperar</Portuguese>
             <Czech>Čekej</Czech>
+            <Italian>Mantenere</Italian>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -192,6 +197,7 @@
             <Russian>Внимание</Russian>
             <Portuguese>Aviso</Portuguese>
             <Czech>Pozor</Czech>
+            <Italian>Attenzione</Italian>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
@@ -222,24 +228,28 @@
             <German>Zeige Gesten im Interaktionsmenü</German>
             <Czech>Zobrazit posunky v interakčním menu</Czech>
             <Polish>Pokaż gesty w menu interakcji</Polish>
+            <Italian>Mostra Gesti su Menù Interazione</Italian>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
             <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
             <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
             <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
+            <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
             <German>Nur Schnelltasten</German>
             <Czech>Pouze klávesové zkratky</Czech>
             <Polish>Tylko skróty klaw.</Polish>
+            <Italian>Solo Hotkey</Italian>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
             <German>Schnelltasten+ Interaktionsmenü</German>
             <Czech>Klávesové zkratky + interakční menu</Czech>
             <Polish>Skróty klaw. + menu interakcji</Polish>
+            <Italian>Hotkey + Menù Interazione</Italian>
         </Key>
     </Package>
 </Project>
