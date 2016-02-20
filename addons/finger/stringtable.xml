@@ -3,6 +3,7 @@
     <Package name="finger">
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
+            <German>Zeige Fingerzeig einem selbst </German>
             <Russian>Индикатор пальца для показывающего</Russian>
             <French>Afficher un indicateur de pointage pour soit même</French>
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
@@ -14,6 +15,7 @@
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
+            <German>Zeigt ein Symbol für den zeigenden Spieler. Diese Option beeinflusst nicht, ob andere Spieler dies sehen können.</German>
             <Russian>Отображать индикатор указания пальцем для показывающего игрока. Эта настройка не влияет на то, будут ли другие игроки видеть индикатор</Russian>
             <French>Affiche l'indicateur pour le joueur qui pointe. Cette option n'affecte pas les autres joueurs</French>
             <Polish> Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
@@ -25,6 +27,7 @@
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
+            <German>Fingerzeiger Anzeige</German>
             <Russian>Индикатор указания пальцем</Russian>
             <French>Indicateur de pointage</French>
             <Polish>Indykator palca</Polish>
@@ -36,6 +39,7 @@
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
+            <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
             <French>Couleur de l'indicateur</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
@@ -47,6 +51,7 @@
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
+            <German>Aktion: "Zeiger Finger auf"</German>
             <Russian>Действие "показать пальцем на"</Russian>
             <French>Action 'Pointer le doigt à"</French>
             <Polish>Akcja "wskaż palcem"</Polish>
@@ -58,6 +63,7 @@
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
+            <German>Zeigt anderen,nahen Spielern die eigene Blickrichtung mittels eines Symbols. Kann dauerhaft ausgeführt werden.</German>
             <French>Montre du doigt et affiche un marqueur virtuel de la direction pointée aux uinités proches. Peut être maintenu</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
@@ -69,6 +75,7 @@
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
+            <German>Fingerzeig Einstellungen</German>
             <French>Option "Montrer du doigt"</French>
             <Polish>Ustawienia wskazywania palcem</Polish>
             <Hungarian>Ujj beállításai</Hungarian>
@@ -80,6 +87,7 @@
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
+            <German>Fingerzeig aktiviert</German>
             <French>Activer "Montrer du doigt"</French>
             <Polish>Aktywuj wskazywanie</Polish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
@@ -91,6 +99,7 @@
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
+            <German>Fingerzeig: Maximale Reichweite</German>
             <French>Distance maximale du pointage</French>
             <Polish>Maks. zasięg wskazywania</Polish>
             <Hungarian>Ujj maximum hatótávja</Hungarian>
@@ -102,6 +111,7 @@
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
+            <German>Maximale Reichweite zwischen Spielern, welche den Fingerzeig des anderen sehen können. (Standart: 4 Meter)</German>
             <French>Distance maximale entre joueurs pour afficher l'indicateur (défaut: 4 mètres)</French>
             <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
             <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
