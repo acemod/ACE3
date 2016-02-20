@@ -32,4 +32,6 @@ PREP(setSurrendered);
 PREP(vehicleCaptiveMoveIn);
 PREP(vehicleCaptiveMoveOut);
 
+GVAR(captivityEnabled) = false;
+
 ADDON = true;
