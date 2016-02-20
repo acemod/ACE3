@@ -58,7 +58,7 @@ class ACE_Settings {
 All text that will be displayed to a user shall be defined in a `stingtable.xml` file for multi-language support.
 
 * There will not be any empty stringtable language values.
-* All stringtables will follow the format as specified by Tabler and the translation guidelines from .
+* All stringtables will follow the format as specified by Tabler and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form .
 
 
 ## 2. Macro Usage
@@ -176,7 +176,7 @@ This is not the case for inline functions or functions not containing their own 
 ### 3.2. Includes
 Every function includes the `script_component.hpp` file just below the function header. Any additional includes or defines must be below this include.
 
-All scripts written must be below this include and any potential additional incldues or defines.
+All scripts written must be below this include and any potential additional includes or defines.
 
 #### 3.2.1. Reasoning
 This ensures every function starts of in an uniform way and enforces function documentation.
@@ -192,7 +192,7 @@ Exceptions:
 ## 5. Code Style
 
 ### 5.1. Braces placement
-Braces "{ }" which enclose a code block will have the first bracket placed behind the statement in case of if, switch statements or while, waituntil & for loops. The second bracket will be placed on the same column as the statement but on a separate line.
+Braces "{ }" which enclose a code block will have the first bracket placed behind the statement in case of if, switch statements or while, waitUntil & for loops. The second bracket will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
 - Closing brace in own line, same level of indentation as keyword
@@ -239,7 +239,7 @@ if (alive player) then {
 };
 ```
 
-In cases where you , e.g, have a lot of one-liner classes, it is allowed to use something like this to save space:
+In cases where there are a lot of one-liner classes, it is allowed to use something like this to save space:
 
 ```cpp
 class One {foo = 1;};
@@ -252,7 +252,7 @@ class Three {foo = 3;};
 Putting the opening brace in it's own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 ### 5.2. Indents
-Ever new scope should be on a new ident. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
+Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
 
 Good example:
 
