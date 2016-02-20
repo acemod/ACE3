@@ -1,4 +1,4 @@
-s// by esteldunedain
+// by esteldunedain
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};

@@ -293,7 +293,10 @@ PREP(hashListSet);
 PREP(hashListPush);
 
 // backwards comp
-DFUNC(canUseWeapon) = CBA_fnc_canUseWeapon;
+DFUNC(canUseWeapon) = {
+    ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");
+    _this call CBA_fnc_canUseWeapon;
+};
 
 GVAR(syncedEvents) = HASH_CREATE;
 GVAR(showHudHash) = [] call FUNC(hashCreate);
