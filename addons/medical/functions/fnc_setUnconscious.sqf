@@ -39,7 +39,7 @@ if !(_set) exitWith {
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];

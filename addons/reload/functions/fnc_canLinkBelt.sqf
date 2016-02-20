@@ -32,6 +32,6 @@ private _maxAmmo = 0;
 
 {
     _maxAmmo = _maxAmmo max (_x select 1);
-} forEach ([magazinesAmmo _player, {_this select 0 == _magazineType}] call EFUNC(common,filter));
+} forEach (magazinesAmmo _player select {_x select 0 == _magazineType});
 
 _maxAmmo > 0

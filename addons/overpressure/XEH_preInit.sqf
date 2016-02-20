@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(fireLauncherBackblast);
-PREP(fireOverpressureZone);
 PREP(getDistance);
 PREP(overpressureDamage);
 PREP(cacheOverPressureValues);

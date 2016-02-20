@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_isUnconscious"];
+params [["_unit", objNull, [objNull]], ["_isUnconscious", false, [false]]];
 
 if (!local _unit || {!_isUnconscious}) exitWith {};
 

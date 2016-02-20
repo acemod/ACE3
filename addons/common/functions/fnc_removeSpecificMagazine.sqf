@@ -19,7 +19,7 @@ params [["_unit", objNull, [objNull]], ["_magazineType", "", [""]], ["_ammoCount
 private _isRemoved = false;
 
 // Check uniform
-private _magazines = [magazinesAmmoCargo uniformContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
+private _magazines = magazinesAmmoCargo uniformContainer _unit select {_x select 0 == _magazineType};
 private _index = _magazines find [_magazineType, _ammoCount];
 
 if (_index > -1) exitWith {
@@ -39,7 +39,7 @@ if (_index > -1) exitWith {
 };
 
 // Check vest
-_magazines = [magazinesAmmoCargo vestContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
+_magazines = magazinesAmmoCargo vestContainer _unit select {_x select 0 == _magazineType};
 _index = _magazines find [_magazineType, _ammoCount];
 
 if (_index > -1) exitWith {
@@ -59,7 +59,7 @@ if (_index > -1) exitWith {
 };
 
 // Check backpack
-_magazines = [magazinesAmmoCargo backpackContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
+_magazines = magazinesAmmoCargo backpackContainer _unit select {_x select 0 == _magazineType};
 _index = _magazines find [_magazineType, _ammoCount];
 
 if (_index > -1) exitWith {

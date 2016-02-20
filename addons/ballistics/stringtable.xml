@@ -1602,6 +1602,7 @@
             <French>[ACE] Caisse de munitions</French>
             <Hungarian>[ACE] Lőszeres láda</Hungarian>
             <Russian>[ACE] Ящик с боеприпасами</Russian>
+            <Italian>[ACE] Cassa munizioni</Italian>
         </Key>
     </Package>
 </Project>

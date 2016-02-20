@@ -4,30 +4,37 @@
         <Key ID="STR_ACE_Headless_Module">
             <English>Headless</English>
             <German>Headless</German>
+            <Polish>Headless</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_ModuleDesc">
             <English>This module allows you to setup automatic transferring of AI to Headless Clients. (Default: No)</English>
             <German>Dieses Modul erlaubt es dir, die KI automatisch auf einen Headless Client zu transferieren. (Standard: Nein) </German>
+            <Polish>Moduł ten pozwala ustawić automatyczne przenoszenie AI do Headless Clientów. (Domyślnie: Nie)</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_EnabledDesc">
             <English>Enables transferring of AI to Headless Clients.</English>
-            <German>Aktiviert denTransfer der KI auf Headless Clients.</German>
+            <German>Aktiviert den Transfer der KI auf Headless Clients.</German>
+            <Polish>Aktywuje przenoszenie AI do Headless Clientów</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_Delay">
             <English>Delay</English>
             <German>Verzögerung</German>
+            <Polish>Opóźnienie</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_DelayDesc">
             <English>Minimal delay between transfers, in seconds. (Default: 15)</English>
             <German>Minimale Verzögerung zwischen Transfers in Sekunden. (Standard: 15)</German>
+            <Polish>Minimalne opóźnienie w sekundach pomiędzy transferami. (Domyślnie: 15)</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_Log">
             <English>Log</English>
             <German>Protokolldatei anlegen</German>
+            <Polish>Dziennik</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_LogDesc">
             <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
             <German>Zeichnet Transferstatistiken, Verbindungen und Verbindungsabbrüche in einer RPT-Datei auf. (Standard: Nein)</German>
+            <Polish>Zapisuj statystyki transferów oraz status Headless Clienta do RPT. (Domyślnie: Nie)</Polish>
         </Key>
     </Package>
 </Project>

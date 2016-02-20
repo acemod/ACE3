@@ -64,7 +64,6 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 - Magazine repacking
 - Realistic weapon overheating mechanic
 - Combat deafness (temporary loss of hearing) simulation
-- Improved ragdoll physics
 - Improved interactions for AARs and ammo bearers
 - Adjustable sniper scopes
 - No idle animation with lowered weapon
