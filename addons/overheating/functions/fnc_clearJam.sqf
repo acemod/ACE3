@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon", "_skipAnim"];
+params ["_unit", "_weapon", ["_skipAnim", false]];
 TRACE_3("params",_unit,_weapon,_skipAnim);
 
 private _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
