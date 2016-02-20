@@ -27,7 +27,7 @@ BEGIN_COUNTER(overheat);
 
 // Get bullet parameters
 private _bulletMass = GVAR(cacheAmmoData) getVariable _ammo;
-if (!isNil "_bulletMass") then {
+if (isNil "_bulletMass") then {
     _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
     if (_bulletMass == 0) then {
         // If the bullet mass is not configured, estimate it
@@ -52,9 +52,9 @@ private _silencer = switch (_weapon) do {
 };
 if (_silencer != "") then {
     private _silencerCoef = GVAR(cacheSilencerData) getVariable _silencer;
-    if (!isNil "_silencerCoef") then {
+    if (isNil "_silencerCoef") then {
         _silencerCoef = 1 +
-                        (1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire"))
+                        (1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire")) +
                         (1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "visibleFire"));
         GVAR(cacheSilencerData) setVariable [_silencer, _silencerCoef];
     };
