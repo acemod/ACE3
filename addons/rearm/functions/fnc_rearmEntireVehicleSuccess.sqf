@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
 if (isServer) then {
     {
