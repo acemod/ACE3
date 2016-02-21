@@ -149,7 +149,7 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
-            <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Mörser</German>
+            <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -161,7 +161,7 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
-            <German>Entferne Geschoss</German>
+            <German>Mörser entladen</German>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -221,11 +221,11 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
-            <German>[ACE] 82mm Nebelpatronenkiste</German>
+            <German>[ACE] 82mm Leuchtpatronenkiste</German>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
-            <German>[ACE] 82mm Standartbox</German>
+            <German>[ACE] 82mm Standardbox</German>
         </Key>
     </Package>
 </Project>
