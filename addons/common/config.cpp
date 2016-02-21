@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_main","ace_modules"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
-        VERSION_CONFIG;
+        VERSION_CONFIG_COMMON;
     };
 };
 
