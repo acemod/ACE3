@@ -955,7 +955,7 @@
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Atropine_Display">
+        <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
@@ -2082,7 +2082,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_cpr">
             <English>%1 started CPR</English>
-        </key>
+        </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
