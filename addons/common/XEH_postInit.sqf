@@ -316,17 +316,6 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-//CBA has events for zeus's display onLoad and onUnload (Need to delay a frame for display to be ready)
-private _zeusDisplayChangedFNC = {
-    [{
-        private _data = !(isNull findDisplay 312);
-        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    }, []] call FUNC(execNextFrame);
-};
-["CBA_curatorOpened", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-["CBA_curatorClosed", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-
-
 // default variables
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
