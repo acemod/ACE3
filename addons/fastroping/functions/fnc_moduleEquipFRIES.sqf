@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_cutRopes
+ * [_module] call ace_fastroping_fnc_moduleEquipFRIES
  *
  * Public: No
  */
