@@ -922,7 +922,7 @@ class ACE_Medical_Advanced {
                     reopeningMinDelay = 500;
                     reopeningMaxDelay = 1000;
                 };
-                class AvulsionsMedium: Avulsions {{
+                class AvulsionsMedium: Avulsions {
                     effectiveness = 0.7;
                     reopeningChance = 0.4;
                     reopeningMinDelay = 250;
