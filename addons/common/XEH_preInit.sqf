@@ -253,6 +253,7 @@ GVAR(eventsLocation) setText QGVAR(eventsLocation);
 PREP(globalEvent);
 PREP(_handleNetEvent);
 PREP(addEventHandler);
+PREP(objectEvent);
 PREP(targetEvent);
 PREP(serverEvent);
 PREP(localEvent);
