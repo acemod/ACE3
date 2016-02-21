@@ -955,9 +955,6 @@
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Atropine_Display">
-            <English>Adenosine autoinjector</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
         </Key>
@@ -965,16 +962,16 @@
             <English>A drug used to counter the effects of Epinephrine</English>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
-            <English>Atropine autoinjector</English>
-            <Russian>Атропин в пневмошприце</Russian>
-            <Spanish>Atropina auto-inyectable</Spanish>
-            <French>Auto-injecteur d'Atropine</French>
-            <Polish>Autostrzykawka AtroPen</Polish>
-            <German>Atropin-Autoinjektor</German>
-            <Czech>Autoinjektor atropin</Czech>
-            <Hungarian>Atropin autoinjektor</Hungarian>
-            <Italian>Autoiniettore di atropina</Italian>
-            <Portuguese>Auto-injetor de Atropina</Portuguese>
+            <English>Adenosine autoinjector</English>
+            <German>Adenosin-Autoinjektor</German>
+            <!--<Russian>Атропин в пневмошприце</Russian>-->
+            <!--<Spanish>Atropina auto-inyectable</Spanish>-->
+            <!--<French>Auto-injecteur d'Atropine</French>-->
+            <!--<Polish>Autostrzykawka AtroPen</Polish>-->
+            <!--<Czech>Autoinjektor atropin</Czech>-->
+            <!--<Hungarian>Atropin autoinjektor</Hungarian>-->
+            <!--<Italian>Autoiniettore di atropina</Italian>-->
+            <!--<Portuguese>Auto-injetor de Atropina</Portuguese>-->
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Desc_Short">
             <English>Used in NBC scenarios</English>
@@ -2080,9 +2077,6 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_cpr">
-            <English>%1 started CPR</English>
-        </key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
@@ -2120,14 +2114,14 @@
             <Czech>%1 použil škrtidlo</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_CPR">
-            <English>%1 performed CPR</English>
-            <German>%1 hat eine HLW durchgeführt</German>
-            <Polish>%1 wykonał cykl RKO</Polish>
-            <Russian>%1 провел сердечно-легочную реанимацию</Russian>
-            <Spanish>%1 realicó RCP</Spanish>
-            <Portuguese>%1 realizou RCP</Portuguese>
-            <Czech>%1 provádí CPR</Czech>
-            <Italian>%1 ha eseguito CPR</Italian>
+            <English>%1 started CPR</English>
+            <German>%1 begann mit HLW</German>
+            <!--<Polish>%1 wykonał cykl RKO</Polish>-->
+            <!--<Russian>%1 провел сердечно-легочную реанимацию</Russian>-->
+            <!--<Spanish>%1 realicó RCP</Spanish>-->
+            <!--<Portuguese>%1 realizou RCP</Portuguese>-->
+            <!--<Czech>%1 provádí CPR</Czech>-->
+            <!--<Italian>%1 ha eseguito CPR</Italian>-->
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
