@@ -32,4 +32,10 @@ class ACE_Settings {
         displayName = CSTRING(unJamOnreload_displayName);
         description = CSTRING(unJamOnreload_description);
     };
+    class GVAR(unJamFailChance) {
+        typeName = "SCALAR";
+        value = 0.1;
+        displayName = CSTRING(unJamFailChance_displayName);
+        description = CSTRING(unJamFailChance_description);
+    };
 };
