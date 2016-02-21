@@ -34,7 +34,7 @@ _brokenRope = [];
         _brokenRope = _x;
     };
 } forEach _deployedRopes;
-_brokenRope set [6, true];
+_brokenRope set [5, true];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
 _unit = {

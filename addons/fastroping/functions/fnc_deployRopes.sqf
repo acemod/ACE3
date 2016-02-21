@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 params ["_vehicle"];
-private ["_config", "_ropeOrigins", "_ropeOrigin", "_deployedRopes", "_hookAttachment", "_origin", "_dummy", "_anchor", "_hook", "_ropeTop", "_ropeBottom"];
+private ["_config", "_ropeOrigins", "_ropeOrigin", "_deployedRopes", "_hookAttachment", "_origin", "_dummy", "_hook", "_ropeTop", "_ropeBottom"];
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
@@ -39,18 +39,15 @@ _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
     _dummy allowDamage false;
     _dummy disableCollisionWith _vehicle;
 
-    _anchor = createVehicle [QGVAR(helper), _origin vectorAdd [0, 0, -2], [], 0, "CAN_COLLIDE"];
-    _anchor allowDamage false;
-    _anchor disableCollisionWith _vehicle;
-
     _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 0.5];
-    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], _anchor, [0, 0, 0], 34.5];
+    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], 1];
+    ropeUnwind [_ropeBottom, 30, 34.5, false];
 
     _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
 
-    //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, anchor helper object, occupied
-    _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _anchor, _hook, false];
+    //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, occupied
+    _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _hook, false];
 
     false
 } count _ropeOrigins;

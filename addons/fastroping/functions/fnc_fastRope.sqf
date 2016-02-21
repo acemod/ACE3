@@ -30,7 +30,7 @@ _usableRopeIndex = 0;
     };
 } forEach _deployedRopes;
 
-_usableRope set [6, true];
+_usableRope set [5, true];
 _deployedRopes set [_usableRopeIndex, _usableRope];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 

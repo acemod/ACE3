@@ -20,7 +20,7 @@ private ["_deployedRopes", "_config", "_waitTime"];
 
 _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 {
-    _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook", "_occupied"];
+    _x params ["", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
 
     //Make player fall if rope is occupied
     if (_occupied) then {
@@ -33,7 +33,7 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
     };
 
     [QGVAR(ropeDetach), [_hook, _ropeTop]] call EFUNC(common,serverEvent);
-    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy, _anchor, _hook], 60] call EFUNC(common,waitAndExecute);
+    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy, _hook], 60] call EFUNC(common,waitAndExecute);
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];

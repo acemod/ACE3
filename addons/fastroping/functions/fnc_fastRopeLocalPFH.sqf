@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
 _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex"];
-_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_anchor", "_hook", "_occupied"];
+_rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
 private ["_vectorUp", "_vectorDir", "_origin"];
 
 //Wait until the unit is actually outside of the helicopter
@@ -36,6 +36,11 @@ if (isNull attachedTo _unit) exitWith {
     if ((getPos _unit) select 2 > 1) then {
         [_unit, "ACE_freeFallStart", 2] call EFUNC(common,doAnimation);
         [_unit, "ACE_freeFallLoop", 1] call EFUNC(common,doAnimation);
+        [{
+            isTouchingGround _this
+        }, {
+            [_this, "", 2] call EFUNC(common,doAnimation);
+        }, _unit] call EFUNC(common,waitUntilAndExecute);
     } else {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
