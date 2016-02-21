@@ -22,6 +22,12 @@ ace_dragging_carrydirection
 ace_dragging_candrag
 ace_dragging_dragposition
 ace_dragging_dragdirection
+ace_fastroping_enabled
+ace_fastroping_friesType
+ace_fastroping_friesAttachmentPoint
+ace_fastroping_onCut
+ace_fastroping_onPrepare
+ace_fastroping_ropeOrigins
 ace_gforcecoef
 ace_offset
 ace_hasReserveParachute
