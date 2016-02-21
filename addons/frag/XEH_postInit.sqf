@@ -28,3 +28,26 @@ if(isServer) then {
 //Cache for ammo type configs
 GVAR(cacheRoundsTypesToTrack) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
 GVAR(cacheRoundsTypesToTrack) setText QGVAR(cacheRoundsTypesToTrack);
+
+DFUNC(grenadeExploded) = {
+    /*
+     * Author: esteldunedain
+     *
+     * Arguments:
+     * Particle position
+     *
+     * Return Value:
+     * Nothing
+     *
+     * Example:
+     * [clientFiredBIS-XEH] call ace_frag_fnc_fired
+     *
+     * Public: No
+     */
+    #define DEBUG_MODE_FULL
+    hintSilent "Exploded";
+    TRACE_1("GrenadeExploded:",_this);
+    [{
+        ["GrenadeExploded", _this] call EFUNC(common,localEvent);
+    }, _this] call EFUNC(common,execNextFrame);
+};
