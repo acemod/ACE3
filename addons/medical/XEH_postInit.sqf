@@ -15,7 +15,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
 ["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
 ["addToMedicalLog", DFUNC(addToLog)] call EFUNC(common,addEventHandler);
-["addToTriageList", DFUNC(addToTriageList)] call EFUNC(common,addEventHandler);
+["addToTriageCard", DFUNC(addToTriageCard)] call EFUNC(common,addEventHandler);
 ["setDead", DFUNC(setDead)] call EFUNC(common,addEventHandler);
 ["setHitPointDamage", DFUNC(setHitPointDamage)] call EFUNC(common,addEventHandler);
 ["setUnconscious", DFUNC(setUnconscious)] call EFUNC(common,addEventHandler);
