@@ -2,6 +2,24 @@
 #define HD_MULT            5
 #define BASE_DRAG_HD    (BASE_DRAG*HD_MULT)
 
+class CfgCloudlets {
+    class Default;
+    class ACE_GrenadeExp: Default {
+        interval = 0.1;
+        beforeDestroyScript = "\z\ace\addons\frag\scripts\grenadeExploded.sqf";
+    };
+};
+class GrenadeExplosion {
+    class ACE_GrenadeExp {
+        simulation = "particles";
+        type = "ACE_GrenadeExp";
+        position[] = {0,0,0};
+        intensity = 1;
+        interval = 0.1;
+        lifeTime = 0.1;
+    };
+};
+
 class CfgAmmo {
     //class ace_arty_105mm_m1_m782_time;
     //class ace_arty_105mm_m1_m782_prox: ace_arty_105mm_m1_m782_time {};
