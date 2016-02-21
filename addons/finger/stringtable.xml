@@ -60,7 +60,7 @@
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
-            <German>Zeigt anderen, nahen Spielern die eigene Blickrichtung mittels eines Symbols. Kann dauerhaft ausgeführt werden.</German>
+            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
             <French>Montre du doigt et affiche un marqueur virtuel de la direction pointée aux uinités proches. Peut être maintenu</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
