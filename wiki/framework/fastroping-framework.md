@@ -23,7 +23,7 @@ ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
 You can also use more or less than two rope origins. You can additionally execute code on rope deployment and rope cutting, for example for opening and closing the helicopters doors, see "3. Using onPrepare and onCut functions" for that.
 
 ## 2. Using a FRIES
-If your helicopter is not be fast roping capable by default, you can make it take a FRIES. A FRIES is just a simple model that gets attached to the helicopter with its own rope origin points. ACE3 already includes two FRIES that are used in real life and can be attached to most helicopters.
+If your helicopter is not fast roping capable by default, you can make it take a FRIES. A FRIES is just a simple model that gets attached to the helicopter with its own rope origin points. ACE3 already includes two FRIES that are used in real life and can be attached to most helicopters.
 
 To make your helicopter FRIES capable, you need to add the following config entries:
 ```

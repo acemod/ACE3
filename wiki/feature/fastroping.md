@@ -16,9 +16,9 @@ If you are sitting in the back of a helicopter that has fast roping capabilities
 1. FRIES preparation, usually consisting of opening the helicopters doors and the extension of the hooks (not necessary for some helicopters)
 2. Rope deployment
 
-You can safely prepare the FRIES in base or during flight do speed up the insertion.
+You can safely prepare the FRIES in base or during flight to speed up the insertion.
 
-Not all helicopters are equipped with a FRIES by default and need to be synched with the "Equip FRIES" module in the editor. If the helicopter cannot carry a FRIES, an error message will appear.
+Not all helicopters are equipped with a FRIES by default and need to be synchronized with the "Equip FRIES" module in the editor. If the helicopter cannot carry a FRIES, an error message will appear.
 
 ## 4. Dependencies
 
