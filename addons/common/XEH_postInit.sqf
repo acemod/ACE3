@@ -416,14 +416,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         ["visibleMapChanged", [ACE_player, _data]] call FUNC(localEvent);
     };
 
-    // "inventoryDisplayChanged" event
-    _data = !(isNull findDisplay 602);
-    if !(_data isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
-        // Raise ACE event locally
-        GVAR(OldInventoryDisplayIsOpen) = _data;
-        ["inventoryDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
     // "activeCameraChanged" event
     _data = call FUNC(isfeatureCameraActive);
     if !(_data isEqualTo GVAR(OldIsCamera)) then {
