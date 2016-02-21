@@ -19,6 +19,16 @@ class asdg_MuzzleSlot_9MM_SMG: asdg_MuzzleSlot { // for 9x19mm universal mount S
         ACE_muzzle_mzls_smg_02 = 1;
     };
 };
+class asdg_MuzzleSlot_556: asdg_MuzzleSlot { // for 5.56x45 universal mount suppressors
+    class compatibleItems {
+        ACE_muzzle_mzls_L = 1;
+    };
+};
+class asdg_MuzzleSlot_45ACP_SMG: asdg_MuzzleSlot { // for .45ACP universal mount SMG suppressors
+    class compatibleItems {
+        ACE_muzzle_mzls_smg_01 = 1;
+    };
+};
 
 class MuzzleSlot;
 
@@ -90,37 +100,6 @@ class CfgWeapons {
             };
         };
     };
-
-
-    /* Assault Rifles */
-
-    class Tavor_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
-        };
-    };
-
-    class mk20_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
-        };
-    };
-
-
-    /* SMGs */
-
-    class SMG_01_Base: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
 
     /* Pistols */
 
