@@ -1,3 +1,4 @@
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -7,6 +8,12 @@ class Extended_PreInit_EventHandlers {
 class Extended_PostInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
+    };
+};
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayInventory {
+        ADDON = QUOTE([ARR_2(ACE_player, _this select 0)] call FUNC(updateInventoryDisplay));
     };
 };
 

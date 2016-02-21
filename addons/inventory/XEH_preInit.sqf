@@ -5,7 +5,7 @@ ADDON = false;
 PREP(addCustomFilter);
 PREP(currentItemListBox);
 PREP(forceItemListUpdate);
-PREP(inventoryDisplayLoaded);
+PREP(inventoryDisplayLoad);
 PREP(onLBSelChanged);
 
 // cache config
