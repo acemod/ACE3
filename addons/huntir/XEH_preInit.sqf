@@ -2,10 +2,6 @@
 
 ADDON = false;
 
-PREP(cam);
-PREP(handleFired);
-PREP(huntir);
-PREP(huntirCompass);
-PREP(keypressed);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

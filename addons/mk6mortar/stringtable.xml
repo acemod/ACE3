@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Mk6Mortar">
         <Key ID="STR_ACE_Mk6Mortar_rangetable_name">
@@ -59,6 +59,7 @@
             <French>Option du MK6</French>
             <Hungarian>MK6 beállítások</Hungarian>
             <Russian>Настройки MK6</Russian>
+            <Italian>Impostazioni MK6</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -70,6 +71,7 @@
             <French>Résistance de l'air</French>
             <Hungarian>Légellenállás</Hungarian>
             <Russian>Сопротивление воздуха</Russian>
+            <Italian>Resistenza dell'Aria</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
@@ -81,6 +83,7 @@
             <French>Pour les tirs de joueurs, modèle de résistance à l'air et d'effet du vent</French>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
+            <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow MK6 Computer</English>
@@ -92,6 +95,7 @@
             <French>Autoriser l'ordinateur de tir pour MK6</French>
             <Hungarian>MK6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер MK6</Russian>
+            <Italian>Consenti Computer MK6</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -103,6 +107,7 @@
             <French>Affiche l'ordinateur de tir (cette option doit être DESACTIVEE  si la résisance à l'air est activée)</French>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
+            <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow MK6 Compass</English>
@@ -114,6 +119,7 @@
             <French>Autoriser la boussole pour MK6</French>
             <Hungarian>MK6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас MK6</Russian>
+            <Italian>Consenti Bussola MK6</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the MK6 Digital Compass</English>
@@ -125,6 +131,7 @@
             <French>Affiche la boussole digitale pour le MK6</French>
             <Hungarian>Az MK6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас MK6</Russian>
+            <Italian>Mostra la Bussola Digitale MK6</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English>This module allows you to setup MK6 mortar settings.</English>
@@ -134,6 +141,7 @@
             <Portuguese>Este módulo permite que você ajuste o morteiro MK6.</Portuguese>
             <Russian>Модуль настройки миномета MK6.</Russian>
             <French>Ce module permet de régler les options du mortier MK6</French>
+            <Italian>Questo modulo ti consente di impostare i parametri del mortaio MK6.</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
             <English>Use Ammunition handling</English>

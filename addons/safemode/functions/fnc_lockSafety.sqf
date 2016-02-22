@@ -38,7 +38,7 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
     _unit setVariable [QGVAR(actionID), [
         _unit, "DefaultAction", {
             if (
-                [_this select 1] call EFUNC(common,canUseWeapon)
+                [_this select 1] call CBA_fnc_canUseWeapon
                 && {
                     if (currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(safedWeapons), []])) then {
                         if (inputAction "nextWeapon" > 0) exitWith {

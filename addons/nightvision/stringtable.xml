@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
@@ -140,6 +140,7 @@
             <Portuguese>Visão Noturna</Portuguese>
             <Czech>Noční vidění</Czech>
             <Polish>Noktowizja</Polish>
+            <Italian>Visione Notturna</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
@@ -148,6 +149,7 @@
             <Portuguese>Ajustes para visão noturna.</Portuguese>
             <Czech>Nastavení nočního vidění</Czech>
             <Polish>Ustawienia noktowizorów</Polish>
+            <Italian>Impostazioni per visione notturna.</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -156,6 +158,7 @@
             <Portuguese>Desabilitar visão noturna nas lunetas</Portuguese>
             <Czech>Zakázat NVG v zaměřovači</Czech>
             <Polish>Wył. NVG przy celowaniu</Polish>
+            <Italian>Disabilita NVG nei mirini</Italian>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
@@ -164,6 +167,7 @@
             <Portuguese>Bloqueia o uso de visão noturna ao utilizar a mira.</Portuguese>
             <Czech>Zabraňuje používání nokovizoru v režimu zaměřovače.</Czech>
             <Polish>Uniemożliwia korzystanie z gogli noktowizyjnych przy celowaniu.</Polish>
+            <Italian>Blocca l'uso di visori notturni mentre miri con ottiche.</Italian>
         </Key>
     </Package>
 </Project>

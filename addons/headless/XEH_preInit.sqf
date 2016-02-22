@@ -2,12 +2,7 @@
 
 ADDON = false;
 
-PREP(handleConnectHC);
-PREP(handleDisconnect);
-PREP(handleInitPost);
-PREP(moduleInit);
-PREP(rebalance);
-PREP(transferGroups);
+#include "XEH_PREP.hpp"
 
 if (isServer) then {
     GVAR(headlessClients) = [];

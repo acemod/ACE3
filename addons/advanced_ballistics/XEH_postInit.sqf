@@ -33,8 +33,6 @@ if (!hasInterface) exitWith {};
     ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
     ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
 
-    [] call FUNC(updateTrajectoryPFH);
-
 }] call EFUNC(common,addEventHandler);
 
 #ifdef DEBUG_MODE_FULL

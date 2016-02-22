@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -39,11 +39,12 @@
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAll">
             <English>Detonate All</English>
-            <German>Zünden Alles</German>
+            <German>Alle Zünden</German>
             <Spanish>Detonar Todo</Spanish>
             <Russian>Подрыв всех</Russian>
             <Czech>Odpálit VŠE</Czech>
             <Polish>Detonuj wszystkie</Polish>
+            <Italian>Detona Tutti</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -454,7 +455,7 @@
             <English>No triggers available for %1</English>
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
-            <German>Keine Auslöser vorhanden für %1</German>
+            <German>Keine Auslöser für %1 vorhanden</German>
             <French>Pas de mise à feu disponible pour %1</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
@@ -544,7 +545,7 @@
             <French>Module explosifs</French>
             <Hungarian>Robbanóanyag-rendszer</Hungarian>
             <Russian>Взрывные устройства</Russian>
-            <Italian>Sistema esplosivi</Italian>
+            <Italian>Sistema Esplosivi</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
@@ -556,7 +557,7 @@
             <French>Requiert un spécialiste?</French>
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
-            <Italian>Richiede lo specialista?</Italian>
+            <Italian>Richiedi specialisti?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -568,7 +569,7 @@
             <French>Le désarmoçage d'explosif requiert un spécialiste? Défaut: non</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
-            <Italian>Si richiede lo specialista esplosivi per disabilitare esplosivi? Default: No</Italian>
+            <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -580,7 +581,7 @@
             <French>Punir les non-spécialistes?</French>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
-            <Italian>Penalizza i non-specialisti?</Italian>
+            <Italian>Punisci non-specialisti?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_Description">
             <English>Increase the time it takes to complete actions for non-specialists? Default: Yes</English>
@@ -592,7 +593,7 @@
             <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes? Défaut: oui</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
-            <Italian>Aumenta il tempo necessario per completare le azioni per i non-specialisti? Default:Sì</Italian>
+            <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_DisplayName">
             <English>Explode on defusal?</English>
@@ -604,7 +605,7 @@
             <French>Explosion si désamorçage?</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
-            <Italian>Esplode al disinnesco?</Italian>
+            <Italian>Fai esplodere quando disarmato?</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplodeOnDefuse_Description">
             <English>Enable certain explosives to explode on defusal? Default: Yes</English>
@@ -616,7 +617,7 @@
             <French>Permet à certains explosifs d'exploser au désamorçage? Défaut: oui</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
-            <Italian>Abilita certi esplosivi ad esplodere al disinnesco? Default:Sì</Italian>
+            <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_Description">
             <English>This module adjusts the settings related to explosives.</English>
@@ -628,13 +629,13 @@
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
-            <Italian>Questo modulo permette di personlalizzare i parametri del modulo esplosivi.</Italian>
+            <Italian>Questo modulo cambia le impostazioni relative agli esplosivi</Italian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
             <English>M6 SLAM Mine (Bottom Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
             <!-- <French>Mine M6 SLAM</French> -->
-            <!-- <German>M6-SLAM-Mine</German> -->
+            <German>M6-SLAM-Mine (Bodenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
@@ -646,7 +647,7 @@
             <English>M6 SLAM Mine (Side Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
             <!-- <French>Mine M6 SLAM</French> -->
-            <!-- <German>M6-SLAM-Mine</German> -->
+            <German>M6-SLAM-Mine (Seitenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
@@ -658,7 +659,7 @@
             <English>Large IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (městská)</Czech> -->
             <!-- <French>Grand engin explosif improvisé (urbain)</French> -->
-            <!-- <German>Große USBV (Stadt)</German> -->
+            <German>Große USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED grande (urbano)</Italian> -->
             <!-- <Polish>Duży IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
@@ -670,7 +671,7 @@
             <English>Large IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
             <!-- <French>Grand engin explosif improvisé (enterré)</French> -->
-            <!-- <German>Große USBV (Eingegraben)</German> -->
+            <German>Große USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED grande (interrato)</Italian> -->
             <!-- <Polish>Duży IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
@@ -682,7 +683,7 @@
             <English>Small IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (městská)</Czech> -->
             <!-- <French>Petit engin explosif improvisé (urbain)</French> -->
-            <!-- <German>Kleine USBV (Stadt)</German> -->
+            <German>Kleine USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED piccolo (urbano)</Italian> -->
             <!-- <Polish>Mały IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
@@ -694,7 +695,7 @@
             <English>Small IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
             <!-- <French>Petit engin explosif improvisé (enterré)</French> -->
-            <!-- <German>Kleine USBV (Eingegraben)</German> -->
+            <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED piccolo (interrato)</Italian> -->
             <!-- <Polish>Mały IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->

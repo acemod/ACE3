@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
@@ -9,7 +9,7 @@
             <Russian>Fulton MX-991</Russian>
             <Czech>Fulton MX-991</Czech>
             <Spanish>Fulton MX-991</Spanish>
-            <Italian>Fulton MX-911</Italian>
+            <Italian>Fulton MX-991</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -19,7 +19,7 @@
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
-            <Italian>Torcia con filtro rosso. Da usare sulla mappa.</Italian>
+            <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -39,7 +39,7 @@
             <Russian>Небольшой фонарик белого света. Для использования на карте.</Russian>
             <Czech>Bílá mini svítilna. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
-            <Italian>Torcia bianca. Da usare sulla mappa.</Italian>
+            <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -59,7 +59,7 @@
             <Russian>Фонарь с красным светофильтром. Для использования на карте.</Russian>
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
-            <Italian>Torcia con filtro rosso. Da usare sulla mappa.</Italian>
+            <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
         </Key>
     </Package>
 </Project>
