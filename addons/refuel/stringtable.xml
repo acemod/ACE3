@@ -47,13 +47,13 @@
             <Italian>Prenti manica benzina</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzleAction">
-            <English>Taking fuel nozzle ...</English>
-            <German>Nehme Zapfpistole ...</German>
-            <Polish>Pobieranie nalewaka ...</Polish>
-            <Russian>Берем топливный шланг ...</Russian>
+            <English>Taking fuel nozzle...</English>
+            <German>Nehme Zapfpistole...</German>
+            <Polish>Pobieranie nalewaka...</Polish>
+            <Russian>Берем топливный шланг...</Russian>
             <Portuguese>Pegando o bocal de combustível...</Portuguese>
-            <Czech>Beru výdejní pistoli ...</Czech>
-            <Italian>Sto prendendo manica benzina ...</Italian>
+            <Czech>Beru výdejní pistoli...</Czech>
+            <Italian>Sto prendendo manica benzina...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
@@ -65,13 +65,13 @@
             <Italian>Collega manica benzina</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectAction">
-            <English>Connecting fuel nozzle ...</English>
-            <German>Zapfpistole anschließen ...</German>
-            <Polish>Podłączanie nalewaka ...</Polish>
-            <Russian>Присоединяем топливный шланг ...</Russian>
+            <English>Connecting fuel nozzle...</English>
+            <German>Zapfpistole anschließen...</German>
+            <Polish>Podłączanie nalewaka...</Polish>
+            <Russian>Присоединяем топливный шланг...</Russian>
             <Portuguese>Conectando o bocal de combustível...</Portuguese>
-            <Czech>Připojuji výdejní pistoli ...</Czech>
-            <Italian>Sto collegando la manica benzina ...</Italian>
+            <Czech>Připojuji výdejní pistoli...</Czech>
+            <Italian>Sto collegando la manica benzina...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
@@ -101,13 +101,13 @@
             <Italian>Controlla benzina rimanente</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelAction">
-            <English>Checking remaining fuel ...</English>
-            <German>Überprüfe verbleibenden Kraftstoff ...</German>
-            <Polish>Sprawdzanie ilości paliwa ...</Polish>
-            <Russian>Проверяем остаток топлива ...</Russian>
+            <English>Checking remaining fuel...</English>
+            <German>Überprüfe verbleibenden Kraftstoff...</German>
+            <Polish>Sprawdzanie ilości paliwa...</Polish>
+            <Russian>Проверяем остаток топлива...</Russian>
             <Portuguese>Verificando combustível restante...</Portuguese>
-            <Czech>Kontroluji zůstatek paliva ...</Czech>
-            <Italian>Sto controllando la benzina rimanente ...</Italian>
+            <Czech>Kontroluji zůstatek paliva...</Czech>
+            <Italian>Sto controllando la benzina rimanente...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
             <English>There are %1 liters left.</English>
@@ -155,13 +155,13 @@
             <Italian>Ferma rifornimento</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOffAction">
-            <English>Stopping fueling ...</English>
-            <German>Stoppe Betankung ...</German>
-            <Polish>Zatrzymywanie tankowania ...</Polish>
-            <Russian>Останавливаем заправку ...</Russian>
+            <English>Stopping fueling...</English>
+            <German>Stoppe Betankung...</German>
+            <Polish>Zatrzymywanie tankowania...</Polish>
+            <Russian>Останавливаем заправку...</Russian>
             <Portuguese>Parando reabastecimento...</Portuguese>
-            <Czech>Zastavuji tankování ...</Czech>
-            <Italian>Sto fermando il rifornimento ...</Italian>
+            <Czech>Zastavuji tankování...</Czech>
+            <Italian>Sto fermando il rifornimento...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
@@ -173,13 +173,13 @@
             <Italian>Inizia rifornimento</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOnAction">
-            <English>Starting fueling ...</English>
-            <German>Beginne Betankung ...</German>
-            <Polish>Rozpoczynanie tankowania ...</Polish>
-            <Russian>Начинаем заправку ...</Russian>
+            <English>Starting fueling...</English>
+            <German>Beginne Betankung...</German>
+            <Polish>Rozpoczynanie tankowania...</Polish>
+            <Russian>Начинаем заправку...</Russian>
             <Portuguese>Começando reabastecimento...</Portuguese>
-            <Czech>Spouštím tankování ...</Czech>
-            <Italian>Sto iniziando il rifornimento ...</Italian>
+            <Czech>Spouštím tankování...</Czech>
+            <Italian>Sto iniziando il rifornimento...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -245,13 +245,13 @@
             <Italian>Riponi manica benzina</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
-            <English>Returning fuel nozzle ...</English>
-            <German>Stecke Zapfpistole zurück ...</German>
-            <Polish>Zwracanie nalewaka ...</Polish>
-            <Russian>Возвращаем топливный шланг ...</Russian>
+            <English>Returning fuel nozzle...</English>
+            <German>Stecke Zapfpistole zurück...</German>
+            <Polish>Zwracanie nalewaka...</Polish>
+            <Russian>Возвращаем топливный шланг...</Russian>
             <Portuguese>Retornando bocal de combustível...</Portuguese>
-            <Czech>Vracím výdejní pistoli ...</Czech>
-            <Italian>Sto riponendo la manica della benzina ...</Italian>
+            <Czech>Vracím výdejní pistoli...</Czech>
+            <Italian>Sto riponendo la manica della benzina...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
@@ -263,13 +263,13 @@
             <Italian>Controlla indicatore livello benzina</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
-            <English>Checking fuel counter ...</English>
-            <German>Betrachte Tankuhr ...</German>
-            <Polish>Sprawdzanie wskaźnika paliwa ...</Polish>
-            <Russian>Проверяем счетчик топлива ...</Russian>
+            <English>Checking fuel counter...</English>
+            <German>Betrachte Tankuhr...</German>
+            <Polish>Sprawdzanie wskaźnika paliwa...</Polish>
+            <Russian>Проверяем счетчик топлива...</Russian>
             <Portuguese>Verificando contador de combustível...</Portuguese>
-            <Czech>Konroluji palivoměr ...</Czech>
-            <Italian>Sto controllando l'indicatore del livello benzina ...</Italian>
+            <Czech>Konroluji palivoměr...</Czech>
+            <Italian>Sto controllando l'indicatore del livello benzina...</Italian>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
             <English>%1 liters have been fueled.</English>

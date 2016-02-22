@@ -38,16 +38,16 @@
             <Russian>Выбрать магазин</Russian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
-            <English>Repacking Magazines ...</English>
-            <German>Magazine umpacken ...</German>
-            <Spanish>Reorganizando cargadores ...</Spanish>
-            <French>Réorganisation des chargeurs ...</French>
-            <Polish>Przepakowywanie magazynków ...</Polish>
-            <Czech>Přepáskovávám zásobník ...</Czech>
-            <Italian>Sto riempendo i caricatori ...</Italian>
-            <Portuguese>Reorganizando Carregadores ...</Portuguese>
-            <Hungarian>Újratárazás ...</Hungarian>
-            <Russian>Перепаковка магазинов ...</Russian>
+            <English>Repacking Magazines...</English>
+            <German>Magazine umpacken...</German>
+            <Spanish>Reorganizando cargadores...</Spanish>
+            <French>Réorganisation des chargeurs...</French>
+            <Polish>Przepakowywanie magazynków...</Polish>
+            <Czech>Přepáskovávám zásobník...</Czech>
+            <Italian>Sto riempendo i caricatori...</Italian>
+            <Portuguese>Reorganizando Carregadores...</Portuguese>
+            <Hungarian>Újratárazás...</Hungarian>
+            <Russian>Перепаковка магазинов...</Russian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazines">
             <English>Repacked Magazines</English>

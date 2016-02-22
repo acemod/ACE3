@@ -2,16 +2,16 @@
 <Project name="ACE">
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
-            <English>Deploy in 5 seconds ...</English>
-            <French>Déploiement dans 5 secondes ...</French>
-            <German>Wird in 5 Sekunden errichtet ...</German>
-            <Spanish>Despliegue en 5 segundos ...</Spanish>
-            <Russian>Возрождение через 5 секунд ...</Russian>
-            <Polish>Rozmieszczenie za 5 sekund ...</Polish>
+            <English>Deploy in 5 seconds...</English>
+            <French>Déploiement dans 5 secondes...</French>
+            <German>Wird in 5 Sekunden errichtet...</German>
+            <Spanish>Despliegue en 5 segundos...</Spanish>
+            <Russian>Возрождение через 5 секунд...</Russian>
+            <Polish>Rozmieszczenie za 5 sekund...</Polish>
             <Czech>Respawn za 5 sekund...</Czech>
-            <Hungarian>Kihelyezés 5 másodperc múlva ...</Hungarian>
-            <Italian>Dispiegamento in 5 secondi ...</Italian>
-            <Portuguese>Será posicionado em 5 segundos ...</Portuguese>
+            <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
+            <Italian>Dispiegamento in 5 secondi...</Italian>
+            <Portuguese>Será posicionado em 5 segundos...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>

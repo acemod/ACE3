@@ -38,14 +38,14 @@
             <Czech>Vyměnit kolo</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingWheel">
-            <English>Replacing Wheel ...</English>
-            <German>Ersetze Reifen ...</German>
-            <Polish>Wymienianie koła ...</Polish>
+            <English>Replacing Wheel...</English>
+            <German>Ersetze Reifen...</German>
+            <Polish>Wymienianie koła...</Polish>
             <Portuguese>Trocando roda...</Portuguese>
-            <Russian>Замена колеса ...</Russian>
-            <Czech>Měním kolo ...</Czech>
-            <Spanish>Cambiando rueda ...</Spanish>
-            <Italian>Sto sostituendo la ruota ...</Italian>
+            <Russian>Замена колеса...</Russian>
+            <Czech>Měním kolo...</Czech>
+            <Spanish>Cambiando rueda...</Spanish>
+            <Italian>Sto sostituendo la ruota...</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -70,14 +70,14 @@
             <Russian>Снять колесо</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingWheel">
-            <English>Removing Wheel ...</English>
-            <German>Entferne Reifen ...</German>
-            <Polish>Zdejmowanie koła ...</Polish>
+            <English>Removing Wheel...</English>
+            <German>Entferne Reifen...</German>
+            <Polish>Zdejmowanie koła...</Polish>
             <Portuguese>Removendo roda...</Portuguese>
-            <Russian>Снятие колеса ...</Russian>
-            <Czech>Odstraňuji kolo ...</Czech>
-            <Spanish>Quitando rueda ...</Spanish>
-            <Italian>Sto rimuovendo la ruota ...</Italian>
+            <Russian>Снятие колеса...</Russian>
+            <Czech>Odstraňuji kolo...</Czech>
+            <Spanish>Quitando rueda...</Spanish>
+            <Italian>Sto rimuovendo la ruota...</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -100,14 +100,14 @@
             <Italian>Cambia cingolo</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
-            <English>Replacing Track ...</English>
-            <German>Tausche Kette aus ...</German>
-            <Polish>Wymienianie gąsienicy ...</Polish>
+            <English>Replacing Track...</English>
+            <German>Tausche Kette aus...</German>
+            <Polish>Wymienianie gąsienicy...</Polish>
             <Portuguese>Trocando esteira...</Portuguese>
-            <Russian>Замена гусеницы ...</Russian>
-            <Czech>Měním pás ...</Czech>
-            <Spanish>Cambiando oruga ...</Spanish>
-            <Italian>Sto sostituendo il cingolo ...</Italian>
+            <Russian>Замена гусеницы...</Russian>
+            <Czech>Měním pás...</Czech>
+            <Spanish>Cambiando oruga...</Spanish>
+            <Italian>Sto sostituendo il cingolo...</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -130,14 +130,14 @@
             <Italian>Rimuovi cingolo</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
-            <English>Removing Track ...</English>
-            <German>Entferne Kette ...</German>
-            <Polish>Zdejmowanie gąsienicy ...</Polish>
+            <English>Removing Track...</English>
+            <German>Entferne Kette...</German>
+            <Polish>Zdejmowanie gąsienicy...</Polish>
             <Portuguese>Removendo esteira...</Portuguese>
-            <Russian>Снятие гусеницы ...</Russian>
-            <Czech>Odstraňuji pás ...</Czech>
-            <Spanish>Quitando oruga ...</Spanish>
-            <Italian>Sto rimuovendo il cingolo ...</Italian>
+            <Russian>Снятие гусеницы...</Russian>
+            <Czech>Odstraňuji pás...</Czech>
+            <Spanish>Quitando oruga...</Spanish>
+            <Italian>Sto rimuovendo il cingolo...</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -160,14 +160,14 @@
             <Italian>Riparazione completa</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
-            <English>Repairing Vehicle ...</English>
-            <German>Entferne Fahrzeug ...</German>
-            <Polish>Naprawianie pojazdu ...</Polish>
+            <English>Repairing Vehicle...</English>
+            <German>Entferne Fahrzeug...</German>
+            <Polish>Naprawianie pojazdu...</Polish>
             <Portuguese>Reparando veículo...</Portuguese>
-            <Russian>Ремонт транспорта ...</Russian>
-            <Czech>Opravuji vozidlo ...</Czech>
-            <Spanish>Reparando vehículo ...</Spanish>
-            <Italian>Sto riparando il veicolo ...</Italian>
+            <Russian>Ремонт транспорта...</Russian>
+            <Czech>Opravuji vozidlo...</Czech>
+            <Spanish>Reparando vehículo...</Spanish>
+            <Italian>Sto riparando il veicolo...</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -262,28 +262,28 @@
             <Italian>Mostra una notifica quando stai riparando un veicolo</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_Repairing">
-            <English>Repairing ...</English>
-            <German>Reparieren ...</German>
-            <Spanish>Reparando ...</Spanish>
-            <French>Réparation ...</French>
+            <English>Repairing...</English>
+            <German>Reparieren...</German>
+            <Spanish>Reparando...</Spanish>
+            <French>Réparation...</French>
             <Polish>Naprawianie...</Polish>
-            <Czech>Opravuji ...</Czech>
+            <Czech>Opravuji...</Czech>
             <Portuguese>Reparando...</Portuguese>
-            <Italian>Sto riparando ...</Italian>
-            <Hungarian>javítása ...</Hungarian>
-            <Russian>Ремонтируем ...</Russian>
+            <Italian>Sto riparando...</Italian>
+            <Hungarian>javítása...</Hungarian>
+            <Russian>Ремонтируем...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_RepairingHitPoint">
-            <English>Repairing %1 ...</English>
-            <German>Repariere %1 ...</German>
-            <Spanish>Reparando %1 ...</Spanish>
-            <French>Réparation %1 ...</French>
+            <English>Repairing %1...</English>
+            <German>Repariere %1...</German>
+            <Spanish>Reparando %1...</Spanish>
+            <French>Réparation %1...</French>
             <Polish>Naprawianie %1...</Polish>
-            <Czech>Opravuji %1 ...</Czech>
+            <Czech>Opravuji %1...</Czech>
             <Portuguese>Reparando %1...</Portuguese>
-            <Italian>Sto riparando %1 ...</Italian>
-            <Hungarian>%1 javítása ...</Hungarian>
-            <Russian>Ремонтируем %1 ...</Russian>
+            <Italian>Sto riparando %1...</Italian>
+            <Hungarian>%1 javítása...</Hungarian>
+            <Russian>Ремонтируем %1...</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_Repaired">
             <English>Repaired %1</English>
