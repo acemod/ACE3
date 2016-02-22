@@ -25,5 +25,13 @@
             <English>Cut ropes</English>
             <German>Seile abwerfen</German>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
+            <English>Equip helicopter with FRIES</English>
+            <German>Rüste Helicopter mit FRIES aus</German>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
+            <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
+            <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
+        </Key>
     </Package>
 </Project>
