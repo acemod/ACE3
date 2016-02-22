@@ -3815,6 +3815,18 @@
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctorShort">
+            <English>Doctor</English>
+            <Russian>Врач</Russian>
+            <Polish>Doktor</Polish>
+            <Spanish>Doctor</Spanish>
+            <German>Arzt</German>
+            <Czech>Doktor</Czech>
+            <Portuguese>Doutor</Portuguese>
+            <French>Médecin</French>
+            <Hungarian>Doktor</Hungarian>
+            <Italian>Dottore</Italian>
+        </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
             <Russian>Задает юниту класс медика</Russian>

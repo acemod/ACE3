@@ -1,5 +1,4 @@
 class ctrlToolbox;
-class ctrlEdit;
 
 class Cfg3DEN {
     class Attributes {
@@ -9,7 +8,7 @@ class Cfg3DEN {
                 class Title;
             };
         };
-        class GVAR(isEngineer): Title {
+        class GVAR(isEngineerControl): Title {
             attributeLoad = "(_this controlsGroupCtrl 100) lbsetcursel (((_value + 1) min 3) max 0);";
             attributeSave = "(missionnamespace getvariable ['ace_isEng_temp',0]) - 1;";
             class Controls: Controls {
@@ -17,19 +16,16 @@ class Cfg3DEN {
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";
-                    x = "48 * (pixelW * 	1.25 * 4)";
-                    w = "82 * (pixelW * 	1.25 * 4)";
-                    h = "5 * (pixelH * 	1.25 * 4)";
+                    x = "48 * (pixelW * 1.25 * 4)";
+                    w = "82 * (pixelW * 1.25 * 4)";
+                    h = "5 * (pixelH * 1.25 * 4)";
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};
-                    // tooltips[] = {""};
-                    values[] = {-1,0,1,2};
                     onToolboxSelChanged = "missionnamespace setvariable ['ace_isEng_temp',_this select 1];";
                 };
             };
         };
-
     };
 
     class Object {
@@ -44,7 +40,7 @@ class Cfg3DEN {
                         typeName = "NUMBER";
                         condition = "objectBrain";
                         defaultValue = "-1";
-                        control = QGVAR(isEngineer);
+                        control = QGVAR(isEngineerControl);
                     };
                     class ace_isRepairVehicle {
                         property = QUOTE(ace_isRepairVehicle);
