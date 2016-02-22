@@ -19,7 +19,7 @@ private _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 if !(currentWeapon _unit in _jammedWeapons) exitWith {
     false
 };
-if !([_unit] call EFUNC(common,canUseWeapon)) exitWith {
+if !([_unit] call CBA_fnc_canUseWeapon) exitWith {
     false
 };
 true
