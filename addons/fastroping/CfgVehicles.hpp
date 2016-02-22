@@ -8,8 +8,8 @@
         typeName = "BOOL"; \
         condition = "objectVehicle"; \
         defaultValue = false; \
-    } \
-};
+    }; \
+}
 
 class CfgVehicles {
     class Building;
