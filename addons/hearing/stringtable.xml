@@ -111,6 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
             <English>Remove tinnitus effect when the player takes hearing damage</English>
+            <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
