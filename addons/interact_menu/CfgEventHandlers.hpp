@@ -24,12 +24,9 @@ class Extended_InitPost_EventHandlers {
         };
     };
 };
-<<<<<<< HEAD
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDiary {
         ADDON = QUOTE(call COMPILE_FILE(XEH_displayLoad));
     };
 };
-=======
->>>>>>> 0f7bfc0f6654cef08f84b36fbc4fd4be2774777b
