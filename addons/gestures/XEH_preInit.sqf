@@ -2,6 +2,6 @@
 
 ADDON = false;
 
-PREP(playSignal);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

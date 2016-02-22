@@ -2,11 +2,7 @@
 
 ADDON = false;
 
-PREP(addCustomFilter);
-PREP(currentItemListBox);
-PREP(forceItemListUpdate);
-PREP(inventoryDisplayLoaded);
-PREP(onLBSelChanged);
+#include "XEH_PREP.hpp"
 
 // cache config
 // items in the inventory display can only be distinguished by their lb names and pictures
@@ -50,15 +46,5 @@ if !(uiNamespace getVariable [QGVAR(configCached), false]) then {
 
     uiNamespace setVariable [QGVAR(configCached), true];
 };
-
-PREP(filterWeapons);
-PREP(filterMagazines);
-PREP(filterItems);
-PREP(filterHeadgear);
-PREP(filterUniforms);
-PREP(filterVests);
-PREP(filterBackpacks);
-PREP(filterGrenades);
-PREP(filterMedical);
 
 ADDON = true;

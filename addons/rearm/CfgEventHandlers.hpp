@@ -1,9 +1,15 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
     };
 };
-
 
 class Extended_Init_EventHandlers {
     class GVAR(defaultCarriedObject) { // TODO check if we need to add all subclasses

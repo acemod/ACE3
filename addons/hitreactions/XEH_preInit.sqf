@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(fallDown);
-PREP(getRandomAnimation);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

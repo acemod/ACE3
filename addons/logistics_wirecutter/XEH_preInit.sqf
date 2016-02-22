@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(cutDownFence);
-PREP(interactEH);
-PREP(isFence);
+#include "XEH_PREP.hpp"
 
 ADDON = true;
