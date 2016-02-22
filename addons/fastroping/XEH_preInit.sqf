@@ -8,6 +8,7 @@ PREP(canFastRope);
 PREP(canPrepareFRIES);
 PREP(cutRopes);
 PREP(deployRopes);
+PREP(equipFRIES);
 PREP(fastRope);
 PREP(fastRopeLocalPFH);
 PREP(fastRopeServerPFH);
