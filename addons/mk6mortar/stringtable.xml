@@ -225,7 +225,7 @@
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
-            <German>[ACE] 82mm Standardbox</German>
+            <German>[ACE] 82mm Standardkiste</German>
         </Key>
     </Package>
 </Project>
