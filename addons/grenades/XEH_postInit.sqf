@@ -15,7 +15,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call EFUNC(common,canUseWeapon))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     // Statement
     [] call FUNC(nextMode);

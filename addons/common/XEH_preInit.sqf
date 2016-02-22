@@ -9,6 +9,17 @@ ADDON = false;
 GVAR(eventsLocation) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
 GVAR(eventsLocation) setText QGVAR(eventsLocation);
 
+// backwards comp
+DFUNC(canUseWeapon) = {
+    ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");
+    _this call CBA_fnc_canUseWeapon;
+};
+
+DFUNC(selectWeaponMode) = {
+    ACE_DEPRECATED("ace_common_fnc_selectWeaponMode","3.7.0","CBA_fnc_selectWeapon");
+    _this call CBA_fnc_selectWeapon;
+};
+
 GVAR(syncedEvents) = HASH_CREATE;
 GVAR(showHudHash) = [] call FUNC(hashCreate);
 
