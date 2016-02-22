@@ -135,15 +135,10 @@ class CfgVehicles {
                 priority = 1;
             };
         };
-        class Turrets;
     };
 
     class Helicopter_Base_H;
-    class Helicopter_Base_F: Helicopter {
-        class Turrets: Turrets {
-            class MainTurret;
-        };
-    };
+    class Helicopter_Base_F;
 
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
@@ -154,12 +149,7 @@ class CfgVehicles {
                 condition = "false";
             };
         };
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                animationSourceBody = "";
-                animationSourceGun = "";
-            };
-        };
+        class Turrets {};
     };
 
     class Heli_Light_02_base_F: Helicopter_Base_H {
