@@ -17,6 +17,12 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayInventory {
+        ADDON = QUOTE([ARR_2(ACE_player, _this select 0)] call FUNC(updateInventoryDisplay));
+    };
+};
+
 // handle preloaded missile
 class Extended_InitPost_EventHandlers {
     class CAManBase {

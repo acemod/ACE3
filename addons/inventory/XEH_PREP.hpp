@@ -2,7 +2,7 @@
 PREP(addCustomFilter);
 PREP(currentItemListBox);
 PREP(forceItemListUpdate);
-PREP(inventoryDisplayLoaded);
+PREP(inventoryDisplayLoad);
 PREP(onLBSelChanged);
 
 PREP(filterWeapons);
