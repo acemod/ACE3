@@ -1,23 +1,50 @@
+class ctrlToolbox;
+class ctrlEdit;
+
 class Cfg3DEN {
+    class Attributes {
+        class Default;
+        class Title: Default {
+            class Controls {
+                class Title;
+            };
+        };
+        class GVAR(isEngineer): Title {
+            attributeLoad = "(_this controlsGroupCtrl 100) lbsetcursel (((_value + 1) min 3) max 0);";
+            attributeSave = "(missionnamespace getvariable ['ace_isEng_temp',0]) - 1;";
+            class Controls: Controls {
+                class Title: Title{};
+                class Value: ctrlToolbox {
+                    idc = 100;
+                    style = "0x02";
+                    x = "48 * (pixelW * 	1.25 * 4)";
+                    w = "82 * (pixelW * 	1.25 * 4)";
+                    h = "5 * (pixelH * 	1.25 * 4)";
+                    rows = 1;
+                    columns = 4;
+                    strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};
+                    // tooltips[] = {""};
+                    values[] = {-1,0,1,2};
+                    onToolboxSelChanged = "missionnamespace setvariable ['ace_isEng_temp',_this select 1];";
+                };
+            };
+        };
+
+    };
+
     class Object {
         class AttributeCategories {
             class ace_attributes {
                 class Attributes {
                     class ace_isEngineer {
                         property = QUOTE(ace_isEngineer);
-                        value = 0;
-                        control = "Combo";
                         displayName = CSTRING(AssignEngineerRole_role_DisplayName);
                         tooltip = CSTRING(AssignEngineerRole_role_Description);
-                        expression = "_this setVariable ['%s',_value];";
+                        expression = "if (_value != -1) then {_this setVariable ['%s',_value, true];}";
                         typeName = "NUMBER";
                         condition = "objectBrain";
-                        defaultValue = 0;
-                        class values {
-                            class none {name = CSTRING(AssignEngineerRole_role_none); value = 0; default = 1;};
-                            class engineer {name = CSTRING(AssignEngineerRole_role_engineer); value = 1; default = 0;};
-                            class specialist {name = CSTRING(AssignEngineerRole_role_specialist); value = 2; default = 0;};
-                        };
+                        defaultValue = "-1";
+                        control = QGVAR(isEngineer);
                     };
                     class ace_isRepairVehicle {
                         property = QUOTE(ace_isRepairVehicle);
@@ -25,7 +52,7 @@ class Cfg3DEN {
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairVehicle_role_DisplayName);
                         tooltip = CSTRING(AssignRepairVehicle_role_Description);
-                        expression = "_this setVariable ['%s',_value];";
+                        expression = "_this setVariable ['%s',_value, true];";
                         typeName = "NUMBER";
                         condition = "objectVehicle";
                         defaultValue = 0;
@@ -36,7 +63,7 @@ class Cfg3DEN {
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairFacility_role_DisplayName);
                         tooltip = CSTRING(AssignRepairFacility_role_Description);
-                        expression = "_this setVariable ['%s',_value];";
+                        expression = "_this setVariable ['%s',_value, true];";
                         typeName = "NUMBER";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
                         defaultValue = 0;
