@@ -1,0 +1,1 @@
+#include "\z\ace\addons\ammoevents\script_component.hpp"

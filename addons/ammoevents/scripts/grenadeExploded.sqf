@@ -1,0 +1,1 @@
+_this call ace_frag_fnc_grenadeExploded;
