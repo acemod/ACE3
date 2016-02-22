@@ -49,6 +49,9 @@
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Inject_Adenosine">
+            <English>Inject Adenosine</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
             <German>Atropin injizieren</German>
@@ -240,6 +243,9 @@
             <Hungarian>Epinefrin beadása ...</Hungarian>
             <Portuguese>Injetando Epinefrina ...</Portuguese>
             <Italian>Inietto l'adrenalina ...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Adenosine">
+            <English>Injecting Adenosine ...</English>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine ...</English>
@@ -948,6 +954,15 @@
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Display">
+            <English>Adenosine autoinjector</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
+            <English>Used to counter effects of Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
+            <English>A drug used to counter the effects of Epinephrine</English>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -2065,6 +2080,9 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Activity_cpr">
+            <English>%1 started CPR</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
             <Spanish>%1 usó %2</Spanish>
@@ -3147,6 +3165,9 @@
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
             <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
+            <English>Basic Medical Settings [ACE]</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
             <Russian>Настройки усложненной медицины [ACE]</Russian>
@@ -3255,6 +3276,12 @@
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
+            <English>Allow Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
+            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование аптечки</Russian>
@@ -3338,6 +3365,12 @@
             <French>Le Kit de Premier Secours doit il être enlevé à l'utilisation?</French>
             <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
             <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
+            <English>Locations Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
+            <English>Where can the Epinephrine be used? (Basic Medical)</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3575,8 +3608,11 @@
             <Russian>Боль приглушается только временно</Russian>
             <Italian>Dolore è solo temporaneamente soppresso, non rimosso</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
+            <English>Configure the treatment settings from ACE Basic Medical</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
-            <English>Configure the treatment settings from ACE Medical</English>
+            <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>

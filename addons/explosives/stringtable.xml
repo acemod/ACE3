@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAll">
             <English>Detonate All</English>
-            <German>Zünden Alles</German>
+            <German>Alle Zünden</German>
             <Spanish>Detonar Todo</Spanish>
             <Russian>Подрыв всех</Russian>
             <Czech>Odpálit VŠE</Czech>
@@ -455,7 +455,7 @@
             <English>No triggers available for %1</English>
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
-            <German>Keine Auslöser vorhanden für %1</German>
+            <German>Keine Auslöser für %1 vorhanden</German>
             <French>Pas de mise à feu disponible pour %1</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
@@ -635,7 +635,7 @@
             <English>M6 SLAM Mine (Bottom Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
             <!-- <French>Mine M6 SLAM</French> -->
-            <!-- <German>M6-SLAM-Mine</German> -->
+            <German>M6-SLAM-Mine (Bodenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
@@ -647,7 +647,7 @@
             <English>M6 SLAM Mine (Side Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
             <!-- <French>Mine M6 SLAM</French> -->
-            <!-- <German>M6-SLAM-Mine</German> -->
+            <German>M6-SLAM-Mine (Seitenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
@@ -659,7 +659,7 @@
             <English>Large IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (městská)</Czech> -->
             <!-- <French>Grand engin explosif improvisé (urbain)</French> -->
-            <!-- <German>Große USBV (Stadt)</German> -->
+            <German>Große USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED grande (urbano)</Italian> -->
             <!-- <Polish>Duży IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
@@ -671,7 +671,7 @@
             <English>Large IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
             <!-- <French>Grand engin explosif improvisé (enterré)</French> -->
-            <!-- <German>Große USBV (Eingegraben)</German> -->
+            <German>Große USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED grande (interrato)</Italian> -->
             <!-- <Polish>Duży IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
@@ -683,7 +683,7 @@
             <English>Small IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (městská)</Czech> -->
             <!-- <French>Petit engin explosif improvisé (urbain)</French> -->
-            <!-- <German>Kleine USBV (Stadt)</German> -->
+            <German>Kleine USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED piccolo (urbano)</Italian> -->
             <!-- <Polish>Mały IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
@@ -695,7 +695,7 @@
             <English>Small IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
             <!-- <French>Petit engin explosif improvisé (enterré)</French> -->
-            <!-- <German>Kleine USBV (Eingegraben)</German> -->
+            <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED piccolo (interrato)</Italian> -->
             <!-- <Polish>Mały IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->

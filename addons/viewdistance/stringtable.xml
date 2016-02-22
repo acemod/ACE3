@@ -255,6 +255,7 @@
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
+            <German>Sichtfeld basierend</German>
             <Russian>Зависит от зума</Russian>
             <Portuguese>Baseado em FoV</Portuguese>
             <Czech>Založeno na FoV</Czech>

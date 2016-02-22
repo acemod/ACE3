@@ -64,6 +64,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
+if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;

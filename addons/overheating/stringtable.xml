@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
-            <German>Ungenauigkeit bei Überhitzung</German>
+            <German>Streuung bei Überhitzung</German>
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
         </Key>

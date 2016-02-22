@@ -2,11 +2,6 @@
 
 ADDON = false;
 
-PREP(checkTaggable);
-PREP(createTag);
-PREP(tagDirection);
-PREP(tagGround);
-PREP(tagWall);
-PREP(tagTestingThread);
+#include "XEH_PREP.hpp"
 
 ADDON = true;
