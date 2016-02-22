@@ -5,11 +5,12 @@ import sys
 import subprocess
 
 def writeAmmoConfig(f, ammo, ammoLibrary, ammoWritten, explosionEffectsLibrary):
-    if not ammo in ammoLibrary:
-        f.write('\tclass ' + ammo + ';\n')
+    if ammo in ammoWritten:
         return
 
-    if ammo in ammoWritten:
+    if not ammo in ammoLibrary:
+        f.write('\tclass ' + ammo + ';\n')
+        ammoWritten[ammo] = True
         return
 
     ammoParent, explosionEffects, explosionEffectsParent = ammoLibrary[ammo]
@@ -32,7 +33,7 @@ def writeAmmoConfig(f, ammo, ammoLibrary, ammoWritten, explosionEffectsLibrary):
 
 def main():
     # Read vanilla data from RPT
-    file_rpt = 'C:/Users/nico/AppData/Local/Arma 3/arma3_2016-02-22_01-30-14.rpt'
+    file_rpt = 'C:/Users/nico/AppData/Local/Arma 3/arma3_2016-02-22_01-44-11.rpt'
     ammoLibrary = {}
     with open(file_rpt, 'r') as f:
         for line in f:
