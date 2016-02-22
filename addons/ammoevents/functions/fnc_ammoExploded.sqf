@@ -15,7 +15,8 @@
 #include "script_component.hpp"
 
 params ["_posAGL", "_ammo"];
-TRACE_2("GrenadeExploded:",_posAGL,_ammo);
+TRACE_2("AmmoExploded:",_posAGL,_ammo);
+hintSilent format ["AmmoExploded: %1 %2",_posAGL,_ammo];
 [{
     ["AmmoExploded", _this] call EFUNC(common,localEvent);
 }, _this] call EFUNC(common,execNextFrame);

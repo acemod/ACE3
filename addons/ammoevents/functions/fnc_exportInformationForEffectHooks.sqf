@@ -23,7 +23,7 @@ for "_i" from 0 to (count _cfgAmmo)-1 do {
         private _ammoParent = configName inheritsFrom _ammoConfig;
         private _ammo = configName _ammoConfig;
         private _explosive = getNumber (_ammoConfig >> "explosive");
-        if (_explosive == 1) then {
+        if (_explosive > 0) then {
             // This ammo is explosive
             private _explosionEffects = getText (_ammoConfig >> "explosionEffects");
 
