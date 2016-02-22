@@ -101,10 +101,6 @@ class RscDisplayMovieInterrupt: RscStandardDisplay {
     };
 };
 class RscDisplayMain: RscStandardDisplay {
-    //Hide the button if there is no world (-world=empty)
-    //Seems odd to use onMouseMoving, but I don't want to overload onLoad
-    onMouseMoving = QUOTE(((_this select 0) displayCtrl 80085) ctrlShow (missionName != '');  _this execVM QUOTE(QUOTE(PATHTOF(script_loadMainMenuBox.sqf))););
-
     class controls {
         class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
             action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";

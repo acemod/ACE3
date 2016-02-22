@@ -69,6 +69,7 @@ _callback = if (isNil _callback) then {
 } else {
     missionNamespace getVariable _callback
 };
+if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 _args call _callback;
 

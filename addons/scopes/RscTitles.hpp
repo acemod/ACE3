@@ -1,5 +1,6 @@
 
 class RscText;
+class RscPicture;
 
 class RscTitles {
     class ACE_Scopes_Zeroing {
@@ -12,8 +13,6 @@ class RscTitles {
         fadein = 0;
         fadeout = 0;
         name = QGVAR(Zeroing);
-        class RscPicture;
-        class RscText;
         class controls {
             class ACE_Scopes_Zeroing_BG : RscPicture {
                 idc = 11;
@@ -69,13 +68,3 @@ class RscTitles {
         };
     };
 };
-
-/*
-class RscInGameUI {
-    class RscUnitInfo;
-    class RscWeaponZeroing : RscUnitInfo {
-        onLoad = QUOTE([ARR_4('onLoad',_this,'RscUnitInfo','IGUI')] call compile preprocessfilelinenumbers 'A3\ui_f\scripts\initDisplay.sqf'; uiNamespace setVariable [ARR_2('ACE_dlgWeaponZeroing', _this select 0)]; );
-        //onLoad = "[""onLoad"",_this,""RscUnitInfo"",'IGUI'] call compile preprocessfilelinenumbers ""A3\ui_f\scripts\initDisplay.sqf""; uiNamespace setVariable ['ACE_dlgWeaponZeroing', _this select 0];";
-    };
-};
-*/

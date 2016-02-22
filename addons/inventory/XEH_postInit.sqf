@@ -5,8 +5,6 @@ if (!hasInterface) exitWith {};
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
 
-["inventoryDisplayLoaded", {_this call FUNC(inventoryDisplayLoaded)}] call EFUNC(common,addEventHandler);
-
 // add custom filters
 
 // generate list of grenades

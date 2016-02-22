@@ -165,6 +165,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
+            <German>Objektgröße</German>
             <Polish>Rozmiar obiektu</Polish>
             <Italian>Dimensioni dell'oggetto</Italian>
         </Key>

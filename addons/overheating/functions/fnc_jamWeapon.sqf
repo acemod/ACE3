@@ -46,7 +46,7 @@ GVAR(knowAboutJam) = false;
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 
     private _condition = {
-        [_this select 1] call EFUNC(common,canUseWeapon)
+        [_this select 1] call CBA_fnc_canUseWeapon
         && {currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(jammedWeapons), []])}
         && {!(currentMuzzle (_this select 1) in ((_this select 1) getVariable [QEGVAR(safemode,safedWeapons), []]))}
     };

@@ -2,10 +2,6 @@
 
 ADDON = false;
 
-PREP(addMissileReloadActions);
-PREP(canLoad);
-PREP(getLoadableMissiles);
-PREP(load);
-PREP(reloadLauncher);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

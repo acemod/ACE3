@@ -2,11 +2,6 @@
 
 ADDON = false;
 
-PREP(adaptViewDistance);
-PREP(changeViewDistance);
-PREP(initModule);
-PREP(returnObjectCoeff);
-PREP(returnValue);
-PREP(setFovBasedOvdPFH);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

@@ -293,31 +293,6 @@ if (!hasInterface) exitWith {};
 
 call FUNC(assignedItemFix);
 
-GVAR(ScrollWheelFrame) = diag_frameno;
-
-["mainDisplayLoaded", {
-    [{
-        call FUNC(handleScrollWheelInit);
-        call FUNC(handleModifierKeyInit);
-    }, [], 0.1] call FUNC(waitAndExecute); // needs delay, otherwise doesn't work without pressing "RESTART" in editor once. Tested in 1.52RC
-}] call FUNC(addEventHandler);
-
-// add PFH to execute event that fires when the main display (46) is created
-private _fnc_initMainDisplayCheck = {
-    [{
-        if !(isNull findDisplay 46) then {
-            // Raise ACE event locally
-            ["mainDisplayLoaded", [findDisplay 46]] call FUNC(localEvent);
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 0, []] call CBA_fnc_addPerFrameHandler;
-};
-
-call _fnc_initMainDisplayCheck;
-
-// repeat this every time a savegame is loaded
-addMissionEventHandler ["Loaded", _fnc_initMainDisplayCheck];
-
 // @todo remove?
 enableCamShake true;
 
@@ -343,17 +318,6 @@ enableCamShake true;
 //////////////////////////////////////////////////
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
-
-//CBA has events for zeus's display onLoad and onUnload (Need to delay a frame for display to be ready)
-private _zeusDisplayChangedFNC = {
-    [{
-        private _data = !(isNull findDisplay 312);
-        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    }, []] call FUNC(execNextFrame);
-};
-["CBA_curatorOpened", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-["CBA_curatorClosed", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-
 
 // default variables
 GVAR(OldPlayerVehicle) = vehicle objNull;
@@ -442,14 +406,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         // Raise ACE event locally
         GVAR(OldVisibleMap) = _data;
         ["visibleMapChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "inventoryDisplayChanged" event
-    _data = !(isNull findDisplay 602);
-    if !(_data isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
-        // Raise ACE event locally
-        GVAR(OldInventoryDisplayIsOpen) = _data;
-        ["inventoryDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
     };
 
     // "activeCameraChanged" event
