@@ -21,7 +21,7 @@ class CfgVehicles {
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
-        scope = 2;
+        scope = 1;
         model = PATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
         class AnimationSources: AnimationSources {
@@ -39,7 +39,7 @@ class CfgVehicles {
     };
     class ACE_friesGantry: ACE_friesBase {
         author = "jokoho48";
-        scope = 2;
+        scope = 1;
         model = PATHTOF(data\friesGantry.p3d);
         animated = 1;
         class AnimationSources: AnimationSources {
@@ -147,7 +147,7 @@ class CfgVehicles {
 
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
-        scope = 2;
+        scope = 1;
         model = PATHTOF(data\helper.p3d);
         class ACE_Actions {
             class ACE_MainActions {
