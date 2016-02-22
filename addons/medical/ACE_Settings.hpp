@@ -133,6 +133,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class GVAR(medicSetting_basicEpi) {
+        category = CSTRING(Category_Medical);
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
+    };
     class GVAR(medicSetting_PAK) {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
@@ -156,6 +162,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {"No", "Yes"};
+    };
+    class GVAR(useLocation_basicEpi) {
+        category = CSTRING(Category_Medical);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useLocation_PAK) {
         category = CSTRING(Category_Medical);

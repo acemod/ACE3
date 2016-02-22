@@ -12,4 +12,8 @@
  */
 #include "script_component.hpp"
 
-(findDisplay 46) displayAddEventHandler ["MouseZChanged", QUOTE(_this call FUNC(handleScrollWheel))];
+disableSerialization;
+
+params ["_display"];
+
+_display displayAddEventHandler ["MouseZChanged", QUOTE(_this call FUNC(handleScrollWheel))];
