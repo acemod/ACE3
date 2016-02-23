@@ -40,8 +40,8 @@ GVAR(CurrentSpeedDial) = 0;
 // placed mine.
 if (isServer) then {
     ["clientRequestsOrientation", {
-        params ["_client"];
-        ["serverSendsOrientations", _client, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
+        params ["_logic"];
+        ["serverSendsOrientations", _logic, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
 } else {
     ["serverSendsOrientations", {
@@ -52,8 +52,9 @@ if (isServer) then {
         } forEach _explosivesOrientations;
     }] call EFUNC(common,addEventHandler);
 
-    private _client = owner ACE_player;
-    ["clientRequestsOrientations", [_client]] call EFUNC(common,serverEvent);
+    //  Create a local logic to use a client ID
+    private _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    ["clientRequestsOrientations", [_logic]] call EFUNC(common,serverEvent);
 };
 
 ["interactMenuOpened", {
