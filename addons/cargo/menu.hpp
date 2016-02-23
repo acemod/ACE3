@@ -67,7 +67,7 @@ class GVAR(menu) {
             colorSelectBackground[] = {0.3, 0.3, 0.3, 1.0};
             colorSelectBackground2[] = {0.3, 0.3, 0.3, 1.0};
         };
-        class btnUnload: ACE_gui_buttonBase {
+        class btnCancel: ACE_gui_buttonBase {
             text = "Cancel";
             idc = 11;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -93,7 +93,7 @@ class GVAR(menu) {
             periodOver = 1;
             action = QUOTE(closeDialog 0);
         };
-        class btnCancel: btnUnload {
+        class btnUnload: btnCancel {
             text = CSTRING(unloadObject);
             idc = 12;
             x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
