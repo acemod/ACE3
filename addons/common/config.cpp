@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_main","ace_modules"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
-        VERSION_CONFIG;
+        VERSION_CONFIG_COMMON;
     };
 };
 
@@ -85,14 +85,6 @@ class CfgUIGrids {
         };
     };
 };
-
-/*
-// check dll
-class RscStandardDisplay;
-class RscDisplayMain: RscStandardDisplay {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getVariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
-};
-*/
 
 class ACE_Extensions {
     extensions[] = {};

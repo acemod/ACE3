@@ -74,31 +74,31 @@
             <Italian>Riarma</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmAction">
-            <English>Rearming %1 with %2 ...</English>
-            <German>Munitioniere %1 auf mit %2 ...</German>
-            <Polish>Przezbrajanie %1 przy pomocy %2 ...</Polish>
-            <Russian>Перевооружается %1 снарядами %2 ...</Russian>
-            <Portuguese>Rearmando %1 com %2 ...</Portuguese>
-            <Czech>Přezbrojuji %1 za pomoci %2 ...</Czech>
-            <Italian>Sto Riarmando %1 con %2 ...</Italian>
+            <English>Rearming %1 with %2...</English>
+            <German>Munitioniere %1 auf mit %2...</German>
+            <Polish>Przezbrajanie %1 przy pomocy %2...</Polish>
+            <Russian>Перевооружается %1 снарядами %2...</Russian>
+            <Portuguese>Rearmando %1 com %2...</Portuguese>
+            <Czech>Přezbrojuji %1 za pomoci %2...</Czech>
+            <Italian>Sto Riarmando %1 con %2...</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_BasicRearmAction">
-            <English>Rearming %1 ...</English>
-            <German>Munitioniere %1 auf ...</German>
-            <Polish>Przezbrajanie %1 ...</Polish>
-            <Russian>Перевооружается %1 ...</Russian>
-            <Portuguese>Rearmando %1 ...</Portuguese>
-            <Czech>Přezbrojuji %1 ...</Czech>
-            <Italian>Riarmando %1 ...</Italian>
+            <English>Rearming %1...</English>
+            <German>Munitioniere %1 auf...</German>
+            <Polish>Przezbrajanie %1...</Polish>
+            <Russian>Перевооружается %1...</Russian>
+            <Portuguese>Rearmando %1...</Portuguese>
+            <Czech>Přezbrojuji %1...</Czech>
+            <Italian>Riarmando %1...</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAction">
-            <English>Taking %1 for %2 ...</English>
-            <German>Nehme %1 für %2 ...</German>
-            <Polish>Pobieranie %1 dla %2 ...</Polish>
-            <Russian>Забираем %1 для %2 ...</Russian>
-            <Portuguese>Pegando %1 para %2 ...</Portuguese>
-            <Czech>Beru %1 pro %2 ...</Czech>
-            <Italian>Sto prendendo %1 per %2 ...</Italian>
+            <English>Taking %1 for %2...</English>
+            <German>Nehme %1 für %2...</German>
+            <Polish>Pobieranie %1 dla %2...</Polish>
+            <Russian>Забираем %1 для %2...</Russian>
+            <Portuguese>Pegando %1 para %2...</Portuguese>
+            <Czech>Beru %1 pro %2...</Czech>
+            <Italian>Sto prendendo %1 per %2...</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAmmo">
             <English>Take ammo</English>
@@ -128,21 +128,21 @@
             <Italian>Riponi munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmoAction">
-            <English>Storing %1 in %2 ...</English>
-            <German>Verstaue %1 in %2 ...</German>
-            <Polish>Przechowywanie %1 w %2 ...</Polish>
-            <Russian>Сохраняется %1 в %2 ...</Russian>
-            <Portuguese>Guardando %1 em %2 ...</Portuguese>
-            <Czech>Ukládám %1 v %2 ...</Czech>
-            <Italian>Sto riponendo %1 in %2 ...</Italian>
+            <English>Storing %1 in %2...</English>
+            <German>Verstaue %1 in %2...</German>
+            <Polish>Przechowywanie %1 w %2...</Polish>
+            <Russian>Сохраняется %1 в %2...</Russian>
+            <Portuguese>Guardando %1 em %2...</Portuguese>
+            <Czech>Ukládám %1 v %2...</Czech>
+            <Italian>Sto riponendo %1 in %2...</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_GrabAction">
-            <English>Picking up ammo ...</English>
-            <German>Nehme Munition ...</German>
-            <Polish>Podnoszenie amunicji ...</Polish>
-            <Russian>Поднятие боекомплекта ...</Russian>
-            <Portuguese>Pegando munição ...</Portuguese>
-            <Italian>Sto raccogliendo le munizioni ...</Italian>
+            <English>Picking up ammo...</English>
+            <German>Nehme Munition...</German>
+            <Polish>Podnoszenie amunicji...</Polish>
+            <Russian>Поднятие боекомплекта...</Russian>
+            <Portuguese>Pegando munição...</Portuguese>
+            <Italian>Sto raccogliendo le munizioni...</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>

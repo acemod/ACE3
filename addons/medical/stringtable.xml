@@ -14,15 +14,15 @@
             <Portuguese>FERIMENTOS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
-            <English>No injuries on this bodypart ...</English>
-            <German>Körperteil nicht verletzt ...</German>
-            <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
-            <Russian>Данная часть тела не повреждена ...</Russian>
-            <French>Aucune blessures sur cette partie du corps ...</French>
-            <Polish>Brak obrażeń na tej części ciała ...</Polish>
-            <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
-            <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
-            <Czech>Žádné zranění na této části těla ...</Czech>
+            <English>No injuries on this bodypart...</English>
+            <German>Körperteil nicht verletzt...</German>
+            <Italian>Non ci sono lesioni in questa parte del corpo...</Italian>
+            <Russian>Данная часть тела не повреждена...</Russian>
+            <French>Aucune blessures sur cette partie du corps...</French>
+            <Polish>Brak obrażeń na tej części ciała...</Polish>
+            <Spanish>Sin heridas en esta parte del cuerpo...</Spanish>
+            <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
+            <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
@@ -221,102 +221,102 @@
             <Italian>Benda la gamba destra</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Morphine">
-            <English>Injecting Morphine ...</English>
-            <German>Morphin injizieren ...</German>
-            <Spanish>Inyectando Morfina ...</Spanish>
-            <Polish>Wstrzykiwanie morfiny ...</Polish>
-            <Czech>Aplikuji morfin ...</Czech>
-            <Russian>Введение морфина ...</Russian>
+            <English>Injecting Morphine...</English>
+            <German>Morphin injizieren...</German>
+            <Spanish>Inyectando Morfina...</Spanish>
+            <Polish>Wstrzykiwanie morfiny...</Polish>
+            <Czech>Aplikuji morfin...</Czech>
+            <Russian>Введение морфина...</Russian>
             <French>Injection de Morphine...</French>
-            <Hungarian>Morfium beadása ...</Hungarian>
-            <Portuguese>Injetando Morfina ...</Portuguese>
-            <Italian>Inietto la morfina ...</Italian>
+            <Hungarian>Morfium beadása...</Hungarian>
+            <Portuguese>Injetando Morfina...</Portuguese>
+            <Italian>Inietto la morfina...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
-            <English>Injecting Epinephrine ...</English>
-            <German>Epinephrin injizieren ...</German>
-            <Spanish>Inyectando Epinefrina ...</Spanish>
-            <Polish>Wstrzykiwanie adrenaliny ...</Polish>
-            <Czech>Aplikuji adrenalin ...</Czech>
-            <Russian>Введение адреналина ...</Russian>
-            <French>Injection d'Adrénaline ...</French>
-            <Hungarian>Epinefrin beadása ...</Hungarian>
-            <Portuguese>Injetando Epinefrina ...</Portuguese>
-            <Italian>Inietto l'adrenalina ...</Italian>
+            <English>Injecting Epinephrine...</English>
+            <German>Epinephrin injizieren...</German>
+            <Spanish>Inyectando Epinefrina...</Spanish>
+            <Polish>Wstrzykiwanie adrenaliny...</Polish>
+            <Czech>Aplikuji adrenalin...</Czech>
+            <Russian>Введение адреналина...</Russian>
+            <French>Injection d'Adrénaline...</French>
+            <Hungarian>Epinefrin beadása...</Hungarian>
+            <Portuguese>Injetando Epinefrina...</Portuguese>
+            <Italian>Inietto l'adrenalina...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
-            <English>Injecting Adenosine ...</English>
+            <English>Injecting Adenosine...</English>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
-            <English>Injecting Atropine ...</English>
-            <German>Atropin injizieren ...</German>
-            <Spanish>Inyectando Atropina ...</Spanish>
-            <Czech>Aplikuji atropin ...</Czech>
-            <Polish>Wstrzykiwanie atropiny ...</Polish>
-            <French>Injection d'Atropine ...</French>
-            <Russian>Введение атропина ...</Russian>
-            <Hungarian>Atropin beadása ...</Hungarian>
-            <Italian>Inietto l'atropina ...</Italian>
+            <English>Injecting Atropine...</English>
+            <German>Atropin injizieren...</German>
+            <Spanish>Inyectando Atropina...</Spanish>
+            <Czech>Aplikuji atropin...</Czech>
+            <Polish>Wstrzykiwanie atropiny...</Polish>
+            <French>Injection d'Atropine...</French>
+            <Russian>Введение атропина...</Russian>
+            <Hungarian>Atropin beadása...</Hungarian>
+            <Italian>Inietto l'atropina...</Italian>
             <Portuguese>Injetando Atropina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
-            <English>Transfusing Blood ...</English>
-            <German>Bluttransfusion ...</German>
-            <Spanish>Transfusión de sangre ...</Spanish>
-            <Polish>Przetaczanie krwi ...</Polish>
-            <Czech>Probíhá transfúze krve ...</Czech>
-            <Russian>Переливание крови ...</Russian>
-            <French>Transfusion Sanguine ...</French>
-            <Hungarian>Infúzió vérrel ...</Hungarian>
-            <Portuguese>Transfundindo Sangue ...</Portuguese>
-            <Italian>Effettuo la trasfusione di sangue ...</Italian>
+            <English>Transfusing Blood...</English>
+            <German>Bluttransfusion...</German>
+            <Spanish>Transfusión de sangre...</Spanish>
+            <Polish>Przetaczanie krwi...</Polish>
+            <Czech>Probíhá transfúze krve...</Czech>
+            <Russian>Переливание крови...</Russian>
+            <French>Transfusion Sanguine...</French>
+            <Hungarian>Infúzió vérrel...</Hungarian>
+            <Portuguese>Transfundindo Sangue...</Portuguese>
+            <Italian>Effettuo la trasfusione di sangue...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
-            <English>Transfusing Saline ...</English>
-            <German>Salzlösungtransfusion ...</German>
-            <Spanish>Transfusión de salino ...</Spanish>
-            <Czech>Probíha transfúze fyziologického roztoku ...</Czech>
-            <Polish>Przetaczanie soli fizjologicznej ...</Polish>
-            <French>Transfusion de saline ...</French>
-            <Russian>Переливание физраствора ...</Russian>
-            <Hungarian>Infúzió sós vizzel ...</Hungarian>
+            <English>Transfusing Saline...</English>
+            <German>Salzlösungtransfusion...</German>
+            <Spanish>Transfusión de salino...</Spanish>
+            <Czech>Probíha transfúze fyziologického roztoku...</Czech>
+            <Polish>Przetaczanie soli fizjologicznej...</Polish>
+            <French>Transfusion de saline...</French>
+            <Russian>Переливание физраствора...</Russian>
+            <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
             <Portuguese>Transfundindo Soro...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
-            <English>Transfusing Plasma ...</English>
-            <German>Plasmatransfusion ...</German>
-            <Spanish>Transfusión de plasma ...</Spanish>
-            <Czech>Probíha transfúze plazmy ...</Czech>
-            <Polish>Przetaczanie osocza ...</Polish>
-            <French>Transfusion de Plasma ...</French>
-            <Russian>Переливание плазмы ...</Russian>
-            <Hungarian>Infúzió vérplazmával ...</Hungarian>
-            <Italian>Effettu la trasfusione di plasma ...</Italian>
+            <English>Transfusing Plasma...</English>
+            <German>Plasmatransfusion...</German>
+            <Spanish>Transfusión de plasma...</Spanish>
+            <Czech>Probíha transfúze plazmy...</Czech>
+            <Polish>Przetaczanie osocza...</Polish>
+            <French>Transfusion de Plasma...</French>
+            <Russian>Переливание плазмы...</Russian>
+            <Hungarian>Infúzió vérplazmával...</Hungarian>
+            <Italian>Effettu la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo Plasma...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaging">
-            <English>Bandaging ...</English>
-            <German>Verbinden ...</German>
-            <Spanish>Vendando ...</Spanish>
-            <Polish>Bandażowanie ...</Polish>
-            <Czech>Obvazuji ...</Czech>
-            <French>Pansement ...</French>
-            <Italian>Sto bendando ...</Italian>
-            <Hungarian>Bekötözés ...</Hungarian>
-            <Portuguese>Atando ...</Portuguese>
-            <Russian>Перевязывание ...</Russian>
+            <English>Bandaging...</English>
+            <German>Verbinden...</German>
+            <Spanish>Vendando...</Spanish>
+            <Polish>Bandażowanie...</Polish>
+            <Czech>Obvazuji...</Czech>
+            <French>Pansement...</French>
+            <Italian>Sto bendando...</Italian>
+            <Hungarian>Bekötözés...</Hungarian>
+            <Portuguese>Atando...</Portuguese>
+            <Russian>Перевязывание...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
-            <English>Applying Tourniquet ...</English>
-            <German>Setze Tourniquet an ...</German>
-            <Spanish>Aplicando torniquete ...</Spanish>
-            <Czech>Aplikuji škrtidlo ...</Czech>
-            <Polish>Zakładanie stazy ...</Polish>
-            <French>Mise en place du Garrot ...</French>
-            <Russian>Наложение жгута ...</Russian>
-            <Hungarian>Érszorító felhelyezése ...</Hungarian>
-            <Italian>Sto applicando il laccio emostatico ...</Italian>
+            <English>Applying Tourniquet...</English>
+            <German>Setze Tourniquet an...</German>
+            <Spanish>Aplicando torniquete...</Spanish>
+            <Czech>Aplikuji škrtidlo...</Czech>
+            <Polish>Zakładanie stazy...</Polish>
+            <French>Mise en place du Garrot...</French>
+            <Russian>Наложение жгута...</Russian>
+            <Hungarian>Érszorító felhelyezése...</Hungarian>
+            <Italian>Sto applicando il laccio emostatico...</Italian>
             <Portuguese>Applicando Torniquete</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Medical">
@@ -464,15 +464,15 @@
             <Portuguese>Diagnosticar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnosing">
-            <English>Diagnosing ...</English>
-            <German>Diagnostizieren ...</German>
+            <English>Diagnosing...</English>
+            <German>Diagnostizieren...</German>
             <Italian>Diagnosi in corso...</Italian>
-            <Russian>Диагностика ...</Russian>
+            <Russian>Диагностика...</Russian>
             <French>Diagnostic en cours</French>
-            <Polish>Diagnozowanie ...</Polish>
-            <Spanish>Diagnosticando ...</Spanish>
+            <Polish>Diagnozowanie...</Polish>
+            <Spanish>Diagnosticando...</Spanish>
             <Hungarian>Diagnózis folyamatban...</Hungarian>
-            <Czech>Diagnostika ...</Czech>
+            <Czech>Diagnostika...</Czech>
             <Portuguese>Diagnosticando...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CPR">
@@ -488,15 +488,15 @@
             <Portuguese>SBV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
-            <English>Performing CPR ...</English>
-            <German>HLW durchführen ...</German>
+            <English>Performing CPR...</English>
+            <German>HLW durchführen...</German>
             <Italian>Eseguendo RCP...</Italian>
-            <Russian>Сердечно-лёгочная реанимация ...</Russian>
+            <Russian>Сердечно-лёгочная реанимация...</Russian>
             <French>RPC en cours</French>
-            <Polish>Przeprowadzanie RKO ...</Polish>
-            <Spanish>Realizando RCP ...</Spanish>
+            <Polish>Przeprowadzanie RKO...</Polish>
+            <Spanish>Realizando RCP...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
-            <Czech>Provádím CPR ...</Czech>
+            <Czech>Provádím CPR...</Czech>
             <Portuguese>Realizando o SBV...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
@@ -1398,15 +1398,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
-            <French>Mesure de la tension ...</French>
-            <Russian>Проверка артериального давления ...</Russian>
+            <French>Mesure de la tension...</French>
+            <Russian>Проверка артериального давления...</Russian>
             <Spanish>Comprobando presión arterial...</Spanish>
             <Polish>Sprawdzanie ciśnienia krwi...</Polish>
             <German>Blutdruck kontrollieren...</German>
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
-            <Czech>Kontroluji krevní tlak ...</Czech>
+            <Czech>Kontroluji krevní tlak...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1565,16 +1565,16 @@
             <Czech>Tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Content">
-            <English>Checking Heart Rate ...</English>
-            <French>Vérification du rythme cardiaque ...</French>
-            <Russian>Проверка пульса ...</Russian>
-            <Spanish>Comprobando ritmo cardíaco ...</Spanish>
-            <Polish>Sprawdzanie tętna ...</Polish>
-            <German>Kontrolliere Herzfrequenz ...</German>
+            <English>Checking Heart Rate...</English>
+            <French>Vérification du rythme cardiaque...</French>
+            <Russian>Проверка пульса...</Russian>
+            <Spanish>Comprobando ritmo cardíaco...</Spanish>
+            <Polish>Sprawdzanie tętna...</Polish>
+            <German>Kontrolliere Herzfrequenz...</German>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
-            <Italian>Controllando il battito cardiaco ...</Italian>
-            <Portuguese>Aferindo Pulso ...</Portuguese>
-            <Czech>Kontroluji srdeční tep ...</Czech>
+            <Italian>Controllando il battito cardiaco...</Italian>
+            <Portuguese>Aferindo Pulso...</Portuguese>
+            <Czech>Kontroluji srdeční tep...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
@@ -1729,7 +1729,7 @@
             <German>Du prüfst ob der Patient ansprechbar ist</German>
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
             <Italian>Controlli la risposta del paziente</Italian>
-            <Portuguese>Aferindo se o paciente tem reação...</Portuguese>
+            <Portuguese>Aferindo se o paciente tem reação</Portuguese>
             <Czech>Zkontroloval jsi reakci pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Responsive">
@@ -1921,7 +1921,7 @@
             <Polish>Szycie</Polish>
             <Hungarian>Összevarrás</Hungarian>
             <Italian>Suturando</Italian>
-            <Portuguese>Suturando...</Portuguese>
+            <Portuguese>Suturando</Portuguese>
             <Czech>Šití</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_You_Treat_Airway">
@@ -2057,16 +2057,16 @@
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
-            <English>Placing body in bodybag</English>
-            <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Упаковка тела ...</Russian>
-            <German>Körper wird in Leichensack gepackt</German>
-            <Polish>Pakowanie ciała do worka na zwłoki ...</Polish>
-            <French>Placement du corps dans la housse</French>
-            <Hungarian>Test hullazsákba helyezése ...</Hungarian>
-            <Italian>Stai mettendo il corpo nella sacca</Italian>
+            <English>Placing body in bodybag...</English>
+            <Spanish>Colocando cuerpo en bolsa para cadáveres...</Spanish>
+            <Russian>Упаковка тела...</Russian>
+            <German>Körper wird in Leichensack gepackt...</German>
+            <Polish>Pakowanie ciała do worka na zwłoki...</Polish>
+            <French>Placement du corps dans la housse...</French>
+            <Hungarian>Test hullazsákba helyezése...</Hungarian>
+            <Italian>Stai mettendo il corpo nella sacca...</Italian>
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
-            <Czech>Umístňuji tělo do pytle na mrtvoly</Czech>
+            <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2748,28 +2748,28 @@
             <Czech>Zlomená stehenní kost</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
-            <English>Treating ...</English>
-            <German>Behandeln ...</German>
-            <Hungarian>Ellátás ...</Hungarian>
-            <Polish>Opatrywanie ran ...</Polish>
-            <French>Traitement ...</French>
-            <Russian>Лечение ...</Russian>
-            <Spanish>Tratando ...</Spanish>
+            <English>Treating...</English>
+            <German>Behandeln...</German>
+            <Hungarian>Ellátás...</Hungarian>
+            <Polish>Opatrywanie ran...</Polish>
+            <French>Traitement...</French>
+            <Russian>Лечение...</Russian>
+            <Spanish>Tratando...</Spanish>
             <Portuguese>Tratando...</Portuguese>
-            <Czech>Ošetřuji ...</Czech>
-            <Italian>Curando ...</Italian>
+            <Czech>Ošetřuji...</Czech>
+            <Italian>Curando...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
-            <English>Removing Tourniquet ...</English>
-            <German>Tourniquet entfernen ...</German>
-            <Polish>Zdejmowanie stazy ...</Polish>
-            <Spanish>Quitando torniquete ...</Spanish>
-            <French>Retire le tourniquet ...</French>
+            <English>Removing Tourniquet...</English>
+            <German>Tourniquet entfernen...</German>
+            <Polish>Zdejmowanie stazy...</Polish>
+            <Spanish>Quitando torniquete...</Spanish>
+            <French>Retire le tourniquet...</French>
             <Portuguese>Removendo torniquete...</Portuguese>
-            <Hungarian>Érszorító eltávolítása ...</Hungarian>
-            <Czech>Sundavám škrtidlo ...</Czech>
-            <Russian>Снятие жгута ...</Russian>
-            <Italian>Togliendo il laccio emostatico ...</Italian>
+            <Hungarian>Érszorító eltávolítása...</Hungarian>
+            <Czech>Sundavám škrtidlo...</Czech>
+            <Russian>Снятие жгута...</Russian>
+            <Italian>Togliendo il laccio emostatico...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
@@ -3189,7 +3189,7 @@
             <Czech>Povoleno pro</Czech>
             <Portuguese>Habilitado para</Portuguese>
             <French>Activer pour</French>
-            <Hungarian>Engedélyezve...</Hungarian>
+            <Hungarian>Engedélyezve</Hungarian>
             <Italian>Abilitato per</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">

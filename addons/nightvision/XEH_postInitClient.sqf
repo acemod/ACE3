@@ -34,7 +34,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     _this call FUNC(updatePPEffects);
     _this call FUNC(onVisionModeChanged);
 }] call EFUNC(common,addEventHandler);
-["zeusDisplayChanged",      {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+
 ["cameraViewChanged",       {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onCameraViewChanged);

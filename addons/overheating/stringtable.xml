@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
-            <German>Ungenauigkeit bei Überhitzung</German>
+            <German>Streuung bei Überhitzung</German>
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
         </Key>
@@ -134,16 +134,16 @@
             <Italian>Sostiuisci la canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
-            <English>Swapping barrel ...</English>
-            <German>Lauf wird gewechselt ...</German>
-            <Spanish>Cambiando el cañón ...</Spanish>
-            <Polish>Wymienianie lufy ...</Polish>
-            <Czech>Vyměňuji hlaveň ...</Czech>
-            <French>Changement du canon ...</French>
-            <Russian>Смена ствола ...</Russian>
-            <Hungarian>Cső kicserélése folyamatban ...</Hungarian>
-            <Portuguese>Substituindo cano ...</Portuguese>
-            <Italian>Sto sostituendo la canna ...</Italian>
+            <English>Swapping barrel...</English>
+            <German>Lauf wird gewechselt...</German>
+            <Spanish>Cambiando el cañón...</Spanish>
+            <Polish>Wymienianie lufy...</Polish>
+            <Czech>Vyměňuji hlaveň...</Czech>
+            <French>Changement du canon...</French>
+            <Russian>Смена ствола...</Russian>
+            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
+            <Portuguese>Substituindo cano...</Portuguese>
+            <Italian>Sto sostituendo la canna...</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
             <English>Swapped barrel</English>
@@ -182,16 +182,16 @@
             <Italian>Controlla la temperatura della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
-            <English>Checking temperature ...</English>
-            <German>Prüfe Temperatur ...</German>
-            <Spanish>Verificando temperatura ...</Spanish>
-            <Polish>Sprawdzanie temperatury ...</Polish>
-            <French>Vérification de la température ...</French>
-            <Hungarian>Hőmérséklet ellenőrzése ...</Hungarian>
-            <Czech>Zjišťuju teplotu ...</Czech>
-            <Portuguese>Conferindo temperatura ...</Portuguese>
-            <Italian>Sto controllando la temperatura ...</Italian>
-            <Russian>Проверка температуры ...</Russian>
+            <English>Checking temperature...</English>
+            <German>Prüfe Temperatur...</German>
+            <Spanish>Verificando temperatura...</Spanish>
+            <Polish>Sprawdzanie temperatury...</Polish>
+            <French>Vérification de la température...</French>
+            <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
+            <Czech>Zjišťuju teplotu...</Czech>
+            <Portuguese>Conferindo temperatura...</Portuguese>
+            <Italian>Sto controllando la temperatura...</Italian>
+            <Russian>Проверка температуры...</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>

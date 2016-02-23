@@ -2,16 +2,7 @@
 
 ADDON = false;
 
-PREP(canDigTrench);
-PREP(handleInteractMenuOpened);
-PREP(handleKilled);
-PREP(handlePlayerChanged);
-PREP(handlePlayerInventoryChanged);
-PREP(handleScrollWheel);
-PREP(handleUnconscious);
-PREP(placeCancel);
-PREP(placeConfirm);
-PREP(placeTrench);
+#include "XEH_PREP.hpp"
 
 // Trench types
 // Name of the object, name of th dummy no geo object, dx, dy

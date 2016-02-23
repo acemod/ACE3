@@ -2,25 +2,7 @@
 
 ADDON = false;
 
-PREP(addLineMarker);
-PREP(calculateMapScale);
-PREP(cancelDrawing);
-PREP(canDraw);
-PREP(canUseMapTools);
-PREP(canUseMapGPS);
-PREP(copyMapReceiveMarkers);
-PREP(copyMapRemoteSend);
-PREP(copyMapStart);
-PREP(handleKeyDown);
-PREP(handleMouseButton);
-PREP(handleMouseMove);
-PREP(handleMouseZChanged);
-PREP(isInsideMapTool);
-PREP(openMapGps);
-PREP(openMapGpsUpdate);
-PREP(removeLineMarker);
-PREP(updateMapToolMarkers);
-PREP(updateLineMarker);
+#include "XEH_PREP.hpp"
 
 if (isServer) then {
     GVAR(drawing_serverLineMarkers) = [];

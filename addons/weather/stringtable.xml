@@ -146,16 +146,16 @@
             <Italian>Sincronizza Misto</Italian>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
-            <English>Synchronizes lightnings, rainbow, fog, ...</English>
-            <Polish>Synchronizuje pioruny, tęcze, mgłę, ...</Polish>
-            <Spanish>Sincroniza relampagos, arcoiris, niebla ...</Spanish>
-            <German>Synchronisiert Blitze, Regenbögen, Nebel, ...</German>
-            <Czech>Synchronizace blesků, duhy, mlhy, ...</Czech>
+            <English>Synchronizes lightnings, rainbow, fog,...</English>
+            <Polish>Synchronizuje pioruny, tęcze, mgłę,...</Polish>
+            <Spanish>Sincroniza relampagos, arcoiris, niebla...</Spanish>
+            <German>Synchronisiert Blitze, Regenbögen, Nebel,...</German>
+            <Czech>Synchronizace blesků, duhy, mlhy,...</Czech>
             <Portuguese>Sincroniza relâmpagos, arco-íris, neblina...</Portuguese>
-            <French>Synchronise les éclairs, les arcs en ciel, le brouillard</French>
-            <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt, ...</Hungarian>
-            <Russian>Синхронизирует молнии, радугу, туман, ...</Russian>
-            <Italian>Sincronizza lampi, arcobaleni, nebbia, ...</Italian>
+            <French>Synchronise les éclairs, les arcs en ciel, le brouillard,...</French>
+            <Hungarian>Szinkronizálja a villámokat, szivárványokat, ködöt,...</Hungarian>
+            <Russian>Синхронизирует молнии, радугу, туман,...</Russian>
+            <Italian>Sincronizza lampi, arcobaleni, nebbia,...</Italian>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
