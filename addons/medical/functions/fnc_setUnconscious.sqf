@@ -39,7 +39,7 @@ if !(_set) exitWith {
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
@@ -96,16 +96,15 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 if (GVAR(delayUnconCaptive) == 0) then {
-    [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
 } else {
     [{
         params ["_unit"];
         if (_unit getVariable ["ACE_isUnconscious", false]) then {
-            [_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
+            [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
         };
     },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
 };
-
 
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);

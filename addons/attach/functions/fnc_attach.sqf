@@ -49,7 +49,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
-    [_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
+    [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
 
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
@@ -88,7 +88,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;
-            [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+            [_unit, "forceWalk", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;

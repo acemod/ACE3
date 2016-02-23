@@ -30,3 +30,5 @@ _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
 //Force an immediate fast volume update:
 [[true]] call FUNC(updateVolume);
+
+[] call FUNC(updateHearingProtection);

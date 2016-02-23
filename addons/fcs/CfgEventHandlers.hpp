@@ -1,4 +1,10 @@
 
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -73,39 +79,6 @@ class Extended_Respawn_EventHandlers {
     class StaticWeapon {
         class ADDON {
             respawn = QUOTE(_this call FUNC(vehicleInit));
-        };
-    };
-};
-
-class Extended_FiredBIS_EventHandlers {
-    class Tank {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Car {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Helicopter {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Plane {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class Ship_F {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
-        };
-    };
-    class StaticWeapon {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(firedEH));
         };
     };
 };

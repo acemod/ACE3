@@ -64,6 +64,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
+if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;
@@ -81,7 +82,7 @@ if ((GVAR(level) >= 2) && {([_target] call FUNC(hasMedicalEnabled))}) then {
 } else {
     //Basic Medical (just use blodyPartStatus):
     private _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
-    _bloodLossOnSelection = _damageBodyParts select _partNumber
+    _bloodLossOnSelection = _damageBodyParts select _partNumber;
     TRACE_1("basic",_bloodLossOnSelection);
 };
 

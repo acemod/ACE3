@@ -15,8 +15,7 @@
 
 params ["_unit", "_magazine", ["_vehicleUsage", false]];
 
-private "_return";
-_return = false;
+private _return = false;
 
 if !(_vehicleUsage) then {
     if (_magazine != "") then {

@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
-        <Key ID="STR_ACE_Overheating_SettingDisplayTextName">
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
             <Spanish>Mostrar texto al encasquillarse</Spanish>
@@ -13,7 +13,7 @@
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
         </Key>
-        <Key ID="STR_ACE_Overheating_SettingDisplayTextDesc">
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
@@ -24,6 +24,42 @@
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
+            <English>Overheating Particle Effects</English>
+            <German>Partikeleffekt bei Überhitzung</German>
+            <Polish>Efekty cząsteczkowe przegrzania</Polish>
+            <Italian>Effetti Particelle Surriscaldamento</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_description">
+            <English>Show particle effects when weapon overheats</English>
+            <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
+            <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
+            <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
+            <English>Overheating Particle Effects for everyone</English>
+            <German>Zeige Partikeleffekt bei allen</German>
+            <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
+            <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
+            <English>Show particle effects when other players weapon overheats</English>
+            <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
+            <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
+            <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
+            <English>Overheating Dispersion</English>
+            <German>Streuung bei Überhitzung</German>
+            <Polish>Wpływ na rozrzut</Polish>
+            <Italian>Dispersione Surriscaldamento</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
+            <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
+            <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
+            <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
+            <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -98,16 +134,16 @@
             <Italian>Sostiuisci la canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
-            <English>Swapping barrel ...</English>
-            <German>Lauf wird gewechselt ...</German>
-            <Spanish>Cambiando el cañón ...</Spanish>
-            <Polish>Wymienianie lufy ...</Polish>
-            <Czech>Vyměňuji hlaveň ...</Czech>
-            <French>Changement du canon ...</French>
-            <Russian>Смена ствола ...</Russian>
-            <Hungarian>Cső kicserélése folyamatban ...</Hungarian>
-            <Portuguese>Substituindo cano ...</Portuguese>
-            <Italian>Sto sostituendo la canna ...</Italian>
+            <English>Swapping barrel...</English>
+            <German>Lauf wird gewechselt...</German>
+            <Spanish>Cambiando el cañón...</Spanish>
+            <Polish>Wymienianie lufy...</Polish>
+            <Czech>Vyměňuji hlaveň...</Czech>
+            <French>Changement du canon...</French>
+            <Russian>Смена ствола...</Russian>
+            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
+            <Portuguese>Substituindo cano...</Portuguese>
+            <Italian>Sto sostituendo la canna...</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
             <English>Swapped barrel</English>
@@ -146,16 +182,16 @@
             <Italian>Controlla la temperatura della canna</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
-            <English>Checking temperature ...</English>
-            <German>Prüfe Temperatur ...</German>
-            <Spanish>Verificando temperatura ...</Spanish>
-            <Polish>Sprawdzanie temperatury ...</Polish>
-            <French>Vérification de la température ...</French>
-            <Hungarian>Hőmérséklet ellenőrzése ...</Hungarian>
-            <Czech>Zjišťuju teplotu ...</Czech>
-            <Portuguese>Conferindo temperatura ...</Portuguese>
-            <Italian>Sto controllando la temperatura ...</Italian>
-            <Russian>Проверка температуры ...</Russian>
+            <English>Checking temperature...</English>
+            <German>Prüfe Temperatur...</German>
+            <Spanish>Verificando temperatura...</Spanish>
+            <Polish>Sprawdzanie temperatury...</Polish>
+            <French>Vérification de la température...</French>
+            <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
+            <Czech>Zjišťuju teplotu...</Czech>
+            <Portuguese>Conferindo temperatura...</Portuguese>
+            <Italian>Sto controllando la temperatura...</Italian>
+            <Russian>Проверка температуры...</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>

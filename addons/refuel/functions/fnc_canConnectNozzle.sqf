@@ -16,11 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 
 !(isNull _nozzle ||
+    {isEngineOn _target} ||
     {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
     {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines

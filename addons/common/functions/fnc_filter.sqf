@@ -9,17 +9,17 @@
  * Return Value:
  * Final array
  *
- * Usage:
- * [[0,1,2,3,4], {_this > 2}] call FUNC(filter) ==> [3,4]
- *
  * Public: Yes
+ *
+ * Deprecated
  */
 #include "script_component.hpp"
 
-params ["_array", "_code"];
+params [["_array", [], [[]]], ["_code", {}, [{}]]];
 
-private "_result";
-_result = [];
+ACE_DEPRECATED("ace_common_fnc_filter","3.7.0","select CODE");
+
+private _result = [];
 
 {
     if (_x call _code) then {

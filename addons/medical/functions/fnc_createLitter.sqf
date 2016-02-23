@@ -81,7 +81,7 @@ _createdLitter = [];
                 // Loop through through the litter options and place the litter
                 {
                     if (_x isEqualType [] && {(count _x > 0)}) then {
-                        [_target, _x select (floor(random(count _x)))] call _createLitter;
+                        [_target, selectRandom _x] call _createLitter;
                     };
                     if (_x isEqualType "") then {
                         [_target, _x] call _createLitter;

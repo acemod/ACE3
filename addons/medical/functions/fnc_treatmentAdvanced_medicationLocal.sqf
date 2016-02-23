@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Treatment classname <STRING>
- *
+ * 2: Injection Site Part Number <NUMBER>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -16,7 +16,18 @@
 #include "script_component.hpp"
 
 private ["_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
-params ["_target", "_className"];
+
+params ["_target", "_className", "_partNumber"];
+TRACE_3("params",_target,_className,_partNumber);
+
+private _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+if ((_tourniquets select _partNumber) > 0) exitWith {
+    TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
+    private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+    _delayedMedications pushBack _this;
+    _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+    true
+};
 
 // We have added a new dose of this medication to our system, so let's increase it
 _varName = format[QGVAR(%1_inSystem), _className];

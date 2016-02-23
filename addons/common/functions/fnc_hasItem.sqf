@@ -10,9 +10,11 @@
  * has Item <BOOL>
  *
  * Public: yes
+ *
+ * Note: Case sensitive
  */
 #include "script_component.hpp"
 
-params ["_unit", "_item"];
+params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
 _item in items _unit // return

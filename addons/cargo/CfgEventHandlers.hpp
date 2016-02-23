@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -12,7 +19,9 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_Killed_EventHandlers {
     class All {
-        init = QUOTE(call FUNC(handleDestroyed));
+        class ADDON {
+            serverKilled = QUOTE(call FUNC(handleDestroyed));
+        };
     };
 };
 
@@ -89,6 +98,11 @@ class Extended_InitPost_EventHandlers {
         };
     };
     class ACE_ConcertinaWireCoil {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class Land_PortableLight_single_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };

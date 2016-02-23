@@ -19,36 +19,34 @@
 
 params ["_list", ["_removeWhitespace", false], ["_checkNil", false]];
 
-private ["_whitespaceList", "_nilCheckedList"];
-
 // Split using comma delimiter
 _list = _list splitString ",";
 TRACE_1("Splitted List",_list);
 
-
 // Remove or Trim Whitespace
-_whitespaceList = [];
+private _whitespaceList = [];
+
 {
     if (_removeWhitespace) then {
         _whitespaceList pushBack ([_x] call FUNC(stringRemoveWhiteSpace));
     } else {
         _whitespaceList pushBack ([_x] call CBA_fnc_trim);
     };
-    nil
+    false
 } count _list;
 
 _list = _whitespaceList;
 TRACE_1("Whitespace List",_list);
 
-
 // Check for object existence
 if (_checkNil) then {
-    _nilCheckedList = [];
+    private _nilCheckedList = [];
+
     {
         if !(isNil _x) then {
             _nilCheckedList pushBack (missionNamespace getVariable _x);
         };
-        nil
+        false
     } count _list;
 
     _list = _nilCheckedList;

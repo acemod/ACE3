@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 private ["_dummy", "_actionID"];
-params ["_unit", ["_delete", false], ["_unholster", true]];
+params [["_unit", objNull, [objNull]], ["_delete", false, [false]], ["_unholster", true, [true]]];
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _dummy) then {
@@ -36,7 +36,7 @@ if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(ReleaseActionID), nil];
 };
-[_unit, QGVAR(vehRearm), false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", QGVAR(vehRearm), false] call EFUNC(common,statusEffect_set);
 
 if (_unholster) then {
     REARM_UNHOLSTER_WEAPON

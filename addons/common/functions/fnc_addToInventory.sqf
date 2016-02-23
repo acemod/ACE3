@@ -18,9 +18,9 @@
 
 params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];
 
-private ["_type", "_canAdd", "_addedToUnit"];
+private _type = _classname call FUNC(getItemType);
 
-_type = [_classname] call FUNC(getItemType);
+private ["_canAdd", "_addedToUnit"];
 
 switch (_container) do {
     case "vest": {
@@ -59,8 +59,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private "_pos";
-            _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _pos = _unit modelToWorldVisual [0,1,0.05];
 
             _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
             _unit addWeaponCargoGlobal [_classname, 1];
@@ -93,8 +92,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private "_pos";
-            _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _pos = _unit modelToWorldVisual [0,1,0.05];
 
             _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
             _unit addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
@@ -123,8 +121,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private "_pos";
-            _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _pos = _unit modelToWorldVisual [0,1,0.05];
 
             _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
             _unit addItemCargoGlobal [_classname, 1];

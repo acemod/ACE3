@@ -15,14 +15,9 @@
 
 params ["_eventName", "_eventCodeIndex"];
 
-GVAR(events) params ["_eventNames", "_events"];
+private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
 
-private ["_eventFunctions", "_eventIndex"];
+if (isNil "_eventFunctions") exitWith {TRACE_1("eventName not found",_eventName);};
+if ((_eventCodeIndex < 0) || {(count _eventFunctions) <= _eventCodeIndex}) exitWith {TRACE_2("index out of bounds",_eventName,_eventCodeIndex);};
 
-_eventFunctions = [];
-_eventIndex = _eventNames find _eventName;
-
-if (_eventIndex != -1) then {
-    _eventFunctions = _events select _eventIndex;
-    _eventFunctions set [_eventCodeIndex, nil];
-};
+_eventFunctions set [_eventCodeIndex, nil];

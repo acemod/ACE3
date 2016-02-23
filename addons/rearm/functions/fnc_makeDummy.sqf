@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_obj", "_dirAndUp"];
+params [["_obj", objNull, [objNull]], ["_dirAndUp", [[1,0,0],[0,0,1]], [[]]]];
 
 _obj setVectorDirAndUp _dirAndUp;
 _obj allowDamage false;

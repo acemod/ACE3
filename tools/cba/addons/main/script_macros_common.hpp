@@ -621,9 +621,6 @@ Author:
 
 #define LSTR(var1) TRIPLES(ADDON,STR,var1)
 
-#define CACHE_DIS_SYS(var1,var2) (isNumber(var1 >> "CfgSettings" >> "CBA" >> "caching" >> QUOTE(var2)) && getNumber(var1 >> "CfgSettings" >> "CBA" >> "caching" >> QUOTE(var2)) != 1)
-#define CACHE_DIS(var1) (!isNil "CBA_RECOMPILE" || CACHE_DIS_SYS(configFile,var1) || CACHE_DIS_SYS(missionConfigFile,var1))
-
 #ifndef DEBUG_SETTINGS
     #define DEBUG_SETTINGS [false, true, false]
 #endif
@@ -829,21 +826,21 @@ Parameters:
 Author:
     Spooner
 ------------------------------------------- */
-#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then { false } else { (typeName (VAR)) == TYPE })
-#define IS_ARRAY(VAR)    IS_META_SYS(VAR,"ARRAY")
-#define IS_BOOL(VAR)     IS_META_SYS(VAR,"BOOL")
-#define IS_CODE(VAR)     IS_META_SYS(VAR,"CODE")
-#define IS_CONFIG(VAR)   IS_META_SYS(VAR,"CONFIG")
-#define IS_CONTROL(VAR)  IS_META_SYS(VAR,"CONTROL")
-#define IS_DISPLAY(VAR)  IS_META_SYS(VAR,"DISPLAY")
-#define IS_GROUP(VAR)    IS_META_SYS(VAR,"GROUP")
-#define IS_OBJECT(VAR)   IS_META_SYS(VAR,"OBJECT")
-#define IS_SCALAR(VAR)   IS_META_SYS(VAR,"SCALAR")
-#define IS_SCRIPT(VAR)   IS_META_SYS(VAR,"SCRIPT")
-#define IS_SIDE(VAR)     IS_META_SYS(VAR,"SIDE")
+#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then { false } else { (VAR) isEqualType TYPE })
+#define IS_ARRAY(VAR)    IS_META_SYS(VAR,[])
+#define IS_BOOL(VAR)     IS_META_SYS(VAR,false)
+#define IS_CODE(VAR)     IS_META_SYS(VAR,{})
+#define IS_CONFIG(VAR)   IS_META_SYS(VAR,configNull)
+#define IS_CONTROL(VAR)  IS_META_SYS(VAR,controlNull)
+#define IS_DISPLAY(VAR)  IS_META_SYS(VAR,displayNull)
+#define IS_GROUP(VAR)    IS_META_SYS(VAR,grpNull)
+#define IS_OBJECT(VAR)   IS_META_SYS(VAR,objNull)
+#define IS_SCALAR(VAR)   IS_META_SYS(VAR,0)
+#define IS_SCRIPT(VAR)   IS_META_SYS(VAR,scriptNull)
+#define IS_SIDE(VAR)     IS_META_SYS(VAR,west)
 #define IS_STRING(VAR)   IS_META_SYS(VAR,"STRING")
-#define IS_TEXT(VAR)     IS_META_SYS(VAR,"TEXT")
-#define IS_LOCATION(VAR) IS_META_SYS(VAR,"LOCATION")
+#define IS_TEXT(VAR)     IS_META_SYS(VAR,text "")
+#define IS_LOCATION(VAR) IS_META_SYS(VAR,locationNull)
 
 #define IS_BOOLEAN(VAR)  IS_BOOL(VAR)
 #define IS_FUNCTION(VAR) IS_CODE(VAR)
@@ -1408,8 +1405,9 @@ Author:
 }
 
 // XEH Specific
-#define XEH_DISABLED class EventHandlers {}; SLX_XEH_DISABLED = 1
-#define XEH_ENABLED class EventHandlers { EXTENDED_EVENTHANDLERS }; delete SLX_XEH_DISABLED
+#define XEH_CLASS CBA_Extended_EventHandlers
+#define XEH_DISABLED class EventHandlers { class XEH_CLASS {}; }; SLX_XEH_DISABLED = 1
+#define XEH_ENABLED class EventHandlers { class XEH_CLASS { EXTENDED_EVENTHANDLERS }; }; SLX_XEH_DISABLED = 0
 
 // TODO: These are actually outdated; _Once ?
 #define XEH_PRE_INIT QUOTE(call COMPILE_FILE(XEH_PreInit_Once))

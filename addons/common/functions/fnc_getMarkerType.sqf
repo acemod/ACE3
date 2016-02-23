@@ -14,11 +14,9 @@
 
 params ["_group"];
 
-private ["_leader", "_vehicle", "_side"];
-
-_leader = leader _group;
-_vehicle = vehicle _leader;
-_side = side _leader;
+private _leader = leader _group;
+private _vehicle = vehicle _leader;
+private _side = side _leader;
 
 if (_vehicle == _leader) exitWith {
     if (

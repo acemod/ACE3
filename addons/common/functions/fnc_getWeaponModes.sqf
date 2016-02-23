@@ -12,13 +12,11 @@
  */
 #include "script_component.hpp"
 
-params ["_weapon"];
+params [["_weapon", "", [""]]];
 
-private ["_config", "_modes"];
+private _config = configFile >> "CfgWeapons" >> _weapon;
 
-_config = configFile >> "CfgWeapons" >> _weapon;
-
-_modes = [];
+private _modes = [];
 
 {
     if (getNumber (_config >> _x >> "showToPlayer") == 1) then {

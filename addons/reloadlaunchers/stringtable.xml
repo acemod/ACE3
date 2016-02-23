@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
@@ -14,15 +14,15 @@
             <Portuguese>Recarregar lançador</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
-            <English>Loading launcher ...</English>
-            <French>Chargement du lanceur ...</French>
-            <German>Panzerabwehr wird geladen ...</German>
-            <Spanish>Cargando lanzador ...</Spanish>
-            <Russian>Зарядка ПУ ...</Russian>
-            <Czech>Nabíjím odpalovač  ...</Czech>
-            <Polish>Ładowanie wyrzutni ...</Polish>
-            <Hungarian>Kilövő betöltés alatt ...</Hungarian>
-            <Italian>Carico il lanciamissili ...</Italian>
+            <English>Loading launcher...</English>
+            <French>Chargement du lanceur...</French>
+            <German>Panzerabwehr wird geladen...</German>
+            <Spanish>Cargando lanzador...</Spanish>
+            <Russian>Зарядка ПУ...</Russian>
+            <Czech>Nabíjím odpalovač...</Czech>
+            <Polish>Ładowanie wyrzutni...</Polish>
+            <Hungarian>Kilövő betöltés alatt...</Hungarian>
+            <Italian>Carico il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">

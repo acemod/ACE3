@@ -1,6 +1,5 @@
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas
- *
  * Returns the weight of a crate.
  *
  * Arguments:
@@ -10,20 +9,20 @@
  * Total Weight <NUMBER>
  *
  * Example:
- * _weight = Crate1 call ace_dragging_fnc_getweight;
+ * [Crate1] call ace_dragging_fnc_getweight;
  *
  * Public: No
 */
 #include "script_component.hpp"
 
-private "_totalWeight";
 params ["_object"];
+
 // Initialize the total weight.
-_totalWeight = 0;
+private _totalWeight = 0;
 
 // Cycle through all item types with their assigned config paths.
 {
-    _x params["_items","_getConfigCode"];
+    _x params ["_items", "_getConfigCode"];
     _items params ["_item", "_count"];
     // Cycle through all items and read their mass out of the config.
     {

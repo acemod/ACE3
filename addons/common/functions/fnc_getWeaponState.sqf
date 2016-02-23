@@ -18,17 +18,13 @@
 
 params ["_unit", "_weapon"];
 
-private ["_muzzles", "_weaponInfo"];
+private _muzzles = _weapon call FUNC(getWeaponMuzzles);
 
-_muzzles = [_weapon] call FUNC(getWeaponMuzzles);
-
-_weaponInfo = [["","","",""], primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find _weapon) max 0);
+private _weaponInfo = [["","","",""], primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find _weapon) max 0);
 
 // get loaded magazines and ammo
-private ["_magazines", "_ammo"];
-
-_magazines = [];
-_ammo = [];
+private _magazines = [];
+private _ammo = [];
 
 {
     _magazines pushBack "";
@@ -38,8 +34,7 @@ _ammo = [];
 
 {
     if (_x select 2) then {
-        private "_index";
-        _index = _muzzles find (_x select 4);
+        private _index = _muzzles find (_x select 4);
 
         if (_index != -1) then {
             _magazines set [_index, _x select 0];

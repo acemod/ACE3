@@ -12,16 +12,14 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
-private ["_turrets", "_turret", "_config"];
+private _turrets = allTurrets [_vehicle, true];
 
-_turrets = allTurrets [_vehicle, true];
-
-_turret = [];
+private _turret = [];
 
 {
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 

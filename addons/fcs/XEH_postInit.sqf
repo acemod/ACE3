@@ -15,5 +15,9 @@ if (!hasInterface) exitWith {};
     };
 }] call EFUNC(common,addEventHandler);
 
+// Register fire event handler
+["firedPlayerVehicle", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["firedPlayerVehicleNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+
 // Register event for global updates
-[QGVAR(forceUpdate), {ACE_player call FUNC(onForceUpdate)}] call EFUNC(common,addEventHandler);
+[QGVAR(forceUpdate), {[ACE_player] call FUNC(onForceUpdate)}] call EFUNC(common,addEventHandler);

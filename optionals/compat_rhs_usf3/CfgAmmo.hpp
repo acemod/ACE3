@@ -139,7 +139,8 @@ class CfgAmmo
         ace_frag_skip = 1;
         ace_frag_force = 0;
     };
-    class rhs_ammo_m69: GrenadeHand {
+    class GrenadeHand_stone;
+    class rhs_ammo_m69: GrenadeHand_stone {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;

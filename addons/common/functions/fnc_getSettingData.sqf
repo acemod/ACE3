@@ -23,12 +23,13 @@
 
 params ["_name"];
 
-private "_value";
-_value = [];
+scopeName "main";
 
 {
-    if (_x select 0 == _name) exitWith {_value = _x};
+    if (_x select 0 == _name) then {
+        _x breakOut "main";
+    };
     false
 } count GVAR(settings);
 
-_value
+[]

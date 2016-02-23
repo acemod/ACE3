@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_dummy","_magazineClass"];
-params ["_target", "_unit"];
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE} || {_target getVariable [QGVAR(disabled), false]}) exitWith {false};
 

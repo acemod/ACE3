@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
@@ -9,6 +9,7 @@
             <Russian>ACE: логистика</Russian>
             <Czech>ACE Logistika</Czech>
             <Spanish>ACE Logística</Spanish>
+            <Italian>Logistica ACE</Italian>
         </Key>
     </Package>
 </Project>

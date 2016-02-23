@@ -2,13 +2,6 @@
 
 ADDON = false;
 
-PREP(adjust);
-PREP(handleInteractMenuOpened);
-PREP(handleKilled);
-PREP(handlePlayerChanged);
-PREP(handleScrollWheel);
-PREP(handleUnconscious);
-PREP(pickup);
-PREP(place);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

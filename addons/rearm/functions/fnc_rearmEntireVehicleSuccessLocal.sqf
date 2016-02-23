@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
+ * 1: TurretPath <ARRAY>
  *
  * Return Value:
  * None
@@ -16,14 +17,9 @@
 #include "script_component.hpp"
 
 private ["_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params ["_vehicle", "_turretPath"];
+params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
 
-_magazines = [];
-if (_turretPath isEqualTo [-1]) then {
-    _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
-} else {
-    _magazines = _vehicle magazinesTurret _turretPath;
-};
+_magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
 {
     _magazine = _x;
     _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);

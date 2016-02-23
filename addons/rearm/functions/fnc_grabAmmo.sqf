@@ -16,10 +16,10 @@
  */
 #include "script_component.hpp"
 
-params ["_dummy", "_unit"];
+params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 REARM_HOLSTER_WEAPON
-[_unit, QGVAR(vehRearm), true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 
 [
     5,

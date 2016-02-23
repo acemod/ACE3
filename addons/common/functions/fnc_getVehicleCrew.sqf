@@ -15,8 +15,7 @@
 
 params ["_vehicle", ["_types", ["driver", "commander", "gunner", "turret", "cargo", "ffv"]]];
 
-private "_crew";
-_crew = [];
+private _crew = [];
 
 // iterate through all crew members
 {

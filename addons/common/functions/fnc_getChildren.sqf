@@ -14,7 +14,6 @@
 
 params ["_name", "_cfgClass"];
 
-private "_classes";
-_classes = format ["configName inheritsFrom _x == '%1'", _name] configClasses (configFile >> _cfgClass);
+private _classes = format ["configName inheritsFrom _x == '%1'", _name] configClasses (configFile >> _cfgClass);
 
-[_classes, {configName _this}] call FUNC(map) // return
+_classes apply {configName _x} // return

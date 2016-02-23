@@ -30,9 +30,8 @@ if (_typeNum == 0) then {
     [_objectType] call FUNC(compileMenuSelfAction);
 };
 
-private ["_varName","_actionTrees", "_parentNode"];
-_varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
-_actionTrees = missionNamespace getVariable [_varName, []];
+private _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
+private _actionTrees = missionNamespace getVariable [_varName, []];
 if((count _actionTrees) == 0) then {
     missionNamespace setVariable [_varName, _actionTrees];
 };
@@ -41,7 +40,7 @@ if (_parentPath isEqualTo ["ACE_MainActions"]) then {
     [_objectType, _typeNum] call FUNC(addMainAction);
 };
 
-_parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
+private _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
 if (isNil {_parentNode}) exitWith {
     ERROR("Failed to add action");
     ACE_LOGERROR_4("action (%1) to parent %2 on object %3 [%4]",(_action select 0),_parentPath,_objectType,_typeNum);

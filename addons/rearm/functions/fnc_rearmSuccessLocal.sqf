@@ -21,8 +21,8 @@
  */
 #include "script_component.hpp"
 
-private ["_rounds", "_currentRounds", "_maxMagazines", "_dummy", "_weaponSelect"];
-params ["_args"];
+private ["_rounds", "_currentRounds", "_maxMagazines", "_currentMagazines", "_dummy", "_weaponSelect"];
+params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5\nUnit: %6", _target, _turretPath, _numMagazines, _magazineClass, _numRounds, _unit];
@@ -32,6 +32,11 @@ _currentRounds = 0;
 
 _maxMagazines = [_target, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
 if (_maxMagazines == 1) then {
+    _currentMagazines = { _x == _magazineClass } count (_target magazinesTurret _turretPath);
+    if (_currentMagazines == 0 && {!(_turretPath isEqualTo [-1])}) then {
+        // Driver gun will always retain it's magazines
+        _target addMagazineTurret [_magazineClass, _turretPath];
+    };
     if (GVAR(level) == 1) then {
         // Fill magazine completely
         _target setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
@@ -46,9 +51,12 @@ if (_maxMagazines == 1) then {
             getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit]] call EFUNC(common,targetEvent);
     };
 } else {
-    for "_idx" from 1 to _maxMagazines do {
+    for "_idx" from 1 to (_maxMagazines+1) do {
         _currentRounds = _target magazineTurretAmmo [_magazineClass, _turretPath];
-        if (_currentRounds > 0) exitWith {
+        if (_currentRounds > 0 || {_idx == (_maxMagazines+1)}) exitWith {
+            if (_idx == (_maxMagazines+1) && {!(_turretPath isEqualTo [-1])}) then {
+                _target addMagazineTurret [_magazineClass, _turretPath];
+            };
             if (GVAR(level) == 2) then {
                 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMaxMagazines %4\nMagazine: %5\nNumRounds: %6\nMagazine: %7", _target, _turretPath, _numMagazines, _maxMagazines, _currentRounds, _numRounds, _magazineClass];
                 // Fill only at most _numRounds

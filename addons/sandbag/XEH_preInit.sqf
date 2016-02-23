@@ -2,16 +2,6 @@
 
 ADDON = false;
 
-PREP(canDeploy);
-PREP(deploy);
-PREP(deployCancel);
-PREP(deployConfirm);
-PREP(handleInteractMenuOpened);
-PREP(handleKilled);
-PREP(handlePlayerChanged);
-PREP(handlePlayerInventoryChanged);
-PREP(handleScrollWheel);
-PREP(handleUnconscious);
-PREP(pickup);
+#include "XEH_PREP.hpp"
 
 ADDON = true;
