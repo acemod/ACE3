@@ -40,10 +40,10 @@ GVAR(CurrentSpeedDial) = 0;
 // placed mine.
 if (isServer) then {
     ["clientRequestsOrientation", {
-        params ["_logic"];
-        TRACE_1("clientRequestsOrientations received:",_logic);
+        params ["_group"];
+        TRACE_1("clientRequestsOrientations received:",_group);
         TRACE_2("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", _logic, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
+        ["serverSendsOrientations", _group, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
 } else {
     ["serverSendsOrientations", {
@@ -53,12 +53,17 @@ if (isServer) then {
             params ["_explosive","_direction","_pitch"];
             [_explosive, _direction, _pitch] call FUNC(setPosition);
         } forEach _explosivesOrientations;
+        deleteGroup GVAR(localGroup);
+        GVAR(localGroup) = nil;
+        deleteVehicle GVAR(localLogic);
+        GVAR(localLogic) = nil;
     }] call EFUNC(common,addEventHandler);
 
     //  Create a logic to get the client ID
-    private _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    TRACE_1("clientRequestsOrientations sent:",_logic);
-    ["clientRequestsOrientations", [_logic]] call EFUNC(common,serverEvent);
+    GVAR(localLogic) = sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    GVAR(localGroup) = createGroup GVAR(localLogic);
+    TRACE_1("clientRequestsOrientations sent:",GVAR(localGroup));
+    ["clientRequestsOrientations", [GVAR(localGroup)]] call EFUNC(common,serverEvent);
 };
 
 ["interactMenuOpened", {
