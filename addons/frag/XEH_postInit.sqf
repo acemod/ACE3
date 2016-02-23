@@ -5,10 +5,6 @@ if(GVAR(EnableDebugTrace) && !isMultiplayer) then {
     GVAR(autoTrace) = true;
 };
 
-if(isServer) then {
-    [QGVAR(frag_eh), { _this call FUNC(frago); }] call EFUNC(common,addEventHandler);
-};
-
 ["SettingsInitialized", {
     //If not enabled, exit
     if (!GVAR(enabled)) exitWith {};
@@ -21,6 +17,10 @@ if(isServer) then {
     ["firedPlayerVehicleNonLocal", DFUNC(fired)] call EFUNC(common,addEventHandler);
     ["firedNonPlayerVehicle", DFUNC(fired)] call EFUNC(common,addEventHandler);
 
+    if (isServer) then {
+        [QGVAR(frag_eh), { _this call FUNC(frago); }] call EFUNC(common,addEventHandler);
+        ["ammoExploded", DFUNC(handleAmmoExploded)] call EFUNC(common,addEventHandler);
+    };
     [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 }] call EFUNC(common,addEventHandler);
