@@ -1,4 +1,3 @@
-/*
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
@@ -47,4 +46,3 @@ class Cfg3DEN {
         };
     };
 };
-*/
