@@ -149,8 +149,8 @@ class CfgVehicles {
                 displayName = CSTRING(MedicalSettings_delayUnconCaptive_DisplayName);
                 description = CSTRING(MedicalSettings_delayUnconCaptive_Description);
                 typeName = "NUMBER";
-                defaultValue = 10;
-            }
+                defaultValue = 3;
+            };
         };
 
         class ModuleDescription {
