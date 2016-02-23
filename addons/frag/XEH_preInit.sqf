@@ -7,7 +7,6 @@ PREP(fired);
 PREP(frago);
 PREP(spallTrack);
 
-GVAR(blackList) = [];
 GVAR(traceFrags) = false;
 
 GVAR(TOTALFRAGS) = 0;
@@ -21,7 +20,6 @@ GVAR(traces) = [];
 GVAR(tracesStarted) = false;
 
 // * Other Shit */
-PREP(addBlackList);
 PREP(addTrack);
 PREP(drawTraces);
 PREP(removeTrack);

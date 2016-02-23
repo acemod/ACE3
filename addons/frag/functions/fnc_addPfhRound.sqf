@@ -7,13 +7,6 @@ DEFAULT_PARAM(3,_doFragTrack,false);
 
 if (!GVAR(enabled)) exitWith {};
 
-//_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
-//if(_enabled < 1) exitWith {};
-
-if(_round in GVAR(blackList)) exitWith {
-    GVAR(blackList) = GVAR(blackList) - [_round];
-};
-
 // Exit on max track
 if( (count GVAR(objects)) > GVAR(MaxTrack)) exitWith { };
 
@@ -51,24 +44,15 @@ if(GVAR(autoTrace)) then {
 // We should do an {!(_round in GVAR(objects))}
 // But we leave that out here for optimization. So this cannot be a framework function
 // Otherwise, it should only be added once and from the FiredEH
-if(_doFragTrack && alive _round) then {
+if (_doSpall && alive _round) then {
     _spallTrack = [];
     _spallTrackID = [];
 
     private["_args"];
-    _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
-    (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
-    (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
-    (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")),
-    (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force))),
-    (getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
-    ];
+    _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID];
     TRACE_1("Initializing track", _round);
     GVAR(objects) pushBack _round;
     GVAR(arguments) pushBack _args;
 
-    if(_doSpall) then {
-        [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
-    };
-    // ACE_player sideChat "WTF2";
+    [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
 };
