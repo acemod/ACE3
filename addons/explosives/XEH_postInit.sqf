@@ -36,16 +36,25 @@ GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
-// Properly angle preplaced bottom-attack SLAMs
-{
-    if (local _x) then {
-        switch (typeOf _x) do {
-            case ("ACE_SLAMDirectionalMine_Magnetic_Ammo"): {
-                [_x, getDir _x, 90] call FUNC(setPosition);
-            };
-        };
-    };
-} forEach allMines;
+// In case we are a JIP client, ask the server for orientation of any previously
+// placed mine.
+if (isServer) then {
+    ["clientRequestsOrientation", {
+        params ["_client"];
+        ["serverSendsOrientations", _client, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
+    }] call EFUNC(common,addEventHandler);
+} else {
+    ["serverSendsOrientations", {
+        params ["_explosivesOrientations"];
+        {
+            params ["_explosive","_direction","_pitch"];
+            [_explosive, _direction, _pitch] call FUNC(setPosition);
+        } forEach _explosivesOrientations;
+    }] call EFUNC(common,addEventHandler);
+
+    private _client = owner ACE_player;
+    ["clientRequestsOrientations", [_client]] call EFUNC(common,serverEvent);
+};
 
 ["interactMenuOpened", {
     //Cancel placement if interact menu opened
