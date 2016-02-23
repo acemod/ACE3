@@ -241,6 +241,7 @@ PREP(fixCrateContent);
 PREP(globalEvent);
 PREP(_handleNetEvent);
 PREP(addEventHandler);
+PREP(objectEvent);
 PREP(targetEvent);
 PREP(serverEvent);
 PREP(localEvent);
