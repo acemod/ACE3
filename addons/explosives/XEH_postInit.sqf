@@ -40,10 +40,10 @@ GVAR(CurrentSpeedDial) = 0;
 // placed mine.
 if (isServer) then {
     ["clientRequestsOrientation", {
-        params ["_client"];
-        TRACE_1("clientRequestsOrientations received:",_client);
+        params ["_logic"];
+        TRACE_1("clientRequestsOrientations received:",_logic);
         TRACE_2("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", _client, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
+        ["serverSendsOrientations", _logic, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
 } else {
     ["serverSendsOrientations", {
@@ -57,9 +57,8 @@ if (isServer) then {
 
     //  Create a logic to get the client ID
     private _logic = createGroup sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    private _client = owner _logic;
-    TRACE_1("clientRequestsOrientations sent:",_client);
-    ["clientRequestsOrientations", [_client]] call EFUNC(common,serverEvent);
+    TRACE_1("clientRequestsOrientations sent:",_logic);
+    ["clientRequestsOrientations", [_logic]] call EFUNC(common,serverEvent);
 };
 
 ["interactMenuOpened", {
