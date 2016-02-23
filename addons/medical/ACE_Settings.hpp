@@ -246,6 +246,6 @@ class ACE_Settings {
     class GVAR(delayUnconCaptive) {
         displayName = CSTRING(delayUnconCaptive);
         typeName = "SCALAR";
-        value = 10;
+        value = 3;
     };
 };
