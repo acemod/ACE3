@@ -564,10 +564,3 @@ class CfgMods {
 
 #include "CfgModuleCategories.hpp"
 #include "CfgVehicleClasses.hpp"
-
-// @todo delete this after CBA update, defines undefined global variable
-class Extended_PreStart_EventHandlers {
-    class ADDON {
-        init = "with uiNamespace do {SLX_XEH_COMPILE_NEW = CBA_fnc_compileFunction};";
-    };
-};
