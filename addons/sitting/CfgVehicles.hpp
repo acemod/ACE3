@@ -12,6 +12,7 @@ class CfgVehicles {
         class Arguments {
             class enable {
                 displayName = CSTRING(Enable);
+                description = CSTRING(Enable)
                 typeName = "BOOL";
                 defaultValue = 1;
             };
