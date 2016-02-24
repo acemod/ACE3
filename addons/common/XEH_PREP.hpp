@@ -233,10 +233,6 @@ PREP(showUser);
 PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
-// ACE_CuratorFix
-PREP(addCuratorUnloadEventhandler);
-PREP(fixCrateContent);
-
 PREP(globalEvent);
 PREP(_handleNetEvent);
 PREP(addEventHandler);
