@@ -9,8 +9,7 @@
 
 // request marker data for JIP
 if (isMultiplayer && {!isServer} && {hasInterface}) then {
-    GVAR(localLogic) = sideLogic createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    GVAR(localGroup) = createGroup GVAR(localLogic);
+    GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     [QGVAR(sendMarkersJIP), [GVAR(localLogic)]] call EFUNC(common,serverEvent);
 };
 
