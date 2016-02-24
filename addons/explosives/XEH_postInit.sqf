@@ -61,7 +61,7 @@ if (isServer) then {
 
     //  Create a logic to get the client ID
     GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    TRACE_1("clientRequestsOrientations sent:",GVAR(localGroup));
+    TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
     ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
 };
 
