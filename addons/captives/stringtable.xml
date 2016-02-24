@@ -178,8 +178,8 @@
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda.</Portuguese>
             <French>Synchronise une unité pour la rendre captive.</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.</Hungarian>
-            <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться в плен.es</Russian>
-            <Italian>Sincronizza una unità per farla arrendere</Italian>
+            <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться в плен.</Russian>
+            <Italian>Sincronizza una unità per farla arrendere.</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
@@ -197,7 +197,7 @@
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.</Russian>
             <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
-            <Italian>Sincronizza un'unità per metterle le manette.<Italian>
+            <Italian>Sincronizza un'unità per metterle le manette.</Italian>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>

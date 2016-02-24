@@ -382,7 +382,7 @@
             <Portuguese>Controla quantos dados são preenchidos nos itens microDAGR. Menos dados restringe a visualização de mapa para mostrar menos informações no minimapa.</Portuguese>
             <French>Contrôle le nombre d'information disponible sur la carte du MicroDAGR.</French>
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
-            <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.bo</Russian>
+            <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.</Russian>
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
         </Key>
     </Package>
