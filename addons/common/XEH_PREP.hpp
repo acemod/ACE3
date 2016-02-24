@@ -225,7 +225,6 @@ PREP(binocularMagazine);
 PREP(removeBinocularMagazine);
 
 // ACE_Debug
-PREP(exportConfig);
 PREP(getChildren);
 PREP(getDisplayConfigName);
 PREP(monitor);
