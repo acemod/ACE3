@@ -80,7 +80,7 @@
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
-#define FontCSE       "RobotoCondensed"
+#define FONT_ACE       "RobotoCondensed"
 
 class ACE_gui_backgroundBase {
   type = CT_STATIC;
@@ -88,7 +88,7 @@ class ACE_gui_backgroundBase {
   style = ST_PICTURE;
   colorBackground[] = {0,0,0,0};
   colorText[] = {1, 1, 1, 1};
-  font = FontCSE;
+  font = FONT_ACE;
   text = "";
   sizeEx = 0.032;
 };
@@ -189,19 +189,19 @@ class ACE_gui_buttonBase {
   animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
   animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
   period = 0.5;
-  font = FontCSE;
+  font = FONT_ACE;
   soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
   soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.0,0};
   soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.07,1};
   soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
   class Attributes {
-    font = FontCSE;
+    font = FONT_ACE;
     color = "#E5E5E5";
     align = "center";
     shadow = "true";
   };
   class AttributesImage {
-    font = FontCSE;
+    font = FONT_ACE;
     color = "#E5E5E5";
     align = "left";
     shadow = "true";
@@ -229,7 +229,7 @@ class ACE_gui_staticBase {
   w = 0.183825;
   h = 0.104575;
   style = ST_LEFT;
-  font = FontCSE;
+  font = FONT_ACE;
   sizeEx = 0.03921;
   colorText[] = {0.95, 0.95, 0.95, 1.0};
   colorBackground[] = {0, 0, 0, 0};
@@ -240,7 +240,7 @@ class RscListBox;
 class ACE_gui_listBoxBase : RscListBox{
   type = CT_LISTBOX;
   style = ST_MULTI;
-  font = FontCSE;
+  font = FONT_ACE;
   sizeEx = 0.03921;
   color[] = {1, 1, 1, 1};
   colorText[] = {0.543, 0.5742, 0.4102, 1.0};
@@ -295,7 +295,7 @@ class ACE_gui_listNBox {
   style =ST_MULTI;
   w = 0.4;
   h = 0.4;
-  font = FontCSE;
+  font = FONT_ACE;
   sizeEx = 0.031;
 
   autoScrollSpeed = -1;
@@ -375,7 +375,7 @@ class ACE_gui_comboBoxBase: RscCombo {
  arrowEmpty = "";
  arrowFull = "";
  wholeHeight = 0.45;
- font = FontCSE;
+ font = FONT_ACE;
  sizeEx = 0.031;
  soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1};
  soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1};
