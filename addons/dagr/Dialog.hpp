@@ -71,7 +71,7 @@
 // Listbox styles
 #define LB_TEXTURES 0x10
 #define LB_MULTI 0x20
-#define FontM "PuristaMedium"
+#define FontM "RobotoCondensed"
 
 class RscText;
 
@@ -79,7 +79,7 @@ class DAGR_Button {
 	idc = -1;
 	type = CT_BUTTON;
 	style = ST_LEFT;
-	font = "PuristaMedium";
+	font = "RobotoCondensed";
 	sizeEx = 0.02;
 	colorText[] = { 0, 1, 0, 1 };
 	colorFocused[] = { 0, 0, 0, 0 };   // border color for focused state
@@ -116,7 +116,7 @@ class DAGR_Menu_Pic {
 	text = "";
 	colorBackground[] = {};
 	colorText[] = {};
-	font = "PuristaMedium";
+	font = "RobotoCondensed";
 	sizeEx = 0.04;
 	waitForLoad = 0;
 };
@@ -131,7 +131,7 @@ class DAGR_Menu_Text {
 	h = 0.15;
 	colorBackground[] = { 0, 0, 0, 0 };
 	colorText[] = { 0.239, 0.216, 0.153, 1 };
-	font = "PuristaMedium";
+	font = "RobotoCondensed";
 	sizeEx = 0.03;
 	waitForLoad = 0;
 	text = "";

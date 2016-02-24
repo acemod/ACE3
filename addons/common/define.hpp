@@ -80,7 +80,7 @@
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
-#define FontCSE       "PuristaMedium"
+#define FontCSE       "RobotoCondensed"
 
 class ACE_gui_backgroundBase {
   type = CT_STATIC;
@@ -125,7 +125,7 @@ class ACE_gui_editBase
     text = "";
     size = 0.2;
     style = "0x00 + 0x40";
-    font = "PuristaMedium";
+    font = "RobotoCondensed";
     shadow = 2;
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     colorDisabled[] =
@@ -463,22 +463,22 @@ class ACE_gui_mapBase {
  colorGrid[] = {0.1,0.1,0.1,0.6};
  colorGridMap[] = {0.1,0.1,0.1,0.6};
  colorText[] = {1, 1, 1, 0.85};
-font = "PuristaMedium";
+font = "RobotoCondensed";
 sizeEx = 0.0270000;
 stickX[] = {0.20, {"Gamma", 1.00, 1.50} };
 stickY[] = {0.20, {"Gamma", 1.00, 1.50} };
 onMouseButtonClick = "";
 onMouseButtonDblClick = "";
 
- fontLabel = "PuristaMedium";
+ fontLabel = "RobotoCondensed";
  sizeExLabel = "(     (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
  fontGrid = "TahomaB";
  sizeExGrid = 0.02;
  fontUnits = "TahomaB";
  sizeExUnits = "(     (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
- fontNames = "PuristaMedium";
+ fontNames = "RobotoCondensed";
  sizeExNames = "(     (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
- fontInfo = "PuristaMedium";
+ fontInfo = "RobotoCondensed";
  sizeExInfo = "(      (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
  fontLevel = "TahomaB";
  sizeExLevel = 0.02;
@@ -493,7 +493,7 @@ onMouseButtonDblClick = "";
   y = "SafeZoneY + safezoneH - 4.5 *          (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
   w = "10 *           (     ((safezoneW / safezoneH) min 1.2) / 40)";
   h = "3.5 *          (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-  font = "PuristaMedium";
+  font = "RobotoCondensed";
   sizeEx = "(     (     (     ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
   colorBackground[] = {1,1,1,0.5};
   color[] = {0,0,0,1};
