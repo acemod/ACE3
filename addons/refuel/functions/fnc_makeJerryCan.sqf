@@ -12,7 +12,7 @@
  * Example:
  * [can] call ace_refuel_fnc_makeJerryCan
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

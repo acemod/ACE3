@@ -11,7 +11,7 @@
  * Example:
  * [truck] call ace_refuel_fnc_reset
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
