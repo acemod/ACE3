@@ -4,54 +4,67 @@
         <Key ID="STR_ACE_tagging_tagWallBlack">
             <English>Tag black</English>
             <German>Schwarz markieren</German>
+            <Polish>Oznacz na czarno</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallRed">
             <English>Tag red</English>
             <German>Rot markieren</German>
+            <Polish>Oznacz na czerwono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallGreen">
             <English>Tag green</English>
             <German>Grün markieren</German>
+            <Polish>Oznacz na zielono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallBLue">
             <English>Tag blue</English>
             <German>Blau markieren</German>
+            <Polish>Oznacz na niebiesko</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlack">
             <English>Tag ground black</English>
             <German>Boden schwarz markieren</German>
+            <Polish>Oznacz ziemię na czarno</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundRed">
             <English>Tag ground red</English>
             <German>Boden rot markieren</German>
+            <Polish>Oznacz ziemię na czerwono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundGreen">
             <English>Tag ground green</English>
             <German>Boden grün markieren</German>
+            <Polish>Oznacz ziemię na zielono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlue">
             <English>Tag ground blue</English>
             <German>Boden blau markieren</German>
+            <Polish>Oznacz ziemię na niebiesko</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlack">
             <English>Black spray paint</English>
             <German>Schwarze Sprühfarbe</German>
+            <Polish>Czarna farba</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintRed">
             <English>Red spray paint</English>
             <German>Rote Sprühfarbe</German>
+            <Polish>Czerwona farba</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintGreen">
             <English>Green spray paint</English>
             <German>Grüne Sprühfarbe</German>
+            <Polish>Zielona farba</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlue">
             <English>Blue spray paint</English>
             <German>Blaue Sprühfarbe</German>
+            <Polish>Niebieska farba</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
+            <Polish>Puszka farby do oznaczania ścian.</Polish>
         </Key>
     </Package>
 </Project>

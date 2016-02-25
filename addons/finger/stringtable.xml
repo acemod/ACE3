@@ -40,7 +40,6 @@
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
             <German>Farbe des Zeigersymbols (Kreis)</German>
-            <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
             <French>Couleur de l'indicateur</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
