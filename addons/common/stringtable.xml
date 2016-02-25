@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -792,6 +792,7 @@
             <German>Kein Platz zum Entladen</German>
             <Polish>Brak miejsca na rozładunek</Polish>
             <Italian>Non c'è spazio per scaricare</Italian>
+            <Spanish>No hay espacio para descargar.</Spanish>
         </Key>
     </Package>
 </Project>

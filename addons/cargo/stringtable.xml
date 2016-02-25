@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -123,6 +123,7 @@
             <Czech>Nakládám</Czech>
             <Russian>Погрузка</Russian>
             <Italian>Caricando</Italian>
+            <Spanish>Cargando</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -132,6 +133,7 @@
             <Czech>Vykládám</Czech>
             <Russian>Выгрузка</Russian>
             <Italian>Scaricando</Italian>
+            <Spanish>Descargando</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -141,6 +143,7 @@
             <Czech>%1&lt;br/&gt;nemůže být naloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть погружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
+            <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -150,24 +153,28 @@
             <Czech>%1&lt;br/&gt;nemůže být vyloženo</Czech>
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
+            <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
             <German>Füge Objekt zum Frachtsystem hinzu</German>
             <Polish>Ustaw jako ładowalny</Polish>
             <Italian>Rendi oggetto caricabile</Italian>
+            <Spanish>Hacer objeto cargable</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
             <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist be- und entladbar.</German>
             <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
             <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
+            <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
             <German>Objektgröße</German>
             <Polish>Rozmiar obiektu</Polish>
             <Italian>Dimensioni dell'oggetto</Italian>
+            <Spanish>Tamaño del objeto</Spanish>
         </Key>
     </Package>
 </Project>

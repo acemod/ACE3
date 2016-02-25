@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Inventory">
         <Key ID="STR_ACE_Inventory_SettingName">
@@ -31,6 +31,7 @@
             <Czech>Batohy</Czech>
             <Polish>Plecaki</Polish>
             <Italian>Zaini</Italian>
+            <Spanish>Mochilas</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -38,6 +39,7 @@
             <Czech>Pokrývka hlavy</Czech>
             <Polish>Hełmy</Polish>
             <Italian>Copricapi</Italian>
+            <Spanish>Cascos</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -45,6 +47,7 @@
             <Czech>Brýle</Czech>
             <Polish>Gogle</Polish>
             <Italian>Occhiali</Italian>
+            <Spanish>Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -52,6 +55,7 @@
             <Czech>Uniformy</Czech>
             <Polish>Uniformy</Polish>
             <Italian>Uniformi</Italian>
+            <Spanish>Uniformes</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -59,6 +63,7 @@
             <Czech>Vesty</Czech>
             <Polish>Kamizelki</Polish>
             <Italian>Vests</Italian>
+            <Spanish>Chalecos</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -66,6 +71,7 @@
             <Czech>Granáty</Czech>
             <Polish>Granaty</Polish>
             <Italian>Granate</Italian>
+            <Spanish>Granadas</Spanish>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -73,6 +79,7 @@
             <Czech>Lékařské vybavení</Czech>
             <Polish>Medyczne</Polish>
             <Italian>Medico</Italian>
+            <Spanish>Médico</Spanish>
         </Key>
     </Package>
 </Project>

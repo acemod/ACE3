@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -335,6 +335,7 @@
             <Russian>Установить канал на старте</Russian>
             <Czech>Zvolit kanál po startu</Czech>
             <Italian>Imposta Canale all'Avvio</Italian>
+            <Spanish>Setear canal al comenzar</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -344,6 +345,7 @@
             <Russian>Изменить начальный канал для установки маркеров при запуске миссии</Russian>
             <Czech>Nastavit kanál po startu mise</Czech>
             <Italian>Cambia il canale marker iniziale all'avvio di missione</Italian>
+            <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
         </Key>
     </Package>
 </Project>

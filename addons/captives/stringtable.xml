@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -189,6 +189,7 @@
             <Russian>Связать юнита</Russian>
             <Czech>Spoutat jednotku</Czech>
             <Italian>Metti manette all'unità</Italian>
+            <Spanish>Hacer que la unidad esté esposada</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
@@ -198,6 +199,7 @@
             <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.</Russian>
             <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
             <Italian>Sincronizza un'unità per metterle le manette.</Italian>
+            <Spanish>Sincroniza una unidad para hacer que esté esposada.</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
