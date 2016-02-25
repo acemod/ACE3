@@ -5,7 +5,7 @@ class CfgLocationTypes {
     class ACE_HashLocation {
         color[] = {0,0,0,0};
         drawStyle = "bananas";
-        font = "PuristaMedium";
+        font = "RobotoCondensed";
         importance = 5;
         name = "HashLocation";
         shadow = 0;

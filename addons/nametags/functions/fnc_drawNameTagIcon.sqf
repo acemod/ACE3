@@ -70,7 +70,7 @@ _fnc_parameters = {
         _name,
         2,
         (0.05 * _scale),
-        "PuristaMedium"
+        "RobotoCondensed"
     ]
 };
 
