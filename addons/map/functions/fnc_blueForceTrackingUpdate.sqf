@@ -17,7 +17,6 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     _playerSide = call EFUNC(common,playerSide);
 
     _groupsToDrawMarkers = allGroups select {side _x == _playerSide};
-    _playersToDrawMarkers = allPlayers select {side _x == _playerSide};
 
     if (GVAR(BFT_HideAiGroups)) then {
         _groupsToDrawMarkers = _groupsToDrawMarkers select {
@@ -28,6 +27,8 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     };
 
     if (GVAR(BFT_ShowPlayerNames)) then {
+        _playersToDrawMarkers = allPlayers select {side _x == _playerSide};
+
         {
             private _markerType = [_x] call EFUNC(common,getMarkerType);
             private _colour = format ["Color%1", side _x];
