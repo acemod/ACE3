@@ -6,11 +6,9 @@ If you have found an issue with ACE3 please make sure that ACE3 really is the ca
 
 Indicate if the issue appears on stable or development version. In case it is the development version, please also include the commit SHA-1 hash.
 
-<div class="panel callout">
-    <h5>Please note:</h5>
-    <p>It's not a valid to simply remove <code>@ace</code> from the mod list to confirm that ACE3 is the culprit.</p>
-    <p>If the error happens when using a <b>third-party mod</b> contact the author of the appropriate mod and report the issue there.</p>
-</div>
+**Please note:**
+- It's not a valid to simply remove <code>@ace</code> from the mod list to confirm that ACE3 is the culprit.
+- If the error happens when using a <b>third-party mod</b> contact the author of the appropriate mod and report the issue there.
 
 ## Reporting the issue
 
