@@ -41,13 +41,10 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
             GVAR(BFT_markers) pushBack _marker;
         } forEach _playersToDrawMarkers;
 
-        if (not GVAR(BFG_HideAiGroups)) then
-        {
-            _groupsToDrawMarkers = _groupsToDrawMarkers select {
-                {
-                    !(_x call EFUNC(common,isPlayer));
-                } count units _x > 0;
-            };
+        _groupsToDrawMarkers = _groupsToDrawMarkers select {
+            {
+                !(_x call EFUNC(common,isPlayer));
+            } count units _x > 0;
         };
     };
 
