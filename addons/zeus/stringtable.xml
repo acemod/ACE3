@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -242,6 +242,7 @@
             <Russian>Добавить запасное колесо</Russian>
             <Czech>Přidat rezervní kolo</Czech>
             <Italian>Aggiungi Ruota di Scorta</Italian>
+            <Spanish>Agregar rueda de auxilio</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
@@ -250,6 +251,7 @@
             <Russian>Добавляет запасное колесо в транспорт</Russian>
             <Czech>Přidá rezervní kolo do vozidla</Czech>
             <Italian>Aggiungi una ruota di scorta al veicolo</Italian>
+            <Spanish>Agrega una rueda de auxilio al vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
@@ -258,6 +260,7 @@
             <Russian>Дабавить запасную гусеницу</Russian>
             <Czech>Přidat náhradní pás</Czech>
             <Italian>Aggiungi Cingolo di Scorta</Italian>
+            <Spanish>Agregar oruga de repuesto</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
@@ -266,6 +269,7 @@
             <Russian>Добавляет запасную гусеницу в транспорт</Russian>
             <Czech>Přidá náhradní pás do vozidla</Czech>
             <Italian>Aggiungi un cingolo di scorta al veicolo</Italian>
+            <Spanish>Agrega una oruga de repuesto al vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -318,6 +322,7 @@
             <Russian>Юнит должен быть транспортом с грузовым отсеком</Russian>
             <Czech>Jednotka musí být vozidlo s úložným prostorem</Czech>
             <Italian>L'unità dev'essere un veicolo con spazio di carico</Italian>
+            <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
@@ -326,6 +331,7 @@
             <Russian>Юнит должен иметь свободное место в грузовом отсеке</Russian>
             <Czech>Jednotka musí mít místo v úložném prostoru</Czech>
             <Italian>L'unità deve avere spazio di carico disponibile</Italian>
+            <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
