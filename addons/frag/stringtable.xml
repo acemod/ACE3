@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_Module_DisplayName">
@@ -65,11 +65,13 @@
             <English>Explosion Reflections Simulation</English>
             <Polish>Symulacja odbicia eksplozji</Polish>
             <Italian>Simulazione Riflessi Esplosioni</Italian>
+            <German>Druckwellensimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
             <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
             <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
+            <German>Aktiviere die ACE-Druckwellensimulation</German>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>

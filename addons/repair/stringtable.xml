@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -381,6 +381,7 @@
             <Spanish>Estabilizador horizontal izquierdo</Spanish>
             <Czech>Levý horizontální stabilizátor</Czech>
             <Italian>Stabilizzatore Orizzontale Sinistro</Italian>
+            <German>Linkes Höhenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
@@ -390,6 +391,7 @@
             <Spanish>Estabilizador horizontal derecho</Spanish>
             <Czech>Pravý horizontální stabilizátor</Czech>
             <Italian>Stabilizzatore Orizzontale Destro</Italian>
+            <German>Rechtes Höhenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
@@ -399,6 +401,7 @@
             <Portuguese>Estabilizador Vertical</Portuguese>
             <Spanish>Estabilizador vertical</Spanish>
             <Italian>Stabilizzatore Verticale</Italian>
+            <German>Seitenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -723,6 +726,7 @@
             <Czech>ERA</Czech>
             <Polish>ERA</Polish>
             <Italian>ERA</Italian>
+            <German>Reaktivpanzerung</German>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>

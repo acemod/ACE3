@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -39,7 +39,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
-            <German>Zeige Partikeleffekt bei allen</German>
+            <German>Zeige Partikeleffekt bei Überhitzung für jeden</German>
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
         </Key>
@@ -63,15 +63,19 @@
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
+            <German>Behebt Ladehemmung beim Nachladen</German>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
+            <German>Nachladen behebt eine Ladehemmung.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
+            <German>Wahrscheinlichkeit das Ladehemmung nicht behoben wird</German>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
+            <German>Wahrscheinlichkeit das der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -135,6 +139,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
             <English>Jam failed to clear</English>
+            <German>Ladehemmung nicht behoben</German>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
