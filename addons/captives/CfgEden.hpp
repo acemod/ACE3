@@ -8,7 +8,7 @@ class Cfg3DEN {
                         control = "Checkbox";
                         displayName = CSTRING(ModuleHandcuffed_DisplayName);
                         tooltip = CSTRING(ModuleHandcuffed_Description);
-                        expression = QUOTE([ARR_2(_this,_value)]call FUNC(setHandcuffed));
+                        expression = QUOTE(if (_value) then {[ARR_3(objNull,[_this],true)] call FUNC(moduleHandcuffed)});
                         typeName = "BOOL";
                         condition = "objectBrain";
                         defaultValue = false;
@@ -18,7 +18,7 @@ class Cfg3DEN {
                         control = "Checkbox";
                         displayName = CSTRING(ModuleSurrender_DisplayName);
                         tooltip = CSTRING(ModuleSurrender_Description);
-                        expression = QUOTE([ARR_2(_this,_value)]call FUNC(setSurrendered));
+                        expression = QUOTE(if (_value) then {[ARR_3(objNull,[_this],true)] call FUNC(moduleSurrender)});
                         typeName = "BOOL";
                         condition = "objectBrain";
                         defaultValue = false;
