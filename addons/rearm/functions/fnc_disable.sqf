@@ -17,5 +17,5 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull], ["_disable", true, [true]]];
+params [["_target", objNull, [objNull]], ["_disable", true, [true]]];
 _target setVariable [QGVAR(disabled), _disable, true];
