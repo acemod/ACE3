@@ -242,4 +242,10 @@ class ACE_Settings {
         values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
         isClientSettable = 1;
     };
+
+    class GVAR(delayUnconCaptive) {
+        displayName = CSTRING(delayUnconCaptive);
+        typeName = "SCALAR";
+        value = 3;
+    };
 };

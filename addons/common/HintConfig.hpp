@@ -25,7 +25,7 @@ class RscTitles {
                 y = safeZoneY + 0.2 * safezoneH;
                 w = 0.2 * safeZoneW;
                 h = 0.1 * SafeZoneH;
-                font = "PuristaMedium";
+                font = "RobotoCondensed";
             };
         };
     };

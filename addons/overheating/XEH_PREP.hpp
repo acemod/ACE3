@@ -1,4 +1,5 @@
 
+PREP(canUnjam);
 PREP(checkTemperature);
 PREP(clearJam);
 PREP(displayTemperature);

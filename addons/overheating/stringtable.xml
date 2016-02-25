@@ -61,6 +61,18 @@
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
         </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
+            <English>Unjam weapon on reload</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnreload_description">
+            <English>Reloading clears a weapon jam.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
+            <English>Chance of unjam failing</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamFailChance_description">
+            <English>Probability that an unjam action might fail, requiring to be repeated.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
             <German>Ersatzlauf</German>
@@ -120,6 +132,9 @@
             <Hungarian>Akadás elhárítva</Hungarian>
             <Portuguese>Arma destravada</Portuguese>
             <Italian>Arma pronta al fuoco</Italian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
+            <English>Jam failed to clear</English>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
