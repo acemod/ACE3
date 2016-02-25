@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -51,6 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
+            <Polish>Wstrzyknij adenozynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -246,6 +247,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
+            <Polish>Wstrzykiwanie adenozyny...</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -957,12 +959,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
+            <Polish>Autostrzykawka z adenozyną</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
+            <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
+            <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -2081,7 +2086,14 @@
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_cpr">
-            <English>%1 started CPR</English>
+            <English>%1 performed CPR</English>
+            <Polish>%1 wykonał cykl RKO</Polish>
+            <Czech>%1 provádí CPR</Czech>
+            <German>%1 hat eine HLW durchgeführt</German>
+            <Italian>%1 ha eseguito CPR</Italian>
+            <Portuguese>%1 realizou RCP</Portuguese>
+            <Russian>%1 провел сердечно-легочную реанимацию</Russian>
+            <Spanish>%1 realicó RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2871,11 +2883,13 @@
             <English>Locations boost training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>
             <Italian>Località aumentano addestramento</Italian>
+            <Polish>Miejsca zwiększają wyszkolenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
             <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem] </Czech>
             <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+            <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -3060,7 +3074,7 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
             <Russian>Откл. мгновенную смерть</Russian>
-            <Polish>Wył. natychmiast. śmierć</Polish>
+            <Polish>Wyłącz natychmiastową śmierć</Polish>
             <Spanish>Prevenir muerte instantánea</Spanish>
             <German>Verhindere direkten Tod</German>
             <Czech>Zabránit okamžité smrti</Czech>
@@ -3167,6 +3181,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
+            <Polish>Podstawowe ustawienia medyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3231,7 +3246,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
             <English>Enable Advanced wounds</English>
             <Russian>Усложненные раны</Russian>
-            <Polish>Akt. zaawansowane rany</Polish>
+            <Polish>Aktywuj zaawansowane rany</Polish>
             <Spanish>Activa heridas avanzadas</Spanish>
             <German>Aktiviere erweiterte Wunden</German>
             <Czech>Povolit pokročilé zranění</Czech>
@@ -3278,14 +3293,16 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
             <English>Allow Epinephrine</English>
+            <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+            <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование аптечки</Russian>
-            <Polish>Ust. apteczek osobistych</Polish>
+            <Polish>Ustawienie apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky</Czech>
@@ -3368,14 +3385,16 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
             <English>Locations Epinephrine</English>
+            <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
+            <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Russian>Место использования аптечки</Russian>
-            <Polish>Ogr. apteczek osobistych</Polish>
+            <Polish>Ograniczenie apteczek osobistych</Polish>
             <Spanish>Ubicacions del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Lokace osobní lékárničky</Czech>
@@ -3471,7 +3490,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical Kit (Adv)</English>
             <Russian>Хирургический набор может использоваться (усл.)</Russian>
-            <Polish>Ust. zestawu chirurg.</Polish>
+            <Polish>Ustawienia zestawu chirurgicznego</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
             <German>Erlaube Operationskasten</German>
             <Czech>Povolit chirurgickou soupravu (Pokr.)</Czech>
@@ -3495,7 +3514,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
             <English>Remove Surgical Kit (Adv)</English>
             <Russian>Удалять хирургический набор (усл.)</Russian>
-            <Polish>Usuń zest. chir. po użyciu</Polish>
+            <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
             <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
             <German>Entferne Operationskasten (erweitert)</German>
             <Czech>Odebrat chirurgickou soupravu (Pokr.)</Czech>
@@ -3519,7 +3538,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical Kit (Adv)</English>
             <Russian>Место использования хирургического набора (усл.)</Russian>
-            <Polish>Ogr. zestawu chirurg.</Polish>
+            <Polish>Ograniczenie zestawu chirurgicznego</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
             <German>Orte für Operationskästen (erweitert)</German>
             <Czech>Lokace chirurgické soupravy (Pokr.)</Czech>
@@ -3546,7 +3565,7 @@
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
-            <Polish>Warunek zestawu chir.</Polish>
+            <Polish>Warunek zestawu chirurgicznego</Polish>
             <Hungarian>Sebészkészlet állapot</Hungarian>
             <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
             <Russian>Условие использования хирургического набора (усл.)</Russian>
@@ -3610,6 +3629,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
+            <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
@@ -3662,7 +3682,7 @@
         <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_DisplayName">
             <English>Max Revive time</English>
             <Russian>Макс. время реанимации</Russian>
-            <Polish>Maks. czas agonii</Polish>
+            <Polish>Maksymalny czas agonii</Polish>
             <Spanish>Tiempo máximo de resucitado</Spanish>
             <German>Maximale Wiederbelebungszeit</German>
             <Czech>Maximální čas pro oživení</Czech>
@@ -3878,7 +3898,7 @@
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
             <Russian>Является медицинским транспортом</Russian>
-            <Polish>Jest pojazdem med.</Polish>
+            <Polish>Jest pojazdem medycznym</Polish>
             <Spanish>Es vehículo médico</Spanish>
             <German>Ist medizinisches Fahrzeug</German>
             <Czech>Zdravotnické vozidlo</Czech>
@@ -3926,7 +3946,7 @@
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
             <Russian>Является госпиталем</Russian>
-            <Polish>Jest budynkiem med.</Polish>
+            <Polish>Jest budynkiem medycznym</Polish>
             <Spanish>Es centro médico</Spanish>
             <German>Ist eine medizinische Einrichtung</German>
             <Czech>Zdravotnické zařízení</Czech>
@@ -4061,12 +4081,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_delayUnconCaptive">
             <English>Delay Medical Unconscious Captivity</English>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay Medical Unconscious Captivity</English>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay Medical Unconscious Captivity</English>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
     </Package>
 </Project>
