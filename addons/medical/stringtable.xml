@@ -2087,7 +2087,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_cpr">
             <English>%1 performed CPR</English>
-            <Spanish>%1 realizó RCP</Spanish>
+            <Spanish>%1 realicó RCP</Spanish>
             <Czech>%1 provádí CPR</Czech>
             <German>%1 hat eine HLW durchgeführt</German>
             <Italian>%1 ha eseguito CPR</Italian>

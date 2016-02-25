@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -19,6 +19,7 @@
             <Czech>Snažím se přehodit</Czech>
             <Polish>Próba zmiany</Polish>
             <Italian>Sto provando a cambiare</Italian>
+            <Spanish>Intentando cambiar</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -197,6 +198,7 @@
             <Russian>Этот модуль позволяет игрокам переключаться между доступными юнитами.</Russian>
             <French>Ce module permet le changement de faction des joueurs</French>
             <Italian>Questo modulo ti permette di cambiare lato durante la partita.</Italian>
+            <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
         </Key>
     </Package>
 </Project>

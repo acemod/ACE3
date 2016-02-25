@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tacticalladder">
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
@@ -45,14 +45,16 @@
             <Russian>Разложить</Russian>
             <Czech>Prodloužit</Czech>
             <Italian>Estendi, +Ctrl ruota</Italian>
+            <Spanish>Extender</Spanish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
-            <English>Ctrl tilt</English>
-            <German>Strg kippen</German>
-            <Polish>Ctrl nachyl</Polish>
-            <Portuguese>Ctrl tilt</Portuguese>
-            <Russian>Ctrl наклонить</Russian>
-            <Czech>Ctrl naklonit</Czech>
+            <English>+Ctrl tilt</English>
+            <German>+Strg kippen</German>
+            <Polish>+Ctrl nachyl</Polish>
+            <Portuguese>+Ctrl tilt</Portuguese>
+            <Russian>+Ctrl наклонить</Russian>
+            <Czech>+Ctrl naklonit</Czech>
+            <Spanish>+Ctrl inclinar</Spanish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
