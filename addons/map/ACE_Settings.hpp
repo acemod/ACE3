@@ -17,6 +17,12 @@ class ACE_Settings {
         displayName = CSTRING(BFT_HideAiGroups_DisplayName);
         description = CSTRING(BFT_HideAiGroups_Description);
     };
+    class GVAR(BFT_ShowPlayerNames) {
+        value = 0;
+        typeName = "BOOL";
+        displayName = CSTRING(BFT_ShowPlayerNames_DisplayName);
+        description = CSTRING(BFT_ShowPlayerNames_Description);
+    };
     class GVAR(mapIllumination) {
         value = 1;
         typeName = "BOOL";

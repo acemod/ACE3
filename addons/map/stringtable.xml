@@ -225,6 +225,30 @@
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
         </Key>
+        <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
+            <English>Show player names?</English>
+            <Polish>Pokaż imiona graczy?</Polish>
+            <Spanish>Mostrar nombres de los jugadores?</Spanish>
+            <German>Zeigen Sie die Namen der Spieler?</German>
+            <Czech>Zobrazit jména hráčů?</Czech>
+            <Portuguese>Mostrar os nomes dos jogadores?</Portuguese>
+            <French>Afficher les noms des joueurs?</French>
+            <Hungarian>Itt található az a játékos nevét?</Hungarian>
+            <Russian>Показать имена игроков?</Russian>
+            <Italian>Mostra i nomi dei giocatori?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_Description">
+            <English>Show individual player names?</English>
+            <Polish>Pokaż poszczególne imiona graczy?</Polish>
+            <Spanish>Mostrar nombres de los jugadores individuales?</Spanish>
+            <German>Zeigen einzelnen Spielernamen?</German>
+            <Czech>Zobrazit názvy jednotlivých hráčů?</Czech>
+            <Portuguese>Mostrar nomes individuais dos jogadores?</Portuguese>
+            <French>Afficher les noms des joueurs individuels?</French>
+            <Hungarian>Itt található az adott játékos neveket?</Hungarian>
+            <Russian>Показать отдельные имена игроков?</Russian>
+            <Italian>Mostra i nomi dei giocatori singoli?</Italian>
+        </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English>This module allows the tracking of allied units with BFT map markers.</English>
             <Polish>Pozwala śledzić na mapie pozycje sojuszniczych jednostek za pomocą markerów BFT.</Polish>
