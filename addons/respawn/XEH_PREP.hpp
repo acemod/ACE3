@@ -9,7 +9,6 @@ PREP(module);
 PREP(moduleFriendlyFire);
 PREP(moduleRallypoint);
 PREP(moveRallypoint);
-PREP(removeBody);
 PREP(restoreGear);
 PREP(showFriendlyFireMessage);
 PREP(teleportToRallypoint);

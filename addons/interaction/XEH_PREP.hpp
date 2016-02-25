@@ -4,7 +4,6 @@ PREP(addPassengerActions);
 PREP(addPassengersActions);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
-PREP(removeTag);
 
 // scroll wheel hint
 PREP(showMouseHint);
