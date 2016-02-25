@@ -4059,5 +4059,14 @@
             <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_delayUnconCaptive">
+            <English>Delay Medical Unconscious Captivity</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
+            <English>Delay Medical Unconscious Captivity</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
+            <English>Delay Medical Unconscious Captivity</English>
+        </Key>
     </Package>
 </Project>
