@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Explosives">
         <Key ID="STR_ACE_Explosives_Menu">
@@ -642,6 +642,7 @@
             <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
+            <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -654,6 +655,7 @@
             <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
+            <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -666,6 +668,7 @@
             <!-- <Russian>Большое СВУ (городское)</Russian> -->
             <!-- <Spanish>IED grande (Urbano)</Spanish> -->
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
+            <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -678,6 +681,7 @@
             <!-- <Russian>Большое СВУ (зарытое)</Russian> -->
             <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
+            <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -690,6 +694,7 @@
             <!-- <Russian>Малое СВУ (городское)</Russian> -->
             <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
+            <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -702,6 +707,7 @@
             <!-- <Russian>Малое СВУ (зарытое)</Russian> -->
             <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
+            <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>

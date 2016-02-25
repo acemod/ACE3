@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
@@ -112,6 +112,7 @@
         <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
             <English>Remove tinnitus effect when the player takes hearing damage</English>
             <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
+            <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -187,6 +188,7 @@
             <Portuguese>Adiciona protetores de ouvido as unidades</Portuguese>
             <Czech>Přidat špunty jednotce</Czech>
             <Italian>Aggiungi Tappi per Orecchie alle unità</Italian>
+            <Spanish>Agregar tapones de oida a la unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
@@ -196,6 +198,7 @@
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
             <Czech>Přidat `ACE_EarPlugs` všem jednotkám které mají zbraň. Můžete vypnout, pokud používáte vlastní výbavu.</Czech>
             <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
+            <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
         </Key>
     </Package>
 </Project>
