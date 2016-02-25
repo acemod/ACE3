@@ -113,6 +113,7 @@
             <English>Remove tinnitus effect when the player takes hearing damage</English>
             <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
             <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
+            <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>

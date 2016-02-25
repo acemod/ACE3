@@ -70,18 +70,22 @@
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
+            <Polish>Usuń zacięcie przy przeładowaniu</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
+            <Polish>Przeładowywanie usuwa zacięcie</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
+            <Polish>Szansa na porażkę usuw. zacięcia</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
             <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
+            <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -146,6 +150,7 @@
         <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
             <English>Jam failed to clear</English>
             <Spanish>Falló el desencasquillado</Spanish>
+            <Polish>Porażka przy usuwaniu zacięcia</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
