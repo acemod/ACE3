@@ -51,7 +51,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
-            <Polish>Wstrzyknij adenozynę</Polish>
+            <Spanish>Inyectar Adenosina</Spanish>
+			<Polish>Wstrzyknij adenozynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -247,7 +248,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
-            <Polish>Wstrzykiwanie adenozyny...</Polish>
+            <Spanish>Inyectando Adenosina...</Spanish>
+			<Polish>Wstrzykiwanie adenozyny...</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -959,15 +961,18 @@
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
-            <Polish>Autostrzykawka z adenozyną</Polish>
+            <Spanish>Asenosina auto-inyectable</Spanish>
+			<Polish>Autostrzykawka z adenozyną</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
-            <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
+            <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
+			<Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
-            <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
+            <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
+			<Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -2149,6 +2154,7 @@
             <Czech>%1 používá PAK</Czech>
             <Russian>%1 использовал аптечку</Russian>
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
+            <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2883,12 +2889,14 @@
             <English>Locations boost training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>
             <Italian>Località aumentano addestramento</Italian>
+			<Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
             <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem] </Czech>
             <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+            <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
@@ -3293,11 +3301,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
             <English>Allow Epinephrine</English>
+			<Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
-            <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
+			<Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
+			<Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3385,10 +3395,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
             <English>Locations Epinephrine</English>
+			<Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
+			<Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
@@ -3629,13 +3641,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
+			<Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
-            <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>
+            <Spanish>Configure las opciones de tratamiento del sistema médico avanzado de ACE</Spanish>
             <German>Behandlungseinstellungen vom ACE-Medizin konfigurieren</German>
             <Czech>Konfigurace nastavení léčby ze zdravotnické systému ACE</Czech>
             <Portuguese>Configure as opções de tratamento do ACE Médico</Portuguese>
@@ -4073,23 +4086,28 @@
             <English>Medical training</English>
             <Polish>Wyszkolenie medyczne</Polish>
             <Italian>Addestramento Medico</Italian>
+            <Spanish>Entrenamiento médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
             <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
+            <Spanish>Es un vehículo médico?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_delayUnconCaptive">
             <English>Delay Medical Unconscious Captivity</English>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+			<Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay Medical Unconscious Captivity</English>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+			<Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay Medical Unconscious Captivity</English>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+			<Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
     </Package>
 </Project>

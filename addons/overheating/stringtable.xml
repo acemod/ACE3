@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -30,48 +30,58 @@
             <German>Partikeleffekt bei Überhitzung</German>
             <Polish>Efekty cząsteczkowe przegrzania</Polish>
             <Italian>Effetti Particelle Surriscaldamento</Italian>
+            <Spanish>Efectos de partículas</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
             <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
             <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
+            <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
             <German>Zeige Partikeleffekt bei allen</German>
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
+            <Spanish>Efectos de partículas para todos</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
             <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
             <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
+            <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
             <German>Streuung bei Überhitzung</German>
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
+            <Spanish>Dispersión</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
             <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
+            <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
+            <Spanish>Desencasquillar el arma al recargar.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
+            <Spanish>Recargar el arma la desencasquilla.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
+            <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
+            <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -135,6 +145,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
             <English>Jam failed to clear</English>
+            <Spanish>Falló el desencasquillado</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
