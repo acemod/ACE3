@@ -3375,7 +3375,7 @@
             <Russian>Удалять аптечки после использования</Russian>
             <Polish>Usuń apteczkę po użyciu</Polish>
             <Spanish>Eliminar EPA después del uso</Spanish>
-            <German>Entferne Erste-Hilfe-Set bei Verwendung</German>
+            <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
             <Czech>Odebrat osobní lékárničku po použití</Czech>
             <Portuguese>Remover o KPS depois do uso</Portuguese>
             <French>Enlever le KPS à l'utilisation</French>
@@ -3430,7 +3430,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
-            <German>Voraussetzungen für das Erste-Hilfe-Set</German>
+            <German>Bedingungen für d. Erste-Hilfe-Set</German>
             <Czech>Podmínka osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
             <French>Condition d'utilisation du KPS</French>
@@ -3574,7 +3574,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
-            <German>Voraussetzungen für den Operationskasten (erweitert)</German>
+            <German>Beding. für d. Operationskasten (erw.)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
