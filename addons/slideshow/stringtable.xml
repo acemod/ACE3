@@ -117,7 +117,7 @@
             <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
             <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
             <Italian>Lista di nomi che verranno usati per per le interazioni, separati da virgole, in ordine per immagini.</Italian>
-            <German>Liste aller Namen die für Interaktionseinträge genutzt werden. Mit Komma getrennt, in Reihenfolge der Bilder.</German>
+            <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Komma getrennt, in Reihenfolge der Bilder.</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>

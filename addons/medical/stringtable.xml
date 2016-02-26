@@ -1036,7 +1036,7 @@
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
-            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
+            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
@@ -1227,7 +1227,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen(Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (Gerinnungsmittel)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
@@ -2087,7 +2087,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Activity_cpr">
             <English>%1 performed CPR</English>
-            <German>%1 hat eine Reanimation durchgeführt</German>
+            <German>%1 hat eine HLW durchgeführt</German>
             <Czech>%1 provádí CPR</Czech>
             <Italian>%1 ha eseguito CPR</Italian>
             <Polish>%1 wykonał cykl RKO</Polish>
@@ -3182,7 +3182,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
-            <German>Grundlegende Sanitätseinstellungen [ACE]</German>
+            <German>Standard Sanitätseinstellungen [ACE]</German>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3298,7 +3298,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
-            <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (grundlegende Sanitätseinstellungen)</German>
+            <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3390,7 +3390,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
-            <German>Wo kann Epiniphrin verwendet werden? (grundlegende Sanitätseinstellungen)</German>
+            <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3630,14 +3630,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
-            <German>Behandlungseinstellungen der Grundlegenden ACE-Medizin konfigurieren</German>
+            <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>
-            <German>Behandlungseinstellungen der Erweiterten ACE-Medizin konfigurieren</German>
+            <German>Behandlungseinstellungen der erweiterten ACE-Medizin konfigurieren</German>
             <Czech>Konfigurace nastavení léčby ze zdravotnické systému ACE</Czech>
             <Portuguese>Configure as opções de tratamento do ACE Médico</Portuguese>
             <French>Configure les paramètres de traitement du système de soin ACE</French>
@@ -3985,7 +3985,7 @@
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
-            <German>[ACE] Sanitätskiste (standard)</German>
+            <German>[ACE] Sanitätskiste (Standard)</German>
             <Czech>[ACE] Zdravotnické zásoby (základní)</Czech>
             <Portuguese>[ACE] Caixa com suprimentos médicos</Portuguese>
             <French>[ACE] Caisse médicale (basique)</French>
