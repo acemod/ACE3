@@ -52,7 +52,7 @@
             <Polish>Domyślny kolor dla liderów grup.</Polish>
             <Russian>Значение цвета для лидеров групп.</Russian>
             <Italian>Colore di riserva dei capisquadra quando non c'è nessuna impostazione gruppo. [Modulo: lascia vuoto per non forzare su clients]</Italian>
-            <German>Ersat-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwedung bei Clients nicht zu erzwingen]</German>
+            <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
             <English>Default Color</English>
@@ -69,7 +69,7 @@
             <Polish>Kolor domyślny</Polish>
             <Russian>Значение цвета.</Russian>
             <Italian>Colore di riserva quando non ci sono impostazioni gruppo. [Modulo: lascia vuto per non forzare sui clients]</Italian>
-            <German>Ersat-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwedung bei Clients nicht zu erzwingen]</German>
+            <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
             <English>Lead Color</English>
@@ -155,7 +155,7 @@
             <Polish>Hasz ID grup zmapowanych w indeksie konfiguracji koloru grup.</Polish>
             <Russian>Хеш ID групп, соответствующих индексам конфигурации цвета групп.</Russian>
             <Italian>Hash degli ID Gruppi mappati nell'indice configurazioni colori gruppi.</Italian>
-            <German>Hashwert der Gruppen-ID die dem Konfigurations-Index der Gruppenfarbe zugeordnet werden.</German>
+            <German>Hashwert der Gruppen-ID, die dem Konfigurations-Index der Gruppenfarbe zugeordnet werden.</German>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_displayName">
             <English>GroupID Color configuration mapping</English>
