@@ -190,6 +190,7 @@
             <Czech>Spoutat jednotku</Czech>
             <Italian>Metti manette all'unità</Italian>
             <Spanish>Hacer que la unidad esté esposada</Spanish>
+            <French>Rend une unité captive</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
@@ -282,6 +283,7 @@
             <Spanish>Requiere rendición</Spanish>
             <Czech>Vzdávání vyžadováno</Czech>
             <Italian>Richiedi Resa</Italian>
+            <French>Requiert la capitulation</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
@@ -292,6 +294,7 @@
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
+            <French>Requiert la capitulation des jouerus avant qu'ils puissent être arrêté</French>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -302,6 +305,7 @@
             <Spanish>Solo rendición</Spanish>
             <Czech>Pouze vzdávání</Czech>
             <Italian>Solo Resa</Italian>
+            <French>Capitulation seulement</French>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
@@ -312,6 +316,7 @@
             <Spanish>Rendición o desarme</Spanish>
             <Czech>Vzdávání nebo beze zbraně</Czech>
             <Italian>Resa o senza armi</Italian>
+            <French>Surrendering or No weapon</French>
         </Key>
     </Package>
 </Project>
