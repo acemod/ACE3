@@ -42,7 +42,10 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
 
         _target setVariable [QGVAR(isConnected), false, true];
         _target setVariable [QGVAR(ownedNozzle), nil, true];
-        ropeDestroy (_nozzle getVariable QGVAR(rope));
+        private _rope = _nozzle getVariable [QGVAR(rope), objNull];
+        if !(isNull _rope) then {
+            ropeDestroy _rope;
+        };
         deleteVehicle _nozzle;
 
         if !(local _target) then {
