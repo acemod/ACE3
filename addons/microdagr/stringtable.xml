@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MicroDAGR">
         <Key ID="STR_ACE_MicroDAGR_itemName">
@@ -364,7 +364,7 @@
         <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
             <Polish>Żadna (wyłącza ekran mapy)</Polish>
-            <Spanish>Nada (No se puede el mapa)</Spanish>
+            <Spanish>Nada (No se puede usar vista del mapa)</Spanish>
             <German>Keine (kann keine Kartenansicht verwenden)</German>
             <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
             <Portuguese>Nada (Não pode usar a tela de mapa)</Portuguese>
