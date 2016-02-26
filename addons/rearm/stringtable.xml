@@ -71,6 +71,22 @@
             <Italian>Ammontare basato sul calibro</Italian>
             <Spanish>Cantidad basada en el calibre</Spanish>
         </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
+            <English>Ammunition supply</English>
+            <German>Munitionsvorat</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
+            <English>How much ammunition does an ammo truck carry?</English>
+            <German>Wie viel Munition transportiert ein Munitionslaster?</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
+            <English>Unlimited ammo supply</English>
+            <German>Unbegrenzter Munitionsvorat</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
+            <English>Only specific Magazines</English>
+            <German>Nur bestimmte Magazine</German>
+        </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
             <German>Aufmunitionieren</German>

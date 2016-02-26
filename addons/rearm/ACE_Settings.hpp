@@ -6,4 +6,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {CSTRING(RearmSettings_vehicle), CSTRING(RearmSettings_magazine), CSTRING(RearmSettings_caliber)};
     };
+    class GVAR(supply) {
+        displayName = CSTRING(RearmSettings_supply_DisplayName);
+        description = CSTRING(RearmSettings_supply_Description);
+        value = 0;
+        typeName = "SCALAR";
+        values[] = {CSTRING(RearmSettings_unlimited), CSTRING(RearmSettings_caliber), CSTRING(RearmSettings_magazineSupply)};
+    };
 };
