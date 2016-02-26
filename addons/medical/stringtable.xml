@@ -770,7 +770,7 @@
         <Key ID="STR_ACE_Medical_receivingIvVolume">
             <English>Receiving IV [%1ml]</English>
             <German>Erhalte IV [%1ml]</German>
-            <Spanish>Reciviendo IV [%1ml]</Spanish>
+            <Spanish>Recibiendo IV [%1ml]</Spanish>
             <Russian>Принимается переливание [%1 мл]</Russian>
             <Polish>Otrzymywanie IV [pozostało %1ml]</Polish>
             <French>Transfusion en IV [%1ml]</French>
@@ -2098,7 +2098,7 @@
             <Italian>%1 ha eseguito CPR</Italian>
             <Portuguese>%1 realizou RCP</Portuguese>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
-            <Spanish>%1 realicó RCP</Spanish>
+            <Spanish>%1 realizó RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -3190,6 +3190,7 @@
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
             <Polish>Podstawowe ustawienia medyczne</Polish>
+            <Spanish>Ajustes médicos básicos [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3243,7 +3244,7 @@
             <English>Players and AI</English>
             <Russian>Игроков и ботов</Russian>
             <Polish>Gracze oraz AI</Polish>
-            <Spanish>Jugadors e IA</Spanish>
+            <Spanish>Jugadores e IA</Spanish>
             <German>Spieler und KI</German>
             <Czech>Hráči a AI</Czech>
             <Portuguese>Jogadores e IA</Portuguese>
@@ -3407,7 +3408,7 @@
             <English>Locations PAK</English>
             <Russian>Место использования аптечки</Russian>
             <Polish>Ograniczenie apteczek osobistych</Polish>
-            <Spanish>Ubicacions del EPA</Spanish>
+            <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Lokace osobní lékárničky</Czech>
             <Portuguese>Localizações do KPS</Portuguese>
