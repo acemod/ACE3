@@ -1,3 +1,4 @@
+class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscText;
 class RscListbox;
@@ -9,7 +10,9 @@ class RscDisplayAttributes {
     class Controls {
         class Background;
         class Title;
-        class Content;
+        class Content: RscControlsGroup {
+            class controls;
+        };
         class ButtonOK;
         class ButtonCancel;
     };
@@ -106,5 +109,51 @@ class GVAR(RscDisplayAttributes_globalSetSkill): RscDisplayAttributes {
         };
         class ButtonOK: ButtonOK {};
         class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(cargoAttribute): RscControlsGroupNoScrollbars {
+    onSetFocus = QUOTE(_this call FUNC(zeusAttributes_vehCargo));
+    idc = 80085;
+    x = "7 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+    y = "10 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+    w = "26 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+    h = "3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    class controls {
+        class Title: RscText {
+            idc = -1;
+            text = "Cargo:";
+            x = "0 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            y = "0 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            w = "10 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            colorBackground[] = {0,0,0,0.5};
+        };
+        class Background: RscText {
+            idc = -1;
+            x = "10 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            y = "0 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            w = "16 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "2.5 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            colorBackground[] = {1,1,1,0.1};
+        };
+        class Cargo: RscListBox {
+            idc = 80086;
+            x = "10 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            y = "0 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            w = "16 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+            h = "3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        };
+
+    };
+};
+
+class RscDisplayAttributesVehicle: RscDisplayAttributes {
+    class Controls: Controls {
+        class Content: Content {
+            class Controls: controls {
+                class Cargo: GVAR(cargoAttribute) { };
+            };
+        };
     };
 };

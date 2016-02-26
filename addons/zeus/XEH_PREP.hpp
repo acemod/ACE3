@@ -18,3 +18,4 @@ PREP(setSkillsLocal);
 PREP(zeus_globalSetSkill);
 PREP(zeusAttributes);
 PREP(zeusAttributes_globalSetSkill);
+PREP(zeusAttributes_vehCargo);
