@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -260,7 +260,7 @@
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
-            <French>Quand autoriser, vous pouvez accéder au modification et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse papier</French>
+            <French>Quand autorisé, vous pouvez accéder aux modifications et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse-papier</French>
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
             <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
             <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
@@ -356,7 +356,7 @@
             <Czech>Debug do schránky</Czech>
             <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
-            <French>Debug vers le presse papier</French>
+            <French>Debug vers le presse-papier</French>
             <Hungarian>Debug a vágólapra</Hungarian>
             <Russian>Отладка в буфер обмена</Russian>
             <Italian>Debug su Blocco Note</Italian>
@@ -368,7 +368,7 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
-            <French>Copie le Debug dans le RPT et le presse papier</French>
+            <French>Copie le Debug dans le RPT et le presse-papier</French>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
@@ -430,6 +430,7 @@
             <Czech>Všechny Kategorie</Czech>
             <Spanish>Todas las categorías</Spanish>
             <Italian>Tutte le Categorie</Italian>
+            <French>Toutes les catégories</French>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -440,6 +441,7 @@
             <Czech>Logistika</Czech>
             <Spanish>Logística</Spanish>
             <Italian>Logistica</Italian>
+            <French>Logistique</French>
         </Key>
     </Package>
 </Project>
