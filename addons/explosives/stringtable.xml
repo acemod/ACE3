@@ -568,7 +568,7 @@
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
-            <French>Le désarmoçage d'explosif requiert un spécialiste ? Défaut: non</French>
+            <French>Le désarmoçage d'explosif requiert un spécialiste ? Défaut : non</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
@@ -616,7 +616,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
-            <French>Permet à certains explosifs d'exploser au désamorçage ? Défaut: oui</French>
+            <French>Permet à certains explosifs d'exploser au désamorçage ? Défaut : oui</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
