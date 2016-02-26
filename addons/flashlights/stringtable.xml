@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Flashlights">
         <Key ID="STR_ACE_Flashlights_MX991_DisplayName">
@@ -10,6 +10,7 @@
             <Czech>Fulton MX-991</Czech>
             <Spanish>Fulton MX-991</Spanish>
             <Italian>Fulton MX-991</Italian>
+            <French>Fulton MX-991</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -20,6 +21,7 @@
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
+            <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -30,6 +32,7 @@
             <Czech>Maglite XL50</Czech>
             <Spanish>Maglite XL50</Spanish>
             <Italian>Maglite XL50</Italian>
+            <French>Maglite XL50</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -40,6 +43,7 @@
             <Czech>Bílá mini svítilna. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
+            <French>Mini lampe torche. Pour utilisation sur carte.</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -50,6 +54,7 @@
             <Czech>KSF-1</Czech>
             <Spanish>KSF-1</Spanish>
             <Italian>KSF-1</Italian>
+            <French>KSF-1</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -60,6 +65,7 @@
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
+            <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
         </Key>
     </Package>
 </Project>
