@@ -388,20 +388,77 @@ class CfgVehicles {
     class Heli_Light_01_base_F: Helicopter_Base_H {
         class ACE_SelfSpatialActions: ACE_SelfSpatialActions {
             class ACE_TurnEngineOn {
-                displayName = "Turn Engine On";
+                icon = PATHTOF(UI\btn-06.paa);
+                displayName = "";
                 selection = "";
-                position = "[0.15,1.75,0.15]";
+                position = "[0.057,1.725,-0.24]";
                 distance = 1.5;
                 condition = "!isEngineOn _target";
                 statement = QUOTE([ARR_3('ace_interaction_engineOn',_target,[ARR_2(_target, true)])] call EFUNC(common,objectEvent););
             };
             class ACE_TurnEngineOff {
-                displayName = "Turn Engine Off";
+                icon = PATHTOF(UI\btn-05.paa);
+                displayName = "";
                 selection = "";
-                position = "[0.15,1.75,0.15]";
+                position = "[0.057,1.725,-0.24]";
                 distance = 1.5;
                 condition = "isEngineOn _target";
                 statement = QUOTE([ARR_3('ace_interaction_engineOn',_target,[ARR_2(_target, false)])] call EFUNC(common,objectEvent););
+            };
+
+            class ACE_BatOn {
+                icon = PATHTOF(UI\btn-02.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.08,1.74,-0.01]";
+                distance = 1.5;
+                condition = QUOTE(!(_target getVariable [ARR_2('ace_interact_batStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_batStatus',true)];);
+            };
+            class ACE_BatOff {
+                icon = PATHTOF(UI\btn-01.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.08,1.74,-0.01]";
+                distance = 1.5;
+                condition = QUOTE((_target getVariable [ARR_2('ace_interact_batStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_batStatus',false)];);
+            };
+            class ACE_GenOn {
+                icon = PATHTOF(UI\btn-04.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.08,1.735,-0.05]";
+                distance = 1.5;
+                condition = QUOTE(!(_target getVariable [ARR_2('ace_interact_genStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_genStatus',true)];);
+            };
+            class ACE_GenOff {
+                icon = PATHTOF(UI\btn-03.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.08,1.735,-0.05]";
+                distance = 1.5;
+                condition = QUOTE((_target getVariable [ARR_2('ace_interact_genStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_genStatus',false)];);
+            };
+            class ACE_FuelPumpOn {
+                icon = PATHTOF(UI\btn-08.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.055,1.74,-0.015]";
+                distance = 1.5;
+                condition = QUOTE(!(_target getVariable [ARR_2('ace_interact_fuelPumpStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_fuelPumpStatus',true)];);
+            };
+            class ACE_FuelPumpOff {
+                icon = PATHTOF(UI\btn-07.paa);
+                displayName = "";
+                selection = "";
+                position = "[-0.055,1.74,-0.015]";
+                distance = 1.5;
+                condition = QUOTE((_target getVariable [ARR_2('ace_interact_fuelPumpStatus',false)]));
+                statement = QUOTE(_target setVariable [ARR_2('ace_interact_fuelPumpStatus',false)];);
             };
         };
     };
