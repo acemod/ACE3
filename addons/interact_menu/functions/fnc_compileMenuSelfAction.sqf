@@ -33,9 +33,25 @@ private _recurseFnc = {
         private _entryCfg = _x;
         if(isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
-
+            private _distance = 10;
+            if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
             private _icon = getText (_entryCfg >> "icon");
             private _statement = compile (getText (_entryCfg >> "statement"));
+
+            // If the position entry is present, compile it
+            private _position = getText (_entryCfg >> "position");
+            if (_position != "") then {
+                _position = compile _position;
+            } else {
+                // If the not, but the selection entry is present use that
+                _position = getText (_entryCfg >> "selection");
+                if (_position != "") then {
+                    _position = compile format ["_target selectionPosition '%1'", _position];
+                } else {
+                    // Otherwise, just use the origin
+                    _position = {[0,0,0]};
+                };
+            };
 
             private _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
@@ -68,8 +84,8 @@ private _recurseFnc = {
                             _condition,
                             _insertChildren,
                             [],
-                            [0,0,0],
-                            10, //distace
+                            _position,
+                            distace,
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover, true],
                             _modifierFunction
                         ],
@@ -125,4 +141,8 @@ private _actions = [
         ]
     ];
 
+private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_SelfSpatialActions";
+private _actions2 = [_actionsCfg, 0] call _recurseFnc;
+
+_actions = _actions + _actions2;
 _namespace setVariable [_objectType, _actions];

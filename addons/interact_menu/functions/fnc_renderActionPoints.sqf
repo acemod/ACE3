@@ -108,7 +108,15 @@ private _fnc_renderSelfActions = {
 
     {
         _action = _x;
-        [_target, _action, _pos] call FUNC(renderBaseMenu);
+        if ((_action select 0 select 0) isEqualTo "ACE_SelfActions") then {
+            if (_target == ACE_player) then {
+                [_target, _action, _pos] call FUNC(renderBaseMenu);
+            } else {
+                [_target, _action, [0.5, 0.2]] call FUNC(renderBaseMenu);
+            };
+        } else {
+            [_target, _action] call FUNC(renderBaseMenu);
+        };
         nil
     } count _classActions;
 };

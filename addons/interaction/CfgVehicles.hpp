@@ -380,6 +380,30 @@ class CfgVehicles {
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
         };
+        class ACE_SelfSpatialActions {};
+    };
+
+    class Helicopter_Base_F: Helicopter {};
+    class Helicopter_Base_H: Helicopter_Base_F {};
+    class Heli_Light_01_base_F: Helicopter_Base_H {
+        class ACE_SelfSpatialActions: ACE_SelfSpatialActions {
+            class ACE_TurnEngineOn {
+                displayName = "Turn Engine On";
+                selection = "";
+                position = "[0.15,1.75,0.15]";
+                distance = 1.5;
+                condition = "!isEngineOn _target";
+                statement = QUOTE([ARR_3('ace_interaction_engineOn',_target,[ARR_2(_target, true)])] call EFUNC(common,objectEvent););
+            };
+            class ACE_TurnEngineOff {
+                displayName = "Turn Engine Off";
+                selection = "";
+                position = "[0.15,1.75,0.15]";
+                distance = 1.5;
+                condition = "isEngineOn _target";
+                statement = QUOTE([ARR_3('ace_interaction_engineOn',_target,[ARR_2(_target, false)])] call EFUNC(common,objectEvent););
+            };
+        };
     };
 
     class Plane: Air {
@@ -577,7 +601,7 @@ class CfgVehicles {
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
     };
-    
+
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {
