@@ -2098,7 +2098,7 @@
             <Italian>%1 ha eseguito CPR</Italian>
             <Portuguese>%1 realizou RCP</Portuguese>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
-            <Spanish>%1 realizó RCP</Spanish>
+            <Spanish>%1 realicó RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>

@@ -45,6 +45,7 @@
             <Czech>Odpálit VŠE</Czech>
             <Polish>Detonuj wszystkie</Polish>
             <Italian>Detona Tutti</Italian>
+            <French>Mise à feu (tous)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -90,6 +91,7 @@
             <Czech>Blokováno</Czech>
             <Polish>Zablokowany</Polish>
             <Italian>Bloccato</Italian>
+            <French>Bloqué</French>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -384,7 +386,7 @@
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler minuteur</French>
+            <French>Régler le minuteur</French>
             <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
@@ -491,7 +493,7 @@
             <English>No explosives on trigger.</English>
             <German>Keine Sprengladungen auf diesem Auslöser.</German>
             <Spanish>Ningún explosivo en el detonador.</Spanish>
-            <French>Pas d'explosif à mettre à feu.</French>
+            <French>Pas d'explosif à déclencher.</French>
             <Italian>Nessun esplosivo</Italian>
             <Czech>Žádná výbušnina k odpálení.</Czech>
             <Hungarian>Nincs robbanóanyag a gyújtóeszközhöz kötve.</Hungarian>
@@ -514,7 +516,7 @@
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
             <German>Zündet Sprengladungen wenn losgelassen.</German>
-            <French>Déclenche la mise à feu d'un explosif lorsqu'il est libéré.</French>
+            <French>Déclenche la mise à feu d'un explosif lorsqu'il est relaché.</French>
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
             <Polish>Używany w celu zdalnej detonacji ładunków, kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
@@ -554,7 +556,7 @@
             <German>Benötigt Sprengstoffexperten?</German>
             <Czech>Vyžadovat specialistu?</Czech>
             <Portuguese>Requer especialista?</Portuguese>
-            <French>Requiert un spécialiste?</French>
+            <French>Requiert un spécialiste ?</French>
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
@@ -566,7 +568,7 @@
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
-            <French>Le désarmoçage d'explosif requiert un spécialiste? Défaut: non</French>
+            <French>Le désarmoçage d'explosif requiert un spécialiste ? Défaut: non</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
@@ -578,7 +580,7 @@
             <German>Bestrafe Nicht-Sprengstoffexperten?</German>
             <Czech>Potrestat, pokud není specialista?</Czech>
             <Portuguese>Punir não especialistas?</Portuguese>
-            <French>Punir les non-spécialistes?</French>
+            <French>Punir les non-spécialistes ?</French>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
@@ -590,7 +592,7 @@
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
-            <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes? Défaut: oui</French>
+            <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes ? Défaut : oui</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
@@ -602,7 +604,7 @@
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
             <Spanish>Explotar al desactivar?</Spanish>
-            <French>Explosion si désamorçage?</French>
+            <French>Explosion au désamorçage ?</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
@@ -614,7 +616,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
-            <French>Permet à certains explosifs d'exploser au désamorçage? Défaut: oui</French>
+            <French>Permet à certains explosifs d'exploser au désamorçage ? Défaut: oui</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
@@ -625,7 +627,7 @@
             <German>Dieses Modul erlaubt die Einstellungen für Sprengstoffe zu verändern.</German>
             <Czech>Tento modul umoňuje přizpůsobit nastavení týkajících se výbušnin.</Czech>
             <Portuguese>Este módulo permite personalizar as definições relacionadas a explosivos.</Portuguese>
-            <French>Ce module ajuste les options relative aux explosifs</French>
+            <French>Ce module ajuste les paramètres liés aux explosifs.</French>
             <Hungarian>Ez a modul a robbanóanyagokhoz kötött beállításokat szabályozza.</Hungarian>
             <Russian>Этот модуль управляет настройками, связанными со взрывными устройствами</Russian>
             <Spanish>Este módulo ajusta las configuraciones relacionadas con explosivos.</Spanish>
@@ -643,6 +645,7 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
+            <French>Mine M6 SLAM (Par le bas)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -656,6 +659,7 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
+            <French>Mine M6 SLAM (De flanc)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -669,6 +673,7 @@
             <!-- <Spanish>IED grande (Urbano)</Spanish> -->
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
+            <French>Grand EEI (Urbain, plaque de pression)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -682,6 +687,7 @@
             <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
+            <French>Grand EEI (Enterré, plaque de pression)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -695,6 +701,7 @@
             <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
+            <French>Petit EEI (Urbain, plaque de pression)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -708,6 +715,7 @@
             <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
+            <French>Petit EEI (Enterré, plaque de pression)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>
