@@ -332,7 +332,7 @@
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
-            <French>Combien d'information apparaisse sur la carte du MicroDAGR</French>
+            <French>Combien d'informations apparaissent sur la carte du MicroDAGR</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
@@ -380,7 +380,7 @@
             <German>Steuert wie viel Daten auf dem microDAGR zu sehen ist. Weniger Daten schränken die Kartenansicht ein, um mehr auf der Minimap zu sehen.</German>
             <Czech>Tento modul umožňuje kontrolovat, kolik informací je obsaženo v MicroDAGR. Menší množství dat omezené zobrazením mapy ukazují méně věcí na minimapě.</Czech>
             <Portuguese>Controla quantos dados são preenchidos nos itens microDAGR. Menos dados restringe a visualização de mapa para mostrar menos informações no minimapa.</Portuguese>
-            <French>Contrôle le nombre d'information disponible sur la carte du MicroDAGR.</French>
+            <French>Contrôle le nombre d'informations disponibles sur la carte du MicroDAGR.</French>
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
             <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.</Russian>
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
