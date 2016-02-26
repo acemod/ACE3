@@ -85,7 +85,7 @@ private _recurseFnc = {
                             _insertChildren,
                             [],
                             _position,
-                            distace,
+                            _distance,
                             [_showDisabled,_enableInside,_canCollapse,_runOnHover, true],
                             _modifierFunction
                         ],
