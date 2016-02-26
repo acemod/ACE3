@@ -14,3 +14,7 @@ PREP(moduleSetMedicalFacility);
 PREP(moduleSurrender);
 PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
+PREP(setSkillsLocal);
+PREP(zeus_globalSetSkill);
+PREP(zeusAttributes);
+PREP(zeusAttributes_globalSetSkill);

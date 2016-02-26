@@ -186,4 +186,19 @@ class CfgVehicles {
             // sync[] = {};
         // };
     // };
+    class GVAR(zeus_globalSetSkill): GVAR(moduleBase) {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        scope = 1;
+        scopeCurator = 2;
+        isTriggerActivated = 0;
+        displayName = "Global Set AI Skill";
+        // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
+        // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
+        function = QFUNC(zeus_globalSetSkill);
+        curatorInfoType = QGVAR(RscDisplayAttributes_globalSetSkill);
+        curatorCost = 0;
+        class Arguments {};
+        class Attributes {};//todo, make it a threden as well
+    };
 };
