@@ -245,7 +245,8 @@ class ACE_Settings {
 
     class GVAR(delayUnconCaptive) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(delayUnconCaptive);
+        displayName = CSTRING(MedicalSettings_delayUnconCaptive_DisplayName);
+        description = CSTRING(MedicalSettings_delayUnconCaptive_Description);
         typeName = "SCALAR";
         value = 3;
     };

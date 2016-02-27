@@ -4111,12 +4111,6 @@
             <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_delayUnconCaptive">
-            <English>Delay cease fire of AI during medical unconsciousness</English>
-            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
-            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
             <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
@@ -4124,6 +4118,8 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
     </Package>
 </Project>
