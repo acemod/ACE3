@@ -3,7 +3,7 @@
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
             <English>Refuel Settings</English>
-            <German>Betankungseinst.</German>
+            <German>Betankungseinstellungen</German>
             <Polish>Ustawienia tankowania</Polish>
             <Russian>Настройки дозаправки</Russian>
             <Portuguese>Ajustes de reabastecimento</Portuguese>

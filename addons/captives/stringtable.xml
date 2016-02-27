@@ -54,7 +54,7 @@
             <German>Du musst ihn zuerst gefangen nehmen.</German>
             <Spanish>Necesitas hacerle prisionero primero!</Spanish>
             <Polish>Najpierw musisz go aresztować!</Polish>
-            <French>Vous devez d'abord le capturer!</French>
+            <French>Vous devez d'abord le capturer !</French>
             <Czech>Musíš ho nejdříve zajmout!</Czech>
             <Italian>Prima devi arrestarlo!</Italian>
             <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
@@ -112,7 +112,7 @@
         <Key ID="STR_ACE_Captives_FriskMenuHeader">
             <English>Inventory of frisked person</English>
             <German>Inventar der durchsuchten Person</German>
-            <French>Inventaire de la fouille</French>
+            <French>Inventaire de la personne fouillé</French>
             <Spanish>Inventario de la persona cacheada</Spanish>
             <Hungarian>Motozott személy felszerelése</Hungarian>
             <Czech>Inventář prohledávané osoby</Czech>
@@ -124,7 +124,7 @@
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
             <German>Person durchsuchen</German>
-            <French>Fouiller</French>
+            <French>Fouiller la personne</French>
             <Spanish>Cachear</Spanish>
             <Czech>Prohledávaná osoba</Czech>
             <Polish>Rewiduj osobę</Polish>
@@ -147,7 +147,7 @@
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
-            <French>Annuler la capitulation</French>
+            <French>Annuler la reddition</French>
             <German>Den Kampf erneut aufnehmen</German>
             <Spanish>Dejar de rendirse</Spanish>
             <Portuguese>Parar de se render</Portuguese>
@@ -201,7 +201,7 @@
             <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
             <Italian>Sincronizza un'unità per metterle le manette.</Italian>
             <Spanish>Sincroniza una unidad para hacer que esté esposada.</Spanish>
-            <English>Synchronise une unité pour la rendre captive.</English>
+            <French>Synchronise une unité pour la rendre captive.</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -210,7 +210,7 @@
             <Czech>Nastavení zajatce</Czech>
             <German>Gefangenen-Einstellungen</German>
             <Portuguese>Ajustes de prisioneiros</Portuguese>
-            <French>Options de capitulation</French>
+            <French>Options de reddition</French>
             <Hungarian>Fogoly-beállítások</Hungarian>
             <Russian>Настройки пленения</Russian>
             <Italian>Impostazioni Prigionieri</Italian>
@@ -222,7 +222,7 @@
             <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
             <German>Einstellungen zur Kapitulation und Kabelbindern</German>
             <Portuguese>Controla as configurações de rendição e abraçadeiras</Portuguese>
-            <French>Contrôle les paramètres de la rédition et des Serflex</French>
+            <French>Contrôle les paramètres de la reddition et des Serflex</French>
             <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
             <Russian>Управляет настройками сдачи в плен и связывания</Russian>
             <Italian>Controlla le impostazioni per la resa e le manette</Italian>
@@ -234,7 +234,7 @@
             <Czech>Může spoutat spolubojovníky</Czech>
             <German>Kann Kameraden fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
-            <French>Peut libérer sa propre faction</French>
+            <French>Peut menotter sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
@@ -258,7 +258,7 @@
             <Czech>Povolit vzdávání</Czech>
             <German>Kapitulation erlauben</German>
             <Portuguese>Permite rendição</Portuguese>
-            <French>Permettre la capitulation</French>
+            <French>Permettre la reddition</French>
             <Hungarian>Kapituláció engedélyezése</Hungarian>
             <Russian>Сдаться в плен</Russian>
             <Italian>Permetti Resa</Italian>
@@ -284,7 +284,7 @@
             <Spanish>Requiere rendición</Spanish>
             <Czech>Vzdávání vyžadováno</Czech>
             <Italian>Richiedi Resa</Italian>
-            <French>Requiert la capitulation</French>
+            <French>Requiert la reddition</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
@@ -295,7 +295,7 @@
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
-            <French>Requiert la capitulation des joueurs avant qu'ils puissent être arrêtés</French>
+            <French>Requiert la reddition des joueurs avant qu'ils ne puissent être arrêtés</French>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -306,7 +306,7 @@
             <Spanish>Solo rendición</Spanish>
             <Czech>Pouze vzdávání</Czech>
             <Italian>Solo Resa</Italian>
-            <French>Capitulation seulement</French>
+            <French>Reddition seulement</French>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
@@ -317,7 +317,7 @@
             <Spanish>Rendición o desarme</Spanish>
             <Czech>Vzdávání nebo beze zbraně</Czech>
             <Italian>Resa o senza armi</Italian>
-            <French>Capitulation ou désarmement</French>
+            <French>Reddition ou désarmement</French>
         </Key>
     </Package>
 </Project>

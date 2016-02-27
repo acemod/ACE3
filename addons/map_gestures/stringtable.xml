@@ -8,6 +8,7 @@
             <Russian>Жесты на карте</Russian>
             <Czech>Ukazování v mapě</Czech>
             <Italian>Gesti Mappa</Italian>
+            <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_displayName">
@@ -17,6 +18,7 @@
             <Russian>Включено</Russian>
             <Czech>Povolit</Czech>
             <Italian>Abilita</Italian>
+            <German>Aktiviert</German>
             <Spanish>Activado</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_maxRange_displayName">
@@ -26,6 +28,7 @@
             <Russian>Макс. дистанция жестов на карте</Russian>
             <Czech>Max. vzdálenost pro ukazování v mapě</Czech>
             <Italian>Distanza Massima Gesti Mappa</Italian>
+            <German>Maximale Reichweite der Kartenzeichen</German>
             <Spanish>Máx. dist. para gestos en mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_maxRange_description">
@@ -35,6 +38,7 @@
             <Russian>Макс. дистанция между игроками для отображения жестов на карте [по-умолчанию: 7 метров]</Russian>
             <Czech>Maximální vzdálenost mezi hráči pro zobrazení indikátoru ukázání v mapě [výchozí: 7 metrů] </Czech>
             <Italian>Distanza massima tra giocatori per mostrare i gesti in mappa [default: 7 metri]</Italian>
+            <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen (Standard: 7 Meter)</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos [defecto: 7 m]</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
@@ -44,6 +48,7 @@
             <Russian>Лид. цвет по-умолчанию</Russian>
             <Czech>Výchozí barva velitele</Czech>
             <Italian>Colore Default Caposquadra</Italian>
+            <German>Gruppenführer-Standardfarbe</German>
             <Spanish>Color por defecto para el lider</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
@@ -52,6 +57,7 @@
             <Polish>Domyślny kolor dla liderów grup.</Polish>
             <Russian>Значение цвета для лидеров групп.</Russian>
             <Italian>Colore di riserva dei capisquadra quando non c'è nessuna impostazione gruppo. [Modulo: lascia vuoto per non forzare su clients]</Italian>
+            <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
@@ -61,6 +67,7 @@
             <Russian>Цвет по-умолчанию</Russian>
             <Czech>Výchozí barva</Czech>
             <Italian>Colore Default</Italian>
+            <German>Standardfarbe</German>
             <Spanish>Color por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_defaultColor_description">
@@ -69,6 +76,7 @@
             <Polish>Kolor domyślny</Polish>
             <Russian>Значение цвета.</Russian>
             <Italian>Colore di riserva quando non ci sono impostazioni gruppo. [Modulo: lascia vuto per non forzare sui clients]</Italian>
+            <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_displayName">
@@ -78,6 +86,7 @@
             <Russian>Лид. цвет</Russian>
             <Czech>Barva velitele</Czech>
             <Italian>Colore Caposquadra</Italian>
+            <German>Gruppenführer-Farbe</German>
             <Spanish>Color para el líder</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_leadColor_description">
@@ -86,6 +95,7 @@
             <Polish>Kolor dla liderów grup zsynchronizowanych z tym modułem.</Polish>
             <Russian>Значение цвета для лидеров групп, которые [группы] синхронизированы с этим модулем.</Russian>
             <Italian>Colore dei Caposquadra per gruppi sincronizzati con questo modulo.</Italian>
+            <German>Farbwert für Gruppenführer, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los líderes de los grupos sincronizados al módulo.</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_displayName">
@@ -95,6 +105,7 @@
             <Russian>Цвет</Russian>
             <Czech>Barva</Czech>
             <Italian>Colore</Italian>
+            <German>Farbe</German>
             <Spanish>Color</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_color_description">
@@ -103,6 +114,7 @@
             <Polish>Kolor dla członków grup zsynchronizowanych z tym modułem.</Polish>
             <Russian>Значение цвета для членов групп, которые [группы] синхронизированы с этим модулем.</Russian>
             <Italian>Colore per membri di gruppi sincronizzati con questo modulo.</Italian>
+            <German>Farbwert für Gruppenmitglieder, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los miembros de los grupos sincronizados al módulo.</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
@@ -112,6 +124,7 @@
             <Russian>Жесты на карте - настройки групп</Russian>
             <Czech>Ukazování v mapě - nastavení skupiny</Czech>
             <Italian>Gesti Mappa - Impostazioni Gruppi</Italian>
+            <German>Kartenzeichen - Gruppeneinstellungen</German>
             <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_interval_displayName">
@@ -121,6 +134,7 @@
             <Russian>Интервал обновления</Russian>
             <Czech>Interval aktualizace</Czech>
             <Italian>Intervallo Aggiornamento</Italian>
+            <German>Update-Intervall</German>
             <Spanish>Período de actualización</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_interval_description">
@@ -130,6 +144,7 @@
             <Russian>Время между обновлениями данных.</Russian>
             <Czech>Čas mezi aktualizacemi dat.</Czech>
             <Italian>Intervallo tra aggiornamenti dati.</Italian>
+            <German>Zeit zwischen Datenupdates.</German>
             <Spanish>Tiempo entre actualizaciones sucesivas.</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_displayName">
@@ -139,6 +154,7 @@
             <Russian>Конфигурация цвета групп</Russian>
             <Czech>Konfigurace barvy pro skupinu</Czech>
             <Italian>Configurazioni colori dei gruppi</Italian>
+            <German>Konfiguration der Gruppenfarbe</German>
             <Spanish>Configuración de color de grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_description">
@@ -147,6 +163,7 @@
             <Polish>Konfiguracja kolorów grup zawierająca tablice par kolorów ([kolorLidera, kolor]).</Polish>
             <Russian>Конфигурация цвета групп содержит массив цветовых пар ([лид. цвет, цвет]).</Russian>
             <Italian>Configurazioni colori gruppi contenenti array di coppie di colori ([leadColor, color]).</Italian>
+            <German>Konfiguration der Gruppenfarbe mit zugeordneten Farbpaaren der Aufstellung ([leadColor, color]).</German>
             <Spanish>Configuración de color de grupo conteniendo una lista de pares de colores ([colorLider, colo]).</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_description">
@@ -155,6 +172,7 @@
             <Polish>Hasz ID grup zmapowanych w indeksie konfiguracji koloru grup.</Polish>
             <Russian>Хеш ID групп, соответствующих индексам конфигурации цвета групп.</Russian>
             <Italian>Hash degli ID Gruppi mappati nell'indice configurazioni colori gruppi.</Italian>
+            <German>Hashwert der Gruppen-ID, die dem Konfigurations-Index der Gruppenfarbe zugeordnet werden.</German>
             <Spanish>ID de Grupo mapeado al índice de la configuración de color de grupo.</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_displayName">
@@ -163,6 +181,7 @@
             <Polish>Mapowanie kolorów poprzez GroupID</Polish>
             <Russian>Соответствие ID групп конфигурации цвета групп</Russian>
             <Italian>Mappatura configurazioni colori GroupID</Italian>
+            <German>Gruppen-ID-Farbe Konfigurationszuordnung</German>
             <Spanish>Mapeado de ID de Grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_enabled_description">
@@ -172,6 +191,7 @@
             <Russian>Включает указания на карте.</Russian>
             <Czech>Povolit ukazování v mapě</Czech>
             <Italian>Abilita i Gesti Mappa</Italian>
+            <German>Aktiviert die Kartenzeichen.</German>
             <Spanish>Activar Gestos en Mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
@@ -181,6 +201,7 @@
             <Russian>Цвет текста имени</Russian>
             <Czech>Barva textu pro jména</Czech>
             <Italian>Colore Testo Nome</Italian>
+            <German>Farbe der Namenstexte.</German>
             <Spanish>Color de los nombres</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_nameTextColor_description">
@@ -189,6 +210,7 @@
             <Polish>Kolor nazwy gracza obok markera gestu mapy.</Polish>
             <Russian>Цвет инмени игрока рядом с маркером жестов.</Russian>
             <Italian>Colore del testo dei nametag oltre a quello dei Gesti Mappa</Italian>
+            <German>Farbe der Namenstexte neben der Kartenzeichen-Markierung.</German>
             <Spanish>Color de los nombres dibujados al lado del marcados de gestos.</Spanish>
         </Key>
         <Key ID="STR_ACE_map_gestures_mapGestures_category">
@@ -198,6 +220,7 @@
             <Russian>Жесты на карте</Russian>
             <Czech>Ukazovní v mapě</Czech>
             <Italian>Gesti Mappa</Italian>
+            <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
         </Key>
     </Package>

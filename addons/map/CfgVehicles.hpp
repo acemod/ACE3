@@ -104,6 +104,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class ShowPlayerNames {
+                displayName = CSTRING(BFT_ShowPlayerNames_DisplayName);
+                description = CSTRING(BFT_ShowPlayerNames_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(BFT_Module_Description);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="finger">
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
@@ -41,7 +41,7 @@
             <English>Color of the pointing indicator circle</English>
             <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
-            <French>Couleur de l'indicateur</French>
+            <French>Couleur de l'indicateur de pointage</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
             <Portuguese>Cor do círculo de indicação</Portuguese>
@@ -53,7 +53,7 @@
             <English>Action "point a finger at"</English>
             <German>Aktion: "Zeige Finger auf"</German>
             <Russian>Действие "показать пальцем на"</Russian>
-            <French>Action 'Pointer le doigt à"</French>
+            <French>Action 'Pointer le doigt vers"</French>
             <Polish>Akcja "wskaż palcem"</Polish>
             <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
             <Portuguese>Ação "Apontar um dedo para"</Portuguese>
