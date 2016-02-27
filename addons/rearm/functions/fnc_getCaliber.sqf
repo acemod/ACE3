@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Check whether enough supply is left to take the magazine.
+ * Get the caliber of the ammo in a magazine and return its parameters.
  *
  * Argument:
  * 0: Magazine Classname <STRING>
