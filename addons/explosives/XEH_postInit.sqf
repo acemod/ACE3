@@ -39,7 +39,7 @@ GVAR(CurrentSpeedDial) = 0;
 // In case we are a JIP client, ask the server for orientation of any previously
 // placed mine.
 if (isServer) then {
-    ["clientRequestsOrientation", {
+    ["clientRequestsOrientations", {
         params ["_logic"];
         TRACE_1("clientRequestsOrientations received:",_logic);
         TRACE_2("serverSendsOrientations sent:",GVAR(explosivesOrientations));
