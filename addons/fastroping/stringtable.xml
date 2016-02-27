@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Fastroping">
+        <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
+            <English>Equip FRIES</English>
+            <German>Rüste FRIES aus</German>
+            <Polish>Wyposaż FRIES</Polish>
+            <French>Equiper le FRIES</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
+            <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
+            <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
+            <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
+            <French>Equipe les hélicoptères compatibles avec un Module Fast Rope Insertion Extraction System.</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
+            <English>Prepare fast roping system</English>
+            <German>Bereite Fast Roping System vor</German>
+            <Polish>Przygotuj system zjazdu na linach</Polish>
+            <French>Préparer le système de corde lisse</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
+            <English>Deploy ropes</English>
+            <German>Seile auswerfen</German>
+            <Polish>Wypuść liny</Polish>
+            <French>Déployer les cordes</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
+            <English>Fast rope</English>
+            <German>Abseilen</German>
+            <Polish>Zjedź na linie</Polish>
+            <French>Descendre à la corde</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
+            <English>Cut ropes</English>
+            <German>Seile abwerfen</German>
+            <Polish>Odetnij liny</Polish>
+            <French>Détacher les cordes</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
+            <English>Equip helicopter with FRIES</English>
+            <German>Rüste Helicopter mit FRIES aus</German>
+            <Polish>Wyposaż helikopter w FRIES</Polish>
+            <French>Equiper l'hélicoptère avec le FRIED</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
+            <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
+            <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
+            <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
+            <French>Equipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
+        </Key>
+    </Package>
+</Project>

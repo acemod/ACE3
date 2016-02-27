@@ -59,8 +59,10 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
             _fuelInSource = _fuelInSource - _rate;
+        } else {
+            _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _rate, true];
         };
-        if (_fuelInSource < 0 && {_fuelInSource > -1}) then {
+        if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
             _fuelInSource = 0;
             _finished = true;
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);

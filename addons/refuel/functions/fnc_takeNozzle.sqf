@@ -55,10 +55,13 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _newNozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             _unit setVariable [QGVAR(nozzle), _newNozzle, true];
 
-            private _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
+            if (_target isKindOf "AllVehicles") then {
+                // Currently ropeCreate requires its first parameter to be a real vehicle
+                private _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
+                _newNozzle setVariable [QGVAR(rope), _rope, true];
+            };
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
-            _newNozzle setVariable [QGVAR(rope), _rope, true];
             _target setVariable [QGVAR(ownedNozzle), _newNozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
@@ -83,7 +86,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
         {true},
         ["isnotinside"]
     ] call EFUNC(common,progressBar);
-} else { // func is called in muzzle either connected or on ground
+} else { // func is called on muzzle either connected or on ground
     [
         2,
         [_unit, _nozzle],

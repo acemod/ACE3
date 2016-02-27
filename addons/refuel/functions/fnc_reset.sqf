@@ -32,8 +32,8 @@ if !(isNil "_nozzle") then {
         _nozzleTarget setVariable [QGVAR(nozzle), nil, true];
     };
 
-    private _rope = _nozzle getVariable [QGVAR(rope), nil];
-    if !(isNil "_rope") then {
+    private _rope = _nozzle getVariable [QGVAR(rope), objNull];
+    if !(isNull _rope) then {
         ropeDestroy _rope;
     };
 
