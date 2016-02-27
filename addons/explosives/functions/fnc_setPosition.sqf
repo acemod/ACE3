@@ -36,7 +36,7 @@ if (isServer) then {
 
     // This is a good time to filter the array and remove explosives that no longer exist
     GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
-        params ["_explosive"];
+        _x params ["_explosive"];
         (!isNull _explosive && {alive _explosive})
     };
     TRACE_1("setPosition",GVAR(explosivesOrientations));

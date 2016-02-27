@@ -43,7 +43,7 @@ if (isServer) then {
         params ["_logic"];
         TRACE_1("clientRequestsOrientations received:",_logic);
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", _logic, GVAR(explosivesOrientations)] call EFUNC(common,targetEvent);
+        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
 } else {
     ["serverSendsOrientations", {
